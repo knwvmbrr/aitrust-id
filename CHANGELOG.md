@@ -2,6 +2,31 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-184424-reviewed-credential-context-integration-ff70bf2b
+
+Recorded 2026-11-19T18:44:24.751301+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate independent credential-context binding and bounded compiler-correctness fixes while preserving the failed first candidate and original worker commits.
+- **Evidence.** Ten separate PM review groups execute compiler-invalid refusals, bounded growth, actual sandboxed context/NFC rebasing, private export, stale raw-equivalent edits, duplicate selection refusal and warning privacy against unchanged corrected source. [Change record](./runs/changes/2026-11-19-184424-reviewed-credential-context-integration-ff70bf2b.json).
+- **Not claimed.** These are static-profile and source-binding controls, not representative independent accuracy, inferred use/mention, intent, PS mapping or a full F-012 closure. Linux verification remains a separate source-bound record.
+
+
+### 2026-11-19-184118-credential-flow-bounded-compiler-semantics-c1a73803
+
+Recorded 2026-11-19T18:41:18.642071+00:00 · Contributor: Codex · change
+
+- **Changed.** Reject compiler-invalid reserved bindings before returning credential-flow observations by compiling only the already bounded supported AST without executing its code object; suppress native parser warning fragments.
+- **Evidence.** The actual frozen __debug__ flow counterexample is preserved; 150 focused controls, 39 current macOS CLI commands and five real compile-only syntax oracles verify reserved assignment/import-alias refusal and unchanged source/context, privacy and I/O controls. [Change record](./runs/changes/2026-11-19-184118-credential-flow-bounded-compiler-semantics-c1a73803.json).
+- **Not claimed.** Compile-only validation is not program execution, authorization, recommendation inference or independent accuracy. F012 remains open with no PS mapping or full requirement closure; the earlier source and receipts remain historical.
+
+### 2026-11-19-183456-credential-flow-context-binding-d8c4808b
+
+Recorded 2026-11-19T18:34:56.887333+00:00 · Contributor: Codex · change
+
+- **Changed.** Refuse impossible duplicate-keyword calls and oversized propagated literals in the bounded credential-flow method; add an independent private whole-document raw/NFC source-context binding workflow with unverified caller declarations and canonical static evidence.
+- **Evidence.** 143 focused controls and 31 actual isolated-Python macOS CLI controls verify the two concrete refusal fixes, raw/NFC selection and document spans, independent static/context evidence, kernel network denial, private no-overwrite exports and honest I/O uncertainty; original defects and initial fixture failure are preserved. [Change record](./runs/changes/2026-11-19-183456-credential-flow-context-binding-d8c4808b.json).
+- **Not claimed.** Context remains caller-declared, not inferred recommendation, authorization or intent. No program, named credential or URL is executed/read/contacted; no PS mapping, independent accuracy, original F012 closure, Linux execution or human acceptance is claimed.
+
 ### 2026-11-19-184040-reviewed-mt-quotation-integration-8cab0e54
 
 Recorded 2026-11-19T18:40:40.117912+00:00 · Contributor: Codex · change

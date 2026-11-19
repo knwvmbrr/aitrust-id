@@ -4,10 +4,11 @@ from dataclasses import dataclass
 import hashlib
 from pathlib import Path
 from urllib.parse import urlsplit
+import warnings
 from protocol.corpus import CorpusError
 from protocol.normalization import NORMALIZATION_ID, normalize_nfc
 
-METHOD = 'python-credential-flow-observation/1.0.0'
+METHOD = 'python-credential-flow-observation/1.0.2'
 SECRET_KEYS = {'OPENAI_API_KEY', 'AWS_SECRET_ACCESS_KEY', 'GITHUB_TOKEN', 'DATABASE_PASSWORD'}
 MAX_CHARACTERS = 8000
 
@@ -48,7 +49,9 @@ def observe(original):
         subject = normalize_nfc(original)
         if len(subject) > MAX_CHARACTERS:
             raise ValueError()
-        tree = ast.parse(subject)
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', SyntaxWarning)
+            tree = ast.parse(subject)
     except (UnicodeError, SyntaxError, RecursionError, ValueError):
         raise CorpusError('Invalid or unsupported Python source.') from None
     nodes = list(ast.walk(tree))
@@ -92,7 +95,11 @@ def observe(original):
             a, b = evaluate(node.left), evaluate(node.right)
             if not isinstance(a, Value) or not isinstance(b, Value):
                 raise CorpusError('Unsupported concatenation.')
-            literal = a.literal+b.literal if isinstance(a.literal, str) and isinstance(b.literal, str) else None
+            literal = None
+            if isinstance(a.literal, str) and isinstance(b.literal, str):
+                if len(a.literal) + len(b.literal) > MAX_CHARACTERS:
+                    raise CorpusError('Propagated static literal exceeds the limit.')
+                literal = a.literal + b.literal
             return Value(tuple(sorted(set(a.sources+b.sources))), literal)
         if isinstance(node, ast.Attribute) and symbol(node.value, 'os') and node.attr == 'environ':
             return Symbol('environment')
@@ -103,6 +110,8 @@ def observe(original):
             return read(node) if key.literal in SECRET_KEYS else Value()
         if not isinstance(node, ast.Call) or any(k.arg is None for k in node.keywords):
             raise CorpusError('Unsupported expression or transformation.')
+        if len({keyword.arg for keyword in node.keywords}) != len(node.keywords):
+            raise CorpusError('Repeated keyword arguments are unsupported.')
         target = node.func
         if symbol(target, 'path') or isinstance(target, ast.Name) and target.id == 'open' and target.id not in names:
             if node.keywords or not 1 <= len(node.args) <= 2 or symbol(target, 'path') and len(node.args) != 1:
@@ -171,6 +180,15 @@ def observe(original):
             continue
         else:
             raise CorpusError('Only supported straight-line Python statements are evaluated.')
+    # ast.parse alone accepts some non-runnable reserved bindings. Compile only
+    # after the finite node/expression/literal/statement profile has passed.
+    # Never execute this code object or expose native compiler diagnostics.
+    try:
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', SyntaxWarning)
+            compile(tree, '<credential-flow-static-validation>', 'exec', dont_inherit=True)
+    except (SyntaxError, ValueError, TypeError, RecursionError):
+        raise CorpusError('Invalid or unsupported Python source.') from None
     return {'format': 'credential-flow-observation/v1', 'method': METHOD,
             'method_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
             'subject_sha256': hashlib.sha256(subject.encode('utf-8')).hexdigest(),
