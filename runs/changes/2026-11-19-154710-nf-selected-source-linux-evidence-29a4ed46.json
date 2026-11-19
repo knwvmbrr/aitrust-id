@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-154710-nf-selected-source-linux-evidence-29a4ed46",
+  "recorded_at": "2026-11-19T15:47:10.334274+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ed2f0292fdba8c3644d6554234edda089dc57b03",
+  "changed": "Record actual corrected-source NF execution as an unprivileged user on the existing isolated Linux verification host, without changing NF sources or active services.",
+  "proves": "21 actual CLI and 7 selected stdlib library controls pass under Python3.13.5 UID1000, kernel network namespace and real libseccomp IPv4/IPv6 denial; all15 selected input hashes and original staging identities remain unchanged, and the owned temporary checkout is removed.",
+  "limits": "Selected engineering controls only; the full pytest suite was not run on Linux and no package was installed. No NF or FI tag, original scope closure, independent accuracy, source-truth, dependency clearance or human acceptance is claimed.",
+  "scope_ids": [
+    "T-NF"
+  ],
+  "files": {
+    "runs/2026-11-19-nf-source-evidence-linux.json": "38299de0824cd32a929162533ae6224b56d0cc8bc0c64ccee190be066920b374"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-nf-source-evidence-linux.json",
+      "sha256": "38299de0824cd32a929162533ae6224b56d0cc8bc0c64ccee190be066920b374"
+    }
+  ],
+  "checks": []
+}
