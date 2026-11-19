@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-051826-esbuild-source-cohort-49b40d84
+
+Recorded 2026-11-19T05:18:26.969102+00:00 · Contributor: Codex dependency engineering lane · change
+
+- **Changed.** Added source-bound offline review and replay of the 26 locked esbuild platform archives, 29 members and exact upstream source notices, with explicit unavailable Go build identity.
+- **Evidence.** Eleven focused controls pass; actual 26-archive and four-source replay passes; corrupted source refuses with fixed diagnostics; source pins and exact MIT/BSD notices are retained. [Change record](./runs/changes/2026-11-19-051826-esbuild-source-cohort-49b40d84.json).
+- **Not claimed.** No publisher signature, binary/source reproducibility, actual compiler identity, blanket permission clearance, route approval or original requirement closure.
+
+
 ### 2026-11-19-043946-publish-agent-tools-trust-drafts-and-stop-repair-7390e354
 
 Recorded 2026-11-19T04:39:46.339045+00:00 · Contributor: Codex · change

@@ -1,0 +1,82 @@
+ESBUILD_VERSION = $(shell cat version.txt)
+GO_VERSION = $(shell cat go.version)
+
+# Stash the "node" executable because otherwise it breaks on GitHub Actions with Windows when "PATH" is changed
+NODE = $(shell which node)
+GO_DIR = $(shell pwd)/go/$(GO_VERSION)/go
+PATH_SEPARATOR = $(shell if uname | grep -qE "MINGW|WIN32|CYGWIN"; then echo ";"; else echo ":"; fi)
+GO_COMPILER = PATH="$(GO_DIR)/bin$(PATH_SEPARATOR)$(PATH)" GOROOT="$(GO_DIR)" CGO_ENABLED=0
+
+# Strip debug info and clear the build id for reproducible builds
+GO_FLAGS += "-ldflags=-s -w -buildid=" -buildvcs=false
+
+# Avoid embedding the build path in the executable for more reproducible builds
+GO_FLAGS += -trimpath
+
+esbuild: version-go cmd/esbuild/*.go pkg/*/*.go internal/*/*.go go.mod
+	CGO_ENABLED=0 go build $(GO_FLAGS) ./cmd/esbuild
+
+test:
+	@$(MAKE) --no-print-directory -j6 test-common
+
+# These tests are for development
+test-common: test-go vet-go no-filepath verify-source-map end-to-end-tests js-api-tests plugin-tests register-test node-unref-tests decorator-tests
+
+# These tests are for release (the extra tests are not included in "test" because they are pretty slow)
+test-all:
+	@$(MAKE) --no-print-directory -j6 test-common test-deno ts-type-tests test-wasm-node test-wasm-browser lib-typecheck test-yarnpnp
+
+check-go-version:
+	@go version | grep -F " go$(GO_VERSION) " || (echo 'Please install Go version $(GO_VERSION)' && false)
+
+# Note: Don't add "-race" here by default. The Go race detector is currently
+# only supported on the following configurations:
+#
+#   darwin/amd64
+#   darwin/arm64
+#   freebsd/amd64,
+#   linux/amd64
+#   linux/arm64
+#   linux/ppc64le
+#   netbsd/amd64
+#   windows/amd64
+#
+# Also, it isn't necessarily supported on older OS versions even if the OS/CPU
+# combination is supported, such as on macOS 10.9. If you want to test using
+# the race detector, you can manually add it using the ESBUILD_RACE environment
+# variable like this: "ESBUILD_RACE=-race make test". Or you can permanently
+# enable it by adding "export ESBUILD_RACE=-race" to your shell profile.
+test-go:
+	go test $(ESBUILD_RACE) ./internal/... ./pkg/...
+
+vet-go:
+	go vet ./cmd/... ./internal/... ./pkg/...
+
+fmt-go:
+	test -z "$(shell go fmt ./cmd/... ./internal/... ./pkg/... )"
+
+go-compiler: go/$(GO_VERSION)
+
+# Build a custom version of the Go compiler that omits buildinfo from the
+# final executable (since there is no command-line option to disable this).
+# This is done in an attempt to avoid poorly-implemented "security" tools
+# from breaking esbuild for users solely on the basis of what version of
+# Go esbuild was compiled with.
+#
+# Most (all?) Go-related security tooling effectivelly runs the command
+# "go version ./esbuild" and then creates a false-positive report for
+# esbuild for every single CVE in Go's expansive standard library. There is
+# no consideration for whether or not the corresponding API is ever actually
+# used by esbuild. These reports are harmful to users as they prevent users
+# from using esbuild in enterprise environments where these tools are
+# mandatory.
+#
+# These reports are all false-positives because esbuild is not a security
+# boundary. It's just a tool to transform trusted text (your source code)
+# into other text, and a local development server that serves a read-only
+# view of your source code and is not intended for production use.
+go/$(GO_VERSION):
+	mkdir -p go/$(GO_VERSION) && cd go/$(GO_VERSION) && curl -LO https://go.dev/dl/go$(GO_VERSION).src.tar.gz && tar xzf go$(GO_VERSION).src.tar.gz
+	cd go/$(GO_VERSION)/go && grep -qF "ctxt.buildinfo()" src/cmd/link/internal/ld/main.go # Make sure this call is still there
+	cd go/$(GO_VERSION)/go/src/cmd/link/internal/ld && sed "s/ctxt.buildinfo/\\/\\/ctxt.buildinfo/" main.go > temp && mv temp main.go
+	cd go/$(GO_VERSION)/go/src && if uname | grep -qE "MINGW|WIN32|CYGWIN"; then ./make.bat; else ./make.bash; fi
