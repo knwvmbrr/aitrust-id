@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-085036-fi-raw-output-descriptor-ownership-e767e978
+
+Recorded 2026-11-19T08:50:36.696731+00:00 · Contributor: Codex · change
+
+- **Changed.** Keep FI temporary raw output descriptors owned by Capture through stream-construction failure using closefd=False, with exactly one close attempt and primary prepublication refusal preserved.
+- **Evidence.** The original injected raw descriptor leak is preserved; 110 focused controls and 23 actual isolated-Python macOS CLI controls verify descriptor ownership, secondary close errors, reused-descriptor safety, complete cleanup attempts and unchanged publication uncertainty. [Change record](./runs/changes/2026-11-19-085036-fi-raw-output-descriptor-ownership-e767e978.json).
+- **Not claimed.** A failed close does not prove the descriptor closed, and its number is never retried. Filesystem publication can remain uncertain; no FI tag, scope closure, independent accuracy, Linux execution or human acceptance is claimed.
+
+
 ### 2026-11-19-084306-fi-output-publication-uncertainty-b743fe02
 
 Recorded 2026-11-19T08:43:06.492562+00:00 · Contributor: Codex · change

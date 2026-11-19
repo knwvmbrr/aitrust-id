@@ -82,3 +82,23 @@ retry handling, including possible private temporary-name remnants; do not
 automatically retry or remove a complete final file. Regression controls inject
 the exact boundaries in the library and actual CLI, preserve no-final-output on
 source drift/pre-link failure, and verify no private path/value echo.
+
+## Raw output descriptor ownership correction plan, before code
+
+Peer review found that `fdopen` can fail before taking ownership of the raw
+temporary descriptor. The frozen candidate then removed the temporary name but
+left the descriptor open after capture exit. An injected failure reproduces that
+leak without a final destination; retain its failed receipt separately.
+
+Keep the raw descriptor in the capture's owned list immediately after `open`,
+and use `fdopen(..., closefd=False)`: neither stream construction nor stream
+close owns that raw descriptor. Capture exit attempts its close exactly once
+with all other owned handles even if construction fails. Preserve a primary
+pre-publication body refusal when a secondary close fails. Never retain that
+descriptor in a retry list after attempting close: it may already be closed and
+its number reused. A failed close cannot justify retrying the same number.
+This remains an ordinary pre-publication refusal. Direct-library and actual CLI
+controls must show the raw descriptor closed/attempted, final absent, temporary
+cleanup attempted, other handles closed, fixed private diagnostics, and no
+unsafe retry after a close reports failure. Existing post-publication uncertainty
+and no-overwrite behavior must continue to pass.

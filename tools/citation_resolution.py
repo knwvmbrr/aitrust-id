@@ -124,10 +124,12 @@ class Capture:
         temporary = '.citation-' + secrets.token_hex(16)
         fd = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW,
                      0o600, dir_fd=parent)
+        self.fds.append(fd)
         error = None
         may_exist = False
         try:
-            with os.fdopen(fd, 'wb') as stream:
+            # Capture alone owns the raw handle, including construction failure.
+            with os.fdopen(fd, 'wb', closefd=False) as stream:
                 os.fchmod(stream.fileno(), 0o600)
                 stream.write(raw)
                 stream.flush()
@@ -181,7 +183,15 @@ class Capture:
         return self
 
     def __exit__(self, kind, value, traceback):
-        self.close()
+        try:
+            self.close()
+        except BaseException:
+            if self.output_may_exist:
+                raise OutputCommitUncertain() from None
+            if kind is None:
+                raise
+            # Keep a primary pre-publication refusal. All closes were attempted.
+            return False
         if kind is not None and self.output_may_exist:
             raise OutputCommitUncertain() from None
 
