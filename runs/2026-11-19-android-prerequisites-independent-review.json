@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-19T18:34:14.503994+00:00",
+  "profile": "android-prerequisites-correction-independent-review/v1",
+  "pass": true,
+  "reviewed_by": "/root/seo",
+  "implemented_by": "/root",
+  "source_base": "70085c9a22cb63102261384609b4b93e5c1daf9c",
+  "source_snapshot": "Frozen corrected working bytes; no commit identity inferred.",
+  "source_sha256": {
+    "scripts/verify-android-emulator.py": "68ac8545670f14130aa558a4527e418076762a1171a3b136506f23bbe8250b53",
+    "tests/test_android_emulator_prerequisites.py": "581e7f00688fb7e26ab684bf196a2e3c17041ff611f4de839709f0aa63bfb1c1",
+    ".github/workflows/android-share.yml": "b2d435bd9571326dc0e8c05badbd35183c17f423b7bd40f4c78f7ba9a2c7a9b3",
+    "scripts/verify-route-boundaries.py": "7c43a1a5e362dbce0d2d67df83997c8fbd7606513c60fc93b1a348cce59e7f03",
+    "docs/android-share-plan.md": "81aa936b56790d3c7456ab2c3d60276b3194935f23d867fc3dbd2b0cd91d77ca"
+  },
+  "reviewed_author_receipt": {
+    "path": "runs/2026-11-19-android-prerequisites-corrected.json",
+    "sha256": "38e323810a2dbb16085524e3f8694c8a019c73688b28b5390c0c5a85c727ad9f",
+    "all_source_hashes_match": true,
+    "author_focused_controls": 15,
+    "official_metadata_checks_reviewed_not_rerun_by_reviewer": 2
+  },
+  "first_review_findings": [
+    {
+      "source_sha256": "3a260c9412096ba5ba473bc372a061cdc1fa83259b39f0ee9f36427b0df07fce",
+      "finding": "Actual child reaped, then authored wait wrapper raised; cleanup attempted group signal using released numeric group ID.",
+      "actual_owned_child_executed": true,
+      "signal_recorded_not_sent": true,
+      "OS_PID_reuse_or_unrelated_signal_not_observed": true
+    },
+    {
+      "finding": "Explicit license refusal with SDK exit zero was FAILED rather than unavailable.",
+      "authored_manager_result": true,
+      "real_hosted_zero_exit_refusal_observed": false
+    }
+  ],
+  "independent_execution": {
+    "interpreter_flags": [
+      "-I",
+      "-S",
+      "-B"
+    ],
+    "command": "Load tests/test_android_emulator_prerequisites.py and run only the four named affected controls using stdlib unittest.",
+    "controls": [
+      "test_post_reap_wait_error_does_not_signal_a_reusable_group_number",
+      "test_normal_reap_does_not_signal_a_reusable_group_number",
+      "test_explicit_refusal_is_unavailable_even_with_zero_exit_code",
+      "test_unrelated_install_failure_fails"
+    ],
+    "tests_run": 4,
+    "passed": 4,
+    "failures": 0,
+    "errors": 0,
+    "elapsed_seconds": 0.044369,
+    "exit_code": 0,
+    "broad_suite_rerun": false
+  },
+  "verified_boundaries": {
+    "known_reaped_child_never_signalled": true,
+    "normal_reap_never_signalled": true,
+    "explicit_license_refusal_null_prerequisite_not_runtime_success": true,
+    "unrelated_install_failure_still_fails": true,
+    "hosted_only_KVM_workflow_no_new_route_permissions": true,
+    "license_record_not_written_or_newly_accepted": true,
+    "source_unchanged_during_review": true
+  },
+  "actionable_findings": [],
+  "limits": {
+    "full_async_wait_and_signal_atomicity_claimed": false,
+    "real_SDK_install_or_emulator_executed_by_reviewer": false,
+    "physical_device_or_TalkBack_tested": false,
+    "independent_accuracy_evidence": false,
+    "N014_or_other_original_closed": false,
+    "production_changed": false,
+    "root_source_edited_by_reviewer": false
+  }
+}
