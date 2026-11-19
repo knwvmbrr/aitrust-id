@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-065723-bind-reviewed-cohort-checks-and-safe-source-verification-eb829c41
+
+Recorded 2026-11-19T06:57:23.079539+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the reviewed Rolldown, C2PA and NLI notice/source controls to named CI and source-selection checks; verify supplied PS ZIP bytes through trusted canonical reconstruction without untrusted directory parsing; record explicit agent reactivation and review handoffs.
+- **Evidence.** 147 focused cohort/input-binding controls and 70 PS policy/export controls pass. All three ordinary offline cohort checks pass without clearance. Actual isolated Linux verification rebuilds the unchanged public PS artifact, preserves staging and rejects malformed supplied bytes without ZIP-reader allocation. [Change record](./runs/changes/2026-11-19-065723-bind-reviewed-cohort-checks-and-safe-source-verification-eb829c41.json).
+- **Not claimed.** Current checks establish engineering consistency, not transitive redistribution approval or tag accuracy. MT correction integration, complete source-bound revalidation and protected publication remain pending. Original 132 complete and 70 open remain.
+
+
 ### 2026-11-19-064440-retain-exact-incoming-evidence-during-real-merge-249f98ec
 
 Recorded 2026-11-19T06:44:40.213683+00:00 · Contributor: Codex · change

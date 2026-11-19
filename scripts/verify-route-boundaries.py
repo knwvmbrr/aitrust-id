@@ -196,6 +196,8 @@ PATTERNS += ('eval/dependency-policy.json', 'tools/dependency_policy.py', 'scrip
 
 PATTERNS += ('NOTICE',)
 
+PATTERNS += ('tools/rolldown_cohort.py', 'scripts/verify-rolldown-cohort.py', 'tests/test_rolldown_cohort.py', 'docs/rolldown-source-review.md', 'sbom/reviews/rolldown-source.json', 'tools/c2pa_cohort.py', 'scripts/verify-c2pa-cohort.py', 'tests/test_c2pa_cohort.py', 'docs/c2pa-cohort-plan.md', 'docs/c2pa-cohort-result.md', 'sbom/c2pa/**/*', 'tools/nli_license_cohort.py', 'scripts/verify-nli-license-cohort.py', 'tests/test_nli_license_cohort.py', 'docs/nli-license-cohort.md', 'sbom/reviews/nli/**/*', 'docs/changelog-merge-parent-plan.md', 'docs/agent-handoffs.md')
+
 def read_json(file):
     return read_evidence(file)
 

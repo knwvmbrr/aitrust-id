@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T06:29:50.374414+00:00",
+  "updated": "2026-11-19T06:57:23.036380+00:00",
   "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1143,7 +1143,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T06:29:50.374414+00:00",
+  "updated_at": "2026-11-19T06:57:23.036380+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3517,7 +3517,8 @@
     ],
     "tag_lanes": "Separate contracts and evidence per tag; not all currently staffed",
     "proprietary_assistant": "planned evaluation track only; no trained model or collection activated",
-    "heavy_validation_policy": "One local native UI or browser validation workload at a time; agents may continue source review. Separate remote CI machines remain independent."
+    "heavy_validation_policy": "One local native UI or browser validation workload at a time; agents may continue source review. Separate remote CI machines remain independent.",
+    "handoff_protocol": "docs/agent-handoffs.md"
   },
   "q4_web_verification": {
     "website": "runs/2026-11-16-q4-website-current.json",
@@ -3854,7 +3855,9 @@
     "notice_removal_with_rehashed_policy_refused": true,
     "public_url": "https://aitrustid.com/downloads/aitrust-id-ps-source.zip",
     "publication": "runs/2026-11-19-ps-source-live-publication.json",
-    "protected_merge": "runs/2026-11-19-ps-source-protected-merge.json"
+    "protected_merge": "runs/2026-11-19-ps-source-protected-merge.json",
+    "current_verifier_evidence": "runs/2026-11-19-ps-source-canonical-linux.json",
+    "public_artifact_bytes_unchanged_by_verifier_hardening": true
   },
   "dependency_conflict_policy": {
     "profile": "technical-dependency-conflict-policy/v1",
@@ -3865,5 +3868,35 @@
     "existing_preview_consumers_promoted": false,
     "complete_project_obligations": false,
     "legal_clearance": false
+  },
+  "dependency_source_cohorts": {
+    "status": "integrated_bounded_observations; distribution_obligations_unresolved",
+    "rolldown": {
+      "evidence": "runs/2026-11-19-rolldown-parser-correction.json",
+      "native_addons": 15,
+      "actual_archives_replayed": 16,
+      "notice_files": 2,
+      "permission_cleared": false
+    },
+    "c2pa": {
+      "evidence": "runs/2026-11-19-c2pa-parser-privacy-correction.json",
+      "packages": 10,
+      "distinct_wheels": 14,
+      "selected_slots": 20,
+      "original_texts": 70,
+      "permission_cleared": false
+    },
+    "nli": {
+      "evidence": "runs/2026-11-19-nli-cohort-engineering.json",
+      "actual_replay": "runs/2026-11-19-nli-final-header-replay.json",
+      "wheel_occurrences": 44,
+      "notice_occurrences": 88,
+      "unique_notice_texts": 40,
+      "runtime_execution_claimed_by_cohort": false,
+      "distribution_ready": false
+    },
+    "new_original_closures": 0,
+    "independent_accuracy_evidence": false,
+    "integration_evidence": "runs/2026-11-19-cohort-policy-integration.json"
   }
 }

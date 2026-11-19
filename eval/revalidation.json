@@ -482,7 +482,25 @@
         "sbom/reviews/sources/*",
         "site/public/downloads/aitrust-id-ps-source.zip",
         "site/public/downloads/aitrust-id-ps-source.zip.sha256",
-        "NOTICE"
+        "NOTICE",
+        "tools/rolldown_cohort.py",
+        "scripts/verify-rolldown-cohort.py",
+        "tests/test_rolldown_cohort.py",
+        "docs/rolldown-source-review.md",
+        "sbom/reviews/rolldown-source.json",
+        "tools/c2pa_cohort.py",
+        "scripts/verify-c2pa-cohort.py",
+        "tests/test_c2pa_cohort.py",
+        "docs/c2pa-cohort-plan.md",
+        "docs/c2pa-cohort-result.md",
+        "sbom/c2pa/**/*",
+        "tools/nli_license_cohort.py",
+        "scripts/verify-nli-license-cohort.py",
+        "tests/test_nli_license_cohort.py",
+        "docs/nli-license-cohort.md",
+        "sbom/reviews/nli/**/*",
+        "docs/changelog-merge-parent-plan.md",
+        "docs/agent-handoffs.md"
       ],
       "commands": [
         [
@@ -783,6 +801,27 @@
           "tests/test_dependency_policy.py",
           "tests/test_ps_source_distribution.py",
           "tests/test_esbuild_cohort.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-rolldown-cohort.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-c2pa-cohort.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-nli-license-cohort.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_rolldown_cohort.py",
+          "tests/test_c2pa_cohort.py",
+          "tests/test_nli_license_cohort.py",
           "-q"
         ]
       ]
@@ -1293,7 +1332,25 @@
         "sbom/reviews/sources/*",
         "site/public/downloads/aitrust-id-ps-source.zip",
         "site/public/downloads/aitrust-id-ps-source.zip.sha256",
-        "NOTICE"
+        "NOTICE",
+        "tools/rolldown_cohort.py",
+        "scripts/verify-rolldown-cohort.py",
+        "tests/test_rolldown_cohort.py",
+        "docs/rolldown-source-review.md",
+        "sbom/reviews/rolldown-source.json",
+        "tools/c2pa_cohort.py",
+        "scripts/verify-c2pa-cohort.py",
+        "tests/test_c2pa_cohort.py",
+        "docs/c2pa-cohort-plan.md",
+        "docs/c2pa-cohort-result.md",
+        "sbom/c2pa/**/*",
+        "tools/nli_license_cohort.py",
+        "scripts/verify-nli-license-cohort.py",
+        "tests/test_nli_license_cohort.py",
+        "docs/nli-license-cohort.md",
+        "sbom/reviews/nli/**/*",
+        "docs/changelog-merge-parent-plan.md",
+        "docs/agent-handoffs.md"
       ],
       "commands": [
         [
@@ -1503,6 +1560,27 @@
           "tests/test_dependency_policy.py",
           "tests/test_ps_source_distribution.py",
           "tests/test_esbuild_cohort.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-rolldown-cohort.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-c2pa-cohort.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-nli-license-cohort.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_rolldown_cohort.py",
+          "tests/test_c2pa_cohort.py",
+          "tests/test_nli_license_cohort.py",
           "-q"
         ]
       ]

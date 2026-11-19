@@ -25,3 +25,12 @@ Execute an actual nonempty source export, isolated extracted finding/no-finding 
 ## Completion limit
 
 The current X-02 acceptance also retains platform, model, native and source-offer obligation review. Gate software and one bounded PS source artifact do not satisfy those remaining obligations. F-057 additionally retains eligible release-artifact SBOM and attestation. Keep both original requirements open unless their full criteria are met or the owner explicitly approves a preserved, documented separation. No new product exception, public endpoint, paid dependency or data collection is authorized here.
+
+
+For supplied ZIP verification, reconstruct the exact bounded canonical archive
+from separately trusted selected source bytes before accepting the input. The
+verifier does not need to allocate a supplied ZIP central directory at all. This
+retains the existing exact-format acceptance while preventing metadata-count
+amplification before rejection. The builder may still inspect its own bounded
+generated archive. Verify both the accepted package and malformed supplied bytes
+with a reader trap, keeping the produced artifact bytes unchanged.
