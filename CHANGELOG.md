@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-081457-synchronize-publication-state-timestamps-cbede663
+
+Recorded 2026-11-19T08:14:57.703543+00:00 · Contributor: Codex · change
+
+- **Changed.** Synchronize both required state timestamps after recording actual MT publication.
+- **Evidence.** The accountability guard passes all referenced evidence chronology and 132 complete / 70 open. CI caught the earlier metadata update changing updated_at alone; the same strict guard is retained. [Change record](./runs/changes/2026-11-19-081457-synchronize-publication-state-timestamps-cbede663.json).
+- **Not claimed.** Metadata correction only; the deployed source and successful live controls are unchanged. No full requirement or release gate closes.
+
+
+### 2026-11-19-081236-record-live-independent-mt-wording-preview-5eb800bf
+
+Recorded 2026-11-19T08:12:36.084343+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the protected deployment and actual live operation of both independent private MT wording observations.
+- **Evidence.** Eleven required engineering CI checks passed. All 313 public artifacts match the reviewed build at both delivery origins (626 matches); live ordinary-CSP checks pass both input-bound methods, privacy, enlarged-text layout and missing-MT-chunk isolation from PS. [Change record](./runs/changes/2026-11-19-081236-record-live-independent-mt-wording-preview-5eb800bf.json).
+- **Not claimed.** The separate accuracy/accessibility release gate still refuses release. No MT tag, independent accuracy, physical iPhone/VoiceOver acceptance, full dependency clearance or original requirement closure. All 202 original IDs and 132 complete/70 open remain.
+
+
 ### 2026-11-19-080100-distinguish-mt-wording-preview-in-seo-regression-88b4a02f
 
 Recorded 2026-11-19T08:01:00.226372+00:00 · Contributor: Codex · change
