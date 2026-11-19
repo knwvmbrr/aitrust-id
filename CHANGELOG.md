@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-223823-credential-flow-context-linux-proof-94e53801
+
+Recorded 2026-11-19T22:38:23.839746+00:00 · Contributor: Codex · change
+
+- **Changed.** Record actual corrected credential-flow context operation on the existing isolated unprivileged Linux route without changing sources or services.
+- **Evidence.** 39 actual CLI controls, seven selected binding controls and five real compile-only oracles pass on exact source2d00900 with Python3.13.5 UID1000; fifteen source hashes and original staging identities are unchanged and the owned temporary checkout is removed. [Change record](./runs/changes/2026-11-19-223823-credential-flow-context-linux-proof-94e53801.json).
+- **Not claimed.** Selected stdlib and CLI controls only, not the full Linux pytest suite. No subject execution, PS mapping, independent accuracy, original F012 closure or human acceptance is claimed.
+
+
 ### 2026-11-19-184118-credential-flow-bounded-compiler-semantics-c1a73803
 
 Recorded 2026-11-19T18:41:18.642071+00:00 · Contributor: Codex · change
