@@ -2,6 +2,87 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-040035-integrate-current-trust-governance-and-runtime-evidence-bec09deb
+
+Recorded 2026-11-19T04:00:35.828325+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the current trust-governance integration and refreshed runtime inventories to executed protocol, website and route-boundary checks.
+- **Evidence.** All 41 protocol and 32 website check groups passed against unchanged source; current bounded personal-route review passed. [Change record](./runs/changes/2026-11-19-040035-integrate-current-trust-governance-and-runtime-evidence-bec09deb.json).
+- **Not claimed.** Engineering evidence only. Original scope remains 132 complete and 70 open; no formation filing, independent tag release validation, physical iPhone acceptance or live publication is asserted.
+
+
+### 2026-11-19-035643-current-native-share-workflow-after-notice-refresh-79fe9e4f
+
+Recorded 2026-11-19T03:56:43.121970+00:00 · Contributor: Codex · change
+
+- **Changed.** Selected a fresh actual six-workflow iPhone14Plus Simulator execution bound to the refreshed notice metadata and unchanged native software.
+- **Evidence.** All six named UI workflows passed on installed iOS26.2; current source and assets matched throughout and the owned Simulator was deleted and absent afterward. [Change record](./runs/changes/2026-11-19-035643-current-native-share-workflow-after-notice-refresh-79fe9e4f.json).
+- **Not claimed.** Simulator software evidence only: no physical phone, human VoiceOver, third-party Share-provider acceptance, independent detector accuracy or new TestFlight upload.
+
+
+### 2026-11-19-034530-retain-linked-notice-precondition-repair-13d795a3
+
+Recorded 2026-11-19T03:45:30.778100+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded linked notice-inventory and generated-public-projection refusals and selected the fresh actual observation chain in state.
+- **Evidence.** All current notice and nested-runtime consistency preconditions now pass on actual observations; prior failures remain in the execution history. [Change record](./runs/changes/2026-11-19-034530-retain-linked-notice-precondition-repair-13d795a3.json).
+- **Not claimed.** Affected protocol and website source-bound revalidation and required CI still pending; no expanded clearance.
+
+
+### 2026-11-19-034352-refresh-exact-image-and-locked-runtime-notice-chain-e86fb7aa
+
+Recorded 2026-11-19T03:43:52.571933+00:00 · Contributor: Codex · change
+
+- **Changed.** Collected installed notices from exact newly scanned images and reprocessed unchanged locked native, asset and nested-runtime archives against the current observation chain.
+- **Evidence.** 449 actual runtime notices and122 distribution records collected without network;205 cached npm archives rechecked; native archives, selected assets and nested runtime replay pass. All notice blob bytes and native notice bundle remain unchanged. [Change record](./runs/changes/2026-11-19-034352-refresh-exact-image-and-locked-runtime-notice-chain-e86fb7aa.json).
+- **Not claimed.** Original retained npm observation time preserved. No package code or downloads; license permission, full transitive coverage, vulnerabilities and independent tag acceptance remain unapproved.
+
+
+### 2026-11-19-033608-refresh-public-governance-projections-3cd70862
+
+Recorded 2026-11-19T03:36:08.339018+00:00 · Contributor: Codex · change
+
+- **Changed.** Refreshed the tracked public governance and decision downloads from the current owner-directed sources.
+- **Evidence.** Public projections identify the trust-owned operating-company direction and preserve future standards governance as an unselected proposal. [Change record](./runs/changes/2026-11-19-033608-refresh-public-governance-projections-3cd70862.json).
+- **Not claimed.** No signed, filed or transferred legal instrument is represented; this is a current draft and decision projection.
+
+
+### 2026-11-19-033207-fresh-current-container-inventory-after-runtime-repair-96478f5d
+
+Recorded 2026-11-19T03:32:07.091429+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrated three actual fresh Linux image scans and current observed inventory, retaining source-bound CI refusals and the reconciled trust-owned governance direction.
+- **Evidence.** Pinned scanner archive and binary identities checked, scans executed without network, 424 package occurrences inventoried, inventory identity and official SPDX checks pass; staging services unchanged. [Change record](./runs/changes/2026-11-19-033207-fresh-current-container-inventory-after-runtime-repair-96478f5d.json).
+- **Not claimed.** Unsigned observed inventory only: missing license metadata7/7/19 remains; no license/vulnerability/independent-tag clearance, no formation or asset transfer. Required CI publication pending.
+
+
+### 2026-11-19-033003-retain-source-bound-container-inventory-refusal-70ec7dca
+
+Recorded 2026-11-19T03:30:03.396181+00:00 · Contributor: Codex · change
+
+- **Changed.** Retained the three required CI refusals that share one stale observed-container inventory cause after the actual Dockerfile repair.
+- **Evidence.** Inventory identity checks refused changed build inputs; a real fresh Linux image scan was commissioned, rather than rebinding old scans. [Change record](./runs/changes/2026-11-19-033003-retain-source-bound-container-inventory-refusal-70ec7dca.json).
+- **Not claimed.** Publication remains blocked until the current scans and required checks pass; no license, vulnerability, signed release or tag-accuracy clearance.
+
+
+### 2026-11-19-032609-align-governance-with-owner-trust-direction-0f6d8766
+
+Recorded 2026-11-19T03:26:09.951019+00:00 · Contributor: Codex · change
+
+- **Changed.** Aligned current governance and decision history with the trust-owned operating LLC direction while preserving future independent standards governance as a separate proposal.
+- **Evidence.** The active governance document no longer unconditionally assigns specification or mark assets to an unformed foundation. Existing licenses, RFC evidence and conformance recusal remain in force. [Change record](./runs/changes/2026-11-19-032609-align-governance-with-owner-trust-direction-0f6d8766.json).
+- **Not claimed.** No entity, certification program, trademark clearance, legal instrument review or asset transfer is claimed.
+
+
+### 2026-11-19-032511-reconcile-trust-choice-with-retained-institutional-scope-7a285235
+
+Recorded 2026-11-19T03:25:11.812764+00:00 · Contributor: Codex · change
+
+- **Changed.** Reconciled F075, F143 and governance planning with the owner-selected trust-owned operating company, retaining historical titles and the separate future standards-governance question.
+- **Evidence.** All202 original records remain; trust/company management and certification ownership are explicitly separate; unexecuted legal jobs remain20 percent. [Change record](./runs/changes/2026-11-19-032511-reconcile-trust-choice-with-retained-institutional-scope-7a285235.json).
+- **Not claimed.** No formation, mark, legal clearance, trust instrument review or full requirement closure.
+
+
 ### 2026-11-19-031923-select-current-plugin-runtime-and-boundary-truth-75364495
 
 Recorded 2026-11-19T03:19:23.319417+00:00 · Contributor: Codex · change

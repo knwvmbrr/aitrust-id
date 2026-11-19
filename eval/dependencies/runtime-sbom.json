@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "kind": "unsigned_observed_runtime_sbom",
-  "captured_at": "2026-10-14T15:46:11.410091+00:00",
+  "captured_at": "2026-11-19T03:29:30.609311+00:00",
   "scanner": "syft 1.54.1",
   "scanner_archive_sha256": "c069905b391cc4c20a5ba65ad5c10be2a7ba074f8ea6ad203e24d14e303dad47",
   "scanner_signed_identity_verified": false,
@@ -12,37 +12,37 @@
     {
       "role": "gateway",
       "artifact": "sbom/runtime/gateway-linux-amd64.spdx.json",
-      "sha256": "e15577b5cc4c642021bccc148d746717ebf1eb8455133ab39eea8462d5340137",
-      "image_id": "08891934508d918533aa00b8de3c41ea887304e1859c8eb6272687c27b095b9b",
-      "manifest_digest": "322cf72533583291dec032e1a156ca6e30356a69a06b5b4c3ed28c8c153c3c3e",
+      "sha256": "7e80adc314e7cf6c51bd44e6192b24fca52bd0354169cf0dcae1b16bac7a5ebc",
+      "image_id": "48fea6256b15b702ed33828517df427d6e7eb0c2bbc74d103876cfb137261d2c",
+      "manifest_digest": "94f76108efa6bc78893740943a703c31a6da92cc1c03721fad481703ddf1c65e",
       "packages": 122
     },
     {
       "role": "evaluator",
       "artifact": "sbom/runtime/evaluator-linux-amd64.spdx.json",
-      "sha256": "b9aca7ebff7f203ba2ba8fdc4cb71875abc16be50e4a5fccd36f1b2daec73750",
-      "image_id": "5776e1d019164e3d888f693a497c83f943597504451535564ac3fb54c21251c2",
-      "manifest_digest": "a2fe288e0a51b84d6afbc59fc8ec1d37b44b709cf09ba67a60e54e76a938f31b",
+      "sha256": "305175f4e408496e4c13bc66d293bc9453123211306e056ad4050fbc4517678b",
+      "image_id": "73d67518fe8bbe78a7c14233b0d1f95a94bc60f46a61c1a3ed0303340008ef4a",
+      "manifest_digest": "185706448f8d70cc3114aba2b7c61f80466c22dba8ac31e1fdc5bd77dd687737",
       "packages": 125
     },
     {
       "role": "anonymizer",
       "artifact": "sbom/runtime/anonymizer-linux-amd64.spdx.json",
-      "sha256": "709ee8f1aee249d10408d126b9dc850c4e72cbdb4a6754f2e1521ce4a0fd1603",
-      "image_id": "9f74213987efa910d085afb516623e60e6cd1b73b3a07a64e341f0c1103054bd",
-      "manifest_digest": "e9a7f2243b7dcdab7c0f5e94d02333d23315ee7706ee9e9fe65ef7d104c837f9",
+      "sha256": "fb34aef22c1338af22545b9572d9cf14949c5bcff60d23dc62a73b655f56c6f4",
+      "image_id": "fef0240572a8107cc98a93a894ea16943e2450c38443a33aa2bb85dac1f804f3",
+      "manifest_digest": "94e3714a62bfb1156e7c9be6468e9bcb0627985257352a07210485b9fc512fe8",
       "packages": 180
     }
   ],
   "sources": {
     ".dockerignore": "0a386c4e319b74842ce59f20a81caf2f86138292e30a1ac2e6e75e18bd16e5f8",
     "deploy/docker-compose.yml": "eb0d64e8cc0f41b4d88547de6bbcd1efb3bf085d6b3e67624eb5cc5d40b7ce29",
-    "services/gateway/Dockerfile": "8133c09d2b32878bc036fc8cedf381de158d46576ab65ac64250aa20f292c992",
+    "services/gateway/Dockerfile": "f54f70902b4cdca938a3b285c159327bde56b7bf44a3efc91df7a1265a3d8c30",
     "services/gateway/requirements.lock": "230b685d1c222b0bb59562ee046090debc4e75ef55a7c651819f5ae066042b59",
-    "services/evaluator/Dockerfile": "adb032a393577f2b87f891e7ad170eee0fa0e3b03cce99e28009acf7a6da1963",
+    "services/evaluator/Dockerfile": "69f04c221aa724b742511ae6e1ba71f63ddda52d52199b7c119ff4ea8ea7dd36",
     "services/evaluator/requirements.lock": "7c55a71d58bdc3587aff25f9d6fed9abf1b6b851fa4b0fe2c516f47ddb6a8af2",
-    "services/anonymizer/Dockerfile": "9f562b7330f8eee4f22e9955a8a672436e45d2171d0e95e421c80da137910ac9",
+    "services/anonymizer/Dockerfile": "fba7cc95464450228deb3718a56535066e9476efa1cfec14a850511590617d08",
     "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887"
   },
-  "inventory_evidence": "runs/2026-10-14-runtime-license-inventory.json"
+  "inventory_evidence": "runs/2026-11-19-runtime-license-inventory.json"
 }

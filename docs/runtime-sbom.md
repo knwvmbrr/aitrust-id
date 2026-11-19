@@ -1,8 +1,6 @@
 # Observed runtime SBOMs
 
-These are inspectable SPDX 2.3 inventories of the three actual Linux amd64 staging
-images. The gateway was rebuilt and rescanned on 2026-10-11 with Syft 1.54.1;
-the unchanged evaluator/redactor scans retain their 2026-10-10 attribution.
+These are inspectable SPDX 2.3 inventories of three actual Linux amd64 images freshly built and scanned with Syft 1.54.1 at source commit `002abe35c7a925708d95a4819c4da415f7384b78` on 19 November 2026 UTC (18 November local). These were isolated audit images; running staging services were neither stopped nor retagged. All original service IDs, images, configuration, PIDs, start times and health remained unchanged.
 They contain 424 package occurrences
 across the images (shared packages are counted in each image), plus one image
 subject per document. No production data or host configuration was scanned.
@@ -11,7 +9,7 @@ subject per document. No production data or host configuration was scanned.
 - [Evaluator inventory](../sbom/runtime/evaluator-linux-amd64.spdx.json): 124 packages.
 - [Redactor inventory](../sbom/runtime/anonymizer-linux-amd64.spdx.json): 179 packages.
 - [Identity manifest](../eval/dependencies/runtime-sbom.json).
-- [Actual scan and missing-license results](../runs/2026-10-11-runtime-license-inventory.json).
+- [Actual scan and missing-license results](../runs/2026-11-19-runtime-license-inventory.json).
 
 The scanner archive was checked against the upstream release checksum and GitHub
 asset digest before execution. The archive also passed
@@ -68,3 +66,11 @@ Upstream sources: [Syft source scanning guide](https://oss.anchore.com/docs/guid
 [versioned release](https://github.com/anchore/syft/releases/tag/v1.54.1),
 [Sigstore verification](https://docs.sigstore.dev/cosign/verifying/verify/),
 [Open Source Definition](https://opensource.org/osd).
+
+## Before validating a container change
+
+Run `python3 scripts/verify-runtime-sbom.py` before expensive integration checks. A changed bound Dockerfile or package input requires an actual fresh image scan, even when the intended change is only filesystem permissions. Preserve historical scan receipts, check the actual new image and scanner identities, validate both inventory and SPDX contracts, then select the current observed inventory. Editing old hashes does not establish a new scan.
+
+[Current isolated execution and cleanup](../runs/2026-11-19-runtime-inventory-rescan.json) records the three fresh scans, archive and binary hashes, network-disabled scanning and unchanged staging observations. Package metadata is still not license clearance or a vulnerability assessment.
+
+After a new image inventory, refresh installed notices from those exact image IDs and verify the unchanged locked npm archives. In a separate candidate checkout, recollect native archive observations and replay selected asset plus nested-runtime notice checks against the current notice manifest. Preserve original observation dates for unchanged retained observations. Run `node site/scripts/prepare.mjs` and record changed public projections before building. Only then rerun the affected engineering checks and required CI. Notice collection and identity verification do not grant redistribution permission.

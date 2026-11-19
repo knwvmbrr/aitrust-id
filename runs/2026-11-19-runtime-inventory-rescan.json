@@ -1,0 +1,54 @@
+{
+  "pass": true,
+  "source_commit": "002abe35c7a925708d95a4819c4da415f7384b78",
+  "captured_at": "2026-11-19T03:29:30.609311+00:00",
+  "fresh_scans": 3,
+  "package_occurrences": 424,
+  "build_inputs": 27,
+  "sbom_sources": 8,
+  "actual_build_mode": "Podman layers; host build networking; linux/amd64; no service starts/stops",
+  "scanner_archive_sha256": "c069905b391cc4c20a5ba65ad5c10be2a7ba074f8ea6ad203e24d14e303dad47",
+  "scanner_binary_sha256": "dbf75864e7a7ff9e1fbf00552c31483f693188632a9f68f343cd7653dac513d6",
+  "scanner_network_disabled": true,
+  "both_current_validators_pass": true,
+  "public_artifact_targeted_private_marker_scan_clean": true,
+  "no_service_change": {
+    "original_staging_same_ids_images_configuration_started_at_pids_healthy": true,
+    "container_inventory_unchanged": true,
+    "temporary_images_removed": true,
+    "cleanup_errors": [],
+    "staging_services_stopped": false,
+    "production_images_changed": false
+  },
+  "images": [
+    {
+      "role": "gateway",
+      "packages": 121,
+      "missing_license_metadata": 7,
+      "image_id": "48fea6256b15b702ed33828517df427d6e7eb0c2bbc74d103876cfb137261d2c",
+      "spdx_sha256": "7e80adc314e7cf6c51bd44e6192b24fca52bd0354169cf0dcae1b16bac7a5ebc"
+    },
+    {
+      "role": "evaluator",
+      "packages": 124,
+      "missing_license_metadata": 7,
+      "image_id": "73d67518fe8bbe78a7c14233b0d1f95a94bc60f46a61c1a3ed0303340008ef4a",
+      "spdx_sha256": "305175f4e408496e4c13bc66d293bc9453123211306e056ad4050fbc4517678b"
+    },
+    {
+      "role": "anonymizer",
+      "packages": 179,
+      "missing_license_metadata": 19,
+      "image_id": "fef0240572a8107cc98a93a894ea16943e2450c38443a33aa2bb85dac1f804f3",
+      "spdx_sha256": "fb34aef22c1338af22545b9572d9cf14949c5bcff60d23dc62a73b655f56c6f4"
+    }
+  ],
+  "public_artifact_sha256": {
+    "proposed-runtime-sbom.json": "9a395779af6e3a1cd8be120c906ac5c5954e07b96e84a82287b9387c60da89b4",
+    "observed-inventory.json": "0b1505a4997f5eb131b627610f3d1567680004618e28656fcaa9d257ee328239",
+    "gateway.spdx.json": "7e80adc314e7cf6c51bd44e6192b24fca52bd0354169cf0dcae1b16bac7a5ebc",
+    "evaluator.spdx.json": "305175f4e408496e4c13bc66d293bc9453123211306e056ad4050fbc4517678b",
+    "anonymizer.spdx.json": "fb34aef22c1338af22545b9572d9cf14949c5bcff60d23dc62a73b655f56c6f4"
+  },
+  "scope": "Observed Linux amd64 runtime inventory. No license clearance, signed identity, vulnerability assessment or tag release approval."
+}

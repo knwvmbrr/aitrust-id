@@ -1,0 +1,48 @@
+{
+  "captured_at": "2026-11-19T03:45:30.735479+00:00",
+  "kind": "linked_notice_and_projection_preconditions",
+  "failed_executions": [
+    {
+      "capability": "protocol",
+      "pass": false,
+      "source_stable": true,
+      "failed_commands": [
+        {
+          "command": [
+            "{python}",
+            "scripts/verify-native-dependencies.py"
+          ],
+          "exit": 1,
+          "stdout_sha256": "205bdbbd8a0b93fb5b0faed0ca41348836375cbb6d8046bbafa00fdc0e2c9bda",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "capability": "website",
+      "pass": false,
+      "source_stable": true,
+      "failed_commands": [
+        {
+          "command": [
+            "node",
+            "scripts/verify-built-website.cjs"
+          ],
+          "exit": 1,
+          "stdout_sha256": "f98a4336f922168f07bcec93ab3728d004d9185fa38a2fccacd00fd9f4fdae84",
+          "stderr_sha256": "0494d00fda2e05ca5d3ae0f687bd7316620650a03601a5a33140fe2e05621939"
+        }
+      ]
+    }
+  ],
+  "observed_preconditions": [
+    "Old installed-notice image IDs and source bindings no longer match new actual runtime inventories",
+    "Changed public governance and decision projections require their own fresh change event"
+  ],
+  "repairs": [
+    "Collect actual installed notices from exact scanned images; replay locked archive/native/asset/nested observations",
+    "Prepare and record generated public projections before build"
+  ],
+  "weakened_checks": false,
+  "independent_accuracy_evidence": false
+}

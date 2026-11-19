@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-033003-retain-source-bound-container-inventory-refusal-70ec7dca",
+  "recorded_at": "2026-11-19T03:30:03.396181+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "002abe35c7a925708d95a4819c4da415f7384b78",
+  "changed": "Retained the three required CI refusals that share one stale observed-container inventory cause after the actual Dockerfile repair.",
+  "proves": "Inventory identity checks refused changed build inputs; a real fresh Linux image scan was commissioned, rather than rebinding old scans.",
+  "limits": "Publication remains blocked until the current scans and required checks pass; no license, vulnerability, signed release or tag-accuracy clearance.",
+  "scope_ids": [
+    "F-057",
+    "F-150",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    "runs/2026-11-18-container-inventory-ci-blocker.json": "9f2f218c9249783b041e7b2589b6137ae0df43af5ec0636fc15c7f3a4c493b05"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-container-inventory-ci-blocker.json",
+      "sha256": "9f2f218c9249783b041e7b2589b6137ae0df43af5ec0636fc15c7f3a4c493b05"
+    }
+  ],
+  "checks": []
+}
