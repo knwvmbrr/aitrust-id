@@ -1,33 +1,17 @@
 // Build current source, then check that exact build on an owned ephemeral server.
-const fs=require('node:fs'),path=require('node:path'),http=require('node:http');
+const path=require('node:path');
 const {BuildPhases}=require('./website-build-phases.cjs');
 const {writeReport}=require('./execution-report.cjs');
-const {parseHeaders,headersFor}=require('./static-headers.cjs');
+const {startSiteFixture}=require('./site-fixture-server.cjs');
 const root=path.resolve(__dirname,'..'),dist=path.join(root,'site/dist');
 const phases=new BuildPhases(root);
 const run=(name,command,args,env=process.env)=>phases.run(name,command,args,env);
 async function main(){
- await run('private-file-controls',process.execPath,['--test','tests/blind-review-files.cjs']);
+ await run('private-file-controls',process.execPath,['--test','tests/blind-review-files.cjs','tests/site-fixture-server.cjs']);
  await run('build',process.platform==='win32'?'npm.cmd':'npm',['run','build:site']);
- const rules=parseHeaders(fs.readFileSync(path.join(dist,'_headers'),'utf8'));
- const mime={'.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.wasm':'application/wasm','.woff2':'font/woff2','.txt':'text/plain','.md':'text/plain','.py':'text/plain'};
- const server=http.createServer((req,res)=>{
-  try{
-   if(req.method!=='GET'&&req.method!=='HEAD'){res.writeHead(405);res.end();return;}
-   const relative=decodeURIComponent(new URL(req.url,'http://127.0.0.1').pathname);
-   let file=path.resolve(dist,'.'+relative);
-   if(file!==dist&&!file.startsWith(dist+path.sep))throw Error('path');
-   if(fs.statSync(file).isDirectory())file=path.join(file,'index.html');
-   let current=file;
-   while(current!==dist){if(fs.lstatSync(current).isSymbolicLink())throw Error('symlink');current=path.dirname(current);}
-   if(!fs.statSync(file).isFile())throw Error('file');
-   res.writeHead(200,{'content-type':mime[path.extname(file)]||'application/octet-stream',...headersFor(rules,relative)});
-   if(req.method==='HEAD')res.end();else fs.createReadStream(file).on('error',()=>res.destroy()).pipe(res);
-  }catch{res.writeHead(404);res.end();}
- });
+ const fixture=await startSiteFixture({directory:dist});
  try{
-  await new Promise((resolve,reject)=>{server.once('error',reject);server.listen(0,'127.0.0.1',resolve);});
-  const env={...process.env,AITRUST_SITE_URL:'http://127.0.0.1:'+server.address().port};
+  const env={...process.env,AITRUST_SITE_URL:fixture.url};
   // Ignore a caller's stale external fixture URL. Both tools see this new build.
   await run('catalogue',process.execPath,['scripts/verify-site.cjs'],env);
   await run('performance',process.execPath,['scripts/verify-performance.cjs'],env);
@@ -36,7 +20,7 @@ async function main(){
   await run('mobile-payload',process.execPath,['scripts/verify-mobile-payload.cjs'],env);
  await run('feedback',process.execPath,['scripts/verify-research-feedback.cjs'],env);
  await run('policies',process.execPath,['scripts/verify-policies.cjs'],env);
- }finally{server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
+ }finally{await fixture.close();}
 }
 // Invalidate any previous success before starting even the first child.
 try{writeReport('output/verification/website-build-phases.json',phases.report());}

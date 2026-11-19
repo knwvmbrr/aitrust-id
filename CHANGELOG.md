@@ -18,6 +18,13 @@ Recorded 2026-11-19T16:37:16.865927+00:00 · Contributor: Codex · change
 - **Changed.** Represent an unavailable NF check observation count as JSON null instead of inventing measured zero; retain integer zero for a completed no-match check.
 - **Evidence.** 13 focused controls and 10 actual current macOS CLI commands distinguish completed zero, Unicode partial availability, one failed check, both failed checks and optional-method drift. The original misleading-zero reproduction is preserved. [Change record](./runs/changes/2026-11-19-163716-nf-unavailable-count-is-unknown-717b2024.json).
 - **Not claimed.** Targeted count semantics only; unrelated timeout controls and the full suite were not rerun. No tag, accuracy, original scope closure or human acceptance is claimed; prior full worker evidence remains historical.
+### 2026-11-19-164159-share-reviewed-static-fixture-0fc0ec52
+
+Recorded 2026-11-19T16:41:59.413341+00:00 · Contributor: Codex site fixture lane · change
+
+- **Changed.** Replaced the CI plain static server with a shared loopback fixture that applies the built reviewed headers, GET/HEAD and path/link refusals. The current-build controller uses the same module and cleanup; CI checks startup readiness and runs the focused fixture controls.
+- **Evidence.** Eight actual HTTP/CLI groups pass, workflow YAML and both caller paths are checked, and the actual HP integration passed against the shared server under ordinary CSP, including real PS and MT after HP child failure. Source and actual served artifact hashes are recorded; peer security replay found no blocker. [Change record](./runs/changes/2026-11-19-164159-share-reviewed-static-fixture-0fc0ec52.json).
+- **Not claimed.** No CSP assertion or accessibility-probe weakening, product/core changes, broad suite, deployment, independent tag accuracy or full PR-head publication-byte claim. PM owns new source bindings and actual CI rerun; fixture assumes an owned frozen build.
 
 
 ### 2026-11-19-162422-tag-bots-current-engineering-verified-6a00427c
