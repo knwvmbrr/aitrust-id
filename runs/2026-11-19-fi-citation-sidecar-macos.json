@@ -1,0 +1,201 @@
+{
+  "schema_version": 1,
+  "component": "FI caller-declared local citation sidecar",
+  "recorded_at": "2026-11-19T08:14:47.092531+00:00",
+  "implemented_by": "Codex",
+  "base_commit": "c088bc6e60c17dc14410b14d4849a8d6f99e4ecf",
+  "platform": "Darwin",
+  "python_version": "3.13.0",
+  "stdlib_only_cli": true,
+  "isolated_python_flags": [
+    "-I",
+    "-S",
+    "-B"
+  ],
+  "minimal_environment": true,
+  "synthetic_only": true,
+  "source_sha256": {
+    "tools/citation_resolution.py": "6d7bf66d62ce68fc6c76a04c31258ed5a2c2b7fe517b7c65354b9187f36d0378",
+    "scripts/citation-resolution.py": "96e4c17fc830f7bb374d6d8faa38624b3ce0fc1c0226508cad041204afd6e98e",
+    "tests/test_citation_resolution.py": "c9a395f90ca6e96ba7fac3272deb7e8bea0db986cfd6666f049654f8353c1ea2",
+    "docs/fi-citation-sidecar.md": "c7a81087180ecc9e28a3a39df8038c83939ff4445d3acc41c5029ef25a8e5cad",
+    "docs/fi-citation-sidecar-plan.md": "738a5f40ef0a4ffbce531dbf8e5cfa209b583019fe79175b4e25213f2acd1ee8",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "tools/quantitative_observations.py": "7579fb31e87efb786587bc982fe7074850d4fee79235557c60b341b89dc9f90c",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec"
+  },
+  "focused_tests": {
+    "final_passed": 86,
+    "failures": 0,
+    "skipped": 0,
+    "elapsed_seconds": 0.75,
+    "earlier_candidate_pass_counts": [
+      79,
+      85
+    ]
+  },
+  "actual_cli": {
+    "passed": 15,
+    "failed": 0,
+    "controls": [
+      {
+        "name": "prepare",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "passed": true,
+        "elapsed_seconds": 0.047,
+        "stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "check_three_states",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "passed": true,
+        "elapsed_seconds": 0.05,
+        "stdout_sha256": "77df5c352e3b32e04e8c48d275ff39ee897ebc114030ed2412af012cd6bf4d5d",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "private_details",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "passed": true,
+        "elapsed_seconds": 0.061,
+        "stdout_sha256": "751dce8272814aae6594f2d53e7b2d86b47bfdcbc92eb032de2654facc04ea2b",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "existing_report_refusal",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "passed": true,
+        "elapsed_seconds": 0.042,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "existing_sidecar_refusal",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "passed": true,
+        "elapsed_seconds": 0.042,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "changed_subject_refusal",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "passed": true,
+        "elapsed_seconds": 0.043,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "changed_valid_corpus_refusal",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "passed": true,
+        "elapsed_seconds": 0.042,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "document_binding_refusal",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "passed": true,
+        "elapsed_seconds": 0.042,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "missing_document_refusal",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "passed": true,
+        "elapsed_seconds": 0.043,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "malformed_argument_refusal",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "passed": true,
+        "elapsed_seconds": 0.041,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "linked_subject_refusal",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "passed": true,
+        "elapsed_seconds": 0.042,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "fifo_subject_refusal",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "passed": true,
+        "elapsed_seconds": 0.042,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "public_subject_refusal",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "passed": true,
+        "elapsed_seconds": 0.042,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "linked_output_refusal",
+        "exit_code": 2,
+        "expected_exit_code": 2,
+        "passed": true,
+        "elapsed_seconds": 0.042,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "independent_quantitative_cli",
+        "exit_code": 0,
+        "expected_exit_code": 0,
+        "passed": true,
+        "elapsed_seconds": 0.04,
+        "stdout_sha256": "5cb10004a98066cfa662e675a721d14f8b7591110f304fdddeaf5d88940f6644",
+        "stderr_bytes": 0
+      }
+    ],
+    "all_three_states_demonstrated": true,
+    "corpus_v1_bytes_unchanged": true,
+    "output_mode_0600": true,
+    "private_text_absent": true,
+    "no_overwrite_preserved": true,
+    "private_raw_evidence_retained": true
+  },
+  "claims": {
+    "full_T_FI_completion": false,
+    "tag_issuance": false,
+    "semantic_source_support": false,
+    "source_authenticity_or_freshness": false,
+    "independent_accuracy": false,
+    "human_acceptance": false,
+    "linux_execution": false,
+    "kernel_network_isolation_measured": false
+  },
+  "remaining": [
+    "Independent contradiction-versus-missing-evidence labels and category error rates",
+    "Accepted FI mapping, supported integration and required human operation",
+    "Other citation grammars, source lookup and contextual interpretation remain unsupported"
+  ]
+}

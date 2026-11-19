@@ -19,6 +19,14 @@ Recorded 2026-11-19T08:12:36.084343+00:00 · Contributor: Codex · change
 - **Evidence.** Eleven required engineering CI checks passed. All 313 public artifacts match the reviewed build at both delivery origins (626 matches); live ordinary-CSP checks pass both input-bound methods, privacy, enlarged-text layout and missing-MT-chunk isolation from PS. [Change record](./runs/changes/2026-11-19-081236-record-live-independent-mt-wording-preview-5eb800bf.json).
 - **Not claimed.** The separate accuracy/accessibility release gate still refuses release. No MT tag, independent accuracy, physical iPhone/VoiceOver acceptance, full dependency clearance or original requirement closure. All 202 original IDs and 132 complete/70 open remain.
 
+### 2026-11-19-081515-fi-citation-sidecar-60c2fd3b
+
+Recorded 2026-11-19T08:15:15.674664+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a separate offline caller-declared numbered-citation sidecar and stdlib CLI, preserving corpus v1 and existing tag routes.
+- **Evidence.** 86 focused controls and 15 actual isolated-Python macOS CLI controls verify exact NFC and document bindings, separate local-resolution states, private exports, no overwrite, refusal and independent-route operation. [Change record](./runs/changes/2026-11-19-081515-fi-citation-sidecar-60c2fd3b.json).
+- **Not claimed.** Literal marker associations do not establish semantic source support, authenticity, freshness or independent accuracy. No FI tag, original scope closure, Linux execution or human acceptance is claimed.
+
 
 ### 2026-11-19-080100-distinguish-mt-wording-preview-in-seo-regression-88b4a02f
 
