@@ -77,7 +77,8 @@ python3 -B scripts/verify-rolldown-cohort.py \
 ```
 
 Each archive is capped at 64 MiB, each member at 32 MiB, and expanded archive
-content at 300 MiB. Members are read in memory, never extracted; absolute paths,
+content at 300 MiB, including decompressed tar headers and PAX metadata before
+`tarfile` processes them. Members are read in memory, never extracted; absolute paths,
 traversal, duplicate names and unexpected links/devices are refused. The one exact
 upstream test-fixture symlink is counted but never followed. Malformed/private CLI
 arguments receive a fixed refusal without echo. Normal verification does not fetch

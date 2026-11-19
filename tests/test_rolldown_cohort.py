@@ -8,6 +8,7 @@ import sys
 import tarfile
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from tools import rolldown_cohort as review
 
@@ -91,6 +92,15 @@ class RolldownCohortTests(unittest.TestCase):
                         if kind == 'link': item.type = tarfile.SYMTYPE; item.linkname = '/private'
                         archive.addfile(item)
                 with self.assertRaises(ValueError): review.members(stream.getvalue())
+
+    def test_pax_metadata_is_bounded_before_tar_member_processing(self):
+        stream = io.BytesIO()
+        with tarfile.open(fileobj=stream, mode='w:gz', format=tarfile.PAX_FORMAT) as archive:
+            item = tarfile.TarInfo('package/notice'); item.size = 1
+            item.pax_headers = {'comment': 'x' * 200000}
+            archive.addfile(item, io.BytesIO(b'x'))
+        with patch.object(review, 'MAX_TOTAL', 1024):
+            with self.assertRaises(ValueError): review.members(stream.getvalue())
 
     def test_cli_refusal_has_no_private_argument_echo(self):
         canary = 'AUTHORED_PRIVATE_ARG_CANARY'

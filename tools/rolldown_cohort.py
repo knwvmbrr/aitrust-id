@@ -2,6 +2,7 @@
 import base64
 from datetime import datetime, timezone
 import hashlib
+import gzip
 import io
 import json
 from pathlib import Path
@@ -69,12 +70,28 @@ def read(path, limit=MAX_ARCHIVE):
     return raw
 
 
+class ExpandedReader:
+    """Bound decompressed tar bytes, including metadata before TarInfo exists."""
+    def __init__(self, handle):
+        self.handle = handle
+        self.consumed = 0
+
+    def read(self, size=-1):
+        remaining = MAX_TOTAL - self.consumed
+        requested = remaining + 1 if size < 0 else min(size, remaining + 1)
+        data = self.handle.read(requested)
+        self.consumed += len(data)
+        need(self.consumed <= MAX_TOTAL)
+        return data
+
+
 def members(raw, source=False):
     need(type(raw) is bytes and 0 < len(raw) <= MAX_ARCHIVE)
     result = {}; total = 0
     source_prefix = 'rolldown-' + COMMIT + '/'
     link = source_prefix + 'packages/rolldown/tests/fixtures/builtin-plugin/import-glob/follow-symlinks/linked/my-lib'
-    with tarfile.open(fileobj=io.BytesIO(raw), mode='r|gz') as archive:
+    with gzip.GzipFile(fileobj=io.BytesIO(raw)) as expanded, \
+            tarfile.open(fileobj=ExpandedReader(expanded), mode='r|') as archive:
         for entry in archive:
             name = entry.name
             need(type(name) is str and 0 < len(name) <= 512 and not name.startswith('/')

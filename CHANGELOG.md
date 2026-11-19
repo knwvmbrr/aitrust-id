@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-060942-rolldown-pax-parser-bound-15aff49f
+
+Recorded 2026-11-19T06:09:42.623264+00:00 · Contributor: Codex dependency engineering lane · change
+
+- **Changed.** Cap decompressed Rolldown tar bytes before PAX and extended metadata parsing, preserving original archive/notice observations.
+- **Evidence.** 12 focused tests and actual replay of the same 16 package archives plus pinned source pass; oversized inert PAX metadata refuses before member processing. Source hashes stayed stable during current CLI replay. [Change record](./runs/changes/2026-11-19-060942-rolldown-pax-parser-bound-15aff49f.json).
+- **Not claimed.** Bounded evidence only; native compiler/transitive/platform/source-offer obligations and all clearance flags remain unresolved. Prior receipts preserved.
+
+
 ### 2026-11-19-055604-rolldown-source-notice-cohort-618cc86f
 
 Recorded 2026-11-19T05:56:04.492828+00:00 · Contributor: Codex dependency engineering lane · change
