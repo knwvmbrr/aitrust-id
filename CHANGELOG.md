@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-031923-select-current-plugin-runtime-and-boundary-truth-75364495
+
+Recorded 2026-11-19T03:19:23.319417+00:00 · Contributor: Codex · change
+
+- **Changed.** Selected passing current-source evidence for all five engineering capabilities, actual repaired runtime and personal-route boundaries; updated state with owner-selected trust direction and review artifacts.
+- **Evidence.** Fourteen extension groups and reviewed route boundaries pass with current 26 service and fifteen replay controls; accountability chronology passes. [Change record](./runs/changes/2026-11-19-031923-select-current-plugin-runtime-and-boundary-truth-75364495.json).
+- **Not claimed.** Protected publication pending; original requirements remain132 complete and70 open, zero full independently validated tag releases. Trust documents remain unsigned and unfiled.
+
+
+### 2026-11-19-031753-current-source-plugin-runtime-website-evidence-02d8e6db
+
+Recorded 2026-11-19T03:17:53.024433+00:00 · Contributor: Codex · change
+
+- **Changed.** Retained passing current-source PS, PII, protocol and website engineering executions after new clean-setup receipt binding and owner legal direction.
+- **Evidence.** Seven PS, six privacy, 41 protocol and 32 website command groups passed with source stable; detector accuracy and human acceptance are separate. [Change record](./runs/changes/2026-11-19-031753-current-source-plugin-runtime-website-evidence-02d8e6db.json).
+- **Not claimed.** Synthetic engineering checks only; independent release evidence, physical iPhone acceptance, entity execution and original 70 open requirements unchanged.
+
+
+### 2026-11-19-031508-trust-review-artifacts-9bc11774
+
+Recorded 2026-11-19T03:15:08.338736+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated the owner review bundle and three Word/PDF drafts for the selected trust-owned manager-managed LLC direction.
+- **Evidence.** All 28 rendered document pages visually reviewed; unchanged pages matched by exact rendered PNG identity and current artifact hashes retained. [Change record](./runs/changes/2026-11-19-031508-trust-review-artifacts-9bc11774.json).
+- **Not claimed.** Unsigned, unfiled drafts; actual trust instrument, legal authority and tax fit still require private review. No full requirement closed.
+
+
+### 2026-11-19-031348-bind-current-setup-proof-and-align-trust-forms-a50c5cba
+
+Recorded 2026-11-19T03:13:48.255282+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the new actual clean-setup receipt in protocol revalidation and aligned current operating formation instructions with owner-selected trust-owned manager-managed LLC.
+- **Evidence.** Fourteen source-binding controls pass; older nonprofit form instructions are expressly excluded from the selected filing route. [Change record](./runs/changes/2026-11-19-031348-bind-current-setup-proof-and-align-trust-forms-a50c5cba.json).
+- **Not claimed.** No formation, transfer, signature, independent accuracy or new full requirement closure.
+
+
+### 2026-11-19-031043-trust-owned-direction-and-proven-linux-repair-cfd67b79
+
+Recorded 2026-11-19T03:10:43.249443+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded owner-selected revocable-trust sole ownership and separate manager role, preserved presentation-layer all-screen objective with explicit platform acceptance, and integrated actual Docker repair plus current clean Linux setup evidence.
+- **Evidence.** Fresh Docker images showed directory mode 0444 before correction, then passed 26 service and 15 replay controls. Current 27-input Podman installation passed ten failure controls and restored identical original staging. [Change record](./runs/changes/2026-11-19-031043-trust-owned-direction-and-proven-linux-repair-cfd67b79.json).
+- **Not claimed.** Trust identity, instrument authority, filing, signatures, transfers, independent tag accuracy and physical-device acceptance remain unverified; original open requirements remain 70.
+
+
 ### 2026-11-19-025701-retain-import-candidate-revalidation-refusals-59cc8569
 
 Recorded 2026-11-19T02:57:01.800930+00:00 · Contributor: Codex · change

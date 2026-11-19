@@ -14,8 +14,7 @@ adding an empty initializer would leave a non-traversable directory unreadable.
 
 The local nonroot import control reproduces the exact Uvicorn message with
 directory mode 0444. Mode 0555 permits loading the same factory and retains
-the original module bytes and file mode 0444. The hosted receipt does not
-include filesystem modes, so its exact directory mode remains unobserved.
+the original module bytes and file mode 0444. The original failed-startup receipt did not include filesystem modes. A fresh hosted build at commit `9e1813d2137ec061a724f6997f286fd8ce1faeb5` subsequently observed directory mode 0444 in all three images before correction. Both hosted jobs passed after correction: three healthy services, 26 service controls and 15 replay controls. Development observations retain their measured misses/extra predictions; this is not independent accuracy acceptance.
 
 After each protocol copy, print only that directory’s mode to the build log,
 then explicitly set the directory to 0555. After

@@ -179,3 +179,11 @@ Sequence: finish current source-bound iOS Share reliability and release gates in
 Per increment retain exact source/model/fixture identity, command, environment, actual result, time/resource measures, failed attempts, cleanup, public-claim scope and next fix. Native UI acceptance requires the complete current producer, exact workflows, source snapshots and owned cleanup; a separately recovered passing summary is not a replacement. Physical devices, independent labels and outside-user accessibility retain their own owners.
 
 This plan itself closes no original requirement, changes no completion percentage, and claims no new operational format or tag.
+
+## Owner clarification on presentation and coverage
+
+On 18 November 2026 Michael reaffirmed that AI Trust ID belongs at the presentation layer: small independent tags alongside what a person sees, expanding toward text, code, images, diagrams, video and other visible content across supported screens. The website and app are access routes to that broader product. This direction does not replace the independent job and release gate of any tag.
+
+Capture, inference and presentation remain separate. Request only the content and OS capability needed for the selected check. Screenshots and OCR are derived observations, not the original file or its provenance. Inaccessible, protected, secure or unsupported surfaces produce an explicit unsupported state; do not bypass sandboxing, DRM, password fields or user consent to pursue coverage.
+
+Acceptance for each new surface requires original actions and scrolling to remain usable, input and focus preserved, pointer hit-testing restricted to actual tag controls, no modal without user action, stale-result removal, keyboard and screen-reader operation, bounded worker cost and separate timeout/crash tests that retain completed sibling results. A presentation-layer architecture reduces interference; it cannot guarantee that the OS, a host application or shared hardware will never impede the tool. Existing platform restrictions and failure disclosures remain part of the contract.

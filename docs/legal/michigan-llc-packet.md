@@ -1,8 +1,8 @@
 # Michigan LLC formation and operating documents
 
-Prepared for Michael by Codex on 18 November 2026. Draft 0.1. Nothing is filed or signed.
+Prepared for Michael by Codex on 18 November 2026. Draft 0.2. Owner direction recorded; nothing is filed, transferred or signed.
 
-This packet prepares a **Michigan domestic, single-member, member-managed LLC** as a proposed commercial operating structure. Michael must confirm that structure and ownership before execution. It does not form a nonprofit, create a foundation subsidiary, establish tax exemption or operate a certification program. A future standards organization would require its own decisions and documents.
+This packet prepares a **Michigan domestic, single-member, manager-managed LLC**, with Michael’s existing revocable living trust intended to hold 100 percent of the membership interest and Michael R. McGuire as initial manager. Michael confirmed that he is the current trustee. Trust identity, authority and execution remain to be verified privately. It does not form a nonprofit, create a foundation subsidiary, establish tax exemption or operate a certification program. A future standards organization would require its own decisions and documents.
 
 ## Why this replaces the wrong starting point
 
@@ -21,6 +21,20 @@ Before filing, complete legal name, resident agent and Michigan registered offic
 
 The current statute sets ordinary Articles of Organization filing at **$50**. Annual statement fees are **$25 through September 30, 2027**, with a statutory change to **$15 after that date**; recheck before payment [M2]. Optional resident-agent services, expedited processing, local permits and professional advice are additional and not purchased by this packet.
 
+
+---
+# Trust ownership verification before execution
+
+Michael selected the existing revocable living trust as the intended sole owner and confirmed he is its current trustee. This supersedes the earlier personal-owner option. Founder is a product role; trustee and Company Manager are distinct legal capacities. No charitable foundation is selected.
+
+Obtain the exact trust name, operative date and amendments, governing law, current trustee identity, cotrustee signing requirements and relevant powers privately. Confirm authority to acquire and hold an LLC interest, contribute assets, appoint a manager, transfer or sell the interest and make distributions. If Michigan law applies, MCL 700.7913 permits a certificate of trust without disclosing dispositive terms; specific authority excerpts may also be required [M8]. This packet is not that sworn certificate.
+
+Decide with counsel whether the Member’s title should name the trustee in that capacity for the trust, and use the same approved title in the agreement, capital ledger, bank and transfer documents. Trust beneficiaries, private addresses, tax identifiers and the full trust instrument do not belong in the public repository.
+
+If the LLC has not been formed, document initial membership for the trust through the proper trustee capacity. If an individual already holds an interest, use a reviewed assignment and admission/record update where required. Neither this direction nor an Articles filing transfers existing IP, domains, contracts or bank balances; each needs its own lawful treatment.
+
+Tax classification depends on the actual trust and LLC elections. Do not assume every revocable trust has identical grantor reporting, EIN requirements or post-death treatment [M11]. A revocable trust is not an automatic creditor shield: Michigan law generally subjects its property to the settlor’s creditors during life [M10]. Transfer flexibility remains subject to fiduciary duties, contracts, law and tax consequences.
+
 ---
 # Formation instructions and Articles worksheet
 
@@ -34,7 +48,7 @@ Use the current official Michigan **CSCL/CD 700 Articles of Organization**, not 
 
 **Resident agent:** _____________________________. Confirm eligibility and actual consent to serve. **Michigan registered office street address:** ______________________________. Mailing address if different: _______________________. A registered office and resident agent must be maintained in Michigan [M3]. Do not substitute a random address or publish someone's residence without an informed choice.
 
-**Management:** Proposed member-managed. Keep Article V consistent with that choice. Michigan's default is member management unless the Articles specify managers [M4]. Do not select manager management in the filing while signing a member-managed agreement.
+**Management:** Intended manager-managed, with Michael R. McGuire as initial manager. Article V must expressly select management by managers; otherwise Michigan’s statutory default is member management [M4]. Keep the filed Articles, agreement and bank authority consistent.
 
 **Organizer:** ____________________. Organizer contact and actual signature: ____________________. **Requested effective date:** ____________________. Use the form's effective-date rules; do not backdate.
 
@@ -57,7 +71,7 @@ The undersigned sole member adopts this Operating Agreement for ________________
 
 ## 2 Sole member and interest
 
-The proposed sole member is **Michael R. McGuire**, subject to his confirmation and signature. If adopted, he holds 100 percent of the membership interest, as recorded in Schedule A. No other person or AI system receives an interest, office or authority merely by contributing code, advising, using the product or appearing in a project role list. If another owner is intended, do not use this agreement without revising the ownership and governance terms.
+The intended sole membership interest is held for Michael’s existing revocable living trust, with the exact trust name, date and legally appropriate trustee capacity completed in Schedule A. Michael R. McGuire is the owner-confirmed current trustee and proposed initial manager. Confirm his power to acquire and hold this interest and appoint the manager under the operative trust documents [M8–M9]. No AI tool, adviser or contributor receives equity or authority merely by participating.
 
 ## 3 Purpose and operating commitments
 
@@ -74,7 +88,7 @@ The registered office and resident agent are those in the accepted Articles or a
 
 ## 5 Management and authority
 
-The Company is member-managed, consistent with its Articles. The Member directs ordinary operations and may sign Company contracts in the Company's exact legal name and his capacity as Member. A contractor, employee, AI tool or account administrator has only the authority specifically delegated in writing. Access credentials do not confer authority to borrow, transfer IP, admit members or sign legal representations.
+The Company is manager-managed, consistent with its Articles. The sole Member, acting through the authorized trustee, appoints Michael R. McGuire as initial Manager. The Manager directs ordinary operations and signs ordinary Company contracts in the Company’s legal name as Manager. The trustee exercises reserved ownership powers in the documented trustee capacity. Keep those capacities distinct even when the same person holds both. Contractors, employees and AI tools have only specifically delegated authority.
 
 The Member's written approval is required for a new owner, change of tax election, amendment, material borrowing or guarantee, sale of substantially all assets, change of management, merger, dissolution, related-party transaction or material IP transfer. Record the decision and supporting information. These internal restrictions do not purport to defeat third-party rights arising under applicable agency law.
 
@@ -86,7 +100,7 @@ Maintain separate Company bank accounts and books. Do not commingle Company and 
 
 ## 7 Allocations distributions and taxes
 
-Subject to applicable law and any valid tax election, Company economic results belong to the sole Member. Distributions occur only as authorized by the Member and permitted by applicable law after considering liabilities, taxes and operating needs. Do not distribute assets needed to satisfy lawful obligations.
+Subject to applicable law and any valid tax election, Company economic results belong to the sole Member for the trust. Pay authorized distributions to the legally appropriate trust account or recipient recorded by the trustee, with an accurate accounting trail. A personal payment to Michael requires its own lawful basis and tax treatment; his manager role does not make him the personal member. Do not distribute assets needed to satisfy lawful obligations.
 
 Have a tax professional confirm federal and state classification, filings, elections, estimated payments, payroll and sales/use-tax obligations for the actual activity. This Agreement makes no S-corporation or other tax election and promises no tax savings. Keep supporting records and the accepted EIN notice privately. A single-member LLC does not automatically become tax exempt.
 
@@ -109,11 +123,11 @@ New contractor work needs a signed agreement specifying scope, payment, ownershi
 
 ## 11 Transfers and new members
 
-The Member may transfer interests only through a lawful written instrument, with tax, contractual and governance consequences reviewed and Company records updated. No additional member is admitted without written admission and an amended agreement addressing multiple owners. A purported transfer of an economic interest is not automatically admission as a managing member. No investor rights, vesting or buy-sell price are invented here.
+The authorized trustee may transfer the membership interest only as permitted by the trust, applicable law and relevant contracts, using a lawful written instrument and updated Company records. Reserved Member approval is required. An economic assignment alone does not necessarily admit a new member or appoint a manager. No additional member is admitted without written admission and an amended agreement. No investor rights, vesting or sale price are invented here.
 
 ## 12 Death incapacity and continuity
 
-Record an actual estate/continuity plan and designated contact privately in Schedule C. Do not assume a family member, executor or agent automatically becomes the managing member. Admission, lawful representation and continuation follow applicable law and valid documents. Review the plan with estate counsel so it addresses incapacity, ownership and timely continuation. No unsigned designation in this packet grants power of attorney or authority over credentials.
+Record trustee succession and manager succession separately in Schedule C. The operative trust governs trustee replacement; the authorized trustee exercises the Member’s appointment powers under this agreement. A successor trustee does not automatically become Company Manager. Obtain evidence of authority and record any appointment, banking and access changes. No blank designation grants authority over the trust, Company or credentials.
 
 ## 13 Dissolution and winding up
 
@@ -129,7 +143,13 @@ These schedules are part of the Agreement only when actually completed and adopt
 
 Company exact legal name and entity number: ___________________________
 
-Sole Member legal name: __________________ Proposed interest: 100 percent
+Trust exact legal name and operative date: ___________________________
+
+Sole Member title and trustee capacity: ______________ Interest: 100 percent
+
+Trustee identity authority certificate and date reviewed: ______________
+
+Initial Manager: Michael R. McGuire. Appointment date: ________________
 
 Member contact and private address: ___________________________________
 
@@ -159,7 +179,7 @@ Company acceptance and effective date: _________________________________
 
 Private contact and actual authority document: _________________________
 
-Estate incapacity and membership-continuation review: __________________
+Trustee succession and separate manager appointment review: __________
 
 Recovery custodian access procedure and last exercise: ________________
 
@@ -169,7 +189,11 @@ No appointed successor or completed recovery is implied by a blank field.
 
 Amendments require the Member's actual written approval and any required filing. Invalid provisions are severed only to the extent lawful without rewriting the essential agreed arrangement. Mandatory law prevails. This Agreement includes its completed schedules and may be executed in lawful counterparts. No AI-generated name, blank line or draft timestamp is a signature.
 
-Member signature: ____________________ Printed name: __________________
+Authorized trustee signature for sole Member: ________________________
+
+Printed trustee name capacity and trust: ______________________________
+
+Manager acceptance signature and date: ________________________________
 
 Actual execution date: ________________ Company effective date: ________
 
@@ -182,7 +206,7 @@ The undersigned sole member of ____________________, LLC, Michigan entity number
 
 1. Confirm the accepted Articles and actual effective date, retain the filed copy and approve the completed Operating Agreement and its schedules.
 2. Confirm the actual ownership and initial capital record. No additional owner or foundation ownership is created by this action.
-3. Authorize the Member to obtain the Company's EIN directly from the IRS, maintain private tax information and consult a tax professional before making an election.
+3. Appoint Michael R. McGuire as initial Manager. Authorize the Manager to coordinate the Company’s IRS EIN application using the correct responsible party and tax-owner information confirmed privately. No tax election or trust tax classification is inferred.
 4. Authorize separate business banking at the institution selected by the Member. Actual authorized signer and capacity: ____________________. Bank-requested resolutions or forms must be reviewed separately. This action does not authorize a personal guarantee, credit facility or unrelated transfer.
 5. Authorize the documented asset licenses or transfers listed in Schedule B only when the actual rights holder signs and any necessary consent is obtained. Do not declare assets owned from an unsigned inventory.
 6. Review existing individual contracts and provider accounts for lawful assignment, novation or replacement. Reissue public Terms with the verified Company identity and effective date only when operation actually transfers; do not erase prior operator responsibilities.
@@ -193,9 +217,9 @@ Attachments and exact approved versions: ______________________________
 
 Exceptions and additional decisions: __________________________________
 
-Sole Member signature: _______________________________________________
+Authorized trustee signature for sole Member: ________________________
 
-Printed name and actual signing date: _________________________________
+Printed name trust capacity and actual signing date: __________________
 
 Store the signed original privately and publish only an authorized redacted summary where appropriate.
 
@@ -248,5 +272,13 @@ M6. Michigan LARA Corporations Division FAQ and license distinction. https://www
 State License Search. https://www.michigan.gov/som/government/state-license-search
 
 M7. FinCEN current BOI guidance. https://www.fincen.gov/boi
+
+M8. Michigan certificate of trust, MCL 700.7913. https://legislature.mi.gov/Laws/MCL?objectName=mcl-700-7913
+
+M9. Michigan LLC persons and operating agreement, MCL 450.4102. https://legislature.mi.gov/Laws/MCL?objectName=mcl-450-4102
+
+M10. Revocable trust and settlor creditors, MCL 700.7506. https://legislature.mi.gov/Laws/MCL?objectName=mcl-700-7506
+
+M11. IRS Form 1041 instructions and grantor trust reporting. https://www.irs.gov/instructions/i1041
 
 Prepared by Codex for owner and qualified legal/tax review. This set supplies proposed formation and operating documents, not an executed entity or a conclusion that the chosen structure is optimal. Confirm the business choices and complete every execution field before signing. The separate legal and operations packet contains the contributor, reviewer, research and community drafts.

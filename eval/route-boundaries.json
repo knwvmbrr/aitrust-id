@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "wire_version": "0.1.0",
-  "reviewed_at": "2026-11-19T02:38:52.040334+00:00",
+  "reviewed_at": "2026-11-19T03:18:55.957838+00:00",
   "reviewed_by": "Codex",
   "rules": [
     "X-01",
@@ -30,7 +30,7 @@
     ".github/workflows/metadata-storage.yml": "463541fe855c89c224859e6f9484a3e40f15c9ae2f749b40df559e05c644ae49",
     ".github/workflows/native-share.yml": "15d95c68fd6e6991a7c082899b76bfef6b6e7b33029c42ec8be86bc0daf0b8e4",
     ".github/workflows/organization-directory.yml": "7c1668060036cf388cb93d78f10e63d047b5e0d2daad39c66742a5ce3e3f9551",
-    ".github/workflows/redaction-development.yml": "f4cbc6806ab7b3dcc8e493954107fab7bed0362a37fdd3164425bed22d63a440",
+    ".github/workflows/redaction-development.yml": "00ec671ba5b8ccc156c39de1547b2dbcdc19700f3c663dd85bc7c72d154b746b",
     ".github/workflows/social-drafts.yml": "f67321c8ec9702f2662223307d67dd24f37b312325352d01d4b3931c33509d9f",
     ".github/workflows/tag-lab.yml": "8c37a4c485da50d4b42b47692f9b07beedb4c7947d80dd0b8b536fc130bf49f6",
     "communications/accounts.json": "464d3680d875c647b90ac4809297418721492843b3093225d1f564a4ede1b4de",
@@ -159,7 +159,7 @@
     "eval/methods/context-v6-eager.py": "b1c604ff79fd77bc5f08cf79f9161d70fd1cfe30b5dce40ee6149ba262c51ff6",
     "eval/requirements.lock": "d6020252107ce24dfc97f98976ee6a203f412078919cce0cd7027c806890e384",
     "eval/requirements.txt": "4cb4f554f9e4247e11edf4dfdccd084513efeed6cde4b5e19546ec017caf1c44",
-    "eval/revalidation.json": "19d6a569bd20919e954e0feecace9796f5c79a2ecda14dc3870ccb94307d56f2",
+    "eval/revalidation.json": "52250257fc72c1d66e2cf214422439a061a48dc080ec272c0dd8b5392325661d",
     "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
     "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
     "extension/src/adapters/README.md": "96f8b739ce57bf19ed5e6c168fdc20b8f57431fb6e2ee41d4b58c62a09d1c366",
@@ -762,7 +762,7 @@
     "scripts/verify-ios-archive.py": "b592ba4ee33dd40001fc2bb314d10bf8019c9ec6f010d024c6c21523c78d4ac8",
     "scripts/verify-ios-bundle.py": "0630ee511b7df755c1b0dd7ff0121f7681e6bab49fb9a0844db7ca920323673d",
     "scripts/verify-ios-share.py": "e7ca30c5def781bb7920e9c404ff9d9132dbc7385c2a817117a8d373263e2cc4",
-    "scripts/verify-local-setup-evidence.py": "1f809ea899789c06a32f84f85805c9f8e9a6a9b9e5aa29ffd1303018b0efbd85",
+    "scripts/verify-local-setup-evidence.py": "56e8e89f00a137bebb53058279bc23296cf238ceae7871dd1f6da97d3679e4c5",
     "scripts/verify-manifest-declarations.py": "1c41601c7f4a1601318e9e223d9caf23a0e1f78924c743a0a4ebcafb06c75e5d",
     "scripts/verify-manifest-inspection.py": "3cd7dbba35d7401ab13d7573d581eab38b5c61cdc49834b0983ee363dd9ed89e",
     "scripts/verify-metadata-store.py": "d4404c275855624608c75595530c027ee748040555002ed85cb61d1fdcc47279",
@@ -811,7 +811,7 @@
     "services/adjudicator/presentation.py": "2166006c60c49a81c3d65d883e0e781d8f65c5461481f1db85257c644fcba762",
     "services/adjudicator/tag_bridge.py": "210b35d4454ffa4df192a0bd16aa16d6ae338a1bb9de5bd00b505f8063b70b03",
     "services/adjudicator/verdict.py": "9a4238667c8831108046e229a75870cc1ea1afb9645806718c4aff4490ce7bf2",
-    "services/anonymizer/Dockerfile": "9f562b7330f8eee4f22e9955a8a672436e45d2171d0e95e421c80da137910ac9",
+    "services/anonymizer/Dockerfile": "fba7cc95464450228deb3718a56535066e9476efa1cfec14a850511590617d08",
     "services/anonymizer/app.py": "2df4afaeee0a2ca4ca2b2b0032f4b38e4b68e2e6c3e2f01361166f54291fd77c",
     "services/anonymizer/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
     "services/anonymizer/model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
@@ -819,13 +819,13 @@
     "services/anonymizer/requirements.freeze": "f141eec1fa11d21c9a9333a65a94a5d0f76df43e6a4da62dfdfe8b645b448b45",
     "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
     "services/anonymizer/requirements.txt": "7121535fd693a31d90cbb802f72e1476525191f5ee5565f2ed84d6231cfae39f",
-    "services/evaluator/Dockerfile": "adb032a393577f2b87f891e7ad170eee0fa0e3b03cce99e28009acf7a6da1963",
+    "services/evaluator/Dockerfile": "69f04c221aa724b742511ae6e1ba71f63ddda52d52199b7c119ff4ea8ea7dd36",
     "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
     "services/evaluator/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
     "services/evaluator/requirements.freeze": "dae667b6ec5dcf4ec14d7a5773114a2e10a3d6c7ee1dbcb74a07d6b07c1da114",
     "services/evaluator/requirements.lock": "7c55a71d58bdc3587aff25f9d6fed9abf1b6b851fa4b0fe2c516f47ddb6a8af2",
     "services/evaluator/requirements.txt": "bbad8257ab10f0390117019ced2df3c23f90676a2f1853ec8a8697cf9fd759de",
-    "services/gateway/Dockerfile": "8133c09d2b32878bc036fc8cedf381de158d46576ab65ac64250aa20f292c992",
+    "services/gateway/Dockerfile": "f54f70902b4cdca938a3b285c159327bde56b7bf44a3efc91df7a1265a3d8c30",
     "services/gateway/app.py": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456",
     "services/gateway/healthcheck.py": "315976f84ed54bd0de5c8a3b58bc73806a17de6ff16388528f79530ace1eaac3",
     "services/gateway/requirements.freeze": "22e3b3ca364559756fbe1ce88c8f07b8a11dd84b1261f6c58e6313b1548ef4ec",
@@ -866,7 +866,7 @@
     "site/scripts/prepare-offline.mjs": "59294d4a5670d42eb0f3aa0e9fc8d82f315312e867ea4cce5dd839bff2f86916",
     "site/scripts/prepare-performance.mjs": "67fd775c7f0387297202f5be901d4380f15fa89143e9349b5b1fdfe865d0d340",
     "site/scripts/prepare.mjs": "4c034764ad0cbfe98f13f73a977f3e0ce736c006e8254a8a3e5f267dd5077d8d",
-    "site/scripts/render-reference.mjs": "327ddfb493e5d5c0b2979d2542bafa8f6475d91c194fc011e1a248ef6f763290",
+    "site/scripts/render-reference.mjs": "28d3868c35d2a222e1023be03e9dfdd12f26ea32e1078cc7df052393789be471",
     "site/scripts/seo.mjs": "13596d28b2574b6a20fb5a8457da4085d7a2cfaa942d9dfcd1c8600d6441bdf0",
     "site/src/ScopeData.jsx": "e67edb907545613754d0b1790aeb5a832e8de3cdc6163286fdd971ae9fa86a9d",
     "site/src/catalog.js": "06348eb62645f1f9fe7ace3edfc385569bcb07c1def9dfbf25a03faf65ac8b27",
@@ -882,12 +882,12 @@
     "site/src/policies.js": "f06f3e69fce96674991eaa1bd9169226a39da2ee9d80c38b06152af25a8de26b",
     "site/src/presentation.js": "8f08d1839cd577e5480eda33d8b1ee73a5721ce2d1734b58f772cf998776599b",
     "site/src/ps-result.js": "f57c879cb04c0e5d3aeaf8799cf02e20ccabea0be4e41a0ac093e87c24125d9f",
-    "site/src/public-scope.json": "b8e3b50ff0d8e1a2e2239c17e9c49fd978c960c56cc5dc6fe040fb0e78c1e878",
+    "site/src/public-scope.json": "fe402e1b7ccf9073c63649ca83dfbc5a7948d002b21f6f9cc91081b12a3c893d",
     "site/src/redaction-performance-model.js": "e6a9c38b194fdecebf9ac52ae7676e6561d4c374160f60b0983129423314834d",
     "site/src/research-feedback.js": "8d817f13277cb1fa45259052d39d0bb20f167b495f2a11cb8c61f3ff5a70bc6c",
     "site/src/review-file.js": "4fc35e0eba06797740b71d11fb8a3b17f03182123415871fcbbebaa33f71f631",
     "site/src/scope-data.js": "a56cc5ee7ad7bec8de819500ffc890cf8e994449c72a26c1d3646eafd35f9660",
-    "site/src/scope-manifest.json": "00346ee4a5f12e95b7616353fc46c565352123001a9f69d574059ce0bbb56714",
+    "site/src/scope-manifest.json": "694459c1044b449f99fe33662392998e64f734763f8bfc9c7bbd1ae209faeda6",
     "site/src/share-record.js": "a3aa76f5e1cf7f18dd522c721f98bd17630f1098f8219bb7f98ccb4ff833363b",
     "site/src/styles.css": "5906f355d793aa4290334a19b0642421f4cde60a0f3804e202bd42a4ed4d354b",
     "site/src/tag-performance.json": "862f9b80bf5a571537a42d40e8aa902c2027b36164a61d426c115e43c1788cc3",
@@ -1130,8 +1130,8 @@
     "tools/tag_api.py": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e"
   },
   "engineering_receipts": {
-    "website": "runs/2026-11-18-agent-tools-website-current.json",
-    "extension": "runs/2026-11-18-agent-tools-extension.json"
+    "website": "runs/2026-11-18-agent-tools-publish-website.json",
+    "extension": "runs/2026-11-18-agent-tools-publish-extension.json"
   },
   "device_evidence": {
     "source_commit": "fc55eb4a913f7727f8e045573187f9a6e1701c48",
@@ -1150,7 +1150,7 @@
       "scripts/verify-device.cjs"
     ]
   },
-  "service_evidence": "runs/2026-11-12-hidden-email-hosted-service.json",
+  "service_evidence": "runs/2026-11-18-protocol-import-hosted-service.json",
   "registry_evidence": "runs/2026-10-10-registry-deferral-linux-corrected.json",
-  "replay_evidence": "runs/2026-11-12-hidden-email-hosted-replay.json"
+  "replay_evidence": "runs/2026-11-18-protocol-import-hosted-replay.json"
 }

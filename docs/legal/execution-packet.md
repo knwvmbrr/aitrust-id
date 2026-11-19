@@ -1,6 +1,6 @@
 # AI Trust ID legal and operations execution packet
 
-Prepared for Michael by Codex on 18 November 2026. Draft version 0.1.
+Prepared for Michael by Codex on 18 November 2026. Draft version 0.2.
 
 Use this packet to approve current operating rules, prepare specific agreements and identify the remaining filing decisions. It does not create a corporation, obtain tax exemption, register a mark or establish that a future service complies with every applicable law. The current public product policies remain separate, versioned documents. No signature or approval is supplied on Michael's behalf.
 
@@ -45,20 +45,21 @@ Store the signed original privately. Publish a redacted adoption summary only af
 ---
 # Entity formation and filing worksheet
 
-Draft decision worksheet. No option is selected by producing this packet. Historical nonprofit and LLC documents are alternatives with incompatible assumptions; do not execute both as one undifferentiated package.
+Owner direction recorded: use a Michigan single-member, manager-managed LLC with Michael’s existing revocable living trust as intended 100 percent owner and Michael as initial manager. Michael confirmed he is the current trustee. Exact trust identity and authority remain private execution prerequisites. Historical foundation-owned drafts are not selected; no entity has been formed or assets transferred.
 
-**Owner choices to record:** proposed legal name; state of formation; nonprofit or for-profit structure; intended activities and budget; ownership or statutory membership; actual directors and officers; compensation objectives; treatment of certification and commercial services; ownership or licensing of pre-existing IP.
+**Remaining facts:** exact LLC name; trust identity, authority and signing capacity; Michigan resident agent and office; organizer and effective date; tax classification; treatment of prior IP and contracts. Keep the completed private schedules outside the repository.
 
-A Michigan nonprofit filing uses the current LARA nonprofit Articles of Incorporation form 502. Its resident agent and registered office must meet Michigan requirements [S1–S2]. Do not insert a private residence or borrowed address without the person's agreement and a privacy review. Formation is separate from federal exemption. If 501(c)(3) recognition is chosen and required, the IRS describes a Form 1023-series application and EIN process [S3]. Do not promise deductible donations before establishing the actual basis.
+Use the Michigan LLC packet’s current Form 700 worksheet. Select manager management expressly in the Articles and use the same ownership title in the agreement, bank records and capital ledger. Nonprofit Form 502 and an exemption application are historical alternatives, not this filing route.
 
 ## Preconditions for signing the formation package
 
-- Confirm name availability and a separate trademark clearance analysis. A domain purchase is neither clearance nor proof of first commercial use.
-- Select one articles and bylaws structure. Reconcile every reference to members, participants, directors, powers, removal, quorum, conflicts and dissolution.
-- Obtain actual director consent; AI reviewers are advisers, not legal directors. Record transaction-specific eligibility and preserve any required minimum number of unconflicted decision makers.
-- Have counsel check liability, indemnity, compensation, statutory member rights, tax classification and any state obligations where work occurs. Do not copy unverified statutory citations into a filing.
-- Document the actual IP creator and rights for each material asset. Choose a license or transfer consciously; a future organization cannot already own it.
-- After accepted formation: retain the filed instrument, EIN record, actual organizational consent, bylaws, officer appointments, bank authorization and filing calendar. Publish redacted filed documents only after confirming their status.
+- Confirm legal name availability and separately review trademark clearance. A domain purchase does not establish clearance.
+- Verify trustee acquisition, transfer and manager-appointment powers, cotrustee signing rules and applicable succession terms privately.
+- Complete the Articles, operating agreement, sole-member action and schedules consistently. Distinguish trustee approval from Michael’s manager acceptance.
+- Confirm the resident agent’s eligibility and consent; review public filing addresses before submission.
+- Have counsel and the tax adviser check the actual trust, entity, authority, liability, tax and activity-specific obligations.
+- Identify the rights and signed instrument for each existing asset. LLC membership ownership and ownership of the product’s IP are separate matters.
+- After accepted formation, retain the filed Articles, effective date, organizational actions, banking authority and appropriate IRS record. Reissue operator policies only when operation actually transfers.
 
 Decision owner: Michael. Legal reviewer and date: ______________________
 
@@ -279,9 +280,11 @@ Public transparency does not authorize publication of personal/family dossiers, 
 
 ## Owner decision sheet
 
-Legal structure and resident agent: ___________________________________
+Selected direction: trust-owned, manager-managed Michigan LLC.
 
-Actual directors and officers: _______________________________________
+Trust authority review and resident agent: ____________________________
+
+Manager appointment and trustee authority review: _____________________
 
 IP ownership or licensing decision: ___________________________________
 

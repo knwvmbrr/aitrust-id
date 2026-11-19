@@ -15,7 +15,7 @@ Checked by Codex PM against the current scope ledger, implementation state and l
 
 The three specialist agents visible in this chat (SEO, Share debugger and web/image lane) have completed their assigned tasks. They are not continuously running a detector lab. Codex PM is active on API, communication and legal integration. No agent-per-tag staffing is claimed.
 
-The new API exposes only PS and optional PII_REDACTED. Making a tag callable does not complete its detector or validation. The MCP adapter was tested with the real official client; independent Linux installation is still pending in CI. Robot, IoT and agent-interaction safety profiles are retained as explicit proposals in `tag-safety-use-cases.json`, not working intent detectors.
+The new API exposes only PS and optional PII_REDACTED. Making a tag callable does not complete its detector or validation. The MCP adapter was tested with the real official client; clean Ubuntu 24.04/Python 3.12 SDK installation and twelve API/MCP controls passed in CI. Robot, IoT and agent-interaction safety profiles are retained as explicit proposals in `tag-safety-use-cases.json`, not working intent detectors.
 
 Next tag work should remain separate from owner-only App Store and social login steps. Track one bounded method increment, its actual error controls and its next independent acceptance gap; do not raise a parent percentage for unrelated infrastructure work. A new staffing assignment must be explicit and actually running before this board calls it active.
 
@@ -26,3 +26,7 @@ After the inventory check above, the PM reactivated two existing specialists: NF
 ## Candidate delivery update
 
 Both bounded assignments are now delivered in isolated commits and integrated into the PM working branch. MT source: `30a5043b28cea009f638aa927025f176e55d5e16`; NF/FI source: `7523925fb11bc03dc766f83bd03c7ad9e32c1b33`. MT has 22 actual CLI controls and 114 focused tests; NF/FI has three actual CLI controls and 228 focused tests. The parent integration additionally passed 73 focused controls across the two new components. These overlapping test sets are not summed into an accuracy score. No production tag assertion or full parent closure was granted. Specialists have finished these assignments; PM owns integration, Linux CI and publication.
+
+## Linux runtime verification update
+
+The three tag lab lanes passed on hosted Linux after the PS lane received its existing hash-locked service test dependencies. The startup debugger identified a protocol-directory traversal defect; a fresh Docker build observed mode 0444 in all three images before explicit correction, then passed 26 service and 15 replay controls. The dedicated Podman clean-clone installation and all ten failure controls passed, restoring the original staging services unchanged. These are synthetic engineering checks, not independent accuracy. All specialist assignments are now finished; PM owns current source validation and protected publication.

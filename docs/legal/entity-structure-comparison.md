@@ -1,6 +1,6 @@
 # AI Trust ID ownership structure comparison
 
-Prepared for Michael by Codex on 18 November 2026. Decision aid version 0.1. **No structure selected.** Michael requested comparison before choosing; the Michigan LLC packet remains an unexecuted option.
+Prepared for Michael by Codex on 18 November 2026. Decision aid version 0.2. **Subsequent owner direction:** Michael selected his existing revocable living trust as intended 100 percent owner of a manager-managed Michigan LLC, with himself as initial manager. He confirmed he is the current trustee. The two-way comparison below is retained as decision history; the current unsigned packet contains the trust-owned direction and private authority checks. No formation or transfer has occurred.
 
 The largest difference is who owns the business and receives its economic value. You can pursue free open-source personal tools under either structure. Neither choice automatically provides trademark clearance, independent tag validation, government eligibility or a security clearance.
 
@@ -58,7 +58,7 @@ Decide these business priorities before selecting documents. The answers guide q
 5. Which activities earn revenue: hosted tools, deployments, support, research, licensing or certification? __________________
 6. Should the standard and a commercial vendor eventually have separate governance? __________________
 
-You can keep building the free product while answering. Do not transfer IP, claim nonprofit status, take charitable donations under an unsupported representation, file Articles or execute the proposed LLC agreement until the relevant choice and terms are settled. Current individual operation remains the disclosed position; it does not provide an entity liability shield.
+You can keep building the free product while answering. Do not transfer IP, claim nonprofit status or take charitable donations under an unsupported representation. Before filing or signing the selected trust-owned LLC documents, verify trust authority and complete the actual terms. Current individual operation remains the disclosed position; it does not provide an entity liability shield.
 
 ---
 # Primary sources checked
