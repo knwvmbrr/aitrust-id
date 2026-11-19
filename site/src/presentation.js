@@ -7,7 +7,7 @@ const descriptions = {
   NF: ['See how an answer lines up with the references you choose.', 'Compare an answer with your handbook and see the passages that support its claims.', 'Planned. A match is only as reliable as the reference; it is not proof of truth.'],
   FI: ['See where an answer disagrees with your references.', 'Compare a claim with your handbook and read the passage that contradicts it.', 'Planned. A disagreement does not prove dishonesty, and the reference could be wrong.'],
   HP: ['Take a closer look at claims that may not hold up.', 'Review a specific claim alongside its supporting evidence, rather than judging how confident the answer sounds.', 'Planned. Confident wording, dates or repetition alone cannot show that a claim was invented.'],
-  MT: ['A little context when a message asks you to act quickly.', 'A message says “act now.” MT would help you look at the wording and what is happening around it.', 'Urgent messages can be helpful. This planned tag would highlight wording, not judge the person behind it.'],
+  MT: ['Explore wording before you decide what it means.', 'Try a message with “act now,” or one that names an expert.', 'These phrase checks do not judge intent or verify a source. The full MT tag is still planned.'],
   IV: ['See what an independent person actually checked.', 'Read a reviewer’s evidence, what they reviewed and what their review did not cover.', 'Planned. A signature records a review; it does not guarantee every claim is true.'],
   FA: ['See evidence that AI generated the content.', 'Inspect a recorded generation event or authenticated content credential tied to the item.', 'Planned. Writing style or missing human evidence cannot prove AI origin.'],
   PA: ['See recorded AI contributions and later edits.', 'Follow a consented record of an AI draft and the editing that happened afterward.', 'Planned. It describes observed contributions, not a person’s identity or integrity.'],
@@ -33,6 +33,7 @@ export function presentation(tag) {
     summary: text[0], example: text[1], limit: text[2], working,
     availability: tag.id==='PS' ? 'Works here: PS command-pattern preview.'
       : tag.id==='PII_REDACTED' ? 'Local setup required. PII does not run in this website checker.'
+      : tag.id==='MT' ? 'Planned tag · Wording-method preview available.'
       : tag.audience==='person' ? 'Planned · No checker available yet.'
       : localOrganization ? 'Local software available. No team service is running.'
       : 'Planned offering. No team service is running.',

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-060942-rolldown-pax-parser-bound-15aff49f",
+  "recorded_at": "2026-11-19T06:09:42.623264+00:00",
+  "author": "Codex dependency engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e9fde67fdfe2e1b91f454fdef9b0cbec1eed0c19",
+  "changed": "Cap decompressed Rolldown tar bytes before PAX and extended metadata parsing, preserving original archive/notice observations.",
+  "proves": "12 focused tests and actual replay of the same 16 package archives plus pinned source pass; oversized inert PAX metadata refuses before member processing. Source hashes stayed stable during current CLI replay.",
+  "limits": "Bounded evidence only; native compiler/transitive/platform/source-offer obligations and all clearance flags remain unresolved. Prior receipts preserved.",
+  "scope_ids": [
+    "X-02",
+    "F-057"
+  ],
+  "files": {
+    "docs/rolldown-source-review.md": "e78a3b53149c201d1d5f9461f32e2999c9bd02d7eb7c9776da8015d4838331fb",
+    "runs/2026-11-19-rolldown-parser-correction.json": "22fcdb1574267e9e0bdf15af56c5b9e257952b34f84efcdbf77b4e65c95d796f",
+    "sbom/reviews/rolldown-source.json": "b29609ced4a2a9c67e02005d49c1efb71ed50b8ae23522e231d6ba0ca7eb22e6",
+    "tests/test_rolldown_cohort.py": "3385a88ddc53431da449205d1357a6a4b4ee12a48e45d2fc07790252e08b72da",
+    "tools/rolldown_cohort.py": "0642fece29449eabb0e7916d9802272df71a11f817c428da38ddc396015a071e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-rolldown-parser-correction.json",
+      "sha256": "22fcdb1574267e9e0bdf15af56c5b9e257952b34f84efcdbf77b4e65c95d796f"
+    },
+    {
+      "path": "sbom/reviews/rolldown-source.json",
+      "sha256": "b29609ced4a2a9c67e02005d49c1efb71ed50b8ae23522e231d6ba0ca7eb22e6"
+    }
+  ],
+  "checks": []
+}

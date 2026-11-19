@@ -2,6 +2,105 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-080100-distinguish-mt-wording-preview-in-seo-regression-88b4a02f
+
+Recorded 2026-11-19T08:01:00.226372+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct the SEO regression to distinguish the available MT wording-method preview from the unreleased MT tag.
+- **Evidence.** All 9 SEO unit checks and the built metadata checks for 36 canonical pages and 20 tag summaries pass. The planned tag status and negative certification/accuracy assertions are retained. [Change record](./runs/changes/2026-11-19-080100-distinguish-mt-wording-preview-in-seo-regression-88b4a02f.json).
+- **Not claimed.** Only the stale test classification changes; application source and accepted method behavior are unchanged. Required CI and live publication remain pending; no original closure.
+
+
+### 2026-11-19-074949-record-combined-mt-cohort-integration-acceptance-4589a662
+
+Recorded 2026-11-19T07:49:49.905148+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current-source acceptance for the mounted private MT phrase preview, readable modals and corrected dependency/source-notice tooling before protected publication.
+- **Evidence.** All five unchanged-source engineering groups pass: 7 PS, 6 privacy, 51 protocol, 14 extension and 42 website command groups. The real MT modal runs both observations under ordinary CSP, binds their input, preserves privacy and leaves PS usable when its chunk fails. Current boundaries and 62-surface accessibility probes pass. [Change record](./runs/changes/2026-11-19-074949-record-combined-mt-cohort-integration-acceptance-4589a662.json).
+- **Not claimed.** No MT tag, intent classification, independent accuracy, physical iPhone/VoiceOver acceptance or broad redistribution clearance. Protected CI and live delivery remain pending; all 202 IDs and 132 complete/70 open are retained.
+
+
+### 2026-11-19-074249-await-real-mt-controls-before-accessibility-probes-17c9f998
+
+Recorded 2026-11-19T07:42:49.331172+00:00 · Contributor: Codex · change
+
+- **Changed.** Wait for the actual lazy MT explorer before catalogue and accessibility geometry/focus probes, instead of treating an open modal shell as completed content.
+- **Evidence.** The focused accessibility run now passes all measured surfaces in both themes; the earlier failure measured controls while the MT panel was still mounting and moving the later contribution action. No focus rule or error assertion was removed. [Change record](./runs/changes/2026-11-19-074249-await-real-mt-controls-before-accessibility-probes-17c9f998.json).
+- **Not claimed.** This corrects test readiness and preserves real focus/size/spacing checks. Final full website execution and publication remain pending; no physical-device or human screen-reader acceptance is granted.
+
+
+### 2026-11-19-073507-distinguish-mt-preview-from-tag-release-in-ui-checks-5e5de0b7
+
+Recorded 2026-11-19T07:35:07.935469+00:00 · Contributor: Codex · change
+
+- **Changed.** Require accurate planned-tag versus available-method wording in catalogue checks and announce both MT inputs as required while retaining the existing custom accessible errors.
+- **Evidence.** The combined catalogue check caught its former No-checker assertion, which is false for the new bounded preview. Required native fields retain custom form validation through noValidate; the updated production controller parses. [Change record](./runs/changes/2026-11-19-073507-distinguish-mt-preview-from-tag-release-in-ui-checks-5e5de0b7.json).
+- **Not claimed.** The MT tag remains planned and its validation card is not promoted. Fresh protocol/website execution follows; unaffected PS, privacy and extension evidence is retained.
+
+
+### 2026-11-19-073022-project-final-mt-preview-and-readable-modals-6eac64d3
+
+Recorded 2026-11-19T07:30:22.970579+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the complete public catalogue and references from the final MT-preview wording, guarded mount and narrow-screen layout before source-bound integration execution.
+- **Evidence.** Preparation preserves 20 tag/offer records and all 202 original scope IDs. The final actual production controls and static references now select the same exact source; scope verification passes. [Change record](./runs/changes/2026-11-19-073022-project-final-mt-preview-and-readable-modals-6eac64d3.json).
+- **Not claimed.** Current source-bound integration, protected CI and publication are pending. MT remains planned as a tag, no independent accuracy or physical/human accessibility acceptance is granted, and the original 132/70 ledger is retained.
+
+
+### 2026-11-19-072909-put-wording-action-before-contribution-details-5f2b545d
+
+Recorded 2026-11-19T07:29:09.005445+00:00 · Contributor: Codex · change
+
+- **Changed.** Place the working MT phrase preview before local-guide and contribution details, keep static availability wording accurate, and capture the ordinary phone layout alongside enlarged-text QA.
+- **Evidence.** The preceding ordinary-CSP production run passed both input-bound methods, privacy and missing-chunk containment; enlarged-text screenshot now retains whole words and a compact header. The final controller parses for the forthcoming complete execution. [Change record](./runs/changes/2026-11-19-072909-put-wording-action-before-contribution-details-5f2b545d.json).
+- **Not claimed.** This is a method-preview layout change. Fresh complete integration execution follows; no MT tag release, independent accuracy or human/device acceptance.
+
+
+### 2026-11-19-072449-keep-enlarged-modal-text-readable-b1bebe31
+
+Recorded 2026-11-19T07:24:49.931247+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve enlarged text while reducing narrow-screen modal chrome and retaining a fixed 44px close target; strengthen the real MT modal checks against a consuming sticky header and fragmented result words.
+- **Evidence.** Visual inspection of the first real 320px enlarged-text screenshot identified a failure that horizontal-scroll-only checks missed. The updated production control parses; a fresh build and visual check follow. [Change record](./runs/changes/2026-11-19-072449-keep-enlarged-modal-text-readable-b1bebe31.json).
+- **Not claimed.** This preserves focus, labels, themes and tag logic. Fresh combined browser execution is pending; physical iPhone and human VoiceOver acceptance remain open.
+
+
+### 2026-11-19-071942-mount-independent-private-mt-wording-preview-170d8757
+
+Recorded 2026-11-19T07:19:42.923117+00:00 · Contributor: Codex · change
+
+- **Changed.** Mount the corrected request-bound MT wording preview through its scoped lazy/error boundary; prepare exact source/notices, publish both guides and distinguish its two observations from the planned MT tag.
+- **Evidence.** 72 focused adapter/builder/source-binding checks and 13 Node client groups pass. Preparation passes; the independent corrected fixture evidence retains full browser parity and corrupt-result refusals. New built-modal controls cover ordinary browser input binding, privacy, reflow and missing-chunk containment. [Change record](./runs/changes/2026-11-19-071942-mount-independent-private-mt-wording-preview-170d8757.json).
+- **Not claimed.** Actual combined production-modal execution, fresh integration receipts and protected publication are next. No MT assertion, contextual intent classification, independent accuracy or physical iPhone/VoiceOver acceptance. All original percentages and 132 complete/70 open remain unchanged.
+
+
+### 2026-11-19-065723-bind-reviewed-cohort-checks-and-safe-source-verification-eb829c41
+
+Recorded 2026-11-19T06:57:23.079539+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the reviewed Rolldown, C2PA and NLI notice/source controls to named CI and source-selection checks; verify supplied PS ZIP bytes through trusted canonical reconstruction without untrusted directory parsing; record explicit agent reactivation and review handoffs.
+- **Evidence.** 147 focused cohort/input-binding controls and 70 PS policy/export controls pass. All three ordinary offline cohort checks pass without clearance. Actual isolated Linux verification rebuilds the unchanged public PS artifact, preserves staging and rejects malformed supplied bytes without ZIP-reader allocation. [Change record](./runs/changes/2026-11-19-065723-bind-reviewed-cohort-checks-and-safe-source-verification-eb829c41.json).
+- **Not claimed.** Current checks establish engineering consistency, not transitive redistribution approval or tag accuracy. MT correction integration, complete source-bound revalidation and protected publication remain pending. Original 132 complete and 70 open remain.
+
+
+### 2026-11-19-064440-retain-exact-incoming-evidence-during-real-merge-249f98ec
+
+Recorded 2026-11-19T06:44:40.213683+00:00 · Contributor: Codex · change
+
+- **Changed.** Let the staged changelog guard recover an incoming event from its exact original commit during a real pending merge, while refusing ambiguous named refs and preserving immutable history and current-file coverage.
+- **Evidence.** 48 actual Git/staged-history controls pass; peer replay confirms the prior named-branch bypass refuses and genuine pending merges pass. Regular bounded no-follow Git pseudoref reads replace ambiguous ref resolution. [Change record](./runs/changes/2026-11-19-064440-retain-exact-incoming-evidence-during-real-merge-249f98ec.json).
+- **Not claimed.** This fixes accountability integration, not detector accuracy or release validation. The current cohort remains bounded source/notice evidence; no original requirement closure.
+
+
+### 2026-11-19-062950-record-live-small-ps-source-publication-c942c7f2
+
+Recorded 2026-11-19T06:29:50.419236+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the actual protected PS-only source download publication and plan the independent MT/cohort integration before its shared source changes.
+- **Evidence.** PR127 passed11required checks at the reviewed exacthead; source98fc8b7 merged and307artifacts per origin matched on both owned domain and Cloudflare deployment,614total. The corrected130542byte source package retains project and Unicode notices. [Change record](./runs/changes/2026-11-19-062950-record-live-small-ps-source-publication-c942c7f2.json).
+- **Not claimed.** Publication proves exact delivery and engineering operation, not independent accuracy or full original closure. Next MT/cohort integration is planned, not published. Original132complete/70open remains.
+
+
 ### 2026-11-19-061622-verify-notice-corrected-download-integration-49ce30c9
 
 Recorded 2026-11-19T06:16:22.875817+00:00 · Contributor: Codex · change
@@ -18,6 +117,23 @@ Recorded 2026-11-19T06:10:58.800334+00:00 · Contributor: Codex · change
 - **Changed.** Retain the applicable project NOTICE attribution in the PS source guide and require it independently of its declared hash; rebuild the source ZIP, digest and current scope/state projections.
 - **Evidence.** 69 focused policy/export controls pass, including an actual ZIP attribution inspection and removed-and-rehashed attribution refusal. The corrected archive executes finding/no-finding checks and rebuilds identical bytes on Mac and network-isolated nonroot Linux; staging IDs, images, configuration and health remain unchanged. [Change record](./runs/changes/2026-11-19-061058-preserve-applicable-project-notice-in-ps-archive-83f040f2.json).
 - **Not claimed.** The earlier unpublished candidate and its immutable evidence remain historical. Corrected source ZIP is 130542 bytes; no independent accuracy, full original closure, legal clearance or live publication is granted. Fresh integration and protected checks follow.
+
+### 2026-11-19-070555-mt-preview-integrity-correction-bedaf577
+
+Recorded 2026-11-19T07:05:55.348819+00:00 · Contributor: Codex - MT integrity correction lane · change
+
+- **Changed.** Correct MT request/result identity and closed evidence validation; capture bounded no-follow source snapshots before publishing method bundles.
+- **Evidence.** 13 Node groups,36 focused Python tests and fresh Chromium/WebKit controls pass; each browser validates30 full records and refuses five corrupt result types before rendering. Source links/FIFO/oversize/drift preserve prior outputs. [Change record](./runs/changes/2026-11-19-070555-mt-preview-integrity-correction-bedaf577.json).
+- **Not claimed.** Supersedes unmounted70a38b5 evidence for integrity adoption. No canonical method change, tag assertion, independent accuracy, physical-device acceptance, full closure or production mounting. Prior receipts preserved; PM owns integration.
+
+
+### 2026-11-19-062807-mt-on-device-phrase-explorer-349e58b8
+
+Recorded 2026-11-19T06:28:07.219514+00:00 · Contributor: Codex - MT on-device evidence engineering lane · change
+
+- **Changed.** Build a separate on-device MT phrase explorer component with exact Python urgency/authority observations, lazy per-run workers and scoped import/render failure containment.
+- **Evidence.** 80 focused Python checks, eight Node client groups and two actual browser engines pass; each browser matches26 full native records with private-detail, failure, cancellation, reflow and storage controls. [Change record](./runs/changes/2026-11-19-062807-mt-on-device-phrase-explorer-349e58b8.json).
+- **Not claimed.** Working unpublished component: PM must mount and production-build it. No MT assertion, manipulation/intent/truth verdict, independent accuracy, physical iPhone/VoiceOver acceptance, dependency clearance or full requirement closure. Scope/state unchanged.
 
 
 ### 2026-11-19-055630-record-source-download-integration-evidence-4edd25dd
@@ -54,6 +170,48 @@ Recorded 2026-11-19T05:45:04.086095+00:00 · Contributor: Codex · change
 - **Changed.** Connect a deterministic PS-only source download to its independent Terminal instructions; enforce exact-source dependency conflict refusals for that exporter and required CI, preserve the esbuild source review and mixed-stream privacy blockers, and refuse unresolved changelog merge markers.
 - **Evidence.** 145 focused integration and failure controls pass; actual Mac and isolated nonroot Linux receipts verify identical ZIP bytes and extracted finding/no-finding operation. Site preparation exports through the real policy. [Change record](./runs/changes/2026-11-19-054504-integrate-small-ps-download-and-conflict-policy-d3ae8daf.json).
 - **Not claimed.** 132 complete and 70 original open requirements remain. Other 13 policy scopes remain blocked, existing previews are not approved releases, and independent tag accuracy, legal clearance, live mixed-stream capture, physical phone acceptance and new publication remain unverified.
+
+### 2026-11-19-060942-rolldown-pax-parser-bound-15aff49f
+
+Recorded 2026-11-19T06:09:42.623264+00:00 · Contributor: Codex dependency engineering lane · change
+
+- **Changed.** Cap decompressed Rolldown tar bytes before PAX and extended metadata parsing, preserving original archive/notice observations.
+- **Evidence.** 12 focused tests and actual replay of the same 16 package archives plus pinned source pass; oversized inert PAX metadata refuses before member processing. Source hashes stayed stable during current CLI replay. [Change record](./runs/changes/2026-11-19-060942-rolldown-pax-parser-bound-15aff49f.json).
+- **Not claimed.** Bounded evidence only; native compiler/transitive/platform/source-offer obligations and all clearance flags remain unresolved. Prior receipts preserved.
+
+
+### 2026-11-19-055604-rolldown-source-notice-cohort-618cc86f
+
+Recorded 2026-11-19T05:56:04.492828+00:00 · Contributor: Codex dependency engineering lane · change
+
+- **Changed.** Preserve the previously uncollected Rolldown third-party notice and bind 15 native addons plus wrapper to exact cached packages and pinned upstream source/build declarations.
+- **Evidence.** Actual replay of 16 locked npm archives and one pinned upstream source archive passed; 11 focused refusal controls passed. Both complete bundled license texts are retained byte for byte. [Change record](./runs/changes/2026-11-19-055604-rolldown-source-notice-cohort-618cc86f.json).
+- **Not claimed.** Supplemental source/notice observations only. Compiled Rust graph, platform/runtime terms, actual compiler identity, reproducible builds and distribution source-offer assembly remain unresolved. No permission or release clearance and no original requirement closure.
+
+### 2026-11-19-061008-c2pa-zip-preflight-private-diagnostics-5b559dfe
+
+Recorded 2026-11-19T06:10:08.540495+00:00 · Contributor: Codex dependency engineering lane · change
+
+- **Changed.** Preflight bounded C2PA ZIP directories before ZipInfo allocation and suppress malformed CLI argument echoes.
+- **Evidence.** 59 focused tests and actual current cache replay pass; oversized or inconsistent directories refuse before ZipFile is called, malformed private canary receives a fixed refusal, and original artifact/notice observations stay identical. [Change record](./runs/changes/2026-11-19-061008-c2pa-zip-preflight-private-diagnostics-5b559dfe.json).
+- **Not claimed.** Finite classic ZIP profile explicitly refuses ZIP64, split disks, comments, trailing data and unsupported structures. No native graph, compiler, source-offer, permission or original scope clearance. Prior evidence retained unchanged.
+
+
+### 2026-11-19-060215-c2pa-selected-cohort-evidence-68e6d6da
+
+Recorded 2026-11-19T06:02:15.686376+00:00 · Contributor: Codex - C2PA evidence engineering lane · change
+
+- **Changed.** Bind the finite optional C2PA Python/native cohort to exact wheel, source, notice and native release artifacts with a bounded offline verifier.
+- **Evidence.** 47 focused checks and four actual CLI controls pass; 14 wheels, 10 source distributions, two native release byte matches and 309 Python-file matches are replayed without package execution. [Change record](./runs/changes/2026-11-19-060215-c2pa-selected-cohort-evidence-68e6d6da.json).
+- **Not claimed.** Engineering evidence only: no license permission, resolved native graph, source offers, reproducible build, publisher authentication, tag release or full X-02/F-057 closure. Scope/state/selectors unchanged.
+
+### 2026-11-19-062346-bind-nli-source-notice-obligations-d561a116
+
+Recorded 2026-11-19T06:23:46.805239+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the finite optional NLI model and two locked runtime cohorts to replayed notices, official source references and explicit native/source-offer obligations; retain a deterministic notice bundle and bounded raw ZIP-header refusal controls.
+- **Evidence.** All44 cached wheel occurrences replay successfully, including88 notice occurrences;50 focused controls pass. Existing model/tokenizer/config/card bytes match pinned provider Git or LFS identities without inference or new weight downloads. Earlier malformed-header admissions and the strict local-ZIP64 candidate refusal remain recorded. [Change record](./runs/changes/2026-11-19-062346-bind-nli-source-notice-obligations-d561a116.json).
+- **Not claimed.** Publisher card metadata is real licensing evidence; related base-code terms do not establish the exact training-base revision.16 native package occurrences retain explicit applicability/source blockers. Distribution-ready remainsfalse. No qualified legal clearance, independent accuracy, global requirement closure, runtime/service change or deployment is claimed.
 
 
 ### 2026-11-19-052623-export-exact-policy-approved-ps-source-49c2359e

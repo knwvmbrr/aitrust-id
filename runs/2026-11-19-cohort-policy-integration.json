@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-11-19T06:57:23.031584+00:00",
+  "pass": true,
+  "kind": "cohort_and_source_verifier_integration",
+  "sources": {
+    ".github/workflows/ci.yml": "0a08f1f22984a8c776abcb8e9c3365d0a2c19296c7822fb25d683f02412b13ac",
+    "package.json": "0eae5747fda88c20ec333541289f48466f1fb7536df84f1f722cbe56fbb2dfaf",
+    "eval/revalidation.json": "fb6208551915b0151a03ff746890cb6f9fb62d208cb31b1a7eae337aef6322ad",
+    "scripts/verify-route-boundaries.py": "6beb3cf7af5f704bab97c39a033a26d39b379b9934b69742f2e16fadc59864d1",
+    "tools/ps_source_distribution.py": "682066c75455f0c50585b5eae5a9fb878c0300e7abecbed58987626077fc9c62",
+    "tests/test_ps_source_distribution.py": "c7e0551be7e1f5815bc69e2c5a639a15849a5e24b6242e3df9216761dccb0a06",
+    "docs/dependency-conflict-plan.md": "bc55f81c0fea636b01c6727de8c6ff3a5404f80f44b5bbcf2f06c84545540812",
+    "docs/agent-handoffs.md": "2fbdec0e98cd62da867e79a8e573250961005746b51bc51e6b46e6f530af2c8b"
+  },
+  "cohort_and_binding_focused_controls": 147,
+  "ps_policy_export_focused_controls": 70,
+  "default_offline_cohort_consistency_commands_passed": 3,
+  "actual_archive_replay_repeated_by_this_integration": false,
+  "actual_canonical_ps_linux_receipt": "runs/2026-11-19-ps-source-canonical-linux.json",
+  "public_ps_zip_sha256_unchanged": "c305d9176263b6d150c86e0d7950bb61ad651354c6b0b1ed612737e925c71624",
+  "other_policy_scopes_promoted": false,
+  "complete_project_obligations": false,
+  "independent_accuracy_evidence": false,
+  "legal_clearance": false,
+  "original_completed": 132,
+  "original_open": 70,
+  "full_integration_revalidation_pending": true,
+  "mt_integration_pending": true
+}

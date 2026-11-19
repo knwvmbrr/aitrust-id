@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-072909-put-wording-action-before-contribution-details-5f2b545d",
+  "recorded_at": "2026-11-19T07:29:09.005445+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "eb5321d182d33a9a92e2c5d70421dd7974d3cb9f",
+  "changed": "Place the working MT phrase preview before local-guide and contribution details, keep static availability wording accurate, and capture the ordinary phone layout alongside enlarged-text QA.",
+  "proves": "The preceding ordinary-CSP production run passed both input-bound methods, privacy and missing-chunk containment; enlarged-text screenshot now retains whole words and a compact header. The final controller parses for the forthcoming complete execution.",
+  "limits": "This is a method-preview layout change. Fresh complete integration execution follows; no MT tag release, independent accuracy or human/device acceptance.",
+  "scope_ids": [
+    "WP-SITE",
+    "T-MT",
+    "F-139"
+  ],
+  "files": {
+    "site/src/main.jsx": "ac31307ee51620143ab00dba6cc1ba462d5bc461de70ab5566236839f0b9b9a6",
+    "site/src/presentation.js": "4253fe610df20ab93632be719bf8cc94c797abd07d950e66114e850ae92c1602",
+    "scripts/mt-site-controls.cjs": "5cdd8c8eb85795b13fd6ca0adce21850273c258c3e3ba29c49871796534ee7f2"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/mt-site-controls.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T07:29:09.321328+00:00"
+    }
+  ]
+}

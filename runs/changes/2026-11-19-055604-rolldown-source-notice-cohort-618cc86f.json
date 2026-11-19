@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-055604-rolldown-source-notice-cohort-618cc86f",
+  "recorded_at": "2026-11-19T05:56:04.492828+00:00",
+  "author": "Codex dependency engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4ae7a14d1738211969bbc9faca041c3afbf03b40",
+  "changed": "Preserve the previously uncollected Rolldown third-party notice and bind 15 native addons plus wrapper to exact cached packages and pinned upstream source/build declarations.",
+  "proves": "Actual replay of 16 locked npm archives and one pinned upstream source archive passed; 11 focused refusal controls passed. Both complete bundled license texts are retained byte for byte.",
+  "limits": "Supplemental source/notice observations only. Compiled Rust graph, platform/runtime terms, actual compiler identity, reproducible builds and distribution source-offer assembly remain unresolved. No permission or release clearance and no original requirement closure.",
+  "scope_ids": [
+    "X-02",
+    "F-057"
+  ],
+  "files": {
+    "docs/rolldown-source-review.md": "4acdb42db020ee4a118616a1f57f94b03f927207376e056b58559ec04d46ff47",
+    "runs/2026-11-19-rolldown-source-cohort.json": "b2c86f0202d93ef623aca0852834e0181b6898e097212ec116b2ac985d1ce239",
+    "sbom/reviews/rolldown-source.json": "4d070b5ac69d4c964e98b49bf31bb47551cb3c18c2c47b1ac85e71259ab667f8",
+    "sbom/reviews/sources/12c2aff1bbfe8a7f0b744d1cc32d913bb25d93f9ebbb3c039f5a30e8d510f7f4.txt": "12c2aff1bbfe8a7f0b744d1cc32d913bb25d93f9ebbb3c039f5a30e8d510f7f4",
+    "sbom/reviews/sources/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734",
+    "sbom/reviews/sources/3f8d314a43dbcb94b5d5154de481c60197283665dcfb1606187b7cfc52fea700.txt": "3f8d314a43dbcb94b5d5154de481c60197283665dcfb1606187b7cfc52fea700",
+    "sbom/reviews/sources/5156ce3b07843a92729f9922a8258669b72fdd433571b9bf37a39aae946fa082.txt": "5156ce3b07843a92729f9922a8258669b72fdd433571b9bf37a39aae946fa082",
+    "sbom/reviews/sources/8f1d138e5654698acc01fcf2e93e3d16d74a2bb7aa1f481521512f6d20756ee6.txt": "8f1d138e5654698acc01fcf2e93e3d16d74a2bb7aa1f481521512f6d20756ee6",
+    "sbom/reviews/sources/992de675144ecaabf37c3aa86a7c9e95a8f7e7faee9834aff53720226087303c.txt": "992de675144ecaabf37c3aa86a7c9e95a8f7e7faee9834aff53720226087303c",
+    "sbom/reviews/sources/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c",
+    "sbom/reviews/sources/ca09cddc908ee4aac144dfce2206c95eab66ea821fed869ffbe1610fa46a08b0.txt": "ca09cddc908ee4aac144dfce2206c95eab66ea821fed869ffbe1610fa46a08b0",
+    "sbom/reviews/sources/e35de674aaffa81e891fcf372202c19d1f01affb05bf9412b15f5baf371766ef.txt": "e35de674aaffa81e891fcf372202c19d1f01affb05bf9412b15f5baf371766ef",
+    "sbom/reviews/sources/feef3bd222f59b6bb56272624c9ce65b4b658cf17646c87e205703fa799ae443.txt": "feef3bd222f59b6bb56272624c9ce65b4b658cf17646c87e205703fa799ae443",
+    "scripts/verify-rolldown-cohort.py": "520c0e60feac2c875076ee081ecf990f68d54ff76680fd4e5f49f51cb1a751d6",
+    "tests/test_rolldown_cohort.py": "84cc173cebb389a0b5e4bef9a27e3e0862218bb1716c3311ceafaa44040ad92c",
+    "tools/rolldown_cohort.py": "b6114cd0c04cd5a44533cc0e69e77c0071671e26507d60b947c4dc2bff4229d3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-rolldown-source-cohort.json",
+      "sha256": "b2c86f0202d93ef623aca0852834e0181b6898e097212ec116b2ac985d1ce239"
+    },
+    {
+      "path": "sbom/reviews/rolldown-source.json",
+      "sha256": "4d070b5ac69d4c964e98b49bf31bb47551cb3c18c2c47b1ac85e71259ab667f8"
+    }
+  ],
+  "checks": []
+}

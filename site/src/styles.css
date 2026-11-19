@@ -80,6 +80,16 @@
 .theme-toggle:checked { background: var(--foreground); }
 .theme-toggle:checked::before { transform: translateX(1.375rem); }
 .modal { padding-bottom: env(safe-area-inset-bottom); }
+/* Enlarged text needs reading width, not enlarged decorative chrome. */
+.modal-header [data-dialog-close] { width:44px; height:44px; min-width:44px; min-height:44px; }
+.modal-header [data-dialog-close] svg { width:24px; height:24px; }
+@media (max-width:480px) {
+  .modal { inset-inline:8px; max-height:calc(100dvh - 16px); }
+  .modal-header { gap:12px; padding:12px; }
+  .modal-body { padding:16px 12px; }
+  .modal [data-mt-explorer], .modal [data-mt-explorer] section[aria-label="Wording result"] { padding:12px; }
+}
+
 @media (forced-colors: active) {
   .theme-toggle { appearance: auto; width: 2rem; height: 2rem; }
   .theme-toggle::before { display: none; }

@@ -139,6 +139,17 @@ jobs:
           python scripts/export-ps-source.py verify site/public/downloads/aitrust-id-ps-source.zip
           python scripts/verify-esbuild-cohort.py
           python -m pytest tests/test_dependency_policy.py tests/test_ps_source_distribution.py tests/test_esbuild_cohort.py -q
+      - name: Check bounded native and model source notices without granting clearance
+        run: |
+          python scripts/verify-rolldown-cohort.py
+          python scripts/verify-c2pa-cohort.py
+          python scripts/verify-nli-license-cohort.py
+          python -m pytest tests/test_rolldown_cohort.py tests/test_c2pa_cohort.py tests/test_nli_license_cohort.py -q
+      - name: Enforce private input-bound MT method preview contracts
+        run: |
+          python scripts/build-mt-device.py
+          python -m pytest tests/test_mt_device.py -q
+          node --test tests/mt-device-client.mjs
       - name: Refuse corrupted notice evidence and permission promotion
         run: python -m pytest tests/test_license_notices.py -q
       - name: Exercise independent editorial choices and private input refusals

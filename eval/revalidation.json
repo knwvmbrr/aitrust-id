@@ -482,7 +482,45 @@
         "sbom/reviews/sources/*",
         "site/public/downloads/aitrust-id-ps-source.zip",
         "site/public/downloads/aitrust-id-ps-source.zip.sha256",
-        "NOTICE"
+        "NOTICE",
+        "tools/rolldown_cohort.py",
+        "scripts/verify-rolldown-cohort.py",
+        "tests/test_rolldown_cohort.py",
+        "docs/rolldown-source-review.md",
+        "sbom/reviews/rolldown-source.json",
+        "tools/c2pa_cohort.py",
+        "scripts/verify-c2pa-cohort.py",
+        "tests/test_c2pa_cohort.py",
+        "docs/c2pa-cohort-plan.md",
+        "docs/c2pa-cohort-result.md",
+        "sbom/c2pa/**/*",
+        "tools/nli_license_cohort.py",
+        "scripts/verify-nli-license-cohort.py",
+        "tests/test_nli_license_cohort.py",
+        "docs/nli-license-cohort.md",
+        "sbom/reviews/nli/**/*",
+        "docs/changelog-merge-parent-plan.md",
+        "docs/agent-handoffs.md",
+        "tools/mt_device.py",
+        "scripts/build-mt-device.py",
+        "tests/test_mt_device.py",
+        "scripts/build-mt-device-fixture.mjs",
+        "scripts/verify-mt-device.cjs",
+        "tests/mt-device-client.mjs",
+        "site/src/MTExplorer.jsx",
+        "site/src/MTExplorerSlot.jsx",
+        "site/src/mt-device-client.js",
+        "site/src/mt-device-result.js",
+        "site/src/mt-device-worker.js",
+        "site/src/mt-device-manifest.json",
+        "site/public/mt-device/*",
+        "site/public/reference/mt-device-explorer.md",
+        "docs/mt-device-explorer-plan.md",
+        "docs/mt-device-explorer.md",
+        "docs/mt-device-explorer-result.md",
+        "docs/mt-device-integrity-correction.md",
+        "scripts/mt-site-controls.cjs",
+        "scripts/verify-mt-client.cjs"
       ],
       "commands": [
         [
@@ -784,6 +822,38 @@
           "tests/test_ps_source_distribution.py",
           "tests/test_esbuild_cohort.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-rolldown-cohort.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-c2pa-cohort.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-nli-license-cohort.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_rolldown_cohort.py",
+          "tests/test_c2pa_cohort.py",
+          "tests/test_nli_license_cohort.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_mt_device.py",
+          "-q"
+        ],
+        [
+          "node",
+          "scripts/verify-mt-client.cjs"
         ]
       ]
     },
@@ -1293,7 +1363,45 @@
         "sbom/reviews/sources/*",
         "site/public/downloads/aitrust-id-ps-source.zip",
         "site/public/downloads/aitrust-id-ps-source.zip.sha256",
-        "NOTICE"
+        "NOTICE",
+        "tools/rolldown_cohort.py",
+        "scripts/verify-rolldown-cohort.py",
+        "tests/test_rolldown_cohort.py",
+        "docs/rolldown-source-review.md",
+        "sbom/reviews/rolldown-source.json",
+        "tools/c2pa_cohort.py",
+        "scripts/verify-c2pa-cohort.py",
+        "tests/test_c2pa_cohort.py",
+        "docs/c2pa-cohort-plan.md",
+        "docs/c2pa-cohort-result.md",
+        "sbom/c2pa/**/*",
+        "tools/nli_license_cohort.py",
+        "scripts/verify-nli-license-cohort.py",
+        "tests/test_nli_license_cohort.py",
+        "docs/nli-license-cohort.md",
+        "sbom/reviews/nli/**/*",
+        "docs/changelog-merge-parent-plan.md",
+        "docs/agent-handoffs.md",
+        "tools/mt_device.py",
+        "scripts/build-mt-device.py",
+        "tests/test_mt_device.py",
+        "scripts/build-mt-device-fixture.mjs",
+        "scripts/verify-mt-device.cjs",
+        "tests/mt-device-client.mjs",
+        "site/src/MTExplorer.jsx",
+        "site/src/MTExplorerSlot.jsx",
+        "site/src/mt-device-client.js",
+        "site/src/mt-device-result.js",
+        "site/src/mt-device-worker.js",
+        "site/src/mt-device-manifest.json",
+        "site/public/mt-device/*",
+        "site/public/reference/mt-device-explorer.md",
+        "docs/mt-device-explorer-plan.md",
+        "docs/mt-device-explorer.md",
+        "docs/mt-device-explorer-result.md",
+        "docs/mt-device-integrity-correction.md",
+        "scripts/mt-site-controls.cjs",
+        "scripts/verify-mt-client.cjs"
       ],
       "commands": [
         [
@@ -1504,6 +1612,38 @@
           "tests/test_ps_source_distribution.py",
           "tests/test_esbuild_cohort.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-rolldown-cohort.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-c2pa-cohort.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-nli-license-cohort.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_rolldown_cohort.py",
+          "tests/test_c2pa_cohort.py",
+          "tests/test_nli_license_cohort.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_mt_device.py",
+          "-q"
+        ],
+        [
+          "node",
+          "scripts/verify-mt-client.cjs"
         ]
       ]
     }

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-062950-record-live-small-ps-source-publication-c942c7f2",
+  "recorded_at": "2026-11-19T06:29:50.419236+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "98fc8b791ebb3b05dbc71f212c2a8afec9cdd9d6",
+  "changed": "Record the actual protected PS-only source download publication and plan the independent MT/cohort integration before its shared source changes.",
+  "proves": "PR127 passed11required checks at the reviewed exacthead; source98fc8b7 merged and307artifacts per origin matched on both owned domain and Cloudflare deployment,614total. The corrected130542byte source package retains project and Unicode notices.",
+  "limits": "Publication proves exact delivery and engineering operation, not independent accuracy or full original closure. Next MT/cohort integration is planned, not published. Original132complete/70open remains.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-150",
+    "WP-SITE"
+  ],
+  "files": {
+    "state.json": "eae7c4c5f873d2f70e0ccd2fbca5e0956847959481406488c04c6fbcfdf41395",
+    "docs/mt-cohort-integration-plan.md": "2ee8d4596752223ff6f612fb126db3bdfebddd7c45cd1f788f4a4a9d29ce77ac",
+    "runs/2026-11-19-ps-source-live-publication.json": "b7ab8bab87cfa2f4bc29cec83b4e88c75b00e82f245a41bdb2abf7142b09936e",
+    "runs/2026-11-19-ps-source-protected-merge.json": "06db0cb750d62f485a0b018071ab774278db45c8e2bd216c289aefcdc09a9409"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-ps-source-live-publication.json",
+      "sha256": "b7ab8bab87cfa2f4bc29cec83b4e88c75b00e82f245a41bdb2abf7142b09936e"
+    },
+    {
+      "path": "runs/2026-11-19-ps-source-protected-merge.json",
+      "sha256": "06db0cb750d62f485a0b018071ab774278db45c8e2bd216c289aefcdc09a9409"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T06:29:51.227732+00:00"
+    }
+  ]
+}

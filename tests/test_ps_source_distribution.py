@@ -254,3 +254,19 @@ def test_actual_cli_refuses_missing_real_policy_without_private_echo(source, tmp
     assert completed.returncode == 2 and completed.stdout == b''
     assert b'PRIVATE-CANARY' not in completed.stderr and b'Traceback' not in completed.stderr
     assert not output.exists()
+
+
+def test_supplied_zip_verification_never_allocates_an_untrusted_directory(tmp_path, monkeypatch):
+    # The real current source profile supplies all canonical files; no fake input policy.
+    raw=distribution.build()
+    original=distribution.zipfile.ZipFile
+    calls=[]
+    def only_trusted_writes(file, mode='r', *args, **kwargs):
+        calls.append(mode)
+        assert mode=='w', 'Supplied ZIP bytes were sent to the parser'
+        return original(file,mode,*args,**kwargs)
+    monkeypatch.setattr(distribution.zipfile,'ZipFile',only_trusted_writes)
+    assert distribution.verify(raw)['profile']=='ai-trust-id-ps-source/v1'
+    for malformed in (b'PK\x05\x06'+b'\xff'*200, b'PK\x01\x02'*100000, raw+b'private trailing bytes'):
+        with pytest.raises(ValueError):distribution.verify(malformed)
+    assert calls and set(calls)=={'w'}

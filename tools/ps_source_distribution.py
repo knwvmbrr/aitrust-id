@@ -190,8 +190,13 @@ def build(root=ROOT, *, route_check=None):
 
 
 def verify(raw, root=ROOT, *, route_check=None):
-    value, _ = capture(root, route_check)
-    return inspect(raw, value)
+    require(type(raw) is bytes and 0 < len(raw) <= MAX_ARCHIVE)
+    value, members = capture(root, route_check)
+    members[MANIFEST] = canonical(manifest(value))
+    # The selected trusted source determines every canonical byte. Never parse
+    # an untrusted central directory just to discover it is not this artifact.
+    require(raw == assemble(members))
+    return manifest(value)
 
 
 def verify_file(path, root=ROOT, *, route_check=None):

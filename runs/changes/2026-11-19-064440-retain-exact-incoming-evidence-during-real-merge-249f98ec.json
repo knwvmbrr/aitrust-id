@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-064440-retain-exact-incoming-evidence-during-real-merge-249f98ec",
+  "recorded_at": "2026-11-19T06:44:40.213683+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "90a187ec9936e0110d89f32123ced08914df533a",
+  "changed": "Let the staged changelog guard recover an incoming event from its exact original commit during a real pending merge, while refusing ambiguous named refs and preserving immutable history and current-file coverage.",
+  "proves": "48 actual Git/staged-history controls pass; peer replay confirms the prior named-branch bypass refuses and genuine pending merges pass. Regular bounded no-follow Git pseudoref reads replace ambiguous ref resolution.",
+  "limits": "This fixes accountability integration, not detector accuracy or release validation. The current cohort remains bounded source/notice evidence; no original requirement closure.",
+  "scope_ids": [
+    "F-150",
+    "WP-RELEASE"
+  ],
+  "files": {
+    "scripts/changelog_core.py": "dd9941b80370e8f362db7fd42677ab6bea8bec38e4f68d25124b08c708d6c9d9",
+    "tests/test_changelog_pipeline.py": "69749573a012c7568e1bf04843545a1004f6114a115f2efcc51e1e1a9475fc73",
+    "docs/changelog-merge-parent-plan.md": "0d704ed8e4bcaf0aa3d908953c4a340f56997b160bc70c3c8091c997ac6de57d",
+    "docs/changelog-policy.md": "2119b3387da8d1cbf5736b339e749210ffc54cc3ffc5c8b777b3c95a59397f07",
+    "docs/mt-cohort-integration-plan.md": "8e8dde6f600bce7c926f46c77156c2b3768ac1733029b66568ff10d05098ed37",
+    "runs/2026-11-19-changelog-merge-parent-controls.json": "c3ceabc4a6d7b15cad16d4aa298ed34f1b78c975dee4b56ca128aadda5907911"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-changelog-merge-parent-controls.json",
+      "sha256": "c3ceabc4a6d7b15cad16d4aa298ed34f1b78c975dee4b56ca128aadda5907911"
+    }
+  ],
+  "checks": []
+}

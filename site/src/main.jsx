@@ -10,6 +10,7 @@ import {registerPublicTagTools} from './model-tools.js';
 import {publisher} from './policies.js';
 import {presentation} from './presentation.js';
 import {usage} from './usage.js';
+import {MTExplorerSlot} from './MTExplorerSlot.jsx';
 import {catalogueExport} from './catalogue-export.js';
 import {Performance,PerformanceEvidence,performanceById} from './performance.jsx';
 import {HandheldDialogs} from './handheld.jsx';
@@ -36,10 +37,10 @@ function Shell({children,title,description}) {
   if(top&&top!==content.current){event.preventDefault();event.stopImmediatePropagation();top.querySelector('[data-dialog-close]')?.click();}
  }
  return <Dialog.Portal><Dialog.Overlay className="fixed inset-0 z-40 bg-black/60"/><Dialog.Content ref={content} data-ai-dialog onEscapeKeyDown={escape} className="modal fixed inset-x-3 top-1/2 z-50 mx-auto max-h-[calc(100dvh-1.5rem)] max-w-2xl -translate-y-1/2 overflow-y-auto break-words rounded-2xl border border-line bg-surface shadow-lg sm:inset-x-6 sm:max-h-[calc(100dvh-3rem)]">
-  <header className="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-line bg-surface px-5 py-4 sm:px-6">
+  <header className="modal-header sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-line bg-surface px-5 py-4 sm:px-6">
    <div className="min-w-0"><Dialog.Title className="text-xl font-semibold">{title}</Dialog.Title><Dialog.Description className="mt-1 text-sm text-muted">{description}</Dialog.Description></div>
    <Dialog.Close data-dialog-close aria-label="Close" className="flex size-11 shrink-0 items-center justify-center rounded-lg border border-line hover:border-ink"><svg aria-hidden="true" viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="m6 6 12 12M18 6 6 18"/></svg></Dialog.Close>
-  </header><div className="px-5 py-5 sm:px-6">{children}</div>
+  </header><div className="modal-body px-5 py-5 sm:px-6">{children}</div>
  </Dialog.Content></Dialog.Portal>;
 }
 function Disclosure({title,children,defer=false}) {
@@ -71,6 +72,7 @@ function TagDetails({tag}) {
   <p data-tag-example className="mt-2 text-sm leading-6"><span className="font-semibold">For example: </span>{intro.example}</p>
   <p data-tag-limit className="mt-2 text-sm leading-6 text-muted">{intro.limit}</p>
   <p data-tag-availability className="mt-2 text-left text-xs leading-5 text-muted">{intro.availability}</p>
+  {tag.id==='MT'&&<MTExplorerSlot/>}
   <UseTag tag={tag}/>
   {intro.working&&<section aria-label="Validation status" className="my-4 rounded-xl border border-line bg-canvas p-4">
    <div className="flex flex-wrap items-center justify-between gap-2"><h3 className="text-sm font-semibold">Validation</h3><span className="text-xs text-muted">{intro.stage}</span></div>

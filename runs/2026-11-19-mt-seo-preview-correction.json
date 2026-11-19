@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-11-19T08:01:00.187032+00:00",
+  "pass": true,
+  "failed_ci_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44483659391",
+  "failed_head": "8b0573f53ef7d0f5e8cb878cccf725efabf005a1",
+  "error_signature": "unavailable adopted tags do not appear as available development checkers: MT expected Planned / No checker, actual Planned tag / Wording-method preview available",
+  "cause": "The SEO regression still classified MT as having no usable method after the bounded preview was integrated.",
+  "fix": "Keep unavailable tags in the original negative assertions; require MT to retain Coming Soon tag status while explicitly advertising only its wording-method preview. Preserve negative assertions for certification and independent validation.",
+  "source_sha256": {
+    "tests/seo-metadata.mjs": "024bf29562d92f530434cbf3b4af0755abb1112f09fe4503429978f12e1de56d"
+  },
+  "checks": [
+    {
+      "argv": [
+        "npm",
+        "run",
+        "verify:seo"
+      ],
+      "exit_status": 0,
+      "unit_tests_passed": 9,
+      "canonical_pages_checked": 36,
+      "tag_summaries_checked": 20
+    }
+  ],
+  "application_source_changed": false,
+  "existing_source_bound_receipts_changed": false,
+  "independent_accuracy_evidence": false,
+  "new_original_closures": 0
+}
