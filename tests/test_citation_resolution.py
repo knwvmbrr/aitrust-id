@@ -331,6 +331,54 @@ def test_close_attempts_every_owned_handle_and_classifies_postcommit_failure(tmp
     assert output.exists() is published
 
 
+@pytest.mark.parametrize('close_mode', ['normal', 'closed_then_reused', 'failed_without_closing'])
+def test_fdopen_failure_retains_raw_ownership_and_never_retries_close(tmp_path, monkeypatch, close_mode):
+    private, _, _ = setup_files(tmp_path)
+    output = private / 'new.json'
+    fdopen, close = os.fdopen, os.close
+    raw = None
+    replacement = None
+    attempts = []
+    def fdopen_failure(fd, *args, **kwargs):
+        nonlocal raw
+        assert kwargs.get('closefd') is False
+        raw = fd
+        raise OSError('SYNTHETIC_FDOPEN_PRIMARY')
+    def close_once(fd):
+        nonlocal replacement
+        attempts.append(fd)
+        if fd == raw:
+            if close_mode == 'failed_without_closing': raise OSError('SYNTHETIC_CLOSE_SECONDARY')
+            close(fd)
+            if close_mode == 'closed_then_reused':
+                replacement = os.open(os.devnull, os.O_RDONLY)
+                assert replacement == raw
+                raise OSError('SYNTHETIC_CLOSE_SECONDARY')
+        else: close(fd)
+    monkeypatch.setattr(os, 'fdopen', fdopen_failure)
+    monkeypatch.setattr(os, 'close', close_once)
+    capture = c.Capture()
+    try:
+        with pytest.raises(OSError, match='^SYNTHETIC_FDOPEN_PRIMARY$'):
+            with capture:
+                capture.save(output, {'synthetic': True}, 1000)
+        assert raw is not None and attempts.count(raw) == 1
+        assert capture.fds == [] and not output.exists() and not list(private.glob('.citation-*'))
+        for fd in attempts:
+            if fd != raw:
+                with pytest.raises(OSError): os.fstat(fd)
+        if close_mode == 'normal':
+            with pytest.raises(OSError): os.fstat(raw)
+        else:
+            # A close error can mean still open or already reused: never guess.
+            os.fstat(raw)
+    finally:
+        monkeypatch.setattr(os, 'fdopen', fdopen)
+        monkeypatch.setattr(os, 'close', close)
+        if close_mode != 'normal' and raw is not None:
+            close(raw)  # Only this inert fixture knows ownership after injection.
+
+
 FAULT_DRIVER = r'''
 import importlib.abc,json,os,pathlib,runpy,stat,sys
 root,mode=sys.argv[1:3];sys.path.insert(0,root)
@@ -341,9 +389,18 @@ if mode=='import':
  sys.meta_path.insert(0,Fail())
 else:
  from tools import citation_resolution as c
- link,unlink,fsync,close=os.link,os.unlink,os.fsync,os.close
- linked=False;closed=False;drifted=False
+ link,unlink,fsync,close,fdopen=os.link,os.unlink,os.fsync,os.close,os.fdopen
+ linked=False;closed=False;drifted=False;raw_fd=None;replacement=None;raw_attempts=0;owned_fds=[]
  original_check=c.Capture.check
+ original_close=c.Capture.close
+ def capture_close(self):
+  owned_fds.extend(self.fds);return original_close(self)
+ def fdopen_fault(fd,*args,**kwargs):
+  global raw_fd
+  if mode in ('fdopen','fdopen_close'):
+   assert kwargs.get('closefd') is False
+   raw_fd=fd;raise OSError('SYNTHETIC_PRIVATE_CANARY')
+  return fdopen(fd,*args,**kwargs)
  def check_fault(self):
   global drifted
   if mode=='drift' and not drifted:
@@ -365,13 +422,36 @@ else:
   if (mode=='fsync' and linked and stat.S_ISDIR(os.fstat(fd).st_mode)) or (mode=='pre_fsync' and not linked):raise OSError('SYNTHETIC_PRIVATE_CANARY')
   return fsync(fd)
  def close_fault(fd):
-  global closed
+  global closed,replacement,raw_attempts
+  if mode in ('fdopen','fdopen_close') and fd==raw_fd:
+   raw_attempts+=1
+   close(fd)
+   if mode=='fdopen_close':
+    replacement=os.open(os.devnull,os.O_RDONLY)
+    assert replacement==raw_fd
+    raise OSError('SYNTHETIC_PRIVATE_CANARY')
+   return
   close(fd)
   if mode=='close' and linked and not closed:
    closed=True;raise OSError('SYNTHETIC_PRIVATE_CANARY')
- os.link=link_fault;os.unlink=unlink_fault;os.fsync=fsync_fault;os.close=close_fault;c.Capture.check=check_fault
+ os.link=link_fault;os.unlink=unlink_fault;os.fsync=fsync_fault;os.close=close_fault;os.fdopen=fdopen_fault;c.Capture.check=check_fault;c.Capture.close=capture_close
 sys.argv=[str(pathlib.Path(root)/'scripts/citation-resolution.py'),*sys.argv[3:]]
-runpy.run_path(sys.argv[0],run_name='__main__')
+try:runpy.run_path(sys.argv[0],run_name='__main__')
+except SystemExit:
+ if mode in ('fdopen','fdopen_close'):
+  assert raw_fd is not None and raw_attempts==1
+  for fd in owned_fds:
+   if replacement is not None and fd==raw_fd:continue
+   try:os.fstat(fd)
+   except OSError:pass
+   else:raise AssertionError('Owned capture handle leaked')
+  if replacement is not None:
+   os.fstat(replacement);close(replacement)
+  else:
+   try:os.fstat(raw_fd)
+   except OSError:pass
+   else:raise AssertionError('Raw handle leaked')
+ raise
 '''
 
 
@@ -405,7 +485,7 @@ def test_actual_cli_postpublication_failures_are_fixed_uncertainty(tmp_path, mod
         assert output.stat().st_mode & 0o777 == 0o600
 
 
-@pytest.mark.parametrize('mode', ['pre_fsync', 'import', 'race', 'drift'])
+@pytest.mark.parametrize('mode', ['pre_fsync', 'import', 'race', 'drift', 'fdopen', 'fdopen_close'])
 def test_actual_cli_precommit_and_import_refusals_stay_generic_and_private(tmp_path, mode):
     private, subject, store = setup_files(tmp_path)
     output = private / 'new.json'
