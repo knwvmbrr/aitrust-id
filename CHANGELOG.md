@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-153132-nf-selected-source-evidence-9e6db2cb
+
+Recorded 2026-11-19T15:31:32.517470+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a separately invoked NF evidence workflow binding caller-selected arbitrary NFC claim and source passage spans, composing canonical literal and cosine observations in independent bounded network-denied workers with NF-owned private I/O.
+- **Evidence.** 91 focused controls and 21 actual isolated-Python macOS CLI controls verify source and span identity, separate observation failures, real network denial, timeout and output caps, private exports, cross-tag independence and honest publication uncertainty; the initial failed candidate is retained. [Change record](./runs/changes/2026-11-19-153132-nf-selected-source-evidence-9e6db2cb.json).
+- **Not claimed.** Literal occurrence and cosine resemblance do not establish semantic support, source freshness or truth. No NF or FI tag, original scope closure, independent accuracy, Linux execution, full dependency clearance or human acceptance is claimed.
+
+
 ### 2026-11-19-094620-record-live-fi-citation-source-and-guide-publication-064d4d37
 
 Recorded 2026-11-19T09:46:20.522872+00:00 · Contributor: Codex · change

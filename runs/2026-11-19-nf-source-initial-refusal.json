@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "component": "NF selected-source initial candidate",
+  "focused_tests": {
+    "passed": 56,
+    "failed": 3,
+    "elapsed_seconds": 1.37
+  },
+  "error_signature": "NameError: usable is not defined",
+  "cause": "A span-validator setup block was inserted in evaluate unsupported-kind branch instead of validate_output cosine branch. The same defect escaped the tuple-based unexpected-exception boundary.",
+  "correction": "Place setup in cosine validator and make per-check plus CLI exception boundaries fixed and fail closed for unexpected Exception without catching cancellation BaseExceptions.",
+  "source_sha256": {
+    "tools/nf_source_evidence.py": "27cdfdacf82d18e8791ad88079dc7714ec5c917de5e52526f6d4a3700e20ac1a",
+    "tools/nf_private_io.py": "724d557d914ffe4f6676650235d81f6c6b172ff1468175c5315176c140032b6f",
+    "scripts/nf-source-worker.py": "5ba6311279c125095ba90de6134a2e90078e36538b96d9167892fc75871cae9b",
+    "scripts/check-nf-source-evidence.py": "2efaa2479fa10921b65049981deb66e2144cd91914d22c5f8b171387c5df420f",
+    "tests/test_nf_source_evidence.py": "e099112690a9c3c5ece9d8e704d071db0ed5abcf7b88c04bb0490657217373f8"
+  },
+  "claims": {
+    "fixed": false,
+    "accuracy_or_scope_completion": false
+  }
+}
