@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-022119-bind-integrated-tag-tool-site-and-boundary-checks-ce4d2e69
+
+Recorded 2026-11-19T02:21:19.354115+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind current website and route review to the integrated tag tools, independent method candidates and legal draft downloads.
+- **Evidence.** All32 website commands,14 extension commands and the route-boundary verifier pass;41 protocol controls remain current. [Change record](./runs/changes/2026-11-19-022119-bind-integrated-tag-tool-site-and-boundary-checks-ce4d2e69.json).
+- **Not claimed.** Public deployment and hosted Linux checks are not yet verified. No independent tag release, social publication, filing or original scope closure.
+
+
+### 2026-11-19-021434-bind-agent-tools-protocol-evidence-b1d7cdf0
+
+Recorded 2026-11-19T02:14:34.409661+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh protocol execution and review the current local API route inventory without adding a listener.
+- **Evidence.** All forty-one protocol commands pass against frozen current inputs. [Change record](./runs/changes/2026-11-19-021434-bind-agent-tools-protocol-evidence-b1d7cdf0.json).
+- **Not claimed.** Website verification and Linux CI remain pending; no independent tag validation or original requirement closure.
+
+
+### 2026-11-19-021237-integrate-tag-candidates-linux-lab-and-michigan-llc-drafts-8413edaa
+
+Recorded 2026-11-19T02:12:37.615954+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate independently delivered MT quotation and NF/FI claim coverage components; repair repeated-match API schema and encoded-execution wording; configure separate scheduled Linux lanes; prepare a distinct Michigan LLC document set.
+- **Evidence.** Actual API/MCP controls pass after two debugger findings; 73 integration tests across new components pass; local lab controls pass; nine LLC pages and thirteen operations pages rendered and inspected. [Change record](./runs/changes/2026-11-19-021237-integrate-tag-candidates-linux-lab-and-michigan-llc-drafts-8413edaa.json).
+- **Not claimed.** No parent tag released, independent labels acquired, Linux scheduled run completed, account connected, social post sent, legal filing executed or original requirement closed. Remaining original requirements:70.
+
+
+### 2026-11-19-020930-reference-claim-coverage-8f1dbeb0
+
+Recorded 2026-11-19T02:09:30.242338+00:00 · Contributor: Codex NF/FI evidence lane · change
+
+- **Changed.** Account for every supported claim line in automatic reference NLI results and show evaluated and unevaluated line counts in the summary.
+- **Evidence.** The old maximum-one comparison omits coverage; the current map accounts for both claims with the same one controlled comparison. Three actual private CLI controls and 228 focused compatibility and refusal checks pass. [Change record](./runs/changes/2026-11-19-020930-reference-claim-coverage-8f1dbeb0.json).
+- **Not claimed.** Coverage counts model outputs for bounded input lines. Source truth, exhaustive retrieval, model accuracy and NF/FI release remain unestablished. No original parent requirement closes.
+
+
+### 2026-11-19-020642-authority-quotation-candidate-baf4b261
+
+Recorded 2026-11-19T02:06:42.093813+00:00 · Contributor: Codex - MT evidence engineering lane · change
+
+- **Changed.** Add a separately versioned opt-in authority quotation observation with local marker contexts and private evidence export.
+- **Evidence.** 114 focused tests and 22 actual executable controls pass; retained quoted phrases and quoted-marker locality are reproducible under the bounded ASCII grammar. [Change record](./runs/changes/2026-11-19-020642-authority-quotation-candidate-baf4b261.json).
+- **Not claimed.** Engineering candidate only; old MT workflow unchanged; no quotation endorsement, semantic attribution, negation, intent, accuracy or tag-release claim; no global completion changed.
+
+
+### 2026-11-19-015558-connect-local-tag-tools-and-owner-release-review-db6b01ef
+
+Recorded 2026-11-19T01:55:58.884876+00:00 · Contributor: Codex · change
+
+- **Changed.** Add independent local JSON and MCP tag tools, source-bound release review drafts, AITRUSTID social setup instructions, unexecuted legal operating forms and a current tag staffing board.
+- **Evidence.** Twelve real SDK/API controls, four approval/source/destination controls, scope verification and thirteen rendered legal packet pages checked on this Mac. [Change record](./runs/changes/2026-11-19-015558-connect-local-tag-tools-and-owner-release-review-db6b01ef.json).
+- **Not claimed.** No new detector, independent accuracy release, social account or post, public API, company formation or original requirement closure. Clean Linux tool installation and current public site build remain pending.
+
+
 ### 2026-11-19-010800-enable-owner-testflight-build-a4e2fc7f
 
 Recorded 2026-11-19T01:08:00.060832+00:00 · Contributor: Codex · change

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-18T15:46:57.961717+00:00",
+  "audited_at": "2026-11-19T01:54:21.135044+00:00",
   "client_date": "2026-11-18",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -14144,6 +14144,76 @@
         "N-003",
         "N-006"
       ]
+    },
+    {
+      "id": "ENH-AGENT-TAG-TOOLS",
+      "kind": "enhancement",
+      "title": "Independent tag JSON API and local MCP tools",
+      "percent_complete": 80,
+      "milestones_passed": [
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration"
+      ],
+      "audited_at": "2026-11-19T01:54:21.135044+00:00",
+      "checked_by": "Codex",
+      "implemented_by": [
+        "Codex \u2014 implemented and executed current software"
+      ],
+      "planning_contributors": [
+        "Michael \u2014 requested product scope"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Run the hashed optional installation and interoperability checks on clean Linux before accepting the complete declared Mac/Linux software contract. Independent accuracy remains with each parent tag.",
+      "next_owner": "Codex integration; Michael for actual account creation and human approval where applicable",
+      "evidence": [
+        "docs/ai-tools.md",
+        "docs/ai-tool-plugin-plan.md",
+        "runs/2026-11-18-ai-tools-mac-debugged.json",
+        "tests/test_ai_tools_mcp.py"
+      ],
+      "evidence_scope": "Real official SDK stdio discovery, modern and legacy client calls, actual PS, synthetic valid privacy projection, privacy outage isolation, cancellation and bounded private errors passed on this Mac. No public endpoint or new tag released.",
+      "required_acceptance": [
+        "Run the hashed optional installation and interoperability checks on clean Linux before accepting the complete declared Mac/Linux software contract. Independent accuracy remains with each parent tag."
+      ],
+      "queue": "open"
+    },
+    {
+      "id": "ENH-RELEASE-COMMUNICATION",
+      "kind": "enhancement",
+      "title": "Versioned release review and owner-approved social handoff",
+      "percent_complete": 60,
+      "milestones_passed": [
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks"
+      ],
+      "audited_at": "2026-11-19T01:54:21.135044+00:00",
+      "checked_by": "Codex",
+      "implemented_by": [
+        "Codex \u2014 implemented and executed current software"
+      ],
+      "planning_contributors": [
+        "Michael \u2014 requested product scope"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Create and verify project-owned social accounts; obtain exact owner approval and verify one platform post, its returned ID and safe retry behavior. Run review workflow in CI.",
+      "next_owner": "Codex integration; Michael for actual account creation and human approval where applicable",
+      "evidence": [
+        "docs/communications-plan.md",
+        "docs/social-launch-kit.md",
+        "runs/2026-11-18-release-review-queue.json"
+      ],
+      "evidence_scope": "Four software controls and actual draft CLI pass. No accounts, approvals or network publication are claimed.",
+      "required_acceptance": [
+        "Create and verify project-owned social accounts; obtain exact owner approval and verify one platform post, its returned ID and safe retry behavior. Run review workflow in CI."
+      ],
+      "queue": "open"
     }
   ],
   "revalidation": "Any affected source, protocol, method, route, privacy or acceptance change reopens the relevant item; snapshots are not perpetual guarantees."

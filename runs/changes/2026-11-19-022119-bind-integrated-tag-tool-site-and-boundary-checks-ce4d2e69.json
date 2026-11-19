@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-022119-bind-integrated-tag-tool-site-and-boundary-checks-ce4d2e69",
+  "recorded_at": "2026-11-19T02:21:19.354115+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a6e6abd37b9d0b979b1cf8e365c3b6ccd483f85a",
+  "changed": "Bind current website and route review to the integrated tag tools, independent method candidates and legal draft downloads.",
+  "proves": "All32 website commands,14 extension commands and the route-boundary verifier pass;41 protocol controls remain current.",
+  "limits": "Public deployment and hosted Linux checks are not yet verified. No independent tag release, social publication, filing or original scope closure.",
+  "scope_ids": [
+    "F-150",
+    "WP-SITE",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    "state.json": "b2a58857dbb44ba4ae3a31b91b6b7a1792ecd6b4a88b2e1517d33a0f5261eac4",
+    "eval/route-boundaries.json": "3d9c827693625ce7399237d5aadb4a8a4b6d6230cd915177ddd9838d66007597",
+    "runs/2026-11-18-agent-tools-website.json": "306387f95d73e623895df1e167a14b73e9e123ac156bf0b48d4b416b37ba2a36",
+    "runs/2026-11-18-agent-tools-extension.json": "f6a136b4773f8ab781585cbb7f58a4b6264e42be674b086535754a47e78a4dd3",
+    "runs/2026-11-18-agent-tools-boundaries.json": "ffa95140bfbb3894a6691f8f353446cbf2bb12912db70608117dd9dc624927b7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-agent-tools-website.json",
+      "sha256": "306387f95d73e623895df1e167a14b73e9e123ac156bf0b48d4b416b37ba2a36"
+    },
+    {
+      "path": "runs/2026-11-18-agent-tools-extension.json",
+      "sha256": "f6a136b4773f8ab781585cbb7f58a4b6264e42be674b086535754a47e78a4dd3"
+    },
+    {
+      "path": "runs/2026-11-18-agent-tools-boundaries.json",
+      "sha256": "ffa95140bfbb3894a6691f8f353446cbf2bb12912db70608117dd9dc624927b7"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T02:21:19.949089+00:00"
+    }
+  ]
+}

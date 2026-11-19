@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-19T02:08:06.757838+00:00",
+  "author": "Codex NF/FI evidence lane",
+  "source_base": "7b5ab10df9c91a4134d0d655c315b13df890e422",
+  "scope_ids": [
+    "F-020b",
+    "T-NF",
+    "T-FI"
+  ],
+  "claim_level": "engineering_only",
+  "pass": true,
+  "before_source_sha256": "e92e85f2b1820c003be3c7111829ef0bdaa0a3112e770af0f8dc8b8a24e376c3",
+  "sources": {
+    "research/nli/references.py": "11b82d35eeb12cc299c65d59ab2c5fcc96118a36911604157476f98842b2c657",
+    "scripts/check-nli-references.py": "1c3b1f624ca7d1acd0ef5072b1f80670984c6546d50b025c168cc632d3109cc8",
+    "tests/test_reference_claim_coverage.py": "d574bf99d4b862fcff67956cdb051817bca913497a3236ae7e39fb1c09f6c942"
+  },
+  "source_unchanged_during_execution": true,
+  "before_after": [
+    {
+      "version": "before",
+      "controlled_backend_calls": 1,
+      "actual_model_inference": false,
+      "model_rows": 1,
+      "coverage_present": false,
+      "coverage_postcondition_pass": false
+    },
+    {
+      "version": "after",
+      "controlled_backend_calls": 1,
+      "actual_model_inference": false,
+      "model_rows": 1,
+      "coverage_present": true,
+      "coverage_postcondition_pass": true,
+      "coverage_counts": {
+        "claim_coverage_obtained": true,
+        "claim_units": 2,
+        "claim_units_evaluated": 1,
+        "claim_units_not_evaluated": 1
+      }
+    }
+  ],
+  "actual_cli_controls": [
+    {
+      "case": "actual_cli_two_unmatched_claims",
+      "exit_status": 0,
+      "coverage_obtained": true,
+      "claims": 2,
+      "evaluated": 0,
+      "not_evaluated": 2,
+      "model_invoked": false,
+      "public_text_hash_span_or_path_echoed": false,
+      "private_mode0600": true
+    },
+    {
+      "case": "actual_cli_existing_details_refused",
+      "exit_status": 2,
+      "prior_bytes_unchanged": true
+    },
+    {
+      "case": "actual_cli_corrupted_reference_refused_before_details",
+      "exit_status": 2,
+      "created_details": false
+    }
+  ],
+  "focused_tests": {
+    "command": "python3 -B -m pytest -p no:cacheprovider tests/test_reference_claim_coverage.py tests/test_nli_references.py tests/test_nli_reference_cli.py tests/test_selected_nli_references.py tests/test_reference_review_window.py -q",
+    "passed": 228,
+    "failed": 0,
+    "seconds": 1.84
+  },
+  "retained_candidate_failure": {
+    "passed": 224,
+    "failed": 1,
+    "seconds": 2.16,
+    "failure": "New legacy-summary test omitted the existing mandatory network_control field in its synthetic result fixture. Corrected the fixture. The original API requirement was retained."
+  },
+  "actual_model_inference": false,
+  "network_used": false,
+  "browser_native_suite_executed": false,
+  "independent_accuracy_evidence": false,
+  "original_requirement_closures": 0,
+  "limits": [
+    "Coverage counts model outputs for explicit supported input lines",
+    "It does not establish source authenticity, freshness, factual support or exhaustive retrieval",
+    "Claim units may contain several semantic statements",
+    "Historical coverage without the original subject remains unavailable"
+  ]
+}

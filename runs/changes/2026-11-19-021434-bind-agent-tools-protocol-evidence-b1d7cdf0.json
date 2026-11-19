@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-021434-bind-agent-tools-protocol-evidence-b1d7cdf0",
+  "recorded_at": "2026-11-19T02:14:34.409661+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a6e6abd37b9d0b979b1cf8e365c3b6ccd483f85a",
+  "changed": "Refresh protocol execution and review the current local API route inventory without adding a listener.",
+  "proves": "All forty-one protocol commands pass against frozen current inputs.",
+  "limits": "Website verification and Linux CI remain pending; no independent tag validation or original requirement closure.",
+  "scope_ids": [
+    "F-150",
+    "WP-VALIDATION",
+    "WP-SITE"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "e930ed3314b75a9809a5cb9dbab87f6a6bf2677664fa948570094862f7ce80ff",
+    "runs/2026-11-18-agent-tools-protocol.json": "976ccb2a619a8cc9f2bac222c0a34e40e68cda5a35ff75084dc66630b3676236"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-agent-tools-protocol.json",
+      "sha256": "976ccb2a619a8cc9f2bac222c0a34e40e68cda5a35ff75084dc66630b3676236"
+    }
+  ],
+  "checks": []
+}

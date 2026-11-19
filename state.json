@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T01:07:58.229513+00:00",
-  "active_increment": "Owner-approved compliance saved and TestFlight 1.0 (1) assigned to the owner-only group with Testing status. Physical Share and VoiceOver acceptance remain open; 70 requirements remain.",
+  "updated": "2026-11-19T02:21:19.310681+00:00",
+  "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -39,7 +39,7 @@
     "evidence": "runs/2026-11-06-host-protected-publication.json",
     "remaining": [
       "Human screen-reader review",
-      "Native optional model-tool integration unverified",
+      "Host-specific MCP configuration and user-interface acceptance beyond the official SDK client",
       "DNSSEC and DMARC rollout remain unverified",
       "Self-hosted community and private research application gates remain open",
       "Search Console ownership verification, sitemap submission and actual Google indexing checks"
@@ -1142,7 +1142,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T01:07:58.229513+00:00",
+  "updated_at": "2026-11-19T02:21:19.310681+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3575,7 +3575,7 @@
   "tag_status": {
     "recorded_at": "2026-11-16T20:47:35.175951+00:00",
     "board": "docs/tag-status-2026-11-16.json",
-    "readable_board": "docs/tag-status-2026-11-16.md",
+    "readable_board": "docs/tag-status-2026-11-18.md",
     "complete_tags": 0,
     "independently_release_validated_tags": 0,
     "working_preview_tags": [
@@ -3587,7 +3587,16 @@
     "all_tags_concurrently_staffed": false,
     "candidate_changes_integrated": true,
     "publication_completed_at": "2026-11-17T12:27:44.932Z",
-    "published_source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd"
+    "published_source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
+    "active_agents_checked_at": "2026-11-19T02:12:36.319671+00:00",
+    "specialist_agents_currently_running": 0,
+    "current_integration_owner": "Codex PM",
+    "active_tag_lanes": [],
+    "delivered_this_increment": {
+      "MT": "runs/2026-11-18-authority-quotation-candidate.json",
+      "NF_FI": "runs/2026-11-18-reference-claim-coverage.json"
+    },
+    "integration_status": "Both specialist candidates delivered and integrated into working branch; checks and publication pending"
   },
   "current_engineering_revalidation_status": {
     "latest_published_evidence_increment": {
@@ -3598,6 +3607,15 @@
       "evidence": "runs/2026-11-17-independent-evidence-publication.json",
       "matching_artifacts": 592,
       "independent_release_validated": false
+    },
+    "agent_integration": {
+      "protocol": "runs/2026-11-18-agent-tools-protocol.json",
+      "website": "runs/2026-11-18-agent-tools-website.json",
+      "protocol_commands": 41,
+      "website_commands": 32,
+      "independent_accuracy_evidence": false,
+      "boundaries": "runs/2026-11-18-agent-tools-boundaries.json",
+      "extension": "runs/2026-11-18-agent-tools-extension.json"
     }
   },
   "mt_evidence_workflow": {
@@ -3684,5 +3702,48 @@
     "social_draft_workflow_verified": true
   },
   "current_route_boundaries": "runs/2026-11-18-testflight-compliance-boundaries.json",
-  "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json"
+  "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json",
+  "agent_tag_tools": {
+    "status": "implemented_mac_verified_linux_pending",
+    "implemented_by": "Codex",
+    "guide": "docs/ai-tools.md",
+    "evidence": "runs/2026-11-18-ai-tools-mac-debugged.json",
+    "mcp_protocol_checks_passed": 5,
+    "api_checks_passed": 7,
+    "callable_tags": [
+      "PS",
+      "PII_REDACTED"
+    ],
+    "public_endpoint_deployed": false,
+    "independent_accuracy_granted": false,
+    "review_defects_fixed": [
+      "Repeated signals aggregated without lost counts",
+      "Encoded execution gets accurate command-risk wording"
+    ]
+  },
+  "release_communications": {
+    "status": "draft_queue_and_approval_validator_implemented_no_connected_accounts",
+    "guide": "docs/social-launch-kit.md",
+    "evidence": "runs/2026-11-18-release-review-queue.json",
+    "requested_handle": "AITRUSTID",
+    "handle_availability_verified": false,
+    "connected_accounts": 0,
+    "automatic_network_publication": false
+  },
+  "legal_execution_packet": {
+    "status": "unexecuted_drafts_prepared_not_counsel_cleared",
+    "source": "docs/legal/execution-packet.md",
+    "operator_decision_required": true,
+    "formation_filed": false,
+    "historical_package_fully_reviewed": false,
+    "evidence": "runs/2026-11-18-legal-execution-packet.json",
+    "michigan_llc_source": "docs/legal/michigan-llc-packet.md",
+    "michigan_llc_evidence": "runs/2026-11-18-michigan-llc-packet.json"
+  },
+  "virtual_tag_lab": {
+    "status": "workflow_configured_not_yet_merged_or_run_on_Linux",
+    "guide": "docs/virtual-tag-lab.md",
+    "mac_controls_passed": 329,
+    "independent_accuracy_granted": false
+  }
 }

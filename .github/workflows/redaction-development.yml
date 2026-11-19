@@ -1,5 +1,7 @@
 name: redaction-development
 on:
+  schedule:
+    - cron: '20 8 * * 1'
   workflow_dispatch:
   pull_request:
     paths:

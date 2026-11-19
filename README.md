@@ -632,3 +632,10 @@ separate gates. Run `make verify-host-capture` for its focused checks.
 
 
 Tag delivery and ownership: [all14 tag scores and gaps](docs/tag-status-2026-11-16.md). Completion and independent accuracy are separate; no complete tag is independently release validated.
+
+## Connect your AI application
+
+Use the free [Python/JSON tag API and MCP plugin](docs/ai-tools.md) to call the
+implemented checks from an AI application. PS runs without Docker or an account;
+optional privacy checking stays separate. Results identify the method and evidence,
+preserve unavailable states, and do not establish safety or independent accuracy.

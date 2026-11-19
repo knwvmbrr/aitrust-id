@@ -260,6 +260,12 @@ PATTERNS += ('tools/hash_reports.py', 'scripts/hash-reports.py', 'scripts/verify
 
 PATTERNS += ('runs/2026-11-09-hash-inbox-current-macos.json','runs/2026-11-09-hash-inbox-current-linux.json')
 
+PATTERNS += ('tools/tag_api.py', 'scripts/tag-api.py', 'scripts/ai-tools-server.py', 'scripts/verify-ai-tools.py', 'integrations/**/*', 'tests/test_ai_*.py', 'scripts/release-announcements.py', 'tests/test_release_announcements.py', 'communications/**/*')
+
+PATTERNS += ('tools/authority_quotation.py','scripts/authority-quotation.py','scripts/verify-authority-quotation.py','tests/test_authority_quotation.py')
+
+PATTERNS += ('tests/test_reference_claim_coverage.py',)
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:
