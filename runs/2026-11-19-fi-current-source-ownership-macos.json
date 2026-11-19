@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "component": "FI frozen-source ownership and publication verification",
+  "recorded_at": "2026-11-19T09:16:43.882636+00:00",
+  "executed_by": "Codex",
+  "source_commit": "99982c1d006b67c71d5541c90d44b13fe5eaf4e3",
+  "platform": "Darwin",
+  "python_version": "3.12.14",
+  "source_sha256": {
+    "tools/citation_resolution.py": "7581a6684f1db434069b876beac3883746d6e537729249e0cf2d66e03277bb71",
+    "scripts/citation-resolution.py": "ae9b685cae0781350944bf18e754aaba87c03e396fdcec8463768b9c7c23190c",
+    "tests/test_citation_resolution.py": "213f0173448cf6af4fb9c1d043cf2c5b3a7a9b6cbe1c4ebf1b5a17f1ec5a62d5",
+    "docs/fi-citation-sidecar.md": "93be92ed4faea588f10ad75be83c0343fe7473092c6a2f76fc4f5771a7ed047a",
+    "docs/fi-citation-sidecar-plan.md": "e9452ca321e7b35a1af7e4a96c9eee7b779326912fbb4932f1966e985f067d54",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "tools/quantitative_observations.py": "7579fb31e87efb786587bc982fe7074850d4fee79235557c60b341b89dc9f90c",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec"
+  },
+  "source_hashes_stable_before_after": true,
+  "source_docs_or_tests_changed": false,
+  "focused_test_suite_rerun": false,
+  "actual_cli": {
+    "passed": 23,
+    "failed": 0,
+    "isolated_flags": [
+      "-I",
+      "-S",
+      "-B"
+    ],
+    "minimal_environment": true,
+    "stdlib_only": true,
+    "controls": [
+      {
+        "name": "current_prepare",
+        "exit_code": 0,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "623c26bc2818c217082ff13ebfe09c78ace2d45095cde1d789974806784d41f0",
+        "stderr_bytes": 0,
+        "final_exists": true,
+        "private_temporary_names_remain": false,
+        "mode_0600": true,
+        "complete_json": true
+      },
+      {
+        "name": "current_three_state_check",
+        "exit_code": 0,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "77df5c352e3b32e04e8c48d275ff39ee897ebc114030ed2412af012cd6bf4d5d",
+        "stderr_bytes": 0
+      },
+      {
+        "name": "current_private_report",
+        "exit_code": 0,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "751dce8272814aae6594f2d53e7b2d86b47bfdcbc92eb032de2654facc04ea2b",
+        "stderr_bytes": 0,
+        "final_exists": true,
+        "private_temporary_names_remain": false,
+        "mode_0600": true,
+        "complete_json": true
+      },
+      {
+        "name": "existing_report_refusal",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0,
+        "final_exists": true,
+        "private_temporary_names_remain": false,
+        "mode_0600": true,
+        "complete_json": true
+      },
+      {
+        "name": "changed_subject_no_final",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0,
+        "final_exists": false,
+        "private_temporary_names_remain": false
+      },
+      {
+        "name": "prepare_unlink",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": true,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0,
+        "final_exists": true,
+        "private_temporary_names_remain": true,
+        "mode_0600": true,
+        "complete_json": true
+      },
+      {
+        "name": "prepare_fsync",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": true,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0,
+        "final_exists": true,
+        "private_temporary_names_remain": false,
+        "mode_0600": true,
+        "complete_json": true
+      },
+      {
+        "name": "prepare_close",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": true,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0,
+        "final_exists": true,
+        "private_temporary_names_remain": false,
+        "mode_0600": true,
+        "complete_json": true
+      },
+      {
+        "name": "prepare_link_before",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": true,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0,
+        "final_exists": false,
+        "private_temporary_names_remain": false
+      },
+      {
+        "name": "prepare_link_after",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": true,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0,
+        "final_exists": true,
+        "private_temporary_names_remain": false,
+        "mode_0600": true,
+        "complete_json": true
+      },
+      {
+        "name": "prepare_fdopen",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0,
+        "final_exists": false,
+        "private_temporary_names_remain": false
+      },
+      {
+        "name": "prepare_fdopen_close",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0,
+        "final_exists": false,
+        "private_temporary_names_remain": false
+      },
+      {
+        "name": "check_unlink",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": true,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0,
+        "final_exists": true,
+        "private_temporary_names_remain": true,
+        "mode_0600": true,
+        "complete_json": true
+      },
+      {
+        "name": "check_fsync",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": true,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0,
+        "final_exists": true,
+        "private_temporary_names_remain": false,
+        "mode_0600": true,
+        "complete_json": true
+      },
+      {
+        "name": "check_close",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": true,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0,
+        "final_exists": true,
+        "private_temporary_names_remain": false,
+        "mode_0600": true,
+        "complete_json": true
+      },
+      {
+        "name": "check_link_before",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": true,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0,
+        "final_exists": false,
+        "private_temporary_names_remain": false
+      },
+      {
+        "name": "check_link_after",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": true,
+        "stdout_sha256": "3d5d02f2f73c4609700cf9047b9b59e655c965a775b6291a2c8779121900ea41",
+        "stderr_bytes": 0,
+        "final_exists": true,
+        "private_temporary_names_remain": false,
+        "mode_0600": true,
+        "complete_json": true
+      },
+      {
+        "name": "check_fdopen",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0,
+        "final_exists": false,
+        "private_temporary_names_remain": false
+      },
+      {
+        "name": "check_fdopen_close",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0,
+        "final_exists": false,
+        "private_temporary_names_remain": false
+      },
+      {
+        "name": "ordinary_pre_fsync",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0,
+        "final_exists": false,
+        "private_temporary_names_remain": false
+      },
+      {
+        "name": "ordinary_import",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0,
+        "final_exists": false,
+        "private_temporary_names_remain": false
+      },
+      {
+        "name": "ordinary_race",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0,
+        "final_exists": true,
+        "private_temporary_names_remain": false,
+        "mode_0600": true,
+        "complete_json": false
+      },
+      {
+        "name": "ordinary_drift",
+        "exit_code": 2,
+        "passed": true,
+        "fixed_uncertainty": false,
+        "stdout_sha256": "a9fdff3e61032146ffabaa173da35faf37103c2f337793a7ba79811ac0e8014f",
+        "stderr_bytes": 0,
+        "final_exists": false,
+        "private_temporary_names_remain": false
+      }
+    ]
+  },
+  "fault_injection": "Fixed synthetic OS-call wrappers around actual CLI; fdopen modes assert one raw-close attempt, other handles closed, and reused replacement remains open until fixture-owned cleanup",
+  "boundaries": {
+    "current_three_resolution_states_supported": true,
+    "fdopen_failure_has_no_final_and_attempts_raw_close": true,
+    "secondary_close_error_preserves_primary_refusal": true,
+    "reused_descriptor_not_reclosed": true,
+    "postpublication_uncertainty_preserved": true,
+    "unexpected_link_error_conservatively_uncertain": true,
+    "prepublication_drift_has_no_new_final": true,
+    "existing_destination_preserved": true,
+    "private_content_or_path_echo": false,
+    "automatic_retry_or_final_rollback": false
+  },
+  "related_immutable_receipts": [
+    "runs/2026-11-19-fi-opaque-target-corrected-macos.json",
+    "runs/2026-11-19-fi-fdopen-corrected-macos.json",
+    "runs/2026-11-19-fi-postcommit-corrected-macos.json"
+  ],
+  "claims": {
+    "full_T_FI_completion": false,
+    "tag_issuance": false,
+    "independent_accuracy": false,
+    "human_acceptance": false,
+    "linux_execution": false,
+    "kernel_network_isolation_measured": false
+  }
+}
