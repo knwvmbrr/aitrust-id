@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-154710-nf-selected-source-linux-evidence-29a4ed46
+
+Recorded 2026-11-19T15:47:10.334274+00:00 · Contributor: Codex · change
+
+- **Changed.** Record actual corrected-source NF execution as an unprivileged user on the existing isolated Linux verification host, without changing NF sources or active services.
+- **Evidence.** 21 actual CLI and 7 selected stdlib library controls pass under Python3.13.5 UID1000, kernel network namespace and real libseccomp IPv4/IPv6 denial; all15 selected input hashes and original staging identities remain unchanged, and the owned temporary checkout is removed. [Change record](./runs/changes/2026-11-19-154710-nf-selected-source-linux-evidence-29a4ed46.json).
+- **Not claimed.** Selected engineering controls only; the full pytest suite was not run on Linux and no package was installed. No NF or FI tag, original scope closure, independent accuracy, source-truth, dependency clearance or human acceptance is claimed.
+
+
 ### 2026-11-19-153737-nf-canonical-cosine-record-binding-41f58ead
 
 Recorded 2026-11-19T15:37:37.915789+00:00 · Contributor: Codex · change
