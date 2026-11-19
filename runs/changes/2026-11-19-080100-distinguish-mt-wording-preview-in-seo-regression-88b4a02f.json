@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-080100-distinguish-mt-wording-preview-in-seo-regression-88b4a02f",
+  "recorded_at": "2026-11-19T08:01:00.226372+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8b0573f53ef7d0f5e8cb878cccf725efabf005a1",
+  "changed": "Correct the SEO regression to distinguish the available MT wording-method preview from the unreleased MT tag.",
+  "proves": "All 9 SEO unit checks and the built metadata checks for 36 canonical pages and 20 tag summaries pass. The planned tag status and negative certification/accuracy assertions are retained.",
+  "limits": "Only the stale test classification changes; application source and accepted method behavior are unchanged. Required CI and live publication remain pending; no original closure.",
+  "scope_ids": [
+    "T-MT"
+  ],
+  "files": {
+    "runs/2026-11-19-mt-seo-preview-correction.json": "acf6167d96a576a0b7101199653b9d3a326fe4398ca678ef848f58b235140546",
+    "tests/seo-metadata.mjs": "024bf29562d92f530434cbf3b4af0755abb1112f09fe4503429978f12e1de56d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-mt-seo-preview-correction.json",
+      "sha256": "acf6167d96a576a0b7101199653b9d3a326fe4398ca678ef848f58b235140546"
+    }
+  ],
+  "checks": []
+}

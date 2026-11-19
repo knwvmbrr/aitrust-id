@@ -16,11 +16,17 @@ test('local privacy setup is not described as a website capability',()=>{
  assert.match(tagDescription(tag('PII_REDACTED')),/Local setup required\. PII does not run in this website checker/);
 });
 test('unavailable adopted tags do not appear as available development checkers',()=>{
- for(const id of ['NF','FI','HP','MT','IV','FA','PA','UNK','PII_OUTBOUND']){
+ for(const id of ['NF','FI','HP','IV','FA','PA','UNK','PII_OUTBOUND']){
   const description=tagDescription(tag(id));
   assert.match(description,/Planned · No checker available yet/,id);
   assert.doesNotMatch(description,/Development preview|Works here/,id);
  }
+});
+test('MT discovery distinguishes its wording-method preview from tag release',()=>{
+ const description=tagDescription(tag('MT'));
+ assert.equal(tag('MT').status,'Coming Soon');
+ assert.match(description,/Planned tag · Wording-method preview available/);
+ assert.doesNotMatch(description,/No checker|Works here|certified|independently validated|detects manipulation|accuracy guarantee/i);
 });
 test('working organization tools are distinguished from unbuilt hosted offerings',()=>{
  for(const id of ['fleet','host','audit','sso'])assert.match(tagDescription(tag(id)),/Local software available\. No team service is running/,id);

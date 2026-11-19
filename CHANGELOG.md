@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-080100-distinguish-mt-wording-preview-in-seo-regression-88b4a02f
+
+Recorded 2026-11-19T08:01:00.226372+00:00 · Contributor: Codex · change
+
+- **Changed.** Correct the SEO regression to distinguish the available MT wording-method preview from the unreleased MT tag.
+- **Evidence.** All 9 SEO unit checks and the built metadata checks for 36 canonical pages and 20 tag summaries pass. The planned tag status and negative certification/accuracy assertions are retained. [Change record](./runs/changes/2026-11-19-080100-distinguish-mt-wording-preview-in-seo-regression-88b4a02f.json).
+- **Not claimed.** Only the stale test classification changes; application source and accepted method behavior are unchanged. Required CI and live publication remain pending; no original closure.
+
+
 ### 2026-11-19-074949-record-combined-mt-cohort-integration-acceptance-4589a662
 
 Recorded 2026-11-19T07:49:49.905148+00:00 · Contributor: Codex · change
