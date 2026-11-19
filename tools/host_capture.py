@@ -232,6 +232,18 @@ def foreground(stdin,stdout):
 
 
 @contextmanager
+def worker_launch():
+    """Defer terminal stops until the caller owns its detached worker handle."""
+    # A vfork child can briefly share our foreground group before setsid. It
+    # must not stop there while its parent is suspended waiting for exec.
+    # This pipe-only child retains the blocked terminal stops in its private
+    # session; SIGKILL cleanup and the parent-death watcher remain available.
+    prior=signal.pthread_sigmask(signal.SIG_BLOCK,{signal.SIGTSTP,signal.SIGTTIN,signal.SIGTTOU})
+    try:yield
+    finally:signal.pthread_sigmask(signal.SIG_SETMASK,prior)
+
+
+@contextmanager
 def interrupt_cleanup(stdin,stdout):
     """Job control cannot resume a blocked terminal read behind the shell."""
     prior={sig:signal.getsignal(sig) for sig in
@@ -331,7 +343,8 @@ def run(root,name,expected,*,consent,tag=None,record_dir=None,stdin=sys.stdin,st
                         record('captured',subject=snapshot);say('HOST CAPTURED · revision '+str(revision))
                         if tag:
                             require(sha(script.read_bytes())==script_hash)
-                            worker=Worker(script,text);pending=(epoch,revision,snapshot,text)
+                            with worker_launch():
+                                worker=Worker(script,text);pending=(epoch,revision,snapshot,text)
                         text=None
                 if worker:
                     completed=False

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-023935-bind-lab-bootstrap-and-diagnostic-verification-923a4f04",
+  "recorded_at": "2026-11-19T02:39:35.772322+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6ebcbeb6aa15ea599b088c98078407703734d0f2",
+  "changed": "Bind updated Linux evidence and failure diagnostics to current website and route review.",
+  "proves": "Current32 website commands,41 protocol commands and route boundary checks pass.",
+  "limits": "Scheduled PS and privacy startup follow-up require hosted execution. No independent accuracy, physical acceptance or original requirement closure.",
+  "scope_ids": [
+    "F-150",
+    "WP-VALIDATION",
+    "WP-OPERATIONS"
+  ],
+  "files": {
+    "state.json": "00024cb740fc228a5b99d79a27ec49e0ba9e3b80d5967d160b368bbf0f643397",
+    "eval/route-boundaries.json": "e648ee1d0c1968de2fa39f3414619fee1966b3d932baf5e94ff2bb5a14fed95b",
+    "runs/2026-11-18-agent-tools-website-current.json": "93f575ed5fc84c48dcc769935f3da252fc35a396875365ed936ad7c1aef3d830",
+    "runs/2026-11-18-agent-tools-boundaries-current.json": "04a587b71841729bcfa2c6e330adb4c084ac3de3bab8c1c16b227e015a9e4411"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-agent-tools-website-current.json",
+      "sha256": "93f575ed5fc84c48dcc769935f3da252fc35a396875365ed936ad7c1aef3d830"
+    },
+    {
+      "path": "runs/2026-11-18-agent-tools-boundaries-current.json",
+      "sha256": "04a587b71841729bcfa2c6e330adb4c084ac3de3bab8c1c16b227e015a9e4411"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T02:39:36.373047+00:00"
+    }
+  ]
+}

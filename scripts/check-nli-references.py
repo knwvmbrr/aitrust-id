@@ -116,7 +116,7 @@ def check(record,subject,cache=None,threshold=.75,maximum=5,runner=run_owned,sel
     result['network_control']=control
     return result
 
-def summary(result,saved):
+def summary(result,saved,subject=None):
     return {'profile':result['profile'],'state':result['state'],
         'retrieval_evaluation_obtained':result['retrieval_evaluation_obtained'],'model_evaluation_obtained':result['model_evaluation_obtained'],
         'passages_evaluated':len(result['observations']),
@@ -124,7 +124,8 @@ def summary(result,saved):
             if result['model_evaluation_obtained'] else 'No passage met this lexical selection threshold. This does not show the claim is false.'),
         'network_control':result['network_control'],'detailed_output_saved':saved,
         'reference_freshness':'unestablished','calibrated_probability':False,
-        'independent_corroboration':False,'truth_established':False,'tag_asserted':False,'release_approved':False}
+        'independent_corroboration':False,'truth_established':False,'tag_asserted':False,'release_approved':False,
+        **references.coverage_summary(result,subject)}
 
 def main(argv=None):
     parser=Parser(description=__doc__)
@@ -156,12 +157,12 @@ def main(argv=None):
             result=check(record,subject,args.model_cache,selection=selection)
         after = review_window.preflight(record, policy, review_window.utc_now()) if policy is not None else None
         window_summary = review_window.summary(before, after) if policy is not None else None
+        console=summary(result,args.details is not None,subject)
         if args.details:
             files={'reference-observations.json':(json.dumps(result,indent=2,allow_nan=False)+'\n').encode()}
             if policy is not None:
                 files['reference-window-check.json']=(json.dumps({'before':before,'after':after},indent=2,allow_nan=False)+'\n').encode()
             create(args.details,REPO,files)
-        console=summary(result,args.details is not None)
         if policy is not None:console['declared_review_windows']=window_summary
         print(json.dumps(console,ensure_ascii=True,allow_nan=False));return 0
     except review_window.WindowFailure as error:

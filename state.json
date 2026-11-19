@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-18T15:50:52.623919+00:00",
-  "active_increment": "Verified the five bundled Pyodide files against the upstream core archive and retained exact source archives. Scope remains 132 complete and 70 open.",
+  "updated": "2026-11-19T04:30:14.287764+00:00",
+  "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -39,7 +39,7 @@
     "evidence": "runs/2026-11-06-host-protected-publication.json",
     "remaining": [
       "Human screen-reader review",
-      "Native optional model-tool integration unverified",
+      "Host-specific MCP configuration and user-interface acceptance beyond the official SDK client",
       "DNSSEC and DMARC rollout remain unverified",
       "Self-hosted community and private research application gates remain open",
       "Search Console ownership verification, sitemap submission and actual Google indexing checks"
@@ -1094,7 +1094,8 @@
     "publication": "runs/2026-11-10-private-tools-publication.json",
     "public_catalogue": "runs/2026-11-10-private-tools-live-site.json",
     "public_policies": "runs/2026-11-10-private-tools-live-policies.json",
-    "current_verification": "runs/2026-11-12-hidden-email-reviewed-boundaries.json"
+    "current_verification": "runs/2026-11-12-hidden-email-reviewed-boundaries.json",
+    "current_evidence": "runs/2026-11-19-agent-tools-host-stop-boundaries.json"
   },
   "offline_components": {
     "status": "component_acceptance_and_publication_pass",
@@ -1134,15 +1135,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-17-runtime-notices-PS.json",
-    "PII_REDACTED": "runs/2026-11-17-runtime-notices-PII_REDACTED.json",
-    "protocol": "runs/2026-11-18-pyodide-origin-protocol.json",
-    "extension": "runs/2026-11-17-crlf-extension.json",
-    "website": "runs/2026-11-18-pyodide-origin-website.json",
+    "PS": "runs/2026-11-19-agent-tools-host-stop-PS.json",
+    "PII_REDACTED": "runs/2026-11-19-agent-tools-host-stop-PII_REDACTED.json",
+    "protocol": "runs/2026-11-19-agent-tools-host-stop-protocol.json",
+    "extension": "runs/2026-11-19-agent-tools-host-stop-extension.json",
+    "website": "runs/2026-11-19-agent-tools-host-stop-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-18T15:50:52.623919+00:00",
+  "updated_at": "2026-11-19T04:30:14.287764+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1236,10 +1237,10 @@
     "positive_acceptance": "runs/2026-10-10-required-ci-positive-acceptance.json"
   },
   "dependency_license_audit": {
-    "status": "three_observed_linux_images_pass_pinned_official_spdx_schema_and_selected_consistency; unsigned; incomplete_license_and_client_coverage",
+    "status": "fresh_three_linux_amd64_images_scanned_current_inventory_and_spdx_checks_pass_unsigned_license_and_client_coverage_incomplete",
     "package_occurrences": 424,
     "manifest": "eval/dependencies/runtime-sbom.json",
-    "evidence": "runs/2026-10-11-runtime-license-inventory.json",
+    "evidence": "runs/2026-11-19-runtime-license-inventory.json",
     "license_cleared": false,
     "release_signed": false,
     "spdx_standard_evidence": "runs/2026-10-10-spdx-standard-inventory.json",
@@ -1251,7 +1252,8 @@
     "website_revalidation": "runs/2026-10-10-spdx-website-revalidation-repaired.json",
     "precondition_diagnosis": "runs/2026-10-10-target25-revalidation-order.json",
     "hosted_source_evidence": "runs/2026-10-10-spdx-protected-merge.json",
-    "readme_review_evidence": "runs/2026-10-10-spdx-readme-current-render.json"
+    "readme_review_evidence": "runs/2026-10-10-spdx-readme-current-render.json",
+    "fresh_actual_scan": "runs/2026-11-19-runtime-inventory-rescan.json"
   },
   "dependency_automation": {
     "status": "protected_source_merged; codeowners_accepted; all_ten_actual_update_jobs_succeeded; proposal_held_by_required_checks",
@@ -1662,7 +1664,8 @@
     "current_capabilities": "runs/2026-10-11-notices-current-capabilities.json",
     "current_boundaries": "runs/2026-10-11-notices-checkout-boundaries.json",
     "source_commit": "c6c51005374179f3d14a9a2e2b65c981bc16f60e",
-    "website_publication": "runs/2026-10-11-notices-publication.json"
+    "website_publication": "runs/2026-10-11-notices-publication.json",
+    "current_fresh_image_notice_observations": "runs/2026-11-19-current-runtime-notice-observations.json"
   },
   "metadata_storage_controls": {
     "status": "synthetic_only_component",
@@ -1992,7 +1995,7 @@
     "protected_merge": "runs/2026-10-11-choice-framing-protected-merge.json"
   },
   "native_sharing": {
-    "status": "internal_testflight_upload_completed_processing_and_physical_acceptance_open",
+    "status": "internal_testflight_build_assigned_testing_physical_acceptance_open",
     "requirement": "N-013",
     "percent_complete": 80,
     "workflow_proof": "runs/2026-11-17-split-native-share-workflow.json",
@@ -2080,8 +2083,19 @@
     "current_signed_archive": "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
     "current_apple_validation": "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
     "current_testflight_upload": "runs/2026-11-18-ios-testflight-internal-upload.json",
-    "testflight_processing_verified": false,
-    "latest_testflight_dashboard_access": "runs/2026-11-18-testflight-mac-session-recheck.json"
+    "testflight_processing_verified": true,
+    "latest_testflight_dashboard_access": "runs/2026-11-18-testflight-owner-build-testing.json",
+    "app_store_connect_internal_build_visible": true,
+    "testflight_build_status": "Testing",
+    "testflight_tester_access_verified": true,
+    "testflight_owner_group_membership_verified": true,
+    "testflight_build_assigned_to_owner_group": true,
+    "latest_testflight_owner_group_evidence": "runs/2026-11-18-testflight-owner-build-testing.json",
+    "current_testflight_compliance_inputs": "runs/2026-11-18-ios-testflight-compliance-inputs.json",
+    "current_software_workflow_evidence": "runs/2026-11-19-current-notices-native-share-workflow.json",
+    "current_software_workflows_passed": 6,
+    "current_software_runtime": "iOS26.2 Simulator",
+    "physical_phone_acceptance_complete": false
   },
   "organization_policy": {
     "status": "offline_literal_component_development_only",
@@ -2114,7 +2128,8 @@
     ],
     "full_python_evidence": "runs/2026-10-12-native-notice-repaired-full-suite.json",
     "direct_packaging_all_notices_bound": true,
-    "direct_packaging_repair_evidence": "runs/2026-10-12-native-notice-direct-repair.json"
+    "direct_packaging_repair_evidence": "runs/2026-10-12-native-notice-direct-repair.json",
+    "current_observation_chain": "runs/2026-11-19-current-runtime-notice-observations.json"
   },
   "editorial_workflow": {
     "profile": "owner-editorial-review/v1",
@@ -2720,13 +2735,13 @@
     "child_statuses_unchanged": true
   },
   "one_command_setup": {
-    "status": "Source-bound complete-input Linux setup and ten actual failure controls pass; PR72 publication verified",
+    "status": "Current 27-input Linux clean-clone setup, authenticated pipeline, ten actual failure controls and exact original staging restoration passed; protected publication pending.",
     "scope_id": "F-105",
     "human_acceptance_scope": "F-142",
     "owner_decision": "runs/2026-10-13-clean-setup-owner-decision.json",
     "collection_enabled": false,
     "independent_release_validated": false,
-    "evidence": "runs/2026-10-14-tag-isolation-clean-setup-linux.json",
+    "evidence": "runs/2026-11-18-agent-tools-clean-setup-linux.json",
     "cache_scope": "Installed usable Podman and pinned dependency caches; not a blank-host installer",
     "human_acceptance_complete": false,
     "physical_phone_tested": false,
@@ -2947,7 +2962,8 @@
     "current_website_receipt": "runs/2026-10-15-native-accepted-website.json",
     "retained_website_refusal": "runs/2026-10-15-native-current-website.json",
     "source_commit": "42c9aba74b80ee2766904727cdaa81d381010e74",
-    "protected_merge": "runs/2026-10-15-native-protected-merge.json"
+    "protected_merge": "runs/2026-10-15-native-protected-merge.json",
+    "current_observation_chain": "runs/2026-11-19-current-runtime-notice-observations.json"
   },
   "current_capture_attempt": "runs/2026-10-15-current-capture-paused-observation.json",
   "quiet_paused_checks": {
@@ -3004,10 +3020,10 @@
       "macOS",
       "Linux"
     ],
-    "controls_per_os": 19,
+    "controls_per_os": 20,
     "evidence": [
-      "runs/2026-11-06-host-capture-final-macos.json",
-      "runs/2026-11-06-host-capture-final-linux.json"
+      "runs/2026-11-18-host-stop-launch-macos.json",
+      "runs/2026-11-19-host-stop-launch-linux.json"
     ],
     "guide": "docs/host-capture.md",
     "source_changes_stop_capture": true,
@@ -3018,10 +3034,17 @@
     "independent_security_review": false,
     "human_acceptance": false,
     "independent_accuracy_evidence": false,
-    "current_engineering_evidence": "runs/2026-11-06-host-release-protocol.json",
+    "current_engineering_evidence": "runs/2026-11-19-agent-tools-host-stop-protocol.json",
     "foreground_job_control_verified": true,
     "cross_repository_output_refused": true,
-    "protected_publication": "runs/2026-11-06-host-protected-publication.json"
+    "protected_publication": "runs/2026-11-06-host-protected-publication.json",
+    "prior_os_evidence": [
+      "runs/2026-11-06-host-capture-final-macos.json",
+      "runs/2026-11-06-host-capture-final-linux.json"
+    ],
+    "launch_stop_handoff_verified": true,
+    "launch_control_negative_evidence": "runs/2026-11-18-host-stop-launch-reviewed-negative-control.json",
+    "precise_prior_ci_process_state_proven": false
   },
   "browser_ci_installation": {
     "status": "local_policy_checks_pass; corrected_hosted_execution_pending",
@@ -3568,7 +3591,7 @@
   "tag_status": {
     "recorded_at": "2026-11-16T20:47:35.175951+00:00",
     "board": "docs/tag-status-2026-11-16.json",
-    "readable_board": "docs/tag-status-2026-11-16.md",
+    "readable_board": "docs/tag-status-2026-11-18.md",
     "complete_tags": 0,
     "independently_release_validated_tags": 0,
     "working_preview_tags": [
@@ -3580,7 +3603,17 @@
     "all_tags_concurrently_staffed": false,
     "candidate_changes_integrated": true,
     "publication_completed_at": "2026-11-17T12:27:44.932Z",
-    "published_source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd"
+    "published_source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
+    "active_agents_checked_at": "2026-11-19T02:12:36.319671+00:00",
+    "specialist_agents_currently_running": 0,
+    "current_integration_owner": "Codex PM",
+    "active_tag_lanes": [],
+    "delivered_this_increment": {
+      "MT": "runs/2026-11-18-authority-quotation-candidate.json",
+      "NF_FI": "runs/2026-11-18-reference-claim-coverage.json"
+    },
+    "integration_status": "Both specialist candidates delivered and integrated into working branch; checks and publication pending",
+    "current_status_board": "docs/tag-status-2026-11-18.md"
   },
   "current_engineering_revalidation_status": {
     "latest_published_evidence_increment": {
@@ -3591,6 +3624,17 @@
       "evidence": "runs/2026-11-17-independent-evidence-publication.json",
       "matching_artifacts": 592,
       "independent_release_validated": false
+    },
+    "agent_integration": {
+      "PS": "runs/2026-11-19-agent-tools-host-stop-PS.json",
+      "PII_REDACTED": "runs/2026-11-19-agent-tools-host-stop-PII_REDACTED.json",
+      "protocol": "runs/2026-11-19-agent-tools-host-stop-protocol.json",
+      "extension": "runs/2026-11-19-agent-tools-host-stop-extension.json",
+      "website": "runs/2026-11-19-agent-tools-host-stop-website.json",
+      "boundaries": "runs/2026-11-19-agent-tools-host-stop-boundaries.json",
+      "independent_accuracy_evidence": false,
+      "source_bound_checks_passed": true,
+      "protected_publication_pending": true
     }
   },
   "mt_evidence_workflow": {
@@ -3676,6 +3720,62 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-18-pyodide-origin-boundaries.json",
-  "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json"
+  "current_route_boundaries": "runs/2026-11-19-agent-tools-host-stop-boundaries.json",
+  "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json",
+  "agent_tag_tools": {
+    "status": "mac_and_clean_linux_software_verified_protected_publication_pending",
+    "implemented_by": "Codex",
+    "guide": "docs/ai-tools.md",
+    "evidence": "runs/2026-11-18-ai-tools-mac-debugged.json",
+    "mcp_protocol_checks_passed": 5,
+    "api_checks_passed": 7,
+    "callable_tags": [
+      "PS",
+      "PII_REDACTED"
+    ],
+    "public_endpoint_deployed": false,
+    "independent_accuracy_granted": false,
+    "review_defects_fixed": [
+      "Repeated signals aggregated without lost counts",
+      "Encoded execution gets accurate command-risk wording"
+    ],
+    "linux_evidence": "runs/2026-11-18-ai-tools-linux.json"
+  },
+  "release_communications": {
+    "status": "draft_queue_and_approval_validator_implemented_no_connected_accounts",
+    "guide": "docs/social-launch-kit.md",
+    "evidence": "runs/2026-11-18-release-review-queue.json",
+    "requested_handle": "AITRUSTID",
+    "handle_availability_verified": false,
+    "connected_accounts": 0,
+    "automatic_network_publication": false
+  },
+  "legal_execution_packet": {
+    "status": "unexecuted_drafts_prepared_not_counsel_cleared",
+    "source": "docs/legal/execution-packet.md",
+    "operator_decision_required": true,
+    "formation_filed": false,
+    "historical_package_fully_reviewed": false,
+    "evidence": "runs/2026-11-18-legal-execution-packet.json",
+    "michigan_llc_source": "docs/legal/michigan-llc-packet.md",
+    "michigan_llc_evidence": "runs/2026-11-18-michigan-llc-packet.json",
+    "owner_choice": "existing_revocable_living_trust_sole_member_michael_initial_manager",
+    "comparison": "runs/2026-11-18-entity-structure-comparison.json",
+    "owner_reports_current_trustee": true,
+    "trust_instrument_reviewed": false,
+    "trust_identity_public": false,
+    "current_decision": "runs/2026-11-18-owner-trust-and-presentation-direction.json",
+    "current_artifacts": "runs/2026-11-18-trust-owner-packet-artifacts.json"
+  },
+  "virtual_tag_lab": {
+    "status": "PS_MT_NF_FI_hosted_lanes_passed_privacy_startup_repair_proven",
+    "guide": "docs/virtual-tag-lab.md",
+    "mac_controls_passed": 329,
+    "independent_accuracy_granted": false,
+    "first_hosted_evidence": "runs/2026-11-18-agent-tools-first-hosted.json",
+    "privacy_startup_cause": "All three fresh Docker images observed protocol directory 0444 before correction; explicit 0555 traversal and nonroot module check passed with healthy actual services and replay",
+    "startup_diagnostic": "runs/2026-11-18-privacy-startup-hosted.json",
+    "current_runtime_evidence": "runs/2026-11-18-protocol-import-hosted-service.json",
+    "schedules_live_on_default_branch": false
+  }
 }

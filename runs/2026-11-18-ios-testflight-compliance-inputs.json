@@ -1,0 +1,49 @@
+{
+  "kind": "ios_testflight_compliance_inputs",
+  "pass": true,
+  "version": "1.0",
+  "build": "1",
+  "captured_at": "2026-11-18T16:07:12.364222+00:00",
+  "ipa_sha256": "e0a51bc29804f53d7dcc95e9ebded22badbe9599bf78c48fad26884b673c58e1",
+  "source_commit": "0231f44e5a5a62b23ee5820db05aeae5e98073a9",
+  "bundle_observations": {
+    "com.aitrustid.app": {
+      "non_exempt_encryption_plist_value": null,
+      "runtime_files_matched": 5,
+      "bridge_matches_source": true
+    },
+    "com.aitrustid.app.share": {
+      "non_exempt_encryption_plist_value": null,
+      "runtime_files_matched": 5,
+      "bridge_matches_source": true
+    }
+  },
+  "pyodide_runtime_version": "314.0.7",
+  "native_source_observation": "Apple CryptoKit SHA-256 resource integrity check",
+  "bridge_observation": "Python hashlib SHA-256 source integrity check",
+  "packaged_wasm_node_probe": {
+    "tls": {
+      "provider": "OpenSSL (stub)",
+      "client_context_created": true,
+      "cipher_suite_count": 0
+    },
+    "embedded_libraries": {
+      "python": "3.14.2",
+      "sqlite_source_id": "2022-06-25 14:57:57 14e166f40dbfa6e055543f8301525f2ca2e96a02a57269818b9e69e162e98918",
+      "zlib": "1.3.1",
+      "zstd": "1.5.7"
+    },
+    "sha256_provider": "_sha2",
+    "sha256_known_answer_pass": true,
+    "module_available": {
+      "_ssl": true,
+      "_hashlib": false,
+      "_hmac": true,
+      "_sha2": true
+    }
+  },
+  "native_device_crypto_probe": false,
+  "export_compliance_determined": false,
+  "export_compliance_submitted": false,
+  "requirements_closed": []
+}

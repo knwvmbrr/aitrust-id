@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-034352-refresh-exact-image-and-locked-runtime-notice-chain-e86fb7aa",
+  "recorded_at": "2026-11-19T03:43:52.571933+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "002abe35c7a925708d95a4819c4da415f7384b78",
+  "changed": "Collected installed notices from exact newly scanned images and reprocessed unchanged locked native, asset and nested-runtime archives against the current observation chain.",
+  "proves": "449 actual runtime notices and122 distribution records collected without network;205 cached npm archives rechecked; native archives, selected assets and nested runtime replay pass. All notice blob bytes and native notice bundle remain unchanged.",
+  "limits": "Original retained npm observation time preserved. No package code or downloads; license permission, full transitive coverage, vulnerabilities and independent tag acceptance remain unapproved.",
+  "scope_ids": [
+    "F-057",
+    "F-075",
+    "F-143",
+    "F-150",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    "DECISIONS.md": "b1b96b462d67b9773856e9e3c992b48de01df04a2dfc72968a94fb0ead26187e",
+    "GOVERNANCE.md": "97964ebd616af7b3c0f4f4c1fa36f728038f9101677d13f7ced277e2a0f69c7c",
+    "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
+    "docs/master-scope.md": "7c16c27e9d96cb416cb4ecd042b73e98d53ecd5307d0a87bb10a0a529bcae2e7",
+    "docs/runtime-sbom.md": "f37d45a7caf79a8f9679fb05fdf46e8c2e568e74c35090f53335a233ea643df2",
+    "docs/scope-delivery.json": "45099ed70bd388d557c43bca64fcbc9b37ef523a9135af3f50a47e1fe251271f",
+    "docs/scope-delivery.md": "54a525576e511e56de86a9632de3b4adbb46307c7cbdff598853801b8fa9f561",
+    "docs/scope-progress.json": "36c4ee62b2da70bd2f59b0cd762a27c739b2e96f75c8c17253f199f8f9a784a7",
+    "docs/scope-progress.md": "44ce638c50a0cc371d21ce035dc516724fd49655ee4369339b1da3dee0de81fe",
+    "eval/dependencies/runtime-sbom.json": "9a395779af6e3a1cd8be120c906ac5c5954e07b96e84a82287b9387c60da89b4",
+    "runs/2026-11-18-container-inventory-ci-blocker.json": "9f2f218c9249783b041e7b2589b6137ae0df43af5ec0636fc15c7f3a4c493b05",
+    "runs/2026-11-19-current-runtime-notice-observations.json": "64fcc1b49ee490353fcded66327bfcc76eafa5f32aaf64b2087a818e50383a06",
+    "runs/2026-11-19-runtime-inventory-rescan.json": "4d043e988a586bc7f7939d8c09c599c6230e8f57cac08fe5a26634b746562fd1",
+    "runs/2026-11-19-runtime-license-inventory.json": "0b1505a4997f5eb131b627610f3d1567680004618e28656fcaa9d257ee328239",
+    "sbom/assets/notices.json": "5c165aea3c716a183174a10ce8be0b5e0894554a8ad5492171e5141dc642facd",
+    "sbom/native/manifest.json": "b73adf17026164ae36fa227e2807aa6a1e30de4c3bc47bb62a2eb53b6dffe860",
+    "sbom/nested-runtime/manifest.json": "9452abdfd81cafdc2f0b9a0b2e45cb4206aa40c51ab41edcb61d3552f33a05d6",
+    "sbom/notices/manifest.json": "8a19f0328c542c610fb5028e78313c80e7bf40c2d4e51f281a144883ee95bb58",
+    "sbom/runtime/anonymizer-linux-amd64.spdx.json": "fb34aef22c1338af22545b9572d9cf14949c5bcff60d23dc62a73b655f56c6f4",
+    "sbom/runtime/evaluator-linux-amd64.spdx.json": "305175f4e408496e4c13bc66d293bc9453123211306e056ad4050fbc4517678b",
+    "sbom/runtime/gateway-linux-amd64.spdx.json": "7e80adc314e7cf6c51bd44e6192b24fca52bd0354169cf0dcae1b16bac7a5ebc",
+    "site/public/reference/decisions.md": "b1b96b462d67b9773856e9e3c992b48de01df04a2dfc72968a94fb0ead26187e",
+    "site/public/reference/governance-policy.md": "97964ebd616af7b3c0f4f4c1fa36f728038f9101677d13f7ced277e2a0f69c7c",
+    "site/public/reference/public-scope.json": "76d0db91f0bb8e933556492cf677b6e2cb6f9ce3bae61ffe29124a8e3d0490e8",
+    "site/src/public-scope.json": "76d0db91f0bb8e933556492cf677b6e2cb6f9ce3bae61ffe29124a8e3d0490e8",
+    "site/src/scope-manifest.json": "7a96913e59fe88f6b891081c260010b19e8c947b8d0f62f5006a39f835995717",
+    "state.json": "a3666a28531729a2392a2ed685b3effb3ef117f23d0bb95cec88dde02cca34cd"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-current-runtime-notice-observations.json",
+      "sha256": "64fcc1b49ee490353fcded66327bfcc76eafa5f32aaf64b2087a818e50383a06"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,36 @@
+{
+  "kind": "release_communication_software_verification",
+  "captured_at": "2026-11-19T01:54:21.135044+00:00",
+  "implemented_by": "Codex",
+  "pass": true,
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_release_announcements.py",
+        "-v"
+      ],
+      "exit": 0,
+      "tests": 4,
+      "output_sha256": "8998e941000f9eef982b407ee6fe0f29cce1ba82c12ea40fe512033d542fb214"
+    }
+  ],
+  "drafts_generated": 1,
+  "connected_accounts": 0,
+  "network_post_performed": false,
+  "owner_approval_created": false,
+  "sources": {
+    "scripts/release-announcements.py": "0d9b169c39420a680f6f47737ed294c34e78ce632140ae94d0cc7611e4943dc7",
+    "tests/test_release_announcements.py": "817f149726a38ce7027ce3d5b0b9f7b08f591ab8de1bf3be513df15421dc98f4",
+    "communications/accounts.json": "464d3680d875c647b90ac4809297418721492843b3093225d1f564a4ede1b4de",
+    "communications/releases/agent-tools-preview.json": "7fe2f4abf87d8fd88770058969a194fa96c8d432070cf06b3c61e37b36e2b00a",
+    ".github/workflows/social-drafts.yml": "f67321c8ec9702f2662223307d67dd24f37b312325352d01d4b3931c33509d9f"
+  },
+  "limits": "Local approval validation and draft generation only; no social account, platform send or independent tag accuracy."
+}

@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-11-19T02:29:43.988993+00:00",
+  "kind": "first_hosted_agent_integration",
+  "source_commit": "6ebcbeb6aa15ea599b088c98078407703734d0f2",
+  "mcp_linux": {
+    "run": 44443814308,
+    "job": 135290927624,
+    "pass": true,
+    "receipt": "runs/2026-11-18-ai-tools-linux.json",
+    "checks": 12,
+    "source_hashes_match": true
+  },
+  "tag_lab": {
+    "run": 44443814312,
+    "MT": "passed",
+    "NF_FI": "passed",
+    "PS": "failed_missing_fastapi_in_parity_test_environment"
+  },
+  "privacy_development": {
+    "run": 44443814221,
+    "pass": false,
+    "failure": "anonymizer_unhealthy_startup_logs_not_retained",
+    "service_source_changed": false,
+    "diagnostics_pending": true
+  },
+  "independent_accuracy_evidence": false,
+  "original_scope_closed": []
+}

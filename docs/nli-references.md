@@ -22,6 +22,19 @@ Omit `--details PRIVATE/result` for a short console summary only. Deliberately r
 
 **No similar passage:** lexical selection completed, but nothing met the threshold. The model did not run. This does not mean the claim is false, fictional or unsupported everywhere. No model identity or invented score is attached to an unperformed evaluation.
 
+**Claim coverage:** the automatic route reports how many nonempty input lines
+received at least one model comparison and how many stayed unevaluated. The
+global pair limit can leave a line unevaluated even when another line has a
+result. Coverage does not determine why a line was omitted. A line may contain
+several semantic claims, and one comparison does not check every reference or
+establish that line's truth.
+
+Private details contain `reference-claim-coverage/1.0.0`, with exact normalized
+line spans and indices into the observation list. The CLI reconstructs that
+mapping from your captured input before exporting it. Old records without the
+map, or summaries without the original input, report coverage unavailable. The
+explicit one-line selection route keeps its separately declared selection scope.
+
 **Unavailable:** no usable result was obtained. A short category explains whether to check private files, pinned cache, dependencies, supported sandbox or deadline. Exit status is `2`; the command returns no partial result or tag.
 
 ## Choose a particular reference passage

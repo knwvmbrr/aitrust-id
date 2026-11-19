@@ -390,6 +390,8 @@
         "runs/2026-11-06-host-capture-reviewed-linux.json",
         "runs/2026-11-06-host-capture-final-macos.json",
         "runs/2026-11-06-host-capture-final-linux.json",
+        "runs/2026-11-18-host-stop-launch-macos.json",
+        "runs/2026-11-19-host-stop-launch-linux.json",
         "tools/conformance_vectors.py",
         "scripts/check-conformance-vectors.py",
         "scripts/verify-conformance-delivery.py",
@@ -447,7 +449,22 @@
         "tests/test_replay_verifier_engine.py",
         "runs/2026-11-09-pan-service-linux.json",
         "runs/2026-11-12-hidden-email-hosted-replay.json",
-        "runs/2026-11-12-hidden-email-clean-setup-linux.json"
+        "runs/2026-11-12-hidden-email-clean-setup-linux.json",
+        "tools/tag_api.py",
+        "scripts/tag-api.py",
+        "scripts/ai-tools-server.py",
+        "scripts/verify-ai-tools.py",
+        "integrations/**/*",
+        "tests/test_ai_*.py",
+        "scripts/release-announcements.py",
+        "tests/test_release_announcements.py",
+        "communications/**/*",
+        "tools/authority_quotation.py",
+        "scripts/authority-quotation.py",
+        "scripts/verify-authority-quotation.py",
+        "tests/test_authority_quotation.py",
+        "tests/test_reference_claim_coverage.py",
+        "runs/2026-11-18-agent-tools-clean-setup-linux.json"
       ],
       "commands": [
         [
@@ -717,6 +734,14 @@
           "-m",
           "pytest",
           "tests/test_replay_verifier_engine.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_ai_tag_api.py",
+          "tests/test_release_announcements.py",
           "-q"
         ]
       ]
@@ -1086,6 +1111,8 @@
         "runs/2026-11-06-host-capture-reviewed-linux.json",
         "runs/2026-11-06-host-capture-final-macos.json",
         "runs/2026-11-06-host-capture-final-linux.json",
+        "runs/2026-11-18-host-stop-launch-macos.json",
+        "runs/2026-11-19-host-stop-launch-linux.json",
         "tools/conformance_vectors.py",
         "scripts/check-conformance-vectors.py",
         "scripts/verify-conformance-delivery.py",
@@ -1193,7 +1220,21 @@
         "sbom/nested-runtime/*",
         "tools/nested_runtime_inventory.py",
         "scripts/verify-nested-runtime.py",
-        "tests/test_nested_runtime_inventory.py"
+        "tests/test_nested_runtime_inventory.py",
+        "tools/tag_api.py",
+        "scripts/tag-api.py",
+        "scripts/ai-tools-server.py",
+        "scripts/verify-ai-tools.py",
+        "integrations/**/*",
+        "tests/test_ai_*.py",
+        "scripts/release-announcements.py",
+        "tests/test_release_announcements.py",
+        "communications/**/*",
+        "tools/authority_quotation.py",
+        "scripts/authority-quotation.py",
+        "scripts/verify-authority-quotation.py",
+        "tests/test_authority_quotation.py",
+        "tests/test_reference_claim_coverage.py"
       ],
       "commands": [
         [

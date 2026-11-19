@@ -1,0 +1,16 @@
+{
+  "kind": "container_inventory_current_source_refusal",
+  "captured_at": "2026-11-19T03:30:03.353539+00:00",
+  "source_commit": "002abe35c7a925708d95a4819c4da415f7384b78",
+  "run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44450707708",
+  "failed_jobs": {
+    "scope-plan": 135313642410,
+    "spec": 135313642756,
+    "no-egress": 135313642652
+  },
+  "root_cause": "Observed historical runtime SBOM build inputs differ from corrected Dockerfiles; actual fresh images must be scanned before current inventory can be accepted",
+  "fresh_scan_in_progress": true,
+  "old_scan_rebound": false,
+  "gate_weakened": false,
+  "independent_accuracy_evidence": false
+}

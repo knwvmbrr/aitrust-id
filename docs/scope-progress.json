@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-18T15:46:57.961717+00:00",
+  "audited_at": "2026-11-19T04:25:55.397408+00:00",
   "client_date": "2026-11-18",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -3761,14 +3761,15 @@
         "selected_integration",
         "final_acceptance"
       ],
-      "audited_at": "2026-11-12T16:29:28.134941+00:00",
+      "audited_at": "2026-11-19T03:10:15.102793+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 prior session/run attribution",
         "Codex \u2014 private one-command setup, effective-runtime inspection and actual Linux execution, 2026-10-13T22:49:20.606326+00:00",
         "Codex \u2014 independent tag reservations, selected readiness, process-isolated PS and independently preserved multi-tag results; actual Linux fault/recovery verification, 2026-10-14T11:38:02.001046+00:00",
         "Codex \u2014 current-source clean Linux clone, ten actual setup/failure controls and original staging restoration, 2026-11-08",
-        "Codex \u2014 repeat full actual clean-clone/failure verification for the hidden-email redactor source; 2026-11-12T16:29:28.134941+00:00"
+        "Codex \u2014 repeat full actual clean-clone/failure verification for the hidden-email redactor source; 2026-11-12T16:29:28.134941+00:00",
+        "Codex \u2014 complete-input clean Linux setup and ten failure controls after protocol-directory permission repair, 2026-11-19T03:10:15.102793+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -3802,7 +3803,8 @@
         "runs/2026-10-14-tag-isolation-clean-setup-linux.json",
         "runs/2026-11-08-pii-separator-clean-setup-linux.json",
         "runs/2026-11-09-pan-clean-setup-linux.json",
-        "runs/2026-11-12-hidden-email-clean-setup-linux.json"
+        "runs/2026-11-12-hidden-email-clean-setup-linux.json",
+        "runs/2026-11-18-agent-tools-clean-setup-linux.json"
       ],
       "evidence_scope": "Complete 27-input Linux Podman clean-clone setup with explicitly selected build-only host networking, unchanged constrained runtime networks, real authenticated pipeline and ten actual failure controls. Human acceptance remains F-142; Docker/cold-host daemon and independent tag release are not claimed.",
       "required_acceptance": [],
@@ -4525,7 +4527,7 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-11-18T15:46:57.961717+00:00",
+      "audited_at": "2026-11-18T16:08:29.389587+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 bounded image inventory and offline verification; full license/signing mechanism incomplete",
@@ -4603,9 +4605,10 @@
         "runs/2026-11-09-ios-distribution-final-archive.json",
         "docs/nested-runtime-evidence.md",
         "runs/2026-11-17-nested-runtime-obligations.json",
-        "runs/2026-11-18-pyodide-release-origin.json"
+        "runs/2026-11-18-pyodide-release-origin.json",
+        "runs/2026-11-18-pyodide-embedded-sources.json"
       ],
-      "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations. Selected font/Unicode/runtime/model-card bindings now execute offline; exact Unicode notice inclusion and upstream runtime member identity are checked. Full native/transitive/platform/source-offer permission gates remain open. Native observations now reproduce 205 artifacts, 146 executable/native candidates, 54 licensing declarations and 14 version declarations. One nested archive remains uninspected; declarations do not clear full linkage, source-offer, platform or model obligations. Existing full acceptance and percentage unchanged. The six-archive Pyodide replay verified all five npm and upstream core runtime files byte for byte and checked seven build recipes.",
+      "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations. Selected font/Unicode/runtime/model-card bindings now execute offline; exact Unicode notice inclusion and upstream runtime member identity are checked. Full native/transitive/platform/source-offer permission gates remain open. Native observations now reproduce 205 artifacts, 146 executable/native candidates, 54 licensing declarations and 14 version declarations. One nested archive remains uninspected; declarations do not clear full linkage, source-offer, platform or model obligations. Existing full acceptance and percentage unchanged. The six-archive Pyodide replay verified all five npm and upstream core runtime files byte for byte and checked seven build recipes. Signed iPhone WASM directly reports zlib and SQLite identifiers that match selected verified upstream archives; the bzip2 archive matches the Emscripten recipe. Full embedded source and license coverage is still open.",
       "required_acceptance": [
         "Review and bind package-to-notice obligations, bundled/native/model/font/runtime/data components and source offers; expand architecture coverage and execute the full source-bound conflict policy before claiming license clearance. Source-bound development signing is already exercised."
       ],
@@ -5852,30 +5855,37 @@
     {
       "id": "F-075",
       "kind": "requirement",
-      "title": "Two-entity structure \u2014 independent foundation holds spec and mark; implementations compete on top",
+      "title": "Trust-owned operating company and institutional accountability",
       "percent_complete": 20,
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-11-19T03:25:10.808530+00:00",
       "checked_by": "Codex",
       "implemented_by": [],
       "planning_contributors": [
-        "Codex \u2014 scope normalization and package contract"
+        "Codex \u2014 scope normalization and package contract",
+        "Michael \u2014 trust-owned operating company direction and trustee confirmation, 2026-11-18"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Deliver Two-entity structure \u2014 independent foundation holds spec and mark; implementations compete on top. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists.",
-      "next_owner": "Codex",
+      "next_fix": "Verify trust identity and relevant trustee powers privately; complete and execute consistent manager-managed LLC formation, membership, manager appointment and asset-rights instruments; determine actual activity obligations and change provider disclosures only after operation transfers. Any future independent standards organization remains a separate, unselected decision.",
+      "next_owner": "Michael for private facts and execution; qualified legal/tax reviewer; Codex prepares current documents",
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/scope-delivery.md",
+        "docs/legal/michigan-llc-packet.md",
+        "runs/2026-11-18-owner-trust-and-presentation-direction.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Owner direction and unsigned forms only; private trust instrument, formation, transfers, signatures, tax/legal fit and mark clearance unverified.",
       "required_acceptance": [
-        "Deliver Two-entity structure \u2014 independent foundation holds spec and mark; implementations compete on top. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
+        "Verify trust identity and relevant trustee powers privately; complete and execute consistent manager-managed LLC formation, membership, manager appointment and asset-rights instruments; determine actual activity obligations and change provider disclosures only after operation transfers. Any future independent standards organization remains a separate, unselected decision."
       ],
-      "queue": "open"
+      "queue": "open",
+      "historical_title": "Two-entity structure \u2014 independent foundation holds spec and mark; implementations compete on top",
+      "historical_required_acceptance": [
+        "Deliver Two-entity structure \u2014 independent foundation holds spec and mark; implementations compete on top. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
+      ]
     },
     {
       "id": "F-143",
@@ -5885,23 +5895,26 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-10-09T13:29:52.810894+00:00",
+      "audited_at": "2026-11-19T03:25:10.808530+00:00",
       "checked_by": "Codex",
       "implemented_by": [],
       "planning_contributors": [
-        "Codex \u2014 scope normalization and package contract"
+        "Codex \u2014 scope normalization and package contract",
+        "Michael \u2014 trust-owned operating company direction and trustee confirmation, 2026-11-18"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Deliver Certification-mark ownership and filing work. Next package action: Separate current individual publisher from any future legal entity. Required outcome: The public can distinguish a future institutional target from a mark or foundation that already exists.",
-      "next_owner": "Codex",
+      "next_fix": "Complete qualified brand and certification-mark clearance and actual ownership/owner-use analysis. Adopt any certification structure only through a separate decision; the trust-owned operating-company choice does not file a mark or designate a foundation as its owner.",
+      "next_owner": "Michael for private facts and execution; qualified legal/tax reviewer; Codex prepares current documents",
       "evidence": [
-        "docs/scope-delivery.md"
+        "docs/scope-delivery.md",
+        "docs/legal/michigan-llc-packet.md",
+        "runs/2026-11-18-owner-trust-and-presentation-direction.json"
       ],
-      "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+      "evidence_scope": "Owner direction and unsigned forms only; private trust instrument, formation, transfers, signatures, tax/legal fit and mark clearance unverified.",
       "required_acceptance": [
-        "Deliver Certification-mark ownership and filing work. Next package action: Separate current individual publisher from any future legal entity. Required outcome: The public can distinguish a future institutional target from a mark or foundation that already exists."
+        "Complete qualified brand and certification-mark clearance and actual ownership/owner-use analysis. Adopt any certification structure only through a separate decision; the trust-owned operating-company choice does not file a mark or designate a foundation as its owner."
       ],
       "queue": "open"
     },
@@ -6872,11 +6885,12 @@
         "selected_integration",
         "final_acceptance"
       ],
-      "audited_at": "2026-11-06T04:47:04.474978+00:00",
+      "audited_at": "2026-11-19T04:25:55.397408+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
-        "Codex \u2014 foreground capture implementation and actual macOS/Linux execution, 2026-11-06T04:24:57.021692+00:00"
+        "Codex \u2014 foreground capture implementation and actual macOS/Linux execution, 2026-11-06T04:24:57.021692+00:00",
+        "Codex \u2014 worker launch/ownership stop-signal repair, actual current macOS and isolated Linux terminal execution, 2026-11-19T04:25:55.397408+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -6909,9 +6923,12 @@
         "runs/2026-11-06-host-capture-reviewed-acceptance.json",
         "runs/2026-11-06-host-capture-final-macos.json",
         "runs/2026-11-06-host-capture-final-linux.json",
-        "runs/2026-11-06-host-capture-final-acceptance.json"
+        "runs/2026-11-06-host-capture-final-acceptance.json",
+        "runs/2026-11-18-host-stop-launch-macos.json",
+        "runs/2026-11-19-host-stop-launch-linux.json",
+        "runs/2026-11-18-host-stop-launch-reviewed-negative-control.json"
       ],
-      "evidence_scope": "Complete foreground one-private-text-file adapter, optional independent PS worker, source-change refusal, visible controls and actual OS/failure checks. No hosted agent, independent security/human acceptance, accuracy or phone support.",
+      "evidence_scope": "Complete foreground one-private-text-file adapter, optional independent PS worker, source-change refusal, visible controls and actual OS/failure checks. No hosted agent, independent security/human acceptance, accuracy or phone support. Current startup stop-signal repair is bound to 20 actual controls per OS; original completion date is retained.",
       "required_acceptance": [],
       "queue": "completed"
     },
@@ -7111,7 +7128,7 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-11-18T15:46:57.961717+00:00",
+      "audited_at": "2026-11-18T16:08:29.389587+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 bounded image inventory and offline verification; full license/signing mechanism incomplete",
@@ -7180,9 +7197,10 @@
         "runs/2026-10-15-native-archive-replay.json",
         "docs/nested-runtime-evidence.md",
         "runs/2026-11-17-nested-runtime-obligations.json",
-        "runs/2026-11-18-pyodide-release-origin.json"
+        "runs/2026-11-18-pyodide-release-origin.json",
+        "runs/2026-11-18-pyodide-embedded-sources.json"
       ],
-      "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations. Selected font/Unicode/runtime/model-card bindings now execute offline; exact Unicode notice inclusion and upstream runtime member identity are checked. Full native/transitive/platform/source-offer permission gates remain open. Native observations now reproduce 205 artifacts, 146 executable/native candidates, 54 licensing declarations and 14 version declarations. One nested archive remains uninspected; declarations do not clear full linkage, source-offer, platform or model obligations. Existing full acceptance and percentage unchanged. The six-archive Pyodide replay verified all five npm and upstream core runtime files byte for byte and checked seven build recipes.",
+      "evidence_scope": "Actual Linux amd64 SPDX inventories for 421 package occurrences across three images plus offline identity controls. Unsigned; scanner identity not signature-verified; missing license declarations and client/build/vendored coverage unresolved. This partial evidence does not complete the full named item. Official pinned SPDX 2.3.1 schema and selected internal checks now execute offline for all three images; 261 package verification codes reproduce, with corrupted/rehashed metadata controls. Full license clearance, client/build coverage and release signing remain unaccepted. Notice evidence now covers 449 installed notice occurrences and 149 npm notice occurrences (224 deduplicated texts), with actual archive integrity/extraction rechecks for all 205 locked npm artifacts. This does not grant license permission or resolve bundled-source obligations. Selected font/Unicode/runtime/model-card bindings now execute offline; exact Unicode notice inclusion and upstream runtime member identity are checked. Full native/transitive/platform/source-offer permission gates remain open. Native observations now reproduce 205 artifacts, 146 executable/native candidates, 54 licensing declarations and 14 version declarations. One nested archive remains uninspected; declarations do not clear full linkage, source-offer, platform or model obligations. Existing full acceptance and percentage unchanged. The six-archive Pyodide replay verified all five npm and upstream core runtime files byte for byte and checked seven build recipes. Signed iPhone WASM directly reports zlib and SQLite identifiers that match selected verified upstream archives; the bzip2 archive matches the Emscripten recipe. Full embedded source and license coverage is still open.",
       "required_acceptance": [
         "Review and bind package-to-notice obligations, bundled/native/model/font/runtime/data components and source offers; expand architecture coverage and execute the full source-bound conflict policy before claiming license clearance. Source-bound development signing is already exercised."
       ],
@@ -8789,7 +8807,7 @@
         "executable_checks",
         "selected_integration"
       ],
-      "audited_at": "2026-11-18T14:50:45.503559+00:00",
+      "audited_at": "2026-11-19T01:07:58.229513+00:00",
       "checked_by": "Codex",
       "implemented_by": [
         "Codex \u2014 exact native PS engine observation and file controls; Share prototype failed and is not offered as an app, 2026-10-11T23:05:16.789989+00:00",
@@ -8799,7 +8817,8 @@
         "Codex native delivery lane \u2014 paginated privacy and license notices, reproduced all five local workflows, verified exact archive resources and diagnosed Keychain signing, 2026-11-17T22:21:46.286300+00:00",
         "Codex \u2014 direct deletion and simulator inventory confirmation on local and hosted runs; 2026-11-18T01:52:33.178019+00:00",
         "Codex \u2014 separate notice navigation and same-run named iPhone workflow verification; 2026-11-18T02:23:24.523441+00:00",
-        "Codex \u2014 signed, verified and uploaded the current iPhone distribution build, 2026-11-18T13:35:32.222337+00:00"
+        "Codex \u2014 signed, verified and uploaded the current iPhone distribution build, 2026-11-18T13:35:32.222337+00:00",
+        "Codex \u2014 saved the owner-approved Apple compliance answer and assigned build 1.0 (1) to the existing owner-only internal group, 2026-11-19T01:07:58.229513+00:00"
       ],
       "planning_contributors": [
         "Codex \u2014 scope normalization and package contract"
@@ -8807,7 +8826,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Open AI Trust ID \u2192 TestFlight in an authenticated App Store Connect session; confirm processing and internal tester access, then complete physical Share, offline, VoiceOver and outside-user acceptance.",
+      "next_fix": "Install assigned internal TestFlight build 1.0 (1) on the iPhone 14 Plus and complete physical Share, offline, VoiceOver, lifecycle, removal and outside-user acceptance.",
       "next_owner": "Michael / physical-device testers / Codex",
       "evidence": [
         "docs/scope-delivery.md",
@@ -8866,9 +8885,14 @@
         "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
         "runs/2026-11-18-ios-testflight-internal-upload.json",
         "runs/2026-11-18-testflight-dashboard-authentication.json",
-        "runs/2026-11-18-testflight-mac-session-recheck.json"
+        "runs/2026-11-18-testflight-mac-session-recheck.json",
+        "runs/2026-11-18-testflight-missing-compliance.json",
+        "runs/2026-11-18-ios-testflight-compliance-inputs.json",
+        "scripts/verify-ios-compliance-inputs.py",
+        "runs/2026-11-18-testflight-owner-group.json",
+        "runs/2026-11-18-testflight-owner-build-testing.json"
       ],
-      "evidence_scope": "The software and upload milestones are confirmed. The follow-up App Store Connect check in Chrome and Safari on the Mac returned to sign-in. Processing, tester access and actual iPhone and VoiceOver acceptance are still unverified.",
+      "evidence_scope": "The owner-approved compliance answer was saved. Apple shows the owner-only internal group with 1 tester, 1 build and build 1.0 (1) Testing. Assignment is verified; actual installation, physical Share and human VoiceOver acceptance remain open.",
       "required_acceptance": [
         "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
       ],
@@ -14014,26 +14038,28 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-11-16T20:09:45.055440+00:00",
+      "audited_at": "2026-11-19T03:09:28.874643+00:00",
       "checked_by": "Codex",
       "implemented_by": [],
       "planning_contributors": [
         "Michael \u2014 direct scope clarification, 2026-11-16",
-        "Codex PM and specialist audit"
+        "Codex PM and specialist audit",
+        "Michael \u2014 presentation-layer and all-screen coverage clarification, 2026-11-18"
       ],
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Per-platform authorized adapters bind observations and tags to exact content revisions; multiple compact tags must not intercept underlying actions, move focus, steal input or hide content. Verify per-tag fault containment, stale-result removal and supported OS/permission boundaries. No universal screen access is presumed.",
+      "next_fix": "Implement and qualify each permitted presentation surface with separate capture, extraction and tag workers: compact multiple tags, original action/scroll/focus preservation, tag-only pointer hit-testing, stale-result removal, accessibility and sibling-failure containment. Expand coverage across visible text, code, images, diagrams and video without bypassing protected/unsupported surfaces. Universal screen access and absolute noninterference are not established.",
       "next_owner": "CTO architecture; platform integration agents; Debugger",
       "evidence": [
         "docs/scope-priorities-2026-11-16.md",
         "docs/quarterly-brand-and-agent-plan.md",
-        "docs/quiet-layer-architecture.md"
+        "docs/quiet-layer-architecture.md",
+        "runs/2026-11-18-owner-trust-and-presentation-direction.json"
       ],
       "evidence_scope": "Explicit written job/acceptance only; no implementation, release, payment, capture or training activation inferred.",
       "required_acceptance": [
-        "Per-platform authorized adapters bind observations and tags to exact content revisions; multiple compact tags must not intercept underlying actions, move focus, steal input or hide content. Verify per-tag fault containment, stale-result removal and supported OS/permission boundaries. No universal screen access is presumed."
+        "Implement and qualify each permitted presentation surface with separate capture, extraction and tag workers: compact multiple tags, original action/scroll/focus preservation, tag-only pointer hit-testing, stale-result removal, accessibility and sibling-failure containment. Expand coverage across visible text, code, images, diagrams and video without bypassing protected/unsupported surfaces. Universal screen access and absolute noninterference are not established."
       ],
       "queue": "open",
       "work_packages": [
@@ -14136,6 +14162,77 @@
         "N-003",
         "N-006"
       ]
+    },
+    {
+      "id": "ENH-AGENT-TAG-TOOLS",
+      "kind": "enhancement",
+      "title": "Independent tag JSON API and local MCP tools",
+      "percent_complete": 80,
+      "milestones_passed": [
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration"
+      ],
+      "audited_at": "2026-11-19T02:34:15.839457+00:00",
+      "checked_by": "Codex",
+      "implemented_by": [
+        "Codex \u2014 implemented and executed current software"
+      ],
+      "planning_contributors": [
+        "Michael \u2014 requested product scope"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Complete the protected merge and verify the published instructions and downloadable source. The clean Linux SDK installation and twelve controls passed with matching source hashes; parent-tag accuracy is separate.",
+      "next_owner": "Codex integration; Michael for actual account creation and human approval where applicable",
+      "evidence": [
+        "docs/ai-tools.md",
+        "docs/ai-tool-plugin-plan.md",
+        "runs/2026-11-18-ai-tools-mac-debugged.json",
+        "tests/test_ai_tools_mcp.py",
+        "runs/2026-11-18-ai-tools-linux.json"
+      ],
+      "evidence_scope": "Real official SDK stdio discovery, modern and legacy client calls, actual PS, synthetic valid privacy projection, privacy outage isolation, cancellation and bounded private errors passed on this Mac. No public endpoint or new tag released. Clean Ubuntu24.04/Python3.12 hosted install and twelve API/MCP controls also passed.",
+      "required_acceptance": [
+        "Complete the protected merge and verify the published instructions and downloadable source. The clean Linux SDK installation and twelve controls passed with matching source hashes; parent-tag accuracy is separate."
+      ],
+      "queue": "open"
+    },
+    {
+      "id": "ENH-RELEASE-COMMUNICATION",
+      "kind": "enhancement",
+      "title": "Versioned release review and owner-approved social handoff",
+      "percent_complete": 60,
+      "milestones_passed": [
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks"
+      ],
+      "audited_at": "2026-11-19T01:54:21.135044+00:00",
+      "checked_by": "Codex",
+      "implemented_by": [
+        "Codex \u2014 implemented and executed current software"
+      ],
+      "planning_contributors": [
+        "Michael \u2014 requested product scope"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Create and verify project-owned social accounts; obtain exact owner approval and verify one platform post, its returned ID and safe retry behavior. Run review workflow in CI.",
+      "next_owner": "Codex integration; Michael for actual account creation and human approval where applicable",
+      "evidence": [
+        "docs/communications-plan.md",
+        "docs/social-launch-kit.md",
+        "runs/2026-11-18-release-review-queue.json"
+      ],
+      "evidence_scope": "Four software controls and actual draft CLI pass. No accounts, approvals or network publication are claimed.",
+      "required_acceptance": [
+        "Create and verify project-owned social accounts; obtain exact owner approval and verify one platform post, its returned ID and safe retry behavior. Run review workflow in CI."
+      ],
+      "queue": "open"
     }
   ],
   "revalidation": "Any affected source, protocol, method, route, privacy or acceptance change reopens the relevant item; snapshots are not perpetual guarantees."

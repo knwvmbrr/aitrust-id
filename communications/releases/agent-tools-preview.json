@@ -1,0 +1,10 @@
+{
+  "id": "agent-tools-preview",
+  "version": "0.1.0 development preview",
+  "title": "Connect a local tag checker to your AI application",
+  "use_case": "Let an AI application inspect selected command text through a local JSON API or MCP tool without executing it.",
+  "summary": "PS checks supported command-risk patterns. Optional privacy checking has its own setup and failure state.",
+  "limits": "Development checks, not independent accuracy validation, AI authorship detection or a safety clearance. No public hosted API is announced.",
+  "url": "https://aitrustid.com/reference/conformance/",
+  "evidence": ["docs/ai-tools.md", "integrations/ai-tools/check-text.output.schema.json", "tests/test_ai_tools_mcp.py"]
+}

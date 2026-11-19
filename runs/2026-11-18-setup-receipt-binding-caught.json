@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-11-19T03:13:47.971699+00:00",
+  "kind": "setup_receipt_binding_correction",
+  "failed_check": [
+    "{python}",
+    "-m",
+    "pytest",
+    "tests/test_scoped_component_inputs.py",
+    "-q"
+  ],
+  "cause": "New current clean-setup receipt selected in verifier was not yet included in protocol source fingerprint",
+  "repair": "Bound the actual new receipt as an additional input without removing historical evidence",
+  "focused_checks_passed": 14,
+  "website_previous_run": "Cancelled before source revisions; no completed receipt claimed",
+  "independent_accuracy_evidence": false
+}

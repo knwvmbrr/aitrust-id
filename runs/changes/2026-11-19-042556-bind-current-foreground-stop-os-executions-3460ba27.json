@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-042556-bind-current-foreground-stop-os-executions-3460ba27",
+  "recorded_at": "2026-11-19T04:25:56.209067+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ab5fa14e7c075bcad3301791f2284ef1256f80ae",
+  "changed": "Bind the repaired foreground worker stop handoff to new actual macOS and isolated nonroot Linux evidence, while preserving the original requirement completion and historical runs.",
+  "proves": "Twenty actual current-source terminal controls pass per OS; three forced stop-signal subcases fail when only the handoff is removed; source binding and refusal tests pass.",
+  "limits": "Prior CI process state is not proven. No independent tag accuracy, human acceptance, phone use, new requirement closure or deployment is granted.",
+  "scope_ids": [
+    "F-160",
+    "F-096",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    "scripts/verify-host-capture-evidence.py": "9aa8f28d29ab84045d15931a11f809ffb7e568ac1ef93039d6719ef4a1e7cb39",
+    "tests/test_host_capture_evidence.py": "96a196aab4ff631009942c7a987bd5462eb54957b029d5bf18a632cf2ca1fc38",
+    "eval/revalidation.json": "0baf3a6aa05e6d2ad6df3ce0ec994803c2b84658298ed27f5323fe45fb8a179d",
+    "docs/scope-progress.json": "3e365a9e9892393c2a9bf16bee872ca06b451a154b223edbb90e25d15353f0d0",
+    "docs/scope-progress.md": "0db6088a09352427f0b06709b923386239c445ed588cbdd113c5417859a73c18",
+    "docs/scope-delivery.md": "54a525576e511e56de86a9632de3b4adbb46307c7cbdff598853801b8fa9f561",
+    "docs/master-scope.md": "7c16c27e9d96cb416cb4ecd042b73e98d53ecd5307d0a87bb10a0a529bcae2e7",
+    "site/src/public-scope.json": "aaaa35d0111d8a749bb54613fd304eb8be0222adcd288ef0f9b24a7705ae1e1f",
+    "site/src/scope-manifest.json": "a7bd4708d1c5d47342545cf79361fa643045d62a324ced510062c8945dc0ee88",
+    "site/public/reference/public-scope.json": "aaaa35d0111d8a749bb54613fd304eb8be0222adcd288ef0f9b24a7705ae1e1f",
+    "state.json": "94ffe1ba5a41986359146c6470d29a03776a512ad0f1ff0fba2b024d11d1526f",
+    "runs/2026-11-18-host-stop-launch-macos.json": "298d76cd6716d0f76ad79aaa344d68ebb2f7bd27f9ef40992aca1f4692c253e9",
+    "runs/2026-11-19-host-stop-launch-linux.json": "7a6965b79e9414925d0e42a1b091ed1f26ce845f400ac7cb91c5bd68ee48e466"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-18-host-stop-launch-macos.json",
+      "sha256": "298d76cd6716d0f76ad79aaa344d68ebb2f7bd27f9ef40992aca1f4692c253e9"
+    },
+    {
+      "path": "runs/2026-11-19-host-stop-launch-linux.json",
+      "sha256": "7a6965b79e9414925d0e42a1b091ed1f26ce845f400ac7cb91c5bd68ee48e466"
+    },
+    {
+      "path": "runs/2026-11-18-host-stop-launch-reviewed-negative-control.json",
+      "sha256": "4c200213b7b2d29e1dcfea1015133bdece496d6e7808aa492df331d36f2133fc"
+    }
+  ],
+  "checks": []
+}

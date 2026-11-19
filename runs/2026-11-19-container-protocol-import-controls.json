@@ -1,0 +1,83 @@
+{
+  "kind": "nonroot_protocol_factory_import_correction_controls",
+  "captured_at": "2026-11-19T02:46:49.868331+00:00",
+  "source_base": "6c0d92d4e2d6be5e3a018d392ae6e53e31cfd5a5",
+  "hosted_diagnostic_sha256": "9b5e2ae7fe6d5800d4f315c677541e56dbf5a67d2592c52d0484f09ff8ca3a59",
+  "hosted_observation": {
+    "process_exit": 1,
+    "oom_killed": false,
+    "restart_count": 3,
+    "health_probe_count": 0,
+    "error_signature": "Error loading ASGI app. Could not import module \"protocol.http_privacy\".",
+    "signature_occurrences": 3,
+    "directory_mode_observed": false,
+    "docker_version": "29.4.2",
+    "compose_version": "5.1.3"
+  },
+  "sources": {
+    "services/anonymizer/Dockerfile": "fba7cc95464450228deb3718a56535066e9476efa1cfec14a850511590617d08",
+    "services/gateway/Dockerfile": "f54f70902b4cdca938a3b285c159327bde56b7bf44a3efc91df7a1265a3d8c30",
+    "services/evaluator/Dockerfile": "69f04c221aa724b742511ae6e1ba71f63ddda52d52199b7c119ff4ea8ea7dd36",
+    "tests/test_container_protocol_import.py": "10939be009c5a117305fb1f52c07551349619a02de928a73242ba27bcfbfdc70",
+    ".github/workflows/redaction-development.yml": "00ec671ba5b8ccc156c39de1547b2dbcdc19700f3c663dd85bc7c72d154b746b",
+    "docs/pii-protocol-import-plan.md": "8fa8756f3851af722cacd81b5e78f75402ec41a81b945c1c9f98544ae9686fc3",
+    "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807"
+  },
+  "docker_started_locally": false,
+  "hosted_corrected_image_verified": false,
+  "original_hosted_directory_mode_confirmed": false,
+  "service_health_accepted": false,
+  "independent_accuracy_evidence": false,
+  "original_requirements_closed": [],
+  "pre_observation_adjacent_controls": {
+    "pass": true,
+    "tests_passed": 57,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests/test_container_protocol_import.py",
+      "tests/test_http_privacy.py",
+      "tests/test_personal_startup_diagnostics.py",
+      "tests/test_worker_process.py",
+      "-q"
+    ],
+    "uvicorn_version": "0.34.0",
+    "python": "3.12.14",
+    "nonroot_execution": true,
+    "actual_uvicorn_cli_config_loader": true,
+    "server_started": false,
+    "nontraversable_directory_matches_hosted_import_error": true,
+    "traversable_directory_loads_same_factory": true,
+    "module_bytes_and_0444_mode_preserved": true,
+    "all_three_image_module_resolution_checks_executed": true,
+    "missing_factory_module_refused": true,
+    "warnings": [
+      "Existing Starlette httpx TestClient deprecation"
+    ]
+  },
+  "final_import_controls": {
+    "pass": true,
+    "tests_passed": 4,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "command": [
+      "python",
+      "-m",
+      "pytest",
+      "tests/test_container_protocol_import.py",
+      "-q"
+    ],
+    "actual_uvicorn_cli_config_loader": true,
+    "actual_directory_mode_observation": true,
+    "nontraversable_directory_refused": true,
+    "same_readonly_module_factory_loaded_after_directory_fix": true,
+    "all_three_image_resolution_checks_executed_without_service_import": true,
+    "missing_module_refused": true,
+    "server_started": false,
+    "docker_started": false
+  },
+  "prior_control_receipt_sha256": "5de936e26fab93ceb5526e3a64771334c436565e987cc10620a36a2d3f38abba"
+}

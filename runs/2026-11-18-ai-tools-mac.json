@@ -1,0 +1,56 @@
+{
+  "kind": "ai_tag_tools_software_verification",
+  "captured_at": "2026-11-19T01:25:48.054878+00:00",
+  "pass": true,
+  "implemented_by": "Codex",
+  "sources": {
+    "tools/tag_api.py": "71140e75758a32a6c657c33a2de470a5c19d45317d643a866bff9313069a9d0e",
+    "scripts/tag-api.py": "5d716e4db502e468dabcefba77e6d4f82605f23f57e3b8951a312461faec924a",
+    "scripts/ai-tools-server.py": "31392c7f99b9d850048b9a3760ed648122329ac0474597dd4473750554db9339",
+    "scripts/check-tags.py": "c3cd8c05ad2969b023bb6f332331787b13b2ff6347913fc0f0c3144321279c96",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/aitrust.py": "0fb8dcbd48a80caa456f467d535c7ff079397fa9ed9505fed75aabcbfeaea5ab",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "integrations/mcp/requirements.in": "e4b126c178b691553fe97502dac5f70f164f89d8448b9617964eb7bd04d52613",
+    "integrations/mcp/requirements.lock": "44a461e42c16aa45dabfb8b7b108a968396d7cd592cec39790891dc98bc1bd0a",
+    "integrations/ai-tools/function-tools.json": "a69301e18521fb975f13f718fb332400c739ccd7af76720502e9e6ec0567d00a",
+    "integrations/ai-tools/check-text.input.schema.json": "78bf99eb5a0c2f5bdb90528b43af0dfa7b45804f251dc618f3d3a77da4b1623b",
+    "integrations/ai-tools/check-text.output.schema.json": "54a3d0330e4ecd4eb9b7f65cde9492d45cd8b6c32b82f6d83bc707ea31c42610",
+    "tests/test_ai_tag_api.py": "463a2f099b3b051421a4ce201acdeaf2188a44fb4f601ebd356208a2d03ed6b4",
+    "tests/test_ai_tools_mcp.py": "896bbdc76b2e1a3f05a11ab182309153cafdb4b7f83b7ff231c2307e6029e1e3",
+    "scripts/verify-ai-tools.py": "45eb6caf9814f5161a6341113a61a84ac08f363ec76252ddea8f93259224f23c"
+  },
+  "suites": [
+    {
+      "suite": "test_ai_tag_api.py",
+      "exit": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e884906372aa82b9da5c5b9c7073e50652daf03ac11facd45fe65d20eb116062"
+    },
+    {
+      "suite": "test_ai_tools_mcp.py",
+      "exit": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "a9395d55ac6c13cb1c60ec491d93ccf1919263387d09fcc987b8f3b63fed703d"
+    }
+  ],
+  "sdk": {
+    "name": "mcp",
+    "version": "2.3.0"
+  },
+  "real_stdio_protocol": true,
+  "actual_ps_check": true,
+  "independent_missing_privacy": true,
+  "cancellation_capacity": true,
+  "private_marker_not_reflected": true,
+  "malformed_and_oversize_wire_refused": true,
+  "public_endpoint_deployed": false,
+  "community_launched": false,
+  "independent_tag_validation": false,
+  "original_requirements_closed": []
+}

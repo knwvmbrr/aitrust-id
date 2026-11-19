@@ -119,3 +119,7 @@ gross revenue. Those owner business choices remain unresolved.
 
 No professional review, formation, exemption, trademark clearance, independent
 board, staffed response deadline or operating certification is claimed here.
+
+## Dated update — 18 November 2026
+
+The earlier retention discussion does not supersede the later owner-approved metadata pilot contract: 30 active days and seven encrypted-backup days, conditional on security, withdrawal and recovery gates. Other record classes remain separate. The new `execution-packet.md` supplies unexecuted operating forms without adopting the historical formation package or declaring mark clearance.

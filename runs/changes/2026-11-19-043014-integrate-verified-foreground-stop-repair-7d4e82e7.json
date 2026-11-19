@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-043014-integrate-verified-foreground-stop-repair-7d4e82e7",
+  "recorded_at": "2026-11-19T04:30:14.326519+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ab5fa14e7c075bcad3301791f2284ef1256f80ae",
+  "changed": "Integrate the executed host stop handoff with complete current-source personal, extension, protocol, website and boundary evidence.",
+  "proves": "All selected engineering groups pass with unchanged sources; OS stop evidence is current and selected public routes remain bounded.",
+  "limits": "Protected CI and live publication still pending. Original scope stays 132 complete and 70 open; no independent accuracy, human acceptance or full new closure.",
+  "scope_ids": [
+    "F-160",
+    "F-096",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    "state.json": "01b06401d57bcf7ef259f31a666b04312117aec64a3466a9b2d0e4b21f0d6025",
+    "eval/route-boundaries.json": "8ac73617d002f0e76068b5607e1ee8dd56868873bca19812779a77df14c226d2",
+    "runs/2026-11-19-agent-tools-host-stop-PS.json": "36e25109126fdaa15b99fb1839dc538dbc69e59a08b138c2fd02f558e064691f",
+    "runs/2026-11-19-agent-tools-host-stop-PII_REDACTED.json": "a419926fc925c3d9c620bb6ddafc2e0c5e1b45d21707333e1a773ee2dfb514bb",
+    "runs/2026-11-19-agent-tools-host-stop-protocol.json": "65341d72eb34286769d8720951ab5482963f3f50c5fa1eeac84d54f2983fd864",
+    "runs/2026-11-19-agent-tools-host-stop-extension.json": "81262b7308496393c1f004f8069edf8b8efcbf557b44efbbec96c9b49586d3d7",
+    "runs/2026-11-19-agent-tools-host-stop-website.json": "6fb61fd2defefd1e80b24a0d8a98f138e2f7342ddd796c57b03330ca2b50441e",
+    "runs/2026-11-19-agent-tools-host-stop-boundaries.json": "864debecfc1dd409cc2618050a5b086324c22c77bec382cce1f2dd6c2382f0dc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-agent-tools-host-stop-PS.json",
+      "sha256": "36e25109126fdaa15b99fb1839dc538dbc69e59a08b138c2fd02f558e064691f"
+    },
+    {
+      "path": "runs/2026-11-19-agent-tools-host-stop-PII_REDACTED.json",
+      "sha256": "a419926fc925c3d9c620bb6ddafc2e0c5e1b45d21707333e1a773ee2dfb514bb"
+    },
+    {
+      "path": "runs/2026-11-19-agent-tools-host-stop-protocol.json",
+      "sha256": "65341d72eb34286769d8720951ab5482963f3f50c5fa1eeac84d54f2983fd864"
+    },
+    {
+      "path": "runs/2026-11-19-agent-tools-host-stop-extension.json",
+      "sha256": "81262b7308496393c1f004f8069edf8b8efcbf557b44efbbec96c9b49586d3d7"
+    },
+    {
+      "path": "runs/2026-11-19-agent-tools-host-stop-website.json",
+      "sha256": "6fb61fd2defefd1e80b24a0d8a98f138e2f7342ddd796c57b03330ca2b50441e"
+    },
+    {
+      "path": "runs/2026-11-19-agent-tools-host-stop-boundaries.json",
+      "sha256": "864debecfc1dd409cc2618050a5b086324c22c77bec382cce1f2dd6c2382f0dc"
+    }
+  ],
+  "checks": []
+}

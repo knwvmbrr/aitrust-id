@@ -1,0 +1,68 @@
+name: independent-tag-lab
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '10 7 * * *'
+  pull_request:
+    paths:
+      - 'services/evaluator/**'
+      - 'tools/language_observations.py'
+      - 'tools/mt_workflow.py'
+      - 'research/nli/**'
+      - 'tools/authority_quotation.py'
+      - 'tests/test_reference_claim_coverage.py'
+      - 'tests/test_authority_quotation.py'
+      - 'scripts/check-mt-evidence.py'
+      - 'scripts/check-nli-references.py'
+      - 'scripts/verify-mt-evidence.py'
+      - 'tests/test_mt_workflow.py'
+      - 'tests/test_nli_reference_cli.py'
+      - 'tests/test_selected_nli_references.py'
+      - '.github/workflows/tag-lab.yml'
+permissions:
+  contents: read
+concurrency:
+  group: tag-lab-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  tag-lane:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        lane: [PS, MT, NF-FI]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install exact synthetic development test environment
+        run: python -m pip install --require-hashes -r eval/requirements.lock
+      - name: Install existing locked HTTP framework for evaluator parity tests
+        if: matrix.lane == 'PS'
+        run: python -m pip install --require-hashes -r services/gateway/requirements.lock
+      - name: PS actual standalone and failure controls
+        if: matrix.lane == 'PS'
+        run: |
+          python scripts/verify-standalone-ps.py --output output/verification/tag-lab-PS.json
+          python -m pytest tests/test_standalone_ps.py tests/test_independent_tag_batch.py -q --junitxml=output/verification/tag-lab-PS-tests.xml
+      - name: MT actual evidence workflow and context controls
+        if: matrix.lane == 'MT'
+        run: |
+          python scripts/verify-mt-evidence.py --output output/verification/tag-lab-MT.json
+          python scripts/verify-authority-quotation.py --output output/verification/tag-lab-MT-quotation.json
+          python -m pytest tests/test_mt_workflow.py tests/test_language_observations.py tests/test_authority_quotation.py -q --junitxml=output/verification/tag-lab-MT-tests.xml
+      - name: NF FI selected reference contracts without downloading a model
+        if: matrix.lane == 'NF-FI'
+        run: python -m pytest tests/test_nli_pairs.py tests/test_nli_references.py tests/test_selected_nli_references.py tests/test_nli_reference_cli.py tests/test_reference_claim_coverage.py -q --junitxml=output/verification/tag-lab-NF-FI-tests.xml
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: tag-lab-${{ matrix.lane }}-${{ github.run_id }}
+          path: output/verification/tag-lab-*
+          if-no-files-found: error
+          retention-days: 14

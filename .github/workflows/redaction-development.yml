@@ -1,5 +1,7 @@
 name: redaction-development
 on:
+  schedule:
+    - cron: '20 8 * * 1'
   workflow_dispatch:
   pull_request:
     paths:
@@ -11,6 +13,9 @@ on:
       - 'eval/fixtures/pii-*.json'
       - 'tests/test_complete_ipv6.py'
       - 'tests/test_redaction_worker_observations.py'
+      - 'scripts/diagnose-personal-startup.py'
+      - 'tests/test_personal_startup_diagnostics.py'
+      - 'tests/test_container_protocol_import.py'
       - '.github/workflows/redaction-development.yml'
 permissions:
   contents: read
@@ -80,6 +85,7 @@ jobs:
           python -m pip install --require-hashes -r eval/requirements.lock
           python scripts/verify-service.py --help
           python scripts/verify-assertion-replay.py --help
+          python -m pytest tests/test_personal_startup_diagnostics.py tests/test_worker_process.py tests/test_container_protocol_import.py -q
       - name: Create a private disposable staging credential
         run: |
           python - <<'PYCREDENTIAL'
@@ -95,6 +101,10 @@ jobs:
           mkdir -p output/verification
           python scripts/verify-service.py --env-file "$AITRUST_TEST_ENV" --engine docker --project aitrust-staging --output output/verification/pii-service.json > "$RUNNER_TEMP/pii-service-check.log"
           python scripts/verify-assertion-replay.py --env-file "$AITRUST_TEST_ENV" --engine docker --project aitrust-staging --report output/verification/pii-replay.json > "$RUNNER_TEMP/pii-replay-check.log"
+      - name: Preserve bounded redactor diagnostics before cleanup after a failure
+        if: failure()
+        continue-on-error: true
+        run: python scripts/diagnose-personal-startup.py --env-file "$AITRUST_TEST_ENV" --output output/verification/pii-startup.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -102,6 +112,7 @@ jobs:
           path: |
             output/verification/pii-service.json
             output/verification/pii-replay.json
+            output/verification/pii-startup.json
           retention-days: 7
       - name: Remove only this workflow's disposable personal profile
         if: always()

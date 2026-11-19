@@ -124,3 +124,12 @@ These checks create real foreground pseudo-terminals and private temporary test
 files. They exercise permissions, pause/reset/delete, changes, worker faults,
 interruption and independence. Test fault injection exists only in the test
 launcher; no runtime flag disables capture boundaries.
+
+Worker launch temporarily defers terminal stop signals until the foreground
+session owns the worker handle, then restores its previous signal mask and
+cancels any worker when a stop was queued. The private-session, pipe-only worker
+keeps those terminal stop signals blocked; explicit cancellation and parent-death
+cleanup remain active. A deterministic launch-window control queues each of
+SIGTSTP, SIGTTIN and SIGTTOU with an actual child and checks cleanup and exact mask
+restoration. This supplements the real terminal Ctrl-Z and background-resume
+controls; it does not establish the precise process state of a prior CI failure.

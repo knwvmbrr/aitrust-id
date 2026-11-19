@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-040839-bind-regenerated-owner-decision-to-current-website-ef675146",
+  "recorded_at": "2026-11-19T04:08:39.834981+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b54b4a0f792dcffb6effe71b4da2730eb2f5ec38",
+  "changed": "Retain the actual canonical owner-decision source and refresh only the affected website and boundary execution receipts.",
+  "proves": "All 32 current website groups pass against unchanged sources, the exact dated decision renderer passes, and bounded route review passes.",
+  "limits": "The preceding hosted CI refused the source mismatch and also recorded one five-second signing-worker timeout; corrected source must pass protected CI. No full original scope requirement is newly complete.",
+  "scope_ids": [
+    "F-075",
+    "WP-GOVERNANCE",
+    "WP-VALIDATION"
+  ],
+  "files": {
+    "state.json": "a235828ff77a647fcb9f45392c453763ad7b1e3adb92a79aaa964ccb25dd1d3d",
+    "eval/route-boundaries.json": "dd6e52ce8646c7582987205b713561838216cd4984a8f8c8b409d8ecaab802ce",
+    "runs/2026-11-19-agent-tools-final-decision-website.json": "cba28eadb4b4162f17c040fe5e2d5ea41b067d48f3399616c9f547e2b9e6e5ef",
+    "runs/2026-11-19-agent-tools-final-decision-boundaries.json": "3227c9f3d468f141e4f157265d5f9fe94db2465f269d3d5d89d6717a94d75e1d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-agent-tools-final-decision-website.json",
+      "sha256": "cba28eadb4b4162f17c040fe5e2d5ea41b067d48f3399616c9f547e2b9e6e5ef"
+    },
+    {
+      "path": "runs/2026-11-19-agent-tools-final-decision-boundaries.json",
+      "sha256": "3227c9f3d468f141e4f157265d5f9fe94db2465f269d3d5d89d6717a94d75e1d"
+    }
+  ],
+  "checks": []
+}

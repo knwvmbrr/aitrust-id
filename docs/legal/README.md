@@ -29,3 +29,11 @@ Publication backlog: complete section-by-section review of the original package;
 produce safe full public drafts; reconcile cross-references and business choices;
 obtain qualified review; publish any adopted/ filed instruments with dates and
 redactions. The proposed corrections here do not close that backlog.
+
+## Execution packet prepared 18 November 2026
+
+[Read the unexecuted owner packet](execution-packet.md). It includes operating adoption, formation decisions, contributor and reviewer forms, metadata consent, community notice, social approval, paid-service worksheet, incident procedure and IP/mark review. This is a current operating reconciliation, not a complete professional review or execution of the external formation package.
+
+[Michigan trust-owned single-member LLC documents](michigan-llc-packet.md) follow Michael’s selected commercial formation direction, with himself as initial manager. Trust authority and remaining execution facts need private verification. They do not adopt the historical deferred foundation-owned/Delaware LLC draft. Articles worksheet, operating agreement, initial action, asset schedules, license/tax determinations and compliance calendar remain unexecuted.
+
+[Ownership comparison](entity-structure-comparison.md) preserves the earlier alternatives and records Michael’s subsequent trust-owned choice. No formation filing, signature or asset transfer has been executed. The existing revocable trust and trustee status are owner-reported; no trust instrument has been reviewed or published.

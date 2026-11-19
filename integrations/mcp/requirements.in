@@ -1,0 +1,5 @@
+# Optional AI-host adapter. Personal PS checking has no dependency on this SDK.
+mcp==2.3.0
+# Required by the existing local privacy assertion validator; never skip formats.
+jsonschema==4.23.0
+rfc3339-validator==0.1.4

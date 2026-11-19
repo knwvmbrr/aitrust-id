@@ -1,21 +1,23 @@
 {
   "schema_version": 1,
-  "captured_at": "2026-10-14T15:51:49.668658+00:00",
+  "captured_at": "2026-11-19T03:40:14.199207+00:00",
+  "runtime_observed_at": "2026-11-19T03:39:32.913317+00:00",
+  "npm_observed_at": "2026-10-11T15:08:12.821057+00:00",
   "kind": "observed_notice_evidence",
   "collected_by": "Codex",
   "sources": {
     "package-lock.json": "ef289169d3eba2944df961e4169310aadc16328d29ed45205f36d766a29e9576",
     "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
-    "eval/dependencies/runtime-sbom.json": "4547fc412ad2fc6b44c6d8cee9db43638787e6777ad5be2fc47a0cdb03f9cb28",
-    "sbom/runtime/gateway-linux-amd64.spdx.json": "e15577b5cc4c642021bccc148d746717ebf1eb8455133ab39eea8462d5340137",
-    "sbom/runtime/evaluator-linux-amd64.spdx.json": "b9aca7ebff7f203ba2ba8fdc4cb71875abc16be50e4a5fccd36f1b2daec73750",
-    "sbom/runtime/anonymizer-linux-amd64.spdx.json": "709ee8f1aee249d10408d126b9dc850c4e72cbdb4a6754f2e1521ce4a0fd1603"
+    "eval/dependencies/runtime-sbom.json": "9a395779af6e3a1cd8be120c906ac5c5954e07b96e84a82287b9387c60da89b4",
+    "sbom/runtime/gateway-linux-amd64.spdx.json": "7e80adc314e7cf6c51bd44e6192b24fca52bd0354169cf0dcae1b16bac7a5ebc",
+    "sbom/runtime/evaluator-linux-amd64.spdx.json": "305175f4e408496e4c13bc66d293bc9453123211306e056ad4050fbc4517678b",
+    "sbom/runtime/anonymizer-linux-amd64.spdx.json": "fb34aef22c1338af22545b9572d9cf14949c5bcff60d23dc62a73b655f56c6f4"
   },
   "runtime_collector_sha256": "e07118f8457f442b8507a9a43599e54a92cb913ca8c83f162cb2dfa64ce8567f",
   "runtime": [
     {
       "role": "gateway",
-      "image_id": "08891934508d918533aa00b8de3c41ea887304e1859c8eb6272687c27b095b9b",
+      "image_id": "48fea6256b15b702ed33828517df427d6e7eb0c2bbc74d103876cfb137261d2c",
       "notices": [
         {
           "source_path": "/usr/share/doc/mawk/copyright",
@@ -893,7 +895,7 @@
     },
     {
       "role": "evaluator",
-      "image_id": "5776e1d019164e3d888f693a497c83f943597504451535564ac3fb54c21251c2",
+      "image_id": "73d67518fe8bbe78a7c14233b0d1f95a94bc60f46a61c1a3ed0303340008ef4a",
       "notices": [
         {
           "source_path": "/usr/share/doc/mawk/copyright",
@@ -1915,7 +1917,7 @@
     },
     {
       "role": "anonymizer",
-      "image_id": "9f74213987efa910d085afb516623e60e6cd1b73b3a07a64e341f0c1103054bd",
+      "image_id": "fef0240572a8107cc98a93a894ea16943e2450c38443a33aa2bb85dac1f804f3",
       "notices": [
         {
           "source_path": "/usr/share/doc/mawk/copyright",
@@ -6992,7 +6994,5 @@
     "source_offer_obligations": false
   },
   "license_cleared": false,
-  "independent_accuracy_evidence": false,
-  "runtime_observed_at": "2026-10-11T15:06:12.303314+00:00",
-  "npm_observed_at": "2026-10-11T15:08:12.821057+00:00"
+  "independent_accuracy_evidence": false
 }

@@ -1,6 +1,350 @@
 # Changelog
 
+## Unreleased — 2026-11-19
+
+### 2026-11-19-043014-integrate-verified-foreground-stop-repair-7d4e82e7
+
+Recorded 2026-11-19T04:30:14.326519+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate the executed host stop handoff with complete current-source personal, extension, protocol, website and boundary evidence.
+- **Evidence.** All selected engineering groups pass with unchanged sources; OS stop evidence is current and selected public routes remain bounded. [Change record](./runs/changes/2026-11-19-043014-integrate-verified-foreground-stop-repair-7d4e82e7.json).
+- **Not claimed.** Protected CI and live publication still pending. Original scope stays 132 complete and 70 open; no independent accuracy, human acceptance or full new closure.
+
+
+### 2026-11-19-042629-project-host-stop-guide-for-public-reading-422865cd
+
+Recorded 2026-11-19T04:26:29.323066+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the public host-capture guide from its reviewed canonical source with the bounded worker handoff explanation.
+- **Evidence.** The public guide includes the exact current source explanation and remains a description of the selected one-file foreground adapter. [Change record](./runs/changes/2026-11-19-042629-project-host-stop-guide-for-public-reading-422865cd.json).
+- **Not claimed.** Not universal screen capture, independent accuracy, human acceptance or new scope closure.
+
+
+### 2026-11-19-042556-bind-current-foreground-stop-os-executions-3460ba27
+
+Recorded 2026-11-19T04:25:56.209067+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the repaired foreground worker stop handoff to new actual macOS and isolated nonroot Linux evidence, while preserving the original requirement completion and historical runs.
+- **Evidence.** Twenty actual current-source terminal controls pass per OS; three forced stop-signal subcases fail when only the handoff is removed; source binding and refusal tests pass. [Change record](./runs/changes/2026-11-19-042556-bind-current-foreground-stop-os-executions-3460ba27.json).
+- **Not claimed.** Prior CI process state is not proven. No independent tag accuracy, human acceptance, phone use, new requirement closure or deployment is granted.
+
+
+### 2026-11-19-042308-defer-host-terminal-stops-through-worker-handoff-d6001143
+
+Recorded 2026-11-19T04:23:08.048042+00:00 · Contributor: Codex · change
+
+- **Changed.** Defer terminal stop signals across detached worker construction and caller ownership assignment; restore the exact parent mask before existing interruption cleanup.
+- **Evidence.** Initial host-only Mac suite passed20 controls. The reviewed forced-constructor control queues SIGTSTP, SIGTTIN and SIGTTOU with a real child; removing only the launch mask in a private source copy fails all three completion controls. [Change record](./runs/changes/2026-11-19-042308-defer-host-terminal-stops-through-worker-handoff-d6001143.json).
+- **Not claimed.** Exact failed hosted process state was not captured. Source-bound final Mac and nonroot isolated Linux executions are pending. No original requirement closure, independent accuracy, human acceptance or production deployment is claimed.
+
+
+### 2026-11-19-040839-bind-regenerated-owner-decision-to-current-website-ef675146
+
+Recorded 2026-11-19T04:08:39.834981+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the actual canonical owner-decision source and refresh only the affected website and boundary execution receipts.
+- **Evidence.** All 32 current website groups pass against unchanged sources, the exact dated decision renderer passes, and bounded route review passes. [Change record](./runs/changes/2026-11-19-040839-bind-regenerated-owner-decision-to-current-website-ef675146.json).
+- **Not claimed.** The preceding hosted CI refused the source mismatch and also recorded one five-second signing-worker timeout; corrected source must pass protected CI. No full original scope requirement is newly complete.
+
+
+### 2026-11-19-040339-preserve-exact-generated-decision-history-spacing-ecb081da
+
+Recorded 2026-11-19T04:03:39.759768+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve original paragraph spacing in the canonical decision-history source so regenerated DECISIONS.md and its public projection remain byte-identical to the reviewed wording.
+- **Evidence.** The dated decision verifier passes with exact rendered source matching. [Change record](./runs/changes/2026-11-19-040339-preserve-exact-generated-decision-history-spacing-ecb081da.json).
+- **Not claimed.** No new decision or acceptance is inferred.
+
+
+### 2026-11-19-040313-repair-generated-decision-source-binding-87906e6d
+
+Recorded 2026-11-19T04:03:13.665571+00:00 · Contributor: Codex · change
+
+- **Changed.** Move the already published trust and presentation-layer direction into the preserved decision-history source used to generate DECISIONS.md.
+- **Evidence.** The actual decision verifier now passes without changing rendered decision text, acceptance states or source validation rules. [Change record](./runs/changes/2026-11-19-040313-repair-generated-decision-source-binding-87906e6d.json).
+- **Not claimed.** Repairs a generated-document source mismatch; no formation, legal execution or original requirement closure.
+
+
+### 2026-11-19-040035-integrate-current-trust-governance-and-runtime-evidence-bec09deb
+
+Recorded 2026-11-19T04:00:35.828325+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the current trust-governance integration and refreshed runtime inventories to executed protocol, website and route-boundary checks.
+- **Evidence.** All 41 protocol and 32 website check groups passed against unchanged source; current bounded personal-route review passed. [Change record](./runs/changes/2026-11-19-040035-integrate-current-trust-governance-and-runtime-evidence-bec09deb.json).
+- **Not claimed.** Engineering evidence only. Original scope remains 132 complete and 70 open; no formation filing, independent tag release validation, physical iPhone acceptance or live publication is asserted.
+
+
+### 2026-11-19-035643-current-native-share-workflow-after-notice-refresh-79fe9e4f
+
+Recorded 2026-11-19T03:56:43.121970+00:00 · Contributor: Codex · change
+
+- **Changed.** Selected a fresh actual six-workflow iPhone14Plus Simulator execution bound to the refreshed notice metadata and unchanged native software.
+- **Evidence.** All six named UI workflows passed on installed iOS26.2; current source and assets matched throughout and the owned Simulator was deleted and absent afterward. [Change record](./runs/changes/2026-11-19-035643-current-native-share-workflow-after-notice-refresh-79fe9e4f.json).
+- **Not claimed.** Simulator software evidence only: no physical phone, human VoiceOver, third-party Share-provider acceptance, independent detector accuracy or new TestFlight upload.
+
+
+### 2026-11-19-034530-retain-linked-notice-precondition-repair-13d795a3
+
+Recorded 2026-11-19T03:45:30.778100+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded linked notice-inventory and generated-public-projection refusals and selected the fresh actual observation chain in state.
+- **Evidence.** All current notice and nested-runtime consistency preconditions now pass on actual observations; prior failures remain in the execution history. [Change record](./runs/changes/2026-11-19-034530-retain-linked-notice-precondition-repair-13d795a3.json).
+- **Not claimed.** Affected protocol and website source-bound revalidation and required CI still pending; no expanded clearance.
+
+
+### 2026-11-19-034352-refresh-exact-image-and-locked-runtime-notice-chain-e86fb7aa
+
+Recorded 2026-11-19T03:43:52.571933+00:00 · Contributor: Codex · change
+
+- **Changed.** Collected installed notices from exact newly scanned images and reprocessed unchanged locked native, asset and nested-runtime archives against the current observation chain.
+- **Evidence.** 449 actual runtime notices and122 distribution records collected without network;205 cached npm archives rechecked; native archives, selected assets and nested runtime replay pass. All notice blob bytes and native notice bundle remain unchanged. [Change record](./runs/changes/2026-11-19-034352-refresh-exact-image-and-locked-runtime-notice-chain-e86fb7aa.json).
+- **Not claimed.** Original retained npm observation time preserved. No package code or downloads; license permission, full transitive coverage, vulnerabilities and independent tag acceptance remain unapproved.
+
+
+### 2026-11-19-033608-refresh-public-governance-projections-3cd70862
+
+Recorded 2026-11-19T03:36:08.339018+00:00 · Contributor: Codex · change
+
+- **Changed.** Refreshed the tracked public governance and decision downloads from the current owner-directed sources.
+- **Evidence.** Public projections identify the trust-owned operating-company direction and preserve future standards governance as an unselected proposal. [Change record](./runs/changes/2026-11-19-033608-refresh-public-governance-projections-3cd70862.json).
+- **Not claimed.** No signed, filed or transferred legal instrument is represented; this is a current draft and decision projection.
+
+
+### 2026-11-19-033207-fresh-current-container-inventory-after-runtime-repair-96478f5d
+
+Recorded 2026-11-19T03:32:07.091429+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrated three actual fresh Linux image scans and current observed inventory, retaining source-bound CI refusals and the reconciled trust-owned governance direction.
+- **Evidence.** Pinned scanner archive and binary identities checked, scans executed without network, 424 package occurrences inventoried, inventory identity and official SPDX checks pass; staging services unchanged. [Change record](./runs/changes/2026-11-19-033207-fresh-current-container-inventory-after-runtime-repair-96478f5d.json).
+- **Not claimed.** Unsigned observed inventory only: missing license metadata7/7/19 remains; no license/vulnerability/independent-tag clearance, no formation or asset transfer. Required CI publication pending.
+
+
+### 2026-11-19-033003-retain-source-bound-container-inventory-refusal-70ec7dca
+
+Recorded 2026-11-19T03:30:03.396181+00:00 · Contributor: Codex · change
+
+- **Changed.** Retained the three required CI refusals that share one stale observed-container inventory cause after the actual Dockerfile repair.
+- **Evidence.** Inventory identity checks refused changed build inputs; a real fresh Linux image scan was commissioned, rather than rebinding old scans. [Change record](./runs/changes/2026-11-19-033003-retain-source-bound-container-inventory-refusal-70ec7dca.json).
+- **Not claimed.** Publication remains blocked until the current scans and required checks pass; no license, vulnerability, signed release or tag-accuracy clearance.
+
+
+### 2026-11-19-032609-align-governance-with-owner-trust-direction-0f6d8766
+
+Recorded 2026-11-19T03:26:09.951019+00:00 · Contributor: Codex · change
+
+- **Changed.** Aligned current governance and decision history with the trust-owned operating LLC direction while preserving future independent standards governance as a separate proposal.
+- **Evidence.** The active governance document no longer unconditionally assigns specification or mark assets to an unformed foundation. Existing licenses, RFC evidence and conformance recusal remain in force. [Change record](./runs/changes/2026-11-19-032609-align-governance-with-owner-trust-direction-0f6d8766.json).
+- **Not claimed.** No entity, certification program, trademark clearance, legal instrument review or asset transfer is claimed.
+
+
+### 2026-11-19-032511-reconcile-trust-choice-with-retained-institutional-scope-7a285235
+
+Recorded 2026-11-19T03:25:11.812764+00:00 · Contributor: Codex · change
+
+- **Changed.** Reconciled F075, F143 and governance planning with the owner-selected trust-owned operating company, retaining historical titles and the separate future standards-governance question.
+- **Evidence.** All202 original records remain; trust/company management and certification ownership are explicitly separate; unexecuted legal jobs remain20 percent. [Change record](./runs/changes/2026-11-19-032511-reconcile-trust-choice-with-retained-institutional-scope-7a285235.json).
+- **Not claimed.** No formation, mark, legal clearance, trust instrument review or full requirement closure.
+
+
+### 2026-11-19-031923-select-current-plugin-runtime-and-boundary-truth-75364495
+
+Recorded 2026-11-19T03:19:23.319417+00:00 · Contributor: Codex · change
+
+- **Changed.** Selected passing current-source evidence for all five engineering capabilities, actual repaired runtime and personal-route boundaries; updated state with owner-selected trust direction and review artifacts.
+- **Evidence.** Fourteen extension groups and reviewed route boundaries pass with current 26 service and fifteen replay controls; accountability chronology passes. [Change record](./runs/changes/2026-11-19-031923-select-current-plugin-runtime-and-boundary-truth-75364495.json).
+- **Not claimed.** Protected publication pending; original requirements remain132 complete and70 open, zero full independently validated tag releases. Trust documents remain unsigned and unfiled.
+
+
+### 2026-11-19-031753-current-source-plugin-runtime-website-evidence-02d8e6db
+
+Recorded 2026-11-19T03:17:53.024433+00:00 · Contributor: Codex · change
+
+- **Changed.** Retained passing current-source PS, PII, protocol and website engineering executions after new clean-setup receipt binding and owner legal direction.
+- **Evidence.** Seven PS, six privacy, 41 protocol and 32 website command groups passed with source stable; detector accuracy and human acceptance are separate. [Change record](./runs/changes/2026-11-19-031753-current-source-plugin-runtime-website-evidence-02d8e6db.json).
+- **Not claimed.** Synthetic engineering checks only; independent release evidence, physical iPhone acceptance, entity execution and original 70 open requirements unchanged.
+
+
+### 2026-11-19-031508-trust-review-artifacts-9bc11774
+
+Recorded 2026-11-19T03:15:08.338736+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerated the owner review bundle and three Word/PDF drafts for the selected trust-owned manager-managed LLC direction.
+- **Evidence.** All 28 rendered document pages visually reviewed; unchanged pages matched by exact rendered PNG identity and current artifact hashes retained. [Change record](./runs/changes/2026-11-19-031508-trust-review-artifacts-9bc11774.json).
+- **Not claimed.** Unsigned, unfiled drafts; actual trust instrument, legal authority and tax fit still require private review. No full requirement closed.
+
+
+### 2026-11-19-031348-bind-current-setup-proof-and-align-trust-forms-a50c5cba
+
+Recorded 2026-11-19T03:13:48.255282+00:00 · Contributor: Codex · change
+
+- **Changed.** Bound the new actual clean-setup receipt in protocol revalidation and aligned current operating formation instructions with owner-selected trust-owned manager-managed LLC.
+- **Evidence.** Fourteen source-binding controls pass; older nonprofit form instructions are expressly excluded from the selected filing route. [Change record](./runs/changes/2026-11-19-031348-bind-current-setup-proof-and-align-trust-forms-a50c5cba.json).
+- **Not claimed.** No formation, transfer, signature, independent accuracy or new full requirement closure.
+
+
+### 2026-11-19-031043-trust-owned-direction-and-proven-linux-repair-cfd67b79
+
+Recorded 2026-11-19T03:10:43.249443+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded owner-selected revocable-trust sole ownership and separate manager role, preserved presentation-layer all-screen objective with explicit platform acceptance, and integrated actual Docker repair plus current clean Linux setup evidence.
+- **Evidence.** Fresh Docker images showed directory mode 0444 before correction, then passed 26 service and 15 replay controls. Current 27-input Podman installation passed ten failure controls and restored identical original staging. [Change record](./runs/changes/2026-11-19-031043-trust-owned-direction-and-proven-linux-repair-cfd67b79.json).
+- **Not claimed.** Trust identity, instrument authority, filing, signatures, transfers, independent tag accuracy and physical-device acceptance remain unverified; original open requirements remain 70.
+
+
+### 2026-11-19-025701-retain-import-candidate-revalidation-refusals-59cc8569
+
+Recorded 2026-11-19T02:57:01.800930+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain failed candidate checks before obtaining fresh real Linux setup evidence.
+- **Evidence.** Protocol rejects stale full-build setup evidence after Dockerfile changes; website accounting refuses unrecorded new run outputs. [Change record](./runs/changes/2026-11-19-025701-retain-import-candidate-revalidation-refusals-59cc8569.json).
+- **Not claimed.** These are recorded failures, not successful source revalidation. Corrected container startup and current clean setup remain to execute.
+
+
+### 2026-11-19-025250-correct-service-import-directory-and-compare-ownership-60eb77aa
+
+Recorded 2026-11-19T02:52:50.969186+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve HTTP-module startup diagnostics, add explicit traversable read-only protocol directories and nonroot image import assertions, and compare ownership structures without selecting one.
+- **Evidence.** Actual pinned Uvicorn reproduces failure with0444 directory and loads identical module bytes after0555 correction. Twenty-eight integrated import and diagnostic controls pass; four comparison pages rendered and inspected. [Change record](./runs/changes/2026-11-19-025250-correct-service-import-directory-and-compare-ownership-60eb77aa.json).
+- **Not claimed.** Original hosted directory mode and corrected image startup await the next real hosted run. No resources or network isolation weakened, no entity selected or filed, no original requirement closure.
+
+
+### 2026-11-19-024649-make-shared-protocol-directory-traversable-28b43967
+
+Recorded 2026-11-19T02:46:49.911408+00:00 · Contributor: Codex · change
+
+- **Changed.** Set shared ASGI package directory search permissions explicitly and check module resolution as the runtime user in each selected image build.
+- **Evidence.** Nonroot pinned Uvicorn0.34 CLI loading reproduces the hosted import error at directory0444 and succeeds at0555 while source files stay0444. All57 adjacent checks passed before the mode observation addition and all4 final import controls passed afterward. The build now prints the prior directory mode. [Change record](./runs/changes/2026-11-19-024649-make-shared-protocol-directory-traversable-28b43967.json).
+- **Not claimed.** The original hosted directory mode is unobserved until a fresh hosted image build. No local Docker or service process started. Actual container startup, health and replay remain pending.
+
+
+### 2026-11-19-023935-bind-lab-bootstrap-and-diagnostic-verification-923a4f04
+
+Recorded 2026-11-19T02:39:35.772322+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind updated Linux evidence and failure diagnostics to current website and route review.
+- **Evidence.** Current32 website commands,41 protocol commands and route boundary checks pass. [Change record](./runs/changes/2026-11-19-023935-bind-lab-bootstrap-and-diagnostic-verification-923a4f04.json).
+- **Not claimed.** Scheduled PS and privacy startup follow-up require hosted execution. No independent accuracy, physical acceptance or original requirement closure.
+
+
+### 2026-11-19-023620-refresh-linux-lab-protocol-evidence-f3d563a3
+
+Recorded 2026-11-19T02:36:20.039984+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh protocol evidence after recording Linux tool interoperability and startup diagnostics.
+- **Evidence.** All41 current protocol commands pass. [Change record](./runs/changes/2026-11-19-023620-refresh-linux-lab-protocol-evidence-f3d563a3.json).
+- **Not claimed.** Website and hosted startup follow-up remain pending; no independent accuracy or original requirement closure.
+
+
+### 2026-11-19-023437-record-linux-mcp-and-fix-lab-bootstrap-ab8f6acd
+
+Recorded 2026-11-19T02:34:37.589573+00:00 · Contributor: Codex · change
+
+- **Changed.** Record the real clean Linux MCP pass, install the locked PS parity-test framework in its own lane and integrate bounded failure-only privacy startup diagnostics.
+- **Evidence.** Linux API/MCP twelve controls pass with current source hashes; MT and NF/FI Linux lanes pass; diagnostic integration fixtures pass. [Change record](./runs/changes/2026-11-19-023437-record-linux-mcp-and-fix-lab-bootstrap-ab8f6acd.json).
+- **Not claimed.** PS lab dependency fix and privacy startup diagnostics require a hosted rerun. No service-health success, tag accuracy, physical device acceptance or original requirement closure.
+
+
+### 2026-11-19-023205-capture-failed-personal-startup-94ee4f81
+
+Recorded 2026-11-19T02:32:05.009746+00:00 · Contributor: Codex · change
+
+- **Changed.** Added failure-only bounded diagnostics for the disposable CI anonymizer before cleanup, with exact container ownership validation and disposable-token redaction.
+- **Evidence.** All 36 collector and worker controls passed. Actual CLI refusal without a credential produced no Docker calls. Workflow review preserves existing startup, verification and cleanup steps while uploading diagnostic output after failure. [Change record](./runs/changes/2026-11-19-023205-capture-failed-personal-startup-94ee4f81.json).
+- **Not claimed.** No local container started. A new hosted startup failure still needs actual State, Health and stderr evidence before its cause can be established. This diagnostic cannot accept service health or complete a requirement.
+
+
+### 2026-11-19-022119-bind-integrated-tag-tool-site-and-boundary-checks-ce4d2e69
+
+Recorded 2026-11-19T02:21:19.354115+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind current website and route review to the integrated tag tools, independent method candidates and legal draft downloads.
+- **Evidence.** All32 website commands,14 extension commands and the route-boundary verifier pass;41 protocol controls remain current. [Change record](./runs/changes/2026-11-19-022119-bind-integrated-tag-tool-site-and-boundary-checks-ce4d2e69.json).
+- **Not claimed.** Public deployment and hosted Linux checks are not yet verified. No independent tag release, social publication, filing or original scope closure.
+
+
+### 2026-11-19-021434-bind-agent-tools-protocol-evidence-b1d7cdf0
+
+Recorded 2026-11-19T02:14:34.409661+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh protocol execution and review the current local API route inventory without adding a listener.
+- **Evidence.** All forty-one protocol commands pass against frozen current inputs. [Change record](./runs/changes/2026-11-19-021434-bind-agent-tools-protocol-evidence-b1d7cdf0.json).
+- **Not claimed.** Website verification and Linux CI remain pending; no independent tag validation or original requirement closure.
+
+
+### 2026-11-19-021237-integrate-tag-candidates-linux-lab-and-michigan-llc-drafts-8413edaa
+
+Recorded 2026-11-19T02:12:37.615954+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate independently delivered MT quotation and NF/FI claim coverage components; repair repeated-match API schema and encoded-execution wording; configure separate scheduled Linux lanes; prepare a distinct Michigan LLC document set.
+- **Evidence.** Actual API/MCP controls pass after two debugger findings; 73 integration tests across new components pass; local lab controls pass; nine LLC pages and thirteen operations pages rendered and inspected. [Change record](./runs/changes/2026-11-19-021237-integrate-tag-candidates-linux-lab-and-michigan-llc-drafts-8413edaa.json).
+- **Not claimed.** No parent tag released, independent labels acquired, Linux scheduled run completed, account connected, social post sent, legal filing executed or original requirement closed. Remaining original requirements:70.
+
+
+### 2026-11-19-020930-reference-claim-coverage-8f1dbeb0
+
+Recorded 2026-11-19T02:09:30.242338+00:00 · Contributor: Codex NF/FI evidence lane · change
+
+- **Changed.** Account for every supported claim line in automatic reference NLI results and show evaluated and unevaluated line counts in the summary.
+- **Evidence.** The old maximum-one comparison omits coverage; the current map accounts for both claims with the same one controlled comparison. Three actual private CLI controls and 228 focused compatibility and refusal checks pass. [Change record](./runs/changes/2026-11-19-020930-reference-claim-coverage-8f1dbeb0.json).
+- **Not claimed.** Coverage counts model outputs for bounded input lines. Source truth, exhaustive retrieval, model accuracy and NF/FI release remain unestablished. No original parent requirement closes.
+
+
+### 2026-11-19-020642-authority-quotation-candidate-baf4b261
+
+Recorded 2026-11-19T02:06:42.093813+00:00 · Contributor: Codex - MT evidence engineering lane · change
+
+- **Changed.** Add a separately versioned opt-in authority quotation observation with local marker contexts and private evidence export.
+- **Evidence.** 114 focused tests and 22 actual executable controls pass; retained quoted phrases and quoted-marker locality are reproducible under the bounded ASCII grammar. [Change record](./runs/changes/2026-11-19-020642-authority-quotation-candidate-baf4b261.json).
+- **Not claimed.** Engineering candidate only; old MT workflow unchanged; no quotation endorsement, semantic attribution, negation, intent, accuracy or tag-release claim; no global completion changed.
+
+
+### 2026-11-19-015558-connect-local-tag-tools-and-owner-release-review-db6b01ef
+
+Recorded 2026-11-19T01:55:58.884876+00:00 · Contributor: Codex · change
+
+- **Changed.** Add independent local JSON and MCP tag tools, source-bound release review drafts, AITRUSTID social setup instructions, unexecuted legal operating forms and a current tag staffing board.
+- **Evidence.** Twelve real SDK/API controls, four approval/source/destination controls, scope verification and thirteen rendered legal packet pages checked on this Mac. [Change record](./runs/changes/2026-11-19-015558-connect-local-tag-tools-and-owner-release-review-db6b01ef.json).
+- **Not claimed.** No new detector, independent accuracy release, social account or post, public API, company formation or original requirement closure. Clean Linux tool installation and current public site build remain pending.
+
+
+### 2026-11-19-010800-enable-owner-testflight-build-a4e2fc7f
+
+Recorded 2026-11-19T01:08:00.060832+00:00 · Contributor: Codex · change
+
+- **Changed.** Save the owner-approved export compliance answer and assign TestFlight 1.0 (1) to the owner-only testing group.
+- **Evidence.** Apple shows Ready to Test after the saved answer, then the owner group shows 1 tester, 1 build and Testing. [Change record](./runs/changes/2026-11-19-010800-enable-owner-testflight-build-a4e2fc7f.json).
+- **Not claimed.** Phone installation, physical Share, VoiceOver and outside-user acceptance remain open. Public App Store review and independent accuracy are not claimed. The follow-up PR still requires current site verification.
+
+
 ## Unreleased — 2026-11-18
+
+### 2026-11-18-161803-enroll-iphone-owner-testflight-60fac046
+
+Recorded 2026-11-18T16:18:03.829151+00:00 · Contributor: Codex · change
+
+- **Changed.** Create the internal iPhone Owner Test group and enroll only the existing Apple account holder.
+- **Evidence.** The group has one tester with manual distribution, and the build picker disables build 1.0 (1) with Missing Compliance. [Change record](./runs/changes/2026-11-18-161803-enroll-iphone-owner-testflight-60fac046.json).
+- **Not claimed.** No export declaration was saved, no build assigned, and there was no iPhone installation, VoiceOver test, public review, or scope closure.
+
+
+### 2026-11-18-161247-bind-testflight-compliance-verification-9f514396
+
+Recorded 2026-11-18T16:12:47.395367+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the scope verification receipts after the TestFlight compliance and library evidence changes.
+- **Evidence.** Forty protocol commands, thirty-two site commands and the route boundary verification pass against current inputs. [Change record](./runs/changes/2026-11-18-161247-bind-testflight-compliance-verification-9f514396.json).
+- **Not claimed.** Apple’s questionnaire remains unanswered. Scope is 132 complete and 70 open.
+
+
+### 2026-11-18-160918-testflight-compliance-evidence-9c82687d
+
+Recorded 2026-11-18T16:09:18.684938+00:00 · Contributor: Codex · change
+
+- **Changed.** Identify the internal TestFlight blocker and replay source evidence for selected embedded libraries.
+- **Evidence.** Chrome shows build 1.0 (1) with Missing Compliance; the exact signed IPA passed package and runtime input checks, and three embedded library source archives were matched. [Change record](./runs/changes/2026-11-18-160918-testflight-compliance-evidence-9c82687d.json).
+- **Not claimed.** No compliance declaration, tester access, physical device acceptance, full dependency clearance, or scope closure.
+
 
 ### 2026-11-18-155054-bind-verified-pyodide-origin-f99fc9fd
 
