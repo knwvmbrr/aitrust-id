@@ -4,10 +4,11 @@ from dataclasses import dataclass
 import hashlib
 from pathlib import Path
 from urllib.parse import urlsplit
+import warnings
 from protocol.corpus import CorpusError
 from protocol.normalization import NORMALIZATION_ID, normalize_nfc
 
-METHOD = 'python-credential-flow-observation/1.0.1'
+METHOD = 'python-credential-flow-observation/1.0.2'
 SECRET_KEYS = {'OPENAI_API_KEY', 'AWS_SECRET_ACCESS_KEY', 'GITHUB_TOKEN', 'DATABASE_PASSWORD'}
 MAX_CHARACTERS = 8000
 
@@ -48,7 +49,9 @@ def observe(original):
         subject = normalize_nfc(original)
         if len(subject) > MAX_CHARACTERS:
             raise ValueError()
-        tree = ast.parse(subject)
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', SyntaxWarning)
+            tree = ast.parse(subject)
     except (UnicodeError, SyntaxError, RecursionError, ValueError):
         raise CorpusError('Invalid or unsupported Python source.') from None
     nodes = list(ast.walk(tree))
@@ -177,6 +180,15 @@ def observe(original):
             continue
         else:
             raise CorpusError('Only supported straight-line Python statements are evaluated.')
+    # ast.parse alone accepts some non-runnable reserved bindings. Compile only
+    # after the finite node/expression/literal/statement profile has passed.
+    # Never execute this code object or expose native compiler diagnostics.
+    try:
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', SyntaxWarning)
+            compile(tree, '<credential-flow-static-validation>', 'exec', dont_inherit=True)
+    except (SyntaxError, ValueError, TypeError, RecursionError):
+        raise CorpusError('Invalid or unsupported Python source.') from None
     return {'format': 'credential-flow-observation/v1', 'method': METHOD,
             'method_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
             'subject_sha256': hashlib.sha256(subject.encode('utf-8')).hexdigest(),

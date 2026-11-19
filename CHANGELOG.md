@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-184118-credential-flow-bounded-compiler-semantics-c1a73803
+
+Recorded 2026-11-19T18:41:18.642071+00:00 · Contributor: Codex · change
+
+- **Changed.** Reject compiler-invalid reserved bindings before returning credential-flow observations by compiling only the already bounded supported AST without executing its code object; suppress native parser warning fragments.
+- **Evidence.** The actual frozen __debug__ flow counterexample is preserved; 150 focused controls, 39 current macOS CLI commands and five real compile-only syntax oracles verify reserved assignment/import-alias refusal and unchanged source/context, privacy and I/O controls. [Change record](./runs/changes/2026-11-19-184118-credential-flow-bounded-compiler-semantics-c1a73803.json).
+- **Not claimed.** Compile-only validation is not program execution, authorization, recommendation inference or independent accuracy. F012 remains open with no PS mapping or full requirement closure; the earlier source and receipts remain historical.
+
+
 ### 2026-11-19-183456-credential-flow-context-binding-d8c4808b
 
 Recorded 2026-11-19T18:34:56.887333+00:00 · Contributor: Codex · change

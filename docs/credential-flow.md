@@ -31,7 +31,7 @@ the call does not prove a program ran or that a transfer was unauthorized.
 
 ## Supported profile
 
-Method `python-credential-flow-observation/1.0.1` uses the built-in Python syntax
+Method `python-credential-flow-observation/1.0.2` uses the built-in Python syntax
 tree. It is a separate reference component for F-012, not the proposed Semgrep
 implementation or an active PS signal. No new dependency is installed.
 
@@ -68,6 +68,12 @@ Repeated call keyword names refuse even when Python's AST parser accepts them:
 they are not runnable supported programs. Static concatenation refuses before
 creating a propagated literal longer than 8,000 characters, so a small series of
 doubling assignments cannot bypass the input bound through exponential growth.
+After the supported bounded AST profile passes, a compile-only semantic check
+also rejects reserved bindings such as assignment/import aliases to `__debug__`.
+The code object is never executed. Unsupported syntax and excessive node,
+expression or literal work refuse before compilation; compiler diagnostics are
+not echoed to the caller. Native SyntaxWarning fragments from valid parsed code
+are suppressed without executing the program or changing its static result.
 
 This component does not classify whether a displayed program is recommended,
 quoted, authorized or malicious. Those boundaries and independent measurement

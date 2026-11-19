@@ -65,3 +65,16 @@ the existing authorized route without packages, credentials, Docker or deploymen
 changes. Require a different reviewer after freezing. Full F-012 acceptance still
 needs the proposed Semgrep/use-mention integration contract, independent flow
 validation and accepted PS mapping; these engineering controls cannot replace it.
+
+## Compiler counterexample correction, before code
+
+Root review reproduced a supported AST assigning a secret-read value to
+`__debug__`: method1.0.1 returned STATIC_FLOW although the real compiler rejects
+that reserved binding. Preserve candidate3619 and the compile-only reproduction.
+After the complete supported-profile walk, run `compile` on that already bounded
+AST, never its code object. Unknown statements/transforms, >2,000 nodes,
+expression depth>32 and propagated literals>8,000 refuse before that step;
+no power/multiplication or arbitrary AST reaches compiler constant folding.
+Catch compiler semantic refusal as fixed Unavailable for both flow and no-flow.
+Version candidate1.0.2; test assignment and import aliases against actual stdlib
+compile without execution. Refresh current affected evidence before Linux.

