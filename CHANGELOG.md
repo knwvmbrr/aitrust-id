@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-164023-nf-unavailable-count-linux-proof-69160faf
+
+Recorded 2026-11-19T16:40:23.703692+00:00 · Contributor: Codex · change
+
+- **Changed.** Record targeted current-source Linux CLI verification of unknown versus measured-zero NF observation counts.
+- **Evidence.** 10 actual isolated-Python Linux commands pass on exact correction commit 8742be4 as UID1000 with real libseccomp protections; eleven selected source hashes and original staging identities remain unchanged, and the owned temporary checkout is removed. [Change record](./runs/changes/2026-11-19-164023-nf-unavailable-count-linux-proof-69160faf.json).
+- **Not claimed.** Count-correction evidence only; the full suite and unrelated timeout controls were not rerun, and prior full-worker receipts remain historical. No tag, independent accuracy, full original closure or human acceptance is claimed.
+
+
 ### 2026-11-19-163716-nf-unavailable-count-is-unknown-717b2024
 
 Recorded 2026-11-19T16:37:16.865927+00:00 · Contributor: Codex · change
