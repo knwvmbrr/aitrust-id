@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-082247-project-current-fi-citation-scope-and-guides-bc3e3a06",
+  "recorded_at": "2026-11-19T08:22:47.471412+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7d740502904d70b387029f2a1bcf9782ae821fce",
+  "changed": "Regenerate the preserved public scope and publish the exact FI sidecar usage and architecture guides from the accepted local source.",
+  "proves": "The recorded site build passes with all 202 original IDs and unchanged 132 complete / 70 open. Both linked guides are copied; the FI record names the functioning component and remaining parent acceptance.",
+  "limits": "Fresh combined engineering execution and protected publication follow. No FI tag or independent source-support claim is granted.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "README.md": "51f5cff4af4d2f30470aa05f639540346a347a44b9f1bdb4406c0348e8c1ca6e",
+    "docs/scope-progress.json": "8bd09dd67fcd71d22b29437ca8e8f63bd368d6fd251afcdd0d24b03ef6032916",
+    "docs/scope-progress.md": "43cdd678f91daf757cc49e2676ac5ea03397ba92028addcfdf898ebd15e51950",
+    "eval/revalidation.json": "613848ee5a04ca4cb01c109f097831de34878e877ee45c7a7e41804e913760d1",
+    "package.json": "659e50ebc29caf3cd82e7ac701ddc483d8735179e00d8e3330949f016cd10c97",
+    "runs/2026-11-19-fi-citation-PII_REDACTED.json": "5723c9b54e40b8f29f6e69abc2809b41896104a68deb2f975dcccd1c0b595f45",
+    "runs/2026-11-19-fi-citation-integration-review.json": "42f2b4b228d47bee20b2f086cc8595534aaea946b9f3d9110ea86e82fe2057f8",
+    "scripts/verify-route-boundaries.py": "68e81b155154aab2892dc3fbe8efebdfd40c42611cf65d14461e52212c045a0b",
+    "scripts/verify-seo.cjs": "9427e4c0026cbd381c8076f7f0b9ddb16326e340f711758eaddb53c21d41bbda",
+    "site/public/reference/fi-citation-sidecar-plan.md": "738a5f40ef0a4ffbce531dbf8e5cfa209b583019fe79175b4e25213f2acd1ee8",
+    "site/public/reference/fi-citation-sidecar.md": "c7a81087180ecc9e28a3a39df8038c83939ff4445d3acc41c5029ef25a8e5cad",
+    "site/public/reference/public-scope.json": "ff3ed4205a965a6c08a16f0fb316d35c679d79c7c3c56ef92aab1bd7e434adb5",
+    "site/scripts/prepare.mjs": "8e28b526d340575a16b0262ad165135313f9472765af5475b0a7f53ccfb6f708",
+    "site/src/public-scope.json": "ff3ed4205a965a6c08a16f0fb316d35c679d79c7c3c56ef92aab1bd7e434adb5",
+    "site/src/scope-manifest.json": "6a96a0241a75ec7a78b5c3203a6d54e751e2cc897cc43945ad850d4a44c28968",
+    "tests/test_scoped_component_inputs.py": "9e647aabec8344f212d65751e635768417bc077dbcfd6dc0ae5e2d6283be4289"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-fi-citation-integration-review.json",
+      "sha256": "42f2b4b228d47bee20b2f086cc8595534aaea946b9f3d9110ea86e82fe2057f8"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T08:22:47.784374+00:00"
+    }
+  ]
+}

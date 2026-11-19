@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-19
 
+### 2026-11-19-083150-record-current-fi-citation-integration-acceptance-ee5c1c51
+
+Recorded 2026-11-19T08:31:50.532286+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current-source acceptance of the independent offline FI citation-association component, published guide inputs and bound SEO checks.
+- **Evidence.** All five unchanged-source engineering groups pass: 7 PS, 6 privacy, 52 protocol, 14 extension and 43 website command groups. The route review covers 1280 sources with unchanged endpoints/permissions and retains actual service/replay evidence. Scope, contributor attribution and state chronology agree. [Change record](./runs/changes/2026-11-19-083150-record-current-fi-citation-integration-acceptance-ee5c1c51.json).
+- **Not claimed.** This is a literal caller-mapping component, not an FI verdict, semantic source verification or independent validation. The failed website candidate is retained; protected CI and publication remain pending. All 202 IDs and 132 complete / 70 open remain.
+
+
+### 2026-11-19-082607-record-fi-checks-before-serialized-website-execution-7851e8f2
+
+Recorded 2026-11-19T08:26:07.937533+00:00 · Contributor: Codex · change
+
+- **Changed.** Record passing PS, privacy, protocol and extension checks and retain the refused website candidate before serializing its evidence/build phase. Refresh the reviewed source inventory without changing service routes or extension permissions.
+- **Evidence.** Four current-source groups pass. The first website candidate has stable source and one failed build-controller command; its failed receipt and phase record are preserved. Fresh website execution follows after these newly generated evidence files are covered. [Change record](./runs/changes/2026-11-19-082607-record-fi-checks-before-serialized-website-execution-7851e8f2.json).
+- **Not claimed.** Concurrent evidence capture produced uncovered run files while the build guard executed. A subsequent prematurely started candidate was cancelled; sequential checked operations now precede execution. No failed candidate is accepted, no guard is weakened and no FI tag or original closure is granted.
+
+
+### 2026-11-19-082247-project-current-fi-citation-scope-and-guides-bc3e3a06
+
+Recorded 2026-11-19T08:22:47.471412+00:00 · Contributor: Codex · change
+
+- **Changed.** Regenerate the preserved public scope and publish the exact FI sidecar usage and architecture guides from the accepted local source.
+- **Evidence.** The recorded site build passes with all 202 original IDs and unchanged 132 complete / 70 open. Both linked guides are copied; the FI record names the functioning component and remaining parent acceptance. [Change record](./runs/changes/2026-11-19-082247-project-current-fi-citation-scope-and-guides-bc3e3a06.json).
+- **Not claimed.** Fresh combined engineering execution and protected publication follow. No FI tag or independent source-support claim is granted.
+
+
+### 2026-11-19-082153-bind-independent-citation-component-and-seo-checks-f9cc2cdf
+
+Recorded 2026-11-19T08:21:53.599035+00:00 · Contributor: Codex · change
+
+- **Changed.** Bind the reviewed offline citation sidecar into protocol and route-source checks; preserve its open parent criteria, expose both usage/risk guides, and make the real SEO tests part of source-bound website execution.
+- **Evidence.** 152 focused component and input-binding controls pass on the integrated source. A separate read-only review demonstrated valid mixed outcomes, private output and refusal of changed raw input and duplicate JSON. Existing corpus format, tag allowlist and service routes are unchanged. [Change record](./runs/changes/2026-11-19-082153-bind-independent-citation-component-and-seo-checks-f9cc2cdf.json).
+- **Not claimed.** Full integration execution and protected publication are pending. The build guard correctly refused an initial run before this fresh event; it remains enforced. Caller associations do not establish source support or FI, and no original completion percentage changes.
+
+
 ### 2026-11-19-081457-synchronize-publication-state-timestamps-cbede663
 
 Recorded 2026-11-19T08:14:57.703543+00:00 · Contributor: Codex · change

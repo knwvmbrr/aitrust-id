@@ -116,6 +116,12 @@ and returns exact reference passages with Unicode spans, entirely offline.
 Run `python3 scripts/corpus.py --help`. A literal match is not an NF/FI verdict;
 those tags remain planned. No attached document is automatically uploaded.
 
+The optional [numbered-marker sidecar](docs/fi-citation-sidecar.md) associates
+literal numbered markers with documents you explicitly select from that corpus.
+It distinguishes declared, undeclared and unsupported markers. It does not prove
+a source supports a claim, fetch a reference or issue FI/NF. Subject text stays
+local; detailed bindings require a separate private export.
+
 ## Inspect independent signals offline
 
 The source also includes separately selected

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T08:14:57.667444+00:00",
+  "updated": "2026-11-19T08:31:49.958412+00:00",
   "active_increment": "Integrate local agent tag tools, release review queue and legal execution drafts. Owner-only TestFlight build is Testing; 132 original requirements complete and 70 remain open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1135,15 +1135,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-19-mt-cohorts-PS.json",
-    "PII_REDACTED": "runs/2026-11-19-mt-cohorts-PII_REDACTED.json",
-    "protocol": "runs/2026-11-19-mt-cohorts-protocol.json",
-    "extension": "runs/2026-11-19-mt-cohorts-extension.json",
-    "website": "runs/2026-11-19-mt-cohorts-website.json",
+    "PS": "runs/2026-11-19-fi-citation-PS.json",
+    "PII_REDACTED": "runs/2026-11-19-fi-citation-PII_REDACTED.json",
+    "protocol": "runs/2026-11-19-fi-citation-protocol.json",
+    "extension": "runs/2026-11-19-fi-citation-extension.json",
+    "website": "runs/2026-11-19-fi-citation-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T08:14:57.667444+00:00",
+  "updated_at": "2026-11-19T08:31:49.958412+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3709,6 +3709,17 @@
       "protected_publication_pending": false,
       "protected_publication": "runs/2026-11-19-mt-protected-merge.json",
       "live_publication": "runs/2026-11-19-mt-live-publication.json"
+    },
+    "fi_citation_integration": {
+      "PS": "runs/2026-11-19-fi-citation-PS.json",
+      "PII_REDACTED": "runs/2026-11-19-fi-citation-PII_REDACTED.json",
+      "protocol": "runs/2026-11-19-fi-citation-protocol.json",
+      "extension": "runs/2026-11-19-fi-citation-extension.json",
+      "website": "runs/2026-11-19-fi-citation-website.json",
+      "boundaries": "runs/2026-11-19-fi-citation-boundaries.json",
+      "source_bound_checks_passed": true,
+      "independent_accuracy_evidence": false,
+      "protected_publication_pending": true
     }
   },
   "mt_evidence_workflow": {
@@ -3969,5 +3980,21 @@
     "source_commit": "7554191f7d8e8715f7fd46e896284c9a53b3ee2f",
     "live_evidence": "runs/2026-11-19-mt-live-controls.json",
     "publication_evidence": "runs/2026-11-19-mt-live-publication.json"
+  },
+  "fi_citation_sidecar": {
+    "status": "integrated_and_checked; protected_publication_pending",
+    "method": "declared-local-numbered-citations/1.0.0",
+    "source": "tools/citation_resolution.py",
+    "cli": "scripts/citation-resolution.py",
+    "evidence": "runs/2026-11-19-fi-citation-integration.json",
+    "subject_upload_enabled": false,
+    "default_analysis": false,
+    "explicit_private_export_required": true,
+    "corpus_v1_unchanged": true,
+    "fi_tag_issued": false,
+    "semantic_source_support_established": false,
+    "independent_accuracy_evidence": false,
+    "actual_macos_cli_controls": 15,
+    "linux_execution_recorded": false
   }
 }

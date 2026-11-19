@@ -26,6 +26,8 @@ try {
 
 execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[path.join(repo,'scripts/build-mt-device.py')],{stdio:'pipe'});
 fs.copyFileSync(path.join(repo,'docs/mt-device-explorer.md'),path.join(site,'public/reference/mt-device-explorer.md'));
+fs.copyFileSync(path.join(repo,'docs/fi-citation-sidecar.md'),path.join(site,'public/reference/fi-citation-sidecar.md'));
+fs.copyFileSync(path.join(repo,'docs/fi-citation-sidecar-plan.md'),path.join(site,'public/reference/fi-citation-sidecar-plan.md'));
 fs.copyFileSync(path.join(repo,'docs/mt-evidence-workflow.md'),path.join(site,'public/reference/mt-evidence-workflow.md'));
 const scope=JSON.parse(fs.readFileSync(path.join(repo,'docs/master-scope.json')));
 execFileSync(process.env.AITRUST_SCOPE_PYTHON||'python3',[path.join(repo,'scripts/scope-progress.py')],{stdio:'pipe'});
