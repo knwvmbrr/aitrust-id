@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T17:05:38.453703+00:00",
-  "active_increment": "Publish reviewed independent HP/NF method previews and durable tag-worker/task-list accountability.132original requirements complete;70remain open; protected publication pending.",
+  "updated": "2026-11-19T17:36:26.910670+00:00",
+  "active_increment": "Independent HP/NF methods and task-list accountability published.132originals complete,70open; nine scoped jobs complete. Next authorized scope work remains in the preserved queues.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1149,7 +1149,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T17:05:38.453703+00:00",
+  "updated_at": "2026-11-19T17:36:26.910670+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3589,12 +3589,12 @@
     "board": "docs/session-delivery.json",
     "reader_board": "docs/session-delivery-plan.md",
     "task_list_lead": "/root/seo",
-    "assignment_snapshot_at": "2026-11-19T16:56:37.993739+00:00",
+    "assignment_snapshot_at": "2026-11-19T17:26:45.647724+00:00",
     "active_tag_workers_at_snapshot": 0,
-    "phase": "Corrected candidate fully verified locally; PM protected update/publication pending.",
+    "phase": "Protected implementation and verified public delivery complete; nine scoped jobs recorded, zero original closures.",
     "minimum_finished_named_deliverables_per_session": 1,
     "minimum_original_requirement_closures_per_session": 1,
-    "finished_scoped_tasks": 6,
+    "finished_scoped_tasks": 9,
     "original_requirement_closures": 0,
     "original_requirement_goal_met": false,
     "session_goal_check": "python3 scripts/session-delivery.py --check-session",
@@ -3605,7 +3605,9 @@
       "kind": "verifier_lazy_readiness_correction",
       "product_or_probe_relaxation": false,
       "original_requirement_closures": 0
-    }
+    },
+    "closeout_evidence": "runs/2026-11-19-tag-bots-live-publication.json",
+    "final_accounting": "runs/2026-11-19-tag-bots-final-accounting.json"
   },
   "q4_web_verification": {
     "website": "runs/2026-11-16-q4-website-current.json",
@@ -3693,7 +3695,7 @@
     }
   },
   "tag_status": {
-    "recorded_at": "2026-11-19T16:24:21.938954+00:00",
+    "recorded_at": "2026-11-19T17:26:45.647724+00:00",
     "board": "docs/session-delivery.json",
     "readable_board": "docs/session-delivery-plan.md",
     "complete_tags": 0,
@@ -3706,9 +3708,9 @@
     "original_open_requirements": 70,
     "all_tags_concurrently_staffed": false,
     "candidate_changes_integrated": true,
-    "publication_completed_at": "2026-11-17T12:27:44.932Z",
-    "published_source_commit": "bf35566c4bb3b33f9912402862d5066cbc9050dd",
-    "active_agents_checked_at": "2026-11-19T16:56:37.993739+00:00",
+    "publication_completed_at": "2026-11-19T17:24:33.190085+00:00",
+    "published_source_commit": "92be88d00e967d53d4b8604b8f90561088efc903",
+    "active_agents_checked_at": "2026-11-19T17:26:45.647724+00:00",
     "specialist_agents_currently_running": 0,
     "current_integration_owner": "Codex PM",
     "active_tag_lanes": [],
@@ -3718,22 +3720,22 @@
       "task_list_lead": "runs/2026-11-19-tag-integration-pre-pr-review.json",
       "debugging": "runs/2026-11-19-hp-a11y-readiness-final.json"
     },
-    "integration_status": "Corrected source,175focused Python controls and all5current capability groups pass; protected GitHub recheck/publication pending.",
+    "integration_status": "HP bounded browser method and NF offline source workflow published; all11required checks and exact live delivery verified. Full original tags remain unvalidated.",
     "current_status_board": "docs/session-delivery-plan.md",
     "previous_board": "docs/tag-status-2026-11-16.json",
     "working_method_previews": {
-      "MT": "Previously published local literal wording methods; no MT tag release",
-      "HP": "Integrated on-device literal detail method; protected publication pending",
-      "NF": "Integrated offline selected-passage literal/cosine methods; no NF tag release"
+      "MT": "Published local literal wording methods; no MT tag release",
+      "HP": "Published on-device literal detail method; no HP tag release",
+      "NF": "Published offline selected-passage literal/cosine methods; no NF tag release"
     }
   },
   "current_engineering_revalidation_status": {
     "latest_published_evidence_increment": {
-      "captured_at": "2026-11-19T09:46:19.427195+00:00",
-      "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
-      "deployment_url": "https://5d24e1c8.aitrust-id.pages.dev",
-      "evidence": "runs/2026-11-19-fi-live-publication.json",
-      "matching_artifacts": 630,
+      "captured_at": "2026-11-19T17:24:33.190085+00:00",
+      "source_commit": "92be88d00e967d53d4b8604b8f90561088efc903",
+      "deployment_url": "https://f19cd9fe.aitrust-id.pages.dev",
+      "evidence": "runs/2026-11-19-tag-bots-live-publication.json",
+      "matching_artifacts": 644,
       "independent_release_validated": false
     },
     "agent_integration": {
@@ -3793,11 +3795,11 @@
       "PII_REDACTED": "runs/2026-11-19-tag-bots-fixed-PII_REDACTED.json",
       "extension": "runs/2026-11-19-tag-bots-fixed-extension.json",
       "protocol": "runs/2026-11-19-tag-bots-fixed-protocol.json",
-      "website": "runs/2026-11-19-tag-bots-fixed-website.json",
-      "boundaries": "runs/2026-11-19-tag-bots-fixed-boundaries.json",
+      "website": "runs/2026-11-19-tag-bots-closeout-website.json",
+      "boundaries": "runs/2026-11-19-tag-bots-closeout-boundaries.json",
       "source_bound_checks_passed": true,
       "independent_accuracy_evidence": false,
-      "protected_publication_pending": true,
+      "protected_publication_pending": false,
       "retained_failed_website_candidates": [
         "runs/2026-11-19-tag-bots-website.json",
         "runs/2026-11-19-tag-bots-corrected-website.json"
@@ -3815,7 +3817,10 @@
         "NF unknown count",
         "reviewed CI headers",
         "exactly-once fixture descriptor cleanup"
-      ]
+      ],
+      "protected_publication": "runs/2026-11-19-tag-bots-protected-merge.json",
+      "live_publication": "runs/2026-11-19-tag-bots-live-publication.json",
+      "bookkeeping_website_revalidation_pending": false
     }
   },
   "mt_evidence_workflow": {
@@ -4137,7 +4142,9 @@
       "independent_accuracy_evidence": false
     },
     "original_closures": 0,
-    "publication_pending": true
+    "publication_pending": false,
+    "publication": "runs/2026-11-19-tag-bots-live-publication.json",
+    "published_source_commit": "92be88d00e967d53d4b8604b8f90561088efc903"
   },
   "python_test_count_note": "Historical aggregate observation retained; current executed checks are identified by source-bound run records, not summed as unique tests."
 }

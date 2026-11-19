@@ -112,7 +112,7 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 6,
+    "finished_scoped_tasks": 9,
     "original_requirement_closures": 0
   },
   "goals": {
@@ -134,11 +134,11 @@
       "tag_id": "T-NF",
       "bot_id": "tag_nf",
       "actual_worker": null,
-      "status": "reviewed",
-      "checked_at": "2026-11-19T16:56:37.993739+00:00",
-      "current_component_status": "Correction source frozen and independently reviewed; PM current/protected verification pending.",
+      "status": "published",
+      "checked_at": "2026-11-19T17:24:33.190085+00:00",
+      "current_component_status": "Reviewed bounded method component published; full tag remains unvalidated.",
       "blocking_acceptance": "Selected reference/NLI and caller-declared citation components exist; claim-specific reference selection, contradiction-versus-missing-evidence labels, calibrated accepted tag mapping and supported human operation remain.",
-      "next_task": "session-nf-unavailable-count"
+      "next_task": "Continue original-specific validation/next bounded engineering; preserve independent human/context gates."
     },
     {
       "tag_id": "T-FI",
@@ -154,11 +154,11 @@
       "tag_id": "T-HP",
       "bot_id": "tag_hp",
       "actual_worker": null,
-      "status": "reviewed",
-      "checked_at": "2026-11-19T16:56:37.993739+00:00",
-      "current_component_status": "Correction source frozen and independently reviewed; PM current/protected verification pending.",
+      "status": "published",
+      "checked_at": "2026-11-19T17:24:33.190085+00:00",
+      "current_component_status": "Reviewed bounded method component published; full tag remains unvalidated.",
       "blocking_acceptance": "Literal quantities/hedges and selected-pair NLI observations exist; expected uncertainty, contextual specificity, representative independent errors, accepted HP mapping and full human integration remain.",
-      "next_task": "session-security-header-fixture"
+      "next_task": "Continue original-specific validation/next bounded engineering; preserve independent human/context gates."
     },
     {
       "tag_id": "T-MT",
@@ -374,7 +374,7 @@
         "F-020b"
       ],
       "worker": "/root/share_debugger",
-      "status": "in_review",
+      "status": "closed",
       "deliverable": "Standalone caller-selected arbitrary NFC claim/reference passage workflow with separate literal/cosine outcomes, bounded offline workers and safe private export.",
       "done_evidence": [
         "Actual positive, missing/unsupported and malformed/source-drift/private-file cases execute on frozen source.",
@@ -382,7 +382,22 @@
         "Distinct review and protected integration evidence required before scoped task closes."
       ],
       "blocker": null,
-      "next_unblocked_task": "session-nf-independent-crossreview"
+      "next_unblocked_task": "session-nf-independent-crossreview",
+      "closure_record": {
+        "closed_at": "2026-11-19T17:24:33.190085+00:00",
+        "completed_by": "/root/share_debugger",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-19-tag-bots-protected-merge.json",
+            "sha256": "596e10824ef6abe89c107062eb2f3c8b81a28e687f7698f8c17e1a79ad59d725"
+          },
+          {
+            "path": "runs/2026-11-19-tag-bots-live-publication.json",
+            "sha256": "a7534e3cb988da05936100e5812e7cda6532e058a3344c23e2767ae347390450"
+          }
+        ]
+      }
     },
     {
       "task_id": "session-hp-detail-explorer",
@@ -391,7 +406,7 @@
         "F-015"
       ],
       "worker": "/root/web_camo",
-      "status": "in_review",
+      "status": "closed",
       "deliverable": "HP-only on-device literal-detail explorer bound to canonical quantitative method, raw subject and frozen NFC, with lazy independent UI and phone/desktop fixture.",
       "done_evidence": [
         "Canonical/full-record parity and corrupt/stale/unsupported/private-input refusal controls execute.",
@@ -399,7 +414,22 @@
         "Distinct review and protected integration evidence required before scoped task closes."
       ],
       "blocker": null,
-      "next_unblocked_task": "session-hp-independent-crossreview"
+      "next_unblocked_task": "session-hp-independent-crossreview",
+      "closure_record": {
+        "closed_at": "2026-11-19T17:24:33.190085+00:00",
+        "completed_by": "/root/web_camo",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-19-tag-bots-protected-merge.json",
+            "sha256": "596e10824ef6abe89c107062eb2f3c8b81a28e687f7698f8c17e1a79ad59d725"
+          },
+          {
+            "path": "runs/2026-11-19-tag-bots-live-publication.json",
+            "sha256": "a7534e3cb988da05936100e5812e7cda6532e058a3344c23e2767ae347390450"
+          }
+        ]
+      }
     },
     {
       "task_id": "session-nf-independent-crossreview",
@@ -523,14 +553,29 @@
         "T-NF"
       ],
       "worker": "/root/share_debugger",
-      "status": "in_review",
+      "status": "closed",
       "deliverable": "Represent unavailable NF observation counts as unknown/null while preserving completed no-match zero.",
       "done_evidence": [
         "Actual mixed and all-unavailable summaries keep measured versus unknown counts distinct.",
         "Focused current-source tests, private CLI controls and separate reviewer pass; public review fix is pushed before thread resolution."
       ],
       "blocker": null,
-      "next_unblocked_task": "session-nf-explicit-passage"
+      "next_unblocked_task": "session-nf-explicit-passage",
+      "closure_record": {
+        "closed_at": "2026-11-19T17:24:33.190085+00:00",
+        "completed_by": "/root/share_debugger",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-19-tag-bots-protected-merge.json",
+            "sha256": "596e10824ef6abe89c107062eb2f3c8b81a28e687f7698f8c17e1a79ad59d725"
+          },
+          {
+            "path": "runs/2026-11-19-tag-bots-live-publication.json",
+            "sha256": "a7534e3cb988da05936100e5812e7cda6532e058a3344c23e2767ae347390450"
+          }
+        ]
+      }
     },
     {
       "task_id": "session-security-header-fixture",
@@ -5222,5 +5267,11 @@
     "tools/research_admission.py": "f6adfcbdca1c89adca18c460ebb720b8cf057057b43c857967115efe93528f4d",
     "tools/review_execution.py": "a100fbd3ba79d583423e9398937e5a218588fe699b6a084e00a6947f5506578a"
   },
-  "updated_at": "2026-11-19T16:56:37.993739+00:00"
+  "updated_at": "2026-11-19T17:24:33.190085+00:00",
+  "closeout": {
+    "protected_source_commit": "92be88d00e967d53d4b8604b8f90561088efc903",
+    "publication_evidence": "runs/2026-11-19-tag-bots-live-publication.json",
+    "original_goal": "NOT MET",
+    "reason": "No original full acceptance has been waived or met by these component deliverables."
+  }
 }
