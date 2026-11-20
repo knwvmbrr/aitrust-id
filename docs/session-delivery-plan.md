@@ -1,6 +1,30 @@
 # Session delivery board — original requirements remain the goal
 
-## Active next wave — 2026-11-19T18:24:57.745970+00:00
+## Current public delivery job — 2026-11-20T15:59:29.823898+00:00
+
+The new public credential-flow preview is predeclared before completion against source `8b21fffbb3a5b89b9cf6c555959fa9cfa1bd09fd` and the PM's `docs/credential-device-integration-plan.md`. It is a concrete browser feature, with its own final publication gate. **Nine scoped tasks are closed; zero originals newly closed; originals remain 132 complete / 70 open.** The 60-open original requirement goal remains NOT MET.
+
+| Current assignment | Actual worker | State and completion boundary |
+|---|---|---|
+| Public credential-flow preview under PS | `/root/share_debugger` | Active. Paste Python on phone or desktop, run the unchanged canonical 1.0.2 locally, read a short evidence-based result. Requires full raw/NFC/source binding, actual Chromium/WebKit parity and failure/privacy/lifecycle controls, distinct review, required protected checks and actual live publication. No PS mapping or new tag. |
+| Prior credential context CLI | Worker finished; PM integration pending | Reviewed exact Mac/Linux source and proof complete. Its original protected-integration acceptance remains; no worker is reported still running this old lane. |
+| MT quotation workflow | Worker finished; PM integration pending | Reviewed; no MT worker active. Actual current Linux evidence must match its predeclared job before closure. |
+| Android Share runtime | No active assignment at this snapshot | Blocked after actual hosted metadata-phase failure; zero runtime cases ran. Existing APK/prerequisite checks do not close its actual-runtime job. Advance the public browser feature while this remains open. |
+
+### Exact acceptance before closing the new browser job
+
+1. Preserve canonical credential-flow method 1.0.2 bytes. Bind every closed validated result to the original raw input, frozen NFC and exact packaged method/source. Never execute the user's program, infer a real secret/transfer/intent or issue a credential/PS tag.
+2. Compare full canonical results in actual Chromium and WebKit for supported flow, no-flow and unsupported cases. Check both themes, phone/desktop, keyboard, labels, narrow width and text enlargement; emulated engines are not physical-phone/human acceptance.
+3. Prove edit, clear, cancel and unmount suppress stale output and terminate work. No input upload, input storage, account/gateway dependency or default export. Verify malformed records and changed source identities refuse.
+4. Refuse the real optional credential child chunk and still execute the existing PS checker successfully; unrelated methods retain their own operation.
+5. Require a distinct review, exact protected source checks, then actual published asset and live browser verification. Local packaging or a new page alone is insufficient for this task's closure.
+
+The historical literal XML-license-hash blocker is not an SDK acceptance rule. Reviewed package/license metadata detects drift; the existing SDK manager with closed stdin and an unchanged existing record determines prior acceptance. No new terms are accepted. Android remains blocked by the actual uncompleted runtime, not an invented requirement that a raw XML hash appear in a record.
+
+The earlier dated phase below is history and does not override these current assignments. No F-012/T-PS criterion or percentage changes with this browser feature.
+
+
+## Prior implementation phase — 2026-11-19T18:24:57.745970+00:00
 
 Source base: `eb7873ddc861bfadf921d50d338ab2d2607e0d8b`. Current board handoff preserves the frozen PS/MT source identities while exact Linux execution and PM protected integration remain active. The immutable session baseline remains `3716233`; its full original criteria and all nine closed task records are preserved. All 70 full original jobs/outcomes, master and required acceptance were re-read from current source. All 202 master criteria and all 70 still-open required criteria match that baseline. All 514 indexed historical evidence paths remain present; this is identity/index evidence, not a new execution of those files.
 
