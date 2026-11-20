@@ -1,0 +1,64 @@
+{
+  "captured_at": "2026-11-20T01:00:00.787148+00:00",
+  "pass": true,
+  "change_kind": "failure_diagnostic_only",
+  "original_timeout_cause": "UNESTABLISHED",
+  "original_failed_report": {
+    "sha256": "c7bf42c7e8d19f0082366e7320cc5d64ed310c23ccf120100d780e8c20ec90fb",
+    "error": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 29997.700999999997ms exceeded.\nCall log:\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n",
+    "preserved_unchanged_by_lane": true
+  },
+  "source_sha256": {
+    "scripts/accessibility-probes.cjs": "89c7f4947c4e9a0ae9be3fa4414ebd5dfb2b3bce869e9948faa9b86f2fe3b92c",
+    "scripts/verify-site-accessibility.cjs": "733073fc5216c97c2083376a91225b0cfe878354bcdfeb777d906e4632704eb9"
+  },
+  "evidence_sha256": {
+    "runs/2026-11-20-a11y-failure-diagnostic-controls.json": "eaca4d053a63a7fdb9efa622da36d42ed4b5ace3fa3f37373854de442b2775bb",
+    "runs/2026-11-20-a11y-full-diagnostic-run.json": "cb0cabb66c34842c216a5b7abffae2004fea1461754ba51af5aec40fe7f8eee3",
+    "runs/2026-11-20-a11y-full-diagnostic-source-proof.json": "d9374d017a82c6e9a106aa456ad915cd999bed806fcb8a4283002f48e02c71aa"
+  },
+  "full_run": {
+    "surfaces": 62,
+    "focus_checks": 916,
+    "target_checks": 890,
+    "disclosures": 158
+  },
+  "thresholds_or_default_action_timeout_changed": false,
+  "successful_path_pre_action_DOM_reads_added": false,
+  "product_changed": false,
+  "manual_screen_reader": false,
+  "physical_phone": false,
+  "full_WCAG_conformance_asserted": false,
+  "requirement_closed": false,
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/accessibility-probes.cjs"
+      ],
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-site-accessibility.cjs"
+      ],
+      "exit_status": 0
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0
+    }
+  ],
+  "hypotheses_preserved": [
+    "runs/2026-11-20-a11y-control-stability-diagnosis-1.json",
+    "runs/2026-11-20-a11y-control-stability-diagnosis-2.json",
+    "runs/2026-11-20-a11y-control-active-frame-diagnosis.json"
+  ]
+}

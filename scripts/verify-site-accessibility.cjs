@@ -28,7 +28,7 @@ async function verifyHPReadinessControl(browser,base){
    assert.notEqual(beforeName,after.name);assert.equal(after.focused,false);assert.equal(after.indicator,false);
    await page.evaluate(()=>document.fonts.ready);const disclosure=await probes.disclosures(dialog);
    for(const details of await dialog.locator('details').all())await details.evaluate(el=>el.open=true);
-   const targets=await probes.targetSizes(dialog),focus=await probes.focusVisibility(page,dialog),spacing=await probes.spacing(page,dialog);
+   const targets=await probes.targetSizes(dialog),focus=await probes.focusVisibility(page,dialog,{surface:'HP controlled readiness',theme}),spacing=await probes.spacing(page,dialog);
    assert.deepEqual(disclosure.failures,[],'Ready HP disclosures');assert.deepEqual(targets.failures,[],'Ready HP targets');assert.deepEqual(focus.failures,[],'Ready HP focus');assert.deepEqual(spacing.clipped,[],'Ready HP clipping');assert.equal(spacing.horizontal_overflow,false,'Ready HP overflow');
    await page.emulateMedia({forcedColors:'active'});assert(await dialog.isVisible());assert.equal(await dialog.evaluate(el=>el.scrollWidth>el.clientWidth+1),false,'Ready HP forced-colors overflow');
    results.push({theme,actual_child_request_held:true,readiness_waited_for_child:true,indexed_target_before:beforeName,indexed_target_after:after,ready_first:{disclosure,targets,focus,spacing},forced_colors_reflow:true});
@@ -45,7 +45,7 @@ if(require.main===module)(async()=>{
  try{const lazyReadiness=await verifyHPReadinessControl(browser,base);for(const theme of ['light','dark']){
   const context=await browser.newContext({viewport:{width:320,height:760},bypassCSP:true,reducedMotion:'reduce'});const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
   async function check(name,root){
-   await page.evaluate(()=>document.fonts.ready);const disclosure=await probes.disclosures(root);for(const details of await root.locator('details').all())await details.evaluate(e=>e.open=true);const targets=await probes.targetSizes(root);const focus=await probes.focusVisibility(page,root);const spacing=await probes.spacing(page,root);
+   await page.evaluate(()=>document.fonts.ready);const disclosure=await probes.disclosures(root);for(const details of await root.locator('details').all())await details.evaluate(e=>e.open=true);const targets=await probes.targetSizes(root);const focus=await probes.focusVisibility(page,root,{surface:name,theme});const spacing=await probes.spacing(page,root);
    const r={name,theme,targets,focus,spacing,disclosure};results.push(r);
    assert.deepEqual(targets.failures,[],name+' targets');assert.deepEqual(focus.failures,[],name+' focus');assert.deepEqual(spacing.clipped,[],name+' text clipped');assert.equal(spacing.horizontal_overflow,false,name+' overflow');assert.deepEqual(disclosure.failures,[],name+' disclosures');
    await page.emulateMedia({forcedColors:'active'});assert(await root.isVisible());assert.equal(await root.evaluate(e=>e.scrollWidth>e.clientWidth+1),false,name+' forced colors overflow');await page.emulateMedia({forcedColors:'none'});
@@ -60,5 +60,5 @@ if(require.main===module)(async()=>{
   await page.screenshot({path:'output/playwright/accessibility-ps-'+theme+'.png'});await context.close();
  }
  assert.deepEqual(errors,[]);const report={captured_at:new Date().toISOString(),author:'Codex',base,pass:true,lazyReadiness,surfaces:results.length,themes:['light','dark'],viewport:{width:320,height:760},reduced_motion_disclosures:true,forced_colors_reflow:true,validation,coverage:['catalogue','20 tag/offer dialogs','8 independent footer dialogs','PS input/result'],checks:results,errors,manual_screen_reader:false,physical_phone:false,full_wcag_conformance_asserted:false,independent_release_validated:false};writeReport(process.env.AITRUST_SITE_A11Y_REPORT||'output/verification/site-accessibility.json',report);console.log(JSON.stringify({pass:true,lazyReadiness,surfaces:results.length,theme_modes:2,focus_controls:results.reduce((n,r)=>n+r.focus.checked,0),target_controls:results.reduce((n,r)=>n+r.targets.controls,0),disclosures:results.reduce((n,r)=>n+r.disclosure.checked,0)}));
- }catch(e){writeReport(process.env.AITRUST_SITE_A11Y_REPORT||'output/verification/site-accessibility.json',{captured_at:new Date().toISOString(),pass:false,results,error:String(e),errors,full_wcag_conformance_asserted:false});throw e;}finally{await browser.close();}
+ }catch(e){writeReport(process.env.AITRUST_SITE_A11Y_REPORT||'output/verification/site-accessibility.json',{captured_at:new Date().toISOString(),pass:false,results,error:String(e),failure_context:e.accessibilityDiagnostic||null,errors,full_wcag_conformance_asserted:false});throw e;}finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});

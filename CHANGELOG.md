@@ -2,6 +2,25 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-010107-reviewed-accessibility-observability-1bffdb6a
+
+Recorded 2026-11-20T01:01:07.857511+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate failure-only accessibility diagnostics and retain the earlier unexplained scroll timeout, controlled hypotheses and current passing full accessibility run.
+- **Evidence.** Independent review preserves the identical original error, inspects the control only after failure and records surface/theme/action. Author full run passes62 surfaces with unchanged probes and default action timeouts. [Change record](./runs/changes/2026-11-20-010107-reviewed-accessibility-observability-1bffdb6a.json).
+- **Not claimed.** The historical timeout cause remains unestablished. This is observability and current engineering evidence, not a product fix, complete WCAG or human accessibility acceptance; no original closes.
+
+
+### 2026-11-20-010000-record-accessibility-action-failure-context-8997716b
+
+Recorded 2026-11-20T01:00:00.830487+00:00 · Contributor: Codex accessibility debugging lane · change
+
+- **Changed.** Added failure-only surface/control/action diagnostics around existing scroll/focus probes and preserved the original thrown error in the accessibility report. Input controls are identified by labels, never entered values.
+- **Evidence.** Authored timeout/focus controls capture the expected diagnostic without a textarea canary. One actual full accessibility run passed62 surfaces,916 focus checks,890 target checks and158 disclosures in both themes on frozen built assets; source and served hashes remained stable. Original timeout and three non-reproducing hypotheses are preserved. [Change record](./runs/changes/2026-11-20-010000-record-accessibility-action-failure-context-8997716b.json).
+- **Not claimed.** Original timeout cause remains UNESTABLISHED. This is diagnostic improvement only, not a product fix, requirement closure, human/phone acceptance or full conformance claim. No probe criterion, default action timeout or pre-action await was changed; snapshot identity is post-error.
+
+## Unreleased — 2026-11-20
+
 ### 2026-11-20-004838-freeze-generated-tag-wave-inputs-d26e500e
 
 Recorded 2026-11-20T00:48:38.438568+00:00 · Contributor: Codex · change
