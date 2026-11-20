@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-20T16:48:49.781449+00:00",
-  "active_increment": "Independent PS credential-context, MT quotation and Android Share integration candidate; full original acceptance remains132complete/70open. Current protected/hosted checks pending.",
+  "updated": "2026-11-20T17:39:23.437099+00:00",
+  "active_increment": "Public optional Python-flow preview and separate PS/MT CLI methods published from protected04b11a12. Twelve scoped jobs complete; originals132complete/70open. Android followup active.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-11-19-fi-live-publication.json",
+    "evidence": "runs/2026-11-20-credential-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Host-specific MCP configuration and user-interface acceptance beyond the official SDK client",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://5d24e1c8.aitrust-id.pages.dev",
+    "deployment_url": "https://c198f50c.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-11-19-fi-live-publication.json",
+    "publication_evidence": "runs/2026-11-20-credential-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -98,7 +98,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-11-19-fi-citation-opaque-website.json",
+    "verification": "runs/2026-11-20-credential-publication.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -312,10 +312,10 @@
       ],
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
-    "published_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
-    "public_static_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
-    "deployment": "https://842da8d4.aitrust-id.pages.dev",
-    "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+    "published_source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+    "public_static_source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+    "deployment": "https://c198f50c.aitrust-id.pages.dev",
+    "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -324,7 +324,7 @@
       "engineering_release_only": true,
       "independent_tag_release": false
     },
-    "publication": "runs/2026-11-19-fi-live-publication.json",
+    "publication": "runs/2026-11-20-credential-publication.json",
     "prior_current_publication_fields": {
       "evidence": "runs/2026-10-13-ps-efficiency-publication.json",
       "publication_evidence": "runs/2026-10-11-choice-framing-publication.json",
@@ -336,9 +336,6 @@
       "deployment": "https://1e246e84.aitrust-id.pages.dev",
       "deployment_url": "https://c7f7f12b.aitrust-id.pages.dev"
     },
-    "exact_current_build_artifacts_per_origin": 261,
-    "exact_current_matching_artifacts": 783,
-    "current_security_headers_matching": 6,
     "publication_field_history": [
       {
         "superseded_at": "2026-10-14T18:31:52.905486+00:00",
@@ -359,8 +356,30 @@
           "verification": "runs/2026-10-14-draft-privacy-live-browser.json"
         },
         "reason": "Align the current browser receipt with the published source snapshot."
+      },
+      {
+        "superseded_at": "2026-11-20T17:08:16.518216+00:00",
+        "prior_values": {
+          "evidence": "runs/2026-11-19-fi-live-publication.json",
+          "publication_evidence": "runs/2026-11-19-fi-live-publication.json",
+          "publication": "runs/2026-11-19-fi-live-publication.json",
+          "verification": "runs/2026-11-19-fi-citation-opaque-website.json",
+          "published_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
+          "public_static_source_commit": "a8347bdebd33e6c2223aafeeb754341e6340058f",
+          "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+          "deployment": "https://842da8d4.aitrust-id.pages.dev",
+          "deployment_url": "https://5d24e1c8.aitrust-id.pages.dev",
+          "exact_current_build_artifacts_per_origin": 261,
+          "exact_current_matching_artifacts": 783,
+          "current_security_headers_matching": 6
+        },
+        "reason": "Replace current pointers with actual04b critical-asset/browser publication; old broad artifact counts are historical."
       }
-    ]
+    ],
+    "current_critical_HTTP_checks": 16,
+    "current_critical_assets_per_origin": 8,
+    "current_publication_origins": 2,
+    "full_current_artifact_byte_equivalence_claimed": false
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -859,7 +878,10 @@
       "runs/2026-11-19-tag-components-integrated.json",
       "runs/2026-11-19-hp-production-site-final.json",
       "runs/2026-11-19-nf-cosine-binding-corrected-macos.json",
-      "runs/2026-11-19-nf-source-evidence-linux.json"
+      "runs/2026-11-19-nf-source-evidence-linux.json",
+      "runs/2026-11-20-credential-publication.json",
+      "runs/2026-11-20-credential-protected-ci-review.json",
+      "runs/2026-11-20-credential-delivery-closeout-review.json"
     ]
   },
   "research_components": {
@@ -1143,13 +1165,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-20-credential-integrated-PS.json",
     "PII_REDACTED": "runs/2026-11-20-credential-integrated-PII_REDACTED.json",
-    "protocol": "runs/2026-11-20-credential-integrated-protocol.json",
+    "protocol": "runs/2026-11-20-android-pause-final-protocol.json",
     "extension": "runs/2026-11-20-credential-integrated-extension.json",
-    "website": "runs/2026-11-20-credential-integrated-website-release.json",
+    "website": "runs/2026-11-20-android-pause-final-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-20T16:48:49.781449+00:00",
+  "updated_at": "2026-11-20T17:39:23.437099+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3085,8 +3107,8 @@
     "publication": "runs/2026-11-06-agent-protected-publication.json"
   },
   "last_protected_publication": {
-    "evidence": "runs/2026-11-19-fi-protected-merge.json",
-    "merge_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+    "evidence": "runs/2026-11-20-credential-protected-ci-review.json",
+    "merge_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
     "publicly_verified": true,
     "required_checks_passed": 11
   },
@@ -3154,13 +3176,15 @@
     "publication": "runs/2026-11-07-scope-72-live-publication.json"
   },
   "production_publication": {
-    "status": "live_and_verified",
-    "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
-    "deployment_url": "https://5d24e1c8.aitrust-id.pages.dev",
+    "status": "live_and_verified_critical_assets_and_actual_checker",
+    "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+    "deployment_url": "https://c198f50c.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-19-fi-live-publication.json",
-    "protected_merge": "runs/2026-11-19-fi-protected-merge.json",
-    "matching_artifacts": 630,
+    "evidence": "runs/2026-11-20-credential-publication.json",
+    "protected_merge": "runs/2026-11-20-credential-protected-ci-review.json",
+    "critical_HTTP_checks": 16,
+    "origins": 2,
+    "full_artifact_byte_equivalence_claimed": false,
     "scope_records": 202,
     "completed_requirements": 132,
     "open_requirements": 70,
@@ -3168,8 +3192,7 @@
     "real_collection_enabled": false,
     "public_app_store_released": false,
     "formation_filed": false,
-    "metadata_only_followup": true,
-    "meaning": "Records the actual implementation deployment. Later operations records remain in Git and do not rewrite the deployed implementation changelog."
+    "metadata_only_followup": true
   },
   "pii_separator_correction": {
     "status": "source_and_website_published_verified",
@@ -3821,6 +3844,14 @@
       "protected_publication": "runs/2026-11-19-tag-bots-protected-merge.json",
       "live_publication": "runs/2026-11-19-tag-bots-live-publication.json",
       "bookkeeping_website_revalidation_pending": false
+    },
+    "credential_delivery": {
+      "source_bound_checks_passed": true,
+      "protected_publication_pending": false,
+      "protected_publication": "runs/2026-11-20-credential-protected-ci-review.json",
+      "live_publication": "runs/2026-11-20-credential-publication.json",
+      "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+      "independent_accuracy_evidence": false
     }
   },
   "mt_evidence_workflow": {
@@ -3867,12 +3898,16 @@
     }
   },
   "android_share_candidate": {
-    "status": "test APK compiled and test signature verified; runtime unverified",
+    "status": "six actual runtime cases pass; fast-return lifecycle remains unmet; followup active",
     "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/108",
-    "hosted_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44171007663",
+    "hosted_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44776757754",
     "host_receipt": "runs/2026-11-17-android-emulator-host-inventory.json",
-    "emulated_share_cases": 0,
-    "physical_device_accepted": false
+    "emulated_share_cases": 6,
+    "physical_device_accepted": false,
+    "runtime_pass": false,
+    "required_emulated_cases": 7,
+    "followup_PR": "https://github.com/knwvmbrr/aitrust-id/pull/134",
+    "followup_run": 44779986361
   },
   "nested_runtime_notices": {
     "status": "web release merged and verified live",
@@ -4148,9 +4183,9 @@
   },
   "python_test_count_note": "Historical aggregate observation retained; current executed checks are identified by source-bound run records, not summed as unique tests.",
   "independent_tag_wave_nov19": {
-    "recorded_at": "2026-11-20T16:46:15.040622+00:00",
+    "recorded_at": "2026-11-20T17:08:16.518216+00:00",
     "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-    "phase": "all_current_capabilities_and_boundaries_pass; protected_merge_and_publication_pending",
+    "phase": "public Python preview delivered; selected Android API36 seven-case cleanup verified; protected Android integration pending",
     "PS": {
       "method": "python-credential-flow-observation/1.0.2",
       "guide": "docs/credential-flow-context.md",
@@ -4161,29 +4196,52 @@
         "guide": "docs/credential-flow-device.md",
         "production_PS_mapping": false,
         "built_site_review": "runs/2026-11-20-credential-production-independent-review.json",
-        "published": false,
-        "current_website": "runs/2026-11-20-credential-integrated-website-release.json"
-      }
+        "published": true,
+        "current_website": "runs/2026-11-20-credential-integrated-website-release.json",
+        "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+        "public_evidence": "runs/2026-11-20-credential-publication.json",
+        "independent_accuracy_evidence": false,
+        "full_F012_complete": false
+      },
+      "context_CLI_published": true
     },
     "MT": {
       "selection": "authority-quotation",
       "guide": "docs/mt-quotation-workflow.md",
       "review": "runs/2026-11-19-mt-quotation-independent-review.json",
-      "MT_tag_released": false
+      "MT_tag_released": false,
+      "CLI_published": true,
+      "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+      "current_Linux_CI_evidence": "runs/2026-11-20-credential-protected-ci-review.json"
     },
     "Android": {
       "guide": "docs/android-share-developer.md",
       "review": "runs/2026-11-19-android-prerequisites-independent-review.json",
       "new_license_accepted": false,
-      "actual_hosted_runtime_verified": false,
-      "physical_device_complete": false
+      "actual_hosted_runtime_verified": true,
+      "physical_device_complete": false,
+      "actual_hosted_cases_passed": 6,
+      "actual_hosted_case_goal": 7,
+      "diagnostic_followup": {
+        "checked_at": "2026-11-20T17:08:16.518216+00:00",
+        "actual_worker": "/root/share_debugger",
+        "pull_request": 134,
+        "candidate_head": "d50793165254fe666a165542624fcdc159d01293",
+        "hosted_run": 44779986361,
+        "status": "active_at_snapshot",
+        "scope": "Approved onPause wipe candidate, onStop retained; original fast-return driver unchanged. Actual new-source hosted proof pending; no verified fix or seventh-case acceptance."
+      },
+      "actual_runtime_cases": 7,
+      "runtime_evidence": "runs/2026-11-20-android-pause-hosted-seven.json",
+      "separate_review": "runs/2026-11-20-android-pause-independent-review.json",
+      "shared_integration": "all current local capability checks pass; protected merge pending"
     },
     "original_complete": 132,
     "original_open": 70,
     "new_original_closures": 0,
     "independent_accuracy_evidence": false,
     "website_evidence": "runs/2026-11-20-credential-integrated-website-release.json",
-    "boundary_evidence": "runs/2026-11-20-credential-integrated-boundaries.json",
+    "boundary_evidence": "runs/2026-11-20-android-pause-final-boundaries.json",
     "reviewed_source_inputs": 1369,
     "accessibility_observation": {
       "first_attempt": "runs/2026-11-19-tag-wave2-website-attempt.json",
@@ -4192,6 +4250,48 @@
       "original_scroll_timeout_cause_established": false,
       "product_fix_claimed": false,
       "optional_disclosure_readiness": "runs/2026-11-20-credential-disclosure-readiness.json"
+    },
+    "published": true,
+    "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+    "public_evidence": "runs/2026-11-20-credential-publication.json",
+    "protected_review": "runs/2026-11-20-credential-protected-ci-review.json",
+    "finished_scoped_tasks": 12
+  },
+  "production_publication_history": [
+    {
+      "status": "live_and_verified",
+      "source_commit": "dad3ff8d408ff941ba60398a5db0ac16bf73718d",
+      "deployment_url": "https://5d24e1c8.aitrust-id.pages.dev",
+      "public_url": "https://aitrustid.com",
+      "evidence": "runs/2026-11-19-fi-live-publication.json",
+      "protected_merge": "runs/2026-11-19-fi-protected-merge.json",
+      "matching_artifacts": 630,
+      "scope_records": 202,
+      "completed_requirements": 132,
+      "open_requirements": 70,
+      "independent_tag_accuracy_approved": false,
+      "real_collection_enabled": false,
+      "public_app_store_released": false,
+      "formation_filed": false,
+      "metadata_only_followup": true,
+      "meaning": "Records the actual implementation deployment. Later operations records remain in Git and do not rewrite the deployed implementation changelog."
+    }
+  ],
+  "session_delivery_closeout": {
+    "recorded_at": "2026-11-20T17:08:16.518216+00:00",
+    "board": "docs/session-delivery.json",
+    "evidence": "runs/2026-11-20-credential-delivery-closeout-review.json",
+    "finished_scoped_tasks": 12,
+    "new_original_closures": 0,
+    "original_goal": "NOT MET",
+    "active_followup": {
+      "checked_at": "2026-11-20T17:08:16.518216+00:00",
+      "actual_worker": "/root/share_debugger",
+      "pull_request": 134,
+      "candidate_head": "d50793165254fe666a165542624fcdc159d01293",
+      "hosted_run": 44779986361,
+      "status": "active_at_snapshot",
+      "scope": "Approved onPause wipe candidate, onStop retained; original fast-return driver unchanged. Actual new-source hosted proof pending; no verified fix or seventh-case acceptance."
     }
   }
 }

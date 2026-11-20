@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-180738-android-first-failure-lifecycle-metadata-f4f208eb",
+  "recorded_at": "2026-11-20T18:07:38.825303+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "cad8bfb28b44ab5257dcb07d0c5823275626b98b",
+  "changed": "Add one capped failure-only owned Android event metadata query after a zero-case first control failure, without retaining raw event content or changing success predicates.",
+  "proves": "46 focused controls and4 isolated main lifecycle-metadata controls pass. Verified AOSP schema positions bind exact component/action fields; malformed or unavailable data cannot mask primary failure. The real cad8 Ready-screen zero-case failure remains FAILED and source-bound.",
+  "limits": "No native change, new-source Android execution, known lifecycle cause, runtime fix, success timing change, raw event log retention, capability/boundary refresh, physical/human acceptance or original closure.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "scripts/verify-android-emulator.py": "d2874d12fe90f2619c5f90a407afe989ae0640844631af8a5fde0e108c1a7fc7",
+    "tests/test_android_emulator_prerequisites.py": "1f8187bf906fd0391cc63180fc03b1e37d91414273138b11b14429d2a43ad07d",
+    "runs/2026-11-20-android-first-failure-lifecycle.json": "d81c82e1b0ca2c99a9bf8af9bb4151ff0c484f6d55e2c9a54be25a09d83da299"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-first-failure-lifecycle.json",
+      "sha256": "d81c82e1b0ca2c99a9bf8af9bb4151ff0c484f6d55e2c9a54be25a09d83da299"
+    }
+  ],
+  "checks": []
+}

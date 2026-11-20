@@ -1,0 +1,271 @@
+{
+  "format": "ai-trust-id-android-early-share-diagnostics/v1",
+  "recorded_at": "2026-11-20T17:52:27.123591+00:00",
+  "author": "Codex Debugging Lead",
+  "records": [
+    "N-014"
+  ],
+  "base_commit": "0526f5afe3def76f4e3fb1e3201168726063dd84",
+  "sources_sha256": {
+    "scripts/verify-android-emulator.py": "b5e6b827e96d809bc554c88d56b71ccc8ebdcd7d3370ab464bade5636c5b3e42",
+    "tests/test_android_emulator_prerequisites.py": "19c02ce3abbac6ed32f1518a338ba61c2e0f54c9e8a54d8989d37f6c4431a497"
+  },
+  "architecture": {
+    "change": "Extract the unchanged original first six Share controls into fixed typed stage boundaries; retain minimal hints from existing am-start output and already queried UI hierarchies.",
+    "risks": [
+      "The historical zero-case generic failure cannot identify the failed operation or prove a native lifecycle bug.",
+      "Last-view flags describe only the last successfully parsed hierarchy; status hints never establish actual foreground delivery.",
+      "Additional diagnostic source invalidates current capability/boundary receipt identity and requires PM integration."
+    ],
+    "new_native_change": false,
+    "commands_assertions_order_or_deadlines_changed": false,
+    "SDK_or_license_handling_changed": false,
+    "observations": [
+      "fixed control_stage/code",
+      "ui_operation dump/read/parse/observed",
+      "closed last_ui_observation booleans",
+      "closed share_start_observation booleans, removed before a new send"
+    ]
+  },
+  "preserved_failed_hosted": {
+    "run_id": 44785496008,
+    "job_id": 136459149284,
+    "source_commit": "0526f5afe3def76f4e3fb1e3201168726063dd84",
+    "helper_sha256": "10b37854e202aaf842fd7e45ea68bf997877cec97ae9062832f030b46262c31c",
+    "artifact_id": 14653807398,
+    "artifact_zip_bytes": 6385088,
+    "artifact_zip_sha256": "590027f5d9740021fd6e2af9235fcb47c08905b34772b54a0d53729f0bcb3a4f",
+    "raw_emulator_report_sha256": "5e2faf42ab0acd262805b40549386ab5c1b6b07b7b82a592eec190330c3295a1",
+    "reported_result": {
+      "format": "ai-trust-id-android-emulator/v1",
+      "recorded_at": "2026-11-20T17:40:46.170284+00:00",
+      "status": "FAILED",
+      "pass": false,
+      "physical_device_evidence": false,
+      "independent_accuracy_evidence": false,
+      "cases": [],
+      "prerequisites": {
+        "github_hosted_linux": true,
+        "sdkmanager": true,
+        "avdmanager": true,
+        "adb": true,
+        "emulator_preinstalled": false,
+        "aosp_image_preinstalled": false,
+        "kvm_device_exists": true,
+        "kvm_access": true,
+        "existing_license_record": true,
+        "metadata_license_hash_recorded": false,
+        "sdk_writable": true,
+        "sdk_free_bytes": 90794598400
+      },
+      "bound_revisions": {
+        "emulator": "37.3.10",
+        "system-images;android-36;default;x86_64": "2"
+      },
+      "requested_packages": [
+        "emulator",
+        "system-images;android-36;default;x86_64"
+      ],
+      "existing_license_record_sha256": "c43fa37686457c3f18caa3607945f4ec52a9d1beaaad8117e50dc4e863270c85",
+      "sdk_license_acceptance_inferred_from_metadata_hash": false,
+      "phase": "share_controls",
+      "metadata_reviews": [
+        {
+          "package": "emulator",
+          "metadata_sha256": "b97da160df8d80f0fe67739643cb53fbfcafd9c502ef57b78c038645062865ee",
+          "metadata_bytes": 433165,
+          "revision": "37.3.10",
+          "license_sha1": "efa68a6b3c661d18699d5c026771d5911cdc2f83"
+        },
+        {
+          "package": "system-images;android-36;default;x86_64",
+          "metadata_sha256": "7b119fdc282a65432aab52e8bbc64546f7fb6ec74e79e235633c60d06564b111",
+          "metadata_bytes": 189048,
+          "revision": "2",
+          "license_sha1": "efa68a6b3c661d18699d5c026771d5911cdc2f83"
+        }
+      ],
+      "license_record_unchanged": true,
+      "reason": "A required owned-emulator share, lifecycle or offline check did not complete.",
+      "elapsed_seconds": 120.8
+    },
+    "all_native_build_sources_identical_to_previous_seven_pass": true,
+    "native_build_sources_sha256": {
+      "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+      "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+      "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+      "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+      "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+      "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+      "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+      "mobile/android/src/com/aitrustid/android/CheckActivity.java": "2ab7df4100143e4e17e9c87db74f15c1641edf54fff7a986c30b463aa2c6266b",
+      "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+      "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+      "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+      "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+      "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29"
+    },
+    "actual_cause_known": false
+  },
+  "checks": {
+    "focused_unittest_passed": 40,
+    "focused_unittest_failed": 0,
+    "focused_log_sha256": "a96ed7bdc7806e11256063f5d0f3ffd975afb25362884af32f20058ff84eb4b6",
+    "all_twenty_early_stage_failures_preserve_completed_case_prefix": true,
+    "original_six_exact_call_order_preserved": true,
+    "main_mock_transport_dump_read_parse_faults": 4,
+    "actual_isolated_main_fault_processes": [
+      {
+        "control_stage": "share_first_send",
+        "fixed_code": "share_first_send_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_first_receive",
+        "fixed_code": "share_first_receive_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_explicit_check",
+        "fixed_code": "share_automatic_finding_observed",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_finding_tap",
+        "fixed_code": "share_finding_tap_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_finding_view",
+        "fixed_code": "share_finding_view_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_finding_tag",
+        "fixed_code": "share_finding_tag_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_edit",
+        "fixed_code": "share_edit_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_edit_view",
+        "fixed_code": "share_edit_view_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_edit_tag_absence",
+        "fixed_code": "share_old_tag_retained",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_replacement_send",
+        "fixed_code": "share_replacement_send_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_replacement_receive",
+        "fixed_code": "share_replacement_receive_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_replacement_tap",
+        "fixed_code": "share_replacement_tap_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_replacement_view",
+        "fixed_code": "share_replacement_view_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_mime_send",
+        "fixed_code": "share_mime_send_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_mime_view",
+        "fixed_code": "share_mime_view_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_clear_send",
+        "fixed_code": "share_clear_send_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_clear_receive",
+        "fixed_code": "share_clear_receive_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_clear_tap",
+        "fixed_code": "share_clear_tap_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_clear_view",
+        "fixed_code": "share_clear_view_unavailable",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "control_stage": "share_clear_text_absence",
+        "fixed_code": "share_cleared_text_retained",
+        "exit_code": 1,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      }
+    ],
+    "source_hashes_stable": true
+  },
+  "limits": {
+    "new_source_android_execution": false,
+    "original_failure_cause_proven": false,
+    "runtime_bug_fixed": false,
+    "SDK_or_emulator_started_for_controls": false,
+    "physical_device_evidence": false,
+    "independent_accuracy_evidence": false,
+    "current_capability_boundary_receipts_refreshed": false,
+    "original_requirement_closed": false
+  }
+}

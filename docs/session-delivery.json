@@ -112,7 +112,7 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 9,
+    "finished_scoped_tasks": 12,
     "original_requirement_closures": 0
   },
   "goals": {
@@ -167,21 +167,21 @@
       "tag_id": "T-MT",
       "bot_id": "tag_mt",
       "actual_worker": null,
-      "status": "reviewed",
-      "checked_at": "2026-11-20T15:59:29.823898+00:00",
-      "current_component_status": "Frozen quotation-aware authority workflow completed and reviewed; protected integration pending. Full MT remains unvalidated.",
+      "status": "published",
+      "checked_at": "2026-11-20T17:08:16.518216+00:00",
+      "current_component_status": "Scoped method component published from protected04b11a12; full tag remains independently unvalidated.",
       "blocking_acceptance": "Published literal wording and private choice workflows do not establish contextual use/mention, feasible alternatives, attribution, actual independent MT agreement/error rates or accepted tag mapping.",
-      "next_task": "Await exact protected integration, then continue contextual attribution/feasible alternatives and real agreement acceptance."
+      "next_task": "Advance remaining original-specific acceptance; do not rerun completed software jobs."
     },
     {
       "tag_id": "T-PS",
       "bot_id": "tag_ps",
-      "actual_worker": "/root/share_debugger",
-      "status": "active",
-      "checked_at": "2026-11-20T15:59:29.823898+00:00",
-      "current_component_status": "New public optional credential-flow browser preview is active. Prior exact CLI implementation is complete and awaiting protected integration; no credential signal or PS tag mapping is added.",
+      "actual_worker": null,
+      "status": "published",
+      "checked_at": "2026-11-20T17:08:16.518216+00:00",
+      "current_component_status": "Scoped method component published from protected04b11a12; full tag remains independently unvalidated.",
       "blocking_acceptance": "Current development fixtures and blind-review tooling are present, but the independently coordinated representative holdout, actual blind human labels/adjudication, accepted calibration/abstention policy and applicable human route acceptance are not.",
-      "next_task": "session-public-credential-device"
+      "next_task": "Advance remaining original-specific acceptance; do not rerun completed software jobs."
     },
     {
       "tag_id": "T-IV",
@@ -647,7 +647,7 @@
         "T-PS"
       ],
       "worker": "/root/share_debugger",
-      "status": "in_review",
+      "status": "closed",
       "deliverable": "Correct supported credential-flow analysis and deliver a separately invoked private whole-document/code/context binding workflow.",
       "done_evidence": [
         "Concrete failing-before/passing-after impossible-program and bounded-value controls, not only a new wrapper.",
@@ -658,7 +658,7 @@
       "next_unblocked_task": "session-f012-closure-adjudication",
       "assigned_at": "2026-11-19T18:24:57.745970+00:00",
       "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-      "current_status": "Frozen corrected source2d00900a and exact Linux proof45f9961 are complete; PM actual review passes. Worker finished this CLI lane. Predeclared protected integration remains required before scoped closure.",
+      "current_status": "Full predeclared scoped software job reviewed, protected and published; full original acceptance remains open.",
       "review_handoff": {
         "at": "2026-11-19T18:45:23.085934+00:00",
         "implemented_commit": "2d00900a8426d23330f8739c8ab10ca99769236f",
@@ -678,6 +678,21 @@
           "sha256": "874739330dc5974356ccb0a3cf9ba9f0a3e0be846afca1ca0e84882eb2edd6c8",
           "receipt_commit": "45f99610737c94ad737d29666d55d70fc27701fe"
         }
+      },
+      "closure_record": {
+        "closed_at": "2026-11-20T17:08:16.518216+00:00",
+        "completed_by": "/root/share_debugger",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-20-credential-delivery-closeout-review.json",
+            "sha256": "d4b037fe6d2094f4ace3bd10d0e2f6a1f9f1529df2b28f4f61d1a9568d201b74"
+          },
+          {
+            "path": "runs/2026-11-20-credential-protected-ci-review.json",
+            "sha256": "02a73d6bb2bb11d7e849a9be5d360f4b0bd7541b1aca9583727964970b01ada6"
+          }
+        ]
       }
     },
     {
@@ -687,7 +702,7 @@
         "F-019c"
       ],
       "worker": "/root/web_camo",
-      "status": "in_review",
+      "status": "closed",
       "deliverable": "Expose the unchanged quotation-aware authority candidate as an explicit independently selected offline MT evidence check.",
       "done_evidence": [
         "Complete raw/NFC/source-bound quotation evidence reaches the workflow; legacy authority remains unchanged.",
@@ -707,6 +722,22 @@
           "sha256": "350e11d9f5f3f22a5b681b0d5e4210798bb6f9611ae80761ade106fe554f5608"
         },
         "integration_status": "Frozen implementation and actual review complete; protected integration required before closing this scoped task."
+      },
+      "current_status": "Full predeclared scoped software job reviewed, protected and published; full original acceptance remains open.",
+      "closure_record": {
+        "closed_at": "2026-11-20T17:08:16.518216+00:00",
+        "completed_by": "/root/web_camo",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-20-credential-delivery-closeout-review.json",
+            "sha256": "d4b037fe6d2094f4ace3bd10d0e2f6a1f9f1529df2b28f4f61d1a9568d201b74"
+          },
+          {
+            "path": "runs/2026-11-20-credential-protected-ci-review.json",
+            "sha256": "02a73d6bb2bb11d7e849a9be5d360f4b0bd7541b1aca9583727964970b01ada6"
+          }
+        ]
       }
     },
     {
@@ -716,18 +747,29 @@
         "F-142"
       ],
       "worker": "/root",
-      "status": "blocked",
+      "status": "in_review",
       "deliverable": "Reconcile and publish the existing compile-verified Android Share preview with strict current-source license/KVM preflight; obtain actual disposable runtime proof only if its existing licensed prerequisites are met.",
       "done_evidence": [
         "Exact source APK compiles/signature-verifies; Share/edit/clear/offline/lifecycle checks execute in an actual Android runtime with current method parity and zero extra permissions.",
         "Exact existing accepted license match and official package identities checked; no new license assent/local SDK download/production signing or phone install.",
         "Different reviewer verifies immutable actual evidence; physical device/TalkBack and full N014/F142 remain open until their actual acceptance."
       ],
-      "blocker": "Actual hosted Android run44651494156 failed in reviewed_metadata before install or boot; zero of seven runtime cases executed. Existing compile/prerequisite proofs cannot satisfy the predeclared actual-runtime acceptance. Skip this blocked completion and advance the public credential browser job.",
+      "blocker": "Current shared integration validation and protected merge remain. Full original physical/human/distribution criteria remain separately open.",
       "next_unblocked_task": "session-f012-closure-adjudication",
       "assigned_at": "2026-11-19T18:24:57.745970+00:00",
       "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-      "current_status": "SDK prerequisite/metadata correction reviewed; actual Android runtime remains unexecuted. The historical literal XML-license-hash mismatch is not an SDK acceptance authority. The existing SDK manager with closed stdin and unchanged existing acceptance record decides permission; no new terms accepted."
+      "current_status": "All7 original API36 emulator controls pass; separate artifact review complete; PM refreshing shared evidence before protected integration.",
+      "active_followup": {
+        "checked_at": "2026-11-20T17:23:55.320452+00:00",
+        "actual_worker": "/root",
+        "pull_request": 134,
+        "candidate_head": "35abb435091e55e29f8c5567249f592b93b43149",
+        "hosted_run": 44779986361,
+        "status": "integrating_at_snapshot",
+        "scope": "Exact d507 native source and unchanged fast-return control pass all7 cases. Debugger handoff complete; PM owns protected integration.",
+        "runtime_source": "d50793165254fe666a165542624fcdc159d01293",
+        "evidence": "runs/2026-11-20-android-pause-hosted-seven.json"
+      }
     },
     {
       "task_id": "session-f012-closure-adjudication",
@@ -735,14 +777,14 @@
         "F-012"
       ],
       "worker": "/root/seo",
-      "status": "queued",
+      "status": "blocked",
       "deliverable": "Reassess full F012 after current engineering; distinguish supported-program runtime-oracle evidence from representative held-out use/mention and accepted PS integration.",
       "done_evidence": [
         "Read full original F012 job/required acceptance, spec signal registration and PS release contract against exact new executed source.",
         "Any independent execution oracle uses owned synthetic credentials/sink, denies network, preserves compiler validity and reports profile limits; no inference that engineering fixtures equal human labels.",
         "Recommend full closure only if all preserved original gates actually pass; otherwise keep it open with exact next action."
       ],
-      "blocker": null,
+      "blocker": "Full original use/mention, held-out validation and accepted mapping remain unmet; this audit is not counted as another delivery.",
       "next_unblocked_task": "session-ps-credential-context",
       "assigned_at": "2026-11-19T18:24:57.745970+00:00",
       "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b"
@@ -754,7 +796,7 @@
         "T-PS"
       ],
       "worker": "/root/share_debugger",
-      "status": "active",
+      "status": "closed",
       "deliverable": "A fully usable phone and desktop paste-Python credential-flow preview inside the existing PS modal, with independent optional loading and short bounded explanations; published live only after reviewed protected integration.",
       "done_evidence": [
         "The canonical python-credential-flow-observation/1.0.2 implementation remains byte-identical. The device result is closed-shape and exactly bound to original raw UTF-8 input, frozen Unicode-15 NFC, method and packaged source identities; no PS mapping, new tag or inferred intent.",
@@ -783,6 +825,28 @@
         "component": "CredentialFlowExplorerSlot",
         "props": "none",
         "builder": "scripts/build-credential-device.py"
+      },
+      "current_status": "Full predeclared scoped software job reviewed, protected and published; full original acceptance remains open.",
+      "closure_record": {
+        "closed_at": "2026-11-20T17:08:16.518216+00:00",
+        "completed_by": "/root/share_debugger",
+        "verified_by": "/root/web_camo",
+        "evidence": [
+          {
+            "path": "runs/2026-11-20-credential-delivery-closeout-review.json",
+            "sha256": "d4b037fe6d2094f4ace3bd10d0e2f6a1f9f1529df2b28f4f61d1a9568d201b74"
+          },
+          {
+            "path": "runs/2026-11-20-credential-protected-ci-review.json",
+            "sha256": "02a73d6bb2bb11d7e849a9be5d360f4b0bd7541b1aca9583727964970b01ada6"
+          },
+          {
+            "path": "runs/2026-11-20-credential-publication.json",
+            "sha256": "bca376aa15edbf22c8aaf57362c5ce0c306a9931c7835e3e25a158db8253fbaa"
+          }
+        ],
+        "integration_completed_by": "/root",
+        "final_evidence_reviewed_by": "/root/seo"
       }
     }
   ],
@@ -5427,18 +5491,31 @@
     "tools/research_admission.py": "f6adfcbdca1c89adca18c460ebb720b8cf057057b43c857967115efe93528f4d",
     "tools/review_execution.py": "a100fbd3ba79d583423e9398937e5a218588fe699b6a084e00a6947f5506578a"
   },
-  "updated_at": "2026-11-20T15:59:29.823898+00:00",
+  "updated_at": "2026-11-20T17:23:55.320452+00:00",
   "closeout": {
-    "protected_source_commit": "92be88d00e967d53d4b8604b8f90561088efc903",
-    "publication_evidence": "runs/2026-11-19-tag-bots-live-publication.json",
+    "recorded_at": "2026-11-20T17:08:16.518216+00:00",
+    "protected_source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+    "publication_evidence": "runs/2026-11-20-credential-publication.json",
+    "CI_review": "runs/2026-11-20-credential-protected-ci-review.json",
+    "finished_scoped_tasks": 12,
+    "new_original_closures": 0,
     "original_goal": "NOT MET",
-    "reason": "No original full acceptance has been waived or met by these component deliverables."
+    "reason": "Three predeclared working software deliveries complete; no original acceptance waived.",
+    "active_followup": {
+      "checked_at": "2026-11-20T17:08:16.518216+00:00",
+      "actual_worker": "/root/share_debugger",
+      "pull_request": 134,
+      "candidate_head": "d50793165254fe666a165542624fcdc159d01293",
+      "hosted_run": 44779986361,
+      "status": "active_at_snapshot",
+      "scope": "Approved onPause wipe candidate, onStop retained; original fast-return driver unchanged. Actual new-source hosted proof pending; no verified fix or seventh-case acceptance."
+    }
   },
   "current_wave": {
     "wave_id": "2026-11-19-ps-mt-android",
     "started_at": "2026-11-19T18:24:57.745970+00:00",
     "source_commit": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-    "status": "active",
+    "status": "Scoped PS/MT/public browser deliveries published; Android followup active; original goal unmet",
     "goal": "Advance original70 toward60; count only full functioning original acceptance. Skip final owner/external gates and continue independent engineering.",
     "immutable_session_baseline_retained": "3716233b9460efa57c1f0d01bfe30989395efcc4",
     "prior_closed_scoped_tasks_retained": 9,
@@ -5446,7 +5523,7 @@
     "accounting_scope": "Dated assignments and evidence only; does not approve scope or independent accuracy.",
     "source_inputs_sha256": {
       "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
-      "docs/scope-progress.json": "c99752d12d02b902225106de850d884c16368e7886b02b07f9f582473130d38a",
+      "docs/scope-progress.json": "4a63a0a0333ef2e1545857977d6b72e0af6fa84364d51eda90965eeb5b7f9523",
       "docs/scope-delivery.json": "45099ed70bd388d557c43bca64fcbc9b37ef523a9135af3f50a47e1fe251271f",
       "docs/decisions.json": "e04d0ccb32be625463fb503f03b84d1a7afe1580d384f055d7a87da0e256c0cc",
       "spec/signals.md": "f2de6ca8a20f7a9cad59be6e6151285b2fe4239f7c832e79cbdb916f71231c7e",
@@ -5697,16 +5774,19 @@
         "remaining_full_acceptance": "Actual moderation/response owners, inboxes, approved deployment and live operations remain."
       }
     ],
-    "last_handoff_at": "2026-11-20T15:59:29.823898+00:00",
+    "last_handoff_at": "2026-11-20T17:08:16.518216+00:00",
     "commit_handoff_status": "Prepared while exact frozen PS Linux proof and PM protected integration remain active. No new completion counter changes.",
     "visible_delivery": {
       "task_id": "session-public-credential-device",
       "predeclared_at": "2026-11-20T15:59:29.823898+00:00",
       "source_base": "8b21fffbb3a5b89b9cf6c555959fa9cfa1bd09fd",
-      "status": "active",
+      "status": "published",
       "user_outcome": "A person can paste a Python snippet into the public PS panel and inspect supported credential-to-HTTP structure locally.",
       "integration_and_live_publication_required": true,
-      "new_original_closure": false
+      "new_original_closure": false,
+      "published_at": "2026-11-20T16:58:34.418Z",
+      "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+      "evidence": "runs/2026-11-20-credential-publication.json"
     }
   },
   "candidate_original_path": {
@@ -5731,11 +5811,21 @@
     {
       "route": "Android Share",
       "original_id": "N-014",
-      "actual_worker": null,
-      "status": "blocked",
-      "checked_at": "2026-11-20T15:59:29.823898+00:00",
+      "actual_worker": "/root",
+      "status": "in_review",
+      "checked_at": "2026-11-20T17:23:55.320452+00:00",
       "task_id": "session-android-runtime-integration",
-      "scope": "Actual runtime unavailable after metadata-phase refusal; existing SDK manager is acceptance authority. No new license assent; physical/TalkBack acceptance remains open."
+      "scope": "API36 all7 original controls pass with independent artifact review; PM integration pending; physical and human acceptance remain open.",
+      "candidate_head": "35abb435091e55e29f8c5567249f592b93b43149",
+      "hosted_run": 44779986361
+    }
+  ],
+  "closeout_history": [
+    {
+      "protected_source_commit": "92be88d00e967d53d4b8604b8f90561088efc903",
+      "publication_evidence": "runs/2026-11-19-tag-bots-live-publication.json",
+      "original_goal": "NOT MET",
+      "reason": "No original full acceptance has been waived or met by these component deliverables."
     }
   ]
 }

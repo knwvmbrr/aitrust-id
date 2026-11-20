@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-165634-android-background-diagnostic-boundaries-92ef3ede",
+  "recorded_at": "2026-11-20T16:56:34.207066+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1236fb57d76792a6ed9287b1a8b819889631f479",
+  "changed": "Expose fixed owned background-control failure boundaries while preserving the seven Android controls and their command/assertion/deadline behavior.",
+  "proves": "34 focused controls and seven isolated main fault processes pass without SDK or emulator activity. Exact hosted run44776757754 remains FAILED after six original runtime passes; the seventh failure is retained as unknown driver/lifecycle cause.",
+  "limits": "Diagnostic-only follow-up; no changed-source Android execution, runtime fix, seventh-case pass, license acceptance, SDK retry, physical-device proof or original requirement closure.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "scripts/verify-android-emulator.py": "10b37854e202aaf842fd7e45ea68bf997877cec97ae9062832f030b46262c31c",
+    "tests/test_android_emulator_prerequisites.py": "a2318e7875a3d01cb211c25c6ad48f972254d1d25c1fff2dd073c3a3f4092d81",
+    "docs/android-share-developer.md": "3b727ed8a32932da91d97e6c2298a82ffe19c75989bdb44ff989d45969853a6b",
+    "runs/2026-11-20-android-background-diagnostics.json": "c1f784587a3e04a2a6d5a52d71c7b6ca0a4b119d79e95f8e926147e27e38f46f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-background-diagnostics.json",
+      "sha256": "c1f784587a3e04a2a6d5a52d71c7b6ca0a4b119d79e95f8e926147e27e38f46f"
+    }
+  ],
+  "checks": []
+}

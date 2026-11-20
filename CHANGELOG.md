@@ -2,6 +2,121 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-180738-android-first-failure-lifecycle-metadata-f4f208eb
+
+Recorded 2026-11-20T18:07:38.825303+00:00 · Contributor: Codex · change
+
+- **Changed.** Add one capped failure-only owned Android event metadata query after a zero-case first control failure, without retaining raw event content or changing success predicates.
+- **Evidence.** 46 focused controls and4 isolated main lifecycle-metadata controls pass. Verified AOSP schema positions bind exact component/action fields; malformed or unavailable data cannot mask primary failure. The real cad8 Ready-screen zero-case failure remains FAILED and source-bound. [Change record](./runs/changes/2026-11-20-180738-android-first-failure-lifecycle-metadata-f4f208eb.json).
+- **Not claimed.** No native change, new-source Android execution, known lifecycle cause, runtime fix, success timing change, raw event log retention, capability/boundary refresh, physical/human acceptance or original closure.
+
+
+### 2026-11-20-175257-android-early-share-diagnostics-b944d940
+
+Recorded 2026-11-20T17:52:57.664252+00:00 · Contributor: Codex · change
+
+- **Changed.** Expose fixed receive/check/edit/clear failure stages and nonleaking last-observation hints without changing the first six Android controls or the seventh fast-return helper.
+- **Evidence.** 40 focused controls pass, including exact original call order and all20 early-stage failure prefixes;20 isolated main fault processes return fixed private-value-free JSON. The exact0526 failed zero-case report/artifact and unchanged native identities are preserved. [Change record](./runs/changes/2026-11-20-175257-android-early-share-diagnostics-b944d940.json).
+- **Not claimed.** Historical startup/receive cause remains unknown; no native source fix, timing or criterion change, SDK/license action, new-source Android execution, current capability/boundary refresh or original closure is claimed.
+
+
+### 2026-11-20-173924-android-pause-current-protected-candidate-863bf531
+
+Recorded 2026-11-20T17:39:24.606235+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record all current combined Android integration checks and preserve the separate delivery-board stale-receipt CI refusal before protected publication.
+- **Evidence.** All five capability receipts assess current and passing, including final56-command protocol and49-command website runs; reviewed1369-source boundaries, accountability and scoped accounting pass. N014 is80% with no final_acceptance;132 originals complete and70 remain open. The prior delivery-record board is integrated with refreshed evidence. [Change record](./runs/changes/2026-11-20-173924-android-pause-current-protected-candidate-863bf531.json).
+- **Not claimed.** Protected Android merge and resulting publication are pending. Physical Android/TalkBack, originalN014 and independent tag accuracy remain open; ephemeral test signing is not a maintained app release.
+
+
+### 2026-11-20-173316-android-pause-final-protocol-proof-428e43ee
+
+Recorded 2026-11-20T17:33:16.138162+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record the completed final Android protocol execution before the serial final website check.
+- **Evidence.** All56 configured protocol commands passed on the frozen80-percent native scope and exact seven-case source. Recording the receipt before the next build prevents concurrent evidence-bookkeeping races. [Change record](./runs/changes/2026-11-20-173316-android-pause-final-protocol-proof-428e43ee.json).
+- **Not claimed.** Final website, boundary and protected integration remain pending; no physical or original acceptance closure.
+
+
+### 2026-11-20-173041-android-pause-complete-source-freeze-eb820bcf
+
+Recorded 2026-11-20T17:30:41.294109+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Freeze all final native integration source and N01480% public scope mirrors before serial verification.
+- **Evidence.** Every202 required_acceptance remains byte-equivalent as data; all other original percentages stayunchanged. The selected API36 seven-case evidence supports N01480, with final_acceptance absent. The site preparation generated matching scope files and exact guide data. [Change record](./runs/changes/2026-11-20-173041-android-pause-complete-source-freeze-eb820bcf.json).
+- **Not claimed.** Shared final protocol/website/boundary checks and protected merge are still pending. All70 originals remain open where previously open.
+
+
+### 2026-11-20-172911-android-pause-capacity-and-final-preparation-00e4ad62
+
+Recorded 2026-11-20T17:29:11.970873+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Preserve the real local capacity refusal and recovery, update the reviewed native source inventory, and prepare the final scope-derived build before verification.
+- **Evidence.** All116 focused native package/verifier/evidence controls pass after clearing two obsolete project build caches; the 2GB safety reserve is unchanged. The N01480% evidence and all original criteria remain explicit. [Change record](./runs/changes/2026-11-20-172911-android-pause-capacity-and-final-preparation-00e4ad62.json).
+- **Not claimed.** The earlier failed website receipt is preserved. Final current protocol/website checks and protected Android integration are pending; no physical or full original closure.
+
+
+### 2026-11-20-172355-android-pause-native-scope-milestones-9ca02a6c
+
+Recorded 2026-11-20T17:23:55.527418+00:00 · Contributor: Codex PM with task-list lead milestone review · change
+
+- **Changed.** Credit N014 actual selected Android VM integration at80%, with all seven original controls executed; preserve every original acceptance criterion and the final physical/human gate.
+- **Evidence.** Separate review confirms the existing milestone contract permits implementation, executable checks and selected API36 integration; final_acceptance is absent. Original counts stay132 complete/70 open, completed_by/time stayempty, and the source baseline and nine historical closures remain intact. [Change record](./runs/changes/2026-11-20-172355-android-pause-native-scope-milestones-9ca02a6c.json).
+- **Not claimed.** Protected integration plus physical Android/TalkBack, real sender/chooser, update/removal and maintained distribution remain. No full N014, physical evidence, tag accuracy or store-release claim.
+
+
+### 2026-11-20-171830-android-pause-serial-receipt-freeze-5d00993d
+
+Recorded 2026-11-20T17:18:30.875336+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record the completed Android protocol execution and preserve the website build-guard refusal from concurrent receipt publication; serialize the remaining verification.
+- **Evidence.** All56 protocol commands passed with stable sources. The website attempt stopped before browser phases while the newly written protocol evidence lacked a pre-existing change event; all current public files are now covered before the sole remaining website run. [Change record](./runs/changes/2026-11-20-171830-android-pause-serial-receipt-freeze-5d00993d.json).
+- **Not claimed.** No website pass or protected Android integration yet; original requirements remain unchanged. Earlier failed records are retained.
+
+
+### 2026-11-20-171651-android-pause-integrated-review-311d484c
+
+Recorded 2026-11-20T17:16:51.233010+00:00 · Contributor: Codex PM after independent task-list lead review · change
+
+- **Changed.** Integrate the real API36 pause-cleanup correction and preserved fast-return driver, with separately reviewed seven-case evidence and published web-delivery records.
+- **Evidence.** The task-list lead independently verified the actual CI artifact and reports. PM reviewed the lifecycle change, unchanged fast-return criterion, 17 source identities and explicit draft-loss behavior; all seven original cases pass on the exact native source. [Change record](./runs/changes/2026-11-20-171651-android-pause-integrated-review-311d484c.json).
+- **Not claimed.** Current protocol/website and boundary refreshes plus protected integration remain pending. No physical/human, accuracy, store release or full N014 closure.
+
+
+### 2026-11-20-170849-close-published-credential-deliveries-782a295d
+
+Recorded 2026-11-20T17:08:49.724088+00:00 · Contributor: Codex task-list lead · change
+
+- **Changed.** Record completion of the two predeclared CLI jobs and the live optional Python-flow browser preview; update dated worker assignments and actual publication pointers.
+- **Evidence.** Protected head1236 merged as04b11a12 after eleven required passes and zero review threads. The public checker passes actual Chromium/WebKit tests and sixteen critical asset-byte checks across two origins. Current accounting validates twelve scoped tasks, zero original closures, and preserved132complete/70open with valid state chronology. [Change record](./runs/changes/2026-11-20-170849-close-published-credential-deliveries-782a295d.json).
+- **Not claimed.** No full original criterion was changed or completed. No independent detector accuracy, physical-device acceptance, full-site artifact equivalence or first-try success is claimed. Android remains an active separate d507 PR134 followup after six-of-seven runtime results; this operations record does not redeploy the site or replace its deployed changelog.
+### 2026-11-20-171211-android-pause-hosted-seven-proof-75ae93cd
+
+Recorded 2026-11-20T17:12:11.883899+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain exact source-bound API36 seven-control emulator execution for the pause-clearing candidate, preserving the earlier failed reports and release limits.
+- **Evidence.** Actual hosted run44779986361 at d507931 executes all seven original controls successfully with unchanged fast-return helper10b37854. Exact GitHub artifact digest, raw reports, native sources and signed development APK are bound; hosted JVM, compile and137 engine-parity controls pass. [Change record](./runs/changes/2026-11-20-171211-android-pause-hosted-seven-proof-75ae93cd.json).
+- **Not claimed.** One bounded synthetic emulator execution, not physical-device/Share chooser/human TalkBack/accuracy/full N-014 acceptance. Historical callback dispatch remains unproven; shared protocol/boundary/state integration and review are pending. No further runtime rerun.
+
+
+### 2026-11-20-170531-android-clear-on-pause-candidate-2a862184
+
+Recorded 2026-11-20T17:05:31.825507+00:00 · Contributor: Codex · change
+
+- **Changed.** Clear private Android editor/result/renderer state at onPause as well as onStop, retain the unchanged fast-return control, and disclose interrupted-draft loss.
+- **Evidence.** The actual diagnostic hosted run remains FAILED6/7 at background_cleared_view with owned UI and marker present. A new source-wiring regression fails before onPause and passes after it;10 focused controls pass. Added JVM double-clear/fresh-input controls await the existing hosted verifier. [Change record](./runs/changes/2026-11-20-170531-android-clear-on-pause-candidate-2a862184.json).
+- **Not claimed.** No observed onPause/onStop dispatch in the historical failure, no verified lifecycle fix, no new-source Android runtime pass, physical-device proof or original closure. Shared integration gates remain pending.
+
+
+### 2026-11-20-165634-android-background-diagnostic-boundaries-92ef3ede
+
+Recorded 2026-11-20T16:56:34.207066+00:00 · Contributor: Codex · change
+
+- **Changed.** Expose fixed owned background-control failure boundaries while preserving the seven Android controls and their command/assertion/deadline behavior.
+- **Evidence.** 34 focused controls and seven isolated main fault processes pass without SDK or emulator activity. Exact hosted run44776757754 remains FAILED after six original runtime passes; the seventh failure is retained as unknown driver/lifecycle cause. [Change record](./runs/changes/2026-11-20-165634-android-background-diagnostic-boundaries-92ef3ede.json).
+- **Not claimed.** Diagnostic-only follow-up; no changed-source Android execution, runtime fix, seventh-case pass, license acceptance, SDK retry, physical-device proof or original requirement closure.
+
+
 ### 2026-11-20-164850-credential-state-chronology-correction-6dbcd154
 
 Recorded 2026-11-20T16:48:50.393806+00:00 · Contributor: Codex PM after task-list lead diagnosis · change

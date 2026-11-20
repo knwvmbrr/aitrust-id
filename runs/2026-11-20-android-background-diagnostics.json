@@ -1,0 +1,112 @@
+{
+  "format": "ai-trust-id-android-background-diagnostics/v1",
+  "recorded_at": "2026-11-20T16:56:05.090063+00:00",
+  "author": "Codex Debugging Lead",
+  "records": [
+    "N-014"
+  ],
+  "base_commit": "1236fb57d76792a6ed9287b1a8b819889631f479",
+  "sources_sha256": {
+    "scripts/verify-android-emulator.py": "10b37854e202aaf842fd7e45ea68bf997877cec97ae9062832f030b46262c31c",
+    "tests/test_android_emulator_prerequisites.py": "a2318e7875a3d01cb211c25c6ad48f972254d1d25c1fff2dd073c3a3f4092d81",
+    "docs/android-share-developer.md": "3b727ed8a32932da91d97e6c2298a82ffe19c75989bdb44ff989d45969853a6b"
+  },
+  "architecture": {
+    "change": "Extract the unchanged seventh background-clear control and expose fixed typed stage/refusal codes plus minimal flags from existing task/UI reads.",
+    "risks": [
+      "Historical generic failure cannot distinguish driver/refocus/lifecycle failure.",
+      "Observed UI flags are not onStop completion proof."
+    ],
+    "new_commands_or_waits": false,
+    "original_seven_criteria_preserved": true,
+    "sdk_license_or_prerequisite_handling_changed": false
+  },
+  "original_failed_hosted_evidence": {
+    "run_id": 44776757754,
+    "job_id": 136428499146,
+    "source_commit_prefix": "f5256e7",
+    "artifact_id": 14649083900,
+    "artifact_zip_sha256": "717d5be00423626abb128bd09c937961c8bbbfcf56cfdaf22b08fa08a116d517",
+    "emulator_report_sha256": "ee7dadd0403a75b3f62a974a1aed44cd938a1e378b4b802263151b4e3fbd2cf1",
+    "status": "FAILED",
+    "pass": false,
+    "phase": "share_controls",
+    "elapsed_seconds": 132.546,
+    "passed_original_cases": [
+      "receive_requires_explicit_check",
+      "actual_offline_ps_finding",
+      "edit_hides_previous_finding",
+      "new_share_and_no_finding",
+      "unsupported_mime_has_no_verdict",
+      "clear_removes_input_and_result"
+    ],
+    "remaining_original_case": "background_clears_text",
+    "root_cause_known": false
+  },
+  "checks": {
+    "focused_unittest_passed": 34,
+    "focused_unittest_failed": 0,
+    "focused_log_sha256": "df08881152071ee1f3eedcf7c761c6d1ff578010b5b14e45d0c89bcc9d44dd10",
+    "actual_isolated_main_fault_controls": [
+      {
+        "stage": "background_receive",
+        "fixed_code": "background_receive_unavailable",
+        "exit_code": 1,
+        "report_no_private_values": true,
+        "android_cases_executed": 0
+      },
+      {
+        "stage": "background_home",
+        "fixed_code": "background_home_unavailable",
+        "exit_code": 1,
+        "report_no_private_values": true,
+        "android_cases_executed": 0
+      },
+      {
+        "stage": "background_task_inventory",
+        "fixed_code": "background_task_inventory_unavailable",
+        "exit_code": 1,
+        "report_no_private_values": true,
+        "android_cases_executed": 0
+      },
+      {
+        "stage": "background_task_lookup",
+        "fixed_code": "background_owned_task_unavailable",
+        "exit_code": 1,
+        "report_no_private_values": true,
+        "android_cases_executed": 0
+      },
+      {
+        "stage": "background_refocus",
+        "fixed_code": "background_refocus_unavailable",
+        "exit_code": 1,
+        "report_no_private_values": true,
+        "android_cases_executed": 0
+      },
+      {
+        "stage": "background_cleared_view",
+        "fixed_code": "background_cleared_view_unavailable",
+        "exit_code": 1,
+        "report_no_private_values": true,
+        "android_cases_executed": 0
+      },
+      {
+        "stage": "background_marker_absence",
+        "fixed_code": "background_marker_retained",
+        "exit_code": 1,
+        "report_no_private_values": true,
+        "android_cases_executed": 0
+      }
+    ],
+    "sdk_or_emulator_started_for_these_checks": false
+  },
+  "limits": {
+    "actual_changed_source_android_execution": false,
+    "runtime_bug_fixed": false,
+    "full_seven_case_pass": false,
+    "physical_device_tested": false,
+    "independent_accuracy_evidence": false,
+    "original_requirement_closed": false
+  },
+  "sources_unchanged_after_controls": true
+}

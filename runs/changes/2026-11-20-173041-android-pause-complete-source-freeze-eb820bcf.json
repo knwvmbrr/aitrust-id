@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-173041-android-pause-complete-source-freeze-eb820bcf",
+  "recorded_at": "2026-11-20T17:30:41.294109+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f42ba118c35874e015a75bb5eb36e1dabd8b68f3",
+  "changed": "Freeze all final native integration source and N01480% public scope mirrors before serial verification.",
+  "proves": "Every202 required_acceptance remains byte-equivalent as data; all other original percentages stayunchanged. The selected API36 seven-case evidence supports N01480, with final_acceptance absent. The site preparation generated matching scope files and exact guide data.",
+  "limits": "Shared final protocol/website/boundary checks and protected merge are still pending. All70 originals remain open where previously open.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "docs/scope-progress.json": "4a63a0a0333ef2e1545857977d6b72e0af6fa84364d51eda90965eeb5b7f9523",
+    "docs/scope-progress.md": "ec2b57ece3cea490fc14cbc8236fa4debdaa2046238318b474e3a48833e12bfe",
+    "docs/scope-task-index.md": "71c97144101b29f1c424b27fc0668cdecd3287f15caf39f40f2ae1acc37eefac",
+    "docs/session-delivery.json": "8e653d6bc4846e6f32a1172589b59a1f4043b130cdcfd48a23ab187bab14adc1",
+    "eval/route-boundaries.json": "379bbaf2a0a1ab0e76bb84159c2613082c9bc0be9851341e55e8dc9e78954285",
+    "runs/2026-11-20-android-pause-independent-review.json": "10fd486b31de337733276f2dd70d49d5ceb5616451f39c086f365b6e1a309051",
+    "runs/2026-11-20-android-pause-integrated-protocol.json": "ee22d192ac696243c3fc6b437e2a7c672804a86a0489f1ea848250d21093c696",
+    "runs/2026-11-20-android-pause-integrated-website-current.json": "14a1a029f4e3561867586b75b67d0252abef5dda66c009bc51f6f199bd09e8ee",
+    "runs/2026-11-20-android-pause-integrated-website.json": "e3e2bc05af3c269954853a37fc726b7c1dc830316fe041af36d3f0aeaed1ec76",
+    "runs/2026-11-20-local-build-capacity-recovery.json": "76f2535908f691dc83bf3522ec4527dd9f71bfd22d57609cd22e93c2f1e7bdb2",
+    "site/public/reference/public-scope.json": "28f22f621134a364fd44860d0f681f5d40f2b32a84d58af34248b0d80496adbf",
+    "site/src/public-scope.json": "28f22f621134a364fd44860d0f681f5d40f2b32a84d58af34248b0d80496adbf",
+    "site/src/scope-manifest.json": "873ac194760f04b6e023291d795787a9ed0f4de47c9576e5ec67a1c859f07d3c",
+    "state.json": "3e491e6d4efead93d495c693770a32b5b85a492df3b9c1e5a0ec59089d214fc3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-pause-hosted-seven.json",
+      "sha256": "f9266bba3852b4faae690037e173fc5f3fc49b24424c12639e60ab6920c38162"
+    },
+    {
+      "path": "runs/2026-11-20-local-build-capacity-recovery.json",
+      "sha256": "76f2535908f691dc83bf3522ec4527dd9f71bfd22d57609cd22e93c2f1e7bdb2"
+    }
+  ],
+  "checks": []
+}

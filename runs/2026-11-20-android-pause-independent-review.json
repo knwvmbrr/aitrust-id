@@ -1,0 +1,44 @@
+{
+  "captured_at": "2026-11-20T17:16:51.184258+00:00",
+  "pass": true,
+  "author": "Codex PM, with task-list lead independent artifact and remote-run review",
+  "source_receipt": "runs/2026-11-20-android-pause-hosted-seven.json",
+  "source_receipt_sha256": "f9266bba3852b4faae690037e173fc5f3fc49b24424c12639e60ab6920c38162",
+  "sources": {
+    "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+    "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+    "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+    "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+    "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+    "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+    "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "2ab7df4100143e4e17e9c87db74f15c1641edf54fff7a986c30b463aa2c6266b",
+    "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+    "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+    "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+    "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+    "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29",
+    "tests/test_android_share.py": "6991a63dda1ad6817f85ab759f0e9f14149cbaa1e37fc1d08903bcd8541c9938",
+    "tests/test_android_emulator_prerequisites.py": "a2318e7875a3d01cb211c25c6ad48f972254d1d25c1fff2dd073c3a3f4092d81",
+    ".github/workflows/android-share.yml": "b2d435bd9571326dc0e8c05badbd35183c17f423b7bd40f4c78f7ba9a2c7a9b3",
+    "scripts/verify-android-emulator.py": "10b37854e202aaf842fd7e45ea68bf997877cec97ae9062832f030b46262c31c"
+  },
+  "checks": {
+    "current_native_and_helper_sources_match": true,
+    "exact_original_seven_runtime_cases_pass": true,
+    "owned_foreground_cleared_marker_absent": true,
+    "manifest_no_internet_permission": true,
+    "existing_license_unchanged": true,
+    "onPause_wipe_and_retained_onStop_reviewed": true,
+    "original_fast_return_test_unchanged": true,
+    "raw_artifact_and_four_reports_independently_checked_by_task_list_lead": true
+  },
+  "runtime_rerun_by_PM": false,
+  "risk": "Pauses including some system dialogs or multiwindow transitions intentionally discard drafts; user copy and guide disclose this. Historical onStop dispatch cause remains unproven.",
+  "limits": [
+    "Shared current-source validation and protected integration pending.",
+    "No physical Android or TalkBack acceptance.",
+    "No full N-014 or original requirement closure.",
+    "No independent accuracy, store release or maintained distribution signing identity."
+  ]
+}
