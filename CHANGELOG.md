@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-180738-android-first-failure-lifecycle-metadata-f4f208eb
+
+Recorded 2026-11-20T18:07:38.825303+00:00 · Contributor: Codex · change
+
+- **Changed.** Add one capped failure-only owned Android event metadata query after a zero-case first control failure, without retaining raw event content or changing success predicates.
+- **Evidence.** 46 focused controls and4 isolated main lifecycle-metadata controls pass. Verified AOSP schema positions bind exact component/action fields; malformed or unavailable data cannot mask primary failure. The real cad8 Ready-screen zero-case failure remains FAILED and source-bound. [Change record](./runs/changes/2026-11-20-180738-android-first-failure-lifecycle-metadata-f4f208eb.json).
+- **Not claimed.** No native change, new-source Android execution, known lifecycle cause, runtime fix, success timing change, raw event log retention, capability/boundary refresh, physical/human acceptance or original closure.
+
+
 ### 2026-11-20-175257-android-early-share-diagnostics-b944d940
 
 Recorded 2026-11-20T17:52:57.664252+00:00 · Contributor: Codex · change

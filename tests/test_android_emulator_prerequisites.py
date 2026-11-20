@@ -279,7 +279,7 @@ class EarlyShareDiagnostics(unittest.TestCase):
     CASES=['receive_requires_explicit_check','actual_offline_ps_finding','edit_hides_previous_finding',
            'new_share_and_no_finding','unsupported_mime_has_no_verdict','clear_removes_input_and_result']
 
-    def control(self,failure=None):
+    def control(self,failure=None,metadata=None):
         report={};cases=[];calls=[]
         def maybe_fail():
             if report['control_stage']==failure:
@@ -307,7 +307,7 @@ class EarlyShareDiagnostics(unittest.TestCase):
                 ET.SubElement(view,'node',{'text':'Review before running this command.'})
             report['last_ui_observation']=module.owned_ui_observation(view)
             self.assertTrue(predicate(view));return view
-        try:module.verify_share_controls(send,shell,wait,click,report,cases)
+        try:module.verify_share_controls(send,shell,wait,click,report,cases,metadata)
         except module.AndroidControlRefusal as error:return report,cases,calls,error
         return report,cases,calls,None
 
@@ -401,6 +401,76 @@ class EarlyShareDiagnostics(unittest.TestCase):
                 self.assertNotIn('last_ui_observation',report)
                 self.assertNotIn('PRIVATE_',out.getvalue());self.assertNotIn(temporary,out.getvalue())
                 fake_process.terminate.assert_called_once()
+
+
+class LifecycleMetadataDiagnostics(unittest.TestCase):
+    def line(self,tag,values):return ('I/'+tag+'( 123): ['+','.join(values)+']\n').encode()
+
+    def test_exact_owned_schema_positions_and_finite_action_sequence(self):
+        raw=b'--------- beginning of events\n'
+        raw+=self.line('wm_create_activity',['0','55','7',module.COMPONENT,'android.intent.action.SEND','text/plain','PRIVATE_URI_CANARY','0'])
+        raw+=self.line('wm_new_intent',['0','55','7',module.PACKAGE+'/'+module.PACKAGE+'.CheckActivity','android.intent.action.MAIN','','PRIVATE_URI_CANARY','0'])
+        raw+=self.line('wm_relaunch_activity',['0','55','7',module.COMPONENT,'PRIVATE_CONFIG_CANARY'])
+        for tag in ['wm_on_create_called','wm_on_resume_called','wm_on_paused_called','wm_on_stop_called']:
+            raw+=self.line(tag,['55',module.PACKAGE+'.CheckActivity','PRIVATE_REASON_CANARY','999'])
+        result=module.lifecycle_event_observation(raw)
+        self.assertEqual(result['state'],'OBSERVED')
+        self.assertTrue(all(v==1 for v in result['observed_event_counts'].values()))
+        self.assertEqual(result['observed_start_actions']['wm_create_activity'],{'SEND':1,'MAIN':0,'OTHER':0})
+        self.assertEqual(result['observed_start_actions']['wm_new_intent'],{'SEND':0,'MAIN':1,'OTHER':0})
+        self.assertEqual(result['observed_sequence'],['wm_create_activity:SEND','wm_new_intent:MAIN','wm_relaunch_activity',
+            'wm_on_create_called','wm_on_resume_called','wm_on_paused_called','wm_on_stop_called'])
+        self.assertFalse(result['absence_proves_no_callback'])
+        serialized=json.dumps(result);self.assertNotIn('PRIVATE_',serialized);self.assertNotIn('999',serialized)
+        self.assertNotIn(module.PACKAGE,serialized)
+
+    def test_component_filter_rejects_sibling_prefix_and_wrong_field_binding(self):
+        raw=self.line('wm_create_activity',['0','55','7',module.PACKAGE+'.other/.CheckActivity','android.intent.action.SEND','',module.COMPONENT,'0'])
+        raw+=self.line('wm_on_create_called',['55','other.example.Activity',module.PACKAGE+'.CheckActivity','999'])
+        result=module.lifecycle_event_observation(raw)
+        self.assertEqual(result['state'],'NO_MATCHING_OWNED_EVENTS')
+        self.assertTrue(all(v==0 for v in result['observed_event_counts'].values()))
+        self.assertFalse(result['absence_proves_no_callback'])
+
+    def test_unknown_action_is_other_not_a_raw_string(self):
+        raw=self.line('wm_new_intent',['0','55','7',module.COMPONENT,'PRIVATE_ACTION_CANARY','','','0'])
+        result=module.lifecycle_event_observation(raw)
+        self.assertEqual(result['observed_start_actions']['wm_new_intent']['OTHER'],1)
+        self.assertNotIn('PRIVATE_ACTION_CANARY',json.dumps(result))
+
+    def test_malformed_records_are_partial_and_bounds_or_bad_encoding_unavailable(self):
+        for raw in [b'I/wm_create_activity(1): [bad]\n',b'PRIVATE_UNKNOWN_FRAMING\n',
+                    self.line('wm_create_activity',['not-numeric','55','7',module.COMPONENT,'android.intent.action.SEND','','','0'])]:
+            result=module.lifecycle_event_observation(raw)
+            self.assertEqual(result['state'],'PARTIAL');self.assertEqual(result['unparsed_selected_records'],1)
+            self.assertNotIn('PRIVATE_',json.dumps(result))
+        for raw in [b'\xff',b'x'*(module.LIFECYCLE_METADATA_BYTES+1),b'\n'*(module.LIFECYCLE_EVENT_LIMIT+5),None]:
+            self.assertEqual(module.lifecycle_event_observation(raw),{'state':'UNAVAILABLE','reason':'lifecycle_metadata_unavailable'})
+
+    def test_query_is_one_read_only_events_command_with_five_second_deadline(self):
+        shell=mock.Mock(return_value=b'')
+        result=module.collect_first_failure_metadata(shell)
+        shell.assert_called_once_with(['logcat','-b','events','-d','-t','128','-v','brief']+
+            [tag+':I' for tag in module.LIFECYCLE_EVENT_PROFILES]+['*:S'],5)
+        self.assertEqual(result['state'],'NO_MATCHING_OWNED_EVENTS')
+        shell=mock.Mock(side_effect=OSError('PRIVATE_NATIVE_ERROR_CANARY'))
+        self.assertEqual(module.collect_first_failure_metadata(shell),{'state':'UNAVAILABLE','reason':'lifecycle_metadata_unavailable'})
+        shell.assert_called_once()
+
+    def test_diagnostics_only_on_first_failure_and_cannot_mask_primary_refusal(self):
+        runner=EarlyShareDiagnostics()
+        for failure in [None,'share_finding_view']:
+            collect=mock.Mock(side_effect=AssertionError('Diagnostics must not run'))
+            report,cases,calls,error=runner.control(failure,collect);collect.assert_not_called()
+        collect=mock.Mock(return_value={'state':'NO_MATCHING_OWNED_EVENTS'})
+        report,cases,calls,error=runner.control('share_first_receive',collect)
+        collect.assert_called_once_with();self.assertEqual(error.code,'share_first_receive_unavailable');self.assertEqual(cases,[])
+        self.assertEqual(report['first_failure_lifecycle'],{'state':'NO_MATCHING_OWNED_EVENTS'})
+        collect=mock.Mock(side_effect=RuntimeError('PRIVATE_DIAGNOSTIC_CANARY'))
+        report,cases,calls,error=runner.control('share_first_receive',collect)
+        self.assertEqual(error.code,'share_first_receive_unavailable');self.assertEqual(cases,[])
+        self.assertEqual(report['first_failure_lifecycle'],{'state':'UNAVAILABLE','reason':'lifecycle_metadata_unavailable'})
+        self.assertNotIn('PRIVATE_',json.dumps(report)+str(error))
 
 
 class BackgroundControlDiagnostics(unittest.TestCase):

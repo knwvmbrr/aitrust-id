@@ -1,0 +1,188 @@
+{
+  "format": "ai-trust-id-android-first-failure-lifecycle/v1",
+  "recorded_at": "2026-11-20T18:07:05.389388+00:00",
+  "author": "Codex Debugging Lead",
+  "records": [
+    "N-014"
+  ],
+  "base_commit": "cad8bfb28b44ab5257dcb07d0c5823275626b98b",
+  "sources_sha256": {
+    "scripts/verify-android-emulator.py": "d2874d12fe90f2619c5f90a407afe989ae0640844631af8a5fde0e108c1a7fc7",
+    "tests/test_android_emulator_prerequisites.py": "1f8187bf906fd0391cc63180fc03b1e37d91414273138b11b14429d2a43ad07d"
+  },
+  "architecture": {
+    "change": "Single failure-only read-only capped event query; reduce verified AOSP tag positions to exact-owned finite event/action counts and sequence.",
+    "query_count_maximum": 1,
+    "query_on_success": false,
+    "query_timeout_seconds": 5,
+    "logcat_tail_count": 128,
+    "parser_byte_limit": 65536,
+    "parser_line_limit": 132,
+    "native_inputs_changed": false,
+    "original_seven_controls_and_40_second_waits_changed": false,
+    "privacy": "No raw event output, IDs, timestamps, MIME, URI, reasons, extras, paths or subject text retained; unavailable/partial data cannot replace the original failure.",
+    "limits": [
+      "Log-record absence does not prove a callback did not execute.",
+      "Foreign and unsupported framing cannot establish owned lifecycle history.",
+      "This metadata has no success or tag predicate."
+    ]
+  },
+  "verified_primary_event_schemas": [
+    {
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/heads/android16-release/services/core/java/com/android/server/wm/EventLogTags.logtags",
+      "sha256": "bfbb60473bb0c9c1a2244d66f7b6fa0e7754d2c0f7db0e6d8032a40c6dba93f7"
+    },
+    {
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/refs/heads/android16-release/core/java/android/app/EventLogTags.logtags",
+      "sha256": "5963f351940253b23bd595d8af3c371c3cc56832e04adfb846279ef870d12468"
+    }
+  ],
+  "preserved_ready_failure": {
+    "run_id": 44787621743,
+    "job_id": 136466537223,
+    "source_commit": "cad8bfb28b44ab5257dcb07d0c5823275626b98b",
+    "helper_sha256": "b5e6b827e96d809bc554c88d56b71ccc8ebdcd7d3370ab464bade5636c5b3e42",
+    "artifact_id": 14653914271,
+    "artifact_bytes": 6385327,
+    "artifact_sha256": "bcc285b970a7c27d2cd940544ba2e4a18e1bc8c68db7f7330bfcb3cdd5db7870",
+    "raw_emulator_sha256": "0cba856287474fe474b331a74bcfdb1297d777fb43ce7674906578742310f006",
+    "reported_result": {
+      "format": "ai-trust-id-android-emulator/v1",
+      "recorded_at": "2026-11-20T17:54:39.577522+00:00",
+      "status": "FAILED",
+      "pass": false,
+      "physical_device_evidence": false,
+      "independent_accuracy_evidence": false,
+      "cases": [],
+      "prerequisites": {
+        "github_hosted_linux": true,
+        "sdkmanager": true,
+        "avdmanager": true,
+        "adb": true,
+        "emulator_preinstalled": false,
+        "aosp_image_preinstalled": false,
+        "kvm_device_exists": true,
+        "kvm_access": true,
+        "existing_license_record": true,
+        "metadata_license_hash_recorded": false,
+        "sdk_writable": true,
+        "sdk_free_bytes": 90795909120
+      },
+      "bound_revisions": {
+        "emulator": "37.3.10",
+        "system-images;android-36;default;x86_64": "2"
+      },
+      "requested_packages": [
+        "emulator",
+        "system-images;android-36;default;x86_64"
+      ],
+      "existing_license_record_sha256": "c43fa37686457c3f18caa3607945f4ec52a9d1beaaad8117e50dc4e863270c85",
+      "sdk_license_acceptance_inferred_from_metadata_hash": false,
+      "phase": "share_controls",
+      "metadata_reviews": [
+        {
+          "package": "emulator",
+          "metadata_sha256": "b97da160df8d80f0fe67739643cb53fbfcafd9c502ef57b78c038645062865ee",
+          "metadata_bytes": 433165,
+          "revision": "37.3.10",
+          "license_sha1": "efa68a6b3c661d18699d5c026771d5911cdc2f83"
+        },
+        {
+          "package": "system-images;android-36;default;x86_64",
+          "metadata_sha256": "7b119fdc282a65432aab52e8bbc64546f7fb6ec74e79e235633c60d06564b111",
+          "metadata_bytes": 189048,
+          "revision": "2",
+          "license_sha1": "efa68a6b3c661d18699d5c026771d5911cdc2f83"
+        }
+      ],
+      "license_record_unchanged": true,
+      "control_stage": "share_first_receive",
+      "share_start_observation": {
+        "status_ok_reported": true,
+        "status_timeout_reported": false,
+        "error_reported": false,
+        "warning_reported": false,
+        "owned_component_reported": true
+      },
+      "ui_operation": "observed",
+      "last_ui_observation": {
+        "owned_ui_present": true,
+        "owned_editor_present": true,
+        "owned_editor_nonempty": true,
+        "received_text_present": false,
+        "ready_text_present": true,
+        "cleared_text_present": false,
+        "changed_text_present": false,
+        "finding_text_present": false,
+        "no_finding_text_present": false,
+        "unsupported_mime_text_present": false,
+        "unavailable_text_present": false,
+        "tag_ps_present": false,
+        "first_synthetic_text_present": false,
+        "system_ui_present": false,
+        "launcher_ui_present": false,
+        "platform_error_dialog_present": false
+      },
+      "reason": "An owned Android Share control did not complete.",
+      "diagnostic_code": "share_first_receive_unavailable",
+      "elapsed_seconds": 139.717
+    },
+    "cause_known": false,
+    "editor_nonempty_may_be_hint": true
+  },
+  "checks": {
+    "focused_unittest_passed": 46,
+    "focused_unittest_failed": 0,
+    "focused_log_sha256": "14c1750f9355596da0784058a88b0cf23d1ba85f0993c46b09bd59d78d77ff35",
+    "actual_isolated_main_controls": [
+      {
+        "mode": "observed",
+        "metadata_state": "OBSERVED",
+        "exit_code": 1,
+        "exact_one_mock_owned_query": true,
+        "primary_failure_preserved": true,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "mode": "partial",
+        "metadata_state": "PARTIAL",
+        "exit_code": 1,
+        "exact_one_mock_owned_query": true,
+        "primary_failure_preserved": true,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "mode": "missing",
+        "metadata_state": "NO_MATCHING_OWNED_EVENTS",
+        "exit_code": 1,
+        "exact_one_mock_owned_query": true,
+        "primary_failure_preserved": true,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      },
+      {
+        "mode": "unavailable",
+        "metadata_state": "UNAVAILABLE",
+        "exit_code": 1,
+        "exact_one_mock_owned_query": true,
+        "primary_failure_preserved": true,
+        "private_values_excluded": true,
+        "actual_android_cases": 0
+      }
+    ],
+    "source_hashes_stable": true
+  },
+  "limits": {
+    "actual_new_source_android_execution": false,
+    "raw_actual_event_logs_saved": false,
+    "original_cause_proven": false,
+    "runtime_bug_fixed": false,
+    "SDK_or_emulator_started_locally": false,
+    "current_capability_boundary_receipts_refreshed": false,
+    "physical_device_evidence": false,
+    "independent_accuracy_evidence": false,
+    "original_requirement_closed": false
+  }
+}

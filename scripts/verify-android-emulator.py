@@ -287,7 +287,67 @@ def share_start_observation(raw):
     }
 
 
-def verify_share_controls(send,shell,wait,click,report,cases):
+LIFECYCLE_EVENT_PROFILES={
+    'wm_create_activity':(8,3),'wm_new_intent':(8,3),'wm_relaunch_activity':(5,3),
+    'wm_on_create_called':(4,1),'wm_on_resume_called':(4,1),
+    'wm_on_paused_called':(4,1),'wm_on_stop_called':(4,1),
+}
+LIFECYCLE_EVENT_LIMIT=128
+LIFECYCLE_METADATA_BYTES=65536
+
+
+def lifecycle_event_observation(raw):
+    """Reduce bounded AOSP event records to exact-owned finite metadata only.
+
+    Components/actions occupy verified schema positions. Remaining fields may
+    contain private URI/reason data; they are never copied into the result.
+    Counts mean matching log records, not proof of unlogged lifecycle behavior.
+    """
+    unavailable={'state':'UNAVAILABLE','reason':'lifecycle_metadata_unavailable'}
+    if not isinstance(raw,bytes) or len(raw)>LIFECYCLE_METADATA_BYTES:return unavailable
+    try:lines=raw.decode('utf-8','strict').splitlines()
+    except UnicodeError:return unavailable
+    if len(lines)>LIFECYCLE_EVENT_LIMIT+4:return unavailable
+    counts={tag:0 for tag in LIFECYCLE_EVENT_PROFILES}
+    actions={tag:{'SEND':0,'MAIN':0,'OTHER':0} for tag in ('wm_create_activity','wm_new_intent')}
+    sequence=[];unparsed=0;selected=0
+    components={COMPONENT,PACKAGE+'/'+PACKAGE+'.CheckActivity',PACKAGE+'.CheckActivity'}
+    for line in lines:
+        match=re.fullmatch(r'[VDIWEF]/(wm_[a-z_]+)\s*\(\s*\d+\):\s*(.*)',line)
+        if not match:
+            if line.strip() and not line.startswith('---------'):unparsed+=1
+            continue
+        if match[1] not in LIFECYCLE_EVENT_PROFILES:continue
+        selected+=1
+        if selected>LIFECYCLE_EVENT_LIMIT:return unavailable
+        tag=match[1];body=match[2];size,index=LIFECYCLE_EVENT_PROFILES[tag]
+        if not body.startswith('[') or not body.endswith(']'):
+            unparsed+=1;continue
+        values=[part.strip() for part in body[1:-1].split(',')]
+        if len(values)!=size or any(not re.fullmatch(r'-?\d{1,20}',v) for v in values[:index]):
+            unparsed+=1;continue
+        if values[index] not in components:continue
+        counts[tag]+=1
+        if tag in actions:
+            action={'android.intent.action.SEND':'SEND','android.intent.action.MAIN':'MAIN'}.get(values[4],'OTHER')
+            actions[tag][action]+=1;sequence.append(tag+':'+action)
+        else:sequence.append(tag)
+    matched=sum(counts.values())
+    return {'state':'PARTIAL' if unparsed else ('OBSERVED' if matched else 'NO_MATCHING_OWNED_EVENTS'),
+            'observed_event_counts':counts,'observed_start_actions':actions,
+            'observed_sequence':sequence,'unparsed_selected_records':unparsed,
+            'absence_proves_no_callback':False}
+
+
+def collect_first_failure_metadata(shell):
+    """One read-only, capped, failure-only discriminator in the owned AVD."""
+    args=['logcat','-b','events','-d','-t',str(LIFECYCLE_EVENT_LIMIT),'-v','brief']
+    args += [tag+':I' for tag in LIFECYCLE_EVENT_PROFILES]+['*:S']
+    try:return lifecycle_event_observation(shell(args,5))
+    except Exception:return {'state':'UNAVAILABLE','reason':'lifecycle_metadata_unavailable'}
+
+
+def verify_share_controls(send,shell,wait,click,report,cases,first_failure_metadata=None):
     """Original first six controls; diagnostic stages do not change acceptance."""
     def text(view,value):return any(value in n.attrib.get('text','') for n in view.iter('node'))
     try:
@@ -339,6 +399,10 @@ def verify_share_controls(send,shell,wait,click,report,cases):
         cases.append({'case':'clear_removes_input_and_result','pass':True})
     except AndroidControlRefusal:raise
     except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,ET.ParseError,subprocess.SubprocessError):
+        if not cases and first_failure_metadata is not None:
+            # The primary refusal remains authoritative if diagnostics fail.
+            try:report['first_failure_lifecycle']=first_failure_metadata()
+            except Exception:report['first_failure_lifecycle']={'state':'UNAVAILABLE','reason':'lifecycle_metadata_unavailable'}
         raise AndroidControlRefusal(report['control_stage']) from None
 
 
@@ -445,7 +509,7 @@ def main():
         def send(value,kind='text/plain',action='android.intent.action.SEND'):
             report.pop('share_start_observation',None)
             report['share_start_observation']=share_start_observation(shell(['am','start','-W','-a',action,'-t',kind,'--es','android.intent.extra.TEXT',value,'-n',COMPONENT],20))
-        verify_share_controls(send,shell,wait,click,report,cases)
+        verify_share_controls(send,shell,wait,click,report,cases,lambda:collect_first_failure_metadata(shell))
         verify_background_clear(send,shell,wait,report)
         cases.append({'case':'background_clears_text','pass':True})
         permission_occurrences=shell(['dumpsys','package',PACKAGE]).decode().count('android.permission.INTERNET')
