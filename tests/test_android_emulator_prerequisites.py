@@ -275,4 +275,102 @@ class ManagerAcceptance(unittest.TestCase):
         self.assertIn('github_hosted_linux',self.report['missing_prerequisites']);install.assert_not_called()
 
 
+class BackgroundControlDiagnostics(unittest.TestCase):
+    def run_control(self,failure=None,final='cleared',tasks=None):
+        report={'cases':[{'case':'earlier_control','pass':True}]};calls=[];waits=[]
+        def view(status,marker=False):
+            root=ET.Element('hierarchy')
+            ET.SubElement(root,'node',{'resource-id':module.PACKAGE+':id/status','text':status})
+            ET.SubElement(root,'node',{'resource-id':module.PACKAGE+':id/editor','text':'synthetic private marker' if marker else ''})
+            return root
+        def send(value):
+            calls.append(('send',value))
+            if failure=='background_receive':raise OSError('PRIVATE_COMMAND_CANARY')
+        def shell(argv):
+            calls.append(('shell',argv))
+            stage=report['control_stage']
+            if failure==stage:raise subprocess.CalledProcessError(9,['PRIVATE_COMMAND_CANARY'],b'PRIVATE_OUTPUT_CANARY',b'PRIVATE_ERROR_CANARY')
+            if argv==['dumpsys','activity','activities']:
+                return tasks if tasks is not None else ('Task{abc #73 type=standard A=10001:'+module.PACKAGE+'}\n').encode()
+            return b''
+        def wait(predicate):
+            waits.append(predicate)
+            if len(waits)==1:
+                received=view('Text received. Review it, then tap Check.',True)
+                self.assertTrue(predicate(received));return received
+            if failure=='background_cleared_view':
+                self.assertFalse(predicate(view('Unrelated foreground text',True)))
+                raise ValueError('PRIVATE_TIMEOUT_CANARY')
+            seen=view('Ready when you are.' if final=='ready' else 'Cleared. Your text and result are no longer shown.',final=='marker')
+            self.assertTrue(predicate(seen));return seen
+        try:module.verify_background_clear(send,shell,wait,report)
+        except module.AndroidControlRefusal as error:return report,calls,waits,error
+        return report,calls,waits,None
+
+    def test_original_command_order_and_ready_or_cleared_success_are_preserved(self):
+        for final in ['ready','cleared']:
+            report,calls,waits,error=self.run_control(final=final)
+            self.assertIsNone(error);self.assertEqual(len(waits),2)
+            self.assertEqual(calls,[('send','synthetic private marker'),
+                ('shell',['input','keyevent','KEYCODE_HOME']),
+                ('shell',['dumpsys','activity','activities']),('shell',['am','task','focus','73'])])
+            self.assertEqual(report['background_owned_task_matches'],1)
+            self.assertEqual(report['cases'],[{'case':'earlier_control','pass':True}])
+            self.assertEqual(report['control_stage'],'background_marker_absence')
+            self.assertEqual(report['background_observation'],{'owned_ui_present':True,'ready_text_present':final=='ready',
+                'cleared_text_present':final=='cleared','synthetic_marker_present':False})
+
+    def test_every_command_failure_is_fixed_and_cannot_append_a_pass(self):
+        for stage in ['background_receive','background_home','background_task_inventory','background_refocus','background_cleared_view']:
+            report,calls,waits,error=self.run_control(failure=stage)
+            self.assertIsInstance(error,module.AndroidControlRefusal)
+            self.assertEqual(error.code,module.AndroidControlRefusal.STAGES[stage])
+            self.assertEqual(str(error),error.code);self.assertTrue(error.__suppress_context__)
+            self.assertEqual(report['control_stage'],stage)
+            self.assertEqual(report['cases'],[{'case':'earlier_control','pass':True}])
+            self.assertNotIn('PRIVATE_',json.dumps(report)+str(error))
+        self.assertEqual(report['background_observation'],{'owned_ui_present':True,'ready_text_present':False,
+            'cleared_text_present':False,'synthetic_marker_present':True})
+
+    def test_absent_owned_task_refuses_before_focus_without_dump_echo(self):
+        report,calls,waits,error=self.run_control(tasks=b'Task{abc #999 A=other.example PRIVATE_DUMP_CANARY}\n')
+        self.assertEqual(error.code,'background_owned_task_unavailable');self.assertEqual(report['background_owned_task_matches'],0)
+        self.assertFalse(any(call[0]=='shell' and call[1][:3]==['am','task','focus'] for call in calls))
+        self.assertNotIn('PRIVATE_DUMP_CANARY',json.dumps(report)+str(error))
+
+    def test_marker_retention_still_refuses_after_cleared_text(self):
+        report,calls,waits,error=self.run_control(final='marker')
+        self.assertEqual(error.code,'background_marker_retained')
+        self.assertTrue(report['background_observation']['synthetic_marker_present'])
+        self.assertTrue(report['background_observation']['cleared_text_present'])
+
+    def test_inventory_decode_failure_is_fixed_not_a_false_missing_task(self):
+        report,calls,waits,error=self.run_control(tasks=b'\xffPRIVATE_DUMP_CANARY')
+        self.assertEqual(error.code,'background_task_inventory_unavailable')
+        self.assertNotIn('background_owned_task_matches',report)
+
+    def test_original_first_match_behavior_is_not_changed_by_diagnostics(self):
+        tasks=('Task{a #73 A='+module.PACKAGE+'}\nTask{b #74 A='+module.PACKAGE+'}\n').encode()
+        report,calls,waits,error=self.run_control(tasks=tasks)
+        self.assertIsNone(error);self.assertEqual(report['background_owned_task_matches'],2)
+        self.assertEqual(calls[-1],('shell',['am','task','focus','73']))
+
+    def test_fixed_stage_codes_reach_main_without_private_details(self):
+        with tempfile.TemporaryDirectory() as temp:
+            for stage,code in module.AndroidControlRefusal.STAGES.items():
+                def refuse(sdk,report):
+                    report['phase']='share_controls';report['control_stage']=stage
+                    raise module.AndroidControlRefusal(stage)
+                with mock.patch.object(module,'ROOT',Path(temp)),mock.patch.object(sys,'argv',['verify','--sdk-root',temp,'--apk','PRIVATE_ARG_CANARY']),mock.patch.object(module,'prepare_emulator',side_effect=refuse),mock.patch('sys.stdout',new_callable=io.StringIO) as out:
+                    self.assertEqual(module.main(),1)
+                report=json.loads(out.getvalue());self.assertEqual(report['diagnostic_code'],code)
+                self.assertEqual(report['phase'],'share_controls');self.assertEqual(report['control_stage'],stage)
+                self.assertFalse(report['pass']);self.assertEqual(report['status'],'FAILED');self.assertEqual(report['cases'],[])
+                self.assertNotIn('PRIVATE_',out.getvalue());self.assertNotIn(temp,out.getvalue())
+
+    def test_unknown_stage_cannot_be_published(self):
+        with self.assertRaisesRegex(ValueError,'^Invalid Android control diagnostic$'):
+            module.AndroidControlRefusal('PRIVATE_STAGE_CANARY')
+
+
 if __name__=='__main__':unittest.main()

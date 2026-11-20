@@ -113,3 +113,79 @@ run. Updates to the reviewed package selection and fixed diagnostic codes are
 engineering changes, not a reason to accept new terms or mark runtime tests
 passed. The source constant and dated change records carry the selected revision;
 this guide does not duplicate a moving version number.
+
+## Six executed controls; background failure still unresolved
+
+[Hosted run44776757754](https://github.com/knwvmbrr/aitrust-id/actions/runs/44776757754)
+matched both reviewed metadata documents, left the license record unchanged,
+installed/booted the owned emulator and ran the development APK. Its first six
+original controls passed: explicit-check receipt, an offline PS finding, edit
+invalidation, new Share/no finding, unsupported MIME refusal and Clear. The
+seventh background-clear control did not complete. The producer remains FAILED;
+its generic report does not establish whether task lookup, refocusing or the UI
+assertion failed. Six passes do not become seven, a physical-device result or
+full runtime acceptance.
+
+The separate diagnostic revision preserves the same seven controls, existing
+commands, first task match, assertions and wait deadlines. It extracts only the
+background control into a fixed-boundary helper. `control_stage` identifies
+receive, HOME, task inventory, task lookup, refocus, cleared view or marker absence;
+a failure publishes only its fixed `diagnostic_code`. From data already read,
+the report records the task-match count and owned-UI / ready / cleared / synthetic
+marker booleans. It publishes no task IDs, hierarchy dump, native error, command
+output, path or input text. Those flags describe the observed hierarchy, not
+proof that `onStop` completed. License/prerequisite Unavailable handling remains
+unchanged. Diagnostics do not fix or claim to fix the unresolved runtime failure.
+
+The reviewed [AOSP Android16 shell implementation](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/android16-release/services/core/java/com/android/server/am/ActivityManagerShellCommand.java)
+supports `am task focus`; [ActivityTaskManagerService](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/android16-release/services/core/java/com/android/server/wm/ActivityTaskManagerService.java)
+can silently return if no attached task/running activity is found. A successful
+shell return alone does not establish that the expected app became visible.
+No new Share/launcher intent is substituted: it could clear the editor itself
+and mask a lifecycle failure. There is no added SDK retry or license acceptance.
+
+## Earlier privacy clearing candidate
+
+The diagnostic hosted run44778572444 again failed the original seventh fast-return
+control after six passes. Task lookup/refocus returned, and its last observed
+owned foreground hierarchy still contained the synthetic marker rather than a
+ready/cleared message. This proves the failed privacy observation; it does not
+prove that Android had delivered `onStop` (or even `onPause`) between HOME and
+refocus. The exact FAILED report remains historical evidence.
+
+The next source candidate clears through the same `wipe()` method in `onPause`
+as well as `onStop`. This cancels/destroys the owned renderer, invalidates stale
+session tickets and clears editor/result state as soon as the activity pauses,
+rather than relying solely on a later stop. Repeated clearing is deliberate.
+The on-screen privacy note describes pause clearing. Some system dialogs and
+multiwindow transitions can pause a screen while it remains visible; its draft
+and result will then be lost. This favors dropping private state over preserving
+an interrupted draft. Keyboard display and the inline Why-this-tag disclosure
+are not separate activities. This is not a promise that every focus loss on
+all Android versions dispatches a pause.
+
+The original immediate HOME→task-refocus assertion remains unchanged. No STOPPED
+wait, fresh launch/Share intent, delay, assertion removal or positive result
+substitution masks it. Local wiring/state controls cannot establish actual
+Android lifecycle dispatch: a new source-bound hosted APK run must execute all
+seven original controls before a complete runtime pass can be recorded.
+
+## Source-bound API36 seven-control pass
+
+[Run44779986361](https://github.com/knwvmbrr/aitrust-id/actions/runs/44779986361)
+executed source `d50793165254fe666a165542624fcdc159d01293` and completed all
+seven original controls on the owned API36 emulator, including the unchanged
+immediate HOME/refocus check. Its final owned UI showed the cleared message and
+no marker; `emulator.json` is EXECUTED / pass:true / case_count7, with no Internet
+permission and an unchanged existing license record. Actual hosted JVM controls,
+APK compilation, development test-signature verification and pinned-engine parity
+also passed. This is a bounded synthetic emulator result, not physical-device,
+real sending-app/Share chooser, human TalkBack, independent accuracy or release
+acceptance. The two earlier failed runs remain failed; this pass does not retroactively
+prove which callbacks they received.
+
+The immutable receipt `runs/2026-11-20-android-pause-hosted-seven.json` binds the
+exact downloaded artifact, raw reports, native build sources, current helper and
+signed development test APK. Shared protocol/boundary/state integration and review
+are still pending in draft PR134. No full N-014 or other original requirement is
+closed by this component result. No further unchanged runtime retry is needed.

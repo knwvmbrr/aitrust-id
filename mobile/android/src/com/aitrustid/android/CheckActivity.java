@@ -69,7 +69,7 @@ public final class CheckActivity extends Activity {
             if(proposed.codePointCount(0,proposed.length())>ShareSession.MAX_CODEPOINTS){status.setText("Keep the text under 20,001 characters. The extra text was not added.");return "";}return null;
         }});
         column.addView(editor,new LinearLayout.LayoutParams(-1,dp(180)));
-        TextView privacy=text("Stays on this device. Text clears when you leave this screen.",14);privacy.setTextColor(color(R.color.muted));column.addView(privacy);
+        TextView privacy=text("Stays on this device. Text and results clear when this screen pauses, including some system dialogs.",14);privacy.setTextColor(color(R.color.muted));column.addView(privacy);
         LinearLayout actions=new LinearLayout(this);actions.setOrientation(LinearLayout.HORIZONTAL);
         check=button("Check PS",R.id.check);Button clear=button("Clear",R.id.clear);cancel=button("Cancel check",R.id.cancel);
         actions.addView(check,new LinearLayout.LayoutParams(0,-2,1));actions.addView(clear,new LinearLayout.LayoutParams(0,-2,1));column.addView(actions);
@@ -133,6 +133,7 @@ public final class CheckActivity extends Activity {
     }
     private void stopEngine(){if(engine!=null){engine.stop();engine=null;}}
     private void wipe(){stopEngine();session.clear();setText("");resetResult();status.setText("Cleared. Your text and result are no longer shown.");refresh();}
+    @Override protected void onPause(){wipe();super.onPause();}
     @Override protected void onStop(){wipe();super.onStop();}
     @Override protected void onDestroy(){stopEngine();session.clear();super.onDestroy();}
     @Override protected void onSaveInstanceState(Bundle state){super.onSaveInstanceState(state);state.clear();}

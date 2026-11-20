@@ -16,7 +16,11 @@ public final class ShareSessionTest {
         long pending=session.begin();session.cancel();require(!session.finish(pending,ShareSession.State.FINDING)&&session.state()==ShareSession.State.REVIEW);
         long newest=session.begin();require(!session.finish(pending,ShareSession.State.FINDING));require(session.finish(newest,ShareSession.State.UNAVAILABLE));
         long leaving=session.begin();session.clear();require(!session.finish(leaving,ShareSession.State.FINDING)&&session.text().isEmpty()&&session.state()==ShareSession.State.EMPTY);
+        // Pause then Stop can both clear. The second clear must not revive text
+        // or stale work, and a later explicitly supplied input can start fresh.
+        session.clear();require(!session.current(leaving)&&!session.finish(leaving,ShareSession.State.FINDING)&&session.text().isEmpty()&&session.state()==ShareSession.State.EMPTY);
         boolean refused=false;try{session.begin();}catch(IllegalStateException expected){refused=true;}require(refused);
+        session.replace("printf hello");long resumed=session.begin();require(session.finish(resumed,ShareSession.State.NO_FINDING));
         System.out.println("Android pure-JVM input/lifecycle controls passed; no Android runtime or accuracy claim.");
     }
 }

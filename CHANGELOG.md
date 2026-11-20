@@ -9,6 +9,31 @@ Recorded 2026-11-20T17:08:49.724088+00:00 · Contributor: Codex task-list lead �
 - **Changed.** Record completion of the two predeclared CLI jobs and the live optional Python-flow browser preview; update dated worker assignments and actual publication pointers.
 - **Evidence.** Protected head1236 merged as04b11a12 after eleven required passes and zero review threads. The public checker passes actual Chromium/WebKit tests and sixteen critical asset-byte checks across two origins. Current accounting validates twelve scoped tasks, zero original closures, and preserved132complete/70open with valid state chronology. [Change record](./runs/changes/2026-11-20-170849-close-published-credential-deliveries-782a295d.json).
 - **Not claimed.** No full original criterion was changed or completed. No independent detector accuracy, physical-device acceptance, full-site artifact equivalence or first-try success is claimed. Android remains an active separate d507 PR134 followup after six-of-seven runtime results; this operations record does not redeploy the site or replace its deployed changelog.
+### 2026-11-20-171211-android-pause-hosted-seven-proof-75ae93cd
+
+Recorded 2026-11-20T17:12:11.883899+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain exact source-bound API36 seven-control emulator execution for the pause-clearing candidate, preserving the earlier failed reports and release limits.
+- **Evidence.** Actual hosted run44779986361 at d507931 executes all seven original controls successfully with unchanged fast-return helper10b37854. Exact GitHub artifact digest, raw reports, native sources and signed development APK are bound; hosted JVM, compile and137 engine-parity controls pass. [Change record](./runs/changes/2026-11-20-171211-android-pause-hosted-seven-proof-75ae93cd.json).
+- **Not claimed.** One bounded synthetic emulator execution, not physical-device/Share chooser/human TalkBack/accuracy/full N-014 acceptance. Historical callback dispatch remains unproven; shared protocol/boundary/state integration and review are pending. No further runtime rerun.
+
+
+### 2026-11-20-170531-android-clear-on-pause-candidate-2a862184
+
+Recorded 2026-11-20T17:05:31.825507+00:00 · Contributor: Codex · change
+
+- **Changed.** Clear private Android editor/result/renderer state at onPause as well as onStop, retain the unchanged fast-return control, and disclose interrupted-draft loss.
+- **Evidence.** The actual diagnostic hosted run remains FAILED6/7 at background_cleared_view with owned UI and marker present. A new source-wiring regression fails before onPause and passes after it;10 focused controls pass. Added JVM double-clear/fresh-input controls await the existing hosted verifier. [Change record](./runs/changes/2026-11-20-170531-android-clear-on-pause-candidate-2a862184.json).
+- **Not claimed.** No observed onPause/onStop dispatch in the historical failure, no verified lifecycle fix, no new-source Android runtime pass, physical-device proof or original closure. Shared integration gates remain pending.
+
+
+### 2026-11-20-165634-android-background-diagnostic-boundaries-92ef3ede
+
+Recorded 2026-11-20T16:56:34.207066+00:00 · Contributor: Codex · change
+
+- **Changed.** Expose fixed owned background-control failure boundaries while preserving the seven Android controls and their command/assertion/deadline behavior.
+- **Evidence.** 34 focused controls and seven isolated main fault processes pass without SDK or emulator activity. Exact hosted run44776757754 remains FAILED after six original runtime passes; the seventh failure is retained as unknown driver/lifecycle cause. [Change record](./runs/changes/2026-11-20-165634-android-background-diagnostic-boundaries-92ef3ede.json).
+- **Not claimed.** Diagnostic-only follow-up; no changed-source Android execution, runtime fix, seventh-case pass, license acceptance, SDK retry, physical-device proof or original requirement closure.
 
 
 ### 2026-11-20-164850-credential-state-chronology-correction-6dbcd154
