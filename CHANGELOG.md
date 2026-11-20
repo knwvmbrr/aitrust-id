@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-170531-android-clear-on-pause-candidate-2a862184
+
+Recorded 2026-11-20T17:05:31.825507+00:00 · Contributor: Codex · change
+
+- **Changed.** Clear private Android editor/result/renderer state at onPause as well as onStop, retain the unchanged fast-return control, and disclose interrupted-draft loss.
+- **Evidence.** The actual diagnostic hosted run remains FAILED6/7 at background_cleared_view with owned UI and marker present. A new source-wiring regression fails before onPause and passes after it;10 focused controls pass. Added JVM double-clear/fresh-input controls await the existing hosted verifier. [Change record](./runs/changes/2026-11-20-170531-android-clear-on-pause-candidate-2a862184.json).
+- **Not claimed.** No observed onPause/onStop dispatch in the historical failure, no verified lifecycle fix, no new-source Android runtime pass, physical-device proof or original closure. Shared integration gates remain pending.
+
+
 ### 2026-11-20-165634-android-background-diagnostic-boundaries-92ef3ede
 
 Recorded 2026-11-20T16:56:34.207066+00:00 · Contributor: Codex · change

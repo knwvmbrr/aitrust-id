@@ -1,0 +1,53 @@
+{
+  "format": "ai-trust-id-android-pause-clearing-candidate/v1",
+  "recorded_at": "2026-11-20T17:05:16.920918+00:00",
+  "author": "Codex Debugging Lead",
+  "records": [
+    "N-014"
+  ],
+  "base_commit": "12f795141370cfc3eff65fc7b1f903a9e50ff88a",
+  "sources_sha256": {
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "2ab7df4100143e4e17e9c87db74f15c1641edf54fff7a986c30b463aa2c6266b",
+    "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+    "tests/test_android_share.py": "6991a63dda1ad6817f85ab759f0e9f14149cbaa1e37fc1d08903bcd8541c9938",
+    "scripts/verify-android-emulator.py": "10b37854e202aaf842fd7e45ea68bf997877cec97ae9062832f030b46262c31c",
+    "tests/test_android_emulator_prerequisites.py": "a2318e7875a3d01cb211c25c6ad48f972254d1d25c1fff2dd073c3a3f4092d81",
+    "docs/android-share-developer.md": "66fe88ea503d42e9edb7de2b4c37bd6494e25f2753c56038dfc762c7c78e67ca"
+  },
+  "architecture": {
+    "change": "Call the existing idempotent wipe at onPause, preserving onStop; disclose interrupted-draft loss and preserve the unchanged fast-return emulator control.",
+    "reason": "The real HOME/refocus observation retains text; pause clearing deliberately drops private state earlier than relying only on stop.",
+    "risks": [
+      "Some system dialogs or multiwindow pauses clear a draft while it remains visible.",
+      "If Android never dispatches pause, this source change does not establish clearing; actual fast-return verification is still required."
+    ],
+    "original_background_control_unchanged": true,
+    "no_new_intent_delay_or_stopped_wait": true
+  },
+  "checks": {
+    "source_wiring_before": {
+      "passed": 9,
+      "failed": 1,
+      "signature": "Required lifecycle wipe callback absent",
+      "log_sha256": "43549299acbd3990ddfa8a0fbcde17692628a7d07fdc39c5ddc627ab28f75b43"
+    },
+    "focused_after": {
+      "passed": 10,
+      "failed": 0,
+      "command": "python3 -B -m unittest discover -s tests -p test_android_share.py -v",
+      "log_sha256": "11f7403d8baf9317b25b0e779cece8b6b4f110e41ce0982f9c720747a8fb17ac"
+    },
+    "actual_JVM_execution_local": false,
+    "local_JVM_reason": "No supported local JDK was available; existing hosted session verifier must exercise added double-clear/fresh-input assertions.",
+    "actual_changed_source_android_execution": false
+  },
+  "historical_failure_receipt": "runs/2026-11-20-android-background-hosted-failure.json",
+  "limits": {
+    "original_runtime_cause_proven": false,
+    "lifecycle_fix_verified": false,
+    "seventh_case_pass": false,
+    "physical_device_tested": false,
+    "independent_accuracy_evidence": false,
+    "original_requirement_closed": false
+  }
+}

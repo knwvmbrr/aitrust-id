@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-170531-android-clear-on-pause-candidate-2a862184",
+  "recorded_at": "2026-11-20T17:05:31.825507+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "12f795141370cfc3eff65fc7b1f903a9e50ff88a",
+  "changed": "Clear private Android editor/result/renderer state at onPause as well as onStop, retain the unchanged fast-return control, and disclose interrupted-draft loss.",
+  "proves": "The actual diagnostic hosted run remains FAILED6/7 at background_cleared_view with owned UI and marker present. A new source-wiring regression fails before onPause and passes after it;10 focused controls pass. Added JVM double-clear/fresh-input controls await the existing hosted verifier.",
+  "limits": "No observed onPause/onStop dispatch in the historical failure, no verified lifecycle fix, no new-source Android runtime pass, physical-device proof or original closure. Shared integration gates remain pending.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "2ab7df4100143e4e17e9c87db74f15c1641edf54fff7a986c30b463aa2c6266b",
+    "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+    "tests/test_android_share.py": "6991a63dda1ad6817f85ab759f0e9f14149cbaa1e37fc1d08903bcd8541c9938",
+    "docs/android-share-developer.md": "66fe88ea503d42e9edb7de2b4c37bd6494e25f2753c56038dfc762c7c78e67ca",
+    "runs/2026-11-20-android-background-hosted-failure.json": "6901ee9b55c16f334eaa75b0422ae32c7b1d49246b4f67288cc9a4218f14f433",
+    "runs/2026-11-20-android-pause-clearing-candidate.json": "ce58d05001ecafde9800a7e5ab1bacc0837602305276c5c8970244e83689b7a2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-background-hosted-failure.json",
+      "sha256": "6901ee9b55c16f334eaa75b0422ae32c7b1d49246b4f67288cc9a4218f14f433"
+    },
+    {
+      "path": "runs/2026-11-20-android-pause-clearing-candidate.json",
+      "sha256": "ce58d05001ecafde9800a7e5ab1bacc0837602305276c5c8970244e83689b7a2"
+    }
+  ],
+  "checks": []
+}

@@ -143,3 +143,29 @@ can silently return if no attached task/running activity is found. A successful
 shell return alone does not establish that the expected app became visible.
 No new Share/launcher intent is substituted: it could clear the editor itself
 and mask a lifecycle failure. There is no added SDK retry or license acceptance.
+
+## Earlier privacy clearing candidate
+
+The diagnostic hosted run44778572444 again failed the original seventh fast-return
+control after six passes. Task lookup/refocus returned, and its last observed
+owned foreground hierarchy still contained the synthetic marker rather than a
+ready/cleared message. This proves the failed privacy observation; it does not
+prove that Android had delivered `onStop` (or even `onPause`) between HOME and
+refocus. The exact FAILED report remains historical evidence.
+
+The next source candidate clears through the same `wipe()` method in `onPause`
+as well as `onStop`. This cancels/destroys the owned renderer, invalidates stale
+session tickets and clears editor/result state as soon as the activity pauses,
+rather than relying solely on a later stop. Repeated clearing is deliberate.
+The on-screen privacy note describes pause clearing. Some system dialogs and
+multiwindow transitions can pause a screen while it remains visible; its draft
+and result will then be lost. This favors dropping private state over preserving
+an interrupted draft. Keyboard display and the inline Why-this-tag disclosure
+are not separate activities. This is not a promise that every focus loss on
+all Android versions dispatches a pause.
+
+The original immediate HOME→task-refocus assertion remains unchanged. No STOPPED
+wait, fresh launch/Share intent, delay, assertion removal or positive result
+substitution masks it. Local wiring/state controls cannot establish actual
+Android lifecycle dispatch: a new source-bound hosted APK run must execute all
+seven original controls before a complete runtime pass can be recorded.
