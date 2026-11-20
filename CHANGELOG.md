@@ -45,6 +45,13 @@ Recorded 2026-11-20T16:22:02.096870+00:00 · Contributor: Codex PM · change
 - **Changed.** Record current integrated PS and PII engineering executions before final production build verification.
 - **Evidence.** Both configured current-source capability runs exited successfully, alongside the distinct Chromium/WebKit production modal review. [Change record](./runs/changes/2026-11-20-162202-credential-current-capability-execution-015cf396.json).
 - **Not claimed.** Protocol, extension, complete website, protected merge and public deployment still pending. Accuracy and original counts unchanged.
+### 2026-11-20-163850-credential-disclosure-measurement-readiness-6677cce1
+
+Recorded 2026-11-20T16:38:50.052546+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Wait for the actual optional credential form after native Enter and before judging disclosure expansion height; add a controlled delayed-child regression in the existing verifier.
+- **Evidence.** Authored absent child fails, actual ready child passes and genuinely fixed-height clipped body still fails. Actual PS disclosure probes pass in light and dark with the optional readiness hook exercised; helper/product/served hashes stayed stable. [Change record](./runs/changes/2026-11-20-163850-credential-disclosure-measurement-readiness-6677cce1.json).
+- **Not claimed.** Verifier-only change; product, method, visibility, thresholds and timeouts unchanged. First reviewer raw-count assertion error preserved and corrected without changing probe predicates. No full-site replay, tag closure, independent accuracy, physical phone or full WCAG claim.
 
 
 ### 2026-11-20-162050-credential-generated-public-scope-24dc5cf1

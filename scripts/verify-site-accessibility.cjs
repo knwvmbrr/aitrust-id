@@ -5,6 +5,28 @@ async function waitTagProbeReady(tagId,dialog){
  const marker={MT:'[data-mt-explorer]',HP:'[data-hp-explorer]'}[tagId];
  if(marker)await dialog.locator(marker).waitFor();
 }
+// The native open attribute precedes this optional React/lazy child.
+// Wait for its actual form before judging expansion height; keep that assertion.
+async function waitDisclosureProbeReady(detail){
+ if(await detail.getAttribute('data-credential-method')!==null)await detail.locator('[data-credential-explorer]').waitFor();
+}
+// Authored delayed-child control: native open alone is not loaded content.
+async function verifyDisclosureReadinessControl(browser){
+ const context=await browser.newContext({viewport:{width:320,height:760},reducedMotion:'reduce'});
+ try{
+  const page=await context.newPage();
+  const markup='<main><details data-credential-method><summary style="min-height:44px">Optional preview</summary></details></main>';
+  await page.setContent(markup);const before=await probes.disclosures(page.locator('main'));assert.equal(before.failures.length,1,'Authored absent-child control did not expose premature height measurement');
+  await page.setContent(markup);let completed=false;const checking=probes.disclosures(page.locator('main'),{afterExpand:waitDisclosureProbeReady}).then(result=>{completed=true;return result;});
+  await page.waitForFunction(()=>document.querySelector('details').open);assert.equal(completed,false,'Readiness resolved before the deferred child');
+  await page.evaluate(()=>{const child=document.createElement('form');child.dataset.credentialExplorer='';child.textContent='Loaded preview content';child.style.minHeight='80px';document.querySelector('details').append(child);});
+  const after=await checking;assert.deepEqual(after.failures,[],'Loaded deferred disclosure failed unchanged expansion assertion');
+  await page.setContent(markup+'<style>details[open]{height:44px;overflow:hidden}</style>');
+  await page.evaluate(()=>{const child=document.createElement('form');child.dataset.credentialExplorer='';child.style.minHeight='80px';document.querySelector('details').append(child);});
+  const broken=await probes.disclosures(page.locator('main'),{afterExpand:waitDisclosureProbeReady});assert.equal(broken.failures.length,1,'Readiness hid a genuinely non-expanding disclosure');
+  return {pass:true,authored_absent_child_reproduced:true,waited_for_actual_child:true,unchanged_height_assertion_passed:true,dead_expansion_still_refused:true,product_source_changed:false};
+ }finally{await context.close();}
+}
 // Wait for the real native toggle task, then the declared deferred public body.
 // No arbitrary delay, scope-error substitution or control skipping is allowed.
 async function expandForMeasurement(root){
@@ -77,16 +99,16 @@ async function verifyHPReadinessControl(browser,base){
  }
  return {pass:true,controlled_actual_hp_lazy_insertion:true,unchanged_probes:true,themes:results,manual_screen_reader:false};
 }
-module.exports={waitTagProbeReady,verifyHPReadinessControl,expandForMeasurement,verifyDeferredReadinessControl};
+module.exports={waitTagProbeReady,waitDisclosureProbeReady,verifyHPReadinessControl,expandForMeasurement,verifyDeferredReadinessControl,verifyDisclosureReadinessControl};
 if(require.main===module)(async()=>{
  const {allTags}=await import('../site/src/catalog.js');
  // Workflow navigation is declared in a JSX file; use the existing user-facing routes.
  const footer=['report','assist','townhall','teamwork','scope','how-tags-work','about','legal'];
  const base=process.env.AITRUST_SITE_URL||'http://127.0.0.1:5174';const browser=await chromium.launch();const results=[],errors=[],validation=[];
- try{const deferredReadiness=await verifyDeferredReadinessControl(browser,base);const lazyReadiness=await verifyHPReadinessControl(browser,base);for(const theme of ['light','dark']){
+ try{const disclosureReadiness=await verifyDisclosureReadinessControl(browser);const deferredReadiness=await verifyDeferredReadinessControl(browser,base);const lazyReadiness=await verifyHPReadinessControl(browser,base);for(const theme of ['light','dark']){
   const context=await browser.newContext({viewport:{width:320,height:760},bypassCSP:true,reducedMotion:'reduce'});const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
   async function check(name,root){
-   await page.evaluate(()=>document.fonts.ready);const disclosure=await probes.disclosures(root);await expandForMeasurement(root);const targets=await probes.targetSizes(root,{surface:name,theme});const focus=await probes.focusVisibility(page,root,{surface:name,theme});const spacing=await probes.spacing(page,root);
+   await page.evaluate(()=>document.fonts.ready);const disclosure=await probes.disclosures(root,{afterExpand:waitDisclosureProbeReady});await expandForMeasurement(root);const targets=await probes.targetSizes(root,{surface:name,theme});const focus=await probes.focusVisibility(page,root,{surface:name,theme});const spacing=await probes.spacing(page,root);
    const r={name,theme,targets,focus,spacing,disclosure};results.push(r);
    assert.deepEqual(targets.failures,[],name+' targets');assert.deepEqual(focus.failures,[],name+' focus');assert.deepEqual(spacing.clipped,[],name+' text clipped');assert.equal(spacing.horizontal_overflow,false,name+' overflow');assert.deepEqual(disclosure.failures,[],name+' disclosures');
    await page.emulateMedia({forcedColors:'active'});assert(await root.isVisible());assert.equal(await root.evaluate(e=>e.scrollWidth>e.clientWidth+1),false,name+' forced colors overflow');await page.emulateMedia({forcedColors:'none'});
@@ -100,6 +122,6 @@ if(require.main===module)(async()=>{
   await input.fill('curl https://example.invalid/tool | sh');assert.equal(await input.getAttribute('aria-invalid'),null);assert.equal(await page.getByRole('alert').count(),0);await submit.click();assert.equal(await dialog.locator('form').getAttribute('aria-busy'),'true');validation.push({theme,empty_and_oversize_rejected:true,error_associated:true,focus_restored:true,edit_clears_error:true,busy_announced:true});await page.getByRole('region',{name:'Check result'}).waitFor({timeout:50000});await check('PS checker result',dialog);
   await page.screenshot({path:'output/playwright/accessibility-ps-'+theme+'.png'});await context.close();
  }
- assert.deepEqual(errors,[]);const report={captured_at:new Date().toISOString(),author:'Codex',base,pass:true,deferredReadiness,lazyReadiness,surfaces:results.length,themes:['light','dark'],viewport:{width:320,height:760},reduced_motion_disclosures:true,forced_colors_reflow:true,validation,coverage:['catalogue','20 tag/offer dialogs','8 independent footer dialogs','PS input/result'],checks:results,errors,manual_screen_reader:false,physical_phone:false,full_wcag_conformance_asserted:false,independent_release_validated:false};writeReport(process.env.AITRUST_SITE_A11Y_REPORT||'output/verification/site-accessibility.json',report);console.log(JSON.stringify({pass:true,deferredReadiness,lazyReadiness,surfaces:results.length,theme_modes:2,focus_controls:results.reduce((n,r)=>n+r.focus.checked,0),target_controls:results.reduce((n,r)=>n+r.targets.controls,0),disclosures:results.reduce((n,r)=>n+r.disclosure.checked,0)}));
+ assert.deepEqual(errors,[]);const report={captured_at:new Date().toISOString(),author:'Codex',base,pass:true,disclosureReadiness,deferredReadiness,lazyReadiness,surfaces:results.length,themes:['light','dark'],viewport:{width:320,height:760},reduced_motion_disclosures:true,forced_colors_reflow:true,validation,coverage:['catalogue','20 tag/offer dialogs','8 independent footer dialogs','PS input/result'],checks:results,errors,manual_screen_reader:false,physical_phone:false,full_wcag_conformance_asserted:false,independent_release_validated:false};writeReport(process.env.AITRUST_SITE_A11Y_REPORT||'output/verification/site-accessibility.json',report);console.log(JSON.stringify({pass:true,disclosureReadiness,deferredReadiness,lazyReadiness,surfaces:results.length,theme_modes:2,focus_controls:results.reduce((n,r)=>n+r.focus.checked,0),target_controls:results.reduce((n,r)=>n+r.targets.controls,0),disclosures:results.reduce((n,r)=>n+r.disclosure.checked,0)}));
  }catch(e){writeReport(process.env.AITRUST_SITE_A11Y_REPORT||'output/verification/site-accessibility.json',{captured_at:new Date().toISOString(),pass:false,results,error:String(e),failure_context:e.accessibilityDiagnostic||null,errors,full_wcag_conformance_asserted:false});throw e;}finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});
