@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-175257-android-early-share-diagnostics-b944d940
+
+Recorded 2026-11-20T17:52:57.664252+00:00 · Contributor: Codex · change
+
+- **Changed.** Expose fixed receive/check/edit/clear failure stages and nonleaking last-observation hints without changing the first six Android controls or the seventh fast-return helper.
+- **Evidence.** 40 focused controls pass, including exact original call order and all20 early-stage failure prefixes;20 isolated main fault processes return fixed private-value-free JSON. The exact0526 failed zero-case report/artifact and unchanged native identities are preserved. [Change record](./runs/changes/2026-11-20-175257-android-early-share-diagnostics-b944d940.json).
+- **Not claimed.** Historical startup/receive cause remains unknown; no native source fix, timing or criterion change, SDK/license action, new-source Android execution, current capability/boundary refresh or original closure is claimed.
+
+
 ### 2026-11-20-173924-android-pause-current-protected-candidate-863bf531
 
 Recorded 2026-11-20T17:39:24.606235+00:00 · Contributor: Codex PM · change

