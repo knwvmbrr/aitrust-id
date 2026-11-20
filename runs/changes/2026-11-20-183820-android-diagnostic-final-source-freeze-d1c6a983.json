@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-183820-android-diagnostic-final-source-freeze-d1c6a983",
+  "recorded_at": "2026-11-20T18:38:20.467836+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fdc31a8f012fe4f88d8d9db8f5defc01f0ffdea0",
+  "changed": "Freeze the combined diagnostic source and regenerated public80-percent native scope before serial validation.",
+  "proves": "All202 original criteria and all12 completed software-delivery objects match their protected records. The actual selected seven-case native inputs match; startup reliability remains explicitly unestablished and the Android software task stays open.",
+  "limits": "Current combined protocol, website and boundary refresh plus protected integration are pending. No new original completion, app-readiness, physical/human or accuracy claim.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "410a62a95db1c69d4da8f8bd0389597d8834d6f12b29c83404541c6518395d76",
+    "site/public/reference/public-scope.json": "007b0c1f3092822b20e88a91fab9299ce6dc29ae62c43867cf4f1e1deb5146df",
+    "site/src/public-scope.json": "007b0c1f3092822b20e88a91fab9299ce6dc29ae62c43867cf4f1e1deb5146df",
+    "site/src/scope-manifest.json": "8965b2688b19516f630ed9b6b4488de11b878bd96287f52b4e925e12236e5d1d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-diagnostic-current-seven.json",
+      "sha256": "1f39422320191420620a027da46472e5cb677a91b74f47693491e472cfd46312"
+    },
+    {
+      "path": "runs/2026-11-20-android-diagnostic-independent-review.json",
+      "sha256": "37a6294e516d79314d2a3349d46b2e21b2cd6050db6d7819ec0c5ebae083b4d1"
+    }
+  ],
+  "checks": []
+}

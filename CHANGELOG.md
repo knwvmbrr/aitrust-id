@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-183820-android-diagnostic-final-source-freeze-d1c6a983
+
+Recorded 2026-11-20T18:38:20.467836+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Freeze the combined diagnostic source and regenerated public80-percent native scope before serial validation.
+- **Evidence.** All202 original criteria and all12 completed software-delivery objects match their protected records. The actual selected seven-case native inputs match; startup reliability remains explicitly unestablished and the Android software task stays open. [Change record](./runs/changes/2026-11-20-183820-android-diagnostic-final-source-freeze-d1c6a983.json).
+- **Not claimed.** Current combined protocol, website and boundary refresh plus protected integration are pending. No new original completion, app-readiness, physical/human or accuracy claim.
+
+
 ### 2026-11-20-183421-android-diagnostic-source-review-67137c60
 
 Recorded 2026-11-20T18:34:21.367612+00:00 · Contributor: Codex PM and independent static reviewer web_camo · change

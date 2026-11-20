@@ -13936,7 +13936,7 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-11-20T17:23:55.320452+00:00",
+        "audited_at": "2026-11-20T18:22:05.459912+00:00",
         "checked_by": "Codex PM and separate task-list lead source/artifact review",
         "implemented_by": [
           "Codex Android engineering lane — offline PS Share app and hosted test APK build, 2026-11-17T20:42:51.151270+00:00",
@@ -13949,7 +13949,7 @@
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Finish protected shared integration, then complete real Android sender/chooser, physical device and TalkBack, supported offline update/removal and maintained distribution acceptance. The selected API36 VM now passes all seven original Share/edit/clear/offline/lifecycle controls; it does not supply physical or human credit.",
+        "next_fix": "Investigate intermittent first-receive Ready-screen startup failures; selected API36 runs pass7 but earlier failures remain unexplained. Complete real Android sender/chooser, physical device/TalkBack, offline update/removal and maintained distribution acceptance. Protected integration status is tracked in state.json.",
         "next_owner": "Codex",
         "evidence": [
           "docs/scope-delivery.md",
@@ -13960,9 +13960,10 @@
           "runs/2026-11-19-android-prerequisites-corrected.json",
           "runs/2026-11-19-android-prerequisites-independent-review.json",
           "runs/2026-11-20-android-pause-hosted-seven.json",
-          "runs/2026-11-20-android-pause-independent-review.json"
+          "runs/2026-11-20-android-pause-independent-review.json",
+          "runs/2026-11-20-android-diagnostic-current-seven.json"
         ],
-        "evidence_scope": "Actual selected API36 emulator integration, not a browser simulation: exact-source native APK compiled, signed with an ephemeral CI identity, and passed seven original controls including immediate HOME/refocus cleanup. Independent source/artifact review checked13 native inputs, helper and raw reports. onPause now wipes while onStop remains; some system dialogs also clear drafts and this is disclosed. Historical failed callback timing remains unproven. Protected integration is pending at this snapshot; full original acceptance still requires actual physical Android/TalkBack, real sender/chooser and remaining distribution/update/removal acceptance. No independent tag accuracy or store release is claimed.",
+        "evidence_scope": "Actual selected API36 emulator integration, not a browser simulation: exact-source native APK compiled, signed with an ephemeral CI identity, and passed seven original controls including immediate HOME/refocus cleanup. Independent source/artifact review checked13 native inputs, helper and raw reports. onPause now wipes while onStop remains; some system dialogs also clear drafts and this is disclosed. Historical failed callback timing remains unproven. Protected integration is pending at this snapshot; full original acceptance still requires actual physical Android/TalkBack, real sender/chooser and remaining distribution/update/removal acceptance. No independent tag accuracy or store release is claimed. The later56b diagnostic source again passed all7 original API36 cases. Earlier zero-case Ready-screen failures remain unexplained; failure-only lifecycle metadata was not exercised on the successful path, and startup reliability is not established. The software task and full original acceptance stay open.",
         "required_acceptance": [
           "Deliver Native Android sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
         ],
