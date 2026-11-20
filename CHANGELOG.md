@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-010845-independent-wave-ready-for-protected-ci-18c7c902
+
+Recorded 2026-11-20T01:08:45.922764+00:00 · Contributor: Codex · change
+
+- **Changed.** Capture passing unchanged-source capability and boundary checks for the integrated independent tag wave, retaining all original scope and failed candidate history.
+- **Evidence.** PS7,privacy6,extension14,protocol56 andwebsite46 configured commands pass;1352 reviewed source inputs preserve the existing personal endpoint and permission boundaries. All202 original jobs/criteria remain intact with132 complete and70 open. [Change record](./runs/changes/2026-11-20-010845-independent-wave-ready-for-protected-ci-18c7c902.json).
+- **Not claimed.** Protected and actual hosted Android checks are pending. The earlier accessibility scroll cause is unestablished despite current passing diagnostics. No full original closure, independent accuracy, physical phone/human accessibility, new SDK assent or new production tag is claimed.
+
+
 ### 2026-11-20-010107-reviewed-accessibility-observability-1bffdb6a
 
 Recorded 2026-11-20T01:01:07.857511+00:00 · Contributor: Codex · change

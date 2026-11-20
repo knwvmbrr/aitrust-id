@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T22:44:16.890163+00:00",
+  "updated": "2026-11-20T01:08:44.798671+00:00",
   "active_increment": "Independent PS credential-context, MT quotation and Android Share integration candidate; full original acceptance remains132complete/70open. Current protected/hosted checks pending.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1145,11 +1145,11 @@
     "PII_REDACTED": "runs/2026-11-19-tag-wave2-PII_REDACTED.json",
     "protocol": "runs/2026-11-19-tag-wave2-protocol.json",
     "extension": "runs/2026-11-19-tag-wave2-extension.json",
-    "website": "runs/2026-11-19-fi-citation-opaque-website.json",
+    "website": "runs/2026-11-20-tag-wave2-website-current.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T22:44:16.890163+00:00",
+  "updated_at": "2026-11-20T01:08:44.798671+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3591,7 +3591,7 @@
     "task_list_lead": "/root/seo",
     "assignment_snapshot_at": "2026-11-19T17:26:45.647724+00:00",
     "active_tag_workers_at_snapshot": 0,
-    "phase": "Next independent PS/MT/Android software wave integrated as a reviewed candidate; protected and hosted validation pending. Original closure goal remains unmet.",
+    "phase": "PS/MT/Android candidate has current passing capability and source-boundary checks; protected CI and actual hosted Android execution pending. Original132/70 unchanged.",
     "minimum_finished_named_deliverables_per_session": 1,
     "minimum_original_requirement_closures_per_session": 1,
     "finished_scoped_tasks": 9,
@@ -3906,7 +3906,7 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-19-mt-cohorts-boundaries.json",
+  "current_route_boundaries": "runs/2026-11-20-tag-wave2-boundaries.json",
   "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json",
   "agent_tag_tools": {
     "status": "published_local_development_integration",
@@ -4150,7 +4150,7 @@
   "independent_tag_wave_nov19": {
     "recorded_at": "2026-11-19T19:52:10.800392+00:00",
     "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-    "phase": "reviewed_software_integrated; four_current_capabilities_pass; website_and_hosted_pending",
+    "phase": "all_five_current_capabilities_and_boundaries_pass; protected_and_hosted_pending",
     "PS": {
       "method": "python-credential-flow-observation/1.0.2",
       "guide": "docs/credential-flow-context.md",
@@ -4174,6 +4174,16 @@
     "original_complete": 132,
     "original_open": 70,
     "new_original_closures": 0,
-    "independent_accuracy_evidence": false
+    "independent_accuracy_evidence": false,
+    "website_evidence": "runs/2026-11-20-tag-wave2-website-current.json",
+    "boundary_evidence": "runs/2026-11-20-tag-wave2-boundaries.json",
+    "reviewed_source_inputs": 1352,
+    "accessibility_observation": {
+      "first_attempt": "runs/2026-11-19-tag-wave2-website-attempt.json",
+      "diagnostic_result": "runs/2026-11-20-a11y-diagnostic-result.json",
+      "current_full_check_pass": true,
+      "original_scroll_timeout_cause_established": false,
+      "product_fix_claimed": false
+    }
   }
 }
