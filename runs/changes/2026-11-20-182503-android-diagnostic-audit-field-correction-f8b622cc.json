@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-182503-android-diagnostic-audit-field-correction-f8b622cc",
+  "recorded_at": "2026-11-20T18:25:03.207845+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f63b5fcd89bcdc301ec613d7a07ed7350ede1712",
+  "changed": "Preserve the exact all70 acceptance audit field name while correcting human-readable integration notes.",
+  "proves": "All12 closed task objects still exactlymatch the protected delivery record, and all202 required acceptance criteria remain unchanged. This corrects a local text-replacement side effect before final verification.",
+  "limits": "No runtime behavior or acceptance changes; Android startup reliability remains unresolved.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "docs/session-delivery.json": "c49ba4809b5c44e7ad5a3c2259b64e17ba86e246e342e2a094a91d4aa657a52f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-diagnostic-current-seven.json",
+      "sha256": "1f39422320191420620a027da46472e5cb677a91b74f47693491e472cfd46312"
+    }
+  ],
+  "checks": []
+}

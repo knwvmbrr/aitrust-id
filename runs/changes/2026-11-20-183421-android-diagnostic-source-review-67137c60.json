@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-183421-android-diagnostic-source-review-67137c60",
+  "recorded_at": "2026-11-20T18:34:21.367612+00:00",
+  "author": "Codex PM and independent static reviewer web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f63b5fcd89bcdc301ec613d7a07ed7350ede1712",
+  "changed": "Preserve the current selected Android diagnostic execution and separate review without converting historical startup failures into a fixed reliability claim.",
+  "proves": "All native/helper/test source identities match the actual seven-case run; original success controls are unchanged, failure-only metadata is closed and cannot grant acceptance. The retained query parser budget is64KiB and is not misrepresented as streaming capture protection.",
+  "limits": "The real failure-only event query was not exercised on the passing run. Startup cause/reliability, physical/human acceptance and Android task closure remain open. Current combined source receipts still require refresh.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "docs/session-delivery.json": "22574117c11dbb93914eece0f1a5f957b107aab04b05d3b7c828c5c39a1c0c6c",
+    "runs/2026-11-20-android-diagnostic-independent-review.json": "37a6294e516d79314d2a3349d46b2e21b2cd6050db6d7819ec0c5ebae083b4d1",
+    "state.json": "25d7fd25023b41887599d70578114e3ac5f8ced6a45773a31488fae6875cda49"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-diagnostic-current-seven.json",
+      "sha256": "1f39422320191420620a027da46472e5cb677a91b74f47693491e472cfd46312"
+    },
+    {
+      "path": "runs/2026-11-20-android-diagnostic-independent-review.json",
+      "sha256": "37a6294e516d79314d2a3349d46b2e21b2cd6050db6d7819ec0c5ebae083b4d1"
+    }
+  ],
+  "checks": []
+}

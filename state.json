@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-20T18:22:05.459912+00:00",
+  "updated": "2026-11-20T18:34:21.308698+00:00",
   "active_increment": "Public optional Python-flow preview and separate PS/MT CLI methods published from protected04b11a12. Twelve scoped jobs complete; originals132 complete / 70 open. Android followup active.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1171,7 +1171,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-20T18:22:05.459912+00:00",
+  "updated_at": "2026-11-20T18:34:21.308698+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3866,7 +3866,10 @@
       "protected_publication_pending": true,
       "product_deployment_unchanged": "04b11a12b094fc4a770381aae96645dc78d01533",
       "independent_accuracy_evidence": false,
-      "android_runtime_accepted": false
+      "android_runtime_accepted": false,
+      "source_commit": "c8fdbc9cbc8d3ef3ba701ca51b44ef3e6abf0760",
+      "scope": "Historical independent metadata-only branch; combined native sources require separately refreshed current receipts.",
+      "current_for_this_branch": false
     }
   },
   "mt_evidence_workflow": {
@@ -4256,7 +4259,8 @@
       "separate_review": "runs/2026-11-20-android-pause-independent-review.json",
       "shared_integration": "pending refreshed source-bound checks and protected merge",
       "startup_reliability_verified": false,
-      "verification_scope": "Selected API36 execution only. Earlier first-receive Ready-screen failures remain unexplained; no app readiness or software-task closure."
+      "verification_scope": "Selected API36 execution only. Earlier first-receive Ready-screen failures remain unexplained; no app readiness or software-task closure.",
+      "diagnostics_review": "runs/2026-11-20-android-diagnostic-independent-review.json"
     },
     "original_complete": 132,
     "original_open": 70,

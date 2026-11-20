@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-183421-android-diagnostic-source-review-67137c60
+
+Recorded 2026-11-20T18:34:21.367612+00:00 · Contributor: Codex PM and independent static reviewer web_camo · change
+
+- **Changed.** Preserve the current selected Android diagnostic execution and separate review without converting historical startup failures into a fixed reliability claim.
+- **Evidence.** All native/helper/test source identities match the actual seven-case run; original success controls are unchanged, failure-only metadata is closed and cannot grant acceptance. The retained query parser budget is64KiB and is not misrepresented as streaming capture protection. [Change record](./runs/changes/2026-11-20-183421-android-diagnostic-source-review-67137c60.json).
+- **Not claimed.** The real failure-only event query was not exercised on the passing run. Startup cause/reliability, physical/human acceptance and Android task closure remain open. Current combined source receipts still require refresh.
+
+
+### 2026-11-20-182503-android-diagnostic-audit-field-correction-f8b622cc
+
+Recorded 2026-11-20T18:25:03.207845+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Preserve the exact all70 acceptance audit field name while correcting human-readable integration notes.
+- **Evidence.** All12 closed task objects still exactlymatch the protected delivery record, and all202 required acceptance criteria remain unchanged. This corrects a local text-replacement side effect before final verification. [Change record](./runs/changes/2026-11-20-182503-android-diagnostic-audit-field-correction-f8b622cc.json).
+- **Not claimed.** No runtime behavior or acceptance changes; Android startup reliability remains unresolved.
+
+
 ### 2026-11-20-182406-android-diagnostic-review-state-13968f1c
 
 Recorded 2026-11-20T18:24:06.426718+00:00 · Contributor: Codex PM · change
