@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-163850-credential-disclosure-measurement-readiness-6677cce1
+
+Recorded 2026-11-20T16:38:50.052546+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Wait for the actual optional credential form after native Enter and before judging disclosure expansion height; add a controlled delayed-child regression in the existing verifier.
+- **Evidence.** Authored absent child fails, actual ready child passes and genuinely fixed-height clipped body still fails. Actual PS disclosure probes pass in light and dark with the optional readiness hook exercised; helper/product/served hashes stayed stable. [Change record](./runs/changes/2026-11-20-163850-credential-disclosure-measurement-readiness-6677cce1.json).
+- **Not claimed.** Verifier-only change; product, method, visibility, thresholds and timeouts unchanged. First reviewer raw-count assertion error preserved and corrected without changing probe predicates. No full-site replay, tag closure, independent accuracy, physical phone or full WCAG claim.
+
+
 ### 2026-11-20-162050-credential-generated-public-scope-24dc5cf1
 
 Recorded 2026-11-20T16:20:50.992437+00:00 · Contributor: Codex PM · change

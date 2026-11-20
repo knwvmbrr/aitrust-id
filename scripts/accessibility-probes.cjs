@@ -70,8 +70,8 @@ async function spacing(page,root){
   }return {clipped,horizontal_overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth+1||root.scrollWidth>root.clientWidth+1};
  });}finally{await style.evaluate(e=>e.remove());}
 }
-async function disclosures(root){let checked=0;const failures=[];for(const d of await root.locator('details').all()){
+async function disclosures(root,{afterExpand=async()=>{}}={}){let checked=0;const failures=[];for(const d of await root.locator('details').all()){
  const summary=d.locator('summary').first();if(!await summary.isVisible())continue;
- if(await d.evaluate(e=>e.open))await summary.press('Enter');const closed=await d.evaluate(e=>e.getBoundingClientRect().height);await summary.press('Enter');const expanded=await d.evaluate(e=>({open:e.open,height:e.getBoundingClientRect().height}));if(!expanded.open||expanded.height<=closed+1)failures.push('Disclosure fails to expand: '+(await summary.innerText()));await summary.press('Enter');if(await d.evaluate(e=>e.open))failures.push('Disclosure fails to close');checked++;
+ if(await d.evaluate(e=>e.open))await summary.press('Enter');const closed=await d.evaluate(e=>e.getBoundingClientRect().height);await summary.press('Enter');await afterExpand(d);const expanded=await d.evaluate(e=>({open:e.open,height:e.getBoundingClientRect().height}));if(!expanded.open||expanded.height<=closed+1)failures.push('Disclosure fails to expand: '+(await summary.innerText()));await summary.press('Enter');if(await d.evaluate(e=>e.open))failures.push('Disclosure fails to close');checked++;
  }return {checked,failures};}
 module.exports={controls,targetSizes,focusVisibility,spacing,disclosures};
