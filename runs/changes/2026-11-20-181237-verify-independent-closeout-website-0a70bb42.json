@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-181237-verify-independent-closeout-website-0a70bb42",
+  "recorded_at": "2026-11-20T18:12:37.346381+00:00",
+  "author": "Codex task-list lead",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9829737bb5b7fe27535505f60ebbfbe14d175ad8",
+  "changed": "Refresh actual website engineering proof for the independent twelve-job closeout, select the new receipt, and update state after all evidence timestamps.",
+  "proves": "All49 website commands pass with source unchanged. Final1369-source boundary verification passes. Existing PS, redaction, protocol and extension receipts remain current without rerunning them. Twelve closure objects and132 complete/70 open originals remain unchanged.",
+  "limits": "No Android source, N014 milestone, thirteenth closure, independent accuracy or new deployment is adopted. The separate Android diagnostic runtime still fails before its first case; cause remains unestablished.",
+  "scope_ids": [
+    "F-012",
+    "F-019c",
+    "T-PS",
+    "T-MT",
+    "N-014"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "fd7547cadc4fb4b7238e2e8b6fd24d0fad3553f11f35fe6046a8058193e8f1a6",
+    "state.json": "231e761a391746a5d82701ce7c97f250c36c1c1203ac303a9f312c9eef7fa74a",
+    "runs/2026-11-20-independent-closeout-website.json": "b1174e40d57f9519f534dc05b89b230d69c19a5eaae5ef4008caabe1b4ad93bf",
+    "runs/2026-11-20-independent-closeout-boundaries.json": "dda8171288bad02527b3dc8339bcc4b615c2ded4a09a402563188a9919faa74d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-independent-closeout-website.json",
+      "sha256": "b1174e40d57f9519f534dc05b89b230d69c19a5eaae5ef4008caabe1b4ad93bf"
+    },
+    {
+      "path": "runs/2026-11-20-independent-closeout-boundaries.json",
+      "sha256": "dda8171288bad02527b3dc8339bcc4b615c2ded4a09a402563188a9919faa74d"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-20T18:12:37.961227+00:00"
+    }
+  ]
+}

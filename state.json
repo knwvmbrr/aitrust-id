@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-20T17:08:16.528278+00:00",
+  "updated": "2026-11-20T18:12:37.313650+00:00",
   "active_increment": "Public optional Python-flow preview and separate PS/MT CLI methods published from protected04b11a12. Twelve scoped jobs complete; originals132complete/70open. Android followup active.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1171,7 +1171,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-20T17:08:16.528278+00:00",
+  "updated_at": "2026-11-20T18:12:37.313650+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3852,6 +3852,21 @@
       "live_publication": "runs/2026-11-20-credential-publication.json",
       "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
       "independent_accuracy_evidence": false
+    },
+    "credential_closeout_operations": {
+      "PS": "runs/2026-11-20-credential-integrated-PS.json",
+      "PII_REDACTED": "runs/2026-11-20-credential-integrated-PII_REDACTED.json",
+      "protocol": "runs/2026-11-20-credential-integrated-protocol.json",
+      "extension": "runs/2026-11-20-credential-integrated-extension.json",
+      "website": "runs/2026-11-20-independent-closeout-website.json",
+      "boundaries": "runs/2026-11-20-independent-closeout-boundaries.json",
+      "source_bound_checks_passed": true,
+      "website_command_count": 49,
+      "unchanged_capabilities_assessed_without_rerun": true,
+      "protected_publication_pending": true,
+      "product_deployment_unchanged": "04b11a12b094fc4a770381aae96645dc78d01533",
+      "independent_accuracy_evidence": false,
+      "android_runtime_accepted": false
     }
   },
   "mt_evidence_workflow": {
@@ -3898,16 +3913,18 @@
     }
   },
   "android_share_candidate": {
-    "status": "six actual runtime cases pass; fast-return lifecycle remains unmet; followup active",
+    "status": "separate diagnostic followup active; current first-receive runtime failed before any completed case",
     "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/108",
     "hosted_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44776757754",
     "host_receipt": "runs/2026-11-17-android-emulator-host-inventory.json",
-    "emulated_share_cases": 6,
+    "emulated_share_cases": 0,
     "physical_device_accepted": false,
     "runtime_pass": false,
     "required_emulated_cases": 7,
     "followup_PR": "https://github.com/knwvmbrr/aitrust-id/pull/134",
-    "followup_run": 44779986361
+    "followup_run": 44787621743,
+    "followup_candidate": "cad8bfb28b44ab5257dcb07d0c5823275626b98b",
+    "latest_snapshot": "runs/2026-11-20-credential-closeout-android-snapshot.json"
   },
   "nested_runtime_notices": {
     "status": "web release merged and verified live",
@@ -4220,16 +4237,17 @@
       "new_license_accepted": false,
       "actual_hosted_runtime_verified": false,
       "physical_device_complete": false,
-      "actual_hosted_cases_passed": 6,
+      "actual_hosted_cases_passed": 0,
       "actual_hosted_case_goal": 7,
       "diagnostic_followup": {
-        "checked_at": "2026-11-20T17:08:16.518216+00:00",
+        "checked_at": "2026-11-20T18:05:03.124014+00:00",
         "actual_worker": "/root/share_debugger",
         "pull_request": 134,
-        "candidate_head": "d50793165254fe666a165542624fcdc159d01293",
-        "hosted_run": 44779986361,
+        "candidate_head": "cad8bfb28b44ab5257dcb07d0c5823275626b98b",
+        "hosted_run": 44787621743,
         "status": "active_at_snapshot",
-        "scope": "Approved onPause wipe candidate, onStop retained; original fast-return driver unchanged. Actual new-source hosted proof pending; no verified fix or seventh-case acceptance."
+        "scope": "Bounded diagnostic followup after first-receive failure. Owned Ready UI was observed without synthetic text; zero runtime cases completed and exact cause remains unestablished. No Android correction is accepted on this branch.",
+        "evidence": "runs/2026-11-20-credential-closeout-android-snapshot.json"
       }
     },
     "original_complete": 132,
@@ -4281,13 +4299,14 @@
     "new_original_closures": 0,
     "original_goal": "NOT MET",
     "active_followup": {
-      "checked_at": "2026-11-20T17:08:16.518216+00:00",
+      "checked_at": "2026-11-20T18:05:03.124014+00:00",
       "actual_worker": "/root/share_debugger",
       "pull_request": 134,
-      "candidate_head": "d50793165254fe666a165542624fcdc159d01293",
-      "hosted_run": 44779986361,
+      "candidate_head": "cad8bfb28b44ab5257dcb07d0c5823275626b98b",
+      "hosted_run": 44787621743,
       "status": "active_at_snapshot",
-      "scope": "Approved onPause wipe candidate, onStop retained; original fast-return driver unchanged. Actual new-source hosted proof pending; no verified fix or seventh-case acceptance."
+      "scope": "Bounded diagnostic followup after first-receive failure. Owned Ready UI was observed without synthetic text; zero runtime cases completed and exact cause remains unestablished. No Android correction is accepted on this branch.",
+      "evidence": "runs/2026-11-20-credential-closeout-android-snapshot.json"
     }
   }
 }
