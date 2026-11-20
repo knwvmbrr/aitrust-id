@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-170849-close-published-credential-deliveries-782a295d
+
+Recorded 2026-11-20T17:08:49.724088+00:00 · Contributor: Codex task-list lead · change
+
+- **Changed.** Record completion of the two predeclared CLI jobs and the live optional Python-flow browser preview; update dated worker assignments and actual publication pointers.
+- **Evidence.** Protected head1236 merged as04b11a12 after eleven required passes and zero review threads. The public checker passes actual Chromium/WebKit tests and sixteen critical asset-byte checks across two origins. Current accounting validates twelve scoped tasks, zero original closures, and preserved132complete/70open with valid state chronology. [Change record](./runs/changes/2026-11-20-170849-close-published-credential-deliveries-782a295d.json).
+- **Not claimed.** No full original criterion was changed or completed. No independent detector accuracy, physical-device acceptance, full-site artifact equivalence or first-try success is claimed. Android remains an active separate d507 PR134 followup after six-of-seven runtime results; this operations record does not redeploy the site or replace its deployed changelog.
+
+
 ### 2026-11-20-164850-credential-state-chronology-correction-6dbcd154
 
 Recorded 2026-11-20T16:48:50.393806+00:00 · Contributor: Codex PM after task-list lead diagnosis · change
