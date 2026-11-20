@@ -14,6 +14,8 @@ async function expandForMeasurement(root){
  });
  const privacy=root.locator('details').filter({hasText:'Privacy and full details'});
  if(await privacy.count())await privacy.getByRole('button',{name:'Download details',exact:true}).waitFor();
+ const credential=root.locator('[data-credential-method]');
+ if(await credential.count())await credential.locator('[data-credential-explorer]').waitFor();
 }
 // Actual deferred public data: ready-first coverage and physical-node identity.
 // Native close is an authored lifecycle control, not a claim about the original

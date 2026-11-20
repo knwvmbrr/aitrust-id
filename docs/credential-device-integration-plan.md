@@ -45,3 +45,8 @@ only after protected checks and actual public verification. This named browser
 software job can finish; F-012's accepted integration, representative independent
 measurements, use/mention interpretation and applicable human/route release gates
 remain open. Do not raise its original percentage or close T-PS from this preview.
+
+The shared PS panel mounts this optional preview only when its disclosure opens.
+Closing it unmounts the editor and stops its worker; it never takes over the
+existing PS result. The accessibility verifier waits for the expanded preview
+to mount before capturing its physical controls.
