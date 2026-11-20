@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-051652-sdk-correction-protocol-current-b2ed7cf9",
+  "recorded_at": "2026-11-20T05:16:52.427571+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8b21fffbb3a5b89b9cf6c555959fa9cfa1bd09fd",
+  "changed": "Capture current protocol evidence after the reviewed SDK selection and metadata diagnostics correction.",
+  "proves": "All56 configured protocol commands pass with unchanged inputs; unchanged PS, privacy and extension receipts remain current.",
+  "limits": "New-source website and hosted Android checks are pending. Original132complete/70open and independent/human gates remain unchanged.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "runs/2026-11-20-tag-wave2-protocol-sdk-current.json": "91c8780aff87dab16829206422567dbdd1342746c3ad00a2935708446c6fa86b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-tag-wave2-protocol-sdk-current.json",
+      "sha256": "91c8780aff87dab16829206422567dbdd1342746c3ad00a2935708446c6fa86b"
+    }
+  ],
+  "checks": []
+}

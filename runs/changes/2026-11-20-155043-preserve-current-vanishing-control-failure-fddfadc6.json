@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-155043-preserve-current-vanishing-control-failure-fddfadc6",
+  "recorded_at": "2026-11-20T15:50:43.605086+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8b21fffbb3a5b89b9cf6c555959fa9cfa1bd09fd",
+  "changed": "Preserve the second source-stable accessibility failure and the earlier exact protected candidate CI review; keep both separate from current fixes.",
+  "proves": "All11 required checks passed at5cb9aa2 while Android separately failed before install. A later local source-stable website run exposed a missing live control index after catalogue and PS surfaces; the original scheduling cause is still unestablished.",
+  "limits": "No full accessibility, Android runtime or original closure. The debugger is validating public-detail readiness and physical control identity without reducing assertions or increasing timeouts.",
+  "scope_ids": [
+    "F-035",
+    "N-014"
+  ],
+  "files": {
+    "runs/2026-11-20-a11y-vanishing-index-second-failure.json": "16c9f46105aed4e94c47492c399bd6c8dab3d3f74e44263c17c78b8539d03b46",
+    "runs/2026-11-20-pr108-required-ci-review.json": "17f0ad806f77087b82f7006a775340919cd3ebcaec855b7f558e58e44a7d9bb5",
+    "runs/2026-11-20-tag-wave2-protocol-sdk-current.json": "91c8780aff87dab16829206422567dbdd1342746c3ad00a2935708446c6fa86b",
+    "runs/2026-11-20-tag-wave2-website-sdk-attempt.json": "97000540f11082a16e03665456dc808c239ae5682474b6524f8a6a9d6ee626ca"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-tag-wave2-website-sdk-attempt.json",
+      "sha256": "97000540f11082a16e03665456dc808c239ae5682474b6524f8a6a9d6ee626ca"
+    },
+    {
+      "path": "runs/2026-11-20-a11y-vanishing-index-second-failure.json",
+      "sha256": "16c9f46105aed4e94c47492c399bd6c8dab3d3f74e44263c17c78b8539d03b46"
+    },
+    {
+      "path": "runs/2026-11-20-pr108-required-ci-review.json",
+      "sha256": "17f0ad806f77087b82f7006a775340919cd3ebcaec855b7f558e58e44a7d9bb5"
+    }
+  ],
+  "checks": []
+}

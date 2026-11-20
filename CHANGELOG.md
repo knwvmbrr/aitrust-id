@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-155909-prioritize-usable-python-flow-preview-540c9b42
+
+Recorded 2026-11-20T15:59:09.265643+00:00 · Contributor: Codex · change
+
+- **Changed.** Define the next user-visible deliverable: an optional on-device Python flow preview inside PS, with unchanged canonical logic and independent worker/import failure boundaries.
+- **Evidence.** The documented architecture names the user outcome, exact ownership, privacy/source risks and two-engine acceptance before shared UI integration; text diff checks pass. [Change record](./runs/changes/2026-11-20-155909-prioritize-usable-python-flow-preview-540c9b42.json).
+- **Not claimed.** The browser feature remains in implementation; no live availability, original closure or independently validated new tag is claimed.
+
+
+### 2026-11-20-155043-preserve-current-vanishing-control-failure-fddfadc6
+
+Recorded 2026-11-20T15:50:43.605086+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve the second source-stable accessibility failure and the earlier exact protected candidate CI review; keep both separate from current fixes.
+- **Evidence.** All11 required checks passed at5cb9aa2 while Android separately failed before install. A later local source-stable website run exposed a missing live control index after catalogue and PS surfaces; the original scheduling cause is still unestablished. [Change record](./runs/changes/2026-11-20-155043-preserve-current-vanishing-control-failure-fddfadc6.json).
+- **Not claimed.** No full accessibility, Android runtime or original closure. The debugger is validating public-detail readiness and physical control identity without reducing assertions or increasing timeouts.
+
+
+### 2026-11-20-051652-sdk-correction-protocol-current-b2ed7cf9
+
+Recorded 2026-11-20T05:16:52.427571+00:00 · Contributor: Codex · change
+
+- **Changed.** Capture current protocol evidence after the reviewed SDK selection and metadata diagnostics correction.
+- **Evidence.** All56 configured protocol commands pass with unchanged inputs; unchanged PS, privacy and extension receipts remain current. [Change record](./runs/changes/2026-11-20-051652-sdk-correction-protocol-current-b2ed7cf9.json).
+- **Not claimed.** New-source website and hosted Android checks are pending. Original132complete/70open and independent/human gates remain unchanged.
+
+
 ### 2026-11-20-050634-reviewed-sdk-metadata-correction-cfbf00f7
 
 Recorded 2026-11-20T05:06:34.264921+00:00 · Contributor: Codex · change
