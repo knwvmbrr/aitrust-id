@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-163716-credential-disclosure-readiness-diagnosis-3503251a
+
+Recorded 2026-11-20T16:37:16.704758+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Preserve the full website attempt and focused diagnosis: all catalogue, performance and workflow phases passed; disclosure measurement ran before the optional React child mounted.
+- **Evidence.** The actual failure was Inspect Python code preview expansion; the underlying PS focus controls completed. A separate reviewer is correcting deferred readiness while preserving the original height assertion and genuine failure controls. [Change record](./runs/changes/2026-11-20-163716-credential-disclosure-readiness-diagnosis-3503251a.json).
+- **Not claimed.** No current full website pass or product bug-fix claim yet. Failure evidence retained and original requirements remain unchanged.
+
+
+### 2026-11-20-162820-credential-attempt-receipt-coverage-22d8cadc
+
+Recorded 2026-11-20T16:28:20.293890+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Preserve both website attempts and explicitly cover their execution-receipt files in the change record after the catalogue disclosure update.
+- **Evidence.** The first current run refused the former PS disclosure count. The following build guard refused the previous failed receipt because an explicit files list covered only the verifier, not the evidence file; this record uses the complete current change set. [Change record](./runs/changes/2026-11-20-162820-credential-attempt-receipt-coverage-22d8cadc.json).
+- **Not claimed.** No website pass or deployment claimed until the next current-source execution actually succeeds. Failed records remain intact.
+
+
+### 2026-11-20-162658-credential-catalogue-disclosure-contract-e07127a5
+
+Recorded 2026-11-20T16:26:58.750585+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Update the catalogue contract for PS’s additional optional closed Python disclosure, preserving exact disclosure counts and isolating it to PS.
+- **Evidence.** The failed current website run reached the catalogue and refused the former exact count of six disclosures. Diagnosis identified the new seventh disclosure; the updated contract also requires that it starts closed and appears only in PS. [Change record](./runs/changes/2026-11-20-162658-credential-catalogue-disclosure-contract-e07127a5.json).
+- **Not claimed.** The failed receipt is preserved. The complete current website run remains required; this is a catalogue contract update, not an accuracy claim.
+
+
+### 2026-11-20-162446-credential-revalidation-receipt-bookkeeping-42b57ec8
+
+Recorded 2026-11-20T16:24:46.770983+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record successful current protocol and extension checks and preserve the website build-guard refusal caused by unrecorded new execution receipts.
+- **Evidence.** Protocol and extension passed with unchanged sources. Website stopped before browser work because its changelog guard correctly required fresh records for the new public receipts; the missing record is now supplied. [Change record](./runs/changes/2026-11-20-162446-credential-revalidation-receipt-bookkeeping-42b57ec8.json).
+- **Not claimed.** The failed website receipt remains immutable. A corrected website run and protected/live publication are still required; original count remains 70.
+
+
+### 2026-11-20-162202-credential-current-capability-execution-015cf396
+
+Recorded 2026-11-20T16:22:02.096870+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record current integrated PS and PII engineering executions before final production build verification.
+- **Evidence.** Both configured current-source capability runs exited successfully, alongside the distinct Chromium/WebKit production modal review. [Change record](./runs/changes/2026-11-20-162202-credential-current-capability-execution-015cf396.json).
+- **Not claimed.** Protocol, extension, complete website, protected merge and public deployment still pending. Accuracy and original counts unchanged.
+
+
 ### 2026-11-20-162050-credential-generated-public-scope-24dc5cf1
 
 Recorded 2026-11-20T16:20:50.992437+00:00 · Contributor: Codex PM · change
