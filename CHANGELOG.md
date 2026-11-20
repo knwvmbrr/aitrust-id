@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-161946-credential-production-ui-review-2c89bbbd
+
+Recorded 2026-11-20T16:19:46.320445+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Add reusable actual-production-modal verification for the optional Python credential-flow explorer, with a sequential Chromium and WebKit loopback runner.
+- **Evidence.** Both actual production browser engines match three complete canonical native records and pass lazy disclosure, private-detail, cancellation, empty reopen, privacy, narrow enlarged layout and actual PS survival controls. Source and served asset hashes remained stable. [Change record](./runs/changes/2026-11-20-161946-credential-production-ui-review-2c89bbbd.json).
+- **Not claimed.** Engineering parity and interface isolation only. No PS release, independent accuracy, intent, real credentials, physical-phone, human-screen-reader or full original scope completion claim. Product and method source unchanged by reviewer.
+
+
 ### 2026-11-20-155506-deferred-details-a11y-measurement-47b55b39
 
 Recorded 2026-11-20T15:55:06.787379+00:00 · Contributor: Codex / web_camo · change
