@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-173924-android-pause-current-protected-candidate-863bf531",
+  "recorded_at": "2026-11-20T17:39:24.606235+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8cf720683a51ccf485eee7bebda211088dddf01b",
+  "changed": "Record all current combined Android integration checks and preserve the separate delivery-board stale-receipt CI refusal before protected publication.",
+  "proves": "All five capability receipts assess current and passing, including final56-command protocol and49-command website runs; reviewed1369-source boundaries, accountability and scoped accounting pass. N014 is80% with no final_acceptance;132 originals complete and70 remain open. The prior delivery-record board is integrated with refreshed evidence.",
+  "limits": "Protected Android merge and resulting publication are pending. Physical Android/TalkBack, originalN014 and independent tag accuracy remain open; ephemeral test signing is not a maintained app release.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "a5c11cab032f61d0656dbc8e263c84dd78dc167d00e233c23ecb35510490a52e",
+    "runs/2026-11-20-android-pause-final-boundaries.json": "6e4c16ef8787c9f9f809d50955398c647b18f24f0c6f4aa24d0d1109b59ab4e7",
+    "runs/2026-11-20-android-pause-final-protocol.json": "9e98177407b2d57dbf1127dec0d32423af4ea6db8ba60e02c0802c21b639782b",
+    "runs/2026-11-20-android-pause-final-website.json": "8edd43b31f58bd77beb7be00a581020cae20e25c69327e2fd3728fbe4ac40d86",
+    "runs/2026-11-20-delivery-board-stale-receipt-failure.json": "cb37986925ef06019eccf8c9377ebddebd32faec541c55c0bdfe000d2761365b",
+    "state.json": "256a87e0f094860cbfe3c5422b1eabb2180098ca296882c0f76e2da2f3fbb885"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-pause-final-protocol.json",
+      "sha256": "9e98177407b2d57dbf1127dec0d32423af4ea6db8ba60e02c0802c21b639782b"
+    },
+    {
+      "path": "runs/2026-11-20-android-pause-final-website.json",
+      "sha256": "8edd43b31f58bd77beb7be00a581020cae20e25c69327e2fd3728fbe4ac40d86"
+    },
+    {
+      "path": "runs/2026-11-20-android-pause-final-boundaries.json",
+      "sha256": "6e4c16ef8787c9f9f809d50955398c647b18f24f0c6f4aa24d0d1109b59ab4e7"
+    },
+    {
+      "path": "runs/2026-11-20-delivery-board-stale-receipt-failure.json",
+      "sha256": "cb37986925ef06019eccf8c9377ebddebd32faec541c55c0bdfe000d2761365b"
+    }
+  ],
+  "checks": []
+}

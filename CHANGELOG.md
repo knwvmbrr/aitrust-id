@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-173924-android-pause-current-protected-candidate-863bf531
+
+Recorded 2026-11-20T17:39:24.606235+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record all current combined Android integration checks and preserve the separate delivery-board stale-receipt CI refusal before protected publication.
+- **Evidence.** All five capability receipts assess current and passing, including final56-command protocol and49-command website runs; reviewed1369-source boundaries, accountability and scoped accounting pass. N014 is80% with no final_acceptance;132 originals complete and70 remain open. The prior delivery-record board is integrated with refreshed evidence. [Change record](./runs/changes/2026-11-20-173924-android-pause-current-protected-candidate-863bf531.json).
+- **Not claimed.** Protected Android merge and resulting publication are pending. Physical Android/TalkBack, originalN014 and independent tag accuracy remain open; ephemeral test signing is not a maintained app release.
+
+
+### 2026-11-20-173316-android-pause-final-protocol-proof-428e43ee
+
+Recorded 2026-11-20T17:33:16.138162+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record the completed final Android protocol execution before the serial final website check.
+- **Evidence.** All56 configured protocol commands passed on the frozen80-percent native scope and exact seven-case source. Recording the receipt before the next build prevents concurrent evidence-bookkeeping races. [Change record](./runs/changes/2026-11-20-173316-android-pause-final-protocol-proof-428e43ee.json).
+- **Not claimed.** Final website, boundary and protected integration remain pending; no physical or original acceptance closure.
+
+
 ### 2026-11-20-173041-android-pause-complete-source-freeze-eb820bcf
 
 Recorded 2026-11-20T17:30:41.294109+00:00 · Contributor: Codex PM · change

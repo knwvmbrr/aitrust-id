@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-20T17:23:55.320452+00:00",
+  "updated": "2026-11-20T17:39:23.437099+00:00",
   "active_increment": "Public optional Python-flow preview and separate PS/MT CLI methods published from protected04b11a12. Twelve scoped jobs complete; originals132complete/70open. Android followup active.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1165,13 +1165,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-20-credential-integrated-PS.json",
     "PII_REDACTED": "runs/2026-11-20-credential-integrated-PII_REDACTED.json",
-    "protocol": "runs/2026-11-20-credential-integrated-protocol.json",
+    "protocol": "runs/2026-11-20-android-pause-final-protocol.json",
     "extension": "runs/2026-11-20-credential-integrated-extension.json",
-    "website": "runs/2026-11-20-credential-integrated-website-release.json",
+    "website": "runs/2026-11-20-android-pause-final-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-20T17:23:55.320452+00:00",
+  "updated_at": "2026-11-20T17:39:23.437099+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -4185,7 +4185,7 @@
   "independent_tag_wave_nov19": {
     "recorded_at": "2026-11-20T17:08:16.518216+00:00",
     "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-    "phase": "scoped_software_published; Android_followup_active; original_acceptance_open",
+    "phase": "public Python preview delivered; selected Android API36 seven-case cleanup verified; protected Android integration pending",
     "PS": {
       "method": "python-credential-flow-observation/1.0.2",
       "guide": "docs/credential-flow-context.md",
@@ -4234,14 +4234,14 @@
       "actual_runtime_cases": 7,
       "runtime_evidence": "runs/2026-11-20-android-pause-hosted-seven.json",
       "separate_review": "runs/2026-11-20-android-pause-independent-review.json",
-      "shared_integration": "pending current evidence refresh and protected merge"
+      "shared_integration": "all current local capability checks pass; protected merge pending"
     },
     "original_complete": 132,
     "original_open": 70,
     "new_original_closures": 0,
     "independent_accuracy_evidence": false,
     "website_evidence": "runs/2026-11-20-credential-integrated-website-release.json",
-    "boundary_evidence": "runs/2026-11-20-credential-integrated-boundaries.json",
+    "boundary_evidence": "runs/2026-11-20-android-pause-final-boundaries.json",
     "reviewed_source_inputs": 1369,
     "accessibility_observation": {
       "first_attempt": "runs/2026-11-19-tag-wave2-website-attempt.json",
