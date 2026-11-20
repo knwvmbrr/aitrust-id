@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-160408-credential-flow-device-preview-c45f5c2f
+
+Recorded 2026-11-20T16:04:08.800577+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a separately invoked phone-friendly Python credential-flow method preview with exact canonical source, private input binding, bounded independent worker and local optional-surface failure containment.
+- **Evidence.** 53 focused Python controls,10 Node groups,33 actual canonical CLI outcomes and33 full native/browser outcomes per Chromium and WebKit pass. Six corrupt-result injections per engine refuse before rendering. Actual existing PS worker remains functional after optional method, import, render and missing-chunk failures. [Change record](./runs/changes/2026-11-20-160408-credential-flow-device-preview-c45f5c2f.json).
+- **Not claimed.** No production mount or deployment performed in this branch; no PS signal mapping, context/intent classification, independent semantic corroboration, held-out accuracy, physical-phone or human accessibility acceptance. F-012 and full original scope remain open.
+
+
 ### 2026-11-20-050634-reviewed-sdk-metadata-correction-cfbf00f7
 
 Recorded 2026-11-20T05:06:34.264921+00:00 · Contributor: Codex · change

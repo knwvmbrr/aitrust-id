@@ -1,0 +1,118 @@
+"""Credential Python-flow method parity and safe source build; never Credential accuracy evidence."""
+import hashlib
+import importlib.util
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+import sys
+import pytest
+from tools import credential_device as credential
+from tools import credential_flow as canonical
+from protocol.normalization import normalize_nfc
+ROOT=Path(__file__).resolve().parents[1]
+spec=importlib.util.spec_from_file_location('credential_builder',ROOT/'scripts/build-credential-device.py');builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
+CASE_SPEC=importlib.util.spec_from_file_location('credential_cases',ROOT/'scripts/credential-device-cases.py')
+case_module=importlib.util.module_from_spec(CASE_SPEC);CASE_SPEC.loader.exec_module(case_module)
+CASES=[r['text'] for r in case_module.cases() if r['expected'] is not None]
+
+@pytest.mark.parametrize('text',CASES)
+def test_exact_original_record_and_both_raw_normalized_identities(text):
+ record=json.loads(credential.inspect_credential_device(text));assert record['original']==json.loads(json.dumps(canonical.observe(text)))
+ raw=text.encode();normalized=normalize_nfc(text)
+ assert record['raw_sha256']==hashlib.sha256(raw).hexdigest() and record['raw_characters']==len(text) and record['raw_bytes']==len(raw)
+ assert record['subject_sha256']==hashlib.sha256(normalized.encode()).hexdigest() and record['subject_characters']==len(normalized)
+ assert text not in json.dumps(record) and record['tags']==[] and record['tag_asserted'] is False
+
+@pytest.mark.parametrize('text',[r['text'] for r in case_module.cases() if r['expected'] is None]+['\ud800',None,3])
+def test_refusal_not_quiet_result(text):
+ with pytest.raises((ValueError,UnicodeError)):credential.inspect_credential_device(text)
+
+def test_record_budget_refuses_in_full(monkeypatch):
+ monkeypatch.setattr(credential,'MAX_RECORD_BYTES',100)
+ with pytest.raises(ValueError):credential.inspect_credential_device(case_module.FLOW)
+
+def test_no_other_tag_pipeline_is_imported_or_needed():
+ script="""import importlib.abc,json,sys
+class Block(importlib.abc.MetaPathFinder):
+ def find_spec(self,name,path=None,target=None):
+  if name in ('tools.mt_device','tools.hp_device','tools.citation_resolution','tools.nf_source_evidence','tools.credential_flow_context'):raise ImportError('Blocked unrelated runtime')
+sys.meta_path.insert(0,Block())
+from tools.credential_device import inspect_credential_device
+assert json.loads(inspect_credential_device('pass'))['state']=='NO_SUPPORTED_FLOW'
+"""
+ result=subprocess.run([sys.executable,'-I','-S','-B','-c',"import sys;sys.path.insert(0,'.');"+script],cwd=ROOT,capture_output=True,timeout=5)
+ assert result.returncode==0 and not result.stdout and not result.stderr
+
+def tree(tmp_path):
+ root=tmp_path/'checkout';root.mkdir()
+ for name in builder.ALL_FILES:
+  path=root/name;path.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/name,path)
+ builder.build(root);return root
+
+def outputs(root):return {str(p.relative_to(root)):p.read_bytes() for p in (root/'site').rglob('*') if p.is_file()}
+
+def test_builder_exact_deterministic_sources_and_notice_attribution(tmp_path):
+ root=tree(tmp_path);a=builder.build(root);b=builder.build(root);assert a==b
+ raw=(root/('site/public'+a['path'])).read_bytes();assert hashlib.sha256(raw).hexdigest()==a['bundle_sha256'] and len(raw)==a['bundle_bytes']
+ files=json.loads(raw)['files'];assert set(files)==set(builder.ALL_FILES)
+ for name,value in files.items():assert value.encode()==(ROOT/name).read_bytes()
+ notice=(root/'site/public/credential-device/notices.txt').read_bytes()
+ for name in builder.LICENSE_FILES:assert (ROOT/name).read_bytes() in notice
+
+@pytest.mark.parametrize('mode',['symlink','parent_symlink','root_symlink','fifo','oversize','hardlink','normalizer_drift'])
+def test_builder_refused_inputs_preserve_outputs_and_never_copy_private_canary(tmp_path,mode):
+ root=tree(tmp_path);before=outputs(root);private=tmp_path/'private.txt';private.write_text('SYNTHETIC_PRIVATE_CANARY');source=root/'NOTICE';selected=root
+ if mode=='symlink':source.unlink();source.symlink_to(private)
+ elif mode=='parent_symlink':
+  (root/'protocol').rename(tmp_path/'outside-protocol');(root/'protocol').symlink_to(tmp_path/'outside-protocol',target_is_directory=True)
+ elif mode=='root_symlink':selected=tmp_path/'root-link';selected.symlink_to(root,target_is_directory=True)
+ elif mode=='fifo':source.unlink();os.mkfifo(source)
+ elif mode=='oversize':source.write_bytes(b'x'*200001)
+ elif mode=='hardlink':source.unlink();os.link(private,source)
+ else:(root/'protocol/normalization.mjs').write_text('Invalid generated source')
+ with pytest.raises((ValueError,OSError)):builder.build(selected)
+ assert outputs(root)==before and not any(b'SYNTHETIC_PRIVATE_CANARY' in raw for raw in outputs(root).values())
+
+@pytest.mark.parametrize('mode',['file_change','file_replace','parent_replace','root_replace','after_stage'])
+def test_all_captured_identities_rechecked_before_any_public_replacement(tmp_path,monkeypatch,mode):
+ root=tree(tmp_path);before=outputs(root);original_read=builder.Capture.read;trigger=False
+ def mutate():
+  if mode in ('file_change','after_stage'):(root/'NOTICE').write_text('SYNTHETIC_PRIVATE_CANARY')
+  elif mode=='file_replace':(root/'NOTICE').unlink();(root/'NOTICE').write_text('SYNTHETIC_PRIVATE_CANARY')
+  elif mode=='parent_replace':(root/'protocol').rename(tmp_path/'original-protocol');shutil.copytree(tmp_path/'original-protocol',root/'protocol')
+  else:root.rename(tmp_path/'moved-root');root.symlink_to(tmp_path/'moved-root',target_is_directory=True)
+ if mode=='after_stage':
+  original=builder.Capture.check
+  def check(self):
+   nonlocal trigger
+   if not trigger and any((root/'site').rglob('.credential-build-*')):trigger=True;mutate()
+   return original(self)
+  monkeypatch.setattr(builder.Capture,'check',check)
+ else:
+  def read(self,name):
+   nonlocal trigger
+   raw=original_read(self,name)
+   if name==builder.ALL_FILES[-1] and not trigger:trigger=True;mutate()
+   return raw
+  monkeypatch.setattr(builder.Capture,'read',read)
+ with pytest.raises((ValueError,OSError)):builder.build(root)
+ destination=tmp_path/'moved-root' if mode=='root_replace' else root
+ assert trigger and outputs(destination)==before and not list((destination/'site').rglob('.credential-build-*'))
+
+def test_fdopen_failure_closes_owned_descriptor_once_without_output_changes(tmp_path,monkeypatch):
+ root=tree(tmp_path);before=outputs(root);opened=[];closed=[];original=os.close
+ def fdopen(fd,*args,**kwargs):assert kwargs['closefd'] is False;opened.append(fd);raise OSError('SYNTHETIC_PRIVATE_CANARY')
+ def close(fd):closed.append(fd);return original(fd)
+ monkeypatch.setattr(os,'fdopen',fdopen);monkeypatch.setattr(os,'close',close)
+ with pytest.raises(OSError):builder.build(root)
+ assert len(opened)==1 and closed.count(opened[0])==1 and outputs(root)==before
+ with pytest.raises(OSError):os.fstat(opened[0])
+
+def test_postpublication_replace_failure_reports_output_uncertainty(tmp_path,monkeypatch):
+ root=tree(tmp_path);original=os.replace
+ def replace(*args,**kwargs):original(*args,**kwargs);raise OSError('SYNTHETIC_PRIVATE_CANARY')
+ monkeypatch.setattr(os,'replace',replace)
+ with pytest.raises(builder.OutputCommitUncertain) as caught:builder.build(root)
+ assert caught.value.output_may_exist is True and str(caught.value)=='Credential build output may exist; inspect before retrying.'
