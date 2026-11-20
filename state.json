@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-20T17:08:16.528278+00:00",
+  "updated": "2026-11-20T17:23:55.320452+00:00",
   "active_increment": "Public optional Python-flow preview and separate PS/MT CLI methods published from protected04b11a12. Twelve scoped jobs complete; originals132complete/70open. Android followup active.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1171,7 +1171,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-20T17:08:16.528278+00:00",
+  "updated_at": "2026-11-20T17:23:55.320452+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -4218,7 +4218,7 @@
       "guide": "docs/android-share-developer.md",
       "review": "runs/2026-11-19-android-prerequisites-independent-review.json",
       "new_license_accepted": false,
-      "actual_hosted_runtime_verified": false,
+      "actual_hosted_runtime_verified": true,
       "physical_device_complete": false,
       "actual_hosted_cases_passed": 6,
       "actual_hosted_case_goal": 7,
@@ -4230,7 +4230,11 @@
         "hosted_run": 44779986361,
         "status": "active_at_snapshot",
         "scope": "Approved onPause wipe candidate, onStop retained; original fast-return driver unchanged. Actual new-source hosted proof pending; no verified fix or seventh-case acceptance."
-      }
+      },
+      "actual_runtime_cases": 7,
+      "runtime_evidence": "runs/2026-11-20-android-pause-hosted-seven.json",
+      "separate_review": "runs/2026-11-20-android-pause-independent-review.json",
+      "shared_integration": "pending current evidence refresh and protected merge"
     },
     "original_complete": 132,
     "original_open": 70,

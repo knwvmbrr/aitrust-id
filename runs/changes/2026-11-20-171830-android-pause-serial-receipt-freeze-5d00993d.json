@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-171830-android-pause-serial-receipt-freeze-5d00993d",
+  "recorded_at": "2026-11-20T17:18:30.875336+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f42ba118c35874e015a75bb5eb36e1dabd8b68f3",
+  "changed": "Record the completed Android protocol execution and preserve the website build-guard refusal from concurrent receipt publication; serialize the remaining verification.",
+  "proves": "All56 protocol commands passed with stable sources. The website attempt stopped before browser phases while the newly written protocol evidence lacked a pre-existing change event; all current public files are now covered before the sole remaining website run.",
+  "limits": "No website pass or protected Android integration yet; original requirements remain unchanged. Earlier failed records are retained.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "runs/2026-11-20-android-pause-independent-review.json": "10fd486b31de337733276f2dd70d49d5ceb5616451f39c086f365b6e1a309051",
+    "runs/2026-11-20-android-pause-integrated-protocol.json": "ee22d192ac696243c3fc6b437e2a7c672804a86a0489f1ea848250d21093c696",
+    "runs/2026-11-20-android-pause-integrated-website.json": "e3e2bc05af3c269954853a37fc726b7c1dc830316fe041af36d3f0aeaed1ec76"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-pause-integrated-protocol.json",
+      "sha256": "ee22d192ac696243c3fc6b437e2a7c672804a86a0489f1ea848250d21093c696"
+    },
+    {
+      "path": "runs/2026-11-20-android-pause-integrated-website.json",
+      "sha256": "e3e2bc05af3c269954853a37fc726b7c1dc830316fe041af36d3f0aeaed1ec76"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-171651-android-pause-integrated-review-311d484c",
+  "recorded_at": "2026-11-20T17:16:51.233010+00:00",
+  "author": "Codex PM after independent task-list lead review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f42ba118c35874e015a75bb5eb36e1dabd8b68f3",
+  "changed": "Integrate the real API36 pause-cleanup correction and preserved fast-return driver, with separately reviewed seven-case evidence and published web-delivery records.",
+  "proves": "The task-list lead independently verified the actual CI artifact and reports. PM reviewed the lifecycle change, unchanged fast-return criterion, 17 source identities and explicit draft-loss behavior; all seven original cases pass on the exact native source.",
+  "limits": "Current protocol/website and boundary refreshes plus protected integration remain pending. No physical/human, accuracy, store release or full N014 closure.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "runs/2026-11-20-android-pause-independent-review.json": "10fd486b31de337733276f2dd70d49d5ceb5616451f39c086f365b6e1a309051"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-pause-hosted-seven.json",
+      "sha256": "f9266bba3852b4faae690037e173fc5f3fc49b24424c12639e60ab6920c38162"
+    },
+    {
+      "path": "runs/2026-11-20-android-pause-independent-review.json",
+      "sha256": "10fd486b31de337733276f2dd70d49d5ceb5616451f39c086f365b6e1a309051"
+    }
+  ],
+  "checks": []
+}

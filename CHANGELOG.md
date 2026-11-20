@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-173041-android-pause-complete-source-freeze-eb820bcf
+
+Recorded 2026-11-20T17:30:41.294109+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Freeze all final native integration source and N01480% public scope mirrors before serial verification.
+- **Evidence.** Every202 required_acceptance remains byte-equivalent as data; all other original percentages stayunchanged. The selected API36 seven-case evidence supports N01480, with final_acceptance absent. The site preparation generated matching scope files and exact guide data. [Change record](./runs/changes/2026-11-20-173041-android-pause-complete-source-freeze-eb820bcf.json).
+- **Not claimed.** Shared final protocol/website/boundary checks and protected merge are still pending. All70 originals remain open where previously open.
+
+
+### 2026-11-20-172911-android-pause-capacity-and-final-preparation-00e4ad62
+
+Recorded 2026-11-20T17:29:11.970873+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Preserve the real local capacity refusal and recovery, update the reviewed native source inventory, and prepare the final scope-derived build before verification.
+- **Evidence.** All116 focused native package/verifier/evidence controls pass after clearing two obsolete project build caches; the 2GB safety reserve is unchanged. The N01480% evidence and all original criteria remain explicit. [Change record](./runs/changes/2026-11-20-172911-android-pause-capacity-and-final-preparation-00e4ad62.json).
+- **Not claimed.** The earlier failed website receipt is preserved. Final current protocol/website checks and protected Android integration are pending; no physical or full original closure.
+
+
+### 2026-11-20-172355-android-pause-native-scope-milestones-9ca02a6c
+
+Recorded 2026-11-20T17:23:55.527418+00:00 · Contributor: Codex PM with task-list lead milestone review · change
+
+- **Changed.** Credit N014 actual selected Android VM integration at80%, with all seven original controls executed; preserve every original acceptance criterion and the final physical/human gate.
+- **Evidence.** Separate review confirms the existing milestone contract permits implementation, executable checks and selected API36 integration; final_acceptance is absent. Original counts stay132 complete/70 open, completed_by/time stayempty, and the source baseline and nine historical closures remain intact. [Change record](./runs/changes/2026-11-20-172355-android-pause-native-scope-milestones-9ca02a6c.json).
+- **Not claimed.** Protected integration plus physical Android/TalkBack, real sender/chooser, update/removal and maintained distribution remain. No full N014, physical evidence, tag accuracy or store-release claim.
+
+
+### 2026-11-20-171830-android-pause-serial-receipt-freeze-5d00993d
+
+Recorded 2026-11-20T17:18:30.875336+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record the completed Android protocol execution and preserve the website build-guard refusal from concurrent receipt publication; serialize the remaining verification.
+- **Evidence.** All56 protocol commands passed with stable sources. The website attempt stopped before browser phases while the newly written protocol evidence lacked a pre-existing change event; all current public files are now covered before the sole remaining website run. [Change record](./runs/changes/2026-11-20-171830-android-pause-serial-receipt-freeze-5d00993d.json).
+- **Not claimed.** No website pass or protected Android integration yet; original requirements remain unchanged. Earlier failed records are retained.
+
+
+### 2026-11-20-171651-android-pause-integrated-review-311d484c
+
+Recorded 2026-11-20T17:16:51.233010+00:00 · Contributor: Codex PM after independent task-list lead review · change
+
+- **Changed.** Integrate the real API36 pause-cleanup correction and preserved fast-return driver, with separately reviewed seven-case evidence and published web-delivery records.
+- **Evidence.** The task-list lead independently verified the actual CI artifact and reports. PM reviewed the lifecycle change, unchanged fast-return criterion, 17 source identities and explicit draft-loss behavior; all seven original cases pass on the exact native source. [Change record](./runs/changes/2026-11-20-171651-android-pause-integrated-review-311d484c.json).
+- **Not claimed.** Current protocol/website and boundary refreshes plus protected integration remain pending. No physical/human, accuracy, store release or full N014 closure.
+
+
 ### 2026-11-20-170849-close-published-credential-deliveries-782a295d
 
 Recorded 2026-11-20T17:08:49.724088+00:00 · Contributor: Codex task-list lead · change

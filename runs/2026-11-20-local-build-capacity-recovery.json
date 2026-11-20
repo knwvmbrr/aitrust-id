@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-11-20T17:29:10.768034+00:00",
+  "pass": true,
+  "cause": "Eight actual native verifier controls refused because local free disk space was below the unchanged2GB reserve.",
+  "action": "Removed only two stale project-specific regenerable DerivedData directories; preserved source, logs, results, archives and signing material.",
+  "free_bytes_before": 1881530368,
+  "free_bytes_after": 2381021184,
+  "focused_native_controls": {
+    "command": [
+      "python3",
+      "-m",
+      "pytest",
+      "tests/test_ios_project_package.py",
+      "tests/test_ios_share_verifier.py",
+      "tests/test_native_share_evidence.py",
+      "-q"
+    ],
+    "exit": 0,
+    "passed": 116,
+    "stdout_sha256": "5387b4d4b59384902e8374bd6c85df14f81a16edcacc44af9e14c57b0b2f6f2e"
+  },
+  "limits": "Local capacity recovery and focused verifier execution only; no iOS device or signing action performed."
+}

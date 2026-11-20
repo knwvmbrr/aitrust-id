@@ -1,0 +1,1647 @@
+{
+  "schema_version": 1,
+  "kind": "engineering_revalidation",
+  "captured_at": "2026-11-20T17:17:18.396409+00:00",
+  "pass": true,
+  "source_unchanged_during_execution": true,
+  "fingerprint": {
+    "capability": "protocol",
+    "sources": {
+      ".dockerignore": "0a386c4e319b74842ce59f20a81caf2f86138292e30a1ac2e6e75e18bd16e5f8",
+      ".github/workflows/ci.yml": "4f11b50ac0d951d98305b83c7df733415d02002ab07629f0471252a8ae1a1533",
+      ".github/workflows/metadata-storage.yml": "463541fe855c89c224859e6f9484a3e40f15c9ae2f749b40df559e05c644ae49",
+      ".github/workflows/organization-directory.yml": "7c1668060036cf388cb93d78f10e63d047b5e0d2daad39c66742a5ce3e3f9551",
+      "AGENTS.md": "64335866e529ab3e970a862c08db36741ff00523d6e0b6986003a95c1a8b43ec",
+      "GOVERNANCE.md": "97964ebd616af7b3c0f4f4c1fa36f728038f9101677d13f7ced277e2a0f69c7c",
+      "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+      "communications/accounts.json": "464d3680d875c647b90ac4809297418721492843b3093225d1f564a4ede1b4de",
+      "communications/releases/agent-tools-preview.json": "7fe2f4abf87d8fd88770058969a194fa96c8d432070cf06b3c61e37b36e2b00a",
+      "deploy/audit/store.sql": "aff20a33fa64b6f7257448e133187f76be9b69ff763968bc7fe208639a0cfa10",
+      "deploy/backup/restore.py": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+      "deploy/recovery/apply.py": "fc86b7b61929d29df020b4bfb033c26b77da3ceed15d225fa8db50b2479dd62d",
+      "deploy/recovery/collect.py": "51b1d8f6ac7ade5f9c5d7614fea61ce2f145884fc437f8b15c750df7bd54d812",
+      "deploy/recovery/finish.py": "c1b8b85dcb1301e87def5ae35dec0b2dada47ff7dd3f4dd57389171d624a8885",
+      "deploy/recovery/guest.py": "1020ed70957e8b37722511151ddc6cd2100afa27a858f1cb8e5c9858647bc36a",
+      "deploy/recovery/isolate.py": "623c31b3626d5dab002b9fb0dbb40372c2f6ecd31532d9ea36e262d15d556c32",
+      "deploy/recovery/monitor-guest.py": "bebeed7dde7aa47e206ed03306ae353c1ede3467838a8d0393ba4befa854a50a",
+      "deploy/recovery/monitor.py": "c186a26634491510b654360da850cdbf81d534de72ef8c13cc4d544159286d7b",
+      "deploy/recovery/prepare.py": "420932a0a32038e37fa336ffa24df82232921a8d64951125f8675f581b1df209",
+      "deploy/recovery/receive.py": "e2f1053357dad1da1da2e1d460aeecebf82cc747a3b1079bac2146bcfcfd2265",
+      "deploy/recovery/restore-guest.py": "d4ec096d5e0f38d2ee05331ec292b0d4d0af6129015af33c3001fcf5c577d845",
+      "deploy/research/metadata-development.sql": "a6df9e0e344a9910adb5e9576a028106966dbaa907e7221f8c73ce8d5586a32f",
+      "deploy/research/metadata-invitation-development.sql": "539679c23c689b369a2ee11b2ed933acb8821bf16d7f377edaf589d7263040f4",
+      "deploy/research/metadata-pilot-policy.json": "ba1e64ef0f97f67c91d0dac4a3127f619b08f23680c3691709c8450bb21d7cbd",
+      "docs/agent-handoffs.md": "1768644c4572ff82e7f5efcdaf02a11f861bc9e4b95974b1ac2e4410c3875b49",
+      "docs/agent-output-plan.md": "518218894187780b436bdd69baa6afe3d773de71e838ebe1c2c0ce2a44a4036c",
+      "docs/agent-output.md": "3aa21bb6aa8d08c1fdb9d743a3b3cb0442628217769b1d3d069f33e4dabd8256",
+      "docs/android-share-developer.md": "a160a32b00682ef136262d3055a2e6234554ee8c572840c259961d5963b9137c",
+      "docs/android-share-plan.md": "81aa936b56790d3c7456ab2c3d60276b3194935f23d867fc3dbd2b0cd91d77ca",
+      "docs/backup-retention-plan.md": "f5d40f22dbd8449ee202c16e095728871e2556051355e8a9472be424bb63383e",
+      "docs/backup-retention-result.md": "a22c5bdafafbed29824e128b2ecd3ab64f6668b9bf81ee0f70a4cf340feac1c4",
+      "docs/backup-retention.md": "81a99cdf445c0ff1c432ff07adbb3313a88ee77a4fed86609dad27f009356617",
+      "docs/c2pa-cohort-plan.md": "2d048947a09a273e96d40d5ecfc1a69200963be6f39108ff9ada4d3a00103e92",
+      "docs/c2pa-cohort-result.md": "2f26dc7a516cd67c044a659fb0fd393788403e5dbdd01152817943ad47c17f95",
+      "docs/changelog-merge-parent-plan.md": "0d704ed8e4bcaf0aa3d908953c4a340f56997b160bc70c3c8091c997ac6de57d",
+      "docs/ci-browser-install-plan.md": "873f1ef39f66d79e75d2a6d8a0334f30c92edaba711e0d4fd11022c3f5d9ac1c",
+      "docs/conformance-acceptance-plan.md": "16dfba78d295d98a566e3486181c5e9584b59e44016b37f22e30944a2564f702",
+      "docs/conformance-runner.md": "45a8f2758c877c0c2fa7699bfe5a5451163ba1c31f6f9bb1cd99bdb9b563a687",
+      "docs/credential-flow-context-plan.md": "5fa120418a40da8f2507357942836155a05ad5c23d9613f552d81e4611057299",
+      "docs/credential-flow-context.md": "2ad6a7821c5e7a2ed848426a4106c6575ce8a803d1568be6af712f40019705ac",
+      "docs/credential-flow.md": "297efb4c452811cfb835a24f8c02470e355b1949f967f1d0401691566aaf3d00",
+      "docs/dependency-conflict-plan.md": "bc55f81c0fea636b01c6727de8c6ff3a5404f80f44b5bbcf2f06c84545540812",
+      "docs/directory-clock-fence-plan.md": "4e88a0338de2c64adee8090bd4f3c8bd0e8447ef70e0b821a73564a4c47a0874",
+      "docs/draft-privacy-plan.md": "730a7e671c13b93702990dd10c5472524b3baa44928289478f9aeff88d0a708b",
+      "docs/draft-privacy.md": "aeea14d3e125f27d137cfefaed3a4086e3d746d0f4ef34751f5353dbf13f6b77",
+      "docs/feedback-analysis-plan.md": "13345c071f4865aa5b3e49f8f41a6b2dfef3a1a89a9f0979a357aba0500b9231",
+      "docs/feedback-analysis-result.md": "15413490a8648635fcc7b70c6e5da9dea22615e1b6aa63f8ced7d8ee9c32195a",
+      "docs/feedback-analysis.md": "8da85563122867e1e019091b229f0922e2466ce719e084829bbc86d8ca60418d",
+      "docs/fi-citation-sidecar-plan.md": "e9452ca321e7b35a1af7e4a96c9eee7b779326912fbb4932f1966e985f067d54",
+      "docs/fi-citation-sidecar.md": "93be92ed4faea588f10ad75be83c0343fe7473092c6a2f76fc4f5771a7ed047a",
+      "docs/full-host-recovery-plan.md": "fe08fcb328970539a4aa7c7ef97624beb7d5192e61cbe441b2876c90aab20b65",
+      "docs/host-capture-plan.md": "62de9c70015cba39dda9eeaa1cf3f0ae72d04ef51f208482fa1c345b111984a1",
+      "docs/host-capture.md": "90ab5ae83e9fd253caf79ac0c0777fa125dbfafd6be775be5aa0a96d7a6fcd81",
+      "docs/hp-device-explorer-plan.md": "bca7e40a3ff2cab04d853766f245cb09097be5a772427f729877bb54e5236020",
+      "docs/hp-device-explorer.md": "094faea9d9ce45089857babc27071a67bca14d170da4d25a183d9aa4aa919044",
+      "docs/hp-site-integration.md": "e969979983f870e2f45208b81be3daaa2a43573919b5691b0b31c24f434e2446",
+      "docs/independent-review.md": "cf7edebd36be6e5777aa7f291bfada601f36cff13068bab350162ac857636202",
+      "docs/local-setup-plan.md": "7b81e3097906fe3d99fafa49a09f8c7588f3ca8755f59d24dfef1d8b813d765e",
+      "docs/local-setup-result.md": "901acf9c41939aa33015c3b96995a8af5dd9ed190a2888fc008dca8da543b754",
+      "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
+      "docs/mt-device-explorer-plan.md": "2e1bf61b5540a58ffcbbfd8d43f0f724e852a4e243de1e9c3b4859eaaf488fce",
+      "docs/mt-device-explorer-result.md": "bcc93b0347426563bb9c46190f575befbd6881fbac5d2acd0236e4e4355d94d3",
+      "docs/mt-device-explorer.md": "dad64b08d055ce89e0ea5ed1c35eac7b094be449d5eae4b09065994f09bd9896",
+      "docs/mt-device-integrity-correction.md": "7c055579fbe8a8fe92ef7706358f044be4251aba46df7a3187a1b6a42d6430a5",
+      "docs/mt-quotation-workflow-result.md": "890c94a259446fd9f2e863312907556c0f6181f0953a334237abff1335ead6cb",
+      "docs/mt-quotation-workflow.md": "da4f3ec6254575e069cc023d5f602a35dc689c097fed1d69380182f7ad1c5e17",
+      "docs/nf-source-evidence-plan.md": "32bb1d50fa38677e9d30c34312808677081562d4e6eab507c739080573322b77",
+      "docs/nf-source-evidence.md": "0349cb22f0c39d9cf58851147609fac07885a48ff2af0899292bce88faa78318",
+      "docs/nli-license-cohort.md": "1e2b05a9233fd4f42386be03bc7d6849e7b6f90bd86cb347d4bfce4228783407",
+      "docs/open-validation-path.md": "6a1673733bc3c1789ec07c96d75d99da8b2fa3453922fbc4417e640edd57ee12",
+      "docs/organization-audit-plan.md": "b0d165ad9b184a5db35c5da0f11737c5246829bdc930e0869c80d3705a00fa24",
+      "docs/organization-audit.md": "8267bb84f888aae2e27530965b45b56f7e5b7bd360a52282c1e177954b7c6e47",
+      "docs/organization-directory-plan.md": "d5751c2d05e8ae36184253ded42243bdc2edf54ae1fa7bf7aaff800990ec9d02",
+      "docs/organization-directory.md": "03d9aafc07df1b2fb9235429c8f4e0c82f3935cc6b34ebf8d332e5506393763e",
+      "docs/private-policy.md": "6ca65a93b3a3c908cea337ff7a8e210b1161d202fb2ebdb8d6b15e3e47045ad0",
+      "docs/ps-source-distribution.md": "957854f9a2b5e571fcf212b8534a4a9a65afd2152da5ef4879e2f2085740986e",
+      "docs/reference-review-window-plan.md": "c1b74fd3e23919982b50c623b3fb611808f818722fd0d63ea4bbf338d3f8c27f",
+      "docs/reference-revisions.md": "1b006fe82a6e70a763a9bcf056eb331c40d558ff94fd44f9e9ebd12c29462cb5",
+      "docs/rolldown-source-review.md": "e78a3b53149c201d1d5f9461f32e2999c9bd02d7eb7c9776da8015d4838331fb",
+      "docs/scope-groups.json": "5c7954eb92746d5e1575249624142038040f324e34f95f316ff7915fd49fce7c",
+      "docs/scope-progress.json": "bee5495c308bfe922663ae179c725defdb81115f2676783cb5206f814f4f2aaa",
+      "docs/scope-render-plan.md": "8ae724a783f618d1ff9170a05a12df1038e243b82b684784c68cc98e620690b7",
+      "docs/security-operations.md": "36100d28611a2a47ba30159365e5ae24014ba6ebebae8a9472b394dd5a2f78fb",
+      "docs/session-accountability-plan.md": "585c6bfc35db134353818c51ddf0a7251b8095bcc3faaada5918b8489b6ddc31",
+      "docs/session-revision-plan.md": "8c48f988200fdd534fa859edd39656693d0fdd955098f4cace85a4142e3814da",
+      "docs/session-revision-result.md": "66d7e91595d6bca68770854aa34ac4cda258a6f64cdc7b7cf996469b1d357ad5",
+      "docs/session-revisions.md": "01876099857ffbb9883bccb15132dc933a23de24082c01c49e03a67e2d9a43a0",
+      "docs/tag-failure-isolation-plan.md": "d9e6304bfc8303cf6a3cd922882458e0c2cbed7a16c481a0749e1a0e8f26de02",
+      "docs/tag-wave-nov19-integration.md": "10d8bff31a5b102722c54c0707cb13f77760d5df4f15102836e699c61c2131b2",
+      "eval/conformance/assertion-v1.json": "aa30aef56eeff6657b68b315dc4f64b1756ee9eb8c9c54db76159a633c09b745",
+      "eval/dependency-policy.json": "85a36d74190d6ad77b47a19731b50ce07fe2fc81572f009348befb89ae48cdcb",
+      "eval/gates.schema.json": "8798635d95ba86cb297bd115f87f3de23ba56d9a086697dfc4080094e8ebaf85",
+      "eval/gates.yaml": "b56568b012c8aef8b0db4169aaec3709b2ca00ab5750546cdc812091026eaa96",
+      "eval/harness.py": "4d5c16f3081347ba0dcf793301ffdc6406be66450024f662efe9f3902b082c84",
+      "eval/requirements.lock": "d6020252107ce24dfc97f98976ee6a203f412078919cce0cd7027c806890e384",
+      "eval/revalidation.json": "ccb8383eabc4f208d3b96a7566732b3ce1453ae98dbb2369eb0dc191ced1533b",
+      "eval/tag-performance-evidence.json": "91513456f4d227ffe614eca58148556133d60c6de222ed8a6f177f01b02aa5a8",
+      "eval/vectors/ps-unicode-redaction.json": "7690cb2ffb6c7843513554481dc25775ed52661850c792b7463536f481c5d6ea",
+      "eval/vectors/reserved-subjects-v1.json": "fdd385117f811400c2d8a31e8c050a571a1b238999dc5fc91ab7337ffe7494d6",
+      "eval/vectors/subjects-v1.json": "3e47d7e698f9e16926a68fbf82d39cbd23f7e9a63f4c38deaab526782f7c086c",
+      "eval/vectors/subjects-v2.json": "4281cc7ab369f1d415890b130dfcaae80b115c4b2bae47892d0a9b455e7d4fe0",
+      "integrations/ai-tools/check-text.input.schema.json": "78bf99eb5a0c2f5bdb90528b43af0dfa7b45804f251dc618f3d3a77da4b1623b",
+      "integrations/ai-tools/check-text.output.schema.json": "54a3d0330e4ecd4eb9b7f65cde9492d45cd8b6c32b82f6d83bc707ea31c42610",
+      "integrations/ai-tools/function-tools.json": "a69301e18521fb975f13f718fb332400c739ccd7af76720502e9e6ec0567d00a",
+      "integrations/mcp/requirements.in": "e6c1d29fe87f6e388e1bc35a791364b788f5452ab0524f8b452084e2cf569400",
+      "integrations/mcp/requirements.lock": "82375e677571a53a1d3c8b5f13312ae8f81da2a05e4bea0ab59417d4486d95ea",
+      "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+      "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+      "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+      "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+      "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+      "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+      "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+      "mobile/android/src/com/aitrustid/android/CheckActivity.java": "2ab7df4100143e4e17e9c87db74f15c1641edf54fff7a986c30b463aa2c6266b",
+      "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+      "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+      "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+      "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+      "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29",
+      "protocol/accessibility_release.py": "5e1dc8ad1f584c14fffab5cf4b0d6b7b300b50248ae0a8e99c0f72dae460b95d",
+      "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+      "protocol/author-choice.cjs": "fca928eba07e0a1335d62c7d5db83c853c8a8694fbcd30985d2c50f777349c8a",
+      "protocol/categories.py": "e7ac0f4309286a57fa5f6ff2048f35244896f756f3a5c713a38c10cd91b5deae",
+      "protocol/conformance-statement.cjs": "ef65e76adc8873dd506f4c344507bd1b3800ba032aadf0cacd7c25342555f189",
+      "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+      "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+      "protocol/decisions.py": "45d6f00fc7d71f5740a39009d8424fb170013ea5ee8356b06e43c928b4b32182",
+      "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+      "protocol/group-receipts.cjs": "262a66ed3da5ebac28682b6e6992488d66ae9b2a94561788e6a3eccaa9ec90e8",
+      "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+      "protocol/key-backup.cjs": "0c656585f042ac6cfcdcf10721dbed90d8ba4349f8ae00b92fdd310f502aef17",
+      "protocol/measurements.py": "2b850a3416e7ac680367a1a64bc93d64e1ad1078da1124b1212063fca607a818",
+      "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+      "protocol/normalization.cjs": "dc801f09e3abb32f89fde3005bf48e7f62ed46d628dadcd02c2f62ec324f75c4",
+      "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/receipts.cjs": "d807903771a2616e0a437259adc8ac8bf85717b42407224b82f5f9e6799feb59",
+      "protocol/repetition.py": "1d216c7ec554f05ac2bc8b133733ef08ea89c8c10dfc0a7e640714e217abfbd8",
+      "protocol/replay.py": "2948a7894bc9c82f653f4347a67708303a1632a78ba25f8769460f14d11abbe6",
+      "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+      "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+      "protocol/reserved-subjects.cjs": "4ef18ca508118d39eab0bb821a35db553961c80ffa040d18dacf9c4300cb49b9",
+      "protocol/reserved_subjects.py": "18c4b9fca2f049cf8bc5a6f6fdbd6755aaf91b3edc074ee40606aa03fad6b1a1",
+      "protocol/revalidation.py": "a8ea8d3b6fadf0cc0023234496fa00a0b7f7cf582ceff8ed38c9db8c93297379",
+      "protocol/revocation-witnesses.cjs": "32ffb117d0265acd63a0ceb4eae76ed486361525b8aae43d11703cc3be465c14",
+      "protocol/revocation.cjs": "0cfd35c00fd7a2e1dde91f567c499669c99fade18622933dfa08a55e1488caa7",
+      "protocol/scope_groups.py": "885bc5cb213d0f098546c0c507fc30c0c6a30a08744f85c4dedd2477f462e3d9",
+      "protocol/signals.py": "a2d3e52b5ec6760f8f7b2db4a38741b424a31f767e59c16d745a9d897af65f71",
+      "protocol/subjects.cjs": "0551d3a866639f232e9c7d1060ef021e3dd6b7147408cf31a8d3d0f21a1c4469",
+      "protocol/subjects.py": "79dca35c19ad5e60070cb14d72e6af11d753f8daf710e09de3a13a6385fe0074",
+      "protocol/transport_signing.py": "381238a51b786ae394753e43c4f6fa2a99fa4f20e8e938980bb74203fa2e685c",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "runs/2026-10-13-clean-setup-owner-decision.json": "34b464eac19a534636174dc4be86d18ac61b1c3174ad3e11685611af8400f1a8",
+      "runs/2026-10-13-draft-privacy-clean-setup-linux.json": "2605cd92488df3c0f36c114bff1e698e086afb77ac9f179802d8452b6fab4e95",
+      "runs/2026-10-13-historical-reproducibility-owner-decision.json": "a41142ac7d2089187b09f154aacd320a1579673164f58e18f01aa0707a6598d6",
+      "runs/2026-10-13-metadata-pilot-owner-decision.json": "c547ef86524d46f47be95eb8d9ef2fe5fcfdb6817be278446681067b88c259b2",
+      "runs/2026-10-13-one-command-linux-setup.json": "acab76526b9896b47f1b0426fbdfed4050f84cdaf501e380edc3964b9a6463e2",
+      "runs/2026-10-14-tag-isolation-bounded-batch-linux.json": "e05564cdcaf4cb8436b578c33c2f3b06c38f41c7af91d8965a18d12cf7e4d246",
+      "runs/2026-10-14-tag-isolation-bounded-real-linux.json": "122e3e0ccb1200c7994e8a3514d6201eb47b166203727c052844952063251007",
+      "runs/2026-10-14-tag-isolation-clean-setup-linux.json": "19534be16f520a737fba63ab0dace0b5c739a1e9f0fe6247e4dda650ba9d2062",
+      "runs/2026-10-14-tag-isolation-privacy-linux.json": "a7857c20c32a2748e086e2155d60650c7718c7f1a1b2dd9a593b1686076a15df",
+      "runs/2026-10-14-tag-isolation-replay-linux.json": "c6f130cfd81e0ffcf0f46de78ab2995c3c800cb06c2295118e89e9073ae35bc4",
+      "runs/2026-10-14-tag-isolation-service-linux.json": "9e794886ce3cefc8208f90a3b3cce43d040d8096db95731708da24e232148bfc",
+      "runs/2026-11-06-agent-output-linux.json": "1c32fd0c2c11a8d09992b7d043109221e6d0640cd3fe1deaa6615a00e7a91198",
+      "runs/2026-11-06-agent-output-macos.json": "716534fea2e86705758bbfca287eee8ac1b55022fa83b3bc8edc6261b1384f97",
+      "runs/2026-11-06-agent-output-view-current.json": "43cd8c7eb891e7dd795fd6ab0b4e3ec990ff4c790960f40d54cee330e203918b",
+      "runs/2026-11-06-agent-output-view.json": "6d9e55b002872c6ccc7fd79d315e42334b19c62f84ebecc2e2e24725470c9333",
+      "runs/2026-11-06-conformance-software-execution.json": "72fc2914c03cd925f44f0693bac77145d2ef29a5d13fa9c7ba67ffe8d1210d0a",
+      "runs/2026-11-06-conformance-software-owner-decision.json": "c8158b9630b7f4554065b1d25c04e538d8d3875fcd88601c83a70b3b21a3355e",
+      "runs/2026-11-06-host-capture-final-linux.json": "e246a44f972873987616a401bb2971d938c8981b64a18ee48eb141fd4d2986c8",
+      "runs/2026-11-06-host-capture-final-macos.json": "cad4dc4a13c73dc8cc288d4cc3e8ad3a83a9ee325feffc8ac1ab6a1fa8e7704d",
+      "runs/2026-11-06-host-capture-linux.json": "8c6babc827eccb0d8a84c899651368cc8c379be219f84afb496d407805a98b99",
+      "runs/2026-11-06-host-capture-macos.json": "c5c26f107f4fb4b6d7128cd97e38759e34046f0b88dc09b860547747e8a843e9",
+      "runs/2026-11-06-host-capture-reviewed-linux.json": "f1744e5487d409c88a744d8fd31c7fca564a53e3c80d1c916f425a550694f2bf",
+      "runs/2026-11-06-host-capture-reviewed-macos.json": "def5d26b2814ecb290366747beb8a7dc65546f5bddbcc98b2e0591ad2f37535c",
+      "runs/2026-11-07-adapter-incident-exercise.json": "c0fb917c3b51040a709460aea9fb854da4bf31526871e7338190ed5989672a91",
+      "runs/2026-11-07-directory-clock-linux.json": "65fcea22244603f1993ce38d71d7fcedc4420a9ad88cb098118f2e201c0339fe",
+      "runs/2026-11-07-host-reviewed-acceptance.json": "89a083a144084f2fc6d2659bc1927da838cf23d988dd1fe3ffc7a29b60a349d9",
+      "runs/2026-11-07-host-reviewed-guards.json": "6c85e1c57e2631bd098efbf6530caa7269c63d93ad19c35138b7896fe9dd3b9c",
+      "runs/2026-11-07-recovery-cache-reuse-linux.json": "cafe013fef9aff20a872f2f705e510362e9e7eac9d83fdbfee807f56cb574274",
+      "runs/2026-11-07-recovery-source-binding.json": "bd07e7e141366c09dd3ad9f12fec6ec4aad42e38a9334cdad73bb343a34ceb66",
+      "runs/2026-11-07-security-channel-status.json": "39675f04f4b37ee938e3a6a224000fe987297701e0c1c5f763534dfe301ec6ea",
+      "runs/2026-11-07-security-reviewed-acceptance.json": "3188d9f3f0a7ceb53b7e68991895566db0c7c288a8fef49ab462fcf5256b62da",
+      "runs/2026-11-09-pan-service-linux.json": "140a01a9e549f8843ddf545b35de152f7ef5037aa375fffb14e6f7ed839cff57",
+      "runs/2026-11-12-hidden-email-clean-setup-linux.json": "6a9d25de331b034f55a5b688e8192828a420fae27a929b68721c09fc8b7f45f4",
+      "runs/2026-11-12-hidden-email-hosted-replay.json": "a9c22dbb799743f74905bb293625f12d6d36d97cf27342a7bff1dca6c98d719a",
+      "runs/2026-11-18-agent-tools-clean-setup-linux.json": "e91e201bce5922d941721e9e033e303faf2c9997a4d68fc8625981b25faaf0b2",
+      "runs/2026-11-18-host-stop-launch-macos.json": "298d76cd6716d0f76ad79aaa344d68ebb2f7bd27f9ef40992aca1f4692c253e9",
+      "runs/2026-11-19-host-stop-launch-linux.json": "7a6965b79e9414925d0e42a1b091ed1f26ce845f400ac7cb91c5bd68ee48e466",
+      "sbom/c2pa/.gitattributes": "1ef6cb2213cc1f57685c203306fcaac6271139d42ee47b5d549d0d7d8b55ea41",
+      "sbom/c2pa/manifest.json": "5b2074cc8385cb66429b7af35cbe1ea7c0a7286f35a184556e495246fa0d5188",
+      "sbom/c2pa/sources/00329ec9a1b2285e43c01344d2c444e69bd6f9b4a414c25f06e873677adc78fe.txt": "00329ec9a1b2285e43c01344d2c444e69bd6f9b4a414c25f06e873677adc78fe",
+      "sbom/c2pa/sources/00a012aa99298171079b9fa64d276d4790eec454a9bef1c4b12e107e42c2ff44.txt": "00a012aa99298171079b9fa64d276d4790eec454a9bef1c4b12e107e42c2ff44",
+      "sbom/c2pa/sources/02bc025898a65105555b73189824a32f82d64e8893fff3d930b582f77d1a2e3f.txt": "02bc025898a65105555b73189824a32f82d64e8893fff3d930b582f77d1a2e3f",
+      "sbom/c2pa/sources/047cfc71226409de4318b360aef15c63a2adf609731e3dcf7fe932f14ea042ee.txt": "047cfc71226409de4318b360aef15c63a2adf609731e3dcf7fe932f14ea042ee",
+      "sbom/c2pa/sources/04e66961a9e3616bd8d221103dc1c9cdca4a23dc86c71bbfa9e8dc4022b3009e.txt": "04e66961a9e3616bd8d221103dc1c9cdca4a23dc86c71bbfa9e8dc4022b3009e",
+      "sbom/c2pa/sources/07ffefa5614ec9021d862575bf7cb384e671af4ba7c6816ceae7954f79ed8d34.txt": "07ffefa5614ec9021d862575bf7cb384e671af4ba7c6816ceae7954f79ed8d34",
+      "sbom/c2pa/sources/09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b.txt": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+      "sbom/c2pa/sources/0a9e78156ae8b96caf1b4f11ac2df424b83de29736f9e757630548a6272fdf90.txt": "0a9e78156ae8b96caf1b4f11ac2df424b83de29736f9e757630548a6272fdf90",
+      "sbom/c2pa/sources/0cb3efcfd8f7a02a337e98dc3de4b0b57424d7208a332b26e7deb8cb94c13922.txt": "0cb3efcfd8f7a02a337e98dc3de4b0b57424d7208a332b26e7deb8cb94c13922",
+      "sbom/c2pa/sources/10898c620e8007c030e07fa5622b68358a43010025dfbd78a1cb797699de2bb4.txt": "10898c620e8007c030e07fa5622b68358a43010025dfbd78a1cb797699de2bb4",
+      "sbom/c2pa/sources/130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686.txt": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+      "sbom/c2pa/sources/14d3bce8604883600461ad1adc95cb858a8028980024a6d684404b2228393b85.txt": "14d3bce8604883600461ad1adc95cb858a8028980024a6d684404b2228393b85",
+      "sbom/c2pa/sources/1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04.txt": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+      "sbom/c2pa/sources/1cdb529dfcaf4fea8e4fe581726f335a0da5abbbd5bde225205a6911ca1981b1.txt": "1cdb529dfcaf4fea8e4fe581726f335a0da5abbbd5bde225205a6911ca1981b1",
+      "sbom/c2pa/sources/1f77f24b9709a5e4aa7a4fc3e57d0872c48c4b7f79f3f547bfaf875da1d481bb.txt": "1f77f24b9709a5e4aa7a4fc3e57d0872c48c4b7f79f3f547bfaf875da1d481bb",
+      "sbom/c2pa/sources/2255e530e3f80593a354e3d84a29966924d0e10309d1e3a6d50f845ab7d8df66.txt": "2255e530e3f80593a354e3d84a29966924d0e10309d1e3a6d50f845ab7d8df66",
+      "sbom/c2pa/sources/28c562e114435ac37e7abb825e11ad8346461cb7f76ebbda3ce8141ffa07af54.txt": "28c562e114435ac37e7abb825e11ad8346461cb7f76ebbda3ce8141ffa07af54",
+      "sbom/c2pa/sources/2b6eb4118ce7cd7b09601406aa623c553c4476265836f0d9c16f5c061f7efcc0.txt": "2b6eb4118ce7cd7b09601406aa623c553c4476265836f0d9c16f5c061f7efcc0",
+      "sbom/c2pa/sources/2b957c67c65d977995cea65bdb649575e54d164dab08c18224fae8bad08eea77.txt": "2b957c67c65d977995cea65bdb649575e54d164dab08c18224fae8bad08eea77",
+      "sbom/c2pa/sources/2d9294823df6c89357c8be4927fce79361d6561e5ee7532d5926e63939aaa536.txt": "2d9294823df6c89357c8be4927fce79361d6561e5ee7532d5926e63939aaa536",
+      "sbom/c2pa/sources/39b425ce6c898e83f8b8cdeeb65dae690d3ab9f2382ca9c3860e77bf6d34077a.txt": "39b425ce6c898e83f8b8cdeeb65dae690d3ab9f2382ca9c3860e77bf6d34077a",
+      "sbom/c2pa/sources/3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb.txt": "3e0c7c091a948b82533ba98fd7cbb40432d6f1a9acbf85f5922d2f99a93ae6bb",
+      "sbom/c2pa/sources/45073e4baabce80228b1bf043515f6868f964a702b1c0163bc7114f7dabe0cc7.txt": "45073e4baabce80228b1bf043515f6868f964a702b1c0163bc7114f7dabe0cc7",
+      "sbom/c2pa/sources/47ba167a94e78212959646abd75e65816c926c2b175854d958d5efae73f510ba.txt": "47ba167a94e78212959646abd75e65816c926c2b175854d958d5efae73f510ba",
+      "sbom/c2pa/sources/4ba85e4139fd2e054559e8c3b89d24c151220c106cbf717d5a4224a6892062b7.txt": "4ba85e4139fd2e054559e8c3b89d24c151220c106cbf717d5a4224a6892062b7",
+      "sbom/c2pa/sources/529e2955ffef6708f0541d3255a0d255e4811c981692e23a813e09d6d3950fee.txt": "529e2955ffef6708f0541d3255a0d255e4811c981692e23a813e09d6d3950fee",
+      "sbom/c2pa/sources/5315e7401db3cacccd0c2ce5daf81f752a9cc3614b18c37f2b79930b7159ce2f.txt": "5315e7401db3cacccd0c2ce5daf81f752a9cc3614b18c37f2b79930b7159ce2f",
+      "sbom/c2pa/sources/558bafb9093a8e790175d9ecff9688382981d744877dad86fd6770db0f4dc918.txt": "558bafb9093a8e790175d9ecff9688382981d744877dad86fd6770db0f4dc918",
+      "sbom/c2pa/sources/5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63.txt": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63",
+      "sbom/c2pa/sources/602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb.txt": "602c4c7482de6479dd2e9793cda275e5e63d773dacd1eca689232ab7008fb4fb",
+      "sbom/c2pa/sources/61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1.txt": "61532836a2b3111b7ec23519c09df7c41180c27165fb872a6d8913b566b88ad1",
+      "sbom/c2pa/sources/65b5a08da81f4915513e760965ff14b7518f65b7bb3efe0dab364bbcc4d40cb0.txt": "65b5a08da81f4915513e760965ff14b7518f65b7bb3efe0dab364bbcc4d40cb0",
+      "sbom/c2pa/sources/65d47419e480660d7ba329a734f3f7358ce8eba23b2db4806ef595c5328959fe.txt": "65d47419e480660d7ba329a734f3f7358ce8eba23b2db4806ef595c5328959fe",
+      "sbom/c2pa/sources/6b71f9a75aff37687bbbf3da3c89a12cfd47a1e414010bdd77daea3fdf61e2a3.txt": "6b71f9a75aff37687bbbf3da3c89a12cfd47a1e414010bdd77daea3fdf61e2a3",
+      "sbom/c2pa/sources/6d0d41bfe170ac6c7dc248c9a63e254d0fb45a60d50a8257d0af92c6e249b887.txt": "6d0d41bfe170ac6c7dc248c9a63e254d0fb45a60d50a8257d0af92c6e249b887",
+      "sbom/c2pa/sources/7423990cc0948676ef47a71ea62a476ece4c76245e6bebd1c3a71f03c4ffc0f4.txt": "7423990cc0948676ef47a71ea62a476ece4c76245e6bebd1c3a71f03c4ffc0f4",
+      "sbom/c2pa/sources/79a1dc04ab333ee905cc02481c112052b5989d77f5eac3f12ae888806909d394.txt": "79a1dc04ab333ee905cc02481c112052b5989d77f5eac3f12ae888806909d394",
+      "sbom/c2pa/sources/830e364227f9a1f9f84643e7fa5ec2b6f3a92fe3dd67e87a580c61730ae8a716.txt": "830e364227f9a1f9f84643e7fa5ec2b6f3a92fe3dd67e87a580c61730ae8a716",
+      "sbom/c2pa/sources/86bdd5dafab77451044b6fd6d2efab23e3410ce658eb097f04c04f4f54aed62f.txt": "86bdd5dafab77451044b6fd6d2efab23e3410ce658eb097f04c04f4f54aed62f",
+      "sbom/c2pa/sources/89375a50de90d2dcaa04406086da832ad452ebcaf6ab402ef3d51b8401a67c71.txt": "89375a50de90d2dcaa04406086da832ad452ebcaf6ab402ef3d51b8401a67c71",
+      "sbom/c2pa/sources/897c01b14786bfd119723794ebeb623e6c4cf3d74a186bc1873d79018e77de47.txt": "897c01b14786bfd119723794ebeb623e6c4cf3d74a186bc1873d79018e77de47",
+      "sbom/c2pa/sources/89ce6362bb7be88558f4be99a98f5d1b4da93d19cd0323e5ee0bac05cf883dfb.txt": "89ce6362bb7be88558f4be99a98f5d1b4da93d19cd0323e5ee0bac05cf883dfb",
+      "sbom/c2pa/sources/8e2670b3fc1bbf1e2cf99050b062fda50203881e43420bbc6772dad2cde2d548.txt": "8e2670b3fc1bbf1e2cf99050b062fda50203881e43420bbc6772dad2cde2d548",
+      "sbom/c2pa/sources/96a37c8d7b7f425a05386731f644adbd66ebca17c45e8236176cfe614466df9d.txt": "96a37c8d7b7f425a05386731f644adbd66ebca17c45e8236176cfe614466df9d",
+      "sbom/c2pa/sources/96f985b465650f71b86992fc892c82e72b15557fbb9855563b0c8a6b1fa6d712.txt": "96f985b465650f71b86992fc892c82e72b15557fbb9855563b0c8a6b1fa6d712",
+      "sbom/c2pa/sources/9d10d4c95b77114fff98d03808258e56753507b86328ad28759dda7df1a95775.txt": "9d10d4c95b77114fff98d03808258e56753507b86328ad28759dda7df1a95775",
+      "sbom/c2pa/sources/9fda300857ae6a0486b4cd2d2fec7817ed2d45657249a6dfc0c2bbd1a44267b6.txt": "9fda300857ae6a0486b4cd2d2fec7817ed2d45657249a6dfc0c2bbd1a44267b6",
+      "sbom/c2pa/sources/9ff624b29bc48a177f4172c8659e74595485cf7ad9fe4ee340ff8e535594a566.txt": "9ff624b29bc48a177f4172c8659e74595485cf7ad9fe4ee340ff8e535594a566",
+      "sbom/c2pa/sources/a31e0f8f862a604763a6f6a1060d59829f7ed8293e2889463de5125dcafe4389.txt": "a31e0f8f862a604763a6f6a1060d59829f7ed8293e2889463de5125dcafe4389",
+      "sbom/c2pa/sources/a420fcb52deaaac39e20f3083b858093e186fd5ce32203d3d8e2ea8664bc093f.txt": "a420fcb52deaaac39e20f3083b858093e186fd5ce32203d3d8e2ea8664bc093f",
+      "sbom/c2pa/sources/aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe.txt": "aac73b3148f6d1d7111dbca32099f68d26c644c6813ae1e4f05f6579aa2663fe",
+      "sbom/c2pa/sources/ba7592caef494421831ed3fa310dd71f00e05c987153f7f0ec41b4e779025803.txt": "ba7592caef494421831ed3fa310dd71f00e05c987153f7f0ec41b4e779025803",
+      "sbom/c2pa/sources/bd3e69c84e8a60c2b5390c1aef67a7ae124a98e782ca1c51ca7d1a665fe8464f.txt": "bd3e69c84e8a60c2b5390c1aef67a7ae124a98e782ca1c51ca7d1a665fe8464f",
+      "sbom/c2pa/sources/c2469ed5239fdaf220382f0065c23744b361a2f14f637dbf5581958b0a83a7e1.txt": "c2469ed5239fdaf220382f0065c23744b361a2f14f637dbf5581958b0a83a7e1",
+      "sbom/c2pa/sources/c932afade422f2c3c81e12a93fa98a3fe4d515f1500d19530917ef4297689942.txt": "c932afade422f2c3c81e12a93fa98a3fe4d515f1500d19530917ef4297689942",
+      "sbom/c2pa/sources/c9f40ea4fad9d1394edad3bfbbf1c00797bb851385b78581694571fa1b4b36b9.txt": "c9f40ea4fad9d1394edad3bfbbf1c00797bb851385b78581694571fa1b4b36b9",
+      "sbom/c2pa/sources/ccec20e2307acd7da453dd7437e70c6b08e2bc3ead3bc3445af135da37b56d59.txt": "ccec20e2307acd7da453dd7437e70c6b08e2bc3ead3bc3445af135da37b56d59",
+      "sbom/c2pa/sources/dbd8c14c1e4ca1e0c9824a6dbc7cbbf78884f38eb52d91148cd3025f671e4b85.txt": "dbd8c14c1e4ca1e0c9824a6dbc7cbbf78884f38eb52d91148cd3025f671e4b85",
+      "sbom/c2pa/sources/e3a74c846648bb55f4f907284b745e2003b87b96d9c9d17a8a50cf37804541c9.txt": "e3a74c846648bb55f4f907284b745e2003b87b96d9c9d17a8a50cf37804541c9",
+      "sbom/c2pa/sources/e7cbd26e23ce60f6cb3a151d2adf3b1b087bb8f10ac2d9d6db70fdccbf3bb041.txt": "e7cbd26e23ce60f6cb3a151d2adf3b1b087bb8f10ac2d9d6db70fdccbf3bb041",
+      "sbom/c2pa/sources/e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7.txt": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+      "sbom/c2pa/sources/ea6b375e7cc19dab7fb19cd9ac389dcbeb6e8c2ca910f839cca523ea3de14dba.txt": "ea6b375e7cc19dab7fb19cd9ac389dcbeb6e8c2ca910f839cca523ea3de14dba",
+      "sbom/c2pa/sources/eb62a1e31e3c0ed491acc2497e9e8265a810a8112122852e347e3c722757f9fd.txt": "eb62a1e31e3c0ed491acc2497e9e8265a810a8112122852e347e3c722757f9fd",
+      "sbom/c2pa/sources/ef5af1638fbb23676ac3c5777dfcfc2cd9c348fe4172ed5ba3d277655b248090.txt": "ef5af1638fbb23676ac3c5777dfcfc2cd9c348fe4172ed5ba3d277655b248090",
+      "sbom/c2pa/sources/f3711214301b5595f24eb4fe232a70836a6187ab4a93e895d0307006456ed41a.txt": "f3711214301b5595f24eb4fe232a70836a6187ab4a93e895d0307006456ed41a",
+      "sbom/c2pa/sources/f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc.txt": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc",
+      "sbom/c2pa/sources/f60d0155aed8caaeacffe21e0118508f904c59c24a4d082988573379dad8d4b4.txt": "f60d0155aed8caaeacffe21e0118508f904c59c24a4d082988573379dad8d4b4",
+      "sbom/c2pa/sources/fbc34a38fe7a9047c157fbb4caf273d16c1448b23ead8e55573afa3b4494b4b3.txt": "fbc34a38fe7a9047c157fbb4caf273d16c1448b23ead8e55573afa3b4494b4b3",
+      "sbom/c2pa/sources/ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b.txt": "ff309ddcdd65ebd02bc724dbf2bcc4a0ff53a5b61792a44548d383e4ebb19d3b",
+      "sbom/c2pa/sources/ffbaaaa116c13b3c0337a451c316aab71c19aec40b67f4fc971e4685565bddc5.txt": "ffbaaaa116c13b3c0337a451c316aab71c19aec40b67f4fc971e4685565bddc5",
+      "sbom/native/manifest.json": "b73adf17026164ae36fa227e2807aa6a1e30de4c3bc47bb62a2eb53b6dffe860",
+      "sbom/native/sources/0311b7e1a5a37192243d37889a838d2252b2201554e9db49b57a657f9fb517c7.txt": "0311b7e1a5a37192243d37889a838d2252b2201554e9db49b57a657f9fb517c7",
+      "sbom/native/sources/0df583dbc268077130253f0ec2e094e350e5e9d428b9251d68e76196872285b4.txt": "0df583dbc268077130253f0ec2e094e350e5e9d428b9251d68e76196872285b4",
+      "sbom/native/sources/1133024120710bfe1d61b2c9e4814a33357c42379db25b9d5184874a2e1bcdf1.txt": "1133024120710bfe1d61b2c9e4814a33357c42379db25b9d5184874a2e1bcdf1",
+      "sbom/native/sources/1671df5758d1976c073b74d853d5267b286cac16a6492e912afb90b1e3d81be5.txt": "1671df5758d1976c073b74d853d5267b286cac16a6492e912afb90b1e3d81be5",
+      "sbom/native/sources/1b3dbcb9a61421084e5cadfdf2838a393d5488f53461cbc83cab62b351076c36.txt": "1b3dbcb9a61421084e5cadfdf2838a393d5488f53461cbc83cab62b351076c36",
+      "sbom/native/sources/2c963a2f4d040fb3d18202bb3f23cf0e33f15fdbb16f0f07c5c4c9fc265b4b32.txt": "2c963a2f4d040fb3d18202bb3f23cf0e33f15fdbb16f0f07c5c4c9fc265b4b32",
+      "sbom/native/sources/36e4e862aac3ac2dd037ff116627e0106ac67688b368282981962b920d8221d5.txt": "36e4e862aac3ac2dd037ff116627e0106ac67688b368282981962b920d8221d5",
+      "sbom/native/sources/3b381a4b06f57c22ef4b8320f0095d1c379e971d1c657b7ce26b4a71230f6043.txt": "3b381a4b06f57c22ef4b8320f0095d1c379e971d1c657b7ce26b4a71230f6043",
+      "sbom/native/sources/3d083ada5ebafe1e6c227daa7b061d4254b61df4a3901c359ffdeac817ce5866.txt": "3d083ada5ebafe1e6c227daa7b061d4254b61df4a3901c359ffdeac817ce5866",
+      "sbom/native/sources/3d682be005b8402c2e75101253e3300803790356aa0ffbe2ee27c94f15d2d1b8.txt": "3d682be005b8402c2e75101253e3300803790356aa0ffbe2ee27c94f15d2d1b8",
+      "sbom/native/sources/46716ed7386f2ccdead0ffd1d420aa4ebde2e16b2bbe0b85d81a11c2d170edfd.txt": "46716ed7386f2ccdead0ffd1d420aa4ebde2e16b2bbe0b85d81a11c2d170edfd",
+      "sbom/native/sources/47b7ea0d3dfaa71bf75fc69bd5239ffcbf4540249637db84cbec2285ceb2cf11.txt": "47b7ea0d3dfaa71bf75fc69bd5239ffcbf4540249637db84cbec2285ceb2cf11",
+      "sbom/native/sources/486442209236ffa3893312e508694699a6b8834d30a2f9c083c1f3379983e4f9.txt": "486442209236ffa3893312e508694699a6b8834d30a2f9c083c1f3379983e4f9",
+      "sbom/native/sources/4886d9da5238f5d7e44fa2558a3c8d4939e5eb212cc1a3e587472ee2b65fd3fd.txt": "4886d9da5238f5d7e44fa2558a3c8d4939e5eb212cc1a3e587472ee2b65fd3fd",
+      "sbom/native/sources/4afb08b37f1fd2f250633b1f90bf734fcd592c94d285490c705ce2e3d08a08e2.txt": "4afb08b37f1fd2f250633b1f90bf734fcd592c94d285490c705ce2e3d08a08e2",
+      "sbom/native/sources/4def47c6dfd9ff59a4aa8d7320a8cc5fb6913911d225feff7cd260779c1fc92f.txt": "4def47c6dfd9ff59a4aa8d7320a8cc5fb6913911d225feff7cd260779c1fc92f",
+      "sbom/native/sources/50e5282b46bafe5e2c87a0f224a86876067694f0434c5b27c0ea2d5bbceba5d7.txt": "50e5282b46bafe5e2c87a0f224a86876067694f0434c5b27c0ea2d5bbceba5d7",
+      "sbom/native/sources/517dabfb009423898c6aa79a632b7b2110857e0e5c4889c5c1cf85c239270cf3.txt": "517dabfb009423898c6aa79a632b7b2110857e0e5c4889c5c1cf85c239270cf3",
+      "sbom/native/sources/51a97449c443889155bc872522e6de5a91a5fa73edeffa03d749e186bf0eebca.txt": "51a97449c443889155bc872522e6de5a91a5fa73edeffa03d749e186bf0eebca",
+      "sbom/native/sources/5c548c17b8eaa50ba090dab41baeea23cce50eac41e70bec34037727b7e0e881.txt": "5c548c17b8eaa50ba090dab41baeea23cce50eac41e70bec34037727b7e0e881",
+      "sbom/native/sources/5dd6d3c034f925604681d49b7bedc71bd08dcf3d0cfc6d16b9f0569497d700dc.txt": "5dd6d3c034f925604681d49b7bedc71bd08dcf3d0cfc6d16b9f0569497d700dc",
+      "sbom/native/sources/61d34f81d2d2702c25d9d7f15db6d57b5d7596f2e6c31ace1cfd63863447a088.txt": "61d34f81d2d2702c25d9d7f15db6d57b5d7596f2e6c31ace1cfd63863447a088",
+      "sbom/native/sources/64357d4f111b6add13806616b45c0a760afdf314b4f6e01f7fb6fc6894562df9.txt": "64357d4f111b6add13806616b45c0a760afdf314b4f6e01f7fb6fc6894562df9",
+      "sbom/native/sources/64cbc680085107ed6a090df3c65a8cf5a37c6244e485039f57c453425487db73.txt": "64cbc680085107ed6a090df3c65a8cf5a37c6244e485039f57c453425487db73",
+      "sbom/native/sources/6fb8b7207acc691c55856a65207571da154ee155b163992f2e7d88620ca55194.txt": "6fb8b7207acc691c55856a65207571da154ee155b163992f2e7d88620ca55194",
+      "sbom/native/sources/711a113a4feee4312861aaa9d0bacb8693a37ff1614861f21302a1e500e63744.txt": "711a113a4feee4312861aaa9d0bacb8693a37ff1614861f21302a1e500e63744",
+      "sbom/native/sources/7be285dd5b0f38dad41f7d9601c438c0e2e564f50e4f7d8f8b68cc97b9295f5e.txt": "7be285dd5b0f38dad41f7d9601c438c0e2e564f50e4f7d8f8b68cc97b9295f5e",
+      "sbom/native/sources/876f8a4847f39f3eab8d0ae03c594d098d59bc1f887ff42778d7da1034eabe94.txt": "876f8a4847f39f3eab8d0ae03c594d098d59bc1f887ff42778d7da1034eabe94",
+      "sbom/native/sources/89772961fcf195b976573874555f2902bfe04a3e57be61af261ac65ce9348735.txt": "89772961fcf195b976573874555f2902bfe04a3e57be61af261ac65ce9348735",
+      "sbom/native/sources/89fa2bdf6a932cb5c98eb6dcc10aabd2b42267f249f4af2ba2c9257b4fba00a9.txt": "89fa2bdf6a932cb5c98eb6dcc10aabd2b42267f249f4af2ba2c9257b4fba00a9",
+      "sbom/native/sources/8f8f907a15368c3ab82e675dde406263c321e1d14533285f6827da72b2bb7f55.txt": "8f8f907a15368c3ab82e675dde406263c321e1d14533285f6827da72b2bb7f55",
+      "sbom/native/sources/986086beb25bd1b05712a2a0689a64f2e422ae5d7f0d9e46dad44fba3f9a13ff.txt": "986086beb25bd1b05712a2a0689a64f2e422ae5d7f0d9e46dad44fba3f9a13ff",
+      "sbom/native/sources/9b6135ceef5d3e16d713d31d565e3b10322eaa9d6fed326f12bff4a14fc1abb5.txt": "9b6135ceef5d3e16d713d31d565e3b10322eaa9d6fed326f12bff4a14fc1abb5",
+      "sbom/native/sources/9bc1b102b966e442800ecbba245d0145778fb74acfbfca17a332a2e12dba85c8.txt": "9bc1b102b966e442800ecbba245d0145778fb74acfbfca17a332a2e12dba85c8",
+      "sbom/native/sources/9c75698ccb3644de3b13c7b07ed759bb5b15bc16b9d5f99db8a0034ef15e7d65.txt": "9c75698ccb3644de3b13c7b07ed759bb5b15bc16b9d5f99db8a0034ef15e7d65",
+      "sbom/native/sources/9d537e391eb96db2db66346100574e85083fa400117017044689aae4f021fb88.txt": "9d537e391eb96db2db66346100574e85083fa400117017044689aae4f021fb88",
+      "sbom/native/sources/9d7a84ade91e8e50f5dfc303fb53e580e806f6f89bde804e84a01c1b8853fff5.txt": "9d7a84ade91e8e50f5dfc303fb53e580e806f6f89bde804e84a01c1b8853fff5",
+      "sbom/native/sources/a69b87120fe2b9cb8f9057eaef6b9f9887f803e02185ca2f431e8162f6312220.txt": "a69b87120fe2b9cb8f9057eaef6b9f9887f803e02185ca2f431e8162f6312220",
+      "sbom/native/sources/a6cd7571dc2225ed6df850e941e2555992ffb7f84bf618647d99cddbd9a3cc2a.txt": "a6cd7571dc2225ed6df850e941e2555992ffb7f84bf618647d99cddbd9a3cc2a",
+      "sbom/native/sources/ad2ea830c96989b9ce349677c37c5441d91c733facf07abbff759589b429e9a3.txt": "ad2ea830c96989b9ce349677c37c5441d91c733facf07abbff759589b429e9a3",
+      "sbom/native/sources/b4fb1a9f5909cfd58edb4177c2028ce3033cf8651aef740a554c1dc58b3c5ee3.txt": "b4fb1a9f5909cfd58edb4177c2028ce3033cf8651aef740a554c1dc58b3c5ee3",
+      "sbom/native/sources/b50a551dac4fc247382d78b52b8c78a797d914c51bee6df30de2621eac18847d.txt": "b50a551dac4fc247382d78b52b8c78a797d914c51bee6df30de2621eac18847d",
+      "sbom/native/sources/bb979132f3cbff08ce47f36d041e18071f8f534d01f591c0b129ba7abf1e480e.txt": "bb979132f3cbff08ce47f36d041e18071f8f534d01f591c0b129ba7abf1e480e",
+      "sbom/native/sources/bdafeda99223a1086e9bb39755a20d221d3a1f11086186dac49a96aed00c0af1.txt": "bdafeda99223a1086e9bb39755a20d221d3a1f11086186dac49a96aed00c0af1",
+      "sbom/native/sources/bdf6919b0ffd7dcd31907ca49f520f26e8543825e0358f51b9036fed428eddb6.txt": "bdf6919b0ffd7dcd31907ca49f520f26e8543825e0358f51b9036fed428eddb6",
+      "sbom/native/sources/c34b03ea18773e904b3ca21d0d3c5fbd62d5be68d974981b7263eb8db18e361c.txt": "c34b03ea18773e904b3ca21d0d3c5fbd62d5be68d974981b7263eb8db18e361c",
+      "sbom/native/sources/c4f080f20fff40e54485343c844c845554207d038e1cc979809bf3347182988c.txt": "c4f080f20fff40e54485343c844c845554207d038e1cc979809bf3347182988c",
+      "sbom/native/sources/ccc883ec303dac4dbe86e7e255d86c62263323aec600978761e57353c55cd63e.txt": "ccc883ec303dac4dbe86e7e255d86c62263323aec600978761e57353c55cd63e",
+      "sbom/native/sources/cd5163af4e88135a82f0cd0b94bbd331e0eff4e5e47d8b5c0d97a55b0dfccfcd.txt": "cd5163af4e88135a82f0cd0b94bbd331e0eff4e5e47d8b5c0d97a55b0dfccfcd",
+      "sbom/native/sources/d2fbff9f36a84a34bd77255a844ae61de18688b15e0b7bd0a41c0c30391660d7.txt": "d2fbff9f36a84a34bd77255a844ae61de18688b15e0b7bd0a41c0c30391660d7",
+      "sbom/native/sources/d9c7f1db98d2a921986720dd734729bccc896e81d3b35ed83fa1413301faf865.txt": "d9c7f1db98d2a921986720dd734729bccc896e81d3b35ed83fa1413301faf865",
+      "sbom/native/sources/dd8ec01c9950cf6996d1b6baea0036aeb48c2f7f53f8dd52d92dde4d8ce9d074.txt": "dd8ec01c9950cf6996d1b6baea0036aeb48c2f7f53f8dd52d92dde4d8ce9d074",
+      "sbom/native/sources/df733be80a44f45878f212d7f0859ffd18fbdd8ed988b5226663487732aa1c1c.txt": "df733be80a44f45878f212d7f0859ffd18fbdd8ed988b5226663487732aa1c1c",
+      "sbom/native/sources/e2611d5d854815a8b33c8a3d2ec649511a9596ccf16844e8eae7cf81e79881c4.txt": "e2611d5d854815a8b33c8a3d2ec649511a9596ccf16844e8eae7cf81e79881c4",
+      "sbom/native/sources/ef448bf7ac130f0c6b51dbfbadc617b046a200d082de8648ab090784c5db0c3d.txt": "ef448bf7ac130f0c6b51dbfbadc617b046a200d082de8648ab090784c5db0c3d",
+      "sbom/native/sources/f71dbcc9dc73279a7c47d851153f5be343eabb6d152ee7e2cd3cd1c1d276c3bd.txt": "f71dbcc9dc73279a7c47d851153f5be343eabb6d152ee7e2cd3cd1c1d276c3bd",
+      "sbom/reviews/esbuild-source.json": "76eed3448c2e1a7fd75fdaba89a93625f5b61c3670d4ab2c75ab8f6886c43f0b",
+      "sbom/reviews/nli/THIRD-PARTY-NOTICES.txt": "f6e1e4a41d00f0e8c6a2076b7c2413207c3d33b1c45c9697ac6e0614051c7a2c",
+      "sbom/reviews/nli/manifest.json": "c1c2cd50b49421ee8b12f45183698d1e6995a67b1a016b482c7d41aad9efada2",
+      "sbom/reviews/nli/notices/143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3.txt": "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3",
+      "sbom/reviews/nli/notices/2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c.txt": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "sbom/reviews/nli/sources/base-README.md": "235a48b97b65c66b730c36444441ebfb8d5360c0e9100753b83825f90a622656",
+      "sbom/reviews/nli/sources/base-tree.json": "0bdc926f9d4724a2c5205cfb685aabd70733d2ee9889293251a79180c28dcc63",
+      "sbom/reviews/nli/sources/deberta-LICENSE.txt": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "sbom/reviews/nli/sources/flatbuffers-LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "sbom/reviews/nli/sources/model-tree.json": "c0286c0d0fbfae271bacf1c5f5fbe56a05aac466c761568750a119dc91dcbbc8",
+      "sbom/reviews/nli/sources/tokenizers-LICENSE.txt": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "sbom/reviews/nli/sources/tokenizers-python-Cargo.lock": "afcedf7f2ebe008b068d7afd25e77f7d9d8e433c24153bc35a1eb5611083ee5b",
+      "sbom/reviews/nli/sources/tokenizers-python-Cargo.toml": "b22e1ccb03566a1d4d30ffa415dee41be1f3bd7f4188f53c393e27154f45126d",
+      "sbom/reviews/rolldown-source.json": "b29609ced4a2a9c67e02005d49c1efb71ed50b8ae23522e231d6ba0ca7eb22e6",
+      "sbom/reviews/sources/12c2aff1bbfe8a7f0b744d1cc32d913bb25d93f9ebbb3c039f5a30e8d510f7f4.txt": "12c2aff1bbfe8a7f0b744d1cc32d913bb25d93f9ebbb3c039f5a30e8d510f7f4",
+      "sbom/reviews/sources/23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734.txt": "23ecfff35a5a2e80d92142f75228912c3b1abc4b5a8337a821ff4397e2f9f734",
+      "sbom/reviews/sources/2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067.txt": "2d36597f7117c38b006835ae7f537487207d8ec407aa9d9980794b2030cbc067",
+      "sbom/reviews/sources/2d48dbed6151e653adc9ab5d8869cba012d167f13352e45880e59104e1e02b9b.txt": "2d48dbed6151e653adc9ab5d8869cba012d167f13352e45880e59104e1e02b9b",
+      "sbom/reviews/sources/3b17df1bad490358bfa01617ec8ca36e24aea6508982964064dc97874d4be2ed.txt": "3b17df1bad490358bfa01617ec8ca36e24aea6508982964064dc97874d4be2ed",
+      "sbom/reviews/sources/3eb04925b8ec5b4b744f710fbfa54847e8a55caa3982dc9b02f3bb803ef4376d.txt": "3eb04925b8ec5b4b744f710fbfa54847e8a55caa3982dc9b02f3bb803ef4376d",
+      "sbom/reviews/sources/3f8d314a43dbcb94b5d5154de481c60197283665dcfb1606187b7cfc52fea700.txt": "3f8d314a43dbcb94b5d5154de481c60197283665dcfb1606187b7cfc52fea700",
+      "sbom/reviews/sources/5156ce3b07843a92729f9922a8258669b72fdd433571b9bf37a39aae946fa082.txt": "5156ce3b07843a92729f9922a8258669b72fdd433571b9bf37a39aae946fa082",
+      "sbom/reviews/sources/8f1d138e5654698acc01fcf2e93e3d16d74a2bb7aa1f481521512f6d20756ee6.txt": "8f1d138e5654698acc01fcf2e93e3d16d74a2bb7aa1f481521512f6d20756ee6",
+      "sbom/reviews/sources/911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad.txt": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+      "sbom/reviews/sources/96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc.txt": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc",
+      "sbom/reviews/sources/992de675144ecaabf37c3aa86a7c9e95a8f7e7faee9834aff53720226087303c.txt": "992de675144ecaabf37c3aa86a7c9e95a8f7e7faee9834aff53720226087303c",
+      "sbom/reviews/sources/a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c.txt": "a877291d800ed43692f3f9ae09d8e01cc6f7293ad39d43896059c188ffbb8b7c",
+      "sbom/reviews/sources/aeb5ed3472a8898812d4cdca053cb6ef6e0132cc2db76e6f84d1e5e7cf0ebb72.txt": "aeb5ed3472a8898812d4cdca053cb6ef6e0132cc2db76e6f84d1e5e7cf0ebb72",
+      "sbom/reviews/sources/b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681.txt": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+      "sbom/reviews/sources/ca09cddc908ee4aac144dfce2206c95eab66ea821fed869ffbe1610fa46a08b0.txt": "ca09cddc908ee4aac144dfce2206c95eab66ea821fed869ffbe1610fa46a08b0",
+      "sbom/reviews/sources/e35de674aaffa81e891fcf372202c19d1f01affb05bf9412b15f5baf371766ef.txt": "e35de674aaffa81e891fcf372202c19d1f01affb05bf9412b15f5baf371766ef",
+      "sbom/reviews/sources/f2881c3c2d9d03858770bf7713c82ff7564c0893685cf708e49a111e5fd66ab2.txt": "f2881c3c2d9d03858770bf7713c82ff7564c0893685cf708e49a111e5fd66ab2",
+      "sbom/reviews/sources/fa534d2510336c58d1bc84ff129fa61dbb918f75962c0d7301f27f4b2ebd6107.txt": "fa534d2510336c58d1bc84ff129fa61dbb918f75962c0d7301f27f4b2ebd6107",
+      "sbom/reviews/sources/feef3bd222f59b6bb56272624c9ce65b4b658cf17646c87e205703fa799ae443.txt": "feef3bd222f59b6bb56272624c9ce65b4b658cf17646c87e205703fa799ae443",
+      "sbom/reviews/sources/ff80893efe44354b6fa06f18d79dfe7162bf0c2da514fc9c422e920225200fe4.txt": "ff80893efe44354b6fa06f18d79dfe7162bf0c2da514fc9c422e920225200fe4",
+      "scripts/agent-output.py": "4127bb578b7be1c3aef3a2d2f24b027ca03a43c6cce6c621c2baa11025c78e2d",
+      "scripts/agent-signature.cjs": "7654f96f1d080e6c6025b98258c123e952ffc1daeb9c49e35f8eb1a6ee168ccc",
+      "scripts/ai-tools-server.py": "1b07224d2f809de4e5da19c606bd5f9900706fc7fd5ccec61e1351d12bf5f8c0",
+      "scripts/aitrust.py": "0fb8dcbd48a80caa456f467d535c7ff079397fa9ed9505fed75aabcbfeaea5ab",
+      "scripts/analyze-feedback.py": "3c03e00d5eb0e450b1e1c636677742ac357571369e0839312ef719fbd5a569da",
+      "scripts/android-share-build.py": "ef3afbbd7fca59f4afaf5aef22db738f5c49873d85fa6886def66bace6521000",
+      "scripts/authority-quotation.py": "228c65d9255e9b54a9963c040e7109987210b55479f664bc8278a27f7401cd52",
+      "scripts/build-hp-device-fixture.mjs": "4550b337a8ff118eb2b90f499aa2b9383ce4d58fedf383db82630d333cc4ced1",
+      "scripts/build-hp-device.py": "9f84d7649e756500eb31a9fe7595ec7a9c65663cd24e414250025afdf2f789df",
+      "scripts/build-mt-device-fixture.mjs": "96f722b862db64fbc570bd8f426a50d14e490a0fab6c3cc831eb558656e4f6fb",
+      "scripts/build-mt-device.py": "b0142dec86ba1c1a2e9a961e5d77d7498d01235ea3a3cc73df8f28dcc55c43a5",
+      "scripts/build-tag-performance.py": "1ae70e4942a09ada278493e80d70db5a8bc84a05eff1a4a929783e71075e759b",
+      "scripts/changelog_core.py": "dd9941b80370e8f362db7fd42677ab6bea8bec38e4f68d25124b08c708d6c9d9",
+      "scripts/check-assertion.py": "478dcc71e9b795233c34dceeac38aea60e01ea58070528bc697ff893d759c955",
+      "scripts/check-conformance-vectors.py": "11d50fbc2b6c0a04cb3de12880bb381bea16b52dd1f80356456fa3d5fdf29504",
+      "scripts/check-conformance-votes.py": "849a3eac7004151a7adf30aa92e2a1609eb77f036b6c67b0dbf241b00bd2eb96",
+      "scripts/check-dependency-policy.py": "08b9e505854ae1bb6810a63d070418a3f8e53ca36ee46a6b6735e96018641bdc",
+      "scripts/check-mt-evidence.py": "d7587045e92e79b670a3b7b9599651cbe4fe05e74229045b841d0bfddf478208",
+      "scripts/check-nf-source-evidence.py": "7fceb3f2816600b9ad65d58b92f8a649da5b8039e99128ef096c29b9d6f31db6",
+      "scripts/check-private-policy.py": "8c7bd974b4a1d33a579ba88136d4ed2d5ff61324d578bb46a140794c59bfa6df",
+      "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+      "scripts/check-tags.py": "c3cd8c05ad2969b023bb6f332331787b13b2ff6347913fc0f0c3144321279c96",
+      "scripts/ci-ubuntu-mirror.py": "433df28df2bded20badc5b8b7edccca5eac919376f8dd6532b51bc3230056669",
+      "scripts/citation-resolution.py": "ae9b685cae0781350944bf18e754aaba87c03e396fdcec8463768b9c7c23190c",
+      "scripts/credential-context-worker.py": "e47876da8e643a15469a4b932fb763f7d210ef450bfbef6c82a54ef482695621",
+      "scripts/credential-flow-context.py": "48e110d4c947595a6682757dbd95f367875b89a861574d5a0a4374046a743b1f",
+      "scripts/credential-flow.py": "93607d5f721fa52d433d12382bbcaee47dc1d78e1df8d2f95299758ac5c292f6",
+      "scripts/directory-device-browser.cjs": "b9e3a888df7da67b36acc21ec5e7fcddb837f2bf621b5af1a86c35923fbd8c73",
+      "scripts/export-ps-source.py": "7ee020a6d3f2d585e7e8f7e370c5604bea5f78fc97cba0f9f5bdfa93b9e696e3",
+      "scripts/host-capture.py": "ac22b64fc7daef22ba651c2b203f452f32fd2678a0542371901e39366a19a8b8",
+      "scripts/hp-device-cases.py": "d2d2e5f8a7a4bc6b20cbb54559237cd452d8a4e2b0384764a3a2303b15b8a3e8",
+      "scripts/hp-site-controls.cjs": "7c822eb76bbdb8e4e165be7ef6bc8108d531a305fb7831464499029c927c310c",
+      "scripts/metadata-store-sandbox.py": "eef78dfc68a9d51944d777b7de3a3fab08bf6f8e7e630cb8c654387ea9c619de",
+      "scripts/mt-evidence-worker.py": "f4ccabc629b1c93a82a9e4900c279f2b9a9190768831fa7777c4270501af1d68",
+      "scripts/mt-site-controls.cjs": "c889706afd73b6d051fae76ac8aec7e37069d9418689141b9ce21e6dd1ad6bc1",
+      "scripts/nf-source-worker.py": "5ba6311279c125095ba90de6134a2e90078e36538b96d9167892fc75871cae9b",
+      "scripts/organization-audit.py": "d37daae9cbc53b8b4d18286084e4a70c81a3295194a8677763f1458cae5a9b60",
+      "scripts/organization-directory.py": "4a8f13f6a6fffe5bb73910e95118a02749d3c0a6e47fbb89c338108d59fe2bbb",
+      "scripts/prepare-feedback-analysis-demo.py": "51ce57aabd9ec6b274aa035b60662beeede5c2986508c4db95e2ac1a93d05569",
+      "scripts/prepare-private-policy-demo.py": "6a2743909233bc6e6fb60e5ddb9d8dabe6d8730a1982bf5d0bfe99d4588c5213",
+      "scripts/prepare-ps-review.py": "d42f0ded28be966ed9f98be57327c8c808b996a5faca3b30e9af61c13c07e475",
+      "scripts/prepare-reference-review-windows.py": "11d729f1ad5e9a552cafae461070bc1e8ba7fab50fcb4f1b7414216959c8cc2e",
+      "scripts/prepare-reference-revision-demo.py": "99778cd31fa437fc949adb9dc24347b5be3d352e21b03cb7c3d7d7a70a775779",
+      "scripts/prepare-session-revision-demo.py": "a310c274fc8233347cec33471205141710f067b9c2444887bd64900931c3d4d4",
+      "scripts/prepare-session-selections.py": "42c43645e79b4c2720fcd7d021948d8576856e5cb40a7ecc57fe1fd84368eecb",
+      "scripts/release-announcements.py": "0d9b169c39420a680f6f47737ed294c34e78ce632140ae94d0cc7611e4943dc7",
+      "scripts/render-scope-plan.py": "a92b7c55066029a99acb85c0978ed284761abe0ee0c533cc89f77d8f19e2dea6",
+      "scripts/replay-assertion.py": "67cb3f99545fe9d14fe26bfec7bdf56331e40afef8b1d4a943f85c668da2097b",
+      "scripts/research-admission.py": "b8e8d67addf9611a8127486df3e8405de903569c4af942c995441f2a3d1f30cd",
+      "scripts/revalidate.py": "148996a10cb67c5c5978d5d129618b9bf1a2fe2838104088aa747aa0d0509dfb",
+      "scripts/review-reference-revision.py": "730d44d5235b3ac4b4f392e2fa1afee3dc8441f5fa822fe459761cf672662e24",
+      "scripts/review-session-revision.py": "db37559bfb079b1b02c7a8cf324144461edbbb885929d4cea45e9ebcce73cfc6",
+      "scripts/session-delivery.py": "98e91a6e2ce2d4227578dae01b0d445b1f6e3f111b4ea20fcef9ffe103ae6720",
+      "scripts/setup-local.py": "8b9abd1a846b254e89da35b7b81a255cd55ca5552b45b96a25657bd3dd37af06",
+      "scripts/tag-api.py": "5d716e4db502e468dabcefba77e6d4f82605f23f57e3b8951a312461faec924a",
+      "scripts/verify-agent-output-view.cjs": "03ccf44210a9f6c404e2514cc594e609d3b7749824e90eae37a3921baf991c6c",
+      "scripts/verify-agent-output.py": "8590ef2b7016f981606b5b7471734725722451169a7631087484c4eba4f4e0d0",
+      "scripts/verify-ai-tools.py": "9a9f0903989123b82290c04ed5367fb2e3547a396d91450332df8a53c499e4e3",
+      "scripts/verify-android-emulator.py": "10b37854e202aaf842fd7e45ea68bf997877cec97ae9062832f030b46262c31c",
+      "scripts/verify-android-engine.mjs": "f6a81c4dee65290a09d7484bfc2ce69ea1b7145c6f24017bf0817ef60273c56f",
+      "scripts/verify-android-session.py": "db3064b1074df6f67edb0e4fd89dd1970f0074a0f733738b3441419fc2cf755a",
+      "scripts/verify-assertion-replay.py": "d00597fe871904e2925a4154b459da6cc60a88cf99d2397ccabb4b2d7b49c95c",
+      "scripts/verify-authority-quotation.py": "16c3c128aebbf014efd4befca92877d0904748f8730f2bbbbb9137a7f09d869b",
+      "scripts/verify-backup-retention.py": "24afd1c8796e4b7905153de7b593b95607f794457941cabb565731ab6127ef79",
+      "scripts/verify-blind-review-privacy.py": "9706f3b8fc3ab9901c6b2b1207a4b2f99c07b2011bd914a59818391551000404",
+      "scripts/verify-c2pa-cohort.py": "e4ee3c5caf47f267abd708053306a3f23f1e432564e35f2f7225b2c5be44ba3a",
+      "scripts/verify-conformance-delivery.py": "d68ad81c81a00eddc22f46ea0cea24223736335b9846d4bf9c18c9ae02f98ef0",
+      "scripts/verify-conformance-votes.py": "7bb4d305d54d810cd15249dfd67169f31ed8d49f97275550578a80c10a391c87",
+      "scripts/verify-dependency-policy.py": "7481049dd8598089a8b549e5bb77f21975d10753cdedcda0b9ced0692e771dd1",
+      "scripts/verify-draft-privacy.py": "86b0bb958bfd975f506ff601ce107dc7d84e40093f15e12444c07acbbebc8c51",
+      "scripts/verify-esbuild-cohort.py": "a3e830c46464fd727387401f62ade04a89feecc454b8b1f14b73f663dd0c747a",
+      "scripts/verify-feedback-analysis.py": "76d341aa8a6dddf4f9d1bc8eb8b28241ea57284a25531d9efa9d4bd4248f658a",
+      "scripts/verify-host-capture-evidence.py": "9aa8f28d29ab84045d15931a11f809ffb7e568ac1ef93039d6719ef4a1e7cb39",
+      "scripts/verify-host-capture.py": "cea82a899bb91104ef994a4efc60e4c6bdfab66c044abb34a9e545aa6614c29a",
+      "scripts/verify-host-recovery-evidence.py": "136292bd6b666a3d0b891671756199709f003cc6f294fbde4138e0b385a02b5a",
+      "scripts/verify-hp-client.cjs": "331e4da26344b2e4363e502d5db8f328f06d80ad6bf6b234d87a8e557045ee82",
+      "scripts/verify-hp-device.cjs": "929df15cb036c9bd5bffaae57b2bc61ab701cbe7d096a42d9b52448eb228fc4f",
+      "scripts/verify-local-setup-evidence.py": "56e8e89f00a137bebb53058279bc23296cf238ceae7871dd1f6da97d3679e4c5",
+      "scripts/verify-measurements.py": "19dc5201193baec2c600980b9cedc5475137f04809fee9cfc6001ad622357e58",
+      "scripts/verify-metadata-store.py": "d4404c275855624608c75595530c027ee748040555002ed85cb61d1fdcc47279",
+      "scripts/verify-mt-client.cjs": "9b43b3294b707ce461080df869469e487bafbe1a05cf69940c88153b27b794af",
+      "scripts/verify-mt-device.cjs": "b18f0d438c26f3b9ae628b724064e28f50a19211a781010ddb9811e993119e64",
+      "scripts/verify-mt-quotation-workflow.py": "9fff6b939dea1cbf69a301c5113747123393c5b5629dec66d144f6a4773e14cc",
+      "scripts/verify-native-dependencies.py": "6de88de15c06808040d2c675df6ef13f591980a10ab457600064f14b73f3e46d",
+      "scripts/verify-nli-license-cohort.py": "5e248ee94edfb7fd68e6347b2344c9c2d7ca228b2190bbdd461ea616b6924fe7",
+      "scripts/verify-organization-audit-evidence.py": "8ff9bf1cf0e5a2f99de0e4da41253118eaf771e3693e64f7b163b5f198d930b3",
+      "scripts/verify-organization-audit.py": "0bc48696ffa41849f8794fa30b0b3e27a750563a7b68b4c69c1a885ce559527a",
+      "scripts/verify-organization-directory-evidence.py": "20401e35cad5a6030348e1ffde57c659800dcba47d1a7cd8df27b1042d2a6c9f",
+      "scripts/verify-organization-directory.py": "74159f0ff30dc3c9e3daa8f052e2b817a90807685c82419efd0fd75f8c3ff5fd",
+      "scripts/verify-private-policy.py": "22b5725b403f87e4ecdb68663b66994320074e4439c5a6d618e0e88d011f0197",
+      "scripts/verify-reference-review-windows.py": "fd1c118e04e5f919a3d2eb950ada2715ec6c4ccd7cd228b3154062cacab6c1f6",
+      "scripts/verify-reference-revision.py": "30d9f98daaf8102115e5ce45af49fdd7b300dc78f256b87dee5a658ed15e90e1",
+      "scripts/verify-research-admission.py": "251d5ec4fa6da4630fbf8a56971f9f5dacbcaebf639b46272fa9f37312251b07",
+      "scripts/verify-research-invitations.py": "cc7898ca6cba88211117a52aebe45a84feba155ef9e1851689b96bf70c3490e6",
+      "scripts/verify-research-policy.py": "badb16c1c2ad7d22cf001408aa278a0291ee0e049cd221276b82e856336af0eb",
+      "scripts/verify-reserved-subjects.py": "4c2f00032e4b903ae8b84a1104efc1691032ece73d4caa39cea5d3d798aa607c",
+      "scripts/verify-rolldown-cohort.py": "520c0e60feac2c875076ee081ecf990f68d54ff76680fd4e5f49f51cb1a751d6",
+      "scripts/verify-scope-groups.py": "9dd531eeb5bea07d4bcb33cae2d98e1fc1aa3e5558ed6fb019e84a1d36910dc5",
+      "scripts/verify-service.py": "dbd748d85931b25c4d6b847babb44c6c737349ec28282bb122813921add591de",
+      "scripts/verify-session-revisions.py": "91c54feade6e68ee7590690ff728f9cae4e58fd6db0b23b0928561164781c609",
+      "scripts/verify-standalone-ps.py": "546b63388b8bebc7e67938d6d29f5cb08de0156574d939b6edbfbec622ad74d1",
+      "scripts/verify-tag-isolation.py": "f7274122c94e98d3755f240a5958441f4088ab537ad24dba504dd052679ec63d",
+      "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+      "services/anonymizer/Dockerfile": "fba7cc95464450228deb3718a56535066e9476efa1cfec14a850511590617d08",
+      "services/anonymizer/app.py": "2df4afaeee0a2ca4ca2b2b0032f4b38e4b68e2e6c3e2f01361166f54291fd77c",
+      "services/anonymizer/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+      "services/anonymizer/model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+      "services/anonymizer/replay_metadata.py": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5",
+      "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+      "services/evaluator/Dockerfile": "69f04c221aa724b742511ae6e1ba71f63ddda52d52199b7c119ff4ea8ea7dd36",
+      "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+      "services/evaluator/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+      "services/evaluator/requirements.lock": "7c55a71d58bdc3587aff25f9d6fed9abf1b6b851fa4b0fe2c516f47ddb6a8af2",
+      "services/gateway/Dockerfile": "f54f70902b4cdca938a3b285c159327bde56b7bf44a3efc91df7a1265a3d8c30",
+      "services/gateway/app.py": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456",
+      "services/gateway/healthcheck.py": "315976f84ed54bd0de5c8a3b58bc73806a17de6ff16388528f79530ace1eaac3",
+      "services/gateway/requirements.lock": "230b685d1c222b0bb59562ee046090debc4e75ef55a7c651819f5ae066042b59",
+      "site/public/downloads/aitrust-id-ps-source.zip": "c305d9176263b6d150c86e0d7950bb61ad651354c6b0b1ed612737e925c71624",
+      "site/public/downloads/aitrust-id-ps-source.zip.sha256": "9f77d8f7b5e6ca1cc70e9a69dbee27dcf10ad083050697d2659e5e0a6949990a",
+      "site/public/hp-device/.gitattributes": "2c8af6712f2e2278cec58acc52ef9523fdf5e6588a0983562ab75c5829c614cf",
+      "site/public/hp-device/method-943b5b2352f86c44d80d79625cbdcfca8f25a1719d116640863ca7d730f370fb.json": "943b5b2352f86c44d80d79625cbdcfca8f25a1719d116640863ca7d730f370fb",
+      "site/public/hp-device/notices.txt": "36de7bca357f2fffec7617e63ed992634b0e8e028b298184683dc81ebe4faad9",
+      "site/public/mt-device/.gitattributes": "3aeb1c02c4731e0b60494bbc5d1bddcc1c71fe4cdd5de46b9f10e29b220e106d",
+      "site/public/mt-device/method-28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750.json": "28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750",
+      "site/public/mt-device/notices.txt": "23b59ce45b5ea086679994977198cf0c91aba9ba81ecf2f9e087d4d86712b2c3",
+      "site/public/reference/hp-device-explorer.md": "094faea9d9ce45089857babc27071a67bca14d170da4d25a183d9aa4aa919044",
+      "site/public/reference/mt-device-explorer.md": "dad64b08d055ce89e0ea5ed1c35eac7b094be449d5eae4b09065994f09bd9896",
+      "site/public/reference/nf-source-evidence.md": "0349cb22f0c39d9cf58851147609fac07885a48ff2af0899292bce88faa78318",
+      "site/src/HPExplorer.jsx": "42708f179f5a7848c9123c16d8877aaef93bb9df95b205ee9ce3774a9d0a8a9e",
+      "site/src/HPExplorerSlot.jsx": "475104b9089f743ddc795c8580c8db705723e2e5e67f20159aab3c3fd3fcfe71",
+      "site/src/MTExplorer.jsx": "e41c2dd66d38986f9d54912e70bbc49ae5259f4a03dd2b1f1928a520183be30d",
+      "site/src/MTExplorerSlot.jsx": "774c165916edf0bc891aff874ce48dcf1da625d06d9a5c05859ece1d9afd2a06",
+      "site/src/hp-device-client.js": "c6f228d57ba2cdd39e1a52c4adb72ee4d1423261f8099ba427331400bf10e2f4",
+      "site/src/hp-device-manifest.json": "982c9af3ae67953e12ea9f4d99e8a4010b3cc777a19e1025e0838a74c4cc7f0e",
+      "site/src/hp-device-result.js": "f0fe16cc1e03b9c77e25b4f1a80ddb06e5124d123cec18ede764f0ae89c56fef",
+      "site/src/hp-device-worker.js": "fa8216594fffa7b11a4621a47a193813c2a602957cbf238dd36bc8e0e3fbc6df",
+      "site/src/mt-device-client.js": "f17b991c28760ebcefec515bae9cd095dfbe59540dc2bb6572a21380989a3fff",
+      "site/src/mt-device-manifest.json": "171bc67cf7d6761bc7788eab238051f73402a1b72f35b62fcc1d128a1cd7abda",
+      "site/src/mt-device-result.js": "3c76732aa4d3ca38beb553d3011d57b7b0db3fb94b94e0fcb360e67f0f3854af",
+      "site/src/mt-device-worker.js": "34d1f36eeb838fce529cc9d914b6a8233347a58456b131b8c2ba7c9f35979196",
+      "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+      "spec/organization-audit-metadata.schema.json": "ddc883924d3620161eb2d74dbbc59e2188cf72e90ee9bc5424af94ba462ca651",
+      "spec/signal-registry.json": "d38dbb33574cfb1d7d72a91ce20c36769b0aa23a21185684fd7bad2391b7f1a9",
+      "spec/vocabulary.json": "d3c14256da3d44c3a02f252c591a2f9039ebc2944b73837c7c521d8adac0002a",
+      "tests/fixtures/legacy-review-v1/items.jsonl": "3adb92c33754633cc0ce22d4aa01824ed6fe332a5d33afaaa714669345fe2dc4",
+      "tests/fixtures/legacy-review-v1/manifest.json": "eef3a90ae88e72f72d53ab9658a977b749c1e0d32ac287ab31ab54d56f15a656",
+      "tests/fixtures/legacy-review-v1/origin.json": "a61901b538ec10038c625e670a6eaeb4da3acf28d97e2e1f011d000118d92ee1",
+      "tests/fixtures/legacy-review-v1/reviewer-1.json": "885223f9e99fb26ac1d7598e094a8302ac52b01a3ce87dae71a0983e4aa0d338",
+      "tests/fixtures/legacy-review-v1/reviewer-2.json": "3f768f661e60d665826de28437852fd1f4584de5d982b3d1528644a1f9a12f87",
+      "tests/hp-device-client.mjs": "0e4962619887bb071db03f78bbe6a437fd2025344b776296506b44b30373be5c",
+      "tests/mt-device-client.mjs": "cfdb6b30505275d80af722933745196f3dc90f4513659cb1d78f720a39dc34c7",
+      "tests/replay_fixture.py": "293c963d5cd9e34f9583ed81ca39e82e987b3a97a703506d6e5b2f672770528a",
+      "tests/test_agent_output.py": "b35a49b1a79c088dfb4f1291f8207fab1d40864c74741fa5b5698550c184c18b",
+      "tests/test_agent_output_evidence.py": "362a8b484e63510b55a633f1b87e43f182b8b31bb607651c13b08c606490ec49",
+      "tests/test_ai_tag_api.py": "2b216d365bbb7222b1887dc711c10bca7946df886e35d2c98d71e533a763f57e",
+      "tests/test_ai_tools_mcp.py": "2ccb5ddbea55767d5cebb07e9032382dfc1cfb072861e972217228e9a7a7198a",
+      "tests/test_android_emulator_prerequisites.py": "a2318e7875a3d01cb211c25c6ad48f972254d1d25c1fff2dd073c3a3f4092d81",
+      "tests/test_android_share.py": "6991a63dda1ad6817f85ab759f0e9f14149cbaa1e37fc1d08903bcd8541c9938",
+      "tests/test_assertion_conformance.py": "0095b72455ef548f00c84bacbf572e15ddba6c44380592555f22f29bba644a2d",
+      "tests/test_assertion_formats.py": "6a7b667de7a49140731e22f9470cb2ba649872fb3b12650e97187cc7fe5b34f8",
+      "tests/test_assertion_replay.py": "b7bcae3c75817fcab106732ca1bb473ab9bc4ccbbd93da4854394dfb0f6441ce",
+      "tests/test_authority_quotation.py": "5a9bdd12a8027f071d37fab1b625768640efad3a66308c5732334018bf09d93c",
+      "tests/test_backup_retention.py": "c53ebd846aeb4fc5ff973e99679abf01aa42fbe5795b379d59bbaf8662bf760a",
+      "tests/test_blind_review.py": "f1f19dca67b4f62a604729ed57f27de540183f8187f5cf76fb6eb81c4e88897c",
+      "tests/test_blind_review_privacy.py": "08e2393232b9c869d125b3d46e37285e3935026dbb4ee40561654a39409c4f64",
+      "tests/test_c2pa_cohort.py": "6e05c34404ff4b2c15beb0c9b40a6e6dda145b78aee16e03fcd21a6a99674c98",
+      "tests/test_changelog_pipeline.py": "69749573a012c7568e1bf04843545a1004f6114a115f2efcc51e1e1a9475fc73",
+      "tests/test_ci_ubuntu_mirror.py": "1e5a0231a392bb7adb1ee311f8f12bd325615e1b3b3193a9d9ec32ec2f468503",
+      "tests/test_citation_resolution.py": "213f0173448cf6af4fb9c1d043cf2c5b3a7a9b6cbe1c4ebf1b5a17f1ec5a62d5",
+      "tests/test_conformance_delivery.py": "819636aca3b715d7f15e613862615acca348021e7340bb49076c99a2cb7fdcd7",
+      "tests/test_conformance_recusal.py": "ab206c391a181966b13054a4ade266714014d3d1031e77b80b57cd3221310fd7",
+      "tests/test_conformance_vectors.py": "80e47e6bce0338975f09e2bba371b64bdab58df91b983b4005e7d5afddc6d7af",
+      "tests/test_credential_flow.py": "b5450acdaf03c1bbcf62f6d4af2771894c0438ff3590b28fe8f6dc774b74c6c6",
+      "tests/test_credential_flow_context.py": "31d3a10544f511916748880c0aeb460353eabb127c122e3d41f2c856ac211168",
+      "tests/test_dependency_policy.py": "a7fcf507eb15064dc8dc536983f49d3e6a47b3e0569f9d5cae33ca3aeadb2770",
+      "tests/test_draft_privacy.py": "bde3cf98b1555894215cf1e1d17a6de73990ef6bd35a429db144e69bffb0758f",
+      "tests/test_esbuild_cohort.py": "7b2e1e82a48b6c0750e12013b085c8fe19dc8cb2244c023e9b7b377208178959",
+      "tests/test_feedback_analysis.py": "3ce6be9064f4cdeb0194d003ce313803ef2526d6d12b8c9150af9d338b6eb89b",
+      "tests/test_gateway_runtime_isolation.py": "64f9f1a1a4185e386b10b496bae2945425acfa0c1ba4469160016cc0adc35672",
+      "tests/test_host_capture.py": "482481fcbfeedaff38a463fbb5ee7f72ae0dd61ff124096471ac933d3e5ef8af",
+      "tests/test_host_capture_evidence.py": "96a196aab4ff631009942c7a987bd5462eb54957b029d5bf18a632cf2ca1fc38",
+      "tests/test_host_recovery_evidence.py": "6a89ac4e858ce22025346b86b092bf43cef4d817cc80492dff7eb8da712c8c7d",
+      "tests/test_hp_device.py": "2afb09f81e8bc72728d14eb4320740344f6543b770b71509ac0c0a587e9c84ca",
+      "tests/test_independent_tag_batch.py": "33cd371fd2552e243035dc6e30d36969a28e47811e3f9fe0ac8abcf768f13c02",
+      "tests/test_local_setup.py": "6c36201596b445d8e71f58c9beccf847a251357e1909c0fb1c71102d93b2a28e",
+      "tests/test_local_setup_evidence.py": "9135e2d057b22b9598f4f2c16b33b3399ae62e86d16f937e2480101d8222daba",
+      "tests/test_measurement_portability.py": "fcf4c7fa40ff85f7da7f41a16b4b10e2d487aa1269482571fdd08b1bb6e90999",
+      "tests/test_metadata_store.py": "3616ec0a1d03e719dfd81aaf4c6f5c6471c8830e1353486dfdbc9ad4eebbd840",
+      "tests/test_mt_device.py": "54a274c8d95288e5c173865a3203305397802299165ef81416d73721374eb5c8",
+      "tests/test_mt_quotation_workflow.py": "c283d1d2d8d9d235c51dd6d2457583e2b819e8ea019b7e84128ba48108a21248",
+      "tests/test_native_inventory.py": "e0e919841f954ccdcf86247338708fce946d06d4a178e3ea32c8bf5c09489dcf",
+      "tests/test_nf_source_evidence.py": "11f393ee995e897a2724a858a5cfb6208646b047dbc7ae48f267eaf8cd7166e0",
+      "tests/test_nli_license_cohort.py": "816717dd62627909c26d4a94be746bb327a1241b22fdea55f2cda93e8111adf2",
+      "tests/test_organization_audit.py": "7bc4906145b5c3632bab3f9eeed78b043f0521d40eed166d5f241cec2eb05acb",
+      "tests/test_organization_directory.py": "a4c5a612661490c10ce5c7ed01cb5d0adf4e15bbd1dc0dcc0aaa80b1eb4eefe0",
+      "tests/test_organization_directory_evidence.py": "d8faab9ce6776628c3ae52059dda3517e5ee9531149e1c247a406e132fd9051c",
+      "tests/test_private_policy.py": "701700ed4a4ef7e3ba5e25683ef99c6b5593f1e3fc6b26b38cbc952b7d4cbb2d",
+      "tests/test_private_policy_cli.py": "aa9ad2b556bdd519bb925f3ec9f0c0057d128c0fb873a6c4706be9aa017ececd",
+      "tests/test_ps_source_distribution.py": "c7e0551be7e1f5815bc69e2c5a639a15849a5e24b6242e3df9216761dccb0a06",
+      "tests/test_recovery_stream_boundary.py": "0d5e4be8f0ef4fb93ff300e671738b88365524e9a927cb9f85ee68d9da08472a",
+      "tests/test_reference_claim_coverage.py": "d574bf99d4b862fcff67956cdb051817bca913497a3236ae7e39fb1c09f6c942",
+      "tests/test_reference_review_window.py": "62dff6565a42a82db28df4263963b2a0e4f1200610a3ef7f2bccdef63ad6d659",
+      "tests/test_reference_revision.py": "538d45623534f68507d956bbc5e7f8c5fb9a0e9a42029492dbf1f6b6abb8432a",
+      "tests/test_release_announcements.py": "817f149726a38ce7027ce3d5b0b9f7b08f591ab8de1bf3be513df15421dc98f4",
+      "tests/test_replay_verifier_engine.py": "30b808d2b9eb6b7d84ba50ade5af62b33cb4401e9151a8ac56913d611933b334",
+      "tests/test_research_admission.py": "789f3844eb217bdfd0b62d7600d0fed89976bcc3bbba1272860fdf10465905d1",
+      "tests/test_research_invitations.py": "641ac086f6915bdf89a1f431126831284002ff78c02637bdd326d013aa716073",
+      "tests/test_research_policy.py": "921c682a137a702908e50b4822ae8713e627afcd658d50b72c09525d1991262d",
+      "tests/test_reserved_subjects.py": "491c468dbd6f43a6a093c37326e4c7379a033aa1be0c47120ddb5c3e34b978b9",
+      "tests/test_review_execution_binding.py": "a2932c80361d545723cd6f6bff1848f6f9cc34da77cf455d2cf22352c1912882",
+      "tests/test_revision_public_links.py": "df0dea45e70a9ea602cc7adcee03e4a96a5dee421c5f024e42f6acbbd119c654",
+      "tests/test_rolldown_cohort.py": "3385a88ddc53431da449205d1357a6a4b4ee12a48e45d2fc07790252e08b72da",
+      "tests/test_scope_groups.py": "9fa2c52560f94bd0e0157c4914f3ec52f8e729c74232fd08a98320463f2d4ceb",
+      "tests/test_scope_render_command.py": "315da0831b6bacd4ff259a80305c10a9ab0fcc99249a20a8d1baa03eae6dcd68",
+      "tests/test_scoped_component_inputs.py": "9e647aabec8344f212d65751e635768417bc077dbcfd6dc0ae5e2d6283be4289",
+      "tests/test_session_delivery.py": "6101d3b54b5e2f00be54e448fb7081cde6504117d411121ee3c76a8d3f5e0ea9",
+      "tests/test_session_revisions.py": "f6e0f8919fd7c3b63bafece8b90eae0e0633a352d7883c45807419921941a865",
+      "tests/test_standalone_ps.py": "18e1e80eff7340bea44794c4fda990a65b429876708db2cbcdf7dcf21b442edc",
+      "tests/test_tag_failure_isolation.py": "bdcc85b30bccc4746520e3490b0706f666e7e8ba65730c062486e76d05b0f15a",
+      "tests/test_tag_isolation_verifier.py": "23767a2f1497502964fb3bc7e8e2157024b87b62344c2363995be5c74a45130e",
+      "tests/test_tag_performance.py": "8ad7119419c501cc6953836be0f6add164ddfe66912189dbf04cb39977650612",
+      "tests/test_worker_process.py": "34143622ce835f452533e93a5d921dd8f38ddd2fb3bdd37d0cebec83a333fe2d",
+      "tools/agent_output.py": "9eb283f5c66ae408a4ee4f768ad2e5c6dcac33b694aa26178bd0fbaaac066247",
+      "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+      "tools/backup_retention.py": "ee585f1a50c0f41a0f9338777fbf0b6a5237ec1a2cf5f66f52411da496c52f64",
+      "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+      "tools/c2pa_cohort.py": "b9fabb46d7d2e5dab4e6b6ecbf328f10dc659886d1fec7a75fd4c6ac055fd643",
+      "tools/citation_resolution.py": "7581a6684f1db434069b876beac3883746d6e537729249e0cf2d66e03277bb71",
+      "tools/conformance_recusal.py": "af0b047e8d4d708c5232bc4abfd1b92973e5b0e4a12d326056871144ce82df43",
+      "tools/conformance_vectors.py": "fa06f80172fb314876c7d202c67888a888d866097206f28dbbdea23737b55d45",
+      "tools/credential_context_io.py": "efd402ae12ff270b78487ad422483ddc187b94b49cb47686047cccc997cd80a2",
+      "tools/credential_flow.py": "854dd3c6fd9584b3ddee23435c13ff37a70085076ebad0c18c9b38a88ee60fa6",
+      "tools/credential_flow_context.py": "0f73711bb9cdef86702fa09fd48a603212cce017eeeecc3533b1aa2d24931015",
+      "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+      "tools/esbuild_cohort.py": "37dac4b6caf8f206c838926677300689ad95b30d925c44e693260b80fea3e0ba",
+      "tools/feedback_analysis.py": "6cb0cd1651686769d4b39dfb400d96b3de2af3059251d24ef41ba6de1f317085",
+      "tools/host_capture.py": "ddc2fc186e03af052d2c7f6fc93f3506fb120d617c077135a8e665ca57485f72",
+      "tools/hp_device.py": "be4fb51923195a4cdeff74e0913902bd92897764c942f240a9fcce051f913ac4",
+      "tools/mt_device.py": "68f7ceaf6e2d87e0f5babf58534954d3c28a2bad85b1728734f31682d219166b",
+      "tools/mt_quotation_component.py": "cde1cddf716b128e68bb7b1c5b8e95b7c4c89b90e0f0794dbef6e1ac6bf3809f",
+      "tools/mt_workflow.py": "454549459f33e94caf5522ee59bc6ec2678dfe38b40844f10d659b71efe7f7a7",
+      "tools/native_inventory.py": "a839c3043e3a542634ecba6e3a289dd5035efbf66081ccd33974445b740c2bf9",
+      "tools/nf_private_io.py": "a45b077bccb618c891b0ad88133dc1644781d0146dc046fc6c4fe01d71834902",
+      "tools/nf_source_evidence.py": "c69d9bb1d555aa1c6048a4dede9312229fa01b5b4905e1ef912010b17885b046",
+      "tools/nli_license_cohort.py": "07b076c4e96adf8910233eaaea9771dd74f5a676d3852b587b6abf83c23a5102",
+      "tools/organization_audit.py": "8a4c5c85c7225788e227a843e85d055e5cc7981e9240f6a6bd7479e287586e91",
+      "tools/organization_audit_lab.py": "f767f89a16c0a55c58ddf779ea805d69d72aa2db2994b42a82ad4a52f3e6b7c9",
+      "tools/organization_audit_store.py": "476957577728d3f17fd54f93a43eb37c9b053b693b2b37829a811e64390da97d",
+      "tools/organization_directory.py": "7c294b80142eb25f583f2e5566bc91dbc8bf92ff86ccb8d175f62e1718cec47f",
+      "tools/organization_directory_lab.py": "4f58501f705df9a917675d53eb6adae52899b3753828c4138a628ea5184f0209",
+      "tools/private_policy.py": "bcc69df1dc1615e1574c0e870760ebb36edc42140a8ab5fdbbfd695ba4d8f11e",
+      "tools/ps_source_distribution.py": "682066c75455f0c50585b5eae5a9fb878c0300e7abecbed58987626077fc9c62",
+      "tools/reference_review_window.py": "a3dd9bb935bb9cf26c379017daf1a8e7d03d6195dec710fd5aaecb14d4b00781",
+      "tools/reference_revision.py": "9eed26a64c3c5f5afeb620babdb362cba8eb50da7c9afaa350e807538b647219",
+      "tools/research_admission.py": "f6adfcbdca1c89adca18c460ebb720b8cf057057b43c857967115efe93528f4d",
+      "tools/research_policy.py": "5a9fae8dedcb7edb81c2b0b4d6fbb54be061ff4846e80bcf9db3dd99bebc1b67",
+      "tools/review_execution.py": "a100fbd3ba79d583423e9398937e5a218588fe699b6a084e00a6947f5506578a",
+      "tools/rolldown_cohort.py": "0642fece29449eabb0e7916d9802272df71a11f817c428da38ddc396015a071e",
+      "tools/session_delivery.py": "7d612f8eb684922b4e211b580cffd2bdc8eabbb513ce311ef73d4a8add45977f",
+      "tools/session_revisions.py": "53ccbedfa7d8bdd2b71c580828bd28f4ba52c4a1e4ec6fbe162d849a97828248",
+      "tools/tag_api.py": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e"
+    },
+    "sha256": "0b76ec492cea876325e4e15bbbf86fe925bb4b3b525290b83b0dce471516f851",
+    "commands": [
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_assertion_formats.py",
+        "tests/test_assertion_replay.py",
+        "tests/test_measurement_portability.py",
+        "tests/test_tag_performance.py",
+        "tests/test_blind_review.py",
+        "tests/test_blind_review_privacy.py",
+        "tests/test_review_execution_binding.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-reserved-subjects.py"
+      ],
+      [
+        "{python}",
+        "scripts/verify-blind-review-privacy.py"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_private_policy.py",
+        "tests/test_private_policy_cli.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_research_admission.py",
+        "tests/test_research_invitations.py",
+        "tests/test_metadata_store.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_reference_revision.py",
+        "tests/test_corpus_support.py",
+        "tests/test_nli_references.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_feedback_analysis.py",
+        "tests/test_research_admission.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_backup_retention.py",
+        "tests/test_restore_isolation.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_session_revisions.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-session-revisions.py",
+        "--output",
+        "output/verification/session-revisions.json"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_revision_public_links.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_reference_review_window.py",
+        "tests/test_nli_reference_cli.py",
+        "tests/test_reference_revision.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-reference-review-windows.py",
+        "--output",
+        "output/verification/reference-windows.json"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_conformance_recusal.py",
+        "tests/test_research_policy.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-conformance-votes.py",
+        "--output",
+        "output/verification/recusal.json"
+      ],
+      [
+        "{python}",
+        "scripts/verify-research-policy.py"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_scope_groups.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-scope-groups.py"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_scoped_component_inputs.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_local_setup.py",
+        "tests/test_local_setup_evidence.py",
+        "tests/test_local_cli.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-local-setup-evidence.py"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_draft_privacy.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_tag_failure_isolation.py",
+        "tests/test_gateway_runtime_isolation.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_tag_isolation_verifier.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_independent_tag_batch.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_worker_process.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-native-dependencies.py"
+      ],
+      [
+        "{python}",
+        "scripts/verify-organization-audit-evidence.py"
+      ],
+      [
+        "{python}",
+        "scripts/verify-host-capture-evidence.py"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_host_capture.py",
+        "tests/test_host_capture_evidence.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-conformance-delivery.py"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_conformance_vectors.py",
+        "tests/test_conformance_delivery.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_ci_ubuntu_mirror.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_agent_output.py",
+        "tests/test_agent_output_evidence.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_scope_render_command.py",
+        "tests/test_scope_index.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_organization_directory.py",
+        "tests/test_organization_directory_evidence.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-organization-directory-evidence.py"
+      ],
+      [
+        "{python}",
+        "scripts/verify-host-recovery-evidence.py"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_recovery_stream_boundary.py",
+        "tests/test_host_recovery_evidence.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_replay_verifier_engine.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_ai_tag_api.py",
+        "tests/test_release_announcements.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-dependency-policy.py"
+      ],
+      [
+        "{python}",
+        "scripts/export-ps-source.py",
+        "verify",
+        "site/public/downloads/aitrust-id-ps-source.zip"
+      ],
+      [
+        "{python}",
+        "scripts/verify-esbuild-cohort.py"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_dependency_policy.py",
+        "tests/test_ps_source_distribution.py",
+        "tests/test_esbuild_cohort.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-rolldown-cohort.py"
+      ],
+      [
+        "{python}",
+        "scripts/verify-c2pa-cohort.py"
+      ],
+      [
+        "{python}",
+        "scripts/verify-nli-license-cohort.py"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_rolldown_cohort.py",
+        "tests/test_c2pa_cohort.py",
+        "tests/test_nli_license_cohort.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_mt_device.py",
+        "-q"
+      ],
+      [
+        "node",
+        "scripts/verify-mt-client.cjs"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_citation_resolution.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_session_delivery.py",
+        "tests/test_hp_device.py",
+        "tests/test_nf_source_evidence.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/session-delivery.py"
+      ],
+      [
+        "node",
+        "scripts/verify-hp-client.cjs"
+      ],
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_credential_flow.py",
+        "tests/test_credential_flow_context.py",
+        "tests/test_mt_quotation_workflow.py",
+        "tests/test_android_share.py",
+        "tests/test_android_emulator_prerequisites.py",
+        "-q"
+      ]
+    ]
+  },
+  "checks": [
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_assertion_formats.py",
+        "tests/test_assertion_replay.py",
+        "tests/test_measurement_portability.py",
+        "tests/test_tag_performance.py",
+        "tests/test_blind_review.py",
+        "tests/test_blind_review_privacy.py",
+        "tests/test_review_execution_binding.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "788e98609ba35a9240e4aab282399911571bc5b82eacc02be279e247a6959805",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-reserved-subjects.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "5476c069c0968f5729bfe2fbaee72de68c7373986302f5c4d9db9e5bd7b0e598",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-blind-review-privacy.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "056c62383c47f6040c4cb3ad81ac9faa826c0afff4c427b0b0efe7169a849a2a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_private_policy.py",
+        "tests/test_private_policy_cli.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "ceeb935026554b9b7e9499fbfc8c5f846014c1a6d70144932ee852bd11ca9785",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_research_admission.py",
+        "tests/test_research_invitations.py",
+        "tests/test_metadata_store.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "170f99fbde77aa8d40f2135359bbbab5c0cf8663a40fadcdb7df05550f80cdb4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_reference_revision.py",
+        "tests/test_corpus_support.py",
+        "tests/test_nli_references.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "79a93050d909dc73d29c60f0e1ca89ae3497c6f9b552d2301fa4799f0b9e3138",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_feedback_analysis.py",
+        "tests/test_research_admission.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "1079dacfa4dbefcc4e4537053f6ea86ab0f2391b985fb7de71af425651936f47",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_backup_retention.py",
+        "tests/test_restore_isolation.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "9ceff102715d2a4f605fd5d78e8a96d79505fcb853bcceb6632d2c75a96ab1c8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_session_revisions.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "1a93dcc65fd2f5d14ec86fb4a67a3bc5b0c33caf74539c774ed2023853f40037",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-session-revisions.py",
+        "--output",
+        "output/verification/session-revisions.json"
+      ],
+      "exit": 0,
+      "stdout_sha256": "42974b6c8c888dfc3b6fdc95fe5ef64cf131c4a6c8a3ce86034e7a16926b7bbb",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_revision_public_links.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "a00d95dfbc084b6eb22229f4a5b545b4452162a59797c0faa121535a79212580",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_reference_review_window.py",
+        "tests/test_nli_reference_cli.py",
+        "tests/test_reference_revision.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "65fc4614b322344810eb8a4a23897d28798454d2926dccc26cbcb48ab0384dd9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-reference-review-windows.py",
+        "--output",
+        "output/verification/reference-windows.json"
+      ],
+      "exit": 0,
+      "stdout_sha256": "2b179ea1d24fe3804ed272c6eff9bec045057bfe91103451de541caa9cc352ae",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_conformance_recusal.py",
+        "tests/test_research_policy.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "13f35185c8a34d67a4c04ecff5e524acec435bc426c8bed5e1c326e3f6afe808",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-conformance-votes.py",
+        "--output",
+        "output/verification/recusal.json"
+      ],
+      "exit": 0,
+      "stdout_sha256": "f7b910451094c80b4fbba96c63d9acfb42e18a4a15599e7d5c4594161cc25258",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-research-policy.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "2d391f02649e18eaaabe79872061d73aeb1052b6f402257478c4a798607090b4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_scope_groups.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "a6f0138d0fc1c491d7f5a7f61bb0ea7c4ed0952ad8258217e9312ea0a82a0f66",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-scope-groups.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "97613c1757f56df019b7712e3839138c98aee0838423140aefe089ca30d5231d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_scoped_component_inputs.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "565625d96747f973a1f4935ee4301e151c1c82d68498819a0e46dfc5cacc4d12",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_local_setup.py",
+        "tests/test_local_setup_evidence.py",
+        "tests/test_local_cli.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "91dbc8e901bb8bb80ac984dd09cb2c995e4e7414e5677557d0d6cbeedda28010",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-local-setup-evidence.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "eff45c519b602d83a7f4bdeb535427a58dcc28926536f37d99b2d661abe6d929",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_draft_privacy.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "12fabd44acf9aadfacc5fb216147b11a878d5a3b8a003378bff21b244e55bd5d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_tag_failure_isolation.py",
+        "tests/test_gateway_runtime_isolation.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "a30c28454b04d68324688d550ff4aec9106f89de7e834bb173475745ec2ab34a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_tag_isolation_verifier.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "463ab729dff946035d45a5caf93b242c8a04f169983b028d6a4cae429efca324",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_independent_tag_batch.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "551fc771815904231a6da298f1c437edf7595fd111a7eb29e1fe070136eeb1ee",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_worker_process.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "2388777a8cef79827635a20e2538ae0e62789fd86e42469f8bfcb80dfe21e22f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-native-dependencies.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "0a4f661e7ceb256ffeef0c8004e6943b98d49100ce2a64484633ea73dc51d2a5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-organization-audit-evidence.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "38cb5190972038d779b529b2b0d24be1416d2c16a27ed708fc61f2240b5a1154",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-host-capture-evidence.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "02966605f457d8836aad5fd6db0fb275d68cb0bf456e0022f34b0302993d50da",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_host_capture.py",
+        "tests/test_host_capture_evidence.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "1c76b1ca5a55b29437132fb96e8252d5f63d59258c677cc4840e6fea8f52f6ec",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-conformance-delivery.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "2317748f4910787b0e120a2e3c56fc8d23cc6f27633d19ff9c8a16be6da444b8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_conformance_vectors.py",
+        "tests/test_conformance_delivery.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "e5ca04c6858898ccfd150790c23ff62c494af08a1abb9cb963abf0abe7ddda1a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_ci_ubuntu_mirror.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "7548474fb14d06939e7c5c04118884c7575e481e66341dcb60a44054161cc931",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_agent_output.py",
+        "tests/test_agent_output_evidence.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "a6abfb55dc207376273a0cdc093d301ffddb8974cec3f26f168437fe69507868",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_scope_render_command.py",
+        "tests/test_scope_index.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "4e688ee706d67a819f5fa7bf78dbf850f6929241ccac8909aa65930821ee113f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_organization_directory.py",
+        "tests/test_organization_directory_evidence.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "b35cd6195b85b88cc1a5492524e0644a3a6a4def46754d348dc7f48ff9cc816b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-organization-directory-evidence.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "b955e81730a460e9be051d3e5fcca85ed4316d8d8e6f59d942bce2536bad8881",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-host-recovery-evidence.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "3d7a013e8486d1a77cb628f5c06be3c027e869f2ae26913ce3130852069b61bc",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_recovery_stream_boundary.py",
+        "tests/test_host_recovery_evidence.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "3390296d3994c1669d1590cdfe2ca471c8e9c913c93e4b4fbe029251f7b9302b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_replay_verifier_engine.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "3f2ea59ea3ff3b1f8ed8689f38597c7b6868acf5bbab9f1e2bf4e322510ff5ce",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_ai_tag_api.py",
+        "tests/test_release_announcements.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "32d06ca72351ed90db8a8a344ecbbb8b16687cf5456f5451cb3e0c3e6b766625",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-dependency-policy.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "2dfe81dd9106aba611005b587fd32b781e418ddf0c6d7da2470dcad3068a5789",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/export-ps-source.py",
+        "verify",
+        "site/public/downloads/aitrust-id-ps-source.zip"
+      ],
+      "exit": 0,
+      "stdout_sha256": "3779774b9e3eb136c095bff792778e64b95b4f9dbad9e297f8cf0a2566be99d6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-esbuild-cohort.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "9b28e487d3bd9f012fbdf624c2f4ec48e5fe66a244ab9ebad81faf3c4d71c70f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_dependency_policy.py",
+        "tests/test_ps_source_distribution.py",
+        "tests/test_esbuild_cohort.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "2045ffe65fe35b82df6eee50a2a3fe200febaf52dc587d78dcc7ab5b9b5f5319",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-rolldown-cohort.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "f4d966a7abb9502d7d578526bcb35e5a19deb82fb3ccff206290e41406da9aaf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-c2pa-cohort.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "27c4eebdfb6d62c0523b2bc4d753c35cfd46d5f0ba47e10608b1e9cf67ee5dcf",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-nli-license-cohort.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "1f4940b793bd4c9f063e00da7f7d7e1b966999cc523cf57ddc5dfeff1e2906ff",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_rolldown_cohort.py",
+        "tests/test_c2pa_cohort.py",
+        "tests/test_nli_license_cohort.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "c619469a1865c4583187b1438cdab43d0aa831b5abb7b1c438e66bf7299144db",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_mt_device.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "e021aa9ca993ed9b63efbb1b99003df7433b83a329bae64f7ce8aeafad7ed0c0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-mt-client.cjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "90b921dae7dd0c7687a4ba675f3519f91f7f8553759596b769eb7efa9f7ee04e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_citation_resolution.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "617e443a766e465c50ecbe9aebe422b49d7850f60a2de0699e5f48b1f718dd82",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_session_delivery.py",
+        "tests/test_hp_device.py",
+        "tests/test_nf_source_evidence.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "59cd483d3a040b6a5e7677d6b2965a22502949640d170ccce811a8c8467e903f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/session-delivery.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "96515bd963cb75df50d475d9f747cc7495e4571c58596d389f675eee1ba48e50",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "scripts/verify-hp-client.cjs"
+      ],
+      "exit": 0,
+      "stdout_sha256": "52e2d8be06bb9464be1e7110dd48befb0db89f12d46b5669b88e79f0526ce11f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_credential_flow.py",
+        "tests/test_credential_flow_context.py",
+        "tests/test_mt_quotation_workflow.py",
+        "tests/test_android_share.py",
+        "tests/test_android_emulator_prerequisites.py",
+        "-q"
+      ],
+      "exit": 0,
+      "stdout_sha256": "7088bdb6a1151ee3e2413a3012b1dee4f0c171f8a7ec817e56106d7cc8d10de1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "release_approved": false
+}
