@@ -91,6 +91,15 @@ Recorded 2026-11-20T16:04:08.800577+00:00 · Contributor: Codex · change
 - **Evidence.** 53 focused Python controls,10 Node groups,33 actual canonical CLI outcomes and33 full native/browser outcomes per Chromium and WebKit pass. Six corrupt-result injections per engine refuse before rendering. Actual existing PS worker remains functional after optional method, import, render and missing-chunk failures. [Change record](./runs/changes/2026-11-20-160408-credential-flow-device-preview-c45f5c2f.json).
 - **Not claimed.** No production mount or deployment performed in this branch; no PS signal mapping, context/intent classification, independent semantic corroboration, held-out accuracy, physical-phone or human accessibility acceptance. F-012 and full original scope remain open.
 
+### 2026-11-20-161946-credential-production-ui-review-2c89bbbd
+
+Recorded 2026-11-20T16:19:46.320445+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Add reusable actual-production-modal verification for the optional Python credential-flow explorer, with a sequential Chromium and WebKit loopback runner.
+- **Evidence.** Both actual production browser engines match three complete canonical native records and pass lazy disclosure, private-detail, cancellation, empty reopen, privacy, narrow enlarged layout and actual PS survival controls. Source and served asset hashes remained stable. [Change record](./runs/changes/2026-11-20-161946-credential-production-ui-review-2c89bbbd.json).
+- **Not claimed.** Engineering parity and interface isolation only. No PS release, independent accuracy, intent, real credentials, physical-phone, human-screen-reader or full original scope completion claim. Product and method source unchanged by reviewer.
+
+
 ### 2026-11-20-155506-deferred-details-a11y-measurement-47b55b39
 
 Recorded 2026-11-20T15:55:06.787379+00:00 · Contributor: Codex / web_camo · change
