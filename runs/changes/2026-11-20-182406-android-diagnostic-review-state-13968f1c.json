@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-182406-android-diagnostic-review-state-13968f1c",
+  "recorded_at": "2026-11-20T18:24:06.426718+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "56b0294c8e22b456eface6dad0a8d1afe68d1450",
+  "changed": "Keep the Android selected-integration evidence and unresolved startup gap explicit without marking the prototype or original requirement complete.",
+  "proves": "The current selected source passes seven original API36 cases; the earlier Ready-screen failures remain preserved and unexplained. Original requirements and all12 completed delivery objects are retained; N014 remains80 without final_acceptance.",
+  "limits": "The Android software task remains in review, not closed. Real devices, TalkBack, startup reliability and release acceptance remain pending; current shared evidence will be refreshed before protected integration.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "docs/scope-progress.json": "f024425c5621eafdd3067135ba26abe7922d8264ce3b0f7dee8216b2436713cf",
+    "docs/scope-progress.md": "1b9a11cc3101b502f52b867295c96b4477e6ddf80058c3f27a234361758926b8",
+    "docs/session-delivery-plan.md": "3489340492b34cdccdc349a30e9786baa51cb1fd62629b13ccc13883d6bfe5da",
+    "docs/session-delivery.json": "f063e081a13b7286cd088fc487bf15f503e0b899ceb9c01b2fc93a3f9215abe1",
+    "runs/2026-11-20-android-diagnostic-current-seven.json": "1f39422320191420620a027da46472e5cb677a91b74f47693491e472cfd46312",
+    "runs/2026-11-20-credential-closeout-android-snapshot.json": "6aace06e22618d8fe554784336d84d528a6ff13fa324cd8eaa9a6476e4a69ee4",
+    "runs/2026-11-20-independent-closeout-boundaries.json": "dda8171288bad02527b3dc8339bcc4b615c2ded4a09a402563188a9919faa74d",
+    "runs/2026-11-20-independent-closeout-website.json": "b1174e40d57f9519f534dc05b89b230d69c19a5eaae5ef4008caabe1b4ad93bf",
+    "state.json": "b3c7481bd0b52075d4ed0d703093beb6eca0ec1cf6d29a5887852b8700934046"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-diagnostic-current-seven.json",
+      "sha256": "1f39422320191420620a027da46472e5cb677a91b74f47693491e472cfd46312"
+    },
+    {
+      "path": "runs/2026-11-20-android-early-share-diagnostics.json",
+      "sha256": "e7b131a33f4612df4ee4ef0e6b55268e9d5322c65ab612193a0aaca1c7097a08"
+    }
+  ],
+  "checks": []
+}

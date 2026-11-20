@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-182406-android-diagnostic-review-state-13968f1c
+
+Recorded 2026-11-20T18:24:06.426718+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Keep the Android selected-integration evidence and unresolved startup gap explicit without marking the prototype or original requirement complete.
+- **Evidence.** The current selected source passes seven original API36 cases; the earlier Ready-screen failures remain preserved and unexplained. Original requirements and all12 completed delivery objects are retained; N014 remains80 without final_acceptance. [Change record](./runs/changes/2026-11-20-182406-android-diagnostic-review-state-13968f1c.json).
+- **Not claimed.** The Android software task remains in review, not closed. Real devices, TalkBack, startup reliability and release acceptance remain pending; current shared evidence will be refreshed before protected integration.
+
+
+### 2026-11-20-182205-android-diagnostic-bounded-integration-03bf7f4f
+
+Recorded 2026-11-20T18:22:05.704148+00:00 · Contributor: Codex PM after independent Android diagnostic review · change
+
+- **Changed.** Integrate bounded failure-only Android diagnostics and current selected7-case evidence while explicitly retaining the unresolved startup reliability gap.
+- **Evidence.** Native source and original success controls are unchanged from the tested privacy candidate. Independent review confirms exact component filtering, finite enum/count output and unchanged assertions/deadlines. The latest run passes7; earlier Ready failures remainunexplained and the software task is not closed. Preserve the independently repaired web/CLI delivery history. [Change record](./runs/changes/2026-11-20-182205-android-diagnostic-bounded-integration-03bf7f4f.json).
+- **Not claimed.** No app readiness, startup root cause, physical/human, tag accuracy or original closure is claimed. All70 original items remain open where previously open; N014 stays80 with final_acceptance missing.
+
+
 ### 2026-11-20-180738-android-first-failure-lifecycle-metadata-f4f208eb
 
 Recorded 2026-11-20T18:07:38.825303+00:00 · Contributor: Codex · change
@@ -81,6 +99,31 @@ Recorded 2026-11-20T17:16:51.233010+00:00 · Contributor: Codex PM after indepen
 - **Changed.** Integrate the real API36 pause-cleanup correction and preserved fast-return driver, with separately reviewed seven-case evidence and published web-delivery records.
 - **Evidence.** The task-list lead independently verified the actual CI artifact and reports. PM reviewed the lifecycle change, unchanged fast-return criterion, 17 source identities and explicit draft-loss behavior; all seven original cases pass on the exact native source. [Change record](./runs/changes/2026-11-20-171651-android-pause-integrated-review-311d484c.json).
 - **Not claimed.** Current protocol/website and boundary refreshes plus protected integration remain pending. No physical/human, accuracy, store release or full N014 closure.
+### 2026-11-20-181237-verify-independent-closeout-website-0a70bb42
+
+Recorded 2026-11-20T18:12:37.346381+00:00 · Contributor: Codex task-list lead · change
+
+- **Changed.** Refresh actual website engineering proof for the independent twelve-job closeout, select the new receipt, and update state after all evidence timestamps.
+- **Evidence.** All49 website commands pass with source unchanged. Final1369-source boundary verification passes. Existing PS, redaction, protocol and extension receipts remain current without rerunning them. Twelve closure objects and132 complete/70 open originals remain unchanged. [Change record](./runs/changes/2026-11-20-181237-verify-independent-closeout-website-0a70bb42.json).
+- **Not claimed.** No Android source, N014 milestone, thirteenth closure, independent accuracy or new deployment is adopted. The separate Android diagnostic runtime still fails before its first case; cause remains unestablished.
+
+
+### 2026-11-20-180659-freeze-independent-closeout-boundary-4d00698a
+
+Recorded 2026-11-20T18:06:59.611897+00:00 · Contributor: Codex task-list lead · change
+
+- **Changed.** Regenerate the dated boundary review after the operations branch priming build; the reviewed 1369-file source inventory is unchanged.
+- **Evidence.** Prime build completed successfully and the exact route inventory has no added, changed or removed source files. Existing PS, redaction, protocol and extension receipts still assess current; only website evidence is stale from the two board documents. Twelve scoped closures remain valid. [Change record](./runs/changes/2026-11-20-180659-freeze-independent-closeout-boundary-4d00698a.json).
+- **Not claimed.** No source permission, endpoint or runtime boundary is changed. Fresh actual website execution remains pending; no old receipt is rebound.
+
+
+### 2026-11-20-180504-refresh-independent-closeout-evidence-e27137be
+
+Recorded 2026-11-20T18:05:04.034006+00:00 · Contributor: Codex task-list lead · change
+
+- **Changed.** Update only the dated independent Android diagnostic assignment while preserving twelve completed web and CLI jobs; prepare current-source website evidence for this operations branch.
+- **Evidence.** The latest separate cad8 hosted run failed its first receive with owned Ready UI and no synthetic text. All twelve scoped closure records and every original acceptance remain unchanged. [Change record](./runs/changes/2026-11-20-180504-refresh-independent-closeout-evidence-e27137be.json).
+- **Not claimed.** Failure cause is unestablished; no Android source correction, thirteenth task closure, original completion or native runtime acceptance is adopted. Actual website revalidation is pending.
 
 
 ### 2026-11-20-170849-close-published-credential-deliveries-782a295d

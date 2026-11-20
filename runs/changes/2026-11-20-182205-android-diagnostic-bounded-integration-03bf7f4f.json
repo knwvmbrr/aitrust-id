@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-182205-android-diagnostic-bounded-integration-03bf7f4f",
+  "recorded_at": "2026-11-20T18:22:05.704148+00:00",
+  "author": "Codex PM after independent Android diagnostic review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "56b0294c8e22b456eface6dad0a8d1afe68d1450",
+  "changed": "Integrate bounded failure-only Android diagnostics and current selected7-case evidence while explicitly retaining the unresolved startup reliability gap.",
+  "proves": "Native source and original success controls are unchanged from the tested privacy candidate. Independent review confirms exact component filtering, finite enum/count output and unchanged assertions/deadlines. The latest run passes7; earlier Ready failures remainunexplained and the software task is not closed. Preserve the independently repaired web/CLI delivery history.",
+  "limits": "No app readiness, startup root cause, physical/human, tag accuracy or original closure is claimed. All70 original items remain open where previously open; N014 stays80 with final_acceptance missing.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "docs/scope-progress.json": "68a02f954e7e9386cfc5872e0697d375c3b302bc41a15fa93fdd914f758f6821",
+    "docs/scope-progress.md": "a8cbfc4e5c54c1730484bfe242506bf7bfddd1bd02e578eab1c95b1993fbc976",
+    "docs/session-delivery-plan.md": "7f3b225ea99061acd19b72e98eccd5480bac89019522cecadbe03a89a6e2c335",
+    "docs/session-delivery.json": "227783ce16af40a311087e1bec8afb6de6f4dfa18d7c595575f28be8bad4a9b4",
+    "runs/2026-11-20-android-diagnostic-current-seven.json": "1f39422320191420620a027da46472e5cb677a91b74f47693491e472cfd46312",
+    "runs/2026-11-20-credential-closeout-android-snapshot.json": "6aace06e22618d8fe554784336d84d528a6ff13fa324cd8eaa9a6476e4a69ee4",
+    "runs/2026-11-20-independent-closeout-boundaries.json": "dda8171288bad02527b3dc8339bcc4b615c2ded4a09a402563188a9919faa74d",
+    "runs/2026-11-20-independent-closeout-website.json": "b1174e40d57f9519f534dc05b89b230d69c19a5eaae5ef4008caabe1b4ad93bf",
+    "state.json": "570f824e2de6a33539e7ac92ca445852af8be3794cbd6a606e66b6d799ddc2df"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-diagnostic-current-seven.json",
+      "sha256": "1f39422320191420620a027da46472e5cb677a91b74f47693491e472cfd46312"
+    },
+    {
+      "path": "runs/2026-11-20-android-first-failure-lifecycle.json",
+      "sha256": "d81c82e1b0ca2c99a9bf8af9bb4151ff0c484f6d55e2c9a54be25a09d83da299"
+    }
+  ],
+  "checks": []
+}

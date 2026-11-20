@@ -1,0 +1,199 @@
+{
+  "format": "ai-trust-id-android-diagnostic-current-seven/v1",
+  "recorded_at": "2026-11-20T18:13:23.667488+00:00",
+  "author": "Codex Debugging Lead",
+  "records": [
+    "N-014"
+  ],
+  "source_commit": "56b0294c8e22b456eface6dad0a8d1afe68d1450",
+  "pull_request": 134,
+  "run_id": 44789905338,
+  "job_id": 136474499681,
+  "workflow_conclusion": "success",
+  "artifact": {
+    "id": 14655284597,
+    "bytes": 6385470,
+    "sha256": "83456ea66f0a69dfb52131580c4b476ec77a4bfa0d90bb7cb79718fab55910ad",
+    "github_api_digest_verified": true,
+    "raw_report_sha256": {
+      "emulator.json": "3975ef61be53962d90e9c38916f4a10638b5f43f26770acaa008b5917a1c28bc",
+      "build.json": "0891ce693726b32d4dbd359724d02a111787e28b2fde4ed5286677d5c22652b3",
+      "preparation.json": "afbf7f191300260bc886af40bbfcb7e261e9d7da08984ba5e76f50a12af9580b",
+      "engine-parity.json": "86ae04489ec10e1ffdc8d55d7b13dd50da67c1d2987f9c3a452a5e43b09df6f9"
+    }
+  },
+  "signed_development_APK": {
+    "sha256": "7393cc4888364b32f8239fd436e5e52299b88f51b734096decc54b8e5a4bb43d",
+    "bytes": 6444652,
+    "ephemeral_test_only": true
+  },
+  "native_build_sources_sha256": {
+    "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+    "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+    "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+    "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+    "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+    "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+    "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "2ab7df4100143e4e17e9c87db74f15c1641edf54fff7a986c30b463aa2c6266b",
+    "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+    "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+    "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+    "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+    "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29"
+  },
+  "current_helper_and_test_sources_sha256": {
+    "scripts/verify-android-emulator.py": "d2874d12fe90f2619c5f90a407afe989ae0640844631af8a5fde0e108c1a7fc7",
+    "tests/test_android_emulator_prerequisites.py": "1f8187bf906fd0391cc63180fc03b1e37d91414273138b11b14429d2a43ad07d",
+    ".github/workflows/android-share.yml": "b2d435bd9571326dc0e8c05badbd35183c17f423b7bd40f4c78f7ba9a2c7a9b3"
+  },
+  "reported_emulator": {
+    "format": "ai-trust-id-android-emulator/v1",
+    "recorded_at": "2026-11-20T18:08:54.107868+00:00",
+    "status": "EXECUTED",
+    "pass": true,
+    "physical_device_evidence": false,
+    "independent_accuracy_evidence": false,
+    "cases": [
+      {
+        "case": "receive_requires_explicit_check",
+        "pass": true
+      },
+      {
+        "case": "actual_offline_ps_finding",
+        "pass": true
+      },
+      {
+        "case": "edit_hides_previous_finding",
+        "pass": true
+      },
+      {
+        "case": "new_share_and_no_finding",
+        "pass": true
+      },
+      {
+        "case": "unsupported_mime_has_no_verdict",
+        "pass": true
+      },
+      {
+        "case": "clear_removes_input_and_result",
+        "pass": true
+      },
+      {
+        "case": "background_clears_text",
+        "pass": true
+      }
+    ],
+    "prerequisites": {
+      "github_hosted_linux": true,
+      "sdkmanager": true,
+      "avdmanager": true,
+      "adb": true,
+      "emulator_preinstalled": false,
+      "aosp_image_preinstalled": false,
+      "kvm_device_exists": true,
+      "kvm_access": true,
+      "existing_license_record": true,
+      "metadata_license_hash_recorded": false,
+      "sdk_writable": true,
+      "sdk_free_bytes": 94241882112
+    },
+    "bound_revisions": {
+      "emulator": "37.3.10",
+      "system-images;android-36;default;x86_64": "2"
+    },
+    "requested_packages": [
+      "emulator",
+      "system-images;android-36;default;x86_64"
+    ],
+    "existing_license_record_sha256": "c43fa37686457c3f18caa3607945f4ec52a9d1beaaad8117e50dc4e863270c85",
+    "sdk_license_acceptance_inferred_from_metadata_hash": false,
+    "phase": "complete",
+    "metadata_reviews": [
+      {
+        "package": "emulator",
+        "metadata_sha256": "b97da160df8d80f0fe67739643cb53fbfcafd9c502ef57b78c038645062865ee",
+        "metadata_bytes": 433165,
+        "revision": "37.3.10",
+        "license_sha1": "efa68a6b3c661d18699d5c026771d5911cdc2f83"
+      },
+      {
+        "package": "system-images;android-36;default;x86_64",
+        "metadata_sha256": "7b119fdc282a65432aab52e8bbc64546f7fb6ec74e79e235633c60d06564b111",
+        "metadata_bytes": 189048,
+        "revision": "2",
+        "license_sha1": "efa68a6b3c661d18699d5c026771d5911cdc2f83"
+      }
+    ],
+    "license_record_unchanged": true,
+    "control_stage": "background_marker_absence",
+    "ui_operation": "observed",
+    "last_ui_observation": {
+      "owned_ui_present": true,
+      "owned_editor_present": true,
+      "owned_editor_nonempty": true,
+      "received_text_present": false,
+      "ready_text_present": false,
+      "cleared_text_present": true,
+      "changed_text_present": false,
+      "finding_text_present": false,
+      "no_finding_text_present": false,
+      "unsupported_mime_text_present": false,
+      "unavailable_text_present": false,
+      "tag_ps_present": false,
+      "first_synthetic_text_present": false,
+      "system_ui_present": false,
+      "launcher_ui_present": false,
+      "platform_error_dialog_present": false
+    },
+    "share_start_observation": {
+      "status_ok_reported": true,
+      "status_timeout_reported": false,
+      "error_reported": false,
+      "warning_reported": true,
+      "owned_component_reported": true
+    },
+    "background_owned_task_matches": 5,
+    "background_observation": {
+      "owned_ui_present": true,
+      "ready_text_present": false,
+      "cleared_text_present": true,
+      "synthetic_marker_present": false
+    },
+    "api_level": "36",
+    "case_count": 7,
+    "internet_permission": false,
+    "elapsed_seconds": 96.527
+  },
+  "adjacent_checks": {
+    "hosted_unit_session_and_APK_build_passed": true,
+    "actual_engine_parity": {
+      "pass": true,
+      "case_count": 137
+    },
+    "native_build_sources_match_worktree": true
+  },
+  "preserved_failures": [
+    "runs/2026-11-20-android-background-hosted-failure.json",
+    "runs/2026-11-20-android-early-share-diagnostics.json",
+    "runs/2026-11-20-android-first-failure-lifecycle.json"
+  ],
+  "interpretation": {
+    "current_seven_case_integration_pass": true,
+    "failure_only_metadata_absent_on_success": true,
+    "failure_only_lifecycle_query_wire_exercised_on_Android": false,
+    "historical_Ready_failure_cause_known": false,
+    "recreation_hypothesis_proven": false,
+    "startup_reliability_established": false,
+    "native_or_timing_fix_in_this_diagnostic_head": false
+  },
+  "limits": {
+    "physical_device_evidence": false,
+    "real_sender_chooser_evidence": false,
+    "human_TalkBack_evidence": false,
+    "independent_accuracy_evidence": false,
+    "current_capability_boundary_refresh_complete": false,
+    "release_approved": false,
+    "full_N014_or_original_closed": false
+  }
+}
