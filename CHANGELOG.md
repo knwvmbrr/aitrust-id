@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-20
+
+### 2026-11-20-010000-record-accessibility-action-failure-context-8997716b
+
+Recorded 2026-11-20T01:00:00.830487+00:00 · Contributor: Codex accessibility debugging lane · change
+
+- **Changed.** Added failure-only surface/control/action diagnostics around existing scroll/focus probes and preserved the original thrown error in the accessibility report. Input controls are identified by labels, never entered values.
+- **Evidence.** Authored timeout/focus controls capture the expected diagnostic without a textarea canary. One actual full accessibility run passed62 surfaces,916 focus checks,890 target checks and158 disclosures in both themes on frozen built assets; source and served hashes remained stable. Original timeout and three non-reproducing hypotheses are preserved. [Change record](./runs/changes/2026-11-20-010000-record-accessibility-action-failure-context-8997716b.json).
+- **Not claimed.** Original timeout cause remains UNESTABLISHED. This is diagnostic improvement only, not a product fix, requirement closure, human/phone acceptance or full conformance claim. No probe criterion, default action timeout or pre-action await was changed; snapshot identity is post-error.
+
+
 ## Unreleased — 2026-11-19
 
 ### 2026-11-19-223823-credential-flow-context-linux-proof-94e53801

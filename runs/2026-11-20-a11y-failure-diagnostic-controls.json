@@ -1,0 +1,44 @@
+{
+  "captured_at": "2026-11-20T00:56:48.748Z",
+  "pass": true,
+  "scope": "authored diagnostic capture only,not actual timeout cause",
+  "source_sha256": "89c7f4947c4e9a0ae9be3fa4414ebd5dfb2b3bce869e9948faa9b86f2fe3b92c",
+  "original_error_name": "TimeoutError",
+  "original_error_retained": true,
+  "diagnostic": {
+    "surface": "Authored moving control",
+    "theme": "light",
+    "action": "scroll_into_view",
+    "selector": "locator('main').locator('a[href],button,input:not([type=\"hidden\"]),textarea,select,summary,[role=\"button\"],[role=\"tab\"],[role=\"switch\"]').first()",
+    "control": {
+      "name": "Moving control",
+      "tag": "BUTTON",
+      "connected": true,
+      "visible": true,
+      "rect": {
+        "x": 47.985801696777344,
+        "y": 8,
+        "width": 150,
+        "height": 44
+      }
+    }
+  },
+  "input_diagnostic": {
+    "surface": "Authored input",
+    "theme": "dark",
+    "action": "focus",
+    "selector": "locator('main').locator('a[href],button,input:not([type=\"hidden\"]),textarea,select,summary,[role=\"button\"],[role=\"tab\"],[role=\"switch\"]').first()",
+    "control": {
+      "name": "Private example",
+      "tag": "TEXTAREA",
+      "connected": true,
+      "visible": true,
+      "rect": {
+        "x": 111.515625,
+        "y": 8,
+        "width": 182,
+        "height": 36
+      }
+    }
+  }
+}
