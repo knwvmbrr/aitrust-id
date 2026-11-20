@@ -32,6 +32,8 @@ PATTERNS = ('tests/test_device_bundle_determinism.py', 'scripts/verify-ps-effici
             'scripts/verify-registry-deferral.py', 'tests/test_registry_deferral.py',
             '.dockerignore', 'tests/test_route_boundaries.py', 'scripts/replay-assertion.py', 'scripts/verify-assertion-replay.py',
             'scripts/verify-replay-export.cjs', 'tests/test_assertion_replay.py')
+PATTERNS += ('tools/credential_device.py', 'scripts/build-credential-device.py', 'scripts/credential-device-cases.py', 'scripts/credential-site-controls.cjs', 'scripts/verify-credential-client.cjs', 'tests/test_credential_device.py', 'tests/credential-device-client.mjs', 'site/public/credential-device/*', 'site/public/reference/credential-flow-device.md', 'docs/credential-flow-device.md')
+
 PATTERNS += ('tools/composition/*', 'scripts/receipt.cjs',
              'scripts/build-composition-tool.py', 'scripts/check-repetition.py')
 PATTERNS += ('.github/CODEOWNERS', '.github/dependabot.yml',
@@ -296,6 +298,22 @@ PATTERNS += ('tools/tag_api.py', 'scripts/tag-api.py', 'scripts/ai-tools-server.
 PATTERNS += ('tools/authority_quotation.py','scripts/authority-quotation.py','scripts/verify-authority-quotation.py','tests/test_authority_quotation.py')
 
 PATTERNS += ('tests/test_reference_claim_coverage.py',)
+
+PATTERNS += ('mobile/android/**/*', 'scripts/android-share-build.py',
+             'scripts/verify-android-*.py', 'scripts/verify-android-*.mjs',
+             'tests/test_android_share.py', 'tests/test_android_emulator_prerequisites.py',
+             'docs/android-share-plan.md', 'docs/android-share-developer.md')
+
+
+PATTERNS += ('tools/credential_flow.py', 'tools/credential_flow_context.py',
+             'tools/credential_context_io.py', 'scripts/credential-flow.py',
+             'scripts/credential-flow-context.py', 'scripts/credential-context-worker.py',
+             'tests/test_credential_flow.py', 'tests/test_credential_flow_context.py',
+             'docs/credential-flow.md', 'docs/credential-flow-context*.md',
+             'tools/mt_quotation_component.py', 'tests/test_mt_quotation_workflow.py',
+             'scripts/verify-mt-quotation-workflow.py', 'docs/mt-quotation-workflow*.md',
+             'docs/tag-wave-nov19-integration.md')
+
 
 def inventory(root):
     found = {}

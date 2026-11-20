@@ -18,7 +18,7 @@ class Parser(argparse.ArgumentParser):
 def main(argv=None):
     parser = Parser(description=__doc__)
     parser.add_argument('--check', choices=workflow.COMPONENTS, action='append', required=True,
-                        help='Choose each observation explicitly; repeat for another.')
+                        help='Choose explicitly; authority-quotation is the separate opt-in quotation candidate.')
     parser.add_argument('--language', required=True, choices=['en'])
     parser.add_argument('--choice-packet', type=Path, help='Explicit private choice packet for this same text.')
     parser.add_argument('--details', type=Path, help='Save locations and fingerprints in a NEW private folder.')

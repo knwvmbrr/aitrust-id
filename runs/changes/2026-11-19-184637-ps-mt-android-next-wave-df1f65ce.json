@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-184637-ps-mt-android-next-wave-df1f65ce",
+  "recorded_at": "2026-11-19T18:46:37.284172+00:00",
+  "author": "Codex task-list lead",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
+  "changed": "Dispatch the next actual PS, MT and Android work from the full original-acceptance queue; preserve all prior task closures and the immutable scope baseline.",
+  "proves": "Re-read all 70 full original jobs and acceptance; all 202 master criteria and all 70 required criteria remain unchanged, with 514 historical evidence paths present. Accounting inspection passes with nine closed scoped tasks, zero original closures and one active tag assignment. Four targeted independent Android correction controls pass.",
+  "limits": "The strict original-closure goal still returns exit 1: 132 complete and 70 open. MT is reviewed with no active worker; PS exact Linux proof and Android/protected integration remain active. No new task or original closure, independent accuracy, physical-device acceptance, license assent or deployment is claimed.",
+  "scope_ids": [
+    "F-012",
+    "F-019c",
+    "T-PS",
+    "T-MT",
+    "N-014"
+  ],
+  "files": {
+    "docs/session-delivery.json": "02381b7b20f0776a12e040072855c4a3d770f18ac81cafc38c8f6957684f235b",
+    "docs/session-delivery-plan.md": "0c1792acb1a52ea9c8bbe621f3b34c156077ad01b6ec1240e968d81a631d1cca",
+    "runs/2026-11-19-android-prerequisites-independent-review.json": "e07532a0cd44517ab9c4e7310e2a68dbd9738fec320dccb5047920293e815b92"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-android-prerequisites-independent-review.json",
+      "sha256": "e07532a0cd44517ab9c4e7310e2a68dbd9738fec320dccb5047920293e815b92"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/session-delivery.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-19T18:46:37.633392+00:00"
+    }
+  ]
+}

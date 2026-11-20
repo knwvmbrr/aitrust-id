@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-19T17:36:26.910670+00:00",
-  "active_increment": "Independent HP/NF methods and task-list accountability published.132originals complete,70open; nine scoped jobs complete. Next authorized scope work remains in the preserved queues.",
+  "updated": "2026-11-20T16:48:49.781449+00:00",
+  "active_increment": "Independent PS credential-context, MT quotation and Android Share integration candidate; full original acceptance remains132complete/70open. Current protected/hosted checks pending.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -1141,15 +1141,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-19-fi-citation-PS.json",
-    "PII_REDACTED": "runs/2026-11-19-fi-citation-PII_REDACTED.json",
-    "protocol": "runs/2026-11-19-fi-citation-opaque-protocol.json",
-    "extension": "runs/2026-11-19-fi-citation-extension.json",
-    "website": "runs/2026-11-19-fi-citation-opaque-website.json",
+    "PS": "runs/2026-11-20-credential-integrated-PS.json",
+    "PII_REDACTED": "runs/2026-11-20-credential-integrated-PII_REDACTED.json",
+    "protocol": "runs/2026-11-20-credential-integrated-protocol.json",
+    "extension": "runs/2026-11-20-credential-integrated-extension.json",
+    "website": "runs/2026-11-20-credential-integrated-website-release.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-19T17:36:26.910670+00:00",
+  "updated_at": "2026-11-20T16:48:49.781449+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3591,7 +3591,7 @@
     "task_list_lead": "/root/seo",
     "assignment_snapshot_at": "2026-11-19T17:26:45.647724+00:00",
     "active_tag_workers_at_snapshot": 0,
-    "phase": "Protected implementation and verified public delivery complete; nine scoped jobs recorded, zero original closures.",
+    "phase": "PS/MT/Android candidate has current passing capability and source-boundary checks; protected CI and actual hosted Android execution pending. Original132/70 unchanged.",
     "minimum_finished_named_deliverables_per_session": 1,
     "minimum_original_requirement_closures_per_session": 1,
     "finished_scoped_tasks": 9,
@@ -3906,7 +3906,7 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-19-mt-cohorts-boundaries.json",
+  "current_route_boundaries": "runs/2026-11-20-tag-wave2-boundaries.json",
   "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json",
   "agent_tag_tools": {
     "status": "published_local_development_integration",
@@ -4146,5 +4146,52 @@
     "publication": "runs/2026-11-19-tag-bots-live-publication.json",
     "published_source_commit": "92be88d00e967d53d4b8604b8f90561088efc903"
   },
-  "python_test_count_note": "Historical aggregate observation retained; current executed checks are identified by source-bound run records, not summed as unique tests."
+  "python_test_count_note": "Historical aggregate observation retained; current executed checks are identified by source-bound run records, not summed as unique tests.",
+  "independent_tag_wave_nov19": {
+    "recorded_at": "2026-11-20T16:46:15.040622+00:00",
+    "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
+    "phase": "all_current_capabilities_and_boundaries_pass; protected_merge_and_publication_pending",
+    "PS": {
+      "method": "python-credential-flow-observation/1.0.2",
+      "guide": "docs/credential-flow-context.md",
+      "review": "runs/2026-11-19-credential-context-independent-review.json",
+      "production_PS_mapping": false,
+      "linux_evidence": "runs/2026-11-19-credential-flow-context-linux.json",
+      "device_preview": {
+        "guide": "docs/credential-flow-device.md",
+        "production_PS_mapping": false,
+        "built_site_review": "runs/2026-11-20-credential-production-independent-review.json",
+        "published": false,
+        "current_website": "runs/2026-11-20-credential-integrated-website-release.json"
+      }
+    },
+    "MT": {
+      "selection": "authority-quotation",
+      "guide": "docs/mt-quotation-workflow.md",
+      "review": "runs/2026-11-19-mt-quotation-independent-review.json",
+      "MT_tag_released": false
+    },
+    "Android": {
+      "guide": "docs/android-share-developer.md",
+      "review": "runs/2026-11-19-android-prerequisites-independent-review.json",
+      "new_license_accepted": false,
+      "actual_hosted_runtime_verified": false,
+      "physical_device_complete": false
+    },
+    "original_complete": 132,
+    "original_open": 70,
+    "new_original_closures": 0,
+    "independent_accuracy_evidence": false,
+    "website_evidence": "runs/2026-11-20-credential-integrated-website-release.json",
+    "boundary_evidence": "runs/2026-11-20-credential-integrated-boundaries.json",
+    "reviewed_source_inputs": 1369,
+    "accessibility_observation": {
+      "first_attempt": "runs/2026-11-19-tag-wave2-website-attempt.json",
+      "diagnostic_result": "runs/2026-11-20-a11y-diagnostic-result.json",
+      "current_full_check_pass": true,
+      "original_scroll_timeout_cause_established": false,
+      "product_fix_claimed": false,
+      "optional_disclosure_readiness": "runs/2026-11-20-credential-disclosure-readiness.json"
+    }
+  }
 }

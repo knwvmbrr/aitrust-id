@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-20T01:08:44.798671+00:00",
+  "author": "Codex PM",
+  "pass": true,
+  "stage": "local_current_source_candidate",
+  "capabilities": [
+    {
+      "capability": "PS",
+      "receipt": "runs/2026-11-19-tag-wave2-PS.json",
+      "checks": 7,
+      "sources_unchanged": true,
+      "pass": true
+    },
+    {
+      "capability": "PII_REDACTED",
+      "receipt": "runs/2026-11-19-tag-wave2-PII_REDACTED.json",
+      "checks": 6,
+      "sources_unchanged": true,
+      "pass": true
+    },
+    {
+      "capability": "extension",
+      "receipt": "runs/2026-11-19-tag-wave2-extension.json",
+      "checks": 14,
+      "sources_unchanged": true,
+      "pass": true
+    },
+    {
+      "capability": "protocol",
+      "receipt": "runs/2026-11-19-tag-wave2-protocol.json",
+      "checks": 56,
+      "sources_unchanged": true,
+      "pass": true
+    },
+    {
+      "capability": "website",
+      "receipt": "runs/2026-11-20-tag-wave2-website-current.json",
+      "checks": 46,
+      "sources_unchanged": true,
+      "pass": true
+    }
+  ],
+  "boundary_receipt": "runs/2026-11-20-tag-wave2-boundaries.json",
+  "reviewed_inputs": 1352,
+  "master_scope_unchanged": true,
+  "original_requirements": 202,
+  "original_complete": 132,
+  "original_open": 70,
+  "original_closures": 0,
+  "protected_ci_pass_claimed": false,
+  "actual_hosted_android_runtime_claimed": false,
+  "independent_accuracy_evidence": false,
+  "historical_accessibility_timeout_cause_established": false,
+  "staged_guard_and_protected_integration_pending": true
+}

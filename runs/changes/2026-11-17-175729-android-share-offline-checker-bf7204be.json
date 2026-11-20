@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-175729-android-share-offline-checker-bf7204be",
+  "recorded_at": "2026-11-17T17:57:29.872678+00:00",
+  "author": "Codex Android lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0ff7a08630e05ab5f08a801a7fd5ad40df896ab7",
+  "changed": "Add a bounded independent Android text Share checker around the existing offline PS engine, native review/edit/check/clear lifecycle, compact branded results and an existing-tools hosted APK build path.",
+  "proves": "Actual pinned WebAssembly and Android loader match 137 current development/Unicode probes; 9 packaging controls and the actual JVM lifecycle program pass. Asset identity, notice checks and permission refusals remain explicit.",
+  "limits": "APK compilation and actual Android Share/WebView execution await hosted tools; physical devices, TalkBack, human usability, production signing and independent accuracy remain unproven. N-014 and original scope completion unchanged.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+    "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+    "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+    "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+    "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+    "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+    "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "179d01c54c343285fddf440aff2971c8876eb713e91fa12a386d6e6d47d07ea0",
+    "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+    "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+    "mobile/android/tests/ShareSessionTest.java": "5aa69d10bdfa1b76c7ed24d25dc76b66d100f961bf1f7a23986d2e5edac1d5d9",
+    "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+    "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29",
+    ".github/workflows/android-share.yml": "97dbda8cb94efa9cbb809054a729018e009bcab08f438c681aed8f3a52d0123f",
+    "scripts/android-share-build.py": "e4cbc3f1ef0d76394af1e9575af86c9d5847cc791e7a7f9c522f005591480eed",
+    "scripts/verify-android-session.py": "db3064b1074df6f67edb0e4fd89dd1970f0074a0f733738b3441419fc2cf755a",
+    "scripts/verify-android-engine.mjs": "f6a81c4dee65290a09d7484bfc2ce69ea1b7145c6f24017bf0817ef60273c56f",
+    "scripts/verify-android-emulator.py": "3719265cf0211e938306f88de68f82622eed81c44beaf4c88553c7a01bcea31d",
+    "tests/test_android_share.py": "e9e734b4e966c613d85e534197ad0409988c0f9321ea851e380aa81a9e568cf7",
+    "docs/android-share-plan.md": "db0d245586d3f563a4546b83e832ab20edae5258d4c88a68910bd1a9c5eeaa40",
+    "docs/android-share-developer.md": "ce00fcf07663a7e5dde5cb7d5637163b57c3f9accda93b90a32506c3426355c7",
+    "runs/2026-11-17-android-share-component.json": "44ddecdc4d0d11206ff1061084c7adbcc5f6a2d42b7a80bfb5130e7e723386f4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-android-share-component.json",
+      "sha256": "44ddecdc4d0d11206ff1061084c7adbcc5f6a2d42b7a80bfb5130e7e723386f4"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-17T17:57:31.135497+00:00"
+    }
+  ]
+}

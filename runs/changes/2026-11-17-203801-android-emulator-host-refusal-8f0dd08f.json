@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-203801-android-emulator-host-refusal-8f0dd08f",
+  "recorded_at": "2026-11-17T20:38:01.402946+00:00",
+  "author": "Codex Android lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ed0270ba21dc5825f4f7d7d9b27e9a24eb88cc62",
+  "changed": "Record the current hosted Android build and exact emulator prerequisites that prevented execution.",
+  "proves": "Run 44171007663 compiled the APK, verified the development signature, and identified inaccessible KVM and a missing matching SDK license record. The downloaded APK matches its recorded engine and loader.",
+  "limits": "The emulator step stopped before installation and ran zero Android cases. N-014 remains open for Android Share and physical acceptance.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "docs/android-share-developer.md": "0c8a072582fdbe9c8bd8672c7982f0a698766d5bc928c53cce6807a4cbfd0e99",
+    "runs/2026-11-17-android-emulator-host-inventory.json": "90e179fff10c01fd9ed75c0fac83b1126605de4dc19e55bd8385cf25dbd1ab2e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-android-emulator-host-inventory.json",
+      "sha256": "90e179fff10c01fd9ed75c0fac83b1126605de4dc19e55bd8385cf25dbd1ab2e"
+    }
+  ],
+  "checks": []
+}

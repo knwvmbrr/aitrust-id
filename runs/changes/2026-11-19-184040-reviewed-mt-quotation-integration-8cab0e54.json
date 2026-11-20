@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-184040-reviewed-mt-quotation-integration-8cab0e54",
+  "recorded_at": "2026-11-19T18:40:40.117912+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0d6427c46cc1d91ee702e68ec8e2bb0dfc0c8d85",
+  "changed": "Integrate the independent quotation-aware MT workflow and preserve its original author commit and evidence history.",
+  "proves": "A separate PM review executes five canonical/raw-identity/forgery/type/isolation controls against unchanged frozen method and adapter sources; no new tag or combined confidence is asserted.",
+  "limits": "This completes a selected offline engineering job, not contextual MT interpretation, independent agreement, human operation or either full original requirement.",
+  "scope_ids": [
+    "T-MT",
+    "F-019c"
+  ],
+  "files": {
+    "docs/authority-quotation.md": "485cd38466ce5d2a65a30687a893724fef3330bc17545088f65ad2218e14fa14",
+    "docs/mt-evidence-workflow.md": "ca01fcfcc7deeacc8862be47e72c52d57f4d6ca1efafe67534aa4fc901dda6c7",
+    "docs/mt-quotation-workflow-result.md": "890c94a259446fd9f2e863312907556c0f6181f0953a334237abff1335ead6cb",
+    "docs/mt-quotation-workflow.md": "da4f3ec6254575e069cc023d5f602a35dc689c097fed1d69380182f7ad1c5e17",
+    "runs/2026-11-19-mt-quotation-independent-review.json": "350e11d9f5f3f22a5b681b0d5e4210798bb6f9611ae80761ade106fe554f5608",
+    "runs/2026-11-19-mt-quotation-legacy-cli-compat.json": "4085c80ec075c33cd65e1918b43198335180e2ec1039cb9b4cb5fc652c825818",
+    "runs/2026-11-19-mt-quotation-legacy-cli-frozen.json": "7e4579443653db307871c4ba67e3871cd1f2b5db4b8cb671e4b0f85ab35935e5",
+    "runs/2026-11-19-mt-quotation-workflow-candidate-1.json": "5067f73ad9b8284473dc6bc74bba44efedf79b1ee49002939d19d7fd6fc39719",
+    "runs/2026-11-19-mt-quotation-workflow-cli-current.json": "5f931e3d00511a32c51b4f6fa602836e70fb353cd27bd844dea811bfffb902f1",
+    "runs/2026-11-19-mt-quotation-workflow-cli-final.json": "341b47c240fed7794349312d945db98b8140ac0d38d76e7c0b9da2573067466e",
+    "runs/2026-11-19-mt-quotation-workflow-cli-frozen.json": "b2b694a84ce63886450d30aff2da389a2cadc7ec84dc0b99c43564adea40722f",
+    "runs/2026-11-19-mt-quotation-workflow-tests-final.json": "6f472cdcdec8522689b1779ef072020fe02ec28433442a91ad1739fe4e34979e",
+    "scripts/check-mt-evidence.py": "d7587045e92e79b670a3b7b9599651cbe4fe05e74229045b841d0bfddf478208",
+    "scripts/mt-evidence-worker.py": "f4ccabc629b1c93a82a9e4900c279f2b9a9190768831fa7777c4270501af1d68",
+    "scripts/verify-mt-quotation-workflow.py": "9fff6b939dea1cbf69a301c5113747123393c5b5629dec66d144f6a4773e14cc",
+    "tests/test_mt_quotation_workflow.py": "c283d1d2d8d9d235c51dd6d2457583e2b819e8ea019b7e84128ba48108a21248",
+    "tools/mt_quotation_component.py": "cde1cddf716b128e68bb7b1c5b8e95b7c4c89b90e0f0794dbef6e1ac6bf3809f",
+    "tools/mt_workflow.py": "454549459f33e94caf5522ee59bc6ec2678dfe38b40844f10d659b71efe7f7a7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-mt-quotation-independent-review.json",
+      "sha256": "350e11d9f5f3f22a5b681b0d5e4210798bb6f9611ae80761ade106fe554f5608"
+    },
+    {
+      "path": "runs/2026-11-19-mt-quotation-workflow-tests-final.json",
+      "sha256": "6f472cdcdec8522689b1779ef072020fe02ec28433442a91ad1739fe4e34979e"
+    }
+  ],
+  "checks": []
+}

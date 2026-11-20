@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-19T18:38:34.323342+00:00",
+  "author": "Codex PM independent reviewer",
+  "scope_ids": [
+    "T-MT",
+    "F-019c"
+  ],
+  "pass": true,
+  "sources": {
+    "tools/mt_workflow.py": "454549459f33e94caf5522ee59bc6ec2678dfe38b40844f10d659b71efe7f7a7",
+    "tools/mt_quotation_component.py": "cde1cddf716b128e68bb7b1c5b8e95b7c4c89b90e0f0794dbef6e1ac6bf3809f",
+    "scripts/mt-evidence-worker.py": "f4ccabc629b1c93a82a9e4900c279f2b9a9190768831fa7777c4270501af1d68",
+    "scripts/check-mt-evidence.py": "d7587045e92e79b670a3b7b9599651cbe4fe05e74229045b841d0bfddf478208",
+    "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+  },
+  "sources_unchanged": true,
+  "cases": [
+    {
+      "case": "actual_quote_and_outside_phrase_keep_raw_NFC_identity",
+      "pass": true
+    },
+    {
+      "case": "real_canonical_replay_refuses_coherent_suppressed_finding",
+      "pass": true
+    },
+    {
+      "case": "raw_equivalent_edit_requires_new_result",
+      "pass": true
+    },
+    {
+      "case": "missing_optional_source_does_not_disable_selected_urgency",
+      "pass": true
+    },
+    {
+      "case": "typed_false_cannot_be_replaced_by_numeric_zero",
+      "pass": true
+    }
+  ],
+  "actual_canonical_worker_replay": true,
+  "candidate_import_failure_exercised": true,
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false,
+  "original_requirement_closed": false,
+  "limitations": [
+    "Engineering source/consistency review of a separately selected literal quotation method only. No semantic intent, source authenticity, MT agreement or human acceptance.",
+    "Existing urgency/authority/choice profiles and production method sources are not changed."
+  ]
+}

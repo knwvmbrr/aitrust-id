@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-20T00:59:44.638Z",
+  "author": "Codex PM independent reviewer",
+  "scope_ids": [
+    "F-035"
+  ],
+  "pass": true,
+  "sources": {
+    "scripts/accessibility-probes.cjs": "89c7f4947c4e9a0ae9be3fa4414ebd5dfb2b3bce869e9948faa9b86f2fe3b92c",
+    "scripts/verify-site-accessibility.cjs": "733073fc5216c97c2083376a91225b0cfe878354bcdfeb777d906e4632704eb9"
+  },
+  "checks": [
+    {
+      "case": "actual_probe_propagates_identical_original_error_after_failure_only_inspection",
+      "pass": true
+    },
+    {
+      "case": "diagnostic_surface_theme_and_action_present",
+      "pass": true
+    }
+  ],
+  "author_full_run_pass": true,
+  "product_changed": false,
+  "thresholds_or_action_timeouts_changed": false,
+  "original_timeout_cause_established": false,
+  "independent_accuracy_evidence": false,
+  "human_accessibility_verified": false,
+  "original_requirement_closed": false,
+  "limits": "Diagnostic engineering only; historical scroll timeout remains unexplained. No product or full accessibility closure."
+}

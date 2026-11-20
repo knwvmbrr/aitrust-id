@@ -1,5 +1,64 @@
 # Session delivery board — original requirements remain the goal
 
+## Current public delivery job — 2026-11-20T15:59:29.823898+00:00
+
+The new public credential-flow preview is predeclared before completion against source `8b21fffbb3a5b89b9cf6c555959fa9cfa1bd09fd` and the PM's `docs/credential-device-integration-plan.md`. It is a concrete browser feature, with its own final publication gate. **Nine scoped tasks are closed; zero originals newly closed; originals remain 132 complete / 70 open.** The 60-open original requirement goal remains NOT MET.
+
+| Current assignment | Actual worker | State and completion boundary |
+|---|---|---|
+| Public credential-flow preview under PS | `/root/share_debugger` | Active. Paste Python on phone or desktop, run the unchanged canonical 1.0.2 locally, read a short evidence-based result. Requires full raw/NFC/source binding, actual Chromium/WebKit parity and failure/privacy/lifecycle controls, distinct review, required protected checks and actual live publication. No PS mapping or new tag. |
+| Prior credential context CLI | Worker finished; PM integration pending | Reviewed exact Mac/Linux source and proof complete. Its original protected-integration acceptance remains; no worker is reported still running this old lane. |
+| MT quotation workflow | Worker finished; PM integration pending | Reviewed; no MT worker active. Actual current Linux evidence must match its predeclared job before closure. |
+| Android Share runtime | No active assignment at this snapshot | Blocked after actual hosted metadata-phase failure; zero runtime cases ran. Existing APK/prerequisite checks do not close its actual-runtime job. Advance the public browser feature while this remains open. |
+
+### Exact acceptance before closing the new browser job
+
+1. Preserve canonical credential-flow method 1.0.2 bytes. Bind every closed validated result to the original raw input, frozen NFC and exact packaged method/source. Never execute the user's program, infer a real secret/transfer/intent or issue a credential/PS tag.
+2. Compare full canonical results in actual Chromium and WebKit for supported flow, no-flow and unsupported cases. Check both themes, phone/desktop, keyboard, labels, narrow width and text enlargement; emulated engines are not physical-phone/human acceptance.
+3. Prove edit, clear, cancel and unmount suppress stale output and terminate work. No input upload, input storage, account/gateway dependency or default export. Verify malformed records and changed source identities refuse.
+4. Refuse the real optional credential child chunk and still execute the existing PS checker successfully; unrelated methods retain their own operation.
+5. Require a distinct review, exact protected source checks, then actual published asset and live browser verification. Local packaging or a new page alone is insufficient for this task's closure.
+
+The historical literal XML-license-hash blocker is not an SDK acceptance rule. Reviewed package/license metadata detects drift; the existing SDK manager with closed stdin and an unchanged existing record determines prior acceptance. No new terms are accepted. Android remains blocked by the actual uncompleted runtime, not an invented requirement that a raw XML hash appear in a record.
+
+The earlier dated phase below is history and does not override these current assignments. No F-012/T-PS criterion or percentage changes with this browser feature.
+
+
+## Prior implementation phase — 2026-11-19T18:24:57.745970+00:00
+
+Source base: `eb7873ddc861bfadf921d50d338ab2d2607e0d8b`. Current board handoff preserves the frozen PS/MT source identities while exact Linux execution and PM protected integration remain active. The immutable session baseline remains `3716233`; its full original criteria and all nine closed task records are preserved. All 70 full original jobs/outcomes, master and required acceptance were re-read from current source. All 202 master criteria and all 70 still-open required criteria match that baseline. All 514 indexed historical evidence paths remain present; this is identity/index evidence, not a new execution of those files.
+
+**Current accounting: 132 complete / 70 open originals; 9 finished scoped tasks / 0 original closures. Goal 60 remains NOT MET.** No current full-original closure is recommended. This is a dated active assignment snapshot, not a perpetual bot heartbeat.
+
+| Active lane | Actual worker | Concrete deliverable | Full-original limits retained |
+|---|---|---|---|
+| PS credential-flow/context | `/root/share_debugger` | Correct impossible supported-program flows and bounded values; bind selected code and caller-declared recommendation/quotation context to exact whole-document evidence. | F-012 held-out/use-mention and accepted PS integration; T-PS independent labels and human route acceptance. |
+| MT authority/quotation | `/root/web_camo` — handoff complete | Quotation-aware authority integration frozen at `005dd03a` and independently reviewed with five actual controls; protected integration pending. Worker is no longer active. | Contextual attribution, feasible alternatives, representative agreement/errors, accepted MT mapping and human operation. |
+| Android Share delivery | `/root` | Reconcile the existing compile-verified Android preview against current main and strengthen exact license/KVM preflight; obtain actual Share/edit/clear/offline/lifecycle runtime proof only if the approved prerequisites are present. | Actual physical device, TalkBack and outside installation; an APK build is not runtime proof. |
+| Task-list / closure review | `/root/seo` | Preserve all 70 criteria, review each frozen deliverable, reassess genuine full-original candidates and record exact next unblocked action. | No criterion waiver or lowered percentage denominator. |
+
+Latest handoff checked 2026-11-19T18:45:23.085934+00:00: MT is reviewed, not running; PS remains active after a real compiler counterexample and method 1.0.2 correction: source `2d00900a`, 150 focused, 39 actual Mac CLI and five compile-only oracle controls pass; PM separately reviewed ten actual groups. Exact frozen Linux execution is still running. Android prerequisite correction is reviewed; actual hosted runtime remains pending. No new scoped task is closed before protected integration.
+
+### Conditional original path: F-012
+
+F-012 is the first conditional technical closure investigation, not a promise of closure. Its full job is credential-to-network flow with exact signal spans. A separately implemented compiler/execution oracle over owned synthetic temporary credentials and a fake HTTP sink could give independent **mechanism** evidence for its supported Python subset, including impossible-program counterexamples. It cannot establish representative recommendation/quotation performance, authorization or malicious intent.
+
+The existing credential-flow plan explicitly retains the full PS enhancement and held-out acceptance. The signal registry requires held-out precision/recall and registration; PS-01 requires independent evaluation for new detector versions and appropriate human release acceptance. Therefore a successful oracle, authored fixtures or this board alone earns no original closure. Keep F-012 open until all those recorded obligations and accepted PS mapping are actually evidenced.
+
+The earlier hosted runner lacks the exact required Android image license. That remains a refused prerequisite; this wave does not accept a new license. Root can finish the existing compile-verified preview and stronger preflight while real-runtime and physical-device acceptance stay open.
+
+### Follow-through and risks
+
+1. Complete the three active bounded software jobs; skip any actual external/license/owner gate while preserving it and advance another authorized task.
+2. Freeze exact sources. A different reviewer checks concrete positive/refusal/fault/privacy behavior; schedule heavy proof serially.
+3. Close a scoped task only after actual source-bound execution, separate review and required protected integration. Do not count its code preview as its parent tag.
+4. Reassess F-012 full acceptance and the existing conditional T-PS study-linked queue; if no whole original closes, preserve NOT MET and continue another implementable original-aligned job.
+
+The principal risks are counting a new wrapper or test count as a product outcome; treating agent-authored examples, execution-oracle agreement or emulators as independent/human acceptance; and reporting inactive agents as running. Explicit task outcomes, distinct reviewers, immutable baseline digests and separate counters prevent those accounting errors. No capture permission, endpoint, license agreement, deployment or research enrollment is activated by this board.
+
+The previous closeout below remains historical. NF/HP publication is already finished; it is not reassigned work.
+
+
 Snapshot: 2026-11-19T15:20:45.481757+00:00 · Base `3716233b9460efa57c1f0d01bfe30989395efcc4`.
 
 This is a dated assignment snapshot, not a background agent heartbeat. The JSON is the durable detailed board; it preserves every open original, its full acceptance, job, outcome, historical limit, accountable lane, exact evidence index and next action. It does not change the scope ledger.
@@ -8,7 +67,7 @@ This is a dated assignment snapshot, not a background agent heartbeat. The JSON 
 
 The session requires at least one fully working named deliverable and at least one genuine original closure. The requested destination is 60 open originals. Completing a subcomponent, audit, UI or engineering test does not lower 70. The conditional ten-item stretch queue is not a forecast and creates no automatic group closures.
 
-## Ownership and current execution
+## Prior completed wave ownership and execution
 
 | Lane | Accountable worker | Dated state | Concrete next deliverable |
 |---|---|---|---|
@@ -133,7 +192,7 @@ The table names each original and its blocking category. The JSON retains the fu
 
 These are nine currently closed engineering/management deliverables and zero original closures. The original requirement goal remains NOT MET.
 
-## Next unblocked execution sequence
+## Prior wave execution sequence (completed; do not rerun)
 
 1. NF and HP engineers finish their frozen, independently usable components, focused controls and actual supported integration proof. No original closure is inferred.
 2. Task-list lead reviews their exact source and concrete failure/privacy cases. PM schedules heavy browser execution serially, integrates and checks current source-bound receipts.

@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-17T17:57:01.347685+00:00",
+  "author": "Codex Android lane",
+  "source_base": "0ff7a08630e05ab5f08a801a7fd5ad40df896ab7",
+  "scope_ids": [
+    "N-014"
+  ],
+  "claim_level": "engineering_only",
+  "original_requirement_closures": 0,
+  "pass": true,
+  "sources": {
+    ".github/workflows/android-share.yml": "97dbda8cb94efa9cbb809054a729018e009bcab08f438c681aed8f3a52d0123f",
+    "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+    "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+    "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+    "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+    "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+    "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+    "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "179d01c54c343285fddf440aff2971c8876eb713e91fa12a386d6e6d47d07ea0",
+    "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+    "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+    "mobile/android/tests/ShareSessionTest.java": "5aa69d10bdfa1b76c7ed24d25dc76b66d100f961bf1f7a23986d2e5edac1d5d9",
+    "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+    "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29",
+    "scripts/android-share-build.py": "e4cbc3f1ef0d76394af1e9575af86c9d5847cc791e7a7f9c522f005591480eed",
+    "scripts/verify-android-emulator.py": "3719265cf0211e938306f88de68f82622eed81c44beaf4c88553c7a01bcea31d",
+    "scripts/verify-android-engine.mjs": "f6a81c4dee65290a09d7484bfc2ce69ea1b7145c6f24017bf0817ef60273c56f",
+    "scripts/verify-android-session.py": "db3064b1074df6f67edb0e4fd89dd1970f0074a0f733738b3441419fc2cf755a",
+    "tests/test_android_share.py": "e9e734b4e966c613d85e534197ad0409988c0f9321ea851e380aa81a9e568cf7"
+  },
+  "actual_preparation": {
+    "format": "ai-trust-id-android-preparation/v1",
+    "pass": true,
+    "method_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "bundle_sha256": "ecc04fa17135175a841e3ef7ddbffb013098c5c6b877611f3ae7347001b9c0c0",
+    "runtime": "314.0.7",
+    "verified_runtime_members": 5,
+    "assets": 15,
+    "asset_bytes": 13670757,
+    "asset_manifest_sha256": "202307c27a3ac51d966a7d3dd046f925941b1d74af7d363e75386ef919f95b75",
+    "notices_consistency_only": true,
+    "license_clearance": false,
+    "independent_accuracy_evidence": false
+  },
+  "actual_engine_parity": {
+    "format": "ai-trust-id-android-engine-parity/v1",
+    "recorded_at": "2026-11-17T15:12:45.725Z",
+    "pass": true,
+    "actual_runtime": "Pyodide314.0.7",
+    "actual_android_loader": true,
+    "node_filesystem_indexURL_adapter": true,
+    "case_count": 137,
+    "invalid_input_controls": 3,
+    "network_attempts": 0,
+    "method_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "bundle_sha256": "ecc04fa17135175a841e3ef7ddbffb013098c5c6b877611f3ae7347001b9c0c0",
+    "loader_sha256": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+    "native_android_execution": false,
+    "physical_device_evidence": false,
+    "independent_accuracy_evidence": false
+  },
+  "local_controls": {
+    "packaging_unittest_passed": 9,
+    "packaging_seconds": 0.347,
+    "actual_jvm_session_program_passed": true,
+    "jvm_boundaries": [
+      "Unicode/codepoint input",
+      "explicit Check",
+      "edit invalidation",
+      "stale/duplicate callbacks",
+      "cancel",
+      "clear/background",
+      "invalid begin refusal"
+    ],
+    "python_xml_yaml_js_parse_passed": true
+  },
+  "corrected_candidate_failures": [
+    {
+      "stage": "Node verification harness",
+      "failures": 2,
+      "cause": "Missing VM URL global, then Node Pyodide file-URL index incompatibility. Android loader was unchanged; verifier now supplies URL and adapts only the Node runtime directory."
+    },
+    {
+      "stage": "Synthetic packaging unit fixture",
+      "failed": 3,
+      "passed": 6,
+      "cause": "macOS temporary path used symlinked /var alias, correctly refused by asset reader. Fixture now resolves its own temporary root; production protection unchanged."
+    }
+  ],
+  "local_sdk_build": {
+    "attempted": true,
+    "exit_status": 2,
+    "status": "UNAVAILABLE",
+    "reason": "No installed SDK in the checked standard path; no SDK/emulator was downloaded."
+  },
+  "hosted_sdk_build": "PENDING",
+  "android_emulator_execution": "PENDING",
+  "physical_device_evidence": false,
+  "human_accessibility_evidence": false,
+  "independent_accuracy_evidence": false,
+  "limits": [
+    "Node parity is not Android WebView execution",
+    "JVM controls do not prove Activity/provider lifecycle on a phone",
+    "No Play listing or production signing",
+    "No original scope closure or release validation",
+    "Dead-renderer teardown is hardened in source; actual Android provider fault execution remains pending hosted/device evidence."
+  ]
+}

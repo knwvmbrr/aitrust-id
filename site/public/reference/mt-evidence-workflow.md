@@ -1,6 +1,6 @@
 # Look at wording, keep the decision
 
-This free local research tool puts three separate checks in one command. It
+This free local research tool offers four separately selected checks in one command. It
 helps you examine a message without judging its writer. Nothing is uploaded.
 MT is still in development; these observations are not an MT tag.
 
@@ -16,6 +16,12 @@ python3 scripts/check-mt-evidence.py --language en \
   “Leave now” can be important safety advice. The tool does not call it manipulation.
 - **Authority:** an expertise or consensus phrase has no source marker in the same
   sentence. It does not search elsewhere or check whether a citation is real.
+- **Authority quotation (opt in):** add `--check authority-quotation` to keep
+  supported ASCII-double-quoted phrases separate from outside phrases. It keeps
+  the complete canonical record and performs a bounded same-method replay. It
+  does not infer endorsement, negation or semantic attribution. See the
+  [quotation workflow guide](https://github.com/knwvmbrr/aitrust-id/blob/main/docs/mt-quotation-workflow.md). The older `authority`
+  check keeps its original contract; no automatic substitution occurs.
 - **Choice:** the two-choice wording and additional passage **you select** can be
   inspected too. Follow the [private choice-packet guide](choice-framing.md), then
   explicitly add `--check choice --choice-packet /path/to/packet`. Feed the same
@@ -43,8 +49,11 @@ original source and context yourself if you need to reproduce the observation.
 
 Each selected check runs in its own child process. A crash, timeout, malformed
 result or output flood is contained to that check. Supported input is explicitly
-selected English, at most 8,000 characters and 32,000 UTF-8 bytes. Each worker has
-a six-second wall deadline and one-million-byte output cap. The supervisor kills
+selected English, at most 8,000 characters and 32,000 UTF-8 bytes. Each legacy worker has
+a six-second wall deadline and one-million-byte output cap. The optional quotation
+check uses an observation child and a canonical-replay child within one shared
+six-second budget. Its complete record is capped at 100,000 serialized bytes;
+an oversized record makes only that check Unavailable, without clipping evidence. The supervisor kills
 a failed process group. This is fault containment, not protection against a
 modified checkout or compromised computer, and it is not an OS network sandbox.
 
@@ -55,7 +64,8 @@ needed beyond the open-source checkout and Python.
 
 ## What still needs work
 
-Context and quotations, genuine versus rhetorical authority, additional-option
+The optional quotation check covers its declared literal placement grammar only.
+Broader context/quotation interpretation, genuine versus rhetorical authority, additional-option
 feasibility, accepted annotation/error policy, independently blinded labels,
 reviewer agreement and human route accessibility remain MT release requirements.
 The [published observation methods](language-observations.md) and

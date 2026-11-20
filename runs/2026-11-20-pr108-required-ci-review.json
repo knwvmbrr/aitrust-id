@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-20T02:50:51.521129+00:00",
+  "profile": "pr108-required-ci-and-linux-method-review/v1",
+  "pass": true,
+  "pass_scope": "Eleven required engineering checks only; not Android runtime, release gates or full original acceptance",
+  "reviewed_by": "/root/seo",
+  "repository": "knwvmbrr/aitrust-id",
+  "pull_request": 108,
+  "reviewed_head": "5cb9aa2b950a87c65eb513721562da56c7fe69ac",
+  "source_sha256": {
+    ".github/workflows/ci.yml": "4f11b50ac0d951d98305b83c7df733415d02002ab07629f0471252a8ae1a1533",
+    ".github/workflows/android-share.yml": "b2d435bd9571326dc0e8c05badbd35183c17f423b7bd40f4c78f7ba9a2c7a9b3",
+    "tests/test_mt_quotation_workflow.py": "c283d1d2d8d9d235c51dd6d2457583e2b819e8ea019b7e84128ba48108a21248",
+    "tools/mt_workflow.py": "454549459f33e94caf5522ee59bc6ec2678dfe38b40844f10d659b71efe7f7a7",
+    "tools/mt_quotation_component.py": "cde1cddf716b128e68bb7b1c5b8e95b7c4c89b90e0f0794dbef6e1ac6bf3809f",
+    "scripts/check-mt-evidence.py": "d7587045e92e79b670a3b7b9599651cbe4fe05e74229045b841d0bfddf478208",
+    "scripts/verify-android-emulator.py": "68ac8545670f14130aa558a4527e418076762a1171a3b136506f23bbe8250b53",
+    "tools/credential_flow.py": "854dd3c6fd9584b3ddee23435c13ff37a70085076ebad0c18c9b38a88ee60fa6",
+    "tools/credential_flow_context.py": "0f73711bb9cdef86702fa09fd48a603212cce017eeeecc3533b1aa2d24931015"
+  },
+  "required_ci": {
+    "run": 44651494103,
+    "observed_at": "2026-11-20T02:49:17.948097+00:00",
+    "status": "completed",
+    "workflow_conclusion": "failure",
+    "required_passed": 11,
+    "required_failed": 0,
+    "required_pending": 0,
+    "checks": [
+      {
+        "name": "accessibility",
+        "state": "SUCCESS",
+        "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44651494103/job/136007220184"
+      },
+      {
+        "name": "change-records",
+        "state": "SUCCESS",
+        "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44651494103/job/136007220106"
+      },
+      {
+        "name": "device-builder (3.12)",
+        "state": "SUCCESS",
+        "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44651494103/job/136007220528"
+      },
+      {
+        "name": "device-builder (3.13)",
+        "state": "SUCCESS",
+        "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44651494103/job/136007220062"
+      },
+      {
+        "name": "device-builder (3.14)",
+        "state": "SUCCESS",
+        "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44651494103/job/136007220120"
+      },
+      {
+        "name": "host-config",
+        "state": "SUCCESS",
+        "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44651494103/job/136007220096"
+      },
+      {
+        "name": "no-egress",
+        "state": "SUCCESS",
+        "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44651494103/job/136007220187"
+      },
+      {
+        "name": "regressions",
+        "state": "SUCCESS",
+        "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44651494103/job/136007220064"
+      },
+      {
+        "name": "scope-plan",
+        "state": "SUCCESS",
+        "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44651494103/job/136007220304"
+      },
+      {
+        "name": "site",
+        "state": "SUCCESS",
+        "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44651494103/job/136007220269"
+      },
+      {
+        "name": "spec",
+        "state": "SUCCESS",
+        "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44651494103/job/136007219756"
+      }
+    ],
+    "nonrequired_gates_failed_steps": [
+      "Require actual accessibility release evidence",
+      "Assess statistical evidence even when accessibility refuses release"
+    ]
+  },
+  "review_threads": {
+    "observed_at": "2026-11-20T02:17:03.420941+00:00",
+    "count": 0,
+    "unresolved": 0,
+    "pagination_complete": true,
+    "PM_must_recheck_before_merge": true
+  },
+  "linux_MT_evidence": {
+    "full_suite_job": 136007220187,
+    "platform": "GitHub-hosted Linux",
+    "nonroot_network_namespace": true,
+    "pytest_selection": "tests --ignore=tests/test_route_boundaries.py -q",
+    "observed_summary": {
+      "passed": 5323,
+      "skipped": 14,
+      "warnings": 1,
+      "elapsed_seconds": 242.16
+    },
+    "raw_job_log_sha256": "2465131a7980ed412f37ce2e49b3410b579b8fd6eb42247bfd679268accc46f9",
+    "new_quotation_workflow_module_in_selection": true,
+    "new_module_has_no_skip_mark_or_collection_exemption": true,
+    "new_module_actual_CLI_checks_include": [
+      "unsupported quotation keeps urgency available",
+      "explicit private export with absent choice packet",
+      "existing private output not overwritten"
+    ],
+    "aggregate_log_not_per_case_JUnit": true,
+    "separate_tag_lab_run": 44651494102,
+    "separate_tag_lab_job": 136007219184,
+    "separate_tag_lab_pass": true,
+    "separate_tag_lab_artifact": 14590074283,
+    "artifact_zip_sha256": "063bdba519aa6adab97f2ed1d6aaa68b16180c9b0277aeec0c4f6c7a2805a206",
+    "JUnit_sha256": "78f36f46483109f04bac943b542dc3a4c8624a8a8520669239a6747b2e01f7d7",
+    "separate_JUnit_counts": {
+      "legacy_mt_workflow": 20,
+      "language_observations": 55,
+      "canonical_authority_quotation": 39,
+      "new_quotation_workflow": 0
+    },
+    "separate_actual_legacy_CLI_controls": 11,
+    "separate_actual_canonical_quotation_controls": 22,
+    "new_standalone_15_control_verifier_not_claimed_run_on_Linux": true
+  },
+  "android_runtime": {
+    "run": 44651494156,
+    "job": 136007218572,
+    "status": "FAILED",
+    "phase": "reviewed_metadata",
+    "pass": false,
+    "cases_executed": 0,
+    "hosted_KVM_access": true,
+    "manager_and_existing_license_record_present": true,
+    "SDK_install_or_boot_started": false,
+    "hosted_metadata_exception_cause_reported": false,
+    "no_unchanged_retry_by_reviewer": true
+  },
+  "followup_readonly_metadata_comparison": {
+    "captured_at": "2026-11-20T01:11:43.724243+00:00",
+    "primary_source": "https://dl.google.com/android/repository/repository2-3.xml",
+    "metadata_sha256": "b97da160df8d80f0fe67739643cb53fbfcafd9c502ef57b78c038645062865ee",
+    "reviewed_pin": "37.2.13",
+    "observed_stable_revision": "37.3.10",
+    "separate_local_observation_not_hosted_exception_proof": true,
+    "archive_downloaded": false,
+    "new_license_accepted": false
+  },
+  "reviewer_mutations": {
+    "source_edit": false,
+    "rerun": false,
+    "comment": false,
+    "thread_resolution": false,
+    "merge": false,
+    "deployment": false
+  },
+  "original_requirements": {
+    "complete": 132,
+    "open": 70,
+    "new_full_closures": 0,
+    "tag_release_or_independent_accuracy_approved": false
+  },
+  "publication_or_scoped_task_closure_claimed": false
+}

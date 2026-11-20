@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-17T20:30:52.054599+00:00",
+  "author": "Codex Android lane",
+  "scope_ids": [
+    "N-014"
+  ],
+  "claim_level": "engineering_only",
+  "pr": 108,
+  "source_commit": "ccea7ccd420ec36c76f037c71a5f44f3a2cc455f",
+  "run_id": 44169646271,
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44169646271",
+  "job_id": 134345000550,
+  "runner_image": "ubuntu24/20261111.370",
+  "sdk_platform": "android-36",
+  "sdk_build_tools": "36.0.0",
+  "jdk_version": "17.0.21",
+  "compile_pass": true,
+  "hosted_packaging_and_session_controls_pass": true,
+  "ephemeral_signature_verified_by_apksigner": true,
+  "unsigned_apk": {
+    "bytes": 6434671,
+    "sha256": "34537a6ed2b3bf3b333165e1343ac6f94c14be8208a7b68d4cfc2dff258d054f",
+    "permissions": 0
+  },
+  "artifact": {
+    "id": 14365809885,
+    "name": "android-share-development",
+    "archive_sha256": "c698c304e348fbcbb7f3f3e355118c936dd64ae8d33b1d626b0a6828f05bff1b",
+    "ci_test_apk_bytes": 6444652,
+    "ci_test_apk_sha256": "e12b3cd8234626be5ae8ecec58953c55267985d5892e81eeb4b7a6ed614562c8",
+    "zip_members_verified": true
+  },
+  "reports": {
+    "preparation.json": "afbf7f191300260bc886af40bbfcb7e261e9d7da08984ba5e76f50a12af9580b",
+    "build.json": "a4ddeda79dff878142e0f5b26734ce869eb7e35978df533421b7bf69faa44a19",
+    "engine-parity.json": "74e89b8a3a3cc0c9f4ded6c62f97325b9d34072e3732b6c974256ad8dbf90837",
+    "emulator.json": "b4926eff3171881e426a95e2e47bbef141f6625dd13976b96c58ebaa89f1d001"
+  },
+  "method_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+  "android_source_hashes_match_source_commit": true,
+  "engine_parity": {
+    "cases": 137,
+    "invalid_inputs": 3,
+    "network_attempts": 0,
+    "node_runtime_adapter": true
+  },
+  "emulator": {
+    "format": "ai-trust-id-android-emulator/v1",
+    "recorded_at": "2026-11-17T20:28:50.764731+00:00",
+    "status": "UNAVAILABLE",
+    "pass": false,
+    "physical_device_evidence": false,
+    "independent_accuracy_evidence": false,
+    "cases": [],
+    "reason": "Existing API36 emulator image/tools or KVM unavailable; nothing downloaded or licensed.",
+    "elapsed_seconds": 0.0
+  },
+  "android_runtime_executed": false,
+  "physical_device_evidence": false,
+  "human_accessibility_evidence": false,
+  "independent_accuracy_evidence": false,
+  "original_requirement_closures": 0
+}

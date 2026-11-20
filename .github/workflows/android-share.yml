@@ -1,0 +1,110 @@
+name: android-share
+on:
+  push:
+    branches: [main]
+    tags: ['**']
+    paths:
+      - 'mobile/android/**'
+      - 'scripts/android-share-build.py'
+      - 'scripts/verify-android-*.py'
+      - 'scripts/verify-android-*.mjs'
+      - 'scripts/asset_notices.py'
+      - 'scripts/build-device-detector.py'
+      - 'scripts/native-probe-cases.py'
+      - 'services/evaluator/app.py'
+      - 'protocol/**'
+      - 'site/package.json'
+      - 'site/package-lock.json'
+      - 'eval/datasets/unsafe_code/**'
+      - 'eval/vectors/unicode/LICENSE.txt'
+      - 'runs/2026-10-10-normalization-version-gap.json'
+      - 'LICENSE'
+      - 'site/public/device-licenses/**'
+      - 'sbom/assets/notices.json'
+      - 'sbom/notices/manifest.json'
+      - 'tests/test_android_share.py'
+      - 'tests/test_android_emulator_prerequisites.py'
+      - '.github/workflows/android-share.yml'
+  pull_request:
+    paths:
+      - 'mobile/android/**'
+      - 'scripts/android-share-build.py'
+      - 'scripts/verify-android-*.py'
+      - 'scripts/verify-android-*.mjs'
+      - 'scripts/asset_notices.py'
+      - 'scripts/build-device-detector.py'
+      - 'scripts/native-probe-cases.py'
+      - 'services/evaluator/app.py'
+      - 'protocol/**'
+      - 'site/package.json'
+      - 'site/package-lock.json'
+      - 'eval/datasets/unsafe_code/**'
+      - 'eval/vectors/unicode/LICENSE.txt'
+      - 'runs/2026-10-10-normalization-version-gap.json'
+      - 'LICENSE'
+      - 'site/public/device-licenses/**'
+      - 'sbom/assets/notices.json'
+      - 'sbom/notices/manifest.json'
+      - 'tests/test_android_share.py'
+      - 'tests/test_android_emulator_prerequisites.py'
+      - '.github/workflows/android-share.yml'
+permissions:
+  contents: read
+jobs:
+  offline-share:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - name: Require preinstalled reviewed SDK and JDK without accepting licenses
+        shell: bash
+        run: |
+          test -d "$ANDROID_SDK_ROOT/platforms/android-36"
+          test -x "$ANDROID_SDK_ROOT/build-tools/36.0.0/aapt2"
+          test -x "$JAVA_HOME_17_X64/bin/javac"
+          "$JAVA_HOME_17_X64/bin/java" -version
+          "$ANDROID_SDK_ROOT/build-tools/36.0.0/aapt2" version
+          node --version
+      - name: Install existing locked runtime package without lifecycle scripts
+        run: npm ci --ignore-scripts --prefix site
+      - name: Exercise session state and asset refusal controls
+        run: |
+          python3 -B -m unittest discover -s tests -p test_android_share.py -v
+          python3 -B -m unittest discover -s tests -p test_android_emulator_prerequisites.py -v
+          python3 -B scripts/verify-android-session.py --java-home "$JAVA_HOME_17_X64"
+      - name: Prepare exact offline PS assets and build an unsigned APK
+        run: python3 -B scripts/android-share-build.py --runtime-directory site/node_modules/pyodide --compile --sdk-root "$ANDROID_SDK_ROOT" --java-home "$JAVA_HOME_17_X64"
+      - name: Execute the Android loader with the actual pinned WebAssembly engine
+        run: node --experimental-vm-modules scripts/verify-android-engine.mjs
+      - name: Sign only an ephemeral CI test APK
+        shell: bash
+        run: |
+          "$JAVA_HOME_17_X64/bin/keytool" -genkeypair -noprompt -storetype PKCS12 -keystore "$RUNNER_TEMP/aitrust-ci.p12" -alias aitrust-ci -storepass android -keypass android -dname 'CN=AI Trust ID Ephemeral CI Test' -keyalg RSA -keysize 2048 -validity 1
+          "$ANDROID_SDK_ROOT/build-tools/36.0.0/apksigner" sign --ks "$RUNNER_TEMP/aitrust-ci.p12" --ks-key-alias aitrust-ci --ks-pass pass:android --out output/android-share/ai-trust-id-ci-test.apk output/android-share/ai-trust-id-unsigned.apk
+          "$ANDROID_SDK_ROOT/build-tools/36.0.0/apksigner" verify --verbose output/android-share/ai-trust-id-ci-test.apk
+          rm -- "$RUNNER_TEMP/aitrust-ci.p12"
+      - name: Verify Share on a disposable API 36 emulator when hosted prerequisites permit
+        if: runner.environment == 'github-hosted'
+        env:
+          AITRUST_ANDROID_RUNNER: ${{ runner.environment }}
+        shell: bash
+        run: |
+          if test -c /dev/kvm && command -v setfacl >/dev/null; then
+            sudo -n setfacl -m "u:$(id -u):rw" /dev/kvm
+          fi
+          python3 -B scripts/verify-android-emulator.py --sdk-root "$ANDROID_SDK_ROOT" --apk output/android-share/ai-trust-id-ci-test.apk
+      - name: Preserve engineering evidence and the development APK
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: android-share-development
+          path: |
+            output/android-share/preparation.json
+            output/android-share/build.json
+            output/android-share/engine-parity.json
+            output/android-share/emulator.json
+            output/android-share/ai-trust-id-ci-test.apk
+            output/android-share/last-build.log
+          if-no-files-found: error
+          retention-days: 7

@@ -558,7 +558,35 @@
         "site/public/reference/nf-source-evidence.md",
         "AGENTS.md",
         "docs/hp-site-integration.md",
-        "scripts/verify-hp-client.cjs"
+        "scripts/verify-hp-client.cjs",
+        "tools/credential_flow.py",
+        "tools/credential_flow_context.py",
+        "tools/credential_context_io.py",
+        "scripts/credential-flow.py",
+        "scripts/credential-flow-context.py",
+        "scripts/credential-context-worker.py",
+        "tests/test_credential_flow.py",
+        "tests/test_credential_flow_context.py",
+        "docs/credential-flow.md",
+        "docs/credential-flow-context.md",
+        "docs/credential-flow-context-plan.md",
+        "tools/mt_workflow.py",
+        "tools/mt_quotation_component.py",
+        "scripts/check-mt-evidence.py",
+        "scripts/mt-evidence-worker.py",
+        "scripts/verify-mt-quotation-workflow.py",
+        "tests/test_mt_quotation_workflow.py",
+        "docs/mt-quotation-workflow.md",
+        "docs/mt-quotation-workflow-result.md",
+        "mobile/android/**/*",
+        "scripts/android-share-build.py",
+        "scripts/verify-android-*.py",
+        "scripts/verify-android-*.mjs",
+        "tests/test_android_share.py",
+        "tests/test_android_emulator_prerequisites.py",
+        "docs/android-share-plan.md",
+        "docs/android-share-developer.md",
+        "docs/tag-wave-nov19-integration.md"
       ],
       "commands": [
         [
@@ -916,6 +944,17 @@
         [
           "node",
           "scripts/verify-hp-client.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_credential_flow.py",
+          "tests/test_credential_flow_context.py",
+          "tests/test_mt_quotation_workflow.py",
+          "tests/test_android_share.py",
+          "tests/test_android_emulator_prerequisites.py",
+          "-q"
         ]
       ]
     },
@@ -1503,7 +1542,24 @@
         "docs/hp-site-integration.md",
         "scripts/verify-hp-client.cjs",
         "scripts/site-fixture-server.cjs",
-        "tests/site-fixture-server.cjs"
+        "tests/site-fixture-server.cjs",
+        "tools/credential_device.py",
+        "tools/credential_flow.py",
+        "scripts/build-credential-device.py",
+        "scripts/credential-device-cases.py",
+        "scripts/credential-site-controls.cjs",
+        "tests/test_credential_device.py",
+        "tests/credential-device-client.mjs",
+        "site/src/CredentialFlowExplorer.jsx",
+        "site/src/CredentialFlowExplorerSlot.jsx",
+        "site/src/credential-device-*.js",
+        "site/src/credential-device-manifest.json",
+        "site/public/credential-device/*",
+        "docs/credential-flow-device.md",
+        "site/public/reference/credential-flow-device.md",
+        "scripts/verify-credential-client.cjs",
+        "protocol/normalization.mjs",
+        "protocol/normalization-core.js"
       ],
       "commands": [
         [
@@ -1767,6 +1823,21 @@
         [
           "node",
           "scripts/verify-hp-client.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_credential_device.py",
+          "-q"
+        ],
+        [
+          "node",
+          "scripts/verify-credential-client.cjs"
+        ],
+        [
+          "node",
+          "scripts/credential-site-controls.cjs"
         ]
       ]
     }

@@ -1,6 +1,444 @@
 # Changelog
 
+## Unreleased — 2026-11-20
+
+### 2026-11-20-164850-credential-state-chronology-correction-6dbcd154
+
+Recorded 2026-11-20T16:48:50.393806+00:00 · Contributor: Codex PM after task-list lead diagnosis · change
+
+- **Changed.** Refresh both top-level state timestamps after recording the new execution evidence, correcting the protected accountability refusal.
+- **Evidence.** The exact failed CI job is preserved. The unchanged state chronology validator now passes against all referenced evidence; no product source or acceptance criterion changed. [Change record](./runs/changes/2026-11-20-164850-credential-state-chronology-correction-6dbcd154.json).
+- **Not claimed.** Required checks must pass on the corrected commit before merge; no full original or independent accuracy closure claimed.
+
+
+### 2026-11-20-164615-credential-integrated-ready-for-protection-c1e8b08c
+
+Recorded 2026-11-20T16:46:15.082038+00:00 · Contributor: Codex PM with distinct reviewer web_camo · change
+
+- **Changed.** Record the fully passing current-source optional checker integration and final reviewed route boundaries for protected publication.
+- **Evidence.** All five capability receipts assess current: PS7, PII6, protocol56, extension14, website49 configured checks; the 1369-source boundary review passes. Actual Chromium/WebKit production controls cover native record parity, privacy, narrow layouts, cancellation and continued PS operation after optional chunk failure. [Change record](./runs/changes/2026-11-20-164615-credential-integrated-ready-for-protection-c1e8b08c.json).
+- **Not claimed.** Protected merge and live publication remain pending. Original scope remains132 complete/70 open; independent accuracy, physical phones and full tag release are not approved.
+
+
+### 2026-11-20-164106-credential-freeze-before-build-885d7aaf
+
+Recorded 2026-11-20T16:41:06.951634+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Freeze the final source inventory and record the website build refusal observed while the inventory update was still being recorded.
+- **Evidence.** The candidate preserved unchanged source fingerprints but stopped in the build phase. All inventory and failed receipt files are now covered before starting the next execution; no source edits will occur during it. [Change record](./runs/changes/2026-11-20-164106-credential-freeze-before-build-885d7aaf.json).
+- **Not claimed.** The historical build subprocess output was hashed rather than retained, so its precise diagnostic is not asserted. No website pass or publication claimed.
+
+
+### 2026-11-20-164006-credential-final-source-inventory-9c0b3e2e
+
+Recorded 2026-11-20T16:40:06.895371+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Bind the final optional checker and corrected verifier source inventory to the pending current website receipt and current passing extension receipt.
+- **Evidence.** The reviewed inventory contains 1369 source files. Existing PS, PII, protocol and extension receipts still assess current and passing; the website and boundary executions remain pending. [Change record](./runs/changes/2026-11-20-164006-credential-final-source-inventory-9c0b3e2e.json).
+- **Not claimed.** This inventory update is not a boundary pass, deployment or accuracy approval.
+
+
+### 2026-11-20-163716-credential-disclosure-readiness-diagnosis-3503251a
+
+Recorded 2026-11-20T16:37:16.704758+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Preserve the full website attempt and focused diagnosis: all catalogue, performance and workflow phases passed; disclosure measurement ran before the optional React child mounted.
+- **Evidence.** The actual failure was Inspect Python code preview expansion; the underlying PS focus controls completed. A separate reviewer is correcting deferred readiness while preserving the original height assertion and genuine failure controls. [Change record](./runs/changes/2026-11-20-163716-credential-disclosure-readiness-diagnosis-3503251a.json).
+- **Not claimed.** No current full website pass or product bug-fix claim yet. Failure evidence retained and original requirements remain unchanged.
+
+
+### 2026-11-20-162820-credential-attempt-receipt-coverage-22d8cadc
+
+Recorded 2026-11-20T16:28:20.293890+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Preserve both website attempts and explicitly cover their execution-receipt files in the change record after the catalogue disclosure update.
+- **Evidence.** The first current run refused the former PS disclosure count. The following build guard refused the previous failed receipt because an explicit files list covered only the verifier, not the evidence file; this record uses the complete current change set. [Change record](./runs/changes/2026-11-20-162820-credential-attempt-receipt-coverage-22d8cadc.json).
+- **Not claimed.** No website pass or deployment claimed until the next current-source execution actually succeeds. Failed records remain intact.
+
+
+### 2026-11-20-162658-credential-catalogue-disclosure-contract-e07127a5
+
+Recorded 2026-11-20T16:26:58.750585+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Update the catalogue contract for PS’s additional optional closed Python disclosure, preserving exact disclosure counts and isolating it to PS.
+- **Evidence.** The failed current website run reached the catalogue and refused the former exact count of six disclosures. Diagnosis identified the new seventh disclosure; the updated contract also requires that it starts closed and appears only in PS. [Change record](./runs/changes/2026-11-20-162658-credential-catalogue-disclosure-contract-e07127a5.json).
+- **Not claimed.** The failed receipt is preserved. The complete current website run remains required; this is a catalogue contract update, not an accuracy claim.
+
+
+### 2026-11-20-162446-credential-revalidation-receipt-bookkeeping-42b57ec8
+
+Recorded 2026-11-20T16:24:46.770983+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record successful current protocol and extension checks and preserve the website build-guard refusal caused by unrecorded new execution receipts.
+- **Evidence.** Protocol and extension passed with unchanged sources. Website stopped before browser work because its changelog guard correctly required fresh records for the new public receipts; the missing record is now supplied. [Change record](./runs/changes/2026-11-20-162446-credential-revalidation-receipt-bookkeeping-42b57ec8.json).
+- **Not claimed.** The failed website receipt remains immutable. A corrected website run and protected/live publication are still required; original count remains 70.
+
+
+### 2026-11-20-162202-credential-current-capability-execution-015cf396
+
+Recorded 2026-11-20T16:22:02.096870+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record current integrated PS and PII engineering executions before final production build verification.
+- **Evidence.** Both configured current-source capability runs exited successfully, alongside the distinct Chromium/WebKit production modal review. [Change record](./runs/changes/2026-11-20-162202-credential-current-capability-execution-015cf396.json).
+- **Not claimed.** Protocol, extension, complete website, protected merge and public deployment still pending. Accuracy and original counts unchanged.
+### 2026-11-20-163850-credential-disclosure-measurement-readiness-6677cce1
+
+Recorded 2026-11-20T16:38:50.052546+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Wait for the actual optional credential form after native Enter and before judging disclosure expansion height; add a controlled delayed-child regression in the existing verifier.
+- **Evidence.** Authored absent child fails, actual ready child passes and genuinely fixed-height clipped body still fails. Actual PS disclosure probes pass in light and dark with the optional readiness hook exercised; helper/product/served hashes stayed stable. [Change record](./runs/changes/2026-11-20-163850-credential-disclosure-measurement-readiness-6677cce1.json).
+- **Not claimed.** Verifier-only change; product, method, visibility, thresholds and timeouts unchanged. First reviewer raw-count assertion error preserved and corrected without changing probe predicates. No full-site replay, tag closure, independent accuracy, physical phone or full WCAG claim.
+
+
+### 2026-11-20-162050-credential-generated-public-scope-24dc5cf1
+
+Recorded 2026-11-20T16:20:50.992437+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Regenerate the public scope mirrors and corrected optional checker guide before capturing current website fingerprints.
+- **Evidence.** The site preparation generated the scope records from the updated ledger without changing any original criterion or completion percentage. [Change record](./runs/changes/2026-11-20-162050-credential-generated-public-scope-24dc5cf1.json).
+- **Not claimed.** Publication and current full revalidation pending; no full requirement closure claimed.
+
+
+### 2026-11-20-162023-credential-source-freeze-33faad80
+
+Recorded 2026-11-20T16:20:23.113522+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Freeze the current optional preview scope and reviewer-corrected website inputs for integration.
+- **Evidence.** The implemented feature has separate browser review and a recorded canonical method identity; the original scope count stays 132 complete and 70 open. [Change record](./runs/changes/2026-11-20-162023-credential-source-freeze-33faad80.json).
+- **Not claimed.** Protected merge and public deployment pending; independent accuracy unchanged.
+
+
+### 2026-11-20-162012-credential-integration-review-corrections-565363a0
+
+Recorded 2026-11-20T16:20:12.487061+00:00 · Contributor: Codex PM after credential worker source review · change
+
+- **Changed.** Bind the JavaScript normalization implementation in website revalidation and correct the published method guide link found by the separate source reviewer.
+- **Evidence.** The review traced real imported normalization modules absent from the former website inventory and a relative documentation link that resolved to an absent public path. [Change record](./runs/changes/2026-11-20-162012-credential-integration-review-corrections-565363a0.json).
+- **Not claimed.** Current-source checks will run after regeneration; no independent accuracy or original closure claimed.
+
+
+### 2026-11-20-161955-credential-preview-scope-evidence-ff882653
+
+Recorded 2026-11-20T16:19:55.413429+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record the implemented optional on-device credential-flow preview and separate built-site review in the scope ledger, preserving every original acceptance criterion and completion count.
+- **Evidence.** Browser worker receipts and distinct production review establish bounded software behavior; full original F012 remains open at its existing percentage. [Change record](./runs/changes/2026-11-20-161955-credential-preview-scope-evidence-ff882653.json).
+- **Not claimed.** Protected checks, deployment, representative independent accuracy and full PS integration remain open.
+
+
+### 2026-11-20-161903-credential-client-entrypoint-and-guide-360bc604
+
+Recorded 2026-11-20T16:19:03.840709+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Add the manifest-compatible credential client verifier entrypoint and distribute the exact method guide with the public build.
+- **Evidence.** The real client control entrypoint exited successfully and the site build generated the exact method guide. [Change record](./runs/changes/2026-11-20-161903-credential-client-entrypoint-and-guide-360bc604.json).
+- **Not claimed.** Actual built-modal review and protected publication remain pending; original acceptance unchanged.
+
+
+### 2026-11-20-161739-credential-preview-discoverability-86f6cd66
+
+Recorded 2026-11-20T16:17:39.124005+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Document the public optional Python flow preview and its non-execution and no-tag boundaries in the quick product overview.
+- **Evidence.** The existing source-bound worker controls pass; the integrated adapter independently passed 53 focused controls. The public deployment remains pending. [Change record](./runs/changes/2026-11-20-161739-credential-preview-discoverability-86f6cd66.json).
+- **Not claimed.** No full F012 closure or independent accuracy claimed.
+
+
+### 2026-11-20-161649-credential-required-source-checks-b59e6122
+
+Recorded 2026-11-20T16:16:49.155888+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Require the optional Python flow adapter, browser client and built PS modal checks in website revalidation, with exact source inventory bindings.
+- **Evidence.** Configured checks consume the implemented feature; the supplied worker receipts record actual native and browser execution. Production integration remains unverified. [Change record](./runs/changes/2026-11-20-161649-credential-required-source-checks-b59e6122.json).
+- **Not claimed.** No current-source pass, live publication, original closure or accuracy approval claimed.
+
+
+### 2026-11-20-155957-predeclare-public-credential-device-cab266e4
+
+Recorded 2026-11-20T15:59:57.455688+00:00 · Contributor: Codex task-list lead · change
+
+- **Changed.** Predeclare the public optional credential-flow browser preview, exact acceptance and actual worker before completion; update prior CLI handoffs and blocked Android runtime status.
+- **Evidence.** Current accounting passes with nine closed scoped tasks, zero new original closures, one active PS worker and unchanged 132 complete / 70 open originals. The new task requires full raw/NFC/canonical binding, Chromium/WebKit parity, lifecycle/privacy and independent PS survival, distinct review, protected checks and actual live publication. [Change record](./runs/changes/2026-11-20-155957-predeclare-public-credential-device-cab266e4.json).
+- **Not claimed.** No browser feature, protected merge, live publication, Android runtime, full F012 acceptance or validated PS enhancement is claimed complete by this assignment board. Historical closed tasks and original acceptance remain intact; the strict original-closure goal still refuses with exit 1.
+
+
+### 2026-11-20-161503-credential-device-site-integration-80d8fba3
+
+Recorded 2026-11-20T16:15:03.038669+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Integrate the optional on-device Python flow preview in the PS panel with lazy disclosure, build hooks and accessible plain-language copy.
+- **Evidence.** The worker handoff includes native and Chromium/WebKit source-bound checks. Shared production UI integration still awaits built-site verification. [Change record](./runs/changes/2026-11-20-161503-credential-device-site-integration-80d8fba3.json).
+- **Not claimed.** No tag release, independent accuracy, malicious intent or full original requirement closure is claimed.
+
+
+### 2026-11-20-160408-credential-flow-device-preview-c45f5c2f
+
+Recorded 2026-11-20T16:04:08.800577+00:00 · Contributor: Codex · change
+
+- **Changed.** Add a separately invoked phone-friendly Python credential-flow method preview with exact canonical source, private input binding, bounded independent worker and local optional-surface failure containment.
+- **Evidence.** 53 focused Python controls,10 Node groups,33 actual canonical CLI outcomes and33 full native/browser outcomes per Chromium and WebKit pass. Six corrupt-result injections per engine refuse before rendering. Actual existing PS worker remains functional after optional method, import, render and missing-chunk failures. [Change record](./runs/changes/2026-11-20-160408-credential-flow-device-preview-c45f5c2f.json).
+- **Not claimed.** No production mount or deployment performed in this branch; no PS signal mapping, context/intent classification, independent semantic corroboration, held-out accuracy, physical-phone or human accessibility acceptance. F-012 and full original scope remain open.
+
+### 2026-11-20-161946-credential-production-ui-review-2c89bbbd
+
+Recorded 2026-11-20T16:19:46.320445+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Add reusable actual-production-modal verification for the optional Python credential-flow explorer, with a sequential Chromium and WebKit loopback runner.
+- **Evidence.** Both actual production browser engines match three complete canonical native records and pass lazy disclosure, private-detail, cancellation, empty reopen, privacy, narrow enlarged layout and actual PS survival controls. Source and served asset hashes remained stable. [Change record](./runs/changes/2026-11-20-161946-credential-production-ui-review-2c89bbbd.json).
+- **Not claimed.** Engineering parity and interface isolation only. No PS release, independent accuracy, intent, real credentials, physical-phone, human-screen-reader or full original scope completion claim. Product and method source unchanged by reviewer.
+
+
+### 2026-11-20-155506-deferred-details-a11y-measurement-47b55b39
+
+Recorded 2026-11-20T15:55:06.787379+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Wait for real deferred public details before accessibility measurement; capture physical control identities and reject changed sets instead of using live ordinal locators.
+- **Evidence.** Actual delayed scope control includes all 28 PII controls; physical identity survives native close and mutation is refused. Source-stable actual build passes both themes across 62 surfaces, 916 focus checks, 924 target checks and 158 disclosures; six defect mutations remain detected. [Change record](./runs/changes/2026-11-20-155506-deferred-details-a11y-measurement-47b55b39.json).
+- **Not claimed.** Original integrated timeout scheduling cause remains unestablished. Product source and thresholds unchanged; no physical-phone, human screen-reader, full WCAG, independent accuracy or parent completion claim.
+
+### 2026-11-20-155909-prioritize-usable-python-flow-preview-540c9b42
+
+Recorded 2026-11-20T15:59:09.265643+00:00 · Contributor: Codex · change
+
+- **Changed.** Define the next user-visible deliverable: an optional on-device Python flow preview inside PS, with unchanged canonical logic and independent worker/import failure boundaries.
+- **Evidence.** The documented architecture names the user outcome, exact ownership, privacy/source risks and two-engine acceptance before shared UI integration; text diff checks pass. [Change record](./runs/changes/2026-11-20-155909-prioritize-usable-python-flow-preview-540c9b42.json).
+- **Not claimed.** The browser feature remains in implementation; no live availability, original closure or independently validated new tag is claimed.
+
+
+### 2026-11-20-155043-preserve-current-vanishing-control-failure-fddfadc6
+
+Recorded 2026-11-20T15:50:43.605086+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve the second source-stable accessibility failure and the earlier exact protected candidate CI review; keep both separate from current fixes.
+- **Evidence.** All11 required checks passed at5cb9aa2 while Android separately failed before install. A later local source-stable website run exposed a missing live control index after catalogue and PS surfaces; the original scheduling cause is still unestablished. [Change record](./runs/changes/2026-11-20-155043-preserve-current-vanishing-control-failure-fddfadc6.json).
+- **Not claimed.** No full accessibility, Android runtime or original closure. The debugger is validating public-detail readiness and physical control identity without reducing assertions or increasing timeouts.
+
+
+### 2026-11-20-051652-sdk-correction-protocol-current-b2ed7cf9
+
+Recorded 2026-11-20T05:16:52.427571+00:00 · Contributor: Codex · change
+
+- **Changed.** Capture current protocol evidence after the reviewed SDK selection and metadata diagnostics correction.
+- **Evidence.** All56 configured protocol commands pass with unchanged inputs; unchanged PS, privacy and extension receipts remain current. [Change record](./runs/changes/2026-11-20-051652-sdk-correction-protocol-current-b2ed7cf9.json).
+- **Not claimed.** New-source website and hosted Android checks are pending. Original132complete/70open and independent/human gates remain unchanged.
+
+
+### 2026-11-20-050634-reviewed-sdk-metadata-correction-cfbf00f7
+
+Recorded 2026-11-20T05:06:34.264921+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate reviewed stable-emulator pin and fixed metadata refusal diagnostics; make the operator guide refer to the maintained source pin rather than duplicate a moving release number.
+- **Evidence.** Independent review executes redirect and transport refusals, old-versus-reviewed revision binding and actual fixed main reports without exposing private arguments. The author verifies both official XML identities, unchanged license text,26 targeted controls and9 isolated report faults. [Change record](./runs/changes/2026-11-20-050634-reviewed-sdk-metadata-correction-cfbf00f7.json).
+- **Not claimed.** The first hosted metadata exception remains unknown; independent local drift reproduces a consistent guard failure. No SDK install, new terms, archive/device test or full original closure is claimed by this correction. New-source hosted verification remains required.
+
+
+### 2026-11-20-025900-android-metadata-refusals-adc4e7d0
+
+Recorded 2026-11-20T02:59:00.022611+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the reviewed stable Android emulator metadata pin to 37.3.10 and distinguish fixed metadata refusal boundaries without exposing native diagnostics.
+- **Evidence.** 26 focused controls and nine isolated main fault processes pass; actual default helper reads match both official XMLs and unchanged license identity. Captured official XML rejects the old emulator pin. [Change record](./runs/changes/2026-11-20-025900-android-metadata-refusals-adc4e7d0.json).
+- **Not claimed.** Original hosted run remains failed with unknown original exception. No SDK installation, terms acceptance, archive download, emulator boot, Share case execution, physical proof or original requirement closure.
+
+
+### 2026-11-20-010845-independent-wave-ready-for-protected-ci-18c7c902
+
+Recorded 2026-11-20T01:08:45.922764+00:00 · Contributor: Codex · change
+
+- **Changed.** Capture passing unchanged-source capability and boundary checks for the integrated independent tag wave, retaining all original scope and failed candidate history.
+- **Evidence.** PS7,privacy6,extension14,protocol56 andwebsite46 configured commands pass;1352 reviewed source inputs preserve the existing personal endpoint and permission boundaries. All202 original jobs/criteria remain intact with132 complete and70 open. [Change record](./runs/changes/2026-11-20-010845-independent-wave-ready-for-protected-ci-18c7c902.json).
+- **Not claimed.** Protected and actual hosted Android checks are pending. The earlier accessibility scroll cause is unestablished despite current passing diagnostics. No full original closure, independent accuracy, physical phone/human accessibility, new SDK assent or new production tag is claimed.
+
+
+### 2026-11-20-010107-reviewed-accessibility-observability-1bffdb6a
+
+Recorded 2026-11-20T01:01:07.857511+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate failure-only accessibility diagnostics and retain the earlier unexplained scroll timeout, controlled hypotheses and current passing full accessibility run.
+- **Evidence.** Independent review preserves the identical original error, inspects the control only after failure and records surface/theme/action. Author full run passes62 surfaces with unchanged probes and default action timeouts. [Change record](./runs/changes/2026-11-20-010107-reviewed-accessibility-observability-1bffdb6a.json).
+- **Not claimed.** The historical timeout cause remains unestablished. This is observability and current engineering evidence, not a product fix, complete WCAG or human accessibility acceptance; no original closes.
+
+
+### 2026-11-20-010000-record-accessibility-action-failure-context-8997716b
+
+Recorded 2026-11-20T01:00:00.830487+00:00 · Contributor: Codex accessibility debugging lane · change
+
+- **Changed.** Added failure-only surface/control/action diagnostics around existing scroll/focus probes and preserved the original thrown error in the accessibility report. Input controls are identified by labels, never entered values.
+- **Evidence.** Authored timeout/focus controls capture the expected diagnostic without a textarea canary. One actual full accessibility run passed62 surfaces,916 focus checks,890 target checks and158 disclosures in both themes on frozen built assets; source and served hashes remained stable. Original timeout and three non-reproducing hypotheses are preserved. [Change record](./runs/changes/2026-11-20-010000-record-accessibility-action-failure-context-8997716b.json).
+- **Not claimed.** Original timeout cause remains UNESTABLISHED. This is diagnostic improvement only, not a product fix, requirement closure, human/phone acceptance or full conformance claim. No probe criterion, default action timeout or pre-action await was changed; snapshot identity is post-error.
+
+## Unreleased — 2026-11-20
+
+### 2026-11-20-004838-freeze-generated-tag-wave-inputs-d26e500e
+
+Recorded 2026-11-20T00:48:38.438568+00:00 · Contributor: Codex · change
+
+- **Changed.** Freeze generated public scope and MT operator-reference outputs produced by the first integrated build; preserve the failed current-website attempt and its exact diagnosis.
+- **Evidence.** Build, catalogue, performance and workflow phases passed. The accessibility phase timed out on scroll stability in the first PS surface, and generated scope/reference changes made the original source fingerprint stale. [Change record](./runs/changes/2026-11-20-004838-freeze-generated-tag-wave-inputs-d26e500e.json).
+- **Not claimed.** The full website attempt failed and remains failed history. A debugger is reproducing the exact control before any changed-source retry; no weakened probe or original closure.
+
+
 ## Unreleased — 2026-11-19
+
+### 2026-11-19-223823-credential-flow-context-linux-proof-94e53801
+
+Recorded 2026-11-19T22:38:23.839746+00:00 · Contributor: Codex · change
+
+- **Changed.** Record actual corrected credential-flow context operation on the existing isolated unprivileged Linux route without changing sources or services.
+- **Evidence.** 39 actual CLI controls, seven selected binding controls and five real compile-only oracles pass on exact source2d00900 with Python3.13.5 UID1000; fifteen source hashes and original staging identities are unchanged and the owned temporary checkout is removed. [Change record](./runs/changes/2026-11-19-223823-credential-flow-context-linux-proof-94e53801.json).
+- **Not claimed.** Selected stdlib and CLI controls only, not the full Linux pytest suite. No subject execution, PS mapping, independent accuracy, original F012 closure or human acceptance is claimed.
+
+### 2026-11-19-224416-tag-wave-current-capability-evidence-6157f6f9
+
+Recorded 2026-11-19T22:44:16.949875+00:00 · Contributor: Codex · change
+
+- **Changed.** Record current PS, privacy, extension and protocol validation after independent tag-wave integration, with the exact corrected Linux credential evidence.
+- **Evidence.** All four configured capability command groups pass on frozen inputs, including the new affected component controls. Corrected Linux source matches macOS and preserves actual nonroot/network-denial evidence. Reviewed source inventory covers1352 implementation inputs. [Change record](./runs/changes/2026-11-19-224416-tag-wave-current-capability-evidence-6157f6f9.json).
+- **Not claimed.** Website/protected/hosted Android validation is pending. Existing scope remains132complete/70open; no full original, independent accuracy or physical-device acceptance is claimed.
+
+
+### 2026-11-19-203722-independent-wave-scope-and-gates-7533d8d0
+
+Recorded 2026-11-19T20:37:22.271042+00:00 · Contributor: Codex · change
+
+- **Changed.** Update four original scope evidence records, independent operator guides and README, and bind PS context, quotation-aware MT and Android controls into protocol/source-bound verification.
+- **Evidence.** Every original acceptance, percentage, milestone and completion field is preserved against current main; all202 records render with132 complete and70 open. Separately reviewed exact worker sources are integrated with failure histories intact. [Change record](./runs/changes/2026-11-19-203722-independent-wave-scope-and-gates-7533d8d0.json).
+- **Not claimed.** Protected current-source and hosted Android checks are still pending. This adds no original closure, inferred use/intent, independent accuracy, phone accessibility acceptance, new license assent or production tag.
+
+
+### 2026-11-19-184637-ps-mt-android-next-wave-df1f65ce
+
+Recorded 2026-11-19T18:46:37.284172+00:00 · Contributor: Codex task-list lead · change
+
+- **Changed.** Dispatch the next actual PS, MT and Android work from the full original-acceptance queue; preserve all prior task closures and the immutable scope baseline.
+- **Evidence.** Re-read all 70 full original jobs and acceptance; all 202 master criteria and all 70 required criteria remain unchanged, with 514 historical evidence paths present. Accounting inspection passes with nine closed scoped tasks, zero original closures and one active tag assignment. Four targeted independent Android correction controls pass. [Change record](./runs/changes/2026-11-19-184637-ps-mt-android-next-wave-df1f65ce.json).
+- **Not claimed.** The strict original-closure goal still returns exit 1: 132 complete and 70 open. MT is reviewed with no active worker; PS exact Linux proof and Android/protected integration remain active. No new task or original closure, independent accuracy, physical-device acceptance, license assent or deployment is claimed.
+
+### 2026-11-19-184424-reviewed-credential-context-integration-ff70bf2b
+
+Recorded 2026-11-19T18:44:24.751301+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate independent credential-context binding and bounded compiler-correctness fixes while preserving the failed first candidate and original worker commits.
+- **Evidence.** Ten separate PM review groups execute compiler-invalid refusals, bounded growth, actual sandboxed context/NFC rebasing, private export, stale raw-equivalent edits, duplicate selection refusal and warning privacy against unchanged corrected source. [Change record](./runs/changes/2026-11-19-184424-reviewed-credential-context-integration-ff70bf2b.json).
+- **Not claimed.** These are static-profile and source-binding controls, not representative independent accuracy, inferred use/mention, intent, PS mapping or a full F-012 closure. Linux verification remains a separate source-bound record.
+
+
+### 2026-11-19-184118-credential-flow-bounded-compiler-semantics-c1a73803
+
+Recorded 2026-11-19T18:41:18.642071+00:00 · Contributor: Codex · change
+
+- **Changed.** Reject compiler-invalid reserved bindings before returning credential-flow observations by compiling only the already bounded supported AST without executing its code object; suppress native parser warning fragments.
+- **Evidence.** The actual frozen __debug__ flow counterexample is preserved; 150 focused controls, 39 current macOS CLI commands and five real compile-only syntax oracles verify reserved assignment/import-alias refusal and unchanged source/context, privacy and I/O controls. [Change record](./runs/changes/2026-11-19-184118-credential-flow-bounded-compiler-semantics-c1a73803.json).
+- **Not claimed.** Compile-only validation is not program execution, authorization, recommendation inference or independent accuracy. F012 remains open with no PS mapping or full requirement closure; the earlier source and receipts remain historical.
+
+### 2026-11-19-183456-credential-flow-context-binding-d8c4808b
+
+Recorded 2026-11-19T18:34:56.887333+00:00 · Contributor: Codex · change
+
+- **Changed.** Refuse impossible duplicate-keyword calls and oversized propagated literals in the bounded credential-flow method; add an independent private whole-document raw/NFC source-context binding workflow with unverified caller declarations and canonical static evidence.
+- **Evidence.** 143 focused controls and 31 actual isolated-Python macOS CLI controls verify the two concrete refusal fixes, raw/NFC selection and document spans, independent static/context evidence, kernel network denial, private no-overwrite exports and honest I/O uncertainty; original defects and initial fixture failure are preserved. [Change record](./runs/changes/2026-11-19-183456-credential-flow-context-binding-d8c4808b.json).
+- **Not claimed.** Context remains caller-declared, not inferred recommendation, authorization or intent. No program, named credential or URL is executed/read/contacted; no PS mapping, independent accuracy, original F012 closure, Linux execution or human acceptance is claimed.
+
+### 2026-11-19-184040-reviewed-mt-quotation-integration-8cab0e54
+
+Recorded 2026-11-19T18:40:40.117912+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate the independent quotation-aware MT workflow and preserve its original author commit and evidence history.
+- **Evidence.** A separate PM review executes five canonical/raw-identity/forgery/type/isolation controls against unchanged frozen method and adapter sources; no new tag or combined confidence is asserted. [Change record](./runs/changes/2026-11-19-184040-reviewed-mt-quotation-integration-8cab0e54.json).
+- **Not claimed.** This completes a selected offline engineering job, not contextual MT interpretation, independent agreement, human operation or either full original requirement.
+
+
+### 2026-11-19-183843-selected-quotation-framing-workflow-eba9c75f
+
+Recorded 2026-11-19T18:38:43.500483+00:00 · Contributor: Codex MT tag lane · change
+
+- **Changed.** Added explicit authority-quotation selection to the existing independent framing CLI, with a separate versioned context envelope, complete canonical record, raw/frozen-NFC/source binding, closed validation and actual bounded full-record canonical replay. Legacy methods, selections and browser/device sources remain unchanged.
+- **Evidence.** 82 affected Python controls,15 actual new-route CLI controls and11 existing CLI controls pass on frozen source. Coherent forged omissions/context modifications are rejected by replay; unsupported syntax, broken optional source and worker/replay failures leave selected siblings operational. Private full-record export and no-overwrite were exercised. First authored expectation failure is preserved. [Change record](./runs/changes/2026-11-19-183843-selected-quotation-framing-workflow-eba9c75f.json).
+- **Not claimed.** No MT tag, semantic intent/endorsement or independent agreement/accuracy; same-method replay is not independent corroboration. No scope percentage, shared site/state or deployment changes. Human/owner MT gates remain open; the engineering baseline verifier requires Git history while the checker itself does not.
+
+### 2026-11-19-183441-android-prerequisite-review-complete-b55d55a1
+
+Recorded 2026-11-19T18:34:41.316246+00:00 · Contributor: Codex · change
+
+- **Changed.** Record distinct task-list-lead review of the Android prerequisite corrections before hosted integration.
+- **Evidence.** The independent reviewer executed four affected post-reap, normal completion, zero-exit license-refusal and unrelated-install-failure controls and matched all five source identities in the corrected receipt. [Change record](./runs/changes/2026-11-19-183441-android-prerequisite-review-complete-b55d55a1.json).
+- **Not claimed.** This is source-bound engineering review, not an actual emulator, real device, TalkBack, SDK license acceptance or full N-014 completion.
+
+
+### 2026-11-19-183324-android-reviewed-prerequisite-corrections-687857c7
+
+Recorded 2026-11-19T18:33:24.248622+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Prevent process-group signalling after a known child reap, and classify explicit SDK license refusals as unavailable regardless of manager exit code.
+- **Evidence.** Fifteen focused controls pass, including an actual child reaped before a simulated wait error, timeout/output caps and license mutation refusals. Both pinned current official package metadata identities match. Prior 13-control proof is retained as historical source evidence. [Change record](./runs/changes/2026-11-19-183324-android-reviewed-prerequisite-corrections-687857c7.json).
+- **Not claimed.** The post-reap injection models a review edge without forcing OS PID reuse; no atomic asynchronous-cleanup guarantee. Zero-exit license refusal is a synthetic SDK contract control. No hosted emulator, physical device, TalkBack or full original closure yet.
+
+
+### 2026-11-19-183114-android-sdk-existing-acceptance-e9f4aacd
+
+Recorded 2026-11-19T18:31:14.932239+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Correct Android emulator prerequisites to let the existing SDK manager decide existing license acceptance with closed stdin; preserve license bytes on success and failure, bound process diagnostics and time, and grant only the disposable hosted UID KVM access. Include Android implementation sources in reviewed boundary inventory.
+- **Evidence.** Thirteen targeted prerequisite/process controls, nine packaging refusals, the actual JVM lifecycle program and pinned Android-loader real-WASM parity all pass on current local sources. The initial synthetic fixture disk mismatch was corrected without lowering the actual runtime minimum. [Change record](./runs/changes/2026-11-19-183114-android-sdk-existing-acceptance-e9f4aacd.json).
+- **Not claimed.** No new license is accepted and no local emulator is installed. Actual hosted APK/runtime proof is pending; no physical Android, TalkBack, independent accuracy or original N-014 closure.
+
+
+### 2026-11-19-182536-android-nov19-current-main-217b3db9
+
+Recorded 2026-11-19T18:25:36.792087+00:00 · Contributor: Codex · change
+
+- **Changed.** Reconcile the open Android Share preview with current main while retaining both commit histories and current scope/accountability state.
+- **Evidence.** The six earlier Android change entries remain present alongside current main entries; merge conflicts in operational state and route manifest select current main for fresh validation. [Change record](./runs/changes/2026-11-19-182536-android-nov19-current-main-217b3db9.json).
+- **Not claimed.** This is source reconciliation, not a new runtime check or requirement closure. Current Android, website and boundary checks remain pending; physical Android and TalkBack acceptance stay open.
+
+
+### 2026-11-18-132924-android-current-main-43734cad
+
+Recorded 2026-11-18T13:29:24.603347+00:00 · Contributor: Codex · change
+
+- **Changed.** Resolved Android Share branch conflicts against current main, preserving both histories and selecting current website and route evidence.
+- **Evidence.** The installed JVM lifecycle controls, the pinned engine comparisons, 32 website checks and the public route gate ran on the reconciled source. [Change record](./runs/changes/2026-11-18-132924-android-current-main-43734cad.json).
+- **Not claimed.** The Android preview remains in draft. No emulator or physical TalkBack session was evidenced, and no original requirement closed.
+
+### 2026-11-18-013522-android-preview-route-review-834f0786
+
+Recorded 2026-11-18T01:35:22.690589+00:00 · Contributor: Codex · change
+
+- **Changed.** Reconciled the independent Android preview branch with the current web and public route inventories.
+- **Evidence.** All 32 website revalidation checks passed. The installed JVM and 137 engine comparison cases passed on the reconciled source. [Change record](./runs/changes/2026-11-18-013522-android-preview-route-review-834f0786.json).
+- **Not claimed.** Android emulator and physical TalkBack acceptance are pending. The preview carries zero new full scope closures.
+
+### 2026-11-17-203801-android-emulator-host-refusal-8f0dd08f
+
+Recorded 2026-11-17T20:38:01.402946+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Record the current hosted Android build and exact emulator prerequisites that prevented execution.
+- **Evidence.** Run 44171007663 compiled the APK, verified the development signature, and identified inaccessible KVM and a missing matching SDK license record. The downloaded APK matches its recorded engine and loader. [Change record](./runs/changes/2026-11-17-203801-android-emulator-host-refusal-8f0dd08f.json).
+- **Not claimed.** The emulator step stopped before installation and ran zero Android cases. N-014 remains open for Android Share and physical acceptance.
+
+### 2026-11-17-203406-android-hosted-compile-and-emulator-preflight-94fc4a00
+
+Recorded 2026-11-17T20:34:06.092856+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Record the real hosted Android build and add a hosted emulator path with reviewed SDK package versions and an existing license match.
+- **Evidence.** Hosted run 44169646271 produced and verified an ephemeral test APK with zero permissions. The downloaded APK contains classes.dex and matches the recorded method and loader. Official metadata and local refusal controls passed for the new emulator step. [Change record](./runs/changes/2026-11-17-203406-android-hosted-compile-and-emulator-preflight-94fc4a00.json).
+- **Not claimed.** The first runner did not execute emulator cases. Actual Android runtime, physical usability and independent accuracy remain pending.
+
+### 2026-11-17-202759-android-hosted-java-compiler-efe1e9fa
+
+Recorded 2026-11-17T20:27:59.293759+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Compile Java 8 lambdas with the JDK bootstrap classes and keep Android API stubs on the compiler classpath.
+- **Evidence.** Hosted run 44169342019 reached javac and exposed the LambdaMetafactory bootstrap error after its SDK, asset and session checks passed. Local packaging controls pass. [Change record](./runs/changes/2026-11-17-202759-android-hosted-java-compiler-efe1e9fa.json).
+- **Not claimed.** Corrected hosted compile, Android runtime and physical device acceptance remain pending. No original requirement closes.
+
+### 2026-11-17-175729-android-share-offline-checker-bf7204be
+
+Recorded 2026-11-17T17:57:29.872678+00:00 · Contributor: Codex Android lane · change
+
+- **Changed.** Add a bounded independent Android text Share checker around the existing offline PS engine, native review/edit/check/clear lifecycle, compact branded results and an existing-tools hosted APK build path.
+- **Evidence.** Actual pinned WebAssembly and Android loader match 137 current development/Unicode probes; 9 packaging controls and the actual JVM lifecycle program pass. Asset identity, notice checks and permission refusals remain explicit. [Change record](./runs/changes/2026-11-17-175729-android-share-offline-checker-bf7204be.json).
+- **Not claimed.** APK compilation and actual Android Share/WebView execution await hosted tools; physical devices, TalkBack, human usability, production signing and independent accuracy remain unproven. N-014 and original scope completion unchanged.
 
 ### 2026-11-19-173627-tag-bots-state-closeout-3bc059bd
 

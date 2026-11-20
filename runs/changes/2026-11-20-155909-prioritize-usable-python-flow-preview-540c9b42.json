@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-155909-prioritize-usable-python-flow-preview-540c9b42",
+  "recorded_at": "2026-11-20T15:59:09.265643+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8b21fffbb3a5b89b9cf6c555959fa9cfa1bd09fd",
+  "changed": "Define the next user-visible deliverable: an optional on-device Python flow preview inside PS, with unchanged canonical logic and independent worker/import failure boundaries.",
+  "proves": "The documented architecture names the user outcome, exact ownership, privacy/source risks and two-engine acceptance before shared UI integration; text diff checks pass.",
+  "limits": "The browser feature remains in implementation; no live availability, original closure or independently validated new tag is claimed.",
+  "scope_ids": [
+    "F-012",
+    "T-PS"
+  ],
+  "files": {
+    "docs/credential-device-integration-plan.md": "a8f0a1f5ad9008b30bed60763b3c63515dff403b63ab47f81e360e6bf7292768"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-20T15:59:11.402548+00:00"
+    }
+  ]
+}

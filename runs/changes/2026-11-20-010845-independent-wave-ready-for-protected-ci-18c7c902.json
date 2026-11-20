@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-010845-independent-wave-ready-for-protected-ci-18c7c902",
+  "recorded_at": "2026-11-20T01:08:45.922764+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "43de6d821c5522283f960837972b65ac2e746a2c",
+  "changed": "Capture passing unchanged-source capability and boundary checks for the integrated independent tag wave, retaining all original scope and failed candidate history.",
+  "proves": "PS7,privacy6,extension14,protocol56 andwebsite46 configured commands pass;1352 reviewed source inputs preserve the existing personal endpoint and permission boundaries. All202 original jobs/criteria remain intact with132 complete and70 open.",
+  "limits": "Protected and actual hosted Android checks are pending. The earlier accessibility scroll cause is unestablished despite current passing diagnostics. No full original closure, independent accuracy, physical phone/human accessibility, new SDK assent or new production tag is claimed.",
+  "scope_ids": [
+    "F-012",
+    "T-MT",
+    "F-019c",
+    "N-014"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "41cc5c41e94c1b0c8c8bc8052b7be6155e2919475fb353fa80e1afb18c73e0cf",
+    "runs/2026-11-20-tag-wave2-boundaries.json": "3541a55aed1f9b18f96c550c518d6b9979c900113521179f4133ceca611f98ee",
+    "runs/2026-11-20-tag-wave2-local-integration.json": "0045890ca0fae44cc6766e47a9fa9aef907cbd081aee62353aeb2bd177ff6b7d",
+    "runs/2026-11-20-tag-wave2-website-current.json": "d075520c0844eb67ad743715e9715c329b9ab69e799a906e2723ef1142d629ce",
+    "state.json": "1e4f093c9683914172585308d1f38b0823831c340f48b7ce439b4615e7a08414"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-tag-wave2-local-integration.json",
+      "sha256": "0045890ca0fae44cc6766e47a9fa9aef907cbd081aee62353aeb2bd177ff6b7d"
+    },
+    {
+      "path": "runs/2026-11-20-tag-wave2-website-current.json",
+      "sha256": "d075520c0844eb67ad743715e9715c329b9ab69e799a906e2723ef1142d629ce"
+    },
+    {
+      "path": "runs/2026-11-20-tag-wave2-boundaries.json",
+      "sha256": "3541a55aed1f9b18f96c550c518d6b9979c900113521179f4133ceca611f98ee"
+    }
+  ],
+  "checks": []
+}

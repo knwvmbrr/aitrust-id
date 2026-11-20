@@ -12,6 +12,7 @@ import {presentation} from './presentation.js';
 import {usage} from './usage.js';
 import {MTExplorerSlot} from './MTExplorerSlot.jsx';
 import {HPExplorerSlot} from './HPExplorerSlot.jsx';
+import {CredentialFlowExplorerSlot} from './CredentialFlowExplorerSlot.jsx';
 import {catalogueExport} from './catalogue-export.js';
 import {Performance,PerformanceEvidence,performanceById} from './performance.jsx';
 import {HandheldDialogs} from './handheld.jsx';
@@ -49,6 +50,13 @@ function Disclosure({title,children,defer=false}) {
  return <details className="tag-disclosure border-t border-line" onToggle={event=>setOpen(event.currentTarget.open)}><summary className="flex min-h-12 cursor-pointer items-center justify-between gap-3 py-3 text-sm font-semibold"><span>{title}</span><span aria-hidden="true" className="disclosure-symbol text-lg font-normal">+</span></summary><div className="pb-4 text-sm leading-6">{(!defer||open)&&children}</div></details>;
 }
 function FeatureList({ids,records}){const featuresById=new Map(records.map(r=>[r.id,r]));const unique=[...new Set(ids)].map(id=>featuresById.get(id)).filter(Boolean);return <ul className="mt-2 space-y-3">{unique.map(f=><li key={f.id}><p className="text-sm font-semibold">{f.title}</p><p className="text-sm leading-6">{f.job}</p><p className="mt-1 text-sm text-muted">{f.id} · {f.disposition} · Scope record; not an implementation claim</p></li>)}</ul>}
+function PythonFlowPreview(){
+ const [open,setOpen]=useState(false);
+ return <details data-credential-method className="tag-disclosure my-4 border-y border-line py-1" onToggle={event=>setOpen(event.currentTarget.open)}>
+  <summary className="flex min-h-12 cursor-pointer items-center justify-between gap-3 py-3 text-sm font-semibold"><span>Inspect Python code · preview</span><span aria-hidden="true" className="disclosure-symbol text-lg">+</span></summary>
+  {open&&<CredentialFlowExplorerSlot/>}
+ </details>;
+}
 function UseTag({tag}) {
  const use=usage(tag);const [message,setMessage]=useState('');
  async function copy(command){try{await navigator.clipboard.writeText(command);setMessage('Commands copied. Review them before running in Terminal.');}catch{setMessage('Copy is unavailable. Select the commands, or open the full setup guide.');}}
@@ -76,6 +84,7 @@ function TagDetails({tag}) {
   {tag.id==='MT'&&<MTExplorerSlot/>}
   {tag.id==='HP'&&<HPExplorerSlot/>}
   <UseTag tag={tag}/>
+  {tag.id==='PS'&&<PythonFlowPreview/>}
   {intro.working&&<section aria-label="Validation status" className="my-4 rounded-xl border border-line bg-canvas p-4">
    <div className="flex flex-wrap items-center justify-between gap-2"><h3 className="text-sm font-semibold">Validation</h3><span className="text-xs text-muted">{intro.stage}</span></div>
    <p className="mt-1 text-sm font-semibold">{intro.validationTitle}</p><p className="mt-1 text-sm leading-6 text-muted">{intro.validation}</p><a className="mt-2 block text-xs underline underline-offset-4" href="/policies/validation/">{intro.releasePolicy}</a>

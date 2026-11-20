@@ -17,6 +17,13 @@ def execute(request):
     text = workflow.subject(request['subject'], 'en')
     sources = workflow.identity(kind)
     rows = []
+    if kind == workflow.QUOTATION:
+        from tools.mt_quotation_component import produce, replay
+        if request['packet'] is None:
+            return produce(request['subject'], sources, workflow.LIMITS)
+        if type(request['packet']) is not dict or set(request['packet']) != {'replay_record'}:
+            raise ValueError('Unsupported quotation replay request')
+        return replay(request['subject'], request['packet']['replay_record'], sources, workflow.LIMITS)
     if kind == 'choice':
         from tools.blind_review_io import source
         from protocol import corpus

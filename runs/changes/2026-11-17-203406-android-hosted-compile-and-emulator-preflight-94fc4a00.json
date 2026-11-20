@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-17-203406-android-hosted-compile-and-emulator-preflight-94fc4a00",
+  "recorded_at": "2026-11-17T20:34:06.092856+00:00",
+  "author": "Codex Android lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ccea7ccd420ec36c76f037c71a5f44f3a2cc455f",
+  "changed": "Record the real hosted Android build and add a hosted emulator path with reviewed SDK package versions and an existing license match.",
+  "proves": "Hosted run 44169646271 produced and verified an ephemeral test APK with zero permissions. The downloaded APK contains classes.dex and matches the recorded method and loader. Official metadata and local refusal controls passed for the new emulator step.",
+  "limits": "The first runner did not execute emulator cases. Actual Android runtime, physical usability and independent accuracy remain pending.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    ".github/workflows/android-share.yml": "c06494cf13805d26624d8fafae7cf79f978f9c17171dbf20b967995ed4b8251c",
+    "scripts/verify-android-emulator.py": "27765711e23371526481bd2e31c58c8af941f485a1abcc98714f7ce3e0298c1c",
+    "docs/android-share-plan.md": "fe80a2b87a35065de9f26cd3476befba2380a862ad0850bd9869b1bc0edd45cb",
+    "docs/android-share-developer.md": "145d897886830a857760ed3a322bd1b7d44b786c72e71604bdd0bf4bd670f6a7",
+    "runs/2026-11-17-android-hosted-build.json": "47f8299707e914769bf472fee87c850b678c9d98269f282c7289a7764b12debd"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-17-android-hosted-build.json",
+      "sha256": "47f8299707e914769bf472fee87c850b678c9d98269f282c7289a7764b12debd"
+    }
+  ],
+  "checks": []
+}

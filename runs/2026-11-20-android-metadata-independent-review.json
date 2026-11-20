@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-20T04:30:18.350684+00:00",
+  "author": "Codex PM independent reviewer",
+  "scope_ids": [
+    "N-014"
+  ],
+  "pass": true,
+  "sources": {
+    "scripts/verify-android-emulator.py": "ef43b59da70d7c1bba67d0fbb6dfb62921a10d4eacb3a52dd5d231599a3c7b6a"
+  },
+  "sources_unchanged": true,
+  "cases": [
+    {
+      "case": "metadata_redirect",
+      "pass": true
+    },
+    {
+      "case": "metadata_transport",
+      "pass": true
+    },
+    {
+      "case": "metadata_revision_drift",
+      "pass": true
+    },
+    {
+      "case": "reviewed_revision_and_bytes_bind_complete_metadata",
+      "pass": true
+    },
+    {
+      "case": "actual_main_reports_fixed_refusal_without_private_arguments_or_cases",
+      "pass": true
+    }
+  ],
+  "SDK_install_performed": false,
+  "license_newly_accepted": false,
+  "archive_downloaded": false,
+  "actual_android_runtime_exercised": false,
+  "original_hosted_exception_established": false,
+  "original_requirement_closed": false,
+  "independent_accuracy_evidence": false,
+  "limitations": [
+    "Synthetic metadata/error-transport and actual main reporting review only. Current official metadata matches are separately bound in the author receipt; the original hosted generic exception remains unknown."
+  ]
+}

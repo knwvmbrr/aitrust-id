@@ -1,0 +1,198 @@
+{
+  "format": "ai-trust-id-android-metadata-diagnostics/v1",
+  "recorded_at": "2026-11-20T02:58:51.482069+00:00",
+  "author": "Codex Debugging Lead",
+  "records": [
+    "N-014"
+  ],
+  "source_base_commit": "5cb9aa2b950a87c65eb513721562da56c7fe69ac",
+  "sources_sha256": {
+    "scripts/verify-android-emulator.py": "ef43b59da70d7c1bba67d0fbb6dfb62921a10d4eacb3a52dd5d231599a3c7b6a",
+    "tests/test_android_emulator_prerequisites.py": "0421e4ab0d4ace5a2c9c26ffece5ed7c1e6eaf3ae88a965074db2e90831a6cde"
+  },
+  "architecture": {
+    "change": "Preserve exact official package, license and archive allowlists; reject redirects before following; expose only fixed typed metadata boundary codes. Record successful document identities. Refresh same stable emulator package pin after read-only official metadata review.",
+    "risks": [
+      "Official stable metadata can change again; drift must refuse before installation.",
+      "Transport and metadata drift are distinct; generic historical failure cannot establish its original exception.",
+      "Matching metadata does not prove archive contents, installation, emulator boot or Share behavior."
+    ],
+    "unchanged_limits": {
+      "metadata_timeout_seconds": 15,
+      "metadata_bytes": 4194304,
+      "sdk_timeout_seconds": 270,
+      "sdk_output_bytes": 1048576
+    }
+  },
+  "historical_hosted_failure": {
+    "run_id": 44651494156,
+    "source_commit": "5cb9aa2b950a87c65eb513721562da56c7fe69ac",
+    "log_sha256": "173fb4902becad21967930dbd12355d60a879a2dccafa080aca34eedb1c7e9e3",
+    "status": "FAILED",
+    "phase": "reviewed_metadata",
+    "elapsed_seconds": 0.135,
+    "kvm_access": true,
+    "sdk_install_started": false,
+    "case_count": 0,
+    "original_exception_known": false
+  },
+  "before": {
+    "source_commit": "5cb9aa2b950a87c65eb513721562da56c7fe69ac",
+    "helper_sha256": "68ac8545670f14130aa558a4527e418076762a1171a3b136506f23bbe8250b53",
+    "old_emulator_pin": [
+      "repository2-3.xml",
+      "37.2.13",
+      "emulator-linux_x64-16740729.zip",
+      349658551,
+      "f41f9e31eb5ca64926603c03265c50bbc0ff4172"
+    ],
+    "captured_official_metadata_replay": [
+      {
+        "package": "emulator",
+        "outcome": "Official SDK package revision or license drift"
+      },
+      {
+        "package": "system-images;android-36;default;x86_64",
+        "outcome": "MATCH"
+      }
+    ],
+    "additional_live_read": "ConnectionResetError before metadata parsing; not retried",
+    "hosted_original_exception_known": false
+  },
+  "read_only_official_metadata": {
+    "recorded_at": "2026-11-20T02:39:28.873896+00:00",
+    "records": [
+      {
+        "package": "emulator",
+        "metadata_sha256": "b97da160df8d80f0fe67739643cb53fbfcafd9c502ef57b78c038645062865ee",
+        "metadata_bytes": 433165,
+        "license_sha1": "efa68a6b3c661d18699d5c026771d5911cdc2f83",
+        "revision": "37.3.10",
+        "license_ref": "android-sdk-license",
+        "archives": [
+          {
+            "host": "linux",
+            "url": "emulator-linux_x64-16970787.zip",
+            "bytes": "350068887",
+            "sha1": "5f7314368fc6c05c937f6991bb4106214dc389e7"
+          }
+        ]
+      },
+      {
+        "package": "system-images;android-36;default;x86_64",
+        "metadata_sha256": "7b119fdc282a65432aab52e8bbc64546f7fb6ec74e79e235633c60d06564b111",
+        "metadata_bytes": 189048,
+        "license_sha1": "efa68a6b3c661d18699d5c026771d5911cdc2f83",
+        "revision": "2",
+        "license_ref": "android-sdk-license",
+        "archives": [
+          {
+            "host": null,
+            "url": "x86_64-36_r02.zip",
+            "bytes": "844217077",
+            "sha1": "829c076e8ff448a336097ae25a355b495ba36e2c"
+          }
+        ]
+      }
+    ]
+  },
+  "current_default_helper_live_reads": {
+    "recorded_at": "2026-11-20T02:57:40.403542+00:00",
+    "actual_default_metadata_reads": [
+      {
+        "outcome": "MATCH",
+        "observation": {
+          "package": "emulator",
+          "metadata_sha256": "b97da160df8d80f0fe67739643cb53fbfcafd9c502ef57b78c038645062865ee",
+          "metadata_bytes": 433165,
+          "revision": "37.3.10",
+          "license_sha1": "efa68a6b3c661d18699d5c026771d5911cdc2f83"
+        }
+      },
+      {
+        "outcome": "MATCH",
+        "observation": {
+          "package": "system-images;android-36;default;x86_64",
+          "metadata_sha256": "7b119fdc282a65432aab52e8bbc64546f7fb6ec74e79e235633c60d06564b111",
+          "metadata_bytes": 189048,
+          "revision": "2",
+          "license_sha1": "efa68a6b3c661d18699d5c026771d5911cdc2f83"
+        }
+      }
+    ]
+  },
+  "verification": {
+    "focused_unittest_count": 26,
+    "focused_exit_code": 0,
+    "focused_log_sha256": "0670ab71505f5719b998b5c6f611261fae0754db53ea1bd739e098b7b02d4cae",
+    "actual_isolated_main_fault_processes": [
+      {
+        "diagnostic_code": "metadata_http_status",
+        "exit_code": 1,
+        "fixed_report_no_private_values": true,
+        "case_count": 0
+      },
+      {
+        "diagnostic_code": "metadata_redirect",
+        "exit_code": 1,
+        "fixed_report_no_private_values": true,
+        "case_count": 0
+      },
+      {
+        "diagnostic_code": "metadata_transport",
+        "exit_code": 1,
+        "fixed_report_no_private_values": true,
+        "case_count": 0
+      },
+      {
+        "diagnostic_code": "metadata_size",
+        "exit_code": 1,
+        "fixed_report_no_private_values": true,
+        "case_count": 0
+      },
+      {
+        "diagnostic_code": "metadata_parse",
+        "exit_code": 1,
+        "fixed_report_no_private_values": true,
+        "case_count": 0
+      },
+      {
+        "diagnostic_code": "metadata_license_drift",
+        "exit_code": 1,
+        "fixed_report_no_private_values": true,
+        "case_count": 0
+      },
+      {
+        "diagnostic_code": "metadata_package_drift",
+        "exit_code": 1,
+        "fixed_report_no_private_values": true,
+        "case_count": 0
+      },
+      {
+        "diagnostic_code": "metadata_revision_drift",
+        "exit_code": 1,
+        "fixed_report_no_private_values": true,
+        "case_count": 0
+      },
+      {
+        "diagnostic_code": "metadata_archive_drift",
+        "exit_code": 1,
+        "fixed_report_no_private_values": true,
+        "case_count": 0
+      }
+    ],
+    "source_hashes_stable": true,
+    "harness_correction": "Initial fault harness used rewritten argv to select code and failed its report assertion; captured fixed code before invoking main. No helper source change or network retry."
+  },
+  "limits": {
+    "sdk_installed": false,
+    "sdk_terms_accepted": false,
+    "archive_downloaded": false,
+    "emulator_started": false,
+    "android_share_executed": false,
+    "physical_device_evidence": false,
+    "independent_accuracy_evidence": false,
+    "original_requirement_closed": false,
+    "hosted_original_failure_cause_proven": false
+  }
+}

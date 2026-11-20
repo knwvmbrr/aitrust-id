@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-010000-record-accessibility-action-failure-context-8997716b",
+  "recorded_at": "2026-11-20T01:00:00.830487+00:00",
+  "author": "Codex accessibility debugging lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0ed390119eedd9b760efc8d4df34cfb7c273c5fb",
+  "changed": "Added failure-only surface/control/action diagnostics around existing scroll/focus probes and preserved the original thrown error in the accessibility report. Input controls are identified by labels, never entered values.",
+  "proves": "Authored timeout/focus controls capture the expected diagnostic without a textarea canary. One actual full accessibility run passed62 surfaces,916 focus checks,890 target checks and158 disclosures in both themes on frozen built assets; source and served hashes remained stable. Original timeout and three non-reproducing hypotheses are preserved.",
+  "limits": "Original timeout cause remains UNESTABLISHED. This is diagnostic improvement only, not a product fix, requirement closure, human/phone acceptance or full conformance claim. No probe criterion, default action timeout or pre-action await was changed; snapshot identity is post-error.",
+  "scope_ids": [
+    "F-139",
+    "F-142"
+  ],
+  "files": {
+    "docs/accessibility-failure-diagnostics.md": "89c8aa6c16f3936d85952c86f68c5824c5d559a0cc48edf9f0ac0e1dd60c0668",
+    "runs/2026-11-20-a11y-control-active-frame-diagnosis.json": "54b6041fcf1996f97b40adc557c94a731f5ef5cd3f444ffeceb358820224630b",
+    "runs/2026-11-20-a11y-control-stability-diagnosis-1.json": "5fe14809a9ee9a54c4d6c6e01a1d8bbe6b4a23aa0b49073bea631afa134cff0c",
+    "runs/2026-11-20-a11y-control-stability-diagnosis-2.json": "4ead34374496a1f0b68cfd3f9e0218c6b18e8b5b9cac6dd1605251d2a62847db",
+    "runs/2026-11-20-a11y-diagnostic-result.json": "d5516de70ecfcafd06859a9dfa9d352980ab608a52f25c8ceacf685589c7d76c",
+    "runs/2026-11-20-a11y-failure-diagnostic-controls.json": "eaca4d053a63a7fdb9efa622da36d42ed4b5ace3fa3f37373854de442b2775bb",
+    "runs/2026-11-20-a11y-full-diagnostic-run.json": "cb0cabb66c34842c216a5b7abffae2004fea1461754ba51af5aec40fe7f8eee3",
+    "runs/2026-11-20-a11y-full-diagnostic-source-proof.json": "d9374d017a82c6e9a106aa456ad915cd999bed806fcb8a4283002f48e02c71aa",
+    "scripts/accessibility-probes.cjs": "89c7f4947c4e9a0ae9be3fa4414ebd5dfb2b3bce869e9948faa9b86f2fe3b92c",
+    "scripts/verify-site-accessibility.cjs": "733073fc5216c97c2083376a91225b0cfe878354bcdfeb777d906e4632704eb9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-a11y-diagnostic-result.json",
+      "sha256": "d5516de70ecfcafd06859a9dfa9d352980ab608a52f25c8ceacf685589c7d76c"
+    },
+    {
+      "path": "runs/2026-11-20-a11y-full-diagnostic-source-proof.json",
+      "sha256": "d9374d017a82c6e9a106aa456ad915cd999bed806fcb8a4283002f48e02c71aa"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-20T01:00:00.926085+00:00"
+    }
+  ]
+}

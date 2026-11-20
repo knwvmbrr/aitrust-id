@@ -79,7 +79,9 @@
     "test:hp-device": "python3 -m pytest tests/test_hp_device.py -q && node --test tests/hp-device-client.mjs",
     "verify:hp-site": "node scripts/hp-site-controls.cjs",
     "verify:delivery": "python3 scripts/session-delivery.py",
-    "check:session": "python3 scripts/session-delivery.py --check-session"
+    "check:session": "python3 scripts/session-delivery.py --check-session",
+    "build:credential-device": "python3 scripts/build-credential-device.py",
+    "test:credential-device": "python3 -m pytest tests/test_credential_device.py -q && node --test tests/credential-device-client.mjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",

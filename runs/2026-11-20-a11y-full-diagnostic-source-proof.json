@@ -1,0 +1,35 @@
+{
+  "captured_at": "2026-11-20T00:57:28.225Z",
+  "pass": true,
+  "source_sha256": {
+    "scripts/accessibility-probes.cjs": "89c7f4947c4e9a0ae9be3fa4414ebd5dfb2b3bce869e9948faa9b86f2fe3b92c",
+    "scripts/verify-site-accessibility.cjs": "733073fc5216c97c2083376a91225b0cfe878354bcdfeb777d906e4632704eb9"
+  },
+  "served_artifact_sha256": {
+    "_headers": "a40aac80dbcc3744229866b382828bbf0a381ec2662f313c54f5e328eb8f96ce",
+    "index.html": "3663f8c6289c377ec47581c06e85be696074af3ec1bb990912accfab5544edce",
+    "assets/HPExplorer-MrnqLV0a.js": "d0ee7ccb8f27bd244f2731c52699ac75a4e4b1dbb390535e836d3a8c3c46eaed",
+    "assets/MTExplorer-BGfYTtCO.js": "88ffe9b3f16509509da2e22cf3bbb81306c095750504551b3da7dad1600095dc",
+    "assets/device-worker-CYlrzLLK.js": "4ccf9842437c5fb613d04a6e3ab268fbf369f84a2a767b62416aafb9baf32269",
+    "assets/hp-device-worker-Ckw2-Whn.js": "04f97ef2dae6e5afb5573bd7e0465b1d72886fb656e8dbcd02d0a9f28bef2a1d",
+    "assets/index-BikIHjkX.css": "49734eb434083c869df2e3b3c47d0e19c620bba2710055a6abd705a863151868",
+    "assets/index-CDcsWZMx.js": "cb6a07b3f0c061da54aa3940ca5984867fff85bf2bfdaef13b347a6d5d69c018",
+    "assets/mt-device-worker-Bw5Cr2RG.js": "d688ff86b80a4bd993805b61900d89f864c94a299e7140ced3d7db0b68f8b115",
+    "assets/public-scope-B5YX1OAD.json": "757c53bab22469599fed16acc387bf288f5881e08909dc34afc5e8f612fe4d77"
+  },
+  "base_commit": "0ed390119eedd9b760efc8d4df34cfb7c273c5fb",
+  "purpose": "One unchanged-threshold full accessibility run with failure-only diagnostic capture",
+  "original_timeout_cause": "UNESTABLISHED",
+  "product_changed": false,
+  "child": {
+    "code": 0,
+    "signal": null,
+    "stdout": "{\"pass\":true,\"lazyReadiness\":{\"pass\":true,\"controlled_actual_hp_lazy_insertion\":true,\"unchanged_probes\":true,\"themes\":[{\"theme\":\"light\",\"actual_child_request_held\":true,\"readiness_waited_for_child\":true,\"indexed_target_before\":\"Testing and evidence\\n+\",\"indexed_target_after\":{\"name\":\"Source notices\",\"focused\":false,\"indicator\":false},\"ready_first\":{\"disclosure\":{\"checked\":3,\"failures\":[]},\"targets\":{\"controls\":19,\"inline_exceptions\":0,\"failures\":[]},\"focus\":{\"checked\":19,\"failures\":[]},\"spacing\":{\"clipped\":[],\"horizontal_overflow\":false}},\"forced_colors_reflow\":true},{\"theme\":\"dark\",\"actual_child_request_held\":true,\"readiness_waited_for_child\":true,\"indexed_target_before\":\"Testing and evidence\\n+\",\"indexed_target_after\":{\"name\":\"Source notices\",\"focused\":false,\"indicator\":false},\"ready_first\":{\"disclosure\":{\"checked\":3,\"failures\":[]},\"targets\":{\"controls\":17,\"inline_exceptions\":0,\"failures\":[]},\"focus\":{\"checked\":19,\"failures\":[]},\"spacing\":{\"clipped\":[],\"horizontal_overflow\":false}},\"forced_colors_reflow\":true}],\"manual_screen_reader\":false},\"surfaces\":62,\"theme_modes\":2,\"focus_controls\":916,\"target_controls\":890,\"disclosures\":158}\n",
+    "stderr": ""
+  },
+  "actual_report": {
+    "path": "runs/2026-11-20-a11y-full-diagnostic-run.json",
+    "sha256": "cb0cabb66c34842c216a5b7abffae2004fea1461754ba51af5aec40fe7f8eee3"
+  },
+  "source_and_served_artifacts_unchanged": true
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-183324-android-reviewed-prerequisite-corrections-687857c7",
+  "recorded_at": "2026-11-19T18:33:24.248622+00:00",
+  "author": "Codex Android lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "70085c9a22cb63102261384609b4b93e5c1daf9c",
+  "changed": "Prevent process-group signalling after a known child reap, and classify explicit SDK license refusals as unavailable regardless of manager exit code.",
+  "proves": "Fifteen focused controls pass, including an actual child reaped before a simulated wait error, timeout/output caps and license mutation refusals. Both pinned current official package metadata identities match. Prior 13-control proof is retained as historical source evidence.",
+  "limits": "The post-reap injection models a review edge without forcing OS PID reuse; no atomic asynchronous-cleanup guarantee. Zero-exit license refusal is a synthetic SDK contract control. No hosted emulator, physical device, TalkBack or full original closure yet.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    ".github/workflows/android-share.yml": "b2d435bd9571326dc0e8c05badbd35183c17f423b7bd40f4c78f7ba9a2c7a9b3",
+    "docs/android-share-plan.md": "81aa936b56790d3c7456ab2c3d60276b3194935f23d867fc3dbd2b0cd91d77ca",
+    "runs/2026-11-19-android-prerequisites-corrected.json": "38e323810a2dbb16085524e3f8694c8a019c73688b28b5390c0c5a85c727ad9f",
+    "runs/2026-11-19-android-prerequisites-local.json": "d755bafa03c332886759f4d4be718e87fb939a93857c7fa7692d84e6f272ee6a",
+    "scripts/verify-android-emulator.py": "68ac8545670f14130aa558a4527e418076762a1171a3b136506f23bbe8250b53",
+    "scripts/verify-route-boundaries.py": "7c43a1a5e362dbce0d2d67df83997c8fbd7606513c60fc93b1a348cce59e7f03",
+    "tests/test_android_emulator_prerequisites.py": "581e7f00688fb7e26ab684bf196a2e3c17041ff611f4de839709f0aa63bfb1c1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-android-prerequisites-corrected.json",
+      "sha256": "38e323810a2dbb16085524e3f8694c8a019c73688b28b5390c0c5a85c727ad9f"
+    }
+  ],
+  "checks": []
+}

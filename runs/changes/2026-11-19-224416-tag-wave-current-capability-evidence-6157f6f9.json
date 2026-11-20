@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-19-224416-tag-wave-current-capability-evidence-6157f6f9",
+  "recorded_at": "2026-11-19T22:44:16.949875+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e3ff86e1da953c714e2cc888437ec8b567ed7585",
+  "changed": "Record current PS, privacy, extension and protocol validation after independent tag-wave integration, with the exact corrected Linux credential evidence.",
+  "proves": "All four configured capability command groups pass on frozen inputs, including the new affected component controls. Corrected Linux source matches macOS and preserves actual nonroot/network-denial evidence. Reviewed source inventory covers1352 implementation inputs.",
+  "limits": "Website/protected/hosted Android validation is pending. Existing scope remains132complete/70open; no full original, independent accuracy or physical-device acceptance is claimed.",
+  "scope_ids": [
+    "F-012",
+    "T-MT",
+    "F-019c",
+    "N-014"
+  ],
+  "files": {
+    "README.md": "b881ff959590ab3b95afecf2a61099045ecbc2e91f6322e600ab15b3aa4ab408",
+    "docs/android-share-developer.md": "f278be4113fa51e0859a1babaa5c414e1080b06d151b1fb38727f50b9a96d6cf",
+    "docs/scope-progress.json": "90ca92c674401c59888d6612c5ec67a7b099c2e6e8147d0f60350fd3d134ea76",
+    "docs/scope-progress.md": "e74beee9d32e587c00b99b7e1022436f8431214877a5323ecaac875c31252e6c",
+    "docs/tag-wave-nov19-integration.md": "10d8bff31a5b102722c54c0707cb13f77760d5df4f15102836e699c61c2131b2",
+    "eval/revalidation.json": "0a52934db5ccc4db7619c780d3d63afd21485de9feda820214fa3dc0b5ba55f6",
+    "eval/route-boundaries.json": "03bbc1a3b164308fde69d6b1a853ab8e62cc222c225c462d19c5a87bef654d84",
+    "runs/2026-11-19-credential-flow-context-linux.json": "874739330dc5974356ccb0a3cf9ba9f0a3e0be846afca1ca0e84882eb2edd6c8",
+    "runs/2026-11-19-tag-wave2-PII_REDACTED.json": "c2ea113e14bf77698c7bdbf6d9b28d3488b426a269b83df8e305b52077bf480c",
+    "runs/2026-11-19-tag-wave2-PS.json": "386e17bafb5c0abea94d9580dc1c6fa43f573ec69bd557fa00db845512b25e92",
+    "runs/2026-11-19-tag-wave2-extension.json": "28f55280a9d5c55f2839795fe3086b5855f0444985329524bc59ea85f645aeeb",
+    "runs/2026-11-19-tag-wave2-protocol.json": "d4f8d8f7db13052083f38acb6e6f9383c1eddcfe2bbf3208e62f620f08d8aaca",
+    "scripts/verify-route-boundaries.py": "50f6f2085b1aa4b4b4676f29bf5cd6fdda2d2efc6b724f9ee2466083871b7f60",
+    "state.json": "6638c74280bc64fc34f29039bdd87cc3ca7d83bdcb2f4cb3f93af33ae306517d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-tag-wave2-PS.json",
+      "sha256": "386e17bafb5c0abea94d9580dc1c6fa43f573ec69bd557fa00db845512b25e92"
+    },
+    {
+      "path": "runs/2026-11-19-tag-wave2-PII_REDACTED.json",
+      "sha256": "c2ea113e14bf77698c7bdbf6d9b28d3488b426a269b83df8e305b52077bf480c"
+    },
+    {
+      "path": "runs/2026-11-19-tag-wave2-extension.json",
+      "sha256": "28f55280a9d5c55f2839795fe3086b5855f0444985329524bc59ea85f645aeeb"
+    },
+    {
+      "path": "runs/2026-11-19-tag-wave2-protocol.json",
+      "sha256": "d4f8d8f7db13052083f38acb6e6f9383c1eddcfe2bbf3208e62f620f08d8aaca"
+    },
+    {
+      "path": "runs/2026-11-19-credential-flow-context-linux.json",
+      "sha256": "874739330dc5974356ccb0a3cf9ba9f0a3e0be846afca1ca0e84882eb2edd6c8"
+    }
+  ],
+  "checks": []
+}

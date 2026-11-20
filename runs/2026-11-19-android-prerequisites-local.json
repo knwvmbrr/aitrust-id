@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-19T18:29:32.885436+00:00",
+  "author": "Codex Android lane",
+  "scope_ids": [
+    "N-014"
+  ],
+  "pass": true,
+  "source_base": "70085c9a22cb63102261384609b4b93e5c1daf9c",
+  "sources": {
+    "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+    "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29",
+    "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+    "mobile/android/tests/ShareSessionTest.java": "5aa69d10bdfa1b76c7ed24d25dc76b66d100f961bf1f7a23986d2e5edac1d5d9",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "179d01c54c343285fddf440aff2971c8876eb713e91fa12a386d6e6d47d07ea0",
+    "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+    "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+    "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+    "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+    "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+    "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+    "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+    "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+    "scripts/android-share-build.py": "ef3afbbd7fca59f4afaf5aef22db738f5c49873d85fa6886def66bace6521000",
+    "scripts/verify-android-emulator.py": "3a260c9412096ba5ba473bc372a061cdc1fa83259b39f0ee9f36427b0df07fce",
+    "scripts/verify-android-session.py": "db3064b1074df6f67edb0e4fd89dd1970f0074a0f733738b3441419fc2cf755a",
+    "scripts/verify-android-engine.mjs": "f6a81c4dee65290a09d7484bfc2ce69ea1b7145c6f24017bf0817ef60273c56f",
+    "tests/test_android_share.py": "e9e734b4e966c613d85e534197ad0409988c0f9321ea851e380aa81a9e568cf7",
+    "tests/test_android_emulator_prerequisites.py": "3b253810d7939bfcc2e14a81eeb120dc3ba365358f53f7f3885bce7faec2fff1",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    ".github/workflows/android-share.yml": "b2d435bd9571326dc0e8c05badbd35183c17f423b7bd40f4c78f7ba9a2c7a9b3"
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_android_share.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.411,
+      "private_log_sha256": "005cd060fe83bfb357aff3d9d72b9a78e8784c791413c90d78608f1f7dfcf03e"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_android_emulator_prerequisites.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.274,
+      "private_log_sha256": "aeac56c1537775866d1637134b3ad3ad6b29b3ac4fb1a8a968c7426e22762e12"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/verify-android-session.py",
+        "--java-home",
+        "${JAVA_HOME}"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.608,
+      "private_log_sha256": "33d11ce5bda1006d7d306afd94d02293ab523d2864c97baba91a98f9190ecb63"
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "scripts/android-share-build.py",
+        "--runtime-directory",
+        "site/node_modules/pyodide"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.124,
+      "private_log_sha256": "afbf7f191300260bc886af40bbfcb7e261e9d7da08984ba5e76f50a12af9580b"
+    },
+    {
+      "argv": [
+        "node",
+        "--experimental-vm-modules",
+        "scripts/verify-android-engine.mjs"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.604,
+      "private_log_sha256": "c4675b44a09123a07a0ce34d48067b91bf157d378056cb3d7a42d2f6c9831ee5"
+    }
+  ],
+  "command_count": 5,
+  "emulator_executed": false,
+  "physical_device_evidence": false,
+  "independent_accuracy_evidence": false,
+  "original_requirement_closed": false,
+  "prior_test_fixture_failure": {
+    "signature": "ManagerAcceptance fixtures reached actual low disk prerequisite and never invoked mocked installer",
+    "correction": "Keep actual 6GiB runtime minimum unchanged; give synthetic setup fixture explicit20GiB disk inventory.13 focused controls then execute intended paths."
+  },
+  "sources_unchanged": true,
+  "limitations": [
+    "Current local Android packaging/JVM/realWASM checks only. No actual SDK APK compilation or Android runtime is claimed by this record.",
+    "License manager commands are closed-stdin with bounded output; terms are not newly accepted.",
+    "Hosted runtime, physical Android/TalkBack and fullN014 acceptance remain open."
+  ]
+}

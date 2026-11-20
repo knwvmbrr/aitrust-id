@@ -28,6 +28,8 @@ is connected.
 distinguish related products from full product equivalence; business viability and
 comparative superiority are not established.
 
+The PS panel also has an optional **Inspect Python code** preview: paste a supported Python snippet to inspect credential-related data flow on your device. It never runs the snippet and does not issue a PS tag. [Method and limits](docs/credential-flow-device.md).
+
 ## Deploy approved local checker versions
 
 The [offline fleet tool](docs/fleet-deployment.md) enrolls private macOS/Linux
@@ -76,7 +78,10 @@ physical phones and human screen-reader testing remain open.
 
 Two reviewers can use **Review test examples** on the same PS page. This is a
 separate blind file form with no predictions. See [reviewer instructions](docs/PS-reviewer-start.md).
-Native iPhone/Android sharing interfaces are tracked future work, not shipped apps.
+Native sharing is development work, not a public App Store/Play release. The
+[Android Share preview](docs/android-share-developer.md) includes source, exact
+offline assets and a hosted test-APK build; physical-phone/TalkBack acceptance
+remains open.
 [Architecture, privacy boundaries and acceptance](docs/handheld-delivery.md).
 
 ## Try the local checker
@@ -131,6 +136,11 @@ The source also includes separately selected
 For one private command with separate urgency, authority and selected-choice results,
 use the [framing evidence workflow](docs/mt-evidence-workflow.md). A failed check
 does not erase its peers; this research route issues no MT tag.
+Select `--check authority-quotation` to keep quoted authority wording separate
+from phrases outside supported quotes; [instructions](docs/mt-quotation-workflow.md).
+[Credential context](docs/credential-flow-context.md) binds Python and surrounding
+text you select to an explicitly declared recommendation, quoted example or unknown
+context. It never verifies that declaration, executes the program or issues PS.
 Each has its own CLI, input boundary, version, exact evidence positions and failure
 state. They neither change the live PS checker nor release HP or MT. No inspected
 program executes; no ranking or source is fetched. Their combined actual CLI
