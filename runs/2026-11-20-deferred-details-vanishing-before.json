@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-11-20T15:44:20.818Z",
+  "pass": true,
+  "product_changed": false,
+  "base": "8b21fffbb3a5b89b9cf6c555959fa9cfa1bd09fd",
+  "subject_surface": "PII_REDACTED",
+  "controlled_scope_load": true,
+  "fetches_before_first_open": 0,
+  "raw_count_open": 28,
+  "tail_names": [
+    "Privacy and full details+",
+    "Copy link",
+    "Download details",
+    "Report an issue",
+    "Help improve this tag"
+  ],
+  "nth26_before": {
+    "name": "Report an issue",
+    "visible": true
+  },
+  "raw_count_closed": 26,
+  "evaluate_error": "locator.evaluate: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('dialog').locator('a[href],button,input:not([type=\"hidden\"]),textarea,select,summary,[role=\"button\"],[role=\"tab\"],[role=\"switch\"]').nth(26)\u001b[22m\n",
+  "reproduced_missing_nth26": true,
+  "fetches": 1
+}

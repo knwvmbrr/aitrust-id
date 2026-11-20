@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-155506-deferred-details-a11y-measurement-47b55b39",
+  "recorded_at": "2026-11-20T15:55:06.787379+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8b21fffbb3a5b89b9cf6c555959fa9cfa1bd09fd",
+  "changed": "Wait for real deferred public details before accessibility measurement; capture physical control identities and reject changed sets instead of using live ordinal locators.",
+  "proves": "Actual delayed scope control includes all 28 PII controls; physical identity survives native close and mutation is refused. Source-stable actual build passes both themes across 62 surfaces, 916 focus checks, 924 target checks and 158 disclosures; six defect mutations remain detected.",
+  "limits": "Original integrated timeout scheduling cause remains unestablished. Product source and thresholds unchanged; no physical-phone, human screen-reader, full WCAG, independent accuracy or parent completion claim.",
+  "scope_ids": [
+    "F-139",
+    "F-142"
+  ],
+  "files": {
+    "scripts/accessibility-probes.cjs": "d16a5723b16d3fa360044ae00fba166f2ada4c592b09952154b21b78c866b55c",
+    "scripts/verify-site-accessibility.cjs": "d1f5e0e99df2dda2f2d45ee02cea4d3a97f35461171c4b29a7fd509554613033",
+    "docs/accessibility-deferred-details-measurement.md": "826995b69cad68e7f5c34ca88d14f352a936fb6e8e33a9aa5bc1c8dee56a1805",
+    "runs/2026-11-20-deferred-details-current-a11y.json": "8d4b5ba0913957e9e15f62830ee244c2baac2fa300ca3669161ab198791a3f92",
+    "runs/2026-11-20-deferred-details-exact-sequence-before.json": "078609169dc36f90bacd2c0db08c0e42458a0d5e5a57cb74fb9c3105801bc311",
+    "runs/2026-11-20-deferred-details-execution.json": "58756de77cb8a729eb5a7c9a65e6fdfa3f40eb0023cc82677c11ccfbacd27f6e",
+    "runs/2026-11-20-deferred-details-focused-after.json": "e4dc56e8b1c74aba9e128f6e90a7393d844df9e4ffa8271434aea7a70c8d8bb8",
+    "runs/2026-11-20-deferred-details-probe-mutations.json": "98310d3d2c87e0a1e66049d774ffc2c0b51e277e18f177d435668afc9efdb16c",
+    "runs/2026-11-20-deferred-details-vanishing-before.json": "d4edf86bde2add5fb5636df69b8b96e2912323d0774aa85b3dbbfe2b330ce803"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-deferred-details-execution.json",
+      "sha256": "58756de77cb8a729eb5a7c9a65e6fdfa3f40eb0023cc82677c11ccfbacd27f6e"
+    },
+    {
+      "path": "runs/2026-11-20-deferred-details-current-a11y.json",
+      "sha256": "8d4b5ba0913957e9e15f62830ee244c2baac2fa300ca3669161ab198791a3f92"
+    },
+    {
+      "path": "runs/2026-11-20-deferred-details-focused-after.json",
+      "sha256": "e4dc56e8b1c74aba9e128f6e90a7393d844df9e4ffa8271434aea7a70c8d8bb8"
+    },
+    {
+      "path": "runs/2026-11-20-deferred-details-probe-mutations.json",
+      "sha256": "98310d3d2c87e0a1e66049d774ffc2c0b51e277e18f177d435668afc9efdb16c"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-20T15:55:06.824009+00:00"
+    }
+  ]
+}

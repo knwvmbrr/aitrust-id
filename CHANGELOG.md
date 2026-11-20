@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-155506-deferred-details-a11y-measurement-47b55b39
+
+Recorded 2026-11-20T15:55:06.787379+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Wait for real deferred public details before accessibility measurement; capture physical control identities and reject changed sets instead of using live ordinal locators.
+- **Evidence.** Actual delayed scope control includes all 28 PII controls; physical identity survives native close and mutation is refused. Source-stable actual build passes both themes across 62 surfaces, 916 focus checks, 924 target checks and 158 disclosures; six defect mutations remain detected. [Change record](./runs/changes/2026-11-20-155506-deferred-details-a11y-measurement-47b55b39.json).
+- **Not claimed.** Original integrated timeout scheduling cause remains unestablished. Product source and thresholds unchanged; no physical-phone, human screen-reader, full WCAG, independent accuracy or parent completion claim.
+
+
 ### 2026-11-20-050634-reviewed-sdk-metadata-correction-cfbf00f7
 
 Recorded 2026-11-20T05:06:34.264921+00:00 · Contributor: Codex · change
