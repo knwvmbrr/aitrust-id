@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-181237-verify-independent-closeout-website-0a70bb42
+
+Recorded 2026-11-20T18:12:37.346381+00:00 · Contributor: Codex task-list lead · change
+
+- **Changed.** Refresh actual website engineering proof for the independent twelve-job closeout, select the new receipt, and update state after all evidence timestamps.
+- **Evidence.** All49 website commands pass with source unchanged. Final1369-source boundary verification passes. Existing PS, redaction, protocol and extension receipts remain current without rerunning them. Twelve closure objects and132 complete/70 open originals remain unchanged. [Change record](./runs/changes/2026-11-20-181237-verify-independent-closeout-website-0a70bb42.json).
+- **Not claimed.** No Android source, N014 milestone, thirteenth closure, independent accuracy or new deployment is adopted. The separate Android diagnostic runtime still fails before its first case; cause remains unestablished.
+
+
+### 2026-11-20-180659-freeze-independent-closeout-boundary-4d00698a
+
+Recorded 2026-11-20T18:06:59.611897+00:00 · Contributor: Codex task-list lead · change
+
+- **Changed.** Regenerate the dated boundary review after the operations branch priming build; the reviewed 1369-file source inventory is unchanged.
+- **Evidence.** Prime build completed successfully and the exact route inventory has no added, changed or removed source files. Existing PS, redaction, protocol and extension receipts still assess current; only website evidence is stale from the two board documents. Twelve scoped closures remain valid. [Change record](./runs/changes/2026-11-20-180659-freeze-independent-closeout-boundary-4d00698a.json).
+- **Not claimed.** No source permission, endpoint or runtime boundary is changed. Fresh actual website execution remains pending; no old receipt is rebound.
+
+
+### 2026-11-20-180504-refresh-independent-closeout-evidence-e27137be
+
+Recorded 2026-11-20T18:05:04.034006+00:00 · Contributor: Codex task-list lead · change
+
+- **Changed.** Update only the dated independent Android diagnostic assignment while preserving twelve completed web and CLI jobs; prepare current-source website evidence for this operations branch.
+- **Evidence.** The latest separate cad8 hosted run failed its first receive with owned Ready UI and no synthetic text. All twelve scoped closure records and every original acceptance remain unchanged. [Change record](./runs/changes/2026-11-20-180504-refresh-independent-closeout-evidence-e27137be.json).
+- **Not claimed.** Failure cause is unestablished; no Android source correction, thirteenth task closure, original completion or native runtime acceptance is adopted. Actual website revalidation is pending.
+
+
+### 2026-11-20-170849-close-published-credential-deliveries-782a295d
+
+Recorded 2026-11-20T17:08:49.724088+00:00 · Contributor: Codex task-list lead · change
+
+- **Changed.** Record completion of the two predeclared CLI jobs and the live optional Python-flow browser preview; update dated worker assignments and actual publication pointers.
+- **Evidence.** Protected head1236 merged as04b11a12 after eleven required passes and zero review threads. The public checker passes actual Chromium/WebKit tests and sixteen critical asset-byte checks across two origins. Current accounting validates twelve scoped tasks, zero original closures, and preserved132complete/70open with valid state chronology. [Change record](./runs/changes/2026-11-20-170849-close-published-credential-deliveries-782a295d.json).
+- **Not claimed.** No full original criterion was changed or completed. No independent detector accuracy, physical-device acceptance, full-site artifact equivalence or first-try success is claimed. Android remains an active separate d507 PR134 followup after six-of-seven runtime results; this operations record does not redeploy the site or replace its deployed changelog.
+
+
 ### 2026-11-20-164850-credential-state-chronology-correction-6dbcd154
 
 Recorded 2026-11-20T16:48:50.393806+00:00 · Contributor: Codex PM after task-list lead diagnosis · change

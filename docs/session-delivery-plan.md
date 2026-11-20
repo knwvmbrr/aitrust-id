@@ -1,3 +1,17 @@
+# Current closeout — published software, full original scope retained
+
+Checked 2026-11-20T17:08:16.518216+00:00. [The public PS panel](https://aitrustid.com/#person/PS) now includes the optional local Python-flow preview. It inspects supported credential-to-HTTP structure without executing the program, uploading it or issuing a PS tag.
+
+**Completed scoped tasks: 12 (was 9). Originals: 132 complete / 70 open. New original closures: 0. Goal 60 remains NOT MET.** All original criteria and nine earlier closure records are unchanged.
+
+The credential-context CLI, quotation-aware MT CLI selection and public credential browser preview now meet their predeclared software acceptance. Actual Mac/Linux and both browser-engine controls, separate reviews, eleven required checks, protected merge `04b11a12b094fc4a770381aae96645dc78d01533` and live publication are evidenced. [Closure review](../runs/2026-11-20-credential-delivery-closeout-review.json) · [Protected CI](../runs/2026-11-20-credential-protected-ci-review.json) · [Live proof](../runs/2026-11-20-credential-publication.json). Live checks cover 16 critical HTTP asset bytes across two origins and actual Chromium/WebKit interactions; full-site artifact equivalence, physical phones, human screen readers and independent detector accuracy are not claimed.
+
+PS and MT implementation workers have completed those jobs and have no active assignment. Android worker `/root/share_debugger` remains active at 2026-11-20T18:05:03.124014+00:00 on the separate PR134 diagnostic lane, candidate `cad8bfb28b44ab5257dcb07d0c5823275626b98b`, run 44787621743. The latest first-receive check saw the owned Ready screen without the synthetic text; zero runtime cases completed and the exact cause remains unestablished. Earlier seven-case execution and later failures remain separate history. This branch keeps its existing native source and does not accept the pending Android correction. [Dated snapshot](../runs/2026-11-20-credential-closeout-android-snapshot.json). Android is not closed.
+
+F-012 still needs its accepted use/mention/integration and independent held-out validation. PS/MT retain their complete independent, contextual, calibration, human and route requirements. The F012 audit is not counted as another delivery. Prior failed prebuild, state-chronology, browser and Android candidates remain history; no first-try or unsupported original-cause claim is made. This operations record does not redeploy the implementation or replace its deployed changelog.
+
+## Preserved dated planning and acceptance history
+
 # Session delivery board — original requirements remain the goal
 
 ## Current public delivery job — 2026-11-20T15:59:29.823898+00:00
