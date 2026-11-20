@@ -32,6 +32,8 @@ PATTERNS = ('tests/test_device_bundle_determinism.py', 'scripts/verify-ps-effici
             'scripts/verify-registry-deferral.py', 'tests/test_registry_deferral.py',
             '.dockerignore', 'tests/test_route_boundaries.py', 'scripts/replay-assertion.py', 'scripts/verify-assertion-replay.py',
             'scripts/verify-replay-export.cjs', 'tests/test_assertion_replay.py')
+PATTERNS += ('tools/credential_device.py', 'scripts/build-credential-device.py', 'scripts/credential-device-cases.py', 'scripts/credential-site-controls.cjs', 'scripts/verify-credential-client.cjs', 'tests/test_credential_device.py', 'tests/credential-device-client.mjs', 'site/public/credential-device/*', 'site/public/reference/credential-flow-device.md', 'docs/credential-flow-device.md')
+
 PATTERNS += ('tools/composition/*', 'scripts/receipt.cjs',
              'scripts/build-composition-tool.py', 'scripts/check-repetition.py')
 PATTERNS += ('.github/CODEOWNERS', '.github/dependabot.yml',

@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-161903-credential-client-entrypoint-and-guide-360bc604
+
+Recorded 2026-11-20T16:19:03.840709+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Add the manifest-compatible credential client verifier entrypoint and distribute the exact method guide with the public build.
+- **Evidence.** The real client control entrypoint exited successfully and the site build generated the exact method guide. [Change record](./runs/changes/2026-11-20-161903-credential-client-entrypoint-and-guide-360bc604.json).
+- **Not claimed.** Actual built-modal review and protected publication remain pending; original acceptance unchanged.
+
+
+### 2026-11-20-161739-credential-preview-discoverability-86f6cd66
+
+Recorded 2026-11-20T16:17:39.124005+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Document the public optional Python flow preview and its non-execution and no-tag boundaries in the quick product overview.
+- **Evidence.** The existing source-bound worker controls pass; the integrated adapter independently passed 53 focused controls. The public deployment remains pending. [Change record](./runs/changes/2026-11-20-161739-credential-preview-discoverability-86f6cd66.json).
+- **Not claimed.** No full F012 closure or independent accuracy claimed.
+
+
+### 2026-11-20-161649-credential-required-source-checks-b59e6122
+
+Recorded 2026-11-20T16:16:49.155888+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Require the optional Python flow adapter, browser client and built PS modal checks in website revalidation, with exact source inventory bindings.
+- **Evidence.** Configured checks consume the implemented feature; the supplied worker receipts record actual native and browser execution. Production integration remains unverified. [Change record](./runs/changes/2026-11-20-161649-credential-required-source-checks-b59e6122.json).
+- **Not claimed.** No current-source pass, live publication, original closure or accuracy approval claimed.
+
+
 ### 2026-11-20-155957-predeclare-public-credential-device-cab266e4
 
 Recorded 2026-11-20T15:59:57.455688+00:00 · Contributor: Codex task-list lead · change

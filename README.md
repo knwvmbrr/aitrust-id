@@ -28,6 +28,8 @@ is connected.
 distinguish related products from full product equivalence; business viability and
 comparative superiority are not established.
 
+The PS panel also has an optional **Inspect Python code** preview: paste a supported Python snippet to inspect credential-related data flow on your device. It never runs the snippet and does not issue a PS tag. [Method and limits](docs/credential-flow-device.md).
+
 ## Deploy approved local checker versions
 
 The [offline fleet tool](docs/fleet-deployment.md) enrolls private macOS/Linux

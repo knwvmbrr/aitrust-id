@@ -1542,7 +1542,22 @@
         "docs/hp-site-integration.md",
         "scripts/verify-hp-client.cjs",
         "scripts/site-fixture-server.cjs",
-        "tests/site-fixture-server.cjs"
+        "tests/site-fixture-server.cjs",
+        "tools/credential_device.py",
+        "tools/credential_flow.py",
+        "scripts/build-credential-device.py",
+        "scripts/credential-device-cases.py",
+        "scripts/credential-site-controls.cjs",
+        "tests/test_credential_device.py",
+        "tests/credential-device-client.mjs",
+        "site/src/CredentialFlowExplorer.jsx",
+        "site/src/CredentialFlowExplorerSlot.jsx",
+        "site/src/credential-device-*.js",
+        "site/src/credential-device-manifest.json",
+        "site/public/credential-device/*",
+        "docs/credential-flow-device.md",
+        "site/public/reference/credential-flow-device.md",
+        "scripts/verify-credential-client.cjs"
       ],
       "commands": [
         [
@@ -1806,6 +1821,21 @@
         [
           "node",
           "scripts/verify-hp-client.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_credential_device.py",
+          "-q"
+        ],
+        [
+          "node",
+          "scripts/verify-credential-client.cjs"
+        ],
+        [
+          "node",
+          "scripts/credential-site-controls.cjs"
         ]
       ]
     }
