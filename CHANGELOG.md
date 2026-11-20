@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-155957-predeclare-public-credential-device-cab266e4
+
+Recorded 2026-11-20T15:59:57.455688+00:00 · Contributor: Codex task-list lead · change
+
+- **Changed.** Predeclare the public optional credential-flow browser preview, exact acceptance and actual worker before completion; update prior CLI handoffs and blocked Android runtime status.
+- **Evidence.** Current accounting passes with nine closed scoped tasks, zero new original closures, one active PS worker and unchanged 132 complete / 70 open originals. The new task requires full raw/NFC/canonical binding, Chromium/WebKit parity, lifecycle/privacy and independent PS survival, distinct review, protected checks and actual live publication. [Change record](./runs/changes/2026-11-20-155957-predeclare-public-credential-device-cab266e4.json).
+- **Not claimed.** No browser feature, protected merge, live publication, Android runtime, full F012 acceptance or validated PS enhancement is claimed complete by this assignment board. Historical closed tasks and original acceptance remain intact; the strict original-closure goal still refuses with exit 1.
+
+
 ### 2026-11-20-161503-credential-device-site-integration-80d8fba3
 
 Recorded 2026-11-20T16:15:03.038669+00:00 · Contributor: Codex PM · change

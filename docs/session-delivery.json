@@ -168,7 +168,7 @@
       "bot_id": "tag_mt",
       "actual_worker": null,
       "status": "reviewed",
-      "checked_at": "2026-11-19T18:40:29.596330+00:00",
+      "checked_at": "2026-11-20T15:59:29.823898+00:00",
       "current_component_status": "Frozen quotation-aware authority workflow completed and reviewed; protected integration pending. Full MT remains unvalidated.",
       "blocking_acceptance": "Published literal wording and private choice workflows do not establish contextual use/mention, feasible alternatives, attribution, actual independent MT agreement/error rates or accepted tag mapping.",
       "next_task": "Await exact protected integration, then continue contextual attribution/feasible alternatives and real agreement acceptance."
@@ -178,10 +178,10 @@
       "bot_id": "tag_ps",
       "actual_worker": "/root/share_debugger",
       "status": "active",
-      "checked_at": "2026-11-19T18:45:23.085934+00:00",
-      "current_component_status": "Corrected credential-flow/context method1.0.2 frozen and actual Mac/PM review passed; exact Linux verification active. Existing public PS preview and full release gates unchanged.",
+      "checked_at": "2026-11-20T15:59:29.823898+00:00",
+      "current_component_status": "New public optional credential-flow browser preview is active. Prior exact CLI implementation is complete and awaiting protected integration; no credential signal or PS tag mapping is added.",
       "blocking_acceptance": "Current development fixtures and blind-review tooling are present, but the independently coordinated representative holdout, actual blind human labels/adjudication, accepted calibration/abstention policy and applicable human route acceptance are not.",
-      "next_task": "session-ps-credential-context"
+      "next_task": "session-public-credential-device"
     },
     {
       "tag_id": "T-IV",
@@ -647,7 +647,7 @@
         "T-PS"
       ],
       "worker": "/root/share_debugger",
-      "status": "active",
+      "status": "in_review",
       "deliverable": "Correct supported credential-flow analysis and deliver a separately invoked private whole-document/code/context binding workflow.",
       "done_evidence": [
         "Concrete failing-before/passing-after impossible-program and bounded-value controls, not only a new wrapper.",
@@ -658,7 +658,7 @@
       "next_unblocked_task": "session-f012-closure-adjudication",
       "assigned_at": "2026-11-19T18:24:57.745970+00:00",
       "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-      "current_status": "Corrected source2d00900a is frozen;150focused,39actualMacCLI and5compile-onlyoracle controls pass. PM independently reviewed10actualgroups. Exact-source Linux proof is running; protected integration remains pending.",
+      "current_status": "Frozen corrected source2d00900a and exact Linux proof45f9961 are complete; PM actual review passes. Worker finished this CLI lane. Predeclared protected integration remains required before scoped closure.",
       "review_handoff": {
         "at": "2026-11-19T18:45:23.085934+00:00",
         "implemented_commit": "2d00900a8426d23330f8739c8ab10ca99769236f",
@@ -672,7 +672,12 @@
           "sha256": "b3b4a13dd64a922b21d065f1a4b63712321b36a4b93c70513647b6b742dd0998"
         },
         "prior_candidate": "3619e36f184469bda8c6f93488d90c3b056a7cfb",
-        "failure_retained": "PM actual __debug__ syntax/compile counterexample; corrected method1.0.2 and warnings-as-errors compile handling. Prior candidate is not relabelled current."
+        "failure_retained": "PM actual __debug__ syntax/compile counterexample; corrected method1.0.2 and warnings-as-errors compile handling. Prior candidate is not relabelled current.",
+        "linux_evidence": {
+          "path": "runs/2026-11-19-credential-flow-context-linux.json",
+          "sha256": "874739330dc5974356ccb0a3cf9ba9f0a3e0be846afca1ca0e84882eb2edd6c8",
+          "receipt_commit": "45f99610737c94ad737d29666d55d70fc27701fe"
+        }
       }
     },
     {
@@ -711,18 +716,18 @@
         "F-142"
       ],
       "worker": "/root",
-      "status": "active",
+      "status": "blocked",
       "deliverable": "Reconcile and publish the existing compile-verified Android Share preview with strict current-source license/KVM preflight; obtain actual disposable runtime proof only if its existing licensed prerequisites are met.",
       "done_evidence": [
         "Exact source APK compiles/signature-verifies; Share/edit/clear/offline/lifecycle checks execute in an actual Android runtime with current method parity and zero extra permissions.",
         "Exact existing accepted license match and official package identities checked; no new license assent/local SDK download/production signing or phone install.",
         "Different reviewer verifies immutable actual evidence; physical device/TalkBack and full N014/F142 remain open until their actual acceptance."
       ],
-      "blocker": "Earlier hosted runner lacks exact required efa Android image license; root is reconciling existing compile-verified PR108 and strengthening truthful prerequisite refusal without accepting a new license.",
+      "blocker": "Actual hosted Android run44651494156 failed in reviewed_metadata before install or boot; zero of seven runtime cases executed. Existing compile/prerequisite proofs cannot satisfy the predeclared actual-runtime acceptance. Skip this blocked completion and advance the public credential browser job.",
       "next_unblocked_task": "session-f012-closure-adjudication",
       "assigned_at": "2026-11-19T18:24:57.745970+00:00",
       "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-      "current_status": "Corrected source0d6427c and prerequisite review complete; local five-command/15-prerequisite controls pass. Actual hosted emulator and protected integration pending; physical/TalkBack remains open."
+      "current_status": "SDK prerequisite/metadata correction reviewed; actual Android runtime remains unexecuted. The historical literal XML-license-hash mismatch is not an SDK acceptance authority. The existing SDK manager with closed stdin and unchanged existing acceptance record decides permission; no new terms accepted."
     },
     {
       "task_id": "session-f012-closure-adjudication",
@@ -741,6 +746,44 @@
       "next_unblocked_task": "session-ps-credential-context",
       "assigned_at": "2026-11-19T18:24:57.745970+00:00",
       "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b"
+    },
+    {
+      "task_id": "session-public-credential-device",
+      "original_ids": [
+        "F-012",
+        "T-PS"
+      ],
+      "worker": "/root/share_debugger",
+      "status": "active",
+      "deliverable": "A fully usable phone and desktop paste-Python credential-flow preview inside the existing PS modal, with independent optional loading and short bounded explanations; published live only after reviewed protected integration.",
+      "done_evidence": [
+        "The canonical python-credential-flow-observation/1.0.2 implementation remains byte-identical. The device result is closed-shape and exactly bound to original raw UTF-8 input, frozen Unicode-15 NFC, method and packaged source identities; no PS mapping, new tag or inferred intent.",
+        "Actual Chromium and WebKit compare full records against canonical native execution for supported findings, completed no-flow and unsupported/refused inputs. Phone and desktop views, both themes, labels, keyboard, 320px and text enlargement are checked without claiming physical-device or human-screen-reader acceptance.",
+        "Edit, clear, cancel, new input and unmount invalidate and terminate work; stale or malformed/source-mismatched results refuse. No user program executes, input-bearing request/upload, input storage, account, gateway dependency or automatic export is added.",
+        "Failure or refusal of the optional credential child chunk/worker leaves the actual existing PS checker and unrelated implemented previews usable; independently observe actual PS results after the optional chunk failure.",
+        "A distinct reviewer verifies the frozen builder/client/worker/result/UI source and actual privacy/failure/parity evidence. All applicable required protected checks pass, then actual live assets and browser interactions are verified on the published source before this scoped task closes."
+      ],
+      "blocker": null,
+      "next_unblocked_task": "session-f012-closure-adjudication",
+      "assigned_at": "2026-11-20T15:59:29.823898+00:00",
+      "source_base": "8b21fffbb3a5b89b9cf6c555959fa9cfa1bd09fd",
+      "architecture": {
+        "path": "docs/credential-device-integration-plan.md",
+        "sha256": "a8f0a1f5ad9008b30bed60763b3c63515dff403b63ab47f81e360e6bf7292768",
+        "owner": "/root",
+        "status": "PM working plan observed before task completion; integrated by PM separately"
+      },
+      "ownership": {
+        "worker": "New credential-only adapter, builder, manifest, worker/client/validator, React slot/component and focused controls.",
+        "PM": "Shared PS mount, preparation/package hooks, source inventories, protected integration and publication.",
+        "task_list_lead": "Independent task accounting and frozen evidence review; no original criterion changes."
+      },
+      "release_boundary": "This scoped visible browser feature is neither full F-012 acceptance nor a validated PS enhancement; original counts 132/70 unchanged.",
+      "integration_interface": {
+        "component": "CredentialFlowExplorerSlot",
+        "props": "none",
+        "builder": "scripts/build-credential-device.py"
+      }
     }
   ],
   "original_open_requirements": [
@@ -1154,7 +1197,7 @@
         "Preserve original job/outcome, master and applicable package acceptance; satisfy the stable historical limits recorded above.",
         "Record new immutable source-bound supported/failure evidence and actual required acceptance; a distinct reviewer must inspect the full original result."
       ],
-      "next_unblocked_action": "PS lane: correct supported credential-flow analysis and explicitly bind selected code/context; preserve quoted/recommended/unknown declarations and no PS mapping until full acceptance.",
+      "next_unblocked_action": "Finish the predeclared public optional credential-flow device preview, distinct source review and actual protected/live publication; preserve all original validation and accepted mapping gates.",
       "evidence_scope_at_baseline": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; latest presentation and changelog work does not advance the full requirement acceptance; actual listed builder versions and bounded website/engine checks only; no human, physical-device or independent release acceptance",
       "evidence_paths": [
         "runs/2026-10-09-scope-regressions.json",
@@ -1677,7 +1720,7 @@
         "Preserve original job/outcome, master and applicable package acceptance; satisfy the stable historical limits recorded above.",
         "Record new immutable source-bound supported/failure evidence and actual required acceptance; a distinct reviewer must inspect the full original result."
       ],
-      "next_unblocked_action": "PS lane: correct supported credential-flow analysis and explicitly bind selected code/context; preserve quoted/recommended/unknown declarations and no PS mapping until full acceptance.",
+      "next_unblocked_action": "Finish the predeclared public optional credential-flow device preview, distinct source review and actual protected/live publication; preserve all original validation and accepted mapping gates.",
       "evidence_scope_at_baseline": "Executed reference observation only; no full tag mapping, contextual validity, independent accuracy or release acceptance. Original full named job remains open.",
       "evidence_paths": [
         "runs/2026-10-09-scope-completion-checks.json",
@@ -5384,7 +5427,7 @@
     "tools/research_admission.py": "f6adfcbdca1c89adca18c460ebb720b8cf057057b43c857967115efe93528f4d",
     "tools/review_execution.py": "a100fbd3ba79d583423e9398937e5a218588fe699b6a084e00a6947f5506578a"
   },
-  "updated_at": "2026-11-19T18:45:23.085934+00:00",
+  "updated_at": "2026-11-20T15:59:29.823898+00:00",
   "closeout": {
     "protected_source_commit": "92be88d00e967d53d4b8604b8f90561088efc903",
     "publication_evidence": "runs/2026-11-19-tag-bots-live-publication.json",
@@ -5654,8 +5697,17 @@
         "remaining_full_acceptance": "Actual moderation/response owners, inboxes, approved deployment and live operations remain."
       }
     ],
-    "last_handoff_at": "2026-11-19T18:45:23.085934+00:00",
-    "commit_handoff_status": "Prepared while exact frozen PS Linux proof and PM protected integration remain active. No new completion counter changes."
+    "last_handoff_at": "2026-11-20T15:59:29.823898+00:00",
+    "commit_handoff_status": "Prepared while exact frozen PS Linux proof and PM protected integration remain active. No new completion counter changes.",
+    "visible_delivery": {
+      "task_id": "session-public-credential-device",
+      "predeclared_at": "2026-11-20T15:59:29.823898+00:00",
+      "source_base": "8b21fffbb3a5b89b9cf6c555959fa9cfa1bd09fd",
+      "status": "active",
+      "user_outcome": "A person can paste a Python snippet into the public PS panel and inspect supported credential-to-HTTP structure locally.",
+      "integration_and_live_publication_required": true,
+      "new_original_closure": false
+    }
   },
   "candidate_original_path": {
     "id": "F-012",
@@ -5679,11 +5731,11 @@
     {
       "route": "Android Share",
       "original_id": "N-014",
-      "actual_worker": "/root",
-      "status": "active",
-      "checked_at": "2026-11-19T18:45:23.085934+00:00",
+      "actual_worker": null,
+      "status": "blocked",
+      "checked_at": "2026-11-20T15:59:29.823898+00:00",
       "task_id": "session-android-runtime-integration",
-      "scope": "Delivery integration and currently build-verified preview only. Exact image license absent on the earlier runner remains refused; no auto-assent. Real-runtime proof and physical/TalkBack acceptance remain separate."
+      "scope": "Actual runtime unavailable after metadata-phase refusal; existing SDK manager is acceptance authority. No new license assent; physical/TalkBack acceptance remains open."
     }
   ]
 }
