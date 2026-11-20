@@ -1141,11 +1141,11 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-19-tag-wave2-PS.json",
-    "PII_REDACTED": "runs/2026-11-19-tag-wave2-PII_REDACTED.json",
-    "protocol": "runs/2026-11-19-tag-wave2-protocol.json",
-    "extension": "runs/2026-11-19-tag-wave2-extension.json",
-    "website": "runs/2026-11-20-tag-wave2-website-current.json",
+    "PS": "runs/2026-11-20-credential-integrated-PS.json",
+    "PII_REDACTED": "runs/2026-11-20-credential-integrated-PII_REDACTED.json",
+    "protocol": "runs/2026-11-20-credential-integrated-protocol.json",
+    "extension": "runs/2026-11-20-credential-integrated-extension.json",
+    "website": "runs/2026-11-20-credential-integrated-website-release.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
@@ -4148,9 +4148,9 @@
   },
   "python_test_count_note": "Historical aggregate observation retained; current executed checks are identified by source-bound run records, not summed as unique tests.",
   "independent_tag_wave_nov19": {
-    "recorded_at": "2026-11-19T19:52:10.800392+00:00",
+    "recorded_at": "2026-11-20T16:46:15.040622+00:00",
     "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-    "phase": "optional_browser_preview_verified_in_built_site; current_revalidation_and_publication_pending",
+    "phase": "all_current_capabilities_and_boundaries_pass; protected_merge_and_publication_pending",
     "PS": {
       "method": "python-credential-flow-observation/1.0.2",
       "guide": "docs/credential-flow-context.md",
@@ -4160,8 +4160,9 @@
       "device_preview": {
         "guide": "docs/credential-flow-device.md",
         "production_PS_mapping": false,
-        "built_site_review": "Chromium and WebKit passed by distinct reviewer; receipt handoff pending",
-        "published": false
+        "built_site_review": "runs/2026-11-20-credential-production-independent-review.json",
+        "published": false,
+        "current_website": "runs/2026-11-20-credential-integrated-website-release.json"
       }
     },
     "MT": {
@@ -4181,15 +4182,16 @@
     "original_open": 70,
     "new_original_closures": 0,
     "independent_accuracy_evidence": false,
-    "website_evidence": "runs/2026-11-20-tag-wave2-website-current.json",
-    "boundary_evidence": "runs/2026-11-20-tag-wave2-boundaries.json",
-    "reviewed_source_inputs": 1352,
+    "website_evidence": "runs/2026-11-20-credential-integrated-website-release.json",
+    "boundary_evidence": "runs/2026-11-20-credential-integrated-boundaries.json",
+    "reviewed_source_inputs": 1369,
     "accessibility_observation": {
       "first_attempt": "runs/2026-11-19-tag-wave2-website-attempt.json",
       "diagnostic_result": "runs/2026-11-20-a11y-diagnostic-result.json",
       "current_full_check_pass": true,
       "original_scroll_timeout_cause_established": false,
-      "product_fix_claimed": false
+      "product_fix_claimed": false,
+      "optional_disclosure_readiness": "runs/2026-11-20-credential-disclosure-readiness.json"
     }
   }
 }

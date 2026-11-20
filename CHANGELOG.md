@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-164615-credential-integrated-ready-for-protection-c1e8b08c
+
+Recorded 2026-11-20T16:46:15.082038+00:00 · Contributor: Codex PM with distinct reviewer web_camo · change
+
+- **Changed.** Record the fully passing current-source optional checker integration and final reviewed route boundaries for protected publication.
+- **Evidence.** All five capability receipts assess current: PS7, PII6, protocol56, extension14, website49 configured checks; the 1369-source boundary review passes. Actual Chromium/WebKit production controls cover native record parity, privacy, narrow layouts, cancellation and continued PS operation after optional chunk failure. [Change record](./runs/changes/2026-11-20-164615-credential-integrated-ready-for-protection-c1e8b08c.json).
+- **Not claimed.** Protected merge and live publication remain pending. Original scope remains132 complete/70 open; independent accuracy, physical phones and full tag release are not approved.
+
+
+### 2026-11-20-164106-credential-freeze-before-build-885d7aaf
+
+Recorded 2026-11-20T16:41:06.951634+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Freeze the final source inventory and record the website build refusal observed while the inventory update was still being recorded.
+- **Evidence.** The candidate preserved unchanged source fingerprints but stopped in the build phase. All inventory and failed receipt files are now covered before starting the next execution; no source edits will occur during it. [Change record](./runs/changes/2026-11-20-164106-credential-freeze-before-build-885d7aaf.json).
+- **Not claimed.** The historical build subprocess output was hashed rather than retained, so its precise diagnostic is not asserted. No website pass or publication claimed.
+
+
+### 2026-11-20-164006-credential-final-source-inventory-9c0b3e2e
+
+Recorded 2026-11-20T16:40:06.895371+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Bind the final optional checker and corrected verifier source inventory to the pending current website receipt and current passing extension receipt.
+- **Evidence.** The reviewed inventory contains 1369 source files. Existing PS, PII, protocol and extension receipts still assess current and passing; the website and boundary executions remain pending. [Change record](./runs/changes/2026-11-20-164006-credential-final-source-inventory-9c0b3e2e.json).
+- **Not claimed.** This inventory update is not a boundary pass, deployment or accuracy approval.
+
+
 ### 2026-11-20-163716-credential-disclosure-readiness-diagnosis-3503251a
 
 Recorded 2026-11-20T16:37:16.704758+00:00 · Contributor: Codex PM · change
