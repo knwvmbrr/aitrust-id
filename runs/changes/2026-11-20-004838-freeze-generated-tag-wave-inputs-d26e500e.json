@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-004838-freeze-generated-tag-wave-inputs-d26e500e",
+  "recorded_at": "2026-11-20T00:48:38.438568+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0ed390119eedd9b760efc8d4df34cfb7c273c5fb",
+  "changed": "Freeze generated public scope and MT operator-reference outputs produced by the first integrated build; preserve the failed current-website attempt and its exact diagnosis.",
+  "proves": "Build, catalogue, performance and workflow phases passed. The accessibility phase timed out on scroll stability in the first PS surface, and generated scope/reference changes made the original source fingerprint stale.",
+  "limits": "The full website attempt failed and remains failed history. A debugger is reproducing the exact control before any changed-source retry; no weakened probe or original closure.",
+  "scope_ids": [
+    "F-012",
+    "T-MT",
+    "F-019c",
+    "N-014"
+  ],
+  "files": {
+    "runs/2026-11-19-tag-wave2-website-attempt.json": "cc575ebb7bc41be2e8fa36e9a6a2172a3df5e3ad793a66da35b9f637fe496c0f",
+    "runs/2026-11-19-tag-wave2-website-diagnosis.json": "f32dfb2e664f05f0799aedd9f88df0f0f2499f079db98bc77ae98478652616fe",
+    "site/public/reference/mt-evidence-workflow.md": "ca01fcfcc7deeacc8862be47e72c52d57f4d6ca1efafe67534aa4fc901dda6c7",
+    "site/public/reference/public-scope.json": "757c53bab22469599fed16acc387bf288f5881e08909dc34afc5e8f612fe4d77",
+    "site/src/public-scope.json": "757c53bab22469599fed16acc387bf288f5881e08909dc34afc5e8f612fe4d77",
+    "site/src/scope-manifest.json": "08c3bf706278fdeb1a3bcfe50459de43bd4ee575813380275a8abbe862a1279f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-19-tag-wave2-website-attempt.json",
+      "sha256": "cc575ebb7bc41be2e8fa36e9a6a2172a3df5e3ad793a66da35b9f637fe496c0f"
+    },
+    {
+      "path": "runs/2026-11-19-tag-wave2-website-diagnosis.json",
+      "sha256": "f32dfb2e664f05f0799aedd9f88df0f0f2499f079db98bc77ae98478652616fe"
+    }
+  ],
+  "checks": []
+}

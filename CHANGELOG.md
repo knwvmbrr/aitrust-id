@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-20
+
+### 2026-11-20-004838-freeze-generated-tag-wave-inputs-d26e500e
+
+Recorded 2026-11-20T00:48:38.438568+00:00 · Contributor: Codex · change
+
+- **Changed.** Freeze generated public scope and MT operator-reference outputs produced by the first integrated build; preserve the failed current-website attempt and its exact diagnosis.
+- **Evidence.** Build, catalogue, performance and workflow phases passed. The accessibility phase timed out on scroll stability in the first PS surface, and generated scope/reference changes made the original source fingerprint stale. [Change record](./runs/changes/2026-11-20-004838-freeze-generated-tag-wave-inputs-d26e500e.json).
+- **Not claimed.** The full website attempt failed and remains failed history. A debugger is reproducing the exact control before any changed-source retry; no weakened probe or original closure.
+
+
 ## Unreleased — 2026-11-19
 
 ### 2026-11-19-223823-credential-flow-context-linux-proof-94e53801

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-20T00:48:38.386377+00:00",
+  "author": "Codex PM",
+  "scope_ids": [
+    "F-012",
+    "T-MT",
+    "F-019c",
+    "N-014"
+  ],
+  "pass": false,
+  "stage": "website_current_candidate",
+  "failed_receipt": "runs/2026-11-19-tag-wave2-website-attempt.json",
+  "build_succeeded": true,
+  "catalogue_and_performance_and_workflow_phases_passed": true,
+  "accessibility_failure": "TimeoutError: locator.scrollIntoViewIfNeeded: Timeout 29997.700999999997ms exceeded.\nCall log:\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    - waiting for element to be stable\u001b[22m\n",
+  "completed_accessibility_surfaces": 1,
+  "generated_sources_refreshed_by_build": {
+    "site/public/reference/mt-evidence-workflow.md": {
+      "before_sha256": "42f509e92a2bf011b9f5750956957018e5c42cc1aeb2f0f377d2a1ce17ea8784",
+      "after_sha256": "ca01fcfcc7deeacc8862be47e72c52d57f4d6ca1efafe67534aa4fc901dda6c7"
+    },
+    "site/public/reference/public-scope.json": {
+      "before_sha256": "7123f792b600cb7fc1d48c35ece683508ee0919ea62868c856f88af36c9e40e4",
+      "after_sha256": "757c53bab22469599fed16acc387bf288f5881e08909dc34afc5e8f612fe4d77"
+    },
+    "site/src/public-scope.json": {
+      "before_sha256": "7123f792b600cb7fc1d48c35ece683508ee0919ea62868c856f88af36c9e40e4",
+      "after_sha256": "757c53bab22469599fed16acc387bf288f5881e08909dc34afc5e8f612fe4d77"
+    },
+    "site/src/scope-manifest.json": {
+      "before_sha256": "ff35259f2c4e2e81f115752f86f409f5f619995fa3e421262c4d140fcd328c33",
+      "after_sha256": "08c3bf706278fdeb1a3bcfe50459de43bd4ee575813380275a8abbe862a1279f"
+    }
+  },
+  "source_stability_failed": true,
+  "next_action": "Freeze generated scope/reference outputs before next fingerprint; independently reproduce exact PS accessibility scroll timeout, do not retry unchanged or relax probes.",
+  "independent_accuracy_evidence": false,
+  "original_requirement_closed": false
+}
