@@ -113,3 +113,33 @@ run. Updates to the reviewed package selection and fixed diagnostic codes are
 engineering changes, not a reason to accept new terms or mark runtime tests
 passed. The source constant and dated change records carry the selected revision;
 this guide does not duplicate a moving version number.
+
+## Six executed controls; background failure still unresolved
+
+[Hosted run44776757754](https://github.com/knwvmbrr/aitrust-id/actions/runs/44776757754)
+matched both reviewed metadata documents, left the license record unchanged,
+installed/booted the owned emulator and ran the development APK. Its first six
+original controls passed: explicit-check receipt, an offline PS finding, edit
+invalidation, new Share/no finding, unsupported MIME refusal and Clear. The
+seventh background-clear control did not complete. The producer remains FAILED;
+its generic report does not establish whether task lookup, refocusing or the UI
+assertion failed. Six passes do not become seven, a physical-device result or
+full runtime acceptance.
+
+The separate diagnostic revision preserves the same seven controls, existing
+commands, first task match, assertions and wait deadlines. It extracts only the
+background control into a fixed-boundary helper. `control_stage` identifies
+receive, HOME, task inventory, task lookup, refocus, cleared view or marker absence;
+a failure publishes only its fixed `diagnostic_code`. From data already read,
+the report records the task-match count and owned-UI / ready / cleared / synthetic
+marker booleans. It publishes no task IDs, hierarchy dump, native error, command
+output, path or input text. Those flags describe the observed hierarchy, not
+proof that `onStop` completed. License/prerequisite Unavailable handling remains
+unchanged. Diagnostics do not fix or claim to fix the unresolved runtime failure.
+
+The reviewed [AOSP Android16 shell implementation](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/android16-release/services/core/java/com/android/server/am/ActivityManagerShellCommand.java)
+supports `am task focus`; [ActivityTaskManagerService](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/android16-release/services/core/java/com/android/server/wm/ActivityTaskManagerService.java)
+can silently return if no attached task/running activity is found. A successful
+shell return alone does not establish that the expected app became visible.
+No new Share/launcher intent is substituted: it could clear the editor itself
+and mask a lifecycle failure. There is no added SDK retry or license acceptance.

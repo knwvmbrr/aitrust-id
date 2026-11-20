@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-165634-android-background-diagnostic-boundaries-92ef3ede
+
+Recorded 2026-11-20T16:56:34.207066+00:00 · Contributor: Codex · change
+
+- **Changed.** Expose fixed owned background-control failure boundaries while preserving the seven Android controls and their command/assertion/deadline behavior.
+- **Evidence.** 34 focused controls and seven isolated main fault processes pass without SDK or emulator activity. Exact hosted run44776757754 remains FAILED after six original runtime passes; the seventh failure is retained as unknown driver/lifecycle cause. [Change record](./runs/changes/2026-11-20-165634-android-background-diagnostic-boundaries-92ef3ede.json).
+- **Not claimed.** Diagnostic-only follow-up; no changed-source Android execution, runtime fix, seventh-case pass, license acceptance, SDK retry, physical-device proof or original requirement closure.
+
+
 ### 2026-11-20-164850-credential-state-chronology-correction-6dbcd154
 
 Recorded 2026-11-20T16:48:50.393806+00:00 · Contributor: Codex PM after task-list lead diagnosis · change

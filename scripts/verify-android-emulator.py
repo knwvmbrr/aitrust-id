@@ -212,6 +212,65 @@ def prepare_emulator(sdk, report):
         raise ValueError('Installed SDK package version differs from review')
     return adb,emulator,avd
 
+
+class AndroidControlRefusal(ValueError):
+    """Fixed owned background-control boundaries; never native command details."""
+    STAGES={
+        'background_receive':'background_receive_unavailable',
+        'background_home':'background_home_unavailable',
+        'background_task_inventory':'background_task_inventory_unavailable',
+        'background_task_lookup':'background_owned_task_unavailable',
+        'background_refocus':'background_refocus_unavailable',
+        'background_cleared_view':'background_cleared_view_unavailable',
+        'background_marker_absence':'background_marker_retained',
+    }
+
+    def __init__(self,stage):
+        if stage not in self.STAGES:raise ValueError('Invalid Android control diagnostic')
+        self.code=self.STAGES[stage]
+        super().__init__(self.code)
+
+
+def verify_background_clear(send,shell,wait,report):
+    """Run the original seventh control, retaining only fixed failure boundaries.
+
+    No new intent, command, delay, retry or success path is introduced. UI flags
+    describe the already observed foreground hierarchy, not lifecycle completion.
+    """
+    def text(view,value):return any(value in n.attrib.get('text','') for n in view.iter('node'))
+    def cleared(view):
+        ready=text(view,'Ready when you are.')
+        wiped=text(view,'Cleared. Your text and result')
+        report['background_observation']={
+            'owned_ui_present':any(n.attrib.get('resource-id','').startswith(PACKAGE+':id/') for n in view.iter('node')),
+            'ready_text_present':ready,'cleared_text_present':wiped,
+            'synthetic_marker_present':text(view,'synthetic private marker'),
+        }
+        return ready or wiped
+    try:
+        report['control_stage']='background_receive'
+        send('synthetic private marker');wait(lambda x:text(x,'Text received. Review it'))
+        report['control_stage']='background_home'
+        shell(['input','keyevent','KEYCODE_HOME'])
+        # Preserve the same task refocus, without a fresh Share/launcher intent
+        # that could wipe the editor and mask broken onStop behavior.
+        report['control_stage']='background_task_inventory'
+        tasks=shell(['dumpsys','activity','activities']).decode()
+        report['control_stage']='background_task_lookup'
+        matches=re.findall(r'Task\{[^\n]*#(\d+)[^\n]*'+re.escape(PACKAGE),tasks)
+        report['background_owned_task_matches']=len(matches)
+        if not matches:raise AndroidControlRefusal('background_task_lookup')
+        report['control_stage']='background_refocus'
+        shell(['am','task','focus',matches[0]])
+        report['control_stage']='background_cleared_view'
+        view=wait(cleared)
+        report['control_stage']='background_marker_absence'
+        assert not text(view,'synthetic private marker')
+    except AndroidControlRefusal:raise
+    except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,ET.ParseError,subprocess.SubprocessError):
+        raise AndroidControlRefusal(report['control_stage']) from None
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--sdk-root',required=True);parser.add_argument('--apk',required=True)
@@ -286,15 +345,7 @@ def main():
         view=wait(lambda x:text(x,'Cleared. Your text and result'))
         assert not text(view,'printf hello')
         cases.append({'case':'clear_removes_input_and_result','pass':True})
-        send('synthetic private marker');wait(lambda x:text(x,'Text received. Review it'));shell(['input','keyevent','KEYCODE_HOME'])
-        # Bring the existing task forward without a new Share or launcher intent.
-        # A fresh intent would itself wipe the editor and mask a broken onStop.
-        tasks=shell(['dumpsys','activity','activities']).decode()
-        match=re.search(r'Task\{[^\n]*#(\d+)[^\n]*'+re.escape(PACKAGE),tasks)
-        if not match:raise ValueError('Owned Android task not found')
-        shell(['am','task','focus',match.group(1)])
-        view=wait(lambda x:text(x,'Ready when you are.') or text(x,'Cleared. Your text and result'))
-        assert not text(view,'synthetic private marker')
+        verify_background_clear(send,shell,wait,report)
         cases.append({'case':'background_clears_text','pass':True})
         permission_occurrences=shell(['dumpsys','package',PACKAGE]).decode().count('android.permission.INTERNET')
         if permission_occurrences:raise ValueError('Unexpected Android Internet permission')
@@ -302,6 +353,8 @@ def main():
         return 0
     except MetadataRefusal as error:
         report.update(status='FAILED',reason='Reviewed official SDK metadata was refused.',diagnostic_code=error.code);return 1
+    except AndroidControlRefusal as error:
+        report.update(status='FAILED',reason='The owned background-clear control did not complete.',diagnostic_code=error.code);return 1
     except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,ET.ParseError,subprocess.SubprocessError):
         report.update(status='FAILED',reason='A required owned-emulator share, lifecycle or offline check did not complete.');return 1
     finally:
