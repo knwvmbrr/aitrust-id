@@ -4150,13 +4150,19 @@
   "independent_tag_wave_nov19": {
     "recorded_at": "2026-11-19T19:52:10.800392+00:00",
     "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-    "phase": "all_five_current_capabilities_and_boundaries_pass; protected_and_hosted_pending",
+    "phase": "optional_browser_preview_verified_in_built_site; current_revalidation_and_publication_pending",
     "PS": {
       "method": "python-credential-flow-observation/1.0.2",
       "guide": "docs/credential-flow-context.md",
       "review": "runs/2026-11-19-credential-context-independent-review.json",
       "production_PS_mapping": false,
-      "linux_evidence": "runs/2026-11-19-credential-flow-context-linux.json"
+      "linux_evidence": "runs/2026-11-19-credential-flow-context-linux.json",
+      "device_preview": {
+        "guide": "docs/credential-flow-device.md",
+        "production_PS_mapping": false,
+        "built_site_review": "Chromium and WebKit passed by distinct reviewer; receipt handoff pending",
+        "published": false
+      }
     },
     "MT": {
       "selection": "authority-quotation",

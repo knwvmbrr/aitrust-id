@@ -38,7 +38,7 @@ no default export or sharing action.
 
 The canonical `tools/credential_flow.py` remains byte-identical method
 `python-credential-flow-observation/1.0.2`. See
-[its complete profile](credential-flow.md). Supported straight-line imports,
+[its complete profile](https://github.com/knwvmbrr/aitrust-id/blob/main/docs/credential-flow.md). Supported straight-line imports,
 assignments, literals, containers and concatenation connect recognized literal
 credential-path reads or named environment keys to supported `requests` arguments.
 Import aliases are supported. An unrelated read, overwritten value, comment,

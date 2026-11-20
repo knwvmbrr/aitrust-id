@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-162050-credential-generated-public-scope-24dc5cf1
+
+Recorded 2026-11-20T16:20:50.992437+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Regenerate the public scope mirrors and corrected optional checker guide before capturing current website fingerprints.
+- **Evidence.** The site preparation generated the scope records from the updated ledger without changing any original criterion or completion percentage. [Change record](./runs/changes/2026-11-20-162050-credential-generated-public-scope-24dc5cf1.json).
+- **Not claimed.** Publication and current full revalidation pending; no full requirement closure claimed.
+
+
+### 2026-11-20-162023-credential-source-freeze-33faad80
+
+Recorded 2026-11-20T16:20:23.113522+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Freeze the current optional preview scope and reviewer-corrected website inputs for integration.
+- **Evidence.** The implemented feature has separate browser review and a recorded canonical method identity; the original scope count stays 132 complete and 70 open. [Change record](./runs/changes/2026-11-20-162023-credential-source-freeze-33faad80.json).
+- **Not claimed.** Protected merge and public deployment pending; independent accuracy unchanged.
+
+
+### 2026-11-20-162012-credential-integration-review-corrections-565363a0
+
+Recorded 2026-11-20T16:20:12.487061+00:00 · Contributor: Codex PM after credential worker source review · change
+
+- **Changed.** Bind the JavaScript normalization implementation in website revalidation and correct the published method guide link found by the separate source reviewer.
+- **Evidence.** The review traced real imported normalization modules absent from the former website inventory and a relative documentation link that resolved to an absent public path. [Change record](./runs/changes/2026-11-20-162012-credential-integration-review-corrections-565363a0.json).
+- **Not claimed.** Current-source checks will run after regeneration; no independent accuracy or original closure claimed.
+
+
+### 2026-11-20-161955-credential-preview-scope-evidence-ff882653
+
+Recorded 2026-11-20T16:19:55.413429+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record the implemented optional on-device credential-flow preview and separate built-site review in the scope ledger, preserving every original acceptance criterion and completion count.
+- **Evidence.** Browser worker receipts and distinct production review establish bounded software behavior; full original F012 remains open at its existing percentage. [Change record](./runs/changes/2026-11-20-161955-credential-preview-scope-evidence-ff882653.json).
+- **Not claimed.** Protected checks, deployment, representative independent accuracy and full PS integration remain open.
+
+
 ### 2026-11-20-161903-credential-client-entrypoint-and-guide-360bc604
 
 Recorded 2026-11-20T16:19:03.840709+00:00 · Contributor: Codex PM · change

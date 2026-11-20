@@ -1833,11 +1833,12 @@
           "executable_checks",
           "selected_integration"
         ],
-        "audited_at": "2026-11-19T19:52:10.800392+00:00",
+        "audited_at": "2026-11-20T16:19:55.288300+00:00",
         "checked_by": "Codex PM with separate task-list lead review",
         "implemented_by": [
           "Codex — bounded independently selected offline reference component and actual Mac/Linux CLI controls",
-          "Codex independent PS credential lane — bounded software increment; full original remains open, 2026-11-19T19:52:10.800392+00:00"
+          "Codex independent PS credential lane — bounded software increment; full original remains open, 2026-11-19T19:52:10.800392+00:00",
+          "Codex credential device worker — optional on-device Python inspection; Codex PM integrated; web_camo independently tested built production UI in Chromium and WebKit, 2026-11-20"
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
@@ -1861,9 +1862,13 @@
           "docs/credential-flow-context.md",
           "tools/credential_flow_context.py",
           "runs/2026-11-19-credential-flow-compiler-corrected-macos.json",
-          "runs/2026-11-19-credential-context-independent-review.json"
+          "runs/2026-11-19-credential-context-independent-review.json",
+          "tools/credential_device.py",
+          "site/src/CredentialFlowExplorer.jsx",
+          "docs/credential-flow-device.md",
+          "runs/2026-11-20-credential-device-browser.json"
         ],
-        "evidence_scope": "Executed reference observation only; no full tag mapping, contextual validity, independent accuracy or release acceptance. Original full named job remains open. The separate caller-selected context workflow now binds raw/NFC whole-document code/context spans, refuses compiler-invalid and excessive literal-growth cases, and preserves declared context as unverified. Current macOS and separate review evidence cover source binding, actual network denial, private publication and stale-result refusal. No program executes or PS tag mapping is performed; representative held-out and original integration acceptance remain open.",
+        "evidence_scope": "Executed reference observation only; no full tag mapping, contextual validity, independent accuracy or release acceptance. Original full named job remains open. The separate caller-selected context workflow now binds raw/NFC whole-document code/context spans, refuses compiler-invalid and excessive literal-growth cases, and preserves declared context as unverified. Current macOS and separate review evidence cover source binding, actual network denial, private publication and stale-result refusal. No program executes or PS tag mapping is performed; representative held-out and original integration acceptance remain open. Optional browser method is implemented and separately checked in the actual PS modal; it never executes submitted Python, uploads source or issues a PS tag. Protected merge and live publication pending at this snapshot. Full original integration/context and independent accuracy criteria are unchanged.",
         "required_acceptance": [
           "Complete the proposed Semgrep/use-mention integration contract and independent credential-flow validation before any PS mapping. The separate bounded Python static-flow observation now runs on Mac and isolated Linux; unknown syntax is explicitly unavailable."
         ],
