@@ -15,6 +15,7 @@ import signal
 import stat
 import tempfile
 import time
+import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
 
@@ -29,7 +30,7 @@ DISK_MINIMUM=6*1024**3
 SDK_TIMEOUT_SECONDS=270
 SDK_OUTPUT_LIMIT=1024*1024
 PACKAGES={
-    'emulator':('repository2-3.xml','37.2.13','emulator-linux_x64-16740729.zip',349658551,'f41f9e31eb5ca64926603c03265c50bbc0ff4172'),
+    'emulator':('repository2-3.xml','37.3.10','emulator-linux_x64-16970787.zip',350068887,'5f7314368fc6c05c937f6991bb4106214dc389e7'),
     IMAGE:('sys-img/android/sys-img2-3.xml','2','x86_64-36_r02.zip',844217077,'829c076e8ff448a336097ae25a355b495ba36e2c'),
 }
 
@@ -83,32 +84,64 @@ def sdk_install(argv):
             process.wait(timeout=5)
 
 
+class MetadataRefusal(ValueError):
+    """Only fixed, non-sensitive metadata boundaries may reach the public report."""
+    CODES=frozenset({'metadata_http_status','metadata_redirect','metadata_transport',
+        'metadata_size','metadata_parse','metadata_license_drift',
+        'metadata_package_drift','metadata_revision_drift','metadata_archive_drift'})
+
+    def __init__(self,code):
+        if code not in self.CODES:raise ValueError('Invalid metadata diagnostic code')
+        self.code=code
+        super().__init__(code)
+
+
+class RejectMetadataRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self,req,fp,code,msg,headers,newurl):
+        raise MetadataRefusal('metadata_redirect')
+
+
 def require_metadata_identity(package, expected):
     relative,revision,archive_name,archive_size,checksum=expected
-    with urllib.request.urlopen(GOOGLE_REPOSITORY+relative,timeout=15) as response:
-        if response.geturl()!=GOOGLE_REPOSITORY+relative:
-            raise ValueError('Unexpected Google metadata redirect')
-        raw=response.read(METADATA_LIMIT+1)
+    url=GOOGLE_REPOSITORY+relative
+    try:
+        with urllib.request.build_opener(RejectMetadataRedirect()).open(url,timeout=15) as response:
+            if response.geturl()!=url:raise MetadataRefusal('metadata_redirect')
+            if response.status!=200:raise MetadataRefusal('metadata_http_status')
+            raw=response.read(METADATA_LIMIT+1)
+    except MetadataRefusal:raise
+    except urllib.error.HTTPError:
+        raise MetadataRefusal('metadata_http_status') from None
+    except (OSError,urllib.error.URLError):
+        raise MetadataRefusal('metadata_transport') from None
     if len(raw)>METADATA_LIMIT:
-        raise ValueError('Official SDK metadata exceeded the review limit')
-    root=ET.fromstring(raw)
+        raise MetadataRefusal('metadata_size')
+    try:root=ET.fromstring(raw)
+    except ET.ParseError:raise MetadataRefusal('metadata_parse') from None
     licenses=[node for node in root.findall('license') if node.get('id')=='android-sdk-license']
     if len(licenses)!=1 or hashlib.sha1((licenses[0].text or '').encode()).hexdigest()!=LICENSE_HASH:
-        raise ValueError('Official SDK license text drift')
+        raise MetadataRefusal('metadata_license_drift')
     candidates=[node for node in root.findall('remotePackage') if node.get('path')==package and
                 (node.find('channelRef') is None or node.find('channelRef').get('ref')=='channel-0')]
     if len(candidates)!=1:
-        raise ValueError('Expected one official stable package')
+        raise MetadataRefusal('metadata_package_drift')
     selected=candidates[0]
-    declared='.'.join(node.text for node in selected.find('revision'))
-    if declared!=revision or selected.find('uses-license').get('ref')!='android-sdk-license':
-        raise ValueError('Official SDK package revision or license drift')
+    revision_node=selected.find('revision')
+    if revision_node is None or not len(revision_node) or any(not node.text for node in revision_node):
+        raise MetadataRefusal('metadata_parse')
+    declared='.'.join(node.text for node in revision_node)
+    if declared!=revision:raise MetadataRefusal('metadata_revision_drift')
+    license_node=selected.find('uses-license')
+    if license_node is None or license_node.get('ref')!='android-sdk-license':
+        raise MetadataRefusal('metadata_license_drift')
     matches=[node.find('complete') for node in selected.findall('archives/archive')
              if node.findtext('host-os') in (None,'linux') and node.find('complete') is not None
              and node.find('complete').findtext('url')==archive_name]
     if (len(matches)!=1 or matches[0].findtext('size')!=str(archive_size)
             or matches[0].findtext('checksum')!=checksum):
-        raise ValueError('Official SDK package archive identity drift')
+        raise MetadataRefusal('metadata_archive_drift')
+    return {'package':package,'metadata_sha256':hashlib.sha256(raw).hexdigest(),
+            'metadata_bytes':len(raw),'revision':declared,'license_sha1':LICENSE_HASH}
 
 
 def installed_revision(component):
@@ -159,8 +192,9 @@ def prepare_emulator(sdk, report):
             report['reason']='Hosted SDK directory lacks write access or download space.'
             return None
         report['phase']='reviewed_metadata'
+        report['metadata_reviews']=[]
         for package in needed:
-            require_metadata_identity(package,PACKAGES[package])
+            report['metadata_reviews'].append(require_metadata_identity(package,PACKAGES[package]))
         report['phase']='sdk_install'
         try:
             code,diagnostics=sdk_install([str(manager),f'--sdk_root={sdk}','--channel=0','--install',*needed])
@@ -266,6 +300,8 @@ def main():
         if permission_occurrences:raise ValueError('Unexpected Android Internet permission')
         report.update(status='EXECUTED',phase='complete',**{'pass':True},api_level=shell(['getprop','ro.build.version.sdk']).decode().strip(),case_count=len(cases),internet_permission=False)
         return 0
+    except MetadataRefusal as error:
+        report.update(status='FAILED',reason='Reviewed official SDK metadata was refused.',diagnostic_code=error.code);return 1
     except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,ET.ParseError,subprocess.SubprocessError):
         report.update(status='FAILED',reason='A required owned-emulator share, lifecycle or offline check did not complete.');return 1
     finally:

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-20-025900-android-metadata-refusals-adc4e7d0",
+  "recorded_at": "2026-11-20T02:59:00.022611+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5cb9aa2b950a87c65eb513721562da56c7fe69ac",
+  "changed": "Refresh the reviewed stable Android emulator metadata pin to 37.3.10 and distinguish fixed metadata refusal boundaries without exposing native diagnostics.",
+  "proves": "26 focused controls and nine isolated main fault processes pass; actual default helper reads match both official XMLs and unchanged license identity. Captured official XML rejects the old emulator pin.",
+  "limits": "Original hosted run remains failed with unknown original exception. No SDK installation, terms acceptance, archive download, emulator boot, Share case execution, physical proof or original requirement closure.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "scripts/verify-android-emulator.py": "ef43b59da70d7c1bba67d0fbb6dfb62921a10d4eacb3a52dd5d231599a3c7b6a",
+    "tests/test_android_emulator_prerequisites.py": "0421e4ab0d4ace5a2c9c26ffece5ed7c1e6eaf3ae88a965074db2e90831a6cde",
+    "runs/2026-11-20-android-metadata-diagnostics.json": "6e416ac584f12389eb897223a4437b7ada4b7f8367a1310636a71076085e02f6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-metadata-diagnostics.json",
+      "sha256": "6e416ac584f12389eb897223a4437b7ada4b7f8367a1310636a71076085e02f6"
+    }
+  ],
+  "checks": []
+}

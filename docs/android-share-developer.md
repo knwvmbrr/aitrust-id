@@ -66,8 +66,9 @@ The emulator step checks the hosted runner's SDK tools, KVM, recorded Android
 SDK license record and disk space. On this disposable hosted runner only, an
 ACL grants the current UID access to the existing KVM character device. If
 emulator packages are absent, the helper verifies Google's reviewed package and
-license-text identities and invokes the existing SDK manager for emulator 37.2.13
-and AOSP API 36 x86_64 image revision 2 with closed stdin. The SDK manager decides
+license-text identities and invokes the existing SDK manager for the emulator
+and AOSP API 36 image revisions pinned in `PACKAGES` in
+`scripts/verify-android-emulator.py`, with closed stdin. The SDK manager decides
 whether its existing acceptance record permits installation; a raw repository
 XML-text hash is not substituted for that decision. No license record is created
 or changed; its bytes are checked on success and failure. Diagnostics and install
@@ -100,3 +101,15 @@ with a working licensed SDK or an authorized test device is still needed.
 The native UI/schema/resource/lifecycle boundaries are separate from detector
 accuracy. Android delivery failure cannot disable iOS, the website or another tag.
 No original scope requirement reaches 100% from these local checks.
+
+## Upstream revision drift
+
+The first November 19 hosted candidate stopped in reviewed metadata before
+SDK installation or Android execution. KVM access and the existing license
+record were present. A separate read of current official metadata reproduced
+the old emulator revision guard refusing a newer stable release; the original
+generic hosted report does not expose its exact exception. Preserve that failed
+run. Updates to the reviewed package selection and fixed diagnostic codes are
+engineering changes, not a reason to accept new terms or mark runtime tests
+passed. The source constant and dated change records carry the selected revision;
+this guide does not duplicate a moving version number.

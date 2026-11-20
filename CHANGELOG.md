@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-050634-reviewed-sdk-metadata-correction-cfbf00f7
+
+Recorded 2026-11-20T05:06:34.264921+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrate reviewed stable-emulator pin and fixed metadata refusal diagnostics; make the operator guide refer to the maintained source pin rather than duplicate a moving release number.
+- **Evidence.** Independent review executes redirect and transport refusals, old-versus-reviewed revision binding and actual fixed main reports without exposing private arguments. The author verifies both official XML identities, unchanged license text,26 targeted controls and9 isolated report faults. [Change record](./runs/changes/2026-11-20-050634-reviewed-sdk-metadata-correction-cfbf00f7.json).
+- **Not claimed.** The first hosted metadata exception remains unknown; independent local drift reproduces a consistent guard failure. No SDK install, new terms, archive/device test or full original closure is claimed by this correction. New-source hosted verification remains required.
+
+
+### 2026-11-20-025900-android-metadata-refusals-adc4e7d0
+
+Recorded 2026-11-20T02:59:00.022611+00:00 · Contributor: Codex · change
+
+- **Changed.** Refresh the reviewed stable Android emulator metadata pin to 37.3.10 and distinguish fixed metadata refusal boundaries without exposing native diagnostics.
+- **Evidence.** 26 focused controls and nine isolated main fault processes pass; actual default helper reads match both official XMLs and unchanged license identity. Captured official XML rejects the old emulator pin. [Change record](./runs/changes/2026-11-20-025900-android-metadata-refusals-adc4e7d0.json).
+- **Not claimed.** Original hosted run remains failed with unknown original exception. No SDK installation, terms acceptance, archive download, emulator boot, Share case execution, physical proof or original requirement closure.
+
+
 ### 2026-11-20-010845-independent-wave-ready-for-protected-ci-18c7c902
 
 Recorded 2026-11-20T01:08:45.922764+00:00 · Contributor: Codex · change

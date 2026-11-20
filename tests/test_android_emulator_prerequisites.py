@@ -1,11 +1,15 @@
 """Refuse unsafe prerequisites without accepting SDK terms or booting a device."""
 import importlib.util
+import io
+import json
 import os
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import unittest
+import urllib.error
+import xml.etree.ElementTree as ET
 from unittest import mock
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -76,6 +80,120 @@ class BoundedSdkProcess(unittest.TestCase):
                 module.sdk_install([sys.executable,'-c','print("done")'])
 
 
+class ReviewedMetadata(unittest.TestCase):
+    def setUp(self):
+        self.package='emulator';self.expected=module.PACKAGES[self.package]
+        self.license='synthetic reviewed license'
+        self.hash_patch=mock.patch.object(module,'LICENSE_HASH',module.hashlib.sha1(self.license.encode()).hexdigest())
+        self.hash_patch.start();self.addCleanup(self.hash_patch.stop)
+
+    def xml(self):
+        _,revision,name,size,checksum=self.expected
+        root=ET.Element('repository')
+        ET.SubElement(root,'license',id='android-sdk-license').text=self.license
+        package=ET.SubElement(root,'remotePackage',path=self.package)
+        ET.SubElement(package,'channelRef',ref='channel-0')
+        rev=ET.SubElement(package,'revision')
+        for tag,value in zip(['major','minor','micro'],revision.split('.')):ET.SubElement(rev,tag).text=value
+        ET.SubElement(package,'uses-license',ref='android-sdk-license')
+        archive=ET.SubElement(ET.SubElement(package,'archives'),'archive')
+        ET.SubElement(archive,'host-os').text='linux'
+        complete=ET.SubElement(archive,'complete')
+        for tag,value in [('url',name),('size',str(size)),('checksum',checksum)]:ET.SubElement(complete,tag).text=value
+        return root
+
+    def call(self,raw=None,status=200,url=None,error=None):
+        response=io.BytesIO(ET.tostring(self.xml()) if raw is None else raw)
+        response.status=status;response.geturl=lambda:url or module.GOOGLE_REPOSITORY+self.expected[0]
+        opener=mock.Mock();opener.open.side_effect=error;opener.open.return_value=response
+        with mock.patch.object(module.urllib.request,'build_opener',return_value=opener):
+            result=module.require_metadata_identity(self.package,self.expected)
+        opener.open.assert_called_once_with(module.GOOGLE_REPOSITORY+self.expected[0],timeout=15)
+        return result
+
+    def refused(self,code,**kwargs):
+        with self.assertRaises(module.MetadataRefusal) as raised:self.call(**kwargs)
+        self.assertEqual(str(raised.exception),code);self.assertEqual(raised.exception.code,code)
+
+    def test_matching_identity_returns_only_bound_observation(self):
+        raw=ET.tostring(self.xml());result=self.call(raw)
+        self.assertEqual(result,{'package':'emulator','metadata_sha256':module.hashlib.sha256(raw).hexdigest(),
+            'metadata_bytes':len(raw),'revision':self.expected[1],'license_sha1':module.LICENSE_HASH})
+
+    def test_http_status_and_transport_have_fixed_codes(self):
+        self.refused('metadata_http_status',status=503)
+        self.refused('metadata_http_status',error=urllib.error.HTTPError('private-canary',404,'private-canary',{},None))
+        for error in [urllib.error.URLError('private-canary'),ConnectionResetError('private-canary'),TimeoutError('private-canary')]:
+            self.refused('metadata_transport',error=error)
+
+    def test_redirect_is_refused_before_follow_and_after_response(self):
+        self.refused('metadata_redirect',url='https://example.invalid/private-canary')
+        handler=module.RejectMetadataRedirect()
+        with self.assertRaisesRegex(module.MetadataRefusal,'^metadata_redirect$'):
+            handler.redirect_request(None,None,302,'private-canary',{},'https://example.invalid/private-canary')
+
+    def test_read_is_capped_and_oversize_refuses(self):
+        class Response(io.BytesIO):
+            status=200
+            def geturl(inner):return module.GOOGLE_REPOSITORY+self.expected[0]
+            def read(inner,limit):
+                self.assertEqual(limit,module.METADATA_LIMIT+1)
+                return b'x'*limit
+        opener=mock.Mock();opener.open.return_value=Response()
+        with mock.patch.object(module.urllib.request,'build_opener',return_value=opener):
+            with self.assertRaisesRegex(module.MetadataRefusal,'^metadata_size$'):
+                module.require_metadata_identity(self.package,self.expected)
+
+    def test_invalid_xml_or_missing_revision_structure_is_parse(self):
+        self.refused('metadata_parse',raw=b'<private-canary')
+        for variant in ['missing','empty','empty-child']:
+            root=self.xml();package=root.find('remotePackage');rev=package.find('revision')
+            if variant=='missing':package.remove(rev)
+            elif variant=='empty':rev.clear()
+            else:rev[0].text=None
+            self.refused('metadata_parse',raw=ET.tostring(root))
+
+    def test_license_text_and_selected_reference_refuse(self):
+        for variant in ['text','missing','ref']:
+            root=self.xml();package=root.find('remotePackage')
+            if variant=='text':root.find('license').text='changed'
+            elif variant=='missing':package.remove(package.find('uses-license'))
+            else:package.find('uses-license').set('ref','other')
+            self.refused('metadata_license_drift',raw=ET.tostring(root))
+
+    def test_stable_package_ambiguity_or_absence_refuses(self):
+        for variant in ['duplicate','preview','missing']:
+            root=self.xml();package=root.find('remotePackage')
+            if variant=='duplicate':root.append(ET.fromstring(ET.tostring(package)))
+            elif variant=='preview':package.find('channelRef').set('ref','channel-1')
+            else:root.remove(package)
+            self.refused('metadata_package_drift',raw=ET.tostring(root))
+
+    def test_revision_and_archive_drift_are_separate(self):
+        root=self.xml();root.find('remotePackage/revision/major').text='999'
+        self.refused('metadata_revision_drift',raw=ET.tostring(root))
+        for field in ['url','size','checksum']:
+            root=self.xml();root.find('remotePackage/archives/archive/complete/'+field).text='changed'
+            self.refused('metadata_archive_drift',raw=ET.tostring(root))
+        root=self.xml();archive=root.find('remotePackage/archives/archive');archive.remove(archive.find('complete'))
+        self.refused('metadata_archive_drift',raw=ET.tostring(root))
+
+    def test_every_fixed_code_survives_main_without_private_details(self):
+        with tempfile.TemporaryDirectory() as temp:
+            for code in sorted(module.MetadataRefusal.CODES):
+                with mock.patch.object(module,'ROOT',Path(temp)),mock.patch.object(sys,'argv',['verify','--sdk-root',temp,'--apk','private-canary']),mock.patch.object(module,'prepare_emulator',side_effect=module.MetadataRefusal(code)),mock.patch('sys.stdout',new_callable=io.StringIO) as out:
+                    self.assertEqual(module.main(),1)
+                report=json.loads(out.getvalue())
+                self.assertFalse(report['pass']);self.assertEqual(report['status'],'FAILED')
+                self.assertEqual(report['cases'],[]);self.assertEqual(report['diagnostic_code'],code)
+                self.assertNotIn('private-canary',out.getvalue());self.assertNotIn(temp,out.getvalue())
+                self.assertEqual(report,json.loads((Path(temp)/'output/android-share/emulator.json').read_text()))
+
+    def test_unknown_diagnostic_cannot_be_published(self):
+        with self.assertRaisesRegex(ValueError,'^Invalid metadata diagnostic code$'):
+            module.MetadataRefusal('private-canary')
+
+
 class ManagerAcceptance(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
@@ -93,6 +211,14 @@ class ManagerAcceptance(unittest.TestCase):
 
     def enter(self,patch):
         value=patch.start();self.addCleanup(patch.stop);return value
+
+    def test_metadata_refusal_never_starts_sdk_install(self):
+        install=self.enter(mock.patch.object(module,'sdk_install',side_effect=AssertionError('must not install')))
+        with mock.patch.object(module,'require_metadata_identity',side_effect=module.MetadataRefusal('metadata_revision_drift')):
+            with self.assertRaisesRegex(module.MetadataRefusal,'^metadata_revision_drift$'):
+                module.prepare_emulator(self.sdk,self.report)
+        self.assertEqual(self.report['phase'],'reviewed_metadata');install.assert_not_called()
+        self.assertEqual(self.license.read_bytes(),self.original)
 
     def test_manager_license_refusal_is_unavailable_not_executed(self):
         install=self.enter(mock.patch.object(module,'sdk_install',return_value=(1,b'License for package Android Emulator not accepted.')))
