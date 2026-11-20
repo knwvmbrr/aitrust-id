@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-164850-credential-state-chronology-correction-6dbcd154
+
+Recorded 2026-11-20T16:48:50.393806+00:00 · Contributor: Codex PM after task-list lead diagnosis · change
+
+- **Changed.** Refresh both top-level state timestamps after recording the new execution evidence, correcting the protected accountability refusal.
+- **Evidence.** The exact failed CI job is preserved. The unchanged state chronology validator now passes against all referenced evidence; no product source or acceptance criterion changed. [Change record](./runs/changes/2026-11-20-164850-credential-state-chronology-correction-6dbcd154.json).
+- **Not claimed.** Required checks must pass on the corrected commit before merge; no full original or independent accuracy closure claimed.
+
+
 ### 2026-11-20-164615-credential-integrated-ready-for-protection-c1e8b08c
 
 Recorded 2026-11-20T16:46:15.082038+00:00 · Contributor: Codex PM with distinct reviewer web_camo · change
