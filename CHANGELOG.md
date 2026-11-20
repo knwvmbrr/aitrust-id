@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-20
 
+### 2026-11-20-171211-android-pause-hosted-seven-proof-75ae93cd
+
+Recorded 2026-11-20T17:12:11.883899+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain exact source-bound API36 seven-control emulator execution for the pause-clearing candidate, preserving the earlier failed reports and release limits.
+- **Evidence.** Actual hosted run44779986361 at d507931 executes all seven original controls successfully with unchanged fast-return helper10b37854. Exact GitHub artifact digest, raw reports, native sources and signed development APK are bound; hosted JVM, compile and137 engine-parity controls pass. [Change record](./runs/changes/2026-11-20-171211-android-pause-hosted-seven-proof-75ae93cd.json).
+- **Not claimed.** One bounded synthetic emulator execution, not physical-device/Share chooser/human TalkBack/accuracy/full N-014 acceptance. Historical callback dispatch remains unproven; shared protocol/boundary/state integration and review are pending. No further runtime rerun.
+
+
 ### 2026-11-20-170531-android-clear-on-pause-candidate-2a862184
 
 Recorded 2026-11-20T17:05:31.825507+00:00 · Contributor: Codex · change

@@ -169,3 +169,23 @@ wait, fresh launch/Share intent, delay, assertion removal or positive result
 substitution masks it. Local wiring/state controls cannot establish actual
 Android lifecycle dispatch: a new source-bound hosted APK run must execute all
 seven original controls before a complete runtime pass can be recorded.
+
+## Source-bound API36 seven-control pass
+
+[Run44779986361](https://github.com/knwvmbrr/aitrust-id/actions/runs/44779986361)
+executed source `d50793165254fe666a165542624fcdc159d01293` and completed all
+seven original controls on the owned API36 emulator, including the unchanged
+immediate HOME/refocus check. Its final owned UI showed the cleared message and
+no marker; `emulator.json` is EXECUTED / pass:true / case_count7, with no Internet
+permission and an unchanged existing license record. Actual hosted JVM controls,
+APK compilation, development test-signature verification and pinned-engine parity
+also passed. This is a bounded synthetic emulator result, not physical-device,
+real sending-app/Share chooser, human TalkBack, independent accuracy or release
+acceptance. The two earlier failed runs remain failed; this pass does not retroactively
+prove which callbacks they received.
+
+The immutable receipt `runs/2026-11-20-android-pause-hosted-seven.json` binds the
+exact downloaded artifact, raw reports, native build sources, current helper and
+signed development test APK. Shared protocol/boundary/state integration and review
+are still pending in draft PR134. No full N-014 or other original requirement is
+closed by this component result. No further unchanged runtime retry is needed.
