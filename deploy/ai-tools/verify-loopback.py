@@ -11,6 +11,7 @@ import logging
 import os
 from pathlib import Path
 import signal
+import ssl
 import socket
 import subprocess
 import sys
@@ -35,7 +36,7 @@ async def main(binary,output):
         root=Path(directory);sock=free_socket();port=sock.getsockname()[1];p=free_socket();front=p.getsockname()[1];p.close();base='http://127.0.0.1:'+str(front)
         config=root/'Caddyfile';config.write_text(render.caddyfile(front,port));prod=root/'production.Caddyfile';prod.write_text(render.caddyfile())
         env={**os.environ,'XDG_DATA_HOME':str(root/'data'),'XDG_CONFIG_HOME':str(root/'config'),'HOME':str(root)}
-        proxy=None;server=None;task=None;app=None;children=[]
+        proxy=None;tlsproxy=None;server=None;task=None;app=None;children=[]
         try:
             adaptations=[]
             for source in [config,prod]:
@@ -103,6 +104,38 @@ async def main(binary,output):
                 rd,wr=await asyncio.open_connection('127.0.0.1',front);wr.write(f'POST /v1/check HTTP/1.1\r\nHost: {render.HOST}\r\nContent-Type: application/json\r\nContent-Length: 100\r\nConnection: close\r\n\r\n{{'.encode());await wr.drain();data=await asyncio.wait_for(rd.read(8192),14);wr.close();await wr.wait_closed();assert not data or data.split(b'\r\n',1)[0].split(b' ')[1] in (b'400',b'408',b'504');assert CANARY.encode() not in data
                 groups.append('actual_incomplete_body_finite_deadline')
                 assert (await c.get(base+'/healthz')).status_code==200
+            stage='TLS_SNI_Host_policy'
+            # A private self-signed fixture, NEVER a production/ACME credential.
+            from cryptography import x509
+            from cryptography.hazmat.primitives.asymmetric import ec
+            from cryptography.hazmat.primitives import serialization,hashes
+            from cryptography.x509.oid import NameOID
+            from datetime import timedelta
+            key=ec.generate_private_key(ec.SECP256R1());name=x509.Name([x509.NameAttribute(NameOID.COMMON_NAME,render.HOST)]);now=datetime.now(timezone.utc)
+            cert=x509.CertificateBuilder().subject_name(name).issuer_name(name).public_key(key.public_key()).serial_number(x509.random_serial_number()).not_valid_before(now-timedelta(minutes=1)).not_valid_after(now+timedelta(days=1)).add_extension(x509.SubjectAlternativeName([x509.DNSName(render.HOST)]),critical=False).add_extension(x509.BasicConstraints(ca=True,path_length=0),critical=True).sign(key,hashes.SHA256())
+            certpath=root/'synthetic-cert.pem';keypath=root/'synthetic-key.pem';certpath.write_bytes(cert.public_bytes(serialization.Encoding.PEM))
+            with keypath.open('xb') as f:f.write(key.private_bytes(serialization.Encoding.PEM,serialization.PrivateFormat.PKCS8,serialization.NoEncryption()))
+            keypath.chmod(0o600);key=None
+            ts=free_socket();tlsport=ts.getsockname()[1];ts.close()
+            text=render.caddyfile();old='    tls {\n        protocols tls1.2 tls1.3\n        issuer acme {\n            disable_http_challenge\n        }\n    }'
+            assert text.count(old)==1
+            text=text.replace('https://'+render.HOST+' {','https://'+render.HOST+':'+str(tlsport)+' {\n    bind 127.0.0.1').replace(old,'    tls '+str(certpath)+' '+str(keypath)+' {\n        protocols tls1.2 tls1.3\n    }').replace('127.0.0.1:8790','127.0.0.1:'+str(port))
+            tc=root/'synthetic-TLS.Caddyfile';tc.write_text(text)
+            tlsproxy=subprocess.Popen([str(binary),'run','--config',str(tc),'--adapter','caddyfile'],stdout=logs,stderr=logs,env=env,start_new_session=True)
+            context=ssl.create_default_context(cafile=str(certpath))
+            async def tls_request(host):
+                rd,wr=await asyncio.open_connection('127.0.0.1',tlsport,ssl=context,server_hostname=render.HOST)
+                try:
+                    wr.write(('GET /healthz HTTP/1.1\r\nHost: '+host+'\r\nConnection: close\r\n\r\n').encode());await wr.drain();return await asyncio.wait_for(rd.read(8192),5)
+                finally:wr.close();await wr.wait_closed()
+            async with asyncio.timeout(5):
+                while True:
+                    try:data=await tls_request(render.HOST);break
+                    except (OSError,ssl.SSLError):await asyncio.sleep(.03)
+            assert data.startswith(b'HTTP/1.1 200') and b'"ok": true' in data
+            bad=await tls_request('wrong.invalid');assert bad.startswith(b'HTTP/1.1 421');assert b'wrong.invalid' not in bad and CANARY.encode() not in bad
+            tlsproxy.terminate();await asyncio.to_thread(tlsproxy.wait,20);assert tlsproxy.returncode==0
+            groups.append('actual_private_TLS_correct_pair_and_SNI_Host_mismatch_421')
             stage='shutdown'
             proxy.terminate();await asyncio.to_thread(proxy.wait,20);assert proxy.returncode==0
             server.should_exit=True;await asyncio.wait_for(task,5);assert not app.engine.active and not app.engine.running and not app.engine.launches and not app.engine.reapers
@@ -117,6 +150,7 @@ async def main(binary,output):
             for child in children:
                 if child.returncode is None:child.kill()
                 await child.wait()
+            if tlsproxy and tlsproxy.poll() is None:tlsproxy.terminate();await asyncio.to_thread(tlsproxy.wait,20)
             if proxy and proxy.poll() is None:proxy.terminate();await asyncio.to_thread(proxy.wait,20)
             if server and task and not task.done():server.should_exit=True;await asyncio.wait_for(task,5)
             sock.close()

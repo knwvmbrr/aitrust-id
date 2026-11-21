@@ -14,7 +14,7 @@ def load(name):
 render=load('render');prepare=load('prepare');fetch=load('fetch-caddy')
 class Deployment(unittest.TestCase):
     def test_closed_host_routes_tls_and_private_logging(self):
-        s=render.caddyfile();self.assertIn('https://vps-18ef1326.vps.ovh.us',s);self.assertIn('admin off',s);self.assertIn('output discard',s);self.assertNotIn('\n    log\n',s);self.assertIn('disable_http_challenge',s);self.assertIn('auto_https disable_redirects',s);self.assertIn('path /healthz /v1/tags',s);self.assertIn('path /mcp /v1/check',s);self.assertNotIn('api.aitrustid.com',s)
+        s=render.caddyfile();self.assertIn('https://vps-18ef1326.vps.ovh.us',s);self.assertIn('admin off',s);self.assertIn('strict_sni_host on',s);self.assertIn('output discard',s);self.assertNotIn('\n    log\n',s);self.assertIn('disable_http_challenge',s);self.assertIn('auto_https disable_redirects',s);self.assertIn('path /healthz /v1/tags',s);self.assertIn('path /mcp /v1/check',s);self.assertNotIn('api.aitrustid.com',s)
     def test_proxy_limits_credentials_and_transport(self):
         s=render.caddyfile(19111,19112)
         for token in ['http://:19111','bind 127.0.0.1','127.0.0.1:19112','max_size 256000','max_header_size 8192','read_body 12s','write 15s','max_conns_per_host 16','header_up -Cookie','header_up -Authorization','header_up -X-Forwarded-For','compression off','Cache-Control "no-store"']:self.assertIn(token,s)

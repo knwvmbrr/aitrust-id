@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-153530-remote-proxy-sni-host-policy-50cc1c17
+
+Recorded 2026-11-21T15:35:30.090292+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Required exact TLS SNI and HTTP Host agreement and added a private synthetic-certificate ingress control.
+- **Evidence.** The documented strict_sni_host policy is rendered without wildcard certificates; the loopback verifier retains canonical HTTP/MCP controls and adds correct-pair200 versus mismatched-Host421 under the same production policy. [Change record](./runs/changes/2026-11-21-153530-remote-proxy-sni-host-policy-50cc1c17.json).
+- **Not claimed.** Actual corrected proxy execution remains pending. Temporary self-signed test material is private and deleted; this is not public trusted TLS, ACME issuance or effective systemd sandbox activation.
+
+
 ### 2026-11-21-153307-remote-proxy-explicit-loopback-bind-54224e5c
 
 Recorded 2026-11-21T15:33:07.129501+00:00 · Contributor: Codex API deployment engineer · change
