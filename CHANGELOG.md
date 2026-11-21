@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-204050-public-guide-state-chronology-fixed-b3efeba7
+
+Recorded 2026-11-21T20:40:50.936411+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Corrected the state timestamp mismatch caught by protected CI without changing source, scope or safeguards.
+- **Evidence.** The unchanged accountability guard now passes all 202 original counts and 977 referenced evidence records. All five engineering receipts still match their exact source fingerprints after the metadata-only correction. [Change record](./runs/changes/2026-11-21-204050-public-guide-state-chronology-fixed-b3efeba7.json).
+- **Not claimed.** The original CI refusal is preserved. Protected CI reruns on the corrected commit; no source-bound functional suite is rerun without a source change, and no original or accuracy gate is waived.
+
+
 ### 2026-11-21-203239-public-guide-boundaries-43b255e6
 
 Recorded 2026-11-21T20:32:39.407137+00:00 · Contributor: Codex /root · change

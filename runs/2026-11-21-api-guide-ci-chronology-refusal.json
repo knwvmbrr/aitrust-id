@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-11-21T20:40:22.459440+00:00",
+  "kind": "protected_CI_state_chronology_refusal",
+  "pass": false,
+  "run_id": 44946987109,
+  "job_id": 136976350393,
+  "failed_command": [
+    "python",
+    "scripts/verify-accountability.py"
+  ],
+  "error": "ValueError: State timestamps disagree",
+  "scope_structure_and_progress_checks_passed_before_failure": true,
+  "root_cause": "Root metadata writes updated updated but not the matching updated_at field.",
+  "fix": "Synchronize both timezone-aware timestamps after all referenced evidence. Keep all source and acceptance checks unchanged.",
+  "original_requirements_closed": 0
+}

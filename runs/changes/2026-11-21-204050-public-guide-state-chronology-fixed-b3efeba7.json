@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-204050-public-guide-state-chronology-fixed-b3efeba7",
+  "recorded_at": "2026-11-21T20:40:50.936411+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ef819caa84e61907b74b100aed008faf5aefa6ed",
+  "changed": "Corrected the state timestamp mismatch caught by protected CI without changing source, scope or safeguards.",
+  "proves": "The unchanged accountability guard now passes all 202 original counts and 977 referenced evidence records. All five engineering receipts still match their exact source fingerprints after the metadata-only correction.",
+  "limits": "The original CI refusal is preserved. Protected CI reruns on the corrected commit; no source-bound functional suite is rerun without a source change, and no original or accuracy gate is waived.",
+  "scope_ids": [
+    "WP-SITE",
+    "WP-INTEGRATIONS"
+  ],
+  "files": {
+    "state.json": "5823638b630a1766ce1a376f6f2972abc34eda93adb83863341a9b8d477953f4",
+    "runs/2026-11-21-api-guide-ci-chronology-refusal.json": "11f740a9959e194f6138ff1a30ec6ed725c38ea9d32e6303e9e3fd22b6040776",
+    "runs/2026-11-21-api-guide-accountability-corrected.json": "c94467e429dc18237fac6526afd34996a9f733b9d260895bd9573cc899ab1edf"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-api-guide-ci-chronology-refusal.json",
+      "sha256": "11f740a9959e194f6138ff1a30ec6ed725c38ea9d32e6303e9e3fd22b6040776"
+    },
+    {
+      "path": "runs/2026-11-21-api-guide-accountability-corrected.json",
+      "sha256": "c94467e429dc18237fac6526afd34996a9f733b9d260895bd9573cc899ab1edf"
+    }
+  ],
+  "checks": []
+}
