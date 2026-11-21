@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-073355-android-recreation-pass-home-setup-failure-6e27d38e",
+  "recorded_at": "2026-11-21T07:33:55.206521+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e12de0c88821d5edae7354c8c2b69123d27bc0a0",
+  "changed": "Preserve actual default edited-draft recreation success and the later unexecuted HOME exercise.",
+  "proves": "Original seven and first supplemental recreation case passed with receipt, exact text reassertion and observed up/down movement; second case failed at fresh background-receive setup before configuration/HOME.",
+  "limits": "The full producer remains failed and HOME-race outcome is unexecuted. No final default9, physical/human, production readiness or full-original closure is claimed.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "runs/2026-11-21-android-config-first-pass-home-setup-failed.json": "b41969e2ad091597743d5bfcb2bcbc8ffa809e9eb08d9f5bddfc5014d9e6e68d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-config-first-pass-home-setup-failed.json",
+      "sha256": "b41969e2ad091597743d5bfcb2bcbc8ffa809e9eb08d9f5bddfc5014d9e6e68d"
+    }
+  ],
+  "checks": []
+}

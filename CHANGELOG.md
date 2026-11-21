@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-073355-android-recreation-pass-home-setup-failure-6e27d38e
+
+Recorded 2026-11-21T07:33:55.206521+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve actual default edited-draft recreation success and the later unexecuted HOME exercise.
+- **Evidence.** Original seven and first supplemental recreation case passed with receipt, exact text reassertion and observed up/down movement; second case failed at fresh background-receive setup before configuration/HOME. [Change record](./runs/changes/2026-11-21-073355-android-recreation-pass-home-setup-failure-6e27d38e.json).
+- **Not claimed.** The full producer remains failed and HOME-race outcome is unexecuted. No final default9, physical/human, production readiness or full-original closure is claimed.
+
+
 ### 2026-11-21-071828-android-derived-margin-motion-controls-06afb06f
 
 Recorded 2026-11-21T07:18:28.711994+00:00 · Contributor: Codex · change
