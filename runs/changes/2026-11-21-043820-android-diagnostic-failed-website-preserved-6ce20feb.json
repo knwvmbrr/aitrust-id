@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-043820-android-diagnostic-failed-website-preserved-6ce20feb",
+  "recorded_at": "2026-11-21T04:38:20.334141+00:00",
+  "author": "/root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "afe0296171a149876079b374e25c942b6a3cccb3",
+  "changed": "Preserved the current protocol pass and the failed website accessibility candidate before new diagnostics.",
+  "proves": "The protocol completed its existing checks. Website verification stopped at the dialog accessibility probe; unchanged focused MT-to-IV checks did not reproduce the failure.",
+  "limits": "The website candidate remains failed, the original cause is unestablished, and this record closes no Android or original requirement.",
+  "scope_ids": [
+    "N-014",
+    "F-142"
+  ],
+  "files": {
+    "runs/2026-11-20-android-diagnostic-final-protocol.json": "a5777c61942fccdb55e6c6a02f63e29f00e1163384d770cfe5752338439124c5",
+    "runs/2026-11-20-android-diagnostic-final-website.json": "095c445abb743159c163c8ed9c6f7fc00d7120582e5fc623defee29be29226a1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-diagnostic-final-protocol.json",
+      "sha256": "a5777c61942fccdb55e6c6a02f63e29f00e1163384d770cfe5752338439124c5"
+    },
+    {
+      "path": "runs/2026-11-20-android-diagnostic-final-website.json",
+      "sha256": "095c445abb743159c163c8ed9c6f7fc00d7120582e5fc623defee29be29226a1"
+    }
+  ],
+  "checks": []
+}

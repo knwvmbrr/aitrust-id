@@ -1,6 +1,26 @@
 # Changelog
 
+## Unreleased — 2026-11-21
+
+### 2026-11-21-043820-android-diagnostic-failed-website-preserved-6ce20feb
+
+Recorded 2026-11-21T04:38:20.334141+00:00 · Contributor: /root · change
+
+- **Changed.** Preserved the current protocol pass and the failed website accessibility candidate before new diagnostics.
+- **Evidence.** The protocol completed its existing checks. Website verification stopped at the dialog accessibility probe; unchanged focused MT-to-IV checks did not reproduce the failure. [Change record](./runs/changes/2026-11-21-043820-android-diagnostic-failed-website-preserved-6ce20feb.json).
+- **Not claimed.** The website candidate remains failed, the original cause is unestablished, and this record closes no Android or original requirement.
+
+
 ## Unreleased — 2026-11-20
+
+### 2026-11-20-184038-android-diagnostic-current-protocol-6a3e1124
+
+Recorded 2026-11-20T18:40:38.077222+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Record final combined native diagnostic protocol execution before serial website validation.
+- **Evidence.** All56 configured protocol commands pass with stable sources after preserving exact original criteria and explicit startup reliability limitations. [Change record](./runs/changes/2026-11-20-184038-android-diagnostic-current-protocol-6a3e1124.json).
+- **Not claimed.** Website, boundary refresh and protected integration remain pending; the Android software task and full original acceptance remain open.
+
 
 ### 2026-11-20-183820-android-diagnostic-final-source-freeze-d1c6a983
 
