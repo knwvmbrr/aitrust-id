@@ -408,7 +408,7 @@ jobs:
           node --test tests/nf-browser-diagnostics.cjs
           node scripts/verify-nf-client.cjs
           node scripts/verify-nf-site.cjs
-          python3 -m pytest tests/test_hp_uncertainty_device.py tests/test_pyodide_js_sources.py -q
+          python3 -m pytest tests/test_hp_uncertainty_device.py tests/test_pyodide_js_sources.py tests/test_zlib_source_delivery.py -q
           node scripts/verify-hp-uncertainty-client.cjs
           node scripts/verify-hp-uncertainty-site.cjs
 

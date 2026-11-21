@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-112808-normal-embedded-source-maintenance-integration-c919b12b",
+  "recorded_at": "2026-11-21T11:28:08.882428+00:00",
+  "author": "Codex /root integration; source and IO worker /root/seo; distinct reviewer /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e9185f128818e823c9b57efbab0a9e275f28318a",
+  "changed": "Added exact embedded zlib source/notice preparation and additive postbuild/predeploy artifact checks, registered closed source/test inputs, and made both source deliveries discoverable with and without JavaScript.",
+  "proves": "The reviewed standalone producers passed cached-source replay, constructor/descriptor-reuse faults and deterministic artifact checks. Existing JavaScript source notices and all upstream archive/license content are retained; refreshed metadata binds the actual corrected producer.",
+  "limits": "Combined normal build, final source-bound/protected checks and public maintenance delivery remain pending. Global native/WASM/license obligations and all original percentages remain open and unchanged.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "site/scripts/prepare-device.mjs": "2a20a63f3ac341eb7375c85f4a547c733fc3a3837ced00b11f87e59fefba0450",
+    "site/scripts/prepare.mjs": "9de9996e5efc9329f1dd03ff51b12e43b4181484ef22ad53348a737550070d5b",
+    "site/package.json": "8b1962dba1b731bab560511a526e35384c9f1a83b94d4ad1f337ae33247644ee",
+    "site/src/workflows/About.jsx": "77c6f96b2407c93df43c0678c8253170a5d02fd58c1245885d3f945a157c0c27",
+    ".gitignore": "a5678d193be4e1cccf7e2655fd2f7d53a2b622cf4c78b6c411378da537888778",
+    "README.md": "91d0dbbfee053bc0256ad9eccccbde8a61d04495d76c7e7bcdfc01dafd6b6331",
+    "scripts/verify-route-boundaries.py": "27fd4123e79cfc9a053d3c92dde493ad01d8f50506a746fe1ac37da357709817",
+    "eval/revalidation.json": "cc1c101276d3fd051b9768b1cc8c1b7a0e88385a0dcd1271edfe4dbe26e9aa64",
+    ".github/workflows/ci.yml": "630905a7229e9f2d000eb7571e4dfa1098fba90d97f73620ab5954668f9df226"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-js-export-owned-fd-corrected.json",
+      "sha256": "0caade71d3165db40328ee394810dc6bfd0a63ce2f41824db274671ebda7630a"
+    },
+    {
+      "path": "runs/2026-11-21-js-export-owned-fd-independent-review.json",
+      "sha256": "033cb45a8ad9c9e0dd585d1a73a2e1caefb244b6784353658665d5cea864e18e"
+    },
+    {
+      "path": "runs/2026-11-21-zlib-source-corrected-independent-review.json",
+      "sha256": "46c3d519e1e6a92db8898ea8aace4032cc039718636feec7f78ffe2722b0d9eb"
+    }
+  ],
+  "checks": []
+}

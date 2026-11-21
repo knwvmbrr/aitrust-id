@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-112808-normal-embedded-source-maintenance-integration-c919b12b
+
+Recorded 2026-11-21T11:28:08.882428+00:00 · Contributor: Codex /root integration; source and IO worker /root/seo; distinct reviewer /root/web_camo · change
+
+- **Changed.** Added exact embedded zlib source/notice preparation and additive postbuild/predeploy artifact checks, registered closed source/test inputs, and made both source deliveries discoverable with and without JavaScript.
+- **Evidence.** The reviewed standalone producers passed cached-source replay, constructor/descriptor-reuse faults and deterministic artifact checks. Existing JavaScript source notices and all upstream archive/license content are retained; refreshed metadata binds the actual corrected producer. [Change record](./runs/changes/2026-11-21-112808-normal-embedded-source-maintenance-integration-c919b12b.json).
+- **Not claimed.** Combined normal build, final source-bound/protected checks and public maintenance delivery remain pending. Global native/WASM/license obligations and all original percentages remain open and unchanged.
+
+
 ### 2026-11-21-112301-existing-js-export-owned-fd-correction-901aaac6
 
 Recorded 2026-11-21T11:23:01.843488+00:00 · Contributor: Codex /root/seo; distinct review /root/web_camo · change
