@@ -13,7 +13,8 @@ not physical-device, arbitrary-source-app or TalkBack acceptance.
 - `tests/android/intent-sender/AndroidManifest.xml` and `SenderActivity.java`: a
   separate test-only, zero-permission application. A finite integer selects one
   hard-coded synthetic intent; no caller-provided text, URI or package is read.
-  It explicitly addresses the existing checker, then finishes. No provider,
+  It explicitly addresses the existing checker through the finite callback
+  handshake described below. No provider,
   upload, storage, credential, implicit recipient or new endpoint is introduced.
 - `scripts/android-intent-controls.py`: compile/sign the sender with preinstalled
   SDK36/JDK tools in an owned private temporary directory; validate its zero
@@ -68,3 +69,31 @@ Before hosted dispatch: meaningful focused controls, exact frozen source hashes,
 and distinct source review. Then one ordinary changed-source hosted path with
 existing license acceptance rules, retaining all outcomes. No local SDK installs,
 local emulator, terms acceptance, new infrastructure or manual unchanged reruns.
+
+
+## Evidence-driven sender dispatch correction
+
+Run44888523549 at ab0666b completed the original7 and configuration2, compiled
+and installed a separate zero-permission sender with a different UID, then
+failed the first new missing-text refusal. The hierarchy still showed the exact
+prior valid marker, Received and enabled Check. Zero invalid/recovery pairs
+completed. The outgoing callback/selection was not observed; task-root reuse or
+stale selection is a hypothesis, not an established product parser defect.
+The exact failed report and artifact remain immutable.
+
+Correction is confined to the test sender and its driver. Keep a singleTask
+sender activity in its test task. Both onCreate and onNewIntent explicitly
+process their actual callback Intent. Consume the incoming intent to MAIN; never
+read caller text, URI or recipient. Attest each dispatch with a fixed, bounded
+in-memory counter, enumerated selection/callback and START_RETURNED/START_REFUSED.
+The export has one exact argument and marker; no UI, general extras, reflection,
+text, URI, UID or paths are examined or emitted. Clear the pending enum/outcome
+after one export. Every driver start must observe exactly the next counter and
+requested selection with START_RETURNED before any checker UI assertion. A
+missing, stale, malformed, duplicate or wrong frame fails the new case; it never
+becomes evidence of a target rejection. No extra wait budget or blind retries.
+
+The sender task behavior changes, not the checker APK or original nine controls.
+A returned start still is not proof of target parsing: the exact unsupported
+checker state and later exact valid recovery remain mandatory. Distinct source
+review and one changed-source hosted candidate follow focused correction tests.

@@ -709,7 +709,7 @@ def verify_configuration_controls(send,shell,wait,click,report):
 
 class AndroidIntentRefusal(ValueError):
     CODES=frozenset({'intent_'+stage+'_unavailable' for stage in
-        ('source','default_apk','build','install','uid','portrait','prime','send','refusal','recovery','cleanup','workflow')})
+        ('source','default_apk','build','install','uid','portrait','prime','send','dispatch','refusal','recovery','cleanup','workflow')})
     def __init__(self,code):
         if code not in self.CODES:raise ValueError('Invalid synthetic intent diagnostic')
         self.code=code;super().__init__(code)

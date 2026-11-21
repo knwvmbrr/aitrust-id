@@ -99,6 +99,7 @@ class SafeSenderBoundary(unittest.TestCase):
         app=value.find('application');self.assertEqual(app.attrib[ns+'allowBackup'],'false');self.assertEqual(app.attrib[ns+'debuggable'],'false')
         self.assertEqual(app.findall('provider'),[]);self.assertEqual(app.findall('service'),[])
         self.assertEqual([x.attrib[ns+'name'] for x in app.findall('activity')],['.SenderActivity'])
+        self.assertEqual(app.find('activity').attrib[ns+'launchMode'],'singleTask')
         production=(ROOT/'mobile/android/AndroidManifest.xml').read_text();self.assertNotIn(m.SENDER,production)
         builder=load('synthetic_default_builder','scripts/android-share-build.py')
         with tempfile.TemporaryDirectory() as p:
@@ -138,6 +139,51 @@ class SafeSenderBoundary(unittest.TestCase):
         self.assertEqual(error.exception.code,'intent_workflow_unavailable');self.assertEqual(report,{'status':'FAILED','pass':False})
         self.assertNotIn('PRIVATE_',str(error.exception))
 
+class DispatchHandshake(unittest.TestCase):
+    def frame(self,counter=1,selection=0,**changes):
+        value={'schema':1,'counter':counter,'selection':selection,'outcome':'START_RETURNED','callback':'CREATE'}
+        value.update(changes)
+        return b'PRIVATE_FRAMEWORK_HEADER /private/file\n  AITRUST_SYNTHETIC_V1:'+json.dumps(value).encode()+b'\n'
+
+    def test_exact_frame_returns_only_fixed_enums_and_rejects_private_or_malformed(self):
+        value=m.parse_dispatch(self.frame(),1,0)
+        self.assertEqual(value,{'counter':1,'selection':'valid','callback':'CREATE','start_returned':True})
+        for changes in [{'schema':True},{'counter':True},{'counter':2},{'selection':True},{'selection':1},{'outcome':'START_REFUSED'},{'outcome':'NONE'},{'callback':'PRIVATE_CALLBACK'},{'PRIVATE_FIELD':'PRIVATE_DATA'}]:
+            with self.assertRaises(ValueError) as error:m.parse_dispatch(self.frame(**changes),1,0)
+            self.assertNotIn('PRIVATE_',str(error.exception))
+        for raw in [b'',b'x'*65537,self.frame()*2,b'AITRUST_SYNTHETIC_V1:[]',b'AITRUST_SYNTHETIC_V1:{"schema":1,"schema":1}',b'AITRUST_SYNTHETIC_V1:PRIVATE_BAD_JSON']:
+            with self.assertRaises(ValueError) as error:m.parse_dispatch(raw,1,0)
+            self.assertNotIn('PRIVATE_',str(error.exception))
+
+    def test_reused_task_stale_selection_refuses_before_checker_assertion(self):
+        for stale in [False,True]:
+            with self.subTest(stale=stale),tempfile.TemporaryDirectory() as p:
+                report={};state=0;counter=0;waits=[]
+                def shell(args,timeout=10):
+                    nonlocal state,counter
+                    if args[0]=='pm':return ('package:'+args[-1]+' uid:'+('10042' if args[-1]==m.SENDER else '10041')+'\n').encode()
+                    if args==['wm','user-rotation']:return b'lock 0\n'
+                    if args[:3]==['am','start','-W']:
+                        incoming=int(args[-1])
+                        if not(stale and incoming==1):state=incoming;counter+=1
+                        return b'PRIVATE_START_WARNING'
+                    if args[:2]==['dumpsys','activity']:return self.frame(counter,state,callback='CREATE' if counter==1 else 'NEW_INTENT')
+                    raise AssertionError('Unexpected command')
+                def wait(predicate):
+                    waits.append(state);view=ET.Element('hierarchy')
+                    for rid,text,enabled in [('editor',m.MARKER if state==0 else m.HINT,True),('status',m.RECEIVED if state==0 else m.UNSUPPORTED,True),('check','Check',state==0)]:
+                        ET.SubElement(view,'node',{'resource-id':m.PACKAGE+':id/'+rid,'text':text,'enabled':str(enabled).lower()})
+                    self.assertTrue(predicate(view));return view
+                with mock.patch.dict(os.environ,{'RUNNER_TEMP':p}),mock.patch.object(m,'source_identity',return_value={'fixed':'a'}),mock.patch.object(m,'dex_bytes',return_value=b'ordinary'),mock.patch.object(m,'compile_sender',return_value=(Path(p)/'sender.apk',{'permission_count':0})):
+                    if stale:
+                        with self.assertRaises(m.IntentControlRefusal) as error:m.run_controls(Path(p),Path(p)/'default.apk',lambda x:None,shell,wait,report)
+                        self.assertEqual(error.exception.code,'intent_dispatch_unavailable');self.assertEqual(waits,[0]);self.assertEqual(report['case_count'],0);self.assertFalse(report['pass'])
+                    else:
+                        m.run_controls(Path(p),Path(p)/'default.apk',lambda x:None,shell,wait,report)
+                        self.assertTrue(report['pass']);self.assertEqual(len(report['dispatches']),19);self.assertEqual([v['counter'] for v in report['dispatches']],list(range(1,20)));self.assertEqual(len(waits),19)
+                self.assertNotIn('PRIVATE_',json.dumps(report));self.assertNotIn(m.MARKER,json.dumps(report))
+
+
 class SenderBuild(unittest.TestCase):
     def test_actual_build_command_contract_with_inert_sdk_and_failures(self):
         for fault in [None,'command','permission','source_drift']:
@@ -154,7 +200,7 @@ class SenderBuild(unittest.TestCase):
                     if fault=='command':return subprocess.CompletedProcess(argv,1,b'PRIVATE_TOOL_CANARY')
                     if tool=='aapt2' and args[1]=='link':
                         with zipfile.ZipFile(Path(args[args.index('-o')+1]),'w') as z:z.writestr('AndroidManifest.xml',b'inert')
-                    if tool=='d8':(Path(args[args.index('--output')+1])/'classes.dex').write_bytes(m.SENDER_DEX)
+                    if tool=='d8':(Path(args[args.index('--output')+1])/'classes.dex').write_bytes(m.SENDER_DEX+m.SENDER_FRAME)
                     if tool=='zipalign':shutil.copyfile(args[-2],args[-1])
                     if tool=='keytool':Path(args[args.index('-keystore')+1]).touch()
                     if tool=='apksigner' and args[1]=='sign':shutil.copyfile(args[-1],args[args.index('--out')+1])
@@ -194,10 +240,10 @@ class ActualSenderJVM(unittest.TestCase):
         'android/os/Bundle.java':'package android.os; public class Bundle {}',
         'android/net/Uri.java':'package android.net; public class Uri { public final String value; private Uri(String s){value=s;} public static Uri parse(String s){return new Uri(s);} }',
         'android/content/ComponentName.java':'package android.content; public class ComponentName {public final String p,c;public ComponentName(String a,String b){p=a;c=b;}}',
-        'android/app/Activity.java':'package android.app; import android.content.Intent; import android.os.Bundle; public class Activity {public void onCreate(Bundle b){} public Intent getIntent(){return new Intent("stub");}public void startActivity(Intent i){}public void finish(){}}',
+        'android/app/Activity.java':'package android.app; import android.content.Intent; import android.os.Bundle; import java.io.*; public class Activity {public Intent incoming=new Intent("stub");public Intent sent;public int launches=0;public void onCreate(Bundle b){} protected void onNewIntent(Intent i){} public Intent getIntent(){return incoming;}public void setIntent(Intent i){incoming=i;}public void startActivity(Intent i){sent=i;launches++;}public void dump(String p,FileDescriptor fd,PrintWriter w,String[] a){} }',
         'android/content/ClipData.java':'''package android.content; import android.net.Uri; import java.util.*; public class ClipData {public static class Item {public final Object value;public Item(Uri u){value=u;}public Item(CharSequence s){value=s;}} public final ArrayList<Item> items=new ArrayList<>();public ClipData(String l,String[] t,Item i){items.add(i);}public static ClipData newPlainText(String l,CharSequence s){return new ClipData(l,new String[]{"text/plain"},new Item(s));}public void addItem(Item i){items.add(i);}}''',
-        'android/content/Intent.java':'''package android.content; import android.net.Uri; import java.util.*; public class Intent {public static final String ACTION_SEND="SEND",ACTION_SEND_MULTIPLE="MULTIPLE",EXTRA_TEXT="TEXT",EXTRA_STREAM="STREAM"; public String action,type;public ComponentName component;public Uri data;public ClipData clip;public final HashMap<String,Object> extras=new HashMap<>();public Intent(String s){action=s;}public Intent setComponent(ComponentName c){component=c;return this;}public Intent setType(String s){type=s;return this;}public Intent setAction(String s){action=s;return this;}public Intent setDataAndType(Uri u,String s){data=u;type=s;return this;}public Intent putExtra(String s,Object v){extras.put(s,v);return this;}public void removeExtra(String s){extras.remove(s);}public void setClipData(ClipData c){clip=c;}public int getIntExtra(String s,int d){Object v=extras.get(s);return v instanceof Integer?(Integer)v:d;}}''',
-        'com/aitrustid/synthetic/Harness.java':'''package com.aitrustid.synthetic; import android.content.*; public class Harness {static void ok(boolean b){if(!b)throw new AssertionError("fixed fixture mismatch");}public static void main(String[] a){for(int k=0;k<=9;k++){Intent i=SenderActivity.selected(k);ok(i.component.p.equals("com.aitrustid.android")&&i.component.c.equals("com.aitrustid.android.CheckActivity"));ok(i.type.equals("text/plain"));if(k==0)ok(i.extras.get(Intent.EXTRA_TEXT).equals(SenderActivity.MARKER));if(k==1)ok(!i.extras.containsKey(Intent.EXTRA_TEXT));if(k==2)ok(i.extras.get(Intent.EXTRA_TEXT) instanceof Integer);if(k==3)ok(i.action.equals(Intent.ACTION_SEND_MULTIPLE));if(k==4)ok(i.extras.get(Intent.EXTRA_STREAM) instanceof android.net.Uri);if(k==5)ok(i.data.value.equals("content://synthetic.invalid/item"));if(k==6)ok(i.clip.items.size()==1&&i.clip.items.get(0).value instanceof android.net.Uri);if(k==7)ok(i.clip.items.size()==2);if(k==8)ok(((String)i.extras.get(Intent.EXTRA_TEXT)).codePointCount(0,20001)==20001);if(k==9)ok(Character.isHighSurrogate(((String)i.extras.get(Intent.EXTRA_TEXT)).charAt(1)));}for(int k:new int[]{-1,10}){try{SenderActivity.selected(k);throw new AssertionError();}catch(IllegalArgumentException expected){}}System.out.println("SYNTHETIC_INTENTS:10");}}'''}
+        'android/content/Intent.java':'''package android.content; import android.net.Uri; import java.util.*; public class Intent {public static final String ACTION_MAIN="MAIN",ACTION_SEND="SEND",ACTION_SEND_MULTIPLE="MULTIPLE",EXTRA_TEXT="TEXT",EXTRA_STREAM="STREAM"; public String action,type;public ComponentName component;public Uri data;public ClipData clip;public final HashMap<String,Object> extras=new HashMap<>();public Intent(String s){action=s;}public Intent setComponent(ComponentName c){component=c;return this;}public Intent setType(String s){type=s;return this;}public Intent setAction(String s){action=s;return this;}public Intent setDataAndType(Uri u,String s){data=u;type=s;return this;}public Intent putExtra(String s,Object v){extras.put(s,v);return this;}public void removeExtra(String s){extras.remove(s);}public void setClipData(ClipData c){clip=c;}public int getIntExtra(String s,int d){Object v=extras.get(s);return v instanceof Integer?(Integer)v:d;}}''',
+        'com/aitrustid/synthetic/Harness.java':'''package com.aitrustid.synthetic; import android.content.*; public class Harness {static void ok(boolean b){if(!b)throw new AssertionError("fixed fixture mismatch");}public static void main(String[] a){for(int k=0;k<=9;k++){Intent i=SenderActivity.selected(k);ok(i.component.p.equals("com.aitrustid.android")&&i.component.c.equals("com.aitrustid.android.CheckActivity"));ok(i.type.equals("text/plain"));if(k==0)ok(i.extras.get(Intent.EXTRA_TEXT).equals(SenderActivity.MARKER));if(k==1)ok(!i.extras.containsKey(Intent.EXTRA_TEXT));if(k==2)ok(i.extras.get(Intent.EXTRA_TEXT) instanceof Integer);if(k==3)ok(i.action.equals(Intent.ACTION_SEND_MULTIPLE));if(k==4)ok(i.extras.get(Intent.EXTRA_STREAM) instanceof android.net.Uri);if(k==5)ok(i.data.value.equals("content://synthetic.invalid/item"));if(k==6)ok(i.clip.items.size()==1&&i.clip.items.get(0).value instanceof android.net.Uri);if(k==7)ok(i.clip.items.size()==2);if(k==8)ok(((String)i.extras.get(Intent.EXTRA_TEXT)).codePointCount(0,20001)==20001);if(k==9)ok(Character.isHighSurrogate(((String)i.extras.get(Intent.EXTRA_TEXT)).charAt(1)));}for(int k:new int[]{-1,10}){try{SenderActivity.selected(k);throw new AssertionError();}catch(IllegalArgumentException expected){}}SenderActivity a1=new SenderActivity();a1.incoming=new Intent("stub").putExtra("selection",0);a1.onCreate(null);ok(a1.launches==1&&a1.sent.extras.get(Intent.EXTRA_TEXT).equals(SenderActivity.MARKER));java.io.StringWriter w1=new java.io.StringWriter();a1.dump("",null,new java.io.PrintWriter(w1),new String[]{"synthetic-ingress-v1"});ok(w1.toString().contains("\\\"counter\\\":1")&&w1.toString().contains("START_RETURNED"));a1.incoming=new Intent("old").putExtra("selection",0);a1.onNewIntent(new Intent("fresh").putExtra("selection",1));ok(a1.launches==2&&!a1.sent.extras.containsKey(Intent.EXTRA_TEXT));ok(a1.getIntent().action.equals(Intent.ACTION_MAIN)&&a1.getIntent().extras.isEmpty());java.io.StringWriter w2=new java.io.StringWriter();a1.dump("",null,new java.io.PrintWriter(w2),new String[]{"synthetic-ingress-v1"});ok(w2.toString().contains("\\\"selection\\\":1")&&w2.toString().contains("NEW_INTENT"));java.io.StringWriter w3=new java.io.StringWriter();a1.dump("",null,new java.io.PrintWriter(w3),new String[]{"synthetic-ingress-v1"});ok(w3.toString().contains("\\\"selection\\\":-1")&&w3.toString().contains("NONE"));System.out.println("SYNTHETIC_INTENTS:10");}}'''}
         with tempfile.TemporaryDirectory() as p:
             stage=Path(p);files=[]
             for n,raw in stubs.items():

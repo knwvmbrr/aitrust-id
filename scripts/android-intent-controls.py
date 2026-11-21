@@ -2,6 +2,7 @@
 """Finite synthetic cross-UID Share ingress controls; never part of the checker APK."""
 import hashlib
 import io
+import json
 import os
 from pathlib import Path
 import re
@@ -29,9 +30,10 @@ RECEIVED='Text received. Review it, then tap Check.'
 FIXTURES=('tests/android/intent-sender/AndroidManifest.xml','tests/android/intent-sender/SenderActivity.java')
 CASES=('missing_text','wrong_typed_text','send_multiple','stream_extra','data_uri','clip_uri','multiple_clip_items','over_limit_text','unpaired_utf16')
 SENDER_DEX=b'Lcom/aitrustid/synthetic/SenderActivity;'
+SENDER_FRAME=b'AITRUST_SYNTHETIC_V1:'
 
 class IntentControlRefusal(ValueError):
-    STAGES=frozenset({'source','default_apk','build','install','uid','portrait','prime','send','refusal','recovery','cleanup'})
+    STAGES=frozenset({'source','default_apk','build','install','uid','portrait','prime','send','dispatch','refusal','recovery','cleanup'})
     def __init__(self,stage):
         if stage not in self.STAGES:raise ValueError('Invalid synthetic intent boundary')
         self.code='intent_'+stage+'_unavailable'
@@ -96,10 +98,29 @@ def compile_sender(sdk,stage):
     command([tools/'apksigner','verify',signed]);key.unlink()
     permissions=command([tools/'aapt2','dump','permissions',signed]).decode('utf-8')
     if 'uses-permission:' in permissions or 'uses-permission-sdk-' in permissions:raise ValueError('Synthetic permission refused')
-    if SENDER_DEX not in dex_bytes(signed):raise ValueError('Synthetic sender identity unavailable')
+    payload=dex_bytes(signed)
+    if SENDER_DEX not in payload or SENDER_FRAME not in payload:raise ValueError('Synthetic sender identity unavailable')
     if source_identity()!=sources:raise ValueError('Synthetic source changed')
     raw=read_regular(signed,1024*1024)
     return signed,{'variant':'synthetic-sender-only/v1','apk_sha256':hashlib.sha256(raw).hexdigest(),'apk_bytes':len(raw),'permission_count':0,'production_checker_modified':False,'sources':sources}
+
+
+def parse_dispatch(raw,counter,selection):
+    if type(raw) is not bytes or len(raw)>65536 or type(counter) is not int or type(selection) is not int or not 1<=counter<=32 or not 0<=selection<=9:raise ValueError('Synthetic dispatch unavailable')
+    frames=[line.strip()[len(SENDER_FRAME):] for line in raw.splitlines() if line.strip().startswith(SENDER_FRAME)]
+    if len(frames)!=1:raise ValueError('Synthetic dispatch unavailable')
+    def closed(pairs):
+        value={}
+        for key,item in pairs:
+            if key in value:raise ValueError('Synthetic dispatch unavailable')
+            value[key]=item
+        return value
+    value=json.loads(frames[0],object_pairs_hook=closed)
+    if not isinstance(value,dict) or set(value)!={'schema','counter','selection','outcome','callback'}:raise ValueError('Synthetic dispatch unavailable')
+    if type(value['schema']) is not int or value['schema']!=1 or type(value['counter']) is not int or value['counter']!=counter or type(value['selection']) is not int or value['selection']!=selection:raise ValueError('Synthetic dispatch unavailable')
+    if value['outcome']!='START_RETURNED' or value['callback'] not in ('CREATE','NEW_INTENT'):raise ValueError('Synthetic dispatch unavailable')
+    return {'counter':counter,'selection':'valid' if selection==0 else CASES[selection-1],
+        'callback':value['callback'],'start_returned':True}
 
 
 def observe(view):
@@ -140,6 +161,8 @@ def verify_cases(send,wait,report):
             report['control_stage']='recovery';send(0);wait(valid)
             cases.append({'case':name,'refused':True,'fresh_valid_recovery':True,'pass':True})
         report.update(status='EXECUTED',**{'pass':True},case_count=len(cases))
+    except IntentControlRefusal:
+        report.update(status='FAILED',**{'pass':False},case_count=len(cases));raise
     except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,subprocess.SubprocessError,RuntimeError,zipfile.BadZipFile,zlib.error,EOFError):
         report.update(status='FAILED',case_count=len(cases))
         raise IntentControlRefusal(report['control_stage']) from None
@@ -150,7 +173,8 @@ def run_controls(sdk,checker_apk,install,shell,wait,report):
     stage='source'
     try:
         sources=source_identity();stage='default_apk'
-        if SENDER_DEX in dex_bytes(checker_apk):raise ValueError('Sender leaked into checker')
+        payload=dex_bytes(checker_apk)
+        if SENDER_DEX in payload or SENDER_FRAME in payload:raise ValueError('Sender leaked into checker')
         report['default_checker_excludes_sender']=True
         stage='build'
         with tempfile.TemporaryDirectory(prefix='aitrust-synthetic-sender-',dir=os.environ['RUNNER_TEMP']) as temporary:
@@ -164,9 +188,18 @@ def run_controls(sdk,checker_apk,install,shell,wait,report):
             report['different_application_uid']=True
             stage='portrait'
             if shell(['wm','user-rotation']).strip()!=b'lock 0':raise ValueError('Owned portrait precondition unavailable')
+            dispatches=[];report['dispatches']=dispatches
             def send(selection):
                 if type(selection) is not int or not 0<=selection<=9:raise ValueError('Invalid synthetic selection')
-                shell(['am','start','-W','-n',SENDER_COMPONENT,'--ei','selection',str(selection)],20)
+                report['dispatch_state']='REQUESTED'
+                try:
+                    shell(['am','start','-W','-n',SENDER_COMPONENT,'--ei','selection',str(selection)],20)
+                    raw=shell(['dumpsys','activity',SENDER_COMPONENT,'synthetic-ingress-v1'],5)
+                    value=parse_dispatch(raw,len(dispatches)+1,selection)
+                except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,subprocess.SubprocessError,RuntimeError):
+                    report['dispatch_state']='UNAVAILABLE'
+                    raise IntentControlRefusal('dispatch') from None
+                dispatches.append(value);report['dispatch_state']='ATTESTED'
             verify_cases(send,wait,report)
             stage='source'
             if source_identity()!=sources:raise ValueError('Synthetic source changed')
