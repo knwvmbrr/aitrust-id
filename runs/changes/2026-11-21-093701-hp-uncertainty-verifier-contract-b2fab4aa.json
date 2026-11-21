@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-093701-hp-uncertainty-verifier-contract-b2fab4aa",
+  "recorded_at": "2026-11-21T09:37:01.502543+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7f4fb72e42b4f04b1aa78549d8f0f154abc2b8b3",
+  "changed": "Align actual HP-preview controls with the closed native disclosure and pre-worker Unicode input refusal; also verify disclosure close/reopen cancellation.",
+  "proves": "The corrected verifier passes syntax and targets the owned summary, exact current validation text, retained invalid input/focus and unchanged worker count; payload failures keep their separate Unavailable predicate.",
+  "limits": "Verifier contract correction only; actual integrated execution still pending. No product method/copy change, production success or requirement closure.",
+  "scope_ids": [
+    "T-HP",
+    "F-018",
+    "F-142"
+  ],
+  "files": {
+    "scripts/hp-uncertainty-site-controls.cjs": "ffc0fb77ed469189b825cd6714805f488c7efcb10f58dbd9c8f5c05c4c3142f2",
+    "docs/hp-uncertainty-integration-controls.md": "d8bcacae28f835ce946ef450648d02c389c146bfcc39e61f99f8d1b88efae856"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/hp-uncertainty-site-controls.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T09:37:01.604459+00:00"
+    }
+  ]
+}

@@ -4,7 +4,14 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path');
 const {execFileSync}=require('node:child_process');
 const sourceRoot=()=>path.resolve(process.env.AITRUST_HP_UNCERTAINTY_SOURCE_ROOT||process.cwd());
+const disclosure=page=>page.locator('[data-hp-uncertainty-method]');
 const form=page=>page.locator('[data-hp-uncertainty]');
+async function openPreview(page){
+ const details=disclosure(page);await details.waitFor();assert.equal(await details.evaluate(e=>e.open),false,'Optional preview must be closed before explicit open');
+ assert.equal(await form(page).count(),0,'Closed preview retained its editor');
+ assert((await details.locator(':scope > summary').innerText()).includes('Uncertainty words · preview'));
+ await details.locator(':scope > summary').press('Enter');await form(page).waitFor();assert.equal(await details.evaluate(e=>e.open),true);
+}
 const field=page=>form(page).getByLabel('English passage',{exact:true});
 const selection=page=>form(page).getByRole('checkbox');
 const result=page=>form(page).getByRole('region',{name:'Uncertainty wording result',exact:true});
@@ -35,7 +42,11 @@ async function verifyHPUncertaintySite(browser,base){
   await context.addInitScript(()=>{window.__hpUncertaintySiteWorkers=[];const Original=window.Worker;window.Worker=class extends Original{constructor(...args){super(...args);this.probe={terminated:false};window.__hpUncertaintySiteWorkers.push(this.probe);}terminate(){this.probe.terminated=true;super.terminate();}};});
   const page=await context.newPage(),requests=[],logs=[],errors=[];
   page.on('request',r=>requests.push({url:r.url(),method:r.method(),body:r.postData()||''}));page.on('console',m=>logs.push(m.text()));page.on('pageerror',e=>errors.push(e.message));
-  const response=await page.goto(base+'/#person/HP');assert(response.headers()['content-security-policy']?.includes("script-src 'self'"),'Actual response CSP unavailable');await form(page).waitFor();
+  const response=await page.goto(base+'/#person/HP');assert(response.headers()['content-security-policy']?.includes("script-src 'self'"),'Actual response CSP unavailable');
+  await disclosure(page).waitFor();assert.equal(await disclosure(page).evaluate(e=>e.open),false);assert.equal(await form(page).count(),0);
+  assert.equal(await page.evaluate(()=>window.__hpUncertaintySiteWorkers.length),0);
+  assert(!requests.some(r=>/HPUncertaintyExplorer-|hp-uncertainty-worker-|\/device\/runtime|\/hp-uncertainty-device\/hedge-/.test(r.url)),'Closed preview downloaded or analyzed before explicit open');
+  await openPreview(page);
   const modal=page.getByRole('dialog').filter({has:form(page)});assert.equal(await modal.count(),1);
   assert((await form(page).innerText()).includes('No HP tag is issued.'));
   assert.equal(await page.evaluate(()=>window.__hpUncertaintySiteWorkers.length),0);
@@ -49,7 +60,10 @@ async function verifyHPUncertaintySite(browser,base){
    assert(await stopped(page));
   }
   assert((await result(page).innerText()).includes('negation, word sense and confidence are not interpreted'));
-  stage='unsupported_context_boundary';await enter(page,'mayé work');await run(page).click();await form(page).getByRole('alert').filter({hasText:'Unavailable:'}).waitFor({timeout:60000});assert.equal(await result(page).count(),0);
+  stage='unsupported_context_boundary';await enter(page,'mayé work');const beforeBoundary=await page.evaluate(()=>window.__hpUncertaintySiteWorkers.length);await run(page).click();
+  await form(page).getByRole('alert').filter({hasText:'Use an English passage'}).waitFor();assert((await form(page).getByRole('alert').innerText()).includes('Some Unicode word-boundary forms are unavailable'));
+  assert.equal(await field(page).inputValue(),'mayé work');assert(await field(page).evaluate(e=>e===document.activeElement&&e.getAttribute('aria-invalid')==='true'));
+  assert.equal(await page.evaluate(()=>window.__hpUncertaintySiteWorkers.length),beforeBoundary);assert.equal(await result(page).count(),0);
   stage='oversize_retention_and_focus';const over='😀'.repeat(8001);await field(page).fill(over);await selection(page).check();const beforeOversize=await page.evaluate(()=>window.__hpUncertaintySiteWorkers.length);await run(page).click();await form(page).getByRole('alert').waitFor();
   assert.equal(await field(page).inputValue(),over);assert(await field(page).evaluate(e=>e===document.activeElement&&e.getAttribute('aria-invalid')==='true'));assert.equal(await page.evaluate(()=>window.__hpUncertaintySiteWorkers.length),beforeOversize);assert.equal(await result(page).count(),0);
   stage='private_input';await check(page,'PRIVATE_HP_UNCERTAINTY_SITE_CANARY Cafe\u0301. It may work.');assert.equal(await result(page).getByLabel('Private uncertainty evidence',{exact:true}).count(),0);
@@ -60,7 +74,7 @@ async function verifyHPUncertaintySite(browser,base){
   await page.evaluate(()=>document.documentElement.style.fontSize='');await page.setViewportSize({width:390,height:844});
   for(const theme of ['light','dark']){await page.emulateMedia({colorScheme:theme});await page.waitForFunction(t=>document.documentElement.dataset.theme===t,theme);assert(await form(page).isVisible());await form(page).scrollIntoViewIfNeeded();fs.mkdirSync('output/playwright',{recursive:true});await page.screenshot({path:'output/playwright/hp-uncertainty-production-'+browser.browserType().name()+'-'+theme+'.png'});}
   stage='edit_clear_cancel_unmount';
-  for(const action of ['edit','unselect','clear','cancel','unmount']){
+  for(const action of ['edit','unselect','clear','cancel','close_preview','unmount']){
    let release;const blocked=new Promise(r=>{release=r;});
    const requested=page.waitForRequest(r=>/\/hp-uncertainty-device\/hedge-[^/]+\.json$/.test(new URL(r.url()).pathname),{timeout:50000});requested.catch(()=>{});
    const hold=async route=>{await blocked;try{await route.continue();}catch{}};
@@ -71,11 +85,13 @@ async function verifyHPUncertaintySite(browser,base){
     if(action==='unselect')await selection(page).uncheck();
     if(action==='clear')await form(page).getByRole('button',{name:'Clear passage',exact:true}).click();
     if(action==='cancel')await form(page).getByRole('button',{name:'Cancel wording check',exact:true}).click();
+    if(action==='close_preview'){await disclosure(page).locator(':scope > summary').press('Enter');await form(page).waitFor({state:'detached'});}
     if(action==='unmount'){await modal.getByRole('button',{name:'Close',exact:true}).click();await form(page).waitFor({state:'detached'});}
     assert(await stopped(page));release();await page.unroute('**/hp-uncertainty-device/hedge-*.json',hold);assert.equal(await result(page).count(),0);
     if(action==='edit'||action==='unselect')assert(!(await selection(page).isChecked()));
     if(action==='clear')assert.equal(await field(page).inputValue(),'');
-    if(action==='unmount'){await page.goto(base+'/#person/HP');await form(page).waitFor();assert.equal(await field(page).inputValue(),'');assert(!(await selection(page).isChecked()));assert.equal(await result(page).count(),0);}
+    if(action==='unmount')await page.goto(base+'/#person/HP');
+    if(action==='unmount'||action==='close_preview'){await openPreview(page);assert.equal(await field(page).inputValue(),'');assert(!(await selection(page).isChecked()));assert.equal(await result(page).count(),0);}
    }finally{release();await page.unroute('**/hp-uncertainty-device/hedge-*.json',hold);}
   }
   stage='privacy_and_guide';assert.deepEqual(await page.evaluate(()=>({local:{...localStorage},session:{...sessionStorage}})),storage);
@@ -85,12 +101,13 @@ async function verifyHPUncertaintySite(browser,base){
  for(const mode of ['payload','chunk']){
   const c=await browser.newContext({viewport:{width:390,height:844}});try{
    const p=await c.newPage();let hits=0;await p.route(mode==='payload'?'**/hp-uncertainty-device/hedge-*.json':'**/assets/HPUncertaintyExplorer-*.js',r=>{hits++;return r.fulfill({status:404,body:'Unavailable',contentType:'text/plain'});});
-   await p.goto(base+'/#person/HP');
+   await p.goto(base+'/#person/HP');await disclosure(p).waitFor();assert.equal(await disclosure(p).evaluate(e=>e.open),false);assert.equal(await form(p).count(),0);
+   if(mode==='payload')await openPreview(p);else await disclosure(p).locator(':scope > summary').press('Enter');
    if(mode==='payload'){await form(p).waitFor();await enter(p,'It may work.');await run(p).click();await form(p).getByRole('alert').filter({hasText:'Unavailable:'}).waitFor({timeout:60000});assert.equal(await result(p).count(),0);}
    else await p.locator('[data-hp-uncertainty-unavailable]').waitFor({timeout:20000});
    assert(hits>0);await peerChecks(p,base);
   }catch(error){error.hpUncertaintySiteStage='optional_'+mode;throw error;}finally{await c.close();}
  }
- return {pass:true,actual_HP_modal:true,whole_canonical_records:rows.length,raw_frozen_NFC_annotation_source_bound:true,explicit_whole_context_and_keyboard_focus:true,unsupported_boundary_not_zero:true,input8001_retained_and_refused:true,private_details_opt_in:true,edit_unselect_clear_cancel_unmount:true,empty_reopen:true,no_analysis_before_run:true,no_input_upload_storage_console:true,reflow320_at200percent:true,light_dark:true,minimum44px_actions:true,guide_exact:true,optional_payload_and_actual_chunk_failures_then_numericHP_PS_MT:true,HP_tag_issued:false,independent_accuracy_evidence:false,physical_phone:false,human_screen_reader:false};
+ return {pass:true,actual_HP_modal:true,whole_canonical_records:rows.length,raw_frozen_NFC_annotation_source_bound:true,explicit_whole_context_and_keyboard_focus:true,unsupported_boundary_not_zero:true,input8001_retained_and_refused:true,private_details_opt_in:true,edit_unselect_clear_cancel_unmount:true,empty_reopen:true,native_preview_closed_before_open:true,close_preview_unmounts_and_cancels:true,no_analysis_before_run:true,no_input_upload_storage_console:true,reflow320_at200percent:true,light_dark:true,minimum44px_actions:true,guide_exact:true,optional_payload_and_actual_chunk_failures_then_numericHP_PS_MT:true,HP_tag_issued:false,independent_accuracy_evidence:false,physical_phone:false,human_screen_reader:false};
 }
 module.exports={verifyHPUncertaintySite};

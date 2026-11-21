@@ -4,7 +4,9 @@ This is a new production-route verifier, separate from the source-stable
 standalone fixture. It does not modify that fixture's historical proof or method.
 Architecture: inspect the real HP modal using scoped semantic controls; obtain
 three complete expected records from the unchanged canonical Python adapter;
-verify explicit caller context, private details, intact refusal and cancellation;
+verify the closed native `data-hp-uncertainty-method` disclosure before opening
+its owned summary, then explicit caller context, private details, intact refusal
+and cancellation;
 then refuse each actual optional delivery path and exercise real numeric HP, PS
 and MT checkers. No generic fixture buttons stand in for those neighbouring checks.
 
@@ -38,3 +40,10 @@ Public-origin review can call the same exported helper without rebuilding.
 At source handoff, syntax and side-effect-free import checks pass. Actual
 integrated execution is pending PM's built fixture; no success is pre-recorded.
 T-HP/F-018, independent accuracy, full release and public publication remain open.
+
+The unsupported `mayé work` case is an input-boundary refusal before any new
+worker: the intact text, invalid state, input focus and actual validation message
+are required. Worker/payload failures retain their separate Unavailable checks.
+Closing the native preview must unmount/cancel it and reopen empty; closing the
+whole HP modal is tested separately. These controls remain unexecuted until the
+PM integrated build is ready.

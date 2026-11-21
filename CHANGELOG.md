@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-093701-hp-uncertainty-verifier-contract-b2fab4aa
+
+Recorded 2026-11-21T09:37:01.502543+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Align actual HP-preview controls with the closed native disclosure and pre-worker Unicode input refusal; also verify disclosure close/reopen cancellation.
+- **Evidence.** The corrected verifier passes syntax and targets the owned summary, exact current validation text, retained invalid input/focus and unchanged worker count; payload failures keep their separate Unavailable predicate. [Change record](./runs/changes/2026-11-21-093701-hp-uncertainty-verifier-contract-b2fab4aa.json).
+- **Not claimed.** Verifier contract correction only; actual integrated execution still pending. No product method/copy change, production success or requirement closure.
+
+
 ### 2026-11-21-093238-hp-uncertainty-verifier-handoff-14d10265
 
 Recorded 2026-11-21T09:32:38.085156+00:00 · Contributor: Codex /root/web_camo · change
