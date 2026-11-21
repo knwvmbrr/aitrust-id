@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-152958-remote-proxy-timeout-status-contract-c28b968f
+
+Recorded 2026-11-21T15:29:58.389370+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Bound the proxy slow-body probe to fixed timeout refusals including the existing application504 contract.
+- **Evidence.** The probe retains its14second outer limit and accepts only400,408 or504 (or closed connection) for an incomplete body; no success response is accepted. [Change record](./runs/changes/2026-11-21-152958-remote-proxy-timeout-status-contract-c28b968f.json).
+- **Not claimed.** Source contract correction before actual proxy execution, no application timeout or production semantics change.
+
+
 ### 2026-11-21-152842-remote-proxy-debian-mirror-transport-ae4c5768
 
 Recorded 2026-11-21T15:28:42.909382+00:00 · Contributor: Codex API deployment engineer · change

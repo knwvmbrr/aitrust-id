@@ -100,7 +100,7 @@ async def main(binary,output):
                 assert (await c.post(base+'/v1/check',json={'text':'Ordinary text.'})).json()['state']=='COMPLETE'
                 groups.append('actual_proxy_disconnect_direct_canonical_worker_reap_and_recovery')
                 stage='slow_body'
-                rd,wr=await asyncio.open_connection('127.0.0.1',front);wr.write(f'POST /v1/check HTTP/1.1\r\nHost: {render.HOST}\r\nContent-Type: application/json\r\nContent-Length: 100\r\nConnection: close\r\n\r\n{{'.encode());await wr.drain();data=await asyncio.wait_for(rd.read(8192),14);wr.close();await wr.wait_closed();assert not data or data.startswith(b'HTTP/1.1 4');assert CANARY.encode() not in data
+                rd,wr=await asyncio.open_connection('127.0.0.1',front);wr.write(f'POST /v1/check HTTP/1.1\r\nHost: {render.HOST}\r\nContent-Type: application/json\r\nContent-Length: 100\r\nConnection: close\r\n\r\n{{'.encode());await wr.drain();data=await asyncio.wait_for(rd.read(8192),14);wr.close();await wr.wait_closed();assert not data or data.split(b'\r\n',1)[0].split(b' ')[1] in (b'400',b'408',b'504');assert CANARY.encode() not in data
                 groups.append('actual_incomplete_body_finite_deadline')
                 assert (await c.get(base+'/healthz')).status_code==200
             stage='shutdown'
