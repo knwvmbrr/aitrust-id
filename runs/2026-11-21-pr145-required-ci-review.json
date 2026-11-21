@@ -1,0 +1,87 @@
+{
+  "captured_at": "2026-11-21T22:15:39.893072+00:00",
+  "performed_by": "Codex PM /root",
+  "pass": true,
+  "kind": "protected_API_guide_source_and_review_checks",
+  "PR": "https://github.com/knwvmbrr/aitrust-id/pull/145",
+  "tested_source_commit": "d466b93635bdc5b523fb933834fd86b309934431",
+  "merged_source_commit": "a0c59d27dc4597599422a9f356978901e597f49d",
+  "merged_at": "2026-11-21T22:12:40Z",
+  "tested_and_merged_trees_equal": true,
+  "required_count": 11,
+  "checks": [
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44954175149/job/136998499246",
+      "name": "accessibility",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44954175149/job/136998499229",
+      "name": "change-records",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44954175149/job/136998499146",
+      "name": "scope-plan",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44954175149/job/136998499299",
+      "name": "site",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44954175149/job/136998499377",
+      "name": "device-builder (3.14)",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44954175149/job/136998499250",
+      "name": "device-builder (3.13)",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44954175149/job/136998499241",
+      "name": "host-config",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44954175149/job/136998499242",
+      "name": "device-builder (3.12)",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44954175149/job/136998499143",
+      "name": "regressions",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44954175149/job/136998499273",
+      "name": "no-egress",
+      "state": "SUCCESS"
+    },
+    {
+      "bucket": "pass",
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44954175149/job/136998499023",
+      "name": "spec",
+      "state": "SUCCESS"
+    }
+  ],
+  "agent_tools": "SUCCESS",
+  "unresolved_review_threads": 0,
+  "original_rollback_finding": "Corrected in reviewed source and resolved only after corrected source/regression evidence was pushed.",
+  "detector_release_gates": "FAILURE; separate and not waived",
+  "live_operator_changed": false,
+  "independent_accuracy_evidence": false,
+  "new_original_closures": 0
+}

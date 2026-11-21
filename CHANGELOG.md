@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-221627-public-api-guide-published-873aed90
+
+Recorded 2026-11-21T22:16:27.560800+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Published the API/MCP connection guide through protected source and normal Pages deployment; archived stale current publication aliases; recorded the separately reviewed JPEG development branch.
+- **Evidence.** All11 required source checks and agent-tools passed with no unresolved findings;22 live selected HTTP files matched the build; Google verification remained intact; the live guide PS example returned FINDING without echoing input. JPEG committed source and independent review identities match its normal public branch. [Change record](./runs/changes/2026-11-21-221627-public-api-guide-published-873aed90.json).
+- **Not claimed.** 133 original requirements complete69 open; target60 unmet. Five development-source outcomes are not full tag releases. No provider account connection, independent accuracy, physical-phone acceptance, global artifact equivalence or installed operator upgrade is claimed.
+
+
 ### 2026-11-21-215621-public-guide-final-source-checks-cd8a4621
 
 Recorded 2026-11-21T21:56:21.589649+00:00 · Contributor: Codex PM /root · change

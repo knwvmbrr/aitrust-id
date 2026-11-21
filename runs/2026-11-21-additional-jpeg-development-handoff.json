@@ -1,0 +1,43 @@
+{
+  "captured_at": "2026-11-21T22:12:11.363466+00:00",
+  "performed_by": "Codex PM /root",
+  "kind": "additional_independent_image_development_source_handoff",
+  "scope_ids": [
+    "T-FA",
+    "T-PA",
+    "F-155"
+  ],
+  "producer": "Codex /root/web_camo",
+  "different_engineering_reviewer": "Codex /root/seo",
+  "source_commit": "8e1b1a23a1bef0659bf1ec567ceef647b5cd76a5",
+  "branch": "codex/image-metadata-boundary",
+  "status": "published_development_source",
+  "outcome": "Private bounded JPEG header/metadata-section observations with no raw values, no pixels decoded and no AI-origin verdict. PNG remains unchanged.",
+  "source_download": "https://github.com/knwvmbrr/aitrust-id/archive/8e1b1a23a1bef0659bf1ec567ceef647b5cd76a5.zip",
+  "execution": {
+    "URL": "https://github.com/knwvmbrr/aitrust-id/blob/8e1b1a23a1bef0659bf1ec567ceef647b5cd76a5/runs/2026-11-21-jpeg-metadata-corrected-cli.json",
+    "sha256": "6990cd96c39f5fe9145b10d576fd2e7b0441f9c1853fb436b5a09ab8c80b9950",
+    "actual_CLI_controls": 6
+  },
+  "review": {
+    "URL": "https://github.com/knwvmbrr/aitrust-id/blob/8e1b1a23a1bef0659bf1ec567ceef647b5cd76a5/runs/2026-11-21-jpeg-metadata-independent-review.json",
+    "sha256": "8cf87fa3f674506881e0f84d7ba128132f42f9517234abd9ee34fbacd2bb5f7a",
+    "focused_groups": 3,
+    "actual_CLI_controls": 2
+  },
+  "root_checked": {
+    "committed_source_and_evidence_digests": 5,
+    "owned_changed_files": 12,
+    "PNG_sources_unchanged": true,
+    "normal_remote_branch_ref_matches_commit": true,
+    "root_read_module_CLI_and_usage_limits": true
+  },
+  "main_or_production_integrated": false,
+  "independent_accuracy_evidence": false,
+  "tags_issued": [],
+  "new_original_closures": 0,
+  "original_complete": 133,
+  "original_open": 69,
+  "target_open": 60,
+  "target_met": false
+}
