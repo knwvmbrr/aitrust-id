@@ -1,0 +1,27 @@
+{
+  "schema": "aitrust-independent-correction-review-1",
+  "pass": true,
+  "captured_at": "2026-11-21T16:05:27.866902+00:00",
+  "reviewed_by": "/root/seo",
+  "source_sha256": {
+    "deploy/ai-tools/activate.py": "32ea65a7e67747ff41f6f72bac169c83cedb0585b770a9b82ede6f83bfd56f7d",
+    "deploy/ai-tools/verify-isolation.py": "b94fe936257441c383ddececa6a6210f82369c5e396404ab3377c39d26c80fd6",
+    "deploy/ai-tools/activation-plan.md": "923bdada413c2f0d591ece36f49de021a8162d4d1a237e8678026d8d7ec41db2",
+    "tests/test_ai_tools_activation.py": "31a141a777d7e7befc0917b572edfdb2049192491b6a44b988e5caa14fc5fc22"
+  },
+  "source_stable": true,
+  "approved_release_commit": "a5215149af23be51cd29f9b37ce1d85bdeff0c49",
+  "reviewed_source_members": 14,
+  "approved_projection_matches_immutable_Git": true,
+  "unchanged_source_baseline_accepted": true,
+  "original_coherent_rebind_now_refused": true,
+  "earlier_failure_sha256": "069647d267f4f1473711a86f9c9d5b4b29d8b06c3f09d180a33311c6cfc0c2fd",
+  "other_static_review": "No additional actionable blocker found in exclusive new-namespace/unit creation, no-flush tagged443 rules/persistence, bounded exact-owned rollback, private app-first isolation check and explicit post-public-proof finalize.",
+  "limits": [
+    "Own temporary source-identity regression only. Root ownership/read_regular and pinned binary modeled valid controls, real source SHA256 unchanged.",
+    "No privileged operation, external command, service, package, network or activation by reviewer.",
+    "Actual host isolation, trusted public TLS, internet/client/refusal/recovery/old-service-health controls remain activation requirements.",
+    "Interrupted activation may require operator rollback from retained exact ledger; no cross-file/crash atomicity claim.",
+    "No original requirement or tag-accuracy clearance."
+  ]
+}
