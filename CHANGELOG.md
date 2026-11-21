@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-160614-remote-api-activation-guards-a7dbfbf3
+
+Recorded 2026-11-21T16:06:14.718026+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Added exact-release root activation/rollback and actual service isolation probes for the approved provider-host API.
+- **Evidence.** Eleven focused ownership/IO guards pass. Distinct review reproduced and fixed coherent source-manifest rebinding: exact approveda521 commit and14 Git source hashes are enforced before activation. Only newunits and one tagged443 rule/persistence addition are permitted; no full firewall reload. [Change record](./runs/changes/2026-11-21-160614-remote-api-activation-guards-a7dbfbf3.json).
+- **Not claimed.** No privileged activation/publicTLS/effectiveBPF proof yet; interrupted operations retain records for bounded rollback. Existing runtime and prior actual14-client/11-proxy proofs are unchanged. No original closure.
+
+
 ### 2026-11-21-154123-remote-proxy-reviewed-linux-proof-85907b44
 
 Recorded 2026-11-21T15:41:23.855883+00:00 · Contributor: Codex API deployment engineer · change

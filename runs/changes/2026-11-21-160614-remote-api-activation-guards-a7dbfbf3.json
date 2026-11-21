@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-160614-remote-api-activation-guards-a7dbfbf3",
+  "recorded_at": "2026-11-21T16:06:14.718026+00:00",
+  "author": "Codex API deployment engineer",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a5215149af23be51cd29f9b37ce1d85bdeff0c49",
+  "changed": "Added exact-release root activation/rollback and actual service isolation probes for the approved provider-host API.",
+  "proves": "Eleven focused ownership/IO guards pass. Distinct review reproduced and fixed coherent source-manifest rebinding: exact approveda521 commit and14 Git source hashes are enforced before activation. Only newunits and one tagged443 rule/persistence addition are permitted; no full firewall reload.",
+  "limits": "No privileged activation/publicTLS/effectiveBPF proof yet; interrupted operations retain records for bounded rollback. Existing runtime and prior actual14-client/11-proxy proofs are unchanged. No original closure.",
+  "scope_ids": [
+    "T-PS"
+  ],
+  "files": {
+    "deploy/ai-tools/activate.py": "32ea65a7e67747ff41f6f72bac169c83cedb0585b770a9b82ede6f83bfd56f7d",
+    "deploy/ai-tools/verify-isolation.py": "b94fe936257441c383ddececa6a6210f82369c5e396404ab3377c39d26c80fd6",
+    "deploy/ai-tools/activation-plan.md": "923bdada413c2f0d591ece36f49de021a8162d4d1a237e8678026d8d7ec41db2",
+    "tests/test_ai_tools_activation.py": "31a141a777d7e7befc0917b572edfdb2049192491b6a44b988e5caa14fc5fc22",
+    "runs/2026-11-21-api-activation-source-rebind-original.json": "069647d267f4f1473711a86f9c9d5b4b29d8b06c3f09d180a33311c6cfc0c2fd",
+    "runs/2026-11-21-api-activation-source-rebind-corrected-review.json": "f0c9dbfe01cdab85b8143e2979c92ed78dad20a9f5b72acc9d0d1059f1d6c8e7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-api-activation-source-rebind-original.json",
+      "sha256": "069647d267f4f1473711a86f9c9d5b4b29d8b06c3f09d180a33311c6cfc0c2fd"
+    },
+    {
+      "path": "runs/2026-11-21-api-activation-source-rebind-corrected-review.json",
+      "sha256": "f0c9dbfe01cdab85b8143e2979c92ed78dad20a9f5b72acc9d0d1059f1d6c8e7"
+    }
+  ],
+  "checks": []
+}
