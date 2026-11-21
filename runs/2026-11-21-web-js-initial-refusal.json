@@ -1,0 +1,16 @@
+{
+  "format": "ai-trust-id-web-js-notice-initial-refusal/v1",
+  "captured_at": "2026-11-21T05:33:04.554896+00:00",
+  "pass": false,
+  "observed_result": "Fixed refusal before archive parsing because one selected observed package has no carried notice.",
+  "refused_package": "react-remove-scroll-bar@2.3.8",
+  "corrected_initial_assumption": "34 selected package records carry notice files; one does not. 35 rows is not35 complete release notices.",
+  "candidate_sources_sha256": {
+    "tools/web_distribution.py": "08ce69c9db753488be13da738cf58825dff5c9629306ceaf052cf783d4b4633b",
+    "scripts/web-distribution.py": "158e588f22b263c5b8ba1f37906d1b8436b55bfa69024f36f24b50f1ca5b162b",
+    "site/package.json": "18ae5dcb631a4bde5f341d7e14a366a0f0aed58a9d85c2263b8e7ef084e8ef36"
+  },
+  "raw_private_failure_digest": "cfb5aadbb3c011afe36a2f262934133968e5f05a2a0e10042a15454c06140025",
+  "actual_archive_replay_reached": false,
+  "full_requirement_closed": false
+}

@@ -1,0 +1,120 @@
+{
+  "format": "ai-trust-id-web-js-corrected-built-artifact/v1",
+  "captured_at": "2026-11-21T05:50:02.864849+00:00",
+  "pass": true,
+  "completed_by": "/root/seo",
+  "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+  "sources_sha256": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "docs/web-distribution-plan.md": "1b8bb4495e1773b6240a2dce9dfab0f579f7257f6d090188c4aab5a6b9b0feb8",
+    "docs/web-distribution.md": "7f8762f9fa78b3d653697f2ef9cfbbe8fe11f3dc3a845b41be7e252e883fdc11",
+    "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+    "sbom/notices/210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751.txt": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+    "sbom/notices/30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9.txt": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+    "sbom/notices/54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8.txt": "54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8",
+    "sbom/notices/9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97.txt": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+    "sbom/notices/acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05.txt": "acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05",
+    "sbom/notices/d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5.txt": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5",
+    "sbom/notices/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "sbom/notices/manifest.json": "8a19f0328c542c610fb5028e78313c80e7bf40c2d4e51f281a144883ee95bb58",
+    "sbom/reviews/web-js/react-remove-scroll-bar-2.3.8.json": "3c57078bb1141ad9836c165831193adf40845e091f1becb65f18a721b47a9072",
+    "sbom/reviews/web-js/sources/a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84.txt": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84",
+    "scripts/web-distribution.py": "a866e414fc288b3b4c17bea307c23e8bb302b5aad658f70c190f4f6d5beed5e2",
+    "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+    "site/package.json": "18ae5dcb631a4bde5f341d7e14a366a0f0aed58a9d85c2263b8e7ef084e8ef36",
+    "tests/test_web_distribution.py": "36aa1b838c0c4d75be938f33e14dabe3ca7ba4a42ca1198d4d32508e5e927765",
+    "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+    "tools/web_distribution.py": "30d2a875f4a75186cbb27b25adbd718a9a3bb1e05272b6d6479f73563dfb4fd2",
+    ".gitattributes": "ca853c95c469c7eac27d9f7490f67caa26a216cce83914cec0a367ebd4e4dbfd"
+  },
+  "normal_build": {
+    "argv": [
+      "npm",
+      "run",
+      "build:site"
+    ],
+    "exit": 0,
+    "mandatory_preparation_hook_executed": true,
+    "stdout_stderr_sha256": "32c9acf8eeae04bf4dcd972cc19b6b8ac9ae9de6e5bfbf7875d6750605db35ab"
+  },
+  "actual_built_notice_check": {
+    "action": "built_artifact_notice_bytes_verified",
+    "archive_notice_packages": 34,
+    "artifacts": {
+      "THIRD-PARTY-NOTICES.txt": {
+        "bytes": 47849,
+        "sha256": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab"
+      },
+      "packages.json": {
+        "bytes": 38531,
+        "sha256": "00befda9916cad2ee20c99aac2c4d305aef8c8224e7092f3e6514cc6d6f50fec"
+      },
+      "web-runtime.spdx.json": {
+        "bytes": 28936,
+        "sha256": "b8d33dd9932fa0557e5ee481e66e66a1eb2ed53de1eff69933a00a730bcc075f"
+      }
+    },
+    "complete_bundle_graph": false,
+    "complete_source_offers": false,
+    "exact_release_notice_gap_packages": [
+      "react-remove-scroll-bar@2.3.8"
+    ],
+    "independent_accuracy_evidence": false,
+    "legal_clearance": false,
+    "packages": 35,
+    "pass": true,
+    "profile": "website-npm-notice-delivery/v1",
+    "release_approved": false,
+    "sources_sha256": {
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+      "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "sbom/notices/210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751.txt": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+      "sbom/notices/30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9.txt": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "sbom/notices/54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8.txt": "54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8",
+      "sbom/notices/9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97.txt": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+      "sbom/notices/acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05.txt": "acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05",
+      "sbom/notices/d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5.txt": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5",
+      "sbom/notices/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "sbom/notices/manifest.json": "8a19f0328c542c610fb5028e78313c80e7bf40c2d4e51f281a144883ee95bb58",
+      "sbom/reviews/web-js/react-remove-scroll-bar-2.3.8.json": "3c57078bb1141ad9836c165831193adf40845e091f1becb65f18a721b47a9072",
+      "sbom/reviews/web-js/sources/a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84.txt": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84",
+      "scripts/web-distribution.py": "a866e414fc288b3b4c17bea307c23e8bb302b5aad658f70c190f4f6d5beed5e2",
+      "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+      "site/package.json": "18ae5dcb631a4bde5f341d7e14a366a0f0aed58a9d85c2263b8e7ef084e8ef36",
+      "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+      "tools/web_distribution.py": "30d2a875f4a75186cbb27b25adbd718a9a3bb1e05272b6d6479f73563dfb4fd2"
+    },
+    "supplemental_project_notice_packages": 1
+  },
+  "actual_npm_reviewed_release_command": {
+    "exit": 1,
+    "status": "blocked_unknown",
+    "stdout_sha256": "5160f9f98845bedbf5f86dda460e33cc754d86c55f3a6272de8da80177ed8237"
+  },
+  "actual_independent_PS_source_artifact_verification": {
+    "exit": 0,
+    "stdout_sha256": "3779774b9e3eb136c095bff792778e64b95b4f9dbad9e297f8cf0a2566be99d6"
+  },
+  "actual_selected_spdx_pinned_schema_valid": true,
+  "hosting_readable_modes": {
+    "site/dist/web-licenses": "0o755",
+    "site/dist/web-licenses/web-runtime.spdx.json": "0o644",
+    "site/dist/web-licenses/packages.json": "0o644",
+    "site/dist/web-licenses/THIRD-PARTY-NOTICES.txt": "0o644"
+  },
+  "source_unchanged_during_build_and_checks": true,
+  "supersedes_for_current_source": "runs/2026-11-21-web-js-built-artifact.json",
+  "limits": {
+    "archive_notice_records": 34,
+    "separate_upstream_project_supplements": 1,
+    "all35_exact_release_notice_obligations_complete": false,
+    "exact_2_3_8_source_license_correspondence_verified": false,
+    "full_F057_X02_closed": false,
+    "legal_clearance": false,
+    "release_approved": false,
+    "production_changed": false,
+    "browser_suite_run": false
+  }
+}

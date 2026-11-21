@@ -59,6 +59,67 @@ Recorded 2026-11-21T05:39:13.179120+00:00 · Contributor: Codex / web_camo · ch
 - **Changed.** Implement a separately selected straight/curly double-quote authority candidate in the existing MT client/worker/UI, with an optional hash-bound source cohort and a versioned canonical method.
 - **Evidence.** 74 focused Python controls and19 Node client controls pass; ordinary phone curly quotation is supported, strict unsupported grammar refuses, raw/frozen-NFC/source/closed evidence bindings hold, and legacy canonical/manifest bytes remain unchanged. Existing verification entrypoints include the new controls. [Change record](./runs/changes/2026-11-21-053913-mt-mobile-quote-candidate-implementation-9a4b53bb.json).
 - **Not claimed.** Prototype implementation pending actual Chromium/WebKit execution, distinct final review and PM integration/publication. Shape/span/source validation trusts the canonical worker; no semantic-completeness, intended ASCII nesting, endorsement, intent, MT release, independent accuracy or original closure claim.
+### 2026-11-21-060306-verify-bounded-notice-artifact-746b556b
+
+Recorded 2026-11-21T06:03:06.088337+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Verify the current normal-build notice artifact after preallocation budget enforcement.
+- **Evidence.** Actual normal build, exact carried notice comparison and selected SPDX schema pass. Notice text stays byte-identical. The real reviewed-release consumer still refuses; independent PS remains admitted. Peer independently confirms reduced-cap, read-trap and duplicated-occurrence controls. [Change record](./runs/changes/2026-11-21-060306-verify-bounded-notice-artifact-746b556b.json).
+- **Not claimed.** Earlier33 controls and current8 affected controls are separate evidence, not41 current tests. No archive replay or broad browser suite repeated. Exact2.3.8 source/license correspondence and full original F057/X02 remain open.
+
+
+### 2026-11-21-060020-bound-notice-bytes-before-reading-0540f121
+
+Recorded 2026-11-21T06:00:20.476862+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Apply combined source, duplicate-notice, copy and header byte budgets before reading/retaining content and before every bundle extension.
+- **Evidence.** The independent reduced-cap counter is reproduced on original source. Eight affected resource/prepare/rollback checks pass; actual notice bundle bytes remain identical. New index and SPDX retain updated producer source identity. [Change record](./runs/changes/2026-11-21-060020-bound-notice-bytes-before-reading-0540f121.json).
+- **Not claimed.** Earlier33-test and archive evidence remain source-bound history. Current normal-build artifact refresh is pending. No exact RSS guarantee, full source/license clearance or original F057/X02 closure is claimed.
+
+
+### 2026-11-21-055140-clarify-notice-result-guide-c79a42e6
+
+Recorded 2026-11-21T05:51:40.217997+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Format the selected notice result guide as readable Markdown with spaced counts and commands.
+- **Evidence.** Only the result guide presentation changes; the current actual artifact proof and producer source remain unchanged. [Change record](./runs/changes/2026-11-21-055140-clarify-notice-result-guide-c79a42e6.json).
+- **Not claimed.** No new implementation, test rerun, validation, release, scope or completion claim.
+
+
+### 2026-11-21-055059-verify-carried-website-notice-artifact-10514bd7
+
+Recorded 2026-11-21T05:50:59.138114+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Verify the current normal-build website artifact carries its selected JavaScript notice text and source/SPDX index, with narrow exact-byte whitespace preservation.
+- **Evidence.** Actual normal build and source-derived built-file comparison pass on corrected source.33 focused controls,35 cached archive identities, selected SPDX schema, hosting-readable modes and independent PS source verification pass. The actual npm reviewed-release command correctly refuses unresolved global obligations. [Change record](./runs/changes/2026-11-21-055059-verify-carried-website-notice-artifact-10514bd7.json).
+- **Not claimed.** 34 archive notice records are complete; one separately pinned upstream project text does not establish exact2.3.8 release correspondence. FullF057/X02, all-source obligations, protected publication and live-link evidence remain open; no detector accuracy or original requirement closure is claimed.
+
+
+### 2026-11-21-054815-validate-website-notice-root-shape-c2370433
+
+Recorded 2026-11-21T05:48:15.607865+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Require a well-formed root lock dependency mapping and selected direct runtime dependencies before producing website notice assets; tighten API refusal controls.
+- **Evidence.** The PM root-entry counterexample is reproduced in the direct API. Corrected33 focused controls and current35 exact cached archive replay pass; current CLI was already defensively refusing and is not described as leaking after the earlier fix. [Change record](./runs/changes/2026-11-21-054815-validate-website-notice-root-shape-c2370433.json).
+- **Not claimed.** Normal-build refresh follows this source freeze. One exact2.3.8 source/license correspondence gap remains unverified; no full F057 or X02 closure or licensing clearance.
+
+
+### 2026-11-21-054327-refuse-malformed-website-notice-identities-2658cd8f
+
+Recorded 2026-11-21T05:43:27.432563+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Refuse matching malformed dependency identity fields without private traceback output and bind the reused regular-file reader source in the generated notice index.
+- **Evidence.** Both new malformed-value controls fail the original producer;28 current focused controls pass and all35 exact cached archives replay under current source. Earlier successful actual normal-build artifact proof remains source-bound history. [Change record](./runs/changes/2026-11-21-054327-refuse-malformed-website-notice-identities-2658cd8f.json).
+- **Not claimed.** Current-source normal-build refresh is pending. The one exact-release source/license gap and full F057/X02 remain open. No source or policy clearance flags are upgraded.
+
+
+### 2026-11-21-053854-carry-website-javascript-notices-b6b23d82
+
+Recorded 2026-11-21T05:38:54.034152+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Prepare and carry selected website JavaScript notice texts on every normal build, with exact package/archive/notice byte bindings and selected-cohort SPDX metadata.
+- **Evidence.** 26 focused controls pass. Actual offline replay verifies35 pinned tarballs;34 carry full matched notices and one retains an explicitly separated upstream project supplement with exact-release correspondence unverified. Selected SPDX validates against the existing pinned schema. Prior built artifact lacks the selected bundle. [Change record](./runs/changes/2026-11-21-053854-carry-website-javascript-notices-b6b23d82.json).
+- **Not claimed.** Initial35-complete assumption was corrected after an actual refusal. No complete graph, source-offer or license clearance is claimed. Real normal-build artifact proof is pending; F057 and X02 remain open, global reviewed-release policy still refuses web-checker.
 
 
 ## Unreleased — 2026-11-20

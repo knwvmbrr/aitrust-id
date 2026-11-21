@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-060306-verify-bounded-notice-artifact-746b556b",
+  "recorded_at": "2026-11-21T06:03:06.088337+00:00",
+  "author": "Codex website distribution engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1030763a9cb99551a56e08a46dbac7cfcee768f3",
+  "changed": "Verify the current normal-build notice artifact after preallocation budget enforcement.",
+  "proves": "Actual normal build, exact carried notice comparison and selected SPDX schema pass. Notice text stays byte-identical. The real reviewed-release consumer still refuses; independent PS remains admitted. Peer independently confirms reduced-cap, read-trap and duplicated-occurrence controls.",
+  "limits": "Earlier33 controls and current8 affected controls are separate evidence, not41 current tests. No archive replay or broad browser suite repeated. Exact2.3.8 source/license correspondence and full original F057/X02 remain open.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "runs/2026-11-21-web-js-budget-current-artifact.json": "81c535b78f86842bd779e8e83ba60b5baa851c9a70c58d9505c9e2e6609a577e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-web-js-budget-current-artifact.json",
+      "sha256": "81c535b78f86842bd779e8e83ba60b5baa851c9a70c58d9505c9e2e6609a577e"
+    }
+  ],
+  "checks": []
+}
