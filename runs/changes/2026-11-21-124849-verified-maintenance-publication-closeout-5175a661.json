@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-124849-verified-maintenance-publication-closeout-5175a661",
+  "recorded_at": "2026-11-21T12:48:49.085713+00:00",
+  "author": "Codex /root; reviews /root/web_camo and /root/share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "872607f9ab409fbfec55dfee59cdbf62e265a04c",
+  "changed": "Published and independently reconciled MT whole-input behavior, actual Android Sharesheet controls and exact runtime source/notice delivery after protected PR141.",
+  "proves": "Actual live Chromium/WebKit HP/MT/NF workflows, source downloads with JavaScript disabled and72 selected HTTP byte comparisons pass. Exact-head Android112 plus all selected runtime cases and all11 protected checks pass; all five current-source receipts and1486-source boundary remain current. Scope remains132complete70open and19scoped; existing API/MCP enhancement100.",
+  "limits": "The60-open original goal is NOT MET. No new original/scoped task or full tag, physical/human, independent accuracy, global native/WASM or license clearance is credited. F030 DOM choice is authorized by its existing criterion but live interactive evidence remains pending.",
+  "scope_ids": [
+    "T-MT",
+    "N-014",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "state.json": "89e47c11728ab765edd2834491ae5740c388cac0f33c24e6282678d8508cec18",
+    "runs/2026-11-21-nov21-maintenance-publication.json": "353956701ddaa3cf9b1afad99b1ccbae6fb27b1c8095cba84908c2c1b1b0299e",
+    "runs/2026-11-21-maintenance-publication-closeout.json": "0bd2e9c060f6b893327d4f11098eddd44117f09f92f750d800b296af16ab09da",
+    "runs/2026-11-21-maintenance-actual-closeout-counterreview.json": "953d13f70dc8c754ff576ebc5a976dcdfcb5039bbb0e64ec910354eafce709d6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nov21-maintenance-publication.json",
+      "sha256": "353956701ddaa3cf9b1afad99b1ccbae6fb27b1c8095cba84908c2c1b1b0299e"
+    },
+    {
+      "path": "runs/2026-11-21-pr141-required-ci-review.json",
+      "sha256": "88542899b4f87a21c8a8f30d86e9b1dc70d2a17e3091bcc24647682d71b30df5"
+    },
+    {
+      "path": "runs/2026-11-21-android-pr141-automatic-review.json",
+      "sha256": "000a7bcb0075dd86676e3258347f950cc98c262c79f37d65f7ce221abb12fe50"
+    },
+    {
+      "path": "runs/2026-11-21-maintenance-actual-closeout-counterreview.json",
+      "sha256": "953d13f70dc8c754ff576ebc5a976dcdfcb5039bbb0e64ec910354eafce709d6"
+    }
+  ],
+  "checks": []
+}

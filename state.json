@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-21T12:16:20.056643+00:00",
+  "updated": "2026-11-21T12:42:16.374024+00:00",
   "active_increment": "Publish the source-matched Android Share fix and independent NF reference preview; all70 original requirements remain open, with N014 advanced20 to80 and physical/human acceptance preserved.",
-  "status": "independent_HP_uncertainty_preview_runtime_sources_Android_malformed_controls_published; original70_target60_unmet",
+  "status": "MT_whole_input_Android_real_Sharesheet_and_runtime_sources_verified_published; original70_target60_unmet",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -1195,7 +1195,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-21T12:16:20.056643+00:00",
+  "updated_at": "2026-11-21T12:42:16.374024+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -4570,12 +4570,13 @@
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
     "CI_review": "runs/2026-11-21-pr140-required-ci-review.json",
     "closed_at": "2026-11-21T11:07:03.859569+00:00",
-    "metadata_only_followup_pending": true
+    "metadata_only_followup_pending": false,
+    "metadata_fulfilled_by_maintenance_source": "872607f9ab409fbfec55dfee59cdbf62e265a04c"
   },
   "nov21_maintenance_delivery": {
     "recorded_at": "2026-11-21T11:12:20.374012+00:00",
     "architecture": "docs/maintenance-delivery-nov21.md",
-    "status": "all5_current_source_checks_pass_after_history_free_guard; new_protected_and_automatic_Android_checks_pending",
+    "status": "protected_and_publicly_verified_maintenance; original_target60_unmet",
     "MT_worker_commit": "ecd3096318437db0816a0484bb21cfb248546f41",
     "MT_before": "runs/2026-11-21-mt-input-clipping-before.json",
     "MT_after": "runs/2026-11-21-mt-input-retention-after.json",
@@ -4633,7 +4634,18 @@
       "focused_pass": 111,
       "focused_error": 1,
       "APK_or_emulator_executed": false
-    }
+    },
+    "protected_source_commit": "872607f9ab409fbfec55dfee59cdbf62e265a04c",
+    "protected_head": "baace80600ed6fbd8feb3b2d37ee17246c789c09",
+    "protected_CI_review": "runs/2026-11-21-pr141-required-ci-review.json",
+    "Android_automatic_current_source_run": 44903218008,
+    "Android_automatic_current_focused": 112,
+    "Android_automatic_review": "runs/2026-11-21-android-pr141-automatic-review.json",
+    "publication_evidence": "runs/2026-11-21-nov21-maintenance-publication.json",
+    "published_at": "2026-11-21T12:41:22.013Z",
+    "closed_at": "2026-11-21T12:42:16.374024+00:00",
+    "closeout_evidence": "runs/2026-11-21-maintenance-publication-closeout.json",
+    "evidence_record_integration": "This evidence record follows normal protected Git history; its own merge is not another runtime claim."
   },
   "f030_dom_route_choice": {
     "selected_at": "2026-11-21T11:57:14.251814+00:00",

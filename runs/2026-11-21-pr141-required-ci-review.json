@@ -1,0 +1,73 @@
+{
+  "captured_at": "2026-11-21T12:35:36.295793+00:00",
+  "pass": true,
+  "kind": "protected_exact_source_check_review",
+  "PR": 141,
+  "url": "https://github.com/knwvmbrr/aitrust-id/pull/141",
+  "source_commit": "baace80600ed6fbd8feb3b2d37ee17246c789c09",
+  "merge_commit": "872607f9ab409fbfec55dfee59cdbf62e265a04c",
+  "tested_and_merged_trees_equal": true,
+  "required_count": 11,
+  "checks": [
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44903218000/job/136843296634",
+      "name": "accessibility",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44903218000/job/136843296590",
+      "name": "regressions",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44903218000/job/136843296490",
+      "name": "no-egress",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44903218000/job/136843296541",
+      "name": "scope-plan",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44903218000/job/136843296458",
+      "name": "spec",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44903218000/job/136843296518",
+      "name": "host-config",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44903218000/job/136843296259",
+      "name": "change-records",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44903218000/job/136843296645",
+      "name": "device-builder (3.12)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44903218000/job/136843296664",
+      "name": "device-builder (3.13)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44903218000/job/136843296553",
+      "name": "device-builder (3.14)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44903218000/job/136843296557",
+      "name": "site",
+      "state": "SUCCESS"
+    }
+  ],
+  "unresolved_review_threads": 0,
+  "review_threads_method": "Connected GitHub exact PR review inventory checked before expected-head normal protected merge.",
+  "nonrequired_independent_release_gate_pass": false,
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false
+}
