@@ -1,0 +1,200 @@
+{
+  "format": "ai-trust-id-android-pr140-automatic-review/v1",
+  "captured_at": "2026-11-21T10:52:43.701388+00:00",
+  "pass": true,
+  "reviewer": "/root/share_debugger",
+  "source_commit": "3941603265c763de07d9f7d91e465e0832db39d1",
+  "run": {
+    "id": 44896016732,
+    "job_id": 136821716505,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44896016732",
+    "event": "pull_request",
+    "attempt": 1,
+    "conclusion": "success"
+  },
+  "review_method": "Read-only completed automatic job log and immutable source comparison; no artifact download, VM launch or rerun.",
+  "log_sha256": "2d2dc339b84b178a24f09930701e9d91ff6c8fafe3003224788e759807ca5e40",
+  "log_bytes": 77679,
+  "focused_groups": [
+    10,
+    46,
+    12,
+    20,
+    14
+  ],
+  "actual_focused_tests": 102,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "actual_jdk_fixture_execution": true,
+  "runtime": {
+    "status": "EXECUTED",
+    "pass": true,
+    "original7": [
+      {
+        "case": "receive_requires_explicit_check",
+        "pass": true
+      },
+      {
+        "case": "actual_offline_ps_finding",
+        "pass": true
+      },
+      {
+        "case": "edit_hides_previous_finding",
+        "pass": true
+      },
+      {
+        "case": "new_share_and_no_finding",
+        "pass": true
+      },
+      {
+        "case": "unsupported_mime_has_no_verdict",
+        "pass": true
+      },
+      {
+        "case": "clear_removes_input_and_result",
+        "pass": true
+      },
+      {
+        "case": "background_clears_text",
+        "pass": true
+      }
+    ],
+    "configuration2": [
+      {
+        "case": "configuration_preserves_current_edited_review_without_result",
+        "pass": true
+      },
+      {
+        "case": "configuration_immediate_home_refocus_does_not_revive_text",
+        "pass": true
+      }
+    ],
+    "malformed9_pairs": [
+      {
+        "case": "missing_text",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "wrong_typed_text",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "send_multiple",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "stream_extra",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "data_uri",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "clip_uri",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "multiple_clip_items",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "over_limit_text",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "unpaired_utf16",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      }
+    ],
+    "exact_fresh_sender_receipts": 19,
+    "sequence_callbacks_and_outcomes_verified": true,
+    "different_application_uid": true,
+    "source_stable": true,
+    "api_level": "36",
+    "internet_permission": false,
+    "license_record_unchanged": true,
+    "elapsed_seconds": 172.47
+  },
+  "default_apk": {
+    "no_diagnostic_variant_in_build": true,
+    "permission_count": 0,
+    "sender_descriptor_and_frame_excluded_by_actual_helper": true,
+    "intake_probe_exclusion_build_gate_source_unchanged": true,
+    "current_apk_independently_downloaded": false,
+    "native14_sources_match_current_commit": true,
+    "unchanged_from_previously_independently_audited_default_apk_source": true
+  },
+  "actual_ingress_source6": {
+    "tests/android/intent-sender/AndroidManifest.xml": "e4451b9f502ab31b8e13a8686f565c3a883df51ad95c87cae463ea9f5435cc47",
+    "tests/android/intent-sender/SenderActivity.java": "01db8ae344f8986d220d2be79d897cf051574eb6843b41ad4efc28f29e9d3e81",
+    "scripts/android-intent-controls.py": "30dfa5104578d584515f816387ff284766ec859ed20cc538027f1c453721b370",
+    "scripts/verify-android-emulator.py": "3460a2d0c3cc3ca69838d41dab9d28f296f280fd97027249a1124476fff8250b",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f"
+  },
+  "current_source29_bindings": {
+    ".github/workflows/android-share.yml": "1ccc56d0e5b898319deb5188b4188488618e68fdec525d9a290cf3ef0074fab6",
+    "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+    "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+    "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+    "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+    "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+    "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+    "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+    "mobile/android/src/com/aitrustid/android/ConfigurationDraft.java": "5fb22a21a6c8ad36b4535e39955ecff4a6baede2e42c43c9648b8149dd52211a",
+    "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+    "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+    "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+    "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+    "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "scripts/android-intent-controls.py": "30dfa5104578d584515f816387ff284766ec859ed20cc538027f1c453721b370",
+    "scripts/android-share-build.py": "8cb6ed20056bbf9d7f69dfb2fb19eaf9c5025eeb44ef8ea3f7d52576ffa1184e",
+    "scripts/verify-android-emulator.py": "3460a2d0c3cc3ca69838d41dab9d28f296f280fd97027249a1124476fff8250b",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "tests/android/CheckActivity.java": "76e847187c37bf216aaaffb7da71d7b663ffe1cba5c64c17eb4cf7f098d513e7",
+    "tests/android/ConfigurationLifecycleHarness.java": "3e5a6380c5b2b5d5c398a1f4ecacc6bd710c8e2f253f0c4eb3af42de273de707",
+    "tests/android/intent-sender/AndroidManifest.xml": "e4451b9f502ab31b8e13a8686f565c3a883df51ad95c87cae463ea9f5435cc47",
+    "tests/android/intent-sender/SenderActivity.java": "01db8ae344f8986d220d2be79d897cf051574eb6843b41ad4efc28f29e9d3e81",
+    "tests/test_android_configuration_controls.py": "996514248f6e2bc220d132627aa26fe3da77e405017ad66f0f513de871f9efcb",
+    "tests/test_android_emulator_prerequisites.py": "1f8187bf906fd0391cc63180fc03b1e37d91414273138b11b14429d2a43ad07d",
+    "tests/test_android_intake_probe.py": "3ceccd81d04d864256a0f57ee6a35cf43529732bc111762356712be1afd16f9f",
+    "tests/test_android_intent_controls.py": "207faad8e6e6df40bc85f3ff9231be72b6ecfff7d4651e066d048f1164732258",
+    "tests/test_android_share.py": "d30aa8ead3c9d09700251c6258ca9c193b5142ab2954bd1a652d1285c0bec2d9"
+  },
+  "only_change_from_prior_runtime_source": "Additive workflow14test registration and trigger coverage; actual automatic current-head run now executed.",
+  "canonical_parity": {
+    "pass": true,
+    "cases": 137,
+    "invalid_controls": 3,
+    "network_attempts": 0,
+    "method_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+  },
+  "software_handoff_accepted_for_declared_emulator_scope": true,
+  "protected_merge_and_publication_pending": true,
+  "physical_device_evidence": false,
+  "human_talkback_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_original_requirement_closure": false
+}

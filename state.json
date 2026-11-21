@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-21T10:46:30.528020+00:00",
+  "updated": "2026-11-21T11:07:03.859569+00:00",
   "active_increment": "Publish the source-matched Android Share fix and independent NF reference preview; all70 original requirements remain open, with N014 advanced20 to80 and physical/human acceptance preserved.",
-  "status": "new_independent_HP_runtime_Android_software_integrated_under_verification; prior_production_live; original70_target60_unmet",
+  "status": "independent_HP_uncertainty_preview_runtime_sources_Android_malformed_controls_published; original70_target60_unmet",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -719,7 +719,7 @@
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
     "candidate_source": "https://theailab.org/ai-trust-registry",
-    "observed_mark": "AI Trust ID\u2122",
+    "observed_mark": "AI Trust ID™",
     "registration_priority_and_legal_conflict_verified": false
   },
   "market_research": {
@@ -1195,7 +1195,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-21T10:46:30.528020+00:00",
+  "updated_at": "2026-11-21T11:07:03.859569+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1538,7 +1538,7 @@
     "active_retention_days": 30,
     "backup_expiry_days": 7,
     "invitation_only": true,
-    "owner_role": "Michael \u2014 accepted accountable pilot operator and access approver",
+    "owner_role": "Michael — accepted accountable pilot operator and access approver",
     "owner_decision": "runs/2026-10-13-metadata-pilot-owner-decision.json",
     "policy": "deploy/research/metadata-pilot-policy.json"
   },
@@ -4479,7 +4479,7 @@
   "nov21_next_delivery": {
     "recorded_at": "2026-11-21T10:00:20.708615+00:00",
     "architecture": "docs/independent-delivery-nov21-next.md",
-    "status": "all5_current_source_checks_pass; protected_CI_and_public_delivery_pending",
+    "status": "protected_and_publicly_verified_software_delivery; original_target60_unmet",
     "HP": {
       "standalone_worker_commit": "8fec188288fe93b53c1c413e0a7d20d42f48e102",
       "integrated_evidence": "runs/2026-11-21-hp-next-integrated-site.json",
@@ -4506,15 +4506,18 @@
       "distinct_review": "runs/2026-11-21-android-malformed-independent-review.json",
       "new_local_focused_groups": 14,
       "prior_hosted_focused_tests": 88,
-      "new_workflow_execution_pending": true,
-      "physical_TalkBack_or_release_acceptance": false
+      "new_workflow_execution_pending": false,
+      "physical_TalkBack_or_release_acceptance": false,
+      "automatic_current_source_run": 44896016732,
+      "automatic_focused_tests": 102,
+      "automatic_review": "runs/2026-11-21-android-pr140-automatic-review.json"
     },
     "all_original_criteria_preserved": true,
     "original_complete": 132,
     "original_open": 70,
     "new_original_closures": 0,
-    "closed_scoped_jobs": 16,
-    "protected_public_delivery_pending": true,
+    "closed_scoped_jobs": 19,
+    "protected_public_delivery_pending": false,
     "real_collection_enabled": false,
     "independent_accuracy_evidence": false,
     "prior_policy1_12_unchanged": true,
@@ -4562,6 +4565,11 @@
       "website": "runs/2026-11-21-independent-final-website.json"
     },
     "finite_inventory_review": "runs/2026-11-21-independent-finite-inventory-review.json",
-    "source_inventory_count": 1467
+    "source_inventory_count": 1467,
+    "publication_evidence": "runs/2026-11-21-nov21-independent-publication.json",
+    "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
+    "CI_review": "runs/2026-11-21-pr140-required-ci-review.json",
+    "closed_at": "2026-11-21T11:07:03.859569+00:00",
+    "metadata_only_followup_pending": true
   }
 }

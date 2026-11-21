@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-110732-independent-public-software-closeout-887d3bf9
+
+Recorded 2026-11-21T11:07:32.991981+00:00 · Contributor: Codex /root; distinct workers and reviewers /root/seo /root/web_camo /root/share_debugger · change
+
+- **Changed.** Closed three predeclared software delivery jobs after protected PR140 and actual public HP/NF/source-download checks; completed the existing API/MCP enhancement acceptance.
+- **Evidence.** 54 selected HTTP asset comparisons across two origins and actual Chromium/WebKit controls pass. Scoped jobs16 to19; existing ENH-AGENT-TAG-TOOLS80 to100 with retained full criterion and actual source-download proof. All202 original percentages and required acceptance preserved:132 complete70open. [Change record](./runs/changes/2026-11-21-110732-independent-public-software-closeout-887d3bf9.json).
+- **Not claimed.** Goal60 remains NOT MET. No full tag, independent accuracy, physical Android/TalkBack, full WASM/native obligations or other original acceptance is credited. MT input repair and Android chooser remain independent pending work.
+
+
+### 2026-11-21-110207-independent-protected-merge-proof-92270f18
+
+Recorded 2026-11-21T11:02:07.474655+00:00 · Contributor: Codex /root; actual Android/API reviewer /root/share_debugger · change
+
+- **Changed.** Recorded exact protected PR140 merge and current automatic Android/API acceptance reviews before normal deployment.
+- **Evidence.** All eleven required checks pass on3941603; protected merged93a6ec has the same tree. Android102 plus original9 and malformed9 pairs executed. Existing API/MCP enhancement remaining software acceptance is independently evidenced. [Change record](./runs/changes/2026-11-21-110207-independent-protected-merge-proof-92270f18.json).
+- **Not claimed.** Public deployment and three software-job closures remain pending. Original132 complete70open and failing independent release gate retained.
+
+
 ### 2026-11-21-104643-independent-current-evidence-sealed-9f2f032a
 
 Recorded 2026-11-21T10:46:43.674973+00:00 · Contributor: Codex /root; reviewers /root/seo /root/web_camo /root/share_debugger · change

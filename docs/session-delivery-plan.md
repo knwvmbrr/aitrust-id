@@ -1,3 +1,13 @@
+# Current public delivery — 2026-11-21T11:07:03.859569+00:00
+
+The optional HP uncertainty-word preview is now in the actual public HP modal, closed until opened. It keeps the selected passage on device, requires explicit context and issues no HP verdict. Selected Pyodide JavaScript source and exact MPL/MIT notices are now downloadable from About. Android's actual default APK passed the original7+configuration2 controls and9 malformed-Share/refusal/fresh-recovery pairs; its102 focused checks ran automatically against the protected source.
+
+**19 completed scoped software jobs; 132 complete /70 open original requirements. Zero new original closures; target60 remains NOT MET.** Full original acceptance is preserved. The live browser proof covers actual HP/NF/privacy/lifecycle/peer recovery in Chromium and WebKit plus selected critical HTTP assets. It is not physical-phone, human screen-reader or independent accuracy evidence.
+
+[Public execution proof](../runs/2026-11-21-nov21-independent-publication.json) · [Protected checks](../runs/2026-11-21-pr140-required-ci-review.json) · [Full software closeout](../runs/2026-11-21-independent-software-closeout.json). Root owns the next integration. New MT input-retention, Android chooser and exact runtime-source repairs are independent pending work, not completed originals or perpetual bot processes.
+
+## Preserved earlier dated snapshots
+
 # Current independent integration — 2026-11-21T10:00:20.708615+00:00
 
 Three independently usable software jobs are in review: actual HP-modal uncertainty-word exploration, selected browser-runtime source/notice delivery, and Android malformed-Share refusal/recovery. The combined normal build, actual HP modal in both engines, exact runtime artifact gate and separate Android API36 execution pass with distinct review. These are not protected/public completion claims yet.
