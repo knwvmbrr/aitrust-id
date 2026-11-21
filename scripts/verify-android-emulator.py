@@ -516,9 +516,10 @@ def verify_configuration_controls(send,shell,wait,click,report):
     inserted X. Retain booleans only, not editor values, hashes or hierarchy data.
     """
     def text(view,value):return any(value in n.attrib.get('text','') for n in view.iter('node'))
-    def editor(view):
+    def editor(view,required=True):
         nodes=[n for n in view.iter('node') if n.attrib.get('resource-id')==PACKAGE+':id/editor']
-        if len(nodes)!=1:raise ValueError('Owned synthetic editor unavailable')
+        if len(nodes)>1 or required and not nodes:raise ValueError('Owned synthetic editor unavailable')
+        if not nodes:return None
         return nodes[0].attrib.get('text','')
     cases=[];report.update(status='RUNNING',**{'pass':False},cases=cases)
     try:
@@ -537,10 +538,60 @@ def verify_configuration_controls(send,shell,wait,click,report):
         view=wait(edited);expected=editor(view)
         report['control_stage']='configuration_rotate'
         shell(['wm','user-rotation','lock','1'])
-        view=wait(lambda x:x.attrib.get('rotation')=='1' and text(x,'Text received. Review it'))
+        rotation={'phase':'ROTATING','up':0,'down':0}
+        def scroll(view,up):
+            nodes=[n for n in view.iter('node') if n.attrib.get('class')=='android.widget.ScrollView' and n.attrib.get('package')==PACKAGE]
+            if len(nodes)!=1:raise ValueError('Owned scroll view unavailable')
+            match=re.fullmatch(r'\[(\d{1,4}),(\d{1,4})\]\[(\d{1,4}),(\d{1,4})\]',nodes[0].attrib.get('bounds',''))
+            if match is None:raise ValueError('Owned scroll bounds unavailable')
+            left,top,right,bottom=map(int,match.groups())
+            if not (0<=left<right<=8192 and 0<=top<bottom<=8192 and right-left>=64 and bottom-top>=64):raise ValueError('Owned scroll bounds unavailable')
+            # Vertical motion in the owned outer margin avoids the editor's
+            # independent scrolling. No coordinates are retained in evidence.
+            x=right-max(2,(right-left)//32);low=top+(bottom-top)*3//4;high=top+(bottom-top)//4
+            shell(['input','swipe',x,low if up else high,x,high if up else low,'200'],5)
+            rotation['up' if up else 'down']+=1
+            report['rotation_scroll_actions']=rotation['up']+rotation['down']
+        def configuration_ready(view):
+            value=editor(view,False);received=text(view,'Text received. Review it')
+            status=any(n.attrib.get('resource-id')==PACKAGE+':id/status' for n in view.iter('node'))
+            tag=any(n.attrib.get('resource-id')==PACKAGE+':id/tag' for n in view.iter('node'))
+            actual=view.attrib.get('rotation');observed_rotation=actual if actual in ('0','1') else ('UNAVAILABLE' if actual is None else 'OTHER')
+            report['rotation_state']=rotation['phase']
+            report['rotation_observation']={'rotation':observed_rotation,'editor_observed':value is not None,
+                'editor_matches_edited_draft':None if value is None else value==expected,
+                'status_node_observed':status,'received_status_visible':received,'result_tag_visible':tag}
+            if rotation['phase']=='ROTATING':
+                if actual!='1' or value is None:return False
+                assert value==expected and not tag
+                if received:
+                    report['rotation_receipt_observed']=True;return True
+                assert not text(view,'Ready when you are.') and not text(view,'Cleared. Your text and result')
+                if not status:
+                    # Only scroll after positively observing rotation and the
+                    # exact edited draft, with status absent from this snapshot.
+                    report['rotation_scroll_precondition']=dict(report['rotation_observation'])
+                    scroll(view,True);rotation['phase']='RECEIPT'
+                return False
+            assert actual=='1' and not tag
+            if value is not None:assert value==expected
+            assert not text(view,'Ready when you are.') and not text(view,'Cleared. Your text and result')
+            if rotation['phase']=='RECEIPT':
+                if received:
+                    report['rotation_receipt_observed']=True
+                    scroll(view,False);rotation['phase']='REASSERT_EDITOR';return False
+                if rotation['up']>=2:raise ValueError('Receipt unavailable after bounded scroll')
+                scroll(view,True);return False
+            if value is not None:return True
+            if rotation['down']>=2:raise ValueError('Edited draft unavailable after bounded scroll')
+            scroll(view,False);return False
+        # Rotation, status navigation and final exact-text reassertion share ONE
+        # existing 40-second wait. No new per-scroll wait/reset is introduced.
+        view=wait(configuration_ready)
         report['control_stage']='configuration_restore'
         assert editor(view)==expected
         assert not any(n.attrib.get('resource-id')==PACKAGE+':id/tag' for n in view.iter('node'))
+        report['rotation_state']='COMPLETE';report['rotation_edited_reasserted']=True
         cases.append({'case':'configuration_preserves_current_edited_review_without_result','pass':True})
         report['control_stage']='configuration_home'
         background={};report['background']=background

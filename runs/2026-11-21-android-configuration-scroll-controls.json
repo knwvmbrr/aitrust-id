@@ -1,0 +1,105 @@
+{
+  "format": "ai-trust-id-android-configuration-scroll-controls/v1",
+  "recorded_at": "2026-11-21T06:53:29.748607+00:00",
+  "pass": true,
+  "preserved_failed_default": {
+    "path": "runs/2026-11-21-android-default-configuration-failed.json",
+    "sha256": "72149926339a209432cdbc35871fed884404ec310b446fcc9c8e2637854c82bd",
+    "producer_stays_failed": true
+  },
+  "focused_tests": {
+    "tests": 55,
+    "affected_configuration_groups": 9,
+    "original_prerequisite_and_controller_tests": 46,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "no_broad_native_or_browser_rerun": true
+  },
+  "actual_isolated_stdlib_fixture": {
+    "recorded_at": "2026-11-21T06:51:08.464512+00:00",
+    "synthetic_ui_model_not_android_runtime": true,
+    "before_source_sha256": "c2c235059372332db78662e45d680883afc9127064c3356ef60ede866cee8da7",
+    "after_source_sha256": "51ff2fa179f2914e29a3d805c2bc7ccd096ad2aa65da2e514e1eee68fd9d8bb0",
+    "before": {
+      "status": "FAILED",
+      "diagnostic_code": "configuration_rotate_unavailable",
+      "scroll_actions": 0
+    },
+    "after": {
+      "status": "EXECUTED",
+      "pass": true,
+      "rotation_scroll_actions": 2,
+      "positive_precondition": {
+        "rotation": "1",
+        "editor_observed": true,
+        "editor_matches_edited_draft": true,
+        "status_node_observed": false,
+        "received_status_visible": false,
+        "result_tag_visible": false
+      },
+      "receipt_observed": true,
+      "edited_reasserted": true
+    }
+  },
+  "source_comparison": {
+    "all14_native_sources_unchanged_from_actual_failed_default_apk": true,
+    "original_seven_helper_asts_unchanged": true,
+    "actual_wait_ast_unchanged": true,
+    "rotation_wait_calls": 1,
+    "existing_wait_default_seconds": 40,
+    "maximum_up_gestures": 2,
+    "maximum_down_gestures": 2,
+    "no_new_per_substep_wait_reset": true,
+    "rotation_to_home_adjacency_preserved": true
+  },
+  "failure_controls": [
+    "offscreen receipt requires bounded owned navigation",
+    "lost edited text refuses immediately",
+    "missing receipt refuses",
+    "exact editor reassertion after receipt required",
+    "visible result tag refuses",
+    "foreign or malformed scroll bounds receive no gesture",
+    "late revived marker fails immediately",
+    "nested background failure cannot pass",
+    "diagnostic/default flag conflict refuses before SDK"
+  ],
+  "metadata": {
+    "finite_rotation_state_visibility_booleans_and_counts_only": true,
+    "match_unknown_when_editor_absent": null,
+    "first_scroll_positive_precondition_retained": true,
+    "input_text_hash_coordinates_ids_or_dump_retained": false
+  },
+  "workflow": {
+    "normal_pr_push_automatically_require_configuration_controls": true,
+    "manual_default_input_honored": true,
+    "manual_diagnostic_default_excluded": true,
+    "explicit_invalid_combination_still_refused": true,
+    "actual_shell_argument_selection_executed_for_six_event_input_cases": true,
+    "automatic_and_manual_true_argv_identical": true,
+    "yaml_and_bash_syntax_passed": true,
+    "extra_emulator_jobs_or_new_licenses_permissions_secrets": false
+  },
+  "distinct_review": {
+    "reviewer": "/root/web_camo",
+    "result": "CLEAR for one changed-source default candidate",
+    "affected_controls_replayed": 9,
+    "source_hashes_and_original_helpers_wait_rechecked": true,
+    "sdk_emulator_browser": false
+  },
+  "sources": {
+    "scripts/verify-android-emulator.py": "51ff2fa179f2914e29a3d805c2bc7ccd096ad2aa65da2e514e1eee68fd9d8bb0",
+    "tests/test_android_configuration_controls.py": "eec9f76bd487960892220fd7badb22a394b6021f2044ea1104fd545cd7846fb2",
+    ".github/workflows/android-share.yml": "536c97412669fa97527a026edd72297d82cf0ad849d6628ca6c0df4c4c923b5a",
+    "docs/android-configuration-verifier-visibility-plan.md": "1c474c270aa74897f393446f0b97c72dcaf7784a7e5b71bcb626e58b4a1c57fe",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+    "mobile/android/src/com/aitrustid/android/ConfigurationDraft.java": "5fb22a21a6c8ad36b4535e39955ecff4a6baede2e42c43c9648b8149dd52211a"
+  },
+  "historical_default_failure_visibility_cause": "HYPOTHESIS_NOT_PROVEN",
+  "new_current_default_runtime_acceptance_pending": true,
+  "product_activity_logic_changed_by_this_correction": false,
+  "physical_device_evidence": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false
+}

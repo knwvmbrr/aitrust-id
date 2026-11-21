@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-065329-android-bounded-configuration-navigation-9f314fc6",
+  "recorded_at": "2026-11-21T06:53:29.790323+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "61fcf56f8534ade8b8c3920562a68fd7be1a8675",
+  "changed": "Navigate offscreen configuration status within one bounded wait and require supplemental privacy controls on normal PR/push jobs.",
+  "proves": "55 focused controls pass; the old/new synthetic offscreen fixture fails before and passes after bounded owned scrolling with exact post-receipt text. Separate review confirmed original seven/wait unchanged, fixed data refusals, native bytes unchanged and automatic/manual-true argument equivalence.",
+  "limits": "Prior default producer remains failed and its visibility cause is unproven. Current changed-source default7+2 execution, physical/human and full-original acceptance remain pending; no new APK readiness claim follows from fixture results.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "scripts/verify-android-emulator.py": "51ff2fa179f2914e29a3d805c2bc7ccd096ad2aa65da2e514e1eee68fd9d8bb0",
+    "tests/test_android_configuration_controls.py": "eec9f76bd487960892220fd7badb22a394b6021f2044ea1104fd545cd7846fb2",
+    ".github/workflows/android-share.yml": "536c97412669fa97527a026edd72297d82cf0ad849d6628ca6c0df4c4c923b5a",
+    "docs/android-configuration-verifier-visibility-plan.md": "1c474c270aa74897f393446f0b97c72dcaf7784a7e5b71bcb626e58b4a1c57fe",
+    "runs/2026-11-21-android-configuration-scroll-controls.json": "658277e236be5a05d01c418db2cd1130a56b8d1e3030a31e5e8a1dab8385fd09"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-configuration-scroll-controls.json",
+      "sha256": "658277e236be5a05d01c418db2cd1130a56b8d1e3030a31e5e8a1dab8385fd09"
+    }
+  ],
+  "checks": []
+}

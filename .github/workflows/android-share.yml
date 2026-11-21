@@ -68,7 +68,7 @@ jobs:
     timeout-minutes: 15
     env:
       AITRUST_INTAKE_PROBE: ${{ github.event_name == 'workflow_dispatch' && inputs.intake_probe && '1' || '0' }}
-      AITRUST_CONFIGURATION_CONTROLS: ${{ github.event_name == 'workflow_dispatch' && inputs.configuration_controls && '1' || '0' }}
+      AITRUST_CONFIGURATION_CONTROLS: ${{ (github.event_name != 'workflow_dispatch' || inputs.configuration_controls) && '1' || '0' }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with: {persist-credentials: false}

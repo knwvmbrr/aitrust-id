@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-065329-android-bounded-configuration-navigation-9f314fc6
+
+Recorded 2026-11-21T06:53:29.790323+00:00 · Contributor: Codex · change
+
+- **Changed.** Navigate offscreen configuration status within one bounded wait and require supplemental privacy controls on normal PR/push jobs.
+- **Evidence.** 55 focused controls pass; the old/new synthetic offscreen fixture fails before and passes after bounded owned scrolling with exact post-receipt text. Separate review confirmed original seven/wait unchanged, fixed data refusals, native bytes unchanged and automatic/manual-true argument equivalence. [Change record](./runs/changes/2026-11-21-065329-android-bounded-configuration-navigation-9f314fc6.json).
+- **Not claimed.** Prior default producer remains failed and its visibility cause is unproven. Current changed-source default7+2 execution, physical/human and full-original acceptance remain pending; no new APK readiness claim follows from fixture results.
+
+
 ### 2026-11-21-064401-android-default-config-candidate-failed-8690b475
 
 Recorded 2026-11-21T06:44:01.976123+00:00 · Contributor: Codex · change
