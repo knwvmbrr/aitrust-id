@@ -48,3 +48,44 @@ Execution: `runs/2026-11-21-remote-tag-connectors-direct-Linux-execution.json` S
 Distinct direct-worker review: `runs/2026-11-21-remote-tag-direct-worker-independent-review.json` SHA256 `8ccec405a13d302fc8b566da4caf51387b2c4bba4d2dc38ca9ad7c99ac1ea830`, with independent genuine-worker replay. The first789 and intermediate d0Linux records remain historical identities. Final Linux evidence review and root protected integration/public deployment remain separate; no broad tag or accuracy claim follows.
 
 The distinct final Linux evidence review confirmed the exact 20-file archive against commit `8294f49107262e4f2b5604632a81503d293c0956`, all 30 locked installed versions, the actual 14-group client receipt and completed private-workspace cleanup. It did not independently inspect the discarded inner test logs or establish public HTTPS deployment, account integration, accuracy or original scope closure. See `runs/2026-11-21-remote-tag-direct-Linux-independent-review.json`.
+
+## Private provider-host deployment preparation
+
+The frozen `e3fcccfe2280e9aadc53403add926f3a555693f0` deployment candidate
+completed 11 actual private Linux proxy control groups. The exact Debian
+Caddy2.11.2-1~bpo13+1 package matched signed host apt metadata and its pinned
+SHA256; no maintainer scripts or global package installation ran. Both the
+production provider-host configuration and the private listener adapted and
+validated with that binary. Actual ordinary HTTP and official modern/legacy
+MCP calls matched the canonical brief records through the proxy. Header,
+origin, query, credential, malformed framing, oversized and incomplete-body
+requests refused. Disconnecting a real held canonical worker reaped it, and a
+new check recovered. Both proxy and app stopped without owned workers.
+
+A separately derived private TLS listener used only an ephemeral self-signed
+provider-SAN test certificate: correct SNI/Host returned the real health200;
+provider SNI with a different Host refused421. This validates the configured
+strict-SNI policy, not a publicly trusted chain, ACME issuance or internet
+reachability. All captured request/process logs in this bounded proof were
+empty. The private candidate and its venv/package extraction were removed
+only after the proof files were retained locally.
+
+The first package-origin refusal (Debian's exact root-owned mirror-list
+transport) and first private HTTP failure (an implicit IP Host matcher bypassed
+the intended route) remain preserved with their concrete diagnoses. A separate
+bookkeeping mistake queried `/health` instead of the old service's `/healthz`:
+the execution receipt therefore preserves null before/after health fields.
+Those fields do not establish service health. A later read-only observation
+confirmed the owned directory absent, zero remaining owned workdir processes,
+and the correct old service `/healthz`200/ok. No existing service was modified.
+
+See `runs/2026-11-21-remote-proxy-corrected-Linux.json`,
+`runs/2026-11-21-remote-proxy-corrected-source-review-input.json` and
+`runs/2026-11-21-remote-proxy-private-cleanup.json`. Operator activation still
+must prove effective systemd/BPF and no-swap controls, public trusted HTTPS,
+exact protected deployment bytes, internet MCP calls and applicable host
+account/workspace approval. No firewall, global user/unit/config, DNS or public
+listener was changed. The preparation/activation boundary is documented in
+`deploy/ai-tools/README.md`; no original scope closure is claimed.
+
+The distinct final deployment review confirmed all 26 archive members against immutable `e3fcccfe2280e9aadc53403add926f3a555693f0`, the exact 11-group proof and 30 locked versions. It explicitly preserves this result-document post-proof bookkeeping delta and the wrong-health-path limitation; no runtime replay or public activation is implied. See `runs/2026-11-21-remote-proxy-independent-review.json`.

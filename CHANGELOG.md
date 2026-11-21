@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-154123-remote-proxy-reviewed-linux-proof-85907b44
+
+Recorded 2026-11-21T15:41:23.855883+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Retained source-bound actual private Linux Caddy proxy/TLS-policy proof and its distinct independent review.
+- **Evidence.** All11 actual groups pass through the pinned extracted Caddy binary with canonical HTTP/MCP parity, ingress refusals, real worker disconnect/reap/recovery, bounded body deadline, private SNI-Host421 and clean shutdown;26 frozen sources and30 lock versions match, and owned temporary state is removed. [Change record](./runs/changes/2026-11-21-154123-remote-proxy-reviewed-linux-proof-85907b44.json).
+- **Not claimed.** No public port, trustedTLS/ACME, effective systemd/BPF/swap activation, AI-host account, accuracy or original closure. Wrong /health bookkeeping nulls are retained; correct /healthz200 is a later separate read-only cleanup observation. Result docs changed only after proof.
+
+
 ### 2026-11-21-153530-remote-proxy-sni-host-policy-50cc1c17
 
 Recorded 2026-11-21T15:35:30.090292+00:00 · Contributor: Codex API deployment engineer · change
