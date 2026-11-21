@@ -1,0 +1,61 @@
+{
+  "format": "jpeg-metadata-independent-review/v1",
+  "captured_at": "2026-11-21T22:06:28.992914+00:00",
+  "pass": true,
+  "reviewer": "seo",
+  "source_base": "41f6107cb48a82c50e48d004d76c89f6af1e7f44",
+  "source_sha256": {
+    "tools/jpeg_metadata.py": "c7e8fcb58acd2087a35c886a32b7df1fa390c74c52c023e9b137bdf1dd90872a",
+    "scripts/inspect-jpeg-metadata.py": "4327f00618fa1f74ed6b17eb3d358e66d2c785cc437ec8f6e12dff6d091b7a46",
+    "tests/test_jpeg_metadata.py": "51a3d326ec301fc6815ba284db258de6bf2b8ddd5a38c6fb1735460702bad79d"
+  },
+  "source_stable": true,
+  "author_actual_cli_receipt": {
+    "path": "runs/2026-11-21-jpeg-metadata-corrected-cli.json",
+    "sha256": "6990cd96c39f5fe9145b10d576fd2e7b0441f9c1853fb436b5a09ab8c80b9950",
+    "commands": 6,
+    "all5source_and3PNG_hashes_match": true
+  },
+  "actual_focused_test_groups": [
+    "test_closed_exact_result_refuses_raw_values_counts_identity_and_tags",
+    "test_no_follow_parent_leaf_FIFO_and_exact_opened_subject_drift",
+    "test_actual_worker_timeout_overflow_nonzero_and_known_reaped_ownership"
+  ],
+  "actual_focused_tests_passed": 3,
+  "actual_CLI_controls": [
+    {
+      "case": "actual_default_text",
+      "exit": 0,
+      "pass": true,
+      "no_values_or_path": true,
+      "stdout_sha256": "e1c858fa46a3c1e08299a36cfa941796a9acd82d124635eca3db432288caf440"
+    },
+    {
+      "case": "actual_explicit_JSON",
+      "exit": 0,
+      "pass": true,
+      "no_values_or_path": true,
+      "stdout_sha256": "1edcf3792bf389364ff2018fa044caf3ddde1cc04886138c8cf2800403b66781"
+    }
+  ],
+  "source_review": [
+    "10MiB/4mheaderpixels/4096markers/64tables/128metadata/256KiB limits; no inflation, external parser or URL fetch.",
+    "Single8bitbaseline1or3component scan only; DNL, other coding/multiscan/abbreviated forms Unsupported; framing not entropy/pixel validation.",
+    "Metadata prefix categories and counts only; no raw Exif/XMP/ICC/APP11/COM values, default asset SHA or path.",
+    "Exact full record replay binds captured encoded bytes; retained no-follow leaf/ancestor descriptors and post-worker identities refuse drift.",
+    "Bounded isolated stdlib worker has fixed argv, held regular input FD,4s wall/2sCPU/8KiB output, known-reaped returncode guard; parent closes owned handles once.",
+    "Origin remains Unknown, pixels/C2PA/watermark/truth not verified, no tags or release assertions."
+  ],
+  "new_actionable_findings": [],
+  "limits": [
+    "Three focused groups and two actual synthetic CLI commands only; no full component suite, browser/native/model/install/network or source mutation.",
+    "Author previous failures/accounting retained; current sixCLI receipt inspected rather than relabeled independent execution.",
+    "Source/file/engineering review is not independent accuracy, actual entropy decoding, signature/trust/revocation or full FA/PA/F155 acceptance."
+  ],
+  "reporting_correction": {
+    "corrected_at": "2026-11-21T22:08:32.885679+00:00",
+    "supersedes_sha256": "17dda8652ee00cc3efd256c75238693a8be5f82bba68d3b2922e08809d3fec5e",
+    "change": "Corrected incidental full-suite count wording: current component has11 methods, not12. Original review capture time, source hashes and actual3 focused groups+2 CLI observations retained.",
+    "new_execution": false
+  }
+}

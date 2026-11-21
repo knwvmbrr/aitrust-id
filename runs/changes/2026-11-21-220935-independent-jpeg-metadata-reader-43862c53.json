@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-220935-independent-jpeg-metadata-reader-43862c53",
+  "recorded_at": "2026-11-21T22:09:35.578653+00:00",
+  "author": "Codex /root/web_camo image evidence engineer",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "41f6107cb48a82c50e48d004d76c89f6af1e7f44",
+  "changed": "Added a separate bounded offline JPEG metadata observation CLI with fixed private summaries, explicit selected baseline profile, exact byte/result binding and no PNG dependency.",
+  "proves": "Current six actual standard-library-only CLI controls pass with source and PNG hashes stable; distinct review passes three focused groups and two actual text/JSON commands. Preserved initial empty-restart and deferred-height classification failures and their targeted corrections; no unchanged whole suite repeated.",
+  "limits": "Framing only: no entropy/pixel decoding, image-validity, color, orientation, watermark, credential, origin, authorship or truth verification; no tags or FA/PA/F-155 closure. Explicit JSON hashes link copies. No main/site/API/dependency/deploy change; development branch push remains held for PM identity review.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA",
+    "F-155"
+  ],
+  "files": {
+    "tools/jpeg_metadata.py": "c7e8fcb58acd2087a35c886a32b7df1fa390c74c52c023e9b137bdf1dd90872a",
+    "scripts/inspect-jpeg-metadata.py": "4327f00618fa1f74ed6b17eb3d358e66d2c785cc437ec8f6e12dff6d091b7a46",
+    "tests/test_jpeg_metadata.py": "51a3d326ec301fc6815ba284db258de6bf2b8ddd5a38c6fb1735460702bad79d",
+    "docs/jpeg-metadata-plan.md": "3b1f15b0fe04eccb4dd192b002d02d577dbca9f1827a9014905c1e67350d49ca",
+    "docs/jpeg-metadata.md": "9a2a19993cef09d08a505eff58c24d5a46aa3a8eff3b8c37724612f6cde77977",
+    "docs/jpeg-metadata-result.md": "02cbd212804731911dcbe95bfadf20dfc07f64090a8e5a3daff11d6474c0f8eb",
+    "runs/2026-11-21-jpeg-development-boundary-failures.json": "a67239a6700db53f36fa00b6fd1fc29c7b40829f6c49eda7289004619e196c55",
+    "runs/2026-11-21-jpeg-metadata-actual-cli.json": "4572e729b6c66cf69101791e3ac169baf22b4e123c22f48df4a0eaf9b6bd5701",
+    "runs/2026-11-21-jpeg-metadata-corrected-cli.json": "6990cd96c39f5fe9145b10d576fd2e7b0441f9c1853fb436b5a09ab8c80b9950",
+    "runs/2026-11-21-jpeg-metadata-independent-review.json": "8cf87fa3f674506881e0f84d7ba128132f42f9517234abd9ee34fbacd2bb5f7a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-jpeg-development-boundary-failures.json",
+      "sha256": "a67239a6700db53f36fa00b6fd1fc29c7b40829f6c49eda7289004619e196c55"
+    },
+    {
+      "path": "runs/2026-11-21-jpeg-metadata-corrected-cli.json",
+      "sha256": "6990cd96c39f5fe9145b10d576fd2e7b0441f9c1853fb436b5a09ab8c80b9950"
+    },
+    {
+      "path": "runs/2026-11-21-jpeg-metadata-independent-review.json",
+      "sha256": "8cf87fa3f674506881e0f84d7ba128132f42f9517234abd9ee34fbacd2bb5f7a"
+    }
+  ],
+  "checks": []
+}

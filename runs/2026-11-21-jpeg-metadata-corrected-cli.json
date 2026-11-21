@@ -1,0 +1,125 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T22:04:35.189736+00:00",
+  "kind": "independent_jpeg_metadata_DNL_corrected_actual_cli",
+  "author": "Codex /root/web_camo image evidence engineer",
+  "source_base": "41f6107cb48a82c50e48d004d76c89f6af1e7f44",
+  "source_sha256": {
+    "tools/jpeg_metadata.py": "c7e8fcb58acd2087a35c886a32b7df1fa390c74c52c023e9b137bdf1dd90872a",
+    "scripts/inspect-jpeg-metadata.py": "4327f00618fa1f74ed6b17eb3d358e66d2c785cc437ec8f6e12dff6d091b7a46",
+    "tests/test_jpeg_metadata.py": "51a3d326ec301fc6815ba284db258de6bf2b8ddd5a38c6fb1735460702bad79d",
+    "docs/jpeg-metadata-plan.md": "3b1f15b0fe04eccb4dd192b002d02d577dbca9f1827a9014905c1e67350d49ca",
+    "docs/jpeg-metadata.md": "9a2a19993cef09d08a505eff58c24d5a46aa3a8eff3b8c37724612f6cde77977"
+  },
+  "PNG_unchanged_sha256": {
+    "tools/png_metadata.py": "addd35028617f2d5c2cd01dc19106cec9946686cfe35139beb923af3973d6994",
+    "scripts/inspect-png-metadata.py": "dd84cec16b2069c525cdfb7efb723f63e8b4643e9a846cf98902f9acd34f60d8",
+    "tests/test_png_metadata.py": "dfb46aec2bec91ad3b2e042aa6a6759c79b3f83f0b18a2041832818e8957bdd1"
+  },
+  "source_stable": true,
+  "python": "3.13.0",
+  "platform": "darwin",
+  "profile": "jpeg-metadata-observation/1.0.0",
+  "actual_cli_controls": [
+    {
+      "case": "private_metadata_JSON",
+      "pass": true,
+      "exit_status": 0,
+      "site_packages_disabled": true,
+      "elapsed_ms": 86,
+      "input_bytes": 227,
+      "raw_values_and_path_absent": true,
+      "state": "OBSERVED",
+      "reason": null,
+      "exact_subject_digest": true
+    },
+    {
+      "case": "empty_restart_segment",
+      "pass": true,
+      "exit_status": 2,
+      "site_packages_disabled": true,
+      "elapsed_ms": 81,
+      "input_bytes": 148,
+      "raw_values_and_path_absent": true,
+      "state": "UNAVAILABLE",
+      "reason": "malformed_structure",
+      "exact_subject_digest": true
+    },
+    {
+      "case": "recovery",
+      "pass": true,
+      "exit_status": 0,
+      "site_packages_disabled": true,
+      "elapsed_ms": 72,
+      "input_bytes": 137,
+      "raw_values_and_path_absent": true,
+      "state": "OBSERVED",
+      "reason": null,
+      "exact_subject_digest": true
+    },
+    {
+      "case": "valid_DNL_deferred_height",
+      "pass": true,
+      "exit_status": 2,
+      "site_packages_disabled": true,
+      "elapsed_ms": 72,
+      "input_bytes": 143,
+      "raw_values_and_path_absent": true,
+      "state": "UNAVAILABLE",
+      "reason": "unsupported_variant",
+      "exact_subject_digest": true
+    },
+    {
+      "case": "malformed_argument_fixed_no_echo",
+      "pass": true,
+      "exit_status": 2
+    },
+    {
+      "case": "unchanged_PNG_actual_CLI_after_JPEG_refusals",
+      "pass": true,
+      "exit_status": 0
+    }
+  ],
+  "focused_execution_accounting": {
+    "first_candidate": {
+      "tests": 10,
+      "passed": 9,
+      "failed": 1,
+      "log_sha256": "66e21918700b034f5b0201c23764fa4691aa5294e672d5a1ad9360a2a59e5ef4",
+      "finding": "Consecutive restart markers without entropy between them were accepted; per-segment count now required."
+    },
+    "affected_restart": {
+      "tests": 1,
+      "pass": true,
+      "log_sha256": "af47aff379d98c784d59908b0a9ab3b79d582ae906d3a5de4f17ed7984993719"
+    },
+    "added_boundaries": {
+      "tests": 2,
+      "pass": true,
+      "log_sha256": "ab4c0af9d5462595d844d1a390779994cc9009cf52b6adf74a3c48d8e9941a94",
+      "cases": [
+        "actual worker argv/timeout/overflow/nonzero/reaped ownership",
+        "bounded no-follow implementation digest"
+      ]
+    },
+    "DNL_original": {
+      "tests": 1,
+      "pass": false,
+      "reason": "Valid deferred-height header was incorrectly called malformed instead of unsupported.",
+      "log_sha256": "e4e059a3022e7e725d54c5e05aee64bf067efe55b5e41a46512980f2857a19fc"
+    },
+    "DNL_corrected": {
+      "tests": 1,
+      "pass": true,
+      "log_sha256": "4c261e3b8517a56b220b13a1b2025de23679a7153aafe432896cb603d485183d"
+    }
+  },
+  "limits": [
+    "Synthetic framing evidence only. No entropy/DCT/pixel decoding; damaged compressed image codes can pass supported framing.",
+    "No metadata values or filename returned; explicit JSON exact-file digest can link copies.",
+    "No AI-origin, authorship/truth/signature/trust/revocation/watermark verification or tag issued.",
+    "No dependency, PNG behavior, API/site/scope/state/deploy changes; no full FA/PA/F155 closure.",
+    "Authored current macOS/CPython execution only; distinct review pending, no current Linux/browser/physical/human or independent accuracy."
+  ],
+  "prior13CLI_receipt_sha256": "4572e729b6c66cf69101791e3ac169baf22b4e123c22f48df4a0eaf9b6bd5701"
+}

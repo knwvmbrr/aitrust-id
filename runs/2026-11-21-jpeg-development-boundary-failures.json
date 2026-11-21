@@ -1,0 +1,26 @@
+{
+  "pass": false,
+  "captured_at": "2026-11-21T22:06:23.936493+00:00",
+  "kind": "jpeg_development_boundary_failures_preserved",
+  "first_focused": {
+    "tests": 10,
+    "passed": 9,
+    "failed": 1,
+    "failure": "Consecutive restart markers with no entropy between them were accepted.",
+    "source_digest_captured": false,
+    "log_sha256": "66e21918700b034f5b0201c23764fa4691aa5294e672d5a1ad9360a2a59e5ef4",
+    "correction": "Require nonempty coded-data segment before every restart and following the last restart; MCU interval and entropy validity remain unverified.",
+    "affected_restart_group_after_fix_pass": true
+  },
+  "deferred_height": {
+    "source_sha256": "3c675a356f3206b9f3ab6d92848fa677e179a766229d9c1ae2fb8be948c02ac1",
+    "failure": "Valid zero-height SOF with later DNL was classified malformed instead of unsupported.",
+    "log_sha256": "e4e059a3022e7e725d54c5e05aee64bf067efe55b5e41a46512980f2857a19fc",
+    "correction": "A deferred-height header now returns unsupported_variant before interpreting scan contents.",
+    "affected_unsupported_group_after_fix_pass": true
+  },
+  "limits": [
+    "Only authored synthetic framing cases; no pixels, user images, origin classifier or tag.",
+    "First13 actual CLI receipt remains at its earlier exact source; current6CLI receipt is separate."
+  ]
+}

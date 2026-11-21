@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-220935-independent-jpeg-metadata-reader-43862c53
+
+Recorded 2026-11-21T22:09:35.578653+00:00 · Contributor: Codex /root/web_camo image evidence engineer · change
+
+- **Changed.** Added a separate bounded offline JPEG metadata observation CLI with fixed private summaries, explicit selected baseline profile, exact byte/result binding and no PNG dependency.
+- **Evidence.** Current six actual standard-library-only CLI controls pass with source and PNG hashes stable; distinct review passes three focused groups and two actual text/JSON commands. Preserved initial empty-restart and deferred-height classification failures and their targeted corrections; no unchanged whole suite repeated. [Change record](./runs/changes/2026-11-21-220935-independent-jpeg-metadata-reader-43862c53.json).
+- **Not claimed.** Framing only: no entropy/pixel decoding, image-validity, color, orientation, watermark, credential, origin, authorship or truth verification; no tags or FA/PA/F-155 closure. Explicit JSON hashes link copies. No main/site/API/dependency/deploy change; development branch push remains held for PM identity review.
+
+
 ### 2026-11-21-203337-publish-png-development-review-eb855388
 
 Recorded 2026-11-21T20:33:37.628171+00:00 · Contributor: Codex /root/web_camo image evidence engineer · change
