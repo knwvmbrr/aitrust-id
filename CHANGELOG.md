@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-063412-android-configuration-only-draft-handoff-a73fe2c2
+
+Recorded 2026-11-21T06:34:12.437519+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve a current review draft only through one-use framework configuration handoff while clearing actual-leave state and keeping consumed intents.
+- **Evidence.** Positive prior failure trace identifies configuration recreation; 73 focused controls pass, including 19 modeled lifecycle interleavings executed against production method bodies. Distinct review cleared ownership and separate default-APK recreation/HOME controls; original seven are unchanged. [Change record](./runs/changes/2026-11-21-063412-android-configuration-only-draft-handoff-a73fe2c2.json).
+- **Not claimed.** Actual current default APK build/runtime and forced configuration/HOME acceptance remain pending. No Bundle/disk/static/Intent text persistence, old result/engine transfer, OS-held intent erasure, physical/human acceptance or full original closure is claimed.
+
+
 ### 2026-11-21-054724-android-probe-defer-precreate-ui-read-51d9850c
 
 Recorded 2026-11-21T05:47:24.831548+00:00 · Contributor: Codex · change

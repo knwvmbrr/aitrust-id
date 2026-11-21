@@ -458,11 +458,12 @@ def verify_share_controls(send,shell,wait,click,report,cases,first_failure_metad
         raise AndroidControlRefusal(report['control_stage']) from None
 
 
-def verify_background_clear(send,shell,wait,report):
+def verify_background_clear(send,shell,wait,report,before_home=None):
     """Run the original seventh control, retaining only fixed failure boundaries.
 
-    No new intent, command, delay, retry or success path is introduced. UI flags
-    describe the already observed foreground hierarchy, not lifecycle completion.
+    With no hook, the original commands/waits/predicates are unchanged. Only the
+    separate configuration exercise supplies a before-HOME rotation hook, with
+    no wait afterward. UI flags are observations, not lifecycle completion.
     """
     def text(view,value):return any(value in n.attrib.get('text','') for n in view.iter('node'))
     def cleared(view):
@@ -478,6 +479,7 @@ def verify_background_clear(send,shell,wait,report):
         report['control_stage']='background_receive'
         send('synthetic private marker');wait(lambda x:text(x,'Text received. Review it'))
         report['control_stage']='background_home'
+        if before_home is not None:before_home()
         shell(['input','keyevent','KEYCODE_HOME'])
         # Preserve the same task refocus, without a fresh Share/launcher intent
         # that could wipe the editor and mask broken onStop behavior.
@@ -498,13 +500,77 @@ def verify_background_clear(send,shell,wait,report):
         raise AndroidControlRefusal(report['control_stage']) from None
 
 
+class AndroidConfigurationRefusal(ValueError):
+    STAGES=('configuration_default_variant','configuration_portrait','configuration_receive',
+            'configuration_edit','configuration_rotate','configuration_restore',
+            'configuration_home','configuration_final_rotation')
+    def __init__(self,stage):
+        if stage not in self.STAGES:raise ValueError('Invalid configuration control')
+        self.code=stage+'_unavailable';super().__init__(self.code)
+
+
+def verify_configuration_controls(send,shell,wait,click,report):
+    """Supplemental default-APK checks; never replace the original seven.
+
+    Every text value read below must be the declared synthetic marker with one
+    inserted X. Retain booleans only, not editor values, hashes or hierarchy data.
+    """
+    def text(view,value):return any(value in n.attrib.get('text','') for n in view.iter('node'))
+    def editor(view):
+        nodes=[n for n in view.iter('node') if n.attrib.get('resource-id')==PACKAGE+':id/editor']
+        if len(nodes)!=1:raise ValueError('Owned synthetic editor unavailable')
+        return nodes[0].attrib.get('text','')
+    cases=[];report.update(status='RUNNING',**{'pass':False},cases=cases)
+    try:
+        report['control_stage']='configuration_portrait'
+        shell(['wm','user-rotation','lock','0'])
+        wait(lambda x:x.attrib.get('rotation')=='0')
+        report['control_stage']='configuration_receive'
+        marker='owned configuration draft'
+        send(marker);view=wait(lambda x:text(x,'Text received. Review it'))
+        assert editor(view)==marker
+        report['control_stage']='configuration_edit'
+        click(view,'editor');shell(['input','text','X'])
+        def edited(view):
+            value=editor(view)
+            return value.count('X')==1 and value.replace('X','')==marker
+        view=wait(edited);expected=editor(view)
+        report['control_stage']='configuration_rotate'
+        shell(['wm','user-rotation','lock','1'])
+        view=wait(lambda x:x.attrib.get('rotation')=='1' and text(x,'Text received. Review it'))
+        report['control_stage']='configuration_restore'
+        assert editor(view)==expected
+        assert not any(n.attrib.get('resource-id')==PACKAGE+':id/tag' for n in view.iter('node'))
+        cases.append({'case':'configuration_preserves_current_edited_review_without_result','pass':True})
+        report['control_stage']='configuration_home'
+        background={};report['background']=background
+        # No wait between forced configuration and HOME, and no new launcher or
+        # Share intent is substituted for the existing immediate task refocus.
+        verify_background_clear(send,shell,wait,background,
+            before_home=lambda:shell(['wm','user-rotation','lock','0']))
+        report['control_stage']='configuration_final_rotation'
+        def rotated_without_revival(view):
+            assert not text(view,'synthetic private marker')
+            return view.attrib.get('rotation')=='0'
+        view=wait(rotated_without_revival)
+        assert any(n.attrib.get('resource-id')==PACKAGE+':id/editor' for n in view.iter('node'))
+        assert text(view,'Ready when you are.') or text(view,'Cleared. Your text and result')
+        cases.append({'case':'configuration_immediate_home_refocus_does_not_revive_text','pass':True})
+        report.update(status='EXECUTED',**{'pass':True},case_count=len(cases))
+    except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,ET.ParseError,subprocess.SubprocessError):
+        report.update(status='FAILED',case_count=len(cases))
+        raise AndroidConfigurationRefusal(report['control_stage']) from None
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--sdk-root',required=True);parser.add_argument('--apk',required=True)
     parser.add_argument('--intake-probe',action='store_true',help='Read finite provenance from the separately built diagnostic APK.')
+    parser.add_argument('--configuration-controls',action='store_true',help='Run separate forced-configuration privacy checks on the default APK.')
     args=parser.parse_args();output=ROOT/'output/android-share/emulator.json';cases=[];process=None;started=time.monotonic();avd_home=None
     report={'format':'ai-trust-id-android-emulator/v1','recorded_at':dt.datetime.now(dt.timezone.utc).isoformat(),'status':'UNAVAILABLE','pass':False,'physical_device_evidence':False,'independent_accuracy_evidence':False,'cases':cases}
     try:
+        if args.configuration_controls and args.intake_probe:raise AndroidConfigurationRefusal('configuration_default_variant')
         sdk=Path(args.sdk_root).resolve(strict=True)
         prepared=prepare_emulator(sdk,report)
         if prepared is None:return 0
@@ -569,6 +635,11 @@ def main():
             (lambda:collect_intake_probe(shell)) if args.intake_probe else None)
         verify_background_clear(send,shell,wait,report)
         cases.append({'case':'background_clears_text','pass':True})
+        report['case_count']=len(cases)
+        if args.configuration_controls:
+            report['phase']='configuration_controls'
+            report['configuration_controls']={}
+            verify_configuration_controls(send,shell,wait,click,report['configuration_controls'])
         permission_occurrences=shell(['dumpsys','package',PACKAGE]).decode().count('android.permission.INTERNET')
         if permission_occurrences:raise ValueError('Unexpected Android Internet permission')
         report.update(status='EXECUTED',phase='complete',**{'pass':True},api_level=shell(['getprop','ro.build.version.sdk']).decode().strip(),case_count=len(cases),internet_permission=False)
@@ -577,6 +648,8 @@ def main():
         report.update(status='FAILED',reason='Reviewed official SDK metadata was refused.',diagnostic_code=error.code);return 1
     except AndroidControlRefusal as error:
         report.update(status='FAILED',reason='An owned Android Share control did not complete.',diagnostic_code=error.code);return 1
+    except AndroidConfigurationRefusal as error:
+        report.update(status='FAILED',reason='An owned default-APK configuration control did not complete.',diagnostic_code=error.code);return 1
     except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,ET.ParseError,subprocess.SubprocessError):
         report.update(status='FAILED',reason='A required owned-emulator share, lifecycle or offline check did not complete.');return 1
     finally:

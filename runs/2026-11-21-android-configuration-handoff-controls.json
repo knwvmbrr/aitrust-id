@@ -1,0 +1,87 @@
+{
+  "format": "ai-trust-id-android-configuration-handoff-controls/v1",
+  "recorded_at": "2026-11-21T06:34:12.393883+00:00",
+  "pass": true,
+  "base_commit": "78c634ba425e7ee1b4c2df3e97219cf0fef8cd33",
+  "source_failure_evidence": {
+    "path": "runs/2026-11-21-android-intake-three-hosted-result.json",
+    "sha256": "7186595c0d54315251916a4507a2b58ad57a3769506debfda3b730a9269b9c83",
+    "this_diagnostic_configuration_recreation_proven": true,
+    "earlier_untraced_failures_not_individually_explained": true
+  },
+  "focused_tests": {
+    "tests": 73,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "existing_packaging_prerequisite_controls": 56,
+    "probe_and_method_body_controls": 12,
+    "supplemental_driver_fault_groups": 5
+  },
+  "actual_local_jvm": {
+    "runtime": "OpenJDK21.0.10 Homebrew",
+    "production_method_bodies_executed": true,
+    "modeled_framework_lifecycle_controls": 19,
+    "diagnostic_probe_modes": 5,
+    "old_precreate_lookup_negative_control_rejected": true,
+    "java_process_executions": 7,
+    "full_android_ui_or_framework_executed": false,
+    "edited_text_model_uses_canonical_session_and_setText_not_real_keyboard_dispatch": true
+  },
+  "distinct_review": {
+    "reviewer": "/root/web_camo",
+    "result": "CLEAR for one default-APK candidate",
+    "supplemental_fault_groups_independently_replayed": 5,
+    "original_six_source_compared_unchanged": true,
+    "original_seventh_unchanged_when_optional_hook_none": true,
+    "sdk_emulator_browser_by_reviewer": false
+  },
+  "candidate_boundaries": {
+    "one_use_instance_text_only_holder": true,
+    "incoming_restore_eligibility_snapshotted_before_receive": true,
+    "only_nonnull_main_restores": true,
+    "fresh_send_unsupported_unknown_null_clear_wins": true,
+    "pause_stop_still_clear_old_session_ui_result_and_renderer": true,
+    "user_leave_hint_revokes_pending_or_unconsumed_transfer": true,
+    "old_destroy_cannot_erase_transferred_successor_session": true,
+    "caller_intent_stays_consumed_main": true,
+    "bundle_disk_static_or_intent_text_persistence_added": false,
+    "result_ticket_or_engine_handoff": false,
+    "blanket_config_changes_or_delivery_delay_added": false,
+    "os_held_original_caller_intent_erasure_claim": false
+  },
+  "workflow": {
+    "yaml_and_bash_syntax_passed": true,
+    "same_runner_deadlines_action_pins_permissions_sdk_license_rules": true,
+    "optional_manual_false_default_configuration_controls": true,
+    "default_apk_required_for_configuration_controls": true,
+    "original_seven_preserved": true,
+    "separate_supplemental_cases": [
+      "configuration_preserves_current_edited_review_without_result",
+      "configuration_immediate_home_refocus_does_not_revive_text"
+    ],
+    "no_wait_between_forced_configuration_and_home": true,
+    "late_marker_observation_fails_immediately": true
+  },
+  "sources": {
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "33024ad9fc922df115569255cc7cd8d4e80ce76b06f10507f915dc1bc4e814e9",
+    "mobile/android/src/com/aitrustid/android/ConfigurationDraft.java": "5fb22a21a6c8ad36b4535e39955ecff4a6baede2e42c43c9648b8149dd52211a",
+    "scripts/verify-android-emulator.py": "c2c235059372332db78662e45d680883afc9127064c3356ef60ede866cee8da7",
+    "scripts/android-share-build.py": "8cb6ed20056bbf9d7f69dfb2fb19eaf9c5025eeb44ef8ea3f7d52576ffa1184e",
+    "tests/test_android_intake_probe.py": "3ceccd81d04d864256a0f57ee6a35cf43529732bc111762356712be1afd16f9f",
+    "tests/android/ConfigurationLifecycleHarness.java": "3e5a6380c5b2b5d5c398a1f4ecacc6bd710c8e2f253f0c4eb3af42de273de707",
+    "tests/android/CheckActivity.java": "76e847187c37bf216aaaffb7da71d7b663ffe1cba5c64c17eb4cf7f098d513e7",
+    "tests/test_android_configuration_controls.py": "51b0dd85c7a5c737e7088c84ca4cf449fd22bb5129b02bcbabf635d2ce98d798",
+    "tests/test_android_share.py": "d30aa8ead3c9d09700251c6258ca9c193b5142ab2954bd1a652d1285c0bec2d9",
+    "tests/test_android_emulator_prerequisites.py": "1f8187bf906fd0391cc63180fc03b1e37d91414273138b11b14429d2a43ad07d",
+    ".github/workflows/android-share.yml": "a87b2916e4646c7b8ce8776133b3fb99d32bbdb6c92d6ff8ef4708ea25fff989",
+    "docs/android-configuration-handoff-plan.md": "ddb61f7c24a9f66bb6d089070e08b502fe9482055294418763795e70b4d0d4f0",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+  },
+  "actual_current_default_apk_compiled_or_run": false,
+  "actual_current_default_apk_and_forced_configuration_pending": true,
+  "physical_device_evidence": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false
+}

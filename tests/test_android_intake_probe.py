@@ -161,7 +161,7 @@ class ActualProductionMethodJVM(unittest.TestCase):
             if javac and os.uname().sysname!='Darwin':cls.home=Path(javac).resolve().parents[1]
         if cls.home is None:raise unittest.SkipTest('Existing actual JDK required; no toolchain downloaded')
 
-    def test_actual_receive_body_and_aosp_custom_intent_handoff_reproduce_ready_without_runtime_claim(self):
+    def test_actual_methods_transfer_config_draft_and_preserve_real_leave_clearing_without_runtime_claim(self):
         source=(ROOT/'mobile/android/src/com/aitrustid/android/CheckActivity.java').read_text()
         receive=extracted_method(source,'    private void receive(Intent intent){','    @Override protected void onNewIntent')
         new_intent=extracted_method(source,'    @Override protected void onNewIntent','    private void setText(String value){')
@@ -176,15 +176,23 @@ class IntakeActivityBase extends Activity {
  private TextView status=new TextView(),tag=new TextView(),details=new TextView();
  private Button check=new Button(),cancel=new Button(),more=new Button();
  private Engine engine; private boolean settingText=false,detailsOpen=false;private String evidence="";
+ private boolean viewsReady=false,userLeaving=false;
+ private ConfigurationDraft pendingDraft,transferredDraft;
  private boolean fixtureCreated=false;
  static class Engine {void stop(){}}
- public void onCreate(android.os.Bundle saved){super.onCreate(null);fixtureCreated=true;receive(getIntent());}
+ public void onCreate(android.os.Bundle saved){super.onCreate(null);fixtureCreated=true;viewsReady=true;receiveOrRestore(getIntent(),getLastNonConfigurationInstance());}
+ public void editForTest(String text){session.replace(text);setText(text);}
+ public void clearForTest(){wipe();}
+ public long beginForTest(){return session.begin();}
+ public boolean finishForTest(long ticket){return session.finish(ticket,ShareSession.State.FINDING);}
  @SuppressWarnings("unchecked") public <T extends View> T findViewById(int id){if(!fixtureCreated)throw new AssertionError("Premature diagnostic UI read");return (T)(id==R.id.editor?editor:status);}
 '''+receive+new_intent+methods+lifecycle+'}\n'
         files={
             'com/aitrustid/android/IntakeActivityBase.java':base,
             'com/aitrustid/android/CheckActivity.java':(ROOT/'tests/android/CheckActivity.java').read_text(),
             'com/aitrustid/android/ShareSession.java':(ROOT/'mobile/android/src/com/aitrustid/android/ShareSession.java').read_text(),
+            'com/aitrustid/android/ConfigurationDraft.java':(ROOT/'mobile/android/src/com/aitrustid/android/ConfigurationDraft.java').read_text(),
+            'com/aitrustid/android/ConfigurationLifecycleHarness.java':(ROOT/'tests/android/ConfigurationLifecycleHarness.java').read_text(),
             'com/aitrustid/android/R.java':'package com.aitrustid.android; class R {static class id {static final int editor=1,status=2;}}',
             'android/os/Bundle.java':'package android.os; public class Bundle {}',
             'android/content/ClipData.java':'package android.content; public class ClipData {public int getItemCount(){return 1;} public Item getItemAt(int n){return new Item();} public static class Item {public Object getUri(){return null;}}}',
@@ -202,10 +210,12 @@ class IntakeActivityBase extends Activity {
             'android/widget/Button.java':'package android.widget; public class Button extends TextView {}',
             'android/view/inputmethod/InputMethodManager.java':'package android.view.inputmethod; public class InputMethodManager {public void hideSoftInputFromWindow(Object token,int flags){}}',
             'android/app/Activity.java':'''package android.app; public class Activity {
- public static final String INPUT_METHOD_SERVICE="input";private android.content.Intent intent;public boolean changing=false;
+ public static final String INPUT_METHOD_SERVICE="input";private android.content.Intent intent;public boolean changing=false,finishing=false;public Object lastNonConfig;
  public android.content.Intent getIntent(){return intent;} public void setIntent(android.content.Intent value){intent=value;}
  public Object getSystemService(String name){return new android.view.inputmethod.InputMethodManager();}
  public boolean isChangingConfigurations(){return changing;}
+ public boolean isFinishing(){return finishing;}public Object getLastNonConfigurationInstance(){return lastNonConfig;}
+ public Object onRetainNonConfigurationInstance(){return null;}protected void onUserLeaveHint(){}
  public void onCreate(android.os.Bundle b){} protected void onNewIntent(android.content.Intent i){}
  protected void onResume(){}protected void onPause(){}protected void onStop(){}protected void onDestroy(){}
  public <T extends android.view.View> T findViewById(int id){return null;}
@@ -223,10 +233,10 @@ public class IntakeHarness {
   require(((TextView)first.findViewById(R.id.status)).getText().toString().startsWith("Text received."));
   // This handoff is taken from Android16 ActivityThread, not an Android VM run.
   Intent custom=first.getIntent();require(Intent.ACTION_MAIN.equals(custom.getAction()));
-  first.changing=true;first.onPause();first.onStop();first.onDestroy();
-  CheckActivity recreated=new CheckActivity();recreated.setIntent(custom);recreated.onCreate(new android.os.Bundle());recreated.onResume();
-  require("Ready when you are.".contentEquals(((TextView)recreated.findViewById(R.id.status)).getText()));
-  require(((TextView)recreated.findViewById(R.id.editor)).length()==0);
+  first.changing=true;first.onPause();first.onStop();Object retained=first.onRetainNonConfigurationInstance();first.onDestroy();
+  CheckActivity recreated=new CheckActivity();recreated.setIntent(custom);recreated.lastNonConfig=retained;recreated.onCreate(new android.os.Bundle());recreated.onResume();
+  require(((TextView)recreated.findViewById(R.id.status)).getText().toString().startsWith("Text received."));
+  require(((TextView)recreated.findViewById(R.id.editor)).length()>0);
   if(args.length>0&&"overflow".equals(args[0])){for(int i=0;i<50;i++)recreated.onResume();}
   if(args.length>0&&("main".equals(args[0])||"pause".equals(args[0]))){
    recreated.onNewIntent(new Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT,"PRIVATE_SECOND_SYNTHETIC_CANARY"));
@@ -261,9 +271,12 @@ public class IntakeHarness {
                 self.assertIn([1,'CREATE_BEGIN','SEND',False,'UNBUILT',False],observed['events'])
                 self.assertIn([1,'CREATE_END','MAIN',True,'RECEIVED',False],observed['events'])
                 self.assertIn([1,'DESTROY_BEGIN','MAIN',False,'CLEARED',True],observed['events'])
-                self.assertIn([2,'CREATE_END','MAIN',False,'READY',False],observed['events'])
+                self.assertIn([2,'CREATE_END','MAIN',True,'RECEIVED',False],observed['events'])
                 if extra==['main']:self.assertEqual(observed['events'][-1],[2,'NEW_INTENT_END','MAIN',False,'READY',False])
                 if extra==['pause']:self.assertEqual(observed['events'][-1],[2,'RESUME_END','MAIN',False,'CLEARED',False])
+            result=subprocess.run([str(self.home/'bin/java'),'-ea','-cp',str(home/'classes'),'com.aitrustid.android.ConfigurationLifecycleHarness'],capture_output=True,timeout=10)
+            self.assertEqual(result.returncode,0,result.stderr.decode())
+            self.assertEqual(json.loads(result.stdout),{'pass':True,'modeled_lifecycle_controls':19,'android_runtime':False})
             # Reintroduce exactly the old pre-create UI read. The actual wrapper
             # must fail the spy before it can process any supplied text.
             wrapper=home/'com/aitrustid/android/CheckActivity.java'

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-063412-android-configuration-only-draft-handoff-a73fe2c2",
+  "recorded_at": "2026-11-21T06:34:12.437519+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "78c634ba425e7ee1b4c2df3e97219cf0fef8cd33",
+  "changed": "Preserve a current review draft only through one-use framework configuration handoff while clearing actual-leave state and keeping consumed intents.",
+  "proves": "Positive prior failure trace identifies configuration recreation; 73 focused controls pass, including 19 modeled lifecycle interleavings executed against production method bodies. Distinct review cleared ownership and separate default-APK recreation/HOME controls; original seven are unchanged.",
+  "limits": "Actual current default APK build/runtime and forced configuration/HOME acceptance remain pending. No Bundle/disk/static/Intent text persistence, old result/engine transfer, OS-held intent erasure, physical/human acceptance or full original closure is claimed.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "33024ad9fc922df115569255cc7cd8d4e80ce76b06f10507f915dc1bc4e814e9",
+    "mobile/android/src/com/aitrustid/android/ConfigurationDraft.java": "5fb22a21a6c8ad36b4535e39955ecff4a6baede2e42c43c9648b8149dd52211a",
+    "scripts/verify-android-emulator.py": "c2c235059372332db78662e45d680883afc9127064c3356ef60ede866cee8da7",
+    "tests/test_android_intake_probe.py": "3ceccd81d04d864256a0f57ee6a35cf43529732bc111762356712be1afd16f9f",
+    "tests/android/ConfigurationLifecycleHarness.java": "3e5a6380c5b2b5d5c398a1f4ecacc6bd710c8e2f253f0c4eb3af42de273de707",
+    "tests/test_android_configuration_controls.py": "51b0dd85c7a5c737e7088c84ca4cf449fd22bb5129b02bcbabf635d2ce98d798",
+    "tests/test_android_share.py": "d30aa8ead3c9d09700251c6258ca9c193b5142ab2954bd1a652d1285c0bec2d9",
+    ".github/workflows/android-share.yml": "a87b2916e4646c7b8ce8776133b3fb99d32bbdb6c92d6ff8ef4708ea25fff989",
+    "docs/android-configuration-handoff-plan.md": "ddb61f7c24a9f66bb6d089070e08b502fe9482055294418763795e70b4d0d4f0",
+    "runs/2026-11-21-android-configuration-handoff-controls.json": "a0a1de33db9fad0b24f9ea99ad020064f8f406e7b8e5e029e252d0914272e3e6",
+    "runs/2026-11-21-android-intake-three-hosted-result.json": "7186595c0d54315251916a4507a2b58ad57a3769506debfda3b730a9269b9c83"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-configuration-handoff-controls.json",
+      "sha256": "a0a1de33db9fad0b24f9ea99ad020064f8f406e7b8e5e029e252d0914272e3e6"
+    },
+    {
+      "path": "runs/2026-11-21-android-intake-three-hosted-result.json",
+      "sha256": "7186595c0d54315251916a4507a2b58ad57a3769506debfda3b730a9269b9c83"
+    }
+  ],
+  "checks": []
+}

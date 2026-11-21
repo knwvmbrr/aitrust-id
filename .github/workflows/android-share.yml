@@ -7,6 +7,11 @@ on:
         type: boolean
         required: true
         default: false
+      configuration_controls:
+        description: 'Exercise forced configuration and immediate HOME on the default APK'
+        type: boolean
+        required: true
+        default: false
   push:
     branches: [main]
     tags: ['**']
@@ -63,6 +68,7 @@ jobs:
     timeout-minutes: 15
     env:
       AITRUST_INTAKE_PROBE: ${{ github.event_name == 'workflow_dispatch' && inputs.intake_probe && '1' || '0' }}
+      AITRUST_CONFIGURATION_CONTROLS: ${{ github.event_name == 'workflow_dispatch' && inputs.configuration_controls && '1' || '0' }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with: {persist-credentials: false}
@@ -82,6 +88,7 @@ jobs:
           python3 -B -m unittest discover -s tests -p test_android_share.py -v
           python3 -B -m unittest discover -s tests -p test_android_emulator_prerequisites.py -v
           python3 -B -m unittest discover -s tests -p test_android_intake_probe.py -v
+          python3 -B -m unittest discover -s tests -p test_android_configuration_controls.py -v
           python3 -B scripts/verify-android-session.py --java-home "$JAVA_HOME_17_X64"
       - name: Prepare exact offline PS assets and build an unsigned APK
         shell: bash
@@ -111,6 +118,7 @@ jobs:
           fi
           probe_args=()
           if test "$AITRUST_INTAKE_PROBE" = 1; then probe_args+=(--intake-probe); fi
+          if test "$AITRUST_CONFIGURATION_CONTROLS" = 1; then probe_args+=(--configuration-controls); fi
           python3 -B scripts/verify-android-emulator.py --sdk-root "$ANDROID_SDK_ROOT" --apk output/android-share/ai-trust-id-ci-test.apk "${probe_args[@]}"
       - name: Preserve engineering evidence and the development APK
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

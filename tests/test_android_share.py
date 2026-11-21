@@ -86,6 +86,7 @@ class AndroidShare(unittest.TestCase):
         for callback in ['onPause','onStop']:
             body=re.search(r'@Override\s+protected\s+void\s+'+callback+r'\(\)\s*\{([^{}]*)\}',source)
             self.assertIsNotNone(body,'Required lifecycle wipe callback absent')
-            self.assertRegex(body.group(1),r'^\s*wipe\(\);\s*super\.'+callback+r'\(\);\s*$')
+            self.assertEqual(body.group(1).count('wipe();'),1)
+            self.assertLess(body.group(1).index('wipe();'),body.group(1).index('super.'+callback+'();'))
 
 if __name__=='__main__':unittest.main()
