@@ -1,0 +1,204 @@
+{
+  "profile": "finite-maintenance-source-inventory-peer-review/v1",
+  "captured_at": "2026-11-21T11:37:51.153320+00:00",
+  "pass": true,
+  "reviewed_by": "Codex /root/seo",
+  "candidate_sha256": "5c9fb23cc3dbe843749f36e240fabd5607d54a3c9aafccf037c7ef337daaa062",
+  "base_commit": "3941603265c763de07d9f7d91e465e0832db39d1",
+  "source_count_before": 1467,
+  "source_count_current": 1486,
+  "actual_double_capture_matches_candidate": true,
+  "added": {
+    "docs/android-os-chooser-plan.md": "d8e4cc2bbdb3b4cbb0f52c8ccb19a4a7aba2b8a5e7f44cfd9981bb5bb4c0bbf3",
+    "docs/zlib-source-delivery-plan.md": "52cf32bae7b153d563ea03f9c7d84a078109a14d72297de4b04ca69590caccde",
+    "docs/zlib-source-delivery.md": "1c2a4ced22273a62335b87b7f92e368d586b18cc4f5681e3fd08ae0eb0253021",
+    "sbom/reviews/zlib-runtime/manifest.json": "baf610ed2d6db1123e1e091cac13814e2f80cb08620924596d1b939c351f2709",
+    "sbom/reviews/zlib-runtime/sources/17e88863f3600672ab49182f217281b6fc4d3c762bde361935e436a95214d05c.tar.gz": "17e88863f3600672ab49182f217281b6fc4d3c762bde361935e436a95214d05c",
+    "sbom/reviews/zlib-runtime/sources/3fdaedb6b2d1bb6d88754183f94f7af33c17eb3fea084bb12bde3f6321a54089.json": "3fdaedb6b2d1bb6d88754183f94f7af33c17eb3fea084bb12bde3f6321a54089",
+    "sbom/reviews/zlib-runtime/sources/620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86.txt": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+    "sbom/reviews/zlib-runtime/sources/845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243.txt": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243",
+    "sbom/reviews/zlib-runtime/sources/8a5579af72ea4f427ff00a4150f0ccb3fc5c1e4379f726e101133b1ab9fc600c.h": "8a5579af72ea4f427ff00a4150f0ccb3fc5c1e4379f726e101133b1ab9fc600c",
+    "sbom/reviews/zlib-runtime/sources/d3d8ca9a7caac82fa68e4984e47c03386093b8fa2b068e8e9eccedd3aa406926.py": "d3d8ca9a7caac82fa68e4984e47c03386093b8fa2b068e8e9eccedd3aa406926",
+    "sbom/reviews/zlib-runtime/sources/fbab901f75feb30106921191b00a52ed14fb439e49ad0e42bc7b329438c34d24.txt": "fbab901f75feb30106921191b00a52ed14fb439e49ad0e42bc7b329438c34d24",
+    "scripts/android-chooser-controls.py": "3bb0d3cb2117dca46554b49badecee240733466aeb9185a608c8a4a27ac86b34",
+    "scripts/mt-input-site-controls.cjs": "32a9ac118651d0379b70bfec0240e4fbb4bb8ae5cb7fe7cb3a2786bef01f5dd6",
+    "scripts/verify-mt-input.cjs": "62705d3d0d42efd625b107c5469e00d1afd82fa87dea0fc016cec38042588e39",
+    "scripts/zlib-source-delivery.py": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe",
+    "tests/android/intent-sender/ChooserActivity.java": "49029c0cf2f6ca951dfdf4291c84502a008502aa2fd01220cb0c591faa725719",
+    "tests/test_android_chooser_controls.py": "a26559c5807a0bf07535d804f7c64c1a1bb070afec79f4147789b6b5214bcaf9",
+    "tests/test_zlib_source_delivery.py": "ed2d604bbc7dfbacebb125b6eb79c6a0946f25c3d38b39cf7baaf4148ac03ed9",
+    "tools/zlib_source_delivery.py": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a"
+  },
+  "modified": {
+    ".gitattributes": {
+      "before": "903cb245fa685b1382e8b83a5bdc4e6367360e6c9ff5c565a6db284b30d2b470",
+      "after": "cdbe23a109ae233622b87643e06d5a26bfefce3436bcb5af2faa9e3bac458276"
+    },
+    ".github/workflows/android-share.yml": {
+      "before": "1ccc56d0e5b898319deb5188b4188488618e68fdec525d9a290cf3ef0074fab6",
+      "after": "47c12e06829a5f13b27a84a7cc72546124a6a9259ca996a4dc8a02560aa2412b"
+    },
+    ".github/workflows/ci.yml": {
+      "before": "375b76ebb0fe92e30f5f4ce6dda67b0560e4761d902bc454c9d8e6e884a922af",
+      "after": "630905a7229e9f2d000eb7571e4dfa1098fba90d97f73620ab5954668f9df226"
+    },
+    "docs/android-share-developer.md": {
+      "before": "05e4b51f074ec5085bda66e40e01f48a9899bd56ca9d40e4d79e889a2efdad69",
+      "after": "9aa6fde42dd61079c49c568c367cfef80095110bfa36f735a694e2c31b476ac1"
+    },
+    "eval/revalidation.json": {
+      "before": "6dc0b2c191208be3088e4e845bda05d3bdb54c270ceb88e20255850fe72c3db9",
+      "after": "266e60ec511a839e5d85f01f0d2b9c14b2ffa0e7bb4161613d9866dbb1c21fb0"
+    },
+    "sbom/reviews/pyodide-js/manifest.json": {
+      "before": "412dddb423851c9d60fff587679e883c36e89f76c92a932e369feace2b1c61ca",
+      "after": "24263f38d4ada9e82533048d7aead0cb543a3f0f4cbd8bfd69316aefd53c57b6"
+    },
+    "scripts/android-intent-controls.py": {
+      "before": "30dfa5104578d584515f816387ff284766ec859ed20cc538027f1c453721b370",
+      "after": "fe810635f94ccc9dda90063c73cca99724698d734794be34c4d39c75803dd69a"
+    },
+    "scripts/verify-android-emulator.py": {
+      "before": "3460a2d0c3cc3ca69838d41dab9d28f296f280fd97027249a1124476fff8250b",
+      "after": "825c703e20ec3401d29c779294138e337d80b9d19ec920ef8ebf4d4d4c573e43"
+    },
+    "scripts/verify-mt-mobile-site.cjs": {
+      "before": "f265bf6f2a102f52583549af9761d5b360b190d7650f1fbd51e88fbec9139918",
+      "after": "661cd467bdcc14657a9935359fc97c4f3ab2e734e5244341f74638c6cc4608e7"
+    },
+    "scripts/verify-route-boundaries.py": {
+      "before": "a859c44b622749b440033a0837938fe48047a02afd5f30eb5b3f5cba6d3889fa",
+      "after": "7302104b6e924df76a6df468f8eb1a6b43b9219f27c73647786e9bf87323711d"
+    },
+    "site/index.html": {
+      "before": "33de664ca863903b39be5b1ebaec7a7d799c261f5198aafa13049ea8e7af0120",
+      "after": "11e729444de44d2d1b71ba5ea3de3bfec3c2372872965eddd3771854540ffe4a"
+    },
+    "site/package.json": {
+      "before": "e96338699327cb404b3a9e708448f102f1c64d6fcbdb7f9e2d966ff66f4f07bb",
+      "after": "8b1962dba1b731bab560511a526e35384c9f1a83b94d4ad1f337ae33247644ee"
+    },
+    "site/public/web-licenses/packages.json": {
+      "before": "6b2aa1edc95e860e42f722975fdbef68b2509c51bd5b3ac587ffc76cfce3b02a",
+      "after": "c79cdb3784f0726b1b202650fdf311d68262b80610e4fc891495842b6f7ebf28"
+    },
+    "site/public/web-licenses/web-runtime.spdx.json": {
+      "before": "a881cbc54c44471f42f43639bb3fbba7fb4712b02b552c328efef8456a41c337",
+      "after": "5fee9fc50c2d3c519ac4c5d5252aa9adf2dba1fa390274e2cbcf7d82ddf4d1a6"
+    },
+    "site/scripts/prepare-device.mjs": {
+      "before": "0e932c26b59fac4d3cb43288a2ca29f33a3e281c0a2559697ff8befb3a683ff5",
+      "after": "2a20a63f3ac341eb7375c85f4a547c733fc3a3837ced00b11f87e59fefba0450"
+    },
+    "site/scripts/prepare.mjs": {
+      "before": "f486c8ac26d89308cadb3cf5da6d11a04b9feb7e506a46286821441a3c440c2f",
+      "after": "9de9996e5efc9329f1dd03ff51b12e43b4181484ef22ad53348a737550070d5b"
+    },
+    "site/src/MTExplorer.jsx": {
+      "before": "5ca26cbac4e55cfe870aa5d1190f530d8e8fc4ea1934f47cb9af41420bd0e54e",
+      "after": "3ef945ff120e977cb9860bc3a15136df8d3b1db200df58bc128de5b468855032"
+    },
+    "site/src/public-scope.json": {
+      "before": "da37a7d776adcda73416aa3a09d44c475e486561baf9e450526ea804a028242a",
+      "after": "dc19ef46baf757cbbb520a6d0350bff75cda234736888b6213c20dfbe9b07fee"
+    },
+    "site/src/scope-manifest.json": {
+      "before": "a6adf776818199cebab2ca7e8f87e62ebce5dc26f38e11a3e7c3c84abc4928cb",
+      "after": "9445c97dff04cda8685885fd7b0be03a994f5f152aa6293bd70a299495b680b2"
+    },
+    "site/src/workflows/About.jsx": {
+      "before": "03e737552efa1cc16c7be8214ceedb4b5c0ddfa4289494cfd45152badbc56538",
+      "after": "77c6f96b2407c93df43c0678c8253170a5d02fd58c1245885d3f945a157c0c27"
+    },
+    "tests/android/intent-sender/AndroidManifest.xml": {
+      "before": "e4451b9f502ab31b8e13a8686f565c3a883df51ad95c87cae463ea9f5435cc47",
+      "after": "db418118d0a69ca8fa983b48644ed7d1f1947451168545e37883299ce840555b"
+    },
+    "tests/mt-device-client.mjs": {
+      "before": "cfdb6b30505275d80af722933745196f3dc90f4513659cb1d78f720a39dc34c7",
+      "after": "86767ebc3b1050c498ac1b0424228fca73e73c51dd4b0fd4f5f6909f0d97336d"
+    },
+    "tests/test_android_intent_controls.py": {
+      "before": "207faad8e6e6df40bc85f3ff9231be72b6ecfff7d4651e066d048f1164732258",
+      "after": "fe0ef4c4572629cd15ef9e4514e398b8548c9176786453796b5b42f8e1718a26"
+    },
+    "tests/test_pyodide_js_sources.py": {
+      "before": "609ad2f8f709662767af677055f01333863dd78c95dcbf341154d6400202deb8",
+      "after": "b95b97ba570ac9654008bad377df0de189cbf3503502840da5951171c476764a"
+    },
+    "tools/pyodide_js_sources.py": {
+      "before": "e6702ea1949a46ccae76d1dbefaf5c5d76003a7b4f651d08d20b18ef64af2e00",
+      "after": "5f964360f591fcfbe4fabe24a214d4430dc639c38e608818f8e5fe870c546e4e"
+    }
+  },
+  "removed": [],
+  "all_current_inventory_paths_tracked": true,
+  "source_coverage_checked": {
+    "scripts/mt-input-site-controls.cjs": "32a9ac118651d0379b70bfec0240e4fbb4bb8ae5cb7fe7cb3a2786bef01f5dd6",
+    "scripts/verify-mt-input.cjs": "62705d3d0d42efd625b107c5469e00d1afd82fa87dea0fc016cec38042588e39",
+    "tools/zlib_source_delivery.py": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a",
+    "scripts/zlib-source-delivery.py": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe",
+    "tests/test_zlib_source_delivery.py": "ed2d604bbc7dfbacebb125b6eb79c6a0946f25c3d38b39cf7baaf4148ac03ed9",
+    "sbom/reviews/zlib-runtime/manifest.json": "baf610ed2d6db1123e1e091cac13814e2f80cb08620924596d1b939c351f2709",
+    "scripts/android-chooser-controls.py": "3bb0d3cb2117dca46554b49badecee240733466aeb9185a608c8a4a27ac86b34",
+    "tests/test_android_chooser_controls.py": "a26559c5807a0bf07535d804f7c64c1a1bb070afec79f4147789b6b5214bcaf9",
+    "tests/android/intent-sender/ChooserActivity.java": "49029c0cf2f6ca951dfdf4291c84502a008502aa2fd01220cb0c591faa725719",
+    "tests/android/intent-sender/AndroidManifest.xml": "db418118d0a69ca8fa983b48644ed7d1f1947451168545e37883299ce840555b"
+  },
+  "all_seven_zlib_retained_source_inputs_covered": true,
+  "branch_only_diagnostic_workflow_absent": true,
+  "commands": {
+    "PS": {
+      "before": 7,
+      "after": 7,
+      "all_previous_commands_and_argv_order_retained": true,
+      "all_previous_source_patterns_retained": true
+    },
+    "PII_REDACTED": {
+      "before": 6,
+      "after": 6,
+      "all_previous_commands_and_argv_order_retained": true,
+      "all_previous_source_patterns_retained": true
+    },
+    "protocol": {
+      "before": 60,
+      "after": 61,
+      "all_previous_commands_and_argv_order_retained": true,
+      "all_previous_source_patterns_retained": true
+    },
+    "extension": {
+      "before": 14,
+      "after": 14,
+      "all_previous_commands_and_argv_order_retained": true,
+      "all_previous_source_patterns_retained": true
+    },
+    "website": {
+      "before": 59,
+      "after": 59,
+      "all_previous_commands_and_argv_order_retained": true,
+      "all_previous_source_patterns_retained": true
+    }
+  },
+  "integration_read": {
+    "MT_helper_called_after_existing_quotation_checks": true,
+    "zlib_normal_export_after_pinned_runtime_and_existing_JS_export": true,
+    "both_existing_JS_and_new_zlib_postbuild_predeploy_artifact_gates": true,
+    "chooser_driver_calls_selected_helper_after_prior_intent_controls": true,
+    "sender_source_globs_cover_manifest_and_ChooserActivity": true
+  },
+  "scope": {
+    "master_entirely_unchanged": true,
+    "original_record_count": 202,
+    "required_acceptance_and_percentages_unchanged": true,
+    "complete": 132,
+    "open": 70,
+    "closed_scoped_tasks": 19,
+    "original_closures": 0,
+    "agent_tag_tools_enhancement_percent": 100
+  },
+  "limits": [
+    "Read-only finite inventory/source-coverage review, not browser, platform, runtime, endpoint, permission, distribution, license or security acceptance.",
+    "No code, test, host, network or full suite executed. Current capability runs and protected/public publication are parent-owned and separate.",
+    "Generated zlib delivery is checked by explicit source-bound postbuild/predeploy artifact gates; no automatic offline-cache admission or global route clearance."
+  ]
+}

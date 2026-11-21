@@ -1,0 +1,294 @@
+{
+  "format": "ai-trust-id-android-os-chooser-hosted/v1",
+  "captured_at": "2026-11-21T11:25:23.811398+00:00",
+  "pass": true,
+  "scope": [
+    "N-014"
+  ],
+  "source_commit": "e3c8c562845eec17d599bc3050676a10ef3f8cde",
+  "run": {
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44898547294",
+    "job_id": 136829325460,
+    "event": "workflow_dispatch",
+    "conclusion": "success",
+    "intake_probe": false,
+    "configuration_controls": true,
+    "run_count": 1
+  },
+  "evidence_capture": {
+    "completed_job_log_only": true,
+    "log_bytes": 80362,
+    "log_sha256": "fc40b4efdd432993f67d2f0bb9ac6f4d4cf775f6a67edbafdbbc264c5f460b02",
+    "artifact_downloaded": false,
+    "apk_downloaded": false,
+    "local_sdk_installed": false,
+    "new_license_accepted": false,
+    "normalized_extracted_reports": {
+      "ai-trust-id-android-build-v1.json": "c941c1df752833c002f38530175330b3c361b40bfb920b379da408f4ed201409",
+      "ai-trust-id-android-engine-parity-v1.json": "16749e1e8979215c85b42b03b68c5c37e2d87a676a58c62d8eb7842b54d75e00",
+      "ai-trust-id-android-emulator-v1.json": "2577226f4cb0d03cd42759a888649b07e077643f0cb9f248f96818ae503a6561"
+    }
+  },
+  "actual_hosted_focused_controls": {
+    "tests": 102,
+    "groups": [
+      10,
+      46,
+      12,
+      20,
+      14
+    ],
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "new_chooser_ten_registered_here": false
+  },
+  "new_chooser_local_controls": {
+    "tests": 10,
+    "python_versions": [
+      "3.12.14",
+      "3.13.0"
+    ],
+    "runtime_evidence": false,
+    "evidence": "runs/2026-11-21-android-chooser-local-refusal-controls.json",
+    "evidence_sha256": "4da3db945df654ece8546a72b9d817fc43fed32908ed2142461194454e5eacd2"
+  },
+  "actual_runtime": {
+    "api_level": "36",
+    "elapsed_seconds": 183.328,
+    "original_share_cases": [
+      {
+        "case": "receive_requires_explicit_check",
+        "pass": true
+      },
+      {
+        "case": "actual_offline_ps_finding",
+        "pass": true
+      },
+      {
+        "case": "edit_hides_previous_finding",
+        "pass": true
+      },
+      {
+        "case": "new_share_and_no_finding",
+        "pass": true
+      },
+      {
+        "case": "unsupported_mime_has_no_verdict",
+        "pass": true
+      },
+      {
+        "case": "clear_removes_input_and_result",
+        "pass": true
+      },
+      {
+        "case": "background_clears_text",
+        "pass": true
+      }
+    ],
+    "configuration_cases": [
+      {
+        "case": "configuration_preserves_current_edited_review_without_result",
+        "pass": true
+      },
+      {
+        "case": "configuration_immediate_home_refocus_does_not_revive_text",
+        "pass": true
+      }
+    ],
+    "malformed_refusal_and_fresh_recovery_pairs": [
+      {
+        "case": "missing_text",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "wrong_typed_text",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "send_multiple",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "stream_extra",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "data_uri",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "clip_uri",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "multiple_clip_items",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "over_limit_text",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      },
+      {
+        "case": "unpaired_utf16",
+        "refused": true,
+        "fresh_valid_recovery": true,
+        "pass": true
+      }
+    ],
+    "fresh_sender_dispatch_count": 19,
+    "chooser_cases": [
+      {
+        "case": "system_chooser_receive_and_explicit_offline_check",
+        "pass": true
+      },
+      {
+        "case": "system_chooser_cancel_and_existing_checker_refocus",
+        "pass": true
+      }
+    ],
+    "chooser_final_observation": {
+      "owned_editor_present": true,
+      "owned_status_present": true,
+      "owned_check_present": true,
+      "editor_first_sample": false,
+      "editor_cancel_sample": false,
+      "editor_empty_or_exact_hint": true,
+      "received": false,
+      "cleared": true,
+      "finding": false,
+      "check_enabled": false,
+      "tag_present": false,
+      "tag_ps": false,
+      "details_present": false,
+      "source_ready_zero": false,
+      "source_ready_one": false,
+      "source_ready_two": false,
+      "source_button_present": false,
+      "source_button_enabled": false,
+      "system_target_present": false
+    },
+    "existing_checker_task_captured": true,
+    "chooser_source_stable": true,
+    "sender_source_stable": true,
+    "different_application_uid": true,
+    "default_checker_excludes_test_source": true,
+    "internet_permission": false,
+    "license_record_unchanged": true
+  },
+  "build": {
+    "format": "ai-trust-id-android-build/v1",
+    "pass": true,
+    "apk_sha256": "7836f4b7d5b04b43848556a77b23924de386745e2d9cf7558e8083605b06a9dd",
+    "apk_bytes": 6435445,
+    "sdk_platform": "android-36",
+    "build_tools": "36.0.0",
+    "permission_count": 0,
+    "signed": false,
+    "preparation_sha256": "afbf7f191300260bc886af40bbfcb7e261e9d7da08984ba5e76f50a12af9580b",
+    "method_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "emulator_executed": false,
+    "physical_device_evidence": false,
+    "independent_accuracy_evidence": false,
+    "sources": {
+      "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+      "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+      "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+      "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+      "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+      "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+      "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+      "mobile/android/src/com/aitrustid/android/CheckActivity.java": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+      "mobile/android/src/com/aitrustid/android/ConfigurationDraft.java": "5fb22a21a6c8ad36b4535e39955ecff4a6baede2e42c43c9648b8149dd52211a",
+      "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+      "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+      "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+      "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+      "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29"
+    }
+  },
+  "engine": {
+    "format": "ai-trust-id-android-engine-parity/v1",
+    "recorded_at": "2026-11-21T11:20:00.022Z",
+    "pass": true,
+    "actual_runtime": "Pyodide314.0.7",
+    "actual_android_loader": true,
+    "node_filesystem_indexURL_adapter": true,
+    "case_count": 137,
+    "invalid_input_controls": 3,
+    "network_attempts": 0,
+    "method_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "bundle_sha256": "ecc04fa17135175a841e3ef7ddbffb013098c5c6b877611f3ae7347001b9c0c0",
+    "loader_sha256": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+    "native_android_execution": false,
+    "physical_device_evidence": false,
+    "independent_accuracy_evidence": false
+  },
+  "reported_runtime_source_bindings": {
+    "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+    "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+    "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+    "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+    "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+    "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+    "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+    "mobile/android/src/com/aitrustid/android/ConfigurationDraft.java": "5fb22a21a6c8ad36b4535e39955ecff4a6baede2e42c43c9648b8149dd52211a",
+    "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+    "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+    "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+    "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+    "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "scripts/android-chooser-controls.py": "3bb0d3cb2117dca46554b49badecee240733466aeb9185a608c8a4a27ac86b34",
+    "scripts/android-intent-controls.py": "fe810635f94ccc9dda90063c73cca99724698d734794be34c4d39c75803dd69a",
+    "scripts/verify-android-emulator.py": "825c703e20ec3401d29c779294138e337d80b9d19ec920ef8ebf4d4d4c573e43",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "tests/android/intent-sender/AndroidManifest.xml": "db418118d0a69ca8fa983b48644ed7d1f1947451168545e37883299ce840555b",
+    "tests/android/intent-sender/ChooserActivity.java": "49029c0cf2f6ca951dfdf4291c84502a008502aa2fd01220cb0c591faa725719",
+    "tests/android/intent-sender/SenderActivity.java": "01db8ae344f8986d220d2be79d897cf051574eb6843b41ad4efc28f29e9d3e81"
+  },
+  "execution_context_sources": {
+    ".github/workflows/android-share.yml": "1ccc56d0e5b898319deb5188b4188488618e68fdec525d9a290cf3ef0074fab6",
+    "scripts/android-share-build.py": "8cb6ed20056bbf9d7f69dfb2fb19eaf9c5025eeb44ef8ea3f7d52576ffa1184e",
+    "scripts/verify-android-engine.mjs": "f6a81c4dee65290a09d7484bfc2ce69ea1b7145c6f24017bf0817ef60273c56f",
+    "scripts/verify-android-session.py": "db3064b1074df6f67edb0e4fd89dd1970f0074a0f733738b3441419fc2cf755a",
+    "tests/test_android_share.py": "d30aa8ead3c9d09700251c6258ca9c193b5142ab2954bd1a652d1285c0bec2d9",
+    "tests/test_android_emulator_prerequisites.py": "1f8187bf906fd0391cc63180fc03b1e37d91414273138b11b14429d2a43ad07d",
+    "tests/test_android_intake_probe.py": "3ceccd81d04d864256a0f57ee6a35cf43529732bc111762356712be1afd16f9f",
+    "tests/test_android_configuration_controls.py": "996514248f6e2bc220d132627aa26fe3da77e405017ad66f0f513de871f9efcb",
+    "tests/test_android_intent_controls.py": "fe0ef4c4572629cd15ef9e4514e398b8548c9176786453796b5b42f8e1718a26",
+    "tests/test_android_chooser_controls.py": "a26559c5807a0bf07535d804f7c64c1a1bb070afec79f4147789b6b5214bcaf9"
+  },
+  "default_product_sources_unchanged_from_pr140": true,
+  "source_mutated_after_dispatch": false,
+  "physical_device_evidence": false,
+  "outside_human_evidence": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closed": false,
+  "limits": [
+    "One selected disposable API36 emulator run, not a physical device or arbitrary sending-app compatibility guarantee.",
+    "System target selection, exact first sample and explicit PS result precede cancellation in the frozen driver; no direct checker component fallback exists.",
+    "Cancellation rechecks the captured existing checker task without a new MAIN/SEND. This does not assert erasure of an OS-held caller intent.",
+    "Only completed log reports were retrieved; no independent APK byte inspection or raw artifact/preparation download is claimed.",
+    "The new ten focused chooser groups were local; this workflow ran the existing102. Future protected integration must register and execute112.",
+    "Earlier failed records remain historical; this pass does not establish the cause or absence of every earlier intermittent failure.",
+    "Full N-014 release, TalkBack, physical-device and outside-human acceptance remain open."
+  ]
+}

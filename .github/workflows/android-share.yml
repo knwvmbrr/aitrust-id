@@ -37,6 +37,8 @@ on:
       - 'tests/test_android_share.py'
       - 'tests/test_android_emulator_prerequisites.py'
       - 'scripts/android-intent-controls.py'
+      - 'scripts/android-chooser-controls.py'
+      - 'tests/test_android_chooser_controls.py'
       - 'tests/test_android_intent_controls.py'
       - 'tests/android/intent-sender/**'
       - '.github/workflows/android-share.yml'
@@ -63,6 +65,8 @@ on:
       - 'tests/test_android_share.py'
       - 'tests/test_android_emulator_prerequisites.py'
       - 'scripts/android-intent-controls.py'
+      - 'scripts/android-chooser-controls.py'
+      - 'tests/test_android_chooser_controls.py'
       - 'tests/test_android_intent_controls.py'
       - 'tests/android/intent-sender/**'
       - '.github/workflows/android-share.yml'
@@ -96,6 +100,7 @@ jobs:
           python3 -B -m unittest discover -s tests -p test_android_intake_probe.py -v
           python3 -B -m unittest discover -s tests -p test_android_configuration_controls.py -v
           python3 -B -m unittest discover -s tests -p test_android_intent_controls.py -v
+          python3 -B -m unittest discover -s tests -p test_android_chooser_controls.py -v
           python3 -B scripts/verify-android-session.py --java-home "$JAVA_HOME_17_X64"
       - name: Prepare exact offline PS assets and build an unsigned APK
         shell: bash

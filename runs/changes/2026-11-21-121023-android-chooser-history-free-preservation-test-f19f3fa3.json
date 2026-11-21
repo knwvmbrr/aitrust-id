@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-121023-android-chooser-history-free-preservation-test-f19f3fa3",
+  "recorded_at": "2026-11-21T12:10:23.075503+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "27aec44019b6cd9d3957e723eddcd4900a27f129",
+  "changed": "Replaced a historical Git-object dependency in the chooser source-preservation test with the same four pinned original function-source identities; preserved the failed automatic run.",
+  "proves": "Same ten groups pass on Python3.12 and3.13; actual no-Git isolated stdlib copies reproduce the old error and pass corrected source; a weakened original guard refuses. Distinct source review a999d579 confirms exact constants and unchanged runtime files.",
+  "limits": "PR141 attempted112 tests with111passing and1error; no APK or emulator ran. This test-only correction requires a changed-source protected run and grants no new Android, physical, human or full N-014 acceptance.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "tests/test_android_chooser_controls.py": "47aed2e0069c75bae7fdaa15cba71b49603acdbb19ba4a47c82fed787704e4da",
+    "runs/2026-11-21-android-chooser-shallow-checkout-failed.json": "c0f18ce4ad1d0d3ecb12734366a4c73b12cc8e44cd30cbf23d83609061814362",
+    "runs/2026-11-21-android-chooser-history-free-controls.json": "b4bbd71494464060d72a764e83e867d1731b7afc6cae8d2bd83e308921330445"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-chooser-shallow-checkout-failed.json",
+      "sha256": "c0f18ce4ad1d0d3ecb12734366a4c73b12cc8e44cd30cbf23d83609061814362"
+    },
+    {
+      "path": "runs/2026-11-21-android-chooser-history-free-controls.json",
+      "sha256": "b4bbd71494464060d72a764e83e867d1731b7afc6cae8d2bd83e308921330445"
+    }
+  ],
+  "checks": []
+}

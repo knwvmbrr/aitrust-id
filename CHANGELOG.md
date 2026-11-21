@@ -2,6 +2,204 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-121621-portable-protocol-current-evidence-sealed-72121f0a
+
+Recorded 2026-11-21T12:16:21.686982+00:00 · Contributor: Codex /root; inventory /root/seo; correction /root/share_debugger; review /root/web_camo · change
+
+- **Changed.** Sealed current61-command protocol evidence and one-test portable inventory update after the source-ZIP/shallow-checkout test repair; retained all four unaffected current receipts.
+- **Evidence.** All five capability receipts are current. The normal boundary retains1486 exact inputs and unchanged browser receipts. Four original function identities remain pinned without Git history; product and runtime/helper code are unchanged. [Change record](./runs/changes/2026-11-21-121621-portable-protocol-current-evidence-sealed-72121f0a.json).
+- **Not claimed.** New expected-head protected CI and actual112-test Android run remain pending. The failed111PASS/1ERROR candidate ran no APK/emulator and remains recorded; no full-original, physical/human or accuracy completion is inferred.
+
+
+### 2026-11-21-121327-android-portable-source-guard-integrated-c77a54b2
+
+Recorded 2026-11-21T12:13:27.713739+00:00 · Contributor: Codex /root integration; fix /root/share_debugger; review /root/web_camo · change
+
+- **Changed.** Integrated the exact source-preservation test repair for shallow checkouts and source ZIPs; retained the actual failed112-test candidate without claiming APK or emulator execution.
+- **Evidence.** All10 chooser groups pass on both clean no-Git Python3.12/3.13 copies, exact four original function identities remain pinned and weakening is refused. App, helper, sender, workflow, deadlines and case semantics are unchanged. Four capability receipts remain current. [Change record](./runs/changes/2026-11-21-121327-android-portable-source-guard-integrated-c77a54b2.json).
+- **Not claimed.** Protocol revalidation and fresh exact-head protected/112-test Android execution remain required. No physical/human/accuracy or original closure is claimed; counts132complete70open and19scoped retained.
+
+
+### 2026-11-21-121023-android-chooser-history-free-preservation-test-f19f3fa3
+
+Recorded 2026-11-21T12:10:23.075503+00:00 · Contributor: Codex · change
+
+- **Changed.** Replaced a historical Git-object dependency in the chooser source-preservation test with the same four pinned original function-source identities; preserved the failed automatic run.
+- **Evidence.** Same ten groups pass on Python3.12 and3.13; actual no-Git isolated stdlib copies reproduce the old error and pass corrected source; a weakened original guard refuses. Distinct source review a999d579 confirms exact constants and unchanged runtime files. [Change record](./runs/changes/2026-11-21-121023-android-chooser-history-free-preservation-test-f19f3fa3.json).
+- **Not claimed.** PR141 attempted112 tests with111passing and1error; no APK or emulator ran. This test-only correction requires a changed-source protected run and grants no new Android, physical, human or full N-014 acceptance.
+
+
+### 2026-11-21-120148-maintenance-current-evidence-sealed-1c7f09f3
+
+Recorded 2026-11-21T12:01:48.710705+00:00 · Contributor: Codex /root; independent inventory and source/runtime reviewers · change
+
+- **Changed.** Sealed all five passing current-source maintenance receipts and exact1486-source boundary binding after the isolated native-test capacity correction.
+- **Evidence.** PS7, privacy6, extension14, protocol61 and website59 complete command receipts pass against current source. The original failed website receipt and narrow diagnosis remain immutable; all original202 criteria remain132complete70open and scoped19. [Change record](./runs/changes/2026-11-21-120148-maintenance-current-evidence-sealed-1c7f09f3.json).
+- **Not claimed.** Protected checks, actual fresh112-test Android workflow and public maintenance verification still gate publication. No full tag, independent accuracy, physical/human or global distribution approval is claimed.
+
+
+### 2026-11-21-115731-select-existing-dom-capture-alternative-fd1f0317
+
+Recorded 2026-11-21T11:57:31.468026+00:00 · Contributor: Codex /root; exact acceptance review /root/seo · change
+
+- **Changed.** Selected the completed-response DOM adapter already enumerated in F030 acceptance; removed an inferred extra approval blocker without changing the original criterion.
+- **Evidence.** The original OR alternative names Codex and permits explicit DOM route replacement. Existing completed-response consent remains the boundary; mixed-stream observation and fetch-patch validation are not claimed. [Change record](./runs/changes/2026-11-21-115731-select-existing-dom-capture-alternative-fd1f0317.json).
+- **Not claimed.** F030 remains open: actual source-bound live vendor supported/failure evidence is still required and interactive browser access is currently unavailable. No new capture, installation, permission, owner decision or original closure is invented.
+
+
+### 2026-11-21-114904-native-capacity-and-inventory-review-334bdeab
+
+Recorded 2026-11-21T11:49:04.875378+00:00 · Contributor: Codex /root; reviewers /root/web_camo /root/seo · change
+
+- **Changed.** Recorded independent capacity-test and single-input inventory correction reviews before website-only revalidation.
+- **Evidence.** Production reserve guards and all prior inventory inputs remain unchanged; the only new source delta is the reviewed synthetic test isolation and actual low-reserve controls. All118 focused tests pass and four other capability receipts remain current. [Change record](./runs/changes/2026-11-21-114904-native-capacity-and-inventory-review-334bdeab.json).
+- **Not claimed.** Website capability and protected/public maintenance delivery remain pending. No original acceptance or percentage is changed.
+
+
+### 2026-11-21-114722-native-io-test-capacity-isolation-027827f6
+
+Recorded 2026-11-21T11:47:22.853640+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Preserved the failed website receipt and corrected synthetic native I/O tests that depended on unrelated host free space; added explicit low-capacity refusal/reaping and permitted-cleanup controls.
+- **Evidence.** The unchanged production runner correctly enforced its2000000000-byte reserve. All118 affected focused tests pass after isolating the test environment; the real low-reserve path still refuses and reaps its actual child. Four other capability receipts remain current. [Change record](./runs/changes/2026-11-21-114722-native-io-test-capacity-isolation-027827f6.json).
+- **Not claimed.** This changes tests only, not the production resource guard, native app, iPhone acceptance or release. The website capability must run again against the corrected test source; original132complete70open and19scoped retained.
+
+
+### 2026-11-21-113911-maintenance-independent-source-reviews-recorded-2150a581
+
+Recorded 2026-11-21T11:39:11.897005+00:00 · Contributor: Codex /root; distinct reviewers /root/seo /root/web_camo /root/share_debugger · change
+
+- **Changed.** Recorded the exact independent finite-inventory, actual built-artifact/no-script/offline and MT/Android integration reviews for the frozen maintenance source.
+- **Evidence.** 1486 reviewed sources preserve all prior commands/criteria; all new runtime/source and native-paste/chooser inputs are covered. Separate reviewers found no actionable integrated-source issue. Actual automatic112-test execution and public delivery are still distinct gates. [Change record](./runs/changes/2026-11-21-113911-maintenance-independent-source-reviews-recorded-2150a581.json).
+- **Not claimed.** Reviews alone are not runtime or accuracy evidence. Original132complete70open and scoped19 retained. No full tag, physical/human or global distribution acceptance is inferred.
+
+
+### 2026-11-21-113519-maintenance-normal-artifacts-source-freeze-af3ee730
+
+Recorded 2026-11-21T11:35:19.941461+00:00 · Contributor: Codex /root integration; distinct engineering reviewers · change
+
+- **Changed.** Normal build now emits both exact selected runtime source deliveries and preserves native MT input; generated references and source metadata are frozen for final review and current-source checks.
+- **Evidence.** Both normal postbuild five-runtime/three-artifact gates pass. Source offers are discoverable with and without JavaScript and absent from the automatic offline cache. The full original202 records remain132complete70open, scoped jobs19; all reviewed maintenance handoffs are finished. [Change record](./runs/changes/2026-11-21-113519-maintenance-normal-artifacts-source-freeze-af3ee730.json).
+- **Not claimed.** Current capability execution, protected CI, actual112-test Android workflow and public maintenance verification remain required. No independent accuracy, physical device, full native/WASM obligations or original closure is claimed.
+
+
+### 2026-11-21-113237-reviewed-maintenance-integration-before-build-74ebcfe1
+
+Recorded 2026-11-21T11:32:37.436750+00:00 · Contributor: Codex /root; independent MT Android and runtime workers/reviewers · change
+
+- **Changed.** Integrated real OS Sharesheet selection/cancellation controls, registered112 automatic Android focused checks and their two trigger paths, and refreshed scope/state with exact reviewed maintenance evidence.
+- **Evidence.** The authored API36 run passed original7/configuration2/malformed9 pairs and two real chooser cases. Standalone MT and source-export corrected candidates have distinct actual controls and reviews. All202 originals and required criteria remain132complete70open; scoped jobs remain19. [Change record](./runs/changes/2026-11-21-113237-reviewed-maintenance-integration-before-build-74ebcfe1.json).
+- **Not claimed.** Only102 focused tests have run in the reviewed prior host; the ten new groups are local until the combined workflow runs. Final combined source/protected/public maintenance acceptance is not claimed. Physical devices, people, independent accuracy and global distribution remain open.
+
+
+### 2026-11-21-112615-android-chooser-actual-hosted-outcome-35a1b895
+
+Recorded 2026-11-21T11:26:15.227778+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded one actual default-APK system Sharesheet selection, explicit offline Check and cancellation/existing-task privacy outcome with distinct captured-log review.
+- **Evidence.** Run44898547294 at frozen e3c8c56 executed original7/config2/malformed9 plus newchooser2,19senderframes and102registered focused controls;22runtime inputs match. Newchooser10 remain local only. [Change record](./runs/changes/2026-11-21-112615-android-chooser-actual-hosted-outcome-35a1b895.json).
+- **Not claimed.** One selected API36 emulator, no physical, outside-human, TalkBack, broad reliability or full N-014 closure. No APK/artifact download or unchanged rerun. Future protected integration must register and execute112.
+
+
+### 2026-11-21-111643-android-chooser-malformed-archive-refusal-122d5e71
+
+Recorded 2026-11-21T11:16:43.047353+00:00 · Contributor: Codex · change
+
+- **Changed.** Contained malformed APK archive failures in the new chooser control boundary with a fixed nonleaking refusal.
+- **Evidence.** Ten affected control groups passed on both Python3.12 and3.13 including malformed archive privacy refusal; prior14-group evidence remains historical and unchanged. [Change record](./runs/changes/2026-11-21-111643-android-chooser-malformed-archive-refusal-122d5e71.json).
+- **Not claimed.** Local controls and JDK construction do not establish Android Sharesheet behavior; hosted execution remains pending and no original requirement is closed.
+
+
+### 2026-11-21-111458-android-system-chooser-controls-2d0e0b3e
+
+Recorded 2026-11-21T11:14:58.891188+00:00 · Contributor: Codex · change
+
+- **Changed.** Added a separate fixed-sample native source and bounded system Sharesheet selection/cancellation controls, preserving the production APK and existing assertions.
+- **Evidence.** Ten new and fourteen affected groups passed on Python3.12 and3.13 with the existingJDK; exact original control and production source identities retained. [Change record](./runs/changes/2026-11-21-111458-android-system-chooser-controls-2d0e0b3e.json).
+- **Not claimed.** Actual Android chooser execution remains pending. No physical, human, accuracy, release or full N-014 acceptance is claimed.
+
+
+### 2026-11-21-112808-normal-embedded-source-maintenance-integration-c919b12b
+
+Recorded 2026-11-21T11:28:08.882428+00:00 · Contributor: Codex /root integration; source and IO worker /root/seo; distinct reviewer /root/web_camo · change
+
+- **Changed.** Added exact embedded zlib source/notice preparation and additive postbuild/predeploy artifact checks, registered closed source/test inputs, and made both source deliveries discoverable with and without JavaScript.
+- **Evidence.** The reviewed standalone producers passed cached-source replay, constructor/descriptor-reuse faults and deterministic artifact checks. Existing JavaScript source notices and all upstream archive/license content are retained; refreshed metadata binds the actual corrected producer. [Change record](./runs/changes/2026-11-21-112808-normal-embedded-source-maintenance-integration-c919b12b.json).
+- **Not claimed.** Combined normal build, final source-bound/protected checks and public maintenance delivery remain pending. Global native/WASM/license obligations and all original percentages remain open and unchanged.
+
+
+### 2026-11-21-112301-existing-js-export-owned-fd-correction-901aaac6
+
+Recorded 2026-11-21T11:23:01.843488+00:00 · Contributor: Codex /root/seo; distinct review /root/web_camo · change
+
+- **Changed.** Fixed raw descriptor ownership in the existing selected JS source exporter after an actual constructor-failure leak; refreshed both source-bound manifests through exact cached replay.
+- **Evidence.** 39 focused controls and 8 actual artifact/cache/CLI controls pass. Distinct review replayed six affected IO/CLI/artifact groups, confirming close-once ownership, preserved old outputs and exact current JS and zlib delivery. Historical failed reproduction and old source-bound artifacts remain retained. [Change record](./runs/changes/2026-11-21-112301-existing-js-export-owned-fd-correction-901aaac6.json).
+- **Not claimed.** No upstream source, license or notice content changed. No new task count, original closure, full WASM/source linkage, global license or distribution admission. Normal shared build hooks and publication remain PM-owned.
+
+
+### 2026-11-21-111134-exact-zlib-source-notice-delivery-90207ce3
+
+Recorded 2026-11-21T11:11:34.119740+00:00 · Contributor: Codex /root/seo; distinct review /root/web_camo · change
+
+- **Changed.** Added exact cached embedded-zlib source and verbatim current upstream notices with deterministic artifact delivery and anchored runtime/source/recipe checks.
+- **Evidence.** One actual selected-runtime probe reports zlib1.3.1 with zero network attempts. After a preserved descriptor-constructor finding,32focused controls and7current actual artifact/cache checks pass; distinct review confirms close-once ownership and exact5runtime/3artifact delivery. Earlier16-control and failed review records remain historical. [Change record](./runs/changes/2026-11-21-111134-exact-zlib-source-notice-delivery-90207ce3.json).
+- **Not claimed.** Existing F-057 repair only, no new task count or original closure. No full WASM/build-linkage reproduction, global licensing/route admission or public integration. Shared hooks/package/state remain PM-owned.
+
+
+### 2026-11-21-111220-maintenance-mt-paste-and-delivery-plan-be731531
+
+Recorded 2026-11-21T11:12:20.442244+00:00 · Contributor: Codex /root integration; MT /root/web_camo; runtime /root/seo; Android /root/share_debugger · change
+
+- **Changed.** Integrated the reviewed MT whole-input repair and existing verifier regression hook; registered its two source inputs and documented the independent maintenance plan before shared runtime integration.
+- **Evidence.** The actual before-candidate accepted a clipped native paste. The isolated corrected candidate retains and refuses all six oversize combinations before analysis in Chromium/WebKit. Existing method/payload semantics and original gates are preserved. [Change record](./runs/changes/2026-11-21-111220-maintenance-mt-paste-and-delivery-plan-be731531.json).
+- **Not claimed.** Final combined verification, protected integration and public MT repair remain pending. Other maintenance lanes are isolated work, not completed originals. Original132complete70open and19scoped count retained.
+
+
+### 2026-11-21-105653-mt-input-repair-runtime-proof-c58318fe
+
+Recorded 2026-11-21T10:56:53.110936+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Finish the actual MT full-input retention repair and connect its native-paste regression to the existing normal MT production-route verifier.
+- **Evidence.** Normal build and one focused no-worker input group pass. Actual Chromium/WebKit each retain/refuse six oversized selection/shape cases, compare three canonical records plus the valid8000-emoji boundary, verify privacy/lifecycle/mobile layout and actual PS/HP recovery after MT failure. Before clipping remains immutable. [Change record](./runs/changes/2026-11-21-105653-mt-input-repair-runtime-proof-c58318fe.json).
+- **Not claimed.** No canonical/client/worker/payload meaning change, MT tag, independent accuracy, physical/human acceptance or original closure. Parent must execute the complete hooked normal verifier and refresh protected source bindings/publication; no unchanged broad suite was repeated here.
+
+
+### 2026-11-21-105310-mt-input-production-controls-a7eddfef
+
+Recorded 2026-11-21T10:53:10.751777+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Bind targeted MT input checks to the actual modal, native input insertion and independent PS/HP recovery after a real MT payload refusal.
+- **Evidence.** The reusable helper and runner pass syntax. Existing MT test adds explicit oversized emoji/ASCII no-worker controls for all three selections. [Change record](./runs/changes/2026-11-21-105310-mt-input-production-controls-a7eddfef.json).
+- **Not claimed.** Corrected actual browser execution and normal build remain pending; no whole method cohort rerun or tag acceptance claimed.
+
+
+### 2026-11-21-105241-mt-full-input-retention-adafcb75
+
+Recorded 2026-11-21T10:52:41.177447+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Repair MT native-input clipping by retaining the complete passage and using the unchanged pre-worker codepoint/byte refusal limits.
+- **Evidence.** Actual Chromium native insertion reproduced8001 emoji clipped to8000 and accepted as a different full canonical record before the repair. Product change removes only the HTML length clip and clarifies intact-input refusal; canonical/client/worker methods stay unchanged. [Change record](./runs/changes/2026-11-21-105241-mt-full-input-retention-adafcb75.json).
+- **Not claimed.** Corrected build and actual Chromium/WebKit affected controls remain pending. This repairs existing input integrity, not an MT verdict, independent validation or original requirement closure.
+
+
+### 2026-11-21-110732-independent-public-software-closeout-887d3bf9
+
+Recorded 2026-11-21T11:07:32.991981+00:00 · Contributor: Codex /root; distinct workers and reviewers /root/seo /root/web_camo /root/share_debugger · change
+
+- **Changed.** Closed three predeclared software delivery jobs after protected PR140 and actual public HP/NF/source-download checks; completed the existing API/MCP enhancement acceptance.
+- **Evidence.** 54 selected HTTP asset comparisons across two origins and actual Chromium/WebKit controls pass. Scoped jobs16 to19; existing ENH-AGENT-TAG-TOOLS80 to100 with retained full criterion and actual source-download proof. All202 original percentages and required acceptance preserved:132 complete70open. [Change record](./runs/changes/2026-11-21-110732-independent-public-software-closeout-887d3bf9.json).
+- **Not claimed.** Goal60 remains NOT MET. No full tag, independent accuracy, physical Android/TalkBack, full WASM/native obligations or other original acceptance is credited. MT input repair and Android chooser remain independent pending work.
+
+
+### 2026-11-21-110207-independent-protected-merge-proof-92270f18
+
+Recorded 2026-11-21T11:02:07.474655+00:00 · Contributor: Codex /root; actual Android/API reviewer /root/share_debugger · change
+
+- **Changed.** Recorded exact protected PR140 merge and current automatic Android/API acceptance reviews before normal deployment.
+- **Evidence.** All eleven required checks pass on3941603; protected merged93a6ec has the same tree. Android102 plus original9 and malformed9 pairs executed. Existing API/MCP enhancement remaining software acceptance is independently evidenced. [Change record](./runs/changes/2026-11-21-110207-independent-protected-merge-proof-92270f18.json).
+- **Not claimed.** Public deployment and three software-job closures remain pending. Original132 complete70open and failing independent release gate retained.
+
+
 ### 2026-11-21-104643-independent-current-evidence-sealed-9f2f032a
 
 Recorded 2026-11-21T10:46:43.674973+00:00 · Contributor: Codex /root; reviewers /root/seo /root/web_camo /root/share_debugger · change

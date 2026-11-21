@@ -1,0 +1,24 @@
+{
+  "profile": "native-synthetic-capacity-isolation-peer-review/v1",
+  "captured_at": "2026-11-21T11:48:07.259965+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/web_camo",
+  "source_sha256": {
+    "scripts/verify-ios-share.py": "e7ca30c5def781bb7920e9c404ff9d9132dbc7385c2a817117a8d373263e2cc4",
+    "tests/test_ios_share_verifier.py": "0e453930ffb2e7f0c7e7bfbb7616fa7cf9a8a8995240764668e0ab82436bee34"
+  },
+  "correction_receipt_sha256": "37a530cf03b678779408267134d242145a04e5d43a8259b0eac5f0fe2decce2f",
+  "historical_failure_sha256": "aed9501dbbe27c80eb1bd6e44b8fc2bd6a4d0be6d700a66e88124d8f56b9b556",
+  "confirmed": [
+    "production runner byte-identical toHEAD, actual2GBreserve and5GBentryguard unchanged",
+    "autouse fixture only within synthetic test module monkeypatches capacity, reset pertest; child production runner source not modified",
+    "explicit lowreserve test overrides fixture to1999999999, launches real child and requirescapacityfailure/reapedPID/logbyteshash",
+    "explicit cleanup lowreserve test uses same1999999999 and cleanupTrue requiresactualchild completion",
+    "retained diagnostic log matches receipt/error and corrected118 log matches receipt; no historical exactfreebytes invented"
+  ],
+  "limits": [
+    "Read-only diff/source/loghash review only; no reviewer tests/browser/VM/runtime or build rerun.",
+    "Synthetic fixture does not establish actualhostcapacity; current website-only rerun stillrequired.",
+    "Prior artifact/Android/MT evidence unchanged; no physical/release/accuracy/originalclosure claim."
+  ]
+}

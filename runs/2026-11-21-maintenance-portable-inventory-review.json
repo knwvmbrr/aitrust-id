@@ -1,0 +1,34 @@
+{
+  "profile": "finite-maintenance-portability-single-test-delta-peer-review/v1",
+  "captured_at": "2026-11-21T12:13:30.758692+00:00",
+  "pass": true,
+  "reviewed_by": "Codex /root/seo",
+  "previous_candidate_sha256": "252fc8c2c57caa88ef3136915beb0c872920abbcc57007b17ce79f8c4ab02298",
+  "candidate_sha256": "0a8b2e46d08bf7c4cf4cfde13e00dfa886ceec687d5577e33609c3b326a25024",
+  "previous_review_sha256": "8eb1772da2b4f5d1298de0cb70516e23356083a6f227d5f4e4ce72c9362f76b0",
+  "actual_source_count": 1486,
+  "twice_current_inventory_matches": true,
+  "added": [],
+  "removed": [],
+  "modified": {
+    "tests/test_android_chooser_controls.py": {
+      "before": "a26559c5807a0bf07535d804f7c64c1a1bb070afec79f4147789b6b5214bcaf9",
+      "after": "47aed2e0069c75bae7fdaa15cba71b49603acdbb19ba4a47c82fed787704e4da"
+    }
+  },
+  "all_other_previously_reviewed_sources_identical": true,
+  "all_current_sources_tracked": true,
+  "previous_command_and_source_coverage_review_still_applicable": true,
+  "scope": {
+    "master_entirely_unchanged": true,
+    "all202required_acceptance_and_percentages_unchanged": true,
+    "complete": 132,
+    "open": 70,
+    "scoped_tasks_closed": 19,
+    "original_closures": 0
+  },
+  "limits": [
+    "Read-only exact one-test portability inventory delta only, not semantic test review or actual CI/platform execution.",
+    "No tests, browser, host, network or source mutations; current capability and publication outcomes remain separate."
+  ]
+}

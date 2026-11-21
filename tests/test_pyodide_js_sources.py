@@ -191,3 +191,53 @@ def test_runtime_projection_shape_refused_before_digest(change):
     elif change=='bad_hash':value['pyodide.mjs']['sha256']='not-a-digest'
     else:value['pyodide.mjs']['claimed_allowed']=True
     with pytest.raises(js.SourceError):js.reviewed_runtime(value)
+
+
+def test_constructor_failure_closes_owned_output_fd(tmp_path,monkeypatch):
+    original=js.os.fdopen;seen=[]
+    def fail(fd,mode,*args,**kwargs):
+        if mode=='wb':
+            assert kwargs.get('closefd') is False;seen.append(fd);raise OSError('PRIVATE_CONSTRUCTOR')
+        return original(fd,mode,*args,**kwargs)
+    monkeypatch.setattr(js.os,'fdopen',fail)
+    with pytest.raises(OSError):js.export(tmp_path/'source')
+    assert len(seen)==1
+    with pytest.raises(OSError):os.fstat(seen[0])
+    assert not (tmp_path/'source').exists()
+
+
+def test_release_error_does_not_close_reused_owned_descriptor(tmp_path,monkeypatch):
+    marker=tmp_path/'marker';marker.write_bytes(b'owned marker');fdopen=js.os.fdopen;close=js.os.close;writers=[];attempts=[];reused=[]
+    def capture(fd,mode,*args,**kwargs):
+        if mode=='wb':writers.append(fd);assert kwargs.get('closefd') is False
+        return fdopen(fd,mode,*args,**kwargs)
+    def release_then_error(fd):
+        if writers and fd==writers[0]:
+            attempts.append(fd)
+            if len(attempts)>1:return close(fd)
+            close(fd);replacement=os.open(marker,os.O_RDONLY);reused.append(replacement);assert replacement==fd
+            raise OSError('PRIVATE_CLOSE_AFTER_RELEASE')
+        return close(fd)
+    try:
+        with monkeypatch.context() as patch:
+            patch.setattr(js.os,'fdopen',capture);patch.setattr(js.os,'close',release_then_error)
+            with pytest.raises(OSError):js.export(tmp_path/'source')
+            assert len(attempts)==1 and os.fstat(reused[0]).st_size==len(b'owned marker')
+            assert not (tmp_path/'source').exists()
+    finally:
+        for fd in reused:close(fd)
+
+
+def test_actual_cli_constructor_error_stays_private(tmp_path):
+    code="""import importlib.util,sys
+spec=importlib.util.spec_from_file_location('js_cli','scripts/pyodide-js-sources.py');cli=importlib.util.module_from_spec(spec);spec.loader.exec_module(cli)
+original=cli.source.os.fdopen
+def fail(fd,mode,*args,**kwargs):
+ if mode=='wb':raise OSError('/PRIVATE_CONSTRUCTOR_PATH')
+ return original(fd,mode,*args,**kwargs)
+cli.source.os.fdopen=fail
+raise SystemExit(cli.main(['--export',sys.argv[1]]))
+"""
+    result=subprocess.run([sys.executable,'-B','-c',code,str(tmp_path/'source')],capture_output=True,timeout=10)
+    assert result.returncode==2 and json.loads(result.stdout)=={'pass':False,'reason':'selected_runtime_source_notice_unavailable'} and not result.stderr and b'PRIVATE' not in result.stdout
+    assert not (tmp_path/'source').exists()

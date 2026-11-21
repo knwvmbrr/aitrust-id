@@ -1,0 +1,72 @@
+{
+  "profile": "integrated-normal-source-offer-peer-review/v1",
+  "captured_at": "2026-11-21T11:36:50.417659+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/web_camo",
+  "parent_head": "2995b5a6d7d4c4d2f677708d47849343c1bcaba3",
+  "working_tree_source_sha256": {
+    "site/package.json": "8b1962dba1b731bab560511a526e35384c9f1a83b94d4ad1f337ae33247644ee",
+    "site/scripts/prepare-device.mjs": "2a20a63f3ac341eb7375c85f4a547c733fc3a3837ced00b11f87e59fefba0450",
+    "site/scripts/prepare-offline.mjs": "59294d4a5670d42eb0f3aa0e9fc8d82f315312e867ea4cce5dd839bff2f86916",
+    "site/scripts/prepare.mjs": "9de9996e5efc9329f1dd03ff51b12e43b4181484ef22ad53348a737550070d5b",
+    "site/src/workflows/About.jsx": "77c6f96b2407c93df43c0678c8253170a5d02fd58c1245885d3f945a157c0c27",
+    ".github/workflows/android-share.yml": "47c12e06829a5f13b27a84a7cc72546124a6a9259ca996a4dc8a02560aa2412b",
+    "tools/pyodide_js_sources.py": "5f964360f591fcfbe4fabe24a214d4430dc639c38e608818f8e5fe870c546e4e",
+    "tools/zlib_source_delivery.py": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a",
+    "sbom/reviews/pyodide-js/manifest.json": "24263f38d4ada9e82533048d7aead0cb543a3f0f4cbd8bfd69316aefd53c57b6",
+    "sbom/reviews/zlib-runtime/manifest.json": "baf610ed2d6db1123e1e091cac13814e2f80cb08620924596d1b939c351f2709"
+  },
+  "source_stable": true,
+  "built_artifacts": {
+    "runtime-js-sources/PYODIDE-JS-SOURCES.zip": {
+      "bytes": 1632140,
+      "sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"
+    },
+    "runtime-js-sources/NOTICES.txt": {
+      "bytes": 18300,
+      "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+    },
+    "runtime-js-sources/index.json": {
+      "bytes": 3006,
+      "sha256": "1e26ef876d26f7aea469332d0e0b59779b70e63a0ecfb31a062320da96ce9f4e"
+    },
+    "runtime-zlib-sources/ZLIB-SOURCES.zip": {
+      "bytes": 1682541,
+      "sha256": "d022f0ff9d1a4436253939bdb9a9f837c6a134425511b34ebced63fa922407ac"
+    },
+    "runtime-zlib-sources/NOTICES.txt": {
+      "bytes": 7912,
+      "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+    },
+    "runtime-zlib-sources/index.json": {
+      "bytes": 1858,
+      "sha256": "fddd24058a4c744663b677423852dee4df55967696e361344b75fd477523c97c"
+    }
+  },
+  "built_index_sha256": "d3d2430c2ea43c013f25906079ee910baab6fe86ecb687e169d98e2d7dfad245",
+  "offline_worker_sha256": "ede5a6841fbc1d5e4c90dff7d5c9e49c8a929c538a7f302dc1dc5736d5c0599c",
+  "offline_release_sha256": "baa0a6dfa8b2a3b309334307eb834954ad9f2899b59f8bcead0872438611cad0",
+  "checks": [
+    "all6 current runtime source/notice/index artifacts exact author producer outputs and public copies",
+    "actual built noscript and About sources link both sourceZIPs and notices",
+    "exact offline allowlist and implemented worker exclude both source delivery directories",
+    "normal unchanged build chain plus preserved old postbuild/predeploy checks with additive zlibgate and both exporters",
+    "both Android filters include chooserhelper/test/source;6existing unittest command paths total112 static methods",
+    "both pinned manifests retain all source/archive/runtime/license/notice data except corrected producer bindings"
+  ],
+  "static_CI_test_counts": {
+    "test_android_share.py": 10,
+    "test_android_emulator_prerequisites.py": 46,
+    "test_android_intake_probe.py": 12,
+    "test_android_configuration_controls.py": 20,
+    "test_android_intent_controls.py": 14,
+    "test_android_chooser_controls.py": 10
+  },
+  "limits": [
+    "Light read-only source/hash/HTML/AST/artifact inspection only; no new build, gates, tests, browser, VM, SDK, download or deployed HTTP.",
+    "Parent reports actual normal both5runtime/3artifact gates PASS; this independent review verifies exact built output and hook mechanics, not a second gate execution.",
+    "New112 integrated hosted test execution, current capability checks, protectedCI and live publication remain pending.",
+    "Offline source offers require network unless separately downloaded; no automatic sourceZIPcache.",
+    "No fullWASM/source-build linkage, license/route/globalclearance, independent accuracy, physical device or original requirement closure."
+  ]
+}

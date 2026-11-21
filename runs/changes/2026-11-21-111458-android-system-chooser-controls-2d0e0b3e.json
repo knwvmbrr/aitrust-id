@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-111458-android-system-chooser-controls-2d0e0b3e",
+  "recorded_at": "2026-11-21T11:14:58.891188+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3941603265c763de07d9f7d91e465e0832db39d1",
+  "changed": "Added a separate fixed-sample native source and bounded system Sharesheet selection/cancellation controls, preserving the production APK and existing assertions.",
+  "proves": "Ten new and fourteen affected groups passed on Python3.12 and3.13 with the existingJDK; exact original control and production source identities retained.",
+  "limits": "Actual Android chooser execution remains pending. No physical, human, accuracy, release or full N-014 acceptance is claimed.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "docs/android-os-chooser-plan.md": "d8e4cc2bbdb3b4cbb0f52c8ccb19a4a7aba2b8a5e7f44cfd9981bb5bb4c0bbf3",
+    "docs/android-share-developer.md": "e80c6e1b27d2ed5fee8c77d2b7dd8d584ecf6980f13a4e5630bece5dc984173b",
+    "scripts/android-chooser-controls.py": "3b28d4b4610a376d086550e893e3f98afa43d9ef7b6791ca2034e261e82d4c0f",
+    "scripts/android-intent-controls.py": "fe810635f94ccc9dda90063c73cca99724698d734794be34c4d39c75803dd69a",
+    "scripts/verify-android-emulator.py": "825c703e20ec3401d29c779294138e337d80b9d19ec920ef8ebf4d4d4c573e43",
+    "tests/android/intent-sender/ChooserActivity.java": "49029c0cf2f6ca951dfdf4291c84502a008502aa2fd01220cb0c591faa725719",
+    "tests/android/intent-sender/AndroidManifest.xml": "db418118d0a69ca8fa983b48644ed7d1f1947451168545e37883299ce840555b",
+    "tests/test_android_chooser_controls.py": "07aae915101121c32879c16341ec15aeb3be064c82cb12c1632407432862e0ee",
+    "tests/test_android_intent_controls.py": "fe0ef4c4572629cd15ef9e4514e398b8548c9176786453796b5b42f8e1718a26",
+    "runs/2026-11-21-android-chooser-local-controls.json": "8a5ae4e3e137df8c6dc9e431ec4b86507155875b6e95cfd535abf10216b8b0ba"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-chooser-local-controls.json",
+      "sha256": "8a5ae4e3e137df8c6dc9e431ec4b86507155875b6e95cfd535abf10216b8b0ba"
+    }
+  ],
+  "checks": []
+}

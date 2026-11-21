@@ -12,3 +12,5 @@ for(const file of ['pyodide.mjs','pyodide.asm.mjs','pyodide.asm.wasm','python_st
 
 // Carry exact selected loader sources and verbatim notices with every normal build.
 execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[root+'scripts/pyodide-js-sources.py','--export',root+'site/public/runtime-js-sources'],{stdio:'inherit',timeout:15000});
+// Carry the exact selected embedded-library source and verbatim upstream notices.
+execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[root+'scripts/zlib-source-delivery.py','--export',root+'site/public/runtime-zlib-sources'],{stdio:'inherit',timeout:15000});

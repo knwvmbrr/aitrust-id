@@ -112,7 +112,7 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 16,
+    "finished_scoped_tasks": 19,
     "original_requirement_closures": 0
   },
   "goals": {
@@ -138,11 +138,11 @@
       "tag_id": "T-NF",
       "bot_id": "tag_nf",
       "actual_worker": null,
-      "status": "reviewed",
-      "checked_at": "2026-11-21T10:12:11.136863+00:00",
+      "status": "published",
+      "checked_at": "2026-11-21T11:07:03.859569+00:00",
       "current_component_status": "NF preview remains live. Its bounded hosted verifier completed every case in143.498seconds with unchanged180second budget on the measured4CPU host; explicithosted2only, local1default. No NF, accuracy or original-cause conclusion added.",
       "blocking_acceptance": "Selected reference/NLI and caller-declared citation components exist; claim-specific reference selection, contradiction-versus-missing-evidence labels, calibrated accepted tag mapping and supported human operation remain.",
-      "next_task": "PM completes current-source and protected/public integration of the reviewed verification profile."
+      "next_task": "Keep independent claim/reference context and full-tag validation open; current optional comparisons are previews."
     },
     {
       "tag_id": "T-FI",
@@ -158,21 +158,21 @@
       "tag_id": "T-HP",
       "bot_id": "tag_hp",
       "actual_worker": null,
-      "status": "reviewed",
-      "checked_at": "2026-11-21T10:00:20.708615+00:00",
-      "current_component_status": "Both standalone and actual integrated HP-modal uncertainty-word controls pass; protected/public delivery pending. No HP, truth or inferred need-for-uncertainty verdict.",
+      "status": "published",
+      "checked_at": "2026-11-21T11:07:03.859569+00:00",
+      "current_component_status": "Optional caller-selected uncertainty-word preview publicly verified in both browser engines; no HP verdict.",
       "blocking_acceptance": "Literal quantities/hedges and selected-pair NLI observations exist; expected uncertainty, contextual specificity, representative independent errors, accepted HP mapping and full human integration remain.",
-      "next_task": "Complete current-source/protected/public delivery; preserve full independent/contextual/human criteria."
+      "next_task": "Preserve contextual, independently labeled and human full-tag acceptance."
     },
     {
       "tag_id": "T-MT",
       "bot_id": "tag_mt",
       "actual_worker": null,
-      "status": "published",
-      "checked_at": "2026-11-21T06:53:27.169178+00:00",
-      "current_component_status": "Explicit phone quotation-placement preview published and verified in actualChromium/WebKit. Original urgency/authority preserved; optional failure leaves real PS operating. No MT verdict or independent accuracy approval.",
+      "status": "reviewed",
+      "checked_at": "2026-11-21T11:31:36.349842+00:00",
+      "current_component_status": "Native input clipping was reproduced and repaired; standalone actual Chromium/WebKit canonical, refusal, privacy, lifecycle and peer-recovery controls passed. Current integrated/public delivery evidence is separately tracked in state.json.nov21_maintenance_delivery; no MT verdict or accuracy claim.",
       "blocking_acceptance": "Published literal wording and private choice workflows do not establish contextual use/mention, feasible alternatives, attribution, actual independent MT agreement/error rates or accepted tag mapping.",
-      "next_task": "session-mt-mobile-quotation"
+      "next_task": "Preserve independent contextual labels, disagreement policy and full MT acceptance; maintain the whole-input contract."
     },
     {
       "tag_id": "T-PS",
@@ -1005,7 +1005,7 @@
         "T-HP"
       ],
       "worker": "/root/web_camo",
-      "status": "in_review",
+      "status": "closed",
       "deliverable": "Optional caller-selected on-device uncertainty-word explorer with explicit annotated passage; preserve canonical method and independent existing HP/PS/MT behavior.",
       "done_evidence": [
         "Architecture and limits before implementation; raw/frozen-NFC/source/annotation-bound closed canonical records.",
@@ -1016,8 +1016,28 @@
       "source_base": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
       "blocker": null,
       "next_unblocked_task": "session-android-malformed-share",
-      "current_status": "Standalone21record/10refusal per-engine proof and actual HP-modal three-record/private/lifecycle/peer-recovery checks pass with distinct review. Closed/deferred UI, normal build and source/notice links work. Current-source global checks and protected/public delivery remain pending.",
-      "evidence_review": "runs/2026-11-21-hp-runtime-independent-review.json"
+      "current_status": "Predeclared software outcome verified against actual current source, distinct review, protected checks and public artifact/browser delivery. Full original acceptance remains open.",
+      "evidence_review": "runs/2026-11-21-hp-runtime-independent-review.json",
+      "closure_record": {
+        "closed_at": "2026-11-21T11:07:03.859569+00:00",
+        "completed_by": "/root/web_camo",
+        "verified_by": "/root",
+        "integration_completed_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-21-nov21-independent-publication.json",
+            "sha256": "84dc5713d1155fd4a56fd60e811c5162bcb9c3419aa1b1e51ef97b07facc463c"
+          },
+          {
+            "path": "runs/2026-11-21-pr140-required-ci-review.json",
+            "sha256": "fc51882e4438c0201ae857b7fc0afca9c0b77c8a61670aa57978e843889d6689"
+          },
+          {
+            "path": "runs/2026-11-21-android-pr140-automatic-review.json",
+            "sha256": "0ee734c7351d591fd0db1155c5ead031cdea07e0b7254ca690ecce731a86a75b"
+          }
+        ]
+      }
     },
     {
       "task_id": "session-android-malformed-share",
@@ -1026,7 +1046,7 @@
         "F-142"
       ],
       "worker": "/root/share_debugger",
-      "status": "in_review",
+      "status": "closed",
       "deliverable": "Real default-APK malformed-intent refusal and valid fresh-Share recovery, using a separate owned zero-permission synthetic sender.",
       "done_evidence": [
         "Preserve original7 plus2 configuration/privacy controls unchanged; add separately named real hostile payload cases.",
@@ -1037,8 +1057,28 @@
       "source_base": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
       "blocker": null,
       "next_unblocked_task": "session-hp-device-uncertainty",
-      "current_status": "Actual reviewed API36 old7+2 and new9 authored refusal/fresh-recovery pairs pass with19 advancing dispatch receipts. The failed zero-pair sender candidate is preserved. Integrated automatic workflow now includes14 focused groups; new source-bound/protected publication still pending.",
-      "evidence_review": "runs/2026-11-21-android-malformed-independent-review.json"
+      "current_status": "Predeclared software outcome verified against actual current source, distinct review, protected checks and public artifact/browser delivery. Full original acceptance remains open.",
+      "evidence_review": "runs/2026-11-21-android-malformed-independent-review.json",
+      "closure_record": {
+        "closed_at": "2026-11-21T11:07:03.859569+00:00",
+        "completed_by": "/root/share_debugger",
+        "verified_by": "/root",
+        "integration_completed_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-21-nov21-independent-publication.json",
+            "sha256": "84dc5713d1155fd4a56fd60e811c5162bcb9c3419aa1b1e51ef97b07facc463c"
+          },
+          {
+            "path": "runs/2026-11-21-pr140-required-ci-review.json",
+            "sha256": "fc51882e4438c0201ae857b7fc0afca9c0b77c8a61670aa57978e843889d6689"
+          },
+          {
+            "path": "runs/2026-11-21-android-pr140-automatic-review.json",
+            "sha256": "0ee734c7351d591fd0db1155c5ead031cdea07e0b7254ca690ecce731a86a75b"
+          }
+        ]
+      }
     },
     {
       "task_id": "session-pyodide-js-source-delivery",
@@ -1047,7 +1087,7 @@
         "X-02"
       ],
       "worker": "/root/seo",
-      "status": "in_review",
+      "status": "closed",
       "deliverable": "Carry the selected pinned Pyodide JavaScript preferred sources and verbatim MPL/MIT notices in the actual website artifact, with an exact current-runtime consumer gate and discoverable source links.",
       "done_evidence": [
         "Pre-implementation plan and source-reviewed cached archive replay bind all five shipped runtime members, ten preferred source files and exact verbatim notice bytes.",
@@ -1057,9 +1097,29 @@
       "architecture": "docs/pyodide-js-source-plan.md",
       "registered_at": "2026-11-21T10:00:20.708615+00:00",
       "blocker": null,
-      "current_status": "36 focused and11 actual artifact controls plus distinct coherent-rebind review pass; normal combined build and actual5runtime/3outputs gate pass with source review. Protected/public delivery remains pending.",
+      "current_status": "Predeclared software outcome verified against actual current source, distinct review, protected checks and public artifact/browser delivery. Full original acceptance remains open.",
       "evidence_review": "runs/2026-11-21-pyodide-js-source-independent-review.json",
-      "next_unblocked_task": "session-hp-device-uncertainty"
+      "next_unblocked_task": "session-hp-device-uncertainty",
+      "closure_record": {
+        "closed_at": "2026-11-21T11:07:03.859569+00:00",
+        "completed_by": "/root/seo",
+        "verified_by": "/root",
+        "integration_completed_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-21-nov21-independent-publication.json",
+            "sha256": "84dc5713d1155fd4a56fd60e811c5162bcb9c3419aa1b1e51ef97b07facc463c"
+          },
+          {
+            "path": "runs/2026-11-21-pr140-required-ci-review.json",
+            "sha256": "fc51882e4438c0201ae857b7fc0afca9c0b77c8a61670aa57978e843889d6689"
+          },
+          {
+            "path": "runs/2026-11-21-android-pr140-automatic-review.json",
+            "sha256": "0ee734c7351d591fd0db1155c5ead031cdea07e0b7254ca690ecce731a86a75b"
+          }
+        ]
+      }
     }
   ],
   "original_open_requirements": [
@@ -5704,22 +5764,22 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-21T10:16:00.652798+00:00",
+  "updated_at": "2026-11-21T11:31:36.349842+00:00",
   "closeout": {
-    "recorded_at": "2026-11-21T09:02:00.648138+00:00",
-    "protected_source_commit": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
-    "publication_evidence": "runs/2026-11-21-nov21-functional-publication.json",
-    "CI_review": "runs/2026-11-21-pr138-required-ci-review.json",
-    "finished_scoped_tasks": 16,
+    "recorded_at": "2026-11-21T11:07:03.859569+00:00",
+    "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
+    "publication_evidence": "runs/2026-11-21-nov21-independent-publication.json",
+    "CI_review": "runs/2026-11-21-pr140-required-ci-review.json",
+    "finished_scoped_tasks": 19,
     "new_original_closures": 0,
     "original_goal": "NOT MET",
-    "reason": "Two further predeclared software jobs fully delivered; no original criteria waived or renamed as completed."
+    "reason": "Three predeclared software jobs fully delivered. No original acceptance weakened, deleted or silently reassigned."
   },
   "current_wave": {
     "wave_id": "2026-11-19-ps-mt-android",
     "started_at": "2026-11-19T18:24:57.745970+00:00",
     "source_commit": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-    "status": "Allthree specialist handoffs reviewed; PM final combined source/protected/public verification pending. Original70 target60 unmet.",
+    "status": "Three more independently functioning software jobs protected and publicly delivered; original132complete/70open; target60 NOT MET.",
     "goal": "Advance original70 toward60; count only full functioning original acceptance. Skip final owner/external gates and continue independent engineering.",
     "immutable_session_baseline_retained": "3716233b9460efa57c1f0d01bfe30989395efcc4",
     "prior_closed_scoped_tasks_retained": 9,
@@ -6068,6 +6128,16 @@
         "status": "active_at_snapshot",
         "scope": "One changed-source DEFAULT APK run with all original7 plus2 configuration/privacy controls. No owner input needed; real physical/TalkBack/outside acceptance stays open."
       }
+    },
+    {
+      "recorded_at": "2026-11-21T09:02:00.648138+00:00",
+      "protected_source_commit": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
+      "publication_evidence": "runs/2026-11-21-nov21-functional-publication.json",
+      "CI_review": "runs/2026-11-21-pr138-required-ci-review.json",
+      "finished_scoped_tasks": 16,
+      "new_original_closures": 0,
+      "original_goal": "NOT MET",
+      "reason": "Two further predeclared software jobs fully delivered; no original criteria waived or renamed as completed."
     }
   ],
   "delivery_route_assignment_history": [
@@ -6088,5 +6158,31 @@
       ],
       "meaning": "Historical November20 failed diagnostic snapshot; not a current active worker."
     }
-  ]
+  ],
+  "maintenance_wave": {
+    "checked_at": "2026-11-21T11:31:36.349842+00:00",
+    "accounting": "Existing scope maintenance; no new scoped task or original closure",
+    "PM": "/root",
+    "status": "Reviewed handoffs integrated; actual current/protected/public delivery is recorded separately in state.json.nov21_maintenance_delivery",
+    "is_live_heartbeat": false,
+    "MT": {
+      "worker": "/root/web_camo",
+      "status": "reviewed handoff; worker finished",
+      "source_commit": "ecd3096318437db0816a0484bb21cfb248546f41"
+    },
+    "Android": {
+      "worker": "/root/share_debugger",
+      "status": "reviewed actual API36 chooser handoff; worker finished",
+      "source_commit": "e3c8c562845eec17d599bc3050676a10ef3f8cde",
+      "actual_hosted_run": 44898547294
+    },
+    "runtime_sources": {
+      "worker": "/root/seo",
+      "status": "reviewed exact cached zlib and JS descriptor repair handoffs; worker finished",
+      "source_commits": [
+        "261f65b044c4f9233402c3f693f5d93f37da57ce",
+        "6a4aa1dcdce1b044aec7e133a42e1eb8be307bc3"
+      ]
+    }
+  }
 }

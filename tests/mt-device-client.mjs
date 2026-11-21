@@ -101,3 +101,11 @@ test('validation refuses accessor and comma-combined unknown keys before values 
  a.original.parameters.language={toJSON(){calls++;return 'en';}};
  assert.throws(()=>validMTRecord(a,'authority',authorityContext));assert.equal(calls,0);
 });
+
+// UI must retain native paste; the existing client is the authoritative pre-worker bound.
+test('complete oversized emoji and ASCII refuse before any worker for every existing selection',async()=>{
+ for(const kind of ['urgency','authority','authority-curly'])for(const text of ['😀'.repeat(8001),'x'.repeat(16001)]){
+  let made=0;const client=mtDeviceClient({createWorker:()=>{made++;throw Error('Worker must not start');}});
+  assert.throws(()=>validMTInput(kind,text));await assert.rejects(client.check(kind,text));assert.equal(made,0);
+ }
+});

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-115731-select-existing-dom-capture-alternative-fd1f0317",
+  "recorded_at": "2026-11-21T11:57:31.468026+00:00",
+  "author": "Codex /root; exact acceptance review /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2995b5a6d7d4c4d2f677708d47849343c1bcaba3",
+  "changed": "Selected the completed-response DOM adapter already enumerated in F030 acceptance; removed an inferred extra approval blocker without changing the original criterion.",
+  "proves": "The original OR alternative names Codex and permits explicit DOM route replacement. Existing completed-response consent remains the boundary; mixed-stream observation and fetch-patch validation are not claimed.",
+  "limits": "F030 remains open: actual source-bound live vendor supported/failure evidence is still required and interactive browser access is currently unavailable. No new capture, installation, permission, owner decision or original closure is invented.",
+  "scope_ids": [
+    "F-030"
+  ],
+  "files": {
+    "state.json": "688e7957834af32afb13b53378a6d15494a1b554c0ddd6ba410dae982cef8535"
+  },
+  "evidence": [
+    {
+      "path": "docs/scope-progress.json",
+      "sha256": "e15e38624b1d5d00d30ae8a415843b9f148f96161057197a5420c64a4603cc6e"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/session-delivery.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T11:57:31.913338+00:00"
+    }
+  ]
+}

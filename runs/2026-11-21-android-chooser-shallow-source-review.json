@@ -1,0 +1,33 @@
+{
+  "profile": "android-chooser-shallow-source-guard-peer-review/v1",
+  "captured_at": "2026-11-21T12:09:38.353044+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/web_camo",
+  "test_sha256": "47aed2e0069c75bae7fdaa15cba71b49603acdbb19ba4a47c82fed787704e4da",
+  "runtime_unchanged_sha256": {
+    "scripts/android-chooser-controls.py": "3bb0d3cb2117dca46554b49badecee240733466aeb9185a608c8a4a27ac86b34",
+    "scripts/android-intent-controls.py": "fe810635f94ccc9dda90063c73cca99724698d734794be34c4d39c75803dd69a",
+    "scripts/verify-android-emulator.py": "825c703e20ec3401d29c779294138e337d80b9d19ec920ef8ebf4d4d4c573e43",
+    "tests/android/intent-sender/ChooserActivity.java": "49029c0cf2f6ca951dfdf4291c84502a008502aa2fd01220cb0c591faa725719",
+    "tests/android/intent-sender/SenderActivity.java": "01db8ae344f8986d220d2be79d897cf051574eb6843b41ad4efc28f29e9d3e81",
+    "tests/android/intent-sender/AndroidManifest.xml": "db418118d0a69ca8fa983b48644ed7d1f1947451168545e37883299ce840555b"
+  },
+  "historical_3941603_exact_source_segment_sha256": {
+    "verify_cases": "90f7ac9b6d4a2ca0b00707608c8bb1dbc095d4d1ea6474c0349462cc65923727",
+    "parse_dispatch": "74cd207aeafcfa1ce6cde351a7d27dc1c6da358435fa391b39e8407c95e4cbc6",
+    "observe": "830a3e14144832f2f5600f5f038673565d54f071488d89d280bbb48514dbbf6d",
+    "installed_uid": "d149734e21223f1340a9d332cac6a15ee06d83d49b7f16642a3c43f6f5eaf313"
+  },
+  "confirmed": [
+    "all4 finite historical function segments match3941603 and current runtime",
+    "oldoriginal7/config2/wait guard retained;10testgroups unchanged",
+    "preservation assertion now no Git or subprocess dependency and traps subprocess.run",
+    "actualweakened resultguard source changes one bound identity; negative rejects",
+    "runtime/helper/sender/defaultproduct unchanged by test-only repair"
+  ],
+  "limits": [
+    "Read-only AST/historical Git/source comparison only, no reviewertest/VM/browser/SDK/download.",
+    "Author clean no.git source and bothPython executions remain separate evidence; protected CI rerun still required.",
+    "Prior actual chooser runtime remains historical exactsource; no new emulator claim or originalclosure."
+  ]
+}

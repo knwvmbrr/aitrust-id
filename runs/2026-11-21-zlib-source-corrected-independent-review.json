@@ -1,0 +1,39 @@
+{
+  "profile": "zlib-corrected-source-artifact-independent-review/v1",
+  "captured_at": "2026-11-21T11:10:53.316616+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/web_camo",
+  "source_sha256": {
+    "tools/zlib_source_delivery.py": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a",
+    "scripts/zlib-source-delivery.py": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe",
+    "tests/test_zlib_source_delivery.py": "ed2d604bbc7dfbacebb125b6eb79c6a0946f25c3d38b39cf7baaf4148ac03ed9",
+    "sbom/reviews/zlib-runtime/manifest.json": "f84d1828da336944916358eb2c4c30d5f3c610c01936a562cf8c7614751163e5"
+  },
+  "actual_producer_receipt": {
+    "path": "runs/2026-11-21-zlib-source-fd-corrected.json",
+    "sha256": "19e70cbd976b7175b6e7adc3cbefddf978c742439ff350c628f019dfe74b2115"
+  },
+  "prior_review": {
+    "path": "output/verification/zlib-source-initial-independent-review.json",
+    "sha256": "68ac8d584b956fe2aa7a72d703bafc23de9c6bb4052fc2fd17e7ce680b81c8bf",
+    "initial_descriptor_leak_preserved": true
+  },
+  "independent_corrected_controls": {
+    "original_constructor_fault_closes_rawfd_preserves_previous3outputs": true,
+    "close_after_release_attempted_once_reused_marker_survives": true,
+    "actual_export_deterministic_exact": true,
+    "actual_retained5runtime3artifact_gate": true,
+    "actual_check_built_CLI_success": true,
+    "actual_unknown_private_argv_fixed_refusal_no_stderr": true,
+    "all_current_source_and_actual_artifact_hashes_match_receipt": true,
+    "retained_probe_is_exact_actual_probe_with_bound_controller_zero_network": true
+  },
+  "current_bundle_sha256": "0389065b9212d7d94bb8ecc2ac41eb83902af3c943a079a5573616369a9508bf",
+  "unchanged_prior_controls": "Twelve initial independently executed groups covered coherent runtime/cohort, recipe and notice rebinding; missing/changed/extra/symlink/PAX limits and deterministic verbatim notices. Only output descriptor ownership changed; these were not unnecessarily repeated.",
+  "limits": [
+    "Light owned temporary Python/artifact IO only; no download, browser, NodeVM, new model/service/license or source mutation.",
+    "Actual zlib1.3.1 version probe is retained producer evidence, not re-executed by reviewer; recipe identity is not build/linkage reproduction.",
+    "No full WASM corresponding source, global route/project license clearance, tag accuracy, new task/original closure or public integration claimed.",
+    "Shared foundation analogous fdopen pattern remains a separately reported inherited concern; this bounded fix changes only new zlib output ownership."
+  ]
+}

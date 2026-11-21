@@ -1,0 +1,195 @@
+{
+  "format": "ai-trust-id-agent-tag-tools-enhancement-acceptance/v1",
+  "captured_at": "2026-11-21T10:56:16.442803+00:00",
+  "pass": true,
+  "reviewer": "/root/share_debugger",
+  "enhancement_id": "ENH-AGENT-TAG-TOOLS",
+  "required_acceptance_verbatim": [
+    "Complete the protected merge and verify the published instructions and downloadable source. The clean Linux SDK installation and twelve controls passed with matching source hashes; parent-tag accuracy is separate."
+  ],
+  "declared_remaining_software_acceptance_met": true,
+  "recommended_percent_complete": 100,
+  "new_scoped_software_task_created": false,
+  "original_requirement_closures": 0,
+  "source_commit": "630f97e8758932e09fc3a9fbdf66708de3e61bf4",
+  "protected_merge": {
+    "headRefOid": "2089e2ff5893d2cf8638cb8d18519a82445c361e",
+    "mergeCommit": {
+      "oid": "630f97e8758932e09fc3a9fbdf66708de3e61bf4"
+    },
+    "mergedAt": "2026-11-19T04:36:50Z",
+    "number": 125,
+    "state": "MERGED",
+    "url": "https://github.com/knwvmbrr/aitrust-id/pull/125"
+  },
+  "protected_required_checks": {
+    "count": 11,
+    "all_success": true,
+    "retained_check_record_sha256": "39705eae3717f68a125deaeb1670fe0ade33aecdbebd7317cdd567601268df07"
+  },
+  "existing_actual_functional_evidence": {
+    "runs/2026-11-18-ai-tools-linux.json": {
+      "sha256": "741b9fc12e2892b8c67088c6f8cb22a590270041c807c82e7f1c209fb48f29c2",
+      "tests": 12,
+      "clean_hosted_linux_optional_sdk": true
+    },
+    "runs/2026-11-18-ai-tools-mac-debugged.json": {
+      "sha256": "6b335a58ce68c504c4bdbe3f68f92a4c683873dd0a0dc68c18944a8c540c5cf1",
+      "tests": 12,
+      "actual_macos_optional_sdk": true
+    }
+  },
+  "functional_acceptance": {
+    "official_sdk_real_stdio_discovery_and_calls": true,
+    "actual_ps_finding_and_negative_without_gateway": true,
+    "missing_privacy_partial_result_preserves_ps": true,
+    "malformed_oversize_private_marker_saturation_and_cancellation_controls": true,
+    "public_installation_host_configuration_python_api_and_removal_instructions": true,
+    "all23_evidence_bound_sources_unchanged_current_and_downloaded": true
+  },
+  "existing_publication_record": {
+    "path": "runs/2026-11-19-agent-tools-trust-live-publication.json",
+    "sha256": "442fff3f184a263d104f2c891b37ffd75bd68c90278ff50c94583ab3f248d337",
+    "artifacts_per_origin": 304,
+    "origins": 2,
+    "matching_artifacts": 608,
+    "aggregate_record_not_individual_file_manifest": true,
+    "full304_download_not_repeated": true
+  },
+  "current_bounded_public_guide_checks": [
+    {
+      "url": "https://aitrustid.com/reference/ai-tools.md",
+      "status": 200,
+      "bytes": 7642,
+      "sha256": "4e2ca5c583f680d1339fd6f418c5cfbb6c9eee6978f945bfe1aa78e355e37abe",
+      "matches_exact_published_commit": true
+    },
+    {
+      "url": "https://335346d2.aitrust-id.pages.dev/reference/ai-tools.md",
+      "status": 200,
+      "bytes": 7642,
+      "sha256": "4e2ca5c583f680d1339fd6f418c5cfbb6c9eee6978f945bfe1aa78e355e37abe",
+      "matches_exact_published_commit": true
+    }
+  ],
+  "exact_published_source_download": {
+    "url": "https://codeload.github.com/knwvmbrr/aitrust-id/zip/630f97e8758932e09fc3a9fbdf66708de3e61bf4",
+    "status": 200,
+    "sha256": "b664e1eb26c40323b439e90f304d2a4c94bc005d74fecc1d9871d0fc7506fc0b",
+    "bytes": 20536403,
+    "compressed_limit": 33554432,
+    "uncompressed_limit": 67108864,
+    "member_count": 5058,
+    "complete_git_blob_inventory_matched": 4952,
+    "exact_selected_API_MCP_source_files": {
+      "tools/tag_api.py": {
+        "bytes": 5750,
+        "sha256": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e"
+      },
+      "scripts/tag-api.py": {
+        "bytes": 1634,
+        "sha256": "5d716e4db502e468dabcefba77e6d4f82605f23f57e3b8951a312461faec924a"
+      },
+      "scripts/ai-tools-server.py": {
+        "bytes": 7400,
+        "sha256": "1b07224d2f809de4e5da19c606bd5f9900706fc7fd5ccec61e1351d12bf5f8c0"
+      },
+      "scripts/check-tags.py": {
+        "bytes": 5755,
+        "sha256": "c3cd8c05ad2969b023bb6f332331787b13b2ff6347913fc0f0c3144321279c96"
+      },
+      "scripts/check-ps.py": {
+        "bytes": 6722,
+        "sha256": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240"
+      },
+      "scripts/aitrust.py": {
+        "bytes": 15916,
+        "sha256": "0fb8dcbd48a80caa456f467d535c7ff079397fa9ed9505fed75aabcbfeaea5ab"
+      },
+      "scripts/worker_process.py": {
+        "bytes": 2986,
+        "sha256": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd"
+      },
+      "scripts/build-device-detector.py": {
+        "bytes": 9406,
+        "sha256": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3"
+      },
+      "services/evaluator/app.py": {
+        "bytes": 28865,
+        "sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+      },
+      "spec/assertion.schema.json": {
+        "bytes": 13233,
+        "sha256": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c"
+      },
+      "protocol/normalization.py": {
+        "bytes": 2419,
+        "sha256": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1"
+      },
+      "protocol/unicode15-data.json": {
+        "bytes": 59614,
+        "sha256": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+      },
+      "integrations/mcp/requirements.in": {
+        "bytes": 217,
+        "sha256": "e6c1d29fe87f6e388e1bc35a791364b788f5452ab0524f8b452084e2cf569400"
+      },
+      "integrations/mcp/requirements.lock": {
+        "bytes": 42598,
+        "sha256": "82375e677571a53a1d3c8b5f13312ae8f81da2a05e4bea0ab59417d4486d95ea"
+      },
+      "integrations/ai-tools/function-tools.json": {
+        "bytes": 1296,
+        "sha256": "a69301e18521fb975f13f718fb332400c739ccd7af76720502e9e6ec0567d00a"
+      },
+      "integrations/ai-tools/check-text.input.schema.json": {
+        "bytes": 558,
+        "sha256": "78bf99eb5a0c2f5bdb90528b43af0dfa7b45804f251dc618f3d3a77da4b1623b"
+      },
+      "integrations/ai-tools/check-text.output.schema.json": {
+        "bytes": 2744,
+        "sha256": "54a3d0330e4ecd4eb9b7f65cde9492d45cd8b6c32b82f6d83bc707ea31c42610"
+      },
+      "tests/test_ai_tag_api.py": {
+        "bytes": 6050,
+        "sha256": "2b216d365bbb7222b1887dc711c10bca7946df886e35d2c98d71e533a763f57e"
+      },
+      "tests/test_ai_tools_mcp.py": {
+        "bytes": 9336,
+        "sha256": "2ccb5ddbea55767d5cebb07e9032382dfc1cfb072861e972217228e9a7a7198a"
+      },
+      "scripts/verify-ai-tools.py": {
+        "bytes": 4161,
+        "sha256": "9a9f0903989123b82290c04ed5367fb2e3547a396d91450332df8a53c499e4e3"
+      },
+      "docs/ai-tools.md": {
+        "bytes": 7642,
+        "sha256": "4e2ca5c583f680d1339fd6f418c5cfbb6c9eee6978f945bfe1aa78e355e37abe"
+      },
+      "docs/ai-tool-plugin-plan.md": {
+        "bytes": 3398,
+        "sha256": "80380fd607c85955c3ede5163f129d4af12f87cbfd7cd3f94c20cda5a4129c5a"
+      },
+      "docs/tag-safety-use-cases.json": {
+        "bytes": 13406,
+        "sha256": "631d1fdd4fcc89a4032d7ea62f4cfb3a8c624eea729785d2b4f3ac51850eb000"
+      }
+    },
+    "archive_extracted_or_executed": false
+  },
+  "inspection_limits": {
+    "transport_deadline_seconds": 60,
+    "compressed_byte_cap": 33554432,
+    "expanded_declared_byte_cap": 67108864,
+    "member_count_preflight_before_ZipFile": 10000,
+    "no_credentials_cookies_or_authorization_sent": true,
+    "archive_extracted_or_executed": false,
+    "new_package_sdk_model_or_service_installed": false,
+    "new_external_message_or_endpoint": false
+  },
+  "no_other_original_or_tag_gate_changed": true,
+  "independent_tag_validation": false,
+  "human_host_UI_or_physical_acceptance": false,
+  "full_pipeline_distribution_or_legal_clearance": false,
+  "scope_note": "This closes the existing API/MCP software enhancement only. F-158/F-159 were already complete; all70 original open records remain open. Findings are development checks, not safety or authorship clearance."
+}

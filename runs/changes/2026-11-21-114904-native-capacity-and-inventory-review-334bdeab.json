@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-114904-native-capacity-and-inventory-review-334bdeab",
+  "recorded_at": "2026-11-21T11:49:04.875378+00:00",
+  "author": "Codex /root; reviewers /root/web_camo /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2995b5a6d7d4c4d2f677708d47849343c1bcaba3",
+  "changed": "Recorded independent capacity-test and single-input inventory correction reviews before website-only revalidation.",
+  "proves": "Production reserve guards and all prior inventory inputs remain unchanged; the only new source delta is the reviewed synthetic test isolation and actual low-reserve controls. All118 focused tests pass and four other capability receipts remain current.",
+  "limits": "Website capability and protected/public maintenance delivery remain pending. No original acceptance or percentage is changed.",
+  "scope_ids": [
+    "F-142",
+    "N-013"
+  ],
+  "files": {
+    "runs/2026-11-21-native-synthetic-capacity-peer-review.json": "316c4027b359399c3d3a5c890a62218b007bb820224faf2ab2771b28faf67398",
+    "runs/2026-11-21-maintenance-corrected-inventory-review.json": "8eb1772da2b4f5d1298de0cb70516e23356083a6f227d5f4e4ce72c9362f76b0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-native-synthetic-capacity-peer-review.json",
+      "sha256": "316c4027b359399c3d3a5c890a62218b007bb820224faf2ab2771b28faf67398"
+    },
+    {
+      "path": "runs/2026-11-21-maintenance-corrected-inventory-review.json",
+      "sha256": "8eb1772da2b4f5d1298de0cb70516e23356083a6f227d5f4e4ce72c9362f76b0"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,73 @@
+{
+  "captured_at": "2026-11-21T11:02:07.422845+00:00",
+  "pass": true,
+  "kind": "protected_exact_source_check_review",
+  "PR": 140,
+  "url": "https://github.com/knwvmbrr/aitrust-id/pull/140",
+  "source_commit": "3941603265c763de07d9f7d91e465e0832db39d1",
+  "merge_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
+  "tested_and_merged_trees_equal": true,
+  "required_count": 11,
+  "checks": [
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44896016775/job/136821717033",
+      "name": "device-builder (3.12)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44896016775/job/136821717015",
+      "name": "regressions",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44896016775/job/136821717123",
+      "name": "site",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44896016775/job/136821716851",
+      "name": "host-config",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44896016775/job/136821716995",
+      "name": "scope-plan",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44896016775/job/136821717051",
+      "name": "spec",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44896016775/job/136821717007",
+      "name": "no-egress",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44896016775/job/136821716990",
+      "name": "device-builder (3.14)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44896016775/job/136821717031",
+      "name": "device-builder (3.13)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44896016775/job/136821716983",
+      "name": "accessibility",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44896016775/job/136821716975",
+      "name": "change-records",
+      "state": "SUCCESS"
+    }
+  ],
+  "unresolved_review_threads": 0,
+  "review_threads_method": "Connected GitHub exact PR review inventory inspected before expected-head protected merge.",
+  "nonrequired_independent_release_gate_pass": false,
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false
+}

@@ -23,3 +23,7 @@ site/public/nf-device/notices.txt -whitespace
 sbom/reviews/pyodide-js/sources/1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5.txt -whitespace
 sbom/reviews/pyodide-js/sources/899da9d991cb211a3642b84e82a9ae0b4b4e44546fd207e34d7d4ec2eb40f420.txt -whitespace
 site/public/hp-uncertainty-device/notices.txt -whitespace
+
+# Preserve selected upstream Emscripten notice and port-recipe bytes.
+sbom/reviews/zlib-runtime/sources/620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86.txt -whitespace
+sbom/reviews/zlib-runtime/sources/d3d8ca9a7caac82fa68e4984e47c03386093b8fa2b068e8e9eccedd3aa406926.py -whitespace

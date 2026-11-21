@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-113911-maintenance-independent-source-reviews-recorded-2150a581",
+  "recorded_at": "2026-11-21T11:39:11.897005+00:00",
+  "author": "Codex /root; distinct reviewers /root/seo /root/web_camo /root/share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2995b5a6d7d4c4d2f677708d47849343c1bcaba3",
+  "changed": "Recorded the exact independent finite-inventory, actual built-artifact/no-script/offline and MT/Android integration reviews for the frozen maintenance source.",
+  "proves": "1486 reviewed sources preserve all prior commands/criteria; all new runtime/source and native-paste/chooser inputs are covered. Separate reviewers found no actionable integrated-source issue. Actual automatic112-test execution and public delivery are still distinct gates.",
+  "limits": "Reviews alone are not runtime or accuracy evidence. Original132complete70open and scoped19 retained. No full tag, physical/human or global distribution acceptance is inferred.",
+  "scope_ids": [
+    "T-MT",
+    "N-014",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "runs/2026-11-21-maintenance-finite-inventory-independent-review.json": "e1e28903db4ef1a5487ee9c1909c128201f6292a9cadae6226a7a5b0e57d8590",
+    "runs/2026-11-21-maintenance-artifact-nojs-offline-review.json": "e564b9bed3152e3ae2dfc1435570fc634a8e1eb92a58d04e761b13771b23ecba",
+    "runs/2026-11-21-maintenance-mt-android-integration-review.json": "475c7b2d8e50485ec49234e7c1dfc4be8c1d0f9e24394c2f474efe7d74b22c3d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-maintenance-finite-inventory-independent-review.json",
+      "sha256": "e1e28903db4ef1a5487ee9c1909c128201f6292a9cadae6226a7a5b0e57d8590"
+    },
+    {
+      "path": "runs/2026-11-21-maintenance-artifact-nojs-offline-review.json",
+      "sha256": "e564b9bed3152e3ae2dfc1435570fc634a8e1eb92a58d04e761b13771b23ecba"
+    },
+    {
+      "path": "runs/2026-11-21-maintenance-mt-android-integration-review.json",
+      "sha256": "475c7b2d8e50485ec49234e7c1dfc4be8c1d0f9e24394c2f474efe7d74b22c3d"
+    }
+  ],
+  "checks": []
+}

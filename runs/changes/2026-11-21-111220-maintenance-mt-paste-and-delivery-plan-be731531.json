@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-111220-maintenance-mt-paste-and-delivery-plan-be731531",
+  "recorded_at": "2026-11-21T11:12:20.442244+00:00",
+  "author": "Codex /root integration; MT /root/web_camo; runtime /root/seo; Android /root/share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5466e016b77cdb3ab0deae8c30c68cd2fc352e5a",
+  "changed": "Integrated the reviewed MT whole-input repair and existing verifier regression hook; registered its two source inputs and documented the independent maintenance plan before shared runtime integration.",
+  "proves": "The actual before-candidate accepted a clipped native paste. The isolated corrected candidate retains and refuses all six oversize combinations before analysis in Chromium/WebKit. Existing method/payload semantics and original gates are preserved.",
+  "limits": "Final combined verification, protected integration and public MT repair remain pending. Other maintenance lanes are isolated work, not completed originals. Original132complete70open and19scoped count retained.",
+  "scope_ids": [
+    "T-MT",
+    "F-019a",
+    "F-019c",
+    "N-014",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "docs/maintenance-delivery-nov21.md": "4c10b480f0c0ff913c3f4aa4bf0acf76a4ffadaff57c0f73bbfad082f4fefbd3",
+    "scripts/verify-route-boundaries.py": "f56a08fe74485409b1364cf19b68b203c319f207e208003b0e78c6023ced48f5",
+    "eval/revalidation.json": "9eff962792bfc908ea2f6dcb1fb09c6a08df3e44e7df28e5dc9a7afacee4b390",
+    "state.json": "a3903707209471691111747f1036b54c3ed043e19c5e1d2365072be804f11eb0",
+    "docs/session-delivery.json": "4dd873d9eef821cdab9d33e452122457977a7b9cc83e2c474fcaceb6fa345a20",
+    "docs/scope-progress.json": "7be86a05dd5ee0392ef0a08739f6b6f4307533ed2f4ca74895653ceb062f8c2f",
+    "docs/scope-progress.md": "df19730fcae64bb49cf04cfbf328d397b1bb6d9d37af48e9d0f156898c78ac40",
+    "runs/2026-11-21-independent-actual-closeout-counterreview.json": "cad5e61429eabceedeb373e7f3547d5949f098f91cbd663c126b2a40d5859820"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-mt-input-clipping-before.json",
+      "sha256": "ef2e3c37ecbe7dc7afd240ae1ffa59b2f090721f7f9d35576ed47cbc8c4cbccb"
+    },
+    {
+      "path": "runs/2026-11-21-mt-input-retention-after.json",
+      "sha256": "ef89b7940149362eee23aa9c6fa3109143749a16afcfd8c37a91676a6f8b12ba"
+    },
+    {
+      "path": "runs/2026-11-21-independent-actual-closeout-counterreview.json",
+      "sha256": "cad5e61429eabceedeb373e7f3547d5949f098f91cbd663c126b2a40d5859820"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,42 @@
+{
+  "profile": "zlib-source-initial-independent-review/v1",
+  "captured_at": "2026-11-21T11:07:01.731379+00:00",
+  "pass": false,
+  "reviewer": "Codex /root/web_camo",
+  "frozen_source_sha256": {
+    "tools/zlib_source_delivery.py": "2f02c1f818d367ccaa809012566c36f3779df720988ce38430ba1264b61643d3",
+    "scripts/zlib-source-delivery.py": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe",
+    "tests/test_zlib_source_delivery.py": "d341374fc0964f46fe2250e334fb95a31f6e3abeef22697ec06466fbfaa91904",
+    "sbom/reviews/zlib-runtime/manifest.json": "e3a9905a5c4fb0127d9dd1f9b9c59bfddcc19c11c605ca96176e1f880857c046"
+  },
+  "executed_light_groups": {
+    "deterministic_exact_output": true,
+    "all_three_verbatim_notices": true,
+    "coherent_runtime_and_cohort_rebind_refused": true,
+    "coherent_recipe_rebind_refused": true,
+    "coherent_notice_rebind_refused": true,
+    "retained_evidence_symlink_refused": true,
+    "actual_export_and_exact5runtime3outputs": true,
+    "missing_notice_refused": true,
+    "changed_notice_refused": true,
+    "extra_delivery_refused": true,
+    "built_delivery_symlink_refused": true,
+    "oversize_PAX_preflight_refused": true
+  },
+  "prior_bundle_sha256": "15174d440f490dd53cb4a3c20e18d13f86038060fa3de109f13795935b4de52e",
+  "blocking_finding": {
+    "boundary": "new zlib export raw descriptor ownership",
+    "actual_constructor_fault_reproduced": true,
+    "raw_output_descriptor_remained_open": true,
+    "public_target_present": false,
+    "reviewer_closed_owned_leaked_descriptor": true,
+    "requested_fix": "Immediate explicit raw descriptor ownership, close attempted once even if fdopen construction fails, and close-after-release/reused-fd refusal controls."
+  },
+  "diagnosed_review_harness_refusal": "Initial macOS /var temporary parent alias correctly failed the no-symlink target-parent guard before the injected boundary; using the resolved owned temporary parent reached the real descriptor fault.",
+  "limits": [
+    "Read-only reviewed source; only owned synthetic temporary artifact IO/fault injection executed, no source mutation.",
+    "No new download, browser, NodeVM, runtime model, service or terms.",
+    "Source/notice/runtime identity is not compiler reproduction, legal clearance, full corresponding source, independent accuracy or original closure.",
+    "This is preserved initial failed candidate review; corrected producer and current artifact must receive fresh review."
+  ]
+}

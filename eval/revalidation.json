@@ -613,7 +613,15 @@
         "docs/android-malformed-intent-plan.md",
         "tests/nf-browser-diagnostics.cjs",
         "scripts/verify-nf-diagnostics.cjs",
-        "docs/nf-browser-diagnostic-plan.md"
+        "docs/nf-browser-diagnostic-plan.md",
+        "tools/zlib_source_delivery.py",
+        "scripts/zlib-source-delivery.py",
+        "tests/test_zlib_source_delivery.py",
+        "sbom/reviews/zlib-runtime/**/*",
+        "docs/zlib-source-delivery*.md",
+        "scripts/android-chooser-controls.py",
+        "tests/test_android_chooser_controls.py",
+        "docs/android-os-chooser-plan.md"
       ],
       "commands": [
         [
@@ -998,6 +1006,8 @@
           "tests/test_android_intent_controls.py",
           "tests/test_hp_uncertainty_device.py",
           "tests/test_pyodide_js_sources.py",
+          "tests/test_zlib_source_delivery.py",
+          "tests/test_android_chooser_controls.py",
           "-q"
         ],
         [
@@ -1007,6 +1017,10 @@
         [
           "node",
           "scripts/verify-nf-diagnostics.cjs"
+        ],
+        [
+          "{python}",
+          "scripts/zlib-source-delivery.py"
         ]
       ]
     },
@@ -1670,7 +1684,14 @@
         "docs/pyodide-js-source*.md",
         "tests/nf-browser-diagnostics.cjs",
         "scripts/verify-nf-diagnostics.cjs",
-        "docs/nf-browser-diagnostic-plan.md"
+        "docs/nf-browser-diagnostic-plan.md",
+        "scripts/mt-input-site-controls.cjs",
+        "scripts/verify-mt-input.cjs",
+        "tools/zlib_source_delivery.py",
+        "scripts/zlib-source-delivery.py",
+        "tests/test_zlib_source_delivery.py",
+        "sbom/reviews/zlib-runtime/**/*",
+        "docs/zlib-source-delivery*.md"
       ],
       "commands": [
         [
@@ -1988,6 +2009,7 @@
           "pytest",
           "tests/test_hp_uncertainty_device.py",
           "tests/test_pyodide_js_sources.py",
+          "tests/test_zlib_source_delivery.py",
           "-q"
         ],
         [

@@ -311,7 +311,13 @@ def export(destination, root=ROOT):
     try:
         for name,raw in expected.items():
             fd=os.open(stage/name,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o644)
-            with os.fdopen(fd,'wb') as stream:stream.write(raw);stream.flush();os.fsync(stream.fileno())
+            try:
+                # Retain raw ownership even if wrapper construction itself fails.
+                with os.fdopen(fd,'wb',closefd=False) as stream:stream.write(raw);stream.flush();os.fsync(stream.fileno())
+            finally:
+                owned_fd=fd;fd=None
+                # One close attempt only; its error may follow descriptor reuse.
+                os.close(owned_fd)
         need(expected==outputs(root))
         if existing:os.rename(target,backup);moved=True
         os.rename(stage,target);committed=True

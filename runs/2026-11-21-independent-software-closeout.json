@@ -1,0 +1,49 @@
+{
+  "captured_at": "2026-11-21T11:07:03.859569+00:00",
+  "pass": true,
+  "kind": "predeclared_software_delivery_closeout",
+  "source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
+  "reviewed_by": "Codex /root; distinct source/runtime reviewers /root/web_camo /root/share_debugger /root/seo",
+  "closed_jobs": [
+    "session-hp-device-uncertainty",
+    "session-android-malformed-share",
+    "session-pyodide-js-source-delivery"
+  ],
+  "new_original_closures": 0,
+  "original_complete": 132,
+  "original_open": 70,
+  "target_open": 60,
+  "original_target_met": false,
+  "all_original_criteria_preserved": true,
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nov21-independent-publication.json",
+      "sha256": "84dc5713d1155fd4a56fd60e811c5162bcb9c3419aa1b1e51ef97b07facc463c"
+    },
+    {
+      "path": "runs/2026-11-21-pr140-required-ci-review.json",
+      "sha256": "fc51882e4438c0201ae857b7fc0afca9c0b77c8a61670aa57978e843889d6689"
+    },
+    {
+      "path": "runs/2026-11-21-android-pr140-automatic-review.json",
+      "sha256": "0ee734c7351d591fd0db1155c5ead031cdea07e0b7254ca690ecce731a86a75b"
+    },
+    {
+      "path": "runs/2026-11-21-hp-runtime-independent-review.json",
+      "sha256": "c6f5ad1daba1aee445966ef0fd5da765ba517dcba8be891655897bbfba229a30"
+    },
+    {
+      "path": "runs/2026-11-21-pyodide-js-source-independent-review.json",
+      "sha256": "f391e4463e1d6f877e7a8582f9747559c7179f5968c45dc7161656a820a94e1b"
+    },
+    {
+      "path": "runs/2026-11-21-independent-finite-inventory-review.json",
+      "sha256": "59bde636ba800295e6d79c247c38c60d0780eeabe5348881d8db57834f45c051"
+    }
+  ],
+  "limitations": [
+    "Selected software acceptance only; no full tag or original requirement release.",
+    "Physical phones, human screen readers, outside-user acceptance, independent accuracy and remaining whole-route legal/distribution acceptance remain open.",
+    "Public proof compares selected critical bytes and real browser workflows, not whole-site artifact equivalence."
+  ]
+}

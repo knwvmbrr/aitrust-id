@@ -1,0 +1,155 @@
+{
+  "profile": "selected-zlib-fd-correction-actual-artifact/v1",
+  "captured_at": "2026-11-21T11:08:00.002823+00:00",
+  "pass": true,
+  "prepared_by": "Codex /root/seo",
+  "source_base": "3941603265c763de07d9f7d91e465e0832db39d1",
+  "source_sha256": {
+    "tools/zlib_source_delivery.py": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a",
+    "scripts/zlib-source-delivery.py": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe",
+    "tools/pyodide_js_sources.py": "e6702ea1949a46ccae76d1dbefaf5c5d76003a7b4f651d08d20b18ef64af2e00",
+    "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+    "sbom/reviews/zlib-runtime/manifest.json": "f84d1828da336944916358eb2c4c30d5f3c610c01936a562cf8c7614751163e5",
+    "sbom/nested-runtime/pyodide-wasm-release.json": "fda0196c527b3920744261e27ac93cb71637ad36cf127e450aeaf49f425dd86f",
+    "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+    "tests/test_zlib_source_delivery.py": "ed2d604bbc7dfbacebb125b6eb79c6a0946f25c3d38b39cf7baaf4148ac03ed9"
+  },
+  "source_stable": true,
+  "checks": [
+    {
+      "name": "current_source_actual_export",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "artifacts": {
+          "ZLIB-SOURCES.zip": {
+            "bytes": 1682541,
+            "sha256": "0389065b9212d7d94bb8ecc2ac41eb83902af3c943a079a5573616369a9508bf"
+          },
+          "NOTICES.txt": {
+            "bytes": 7912,
+            "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+          },
+          "index.json": {
+            "bytes": 1858,
+            "sha256": "2e984f3638e79aced911cbe210ceba655ad066949582d3f3036c0b9d9e0d63b0"
+          }
+        },
+        "full_wasm_corresponding_source": false,
+        "compiled_library_rebuilt": false,
+        "publisher_signature_verified": false,
+        "legal_clearance": false,
+        "global_distribution_admitted": false,
+        "complete_project_obligations": false
+      }
+    },
+    {
+      "name": "current_source_actual_five_runtime_three_artifact_check",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "profile": "selected-zlib-runtime-source-notices/v1",
+        "zlib_version": "1.3.1",
+        "runtime_members_checked": 5,
+        "delivery_artifacts_checked": 3,
+        "bundle_sha256": "0389065b9212d7d94bb8ecc2ac41eb83902af3c943a079a5573616369a9508bf",
+        "full_wasm_corresponding_source": false,
+        "compiled_library_rebuilt": false,
+        "publisher_signature_verified": false,
+        "legal_clearance": false,
+        "global_distribution_admitted": false,
+        "complete_project_obligations": false
+      }
+    },
+    {
+      "name": "repeat_export_byte_identical",
+      "pass": true
+    },
+    {
+      "name": "changed_ZLIB-SOURCES.zip_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "changed_NOTICES.txt_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "changed_index.json_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "current_exact_cached_archive_recipe_replay",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "cached_archives_replayed": 2,
+        "zlib_version": "1.3.1",
+        "full_wasm_corresponding_source": false,
+        "compiled_library_rebuilt": false,
+        "publisher_signature_verified": false,
+        "legal_clearance": false,
+        "global_distribution_admitted": false,
+        "complete_project_obligations": false
+      }
+    }
+  ],
+  "focused_tests": {
+    "passed": 32,
+    "duration_seconds": 1.22,
+    "argv": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_zlib_source_delivery.py"
+    ],
+    "added_controls": [
+      "fdopen-constructor failure closes raw owned descriptor",
+      "close-after-release does not close reused marker descriptor",
+      "actual CLI constructor error emits fixed private refusal"
+    ]
+  },
+  "prior_candidate_receipt": "runs/2026-11-21-zlib-source-actual-artifact.json",
+  "prior_peer_finding": "Before correction, fdopen constructor failure could leave the just-opened raw output descriptor unclosed; no output was published. Corrected closefd=False wrapper retains explicit ownership and attempts the raw close once.",
+  "output_artifacts": {
+    "ZLIB-SOURCES.zip": {
+      "bytes": 1682541,
+      "sha256": "0389065b9212d7d94bb8ecc2ac41eb83902af3c943a079a5573616369a9508bf"
+    },
+    "NOTICES.txt": {
+      "bytes": 7912,
+      "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+    },
+    "index.json": {
+      "bytes": 1858,
+      "sha256": "2e984f3638e79aced911cbe210ceba655ad066949582d3f3036c0b9d9e0d63b0"
+    }
+  },
+  "claims": {
+    "full_wasm_corresponding_source": false,
+    "compiled_library_rebuilt": false,
+    "publisher_signature_verified": false,
+    "legal_clearance": false,
+    "global_distribution_admitted": false,
+    "complete_project_obligations": false
+  },
+  "limits": [
+    "Current five runtime files copied from the earlier actual built-artifact control; their anchored hashes are unchanged.",
+    "No new WASM execution: original granted current-runtime1.3.1 probe remains separately bound; no Node/browser/model or root mutation in this correction.",
+    "Earlier16actual checks remain historical; current correction executes7actual artifact/cache checks plus32focused controls.",
+    "No full route/original requirement, legal clearance, full WASM source or public integration claimed."
+  ]
+}

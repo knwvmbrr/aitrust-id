@@ -1,0 +1,219 @@
+{
+  "profile": "mt-native-input-retention-repair/v1",
+  "captured_at": "2026-11-21T10:56:20.976318+00:00",
+  "pass": true,
+  "implemented_by": "Codex /root/web_camo",
+  "base_commit": "3941603265c763de07d9f7d91e465e0832db39d1",
+  "scope_ids": [
+    "T-MT",
+    "F-019a",
+    "F-019c",
+    "F-142"
+  ],
+  "before": {
+    "path": "runs/2026-11-21-mt-input-clipping-before.json",
+    "sha256": "ef2e3c37ecbe7dc7afd240ae1ffa59b2f090721f7f9d35576ed47cbc8c4cbccb",
+    "actual_native_8001_emoji_clipped_to8000_and_accepted": true
+  },
+  "after": {
+    "path": "runs/2026-11-21-mt-input-retention-after.json",
+    "sha256": "ef89b7940149362eee23aa9c6fa3109143749a16afcfd8c37a91676a6f8b12ba",
+    "source_and_served_stable": true,
+    "engines": [
+      {
+        "engine": "Chromium",
+        "pass": true,
+        "mode": "corrected_native_input",
+        "observations": [
+          {
+            "check": "urgency",
+            "shape": "non_bmp",
+            "attempted_codepoints": 8001,
+            "retained_codepoints": 8001,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          },
+          {
+            "check": "urgency",
+            "shape": "ascii",
+            "attempted_codepoints": 16001,
+            "retained_codepoints": 16001,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          },
+          {
+            "check": "authority",
+            "shape": "non_bmp",
+            "attempted_codepoints": 8001,
+            "retained_codepoints": 8001,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          },
+          {
+            "check": "authority",
+            "shape": "ascii",
+            "attempted_codepoints": 16001,
+            "retained_codepoints": 16001,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          },
+          {
+            "check": "authority-curly",
+            "shape": "non_bmp",
+            "attempted_codepoints": 8001,
+            "retained_codepoints": 8001,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          },
+          {
+            "check": "authority-curly",
+            "shape": "ascii",
+            "attempted_codepoints": 16001,
+            "retained_codepoints": 16001,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          }
+        ],
+        "whole_canonical_records": 3,
+        "exact_8000_non_bmp_boundary_accepted": true,
+        "private_details_opt_in": true,
+        "edit_clear_unmount_terminate": true,
+        "empty_reopen": true,
+        "no_input_upload_storage_console": true,
+        "reflow320_at200percent": true,
+        "minimum44px_actions": true,
+        "optional_MT_failure_then_actual_PS_HP": true,
+        "canonical_methods_changed": false,
+        "MT_tag_issued": false,
+        "physical_phone": false,
+        "independent_accuracy_evidence": false
+      },
+      {
+        "engine": "WebKit",
+        "pass": true,
+        "mode": "corrected_native_input",
+        "observations": [
+          {
+            "check": "urgency",
+            "shape": "non_bmp",
+            "attempted_codepoints": 8001,
+            "retained_codepoints": 8001,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          },
+          {
+            "check": "urgency",
+            "shape": "ascii",
+            "attempted_codepoints": 16001,
+            "retained_codepoints": 16001,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          },
+          {
+            "check": "authority",
+            "shape": "non_bmp",
+            "attempted_codepoints": 8001,
+            "retained_codepoints": 8001,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          },
+          {
+            "check": "authority",
+            "shape": "ascii",
+            "attempted_codepoints": 16001,
+            "retained_codepoints": 16001,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          },
+          {
+            "check": "authority-curly",
+            "shape": "non_bmp",
+            "attempted_codepoints": 8001,
+            "retained_codepoints": 8001,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          },
+          {
+            "check": "authority-curly",
+            "shape": "ascii",
+            "attempted_codepoints": 16001,
+            "retained_codepoints": 16001,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          }
+        ],
+        "whole_canonical_records": 3,
+        "exact_8000_non_bmp_boundary_accepted": true,
+        "private_details_opt_in": true,
+        "edit_clear_unmount_terminate": true,
+        "empty_reopen": true,
+        "no_input_upload_storage_console": true,
+        "reflow320_at200percent": true,
+        "minimum44px_actions": true,
+        "optional_MT_failure_then_actual_PS_HP": true,
+        "canonical_methods_changed": false,
+        "MT_tag_issued": false,
+        "physical_phone": false,
+        "independent_accuracy_evidence": false
+      }
+    ]
+  },
+  "product_delta": "Removed HTML UTF16 length clipping; retained original passage and unchanged pre-worker limits; clarified intact-input copy.",
+  "unchanged_canonical_client_worker_payload_sources": [
+    "site/src/mt-device-client.js",
+    "site/src/mt-device-worker.js",
+    "site/src/mt-device-result.js",
+    "site/src/mt-device-manifest.json",
+    "site/src/mt-mobile-device-result.js",
+    "site/src/mt-mobile-device-manifest.json",
+    "tools/mt_device.py",
+    "tools/mt_mobile_device.py",
+    "tools/language_observations.py",
+    "tools/authority_quotation.py",
+    "tools/authority_mobile_quotation.py"
+  ],
+  "sources": {
+    "site/src/MTExplorer.jsx": "3ef945ff120e977cb9860bc3a15136df8d3b1db200df58bc128de5b468855032",
+    "site/src/mt-device-client.js": "c4ae3168af3d705e3707ef6ba143a35fc042a047c142dd6e6bbc05c6c3bb8c2e",
+    "site/src/mt-device-worker.js": "99cd033c5da6468c34de8c3c27dab663cd48dbad6a97c40577418b29e7b75197",
+    "site/src/mt-device-result.js": "24bfe35426849f6f85a3682eec732cb9a4ea73d54d749a42017d7b485ac80cc8",
+    "site/src/mt-device-manifest.json": "171bc67cf7d6761bc7788eab238051f73402a1b72f35b62fcc1d128a1cd7abda",
+    "site/src/mt-mobile-device-result.js": "c8190bbf680526a00a6baed4a09f43f1e6878589526184e5d70abe99cfaf9098",
+    "site/src/mt-mobile-device-manifest.json": "14b1100762d2e74337d4a40acbbe1e48a67ca0a503ec8abffe8aad9f76208781",
+    "tools/mt_device.py": "68f7ceaf6e2d87e0f5babf58534954d3c28a2bad85b1728734f31682d219166b",
+    "tools/mt_mobile_device.py": "cda56dce7cdd8322fe7b0d45b27e167c943ead2f7d22705ff322e9e9ebbb28dd",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+    "tools/authority_mobile_quotation.py": "f230f44ea5584302e08b1b462839b8b41c0e69d03f7f5e34fc197a0c47b2b4bd",
+    "scripts/mt-input-site-controls.cjs": "32a9ac118651d0379b70bfec0240e4fbb4bb8ae5cb7fe7cb3a2786bef01f5dd6",
+    "scripts/verify-mt-input.cjs": "62705d3d0d42efd625b107c5469e00d1afd82fa87dea0fc016cec38042588e39",
+    "scripts/verify-mt-mobile-site.cjs": "661cd467bdcc14657a9935359fc97c4f3ab2e734e5244341f74638c6cc4608e7",
+    "tests/mt-device-client.mjs": "86767ebc3b1050c498ac1b0424228fca73e73c51dd4b0fd4f5f6909f0d97336d"
+  },
+  "focused_check": {
+    "command": "node --test --test-name-pattern=complete oversized emoji tests/mt-device-client.mjs",
+    "passed_groups": 1,
+    "oversize_kind_shape_combinations": 6
+  },
+  "normal_build": {
+    "command": "npm run build:site",
+    "exit_status": 0,
+    "private_log_sha256": "445e6ebdec0999e3e395b63ec3578a8ebd87549a0500015a805e1a785e5733de",
+    "runtime_postbuild_gate": "PASS exact5runtime3selectedsourceartifacts"
+  },
+  "existing_normal_hook": {
+    "path": "scripts/verify-mt-mobile-site.cjs",
+    "same_browser_engines": true,
+    "calls_verified_export": "verifyMTInputSite",
+    "new_required_command": false,
+    "syntax_checked": true,
+    "full_existing_hook_execution": "Parent integration gate pending; affected exported function actually executed in both engines."
+  },
+  "limits": [
+    "Actual browser engines, not physical phone or human screen reader.",
+    "No MT tag, new canonical method, independent accuracy, confidence or original requirement closure.",
+    "No shared scope/state/package/revalidation/CI/global inventory edit.",
+    "Existing normal CI hook is connected without dropping old checks; parent owns refreshed bindings, protected execution and public delivery.",
+    "Large retained input uses browser memory; no hard renderer-memory or forensic-erasure guarantee."
+  ]
+}

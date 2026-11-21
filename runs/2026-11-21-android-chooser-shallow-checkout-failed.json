@@ -1,0 +1,73 @@
+{
+  "format": "ai-trust-id-android-chooser-shallow-checkout-failure/v1",
+  "captured_at": "2026-11-21T12:07:52.733520+00:00",
+  "pass": false,
+  "scope": [
+    "N-014"
+  ],
+  "source_commit": "8cf0070975611d14a393789eb96badbb364428d6",
+  "run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44901997611",
+  "job_id": 136839646982,
+  "event": "pull_request",
+  "failed_stage": "Exercise session state and asset refusal controls",
+  "actual_focused_attempt": {
+    "groups": [
+      10,
+      46,
+      12,
+      20,
+      14,
+      10
+    ],
+    "tests": 112,
+    "passed": 111,
+    "failures": 0,
+    "errors": 1,
+    "skipped": 0,
+    "old102_passed": true,
+    "new_chooser_ten_passed": 9
+  },
+  "failure": {
+    "test": "OwnedBoundaries.test_original_seven_config_two_and_invalid_pairs_unchanged",
+    "file": "tests/test_android_chooser_controls.py",
+    "line": 164,
+    "exception": "subprocess.CalledProcessError",
+    "returncode": 128,
+    "cause": "The new exact-source preservation test shells out to a historical Git object which is not guaranteed in the unchanged shallow actions checkout.",
+    "historical_baseline": "3941603265c763de07d9f7d91e465e0832db39d1"
+  },
+  "log": {
+    "bytes": 44367,
+    "sha256": "effb11cc8eb52506ffae3c0f518032c0beb5b6a185c167a3930488f28bc38088",
+    "download_count": 1
+  },
+  "build_executed": false,
+  "engine_executed": false,
+  "emulator_executed": false,
+  "runtime_cases_executed": 0,
+  "secondary_upload_failure": "No expected Android outputs existed because the earlier focused-test step failed.",
+  "artifact_or_apk_downloaded": false,
+  "prior_selected_runtime_pass_rewritten": false,
+  "planned_correction_before_edit": {
+    "owned_file": "tests/test_android_chooser_controls.py",
+    "mechanism": "Pin the exact four original function-source SHA256 identities from the reviewed baseline, matching the existing source-segment guard; remove history/Git process dependency.",
+    "controls": [
+      "Run unchanged ten-group suite on both supported local Python versions.",
+      "Actual clean copied source with no .git must run all ten under isolated stdlib Python.",
+      "A subprocess trap inside the preservation group must not fire.",
+      "A changed original control body must be refused."
+    ],
+    "preserved": [
+      "Original source identity semantics and ten-group count.",
+      "All product/helper/native/workflow bytes and deadlines.",
+      "First failed result and prior actual runtime proof."
+    ],
+    "risks": [
+      "Constants must be captured from the exact reviewed original; verify them against both original and current function source before freezing.",
+      "No test-only correction can grant a new actual Android runtime pass; ordinary changed-source CI remains required."
+    ]
+  },
+  "physical_device_evidence": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closed": false
+}

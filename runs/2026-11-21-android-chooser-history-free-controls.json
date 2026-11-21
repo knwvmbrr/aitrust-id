@@ -1,0 +1,116 @@
+{
+  "format": "ai-trust-id-android-chooser-history-free-source-guard/v1",
+  "captured_at": "2026-11-21T12:10:02.333154+00:00",
+  "pass": true,
+  "scope": [
+    "N-014"
+  ],
+  "failed_pr_source": "8cf0070975611d14a393789eb96badbb364428d6",
+  "failed_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44901997611",
+  "preserved_failure": {
+    "path": "runs/2026-11-21-android-chooser-shallow-checkout-failed.json",
+    "sha256": "c0f18ce4ad1d0d3ecb12734366a4c73b12cc8e44cd30cbf23d83609061814362"
+  },
+  "changed_source": "tests/test_android_chooser_controls.py",
+  "changed_source_sha256": "47aed2e0069c75bae7fdaa15cba71b49603acdbb19ba4a47c82fed787704e4da",
+  "prior_source_sha256": "a26559c5807a0bf07535d804f7c64c1a1bb070afec79f4147789b6b5214bcaf9",
+  "mechanism": "Exact original function-source SHA256 comparisons no longer execute Git or require repository history.",
+  "original_reference": "3941603265c763de07d9f7d91e465e0832db39d1",
+  "four_original_function_identities": {
+    "verify_cases": "90f7ac9b6d4a2ca0b00707608c8bb1dbc095d4d1ea6474c0349462cc65923727",
+    "parse_dispatch": "74cd207aeafcfa1ce6cde351a7d27dc1c6da358435fa391b39e8407c95e4cbc6",
+    "observe": "830a3e14144832f2f5600f5f038673565d54f071488d89d280bbb48514dbbf6d",
+    "installed_uid": "d149734e21223f1340a9d332cac6a15ee06d83d49b7f16642a3c43f6f5eaf313"
+  },
+  "original_and_current_function_identities_match": true,
+  "preservation_subprocess_trap": true,
+  "weakened_result_guard_refusal": true,
+  "local_focused": [
+    {
+      "python": "3.12.14",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.13.0",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "actual_clean_source_no_git": {
+    "has_git_metadata": false,
+    "isolated_stdlib_flags": [
+      "-I",
+      "-S",
+      "-B"
+    ],
+    "existing_jdk": "OpenJDK21.0.10",
+    "checks": [
+      {
+        "case": "before-no-git",
+        "returncode": 1,
+        "log_sha256": "17d61df0a24ab6f2c73a06808b73cff2cb3fa72ddce672ccd1d18fb4df8224a4",
+        "log_bytes": 3008,
+        "tests": 10,
+        "skip_count": 0
+      },
+      {
+        "case": "after-no-git-python312",
+        "returncode": 0,
+        "log_sha256": "67e52a271ef47c02999f27c9c25c10ca6dc38e1bfb8c14e88b91d8f8e372494c",
+        "log_bytes": 1748,
+        "tests": 10,
+        "skip_count": 0
+      },
+      {
+        "case": "after-no-git-python313",
+        "returncode": 0,
+        "log_sha256": "e01ebc4a79f53e381bbf378dfeb6457f08e8a4cd2c85b5a3b827aa125519e563",
+        "log_bytes": 1748,
+        "tests": 10,
+        "skip_count": 0
+      },
+      {
+        "case": "weakened-original-refused",
+        "returncode": 1,
+        "log_sha256": "697d0d62874a7cb208de5a0de050c006bae8bbf5aab10a002a469aca914ff191",
+        "log_bytes": 2971,
+        "tests": 10,
+        "skip_count": 0
+      }
+    ],
+    "private_collector_sha256": "ccae6afa47bafdb3b698a56a1efd26c669d72c805a2c0d302138f5a2013365d8",
+    "copied_disposable_sources_removed": true
+  },
+  "source_bindings": {
+    "tests/test_android_chooser_controls.py": "47aed2e0069c75bae7fdaa15cba71b49603acdbb19ba4a47c82fed787704e4da",
+    "scripts/android-chooser-controls.py": "3bb0d3cb2117dca46554b49badecee240733466aeb9185a608c8a4a27ac86b34",
+    "scripts/android-intent-controls.py": "fe810635f94ccc9dda90063c73cca99724698d734794be34c4d39c75803dd69a",
+    "scripts/verify-android-emulator.py": "825c703e20ec3401d29c779294138e337d80b9d19ec920ef8ebf4d4d4c573e43",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "tests/android/intent-sender/ChooserActivity.java": "49029c0cf2f6ca951dfdf4291c84502a008502aa2fd01220cb0c591faa725719"
+  },
+  "group_count_changed": false,
+  "product_helper_native_workflow_changed": false,
+  "new_sdk_or_emulator_execution": false,
+  "new_dependencies_installed": false,
+  "unchanged_failed_workflow_retried": false,
+  "current_hosted112_pass_claimed": false,
+  "prior_selected_runtime_rewritten": false,
+  "physical_device_evidence": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closed": false,
+  "limits": [
+    "This corrects the focused-test portability bug, not an Android product behavior.",
+    "Actual PR141 source attempted112 tests with111passing/1error; build, engine and emulator were skipped. That failure remains immutable.",
+    "The ordinary changed-source protected/Android run remains required for a current112 and runtime result.",
+    "No fetch-depth, permissions, SDK/license, timeout, test count or original runtime acceptance was changed."
+  ]
+}

@@ -98,7 +98,7 @@ class SafeSenderBoundary(unittest.TestCase):
         self.assertEqual(value.attrib['package'],m.SENDER);self.assertEqual(value.findall('uses-permission'),[])
         app=value.find('application');self.assertEqual(app.attrib[ns+'allowBackup'],'false');self.assertEqual(app.attrib[ns+'debuggable'],'false')
         self.assertEqual(app.findall('provider'),[]);self.assertEqual(app.findall('service'),[])
-        self.assertEqual([x.attrib[ns+'name'] for x in app.findall('activity')],['.SenderActivity'])
+        self.assertEqual([x.attrib[ns+'name'] for x in app.findall('activity')],['.SenderActivity','.ChooserActivity'])
         self.assertEqual(app.find('activity').attrib[ns+'launchMode'],'singleTask')
         production=(ROOT/'mobile/android/AndroidManifest.xml').read_text();self.assertNotIn(m.SENDER,production)
         builder=load('synthetic_default_builder','scripts/android-share-build.py')
@@ -200,7 +200,7 @@ class SenderBuild(unittest.TestCase):
                     if fault=='command':return subprocess.CompletedProcess(argv,1,b'PRIVATE_TOOL_CANARY')
                     if tool=='aapt2' and args[1]=='link':
                         with zipfile.ZipFile(Path(args[args.index('-o')+1]),'w') as z:z.writestr('AndroidManifest.xml',b'inert')
-                    if tool=='d8':(Path(args[args.index('--output')+1])/'classes.dex').write_bytes(m.SENDER_DEX+m.SENDER_FRAME)
+                    if tool=='d8':(Path(args[args.index('--output')+1])/'classes.dex').write_bytes(m.SENDER_DEX+m.SENDER_FRAME+m.CHOOSER_DEX)
                     if tool=='zipalign':shutil.copyfile(args[-2],args[-1])
                     if tool=='keytool':Path(args[args.index('-keystore')+1]).touch()
                     if tool=='apksigner' and args[1]=='sign':shutil.copyfile(args[-1],args[args.index('--out')+1])

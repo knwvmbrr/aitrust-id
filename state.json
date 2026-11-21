@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-21T10:46:30.528020+00:00",
+  "updated": "2026-11-21T12:16:20.056643+00:00",
   "active_increment": "Publish the source-matched Android Share fix and independent NF reference preview; all70 original requirements remain open, with N014 advanced20 to80 and physical/human acceptance preserved.",
-  "status": "new_independent_HP_runtime_Android_software_integrated_under_verification; prior_production_live; original70_target60_unmet",
+  "status": "independent_HP_uncertainty_preview_runtime_sources_Android_malformed_controls_published; original70_target60_unmet",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -1195,7 +1195,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-21T10:46:30.528020+00:00",
+  "updated_at": "2026-11-21T12:16:20.056643+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -4479,7 +4479,7 @@
   "nov21_next_delivery": {
     "recorded_at": "2026-11-21T10:00:20.708615+00:00",
     "architecture": "docs/independent-delivery-nov21-next.md",
-    "status": "all5_current_source_checks_pass; protected_CI_and_public_delivery_pending",
+    "status": "protected_and_publicly_verified_software_delivery; original_target60_unmet",
     "HP": {
       "standalone_worker_commit": "8fec188288fe93b53c1c413e0a7d20d42f48e102",
       "integrated_evidence": "runs/2026-11-21-hp-next-integrated-site.json",
@@ -4506,15 +4506,18 @@
       "distinct_review": "runs/2026-11-21-android-malformed-independent-review.json",
       "new_local_focused_groups": 14,
       "prior_hosted_focused_tests": 88,
-      "new_workflow_execution_pending": true,
-      "physical_TalkBack_or_release_acceptance": false
+      "new_workflow_execution_pending": false,
+      "physical_TalkBack_or_release_acceptance": false,
+      "automatic_current_source_run": 44896016732,
+      "automatic_focused_tests": 102,
+      "automatic_review": "runs/2026-11-21-android-pr140-automatic-review.json"
     },
     "all_original_criteria_preserved": true,
     "original_complete": 132,
     "original_open": 70,
     "new_original_closures": 0,
-    "closed_scoped_jobs": 16,
-    "protected_public_delivery_pending": true,
+    "closed_scoped_jobs": 19,
+    "protected_public_delivery_pending": false,
     "real_collection_enabled": false,
     "independent_accuracy_evidence": false,
     "prior_policy1_12_unchanged": true,
@@ -4562,6 +4565,87 @@
       "website": "runs/2026-11-21-independent-final-website.json"
     },
     "finite_inventory_review": "runs/2026-11-21-independent-finite-inventory-review.json",
-    "source_inventory_count": 1467
+    "source_inventory_count": 1467,
+    "publication_evidence": "runs/2026-11-21-nov21-independent-publication.json",
+    "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
+    "CI_review": "runs/2026-11-21-pr140-required-ci-review.json",
+    "closed_at": "2026-11-21T11:07:03.859569+00:00",
+    "metadata_only_followup_pending": true
+  },
+  "nov21_maintenance_delivery": {
+    "recorded_at": "2026-11-21T11:12:20.374012+00:00",
+    "architecture": "docs/maintenance-delivery-nov21.md",
+    "status": "all5_current_source_checks_pass_after_history_free_guard; new_protected_and_automatic_Android_checks_pending",
+    "MT_worker_commit": "ecd3096318437db0816a0484bb21cfb248546f41",
+    "MT_before": "runs/2026-11-21-mt-input-clipping-before.json",
+    "MT_after": "runs/2026-11-21-mt-input-retention-after.json",
+    "new_original_closures": 0,
+    "original_complete": 132,
+    "original_open": 70,
+    "new_scoped_task_created": false,
+    "real_collection_enabled": false,
+    "Android_hosted_run": 44898547294,
+    "Android_hosted_focused": 102,
+    "Android_new_local_focused": 10,
+    "Android_registered_automatic_focused": 112,
+    "Android_runtime_cases": {
+      "original": 7,
+      "configuration": 2,
+      "malformed_refusal_recovery_pairs": 9,
+      "OS_chooser": 2
+    },
+    "runtime_sources_worker_commits": [
+      "261f65b044c4f9233402c3f693f5d93f37da57ce",
+      "6a4aa1dcdce1b044aec7e133a42e1eb8be307bc3"
+    ],
+    "current_scope_counter": {
+      "original_complete": 132,
+      "original_open": 70,
+      "closed_scoped_jobs": 19
+    },
+    "tag_release_approved": false,
+    "independent_accuracy_evidence": false,
+    "physical_phone_tested": false,
+    "registered_checks": {
+      "PS": 7,
+      "PII_REDACTED": 6,
+      "protocol": 61,
+      "extension": 14,
+      "website": 59
+    },
+    "normal_build_and_both_selected_artifact_gates_passed": true,
+    "receipts": {
+      "PS": "runs/2026-11-21-maintenance-final-PS.json",
+      "PII_REDACTED": "runs/2026-11-21-maintenance-final-PII_REDACTED.json",
+      "extension": "runs/2026-11-21-maintenance-final-extension.json",
+      "protocol": "runs/2026-11-21-maintenance-final-protocol-portable.json",
+      "website": "runs/2026-11-21-maintenance-final-website.json"
+    },
+    "source_inventory_count": 1486,
+    "finite_inventory_review": "runs/2026-11-21-maintenance-portable-inventory-review.json",
+    "preserved_failed_website": "runs/2026-11-21-maintenance-website-capacity-failure.json",
+    "test_capacity_correction": "runs/2026-11-21-maintenance-native-reserve-correction.json",
+    "preserved_Android_first_CI_failure": "runs/2026-11-21-android-chooser-shallow-checkout-failed.json",
+    "Android_history_free_controls": "runs/2026-11-21-android-chooser-history-free-controls.json",
+    "first_Android_CI_candidate": {
+      "source_commit": "8cf0070975611d14a393789eb96badbb364428d6",
+      "run": 44901997611,
+      "focused_pass": 111,
+      "focused_error": 1,
+      "APK_or_emulator_executed": false
+    }
+  },
+  "f030_dom_route_choice": {
+    "selected_at": "2026-11-21T11:57:14.251814+00:00",
+    "selected_by": "Codex PM /root under the existing full F030 alternative",
+    "selected_route": "explicitly consented completed-response DOM adapter",
+    "original_criterion": "Prove MAIN-world stream capture on a live supported vendor OR explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation.",
+    "original_master_and_full_acceptance_preserved": true,
+    "separate_owner_approval_for_this_enumerated_choice_required": false,
+    "DOM_success_is_fetch_patch_validation": false,
+    "mixed_stream_capture_enabled": false,
+    "new_permissions_granted": false,
+    "status": "route_selected; source-bound live vendor proof still required; interactive browser access currently unavailable and skipped",
+    "original_requirement_closed": false
   }
 }

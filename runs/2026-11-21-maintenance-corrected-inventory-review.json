@@ -1,0 +1,35 @@
+{
+  "profile": "finite-maintenance-single-test-delta-peer-review/v1",
+  "captured_at": "2026-11-21T11:48:11.705349+00:00",
+  "pass": true,
+  "reviewed_by": "Codex /root/seo",
+  "previous_candidate_sha256": "5c9fb23cc3dbe843749f36e240fabd5607d54a3c9aafccf037c7ef337daaa062",
+  "candidate_sha256": "252fc8c2c57caa88ef3136915beb0c872920abbcc57007b17ce79f8c4ab02298",
+  "previous_review_sha256": "e1e28903db4ef1a5487ee9c1909c128201f6292a9cadae6226a7a5b0e57d8590",
+  "actual_source_count": 1486,
+  "twice_current_inventory_matches": true,
+  "added": [],
+  "removed": [],
+  "modified": {
+    "tests/test_ios_share_verifier.py": {
+      "before": "4b7ebe84b4bad2c106adc84781e1823a09bd15330402171390f430b034e1d2a2",
+      "after": "0e453930ffb2e7f0c7e7bfbb7616fa7cf9a8a8995240764668e0ab82436bee34"
+    }
+  },
+  "all_other_reviewed_sources_identical": true,
+  "all_current_sources_tracked": true,
+  "previous_command_and_source_coverage_review_still_applicable": true,
+  "scope": {
+    "master_entirely_unchanged": true,
+    "all202required_acceptance_and_percentages_unchanged": true,
+    "complete": 132,
+    "open": 70,
+    "scoped_tasks_closed": 19,
+    "original_closures": 0,
+    "agent_tag_tools_percent": 100
+  },
+  "limits": [
+    "Finite inventory/hash and unchanged-criteria comparison only. No tests, browser, host or network execution.",
+    "The changed test semantic review and current actual capability execution remain separate; no product, permission, license or release clearance."
+  ]
+}

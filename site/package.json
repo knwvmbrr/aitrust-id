@@ -10,9 +10,9 @@
     "deploy": "wrangler pages deploy dist --project-name aitrust-id --branch main --commit-dirty=true",
     "verify:data": "node scripts/prepare.mjs",
     "prebuild": "node ../scripts/verify-changelog.cjs",
-    "predeploy": "node ../scripts/verify-changelog.cjs && node ../scripts/verify-route-boundaries.cjs && python3 ../scripts/pyodide-js-sources.py --check-built dist",
+    "predeploy": "node ../scripts/verify-changelog.cjs && node ../scripts/verify-route-boundaries.cjs && python3 ../scripts/pyodide-js-sources.py --check-built dist && python3 ../scripts/zlib-source-delivery.py --check-built dist",
     "reviewed-release": "python3 ../scripts/web-distribution.py release-check",
-    "postbuild": "python3 ../scripts/pyodide-js-sources.py --check-built dist"
+    "postbuild": "python3 ../scripts/pyodide-js-sources.py --check-built dist && python3 ../scripts/zlib-source-delivery.py --check-built dist"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "1.2.0",

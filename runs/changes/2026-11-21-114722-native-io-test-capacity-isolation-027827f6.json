@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-114722-native-io-test-capacity-isolation-027827f6",
+  "recorded_at": "2026-11-21T11:47:22.853640+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2995b5a6d7d4c4d2f677708d47849343c1bcaba3",
+  "changed": "Preserved the failed website receipt and corrected synthetic native I/O tests that depended on unrelated host free space; added explicit low-capacity refusal/reaping and permitted-cleanup controls.",
+  "proves": "The unchanged production runner correctly enforced its2000000000-byte reserve. All118 affected focused tests pass after isolating the test environment; the real low-reserve path still refuses and reaps its actual child. Four other capability receipts remain current.",
+  "limits": "This changes tests only, not the production resource guard, native app, iPhone acceptance or release. The website capability must run again against the corrected test source; original132complete70open and19scoped retained.",
+  "scope_ids": [
+    "F-142",
+    "N-013"
+  ],
+  "files": {
+    "tests/test_ios_share_verifier.py": "0e453930ffb2e7f0c7e7bfbb7616fa7cf9a8a8995240764668e0ab82436bee34",
+    "runs/2026-11-21-maintenance-website-capacity-failure.json": "aed9501dbbe27c80eb1bd6e44b8fc2bd6a4d0be6d700a66e88124d8f56b9b556",
+    "runs/2026-11-21-maintenance-native-reserve-correction.json": "37a530cf03b678779408267134d242145a04e5d43a8259b0eac5f0fe2decce2f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-maintenance-website-capacity-failure.json",
+      "sha256": "aed9501dbbe27c80eb1bd6e44b8fc2bd6a4d0be6d700a66e88124d8f56b9b556"
+    },
+    {
+      "path": "runs/2026-11-21-maintenance-native-reserve-correction.json",
+      "sha256": "37a530cf03b678779408267134d242145a04e5d43a8259b0eac5f0fe2decce2f"
+    }
+  ],
+  "checks": []
+}

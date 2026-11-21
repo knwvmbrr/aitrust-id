@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-110207-independent-protected-merge-proof-92270f18",
+  "recorded_at": "2026-11-21T11:02:07.474655+00:00",
+  "author": "Codex /root; actual Android/API reviewer /root/share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
+  "changed": "Recorded exact protected PR140 merge and current automatic Android/API acceptance reviews before normal deployment.",
+  "proves": "All eleven required checks pass on3941603; protected merged93a6ec has the same tree. Android102 plus original9 and malformed9 pairs executed. Existing API/MCP enhancement remaining software acceptance is independently evidenced.",
+  "limits": "Public deployment and three software-job closures remain pending. Original132 complete70open and failing independent release gate retained.",
+  "scope_ids": [
+    "F-018",
+    "F-057",
+    "N-014",
+    "X-02"
+  ],
+  "files": {
+    "runs/2026-11-21-pr140-required-ci-review.json": "fc51882e4438c0201ae857b7fc0afca9c0b77c8a61670aa57978e843889d6689",
+    "runs/2026-11-21-android-pr140-automatic-review.json": "0ee734c7351d591fd0db1155c5ead031cdea07e0b7254ca690ecce731a86a75b",
+    "runs/2026-11-21-agent-tag-tools-enhancement-acceptance.json": "1cb7071b2a87c2668dac4df75616de4910c8a9bf0fc7e8ff8d2fc3616e39ad4a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-pr140-required-ci-review.json",
+      "sha256": "fc51882e4438c0201ae857b7fc0afca9c0b77c8a61670aa57978e843889d6689"
+    },
+    {
+      "path": "runs/2026-11-21-android-pr140-automatic-review.json",
+      "sha256": "0ee734c7351d591fd0db1155c5ead031cdea07e0b7254ca690ecce731a86a75b"
+    },
+    {
+      "path": "runs/2026-11-21-agent-tag-tools-enhancement-acceptance.json",
+      "sha256": "1cb7071b2a87c2668dac4df75616de4910c8a9bf0fc7e8ff8d2fc3616e39ad4a"
+    }
+  ],
+  "checks": []
+}
