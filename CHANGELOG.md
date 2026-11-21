@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-145641-bound-current-capture-prerequisite-repair-302ac434
+
+Recorded 2026-11-21T14:56:41.868493+00:00 · Contributor: Codex PM /root; independent containment review /root/seo · change
+
+- **Changed.** Specify isolated current-source signed capture staging with cached dependencies, unique private credentials, measured runtime containment and owner-gated browser trust.
+- **Evidence.** Current cached requirement identities match; the plan preserves the existing stack and forbids public exposure, local Docker and silent unsigned substitution. [Change record](./runs/changes/2026-11-21-145641-bound-current-capture-prerequisite-repair-302ac434.json).
+- **Not claimed.** Architecture and prerequisite repair only; no live capture or original closure is claimed.
+
+
+### 2026-11-21-143337-start-full-original-closure-wave-0a706c6f
+
+Recorded 2026-11-21T14:33:37.180705+00:00 · Contributor: Codex PM /root; task-list review /root/seo · change
+
+- **Changed.** Select full original capture and tenant-policy acceptance targets; preserve every historical gate and assign a separate open AI-client connection implementation.
+- **Evidence.** Fresh queue classification and live native UI/service prerequisite checks identify concrete work and exact configuration blockers; accounting remains valid. [Change record](./runs/changes/2026-11-21-143337-start-full-original-closure-wave-0a706c6f.json).
+- **Not claimed.** No original closed, no endpoint deployed, no capture or signing trust enabled, no independent human or accuracy acceptance inferred.
+
+
 ### 2026-11-21-124849-verified-maintenance-publication-closeout-5175a661
 
 Recorded 2026-11-21T12:48:49.085713+00:00 · Contributor: Codex /root; reviews /root/web_camo and /root/share_debugger · change

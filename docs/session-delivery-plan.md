@@ -1,3 +1,13 @@
+# Current original-closure wave
+
+Updated 2026-11-21T14:33:27.554593+00:00. **132 complete / 70 open; target 60 not met.**
+
+The next full-original candidates are F-030 (actual supported DOM capture) and N-010 (owned per-tenant private policy operation), with their complete historical criteria preserved. Root verified that Chrome UI access is restored, but checks are disabled, no gateway key is selected, and the local gateway is unavailable. The existing remote staging service is unsigned and differs from current service source; it cannot silently substitute. Skip this configuration gate while the independent policy implementation proceeds.
+
+`/root/share_debugger` owns the private policy implementation; `/root/seo` owns independent acceptance and execution review. `/root/web_camo` now implements the newly requested open HTTP/MCP connection for AI clients. The existing MCP tool is local stdio only, so web-client connection is real missing functionality, not a completed public endpoint. These are dated assignments, not permanent tag processes.
+
+[Architecture and risks](original-closure-wave-nov21.md). No original closure or extra finished task is recorded from this plan.
+
 # Independent maintenance review — 2026-11-21T11:31:36.349842+00:00
 
 The reviewed MT handoff preserves the whole native paste and refuses oversized text before analysis. The Android handoff exercises actual OS Share selection and cancellation in addition to the original/configuration/malformed controls. Exact embedded-library sources/notices and the selected-source export ownership repair also have separate actual controls and distinct reviews.

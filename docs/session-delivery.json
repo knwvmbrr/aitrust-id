@@ -5764,7 +5764,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-21T11:31:36.349842+00:00",
+  "updated_at": "2026-11-21T14:33:27.554593+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -6184,5 +6184,58 @@
         "6a4aa1dcdce1b044aec7e133a42e1eb8be307bc3"
       ]
     }
+  },
+  "original_closure_wave": {
+    "recorded_at": "2026-11-21T14:33:27.554593+00:00",
+    "source_base": "e8287050493f3f30b6c92967beed224a6c8b4dc3",
+    "architecture": "docs/original-closure-wave-nov21.md",
+    "original_complete": 132,
+    "original_open": 70,
+    "target_open": 60,
+    "task_list_lead": "/root/seo",
+    "classification": {
+      "near_term_technical": [
+        "F-030",
+        "N-010"
+      ],
+      "method_or_claim_evidence": 28,
+      "human_outside_device_operating": 17,
+      "governance_adoption_terms": 11,
+      "community_research_operation": 7,
+      "substantial_integration_distribution": 5
+    },
+    "F-030": {
+      "worker": "/root",
+      "reviewer": "/root/web_camo",
+      "status": "blocked at authenticated service and existing browser configuration; DOM alternate already selected",
+      "observed": {
+        "native_mac_ui_accessible": true,
+        "browser_connector_available": false,
+        "installed_consent_enabled": false,
+        "gateway_key_selected": false,
+        "local_gateway_available": false,
+        "remote_staging_healthy": true,
+        "remote_staging_signed": false,
+        "remote_and_saved_token_match": false,
+        "remote_services_current_source": false
+      },
+      "new_capture_or_trust_grant_performed": false,
+      "original_closure": false
+    },
+    "N-010": {
+      "worker": "/root/share_debugger",
+      "reviewer": "/root/seo",
+      "status": "architecture and full original boundary review; implement owner-bound per-tenant policy enforcement",
+      "historical_human_commercial_gate_preserved": true,
+      "original_closure": false
+    },
+    "open_ai_client_connection": {
+      "worker": "/root/web_camo",
+      "status": "research and implement actual HTTP MCP connection independently of N010",
+      "existing_capability": "local stdio MCP, Python and JSON interface only",
+      "scope_effect": "new authorized connection enhancement; no original count reduction",
+      "public_endpoint_deployed": false
+    },
+    "inactive_tag_queues_are_not_running_processes": true
   }
 }
