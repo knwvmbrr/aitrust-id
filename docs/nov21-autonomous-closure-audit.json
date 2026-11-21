@@ -1,0 +1,2789 @@
+{
+  "schema": "original-autonomous-closure-audit/v1",
+  "captured_at": "2026-11-21T20:11:26.924900+00:00",
+  "performed_by": "Codex /root/seo task-list lead",
+  "source_base": "ee8db51846d9f6dd7d93a5b9366edf84444833a8",
+  "source_documents_sha256": {
+    "AGENTS.md": "64335866e529ab3e970a862c08db36741ff00523d6e0b6986003a95c1a8b43ec",
+    "state.json": "ea9002bcbc2f8b567f7c432b34e5be297569a726486aaf050e763f8cef033e44",
+    "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
+    "docs/scope-progress.json": "c7dea5d3e608657c31c560e8ef2e781d733739d01c37332bf9959a2e53e2338f",
+    "docs/session-delivery.json": "de5a51204c05fd6f3fe64ba5b098c1067b89ed51190edf68cf7e6bdbc63154a3",
+    "docs/session-delivery-plan.md": "c7a4db69219b7c9da7f310543b9d91be315a0029f7082a659ee60d1d85303422",
+    "docs/scope-delivery.md": "54a525576e511e56de86a9632de3b4adbb46307c7cbdff598853801b8fa9f561",
+    "DECISIONS.md": "b1b96b462d67b9773856e9e3c992b48de01df04a2dfc72968a94fb0ead26187e",
+    "rfcs/0004-tag-claim-boundaries.md": "b9b6c80c68dec7a59ccd1db6c59faf36fb61997491a6ded981b1fcb462f23b38",
+    "docs/tags/UC-01.md": "13929874c3f3e8fb9620331ebbf09f133be7f87b6b256c70e90105b82b906c55",
+    "docs/private-policy-result.md": "a6a23141cc4727950057c8082ed45e329a84ea1e7971a9bd06e53d2adf0e30c4",
+    "docs/firefox-adapter-result.md": "3c8a22e3c59bfff48262e7b2c62ae564b882915d9a28aa59bafc5e4500354d2e",
+    "docs/independent-review.md": "cf7edebd36be6e5777aa7f291bfada601f36cff13068bab350162ac857636202",
+    "docs/quantitative-observations.md": "2f90b10c7409e507c98c56df12aa0cc33050de4e8e1ebe4a37655ea4693f8488",
+    "docs/session-revision-result.md": "66d7e91595d6bca68770854aa34ac4cda258a6f64cdc7b7cf996469b1d357ad5",
+    "docs/reviewer-agreement.md": "78cba6e39233720c25f8c60c34698fa75518b91f647f6c3814b11258bbecf024"
+  },
+  "baseline": {
+    "original_total": 202,
+    "original_complete": 133,
+    "original_open": 69,
+    "target_open": 60
+  },
+  "activity_semantics": "Dated review assignment. No tag agent is described as a permanent process or running background bot; parent owns current actual staffing.",
+  "scope": "Full69 open master jobs/outcomes/acceptance and required_acceptance read, with historical tag/process gates retained. next_fix is supporting history, never the sole criterion.",
+  "summary": {
+    "originals_classified": 69,
+    "new_original_closures": 0,
+    "full_autonomous_closure_candidates_ready": 0,
+    "target60_status": "NOT MET",
+    "classification_counts": {
+      "claim_method_and_independent_release": 28,
+      "actual_human_device_or_outside_operation": 17,
+      "adoption_legal_governance_or_service_commitment": 11,
+      "actual_community_research_operation": 7,
+      "full_distribution_or_unsupported_vendor_mechanism": 5,
+      "organization_human_commercial_acceptance": 1
+    },
+    "not_all_work_is_owner_blocked": true
+  },
+  "strongest_conditional_candidates": [
+    {
+      "id": "F-037",
+      "remaining": "Outside-user acceptance explicitly retained; more current-vendor lifecycle also needed. F030 one-response DOM replacement does not close it.",
+      "full_closure_without_external_action": false
+    },
+    {
+      "id": "N-010",
+      "remaining": "Real governed local mechanism now exists, but historical human operation/full commercial conformance cannot be machine-substituted.",
+      "full_closure_without_external_action": false
+    },
+    {
+      "id": "T-UC",
+      "remaining": "Apparent proposal wording reviewed against complete UC-01/TAG-UC/RFC0004; do not count a new paper mapping as a fully delivered tag/acceptance.",
+      "full_closure_without_external_action": false
+    }
+  ],
+  "selected_full_original_for_implementation": null,
+  "implementation_performed": false,
+  "reason_no_full_implementation_dispatched": "No remaining original has all full acceptance independently executable within present authorization/evidence. Implementing a partial wrapper or rewriting criteria would not reduce69. Routine technical choices do not require invented owner permission; actual missing software and actual independent/human/legal/operating evidence are distinguished per record.",
+  "next_autonomous_engineering": {
+    "scope_id": "T-FI",
+    "existing_assets": [
+      "tools/citation_resolution.py",
+      "scripts/citation-resolution.py",
+      "tests/test_citation_resolution.py",
+      "docs/fi-citation-sidecar.md"
+    ],
+    "job": "Provide a genuinely usable local phone/desktop citation-resolution path over the existing exact source-bound sidecar, with explicit numbered marker/reference input and clear resolution-failure reasons.",
+    "acceptance": "Bind both subject and declared reference corpus/source versions; preserve supported/unsupported/Unavailable distinctions, independent failure and explicit exports; no truth, contradiction or FI issuance.",
+    "why_not_original_closure": "This supplies real user operation but does not replace blind contradiction/missing-evidence labels, category errors, accepted FI mapping or human release acceptance.",
+    "dispatch_status": "recommendation only; no implementation source or live agent claimed by this audit"
+  },
+  "records": [
+    {
+      "id": "F-004",
+      "title": "Abstention as a first-class state — UNK",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "3891a8afddbf2d1af7816a8cfc60fcaa4bc4302d7e40e4ce874738e62b0922a9",
+      "master_job": "Specify and deliver abstention as a first-class state — UNK.",
+      "master_outcome": "The tool says \"I don't know\" instead of guessing at you",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Complete owner adoption/compatibility decision for the proposed UNK replacement and required human understanding/accessibility checks. Current abstentions and six UI states work without emitting a new UNK verdict."
+      ],
+      "classification": "adoption_legal_governance_or_service_commitment",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "UNK replacement and compatibility adoption plus actual understanding/accessibility acceptance remain explicit. Existing six states do not implement adopted UNK.",
+      "next_authorized_technical_or_operating_action": "No new protocol code until the recorded decision; retain working failed/unsupported/no-finding distinctions.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/extension-consumer-plan.md",
+        "docs/assertion-conformance-plan.md",
+        "scripts/check-assertion.py",
+        "tests/test_assertion_conformance.py",
+        "runs/2026-10-10-six-state-consumer-browser.json",
+        "runs/2026-10-10-consumer-schema-python-corrected.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-004",
+        "docs/scope-progress.json#F-004",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-005",
+      "title": "Per-tag confidence floors",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "e234821beea0180fc7a2a3c6910da79dee98d95e0cfa2c3858a0b650b62d0d8f",
+      "master_job": "Specify and deliver per-tag confidence floors.",
+      "master_outcome": "No tag is shown below the confidence its evidence supports",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Agree and independently validate evidence-supported per-tag calibration/confidence policy, then complete integration and final acceptance. Current 0.70 PS rule-score enforcement works but is not a measured probability or the 0.93 precision gate."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Per-tag calibration/confidence policy and independent supporting evidence remain missing; literal rule score is not measured precision.",
+      "next_authorized_technical_or_operating_action": "Implement only method-appropriate calibration/abstention accounting for a selected accepted claim; do not invent probabilities.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/confidence-floor-audit.md",
+        "runs/2026-10-13-confidence-floor-http-audit.json",
+        "tests/test_gateway_integration.py"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-005",
+        "docs/scope-progress.json#F-005",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-076",
+      "title": "RFC process — template, 14-day comment, evidence requirement",
+      "percent_complete_unchanged": 40,
+      "original_criterion_sha256": "885a5257874aea2c53e1dcbf6b94b5d50c095dd931ae1d62bc1005b9dc07fa24",
+      "master_job": "Specify and deliver rFC process — template, 14-day comment, evidence requirement.",
+      "master_outcome": "The taxonomy cannot drift into noise by accretion",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Execute the RFC/maintainer/recusal process with accepted roles and recorded decisions; a policy file is not an operating foundation or populated independent board."
+      ],
+      "classification": "adoption_legal_governance_or_service_commitment",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Accepted RFC/maintainer/recusal roles, actual decisions and operating process are missing; template is not a populated independent board.",
+      "next_authorized_technical_or_operating_action": "Exercise the real process with legitimately assigned people and dated decisions when supplied.",
+      "historical_evidence_paths_preserved": [
+        "CONTRIBUTING.md",
+        "GOVERNANCE.md",
+        "DECISIONS.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-076",
+        "docs/scope-progress.json#F-076",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-NF",
+      "title": "NF Non-Fiction",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "ee20f8075be102f3a3a580582147e4cd3c790eaa14720e8e4a98af62c00241b0",
+      "master_job": "Extract checkable claims and compare them with the supplied, versioned reference corpus.",
+      "master_outcome": "The reader sees which claim is supported by which source and passage, and the limits of that support.",
+      "master_acceptance": "Independent claim/passage labels measure support accuracy and unsupported-claim coverage.; No corpus means unsupported/unavailable for NF, not an NF verdict.; Changing a source invalidates only findings derived from that source. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Deliver NF Non-Fiction. Next package action: Define claim units, reference freshness and corpus identity. Required outcome: The reader sees which claim is supported by which source and passage, and the limits of that support."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Independent claim/passage labels and support/coverage errors remain required; current literal/overlap and selected NLI observations do not establish semantic support.",
+      "next_authorized_technical_or_operating_action": "Extend exact-source claim/reference coverage presentation with explicit unevaluated units; keep no-corpus/refusal isolation.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/reference-revision-plan.md",
+        "docs/reference-revisions.md",
+        "tools/reference_revision.py",
+        "runs/2026-10-12-reference-revision-practice-local.json",
+        "runs/2026-10-12-reference-revision-linux.json",
+        "docs/nf-source-evidence.md",
+        "runs/2026-11-19-nf-cosine-binding-original-defect.json",
+        "runs/2026-11-19-nf-cosine-binding-corrected-macos.json",
+        "tools/nf_device.py",
+        "docs/nf-device-reference.md",
+        "runs/2026-11-21-nf-device-browser-candidate-1.json",
+        "runs/2026-11-21-nf-device-correction-accounting.json",
+        "runs/2026-11-21-nf-input-original.json",
+        "runs/2026-11-21-nf-input-corrected.json",
+        "runs/2026-11-21-nf-device-independent-review.json",
+        "runs/2026-11-21-nov21-functional-publication.json",
+        "runs/2026-11-21-pr138-required-ci-review.json",
+        "runs/2026-11-21-android-pr138-software-review.json",
+        "runs/2026-11-21-nov21-functional-counter-review.json",
+        "runs/2026-11-21-nov21-functional-closeout.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-NF",
+        "docs/scope-progress.json#T-NF",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-FI",
+      "title": "FI Fiction / Fabricated",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "34e7cec9cb52416aa3e7b0f5abd5e4f9a0b4e7fc1c08b5ca80c562101e46f287",
+      "master_job": "Distinguish contradicted claims from citations that cannot be resolved within the declared reference set.",
+      "master_outcome": "The reader can inspect the contradiction or resolution failure without being told an entire author or work is fabricated.",
+      "master_acceptance": "Blind labels distinguish contradiction from missing evidence.; Offline non-resolution alone never establishes that a source does not exist anywhere.; Publish error rates by evidence type; NF and FI may describe different claims in one answer. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Deliver FI Fiction / Fabricated. Next package action: Separate contradiction and unresolved-citation evidence types. Required outcome: The reader can inspect the contradiction or resolution failure without being told an entire author or work is fabricated."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Blinded contradiction-versus-missing labels, category errors, accepted mapping and supported human operation remain missing.",
+      "next_authorized_technical_or_operating_action": "Port the existing independently usable citation-resolution sidecar to a local phone/desktop form with exact subject/corpus/source bindings; issue no FI verdict.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/reference-revision-plan.md",
+        "docs/reference-revisions.md",
+        "tools/reference_revision.py",
+        "runs/2026-10-12-reference-revision-practice-local.json",
+        "runs/2026-10-12-reference-revision-linux.json",
+        "tools/citation_resolution.py",
+        "scripts/citation-resolution.py",
+        "tests/test_citation_resolution.py",
+        "docs/fi-citation-sidecar.md",
+        "runs/2026-11-19-fi-citation-sidecar-macos.json",
+        "runs/2026-11-19-fi-postcommit-corrected-macos.json",
+        "runs/2026-11-19-fi-postcommit-root-replay.json",
+        "runs/2026-11-19-fi-fdopen-corrected-macos.json",
+        "runs/2026-11-19-fi-final-ownership-review.json",
+        "runs/2026-11-19-fi-opaque-target-corrected-macos.json",
+        "runs/2026-11-19-fi-current-source-ownership-macos.json",
+        "runs/2026-11-19-fi-opaque-target-root-review.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-FI",
+        "docs/scope-progress.json#T-FI",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-HP",
+      "title": "HP Hallucination Possible",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "8119307376567b8b617c1c9b293991b50322eb3d2bbc9b212b843c811f118cfe",
+      "master_job": "Identify validated inconsistency and unsupported-specificity indicators without equating them with proven falsehood.",
+      "master_outcome": "The reader knows which inconsistency or unsupported detail warrants checking and why.",
+      "master_acceptance": "Independent labels and comparison with simpler baselines establish useful indicator performance.; The release claim names the supported indicator; it does not infer model intent.; No source lookup capability is misrepresented as a factual verification. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Deliver HP Hallucination Possible. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: The reader knows which inconsistency or unsupported detail warrants checking and why."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Independent indicator labels and simpler-baseline comparison are missing; literal details/uncertainty previews are not validated hallucination indicators.",
+      "next_authorized_technical_or_operating_action": "Finish contextual citation-scope and word-sense observations without inferred truth; preserve per-method uncertainty.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/hp-device-explorer.md",
+        "runs/2026-11-19-hp-device-core-corrected.json",
+        "runs/2026-11-19-hp-device-browser-candidate-1.json",
+        "runs/2026-11-19-hp-device-independent-review.json",
+        "runs/2026-11-21-hp-uncertainty-delivery.json",
+        "runs/2026-11-21-hp-next-integrated-site.json",
+        "runs/2026-11-21-hp-runtime-shared-integration.json",
+        "runs/2026-11-21-hp-runtime-independent-review.json",
+        "runs/2026-11-21-nov21-independent-publication.json",
+        "runs/2026-11-21-pr140-required-ci-review.json",
+        "runs/2026-11-21-android-pr140-automatic-review.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-HP",
+        "docs/scope-progress.json#T-HP",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-MT",
+      "title": "MT Manipulative Tactic",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "ef2256b6423a40146bca950e029dd218c506fdc4fdf3d3429ea3e2db0fbab04d",
+      "master_job": "Evaluate contextual pressure, constrained-choice framing and unsupported authority appeals.",
+      "master_outcome": "The reader sees the framing and relevant context, with a measured disagreement/uncertainty boundary.",
+      "master_acceptance": "Report agreement, category errors and confidence calibration separately.; Existing alpha 0.55 and accuracy values remain candidates until the protocol is accepted.; MT disagreement never blocks PS, provenance or privacy tag release. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Deliver MT Manipulative Tactic. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: The reader sees the framing and relevant context, with a measured disagreement/uncertainty boundary."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Accepted contextual annotation/error/mapping policy, blind labels/agreement and actual human operation remain missing.",
+      "next_authorized_technical_or_operating_action": "Improve selected grammatical/context observation paths independently; retain safety advice/quotation counterexamples.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/calmer-tag-panels.md",
+        "runs/2026-10-10-calm-a11y-final-local.json",
+        "docs/mt-workflow-plan.md",
+        "docs/mt-evidence-workflow.md",
+        "tools/mt_workflow.py",
+        "runs/2026-11-17-mt-workflow-mac-final.json",
+        "docs/mt-device-explorer.md",
+        "docs/mt-device-integrity-correction.md",
+        "runs/2026-11-19-mt-device-browser-corrected.json",
+        "runs/2026-11-19-mt-device-correction.json",
+        "docs/mt-quotation-workflow.md",
+        "tools/mt_quotation_component.py",
+        "runs/2026-11-19-mt-quotation-workflow-tests-final.json",
+        "runs/2026-11-19-mt-quotation-workflow-cli-frozen.json",
+        "runs/2026-11-19-mt-quotation-independent-review.json",
+        "tools/authority_mobile_quotation.py",
+        "tools/mt_mobile_device.py",
+        "docs/mt-mobile-quotation.md",
+        "runs/2026-11-21-mt-mobile-quotation-delivery.json",
+        "runs/2026-11-21-mt-mobile-pm-review.json",
+        "runs/2026-11-21-nov21-web-closeout-review.json",
+        "runs/2026-11-21-nov21-publication.json",
+        "runs/2026-11-21-nov21-required-ci-review.json",
+        "runs/2026-11-21-nov21-web-closeout-counter-review.json",
+        "runs/2026-11-21-mt-input-clipping-before.json",
+        "runs/2026-11-21-mt-input-retention-after.json",
+        "runs/2026-11-21-mt-input-retention-result.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-MT",
+        "docs/scope-progress.json#T-MT",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-PS",
+      "title": "PS Potential Scam / Risk",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "d00c2ce4b97b074a43cd487adde6f5280af637470978d88d643ea67f3f43ce45",
+      "master_job": "Complete the existing bounded command-risk release, then expand risk capabilities as separately validated increments.",
+      "master_outcome": "The reader sees the hazardous instruction pattern before acting, with exact evidence and a challenge path.",
+      "master_acceptance": "Use PS-01 and its 17-scenario acceptance packet plus phone/device checks.; Candidate 95% Wilson lower-bound precision 0.93 and recall 0.75 require prior protocol acceptance and independent labels.; Maintain all 86 current regression cases and publish category failures; no scam-intent inference. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Current independent representative holdout, real blind labels/adjudication, confidence/category reporting and human route acceptance remain explicit.",
+      "next_authorized_technical_or_operating_action": "Use existing phone packets/measurement tools on legitimately supplied independent labels; authored examples cannot fill this gate.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-regressions.json",
+        "runs/2026-10-09-scope-completion-checks.json",
+        "runs/2026-10-08-upgrade-device-public.json",
+        "docs/ps-result-clarity.md",
+        "runs/2026-10-09-ps-results-public.json",
+        "runs/2026-10-09-ps-results-deployment.json",
+        "runs/2026-10-09-performance-ui-public.json",
+        "docs/device-accessibility-increment.md",
+        "runs/2026-10-09-device-build-matrix-final.json",
+        "runs/2026-10-09-accessibility-site-final-local.json",
+        "runs/2026-10-09-device-a11y-engines-local.json",
+        "runs/2026-10-09-device-accessibility-python.json",
+        "docs/calmer-tag-panels.md",
+        "runs/2026-10-10-calm-a11y-final-local.json",
+        "runs/2026-10-10-context-v6-unicode-regressions.json",
+        "runs/2026-10-10-context-v6-fixed-device-engines.json",
+        "runs/2026-10-10-evidence-resistance.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-PS",
+        "docs/scope-progress.json#T-PS",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-IV",
+      "title": "IV Independently Verified",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "a31335b9743426112b066d24c7493fdbcfab906f56376c3cfeded6e4403f24ad",
+      "master_job": "Bind an explicit human review and its scope to the exact subject/version reviewed.",
+      "master_outcome": "The reader knows who reviewed what, against which evidence and when, including withdrawal or correction.",
+      "master_acceptance": "A machine never assigns IV merely because a detector passed.; Changing the subject or review scope invalidates that attestation.; Review identity and signature integrity are tested separately from the reviewed claim’s accuracy. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Deliver IV Independently Verified. Next package action: Specify reviewer consent, review scope and attestation identity. Required outcome: The reader knows who reviewed what, against which evidence and when, including withdrawal or correction."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Explicit consenting real human review, scope and identity/withdrawal are intrinsic to this tag. A machine cannot supply the human attestation.",
+      "next_authorized_technical_or_operating_action": "Maintain exact-subject attestation/revocation integrity; obtain actual consenting review before issuance.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-IV",
+        "docs/scope-progress.json#T-IV",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-FA",
+      "title": "FA Full AI Augmentation",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "77a251f4ec57ed53c5c74f42de128204680f71341dcdc864ff7fa4753ffce4c9",
+      "master_job": "Evaluate positive origin evidence for full AI generation within an explicitly observed or attested workflow.",
+      "master_outcome": "The reader sees the origin assertion, source of evidence and supported observation window.",
+      "master_acceptance": "Absent typing, paste bursts or missing human evidence never establish FA.; Valid signatures establish the signer/record, not the truth of its origin claim.; Independent provenance cases include assisted-input users and incomplete capture. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Deliver FA Full AI Augmentation. Next package action: Define acceptable generation events and manifest claims with signer trust. Required outcome: The reader sees the origin assertion, source of evidence and supported observation window."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Independent positive provenance cases include assisted users and incomplete capture; cryptographic record integrity alone does not prove full AI generation.",
+      "next_authorized_technical_or_operating_action": "Implement a bounded cooperating-host generation-event adapter only for actually observed/attested events, retaining signer trust and observation window.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/provenance-boundary-increment.md",
+        "docs/adjudication-spec.md",
+        "runs/2026-10-09-provenance-boundary-python.json",
+        "runs/2026-10-09-provenance-boundary-demo.json",
+        "runs/2026-10-09-device-matrix-checkout-correction.json",
+        "runs/2026-10-09-provenance-boundary-final-python.json",
+        "docs/classifier-confidence-plan.md",
+        "tests/test_adjudicator_confidence.py"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-FA",
+        "docs/scope-progress.json#T-FA",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-PA",
+      "title": "PA Partially Augmented",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "d78b83aed6371b0f28ae0587779de7dbeb11ab289879724152b26a5ad80ee3d6",
+      "master_job": "Describe supported AI contribution and subsequent human modification within the observed workflow.",
+      "master_outcome": "The reader can distinguish documented contribution/edit events from unobserved authorship.",
+      "master_acceptance": "Behavioral indicators alone must first demonstrate that they support the bounded claim.; No per-person timing template or absent-human inference.; Do not use outside knowledge as proof of human authorship. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Deliver PA Partially Augmented. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: The reader can distinguish documented contribution/edit events from unobserved authorship."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Documented AI contribution and subsequent human edits are not yet a validated captured workflow; behavioral absence is not authorship proof.",
+      "next_authorized_technical_or_operating_action": "Complete exact revision/event lineage and supported observation-window reporting without deriving identity.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/provenance-boundary-increment.md",
+        "docs/adjudication-spec.md",
+        "runs/2026-10-09-provenance-boundary-python.json",
+        "runs/2026-10-09-provenance-boundary-demo.json",
+        "runs/2026-10-09-device-matrix-checkout-correction.json",
+        "runs/2026-10-09-provenance-boundary-final-python.json",
+        "docs/classifier-confidence-plan.md",
+        "tests/test_adjudicator_confidence.py"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-PA",
+        "docs/scope-progress.json#T-PA",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-UNK",
+      "title": "UNK Unknown",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "901288a69bda06824a65eb97a55a1dd06e334179e8393993238af707f50a5bdd",
+      "master_job": "Represent insufficient evaluated evidence separately from pending, no-finding, unsupported and unavailable results.",
+      "master_outcome": "A reader can tell what was evaluated and why a tag could not provide its claim.",
+      "master_acceptance": "Unavailable processing cannot appear as evaluated uncertainty or success.; No-finding never certifies safety.; Protocol changes require compatibility tests and the established approval process. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Deliver UNK Unknown. Next package action: Reconcile existing protocol codes and six-state UI/proposal meanings without silent taxonomy changes. Required outcome: A reader can tell what was evaluated and why a tag could not provide its claim."
+      ],
+      "classification": "adoption_legal_governance_or_service_commitment",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Taxonomy/compatibility approval and actual human state understanding remain open; unavailable cannot be relabeled evaluated uncertainty.",
+      "next_authorized_technical_or_operating_action": "Preserve current six-state UI and prepare decision-ready compatibility examples without issuing new codes.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-UNK",
+        "docs/scope-progress.json#T-UNK",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-PII",
+      "title": "PII_REDACTED",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "adad7ae23e539146b282482436c71cc688a1cd6604bd7a0cfc59212fd535f3b4",
+      "master_job": "Verify that supported detections were actually transformed before downstream local-service evaluation.",
+      "master_outcome": "The reader knows what category-level transformation occurred and that detection may miss information.",
+      "master_acceptance": "Transformation/order correctness and recognition accuracy are separate measurements.; Invalid or failed required redaction stops the affected service route.; The on-device PS route does not claim this tag or pretend to redact its input. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Run a separate supported-entity/language recognition corpus with misses and false-redaction reporting; rebuild the selected service route for current sources and obtain its human acceptance."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Separate representative recognition/miss/false-redaction corpus and actual human service-route acceptance are missing. Rebuilt signed service is now exercised separately.",
+      "next_authorized_technical_or_operating_action": "Improve supported false masking/obfuscated recognition using development controls while keeping recognition evidence separate.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "tests/test_redaction_contract.py",
+        "docs/tags/PII-01.md",
+        "docs/redaction-recognition.md",
+        "tests/test_complete_ipv6.py",
+        "tests/test_redaction_observations.py",
+        "tests/test_redaction_development_client.py",
+        "tests/test_redaction_development_builder.py",
+        "runs/2026-10-11-pii-recognition-staging.json",
+        "runs/2026-10-11-pii-recognition-service.json",
+        "runs/2026-10-11-pii-recognition-replay.json",
+        "runs/2026-10-11-pii-recognition-integration.json",
+        "runs/2026-10-11-pii-recognition-focused.json",
+        "runs/2026-10-11-pii-labels-review-diagnosis.json",
+        "runs/2026-10-11-pii-labels-recognition.json",
+        "runs/2026-10-11-pii-labels-compact.json",
+        "runs/2026-10-11-pii-labels-service.json",
+        "runs/2026-10-11-pii-labels-replay.json",
+        "runs/2026-10-11-pii-labels-timing.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json",
+        "runs/2026-11-08-pii-separator-mac-development.json",
+        "docs/pii-separator-correction-plan.md",
+        "runs/2026-11-08-pii-separator-english-linux.json",
+        "runs/2026-11-08-pii-separator-compact-linux.json",
+        "runs/2026-11-08-pii-separator-service-linux.json",
+        "runs/2026-11-08-pii-separator-replay-linux.json",
+        "docs/pii-pan-token-plan.md",
+        "tests/test_redaction_pan_token.py",
+        "runs/2026-11-09-pan-candidate-recognizer.json",
+        "runs/2026-11-09-pan-english-linux.json",
+        "runs/2026-11-09-pan-compact-linux.json",
+        "runs/2026-11-09-pan-service-linux.json",
+        "runs/2026-11-09-pan-replay-linux.json",
+        "runs/2026-11-09-pan-clean-setup-linux.json",
+        "runs/2026-11-09-pan-pipeline-timing-linux.json",
+        "docs/pii-hidden-separators-plan.md",
+        "tests/test_redaction_hidden_email.py",
+        "scripts/verify-hidden-email-service.py",
+        "runs/2026-11-12-hidden-email-development.json",
+        "runs/2026-11-12-hidden-email-english-linux.json",
+        "runs/2026-11-12-hidden-email-compact-linux.json",
+        "runs/2026-11-12-hidden-email-asgi-linux.json",
+        "runs/2026-11-12-hidden-email-rebuilt-integration.json",
+        "runs/2026-11-12-hidden-email-hosted-english.json",
+        "runs/2026-11-12-hidden-email-hosted-compact.json",
+        "runs/2026-11-12-hidden-email-hosted-service.json",
+        "runs/2026-11-12-hidden-email-hosted-replay.json",
+        "runs/2026-11-12-hidden-email-clean-setup-linux.json",
+        "runs/2026-11-12-hidden-email-publication.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-PII",
+        "docs/scope-progress.json#T-PII",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-OUT",
+      "title": "PII_OUTBOUND",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "fa702b4895e51f3b14903dc1ce5a1e8b16907fcad44e2a7aecfbdf109839c50b",
+      "master_job": "Warn about supported personal-information detections before a selected send action and let the user edit or cancel.",
+      "master_outcome": "The user controls disclosure before sending, without an invisible copy of their prompt.",
+      "master_acceptance": "Supported send paths cannot transmit before the warning decision.; Unsupported paths are disclosed; no blanket coverage claim.; Consent, cancel and reset tests verify no hidden retention or secondary upload. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Deliver PII_OUTBOUND. Next package action: Define supported compose/send surfaces and capture permissions. Required outcome: The user controls disclosure before sending, without an invisible copy of their prompt."
+      ],
+      "classification": "full_distribution_or_unsupported_vendor_mechanism",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Supported pre-send interception does not exist; full accepted warning/edit/cancel/proceed and recognition/human acceptance are missing.",
+      "next_authorized_technical_or_operating_action": "Implement only an explicitly authorized compose/send surface, with no hidden prompt copy and unsupported-path disclosure.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-OUT",
+        "docs/scope-progress.json#T-OUT",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-010",
+      "title": "sig.piped_installer.v1 — curl/wget piped to a shell",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "c09d4d5d085fca63d3cc389a4b802a99ab5d5f08d54ecd619796c836c583cb2a",
+      "master_job": "Specify and deliver sig.piped_installer.v1 — curl/wget piped to a shell.",
+      "master_outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Independent current-method labels/holdout/category lower bounds and human route acceptance remain required.",
+      "next_authorized_technical_or_operating_action": "Process a legitimately independently sampled packet; do not reuse development fixture labels.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-regressions.json",
+        "runs/2026-10-09-scope-completion-checks.json",
+        "runs/2026-10-08-upgrade-device-public.json",
+        "runs/2026-10-10-context-v6-unicode-regressions.json",
+        "runs/2026-10-10-context-v6-fixed-device-engines.json",
+        "runs/2026-10-10-evidence-resistance.json",
+        "docs/ps-lazy-context-performance-plan.md",
+        "runs/2026-10-13-ps-lazy-context-paired.json",
+        "runs/2026-10-13-ps-lazy-regressions.json",
+        "runs/2026-10-13-ps-lazy-device-engines.json",
+        "runs/2026-10-13-ps-lazy-staging-timing.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-010",
+        "docs/scope-progress.json#F-010",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-011",
+      "title": "sig.obfuscated_payload.v1 — base64/hex into eval/exec",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "39f8d9b4109b2c95eab46c320fa29fb0c943b333260b6ac36186c4184a9e74ea",
+      "master_job": "Specify and deliver sig.obfuscated_payload.v1 — base64/hex into eval/exec.",
+      "master_outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Independent current-method labels/holdout/category lower bounds and human route acceptance remain required.",
+      "next_authorized_technical_or_operating_action": "Process a legitimately independently sampled packet; preserve encoded discussion/benign encoding categories.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-regressions.json",
+        "runs/2026-10-09-scope-completion-checks.json",
+        "runs/2026-10-08-upgrade-device-public.json",
+        "runs/2026-10-10-context-v6-unicode-regressions.json",
+        "runs/2026-10-10-context-v6-fixed-device-engines.json",
+        "runs/2026-10-10-evidence-resistance.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-011",
+        "docs/scope-progress.json#F-011",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-012",
+      "title": "sig.credential_exfil.v1 — reads a secret path, writes to a network sink",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "4ba8a873be49c74a177d26a3065f99cc5639c9e5279547eff781ef0a243d2fb9",
+      "master_job": "Specify and deliver sig.credential_exfil.v1 — reads a secret path, writes to a network sink.",
+      "master_outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Complete the proposed Semgrep/use-mention integration contract and independent credential-flow validation before any PS mapping. The separate bounded Python static-flow observation now runs on Mac and isolated Linux; unknown syntax is explicitly unavailable."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Semgrep/use-mention integration and independent credential-flow validation remain explicit before PS mapping; bounded static-flow preview does not finish the signal.",
+      "next_authorized_technical_or_operating_action": "Advance the accepted static-flow language contract and independently specified execution oracle; no PS mapping from authored fixtures.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "tools/credential_flow.py",
+        "scripts/credential-flow.py",
+        "tests/test_credential_flow.py",
+        "docs/credential-flow.md",
+        "scripts/verify-independent-observations.py",
+        "runs/2026-10-11-independent-observations-mac-final.json",
+        "runs/2026-10-11-independent-observations-linux-final.json",
+        "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+        "runs/2026-10-11-independent-observations-linux-payload-corrected.json",
+        "docs/credential-flow-context.md",
+        "tools/credential_flow_context.py",
+        "runs/2026-11-19-credential-flow-compiler-corrected-macos.json",
+        "runs/2026-11-19-credential-context-independent-review.json",
+        "tools/credential_device.py",
+        "site/src/CredentialFlowExplorer.jsx",
+        "docs/credential-flow-device.md",
+        "runs/2026-11-20-credential-device-browser.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-012",
+        "docs/scope-progress.json#F-012",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-013",
+      "title": "sig.typosquat.v1 — package name within edit distance 1–2 of a top-N name",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "c594d247aa89d5878bba798f2edf995724c9450a0ea205c23612b96ea948222d",
+      "master_job": "Specify and deliver sig.typosquat.v1 — package name within edit distance 1–2 of a top-N name.",
+      "master_outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Obtain an independently supported ranked package snapshot, validate the recommendation/use-mention and benign-similarity boundaries, and complete held-out enhancement acceptance before any PS mapping. The offline ranking/import/edit-distance component is functioning."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Independently supported ranked package snapshot, contextual recommendation/use-mention and held-out acceptance remain missing.",
+      "next_authorized_technical_or_operating_action": "Accept a legitimately sourced versioned rank snapshot; evaluate benign lexical-neighbor controls before mapping.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "tools/package_proximity.py",
+        "scripts/package-proximity.py",
+        "tests/test_package_proximity.py",
+        "docs/package-proximity.md",
+        "scripts/verify-independent-observations.py",
+        "runs/2026-10-11-independent-observations-mac-final.json",
+        "runs/2026-10-11-independent-observations-linux-final.json",
+        "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+        "runs/2026-10-11-independent-observations-linux-payload-corrected.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-013",
+        "docs/scope-progress.json#F-013",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-014",
+      "title": "Use/mention discriminator — is the command being recommended or discussed?",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "2f3edee29f97fd70dcda80bca8a3b0a2b3781514863c57d5f6fa94ff82ce4b91",
+      "master_job": "Specify and deliver use/mention discriminator — is the command being recommended or discussed?.",
+      "master_outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Complete the agreed independent current-method sampling/labeling/holdout protocol, report category errors and confidence lower bounds, then obtain required human route acceptance. Development success is not independent accuracy."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Independent contextual recommendation/mention labels and human acceptance remain explicit.",
+      "next_authorized_technical_or_operating_action": "Retain quoted-warning/mixed-clause categories in a genuinely new blinded packet.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-regressions.json",
+        "runs/2026-10-09-scope-completion-checks.json",
+        "runs/2026-10-08-upgrade-device-public.json",
+        "runs/2026-10-10-context-v6-unicode-regressions.json",
+        "runs/2026-10-10-context-v6-fixed-device-engines.json",
+        "runs/2026-10-10-evidence-resistance.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-014",
+        "docs/scope-progress.json#F-014",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-015",
+      "title": "sig.unsourced_specificity.v1 — figures or dates with no provenance marker",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "2bab85fc5533320f1e8ffdd98df6465b3ae683733771ed268b29c668db772b15",
+      "master_job": "Specify and deliver sig.unsourced_specificity.v1 — figures or dates with no provenance marker.",
+      "master_outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Deliver sig.unsourced_specificity.v1 — figures or dates with no provenance marker. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "The original contextual unsourced-specificity claim remains incomplete: marker placement is not source support; representative context/citation labels and baseline comparison remain.",
+      "next_authorized_technical_or_operating_action": "Improve literal source-marker/document scope without calling it semantic specificity or closing HP.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/quantitative-observations.md",
+        "docs/quantitative-observation-plan.md",
+        "tools/quantitative_observations.py",
+        "scripts/quantitative-observations.py",
+        "scripts/verify-quantitative-observations.py",
+        "tests/test_quantitative_observations.py",
+        "runs/2026-10-11-quantitative-cli-final-mac.json",
+        "runs/2026-10-11-quantitative-cli-final-linux.json",
+        "runs/2026-10-11-quantitative-identifier-boundary-diagnosis.json",
+        "runs/2026-10-11-quantitative-cli-identifiers-mac.json",
+        "runs/2026-10-11-quantitative-cli-identifiers-linux.json",
+        "runs/2026-11-17-quantitative-token-boundaries.json",
+        "docs/hp-device-explorer.md",
+        "runs/2026-11-19-hp-device-core-corrected.json",
+        "runs/2026-11-19-hp-device-browser-candidate-1.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-015",
+        "docs/scope-progress.json#F-015",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-016",
+      "title": "sig.selfcontradiction.v1 — NLI entailment between sentence pairs",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "08a779c7280acb121ccc34eedae61bacdcfd9eee88b46339fffe2833fb76f815",
+      "master_job": "Specify and deliver sig.selfcontradiction.v1 — NLI entailment between sentence pairs.",
+      "master_outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Representative self-contradiction selection and independent labeled/category error validation, agreed calibration/threshold policy, HP integration and human acceptance; no classifier score is treated as truth or independent corroboration."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Representative independent self-contradiction labels, calibrated policy, accepted HP integration and human acceptance remain missing.",
+      "next_authorized_technical_or_operating_action": "Improve explicit pair selection/category reporting; retain observed neutral-pair error and no-truth boundary.",
+      "historical_evidence_paths_preserved": [
+        "docs/nli-pairs.md",
+        "docs/nli-pairs-plan.md",
+        "runs/2026-10-11-nli-current-engineering.json",
+        "runs/2026-10-11-nli-mac-controls.json",
+        "runs/2026-10-11-nli-linux-controls.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-016",
+        "docs/scope-progress.json#F-016",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-018",
+      "title": "sig.hedge_collapse.v1 — hedging absent where uncertainty is expected",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "1ce51ee45894c2c61804edbefc11e304ee1fee4f79097bd5db63285b2441a5cb",
+      "master_job": "Specify and deliver sig.hedge_collapse.v1 — hedging absent where uncertainty is expected.",
+      "master_outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Validate contextual hedge/word-sense interpretation and complete the full HP integration acceptance. The English reference observation works for explicitly caller-selected, hash-bound expected-uncertainty spans; expectation is not inferred."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Expected uncertainty is caller-selected and word-sense/context interpretation remains unvalidated; full recorded HP acceptance is not met.",
+      "next_authorized_technical_or_operating_action": "Add bounded context/word-sense distinctions to the actual English method, without inferring expected uncertainty.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "tools/language_observations.py",
+        "scripts/language-observations.py",
+        "tests/test_language_observations.py",
+        "docs/language-observations.md",
+        "scripts/verify-independent-observations.py",
+        "runs/2026-10-11-independent-observations-mac-final.json",
+        "runs/2026-10-11-independent-observations-linux-final.json",
+        "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+        "runs/2026-10-11-independent-observations-linux-payload-corrected.json",
+        "runs/2026-11-21-hp-uncertainty-delivery.json",
+        "runs/2026-11-21-hp-next-integrated-site.json",
+        "runs/2026-11-21-hp-runtime-shared-integration.json",
+        "runs/2026-11-21-hp-runtime-independent-review.json",
+        "runs/2026-11-21-nov21-independent-publication.json",
+        "runs/2026-11-21-pr140-required-ci-review.json",
+        "runs/2026-11-21-android-pr140-automatic-review.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-018",
+        "docs/scope-progress.json#F-018",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-019a",
+      "title": "sig.urgency_frame.v1 — time-pressure lexicon plus imperative density",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "e99ebc3f0994adc0a855de1581fa73d26aa379213d69444af4cc108f532236e2",
+      "master_job": "Specify and deliver sig.urgency_frame.v1 — time-pressure lexicon plus imperative density.",
+      "master_outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Complete contextual/grammatical imperative and use-mention validation before MT integration. The separate English literal time-pressure and directive-density measurement works; emergency advice is never asserted as manipulation."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Literal directive density is not grammatical/contextual use-mention validation or accepted MT integration.",
+      "next_authorized_technical_or_operating_action": "Implement grammatical/local association improvements with emergency/quotation negatives, then obtain the retained contextual validation.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "tools/language_observations.py",
+        "scripts/language-observations.py",
+        "tests/test_language_observations.py",
+        "docs/language-observations.md",
+        "scripts/verify-independent-observations.py",
+        "runs/2026-10-11-independent-observations-mac-final.json",
+        "runs/2026-10-11-independent-observations-linux-final.json",
+        "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+        "runs/2026-10-11-independent-observations-linux-payload-corrected.json",
+        "docs/mt-workflow-plan.md",
+        "docs/mt-evidence-workflow.md",
+        "tools/mt_workflow.py",
+        "runs/2026-11-17-mt-workflow-mac-final.json",
+        "docs/mt-device-explorer.md",
+        "docs/mt-device-integrity-correction.md",
+        "runs/2026-11-19-mt-device-browser-corrected.json",
+        "runs/2026-11-19-mt-device-correction.json",
+        "runs/2026-11-21-mt-input-clipping-before.json",
+        "runs/2026-11-21-mt-input-retention-after.json",
+        "runs/2026-11-21-mt-input-retention-result.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-019a",
+        "docs/scope-progress.json#F-019a",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-019b",
+      "title": "sig.false_dilemma.v1 — binary framing where alternatives exist",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "5e962e730e6f2441e763cf4bdbb774877b8d779549335797ff6fb37fb626d434",
+      "master_job": "Specify and deliver sig.false_dilemma.v1 — binary framing where alternatives exist.",
+      "master_outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Full contextual/grammatical and additional-alternative validation, representative independent held-out labeling, accepted MT mapping, selected integration and required human operation."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Exclusive grammar, feasible/fresh alternatives, independent labels, accepted MT mapping and human operation remain missing.",
+      "next_authorized_technical_or_operating_action": "Extend actual supported paired-marker grammar and explicit alternative evidence independently.",
+      "historical_evidence_paths_preserved": [
+        "docs/choice-framing.md",
+        "docs/choice-framing-plan.md",
+        "runs/2026-10-11-choice-framing-engineering.json",
+        "runs/2026-10-11-choice-framing-current-mac-controls.json",
+        "runs/2026-10-11-choice-framing-current-linux-controls.json",
+        "runs/2026-10-12-choice-grammar-engineering.json",
+        "runs/2026-10-12-choice-grammar-canonical-cleanup.json",
+        "docs/choice-grammar-result.md",
+        "docs/choice-between-plan.md",
+        "runs/2026-11-12-choice-between-development.json",
+        "runs/2026-11-12-choice-between-mac.json",
+        "runs/2026-11-12-choice-between-linux.json",
+        "docs/mt-workflow-plan.md",
+        "docs/mt-evidence-workflow.md",
+        "tools/mt_workflow.py",
+        "runs/2026-11-17-mt-workflow-mac-final.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-019b",
+        "docs/scope-progress.json#F-019b",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-019c",
+      "title": "sig.authority_appeal.v1 — unattributed appeals to expertise or consensus",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "8a1c0854faeedd0032eeabec8635d1351fd1e6924708620873bfc65ec3f3fff5",
+      "master_job": "Specify and deliver sig.authority_appeal.v1 — unattributed appeals to expertise or consensus.",
+      "master_outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Complete contextual attribution and use-mention validation before MT integration. The English phrase/local-marker component works but does not resolve citations, attribution elsewhere or intent."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Contextual authority attribution and citation/source resolution are not established by nearby marker absence.",
+      "next_authorized_technical_or_operating_action": "Improve source/attribution resolution while retaining exact quotation and uncertainty boundaries.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "tools/language_observations.py",
+        "scripts/language-observations.py",
+        "tests/test_language_observations.py",
+        "docs/language-observations.md",
+        "scripts/verify-independent-observations.py",
+        "runs/2026-10-11-independent-observations-mac-final.json",
+        "runs/2026-10-11-independent-observations-linux-final.json",
+        "runs/2026-10-11-independent-observations-mac-payload-corrected.json",
+        "runs/2026-10-11-independent-observations-linux-payload-corrected.json",
+        "docs/mt-workflow-plan.md",
+        "docs/mt-evidence-workflow.md",
+        "tools/mt_workflow.py",
+        "runs/2026-11-17-mt-workflow-mac-final.json",
+        "docs/mt-device-explorer.md",
+        "docs/mt-device-integrity-correction.md",
+        "runs/2026-11-19-mt-device-browser-corrected.json",
+        "runs/2026-11-19-mt-device-correction.json",
+        "docs/mt-quotation-workflow.md",
+        "tools/mt_quotation_component.py",
+        "runs/2026-11-19-mt-quotation-workflow-cli-frozen.json",
+        "runs/2026-11-19-mt-quotation-independent-review.json",
+        "tools/authority_mobile_quotation.py",
+        "tools/mt_mobile_device.py",
+        "docs/mt-mobile-quotation.md",
+        "runs/2026-11-21-mt-mobile-quotation-delivery.json",
+        "runs/2026-11-21-mt-mobile-pm-review.json",
+        "runs/2026-11-21-nov21-web-closeout-review.json",
+        "runs/2026-11-21-nov21-publication.json",
+        "runs/2026-11-21-nov21-required-ci-review.json",
+        "runs/2026-11-21-nov21-web-closeout-counter-review.json",
+        "runs/2026-11-21-mt-input-clipping-before.json",
+        "runs/2026-11-21-mt-input-retention-after.json",
+        "runs/2026-11-21-mt-input-retention-result.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-019c",
+        "docs/scope-progress.json#F-019c",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-020b",
+      "title": "sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "245c1a95a9a9e26869239d65a9f7c45d6cdd2a6cbba571d7e01aad58ba6db25e",
+      "master_job": "Specify and deliver sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage.",
+      "master_outcome": "A finding identifies this exact signal and the relevant subject spans.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Representative held-out reference/category validation, freshness/claim selection contract, calibrated accepted tag mapping, full FI integration and required human operation."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Representative reference/freshness selection, independent errors/calibration, FI mapping and human operation remain missing.",
+      "next_authorized_technical_or_operating_action": "Improve independent retrieved/selected reference coverage and category accounting; preserve contradiction versus absent evidence.",
+      "historical_evidence_paths_preserved": [
+        "docs/nli-references.md",
+        "docs/nli-reference-plan.md",
+        "runs/2026-10-11-nli-reference-current-engineering.json",
+        "runs/2026-10-11-nli-reference-mac-owned-session-controls.json",
+        "runs/2026-10-11-nli-reference-linux-controls.json",
+        "docs/reference-revision-plan.md",
+        "docs/reference-revisions.md",
+        "tools/reference_revision.py",
+        "runs/2026-10-12-reference-revision-practice-local.json",
+        "runs/2026-10-12-reference-revision-linux.json",
+        "docs/reference-review-window-plan.md",
+        "tools/reference_review_window.py",
+        "scripts/prepare-reference-review-windows.py",
+        "scripts/verify-reference-review-windows.py",
+        "runs/2026-10-13-reference-window-mac-current.json",
+        "runs/2026-10-13-reference-window-linux.json",
+        "docs/nf-source-evidence.md",
+        "runs/2026-11-19-nf-cosine-binding-corrected-macos.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-020b",
+        "docs/scope-progress.json#F-020b",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-029a",
+      "title": "sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "9aaee24e2886c47b875f4e3be4d4c6971be5998439ef6ba804df8d2b65f23a38",
+      "master_job": "Specify and deliver sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session.",
+      "master_outcome": "Observed interaction is documented without unsupported authorship or identity claims.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Deliver sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Literal revision/context comparison does not establish knowledge derivability; arithmetic, paraphrase and incomplete capture are known counterexamples.",
+      "next_authorized_technical_or_operating_action": "Research a genuinely bounded derivability claim before implementation; do not issue authorship from absent context.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/session-revision-plan.md",
+        "docs/session-revisions.md",
+        "docs/session-revision-result.md",
+        "runs/2026-10-12-session-revision-local.json",
+        "runs/2026-10-12-session-revision-linux.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-029a",
+        "docs/scope-progress.json#F-029a",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-023",
+      "title": "Detected PII redaction",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "0a69cbed2401bfc84d942c47c200c09111341002f2661a49192e4b21fa050e76",
+      "master_job": "Remove recognized entities before evaluation",
+      "master_outcome": "Detected entities are redacted; coverage and missed-detection limitations remain visible.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Run a separate supported-entity/language recognition corpus with misses and false-redaction reporting; rebuild the selected service route for current sources and obtain its human acceptance."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Independent recognition corpus and actual human current-service acceptance remain open, despite current signed transformation/service proof.",
+      "next_authorized_technical_or_operating_action": "Improve supported recognition misses/false redaction without weakening required preprocessing failure.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "tests/test_redaction_contract.py",
+        "docs/tags/PII-01.md",
+        "docs/redaction-recognition.md",
+        "tests/test_complete_ipv6.py",
+        "tests/test_redaction_observations.py",
+        "tests/test_redaction_development_client.py",
+        "tests/test_redaction_development_builder.py",
+        "runs/2026-10-11-pii-recognition-staging.json",
+        "runs/2026-10-11-pii-recognition-service.json",
+        "runs/2026-10-11-pii-recognition-replay.json",
+        "runs/2026-10-11-pii-recognition-integration.json",
+        "runs/2026-10-11-pii-recognition-focused.json",
+        "runs/2026-10-11-pii-labels-review-diagnosis.json",
+        "runs/2026-10-11-pii-labels-recognition.json",
+        "runs/2026-10-11-pii-labels-compact.json",
+        "runs/2026-10-11-pii-labels-service.json",
+        "runs/2026-10-11-pii-labels-replay.json",
+        "runs/2026-10-11-pii-labels-timing.json",
+        "runs/2026-11-08-pii-separator-mac-development.json",
+        "docs/pii-separator-correction-plan.md",
+        "runs/2026-11-08-pii-separator-english-linux.json",
+        "runs/2026-11-08-pii-separator-compact-linux.json",
+        "runs/2026-11-08-pii-separator-service-linux.json",
+        "runs/2026-11-08-pii-separator-replay-linux.json",
+        "docs/pii-pan-token-plan.md",
+        "tests/test_redaction_pan_token.py",
+        "runs/2026-11-09-pan-candidate-recognizer.json",
+        "runs/2026-11-09-pan-english-linux.json",
+        "runs/2026-11-09-pan-compact-linux.json",
+        "runs/2026-11-09-pan-service-linux.json",
+        "runs/2026-11-09-pan-replay-linux.json",
+        "runs/2026-11-09-pan-clean-setup-linux.json",
+        "runs/2026-11-09-pan-pipeline-timing-linux.json",
+        "docs/pii-hidden-separators-plan.md",
+        "tests/test_redaction_hidden_email.py",
+        "scripts/verify-hidden-email-service.py",
+        "runs/2026-11-12-hidden-email-development.json",
+        "runs/2026-11-12-hidden-email-english-linux.json",
+        "runs/2026-11-12-hidden-email-compact-linux.json",
+        "runs/2026-11-12-hidden-email-asgi-linux.json",
+        "runs/2026-11-12-hidden-email-rebuilt-integration.json",
+        "runs/2026-11-12-hidden-email-hosted-english.json",
+        "runs/2026-11-12-hidden-email-hosted-compact.json",
+        "runs/2026-11-12-hidden-email-hosted-service.json",
+        "runs/2026-11-12-hidden-email-hosted-replay.json",
+        "runs/2026-11-12-hidden-email-clean-setup-linux.json",
+        "runs/2026-11-12-hidden-email-publication.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-023",
+        "docs/scope-progress.json#F-023",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-024",
+      "title": "PII_OUTBOUND pre-send warning — you are about to paste personal data into a model",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "ab94431814b31592aa890dac51b9e40c4843ebfb2733bf4ea8745f69507108db",
+      "master_job": "Specify and deliver pII_OUTBOUND pre-send warning — you are about to paste personal data into a model.",
+      "master_outcome": "Catches the mistake before it leaves your machine, not after",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Supported compose/send intervention and explicit permission boundaries.",
+        "Independent recognition and human operation before outbound-tag release."
+      ],
+      "classification": "full_distribution_or_unsupported_vendor_mechanism",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Independent recognition/human operation and supported consented send-path enforcement remain explicit.",
+      "next_authorized_technical_or_operating_action": "Build only an authorized send interception with edit/cancel/proceed; manual paste checker alone cannot close it.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/draft-privacy-plan.md",
+        "docs/draft-privacy.md",
+        "scripts/verify-draft-privacy.py",
+        "tests/test_draft_privacy.py",
+        "runs/2026-10-13-draft-privacy-real-linux.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-024",
+        "docs/scope-progress.json#F-024",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-037",
+      "title": "Per-vendor site adapters",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "5f492dddf88c4d1c2a269f2a713f93ad42016aadd6a1b1e9017b94d8608a2d0f",
+      "master_job": "Specify and deliver per-vendor site adapters.",
+      "master_outcome": "Reliable capture per site instead of a guess that works sometimes",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Exercise the declared supported ChatGPT adapter and deliberate recheck lifecycle against current vendor markup; publish unsupported-page behavior and complete outside-user checks."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Fresh actual completed DOM/recheck proof covers one current response; required outside-user checks and broader current vendor lifecycle are not supplied.",
+      "next_authorized_technical_or_operating_action": "Complete current vendor regeneration/edit/navigation observations, retaining outside-user acceptance separately open.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-08-browser-checks.json",
+        "extension/src/adapters/chatgpt.js"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-037",
+        "docs/scope-progress.json#F-037",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-035",
+      "title": "Full screen-reader semantics, aria-live=\"polite\" never assertive",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "c847e9bbc1faa5c23364d18b1c3433d5471b7f482cb84a650095362a8c235e77",
+      "master_job": "Specify and deliver full screen-reader semantics, aria-live=\"polite\" never assertive.",
+      "master_outcome": "The label is announced without interrupting what you are reading",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Rerun the current selected route on live regenerated/edited/multiple responses and vendor navigation; complete required human keyboard/screen-reader/comprehension checks without substituting synthetic fixtures."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Actual human keyboard/screen-reader/comprehension and current multiresponse/regeneration/navigation tasks remain explicit.",
+      "next_authorized_technical_or_operating_action": "Run the written human acceptance with an actual consenting operator; automated accessibility cannot replace it.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-08-browser-checks.json",
+        "scripts/browser-acceptance.js",
+        "scripts/live-dom-acceptance.js",
+        "docs/quiet-paused-checks-plan.md",
+        "docs/quiet-paused-checks.md",
+        "runs/2026-10-15-quiet-paused-privacy.json",
+        "runs/2026-10-15-quiet-paused-regression.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-035",
+        "docs/scope-progress.json#F-035",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-097",
+      "title": "User-invoked labelling — select a response, ask for a check",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "271f75eb0e5135584678e703aa21898125b410fad0c53dd023aff9c49bd6e270",
+      "master_job": "Specify and deliver user-invoked labelling — select a response, ask for a check.",
+      "master_outcome": "Correct attribution even when automatic capture cannot be trusted",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Exercise the declared supported ChatGPT adapter and deliberate recheck lifecycle against current vendor markup; publish unsupported-page behavior and complete outside-user checks."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Actual current deliberate recheck now demonstrated on one response; full explicit outside-user checks remain missing.",
+      "next_authorized_technical_or_operating_action": "Complete additional current vendor lifecycle and publish unsupported behavior, without counting the same root run as outside use.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-08-browser-checks.json",
+        "extension/src/adapters/chatgpt.js"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-097",
+        "docs/scope-progress.json#F-097",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-050",
+      "title": "Gate thresholds in eval/gates.yaml — precision, recall, ECE, abstention band, latency, axe, α",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "7988008efb897a84319a5b3226dac20efa86c4bf81ffedf7b84aa3d9a6526ad0",
+      "master_job": "Specify and deliver gate thresholds in eval/gates.yaml — precision, recall, ECE, abstention band, latency, axe, α.",
+      "master_outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Claim-specific sampling/calibration/abstention protocol and independent evidence are required, not gate YAML presence alone.",
+      "next_authorized_technical_or_operating_action": "Publish reproducible counts only from accepted representative independent data.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "runs/2026-10-09-scope-regressions.json",
+        "eval/gates.yaml",
+        "docs/independent-review.md",
+        "docs/review-execution-binding-plan.md",
+        "docs/review-execution-binding-result.md",
+        "tools/review_execution.py",
+        "tests/test_review_execution_binding.py",
+        "runs/2026-10-12-review-execution-focused.json",
+        "runs/2026-10-12-review-execution-cli.json",
+        "runs/2026-10-12-review-execution-linux.json",
+        "runs/2026-10-12-review-execution-linux-cleanup.json",
+        "runs/2026-10-12-review-repaired-focused.json",
+        "runs/2026-10-12-review-repaired-cli.json",
+        "runs/2026-10-12-review-repaired-linux.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-050",
+        "docs/scope-progress.json#F-050",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-108",
+      "title": "Frozen held-out split with a manifest hash, separate from the regression suite",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "df36d33230c1d9ecfad937a1a2e55ceb08bf7ade7299cb1447472c32900f340e",
+      "master_job": "Specify and deliver frozen held-out split with a manifest hash, separate from the regression suite.",
+      "master_outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Recruit two independent humans and an independent sample coordinator; freeze a new representative holdout, return blind labels and adjudicate disagreement before detector evaluation. Phone packet tooling is complete but actual review is not."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Two independent humans, independent sampling coordinator, new holdout and blind disagreement adjudication remain required.",
+      "next_authorized_technical_or_operating_action": "Use the complete existing private freeze/reviewer/compare pipeline after real participants and sample are supplied.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "tests/test_blind_review.py",
+        "docs/PS-reviewer-start.md",
+        "docs/blind-review-privacy-plan.md",
+        "runs/2026-10-11-blind-private-current-mac-cli.json",
+        "runs/2026-10-11-blind-private-linux-cli.json",
+        "runs/2026-10-11-blind-private-linux-current.json",
+        "runs/2026-10-11-blind-private-browser.json",
+        "runs/2026-10-11-blind-private-device.json",
+        "docs/review-execution-binding-plan.md",
+        "docs/review-execution-binding-result.md",
+        "tools/review_execution.py",
+        "tests/test_review_execution_binding.py",
+        "runs/2026-10-12-review-execution-focused.json",
+        "runs/2026-10-12-review-execution-cli.json",
+        "runs/2026-10-12-review-execution-linux.json",
+        "runs/2026-10-12-review-execution-linux-cleanup.json",
+        "runs/2026-10-12-review-repaired-focused.json",
+        "runs/2026-10-12-review-repaired-cli.json",
+        "runs/2026-10-12-review-repaired-linux.json",
+        "runs/2026-11-06-conformance-software-owner-decision.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-108",
+        "docs/scope-progress.json#F-108",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-056",
+      "title": "Krippendorff's α published for MT, ≥ 0.55",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "acd131a988eef08393f6b8ea085d6fd53b6e9eca4706cee49650a87aa460a4b4",
+      "master_job": "Specify and deliver krippendorff's α published for MT, ≥ 0.55.",
+      "master_outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Deliver Krippendorff's α published for MT, ≥ 0.55. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: Versioned verification evidence determines whether the applicable acceptance criteria passed."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Real blind MT ratings, accepted annotation/sampling/interval policy and measured alpha remain missing. Computational alpha is already implemented.",
+      "next_authorized_technical_or_operating_action": "Collect legitimate independent ratings and report anonymous category/coverage/disagreement before accepting a threshold.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/reviewer-agreement.md",
+        "runs/2026-10-11-reviewer-agreement-mac.json",
+        "runs/2026-10-11-reviewer-agreement-linux.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-056",
+        "docs/scope-progress.json#F-056",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-113",
+      "title": "Measured latency budget on declared hardware",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "912cb1e9e2317b4ed7ca14df1936465012fdcd2eb0dca07103f8f1da32638db7",
+      "master_job": "Measure route-specific startup/warm latency on declared hardware and input sizes before accepting an enforcement budget.",
+      "master_outcome": "Performance claims name their conditions; the historical p95 100 ms value remains a target until accepted.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Expand timing to declared larger input sizes, full service routes and physical phones; agree route-specific budgets and test enforcement before accepting the historical 100 ms target."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Declared physical-phone whole-route measurements and accepted route budgets remain explicit; desktop timing is insufficient.",
+      "next_authorized_technical_or_operating_action": "Measure actual supported physical route startup/update and enforce a legitimately agreed route-specific budget.",
+      "historical_evidence_paths_preserved": [
+        "docs/tag-performance-plan.md",
+        "scripts/verify-device.cjs",
+        "runs/2026-10-09-performance-device-local.json",
+        "docs/pipeline-performance.md",
+        "docs/pipeline-performance-plan.md",
+        "scripts/measure-pipeline-performance.py",
+        "tests/test_pipeline_performance.py",
+        "tests/pipeline-timing.cjs",
+        "runs/2026-10-11-staging-pipeline-performance.json",
+        "runs/2026-10-11-staging-pipeline-source-witness.json",
+        "runs/2026-10-11-pipeline-benchmark-expectation-failure.json",
+        "runs/2026-10-11-staging-pipeline-identity-checked.json",
+        "runs/2026-10-11-staging-pipeline-identity-witness.json",
+        "runs/2026-10-11-pii-pipeline-timing.json",
+        "runs/2026-10-11-pii-labels-review-diagnosis.json",
+        "runs/2026-10-11-pii-labels-recognition.json",
+        "runs/2026-10-11-pii-labels-compact.json",
+        "runs/2026-10-11-pii-labels-service.json",
+        "runs/2026-10-11-pii-labels-replay.json",
+        "runs/2026-10-11-pii-labels-timing.json",
+        "docs/ps-lazy-context-performance-plan.md",
+        "runs/2026-10-13-ps-lazy-context-paired.json",
+        "runs/2026-10-13-ps-lazy-regressions.json",
+        "runs/2026-10-13-ps-lazy-device-engines.json",
+        "runs/2026-10-13-ps-lazy-staging-timing.json",
+        "docs/tag-failure-isolation-result.md",
+        "runs/2026-10-14-tag-isolation-real-linux.json",
+        "runs/2026-10-14-tag-isolation-batch-linux.json",
+        "runs/2026-10-14-tag-isolation-pipeline-timing.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-113",
+        "docs/scope-progress.json#F-113",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-114",
+      "title": "Method-appropriate abstention measurement and policy",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "87b530783288221718efdc5e5409824e2e06e127a6551a8d7209340a1516ba42",
+      "master_job": "Measure abstention and enforce only accepted method-appropriate bounds; deterministic methods have no forced minimum quota.",
+      "master_outcome": "The method can honestly report its evidence without inventing abstentions to meet an arbitrary global band.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Accept the claim-specific sampling, calibration/abstention and category reporting protocol; collect independent evidence and publish reproducible counts rather than reuse development labels."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Independent claim-specific sampling and abstention policy evidence remain required; no artificial deterministic quota.",
+      "next_authorized_technical_or_operating_action": "Use accepted independent data and publish reproducible unavailable/unsupported/abstention categories.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "runs/2026-10-09-scope-regressions.json",
+        "eval/gates.yaml",
+        "docs/independent-review.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-114",
+        "docs/scope-progress.json#F-114",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-057",
+      "title": "SBOM plus Sigstore release signing",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "02a27f1cf2ccdd31e17c4132a2c9013f0d2ae2628226f2308f14ec217f296951",
+      "master_job": "Specify and deliver sBOM plus Sigstore release signing.",
+      "master_outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Review and bind package-to-notice obligations, bundled/native/model/font/runtime/data components and source offers; expand architecture coverage and execute the full source-bound conflict policy before claiming license clearance. Source-bound development signing is already exercised."
+      ],
+      "classification": "full_distribution_or_unsupported_vendor_mechanism",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Full distribution/native/model/platform/data/source-offer coverage remains incomplete; selected notices, SBOM consistency and signing do not clear all13 other scopes.",
+      "next_authorized_technical_or_operating_action": "Finish a real selected missing obligation and consuming artifact gate; retain unknown full routes refused.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/open-dependency-audit-plan.md",
+        "docs/runtime-sbom.md",
+        "runs/2026-10-10-runtime-license-inventory.json",
+        "runs/2026-10-10-runtime-sbom-identity.json",
+        "scripts/verify-runtime-sbom.py",
+        "tests/test_runtime_sbom.py",
+        "eval/dependencies/runtime-sbom.json",
+        "docs/spdx-validation-plan.md",
+        "docs/spdx-inventory-validation.md",
+        "scripts/spdx_inventory.py",
+        "scripts/verify-runtime-sbom-standard.py",
+        "tests/test_spdx_inventory.py",
+        "runs/2026-10-10-spdx-standard-inventory.json",
+        "runs/2026-10-10-spdx-validation-controls.json",
+        "docs/source-provenance.md",
+        "runs/2026-10-10-authenticated-source-download.json",
+        "runs/2026-10-10-source-download-hosted-checks.json",
+        "docs/license-evidence-plan.md",
+        "docs/dependency-notices.md",
+        "scripts/license_notices.py",
+        "scripts/verify-redistribution-notices.py",
+        "tests/test_license_notices.py",
+        "sbom/notices/manifest.json",
+        "runs/2026-10-11-license-notices-timestamped.json",
+        "runs/2026-10-11-license-archives-timestamped.json",
+        "docs/source-input-binding-plan.md",
+        "scripts/source_snapshot.py",
+        "scripts/verify-source-provenance.py",
+        "tests/test_source_provenance.py",
+        "runs/2026-10-11-source-captured-mac.json",
+        "runs/2026-10-11-source-captured-linux.json",
+        "docs/asset-notices-plan.md",
+        "docs/asset-notices.md",
+        "docs/asset-notices-result.md",
+        "scripts/asset_notices.py",
+        "scripts/verify-asset-notices.py",
+        "sbom/assets/notices.json",
+        "tests/test_asset_notices.py",
+        "runs/2026-10-12-selected-asset-mac.json",
+        "runs/2026-10-12-selected-runtime-archive.json",
+        "runs/2026-10-12-selected-assets-linux.json",
+        "runs/2026-10-12-selected-assets-staging-cleanup.json",
+        "docs/native-dependency-plan.md",
+        "docs/native-dependency-evidence.md",
+        "sbom/native/manifest.json",
+        "tools/native_inventory.py",
+        "scripts/verify-native-dependencies.py",
+        "tests/test_native_inventory.py",
+        "runs/2026-10-15-native-focused-controls.json",
+        "runs/2026-10-15-native-archive-replay.json",
+        "mobile/ios/Privacy.txt",
+        "scripts/verify-ios-archive.py",
+        "tests/test_ios_archive.py",
+        "runs/2026-11-09-ios-distribution-final-archive.json",
+        "docs/nested-runtime-evidence.md",
+        "runs/2026-11-17-nested-runtime-obligations.json",
+        "runs/2026-11-18-pyodide-release-origin.json",
+        "runs/2026-11-18-pyodide-embedded-sources.json",
+        "docs/dependency-conflict-plan.md",
+        "docs/ps-source-distribution.md",
+        "eval/dependency-policy.json",
+        "tools/dependency_policy.py",
+        "scripts/verify-dependency-policy.py",
+        "tools/ps_source_distribution.py",
+        "scripts/export-ps-source.py",
+        "runs/2026-11-19-ps-source-default-policy-actual.json",
+        "runs/2026-11-19-ps-source-linux-actual.json",
+        "docs/esbuild-source-review.md",
+        "runs/2026-11-19-esbuild-source-cohort.json",
+        "runs/2026-11-19-ps-source-notice-macos.json",
+        "runs/2026-11-19-ps-source-notice-linux.json",
+        "runs/2026-11-19-ps-source-notice-staging-preserved.json",
+        "runs/2026-11-19-rolldown-parser-correction.json",
+        "runs/2026-11-19-c2pa-parser-privacy-correction.json",
+        "runs/2026-11-19-nli-cohort-engineering.json",
+        "runs/2026-11-19-nli-final-header-replay.json",
+        "docs/rolldown-source-review.md",
+        "docs/c2pa-cohort-result.md",
+        "docs/nli-license-cohort.md",
+        "runs/2026-11-19-ps-source-canonical-linux.json",
+        "tools/web_distribution.py",
+        "scripts/web-distribution.py",
+        "docs/web-distribution.md",
+        "runs/2026-11-21-web-js-budget-current-artifact.json",
+        "runs/2026-11-21-web-js-budget-correction.json",
+        "runs/2026-11-21-web-js-independent-review.json",
+        "runs/2026-11-21-nov21-web-closeout-review.json",
+        "runs/2026-11-21-nov21-publication.json",
+        "runs/2026-11-21-nov21-required-ci-review.json",
+        "runs/2026-11-21-nov21-web-closeout-counter-review.json",
+        "runs/2026-11-21-pyodide-js-source-corrected.json",
+        "runs/2026-11-21-pyodide-js-source-independent-review.json",
+        "runs/2026-11-21-hp-runtime-shared-integration.json",
+        "runs/2026-11-21-hp-runtime-independent-review.json",
+        "runs/2026-11-21-nov21-independent-publication.json",
+        "runs/2026-11-21-pr140-required-ci-review.json",
+        "runs/2026-11-21-android-pr140-automatic-review.json",
+        "runs/2026-11-21-zlib-source-fd-corrected.json",
+        "runs/2026-11-21-zlib-source-corrected-independent-review.json",
+        "runs/2026-11-21-js-export-owned-fd-corrected.json",
+        "runs/2026-11-21-js-export-owned-fd-independent-review.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-057",
+        "docs/scope-progress.json#F-057",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-120",
+      "title": "Evidence packets — committed transcripts per exit gate",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "1d7d90b2f6194376bc85f864ea4b2f645b15f32fc973fdcabb05d036b813e0cc",
+      "master_job": "Specify and deliver evidence packets — committed transcripts per exit gate.",
+      "master_outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Version and publish executable conformance vectors and complete exit-gate evidence for the selected released route; outside implementer runs and final acceptance remain required."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Outside implementer execution and selected release exit-gate acceptance remain required. Reference vectors/software exist.",
+      "next_authorized_technical_or_operating_action": "Obtain actual independently operated implementation results against the published profile, not third-party-shaped fixtures.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "docs/open-validation-path.md",
+        "docs/review-execution-binding-plan.md",
+        "docs/review-execution-binding-result.md",
+        "tools/review_execution.py",
+        "tests/test_review_execution_binding.py",
+        "runs/2026-10-12-review-execution-focused.json",
+        "runs/2026-10-12-review-execution-cli.json",
+        "runs/2026-10-12-review-execution-linux.json",
+        "runs/2026-10-12-review-execution-linux-cleanup.json",
+        "runs/2026-10-12-review-repaired-focused.json",
+        "runs/2026-10-12-review-repaired-cli.json",
+        "runs/2026-10-12-review-repaired-linux.json",
+        "docs/conformance-runner-plan.md",
+        "docs/conformance-runner.md",
+        "tools/conformance_vectors.py",
+        "scripts/check-conformance-vectors.py",
+        "eval/conformance/assertion-v1.json",
+        "tests/test_conformance_vectors.py",
+        "runs/2026-10-15-conformance-reference-vectors.json",
+        "runs/2026-10-15-conformance-evidence-focused.json",
+        "docs/evidence-packet-plan.md",
+        "docs/evidence-packet.md",
+        "tools/evidence_packet.py",
+        "scripts/build-evidence-packet.py",
+        "tests/test_evidence_packet.py"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-120",
+        "docs/scope-progress.json#F-120",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-125",
+      "title": "Per-device revocable keys plus a revocation transparency log",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "e6a282c5637a47eed87db34015ee98506d68a1dba325b0584bb602801d38f9ea",
+      "master_job": "Specify and deliver per-device revocable keys plus a revocation transparency log.",
+      "master_outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Operating public revocation transparency and witness/distribution evidence; full outside-user per-device operation."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Public revocation operation/distribution/completeness/rotation and real independent witness/outside-device use remain unverified.",
+      "next_authorized_technical_or_operating_action": "Prepare bounded log distribution only within an explicitly accepted service contract; no invented endpoint.",
+      "historical_evidence_paths_preserved": [
+        "docs/offline-revocation-plan.md",
+        "docs/offline-revocation.md",
+        "protocol/revocation.cjs",
+        "scripts/revocation.cjs",
+        "tests/offline-revocation.cjs",
+        "runs/2026-10-11-offline-revocation-platforms.json",
+        "runs/2026-11-18-offline-revocation-comparison.json",
+        "runs/2026-11-18-revocation-witness-offline-controls.json",
+        "runs/2026-11-18-revocation-witness-key-identity.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-125",
+        "docs/scope-progress.json#F-125",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-129",
+      "title": "Key custody and recovery for a non-technical author",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "a84e265cb262d59eda4d9891e0f05e89596c1429587a6600f7150f327dd1e02c",
+      "master_job": "Specify and deliver key custody and recovery for a non-technical author.",
+      "master_outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Actual nontechnical-author operation and recovery/compromise understanding on an independently operated computer; no automated terminal can substitute for human acceptance."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Actual nontechnical-author backup/recovery/compromise understanding on a second independently operated computer is explicit.",
+      "next_authorized_technical_or_operating_action": "Use the existing owner-controlled guide with the actual author; terminal automation is not acceptance.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/key-recovery-plan.md",
+        "docs/key-recovery.md",
+        "runs/2026-10-11-key-backup-platforms.json",
+        "runs/2026-10-11-key-backup-terminal-refusal.json",
+        "runs/2026-10-11-key-backup-atomic-repair.json",
+        "runs/2026-10-11-key-backup-atomic-final-platforms.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-129",
+        "docs/scope-progress.json#F-129",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-130",
+      "title": "Group authorship — four signers or four receipts",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "980c5fc6772c3785cd7a5302bda8642116727bd167bcb89b48db164fa8bccf09",
+      "master_job": "Specify and deliver group authorship — four signers or four receipts.",
+      "master_outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Complete outside-user multi-device group operation and the full authorship-receipt interpretation/acceptance. Current cryptographic agreement proves selected keys signed the same artifact-bound record; it does not prove authorship or distinct people, issue PA/FA/IV, implement revocation or adopt RFC-0002."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Real outside-user multi-device group operation and full receipt interpretation remain required; keys do not establish distinct people/authorship.",
+      "next_authorized_technical_or_operating_action": "Use the complete signed same-artifact workflow with legitimately consenting actual participants.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/group-receipt-plan.md",
+        "docs/group-receipts.md",
+        "runs/2026-10-10-group-receipt-controls.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-130",
+        "docs/scope-progress.json#F-130",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-135",
+      "title": "Report AI — public intake for AI content people want flagged",
+      "percent_complete_unchanged": 40,
+      "original_criterion_sha256": "55079e8de87903df9237eec7892acf3f859b528c0dd166f2fb43317b81f6b5da",
+      "master_job": "Specify and deliver report AI — public intake for AI content people want flagged.",
+      "master_outcome": "A person can access the public tag workflow and its support process.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
+      ],
+      "classification": "actual_community_research_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Actual moderators, relevant inbox operation and public correction/appeal handling are not assigned/executed.",
+      "next_authorized_technical_or_operating_action": "Integrate reviewed intake with the adopted transport only after real moderation ownership is established.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-08-scope-plan-workflows-public.json",
+        "site/src/policies.js",
+        "runs/2026-11-17-community-hosted-capacity.json",
+        "docs/community-core.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-135",
+        "docs/scope-progress.json#F-135",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-136",
+      "title": "Townhall — a community space for AI users to talk, with moderation",
+      "percent_complete_unchanged": 40,
+      "original_criterion_sha256": "26522e521946badd67d7cd66ad9f81d540e8a6335075d01a88ae5d4c534e04a3",
+      "master_job": "Provide public live community discussions and official replies with safe publication controls.",
+      "master_outcome": "Everyone can read public community messages and company replies; private reports and research remain outside the public stream.",
+      "master_acceptance": "Exercise two-user and moderator posting, safe rendering, object authorization, bounded live updates, reconnect/replay, throttling and retraction; verify private synthetic markers never reach public responses or logs.",
+      "required_acceptance": [
+        "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
+      ],
+      "classification": "actual_community_research_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Actual moderated community operation and adopted public/native transport remain missing; API PS hosting is not community hosting.",
+      "next_authorized_technical_or_operating_action": "Integrate safe publication/retraction/reconnection core under the separately accepted community contract.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-08-scope-plan-workflows-public.json",
+        "site/src/policies.js",
+        "runs/2026-11-17-community-hosted-capacity.json",
+        "docs/community-core.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-136",
+        "docs/scope-progress.json#F-136",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-137",
+      "title": "Moderation ladder and escalation path derived from the code of conduct",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "66e101f3bac6a7daff68178e9fbede9c49786e6d88c08393a7ff5ac28ba6ca79",
+      "master_job": "Apply a documented moderation and appeal process with public safe action records.",
+      "master_outcome": "People see moderation reasons and appeal routes without removed secrets, private reports or reporter identities being republished.",
+      "master_acceptance": "Test moderator authorization, edits/retractions, safe tombstones and appeals; removed sensitive content must be absent from public history and event replay.",
+      "required_acceptance": [
+        "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
+      ],
+      "classification": "actual_community_research_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Actual moderator authorization, two-person appeals, incident/recovery and public operation remain missing.",
+      "next_authorized_technical_or_operating_action": "Integrate checked moderation/retraction core with legitimately assigned operators and accepted transport.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-08-scope-plan-workflows-public.json",
+        "site/src/policies.js",
+        "runs/2026-11-17-community-hosted-capacity.json",
+        "docs/community-core.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-137",
+        "docs/scope-progress.json#F-137",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-074",
+      "title": "conduct@ with an enforcement ladder",
+      "percent_complete_unchanged": 40,
+      "original_criterion_sha256": "061fe8858c4920ea93fc88644dfb345392b8a43185919d15d29276e3dee3f4f0",
+      "master_job": "Specify and deliver conduct@ with an enforcement ladder.",
+      "master_outcome": "A person can access the public tag workflow and its support process.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
+      ],
+      "classification": "actual_community_research_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Conduct inbox and actual response/enforcement owner operation remain required.",
+      "next_authorized_technical_or_operating_action": "Verify the accepted inbox and actual escalation/appeal exercise without sending unauthorized messages.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-08-scope-plan-workflows-public.json",
+        "site/src/policies.js"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-074",
+        "docs/scope-progress.json#F-074",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-138",
+      "title": "abuse@ and press@",
+      "percent_complete_unchanged": 40,
+      "original_criterion_sha256": "e0598ed11062c9e8e4b98bd7c60b6fcb4c3d30dcdada0898b444fc7f70f28d53",
+      "master_job": "Specify and deliver abuse@ and press@.",
+      "master_outcome": "A person can access the public tag workflow and its support process.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
+      ],
+      "classification": "actual_community_research_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Abuse/press inbox and actual accountable response operations remain required.",
+      "next_authorized_technical_or_operating_action": "Verify accepted public contact channels and real operator handling without inventing staff or SLAs.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-08-scope-plan-workflows-public.json",
+        "site/src/policies.js"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-138",
+        "docs/scope-progress.json#F-138",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-141",
+      "title": "Pilot programme — small consenting group, feedback without collecting prompts or outputs",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "c648a8792a120b4699f62933b01ad9b2141ffdce5ba3f33c485bb17d8121df32",
+      "master_job": "Specify and deliver pilot programme — small consenting group, feedback without collecting prompts or outputs.",
+      "master_outcome": "A person can access the public tag workflow and its support process.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Recruit and record a small consenting pilot, run the real workflow, review user feedback and close defects. Metadata preview/download is tested; it is not a running recruited pilot."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "A genuinely recruited consenting pilot with real workflow feedback and defect closeout is explicit.",
+      "next_authorized_technical_or_operating_action": "Use the existing optional metadata-only workflow after consent/operations acceptance; invented participants cannot count.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/owner-operation.md",
+        "runs/2026-10-10-owner-feedback-browser.json",
+        "docs/research-admission-plan.md",
+        "docs/research-admission.md",
+        "docs/research-admission-result.md",
+        "tools/research_admission.py",
+        "scripts/research-admission.py",
+        "scripts/verify-research-admission.py",
+        "tests/test_research_admission.py",
+        "runs/2026-10-12-admission-linux-controls.json",
+        "runs/2026-10-12-admission-local-controls.json",
+        "runs/2026-10-12-admission-worker-shadowing-refusal.json",
+        "tools/feedback_analysis.py",
+        "scripts/analyze-feedback.py",
+        "scripts/prepare-feedback-analysis-demo.py",
+        "scripts/verify-feedback-analysis.py",
+        "tests/test_feedback_analysis.py",
+        "docs/feedback-analysis-plan.md",
+        "docs/feedback-analysis.md",
+        "docs/feedback-analysis-result.md",
+        "runs/2026-10-12-feedback-analysis-explanations-local.json",
+        "runs/2026-10-12-feedback-analysis-linux.json",
+        "runs/2026-10-12-feedback-analysis-staging-refusal.json",
+        "runs/2026-10-12-feedback-no-change-local.json",
+        "runs/2026-10-12-feedback-no-change-linux.json",
+        "runs/2026-10-12-feedback-review-state-gap.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-141",
+        "docs/scope-progress.json#F-141",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-142",
+      "title": "Install and removal instructions, reproducible",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "c74ba0dab84531b914002fdbf4d23fe9ec1aa7df9a9ef0dfeaca001fe6939ce1",
+      "master_job": "Specify and deliver install and removal instructions, reproducible.",
+      "master_outcome": "A person can access the public tag workflow and its support process.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Perform physical iPhone/Android and real screen-reader install/use/offline-update/removal tasks and outside-user setup checks. Emulated engines and automated axe do not fulfill this gate.",
+        "Obtain an outside implementer run against their own build and record acceptance; the offline schema/profile CLI is implemented and tested with synthetic third-party-shaped records, not actual outside people."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Physical iPhone/Android, real screen readers and an outside implementer installation/removal are explicitly required.",
+      "next_authorized_technical_or_operating_action": "Run the prepared guide on actual consenting human/device routes; browser engines do not substitute.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-08-upgrade-device-public.json",
+        "runs/2026-10-08-scope-plan-site-public.json",
+        "docs/handheld-delivery.md",
+        "runs/2026-11-06-conformance-software-owner-decision.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-142",
+        "docs/scope-progress.json#F-142",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-075",
+      "title": "Trust-owned operating company and institutional accountability",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "686b78c33712efc10b7e44ada73fe2a87cd167458c2c43a2fd80464c287cb27b",
+      "master_job": "Prepare the owner-selected trust-owned Michigan LLC with Michael as initial manager; keep any later independent standards organization a separate, unselected governance decision.",
+      "master_outcome": "The public can identify the actual operator and distinguish trust ownership, management, future standards governance and an operating certification program.",
+      "master_acceptance": "Verify private trust identity and relevant trustee powers, execute consistent manager-managed formation and ownership instruments, determine actual activity obligations and update provider disclosures only after actual operation transfers. No foundation or certification is inferred.",
+      "required_acceptance": [
+        "Verify trust identity and relevant trustee powers privately; complete and execute consistent manager-managed LLC formation, membership, manager appointment and asset-rights instruments; determine actual activity obligations and change provider disclosures only after operation transfers. Any future independent standards organization remains a separate, unselected decision."
+      ],
+      "classification": "adoption_legal_governance_or_service_commitment",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Private trust powers/identity, executed formation/ownership/manager instruments and actual transfer require owner/qualified action.",
+      "next_authorized_technical_or_operating_action": "Prepare/reconcile permitted drafts only; do not claim execution or legal authority.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/legal/michigan-llc-packet.md",
+        "runs/2026-11-18-owner-trust-and-presentation-direction.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-075",
+        "docs/scope-progress.json#F-075",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-143",
+      "title": "Certification-mark ownership and filing work",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "0d10c67cf4995615d56c32c05ff25e78291b66c188eb33922273039a274e78a2",
+      "master_job": "Prepare qualified clearance, ownership and filing decisions before any certification-mark application or asset assignment.",
+      "master_outcome": "The public can distinguish actual brand ownership from any separately reviewed future certification-mark owner; foundation ownership is not presumed.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Complete qualified brand and certification-mark clearance and actual ownership/owner-use analysis. Adopt any certification structure only through a separate decision; the trust-owned operating-company choice does not file a mark or designate a foundation as its owner."
+      ],
+      "classification": "adoption_legal_governance_or_service_commitment",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Qualified clearance/ownership and certification-mark filing decisions are legal/owner work.",
+      "next_authorized_technical_or_operating_action": "Keep evidence/drafts precise; no machine legal clearance or inferred foundation ownership.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/legal/michigan-llc-packet.md",
+        "runs/2026-11-18-owner-trust-and-presentation-direction.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-143",
+        "docs/scope-progress.json#F-143",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-145",
+      "title": "Certification programme — what a certifier must test, and how one is accredited",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "0abadea701d6e508c65fd2a59a96755a715d80ed4d7a85848df22a37b4de01d5",
+      "master_job": "Specify and deliver certification programme — what a certifier must test, and how one is accredited.",
+      "master_outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Deliver Certification programme — what a certifier must test, and how one is accredited. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
+      ],
+      "classification": "adoption_legal_governance_or_service_commitment",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "An operating certification/accreditation programme and accountable accepted roles are not implemented/adopted. Template publisher separation does not deliver the programme.",
+      "next_authorized_technical_or_operating_action": "Design runnable programme/conformance mechanics only within a legitimate adopted authority; no invented accreditor.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-145",
+        "docs/scope-progress.json#F-145",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-146",
+      "title": "Nonprofit formation and filings",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "b2b2271c1581753797db0fc1131e50221dbaee5fd5a71db2a9fbb5c210722a2a",
+      "master_job": "Specify and deliver nonprofit formation and filings.",
+      "master_outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Reconcile full safe public formation drafts, approve entity/tax choices with a realistic budget and qualified counsel, and perform actual filings. Inventory and proposed corrections are not formation."
+      ],
+      "classification": "adoption_legal_governance_or_service_commitment",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Entity/tax choices, qualified review and actual filings are explicit; current trust-owned LLC direction does not form an unselected nonprofit.",
+      "next_authorized_technical_or_operating_action": "Reconcile authorized drafts while preserving the unselected formation decision and real filing gate.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/legal-operations-review.md",
+        "docs/legal/reviewed-corrections.md",
+        "docs/legal/source-inventory.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-146",
+        "docs/scope-progress.json#F-146",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-148",
+      "title": "Qualified legal review of every biometric and privacy assurance",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "af837cfac1a688233e9d306e00ca4b0ea851bba2319d55b76d2db6ce9a67e07c",
+      "master_job": "Specify and deliver qualified legal review of every biometric and privacy assurance.",
+      "master_outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Qualified counsel must review actual privacy/biometric assurances and applicability. Codex targeted draft repairs and authoritative-source research do not constitute this qualified review."
+      ],
+      "classification": "adoption_legal_governance_or_service_commitment",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Qualified counsel must actually review privacy/biometric applicability and assurances.",
+      "next_authorized_technical_or_operating_action": "Keep factual assurances aligned with code; legal research is not counsel acceptance.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/legal-operations-review.md",
+        "docs/legal/reviewed-corrections.md",
+        "docs/legal/source-inventory.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-148",
+        "docs/scope-progress.json#F-148",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-155",
+      "title": "SynthID and vendor watermarking",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "3d22d11ab22ee4f2aa4f32778a8695522c6ea92534b028873bdadcc771e5e665",
+      "master_job": "Specify and deliver synthID and vendor watermarking.",
+      "master_outcome": "The application extends supported tags without disabling the personal workflow.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Deliver SynthID and vendor watermarking. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
+      ],
+      "classification": "full_distribution_or_unsupported_vendor_mechanism",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Last bounded feasibility review found no installed official reference detector stack or accepted key/scheme/token/threshold profile; simulated watermarks do not meet vendor acceptance.",
+      "next_authorized_technical_or_operating_action": "Use a legitimately supplied supported watermark detector/profile only after resources/inputs are approved; no production Gemini verification claim.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-155",
+        "docs/scope-progress.json#F-155",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-156",
+      "title": "Additional browser and site adapters",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "167946de6fb7b3d8729e0f85689326ddb143fa9e781dfbc8915466b5b4e09ab2",
+      "master_job": "Specify and deliver additional browser and site adapters.",
+      "master_outcome": "The application extends supported tags without disabling the personal workflow.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Deliver Additional browser and site adapters. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Synthetic Firefox integration exists; stable outside-user install/removal and current live vendor acceptance are explicitly retained historically.",
+      "next_authorized_technical_or_operating_action": "Complete live selected Firefox/vendor lifecycle and actual stable user distribution without borrowing Chrome acceptance.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/firefox-adapter-plan.md",
+        "docs/firefox-preview.md",
+        "docs/firefox-adapter-result.md",
+        "scripts/build-firefox-extension.py",
+        "scripts/verify-firefox-extension.py",
+        "tests/test_firefox_package.py",
+        "tests/test_firefox_driver_protocol.py",
+        "tests/firefox-permissions.cjs",
+        "runs/2026-10-13-firefox-linux-integration.json",
+        "runs/2026-10-13-firefox-real-services-linux.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-156",
+        "docs/scope-progress.json#F-156",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "F-163",
+      "title": "Support with an SLA",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "18de38ed74067239c7888a199ebda5330f268872c8492d39b89136c7b35c5dea",
+      "master_job": "Specify and deliver support with an SLA.",
+      "master_outcome": "The application extends supported tags without disabling the personal workflow.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Deliver Support with an SLA. Next package action: Define supported versions/hours, escalation, exclusions and service outcomes. Required outcome: The application extends supported tags without disabling the personal workflow."
+      ],
+      "classification": "adoption_legal_governance_or_service_commitment",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Actual accepted service hours/versions/escalation/exclusions and SLA outcomes are not operating. A public free endpoint is not an SLA.",
+      "next_authorized_technical_or_operating_action": "Prepare technical service measurements while leaving the legal/operating commitment to its accountable provider.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/approachable-tag-modals.md",
+        "runs/2026-10-09-approachable-public.json",
+        "scripts/verify-enterprise.cjs"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#F-163",
+        "docs/scope-progress.json#F-163",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "X-02",
+      "title": "Any closed-source or paid dependency in the pipeline",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "723cbe8bca73b680729e1aa1ce1583cfabea326bf56512825c466789ecf36c3c",
+      "master_job": "Prevent introduction of: Any closed-source or paid dependency in the pipeline",
+      "master_outcome": "The product excludes any closed-source or paid dependency in the pipeline, and changes are reviewed against this boundary.",
+      "master_acceptance": "Review release configuration, public claims, and relevant code for this boundary; reject conflicting changes or require an explicit recorded product decision.",
+      "required_acceptance": [
+        "Review and bind package-to-notice obligations, bundled/native/model/font/runtime/data components and source offers; expand architecture coverage and execute the full source-bound conflict policy before claiming license clearance. Source-bound development signing is already exercised."
+      ],
+      "classification": "full_distribution_or_unsupported_vendor_mechanism",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Other13 actual distribution policies/native/model/platform/embedded obligations remain unknown; a closed platform cannot be silently exempted.",
+      "next_authorized_technical_or_operating_action": "Resolve real exact source/notice conflicts and route consumers; paid/proprietary exceptions require explicit recorded decision.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/open-dependency-audit-plan.md",
+        "docs/runtime-sbom.md",
+        "runs/2026-10-10-runtime-license-inventory.json",
+        "runs/2026-10-10-runtime-sbom-identity.json",
+        "scripts/verify-runtime-sbom.py",
+        "tests/test_runtime_sbom.py",
+        "eval/dependencies/runtime-sbom.json",
+        "docs/spdx-validation-plan.md",
+        "docs/spdx-inventory-validation.md",
+        "scripts/spdx_inventory.py",
+        "scripts/verify-runtime-sbom-standard.py",
+        "tests/test_spdx_inventory.py",
+        "runs/2026-10-10-spdx-standard-inventory.json",
+        "runs/2026-10-10-spdx-validation-controls.json",
+        "docs/license-evidence-plan.md",
+        "docs/dependency-notices.md",
+        "scripts/license_notices.py",
+        "scripts/verify-redistribution-notices.py",
+        "tests/test_license_notices.py",
+        "sbom/notices/manifest.json",
+        "runs/2026-10-11-license-notices-timestamped.json",
+        "runs/2026-10-11-license-archives-timestamped.json",
+        "docs/source-input-binding-plan.md",
+        "scripts/source_snapshot.py",
+        "scripts/verify-source-provenance.py",
+        "tests/test_source_provenance.py",
+        "runs/2026-10-11-source-captured-mac.json",
+        "runs/2026-10-11-source-captured-linux.json",
+        "docs/asset-notices-plan.md",
+        "docs/asset-notices.md",
+        "docs/asset-notices-result.md",
+        "scripts/asset_notices.py",
+        "scripts/verify-asset-notices.py",
+        "sbom/assets/notices.json",
+        "tests/test_asset_notices.py",
+        "runs/2026-10-12-selected-asset-mac.json",
+        "runs/2026-10-12-selected-runtime-archive.json",
+        "runs/2026-10-12-selected-assets-linux.json",
+        "runs/2026-10-12-selected-assets-staging-cleanup.json",
+        "docs/native-dependency-plan.md",
+        "docs/native-dependency-evidence.md",
+        "sbom/native/manifest.json",
+        "tools/native_inventory.py",
+        "scripts/verify-native-dependencies.py",
+        "tests/test_native_inventory.py",
+        "runs/2026-10-15-native-focused-controls.json",
+        "runs/2026-10-15-native-archive-replay.json",
+        "docs/nested-runtime-evidence.md",
+        "runs/2026-11-17-nested-runtime-obligations.json",
+        "runs/2026-11-18-pyodide-release-origin.json",
+        "runs/2026-11-18-pyodide-embedded-sources.json",
+        "docs/dependency-conflict-plan.md",
+        "docs/ps-source-distribution.md",
+        "eval/dependency-policy.json",
+        "tools/dependency_policy.py",
+        "scripts/verify-dependency-policy.py",
+        "tools/ps_source_distribution.py",
+        "scripts/export-ps-source.py",
+        "runs/2026-11-19-ps-source-default-policy-actual.json",
+        "runs/2026-11-19-ps-source-linux-actual.json",
+        "docs/esbuild-source-review.md",
+        "runs/2026-11-19-esbuild-source-cohort.json",
+        "runs/2026-11-19-ps-source-notice-macos.json",
+        "runs/2026-11-19-ps-source-notice-linux.json",
+        "runs/2026-11-19-ps-source-notice-staging-preserved.json",
+        "runs/2026-11-19-rolldown-parser-correction.json",
+        "runs/2026-11-19-c2pa-parser-privacy-correction.json",
+        "runs/2026-11-19-nli-cohort-engineering.json",
+        "runs/2026-11-19-nli-final-header-replay.json",
+        "docs/rolldown-source-review.md",
+        "docs/c2pa-cohort-result.md",
+        "docs/nli-license-cohort.md",
+        "runs/2026-11-19-ps-source-canonical-linux.json",
+        "tools/web_distribution.py",
+        "scripts/web-distribution.py",
+        "docs/web-distribution.md",
+        "runs/2026-11-21-web-js-budget-current-artifact.json",
+        "runs/2026-11-21-web-js-budget-correction.json",
+        "runs/2026-11-21-web-js-independent-review.json",
+        "runs/2026-11-21-nov21-web-closeout-review.json",
+        "runs/2026-11-21-nov21-publication.json",
+        "runs/2026-11-21-nov21-required-ci-review.json",
+        "runs/2026-11-21-nov21-web-closeout-counter-review.json",
+        "runs/2026-11-21-pyodide-js-source-corrected.json",
+        "runs/2026-11-21-pyodide-js-source-independent-review.json",
+        "runs/2026-11-21-hp-runtime-shared-integration.json",
+        "runs/2026-11-21-hp-runtime-independent-review.json",
+        "runs/2026-11-21-nov21-independent-publication.json",
+        "runs/2026-11-21-pr140-required-ci-review.json",
+        "runs/2026-11-21-android-pr140-automatic-review.json",
+        "runs/2026-11-21-zlib-source-fd-corrected.json",
+        "runs/2026-11-21-zlib-source-corrected-independent-review.json",
+        "runs/2026-11-21-js-export-owned-fd-corrected.json",
+        "runs/2026-11-21-js-export-owned-fd-independent-review.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#X-02",
+        "docs/scope-progress.json#X-02",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "N-001",
+      "title": "Protocol compatibility and schema migration",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "73292f15669bf0aded98f640a764ef19b899c87ba9d439968de90eca27e1295f",
+      "master_job": "Specify and deliver protocol compatibility and schema migration.",
+      "master_outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Accept any successor-version migration before implementing it; exercise the accepted transformation and evidence-loss/round-trip contract. Current version checks and unknown-version refusal work; no successor migration or proposal adoption is claimed."
+      ],
+      "classification": "adoption_legal_governance_or_service_commitment",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "No successor migration has been accepted; accepted transformation/evidence-loss/round-trip execution remains required.",
+      "next_authorized_technical_or_operating_action": "Keep unknown versions refused and prepare decision-ready transformations without adopting one.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/extension-consumer-plan.md",
+        "docs/assertion-conformance-plan.md",
+        "scripts/check-assertion.py",
+        "tests/test_assertion_conformance.py",
+        "runs/2026-10-10-six-state-consumer-browser.json",
+        "runs/2026-10-10-consumer-schema-python-corrected.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#N-001",
+        "docs/scope-progress.json#N-001",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "N-005",
+      "title": "Label dispute, correction, and supersession workflow",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "6de943d13e00486e197cda5fe73e0a21037a9751ad820a2c96898760bb50cc26",
+      "master_job": "Specify and deliver label dispute, correction, and supersession workflow.",
+      "master_outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Current report/contribution links and policy are present. Assign actual moderators/response owners, verify relevant inboxes and public correction/appeal tasks; implement the separately gated self-hosted live community application."
+      ],
+      "classification": "actual_community_research_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Actual assigned moderator/inbox and public submission/appeal/supersession operation remain required.",
+      "next_authorized_technical_or_operating_action": "Integrate existing correction bindings under adopted public moderation transport and actual accountable operators.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-08-scope-plan-workflows-public.json",
+        "site/src/policies.js",
+        "runs/2026-11-17-community-hosted-capacity.json",
+        "docs/community-core.md",
+        "runs/2026-11-17-dispute-link-current-sqlite.json",
+        "docs/dispute-correction-link.md",
+        "tests/test_dispute_correction_link.py"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#N-005",
+        "docs/scope-progress.json#N-005",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "N-010",
+      "title": "Personal/team/enterprise/proprietary tag offering boundaries",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "86412bf6b6daeb348895e00223e83c8f45f3aa59f526a8d36c684e3b32281555",
+      "master_job": "Specify and deliver personal/team/enterprise/proprietary tag offering boundaries.",
+      "master_outcome": "The named capability has observable behavior and is tracked independently of implementation status.",
+      "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+      "required_acceptance": [
+        "Accept organization namespaces and ownership boundaries; implement per-tenant custom policy and validate each job separately. No organization service is running or sold."
+      ],
+      "classification": "organization_human_commercial_acceptance",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Current governed tenant software works, but private-policy-result.md explicitly retains human operation and full commercial conformance; technical authority is not real organization/employee acceptance.",
+      "next_authorized_technical_or_operating_action": "Use the completed local registry in actual accepted organization operation; do not reinterpret historical human gate as conditional-only.",
+      "historical_evidence_paths_preserved": [
+        "site/src/policies.js",
+        "docs/scope-delivery.md",
+        "docs/approachable-tag-modals.md",
+        "runs/2026-10-09-approachable-public.json",
+        "docs/private-policy-plan.md",
+        "docs/private-policy-result.md",
+        "docs/private-policy.md",
+        "tools/private_policy.py",
+        "tests/test_private_policy.py",
+        "tests/test_private_policy_cli.py",
+        "runs/2026-10-11-private-policy-mac-controls.json",
+        "runs/2026-10-11-private-policy-linux-controls.json",
+        "runs/2026-10-11-private-policy-staging-cleanup.json",
+        "docs/quarterly-brand-and-agent-plan.md",
+        "docs/organization-policy-registry.md",
+        "docs/organization-policy-registry-result.md",
+        "runs/2026-11-21-organization-policy-mac-final-operation.json",
+        "runs/2026-11-21-organization-policy-linux-operation.json",
+        "runs/2026-11-21-organization-policy-linux-independent-review.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#N-010",
+        "docs/scope-progress.json#N-010",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-UC",
+      "title": "Unsafe Command",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "f988ec9b9b3d7230ff17ce334680a0082dac4c95b0e5c318f66bfb5d3ac7ad12",
+      "master_job": "Research a clearer command-risk tag name/claim while preserving PS until a change is accepted.",
+      "master_outcome": "A proposed migration explains exactly which meaning changes and how old PS records remain interpretable.",
+      "master_acceptance": "No rename or new live taxonomy code without owner/RFC acceptance.; Historic PS records retain their original meaning.; A naming change is not new independent accuracy evidence. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Deliver Unsafe Command. Next package action: Prepare an RFC decision and compatibility mapping. Required outcome: A proposed migration explains exactly which meaning changes and how old PS records remain interpretable."
+      ],
+      "classification": "adoption_legal_governance_or_service_commitment",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Research/proposal job is narrower than live rename, but full UC-01 retains independent context/route/human release and RFC0004 requires owner acceptance before implementation. A paper mapping alone cannot close it.",
+      "next_authorized_technical_or_operating_action": "Prepare concrete PS-compatible examples without registering/issuing UC; implementation awaits the recorded owner/RFC choice.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-UC",
+        "docs/scope-progress.json#T-UC",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-SC",
+      "title": "Scam Pattern",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "0d991ef321d006955813bea917a0f26111949ffdfddde8f405231272c108e520",
+      "master_job": "Research whether contextual fraud indicators support a useful, bounded possible-scam finding.",
+      "master_outcome": "The reader can inspect each validated indicator and dismiss a warning without an accusation of intent.",
+      "master_acceptance": "Two-family co-occurrence is a hypothesis, not independent corroboration.; Publish measured false-positive rates and category misses; hedged wording and one-action dismissal are required.; If indicator combinations do not separate benign discussion from relevant risk, do not issue the proposed claim. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Deliver Scam Pattern. Next package action: Define pressure, value transfer, identity assertion and channel-switch labeling with benign controls. Required outcome: The reader can inspect each validated indicator and dismiss a warning without an accusation of intent."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Independent contextual false-positive/category evidence and accepted indicator combination/claim are missing; co-occurrence alone is a hypothesis.",
+      "next_authorized_technical_or_operating_action": "Develop independently executable supported pressure/value/identity/channel observations with benign discussion controls.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-SC",
+        "docs/scope-progress.json#T-SC",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "T-BT",
+      "title": "Automation Pattern",
+      "percent_complete_unchanged": 20,
+      "original_criterion_sha256": "6475e04ebcb3b41cc6e3f2dd5749c284e133c36a60424a729f946ab56141ef92",
+      "master_job": "Research positive automation evidence without judging people from style, speed or absent human signals.",
+      "master_outcome": "A finding reports supported automation evidence within a defined workflow, without labeling an ordinary person a bot.",
+      "master_acceptance": "Absence of human evidence never issues BT.; Repetition, template structure and timing regularity alone are not accepted proof.; No deployment if the proposed evidence cannot support the declared claim. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "required_acceptance": [
+        "Deliver Automation Pattern. Next package action: Define positive, verifiable automation evidence and its capture boundaries. Required outcome: A finding reports supported automation evidence within a defined workflow, without labeling an ordinary person a bot."
+      ],
+      "classification": "claim_method_and_independent_release",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Positive verifiable automation evidence and accepted bounded claim remain unsupported; timing/repetition or absent human evidence is not proof.",
+      "next_authorized_technical_or_operating_action": "Research explicit cooperating workflow event evidence without classifying a person from style or behavior.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#T-BT",
+        "docs/scope-progress.json#T-BT",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "N-011",
+      "title": "In-house research data, training and anomaly pipeline",
+      "percent_complete_unchanged": 60,
+      "original_criterion_sha256": "92afd387e25ec00f592409f20adb3a1e1f95ad1fdb473e4cd001549e4f009eca",
+      "master_job": "Organize approved tag outputs in a remotely hosted, controlled open-source data stack for independently reviewed training and pattern analysis.",
+      "master_outcome": "Versioned records, independent labels and approved examples support reproducible improvement without making collection a dependency of local tags.",
+      "master_acceptance": "Verify selected-tag record structure, no unapproved response text, independent-label separation, remote authentication/access isolation, bounded retry/deduplication, retention/deletion and dataset manifests before collection goes live.",
+      "required_acceptance": [
+        "Deploy and review the approved invited metadata-only route with effective least-privilege authorization, proxy/provider handling and owner operations; prove actual encrypted 7-day backup expiry and replacement-host recovery before enabling any real collection. Run a consenting pilot. Example sharing, model training and anomaly purposes remain separately unapproved."
+      ],
+      "classification": "actual_community_research_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Invited metadata deployment, actual encrypted7day expiry/replacement-host recovery, owner operation and consenting pilot remain explicit.",
+      "next_authorized_technical_or_operating_action": "Complete authorized effective storage/backup/recovery mechanisms while real collection stays disabled until full acceptance.",
+      "historical_evidence_paths_preserved": [
+        "docs/data-growth-plan.md",
+        "runs/2026-10-08-private-host-foundation.json",
+        "docs/owner-operation.md",
+        "runs/2026-10-10-owner-feedback-browser.json",
+        "docs/metadata-storage-plan.md",
+        "docs/metadata-storage.md",
+        "deploy/research/metadata-development.sql",
+        "scripts/metadata-store-sandbox.py",
+        "scripts/verify-metadata-store.py",
+        "tests/test_metadata_store.py",
+        "runs/2026-10-11-metadata-store-unicode-linux.json",
+        "runs/2026-10-11-metadata-storage-bounded-diagnostics.json",
+        "runs/2026-10-11-metadata-storage-merged-source.json",
+        "runs/2026-10-11-metadata-storage-protected-merge.json",
+        "runs/2026-10-11-metadata-store-diagnostics-linux.json",
+        "docs/research-invitation-result.md",
+        "runs/2026-10-12-invitation-expanded-linux.json",
+        "runs/2026-10-12-invitation-base-linux.json",
+        "runs/2026-10-12-invitation-focused.json",
+        "docs/research-admission-plan.md",
+        "docs/research-admission.md",
+        "docs/research-admission-result.md",
+        "tools/research_admission.py",
+        "scripts/research-admission.py",
+        "scripts/verify-research-admission.py",
+        "tests/test_research_admission.py",
+        "runs/2026-10-12-admission-linux-controls.json",
+        "runs/2026-10-12-admission-local-controls.json",
+        "runs/2026-10-12-admission-worker-shadowing-refusal.json",
+        "tools/feedback_analysis.py",
+        "scripts/analyze-feedback.py",
+        "scripts/prepare-feedback-analysis-demo.py",
+        "scripts/verify-feedback-analysis.py",
+        "tests/test_feedback_analysis.py",
+        "docs/feedback-analysis-plan.md",
+        "docs/feedback-analysis.md",
+        "docs/feedback-analysis-result.md",
+        "runs/2026-10-12-feedback-analysis-explanations-local.json",
+        "runs/2026-10-12-feedback-analysis-linux.json",
+        "runs/2026-10-12-feedback-analysis-staging-refusal.json",
+        "runs/2026-10-12-feedback-no-change-local.json",
+        "runs/2026-10-12-feedback-no-change-linux.json",
+        "runs/2026-10-12-feedback-review-state-gap.json",
+        "docs/backup-retention-plan.md",
+        "docs/backup-retention.md",
+        "docs/backup-retention-result.md",
+        "tools/backup_retention.py",
+        "scripts/verify-backup-retention.py",
+        "tests/test_backup_retention.py",
+        "runs/2026-10-12-backup-retention-linux.json",
+        "runs/2026-10-12-backup-retention-current-refusals.json",
+        "runs/2026-10-12-backup-retention-cache-failure.json",
+        "runs/2026-10-12-backup-retention-ordered-linux.json",
+        "runs/2026-10-12-backup-retention-ordered-refusals.json",
+        "runs/2026-10-12-backup-retention-order-fix.json",
+        "runs/2026-10-12-backup-cancellation-linux.json",
+        "runs/2026-10-12-backup-cancellation-encrypted.json",
+        "runs/2026-10-12-backup-cancellation-refusals.json",
+        "runs/2026-10-12-backup-cancellation-review-finding.json",
+        "docs/metadata-pilot-contract.md",
+        "runs/2026-10-13-metadata-pilot-owner-decision.json",
+        "deploy/research/metadata-pilot-policy.json",
+        "docs/research-http-plan.md",
+        "docs/research-http.md",
+        "docs/research-http-result.md",
+        "runs/2026-10-14-research-http-linux.json",
+        "runs/2026-10-14-research-http-current-linux.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#N-011",
+        "docs/scope-progress.json#N-011",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "N-012",
+      "title": "Phone and offline on-device tag checker",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "186b9cba6ef67018a6f08d06b637d7407358f9bb0f1ddef1bd47c519805c7846",
+      "master_job": "Run a version-bound tag method on a phone without an account, extension or local containers.",
+      "master_outcome": "A person copies an answer from any app and receives a bounded PS preview without uploading the answer.",
+      "master_acceptance": "Compare full evidence for all active fixtures in Chromium and WebKit; test failed initialization, invalid source, timeout/cancellation, stale results, offline reload, clear/removal, no input-bearing requests/storage, keyboard, 320px and text enlargement.",
+      "required_acceptance": [
+        "Execute the owner guide on the identified physical iPhone 14 Plus with actual iOS version and VoiceOver; then Android/TalkBack, outside-user setup and human desktop screen-reader checks. Browser engines do not substitute."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Physical iPhone14Plus actual iOS/VoiceOver, Android/TalkBack, outside-user and human desktop tasks remain explicit.",
+      "next_authorized_technical_or_operating_action": "Use the complete owner guide on real devices/people; no more engine reruns as a substitute.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-08-upgrade-device-public.json",
+        "runs/2026-10-08-scope-plan-site-public.json",
+        "docs/handheld-delivery.md",
+        "docs/owner-operation.md",
+        "runs/2026-10-10-owner-feedback-browser.json",
+        "docs/ps-lazy-context-performance-plan.md",
+        "runs/2026-10-13-ps-lazy-context-paired.json",
+        "runs/2026-10-13-ps-lazy-regressions.json",
+        "runs/2026-10-13-ps-lazy-device-engines.json",
+        "runs/2026-10-13-ps-lazy-staging-timing.json",
+        "runs/2026-11-09-iphone-target-status.json",
+        "runs/2026-11-17-offline-worker-removal-browser.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#N-012",
+        "docs/scope-progress.json#N-012",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "N-013",
+      "title": "Native iPhone sharing into a tag check",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "f087a374b28d00a13d8747a90af8d00896bbd08cf9c2d07686e43bdfefa8e71c",
+      "master_job": "Receive selected text through an iPhone Share extension with explicit user action.",
+      "master_outcome": "A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
+      "master_acceptance": "Signed containing app and Share extension tested on real iPhones; bounded input, process lifecycle, consent, no unintended transfers, independent method parity and accessible results.",
+      "required_acceptance": [
+        "Deliver Native iPhone sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Actual signed app/Share on iPhone14Plus with offline/VoiceOver/lifecycle/removal and outside-user operation remain missing.",
+      "next_authorized_technical_or_operating_action": "Use current actual TestFlight1.0(1) with the owner; invited tester/no sessions is not acceptance.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "docs/native-share-plan.md",
+        "docs/native-engine-checks.md",
+        "docs/experiments/native-share-unreleased.json",
+        "runs/2026-10-11-native-engine-observed.json",
+        "runs/2026-10-11-native-engine-resource-identity.json",
+        "runs/2026-10-11-native-copy-controls.json",
+        "runs/2026-10-11-native-share-unavailable.json",
+        "runs/2026-10-11-native-runtime-attempt-4.json",
+        "runs/2026-10-11-native-runtime-attempt-5.json",
+        "runs/2026-10-12-native-python-private-candidate.json",
+        "docs/native-share-repair-plan.md",
+        "docs/native-share-developer.md",
+        "runs/2026-11-07-native-share-progress-baseline.json",
+        "runs/2026-11-07-native-share-workflow.json",
+        "runs/2026-11-07-native-share-text-controls.json",
+        "scripts/verify-ios-share.py",
+        "scripts/verify-native-share-evidence.py",
+        "mobile/ios/Tests/UIFlows.swift",
+        "runs/2026-11-07-native-share-reviewed-workflow.json",
+        "runs/2026-11-07-native-share-current-workflow.json",
+        "runs/2026-11-07-native-share-bootstrap-workflow.json",
+        "runs/2026-11-07-native-share-bounded-workflow.json",
+        "runs/2026-11-07-native-automation-budget.json",
+        "runs/2026-11-08-ios-archive-readiness.json",
+        "docs/ios-distribution-plan.md",
+        "docs/app-store-readiness.md",
+        "scripts/verify-ios-archive.py",
+        "tests/test_ios_archive.py",
+        "runs/2026-11-09-native-share-initial-workflow.json",
+        "runs/2026-11-09-native-share-diagnostic-workflow.json",
+        "runs/2026-11-09-native-share-distribution-workflow.json",
+        "runs/2026-11-09-ios-distribution-final-archive.json",
+        "runs/2026-11-09-native-share-hosted-workflow.json",
+        "runs/2026-11-09-ios-hosted-archive.json",
+        "runs/2026-11-09-native-share-hosted-startup-refusal.json",
+        "runs/2026-11-09-iphone-target-status.json",
+        "runs/2026-11-17-native-share-current-workflow.json",
+        "runs/2026-11-17-ios-runtime-notices-unsigned-archive.json",
+        "runs/2026-11-17-current-ios-signing-attempt.json",
+        "runs/2026-11-17-paged-notices-native-share-workflow.json",
+        "runs/2026-11-17-paged-notices-ios-archive.json",
+        "runs/2026-11-17-ios-notice-page-reconstruction.json",
+        "runs/2026-11-17-ios-signing-keychain-diagnosis.json",
+        "runs/2026-11-17-paged-notices-ios27-ui-and-cleanup.json",
+        "runs/2026-11-17-share-manual-signing-retry.json",
+        "runs/2026-11-17-owned-cleanup-first-local-run.json",
+        "runs/2026-11-17-owned-cleanup-notice-navigation.json",
+        "runs/2026-11-17-owned-cleanup-keyboard-navigation.json",
+        "runs/2026-11-17-hosted-ios27-owned-cleanup.json",
+        "runs/2026-11-17-owned-cleanup-ios-archive.json",
+        "runs/2026-11-17-split-native-share-workflow.json",
+        "runs/2026-11-17-hosted-split-ios27-pass.json",
+        "runs/2026-11-18-ios-signed-archive-and-apple-validation.json",
+        "runs/2026-11-18-ios-testflight-internal-upload.json",
+        "runs/2026-11-18-testflight-dashboard-authentication.json",
+        "runs/2026-11-18-testflight-mac-session-recheck.json",
+        "runs/2026-11-18-testflight-missing-compliance.json",
+        "runs/2026-11-18-ios-testflight-compliance-inputs.json",
+        "scripts/verify-ios-compliance-inputs.py",
+        "runs/2026-11-18-testflight-owner-group.json",
+        "runs/2026-11-18-testflight-owner-build-testing.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#N-013",
+        "docs/scope-progress.json#N-013",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "N-014",
+      "title": "Native Android sharing into a tag check",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "13afa5ea98f0bca08a78390427c7f4c356b63bf10ff56bb9128b4895178a7643",
+      "master_job": "Receive selected text through an Android OS share interface with explicit user action.",
+      "master_outcome": "A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
+      "master_acceptance": "Receive supported share intents on real Android devices; bounds, lifecycle, consent, no unintended transfers, independent method parity and accessible results.",
+      "required_acceptance": [
+        "Deliver Native Android sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Actual physical Android/TalkBack/outside-user and maintained release/signing/startup coverage remain missing; API36 emulator is selected integration only.",
+      "next_authorized_technical_or_operating_action": "Run the working Share build on legitimately available physical human-operated devices, retaining current startup/refusal limits.",
+      "historical_evidence_paths_preserved": [
+        "docs/scope-delivery.md",
+        "runs/2026-11-17-android-emulator-host-inventory.json",
+        "docs/android-share-developer.md",
+        "docs/android-share-plan.md",
+        "runs/2026-11-19-android-prerequisites-local.json",
+        "runs/2026-11-19-android-prerequisites-corrected.json",
+        "runs/2026-11-19-android-prerequisites-independent-review.json",
+        "runs/2026-11-21-android-default-configuration-nine-pass.json",
+        "runs/2026-11-21-android-integration-pm-review.json",
+        "runs/2026-11-21-android-integration-manifest-correction.json",
+        "runs/2026-11-21-nov21-functional-publication.json",
+        "runs/2026-11-21-pr138-required-ci-review.json",
+        "runs/2026-11-21-android-pr138-software-review.json",
+        "runs/2026-11-21-nov21-functional-counter-review.json",
+        "runs/2026-11-21-nov21-functional-closeout.json",
+        "runs/2026-11-21-android-malformed-first-host-failed.json",
+        "runs/2026-11-21-android-synthetic-dispatch-controls.json",
+        "runs/2026-11-21-android-malformed-intent-hosted-pass.json",
+        "runs/2026-11-21-android-malformed-independent-review.json",
+        "runs/2026-11-21-nov21-independent-publication.json",
+        "runs/2026-11-21-pr140-required-ci-review.json",
+        "runs/2026-11-21-android-pr140-automatic-review.json",
+        "runs/2026-11-21-android-os-chooser-hosted-pass.json",
+        "runs/2026-11-21-android-chooser-peer-review.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#N-014",
+        "docs/scope-progress.json#N-014",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    },
+    {
+      "id": "N-015",
+      "title": "Blind PS review from a phone",
+      "percent_complete_unchanged": 80,
+      "original_criterion_sha256": "d38b44caa75c96c0b168ca2a6d2eb82f6d2ed1ada027ffffa49dc6f790787e9b",
+      "master_job": "Read a frozen reviewer JSON file, collect independent labels and export exact item fields for comparison.",
+      "master_outcome": "Reviewers can label without developer setup or detector predictions; incomplete and changed files fail coordinator comparison.",
+      "master_acceptance": "Validate frozen hashes, reviewer slot, exact original text, unique complete items and reasons; show disagreements and ambiguity; forbid hidden predictions, uploads, automatic persistence and claims of verified independence.",
+      "required_acceptance": [
+        "Recruit two independent humans and an independent sample coordinator; freeze a new representative holdout, return blind labels and adjudicate disagreement before detector evaluation. Phone packet tooling is complete but actual review is not."
+      ],
+      "classification": "actual_human_device_or_outside_operation",
+      "fully_finishable_autonomously_now": false,
+      "precise_unmet_acceptance": "Independent coordinator/two human reviewers/new representative blind holdout and human adjudication remain explicit.",
+      "next_authorized_technical_or_operating_action": "Use frozen phone packets with actual independent participants; invented ratings remain engineering only.",
+      "historical_evidence_paths_preserved": [
+        "runs/2026-10-09-scope-completion-checks.json",
+        "tests/test_blind_review.py",
+        "docs/PS-reviewer-start.md",
+        "docs/blind-review-privacy-plan.md",
+        "runs/2026-10-11-blind-private-current-mac-cli.json",
+        "runs/2026-10-11-blind-private-linux-cli.json",
+        "runs/2026-10-11-blind-private-linux-current.json",
+        "runs/2026-10-11-blind-private-browser.json",
+        "runs/2026-10-11-blind-private-device.json",
+        "runs/2026-11-09-iphone-target-status.json"
+      ],
+      "criterion_sources": [
+        "docs/master-scope.json#N-015",
+        "docs/scope-progress.json#N-015",
+        "docs/scope-delivery.md"
+      ],
+      "scope_or_gate_waiver_recommended": false
+    }
+  ],
+  "limits": [
+    "This audit adds no original IDs, changes no percentages/criteria and closes no scoped software task.",
+    "Current source/evidence hashes establish identity, not independent accuracy, professional approval or actual outside people.",
+    "Historical evidence paths are preserved as references; they were not all rerun or promoted to current proof.",
+    "No new tests, Docker, service, model/download, private user data, account grant or deployment used for this review.",
+    "Parent must select any future bounded implementation and review its exact functioning result before acceptance."
+  ]
+}
