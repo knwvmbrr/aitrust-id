@@ -1,0 +1,60 @@
+{
+  "format": "ps-review-join-corrected-distinct-review/v1",
+  "captured_at": "2026-11-21T21:16:24.703142+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/share_debugger",
+  "reviewed_candidate_base": "ff4fc665ad06230937e7eb53e0765c3a5b417ef3",
+  "source_sha256": {
+    "tools/ps_review_join.py": "e3133d07a7277610513540be19a1f63c086f512f0e50c57e861b3674f297d866",
+    "scripts/ps-review-join.py": "410407167bab23297a1074a258ae64d3d2b0712dfa99940917489af2381f2d6e",
+    "tests/test_ps_review_join.py": "89db8ce28f892f693cbdde65b5a59bef596bcfb1b469ea63f6520bbfc1f5a1cc",
+    "docs/ps-review-join-plan.md": "25210116fc0a3186b70d38f40da2a87c785b6cf160f6bb0b41ba454bb7f9de25",
+    "docs/ps-review-join.md": "48680a2f617422ab37c55c7908f1bfec351332e548ac1577d750179ec9ee2a99",
+    "scripts/prepare-ps-review.py": "d42f0ded28be966ed9f98be57327c8c808b996a5faca3b30e9af61c13c07e475",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "tools/review_execution.py": "a100fbd3ba79d583423e9398937e5a218588fe699b6a084e00a6947f5506578a",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "eval/harness.py": "4d5c16f3081347ba0dcf793301ffdc6406be66450024f662efe9f3902b082c84",
+    "eval/gates.yaml": "b56568b012c8aef8b0db4169aaec3709b2ca00ab5750546cdc812091026eaa96"
+  },
+  "source_stable": true,
+  "original_parent_close_finding_sha256": "d08482e67272fc48940d2addf506243f5c31be1826fb005469e933f66b8cbe5f",
+  "actual_corrected_parent_close_case": {
+    "exit": 1,
+    "complete_output_remains": true,
+    "explicit_export_uncertainty": true,
+    "parent_close_attempts": 1,
+    "private_path_or_exception_echo": false,
+    "stderr_sha256": "6710d6f86343c94c37df2b5edf52fca1ed809c91e152568f0f8a602c80f1772f"
+  },
+  "author_current_cli_receipt": {
+    "path": "runs/2026-11-21-ps-review-join-parent-corrected-cli.json",
+    "sha256": "d16d26f9e6b21b7a9961cb40b478f2a8aa4245906c9283d0a0a2ed98f4d070f7",
+    "actual_commands": 7,
+    "all15sources_match": true
+  },
+  "other_actual_reviewer_controls": {
+    "prior_frozen_end_to_end_and_result_close_controls_passed": 2,
+    "seconds": 1.69,
+    "scope": "Prior ff4fc candidate before wrapper-only parent-close fix; not relabeled current full-suite proof."
+  },
+  "source_review": [
+    "Entire parent-directory ownership context is now inside typed post-creation OSError uncertainty handling; released numeric FD is never retried.",
+    "Private no-overwrite fixed-name export, rollback identity guards and worker/deadline/output bounds remain.",
+    "Current frozen recipe is compared against trusted current implementation/dependency identity; packet values never select child argv/code.",
+    "Explicit decisions bind every original item and both returned forms; no automatic labels. Ambiguity stays outside binary counts with explicit accounting.",
+    "Existing evaluation harness consumes the advisory shape but must refuse release: independence/method-fixed false and calibration absent.",
+    "Inputs/reasons stay private; per-item hashes/signals can still link data and are explicitly disclosed. Console diagnostics are fixed."
+  ],
+  "new_actionable_findings": [],
+  "limits": [
+    "Bounded authored synthetic source/filesystem/CLI review, not an independent human-label, sampling, chronology, probability or accuracy validation.",
+    "One corrected parent-close fault replay; author seven current CLI results are hash-checked, not rerun by reviewer.",
+    "No broad21/24suite, new network/model/dependency/SDK/browser or source edit by reviewer.",
+    "No development publication, main deployment, full original requirement or release acceptance granted by this review."
+  ]
+}

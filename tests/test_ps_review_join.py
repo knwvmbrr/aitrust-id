@@ -128,7 +128,7 @@ def test_export_failure_rolls_back_only_owned_output(tmp_path):
         if attempts == 2: raise OSError('PRIVATE_CANARY')
         return real(fd, value)
     with patch.object(j.os, 'write', side_effect=failed):
-        with pytest.raises(OSError): j.publish(destination, {'report.json': b'{}', 'predictions.json': b'{}'}, lambda: None)
+        with pytest.raises(j.ExportUncertain): j.publish(destination, {'report.json': b'{}', 'predictions.json': b'{}'}, lambda: None)
     assert not destination.exists()
 
 
@@ -191,4 +191,19 @@ def test_final_directory_close_error_is_explicit_uncertain_and_close_once(tmp_pa
         assert cli.main(['prepare','--packet',str(tmp_path/'unused'),'--output',str(destination)])==1
     stderr=capsys.readouterr().err
     assert 'export uncertain' in stderr and 'output may remain' in stderr and 'PRIVATE_CANARY'not in stderr
+    assert len(attempts)==1 and (destination/'adjudication.json').is_file()
+
+
+def test_parent_directory_close_after_complete_export_is_uncertain_once(tmp_path,capsys):
+    import importlib.util
+    tmp_path.chmod(0o700);destination=tmp_path/'result';real_close=os.close;attempts=[]
+    spec=importlib.util.spec_from_file_location('join_cli_parent',ROOT/'scripts/ps-review-join.py');cli=importlib.util.module_from_spec(spec);spec.loader.exec_module(cli)
+    def close(fd):
+        if os.fstat(fd).st_ino==tmp_path.stat().st_ino:
+            attempts.append(fd);real_close(fd);raise OSError('PRIVATE_PARENT_CLOSE_CANARY')
+        real_close(fd)
+    with patch.object(cli.join,'template',return_value={'decisions':[]}),patch.object(cli.join,'capture',return_value={}),patch.object(cli.join,'sources',return_value={}),patch.object(j.os,'close',side_effect=close):
+        assert cli.main(['prepare','--packet',str(tmp_path/'unused'),'--output',str(destination)])==1
+    stderr=capsys.readouterr().err
+    assert 'export uncertain'in stderr and 'output may remain'in stderr and 'PRIVATE_PARENT_CLOSE_CANARY'not in stderr
     assert len(attempts)==1 and (destination/'adjudication.json').is_file()

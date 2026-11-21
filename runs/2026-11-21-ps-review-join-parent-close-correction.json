@@ -1,0 +1,42 @@
+{
+  "format": "ps-review-join-parent-publication-correction/v1",
+  "captured_at": "2026-11-21T21:15:41.478807+00:00",
+  "pass": true,
+  "source_base": "ff4fc665ad06230937e7eb53e0765c3a5b417ef3",
+  "source_sha256": {
+    "tools/ps_review_join.py": "e3133d07a7277610513540be19a1f63c086f512f0e50c57e861b3674f297d866",
+    "scripts/ps-review-join.py": "410407167bab23297a1074a258ae64d3d2b0712dfa99940917489af2381f2d6e",
+    "tests/test_ps_review_join.py": "89db8ce28f892f693cbdde65b5a59bef596bcfb1b469ea63f6520bbfc1f5a1cc"
+  },
+  "original_peer_finding": {
+    "path": "runs/2026-11-21-ps-review-join-parent-close-original.json",
+    "sha256": "d08482e67272fc48940d2addf506243f5c31be1826fb005469e933f66b8cbe5f"
+  },
+  "correction": "The typed uncertainty boundary covers the complete private-parent context. A post-creation OSError, including parent-directory close after release, reports that private output may remain without retrying a released descriptor.",
+  "affected_controls": {
+    "pass": true,
+    "passed": 4,
+    "deselected": 20,
+    "seconds": 0.06,
+    "cases": [
+      "actual_parent_close_after_release",
+      "actual_result_directory_close_after_release",
+      "write_failure_owned_rollback",
+      "final_export_stability_rollback"
+    ]
+  },
+  "actual_current_cli": {
+    "path": "runs/2026-11-21-ps-review-join-parent-corrected-cli.json",
+    "sha256": "d16d26f9e6b21b7a9961cb40b478f2a8aa4245906c9283d0a0a2ed98f4d070f7",
+    "command_count": 7,
+    "existing_harness_consumes": true,
+    "evaluation_gate_pass": false
+  },
+  "original_frozen_packet_unchanged": true,
+  "distinct_peer_review_pending": true,
+  "limits": [
+    "No broad suite or old test count presented as current full coverage.",
+    "Post-creation I/O failure conservatively reports uncertainty even when owned rollback removed the folder.",
+    "Synthetic ratings only; no claim of verified human decisions, accepted sampling/calibration or original scope closure."
+  ]
+}

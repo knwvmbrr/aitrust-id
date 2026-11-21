@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-211827-ps-review-parent-export-correction-f9467f4e",
+  "recorded_at": "2026-11-21T21:18:27.581170+00:00",
+  "author": "seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ff4fc665ad06230937e7eb53e0765c3a5b417ef3",
+  "changed": "Extended the PS advisory join typed export-uncertainty boundary across its private parent-directory context after a distinct reviewer reproduced a close-after-release gap.",
+  "proves": "Four affected publication controls and seven actual current-source CLI commands pass; existing harness still consumes and refuses release. Distinct reviewer replayed the exact parent-close countercase and verified all15 current source bindings; explicit may-remain warning and one close observed.",
+  "limits": "Original first candidate and both peer failures preserved. Synthetic engineering only; no full24-suite claim, human adjudication/independence, calibration, original requirement closure, deployment or sampling acceptance.",
+  "scope_ids": [
+    "F-108",
+    "N-015",
+    "T-PS"
+  ],
+  "files": {
+    "tools/ps_review_join.py": "e3133d07a7277610513540be19a1f63c086f512f0e50c57e861b3674f297d866",
+    "tests/test_ps_review_join.py": "89db8ce28f892f693cbdde65b5a59bef596bcfb1b469ea63f6520bbfc1f5a1cc",
+    "runs/2026-11-21-ps-review-join-parent-corrected-cli.json": "d16d26f9e6b21b7a9961cb40b478f2a8aa4245906c9283d0a0a2ed98f4d070f7",
+    "runs/2026-11-21-ps-review-join-parent-close-original.json": "d08482e67272fc48940d2addf506243f5c31be1826fb005469e933f66b8cbe5f",
+    "runs/2026-11-21-ps-review-join-parent-close-correction.json": "e6c62cbdd77ef4b4dac2fc04e3810b18df4a6ca89223eb7c239f36b67d976396",
+    "runs/2026-11-21-ps-review-join-independent-review.json": "63353a1ceab7618627ed15f11fc276537f98952c349c69112bf4868793d6190e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-ps-review-join-parent-corrected-cli.json",
+      "sha256": "d16d26f9e6b21b7a9961cb40b478f2a8aa4245906c9283d0a0a2ed98f4d070f7"
+    },
+    {
+      "path": "runs/2026-11-21-ps-review-join-parent-close-original.json",
+      "sha256": "d08482e67272fc48940d2addf506243f5c31be1826fb005469e933f66b8cbe5f"
+    },
+    {
+      "path": "runs/2026-11-21-ps-review-join-parent-close-correction.json",
+      "sha256": "e6c62cbdd77ef4b4dac2fc04e3810b18df4a6ca89223eb7c239f36b67d976396"
+    },
+    {
+      "path": "runs/2026-11-21-ps-review-join-independent-review.json",
+      "sha256": "63353a1ceab7618627ed15f11fc276537f98952c349c69112bf4868793d6190e"
+    }
+  ],
+  "checks": []
+}

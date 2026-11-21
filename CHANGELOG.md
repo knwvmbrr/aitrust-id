@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-211827-ps-review-parent-export-correction-f9467f4e
+
+Recorded 2026-11-21T21:18:27.581170+00:00 · Contributor: seo · change
+
+- **Changed.** Extended the PS advisory join typed export-uncertainty boundary across its private parent-directory context after a distinct reviewer reproduced a close-after-release gap.
+- **Evidence.** Four affected publication controls and seven actual current-source CLI commands pass; existing harness still consumes and refuses release. Distinct reviewer replayed the exact parent-close countercase and verified all15 current source bindings; explicit may-remain warning and one close observed. [Change record](./runs/changes/2026-11-21-211827-ps-review-parent-export-correction-f9467f4e.json).
+- **Not claimed.** Original first candidate and both peer failures preserved. Synthetic engineering only; no full24-suite claim, human adjudication/independence, calibration, original requirement closure, deployment or sampling acceptance.
+
+
 ### 2026-11-21-211100-ps-advisory-review-join-82461250
 
 Recorded 2026-11-21T21:11:00.449077+00:00 · Contributor: seo · change

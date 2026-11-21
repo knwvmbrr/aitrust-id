@@ -1,0 +1,19 @@
+{
+  "format": "ps-review-join-parent-close-review/v1",
+  "captured_at": "2026-11-21T21:13:29.057327+00:00",
+  "pass": false,
+  "source_commit": "ff4fc665ad06230937e7eb53e0765c3a5b417ef3",
+  "module_sha256": "e2d1bdbbc3f534c2872474c9b58492844e7933f74dda7c5fad3ccbf2d5894598",
+  "case": "actual_owned_parent_directory_close_after_complete_publication",
+  "actual_exit": 1,
+  "complete_output_remains": true,
+  "explicit_export_uncertain_reported": false,
+  "generic_join_unavailable_reported": true,
+  "owned_parent_close_attempts": 1,
+  "stderr_sha256": "1b7d4c58c2c797afd9b5b6c69e209d0ab070672c442ecacbd12f2b3ca84acf95",
+  "private_path_or_exception_echo": false,
+  "limits": [
+    "Fixed synthetic publisher fixture with actual filesystem and CLI exception routing; no real packet, input, broad suite, source edits or network.",
+    "Same output-uncertainty defect remains at the outer private-parent context close; result-directory close correction alone does not cover it."
+  ]
+}

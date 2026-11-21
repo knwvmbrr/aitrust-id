@@ -205,12 +205,25 @@ def join(packet, adjudication):
 
 
 def publish(path, files, stable):
+    publication = {'created': False}
+    try:
+        return _publish(path, files, stable, publication)
+    except OSError:
+        # Includes the parent-directory context's own close after successful
+        # publication. Its descriptor must not be retried after release.
+        if publication['created']:
+            raise ExportUncertain('Private output may remain; do not accept it.') from None
+        raise
+
+
+def _publish(path, files, stable, publication):
     """Exclusive fixed-name export with single raw-FD ownership and rollback."""
     path = Path(path).absolute(); need(set(files) in ({'adjudication.json'}, {'report.json', 'predictions.json'}))
     need(all(type(v) is bytes for v in files.values()) and sum(map(len, files.values())) <= MAX_OUTPUT)
     stable()
     with directory(path.parent, ROOT) as parent:
         os.mkdir(path.name, 0o700, dir_fd=parent)
+        publication['created'] = True
         fd = None; owned = {}; directory_id = None
         try:
             fd = os.open(path.name, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW, dir_fd=parent)
