@@ -62,3 +62,22 @@ and recovery. Use finite invented fixtures and current source hashes; preserve
 any failed baseline/control records. Run only affected controls, with existing
 worker deadlines unchanged. These are authored engineering observations, not
 independent accuracy, human acceptance or full original requirement closure.
+
+## Review correction before parser refactor
+
+Distinct review reproduced a construction-only forged worker row: the existing
+shape validator accepted an either/or row relabeled as additive and the new brief
+then described additive wording. Preserve that failed receipt. Factor the exact
+canonical recognizer into one bounded helper inside choice_framing.py, shared by
+producer and selected-choice consumer validation. Replay the actual frame and
+choice spans; require the exact construction and paired marker spans before a
+brief is eligible. Keep the same 2000-character frame, 256-character item and
+ordered selection limits. This is one recognizer, not a second grammar.
+
+Only the selected choice validation path lazily loads this helper. A missing or
+broken choice parser/worker remains unavailable without invalidating authority
+or urgency. No new worker, timeout, corpus format or reference-truth inference is
+introduced. Canonical output semantics stay1.3.0; changed source hashes identify
+the corrected implementation. Replay only the original forgery, altered markers,
+genuine additive and existing four-form positives, then capture new actual CLI
+proof. Earlier successful executions remain historical to their exact source.

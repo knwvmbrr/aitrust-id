@@ -15,6 +15,39 @@ def span(value,text,limit):
     start,end=value;require(0<=start<end<=len(text) and end-start<=limit and text[start:end].strip())
     return start,end
 
+def paired_markers(subject,frame,choices):
+    """Canonical finite grammar over already-frozen selected NFC locations."""
+    left,right=span(frame,subject,2000)
+    require(isinstance(choices,list) and len(choices)==2)
+    first,second=[span(value,subject,256) for value in choices]
+    require(left<=first[0]<first[1]<=second[0]<second[1]<=right)
+    require(subject[first[0]:first[1]].strip().casefold()!=subject[second[0]:second[1]].strip().casefold())
+    prefix=subject[left:first[0]];gap=subject[first[1]:second[0]]
+    leading=re.search(r'\b(either|only|neither|between)\s*$',prefix,re.I)
+    kind=leading.group(1).casefold() if leading else None
+    expected={'either':'or','only':'or','neither':'nor','between':'and'}.get(kind)
+    connector=re.fullmatch(r'[\s,]*'+expected+r'[\s,:]*',gap,re.I) if expected else None
+    # Additive correlative wording does not present exclusive alternatives.
+    # lower(), rather than casefold(), preserves refusal of long-s and other
+    # Unicode case confusables accepted by Python's re.I matching.
+    additive=re.search(r'\b(not\s+only)\s+$',prefix,re.I)
+    additive_connector=re.fullmatch(r'[\s,]+(but\s+also)[\s,:]+',gap,re.I)
+    is_additive=bool(additive and additive_connector
+        and additive.group(1).lower().split()==['not','only']
+        and additive_connector.group(1).lower().split()==['but','also'])
+    if is_additive:
+        kind='additive';construction='not_only_but_also'
+        markers=[[left+additive.start(1),left+additive.end(1)],
+                 [first[1]+additive_connector.start(1),first[1]+additive_connector.end(1)]]
+    else:
+        if leading is None or connector is None:
+            return None
+        trailing=re.search(r'\b'+expected+r'\b',gap,re.I)
+        construction=kind+'_'+expected
+        markers=[[left+leading.start(),left+leading.end(1)],
+                 [first[1]+trailing.start(),first[1]+trailing.end()]]
+    return kind,construction,markers
+
 def observe(original,record,context):
     subject=subject_text(original,'en');record=corpus.parse(corpus.encoded(record))
     require(isinstance(context,dict) and set(context)=={'format','language','subject_sha256','manifest_sha256','frames'})
@@ -38,30 +71,11 @@ def observe(original,record,context):
     for left,right,first,second,ref,source_hash in prepared:
         # These positions are an explicit caller selection, not an automatic
         # parse, quotation classification or proof that other options work.
-        prefix=subject[left:first[0]];gap=subject[first[1]:second[0]]
-        leading=re.search(r'\b(either|only|neither|between)\s*$',prefix,re.I)
-        kind=leading.group(1).casefold() if leading else None
-        expected={'either':'or','only':'or','neither':'nor','between':'and'}.get(kind)
-        connector=re.fullmatch(r'[\s,]*'+expected+r'[\s,:]*',gap,re.I) if expected else None
-        # Additive correlative wording does not present exclusive alternatives.
-        # lower(), rather than casefold(), preserves refusal of long-s and other
-        # Unicode case confusables accepted by Python's re.I matching.
-        additive=re.search(r'\b(not\s+only)\s+$',prefix,re.I)
-        additive_connector=re.fullmatch(r'[\s,]+(but\s+also)[\s,:]+',gap,re.I)
-        is_additive=bool(additive and additive_connector
-            and additive.group(1).lower().split()==['not','only']
-            and additive_connector.group(1).lower().split()==['but','also'])
-        if is_additive:
-            kind='additive';construction='not_only_but_also'
-            markers=[[left+additive.start(1),left+additive.end(1)],
-                     [first[1]+additive_connector.start(1),first[1]+additive_connector.end(1)]]
-        else:
-            if leading is None or connector is None:
-                unmatched.append([left,right]);continue
-            trailing=re.search(r'\b'+expected+r'\b',gap,re.I)
-            construction=kind+'_'+expected
-            markers=[[left+leading.start(),left+leading.end(1)],
-                     [first[1]+trailing.start(),first[1]+trailing.end()]]
+        parsed=paired_markers(subject,[left,right],[list(first),list(second)])
+        if parsed is None:
+            unmatched.append([left,right]);continue
+        kind,construction,markers=parsed
+        is_additive=kind=='additive'
         negation=[[left+m.start(),left+m.end()] for m in
                   re.finditer(r'\b(?:not|neither|nor)\b',subject[left:right],re.I)
                   if m.group().casefold() in ('not','neither','nor')]

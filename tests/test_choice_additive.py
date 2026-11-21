@@ -147,3 +147,36 @@ def test_preparer_unknown_example_uses_fixed_private_error(tmp_path):
     child=subprocess.run([sys.executable,'-I','-S','-B',str(ROOT/'scripts/prepare-choice-demo.py'),'--example','PRIVATE_CANARY','--output',str(tmp_path/'out')],capture_output=True,timeout=15)
     assert child.returncode==2 and b'PRIVATE_CANARY'not in child.stderr+child.stdout and str(tmp_path).encode()not in child.stderr+child.stdout
     assert not(tmp_path/'out').exists()
+
+
+@pytest.mark.parametrize('text,fault',[
+    ('Either tea or coffee.','construction_to_additive'),
+    ('Not only tea but also coffee.','construction_to_either'),
+    ('Not only tea but also coffee.','marker_start'),
+    ('Not only tea but also coffee.','marker_end'),
+    ('Not only tea but also coffee.','choice_boundary'),
+    ('Not only tea but also coffee.','context_boundary'),
+])
+def test_consumer_replays_canonical_construction_before_specific_brief(tmp_path,text,fault):
+    tmp_path.chmod(0o700);folder=save_packet(tmp_path/'packet',text)
+    row=mt_workflow.run_component('choice',text,folder)
+    assert row['state']=='OBSERVATIONS';sources=mt_workflow.identity('choice')
+    assert mt_workflow.validate(row,'choice',text,sources)==row
+    forged=copy.deepcopy(row);item=forged['observations'][0]
+    if fault=='construction_to_additive':item['construction']='not_only_but_also'
+    if fault=='construction_to_either':item['construction']='either_or'
+    if fault=='marker_start':item['subject_spans'][2][0]+=1
+    if fault=='marker_end':item['subject_spans'][3][1]-=1
+    if fault=='choice_boundary':item['subject_spans'][0][0]+=1
+    if fault=='context_boundary':item['context_span'][0]+=1
+    with pytest.raises(ValueError):mt_workflow.validate(forged,'choice',text,sources)
+
+
+def test_optional_parent_grammar_replay_import_failure_is_isolated_and_recovers(tmp_path):
+    tmp_path.chmod(0o700);text='Not only tea but also coffee.';folder=save_packet(tmp_path/'packet',text)
+    with patch.dict(sys.modules,{'tools.choice_framing':None}):
+        failed=mt_workflow.check(text,['choice','authority'],'en',folder)
+    assert failed['state']=='PARTIAL' and failed['checks'][0]['state']=='UNAVAILABLE'
+    assert failed['checks'][1]['state']=='NO_SUPPORTED_PATTERN'
+    recovered=mt_workflow.check(text,['choice'],'en',folder)
+    assert recovered['state']=='COMPLETE' and 'not exclusive alternatives'in mt_workflow.brief(recovered['checks'][0])

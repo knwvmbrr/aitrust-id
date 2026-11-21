@@ -1,0 +1,184 @@
+{
+  "format": "choice-additive-actual-cli/v1",
+  "captured_at": "2026-11-21T20:22:51.446661+00:00",
+  "pass": true,
+  "source_hashes": {
+    "tools/choice_framing.py": "01ec221400300a302d561cfd88e6df7000465040966875a6ece25c6a4f4bbf36",
+    "tools/mt_workflow.py": "af66b65a8a6ee4028fb33da7a1435b771811e883da63e3ef230792efc133814d",
+    "scripts/check-choice-framing.py": "4b397aa383765119e16676ecf9e84d3695e26a718e3b2ac6072ff480d456982b",
+    "scripts/mt-evidence-worker.py": "b48786fbca7724e99df55d53bef319147f72a8646a9034db225f56bc6cdd01ef",
+    "scripts/prepare-choice-demo.py": "bd4a32a709b9e0977c9c2a2a2ed2922c404164373e2c965ca35e31f924db8cde",
+    "scripts/check-mt-evidence.py": "d7587045e92e79b670a3b7b9599651cbe4fe05e74229045b841d0bfddf478208",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "tests/test_choice_additive.py": "3be42d002e60200d39b77b3f3a2f871155a94bc5b9affeb3649dca6787290b7a",
+    "tests/test_choice_framing.py": "ea441907b0a8de0e0473d727c5f165f4e36f4cc396b2cd46f94dbc58dd247234",
+    "tests/test_choice_framing_cli.py": "2618d847830bf059a1ca44746b92880f4a89a653caac87f16a27124b37510f82",
+    "docs/choice-framing.md": "977dab3c662b4a3360b4e28b495ad4fd0b76e08f3b8e3e36ea2db0ccc6b52986",
+    "docs/choice-additive-plan.md": "d7d727e762c05f42abce2f032b874b9cc26b74181869283541eab0097dae147e"
+  },
+  "python": "3.12.14",
+  "platform": "darwin",
+  "caller_subject_executed": false,
+  "network_used_by_checker": false,
+  "phone_preview_changed": false,
+  "independent_accuracy_evidence": false,
+  "original_closed": false,
+  "legacy_full_record_comparisons": [
+    {
+      "construction": "either_or",
+      "full_legacy_record_preserved_except_version_and_source_identity": true
+    },
+    {
+      "construction": "only_or",
+      "full_legacy_record_preserved_except_version_and_source_identity": true
+    },
+    {
+      "construction": "neither_nor",
+      "full_legacy_record_preserved_except_version_and_source_identity": true
+    },
+    {
+      "construction": "between_and",
+      "full_legacy_record_preserved_except_version_and_source_identity": true
+    }
+  ],
+  "explicit_artifact_private": true,
+  "additive_does_not_nominate_false_dilemma": true,
+  "actual_consumer_uses_current_version": true,
+  "source_stable": true,
+  "actual_cli_cases": [
+    {
+      "case": "prepare_fixed_additive",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "6665c4c3a0f3279b4334e1f8477f3c46f93bf209e7b3e2a05da90be2d185b743",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "additive_brief_zero_binary",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "1a5bbb7520ea38d51fb5bfeb2ccd5c073fb475f770945979faccada21435d9c1",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "additive_complete_private_record",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "4472f779557f6c2ae64b23a43d4d01a19b36300868081bf65d6b88b470921450",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "no_overwrite",
+      "exit": 2,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "1f0f7fdb66895b10cfc5484c0eef41f3e3587c1608bca6f86f6546f2819f130d"
+    },
+    {
+      "case": "current_choice_consumer",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "aa61dab66878a201ac527383dc0af58d9c508c407549829eec53d08b6bcd1c4f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "current_choice_and_authority_consumer",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "fcac9cc4de752825cbb3be08824ac63673a478ce90772b8ce6ce1dfafec36e27",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "unknown_example_private_refusal",
+      "exit": 2,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "142eb49f1983322ee9857d3ec94b3e515e8d0990efd4744857617c3c536a64a7"
+    },
+    {
+      "case": "either_or_choice_cli",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "3bc7d36399dd099b526b800871e73265173431ba8706657142b09a0b75889729",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "either_or_worker_consumer",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "feb93888cfaccd154e4981032b1653534977022d377fe17fc7b1d5c147b68c5d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "only_or_choice_cli",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "3bc7d36399dd099b526b800871e73265173431ba8706657142b09a0b75889729",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "only_or_worker_consumer",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "feb93888cfaccd154e4981032b1653534977022d377fe17fc7b1d5c147b68c5d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "neither_nor_choice_cli",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "3bc7d36399dd099b526b800871e73265173431ba8706657142b09a0b75889729",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "neither_nor_worker_consumer",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "feb93888cfaccd154e4981032b1653534977022d377fe17fc7b1d5c147b68c5d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "between_and_choice_cli",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "3bc7d36399dd099b526b800871e73265173431ba8706657142b09a0b75889729",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "between_and_worker_consumer",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "feb93888cfaccd154e4981032b1653534977022d377fe17fc7b1d5c147b68c5d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "frozen_NFC_emoji_spans",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "4472f779557f6c2ae64b23a43d4d01a19b36300868081bf65d6b88b470921450",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "stale_binding_no_publication",
+      "exit": 2,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "1f0f7fdb66895b10cfc5484c0eef41f3e3587c1608bca6f86f6546f2819f130d"
+    }
+  ],
+  "actual_cli_invocations": 17,
+  "elapsed_seconds": 0.96,
+  "producer_sha256": "2e2887ca60972e0622c1bdb8315f02e3b69459e5201521d075d6a1ad3c1e20be",
+  "limits": [
+    "Authored synthetic engineering controls on macOS; no current Linux/browser/physical/human/independent accuracy evidence.",
+    "Current method1.3 changes profile/source identity; old1.2 receipts remain historical.",
+    "Prior forms retain complete record values apart from explicit profile/source identity.",
+    "Additive literal framing is not exclusivity, intent, truth, feasibility or an MT tag."
+  ]
+}

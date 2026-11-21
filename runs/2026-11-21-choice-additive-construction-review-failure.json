@@ -1,0 +1,19 @@
+{
+  "pass": false,
+  "captured_at": "2026-11-21T20:18:28.452133+00:00",
+  "kind": "MT_additive_construction_rebind_review",
+  "source_commit": "9fef71ae5aa4b8be1e594a083f5ca13961719cd7",
+  "source_sha256": {
+    "tools/choice_framing.py": "105f75d7518bf1acdc77f628b1da0dfefe0850d7b468adcd8f4332df17026da4",
+    "tools/mt_workflow.py": "73dbe9b95821e7d21931d37f5557b39ef225fd2821156bfef4aa3e7acdecaf71",
+    "scripts/mt-evidence-worker.py": "b48786fbca7724e99df55d53bef319147f72a8646a9034db225f56bc6cdd01ef"
+  },
+  "actual_owned_worker_baseline": "either_or",
+  "only_output_field_modified": "observations[0].construction",
+  "forged_construction_accepted": "not_only_but_also",
+  "false_additive_brief_produced": true,
+  "limits": [
+    "One synthetic private packet and one actual existing bounded choice worker; no suite, network or source edits.",
+    "This is current consumer result-integrity failure, not independent accuracy or a production MT verdict."
+  ]
+}

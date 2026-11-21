@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-202323-bind-choice-construction-before-brief-ec804bc4
+
+Recorded 2026-11-21T20:23:23.663870+00:00 · Contributor: Codex · change
+
+- **Changed.** Corrected enum-only choice construction acceptance by replaying the producer canonical recognizer against selected text and exact marker spans before any specific brief.
+- **Evidence.** Original relabeling and marker/boundary forgery controls now refuse; genuine additive, legacy forms and optional parser failure/recovery pass29 affected controls. Fresh17 actual CLI operations bind corrected18inputs and preserve complete legacy records apart from declared version/source identity. [Change record](./runs/changes/2026-11-21-202323-bind-choice-construction-before-brief-ec804bc4.json).
+- **Not claimed.** Earlier failed review and receipts remain historical. Corrected independent review is pending. No new grammar, deadlines, tag mapping, independent accuracy, current Linux/browser/human acceptance or full F-019b/T-MT closure is claimed.
+
+
 ### 2026-11-21-201555-distinguish-additive-choice-wording-539df325
 
 Recorded 2026-11-21T20:15:55.016631+00:00 · Contributor: Codex · change

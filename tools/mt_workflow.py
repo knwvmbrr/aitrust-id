@@ -139,6 +139,13 @@ def validate(row, kind, text, sources, *, replay_timeout=DEADLINE):
                     or not valid_hash(ref['sha256']) or not valid_hash(ref['normalized_sha256'])
                     or not valid_span(ref['span'], 200000) or ref['span'][1] - ref['span'][0] > 2000):
                 raise ValueError('Invalid nominated reference')
+            # Use the producer's one finite recognizer before any construction-
+            # specific brief; an enum and in-range spans are not text binding.
+            from tools.choice_framing import paired_markers
+            parsed=paired_markers(text,context,item['subject_spans'][:2])
+            if (parsed is None or parsed[1]!=item['construction']
+                    or parsed[2]!=item['subject_spans'][2:]):
+                raise ValueError('Choice construction or marker binding refused')
         elif item['reference'] is not None or item['construction'] is not None:
             raise ValueError('Unrequested reference')
     return row
@@ -146,8 +153,8 @@ def validate(row, kind, text, sources, *, replay_timeout=DEADLINE):
 
 def run_component(kind, text, packet=None, *, deadline=DEADLINE):
     try:
-        # A broken optional choice module is loaded only in its child. Its failure
-        # cannot invalidate the urgency/authority result or invoke another tag.
+        # Choice execution and selected-path grammar replay are optional. A
+        # failure cannot invalidate urgency/authority or invoke another tag.
         if kind == QUOTATION and (type(deadline) not in (int, float) or not 0 < deadline <= 60):
             raise ValueError('Invalid quotation deadline')
         started = time.monotonic()
@@ -169,7 +176,7 @@ def run_component(kind, text, packet=None, *, deadline=DEADLINE):
             raise ValueError('Method changed during validation')
         return result
     except (OSError, ValueError, TypeError, KeyError, RuntimeError, ImportError,
-            UnicodeError, RecursionError, subprocess.SubprocessError):
+            UnicodeError, RecursionError, SyntaxError, subprocess.SubprocessError):
         return unavailable(kind)
 
 

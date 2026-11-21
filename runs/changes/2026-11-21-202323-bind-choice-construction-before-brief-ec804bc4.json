@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-202323-bind-choice-construction-before-brief-ec804bc4",
+  "recorded_at": "2026-11-21T20:23:23.663870+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9fef71ae5aa4b8be1e594a083f5ca13961719cd7",
+  "changed": "Corrected enum-only choice construction acceptance by replaying the producer canonical recognizer against selected text and exact marker spans before any specific brief.",
+  "proves": "Original relabeling and marker/boundary forgery controls now refuse; genuine additive, legacy forms and optional parser failure/recovery pass29 affected controls. Fresh17 actual CLI operations bind corrected18inputs and preserve complete legacy records apart from declared version/source identity.",
+  "limits": "Earlier failed review and receipts remain historical. Corrected independent review is pending. No new grammar, deadlines, tag mapping, independent accuracy, current Linux/browser/human acceptance or full F-019b/T-MT closure is claimed.",
+  "scope_ids": [
+    "F-019b",
+    "T-MT"
+  ],
+  "files": {
+    "tools/choice_framing.py": "01ec221400300a302d561cfd88e6df7000465040966875a6ece25c6a4f4bbf36",
+    "tools/mt_workflow.py": "af66b65a8a6ee4028fb33da7a1435b771811e883da63e3ef230792efc133814d",
+    "tests/test_choice_additive.py": "3be42d002e60200d39b77b3f3a2f871155a94bc5b9affeb3649dca6787290b7a",
+    "docs/choice-additive-plan.md": "d7d727e762c05f42abce2f032b874b9cc26b74181869283541eab0097dae147e",
+    "docs/choice-framing.md": "977dab3c662b4a3360b4e28b495ad4fd0b76e08f3b8e3e36ea2db0ccc6b52986",
+    "runs/2026-11-21-choice-additive-construction-review-failure.json": "1465198f997dfe0d564ede40fd03a3ec21a4b0209a6c6f22de14acb609f0eb00",
+    "runs/2026-11-21-choice-additive-actual-cli-corrected.json": "8a21aca093a29163f790cf7a13f2f8964c5061bdd616bf59c9f9f20adf7e7fd8",
+    "runs/2026-11-21-choice-additive-integrity-correction.json": "3b8c3db96a63874e88be6d1efa1563bc004f308b6070d203ee295acc605cf90c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-choice-additive-construction-review-failure.json",
+      "sha256": "1465198f997dfe0d564ede40fd03a3ec21a4b0209a6c6f22de14acb609f0eb00"
+    },
+    {
+      "path": "runs/2026-11-21-choice-additive-actual-cli-corrected.json",
+      "sha256": "8a21aca093a29163f790cf7a13f2f8964c5061bdd616bf59c9f9f20adf7e7fd8"
+    },
+    {
+      "path": "runs/2026-11-21-choice-additive-integrity-correction.json",
+      "sha256": "3b8c3db96a63874e88be6d1efa1563bc004f308b6070d203ee295acc605cf90c"
+    }
+  ],
+  "checks": []
+}

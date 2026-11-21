@@ -49,8 +49,10 @@ python3 scripts/check-mt-evidence.py --language en --check choice \
   --choice-packet "$practice/additive" < "$practice/additive/subject.txt"
 ```
 
-A failed choice worker stays Unavailable; other selected MT components remain
-separate. This new profile has actual authored macOS CLI controls; historical
+The independent consumer replays the same canonical marker recognizer on the
+actual selected frame/items. A changed construction label or marker span refuses
+before the construction-specific brief. A failed choice worker or selected-path
+recognizer stays Unavailable; other selected MT components remain separate. This new profile has actual authored macOS CLI controls; historical
 Mac/Linux executions of version1.2.0 do not establish current Linux execution.
 The phone-browser wording preview does not consume this choice component.
 
