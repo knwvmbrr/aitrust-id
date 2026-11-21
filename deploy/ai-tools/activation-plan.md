@@ -12,10 +12,11 @@ change the original tag validation or scope acceptance.
    and generated exact config/units; no private worktree files. Create a new
    root-owned immutable release and its own hash-locked venv. Extract the exact
    apt-SHA-verified Caddy package privately; no global package installation.
-3. `activate.py` defaults to a read-only plan. `--apply-reviewed` requires root,
-   exact source/config/binary hashes, absent units/state and an absent owned
-   firewall tag. Snapshot the existing file/rules first. Never execute the
-   existing flush-containing nftables file.
+3. `activate.py` defaults to a read-only plan. `--apply-reviewed` is PRIVATE
+   ONLY: it requires root, exact source/config/binary hashes, absent units/state
+   and an absent owned firewall tag. Use the immutable release venv interpreter
+   for the existing pinned httpx2 readiness probe. Snapshot the existing
+   file/rules first. Never execute the existing flush-containing firewall file.
 4. Install ONLY the two new units with exclusive creation. Verify/start the
    loopback-only app. Before any public rule, `verify-isolation.py` requires
    actual cgroup limits, nonroot/no-capability/no-new-privilege process status,
@@ -23,7 +24,10 @@ change the original tag validation or scope acceptance.
    cgroup/mount namespace. The probe verifies blocked homes/source writes,
    permitted loopback and denied nonloopback connection to the owned primary's
    SSH port. It reads no home/database contents and sends no credentials.
-5. Insert ONLY the tagged newTCP44340/s80-burst rule; preserve all old rules by
+5. Private preparation returns `private_isolation_ready` and STOPS. The
+   separately invoked `--publish-reviewed RECORD` requires a fresh isolation
+   proof plus root's confirmed published disclosure release, then inserts ONLY
+   the tagged newTCP44340/s80-burst rule; preserve all old rules by
    handle and normalized definition. Atomically append its marked persistence
    command to the existing file after an exact-before check; do not load it.
    Start ONLY the new proxy. Trusted certificate issuance uses TLS-ALPN443;
@@ -53,3 +57,19 @@ not make PS independently validated or remote PII available.
 
 Primary reference for the actual host's systemd257 IP/BPF/resource controls:
 https://www.freedesktop.org/software/systemd/man/257/systemd.resource-control.html
+
+The service uses Type=simple, which establishes process start rather than HTTP
+readiness. Private health requires a positive fixed `/healthz` result within
+a5second monotonic budget before isolation is tested. Connection refusal
+while bootstrapping is retried against that same predicate; generic failures
+retain a fixed operation-stage code. No API request or worker deadline changes.
+Historical one-shot failures at `private_app_started` did not distinguish
+immediate health readiness from the separately reproduced probe-errno issue;
+the historical cause is not retroactively claimed.
+
+Private preparation and later publication are separate commands, both executed
+with the immutable release venv interpreter. The readiness operation reuses the
+existing pinned httpx2 package under an absolute async5second budget including
+headers, streamed body (4096 bytes), close and retries; a late positive is
+refused. Recorded unit hashes must also match the exact reviewed renderer;
+coherently editing a record beside an altered unit cannot authorize it.

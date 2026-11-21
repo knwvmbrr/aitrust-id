@@ -99,3 +99,33 @@ snapshot and an atomic, separately reviewed addition to the existing file.
 Neither candidate preparation nor its proof performs this action.
 
 `strict_sni_host on` makes a valid provider-SNI connection with a different HTTP Host a transport refusal (421), before route execution. The private TLS control substitutes only an ephemeral self-signed provider-SAN certificate and a loopback/random listener for ACME/public443; it proves this routing policy, not a publicly trusted certificate or internet reachability. No wildcard or alternate-host certificate is requested.
+
+
+## Reviewed operator helper (public activation remains separate)
+
+`activate.py` is root-only and accepts ONLY source commit
+`a5215149af23be51cd29f9b37ce1d85bdeff0c49` with its independently reviewed14-file
+source projection embedded in the helper. A colocated editable release manifest
+is insufficient. Future source changes require another reviewed helper revision.
+
+- `--commit SHA` prints the checked plan without activation.
+- `--commit SHA --own-public-ip OWNED_IP --apply-reviewed` installs only the new
+  units, starts the private app, waits for positive bounded HTTP readiness and
+  proves actual isolation. It returns `private_isolation_ready`; no public
+  firewall, persistence or proxy activation occurs in this command.
+- Only after the operator releases the publication hold,
+  `--publish-reviewed RECORD --own-public-ip OWNED_IP` repeats actual isolation,
+  inserts the owned443 rule/persistence addition and starts the separate proxy.
+- After real external trustedTLS/client proof, `--finalize-after-proof RECORD`
+  enables only those two units for restart.
+- `--rollback RECORD` performs only the bounded owned rollback described above.
+
+A failed command reports its fixed stage and retains a private record for
+review. No source/input/token/path content is echoed in failure prose. The
+helper does not offer an unreviewed "force" option.
+
+Run the operator helper with the immutable release's own `venv/bin/python`
+under sudo, not the host's optional-package-free Python. The private readiness
+probe reuses the already hash-locked httpx2 environment with a whole5second
+async deadline and a4096-byte streamed-body cap. It does not install or use a
+new dependency. Plan/rollback operations remain standard-library only.

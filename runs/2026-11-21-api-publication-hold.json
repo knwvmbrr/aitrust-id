@@ -1,0 +1,29 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T16:17:16.509206+00:00",
+  "profile": "api-publication-hold-1",
+  "operator_commit": "9665e965a4f79d0cfe38dd534ca6a1fa5a665004",
+  "second_private_attempt": {
+    "pass": false,
+    "record": "/opt/aitrustid-ai-tools/activation-records/20261121T161650Z-a5215149af23",
+    "phase": "private_app_started",
+    "reason": "activation_unavailable",
+    "rollback_required": true
+  },
+  "hold_and_rollback": {
+    "hold_applied": true,
+    "prior_phase": "private_app_started",
+    "helper_processes_terminated": 0,
+    "rollback": {
+      "pass": true,
+      "phase": "rolled_back",
+      "release_retained_for_review": true,
+      "other_services_modified": false
+    }
+  },
+  "public_exposure_established": false,
+  "public_rule_inserted": false,
+  "proxy_started": false,
+  "historical_failure_cause": "unestablished; private_app_started covered both immediate health and the later isolation function. Later direct private isolation passed after positive HTTP readiness.",
+  "new_original_closures": 0
+}
