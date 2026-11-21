@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-171829-google-search-discovery-status-974bb2b1
+
+Recorded 2026-11-21T17:18:29.540533+00:00 · Contributor: Codex /root observed; /root/seo documented · change
+
+- **Changed.** Recorded actual Google Search visibility for eleven specific AI Trust ID URLs and the remaining Search Console access step.
+- **Evidence.** The exact native-UI observation timestamp, two site queries and eleven public result URLs are retained without account identifiers. Focused PS search returned the observed command-risk title and description. [Change record](./runs/changes/2026-11-21-171829-google-search-discovery-status-974bb2b1.json).
+- **Not claimed.** Documentation of a completed root observation only; no new crawl or test. No complete37URL index, ranking, traffic, Search Console ownership, URL Inspection, sitemap submission or original requirement closure claim.
+
+
 ### 2026-11-21-163005-api-private-public-stage-boundary-78ebb2cd
 
 Recorded 2026-11-21T16:30:05.160474+00:00 · Contributor: Codex API deployment engineer · change
