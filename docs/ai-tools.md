@@ -1,7 +1,10 @@
 # Use AI Trust ID from your AI application
 
 Give an AI application a checker it can call. The free, open-source integration
-supports **MCP**, ordinary **Python**, and **JSON over stdin/stdout**. You do not
+supports local **MCP**, ordinary **Python**, and **JSON over stdin/stdout**.
+An optional remote HTTP/MCP connector is described in the
+[remote connection guide](remote-ai-connections.md); using it sends your selected
+text to that server. The commands below remain local by default. You do not
 need an AI Trust ID account or a paid inference service. Choose which check to
 run; one unavailable tag does not erase another tag’s result.
 
@@ -82,7 +85,9 @@ configuration shape is:
 Replace the two example paths with your real paths. Host configuration file names
 and locations differ; follow your host's MCP instructions. We verified the actual
 stdio protocol with the official client, not every host's user interface.
-There is no HTTP listener or cloud endpoint to expose.
+This stdio entry opens no HTTP listener and does not activate a remote connection.
+For a separately selected HTTPS connector, follow the
+[remote connection guide](remote-ai-connections.md).
 
 Ask the connected AI application to list the available tags, then call
 `check_text` with `text` and an optional `tags` array. Omit `tags` to request PS.
@@ -133,8 +138,10 @@ without echoing their contents. No input-bearing log or automatic retry queue
 is created. These are local process controls, not a malicious-host sandbox.
 The connecting host and OS administrator remain trusted.
 
-Checking does not enroll anyone in research, create a training example, post to
-the community or contact AI Trust ID's remote infrastructure. The optional
+These local commands do not enroll anyone in research, create a training example,
+post to the community or contact AI Trust ID's remote infrastructure. The optional
+remote connector has a different boundary: the host sends selected text to its
+configured server; it does not provide remote privacy redaction. The optional
 privacy route passes the selected text to your own local service under its
 existing boundary. A business can run the source under the Apache-2.0 terms;
 no paid standard-verification API is introduced.

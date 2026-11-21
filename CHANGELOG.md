@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-160509-optional-remote-connection-guide-bd3d8a22
+
+Recorded 2026-11-21T16:05:09.479116+00:00 · Contributor: Codex · change
+
+- **Changed.** Added an approachable crawlable optional HTTP/MCP connection guide and version1.14 remote selected-text/privacy disclosures while preserving local defaults and prior policy archives.
+- **Evidence.** Focused actual document/page rendering, SEO metadata, static navigation, copy boundaries, JavaScript syntax and exact policy archive checks pass. The page makes no automatic connection. [Change record](./runs/changes/2026-11-21-160509-optional-remote-connection-guide-bd3d8a22.json).
+- **Not claimed.** Public endpoint activation remains pending; no live address, provider approval, ChatGPT/Claude account UI test, full site build, detector accuracy or original requirement closure is claimed. Shared sitemap and source-bound publication checks remain integration work.
+
+
 ### 2026-11-21-160643-pause-owned-live-test-runtime-4a5f1e99
 
 Recorded 2026-11-21T16:06:43.326652+00:00 · Contributor: Codex /root · change

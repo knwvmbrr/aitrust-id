@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-160509-optional-remote-connection-guide-bd3d8a22",
+  "recorded_at": "2026-11-21T16:05:09.479116+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e35fa83736bb28bd7d27f294ce42d1967ba6b31d",
+  "changed": "Added an approachable crawlable optional HTTP/MCP connection guide and version1.14 remote selected-text/privacy disclosures while preserving local defaults and prior policy archives.",
+  "proves": "Focused actual document/page rendering, SEO metadata, static navigation, copy boundaries, JavaScript syntax and exact policy archive checks pass. The page makes no automatic connection.",
+  "limits": "Public endpoint activation remains pending; no live address, provider approval, ChatGPT/Claude account UI test, full site build, detector accuracy or original requirement closure is claimed. Shared sitemap and source-bound publication checks remain integration work.",
+  "scope_ids": [
+    "F-007",
+    "F-096"
+  ],
+  "files": {
+    "docs/ai-tools.md": "f84f0ae19f7062bf18f078da6519e2e4ff23ffced923523431d1722cc29e542f",
+    "docs/remote-ai-connections.md": "843e8b5a600ebb3d74fb01c3e8a4133cd15e3b2dc4ae7b1ca1c30461b1a64058",
+    "site/scripts/render-reference.mjs": "028f67bb7b07eb0580121fc43d45e66d9e9ed7cd77e5c0f0418524c53c670b3c",
+    "site/src/policies.js": "179bcc175968c77395661ce6ec444ae8fe116622b6ead096fabbe006132b5b26",
+    "site/public/reference/policies/access/v1.14.txt": "b37c26776b51d91e9e86adae12977b5c84e823c17da1acd20c4564a31e2dda5a",
+    "site/public/reference/policies/community/v1.14.txt": "bd86320821019af0c37cc5774fc793ed4226086421daffc7524821678d8cb408",
+    "site/public/reference/policies/contributing/v1.14.txt": "9033b8bcb7a5608952a9a78915052fd707e70cb3c766b7392f53851aa4232ae6",
+    "site/public/reference/policies/governance/v1.14.txt": "e855d8c89430468f7bfd6e6f29df9264c47c98232fb68819dcfd8558b69a6947",
+    "site/public/reference/policies/licenses/v1.14.txt": "096d40a99a20cefa3cf3f2cd24ac7a491fefcbd17333751f2d40d0873943e917",
+    "site/public/reference/policies/privacy/v1.14.txt": "875d3d60ae935de4fef614708afd451145673753fd9a9991eec3c51be7a5d4a0",
+    "site/public/reference/policies/security/v1.14.txt": "8a836f0d85b8ed848cec1e1dd55ce9bbc870de3ecf40b29ba319bfbe2b670835",
+    "site/public/reference/policies/terms/v1.14.txt": "10459a8f67c140438618fadd1e7ec2ff2b5a7c0a8a3ada6e18ab2feb22038e6d",
+    "site/public/reference/policies/validation/v1.14.txt": "e31da27975d3f34af301dc1a7478e3edb2d7e09a40caec7d88e4c5a5463969ae",
+    "runs/2026-11-21-remote-ai-connections-copy.json": "e1340a731bb85d56d3a5e14986f19ec6e03888dda6b7a998081310916931b3b1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-remote-ai-connections-copy.json",
+      "sha256": "e1340a731bb85d56d3a5e14986f19ec6e03888dda6b7a998081310916931b3b1"
+    }
+  ],
+  "checks": []
+}

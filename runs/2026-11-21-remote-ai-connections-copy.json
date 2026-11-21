@@ -1,0 +1,81 @@
+{
+  "format": "ai-trust-id-remote-connections-copy/v1",
+  "captured_at": "2026-11-21T16:04:58.482493+00:00",
+  "pass": true,
+  "source_base": "e35fa83736bb28bd7d27f294ce42d1967ba6b31d",
+  "source_hashes": {
+    "docs/ai-tools.md": "f84f0ae19f7062bf18f078da6519e2e4ff23ffced923523431d1722cc29e542f",
+    "docs/remote-ai-connections.md": "843e8b5a600ebb3d74fb01c3e8a4133cd15e3b2dc4ae7b1ca1c30461b1a64058",
+    "site/scripts/render-reference.mjs": "028f67bb7b07eb0580121fc43d45e66d9e9ed7cd77e5c0f0418524c53c670b3c",
+    "site/src/policies.js": "179bcc175968c77395661ce6ec444ae8fe116622b6ead096fabbe006132b5b26",
+    "site/public/reference/policies/access/v1.14.txt": "b37c26776b51d91e9e86adae12977b5c84e823c17da1acd20c4564a31e2dda5a",
+    "site/public/reference/policies/community/v1.14.txt": "bd86320821019af0c37cc5774fc793ed4226086421daffc7524821678d8cb408",
+    "site/public/reference/policies/contributing/v1.14.txt": "9033b8bcb7a5608952a9a78915052fd707e70cb3c766b7392f53851aa4232ae6",
+    "site/public/reference/policies/governance/v1.14.txt": "e855d8c89430468f7bfd6e6f29df9264c47c98232fb68819dcfd8558b69a6947",
+    "site/public/reference/policies/licenses/v1.14.txt": "096d40a99a20cefa3cf3f2cd24ac7a491fefcbd17333751f2d40d0873943e917",
+    "site/public/reference/policies/privacy/v1.14.txt": "875d3d60ae935de4fef614708afd451145673753fd9a9991eec3c51be7a5d4a0",
+    "site/public/reference/policies/security/v1.14.txt": "8a836f0d85b8ed848cec1e1dd55ce9bbc870de3ecf40b29ba319bfbe2b670835",
+    "site/public/reference/policies/terms/v1.14.txt": "10459a8f67c140438618fadd1e7ec2ff2b5a7c0a8a3ada6e18ab2feb22038e6d",
+    "site/public/reference/policies/validation/v1.14.txt": "e31da27975d3f34af301dc1a7478e3edb2d7e09a40caec7d88e4c5a5463969ae"
+  },
+  "prior_policy_archives_sha256": {
+    "site/public/reference/policies/access/v1.13.txt": "80aeff9394a1d893890784cc246856447f7df8f63fe72c136079ed11a99b42a0",
+    "site/public/reference/policies/community/v1.13.txt": "68f07f398cee7464936ef8b81d5cfcc8549f7faba446e29ddc3e9c646f4be808",
+    "site/public/reference/policies/contributing/v1.13.txt": "57f700e08c014c8bc2cb489e8ce872e07be6b4ebc593fddd52b2531934f82716",
+    "site/public/reference/policies/governance/v1.13.txt": "1dc4f0c9bad833994e5ca72a17f3b6c3e69ce0c0492878a16310c04bf85981cd",
+    "site/public/reference/policies/licenses/v1.13.txt": "429c7b116ece5cbad48f49bc72296543936016b46b78086844524bd56a3894d3",
+    "site/public/reference/policies/privacy/v1.13.txt": "12fab6a043eccc7607fa4f437e1db7b0f04293f5e3a93a48a6946e0364d62abd",
+    "site/public/reference/policies/security/v1.13.txt": "b0d4b6b7522933b8469b1e2cc832329218028d3b06919209f3abf7e898c37e92",
+    "site/public/reference/policies/terms/v1.13.txt": "50adcb510fd95fc7fb86e4d97e767a3549b5b7f7ce3754930f82acff95d111be",
+    "site/public/reference/policies/validation/v1.13.txt": "05d3528c8fa8d967cee22fb8080bbeacd7f936a4b593ba571d4130a4f33da884"
+  },
+  "prior_policy_archives_unchanged": true,
+  "new_policy_version": "1.14",
+  "new_policy_archive_count": 9,
+  "connection_page": "/reference/remote-ai/",
+  "activation_status": "PENDING_NO_LIVE_ENDPOINT_CLAIM",
+  "actual_checks": [
+    "node --check on actual renderer and policy module",
+    "Actual document function and new page invocation rendered using actual SEO metadata; only built CSS path was an inert fixture",
+    "Canonical index/follow metadata, one h1, main landmark, safe link schemes, left-aligned existing classes, official guide links",
+    "No new form, iframe, fetch, XMLHttpRequest, WebSocket, EventSource or module/network client",
+    "Existing reference navigation and conformance link plus Markdown copy registration",
+    "All nine1.14 archive bytes equal actual policyText output; all nine1.13 archives equal committed original bytes",
+    "Explicit selected-text disclosure, local default, remote PII unavailability, response-state and no-safety/no-provider-approval language",
+    "git diff --check"
+  ],
+  "initial_focused_check": {
+    "result": "FAILED_LITERAL_EXPECTATION",
+    "detail": "Page used privacy redaction without the explicit PII capability identifier. Copy clarified to PII_REDACTED and affected focused render passed. No runtime or service defect inferred."
+  },
+  "official_sources_reviewed": [
+    {
+      "url": "https://developers.openai.com/api/docs/guides/custom-mcp-server",
+      "observed": "Remote streaming HTTP/custom MCP flow and No authentication option; workspace/security restrictions apply."
+    },
+    {
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/mcp-connector",
+      "observed": "Messages API remote HTTPS server and toolset; product UI availability is separate."
+    }
+  ],
+  "connector_implementation_reference": {
+    "commit": "a5215149af23be51cd29f9b37ce1d85bdeff0c49",
+    "path": "docs/remote-tag-connectors.md"
+  },
+  "limits": {
+    "full_site_build_executed": false,
+    "browser_or_account_UI_tested": false,
+    "public_endpoint_tested_by_this_record": false,
+    "provider_approval_claimed": false,
+    "independent_accuracy_claimed": false,
+    "original_requirement_closed": false,
+    "application_network_behavior_changed": false,
+    "scope_state_changed": false,
+    "root_integration_pending": [
+      "Sitemap route registration",
+      "Global source bindings",
+      "Full build and protected checks",
+      "Actual remote endpoint proof before any live URL copy"
+    ]
+  }
+}
