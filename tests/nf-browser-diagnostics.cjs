@@ -1,7 +1,7 @@
 const test=require('node:test'),assert=require('node:assert/strict');
 const {spawnSync}=require('node:child_process');
 const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
-const {classifyChild,createStageDiagnostics,runCommands}=require('../scripts/verify-nf-client.cjs');
+const {classifyChild,createStageDiagnostics,runCommands,engineExecution,settleEngineChecks}=require('../scripts/verify-nf-client.cjs');
 const {writeReport}=require('../scripts/execution-report.cjs');
 test('typed outcomes distinguish deadline, startup, signal and ordinary exit without diagnostic text',()=>{
  const rows=[
@@ -41,7 +41,7 @@ test('browser stage sequence records exact substep timing while interrupted work
  let time=0;const records=[];const d=createStageDiagnostics({clock:()=>time,record:v=>records.push(v)});
  time=5;d.enter('WebKit','invalid_cosine_then_literal','cosine_alert_wait');time=15;d.enter('WebKit','invalid_cosine_then_literal','cosine_alert_observed');time=25;d.enter('WebKit','invalid_cosine_then_literal','literal_submit');time=35;d.enter('WebKit','invalid_cosine_then_literal','literal_result_wait');
  assert.equal(records.at(-1).completed,false);assert.equal(records.at(-1).last.stage_elapsed_ms,30);assert.equal(records.at(-1).last.since_previous_ms,10);assert.equal(records.at(-1).last.substep,'literal_result_wait');
- d.enter('WebKit','complete','complete');assert.equal(records.at(-1).completed,true);
+ d.enter('setup','complete','complete');assert.equal(records.at(-1).completed,true);
 });
 test('closed browser diagnostics reject private strings, unknown phases and unbounded indices',()=>{
  const records=[];const d=createStageDiagnostics({record:v=>records.push(v)});
@@ -51,4 +51,31 @@ test('closed browser diagnostics reject private strings, unknown phases and unbo
 test('progress has finite event budget and persists before child completion',()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'nf-fixed-progress-'));
  try{const d=createStageDiagnostics({record:v=>writeReport('output/progress.json',v,root)});for(let i=0;i<512;i++)d.enter('Chromium','mount');const file=path.join(root,'output/progress.json'),before=fs.readFileSync(file);assert.equal(JSON.parse(before).completed,false);assert.equal(JSON.parse(before).events.length,512);assert.throws(()=>d.enter('Chromium','mount'));assert.deepEqual(fs.readFileSync(file),before);}finally{fs.rmSync(root,{recursive:true,force:true});}
+});
+
+const hostedEnv={AITRUST_NF_ENGINE_CONCURRENCY:'2',GITHUB_ACTIONS:'true',AITRUST_CI_RUNNER_ENV:'github-hosted',AITRUST_CI_RUNNER_OS:'Linux'};
+const capable={platform:'linux',available_cpu_threads:2,total_memory_bytes:8*1024**3,available_memory_bytes:4*1024**3,constrained_memory_bytes:null};
+test('default local mode is sequential and unsupported modes/host capacity refuse before launch',()=>{
+ assert.equal(engineExecution({env:{},capacity:{...capable,platform:'darwin'}}).concurrency,1);
+ assert.equal(engineExecution({env:{AITRUST_NF_ENGINE_CONCURRENCY:'1'},capacity:capable}).concurrency,1);
+ assert.equal(engineExecution({env:hostedEnv,capacity:capable}).concurrency,2);
+ for(const flag of ['0','3','auto',' 2','PRIVATE'])assert.throws(()=>engineExecution({env:{...hostedEnv,AITRUST_NF_ENGINE_CONCURRENCY:flag},capacity:capable}),/^Error: Unsupported NF engine profile$/);
+ for(const value of [{...capable,platform:'darwin'},{...capable,available_cpu_threads:1},{...capable,available_cpu_threads:null},{...capable,total_memory_bytes:2*1024**3},{...capable,available_memory_bytes:1024**3},{...capable,available_memory_bytes:null},{...capable,constrained_memory_bytes:2*1024**3}])assert.throws(()=>engineExecution({env:hostedEnv,capacity:value}));
+ for(const field of ['GITHUB_ACTIONS','AITRUST_CI_RUNNER_ENV','AITRUST_CI_RUNNER_OS'])assert.throws(()=>engineExecution({env:{...hostedEnv,[field]:'unsupported'},capacity:capable}));
+});
+test('two-engine settling never exceeds max2 and waits for rejected peer cleanup',async()=>{
+ let active=0,max=0;const closed=[],began=[];
+ const settled=await settleEngineChecks(2,async name=>{active++;max=Math.max(max,active);began.push(name);try{await new Promise(r=>setTimeout(r,name==='Chromium'?2:12));if(name==='Chromium')throw Error('Authored cohort refusal');return name;}finally{await new Promise(r=>setTimeout(r,4));closed.push(name);active--;}});
+ assert.deepEqual(began,['Chromium','WebKit']);assert.equal(max,2);assert.equal(active,0);assert.deepEqual(closed.sort(),['Chromium','WebKit']);assert.deepEqual(settled.map(v=>v.status),['rejected','fulfilled']);
+});
+test('sequential settling keeps max1 and still accounts for cleanup failure without masking peer',async()=>{
+ let active=0,max=0;const closed=[];
+ const settled=await settleEngineChecks(1,async name=>{active++;max=Math.max(max,active);try{return name;}finally{active--;closed.push(name);if(name==='Chromium')throw Error('Authored cleanup failure');}});
+ assert.equal(max,1);assert.equal(active,0);assert.deepEqual(closed,['Chromium','WebKit']);assert.deepEqual(settled.map(v=>v.status),['rejected','fulfilled']);
+ for(const count of [0,3,NaN])await assert.rejects(settleEngineChecks(count,async()=>{}));
+});
+test('interleaved engine timing stays per-engine and global completion is separate',()=>{
+ let time=0;const records=[];const d=createStageDiagnostics({clock:()=>time,record:v=>records.push(v)});
+ d.enter('Chromium','mount');time=10;d.enter('WebKit','mount');time=20;d.enter('Chromium','mount','complete');time=40;d.enter('WebKit','mount','complete');
+ assert.equal(records[2].last.stage_elapsed_ms,20);assert.equal(records[2].last.engine_elapsed_ms,20);assert.equal(records[3].last.stage_elapsed_ms,30);assert.equal(records[3].last.engine_elapsed_ms,30);assert(records.every(v=>!v.completed));
 });

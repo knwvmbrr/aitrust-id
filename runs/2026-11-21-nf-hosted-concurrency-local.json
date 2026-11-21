@@ -1,0 +1,60 @@
+{
+  "profile": "nf-bounded-hosted-concurrency-local/v1",
+  "captured_at": "2026-11-21T09:54:25.580263+00:00",
+  "pass": true,
+  "prepared_by": "Codex /root/seo",
+  "source_before_refactor": "73f99d61d77457b35827690faab3134d5c8d226f",
+  "source_sha256": {
+    "scripts/verify-nf-client.cjs": "02d7f8242217551202e543117b4af55f41557bcf9fa7b5a63bb63cbc786979d4",
+    "scripts/verify-nf-device.cjs": "1e219b066d18f37d716551e1de92dad06d5b1669ce0608b0bbb8c816ba3e0f06",
+    "tests/nf-browser-diagnostics.cjs": "a9b5352bdff6364fcc4a5dbb90c6beba894580af5a3cc8f7654d2fc272232c30",
+    ".github/workflows/nf-browser-diagnostic.yml": "57c2aa4d06ab0504cff9cea412c3bb863cd8e2cae338d0475998409502a11162",
+    "docs/nf-browser-diagnostic-plan.md": "62691d9858033069d952cf3f134b0ccb4fd3903be9c04583f6985f4251e66698"
+  },
+  "focused_tests": {
+    "argv": [
+      "node",
+      "--test",
+      "tests/nf-browser-diagnostics.cjs"
+    ],
+    "passed": 12,
+    "duration_ms": 2710.0705,
+    "browser_executed": false
+  },
+  "syntax_checks": [
+    "scripts/verify-nf-client.cjs",
+    "scripts/verify-nf-device.cjs"
+  ],
+  "workflow_yaml_parsed": true,
+  "distinct_review": {
+    "reviewed_by": "Codex /root/web_camo",
+    "source_review_pass": true,
+    "reviewer_browser_execution": false
+  },
+  "mode_contract": {
+    "default_local_concurrency": 1,
+    "hosted_maximum": 2,
+    "explicit_flag_required": true,
+    "declared_github_hosted_linux_required": true,
+    "minimum_cpu_threads": 2,
+    "minimum_total_memory_bytes": 4294967296,
+    "minimum_available_memory_bytes": 2147483648,
+    "minimum_constrained_memory_bytes_if_present": 4294967296
+  },
+  "preserved_checks": {
+    "cases_per_engine": 33,
+    "forgeries_per_engine": 8,
+    "aggregate_browser_timeout_ms": 180000,
+    "explicit_ui_wait_timeout_ms": 50000,
+    "fresh_workers_no_context_or_result_reuse": true,
+    "all_privacy_UI_lifecycle_and_PS_MT_recoveries": true
+  },
+  "resource_lifecycle": "Both fixed engine tasks settle including async browser cleanup before fixture close. Any engine/checkpoint/cleanup failure makes global pass false. Final source/artifact checks occur after both settle.",
+  "prior_actual_failure_receipt": "runs/2026-11-21-nf-browser-hosted-deadline.json",
+  "hosted_changed_source_execution": "pending_one_reviewed_push",
+  "limits": [
+    "No local parallel browser execution.",
+    "Performance correction is based on the recorded diagnostic aggregate deadline, not proof of the earlier PR139 product root cause.",
+    "No timeout increase, dropped case, shared warm worker, detector accuracy, original requirement closure or release approval."
+  ]
+}

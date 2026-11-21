@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-095425-nf-bounded-hosted-engine-concurrency-1511bd05
+
+Recorded 2026-11-21T09:54:25.616765+00:00 · Contributor: Codex /root/seo; distinct source review /root/web_camo · change
+
+- **Changed.** Added explicitly capacity-gated hosted concurrency for the two independent NF browser cohorts while preserving sequential local execution.
+- **Evidence.** Twelve focused controls pass for mode/capacity refusal, maximum two tasks, independent timing, cleanup/failure isolation and original finite diagnostics. Distinct review confirms unchanged33cases,8forgeries,freshworkers and180/50second budgets. [Change record](./runs/changes/2026-11-21-095425-nf-bounded-hosted-engine-concurrency-1511bd05.json).
+- **Not claimed.** One changed-source hosted execution remains pending. No original PR139 product cause, unconditional speed guarantee, accuracy, full requirement closure or release approval is inferred.
+
+
 ### 2026-11-21-094858-nf-browser-hosted-deadline-observed-d0bc4776
 
 Recorded 2026-11-21T09:48:58.903474+00:00 · Contributor: Codex /root/seo · change

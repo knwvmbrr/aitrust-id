@@ -4,7 +4,7 @@ const {execFileSync}=require('node:child_process');
 const {chromium,webkit}=require('playwright');
 const {startSiteFixture}=require('./site-fixture-server.cjs');
 const {writeReport}=require('./execution-report.cjs');
-const {createStageDiagnostics}=require('./verify-nf-client.cjs');
+const {createStageDiagnostics,hostCapacity,engineExecution,settleEngineChecks}=require('./verify-nf-client.cjs');
 const cases=JSON.parse(execFileSync(process.env.AITRUST_VERIFY_PYTHON||'python3',['scripts/nf-device-cases.py'],{encoding:'utf8'}));
 const manifest=JSON.parse(fs.readFileSync('site/src/nf-device-manifest.json'));
 const sources=['tools/nf_device.py','protocol/corpus.py','protocol/corpus_support.py','tools/nf_source_evidence.py','protocol/normalization.py','protocol/unicode15-data.json','protocol/normalization.mjs','protocol/normalization-core.js','scripts/build-nf-device.py','scripts/build-nf-device-fixture.mjs','scripts/nf-device-cases.py','scripts/verify-nf-device.cjs','scripts/verify-nf-client.cjs','site/src/NFExplorer.jsx','site/src/NFExplorerSlot.jsx','site/src/nf-device-client.js','site/src/nf-device-worker.js','site/src/nf-device-result.js','site/src/nf-cosine-result.js','site/src/nf-device-manifest.json','site/public/nf-device/notices.txt','tests/test_nf_device.py','tests/nf-device-client.mjs','docs/nf-device-reference.md',...Object.values(manifest.checks).map(v=>'site/public'+v.path)];
@@ -22,13 +22,14 @@ async function fill(page,a='Water is safe.',b='Water is not safe.',check='litera
 const result=page=>page.getByRole('region',{name:'Reference comparison result',exact:true});
 async function peers(page){const r=await page.evaluate(()=>window.__peerChecks());assert.equal(r.ps.state,'FINDING');assert(r.ps.candidates.length);assert.equal(r.mt.check,'urgency');assert.equal(r.mt.state,'OBSERVATIONS');assert(r.mt.counts.finding_groups>0);return true;}
 (async()=>{
- let fixture,engineName='setup',stage='server',browser,lastSubstep='start';
- const diagnostics=createStageDiagnostics({record:value=>writeReport(process.env.AITRUST_NF_STAGE_REPORT||'output/verification/nf-device-stage.json',{...value,source_sha256:before})});
+ let fixture,engineName='setup',stage='configuration',lastSubstep='start';
+ const diagnostics=createStageDiagnostics({record:value=>writeReport(process.env.AITRUST_NF_STAGE_REPORT||'output/verification/nf-device-stage.json',{...value,execution:report.execution||null,host_capacity:report.host_capacity||null,source_sha256:before})});
  const mark=(substep='start',index=null)=>{lastSubstep=substep;diagnostics.enter(engineName,stage,substep,index);};
- try{
-  mark();fixture=await startSiteFixture({directory:root});
-  for(const [name,engine] of [['Chromium',chromium],['WebKit',webkit]]){
-   engineName=name;stage='launch';mark();browser=await engine.launch({headless:true});const context=await browser.newContext({viewport:{width:390,height:844}});await context.addInitScript(instrumentation);const page=await context.newPage();const requests=[],logs=[];
+ async function runEngine(name){
+  let engineName=name,stage='launch',browser,lastSubstep='start';const outcome={engine:name,pass:false};
+  const mark=(substep='start',index=null)=>{lastSubstep=substep;diagnostics.enter(engineName,stage,substep,index);};
+  try{
+   stage='launch';mark();browser=await ({Chromium:chromium,WebKit:webkit})[name].launch({headless:true});const context=await browser.newContext({viewport:{width:390,height:844}});await context.addInitScript(instrumentation);const page=await context.newPage();const requests=[],logs=[];
    page.on('request',r=>requests.push({url:r.url(),method:r.method(),body:r.postData()}));page.on('console',r=>logs.push(r.text()));
    stage='mount';mark();await page.goto(fixture.url);await page.locator('[data-nf-explorer]').waitFor();assert.equal(await page.evaluate(()=>window.__nfWorkers.length),0);assert(!requests.some(r=>r.url.includes('/device/runtime')||r.url.includes('/nf-device/')));
    await page.getByRole('button',{name:'Compare passages',exact:true}).click();await page.getByRole('alert').waitFor();assert.equal(await page.evaluate(()=>window.__nfWorkers.length),0);
@@ -63,10 +64,31 @@ async function peers(page){const r=await page.evaluate(()=>window.__peerChecks()
    stage='chunk_import_render';mark();for(const mode of ['chunk','import','render']){mark(mode);
     const c=await browser.newContext();const p=await c.newPage();if(mode==='chunk')await p.route('**/assets/NFExplorer-*.js',r=>r.fulfill({status:404,body:'Unavailable'}));await p.goto(fixture.url);if(mode!=='chunk')await p.getByRole('button',{name:mode==='import'?'Import failure':'Render failure',exact:true}).click();await p.locator('[data-nf-unavailable]').waitFor();assert(await peers(p));await c.close();
    }
-   report.engines.push({engine:name,pass:true,authored_cases:cases.length,full_canonical_records:cases.filter(v=>v.expected).length,canonical_refusals:cases.filter(v=>!v.expected).length,negation_similarity_not_truth:true,both_raw_and_frozen_nfc_bound:true,corrupt_records_refused:8,optional_payload_and_validator_failures_then_literal_PS_MT:true,actual_NF_chunk_import_render_failure_then_PS_MT:true,edit_clear_cancel_unmount_terminate:true,default_no_worker_or_input_transfer:true,no_input_upload_storage_console:true,private_details_opt_in:true,reflow_320_at_200percent:true,light_dark:true,physical_phone:false,independent_accuracy_evidence:false});
-   await browser.close();browser=null;
+   outcome.result={engine:name,pass:true,authored_cases:cases.length,full_canonical_records:cases.filter(v=>v.expected).length,canonical_refusals:cases.filter(v=>!v.expected).length,negation_similarity_not_truth:true,both_raw_and_frozen_nfc_bound:true,corrupt_records_refused:8,optional_payload_and_validator_failures_then_literal_PS_MT:true,actual_NF_chunk_import_render_failure_then_PS_MT:true,edit_clear_cancel_unmount_terminate:true,default_no_worker_or_input_transfer:true,no_input_upload_storage_console:true,private_details_opt_in:true,reflow_320_at_200percent:true,light_dark:true,physical_phone:false,independent_accuracy_evidence:false};outcome.pass=true;
+
+  }catch(error){outcome.pass=false;outcome.failure={engine:engineName,stage,substep:lastSubstep,error_sha256:hash(String(error.message))};}
+  finally{
+   outcome.browser_cleanup={attempted:Boolean(browser),complete:false};
+   try{await browser?.close();outcome.browser_cleanup.complete=true;}
+   catch(error){outcome.pass=false;delete outcome.result;outcome.failure={engine:engineName,stage:'cleanup',substep:'browser_close',error_sha256:hash(String(error.message))};}
   }
-  stage='source_stability';mark();assert.deepEqual(inventory(),before);assert.deepEqual(Object.fromEntries(artifact(root)),served);report.source_unchanged_during_execution=true;report.served_unchanged_during_execution=true;stage='complete';mark('complete');report.pass=true;
- }catch(error){report.pass=false;report.failure={engine:engineName,stage,substep:lastSubstep,error_sha256:hash(String(error.message))};console.error('NF browser proof failed at '+engineName+'/'+stage);process.exitCode=1;}
- finally{await browser?.close();await fixture?.close();writeReport(process.env.AITRUST_NF_DEVICE_REPORT||'output/verification/nf-device-browser.json',report);console.log(JSON.stringify({pass:report.pass,engines:report.engines,failure:report.failure}));}
+  return outcome;
+ }
+ try{
+  report.host_capacity=hostCapacity();mark();report.execution=engineExecution({capacity:report.host_capacity});
+  stage='server';mark();fixture=await startSiteFixture({directory:root});
+  const settled=await settleEngineChecks(report.execution.concurrency,runEngine);
+  const outcomes=settled.map((value,i)=>value.status==='fulfilled'?value.value:{engine:['Chromium','WebKit'][i],pass:false,browser_cleanup:{attempted:true,complete:false},failure:{engine:['Chromium','WebKit'][i],stage:'cleanup',substep:'browser_close',error_sha256:hash(String(value.reason?.message||'Engine rejected'))}});
+  report.engine_outcomes=outcomes.map(({engine,pass,browser_cleanup,failure})=>({engine,pass,browser_cleanup,...(failure?{failure}:{})})).sort((a,b)=>a.engine.localeCompare(b.engine));
+  report.engines=outcomes.filter(v=>v.pass).map(v=>v.result).sort((a,b)=>a.engine.localeCompare(b.engine));
+  report.completed_engines=report.engines.map(v=>v.engine);
+  stage='source_stability';mark();assert.deepEqual(inventory(),before);assert.deepEqual(Object.fromEntries(artifact(root)),served);report.source_unchanged_during_execution=true;report.served_unchanged_during_execution=true;
+  if(outcomes.some(v=>!v.pass)){report.failure=outcomes.find(v=>!v.pass).failure;throw Error('NF engine cohort incomplete');}
+  stage='cleanup';mark();await fixture.close();fixture=null;report.fixture_cleanup=true;
+  stage='complete';mark('complete');report.pass=true;
+ }catch(error){report.pass=false;if(!report.failure)report.failure={engine:engineName,stage,substep:lastSubstep,error_sha256:hash(String(error.message))};console.error('NF browser proof failed at '+report.failure.engine+'/'+report.failure.stage);process.exitCode=1;}
+ finally{
+  if(fixture){try{await fixture.close();report.fixture_cleanup=true;}catch(error){report.pass=false;report.fixture_cleanup=false;report.cleanup_failure={stage:'cleanup',error_sha256:hash(String(error.message))};process.exitCode=1;}}
+  writeReport(process.env.AITRUST_NF_DEVICE_REPORT||'output/verification/nf-device-browser.json',report);console.log(JSON.stringify({pass:report.pass,execution:report.execution,engines:report.engines,completed_engines:report.completed_engines,failure:report.failure}));
+ }
 })();

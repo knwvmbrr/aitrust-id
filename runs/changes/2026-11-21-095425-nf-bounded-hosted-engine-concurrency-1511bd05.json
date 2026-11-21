@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-095425-nf-bounded-hosted-engine-concurrency-1511bd05",
+  "recorded_at": "2026-11-21T09:54:25.616765+00:00",
+  "author": "Codex /root/seo; distinct source review /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "73f99d61d77457b35827690faab3134d5c8d226f",
+  "changed": "Added explicitly capacity-gated hosted concurrency for the two independent NF browser cohorts while preserving sequential local execution.",
+  "proves": "Twelve focused controls pass for mode/capacity refusal, maximum two tasks, independent timing, cleanup/failure isolation and original finite diagnostics. Distinct review confirms unchanged33cases,8forgeries,freshworkers and180/50second budgets.",
+  "limits": "One changed-source hosted execution remains pending. No original PR139 product cause, unconditional speed guarantee, accuracy, full requirement closure or release approval is inferred.",
+  "scope_ids": [
+    "T-NF"
+  ],
+  "files": {
+    "scripts/verify-nf-client.cjs": "02d7f8242217551202e543117b4af55f41557bcf9fa7b5a63bb63cbc786979d4",
+    "scripts/verify-nf-device.cjs": "1e219b066d18f37d716551e1de92dad06d5b1669ce0608b0bbb8c816ba3e0f06",
+    "tests/nf-browser-diagnostics.cjs": "a9b5352bdff6364fcc4a5dbb90c6beba894580af5a3cc8f7654d2fc272232c30",
+    ".github/workflows/nf-browser-diagnostic.yml": "57c2aa4d06ab0504cff9cea412c3bb863cd8e2cae338d0475998409502a11162",
+    "docs/nf-browser-diagnostic-plan.md": "62691d9858033069d952cf3f134b0ccb4fd3903be9c04583f6985f4251e66698",
+    "runs/2026-11-21-nf-hosted-concurrency-local.json": "e0c897dc81beb6abf5776186630cf8a66e502407ec30e31e1e919a0bb0d7f4e5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nf-hosted-concurrency-local.json",
+      "sha256": "e0c897dc81beb6abf5776186630cf8a66e502407ec30e31e1e919a0bb0d7f4e5"
+    },
+    {
+      "path": "runs/2026-11-21-nf-browser-hosted-deadline.json",
+      "sha256": "1b22d4c75dec483a573e71ef8e27004426127ee587864854402146f11a625a3a"
+    }
+  ],
+  "checks": []
+}

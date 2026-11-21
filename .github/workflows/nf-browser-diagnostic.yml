@@ -11,6 +11,9 @@ jobs:
     timeout-minutes: 20
     env:
       AITRUST_VERIFY_PYTHON: python3
+      AITRUST_NF_ENGINE_CONCURRENCY: '2'
+      AITRUST_CI_RUNNER_ENV: ${{ runner.environment }}
+      AITRUST_CI_RUNNER_OS: ${{ runner.os }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
