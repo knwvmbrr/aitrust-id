@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-223513-mt-choice-browser-independent-review-2858d30c
+
+Recorded 2026-11-21T22:35:13.703789+00:00 · Contributor: Codex share_debugger MT worker · change
+
+- **Changed.** Recorded the independent final source and evidence review of the optional local choice-wording browser practice.
+- **Evidence.** A distinct reviewer verified all 62 current source bindings, the actual two-engine correction proof and served source/runtime identities, and independently passed three focused manifest and polite-announcement controls. [Change record](./runs/changes/2026-11-21-223513-mt-choice-browser-independent-review-2858d30c.json).
+- **Not claimed.** Metadata only; runtime remains frozen at 842145d6. No new execution, publication, tag verdict, independent accuracy, physical or human acceptance, or full requirement closure.
+
+
 ### 2026-11-21-222947-mt-choice-manifest-polite-fixes-8af17b61
 
 Recorded 2026-11-21T22:29:47.481379+00:00 · Contributor: Codex share_debugger MT worker · change
