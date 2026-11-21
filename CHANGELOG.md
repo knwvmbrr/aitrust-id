@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-153327-governed-local-policy-ci-registration-0edf51ea
+
+Recorded 2026-11-21T15:33:27.700006+00:00 · Contributor: Codex · change
+
+- **Changed.** Registered a dedicated read-only Python3.13 isolated-stdlib CI job for the governed local organization policy workflow without project dependency installs, services or containers.
+- **Evidence.** Actual PyYAML6.0.3 parsed the workflow; Python3.12/3.13 compiled its inline runner; all18 current input paths are covered, exact27 groups and zero skips required, pinned actions and fixed source/time/resource budgets checked. [Change record](./runs/changes/2026-11-21-153327-governed-local-policy-ci-registration-0edf51ea.json).
+- **Not claimed.** The new workflow has not executed on a hosted runner yet. Existing Mac/Linux results validate the frozen software separately. No full N-010, human, employee, commercial or real organization acceptance is granted.
+
+
 ### 2026-11-21-160024-prove-live-browser-tag-lifecycle-7bd7f4bf
 
 Recorded 2026-11-21T16:00:24.398118+00:00 · Contributor: Codex /root · change

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-153327-governed-local-policy-ci-registration-0edf51ea",
+  "recorded_at": "2026-11-21T15:33:27.700006+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "61145e760a09f957ff50f0d78c687b914eccaa84",
+  "changed": "Registered a dedicated read-only Python3.13 isolated-stdlib CI job for the governed local organization policy workflow without project dependency installs, services or containers.",
+  "proves": "Actual PyYAML6.0.3 parsed the workflow; Python3.12/3.13 compiled its inline runner; all18 current input paths are covered, exact27 groups and zero skips required, pinned actions and fixed source/time/resource budgets checked.",
+  "limits": "The new workflow has not executed on a hosted runner yet. Existing Mac/Linux results validate the frozen software separately. No full N-010, human, employee, commercial or real organization acceptance is granted.",
+  "scope_ids": [
+    "N-010"
+  ],
+  "files": {
+    ".github/workflows/organization-policy.yml": "861957e48207ba7c0c41b344a34a3b74df5c0ad6e9b5709e0020105a2d033de1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-organization-policy-mac-final-operation.json",
+      "sha256": "9af25cb7b6cf47629fca1535c41a6a0b52ce9a6be60103c9b2f0d9051058509c"
+    },
+    {
+      "path": "runs/2026-11-21-organization-policy-linux-operation.json",
+      "sha256": "1da9b65b4dd02ec3b65ac0f1e94b5285cf185ba890947c73d153aa4dbe94531a"
+    }
+  ],
+  "checks": []
+}
