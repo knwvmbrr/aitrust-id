@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-095736-nf-diagnostic-workflow-context-correction-2ae6c59d
+
+Recorded 2026-11-21T09:57:36.773851+00:00 · Contributor: Codex /root/seo; distinct workflow review /root/web_camo · change
+
+- **Changed.** Moved only two hosted-runner metadata expressions from unsupported job env into the NF execution step env.
+- **Evidence.** All explicit and implicit GitHub context uses were checked against the official scope table; YAML parses and distinct workflow-only review passes. The actual pre-job failure is retained with zero runtime jobs. [Change record](./runs/changes/2026-11-21-095736-nf-diagnostic-workflow-context-correction-2ae6c59d.json).
+- **Not claimed.** No runtime, timeout, permission, assertion or trigger change. This is workflow repair, not passing concurrency evidence, product reliability or original closure.
+
+
 ### 2026-11-21-095425-nf-bounded-hosted-engine-concurrency-1511bd05
 
 Recorded 2026-11-21T09:54:25.616765+00:00 · Contributor: Codex /root/seo; distinct source review /root/web_camo · change

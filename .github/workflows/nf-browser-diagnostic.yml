@@ -12,8 +12,6 @@ jobs:
     env:
       AITRUST_VERIFY_PYTHON: python3
       AITRUST_NF_ENGINE_CONCURRENCY: '2'
-      AITRUST_CI_RUNNER_ENV: ${{ runner.environment }}
-      AITRUST_CI_RUNNER_OS: ${{ runner.os }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -41,6 +39,9 @@ jobs:
       - name: Verify closed process and stage diagnostics
         run: node --test tests/nf-browser-diagnostics.cjs
       - name: Execute unchanged bounded NF browser entrypoint once
+        env:
+          AITRUST_CI_RUNNER_ENV: ${{ runner.environment }}
+          AITRUST_CI_RUNNER_OS: ${{ runner.os }}
         run: node scripts/verify-nf-client.cjs
       - name: Retain only selected safe NF diagnostic records
         if: always()
