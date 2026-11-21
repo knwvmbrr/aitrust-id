@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-093238-hp-uncertainty-verifier-handoff-14d10265
+
+Recorded 2026-11-21T09:32:38.085156+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Document exact integrated HP-preview verifier invocation, ownership, source binding and pending execution.
+- **Evidence.** The production verifier interface is reusable for built or public origins and its source snapshot is distinct from historical standalone proof. [Change record](./runs/changes/2026-11-21-093238-hp-uncertainty-verifier-handoff-14d10265.json).
+- **Not claimed.** Actual PM-built execution and protected publication remain pending; no tag release or original closure.
+
+
+### 2026-11-21-093218-hp-uncertainty-integration-verifier-01f2a6df
+
+Recorded 2026-11-21T09:32:18.120085+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Add reusable actual HP-modal controls and a source-bound Chromium/WebKit runner for the optional uncertainty-word preview.
+- **Evidence.** Both new scripts pass syntax; importing the reusable function starts no browser. The production controls retain full canonical record, explicit selection, privacy, lifecycle, oversize, layout and actual sibling-check recovery assertions. [Change record](./runs/changes/2026-11-21-093218-hp-uncertainty-integration-verifier-01f2a6df.json).
+- **Not claimed.** Actual integrated execution is pending the PM-built mount and guide. No production success, publication, HP tag, accuracy or original closure is claimed.
+
+
 ### 2026-11-21-092952-pyodide-source-normal-build-hook-039e604d
 
 Recorded 2026-11-21T09:29:52.855488+00:00 · Contributor: Codex /root/seo · change
