@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-094858-nf-browser-hosted-deadline-observed-d0bc4776",
+  "recorded_at": "2026-11-21T09:48:58.903474+00:00",
+  "author": "Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bc6c8c05a234defe86540374c4f9b607ba8beeb1",
+  "changed": "Preserved the single actual Linux NF diagnostic outcome and exact selected artifact identity.",
+  "proves": "The parent recorded ETIMEDOUT at180156ms; Chromium completed its full cohort, WebKit completed invalid-cosine and literal recovery and reached the final render-failure recovery before the unchanged aggregate deadline.",
+  "limits": "This is an actual failed execution, not a fixed product or passing WebKit cohort. The earlier untraced PR139 cause remains unestablished. No checks or timeouts changed, no retry or original closure.",
+  "scope_ids": [
+    "T-NF"
+  ],
+  "files": {
+    "runs/2026-11-21-nf-browser-hosted-deadline.json": "1b22d4c75dec483a573e71ef8e27004426127ee587864854402146f11a625a3a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nf-browser-hosted-deadline.json",
+      "sha256": "1b22d4c75dec483a573e71ef8e27004426127ee587864854402146f11a625a3a"
+    }
+  ],
+  "checks": []
+}

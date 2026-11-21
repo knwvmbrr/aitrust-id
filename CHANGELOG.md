@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-094858-nf-browser-hosted-deadline-observed-d0bc4776
+
+Recorded 2026-11-21T09:48:58.903474+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Preserved the single actual Linux NF diagnostic outcome and exact selected artifact identity.
+- **Evidence.** The parent recorded ETIMEDOUT at180156ms; Chromium completed its full cohort, WebKit completed invalid-cosine and literal recovery and reached the final render-failure recovery before the unchanged aggregate deadline. [Change record](./runs/changes/2026-11-21-094858-nf-browser-hosted-deadline-observed-d0bc4776.json).
+- **Not claimed.** This is an actual failed execution, not a fixed product or passing WebKit cohort. The earlier untraced PR139 cause remains unestablished. No checks or timeouts changed, no retry or original closure.
+
+
 ### 2026-11-21-094130-nf-browser-bounded-diagnostics-354e4290
 
 Recorded 2026-11-21T09:41:30.477234+00:00 · Contributor: Codex /root/seo; distinct source review /root/web_camo · change
