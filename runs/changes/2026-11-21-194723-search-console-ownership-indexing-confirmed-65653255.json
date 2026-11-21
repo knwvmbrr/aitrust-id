@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-194723-search-console-ownership-indexing-confirmed-65653255",
+  "recorded_at": "2026-11-21T19:47:23.518369+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d95728d660b502e590e03bf68a5838d950efc187",
+  "changed": "Verified approved Google Search Console ownership via the published HTML file, submitted the canonical sitemap and inspected the homepage and PS.",
+  "proves": "Actual Google UI confirms Ownership verified; sitemap Success with 37 discovered pages; homepage and PS each URL is on Google and Page is indexed. File remains included for future deployments.",
+  "limits": "Only the HTTPS apex URL-prefix property was verified. Aggregate reports are processing; all 37 pages indexed, ranking, traffic and independent detector accuracy are not claimed. Static file is live; protected source PR 144 is pending normal checks. No full original closure.",
+  "scope_ids": [
+    "WP-SITE"
+  ],
+  "files": {
+    "state.json": "b81f6af531a24d151ccbe41efdc32a32caa4095a24389bd02ef88ae6d0c2d29b",
+    "docs/search-discovery-status.md": "173f2ee883cfedc267b8a04249849b8a2d2abf6fe120f4ecc15ffd43527a18ac",
+    "docs/session-delivery.json": "d87d7115d3d0a0c4ce98df76b3fd1671ab31a8a84a072e9df879780f16a86e53",
+    "docs/session-delivery-plan.md": "d37dd48c25054be96df0abf3c7ed6ceecb29ede2c3790e634b3a7d2d66dede3a",
+    "site/public/googlefd96956266acb393.html": "9044d09734a758ef85446bad2f71c13fc9090a06d73663d4be5d0bd3eee94677",
+    "runs/2026-11-21-search-console-verified.json": "d1de97f7fce5003fd28a9585d92e743477dc39485a433396376e459f12226d1f",
+    "runs/2026-11-21-google-verification-publication.json": "74a39db917d6acce360cf61f6bb6d1842715c6434a8a9adc4e9d65d21ef27938"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-search-console-verified.json",
+      "sha256": "d1de97f7fce5003fd28a9585d92e743477dc39485a433396376e459f12226d1f"
+    },
+    {
+      "path": "runs/2026-11-21-google-verification-publication.json",
+      "sha256": "74a39db917d6acce360cf61f6bb6d1842715c6434a8a9adc4e9d65d21ef27938"
+    }
+  ],
+  "checks": []
+}

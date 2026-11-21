@@ -1,3 +1,13 @@
+# Current requested delivery
+
+The public HTTPS/MCP PS preview is operational at `https://vps-18ef1326.vps.ovh.us/mcp`. Actual trusted TLS, official tool discovery and one PS result are recorded in the [operational receipt](../runs/2026-11-21-public-api-connection-operational.json), with [deployment and rollback evidence](../runs/2026-11-21-api-deployment-complete.json). Version1.14 privacy disclosures were published before public activation. The refreshed three-step connection instructions are implemented and awaiting publication. Actual ChatGPT/Claude account installation remains separate.
+
+Google Search Console ownership is verified for the approved HTTPS URL-prefix. The canonical sitemap reports Success with37 discovered pages; actual URL Inspection confirms the homepage andPS are each indexed. [Dated actual observations](search-discovery-status.md). Aggregate reports are processing; all-page coverage, rankings andtraffic remain unverified. Preserve the Google verification file in all future deployments. The static file is live; protected sourcePR144 remains pending checks.
+
+**133 complete /69 open original requirements; target60 needs9 further full closures.** F030 is the sole new original closure. All other original criteria remain intact. The three specialist handoffs are complete; root owns current integration/publication. No new test suites were started after the owner's direction to finish this implementation batch first.
+
+## Earlier dated snapshots
+
 # Current original-closure wave
 
 **133 complete /69 open; target60 needs9 further full original closures.**

@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-200658-api-operator-controls-ci-ad40f325
+
+Recorded 2026-11-21T20:06:58.798124+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Registered the existing API deployment ownership and isolation-verifier refusal controls in the protected AI tools workflow.
+- **Evidence.** The selected workflow now executes the activation and isolation guard modules alongside the existing API/OpenAPI checks whenever operator sources change. [Change record](./runs/changes/2026-11-21-200658-api-operator-controls-ci-ad40f325.json).
+- **Not claimed.** This registration adds no public endpoint, platform-account installation, independent detector validation or original closure; execution follows the completed implementation batch.
+
+
+### 2026-11-21-194831-public-api-scope-handoff-attribution-7ec6fef7
+
+Recorded 2026-11-21T19:48:31.548873+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Reconciled the public API deployment handoff into the scope milestone and preserved its distinct review; attributed the previously prepared scope edits.
+- **Evidence.** The dated operational and independent deployment receipts support actual HTTPS/MCP operation. Remote connection enhancement stays at 80 with guide publication and provider-account acceptance outstanding; all 202 originals and 69 open remain unchanged. [Change record](./runs/changes/2026-11-21-194831-public-api-scope-handoff-attribution-7ec6fef7.json).
+- **Not claimed.** No ChatGPT or Claude account connection, independent accuracy or new original closure. The earlier missing-attribution guard refusal is retained; guide and broader post-publication source delivery remain separate.
+
+
+### 2026-11-21-194723-search-console-ownership-indexing-confirmed-65653255
+
+Recorded 2026-11-21T19:47:23.518369+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Verified approved Google Search Console ownership via the published HTML file, submitted the canonical sitemap and inspected the homepage and PS.
+- **Evidence.** Actual Google UI confirms Ownership verified; sitemap Success with 37 discovered pages; homepage and PS each URL is on Google and Page is indexed. File remains included for future deployments. [Change record](./runs/changes/2026-11-21-194723-search-console-ownership-indexing-confirmed-65653255.json).
+- **Not claimed.** Only the HTTPS apex URL-prefix property was verified. Aggregate reports are processing; all 37 pages indexed, ranking, traffic and independent detector accuracy are not claimed. Static file is live; protected source PR 144 is pending normal checks. No full original closure.
+
+
+### 2026-11-21-193732-testflight-build-testing-confirmed-a108a813
+
+Recorded 2026-11-21T19:37:32.242491+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Confirmed build 1.0 (1) is Testing in the owner-only TestFlight group after Apple sign-in was restored.
+- **Evidence.** Actual Apple UI shows 87 days remaining, one build, one owner tester and Invited status dated November 18. No sessions or devices are listed. [Change record](./runs/changes/2026-11-21-193732-testflight-build-testing-confirmed-a108a813.json).
+- **Not claimed.** No new upload or invitation was sent. Actual iPhone installation, Share, offline operation and VoiceOver acceptance, and public App Store approval remain separate.
+
+
+### 2026-11-21-193620-app-build-status-recheck-ef4ab4bc
+
+Recorded 2026-11-21T19:36:20.323821+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Rechecked the app build status in App Store Connect; the expired session returned Apple sign-in.
+- **Evidence.** Fresh UI access was attempted. Last verified internal build remains 1.0 (1), Testing, assigned November 18; its historical evidence is retained separately. [Change record](./runs/changes/2026-11-21-193620-app-build-status-recheck-ef4ab4bc.json).
+- **Not claimed.** Current Apple dashboard, physical installation, Share and VoiceOver acceptance, and public App Store approval were not verified. No new upload, tests or original closure.
+
+
+### 2026-11-21-174945-google-visibility-console-follow-up-94fbe471
+
+Recorded 2026-11-21T17:49:45.448932+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Recorded actual Google visibility for 11 URLs and the separate unfinished Search Console ownership workflow; documented the locked-Mac follow-up.
+- **Evidence.** The saved native Chrome observation contains the homepage and PS search results. Follow-up granted no ownership or permissions. [Change record](./runs/changes/2026-11-21-174945-google-visibility-console-follow-up-94fbe471.json).
+- **Not claimed.** Search Console verification, sitemap submission and individual URL Inspection remain pending owner approval and Mac unlock. No original requirement closure or comprehensive indexing claim.
+
+
 ### 2026-11-21-173620-remote-api-public-deployment-d98ac614
 
 Recorded 2026-11-21T17:36:20.894852+00:00 · Contributor: Codex API deployment engineer · change

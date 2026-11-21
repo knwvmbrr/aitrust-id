@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-174945-google-visibility-console-follow-up-94fbe471",
+  "recorded_at": "2026-11-21T17:49:45.448932+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d95728d660b502e590e03bf68a5838d950efc187",
+  "changed": "Recorded actual Google visibility for 11 URLs and the separate unfinished Search Console ownership workflow; documented the locked-Mac follow-up.",
+  "proves": "The saved native Chrome observation contains the homepage and PS search results. Follow-up granted no ownership or permissions.",
+  "limits": "Search Console verification, sitemap submission and individual URL Inspection remain pending owner approval and Mac unlock. No original requirement closure or comprehensive indexing claim.",
+  "scope_ids": [
+    "WP-INTEGRATIONS"
+  ],
+  "files": {
+    "docs/search-discovery-status.md": "19f0d7d773789c95d151a130d7fd57ab8c2c65750ba01d6004735c19dabe585a",
+    "runs/2026-11-21-search-console-continuation.json": "fe7450fd58f0d7bc7716184a89672038973fcaf09e39c63db542aaeee499ecfc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-google-search-visibility.json",
+      "sha256": "468d996eb5f6d555bde80512248aa4e62df4892a3dac8cc876fdedf80cd19fc0"
+    },
+    {
+      "path": "runs/2026-11-21-search-console-continuation.json",
+      "sha256": "fe7450fd58f0d7bc7716184a89672038973fcaf09e39c63db542aaeee499ecfc"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-193732-testflight-build-testing-confirmed-a108a813",
+  "recorded_at": "2026-11-21T19:37:32.242491+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d95728d660b502e590e03bf68a5838d950efc187",
+  "changed": "Confirmed build 1.0 (1) is Testing in the owner-only TestFlight group after Apple sign-in was restored.",
+  "proves": "Actual Apple UI shows 87 days remaining, one build, one owner tester and Invited status dated November 18. No sessions or devices are listed.",
+  "limits": "No new upload or invitation was sent. Actual iPhone installation, Share, offline operation and VoiceOver acceptance, and public App Store approval remain separate.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "state.json": "350ada3a7166026698a8841459e1e8cd937ba6b83914cd7f10a2aa24fb355739",
+    "runs/2026-11-21-testflight-build-testing-confirmed.json": "52307a86f9573a068503eaaa00ffb287c1c7e517249d180e0a80bb6d92e63e28"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-testflight-build-testing-confirmed.json",
+      "sha256": "52307a86f9573a068503eaaa00ffb287c1c7e517249d180e0a80bb6d92e63e28"
+    }
+  ],
+  "checks": []
+}

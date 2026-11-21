@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-21T16:10:18.458650+00:00",
+  "audited_at": "2026-11-21T17:45:49.911741+00:00",
   "client_date": "2026-11-21",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -14518,14 +14518,15 @@
       "id": "ENH-REMOTE-TAG-CONNECTION",
       "kind": "enhancement",
       "title": "Optional open HTTP and remote MCP connection for AI applications",
-      "percent_complete": 60,
+      "percent_complete": 80,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration"
       ],
-      "audited_at": "2026-11-21T16:10:18.458650+00:00",
-      "checked_by": "Codex /root; distinct /root/seo source/Linux review",
+      "audited_at": "2026-11-21T17:45:49.911741+00:00",
+      "checked_by": "Codex /root integration; distinct /root/seo deployment-source review",
       "implemented_by": [
         "Codex /root/web_camo — bounded HTTP/MCP server and reviewed proxy preparation"
       ],
@@ -14535,17 +14536,22 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Activate exact immutable release under effective systemd isolation; prove trusted public HTTPS and official MCP/ordinary clients; publish reviewed instructions and privacy notice. Keep host-specific account/workspace acceptance separate.",
-      "next_owner": "Codex /root integration; /root/web_camo deployment; /root/share_debugger guide",
+      "next_fix": "Publish refreshed connection instructions and complete one owner-approved supported AI-host account connection; no provider approval or accuracy is inferred from SDK operation.",
+      "next_owner": "Codex integration; owner for new provider-account tool permission where required",
       "evidence": [
         "docs/remote-tag-connectors-plan.md",
         "docs/remote-tag-connectors-result.md",
         "runs/2026-11-21-remote-tag-connectors-direct-Linux-execution.json",
-        "runs/2026-11-21-remote-proxy-corrected-Linux.json"
+        "runs/2026-11-21-remote-proxy-corrected-Linux.json",
+        "runs/2026-11-21-public-api-connection-operational.json",
+        "runs/2026-11-21-api-deployment-complete.json",
+        "runs/2026-11-21-api-deployment-independent-review.json",
+        "docs/remote-ai-connections.md"
       ],
-      "evidence_scope": "Actual14 remote HTTP/MCP controls and11 private Linux proxy groups. ExistingPS canonical parity; remote privacy explicitly Unavailable. No public or host approval claim.",
+      "evidence_scope": "Public trusted HTTPS and official MCP discovery/PS call work; active/enabled services, actual limits/isolation, preservation and rollback are evidenced. Source instructions are complete. Actual ChatGPT/Claude workspace setup remains separate and unverified.",
       "required_acceptance": [
-        "Effective isolated immutable service and trusted public HTTPS; canonical supported/no-finding, refusal and recovery through official modern/legacy MCP and ordinary API; truthful published connection and data-flow instructions."
+        "Effective isolated immutable service and trusted public HTTPS; canonical supported/no-finding, refusal and recovery through official modern/legacy MCP and ordinary API; truthful published connection and data-flow instructions.",
+        "Complete one chosen supported AI-host account connection with owner approval, preserving limited tool permissions and selected-text disclosure; SDK compatibility alone is not that account acceptance."
       ],
       "queue": "open"
     }

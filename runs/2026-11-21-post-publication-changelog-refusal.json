@@ -1,0 +1,18 @@
+{
+  "captured_at": "2026-11-21T19:48:31.391414+00:00",
+  "command": [
+    "node",
+    "scripts/verify-changelog.cjs"
+  ],
+  "exit_code": 1,
+  "pass": false,
+  "errors": [
+    "New change missing fresh matching event: docs/scope-progress.json",
+    "New change missing fresh matching event: docs/scope-progress.md",
+    "New change missing fresh matching event: runs/2026-11-21-api-deployment-independent-review.json"
+  ],
+  "root_cause": "Previously prepared post-publication API scope and distinct review handoff changes lacked their own fresh attributed event; Google and app events cover their own changes only.",
+  "fix": "Add the missing exact-file attributed API scope handoff event, preserving the prior refusal.",
+  "new_test_suites_run": false,
+  "original_requirements_closed": 0
+}
