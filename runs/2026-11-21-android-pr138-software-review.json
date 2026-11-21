@@ -1,0 +1,78 @@
+{
+  "format": "ai-trust-id-native-software-handoff-review/v1",
+  "captured_at": "2026-11-21T08:56:55.275538+00:00",
+  "pass": true,
+  "source_commit": "c408e218da929c60a7f2e5483560eef2f593c267",
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886233496",
+  "job_id": 136792013135,
+  "review_method": "Read-only completed hosted job log and exact Git source comparison; no artifact download or rerun.",
+  "actual_default_apk": true,
+  "actual_status": "EXECUTED",
+  "original_controls": [
+    {
+      "case": "receive_requires_explicit_check",
+      "pass": true
+    },
+    {
+      "case": "actual_offline_ps_finding",
+      "pass": true
+    },
+    {
+      "case": "edit_hides_previous_finding",
+      "pass": true
+    },
+    {
+      "case": "new_share_and_no_finding",
+      "pass": true
+    },
+    {
+      "case": "unsupported_mime_has_no_verdict",
+      "pass": true
+    },
+    {
+      "case": "clear_removes_input_and_result",
+      "pass": true
+    },
+    {
+      "case": "background_clears_text",
+      "pass": true
+    }
+  ],
+  "configuration_controls": [
+    {
+      "case": "configuration_preserves_current_edited_review_without_result",
+      "pass": true
+    },
+    {
+      "case": "configuration_immediate_home_refocus_does_not_revive_text",
+      "pass": true
+    }
+  ],
+  "focused_tests_passed": 88,
+  "focused_group_counts": [
+    10,
+    46,
+    12,
+    20
+  ],
+  "bound_sources_match": 23,
+  "native_build_sources_match": 14,
+  "default_dex_gate_source_matches_previously_audited_default_artifact": true,
+  "current_artifact_independently_downloaded": false,
+  "exact_edited_draft_reasserted": true,
+  "fresh_marker_and_receipt_observed": true,
+  "home_refocus_marker_absent": true,
+  "api_level": "36",
+  "internet_permission": false,
+  "license_record_unchanged": true,
+  "completed_log_sha256": "57c836baf01266f3aeb17cd1e41780b4b4d964ad0a9a733a61054680463ebf24",
+  "completed_log_bytes": 62547,
+  "software_handoff_accepted": true,
+  "acceptance_scope": "Reviewed configuration-loss fix, default-APK packaging/probe exclusion gate, preserved original7 plus mandatory configuration2 and source-bound controls.",
+  "physical_device_evidence": false,
+  "human_talkback_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_original_requirement_closed": false,
+  "all_startup_or_external_sender_compatibility_guaranteed": false,
+  "next_unblocked_engineering": "Actual default-APK adversarial intent ingress controls through an owned synthetic sender: missing text, SEND_MULTIPLE, stream/data/ClipData URI, oversized or malformed text; require empty review/no verdict/Check disabled and fresh valid Share recovery. No new permission, terms or detector changes."
+}

@@ -73,3 +73,7 @@ checks: pure adapter/builder tests, source-bound client/fixture/native-input
 controls, and actual NF modal operation with PS/MT recovery. The normal build
 prepares both method bundles and source notices, and the generic accessibility
 probe waits for the actual lazy NF form. No catalogue tag is promoted.
+
+## Subsequent verified functional delivery
+
+Checked 2026-11-21T09:02:00.648138+00:00. Protected merge `f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a` matches the tested tree. All11 required checks pass. NF is live with34 critical HTTP comparisons across apex/www and actualChromium/WebKit controls. Android default API36 Share passes all7original+2separate controls and88 focused tests; zero permissions or default diagnostic markers. See `runs/2026-11-21-nov21-functional-closeout.json`. Two additional software jobs close, total16; originals remain132/70. HP uncertainty wording and native malformed-Share controls are independently assigned and uncompleted.

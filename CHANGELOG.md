@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-091323-nov21-final-closeout-source-evidence-f038e00f
+
+Recorded 2026-11-21T09:13:23.050944+00:00 · Contributor: Codex /root; exact inventory review /root/seo · change
+
+- **Changed.** Bound final documentation and generated catalogue updates to freshly executed source receipts and the reviewed current route inventory.
+- **Evidence.** Current 57-command protocol and 55-command website receipts pass without source drift. Unchanged PS, PII and extension receipts still match. Distinct inventory review verifies 1416 sources and only two generated-data changes. [Change record](./runs/changes/2026-11-21-091323-nov21-final-closeout-source-evidence-f038e00f.json).
+- **Not claimed.** This updates evidence after actual software publication; it does not change detector methods, permissions, original acceptance or the 70-open count.
+
+
+### 2026-11-21-090325-nov21-closeout-derived-scope-corrected-fb5fb4af
+
+Recorded 2026-11-21T09:03:25.289696+00:00 · Contributor: Codex /root; task-list review /root/seo · change
+
+- **Changed.** Refreshed generated scope projections and corrected the current top-level publication status from verified live evidence.
+- **Evidence.** Normal site preparation retains 202 originals, 132 complete and 70 open; current software source is protected and publicly verified. Task-list review caught a stale pending status, now corrected. [Change record](./runs/changes/2026-11-21-090325-nov21-closeout-derived-scope-corrected-fb5fb4af.json).
+- **Not claimed.** Derived catalogue and operations data only; not tag validation, physical or independent acceptance or a new original closure.
+
+
+### 2026-11-21-090224-nov21-functional-public-closeout-7dc922bb
+
+Recorded 2026-11-21T09:02:24.475449+00:00 · Contributor: Codex /root; Android /root/share_debugger; NF /root/seo; review /root/web_camo · change
+
+- **Changed.** Published repaired Android Share source and the private on-device reference workflow through protected integration, and updated attributed scope and delivery state.
+- **Evidence.** Actual default API36 seven original plus two configuration/privacy controls pass. Eleven required protected checks pass. Actual public NF Chromium/WebKit controls and 34 critical HTTP comparisons pass. Two predeclared software jobs complete; scoped total 16. [Change record](./runs/changes/2026-11-21-090224-nov21-functional-public-closeout-7dc922bb.json).
+- **Not claimed.** Originals remain 132 complete and 70 open; target 60 unmet. No physical phone, TalkBack, human or independent-accuracy acceptance is invented. NF is wording evidence, not a truth verdict. Further HP and Android work is assigned, not complete.
+
+
 ### 2026-11-21-084217-pr138-reviewed-inventory-134c4898
 
 Recorded 2026-11-21T08:42:17.628757+00:00 · Contributor: Codex /root; inventory review /root/seo; code review /root/web_camo · change
