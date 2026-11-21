@@ -1,0 +1,17 @@
+{
+  "pass": false,
+  "captured_at": "2026-11-21T21:17:36.864876+00:00",
+  "kind": "api_rollback_same_handle_rule_definition_drift",
+  "source_sha256": "03ca0d627cb0234b35aa0b7fa43aa6fcae3fe386a6c8388546a44e610acef075",
+  "source_stable": true,
+  "actual_prepare_and_publish": true,
+  "rule_handle_and_tag_preserved": true,
+  "only_current_rule_definition_changed_to_drop": true,
+  "rollback_unexpectedly_passed": true,
+  "service_stop_after_unrecognized_rule_drift": true,
+  "changed_rule_deleted": true,
+  "limits": [
+    "Actual temporary files/current operator methods with author SyntheticHost modeled commands/root; no real nft/systemctl/SSH/services.",
+    "Shows exact rule ownership is not established by matching tag+handle alone; no unrelated host data accessed."
+  ]
+}

@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-212041-record-api-retirement-peer-review-285aac0d
+
+Recorded 2026-11-21T21:20:41.099363+00:00 · Contributor: Codex /root/web_camo API operator engineer · change
+
+- **Changed.** Preserved the exact distinct corrected API rollback ownership review before integration.
+- **Evidence.** Independent six-control temporary-filesystem review confirms changed-rule refusal before service actions, counter-only legitimate rollback, stale record replacement preservation, terminal-write recovery/blocking and unrecorded-unit refusal; exact current runtime/test hashes remain stable. [Change record](./runs/changes/2026-11-21-212041-record-api-retirement-peer-review-285aac0d.json).
+- **Not claimed.** Source/synthetic privileged-boundary review only, no live operator migration, remote service/firewall mutation, universal transaction atomicity or original closure. Existing legacy live record remains unanchored and must not be adopted automatically.
+
+
+### 2026-11-21-212017-retire-api-rollback-authority-e593c610
+
+Recorded 2026-11-21T21:20:17.233602+00:00 · Contributor: Codex /root/web_camo API operator engineer · change
+
+- **Changed.** Bound API management to one serialized active invocation epoch and unit inode identities, durably retired rollback records, and preflighted exact recorded firewall rule and persistence before stopping services.
+- **Evidence.** Actual owned-filesystem original counterexample deleted replacement units; current twelve affected controls preserve replacements, reject stale/legacy authority and drift before mutations, retain lease on failed state writes, and exercise bounded same-record recovery. Earlier twenty-five guards remain historical to their exact candidate. [Change record](./runs/changes/2026-11-21-212017-retire-api-rollback-authority-e593c610.json).
+- **Not claimed.** No remote or privileged service/firewall changes. Existing deployed879 and legacy record are not adopted or updated; uncertain/incomplete state requires manual operator review. No original requirement closure or runtime/route change; distinct corrected peer review pending.
+
+
 ### 2026-11-21-204050-public-guide-state-chronology-fixed-b3efeba7
 
 Recorded 2026-11-21T20:40:50.936411+00:00 · Contributor: Codex /root · change

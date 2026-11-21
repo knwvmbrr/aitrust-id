@@ -1,0 +1,55 @@
+{
+  "format": "api-rollback-ownership-corrected-independent-review/v1",
+  "captured_at": "2026-11-21T21:20:06.368126+00:00",
+  "pass": true,
+  "reviewer": "seo",
+  "source_base": "0396178cc691272c18099650131d13227cadb410",
+  "source_sha256": {
+    "deploy/ai-tools/activate.py": "03ef82846753f990847f67db048ab2fcd931e544dd6f769000081639718f6e65",
+    "tests/test_ai_tools_activation.py": "b200383952d7031372913ff52d4696d5ad5f2a94a89d14725b8027c8181d63f5"
+  },
+  "source_stable": true,
+  "historical_rule_definition_finding_sha256": "a949bdc05952ddcd89644f8f095c21cd5c2f1d236273d97e970b1b5f8edc9a20",
+  "actual_affected_controls": [
+    {
+      "case": "original_same_handle_tag_changed_expr",
+      "pass": true,
+      "preflight_refusal": true,
+      "external_commands": 0,
+      "replacement_resources_unchanged": true
+    },
+    {
+      "case": "only_mutable_counter_values_change",
+      "pass": true,
+      "owned_rollback_completed": true
+    },
+    {
+      "case": "semantic_bytes_field_not_stripped",
+      "pass": true
+    },
+    {
+      "case": "test_retired_record_cannot_remove_actual_new_activation",
+      "pass": true
+    },
+    {
+      "case": "test_terminal_write_failure_blocks_replacement_then_same_record_recovers",
+      "pass": true
+    },
+    {
+      "case": "test_unit_created_before_ledger_save_is_not_silently_adopted",
+      "pass": true
+    }
+  ],
+  "source_review": [
+    "Persistent no-follow private lock serializes all cooperating mutators; read-only dry run does not create lease.",
+    "Active random epoch and record name required at every recorded mutator; old retired/unanchored record cannot borrow replacement authority.",
+    "Full normalized owned rule, unit inode+hash and persistence bytes preflight before service stop; unrecorded unit refuses without adoption.",
+    "Rollback-in-progress retains lease; terminal rolled_back persisted before lease release. Terminal-write uncertainty conservatively blocks replacement/manual review.",
+    "No automatic adoption or mutation of historical live operator record; original immutable release/runtime and private/public split unchanged."
+  ],
+  "limits": [
+    "Actual owned temporary files and author modeled root/nft/systemctl commands only; zero real privileged services/SSH/firewall changes.",
+    "Six focused controls, no full25/28-suite repeat or production redeployment.",
+    "Not an atomic transaction across OS resources; trusted root/cooperating lock and durable filesystem assumptions retained; uncertain recovery may require manual operator review."
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T21:20:17.188382+00:00",
+  "kind": "api_operator_active_invocation_and_terminal_rollback_correction",
+  "source_base": "0396178cc691272c18099650131d13227cadb410",
+  "source_sha256": {
+    "deploy/ai-tools/activate.py": "03ef82846753f990847f67db048ab2fcd931e544dd6f769000081639718f6e65",
+    "tests/test_ai_tools_activation.py": "b200383952d7031372913ff52d4696d5ad5f2a94a89d14725b8027c8181d63f5",
+    "docs/api-rollback-ownership-plan.md": "5a2d1978a9d3bb0e1634e479719b3d95436ca7d83a6fb791f054ffa8dc69db46"
+  },
+  "historical_original": {
+    "path": "runs/2026-11-21-api-stale-rollback-original.json",
+    "sha256": "3f9730e623c9acf02c8a0a3097219518a8f34f2a43b862a7492323b6f5a3ecfa",
+    "actual_stale_rollback_deleted_replacement": true
+  },
+  "historical_rule_countercase": {
+    "path": "runs/2026-11-21-api-rollback-rule-definition-original.json",
+    "sha256": "a949bdc05952ddcd89644f8f095c21cd5c2f1d236273d97e970b1b5f8edc9a20"
+  },
+  "execution_accounting": {
+    "first_affected_operator_module": {
+      "groups": 25,
+      "pass": true,
+      "runtime_sha256": "51b723c8a6fd88c151338510140e4bedb3ba5f6cded2d622bfa26ad8e9606abd",
+      "test_sha256": "12a3aba8a5d4e86193b6ced686e9803adfdb72156fffc5154026fd652a83f062",
+      "log_sha256": "989f6782857418e4b39bcb0622d37d66dc2bc932522ea062437ced14823ca9c7",
+      "status": "historical candidate before unrecorded-unit and full-rule-definition guards"
+    },
+    "current_affected_controls": {
+      "groups": 12,
+      "pass": true,
+      "elapsed_seconds": 0.106,
+      "log_sha256": "53ad12c5fae8e2434c28c87506f183372adabcb730ac8929cd0cb40c58300fa2",
+      "cases": [
+        "actual applyA/rollbackA/applyB/staleA refusal with replacement bytes preserved and zero service actions",
+        "forged old terminal phase cannot borrow current active epoch",
+        "legacy unanchored state refused before resource mutation",
+        "unit content/inode, unknown-tag, wrong-handle, persistence drift preflight before stop",
+        "same-handle/tag altered rule expression refused before stop",
+        "counter-only changes accepted; non-counter semantic bytes field retained",
+        "failed first rollback state write retains untouched units and active lease",
+        "failed terminal write retains lease, blocks replacement, same invocation can recover",
+        "partial unit deletion retry only under same active lease",
+        "after-terminal-write or lease-cleanup uncertainty remains retired/blocks replacement",
+        "unrecorded unit from pre-ledger crash is not adopted or silently retained as successful rollback",
+        "owned flock contention and no lock/lease creation on read-only dry run",
+        "failed unit installation rollback removes only its actually recorded first unit"
+      ]
+    }
+  },
+  "mechanism": {
+    "active_record_name_and_random_epoch": true,
+    "mutating_entrypoints_serialized": true,
+    "terminal_state_durable_before_lease_release": true,
+    "canonical_unit_hash_and_inode_binding": true,
+    "recorded_rule_definition_excluding_only_mutable_counters": true,
+    "full_resource_preflight_before_stop": true,
+    "legacy_auto_adoption": false
+  },
+  "limits": [
+    "Actual owned temporary files and operator functions; root ownership/service/nft observations modeled, never external privileged commands.",
+    "No remote operator update, live API/runtime/unit/firewall/DNS/DB/backup mutation or additional original closure.",
+    "No transaction-atomic promise across files, systemd and nft. Uncertain terminal/lease writes or unrecorded resources require manual operator review.",
+    "Existing live historical unanchored record is refused by this new source; it is not upgraded/adopted. Deployed879 operator remains unchanged.",
+    "Current whole28-test module has not been rerun;12 affected current groups and preserved25 earlier source-bound groups are reported separately. Distinct peer correction review pending."
+  ]
+}

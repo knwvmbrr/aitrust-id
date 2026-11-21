@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-212017-retire-api-rollback-authority-e593c610",
+  "recorded_at": "2026-11-21T21:20:17.233602+00:00",
+  "author": "Codex /root/web_camo API operator engineer",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0396178cc691272c18099650131d13227cadb410",
+  "changed": "Bound API management to one serialized active invocation epoch and unit inode identities, durably retired rollback records, and preflighted exact recorded firewall rule and persistence before stopping services.",
+  "proves": "Actual owned-filesystem original counterexample deleted replacement units; current twelve affected controls preserve replacements, reject stale/legacy authority and drift before mutations, retain lease on failed state writes, and exercise bounded same-record recovery. Earlier twenty-five guards remain historical to their exact candidate.",
+  "limits": "No remote or privileged service/firewall changes. Existing deployed879 and legacy record are not adopted or updated; uncertain/incomplete state requires manual operator review. No original requirement closure or runtime/route change; distinct corrected peer review pending.",
+  "scope_ids": [
+    "T-PS"
+  ],
+  "files": {
+    "deploy/ai-tools/activate.py": "03ef82846753f990847f67db048ab2fcd931e544dd6f769000081639718f6e65",
+    "tests/test_ai_tools_activation.py": "b200383952d7031372913ff52d4696d5ad5f2a94a89d14725b8027c8181d63f5",
+    "docs/api-rollback-ownership-plan.md": "5a2d1978a9d3bb0e1634e479719b3d95436ca7d83a6fb791f054ffa8dc69db46",
+    "runs/2026-11-21-api-stale-rollback-original.json": "3f9730e623c9acf02c8a0a3097219518a8f34f2a43b862a7492323b6f5a3ecfa",
+    "runs/2026-11-21-api-rollback-rule-definition-original.json": "a949bdc05952ddcd89644f8f095c21cd5c2f1d236273d97e970b1b5f8edc9a20",
+    "runs/2026-11-21-api-rollback-ownership-corrected.json": "3712415849bb1935eacd3fda3cf8344c850f9b231cb1f7745c0a3090f9abce30"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-api-stale-rollback-original.json",
+      "sha256": "3f9730e623c9acf02c8a0a3097219518a8f34f2a43b862a7492323b6f5a3ecfa"
+    },
+    {
+      "path": "runs/2026-11-21-api-rollback-rule-definition-original.json",
+      "sha256": "a949bdc05952ddcd89644f8f095c21cd5c2f1d236273d97e970b1b5f8edc9a20"
+    },
+    {
+      "path": "runs/2026-11-21-api-rollback-ownership-corrected.json",
+      "sha256": "3712415849bb1935eacd3fda3cf8344c850f9b231cb1f7745c0a3090f9abce30"
+    }
+  ],
+  "checks": []
+}
