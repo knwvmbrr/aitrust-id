@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-105653-mt-input-repair-runtime-proof-c58318fe
+
+Recorded 2026-11-21T10:56:53.110936+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Finish the actual MT full-input retention repair and connect its native-paste regression to the existing normal MT production-route verifier.
+- **Evidence.** Normal build and one focused no-worker input group pass. Actual Chromium/WebKit each retain/refuse six oversized selection/shape cases, compare three canonical records plus the valid8000-emoji boundary, verify privacy/lifecycle/mobile layout and actual PS/HP recovery after MT failure. Before clipping remains immutable. [Change record](./runs/changes/2026-11-21-105653-mt-input-repair-runtime-proof-c58318fe.json).
+- **Not claimed.** No canonical/client/worker/payload meaning change, MT tag, independent accuracy, physical/human acceptance or original closure. Parent must execute the complete hooked normal verifier and refresh protected source bindings/publication; no unchanged broad suite was repeated here.
+
+
+### 2026-11-21-105310-mt-input-production-controls-a7eddfef
+
+Recorded 2026-11-21T10:53:10.751777+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Bind targeted MT input checks to the actual modal, native input insertion and independent PS/HP recovery after a real MT payload refusal.
+- **Evidence.** The reusable helper and runner pass syntax. Existing MT test adds explicit oversized emoji/ASCII no-worker controls for all three selections. [Change record](./runs/changes/2026-11-21-105310-mt-input-production-controls-a7eddfef.json).
+- **Not claimed.** Corrected actual browser execution and normal build remain pending; no whole method cohort rerun or tag acceptance claimed.
+
+
+### 2026-11-21-105241-mt-full-input-retention-adafcb75
+
+Recorded 2026-11-21T10:52:41.177447+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Repair MT native-input clipping by retaining the complete passage and using the unchanged pre-worker codepoint/byte refusal limits.
+- **Evidence.** Actual Chromium native insertion reproduced8001 emoji clipped to8000 and accepted as a different full canonical record before the repair. Product change removes only the HTML length clip and clarifies intact-input refusal; canonical/client/worker methods stay unchanged. [Change record](./runs/changes/2026-11-21-105241-mt-full-input-retention-adafcb75.json).
+- **Not claimed.** Corrected build and actual Chromium/WebKit affected controls remain pending. This repairs existing input integrity, not an MT verdict, independent validation or original requirement closure.
+
+
 ### 2026-11-21-110732-independent-public-software-closeout-887d3bf9
 
 Recorded 2026-11-21T11:07:32.991981+00:00 · Contributor: Codex /root; distinct workers and reviewers /root/seo /root/web_camo /root/share_debugger · change

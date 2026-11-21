@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-105310-mt-input-production-controls-a7eddfef",
+  "recorded_at": "2026-11-21T10:53:10.751777+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3941603265c763de07d9f7d91e465e0832db39d1",
+  "changed": "Bind targeted MT input checks to the actual modal, native input insertion and independent PS/HP recovery after a real MT payload refusal.",
+  "proves": "The reusable helper and runner pass syntax. Existing MT test adds explicit oversized emoji/ASCII no-worker controls for all three selections.",
+  "limits": "Corrected actual browser execution and normal build remain pending; no whole method cohort rerun or tag acceptance claimed.",
+  "scope_ids": [
+    "T-MT",
+    "F-142"
+  ],
+  "files": {
+    "scripts/mt-input-site-controls.cjs": "32a9ac118651d0379b70bfec0240e4fbb4bb8ae5cb7fe7cb3a2786bef01f5dd6",
+    "scripts/verify-mt-input.cjs": "62705d3d0d42efd625b107c5469e00d1afd82fa87dea0fc016cec38042588e39",
+    "tests/mt-device-client.mjs": "86767ebc3b1050c498ac1b0424228fca73e73c51dd4b0fd4f5f6909f0d97336d"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/mt-input-site-controls.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T10:53:10.852081+00:00"
+    }
+  ]
+}

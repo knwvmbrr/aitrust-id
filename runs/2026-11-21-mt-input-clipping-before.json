@@ -1,0 +1,118 @@
+{
+  "profile": "mt-native-full-input-retention/v1",
+  "captured_at": "2026-11-21T10:52:11.596Z",
+  "pass": true,
+  "mode": "original_defect_reproduction",
+  "before": {
+    "source": {
+      "site/src/MTExplorer.jsx": "5ca26cbac4e55cfe870aa5d1190f530d8e8fc4ea1934f47cb9af41420bd0e54e",
+      "site/src/main.jsx": "a52e5909ecfe1ce46ed7efffb7c6a317c0ce3ceba994a77a4bdb578356fc8630",
+      "site/src/mt-device-client.js": "c4ae3168af3d705e3707ef6ba143a35fc042a047c142dd6e6bbc05c6c3bb8c2e",
+      "site/src/mt-device-worker.js": "99cd033c5da6468c34de8c3c27dab663cd48dbad6a97c40577418b29e7b75197",
+      "site/src/mt-device-result.js": "24bfe35426849f6f85a3682eec732cb9a4ea73d54d749a42017d7b485ac80cc8",
+      "site/src/mt-device-manifest.json": "171bc67cf7d6761bc7788eab238051f73402a1b72f35b62fcc1d128a1cd7abda",
+      "site/src/mt-mobile-device-result.js": "c8190bbf680526a00a6baed4a09f43f1e6878589526184e5d70abe99cfaf9098",
+      "site/src/mt-mobile-device-manifest.json": "14b1100762d2e74337d4a40acbbe1e48a67ca0a503ec8abffe8aad9f76208781",
+      "tools/mt_device.py": "68f7ceaf6e2d87e0f5babf58534954d3c28a2bad85b1728734f31682d219166b",
+      "tools/mt_mobile_device.py": "cda56dce7cdd8322fe7b0d45b27e167c943ead2f7d22705ff322e9e9ebbb28dd",
+      "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+      "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+      "tools/authority_mobile_quotation.py": "f230f44ea5584302e08b1b462839b8b41c0e69d03f7f5e34fc197a0c47b2b4bd",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+    },
+    "verifier": {
+      "scripts/verify-mt-input.cjs": "5132491c741f5c705613abb4250ef160309ea13d61bfdca15b7899fcd0c6ce88",
+      "scripts/mt-input-site-controls.cjs": "dd298d31887e9ed87fb9d9a45f1ebee36195ab883484a8142a969dd194f47642"
+    },
+    "served": {
+      "index.html": "d4561305381f5dbdf52c7faf85f517d3a47cb6a6bd28c2c2f22ce7e0433e665a",
+      "_headers": "a40aac80dbcc3744229866b382828bbf0a381ec2662f313c54f5e328eb8f96ce",
+      "assets/CredentialFlowExplorer-Cz3CqMm1.js": "2d84889da467a08ab41136dadc8ca267ee4ade27f6dc43e277c535aa52052f1e",
+      "assets/HPExplorer-B-kZxn9X.js": "627d0ed36f8ec2c41952fd16f6b774b2e943a0a9451e01f3970f7dc73c3d7e91",
+      "assets/HPUncertaintyExplorer-D-dnnXK0.js": "aae801c66b92f595019a9ecd4a50a80b4507bdf2b9bb078cd24416cd3335524d",
+      "assets/MTExplorer-D98Y1Aev.js": "b3288d3a07cb6eacff960b825c571e0bc2e8315bbf74d2d578ccd4d50831bd80",
+      "assets/NFExplorer-0hzC0-a_.js": "cd17a6a70c080d3b51743c4bad77a85565d2ece1ce7456d656df83687a754983",
+      "assets/credential-device-worker-IB4hBigb.js": "bab56f40502b0223681d34756715e628915102dd104515beb0a79b70a3bedb8d",
+      "assets/device-worker-CYlrzLLK.js": "4ccf9842437c5fb613d04a6e3ab268fbf369f84a2a767b62416aafb9baf32269",
+      "assets/hp-device-worker-Ckw2-Whn.js": "04f97ef2dae6e5afb5573bd7e0465b1d72886fb656e8dbcd02d0a9f28bef2a1d",
+      "assets/hp-uncertainty-worker-RW14Xkr0.js": "4ff06f16be4582ce3ab909008d09a586638a46f0942878f91daf39f64d82c12b",
+      "assets/index-BM2bMv0o.js": "388970556165aacc67a293fbd68e5ec02f1da82e5db7143dca71a60994aa9428",
+      "assets/index-DMEWAvPu.css": "f1741d353c7142611236dacd1e56c09e5d2b85faa6a5cd08c39cba51127cefba",
+      "assets/mt-device-worker-BFy14zjg.js": "d698f7329c667d52ae217ff49cbed7ead8ae427765a552e5a624e65e6f77cdcc",
+      "assets/mt-mobile-device-result-DTc7FO4g.js": "f36b1e482a325f8a12e346bbe520fcdc5a627bedf7418a79be1fbed66f4ff47c",
+      "assets/nf-cosine-result-OT35tzLJ.js": "d31af6f5e715be7595fd01374c12e43ecf42fd0aa745c3cc7cd34f8ba520ea15",
+      "assets/nf-device-worker-C0Au7N2H.js": "e9b6f123170823651c0fd72453940666f57bf48bccdc1373af3aa5eeb2de72ca",
+      "device/runtime-314.0.7/pyodide.mjs": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+      "device/runtime-314.0.7/pyodide.asm.mjs": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+      "device/runtime-314.0.7/pyodide.asm.wasm": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+      "device/runtime-314.0.7/python_stdlib.zip": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+      "device/runtime-314.0.7/pyodide-lock.json": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010"
+    }
+  },
+  "engines": [
+    {
+      "engine": "Chromium",
+      "pass": true,
+      "mode": "original_defect_reproduced",
+      "attempted_codepoints": 8001,
+      "retained_codepoints": 8000,
+      "accepted_shortened_result": true,
+      "worker_count": 1,
+      "method_unchanged": true,
+      "product_acceptance_claimed": false
+    }
+  ],
+  "full_canonical_cohort_repeated": false,
+  "production_publication_claimed": false,
+  "after": {
+    "source": {
+      "site/src/MTExplorer.jsx": "5ca26cbac4e55cfe870aa5d1190f530d8e8fc4ea1934f47cb9af41420bd0e54e",
+      "site/src/main.jsx": "a52e5909ecfe1ce46ed7efffb7c6a317c0ce3ceba994a77a4bdb578356fc8630",
+      "site/src/mt-device-client.js": "c4ae3168af3d705e3707ef6ba143a35fc042a047c142dd6e6bbc05c6c3bb8c2e",
+      "site/src/mt-device-worker.js": "99cd033c5da6468c34de8c3c27dab663cd48dbad6a97c40577418b29e7b75197",
+      "site/src/mt-device-result.js": "24bfe35426849f6f85a3682eec732cb9a4ea73d54d749a42017d7b485ac80cc8",
+      "site/src/mt-device-manifest.json": "171bc67cf7d6761bc7788eab238051f73402a1b72f35b62fcc1d128a1cd7abda",
+      "site/src/mt-mobile-device-result.js": "c8190bbf680526a00a6baed4a09f43f1e6878589526184e5d70abe99cfaf9098",
+      "site/src/mt-mobile-device-manifest.json": "14b1100762d2e74337d4a40acbbe1e48a67ca0a503ec8abffe8aad9f76208781",
+      "tools/mt_device.py": "68f7ceaf6e2d87e0f5babf58534954d3c28a2bad85b1728734f31682d219166b",
+      "tools/mt_mobile_device.py": "cda56dce7cdd8322fe7b0d45b27e167c943ead2f7d22705ff322e9e9ebbb28dd",
+      "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+      "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+      "tools/authority_mobile_quotation.py": "f230f44ea5584302e08b1b462839b8b41c0e69d03f7f5e34fc197a0c47b2b4bd",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+    },
+    "verifier": {
+      "scripts/verify-mt-input.cjs": "5132491c741f5c705613abb4250ef160309ea13d61bfdca15b7899fcd0c6ce88",
+      "scripts/mt-input-site-controls.cjs": "dd298d31887e9ed87fb9d9a45f1ebee36195ab883484a8142a969dd194f47642"
+    },
+    "served": {
+      "index.html": "d4561305381f5dbdf52c7faf85f517d3a47cb6a6bd28c2c2f22ce7e0433e665a",
+      "_headers": "a40aac80dbcc3744229866b382828bbf0a381ec2662f313c54f5e328eb8f96ce",
+      "assets/CredentialFlowExplorer-Cz3CqMm1.js": "2d84889da467a08ab41136dadc8ca267ee4ade27f6dc43e277c535aa52052f1e",
+      "assets/HPExplorer-B-kZxn9X.js": "627d0ed36f8ec2c41952fd16f6b774b2e943a0a9451e01f3970f7dc73c3d7e91",
+      "assets/HPUncertaintyExplorer-D-dnnXK0.js": "aae801c66b92f595019a9ecd4a50a80b4507bdf2b9bb078cd24416cd3335524d",
+      "assets/MTExplorer-D98Y1Aev.js": "b3288d3a07cb6eacff960b825c571e0bc2e8315bbf74d2d578ccd4d50831bd80",
+      "assets/NFExplorer-0hzC0-a_.js": "cd17a6a70c080d3b51743c4bad77a85565d2ece1ce7456d656df83687a754983",
+      "assets/credential-device-worker-IB4hBigb.js": "bab56f40502b0223681d34756715e628915102dd104515beb0a79b70a3bedb8d",
+      "assets/device-worker-CYlrzLLK.js": "4ccf9842437c5fb613d04a6e3ab268fbf369f84a2a767b62416aafb9baf32269",
+      "assets/hp-device-worker-Ckw2-Whn.js": "04f97ef2dae6e5afb5573bd7e0465b1d72886fb656e8dbcd02d0a9f28bef2a1d",
+      "assets/hp-uncertainty-worker-RW14Xkr0.js": "4ff06f16be4582ce3ab909008d09a586638a46f0942878f91daf39f64d82c12b",
+      "assets/index-BM2bMv0o.js": "388970556165aacc67a293fbd68e5ec02f1da82e5db7143dca71a60994aa9428",
+      "assets/index-DMEWAvPu.css": "f1741d353c7142611236dacd1e56c09e5d2b85faa6a5cd08c39cba51127cefba",
+      "assets/mt-device-worker-BFy14zjg.js": "d698f7329c667d52ae217ff49cbed7ead8ae427765a552e5a624e65e6f77cdcc",
+      "assets/mt-mobile-device-result-DTc7FO4g.js": "f36b1e482a325f8a12e346bbe520fcdc5a627bedf7418a79be1fbed66f4ff47c",
+      "assets/nf-cosine-result-OT35tzLJ.js": "d31af6f5e715be7595fd01374c12e43ecf42fd0aa745c3cc7cd34f8ba520ea15",
+      "assets/nf-device-worker-C0Au7N2H.js": "e9b6f123170823651c0fd72453940666f57bf48bccdc1373af3aa5eeb2de72ca",
+      "device/runtime-314.0.7/pyodide.mjs": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+      "device/runtime-314.0.7/pyodide.asm.mjs": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+      "device/runtime-314.0.7/pyodide.asm.wasm": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+      "device/runtime-314.0.7/python_stdlib.zip": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+      "device/runtime-314.0.7/pyodide-lock.json": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010"
+    }
+  },
+  "source_and_served_stable": true
+}
