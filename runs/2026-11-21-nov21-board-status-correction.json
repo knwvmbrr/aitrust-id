@@ -1,0 +1,13 @@
+{
+  "profile": "nov21-delivery-board-status-correction/v1",
+  "captured_at": "2026-11-21T06:21:03.696394+00:00",
+  "pass": false,
+  "failed_evidence": "runs/2026-11-21-nov21-final-protocol.json",
+  "failure": "Task in_review status was incorrectly used for a logical tag bot; its accepted reviewed status is separate.",
+  "corrected_record": "T-MT",
+  "corrected_bot_status": "reviewed",
+  "software_task_status": "in_review",
+  "product_source_changed": false,
+  "acceptance_criteria_changed": false,
+  "original_requirement_closed": false
+}

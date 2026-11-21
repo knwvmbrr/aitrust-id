@@ -131,7 +131,36 @@ def build(root=ROOT):
         capture.check();publish(capture,outputs);return manifest
 
 
+MOBILE_SOURCE_FILES=('tools/mt_mobile_device.py','tools/authority_mobile_quotation.py',
+ 'scripts/authority-mobile-quotation.py','tools/authority_quotation.py','scripts/authority-quotation.py',
+ 'tools/language_observations.py','protocol/normalization.py','protocol/unicode15-data.json',
+ 'protocol/corpus.py','tools/blind_review_io.py')
+MOBILE_ALL_FILES=(*MOBILE_SOURCE_FILES,*LICENSE_FILES,*NORMALIZER_FILES)
+
+
+def build_mobile(root=ROOT):
+    # Independent optional payload: the legacy source and manifest stay identical.
+    with Capture(root) as capture:
+        files={p:capture.read(p) for p in MOBILE_ALL_FILES};capture.check()
+        expected=('// Generated; run scripts/generate-normalization.py. Unicode data license retained.\nconst TABLES = '+files['protocol/unicode15-data.json'].decode().strip()+';\n'+files['protocol/normalization-core.js'].decode()+'\nexport { normalizeNFC, NORMALIZATION_ID };\n').encode()
+        need(files['protocol/normalization.mjs']==expected)
+        sources={p:hashlib.sha256(raw).hexdigest() for p,raw in files.items()}
+        value={'format':'mt-mobile-source-bundle/v1','files':{p:raw.decode('utf-8','strict') for p,raw in files.items()}}
+        raw=(json.dumps(value,ensure_ascii=True,sort_keys=True,separators=(',',':'))+'\n').encode();need(len(raw)<=1000000)
+        digest=hashlib.sha256(raw).hexdigest();path='/mt-mobile-device/method-'+digest+'.json'
+        manifest={'format':'mt-mobile-source-manifest/v1','runtime':'314.0.7','runtime_path':'/device/runtime-314.0.7/',
+          'path':path,'bundle_sha256':digest,'bundle_bytes':len(raw),'sources':sources,
+          'method':'mobile-double-quote-authority-observations/1.0.0','normalization_id':'NFC-Unicode-15.0.0/v1',
+          'max_codepoints':8000,'max_bytes':32000,'max_record_bytes':100000}
+        notices=b'AI Trust ID optional mobile double-quote preview - original source notices\n\n'
+        for name in LICENSE_FILES:notices+=('----- '+name+' -----\n').encode()+files[name]+b'\n'
+        outputs=[('site/public'+path,raw),('site/public/mt-mobile-device/notices.txt',notices),
+          ('site/src/mt-mobile-device-manifest.json',(json.dumps(manifest,indent=2)+'\n').encode())]
+        capture.check();publish(capture,outputs);return manifest
+
+
 if __name__=='__main__':
-    try:print(json.dumps(build(),sort_keys=True))
+    try:
+        legacy=build();build_mobile();print(json.dumps(legacy,sort_keys=True))
     except (ValueError,OSError,UnicodeError):
         print('MT build unavailable; source capture was not approved.',file=sys.stderr);raise SystemExit(2)

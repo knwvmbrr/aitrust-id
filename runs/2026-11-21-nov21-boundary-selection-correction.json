@@ -1,0 +1,21 @@
+{
+  "profile": "boundary-receipt-selection-correction/v1",
+  "captured_at": "2026-11-21T06:31:23.034102+00:00",
+  "pass": false,
+  "cause": "Selected browser evidence requires exactly extension and website; the integration writer incorrectly inserted all five capability names.",
+  "failed_manifest_sha256": "f6d59c054b5ea770dff18b1a6e4b83cd531909a3361108beb493ee3a3016ad61",
+  "wrong_keys": [
+    "PII_REDACTED",
+    "PS",
+    "extension",
+    "protocol",
+    "website"
+  ],
+  "correct_keys": [
+    "extension",
+    "website"
+  ],
+  "product_code_changed": false,
+  "capability_receipts_invalidated": false,
+  "original_requirement_closed": false
+}

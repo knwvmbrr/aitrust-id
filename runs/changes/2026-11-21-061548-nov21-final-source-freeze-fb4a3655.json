@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-061548-nov21-final-source-freeze-fb4a3655",
+  "recorded_at": "2026-11-21T06:15:48.236233+00:00",
+  "author": "/root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d50c7011142bf1c135c3e755b9ff638a91e6ccd6",
+  "changed": "Bound the final mobile-quotation and website-notice source graph after normal build preparation.",
+  "proves": "The normal build completed under the existing verification environment, created the actual MT guide and carried notice artifacts, and regenerated unchanged-denominator202-record scope data. The boundary inventory now covers the added sources and checks.",
+  "limits": "The current-source52-command website pass and protected/public delivery are still pending; no original requirement or tag release is completed.",
+  "scope_ids": [
+    "T-MT",
+    "F-019c",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "41aba66893f5dbdfd1f6722cd9c6ae8fdfef1f6fe4084e8539becfd64f0c25d3",
+    "docs/scope-progress.json": "8540adc440826b23ff8ce0110edf293cc4523ace78d5ab9863695968f96139de",
+    "docs/session-delivery.json": "3d3be788e00f7bb01dcd1412fb447f41ee3c046cdf26cb250a00525f0ed1568c",
+    "eval/revalidation.json": "5b8e68fe785a49949077a6fa04385ba6ba2528d80562b70dcb576622a2ffed7e",
+    "eval/route-boundaries.json": "d074eff06a3563c8ed93bc8dc0a4faad8f8236fd8f5523d0486977894a3accd3",
+    "runs/2026-11-21-mt-mobile-pm-review.json": "396a11b15e7608fb6d1f68f176e69c66b261a8629f4048be52042283ba3b66cc",
+    "runs/2026-11-21-nov21-normal-prime.json": "50facd9cfc5bb15b0b139fe567c96dc3285d999f213853c7829abcafb1e70ff7",
+    "runs/2026-11-21-nov21-prime-prerequisite.json": "9798617e2bcad53ffb0f2f874d710837c6c58c38d6851bbf167535c2a9842f34",
+    "scripts/verify-route-boundaries.py": "bdad0947cf142f3918f8aeb8260092b99d9ccfa2ed59b7c7c2d06e02951dd166",
+    "site/public/reference/public-scope.json": "42fda53e3a9a22471adcb7e07d8981369c1addf1924c7b49279680155cc72c44",
+    "site/scripts/prepare.mjs": "3df34b9d67759aac4c1340b25aecd7ab32c37ebf85af59172352d90572959ef0",
+    "site/src/public-scope.json": "42fda53e3a9a22471adcb7e07d8981369c1addf1924c7b49279680155cc72c44",
+    "site/src/scope-manifest.json": "cf3f98c00adde68399aefef177c2147bcb693e179de62c5dfe183e1394e7a535",
+    "site/src/workflows/About.jsx": "f6abbe88a9b292ed3e8df13dba8d253194e220e3470ebbc279cd2e6a1ed57ebd",
+    "state.json": "dd07d06dd36f050a745e4c2ec23dc59823dcd32ded2d3c96b855e71c037180a5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nov21-normal-prime.json",
+      "sha256": "50facd9cfc5bb15b0b139fe567c96dc3285d999f213853c7829abcafb1e70ff7"
+    }
+  ],
+  "checks": []
+}

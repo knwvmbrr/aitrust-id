@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-053913-mt-mobile-quote-candidate-implementation-9a4b53bb",
+  "recorded_at": "2026-11-21T05:39:13.179120+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+  "changed": "Implement a separately selected straight/curly double-quote authority candidate in the existing MT client/worker/UI, with an optional hash-bound source cohort and a versioned canonical method.",
+  "proves": "74 focused Python controls and19 Node client controls pass; ordinary phone curly quotation is supported, strict unsupported grammar refuses, raw/frozen-NFC/source/closed evidence bindings hold, and legacy canonical/manifest bytes remain unchanged. Existing verification entrypoints include the new controls.",
+  "limits": "Prototype implementation pending actual Chromium/WebKit execution, distinct final review and PM integration/publication. Shape/span/source validation trusts the canonical worker; no semantic-completeness, intended ASCII nesting, endorsement, intent, MT release, independent accuracy or original closure claim.",
+  "scope_ids": [
+    "T-MT",
+    "F-019c"
+  ],
+  "files": {
+    "docs/mt-mobile-quotation-plan.md": "b91fe733a18824d206e98eeffdf8b6ff6b222cb16dbbb22b0a3a14c7bc346f0f",
+    "docs/mt-mobile-quotation.md": "f38a749ea931ccdd46a19ee05d1d664f47121780a7161030382d11258ec64273",
+    "runs/2026-11-21-mt-mobile-quotes-before.json": "490850556a1ddd25f520e05152ddd073eace6f49fcc910df191942d796f8258b",
+    "scripts/authority-mobile-quotation.py": "999e5579be946b060b1bd1e71704be5fa1e59476eace80c0a39a82da92802145",
+    "scripts/build-mt-device.py": "3a7302055a99d366d207cda1d637e394a1f317939f270a27656d969744f75838",
+    "scripts/mt-mobile-device-cases.py": "68894477d4507dc00f880b1762b21b12171400137c43150a4fb8504835ecd5f9",
+    "scripts/mt-mobile-site-controls.cjs": "afa9531569cc087646b25aef92d948ea89cde28ffd719d0b19ce7cf911c03b08",
+    "scripts/verify-mt-client.cjs": "e5c4d50fb7d558c88781f77d4972ca2c9e5920cfb21a452ac3c0d73660bf012d",
+    "scripts/verify-mt-device.cjs": "9b002ed68c4b61b028575dc7c2ad7cfb614294fe6d20ad4a9b9a8fb11012c416",
+    "site/public/mt-mobile-device/method-cd6e6e257407e87b22947a29d8e836caebcd75e4658acaba6563d02ec858c292.json": "cd6e6e257407e87b22947a29d8e836caebcd75e4658acaba6563d02ec858c292",
+    "site/public/mt-mobile-device/notices.txt": "30ffbd36aaafa4904681fa4e841633e27773baf3f6b97b37933c30234234f1c8",
+    "site/public/reference/mt-mobile-quotation.md": "f38a749ea931ccdd46a19ee05d1d664f47121780a7161030382d11258ec64273",
+    "site/src/MTExplorer.jsx": "5ca26cbac4e55cfe870aa5d1190f530d8e8fc4ea1934f47cb9af41420bd0e54e",
+    "site/src/mt-device-client.js": "c4ae3168af3d705e3707ef6ba143a35fc042a047c142dd6e6bbc05c6c3bb8c2e",
+    "site/src/mt-device-result.js": "24bfe35426849f6f85a3682eec732cb9a4ea73d54d749a42017d7b485ac80cc8",
+    "site/src/mt-device-worker.js": "99cd033c5da6468c34de8c3c27dab663cd48dbad6a97c40577418b29e7b75197",
+    "site/src/mt-mobile-device-manifest.json": "14b1100762d2e74337d4a40acbbe1e48a67ca0a503ec8abffe8aad9f76208781",
+    "site/src/mt-mobile-device-result.js": "c8190bbf680526a00a6baed4a09f43f1e6878589526184e5d70abe99cfaf9098",
+    "tests/mt-mobile-device-client.mjs": "128ede146f191a132dd6d50822d75736a921c2f5c49086006f34c1c65379a286",
+    "tests/test_mt_mobile_device.py": "f00b8cc8debd63dfc73b1bbdfbd12fb699de472b5bb8295f75395da026e86ffd",
+    "tools/authority_mobile_quotation.py": "f230f44ea5584302e08b1b462839b8b41c0e69d03f7f5e34fc197a0c47b2b4bd",
+    "tools/mt_mobile_device.py": "cda56dce7cdd8322fe7b0d45b27e167c943ead2f7d22705ff322e9e9ebbb28dd"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T05:39:13.282915+00:00"
+    }
+  ]
+}

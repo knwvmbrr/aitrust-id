@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-061211-nov21-prime-interpreter-b1674ae8",
+  "recorded_at": "2026-11-21T06:12:11.868582+00:00",
+  "author": "/root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d50c7011142bf1c135c3e755b9ff638a91e6ccd6",
+  "changed": "Preserved an integration-prime prerequisite refusal and selected the existing pinned verification interpreter.",
+  "proves": "The first build failed importing pydantic under the default interpreter; the configured project virtual environment is used for the next source-bound build.",
+  "limits": "No package was installed, no product bug or successful build is claimed by this diagnostic record, and no original requirement closes.",
+  "scope_ids": [
+    "F-057",
+    "T-MT"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "41aba66893f5dbdfd1f6722cd9c6ae8fdfef1f6fe4084e8539becfd64f0c25d3",
+    "docs/scope-progress.json": "8540adc440826b23ff8ce0110edf293cc4523ace78d5ab9863695968f96139de",
+    "docs/session-delivery.json": "3d3be788e00f7bb01dcd1412fb447f41ee3c046cdf26cb250a00525f0ed1568c",
+    "eval/revalidation.json": "5b8e68fe785a49949077a6fa04385ba6ba2528d80562b70dcb576622a2ffed7e",
+    "runs/2026-11-21-mt-mobile-pm-review.json": "396a11b15e7608fb6d1f68f176e69c66b261a8629f4048be52042283ba3b66cc",
+    "runs/2026-11-21-nov21-prime-prerequisite.json": "9798617e2bcad53ffb0f2f874d710837c6c58c38d6851bbf167535c2a9842f34",
+    "site/scripts/prepare.mjs": "3df34b9d67759aac4c1340b25aecd7ab32c37ebf85af59172352d90572959ef0",
+    "site/src/workflows/About.jsx": "f6abbe88a9b292ed3e8df13dba8d253194e220e3470ebbc279cd2e6a1ed57ebd",
+    "state.json": "dd07d06dd36f050a745e4c2ec23dc59823dcd32ded2d3c96b855e71c037180a5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nov21-prime-prerequisite.json",
+      "sha256": "9798617e2bcad53ffb0f2f874d710837c6c58c38d6851bbf167535c2a9842f34"
+    }
+  ],
+  "checks": []
+}

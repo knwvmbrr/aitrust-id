@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-053854-carry-website-javascript-notices-b6b23d82",
+  "recorded_at": "2026-11-21T05:38:54.034152+00:00",
+  "author": "Codex website distribution engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+  "changed": "Prepare and carry selected website JavaScript notice texts on every normal build, with exact package/archive/notice byte bindings and selected-cohort SPDX metadata.",
+  "proves": "26 focused controls pass. Actual offline replay verifies35 pinned tarballs;34 carry full matched notices and one retains an explicitly separated upstream project supplement with exact-release correspondence unverified. Selected SPDX validates against the existing pinned schema. Prior built artifact lacks the selected bundle.",
+  "limits": "Initial35-complete assumption was corrected after an actual refusal. No complete graph, source-offer or license clearance is claimed. Real normal-build artifact proof is pending; F057 and X02 remain open, global reviewed-release policy still refuses web-checker.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/web_distribution.py": "ccd8dd8e8f6d66532621ca5f35d17c06519167b6c427eb9d129ecf6b3a059988",
+    "scripts/web-distribution.py": "158e588f22b263c5b8ba1f37906d1b8436b55bfa69024f36f24b50f1ca5b162b",
+    "tests/test_web_distribution.py": "e4c54cd7c798ac585841e1d0b9186e1ac1bd020a321bb6bfd35b04efa6a8755e",
+    "site/package.json": "18ae5dcb631a4bde5f341d7e14a366a0f0aed58a9d85c2263b8e7ef084e8ef36",
+    "docs/web-distribution-plan.md": "1b8bb4495e1773b6240a2dce9dfab0f579f7257f6d090188c4aab5a6b9b0feb8",
+    "docs/web-distribution.md": "7f8762f9fa78b3d653697f2ef9cfbbe8fe11f3dc3a845b41be7e252e883fdc11",
+    "sbom/reviews/web-js/react-remove-scroll-bar-2.3.8.json": "3c57078bb1141ad9836c165831193adf40845e091f1becb65f18a721b47a9072",
+    "sbom/reviews/web-js/sources/a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84.txt": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84",
+    "site/public/web-licenses/THIRD-PARTY-NOTICES.txt": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab",
+    "site/public/web-licenses/packages.json": "92836ba6c8921d5cf30fb18b92a4ec621251d68ac0c5ed25cb060c7e1668d8d4",
+    "site/public/web-licenses/web-runtime.spdx.json": "fcba803b7165c49c8651935144ecd9c13ec4b4b96923f59f343cca70d4d59fc3",
+    "runs/2026-11-21-web-js-initial-refusal.json": "2a8942136f1390e89a5ba9da42d51d51bc76fccc28b191b0daa346ae15318942",
+    "runs/2026-11-21-web-js-source-proof.json": "0320f4ab328d44120fc57cf65f97fa3c2ff1cea0c06bc39d64894fd642cca31f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-web-js-source-proof.json",
+      "sha256": "0320f4ab328d44120fc57cf65f97fa3c2ff1cea0c06bc39d64894fd642cca31f"
+    },
+    {
+      "path": "runs/2026-11-21-web-js-initial-refusal.json",
+      "sha256": "2a8942136f1390e89a5ba9da42d51d51bc76fccc28b191b0daa346ae15318942"
+    }
+  ],
+  "checks": []
+}

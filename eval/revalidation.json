@@ -1559,7 +1559,24 @@
         "site/public/reference/credential-flow-device.md",
         "scripts/verify-credential-client.cjs",
         "protocol/normalization.mjs",
-        "protocol/normalization-core.js"
+        "protocol/normalization-core.js",
+        "tools/authority_mobile_quotation.py",
+        "tools/mt_mobile_device.py",
+        "scripts/authority-mobile-quotation.py",
+        "scripts/mt-mobile-device-cases.py",
+        "scripts/mt-mobile-site-controls.cjs",
+        "scripts/verify-mt-mobile-site.cjs",
+        "tests/test_mt_mobile_device.py",
+        "tests/mt-mobile-device-client.mjs",
+        "site/public/mt-mobile-device/*",
+        "site/public/reference/mt-mobile-quotation.md",
+        "tools/web_distribution.py",
+        "scripts/web-distribution.py",
+        "tests/test_web_distribution.py",
+        "sbom/notices/manifest.json",
+        "sbom/notices/*.txt",
+        "sbom/reviews/web-js/**/*",
+        "site/public/web-licenses/*"
       ],
       "commands": [
         [
@@ -1838,6 +1855,23 @@
         [
           "node",
           "scripts/credential-site-controls.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_mt_mobile_device.py",
+          "tests/test_web_distribution.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/web-distribution.py",
+          "check-built"
+        ],
+        [
+          "node",
+          "scripts/verify-mt-mobile-site.cjs"
         ]
       ]
     }

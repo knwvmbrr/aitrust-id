@@ -1,0 +1,885 @@
+{
+  "profile": "website-npm-notice-delivery/v1",
+  "sources_sha256": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+    "sbom/notices/210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751.txt": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+    "sbom/notices/30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9.txt": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+    "sbom/notices/54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8.txt": "54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8",
+    "sbom/notices/9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97.txt": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+    "sbom/notices/acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05.txt": "acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05",
+    "sbom/notices/d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5.txt": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5",
+    "sbom/notices/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+    "sbom/notices/manifest.json": "8a19f0328c542c610fb5028e78313c80e7bf40c2d4e51f281a144883ee95bb58",
+    "sbom/reviews/web-js/react-remove-scroll-bar-2.3.8.json": "3c57078bb1141ad9836c165831193adf40845e091f1becb65f18a721b47a9072",
+    "sbom/reviews/web-js/sources/a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84.txt": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84",
+    "scripts/web-distribution.py": "a866e414fc288b3b4c17bea307c23e8bb302b5aad658f70c190f4f6d5beed5e2",
+    "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+    "site/package.json": "18ae5dcb631a4bde5f341d7e14a366a0f0aed58a9d85c2263b8e7ef084e8ef36",
+    "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+    "tools/web_distribution.py": "56214c9e270c6c9ac05860a74931400fa7135fc43f2afb2c013add2bf6c66215"
+  },
+  "package_count": 35,
+  "selection": "Every non-development site/package-lock.json entry; may include tree-shaken packages.",
+  "packages": [
+    {
+      "package_path": "node_modules/@radix-ui/primitive",
+      "name": "@radix-ui/primitive",
+      "version": "1.1.7",
+      "integrity": "sha512-rqWnm76nYT8HoNNqEjpgJ7Pw/DrBj5iBTrmEPo6HTX5+VJyBNOqTdv4g89G63HuR5g0AaENoAcH7Is5fF2kZ8Q==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/primitive/-/primitive-1.1.7.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "aeb0887b22ceb9445f736d02848b2ae56de9a38e0621e8db2ec5c5ee4baf7930",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            1898,
+            2961
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-collection",
+      "name": "@radix-ui/react-collection",
+      "version": "1.1.16",
+      "integrity": "sha512-yEQrjfI5eBbeYEJXOASpm+gs9eNHY8+UjkZ81GzcuwdLrSMOlEM8jnGoGdeGo92oiBMkuwZUhHTsnsrDiJLcyA==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-collection/-/react-collection-1.1.16.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "0366bf961ff766430312516c12d0a4290bd996b0148db9cc6a0b594e658dcc49",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            3227,
+            4290
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-compose-refs",
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.5",
+      "integrity": "sha512-+48PbAAbq3didjJxa+OaWY2ZwgAKsNiRGyeHKszblZMQ+kcpd9pAaT11cMkGEie0vsOi3QdeTE6d5Fe3Gn61kA==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-compose-refs/-/react-compose-refs-1.1.5.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "a355b15dc60311aaf0d21e3f503a75b7799950f7ff03dcdc3265ec31d6bb4797",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            4560,
+            5623
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-context",
+      "name": "@radix-ui/react-context",
+      "version": "1.2.2",
+      "integrity": "sha512-RHCUGwKHDr0hDGg4X7ma4JG4/+12qxw8rkh5QKdDldlCvtja6nUx1Ef/8HVrJze81lEsgLQlqjzjGNHantgnQA==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-context/-/react-context-1.2.2.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "756bd1183c8e459586b8c03b9ebae5f04b3572436fb3edc370cdec7713cc97b4",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            5878,
+            6941
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-dialog",
+      "name": "@radix-ui/react-dialog",
+      "version": "1.2.0",
+      "integrity": "sha512-l5CX8HdNL+9cc4s7HkNyplumSA3FIx68sg9dttBHKr286fRBwq1MBniDVTeI/tkof92/APntMQvC1YG1Khb0Cg==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-dialog/-/react-dialog-1.2.0.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "535f2e39d1bfd6b8f45942674f6b4827416b5041e49335d3554e494ca73f3e40",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            7193,
+            8256
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-direction",
+      "name": "@radix-ui/react-direction",
+      "version": "1.1.5",
+      "integrity": "sha512-/NlO/rOqQabmg+GGr86vCmbJVhqTv85NfM9g6Gknf/JVygXeZ6e6HM/RW1omerW9HsFtecwNqgEAKV6UqDsvpA==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-direction/-/react-direction-1.1.5.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "a8550d9ec91156a180755f2c2e99e5b92f2bc9e0180dac8a13bab2304b15921d",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            8517,
+            9580
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-dismissable-layer",
+      "name": "@radix-ui/react-dismissable-layer",
+      "version": "1.1.20",
+      "integrity": "sha512-35WHRrycfnj2m4LvPiKMKHGLM3Y2WvUA744CkRdxjs1BGDX1c8PVMfmiSGTUwnHRbqdtIoxveYTXvcJSt7VfgQ==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-dismissable-layer/-/react-dismissable-layer-1.1.20.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "4a5d296a12e9705cdb3decc9e8a509997243d997a784c2f3b5042b5aa727b91b",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            9867,
+            10930
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-focus-guards",
+      "name": "@radix-ui/react-focus-guards",
+      "version": "1.1.6",
+      "integrity": "sha512-RNOJjfZMTyBM6xYmV3IVGXkPjIhcBAuv48POevAXwrGJhkWZ9p1rFoIS1JFooPuT193AZmRsCPhpoVJxx6OPoQ==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-focus-guards/-/react-focus-guards-1.1.6.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "5ab483e86bfce17782977b6b7990b8435991dd320ae0afda09c6f2529ee2d341",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            11200,
+            12263
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-focus-scope",
+      "name": "@radix-ui/react-focus-scope",
+      "version": "1.2.0",
+      "integrity": "sha512-I5S7vsAOozx2lWSBAyuXjWIJ/A8qx4fjbv6115WoaRYQSb1yZDaeNHonUAQzXyE8oD+0whJHbQRl4HIE2gQ0Xw==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-focus-scope/-/react-focus-scope-1.2.0.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "4c1046590a86decc0ec57639ceae2815c98f02fe4f95f976a24509bdd99a1c06",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            12530,
+            13593
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-id",
+      "name": "@radix-ui/react-id",
+      "version": "1.1.4",
+      "integrity": "sha512-TMQp2llA+RYn7JcjnrMnz7wN4pcVttPZnRZo52PLQsoLVKzNlVwUeHmfePgTgRluXFvlD3GD5g5MOVVTJCO0qA==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-id/-/react-id-1.1.4.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "d4a52062e411906b99b152eff6320ae0da6327789a62dccefb0ae58220916570",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            13833,
+            14896
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-portal",
+      "name": "@radix-ui/react-portal",
+      "version": "1.1.18",
+      "integrity": "sha512-ygFIJ+QXNKf72AAq8x3hd22+ws7pYpmc1S0E4kW0Je+qD4qEb3FvxeKVQRGrVDMOkQaYfsB+Qs+KDh81a1gAOw==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-portal/-/react-portal-1.1.18.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "c4beb839d8e0b002cbf7e6fb71be4f865c945347fc2ce828e4da8109a0f69813",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            15150,
+            16213
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-presence",
+      "name": "@radix-ui/react-presence",
+      "version": "1.1.11",
+      "integrity": "sha512-Z7/atlkab36Z8hm+V8zYc79r0W+tiOB1o0tun1By94JyadkekLQmtEAnBSP9XKXBNQsStoStS4+gX10JpS5akA==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-presence/-/react-presence-1.1.11.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "bf46b30f7890f14c8bc791ef5ffe47ca8517939f8c78993fc450bd69a9f0ee61",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            16473,
+            17536
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-primitive",
+      "name": "@radix-ui/react-primitive",
+      "version": "2.1.11",
+      "integrity": "sha512-RzcaSw5aKl0OPhBJ1wbolKSF6nVvN+0o/QLeIVq+09npiPdnCkPggy2k6gI6yetxl4ZyrlBPYFgCB8BQJZwXcQ==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-primitive/-/react-primitive-2.1.11.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "cd0107911bb3f22e6c916c4f0e520230fe942ed47e5992e34f4674701a8d920c",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            17799,
+            18862
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-roving-focus",
+      "name": "@radix-ui/react-roving-focus",
+      "version": "1.1.20",
+      "integrity": "sha512-+ZjbkU21fTSJdn4nq/IFKUdKS+JSZHORBZ8ma1f6YpOMNzRt0xf3sVAWVK/+ktHCajPy4HYDsyHXZIZmOMxzIA==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-roving-focus/-/react-roving-focus-1.1.20.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "bb6a218e2a344af1d72168ee00e8d7f039207263c386c54255e283c28af4f77e",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            19134,
+            20197
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-slot",
+      "name": "@radix-ui/react-slot",
+      "version": "1.4.0",
+      "integrity": "sha512-IuMVHZ+Ah5fkctu3X3qeFrV/ZrBcuWuDTFUUPfS/L5hvoTjzhp/HdWGE14CsQombPdEidsa33HVlYZXi49PZ1Q==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-slot/-/react-slot-1.4.0.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "00bdd8221e5534d8d2d0cbb831a79b1344b69521faef10245d7fe13e98893d7b",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            20443,
+            21506
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-tabs",
+      "name": "@radix-ui/react-tabs",
+      "version": "1.1.22",
+      "integrity": "sha512-GmVH+P3wx1ZPMuH7WajQzygZIbqgnsb5h8z4Ow3sQMuDqgcqISSBNom6MLVNJvfrkuJTtqfXc3ZolHjX+w0CHg==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-tabs/-/react-tabs-1.1.22.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "238efb1dc76379b8d4d80deae2f0d398c239fad97c3567a8e418854530cb2d3f",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            21754,
+            22817
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-use-callback-ref",
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.4",
+      "integrity": "sha512-R6OUY2e2fA6Yn6s+VSx5KBV6Nx8LQEhu+cz7LCej18rQ1HLyg9PSC9jP/ZNx0o6FAIK9c0F1kHylzSxKsdlkrQ==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-callback-ref/-/react-use-callback-ref-1.1.4.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "2b8287f7ca3f54df491a63a9e9a2e7070f289c4979056f1dab96a30188eadb35",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            23099,
+            24162
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-use-controllable-state",
+      "name": "@radix-ui/react-use-controllable-state",
+      "version": "1.2.6",
+      "integrity": "sha512-uEQJGT97ZA/TgP/Hydw47lHu+/vQj6z/0jA+WeTbK1o9Rx45GImjpD0tc3W5ad3D6XTSR6e1yEO0FvGq6WQfVQ==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-controllable-state/-/react-use-controllable-state-1.2.6.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "75c4ccec673739cb505d8791516d4343c0fb5690500c7774c74029276c05528d",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            24462,
+            25525
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-use-effect-event",
+      "name": "@radix-ui/react-use-effect-event",
+      "version": "0.0.5",
+      "integrity": "sha512-7cshFL8HGS/7HEiHH+9kL9HBwp2sa9yX18Knwek6KYWmXwM7pegMgta2AXMQKI+rq3JnfSj9x8wYqFMTdG1Jgg==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-effect-event/-/react-use-effect-event-0.0.5.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "0add7f5ca8c7127902b93cfc2277e3c27d9f33bb9cf9a381741fdde361415eb2",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            25807,
+            26870
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-use-is-hydrated",
+      "name": "@radix-ui/react-use-is-hydrated",
+      "version": "0.1.3",
+      "integrity": "sha512-umO/aJ+82CpOnhDZUTbILCQf7kU/g0iv+oGs/Q8jw7IkhWBzaEP4sA268PhFAJTFetbwp3ICc6ktpI4TqtxcIw==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-is-hydrated/-/react-use-is-hydrated-0.1.3.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "cc309145b7f5ff83c68f0282bc0cb15df7bb32877d46b9f46b0a7120854e677f",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            27149,
+            28212
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/@radix-ui/react-use-layout-effect",
+      "name": "@radix-ui/react-use-layout-effect",
+      "version": "1.1.4",
+      "integrity": "sha512-K20DkRkUwDnxEYMBPcg3Y6voLkEy5p5QQmszZgLngKKiC7dzBR/aEuK3w1qlx2JWDUNH6FluahYdgR3BP+QbYw==",
+      "resolved": "https://registry.npmjs.org/@radix-ui/react-use-layout-effect/-/react-use-layout-effect-1.1.4.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "7bc22fe5fb82a07133c61b640d50a9a3553b0da16ae8e6458c19053206563ed9",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+          "bytes": 1063,
+          "notice": "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt",
+          "bundle_byte_span": [
+            28497,
+            29560
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/aria-hidden",
+      "name": "aria-hidden",
+      "version": "1.2.6",
+      "integrity": "sha512-ik3ZgC9dY/lYVVM++OISsaYDeg1tb0VtP5uL3ouh1koGOaUMDPpbFIei4JkFimWUFPn90sbMNMXQAIVOlnYKJA==",
+      "resolved": "https://registry.npmjs.org/aria-hidden/-/aria-hidden-1.2.6.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "bb3ff0d0a5b0c4a5ab5e579d79e91fbd41cd1700028ddf91ebd3154b3c13749e",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071,
+          "notice": "sbom/notices/30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9.txt",
+          "bundle_byte_span": [
+            29789,
+            30860
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/clsx",
+      "name": "clsx",
+      "version": "2.1.1",
+      "integrity": "sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==",
+      "resolved": "https://registry.npmjs.org/clsx/-/clsx-2.1.1.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "6320104b491ca645120e8f99589ce663ff1fb337ba80066719a011bd95320303",
+      "notices": [
+        {
+          "source_path": "package/license",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+          "bytes": 1104,
+          "notice": "sbom/notices/9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97.txt",
+          "bundle_byte_span": [
+            31068,
+            32172
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/detect-node-es",
+      "name": "detect-node-es",
+      "version": "1.1.0",
+      "integrity": "sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==",
+      "resolved": "https://registry.npmjs.org/detect-node-es/-/detect-node-es-1.1.0.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "bc0bc6ee6c25bfd3db4e44dbaa210011dc5a1937a381bbbd92ad857bf5183678",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8",
+          "bytes": 1068,
+          "notice": "sbom/notices/54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8.txt",
+          "bundle_byte_span": [
+            32410,
+            33478
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/get-nonce",
+      "name": "get-nonce",
+      "version": "1.0.1",
+      "integrity": "sha512-FJhYRoDaiatfEkUK8HKlicmu/3SGFD51q3itKDGoSTysQJBnfOcxU5GxnhE1E6soB76MbT0MBtnKJuXyAx+96Q==",
+      "resolved": "https://registry.npmjs.org/get-nonce/-/get-nonce-1.0.1.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "943112eb62102f2ef56bad6eb50a3fe12bc0b386da0893614d81c735baa05897",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05",
+          "bytes": 1071,
+          "notice": "sbom/notices/acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05.txt",
+          "bundle_byte_span": [
+            33701,
+            34772
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/react",
+      "name": "react",
+      "version": "19.3.0",
+      "integrity": "sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog==",
+      "resolved": "https://registry.npmjs.org/react/-/react-19.3.0.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "5a4024110c49476e1538a70fd65b9e59d038fcc280b78eb933c24e10453afbf9",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088,
+          "notice": "sbom/notices/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt",
+          "bundle_byte_span": [
+            34985,
+            36073
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/react-dom",
+      "name": "react-dom",
+      "version": "19.3.0",
+      "integrity": "sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==",
+      "resolved": "https://registry.npmjs.org/react-dom/-/react-dom-19.3.0.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "dbeffb1e6cdbbbba07f799da4635333d0e20c210a32278dded85441ec4cb6a17",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088,
+          "notice": "sbom/notices/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt",
+          "bundle_byte_span": [
+            36298,
+            37386
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/react-remove-scroll",
+      "name": "react-remove-scroll",
+      "version": "2.7.2",
+      "integrity": "sha512-Iqb9NjCCTt6Hf+vOdNIZGdTiH1QSqr27H/Ek9sv/a97gfueI/5h1s3yRi1nngzMUaOOToin5dI1dXKdXiF+u0Q==",
+      "resolved": "https://registry.npmjs.org/react-remove-scroll/-/react-remove-scroll-2.7.2.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "b9c7cc76fbd5cfb209e03b668228d56e14a76afc922434e5964f2d2f36ccf1cc",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071,
+          "notice": "sbom/notices/30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9.txt",
+          "bundle_byte_span": [
+            37639,
+            38710
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/react-remove-scroll-bar",
+      "name": "react-remove-scroll-bar",
+      "version": "2.3.8",
+      "integrity": "sha512-9r+yi9+mgU33AKcj6IbT9oRCO78WriSj6t/cF8DWBZJ9aOGPOTEDvdUDz1FwKim7QXWwmHqtdHnRJfhAxEG46Q==",
+      "resolved": "https://registry.npmjs.org/react-remove-scroll-bar/-/react-remove-scroll-bar-2.3.8.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "ccc872d7a2dc007cbf9d755f30d56b8d80eabdbe22c44c95a709129bfdc46f01",
+      "notices": [
+        {
+          "source_path": "upstream-project/LICENSE",
+          "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84",
+          "bytes": 1093,
+          "notice": "sbom/reviews/web-js/sources/a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84.txt",
+          "bundle_byte_span": [
+            39315,
+            40408
+          ],
+          "origin": "supplemental_upstream_project_notice"
+        }
+      ],
+      "supplemental_project_notice": true,
+      "exact_release_notice_relationship_complete": false
+    },
+    {
+      "package_path": "node_modules/react-style-singleton",
+      "name": "react-style-singleton",
+      "version": "2.2.3",
+      "integrity": "sha512-b6jSvxvVnyptAiLjbkWLE/lOnR4lfTtDAl+eUC7RZy+QQWc6wRzIV2CE6xBuMmDxc2qIihtDCZD5NPOFl7fRBQ==",
+      "resolved": "https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.3.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "8cd3380ee25e0ac80060dcee138c61433862a992fc21d665da823efbfe43ff0f",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071,
+          "notice": "sbom/notices/30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9.txt",
+          "bundle_byte_span": [
+            40667,
+            41738
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/scheduler",
+      "name": "scheduler",
+      "version": "0.28.0",
+      "integrity": "sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==",
+      "resolved": "https://registry.npmjs.org/scheduler/-/scheduler-0.28.0.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "302995d590e3c0a11eeb40d1d0f299c1df1800135d599d85cdd5faeb614f32d6",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088,
+          "notice": "sbom/notices/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt",
+          "bundle_byte_span": [
+            41963,
+            43051
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/tailwind-merge",
+      "name": "tailwind-merge",
+      "version": "3.5.0",
+      "integrity": "sha512-I8K9wewnVDkL1NTGoqWmVEIlUcB9gFriAEkXkfCjX5ib8ezGxtR3xD7iZIxrfArjEsH7F1CHD4RFUtxefdqV/A==",
+      "resolved": "https://registry.npmjs.org/tailwind-merge/-/tailwind-merge-3.5.0.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "43c2368d28825d0f645bac8a5b34ca446ee92c23b7e86bc2909c8acb9ac4ec2d",
+      "notices": [
+        {
+          "source_path": "package/LICENSE.md",
+          "sha256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5",
+          "bytes": 1070,
+          "notice": "sbom/notices/d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5.txt",
+          "bundle_byte_span": [
+            43292,
+            44362
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/tslib",
+      "name": "tslib",
+      "version": "2.8.1",
+      "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==",
+      "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz",
+      "license_declared": "0BSD",
+      "artifact_sha256": "66f635d5eeabae44807534976913a102cf615b9a045368359c9f79ae6ee2119e",
+      "notices": [
+        {
+          "source_path": "package/LICENSE.txt",
+          "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+          "bytes": 655,
+          "notice": "sbom/notices/210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751.txt",
+          "bundle_byte_span": [
+            44578,
+            45233
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/use-callback-ref",
+      "name": "use-callback-ref",
+      "version": "1.3.3",
+      "integrity": "sha512-jQL3lRnocaFtu3V00JToYz/4QkNWswxijDaCVNZRiRTO3HQDLsdu1ZtmIUvV4yPp+rvWm5j0y0TG/S61cuijTg==",
+      "resolved": "https://registry.npmjs.org/use-callback-ref/-/use-callback-ref-1.3.3.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "f1c0efff7a48011a8ad317c555fd043ef6e427c78b00ca2d438682958d880600",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071,
+          "notice": "sbom/notices/30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9.txt",
+          "bundle_byte_span": [
+            45477,
+            46548
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    },
+    {
+      "package_path": "node_modules/use-sidecar",
+      "name": "use-sidecar",
+      "version": "1.1.3",
+      "integrity": "sha512-Fedw0aZvkhynoPYlA5WXrMCAMm+nSWdZt6lzJQ7Ok8S6Q+VsHmHpRWndVRJ8Be0ZbkfPc5LRYH+5XrzXcEeLRQ==",
+      "resolved": "https://registry.npmjs.org/use-sidecar/-/use-sidecar-1.1.3.tgz",
+      "license_declared": "MIT",
+      "artifact_sha256": "06e3040fe38ac958402bbda2cd640b556786048b6bd3d97900eec1d80702c0f8",
+      "notices": [
+        {
+          "source_path": "package/LICENSE",
+          "sha256": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+          "bytes": 1071,
+          "notice": "sbom/notices/30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9.txt",
+          "bundle_byte_span": [
+            46777,
+            47848
+          ],
+          "origin": "archive_notice"
+        }
+      ],
+      "supplemental_project_notice": false,
+      "exact_release_notice_relationship_complete": true
+    }
+  ],
+  "archive_notice_packages": 34,
+  "supplemental_project_notice_packages": 1,
+  "exact_release_notice_gap_packages": [
+    "react-remove-scroll-bar@2.3.8"
+  ],
+  "notice_bundle_sha256": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab",
+  "notice_bundle_bytes": 47849,
+  "related_files": {
+    "notice_bundle": "THIRD-PARTY-NOTICES.txt",
+    "selected_cohort_spdx": "web-runtime.spdx.json",
+    "project_license": "../reference/code-license.txt"
+  },
+  "claims": {
+    "legal_clearance": false,
+    "complete_bundle_graph": false,
+    "complete_source_offers": false,
+    "release_approved": false
+  }
+}

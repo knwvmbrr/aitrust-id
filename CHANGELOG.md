@@ -1,5 +1,226 @@
 # Changelog
 
+## Unreleased — 2026-11-21
+
+### 2026-11-21-063125-nov21-final-engineering-3f4d2d3b
+
+Recorded 2026-11-21T06:31:25.861395+00:00 · Contributor: /root · change
+
+- **Changed.** Completed current-source checks and corrected the selected-browser receipt contract before protected integration.
+- **Evidence.** All five capability receipts are current; the boundary consumer verifies its exact extension/website pair and1390source identities. Incorrect-key and accounting candidates are preserved. [Change record](./runs/changes/2026-11-21-063125-nov21-final-engineering-3f4d2d3b.json).
+- **Not claimed.** No independent accuracy, physical-phone, tag release or original closure; protected/public delivery remains pending. Historical service cases were not rerun.
+
+
+### 2026-11-21-062741-nov21-corrected-website-fb8369a6
+
+Recorded 2026-11-21T06:27:41.759057+00:00 · Contributor: /root · change
+
+- **Changed.** Captured current-source website execution after the corrected accounting field.
+- **Evidence.** The declared capability checks completed with unchanged source identity. [Change record](./runs/changes/2026-11-21-062741-nov21-corrected-website-fb8369a6.json).
+- **Not claimed.** Engineering execution only; no original or independently validated tag release.
+
+
+### 2026-11-21-062240-nov21-corrected-protocol-3dde3990
+
+Recorded 2026-11-21T06:22:40.729718+00:00 · Contributor: /root · change
+
+- **Changed.** Captured current-source protocol execution after the corrected accounting field.
+- **Evidence.** The declared capability checks completed with unchanged source identity. [Change record](./runs/changes/2026-11-21-062240-nov21-corrected-protocol-3dde3990.json).
+- **Not claimed.** Engineering execution only; no original or independently validated tag release.
+
+
+### 2026-11-21-062104-nov21-board-status-correction-2743095d
+
+Recorded 2026-11-21T06:21:04.512904+00:00 · Contributor: /root · change
+
+- **Changed.** Corrected a tag-bot status value without changing the in-review software task or original acceptance.
+- **Evidence.** The actual delivery-accounting consumer accepts reviewed for logical bots; in_review remains a task status. The failed protocol candidate is preserved and accounting is checked before re-execution. [Change record](./runs/changes/2026-11-21-062104-nov21-board-status-correction-2743095d.json).
+- **Not claimed.** No product behavior, source criteria, accuracy claim or original completion changed. The final current-source checks remain pending.
+
+
+### 2026-11-21-061659-nov21-current-extension-c7ed034d
+
+Recorded 2026-11-21T06:16:59.339495+00:00 · Contributor: /root · change
+
+- **Changed.** Captured current-source extension engineering execution after the final source freeze.
+- **Evidence.** The declared capability commands completed with unchanged source identity. [Change record](./runs/changes/2026-11-21-061659-nov21-current-extension-c7ed034d.json).
+- **Not claimed.** Engineering checks only; no independent accuracy, tag release or original closure.
+
+
+### 2026-11-21-061617-nov21-current-pii-redacted-d8af99f7
+
+Recorded 2026-11-21T06:16:17.092295+00:00 · Contributor: /root · change
+
+- **Changed.** Captured current-source PII_REDACTED engineering execution after the final source freeze.
+- **Evidence.** The declared capability commands completed with unchanged source identity. [Change record](./runs/changes/2026-11-21-061617-nov21-current-pii-redacted-d8af99f7.json).
+- **Not claimed.** Engineering checks only; no independent accuracy, tag release or original closure.
+
+
+### 2026-11-21-061609-nov21-current-ps-ab665bd1
+
+Recorded 2026-11-21T06:16:09.154636+00:00 · Contributor: /root · change
+
+- **Changed.** Captured current-source PS engineering execution after the final source freeze.
+- **Evidence.** The declared capability commands completed with unchanged source identity. [Change record](./runs/changes/2026-11-21-061609-nov21-current-ps-ab665bd1.json).
+- **Not claimed.** Engineering checks only; no independent accuracy, tag release or original closure.
+
+
+### 2026-11-21-061548-nov21-final-source-freeze-fb4a3655
+
+Recorded 2026-11-21T06:15:48.236233+00:00 · Contributor: /root · change
+
+- **Changed.** Bound the final mobile-quotation and website-notice source graph after normal build preparation.
+- **Evidence.** The normal build completed under the existing verification environment, created the actual MT guide and carried notice artifacts, and regenerated unchanged-denominator202-record scope data. The boundary inventory now covers the added sources and checks. [Change record](./runs/changes/2026-11-21-061548-nov21-final-source-freeze-fb4a3655.json).
+- **Not claimed.** The current-source52-command website pass and protected/public delivery are still pending; no original requirement or tag release is completed.
+
+
+### 2026-11-21-061211-nov21-prime-interpreter-b1674ae8
+
+Recorded 2026-11-21T06:12:11.868582+00:00 · Contributor: /root · change
+
+- **Changed.** Preserved an integration-prime prerequisite refusal and selected the existing pinned verification interpreter.
+- **Evidence.** The first build failed importing pydantic under the default interpreter; the configured project virtual environment is used for the next source-bound build. [Change record](./runs/changes/2026-11-21-061211-nov21-prime-interpreter-b1674ae8.json).
+- **Not claimed.** No package was installed, no product bug or successful build is claimed by this diagnostic record, and no original requirement closes.
+
+
+### 2026-11-21-060809-nov21-integrated-source-bbe02ea5
+
+Recorded 2026-11-21T06:08:09.062457+00:00 · Contributor: /root · change
+
+- **Changed.** Integrated the independently selected mobile quotation method, mandatory JavaScript notice preparation and actual-route checks into the normal website pipeline.
+- **Evidence.** Exact worker sources and recorded browser/artifact evidence were independently reviewed. Current source registers52 website checks, retains all prior checks and exposes the carried notice text from About. [Change record](./runs/changes/2026-11-21-060809-nov21-integrated-source-bbe02ea5.json).
+- **Not claimed.** Final current-source checks, protected merge and public delivery remain pending. MT meaning/independent accuracy and complete source-license obligations remain unaccepted; originals132complete/70open.
+
+
+### 2026-11-21-052140-nov21-independent-delivery-wave-bcc4ecbe
+
+Recorded 2026-11-21T05:21:40.284076+00:00 · Contributor: /root · change
+
+- **Changed.** Assigned independent Android first-Share repair, phone quotation grammar and carried JS notice jobs with predeclared software acceptance.
+- **Evidence.** The board names actual workers, isolated jobs and full original limits before implementation; Android remains separate from website publication. [Change record](./runs/changes/2026-11-21-052140-nov21-independent-delivery-wave-bcc4ecbe.json).
+- **Not claimed.** No new closure or percentage change. Originals132complete/70open; target60unmet. This is a dated assignment snapshot, not perpetual workers.
+### 2026-11-21-043819-dialog-measurement-failure-context-5b677ad1
+
+Recorded 2026-11-21T04:38:19.116678+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Add failure-only bounded dialog/route identity context and operation-stage attribution to the existing accessibility verifier, with isolated privacy controls.
+- **Evidence.** Four focused unchanged actual MTdark-to-IV checks pass without reproducing historical timeout. Final source-hashed browser controls suppress private DOM/input/hash/context values, discriminate expected dialog identity and bound closed/missing/hung-page failure observation. [Change record](./runs/changes/2026-11-21-043819-dialog-measurement-failure-context-5b677ad1.json).
+- **Not claimed.** Diagnostic-only; historical timeout cause UNESTABLISHED. Product/router source, successful site operations, waits, predicates and thresholds unchanged. No full-site rerun, workaround, original requirement closure, physical-phone, human or independent accuracy claim.
+### 2026-11-21-060609-web-js-independent-source-review-68e89229
+
+Recorded 2026-11-21T06:06:09.467431+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Record independent read-only review of corrected website notice packaging and its actual carried artifact, preserving the allocation finding and narrow refusal replays.
+- **Evidence.** Reviewed frozen producer238f952/current56214c9; cap1000 stops before notice reads and append remains521bytes, repeated logical notice copies are charged. Actual source-derived built consumer and35 notice spans match;34 archive packages plus1explicit unverified supplement; SPDX NOASSERTION and PS policy independence remain. [Change record](./runs/changes/2026-11-21-060609-web-js-independent-source-review-68e89229.json).
+- **Not claimed.** No producer edits, broad/archive/browser/build reruns, full dependency graph/source offers, exact2.3.8 correspondence, legal clearance, release approval or F057/X02 closure. Prior PS artifact execution remains historical; reviewer freshly checked policy only.
+
+
+### 2026-11-21-054909-mt-mobile-result-formatting-6f4bc998
+
+Recorded 2026-11-21T05:49:09.459844+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Normalize the MT mobile candidate delivery report list formatting for readable handoff.
+- **Evidence.** Delivery report formatting checked; executable sources and all runtime evidence bytes unchanged. [Change record](./runs/changes/2026-11-21-054909-mt-mobile-result-formatting-6f4bc998.json).
+- **Not claimed.** Documentation only; no additional execution, deployment, validation or scope closure.
+
+
+### 2026-11-21-054824-mt-mobile-prototype-delivery-68b57aa5
+
+Recorded 2026-11-21T05:48:24.340053+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Record working source-bound optional mobile quotation candidate, dual-engine actual prototype MT route proof and integration handoff.
+- **Evidence.** Chromium and WebKit each pass30 legacy plus28 candidate whole records in the existing fixture verifier, and three actual-modal canonical records plus privacy/lifecycle/optional-failure recovery controls.74 focused Python and19 Node controls pass; prototype source/served hashes stable; four phone-view screenshots inspected. [Change record](./runs/changes/2026-11-21-054824-mt-mobile-prototype-delivery-68b57aa5.json).
+- **Not claimed.** Prototype/software candidate only; final distinct review, PM protected preparation/integration/build/publication pending. No semantic-completeness, intended ASCII nesting, MT verdict, independent accuracy, physical phone, human acceptance or full original closure. First preparation refusal retained.
+
+
+### 2026-11-21-054527-mt-mobile-fixture-and-route-runner-6bf6f96f
+
+Recorded 2026-11-21T05:45:27.719637+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Record source-stable dual-engine MT fixture parity and add a thin standalone runner around the reusable actual MT modal verifier.
+- **Evidence.** Existing fixture verifier passes Chromium and WebKit with30 legacy plus28 mobile complete canonical records per engine and the retained lifecycle/privacy/fault controls. The new route driver syntax-checks and binds local served assets for forthcoming prototype execution. [Change record](./runs/changes/2026-11-21-054527-mt-mobile-fixture-and-route-runner-6bf6f96f.json).
+- **Not claimed.** Actual prototype-route driver execution and final distinct review remain pending; no final production/preparation/publication, independent accuracy, physical-phone or original requirement closure claim.
+
+
+### 2026-11-21-054200-mt-prototype-preparation-refusal-d3be969e
+
+Recorded 2026-11-21T05:42:00.836022+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Preserve the first prototype build refusal from an absent inherited generated PS manifest; prepare that prerequisite with its unchanged existing builder.
+- **Evidence.** The MT-only fixture builds; the failed actual-site prototype identifies the missing generated import without establishing an MT code defect. [Change record](./runs/changes/2026-11-21-054200-mt-prototype-preparation-refusal-d3be969e.json).
+- **Not claimed.** No PS source or method change, full build/publication claim, tag release or original closure. Actual-route browser proof remains pending.
+
+
+### 2026-11-21-053913-mt-mobile-quote-candidate-implementation-9a4b53bb
+
+Recorded 2026-11-21T05:39:13.179120+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Implement a separately selected straight/curly double-quote authority candidate in the existing MT client/worker/UI, with an optional hash-bound source cohort and a versioned canonical method.
+- **Evidence.** 74 focused Python controls and19 Node client controls pass; ordinary phone curly quotation is supported, strict unsupported grammar refuses, raw/frozen-NFC/source/closed evidence bindings hold, and legacy canonical/manifest bytes remain unchanged. Existing verification entrypoints include the new controls. [Change record](./runs/changes/2026-11-21-053913-mt-mobile-quote-candidate-implementation-9a4b53bb.json).
+- **Not claimed.** Prototype implementation pending actual Chromium/WebKit execution, distinct final review and PM integration/publication. Shape/span/source validation trusts the canonical worker; no semantic-completeness, intended ASCII nesting, endorsement, intent, MT release, independent accuracy or original closure claim.
+### 2026-11-21-060306-verify-bounded-notice-artifact-746b556b
+
+Recorded 2026-11-21T06:03:06.088337+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Verify the current normal-build notice artifact after preallocation budget enforcement.
+- **Evidence.** Actual normal build, exact carried notice comparison and selected SPDX schema pass. Notice text stays byte-identical. The real reviewed-release consumer still refuses; independent PS remains admitted. Peer independently confirms reduced-cap, read-trap and duplicated-occurrence controls. [Change record](./runs/changes/2026-11-21-060306-verify-bounded-notice-artifact-746b556b.json).
+- **Not claimed.** Earlier33 controls and current8 affected controls are separate evidence, not41 current tests. No archive replay or broad browser suite repeated. Exact2.3.8 source/license correspondence and full original F057/X02 remain open.
+
+
+### 2026-11-21-060020-bound-notice-bytes-before-reading-0540f121
+
+Recorded 2026-11-21T06:00:20.476862+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Apply combined source, duplicate-notice, copy and header byte budgets before reading/retaining content and before every bundle extension.
+- **Evidence.** The independent reduced-cap counter is reproduced on original source. Eight affected resource/prepare/rollback checks pass; actual notice bundle bytes remain identical. New index and SPDX retain updated producer source identity. [Change record](./runs/changes/2026-11-21-060020-bound-notice-bytes-before-reading-0540f121.json).
+- **Not claimed.** Earlier33-test and archive evidence remain source-bound history. Current normal-build artifact refresh is pending. No exact RSS guarantee, full source/license clearance or original F057/X02 closure is claimed.
+
+
+### 2026-11-21-055140-clarify-notice-result-guide-c79a42e6
+
+Recorded 2026-11-21T05:51:40.217997+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Format the selected notice result guide as readable Markdown with spaced counts and commands.
+- **Evidence.** Only the result guide presentation changes; the current actual artifact proof and producer source remain unchanged. [Change record](./runs/changes/2026-11-21-055140-clarify-notice-result-guide-c79a42e6.json).
+- **Not claimed.** No new implementation, test rerun, validation, release, scope or completion claim.
+
+
+### 2026-11-21-055059-verify-carried-website-notice-artifact-10514bd7
+
+Recorded 2026-11-21T05:50:59.138114+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Verify the current normal-build website artifact carries its selected JavaScript notice text and source/SPDX index, with narrow exact-byte whitespace preservation.
+- **Evidence.** Actual normal build and source-derived built-file comparison pass on corrected source.33 focused controls,35 cached archive identities, selected SPDX schema, hosting-readable modes and independent PS source verification pass. The actual npm reviewed-release command correctly refuses unresolved global obligations. [Change record](./runs/changes/2026-11-21-055059-verify-carried-website-notice-artifact-10514bd7.json).
+- **Not claimed.** 34 archive notice records are complete; one separately pinned upstream project text does not establish exact2.3.8 release correspondence. FullF057/X02, all-source obligations, protected publication and live-link evidence remain open; no detector accuracy or original requirement closure is claimed.
+
+
+### 2026-11-21-054815-validate-website-notice-root-shape-c2370433
+
+Recorded 2026-11-21T05:48:15.607865+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Require a well-formed root lock dependency mapping and selected direct runtime dependencies before producing website notice assets; tighten API refusal controls.
+- **Evidence.** The PM root-entry counterexample is reproduced in the direct API. Corrected33 focused controls and current35 exact cached archive replay pass; current CLI was already defensively refusing and is not described as leaking after the earlier fix. [Change record](./runs/changes/2026-11-21-054815-validate-website-notice-root-shape-c2370433.json).
+- **Not claimed.** Normal-build refresh follows this source freeze. One exact2.3.8 source/license correspondence gap remains unverified; no full F057 or X02 closure or licensing clearance.
+
+
+### 2026-11-21-054327-refuse-malformed-website-notice-identities-2658cd8f
+
+Recorded 2026-11-21T05:43:27.432563+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Refuse matching malformed dependency identity fields without private traceback output and bind the reused regular-file reader source in the generated notice index.
+- **Evidence.** Both new malformed-value controls fail the original producer;28 current focused controls pass and all35 exact cached archives replay under current source. Earlier successful actual normal-build artifact proof remains source-bound history. [Change record](./runs/changes/2026-11-21-054327-refuse-malformed-website-notice-identities-2658cd8f.json).
+- **Not claimed.** Current-source normal-build refresh is pending. The one exact-release source/license gap and full F057/X02 remain open. No source or policy clearance flags are upgraded.
+
+
+### 2026-11-21-053854-carry-website-javascript-notices-b6b23d82
+
+Recorded 2026-11-21T05:38:54.034152+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Prepare and carry selected website JavaScript notice texts on every normal build, with exact package/archive/notice byte bindings and selected-cohort SPDX metadata.
+- **Evidence.** 26 focused controls pass. Actual offline replay verifies35 pinned tarballs;34 carry full matched notices and one retains an explicitly separated upstream project supplement with exact-release correspondence unverified. Selected SPDX validates against the existing pinned schema. Prior built artifact lacks the selected bundle. [Change record](./runs/changes/2026-11-21-053854-carry-website-javascript-notices-b6b23d82.json).
+- **Not claimed.** Initial35-complete assumption was corrected after an actual refusal. No complete graph, source-offer or license clearance is claimed. Real normal-build artifact proof is pending; F057 and X02 remain open, global reviewed-release policy still refuses web-checker.
+
+
 ## Unreleased — 2026-11-20
 
 ### 2026-11-20-181237-verify-independent-closeout-website-0a70bb42

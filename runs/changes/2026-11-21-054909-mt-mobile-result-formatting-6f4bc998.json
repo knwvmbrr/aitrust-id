@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-054909-mt-mobile-result-formatting-6f4bc998",
+  "recorded_at": "2026-11-21T05:49:09.459844+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+  "changed": "Normalize the MT mobile candidate delivery report list formatting for readable handoff.",
+  "proves": "Delivery report formatting checked; executable sources and all runtime evidence bytes unchanged.",
+  "limits": "Documentation only; no additional execution, deployment, validation or scope closure.",
+  "scope_ids": [
+    "T-MT",
+    "F-019c"
+  ],
+  "files": {
+    "docs/mt-mobile-quotation-result.md": "711fd3e0a8aff5de33b5b4833643a2939f720064c2a9de0f6fdaaef114cfea40"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T05:49:09.524814+00:00"
+    }
+  ]
+}

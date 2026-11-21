@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-060020-bound-notice-bytes-before-reading-0540f121",
+  "recorded_at": "2026-11-21T06:00:20.476862+00:00",
+  "author": "Codex website distribution engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1030763a9cb99551a56e08a46dbac7cfcee768f3",
+  "changed": "Apply combined source, duplicate-notice, copy and header byte budgets before reading/retaining content and before every bundle extension.",
+  "proves": "The independent reduced-cap counter is reproduced on original source. Eight affected resource/prepare/rollback checks pass; actual notice bundle bytes remain identical. New index and SPDX retain updated producer source identity.",
+  "limits": "Earlier33-test and archive evidence remain source-bound history. Current normal-build artifact refresh is pending. No exact RSS guarantee, full source/license clearance or original F057/X02 closure is claimed.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/web_distribution.py": "56214c9e270c6c9ac05860a74931400fa7135fc43f2afb2c013add2bf6c66215",
+    "tests/test_web_distribution.py": "3ca71d8b354874b48329bb6b672b624f5dcc8381cfd0d8e0c6577f1a3bf69d40",
+    "docs/web-distribution-plan.md": "4f2c05196729bb8c32e3dd6af5d6069ce4eba022ce476a09a2242c6e54c065cc",
+    "docs/web-distribution.md": "446d03449e10470a419641277c69480cd0874b87802d52e8e39df9f39369cc1b",
+    "docs/web-distribution-result.md": "4512062bd88b61f435952b0992164a23411e518f5670d2ca6bbbfcbd154777d6",
+    "site/public/web-licenses/packages.json": "2340e28e3965bf1f5e17791fdd490d41cc4e1d5d7f771e9611c91775fef8a627",
+    "site/public/web-licenses/web-runtime.spdx.json": "32a852b87aadbe2eb86f9efaa77816f2dec607f20724ab2932d7a731e0f64152",
+    "runs/2026-11-21-web-js-budget-original.json": "eceadb0366b1cab69749621136e21793ecda7724b4039b0aa4696af410b98546",
+    "runs/2026-11-21-web-js-budget-correction.json": "5660299733a9a38dbdbd186dd5efb2dbf15aa60e8fea622dcbe9e76a1419c115"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-web-js-budget-original.json",
+      "sha256": "eceadb0366b1cab69749621136e21793ecda7724b4039b0aa4696af410b98546"
+    },
+    {
+      "path": "runs/2026-11-21-web-js-budget-correction.json",
+      "sha256": "5660299733a9a38dbdbd186dd5efb2dbf15aa60e8fea622dcbe9e76a1419c115"
+    }
+  ],
+  "checks": []
+}
