@@ -1,0 +1,40 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T19:39:57.496777+00:00",
+  "performed_by": "Codex /root/seo",
+  "reviewed_by": "Codex /root",
+  "root_review_provenance": "Parent message: independently compared all file SHA maps, exact downloaded53bytes and removal of the new attributed changelog section reproduces the prior changelog bytes.",
+  "normal_build_exit": 0,
+  "normal_JS_and_zlib_postbuild_guards_passed": true,
+  "normal_predeploy_before_review_stamp_exit": 0,
+  "source_base": "abe7d64be77b03d19f51143f774fa51b59717e59",
+  "source_inventory_before": 1650,
+  "source_inventory_after": 1651,
+  "source_added": {
+    "site/public/googlefd96956266acb393.html": "9044d09734a758ef85446bad2f71c13fc9090a06d73663d4be5d0bd3eee94677"
+  },
+  "source_changed": {},
+  "source_removed": [],
+  "reviewed_payload_delta": {
+    "pass": true,
+    "captured_at": "2026-11-21T19:38:24.401870+00:00",
+    "reviewed_deployment": "https://0bd1a8f2.aitrust-id.pages.dev",
+    "reviewed_source": "abe7d64be77b03d19f51143f774fa51b59717e59",
+    "old_files": 384,
+    "candidate_files": 385,
+    "added": {
+      "googlefd96956266acb393.html": "9044d09734a758ef85446bad2f71c13fc9090a06d73663d4be5d0bd3eee94677"
+    },
+    "changed": {
+      "reference/changelog.md": {
+        "reviewed": "c004ebd6748500069ea9c9c3eb02b40c0114b546b8d41edabc4e9089e7761e07",
+        "candidate": "cc74a9993ded6cd7aac02387cac71acbc1163bbd3cd3867e527ab5dc4e52381e"
+      }
+    },
+    "removed": []
+  },
+  "normal_deploy_predeploy_guards_will_run_again": true,
+  "source_approval_is_not_accuracy_or_ownership_verification": true,
+  "public_account_information_retained": false,
+  "original_closures": 0
+}

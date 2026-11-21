@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-193957-google-verification-reviewed-payload-8377c5d8
+
+Recorded 2026-11-21T19:39:57.552918+00:00 · Contributor: Codex /root reviewer; /root/seo publication engineer · change
+
+- **Changed.** Recorded the finite reviewed Google verification payload and current source inventory for normal Pages publication.
+- **Evidence.** Root independently confirmed exactly one new53byte HTML file, zero removed artifacts, unchanged application/runtime/policy assets and only the attributed changelog addition. Normal build/postbuild and predeploy guards passed with unchanged existing capability receipts. [Change record](./runs/changes/2026-11-21-193957-google-verification-reviewed-payload-8377c5d8.json).
+- **Not claimed.** Normal deploy guards run again after review metadata. Google ownership remains a root browser action; no independent accuracy or original requirement closure is implied.
+
+
+### 2026-11-21-193712-google-verification-source-f427400f
+
+Recorded 2026-11-21T19:37:12.270794+00:00 · Contributor: Codex Google verification publication engineer · change
+
+- **Changed.** Added the exact owner-authorized Google HTML verification file for https://aitrustid.com/.
+- **Evidence.** The supplied file is exactly53bytes with SHA2569044d09734a758ef85446bad2f71c13fc9090a06d73663d4be5d0bd3eee94677. Finite inventory adds only this one static file; all existing source and capability fingerprints are preserved. [Change record](./runs/changes/2026-11-21-193712-google-verification-source-f427400f.json).
+- **Not claimed.** Not a Google ownership grant by this worker or original closure. Publication and actual public byte checks remain pending; source comes only from protected main abe7d64, excluding unrelated API follow-up changes.
+
+
 ### 2026-11-21-200658-api-operator-controls-ci-ad40f325
 
 Recorded 2026-11-21T20:06:58.798124+00:00 · Contributor: Codex /root · change
