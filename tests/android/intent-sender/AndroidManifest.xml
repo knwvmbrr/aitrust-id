@@ -2,5 +2,6 @@
   <uses-sdk android:minSdkVersion="29" android:targetSdkVersion="36" />
   <application android:label="Synthetic Share Test" android:allowBackup="false" android:fullBackupContent="false" android:usesCleartextTraffic="false" android:debuggable="false" android:theme="@android:style/Theme.Material.Light.NoActionBar">
     <activity android:name=".SenderActivity" android:exported="true" android:launchMode="singleTask" android:excludeFromRecents="true" android:stateNotNeeded="true" />
+    <activity android:name=".ChooserActivity" android:exported="true" android:launchMode="singleTask" android:taskAffinity="com.aitrustid.synthetic.chooser" android:excludeFromRecents="true" android:stateNotNeeded="true" />
   </application>
 </manifest>

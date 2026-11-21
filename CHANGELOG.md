@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-111643-android-chooser-malformed-archive-refusal-122d5e71
+
+Recorded 2026-11-21T11:16:43.047353+00:00 · Contributor: Codex · change
+
+- **Changed.** Contained malformed APK archive failures in the new chooser control boundary with a fixed nonleaking refusal.
+- **Evidence.** Ten affected control groups passed on both Python3.12 and3.13 including malformed archive privacy refusal; prior14-group evidence remains historical and unchanged. [Change record](./runs/changes/2026-11-21-111643-android-chooser-malformed-archive-refusal-122d5e71.json).
+- **Not claimed.** Local controls and JDK construction do not establish Android Sharesheet behavior; hosted execution remains pending and no original requirement is closed.
+
+
+### 2026-11-21-111458-android-system-chooser-controls-2d0e0b3e
+
+Recorded 2026-11-21T11:14:58.891188+00:00 · Contributor: Codex · change
+
+- **Changed.** Added a separate fixed-sample native source and bounded system Sharesheet selection/cancellation controls, preserving the production APK and existing assertions.
+- **Evidence.** Ten new and fourteen affected groups passed on Python3.12 and3.13 with the existingJDK; exact original control and production source identities retained. [Change record](./runs/changes/2026-11-21-111458-android-system-chooser-controls-2d0e0b3e.json).
+- **Not claimed.** Actual Android chooser execution remains pending. No physical, human, accuracy, release or full N-014 acceptance is claimed.
+
+
 ### 2026-11-21-104643-independent-current-evidence-sealed-9f2f032a
 
 Recorded 2026-11-21T10:46:43.674973+00:00 · Contributor: Codex /root; reviewers /root/seo /root/web_camo /root/share_debugger · change

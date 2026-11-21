@@ -324,3 +324,46 @@ To run the focused fixture/driver controls with an existing JDK selected through
 JAVA_HOME: `python3 -B -m unittest discover -s tests -p test_android_intent_controls.py -v`.
 The existing licensed hosted verifier path uses `--configuration-controls` to
 run the original nine first and then this separately reported finite suite.
+
+## Bounded OS Sharesheet route (candidate)
+
+The additional `chooser_controls` group uses the actual system chooser, after
+all original seven, configuration two and malformed nine/refusal/recovery pairs.
+It is enabled by the existing `--configuration-controls` path. The default APK,
+permissions, sender's 19-dispatch contract and prior predicates/waits are unchanged.
+The zero-permission test APK additionally contains a separate `ChooserActivity`
+with two fixed samples and a native Share button. It never accepts caller text,
+URIs or a target. The button invokes an untargeted plain-text SEND through
+`Intent.createChooser`; the verifier must observe a unique system-owned
+`AI Trust ID` target and tap its actual native bounds. A direct component launch
+cannot satisfy this case. Exact received text, no automatic result, an explicit
+Check and the actual offline PS finding are mandatory.
+
+The second button use opens the chooser for a distinct fixed cancellation sample.
+Back must return to the synthetic source's positive resumed state. The verifier
+then focuses the previously observed existing checker task, without sending MAIN
+or SEND to it, and requires Cleared, an empty/exact-hint editor, disabled Check and
+no result/cancelled sample. The source's separate task affinity and target
+NEW_TASK flag make this task boundary intentional; actual API36 execution must
+still establish the outcome. There is no claim that Android erases its own caller
+Intent, that all other sending apps behave identically, or that source onResume
+is an activity-result callback.
+
+Only fixed stages, booleans, completed cases and source identities are exported.
+Hierarchies, task IDs, coordinates and submitted text are not saved by this new
+group. Missing/foreign/ambiguous system targets, stale samples, automatic results,
+unknown resumed task schema and cancellation revival fail with fixed diagnostic
+codes. Existing 40-second state waits and owned-emulator command bounds remain.
+The real JDK construction check and inert UI/adversarial controls can be run with
+`python3 -B -m unittest discover -s tests -p test_android_chooser_controls.py -v`.
+They are not Android execution or independent detector accuracy. The new local
+module is not silently counted as registered hosted focused controls; CI/test
+inventory integration belongs to the PM after review.
+
+Official contracts reviewed: [Android task affinity and NEW_TASK](https://developer.android.com/guide/components/activities/tasks-and-back-stack#Affinities),
+[createChooser](https://developer.android.com/reference/android/content/Intent#createChooser(android.content.Intent,%20java.lang.CharSequence)),
+and the API36 AOSP [resumed task dump](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/android16-release/services/core/java/com/android/server/wm/Task.java)
+/[existing-task focus](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/android16-release/services/core/java/com/android/server/am/ActivityManagerShellCommand.java)
+surface. Unknown system schema refuses instead of falling back to a checker
+launch. Actual hosted outcome is pending. Full N-014, physical-device, TalkBack,
+outside-human and store-release gates remain open.
