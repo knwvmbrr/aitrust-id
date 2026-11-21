@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-121621-portable-protocol-current-evidence-sealed-72121f0a
+
+Recorded 2026-11-21T12:16:21.686982+00:00 · Contributor: Codex /root; inventory /root/seo; correction /root/share_debugger; review /root/web_camo · change
+
+- **Changed.** Sealed current61-command protocol evidence and one-test portable inventory update after the source-ZIP/shallow-checkout test repair; retained all four unaffected current receipts.
+- **Evidence.** All five capability receipts are current. The normal boundary retains1486 exact inputs and unchanged browser receipts. Four original function identities remain pinned without Git history; product and runtime/helper code are unchanged. [Change record](./runs/changes/2026-11-21-121621-portable-protocol-current-evidence-sealed-72121f0a.json).
+- **Not claimed.** New expected-head protected CI and actual112-test Android run remain pending. The failed111PASS/1ERROR candidate ran no APK/emulator and remains recorded; no full-original, physical/human or accuracy completion is inferred.
+
+
+### 2026-11-21-121327-android-portable-source-guard-integrated-c77a54b2
+
+Recorded 2026-11-21T12:13:27.713739+00:00 · Contributor: Codex /root integration; fix /root/share_debugger; review /root/web_camo · change
+
+- **Changed.** Integrated the exact source-preservation test repair for shallow checkouts and source ZIPs; retained the actual failed112-test candidate without claiming APK or emulator execution.
+- **Evidence.** All10 chooser groups pass on both clean no-Git Python3.12/3.13 copies, exact four original function identities remain pinned and weakening is refused. App, helper, sender, workflow, deadlines and case semantics are unchanged. Four capability receipts remain current. [Change record](./runs/changes/2026-11-21-121327-android-portable-source-guard-integrated-c77a54b2.json).
+- **Not claimed.** Protocol revalidation and fresh exact-head protected/112-test Android execution remain required. No physical/human/accuracy or original closure is claimed; counts132complete70open and19scoped retained.
+
+
 ### 2026-11-21-121023-android-chooser-history-free-preservation-test-f19f3fa3
 
 Recorded 2026-11-21T12:10:23.075503+00:00 · Contributor: Codex · change
