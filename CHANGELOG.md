@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-203239-public-guide-boundaries-43b255e6
+
+Recorded 2026-11-21T20:32:39.407137+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Completed the source/access boundary check for the frozen public API guide publication candidate.
+- **Evidence.** All 1656 reviewed source entries match; current website and unchanged extension receipts pass their exact-source assessments, with access and existing supported route boundaries retained. [Change record](./runs/changes/2026-11-21-203239-public-guide-boundaries-43b255e6.json).
+- **Not claimed.** No network was executed by this boundary check. This is not a host-compromise defense, accuracy acceptance, organizational/research approval or an original closure.
+
+
 ### 2026-11-21-203113-public-guide-website-complete-1ea8010f
 
 Recorded 2026-11-21T20:31:13.579986+00:00 · Contributor: Codex /root · change
