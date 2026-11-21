@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-230921-mt-choice-manifest-deadline-9038b02a
+
+Recorded 2026-11-21T23:09:21.515995+00:00 · Contributor: Codex share_debugger MT worker · change
+
+- **Changed.** Bounded initial practice manifest headers and streaming with an independent ten-second abort deadline and late-continuation guards.
+- **Evidence.** Ten focused controls pass. Actual Chromium and separate WebKit observations show both stalled headers and stalled body reaching polite Unavailable without worker fetch or false readiness, then a complete canonical additive workflow. A distinct reviewer verified all 62 bindings and independently passed three affected controls. [Change record](./runs/changes/2026-11-21-230921-mt-choice-manifest-deadline-9038b02a.json).
+- **Not claimed.** First combined browser attempt remains failed and its earlier WebKit mechanism unknown; separate positives do not rewrite it. Canonical method, result validator, worker and other tags unchanged. No production, full tag, human, physical or independent accuracy acceptance.
+
+
 ### 2026-11-21-223513-mt-choice-browser-independent-review-2858d30c
 
 Recorded 2026-11-21T22:35:13.703789+00:00 · Contributor: Codex share_debugger MT worker · change

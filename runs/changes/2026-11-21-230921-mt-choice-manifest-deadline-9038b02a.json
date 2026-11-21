@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-230921-mt-choice-manifest-deadline-9038b02a",
+  "recorded_at": "2026-11-21T23:09:21.515995+00:00",
+  "author": "Codex share_debugger MT worker",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "383988b00d6a0f0c7203f13f6eacd695cc52ddea",
+  "changed": "Bounded initial practice manifest headers and streaming with an independent ten-second abort deadline and late-continuation guards.",
+  "proves": "Ten focused controls pass. Actual Chromium and separate WebKit observations show both stalled headers and stalled body reaching polite Unavailable without worker fetch or false readiness, then a complete canonical additive workflow. A distinct reviewer verified all 62 bindings and independently passed three affected controls.",
+  "limits": "First combined browser attempt remains failed and its earlier WebKit mechanism unknown; separate positives do not rewrite it. Canonical method, result validator, worker and other tags unchanged. No production, full tag, human, physical or independent accuracy acceptance.",
+  "scope_ids": [
+    "F-019b",
+    "T-MT"
+  ],
+  "files": {
+    "site/src/mt-choice-client.mjs": "002d42fc109494387fcefed60629b9512fb085a829ec36a77f53e4b513ca4245",
+    "tests/mt-choice-manifest.mjs": "f5c4b03c863c106f2007dc6ecc5b0343e05d3b4e27ae914ba5c5f87bdd188243",
+    "scripts/verify-mt-choice-correction.cjs": "cfcc15cf933cca44e8a1fc670b369852bcb6615409072cd3764e1f3ad55927cc",
+    "docs/mt-choice-browser.md": "14d07604697d6799d00173caf3bb00af998b005650e7d9aaf8e0983eb20aa0b1",
+    "docs/mt-choice-browser-plan.md": "2c87717297303829130fdb21cc466e1124350ea29fb4667a21e903ae11c83433",
+    "runs/2026-11-21-mt-choice-manifest-deadline-gap.json": "a547428efd8f3242e304e76b446ef1fd2030978e93aa29d62fcba4f6e7ea47c7",
+    "runs/2026-11-21-mt-choice-manifest-deadline-first.json": "d99f21184975c761d88a90c426063384d14948209259ec81f64d0ee5b83af928",
+    "runs/2026-11-21-mt-choice-manifest-deadline-webkit.json": "7c1cc47b5a2ab8a241936f2e78b2d7d8c72e441977e034ef202b0759daaab2bc",
+    "runs/2026-11-21-mt-choice-manifest-deadline-fix.json": "5b230ec9574ed0043dabbd132937e25d9ad952b3efeee4dfbf93996b70bd02ab",
+    "runs/2026-11-21-mt-choice-manifest-deadline-independent-review.json": "8e169983afb29b052c7137a83c6b6b3627e16e8b56535e63c2f825d6a0f31570"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-mt-choice-manifest-deadline-gap.json",
+      "sha256": "a547428efd8f3242e304e76b446ef1fd2030978e93aa29d62fcba4f6e7ea47c7"
+    },
+    {
+      "path": "runs/2026-11-21-mt-choice-manifest-deadline-first.json",
+      "sha256": "d99f21184975c761d88a90c426063384d14948209259ec81f64d0ee5b83af928"
+    },
+    {
+      "path": "runs/2026-11-21-mt-choice-manifest-deadline-webkit.json",
+      "sha256": "7c1cc47b5a2ab8a241936f2e78b2d7d8c72e441977e034ef202b0759daaab2bc"
+    },
+    {
+      "path": "runs/2026-11-21-mt-choice-manifest-deadline-fix.json",
+      "sha256": "5b230ec9574ed0043dabbd132937e25d9ad952b3efeee4dfbf93996b70bd02ab"
+    },
+    {
+      "path": "runs/2026-11-21-mt-choice-manifest-deadline-independent-review.json",
+      "sha256": "8e169983afb29b052c7137a83c6b6b3627e16e8b56535e63c2f825d6a0f31570"
+    }
+  ],
+  "checks": []
+}

@@ -44,7 +44,9 @@ example load and editing start no worker or analysis. Check is explicit and
 requires the whole-frame declaration. Preserve whole oversized pasted input and
 show Unavailable; never clip it into an accepted example.
 
-Every Check owns a fresh worker, with 45 seconds for startup and 6 seconds for
+Initial public manifest headers/body have an independent 10-second abort deadline,
+a 64-KiB streaming cap and no late readiness after refusal. Routine failures use
+polite status announcements. Every Check owns a fresh worker, with 45 seconds for startup and 6 seconds for
 execution/validation. Clear, editing, another Check, Cancel and page disposal
 terminate ownership and invalidate late replies/results. Busy/invalid/integrity/
 worker/timeout failures are Unavailable, never zero observations or safe. Other

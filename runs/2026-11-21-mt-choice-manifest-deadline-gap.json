@@ -1,0 +1,22 @@
+{
+  "captured_at": "2026-11-21T22:37:23.746Z",
+  "pass": false,
+  "profile": "mt-choice-initial-manifest-deadline-gap/v1",
+  "source_commit": "383988b00d6a0f0c7203f13f6eacd695cc52ddea",
+  "client_sha256": "66a8d1607b8a603814d79e24e0de93e2eb0377d25b8f33892ace2aeb6fdb113d",
+  "controlled_observations": [
+    {
+      "stage": "headers",
+      "pending_after_25ms": true,
+      "late_valid_response_accepted": true
+    },
+    {
+      "stage": "body",
+      "pending_after_25ms": true,
+      "late_valid_response_accepted": true
+    }
+  ],
+  "source_finding": "Initial fetch and streamed reader have no wall deadline before choiceClient startup. Stalled headers or body leave interface initialization pending.",
+  "scope": "Synthetic inert promises only; no network, input text or browser runtime executed.",
+  "next": "Bound the manifest fetch and stream independently of worker startup; cancel and ignore late continuation."
+}

@@ -52,7 +52,9 @@ worker/startup/deadline failure are **Unavailable**, never safe or zero findings
 A completed unsupported-grammar observation means only that this finite grammar
 did not match the selection.
 
-Each explicit Check starts its own worker. Startup is bounded to 45 seconds;
+The initial public manifest fetch and stream have a separate 10-second deadline.
+A stalled or invalid manifest leaves Check disabled and announces Unavailable
+politely; it sends no input. Each explicit Check starts its own worker. Startup is bounded to 45 seconds;
 evaluation/validation to 6 seconds. Editing, Clear, Cancel or leaving removes the
 old result, stops pending ownership and ignores late replies. Clear removes the
 input fields too. This describes application state, not physical memory erasure.

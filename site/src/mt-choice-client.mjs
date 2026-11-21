@@ -1,15 +1,27 @@
 import {choiceContext,validateChoice} from './mt-choice-result.mjs';
+export const MANIFEST_TIMEOUT_MS=10000;
 export async function loadManifest(){
- const response=await fetch('./manifest.json',{cache:'no-cache'});
- if(!response.ok||Number(response.headers.get('content-length'))>65536)throw Error('Practice files unavailable.');
- const reader=response.body?.getReader();if(!reader)throw Error('Practice files unavailable.');
- const chunks=[];let length=0;
- try{while(true){const {done,value}=await reader.read();if(done)break;length+=value.byteLength;if(length>65536)throw Error('Practice files unavailable.');chunks.push(value);}}
- catch(error){try{await reader.cancel();}catch{}throw error;}finally{reader.releaseLock();}
- const bytes=new Uint8Array(length);let at=0;for(const chunk of chunks){bytes.set(chunk,at);at+=chunk.byteLength;}
- const m=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes));
- if(m.format!=='mt-choice-practice-manifest/v1'||m.runtime!=='314.0.7'||m.method!=='caller-bound-choice-framing-observation/1.3.0'||m.runtime_path!=='./runtime/'||!/^method-[a-f0-9]{64}\.json$/.test(m.bundle)||!Number.isSafeInteger(m.bundle_bytes)||m.bundle_bytes>500000||m.bundle_bytes<1)throw Error('Practice files unavailable.');
- return m;
+ const controller=new AbortController();let reader,timer;
+ const unavailable=()=>Error('Practice files unavailable.');
+ const check=()=>{if(controller.signal.aborted)throw unavailable();};
+ const deadline=new Promise((_,reject)=>{timer=setTimeout(()=>{controller.abort();reject(unavailable());},MANIFEST_TIMEOUT_MS);});
+ const read=async()=>{
+  const response=await fetch('./manifest.json',{cache:'no-cache',signal:controller.signal});check();
+  if(!response.ok||Number(response.headers.get('content-length'))>65536)throw unavailable();
+  reader=response.body?.getReader();if(!reader)throw unavailable();
+  const chunks=[];let length=0;
+  while(true){const {done,value}=await reader.read();check();if(done)break;length+=value.byteLength;if(length>65536)throw unavailable();chunks.push(value);}
+  check();const bytes=new Uint8Array(length);let at=0;for(const chunk of chunks){bytes.set(chunk,at);at+=chunk.byteLength;}
+  check();const m=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes));
+  if(m.format!=='mt-choice-practice-manifest/v1'||m.runtime!=='314.0.7'||m.method!=='caller-bound-choice-framing-observation/1.3.0'||m.runtime_path!=='./runtime/'||!/^method-[a-f0-9]{64}\.json$/.test(m.bundle)||!Number.isSafeInteger(m.bundle_bytes)||m.bundle_bytes>500000||m.bundle_bytes<1)throw unavailable();
+  check();return m;
+ };
+ try{return await Promise.race([read(),deadline]);}
+ catch{throw unavailable();}
+ finally{
+  clearTimeout(timer);controller.abort();
+  if(reader){try{Promise.resolve(reader.cancel()).catch(()=>{});}catch{}try{reader.releaseLock();}catch{}}
+ }
 }
 export function choiceClient(manifest,{onStatus=()=>{},createWorker=()=>new Worker(new URL('./mt-choice-worker.mjs',import.meta.url),{type:'module'}),loadTimeout=45000,checkTimeout=6000}={}){
  let active=null,sequence=0;
