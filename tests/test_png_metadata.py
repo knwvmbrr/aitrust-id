@@ -121,6 +121,22 @@ class Metadata(unittest.TestCase):
                 with patch.object(p.subprocess,'Popen',side_effect=launched(program)),patch.object(p,'WALL_SECONDS',.08):
                     with self.assertRaises(p.ImageError):p.inspect_file(source)
                 self.assertIsNotNone(children[-1].returncode)
+    def test_known_reaped_worker_is_not_signaled_after_wait_error(self):
+        real=subprocess.Popen;children=[]
+        with tempfile.TemporaryDirectory()as d:
+            source=Path(d).resolve()/'image.png';source.write_bytes(image())
+            def make(args,**kwargs):
+                child=real(args,**kwargs);children.append(child);wait=child.wait
+                def postwait(*a,**kw):
+                    wait(*a,**kw)
+                    raise OSError('SYNTHETIC_POST_REAP_FAILURE')
+                child.wait=postwait
+                return child
+            with patch.object(p.subprocess,'Popen',side_effect=make),patch.object(p.os,'killpg')as kill:
+                with self.assertRaises(p.ImageError):p.inspect_file(source)
+            self.assertEqual(children[0].returncode,0)
+            kill.assert_not_called()
+
     def test_bad_image_does_not_disable_existing_PS(self):
         r=subprocess.run([sys.executable,'-I','-S','-B',str(ROOT/'scripts/check-ps.py'),'--json'],input=b'An ordinary sentence.',capture_output=True,timeout=12)
         self.assertEqual(r.returncode,0,r.stderr);self.assertNotIn(CANARY.encode(),r.stdout)

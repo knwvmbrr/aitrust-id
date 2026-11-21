@@ -40,3 +40,10 @@ and recovery. No unchanged broad suite or private photographs.
 
 Normative primary source: W3C PNG3 Recommendation, 24 June 2025,
 https://www.w3.org/TR/2025/REC-png-3-20250624/ (sections 5, 10, 11.2, 11.3.3).
+
+Review correction: a completion flag alone cannot own a numeric process group
+after wait has reaped it. Cleanup must also require `child.returncode is None`
+before signaling. A synthetic error immediately after a real successful wait
+must leave the already-reaped group untouched; genuine timeouts still kill and
+reap the owned child. Preserve the first candidate/failure and capture fresh
+affected worker and normal CLI evidence on the corrected source.

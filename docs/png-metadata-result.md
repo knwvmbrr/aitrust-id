@@ -3,7 +3,8 @@
 The new public CLI runs without the optional C2PA SDK, image packages or Docker.
 It gives an explicitly selected local PNG a fixed metadata inventory and checks
 its supported compressed scanline structure. Its source and actual execution
-are bound in `runs/2026-11-21-png-metadata-cli.json`.
+were first bound in `runs/2026-11-21-png-metadata-cli.json`. That first candidate is historical; the current corrected runtime is bound in
+`runs/2026-11-21-png-metadata-cleanup-corrected-cli.json`.
 
 Thirteen focused synthetic test groups passed. Afterwards, only the unsupported
 fixtures were corrected to fully valid 16-bit, palette and 1×1 Adam7 payloads;
@@ -33,3 +34,16 @@ credential-inspection contract changed. F-155 and full FA/PA acceptance remain
 open, including permitted real watermark verification, explicit evidence/trust
 semantics and independent tests. Current supported profile and resource/privacy
 limits are in [the user guide](png-metadata.md).
+
+## Cleanup ownership correction
+
+Distinct review reproduced a completed-worker edge case: actual wait reaped the
+child, then an injected error left a local completion flag false and cleanup
+attempted to signal the old numeric process group. The signal was intercepted.
+The original candidate and failed regression are preserved. Cleanup now signals
+only if the child is still unreaped (`returncode is None`). The new regression
+uses the actual PNG worker, confirms returncode 0 after the injected error, and
+requires no signal attempt. Three affected worker groups pass, preserving actual
+timeout/output/nonzero cleanup and closed-result refusal checks. Ten fresh
+actual CLI controls pass with corrected sources stable. No unchanged full suite
+was repeated, and earlier receipts were not rebound to the new runtime.

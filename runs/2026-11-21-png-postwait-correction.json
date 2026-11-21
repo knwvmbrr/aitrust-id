@@ -1,0 +1,36 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T20:28:19.951743+00:00",
+  "source_base": "0301ddf6ae5a99339f2c400a670afb9b245b73f8",
+  "correction": "Only signal/join an incomplete child when child.returncode is None; known reaped numeric group IDs are no longer owned.",
+  "source_sha256": {
+    "tools/png_metadata.py": "addd35028617f2d5c2cd01dc19106cec9946686cfe35139beb923af3973d6994",
+    "scripts/inspect-png-metadata.py": "dd84cec16b2069c525cdfb7efb723f63e8b4643e9a846cf98902f9acd34f60d8",
+    "tests/test_png_metadata.py": "dfb46aec2bec91ad3b2e042aa6a6759c79b3f83f0b18a2041832818e8957bdd1"
+  },
+  "affected_controls": {
+    "groups": 3,
+    "pass": true,
+    "log_sha256": "c412e4fe66e380cdf6c0149e4a85f9798589a754b04a2032b0e5a1b29971d9ea",
+    "cases": [
+      "actual completed/reaped PNG worker then injected wait error: no signal attempted",
+      "real owned-worker timeout, output overflow and nonzero cleanup remain reaped",
+      "closed record/subject/header refusal controls remain enforced"
+    ]
+  },
+  "fresh_actual_cli": {
+    "path": "runs/2026-11-21-png-metadata-cleanup-corrected-cli.json",
+    "sha256": "0b6df0c34bdbf3f53979a3eabe21b74208e7ca0611efeed19fb8b7ece2ff71e7",
+    "controls": 10,
+    "source_stable": true
+  },
+  "original_failure": {
+    "path": "runs/2026-11-21-png-postwait-review-failure.json",
+    "sha256": "bdb73f1d1bb7c87343bff0fededa84014e9cbba3c65508513c914b9faf7234af"
+  },
+  "limits": [
+    "First13 groups and first10CLI receipt preserved as historical to0301ddf, not relabeled current.",
+    "Distinct affected correction review pending.",
+    "No tag, origin/truth/authorship/watermark/credential verification or full F155/FA/PA closure."
+  ]
+}

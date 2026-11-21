@@ -181,7 +181,9 @@ def worker_record(fd):
         except (ValueError,UnicodeError,RecursionError):raise ImageError('worker_unavailable')from None
     finally:
         if child is not None:
-            if not complete:
+            # wait() can reap successfully and then raise in surrounding I/O.
+            # A known-reaped numeric process/group ID is no longer ours to signal.
+            if not complete and child.returncode is None:
                 try:os.killpg(child.pid,signal.SIGKILL)
                 except ProcessLookupError:pass
                 child.wait(timeout=5)

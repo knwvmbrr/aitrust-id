@@ -1,0 +1,10 @@
+{
+  "pass": false,
+  "captured_at": "2026-11-21T20:28:19.951743+00:00",
+  "reviewed_commit": "0301ddf6ae5a99339f2c400a670afb9b245b73f8",
+  "runtime_sha256": "c3368f4d070ecb7027cb283e93e4309debb3dabd393efdd3b8f551ed2d74c13b",
+  "finding": "After actual owned-worker wait reaped returncode0, an injected OSError left complete=False and cleanup attempted one killpg against the already-reaped numeric group. Signal intercepted; no unrelated process signaled.",
+  "actual_regression_log_sha256": "752d7b3d459a04664b3079e0a97c44bb23d9cf19937efdee8b0d7bef633290b7",
+  "peer_original_receipt_sha256": "d0f5a4b9b6a7ab6207d24eaf5e4f5c5c1598eb2b6cf358fe3cb9d48064d2105a",
+  "scope": "Worker cleanup ownership, not image classification or metadata truth."
+}

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-202852-png-worker-reaped-ownership-11d204c7
+
+Recorded 2026-11-21T20:28:52.301763+00:00 · Contributor: Codex /root/web_camo image evidence engineer · change
+
+- **Changed.** Preserved a peer-reproduced post-wait cleanup failure and guarded PNG worker signaling against already-reaped process-group IDs.
+- **Evidence.** Actual owned PNG worker fault injection first reproduced the unsafe signal attempt; three affected worker groups now pass, and ten fresh real CLI controls pass with corrected runtime hashes stable. Timeout/output/nonzero cleanup remains exercised. [Change record](./runs/changes/2026-11-21-202852-png-worker-reaped-ownership-11d204c7.json).
+- **Not claimed.** Earlier thirteen-group and first CLI receipts remain historical to0301ddf. Distinct correction review pending; no image-origin, credential, watermark, accuracy, tag or original requirement closure claim.
+
+
 ### 2026-11-21-202404-png-metadata-preflight-6af9ce35
 
 Recorded 2026-11-21T20:24:04.721364+00:00 · Contributor: Codex /root/web_camo image evidence engineer · change
