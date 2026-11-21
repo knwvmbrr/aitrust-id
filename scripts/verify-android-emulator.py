@@ -557,23 +557,8 @@ def verify_configuration_controls(send,shell,wait,click,report):
         nodes=[n for n in view.iter('node') if n.attrib.get('resource-id')==PACKAGE+':id/editor']
         if len(nodes)>1:raise ValueError('Ambiguous owned bounds')
         return None if not nodes else bounds(nodes[0])
-    cases=[];report.update(status='RUNNING',**{'pass':False},cases=cases)
-    try:
-        report['control_stage']='configuration_portrait'
-        shell(['wm','user-rotation','lock','0'])
-        wait(lambda x:x.attrib.get('rotation')=='0')
-        report['control_stage']='configuration_receive'
-        marker='owned configuration draft'
-        send(marker);view=wait(lambda x:text(x,'Text received. Review it'))
-        assert editor(view)==marker
-        report['control_stage']='configuration_edit'
-        click(view,'editor');shell(['input','text','X'])
-        def edited(view):
-            value=editor(view)
-            return value.count('X')==1 and value.replace('X','')==marker
-        view=wait(edited);expected=editor(view)
-        report['control_stage']='configuration_rotate'
-        shell(['wm','user-rotation','lock','1'])
+    def navigate(expected,report,reassert=True):
+        match_key='editor_matches_edited_draft' if reassert else 'editor_matches_fresh_marker'
         deadline=time.monotonic()+40
         def remaining():
             left=deadline-time.monotonic()
@@ -637,11 +622,12 @@ def verify_configuration_controls(send,shell,wait,click,report):
                 rotation['pending_motion']=None
             report['rotation_state']=rotation['phase']
             report['rotation_observation']={'rotation':observed_rotation,'editor_observed':value is not None,
-                'editor_matches_edited_draft':None if value is None else value==expected,
+                match_key:None if value is None else value==expected,
                 'status_node_observed':status,'received_status_visible':received,'result_tag_visible':tag}
             if rotation['phase']=='ROTATING':
                 if actual!='1' or value is None:return False
                 assert value==expected and not tag
+                report['expected_text_observed']=True
                 if received:
                     report['rotation_receipt_observed']=True;return True
                 assert not text(view,'Ready when you are.') and not text(view,'Cleared. Your text and result')
@@ -657,6 +643,7 @@ def verify_configuration_controls(send,shell,wait,click,report):
             if rotation['phase']=='RECEIPT':
                 if received:
                     report['rotation_receipt_observed']=True
+                    if not reassert:return True
                     scroll(view,False);rotation['phase']='REASSERT_EDITOR';return False
                 if rotation['up']>=2:raise ValueError('Receipt unavailable after bounded scroll')
                 scroll(view,True);return False
@@ -665,7 +652,25 @@ def verify_configuration_controls(send,shell,wait,click,report):
             scroll(view,False);return False
         # Rotation, status navigation and final exact-text reassertion share ONE
         # existing 40-second wait. No new per-scroll wait/reset is introduced.
-        view=wait(configuration_ready)
+        return wait(configuration_ready)
+    cases=[];report.update(status='RUNNING',**{'pass':False},cases=cases)
+    try:
+        report['control_stage']='configuration_portrait'
+        shell(['wm','user-rotation','lock','0'])
+        wait(lambda x:x.attrib.get('rotation')=='0')
+        report['control_stage']='configuration_receive'
+        marker='owned configuration draft'
+        send(marker);view=wait(lambda x:text(x,'Text received. Review it'))
+        assert editor(view)==marker
+        report['control_stage']='configuration_edit'
+        click(view,'editor');shell(['input','text','X'])
+        def edited(view):
+            value=editor(view)
+            return value.count('X')==1 and value.replace('X','')==marker
+        view=wait(edited);expected=editor(view)
+        report['control_stage']='configuration_rotate'
+        shell(['wm','user-rotation','lock','1'])
+        view=navigate(expected,report)
         report['control_stage']='configuration_restore'
         assert editor(view)==expected
         assert not any(n.attrib.get('resource-id')==PACKAGE+':id/tag' for n in view.iter('node'))
@@ -675,7 +680,17 @@ def verify_configuration_controls(send,shell,wait,click,report):
         background={};report['background']=background
         # No wait between forced configuration and HOME, and no new launcher or
         # Share intent is substituted for the existing immediate task refocus.
-        verify_background_clear(send,shell,wait,background,
+        def fresh_background_wait(predicate):
+            if background.get('control_stage')!='background_receive':return wait(predicate)
+            navigation={};report['background_receive_navigation']=navigation
+            # This replaces, rather than precedes, the original receive wait.
+            # Old Received with the previous draft cannot satisfy fresh setup.
+            view=navigate('synthetic private marker',navigation,False)
+            assert predicate(view)
+            navigation['rotation_state']='RECEIPT_CONFIRMED'
+            navigation['fresh_marker_and_receipt_observed']=True
+            return view
+        verify_background_clear(send,shell,fresh_background_wait,background,
             before_home=lambda:shell(['wm','user-rotation','lock','0']))
         report['control_stage']='configuration_final_rotation'
         def rotated_without_revival(view):

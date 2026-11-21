@@ -1,0 +1,130 @@
+{
+  "format": "ai-trust-id-android-fresh-home-setup-controls/v1",
+  "recorded_at": "2026-11-21T07:40:33.023648+00:00",
+  "pass": true,
+  "preserved_failed_producer": {
+    "path": "runs/2026-11-21-android-config-first-pass-home-setup-failed.json",
+    "sha256": "b41969e2ad091597743d5bfcb2bcbc8ffa809e9eb08d9f5bddfc5014d9e6e68d",
+    "producer_stays_failed": true,
+    "actual_default_recreation_case_passed": true,
+    "home_case_not_executed": true
+  },
+  "focused_tests": {
+    "tests": 66,
+    "affected_groups": 20,
+    "original_prerequisite_controller_tests": 46,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "actual_stdlib_before_after_fixture": {
+    "recorded_at": "2026-11-21T07:37:45.919413+00:00",
+    "stdlib_synthetic_model_not_android_runtime": true,
+    "before_source_sha256": "52b0655bf5726820015bb4b1647e76af155eb4649a2f23ba7b4cc1d3b8e697e7",
+    "after_source_sha256": "8484ae525ef820937f562ce34619525443c7b1cf8053c1a2eddcbbe3f8f27f30",
+    "before": {
+      "status": "FAILED",
+      "case_count": 1,
+      "background_stage": "background_receive"
+    },
+    "after": {
+      "status": "EXECUTED",
+      "case_count": 2,
+      "fresh_marker_navigation": {
+        "density_query_attempts": 2,
+        "gesture_target_state": "CONTENT_MARGIN_VALIDATED",
+        "effective_density_observed": true,
+        "gesture_observations": [
+          {
+            "direction": "UP",
+            "editor_observed_before": true,
+            "editor_observed_after": false,
+            "editor_bounds_changed": null,
+            "editor_moved_up": null,
+            "editor_moved_down": null,
+            "status_became_visible": true,
+            "rotation_stable": true
+          }
+        ],
+        "rotation_state": "RECEIPT_CONFIRMED",
+        "rotation_observation": {
+          "rotation": "1",
+          "editor_observed": false,
+          "editor_matches_fresh_marker": null,
+          "status_node_observed": true,
+          "received_status_visible": true,
+          "result_tag_visible": false
+        },
+        "expected_text_observed": true,
+        "rotation_scroll_precondition": {
+          "rotation": "1",
+          "editor_observed": true,
+          "editor_matches_fresh_marker": true,
+          "status_node_observed": false,
+          "received_status_visible": false,
+          "result_tag_visible": false
+        },
+        "owned_scrollable": true,
+        "gesture_geometry": {
+          "editor_horizontal_within_scroll": true,
+          "left_full_padding_observed": true,
+          "right_full_padding_observed": true,
+          "point_within_scroll": true,
+          "point_outside_editor": true,
+          "point_within_known_left_padding": true
+        },
+        "previous_edge_outside_known_content_band": false,
+        "content_margin_target_validated": true,
+        "gesture_outside_editor": true,
+        "rotation_scroll_actions": 1,
+        "rotation_receipt_observed": true,
+        "fresh_marker_and_receipt_observed": true
+      }
+    },
+    "first_case_motion_flags_and_command_prefix_unchanged": true
+  },
+  "invariants": {
+    "original_seven_and_actual_wait_asts_unchanged": true,
+    "density_scroll_remaining_margin_functions_asts_unchanged": true,
+    "first_case_full_reassertion_command_prefix_and_motion_facts_unchanged": true,
+    "wrapper_only_for_configuration_background_receive": true,
+    "fresh_exact_marker_rotation_one_and_no_result_required": true,
+    "stale_old_receipt_cannot_satisfy_fresh_setup": true,
+    "returned_snapshot_satisfies_original_received_predicate": true,
+    "existing_receive_budget_seconds": 40,
+    "maximum_setup_up_gestures": 2,
+    "no_additional_receive_wait_or_reset": true,
+    "no_wait_scroll_or_observation_after_configuration_home_hook": true,
+    "marker_text_hash_coordinates_or_ids_exported": false
+  },
+  "refusals": [
+    "stale old Received with wrong marker",
+    "missing replacement SEND",
+    "missing fresh receipt",
+    "visible old result",
+    "expired original second receive budget",
+    "unsafe geometry and changed cache",
+    "late marker revival"
+  ],
+  "distinct_review": {
+    "reviewer": "/root/web_camo",
+    "result": "CLEAR for one changed-source default candidate",
+    "affected_groups_independently_replayed": 20,
+    "all_frozen_hashes_and_original_asts_confirmed": true,
+    "sdk_emulator_browser": false
+  },
+  "sources": {
+    "scripts/verify-android-emulator.py": "8484ae525ef820937f562ce34619525443c7b1cf8053c1a2eddcbbe3f8f27f30",
+    "tests/test_android_configuration_controls.py": "996514248f6e2bc220d132627aa26fe3da77e405017ad66f0f513de871f9efcb",
+    "docs/android-configuration-home-setup-plan.md": "0655b02b9f4dc7e49b38fdd4d76184eb64474c5e6885c53fb51ab97be3edd741",
+    ".github/workflows/android-share.yml": "536c97412669fa97527a026edd72297d82cf0ad849d6628ca6c0df4c4c923b5a",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+    "mobile/android/src/com/aitrustid/android/ConfigurationDraft.java": "5fb22a21a6c8ad36b4535e39955ecff4a6baede2e42c43c9648b8149dd52211a"
+  },
+  "native_logic_changed": false,
+  "actual_current_default9_acceptance_pending": true,
+  "physical_device_evidence": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false
+}

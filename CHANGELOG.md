@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-074033-android-fresh-landscape-home-setup-3bdd0a0d
+
+Recorded 2026-11-21T07:40:33.065730+00:00 · Contributor: Codex · change
+
+- **Changed.** Require fresh landscape marker receipt within the configuration-only HOME setup wait before unchanged privacy actions.
+- **Evidence.** 66 focused controls pass; distinct review replayed20 affected groups. The old setup fails the inert offscreen fixture while fresh-marker navigation completes; stale old receipt, missing new input, result and budget failures refuse before HOME. Original seven, first recreation case and immediate rotation-to-HOME remain unchanged. [Change record](./runs/changes/2026-11-21-074033-android-fresh-landscape-home-setup-3bdd0a0d.json).
+- **Not claimed.** Full current default9 runtime remains pending; prior producer remains failed despite first recreation-case success. No final HOME/privacy, production readiness, physical/human or full-original acceptance is claimed.
+
+
 ### 2026-11-21-073355-android-recreation-pass-home-setup-failure-6e27d38e
 
 Recorded 2026-11-21T07:33:55.206521+00:00 · Contributor: Codex · change

@@ -53,6 +53,9 @@ class ConfigurationControls(unittest.TestCase):
                     if fault=='rotation_changed' and scroll_position>0:rotation='0'
             elif stage=='configuration_home' and child=='background_receive':
                 rotation='1';status='Text received. Review it';value='synthetic private marker'
+                if fault in ('background_offscreen','background_no_receipt'):
+                    show_status=scroll_position>0 and fault!='background_no_receipt';show_editor=scroll_position==0
+                if fault=='background_stale_receipt':value='owned configuration draftX'
             elif stage=='configuration_home' and child=='background_cleared_view':
                 if fault=='immediate_revival':value='synthetic private marker'
             elif stage=='configuration_final_rotation' and fault=='late_revival':
@@ -66,12 +69,13 @@ class ConfigurationControls(unittest.TestCase):
             ET.SubElement(view,'node',{'class':'android.widget.ScrollView','package':'other.invalid' if fault=='foreign_scroll' else driver.PACKAGE,
                 'scrollable':'true','bounds':'PRIVATE_BOUNDS_CANARY' if fault=='bad_scroll_bounds' else ('[0,0][760,400]' if fault=='horizontal_changed' and scroll_position>0 else '[0,0][800,400]')})
             if fault=='automatic_result' and stage=='configuration_rotate':ET.SubElement(view,'node',{'resource-id':driver.PACKAGE+':id/tag','text':'PS'})
+            if fault=='background_automatic_result' and stage=='configuration_home' and child=='background_receive':ET.SubElement(view,'node',{'resource-id':driver.PACKAGE+':id/tag','text':'PS'})
             if fault=='missing_editor' and stage=='configuration_edit':view.remove(view[0])
             return view
         def wait(predicate):
             stage=report['control_stage'];child=report.get('background',{}).get('control_stage')
             calls.append(('wait',stage,child))
-            for _ in range(8 if stage=='configuration_rotate' else 1):
+            for _ in range(8 if stage=='configuration_rotate' or child=='background_receive' else 1):
                 view=snapshot()
                 if predicate(view):return view
             raise ValueError('Synthetic bound expired')
@@ -151,12 +155,37 @@ class ConfigurationControls(unittest.TestCase):
         self.assertIsNotNone(error);self.assertFalse(report['pass']);self.assertEqual(clock.call_count,3)
         self.assertFalse(any(c[0]=='shell' and c[1][:2]==['input','swipe'] for c in calls))
 
+    def test_fresh_landscape_background_marker_precedes_received_and_home(self):
+        report,calls,error=self.exercise('background_offscreen');self.assertIsNone(error);self.assertTrue(report['pass'])
+        navigation=report['background_receive_navigation']
+        self.assertTrue(navigation['expected_text_observed'] and navigation['fresh_marker_and_receipt_observed'])
+        self.assertTrue(navigation['rotation_scroll_precondition']['editor_matches_fresh_marker'])
+        self.assertEqual(navigation['rotation_scroll_actions'],1)
+        self.assertNotIn('rotation_edited_reasserted',navigation)
+        self.assertEqual(sum(c[0]=='wait' and c[2]=='background_receive' for c in calls),1)
+        rotation=max(i for i,c in enumerate(calls) if c==('shell',['wm','user-rotation','lock','0']))
+        self.assertEqual(calls[rotation+1],('shell',['input','keyevent','KEYCODE_HOME']))
+
+    def test_stale_receipt_missing_new_receipt_or_result_fails_before_home(self):
+        for fault in ('background_stale_receipt','background_no_receipt','background_automatic_result'):
+            report,calls,error=self.exercise(fault)
+            self.assertIsNotNone(error);self.assertEqual(report['case_count'],1);self.assertFalse(report['pass'])
+            self.assertEqual(report['background']['control_stage'],'background_receive')
+            self.assertFalse(any(c==('shell',['input','keyevent','KEYCODE_HOME']) for c in calls))
+            if fault=='background_stale_receipt':self.assertFalse(report['background_receive_navigation']['rotation_observation']['editor_matches_fresh_marker'])
+
+    def test_background_receive_has_one_original_budget_not_a_second_wait(self):
+        with mock.patch.object(driver.time,'monotonic',side_effect=[0,0,0,100,100,141]) as clock:
+            report,calls,error=self.exercise('background_offscreen')
+        self.assertIsNotNone(error);self.assertEqual(report['case_count'],1);self.assertEqual(clock.call_count,6)
+        self.assertFalse(any(c==('shell',['input','keyevent','KEYCODE_HOME']) for c in calls))
+
     def test_motion_report_is_closed_and_never_exports_geometry_or_density_values(self):
         report,calls,error=self.exercise('motion');self.assertIsNone(error)
         allowed={'status','pass','cases','control_stage','case_count','density_query_attempts','gesture_target_state','effective_density_observed',
             'gesture_observations','rotation_state','rotation_observation','rotation_scroll_precondition','owned_scrollable',
             'previous_edge_outside_known_content_band','content_margin_target_validated','gesture_outside_editor','rotation_scroll_actions',
-            'rotation_receipt_observed','rotation_edited_reasserted','background','gesture_geometry'}
+            'rotation_receipt_observed','rotation_edited_reasserted','background','gesture_geometry','expected_text_observed','background_receive_navigation'}
         self.assertLessEqual(set(report),allowed)
         self.assertTrue(all(type(v) is bool for v in report['gesture_geometry'].values()))
         for row in report['gesture_observations']:
