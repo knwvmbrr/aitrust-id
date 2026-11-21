@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-043819-dialog-measurement-failure-context-5b677ad1",
+  "recorded_at": "2026-11-21T04:38:19.116678+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "afe0296171a149876079b374e25c942b6a3cccb3",
+  "changed": "Add failure-only bounded dialog/route identity context and operation-stage attribution to the existing accessibility verifier, with isolated privacy controls.",
+  "proves": "Four focused unchanged actual MTdark-to-IV checks pass without reproducing historical timeout. Final source-hashed browser controls suppress private DOM/input/hash/context values, discriminate expected dialog identity and bound closed/missing/hung-page failure observation.",
+  "limits": "Diagnostic-only; historical timeout cause UNESTABLISHED. Product/router source, successful site operations, waits, predicates and thresholds unchanged. No full-site rerun, workaround, original requirement closure, physical-phone, human or independent accuracy claim.",
+  "scope_ids": [
+    "F-139",
+    "F-142"
+  ],
+  "files": {
+    "scripts/verify-site-accessibility.cjs": "9cf9cc16c9bb56356a2805c8ecc8aa5f4c442b605f098c7f94efb21dead10e28",
+    "docs/a11y-dialog-failure-context.md": "b11277a8ef19a4a273b74098aaa0c02bbd921e17986a27ea2fc3f19da9251649",
+    "runs/2026-11-20-a11y-mt-iv-focused-before.json": "74e31787f4ee1abef3defeb490639cb36ff96aad37f7f4af4f50448e58301562",
+    "runs/2026-11-20-a11y-dialog-failure-context-controls.json": "658529b71f4dbea2dcad3d454562cd27671bede37e6946c0bf53fc7da9771082"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-a11y-mt-iv-focused-before.json",
+      "sha256": "74e31787f4ee1abef3defeb490639cb36ff96aad37f7f4af4f50448e58301562"
+    },
+    {
+      "path": "runs/2026-11-20-a11y-dialog-failure-context-controls.json",
+      "sha256": "658529b71f4dbea2dcad3d454562cd27671bede37e6946c0bf53fc7da9771082"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-site-accessibility.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T04:38:19.379945+00:00"
+    }
+  ]
+}

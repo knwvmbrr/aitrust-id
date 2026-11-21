@@ -9,6 +9,13 @@ Recorded 2026-11-21T05:21:40.284076+00:00 · Contributor: /root · change
 - **Changed.** Assigned independent Android first-Share repair, phone quotation grammar and carried JS notice jobs with predeclared software acceptance.
 - **Evidence.** The board names actual workers, isolated jobs and full original limits before implementation; Android remains separate from website publication. [Change record](./runs/changes/2026-11-21-052140-nov21-independent-delivery-wave-bcc4ecbe.json).
 - **Not claimed.** No new closure or percentage change. Originals132complete/70open; target60unmet. This is a dated assignment snapshot, not perpetual workers.
+### 2026-11-21-043819-dialog-measurement-failure-context-5b677ad1
+
+Recorded 2026-11-21T04:38:19.116678+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Add failure-only bounded dialog/route identity context and operation-stage attribution to the existing accessibility verifier, with isolated privacy controls.
+- **Evidence.** Four focused unchanged actual MTdark-to-IV checks pass without reproducing historical timeout. Final source-hashed browser controls suppress private DOM/input/hash/context values, discriminate expected dialog identity and bound closed/missing/hung-page failure observation. [Change record](./runs/changes/2026-11-21-043819-dialog-measurement-failure-context-5b677ad1.json).
+- **Not claimed.** Diagnostic-only; historical timeout cause UNESTABLISHED. Product/router source, successful site operations, waits, predicates and thresholds unchanged. No full-site rerun, workaround, original requirement closure, physical-phone, human or independent accuracy claim.
 
 
 ## Unreleased — 2026-11-20
