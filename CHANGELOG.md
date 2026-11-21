@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-150908-local-policy-source-whitespace-identity-5e3f15c6
+
+Recorded 2026-11-21T15:09:08.348120+00:00 · Contributor: Codex · change
+
+- **Changed.** Removed trailing blank lines from the new owned I/O helper and captured the corrected exact-source Mac workflow; prior execution remains historical.
+- **Evidence.** Code body equals the reviewed helper after stripping only trailing newline bytes. Exact-source Mac27 groups and73 recorded ordinary CLI operations pass with zero failures/errors/skips; no behavior changed. [Change record](./runs/changes/2026-11-21-150908-local-policy-source-whitespace-identity-5e3f15c6.json).
+- **Not claimed.** Source identity refresh only, no original closure or outside-human/commercial acceptance. Authorized isolated Linux proof and protected integration remain pending.
+
+
 ### 2026-11-21-150636-governed-local-organization-policy-edd34e1e
 
 Recorded 2026-11-21T15:06:36.185720+00:00 · Contributor: Codex · change

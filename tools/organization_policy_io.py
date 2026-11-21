@@ -237,5 +237,3 @@ class Capture:
             return False
         if kind is not None and self.output_may_exist:
             raise OutputCommitUncertain() from None
-
-
