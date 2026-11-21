@@ -130,7 +130,8 @@
     "legal_accountable_operator": "Michael R. McGuire",
     "ps_enhancement_engineer": "/root/share_debugger",
     "mt_context_engineer": "/root/web_camo",
-    "android_runtime_integrator": "/root"
+    "android_runtime_integrator": "/root/share_debugger",
+    "distribution_engineer": "/root/seo"
   },
   "tag_bots": [
     {
@@ -166,12 +167,12 @@
     {
       "tag_id": "T-MT",
       "bot_id": "tag_mt",
-      "actual_worker": null,
-      "status": "published",
-      "checked_at": "2026-11-20T17:08:16.518216+00:00",
+      "actual_worker": "/root/web_camo",
+      "status": "active",
+      "checked_at": "2026-11-21T05:21:40.232999+00:00",
       "current_component_status": "Scoped method component published from protected04b11a12; full tag remains independently unvalidated.",
       "blocking_acceptance": "Published literal wording and private choice workflows do not establish contextual use/mention, feasible alternatives, attribution, actual independent MT agreement/error rates or accepted tag mapping.",
-      "next_task": "Advance remaining original-specific acceptance; do not rerun completed software jobs."
+      "next_task": "session-mt-mobile-quotation"
     },
     {
       "tag_id": "T-PS",
@@ -746,7 +747,7 @@
         "N-014",
         "F-142"
       ],
-      "worker": "/root",
+      "worker": "/root/share_debugger",
       "status": "active",
       "deliverable": "Reconcile and publish the existing compile-verified Android Share preview with strict current-source license/KVM preflight; obtain actual disposable runtime proof only if its existing licensed prerequisites are met.",
       "done_evidence": [
@@ -754,20 +755,16 @@
         "Exact existing accepted license match and official package identities checked; no new license assent/local SDK download/production signing or phone install.",
         "Different reviewer verifies immutable actual evidence; physical device/TalkBack and full N014/F142 remain open until their actual acceptance."
       ],
-      "blocker": "Current diagnostic runtime stopped at first receive with owned Ready UI and no synthetic text; zero cases completed. Exact cause remains unestablished.",
+      "blocker": "First shared input intermittently disappears into the Ready screen; fixed three-VM study reproduced failure in1of3. Root cause unestablished; no new unchanged retry.",
       "next_unblocked_task": "session-f012-closure-adjudication",
       "assigned_at": "2026-11-19T18:24:57.745970+00:00",
       "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-      "current_status": "Dated separate diagnostic lane active. Historical d507 seven-case execution does not erase subsequent zero-case failures; no native correction is accepted here.",
+      "current_status": "New source/lifecycle/driver investigation active; no native correction accepted or task closure.",
       "active_followup": {
-        "checked_at": "2026-11-20T18:05:03.124014+00:00",
+        "checked_at": "2026-11-21T05:21:40.232999+00:00",
         "actual_worker": "/root/share_debugger",
-        "pull_request": 134,
-        "candidate_head": "cad8bfb28b44ab5257dcb07d0c5823275626b98b",
-        "hosted_run": 44787621743,
         "status": "active_at_snapshot",
-        "scope": "Bounded diagnostic followup after first-receive failure. Owned Ready UI was observed without synthetic text; zero runtime cases completed and exact cause remains unestablished. No Android correction is accepted on this branch.",
-        "evidence": "runs/2026-11-20-credential-closeout-android-snapshot.json"
+        "scope": "Evidence-backed diagnosis/fix in isolated Android branch; retain all7 original controls, privacy clearing and independent physical/human gates."
       }
     },
     {
@@ -847,6 +844,46 @@
         "integration_completed_by": "/root",
         "final_evidence_reviewed_by": "/root/seo"
       }
+    },
+    {
+      "task_id": "session-mt-mobile-quotation",
+      "original_ids": [
+        "T-MT",
+        "F-019c"
+      ],
+      "worker": "/root/web_camo",
+      "status": "active",
+      "deliverable": "An explicitly selected on-device balanced straight-or-curly quotation observation for ordinary phone text, with the original ASCII method and independent MT checks preserved.",
+      "done_evidence": [
+        "Versioned finite grammar handles declared nonnested ASCII or curly double quotes; mixed/mismatched/escaped/nested syntax refuses instead of inventing context.",
+        "Exact whole canonical records, raw/frozen NFC/method/source bindings and short bounded descriptions pass actual Chromium/WebKit phone/desktop checks.",
+        "Edit/clear/cancel/unmount and malformed/missing worker/source failures refuse locally; old authority/urgency/choice and unrelated tag routes retain their own operation.",
+        "Different review, applicable protected checks and actual live publication precede software-job closure; no MT verdict, intent, empirical agreement or original closure."
+      ],
+      "blocker": null,
+      "next_unblocked_task": "session-web-js-notices",
+      "assigned_at": "2026-11-21T05:21:40.232999+00:00",
+      "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647"
+    },
+    {
+      "task_id": "session-web-js-notices",
+      "original_ids": [
+        "F-057",
+        "X-02"
+      ],
+      "worker": "/root/seo",
+      "status": "active",
+      "deliverable": "Ship the exact retained third-party license/attribution notices for the website JavaScript production dependency graph in its actual built/public artifact.",
+      "done_evidence": [
+        "Bind all selected production-lock packages to exact existing upstream archive/notice records; preserve full copyright and permission text.",
+        "Normal website preparation deterministically carries notices and package/source identities; actual built artifact check rejects unknown/changed/missing notices or locks.",
+        "Existing development deploy and independently admitted PS source route remain functional; no unreviewed route or global legal clearance is granted.",
+        "Different reviewer, source-bound execution, protected checks and actual live artifact delivery precede software-job closure; full F057/X02 acceptance remains preserved."
+      ],
+      "blocker": null,
+      "next_unblocked_task": "session-android-runtime-integration",
+      "assigned_at": "2026-11-21T05:21:40.232999+00:00",
+      "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647"
     }
   ],
   "original_open_requirements": [
@@ -5491,7 +5528,7 @@
     "tools/review_execution.py": "a100fbd3ba79d583423e9398937e5a218588fe699b6a084e00a6947f5506578a",
     "runs/2026-11-20-credential-closeout-android-snapshot.json": "6aace06e22618d8fe554784336d84d528a6ff13fa324cd8eaa9a6476e4a69ee4"
   },
-  "updated_at": "2026-11-20T18:05:03.124014+00:00",
+  "updated_at": "2026-11-21T05:21:40.232999+00:00",
   "closeout": {
     "recorded_at": "2026-11-20T17:08:16.518216+00:00",
     "protected_source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
@@ -5516,7 +5553,7 @@
     "wave_id": "2026-11-19-ps-mt-android",
     "started_at": "2026-11-19T18:24:57.745970+00:00",
     "source_commit": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-    "status": "Scoped PS/MT/public browser deliveries published; Android followup active; original goal unmet",
+    "status": "2026-11-21 independent Android fix, mobile quotation method and shipped JS notice repair active at dated snapshot",
     "goal": "Advance original70 toward60; count only full functioning original acceptance. Skip final owner/external gates and continue independent engineering.",
     "immutable_session_baseline_retained": "3716233b9460efa57c1f0d01bfe30989395efcc4",
     "prior_closed_scoped_tasks_retained": 9,
@@ -5775,7 +5812,7 @@
         "remaining_full_acceptance": "Actual moderation/response owners, inboxes, approved deployment and live operations remain."
       }
     ],
-    "last_handoff_at": "2026-11-20T17:08:16.518216+00:00",
+    "last_handoff_at": "2026-11-21T05:21:40.232999+00:00",
     "commit_handoff_status": "Prepared while exact frozen PS Linux proof and PM protected integration remain active. No new completion counter changes.",
     "visible_delivery": {
       "task_id": "session-public-credential-device",
@@ -5788,7 +5825,8 @@
       "published_at": "2026-11-20T16:58:34.418Z",
       "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
       "evidence": "runs/2026-11-20-credential-publication.json"
-    }
+    },
+    "new_wave_plan": "docs/delivery-wave-2026-11-21.md"
   },
   "candidate_original_path": {
     "id": "F-012",
