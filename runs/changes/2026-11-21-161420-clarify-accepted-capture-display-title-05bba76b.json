@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-161420-clarify-accepted-capture-display-title-05bba76b",
+  "recorded_at": "2026-11-21T16:14:20.839272+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "599a07a8d58f3888e8f82700f06a2177c94dca59",
+  "changed": "Displayed the completed job as accepted DOM capture and preserved its old fetch/tee title as historical_title.",
+  "proves": "The visible100percent label describes the route actually verified; original master job, outcome, full acceptance fingerprint and133/69 accounting remain unchanged.",
+  "limits": "No MAIN-world fetch/tee or new capture behavior is asserted.",
+  "scope_ids": [
+    "F-030"
+  ],
+  "files": {
+    "docs/scope-progress.json": "c7dea5d3e608657c31c560e8ef2e781d733739d01c37332bf9959a2e53e2338f",
+    "docs/scope-progress.md": "7192beee911ff509305a34a79018acf01a3593f0a2120c0830321fc24daa2ea1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-f030-dom-replacement-independent-review.json",
+      "sha256": "e54a7c4bc671207eb0f979839cca01c902b63a4c1fa039e9810c1894df7a50db"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/session-delivery.py",
+        "--check-session"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T16:14:21.373924+00:00"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-163925-correct-connection-catalogue-contract-6986f0a5",
+  "recorded_at": "2026-11-21T16:39:25.342003+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "02e4f53cb563f8b689ffc625bc31184904951574",
+  "changed": "Preserved actual build-success/catalogue-failure evidence and updated the exact sitemap assertion for the added connection page, with source-byte checks for both downloads.",
+  "proves": "Actual unmodified catalogue execution reproduced the old36-versus-new37 assertion. The corrected contract retains uniqueness and required reference pages and adds exact schema/guide delivery checks.",
+  "limits": "The corrected focused and full website executions must still pass. No existing failure, independent accuracy or pending activation is relabeled complete.",
+  "scope_ids": [
+    "WP-INTEGRATIONS"
+  ],
+  "files": {
+    "scripts/verify-site.cjs": "7de50e6f676b29e635036f9ba78b13688b1cc36ed97fddcd86de9a247339a07d",
+    "runs/2026-11-21-api-catalogue-contract-failure.json": "c7381550a04dc52468ee24eec8934bcf4e672dbb431372a0ea3a9fd06bbbd019"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-api-catalogue-contract-failure.json",
+      "sha256": "c7381550a04dc52468ee24eec8934bcf4e672dbb431372a0ea3a9fd06bbbd019"
+    }
+  ],
+  "checks": []
+}

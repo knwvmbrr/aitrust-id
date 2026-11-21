@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-21T11:31:36.349842+00:00",
+  "audited_at": "2026-11-21T16:10:18.458650+00:00",
   "client_date": "2026-11-21",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -2657,40 +2657,52 @@
     {
       "id": "F-030",
       "kind": "requirement",
-      "title": "MV3 MAIN-world capture — fetch patch plus ReadableStream.tee()",
-      "percent_complete": 40,
+      "title": "Completed-response browser capture — accepted DOM alternative",
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
-        "implemented_mechanism"
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-11-19T05:44:15.750347+00:00",
-      "checked_by": "Codex",
+      "audited_at": "2026-11-21T16:03:31.763400+00:00",
+      "checked_by": "Codex /root/seo distinct acceptance review",
       "implemented_by": [
         "Codex — prior session/run attribution",
         "Codex — bounded inactive developer observer and original prototype retirement, 2026-10-13",
-        "Codex stream observer lane — handled CRLF split at the line limit with exact host-response preservation controls, 2026-11-17T22:21:46.286300+00:00"
+        "Codex stream observer lane — handled CRLF split at the line limit with exact host-response preservation controls, 2026-11-17T22:21:46.286300+00:00",
+        "Codex /root — selected existing DOM alternate and executed signed current-source live vendor lifecycle, 2026-11-21T16:03:31.763400+00:00"
       ],
       "planning_contributors": [
         "Codex — scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex /root"
+      ],
+      "completed_at": "2026-11-21T16:03:31.763400+00:00",
+      "completion_timestamp_basis": "Actual current installed Chrome capture, outage/recovery and final pause independently reviewed at this audit.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
         "extension/src/main-world/stream-observer.mjs",
         "docs/stream-observer-plan.md",
         "tests/stream-observer.cjs",
         "runs/2026-10-08-browser-checks.json",
         "runs/2026-11-17-stream-crlf-boundary.json",
-        "docs/f030-live-stream-plan.md"
+        "docs/f030-live-stream-plan.md",
+        "runs/2026-11-21-installed-live-capture-lifecycle.json",
+        "runs/2026-11-21-f030-dom-replacement-independent-review.json",
+        "docs/f030-dom-replacement-result.md"
       ],
-      "evidence_scope": "The inactive synthetic observer now handles a CR/LF chunk split at the exact configured line limit, preserves host response bytes and refuses oversized or malformed framing. Live vendor capture or an accepted replacement remains pending. A fresh synthetic live response exposed a mixed-frame transport privacy boundary and source/DOM representation mismatch. No live stream hook, parser activation or new permission was enabled; a separate explicit opt-in remains required before observing mixed streams.",
-      "required_acceptance": [
+      "evidence_scope": "Full accepted F030 alternative: explicitly selected completed-response DOM adapter, actual installed-source live public Homebrew PS/PII attachment, short PS details, actual gateway outage without stale findings, recovery on same response and final paused capture. MAIN-world fetch/tee remains inactive and unverified. No independent detector accuracy, outside-user, broader vendor lifecycle or human accessibility conclusion.",
+      "required_acceptance": [],
+      "queue": "completed",
+      "completed_acceptance": [
         "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation."
       ],
-      "queue": "open"
+      "prior_next_fix": "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation.",
+      "historical_title": "MV3 MAIN-world capture — fetch patch plus ReadableStream.tee()"
     },
     {
       "id": "F-031",
@@ -8744,18 +8756,20 @@
       "id": "N-010",
       "kind": "requirement",
       "title": "Personal/team/enterprise/proprietary tag offering boundaries",
-      "percent_complete": 60,
+      "percent_complete": 80,
       "milestones_passed": [
         "bounded_contract",
         "implemented_mechanism",
-        "executable_checks"
+        "executable_checks",
+        "selected_integration"
       ],
-      "audited_at": "2026-10-11T23:05:16.789989+00:00",
-      "checked_by": "Codex",
+      "audited_at": "2026-11-21T16:10:18.458650+00:00",
+      "checked_by": "Codex /root integration; distinct /root/seo review",
       "implemented_by": [
         "Codex — prior session/run attribution",
         "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
-        "Codex — caller-bound offline literal policy, namespace qualification, private export and actual Mac/network-denied Linux controls, 2026-10-11T23:05:16.789989+00:00"
+        "Codex — caller-bound offline literal policy, namespace qualification, private export and actual Mac/network-denied Linux controls, 2026-10-11T23:05:16.789989+00:00",
+        "Codex /root/share_debugger — governed tenant registry; distinct /root/seo Mac/Linux review; integrated 2026-11-21T16:10:18.458650+00:00"
       ],
       "planning_contributors": [
         "Codex — scope normalization and package contract"
@@ -8763,7 +8777,7 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Accept namespace ownership and actual custom scope/licensing; integrate and independently validate each organization job, permission, export and human operation before commercial rollout. The optional caller-bound literal prototype is functioning; it does not issue public tags or establish employee consent.",
+      "next_fix": "Complete retained actual human organization operation and full commercial conformance before commercial rollout; require protected hosted CI for integrated software. Governed local registry works without a running organization service.",
       "next_owner": "Codex",
       "evidence": [
         "site/src/policies.js",
@@ -8779,9 +8793,14 @@
         "runs/2026-10-11-private-policy-mac-controls.json",
         "runs/2026-10-11-private-policy-linux-controls.json",
         "runs/2026-10-11-private-policy-staging-cleanup.json",
-        "docs/quarterly-brand-and-agent-plan.md"
+        "docs/quarterly-brand-and-agent-plan.md",
+        "docs/organization-policy-registry.md",
+        "docs/organization-policy-registry-result.md",
+        "runs/2026-11-21-organization-policy-mac-final-operation.json",
+        "runs/2026-11-21-organization-policy-linux-operation.json",
+        "runs/2026-11-21-organization-policy-linux-independent-review.json"
       ],
-      "evidence_scope": "Selected offline literal-policy component and refusals only; no enterprise service, namespace ownership, employee consent or independent real-world validation.",
+      "evidence_scope": "Governed local registry: technical tenant acceptance, per-role capabilities, immutable revisions, supervised workers and permissioned export.27 control groups/73 actual CLI operations per Mac/Linux platform and distinct source-bound review. Real organization identity, employee consent, human operation and full commercial conformance remain unaccepted.",
       "required_acceptance": [
         "Accept organization namespaces and ownership boundaries; implement per-tenant custom policy and validate each job separately. No organization service is running or sold."
       ],
@@ -14492,6 +14511,41 @@
       "evidence_scope": "Four software controls and actual draft CLI pass. No accounts, approvals or network publication are claimed.",
       "required_acceptance": [
         "Create and verify project-owned social accounts; obtain exact owner approval and verify one platform post, its returned ID and safe retry behavior. Run review workflow in CI."
+      ],
+      "queue": "open"
+    },
+    {
+      "id": "ENH-REMOTE-TAG-CONNECTION",
+      "kind": "enhancement",
+      "title": "Optional open HTTP and remote MCP connection for AI applications",
+      "percent_complete": 60,
+      "milestones_passed": [
+        "bounded_contract",
+        "implemented_mechanism",
+        "executable_checks"
+      ],
+      "audited_at": "2026-11-21T16:10:18.458650+00:00",
+      "checked_by": "Codex /root; distinct /root/seo source/Linux review",
+      "implemented_by": [
+        "Codex /root/web_camo — bounded HTTP/MCP server and reviewed proxy preparation"
+      ],
+      "planning_contributors": [
+        "Michael — open connection for ChatGPT, Anthropic and other AI applications"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Activate exact immutable release under effective systemd isolation; prove trusted public HTTPS and official MCP/ordinary clients; publish reviewed instructions and privacy notice. Keep host-specific account/workspace acceptance separate.",
+      "next_owner": "Codex /root integration; /root/web_camo deployment; /root/share_debugger guide",
+      "evidence": [
+        "docs/remote-tag-connectors-plan.md",
+        "docs/remote-tag-connectors-result.md",
+        "runs/2026-11-21-remote-tag-connectors-direct-Linux-execution.json",
+        "runs/2026-11-21-remote-proxy-corrected-Linux.json"
+      ],
+      "evidence_scope": "Actual14 remote HTTP/MCP controls and11 private Linux proxy groups. ExistingPS canonical parity; remote privacy explicitly Unavailable. No public or host approval claim.",
+      "required_acceptance": [
+        "Effective isolated immutable service and trusted public HTTPS; canonical supported/no-finding, refusal and recovery through official modern/legacy MCP and ordinary API; truthful published connection and data-flow instructions."
       ],
       "queue": "open"
     }

@@ -1,0 +1,76 @@
+{
+  "captured_at": "2026-11-21T16:00:24.240502+00:00",
+  "pass": true,
+  "kind": "actual_installed_Chrome_completed_DOM_capture_lifecycle",
+  "performed_by": "Codex /root through native Chrome UI",
+  "source_base": "e8287050493f3f30b6c92967beed224a6c8b4dc3",
+  "source_sha256": {
+    "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
+    "extension/src/shared/contract.js": "5250bacc684a6aae6a55d1f3f9c86e12e1422cf0520880e2507a0baa69efecd7",
+    "extension/src/shared/transport.js": "a012bb6405353a8fda04f90b34c1bc0ec22dcbdb6577a1746f53bbd88f19c352",
+    "extension/src/adapters/chatgpt.js": "483094b7a0149cf4862c437441628151d106f6c3c4360f53be8eb4e7ddae0a1c",
+    "extension/src/content/badge.js": "fb66db5111dc7739c4fc360dca2085588bf6882062e5696995bed9ccb90d5a23",
+    "extension/src/content/bridge.js": "c1f6ec8cdef417609635709664576c706abc94cf808cce0333c937d4251650f1",
+    "extension/src/sw/service-worker.js": "c135a5e367f0dfb976becd05fff27e175b58760f1149d56827fc8a3c07c32c5e",
+    "extension/src/options.html": "44edfdf585957b3c9b00ed245c30c28b74a25f3de5431ed4b8802c4551325146",
+    "extension/src/options.js": "2e0c4848e6913c8e979ec7af124118bd23ddfbcdc748cf541113a07406790b64"
+  },
+  "evidence_sha256": {
+    "runs/2026-11-21-installed-extension-source-paused.json": "6e9df68e0dbae791d8e5540aec2e0f8bc2f35be9df3292a4f2a783b5b6ae2f7a",
+    "runs/2026-11-21-current-signed-capture-service.json": "fdd79bca5e94ed2de2c83cea7975cd0d9226df50c88780f727282b71571278b5",
+    "runs/2026-11-21-capture-static-address-recovery.json": "cffcd71231c243bfc634d52a3da647f60f221331ed89846b606e36f16e36a106",
+    "runs/2026-11-21-capture-mounted-source-independent-review.json": "eb0c9fb3be41ced9c2014c87dd3ea9a43e1d49624240d2a85fb738260d21b643"
+  },
+  "authorization": "Owner expressly authorized prepared test token/public key and existing public Homebrew answer through localhost SSH forward to dedicated staging; pause after testing.",
+  "data_scope": "Existing public Homebrew install command only; no new chat/message, prompt edit, unrelated conversation or general history collected.",
+  "public_key_id": "6fd294f33d1b7ea1a0727022753f77bddc776d1d992147589a94fb06fa681ab6",
+  "route": "completed assistant-response DOM adapter; no MAIN-world fetch or stream hook",
+  "observations": [
+    {
+      "case": "supported_public_response",
+      "pass": true,
+      "observed": "PS and PII compact buttons beneath the single completed assistant code response; original response remains readable."
+    },
+    {
+      "case": "PS_details",
+      "pass": true,
+      "observed": "PS opens its own short explanation, command-risk rather than scam boundary, reproduction and matched-location disclosures, Recheck locally and Download record controls."
+    },
+    {
+      "case": "real_candidate_gateway_outage",
+      "pass": true,
+      "fault": "Stopped only the ownership-labeled temporary gateway candidate. Existing dedicated staging health remained200.",
+      "observed": "Recheck locally removed PS and PII findings and showed a single check-status control: A valid local evaluation could not be obtained. Could not authenticate a result from your local service. Check its signing key and connection.",
+      "stale_finding_present": false,
+      "safe_or_no_findings_claim_present": false
+    },
+    {
+      "case": "gateway_recovery",
+      "pass": true,
+      "fault_restored": true,
+      "observed": "Restarted the same candidate, health200, used status details Recheck locally. PS and PII returned beneath the same completed response."
+    },
+    {
+      "case": "final_pause",
+      "pass": true,
+      "observed": "Enable checks on ChatGPT checkbox value0 and Checks paused. Pending checks are cancelled and tags are removed. Navigating back to the public test did not display tags.",
+      "checks_enabled": false
+    }
+  ],
+  "credential_handling": "Existing authorized token imported into extension local storage through protected field; token/private key not printed, committed, exported or placed on clipboard. Public signing profile imported by file picker.",
+  "new_browser_permissions": false,
+  "test_service_publicly_exposed": false,
+  "local_Docker_started": false,
+  "independent_accuracy_verified": false,
+  "outside_user_verified": false,
+  "physical_iPhone_verified": false,
+  "human_VoiceOver_verified": false,
+  "MAIN_world_stream_verified": false,
+  "limits": [
+    "One actual current-vendor completed public response; broader regeneration/multi-response/vendor compatibility remains a separate gate.",
+    "Browser UI observation plus separately source-bound authenticated service controls; no raw browser dump or private conversation URL retained.",
+    "No screenshot saved to public source because full native browser view includes unrelated tabs/account UI.",
+    "PII rendering is observed, not recognition accuracy validation.",
+    "F030 completion requires separate reviewer acceptance of the expressly permitted DOM replacement, not a fetch-patch claim."
+  ]
+}

@@ -48,8 +48,8 @@ Audit timestamp: **{data['audited_at']}** (UTC; client date {client_date.strftim
 **{len(done)} complete requirement records; {202-len(done)} remain open.** All 202
 original IDs are retained. Completed records leave the open queue, not history.
 The 39 packages and 117 subtasks remain separately tracked: broad package
-completion cannot be inferred from one functioning feature. Four research
-opportunities are attached to existing packages, without expanding or replacing
+completion cannot be inferred from one functioning feature. Separately tracked
+enhancements are attached to existing packages, without expanding or replacing
 the adopted tag taxonomy.
 
 ## How to read the percentages

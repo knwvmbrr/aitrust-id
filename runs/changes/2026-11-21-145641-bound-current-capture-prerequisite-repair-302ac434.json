@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-145641-bound-current-capture-prerequisite-repair-302ac434",
+  "recorded_at": "2026-11-21T14:56:41.868493+00:00",
+  "author": "Codex PM /root; independent containment review /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e8287050493f3f30b6c92967beed224a6c8b4dc3",
+  "changed": "Specify isolated current-source signed capture staging with cached dependencies, unique private credentials, measured runtime containment and owner-gated browser trust.",
+  "proves": "Current cached requirement identities match; the plan preserves the existing stack and forbids public exposure, local Docker and silent unsigned substitution.",
+  "limits": "Architecture and prerequisite repair only; no live capture or original closure is claimed.",
+  "scope_ids": [
+    "F-030"
+  ],
+  "files": {
+    "docs/original-closure-wave-nov21.md": "8a04b858e9b24c2e43606ea9ef0aefc47f69eb699497e064e550c98b4bfaebf7"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/session-delivery.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T14:56:42.410403+00:00"
+    }
+  ]
+}

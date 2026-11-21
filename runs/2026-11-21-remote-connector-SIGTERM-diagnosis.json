@@ -1,0 +1,10 @@
+{
+  "profile": "remote-connector-SIGTERM-exit-diagnosis/v1",
+  "captured_at": "2026-11-21T14:45:06.860156+00:00",
+  "pass": false,
+  "prior_failed_receipt_sha256": "de99c2ecf962253edf140bdbc7d9585dc432fb65ed47dcc93c52ce7539286edb",
+  "error": "Authored CLI test expected exit0 but observed-15 after intentionalSIGTERM.",
+  "actual_source_diagnosis": "Pinned uvicorn0.54.0 Server.capture_signals restores original handlers and re-raises capturedSIGTERM after graceful lifecycle.",
+  "fix": "Accept only exit0 or intentional-SIGTERM after bounded reap; retain no-fetch/no-input-log and worker-reap lifecycle tests.",
+  "runtime_or_canonical_failure": false
+}

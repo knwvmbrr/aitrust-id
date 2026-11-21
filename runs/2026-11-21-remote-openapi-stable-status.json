@@ -1,0 +1,54 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T16:22:23.774699+00:00",
+  "performed_by": "Codex /root/seo",
+  "owned_source_sha256": {
+    "integrations/ai-tools/remote-openapi.json": "f8af27c8727131496a99c6194d2bf69dd9791c106a8fc1565ce8e20f43c3c953",
+    "scripts/verify-remote-openapi.py": "dd8b983a64da448aba59935359da539b3220aab372ee173b437aeda5c7be7e28",
+    "tests/test_remote_openapi.py": "dc6c5ebd0c078e83fbeae1c09437a6c66171d4f02b9c014e661b33497e6ddc26"
+  },
+  "implementation_source_sha256": {
+    "tools/remote_tag_server.py": "b656abfb64eb925f8e63789365590a35c652d35e16001da284fa8f827162a72d",
+    "tools/tag_api.py": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e",
+    "deploy/ai-tools/render.py": "d7d994babf384201d3285b509a281faa417e154f84790853055291f17b4faa89"
+  },
+  "executed": [
+    {
+      "argv_template": [
+        "verification-python",
+        "-B",
+        "-m",
+        "pytest",
+        "tests/test_remote_openapi.py",
+        "-q",
+        "-k",
+        "surface_and_claim_drift_refuse"
+      ],
+      "exit": 0,
+      "passed": 1,
+      "deselected": 7,
+      "elapsed_seconds_reported_by_pytest": 0.6
+    },
+    {
+      "argv_template": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "scripts/verify-remote-openapi.py"
+      ],
+      "exit": 0,
+      "pass": true,
+      "SDK_imported": false,
+      "public_activation_verified": false,
+      "AI_host_approval_verified": false
+    }
+  ],
+  "correction": "Stable engineering-preview transport declaration replaces forced pendingdeployment text. Deployment reachability and AI-host installation remain separately verified and are not asserted by this asset.",
+  "prior_focused_eight_receipt": "runs/2026-11-21-remote-openapi-contract.json",
+  "limits": [
+    "Earlier eight-test pass is historical; current affected regression and isolated checker passed. Parent will run the current full focused file on integration.",
+    "No runtime, route, schema projection, provider URL, limits, permissions, dependency or original scope changed.",
+    "No host approval, actual public activation or independent accuracy established by this checker."
+  ]
+}

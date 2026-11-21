@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-161145-integrate-governed-policy-and-remote-scope-42ddebff",
+  "recorded_at": "2026-11-21T16:11:45.758526+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c8b6fe9d5f1335c0d271c6142a473c5480d5ff19",
+  "changed": "Integrated the governed local organization-policy mechanism at80 with human/commercial gates retained, registered the requested remote API enhancement separately and added the new connection page to sitemap generation.",
+  "proves": "18 integrated sources match actual Mac execution, ordinary CLI starts, actual Linux review is retained and202 original IDs stay133 complete69 open.",
+  "limits": "Remote public activation, protected hosted checks and host-specific connection approval remain pending. No other original requirement is completed; planned tags are not advertised as working detectors.",
+  "scope_ids": [
+    "N-010",
+    "WP-INTEGRATIONS"
+  ],
+  "files": {
+    "docs/scope-progress.json": "fe899a69f8be31b0a55b5f1fc54a906f682afbc8efaef9dfc2f5c8f66f76943c",
+    "docs/scope-progress.md": "8b9c9748d57aa55923afde66b3b7d709c4f536f225ad23be78de5a9d3d7e15d1",
+    "docs/scope-task-index.md": "26ccacff0af55970e96508a999a14757971752faa128e9814c2d406c42b04c58",
+    "state.json": "041bb62b0920b128271db5796bd78afd29891d98ee9aa81bb7a6c80ffbc0f42d",
+    "site/scripts/prepare.mjs": "22d66ccdfbd238977ad2b12df81a6fa958421da188b7b94414b12ae0f374b74e",
+    "runs/2026-11-21-organization-policy-integrated-source.json": "88bf917f8140a7ad7b85e6a7169a40d7a73b8acfe8d98f2d7d313f9b2f111895"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-organization-policy-integrated-source.json",
+      "sha256": "88bf917f8140a7ad7b85e6a7169a40d7a73b8acfe8d98f2d7d313f9b2f111895"
+    },
+    {
+      "path": "runs/2026-11-21-organization-policy-linux-independent-review.json",
+      "sha256": "977fc74b0ce331fae12269996887527f817f48c958b2ecc0bdfcccadcdbf8a81"
+    },
+    {
+      "path": "runs/2026-11-21-remote-tag-connectors-direct-Linux-execution.json",
+      "sha256": "fff3bbc1d03be82184f44273fef67da9bfc21ab1694b3e7cdfb643612439a23a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T16:11:45.917333+00:00"
+    }
+  ]
+}

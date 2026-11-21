@@ -1,0 +1,9 @@
+{
+  "profile": "remote-connector-repeated-cancel-first-correction/v1",
+  "captured_at": "2026-11-21T14:50:38.397070+00:00",
+  "pass": false,
+  "peer_original_receipt_sha256": "72abfe9a3edcfd577e6fd16ed181159b0dc347ddc2a34db70701a1418c703643",
+  "observed": "Targeted repeatedcancel/pendinglaunch-shutdown control failed with PermissionError from process-group kill; duplicate concurrent reapers were a source risk.",
+  "next_change": "Share one owned reaper task perlaunch across request cleanup and shutdown; add test-owned cleanup on assertionfailure. No blanketpermission-error bypass.",
+  "cause_retroactively_proven": false
+}

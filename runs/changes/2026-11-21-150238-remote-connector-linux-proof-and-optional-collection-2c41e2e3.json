@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-150238-remote-connector-linux-proof-and-optional-collection-2c41e2e3",
+  "recorded_at": "2026-11-21T15:02:38.752281+00:00",
+  "author": "Codex /root/web_camo; integration finding /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "789693271d8073cdb31566f62224500edcc1ee18",
+  "changed": "Recorded actual clean nonroot Linux connector execution and cleanup; corrected optional SDK test collection while retaining strict dedicated fourteen-control verification.",
+  "proves": "Exact789 tracked archive passed14 actual Linux groups with20 stable source identities and30 matching locked versions, private canary absent and owned workspace cleaned. Actual no-SDK stdlib import skips optional tests; dedicated verifier refuses without the SDK.",
+  "limits": "First Linux proof remains exact789 historical. Corrected test/verifier source needs fresh Linux execution; no runtime semantic change, public hosting, AI-account connection, hosted PII, accuracy or original closure.",
+  "scope_ids": [
+    "T-PS"
+  ],
+  "files": {
+    "docs/remote-tag-connectors-result.md": "afcbbf862eb7a3b6c94edd9948f5b5706fb5d4868250a1947ea72e4582b09e3b",
+    "tests/test_remote_tag_server.py": "fb531d9a4441d0c3ab39d393dc4a76867154f6fbd2dc8d17d9bfd9923a49d834",
+    "scripts/verify-remote-tag-server.py": "443e0085b0c0cdef89f5ab2d7b1123a388bb15b43ef161226a2f9465f626a54d",
+    "runs/2026-11-21-remote-tag-connectors-clean-Linux-execution.json": "401a5f327b241191d9ff97a5a17a758c258543ccdcd920ddd8a77b0e95caadb3",
+    "runs/2026-11-21-remote-tag-connectors-Linux-client-controls.json": "5c1c2af6455acf8174c651eb9c03b8894db80113a9ae0fd67509f8bf6afe42c0",
+    "runs/2026-11-21-remote-tag-connectors-Linux-cleanup.json": "7e06306af43888f9b48d21649022a140197a40ae132fe3d100292d9cf3666654",
+    "runs/2026-11-21-remote-tag-optional-SDK-correction.json": "35663497112f81afc53b62ac5674ea36360d85c8310b84ed5a5f7398dc676ab5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-remote-tag-connectors-clean-Linux-execution.json",
+      "sha256": "401a5f327b241191d9ff97a5a17a758c258543ccdcd920ddd8a77b0e95caadb3"
+    },
+    {
+      "path": "runs/2026-11-21-remote-tag-connectors-Linux-cleanup.json",
+      "sha256": "7e06306af43888f9b48d21649022a140197a40ae132fe3d100292d9cf3666654"
+    },
+    {
+      "path": "runs/2026-11-21-remote-tag-optional-SDK-correction.json",
+      "sha256": "35663497112f81afc53b62ac5674ea36360d85c8310b84ed5a5f7398dc676ab5"
+    }
+  ],
+  "checks": []
+}

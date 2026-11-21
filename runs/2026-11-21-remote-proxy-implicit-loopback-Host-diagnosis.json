@@ -1,0 +1,33 @@
+{
+  "rows": [
+    {
+      "status": 200,
+      "canonical_equal": false,
+      "cache_control": null,
+      "server": "Caddy",
+      "canary_absent": true,
+      "header_keys": [
+        "content-length",
+        "date",
+        "server"
+      ]
+    },
+    {
+      "status": 200,
+      "canonical_equal": false,
+      "cache_control": null,
+      "server": "Caddy",
+      "canary_absent": true,
+      "header_keys": [
+        "content-length",
+        "date",
+        "server"
+      ]
+    }
+  ],
+  "captured_at": "2026-11-21T15:32:17.855626+00:00",
+  "pass": false,
+  "diagnosis": "The loopback Caddy site address generated an implicit Host127.0.0.1 match, so requests carrying the approved provider Host never entered the route and received empty default200. Production uses the provider site address already; fix the private proof listener to explicit127.0.0.1 bind with no implicit IP Host selection.",
+  "source_commit": "a1cb7cba57ba786ad0b30133b2daeb29c0ca6957",
+  "public_service_deployed": false
+}

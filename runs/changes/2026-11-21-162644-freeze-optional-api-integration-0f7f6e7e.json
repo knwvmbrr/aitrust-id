@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-162644-freeze-optional-api-integration-0f7f6e7e",
+  "recorded_at": "2026-11-21T16:26:44.438723+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "02e4f53cb563f8b689ffc625bc31184904951574",
+  "changed": "Bound new remote and governed-local sources in the reviewed inventory, registered real OpenAPI tests in CI, added the exact API download and displayed current accepted scope titles without changing original records.",
+  "proves": "Actual integrated8-contract checks and SDK-free verifier pass; distinct bounded integration review preserves202 original identities and full acceptance. Governed80 state retains the literal60 prototype as history.",
+  "limits": "Source freeze before fresh protocol/website execution and protected publication. API activation remains held; no provider UI, accuracy, human acceptance or extra original closure.",
+  "scope_ids": [
+    "WP-INTEGRATIONS",
+    "N-010",
+    "F-030"
+  ],
+  "files": {
+    ".github/workflows/ai-tools.yml": "08f3df9e82811115abb9b1a01d27619ffe955ce723a829a1be2c7ea05e062a4b",
+    "scripts/verify-route-boundaries.py": "8b71f43562d46d30db4b7060dfa51708dee3fde268c72a083c019baed755a4ce",
+    "site/scripts/render-reference.mjs": "b4c264f7c9da6a8bd701a69d26f0514f6d19c2c69741880974eb93d1d66b7867",
+    "site/src/workflows/Scope.jsx": "c85846944aa5d32146075a4904ace115f0db97734d9d1cd7a1413385fe8d5f7f",
+    "state.json": "6076d254a629c76db4e862a8d54190fd30785b462401b2c821588d120a2a6e1b",
+    "runs/2026-11-21-optional-remote-tenant-prefreeze-review.json": "0523b97e83149f56c78005b37b413ad81b6e5d095c3c9bac5a3fd9768b91d699",
+    "runs/2026-11-21-remote-openapi-integrated-execution.json": "10da6c1203b5f18bc48a7e5025cf518351c640b00a737ef260fb9ae03f7c4de7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-remote-openapi-integrated-execution.json",
+      "sha256": "10da6c1203b5f18bc48a7e5025cf518351c640b00a737ef260fb9ae03f7c4de7"
+    },
+    {
+      "path": "runs/2026-11-21-optional-remote-tenant-prefreeze-review.json",
+      "sha256": "0523b97e83149f56c78005b37b413ad81b6e5d095c3c9bac5a3fd9768b91d699"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/session-delivery.py",
+        "--check-session"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T16:26:45.358339+00:00"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 Terms of use
-AI TRUST ID · Version 1.13 · Effective 2026-11-21
+AI TRUST ID · Version 1.14 · Effective 2026-11-21
 Published by AI Trust ID.
 
 Your rights when using the free preview and open source.
@@ -19,6 +19,11 @@ Read the method, supported scope, current evidence and limitations for the tag y
 
 PS method and evidence: /tags/ps/
 Validation and release policy: /policies/validation/
+
+Optional remote connections
+A separately chosen HTTP or MCP connection sends the selected text to its configured server. It offers the bounded PS development check; remote privacy redaction is unavailable and other planned tag capabilities are not offered by this connector. The local command, stdio integration and on-device checker do not activate this connection. An AI host may require its own account, permissions or administrator approval; compatibility is not provider approval or a tested ChatGPT/Claude account connection. No availability or safety guarantee is made.
+
+Connection steps and limits: /reference/remote-ai/
 
 Your software rights
 Project code is licensed under Apache-2.0; the specification is CC BY 4.0. The actual licenses govern copying, modification, redistribution, attribution, patents and warranty limitations. These website terms do not narrow those permissions or grant rights to third-party content or trademarks. Downloading software does not enroll you in a service or require a subscription.

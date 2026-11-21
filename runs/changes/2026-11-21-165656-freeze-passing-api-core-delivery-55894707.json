@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-165656-freeze-passing-api-core-delivery-55894707",
+  "recorded_at": "2026-11-21T16:56:56.162616+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "02e4f53cb563f8b689ffc625bc31184904951574",
+  "changed": "Captured the passing59-command website execution and1650-source boundary review, refreshed current protocol/website pointers and reused only fingerprint-matching PS/privacy/extension receipts.",
+  "proves": "All five current capability receipts match exact current inputs;61 protocol and59 website commands pass with stable source; actual catalogue/download/accessibility checks pass. Scope remains133 complete69 open.",
+  "limits": "ProtectedGitHub checks/public website delivery are next. Public API and provider-account connections remain held/pending; no independent accuracy or additional original closure.",
+  "scope_ids": [
+    "WP-INTEGRATIONS",
+    "F-030",
+    "N-010"
+  ],
+  "files": {
+    "runs/2026-11-21-api-core-final-website.json": "e53d8835a25ce798d449e87552c236333ddc22741f173430165deec57524a32f",
+    "runs/2026-11-21-api-core-boundaries.json": "c7741579570a600b6101a562814a6bf736c23bcd47f765a188529cd44d9c1d54",
+    "eval/route-boundaries.json": "84dd34fe5f99cc083c48351184950e3057054ec815269784400cee5a9d965e74",
+    "state.json": "ea9002bcbc2f8b567f7c432b34e5be297569a726486aaf050e763f8cef033e44"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-api-core-final-protocol.json",
+      "sha256": "b01ed5dd2cae1c8828a02726ffc7be4c79796481a879ea0f9d5f7e21118261c3"
+    },
+    {
+      "path": "runs/2026-11-21-api-core-final-website.json",
+      "sha256": "e53d8835a25ce798d449e87552c236333ddc22741f173430165deec57524a32f"
+    },
+    {
+      "path": "runs/2026-11-21-api-core-boundaries.json",
+      "sha256": "c7741579570a600b6101a562814a6bf736c23bcd47f765a188529cd44d9c1d54"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T16:56:56.904174+00:00"
+    }
+  ]
+}

@@ -2,6 +2,285 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-165656-freeze-passing-api-core-delivery-55894707
+
+Recorded 2026-11-21T16:56:56.162616+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Captured the passing59-command website execution and1650-source boundary review, refreshed current protocol/website pointers and reused only fingerprint-matching PS/privacy/extension receipts.
+- **Evidence.** All five current capability receipts match exact current inputs;61 protocol and59 website commands pass with stable source; actual catalogue/download/accessibility checks pass. Scope remains133 complete69 open. [Change record](./runs/changes/2026-11-21-165656-freeze-passing-api-core-delivery-55894707.json).
+- **Not claimed.** ProtectedGitHub checks/public website delivery are next. Public API and provider-account connections remain held/pending; no independent accuracy or additional original closure.
+
+
+### 2026-11-21-163925-correct-connection-catalogue-contract-6986f0a5
+
+Recorded 2026-11-21T16:39:25.342003+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Preserved actual build-success/catalogue-failure evidence and updated the exact sitemap assertion for the added connection page, with source-byte checks for both downloads.
+- **Evidence.** Actual unmodified catalogue execution reproduced the old36-versus-new37 assertion. The corrected contract retains uniqueness and required reference pages and adds exact schema/guide delivery checks. [Change record](./runs/changes/2026-11-21-163925-correct-connection-catalogue-contract-6986f0a5.json).
+- **Not claimed.** The corrected focused and full website executions must still pass. No existing failure, independent accuracy or pending activation is relabeled complete.
+
+
+### 2026-11-21-163541-record-website-interpreter-diagnosis-30ffa733
+
+Recorded 2026-11-21T16:35:41.431673+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Preserved the actual first website build failure and diagnosed the Node child interpreter mismatch.
+- **Evidence.** Build stopped on missing pydantic in the system Python; the parent source-bound verifier had used the approved venv by absolute path without propagating that interpreter selection to build children. [Change record](./runs/changes/2026-11-21-163541-record-website-interpreter-diagnosis-30ffa733.json).
+- **Not claimed.** Environment repair is selected, not yet a passing build. No source behavior, acceptance or public API exposure changed.
+
+
+### 2026-11-21-163225-bind-api-core-protocol-and-public-metadata-a7a61fed
+
+Recorded 2026-11-21T16:32:25.244280+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Captured all61 source-bound protocol commands and prepared current133/69 public scope,37 sitemap URLs and current version1.14 policy aliases while preserving versioned archives.
+- **Evidence.** Frozen protocol input fingerprint stayed stable and still matches after actual site data preparation. Public data derives from current preserved202 records. [Change record](./runs/changes/2026-11-21-163225-bind-api-core-protocol-and-public-metadata-a7a61fed.json).
+- **Not claimed.** Website execution, protectedCI and actual publication remain next; public API stillheld and other original/human/accuracy gates remain open.
+
+
+### 2026-11-21-162644-freeze-optional-api-integration-0f7f6e7e
+
+Recorded 2026-11-21T16:26:44.438723+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Bound new remote and governed-local sources in the reviewed inventory, registered real OpenAPI tests in CI, added the exact API download and displayed current accepted scope titles without changing original records.
+- **Evidence.** Actual integrated8-contract checks and SDK-free verifier pass; distinct bounded integration review preserves202 original identities and full acceptance. Governed80 state retains the literal60 prototype as history. [Change record](./runs/changes/2026-11-21-162644-freeze-optional-api-integration-0f7f6e7e.json).
+- **Not claimed.** Source freeze before fresh protocol/website execution and protected publication. API activation remains held; no provider UI, accuracy, human acceptance or extra original closure.
+
+
+### 2026-11-21-162223-openapi-stable-status-977eb6b0
+
+Recorded 2026-11-21T16:22:23.832976+00:00 · Contributor: Codex API contract engineer · change
+
+- **Changed.** Kept the OpenAPI transport description stable across deployment instead of enforcing a stale pending state.
+- **Evidence.** One affected false-assurance regression and actual isolated SDK-free contract CLI pass; exact server preview declaration refers operational reachability and account installation to the connection page. [Change record](./runs/changes/2026-11-21-162223-openapi-stable-status-977eb6b0.json).
+- **Not claimed.** Historical eight-test proof retained. Current full focused file is an integration check; no runtime, endpoint, independent accuracy, deployment or host approval claim.
+
+
+### 2026-11-21-161824-remote-openapi-contract-eca30759
+
+Recorded 2026-11-21T16:18:24.739865+00:00 · Contributor: Codex API contract engineer · change
+
+- **Changed.** Added an importable OpenAPI3.1.1 manifest for the three existing ordinary remote JSON API operations.
+- **Evidence.** Eight current focused controls pass, including real canonical PS finding/no-finding and partial/unavailable projections, closed source/route/input/claim checks and an actual -I-S standard-library CLI without the optional MCP SDK. [Change record](./runs/changes/2026-11-21-161824-remote-openapi-contract-eca30759.json).
+- **Not claimed.** Provider activation and AI-host import approval remain pending. MCP is excluded; remote PII remains Unavailable. No route/runtime change, independent accuracy or original requirement closure.
+
+
+### 2026-11-21-161420-clarify-accepted-capture-display-title-05bba76b
+
+Recorded 2026-11-21T16:14:20.839272+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Displayed the completed job as accepted DOM capture and preserved its old fetch/tee title as historical_title.
+- **Evidence.** The visible100percent label describes the route actually verified; original master job, outcome, full acceptance fingerprint and133/69 accounting remain unchanged. [Change record](./runs/changes/2026-11-21-161420-clarify-accepted-capture-display-title-05bba76b.json).
+- **Not claimed.** No MAIN-world fetch/tee or new capture behavior is asserted.
+
+
+### 2026-11-21-161145-integrate-governed-policy-and-remote-scope-42ddebff
+
+Recorded 2026-11-21T16:11:45.758526+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Integrated the governed local organization-policy mechanism at80 with human/commercial gates retained, registered the requested remote API enhancement separately and added the new connection page to sitemap generation.
+- **Evidence.** 18 integrated sources match actual Mac execution, ordinary CLI starts, actual Linux review is retained and202 original IDs stay133 complete69 open. [Change record](./runs/changes/2026-11-21-161145-integrate-governed-policy-and-remote-scope-42ddebff.json).
+- **Not claimed.** Remote public activation, protected hosted checks and host-specific connection approval remain pending. No other original requirement is completed; planned tags are not advertised as working detectors.
+
+
+### 2026-11-21-160509-optional-remote-connection-guide-bd3d8a22
+
+Recorded 2026-11-21T16:05:09.479116+00:00 · Contributor: Codex · change
+
+- **Changed.** Added an approachable crawlable optional HTTP/MCP connection guide and version1.14 remote selected-text/privacy disclosures while preserving local defaults and prior policy archives.
+- **Evidence.** Focused actual document/page rendering, SEO metadata, static navigation, copy boundaries, JavaScript syntax and exact policy archive checks pass. The page makes no automatic connection. [Change record](./runs/changes/2026-11-21-160509-optional-remote-connection-guide-bd3d8a22.json).
+- **Not claimed.** Public endpoint activation remains pending; no live address, provider approval, ChatGPT/Claude account UI test, full site build, detector accuracy or original requirement closure is claimed. Shared sitemap and source-bound publication checks remain integration work.
+
+
+### 2026-11-21-160643-pause-owned-live-test-runtime-4a5f1e99
+
+Recorded 2026-11-21T16:06:43.326652+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Stopped only the three ownership-labeled temporary browser-test containers and closed their owned SSH forward after final UI pause.
+- **Evidence.** All temporary test containers stopped, forward closed and existing dedicated staging remained healthy. [Change record](./runs/changes/2026-11-21-160643-pause-owned-live-test-runtime-4a5f1e99.json).
+- **Not claimed.** Private recovery/configuration artifacts retained; no production service, global Docker or original scope count changed.
+
+
+### 2026-11-21-160512-preserve-readable-scope-encoding-99c025e8
+
+Recorded 2026-11-21T16:05:12.094888+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Retained existing readable Unicode serialization in the updated machine-readable scope, board and state.
+- **Evidence.** The same202 immutable original identities and original acceptance hash still verify at133 complete69 open; reduces unrelated formatting churn. [Change record](./runs/changes/2026-11-21-160512-preserve-readable-scope-encoding-99c025e8.json).
+- **Not claimed.** Encoding only; no additional requirement completion, source behavior or public delivery.
+
+
+### 2026-11-21-160447-close-live-dom-capture-original-c157b50e
+
+Recorded 2026-11-21T16:04:47.207422+00:00 · Contributor: Codex /root; distinct original acceptance reviewer /root/seo · change
+
+- **Changed.** Closed the full accepted F030 DOM alternative from actual installed Chrome lifecycle evidence, preserved prior acceptance and stream limits, updated133/69 accounting, and registered the implemented remote MCP verifier in its dedicated CI job.
+- **Evidence.** Distinct source-bound acceptance and exact original baseline accounting pass; live browser attachment, honest outage, recovery and final pause work. Dedicated CI now executes remote HTTP/MCP controls instead of relying on local stdio checks. [Change record](./runs/changes/2026-11-21-160447-close-live-dom-capture-original-c157b50e.json).
+- **Not claimed.** Target60 still needs9 full original closures. Remote public activation and hosted CI remain pending; N010 human/commercial gates and independent tag accuracy remain open. No other original is closed.
+
+
+### 2026-11-21-154123-remote-proxy-reviewed-linux-proof-85907b44
+
+Recorded 2026-11-21T15:41:23.855883+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Retained source-bound actual private Linux Caddy proxy/TLS-policy proof and its distinct independent review.
+- **Evidence.** All11 actual groups pass through the pinned extracted Caddy binary with canonical HTTP/MCP parity, ingress refusals, real worker disconnect/reap/recovery, bounded body deadline, private SNI-Host421 and clean shutdown;26 frozen sources and30 lock versions match, and owned temporary state is removed. [Change record](./runs/changes/2026-11-21-154123-remote-proxy-reviewed-linux-proof-85907b44.json).
+- **Not claimed.** No public port, trustedTLS/ACME, effective systemd/BPF/swap activation, AI-host account, accuracy or original closure. Wrong /health bookkeeping nulls are retained; correct /healthz200 is a later separate read-only cleanup observation. Result docs changed only after proof.
+
+
+### 2026-11-21-153530-remote-proxy-sni-host-policy-50cc1c17
+
+Recorded 2026-11-21T15:35:30.090292+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Required exact TLS SNI and HTTP Host agreement and added a private synthetic-certificate ingress control.
+- **Evidence.** The documented strict_sni_host policy is rendered without wildcard certificates; the loopback verifier retains canonical HTTP/MCP controls and adds correct-pair200 versus mismatched-Host421 under the same production policy. [Change record](./runs/changes/2026-11-21-153530-remote-proxy-sni-host-policy-50cc1c17.json).
+- **Not claimed.** Actual corrected proxy execution remains pending. Temporary self-signed test material is private and deleted; this is not public trusted TLS, ACME issuance or effective systemd sandbox activation.
+
+
+### 2026-11-21-153307-remote-proxy-explicit-loopback-bind-54224e5c
+
+Recorded 2026-11-21T15:33:07.129501+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Corrected the private Caddy proof listener to explicit loopback bind without an implicit conflicting IP Host matcher.
+- **Evidence.** Actual first requests exposed empty200 outside the intended route; a bounded diagnosis isolated site-address Host selection. The corrected fixture keeps provider Host checks and never binds publicly;9 focused controls pass. [Change record](./runs/changes/2026-11-21-153307-remote-proxy-explicit-loopback-bind-54224e5c.json).
+- **Not claimed.** The production provider-host configuration was not changed. Corrected real proxy execution remains pending, and historical failure receipts remain immutable.
+
+
+### 2026-11-21-152958-remote-proxy-timeout-status-contract-c28b968f
+
+Recorded 2026-11-21T15:29:58.389370+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Bound the proxy slow-body probe to fixed timeout refusals including the existing application504 contract.
+- **Evidence.** The probe retains its14second outer limit and accepts only400,408 or504 (or closed connection) for an incomplete body; no success response is accepted. [Change record](./runs/changes/2026-11-21-152958-remote-proxy-timeout-status-contract-c28b968f.json).
+- **Not claimed.** Source contract correction before actual proxy execution, no application timeout or production semantics change.
+
+
+### 2026-11-21-152842-remote-proxy-debian-mirror-transport-ae4c5768
+
+Recorded 2026-11-21T15:28:42.909382+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Accepted the exact root-owned Debian mirror-list transport after its actual safe first refusal.
+- **Evidence.** The downloader keeps the exact package SHA/version/size and validates only a bounded no-follow root-owned mirror list of official Debian origins; private or writable mirror sources refuse. [Change record](./runs/changes/2026-11-21-152842-remote-proxy-debian-mirror-transport-ae4c5768.json).
+- **Not claimed.** The first setup failure is retained. This does not activate a service, prove TLS or grant a new download origin.
+
+
+### 2026-11-21-152548-remote-connector-private-deployment-candidate-f6db55d9
+
+Recorded 2026-11-21T15:25:48.569192+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Added isolated provider-host deployment preparation, pinned temporary Caddy extraction and a real loopback proxy verifier.
+- **Evidence.** Eight focused source/preparation controls pass; source selection is tracked-only and exclusive, while rendered app/proxy units bound resources and retain a separate operator activation gate. [Change record](./runs/changes/2026-11-21-152548-remote-connector-private-deployment-candidate-f6db55d9.json).
+- **Not claimed.** Caddy/Linux proxy execution is pending; no public port, TLS issuance, DNS, global service, user, firewall or existing container change. Unit rendering is not enforced sandbox evidence.
+
+
+### 2026-11-21-153327-governed-local-policy-ci-registration-0edf51ea
+
+Recorded 2026-11-21T15:33:27.700006+00:00 · Contributor: Codex · change
+
+- **Changed.** Registered a dedicated read-only Python3.13 isolated-stdlib CI job for the governed local organization policy workflow without project dependency installs, services or containers.
+- **Evidence.** Actual PyYAML6.0.3 parsed the workflow; Python3.12/3.13 compiled its inline runner; all18 current input paths are covered, exact27 groups and zero skips required, pinned actions and fixed source/time/resource budgets checked. [Change record](./runs/changes/2026-11-21-153327-governed-local-policy-ci-registration-0edf51ea.json).
+- **Not claimed.** The new workflow has not executed on a hosted runner yet. Existing Mac/Linux results validate the frozen software separately. No full N-010, human, employee, commercial or real organization acceptance is granted.
+
+
+### 2026-11-21-160024-prove-live-browser-tag-lifecycle-7bd7f4bf
+
+Recorded 2026-11-21T16:00:24.398118+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Observed the installed completed-response DOM adapter on the authorized existing public Homebrew answer, real temporary gateway outage, recovery and final pause.
+- **Evidence.** Actual Chrome attached compact PS and PII, opened PS details, removed stale findings on unavailable service, recovered on the same response and confirmed checks paused. [Change record](./runs/changes/2026-11-21-160024-prove-live-browser-tag-lifecycle-7bd7f4bf.json).
+- **Not claimed.** One supported live response; no stream-hook, independent accuracy, outside-user or physical-device acceptance. Full original closure awaits distinct review.
+
+
+### 2026-11-21-153129-prove-signed-capture-service-and-paused-source-2e22b53f
+
+Recorded 2026-11-21T15:31:29.063230+00:00 · Contributor: Codex PM /root; mounted-source review /root/seo · change
+
+- **Changed.** Restore a separately isolated signed current-source capture test service and reload the existing installed extension while keeping capture paused.
+- **Evidence.** Six authenticated schema and failure/recovery controls pass; distinct review matches sixteen source inputs in running containers, and the actual Chrome source path and paused reload are observed. [Change record](./runs/changes/2026-11-21-153129-prove-signed-capture-service-and-paused-source-2e22b53f.json).
+- **Not claimed.** The service is remote through a disclosed loopback SSH test forward; no live-vendor capture, new browser trust, human validation, production deployment or original closure is claimed.
+
+
+### 2026-11-21-151957-local-policy-linux-executed-and-reviewed-8d495fcb
+
+Recorded 2026-11-21T15:19:57.010071+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded actual nonroot network-denied Linux tenant-policy operation, exact staging preservation/removal, retained failed preflight and distinct source/artifact review.
+- **Evidence.** Frozen4e06a33 with18 matching inputs passed27 groups and73 recorded ordinary CLI calls on Linux; Mac outcome hashes agree. Actual IPv4/IPv6/Unix/io_uring denial, old staging unchanged, owned temporary cleanup and independent retained-evidence review passed. [Change record](./runs/changes/2026-11-21-151957-local-policy-linux-executed-and-reviewed-8d495fcb.json).
+- **Not claimed.** Full N-010 closure is not recommended: historical outside-human/privacy operation and commercial-conformance gates remain open. Local owner/capability control is not real organization identity, employee consent or global anti-rollback authority. Protected integration/publication remain PM-owned.
+
+
+### 2026-11-21-150908-local-policy-source-whitespace-identity-5e3f15c6
+
+Recorded 2026-11-21T15:09:08.348120+00:00 · Contributor: Codex · change
+
+- **Changed.** Removed trailing blank lines from the new owned I/O helper and captured the corrected exact-source Mac workflow; prior execution remains historical.
+- **Evidence.** Code body equals the reviewed helper after stripping only trailing newline bytes. Exact-source Mac27 groups and73 recorded ordinary CLI operations pass with zero failures/errors/skips; no behavior changed. [Change record](./runs/changes/2026-11-21-150908-local-policy-source-whitespace-identity-5e3f15c6.json).
+- **Not claimed.** Source identity refresh only, no original closure or outside-human/commercial acceptance. Authorized isolated Linux proof and protected integration remain pending.
+
+
+### 2026-11-21-150636-governed-local-organization-policy-edd34e1e
+
+Recorded 2026-11-21T15:06:36.185720+00:00 · Contributor: Codex · change
+
+- **Changed.** Delivered a local owner-controlled tenant policy registry with role-scoped credentials, immutable job revisions, fresh bounded workers, governed private exports and explicit removal; public methods remain independent.
+- **Evidence.** Frozen Mac stdlib execution passed27 groups and73 recorded ordinary CLI operations, including all3 offerings, current authorization, stale/source/worker refusals, private I/O uncertainty and personal PS survival. Distinct source review verified18 bindings and3 affected groups. [Change record](./runs/changes/2026-11-21-150636-governed-local-organization-policy-edd34e1e.json).
+- **Not claimed.** This is a local technical control profile, not real organization identity, employee consent or commercial terms. Historical final human-operation/commercial-conformance acceptance remains open; no full N-010 closure. Linux proof and protected integration remain separate.
+
+
+### 2026-11-21-151823-remote-connector-direct-linux-proof-a42c214e
+
+Recorded 2026-11-21T15:18:23.315790+00:00 · Contributor: Codex MT/API engineer · change
+
+- **Changed.** Retained final direct-worker Linux execution, cleanup and distinct reviews for the optional remote connector.
+- **Evidence.** An exact tracked-source archive ran all 14 official-client and owned-worker groups on Python 3.13 Linux with all 30 locked versions; the private workspace was removed with zero owned processes and prior staging healthy. [Change record](./runs/changes/2026-11-21-151823-remote-connector-direct-linux-proof-a42c214e.json).
+- **Not claimed.** No public HTTPS deployment, account connection, independent detector accuracy, dependency clearance or original requirement completion; discarded inner-log canary checks remain author-observed.
+
+
+### 2026-11-21-151107-remote-direct-canonical-worker-ownership-cb37ed73
+
+Recorded 2026-11-21T15:11:07.139257+00:00 · Contributor: Codex /root/web_camo; independent review /root/seo; PM /root · change
+
+- **Changed.** Removed a nested CLI process group by invoking the unchanged canonical PS worker directly, preserving the ten-second method ceiling inside the shared request budget.
+- **Evidence.** Three affected actual Mac groups pass: genuine canonical SIGSTOP worker disconnect/shutdown reap, real two-worker capacity and isolated cancellation, plus complete brief canonical parity at maximum text/byte boundaries. Prior clean Linux evidence is retained separately; source review finding and prior limits are explicit. [Change record](./runs/changes/2026-11-21-151107-remote-direct-canonical-worker-ownership-cb37ed73.json).
+- **Not claimed.** Fresh final Linux fourteen-control proof and distinct corrected-source review remain pending. Earlier fake-sleeper cancellation proof did not establish nested descendant cleanup. No public deployment, AI account connection, independent accuracy, hosted PII or original closure.
+
+
+### 2026-11-21-150238-remote-connector-linux-proof-and-optional-collection-2c41e2e3
+
+Recorded 2026-11-21T15:02:38.752281+00:00 · Contributor: Codex /root/web_camo; integration finding /root · change
+
+- **Changed.** Recorded actual clean nonroot Linux connector execution and cleanup; corrected optional SDK test collection while retaining strict dedicated fourteen-control verification.
+- **Evidence.** Exact789 tracked archive passed14 actual Linux groups with20 stable source identities and30 matching locked versions, private canary absent and owned workspace cleaned. Actual no-SDK stdlib import skips optional tests; dedicated verifier refuses without the SDK. [Change record](./runs/changes/2026-11-21-150238-remote-connector-linux-proof-and-optional-collection-2c41e2e3.json).
+- **Not claimed.** First Linux proof remains exact789 historical. Corrected test/verifier source needs fresh Linux execution; no runtime semantic change, public hosting, AI-account connection, hosted PII, accuracy or original closure.
+
+
+### 2026-11-21-145412-remote-ps-http-mcp-connector-2afd3d42
+
+Recorded 2026-11-21T14:54:12.550048+00:00 · Contributor: Codex /root/web_camo; distinct review /root/seo; PM /root · change
+
+- **Changed.** Implemented a separate runnable PS-only ordinary HTTP API and official stateless MCP Streamable HTTP connector with unchanged canonical evidence, bounded workers and explicit remote privacy unavailability.
+- **Evidence.** Fourteen source-stable owned-loopback groups pass, including official modern2026-07-28 and legacy clients, full brief canonical parity, actual cancellation/admission/reaping/privacy/framing/refusal/recovery. Distinct peer replay verified repeated cancellation and string IDs. Existing selected SDK lock versions match; earlier failures remain immutable. [Change record](./runs/changes/2026-11-21-145412-remote-ps-http-mcp-connector-2afd3d42.json).
+- **Not claimed.** PM integration, isolated Linux CI, approved HTTPS deployment, proxy/privacy controls and actual host-account connections remain pending. No public hostname, hosted PII, model API, stored input, independent accuracy, global distribution clearance or original requirement closure.
+
+
+### 2026-11-21-145641-bound-current-capture-prerequisite-repair-302ac434
+
+Recorded 2026-11-21T14:56:41.868493+00:00 · Contributor: Codex PM /root; independent containment review /root/seo · change
+
+- **Changed.** Specify isolated current-source signed capture staging with cached dependencies, unique private credentials, measured runtime containment and owner-gated browser trust.
+- **Evidence.** Current cached requirement identities match; the plan preserves the existing stack and forbids public exposure, local Docker and silent unsigned substitution. [Change record](./runs/changes/2026-11-21-145641-bound-current-capture-prerequisite-repair-302ac434.json).
+- **Not claimed.** Architecture and prerequisite repair only; no live capture or original closure is claimed.
+
+
+### 2026-11-21-143337-start-full-original-closure-wave-0a706c6f
+
+Recorded 2026-11-21T14:33:37.180705+00:00 · Contributor: Codex PM /root; task-list review /root/seo · change
+
+- **Changed.** Select full original capture and tenant-policy acceptance targets; preserve every historical gate and assign a separate open AI-client connection implementation.
+- **Evidence.** Fresh queue classification and live native UI/service prerequisite checks identify concrete work and exact configuration blockers; accounting remains valid. [Change record](./runs/changes/2026-11-21-143337-start-full-original-closure-wave-0a706c6f.json).
+- **Not claimed.** No original closed, no endpoint deployed, no capture or signing trust enabled, no independent human or accuracy acceptance inferred.
+
+
 ### 2026-11-21-124849-verified-maintenance-publication-closeout-5175a661
 
 Recorded 2026-11-21T12:48:49.085713+00:00 · Contributor: Codex /root; reviews /root/web_camo and /root/share_debugger · change

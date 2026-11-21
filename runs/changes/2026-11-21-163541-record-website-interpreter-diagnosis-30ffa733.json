@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-163541-record-website-interpreter-diagnosis-30ffa733",
+  "recorded_at": "2026-11-21T16:35:41.431673+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "02e4f53cb563f8b689ffc625bc31184904951574",
+  "changed": "Preserved the actual first website build failure and diagnosed the Node child interpreter mismatch.",
+  "proves": "Build stopped on missing pydantic in the system Python; the parent source-bound verifier had used the approved venv by absolute path without propagating that interpreter selection to build children.",
+  "limits": "Environment repair is selected, not yet a passing build. No source behavior, acceptance or public API exposure changed.",
+  "scope_ids": [
+    "WP-INTEGRATIONS"
+  ],
+  "files": {
+    "runs/2026-11-21-api-website-environment-failure.json": "e53d1b023e8fb10b08a59c90bd24f52549ce211466be9187c554a357b39d7b8a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-api-website-environment-failure.json",
+      "sha256": "e53d1b023e8fb10b08a59c90bd24f52549ce211466be9187c554a357b39d7b8a"
+    }
+  ],
+  "checks": []
+}

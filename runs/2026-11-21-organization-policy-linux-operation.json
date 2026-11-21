@@ -1,0 +1,558 @@
+{
+  "format": "ai-trust-id-organization-policy-operation/v1",
+  "captured_at": "2026-11-21T15:15:42.256974+00:00",
+  "pass": true,
+  "base_commit": "e8287050493f3f30b6c92967beed224a6c8b4dc3",
+  "source_snapshot_is_selected_bytes": true,
+  "source_hashes": {
+    "tools/organization_policy_registry.py": "71e8332710b21dcd72645c45600fa9fb3ea9a5afb48b68c0dc90f6da913e647d",
+    "tools/organization_policy_io.py": "7a3577c837a3582f1076ef8170edcf303314f98da3eb566bbb6326a9ced59a16",
+    "tools/organization_policy_worker.py": "3253de9583b517dfcd79c327229302f1e46b1f572c364b4f3891d7ec7f551058",
+    "scripts/organization-policy.py": "9941f91d343ff89af687e0bf7c508665f166a134bca847e543d6d90cb5af22c6",
+    "tests/test_organization_policy_registry.py": "ee15b93b2f44c1c95fce7717dd2da48dc44e97d10fd97e058be5653fc5c96033",
+    "tests/test_organization_policy_cli.py": "4393309828609563103e1ebbf9ebbde8c75fe99b82626525776b1d994099c8dc",
+    "docs/organization-policy-registry-plan.md": "895fa2acdca65474218fc5e81772c3c585b4c9f197dcf2d78751f9bf513107be",
+    "docs/organization-policy-registry.md": "c1f183d4b6691cb0c5ccc804338eadc4a2c5b97e6cbef1a721bf331464ef72e1",
+    "tools/private_policy.py": "bcc69df1dc1615e1574c0e870760ebb36edc42140a8ab5fdbbfd695ba4d8f11e",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "spec/vocabulary.json": "d3c14256da3d44c3a02f252c591a2f9039ebc2944b73837c7c521d8adac0002a",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+  },
+  "source_stable": true,
+  "platform": "linux",
+  "python": "3.13.5",
+  "sqlite": "3.46.1",
+  "non_root": true,
+  "python_isolated": true,
+  "python_no_site": true,
+  "python_no_bytecode": true,
+  "focused": {
+    "tests": 27,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "log_sha256": "c7df0bccc1ff1c4c3794a2714c0da0256f8718e1b494111264d84052ae2b9753",
+    "log_bytes": 5285
+  },
+  "actual_cli_cases": [
+    {
+      "case": "test_actual_broken_optional_module_does_not_disable_standalone_personal_ps",
+      "commands": [
+        {
+          "operation": "keygen",
+          "returncode": 0,
+          "stdout_sha256": "d111ffd6033ef33b37e436bfd559b17bb519ed023a584233b14f60ac045cb277",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "init",
+          "returncode": 0,
+          "stdout_sha256": "cb89cb572c719bbc4147c748be552fd2a577a92ce29c4328e44ab8025e5975cb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "case": "test_actual_cli_io_failures_are_fixed_and_post_commit_is_explicitly_uncertain",
+      "commands": [
+        {
+          "operation": "keygen",
+          "returncode": 0,
+          "stdout_sha256": "d111ffd6033ef33b37e436bfd559b17bb519ed023a584233b14f60ac045cb277",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "init",
+          "returncode": 0,
+          "stdout_sha256": "cb89cb572c719bbc4147c748be552fd2a577a92ce29c4328e44ab8025e5975cb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "case": "test_actual_complete_cli_runs_with_64_file_descriptor_bound",
+      "commands": [
+        {
+          "operation": "keygen",
+          "returncode": 0,
+          "stdout_sha256": "d111ffd6033ef33b37e436bfd559b17bb519ed023a584233b14f60ac045cb277",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "init",
+          "returncode": 0,
+          "stdout_sha256": "cb89cb572c719bbc4147c748be552fd2a577a92ce29c4328e44ab8025e5975cb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "keygen",
+          "returncode": 0,
+          "stdout_sha256": "d111ffd6033ef33b37e436bfd559b17bb519ed023a584233b14f60ac045cb277",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "init",
+          "returncode": 0,
+          "stdout_sha256": "cb89cb572c719bbc4147c748be552fd2a577a92ce29c4328e44ab8025e5975cb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "enroll",
+          "returncode": 0,
+          "stdout_sha256": "0b0a358c93389ed95d78dd063ffce6f0e6c20a53e94cae8452a894747241e8c1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "grant",
+          "returncode": 0,
+          "stdout_sha256": "454e522c5c41cda6fa10152cc36e7acdcf73976c51029ec0ad5cc921f63af34e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "add-policy",
+          "returncode": 0,
+          "stdout_sha256": "7a36fa59108a95aaefcbb8f56785b6a9d391061cfda324e2c599e0f0c18efe98",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "prepare",
+          "returncode": 0,
+          "stdout_sha256": "93168c99df13361668c3a83244aa6e5dc513ffadee06c66b1fac77ac075a64ac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "check",
+          "returncode": 0,
+          "stdout_sha256": "8377cdfd2de76d1904a075abf89394d1df8c4cf742ad9d6bc0969d5637e13db7",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "remove-tenant",
+          "returncode": 0,
+          "stdout_sha256": "cb0888ab546b8ae96b08d18713ad50528b28532f888fb8bdabf5f28683e9212e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "remove-registry",
+          "returncode": 0,
+          "stdout_sha256": "75b3d266a65084f448a1e02dfad3e7a13a2436704ec010f36524184c5452e3e8",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "case": "test_actual_public_ps_source_and_result_unchanged_after_optional_refusal",
+      "commands": [
+        {
+          "operation": "keygen",
+          "returncode": 0,
+          "stdout_sha256": "d111ffd6033ef33b37e436bfd559b17bb519ed023a584233b14f60ac045cb277",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "init",
+          "returncode": 0,
+          "stdout_sha256": "cb89cb572c719bbc4147c748be552fd2a577a92ce29c4328e44ab8025e5975cb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "check",
+          "returncode": 2,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "b74e3be0a8fd33f9536717d9c14db6cdf36a25b6edc1df4f89b81f28af19073e"
+        }
+      ]
+    },
+    {
+      "case": "test_actual_raw_nfc_equivalent_edit_never_publishes_stale_result",
+      "commands": [
+        {
+          "operation": "keygen",
+          "returncode": 0,
+          "stdout_sha256": "d111ffd6033ef33b37e436bfd559b17bb519ed023a584233b14f60ac045cb277",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "init",
+          "returncode": 0,
+          "stdout_sha256": "cb89cb572c719bbc4147c748be552fd2a577a92ce29c4328e44ab8025e5975cb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "enroll",
+          "returncode": 0,
+          "stdout_sha256": "0b0a358c93389ed95d78dd063ffce6f0e6c20a53e94cae8452a894747241e8c1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "grant",
+          "returncode": 0,
+          "stdout_sha256": "454e522c5c41cda6fa10152cc36e7acdcf73976c51029ec0ad5cc921f63af34e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "add-policy",
+          "returncode": 0,
+          "stdout_sha256": "7a36fa59108a95aaefcbb8f56785b6a9d391061cfda324e2c599e0f0c18efe98",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "prepare",
+          "returncode": 0,
+          "stdout_sha256": "93168c99df13361668c3a83244aa6e5dc513ffadee06c66b1fac77ac075a64ac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "check",
+          "returncode": 2,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "b74e3be0a8fd33f9536717d9c14db6cdf36a25b6edc1df4f89b81f28af19073e"
+        }
+      ]
+    },
+    {
+      "case": "test_actual_role_denial_revoke_recovery_and_other_tenant_survival",
+      "commands": [
+        {
+          "operation": "keygen",
+          "returncode": 0,
+          "stdout_sha256": "d111ffd6033ef33b37e436bfd559b17bb519ed023a584233b14f60ac045cb277",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "init",
+          "returncode": 0,
+          "stdout_sha256": "cb89cb572c719bbc4147c748be552fd2a577a92ce29c4328e44ab8025e5975cb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "enroll",
+          "returncode": 0,
+          "stdout_sha256": "0b0a358c93389ed95d78dd063ffce6f0e6c20a53e94cae8452a894747241e8c1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "grant",
+          "returncode": 0,
+          "stdout_sha256": "454e522c5c41cda6fa10152cc36e7acdcf73976c51029ec0ad5cc921f63af34e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "enroll",
+          "returncode": 0,
+          "stdout_sha256": "0b0a358c93389ed95d78dd063ffce6f0e6c20a53e94cae8452a894747241e8c1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "grant",
+          "returncode": 0,
+          "stdout_sha256": "454e522c5c41cda6fa10152cc36e7acdcf73976c51029ec0ad5cc921f63af34e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "add-policy",
+          "returncode": 0,
+          "stdout_sha256": "7a36fa59108a95aaefcbb8f56785b6a9d391061cfda324e2c599e0f0c18efe98",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "add-policy",
+          "returncode": 0,
+          "stdout_sha256": "7a36fa59108a95aaefcbb8f56785b6a9d391061cfda324e2c599e0f0c18efe98",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "prepare",
+          "returncode": 0,
+          "stdout_sha256": "93168c99df13361668c3a83244aa6e5dc513ffadee06c66b1fac77ac075a64ac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "prepare",
+          "returncode": 0,
+          "stdout_sha256": "93168c99df13361668c3a83244aa6e5dc513ffadee06c66b1fac77ac075a64ac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "check",
+          "returncode": 2,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "b74e3be0a8fd33f9536717d9c14db6cdf36a25b6edc1df4f89b81f28af19073e"
+        },
+        {
+          "operation": "revoke",
+          "returncode": 0,
+          "stdout_sha256": "710ea1184c98e8e4e690930c625ea81a73992ba2c83beabc97723362e50092ae",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "check",
+          "returncode": 2,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "b74e3be0a8fd33f9536717d9c14db6cdf36a25b6edc1df4f89b81f28af19073e"
+        },
+        {
+          "operation": "grant",
+          "returncode": 0,
+          "stdout_sha256": "454e522c5c41cda6fa10152cc36e7acdcf73976c51029ec0ad5cc921f63af34e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "prepare",
+          "returncode": 0,
+          "stdout_sha256": "93168c99df13361668c3a83244aa6e5dc513ffadee06c66b1fac77ac075a64ac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "check",
+          "returncode": 0,
+          "stdout_sha256": "b4b28b4f0381e144b8d137e3b39923702af983653a690886140a10d344cda524",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "check",
+          "returncode": 2,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "b74e3be0a8fd33f9536717d9c14db6cdf36a25b6edc1df4f89b81f28af19073e"
+        },
+        {
+          "operation": "check",
+          "returncode": 0,
+          "stdout_sha256": "b4b28b4f0381e144b8d137e3b39923702af983653a690886140a10d344cda524",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "case": "test_actual_three_offerings_independent_jobs_private_export_and_removal",
+      "commands": [
+        {
+          "operation": "keygen",
+          "returncode": 0,
+          "stdout_sha256": "d111ffd6033ef33b37e436bfd559b17bb519ed023a584233b14f60ac045cb277",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "init",
+          "returncode": 0,
+          "stdout_sha256": "cb89cb572c719bbc4147c748be552fd2a577a92ce29c4328e44ab8025e5975cb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "enroll",
+          "returncode": 0,
+          "stdout_sha256": "0b0a358c93389ed95d78dd063ffce6f0e6c20a53e94cae8452a894747241e8c1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "grant",
+          "returncode": 0,
+          "stdout_sha256": "454e522c5c41cda6fa10152cc36e7acdcf73976c51029ec0ad5cc921f63af34e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "add-policy",
+          "returncode": 0,
+          "stdout_sha256": "7a36fa59108a95aaefcbb8f56785b6a9d391061cfda324e2c599e0f0c18efe98",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "prepare",
+          "returncode": 0,
+          "stdout_sha256": "93168c99df13361668c3a83244aa6e5dc513ffadee06c66b1fac77ac075a64ac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "check",
+          "returncode": 0,
+          "stdout_sha256": "8377cdfd2de76d1904a075abf89394d1df8c4cf742ad9d6bc0969d5637e13db7",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "remove-tenant",
+          "returncode": 0,
+          "stdout_sha256": "cb0888ab546b8ae96b08d18713ad50528b28532f888fb8bdabf5f28683e9212e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "enroll",
+          "returncode": 0,
+          "stdout_sha256": "0b0a358c93389ed95d78dd063ffce6f0e6c20a53e94cae8452a894747241e8c1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "grant",
+          "returncode": 0,
+          "stdout_sha256": "454e522c5c41cda6fa10152cc36e7acdcf73976c51029ec0ad5cc921f63af34e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "add-policy",
+          "returncode": 0,
+          "stdout_sha256": "7a36fa59108a95aaefcbb8f56785b6a9d391061cfda324e2c599e0f0c18efe98",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "prepare",
+          "returncode": 0,
+          "stdout_sha256": "93168c99df13361668c3a83244aa6e5dc513ffadee06c66b1fac77ac075a64ac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "check",
+          "returncode": 0,
+          "stdout_sha256": "8377cdfd2de76d1904a075abf89394d1df8c4cf742ad9d6bc0969d5637e13db7",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "remove-tenant",
+          "returncode": 0,
+          "stdout_sha256": "cb0888ab546b8ae96b08d18713ad50528b28532f888fb8bdabf5f28683e9212e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "enroll",
+          "returncode": 0,
+          "stdout_sha256": "0b0a358c93389ed95d78dd063ffce6f0e6c20a53e94cae8452a894747241e8c1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "grant",
+          "returncode": 0,
+          "stdout_sha256": "454e522c5c41cda6fa10152cc36e7acdcf73976c51029ec0ad5cc921f63af34e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "add-policy",
+          "returncode": 0,
+          "stdout_sha256": "7a36fa59108a95aaefcbb8f56785b6a9d391061cfda324e2c599e0f0c18efe98",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "prepare",
+          "returncode": 0,
+          "stdout_sha256": "93168c99df13361668c3a83244aa6e5dc513ffadee06c66b1fac77ac075a64ac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "check",
+          "returncode": 0,
+          "stdout_sha256": "8377cdfd2de76d1904a075abf89394d1df8c4cf742ad9d6bc0969d5637e13db7",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "remove-tenant",
+          "returncode": 0,
+          "stdout_sha256": "cb0888ab546b8ae96b08d18713ad50528b28532f888fb8bdabf5f28683e9212e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "remove-registry",
+          "returncode": 0,
+          "stdout_sha256": "75b3d266a65084f448a1e02dfad3e7a13a2436704ec010f36524184c5452e3e8",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "case": "test_actual_zero_is_measured_and_unknown_flags_duplicate_selection_are_private",
+      "commands": [
+        {
+          "operation": "keygen",
+          "returncode": 0,
+          "stdout_sha256": "d111ffd6033ef33b37e436bfd559b17bb519ed023a584233b14f60ac045cb277",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "init",
+          "returncode": 0,
+          "stdout_sha256": "cb89cb572c719bbc4147c748be552fd2a577a92ce29c4328e44ab8025e5975cb",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "enroll",
+          "returncode": 0,
+          "stdout_sha256": "0b0a358c93389ed95d78dd063ffce6f0e6c20a53e94cae8452a894747241e8c1",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "grant",
+          "returncode": 0,
+          "stdout_sha256": "454e522c5c41cda6fa10152cc36e7acdcf73976c51029ec0ad5cc921f63af34e",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "add-policy",
+          "returncode": 0,
+          "stdout_sha256": "7a36fa59108a95aaefcbb8f56785b6a9d391061cfda324e2c599e0f0c18efe98",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "prepare",
+          "returncode": 0,
+          "stdout_sha256": "93168c99df13361668c3a83244aa6e5dc513ffadee06c66b1fac77ac075a64ac",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "check",
+          "returncode": 0,
+          "stdout_sha256": "1ff5c7eeb85a3316afc91c57aa958e42aabfea032e844ab73bdd00fc58265966",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "operation": "check",
+          "returncode": 2,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "b74e3be0a8fd33f9536717d9c14db6cdf36a25b6edc1df4f89b81f28af19073e"
+        },
+        {
+          "operation": "invalid_arguments",
+          "returncode": 2,
+          "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stderr_sha256": "5d09d6109b5987fe84ecbc368a70289ac7a0e13401f56cb89e95bd5614f949ac"
+        }
+      ]
+    }
+  ],
+  "actual_cli_command_count": 73,
+  "new_dependencies_installed": false,
+  "subject_executed": false,
+  "service_or_endpoint_started": false,
+  "worker_uses_fresh_bounded_canonical_process": true,
+  "public_ps_before_after_and_broken_optional_module_independence": true,
+  "all_three_local_offerings_executed": true,
+  "full_original_N010_closed": false,
+  "human_or_real_organization_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "elapsed_seconds": 11.606,
+  "limits": [
+    "Actual local software controls, not real organization/employee, outside-human or commercial acceptance.",
+    "The original historical final human-operation gate remains open.",
+    "No hosted service, paid dependency, public tag mapping or shared scope/state change."
+  ],
+  "source_commit_reference": "4e06a3310acecaf9fca8ea0e148c584cb1102e60",
+  "isolated_network_namespace": true,
+  "only_loopback_interface": true,
+  "libseccomp_loaded": true,
+  "kernel_network_probes_denied": {
+    "IPv4": true,
+    "IPv6": true,
+    "Unix": true
+  },
+  "io_uring_denied": true,
+  "no_new_privileges": true,
+  "sandbox_limits": {
+    "address_space_bytes": 536870912,
+    "cpu_seconds": 30,
+    "open_files": 256,
+    "file_bytes": 33554432
+  },
+  "worker_limits_unchanged": true,
+  "packages_installed": false
+}

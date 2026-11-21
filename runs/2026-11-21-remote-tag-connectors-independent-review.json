@@ -1,0 +1,72 @@
+{
+  "profile": "remote-mcp-owned-worker-correction-independent-review/v1",
+  "captured_at": "2026-11-21T14:52:24.338973+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/seo",
+  "source_sha256": {
+    "tools/remote_tag_server.py": "50d23496e601e091c0a3375715c1b021cdb40071269a4c595b158cafbeaa8562",
+    "scripts/remote-tag-server.py": "e759f37f66a119aab3ad1716bf35de547edfa07b926cb512e8059f9fd079a064",
+    "tests/test_remote_tag_server.py": "b531fce08e1a3638535b8968c5525ee168193398153deabf33b6cd64ccb9d2f9",
+    "scripts/verify-remote-tag-server.py": "181f8150984c21e3af5d5fe0e2590a6b5924b0681d6d08ff2f61ad3feeb94131",
+    "docs/remote-tag-connectors-plan.md": "9d36a149dd7e40300e8e5948f5fb7f09a854470ba3784322da0d32f70ea84393",
+    "docs/remote-tag-connectors.md": "0ae80f88caebaaddc343f079a2b1ba6399f42ffe90fbc6c33bbcbbb3e71e106a",
+    "tools/tag_api.py": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e",
+    "scripts/check-tags.py": "c3cd8c05ad2969b023bb6f332331787b13b2ff6347913fc0f0c3144321279c96",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "integrations/mcp/requirements.lock": "82375e677571a53a1d3c8b5f13312ae8f81da2a05e4bea0ab59417d4486d95ea"
+  },
+  "source_stable": true,
+  "author_actual_14_group_receipt_sha256": "0df6aff4d47307178e6f83b62cd6078c3ea5880ff06b37ce4b142cbb7d8e730d",
+  "original_failure_receipt_sha256": "72abfe9a3edcfd577e6fd16ed181159b0dc347ddc2a34db70701a1418c703643",
+  "independent_actual_controls": [
+    {
+      "shutdown_concurrent": false,
+      "held_ownership_before_release": {
+        "task_done": false,
+        "running": 1,
+        "pending_launches": 1,
+        "close_returned_early": null
+      },
+      "after": {
+        "running": 0,
+        "active": 0,
+        "launches": 0,
+        "reapers": 0,
+        "owned_child_reaped": true
+      },
+      "pass": true
+    },
+    {
+      "shutdown_concurrent": true,
+      "held_ownership_before_release": {
+        "task_done": false,
+        "running": 1,
+        "pending_launches": 1,
+        "close_returned_early": false
+      },
+      "after": {
+        "running": 0,
+        "active": 0,
+        "launches": 0,
+        "reapers": 0,
+        "owned_child_reaped": true
+      },
+      "pass": true
+    }
+  ],
+  "actual_focused_MCP_string_ID_HTTP_test": {
+    "passed": true,
+    "test_groups": 1,
+    "includes": "printable string-ID discovery/check with canonical brief parity, protocol-ID-only echo, malformed IDs refusal and recovery"
+  },
+  "all_owned_children_reaped": true,
+  "review_limits": [
+    "Original repeated-direct-cancel reproduced on corrected source independently, with and without concurrent pending-launch close; one separate affected actual owned-loopback HTTP string-ID group.",
+    "No repeat of the complete14-group suite, browser, VM, model, external-host connection or download. No source edits.",
+    "One local code execution review, not public TLS/proxy/log/admission acceptance, independent accuracy, global license clearance, AI-account integration or original requirement closure."
+  ]
+}
