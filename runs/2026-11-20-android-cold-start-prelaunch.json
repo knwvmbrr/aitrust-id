@@ -1,0 +1,59 @@
+{
+  "format": "android-cold-start-prelaunch-controls/v1",
+  "recorded_at": "2026-11-21T04:26:26.752341+00:00",
+  "author": "Codex Debugging Lead",
+  "records": [
+    "N-014"
+  ],
+  "study_status": "PREDECLARED_NOT_LAUNCHED",
+  "planned_samples": 3,
+  "actual_android_samples_executed": 0,
+  "runtime_source_commit": "56b0294c8e22b456eface6dad0a8d1afe68d1450",
+  "sources_sha256": {
+    ".github/workflows/android-cold-start-study.yml": "9ac96885187679764d734eee003daa12a0855a44c227638ca170905e49c37f53",
+    "scripts/cold-start-study.py": "b364308627e85873fb4450ae64d2a7cf17ab4bb74bc115a4f6e9c0419ad6e8ed",
+    "tests/test_cold_start_study.py": "910e4d082190f94d9c9e56861a432818577c7240e17ac82dbc64adfbc0c81e54",
+    "docs/android-cold-start-study-plan.md": "7ede7ff1ed2db1e6374907b7e30d6b83ce8701d819db571103174d4aee2ea066"
+  },
+  "author_checks": {
+    "focused_unittest_passed": 21,
+    "focused_unittest_failed": 0,
+    "focused_log_sha256": "5897425325500c9c31e1e5339797804eb78c194c13968d932221d0fe6a16298e",
+    "python_syntax_files": 2,
+    "bash_syntax_scripts": 10,
+    "actual_frozen_source_start_end": true,
+    "source_start_sha256": "a7efc32bc34aa14c2f4996744d641811bd937a92f53ef83f8413f453c0d93753",
+    "source_end_sha256": "712cfcd5f5b5f63d0cc9b5a9824f913d85891c124b68c4d0e755f674304f3ae1",
+    "new_paths_do_not_trigger_original_android_workflow": true,
+    "original_runtime_steps_exact_copy": true,
+    "all_three_required_no_failure_averaging": true
+  },
+  "preserved_development_failure": {
+    "control": "emulator digest must bind the single inspected read",
+    "before": {
+      "passed": 15,
+      "failed": 1
+    },
+    "signature": "2 reads != 1",
+    "log_sha256": "4e62f4c88c16d37880265494fb2b3246e0cc3caefd157a19bd2c37c0b5e0364a",
+    "correction": "Hash the exact same emulator bytes inspected; current21 controls pass."
+  },
+  "pins": {
+    "checkout": "actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+    "upload": "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+    "download": "actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093",
+    "download_ref_verified_from_official_git_ref": true,
+    "original_workflow_sha256": "b2d435bd9571326dc0e8c05badbd35183c17f423b7bd40f4c78f7ba9a2c7a9b3"
+  },
+  "limits": {
+    "distinct_workflow_review_before_launch_pending": true,
+    "SDK_or_emulator_started_locally": false,
+    "native_or_helper_changed": false,
+    "study_repeated": false,
+    "historical_cause_known": false,
+    "startup_reliability_established": false,
+    "independent_accuracy_evidence": false,
+    "physical_device_evidence": false,
+    "original_requirement_closed": false
+  }
+}
