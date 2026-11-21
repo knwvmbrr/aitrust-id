@@ -161,10 +161,25 @@ class OwnedBoundaries(unittest.TestCase):
         for name,wanted in expected.items():
             rows=[n for n in ast.walk(tree) if isinstance(n,ast.FunctionDef) and n.name==name]
             self.assertEqual(len(rows),1);self.assertEqual(hashlib.sha256(ast.get_source_segment(source,rows[0]).encode()).hexdigest(),wanted)
-        prior=subprocess.run(['git','show','3941603265c763de07d9f7d91e465e0832db39d1:scripts/android-intent-controls.py'],cwd=ROOT,capture_output=True,check=True).stdout.decode()
+        # Exact source-segment identities from reviewed3941603, not a Git-history dependency.
+        # This guard must work in a clean source ZIP and depth-one CI checkout.
+        original={'verify_cases':'90f7ac9b6d4a2ca0b00707608c8bb1dbc095d4d1ea6474c0349462cc65923727',
+            'parse_dispatch':'74cd207aeafcfa1ce6cde351a7d27dc1c6da358435fa391b39e8407c95e4cbc6',
+            'observe':'830a3e14144832f2f5600f5f038673565d54f071488d89d280bbb48514dbbf6d',
+            'installed_uid':'d149734e21223f1340a9d332cac6a15ee06d83d49b7f16642a3c43f6f5eaf313'}
         current=(ROOT/'scripts/android-intent-controls.py').read_text()
-        def function(raw,name):return ast.get_source_segment(raw,next(n for n in ast.parse(raw).body if isinstance(n,ast.FunctionDef) and n.name==name))
-        for name in ['verify_cases','parse_dispatch','observe','installed_uid']:self.assertEqual(function(prior,name),function(current,name))
+        def identities(raw):
+            tree=ast.parse(raw);values={}
+            for name in original:
+                rows=[n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name==name]
+                self.assertEqual(len(rows),1)
+                values[name]=hashlib.sha256(ast.get_source_segment(raw,rows[0]).encode()).hexdigest()
+            return values
+        with mock.patch.object(subprocess,'run',side_effect=AssertionError('Guard must not start Git or another process')):
+            self.assertEqual(identities(current),original)
+            weakened=current.replace("if value['result_tag_present'] or value['result_details_present']:","if False:",1)
+            self.assertNotEqual(weakened,current)
+            self.assertNotEqual(identities(weakened),original)
 
 class ActualChooserJVM(unittest.TestCase):
     def test_real_jdk_constructs_only_two_untargeted_ui_triggered_chooser_intents(self):

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-121023-android-chooser-history-free-preservation-test-f19f3fa3
+
+Recorded 2026-11-21T12:10:23.075503+00:00 · Contributor: Codex · change
+
+- **Changed.** Replaced a historical Git-object dependency in the chooser source-preservation test with the same four pinned original function-source identities; preserved the failed automatic run.
+- **Evidence.** Same ten groups pass on Python3.12 and3.13; actual no-Git isolated stdlib copies reproduce the old error and pass corrected source; a weakened original guard refuses. Distinct source review a999d579 confirms exact constants and unchanged runtime files. [Change record](./runs/changes/2026-11-21-121023-android-chooser-history-free-preservation-test-f19f3fa3.json).
+- **Not claimed.** PR141 attempted112 tests with111passing and1error; no APK or emulator ran. This test-only correction requires a changed-source protected run and grants no new Android, physical, human or full N-014 acceptance.
+
+
 ### 2026-11-21-120148-maintenance-current-evidence-sealed-1c7f09f3
 
 Recorded 2026-11-21T12:01:48.710705+00:00 · Contributor: Codex /root; independent inventory and source/runtime reviewers · change
