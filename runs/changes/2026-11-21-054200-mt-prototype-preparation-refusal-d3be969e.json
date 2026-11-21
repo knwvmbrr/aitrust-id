@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-054200-mt-prototype-preparation-refusal-d3be969e",
+  "recorded_at": "2026-11-21T05:42:00.836022+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+  "changed": "Preserve the first prototype build refusal from an absent inherited generated PS manifest; prepare that prerequisite with its unchanged existing builder.",
+  "proves": "The MT-only fixture builds; the failed actual-site prototype identifies the missing generated import without establishing an MT code defect.",
+  "limits": "No PS source or method change, full build/publication claim, tag release or original closure. Actual-route browser proof remains pending.",
+  "scope_ids": [
+    "T-MT",
+    "F-019c"
+  ],
+  "files": {
+    "runs/2026-11-21-mt-mobile-prototype-build-first.json": "81bd97458ef9fa20a8ce286223c76c06ef43c62b1d8b2fe79fc943912cc9a0d1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-mt-mobile-prototype-build-first.json",
+      "sha256": "81bd97458ef9fa20a8ce286223c76c06ef43c62b1d8b2fe79fc943912cc9a0d1"
+    }
+  ],
+  "checks": []
+}

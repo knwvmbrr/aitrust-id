@@ -1,0 +1,65 @@
+{
+  "recorded_at": "2026-11-21T05:48:24.303801+00:00",
+  "author": "Codex / web_camo",
+  "profile": "mt-mobile-quotation-delivery/v1",
+  "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+  "method": "mobile-double-quote-authority-observations/1.0.0",
+  "sources_sha256": {
+    "tools/authority_mobile_quotation.py": "f230f44ea5584302e08b1b462839b8b41c0e69d03f7f5e34fc197a0c47b2b4bd",
+    "tools/mt_mobile_device.py": "cda56dce7cdd8322fe7b0d45b27e167c943ead2f7d22705ff322e9e9ebbb28dd",
+    "scripts/authority-mobile-quotation.py": "999e5579be946b060b1bd1e71704be5fa1e59476eace80c0a39a82da92802145",
+    "scripts/build-mt-device.py": "3a7302055a99d366d207cda1d637e394a1f317939f270a27656d969744f75838",
+    "scripts/mt-mobile-device-cases.py": "68894477d4507dc00f880b1762b21b12171400137c43150a4fb8504835ecd5f9",
+    "scripts/mt-mobile-site-controls.cjs": "afa9531569cc087646b25aef92d948ea89cde28ffd719d0b19ce7cf911c03b08",
+    "scripts/verify-mt-mobile-site.cjs": "f265bf6f2a102f52583549af9761d5b360b190d7650f1fbd51e88fbec9139918",
+    "scripts/verify-mt-device.cjs": "9b002ed68c4b61b028575dc7c2ad7cfb614294fe6d20ad4a9b9a8fb11012c416",
+    "scripts/verify-mt-client.cjs": "e5c4d50fb7d558c88781f77d4972ca2c9e5920cfb21a452ac3c0d73660bf012d",
+    "site/src/MTExplorer.jsx": "5ca26cbac4e55cfe870aa5d1190f530d8e8fc4ea1934f47cb9af41420bd0e54e",
+    "site/src/mt-device-client.js": "c4ae3168af3d705e3707ef6ba143a35fc042a047c142dd6e6bbc05c6c3bb8c2e",
+    "site/src/mt-device-result.js": "24bfe35426849f6f85a3682eec732cb9a4ea73d54d749a42017d7b485ac80cc8",
+    "site/src/mt-device-worker.js": "99cd033c5da6468c34de8c3c27dab663cd48dbad6a97c40577418b29e7b75197",
+    "site/src/mt-mobile-device-result.js": "c8190bbf680526a00a6baed4a09f43f1e6878589526184e5d70abe99cfaf9098",
+    "site/src/mt-mobile-device-manifest.json": "14b1100762d2e74337d4a40acbbe1e48a67ca0a503ec8abffe8aad9f76208781",
+    "tests/test_mt_mobile_device.py": "f00b8cc8debd63dfc73b1bbdfbd12fb699de472b5bb8295f75395da026e86ffd",
+    "tests/mt-mobile-device-client.mjs": "128ede146f191a132dd6d50822d75736a921c2f5c49086006f34c1c65379a286",
+    "docs/mt-mobile-quotation.md": "f38a749ea931ccdd46a19ee05d1d664f47121780a7161030382d11258ec64273"
+  },
+  "evidence_sha256": {
+    "runs/2026-11-21-mt-mobile-quotes-before.json": "490850556a1ddd25f520e05152ddd073eace6f49fcc910df191942d796f8258b",
+    "runs/2026-11-21-mt-mobile-prototype-build-first.json": "81bd97458ef9fa20a8ce286223c76c06ef43c62b1d8b2fe79fc943912cc9a0d1",
+    "runs/2026-11-21-mt-mobile-fixture-browser.json": "58772c199e8e06f35c3e017b0cdc031108267d9515353ac80643cc75bfab7eeb",
+    "runs/2026-11-21-mt-mobile-prototype-site.json": "0daa13891db64996a912caffa8bba592e8e8cff130eef46df3c5fe26c90bb2d8"
+  },
+  "observed_focused_commands": [
+    {
+      "argv": [
+        "python",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_mt_mobile_device.py",
+        "tests/test_mt_device.py"
+      ],
+      "pass": true,
+      "observed_summary": "74 passed in0.40s"
+    },
+    {
+      "argv": [
+        "node",
+        "scripts/verify-mt-client.cjs"
+      ],
+      "pass": true,
+      "observed_summary": "19 passed;0 failed"
+    }
+  ],
+  "actual_fixture_browser_report_pass": true,
+  "actual_prototype_route_report_pass": true,
+  "prototype_not_final_build": true,
+  "final_distinct_review_and_protected_integration_pending": true,
+  "production_publication_claimed": false,
+  "independent_accuracy_evidence": false,
+  "physical_phone": false,
+  "human_screen_reader": false,
+  "original_requirement_closed": false
+}

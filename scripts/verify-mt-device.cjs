@@ -4,12 +4,15 @@ const {execFileSync}=require('node:child_process');
 const {chromium,webkit}=require('playwright');
 const {writeReport}=require('./execution-report.cjs');
 const {parseHeaders,headersFor}=require('./static-headers.cjs');
+const {mobileWorkerParity}=require('./mt-mobile-site-controls.cjs');
+const mobileManifest=JSON.parse(fs.readFileSync('site/src/mt-mobile-device-manifest.json'));
 const root=path.resolve('output/mt-device-fixture');
 const manifest=JSON.parse(fs.readFileSync('site/src/mt-device-manifest.json'));
 const cases=JSON.parse(execFileSync(process.env.AITRUST_VERIFY_PYTHON||'python3',['scripts/mt-device-cases.py'],{encoding:'utf8'}));
 const workerPath='/assets/'+fs.readdirSync(root+'/assets').find(n=>/^mt-device-worker-.*\.js$/.test(n));
 const headers=parseHeaders(fs.readFileSync('site/public/_headers','utf8'));
 const sources=['protocol/normalization.mjs','protocol/normalization-core.js','protocol/unicode15-data.json','protocol/normalization.py','LICENSE','NOTICE','eval/vectors/unicode/LICENSE.txt','tools/mt_device.py','scripts/build-mt-device.py','scripts/build-mt-device-fixture.mjs','scripts/mt-device-cases.py','scripts/verify-mt-device.cjs','site/src/MTExplorer.jsx','site/src/MTExplorerSlot.jsx','site/src/mt-device-client.js','site/src/mt-device-worker.js','site/src/mt-device-result.js','site/src/mt-device-manifest.json','site/public'+manifest.path,'site/public/mt-device/notices.txt','tests/test_mt_device.py','tests/mt-device-client.mjs'];
+sources.push(...['tools/authority_mobile_quotation.py','tools/mt_mobile_device.py','scripts/authority-mobile-quotation.py','scripts/mt-mobile-device-cases.py','scripts/mt-mobile-site-controls.cjs','site/src/mt-mobile-device-result.js','site/src/mt-mobile-device-manifest.json','site/public'+mobileManifest.path,'site/public/mt-mobile-device/notices.txt','tests/test_mt_mobile_device.py','tests/mt-mobile-device-client.mjs']);
 const inventory=()=>Object.fromEntries(sources.map(p=>[p,crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex')]));
 const before=inventory();
 const assert=(ok,message)=>{if(!ok)throw Error(message);};
@@ -34,6 +37,7 @@ const instrumentation=()=>{
     browser=await engine.launch({headless:true});const context=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1});
     await context.addInitScript(instrumentation);const page=await context.newPage();const requests=[],errors=[],logs=[];
     page.on('request',r=>requests.push({url:r.url(),method:r.method(),body:r.postData()}));page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>logs.push(m.text()));
+    stage='mobile_candidate_full_parity';const mobileParity=await mobileWorkerParity(browser,base,workerPath);
     stage='lazy_mount';await page.goto(base);await page.locator('[data-mt-explorer]').waitFor();
     assert(await page.evaluate(()=>window.__mtWorkers.length)===0,'Worker started at mount');
     assert(!requests.some(r=>/\/device\/runtime|\/mt-device\/method/.test(r.url)),'Runtime or method fetched before explicit run');
@@ -91,7 +95,7 @@ const instrumentation=()=>{
     }
     stage='unsupported_worker';const unsupported=await browser.newContext();await unsupported.addInitScript(()=>window.Worker=undefined);const up=await unsupported.newPage();await up.goto(base);await up.getByLabel('Look for',{exact:true}).selectOption('urgency');await up.getByLabel('English text',{exact:true}).fill('Buy now.');await up.getByRole('button',{name:'Explore wording',exact:true}).click();await up.getByRole('alert').filter({hasText:'couldn’t finish'}).waitFor();await unsupported.close();
     stage='evaluation_deadline';const timeout=await browser.newContext();await timeout.addInitScript(()=>window.Worker=class{constructor(){setTimeout(()=>this.onmessage?.({data:{type:'ready'}}),0);}postMessage(){}terminate(){window.__terminatedProbe=true;}});const tp=await timeout.newPage();await tp.goto(base);await tp.getByLabel('Look for',{exact:true}).selectOption('urgency');await tp.getByLabel('English text',{exact:true}).fill('Buy now.');await tp.getByRole('button',{name:'Explore wording',exact:true}).click();await tp.getByRole('alert').filter({hasText:'couldn’t finish'}).waitFor({timeout:8000});assert(await tp.evaluate(()=>window.__terminatedProbe),'Evaluation timeout left worker');await timeout.close();
-    report.engines.push({name,pass:true,full_native_python_record_parity:cases.length,requested_input_frozen_nfc_identity_bound:true,closed_original_records_validated:true,corrupt_results_refused_before_render:5,default_no_analysis:true,separate_per_run_worker_terminated:true,quote_refusal_then_urgency_recovered:true,private_details_opt_in:true,edit_clear_unmount_cancelled:true,invalid_bundle_refused:true,unsupported_worker_refused:true,evaluation_deadline_refused:true,other_tool_probe_survived:true,mt_import_and_render_failure_contained:true,actual_missing_mt_chunk_contained:true,oversized_bundle_refused:true,keyboard_navigation:name==='WebKit'?'Option+Tab (Safari full-control navigation)':'Tab',actual_ps_worker_retested:false,no_input_in_requests_storage_console:true,reflow_320_at_200_percent:true,labeled_controls_minimum_44px:true,axe_violations:0,storage});
+    report.engines.push({name,mobileParity,pass:true,full_native_python_record_parity:cases.length,requested_input_frozen_nfc_identity_bound:true,closed_original_records_validated:true,corrupt_results_refused_before_render:5,default_no_analysis:true,separate_per_run_worker_terminated:true,quote_refusal_then_urgency_recovered:true,private_details_opt_in:true,edit_clear_unmount_cancelled:true,invalid_bundle_refused:true,unsupported_worker_refused:true,evaluation_deadline_refused:true,other_tool_probe_survived:true,mt_import_and_render_failure_contained:true,actual_missing_mt_chunk_contained:true,oversized_bundle_refused:true,keyboard_navigation:name==='WebKit'?'Option+Tab (Safari full-control navigation)':'Tab',actual_ps_worker_retested:false,no_input_in_requests_storage_console:true,reflow_320_at_200_percent:true,labeled_controls_minimum_44px:true,axe_violations:0,storage});
    }catch(error){report.errors.push({engine:name,stage,message:error.message});throw error;}
    finally{await browser?.close();}
   }
