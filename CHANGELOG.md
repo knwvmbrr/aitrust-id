@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-092600-pyodide-runtime-rebinding-counter-review-0647a0c7
+
+Recorded 2026-11-21T09:26:00.804577+00:00 · Contributor: Codex /root/seo; actual independent review /root · change
+
+- **Changed.** Recorded the distinct PM counter-review of the corrected exact-runtime source/notice producer.
+- **Evidence.** The actual unchanged-source coherently rebound metadata counterexample now refuses in checked, outputs, export and check-built; the original unexpected acceptance is preserved by digest. [Change record](./runs/changes/2026-11-21-092600-pyodide-runtime-rebinding-counter-review-0647a0c7.json).
+- **Not claimed.** No application hook, public artifact, legal clearance, full WASM corresponding-source or global route permission is granted; original70 remain open.
+
+
+### 2026-11-21-092506-pyodide-selected-js-source-notices-46b4f07a
+
+Recorded 2026-11-21T09:25:06.377990+00:00 · Contributor: Codex /root/seo; independent correction review /root · change
+
+- **Changed.** Added a deterministic offline selected Pyodide JavaScript preferred-source bundle and verbatim MPL/MIT notice delivery, repairing the absent carried vendor notice.
+- **Evidence.** Exact cached npm/source replay verifies all five runtime members and ten preferred source files;36 focused controls and11 actual artifact/CLI outcomes pass. Current producer anchors the reviewed runtime projection and refuses coherently rebound metadata. Earlier unpacking and gate-bypass candidates remain recorded. [Change record](./runs/changes/2026-11-21-092506-pyodide-selected-js-source-notices-46b4f07a.json).
+- **Not claimed.** Selected JavaScript source and notice evidence only. No full WASM corresponding source, compiler reproduction, signature verification, legal clearance, distribution-route admission or original F-057/X-02 closure. Normal-build hooks and public publication remain PM-owned and pending.
+
+
 ### 2026-11-21-091323-nov21-final-closeout-source-evidence-f038e00f
 
 Recorded 2026-11-21T09:13:23.050944+00:00 · Contributor: Codex /root; exact inventory review /root/seo · change
