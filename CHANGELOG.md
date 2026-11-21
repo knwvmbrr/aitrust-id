@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-151957-local-policy-linux-executed-and-reviewed-8d495fcb
+
+Recorded 2026-11-21T15:19:57.010071+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded actual nonroot network-denied Linux tenant-policy operation, exact staging preservation/removal, retained failed preflight and distinct source/artifact review.
+- **Evidence.** Frozen4e06a33 with18 matching inputs passed27 groups and73 recorded ordinary CLI calls on Linux; Mac outcome hashes agree. Actual IPv4/IPv6/Unix/io_uring denial, old staging unchanged, owned temporary cleanup and independent retained-evidence review passed. [Change record](./runs/changes/2026-11-21-151957-local-policy-linux-executed-and-reviewed-8d495fcb.json).
+- **Not claimed.** Full N-010 closure is not recommended: historical outside-human/privacy operation and commercial-conformance gates remain open. Local owner/capability control is not real organization identity, employee consent or global anti-rollback authority. Protected integration/publication remain PM-owned.
+
+
 ### 2026-11-21-150908-local-policy-source-whitespace-identity-5e3f15c6
 
 Recorded 2026-11-21T15:09:08.348120+00:00 · Contributor: Codex · change

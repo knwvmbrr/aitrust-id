@@ -1,0 +1,95 @@
+{
+  "format": "ai-trust-id-organization-policy-software-result/v1",
+  "captured_at": "2026-11-21T15:18:53.516634+00:00",
+  "pass": true,
+  "scope": [
+    "N-010"
+  ],
+  "source_commit": "4e06a3310acecaf9fca8ea0e148c584cb1102e60",
+  "implemented_by": "Codex /root/share_debugger",
+  "source_reviewed_by": "Codex /root/seo",
+  "profile": "local-owner-organization-namespace/v1",
+  "source_binding_count": 18,
+  "mac_evidence": {
+    "path": "runs/2026-11-21-organization-policy-mac-final-operation.json",
+    "sha256": "9af25cb7b6cf47629fca1535c41a6a0b52ce9a6be60103c9b2f0d9051058509c",
+    "tests": 27,
+    "recorded_ordinary_cli_calls": 73
+  },
+  "linux_evidence": {
+    "path": "runs/2026-11-21-organization-policy-linux-operation.json",
+    "sha256": "1da9b65b4dd02ec3b65ac0f1e94b5285cf185ba890947c73d153aa4dbe94531a",
+    "tests": 27,
+    "recorded_ordinary_cli_calls": 73
+  },
+  "ordinary_cli_outcome_hashes_identical_across_OS": true,
+  "actual_supported_outcomes": [
+    "Initialize the explicitly accepted local technical contract and measured OS-owner authority.",
+    "Enroll team/enterprise/proprietary local tenants, issue role-scoped capabilities and govern exact custom policy jobs.",
+    "Prepare raw/frozen-NFC/source-bound selections and run fresh bounded canonical workers.",
+    "Separate view/check/configure/export roles, cross-tenant denial, current expiry/revocation and fresh-capability recovery.",
+    "Stale edit/version/pause refusal; unaffected job/tenant and personal PS continue after optional failures.",
+    "Explicit private output, atomic complete no-overwrite files, fdopen/all-close and publication-uncertainty refusals.",
+    "Explicit tenant removal and registry removal without a service or account."
+  ],
+  "linux_preservation": {
+    "captured_at": "2026-11-21T15:15:42.490405+00:00",
+    "old_staging_exact_three_unchanged": true,
+    "old_staging_running_healthy": true,
+    "before_selected_state_sha256": "593880394a2141a29450986b05cac59e6db21eda10d806e0069167c1f12fffe0",
+    "after_selected_state_sha256": "593880394a2141a29450986b05cac59e6db21eda10d806e0069167c1f12fffe0",
+    "config_env_or_health_logs_read": false,
+    "selected_fields": [
+      "id",
+      "image",
+      "pid",
+      "started_at",
+      "health",
+      "running",
+      "network",
+      "readonly",
+      "security"
+    ],
+    "container_inventory_unchanged": true,
+    "before_inventory_sha256": "8b32d2bea1233283b308fb44eac1d4b8e6e819de4b3cd753c3800863389b5397",
+    "after_inventory_sha256": "8b32d2bea1233283b308fb44eac1d4b8e6e819de4b3cd753c3800863389b5397",
+    "other_root_experiment_containers_not_inspected": true,
+    "service_stop_start_or_config_mutations": false,
+    "execution_exit": 0
+  },
+  "linux_owned_temporary_cleanup": {
+    "only_owned_temporary_directory_removed": true
+  },
+  "private_linux_controllers_sha256": {
+    "run.py": "58cf503d46768c3aa1202a6e0d4cc67158692c5234c93515bf20f84ca5bcd163",
+    "outer.py": "679afcc84e92e9afd3c90e8a4660029bfbea2cebcd1410a6f22561b2a5e249d5",
+    "nonroot.py": "9c1f818337ecd9cc26c4fa2e9393fce869b52142e7138483c8b5cbcb7a85fa34",
+    "collect.py": "ac519745dde943cbb0b32f79410bdae0214f165f7055166985607ac34aa71111"
+  },
+  "linux_preflight_failure_preserved": {
+    "path": "runs/2026-11-21-organization-policy-linux-preflight-failed.json",
+    "sha256": "f10f1dbfd12409d1e5437726838c719983a04409261bcf0d6a154ce6fccfd52b",
+    "tests_executed": 0,
+    "corrected_private_wrapper_only": true
+  },
+  "no_existing_canonical_source_edits": true,
+  "no_shared_state_scope_catalogue_or_CI_edits": true,
+  "full_original_closure_recommended": false,
+  "human_gate": {
+    "historical_commit": "7c103f5e737c6684d6a4057c70cc5e9bbeb14b74",
+    "preserved_files": [
+      "docs/private-policy-plan.md",
+      "docs/private-policy-result.md"
+    ],
+    "status": "outside human/privacy operation and full commercial conformance not accepted; local technical adoption does not supersede it"
+  },
+  "employee_consent_or_real_organization_identity_proved": false,
+  "independent_accuracy_evidence": false,
+  "protected_integration_completed": false,
+  "limits": [
+    "The OS owner/administrator and selected registry remain trusted; this is not OS account isolation or a hosted organization service.",
+    "Capability state has no external anti-rollback authority; restoring an old private registry can restore its old revocation state.",
+    "No sale, legal ownership, employee consent, coercion prevention, physical/human or full original acceptance is granted.",
+    "Current source-bound protected integration and documentation/publication remain PM-owned."
+  ]
+}
