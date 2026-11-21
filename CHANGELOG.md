@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-161145-integrate-governed-policy-and-remote-scope-42ddebff
+
+Recorded 2026-11-21T16:11:45.758526+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Integrated the governed local organization-policy mechanism at80 with human/commercial gates retained, registered the requested remote API enhancement separately and added the new connection page to sitemap generation.
+- **Evidence.** 18 integrated sources match actual Mac execution, ordinary CLI starts, actual Linux review is retained and202 original IDs stay133 complete69 open. [Change record](./runs/changes/2026-11-21-161145-integrate-governed-policy-and-remote-scope-42ddebff.json).
+- **Not claimed.** Remote public activation, protected hosted checks and host-specific connection approval remain pending. No other original requirement is completed; planned tags are not advertised as working detectors.
+
+
 ### 2026-11-21-160509-optional-remote-connection-guide-bd3d8a22
 
 Recorded 2026-11-21T16:05:09.479116+00:00 · Contributor: Codex · change
