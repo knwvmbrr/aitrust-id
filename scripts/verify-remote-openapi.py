@@ -11,6 +11,10 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = 'integrations/ai-tools/remote-openapi.json'
 SOURCES = ('tools/remote_tag_server.py', 'tools/tag_api.py', 'deploy/ai-tools/render.py')
 LIMIT = 256_000
+SERVER_DESCRIPTION = ('Engineering preview; public reachability and host account '
+                      'installation are verified separately. See the connection '
+                      'page for current status. No availability or host approval '
+                      'is asserted by this manifest.')
 
 
 class ContractError(ValueError):
@@ -90,7 +94,7 @@ def verify(document=None, root=ROOT):
     require(d.get('security') == [] and 'securitySchemes' not in d['components'])
     require(d.get('servers') and len(d['servers']) == 1
             and d['servers'][0]['url'] == 'https://vps-18ef1326.vps.ovh.us')
-    require('pending' in d['servers'][0]['description'].lower())
+    require(d['servers'][0]['description'] == SERVER_DESCRIPTION)
     require(d.get('x-aitrust-mcp-excluded') is True)
     require(set(d['paths']) == {'/v1/check', '/v1/tags', '/healthz'})
     source = {n: read(root / n, 1_000_000) for n in SOURCES}

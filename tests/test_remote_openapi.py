@@ -101,9 +101,14 @@ class RemoteOpenAPI(unittest.TestCase):
             jsonschema.Draft202012Validator.check_schema(schema)
 
     def test_surface_and_claim_drift_refuse(self):
+        # A transport contract must remain truthful both before and after
+        # deployment. It does not freeze a stale "pending" operational state.
+        self.assertNotIn('pending', self.document['servers'][0]['description'].lower())
+        self.assertTrue(contract.verify(copy.deepcopy(self.document))['pass'])
         changes = [lambda d: d['paths'].update({'/upload': d['paths']['/v1/check']}),
                    lambda d: d['paths'].update({'/mcp': d['paths']['/v1/check']}),
                    lambda d: d['servers'][0].update(url='https://unapproved.invalid'),
+                   lambda d: d['servers'][0].update(description='Live, approved for every AI host and independently validated.'),
                    lambda d: d.update(security=[{'token': []}]),
                    lambda d: d.update(webhooks={'unexpected': {}}),
                    lambda d: d['paths']['/v1/check']['post'].update(callbacks={'unexpected': {}}),

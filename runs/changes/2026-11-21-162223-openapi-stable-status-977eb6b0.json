@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-162223-openapi-stable-status-977eb6b0",
+  "recorded_at": "2026-11-21T16:22:23.832976+00:00",
+  "author": "Codex API contract engineer",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0c1e5581b4eab04dbe5e0bd5bcfe1c6a0e8dc1b6",
+  "changed": "Kept the OpenAPI transport description stable across deployment instead of enforcing a stale pending state.",
+  "proves": "One affected false-assurance regression and actual isolated SDK-free contract CLI pass; exact server preview declaration refers operational reachability and account installation to the connection page.",
+  "limits": "Historical eight-test proof retained. Current full focused file is an integration check; no runtime, endpoint, independent accuracy, deployment or host approval claim.",
+  "scope_ids": [
+    "T-PS"
+  ],
+  "files": {
+    "integrations/ai-tools/remote-openapi.json": "f8af27c8727131496a99c6194d2bf69dd9791c106a8fc1565ce8e20f43c3c953",
+    "scripts/verify-remote-openapi.py": "dd8b983a64da448aba59935359da539b3220aab372ee173b437aeda5c7be7e28",
+    "tests/test_remote_openapi.py": "dc6c5ebd0c078e83fbeae1c09437a6c66171d4f02b9c014e661b33497e6ddc26",
+    "runs/2026-11-21-remote-openapi-stable-status.json": "273cb534ae3c634958e25b6c64083d22b380c4109de79c36a86bf2c68d1313a9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-remote-openapi-stable-status.json",
+      "sha256": "273cb534ae3c634958e25b6c64083d22b380c4109de79c36a86bf2c68d1313a9"
+    }
+  ],
+  "checks": []
+}

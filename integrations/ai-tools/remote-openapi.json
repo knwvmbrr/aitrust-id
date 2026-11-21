@@ -3,12 +3,12 @@
   "info": {
     "title": "AI Trust ID selected-text JSON API",
     "version": "1.0.0-preview",
-    "description": "Open-source engineering preview for explicitly selected text, pending public activation and host-specific import approval. This manifest adds no endpoint and grants no AI-host approval. Ordinary JSON calls only; MCP is separate. No account or authorization token is required or accepted. Selected text reaches the operator server; application input storage and automatic research collection are disabled. Do not send secrets. No safety, truth, AI-origin, certification or independent accuracy claim."
+    "description": "Open-source engineering preview for explicitly selected text, with public reachability and host-specific installation verified separately on the connection page. This manifest adds no endpoint and grants no AI-host approval. Ordinary JSON calls only; MCP is separate. No account or authorization token is required or accepted. Selected text reaches the operator server; application input storage and automatic research collection are disabled. Do not send secrets. No safety, truth, AI-origin, certification or independent accuracy claim."
   },
   "servers": [
     {
       "url": "https://vps-18ef1326.vps.ovh.us",
-      "description": "Approved provider hostname; public activation and trusted TLS verification pending. No availability guarantee."
+      "description": "Engineering preview; public reachability and host account installation are verified separately. See the connection page for current status. No availability or host approval is asserted by this manifest."
     }
   ],
   "security": [],

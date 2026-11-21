@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-162223-openapi-stable-status-977eb6b0
+
+Recorded 2026-11-21T16:22:23.832976+00:00 · Contributor: Codex API contract engineer · change
+
+- **Changed.** Kept the OpenAPI transport description stable across deployment instead of enforcing a stale pending state.
+- **Evidence.** One affected false-assurance regression and actual isolated SDK-free contract CLI pass; exact server preview declaration refers operational reachability and account installation to the connection page. [Change record](./runs/changes/2026-11-21-162223-openapi-stable-status-977eb6b0.json).
+- **Not claimed.** Historical eight-test proof retained. Current full focused file is an integration check; no runtime, endpoint, independent accuracy, deployment or host approval claim.
+
+
 ### 2026-11-21-161824-remote-openapi-contract-eca30759
 
 Recorded 2026-11-21T16:18:24.739865+00:00 · Contributor: Codex API contract engineer · change
