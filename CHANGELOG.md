@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-21
+
+### 2026-11-21-043819-dialog-measurement-failure-context-5b677ad1
+
+Recorded 2026-11-21T04:38:19.116678+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Add failure-only bounded dialog/route identity context and operation-stage attribution to the existing accessibility verifier, with isolated privacy controls.
+- **Evidence.** Four focused unchanged actual MTdark-to-IV checks pass without reproducing historical timeout. Final source-hashed browser controls suppress private DOM/input/hash/context values, discriminate expected dialog identity and bound closed/missing/hung-page failure observation. [Change record](./runs/changes/2026-11-21-043819-dialog-measurement-failure-context-5b677ad1.json).
+- **Not claimed.** Diagnostic-only; historical timeout cause UNESTABLISHED. Product/router source, successful site operations, waits, predicates and thresholds unchanged. No full-site rerun, workaround, original requirement closure, physical-phone, human or independent accuracy claim.
+
+
 ## Unreleased — 2026-11-20
 
 ### 2026-11-20-183820-android-diagnostic-final-source-freeze-d1c6a983

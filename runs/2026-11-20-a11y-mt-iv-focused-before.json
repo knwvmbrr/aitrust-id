@@ -1,0 +1,146 @@
+{
+  "captured_at": "2026-11-21T04:32:48.941Z",
+  "author": "Codex / web_camo",
+  "pass": true,
+  "checks": [
+    {
+      "cycle": 0,
+      "tag": "MT",
+      "theme": "dark",
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      },
+      "targets": {
+        "controls": 22,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 22,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "cycle": 0,
+      "tag": "IV",
+      "theme": "dark",
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      },
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "cycle": 1,
+      "tag": "MT",
+      "theme": "dark",
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      },
+      "targets": {
+        "controls": 22,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 22,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      }
+    },
+    {
+      "cycle": 1,
+      "tag": "IV",
+      "theme": "dark",
+      "disclosure": {
+        "checked": 3,
+        "failures": []
+      },
+      "targets": {
+        "controls": 12,
+        "inline_exceptions": 0,
+        "failures": []
+      },
+      "focus": {
+        "checked": 12,
+        "failures": []
+      },
+      "spacing": {
+        "clipped": [],
+        "horizontal_overflow": false
+      }
+    }
+  ],
+  "early_identities": [
+    {
+      "cycle": 0,
+      "tag": "MT",
+      "route": "#person/MT",
+      "expected_dialog_id": "radix-_r_i_",
+      "actual_dialog_ids": [
+        "radix-_r_i_"
+      ]
+    },
+    {
+      "cycle": 0,
+      "tag": "IV",
+      "route": "#person/IV",
+      "expected_dialog_id": "radix-_r_l_",
+      "actual_dialog_ids": [
+        "radix-_r_l_"
+      ]
+    },
+    {
+      "cycle": 1,
+      "tag": "MT",
+      "route": "#person/MT",
+      "expected_dialog_id": "radix-_r_i_",
+      "actual_dialog_ids": [
+        "radix-_r_i_"
+      ]
+    },
+    {
+      "cycle": 1,
+      "tag": "IV",
+      "route": "#person/IV",
+      "expected_dialog_id": "radix-_r_l_",
+      "actual_dialog_ids": [
+        "radix-_r_l_"
+      ]
+    }
+  ],
+  "historical_timeout_cause": "UNESTABLISHED",
+  "product_source_changed": false,
+  "before": {
+    "main": "c66d3df9a56945fb5165b13e1b28be7eeca9b4dcd08dc0ed4d5f76aa6ac5ad24",
+    "index": "c84c87c0c747ef40234fb108b27fed78e695fec9f4b5b3d0ed77e50ef0848d30",
+    "verifier": "2ed3023bba57b2c03bffcf1a8f7bd666b8b0b9ccbdf068c2a22cb092e6bf4071"
+  },
+  "after": {
+    "main": "c66d3df9a56945fb5165b13e1b28be7eeca9b4dcd08dc0ed4d5f76aa6ac5ad24",
+    "index": "c84c87c0c747ef40234fb108b27fed78e695fec9f4b5b3d0ed77e50ef0848d30",
+    "verifier": "2ed3023bba57b2c03bffcf1a8f7bd666b8b0b9ccbdf068c2a22cb092e6bf4071"
+  },
+  "sources_stable": true
+}
