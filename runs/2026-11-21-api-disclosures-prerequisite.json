@@ -1,0 +1,35 @@
+{
+  "captured_at": "2026-11-21T17:27:35.531074+00:00",
+  "pass": true,
+  "kind": "actual_published_remote_connection_disclosures",
+  "protected_merge": "abe7d64be77b03d19f51143f774fa51b59717e59",
+  "tested_source": "4ff29c85ca623faa42fea504967d6bc7ad989cc0",
+  "deployment_url": "https://0bd1a8f2.aitrust-id.pages.dev",
+  "public_origin": "https://aitrustid.com",
+  "policy_version": "1.14",
+  "transport": "ordinary TLS-verifying curl; no bypass or cookie",
+  "actual_HTTP_artifacts": [
+    {
+      "path": "/policies/privacy/",
+      "status": 200,
+      "sha256": "5f9260c679adb7e50d9bdf40fd232ffb64ee39cedd0d88c2567ec78d1119d019",
+      "matches_reviewed_build": true
+    },
+    {
+      "path": "/reference/remote-ai/",
+      "status": 200,
+      "sha256": "3d8debe86c91aba6cb1fd6b78c53ac6b37c7533beae908f60c7d8d0d2407dbd6",
+      "matches_reviewed_build": true
+    },
+    {
+      "path": "/reference/remote-openapi.json",
+      "status": 200,
+      "sha256": "f8af27c8727131496a99c6194d2bf69dd9791c106a8fc1565ce8e20f43c3c953",
+      "matches_reviewed_build": true
+    }
+  ],
+  "public_API_activated": false,
+  "Google_ownership_granted": false,
+  "earlier_default_urllib_fetch_status": 403,
+  "earlier_urllib_refusal_cause_unestablished": true
+}

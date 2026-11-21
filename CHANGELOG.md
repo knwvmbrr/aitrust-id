@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-173620-remote-api-public-deployment-d98ac614
+
+Recorded 2026-11-21T17:36:20.894852+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Activated the reviewed remote PS HTTP/MCP service on the existing provider hostname after published1.14 disclosures.
+- **Evidence.** Actual external trustedTLS/hostname and health200 pass; one officialMCP2.3.0 discovery/PS call returns FINDING without submittedtext. Both exact readonly-release services are active/enabled with measured resource/isolation controls; one tagged443rule preserves priorrules and persistence, oldstaging remains healthy, and ownedtempstaging is removed. [Change record](./runs/changes/2026-11-21-173620-remote-api-public-deployment-d98ac614.json).
+- **Not claimed.** No ChatGPT/Claude account connection, independent accuracy, uptime study or original scope closure. Only one fixed synthetic example submitted by operator. RemotePS is a developmentmethod; PII unavailable and selectedtext reaches dedicatedOVHhost. Existing role/database/backup/F030 systems unchanged.
+
+
 ### 2026-11-21-173145-public-api-connection-instructions-e85fbbae
 
 Recorded 2026-11-21T17:31:45.067742+00:00 · Contributor: Codex · change

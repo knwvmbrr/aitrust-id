@@ -1,0 +1,48 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T17:36:20.835077+00:00",
+  "profile": "completed-remote-API-deployment-1",
+  "MCP_URL": "https://vps-18ef1326.vps.ovh.us/mcp",
+  "origin": "https://vps-18ef1326.vps.ovh.us",
+  "approved_routes": {
+    "POST": [
+      "/mcp",
+      "/v1/check"
+    ],
+    "GET": [
+      "/v1/tags",
+      "/healthz"
+    ]
+  },
+  "release_commit": "a5215149af23be51cd29f9b37ce1d85bdeff0c49",
+  "operator_commit": "879e5460c6c977479723a514714d44811cfcdf00",
+  "source_publication_main": "abe7d64",
+  "disclosures_published_before_public_activation": true,
+  "phase": "enabled_after_operator_public_proof",
+  "evidence_sha256": {
+    "runs/2026-11-21-api-public-operational.json": "3051bf91bebc1e602f2bd736c67344025146e0c65cf40c7ba40e921231694cd1",
+    "runs/2026-11-21-api-active-operational-state.json": "b4063ef7e3eb19c7d3e6544eaba7be618f71c98349065ed010c1f555a37c7165",
+    "runs/2026-11-21-api-active-isolation.json": "44a013630d5ba8d9d74be1292fb971cb703702617432dc2a082f4f586d93046d",
+    "runs/2026-11-21-api-owned-stage-cleanup.json": "dd2b3c4a3a0677bae6ec5909cb68542cf2a4c472460a43c2798cf9bb4b6b5512",
+    "runs/2026-11-21-api-disclosures-prerequisite.json": "35f96092a3801674bd5c8426cf831e4d0668dfe519f73d4ec4dbbd6d91dbae12"
+  },
+  "rollback": {
+    "record": "/opt/aitrustid-ai-tools/activation-records/20261121T172230Z-a5215149af23",
+    "reviewed_helper": "/opt/aitrustid-ai-tools/operator/879e5460c6c977479723a514714d44811cfcdf00/activate.py",
+    "interpreter": "/opt/aitrustid-ai-tools/releases/a5215149af23be51cd29f9b37ce1d85bdeff0c49/venv/bin/python",
+    "argument": "--rollback",
+    "scope": "Only new APIunits, its tagged443rule and exactowned persistence append; existing services and immutable release retained."
+  },
+  "AI_host_account_connected": false,
+  "independent_accuracy_validated": false,
+  "new_original_closures": 0,
+  "limits": [
+    "One necessary external trustedTLS health observation and one officialMCP PS example, not a regression/accuracy/availability study.",
+    "HostAI account/workspace approval and UI connection are separate; Origin requests remain refused by default.",
+    "RemotePS development check only; remotePII unavailable; submittedtext reaches the dedicatedOVHservice without application input storage/research submission.",
+    "No newDNS, globalpackages, models, database/backup/F030 changes or whole-firewall flush/reload."
+  ],
+  "real_user_data_submitted_by_operator": false,
+  "operator_input_scope": "One fixed public synthetic command example only; publictraffic is not counted through request logs.",
+  "state_observed_at": "2026-11-21T17:32:09.122750+00:00"
+}

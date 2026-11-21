@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-173620-remote-api-public-deployment-d98ac614",
+  "recorded_at": "2026-11-21T17:36:20.894852+00:00",
+  "author": "Codex API deployment engineer",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "879e5460c6c977479723a514714d44811cfcdf00",
+  "changed": "Activated the reviewed remote PS HTTP/MCP service on the existing provider hostname after published1.14 disclosures.",
+  "proves": "Actual external trustedTLS/hostname and health200 pass; one officialMCP2.3.0 discovery/PS call returns FINDING without submittedtext. Both exact readonly-release services are active/enabled with measured resource/isolation controls; one tagged443rule preserves priorrules and persistence, oldstaging remains healthy, and ownedtempstaging is removed.",
+  "limits": "No ChatGPT/Claude account connection, independent accuracy, uptime study or original scope closure. Only one fixed synthetic example submitted by operator. RemotePS is a developmentmethod; PII unavailable and selectedtext reaches dedicatedOVHhost. Existing role/database/backup/F030 systems unchanged.",
+  "scope_ids": [
+    "T-PS"
+  ],
+  "files": {
+    "runs/2026-11-21-api-public-operational.json": "3051bf91bebc1e602f2bd736c67344025146e0c65cf40c7ba40e921231694cd1",
+    "runs/2026-11-21-api-active-operational-state.json": "b4063ef7e3eb19c7d3e6544eaba7be618f71c98349065ed010c1f555a37c7165",
+    "runs/2026-11-21-api-active-isolation.json": "44a013630d5ba8d9d74be1292fb971cb703702617432dc2a082f4f586d93046d",
+    "runs/2026-11-21-api-owned-stage-cleanup.json": "dd2b3c4a3a0677bae6ec5909cb68542cf2a4c472460a43c2798cf9bb4b6b5512",
+    "runs/2026-11-21-api-disclosures-prerequisite.json": "35f96092a3801674bd5c8426cf831e4d0668dfe519f73d4ec4dbbd6d91dbae12",
+    "runs/2026-11-21-api-deployment-complete.json": "319a1122049b8a7ba93893f6b72b57d234ffcc5612131ad55ef9b237a0785bd0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-api-public-operational.json",
+      "sha256": "3051bf91bebc1e602f2bd736c67344025146e0c65cf40c7ba40e921231694cd1"
+    },
+    {
+      "path": "runs/2026-11-21-api-active-operational-state.json",
+      "sha256": "b4063ef7e3eb19c7d3e6544eaba7be618f71c98349065ed010c1f555a37c7165"
+    },
+    {
+      "path": "runs/2026-11-21-api-active-isolation.json",
+      "sha256": "44a013630d5ba8d9d74be1292fb971cb703702617432dc2a082f4f586d93046d"
+    },
+    {
+      "path": "runs/2026-11-21-api-disclosures-prerequisite.json",
+      "sha256": "35f96092a3801674bd5c8426cf831e4d0668dfe519f73d4ec4dbbd6d91dbae12"
+    },
+    {
+      "path": "runs/2026-11-21-api-deployment-complete.json",
+      "sha256": "319a1122049b8a7ba93893f6b72b57d234ffcc5612131ad55ef9b237a0785bd0"
+    }
+  ],
+  "checks": []
+}
