@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-161420-clarify-accepted-capture-display-title-05bba76b
+
+Recorded 2026-11-21T16:14:20.839272+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Displayed the completed job as accepted DOM capture and preserved its old fetch/tee title as historical_title.
+- **Evidence.** The visible100percent label describes the route actually verified; original master job, outcome, full acceptance fingerprint and133/69 accounting remain unchanged. [Change record](./runs/changes/2026-11-21-161420-clarify-accepted-capture-display-title-05bba76b.json).
+- **Not claimed.** No MAIN-world fetch/tee or new capture behavior is asserted.
+
+
 ### 2026-11-21-161145-integrate-governed-policy-and-remote-scope-42ddebff
 
 Recorded 2026-11-21T16:11:45.758526+00:00 · Contributor: Codex /root · change
