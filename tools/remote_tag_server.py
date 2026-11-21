@@ -21,6 +21,7 @@ ROOT=Path(__file__).resolve().parents[1]
 WIRE_LIMIT=256_000
 OUTPUT_LIMIT=2_000_000
 REQUEST_SECONDS=12
+PS_SECONDS=10
 DEADLINE=ContextVar('remote_tag_deadline',default=None)
 CHECK_SCHEMA={'type':'object','properties':{'text':{'type':'string','minLength':1,'maxLength':tag_api.MAX_CHARS},'tags':{'type':'array','minItems':1,'maxItems':2,'uniqueItems':True,'items':{'enum':list(tag_api.CODES)},'default':['PS']}},'required':['text'],'additionalProperties':False}
 
@@ -108,10 +109,11 @@ class Engine:
     async def ps(self,text):
         child=None;launch=None
         try:
-            until=DEADLINE.get() or asyncio.get_running_loop().time()+REQUEST_SECONDS
+            now=asyncio.get_running_loop().time()
+            until=min(DEADLINE.get() or now+REQUEST_SECONDS,now+PS_SECONDS)
             async with asyncio.timeout_at(until):
                 async def create():
-                    process=await asyncio.create_subprocess_exec(sys.executable,'-I','-S','-B',str(ROOT/'scripts/check-ps.py'),'--json',stdin=asyncio.subprocess.PIPE,stdout=asyncio.subprocess.PIPE,stderr=asyncio.subprocess.DEVNULL,start_new_session=True,close_fds=True)
+                    process=await asyncio.create_subprocess_exec(sys.executable,'-I','-S','-B',str(ROOT/'scripts/check-ps.py'),'--worker',stdin=asyncio.subprocess.PIPE,stdout=asyncio.subprocess.PIPE,stderr=asyncio.subprocess.DEVNULL,start_new_session=True,close_fds=True)
                     self.active.add(process);return process
                 launch=asyncio.create_task(create());self.launches.add(launch)
                 child=await asyncio.shield(launch)
