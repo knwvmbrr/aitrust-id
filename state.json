@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-21T06:31:25.832385+00:00",
-  "active_increment": "Independent MT mobile quotation preview and carried JavaScript notices in final integration; Android first-Share investigation remains separate. Originals132complete/70open.",
+  "updated": "2026-11-21T07:06:22.010183+00:00",
+  "active_increment": "MT mobile quotation preview and website notices live; NF independent browser comparison under development; Android exact edited draft survives tested rotation, supplemental receipt/HOME validation remains incomplete. Originals132complete/70open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-11-20-credential-publication.json",
+    "evidence": "runs/2026-11-21-nov21-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Host-specific MCP configuration and user-interface acceptance beyond the official SDK client",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://c198f50c.aitrust-id.pages.dev",
+    "deployment_url": "https://32f95adf.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-11-20-credential-publication.json",
+    "publication_evidence": "runs/2026-11-21-nov21-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 36,
@@ -98,7 +98,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-11-20-credential-publication.json",
+    "verification": "runs/2026-11-21-nov21-publication.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -312,10 +312,10 @@
       ],
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
-    "published_source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
-    "public_static_source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
-    "deployment": "https://c198f50c.aitrust-id.pages.dev",
-    "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+    "published_source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
+    "public_static_source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
+    "deployment": "https://32f95adf.aitrust-id.pages.dev",
+    "source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -324,7 +324,7 @@
       "engineering_release_only": true,
       "independent_tag_release": false
     },
-    "publication": "runs/2026-11-20-credential-publication.json",
+    "publication": "runs/2026-11-21-nov21-publication.json",
     "prior_current_publication_fields": {
       "evidence": "runs/2026-10-13-ps-efficiency-publication.json",
       "publication_evidence": "runs/2026-10-11-choice-framing-publication.json",
@@ -374,6 +374,21 @@
           "current_security_headers_matching": 6
         },
         "reason": "Replace current pointers with actual04b critical-asset/browser publication; old broad artifact counts are historical."
+      },
+      {
+        "superseded_at": "2026-11-21T06:52:29.510590+00:00",
+        "prior_values": {
+          "evidence": "runs/2026-11-20-credential-publication.json",
+          "publication_evidence": "runs/2026-11-20-credential-publication.json",
+          "publication": "runs/2026-11-20-credential-publication.json",
+          "verification": "runs/2026-11-20-credential-publication.json",
+          "published_source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+          "public_static_source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+          "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+          "deployment": "https://c198f50c.aitrust-id.pages.dev",
+          "deployment_url": "https://c198f50c.aitrust-id.pages.dev"
+        },
+        "reason": "Current2aa selected critical files and actual browser checks verified on apex/www; no whole-artifact equivalence claim."
       }
     ],
     "current_critical_HTTP_checks": 16,
@@ -383,9 +398,10 @@
     "pending_increment": {
       "MT_mobile_quotation": true,
       "website_JS_notices": true,
-      "published": false,
+      "published": true,
       "tag_release_approved": false
-    }
+    },
+    "critical_public_HTTP_checks": 26
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -1177,7 +1193,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-21T06:31:25.832385+00:00",
+  "updated_at": "2026-11-21T07:06:22.010183+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3113,8 +3129,8 @@
     "publication": "runs/2026-11-06-agent-protected-publication.json"
   },
   "last_protected_publication": {
-    "evidence": "runs/2026-11-20-credential-protected-ci-review.json",
-    "merge_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+    "evidence": "runs/2026-11-21-nov21-required-ci-review.json",
+    "merge_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
     "publicly_verified": true,
     "required_checks_passed": 11
   },
@@ -3183,12 +3199,12 @@
   },
   "production_publication": {
     "status": "live_and_verified_critical_assets_and_actual_checker",
-    "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
-    "deployment_url": "https://c198f50c.aitrust-id.pages.dev",
+    "source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
+    "deployment_url": "https://32f95adf.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-20-credential-publication.json",
-    "protected_merge": "runs/2026-11-20-credential-protected-ci-review.json",
-    "critical_HTTP_checks": 16,
+    "evidence": "runs/2026-11-21-nov21-publication.json",
+    "protected_merge": "runs/2026-11-21-nov21-required-ci-review.json",
+    "critical_HTTP_checks": 26,
     "origins": 2,
     "full_artifact_byte_equivalence_claimed": false,
     "scope_records": 202,
@@ -4295,28 +4311,48 @@
       "formation_filed": false,
       "metadata_only_followup": true,
       "meaning": "Records the actual implementation deployment. Later operations records remain in Git and do not rewrite the deployed implementation changelog."
+    },
+    {
+      "superseded_at": "2026-11-21T06:52:29.510590+00:00",
+      "prior": {
+        "status": "live_and_verified_critical_assets_and_actual_checker",
+        "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
+        "deployment_url": "https://c198f50c.aitrust-id.pages.dev",
+        "public_url": "https://aitrustid.com",
+        "evidence": "runs/2026-11-20-credential-publication.json",
+        "protected_merge": "runs/2026-11-20-credential-protected-ci-review.json",
+        "critical_HTTP_checks": 16,
+        "origins": 2,
+        "full_artifact_byte_equivalence_claimed": false,
+        "scope_records": 202,
+        "completed_requirements": 132,
+        "open_requirements": 70,
+        "independent_tag_accuracy_approved": false,
+        "real_collection_enabled": false,
+        "public_app_store_released": false,
+        "formation_filed": false,
+        "metadata_only_followup": true
+      },
+      "reason": "Current live MT mobile quotation preview and website code notices verified after protected merge."
     }
   ],
   "session_delivery_closeout": {
-    "recorded_at": "2026-11-20T17:08:16.518216+00:00",
+    "recorded_at": "2026-11-21T06:53:27.169178+00:00",
     "board": "docs/session-delivery.json",
-    "evidence": "runs/2026-11-20-credential-delivery-closeout-review.json",
-    "finished_scoped_tasks": 12,
+    "evidence": "runs/2026-11-21-nov21-web-closeout-review.json",
+    "counter_review": "runs/2026-11-21-nov21-web-closeout-counter-review.json",
+    "finished_scoped_tasks": 14,
     "new_original_closures": 0,
     "original_goal": "NOT MET",
     "active_followup": {
-      "checked_at": "2026-11-20T18:05:03.124014+00:00",
+      "checked_at": "2026-11-21T06:53:27.169178+00:00",
       "actual_worker": "/root/share_debugger",
-      "pull_request": 134,
-      "candidate_head": "cad8bfb28b44ab5257dcb07d0c5823275626b98b",
-      "hosted_run": 44787621743,
       "status": "active_at_snapshot",
-      "scope": "Bounded diagnostic followup after first-receive failure. Owned Ready UI was observed without synthetic text; zero runtime cases completed and exact cause remains unestablished. No Android correction is accepted on this branch.",
-      "evidence": "runs/2026-11-20-credential-closeout-android-snapshot.json"
+      "scope": "One changed-source DEFAULT APK run with all original7 plus2 configuration/privacy controls. No owner input needed; real physical/TalkBack/outside acceptance stays open."
     }
   },
   "nov21_delivery": {
-    "status": "current_engineering_checks_passed; protected_integration_and_public_delivery_pending",
+    "status": "website_software_published_and_verified; current_closeout_revalidation_pending_after_metadata_and_verifier_corrections; Android_configuration_controls_incomplete",
     "plan": "docs/delivery-wave-2026-11-21.md",
     "MT_implementation": "220c2edcb2cde0a0603842a32a446bac8f6d157b",
     "MT_review": "runs/2026-11-21-mt-mobile-pm-review.json",
@@ -4326,7 +4362,7 @@
     "original_open": 70,
     "new_original_closures": 0,
     "independent_accuracy_evidence": false,
-    "production_publication_pending": true,
+    "production_publication_pending": false,
     "receipts": {
       "PS": "runs/2026-11-21-nov21-final-PS.json",
       "PII_REDACTED": "runs/2026-11-21-nov21-final-PII_REDACTED.json",
@@ -4335,6 +4371,17 @@
       "website": "runs/2026-11-21-nov21-current-website.json"
     },
     "boundary_evidence": "runs/2026-11-21-nov21-final-boundaries.json",
-    "all_original_criteria_preserved": true
+    "all_original_criteria_preserved": true,
+    "publication_evidence": "runs/2026-11-21-nov21-publication.json",
+    "protected_merge": "2aa67779352fa11c303867f52799172ec73ee07c",
+    "protected_review": "runs/2026-11-21-nov21-required-ci-review.json",
+    "deployment_url": "https://32f95adf.aitrust-id.pages.dev",
+    "finished_scoped_tasks": 14,
+    "counter_review": "runs/2026-11-21-nov21-web-closeout-counter-review.json",
+    "closeout_accounting": "runs/2026-11-21-nov21-accounting-current.json",
+    "closeout_failures": [
+      "runs/2026-11-21-nov21-closeout-build-guard.json",
+      "runs/2026-11-21-nov21-closeout-a11y-failure.json"
+    ]
   }
 }

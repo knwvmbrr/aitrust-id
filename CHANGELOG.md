@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-071154-nov21-physical-detach-probe-7fbac7ec
+
+Recorded 2026-11-21T07:11:54.159972+00:00 · Contributor: Codex /root; source review /root/web_camo · change
+
+- **Changed.** Corrected the accessibility verifier to await physical node removal instead of role-locator invisibility, and preserved the failed closeout evidence.
+- **Evidence.** The deterministic hidden-but-connected control reproduces the locator ambiguity. Actual deferred-data lifecycle and unchanged physical control-set mutation pass; a different reviewer checked the verifier-only patch. [Change record](./runs/changes/2026-11-21-071154-nov21-physical-detach-probe-7fbac7ec.json).
+- **Not claimed.** Production UI and accessibility thresholds unchanged. Original timeout ordering unestablished. This is engineering verification, not human screen-reader or full WCAG acceptance; final integrated revalidation remains pending.
+
+
+### 2026-11-21-065952-nov21-closeout-generated-attribution-6bda4428
+
+Recorded 2026-11-21T06:59:52.307249+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Recorded successful current protocol checks, rebuilt scope derivatives and preserved the website attribution guard refusal before corrected website execution.
+- **Evidence.** The build guard refused unattributed new evidence and generated scope files. Exact current files now have a fresh matching attributed event before another build. [Change record](./runs/changes/2026-11-21-065952-nov21-closeout-generated-attribution-6bda4428.json).
+- **Not claimed.** The refused website run is not a browser success. No product or acceptance change; corrected website and Android runtime evidence remain pending.
+
+
+### 2026-11-21-065546-nov21-accounting-contract-4614272e
+
+Recorded 2026-11-21T06:55:46.333156+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Corrected closure evidence references to the delivery consumer contract while preserving exact raw CI metadata and every original acceptance criterion.
+- **Evidence.** The accounting gate now verifies fourteen fully delivered scoped jobs and still reports132 complete and70 open original requirements with the60 target unmet. [Change record](./runs/changes/2026-11-21-065546-nov21-accounting-contract-4614272e.json).
+- **Not claimed.** The earlier refused accounting result is preserved. No pass flag, schema, original acceptance or completion percentage was changed; newly assigned NF and Android verification remain incomplete.
+
+
+### 2026-11-21-065357-nov21-delivery-scope-165497e1
+
+Recorded 2026-11-21T06:53:57.363642+00:00 · Contributor: Codex /root PM with independent /root/seo closeout review · change
+
+- **Changed.** Recorded two fully delivered web software jobs and assigned the next independent NF on-device reference workflow; retained all original scope acceptance.
+- **Evidence.** Actual protected and live publication evidence supports two scoped closures, with a separate counter-review. The board records fourteen scoped jobs and seventy open original requirements. Android remains under runtime verification. [Change record](./runs/changes/2026-11-21-065357-nov21-delivery-scope-165497e1.json).
+- **Not claimed.** No full tag or original requirement closed. NF implementation is newly assigned, not complete. Physical, independent accuracy, licensing and human acceptance gates remain.
+
+
+### 2026-11-21-065204-nov21-web-publication-162801e9
+
+Recorded 2026-11-21T06:52:04.048788+00:00 · Contributor: Codex /root with /root/web_camo and /root/seo · change
+
+- **Changed.** Published the separately selected MT phone quotation preview and carried website code notices through protected main and verified the actual public delivery.
+- **Evidence.** The tested and merged trees match; eleven required checks pass. Twenty-six critical public files match built bytes across apex/www. Actual Chromium and WebKit run the MT preview, open the notice link and still run PS after optional MT failure. [Change record](./runs/changes/2026-11-21-065204-nov21-web-publication-162801e9.json).
+- **Not claimed.** Two bounded software deliveries only. Independent tag accuracy, physical phone acceptance, full dependency licensing and all seventy open original requirements remain uncompleted; held Android evidence remains separate.
+
+
 ### 2026-11-21-063125-nov21-final-engineering-3f4d2d3b
 
 Recorded 2026-11-21T06:31:25.861395+00:00 · Contributor: /root · change

@@ -42,7 +42,26 @@ async function expandForMeasurement(root){
 // Actual deferred public data: ready-first coverage and physical-node identity.
 // Native close is an authored lifecycle control, not a claim about the original
 // timeout ordering (which remains unestablished).
+async function waitPhysicalDetach(page,node){
+ await page.waitForFunction(el=>!el.isConnected,node);
+}
+async function verifyPhysicalDetachControl(browser){
+ const context=await browser.newContext();
+ try{
+  const page=await context.newPage();await page.setContent('<details open><summary>Details</summary><button>Download details</button></details>');
+  const button=page.getByRole('button',{name:'Download details',exact:true}),physical=await button.elementHandle();
+  try{
+   await page.locator('summary').press('Enter');await button.waitFor({state:'detached'});
+   assert.equal(await physical.evaluate(e=>e.isConnected),true,'Authored role-hidden control unexpectedly detached');
+   let completed=false;const waiting=waitPhysicalDetach(page,physical).then(()=>{completed=true;});
+   await page.evaluate(()=>document.querySelector('details').open);assert.equal(completed,false,'Physical readiness resolved while node remained attached');
+   await physical.evaluate(e=>e.remove());await waiting;
+   return {pass:true,role_detached_can_mean_hidden_connected:true,waited_for_physical_disconnection:true};
+  }finally{await physical?.dispose();}
+ }finally{await context.close();}
+}
 async function verifyDeferredReadinessControl(browser,base){
+ const physicalDetachControl=await verifyPhysicalDetachControl(browser);
  const context=await browser.newContext({viewport:{width:320,height:760},bypassCSP:true,reducedMotion:'reduce'});
  let release,requested;const gate=new Promise(resolve=>release=resolve),requestSeen=new Promise(resolve=>requested=resolve);let requests=0,capture;
  try{
@@ -59,13 +78,14 @@ async function verifyDeferredReadinessControl(browser,base){
   assert(names.includes('Copy link'));assert(names.includes('Download details'));
   const report=capture.items[names.indexOf('Report an issue')];assert(report,'Report target missing');
   const privacy=dialog.locator('details').filter({hasText:'Privacy and full details'});
-  await privacy.locator('summary').press('Enter');await dialog.getByRole('button',{name:'Download details',exact:true}).waitFor({state:'detached'});
+  const download=capture.items[names.indexOf('Download details')];assert(download,'Download target missing');
+  await privacy.locator('summary').press('Enter');await waitPhysicalDetach(page,download);
   assert.equal(await report.evaluate(e=>e.textContent.trim()),'Report an issue','Physical target was retargeted after native close');
   await assert.rejects(capture.verify(),/Accessibility control set changed during probe/);
   await capture.dispose();capture=undefined;await expandForMeasurement(dialog);
   const targets=await probes.targetSizes(dialog,{surface:'PII deferred ready',theme:'light'}),focus=await probes.focusVisibility(page,dialog,{surface:'PII deferred ready',theme:'light'});
   assert.deepEqual(targets.failures,[]);assert.deepEqual(focus.failures,[]);
-  return {pass:true,no_scope_request_before_open:true,actual_scope_request_held:true,readiness_waited_for_public_data:true,ready_control_count:names.length,copy_and_download_measured:true,physical_report_identity_preserved:true,changed_set_rejected:true,requests,targets,focus,original_timeout_cause:'UNESTABLISHED',product_source_changed:false};
+  return {pass:true,physicalDetachControl,download_physically_detached:true,no_scope_request_before_open:true,actual_scope_request_held:true,readiness_waited_for_public_data:true,ready_control_count:names.length,copy_and_download_measured:true,physical_report_identity_preserved:true,changed_set_rejected:true,requests,targets,focus,original_timeout_cause:'UNESTABLISHED',product_source_changed:false};
  }finally{release();await capture?.dispose();await context.close();}
 }
 async function verifyHPReadinessControl(browser,base){
@@ -131,7 +151,7 @@ async function verifyFailureContextControl(browser){
   return {pass:true,original_failure_observed:true,expected_and_actual_identity_discriminated:true,unknown_route_not_echoed:true,no_labels_text_or_input_values:true,unknown_context_keys_not_echoed:true,closed_or_missing_page_bounded_unavailable:true,product_source_changed:false};
  }finally{await context.close();}
 }
-module.exports={waitTagProbeReady,waitDisclosureProbeReady,verifyHPReadinessControl,expandForMeasurement,verifyDeferredReadinessControl,verifyDisclosureReadinessControl,measurementFailureContext,verifyFailureContextControl};
+module.exports={waitTagProbeReady,waitDisclosureProbeReady,verifyHPReadinessControl,expandForMeasurement,verifyDeferredReadinessControl,verifyDisclosureReadinessControl,measurementFailureContext,verifyFailureContextControl,waitPhysicalDetach,verifyPhysicalDetachControl};
 if(require.main===module)(async()=>{
  const {allTags}=await import('../site/src/catalog.js');
  // Workflow navigation is declared in a JSX file; use the existing user-facing routes.

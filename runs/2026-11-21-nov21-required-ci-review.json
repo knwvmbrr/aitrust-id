@@ -1,0 +1,109 @@
+{
+  "captured_at": "2026-11-21T06:42:26.696985+00:00",
+  "ci_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235470",
+  "head": "0acbf48c89a9a36d980fb55643f693c23d4000bd",
+  "limits": [
+    "Read-only GitHub metadata and failed-job log review.",
+    "No rerun, source edit, comment, resolution, merge or publication.",
+    "Engineering check success is not independent detector validation, tag release or original requirement closure."
+  ],
+  "nonrequired": {
+    "android": {
+      "actual_recorded_passing_cases": 6,
+      "conclusion": "FAILURE",
+      "precise_cause": "Unestablished; artifact not downloaded in this review.",
+      "run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235383",
+      "seventh_background_case_not_recorded": true
+    },
+    "gates": {
+      "conclusion": "FAILURE",
+      "reason": "Frozen independent holdout, Wilson precision/recall lower-bound gates, and calibration evidence remain unmet; not release approval."
+    }
+  },
+  "profile": "pr-required-engineering-review/v1",
+  "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/137",
+  "required_all_pass": true,
+  "required_checks": [
+    {
+      "completedAt": "2026-11-21T06:36:51Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235470/job/136761433613",
+      "name": "accessibility",
+      "status": "COMPLETED"
+    },
+    {
+      "completedAt": "2026-11-21T06:35:32Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235470/job/136761433693",
+      "name": "change-records",
+      "status": "COMPLETED"
+    },
+    {
+      "completedAt": "2026-11-21T06:35:16Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235470/job/136761433609",
+      "name": "device-builder (3.12)",
+      "status": "COMPLETED"
+    },
+    {
+      "completedAt": "2026-11-21T06:35:18Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235470/job/136761433705",
+      "name": "device-builder (3.13)",
+      "status": "COMPLETED"
+    },
+    {
+      "completedAt": "2026-11-21T06:35:20Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235470/job/136761433644",
+      "name": "device-builder (3.14)",
+      "status": "COMPLETED"
+    },
+    {
+      "completedAt": "2026-11-21T06:36:05Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235470/job/136761433655",
+      "name": "host-config",
+      "status": "COMPLETED"
+    },
+    {
+      "completedAt": "2026-11-21T06:41:00Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235470/job/136761433434",
+      "name": "no-egress",
+      "status": "COMPLETED"
+    },
+    {
+      "completedAt": "2026-11-21T06:35:33Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235470/job/136761433732",
+      "name": "regressions",
+      "status": "COMPLETED"
+    },
+    {
+      "completedAt": "2026-11-21T06:35:50Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235470/job/136761433709",
+      "name": "scope-plan",
+      "status": "COMPLETED"
+    },
+    {
+      "completedAt": "2026-11-21T06:41:11Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235470/job/136761433744",
+      "name": "site",
+      "status": "COMPLETED"
+    },
+    {
+      "completedAt": "2026-11-21T06:37:52Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44876235470/job/136761433716",
+      "name": "spec",
+      "status": "COMPLETED"
+    }
+  ],
+  "required_count": 11,
+  "review_threads_paginated": false,
+  "reviewed_by": "/root/seo",
+  "unresolved_review_threads": 0
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-065357-nov21-delivery-scope-165497e1",
+  "recorded_at": "2026-11-21T06:53:57.363642+00:00",
+  "author": "Codex /root PM with independent /root/seo closeout review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2aa67779352fa11c303867f52799172ec73ee07c",
+  "changed": "Recorded two fully delivered web software jobs and assigned the next independent NF on-device reference workflow; retained all original scope acceptance.",
+  "proves": "Actual protected and live publication evidence supports two scoped closures, with a separate counter-review. The board records fourteen scoped jobs and seventy open original requirements. Android remains under runtime verification.",
+  "limits": "No full tag or original requirement closed. NF implementation is newly assigned, not complete. Physical, independent accuracy, licensing and human acceptance gates remain.",
+  "scope_ids": [
+    "T-MT",
+    "F-019c",
+    "F-057",
+    "X-02",
+    "T-NF",
+    "N-014",
+    "F-142"
+  ],
+  "files": {
+    "docs/delivery-wave-2026-11-21.md": "1c605483d12abe13702b155dd4af6af2d03e3e495165cca6b00871e6132cd030",
+    "docs/scope-progress.json": "12b1730a578e3f6da231dd5c9306bdfefa8759f386da5243d5667e10fab28742",
+    "docs/session-delivery.json": "c17d14a1f473658b4d7dd0a0022d6761912e1b47f4a2b1098f03385cf7f463a2",
+    "runs/2026-11-21-nov21-publication.json": "aad34c7a10bfa88b08bec132773425603bb953e296f34739ca79983a76df6b54",
+    "runs/2026-11-21-nov21-required-ci-review.json": "bfa3a0530f1f8824b9c040fd033652db5bf33a2406adee4f4327e5dce3ab74d7",
+    "runs/2026-11-21-nov21-web-closeout-counter-review.json": "01b483385c41cdf1000e9378dfca401b2348ca45e9d873e623e55be4d9b47f96",
+    "runs/2026-11-21-nov21-web-closeout-review.json": "95deee378bd8d4f31288cce3eaa6b003edb13eca31d4626c7f4191d6a9c6b4c1",
+    "state.json": "b606e91b2fd6a84bc59537cf61de7d534ff937b145b9de32303b2c4ef360e23b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nov21-web-closeout-review.json",
+      "sha256": "95deee378bd8d4f31288cce3eaa6b003edb13eca31d4626c7f4191d6a9c6b4c1"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-web-closeout-counter-review.json",
+      "sha256": "01b483385c41cdf1000e9378dfca401b2348ca45e9d873e623e55be4d9b47f96"
+    }
+  ],
+  "checks": []
+}

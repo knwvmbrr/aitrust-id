@@ -1,0 +1,58 @@
+{
+  "captured_at": "2026-11-21T06:51:17.774549+00:00",
+  "profile": "nov21-web-software-delivery-closeout/v1",
+  "reviewed_by": "/root",
+  "pass": true,
+  "source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
+  "protected_head": "0acbf48c89a9a36d980fb55643f693c23d4000bd",
+  "merged_tree_matches_tested_head": true,
+  "deployment_url": "https://32f95adf.aitrust-id.pages.dev",
+  "full_original_closures": 0,
+  "independent_accuracy_evidence": false,
+  "physical_phone_tested": false,
+  "reviewed_evidence": [
+    {
+      "path": "runs/2026-11-21-mt-mobile-pm-review.json",
+      "sha256": "396a11b15e7608fb6d1f68f176e69c66b261a8629f4048be52042283ba3b66cc"
+    },
+    {
+      "path": "runs/2026-11-21-web-js-independent-review.json",
+      "sha256": "4592352a1043a749ae44a0f920dc19d169a44548b319d3b2d575f9826f9cc755"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-required-ci-review.json",
+      "sha256": "bfa3a0530f1f8824b9c040fd033652db5bf33a2406adee4f4327e5dce3ab74d7"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-publication.json",
+      "sha256": "aad34c7a10bfa88b08bec132773425603bb953e296f34739ca79983a76df6b54"
+    }
+  ],
+  "completed_software_jobs": {
+    "session-mt-mobile-quotation": {
+      "versioned_bounded_method_and_canonical_record_checks": true,
+      "source_bound_integrated_website_receipt": "runs/2026-11-21-nov21-current-website.json",
+      "independent_review": "runs/2026-11-21-mt-mobile-pm-review.json",
+      "protected_required_checks": 11,
+      "public_engines": [
+        "Chromium",
+        "WebKit"
+      ],
+      "optional_MT_failure_preserves_actual_PS": true,
+      "MT_verdict_or_release_approved": false
+    },
+    "session-web-js-notices": {
+      "exact_archive_notice_records": 34,
+      "explicitly_unverified_supplemental_record": 1,
+      "independent_review": "runs/2026-11-21-web-js-independent-review.json",
+      "normal_build_and_public_notice_link_bytes_verified": true,
+      "all_dependency_obligations_cleared": false
+    }
+  },
+  "limits": [
+    "Only the two predeclared bounded software jobs meet their delivery acceptance.",
+    "T-MT, F-019c, F-057 and X-02 full original acceptance and percentages remain unchanged.",
+    "The public critical-file byte comparison is not whole-site equivalence.",
+    "The failed independent release gate and held Android run are preserved separately."
+  ]
+}

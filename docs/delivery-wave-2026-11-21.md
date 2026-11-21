@@ -21,9 +21,10 @@ input collection or proprietary dependency is introduced.
 
 ## Risks and boundaries before implementation
 
-* Android consumes its Share intent and replaces it with MAIN. Recreation is one
-  hypothesis, not an established cause; the failing event query found no matching
-  records and cannot prove absent callbacks. Do not relaunch unchanged jobs to
+* Android consumes its Share intent and replaces it with MAIN. The original empty-event query was inconclusive. A later fixed three-VM
+  diagnostic wave positively traced one valid SEND receipt followed by configuration
+  recreation of its consumed MAIN intent into empty Ready. Other untraced historical
+  failures are not automatically attributed to that cause. Do not relaunch unchanged jobs to
   select a passing run or persist private shared input to mask a lifecycle bug.
 * Curly quotation placement is a lexical observation, not endorsement, semantic
   attribution, manipulation or intent. Unsupported grammar remains Unavailable.
@@ -42,3 +43,27 @@ Baseline remains132 complete /70 open originals. Target60 requires10 genuine
 full original closures. The current12 closed scoped jobs include earlier reviews
 and tools; they are not12 released tags. New software jobs close only after their
 predeclared full software acceptance. No original gate is removed or narrowed.
+
+## Verified web delivery
+
+Protected merge `2aa67779352fa11c303867f52799172ec73ee07c` has the same tree
+as the tested head. Eleven required checks passed. The deployed site passed26
+critical-file comparisons across apex/www and actualChromium/WebKit checks,
+including PS after optional MT failure. Two predeclared software jobs are complete;
+the scoped total is14. Original requirements remain132 complete /70 open. The
+Android configuration/privacy candidate remains a separate unfinished delivery.
+
+Evidence: `runs/2026-11-21-nov21-publication.json` and
+`runs/2026-11-21-nov21-web-closeout-counter-review.json`.
+
+## Next independent NF delivery
+
+The NF worker builds a two-input browser preview beside the unchanged private CLI.
+A claim and caller-selected source passage feed explicit literal or word-overlap
+methods in an isolated fixed-origin on-device worker. Both input identities and
+canonical spans bind the result. The UI describes wording evidence, not truth or
+semantic support; negated similar text is an explicit counterexample. No uploads,
+source search, endpoint, capture permission or storage are added. Optional method
+failure must leave literal, MT and PS operating. Independent review and actual
+protected/public browser evidence precede the named software closure. T-NF stays
+open until its full contextual, independent-label and human criteria pass.

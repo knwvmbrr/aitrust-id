@@ -1,0 +1,41 @@
+{
+  "captured_at": "2026-11-21T07:09:03.084Z",
+  "pass": true,
+  "source_sha256": "70a7a69c8601a1b6edf4eca361c64f0826e0fd28406f38eb808e065b6043102a",
+  "product_source_changed": false,
+  "physical_phone_tested": false,
+  "independent_accuracy_evidence": false,
+  "authored": {
+    "pass": true,
+    "role_detached_can_mean_hidden_connected": true,
+    "waited_for_physical_disconnection": true
+  },
+  "actual": {
+    "pass": true,
+    "physicalDetachControl": {
+      "pass": true,
+      "role_detached_can_mean_hidden_connected": true,
+      "waited_for_physical_disconnection": true
+    },
+    "download_physically_detached": true,
+    "no_scope_request_before_open": true,
+    "actual_scope_request_held": true,
+    "readiness_waited_for_public_data": true,
+    "ready_control_count": 28,
+    "copy_and_download_measured": true,
+    "physical_report_identity_preserved": true,
+    "changed_set_rejected": true,
+    "requests": 1,
+    "targets": {
+      "controls": 28,
+      "inline_exceptions": 0,
+      "failures": []
+    },
+    "focus": {
+      "checked": 28,
+      "failures": []
+    },
+    "original_timeout_cause": "UNESTABLISHED",
+    "product_source_changed": false
+  }
+}

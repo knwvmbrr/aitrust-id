@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-065952-nov21-closeout-generated-attribution-6bda4428",
+  "recorded_at": "2026-11-21T06:59:52.307249+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2aa67779352fa11c303867f52799172ec73ee07c",
+  "changed": "Recorded successful current protocol checks, rebuilt scope derivatives and preserved the website attribution guard refusal before corrected website execution.",
+  "proves": "The build guard refused unattributed new evidence and generated scope files. Exact current files now have a fresh matching attributed event before another build.",
+  "limits": "The refused website run is not a browser success. No product or acceptance change; corrected website and Android runtime evidence remain pending.",
+  "scope_ids": [
+    "T-MT",
+    "F-019c",
+    "F-057",
+    "X-02",
+    "T-NF"
+  ],
+  "files": {
+    "docs/delivery-wave-2026-11-21.md": "1c605483d12abe13702b155dd4af6af2d03e3e495165cca6b00871e6132cd030",
+    "docs/scope-progress.json": "12b1730a578e3f6da231dd5c9306bdfefa8759f386da5243d5667e10fab28742",
+    "docs/session-delivery.json": "59af3967c6a2eb3e62d9adcdd1fcecd8eef5742a944b7388ba87ca4a193a1f11",
+    "runs/2026-11-21-nov21-accounting-current.json": "c327515a103f93a32e8450723286dfdb021fe31e3b07df07aef47901283c71b5",
+    "runs/2026-11-21-nov21-accounting-reference-correction.json": "af1a0329a7c21d189ba898e869ecef87976cc04542ab0dad5963f64c53ac817e",
+    "runs/2026-11-21-nov21-closeout-build-guard.json": "bd5de82abffe6aac36d91a8d219507cf9654c4718844406f102cc1f76c94e8b3",
+    "runs/2026-11-21-nov21-closeout-protocol.json": "3ca03f3d55fc08215ea73931c7a7588b754b177ad1dafaa78a8d093630c328f7",
+    "runs/2026-11-21-nov21-closeout-website.json": "00cf9ba3d1598e7cef34d020b31f4cb90be6a3a0e8f44c4ee14fe755b10cb1dc",
+    "runs/2026-11-21-nov21-publication.json": "aad34c7a10bfa88b08bec132773425603bb953e296f34739ca79983a76df6b54",
+    "runs/2026-11-21-nov21-required-ci-review.json": "bfa3a0530f1f8824b9c040fd033652db5bf33a2406adee4f4327e5dce3ab74d7",
+    "runs/2026-11-21-nov21-web-closeout-counter-review.json": "01b483385c41cdf1000e9378dfca401b2348ca45e9d873e623e55be4d9b47f96",
+    "runs/2026-11-21-nov21-web-closeout-review.json": "95deee378bd8d4f31288cce3eaa6b003edb13eca31d4626c7f4191d6a9c6b4c1",
+    "site/public/reference/public-scope.json": "3ccbbb2ba929b47f7284309e593b6f00f88bc408211bf63b77968b377df96ed9",
+    "site/src/public-scope.json": "3ccbbb2ba929b47f7284309e593b6f00f88bc408211bf63b77968b377df96ed9",
+    "site/src/scope-manifest.json": "f8a12c43e81feddabe8cd7a1855aa483d6d120dd0ed585810a23522622e456b6",
+    "state.json": "b606e91b2fd6a84bc59537cf61de7d534ff937b145b9de32303b2c4ef360e23b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nov21-closeout-protocol.json",
+      "sha256": "3ca03f3d55fc08215ea73931c7a7588b754b177ad1dafaa78a8d093630c328f7"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-closeout-website.json",
+      "sha256": "00cf9ba3d1598e7cef34d020b31f4cb90be6a3a0e8f44c4ee14fe755b10cb1dc"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-closeout-build-guard.json",
+      "sha256": "bd5de82abffe6aac36d91a8d219507cf9654c4718844406f102cc1f76c94e8b3"
+    }
+  ],
+  "checks": []
+}
