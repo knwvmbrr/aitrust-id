@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-111220-maintenance-mt-paste-and-delivery-plan-be731531
+
+Recorded 2026-11-21T11:12:20.442244+00:00 · Contributor: Codex /root integration; MT /root/web_camo; runtime /root/seo; Android /root/share_debugger · change
+
+- **Changed.** Integrated the reviewed MT whole-input repair and existing verifier regression hook; registered its two source inputs and documented the independent maintenance plan before shared runtime integration.
+- **Evidence.** The actual before-candidate accepted a clipped native paste. The isolated corrected candidate retains and refuses all six oversize combinations before analysis in Chromium/WebKit. Existing method/payload semantics and original gates are preserved. [Change record](./runs/changes/2026-11-21-111220-maintenance-mt-paste-and-delivery-plan-be731531.json).
+- **Not claimed.** Final combined verification, protected integration and public MT repair remain pending. Other maintenance lanes are isolated work, not completed originals. Original132complete70open and19scoped count retained.
+
+
 ### 2026-11-21-105653-mt-input-repair-runtime-proof-c58318fe
 
 Recorded 2026-11-21T10:56:53.110936+00:00 · Contributor: Codex /root/web_camo · change

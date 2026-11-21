@@ -1,0 +1,42 @@
+{
+  "profile": "nov21-actual-software-closeout-independent-counterreview/v1",
+  "captured_at": "2026-11-21T11:09:32.173835+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/web_camo",
+  "source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
+  "metadata_sha256": {
+    "docs/session-delivery.json": "8246785240b06b5add6c5b14632e597da5d468e4b19b01ec9f6acb362033b1ba",
+    "docs/scope-progress.json": "b12611c4c0aae353ae1ee69a9cfff629d936d54cdbee4c8b134e5d76e19159ee",
+    "docs/scope-progress.md": "ec90b61cf3a8617cb9556e67626e1227c9781e6e4018dd2d05deb00cf3e14fba",
+    "state.json": "5bddde478874d1ab1433a4c30d3dcab00fee26237fa8c5210e2e003ec7b8e6ee",
+    "docs/session-delivery-plan.md": "24c7b446cbe8b7c533de4a7942da5f18480e4bf1a382f0cbeb58a2f035c6396c"
+  },
+  "closeout_proof": {
+    "path": "runs/2026-11-21-independent-software-closeout.json",
+    "sha256": "8d6c791fcfcd074b4eb4b5f1e77dbc50f2fdf6fcd5b69dd1abbe4d3537a521ad"
+  },
+  "verified": {
+    "exact_protected11success_source_tree": true,
+    "selectedHTTP54hashes_match_retained_dist": true,
+    "actual_HP_NF_both_engines_and_downloads": true,
+    "all_closeout_and_task_evidence_hashes_match": true,
+    "only_three_predeclared_jobs_transitioned": [
+      "session-hp-device-uncertainty",
+      "session-android-malformed-share",
+      "session-pyodide-js-source-delivery"
+    ],
+    "every_prior_task_and_all_task_criteria_preserved": true,
+    "different_worker_reviewer_all3": true,
+    "scoped16_to19_original132_70_zero_closures_target60_not_met": true,
+    "all202_original_IDs_criteria_percentages_master_unchanged": true,
+    "existing_enhancement80_to100_completed_criterion_and_prior_next_fix_preserved": true,
+    "no_new_enhancement": true,
+    "client_date_current": true
+  },
+  "diagnosed_review_mapping_refusal": "Initial retained HTTP-path replay treated directory policy URLs as files; corrected local directory-to-index.html mapping matches the fixture/public serving contract. No product or evidence failure was established.",
+  "limits": [
+    "Read-only metadata/retained-evidence verification; no coordinator execution or new browser/network/download/test/build.",
+    "Selected HTTP bytes and actual workflow proof, not whole-site equivalence, independent accuracy or physical/human acceptance.",
+    "Metadata followup not yet protected/pushed; pending flag remains explicit."
+  ]
+}
