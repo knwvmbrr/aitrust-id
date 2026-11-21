@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-060049-android-final-intake-three-host-wave-eb6d8c6f
+
+Recorded 2026-11-21T06:00:49.775480+00:00 · Contributor: Codex · change
+
+- **Changed.** Predeclare one final fixed three-host diagnostic wave with less intrusive intake provenance and strict all-outcomes aggregation.
+- **Evidence.** 25 focused controls and two real frozen-checkout stdlib source guards pass. Separate review replayed numeric variant refusals; invalid ref/retry requests have a fixed rejection-only path. Original runtime commands, deadlines, license rules and seven assertions are preserved. [Change record](./runs/changes/2026-11-21-060049-android-final-intake-three-host-wave-eb6d8c6f.json).
+- **Not claimed.** Hosted wave has not executed. Diagnostic APK is distinct from production, prior Ready failure cause remains unknown, no replacement/retry wave is authorized, and no startup reliability, physical/human or original requirement closure is claimed.
+
+
 ### 2026-11-21-054724-android-probe-defer-precreate-ui-read-51d9850c
 
 Recorded 2026-11-21T05:47:24.831548+00:00 · Contributor: Codex · change

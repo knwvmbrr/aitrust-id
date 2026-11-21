@@ -1,0 +1,131 @@
+name: android-intake-provenance-study
+'on':
+  workflow_call: null
+permissions:
+  contents: read
+jobs:
+  cold-start:
+    name: Intake provenance sample ${{ matrix.sample }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        sample:
+        - 1
+        - 2
+        - 3
+    defaults:
+      run:
+        working-directory: frozen-runtime
+    steps:
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      with:
+        persist-credentials: false
+        ref: 78c634ba425e7ee1b4c2df3e97219cf0fef8cd33
+        path: frozen-runtime
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      with:
+        persist-credentials: false
+        ref: ${{ github.sha }}
+        path: study-control
+    - name: Bind the exact frozen runtime source
+      run: python3 -B ../study-control/scripts/cold-start-study.py source-start --root . --output output/android-share/study-source-start.json
+    - name: Require preinstalled reviewed SDK and JDK without accepting licenses
+      shell: bash
+      run: |
+        test -d "$ANDROID_SDK_ROOT/platforms/android-36"
+        test -x "$ANDROID_SDK_ROOT/build-tools/36.0.0/aapt2"
+        test -x "$JAVA_HOME_17_X64/bin/javac"
+        "$JAVA_HOME_17_X64/bin/java" -version
+        "$ANDROID_SDK_ROOT/build-tools/36.0.0/aapt2" version
+        node --version
+    - name: Install existing locked runtime package without lifecycle scripts
+      run: npm ci --ignore-scripts --prefix site
+    - name: Exercise session state and asset refusal controls
+      run: |
+        python3 -B -m unittest discover -s tests -p test_android_share.py -v
+        python3 -B -m unittest discover -s tests -p test_android_emulator_prerequisites.py -v
+        python3 -B -m unittest discover -s tests -p test_android_intake_probe.py -v
+        python3 -B scripts/verify-android-session.py --java-home "$JAVA_HOME_17_X64"
+    - name: Prepare exact offline PS assets and build an unsigned APK
+      shell: bash
+      run: |
+        probe_args=()
+        if test "$AITRUST_INTAKE_PROBE" = 1; then probe_args+=(--intake-probe); fi
+        python3 -B scripts/android-share-build.py --runtime-directory site/node_modules/pyodide --compile --sdk-root "$ANDROID_SDK_ROOT" --java-home "$JAVA_HOME_17_X64" "${probe_args[@]}"
+    - name: Execute the Android loader with the actual pinned WebAssembly engine
+      run: node --experimental-vm-modules scripts/verify-android-engine.mjs
+    - name: Sign only an ephemeral CI test APK
+      shell: bash
+      run: |
+        "$JAVA_HOME_17_X64/bin/keytool" -genkeypair -noprompt -storetype PKCS12 -keystore "$RUNNER_TEMP/aitrust-ci.p12" -alias aitrust-ci -storepass android -keypass android -dname 'CN=AI Trust ID Ephemeral CI Test' -keyalg RSA -keysize 2048 -validity 1
+        unsigned=output/android-share/ai-trust-id-unsigned.apk
+        if test "$AITRUST_INTAKE_PROBE" = 1; then unsigned=output/android-share/ai-trust-id-intake-probe-unsigned.apk; fi
+        "$ANDROID_SDK_ROOT/build-tools/36.0.0/apksigner" sign --ks "$RUNNER_TEMP/aitrust-ci.p12" --ks-key-alias aitrust-ci --ks-pass pass:android --out output/android-share/ai-trust-id-ci-test.apk "$unsigned"
+        "$ANDROID_SDK_ROOT/build-tools/36.0.0/apksigner" verify --verbose output/android-share/ai-trust-id-ci-test.apk
+        rm -- "$RUNNER_TEMP/aitrust-ci.p12"
+    - name: Verify Share on a disposable API 36 emulator when hosted prerequisites permit
+      if: runner.environment == 'github-hosted'
+      env:
+        AITRUST_ANDROID_RUNNER: ${{ runner.environment }}
+      shell: bash
+      run: |
+        if test -c /dev/kvm && command -v setfacl >/dev/null; then
+          sudo -n setfacl -m "u:$(id -u):rw" /dev/kvm
+        fi
+        probe_args=()
+        if test "$AITRUST_INTAKE_PROBE" = 1; then probe_args+=(--intake-probe); fi
+        python3 -B scripts/verify-android-emulator.py --sdk-root "$ANDROID_SDK_ROOT" --apk output/android-share/ai-trust-id-ci-test.apk "${probe_args[@]}"
+    - name: Retain final frozen-source identity even after failure
+      if: always()
+      run: python3 -B ../study-control/scripts/cold-start-study.py source-end --root . --output output/android-share/study-source-end.json
+    - name: Preserve engineering evidence and the development APK
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      if: always()
+      with:
+        name: android-intake-provenance-${{ github.run_id }}-sample-${{ matrix.sample }}
+        path: |
+          frozen-runtime/output/android-share/preparation.json
+          frozen-runtime/output/android-share/build.json
+          frozen-runtime/output/android-share/engine-parity.json
+          frozen-runtime/output/android-share/emulator.json
+          frozen-runtime/output/android-share/ai-trust-id-ci-test.apk
+          frozen-runtime/output/android-share/last-build.log
+          frozen-runtime/output/android-share/study-source-start.json
+          frozen-runtime/output/android-share/study-source-end.json
+        if-no-files-found: error
+        retention-days: 7
+    env:
+      AITRUST_INTAKE_PROBE: '1'
+  aggregate:
+    name: Require every predeclared outcome
+    if: always()
+    needs:
+    - cold-start
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+    - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      with:
+        persist-credentials: false
+        ref: ${{ github.sha }}
+        path: study-control
+    - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+      with:
+        pattern: android-intake-provenance-${{ github.run_id }}-sample-*
+        path: study-results
+        merge-multiple: false
+    - name: Fail unless all three exact-source samples executed all seven
+      if: always()
+      run: python3 -B study-control/scripts/cold-start-study.py aggregate --inputs study-results --run-id '${{ github.run_id }}' --attempt '${{ github.run_attempt
+        }}' --matrix-result '${{ needs.cold-start.result }}' --output output/android-intake-provenance-summary.json
+    - name: Retain the aggregate including failure
+      uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      if: always()
+      with:
+        name: android-intake-provenance-${{ github.run_id }}-summary-attempt-${{ github.run_attempt }}
+        path: output/android-intake-provenance-summary.json
+        if-no-files-found: error
+        retention-days: 7

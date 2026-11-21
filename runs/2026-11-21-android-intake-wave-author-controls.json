@@ -1,0 +1,58 @@
+{
+  "format": "ai-trust-id-android-intake-wave-author-controls/v1",
+  "recorded_at": "2026-11-21T05:56:24.755424+00:00",
+  "pass": true,
+  "tests": {
+    "focused_study_tests": 23,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "synthetic_aggregation_controls_not_android_runtime": true
+  },
+  "actual_cli": {
+    "isolated_stdlib_frozen_git_source_guards": 2,
+    "source_commit": "78c634ba425e7ee1b4c2df3e97219cf0fef8cd33",
+    "tracked_source_clean": true,
+    "selected_files": 27,
+    "source_start_sha256": "747594437744c0e562613ef684e596c470e72c0586a53b18655a7acc7744b856",
+    "source_end_sha256": "d1a27a937ac76289907a5cfcb0a2f8d82fb0ea67a22995e4ec873927c2dc63fa",
+    "synthetic_complete_and_failed_aggregate_commands_executed": true
+  },
+  "workflow_checks": {
+    "yaml_parsed": true,
+    "all_shell_steps_bash_syntax": true,
+    "ordinary_job_unchanged_except_explicit_wave_skip": true,
+    "existing_events_permissions_action_pins_preserved": true,
+    "manual_false_default_fixed_three_host_selector": true,
+    "exact_owned_ref_and_attempt_one_guard": true,
+    "local_reusable_workflow_only": true,
+    "no_pr_or_default_fourth_host": true,
+    "fixed_matrix_three_fail_fast_false": true,
+    "immutable_runtime_separate_control_checkout": true,
+    "same_original_commands_waits_and_sdk_license_rules": true,
+    "strict_all_outcomes_source_variant_provenance_and_exact_method_required": true,
+    "missing_unavailable_wrong_variant_truncated_and_malformed_metadata_refused": true,
+    "no_secrets_or_broader_permissions": true
+  },
+  "planned_wave": {
+    "fresh_hosts": 3,
+    "original_controls_per_host": 7,
+    "all_outcomes_required": true,
+    "replacement_hosts_or_unchanged_retries": false,
+    "dispatched": false,
+    "historical_cause_if_all_pass": "UNKNOWN"
+  },
+  "sources": {
+    ".github/workflows/android-share.yml": "abd5853616c1fbb9e3345769f3802ee7a8e9859c2407aa535960f7c9cb59ce17",
+    ".github/workflows/android-cold-start-study.yml": "038f12cd56bfb56e99db60939a29511b2d3bb4e81866de1d749bbb70201b6a7f",
+    "scripts/cold-start-study.py": "c8501cb087705adac3450735f83f775ea2efdab1beb9fd3bb01081d69a770f46",
+    "tests/test_cold_start_study.py": "5799547a2c86923de7244bdc04d93916638328b7726ac76bfe627f28d288bc50",
+    "docs/android-intake-provenance-wave-plan.md": "4119c7ecc64f98eeea1ed38c9c4a94b8e7a39e2e0f268b6fc7812f3db3751675"
+  },
+  "new_android_runtime_evidence": false,
+  "product_fix": false,
+  "physical_device_evidence": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-060049-android-final-intake-three-host-wave-eb6d8c6f",
+  "recorded_at": "2026-11-21T06:00:49.775480+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "78c634ba425e7ee1b4c2df3e97219cf0fef8cd33",
+  "changed": "Predeclare one final fixed three-host diagnostic wave with less intrusive intake provenance and strict all-outcomes aggregation.",
+  "proves": "25 focused controls and two real frozen-checkout stdlib source guards pass. Separate review replayed numeric variant refusals; invalid ref/retry requests have a fixed rejection-only path. Original runtime commands, deadlines, license rules and seven assertions are preserved.",
+  "limits": "Hosted wave has not executed. Diagnostic APK is distinct from production, prior Ready failure cause remains unknown, no replacement/retry wave is authorized, and no startup reliability, physical/human or original requirement closure is claimed.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    ".github/workflows/android-share.yml": "4dc6d0e62f14782691a59c5db4493061f3b35c707273eefa819bf4949ae1b97a",
+    ".github/workflows/android-cold-start-study.yml": "038f12cd56bfb56e99db60939a29511b2d3bb4e81866de1d749bbb70201b6a7f",
+    "scripts/cold-start-study.py": "cf1c8c03e2991a380b1cf39e1def5d6fff4f2595f919e598db6521db634d5dc9",
+    "tests/test_cold_start_study.py": "caca1391a6b71908ef75c6fbff2b8c642accd5183ede23b88a84b8efd8baa8d4",
+    "docs/android-intake-provenance-wave-plan.md": "e7230dfde02279c67a200e81ae7bc2ad688cd4218a0ce8c066da14dfb0d1176b",
+    "runs/2026-11-21-android-intake-wave-author-controls.json": "3d36fa8b8e8da7f5a6b4cf1dfa294545c4abad161fabbb1f8f7aafe9592201a2",
+    "runs/2026-11-21-android-intake-wave-reviewed-controls.json": "00fa0830d94a40b36ef696c464bf412dc4e28fbb0c28d79ef0a4c361ba6da87a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-intake-wave-reviewed-controls.json",
+      "sha256": "00fa0830d94a40b36ef696c464bf412dc4e28fbb0c28d79ef0a4c361ba6da87a"
+    }
+  ],
+  "checks": []
+}

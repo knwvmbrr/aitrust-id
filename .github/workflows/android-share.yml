@@ -7,6 +7,11 @@ on:
         type: boolean
         required: true
         default: false
+      intake_three_hosts:
+        description: 'Run the final fixed three-host intake-provenance characterization'
+        type: boolean
+        required: true
+        default: false
   push:
     branches: [main]
     tags: ['**']
@@ -59,6 +64,7 @@ permissions:
   contents: read
 jobs:
   offline-share:
+    if: ${{ !(github.event_name == 'workflow_dispatch' && inputs.intake_three_hosts) }}
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     env:
@@ -126,3 +132,18 @@ jobs:
             output/android-share/last-build.log
           if-no-files-found: error
           retention-days: 7
+  intake-three-hosts:
+    if: github.event_name == 'workflow_dispatch' && inputs.intake_three_hosts && github.run_attempt == 1 && github.ref == 'refs/heads/codex/android-intake-three-vm'
+    permissions:
+      contents: read
+    uses: ./.github/workflows/android-cold-start-study.yml
+  reject-invalid-intake-wave:
+    if: github.event_name == 'workflow_dispatch' && inputs.intake_three_hosts && (github.run_attempt != 1 || github.ref != 'refs/heads/codex/android-intake-three-vm')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 1
+    steps:
+      - name: Refuse an invalid diagnostic wave without starting an emulator
+        shell: bash
+        run: |
+          printf '%s\n' 'intake_wave_request_refused' >&2
+          exit 1
