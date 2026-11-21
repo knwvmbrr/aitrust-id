@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-054337-android-intake-probe-hosted-observation-85968a83
+
+Recorded 2026-11-21T05:43:37.108733+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the one approved diagnostic Android run and its positive first-receive lifecycle frame.
+- **Evidence.** Hosted run44871874400 executed all seven unchanged controls; the distinct diagnostic APK positively observed SEND, received text and resume in one instance, with exact source and artifact bindings. [Change record](./runs/changes/2026-11-21-054337-android-intake-probe-hosted-observation-85968a83.json).
+- **Not claimed.** Historical Ready failures did not recur and their cause remains unknown. Pre-create findViewById may initialize decor earlier; diagnostic timings are not production-equivalent. No product fix, production readiness, physical/human acceptance or full original closure is claimed; no unchanged rerun follows.
+
+
 ### 2026-11-21-053807-android-intake-provenance-variant-3391dfc2
 
 Recorded 2026-11-21T05:38:07.974192+00:00 · Contributor: Codex · change

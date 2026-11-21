@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-054337-android-intake-probe-hosted-observation-85968a83",
+  "recorded_at": "2026-11-21T05:43:37.108733+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "21d754d1d03a38cd14c206388ea29b82c8ca3d33",
+  "changed": "Retain the one approved diagnostic Android run and its positive first-receive lifecycle frame.",
+  "proves": "Hosted run44871874400 executed all seven unchanged controls; the distinct diagnostic APK positively observed SEND, received text and resume in one instance, with exact source and artifact bindings.",
+  "limits": "Historical Ready failures did not recur and their cause remains unknown. Pre-create findViewById may initialize decor earlier; diagnostic timings are not production-equivalent. No product fix, production readiness, physical/human acceptance or full original closure is claimed; no unchanged rerun follows.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "runs/2026-11-21-android-intake-provenance-hosted.json": "8d0eecaeaddd0496a573755f0389916957350d2eb139b2c74a6a9416f12dd720"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-intake-provenance-hosted.json",
+      "sha256": "8d0eecaeaddd0496a573755f0389916957350d2eb139b2c74a6a9416f12dd720"
+    }
+  ],
+  "checks": []
+}
