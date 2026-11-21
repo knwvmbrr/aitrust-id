@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-093723-android-malformed-hosted-eighteen-controls-abd3676e
+
+Recorded 2026-11-21T09:37:23.074562+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded actual default-APK original7, configuration2 and finite9 malformed-intent refusal/recovery pairs with19 fresh cross-UID sender callback receipts and immutable29source/artifact bindings.
+- **Evidence.** Source-frozen API36 run44889760925 executed all cases, retained zero-permission defaultAPK sender/probe exclusion, preserved exactsource/native14 identity and existinglicense record; distinct artifact review confirmed actual results without another download/runtime. [Change record](./runs/changes/2026-11-21-093723-android-malformed-hosted-eighteen-controls-abd3676e.json).
+- **Not claimed.** One synthetic API36 candidate, existing88hosted tests plus separately measured14local groups. The failed first sender producer remains failed and its cause is unestablished. No productsource change, arbitrarychooser/physical/TalkBack/human/independentaccuracy/store acceptance or full original requirement closure; rootprotectedintegration pending.
+
+
 ### 2026-11-21-092726-android-attested-synthetic-dispatch-365549be
 
 Recorded 2026-11-21T09:27:26.290318+00:00 · Contributor: Codex · change
