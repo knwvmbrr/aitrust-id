@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-044036-android-three-vm-hold-f0faaa18",
+  "recorded_at": "2026-11-21T04:40:36.152348+00:00",
+  "author": "/root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d0609788db8a8184ee53053459add2ba77962586",
+  "changed": "Recorded the completed three-VM Android study and held the candidate after a reproduced first-Share failure.",
+  "proves": "Two hosts passed seven controls; one failed before first receive. Aggregate failure and current website accessibility failure remain explicit; diagnostics do not claim a fix.",
+  "limits": "No original closure, no Android software-task closure, no startup reliability, physical-device, TalkBack or detector-accuracy acceptance. Original counts remain132complete/70open.",
+  "scope_ids": [
+    "N-014",
+    "F-142"
+  ],
+  "files": {
+    "docs/session-delivery-plan.md": "39b4b2146e8b0e3ed16e7bcb8fd21dd5b9a927c8089243a1c00edb9df234b534",
+    "docs/session-delivery.json": "52b77ffb9a9d106dba1aa2b7e66deac0fb0436d88f215c987b29147632fe0566",
+    "runs/2026-11-20-android-three-vm-cold-start-result.json": "980c4dbd36acaabe801c880dd6610a07936878867ef689d0b04c81699a6a0468",
+    "state.json": "b987e7f41ad49a833cfd0fe2e266f2abd63b58c78765a8ff975ee2cca1fb1cc5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-three-vm-cold-start-result.json",
+      "sha256": "980c4dbd36acaabe801c880dd6610a07936878867ef689d0b04c81699a6a0468"
+    },
+    {
+      "path": "runs/2026-11-20-android-diagnostic-final-website.json",
+      "sha256": "095c445abb743159c163c8ed9c6f7fc00d7120582e5fc623defee29be29226a1"
+    }
+  ],
+  "checks": []
+}

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-20T18:34:21.308698+00:00",
+  "updated": "2026-11-21T04:40:36.103111+00:00",
   "active_increment": "Public optional Python-flow preview and separate PS/MT CLI methods published from protected04b11a12. Twelve scoped jobs complete; originals132 complete / 70 open. Android followup active.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
@@ -1171,7 +1171,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-20T18:34:21.308698+00:00",
+  "updated_at": "2026-11-21T04:40:36.103111+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3870,6 +3870,16 @@
       "source_commit": "c8fdbc9cbc8d3ef3ba701ca51b44ef3e6abf0760",
       "scope": "Historical independent metadata-only branch; combined native sources require separately refreshed current receipts.",
       "current_for_this_branch": false
+    },
+    "android_diagnostic_integration": {
+      "protocol": "runs/2026-11-20-android-diagnostic-final-protocol.json",
+      "website": "runs/2026-11-20-android-diagnostic-final-website.json",
+      "source_bound_checks_passed": false,
+      "website_failed": true,
+      "new_failure_only_diagnostics_focused_controls_pass": true,
+      "full_site_rerun_after_diagnostics": false,
+      "production_merge_or_release": false,
+      "independent_accuracy_evidence": false
     }
   },
   "mt_evidence_workflow": {
@@ -3916,20 +3926,30 @@
     }
   },
   "android_share_candidate": {
-    "status": "Selected current API36 diagnostic run passes seven; historical first-receive Ready failure remains unexplained; development preview only",
+    "status": "HOLD: fixed three-VM study reproduced intermittent first-Share failure; exact cause unknown",
     "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/108",
     "hosted_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44776757754",
     "host_receipt": "runs/2026-11-17-android-emulator-host-inventory.json",
     "emulated_share_cases": 7,
     "physical_device_accepted": false,
-    "runtime_pass": true,
+    "runtime_pass": false,
     "required_emulated_cases": 7,
     "followup_PR": "https://github.com/knwvmbrr/aitrust-id/pull/134",
-    "followup_run": 44789905338,
+    "followup_run": 44866438210,
     "followup_candidate": "56b0294c8e22b456eface6dad0a8d1afe68d1450",
-    "latest_snapshot": "runs/2026-11-20-android-diagnostic-current-seven.json",
+    "latest_snapshot": "runs/2026-11-20-android-three-vm-cold-start-result.json",
     "startup_reliability_verified": false,
-    "software_task_closed": false
+    "software_task_closed": false,
+    "cold_start_study": {
+      "samples": 3,
+      "completed_seven_cases": 2,
+      "failed_first_receive": 1,
+      "aggregate_pass": false,
+      "runtime_source": "56b0294c8e22b456eface6dad0a8d1afe68d1450",
+      "evidence": "runs/2026-11-20-android-three-vm-cold-start-result.json",
+      "cause_known": false,
+      "additional_samples_launched": 0
+    }
   },
   "nested_runtime_notices": {
     "status": "web release merged and verified live",

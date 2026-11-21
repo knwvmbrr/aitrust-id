@@ -1,3 +1,9 @@
+# Latest diagnostic closeout — full requirement goal remains unmet
+
+Checked 2026-11-21T04:40:36.103111+00:00. The fixed three-VM cold-start study of identical Android source completed: two hosts passed all seven original controls; one failed before the first shared input appeared. Aggregate **FAIL**. The event query returned no matching owned entries; this does not identify a callback or recreation cause. No fourth sample was launched. Android remains a held development candidate; no software-task or original closure. [Full study result](../runs/2026-11-20-android-three-vm-cold-start-result.json).
+
+The current combined candidate also failed website accessibility verification at a dialog measurement. Four unchanged focused MT/dark-to-IV checks passed without reproducing it. Failure-only stage/route/dialog diagnostics and focused privacy controls were added; no product fix, relaxed wait or full-site pass is claimed. Production remains the previously verified public Python-flow delivery. Counts stay **132 complete / 70 open original requirements**, with three new usable software deliveries recorded separately. No new completion is granted for these diagnostics.
+
 # Android development integration snapshot — 2026-11-20T18:22:05.459912+00:00
 
 The selected `56b0294` API36 run passes all seven original controls. Earlier first-receive Ready-screen failures remain unexplained; the failure-only lifecycle query was not exercised by this successful run. PM is integrating the bounded privacy improvement and diagnostics, while the Android software task remains open. N-014 is 80% for selected virtual integration, with physical/human and startup-reliability acceptance still open. Originals remain132 complete / 70 open. This is a dated snapshot, not a live worker heartbeat.

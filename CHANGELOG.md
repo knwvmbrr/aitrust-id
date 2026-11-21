@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-044036-android-three-vm-hold-f0faaa18
+
+Recorded 2026-11-21T04:40:36.152348+00:00 · Contributor: /root · change
+
+- **Changed.** Recorded the completed three-VM Android study and held the candidate after a reproduced first-Share failure.
+- **Evidence.** Two hosts passed seven controls; one failed before first receive. Aggregate failure and current website accessibility failure remain explicit; diagnostics do not claim a fix. [Change record](./runs/changes/2026-11-21-044036-android-three-vm-hold-f0faaa18.json).
+- **Not claimed.** No original closure, no Android software-task closure, no startup reliability, physical-device, TalkBack or detector-accuracy acceptance. Original counts remain132complete/70open.
+
+
 ### 2026-11-21-043820-android-diagnostic-failed-website-preserved-6ce20feb
 
 Recorded 2026-11-21T04:38:20.334141+00:00 · Contributor: /root · change
