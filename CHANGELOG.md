@@ -1,5 +1,52 @@
 # Changelog
 
+## Unreleased — 2026-11-21
+
+### 2026-11-21-054909-mt-mobile-result-formatting-6f4bc998
+
+Recorded 2026-11-21T05:49:09.459844+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Normalize the MT mobile candidate delivery report list formatting for readable handoff.
+- **Evidence.** Delivery report formatting checked; executable sources and all runtime evidence bytes unchanged. [Change record](./runs/changes/2026-11-21-054909-mt-mobile-result-formatting-6f4bc998.json).
+- **Not claimed.** Documentation only; no additional execution, deployment, validation or scope closure.
+
+
+### 2026-11-21-054824-mt-mobile-prototype-delivery-68b57aa5
+
+Recorded 2026-11-21T05:48:24.340053+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Record working source-bound optional mobile quotation candidate, dual-engine actual prototype MT route proof and integration handoff.
+- **Evidence.** Chromium and WebKit each pass30 legacy plus28 candidate whole records in the existing fixture verifier, and three actual-modal canonical records plus privacy/lifecycle/optional-failure recovery controls.74 focused Python and19 Node controls pass; prototype source/served hashes stable; four phone-view screenshots inspected. [Change record](./runs/changes/2026-11-21-054824-mt-mobile-prototype-delivery-68b57aa5.json).
+- **Not claimed.** Prototype/software candidate only; final distinct review, PM protected preparation/integration/build/publication pending. No semantic-completeness, intended ASCII nesting, MT verdict, independent accuracy, physical phone, human acceptance or full original closure. First preparation refusal retained.
+
+
+### 2026-11-21-054527-mt-mobile-fixture-and-route-runner-6bf6f96f
+
+Recorded 2026-11-21T05:45:27.719637+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Record source-stable dual-engine MT fixture parity and add a thin standalone runner around the reusable actual MT modal verifier.
+- **Evidence.** Existing fixture verifier passes Chromium and WebKit with30 legacy plus28 mobile complete canonical records per engine and the retained lifecycle/privacy/fault controls. The new route driver syntax-checks and binds local served assets for forthcoming prototype execution. [Change record](./runs/changes/2026-11-21-054527-mt-mobile-fixture-and-route-runner-6bf6f96f.json).
+- **Not claimed.** Actual prototype-route driver execution and final distinct review remain pending; no final production/preparation/publication, independent accuracy, physical-phone or original requirement closure claim.
+
+
+### 2026-11-21-054200-mt-prototype-preparation-refusal-d3be969e
+
+Recorded 2026-11-21T05:42:00.836022+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Preserve the first prototype build refusal from an absent inherited generated PS manifest; prepare that prerequisite with its unchanged existing builder.
+- **Evidence.** The MT-only fixture builds; the failed actual-site prototype identifies the missing generated import without establishing an MT code defect. [Change record](./runs/changes/2026-11-21-054200-mt-prototype-preparation-refusal-d3be969e.json).
+- **Not claimed.** No PS source or method change, full build/publication claim, tag release or original closure. Actual-route browser proof remains pending.
+
+
+### 2026-11-21-053913-mt-mobile-quote-candidate-implementation-9a4b53bb
+
+Recorded 2026-11-21T05:39:13.179120+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Implement a separately selected straight/curly double-quote authority candidate in the existing MT client/worker/UI, with an optional hash-bound source cohort and a versioned canonical method.
+- **Evidence.** 74 focused Python controls and19 Node client controls pass; ordinary phone curly quotation is supported, strict unsupported grammar refuses, raw/frozen-NFC/source/closed evidence bindings hold, and legacy canonical/manifest bytes remain unchanged. Existing verification entrypoints include the new controls. [Change record](./runs/changes/2026-11-21-053913-mt-mobile-quote-candidate-implementation-9a4b53bb.json).
+- **Not claimed.** Prototype implementation pending actual Chromium/WebKit execution, distinct final review and PM integration/publication. Shape/span/source validation trusts the canonical worker; no semantic-completeness, intended ASCII nesting, endorsement, intent, MT release, independent accuracy or original closure claim.
+
+
 ## Unreleased — 2026-11-20
 
 ### 2026-11-20-181237-verify-independent-closeout-website-0a70bb42

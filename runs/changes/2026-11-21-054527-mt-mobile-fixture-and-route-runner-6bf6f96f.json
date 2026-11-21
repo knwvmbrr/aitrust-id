@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-054527-mt-mobile-fixture-and-route-runner-6bf6f96f",
+  "recorded_at": "2026-11-21T05:45:27.719637+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+  "changed": "Record source-stable dual-engine MT fixture parity and add a thin standalone runner around the reusable actual MT modal verifier.",
+  "proves": "Existing fixture verifier passes Chromium and WebKit with30 legacy plus28 mobile complete canonical records per engine and the retained lifecycle/privacy/fault controls. The new route driver syntax-checks and binds local served assets for forthcoming prototype execution.",
+  "limits": "Actual prototype-route driver execution and final distinct review remain pending; no final production/preparation/publication, independent accuracy, physical-phone or original requirement closure claim.",
+  "scope_ids": [
+    "T-MT",
+    "F-019c"
+  ],
+  "files": {
+    "scripts/verify-mt-mobile-site.cjs": "f265bf6f2a102f52583549af9761d5b360b190d7650f1fbd51e88fbec9139918",
+    "runs/2026-11-21-mt-mobile-fixture-browser.json": "58772c199e8e06f35c3e017b0cdc031108267d9515353ac80643cc75bfab7eeb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-mt-mobile-fixture-browser.json",
+      "sha256": "58772c199e8e06f35c3e017b0cdc031108267d9515353ac80643cc75bfab7eeb"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-mt-mobile-site.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T05:45:27.945476+00:00"
+    }
+  ]
+}

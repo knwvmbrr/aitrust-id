@@ -1,0 +1,13 @@
+{
+  "recorded_at": "2026-11-21T05:41:46.351052+00:00",
+  "author": "Codex / web_camo",
+  "pass": false,
+  "kind": "actual_site_prototype_build",
+  "reason": "clean_checkout_missing_inherited_generated_PS_device_manifest",
+  "failed_import": "site/src/device-manifest.json",
+  "MT_fixture_build_passed": true,
+  "MT_method_or_UI_failure_established": false,
+  "corrective_action": "Run unchanged existing build-device-detector.py in isolated worktree, then rebuild prototype. No PS source changes.",
+  "preparation_script_sha256": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+  "production_build_or_publication_claimed": false
+}

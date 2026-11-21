@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-054824-mt-mobile-prototype-delivery-68b57aa5",
+  "recorded_at": "2026-11-21T05:48:24.340053+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+  "changed": "Record working source-bound optional mobile quotation candidate, dual-engine actual prototype MT route proof and integration handoff.",
+  "proves": "Chromium and WebKit each pass30 legacy plus28 candidate whole records in the existing fixture verifier, and three actual-modal canonical records plus privacy/lifecycle/optional-failure recovery controls.74 focused Python and19 Node controls pass; prototype source/served hashes stable; four phone-view screenshots inspected.",
+  "limits": "Prototype/software candidate only; final distinct review, PM protected preparation/integration/build/publication pending. No semantic-completeness, intended ASCII nesting, MT verdict, independent accuracy, physical phone, human acceptance or full original closure. First preparation refusal retained.",
+  "scope_ids": [
+    "T-MT",
+    "F-019c"
+  ],
+  "files": {
+    "docs/mt-mobile-quotation-result.md": "b874dd234448990f60d37b820819d50e2a17c228fce13ad2b985d67510de9595",
+    "runs/2026-11-21-mt-mobile-prototype-site.json": "0daa13891db64996a912caffa8bba592e8e8cff130eef46df3c5fe26c90bb2d8",
+    "runs/2026-11-21-mt-mobile-quotation-delivery.json": "89a2a1e8178ac7437b9e68df36d5df54c7d0d6b9446f4098f7e9eafb73a18290"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-mt-mobile-prototype-site.json",
+      "sha256": "0daa13891db64996a912caffa8bba592e8e8cff130eef46df3c5fe26c90bb2d8"
+    },
+    {
+      "path": "runs/2026-11-21-mt-mobile-quotation-delivery.json",
+      "sha256": "89a2a1e8178ac7437b9e68df36d5df54c7d0d6b9446f4098f7e9eafb73a18290"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T05:48:24.402125+00:00"
+    }
+  ]
+}

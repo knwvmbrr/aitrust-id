@@ -57,18 +57,21 @@ function urgency(original,counts,size){
  }
  object(counts,['finding_groups','paired_units']);if(counts.finding_groups!==original.findings.length||counts.paired_units!==m.paired_units.length)fail();
 }
-function authority(original,counts,points){
+function authority(original,counts,points,contract=null){
  const size=points.length,names=['outside_supported_quotes_without_marker','outside_supported_quotes_with_marker','quoted_phrase_count','supported_quote_count'];
  object(original,['format','method','state',...names,'source_lookup_performed','quote_endorsement_interpreted','negation_interpreted','semantic_attribution_interpreted','intent_established','truth_established','independent_accuracy_evidence','network_used','tags','subject_sha256','normalization_id','offset_unit','source_sha256','quote_spans','outside_markerless_phrases','outside_marked_phrases','quoted_phrases','subject_text_included','parameters']);
- if(original.format!=='authority-quotation-observation/v1')fail();
- fieldsFalse(original,['source_lookup_performed','quote_endorsement_interpreted','negation_interpreted','semantic_attribution_interpreted','subject_text_included']);sources(original.source_sha256,AUTHORITY_SOURCES);
- const p=original.parameters;object(p,['language','quote_grammar','citation_scope','max_quotes','max_phrases','max_units','max_markers']);
- const fixed={language:'en',quote_grammar:'balanced_unescaped_ASCII_double_quotes',citation_scope:'same_literal_unit_and_supported_quote_context',max_quotes:64,max_phrases:128,max_units:512,max_markers:256};
+ if(original.format!==(contract?.format||'authority-quotation-observation/v1'))fail();
+ fieldsFalse(original,['source_lookup_performed','quote_endorsement_interpreted','negation_interpreted','semantic_attribution_interpreted','subject_text_included']);if(contract){object(original.source_sha256,Object.keys(contract.sources));for(const name of Object.keys(contract.sources))if(original.source_sha256[name]!==contract.sources[name])fail();}else sources(original.source_sha256,AUTHORITY_SOURCES);
+ const p=original.parameters;object(p,contract?Object.keys(contract.parameters):['language','quote_grammar','citation_scope','max_quotes','max_phrases','max_units','max_markers']);
+ const fixed=contract?.parameters||{language:'en',quote_grammar:'balanced_unescaped_ASCII_double_quotes',citation_scope:'same_literal_unit_and_supported_quote_context',max_quotes:64,max_phrases:128,max_units:512,max_markers:256};
  for(const key of Object.keys(fixed))if(p[key]!==fixed[key])fail();
- spans(original.quote_spans,size,64);const quotePoints=[];
+ spans(original.quote_spans,size,64);
+ if(contract){if(!eq(original.quote_spans,contract.quoteSpans))fail();}else{
+const quotePoints=[];
  for(let i=0;i<size;i++){if(['“','”','«','»','`'].includes(points[i]))fail();if(points[i]==='"'){if(points[i-1]==='\\')fail();quotePoints.push(i);}}
  if(quotePoints.length!==original.quote_spans.length*2)fail();
  for(let i=0;i<original.quote_spans.length;i++)if(!eq(original.quote_spans[i],[quotePoints[i*2],quotePoints[i*2+1]+1]))fail();
+ }
  const phraseSpans=[],allMarkers=[];
  for(const [name,mode] of [['outside_markerless_phrases','markerless'],['outside_marked_phrases','marked'],['quoted_phrases','quoted']]){
   list(original[name],128);let previous;
@@ -113,3 +116,6 @@ export function explainMT(record){
  if(record.counts.outside_supported_quotes_with_marker)return {title:'Authority wording has a source marker',body:'A marker appears nearby. This check has not verified the source.'};
  return {title:'No supported authority wording found',body:'This check did not find one of its supported phrases. Other wording may still be present.'};
 }
+
+// Structural foundation only; callers still own their closed profile/subject checks.
+export {authority as validateAuthorityDetails};
