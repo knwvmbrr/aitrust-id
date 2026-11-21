@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-161824-remote-openapi-contract-eca30759
+
+Recorded 2026-11-21T16:18:24.739865+00:00 · Contributor: Codex API contract engineer · change
+
+- **Changed.** Added an importable OpenAPI3.1.1 manifest for the three existing ordinary remote JSON API operations.
+- **Evidence.** Eight current focused controls pass, including real canonical PS finding/no-finding and partial/unavailable projections, closed source/route/input/claim checks and an actual -I-S standard-library CLI without the optional MCP SDK. [Change record](./runs/changes/2026-11-21-161824-remote-openapi-contract-eca30759.json).
+- **Not claimed.** Provider activation and AI-host import approval remain pending. MCP is excluded; remote PII remains Unavailable. No route/runtime change, independent accuracy or original requirement closure.
+
+
 ### 2026-11-21-161420-clarify-accepted-capture-display-title-05bba76b
 
 Recorded 2026-11-21T16:14:20.839272+00:00 · Contributor: Codex /root · change
