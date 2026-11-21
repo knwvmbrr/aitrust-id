@@ -1,0 +1,60 @@
+{
+  "schema": "aitrust-ordinary-openapi-proof-1",
+  "captured_at": "2026-11-21T16:18:24.666814+00:00",
+  "pass": true,
+  "performed_by": "Codex /root/seo",
+  "source_base": "893c9fa0849acb9cbc83cfb32c8b4e3a829fb12e",
+  "owned_source_sha256": {
+    "integrations/ai-tools/remote-openapi.json": "c6d764a939f96415bfddfeb526d90fd7aebf8eb9685557e786957b8c006902aa",
+    "scripts/verify-remote-openapi.py": "c0183c1a672650319ccd5d292a6caa31cf01de061e17b3fe780c13cfff53371c",
+    "tests/test_remote_openapi.py": "c44b207cfa8c167fc4863c9ff352cc410c38b3bce7c4140c35fecb5bf5b3d4bf",
+    "docs/remote-openapi-plan.md": "fb455e177c49af1483677ab3f9bbf9b11c0005ae4ad0d877667d55cef2de3257"
+  },
+  "implementation_source_sha256": {
+    "tools/remote_tag_server.py": "b656abfb64eb925f8e63789365590a35c652d35e16001da284fa8f827162a72d",
+    "tools/tag_api.py": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e",
+    "deploy/ai-tools/render.py": "d7d994babf384201d3285b509a281faa417e154f84790853055291f17b4faa89"
+  },
+  "executed": [
+    {
+      "argv_template": [
+        "verification-python",
+        "-B",
+        "-m",
+        "pytest",
+        "tests/test_remote_openapi.py",
+        "-q"
+      ],
+      "exit": 0,
+      "tests_passed": 8,
+      "elapsed_seconds_reported_by_pytest": 0.63
+    }
+  ],
+  "actual_controls": {
+    "ordinary_operations": 3,
+    "canonical_local_PS_worker_inputs": 2,
+    "canonical_complete_unavailable_partial_response_projections": 7,
+    "closed_request_code_point_and_utf8_boundaries": true,
+    "manifest_surface_source_limit_false_claim_external_reference_mutations_refused": true,
+    "standard_library_isolated_no_site_packages_CLI_passed": true,
+    "private_argv_fixed_refusal_passed": true,
+    "bounded_regular_input_and_symlink_refusal": true,
+    "named_JSON_Schema_2020_12_schemas_checked": 8
+  },
+  "OpenAPI_version": "3.1.1",
+  "primary_format_reference": "https://spec.openapis.org/oas/v3.1.1.html",
+  "prior_executed_service_evidence": [
+    "runs/2026-11-21-remote-tag-connectors-direct-Linux-execution.json",
+    "runs/2026-11-21-remote-proxy-corrected-Linux.json"
+  ],
+  "limits": [
+    "This is an importable description and offline contract asset, not actual ChatGPT/Claude import approval.",
+    "Provider server remains explicitly pending public activation and TLS qualification; no route is added or activated.",
+    "Only PS development patterns are available remotely; optional PII requests remain Unavailable.",
+    "Selected text reaches operator server; no application input storage/research submission, no input echo and no safety/truth/AI-origin/independent-accuracy claim.",
+    "Object schemas do not encode duplicate raw JSON keys, every Unicode whitespace rule or all UTF8/wire limits; documented implementation validation remains required.",
+    "Proxy refusals can be plain text. HTTP200 can contain Unavailable or Partial.",
+    "No new service, dependency, network test, optional MCP SDK import or browser/native matrix run for this asset.",
+    "No original requirement closure, scope percentage or full license clearance."
+  ]
+}
