@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-202404-png-metadata-preflight-6af9ce35
+
+Recorded 2026-11-21T20:24:04.721364+00:00 · Contributor: Codex /root/web_camo image evidence engineer · change
+
+- **Changed.** Added a standalone offline PNG metadata inventory with bounded selected-profile structure and scanline checks; default output hides metadata values, paths and file hashes.
+- **Evidence.** Thirteen focused groups passed, then the valid-unsupported-fixture group and ten actual standard-library-only CLI controls passed with frozen runtime hashes. Actual worker timeout/output/nonzero cleanup, privacy, unsupported/corrupt distinction and recovery are exercised. [Change record](./runs/changes/2026-11-21-202404-png-metadata-preflight-6af9ce35.json).
+- **Not claimed.** No image-origin, authorship, watermark, signature, trust, revocation or truth verdict; no tag issued. Explicit JSON includes a linkable encoded-file hash. Full F-155/FA/PA acceptance remains open; no website/API/deployment/state/scope change.
+
+
 ### 2026-11-21-165656-freeze-passing-api-core-delivery-55894707
 
 Recorded 2026-11-21T16:56:56.162616+00:00 · Contributor: Codex /root · change

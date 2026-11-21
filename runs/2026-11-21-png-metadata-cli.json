@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "pass": true,
+  "captured_at": "2026-11-21T20:23:18.270740+00:00",
+  "author": "Codex /root/web_camo image evidence engineer",
+  "source_base": "abe7d64be77b03d19f51143f774fa51b59717e59",
+  "profile": "png-metadata-preflight/1.0.0",
+  "source_sha256": {
+    "tools/png_metadata.py": "c3368f4d070ecb7027cb283e93e4309debb3dabd393efdd3b8f551ed2d74c13b",
+    "scripts/inspect-png-metadata.py": "dd84cec16b2069c525cdfb7efb723f63e8b4643e9a846cf98902f9acd34f60d8",
+    "tests/test_png_metadata.py": "b8335776d291eaa04bf36086957634cb13410cc630263f36bcdfbe421dfe5043",
+    "docs/png-metadata-plan.md": "0459cc6dee1528659284a056f2db5b30fdf94087508ca0bd10892595b0530cad",
+    "docs/png-metadata.md": "98563fb09664485e4cf2c556500cad5784fa16b847ae5b26d20b1c05d3077ff1"
+  },
+  "source_stable": true,
+  "python": "3.13.0",
+  "actual_cli_controls": [
+    {
+      "case": "metadata_text",
+      "pass": true,
+      "exit_status": 0,
+      "elapsed_ms": 186,
+      "input_bytes": 124,
+      "stdout_bytes": 385,
+      "no_raw_metadata_or_path": true,
+      "site_packages_disabled": true,
+      "default_hash_absent": true
+    },
+    {
+      "case": "metadata_json",
+      "pass": true,
+      "exit_status": 0,
+      "elapsed_ms": 104,
+      "input_bytes": 124,
+      "stdout_bytes": 1120,
+      "no_raw_metadata_or_path": true,
+      "site_packages_disabled": true,
+      "state": "OBSERVED",
+      "reason": null,
+      "exact_input_hash": true
+    },
+    {
+      "case": "no_metadata",
+      "pass": true,
+      "exit_status": 0,
+      "elapsed_ms": 117,
+      "input_bytes": 71,
+      "stdout_bytes": 1117,
+      "no_raw_metadata_or_path": true,
+      "site_packages_disabled": true,
+      "state": "OBSERVED",
+      "reason": null,
+      "exact_input_hash": true
+    },
+    {
+      "case": "valid_16bit",
+      "pass": true,
+      "exit_status": 2,
+      "elapsed_ms": 121,
+      "input_bytes": 68,
+      "stdout_bytes": 573,
+      "no_raw_metadata_or_path": true,
+      "site_packages_disabled": true,
+      "state": "UNAVAILABLE",
+      "reason": "unsupported_variant",
+      "exact_input_hash": true
+    },
+    {
+      "case": "valid_palette",
+      "pass": true,
+      "exit_status": 2,
+      "elapsed_ms": 94,
+      "input_bytes": 83,
+      "stdout_bytes": 573,
+      "no_raw_metadata_or_path": true,
+      "site_packages_disabled": true,
+      "state": "UNAVAILABLE",
+      "reason": "unsupported_variant",
+      "exact_input_hash": true
+    },
+    {
+      "case": "valid_Adam7_1x1",
+      "pass": true,
+      "exit_status": 2,
+      "elapsed_ms": 89,
+      "input_bytes": 69,
+      "stdout_bytes": 573,
+      "no_raw_metadata_or_path": true,
+      "site_packages_disabled": true,
+      "state": "UNAVAILABLE",
+      "reason": "unsupported_variant",
+      "exact_input_hash": true
+    },
+    {
+      "case": "corrupt_IDAT",
+      "pass": true,
+      "exit_status": 2,
+      "elapsed_ms": 86,
+      "input_bytes": 65,
+      "stdout_bytes": 572,
+      "no_raw_metadata_or_path": true,
+      "site_packages_disabled": true,
+      "state": "UNAVAILABLE",
+      "reason": "corrupt_image_data",
+      "exact_input_hash": true
+    },
+    {
+      "case": "metadata_inflate_limit",
+      "pass": true,
+      "exit_status": 2,
+      "elapsed_ms": 88,
+      "input_bytes": 177,
+      "stdout_bytes": 569,
+      "no_raw_metadata_or_path": true,
+      "site_packages_disabled": true,
+      "state": "UNAVAILABLE",
+      "reason": "metadata_limit",
+      "exact_input_hash": true
+    },
+    {
+      "case": "recovery_after_refusal",
+      "pass": true,
+      "exit_status": 0,
+      "elapsed_ms": 92,
+      "input_bytes": 71,
+      "stdout_bytes": 1117,
+      "no_raw_metadata_or_path": true,
+      "site_packages_disabled": true,
+      "state": "OBSERVED",
+      "reason": null,
+      "exact_input_hash": true
+    },
+    {
+      "case": "malformed_argv_no_echo",
+      "pass": true,
+      "exit_status": 2
+    }
+  ],
+  "focused_tests": {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_png_metadata.py",
+      "-v"
+    ],
+    "groups": 13,
+    "pass": true,
+    "log_sha256": "846598b77848547d68e0561f9c9873701e91af1b0a605ef600bfeba417632aec",
+    "test_binding_note": "First13 groups ran before only the unsupported-fixture payloads were corrected to valid16-bit/palette/Adam7 samples; that affected group passed again and current actualCLI uses the valid fixtures. Runtime unchanged."
+  },
+  "limits": [
+    "Synthetic fixtures only; no real photo acceptance or independent accuracy.",
+    "Still noninterlaced8-bit color types0/2/4/6 only; opaque ancillary contents not verified.",
+    "Closed worker schema+captured subject/header binding, not independent semantic replay.",
+    "No rendering, watermark/signature/trust/revocation/AI-origin verification, tag issuance or full F-155/FA/PA closure.",
+    "Default output no hash/values/path; explicit JSON hash can link copies.",
+    "No website/API/SDK/dependency/deploy/state/scope change."
+  ]
+}
