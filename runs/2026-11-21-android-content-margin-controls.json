@@ -1,0 +1,152 @@
+{
+  "format": "ai-trust-id-android-content-margin-controls/v1",
+  "recorded_at": "2026-11-21T07:18:28.664513+00:00",
+  "pass": true,
+  "preserved_failed_default": {
+    "path": "runs/2026-11-21-android-scroll-candidate-failed.json",
+    "sha256": "de2394ea64ede98e679aed63a3e35560fa9cbb360a6e0847a304fd3913da4ca0",
+    "producer_stays_failed": true,
+    "rotation_and_current_edit_observed": true,
+    "actual_old_gesture_delivery_cause": "UNKNOWN"
+  },
+  "focused_tests": {
+    "tests": 63,
+    "affected_groups": 17,
+    "unchanged_original_prerequisite_controller_tests": 46,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "actual_stdlib_inert_inset_comparison": {
+    "recorded_at": "2026-11-21T07:16:28.112187+00:00",
+    "synthetic_geometry_not_android_runtime": true,
+    "before_source_sha256": "51ff2fa179f2914e29a3d805c2bc7ccd096ad2aa65da2e514e1eee68fd9d8bb0",
+    "after_source_sha256": "52b0655bf5726820015bb4b1647e76af155eb4649a2f23ba7b4cc1d3b8e697e7",
+    "before": {
+      "status": "FAILED",
+      "pass": false,
+      "attempted_gestures": 2
+    },
+    "after": {
+      "status": "EXECUTED",
+      "pass": true,
+      "validated_margin": true,
+      "previous_edge_outside_known_content_band": true,
+      "geometry": {
+        "editor_horizontal_within_scroll": true,
+        "left_full_padding_observed": true,
+        "right_full_padding_observed": true,
+        "point_within_scroll": true,
+        "point_outside_editor": true,
+        "point_within_known_left_padding": true
+      },
+      "gesture_observations": [
+        {
+          "direction": "UP",
+          "editor_observed_before": true,
+          "editor_observed_after": false,
+          "editor_bounds_changed": null,
+          "editor_moved_up": null,
+          "editor_moved_down": null,
+          "status_became_visible": true,
+          "rotation_stable": true
+        },
+        {
+          "direction": "DOWN",
+          "editor_observed_before": false,
+          "editor_observed_after": true,
+          "editor_bounds_changed": null,
+          "editor_moved_up": null,
+          "editor_moved_down": null,
+          "status_became_visible": false,
+          "rotation_stable": true
+        }
+      ],
+      "receipt_observed": true,
+      "edited_reasserted": true
+    },
+    "separate_visible_motion_fixture": [
+      {
+        "direction": "UP",
+        "editor_observed_before": true,
+        "editor_observed_after": true,
+        "editor_bounds_changed": true,
+        "editor_moved_up": true,
+        "editor_moved_down": false,
+        "status_became_visible": true,
+        "rotation_stable": true
+      },
+      {
+        "direction": "DOWN",
+        "editor_observed_before": true,
+        "editor_observed_after": true,
+        "editor_bounds_changed": true,
+        "editor_moved_up": false,
+        "editor_moved_down": true,
+        "status_became_visible": false,
+        "rotation_stable": true
+      }
+    ]
+  },
+  "geometry_contract": {
+    "source_padding_dp": 22,
+    "java_positive_half_up_not_bankers_round": true,
+    "strict_physical_optional_override_density": true,
+    "density_response_max_bytes": 1024,
+    "supported_density_dpi_range": [
+      72,
+      1000
+    ],
+    "safe_point_derived_from_owned_editor_left_and_half_padding": true,
+    "point_outside_editable_content_and_inside_known_padding_required": true,
+    "unknown_density_or_geometry_refuses_without_fallback": true,
+    "cache_density_rotation_horizontal_bounds_revalidated": true,
+    "intended_target_not_proof_of_hit_test_or_delivery": true
+  },
+  "limits": {
+    "original_seven_helper_and_wait_asts_unchanged": true,
+    "shared_rotation_budget_seconds": 40,
+    "budget_not_reset_by_density_or_scroll": true,
+    "calls_limited_by_remaining_budget": true,
+    "maximum_up_gestures": 2,
+    "maximum_down_gestures": 2,
+    "maximum_motion_observations": 4,
+    "motion_from_next_snapshot_only": true,
+    "unknown_motion_is_null": true,
+    "coordinates_density_values_ids_text_or_input_hashes_exported": false,
+    "immediate_configuration_home_adjacency_unchanged": true
+  },
+  "negative_controls": [
+    "physical/override ambiguity and malformed or excessive density",
+    "Java half ties280/440",
+    "system inset and inner editor interception fixtures",
+    "missing density/tight bounds",
+    "changed density/rotation/horizontal viewport cache",
+    "lost edit/missing receipt/visible result",
+    "unknown or foreign owned scroll bounds",
+    "expired shared budget",
+    "late marker revival",
+    "metadata schema excludes private geometry"
+  ],
+  "distinct_review": {
+    "reviewer": "/root/web_camo",
+    "result": "CLEAR for one changed-source default candidate",
+    "affected_groups_replayed": 17,
+    "source_hashes_and_original_asts_confirmed": true,
+    "sdk_emulator_browser": false
+  },
+  "sources": {
+    "scripts/verify-android-emulator.py": "52b0655bf5726820015bb4b1647e76af155eb4649a2f23ba7b4cc1d3b8e697e7",
+    "tests/test_android_configuration_controls.py": "028ee0dc94f93ecca5e52335672f74eb4c53ae122d43d9e82f1ac0b000d62d66",
+    "docs/android-content-margin-gesture-plan.md": "106c45a0b704b09482c531aff414350005dec002333427d186cd35f19ef3790e",
+    ".github/workflows/android-share.yml": "536c97412669fa97527a026edd72297d82cf0ad849d6628ca6c0df4c4c923b5a",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+    "mobile/android/src/com/aitrustid/android/ConfigurationDraft.java": "5fb22a21a6c8ad36b4535e39955ecff4a6baede2e42c43c9648b8149dd52211a"
+  },
+  "native_logic_changed_by_this_correction": false,
+  "actual_new_default7plus2_pending": true,
+  "physical_device_evidence": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false
+}

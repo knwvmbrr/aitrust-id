@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-071828-android-derived-margin-motion-controls-06afb06f
+
+Recorded 2026-11-21T07:18:28.711994+00:00 · Contributor: Codex · change
+
+- **Changed.** Derive configuration gestures from owned content padding and observed density, and report bounded postgesture motion facts.
+- **Evidence.** 63 focused controls pass; separate reviewer replayed17 affected groups. Strict source-bound geometry rejects unknown/inset/inner-editor/cache/budget failures; the retained edge helper fails the inert inset fixture while the derived margin passes exact receipt and postreceipt text. [Change record](./runs/changes/2026-11-21-071828-android-derived-margin-motion-controls-06afb06f.json).
+- **Not claimed.** Old actual touch-delivery cause remains unknown and failed producers remain failed. New default7+2 acceptance is pending; intended safe geometry is not proof of hit-testing, and no physical/human/full-original closure is claimed.
+
+
 ### 2026-11-21-070856-android-scroll-candidate-finite-failure-baaf47ec
 
 Recorded 2026-11-21T07:08:56.508703+00:00 · Contributor: Codex · change

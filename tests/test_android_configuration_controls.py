@@ -19,12 +19,19 @@ driver=importlib.util.module_from_spec(spec);spec.loader.exec_module(driver)
 
 class ConfigurationControls(unittest.TestCase):
     def exercise(self,fault=None):
-        report={};calls=[];scroll_position=0
+        report={};calls=[];scroll_position=0;density_reads=0
         def shell(args,timeout=10):
-            nonlocal scroll_position
+            nonlocal scroll_position,density_reads
             calls.append(('shell',args))
+            if args==['wm','density']:
+                density_reads+=1
+                if fault=='missing_density':return b'PRIVATE_DENSITY_CANARY'
+                return b'Physical density: 420\n' if fault=='density_changed' and density_reads>1 else b'Physical density: 320\n'
             if args[:2]==['input','swipe']:
-                scroll_position=max(0,scroll_position+(1 if args[3]>args[5] else -1))
+                # Inset/inner-editor models accept only the independently known
+                # app padding band. Edge or editable-content gestures do nothing.
+                allowed=fault not in ('system_inset','inner_editor') or 56<args[2]<100
+                if allowed:scroll_position=max(0,scroll_position+(1 if args[3]>args[5] else -1))
             if args[:2]==['am','task'] and fault=='refocus':raise OSError('PRIVATE_NATIVE_CANARY')
             if args==['dumpsys','activity','activities']:return b'Task{owned #42 com.aitrustid.android}\n'
             return b''
@@ -39,9 +46,11 @@ class ConfigurationControls(unittest.TestCase):
             elif stage=='configuration_rotate':
                 rotation='1';status='Text received. Review it';value='owned configuration draftX'
                 if fault=='lost_edit':value='owned configuration draft'
-                if fault in ('offscreen','no_receipt','lost_after_scroll','bad_scroll_bounds','foreign_scroll'):
+                if fault in ('offscreen','no_receipt','lost_after_scroll','bad_scroll_bounds','foreign_scroll','system_inset','inner_editor','motion','density_changed','missing_density','tight_bounds','horizontal_changed','rotation_changed'):
                     show_status=scroll_position>0 and fault!='no_receipt';show_editor=scroll_position==0
                     if fault=='lost_after_scroll' and report.get('rotation_receipt_observed') and scroll_position==0:value='owned configuration draft'
+                    if fault=='motion':show_editor=True
+                    if fault=='rotation_changed' and scroll_position>0:rotation='0'
             elif stage=='configuration_home' and child=='background_receive':
                 rotation='1';status='Text received. Review it';value='synthetic private marker'
             elif stage=='configuration_home' and child=='background_cleared_view':
@@ -49,10 +58,13 @@ class ConfigurationControls(unittest.TestCase):
             elif stage=='configuration_final_rotation' and fault=='late_revival':
                 rotation='1';value='synthetic private marker'
             view=ET.Element('hierarchy',{'rotation':rotation})
-            if show_editor:ET.SubElement(view,'node',{'resource-id':driver.PACKAGE+':id/editor','text':value})
+            editor_left,editor_right=(100,650) if fault in ('system_inset','inner_editor') else (44,756)
+            if fault=='tight_bounds':editor_left,editor_right=10,790
+            editor_top=0 if fault=='motion' and scroll_position>0 else 100
+            if show_editor:ET.SubElement(view,'node',{'resource-id':driver.PACKAGE+':id/editor','text':value,'bounds':f'[{editor_left},{editor_top}][{editor_right},{editor_top+180}]'})
             if show_status:ET.SubElement(view,'node',{'resource-id':driver.PACKAGE+':id/status','text':status})
             ET.SubElement(view,'node',{'class':'android.widget.ScrollView','package':'other.invalid' if fault=='foreign_scroll' else driver.PACKAGE,
-                'bounds':'PRIVATE_BOUNDS_CANARY' if fault=='bad_scroll_bounds' else '[0,0][800,400]'})
+                'scrollable':'true','bounds':'PRIVATE_BOUNDS_CANARY' if fault=='bad_scroll_bounds' else ('[0,0][760,400]' if fault=='horizontal_changed' and scroll_position>0 else '[0,0][800,400]')})
             if fault=='automatic_result' and stage=='configuration_rotate':ET.SubElement(view,'node',{'resource-id':driver.PACKAGE+':id/tag','text':'PS'})
             if fault=='missing_editor' and stage=='configuration_edit':view.remove(view[0])
             return view
@@ -109,6 +121,49 @@ class ConfigurationControls(unittest.TestCase):
             self.assertIsNotNone(error);self.assertFalse(any(c[0]=='shell' and c[1][:2]==['input','swipe'] for c in calls))
             self.assertNotIn('PRIVATE',json.dumps(report)+str(error))
 
+    def test_source_derived_margin_avoids_system_inset_and_inner_editor_interception(self):
+        for fault in ('system_inset','inner_editor'):
+            report,calls,error=self.exercise(fault);self.assertIsNone(error);self.assertTrue(report['pass'])
+            self.assertTrue(report['content_margin_target_validated'] and report['gesture_outside_editor'])
+            self.assertTrue(report['previous_edge_outside_known_content_band'])
+            for call in calls:
+                if call[0]=='shell' and call[1][:2]==['input','swipe']:self.assertTrue(56<call[1][2]<100)
+
+    def test_motion_is_observed_from_bounds_and_unknown_is_null(self):
+        report,calls,error=self.exercise('motion');self.assertIsNone(error)
+        self.assertEqual(len(report['gesture_observations']),2)
+        self.assertTrue(report['gesture_observations'][0]['editor_moved_up'])
+        self.assertTrue(report['gesture_observations'][1]['editor_moved_down'])
+        report,calls,error=self.exercise('offscreen');self.assertIsNone(error)
+        self.assertIsNone(report['gesture_observations'][0]['editor_moved_up'])
+        self.assertFalse(report['gesture_observations'][0]['editor_observed_after'])
+
+    def test_unknown_density_tight_geometry_or_changed_cache_refuses(self):
+        for fault in ('missing_density','tight_bounds','density_changed','horizontal_changed','rotation_changed'):
+            report,calls,error=self.exercise(fault);self.assertIsNotNone(error);self.assertFalse(report['pass'])
+            gestures=[c for c in calls if c[0]=='shell' and c[1][:2]==['input','swipe']]
+            self.assertEqual(len(gestures),1 if fault in ('horizontal_changed','rotation_changed') else 0)
+            self.assertNotIn('PRIVATE',json.dumps(report)+str(error))
+
+    def test_expired_shared_budget_cannot_inject_a_gesture_or_reset(self):
+        with mock.patch.object(driver.time,'monotonic',side_effect=[0,0,41]) as clock:
+            report,calls,error=self.exercise('offscreen')
+        self.assertIsNotNone(error);self.assertFalse(report['pass']);self.assertEqual(clock.call_count,3)
+        self.assertFalse(any(c[0]=='shell' and c[1][:2]==['input','swipe'] for c in calls))
+
+    def test_motion_report_is_closed_and_never_exports_geometry_or_density_values(self):
+        report,calls,error=self.exercise('motion');self.assertIsNone(error)
+        allowed={'status','pass','cases','control_stage','case_count','density_query_attempts','gesture_target_state','effective_density_observed',
+            'gesture_observations','rotation_state','rotation_observation','rotation_scroll_precondition','owned_scrollable',
+            'previous_edge_outside_known_content_band','content_margin_target_validated','gesture_outside_editor','rotation_scroll_actions',
+            'rotation_receipt_observed','rotation_edited_reasserted','background','gesture_geometry'}
+        self.assertLessEqual(set(report),allowed)
+        self.assertTrue(all(type(v) is bool for v in report['gesture_geometry'].values()))
+        for row in report['gesture_observations']:
+            self.assertEqual(set(row),{'direction','editor_observed_before','editor_observed_after','editor_bounds_changed','editor_moved_up','editor_moved_down','status_became_visible','rotation_stable'})
+            self.assertIn(row['direction'],('UP','DOWN'))
+            self.assertTrue(all(value is None or type(value) is bool for key,value in row.items() if key!='direction'))
+
     def test_immediate_and_late_revival_fail_without_waiting_for_later_clear(self):
         for fault in ('immediate_revival','late_revival'):
             report,calls,error=self.exercise(fault)
@@ -145,6 +200,37 @@ class ConfigurationControls(unittest.TestCase):
             results[(event,probe,explicit)]=args
         self.assertEqual(results[('pull_request',False,False)],results[('workflow_dispatch',False,True)])
         self.assertEqual(results[('push',False,False)],results[('workflow_dispatch',False,True)])
+
+
+class DensityAndGeometry(unittest.TestCase):
+    def test_physical_override_precedence_and_java_half_up_rounding(self):
+        self.assertEqual(driver.parse_display_density(b'Physical density: 420\n'),420)
+        self.assertEqual(driver.parse_display_density(b'Physical density: 420\r\nOverride density: 320\r\n'),320)
+        for dpi,padding in [(280,39),(440,61)]:
+            x,actual=driver.content_margin_x((0,0,1000,500),(200,100,800,300),dpi)
+            self.assertEqual(actual,padding);self.assertTrue(200-padding<x<200)
+
+    def test_ambiguous_missing_invalid_or_private_density_refuses(self):
+        for raw in [b'',b'Physical density: 0\n',b'Physical density: 420\nOverride density: 0\n',b'Override density: 320\n',
+                    b'Physical density: 420\nPhysical density: 420\n',b'Physical density: 420\nOverride density: 320\nOverride density: 320\n',
+                    b'Physical density: 1001\n',b'PRIVATE_TOKEN',b'X'*1025,b'\xff']:
+            with self.assertRaisesRegex(ValueError,'^Owned density unavailable$'):driver.parse_display_density(raw)
+
+    def test_margin_is_source_bound_and_never_guesses_tight_or_inner_point(self):
+        source=(ROOT/'mobile/android/src/com/aitrustid/android/CheckActivity.java').read_text()
+        self.assertEqual(driver.CONTENT_PADDING_DP,22)
+        self.assertIn('column.setPadding(dp(22),dp(22),dp(22),dp(24))',source)
+        self.assertIn('dp(22)+insets.getSystemWindowInsetLeft()',source)
+        self.assertIn('dp(22)+insets.getSystemWindowInsetRight()',source)
+        self.assertIn('Math.round(value*getResources().getDisplayMetrics().density)',source)
+        for dpi in (72,160,280,320,420,440,640,1000):
+            padding=(22*dpi+80)//160;left=96+padding
+            x,p=driver.content_margin_x((0,0,1600,800),(left,100,1400,300),dpi)
+            self.assertTrue(96<x<left);self.assertFalse(left<=x<=1400)
+        with self.assertRaises(ValueError):driver.content_margin_x((0,0,800,400),(10,100,790,280),320)
+        with self.assertRaises(ValueError):driver.content_margin_x((0,0,800,400),(44,100,756,280),True)
+        for malformed in (None,(0,0,800)):
+            with self.assertRaises(ValueError):driver.content_margin_x(malformed,(44,100,756,280),320)
 
 
 if __name__=='__main__':unittest.main()

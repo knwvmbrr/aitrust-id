@@ -509,6 +509,32 @@ class AndroidConfigurationRefusal(ValueError):
         self.code=stage+'_unavailable';super().__init__(self.code)
 
 
+CONTENT_PADDING_DP=22
+
+
+def parse_display_density(raw):
+    if type(raw) is not bytes or len(raw)>1024:raise ValueError('Owned density unavailable')
+    match=re.fullmatch(rb'Physical density: ([1-9][0-9]{1,3})\r?\n(?:Override density: ([1-9][0-9]{1,3})\r?\n)?',raw)
+    if match is None:raise ValueError('Owned density unavailable')
+    values=[int(value) for value in match.groups() if value is not None]
+    if not all(72<=value<=1000 for value in values):raise ValueError('Owned density unavailable')
+    return values[-1]
+
+
+def content_margin_x(scroll_bounds,editor_bounds,density):
+    if type(density) is not int or not 72<=density<=1000:raise ValueError('Owned margin unavailable')
+    if any(type(bounds) not in (tuple,list) or len(bounds)!=4 for bounds in (scroll_bounds,editor_bounds)):raise ValueError('Owned margin unavailable')
+    if any(type(value) is not int for bounds in (scroll_bounds,editor_bounds) for value in bounds):raise ValueError('Owned margin unavailable')
+    left,top,right,bottom=scroll_bounds;el,et,er,eb=editor_bounds
+    if not (0<=left<right<=8192 and 0<=top<bottom<=8192 and right-left>=64 and bottom-top>=64):raise ValueError('Owned margin unavailable')
+    # Positive Java Math.round, including half ties; Python round is bankers rounding.
+    padding=(CONTENT_PADDING_DP*density+80)//160
+    if not (left+padding<=el<er<=right-padding and et<eb):raise ValueError('Owned margin unavailable')
+    x=el-(padding+1)//2
+    if not (left<x<el and el-padding<x<el):raise ValueError('Owned margin unavailable')
+    return x,padding
+
+
 def verify_configuration_controls(send,shell,wait,click,report):
     """Supplemental default-APK checks; never replace the original seven.
 
@@ -521,6 +547,16 @@ def verify_configuration_controls(send,shell,wait,click,report):
         if len(nodes)>1 or required and not nodes:raise ValueError('Owned synthetic editor unavailable')
         if not nodes:return None
         return nodes[0].attrib.get('text','')
+    def bounds(node):
+        match=re.fullmatch(r'\[(-?\d{1,4}),(-?\d{1,4})\]\[(-?\d{1,4}),(-?\d{1,4})\]',node.attrib.get('bounds',''))
+        if match is None:raise ValueError('Owned bounds unavailable')
+        value=tuple(map(int,match.groups()))
+        if not (all(-8192<=v<=8192 for v in value) and value[0]<value[2] and value[1]<value[3]):raise ValueError('Owned bounds unavailable')
+        return value
+    def editor_bounds(view):
+        nodes=[n for n in view.iter('node') if n.attrib.get('resource-id')==PACKAGE+':id/editor']
+        if len(nodes)>1:raise ValueError('Ambiguous owned bounds')
+        return None if not nodes else bounds(nodes[0])
     cases=[];report.update(status='RUNNING',**{'pass':False},cases=cases)
     try:
         report['control_stage']='configuration_portrait'
@@ -538,25 +574,67 @@ def verify_configuration_controls(send,shell,wait,click,report):
         view=wait(edited);expected=editor(view)
         report['control_stage']='configuration_rotate'
         shell(['wm','user-rotation','lock','1'])
-        rotation={'phase':'ROTATING','up':0,'down':0}
+        deadline=time.monotonic()+40
+        def remaining():
+            left=deadline-time.monotonic()
+            if left<=0:raise ValueError('Configuration budget expired')
+            return min(5,left)
+        def density():
+            report['density_query_attempts']=report.get('density_query_attempts',0)+1
+            report['gesture_target_state']='READING_DENSITY'
+            value=parse_display_density(shell(['wm','density'],remaining()))
+            report['effective_density_observed']=True
+            return value
+        rotation={'phase':'ROTATING','up':0,'down':0,'density':density(),'target':None,'pending_motion':None}
+        motions=[];report['gesture_observations']=motions
         def scroll(view,up):
+            remaining()
             nodes=[n for n in view.iter('node') if n.attrib.get('class')=='android.widget.ScrollView' and n.attrib.get('package')==PACKAGE]
             if len(nodes)!=1:raise ValueError('Owned scroll view unavailable')
-            match=re.fullmatch(r'\[(\d{1,4}),(\d{1,4})\]\[(\d{1,4}),(\d{1,4})\]',nodes[0].attrib.get('bounds',''))
-            if match is None:raise ValueError('Owned scroll bounds unavailable')
-            left,top,right,bottom=map(int,match.groups())
+            left,top,right,bottom=bounds(nodes[0]);current_editor=editor_bounds(view)
             if not (0<=left<right<=8192 and 0<=top<bottom<=8192 and right-left>=64 and bottom-top>=64):raise ValueError('Owned scroll bounds unavailable')
-            # Vertical motion in the owned outer margin avoids the editor's
-            # independent scrolling. No coordinates are retained in evidence.
-            x=right-max(2,(right-left)//32);low=top+(bottom-top)*3//4;high=top+(bottom-top)//4
-            shell(['input','swipe',x,low if up else high,x,high if up else low,'200'],5)
+            scrollable=nodes[0].attrib.get('scrollable')
+            report['owned_scrollable']=None if scrollable not in ('true','false') else scrollable=='true'
+            if density()!=rotation['density']:
+                report['gesture_target_state']='DENSITY_CHANGED';raise ValueError('Owned density changed')
+            target=rotation['target']
+            if target is None:
+                if current_editor is None:raise ValueError('Owned editor geometry unavailable')
+                padding=(CONTENT_PADDING_DP*rotation['density']+80)//160
+                proposed=current_editor[0]-(padding+1)//2
+                report['gesture_geometry']={'editor_horizontal_within_scroll':left<=current_editor[0]<current_editor[2]<=right,
+                    'left_full_padding_observed':current_editor[0]-left>=padding,'right_full_padding_observed':right-current_editor[2]>=padding,
+                    'point_within_scroll':left<proposed<right,'point_outside_editor':proposed<current_editor[0],
+                    'point_within_known_left_padding':current_editor[0]-padding<proposed<current_editor[0]}
+                x,padding=content_margin_x((left,top,right,bottom),current_editor,rotation['density'])
+                target={'x':x,'horizontal':(left,right),'editor_horizontal':(current_editor[0],current_editor[2])}
+                rotation['target']=target
+                old_edge=right-max(2,(right-left)//32)
+                report['previous_edge_outside_known_content_band']=not (current_editor[0]-padding<old_edge<current_editor[2]+padding)
+                report['content_margin_target_validated']=True;report['gesture_outside_editor']=True
+            if target['horizontal']!=(left,right) or current_editor is not None and target['editor_horizontal']!=(current_editor[0],current_editor[2]):
+                report['gesture_target_state']='HORIZONTAL_BOUNDS_CHANGED';raise ValueError('Owned geometry changed')
+            if view.attrib.get('rotation')!='1':
+                report['gesture_target_state']='ROTATION_CHANGED';raise ValueError('Owned rotation changed')
+            x=target['x'];low=top+(bottom-top)*3//4;high=top+(bottom-top)//4
+            rotation['pending_motion']={'editor':current_editor,'status':any(n.attrib.get('resource-id')==PACKAGE+':id/status' for n in view.iter('node')),'up':up}
+            report['gesture_target_state']='CONTENT_MARGIN_VALIDATED'
+            shell(['input','swipe',x,low if up else high,x,high if up else low,'200'],remaining())
             rotation['up' if up else 'down']+=1
             report['rotation_scroll_actions']=rotation['up']+rotation['down']
         def configuration_ready(view):
+            remaining()
             value=editor(view,False);received=text(view,'Text received. Review it')
             status=any(n.attrib.get('resource-id')==PACKAGE+':id/status' for n in view.iter('node'))
             tag=any(n.attrib.get('resource-id')==PACKAGE+':id/tag' for n in view.iter('node'))
             actual=view.attrib.get('rotation');observed_rotation=actual if actual in ('0','1') else ('UNAVAILABLE' if actual is None else 'OTHER')
+            pending=rotation['pending_motion']
+            if pending is not None:
+                after=editor_bounds(view);before=pending['editor'];both=before is not None and after is not None
+                motions.append({'direction':'UP' if pending['up'] else 'DOWN','editor_observed_before':before is not None,'editor_observed_after':after is not None,
+                    'editor_bounds_changed':None if not both else before!=after,'editor_moved_up':None if not both else after[1]<before[1],
+                    'editor_moved_down':None if not both else after[1]>before[1],'status_became_visible':not pending['status'] and status,'rotation_stable':actual=='1'})
+                rotation['pending_motion']=None
             report['rotation_state']=rotation['phase']
             report['rotation_observation']={'rotation':observed_rotation,'editor_observed':value is not None,
                 'editor_matches_edited_draft':None if value is None else value==expected,

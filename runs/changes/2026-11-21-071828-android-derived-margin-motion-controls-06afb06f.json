@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-071828-android-derived-margin-motion-controls-06afb06f",
+  "recorded_at": "2026-11-21T07:18:28.711994+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a61331c4e85e16adb74d432aedac3f4fa377723f",
+  "changed": "Derive configuration gestures from owned content padding and observed density, and report bounded postgesture motion facts.",
+  "proves": "63 focused controls pass; separate reviewer replayed17 affected groups. Strict source-bound geometry rejects unknown/inset/inner-editor/cache/budget failures; the retained edge helper fails the inert inset fixture while the derived margin passes exact receipt and postreceipt text.",
+  "limits": "Old actual touch-delivery cause remains unknown and failed producers remain failed. New default7+2 acceptance is pending; intended safe geometry is not proof of hit-testing, and no physical/human/full-original closure is claimed.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "scripts/verify-android-emulator.py": "52b0655bf5726820015bb4b1647e76af155eb4649a2f23ba7b4cc1d3b8e697e7",
+    "tests/test_android_configuration_controls.py": "028ee0dc94f93ecca5e52335672f74eb4c53ae122d43d9e82f1ac0b000d62d66",
+    "docs/android-content-margin-gesture-plan.md": "106c45a0b704b09482c531aff414350005dec002333427d186cd35f19ef3790e",
+    "runs/2026-11-21-android-content-margin-controls.json": "6acb96709172d7e46a9ca7c5300957a2204cba45bc9acdb8fb333fce9dd46a6d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-content-margin-controls.json",
+      "sha256": "6acb96709172d7e46a9ca7c5300957a2204cba45bc9acdb8fb333fce9dd46a6d"
+    }
+  ],
+  "checks": []
+}
