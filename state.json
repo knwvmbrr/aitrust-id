@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-21T22:16:27.192571+00:00",
+  "updated": "2026-11-21T23:28:53.419129+00:00",
   "active_increment": "Public HTTPS/MCP service running; finish published connection instructions; requested Search Console verification completed.133 original requirements complete,69 open; no new test batches before implementation completion.",
   "status": "public_API_connection_guide_published_and_live_example_working; original133_complete69_open_target60_unmet",
   "scope": "docs/master-scope.json",
@@ -1218,12 +1218,12 @@
     "PS": "runs/2026-11-21-maintenance-final-PS.json",
     "PII_REDACTED": "runs/2026-11-21-maintenance-final-PII_REDACTED.json",
     "extension": "runs/2026-11-21-maintenance-final-extension.json",
-    "protocol": "runs/2026-11-21-public-guide-rollback-protocol.json",
-    "website": "runs/2026-11-21-public-guide-rollback-prepared-website.json",
+    "protocol": "runs/2026-11-21-six-outcomes-final-protocol.json",
+    "website": "runs/2026-11-21-six-outcomes-final-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-21T22:16:27.192571+00:00",
+  "updated_at": "2026-11-21T23:28:53.419129+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -4842,7 +4842,7 @@
     "MT_candidate_not_integrated_or_released": true,
     "guide_website_execution": "runs/2026-11-21-public-guide-rollback-prepared-website.json",
     "guide_rendered_example_execution": "runs/2026-11-21-public-guide-rendered-example.json",
-    "published_development_outcomes": 5,
+    "published_development_outcomes": 6,
     "guide_publication": "runs/2026-11-21-public-connection-guide-publication.json",
     "protected_CI_review": "runs/2026-11-21-pr145-required-ci-review.json",
     "guide_actual_example": "runs/2026-11-21-public-guide-published-PS-example.json",
@@ -4850,7 +4850,13 @@
     "original_complete": 133,
     "original_open": 69,
     "target_met": false,
-    "planning_snapshot_note": "The dated session-delivery plan/board is the prepublication snapshot; this state and the new immutable publication records are the current operational closeout. No original acceptance or percentage changed."
+    "MT_browser_development_handoff": "runs/2026-11-21-mt-browser-development-handoff.json",
+    "six_outcomes_and_actual_target_evidence": "runs/2026-11-21-six-outcomes-strict-target-integration.json",
+    "public_source_availability": "runs/2026-11-21-public-source-archive-availability.json",
+    "final_repository_engineering_receipts": {
+      "protocol": "runs/2026-11-21-six-outcomes-final-protocol.json",
+      "website": "runs/2026-11-21-six-outcomes-final-website.json"
+    }
   },
   "independent_development_handoffs": "runs/2026-11-21-independent-tag-development-handoffs.json",
   "operator_ownership_correction": {
@@ -4864,5 +4870,22 @@
     "finite_boundary_review": "runs/2026-11-21-public-guide-rollback-boundaries.json",
     "protected_source_commit": "a0c59d27dc4597599422a9f356978901e597f49d"
   },
-  "pending_engineering_revalidation": []
+  "pending_engineering_revalidation": [],
+  "session_target_correction": {
+    "status": "source_integrated_and_distinctly_reviewed; affected_protocol_and_website_current; Git_publication_tracked_in_normal_branch_history",
+    "source_commit": "0d6240e3a496cd785b9fd74d337f4a38e81c5489",
+    "author_proof": "runs/2026-11-21-session-target-accountability-corrected.json",
+    "distinct_review": "runs/2026-11-21-session-target-accountability-independent-review.json",
+    "strict_target_open": 60,
+    "actual_open": 69,
+    "strict_goal_met": false,
+    "historical_minimum_closure_milestone_preserved": true,
+    "original_criteria_or_percentages_changed": false,
+    "integrated_accounting_and_scope_review": "runs/2026-11-21-six-outcomes-strict-target-integration.json",
+    "current_software_evidence": [
+      "runs/2026-11-21-six-outcomes-final-protocol.json",
+      "runs/2026-11-21-six-outcomes-final-website.json"
+    ],
+    "final_finite_boundary_review": "runs/2026-11-21-six-outcomes-final-boundaries.json"
+  }
 }

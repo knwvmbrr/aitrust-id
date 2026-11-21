@@ -171,8 +171,8 @@
       "bot_id": "tag_mt",
       "actual_worker": null,
       "status": "reviewed",
-      "checked_at": "2026-11-21T11:31:36.349842+00:00",
-      "current_component_status": "Native input clipping was reproduced and repaired; standalone actual Chromium/WebKit canonical, refusal, privacy, lifecycle and peer-recovery controls passed. Current integrated/public delivery evidence is separately tracked in state.json.nov21_maintenance_delivery; no MT verdict or accuracy claim.",
+      "checked_at": "2026-11-21T23:12:57.420401+00:00",
+      "current_component_status": "MT CLI and standalone browser practice source published with code review; no live MT verdict, independent accuracy or full original closure.",
       "blocking_acceptance": "Published literal wording and private choice workflows do not establish contextual use/mention, feasible alternatives, attribution, actual independent MT agreement/error rates or accepted tag mapping.",
       "next_task": "Preserve independent contextual labels, disagreement policy and full MT acceptance; maintain the whole-input contract."
     },
@@ -200,9 +200,9 @@
       "tag_id": "T-FA",
       "bot_id": "tag_fa",
       "actual_worker": null,
-      "status": "queued",
-      "checked_at": "2026-11-19T15:20:45.481757+00:00",
-      "current_component_status": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; experimental supplied-input bridge and clean-checkout build correction only; no cryptography, capture adapter or independently validated tag",
+      "status": "reviewed",
+      "checked_at": "2026-11-21T23:12:57.420401+00:00",
+      "current_component_status": "PNG and JPEG metadata-observation development source published independently; no image AI-origin verdict or full original closure.",
       "blocking_acceptance": "Image/signature integrity, experimental adjudication and revision-diff observations do not yet deliver independently supported generation/edit origin or outside-session knowledge claims for an adopted workflow.",
       "next_task": "Implement positive event/manifest evidence and exact observation-window coverage without using absent human evidence or text differences as authorship proof."
     },
@@ -210,9 +210,9 @@
       "tag_id": "T-PA",
       "bot_id": "tag_pa",
       "actual_worker": null,
-      "status": "queued",
-      "checked_at": "2026-11-19T15:20:45.481757+00:00",
-      "current_component_status": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation; experimental supplied-input bridge and clean-checkout build correction only; no cryptography, capture adapter or independently validated tag",
+      "status": "reviewed",
+      "checked_at": "2026-11-21T23:12:57.420401+00:00",
+      "current_component_status": "PNG and JPEG metadata-observation development source published independently; no image AI-origin verdict or full original closure.",
       "blocking_acceptance": "Image/signature integrity, experimental adjudication and revision-diff observations do not yet deliver independently supported generation/edit origin or outside-session knowledge claims for an adopted workflow.",
       "next_task": "Implement positive event/manifest evidence and exact observation-window coverage without using absent human evidence or text differences as authorship proof."
     },
@@ -5784,7 +5784,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-21T17:45:49.911741+00:00",
+  "updated_at": "2026-11-21T23:12:57.420401+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -6303,22 +6303,22 @@
       {
         "worker": "/root",
         "outcome": "Publish actual public API connection guide and exact downloads through protected source and Pages",
-        "status": "implementation complete; checking frozen integration before protected publication"
+        "status": "Guide actually published544711b4 and live example verified; strict-target correction integrated with separate review; shared protected closeout pending."
       },
       {
         "worker": "/root/seo",
         "outcome": "Audit all69 unchanged original acceptance contracts and implement any truly autonomous original closure",
-        "status": "Audit complete; advisory PS join and distinct operator correction review complete; source published separately."
+        "status": "All69/full202 acceptance audit complete; PS join published; distinct operator, JPEG, MT browser and strict-target code reviews complete. Worker finished."
       },
       {
         "worker": "/root/share_debugger",
         "outcome": "Independent MT additive grammar evidence distinguishes not-only/but-also from exclusive framing",
-        "status": "MT and FI bounded CLI source published after distinct reviews; original release gates retained."
+        "status": "MT/FI CLI and separate MT browser development source published after distinct reviews. Worker finished; original release gates remain."
       },
       {
         "worker": "/root/web_camo",
         "outcome": "Independent bounded image/provenance capability from actual existing source",
-        "status": "PNG source published; blocking operator correction implemented and independently reviewed; root integration underway."
+        "status": "PNG/JPEG development source published; operator and strict-target corrections implemented and separately reviewed. Worker finished."
       }
     ],
     "historical_session_baseline_preserved": true,
@@ -6407,7 +6407,47 @@
         "download": "https://github.com/knwvmbrr/aitrust-id/archive/95c2861e7e782f560f42764630299e221dd86510.zip",
         "main_or_production_integrated": false,
         "original_closure": false
+      },
+      {
+        "id": "JPEG-metadata-CLI",
+        "scope_ids": [
+          "T-FA",
+          "T-PA",
+          "F-155"
+        ],
+        "producer": "Codex /root/web_camo",
+        "reviewer": "Codex /root/seo",
+        "commit": "8e1b1a23a1bef0659bf1ec567ceef647b5cd76a5",
+        "branch": "codex/image-metadata-boundary",
+        "outcome": "Private bounded JPEG header/metadata-section observations with no raw values, no pixels decoded and no AI-origin verdict. PNG remains unchanged.",
+        "status": "published_development_source",
+        "completed_at": "2026-11-21T22:12:11.363466+00:00",
+        "download": "https://github.com/knwvmbrr/aitrust-id/archive/8e1b1a23a1bef0659bf1ec567ceef647b5cd76a5.zip",
+        "evidence": "runs/2026-11-21-additional-jpeg-development-handoff.json",
+        "main_or_production_integrated": false,
+        "original_closure": false
+      },
+      {
+        "id": "MT-browser-practice",
+        "scope_ids": [
+          "F-019b",
+          "T-MT"
+        ],
+        "producer": "Codex /root/share_debugger",
+        "reviewer": "Codex /root/seo",
+        "commit": "b896cb4f1c303cb2a2bcd8a5ef5e5ba5a9b7acf8",
+        "branch": "codex/mt-additive-choice",
+        "outcome": "Standalone private browser practice for explicitly selected paired wording; additive language remains distinct from other paired frames; no MT verdict.",
+        "status": "published_development_source",
+        "completed_at": "2026-11-21T23:12:57.420401+00:00",
+        "download": "https://github.com/knwvmbrr/aitrust-id/archive/b896cb4f1c303cb2a2bcd8a5ef5e5ba5a9b7acf8.zip",
+        "evidence": "runs/2026-11-21-mt-browser-development-handoff.json",
+        "main_or_production_integrated": false,
+        "original_closure": false
       }
-    ]
+    ],
+    "updated_at": "2026-11-21T23:12:57.420401+00:00",
+    "published_development_outcomes": 6,
+    "strict_target_status": "NOT MET:69originals open;9 full closures remain; minimum milestone is separate."
   }
 }

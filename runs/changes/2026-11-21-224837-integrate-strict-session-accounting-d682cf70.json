@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-224837-integrate-strict-session-accounting-d682cf70",
+  "recorded_at": "2026-11-21T22:48:37.340511+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0d6240e3a496cd785b9fd74d337f4a38e81c5489",
+  "changed": "Integrated separately reviewed strict session target accounting, preserving both changelog histories and the historical F030 milestone.",
+  "proves": "Exact committed author and different-reviewer evidence identities were checked; new source remains pending affected protocol and website revalidation.",
+  "limits": "The original69-open target60 remains unmet; no original criterion or percentage changed, and no new full-suite/publication claim is made.",
+  "scope_ids": [
+    "F-150",
+    "WP-SITE"
+  ],
+  "files": {
+    "state.json": "a0218c6a02c14d67b7e17904a87213f6851debd38ec8fd3c051f3c29759449a7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-session-target-accountability-corrected.json",
+      "sha256": "f948620fb9c20a590621b3b8e1edb960fdd17f461ab5cfcf793c5fedd73cb4b0"
+    },
+    {
+      "path": "runs/2026-11-21-session-target-accountability-independent-review.json",
+      "sha256": "a143f3b9cd543781ab4250891f3c2105b64a34fd56a778640088adf988815ca9"
+    }
+  ],
+  "checks": []
+}

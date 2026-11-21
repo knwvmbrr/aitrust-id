@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-232853-final-closeout-source-and-public-access-3b570971",
+  "recorded_at": "2026-11-21T23:28:53.925654+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0d6240e3a496cd785b9fd74d337f4a38e81c5489",
+  "changed": "Finished current-source checks for the strict target correction and six development handoffs, and verified public source archive access without authentication.",
+  "proves": "All five exact engineering profiles assess current; fresh61protocol and59website commands passed with source stability; current1657-source boundary review and seven unauthenticated archive HEAD200 responses pass.",
+  "limits": "No ZIP bodies downloaded, outside install verified, original requirement closed or independent tag accuracy asserted. Live guide remains the already verifieda0c59d27 deployment;69 originals remain open against60target.",
+  "scope_ids": [
+    "F-150",
+    "WP-SITE"
+  ],
+  "files": {
+    "state.json": "60db05d08b2de827d6ab37f48c9c3a76c407f3124abf801736806260a1a1320a",
+    "eval/route-boundaries.json": "3a0afa17ca188328060eb699ca33c8a67a49e386e536c523f4f86c40da79175f",
+    "runs/2026-11-21-six-outcomes-final-protocol.json": "7af4403514275577d4fc5405fa5ed9cbc178b4b6712844f5b98ec2c06a0afffb",
+    "runs/2026-11-21-six-outcomes-final-website.json": "e262edfa7c54a75b8e98e6f79e2d6d06336a8459a3f048e342f68860d2632774",
+    "runs/2026-11-21-six-outcomes-final-boundaries.json": "f19e028551cb23642df19a0913874177ec82df946095ae8e3d3fddc6e388642c",
+    "runs/2026-11-21-public-source-archive-availability.json": "70cd4172ab1a695ac212702f6bd19ed0ccfe36bfcdd26558e74474cc3796a0a0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-six-outcomes-final-protocol.json",
+      "sha256": "7af4403514275577d4fc5405fa5ed9cbc178b4b6712844f5b98ec2c06a0afffb"
+    },
+    {
+      "path": "runs/2026-11-21-six-outcomes-final-website.json",
+      "sha256": "e262edfa7c54a75b8e98e6f79e2d6d06336a8459a3f048e342f68860d2632774"
+    },
+    {
+      "path": "runs/2026-11-21-six-outcomes-final-boundaries.json",
+      "sha256": "f19e028551cb23642df19a0913874177ec82df946095ae8e3d3fddc6e388642c"
+    },
+    {
+      "path": "runs/2026-11-21-public-source-archive-availability.json",
+      "sha256": "70cd4172ab1a695ac212702f6bd19ed0ccfe36bfcdd26558e74474cc3796a0a0"
+    }
+  ],
+  "checks": []
+}

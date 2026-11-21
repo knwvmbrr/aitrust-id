@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-232853-final-closeout-source-and-public-access-3b570971
+
+Recorded 2026-11-21T23:28:53.925654+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Finished current-source checks for the strict target correction and six development handoffs, and verified public source archive access without authentication.
+- **Evidence.** All five exact engineering profiles assess current; fresh61protocol and59website commands passed with source stability; current1657-source boundary review and seven unauthenticated archive HEAD200 responses pass. [Change record](./runs/changes/2026-11-21-232853-final-closeout-source-and-public-access-3b570971.json).
+- **Not claimed.** No ZIP bodies downloaded, outside install verified, original requirement closed or independent tag accuracy asserted. Live guide remains the already verifieda0c59d27 deployment;69 originals remain open against60target.
+
+
+### 2026-11-21-231406-record-six-handoffs-and-strict-target-9be79f74
+
+Recorded 2026-11-21T23:14:06.051511+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Updated the scope, dated task board and current operational plan with six reviewed published development outcomes, actual completed API publication and correct strict target status.
+- **Evidence.** All202 master bytes and original percentages/required acceptance are preserved. Actual integrated strict CLI exits1 at69open/target60 with historical F030 milestone intact. Current1657-source inventory prepared before final freeze. [Change record](./runs/changes/2026-11-21-231406-record-six-handoffs-and-strict-target-9be79f74.json).
+- **Not claimed.** Nine full original closures remain. MT browser is standalone development source with separate engine observations and an unresolved historical WebKit run cause; no full tag release, independent accuracy or physical human acceptance.
+
+
+### 2026-11-21-224837-integrate-strict-session-accounting-d682cf70
+
+Recorded 2026-11-21T22:48:37.340511+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Integrated separately reviewed strict session target accounting, preserving both changelog histories and the historical F030 milestone.
+- **Evidence.** Exact committed author and different-reviewer evidence identities were checked; new source remains pending affected protocol and website revalidation. [Change record](./runs/changes/2026-11-21-224837-integrate-strict-session-accounting-d682cf70.json).
+- **Not claimed.** The original69-open target60 remains unmet; no original criterion or percentage changed, and no new full-suite/publication claim is made.
+
+
 ### 2026-11-21-224017-enforce-original-open-session-target-9f362a99
 
 Recorded 2026-11-21T22:40:17.914202+00:00 · Contributor: Codex /root/web_camo accountability engineer · change
