@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-160643-pause-owned-live-test-runtime-4a5f1e99
+
+Recorded 2026-11-21T16:06:43.326652+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Stopped only the three ownership-labeled temporary browser-test containers and closed their owned SSH forward after final UI pause.
+- **Evidence.** All temporary test containers stopped, forward closed and existing dedicated staging remained healthy. [Change record](./runs/changes/2026-11-21-160643-pause-owned-live-test-runtime-4a5f1e99.json).
+- **Not claimed.** Private recovery/configuration artifacts retained; no production service, global Docker or original scope count changed.
+
+
 ### 2026-11-21-160512-preserve-readable-scope-encoding-99c025e8
 
 Recorded 2026-11-21T16:05:12.094888+00:00 · Contributor: Codex /root · change
