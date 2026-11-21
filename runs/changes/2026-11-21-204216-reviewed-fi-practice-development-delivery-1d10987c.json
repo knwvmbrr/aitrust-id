@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-204216-reviewed-fi-practice-development-delivery-1d10987c",
+  "recorded_at": "2026-11-21T20:42:16.661288+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "efdbe86694fc8237626bed899c8b5076a124eabb",
+  "changed": "Preserved the exact distinct FI practice source and I/O review for experimental development-branch delivery; source behavior and guide bytes unchanged.",
+  "proves": "Distinct reviewer executed bounded canonical practice, no-overwrite, raw descriptor and post-close ownership, optional import-failure isolation and separate PS controls. All13 current source bindings and authored actual-CLI receipt match the reviewed bytes.",
+  "limits": "This bookkeeping commit runs no new tests and grants no main or production publication, mobile interface, current Linux, human acceptance, independent FI accuracy or full T-FI closure. Development branch only.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "runs/2026-11-21-fi-practice-independent-review.json": "ece9e9b6c7600c7dec423d850a38d9870e0084f5ae487609ec1dc17ce6ff6b3f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-fi-practice-independent-review.json",
+      "sha256": "ece9e9b6c7600c7dec423d850a38d9870e0084f5ae487609ec1dc17ce6ff6b3f"
+    },
+    {
+      "path": "runs/2026-11-21-citation-practice-actual-cli.json",
+      "sha256": "39c315660359559fce46e243ea138ceba891b57c0988e80ee4fc7dfc0d711690"
+    }
+  ],
+  "checks": []
+}

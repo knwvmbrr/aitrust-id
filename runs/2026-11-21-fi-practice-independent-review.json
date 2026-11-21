@@ -1,0 +1,63 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T20:38:10.313294+00:00",
+  "reviewer": "Codex /root/web_camo",
+  "source_commit": "efdbe86694fc8237626bed899c8b5076a124eabb",
+  "source_sha256": {
+    "scripts/prepare-citation-demo.py": "8ef51715bfb5980d8f81f217d3b5e3b966be78f21d0174fddca30d5641310f5a",
+    "docs/fi-citation-practice.md": "ae3babdd229fd86ae88ee7f3b3229ad585d6a400189088c431bd87725cd03e3f",
+    "docs/fi-citation-practice-plan.md": "efdf5c6df7d626208bf9e85c1e0fe059d0fd35875f0f69c135746e21d2354fc1",
+    "tests/test_citation_demo.py": "f285672fc7a785a4dde34ccf295cf061a8c55d4cc3a4e72e07fafc05d4044572",
+    "tools/citation_resolution.py": "7581a6684f1db434069b876beac3883746d6e537729249e0cf2d66e03277bb71",
+    "scripts/citation-resolution.py": "ae9b685cae0781350944bf18e754aaba87c03e396fdcec8463768b9c7c23190c",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+  },
+  "source_stable": true,
+  "author_actual_cli_receipt_sha256": "39c315660359559fce46e243ea138ceba891b57c0988e80ee4fc7dfc0d711690",
+  "controls": [
+    {
+      "check": "actual_two_commands_exact_counts_private_modes_console_boundary",
+      "pass": true
+    },
+    {
+      "check": "actual_existing_packet_no_overwrite",
+      "pass": true
+    },
+    {
+      "check": "actual_raw_fd_constructor_failure_closed_clean_packet",
+      "pass": true
+    },
+    {
+      "check": "actual_postpublication_close_error_no_reused_fd_close_all_others_attempted",
+      "pass": true
+    },
+    {
+      "check": "optional_preparer_import_failure_does_not_disable_existing_canonical_checker",
+      "pass": true
+    },
+    {
+      "check": "actual_existing_PS_with_explicit_synthetic_stdin",
+      "pass": true
+    }
+  ],
+  "first_review_harness_error_sha256": "279e8d5ce80c710e817ca182fd1ae2e25ada7a0beb85689ff37cf7357e77e2ef",
+  "execution_accounting": "First five bounded FI groups completed in first review invocation. Extra PS control omitted stdin and failed the review helper stderr assertion; only that control repeated with explicit synthetic stdin, then all13source identities rechecked. No FI or full17 suite rerun.",
+  "source_review": [
+    "Fixed synthetic packet only; canonical engine and CLI unchanged.",
+    "Current engine/preparer sources captured no-follow and rechecked before publication.",
+    "Immediate raw descriptor ownership, closefd=False, private0700/0600/exclusive files and identity-confirmed cleanup; uncertain publication/cleanup/close remains explicit.",
+    "Post-close reused marker descriptor survived and all other original handles attempted once.",
+    "No FI/truth/source-support verdict; unsupported and undeclared citation association remain separate."
+  ],
+  "limits": [
+    "Bounded synthetic source/file/CLI review, no broad17-repeat/browser/network/SDK/deploy or full original closure.",
+    "No current Linux/physical/human/independent FI accuracy claim.",
+    "Filesystem/OS owner trusted; abrupt termination can leave private partial files."
+  ]
+}

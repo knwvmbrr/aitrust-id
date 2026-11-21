@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-204216-reviewed-fi-practice-development-delivery-1d10987c
+
+Recorded 2026-11-21T20:42:16.661288+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved the exact distinct FI practice source and I/O review for experimental development-branch delivery; source behavior and guide bytes unchanged.
+- **Evidence.** Distinct reviewer executed bounded canonical practice, no-overwrite, raw descriptor and post-close ownership, optional import-failure isolation and separate PS controls. All13 current source bindings and authored actual-CLI receipt match the reviewed bytes. [Change record](./runs/changes/2026-11-21-204216-reviewed-fi-practice-development-delivery-1d10987c.json).
+- **Not claimed.** This bookkeeping commit runs no new tests and grants no main or production publication, mobile interface, current Linux, human acceptance, independent FI accuracy or full T-FI closure. Development branch only.
+
+
 ### 2026-11-21-203522-usable-private-citation-practice-edf313c4
 
 Recorded 2026-11-21T20:35:22.051622+00:00 · Contributor: Codex · change
