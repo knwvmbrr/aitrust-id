@@ -1,0 +1,18 @@
+{
+  "pass": false,
+  "captured_at": "2026-11-21T16:03:47.732920+00:00",
+  "finding": "checked_release_accepts_coherently_rebound_source_under_reviewed_commit",
+  "source_sha256": "03eb23e60fe8e8062f07bb1bcd835ba3fc66ad5b606f46b9f938950278596518",
+  "claimed_release_commit": "a5215149af23be51cd29f9b37ce1d85bdeff0c49",
+  "baseline_accepted": true,
+  "modified_runtime_and_manifest_accepted": true,
+  "source_inputs_changed": [
+    "tools/remote_tag_server.py",
+    "release.json"
+  ],
+  "source_control_changed": false,
+  "limits": [
+    "Owned temporary fixture only; no privileged/global/service operations.",
+    "Root ownership/read-only metadata and already pinned Caddy binary modeled as valid so this isolates source identity validation; actual source hash checks use SHA256 unchanged."
+  ]
+}

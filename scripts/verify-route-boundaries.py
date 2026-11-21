@@ -345,7 +345,7 @@ PATTERNS += ('tools/remote_tag_server.py', 'scripts/remote-tag-server.py',
              'tests/test_organization_policy_*.py', 'docs/organization-policy-*.md',
              'site/public/reference/policies/*/*.txt',
              'scripts/verify-remote-openapi.py', 'tests/test_remote_openapi.py',
-             'docs/remote-openapi-plan.md')
+             'docs/remote-openapi-plan.md', 'docs/api-rollback-ownership-plan.md')
 
 def inventory(root):
     found = {}

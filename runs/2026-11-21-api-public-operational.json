@@ -1,0 +1,44 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T17:28:26.943644+00:00",
+  "profile": "public-API-operational-1",
+  "base_url": "https://vps-18ef1326.vps.ovh.us",
+  "stage": "complete",
+  "test_scope": "Deployment operational health plus one officialMCP discovery/PS example; no regression suite or accuracy validation.",
+  "health_HTTP": 200,
+  "health_profile": "ai-trust-id-remote-ps/v1",
+  "health_cache_control": "no-store",
+  "startup_health_attempts": 2,
+  "TLS": {
+    "chain_and_hostname_verified": true,
+    "version": "TLSv1.3",
+    "certificate_sha256": "f87d393cc54a79003e01abbaa702cd0a15d988519572ac6165887d46f7e0e273",
+    "subject_alt_names": [
+      [
+        "DNS",
+        "vps-18ef1326.vps.ovh.us"
+      ]
+    ],
+    "not_after": "Feb 19 16:29:56 2027 GMT"
+  },
+  "MCP": {
+    "official_sdk": "2.3.0",
+    "mode": "2026-07-28",
+    "tool_names": [
+      "list_tags",
+      "check_text"
+    ],
+    "check_state": "FINDING",
+    "code": "PS",
+    "brief_result_sha256": "16f0cf906fd701db086ac6adfef070ffb955d56eede274ea7726029d7d39b0b2",
+    "result_contains_submitted_text": false
+  },
+  "finished_at": "2026-11-21T17:28:29.969734+00:00",
+  "AI_host_account_connected": false,
+  "independent_accuracy_validated": false,
+  "new_original_closures": 0,
+  "limits": [
+    "Actual trustedHTTPS and officialMCP example from external client, not a ChatGPT/Claude workspace connection.",
+    "RemotePS development method; remotePII unavailable; hosted processing differs from private ondevice mode."
+  ]
+}

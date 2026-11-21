@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-11-21T20:15:45.285290+00:00",
+  "kind": "distinct_review_legacy_guide_correction",
+  "finding_by": "Codex /root/seo",
+  "fixed_by": "Codex /root",
+  "finding": "Linked implementation guide still denied publication after actual deployment.",
+  "fix": "Link the actual hosted connection guide and HTTPS/MCP service; distinguish self-hosting from provider-account registration.",
+  "source": "docs/remote-tag-connectors.md",
+  "previous_sha256": "7026ed05f5f50460463e1cfa76bf327a7bf941775e4e4cbd88afc1f4bbb9a2e0",
+  "corrected_sha256": "6ce7f8bb10c33d19c5357fdbad1061a842793dfa3615686dcf35732187e0c6ce",
+  "runtime_changed": false,
+  "actual_operation_evidence": "runs/2026-11-21-public-api-connection-operational.json",
+  "independent_detector_accuracy_granted": false
+}

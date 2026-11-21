@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-201750-api-guide-independent-review-e4d80a5a",
+  "recorded_at": "2026-11-21T20:17:50.707117+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8044f4559a7706eb5ba70e7aa86c26529d0eb298",
+  "changed": "Completed distinct review of the corrected API connection guide, public operator handoff and CI registration before website publication.",
+  "proves": "The separate reviewer matched all 1656 source inventory entries and linked guide/operator/runtime identities, reviewed the actual 61-command source-bound receipt and cleared the corrected availability wording.",
+  "limits": "Read-only integration review did not rerun functional or network checks and does not grant independent accuracy. Website execution and protected public guide delivery still follow; all 69 original requirements remain open.",
+  "scope_ids": [
+    "WP-INTEGRATIONS",
+    "WP-SITE"
+  ],
+  "files": {
+    "state.json": "fb461255d4aaae97ee8ddca636fdb9885ce48f90e88ab689d68264ee2b5841d6",
+    "runs/2026-11-21-public-api-guide-independent-review.json": "29f4a3403b8e1de716da58f5bd7f79b35738a5e38ec5d342b9af34aa87b86f3e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-public-api-guide-independent-review.json",
+      "sha256": "29f4a3403b8e1de716da58f5bd7f79b35738a5e38ec5d342b9af34aa87b86f3e"
+    },
+    {
+      "path": "runs/2026-11-21-public-guide-protocol.json",
+      "sha256": "0b8229f25672e10a2e5154172703cbdd142b2e4c66d6dee55745d26f8b333983"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,38 @@
+{
+  "captured_at": "2026-11-21T20:11:03.246040+00:00",
+  "kind": "finite_public_API_guide_and_operator_integration_source_review",
+  "reviewed_by": "Codex /root, preserving scoped author and distinct deployment reviews",
+  "pass": true,
+  "added": {
+    "deploy/ai-tools/activate.py": "13736abf6b0c3b63a509aef1611d0e3663ed7b8320519407a0713b016c00a7c5",
+    "deploy/ai-tools/activation-plan.md": "28875ee893989f85ebf5a3585a184205ea0bb2c541e67b3f4bc14c040c17879f",
+    "deploy/ai-tools/test_isolation.py": "7d9fbc0a7c3cc061207d4786c19d15077ba370c12a332ffd5d76c600e48bc720",
+    "deploy/ai-tools/verify-isolation.py": "11478ac83b004d74170e9eb46506b71de91e764f0f98950a973b50d2d0033c5f",
+    "tests/test_ai_tools_activation.py": "bbbe8460da217dfa1c4194e4a7a8fdb84b6679c63e283eba6aef644fa9245129"
+  },
+  "changed": {
+    ".github/workflows/ai-tools.yml": {
+      "previous": "08f3df9e82811115abb9b1a01d27619ffe955ce723a829a1be2c7ea05e062a4b",
+      "current": "fca4879b77eacaf8a26387b8aab4ab87f805e5d1d10ba9223f7466660bcb9665"
+    },
+    "deploy/ai-tools/README.md": {
+      "previous": "95d90a4e83827504245a6a65c05432e45f0b3c47e502280b7dd44555012275ac",
+      "current": "b49cb665c9919f96e80e835891f8657b3fbca514402a29d852af09f25e27d5b3"
+    },
+    "docs/remote-ai-connections.md": {
+      "previous": "843e8b5a600ebb3d74fb01c3e8a4133cd15e3b2dc4ae7b1ca1c30461b1a64058",
+      "current": "0632e4155dd00ad0807615bf0cf11180a7e5ca3122132f931fd12daab4a5c77f"
+    },
+    "site/scripts/render-reference.mjs": {
+      "previous": "b4c264f7c9da6a8bd701a69d26f0514f6d19c2c69741880974eb93d1d66b7867",
+      "current": "842892ef602e0a26e84c28c4d3518a0da96ed87b7538cb1ef234c95ed81aace9"
+    }
+  },
+  "removed": [],
+  "guide_author_commit": "8a590d761f0f343600d2659499cecfa24277ab0a",
+  "operator_frozen_commit": "879e5460c6c977479723a514714d44811cfcdf00",
+  "distinct_deployment_review": "runs/2026-11-21-api-deployment-independent-review.json",
+  "detector_or_extension_runtime_changed": false,
+  "new_independent_accuracy_granted": false,
+  "limits": "Finite source review only; fresh capability execution and protected publication remain separate."
+}

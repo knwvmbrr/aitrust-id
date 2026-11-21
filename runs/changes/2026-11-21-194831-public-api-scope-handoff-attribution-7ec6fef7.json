@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-194831-public-api-scope-handoff-attribution-7ec6fef7",
+  "recorded_at": "2026-11-21T19:48:31.548873+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d95728d660b502e590e03bf68a5838d950efc187",
+  "changed": "Reconciled the public API deployment handoff into the scope milestone and preserved its distinct review; attributed the previously prepared scope edits.",
+  "proves": "The dated operational and independent deployment receipts support actual HTTPS/MCP operation. Remote connection enhancement stays at 80 with guide publication and provider-account acceptance outstanding; all 202 originals and 69 open remain unchanged.",
+  "limits": "No ChatGPT or Claude account connection, independent accuracy or new original closure. The earlier missing-attribution guard refusal is retained; guide and broader post-publication source delivery remain separate.",
+  "scope_ids": [
+    "WP-INTEGRATIONS"
+  ],
+  "files": {
+    "docs/scope-progress.json": "9e7b6ca22f7b61dcf9c1dc827972ab144de89417e022a0f7c8060fa6bcfa033f",
+    "docs/scope-progress.md": "ceb0439c01040add4d83d660b4904df54510b6460198664a2527bca39efe34c0",
+    "runs/2026-11-21-api-deployment-independent-review.json": "a7e0e04017885e7fb78bd85c85636cd4e0493e97655c7604645d94bdab648705",
+    "runs/2026-11-21-post-publication-changelog-refusal.json": "fb5e440b5d66ed520b6339689afcf5a44bc8c6df21406a7d0dca79ca6bffd823"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-api-deployment-independent-review.json",
+      "sha256": "a7e0e04017885e7fb78bd85c85636cd4e0493e97655c7604645d94bdab648705"
+    },
+    {
+      "path": "runs/2026-11-21-public-api-connection-operational.json",
+      "sha256": "3051bf91bebc1e602f2bd736c67344025146e0c65cf40c7ba40e921231694cd1"
+    },
+    {
+      "path": "runs/2026-11-21-post-publication-changelog-refusal.json",
+      "sha256": "fb5e440b5d66ed520b6339689afcf5a44bc8c6df21406a7d0dca79ca6bffd823"
+    }
+  ],
+  "checks": []
+}

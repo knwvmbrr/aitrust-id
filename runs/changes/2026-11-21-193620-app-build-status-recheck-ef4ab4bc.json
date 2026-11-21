@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-193620-app-build-status-recheck-ef4ab4bc",
+  "recorded_at": "2026-11-21T19:36:20.323821+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d95728d660b502e590e03bf68a5838d950efc187",
+  "changed": "Rechecked the app build status in App Store Connect; the expired session returned Apple sign-in.",
+  "proves": "Fresh UI access was attempted. Last verified internal build remains 1.0 (1), Testing, assigned November 18; its historical evidence is retained separately.",
+  "limits": "Current Apple dashboard, physical installation, Share and VoiceOver acceptance, and public App Store approval were not verified. No new upload, tests or original closure.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "state.json": "7e64615f24c5e41595398f369edd1d0614a519de3fe3997cbfd07251e9089d68",
+    "runs/2026-11-21-app-build-status-recheck.json": "2710a25e3e39409d4acac6abc5b709ecb297bd01268010eb6466afab258e2135"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-app-build-status-recheck.json",
+      "sha256": "2710a25e3e39409d4acac6abc5b709ecb297bd01268010eb6466afab258e2135"
+    },
+    {
+      "path": "runs/2026-11-18-testflight-owner-build-testing.json",
+      "sha256": "505b0d117bb9a8dad89ccf010e228d883ca49f8375541db3bc0487a3534211ff"
+    }
+  ],
+  "checks": []
+}

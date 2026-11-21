@@ -1,0 +1,147 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T17:32:09.122750+00:00",
+  "profile": "API-active-operational-state-1",
+  "release_commit": "a5215149af23be51cd29f9b37ce1d85bdeff0c49",
+  "phase": "enabled_after_operator_public_proof",
+  "units": {
+    "aitrustid-ai-tools.service": {
+      "properties": {
+        "OOMPolicy": "kill",
+        "ControlGroup": "/system.slice/aitrustid-ai-tools.service",
+        "CPUQuotaPerSecUSec": "1s",
+        "MemoryMax": "402653184",
+        "MemorySwapMax": "0",
+        "TasksMax": "64",
+        "StandardOutput": "null",
+        "StandardError": "null",
+        "DynamicUser": "yes",
+        "ProtectHome": "yes",
+        "ProtectSystem": "strict",
+        "NoNewPrivileges": "yes",
+        "StateDirectory": "",
+        "KillMode": "control-group",
+        "ActiveState": "active",
+        "UnitFileState": "enabled"
+      },
+      "effective_cgroup_limits": {
+        "memory.max": "402653184",
+        "memory.swap.max": "0",
+        "pids.max": "64",
+        "cpu.max": "100000 100000",
+        "memory.oom.group": "1"
+      },
+      "nonroot_no_new_privileges": true,
+      "capability_scope": "none",
+      "unit_sha256": "785963cc7ffc9a6e7c6f3e522003c32a90a4d2bd8977363a199a128a36e493e9"
+    },
+    "aitrustid-ai-tools-proxy.service": {
+      "properties": {
+        "OOMPolicy": "kill",
+        "ControlGroup": "/system.slice/aitrustid-ai-tools-proxy.service",
+        "CPUQuotaPerSecUSec": "1s",
+        "MemoryMax": "201326592",
+        "MemorySwapMax": "0",
+        "TasksMax": "64",
+        "StandardOutput": "null",
+        "StandardError": "null",
+        "DynamicUser": "yes",
+        "ProtectHome": "yes",
+        "ProtectSystem": "strict",
+        "NoNewPrivileges": "yes",
+        "StateDirectory": "aitrustid-ai-tools-proxy",
+        "KillMode": "control-group",
+        "ActiveState": "active",
+        "UnitFileState": "enabled"
+      },
+      "effective_cgroup_limits": {
+        "memory.max": "201326592",
+        "memory.swap.max": "0",
+        "pids.max": "64",
+        "cpu.max": "100000 100000",
+        "memory.oom.group": "1"
+      },
+      "nonroot_no_new_privileges": true,
+      "capability_scope": "NET_BIND_SERVICE_only",
+      "unit_sha256": "c8ed67b79a6d8704a452874e726d84e204579e64f81aaa5aacc4f7359b313855"
+    }
+  },
+  "app_listener_loopback_only": true,
+  "source_root_owned_readonly_and_exact": true,
+  "source_sha256": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "integrations/mcp/requirements.in": "e6c1d29fe87f6e388e1bc35a791364b788f5452ab0524f8b452084e2cf569400",
+    "integrations/mcp/requirements.lock": "82375e677571a53a1d3c8b5f13312ae8f81da2a05e4bea0ab59417d4486d95ea",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/check-tags.py": "c3cd8c05ad2969b023bb6f332331787b13b2ff6347913fc0f0c3144321279c96",
+    "scripts/remote-tag-server.py": "e759f37f66a119aab3ad1716bf35de547edfa07b926cb512e8059f9fd079a064",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "tools/remote_tag_server.py": "b656abfb64eb925f8e63789365590a35c652d35e16001da284fa8f827162a72d",
+    "tools/tag_api.py": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e"
+  },
+  "Caddyfile_sha256": "c51fded42a40ca28189b9b17d77baf05423eebdde47751964dce56d3192992a1",
+  "firewall": {
+    "owned443_rule": {
+      "family": "inet",
+      "table": "aitrust_host",
+      "chain": "input",
+      "handle": 25,
+      "comment": "aitrustid-ai-tools-https-v1",
+      "expr": [
+        {
+          "match": {
+            "op": "in",
+            "left": {
+              "ct": {
+                "key": "state"
+              }
+            },
+            "right": "new"
+          }
+        },
+        {
+          "match": {
+            "op": "==",
+            "left": {
+              "payload": {
+                "protocol": "tcp",
+                "field": "dport"
+              }
+            },
+            "right": 443
+          }
+        },
+        {
+          "limit": {
+            "rate": 40,
+            "burst": 80,
+            "per": "second"
+          }
+        },
+        {
+          "accept": null
+        }
+      ]
+    },
+    "all_prior_input_rules_preserved": true,
+    "persistence_exact_owned_append": true,
+    "persistence_sha256": "8de72b75499a87f78811ea990b06107568fddfafeae006340b1b80e04370e70c",
+    "whole_ruleset_reload_or_flush_by_operator": false
+  },
+  "TLS_private_state_not_group_or_world_accessible": true,
+  "TLS_private_keys_read_or_exported": false,
+  "old_staging_health": {
+    "status": 200,
+    "ok": true
+  },
+  "F030_stopped_containers_modified": false,
+  "DB_or_backup_modified": false,
+  "rollback_record": "/opt/aitrustid-ai-tools/activation-records/20261121T172230Z-a5215149af23",
+  "rollback_operator": "879e5460c6c977479723a514714d44811cfcdf00",
+  "new_original_closures": 0
+}

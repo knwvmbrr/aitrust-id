@@ -1,3 +1,40 @@
+## Completed development source handoffs — November 21, 2026
+
+Four bounded CLIs are independently reviewed and published as exact downloadable
+development source: MT additive framing, PNG metadata observations, FI citation
+practice and the advisory PS review/prediction join. Producer, different reviewer,
+completion time, exact source/execution/review identities and download links are
+in [the handoff record](../runs/2026-11-21-independent-tag-development-handoffs.json).
+They are not main/runtime integration or full tag releases. All202 originals
+remain preserved at133 complete/69 open. Root owns API-guide publication and the
+reviewed rollback correction; no permanent background tag process is claimed.
+
+## Current owner wave — November 21, 2026
+
+Baseline:133 original requirements complete,69 open. Requested target:60 open,
+requiring9 new full original closures. No closure is credited merely for a
+software component, a passing check or publication. Earlier dated session
+baselines remain historical and are not evidence of progress in this wave.
+
+The task-list lead completed [the full69 audit](nov21-autonomous-closure-audit.json):
+no further full original is currently autonomous under its unchanged acceptance.
+The60 target is not met; useful software work continues without a false closure.
+
+Root owns finished API-guide publication. The task-list lead audits all69 full
+contracts for genuinely autonomous closures. Separate MT and image/provenance
+workers implement bounded capabilities independently; their work does not grant
+independent accuracy or bypass retained owner/human/platform gates.
+
+# Current requested delivery
+
+The public HTTPS/MCP PS preview is operational at `https://vps-18ef1326.vps.ovh.us/mcp`. Actual trusted TLS, official tool discovery and one PS result are recorded in the [operational receipt](../runs/2026-11-21-public-api-connection-operational.json), with [deployment and rollback evidence](../runs/2026-11-21-api-deployment-complete.json). Version1.14 privacy disclosures were published before public activation. The refreshed three-step connection instructions are implemented and awaiting publication. Actual ChatGPT/Claude account installation remains separate.
+
+Google Search Console ownership is verified for the approved HTTPS URL-prefix. The canonical sitemap reports Success with37 discovered pages; actual URL Inspection confirms the homepage andPS are each indexed. [Dated actual observations](search-discovery-status.md). Aggregate reports are processing; all-page coverage, rankings andtraffic remain unverified. Preserve the Google verification file in all future deployments. The static file is live; protected sourcePR144 passed all11 required checks and merged as ee8db51.
+
+**133 complete /69 open original requirements; target60 needs9 further full closures.** F030 is the sole new original closure. All other original criteria remain intact. The three specialist handoffs are complete; root owns current integration/publication. No new test suites were started after the owner's direction to finish this implementation batch first.
+
+## Earlier dated snapshots
+
 # Current original-closure wave
 
 **133 complete /69 open; target60 needs9 further full original closures.**

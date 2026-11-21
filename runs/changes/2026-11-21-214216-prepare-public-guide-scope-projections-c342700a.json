@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-214216-prepare-public-guide-scope-projections-c342700a",
+  "recorded_at": "2026-11-21T21:42:16.877030+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "90d653b4a1be27527786257843b63ede126d950e",
+  "changed": "Prepared final public scope projections before the website source freeze and preserved the first source-drift refusal.",
+  "proves": "All 59 commands exited zero; exact comparison isolated two prebuild-regenerated scope projections as the refusal cause.",
+  "limits": "This refused receipt grants no current website pass, independent accuracy, or original requirement closure.",
+  "scope_ids": [
+    "WP-SITE",
+    "F-150"
+  ],
+  "files": {
+    "site/src/public-scope.json": "0167f71685e6c817baec84838ea231855c4acdc01b39155f7b891ba739b71ef4",
+    "site/src/scope-manifest.json": "532b595efb3c8accb256d6364f19262b327c39b2ebb8e932772f9084871f0c30",
+    "site/public/reference/public-scope.json": "0167f71685e6c817baec84838ea231855c4acdc01b39155f7b891ba739b71ef4",
+    "state.json": "d3bd470b1167df74ca2a41e01c0455d680a47edaa6fb301291a9805431c04a83",
+    "runs/2026-11-21-public-guide-rollback-website-source-drift.json": "b81632918905d11cc78b29c85d16506841bb5912caf2d0833d7a087cd2dea7c0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-public-guide-rollback-website-source-drift.json",
+      "sha256": "b81632918905d11cc78b29c85d16506841bb5912caf2d0833d7a087cd2dea7c0"
+    }
+  ],
+  "checks": []
+}

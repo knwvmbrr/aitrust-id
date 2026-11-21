@@ -1,0 +1,32 @@
+{
+  "schema": "aitrust-independent-correction-review-1",
+  "pass": true,
+  "captured_at": "2026-11-21T16:29:18.904688+00:00",
+  "reviewed_by": "/root/seo",
+  "source_sha256": {
+    "deploy/ai-tools/activate.py": "13736abf6b0c3b63a509aef1611d0e3663ed7b8320519407a0713b016c00a7c5",
+    "tests/test_ai_tools_activation.py": "bbbe8460da217dfa1c4194e4a7a8fdb84b6679c63e283eba6aef644fa9245129",
+    "deploy/ai-tools/verify-isolation.py": "11478ac83b004d74170e9eb46506b71de91e764f0f98950a973b50d2d0033c5f",
+    "deploy/ai-tools/render.py": "d7d994babf384201d3285b509a281faa417e154f84790853055291f17b4faa89"
+  },
+  "source_stable": true,
+  "original_failure_sha256": "d2ed0f09b2a18f4f7f5e32ee148be700916fdfc966da30e49103babe238a555e",
+  "actual_inert_controls": {
+    "original_full_publish_coherent_unit_rebind_refused_before_commands": true,
+    "original_late_clock6_positive_refused_with_budget5": true,
+    "actual_async_blocked_attempt_cancelled_by_total_timer": true,
+    "timer_budget_seconds": 0.02,
+    "observed_timer_elapsed_seconds": 0.022528417001012713,
+    "private_preparation_no_public_rule_or_proxy_start": true,
+    "incomplete_private_phase_publish_refused_before_commands": true
+  },
+  "control_count": 5,
+  "source_review": "Exact approved release/source, canonical units/Caddy/proxy fields anchor records; public resume rechecks installed canonical unit bytes and actual isolation before443. Private-only prepare returns private_isolation_ready without nft mutation/proxy start. Readiness uses pinned existing httpx2 with no environment proxies/redirects, bounded4096 raw body and whole asyncio timeout covering attempts, stream cleanup and retry sleeps; positive status is checked again against absolute deadline.",
+  "limits": [
+    "No actual network/socket, privileged filesystem, service, firewall, package or public activation by reviewer.",
+    "Existing pinned deployment venv is required for actual httpx2 health attempt; no new dependency or global installation.",
+    "Actual host prepare/public proof remains operator work after disclosure publication; public HOLD retained.",
+    "Five affected inert controls executed; original16 author controls not repeated.",
+    "No original requirement or detector accuracy acceptance from this operational review."
+  ]
+}

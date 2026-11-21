@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-212901-rollback-protocol-refreshed-7363e040",
+  "recorded_at": "2026-11-21T21:29:01.095887+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "90d653b4a1be27527786257843b63ede126d950e",
+  "changed": "Refreshed protocol execution after the operator ownership correction and documented development handoffs.",
+  "proves": "All 61 declared protocol commands passed on unchanged corrected sources; root operator controls and distinct lifecycle review remain separate linked evidence.",
+  "limits": "Website refresh and protected publication remain pending. Detector release accuracy, human acceptance and original counts are unchanged.",
+  "scope_ids": [
+    "WP-INTEGRATIONS",
+    "WP-SITE"
+  ],
+  "files": {
+    "state.json": "a467e251ffc9f27584243f41cc234873bfc40b4b3d03c377364b1035a7d14d75",
+    "runs/2026-11-21-public-guide-rollback-protocol.json": "02b3af4c321242c1dcd1741fc469897c32723118bc433377b26c305b761f2e82"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-public-guide-rollback-protocol.json",
+      "sha256": "02b3af4c321242c1dcd1741fc469897c32723118bc433377b26c305b761f2e82"
+    },
+    {
+      "path": "runs/2026-11-21-api-rollback-integrated-controls.json",
+      "sha256": "ea895f838909c333947b2d706fc100d0495a0b7156e1345eb0de116766221df3"
+    }
+  ],
+  "checks": []
+}

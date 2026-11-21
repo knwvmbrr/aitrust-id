@@ -2,6 +2,177 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-215621-public-guide-final-source-checks-cd8a4621
+
+Recorded 2026-11-21T21:56:21.589649+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Bound the public guide and reviewed rollback correction to the prepared source-stable website run and current finite route inventory.
+- **Evidence.** All five exact engineering profiles assess current;61 protocol and59 website commands passed; finite1657-source boundary review passed. [Change record](./runs/changes/2026-11-21-215621-public-guide-final-source-checks-cd8a4621.json).
+- **Not claimed.** A temporary Unicode-only ledger formatting edit was restored byte-for-byte to frozen source before these final checks. No independent accuracy, human device acceptance, original closure or live operator change is implied.
+
+
+### 2026-11-21-214216-prepare-public-guide-scope-projections-c342700a
+
+Recorded 2026-11-21T21:42:16.877030+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Prepared final public scope projections before the website source freeze and preserved the first source-drift refusal.
+- **Evidence.** All 59 commands exited zero; exact comparison isolated two prebuild-regenerated scope projections as the refusal cause. [Change record](./runs/changes/2026-11-21-214216-prepare-public-guide-scope-projections-c342700a.json).
+- **Not claimed.** This refused receipt grants no current website pass, independent accuracy, or original requirement closure.
+
+
+### 2026-11-21-212901-rollback-protocol-refreshed-7363e040
+
+Recorded 2026-11-21T21:29:01.095887+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Refreshed protocol execution after the operator ownership correction and documented development handoffs.
+- **Evidence.** All 61 declared protocol commands passed on unchanged corrected sources; root operator controls and distinct lifecycle review remain separate linked evidence. [Change record](./runs/changes/2026-11-21-212901-rollback-protocol-refreshed-7363e040.json).
+- **Not claimed.** Website refresh and protected publication remain pending. Detector release accuracy, human acceptance and original counts are unchanged.
+
+
+### 2026-11-21-212619-rollback-candidate-state-67325aec
+
+Recorded 2026-11-21T21:26:19.484466+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Marked the integrated operator correction as awaiting affected source-bound execution while retaining the unchanged live deployment.
+- **Evidence.** The normal accountability guard confirms original counts and evidence chronology; both state timestamps now follow referenced operator and development handoff evidence. [Change record](./runs/changes/2026-11-21-212619-rollback-candidate-state-67325aec.json).
+- **Not claimed.** No server or historical activation record was migrated. Prior protocol/website receipts are historical for this changed source until refresh; unchanged detector and extension evidence is assessed separately.
+
+
+### 2026-11-21-212538-api-rollback-integrated-366a05b0
+
+Recorded 2026-11-21T21:25:38.579186+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Integrated the peer-reviewed rollback ownership and full-rule correction, documented legacy refusal and bound its plan and source inventory.
+- **Evidence.** All 28 affected operator controls pass in the integrated tree. The original stale-record and changed-rule counterexamples are preserved, with independent review and exact current source identities. [Change record](./runs/changes/2026-11-21-212538-api-rollback-integrated-366a05b0.json).
+- **Not claimed.** No live operator, server, service, firewall or historical activation record was changed. Protocol and website source-bound evidence is being refreshed; unchanged PS/privacy/extension evidence remains separate. No original closure.
+
+
+### 2026-11-21-212431-independent-tag-development-handoffs-64e7e8a8
+
+Recorded 2026-11-21T21:24:31.905241+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Recorded four independently reviewed, downloadable development workflows in the scope and delivery board without changing original completion.
+- **Evidence.** Normal remote refs confirm MT additive framing, bounded PNG observation, private FI citation practice and the advisory PS review join at exact commits, each with separate execution/reviewer identities. [Change record](./runs/changes/2026-11-21-212431-independent-tag-development-handoffs-64e7e8a8.json).
+- **Not claimed.** Development branches are not main or production integration, independent human accuracy or full tag release. All 202 originals remain at 133 complete and 69 open; the 60 target is unmet.
+
+
+### 2026-11-21-212041-record-api-retirement-peer-review-285aac0d
+
+Recorded 2026-11-21T21:20:41.099363+00:00 · Contributor: Codex /root/web_camo API operator engineer · change
+
+- **Changed.** Preserved the exact distinct corrected API rollback ownership review before integration.
+- **Evidence.** Independent six-control temporary-filesystem review confirms changed-rule refusal before service actions, counter-only legitimate rollback, stale record replacement preservation, terminal-write recovery/blocking and unrecorded-unit refusal; exact current runtime/test hashes remain stable. [Change record](./runs/changes/2026-11-21-212041-record-api-retirement-peer-review-285aac0d.json).
+- **Not claimed.** Source/synthetic privileged-boundary review only, no live operator migration, remote service/firewall mutation, universal transaction atomicity or original closure. Existing legacy live record remains unanchored and must not be adopted automatically.
+
+
+### 2026-11-21-212017-retire-api-rollback-authority-e593c610
+
+Recorded 2026-11-21T21:20:17.233602+00:00 · Contributor: Codex /root/web_camo API operator engineer · change
+
+- **Changed.** Bound API management to one serialized active invocation epoch and unit inode identities, durably retired rollback records, and preflighted exact recorded firewall rule and persistence before stopping services.
+- **Evidence.** Actual owned-filesystem original counterexample deleted replacement units; current twelve affected controls preserve replacements, reject stale/legacy authority and drift before mutations, retain lease on failed state writes, and exercise bounded same-record recovery. Earlier twenty-five guards remain historical to their exact candidate. [Change record](./runs/changes/2026-11-21-212017-retire-api-rollback-authority-e593c610.json).
+- **Not claimed.** No remote or privileged service/firewall changes. Existing deployed879 and legacy record are not adopted or updated; uncertain/incomplete state requires manual operator review. No original requirement closure or runtime/route change; distinct corrected peer review pending.
+
+
+### 2026-11-21-204050-public-guide-state-chronology-fixed-b3efeba7
+
+Recorded 2026-11-21T20:40:50.936411+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Corrected the state timestamp mismatch caught by protected CI without changing source, scope or safeguards.
+- **Evidence.** The unchanged accountability guard now passes all 202 original counts and 977 referenced evidence records. All five engineering receipts still match their exact source fingerprints after the metadata-only correction. [Change record](./runs/changes/2026-11-21-204050-public-guide-state-chronology-fixed-b3efeba7.json).
+- **Not claimed.** The original CI refusal is preserved. Protected CI reruns on the corrected commit; no source-bound functional suite is rerun without a source change, and no original or accuracy gate is waived.
+
+
+### 2026-11-21-203239-public-guide-boundaries-43b255e6
+
+Recorded 2026-11-21T20:32:39.407137+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Completed the source/access boundary check for the frozen public API guide publication candidate.
+- **Evidence.** All 1656 reviewed source entries match; current website and unchanged extension receipts pass their exact-source assessments, with access and existing supported route boundaries retained. [Change record](./runs/changes/2026-11-21-203239-public-guide-boundaries-43b255e6.json).
+- **Not claimed.** No network was executed by this boundary check. This is not a host-compromise defense, accuracy acceptance, organizational/research approval or an original closure.
+
+
+### 2026-11-21-203113-public-guide-website-complete-1ea8010f
+
+Recorded 2026-11-21T20:31:13.579986+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Completed the finished API-guide website execution and exercised its actual rendered curl example against the public service.
+- **Evidence.** All 59 website commands passed with source identity unchanged. The rendered sample produced a live PS FINDING without echoing its invented input; exact protocol and unchanged personal/extension evidence remain separate. [Change record](./runs/changes/2026-11-21-203113-public-guide-website-complete-1ea8010f.json).
+- **Not claimed.** These are engineering and one operational example, not independent accuracy, provider-account installation or an original closure. Protected source and verified public guide deployment follow.
+
+
+### 2026-11-21-201750-api-guide-independent-review-e4d80a5a
+
+Recorded 2026-11-21T20:17:50.707117+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Completed distinct review of the corrected API connection guide, public operator handoff and CI registration before website publication.
+- **Evidence.** The separate reviewer matched all 1656 source inventory entries and linked guide/operator/runtime identities, reviewed the actual 61-command source-bound receipt and cleared the corrected availability wording. [Change record](./runs/changes/2026-11-21-201750-api-guide-independent-review-e4d80a5a.json).
+- **Not claimed.** Read-only integration review did not rerun functional or network checks and does not grant independent accuracy. Website execution and protected public guide delivery still follow; all 69 original requirements remain open.
+
+
+### 2026-11-21-201620-sixty-open-audit-reconciled-77e74866
+
+Recorded 2026-11-21T20:16:20.087551+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Reconciled the full 69-original acceptance audit into the current delivery board.
+- **Evidence.** The task-list lead retained each full criterion and identity, found zero currently autonomous full-original closures and documented concrete remaining gates. The 60 target is explicitly unmet. [Change record](./runs/changes/2026-11-21-201620-sixty-open-audit-reconciled-77e74866.json).
+- **Not claimed.** This audit does not replace missing people, adoption, operating evidence or software; no original percentages or criteria changed.
+
+
+### 2026-11-21-201545-api-legacy-guide-correction-7acc703e
+
+Recorded 2026-11-21T20:15:45.394517+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Corrected the linked legacy connector guide that still described the deployed service as unpublished.
+- **Evidence.** The implementation guide now points to the actual HTTPS/MCP service, dated operational evidence and the user connection guide, while preserving self-hosting and provider-account distinctions. [Change record](./runs/changes/2026-11-21-201545-api-legacy-guide-correction-7acc703e.json).
+- **Not claimed.** No runtime or permission change, provider-account installation, provider endorsement or independent tag validation. The prior finite review is preserved and this exact corrected source is recorded separately.
+
+
+### 2026-11-21-201232-autonomous-original-closure-audit-d43b55b3
+
+Recorded 2026-11-21T20:12:32.887461+00:00 · Contributor: Codex /root/seo task-list lead · change
+
+- **Changed.** Recorded a per-original audit of all69 remaining full acceptance contracts without changing scope or completion.
+- **Evidence.** All69 master jobs/outcomes/acceptance and required acceptance are retained verbatim with actual canonical criterion hashes. Classification:28 method/evidence,17 human/device/outside,11 adoption/legal/governance/service,7 community/research operation,5 distribution/vendor,1 organization human/commercial. No justified new full closure found. [Change record](./runs/changes/2026-11-21-201232-autonomous-original-closure-audit-d43b55b3.json).
+- **Not claimed.** Read-only source accounting, no functional tests or new functional delivery. Routine technical choices are not invented owner gates. FI citation input path is a scoped engineering recommendation only; blind labels/full FI acceptance remain open. No permanent-running bots or new original closures.
+
+
+### 2026-11-21-201403-public-guide-protocol-complete-9181b337
+
+Recorded 2026-11-21T20:14:03.142530+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Completed fresh frozen-source protocol execution and the newly registered API operator controls after the guide implementation batch.
+- **Evidence.** All 61 declared protocol commands completed with unchanged source identity; 16 activation and 3 isolation-verifier controls passed without privileged mutations. [Change record](./runs/changes/2026-11-21-201403-public-guide-protocol-complete-9181b337.json).
+- **Not claimed.** This is engineering execution for publication, not independent detector accuracy or a full original closure. Website execution and actual guide publication remain pending.
+
+
+### 2026-11-21-201103-api-guide-source-freeze-1cb3f2f0
+
+Recorded 2026-11-21T20:11:03.338387+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Bound the finished public API guide and reviewed deployment operator source to the current finite route inventory.
+- **Evidence.** Exactly five operator/control files were added and four declared guide/workflow files changed; no existing detector or installed-extension runtime changed. Author and distinct deployment source reviews remain linked. [Change record](./runs/changes/2026-11-21-201103-api-guide-source-freeze-1cb3f2f0.json).
+- **Not claimed.** Finite source identity is not execution, protected publication, provider-account setup, independent accuracy or a full original closure. Fresh affected capability execution follows this source freeze.
+
+
+### 2026-11-21-201024-sixty-open-wave-dispatched-f8ee5331
+
+Recorded 2026-11-21T20:10:24.255092+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Started the requested 69-to-60 execution wave with root publication and three actual independent worker assignments.
+- **Evidence.** The dated dispatch observation confirms all three assigned specialists running. The board preserves baseline 133 complete and 69 open, target nine full closures, and all historical acceptance. [Change record](./runs/changes/2026-11-21-201024-sixty-open-wave-dispatched-f8ee5331.json).
+- **Not claimed.** No original closure is credited at dispatch. Owner, independent-human and platform gates remain open, and running workers are not completed outcomes.
+
+
+### 2026-11-21-200828-google-verification-protected-source-bdcf037d
+
+Recorded 2026-11-21T20:08:28.393707+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Completed the protected Google verification-file source merge and reconciled the actual merged status into delivery documents.
+- **Evidence.** PR 144 passed all 11 required checks and merged as ee8db51; the existing verification file remains included in this candidate. [Change record](./runs/changes/2026-11-21-200828-google-verification-protected-source-bdcf037d.json).
+- **Not claimed.** Detector release gates remain unmet. Search Console indexing is confirmed only for inspected URLs; no original requirement closes from publication.
+
+
 ### 2026-11-21-193957-google-verification-reviewed-payload-8377c5d8
 
 Recorded 2026-11-21T19:39:57.552918+00:00 · Contributor: Codex /root reviewer; /root/seo publication engineer · change
@@ -18,6 +189,114 @@ Recorded 2026-11-21T19:37:12.270794+00:00 · Contributor: Codex Google verificat
 - **Changed.** Added the exact owner-authorized Google HTML verification file for https://aitrustid.com/.
 - **Evidence.** The supplied file is exactly53bytes with SHA2569044d09734a758ef85446bad2f71c13fc9090a06d73663d4be5d0bd3eee94677. Finite inventory adds only this one static file; all existing source and capability fingerprints are preserved. [Change record](./runs/changes/2026-11-21-193712-google-verification-source-f427400f.json).
 - **Not claimed.** Not a Google ownership grant by this worker or original closure. Publication and actual public byte checks remain pending; source comes only from protected main abe7d64, excluding unrelated API follow-up changes.
+
+
+### 2026-11-21-200658-api-operator-controls-ci-ad40f325
+
+Recorded 2026-11-21T20:06:58.798124+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Registered the existing API deployment ownership and isolation-verifier refusal controls in the protected AI tools workflow.
+- **Evidence.** The selected workflow now executes the activation and isolation guard modules alongside the existing API/OpenAPI checks whenever operator sources change. [Change record](./runs/changes/2026-11-21-200658-api-operator-controls-ci-ad40f325.json).
+- **Not claimed.** This registration adds no public endpoint, platform-account installation, independent detector validation or original closure; execution follows the completed implementation batch.
+
+
+### 2026-11-21-194831-public-api-scope-handoff-attribution-7ec6fef7
+
+Recorded 2026-11-21T19:48:31.548873+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Reconciled the public API deployment handoff into the scope milestone and preserved its distinct review; attributed the previously prepared scope edits.
+- **Evidence.** The dated operational and independent deployment receipts support actual HTTPS/MCP operation. Remote connection enhancement stays at 80 with guide publication and provider-account acceptance outstanding; all 202 originals and 69 open remain unchanged. [Change record](./runs/changes/2026-11-21-194831-public-api-scope-handoff-attribution-7ec6fef7.json).
+- **Not claimed.** No ChatGPT or Claude account connection, independent accuracy or new original closure. The earlier missing-attribution guard refusal is retained; guide and broader post-publication source delivery remain separate.
+
+
+### 2026-11-21-194723-search-console-ownership-indexing-confirmed-65653255
+
+Recorded 2026-11-21T19:47:23.518369+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Verified approved Google Search Console ownership via the published HTML file, submitted the canonical sitemap and inspected the homepage and PS.
+- **Evidence.** Actual Google UI confirms Ownership verified; sitemap Success with 37 discovered pages; homepage and PS each URL is on Google and Page is indexed. File remains included for future deployments. [Change record](./runs/changes/2026-11-21-194723-search-console-ownership-indexing-confirmed-65653255.json).
+- **Not claimed.** Only the HTTPS apex URL-prefix property was verified. Aggregate reports are processing; all 37 pages indexed, ranking, traffic and independent detector accuracy are not claimed. Static file is live; protected source PR 144 is pending normal checks. No full original closure.
+
+
+### 2026-11-21-193732-testflight-build-testing-confirmed-a108a813
+
+Recorded 2026-11-21T19:37:32.242491+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Confirmed build 1.0 (1) is Testing in the owner-only TestFlight group after Apple sign-in was restored.
+- **Evidence.** Actual Apple UI shows 87 days remaining, one build, one owner tester and Invited status dated November 18. No sessions or devices are listed. [Change record](./runs/changes/2026-11-21-193732-testflight-build-testing-confirmed-a108a813.json).
+- **Not claimed.** No new upload or invitation was sent. Actual iPhone installation, Share, offline operation and VoiceOver acceptance, and public App Store approval remain separate.
+
+
+### 2026-11-21-193620-app-build-status-recheck-ef4ab4bc
+
+Recorded 2026-11-21T19:36:20.323821+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Rechecked the app build status in App Store Connect; the expired session returned Apple sign-in.
+- **Evidence.** Fresh UI access was attempted. Last verified internal build remains 1.0 (1), Testing, assigned November 18; its historical evidence is retained separately. [Change record](./runs/changes/2026-11-21-193620-app-build-status-recheck-ef4ab4bc.json).
+- **Not claimed.** Current Apple dashboard, physical installation, Share and VoiceOver acceptance, and public App Store approval were not verified. No new upload, tests or original closure.
+
+
+### 2026-11-21-174945-google-visibility-console-follow-up-94fbe471
+
+Recorded 2026-11-21T17:49:45.448932+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Recorded actual Google visibility for 11 URLs and the separate unfinished Search Console ownership workflow; documented the locked-Mac follow-up.
+- **Evidence.** The saved native Chrome observation contains the homepage and PS search results. Follow-up granted no ownership or permissions. [Change record](./runs/changes/2026-11-21-174945-google-visibility-console-follow-up-94fbe471.json).
+- **Not claimed.** Search Console verification, sitemap submission and individual URL Inspection remain pending owner approval and Mac unlock. No original requirement closure or comprehensive indexing claim.
+
+
+### 2026-11-21-173620-remote-api-public-deployment-d98ac614
+
+Recorded 2026-11-21T17:36:20.894852+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Activated the reviewed remote PS HTTP/MCP service on the existing provider hostname after published1.14 disclosures.
+- **Evidence.** Actual external trustedTLS/hostname and health200 pass; one officialMCP2.3.0 discovery/PS call returns FINDING without submittedtext. Both exact readonly-release services are active/enabled with measured resource/isolation controls; one tagged443rule preserves priorrules and persistence, oldstaging remains healthy, and ownedtempstaging is removed. [Change record](./runs/changes/2026-11-21-173620-remote-api-public-deployment-d98ac614.json).
+- **Not claimed.** No ChatGPT/Claude account connection, independent accuracy, uptime study or original scope closure. Only one fixed synthetic example submitted by operator. RemotePS is a developmentmethod; PII unavailable and selectedtext reaches dedicatedOVHhost. Existing role/database/backup/F030 systems unchanged.
+
+
+### 2026-11-21-173145-public-api-connection-instructions-e85fbbae
+
+Recorded 2026-11-21T17:31:45.067742+00:00 · Contributor: Codex · change
+
+- **Changed.** Published simple three-step optional MCP instructions and copyable HTTP request for the actually activated dedicated OVHcloud API while retaining local routes and the OpenAPI download.
+- **Evidence.** Deployment worker supplied actual external trusted-chain and hostname HTTPS, health200/no-store, official MCP2.3.0 discovery of two tools and one PS example without submitted-text echo. Exact operational receipt preserved. [Change record](./runs/changes/2026-11-21-173145-public-api-connection-instructions-e85fbbae.json).
+- **Not claimed.** No new tests, browser checks or suites were run for this copy change. Root validation and website publication remain pending. ChatGPT/Claude account interfaces, provider approval, availability guarantees, independent accuracy and original requirement closure are not claimed.
+
+
+### 2026-11-21-171829-google-search-discovery-status-974bb2b1
+
+Recorded 2026-11-21T17:18:29.540533+00:00 · Contributor: Codex /root observed; /root/seo documented · change
+
+- **Changed.** Recorded actual Google Search visibility for eleven specific AI Trust ID URLs and the remaining Search Console access step.
+- **Evidence.** The exact native-UI observation timestamp, two site queries and eleven public result URLs are retained without account identifiers. Focused PS search returned the observed command-risk title and description. [Change record](./runs/changes/2026-11-21-171829-google-search-discovery-status-974bb2b1.json).
+- **Not claimed.** Documentation of a completed root observation only; no new crawl or test. No complete37URL index, ranking, traffic, Search Console ownership, URL Inspection, sitemap submission or original requirement closure claim.
+
+
+### 2026-11-21-163005-api-private-public-stage-boundary-78ebb2cd
+
+Recorded 2026-11-21T16:30:05.160474+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Separated private preparation from explicitly authorized public resume, anchored canonical unit records, and bounded complete startup health IO.
+- **Evidence.** 16 focused activation guards and distinct affected counterreview pass. Actual private service isolation passes with attached BPF, enforced limits and mount controls; actual hold inventory confirms no443/proxy exposure, unchanged persistence and healthy old staging. Private preparation cannot open public ingress; publication is a separate command. [Change record](./runs/changes/2026-11-21-163005-api-private-public-stage-boundary-78ebb2cd.json).
+- **Not claimed.** Root public-disclosure hold remains; no publicTLS or AI-host account connection yet. Historical generic private_app_started failure causes remain unestablished; separate verifier defects and rollbacks are retained. Runtime/units unchanged; no original closure.
+
+
+### 2026-11-21-161541-api-packet-filter-probe-contract-7e43ca75
+
+Recorded 2026-11-21T16:15:41.620518+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Corrected the actual-isolation verifier to recognize bounded packet-filter timeout only with positive outside controls before and after.
+- **Evidence.** Actual first private activation retained correct limits/BPF/mount flags but timed out inside the cgroup while the same owned target connected outside.3 focused closed-record/refusal groups and distinct review pass; permission-only assumption is removed without changing unit/network policy. [Change record](./runs/changes/2026-11-21-161541-api-packet-filter-probe-contract-7e43ca75.json).
+- **Not claimed.** First activation refused before public firewall/proxy changes and was rolled back. This is one selected-target engineering probe, not universal network/kernel causation evidence; corrected activation/publicTLS remains pending.
+
+
+### 2026-11-21-160614-remote-api-activation-guards-a7dbfbf3
+
+Recorded 2026-11-21T16:06:14.718026+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Added exact-release root activation/rollback and actual service isolation probes for the approved provider-host API.
+- **Evidence.** Eleven focused ownership/IO guards pass. Distinct review reproduced and fixed coherent source-manifest rebinding: exact approveda521 commit and14 Git source hashes are enforced before activation. Only newunits and one tagged443 rule/persistence addition are permitted; no full firewall reload. [Change record](./runs/changes/2026-11-21-160614-remote-api-activation-guards-a7dbfbf3.json).
+- **Not claimed.** No privileged activation/publicTLS/effectiveBPF proof yet; interrupted operations retain records for bounded rollback. Existing runtime and prior actual14-client/11-proxy proofs are unchanged. No original closure.
 
 
 ### 2026-11-21-165656-freeze-passing-api-core-delivery-55894707

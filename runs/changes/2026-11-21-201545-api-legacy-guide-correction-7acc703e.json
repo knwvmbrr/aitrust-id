@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-201545-api-legacy-guide-correction-7acc703e",
+  "recorded_at": "2026-11-21T20:15:45.394517+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8044f4559a7706eb5ba70e7aa86c26529d0eb298",
+  "changed": "Corrected the linked legacy connector guide that still described the deployed service as unpublished.",
+  "proves": "The implementation guide now points to the actual HTTPS/MCP service, dated operational evidence and the user connection guide, while preserving self-hosting and provider-account distinctions.",
+  "limits": "No runtime or permission change, provider-account installation, provider endorsement or independent tag validation. The prior finite review is preserved and this exact corrected source is recorded separately.",
+  "scope_ids": [
+    "WP-INTEGRATIONS",
+    "WP-SITE"
+  ],
+  "files": {
+    "docs/remote-tag-connectors.md": "6ce7f8bb10c33d19c5357fdbad1061a842793dfa3615686dcf35732187e0c6ce",
+    "eval/route-boundaries.json": "22f165643eef8c496ad1a7eb183c141276d1cc3c80f558a21101273c7b9f1977",
+    "runs/2026-11-21-api-legacy-guide-correction.json": "b6891c5e9bf64bad0c3abf8556c94f408b25a0410d35742902c586e5822f271a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-api-legacy-guide-correction.json",
+      "sha256": "b6891c5e9bf64bad0c3abf8556c94f408b25a0410d35742902c586e5822f271a"
+    },
+    {
+      "path": "runs/2026-11-21-public-api-connection-operational.json",
+      "sha256": "3051bf91bebc1e602f2bd736c67344025146e0c65cf40c7ba40e921231694cd1"
+    }
+  ],
+  "checks": []
+}

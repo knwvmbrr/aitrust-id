@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-200658-api-operator-controls-ci-ad40f325",
+  "recorded_at": "2026-11-21T20:06:58.798124+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d95728d660b502e590e03bf68a5838d950efc187",
+  "changed": "Registered the existing API deployment ownership and isolation-verifier refusal controls in the protected AI tools workflow.",
+  "proves": "The selected workflow now executes the activation and isolation guard modules alongside the existing API/OpenAPI checks whenever operator sources change.",
+  "limits": "This registration adds no public endpoint, platform-account installation, independent detector validation or original closure; execution follows the completed implementation batch.",
+  "scope_ids": [
+    "WP-INTEGRATIONS"
+  ],
+  "files": {
+    ".github/workflows/ai-tools.yml": "fca4879b77eacaf8a26387b8aab4ab87f805e5d1d10ba9223f7466660bcb9665"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-api-deployment-independent-review.json",
+      "sha256": "a7e0e04017885e7fb78bd85c85636cd4e0493e97655c7604645d94bdab648705"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-200828-google-verification-protected-source-bdcf037d",
+  "recorded_at": "2026-11-21T20:08:28.393707+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8a10ef3122975009f05121fd856e3e1356ea8ead",
+  "changed": "Completed the protected Google verification-file source merge and reconciled the actual merged status into delivery documents.",
+  "proves": "PR 144 passed all 11 required checks and merged as ee8db51; the existing verification file remains included in this candidate.",
+  "limits": "Detector release gates remain unmet. Search Console indexing is confirmed only for inspected URLs; no original requirement closes from publication.",
+  "scope_ids": [
+    "WP-SITE"
+  ],
+  "files": {
+    "docs/search-discovery-status.md": "62a69741a27dbe31dd9134703c0ed017677b3ab5583a4182cf246a7e4554f0b5",
+    "docs/session-delivery-plan.md": "79817cfe73c2e1af7f11bc6ce8082fb882d1fe8762d005aabf0a618839de86b0",
+    "docs/session-delivery.json": "83f8dc77436f05e427249d35bf3ef304b51f217e3c0276dc8fc3a751b992789d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-search-console-verified.json",
+      "sha256": "d1de97f7fce5003fd28a9585d92e743477dc39485a433396376e459f12226d1f"
+    }
+  ],
+  "checks": []
+}
