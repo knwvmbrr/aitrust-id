@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-055059-verify-carried-website-notice-artifact-10514bd7",
+  "recorded_at": "2026-11-21T05:50:59.138114+00:00",
+  "author": "Codex website distribution engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+  "changed": "Verify the current normal-build website artifact carries its selected JavaScript notice text and source/SPDX index, with narrow exact-byte whitespace preservation.",
+  "proves": "Actual normal build and source-derived built-file comparison pass on corrected source.33 focused controls,35 cached archive identities, selected SPDX schema, hosting-readable modes and independent PS source verification pass. The actual npm reviewed-release command correctly refuses unresolved global obligations.",
+  "limits": "34 archive notice records are complete; one separately pinned upstream project text does not establish exact2.3.8 release correspondence. FullF057/X02, all-source obligations, protected publication and live-link evidence remain open; no detector accuracy or original requirement closure is claimed.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".gitattributes": "ca853c95c469c7eac27d9f7490f67caa26a216cce83914cec0a367ebd4e4dbfd",
+    "docs/web-distribution-result.md": "9a9eb98e21efe8b1877b236ede630453a16e310f433f7b6c6740c10cdc284a23",
+    "runs/2026-11-21-web-js-built-artifact.json": "4b069d8d179bf8f08245cf0398bdb08aa9b114c4f409fa04ea5d2711a7a0149d",
+    "runs/2026-11-21-web-js-current-built-artifact.json": "ef006d5ce28acebf0bf423c4b2ace1ed366789ebfce95e8483dfc6ea1670528c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-web-js-current-built-artifact.json",
+      "sha256": "ef006d5ce28acebf0bf423c4b2ace1ed366789ebfce95e8483dfc6ea1670528c"
+    }
+  ],
+  "checks": []
+}

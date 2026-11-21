@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-054327-refuse-malformed-website-notice-identities-2658cd8f",
+  "recorded_at": "2026-11-21T05:43:27.432563+00:00",
+  "author": "Codex website distribution engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+  "changed": "Refuse matching malformed dependency identity fields without private traceback output and bind the reused regular-file reader source in the generated notice index.",
+  "proves": "Both new malformed-value controls fail the original producer;28 current focused controls pass and all35 exact cached archives replay under current source. Earlier successful actual normal-build artifact proof remains source-bound history.",
+  "limits": "Current-source normal-build refresh is pending. The one exact-release source/license gap and full F057/X02 remain open. No source or policy clearance flags are upgraded.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/web_distribution.py": "6f5ae2b9270e7078691c47220204436cd7b938a8b6f03ce9d5484f7e0d5cf942",
+    "scripts/web-distribution.py": "a866e414fc288b3b4c17bea307c23e8bb302b5aad658f70c190f4f6d5beed5e2",
+    "tests/test_web_distribution.py": "0ca53c68aa517c2bb7b3404a49d1908eb88bd0b0327645392c2c8df6d1e495e3",
+    "site/public/web-licenses/THIRD-PARTY-NOTICES.txt": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab",
+    "site/public/web-licenses/packages.json": "d5661159e87b2fb05f88054a3c094fcf72eb08309b28952f2b25d984ea431e7c",
+    "site/public/web-licenses/web-runtime.spdx.json": "36798d326a79033a26d9b648cfa1401875dcfb4ab7cecd92f98e53ee69f96534",
+    "runs/2026-11-21-web-js-source-proof.json": "0320f4ab328d44120fc57cf65f97fa3c2ff1cea0c06bc39d64894fd642cca31f",
+    "runs/2026-11-21-web-js-built-artifact.json": "4b069d8d179bf8f08245cf0398bdb08aa9b114c4f409fa04ea5d2711a7a0149d",
+    "runs/2026-11-21-web-js-malformed-identity-correction.json": "cc5e0a0bc6ec70e6048d6fa6f0369fadc2802ba20c69536abf2cf7c6a3c93e32"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-web-js-malformed-identity-correction.json",
+      "sha256": "cc5e0a0bc6ec70e6048d6fa6f0369fadc2802ba20c69536abf2cf7c6a3c93e32"
+    },
+    {
+      "path": "runs/2026-11-21-web-js-built-artifact.json",
+      "sha256": "4b069d8d179bf8f08245cf0398bdb08aa9b114c4f409fa04ea5d2711a7a0149d"
+    }
+  ],
+  "checks": []
+}

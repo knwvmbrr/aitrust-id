@@ -1,5 +1,52 @@
 # Changelog
 
+## Unreleased — 2026-11-21
+
+### 2026-11-21-055140-clarify-notice-result-guide-c79a42e6
+
+Recorded 2026-11-21T05:51:40.217997+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Format the selected notice result guide as readable Markdown with spaced counts and commands.
+- **Evidence.** Only the result guide presentation changes; the current actual artifact proof and producer source remain unchanged. [Change record](./runs/changes/2026-11-21-055140-clarify-notice-result-guide-c79a42e6.json).
+- **Not claimed.** No new implementation, test rerun, validation, release, scope or completion claim.
+
+
+### 2026-11-21-055059-verify-carried-website-notice-artifact-10514bd7
+
+Recorded 2026-11-21T05:50:59.138114+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Verify the current normal-build website artifact carries its selected JavaScript notice text and source/SPDX index, with narrow exact-byte whitespace preservation.
+- **Evidence.** Actual normal build and source-derived built-file comparison pass on corrected source.33 focused controls,35 cached archive identities, selected SPDX schema, hosting-readable modes and independent PS source verification pass. The actual npm reviewed-release command correctly refuses unresolved global obligations. [Change record](./runs/changes/2026-11-21-055059-verify-carried-website-notice-artifact-10514bd7.json).
+- **Not claimed.** 34 archive notice records are complete; one separately pinned upstream project text does not establish exact2.3.8 release correspondence. FullF057/X02, all-source obligations, protected publication and live-link evidence remain open; no detector accuracy or original requirement closure is claimed.
+
+
+### 2026-11-21-054815-validate-website-notice-root-shape-c2370433
+
+Recorded 2026-11-21T05:48:15.607865+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Require a well-formed root lock dependency mapping and selected direct runtime dependencies before producing website notice assets; tighten API refusal controls.
+- **Evidence.** The PM root-entry counterexample is reproduced in the direct API. Corrected33 focused controls and current35 exact cached archive replay pass; current CLI was already defensively refusing and is not described as leaking after the earlier fix. [Change record](./runs/changes/2026-11-21-054815-validate-website-notice-root-shape-c2370433.json).
+- **Not claimed.** Normal-build refresh follows this source freeze. One exact2.3.8 source/license correspondence gap remains unverified; no full F057 or X02 closure or licensing clearance.
+
+
+### 2026-11-21-054327-refuse-malformed-website-notice-identities-2658cd8f
+
+Recorded 2026-11-21T05:43:27.432563+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Refuse matching malformed dependency identity fields without private traceback output and bind the reused regular-file reader source in the generated notice index.
+- **Evidence.** Both new malformed-value controls fail the original producer;28 current focused controls pass and all35 exact cached archives replay under current source. Earlier successful actual normal-build artifact proof remains source-bound history. [Change record](./runs/changes/2026-11-21-054327-refuse-malformed-website-notice-identities-2658cd8f.json).
+- **Not claimed.** Current-source normal-build refresh is pending. The one exact-release source/license gap and full F057/X02 remain open. No source or policy clearance flags are upgraded.
+
+
+### 2026-11-21-053854-carry-website-javascript-notices-b6b23d82
+
+Recorded 2026-11-21T05:38:54.034152+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Prepare and carry selected website JavaScript notice texts on every normal build, with exact package/archive/notice byte bindings and selected-cohort SPDX metadata.
+- **Evidence.** 26 focused controls pass. Actual offline replay verifies35 pinned tarballs;34 carry full matched notices and one retains an explicitly separated upstream project supplement with exact-release correspondence unverified. Selected SPDX validates against the existing pinned schema. Prior built artifact lacks the selected bundle. [Change record](./runs/changes/2026-11-21-053854-carry-website-javascript-notices-b6b23d82.json).
+- **Not claimed.** Initial35-complete assumption was corrected after an actual refusal. No complete graph, source-offer or license clearance is claimed. Real normal-build artifact proof is pending; F057 and X02 remain open, global reviewed-release policy still refuses web-checker.
+
+
 ## Unreleased — 2026-11-20
 
 ### 2026-11-20-181237-verify-independent-closeout-website-0a70bb42

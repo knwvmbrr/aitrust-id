@@ -14,3 +14,6 @@ sbom/nested-runtime/*.rst -whitespace
 sbom/reviews/nli/THIRD-PARTY-NOTICES.txt -whitespace
 sbom/reviews/nli/sources/base-README.md -whitespace
 site/public/credential-device/notices.txt -whitespace
+# Preserve exact carried website and separately sourced upstream license text.
+site/public/web-licenses/THIRD-PARTY-NOTICES.txt -whitespace
+sbom/reviews/web-js/sources/a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84.txt -whitespace

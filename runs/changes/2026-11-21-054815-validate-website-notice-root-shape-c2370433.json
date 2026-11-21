@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-054815-validate-website-notice-root-shape-c2370433",
+  "recorded_at": "2026-11-21T05:48:15.607865+00:00",
+  "author": "Codex website distribution engineering lane",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+  "changed": "Require a well-formed root lock dependency mapping and selected direct runtime dependencies before producing website notice assets; tighten API refusal controls.",
+  "proves": "The PM root-entry counterexample is reproduced in the direct API. Corrected33 focused controls and current35 exact cached archive replay pass; current CLI was already defensively refusing and is not described as leaking after the earlier fix.",
+  "limits": "Normal-build refresh follows this source freeze. One exact2.3.8 source/license correspondence gap remains unverified; no full F057 or X02 closure or licensing clearance.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/web_distribution.py": "30d2a875f4a75186cbb27b25adbd718a9a3bb1e05272b6d6479f73563dfb4fd2",
+    "tests/test_web_distribution.py": "36aa1b838c0c4d75be938f33e14dabe3ca7ba4a42ca1198d4d32508e5e927765",
+    "site/public/web-licenses/THIRD-PARTY-NOTICES.txt": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab",
+    "site/public/web-licenses/packages.json": "00befda9916cad2ee20c99aac2c4d305aef8c8224e7092f3e6514cc6d6f50fec",
+    "site/public/web-licenses/web-runtime.spdx.json": "b8d33dd9932fa0557e5ee481e66e66a1eb2ed53de1eff69933a00a730bcc075f",
+    "runs/2026-11-21-web-js-root-shape-correction.json": "4970b484878bfbf2ed093b69b20566f874e1ec6a58d419062494d1e9001a2d69"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-web-js-root-shape-correction.json",
+      "sha256": "4970b484878bfbf2ed093b69b20566f874e1ec6a58d419062494d1e9001a2d69"
+    }
+  ],
+  "checks": []
+}
