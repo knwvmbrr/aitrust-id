@@ -26,6 +26,7 @@ try {
 
 execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[path.join(repo,'scripts/build-mt-device.py')],{stdio:'pipe'});
 fs.copyFileSync(path.join(repo,'docs/mt-device-explorer.md'),path.join(site,'public/reference/mt-device-explorer.md'));
+fs.copyFileSync(path.join(repo,'docs/mt-mobile-quotation.md'),path.join(site,'public/reference/mt-mobile-quotation.md'));
 execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[path.join(repo,'scripts/build-hp-device.py')],{stdio:'pipe'});
 fs.copyFileSync(path.join(repo,'docs/hp-device-explorer.md'),path.join(site,'public/reference/hp-device-explorer.md'));
 execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[path.join(repo,'scripts/build-credential-device.py')],{stdio:'pipe'});

@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-20T18:12:37.313650+00:00",
-  "active_increment": "Public optional Python-flow preview and separate PS/MT CLI methods published from protected04b11a12. Twelve scoped jobs complete; originals132complete/70open. Android followup active.",
+  "updated": "2026-11-21T06:31:25.832385+00:00",
+  "active_increment": "Independent MT mobile quotation preview and carried JavaScript notices in final integration; Android first-Share investigation remains separate. Originals132complete/70open.",
   "status": "site_source_and_on_device_ps_preview_published; engineering_checks_pass; physical_devices_and_independent_release_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
@@ -379,7 +379,13 @@
     "current_critical_HTTP_checks": 16,
     "current_critical_assets_per_origin": 8,
     "current_publication_origins": 2,
-    "full_current_artifact_byte_equivalence_claimed": false
+    "full_current_artifact_byte_equivalence_claimed": false,
+    "pending_increment": {
+      "MT_mobile_quotation": true,
+      "website_JS_notices": true,
+      "published": false,
+      "tag_release_approved": false
+    }
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -1163,15 +1169,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-20-credential-integrated-PS.json",
-    "PII_REDACTED": "runs/2026-11-20-credential-integrated-PII_REDACTED.json",
-    "protocol": "runs/2026-11-20-credential-integrated-protocol.json",
-    "extension": "runs/2026-11-20-credential-integrated-extension.json",
-    "website": "runs/2026-11-20-credential-integrated-website-release.json",
+    "PS": "runs/2026-11-21-nov21-final-PS.json",
+    "PII_REDACTED": "runs/2026-11-21-nov21-final-PII_REDACTED.json",
+    "protocol": "runs/2026-11-21-nov21-current-protocol.json",
+    "extension": "runs/2026-11-21-nov21-final-extension.json",
+    "website": "runs/2026-11-21-nov21-current-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-20T18:12:37.313650+00:00",
+  "updated_at": "2026-11-21T06:31:25.832385+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -4308,5 +4314,27 @@
       "scope": "Bounded diagnostic followup after first-receive failure. Owned Ready UI was observed without synthetic text; zero runtime cases completed and exact cause remains unestablished. No Android correction is accepted on this branch.",
       "evidence": "runs/2026-11-20-credential-closeout-android-snapshot.json"
     }
+  },
+  "nov21_delivery": {
+    "status": "current_engineering_checks_passed; protected_integration_and_public_delivery_pending",
+    "plan": "docs/delivery-wave-2026-11-21.md",
+    "MT_implementation": "220c2edcb2cde0a0603842a32a446bac8f6d157b",
+    "MT_review": "runs/2026-11-21-mt-mobile-pm-review.json",
+    "notice_implementation": "238f952f1ae9b528a8eaa8fce01d4f4a193cee52",
+    "notice_review": "runs/2026-11-21-web-js-independent-review.json",
+    "original_complete": 132,
+    "original_open": 70,
+    "new_original_closures": 0,
+    "independent_accuracy_evidence": false,
+    "production_publication_pending": true,
+    "receipts": {
+      "PS": "runs/2026-11-21-nov21-final-PS.json",
+      "PII_REDACTED": "runs/2026-11-21-nov21-final-PII_REDACTED.json",
+      "extension": "runs/2026-11-21-nov21-final-extension.json",
+      "protocol": "runs/2026-11-21-nov21-current-protocol.json",
+      "website": "runs/2026-11-21-nov21-current-website.json"
+    },
+    "boundary_evidence": "runs/2026-11-21-nov21-final-boundaries.json",
+    "all_original_criteria_preserved": true
   }
 }

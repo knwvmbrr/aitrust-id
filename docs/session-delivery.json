@@ -167,10 +167,10 @@
     {
       "tag_id": "T-MT",
       "bot_id": "tag_mt",
-      "actual_worker": "/root/web_camo",
-      "status": "active",
-      "checked_at": "2026-11-21T05:21:40.232999+00:00",
-      "current_component_status": "Scoped method component published from protected04b11a12; full tag remains independently unvalidated.",
+      "actual_worker": null,
+      "status": "reviewed",
+      "checked_at": "2026-11-21T05:57:19.959064+00:00",
+      "current_component_status": "Curly quote candidate implemented and reviewed; final protected integration/publication pending. Full MT remains unvalidated.",
       "blocking_acceptance": "Published literal wording and private choice workflows do not establish contextual use/mention, feasible alternatives, attribution, actual independent MT agreement/error rates or accepted tag mapping.",
       "next_task": "session-mt-mobile-quotation"
     },
@@ -852,7 +852,7 @@
         "F-019c"
       ],
       "worker": "/root/web_camo",
-      "status": "active",
+      "status": "in_review",
       "deliverable": "An explicitly selected on-device balanced straight-or-curly quotation observation for ordinary phone text, with the original ASCII method and independent MT checks preserved.",
       "done_evidence": [
         "Versioned finite grammar handles declared nonnested ASCII or curly double quotes; mixed/mismatched/escaped/nested syntax refuses instead of inventing context.",
@@ -863,7 +863,9 @@
       "blocker": null,
       "next_unblocked_task": "session-web-js-notices",
       "assigned_at": "2026-11-21T05:21:40.232999+00:00",
-      "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647"
+      "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+      "current_status": "Frozen source and actual prototype browser proof complete; PM review passed. Final integrated execution, protected checks and publication pending.",
+      "evidence_review": "runs/2026-11-21-mt-mobile-pm-review.json"
     },
     {
       "task_id": "session-web-js-notices",
@@ -872,7 +874,7 @@
         "X-02"
       ],
       "worker": "/root/seo",
-      "status": "active",
+      "status": "in_review",
       "deliverable": "Ship the exact retained third-party license/attribution notices for the website JavaScript production dependency graph in its actual built/public artifact.",
       "done_evidence": [
         "Bind all selected production-lock packages to exact existing upstream archive/notice records; preserve full copyright and permission text.",
@@ -883,7 +885,9 @@
       "blocker": null,
       "next_unblocked_task": "session-android-runtime-integration",
       "assigned_at": "2026-11-21T05:21:40.232999+00:00",
-      "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647"
+      "source_base": "3a1e63766b9403c575f7e25ae45e65d9bfbb7647",
+      "current_status": "Actual normal build, carried-byte check and bounded resource controls complete;34 exact archive notices and one explicitly unverified supplement. Independent review passed; final combined protected/public delivery pending.",
+      "evidence_review": "runs/2026-11-21-web-js-independent-review.json"
     }
   ],
   "original_open_requirements": [
@@ -5528,7 +5532,7 @@
     "tools/review_execution.py": "a100fbd3ba79d583423e9398937e5a218588fe699b6a084e00a6947f5506578a",
     "runs/2026-11-20-credential-closeout-android-snapshot.json": "6aace06e22618d8fe554784336d84d528a6ff13fa324cd8eaa9a6476e4a69ee4"
   },
-  "updated_at": "2026-11-21T05:21:40.232999+00:00",
+  "updated_at": "2026-11-21T06:21:03.696394+00:00",
   "closeout": {
     "recorded_at": "2026-11-20T17:08:16.518216+00:00",
     "protected_source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",

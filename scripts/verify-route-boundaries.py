@@ -315,6 +315,15 @@ PATTERNS += ('tools/credential_flow.py', 'tools/credential_flow_context.py',
              'docs/tag-wave-nov19-integration.md')
 
 
+PATTERNS += ('tools/authority_mobile_quotation.py', 'tools/mt_mobile_device.py',
+             'scripts/authority-mobile-quotation.py', 'scripts/mt-mobile-device-cases.py',
+             'scripts/mt-mobile-site-controls.cjs', 'scripts/verify-mt-mobile-site.cjs',
+             'tests/test_mt_mobile_device.py', 'tests/mt-mobile-device-client.mjs',
+             'site/public/mt-mobile-device/*', 'site/public/reference/mt-mobile-quotation.md',
+             'tools/web_distribution.py', 'scripts/web-distribution.py',
+             'tests/test_web_distribution.py', 'sbom/reviews/web-js/**/*',
+             'site/public/web-licenses/*')
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:

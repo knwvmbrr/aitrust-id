@@ -2,6 +2,96 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-063125-nov21-final-engineering-3f4d2d3b
+
+Recorded 2026-11-21T06:31:25.861395+00:00 · Contributor: /root · change
+
+- **Changed.** Completed current-source checks and corrected the selected-browser receipt contract before protected integration.
+- **Evidence.** All five capability receipts are current; the boundary consumer verifies its exact extension/website pair and1390source identities. Incorrect-key and accounting candidates are preserved. [Change record](./runs/changes/2026-11-21-063125-nov21-final-engineering-3f4d2d3b.json).
+- **Not claimed.** No independent accuracy, physical-phone, tag release or original closure; protected/public delivery remains pending. Historical service cases were not rerun.
+
+
+### 2026-11-21-062741-nov21-corrected-website-fb8369a6
+
+Recorded 2026-11-21T06:27:41.759057+00:00 · Contributor: /root · change
+
+- **Changed.** Captured current-source website execution after the corrected accounting field.
+- **Evidence.** The declared capability checks completed with unchanged source identity. [Change record](./runs/changes/2026-11-21-062741-nov21-corrected-website-fb8369a6.json).
+- **Not claimed.** Engineering execution only; no original or independently validated tag release.
+
+
+### 2026-11-21-062240-nov21-corrected-protocol-3dde3990
+
+Recorded 2026-11-21T06:22:40.729718+00:00 · Contributor: /root · change
+
+- **Changed.** Captured current-source protocol execution after the corrected accounting field.
+- **Evidence.** The declared capability checks completed with unchanged source identity. [Change record](./runs/changes/2026-11-21-062240-nov21-corrected-protocol-3dde3990.json).
+- **Not claimed.** Engineering execution only; no original or independently validated tag release.
+
+
+### 2026-11-21-062104-nov21-board-status-correction-2743095d
+
+Recorded 2026-11-21T06:21:04.512904+00:00 · Contributor: /root · change
+
+- **Changed.** Corrected a tag-bot status value without changing the in-review software task or original acceptance.
+- **Evidence.** The actual delivery-accounting consumer accepts reviewed for logical bots; in_review remains a task status. The failed protocol candidate is preserved and accounting is checked before re-execution. [Change record](./runs/changes/2026-11-21-062104-nov21-board-status-correction-2743095d.json).
+- **Not claimed.** No product behavior, source criteria, accuracy claim or original completion changed. The final current-source checks remain pending.
+
+
+### 2026-11-21-061659-nov21-current-extension-c7ed034d
+
+Recorded 2026-11-21T06:16:59.339495+00:00 · Contributor: /root · change
+
+- **Changed.** Captured current-source extension engineering execution after the final source freeze.
+- **Evidence.** The declared capability commands completed with unchanged source identity. [Change record](./runs/changes/2026-11-21-061659-nov21-current-extension-c7ed034d.json).
+- **Not claimed.** Engineering checks only; no independent accuracy, tag release or original closure.
+
+
+### 2026-11-21-061617-nov21-current-pii-redacted-d8af99f7
+
+Recorded 2026-11-21T06:16:17.092295+00:00 · Contributor: /root · change
+
+- **Changed.** Captured current-source PII_REDACTED engineering execution after the final source freeze.
+- **Evidence.** The declared capability commands completed with unchanged source identity. [Change record](./runs/changes/2026-11-21-061617-nov21-current-pii-redacted-d8af99f7.json).
+- **Not claimed.** Engineering checks only; no independent accuracy, tag release or original closure.
+
+
+### 2026-11-21-061609-nov21-current-ps-ab665bd1
+
+Recorded 2026-11-21T06:16:09.154636+00:00 · Contributor: /root · change
+
+- **Changed.** Captured current-source PS engineering execution after the final source freeze.
+- **Evidence.** The declared capability commands completed with unchanged source identity. [Change record](./runs/changes/2026-11-21-061609-nov21-current-ps-ab665bd1.json).
+- **Not claimed.** Engineering checks only; no independent accuracy, tag release or original closure.
+
+
+### 2026-11-21-061548-nov21-final-source-freeze-fb4a3655
+
+Recorded 2026-11-21T06:15:48.236233+00:00 · Contributor: /root · change
+
+- **Changed.** Bound the final mobile-quotation and website-notice source graph after normal build preparation.
+- **Evidence.** The normal build completed under the existing verification environment, created the actual MT guide and carried notice artifacts, and regenerated unchanged-denominator202-record scope data. The boundary inventory now covers the added sources and checks. [Change record](./runs/changes/2026-11-21-061548-nov21-final-source-freeze-fb4a3655.json).
+- **Not claimed.** The current-source52-command website pass and protected/public delivery are still pending; no original requirement or tag release is completed.
+
+
+### 2026-11-21-061211-nov21-prime-interpreter-b1674ae8
+
+Recorded 2026-11-21T06:12:11.868582+00:00 · Contributor: /root · change
+
+- **Changed.** Preserved an integration-prime prerequisite refusal and selected the existing pinned verification interpreter.
+- **Evidence.** The first build failed importing pydantic under the default interpreter; the configured project virtual environment is used for the next source-bound build. [Change record](./runs/changes/2026-11-21-061211-nov21-prime-interpreter-b1674ae8.json).
+- **Not claimed.** No package was installed, no product bug or successful build is claimed by this diagnostic record, and no original requirement closes.
+
+
+### 2026-11-21-060809-nov21-integrated-source-bbe02ea5
+
+Recorded 2026-11-21T06:08:09.062457+00:00 · Contributor: /root · change
+
+- **Changed.** Integrated the independently selected mobile quotation method, mandatory JavaScript notice preparation and actual-route checks into the normal website pipeline.
+- **Evidence.** Exact worker sources and recorded browser/artifact evidence were independently reviewed. Current source registers52 website checks, retains all prior checks and exposes the carried notice text from About. [Change record](./runs/changes/2026-11-21-060809-nov21-integrated-source-bbe02ea5.json).
+- **Not claimed.** Final current-source checks, protected merge and public delivery remain pending. MT meaning/independent accuracy and complete source-license obligations remain unaccepted; originals132complete/70open.
+
+
 ### 2026-11-21-052140-nov21-independent-delivery-wave-bcc4ecbe
 
 Recorded 2026-11-21T05:21:40.284076+00:00 · Contributor: /root · change

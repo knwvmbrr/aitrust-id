@@ -343,8 +343,10 @@ jobs:
       - run: npm run build:site
       - name: Verify truthful search descriptions and crawlable static pages
         run: npm run verify:seo
-      - name: Bind prepared runtime bytes to retained upstream members
-        run: python scripts/verify-asset-notices.py --prepared-runtime
+      - name: Bind prepared runtime and carried website notice bytes
+        run: |
+          python scripts/verify-asset-notices.py --prepared-runtime
+          python scripts/web-distribution.py check-built
       - name: Exercise native engine resources, freshness and private-output refusals
         run: |
           python -m pytest tests/test_native_bundle.py tests/test_ios_project_package.py tests/test_ios_share_verifier.py tests/test_native_share_evidence.py -q
@@ -396,6 +398,7 @@ jobs:
           npm run verify:workflows
           npm run verify:policies
           node scripts/verify-blind-review-browser.cjs
+          node scripts/verify-mt-mobile-site.cjs
 
   source-provenance:
     # Development-source provenance only. Independent tag-release gates stay separate.
