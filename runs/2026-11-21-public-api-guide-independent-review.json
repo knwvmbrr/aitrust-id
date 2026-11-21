@@ -1,0 +1,55 @@
+{
+  "schema": "aitrust-public-guide-integration-review-1",
+  "pass": true,
+  "captured_at": "2026-11-21T20:16:40.126998+00:00",
+  "reviewed_by": "/root/seo",
+  "review_scope": "Read-only public API guide, reviewed operator integration, CI safe commands and exact source/evidence bindings",
+  "reviewed_source_sha256": {
+    "deploy/ai-tools/activate.py": "13736abf6b0c3b63a509aef1611d0e3663ed7b8320519407a0713b016c00a7c5",
+    "deploy/ai-tools/activation-plan.md": "28875ee893989f85ebf5a3585a184205ea0bb2c541e67b3f4bc14c040c17879f",
+    "deploy/ai-tools/test_isolation.py": "7d9fbc0a7c3cc061207d4786c19d15077ba370c12a332ffd5d76c600e48bc720",
+    "deploy/ai-tools/verify-isolation.py": "11478ac83b004d74170e9eb46506b71de91e764f0f98950a973b50d2d0033c5f",
+    "tests/test_ai_tools_activation.py": "bbbe8460da217dfa1c4194e4a7a8fdb84b6679c63e283eba6aef644fa9245129",
+    ".github/workflows/ai-tools.yml": "fca4879b77eacaf8a26387b8aab4ab87f805e5d1d10ba9223f7466660bcb9665",
+    "deploy/ai-tools/README.md": "b49cb665c9919f96e80e835891f8657b3fbca514402a29d852af09f25e27d5b3",
+    "docs/remote-ai-connections.md": "0632e4155dd00ad0807615bf0cf11180a7e5ca3122132f931fd12daab4a5c77f",
+    "site/scripts/render-reference.mjs": "842892ef602e0a26e84c28c4d3518a0da96ed87b7538cb1ef234c95ed81aace9",
+    "docs/remote-tag-connectors.md": "6ce7f8bb10c33d19c5357fdbad1061a842793dfa3615686dcf35732187e0c6ce"
+  },
+  "source_stable": true,
+  "finite_inventory_sources": 1656,
+  "finite_inventory_matches_twice": true,
+  "original_nine_delta_receipt": {
+    "path": "runs/2026-11-21-public-api-guide-source-review.json",
+    "sha256": "2a2145c48a55c8ce8db60019fa5ca2fa2958820044dcff4aaea85f9a5e4d75d9"
+  },
+  "legacy_copy_correction": {
+    "path": "runs/2026-11-21-api-legacy-guide-correction.json",
+    "sha256": "b6891c5e9bf64bad0c3abf8556c94f408b25a0410d35742902c586e5822f271a"
+  },
+  "deployment_review_sha256": "a7e0e04017885e7fb78bd85c85636cd4e0493e97655c7604645d94bdab648705",
+  "protocol_receipt": {
+    "relative_private_path": "output/coordination/public-guide-protocol.json",
+    "sha256": "0b8229f25672e10a2e5154172703cbdd142b2e4c66d6dee55745d26f8b333983",
+    "commands_passed": 61,
+    "reexecuted_by_reviewer": false
+  },
+  "checked": [
+    "Exact public provider MCP/ordinary JSON URLs and NoAuth, with no credentials in prompts/URLs.",
+    "Selected-text remote disclosure, provider connection metadata, local alternatives, no host-account approval or tag/safety/truth/origin clearance.",
+    "Per-tag Unavailable and Partial preserved; remotePII unavailable and no broader planned-tag support claimed.",
+    "Static generated guide has no automatic data submission, input form or remote connection.",
+    "Guide/renderer bytes equal author8a590d; operator bytes equal reviewed879e546; runtime remains b656.",
+    "CI diff adds only inert16activation+3isolation unittest commands; permissions/pins/credentials posture unchanged, no privileged activation command.",
+    "Legacy linked implementation guide corrected to public availability with operational record and selfhosting versus provider-account distinction.",
+    "All nine finite reviewed files plus corrected legacy guide stable; current inventory exact twice; prior actual deployment proof copies hash-identical."
+  ],
+  "actionable_findings": [],
+  "limits": [
+    "No functional tests, new network requests, browser, privileged operation, service/proxy or dependency changes by reviewer.",
+    "Protocol61PASS is independently source/evidence-inspected parent execution, not a reviewer rerun.",
+    "New guide actual build/protected publication/live bytes remain parent work; source review does not establish them.",
+    "Official OpenAI/Anthropic documentation retrieval is parent-provided; reviewer did not refetch or test provider-account UI.",
+    "No original completion counters/criteria changed; all remaining69 originals and independent/human/legal gates retained."
+  ]
+}

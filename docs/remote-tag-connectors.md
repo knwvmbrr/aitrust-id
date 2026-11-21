@@ -1,6 +1,8 @@
 # Connect an AI host to AI Trust ID
 
-This remote connector is runnable software, not a currently published service or an activated ChatGPT/Claude connection. It offers the existing PS development command-pattern check over standard MCP Streamable HTTP and an ordinary JSON API. Any compatible host can use the same protocol. No model-provider key is needed by this server.
+This implementation powers the published anonymous PS development service at `https://vps-18ef1326.vps.ovh.us`. To connect to the hosted service, follow [Connect your AI application](remote-ai-connections.md); its MCP URL is `https://vps-18ef1326.vps.ovh.us/mcp`. [Actual deployment evidence](../runs/2026-11-21-public-api-connection-operational.json) records trusted HTTPS and official MCP discovery/PS operation on November 21, 2026. ChatGPT/Claude account registration and provider approval are not claimed.
+
+The instructions below also support running your own instance. It offers the existing PS development command-pattern check over standard MCP Streamable HTTP and an ordinary JSON API. Any compatible host can use the same protocol. No model-provider key is needed by this server.
 
 **A finding means a supported command pattern was observed. No finding is not a safety clearance.** The server does not establish scams, intent, truth or AI authorship. Personal checks stay free and open. The remote connector does not provide PII redaction: a requested `PII_REDACTED` check is explicitly Unavailable, and it never contacts your local gateway.
 
@@ -51,7 +53,7 @@ GET/DELETE on `/mcp` return405; there is no session, event history, resumable st
 
 ## ChatGPT, Claude and other hosts
 
-After an operator has deployed and verified the HTTPS service, use **that actual approved `/mcp` URL**, not the local8790 address. These instructions do not claim an already registered app or public URL.
+For the published service, use **`https://vps-18ef1326.vps.ovh.us/mcp`**. For your own instance, first deploy and verify HTTPS, then use that instance's actual approved `/mcp` URL, not the local8790 address. A public endpoint does not establish an installed ChatGPT/Claude account connection or a provider-approved app.
 
 - **ChatGPT:** use its supported custom/remote MCP connection flow, choose NoAuth for this profile, and review the two read-only tools and the selected-text disclosure. Host plans/workspace permissions and administrator approval can restrict availability. The [official guide](https://developers.openai.com/api/docs/guides/custom-mcp-server) describes current supported remote transports. A local stdio entry alone does not connect ChatGPT web.
 - **Anthropic:** the [Messages API MCP connector](https://platform.claude.com/docs/en/agents-and-tools/mcp-connector) accepts a remotely reachable HTTP server; configure the actual approved URL and allowed tools using its current version-specific connector format. Claude product UI and account/workspace availability are separate from Messages API support; follow the host's actual remote-connector flow. No Anthropic credential is entered into this tool server.

@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-203113-public-guide-website-complete-1ea8010f
+
+Recorded 2026-11-21T20:31:13.579986+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Completed the finished API-guide website execution and exercised its actual rendered curl example against the public service.
+- **Evidence.** All 59 website commands passed with source identity unchanged. The rendered sample produced a live PS FINDING without echoing its invented input; exact protocol and unchanged personal/extension evidence remain separate. [Change record](./runs/changes/2026-11-21-203113-public-guide-website-complete-1ea8010f.json).
+- **Not claimed.** These are engineering and one operational example, not independent accuracy, provider-account installation or an original closure. Protected source and verified public guide deployment follow.
+
+
+### 2026-11-21-201750-api-guide-independent-review-e4d80a5a
+
+Recorded 2026-11-21T20:17:50.707117+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Completed distinct review of the corrected API connection guide, public operator handoff and CI registration before website publication.
+- **Evidence.** The separate reviewer matched all 1656 source inventory entries and linked guide/operator/runtime identities, reviewed the actual 61-command source-bound receipt and cleared the corrected availability wording. [Change record](./runs/changes/2026-11-21-201750-api-guide-independent-review-e4d80a5a.json).
+- **Not claimed.** Read-only integration review did not rerun functional or network checks and does not grant independent accuracy. Website execution and protected public guide delivery still follow; all 69 original requirements remain open.
+
+
+### 2026-11-21-201620-sixty-open-audit-reconciled-77e74866
+
+Recorded 2026-11-21T20:16:20.087551+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Reconciled the full 69-original acceptance audit into the current delivery board.
+- **Evidence.** The task-list lead retained each full criterion and identity, found zero currently autonomous full-original closures and documented concrete remaining gates. The 60 target is explicitly unmet. [Change record](./runs/changes/2026-11-21-201620-sixty-open-audit-reconciled-77e74866.json).
+- **Not claimed.** This audit does not replace missing people, adoption, operating evidence or software; no original percentages or criteria changed.
+
+
+### 2026-11-21-201545-api-legacy-guide-correction-7acc703e
+
+Recorded 2026-11-21T20:15:45.394517+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Corrected the linked legacy connector guide that still described the deployed service as unpublished.
+- **Evidence.** The implementation guide now points to the actual HTTPS/MCP service, dated operational evidence and the user connection guide, while preserving self-hosting and provider-account distinctions. [Change record](./runs/changes/2026-11-21-201545-api-legacy-guide-correction-7acc703e.json).
+- **Not claimed.** No runtime or permission change, provider-account installation, provider endorsement or independent tag validation. The prior finite review is preserved and this exact corrected source is recorded separately.
+
+
 ### 2026-11-21-201232-autonomous-original-closure-audit-d43b55b3
 
 Recorded 2026-11-21T20:12:32.887461+00:00 · Contributor: Codex /root/seo task-list lead · change

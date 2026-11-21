@@ -5,6 +5,10 @@ requiring9 new full original closures. No closure is credited merely for a
 software component, a passing check or publication. Earlier dated session
 baselines remain historical and are not evidence of progress in this wave.
 
+The task-list lead completed [the full69 audit](nov21-autonomous-closure-audit.json):
+no further full original is currently autonomous under its unchanged acceptance.
+The60 target is not met; useful software work continues without a false closure.
+
 Root owns finished API-guide publication. The task-list lead audits all69 full
 contracts for genuinely autonomous closures. Separate MT and image/provenance
 workers implement bounded capabilities independently; their work does not grant

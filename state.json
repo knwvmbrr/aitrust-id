@@ -1199,8 +1199,8 @@
     "PS": "runs/2026-11-21-maintenance-final-PS.json",
     "PII_REDACTED": "runs/2026-11-21-maintenance-final-PII_REDACTED.json",
     "extension": "runs/2026-11-21-maintenance-final-extension.json",
-    "protocol": "runs/2026-11-21-api-core-final-protocol.json",
-    "website": "runs/2026-11-21-api-core-final-website.json",
+    "protocol": "runs/2026-11-21-public-guide-protocol.json",
+    "website": "runs/2026-11-21-public-guide-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
@@ -4808,5 +4808,18 @@
     "distinct_review": "runs/2026-11-21-api-deployment-independent-review.json",
     "data_flow_policy_version": "1.14",
     "independent_accuracy_validated": false
+  },
+  "current_sixty_open_wave": {
+    "baseline_complete": 133,
+    "baseline_open": 69,
+    "target_open": 60,
+    "actual_new_original_closures": 0,
+    "audit": "docs/nov21-autonomous-closure-audit.json",
+    "guide_source_independent_review": "runs/2026-11-21-public-api-guide-independent-review.json",
+    "guide_actual_publication_pending": true,
+    "MT_additive_independent_candidate": "9fef71ae5aa4b8be1e594a083f5ca13961719cd7",
+    "MT_candidate_not_integrated_or_released": true,
+    "guide_website_execution": "runs/2026-11-21-public-guide-website.json",
+    "guide_rendered_example_execution": "runs/2026-11-21-public-guide-rendered-example.json"
   }
 }
