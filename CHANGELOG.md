@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-063631-android-optional-retention-copy-4a6cbb28
+
+Recorded 2026-11-21T06:36:31.830021+00:00 · Contributor: Codex · change
+
+- **Changed.** Clarify optional framework draft retention in Android privacy copy without changing lifecycle logic.
+- **Evidence.** Exactly one fixed string literal changed; every other activity byte matches the reviewed 73-control logic snapshot. [Change record](./runs/changes/2026-11-21-063631-android-optional-retention-copy-4a6cbb28.json).
+- **Not claimed.** No broad logic rerun or actual current default APK result is claimed by this copy check; default configuration/HOME runtime and physical/human/full-original acceptance remain pending.
+
+
 ### 2026-11-21-063412-android-configuration-only-draft-handoff-a73fe2c2
 
 Recorded 2026-11-21T06:34:12.437519+00:00 · Contributor: Codex · change

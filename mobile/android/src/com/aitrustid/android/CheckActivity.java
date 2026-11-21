@@ -71,7 +71,7 @@ public final class CheckActivity extends Activity {
             if(proposed.codePointCount(0,proposed.length())>ShareSession.MAX_CODEPOINTS){status.setText("Keep the text under 20,001 characters. The extra text was not added.");return "";}return null;
         }});
         column.addView(editor,new LinearLayout.LayoutParams(-1,dp(180)));
-        TextView privacy=text("Stays on this device. Leaving this screen clears text and results. A display rebuild keeps review text; tap Check again for a result.",14);privacy.setTextColor(color(R.color.muted));column.addView(privacy);
+        TextView privacy=text("Stays on this device. Screen changes can keep your draft. Leaving clears text and results. Tap Check for a new result.",14);privacy.setTextColor(color(R.color.muted));column.addView(privacy);
         LinearLayout actions=new LinearLayout(this);actions.setOrientation(LinearLayout.HORIZONTAL);
         check=button("Check PS",R.id.check);Button clear=button("Clear",R.id.clear);cancel=button("Cancel check",R.id.cancel);
         actions.addView(check,new LinearLayout.LayoutParams(0,-2,1));actions.addView(clear,new LinearLayout.LayoutParams(0,-2,1));column.addView(actions);

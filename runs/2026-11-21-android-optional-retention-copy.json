@@ -1,0 +1,20 @@
+{
+  "format": "ai-trust-id-android-privacy-copy-only/v1",
+  "recorded_at": "2026-11-21T06:36:31.736546+00:00",
+  "pass": true,
+  "logic_source_commit": "8e3a7eebdfe47b3d0e6cbab8ac4b2cc80bb03ca8",
+  "activity_before_sha256": "33024ad9fc922df115569255cc7cd8d4e80ce76b06f10507f915dc1bc4e814e9",
+  "activity_after_sha256": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+  "exact_one_string_literal_changed": true,
+  "all_other_activity_bytes_identical": true,
+  "requested_copy": "Stays on this device. Screen changes can keep your draft. Leaving clears text and results. Tap Check for a new result.",
+  "reason": "Framework nonconfiguration retention is optional; avoid an unconditional draft-retention promise.",
+  "logic_controls": {
+    "path": "runs/2026-11-21-android-configuration-handoff-controls.json",
+    "sha256": "a0a1de33db9fad0b24f9ea99ad020064f8f406e7b8e5e029e252d0914272e3e6",
+    "tests": 73,
+    "copy_only_no_broad_repeat": true
+  },
+  "current_default_apk_build_runtime_pending": true,
+  "full_requirement_closure": false
+}

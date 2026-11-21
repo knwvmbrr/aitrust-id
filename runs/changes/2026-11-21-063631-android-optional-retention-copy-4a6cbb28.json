@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-063631-android-optional-retention-copy-4a6cbb28",
+  "recorded_at": "2026-11-21T06:36:31.830021+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8e3a7eebdfe47b3d0e6cbab8ac4b2cc80bb03ca8",
+  "changed": "Clarify optional framework draft retention in Android privacy copy without changing lifecycle logic.",
+  "proves": "Exactly one fixed string literal changed; every other activity byte matches the reviewed 73-control logic snapshot.",
+  "limits": "No broad logic rerun or actual current default APK result is claimed by this copy check; default configuration/HOME runtime and physical/human/full-original acceptance remain pending.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+    "runs/2026-11-21-android-optional-retention-copy.json": "5c995a57e3c3f0a53a83f86f373dbcf804b3adf3261c21e98b2e7a5186cac593"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-optional-retention-copy.json",
+      "sha256": "5c995a57e3c3f0a53a83f86f373dbcf804b3adf3261c21e98b2e7a5186cac593"
+    }
+  ],
+  "checks": []
+}
