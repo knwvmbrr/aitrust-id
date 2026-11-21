@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-203337-publish-png-development-review-eb855388
+
+Recorded 2026-11-21T20:33:37.628171+00:00 · Contributor: Codex /root/web_camo image evidence engineer · change
+
+- **Changed.** Added the exact independent corrected PNG cleanup review and explicit experimental branch setup instructions for the downloadable development CLI.
+- **Evidence.** The three reviewed runtime, CLI and test hashes still match; copied review bytes retain SHA63f55a0db1f7abfd673e724b4d249301ec24d47ec7e071b8e2ce43f4bde59169. No runtime change or unchanged test rerun. [Change record](./runs/changes/2026-11-21-203337-publish-png-development-review-eb855388.json).
+- **Not claimed.** Development branch publication only; no main, website, tag catalogue, FA/PA/F-155 closure, AI-origin verification, independent accuracy or broad PNG support claim. Explicit JSON hashes can link private images.
+
+
 ### 2026-11-21-202852-png-worker-reaped-ownership-11d204c7
 
 Recorded 2026-11-21T20:28:52.301763+00:00 · Contributor: Codex /root/web_camo image evidence engineer · change

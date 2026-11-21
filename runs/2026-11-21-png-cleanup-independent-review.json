@@ -1,0 +1,46 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T20:28:58.202531+00:00",
+  "kind": "PNG_owned_worker_cleanup_corrected_independent_review",
+  "source_base": "0301ddf6ae5a99339f2c400a670afb9b245b73f8",
+  "source_sha256": {
+    "tools/png_metadata.py": "addd35028617f2d5c2cd01dc19106cec9946686cfe35139beb923af3973d6994",
+    "scripts/inspect-png-metadata.py": "dd84cec16b2069c525cdfb7efb723f63e8b4643e9a846cf98902f9acd34f60d8",
+    "tests/test_png_metadata.py": "dfb46aec2bec91ad3b2e042aa6a6759c79b3f83f0b18a2041832818e8957bdd1",
+    "docs/png-metadata-plan.md": "4dbfc9c6680daea121d9072cf009f815b69d371f70edeb89c9ea2f3d4159d9c3",
+    "docs/png-metadata.md": "98563fb09664485e4cf2c556500cad5784fa16b847ae5b26d20b1c05d3077ff1"
+  },
+  "source_stable": true,
+  "historical_failure_sha256": "d0f5a4b9b6a7ab6207d24eaf5e4f5c5c1598eb2b6cf358fe3cb9d48064d2105a",
+  "author_current_cli_receipt": {
+    "path": "runs/2026-11-21-png-metadata-cleanup-corrected-cli.json",
+    "sha256": "0b6df0c34bdbf3f53979a3eabe21b74208e7ca0611efeed19fb8b7ece2ff71e7",
+    "runtime_CLI_tests_bindings_match": true,
+    "plan_postexecution_prose_change": true
+  },
+  "actual_focused_controls": [
+    {
+      "case": "actual_completed_worker_postwait_OSError",
+      "pass": true,
+      "reaped_returncode": 0,
+      "group_kill_attempted": false
+    },
+    {
+      "case": "actual_normal_owned_worker",
+      "pass": true,
+      "exact_asset_digest": true,
+      "state": "OBSERVED",
+      "tags": []
+    }
+  ],
+  "source_review": [
+    "Known-reaped child returncode guard prevents cleanup signaling reused numeric process group.",
+    "No change to input, output, worker or inflate limits; normal worker and private fixed-error handling preserved.",
+    "Bounded PNG observations with opaque section counts are distinct from C2PA, watermark, origin, authorship or truth verification."
+  ],
+  "limits": [
+    "Two synthetic actual owned worker controls only, no full13 suite/browser/network/model/tool install.",
+    "Initial review harness required all execution-time docs to equal current and stopped before worker execution; author correctly disclosed later plan prose update.",
+    "No independent detector accuracy, unrestricted PNG support, image tag issuance or original requirement closure."
+  ]
+}

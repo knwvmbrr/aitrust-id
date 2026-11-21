@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-203337-publish-png-development-review-eb855388",
+  "recorded_at": "2026-11-21T20:33:37.628171+00:00",
+  "author": "Codex /root/web_camo image evidence engineer",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "61bbb13c6e75ffd9cdc096dfe0d01caecc69e727",
+  "changed": "Added the exact independent corrected PNG cleanup review and explicit experimental branch setup instructions for the downloadable development CLI.",
+  "proves": "The three reviewed runtime, CLI and test hashes still match; copied review bytes retain SHA63f55a0db1f7abfd673e724b4d249301ec24d47ec7e071b8e2ce43f4bde59169. No runtime change or unchanged test rerun.",
+  "limits": "Development branch publication only; no main, website, tag catalogue, FA/PA/F-155 closure, AI-origin verification, independent accuracy or broad PNG support claim. Explicit JSON hashes can link private images.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA",
+    "F-155"
+  ],
+  "files": {
+    "docs/png-metadata.md": "3d3896dcd402c809c5416c761660fb476b71896895fad0f1e79837243eb52d5a",
+    "runs/2026-11-21-png-cleanup-independent-review.json": "63f55a0db1f7abfd673e724b4d249301ec24d47ec7e071b8e2ce43f4bde59169"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-png-cleanup-independent-review.json",
+      "sha256": "63f55a0db1f7abfd673e724b4d249301ec24d47ec7e071b8e2ce43f4bde59169"
+    },
+    {
+      "path": "runs/2026-11-21-png-metadata-cleanup-corrected-cli.json",
+      "sha256": "0b6df0c34bdbf3f53979a3eabe21b74208e7ca0611efeed19fb8b7ece2ff71e7"
+    }
+  ],
+  "checks": []
+}

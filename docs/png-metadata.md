@@ -1,11 +1,22 @@
 # Read a PNG without sharing its stored text
 
+**Experimental development CLI.** Available on the
+`codex/image-metadata-boundary` branch. It is not integrated into main or the
+website and does not release an image tag.
+
 This local reader shows image dimensions and the kinds of metadata sections
 stored in a PNG. It does not upload the file. Names, comments, GPS, URLs and
 other embedded values stay out of its output. The original image is not changed
 or scrubbed: it can still contain identifying information.
 
-From the repository root, on macOS or Linux with Python 3.12 or later:
+To try the isolated development source:
+
+```sh
+git clone --branch codex/image-metadata-boundary --single-branch https://github.com/knwvmbrr/aitrust-id.git aitrust-id-png-preview
+cd aitrust-id-png-preview
+```
+
+From that repository root, on macOS or Linux with Python 3.12 or later:
 
 ```sh
 python3 -I -S -B scripts/inspect-png-metadata.py --image /absolute/path/to/image.png
