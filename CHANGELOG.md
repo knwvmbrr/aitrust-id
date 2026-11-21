@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-201403-public-guide-protocol-complete-9181b337
+
+Recorded 2026-11-21T20:14:03.142530+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Completed fresh frozen-source protocol execution and the newly registered API operator controls after the guide implementation batch.
+- **Evidence.** All 61 declared protocol commands completed with unchanged source identity; 16 activation and 3 isolation-verifier controls passed without privileged mutations. [Change record](./runs/changes/2026-11-21-201403-public-guide-protocol-complete-9181b337.json).
+- **Not claimed.** This is engineering execution for publication, not independent detector accuracy or a full original closure. Website execution and actual guide publication remain pending.
+
+
+### 2026-11-21-201103-api-guide-source-freeze-1cb3f2f0
+
+Recorded 2026-11-21T20:11:03.338387+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Bound the finished public API guide and reviewed deployment operator source to the current finite route inventory.
+- **Evidence.** Exactly five operator/control files were added and four declared guide/workflow files changed; no existing detector or installed-extension runtime changed. Author and distinct deployment source reviews remain linked. [Change record](./runs/changes/2026-11-21-201103-api-guide-source-freeze-1cb3f2f0.json).
+- **Not claimed.** Finite source identity is not execution, protected publication, provider-account setup, independent accuracy or a full original closure. Fresh affected capability execution follows this source freeze.
+
+
+### 2026-11-21-201024-sixty-open-wave-dispatched-f8ee5331
+
+Recorded 2026-11-21T20:10:24.255092+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Started the requested 69-to-60 execution wave with root publication and three actual independent worker assignments.
+- **Evidence.** The dated dispatch observation confirms all three assigned specialists running. The board preserves baseline 133 complete and 69 open, target nine full closures, and all historical acceptance. [Change record](./runs/changes/2026-11-21-201024-sixty-open-wave-dispatched-f8ee5331.json).
+- **Not claimed.** No original closure is credited at dispatch. Owner, independent-human and platform gates remain open, and running workers are not completed outcomes.
+
+
+### 2026-11-21-200828-google-verification-protected-source-bdcf037d
+
+Recorded 2026-11-21T20:08:28.393707+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Completed the protected Google verification-file source merge and reconciled the actual merged status into delivery documents.
+- **Evidence.** PR 144 passed all 11 required checks and merged as ee8db51; the existing verification file remains included in this candidate. [Change record](./runs/changes/2026-11-21-200828-google-verification-protected-source-bdcf037d.json).
+- **Not claimed.** Detector release gates remain unmet. Search Console indexing is confirmed only for inspected URLs; no original requirement closes from publication.
+
+
 ### 2026-11-21-193957-google-verification-reviewed-payload-8377c5d8
 
 Recorded 2026-11-21T19:39:57.552918+00:00 · Contributor: Codex /root reviewer; /root/seo publication engineer · change

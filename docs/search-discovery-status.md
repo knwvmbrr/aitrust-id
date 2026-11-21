@@ -32,9 +32,10 @@ describes supported same-domain verification redirects. The actual successful
 Google verification, rather than the redirect alone, establishes ownership.
 
 The file is live from reviewed commit `226fa6bf19c06fd4e3e360c98e0b3625c8e3c640`;
-[source PR #144](https://github.com/knwvmbrr/aitrust-id/pull/144) remains subject
-to normal protected checks. This record does not claim a source merge, broad
-index coverage, independent detector accuracy or a full original closure.
+[source PR #144](https://github.com/knwvmbrr/aitrust-id/pull/144) passed all 11
+required protected checks and was merged as `ee8db51`. Independent detector
+release gates remain separate and unmet. This does not claim broad index
+coverage, independent detector accuracy or a full original closure.
 
 ## Earlier observations — historical snapshots
 

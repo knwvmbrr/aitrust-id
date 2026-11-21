@@ -1,0 +1,50 @@
+{
+  "captured_at": "2026-11-21T20:14:03.045098+00:00",
+  "performed_by": "Codex /root",
+  "kind": "actual_focused_operator_controls_after_implementation",
+  "pass": true,
+  "commands": [
+    {
+      "argv": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ai_tools_activation.py",
+        "-v"
+      ],
+      "exit": 0,
+      "passed": 16
+    },
+    {
+      "argv": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "deploy/ai-tools",
+        "-p",
+        "test_isolation.py",
+        "-v"
+      ],
+      "exit": 0,
+      "passed": 3
+    }
+  ],
+  "sources": {
+    "tests/test_ai_tools_activation.py": "bbbe8460da217dfa1c4194e4a7a8fdb84b6679c63e283eba6aef644fa9245129",
+    "deploy/ai-tools/test_isolation.py": "7d9fbc0a7c3cc061207d4786c19d15077ba370c12a332ffd5d76c600e48bc720",
+    "deploy/ai-tools/activate.py": "13736abf6b0c3b63a509aef1611d0e3663ed7b8320519407a0713b016c00a7c5",
+    "deploy/ai-tools/verify-isolation.py": "11478ac83b004d74170e9eb46506b71de91e764f0f98950a973b50d2d0033c5f",
+    ".github/workflows/ai-tools.yml": "fca4879b77eacaf8a26387b8aab4ab87f805e5d1d10ba9223f7466660bcb9665"
+  },
+  "privileged_service_or_firewall_mutations_performed": false,
+  "independent_accuracy_granted": false,
+  "original_closures": 0
+}

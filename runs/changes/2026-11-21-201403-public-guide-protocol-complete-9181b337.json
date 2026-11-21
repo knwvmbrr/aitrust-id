@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-201403-public-guide-protocol-complete-9181b337",
+  "recorded_at": "2026-11-21T20:14:03.142530+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8a10ef3122975009f05121fd856e3e1356ea8ead",
+  "changed": "Completed fresh frozen-source protocol execution and the newly registered API operator controls after the guide implementation batch.",
+  "proves": "All 61 declared protocol commands completed with unchanged source identity; 16 activation and 3 isolation-verifier controls passed without privileged mutations.",
+  "limits": "This is engineering execution for publication, not independent detector accuracy or a full original closure. Website execution and actual guide publication remain pending.",
+  "scope_ids": [
+    "WP-INTEGRATIONS",
+    "WP-SITE"
+  ],
+  "files": {
+    "runs/2026-11-21-public-guide-protocol.json": "0b8229f25672e10a2e5154172703cbdd142b2e4c66d6dee55745d26f8b333983",
+    "runs/2026-11-21-api-operator-focused-controls.json": "aa6396eae7857991e82370286b1fd24a27b245f5eb11f47c79a6c2457a34b2a3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-public-guide-protocol.json",
+      "sha256": "0b8229f25672e10a2e5154172703cbdd142b2e4c66d6dee55745d26f8b333983"
+    },
+    {
+      "path": "runs/2026-11-21-api-operator-focused-controls.json",
+      "sha256": "aa6396eae7857991e82370286b1fd24a27b245f5eb11f47c79a6c2457a34b2a3"
+    }
+  ],
+  "checks": []
+}
