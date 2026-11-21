@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-160512-preserve-readable-scope-encoding-99c025e8
+
+Recorded 2026-11-21T16:05:12.094888+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Retained existing readable Unicode serialization in the updated machine-readable scope, board and state.
+- **Evidence.** The same202 immutable original identities and original acceptance hash still verify at133 complete69 open; reduces unrelated formatting churn. [Change record](./runs/changes/2026-11-21-160512-preserve-readable-scope-encoding-99c025e8.json).
+- **Not claimed.** Encoding only; no additional requirement completion, source behavior or public delivery.
+
+
+### 2026-11-21-160447-close-live-dom-capture-original-c157b50e
+
+Recorded 2026-11-21T16:04:47.207422+00:00 · Contributor: Codex /root; distinct original acceptance reviewer /root/seo · change
+
+- **Changed.** Closed the full accepted F030 DOM alternative from actual installed Chrome lifecycle evidence, preserved prior acceptance and stream limits, updated133/69 accounting, and registered the implemented remote MCP verifier in its dedicated CI job.
+- **Evidence.** Distinct source-bound acceptance and exact original baseline accounting pass; live browser attachment, honest outage, recovery and final pause work. Dedicated CI now executes remote HTTP/MCP controls instead of relying on local stdio checks. [Change record](./runs/changes/2026-11-21-160447-close-live-dom-capture-original-c157b50e.json).
+- **Not claimed.** Target60 still needs9 full original closures. Remote public activation and hosted CI remain pending; N010 human/commercial gates and independent tag accuracy remain open. No other original is closed.
+
+
 ### 2026-11-21-154123-remote-proxy-reviewed-linux-proof-85907b44
 
 Recorded 2026-11-21T15:41:23.855883+00:00 · Contributor: Codex API deployment engineer · change

@@ -5,7 +5,10 @@ on:
   pull_request:
     paths:
       - 'tools/tag_api.py'
+      - 'tools/remote_tag_server.py'
       - 'scripts/*ai-tools*'
+      - 'scripts/remote-tag-server.py'
+      - 'scripts/verify-remote-tag-server.py'
       - 'scripts/tag-api.py'
       - 'scripts/check-tags.py'
       - 'scripts/check-ps.py'
@@ -14,6 +17,8 @@ on:
       - 'services/evaluator/app.py'
       - 'integrations/**'
       - 'tests/test_ai_*.py'
+      - 'tests/test_remote_tag_server.py'
+      - 'deploy/ai-tools/**'
       - '.github/workflows/ai-tools.yml'
   workflow_dispatch:
 permissions:
@@ -30,10 +35,14 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install --require-hashes -r integrations/mcp/requirements.lock
+      - run: mkdir -p output/verification
       - run: python scripts/verify-ai-tools.py --output output/verification/ai-tools-linux.json
+      - run: python -B scripts/verify-remote-tag-server.py --output output/verification/remote-tag-server-linux.json
       - uses: actions/upload-artifact@v4
         with:
           name: ai-tools-linux-software-proof
-          path: output/verification/ai-tools-linux.json
+          path: |
+            output/verification/ai-tools-linux.json
+            output/verification/remote-tag-server-linux.json
           retention-days: 7
           if-no-files-found: error

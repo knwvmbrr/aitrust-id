@@ -1,12 +1,16 @@
 # Current original-closure wave
 
-Updated 2026-11-21T14:33:27.554593+00:00. **132 complete / 70 open; target 60 not met.**
+**133 complete /69 open; target60 needs9 further full original closures.**
 
-The next full-original candidates are F-030 (actual supported DOM capture) and N-010 (owned per-tenant private policy operation), with their complete historical criteria preserved. Root verified that Chrome UI access is restored, but checks are disabled, no gateway key is selected, and the local gateway is unavailable. The existing remote staging service is unsigned and differs from current service source; it cannot silently substitute. Skip this configuration gate while the independent policy implementation proceeds.
+F030 is now100% for the expressly selected completed-response DOM replacement. Actual installed Chrome displayed compact PS and PII beneath the existing public Homebrew answer, opened the brief PS panel, replaced stale findings with Unavailable during a real temporary gateway outage, recovered on that same response, and ended with capture paused. The distinct reviewer checked the unchanged original acceptance. Fetch/tee remains inactive and unverified; independent detector accuracy, outside-user and human accessibility gates remain separate.
 
-`/root/share_debugger` owns the private policy implementation; `/root/seo` owns independent acceptance and execution review. `/root/web_camo` now implements the newly requested open HTTP/MCP connection for AI clients. The existing MCP tool is local stdio only, so web-client connection is real missing functionality, not a completed public endpoint. These are dated assignments, not permanent tag processes.
+[Actual live proof](../runs/2026-11-21-installed-live-capture-lifecycle.json) · [Distinct review](../runs/2026-11-21-f030-dom-replacement-independent-review.json) · [Accepted route and limits](f030-dom-replacement-result.md).
 
-[Architecture and risks](original-closure-wave-nov21.md). No original closure or extra finished task is recorded from this plan.
+The governed organization-policy software has actual Mac/Linux controls and independent review. N010 stays open because human operation and full commercial conformance are retained requirements. No other original was closed or weakened.
+
+Current bounded assignments: `/root/web_camo` activates the new dedicated HTTP/MCP namespace after source and isolation review; `/root/share_debugger` prepares its approachable website connection guide and versioned privacy terms; `/root/seo` reviews actual acceptance and deployment evidence. Root owns shared integration, scope/changelog and protected publication. Existing local tools remain independent. These are dated assignments, not permanent background tag processes.
+
+## Preserved earlier dated snapshots
 
 # Independent maintenance review — 2026-11-21T11:31:36.349842+00:00
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-21T11:31:36.349842+00:00",
+  "audited_at": "2026-11-21T16:03:31.763400+00:00",
   "client_date": "2026-11-21",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -2658,39 +2658,50 @@
       "id": "F-030",
       "kind": "requirement",
       "title": "MV3 MAIN-world capture — fetch patch plus ReadableStream.tee()",
-      "percent_complete": 40,
+      "percent_complete": 100,
       "milestones_passed": [
         "bounded_contract",
-        "implemented_mechanism"
+        "implemented_mechanism",
+        "executable_checks",
+        "selected_integration",
+        "final_acceptance"
       ],
-      "audited_at": "2026-11-19T05:44:15.750347+00:00",
-      "checked_by": "Codex",
+      "audited_at": "2026-11-21T16:03:31.763400+00:00",
+      "checked_by": "Codex /root/seo distinct acceptance review",
       "implemented_by": [
         "Codex — prior session/run attribution",
         "Codex — bounded inactive developer observer and original prototype retirement, 2026-10-13",
-        "Codex stream observer lane — handled CRLF split at the line limit with exact host-response preservation controls, 2026-11-17T22:21:46.286300+00:00"
+        "Codex stream observer lane — handled CRLF split at the line limit with exact host-response preservation controls, 2026-11-17T22:21:46.286300+00:00",
+        "Codex /root — selected existing DOM alternate and executed signed current-source live vendor lifecycle, 2026-11-21T16:03:31.763400+00:00"
       ],
       "planning_contributors": [
         "Codex — scope normalization and package contract"
       ],
-      "completed_by": [],
-      "completed_at": null,
-      "completion_timestamp_basis": null,
-      "next_fix": "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation.",
-      "next_owner": "Codex",
+      "completed_by": [
+        "Codex /root"
+      ],
+      "completed_at": "2026-11-21T16:03:31.763400+00:00",
+      "completion_timestamp_basis": "Actual current installed Chrome capture, outage/recovery and final pause independently reviewed at this audit.",
+      "next_fix": null,
+      "next_owner": null,
       "evidence": [
         "extension/src/main-world/stream-observer.mjs",
         "docs/stream-observer-plan.md",
         "tests/stream-observer.cjs",
         "runs/2026-10-08-browser-checks.json",
         "runs/2026-11-17-stream-crlf-boundary.json",
-        "docs/f030-live-stream-plan.md"
+        "docs/f030-live-stream-plan.md",
+        "runs/2026-11-21-installed-live-capture-lifecycle.json",
+        "runs/2026-11-21-f030-dom-replacement-independent-review.json",
+        "docs/f030-dom-replacement-result.md"
       ],
-      "evidence_scope": "The inactive synthetic observer now handles a CR/LF chunk split at the exact configured line limit, preserves host response bytes and refuses oversized or malformed framing. Live vendor capture or an accepted replacement remains pending. A fresh synthetic live response exposed a mixed-frame transport privacy boundary and source/DOM representation mismatch. No live stream hook, parser activation or new permission was enabled; a separate explicit opt-in remains required before observing mixed streams.",
-      "required_acceptance": [
+      "evidence_scope": "Full accepted F030 alternative: explicitly selected completed-response DOM adapter, actual installed-source live public Homebrew PS/PII attachment, short PS details, actual gateway outage without stale findings, recovery on same response and final paused capture. MAIN-world fetch/tee remains inactive and unverified. No independent detector accuracy, outside-user, broader vendor lifecycle or human accessibility conclusion.",
+      "required_acceptance": [],
+      "queue": "completed",
+      "completed_acceptance": [
         "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation."
       ],
-      "queue": "open"
+      "prior_next_fix": "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation."
     },
     {
       "id": "F-031",
