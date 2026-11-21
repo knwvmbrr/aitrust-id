@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-113519-maintenance-normal-artifacts-source-freeze-af3ee730",
+  "recorded_at": "2026-11-21T11:35:19.941461+00:00",
+  "author": "Codex /root integration; distinct engineering reviewers",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2995b5a6d7d4c4d2f677708d47849343c1bcaba3",
+  "changed": "Normal build now emits both exact selected runtime source deliveries and preserves native MT input; generated references and source metadata are frozen for final review and current-source checks.",
+  "proves": "Both normal postbuild five-runtime/three-artifact gates pass. Source offers are discoverable with and without JavaScript and absent from the automatic offline cache. The full original202 records remain132complete70open, scoped jobs19; all reviewed maintenance handoffs are finished.",
+  "limits": "Current capability execution, protected CI, actual112-test Android workflow and public maintenance verification remain required. No independent accuracy, physical device, full native/WASM obligations or original closure is claimed.",
+  "scope_ids": [
+    "T-MT",
+    "N-014",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".github/workflows/android-share.yml": "47c12e06829a5f13b27a84a7cc72546124a6a9259ca996a4dc8a02560aa2412b",
+    "docs/scope-progress.json": "e15e38624b1d5d00d30ae8a415843b9f148f96161057197a5420c64a4603cc6e",
+    "docs/scope-progress.md": "c1974218a03490db7c9e9c0cb3f47e38f778b5d4bd9ae2792ac1e4800efa6f25",
+    "docs/session-delivery-plan.md": "c63043950857393679735843462976e632c8e38a8bb7a7c699a0a3d0ddc98cb4",
+    "docs/session-delivery.json": "46cb759962dd80734c2d8eb8f240b9498143d2b242e6096b64781fe5be2f6a75",
+    "eval/revalidation.json": "266e60ec511a839e5d85f01f0d2b9c14b2ffa0e7bb4161613d9866dbb1c21fb0",
+    "scripts/verify-route-boundaries.py": "7302104b6e924df76a6df468f8eb1a6b43b9219f27c73647786e9bf87323711d",
+    "site/index.html": "11e729444de44d2d1b71ba5ea3de3bfec3c2372872965eddd3771854540ffe4a",
+    "site/public/reference/public-scope.json": "dc19ef46baf757cbbb520a6d0350bff75cda234736888b6213c20dfbe9b07fee",
+    "site/public/web-licenses/packages.json": "c79cdb3784f0726b1b202650fdf311d68262b80610e4fc891495842b6f7ebf28",
+    "site/public/web-licenses/web-runtime.spdx.json": "5fee9fc50c2d3c519ac4c5d5252aa9adf2dba1fa390274e2cbcf7d82ddf4d1a6",
+    "site/src/public-scope.json": "dc19ef46baf757cbbb520a6d0350bff75cda234736888b6213c20dfbe9b07fee",
+    "site/src/scope-manifest.json": "9445c97dff04cda8685885fd7b0be03a994f5f152aa6293bd70a299495b680b2",
+    "state.json": "284c97a410f308b4e6172cff8816f117af5c6c62aa31feaa91df986cdfef8eb2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-os-chooser-hosted-pass.json",
+      "sha256": "f14501d72a582ded798e081978d242e6a081c27029fd3ad88d31b0e1587f205b"
+    },
+    {
+      "path": "runs/2026-11-21-mt-input-retention-after.json",
+      "sha256": "ef89b7940149362eee23aa9c6fa3109143749a16afcfd8c37a91676a6f8b12ba"
+    },
+    {
+      "path": "runs/2026-11-21-js-export-owned-fd-corrected.json",
+      "sha256": "0caade71d3165db40328ee394810dc6bfd0a63ce2f41824db274671ebda7630a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/zlib-source-delivery.py",
+        "--check-built",
+        "site/dist"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T11:35:20.218642+00:00"
+    }
+  ]
+}

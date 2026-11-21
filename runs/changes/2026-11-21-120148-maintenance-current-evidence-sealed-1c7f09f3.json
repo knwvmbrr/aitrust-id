@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-120148-maintenance-current-evidence-sealed-1c7f09f3",
+  "recorded_at": "2026-11-21T12:01:48.710705+00:00",
+  "author": "Codex /root; independent inventory and source/runtime reviewers",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2995b5a6d7d4c4d2f677708d47849343c1bcaba3",
+  "changed": "Sealed all five passing current-source maintenance receipts and exact1486-source boundary binding after the isolated native-test capacity correction.",
+  "proves": "PS7, privacy6, extension14, protocol61 and website59 complete command receipts pass against current source. The original failed website receipt and narrow diagnosis remain immutable; all original202 criteria remain132complete70open and scoped19.",
+  "limits": "Protected checks, actual fresh112-test Android workflow and public maintenance verification still gate publication. No full tag, independent accuracy, physical/human or global distribution approval is claimed.",
+  "scope_ids": [
+    "T-MT",
+    "N-014",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "0a5aac43f50a2a2b4e53357698fac6f33c9a0c436e1eb9f4bdc13f415efb6221",
+    "state.json": "d718d74ab0bb7b488bce1d2042d2c50b4f2dc01276042effe694391fe0d416f2",
+    "runs/2026-11-21-maintenance-final-PS.json": "74359b1c622cf5a3a070375e85b7f924c9ecfec7762f70a1521846650470fa5b",
+    "runs/2026-11-21-maintenance-final-PII_REDACTED.json": "9a0052ab9c6d7080e00643526762b71547ac71b9d3684a4f991ab89d4771de93",
+    "runs/2026-11-21-maintenance-final-extension.json": "ed47acdea3cc98fbd000ce88fd359970928fcadc50ac5e8b79722801816be520",
+    "runs/2026-11-21-maintenance-final-protocol.json": "69802baa09a310dd0b5e1913c44e79cf160e156cac4437f0c4c8a50ed1e2f3e4",
+    "runs/2026-11-21-maintenance-final-website.json": "f9ad0b054af0aab6e65b8f41ade1a193458b486af07d3fabc89c288413fe44db"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-maintenance-final-website.json",
+      "sha256": "f9ad0b054af0aab6e65b8f41ade1a193458b486af07d3fabc89c288413fe44db"
+    },
+    {
+      "path": "runs/2026-11-21-maintenance-corrected-inventory-review.json",
+      "sha256": "8eb1772da2b4f5d1298de0cb70516e23356083a6f227d5f4e4ce72c9362f76b0"
+    }
+  ],
+  "checks": []
+}

@@ -618,7 +618,10 @@
         "scripts/zlib-source-delivery.py",
         "tests/test_zlib_source_delivery.py",
         "sbom/reviews/zlib-runtime/**/*",
-        "docs/zlib-source-delivery*.md"
+        "docs/zlib-source-delivery*.md",
+        "scripts/android-chooser-controls.py",
+        "tests/test_android_chooser_controls.py",
+        "docs/android-os-chooser-plan.md"
       ],
       "commands": [
         [
@@ -1004,6 +1007,7 @@
           "tests/test_hp_uncertainty_device.py",
           "tests/test_pyodide_js_sources.py",
           "tests/test_zlib_source_delivery.py",
+          "tests/test_android_chooser_controls.py",
           "-q"
         ],
         [

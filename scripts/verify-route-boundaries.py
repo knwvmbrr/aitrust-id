@@ -333,6 +333,8 @@ PATTERNS += ('tests/nf-browser-diagnostics.cjs', 'scripts/verify-nf-diagnostics.
 
 PATTERNS += ('tools/zlib_source_delivery.py', 'scripts/zlib-source-delivery.py', 'tests/test_zlib_source_delivery.py', 'sbom/reviews/zlib-runtime/**/*', 'docs/zlib-source-delivery*.md')
 
+PATTERNS += ('scripts/android-chooser-controls.py', 'tests/test_android_chooser_controls.py', 'docs/android-os-chooser-plan.md')
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:

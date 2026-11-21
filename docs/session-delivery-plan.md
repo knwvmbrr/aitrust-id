@@ -1,3 +1,13 @@
+# Independent maintenance review — 2026-11-21T11:31:36.349842+00:00
+
+The reviewed MT handoff preserves the whole native paste and refuses oversized text before analysis. The Android handoff exercises actual OS Share selection and cancellation in addition to the original/configuration/malformed controls. Exact embedded-library sources/notices and the selected-source export ownership repair also have separate actual controls and distinct reviews.
+
+**19 closed scoped jobs; 132 complete /70 open originals. No new original or scoped task is created by this maintenance. Goal60 remains NOT MET.** Current integrated, protected and public delivery status is recorded in `state.json` under `nov21_maintenance_delivery`, with exact receipts. These dated source-review observations do not pre-approve publication, independent accuracy, physical devices, humans or global license obligations.
+
+The worker handoffs are finished, not permanent background processes. Root owns final integration and publication. [Architecture and risks](maintenance-delivery-nov21.md) · [Original scope ledger](scope-progress.md).
+
+## Preserved earlier dated snapshots
+
 # Current public delivery — 2026-11-21T11:07:03.859569+00:00
 
 The optional HP uncertainty-word preview is now in the actual public HP modal, closed until opened. It keeps the selected passage on device, requires explicit context and issues no HP verdict. Selected Pyodide JavaScript source and exact MPL/MIT notices are now downloadable from About. Android's actual default APK passed the original7+configuration2 controls and9 malformed-Share/refusal/fresh-recovery pairs; its102 focused checks ran automatically against the protected source.

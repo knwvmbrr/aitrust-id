@@ -1,0 +1,41 @@
+{
+  "captured_at": "2026-11-21T11:47:22.297416+00:00",
+  "pass": true,
+  "kind": "synthetic_native_IO_capacity_isolation_correction",
+  "failed_capability_receipt": {
+    "path": "runs/2026-11-21-maintenance-website-capacity-failure.json",
+    "sha256": "aed9501dbbe27c80eb1bd6e44b8fc2bd6a4d0be6d700a66e88124d8f56b9b556",
+    "executed_commands": 28,
+    "last_command_exit": 1
+  },
+  "diagnostic": {
+    "exit": 1,
+    "stdout_sha256": "403309f490657e74643b276dd00f5a0a315b26faab5036b38c614b35d3696ba4",
+    "identified_exception": "Build capacity reserve reached",
+    "production_reserve_bytes": 2000000000,
+    "failure_free_bytes_exactly_captured": false
+  },
+  "correction": {
+    "file": "tests/test_ios_share_verifier.py",
+    "sha256": "0e453930ffb2e7f0c7e7bfbb7616fa7cf9a8a8995240764668e0ab82436bee34",
+    "synthetic_IO_capacity_explicit": true,
+    "actual_low_capacity_child_refused_and_reaped": true,
+    "cleanup_allowed_below_reserve": true,
+    "production_runner_unchanged_sha256": "e7ca30c5def781bb7920e9c404ff9d9132dbc7385c2a817117a8d373263e2cc4",
+    "production_reserve_reduced_or_disabled": false
+  },
+  "focused_actual": {
+    "tests_passed": 118,
+    "exit": 0,
+    "stdout_sha256": "178e00291ab6c1e1abe6c270315711352cc0ec354179824542a47b41765567dc"
+  },
+  "other_current_capabilities": {
+    "PS": true,
+    "PII_REDACTED": true,
+    "extension": true,
+    "protocol": true
+  },
+  "independent_accuracy_evidence": false,
+  "physical_phone_tested": false,
+  "new_original_closures": 0
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-113237-reviewed-maintenance-integration-before-build-74ebcfe1",
+  "recorded_at": "2026-11-21T11:32:37.436750+00:00",
+  "author": "Codex /root; independent MT Android and runtime workers/reviewers",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2995b5a6d7d4c4d2f677708d47849343c1bcaba3",
+  "changed": "Integrated real OS Sharesheet selection/cancellation controls, registered112 automatic Android focused checks and their two trigger paths, and refreshed scope/state with exact reviewed maintenance evidence.",
+  "proves": "The authored API36 run passed original7/configuration2/malformed9 pairs and two real chooser cases. Standalone MT and source-export corrected candidates have distinct actual controls and reviews. All202 originals and required criteria remain132complete70open; scoped jobs remain19.",
+  "limits": "Only102 focused tests have run in the reviewed prior host; the ten new groups are local until the combined workflow runs. Final combined source/protected/public maintenance acceptance is not claimed. Physical devices, people, independent accuracy and global distribution remain open.",
+  "scope_ids": [
+    "T-MT",
+    "N-014",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".github/workflows/android-share.yml": "47c12e06829a5f13b27a84a7cc72546124a6a9259ca996a4dc8a02560aa2412b",
+    "scripts/verify-route-boundaries.py": "7302104b6e924df76a6df468f8eb1a6b43b9219f27c73647786e9bf87323711d",
+    "eval/revalidation.json": "266e60ec511a839e5d85f01f0d2b9c14b2ffa0e7bb4161613d9866dbb1c21fb0",
+    "docs/session-delivery.json": "46cb759962dd80734c2d8eb8f240b9498143d2b242e6096b64781fe5be2f6a75",
+    "docs/session-delivery-plan.md": "c63043950857393679735843462976e632c8e38a8bb7a7c699a0a3d0ddc98cb4",
+    "docs/scope-progress.json": "e15e38624b1d5d00d30ae8a415843b9f148f96161057197a5420c64a4603cc6e",
+    "docs/scope-progress.md": "c1974218a03490db7c9e9c0cb3f47e38f778b5d4bd9ae2792ac1e4800efa6f25",
+    "state.json": "b92695d1f50cee5f5ad33059d317f41365cdd0ac2262369c970dfc650b992941"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-os-chooser-hosted-pass.json",
+      "sha256": "f14501d72a582ded798e081978d242e6a081c27029fd3ad88d31b0e1587f205b"
+    },
+    {
+      "path": "runs/2026-11-21-android-chooser-peer-review.json",
+      "sha256": "61e650f785d05c8a782950b4a750ba7d4d9331c83194b42fe6dfcfc405b7142b"
+    },
+    {
+      "path": "runs/2026-11-21-js-export-owned-fd-independent-review.json",
+      "sha256": "033cb45a8ad9c9e0dd585d1a73a2e1caefb244b6784353658665d5cea864e18e"
+    }
+  ],
+  "checks": []
+}

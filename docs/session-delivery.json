@@ -169,10 +169,10 @@
       "bot_id": "tag_mt",
       "actual_worker": null,
       "status": "reviewed",
-      "checked_at": "2026-11-21T11:12:20.374012+00:00",
-      "current_component_status": "Actual native-paste truncation reproduced and fixed in isolated handoff; full canonical records and refusal/lifecycle/privacy/peer-recovery pass in Chromium/WebKit. Protected and public maintenance delivery pending.",
+      "checked_at": "2026-11-21T11:31:36.349842+00:00",
+      "current_component_status": "Native input clipping was reproduced and repaired; standalone actual Chromium/WebKit canonical, refusal, privacy, lifecycle and peer-recovery controls passed. Current integrated/public delivery evidence is separately tracked in state.json.nov21_maintenance_delivery; no MT verdict or accuracy claim.",
       "blocking_acceptance": "Published literal wording and private choice workflows do not establish contextual use/mention, feasible alternatives, attribution, actual independent MT agreement/error rates or accepted tag mapping.",
-      "next_task": "Integrate and publicly verify the existing MT input-retention repair; contextual/independent/human full-tag criteria stay open."
+      "next_task": "Preserve independent contextual labels, disagreement policy and full MT acceptance; maintain the whole-input contract."
     },
     {
       "tag_id": "T-PS",
@@ -5764,7 +5764,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-21T11:12:20.374012+00:00",
+  "updated_at": "2026-11-21T11:31:36.349842+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -6160,21 +6160,29 @@
     }
   ],
   "maintenance_wave": {
-    "checked_at": "2026-11-21T11:12:20.374012+00:00",
-    "accounting": "Maintenance of existing scope; no new scoped task or original closure",
+    "checked_at": "2026-11-21T11:31:36.349842+00:00",
+    "accounting": "Existing scope maintenance; no new scoped task or original closure",
     "PM": "/root",
+    "status": "Reviewed handoffs integrated; actual current/protected/public delivery is recorded separately in state.json.nov21_maintenance_delivery",
+    "is_live_heartbeat": false,
     "MT": {
       "worker": "/root/web_camo",
-      "status": "reviewed_handoff_integrated; final checks and public delivery pending",
+      "status": "reviewed handoff; worker finished",
       "source_commit": "ecd3096318437db0816a0484bb21cfb248546f41"
     },
     "Android": {
       "worker": "/root/share_debugger",
-      "status": "active isolated real OS chooser/cancellation engineering; not physical acceptance"
+      "status": "reviewed actual API36 chooser handoff; worker finished",
+      "source_commit": "e3c8c562845eec17d599bc3050676a10ef3f8cde",
+      "actual_hosted_run": 44898547294
     },
     "runtime_sources": {
       "worker": "/root/seo",
-      "status": "active isolated exact zlib notice/source delivery and existing JS exporter ownership repair"
+      "status": "reviewed exact cached zlib and JS descriptor repair handoffs; worker finished",
+      "source_commits": [
+        "261f65b044c4f9233402c3f693f5d93f37da57ce",
+        "6a4aa1dcdce1b044aec7e133a42e1eb8be307bc3"
+      ]
     }
   }
 }

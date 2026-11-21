@@ -7,6 +7,16 @@ ROOT = Path(__file__).resolve().parents[1]
 verifier = runpy.run_path(str(ROOT / 'scripts/verify-ios-share.py'))
 
 
+@pytest.fixture(autouse=True)
+def synthetic_command_capacity(monkeypatch):
+    # I/O, PTY and deadline controls must not depend on unrelated host disk use.
+    # The real runner still reads actual capacity; the low-reserve path has its
+    # own actual-child refusal/cleanup control below.
+    from types import SimpleNamespace
+    monkeypatch.setattr(verifier['shutil'], 'disk_usage',
+                        lambda _: SimpleNamespace(free=50_000_000_000))
+
+
 def workflow_tree():
     return {'testNodes': [{'nodeType': 'Test Suite', 'children': [
         {'nodeType': 'Test Case', 'nodeIdentifier': name, 'result': 'Passed'}
@@ -405,3 +415,42 @@ def test_interrupted_cleanup_preserves_failure_report_and_original_interrupt(lif
     assert proof['pass'] is False and proof['owned_simulator_removed'] is False
     assert proof['post_ui_source_unchanged'] is True
     assert 'test_count' not in proof
+
+
+def test_actual_low_capacity_refuses_and_reaps_child(tmp_path, monkeypatch):
+    import sys, os, hashlib
+    from types import SimpleNamespace
+    processes = []
+    popen = verifier['subprocess'].Popen
+    def started(*args, **kwargs):
+        process = popen(*args, **kwargs)
+        processes.append(process)
+        return process
+    monkeypatch.setattr(verifier['subprocess'], 'Popen', started)
+    monkeypatch.setattr(verifier['shutil'], 'disk_usage',
+                        lambda _: SimpleNamespace(free=1_999_999_999))
+    report = {'command_events': []}
+    with pytest.raises(ValueError, match='capacity reserve'):
+        verifier['run_command']([sys.executable, '-c', 'import time; time.sleep(20)'],
+            output=tmp_path, stage='low_capacity', report=report, created=True)
+    assert len(processes) == 1 and processes[0].poll() is not None
+    with pytest.raises(ProcessLookupError): os.kill(processes[0].pid, 0)
+    event = report['command_events'][0]
+    assert event['outcome'] == 'capacity_reserve' and event['returncode'] < 0
+    raw = (tmp_path / 'low_capacity.log').read_bytes()
+    assert event['output_bytes'] == len(raw)
+    assert event['output_sha256'] == hashlib.sha256(raw).hexdigest()
+
+
+def test_cleanup_can_finish_below_capacity_reserve(tmp_path, monkeypatch):
+    import sys
+    from types import SimpleNamespace
+    monkeypatch.setattr(verifier['shutil'], 'disk_usage',
+                        lambda _: SimpleNamespace(free=1_999_999_999))
+    report = {'command_events': []}
+    result = verifier['run_command']([sys.executable, '-c', "print('synthetic cleanup')"],
+        output=tmp_path, stage='low_capacity_cleanup', report=report, created=True,
+        cleanup=True)
+    assert result == 'synthetic cleanup'
+    assert report['command_events'][0]['outcome'] == 'passed'
+    assert report['command_events'][0]['cleanup'] is True

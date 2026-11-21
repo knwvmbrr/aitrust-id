@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-21T11:12:20.374012+00:00",
+  "updated": "2026-11-21T12:01:46.248985+00:00",
   "active_increment": "Publish the source-matched Android Share fix and independent NF reference preview; all70 original requirements remain open, with N014 advanced20 to80 and physical/human acceptance preserved.",
   "status": "independent_HP_uncertainty_preview_runtime_sources_Android_malformed_controls_published; original70_target60_unmet",
   "scope": "docs/master-scope.json",
@@ -1195,7 +1195,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-21T11:12:20.374012+00:00",
+  "updated_at": "2026-11-21T12:01:46.248985+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -4575,7 +4575,7 @@
   "nov21_maintenance_delivery": {
     "recorded_at": "2026-11-21T11:12:20.374012+00:00",
     "architecture": "docs/maintenance-delivery-nov21.md",
-    "status": "MT input repair integrated; exact source/protected/public delivery pending; Android chooser and runtime source repairs active in isolated worktrees",
+    "status": "all5_current_source_checks_pass; protected_and_public_delivery_pending",
     "MT_worker_commit": "ecd3096318437db0816a0484bb21cfb248546f41",
     "MT_before": "runs/2026-11-21-mt-input-clipping-before.json",
     "MT_after": "runs/2026-11-21-mt-input-retention-after.json",
@@ -4583,6 +4583,60 @@
     "original_complete": 132,
     "original_open": 70,
     "new_scoped_task_created": false,
-    "real_collection_enabled": false
+    "real_collection_enabled": false,
+    "Android_hosted_run": 44898547294,
+    "Android_hosted_focused": 102,
+    "Android_new_local_focused": 10,
+    "Android_registered_automatic_focused": 112,
+    "Android_runtime_cases": {
+      "original": 7,
+      "configuration": 2,
+      "malformed_refusal_recovery_pairs": 9,
+      "OS_chooser": 2
+    },
+    "runtime_sources_worker_commits": [
+      "261f65b044c4f9233402c3f693f5d93f37da57ce",
+      "6a4aa1dcdce1b044aec7e133a42e1eb8be307bc3"
+    ],
+    "current_scope_counter": {
+      "original_complete": 132,
+      "original_open": 70,
+      "closed_scoped_jobs": 19
+    },
+    "tag_release_approved": false,
+    "independent_accuracy_evidence": false,
+    "physical_phone_tested": false,
+    "registered_checks": {
+      "PS": 7,
+      "PII_REDACTED": 6,
+      "protocol": 61,
+      "extension": 14,
+      "website": 59
+    },
+    "normal_build_and_both_selected_artifact_gates_passed": true,
+    "receipts": {
+      "PS": "runs/2026-11-21-maintenance-final-PS.json",
+      "PII_REDACTED": "runs/2026-11-21-maintenance-final-PII_REDACTED.json",
+      "extension": "runs/2026-11-21-maintenance-final-extension.json",
+      "protocol": "runs/2026-11-21-maintenance-final-protocol.json",
+      "website": "runs/2026-11-21-maintenance-final-website.json"
+    },
+    "source_inventory_count": 1486,
+    "finite_inventory_review": "runs/2026-11-21-maintenance-corrected-inventory-review.json",
+    "preserved_failed_website": "runs/2026-11-21-maintenance-website-capacity-failure.json",
+    "test_capacity_correction": "runs/2026-11-21-maintenance-native-reserve-correction.json"
+  },
+  "f030_dom_route_choice": {
+    "selected_at": "2026-11-21T11:57:14.251814+00:00",
+    "selected_by": "Codex PM /root under the existing full F030 alternative",
+    "selected_route": "explicitly consented completed-response DOM adapter",
+    "original_criterion": "Prove MAIN-world stream capture on a live supported vendor OR explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation.",
+    "original_master_and_full_acceptance_preserved": true,
+    "separate_owner_approval_for_this_enumerated_choice_required": false,
+    "DOM_success_is_fetch_patch_validation": false,
+    "mixed_stream_capture_enabled": false,
+    "new_permissions_granted": false,
+    "status": "route_selected; source-bound live vendor proof still required; interactive browser access currently unavailable and skipped",
+    "original_requirement_closed": false
   }
 }
