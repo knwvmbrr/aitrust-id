@@ -28,6 +28,22 @@ def bpf_count(group,kind):
         return int(q.prog_cnt)
     finally:owned=fd;fd=None;os.close(owned)
 
+def denial_mode(error):
+    if isinstance(error,TimeoutError):return 'bounded_timeout'
+    if isinstance(error,OSError)and error.errno in (errno.EPERM,errno.EACCES):return 'permission_denied'
+    return None
+
+def owned_target_ready(public_ip):
+    try:
+        s=socket.create_connection((public_ip,22),timeout=2)
+        try:return True
+        finally:s.close()
+    except OSError:return False
+
+def valid_functional(result,before,after):
+    fields={'root_home_blocked','operator_home_blocked','source_write_blocked','loopback_connects','nonloopback_connect_blocked'}
+    return type(result)is dict and set(result)==fields|{'nonloopback_denial_mode'} and before is True and after is True and all(result[n]is True for n in fields)and result['nonloopback_denial_mode']in ('permission_denied','bounded_timeout')
+
 def observe(commit,public_ip):
     if os.getuid()!=0:raise ValueError('root_operator_required')
     addr=ipaddress.ip_address(public_ip)
@@ -44,6 +60,8 @@ def observe(commit,public_ip):
     status=dict(x.split(':',1)for x in Path('/proc',str(pid),'status').read_text().splitlines()if':'in x);uid=int(status['Uid'].split()[0]);gid=int(status['Gid'].split()[0])
     if uid==0 or gid==0 or status.get('NoNewPrivs','').strip()!='1' or int(status.get('CapEff','0').strip(),16)!=0:raise ValueError('process_privilege_unavailable')
     attachments={'ingress':bpf_count(group,0),'egress':bpf_count(group,1)}
+    outside_before=owned_target_ready(public_ip)
+    if not outside_before:raise ValueError('outside_target_control_unavailable')
     readfd,writefd=os.pipe();child=os.fork()
     if child==0:
         os.close(readfd)
@@ -66,8 +84,9 @@ def observe(commit,public_ip):
             except OSError as e:result['source_write_blocked']=e.errno in (errno.EACCES,errno.EROFS,errno.EPERM)
             s=socket.create_connection(('127.0.0.1',8790),timeout=2);s.close();result['loopback_connects']=True
             s=socket.socket();s.settimeout(2)
-            try:s.connect((public_ip,22));result['nonloopback_connect_blocked']=False
-            except OSError as e:result['nonloopback_connect_blocked']=e.errno in (errno.EPERM,errno.EACCES)
+            try:s.connect((public_ip,22));result['nonloopback_connect_blocked']=False;result['nonloopback_denial_mode']=None
+            except OSError as e:
+                mode=denial_mode(e);result['nonloopback_connect_blocked']=mode is not None;result['nonloopback_denial_mode']=mode
             finally:s.close()
             os.write(writefd,json.dumps(result).encode())
         except Exception:os.write(writefd,b'{"probe_unavailable":true}')
@@ -79,9 +98,9 @@ def observe(commit,public_ip):
         raw=os.read(readfd,4097)
     finally:os.close(readfd);os.waitpid(child,0)
     result=json.loads(raw)
-    expected={'root_home_blocked','operator_home_blocked','source_write_blocked','loopback_connects','nonloopback_connect_blocked'}
-    if set(result)!=expected or not all(v is True for v in result.values()):raise ValueError('functional_isolation_unavailable')
-    return {'pass':True,'captured_at':datetime.now(timezone.utc).isoformat(),'profile':'actual-api-service-isolation-1','release_commit':commit,'unit_policy':{k:v for k,v in props.items()if k not in ['MainPID','User']},'effective_cgroup_controls':controls,'actual_BPF_attachment_counts':attachments,'main_process_nonroot_no_capabilities_no_new_privileges':True,'actual_mount_and_cgroup_probe':result,'contents_of_homes_or_database_read':False,'limits':['Functional probe joins the actual service cgroup and mount namespace, then drops to its dynamic UID; it does not claim to duplicate every execution restriction.','No data or credentials are submitted, stored, read or reported; nonloopback test targets only the operator-approved own primary address TCP22.']}
+    outside_after=owned_target_ready(public_ip)
+    if not valid_functional(result,outside_before,outside_after):raise ValueError('functional_isolation_unavailable')
+    return {'pass':True,'captured_at':datetime.now(timezone.utc).isoformat(),'profile':'actual-api-service-isolation-1','release_commit':commit,'unit_policy':{k:v for k,v in props.items()if k not in ['MainPID','User']},'effective_cgroup_controls':controls,'actual_BPF_attachment_counts':attachments,'main_process_nonroot_no_capabilities_no_new_privileges':True,'actual_mount_and_cgroup_probe':result,'same_owned_nonloopback_target_connects_outside_cgroup_before_and_after':outside_before and outside_after,'contents_of_homes_or_database_read':False,'limits':['Packet filtering can produce a bounded TCP timeout rather than a syscall permission error; two positive outside-cgroup controls and attached BPF are required.','Functional probe joins the actual service cgroup and mount namespace, then drops to its dynamic UID; it does not claim to duplicate every execution restriction.','No data or credentials are submitted, stored, read or reported; nonloopback test targets only the operator-approved own primary address TCP22.']}
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--commit',required=True);p.add_argument('--own-public-ip',required=True);a=p.parse_args()
     try:print(json.dumps(observe(a.commit,a.own_public_ip),indent=2))

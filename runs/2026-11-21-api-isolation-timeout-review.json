@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T16:15:04.160911+00:00",
+  "reviewed_by": "/root/seo",
+  "source_sha256": {
+    "deploy/ai-tools/verify-isolation.py": "11478ac83b004d74170e9eb46506b71de91e764f0f98950a973b50d2d0033c5f",
+    "deploy/ai-tools/test_isolation.py": "7d9fbc0a7c3cc061207d4786c19d15077ba370c12a332ffd5d76c600e48bc720",
+    "deploy/ai-tools/activate.py": "32ea65a7e67747ff41f6f72bac169c83cedb0585b770a9b82ede6f83bfd56f7d"
+  },
+  "affected_controls": 3,
+  "command_template": "python3 -B deploy/ai-tools/test_isolation.py",
+  "command_exit": 0,
+  "review_scope": "Verifier-only permission-error versus bounded-packet-drop timeout distinction",
+  "finding": "No new actionable blocker. Strict before/after positive connection to the same operator-approved own TCP22 target, attached ingress/egress BPF, actual cgroup/mount/nonroot controls and closed typed result are retained. Connection success, refused/unreachable/unknown errors, failed outside controls and nonboolean records do not pass.",
+  "historical_failed_activation": "runs/2026-11-21-api-first-isolation-refusal.json",
+  "limits": [
+    "Only three inert mocked controls executed, no actual socket/network/privileged operation by reviewer.",
+    "This is one selected target/time observation; it does not establish universal denial or independently identify the kernel packet filter program.",
+    "Actual changed-verifier host activation proof must run; trusted public TLS/client/refusal/recovery and previous-service health remain separate.",
+    "No original requirement closure or source/tag accuracy claim."
+  ]
+}
