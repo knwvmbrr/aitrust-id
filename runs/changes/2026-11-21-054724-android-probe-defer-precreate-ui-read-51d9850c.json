@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-054724-android-probe-defer-precreate-ui-read-51d9850c",
+  "recorded_at": "2026-11-21T05:47:24.831548+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fdda6d3474b8b7fc8ba12f28c2be326ed97fa199",
+  "changed": "Remove pre-create view/window access from the diagnostic wrapper and predeclare the final bounded three-host follow-up.",
+  "proves": "68 focused controls pass; actual JVM view-read spy admits the corrected wrapper and rejects reintroduced old pre-create lookup. Production activity/helper and all seven Android controls are unchanged.",
+  "limits": "Only instrumentation is corrected. New corrected-source Android runtime evidence is pending; prior passing diagnostic does not explain historical Ready failures, and no product/full-original closure is claimed.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "tests/android/CheckActivity.java": "76e847187c37bf216aaaffb7da71d7b663ffe1cba5c64c17eb4cf7f098d513e7",
+    "tests/test_android_intake_probe.py": "6bfa1bb529e2521002674cce484677f636c9ac60862848bb84694a49a82ac029",
+    "docs/android-intake-provenance-plan.md": "50e7c02e82a9887404610d831fa4006b72d4321f2497b51ff86de10859b5d945",
+    "runs/2026-11-21-android-precreate-probe-correction.json": "2b89378c9d47e519c38e5ff1777e197fc9d31154770ef7bc48b5409c30ebdbb8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-precreate-probe-correction.json",
+      "sha256": "2b89378c9d47e519c38e5ff1777e197fc9d31154770ef7bc48b5409c30ebdbb8"
+    }
+  ],
+  "checks": []
+}

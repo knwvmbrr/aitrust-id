@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-054724-android-probe-defer-precreate-ui-read-51d9850c
+
+Recorded 2026-11-21T05:47:24.831548+00:00 · Contributor: Codex · change
+
+- **Changed.** Remove pre-create view/window access from the diagnostic wrapper and predeclare the final bounded three-host follow-up.
+- **Evidence.** 68 focused controls pass; actual JVM view-read spy admits the corrected wrapper and rejects reintroduced old pre-create lookup. Production activity/helper and all seven Android controls are unchanged. [Change record](./runs/changes/2026-11-21-054724-android-probe-defer-precreate-ui-read-51d9850c.json).
+- **Not claimed.** Only instrumentation is corrected. New corrected-source Android runtime evidence is pending; prior passing diagnostic does not explain historical Ready failures, and no product/full-original closure is claimed.
+
+
 ### 2026-11-21-054337-android-intake-probe-hosted-observation-85968a83
 
 Recorded 2026-11-21T05:43:37.108733+00:00 · Contributor: Codex · change

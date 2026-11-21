@@ -37,15 +37,20 @@ public final class CheckActivity extends IntakeActivityBase {
             else if("Cleared. Your text and result are no longer shown.".contentEquals(value))state="CLEARED";
             else state="OTHER";
         }
+        recordFixed(callback,delivered,editor!=null&&editor.length()>0,state,isChangingConfigurations());
+    }
+    private void recordFixed(String callback,Intent delivered,boolean editor,String state,boolean changing){
         // Every string inserted below is a code-owned enum, never a subject value.
         String row="["+instance+",\""+callback+"\",\""+action(delivered)+"\","+
-            (editor!=null&&editor.length()>0)+",\""+state+"\","+isChangingConfigurations()+"]";
+            editor+",\""+state+"\","+changing+"]";
         synchronized(CheckActivity.class){
             if(events.size()<LIMIT)events.add(row);else truncated=true;
         }
     }
     @Override public void onCreate(Bundle saved){
-        record("CREATE_BEGIN",getIntent());super.onCreate(saved);record("CREATE_END",getIntent());
+        // Never find a view or touch the window before production initializes it.
+        recordFixed("CREATE_BEGIN",getIntent(),false,"UNBUILT",false);
+        super.onCreate(saved);record("CREATE_END",getIntent());
     }
     @Override protected void onNewIntent(Intent intent){
         record("NEW_INTENT_BEGIN",intent);super.onNewIntent(intent);record("NEW_INTENT_END",getIntent());

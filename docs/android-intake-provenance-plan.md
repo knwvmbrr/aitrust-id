@@ -58,3 +58,28 @@ Any product correction requires positive provenance and a separate bounded plan.
 
 Primary source: [Android 16 ActivityThread](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/android16-release/core/java/android/app/ActivityThread.java),
 `handleRelaunchActivityInner`; [Activity.dump](https://developer.android.com/reference/android/app/Activity#dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String%5B%5D)).
+
+## Less intrusive, final finite characterization wave
+
+The first explicit diagnostic run passed all seven controls and positively
+observed one SEND/received/resume sequence. It did not reproduce the old failure.
+Its CREATE_BEGIN observation queried views before the production base onCreate,
+which can initialize window decor earlier. Preserve that run as a distinct
+instrumented pass with unknown historical cause.
+
+Correct only that diagnostic boundary: before base onCreate, append the fixed
+instance/action/UNBUILT observation without reading any view, window or UI state.
+After base creation, retain the existing finite observations. A JVM view-read spy
+must reject the previous pre-create call and admit the corrected wrapper. The
+production business logic, clearing, helper, permissions and seven predicates
+remain unchanged.
+
+Freeze this correction before configuring one final wave of exactly three fresh
+hosted API36 VMs. Reuse the earlier finite study controls, but bind the new wrapper
+and diagnostic build identity as well as the original native sources. Use the
+same seven commands/waits, SDK/KVM/license prerequisites and deadlines. Retain all
+three outcomes and positive first-receive frames; aggregation fails if any sample
+does not execute all seven or cannot provide the required finite provenance. No
+averaging or replacement host is allowed. Distinct workflow/source review precedes
+launch. A failure trace may justify a specific product correction; three passes
+still leave the old cause unknown and end this wave without a startup fix claim.

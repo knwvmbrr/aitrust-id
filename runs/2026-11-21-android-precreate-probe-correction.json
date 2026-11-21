@@ -1,0 +1,47 @@
+{
+  "format": "ai-trust-id-android-precreate-probe-correction/v1",
+  "recorded_at": "2026-11-21T05:47:24.790457+00:00",
+  "pass": true,
+  "focused_tests": {
+    "tests": 68,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "actual_jvm": {
+    "runtime": "OpenJDK21.0.10 Homebrew",
+    "corrected_wrapper_modes_passed": 5,
+    "previous_precreate_ui_read_reintroduced": true,
+    "negative_control_compiled": true,
+    "negative_control_rejected_by_precreate_view_read_spy": true,
+    "subject_not_echoed": true,
+    "android_runtime": false
+  },
+  "correction": "CREATE_BEGIN records fixed action/instance/UNBUILT values without findViewById, getWindow or UI-state access; later finite observations unchanged.",
+  "production_activity_and_helper_unchanged": true,
+  "previous_diagnostic_android_result": {
+    "path": "runs/2026-11-21-android-intake-provenance-hosted.json",
+    "sha256": "8d0eecaeaddd0496a573755f0389916957350d2eb139b2c74a6a9416f12dd720",
+    "historical_cause": "UNKNOWN",
+    "new_corrected_source_runtime_evidence": false
+  },
+  "next_wave_predeclared": {
+    "fresh_hosts": 3,
+    "original_controls_per_host": 7,
+    "all_outcomes_required": true,
+    "replacement_hosts_or_unchanged_retries": false,
+    "historical_cause_if_all_pass": "UNKNOWN"
+  },
+  "product_fix": false,
+  "current_production_acceptance": false,
+  "full_requirement_closure": false,
+  "sources": {
+    "tests/android/CheckActivity.java": "76e847187c37bf216aaaffb7da71d7b663ffe1cba5c64c17eb4cf7f098d513e7",
+    "tests/test_android_intake_probe.py": "6bfa1bb529e2521002674cce484677f636c9ac60862848bb84694a49a82ac029",
+    "docs/android-intake-provenance-plan.md": "50e7c02e82a9887404610d831fa4006b72d4321f2497b51ff86de10859b5d945",
+    "scripts/android-share-build.py": "8cb6ed20056bbf9d7f69dfb2fb19eaf9c5025eeb44ef8ea3f7d52576ffa1184e",
+    "scripts/verify-android-emulator.py": "740b64ffde7368ade2c5134fbf9e53f53cadb8ca677a38d48eba0373ebbe6e59",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "2ab7df4100143e4e17e9c87db74f15c1641edf54fff7a986c30b463aa2c6266b",
+    ".github/workflows/android-share.yml": "e673479d729368e86e45b990f3c2f7649abbaac2b2698e2532e43042a2c15f6e"
+  }
+}

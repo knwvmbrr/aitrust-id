@@ -176,9 +176,10 @@ class IntakeActivityBase extends Activity {
  private TextView status=new TextView(),tag=new TextView(),details=new TextView();
  private Button check=new Button(),cancel=new Button(),more=new Button();
  private Engine engine; private boolean settingText=false,detailsOpen=false;private String evidence="";
+ private boolean fixtureCreated=false;
  static class Engine {void stop(){}}
- public void onCreate(android.os.Bundle saved){super.onCreate(null);receive(getIntent());}
- @SuppressWarnings("unchecked") public <T extends View> T findViewById(int id){return (T)(id==R.id.editor?editor:status);}
+ public void onCreate(android.os.Bundle saved){super.onCreate(null);fixtureCreated=true;receive(getIntent());}
+ @SuppressWarnings("unchecked") public <T extends View> T findViewById(int id){if(!fixtureCreated)throw new AssertionError("Premature diagnostic UI read");return (T)(id==R.id.editor?editor:status);}
 '''+receive+new_intent+methods+lifecycle+'}\n'
         files={
             'com/aitrustid/android/IntakeActivityBase.java':base,
@@ -257,12 +258,24 @@ public class IntakeHarness {
                     self.assertEqual(observed['state'],'UNAVAILABLE');continue
                 self.assertEqual(observed['state'],'OBSERVED');self.assertEqual(observed['instances'],2)
                 self.assertEqual(observed['truncated'],extra==['overflow'])
-                self.assertIn([1,'CREATE_BEGIN','SEND',False,'OTHER',False],observed['events'])
+                self.assertIn([1,'CREATE_BEGIN','SEND',False,'UNBUILT',False],observed['events'])
                 self.assertIn([1,'CREATE_END','MAIN',True,'RECEIVED',False],observed['events'])
                 self.assertIn([1,'DESTROY_BEGIN','MAIN',False,'CLEARED',True],observed['events'])
                 self.assertIn([2,'CREATE_END','MAIN',False,'READY',False],observed['events'])
                 if extra==['main']:self.assertEqual(observed['events'][-1],[2,'NEW_INTENT_END','MAIN',False,'READY',False])
                 if extra==['pause']:self.assertEqual(observed['events'][-1],[2,'RESUME_END','MAIN',False,'CLEARED',False])
+            # Reintroduce exactly the old pre-create UI read. The actual wrapper
+            # must fail the spy before it can process any supplied text.
+            wrapper=home/'com/aitrustid/android/CheckActivity.java'
+            corrected=wrapper.read_text();anchor='recordFixed("CREATE_BEGIN",getIntent(),false,"UNBUILT",false);'
+            self.assertEqual(corrected.count(anchor),1)
+            wrapper.write_text(corrected.replace(anchor,'record("CREATE_BEGIN",getIntent());',1))
+            result=subprocess.run([str(self.home/'bin/javac'),'--release','8','-cp',str(home/'classes'),'-d',str(home/'classes'),str(wrapper)],capture_output=True,timeout=30)
+            self.assertEqual(result.returncode,0,result.stderr.decode())
+            result=subprocess.run([str(self.home/'bin/java'),'-ea','-cp',str(home/'classes'),'com.aitrustid.android.IntakeHarness'],capture_output=True,timeout=10)
+            self.assertNotEqual(result.returncode,0)
+            self.assertIn(b'Premature diagnostic UI read',result.stderr)
+            self.assertNotIn(b'PRIVATE',result.stderr+result.stdout)
 
 
 if __name__=='__main__':unittest.main()
