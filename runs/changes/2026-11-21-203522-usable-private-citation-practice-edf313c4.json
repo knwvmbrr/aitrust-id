@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-203522-usable-private-citation-practice-edf313c4",
+  "recorded_at": "2026-11-21T20:35:22.051622+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ee8db51846d9f6dd7d93a5b9366edf84444833a8",
+  "changed": "Added a complete two-command private synthetic citation practice packet using the unchanged canonical corpus, declaration sidecar and checker; no manual hash authoring.",
+  "proves": "Actual13 isolated-stdlib command invocations and3 fixed fault shims pass current13source bindings, with resolved/unmapped/unsupported1each,0600/0700, source identity, stale/no-overwrite refusal, honest cleanup/close uncertainty and existing checker independence.18 authored controls passed across documented phases; one fixture failure preserved.",
+  "limits": "Selected synthetic macOS software workflow; independent review pending. No browser/phone/current Linux, source truth, contradiction, independent FI accuracy, human operation, full T-FI closure or shared scope/state/deployment change is claimed.",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "files": {
+    "scripts/prepare-citation-demo.py": "8ef51715bfb5980d8f81f217d3b5e3b966be78f21d0174fddca30d5641310f5a",
+    "docs/fi-citation-practice.md": "ae3babdd229fd86ae88ee7f3b3229ad585d6a400189088c431bd87725cd03e3f",
+    "docs/fi-citation-practice-plan.md": "efdf5c6df7d626208bf9e85c1e0fe059d0fd35875f0f69c135746e21d2354fc1",
+    "tests/test_citation_demo.py": "f285672fc7a785a4dde34ccf295cf061a8c55d4cc3a4e72e07fafc05d4044572",
+    "runs/2026-11-21-citation-practice-first-controls.json": "7cb644c8273485f47f03739161ced59038fdab982fe93f871ef3b56058cd741f",
+    "runs/2026-11-21-citation-practice-actual-cli.json": "39c315660359559fce46e243ea138ceba891b57c0988e80ee4fc7dfc0d711690",
+    "runs/2026-11-21-citation-practice-development.json": "71331a2fc6b5b6d3c1acbbd3d243cb19ac804a3c841e8fd54e98e8ecc69c7097"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-citation-practice-first-controls.json",
+      "sha256": "7cb644c8273485f47f03739161ced59038fdab982fe93f871ef3b56058cd741f"
+    },
+    {
+      "path": "runs/2026-11-21-citation-practice-actual-cli.json",
+      "sha256": "39c315660359559fce46e243ea138ceba891b57c0988e80ee4fc7dfc0d711690"
+    },
+    {
+      "path": "runs/2026-11-21-citation-practice-development.json",
+      "sha256": "71331a2fc6b5b6d3c1acbbd3d243cb19ac804a3c841e8fd54e98e8ecc69c7097"
+    }
+  ],
+  "checks": []
+}

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-203522-usable-private-citation-practice-edf313c4
+
+Recorded 2026-11-21T20:35:22.051622+00:00 · Contributor: Codex · change
+
+- **Changed.** Added a complete two-command private synthetic citation practice packet using the unchanged canonical corpus, declaration sidecar and checker; no manual hash authoring.
+- **Evidence.** Actual13 isolated-stdlib command invocations and3 fixed fault shims pass current13source bindings, with resolved/unmapped/unsupported1each,0600/0700, source identity, stale/no-overwrite refusal, honest cleanup/close uncertainty and existing checker independence.18 authored controls passed across documented phases; one fixture failure preserved. [Change record](./runs/changes/2026-11-21-203522-usable-private-citation-practice-edf313c4.json).
+- **Not claimed.** Selected synthetic macOS software workflow; independent review pending. No browser/phone/current Linux, source truth, contradiction, independent FI accuracy, human operation, full T-FI closure or shared scope/state/deployment change is claimed.
+
+
 ### 2026-11-21-193957-google-verification-reviewed-payload-8377c5d8
 
 Recorded 2026-11-21T19:39:57.552918+00:00 · Contributor: Codex /root reviewer; /root/seo publication engineer · change

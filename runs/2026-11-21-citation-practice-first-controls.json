@@ -1,0 +1,16 @@
+{
+  "format": "citation-practice-first-controls/v1",
+  "captured_at": "2026-11-21T20:32:24.993616+00:00",
+  "pass": false,
+  "passed": 17,
+  "failed": 1,
+  "failure": "Missing-engine fixture set sys.modules toNone but from-package import reused its already cached attribute; the simulated absence did not occur.",
+  "classification": "test_fixture_failure_not_product_refusal",
+  "source_sha256": {
+    "scripts/prepare-citation-demo.py": "8ef51715bfb5980d8f81f217d3b5e3b966be78f21d0174fddca30d5641310f5a",
+    "tests/test_citation_demo.py": "21b61cac49a189d5367e9a230b14aad65dfd0ffd6ca094184a61e4cd83645393"
+  },
+  "next_correction": "Inject actual ImportError at the specific from-tools engine import, then repeat only that affected group.",
+  "private_paths_or_subjects_included": false,
+  "original_closed": false
+}

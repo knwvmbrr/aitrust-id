@@ -1,0 +1,50 @@
+{
+  "format": "fi-citation-practice-development/v1",
+  "captured_at": "2026-11-21T20:35:22.007895+00:00",
+  "pass": true,
+  "source_base": "ee8db51846d9f6dd7d93a5b9366edf84444833a8",
+  "source_hashes": {
+    "scripts/prepare-citation-demo.py": "8ef51715bfb5980d8f81f217d3b5e3b966be78f21d0174fddca30d5641310f5a",
+    "docs/fi-citation-practice.md": "ae3babdd229fd86ae88ee7f3b3229ad585d6a400189088c431bd87725cd03e3f",
+    "docs/fi-citation-practice-plan.md": "efdf5c6df7d626208bf9e85c1e0fe059d0fd35875f0f69c135746e21d2354fc1",
+    "tests/test_citation_demo.py": "f285672fc7a785a4dde34ccf295cf061a8c55d4cc3a4e72e07fafc05d4044572"
+  },
+  "canonical_engine_and_CLI_unchanged": true,
+  "focused_executions": [
+    {
+      "passed": 17,
+      "failed": 1,
+      "seconds": 0.19,
+      "result": "First focused attempt exposed cached-package import fault-fixture error; preserved separately. Runtime producer source was not changed."
+    },
+    {
+      "passed": 1,
+      "failed": 0,
+      "seconds": 0.05,
+      "result": "Corrected specific ImportError injection proves fixed missing-engine refusal; no unchanged full-module rerun."
+    }
+  ],
+  "preserved_failed_control": {
+    "path": "runs/2026-11-21-citation-practice-first-controls.json",
+    "sha256": "7cb644c8273485f47f03739161ced59038fdab982fe93f871ef3b56058cd741f"
+  },
+  "actual_frozen_source_CLI": {
+    "path": "runs/2026-11-21-citation-practice-actual-cli.json",
+    "sha256": "39c315660359559fce46e243ea138ceba891b57c0988e80ee4fc7dfc0d711690",
+    "ordinary_invocations": 13,
+    "fault_shims": 3,
+    "source_inputs": 13,
+    "source_stable": true
+  },
+  "requirements": {
+    "full_TFI_closed": false,
+    "remaining_TFI": "Deliver FI Fiction / Fabricated. Next package action: Separate contradiction and unresolved-citation evidence types. Required outcome: The reader can inspect the contradiction or resolution failure without being told an entire author or work is fabricated.",
+    "human_and_independent_error_acceptance_preserved": true
+  },
+  "limits": [
+    "Authored selected synthetic software execution on macOS/Python3.12.14 only; distinct review pending.",
+    "No new browser/phone interface, current Linux, independent accuracy, contradiction/truth/authenticity/freshness/feasibility or tag release accepted.",
+    "No global scope/state/catalogue/CI/package/endpoint or deployment change.",
+    "Current13 ordinary commands and3 fixed fault shims are separate from phased unit counts; no summed broad suite claim."
+  ]
+}
