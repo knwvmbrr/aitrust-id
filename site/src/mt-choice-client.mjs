@@ -2,8 +2,12 @@ import {choiceContext,validateChoice} from './mt-choice-result.mjs';
 export async function loadManifest(){
  const response=await fetch('./manifest.json',{cache:'no-cache'});
  if(!response.ok||Number(response.headers.get('content-length'))>65536)throw Error('Practice files unavailable.');
- const raw=await response.text();if(new TextEncoder().encode(raw).length>65536)throw Error('Practice files unavailable.');
- const m=JSON.parse(raw);
+ const reader=response.body?.getReader();if(!reader)throw Error('Practice files unavailable.');
+ const chunks=[];let length=0;
+ try{while(true){const {done,value}=await reader.read();if(done)break;length+=value.byteLength;if(length>65536)throw Error('Practice files unavailable.');chunks.push(value);}}
+ catch(error){try{await reader.cancel();}catch{}throw error;}finally{reader.releaseLock();}
+ const bytes=new Uint8Array(length);let at=0;for(const chunk of chunks){bytes.set(chunk,at);at+=chunk.byteLength;}
+ const m=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes));
  if(m.format!=='mt-choice-practice-manifest/v1'||m.runtime!=='314.0.7'||m.method!=='caller-bound-choice-framing-observation/1.3.0'||m.runtime_path!=='./runtime/'||!/^method-[a-f0-9]{64}\.json$/.test(m.bundle)||!Number.isSafeInteger(m.bundle_bytes)||m.bundle_bytes>500000||m.bundle_bytes<1)throw Error('Practice files unavailable.');
  return m;
 }

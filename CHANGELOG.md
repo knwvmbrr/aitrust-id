@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-222947-mt-choice-manifest-polite-fixes-8af17b61
+
+Recorded 2026-11-21T22:29:47.481379+00:00 · Contributor: Codex share_debugger MT worker · change
+
+- **Changed.** Bounded practice manifest allocation before decoding and made routine optional failure announcements polite.
+- **Evidence.** Six manifest and polite-status controls pass; targeted actual Chromium and WebKit each load the streaming manifest, refuse a missing declaration politely, complete one whole canonical additive record and clear input/details, with source identity stable. [Change record](./runs/changes/2026-11-21-222947-mt-choice-manifest-polite-fixes-8af17b61.json).
+- **Not claimed.** Prior full browser proof is preserved against earlier client/HTML bytes. No canonical method change, deployment, tag verdict, independent accuracy, human or physical acceptance, or original closure.
+
+
 ### 2026-11-21-222454-mt-choice-browser-practice-9f4165a0
 
 Recorded 2026-11-21T22:24:54.039404+00:00 · Contributor: Codex share_debugger MT worker · change

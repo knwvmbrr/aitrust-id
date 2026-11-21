@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-222947-mt-choice-manifest-polite-fixes-8af17b61",
+  "recorded_at": "2026-11-21T22:29:47.481379+00:00",
+  "author": "Codex share_debugger MT worker",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2eb5d3c9f6b2746a886bc99ef4c9d2a247786519",
+  "changed": "Bounded practice manifest allocation before decoding and made routine optional failure announcements polite.",
+  "proves": "Six manifest and polite-status controls pass; targeted actual Chromium and WebKit each load the streaming manifest, refuse a missing declaration politely, complete one whole canonical additive record and clear input/details, with source identity stable.",
+  "limits": "Prior full browser proof is preserved against earlier client/HTML bytes. No canonical method change, deployment, tag verdict, independent accuracy, human or physical acceptance, or original closure.",
+  "scope_ids": [
+    "F-019b",
+    "T-MT"
+  ],
+  "files": {
+    "site/src/mt-choice-client.mjs": "66a8d1607b8a603814d79e24e0de93e2eb0377d25b8f33892ace2aeb6fdb113d",
+    "site/src/mt-choice-practice.html": "ba9b68a0d73475761a472eef3b211c8c85809f79df4c1a1a08beb286d3bed9cf",
+    "scripts/verify-mt-choice-browser.cjs": "0c2432526c63bda4a54aa864ffe10c1bac47874ccfcd82480addc40ac68ea769",
+    "scripts/verify-mt-choice-correction.cjs": "26b626e584f16b1eeb9150bfc4a1c63c39f46793a2a28d1bfd62a6775e76030c",
+    "tests/mt-choice-manifest.mjs": "6d20b52d08f38ef3d80e06961ae34109930f0ef32bbc68ed78cc9cd0ba7a2b20",
+    "runs/2026-11-21-mt-choice-browser-reviewed-correction.json": "21e3774f8d76a0cb36201662e91fed64a2720a81e16509f20e505a475a69b1fb",
+    "runs/2026-11-21-mt-choice-browser-review-fixes.json": "80fa8080c10bee01309a121d6b981d126b8783e84a33ad38960a8e326fe66d53"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-mt-choice-browser-reviewed-correction.json",
+      "sha256": "21e3774f8d76a0cb36201662e91fed64a2720a81e16509f20e505a475a69b1fb"
+    },
+    {
+      "path": "runs/2026-11-21-mt-choice-browser-review-fixes.json",
+      "sha256": "80fa8080c10bee01309a121d6b981d126b8783e84a33ad38960a8e326fe66d53"
+    }
+  ],
+  "checks": []
+}
