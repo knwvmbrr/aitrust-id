@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-091608-hp-uncertainty-source-preview-1a613b14",
+  "recorded_at": "2026-11-21T09:16:08.015567+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
+  "changed": "Add an isolated caller-selected whole-passage uncertainty-word component, exact canonical record validation, bounded source packaging and standalone fixture.",
+  "proves": "16 focused Python controls and 10 Node groups over 31 authored cases passed; the isolated fixture compiled. Browser execution follows this source record.",
+  "limits": "No production mount, HP tag, contextual accuracy, independent human validation or full original requirement closure. Ambiguous lexical Unicode boundaries refuse.",
+  "scope_ids": [
+    "T-HP",
+    "F-018"
+  ],
+  "files": {
+    "docs/hp-uncertainty-device-plan.md": "28c8896f13d137155e253738fda767b8d096361ed37c53f0fd55dcc872ae0ace",
+    "docs/hp-uncertainty-device.md": "759c80842b27d1df0ee9a46d43872cacd8e9cf7dabc264494939680e26297d8f",
+    "scripts/build-hp-uncertainty-device.py": "dd04f270f4df593ee971110cc65c752b9bd76413f23adec3418c78d57043d0ff",
+    "scripts/build-hp-uncertainty-fixture.mjs": "5b77d728feff6d11c84f642f1260c58f99f35b92f0ac515e8673f4743a1d10a2",
+    "scripts/hp-uncertainty-cases.py": "1d18767e356e6b299125a08d7044706a33708432569b20ed652bcb2b6c2709c4",
+    "scripts/verify-hp-uncertainty-device.cjs": "98a4d488c7c2caa254c5e0af5f1fe203166dd770ce04a38cf600f8c5bf27ca9f",
+    "site/public/hp-uncertainty-device/hedge-1d9b6c18c384cc84ac32dde20587a8d7cbef397129cddf6cd8a55be469afa747.json": "1d9b6c18c384cc84ac32dde20587a8d7cbef397129cddf6cd8a55be469afa747",
+    "site/public/hp-uncertainty-device/hedge-1e05ab4af768a5db89229dcfdb8eb18faf1f8adbf58518b4efe9c56f9bdd01ec.json": "1e05ab4af768a5db89229dcfdb8eb18faf1f8adbf58518b4efe9c56f9bdd01ec",
+    "site/public/hp-uncertainty-device/notices.txt": "65b8d71609eab5ef56a94e2384fca00b1e6d4ae83160f756406bc20eaf262052",
+    "site/src/HPUncertaintyExplorer.jsx": "7f427bc59b88bbf2c92cb7e5a8ced90e7a03b8d67ad9401293902be963897f57",
+    "site/src/HPUncertaintyExplorerSlot.jsx": "a65b347c0a9aed29c510fd5f4609b1a041f9ca4b0e27d904529368a6368e14ae",
+    "site/src/hp-uncertainty-client.js": "a73dd71119fd294a9cd65de23c0fd5eb3dbd9387e8ccdb86d59afc7b21f0efdf",
+    "site/src/hp-uncertainty-manifest.json": "5b7a21399b59cdb7362f7d94436f4cb24f56e4fa443c2a0dfd833ed5b4ea1071",
+    "site/src/hp-uncertainty-result.js": "0fbd170a982ae6c60abc6f45ebca57c0350f46077858f0362e8859954ba91fa6",
+    "site/src/hp-uncertainty-worker.js": "2107f92377c48c0838785f3fae57ec72de6510a7177c56bcd5948818085291a1",
+    "tests/hp-uncertainty-client.mjs": "d28b80f217b4061105855bf4d71620bef934327cb851a55374ae5c60cd0a1112",
+    "tests/test_hp_uncertainty_device.py": "9aba879ce5e398e4984bd63ac469738912ab4efa7dd17d8ae7977afab747a10f",
+    "tools/hp_uncertainty_device.py": "793ff4c62e8b2db29abae6387c8e616794ae2ed1f2ee1c4d019ec6e4cf805c5a"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-hp-uncertainty-device.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T09:16:08.284930+00:00"
+    }
+  ]
+}

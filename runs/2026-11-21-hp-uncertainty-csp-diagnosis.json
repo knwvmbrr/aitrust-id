@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-11-21T09:21:31.789283+00:00",
+  "pass": false,
+  "profile": "hp-uncertainty-first-browser-instrumentation-failure/v1",
+  "failure_receipt": "runs/2026-11-21-hp-uncertainty-browser-candidate-1.json",
+  "failure_sha256": "88596cbd831b06738189c885a559f8f65bd507a1ceee89c3da9c6c0ce409c48b",
+  "failed_phase": "Chromium/accessibility_reflow",
+  "diagnosis": "The trusted axe path injection creates an inline script and was blocked by the unchanged real CSP before axe/reflow execution. Narrow actual diagnosis reproduced the same blocked call.",
+  "product_accessibility_defect_established": false,
+  "correction": "Copy installed pinned axe into the ignored owned fixture and load its same-origin URL under unchanged CSP; keep all accessibility/reflow predicates. Refuse unselected public payloads.",
+  "obsolete_unselected_payloads_removed": [
+    {
+      "sha256": "1d9b6c18c384cc84ac32dde20587a8d7cbef397129cddf6cd8a55be469afa747",
+      "private_ignored_history_retained": true
+    }
+  ],
+  "full_browser_retry_performed_yet": false,
+  "independent_accuracy_evidence": false
+}

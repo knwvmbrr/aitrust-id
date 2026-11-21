@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-092814-hp-uncertainty-browser-delivery-07aab8ec
+
+Recorded 2026-11-21T09:28:14.801687+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Complete the isolated HP uncertainty-word preview and source-stable Chromium/WebKit proof with explicit context, canonical record validation and independent failure handling.
+- **Evidence.** 16 Python groups and10 Node groups pass. Both actual engines pass31 authored cases (21 complete records plus10 refusals),8 corrupt-record refusals, input/privacy/lifecycle/keyboard/reflow/theme checks and numericHP/PS/MT recovery. The original CSP instrumentation failure remains immutable. [Change record](./runs/changes/2026-11-21-092814-hp-uncertainty-browser-delivery-07aab8ec.json).
+- **Not claimed.** Standalone engineering delivery only; shared production mount, protected publication and distinct review remain pending. No HP tag, semantic judgment, independent accuracy, physical/human acceptance or original requirement closure.
+
+
+### 2026-11-21-092143-hp-uncertainty-csp-fixture-correction-63cd4dfa
+
+Recorded 2026-11-21T09:21:43.652679+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Load trusted axe from the owned fixture origin under unchanged CSP and exclude the obsolete unselected source payload from delivery.
+- **Evidence.** The first browser candidate and a narrow diagnosis reproduced CSP blocking of inline verifier injection before accessibility evaluation. App method sources are unchanged. [Change record](./runs/changes/2026-11-21-092143-hp-uncertainty-csp-fixture-correction-63cd4dfa.json).
+- **Not claimed.** The first candidate is failed historical evidence. Corrected actual browser execution remains pending; no product accessibility defect, accuracy or original closure is asserted.
+
+
+### 2026-11-21-091608-hp-uncertainty-source-preview-1a613b14
+
+Recorded 2026-11-21T09:16:08.015567+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Add an isolated caller-selected whole-passage uncertainty-word component, exact canonical record validation, bounded source packaging and standalone fixture.
+- **Evidence.** 16 focused Python controls and 10 Node groups over 31 authored cases passed; the isolated fixture compiled. Browser execution follows this source record. [Change record](./runs/changes/2026-11-21-091608-hp-uncertainty-source-preview-1a613b14.json).
+- **Not claimed.** No production mount, HP tag, contextual accuracy, independent human validation or full original requirement closure. Ambiguous lexical Unicode boundaries refuse.
+
+
 ### 2026-11-21-092600-pyodide-runtime-rebinding-counter-review-0647a0c7
 
 Recorded 2026-11-21T09:26:00.804577+00:00 · Contributor: Codex /root/seo; actual independent review /root · change
