@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-21T08:42:16.802091+00:00",
+  "updated": "2026-11-21T10:46:30.528020+00:00",
   "active_increment": "Publish the source-matched Android Share fix and independent NF reference preview; all70 original requirements remain open, with N014 advanced20 to80 and physical/human acceptance preserved.",
-  "status": "all5_current_source_checks_and_personal_boundaries_pass; protected_CI_and_new_public_delivery_pending",
+  "status": "new_independent_HP_runtime_Android_software_integrated_under_verification; prior_production_live; original70_target60_unmet",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -1195,7 +1195,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-21T08:42:16.802091+00:00",
+  "updated_at": "2026-11-21T10:46:30.528020+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3202,12 +3202,12 @@
   },
   "production_publication": {
     "status": "live_and_verified_critical_assets_and_actual_checker",
-    "source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
-    "deployment_url": "https://32f95adf.aitrust-id.pages.dev",
+    "source_commit": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
+    "deployment_url": "https://26f7b904.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-21-nov21-publication.json",
-    "protected_merge": "runs/2026-11-21-nov21-required-ci-review.json",
-    "critical_HTTP_checks": 26,
+    "evidence": "runs/2026-11-21-nov21-functional-publication.json",
+    "protected_merge": "runs/2026-11-21-pr138-required-ci-review.json",
+    "critical_HTTP_checks": 34,
     "origins": 2,
     "full_artifact_byte_equivalence_claimed": false,
     "scope_records": 202,
@@ -3945,7 +3945,7 @@
     }
   },
   "android_share_candidate": {
-    "status": "default_API36_runtime_9_pass; integrated_protected_source_publication_pending; physical_human_release_acceptance_open",
+    "status": "protected_published_source_with_9_actual_API36_controls; physical_human_distribution_acceptance_open",
     "hosted_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44881591785",
     "host_receipt": "runs/2026-11-21-android-default-configuration-nine-pass.json",
     "integration_review": "runs/2026-11-21-android-integration-pm-review.json",
@@ -3964,15 +3964,18 @@
     "current_source_path_count": 18,
     "automatic_PR_runtime": {
       "pull_request": 138,
-      "head": "d48957355ba07aece773e4a15a1bac62a9b937e5",
-      "run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722214",
+      "head": "c408e218da929c60a7f2e5483560eef2f593c267",
+      "run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886233496",
       "executed_original": 7,
       "executed_configuration": 2,
       "pass": true,
       "source_bindings_identical_to_retained_run": true,
       "additional_artifact_download": false,
       "additional_VM_launched_by_reviewer": false
-    }
+    },
+    "published_source_commit": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
+    "publication_review": "runs/2026-11-21-nov21-functional-closeout.json",
+    "current_runtime_review": "runs/2026-11-21-android-pr138-software-review.json"
   },
   "nested_runtime_notices": {
     "status": "web release merged and verified live",
@@ -4360,25 +4363,42 @@
         "metadata_only_followup": true
       },
       "reason": "Current live MT mobile quotation preview and website code notices verified after protected merge."
+    },
+    {
+      "superseded_at": "2026-11-21T09:02:00.648138+00:00",
+      "prior": {
+        "status": "live_and_verified_critical_assets_and_actual_checker",
+        "source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
+        "deployment_url": "https://32f95adf.aitrust-id.pages.dev",
+        "public_url": "https://aitrustid.com",
+        "evidence": "runs/2026-11-21-nov21-publication.json",
+        "protected_merge": "runs/2026-11-21-nov21-required-ci-review.json",
+        "critical_HTTP_checks": 26,
+        "origins": 2,
+        "full_artifact_byte_equivalence_claimed": false,
+        "scope_records": 202,
+        "completed_requirements": 132,
+        "open_requirements": 70,
+        "independent_tag_accuracy_approved": false,
+        "real_collection_enabled": false,
+        "public_app_store_released": false,
+        "formation_filed": false,
+        "metadata_only_followup": true
+      },
+      "reason": "Repaired Android source and optional NF browser workflow protected and published."
     }
   ],
   "session_delivery_closeout": {
-    "recorded_at": "2026-11-21T06:53:27.169178+00:00",
+    "recorded_at": "2026-11-21T09:02:00.648138+00:00",
     "board": "docs/session-delivery.json",
-    "evidence": "runs/2026-11-21-nov21-web-closeout-review.json",
-    "counter_review": "runs/2026-11-21-nov21-web-closeout-counter-review.json",
-    "finished_scoped_tasks": 14,
+    "evidence": "runs/2026-11-21-nov21-functional-closeout.json",
+    "counter_review": "runs/2026-11-21-nov21-functional-counter-review.json",
+    "finished_scoped_tasks": 16,
     "new_original_closures": 0,
-    "original_goal": "NOT MET",
-    "active_followup": {
-      "checked_at": "2026-11-21T06:53:27.169178+00:00",
-      "actual_worker": "/root/share_debugger",
-      "status": "active_at_snapshot",
-      "scope": "One changed-source DEFAULT APK run with all original7 plus2 configuration/privacy controls. No owner input needed; real physical/TalkBack/outside acceptance stays open."
-    }
+    "original_goal": "NOT MET"
   },
   "nov21_delivery": {
-    "status": "all5_current_source_checks_and_boundaries_pass; protected_CI_pending",
+    "status": "protected_and_public_functional_delivery_verified; original_target_unmet",
     "plan": "docs/delivery-wave-2026-11-21.md",
     "MT_implementation": "220c2edcb2cde0a0603842a32a446bac8f6d157b",
     "MT_review": "runs/2026-11-21-mt-mobile-pm-review.json",
@@ -4393,28 +4413,29 @@
       "PS": "runs/2026-11-21-nov21-next-PS.json",
       "PII_REDACTED": "runs/2026-11-21-nov21-next-PII_REDACTED.json",
       "extension": "runs/2026-11-21-nov21-next-extension-corrected.json",
-      "protocol": "runs/2026-11-21-nov21-functional-protocol.json",
-      "website": "runs/2026-11-21-nov21-functional-website.json"
+      "protocol": "runs/2026-11-21-nov21-public-closeout-protocol.json",
+      "website": "runs/2026-11-21-nov21-public-closeout-website.json"
     },
     "boundary_evidence": "runs/2026-11-21-nov21-functional-boundaries.json",
     "all_original_criteria_preserved": true,
-    "publication_evidence": "runs/2026-11-21-nov21-publication.json",
-    "protected_merge": "2aa67779352fa11c303867f52799172ec73ee07c",
-    "protected_review": "runs/2026-11-21-nov21-required-ci-review.json",
-    "deployment_url": "https://32f95adf.aitrust-id.pages.dev",
-    "finished_scoped_tasks": 14,
-    "counter_review": "runs/2026-11-21-nov21-web-closeout-counter-review.json",
-    "closeout_accounting": "runs/2026-11-21-nov21-accounting-current.json",
+    "publication_evidence": "runs/2026-11-21-nov21-functional-publication.json",
+    "protected_merge": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
+    "protected_review": "runs/2026-11-21-pr138-required-ci-review.json",
+    "deployment_url": "https://26f7b904.aitrust-id.pages.dev",
+    "finished_scoped_tasks": 16,
+    "counter_review": "runs/2026-11-21-nov21-functional-counter-review.json",
+    "closeout_accounting": "output/verification/session-delivery.json",
     "closeout_failures": [
       "runs/2026-11-21-nov21-closeout-build-guard.json",
       "runs/2026-11-21-nov21-closeout-a11y-failure.json"
     ],
     "android_integration_evidence": "runs/2026-11-21-android-integration-pm-review.json",
     "NF_integration_evidence": "runs/2026-11-21-nf-integrated-modal.json",
-    "inventory_correction": "runs/2026-11-21-pr138-inventory-correction.json"
+    "inventory_correction": "runs/2026-11-21-pr138-inventory-correction.json",
+    "current_closeout_inventory_review": "runs/2026-11-21-nov21-closeout-inventory-review.json"
   },
   "nf_device_preview": {
-    "status": "actual_integrated_modal_passes_both_engines; protected_public_delivery_pending",
+    "status": "live_optional_on_device_reference_preview; full_NF_tag_not_released",
     "worker_commit": "b582d1b909b83839c490669cb54e422ff58957a6",
     "architecture": "docs/nf-device-reference-plan.md",
     "guide": "docs/nf-device-reference.md",
@@ -4427,12 +4448,14 @@
     "NF_tag_issued": false,
     "independent_accuracy_evidence": false,
     "physical_phone_tested": false,
-    "publicly_published": false,
+    "publicly_published": true,
     "integrated_modal_evidence": "runs/2026-11-21-nf-final-integrated-modal.json",
     "shared_review": "runs/2026-11-21-nf-shared-integration-review.json",
     "copy_privacy_review": "runs/2026-11-21-nf-copy-dataflow-review.json",
     "current_browser_evidence": "runs/2026-11-21-nf-final-device-browser.json",
-    "current_input_controls": "runs/2026-11-21-nf-final-input.json"
+    "current_input_controls": "runs/2026-11-21-nf-final-input.json",
+    "publication": "runs/2026-11-21-nov21-functional-publication.json",
+    "published_source_commit": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a"
   },
   "android_share_candidate_history": [
     {
@@ -4452,5 +4475,93 @@
         "latest_snapshot": "runs/2026-11-20-credential-closeout-android-snapshot.json"
       }
     }
-  ]
+  ],
+  "nov21_next_delivery": {
+    "recorded_at": "2026-11-21T10:00:20.708615+00:00",
+    "architecture": "docs/independent-delivery-nov21-next.md",
+    "status": "all5_current_source_checks_pass; protected_CI_and_public_delivery_pending",
+    "HP": {
+      "standalone_worker_commit": "8fec188288fe93b53c1c413e0a7d20d42f48e102",
+      "integrated_evidence": "runs/2026-11-21-hp-next-integrated-site.json",
+      "distinct_review": "runs/2026-11-21-hp-runtime-independent-review.json",
+      "HP_tag_issued": false,
+      "physical_or_independent_acceptance": false
+    },
+    "runtime_sources": {
+      "worker_commit": "9bcbde78933ac0afd208ce7a1d7c59bc115f47f8",
+      "hook_commit": "ae787f41e78e19a5a8c8c86650cc216cd3db850e",
+      "exact_runtime_members": 5,
+      "selected_preferred_files": 10,
+      "actual_source_artifacts": 3,
+      "full_WASM_or_global_distribution_clearance": false
+    },
+    "Android": {
+      "runtime_source_commit": "c5f6204f37bdf94ed7192bddec8428223eed21f0",
+      "actual_hosted_run": 44889760925,
+      "original_cases": 7,
+      "configuration_cases": 2,
+      "malformed_refusal_recovery_pairs": 9,
+      "fresh_dispatches": 19,
+      "evidence": "runs/2026-11-21-android-malformed-intent-hosted-pass.json",
+      "distinct_review": "runs/2026-11-21-android-malformed-independent-review.json",
+      "new_local_focused_groups": 14,
+      "prior_hosted_focused_tests": 88,
+      "new_workflow_execution_pending": true,
+      "physical_TalkBack_or_release_acceptance": false
+    },
+    "all_original_criteria_preserved": true,
+    "original_complete": 132,
+    "original_open": 70,
+    "new_original_closures": 0,
+    "closed_scoped_jobs": 16,
+    "protected_public_delivery_pending": true,
+    "real_collection_enabled": false,
+    "independent_accuracy_evidence": false,
+    "prior_policy1_12_unchanged": true,
+    "new_factual_policy_version": "1.13",
+    "held_prior_metadata_PR": 139,
+    "held_prior_metadata_reason": "NF two-engine suite hit outer deadline; original run cause unestablished, bounded Linux diagnostic established aggregate exhaustion in its separate execution.",
+    "NF_verifier": {
+      "source_handoff_commit": "09453b5deb788815905b486ab081340e9588bd43",
+      "tested_runtime_commit": "3a5838a42bd5a479e3a6cf49213e0837a218250d",
+      "actual_hosted_run": 44892061532,
+      "evidence": "runs/2026-11-21-nf-hosted-parallel-complete.json",
+      "distinct_review": "runs/2026-11-21-nf-hosted-parallel-independent-review.json",
+      "actual_browser_program_elapsed_ms": 143498,
+      "unchanged_browser_budget_ms": 180000,
+      "mode": "explicit_capacity_gated_hosted_parallel_two; default_local_sequential",
+      "completed_engines": [
+        "Chromium",
+        "WebKit"
+      ],
+      "per_engine_authored_cases": 33,
+      "per_engine_complete_records": 21,
+      "per_engine_refusals": 12,
+      "per_engine_corrupt_records_refused": 8,
+      "all_original_controls_and_deadlines_preserved": true,
+      "prior_metadata_PR_cause_retroactively_proven": false,
+      "general_speed_or_accuracy_guarantee": false
+    },
+    "registered_checks": {
+      "PS": 7,
+      "PII_REDACTED": 6,
+      "extension": 14,
+      "protocol": 60,
+      "website": 59
+    },
+    "final_source_reviews": [
+      "runs/2026-11-21-next-hp-runtime-source-review.json",
+      "runs/2026-11-21-next-nf-source-review.json",
+      "runs/2026-11-21-next-android-source-review.json"
+    ],
+    "receipts": {
+      "PS": "runs/2026-11-21-independent-final-PS.json",
+      "PII_REDACTED": "runs/2026-11-21-independent-final-PII_REDACTED.json",
+      "extension": "runs/2026-11-21-independent-final-extension.json",
+      "protocol": "runs/2026-11-21-independent-final-protocol.json",
+      "website": "runs/2026-11-21-independent-final-website.json"
+    },
+    "finite_inventory_review": "runs/2026-11-21-independent-finite-inventory-review.json",
+    "source_inventory_count": 1467
+  }
 }

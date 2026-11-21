@@ -1,0 +1,80 @@
+{
+  "format": "ai-trust-id-hp-runtime-independent-integration-review/v1",
+  "captured_at": "2026-11-21T09:53:24.432724+00:00",
+  "pass": true,
+  "reviewer": "/root/share_debugger",
+  "review_method": "Read-only retained reports, source/helper contract and current artifact/policy bytes; no browser, test suite, build, download or source edit.",
+  "reviewed_reports": {
+    "runs/2026-11-21-hp-next-integrated-site.json": "32b85fcf9a4f7314edc506bca3eadec9352695ba101ef52a9e38402bda1b31bf",
+    "runs/2026-11-21-hp-runtime-shared-integration.json": "4855ba6fc4f3629104f42b6bf0265b7b7c42a112dcdccde32431fd130f011448"
+  },
+  "engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "canonical_case_ids_per_engine": [
+    "canonical_nfc",
+    "calendar",
+    "negation"
+  ],
+  "full_record_deep_equality_assertions_in_current_helper_confirmed": true,
+  "whole_canonical_records_per_engine": 3,
+  "stable_source_hashes": 24,
+  "stable_served_hashes": 25,
+  "all_current_scoped_source_and_served_hashes_match": true,
+  "helper_exact051c28f_sha256": "ffc0fb77ed469189b825cd6714805f488c7efcb10f58dbd9c8f5c05c4c3142f2",
+  "controls": {
+    "pass": true,
+    "actual_HP_modal": true,
+    "raw_frozen_NFC_annotation_source_bound": true,
+    "explicit_whole_context_and_keyboard_focus": true,
+    "unsupported_boundary_not_zero": true,
+    "input8001_retained_and_refused": true,
+    "private_details_opt_in": true,
+    "edit_unselect_clear_cancel_unmount": true,
+    "empty_reopen": true,
+    "native_preview_closed_before_open": true,
+    "close_preview_unmounts_and_cancels": true,
+    "no_analysis_before_run": true,
+    "no_input_upload_storage_console": true,
+    "reflow320_at200percent": true,
+    "light_dark": true,
+    "minimum44px_actions": true,
+    "guide_exact": true,
+    "optional_payload_and_actual_chunk_failures_then_numericHP_PS_MT": true
+  },
+  "guide_link_finding_fixed_exact_source_public_dist": true,
+  "policy1_13_factual_context_and_selected_JS_source_only": true,
+  "new_policy1_13_archives_exact_current_source_and_dist": 9,
+  "old_policy1_12_archives_exact_f5_public_and_dist": 9,
+  "actual_normal_build_exit": 0,
+  "runtime_exact_five_current_files_and_three_outputs": true,
+  "runtime_bundle_sha256": "0ab9f83496de972e9976677e2729d4931460f1c6cbb29b67de068454975fa412",
+  "selected_runtime_claims_all_false": {
+    "all_dependency_obligations": false,
+    "compiler_reproduced": false,
+    "distribution_route_admitted": false,
+    "full_wasm_corresponding_source": false,
+    "legal_clearance": false,
+    "signature_verified": false
+  },
+  "current_integration_source_hashes": {
+    "site/src/main.jsx": "a52e5909ecfe1ce46ed7efffb7c6a317c0ce3ceba994a77a4bdb578356fc8630",
+    "site/src/catalog.js": "faf6beae64adc130da9bc922dac8af7ce621a09565dc476f79017fc9ce44b96e",
+    "site/src/presentation.js": "50a8c5a8390be8eb2dd19f6ec285f60f8b47d6bcf0248b682ac59ece0da89c1d",
+    "site/src/usage.js": "bf54a974ccd3a4d41cc6be5e22e00d3e0e76b958139108b09493dea07f2ca262",
+    "site/src/policies.js": "73ed4386eb9b1f709a7996f84cb16f24e01a5176eef9cbb3087eb924df968c41",
+    "site/src/workflows/About.jsx": "7421ad1a13184e255fb55d43ab1e44bdcf7ce9b29d625248c6a2308e82e7ca6c",
+    "site/package.json": "e96338699327cb404b3a9e708448f102f1c64d6fcbdb7f9e2d966ff66f4f07bb",
+    "site/scripts/prepare.mjs": "f486c8ac26d89308cadb3cf5da6d11a04b9feb7e506a46286821441a3c440c2f",
+    "site/scripts/prepare-device.mjs": "0e932c26b59fac4d3cb43288a2ca29f33a3e281c0a2559697ff8befb3a683ff5",
+    "scripts/hp-uncertainty-site-controls.cjs": "ffc0fb77ed469189b825cd6714805f488c7efcb10f58dbd9c8f5c05c4c3142f2"
+  },
+  "no_new_actionable_blocker_in_reviewed_boundary": true,
+  "global_configuration_source_freeze_and_protected_publication_pending": true,
+  "HP_tag_release": false,
+  "physical_phone_or_human_screen_reader_acceptance": false,
+  "independent_accuracy_or_semantic_corroboration": false,
+  "full_WASM_source_or_legal_clearance": false,
+  "full_original_requirement_closure": false
+}

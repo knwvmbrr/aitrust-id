@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-11-21T09:24:31.402246+00:00",
+  "pass": true,
+  "reviewed_by": "/root",
+  "module_sha256": "e6702ea1949a46ccae76d1dbefaf5c5d76003a7b4f651d08d20b18ef64af2e00",
+  "outcomes": {
+    "checked": "refused",
+    "outputs": "refused",
+    "export": "refused",
+    "check_built": "refused"
+  },
+  "legal_clearance": false,
+  "full_WASM_source_claim": false,
+  "global_distribution_admission": false,
+  "profile": "selected-pyodide-js-correction-independent-review/v1",
+  "private_corrected_execution_sha256": "19d56492072563dcd8172429f449848f98cf074c6ac95dadb3536e905023c527",
+  "prior_actual_counterexample": {
+    "private_execution_sha256": "3f4a13493e7368300d2f4222f7a6fac3c0318a7268814d1d925144719863b994",
+    "unexpected_accept": true,
+    "reviewed_runtime_replaced": true,
+    "module_or_cli_changed": false,
+    "archive_lock_source_map_changed": false
+  },
+  "review_limits": [
+    "Distinct PM engineering review of the exact runtime metadata rebinding defect and bounded source/notice producer; not independent legal clearance or detector validation.",
+    "Normal website build integration and public source/notice delivery are pending."
+  ]
+}

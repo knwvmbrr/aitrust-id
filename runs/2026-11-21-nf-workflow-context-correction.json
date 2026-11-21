@@ -1,0 +1,83 @@
+{
+  "profile": "nf-diagnostic-workflow-context-correction/v1",
+  "captured_at": "2026-11-21T09:57:36.709915+00:00",
+  "pass": true,
+  "prepared_by": "Codex /root/seo",
+  "workflow_sha256": "d46ee9d57684e0077463aee22303de94ff85b38b082d43578e4960be113a72f3",
+  "prior_actual_run": {
+    "id": 44891826876,
+    "source_commit": "5ac7c7441408d23d367490a0363cf613048b4d89",
+    "conclusion": "failure",
+    "jobs_started": 0,
+    "check_runs": 0,
+    "private_metadata_sha256": "b42094fc11c53c664bf86b5ab2a28cc84a0988b600d12373380ba49029458703",
+    "runtime_execution": false
+  },
+  "fixed_source_defect": "The runner context was referenced in job-level env, where GitHub does not permit it. The same two metadata expressions now live in the NF execution step env.",
+  "official_source": "https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#context-availability",
+  "all_explicit_context_references": [
+    {
+      "step_index": 0,
+      "scope": "jobs.nf-browser-diagnostic.steps.with",
+      "field": "ref",
+      "expression": "github.sha",
+      "allowed_by_official_context_table": true
+    },
+    {
+      "step_index": 7,
+      "scope": "jobs.nf-browser-diagnostic.steps.env",
+      "field": "AITRUST_CI_RUNNER_ENV",
+      "expression": "runner.environment",
+      "allowed_by_official_context_table": true
+    },
+    {
+      "step_index": 7,
+      "scope": "jobs.nf-browser-diagnostic.steps.env",
+      "field": "AITRUST_CI_RUNNER_OS",
+      "expression": "runner.os",
+      "allowed_by_official_context_table": true
+    },
+    {
+      "step_index": 10,
+      "scope": "jobs.nf-browser-diagnostic.steps.env",
+      "field": "AITRUST_CI_RUNNER_ENV",
+      "expression": "runner.environment",
+      "allowed_by_official_context_table": true
+    },
+    {
+      "step_index": 10,
+      "scope": "jobs.nf-browser-diagnostic.steps.env",
+      "field": "AITRUST_CI_RUNNER_OS",
+      "expression": "runner.os",
+      "allowed_by_official_context_table": true
+    }
+  ],
+  "implicit_context_reviews": [
+    {
+      "scope": "jobs.nf-browser-diagnostic.if",
+      "contexts": [
+        "github"
+      ],
+      "allowed": true
+    },
+    {
+      "scope": "jobs.nf-browser-diagnostic.steps.if",
+      "expression": "always()",
+      "allowed": true
+    }
+  ],
+  "yaml_parsed": true,
+  "distinct_workflow_review": {
+    "reviewed_by": "Codex /root/web_camo",
+    "pass": true
+  },
+  "runtime_source_sha256": {
+    "scripts/verify-nf-client.cjs": "02d7f8242217551202e543117b4af55f41557bcf9fa7b5a63bb63cbc786979d4",
+    "scripts/verify-nf-device.cjs": "1e219b066d18f37d716551e1de92dad06d5b1669ce0608b0bbb8c816ba3e0f06"
+  },
+  "runtime_source_changed": false,
+  "limitations": [
+    "Static workflow repair only; no actual concurrency/runtime performance proof exists yet for this source.",
+    "The failed pre-job candidate remains preserved, and no unchanged run was retried."
+  ]
+}

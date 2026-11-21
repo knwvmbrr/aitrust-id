@@ -1,0 +1,71 @@
+{
+  "profile": "nf-hosted-parallel-actual-independent-review/v1",
+  "captured_at": "2026-11-21T10:05:08.707531+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/web_camo",
+  "source_commit": "3a5838a42bd5a479e3a6cf49213e0837a218250d",
+  "run": 44892061532,
+  "candidate": {
+    "path": "runs/2026-11-21-nf-hosted-parallel-complete.json",
+    "sha256": "effe8e4e2bcf911712fb5ec6800c4d9efd376421df8bb442fe2bb04078a226eb"
+  },
+  "artifact": {
+    "id": 14702935557,
+    "bytes": 21451,
+    "sha256": "76ff60d08014788c37ff7f71108462c30861b72d0f4368dd7a3941b45ed95f9e",
+    "downloaded_once": true,
+    "members": {
+      "nf-device-stage.json": {
+        "bytes": 58868,
+        "sha256": "d4f1b5033e08a930b301f001bb244cd8330de5ce22f74ae36df8d56d83d5a8c8"
+      },
+      "nf-device-browser.json": {
+        "bytes": 36871,
+        "sha256": "aa93335b9834ebaa575fd62f0a26c2ea1c187fa865b5bdd28ac0f1570b2bf1ae"
+      },
+      "nf-client-diagnostic.json": {
+        "bytes": 923,
+        "sha256": "6fbfbc08c06937de2f59e59dd9f9bfdd7cb4a19f5308fa35a864c981ea5c10f3"
+      }
+    }
+  },
+  "verified": {
+    "three_raw_reports_exact_zip_member_and_candidate_bindings": true,
+    "actual_job_log_hash_and_separate_input_summary": true,
+    "parent_all_four_commands_success": true,
+    "canonical_browser_elapsed_ms": 143498,
+    "original_aggregate_timeout_ms": 180000,
+    "engines": 2,
+    "authored_cases_each": 33,
+    "complete_records_each": 21,
+    "canonical_refusals_each": 12,
+    "corrupt_refusals_each": 8,
+    "all_assertion_flags_and_browser_fixture_cleanup": true,
+    "per_engine_case_begin_complete_indices_all33": true,
+    "progress_event_count": 207,
+    "immutable_source_bindings": 26,
+    "prior_serial_served_artifacts_identical": 282,
+    "changed_source_paths_only": [
+      "scripts/verify-nf-client.cjs",
+      "scripts/verify-nf-device.cjs"
+    ],
+    "actual_capacity": {
+      "platform": "linux",
+      "available_cpu_threads": 4,
+      "total_memory_bytes": 16760348672,
+      "available_memory_bytes": 15348473856,
+      "constrained_memory_bytes": null
+    },
+    "two_fields_3000_codepoints_retained_refused_focused_both_engines": true
+  },
+  "limits": [
+    "Read-only retained-artifact/source review; no new download, browser, SDK or runtime execution.",
+    "One selected capacity-gated hosted Linux candidate, not unconditional speed/reliability or default parallelism.",
+    "Old sequential timeout and invalid-workflow histories remain evidence of distinct attempts; prior untraced PR139 cause is not reconstructed.",
+    "No independent accuracy, physical-phone/human accessibility, full original scope closure or production delivery claim.",
+    "Diagnostic-only workflow remains excluded from production integration; root owns any separately reviewed standard CI flag/source bindings."
+  ],
+  "private_review_sha256": "7c841a557b9f06f38cec549e4dfecb4274ed7045a1ed985b99c4b8418fedbba0",
+  "public_copy_sanitized_at": "2026-11-21T10:05:41.357327+00:00",
+  "sanitization": "Only candidate private absolute path replaced with repository-relative path; original review time, reviewer and findings preserved."
+}

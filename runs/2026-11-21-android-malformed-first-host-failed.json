@@ -1,0 +1,122 @@
+{
+  "format": "ai-trust-id-android-malformed-first-host-failed/v1",
+  "recorded_at": "2026-11-21T09:21:14.926086+00:00",
+  "source_commit": "ab0666be2b42b69e19394f5c563176111ee67f59",
+  "run": {
+    "id": 44888523549,
+    "job_id": 136799015087,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44888523549",
+    "conclusion": "failure",
+    "attempt": 1,
+    "configuration_controls": true,
+    "intake_probe": false
+  },
+  "artifact": {
+    "id": 14701311880,
+    "sha256": "0520f6d6a9272254c6275ffb1d81b7b88c371334dd7debc6cdebf68ef1033562",
+    "bytes": 6387668,
+    "download_count": 1,
+    "raw_reports": {
+      "emulator.json": {
+        "sha256": "b6fd87d68cc5533c404936e5dc9af407d3c30c7dd56b6d8ef2c5e307186ec553",
+        "bytes": 9438
+      },
+      "build.json": {
+        "sha256": "7b9dbcae1a99b4c5e57c6f31744674d368a15b1599c22fe59d9eaa26229395e5",
+        "bytes": 2255
+      },
+      "preparation.json": {
+        "sha256": "afbf7f191300260bc886af40bbfcb7e261e9d7da08984ba5e76f50a12af9580b",
+        "bytes": 546
+      },
+      "engine-parity.json": {
+        "sha256": "310a64c56f5003d2d6ee8ab5ee73555c88db902207c8e1706170a85d63ca3dd3",
+        "bytes": 685
+      }
+    },
+    "job_log_sha256": "7c3a9f0c3608bce0fed6f2efacc65237b69a6c1099a82d7d8c0f72ceec1eeceb"
+  },
+  "runtime": {
+    "status": "FAILED",
+    "pass": false,
+    "phase": "intent_controls",
+    "original_seven_passed": true,
+    "configuration_two_passed": true,
+    "intent_controls": {
+      "status": "FAILED",
+      "pass": false,
+      "cases": [],
+      "default_checker_excludes_sender": true,
+      "sender_build": {
+        "variant": "synthetic-sender-only/v1",
+        "apk_sha256": "0cd3186dd1d30c8398b64a1b29429cfaad0d6f925ffe7199ed3927ad8e0de169",
+        "apk_bytes": 12691,
+        "permission_count": 0,
+        "production_checker_modified": false,
+        "sources": {
+          "tests/android/intent-sender/AndroidManifest.xml": "d3da94675e71314891cb2ff90b0e1d51ff0fa40df048eb2a7ee44df9b591f988",
+          "tests/android/intent-sender/SenderActivity.java": "012bd2fb8f39d411f844cf57f193ae63a958628e011cf6fbc75910b03e45e7bb",
+          "scripts/android-intent-controls.py": "2df966e2a77ed859d78708480555d9226e4c50a78d34f4dce2636966f0df3a6c",
+          "scripts/verify-android-emulator.py": "2ad588de8dc8e6e402014fa6ad928799b9f84dfb7f1bb16d5a626097044a1119",
+          "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+          "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f"
+        }
+      },
+      "different_application_uid": true,
+      "control_stage": "refusal",
+      "last_observation": {
+        "owned_editor_present": true,
+        "owned_status_present": true,
+        "owned_check_present": true,
+        "editor_empty_or_exact_hint": false,
+        "editor_exact_synthetic_marker": true,
+        "received_status": true,
+        "unsupported_status": false,
+        "check_enabled": true,
+        "result_tag_present": false,
+        "result_details_present": false
+      },
+      "case": "missing_text",
+      "case_count": 0
+    },
+    "diagnostic_code": "intent_refusal_unavailable",
+    "elapsed_seconds": 165.392,
+    "license_record_unchanged": true
+  },
+  "default_apk": {
+    "signed_apk_sha256": "294609cfd498e948e0bf5105f5d1412d7c31d090d16124b2afd6e99e74663e86",
+    "signed_apk_bytes": 6444652,
+    "unsigned_apk_sha256": "ad481c5f6d7c3c1277fdba58d91520563a6eeaad3db44f7d9d90077f8c4f58cf",
+    "permission_count": 0,
+    "native_sources": {
+      "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+      "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+      "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+      "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+      "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+      "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+      "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+      "mobile/android/src/com/aitrustid/android/CheckActivity.java": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+      "mobile/android/src/com/aitrustid/android/ConfigurationDraft.java": "5fb22a21a6c8ad36b4535e39955ecff4a6baede2e42c43c9648b8149dd52211a",
+      "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+      "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+      "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+      "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+      "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29"
+    }
+  },
+  "interpretation": {
+    "new_completed_pairs": 0,
+    "missing_text_refusal_not_observed": true,
+    "prior_valid_exact_marker_received_and_check_enabled_observed": true,
+    "sender_start_callback_and_requested_selection_not_attested": true,
+    "task_reuse_or_stale_sender_selection_hypothesis_not_proved": true,
+    "product_ingress_bug_not_established": true,
+    "no_unchanged_retry": true,
+    "full_producer_stays_failed": true
+  },
+  "physical_device_evidence": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false
+}

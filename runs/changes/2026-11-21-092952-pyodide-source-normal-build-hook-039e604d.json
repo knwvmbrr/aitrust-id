@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-092952-pyodide-source-normal-build-hook-039e604d",
+  "recorded_at": "2026-11-21T09:29:52.855488+00:00",
+  "author": "Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9bcbde78933ac0afd208ce7a1d7c59bc115f47f8",
+  "changed": "Added the selected source/notice exporter after existing pinned runtime preparation in the normal website build path.",
+  "proves": "Actual prepare-device execution with the approved existing Python passes; exact current prepared runtime plus all three source/notice outputs pass the artifact gate without altering producer pins.",
+  "limits": "Only preparation integrated here; PM owns post-build gate, public links, offline handling and protected publication. No whole website test, legal clearance, full WASM or original closure claimed.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "site/scripts/prepare-device.mjs": "0e932c26b59fac4d3cb43288a2ca29f33a3e281c0a2559697ff8befb3a683ff5",
+    "runs/2026-11-21-pyodide-js-preparation-hook.json": "230d2d11386f6d0378353e9ea8604b8e5ac2827711c723ce1f6e77987d4a7f87"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-pyodide-js-preparation-hook.json",
+      "sha256": "230d2d11386f6d0378353e9ea8604b8e5ac2827711c723ce1f6e77987d4a7f87"
+    },
+    {
+      "path": "runs/2026-11-21-pyodide-js-source-corrected.json",
+      "sha256": "e13ef5152d595f25b51830c31150a646e1d0e647660202ddd04a930e18711aa1"
+    }
+  ],
+  "checks": []
+}

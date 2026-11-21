@@ -9,3 +9,6 @@ const directory=new URL('../public/device/runtime-314.0.7/',import.meta.url);
 await mkdir(directory,{recursive:true});
 for(const file of ['pyodide.mjs','pyodide.asm.mjs','pyodide.asm.wasm','python_stdlib.zip','pyodide-lock.json'])
  await copyFile(new URL('../node_modules/pyodide/'+file,import.meta.url),new URL(file,directory));
+
+// Carry exact selected loader sources and verbatim notices with every normal build.
+execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[root+'scripts/pyodide-js-sources.py','--export',root+'site/public/runtime-js-sources'],{stdio:'inherit',timeout:15000});

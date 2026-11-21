@@ -12,6 +12,7 @@ import {presentation} from './presentation.js';
 import {usage} from './usage.js';
 import {MTExplorerSlot} from './MTExplorerSlot.jsx';
 import {HPExplorerSlot} from './HPExplorerSlot.jsx';
+import {HPUncertaintyExplorerSlot} from './HPUncertaintyExplorerSlot.jsx';
 import {NFExplorerSlot} from './NFExplorerSlot.jsx';
 import {CredentialFlowExplorerSlot} from './CredentialFlowExplorerSlot.jsx';
 import {catalogueExport} from './catalogue-export.js';
@@ -58,6 +59,13 @@ function PythonFlowPreview(){
   {open&&<CredentialFlowExplorerSlot/>}
  </details>;
 }
+function UncertaintyWordingPreview(){
+ const [open,setOpen]=useState(false);
+ return <details data-hp-uncertainty-method className="tag-disclosure my-4 border-y border-line py-1" onToggle={event=>setOpen(event.currentTarget.open)}>
+  <summary className="flex min-h-12 cursor-pointer items-center justify-between gap-3 py-3 text-sm font-semibold"><span>Uncertainty words · preview</span><span aria-hidden="true" className="disclosure-symbol text-lg">+</span></summary>
+  {open&&<HPUncertaintyExplorerSlot/>}
+ </details>;
+}
 function UseTag({tag}) {
  const use=usage(tag);const [message,setMessage]=useState('');
  async function copy(command){try{await navigator.clipboard.writeText(command);setMessage('Commands copied. Review them before running in Terminal.');}catch{setMessage('Copy is unavailable. Select the commands, or open the full setup guide.');}}
@@ -84,6 +92,7 @@ function TagDetails({tag}) {
   <p data-tag-availability className="mt-2 text-left text-xs leading-5 text-muted">{intro.availability}</p>
   {tag.id==='MT'&&<MTExplorerSlot/>}
   {tag.id==='HP'&&<HPExplorerSlot/>}
+  {tag.id==='HP'&&<UncertaintyWordingPreview/>}
   {tag.id==='NF'&&<NFExplorerSlot/>}
   <UseTag tag={tag}/>
   {tag.id==='PS'&&<PythonFlowPreview/>}

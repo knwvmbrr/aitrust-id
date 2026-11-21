@@ -1,0 +1,39 @@
+{
+  "captured_at": "2026-11-21T09:02:00.648138+00:00",
+  "pass": true,
+  "profile": "nov21-functional-software-closeout/v1",
+  "reviewed_by": "/root",
+  "distinct_reviewed_by": "/root/web_camo",
+  "protected_source_commit": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
+  "tested_head": "c408e218da929c60a7f2e5483560eef2f593c267",
+  "deployment_url": "https://26f7b904.aitrust-id.pages.dev",
+  "public_url": "https://aitrustid.com/#person/NF",
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nov21-functional-publication.json",
+      "sha256": "772a0b062532a5682be2f3ce1906ad5c51a07519d01de7452f8d04f54dcdbc59"
+    },
+    {
+      "path": "runs/2026-11-21-android-pr138-software-review.json",
+      "sha256": "c931dee7f4fe2273f95213f3de188278b4c88f1591345ad7c0c2af0151cc08ac"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-functional-counter-review.json",
+      "sha256": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7"
+    }
+  ],
+  "CI_review": {
+    "path": "runs/2026-11-21-pr138-required-ci-review.json",
+    "sha256": "20464479d31c40e2a6261d1d3e239f892ed2214ec9d75f992e08025dfe12b401"
+  },
+  "finished_software_jobs": [
+    "session-android-runtime-integration",
+    "session-nf-device-reference"
+  ],
+  "new_original_closures": 0,
+  "original_complete": 132,
+  "original_open": 70,
+  "NF_tag_released": false,
+  "physical_device_or_human_acceptance": false,
+  "scope": "Source-bound actual runtime and selected public artifact/browser software acceptance only; original contextual, independent, human and operational criteria are preserved."
+}

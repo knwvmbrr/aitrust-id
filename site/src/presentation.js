@@ -6,7 +6,7 @@ const descriptions = {
   PII_REDACTED: ['Keep detected personal details out of the local checker.', 'An answer includes an email address. The local service can remove detected values before checking the rest of the text.', 'Some sensitive details can be missed. This tag does not mean all private information is gone.'],
   NF: ['Compare a claim with a passage you choose.', 'Paste a sentence and a handbook passage to see exact matches or shared words.', 'Matching words can still disagree. This preview does not verify facts; the full NF tag is still planned.'],
   FI: ['See where an answer disagrees with your references.', 'Compare a claim with your handbook and read the passage that contradicts it.', 'Planned. A disagreement does not prove dishonesty, and the reference could be wrong.'],
-  HP: ['Explore numbers and date-shaped details.', 'Paste a passage to see which numbers have a nearby URL or numbered reference.', 'This literal preview does not verify a claim or its source. The full HP tag is still planned.'],
+  HP: ['Look more closely at details and wording.', 'Find number-shaped details, or choose a passage to look for words such as “may” or “likely.”', 'These literal previews do not decide whether a statement is true or needs uncertainty. The full HP tag is still planned.'],
   MT: ['Explore wording before you decide what it means.', 'Try a message with “act now,” or one that names an expert.', 'These phrase checks do not judge intent or verify a source. The full MT tag is still planned.'],
   IV: ['See what an independent person actually checked.', 'Read a reviewer’s evidence, what they reviewed and what their review did not cover.', 'Planned. A signature records a review; it does not guarantee every claim is true.'],
   FA: ['See evidence that AI generated the content.', 'Inspect a recorded generation event or authenticated content credential tied to the item.', 'Planned. Writing style or missing human evidence cannot prove AI origin.'],
@@ -34,7 +34,7 @@ export function presentation(tag) {
     availability: tag.id==='PS' ? 'Works here: PS command-pattern preview.'
       : tag.id==='PII_REDACTED' ? 'Local setup required. PII does not run in this website checker.'
       : tag.id==='MT' ? 'Planned tag · Wording-method preview available.'
-      : tag.id==='HP' ? 'Planned tag · Literal-detail preview available.'
+      : tag.id==='HP' ? 'Planned tag · Detail and uncertainty-word previews available.'
       : tag.id==='NF' ? 'Planned tag · Reference comparison preview available.'
       : tag.audience==='person' ? 'Planned · No checker available yet.'
       : localOrganization ? 'Local software available. No team service is running.'

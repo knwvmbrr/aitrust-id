@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-094529-independent-hp-runtime-integration-6bb2a320",
+  "recorded_at": "2026-11-21T09:45:29.439511+00:00",
+  "author": "Codex /root PM; HP /root/web_camo; runtime /root/seo; review /root/share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "905e371591d025ea7124110acdede856d40f0411",
+  "changed": "Mounted a separate deferred HP uncertainty-word preview, added its build and guide flow, and carried the reviewed runtime JS source artifacts through exact postbuild/predeploy gates and public links.",
+  "proves": "Standalone HP source and both-browser controls pass; selected runtime producer and actual artifact checks pass with corrected coherent-rebind refusal. Shared source review preserves prior commands and independence; a discovered relative guide target is now published, and both deferred forms retain absent-child/dead-expansion controls.",
+  "limits": "Integrated normal build/browser, current all-capability evidence, protected merge and public delivery remain pending. No full HP, contextual accuracy, physical or legal/WASM/global-distribution acceptance. Original70 target60 remains unmet.",
+  "scope_ids": [
+    "T-HP",
+    "F-018",
+    "F-057",
+    "X-02",
+    "N-014"
+  ],
+  "files": {
+    ".gitattributes": "903cb245fa685b1382e8b83a5bdc4e6367360e6c9ff5c565a6db284b30d2b470",
+    ".gitignore": "230fa33a44c09107ccf91ba0bcfe82eb7bd6685e0e064ce4ff7dabe4cfef4e4e",
+    "docs/independent-delivery-nov21-next.md": "add967c327e8a46b245d41cab343bfee18e7ed07cfe2d4b190890ee5a0759ace",
+    "package.json": "17cd9777229f148d8a22ec337b08ddcdacfdb71dd7d158629ec2027e8bdd52ef",
+    "scripts/verify-site-accessibility.cjs": "f5bff5149b162d672f14319856b0fda8a620d6607624559ae93931e809a2202d",
+    "site/package.json": "e96338699327cb404b3a9e708448f102f1c64d6fcbdb7f9e2d966ff66f4f07bb",
+    "site/scripts/prepare.mjs": "f486c8ac26d89308cadb3cf5da6d11a04b9feb7e506a46286821441a3c440c2f",
+    "site/src/catalog.js": "faf6beae64adc130da9bc922dac8af7ce621a09565dc476f79017fc9ce44b96e",
+    "site/src/main.jsx": "a52e5909ecfe1ce46ed7efffb7c6a317c0ce3ceba994a77a4bdb578356fc8630",
+    "site/src/policies.js": "73ed4386eb9b1f709a7996f84cb16f24e01a5176eef9cbb3087eb924df968c41",
+    "site/src/presentation.js": "50a8c5a8390be8eb2dd19f6ec285f60f8b47d6bcf0248b682ac59ece0da89c1d",
+    "site/src/usage.js": "bf54a974ccd3a4d41cc6be5e22e00d3e0e76b958139108b09493dea07f2ca262",
+    "site/src/workflows/About.jsx": "7421ad1a13184e255fb55d43ab1e44bdcf7ce9b29d625248c6a2308e82e7ca6c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-hp-uncertainty-delivery.json",
+      "sha256": "43018ff4f59d2306c2c8263826e25cef53b32b4933de7b1afc98cecebf20aa25"
+    },
+    {
+      "path": "runs/2026-11-21-pyodide-js-source-corrected.json",
+      "sha256": "e13ef5152d595f25b51830c31150a646e1d0e647660202ddd04a930e18711aa1"
+    },
+    {
+      "path": "runs/2026-11-21-pyodide-js-source-independent-review.json",
+      "sha256": "f391e4463e1d6f877e7a8582f9747559c7179f5968c45dc7161656a820a94e1b"
+    }
+  ],
+  "checks": []
+}

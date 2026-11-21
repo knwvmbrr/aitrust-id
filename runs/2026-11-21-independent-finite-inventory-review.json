@@ -1,0 +1,33 @@
+{
+  "profile": "finite-independent-inventory-delta-review/v1",
+  "captured_at": "2026-11-21T10:32:34.424685+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/seo",
+  "candidate_sha256": "673ec01d5924e658015d1b165df35b8d4b6a8b5b24c27a15c0af889d335c8431",
+  "prior_inventory_review_sha256": "aaf77550e7599633669b382d7ad4b044a3150755eec100194bd341d1e7f98154",
+  "sources": 1467,
+  "changed": 77,
+  "added": 51,
+  "modified": 26,
+  "removed": 0,
+  "double_capture_exact_and_stable": true,
+  "only_delta_from_previous_candidate": {
+    "path": "tests/seo-metadata.mjs",
+    "before": "3c0f75ea048e271ba5fe1716a8ff792562545aea69d859e802d95065979417f7",
+    "after": "1588669dbed3f0e10c7f3cf2d8cfa42a0818b57068e0875556ec962bd278ae80"
+  },
+  "source_review": "Only the HP descriptive-copy expectation/name changes; Coming Soon, adopted formal name and no-certification/truth/independent-accuracy checks remain intact.",
+  "original_scope": {
+    "records": 202,
+    "complete": 132,
+    "open": 70,
+    "all_required_acceptance_preserved": true
+  },
+  "prior_scope_and_permission_review_remains_applicable": true,
+  "new_tests_browser_host_or_retry_executed_by_reviewer": false,
+  "limits": [
+    "Read-only source/hash delta review, not evidence that the current website execution passed.",
+    "Bind exact actual extension/website receipts only after current execution completion.",
+    "No permission, legal clearance, global license admission, detector accuracy or original requirement closure."
+  ]
+}

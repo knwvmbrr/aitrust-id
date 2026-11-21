@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-090224-nov21-functional-public-closeout-7dc922bb",
+  "recorded_at": "2026-11-21T09:02:24.475449+00:00",
+  "author": "Codex /root; Android /root/share_debugger; NF /root/seo; review /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
+  "changed": "Published repaired Android Share source and the private on-device reference workflow through protected integration, and updated attributed scope and delivery state.",
+  "proves": "Actual default API36 seven original plus two configuration/privacy controls pass. Eleven required protected checks pass. Actual public NF Chromium/WebKit controls and 34 critical HTTP comparisons pass. Two predeclared software jobs complete; scoped total 16.",
+  "limits": "Originals remain 132 complete and 70 open; target 60 unmet. No physical phone, TalkBack, human or independent-accuracy acceptance is invented. NF is wording evidence, not a truth verdict. Further HP and Android work is assigned, not complete.",
+  "scope_ids": [
+    "N-014",
+    "T-NF",
+    "F-142"
+  ],
+  "files": {
+    "docs/delivery-wave-2026-11-21.md": "f1e0459f582eb993e0d6c50a8dc104d6faff1c1dfc0dec991944f11dd82da077",
+    "docs/scope-progress.json": "424dabf185784dfb3226ff1c1e49bda7390f0560a3ee66172538ce6ee0b72127",
+    "docs/scope-progress.md": "54b286f22d782d4ec833369b12c5d3b390f0bb7681f88e1231d64524c687677a",
+    "docs/session-delivery-plan.md": "a558ed3fd94be60fd9e4415402ea0414157f7788cc6592f5a4780b0fbc4f10a0",
+    "docs/session-delivery.json": "e1b0ab8a1da626b4ff3cc09e83bd9da8dd8339474f118d2dfdfe66ccd4d5c6aa",
+    "runs/2026-11-21-android-pr138-software-review.json": "c931dee7f4fe2273f95213f3de188278b4c88f1591345ad7c0c2af0151cc08ac",
+    "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5",
+    "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
+    "runs/2026-11-21-nov21-functional-publication.json": "772a0b062532a5682be2f3ce1906ad5c51a07519d01de7452f8d04f54dcdbc59",
+    "runs/2026-11-21-pr138-required-ci-review.json": "20464479d31c40e2a6261d1d3e239f892ed2214ec9d75f992e08025dfe12b401",
+    "state.json": "d593966f743f3612e2ff4dafadb8be8d50f02b577b722b841a66b17d67de1005"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nov21-functional-publication.json",
+      "sha256": "772a0b062532a5682be2f3ce1906ad5c51a07519d01de7452f8d04f54dcdbc59"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-functional-counter-review.json",
+      "sha256": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-functional-closeout.json",
+      "sha256": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
+    }
+  ],
+  "checks": []
+}

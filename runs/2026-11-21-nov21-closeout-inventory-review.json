@@ -1,0 +1,27 @@
+{
+  "profile": "read-only-closeout-derived-inventory-review/v1",
+  "captured_at": "2026-11-21T09:06:52.481061+00:00",
+  "pass": true,
+  "reviewed_by": "/root/seo",
+  "candidate_sha256": "e67c36327c2f80ade23cfaf6d652eb0cdad20a003c28018eaa0240b24627ff2e",
+  "source_count": 1416,
+  "same_paths": true,
+  "changed": [
+    "site/src/public-scope.json",
+    "site/src/scope-manifest.json"
+  ],
+  "removed": [],
+  "current_inventory_matches": true,
+  "derived_public_scope_hash_and_bytes_match": true,
+  "scoped_tasks_closed": 16,
+  "new_original_closures": 0,
+  "original_scope": {
+    "total": 202,
+    "complete": 132,
+    "open": 70,
+    "required_acceptance_unchanged_from_f5": true
+  },
+  "source_stable_during_capture": true,
+  "permission_endpoint_or_distribution_approval": false,
+  "current_website_receipt_still_required": true
+}

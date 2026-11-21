@@ -1,0 +1,87 @@
+{
+  "profile": "nov21-hp-runtime-final-source-dataflow-peer-review/v1",
+  "captured_at": "2026-11-21T10:17:05.428340+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/web_camo",
+  "root_HEAD_before_uncommitted_integration": "905e371591d025ea7124110acdede856d40f0411",
+  "source_sha256": {
+    "site/src/main.jsx": "a52e5909ecfe1ce46ed7efffb7c6a317c0ce3ceba994a77a4bdb578356fc8630",
+    "site/src/catalog.js": "faf6beae64adc130da9bc922dac8af7ce621a09565dc476f79017fc9ce44b96e",
+    "site/src/presentation.js": "50a8c5a8390be8eb2dd19f6ec285f60f8b47d6bcf0248b682ac59ece0da89c1d",
+    "site/src/usage.js": "bf54a974ccd3a4d41cc6be5e22e00d3e0e76b958139108b09493dea07f2ca262",
+    "site/src/workflows/About.jsx": "03e737552efa1cc16c7be8214ceedb4b5c0ddfa4289494cfd45152badbc56538",
+    "site/src/policies.js": "73ed4386eb9b1f709a7996f84cb16f24e01a5176eef9cbb3087eb924df968c41",
+    "README.md": "8e7963a05ebcf3d3b06c8af1bfeeb789eef103a500c76519487e39d693b03b95",
+    "scripts/verify-site-accessibility.cjs": "f5bff5149b162d672f14319856b0fda8a620d6607624559ae93931e809a2202d",
+    "scripts/hp-site-controls.cjs": "83f49f14b47b605aaa59513335ebc2ae03db76b1b19a4e7f429d9a776ec11235",
+    "scripts/verify-site.cjs": "c4b65a0d9cb4e6a4543c68730dee751cc844e079f7440be991e8c6ba4f5fb21d",
+    "scripts/hp-uncertainty-site-controls.cjs": "ffc0fb77ed469189b825cd6714805f488c7efcb10f58dbd9c8f5c05c4c3142f2",
+    "scripts/verify-hp-uncertainty-site.cjs": "4f92351948ac8125c43d091ae85952f72b458ca603964a8b0cbc68890cbe319f",
+    "scripts/verify-hp-uncertainty-client.cjs": "2c04e2375bce68208f4f45cc3504ec2c3748c2000443cd31f600435a26675761",
+    "scripts/verify-nf-diagnostics.cjs": "ac66780b77dda71b51c07fc8a0bfba911c3f1256bb4cf5afadabf5cd7128f633",
+    "site/src/HPUncertaintyExplorer.jsx": "7f427bc59b88bbf2c92cb7e5a8ced90e7a03b8d67ad9401293902be963897f57",
+    "site/src/HPUncertaintyExplorerSlot.jsx": "a65b347c0a9aed29c510fd5f4609b1a041f9ca4b0e27d904529368a6368e14ae",
+    "site/src/hp-uncertainty-client.js": "a73dd71119fd294a9cd65de23c0fd5eb3dbd9387e8ccdb86d59afc7b21f0efdf",
+    "site/src/hp-uncertainty-worker.js": "2107f92377c48c0838785f3fae57ec72de6510a7177c56bcd5948818085291a1",
+    "site/src/hp-uncertainty-result.js": "0fbd170a982ae6c60abc6f45ebca57c0350f46077858f0362e8859954ba91fa6",
+    "site/src/hp-uncertainty-manifest.json": "5b7a21399b59cdb7362f7d94436f4cb24f56e4fa443c2a0dfd833ed5b4ea1071",
+    "tools/hp_uncertainty_device.py": "793ff4c62e8b2db29abae6387c8e616794ae2ed1f2ee1c4d019ec6e4cf805c5a",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "site/scripts/prepare.mjs": "f486c8ac26d89308cadb3cf5da6d11a04b9feb7e506a46286821441a3c440c2f",
+    "package.json": "7003af966cbcc3cec8347eb6525f035067b5803483e6c5fe840c769fed945f2e",
+    "site/package.json": "e96338699327cb404b3a9e708448f102f1c64d6fcbdb7f9e2d966ff66f4f07bb",
+    ".github/workflows/ci.yml": "375b76ebb0fe92e30f5f4ce6dda67b0560e4761d902bc454c9d8e6e884a922af",
+    ".github/workflows/android-share.yml": "1ccc56d0e5b898319deb5188b4188488618e68fdec525d9a290cf3ef0074fab6",
+    "docs/scope-progress.json": "0e4ddd08af3071609236b6de812090fb14a232652323b610d49cd976c7ab0d43",
+    "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
+    "eval/revalidation.json": "6dc0b2c191208be3088e4e845bda05d3bdb54c270ceb88e20255850fe72c3db9"
+  },
+  "retained_actual_reports": {
+    "runs/2026-11-21-hp-next-integrated-site.json": "32b85fcf9a4f7314edc506bca3eadec9352695ba101ef52a9e38402bda1b31bf",
+    "runs/2026-11-21-hp-runtime-independent-review.json": "c6f5ad1daba1aee445966ef0fd5da765ba517dcba8be891655897bbfba229a30",
+    "runs/2026-11-21-hp-runtime-shared-integration.json": "4855ba6fc4f3629104f42b6bf0265b7b7c42a112dcdccde32431fd130f011448"
+  },
+  "confirmed": {
+    "HP_closed_native_disclosure_mount_unmount_matches_reviewed_helper": true,
+    "canonical_method_and_fresh_independent_workers_unchanged": true,
+    "whole_passage_context_is_explicit_no_need_or_truth_inference": true,
+    "private_details_closed_no_upload_storage_or_training_permission_added": true,
+    "policy1_13_factual_context_and_selected_JS_source_limits": true,
+    "prior9_policy1_12_unchanged": {
+      "site/public/reference/policies/access/v1.12.txt": "d6afc6fbc68bea77ccaaa681398453b445e4879978b42370cd2edf5e8ad8ea9f",
+      "site/public/reference/policies/community/v1.12.txt": "d98c70c09efdcfdd68953cce0e2d708282f7c8f5d384fa1c00c671817d1f7e19",
+      "site/public/reference/policies/contributing/v1.12.txt": "53e97e855840439c96a5ea2e558ace96fd7bebd0b24ce47d3e3e4346a89467ab",
+      "site/public/reference/policies/governance/v1.12.txt": "f7157456afab204d0d29a6ffa782fa83b1158b0d0684e58368080ac70535dbbc",
+      "site/public/reference/policies/licenses/v1.12.txt": "2dd9602d34539ee61d080709c77cd91d8290e6e0a97c021482c73dc9642a5acd",
+      "site/public/reference/policies/privacy/v1.12.txt": "d82b1e4d950464296a78d1c1e285ebb242ec5fbe91889b39b1d772030a3b9a02",
+      "site/public/reference/policies/security/v1.12.txt": "ead8a8031d215f48f9c7aa4a165c35c0224c3bcf08bdc35d8d1f283153b0916f",
+      "site/public/reference/policies/terms/v1.12.txt": "3a7684e77885cc18be9a9e0bc228c90a0e2f69b5291e389fa81110887be488fd",
+      "site/public/reference/policies/validation/v1.12.txt": "0e99314db7b86c0b11bfc1c77ae7c407d0f79de923046aef63f6549cfaa6610f"
+    },
+    "all202_original_criteria_and_percentages_unchanged": true,
+    "original_complete": 132,
+    "original_open": 70,
+    "all55_original_website_commands_preserved_order_current59": true,
+    "selected_normal_build_source_runtime_gate5files3artifacts": true,
+    "readiness_wait_added_without_relaxing_height_dead_or_absent_assertions": true
+  },
+  "findings_corrected_before_freeze": [
+    "Existing numeric HP and catalogue assertions now require the exact current planned-preview availability wording.",
+    "Both Android push and pull-request filters include actual tests/android/intent-sender/** source directory.",
+    "HP disclosure count now4 with HP-only existence, closed state and absent editor assertions; other counts unchanged."
+  ],
+  "limits": [
+    "Read-only source and retained-proof review; no repeated browser, tests, build, VM, download or source mutation by reviewer.",
+    "Actual integrated three-canonical-record browser proof is retained selected evidence, not a fresh whole-current-source release run.",
+    "Parent still owns current source freeze, required59-command website evidence, protected checks and public delivery.",
+    "No full HP/F018, independent accuracy, physical-phone/human accessibility, full WASM corresponding source or legal clearance claimed."
+  ],
+  "privacy_projection": {
+    "original_review_sha256": "de78b173ceabcd5f6a234e75af6251e2ab7ebfd969312de6ccd4e1c21878c222",
+    "omitted_fields": [
+      "reviewed_root"
+    ],
+    "projection_recorded_at": "2026-11-21T10:19:44.414471+00:00",
+    "meaning": "Only the local worktree path was omitted. Original review, source bindings, findings and claims are retained; no new execution is claimed."
+  }
+}

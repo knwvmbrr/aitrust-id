@@ -1,0 +1,29 @@
+{
+  "format": "hp-uncertainty-source-manifest/v1",
+  "runtime": "314.0.7",
+  "runtime_path": "/device/runtime-314.0.7/",
+  "checks": {
+    "hedge": {
+      "path": "/hp-uncertainty-device/hedge-1e05ab4af768a5db89229dcfdb8eb18faf1f8adbf58518b4efe9c56f9bdd01ec.json",
+      "bundle_sha256": "1e05ab4af768a5db89229dcfdb8eb18faf1f8adbf58518b4efe9c56f9bdd01ec",
+      "bundle_bytes": 178514,
+      "sources": {
+        "tools/hp_uncertainty_device.py": "793ff4c62e8b2db29abae6387c8e616794ae2ed1f2ee1c4d019ec6e4cf805c5a",
+        "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+        "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+        "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+        "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+        "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+        "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+        "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+        "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb"
+      },
+      "method": "english-context-observations/1.0.0"
+    }
+  },
+  "normalization_id": "NFC-Unicode-15.0.0/v1",
+  "max_codepoints": 8000,
+  "max_bytes": 32000,
+  "boundary": "hp-uncertainty-safe-boundaries/v1"
+}

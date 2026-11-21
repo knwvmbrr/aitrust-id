@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-091323-nov21-final-closeout-source-evidence-f038e00f",
+  "recorded_at": "2026-11-21T09:13:23.050944+00:00",
+  "author": "Codex /root; exact inventory review /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
+  "changed": "Bound final documentation and generated catalogue updates to freshly executed source receipts and the reviewed current route inventory.",
+  "proves": "Current 57-command protocol and 55-command website receipts pass without source drift. Unchanged PS, PII and extension receipts still match. Distinct inventory review verifies 1416 sources and only two generated-data changes.",
+  "limits": "This updates evidence after actual software publication; it does not change detector methods, permissions, original acceptance or the 70-open count.",
+  "scope_ids": [
+    "N-014",
+    "T-NF"
+  ],
+  "files": {
+    "docs/delivery-wave-2026-11-21.md": "f1e0459f582eb993e0d6c50a8dc104d6faff1c1dfc0dec991944f11dd82da077",
+    "docs/scope-progress.json": "424dabf185784dfb3226ff1c1e49bda7390f0560a3ee66172538ce6ee0b72127",
+    "docs/scope-progress.md": "54b286f22d782d4ec833369b12c5d3b390f0bb7681f88e1231d64524c687677a",
+    "docs/session-delivery-plan.md": "a558ed3fd94be60fd9e4415402ea0414157f7788cc6592f5a4780b0fbc4f10a0",
+    "docs/session-delivery.json": "e1b0ab8a1da626b4ff3cc09e83bd9da8dd8339474f118d2dfdfe66ccd4d5c6aa",
+    "eval/route-boundaries.json": "b9db4982010a1f736c9ab77e075363c55ddbcbd8fa8239b409992be572fccb8c",
+    "runs/2026-11-21-android-pr138-software-review.json": "c931dee7f4fe2273f95213f3de188278b4c88f1591345ad7c0c2af0151cc08ac",
+    "runs/2026-11-21-nov21-closeout-inventory-review.json": "de8fdf50860e99e06cd34ec71bbcaa734a941e69a1c76146420e6de58b24b79f",
+    "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5",
+    "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
+    "runs/2026-11-21-nov21-functional-publication.json": "772a0b062532a5682be2f3ce1906ad5c51a07519d01de7452f8d04f54dcdbc59",
+    "runs/2026-11-21-nov21-public-closeout-protocol.json": "f661044c3444761e9f4061913e57da3371bc1a4b2fcece166b41960559d031a4",
+    "runs/2026-11-21-nov21-public-closeout-website.json": "6203331192b4092a12390d5d2c3123e948a8aaea884c8b326c5af123434ba219",
+    "runs/2026-11-21-pr138-required-ci-review.json": "20464479d31c40e2a6261d1d3e239f892ed2214ec9d75f992e08025dfe12b401",
+    "site/public/reference/public-scope.json": "70cc7dae4a1c14fc396c43a09244c7ab46cbdf0e610c7fc74d7eca3d2f4bb9cf",
+    "site/src/public-scope.json": "70cc7dae4a1c14fc396c43a09244c7ab46cbdf0e610c7fc74d7eca3d2f4bb9cf",
+    "site/src/scope-manifest.json": "271e43b19b7b289f5a979dc4f65f183f17b7242e07a208b469a4c02983e5205f",
+    "state.json": "22d787a40ecc52864f2b41ad7bffe8a8f9a4e9adf0faa8c0b0b2482ef26678c1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nov21-public-closeout-protocol.json",
+      "sha256": "f661044c3444761e9f4061913e57da3371bc1a4b2fcece166b41960559d031a4"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-public-closeout-website.json",
+      "sha256": "6203331192b4092a12390d5d2c3123e948a8aaea884c8b326c5af123434ba219"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-closeout-inventory-review.json",
+      "sha256": "de8fdf50860e99e06cd34ec71bbcaa734a941e69a1c76146420e6de58b24b79f"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-095325-independent-tag-current-checks-af2a0c34",
+  "recorded_at": "2026-11-21T09:53:25.674891+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "905e371591d025ea7124110acdede856d40f0411",
+  "changed": "Registered additive HP/runtime/Android source checks while preserving every existing capability command; Android automatic path filters and preflight now include the new intent helper and its 14 focused groups.",
+  "proves": "The actual integrated HP modal passes Chromium/WebKit canonical, refusal, privacy, cancellation, reflow and actual sibling-recovery controls. Normal built runtime exactly matches five pinned files and three source artifacts; policy1.12 archives remain unchanged.",
+  "limits": "Current whole-source capability execution, corrected Linux NF suite, protected integration and public delivery remain pending. This adds verification coverage, not independent accuracy or a full original closure.",
+  "scope_ids": [
+    "T-HP",
+    "F-018",
+    "F-057",
+    "X-02",
+    "N-014"
+  ],
+  "files": {
+    ".gitattributes": "903cb245fa685b1382e8b83a5bdc4e6367360e6c9ff5c565a6db284b30d2b470",
+    ".github/workflows/android-share.yml": "0d1f48e6f1f59ce8956e6b95b819af22ead3bcd7c358a0b4e9e1fe9e6e755315",
+    ".github/workflows/ci.yml": "54fe0b87051db5429bbda4c91c51fa186d84060bee045046ec9ed311e4878616",
+    ".gitignore": "230fa33a44c09107ccf91ba0bcfe82eb7bd6685e0e064ce4ff7dabe4cfef4e4e",
+    "docs/independent-delivery-nov21-next.md": "add967c327e8a46b245d41cab343bfee18e7ed07cfe2d4b190890ee5a0759ace",
+    "eval/revalidation.json": "e37f56ba9e18e2243b144f4f7b933677376c734c0d308ad3b4c2c6f6e75740ae",
+    "package.json": "7003af966cbcc3cec8347eb6525f035067b5803483e6c5fe840c769fed945f2e",
+    "runs/2026-11-21-hp-next-integrated-site.json": "32b85fcf9a4f7314edc506bca3eadec9352695ba101ef52a9e38402bda1b31bf",
+    "runs/2026-11-21-hp-runtime-shared-integration.json": "4855ba6fc4f3629104f42b6bf0265b7b7c42a112dcdccde32431fd130f011448",
+    "scripts/verify-hp-uncertainty-client.cjs": "2c04e2375bce68208f4f45cc3504ec2c3748c2000443cd31f600435a26675761",
+    "scripts/verify-route-boundaries.py": "41ac0285285c336500db0923e554a17ce60c1047efbc70b7f01f5c4b51d0b279",
+    "scripts/verify-site-accessibility.cjs": "f5bff5149b162d672f14319856b0fda8a620d6607624559ae93931e809a2202d",
+    "site/index.html": "33de664ca863903b39be5b1ebaec7a7d799c261f5198aafa13049ea8e7af0120",
+    "site/package.json": "e96338699327cb404b3a9e708448f102f1c64d6fcbdb7f9e2d966ff66f4f07bb",
+    "site/public/reference/hp-uncertainty-device.md": "759c80842b27d1df0ee9a46d43872cacd8e9cf7dabc264494939680e26297d8f",
+    "site/public/reference/language-observations.md": "ed6a6c8be749916a24d699b301cf12f0165670da202682bf83fd358e5763fb5b",
+    "site/public/reference/policies/access/v1.13.txt": "80aeff9394a1d893890784cc246856447f7df8f63fe72c136079ed11a99b42a0",
+    "site/public/reference/policies/community/v1.13.txt": "68f07f398cee7464936ef8b81d5cfcc8549f7faba446e29ddc3e9c646f4be808",
+    "site/public/reference/policies/contributing/v1.13.txt": "57f700e08c014c8bc2cb489e8ce872e07be6b4ebc593fddd52b2531934f82716",
+    "site/public/reference/policies/governance/v1.13.txt": "1dc4f0c9bad833994e5ca72a17f3b6c3e69ce0c0492878a16310c04bf85981cd",
+    "site/public/reference/policies/licenses/v1.13.txt": "429c7b116ece5cbad48f49bc72296543936016b46b78086844524bd56a3894d3",
+    "site/public/reference/policies/privacy/v1.13.txt": "12fab6a043eccc7607fa4f437e1db7b0f04293f5e3a93a48a6946e0364d62abd",
+    "site/public/reference/policies/security/v1.13.txt": "b0d4b6b7522933b8469b1e2cc832329218028d3b06919209f3abf7e898c37e92",
+    "site/public/reference/policies/terms/v1.13.txt": "50adcb510fd95fc7fb86e4d97e767a3549b5b7f7ce3754930f82acff95d111be",
+    "site/public/reference/policies/validation/v1.13.txt": "05d3528c8fa8d967cee22fb8080bbeacd7f936a4b593ba571d4130a4f33da884",
+    "site/public/reference/policy-access.txt": "80aeff9394a1d893890784cc246856447f7df8f63fe72c136079ed11a99b42a0",
+    "site/public/reference/policy-community.txt": "68f07f398cee7464936ef8b81d5cfcc8549f7faba446e29ddc3e9c646f4be808",
+    "site/public/reference/policy-contributing.txt": "57f700e08c014c8bc2cb489e8ce872e07be6b4ebc593fddd52b2531934f82716",
+    "site/public/reference/policy-governance.txt": "1dc4f0c9bad833994e5ca72a17f3b6c3e69ce0c0492878a16310c04bf85981cd",
+    "site/public/reference/policy-licenses.txt": "429c7b116ece5cbad48f49bc72296543936016b46b78086844524bd56a3894d3",
+    "site/public/reference/policy-privacy.txt": "12fab6a043eccc7607fa4f437e1db7b0f04293f5e3a93a48a6946e0364d62abd",
+    "site/public/reference/policy-security.txt": "b0d4b6b7522933b8469b1e2cc832329218028d3b06919209f3abf7e898c37e92",
+    "site/public/reference/policy-terms.txt": "50adcb510fd95fc7fb86e4d97e767a3549b5b7f7ce3754930f82acff95d111be",
+    "site/public/reference/policy-validation.txt": "05d3528c8fa8d967cee22fb8080bbeacd7f936a4b593ba571d4130a4f33da884",
+    "site/public/web-licenses/packages.json": "6b2aa1edc95e860e42f722975fdbef68b2509c51bd5b3ac587ffc76cfce3b02a",
+    "site/public/web-licenses/web-runtime.spdx.json": "a881cbc54c44471f42f43639bb3fbba7fb4712b02b552c328efef8456a41c337",
+    "site/scripts/prepare.mjs": "f486c8ac26d89308cadb3cf5da6d11a04b9feb7e506a46286821441a3c440c2f",
+    "site/src/catalog.js": "faf6beae64adc130da9bc922dac8af7ce621a09565dc476f79017fc9ce44b96e",
+    "site/src/main.jsx": "a52e5909ecfe1ce46ed7efffb7c6a317c0ce3ceba994a77a4bdb578356fc8630",
+    "site/src/policies.js": "73ed4386eb9b1f709a7996f84cb16f24e01a5176eef9cbb3087eb924df968c41",
+    "site/src/presentation.js": "50a8c5a8390be8eb2dd19f6ec285f60f8b47d6bcf0248b682ac59ece0da89c1d",
+    "site/src/usage.js": "bf54a974ccd3a4d41cc6be5e22e00d3e0e76b958139108b09493dea07f2ca262",
+    "site/src/workflows/About.jsx": "7421ad1a13184e255fb55d43ab1e44bdcf7ce9b29d625248c6a2308e82e7ca6c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-hp-next-integrated-site.json",
+      "sha256": "32b85fcf9a4f7314edc506bca3eadec9352695ba101ef52a9e38402bda1b31bf"
+    },
+    {
+      "path": "runs/2026-11-21-hp-runtime-shared-integration.json",
+      "sha256": "4855ba6fc4f3629104f42b6bf0265b7b7c42a112dcdccde32431fd130f011448"
+    },
+    {
+      "path": "runs/2026-11-21-android-malformed-intent-hosted-pass.json",
+      "sha256": "d1f4cafdcff56c1f0fd14f866a20491522eee18a65603320dd8458b16b6320a4"
+    }
+  ],
+  "checks": []
+}

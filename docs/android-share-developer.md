@@ -233,3 +233,94 @@ startup paths, external sending-app/chooser compatibility, physical devices,
 TalkBack or outside-human acceptance, independent detector accuracy, Play release
 readiness, or a full original requirement closure. No original scope percentage
 is changed by this record.
+
+
+## Finite synthetic external-UID ingress controls
+
+The existing original seven and configuration two remain separate, unchanged
+controls. With `--configuration-controls`, the verifier now subsequently builds a
+**separate synthetic sender APK** using only the existing SDK/JDK, signs that
+fixture with its own disposable CI key and installs it on the owned emulator.
+No sender class, manifest, asset or probe is added to the default checker APK.
+Both apps have zero requested permissions, and their installed UIDs must differ.
+
+The sender accepts only a fixed integer selection, never caller text, URI,
+recipient or code. Nine hard-coded invalid forms cover missing/wrong-typed text,
+SEND_MULTIPLE, stream/data URI, URI/multiple-item ClipData, over-limit text and
+unpaired UTF16. Each must produce the owned unsupported-input message, empty or
+exact-hint editor, disabled Check and no result. A fresh exact synthetic valid
+Share is required after every refusal. A stale refusal, old marker, arbitrary
+editor hint or merely successful shell return cannot count as a pass.
+
+New results live in the separate `intent_controls` object. Only completed
+invalid/recovery pairs are counted; fixed diagnostics and closed boolean flags
+replace raw errors, app dumps, payload text, URIs, private paths and UID numbers.
+The existing40-second per-state UI deadline and original nine acceptance paths
+are unchanged. These controls run on ordinary PR/push default-APK jobs because
+that existing path enables configuration controls; no workflow or SDK/license
+rules change. Sender source/DEX/permission drift, equal UID, wrong orientation,
+build/install failures or missing UI assertions fail this extra suite and cannot
+turn it into a zero-findings result. The dated execution below records the selected hosted outcome; UI/schema
+controls alone are not Android runtime evidence.
+
+Explicit component addressing tests exported Android intent/Parcelable ingress.
+It does not test real third-party chooser discovery, every sending app, physical
+phones, TalkBack, independent accuracy or full N-014 acceptance. No URI provider
+is installed, no caller input is executed or uploaded, and no SDK/terms are
+installed or accepted locally. The fixture APK and disposable key use an owned
+private temporary directory and normal cleanup; a host cleanup failure remains
+a failure rather than a claim that private files were necessarily removed.
+
+
+The first sender candidate, run44888523549, passed the unchanged original nine
+but completed zero new pairs: missing-text refusal was not observed and the old
+valid marker remained. That failed report stays failed. It did not capture the
+sender callback, so it does not prove either malformed checker acceptance or a
+particular task-reuse cause. The corrected test-only sender remains singleTask,
+processes the fresh onNewIntent argument explicitly and consumes its incoming
+selection. Before every checker assertion, the driver requires the next exact
+bounded dispatch counter, requested selection and START_RETURNED from a one-use
+closed sender frame. The frame contains no arbitrary intent fields, text, URI,
+UID, task ID or paths and clears its pending enums after export. Stale/missing
+callback data remains a failed case. A returned start alone still cannot satisfy
+the checker refusal or fresh recovery assertions. Default checker/source and
+original nine control paths remain unchanged; the selected execution below
+measures the corrected sender.
+
+
+[Run44889760925](https://github.com/knwvmbrr/aitrust-id/actions/runs/44889760925)
+at `c5f6204f37bdf94ed7192bddec8428223eed21f0` executed the **default** checker
+APK and completed original7 + configuration2 + all9 invalid/refusal/recovery
+pairs on the owned API36 emulator. Nineteen exact advancing sender receipts
+showed CREATE for the first valid selection, then NEW_INTENT with each requested
+selection and returned start. Every malformed form separately reached the
+owned unsupported-input state with disabled Check/no result, followed by exact
+valid-marker receipt with enabled Check/no result. These UI assertions, rather
+than start returns alone, establish the selected parser/refusal outcomes.
+
+The sender had a different installed UID and zero requested permissions. The
+actual checker DEX excludes sender and intake-probe markers; all14 native source
+hashes are unchanged from published basef5c03183. The method remains pinned,
+Internet permission is absent and the existing SDK license record was unchanged.
+Hosted88 existing tests and canonical137 +3 invalid parity controls passed. The
+new14 focused groups ran locally on existing Python3.12/3.13 with the installed
+JDK21; they are not claimed as additional hosted test execution. No local SDK was
+installed and no extra terms were accepted.
+
+`runs/2026-11-21-android-malformed-intent-hosted-pass.json` binds all29 source
+inputs, the single downloaded artifact, raw reports, default test APK and19
+finite dispatch receipts. A different reviewer checked that same retained
+artifact without another runtime or download. The first failed producer remains
+failed; its task/callback cause is not retroactively proved by this pass.
+The separate temporary sender APK is represented by its actual build/source/hash
+and runtime report; it is not included in the uploaded checker-APK artifact.
+
+Protected root integration remains separate. These finite synthetic API36
+results do not close N-014, arbitrary-app chooser compatibility, physical-device,
+TalkBack/outside-human, independent accuracy, broad startup or store-release
+acceptance. Do not rerun this unchanged candidate to accumulate passes.
+
+To run the focused fixture/driver controls with an existing JDK selected through
+JAVA_HOME: `python3 -B -m unittest discover -s tests -p test_android_intent_controls.py -v`.
+The existing licensed hosted verifier path uses `--configuration-controls` to
+run the original nine first and then this separately reported finite suite.

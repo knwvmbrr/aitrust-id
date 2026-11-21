@@ -2,6 +2,213 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-104643-independent-current-evidence-sealed-9f2f032a
+
+Recorded 2026-11-21T10:46:43.674973+00:00 · Contributor: Codex /root; reviewers /root/seo /root/web_camo /root/share_debugger · change
+
+- **Changed.** Sealed all five passing current-source capability receipts and the independently reviewed 1467-file finite source inventory after correcting the stale HP SEO expectation.
+- **Evidence.** PS 7, PII 6, extension 14, protocol 60 and website 59 command receipts pass against their current source fingerprints; the failed website candidate remains immutable. [Change record](./runs/changes/2026-11-21-104643-independent-current-evidence-sealed-9f2f032a.json).
+- **Not claimed.** Engineering checks only. Protected CI and public delivery remain pending. All 202 original acceptance contracts and 132 complete / 70 open counts remain unchanged.
+
+
+### 2026-11-21-103123-independent-seo-preview-copy-correction-ba2466f6
+
+Recorded 2026-11-21T10:31:23.855552+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Corrected SEO assertions that still expected the earlier number-only HP preview after adding the independently isolated uncertainty-word preview.
+- **Evidence.** Actual 11 SEO metadata controls and built36-page metadata/20tag summary checks now pass. Existing Coming Soon/formal-name/no-certification/no-truth-verification assertions are retained. The earlier failed59-command receipt is preserved. PS, PII, extension and60-command protocol receipts still match their exact fingerprints and are reused. [Change record](./runs/changes/2026-11-21-103123-independent-seo-preview-copy-correction-ba2466f6.json).
+- **Not claimed.** Only the affected website capability needs fresh execution; no product-method, accuracy, original acceptance or release gate was changed. Protected/public delivery and70-to60 target remain pending.
+
+
+### 2026-11-21-101944-independent-final-source-review-recorded-8f0f8ddb
+
+Recorded 2026-11-21T10:19:44.458037+00:00 · Contributor: Codex /root; final source reviews /root/web_camo, /root/seo and /root/share_debugger · change
+
+- **Changed.** Preserved all three distinct final source reviews and updated current pending-delivery state after source-contract corrections.
+- **Evidence.** All prior commands, original202criteria, policy history, worker snapshots and local/host rules remain required. The HP review omits only its private local worktree path, with exact original digest retained and no new execution claimed. [Change record](./runs/changes/2026-11-21-101944-independent-final-source-review-recorded-8f0f8ddb.json).
+- **Not claimed.** Current60-command protocol and59-command website final executions, protected integration and publication remain pending. Zero new original closures or independent/human/legal clearance.
+
+
+### 2026-11-21-101629-independent-final-disclosure-and-worker-accounting-86e3fa5d
+
+Recorded 2026-11-21T10:16:29.631580+00:00 · Contributor: Codex /root; review /root/web_camo and /root/share_debugger · change
+
+- **Changed.** Required the new HP disclosure only on HP, closed and unmounted by default, and preserved the stale Android active-worker assignment verbatim in history while making the current reviewed/unassigned route explicit.
+- **Evidence.** Static review caught the added-disclosure count mismatch and an ambiguous historical worker field before final execution. Every original record/criterion remains intact; previous active snapshot is retained as historical evidence, not erased. [Change record](./runs/changes/2026-11-21-101629-independent-final-disclosure-and-worker-accounting-86e3fa5d.json).
+- **Not claimed.** No new runtime, independent accuracy or original closure is asserted by these bookkeeping and expected-markup corrections. Global source execution and protected/public release remain pending.
+
+
+### 2026-11-21-101442-independent-wave-peer-guard-corrections-b08705fb
+
+Recorded 2026-11-21T10:14:42.041666+00:00 · Contributor: Codex /root; source review /root/web_camo and /root/share_debugger · change
+
+- **Changed.** Aligned the existing HP checks with the actual expanded planned-preview copy and included the real synthetic sender source directory in both Android workflow triggers.
+- **Evidence.** Peer source review caught two stale literal-only text expectations and a future sender-only trigger gap before global execution. Existing planned-tag/no-verdict checks, old runtime cases, SDK permissions and all deadlines remain required. [Change record](./runs/changes/2026-11-21-101442-independent-wave-peer-guard-corrections-b08705fb.json).
+- **Not claimed.** Source/coverage corrections, not new runtime or independent-accuracy evidence. Protected/current-source/public execution remains pending;70 original requirements stay open.
+
+
+### 2026-11-21-101211-independent-wave-reviewed-source-freeze-0b1b2f65
+
+Recorded 2026-11-21T10:12:11.181646+00:00 · Contributor: Codex /root integration; /root/seo NF profile; /root/web_camo and /root/share_debugger reviews · change
+
+- **Changed.** Combined reviewed HP/runtime/Android handoffs and the evidence-based capacity-gated NF verifier correction; retained all old commands, limits and acceptance, and updated current delivery status before final source execution.
+- **Evidence.** Integrated HP both-engine proof, actual Android7+2+9pairs, exact runtime5/3 artifact gate and distinct reviews pass. Selected hosted NF executes allcases within143.498seconds of the unchanged180-second deadline; local remains sequential. All202 records and132/70 accounting preserved;154 focused integration checks and12 inert controller checks pass. [Change record](./runs/changes/2026-11-21-101211-independent-wave-reviewed-source-freeze-0b1b2f65.json).
+- **Not claimed.** Historical failed metadataCI, serial deadline and workflow-context error remain visible; no retroactive product-cause, accuracy, physical/human, fullWASM or legal clearance. The three new software jobs remain in_review until protected/public delivery. Final all-capability source checks are still pending.
+
+
+### 2026-11-21-095325-independent-tag-current-checks-af2a0c34
+
+Recorded 2026-11-21T09:53:25.674891+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Registered additive HP/runtime/Android source checks while preserving every existing capability command; Android automatic path filters and preflight now include the new intent helper and its 14 focused groups.
+- **Evidence.** The actual integrated HP modal passes Chromium/WebKit canonical, refusal, privacy, cancellation, reflow and actual sibling-recovery controls. Normal built runtime exactly matches five pinned files and three source artifacts; policy1.12 archives remain unchanged. [Change record](./runs/changes/2026-11-21-095325-independent-tag-current-checks-af2a0c34.json).
+- **Not claimed.** Current whole-source capability execution, corrected Linux NF suite, protected integration and public delivery remain pending. This adds verification coverage, not independent accuracy or a full original closure.
+
+
+### 2026-11-21-094529-independent-hp-runtime-integration-6bb2a320
+
+Recorded 2026-11-21T09:45:29.439511+00:00 · Contributor: Codex /root PM; HP /root/web_camo; runtime /root/seo; review /root/share_debugger · change
+
+- **Changed.** Mounted a separate deferred HP uncertainty-word preview, added its build and guide flow, and carried the reviewed runtime JS source artifacts through exact postbuild/predeploy gates and public links.
+- **Evidence.** Standalone HP source and both-browser controls pass; selected runtime producer and actual artifact checks pass with corrected coherent-rebind refusal. Shared source review preserves prior commands and independence; a discovered relative guide target is now published, and both deferred forms retain absent-child/dead-expansion controls. [Change record](./runs/changes/2026-11-21-094529-independent-hp-runtime-integration-6bb2a320.json).
+- **Not claimed.** Integrated normal build/browser, current all-capability evidence, protected merge and public delivery remain pending. No full HP, contextual accuracy, physical or legal/WASM/global-distribution acceptance. Original70 target60 remains unmet.
+
+
+### 2026-11-21-093723-android-malformed-hosted-eighteen-controls-abd3676e
+
+Recorded 2026-11-21T09:37:23.074562+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded actual default-APK original7, configuration2 and finite9 malformed-intent refusal/recovery pairs with19 fresh cross-UID sender callback receipts and immutable29source/artifact bindings.
+- **Evidence.** Source-frozen API36 run44889760925 executed all cases, retained zero-permission defaultAPK sender/probe exclusion, preserved exactsource/native14 identity and existinglicense record; distinct artifact review confirmed actual results without another download/runtime. [Change record](./runs/changes/2026-11-21-093723-android-malformed-hosted-eighteen-controls-abd3676e.json).
+- **Not claimed.** One synthetic API36 candidate, existing88hosted tests plus separately measured14local groups. The failed first sender producer remains failed and its cause is unestablished. No productsource change, arbitrarychooser/physical/TalkBack/human/independentaccuracy/store acceptance or full original requirement closure; rootprotectedintegration pending.
+
+
+### 2026-11-21-092726-android-attested-synthetic-dispatch-365549be
+
+Recorded 2026-11-21T09:27:26.290318+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved the failed first synthetic ingress run and corrected the test-only sender to process fresh singleTask callbacks with exact monotonically advancing one-use dispatch receipts before checker UI assertions.
+- **Evidence.** Fourteen affected groups passed on existing Python3.12 and3.13, including realJDK fresh-callback and consumed-intent models; distinct review confirmed fixed privacy/schema/UID/DEX guards and stale-dispatch refusal before UI. [Change record](./runs/changes/2026-11-21-092726-android-attested-synthetic-dispatch-365549be.json).
+- **Not claimed.** Original cause is unestablished. Old nine passed but zero new pairs completed in the preserved failed producer. No product/defaultAPK/workflow change; START_RETURNED is not target receipt, so actual new refusal/recovery execution remains pending. No physical/human/accuracy/full requirement acceptance.
+
+
+### 2026-11-21-091209-android-finite-malformed-intent-controls-d3580ce6
+
+Recorded 2026-11-21T09:12:09.891614+00:00 · Contributor: Codex · change
+
+- **Changed.** Added a separate zero-permission fixed synthetic sender and finite malformed Share ingress/refusal plus fresh valid recovery controls after the unchanged original nine Android controls.
+- **Evidence.** Twelve affected groups passed on existing Python3.12 and3.13, with actual existingJDK fixed Intent construction and distinct source review; original control/wait source unchanged, private diagnostics and default-APK sender exclusion fail closed. [Change record](./runs/changes/2026-11-21-091209-android-finite-malformed-intent-controls-d3580ce6.json).
+- **Not claimed.** Hosted Android transport/runtime is pending; JVM fixtures and inert driver tests are not Android framework evidence. No default checker or workflow changes, local SDK install, new terms, physical/human acceptance, independent accuracy or full original requirement closure.
+
+
+### 2026-11-21-093701-hp-uncertainty-verifier-contract-b2fab4aa
+
+Recorded 2026-11-21T09:37:01.502543+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Align actual HP-preview controls with the closed native disclosure and pre-worker Unicode input refusal; also verify disclosure close/reopen cancellation.
+- **Evidence.** The corrected verifier passes syntax and targets the owned summary, exact current validation text, retained invalid input/focus and unchanged worker count; payload failures keep their separate Unavailable predicate. [Change record](./runs/changes/2026-11-21-093701-hp-uncertainty-verifier-contract-b2fab4aa.json).
+- **Not claimed.** Verifier contract correction only; actual integrated execution still pending. No product method/copy change, production success or requirement closure.
+
+
+### 2026-11-21-093238-hp-uncertainty-verifier-handoff-14d10265
+
+Recorded 2026-11-21T09:32:38.085156+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Document exact integrated HP-preview verifier invocation, ownership, source binding and pending execution.
+- **Evidence.** The production verifier interface is reusable for built or public origins and its source snapshot is distinct from historical standalone proof. [Change record](./runs/changes/2026-11-21-093238-hp-uncertainty-verifier-handoff-14d10265.json).
+- **Not claimed.** Actual PM-built execution and protected publication remain pending; no tag release or original closure.
+
+
+### 2026-11-21-093218-hp-uncertainty-integration-verifier-01f2a6df
+
+Recorded 2026-11-21T09:32:18.120085+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Add reusable actual HP-modal controls and a source-bound Chromium/WebKit runner for the optional uncertainty-word preview.
+- **Evidence.** Both new scripts pass syntax; importing the reusable function starts no browser. The production controls retain full canonical record, explicit selection, privacy, lifecycle, oversize, layout and actual sibling-check recovery assertions. [Change record](./runs/changes/2026-11-21-093218-hp-uncertainty-integration-verifier-01f2a6df.json).
+- **Not claimed.** Actual integrated execution is pending the PM-built mount and guide. No production success, publication, HP tag, accuracy or original closure is claimed.
+
+
+### 2026-11-21-092952-pyodide-source-normal-build-hook-039e604d
+
+Recorded 2026-11-21T09:29:52.855488+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Added the selected source/notice exporter after existing pinned runtime preparation in the normal website build path.
+- **Evidence.** Actual prepare-device execution with the approved existing Python passes; exact current prepared runtime plus all three source/notice outputs pass the artifact gate without altering producer pins. [Change record](./runs/changes/2026-11-21-092952-pyodide-source-normal-build-hook-039e604d.json).
+- **Not claimed.** Only preparation integrated here; PM owns post-build gate, public links, offline handling and protected publication. No whole website test, legal clearance, full WASM or original closure claimed.
+
+
+### 2026-11-21-092814-hp-uncertainty-browser-delivery-07aab8ec
+
+Recorded 2026-11-21T09:28:14.801687+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Complete the isolated HP uncertainty-word preview and source-stable Chromium/WebKit proof with explicit context, canonical record validation and independent failure handling.
+- **Evidence.** 16 Python groups and10 Node groups pass. Both actual engines pass31 authored cases (21 complete records plus10 refusals),8 corrupt-record refusals, input/privacy/lifecycle/keyboard/reflow/theme checks and numericHP/PS/MT recovery. The original CSP instrumentation failure remains immutable. [Change record](./runs/changes/2026-11-21-092814-hp-uncertainty-browser-delivery-07aab8ec.json).
+- **Not claimed.** Standalone engineering delivery only; shared production mount, protected publication and distinct review remain pending. No HP tag, semantic judgment, independent accuracy, physical/human acceptance or original requirement closure.
+
+
+### 2026-11-21-092143-hp-uncertainty-csp-fixture-correction-63cd4dfa
+
+Recorded 2026-11-21T09:21:43.652679+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Load trusted axe from the owned fixture origin under unchanged CSP and exclude the obsolete unselected source payload from delivery.
+- **Evidence.** The first browser candidate and a narrow diagnosis reproduced CSP blocking of inline verifier injection before accessibility evaluation. App method sources are unchanged. [Change record](./runs/changes/2026-11-21-092143-hp-uncertainty-csp-fixture-correction-63cd4dfa.json).
+- **Not claimed.** The first candidate is failed historical evidence. Corrected actual browser execution remains pending; no product accessibility defect, accuracy or original closure is asserted.
+
+
+### 2026-11-21-091608-hp-uncertainty-source-preview-1a613b14
+
+Recorded 2026-11-21T09:16:08.015567+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Add an isolated caller-selected whole-passage uncertainty-word component, exact canonical record validation, bounded source packaging and standalone fixture.
+- **Evidence.** 16 focused Python controls and 10 Node groups over 31 authored cases passed; the isolated fixture compiled. Browser execution follows this source record. [Change record](./runs/changes/2026-11-21-091608-hp-uncertainty-source-preview-1a613b14.json).
+- **Not claimed.** No production mount, HP tag, contextual accuracy, independent human validation or full original requirement closure. Ambiguous lexical Unicode boundaries refuse.
+
+
+### 2026-11-21-092600-pyodide-runtime-rebinding-counter-review-0647a0c7
+
+Recorded 2026-11-21T09:26:00.804577+00:00 · Contributor: Codex /root/seo; actual independent review /root · change
+
+- **Changed.** Recorded the distinct PM counter-review of the corrected exact-runtime source/notice producer.
+- **Evidence.** The actual unchanged-source coherently rebound metadata counterexample now refuses in checked, outputs, export and check-built; the original unexpected acceptance is preserved by digest. [Change record](./runs/changes/2026-11-21-092600-pyodide-runtime-rebinding-counter-review-0647a0c7.json).
+- **Not claimed.** No application hook, public artifact, legal clearance, full WASM corresponding-source or global route permission is granted; original70 remain open.
+
+
+### 2026-11-21-092506-pyodide-selected-js-source-notices-46b4f07a
+
+Recorded 2026-11-21T09:25:06.377990+00:00 · Contributor: Codex /root/seo; independent correction review /root · change
+
+- **Changed.** Added a deterministic offline selected Pyodide JavaScript preferred-source bundle and verbatim MPL/MIT notice delivery, repairing the absent carried vendor notice.
+- **Evidence.** Exact cached npm/source replay verifies all five runtime members and ten preferred source files;36 focused controls and11 actual artifact/CLI outcomes pass. Current producer anchors the reviewed runtime projection and refuses coherently rebound metadata. Earlier unpacking and gate-bypass candidates remain recorded. [Change record](./runs/changes/2026-11-21-092506-pyodide-selected-js-source-notices-46b4f07a.json).
+- **Not claimed.** Selected JavaScript source and notice evidence only. No full WASM corresponding source, compiler reproduction, signature verification, legal clearance, distribution-route admission or original F-057/X-02 closure. Normal-build hooks and public publication remain PM-owned and pending.
+
+
+### 2026-11-21-091323-nov21-final-closeout-source-evidence-f038e00f
+
+Recorded 2026-11-21T09:13:23.050944+00:00 · Contributor: Codex /root; exact inventory review /root/seo · change
+
+- **Changed.** Bound final documentation and generated catalogue updates to freshly executed source receipts and the reviewed current route inventory.
+- **Evidence.** Current 57-command protocol and 55-command website receipts pass without source drift. Unchanged PS, PII and extension receipts still match. Distinct inventory review verifies 1416 sources and only two generated-data changes. [Change record](./runs/changes/2026-11-21-091323-nov21-final-closeout-source-evidence-f038e00f.json).
+- **Not claimed.** This updates evidence after actual software publication; it does not change detector methods, permissions, original acceptance or the 70-open count.
+
+
+### 2026-11-21-090325-nov21-closeout-derived-scope-corrected-fb5fb4af
+
+Recorded 2026-11-21T09:03:25.289696+00:00 · Contributor: Codex /root; task-list review /root/seo · change
+
+- **Changed.** Refreshed generated scope projections and corrected the current top-level publication status from verified live evidence.
+- **Evidence.** Normal site preparation retains 202 originals, 132 complete and 70 open; current software source is protected and publicly verified. Task-list review caught a stale pending status, now corrected. [Change record](./runs/changes/2026-11-21-090325-nov21-closeout-derived-scope-corrected-fb5fb4af.json).
+- **Not claimed.** Derived catalogue and operations data only; not tag validation, physical or independent acceptance or a new original closure.
+
+
+### 2026-11-21-090224-nov21-functional-public-closeout-7dc922bb
+
+Recorded 2026-11-21T09:02:24.475449+00:00 · Contributor: Codex /root; Android /root/share_debugger; NF /root/seo; review /root/web_camo · change
+
+- **Changed.** Published repaired Android Share source and the private on-device reference workflow through protected integration, and updated attributed scope and delivery state.
+- **Evidence.** Actual default API36 seven original plus two configuration/privacy controls pass. Eleven required protected checks pass. Actual public NF Chromium/WebKit controls and 34 critical HTTP comparisons pass. Two predeclared software jobs complete; scoped total 16. [Change record](./runs/changes/2026-11-21-090224-nov21-functional-public-closeout-7dc922bb.json).
+- **Not claimed.** Originals remain 132 complete and 70 open; target 60 unmet. No physical phone, TalkBack, human or independent-accuracy acceptance is invented. NF is wording evidence, not a truth verdict. Further HP and Android work is assigned, not complete.
+
+
 ### 2026-11-21-084217-pr138-reviewed-inventory-134c4898
 
 Recorded 2026-11-21T08:42:17.628757+00:00 · Contributor: Codex /root; inventory review /root/seo; code review /root/web_camo · change

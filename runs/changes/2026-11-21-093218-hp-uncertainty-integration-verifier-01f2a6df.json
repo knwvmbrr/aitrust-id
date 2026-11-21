@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-093218-hp-uncertainty-integration-verifier-01f2a6df",
+  "recorded_at": "2026-11-21T09:32:18.120085+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8fec188288fe93b53c1c413e0a7d20d42f48e102",
+  "changed": "Add reusable actual HP-modal controls and a source-bound Chromium/WebKit runner for the optional uncertainty-word preview.",
+  "proves": "Both new scripts pass syntax; importing the reusable function starts no browser. The production controls retain full canonical record, explicit selection, privacy, lifecycle, oversize, layout and actual sibling-check recovery assertions.",
+  "limits": "Actual integrated execution is pending the PM-built mount and guide. No production success, publication, HP tag, accuracy or original closure is claimed.",
+  "scope_ids": [
+    "T-HP",
+    "F-018",
+    "F-142"
+  ],
+  "files": {
+    "scripts/hp-uncertainty-site-controls.cjs": "7758ff8dee2eb5da0137795706e5513d5596f00e37b29691a669b4f06ecbe029",
+    "scripts/verify-hp-uncertainty-site.cjs": "4f92351948ac8125c43d091ae85952f72b458ca603964a8b0cbc68890cbe319f"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/hp-uncertainty-site-controls.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T09:32:18.269215+00:00"
+    }
+  ]
+}

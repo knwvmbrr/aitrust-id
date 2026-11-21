@@ -1,0 +1,98 @@
+{
+  "format": "ai-trust-id-final-combined-source-review/v1",
+  "captured_at": "2026-11-21T10:18:26.971467+00:00",
+  "pass": true,
+  "reviewer": "/root/share_debugger",
+  "review_scope": "Read-only final source/configuration/accounting review before new global and protected checks.",
+  "fixed_findings": {
+    "android_sender_fixture_matches_both_pr_and_push_filters": true,
+    "android_workflow_other_delta_only_adds_new14_test_registration": true,
+    "old_route_assignment_preserved_verbatim_in_history": true,
+    "current_route_assignments_reviewed_with_no_active_worker": true
+  },
+  "canonical_files_byte_identical_to_f5": 18,
+  "canonical_tag_result_and_worker_independence_retained": true,
+  "prior_command_pattern_retention": {
+    "PS": {
+      "prior_commands": 7,
+      "current_commands": 7,
+      "all_prior_commands_and_patterns_retained": true
+    },
+    "PII_REDACTED": {
+      "prior_commands": 6,
+      "current_commands": 6,
+      "all_prior_commands_and_patterns_retained": true
+    },
+    "protocol": {
+      "prior_commands": 57,
+      "current_commands": 60,
+      "all_prior_commands_and_patterns_retained": true
+    },
+    "extension": {
+      "prior_commands": 14,
+      "current_commands": 14,
+      "all_prior_commands_and_patterns_retained": true
+    },
+    "website": {
+      "prior_commands": 55,
+      "current_commands": 59,
+      "all_prior_commands_and_patterns_retained": true
+    }
+  },
+  "android_current_receipt": {
+    "path": "runs/2026-11-21-android-malformed-intent-hosted-pass.json",
+    "sha256": "d1f4cafdcff56c1f0fd14f866a20491522eee18a65603320dd8458b16b6320a4",
+    "source_bindings": 29,
+    "expected_current_mismatches": [
+      ".github/workflows/android-share.yml"
+    ],
+    "default_product_and_ingress_sources_match_c5": true,
+    "old_proof_not_rewritten_or_promoted_to_current_workflow": true,
+    "new_automatic_pr_android_execution_pending": true
+  },
+  "scope": {
+    "original_records": 202,
+    "master_bytes_unchanged": true,
+    "required_acceptance_unchanged": true,
+    "complete": 132,
+    "open": 70,
+    "new_original_closures": 0,
+    "scoped_task_status_counts": {
+      "closed": 16,
+      "blocked": 1,
+      "in_review": 3
+    },
+    "tag_bots_active_worker_count": 0,
+    "current_route_active_worker_count": 0
+  },
+  "budgets": {
+    "NF_existing_parent_ms": 180000,
+    "NF_existing_explicit_ui_ms": 50000,
+    "NF_local_default_engine_concurrency": 1,
+    "NF_hosted_two_requires_explicit_flag_and_host_capacity": true,
+    "NF_all_engine_outcomes_and_cleanup_required": true,
+    "HP_new_declared_browser_wrapper_ms": 360000,
+    "new_HP_budget_not_existing_NF_budget_increase": true,
+    "local_heavy_commands_remain_sequential": true
+  },
+  "current_reviewed_hashes": {
+    ".github/workflows/android-share.yml": "1ccc56d0e5b898319deb5188b4188488618e68fdec525d9a290cf3ef0074fab6",
+    ".github/workflows/ci.yml": "375b76ebb0fe92e30f5f4ce6dda67b0560e4761d902bc454c9d8e6e884a922af",
+    "eval/revalidation.json": "6dc0b2c191208be3088e4e845bda05d3bdb54c270ceb88e20255850fe72c3db9",
+    "docs/session-delivery.json": "cfe5597f2055f420aad3d2877b990ab784dbd162105a8c320ee3f93187d3e312",
+    "docs/scope-progress.json": "0e4ddd08af3071609236b6de812090fb14a232652323b610d49cd976c7ab0d43",
+    "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
+    "scripts/verify-nf-client.cjs": "02d7f8242217551202e543117b4af55f41557bcf9fa7b5a63bb63cbc786979d4",
+    "scripts/verify-nf-device.cjs": "1e219b066d18f37d716551e1de92dad06d5b1669ce0608b0bbb8c816ba3e0f06",
+    "scripts/verify-hp-uncertainty-client.cjs": "2c04e2375bce68208f4f45cc3504ec2c3748c2000443cd31f600435a26675761",
+    "site/src/main.jsx": "a52e5909ecfe1ce46ed7efffb7c6a317c0ce3ceba994a77a4bdb578356fc8630",
+    "site/src/policies.js": "73ed4386eb9b1f709a7996f84cb16f24e01a5176eef9cbb3087eb924df968c41"
+  },
+  "no_new_actionable_blocker": true,
+  "tests_browser_vm_build_download_or_root_source_mutation_performed": false,
+  "fresh_global_capability_checks_pending": true,
+  "protected_publication_pending": true,
+  "physical_human_independent_accuracy_or_full_HP_acceptance": false,
+  "full_WASM_source_or_legal_clearance": false,
+  "full_original_requirement_closure": false
+}

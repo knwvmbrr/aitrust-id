@@ -3,6 +3,7 @@
 import argparse
 import datetime as dt
 import hashlib
+import importlib.util
 import json
 import os
 from pathlib import Path
@@ -706,6 +707,27 @@ def verify_configuration_controls(send,shell,wait,click,report):
         raise AndroidConfigurationRefusal(report['control_stage']) from None
 
 
+class AndroidIntentRefusal(ValueError):
+    CODES=frozenset({'intent_'+stage+'_unavailable' for stage in
+        ('source','default_apk','build','install','uid','portrait','prime','send','dispatch','refusal','recovery','cleanup','workflow')})
+    def __init__(self,code):
+        if code not in self.CODES:raise ValueError('Invalid synthetic intent diagnostic')
+        self.code=code;super().__init__(code)
+
+
+def verify_intent_controls(sdk,apk,install,shell,wait,report):
+    # Lazy test-only dependency: it never enters the production checker package.
+    try:
+        spec=importlib.util.spec_from_file_location('owned_android_intent_controls',ROOT/'scripts/android-intent-controls.py')
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        module.run_controls(sdk,apk,install,shell,wait,report)
+    except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,RuntimeError,ImportError,SyntaxError,subprocess.SubprocessError) as error:
+        code=getattr(error,'code','intent_workflow_unavailable')
+        if code not in AndroidIntentRefusal.CODES:code='intent_workflow_unavailable'
+        report.update(status='FAILED',**{'pass':False})
+        raise AndroidIntentRefusal(code) from None
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--sdk-root',required=True);parser.add_argument('--apk',required=True)
@@ -784,10 +806,17 @@ def main():
             report['phase']='configuration_controls'
             report['configuration_controls']={}
             verify_configuration_controls(send,shell,wait,click,report['configuration_controls'])
+            report['phase']='intent_controls'
+            report['intent_controls']={}
+            verify_intent_controls(sdk,Path(args.apk),
+                lambda apk:run([adb,'-s','emulator-5580','install','--no-streaming',apk],30),
+                shell,wait,report['intent_controls'])
         permission_occurrences=shell(['dumpsys','package',PACKAGE]).decode().count('android.permission.INTERNET')
         if permission_occurrences:raise ValueError('Unexpected Android Internet permission')
         report.update(status='EXECUTED',phase='complete',**{'pass':True},api_level=shell(['getprop','ro.build.version.sdk']).decode().strip(),case_count=len(cases),internet_permission=False)
         return 0
+    except AndroidIntentRefusal as error:
+        report.update(status='FAILED',reason='An owned synthetic Share ingress control did not complete.',diagnostic_code=error.code);return 1
     except MetadataRefusal as error:
         report.update(status='FAILED',reason='Reviewed official SDK metadata was refused.',diagnostic_code=error.code);return 1
     except AndroidControlRefusal as error:

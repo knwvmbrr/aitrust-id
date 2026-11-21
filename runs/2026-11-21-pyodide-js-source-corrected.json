@@ -1,0 +1,185 @@
+{
+  "profile": "selected-pyodide-js-source-artifact-corrected/v1",
+  "captured_at": "2026-11-21T09:24:04.378772+00:00",
+  "pass": true,
+  "prepared_by": "Codex /root/seo",
+  "source_base": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
+  "source_sha256": {
+    "sbom/reviews/pyodide-js/manifest.json": "412dddb423851c9d60fff587679e883c36e89f76c92a932e369feace2b1c61ca",
+    "sbom/nested-runtime/pyodide-wasm-release.json": "fda0196c527b3920744261e27ac93cb71637ad36cf127e450aeaf49f425dd86f",
+    "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+    "tools/pyodide_js_sources.py": "e6702ea1949a46ccae76d1dbefaf5c5d76003a7b4f651d08d20b18ef64af2e00",
+    "scripts/pyodide-js-sources.py": "5dc7db3693a6cf2d02c888915dcd8aa3df2a4306005552392f23a2a656307d63",
+    "tests/test_pyodide_js_sources.py": "609ad2f8f709662767af677055f01333863dd78c95dcbf341154d6400202deb8"
+  },
+  "source_stable": true,
+  "checks": [
+    {
+      "name": "existing_actual_built_site_missing_delivery_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "selected_runtime_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "actual_export",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "artifacts": {
+          "PYODIDE-JS-SOURCES.zip": {
+            "bytes": 1632140,
+            "sha256": "0ab9f83496de972e9976677e2729d4931460f1c6cbb29b67de068454975fa412"
+          },
+          "NOTICES.txt": {
+            "bytes": 18300,
+            "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+          },
+          "index.json": {
+            "bytes": 3006,
+            "sha256": "1f8b9166d3e1d562560ec979c59da27ebe837b524735aa6c4a0f9873510fa779"
+          }
+        },
+        "full_wasm_corresponding_source": false,
+        "all_dependency_obligations": false,
+        "compiler_reproduced": false,
+        "signature_verified": false,
+        "legal_clearance": false,
+        "distribution_route_admitted": false
+      }
+    },
+    {
+      "name": "actual_selected_built_runtime_and_source_delivery",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "profile": "selected-pyodide-js-source-notices/v1",
+        "preferred_source_files": 10,
+        "vendor_source_files": 2,
+        "verbatim_license_texts": 2,
+        "selected_runtime_members": 5,
+        "delivered_artifacts": 3,
+        "bundle_sha256": "0ab9f83496de972e9976677e2729d4931460f1c6cbb29b67de068454975fa412",
+        "full_wasm_corresponding_source": false,
+        "all_dependency_obligations": false,
+        "compiler_reproduced": false,
+        "signature_verified": false,
+        "legal_clearance": false,
+        "distribution_route_admitted": false
+      }
+    },
+    {
+      "name": "repeat_export_identical",
+      "pass": true
+    },
+    {
+      "name": "changed_PYODIDE-JS-SOURCES.zip_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "selected_runtime_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "changed_NOTICES.txt_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "selected_runtime_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "changed_index.json_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "selected_runtime_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "unknown_carried_file_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "selected_runtime_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "changed_runtime_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "selected_runtime_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "exact_cached_npm_all_five_members_and_source_replayed",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "preferred_source_files": 10,
+        "verbatim_license_texts": 2,
+        "cached_npm_replayed": true,
+        "full_wasm_corresponding_source": false,
+        "all_dependency_obligations": false,
+        "compiler_reproduced": false,
+        "signature_verified": false,
+        "legal_clearance": false,
+        "distribution_route_admitted": false
+      }
+    },
+    {
+      "name": "unchanged_producer_all_five_runtime_rebound_metadata_refused",
+      "refused_operations": 3,
+      "producer_sources_changed": false,
+      "pass": true
+    }
+  ],
+  "focused_tests": {
+    "passed": 36,
+    "duration_seconds": 0.98,
+    "argv": [
+      "python3",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_pyodide_js_sources.py"
+    ]
+  },
+  "actual_built_runtime_used": true,
+  "runtime_projection_sha256": "f494c20732352d023ff434923888381888e92c3a2984acdd0cc4e824965366b8",
+  "all_five_runtime_members_replayed_from_exact_cached_npm": true,
+  "bundle_members": 14,
+  "preferred_files": 10,
+  "verbatim_licenses": 2,
+  "output_artifacts": {
+    "PYODIDE-JS-SOURCES.zip": {
+      "bytes": 1632140,
+      "sha256": "0ab9f83496de972e9976677e2729d4931460f1c6cbb29b67de068454975fa412"
+    },
+    "NOTICES.txt": {
+      "bytes": 18300,
+      "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+    },
+    "index.json": {
+      "bytes": 3006,
+      "sha256": "1f8b9166d3e1d562560ec979c59da27ebe837b524735aa6c4a0f9873510fa779"
+    }
+  },
+  "claims": {
+    "full_wasm_corresponding_source": false,
+    "all_dependency_obligations": false,
+    "compiler_reproduced": false,
+    "signature_verified": false,
+    "legal_clearance": false,
+    "distribution_route_admitted": false
+  },
+  "supersedes_for_current_source": "runs/2026-11-21-pyodide-js-source-artifact.json",
+  "prior_gate_finding": "Mutable release and mirrored cohort metadata could rebind all five runtime identities without changing producer source. Exact producer-anchored projection now refuses this; earlier proof remains historical.",
+  "limits": [
+    "Only five actual built runtime files copied to owned fixture; root build and source untouched.",
+    "No normal build hook, public delivery, browser test, distribution admission, full WASM source, compiler reproduction or legal clearance.",
+    "No downloads, installs, archive code execution or user data."
+  ]
+}

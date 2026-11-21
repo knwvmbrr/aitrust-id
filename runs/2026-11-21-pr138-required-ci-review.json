@@ -1,0 +1,263 @@
+{
+  "profile": "pr-required-engineering-review/v1",
+  "captured_at": "2026-11-21T08:56:27.421900+00:00",
+  "reviewed_by": "/root/seo",
+  "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/138",
+  "head": "c408e218da929c60a7f2e5483560eef2f593c267",
+  "required_checks": [
+    {
+      "name": "accessibility",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886225725/job/136791988824",
+      "completedAt": "2026-11-21T08:45:35Z"
+    },
+    {
+      "name": "change-records",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886225725/job/136791989026",
+      "completedAt": "2026-11-21T08:44:11Z"
+    },
+    {
+      "name": "device-builder (3.12)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886225725/job/136791989021",
+      "completedAt": "2026-11-21T08:43:56Z"
+    },
+    {
+      "name": "device-builder (3.13)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886225725/job/136791988971",
+      "completedAt": "2026-11-21T08:43:56Z"
+    },
+    {
+      "name": "device-builder (3.14)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886225725/job/136791989067",
+      "completedAt": "2026-11-21T08:43:59Z"
+    },
+    {
+      "name": "host-config",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886225725/job/136791988944",
+      "completedAt": "2026-11-21T08:44:33Z"
+    },
+    {
+      "name": "no-egress",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886225725/job/136791988931",
+      "completedAt": "2026-11-21T08:48:15Z"
+    },
+    {
+      "name": "regressions",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886225725/job/136791989041",
+      "completedAt": "2026-11-21T08:44:04Z"
+    },
+    {
+      "name": "scope-plan",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886225725/job/136791989045",
+      "completedAt": "2026-11-21T08:44:16Z"
+    },
+    {
+      "name": "site",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886225725/job/136791989013",
+      "completedAt": "2026-11-21T08:53:38Z"
+    },
+    {
+      "name": "spec",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886225725/job/136791988969",
+      "completedAt": "2026-11-21T08:46:23Z"
+    }
+  ],
+  "required_count": 11,
+  "required_all_pass": true,
+  "unresolved_review_threads": 0,
+  "review_threads_paginated": false,
+  "ci_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886225725",
+  "inventory_correction": {
+    "exact_reviewed_sources": 1416,
+    "engineering_receipt_keys": [
+      "extension",
+      "website"
+    ],
+    "application_code_unchanged_from_d489": true,
+    "hosted_boundary_step_passed": true
+  },
+  "hosted_linux_NF": {
+    "python_passed": 32,
+    "node_client_groups": 10,
+    "canonical_engines": [
+      {
+        "engine": "Chromium",
+        "pass": true,
+        "authored_cases": 33,
+        "full_canonical_records": 21,
+        "canonical_refusals": 12,
+        "negation_similarity_not_truth": true,
+        "both_raw_and_frozen_nfc_bound": true,
+        "corrupt_records_refused": 8,
+        "optional_payload_and_validator_failures_then_literal_PS_MT": true,
+        "actual_NF_chunk_import_render_failure_then_PS_MT": true,
+        "edit_clear_cancel_unmount_terminate": true,
+        "default_no_worker_or_input_transfer": true,
+        "no_input_upload_storage_console": true,
+        "private_details_opt_in": true,
+        "reflow_320_at_200percent": true,
+        "light_dark": true,
+        "physical_phone": false,
+        "independent_accuracy_evidence": false
+      },
+      {
+        "engine": "WebKit",
+        "pass": true,
+        "authored_cases": 33,
+        "full_canonical_records": 21,
+        "canonical_refusals": 12,
+        "negation_similarity_not_truth": true,
+        "both_raw_and_frozen_nfc_bound": true,
+        "corrupt_records_refused": 8,
+        "optional_payload_and_validator_failures_then_literal_PS_MT": true,
+        "actual_NF_chunk_import_render_failure_then_PS_MT": true,
+        "edit_clear_cancel_unmount_terminate": true,
+        "default_no_worker_or_input_transfer": true,
+        "no_input_upload_storage_console": true,
+        "private_details_opt_in": true,
+        "reflow_320_at_200percent": true,
+        "light_dark": true,
+        "physical_phone": false,
+        "independent_accuracy_evidence": false
+      }
+    ],
+    "affected_input_engines": [
+      {
+        "engine": "Chromium",
+        "observations": [
+          {
+            "field": "claim",
+            "attempted_codepoints": 3000,
+            "retained_codepoints": 3000,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          },
+          {
+            "field": "passage",
+            "attempted_codepoints": 3000,
+            "retained_codepoints": 3000,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          }
+        ],
+        "bad_reference": {
+          "claim_invalid": null,
+          "reference_invalid": "true",
+          "focus": "reference"
+        },
+        "pass": true
+      },
+      {
+        "engine": "WebKit",
+        "observations": [
+          {
+            "field": "claim",
+            "attempted_codepoints": 3000,
+            "retained_codepoints": 3000,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          },
+          {
+            "field": "passage",
+            "attempted_codepoints": 3000,
+            "retained_codepoints": 3000,
+            "refused_before_worker": true,
+            "correct_invalid_focus": true
+          }
+        ],
+        "bad_reference": {
+          "claim_invalid": null,
+          "reference_invalid": "true",
+          "focus": "reference"
+        },
+        "pass": true
+      }
+    ],
+    "actual_modal_engines": [
+      {
+        "engine": "Chromium",
+        "pass": true,
+        "actual_NF_modal": true,
+        "full_canonical_records": 3,
+        "both_raw_and_frozen_NFC_bound": true,
+        "private_details_opt_in": true,
+        "negation_not_truth": true,
+        "edit_clear_cancel_unmount": true,
+        "empty_reopen": true,
+        "optional_payload_and_validator_failures_then_literal_PS_MT": true,
+        "no_input_upload_storage_console": true,
+        "reflow320_at200percent": true,
+        "both_themes": true,
+        "physical_phone": false,
+        "human_screen_reader": false,
+        "independent_accuracy_evidence": false,
+        "NF_tag_issued": false
+      },
+      {
+        "engine": "WebKit",
+        "pass": true,
+        "actual_NF_modal": true,
+        "full_canonical_records": 3,
+        "both_raw_and_frozen_NFC_bound": true,
+        "private_details_opt_in": true,
+        "negation_not_truth": true,
+        "edit_clear_cancel_unmount": true,
+        "empty_reopen": true,
+        "optional_payload_and_validator_failures_then_literal_PS_MT": true,
+        "no_input_upload_storage_console": true,
+        "reflow320_at200percent": true,
+        "both_themes": true,
+        "physical_phone": false,
+        "human_screen_reader": false,
+        "independent_accuracy_evidence": false,
+        "NF_tag_issued": false
+      }
+    ]
+  },
+  "hosted_replay_export": {
+    "pass": true,
+    "download_sha256": "a18d60f7198ab69d4f348aac80171668b01fc5198ad422a736ca7f647fe0e526"
+  },
+  "hosted_android": {
+    "run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44886233496/job/136792013135",
+    "pass": true,
+    "share_cases": 7,
+    "configuration_cases": 2,
+    "actual_WASM_cases": 137,
+    "installed_JVM_controls_passed": true,
+    "artifact_downloaded_by_reviewer": false,
+    "physical_or_independent_accuracy_evidence": false
+  },
+  "nonrequired_release_gates": "FAILURE; independent holdout/confidence-bound/calibration requirements remain unmet.",
+  "prior_failed_ci_review_sha256": "445223a7ccb4f33c7d375cc14cf4a1ffb42eb0ed06403bdd99f0c06fc955419f",
+  "ignored_log_sha256": {
+    "pr138-c408-site.log": "4d755537e699b047b94e088c07e31ec5f2641a83c21cbc8c44241b4f79a98270",
+    "pr138-c408-android.log": "57c836baf01266f3aeb17cd1e41780b4b4d964ad0a9a733a61054680463ebf24"
+  },
+  "limits": [
+    "Read-only API/log/Git comparisons; no source/public writes, retries, comments, resolutions, merge, deployment, original closure or independent validation by reviewer.",
+    "Hosted direct replay export passed; separate14 authored transport controls were reviewed macOS evidence, not individually identified in this hosted log.",
+    "JVM control step passed; no separately printed JDK module-resolution argv is inferred."
+  ]
+}
