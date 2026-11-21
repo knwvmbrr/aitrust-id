@@ -74,3 +74,15 @@ This is real project licensing evidence, not exact-release source correspondence
 The notice bundle, index and SPDX limits keep that unresolved distinction.
 The actual cached replay subsequently checked all35 tarballs, preserving the
 empty archive-notice observation rather than fabricating a member.
+
+## Resource correction after independent review
+
+A reduced1000-byte cap exposed allocation before the original final-size check:
+37,003 notice bytes were retained and47,849 bundle bytes were constructed before
+refusal. No large hostile allocation was attempted. The corrected selector
+reserves a combined logical budget for source bytes, each included notice
+occurrence (including duplicates), the planned copies and every header before
+reads/retention. The descriptor reader receives the remaining source allowance.
+A separate check precedes every bundle extension. This bounds logical byte
+processing; it is not an exact process-RSS or filesystem-crash guarantee.
+The real notice bundle's bytes remain unchanged.

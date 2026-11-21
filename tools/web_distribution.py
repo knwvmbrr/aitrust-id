@@ -33,6 +33,25 @@ MAX_COMPRESSED = 16_000_000
 MAX_EXPANDED = 32_000_000
 MAX_ARCHIVE_TOTAL = 128_000_000
 
+BUNDLE_PREFIX = (
+    b'AI TRUST ID - website JavaScript dependency notices\n'
+    b'\n'
+    b'Retained attribution for the site lock non-development cohort.\n'
+    b'Archive-carried notices and separately pinned project supplements are distinguished below.\n'
+    b'This may include tree-shaken packages. It is not complete dependency, source-offer\n'
+    b'or legal clearance. Archive identity is observed; no package is executed here.\n'
+    b'Package bindings: packages.json; selected-cohort SPDX: web-runtime.spdx.json\n'
+    b'\n'
+    b'First-party attribution (project license: ../reference/code-license.txt):\n'
+)
+SUPPLEMENT_WARNING = (
+    b'\n'
+    b'SUPPLEMENTAL UPSTREAM PROJECT LICENSE, NOT AN EXACT-RELEASE NOTICE MATCH.\n'
+    b'The 2.3.8 archive has no matched full notice. Its registry gitHead was not retrievable.\n'
+    b'Text below is pinned to a separate upstream project commit whose package is 2.3.7.\n'
+    b'Exact 2.3.8 source/license correspondence remains UNVERIFIED. No clearance is implied.\n'
+)
+
 
 class NoticeError(ValueError):
     """Only fixed public diagnostics cross the command boundary."""
@@ -117,9 +136,43 @@ def supplemental(row, raw):
             'source_url':source['url']}
 
 
+class Budget:
+    """Bound combined retained source bytes and planned bundle allocations."""
+    def __init__(self):
+        require(type(MAX_BUNDLE) is int and MAX_BUNDLE > 0)
+        self.limit = MAX_BUNDLE
+        self.used = 0
+
+    def reserve(self, amount):
+        require(type(amount) is int and amount >= 0 and amount <= self.limit - self.used)
+        self.used += amount
+
+    def read_source(self, root, name):
+        remaining = self.limit - self.used
+        require(remaining > 0)
+        # The descriptor reader checks regular-file size against this remaining
+        # allowance before allocating its content buffer.
+        value = read(root, name, min(MAX_JSON, remaining))
+        self.reserve(len(value))
+        return value
+
+
+def package_header(row):
+    return ('\n' + '=' * 72 + '\n' + row['name'] + '@' + row['version'] +
+            '\nArchive: ' + row['resolved'] + '\nDeclared license: ' +
+            row['license_declared'] + '\n').encode('utf-8')
+
+
+def notice_header(item, supplement):
+    label = 'Upstream project file: ' if supplement else 'Original archive member: '
+    return ('\n' + label + item['source_path'] + '\n').encode('utf-8')
+
+
 def selected(root=ROOT):
     """Select the lock's non-dev cohort, without requiring unrelated runtimes."""
-    raw = {name: read(root, name, MAX_JSON) for name in SOURCES}
+    budget = Budget()
+    raw = {name: budget.read_source(root, name) for name in SOURCES}
+    budget.reserve(len(BUNDLE_PREFIX) + len(raw['NOTICE']) + 1)
     lock = load(raw['site/package-lock.json'])
     package = load(raw['site/package.json'])
     manifest = load(raw['sbom/notices/manifest.json'])
@@ -156,6 +209,7 @@ def selected(root=ROOT):
                 ('dev' not in locked or type(locked['dev']) is bool))
         if locked.get('dev') is True:
             continue
+        require(len(cohort) < 128)
         name = path.rsplit('node_modules/', 1)[-1]
         require(path == 'node_modules/' + name and NAME.fullmatch(name) and len(name) <= 160)
         row = observed.get(path)
@@ -176,6 +230,7 @@ def selected(root=ROOT):
         require(algorithm in ('sha256', 'sha512') and
                 len(base64.b64decode(encoded, validate=True)) == {'sha256':32, 'sha512':64}[algorithm])
         require(type(row['notices']) is list and len(row['notices']) <= 32)
+        budget.reserve(len(package_header({**row, 'name':name})))
         members = set(); notices = []
         for notice in row['notices']:
             require(type(notice) is dict and set(notice) == {'source_path', 'sha256', 'bytes', 'notice'})
@@ -187,14 +242,21 @@ def selected(root=ROOT):
                     type(notice['bytes']) is int and 0 < notice['bytes'] <= MAX_NOTICE and
                     manifest['notices'].get(sha) == notice['bytes'])
             members.add(member)
-            value = read(root, notice['notice'], MAX_NOTICE)
+            # Count every included occurrence, even when multiple packages
+            # share a hash. Reserve retained bytes plus their future bundle copy.
+            budget.reserve(2 * notice['bytes'] + len(notice_header(notice, False)) + 1)
+            value = read(root, notice['notice'], min(MAX_NOTICE, notice['bytes']))
             require(len(value) == notice['bytes'] and digest(value) == sha)
             value.decode('utf-8', errors='strict')
             raw[notice['notice']] = value
             notices.append({**notice, 'text': value, 'origin':'archive_notice'})
         archive_notices = list(notices)
         if not notices:
-            notices = [supplemental(row, raw)]
+            item = supplemental(row, raw)
+            # Supplemental text was already charged as a source; reserve its
+            # planned bundle copy, warning and header before retention.
+            budget.reserve(len(SUPPLEMENT_WARNING) + item['bytes'] + len(notice_header(item, True)) + 1)
+            notices = [item]
         cohort.append({**row, 'name': name, 'archive_notices':archive_notices, 'notices': notices,
                        'supplemental_project_notice':not bool(archive_notices)})
     require(0 < len(cohort) <= 128)
@@ -208,29 +270,22 @@ def selected(root=ROOT):
 def expected(root=ROOT):
     raw, cohort, observed_at = selected(root)
     source_hashes = {name: digest(value) for name, value in sorted(raw.items())}
-    bundle = bytearray(b'AI TRUST ID - website JavaScript dependency notices\n\n'
-        b'Retained attribution for the site lock non-development cohort.\n'
-        b'Archive-carried notices and separately pinned project supplements are distinguished below.\n'
-        b'This may include tree-shaken packages. It is not complete dependency, source-offer\n'
-        b'or legal clearance. Archive identity is observed; no package is executed here.\n'
-        b'Package bindings: packages.json; selected-cohort SPDX: web-runtime.spdx.json\n\n'
-        b'First-party attribution (project license: ../reference/code-license.txt):\n')
-    bundle.extend(raw['NOTICE']); bundle.extend(b'\n')
+    bundle = bytearray()
+
+    def append(value):
+        require(len(value) <= MAX_BUNDLE - len(bundle))
+        bundle.extend(value)
+
+    append(BUNDLE_PREFIX); append(raw['NOTICE']); append(b'\n')
     packages = []; spdx = []
     for row in cohort:
-        bundle.extend(('\n' + '=' * 72 + '\n' + row['name'] + '@' + row['version'] +
-                       '\nArchive: ' + row['resolved'] + '\nDeclared license: ' +
-                       row['license_declared'] + '\n').encode('utf-8'))
+        append(package_header(row))
         if row['supplemental_project_notice']:
-            bundle.extend(b'\nSUPPLEMENTAL UPSTREAM PROJECT LICENSE, NOT AN EXACT-RELEASE NOTICE MATCH.\n'
-                b'The 2.3.8 archive has no matched full notice. Its registry gitHead was not retrievable.\n'
-                b'Text below is pinned to a separate upstream project commit whose package is 2.3.7.\n'
-                b'Exact 2.3.8 source/license correspondence remains UNVERIFIED. No clearance is implied.\n')
+            append(SUPPLEMENT_WARNING)
         notices = []
         for item in sorted(row['notices'], key=lambda item: item['source_path']):
-            label = 'Upstream project file: ' if row['supplemental_project_notice'] else 'Original archive member: '
-            bundle.extend(('\n' + label + item['source_path'] + '\n').encode())
-            start = len(bundle); bundle.extend(item['text']); end = len(bundle); bundle.extend(b'\n')
+            append(notice_header(item, row['supplemental_project_notice']))
+            start = len(bundle); append(item['text']); end = len(bundle); append(b'\n')
             notices.append({key:item[key] for key in ('source_path', 'sha256', 'bytes', 'notice')} |
                            {'bundle_byte_span':[start, end], 'origin':item['origin']})
         packages.append({key:row[key] for key in ('package_path', 'name', 'version', 'integrity',

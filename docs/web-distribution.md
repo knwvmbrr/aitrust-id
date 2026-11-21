@@ -88,3 +88,9 @@ of protection from a malicious same-user process.
 
 F-057 and X-02 remain open for their original complete obligations, the other
 13 distribution scopes and eligible full artifact SBOM/signature evidence.
+
+The combined16MB logical notice budget now accounts for source inputs, every
+retained notice occurrence (even repeated hashes), planned bundle copies and
+headers before reading/storing them. Every append also checks remaining capacity
+before allocation. This is a byte-processing budget, not a16MB process-memory
+claim. The earlier reduced-budget counterexample is retained with the correction.

@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-060306-verify-bounded-notice-artifact-746b556b
+
+Recorded 2026-11-21T06:03:06.088337+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Verify the current normal-build notice artifact after preallocation budget enforcement.
+- **Evidence.** Actual normal build, exact carried notice comparison and selected SPDX schema pass. Notice text stays byte-identical. The real reviewed-release consumer still refuses; independent PS remains admitted. Peer independently confirms reduced-cap, read-trap and duplicated-occurrence controls. [Change record](./runs/changes/2026-11-21-060306-verify-bounded-notice-artifact-746b556b.json).
+- **Not claimed.** Earlier33 controls and current8 affected controls are separate evidence, not41 current tests. No archive replay or broad browser suite repeated. Exact2.3.8 source/license correspondence and full original F057/X02 remain open.
+
+
+### 2026-11-21-060020-bound-notice-bytes-before-reading-0540f121
+
+Recorded 2026-11-21T06:00:20.476862+00:00 · Contributor: Codex website distribution engineering lane · change
+
+- **Changed.** Apply combined source, duplicate-notice, copy and header byte budgets before reading/retaining content and before every bundle extension.
+- **Evidence.** The independent reduced-cap counter is reproduced on original source. Eight affected resource/prepare/rollback checks pass; actual notice bundle bytes remain identical. New index and SPDX retain updated producer source identity. [Change record](./runs/changes/2026-11-21-060020-bound-notice-bytes-before-reading-0540f121.json).
+- **Not claimed.** Earlier33-test and archive evidence remain source-bound history. Current normal-build artifact refresh is pending. No exact RSS guarantee, full source/license clearance or original F057/X02 closure is claimed.
+
+
 ### 2026-11-21-055140-clarify-notice-result-guide-c79a42e6
 
 Recorded 2026-11-21T05:51:40.217997+00:00 · Contributor: Codex website distribution engineering lane · change

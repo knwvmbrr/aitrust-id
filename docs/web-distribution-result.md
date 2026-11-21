@@ -43,3 +43,13 @@ F-057 and X-02 remain open. Carried attribution does not complete the embedded
 runtime, native/build-tool graphs, source offers, the other 13 policy scopes or
 eligible full release-artifact SBOM/signatures. No legal clearance, detector
 accuracy, tag issuance, new original closure or whole-project percentage follows.
+
+Independent review then found a resource-bound defect: the original final-size
+check ran after notice retention and bundle construction. A small reduced-cap
+counter reproduced it without allocating large data. The correction has eight
+current affected resource/prepare/rollback controls passing; the earlier33-test
+source proof remains historical. Retained source bytes, duplicate notice
+occurrences, copies and headers are admitted before reading/appending. The
+actual notice bundle text remains byte-identical. Updated source bindings and
+artifact proof are recorded separately; no archive download or broad browser
+suite is repeated for this correction.

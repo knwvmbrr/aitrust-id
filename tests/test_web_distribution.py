@@ -240,3 +240,52 @@ def test_root_lock_entry_and_dependencies_have_strict_api_and_cli_refusal(select
                             cwd=root, capture_output=True, timeout=10)
     assert result.returncode == 2 and not result.stderr
     assert json.loads(result.stdout)['reason'] == 'website_notice_check_refused'
+
+
+def test_source_and_notice_budget_refuses_before_reading_notice_contents(monkeypatch):
+    calls = []; original = web.read
+    def observed(root, name, limit):
+        calls.append((name, limit));return original(root, name, limit)
+    monkeypatch.setattr(web, 'read', observed)
+    monkeypatch.setattr(web, 'MAX_BUNDLE', 1000)
+    with pytest.raises(ValueError):web.selected(ROOT)
+    assert calls and all(limit <= 1000 for _, limit in calls)
+    assert not any(name.startswith('sbom/notices/') and name.endswith('.txt') for name,_ in calls)
+
+
+def test_duplicate_notice_occurrences_spend_the_combined_budget(monkeypatch):
+    raw, cohort, _ = web.selected(ROOT)
+    archive = [n for r in cohort for n in r['archive_notices']]
+    unique = {n['sha256']:n['bytes'] for n in archive}
+    source_bytes = sum(len(raw[name]) for name in web.SOURCES)
+    headers = len(web.BUNDLE_PREFIX) + len(raw['NOTICE']) + 1
+    for row in cohort:
+        headers += len(web.package_header(row))
+        if row['supplemental_project_notice']:headers += len(web.SUPPLEMENT_WARNING)
+        for notice in row['notices']:
+            headers += len(web.notice_header(notice, row['supplemental_project_notice'])) + 1
+            if row['supplemental_project_notice']:headers += notice['bytes']
+    # A dedup-only check would fit. Every retained occurrence plus its planned
+    # bundle copy must instead consume capacity before reading the next copy.
+    cap = source_bytes + headers + 2*sum(unique.values()) + 1
+    assert cap < source_bytes + headers + 2*sum(n['bytes'] for n in archive)
+    calls = []; original = web.read
+    def observed(root, name, limit):
+        if name.startswith('sbom/notices/') and name.endswith('.txt'):calls.append(name)
+        return original(root, name, limit)
+    monkeypatch.setattr(web, 'read', observed);monkeypatch.setattr(web, 'MAX_BUNDLE', cap)
+    with pytest.raises(web.NoticeError):web.selected(ROOT)
+    assert 0 < len(calls) < len(archive) and len(calls) > len(set(calls))
+
+
+def test_append_guard_checks_before_extending_even_with_selection_injected(monkeypatch):
+    selected = web.selected(ROOT)
+    class Tracked(bytearray):
+        largest = 0
+        def extend(self, value):
+            super().extend(value);Tracked.largest = max(Tracked.largest, len(self))
+    monkeypatch.setattr(web, 'selected', lambda root:selected)
+    monkeypatch.setattr(web, 'MAX_BUNDLE', 1000)
+    monkeypatch.setattr(web, 'bytearray', Tracked, raising=False)
+    with pytest.raises(web.NoticeError):web.expected(ROOT)
+    assert Tracked.largest <= 1000
