@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-042626-android-cold-start-study-predeclaration-66564139",
+  "recorded_at": "2026-11-21T04:26:26.801880+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "56b0294c8e22b456eface6dad0a8d1afe68d1450",
+  "changed": "Predeclare one three-host experimental cold-start study at immutable56b source with original Android controls and strict all-outcomes aggregation.",
+  "proves": "21 focused source/workflow/synthetic aggregate controls,10 bash syntax scripts,2 Python syntax checks and actual frozen source-start/end guards pass before launch. New paths do not trigger the ordinary Android workflow.",
+  "limits": "No hosted study sample has run; distinct workflow review is pending before launch. No native/helper changes, repeated study, startup/root-cause/accuracy/physical-phone/full N-014 acceptance or production integration.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    ".github/workflows/android-cold-start-study.yml": "9ac96885187679764d734eee003daa12a0855a44c227638ca170905e49c37f53",
+    "scripts/cold-start-study.py": "b364308627e85873fb4450ae64d2a7cf17ab4bb74bc115a4f6e9c0419ad6e8ed",
+    "tests/test_cold_start_study.py": "910e4d082190f94d9c9e56861a432818577c7240e17ac82dbc64adfbc0c81e54",
+    "docs/android-cold-start-study-plan.md": "7ede7ff1ed2db1e6374907b7e30d6b83ce8701d819db571103174d4aee2ea066",
+    "runs/2026-11-20-android-cold-start-prelaunch.json": "e3514d18623becf8a62cf419f0d0c8ba31c21493d5da5c056aaaac6b2a07a99b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-20-android-cold-start-prelaunch.json",
+      "sha256": "e3514d18623becf8a62cf419f0d0c8ba31c21493d5da5c056aaaac6b2a07a99b"
+    }
+  ],
+  "checks": []
+}

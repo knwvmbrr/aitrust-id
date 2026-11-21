@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-21
+
+### 2026-11-21-042626-android-cold-start-study-predeclaration-66564139
+
+Recorded 2026-11-21T04:26:26.801880+00:00 · Contributor: Codex · change
+
+- **Changed.** Predeclare one three-host experimental cold-start study at immutable56b source with original Android controls and strict all-outcomes aggregation.
+- **Evidence.** 21 focused source/workflow/synthetic aggregate controls,10 bash syntax scripts,2 Python syntax checks and actual frozen source-start/end guards pass before launch. New paths do not trigger the ordinary Android workflow. [Change record](./runs/changes/2026-11-21-042626-android-cold-start-study-predeclaration-66564139.json).
+- **Not claimed.** No hosted study sample has run; distinct workflow review is pending before launch. No native/helper changes, repeated study, startup/root-cause/accuracy/physical-phone/full N-014 acceptance or production integration.
+
+
 ## Unreleased — 2026-11-20
 
 ### 2026-11-20-180738-android-first-failure-lifecycle-metadata-f4f208eb
