@@ -1,0 +1,261 @@
+{
+  "profile": "selected-zlib-source-actual-artifact/v1",
+  "captured_at": "2026-11-21T11:05:36.881681+00:00",
+  "pass": true,
+  "prepared_by": "Codex /root/seo",
+  "source_base": "3941603265c763de07d9f7d91e465e0832db39d1",
+  "source_sha256": {
+    "tools/zlib_source_delivery.py": "2f02c1f818d367ccaa809012566c36f3779df720988ce38430ba1264b61643d3",
+    "scripts/zlib-source-delivery.py": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe",
+    "tools/pyodide_js_sources.py": "e6702ea1949a46ccae76d1dbefaf5c5d76003a7b4f651d08d20b18ef64af2e00",
+    "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+    "sbom/reviews/zlib-runtime/manifest.json": "e3a9905a5c4fb0127d9dd1f9b9c59bfddcc19c11c605ca96176e1f880857c046",
+    "sbom/nested-runtime/pyodide-wasm-release.json": "fda0196c527b3920744261e27ac93cb71637ad36cf127e450aeaf49f425dd86f",
+    "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+    "tests/test_zlib_source_delivery.py": "d341374fc0964f46fe2250e334fb95a31f6e3abeef22697ec06466fbfaa91904"
+  },
+  "source_stable": true,
+  "actual_current_built_runtime_used": true,
+  "checks": [
+    {
+      "name": "actual_existing_built_site_missing_zlib_artifact_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "actual_export",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "artifacts": {
+          "ZLIB-SOURCES.zip": {
+            "bytes": 1682541,
+            "sha256": "15174d440f490dd53cb4a3c20e18d13f86038060fa3de109f13795935b4de52e"
+          },
+          "NOTICES.txt": {
+            "bytes": 7912,
+            "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+          },
+          "index.json": {
+            "bytes": 1858,
+            "sha256": "165d232164d2a75d84d186315b9a50094da7dafb2eaadf68486355dce449d35e"
+          }
+        },
+        "full_wasm_corresponding_source": false,
+        "compiled_library_rebuilt": false,
+        "publisher_signature_verified": false,
+        "legal_clearance": false,
+        "global_distribution_admitted": false,
+        "complete_project_obligations": false
+      }
+    },
+    {
+      "name": "actual_five_runtime_three_delivery_check",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "profile": "selected-zlib-runtime-source-notices/v1",
+        "zlib_version": "1.3.1",
+        "runtime_members_checked": 5,
+        "delivery_artifacts_checked": 3,
+        "bundle_sha256": "15174d440f490dd53cb4a3c20e18d13f86038060fa3de109f13795935b4de52e",
+        "full_wasm_corresponding_source": false,
+        "compiled_library_rebuilt": false,
+        "publisher_signature_verified": false,
+        "legal_clearance": false,
+        "global_distribution_admitted": false,
+        "complete_project_obligations": false
+      }
+    },
+    {
+      "name": "deterministic_repeat_and_full_source_zip",
+      "pass": true
+    },
+    {
+      "name": "changed_ZLIB-SOURCES.zip_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "missing_ZLIB-SOURCES.zip_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "changed_NOTICES.txt_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "missing_NOTICES.txt_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "changed_index.json_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "missing_index.json_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "extra_delivery_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "changed_runtime_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "copied_source_control_baseline",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "zlib_version": "1.3.1",
+        "full_wasm_corresponding_source": false,
+        "compiled_library_rebuilt": false,
+        "publisher_signature_verified": false,
+        "legal_clearance": false,
+        "global_distribution_admitted": false,
+        "complete_project_obligations": false
+      }
+    },
+    {
+      "name": "coherently_rehashed_runtime_export_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "coherently_rehashed_runtime_artifact_refused",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "exact_cached_source_and_recipe_replay",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "cached_archives_replayed": 2,
+        "zlib_version": "1.3.1",
+        "full_wasm_corresponding_source": false,
+        "compiled_library_rebuilt": false,
+        "publisher_signature_verified": false,
+        "legal_clearance": false,
+        "global_distribution_admitted": false,
+        "complete_project_obligations": false
+      }
+    }
+  ],
+  "previous_carried_notices_missing_exact_zlib_text": [
+    "device-licenses/python-license.txt",
+    "device-licenses/python-stdlib-notices.txt",
+    "device-licenses/pyodide-MPL-2.0.txt",
+    "runtime-js-sources/NOTICES.txt",
+    "web-licenses/THIRD-PARTY-NOTICES.txt"
+  ],
+  "actual_wasm_version_probe": {
+    "captured_at": "2026-11-21T10:56:52.636797+00:00",
+    "controller_sha256": "09b2954e2bdd2be2d56d5da508bfb7d39bc8791bd22607f17a15bc9f93bac83c",
+    "exit": 0,
+    "elapsed_seconds": 1.281248,
+    "stderr_bytes": 0,
+    "result": {
+      "pass": true,
+      "zlib_runtime_version": "1.3.1",
+      "pyodide_runtime_version": "314.0.7",
+      "network_attempts": 0,
+      "runtime_sha256": {
+        "pyodide.mjs": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+        "pyodide.asm.mjs": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+        "pyodide.asm.wasm": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+        "python_stdlib.zip": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+        "pyodide-lock.json": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010"
+      },
+      "source_stable": true
+    },
+    "failure_sha256": null
+  },
+  "probe_record_sha256": "3fdaedb6b2d1bb6d88754183f94f7af33c17eb3fea084bb12bde3f6321a54089",
+  "output_artifacts": {
+    "ZLIB-SOURCES.zip": {
+      "bytes": 1682541,
+      "sha256": "15174d440f490dd53cb4a3c20e18d13f86038060fa3de109f13795935b4de52e"
+    },
+    "NOTICES.txt": {
+      "bytes": 7912,
+      "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+    },
+    "index.json": {
+      "bytes": 1858,
+      "sha256": "165d232164d2a75d84d186315b9a50094da7dafb2eaadf68486355dce449d35e"
+    }
+  },
+  "zip_members": 6,
+  "full_zlib_archive_carried": true,
+  "full_verbatim_zlib_license_and_header_carried": true,
+  "emscripten_recipe_full_license_carried": true,
+  "focused_tests": {
+    "argv": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_zlib_source_delivery.py"
+    ],
+    "passed": 29,
+    "duration_seconds": 1.21
+  },
+  "claims": {
+    "full_wasm_corresponding_source": false,
+    "compiled_library_rebuilt": false,
+    "publisher_signature_verified": false,
+    "legal_clearance": false,
+    "global_distribution_admitted": false,
+    "complete_project_obligations": false
+  },
+  "limits": [
+    "Only five actual runtime files copied to an owned artifact; no root artifact mutation, full build, browser or public deployment claimed.",
+    "Existing Node/WASM version probe executed once under granted resource slot; no user inputs or network calls.",
+    "Full F-057/X-02,13unknown routes and other WASM/native/source obligations remain open.",
+    "Normal preparation/postbuild/predeploy hooks and public links are PM-owned and not yet integrated."
+  ]
+}

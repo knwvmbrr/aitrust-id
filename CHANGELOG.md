@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-111134-exact-zlib-source-notice-delivery-90207ce3
+
+Recorded 2026-11-21T11:11:34.119740+00:00 · Contributor: Codex /root/seo; distinct review /root/web_camo · change
+
+- **Changed.** Added exact cached embedded-zlib source and verbatim current upstream notices with deterministic artifact delivery and anchored runtime/source/recipe checks.
+- **Evidence.** One actual selected-runtime probe reports zlib1.3.1 with zero network attempts. After a preserved descriptor-constructor finding,32focused controls and7current actual artifact/cache checks pass; distinct review confirms close-once ownership and exact5runtime/3artifact delivery. Earlier16-control and failed review records remain historical. [Change record](./runs/changes/2026-11-21-111134-exact-zlib-source-notice-delivery-90207ce3.json).
+- **Not claimed.** Existing F-057 repair only, no new task count or original closure. No full WASM/build-linkage reproduction, global licensing/route admission or public integration. Shared hooks/package/state remain PM-owned.
+
+
 ### 2026-11-21-111220-maintenance-mt-paste-and-delivery-plan-be731531
 
 Recorded 2026-11-21T11:12:20.442244+00:00 · Contributor: Codex /root integration; MT /root/web_camo; runtime /root/seo; Android /root/share_debugger · change

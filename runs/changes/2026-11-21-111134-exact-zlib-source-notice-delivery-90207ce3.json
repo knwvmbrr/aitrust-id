@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-111134-exact-zlib-source-notice-delivery-90207ce3",
+  "recorded_at": "2026-11-21T11:11:34.119740+00:00",
+  "author": "Codex /root/seo; distinct review /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3941603265c763de07d9f7d91e465e0832db39d1",
+  "changed": "Added exact cached embedded-zlib source and verbatim current upstream notices with deterministic artifact delivery and anchored runtime/source/recipe checks.",
+  "proves": "One actual selected-runtime probe reports zlib1.3.1 with zero network attempts. After a preserved descriptor-constructor finding,32focused controls and7current actual artifact/cache checks pass; distinct review confirms close-once ownership and exact5runtime/3artifact delivery. Earlier16-control and failed review records remain historical.",
+  "limits": "Existing F-057 repair only, no new task count or original closure. No full WASM/build-linkage reproduction, global licensing/route admission or public integration. Shared hooks/package/state remain PM-owned.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".gitattributes": "cdbe23a109ae233622b87643e06d5a26bfefce3436bcb5af2faa9e3bac458276",
+    "tools/zlib_source_delivery.py": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a",
+    "scripts/zlib-source-delivery.py": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe",
+    "tests/test_zlib_source_delivery.py": "ed2d604bbc7dfbacebb125b6eb79c6a0946f25c3d38b39cf7baaf4148ac03ed9",
+    "docs/zlib-source-delivery-plan.md": "52cf32bae7b153d563ea03f9c7d84a078109a14d72297de4b04ca69590caccde",
+    "docs/zlib-source-delivery.md": "1c2a4ced22273a62335b87b7f92e368d586b18cc4f5681e3fd08ae0eb0253021",
+    "runs/2026-11-21-zlib-source-actual-artifact.json": "09762d46172676134f1ee0d44db0bdfe934750ca3620587765233fbd4506c98f",
+    "runs/2026-11-21-zlib-source-fd-corrected.json": "19e70cbd976b7175b6e7adc3cbefddf978c742439ff350c628f019dfe74b2115",
+    "runs/2026-11-21-zlib-source-initial-independent-review.json": "68ac8d584b956fe2aa7a72d703bafc23de9c6bb4052fc2fd17e7ce680b81c8bf",
+    "runs/2026-11-21-zlib-source-corrected-independent-review.json": "46c3d519e1e6a92db8898ea8aace4032cc039718636feec7f78ffe2722b0d9eb",
+    "sbom/reviews/zlib-runtime/manifest.json": "f84d1828da336944916358eb2c4c30d5f3c610c01936a562cf8c7614751163e5",
+    "sbom/reviews/zlib-runtime/sources/fbab901f75feb30106921191b00a52ed14fb439e49ad0e42bc7b329438c34d24.txt": "fbab901f75feb30106921191b00a52ed14fb439e49ad0e42bc7b329438c34d24",
+    "sbom/reviews/zlib-runtime/sources/8a5579af72ea4f427ff00a4150f0ccb3fc5c1e4379f726e101133b1ab9fc600c.h": "8a5579af72ea4f427ff00a4150f0ccb3fc5c1e4379f726e101133b1ab9fc600c",
+    "sbom/reviews/zlib-runtime/sources/620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86.txt": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+    "sbom/reviews/zlib-runtime/sources/d3d8ca9a7caac82fa68e4984e47c03386093b8fa2b068e8e9eccedd3aa406926.py": "d3d8ca9a7caac82fa68e4984e47c03386093b8fa2b068e8e9eccedd3aa406926",
+    "sbom/reviews/zlib-runtime/sources/17e88863f3600672ab49182f217281b6fc4d3c762bde361935e436a95214d05c.tar.gz": "17e88863f3600672ab49182f217281b6fc4d3c762bde361935e436a95214d05c",
+    "sbom/reviews/zlib-runtime/sources/845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243.txt": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243",
+    "sbom/reviews/zlib-runtime/sources/3fdaedb6b2d1bb6d88754183f94f7af33c17eb3fea084bb12bde3f6321a54089.json": "3fdaedb6b2d1bb6d88754183f94f7af33c17eb3fea084bb12bde3f6321a54089"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-zlib-source-fd-corrected.json",
+      "sha256": "19e70cbd976b7175b6e7adc3cbefddf978c742439ff350c628f019dfe74b2115"
+    },
+    {
+      "path": "runs/2026-11-21-zlib-source-corrected-independent-review.json",
+      "sha256": "46c3d519e1e6a92db8898ea8aace4032cc039718636feec7f78ffe2722b0d9eb"
+    }
+  ],
+  "checks": []
+}
