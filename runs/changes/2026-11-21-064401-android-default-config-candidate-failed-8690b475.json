@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-064401-android-default-config-candidate-failed-8690b475",
+  "recorded_at": "2026-11-21T06:44:01.976123+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "61cf55fd21361b3b39d405850ec21a70ada7a189",
+  "changed": "Retain the first default-APK configuration candidate as failed despite seven original passes.",
+  "proves": "Current non-probe APK compiled and ran all seven original controls; separate configuration_rotate requirement failed before either supplemental case completed. Native source14 hashes and actual default DEX identity match.",
+  "limits": "Exact rotation/current draft was not recorded at failure; landscape status visibility is only a source-supported verifier hypothesis. Full configuration/HOME acceptance, production readiness and physical/human/full-original closure remain pending.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "runs/2026-11-21-android-default-configuration-failed.json": "72149926339a209432cdbc35871fed884404ec310b446fcc9c8e2637854c82bd"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-default-configuration-failed.json",
+      "sha256": "72149926339a209432cdbc35871fed884404ec310b446fcc9c8e2637854c82bd"
+    }
+  ],
+  "checks": []
+}

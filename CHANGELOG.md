@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-064401-android-default-config-candidate-failed-8690b475
+
+Recorded 2026-11-21T06:44:01.976123+00:00 · Contributor: Codex · change
+
+- **Changed.** Retain the first default-APK configuration candidate as failed despite seven original passes.
+- **Evidence.** Current non-probe APK compiled and ran all seven original controls; separate configuration_rotate requirement failed before either supplemental case completed. Native source14 hashes and actual default DEX identity match. [Change record](./runs/changes/2026-11-21-064401-android-default-config-candidate-failed-8690b475.json).
+- **Not claimed.** Exact rotation/current draft was not recorded at failure; landscape status visibility is only a source-supported verifier hypothesis. Full configuration/HOME acceptance, production readiness and physical/human/full-original closure remain pending.
+
+
 ### 2026-11-21-063631-android-optional-retention-copy-4a6cbb28
 
 Recorded 2026-11-21T06:36:31.830021+00:00 · Contributor: Codex · change
