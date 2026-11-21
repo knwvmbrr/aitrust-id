@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-112301-existing-js-export-owned-fd-correction-901aaac6
+
+Recorded 2026-11-21T11:23:01.843488+00:00 · Contributor: Codex /root/seo; distinct review /root/web_camo · change
+
+- **Changed.** Fixed raw descriptor ownership in the existing selected JS source exporter after an actual constructor-failure leak; refreshed both source-bound manifests through exact cached replay.
+- **Evidence.** 39 focused controls and 8 actual artifact/cache/CLI controls pass. Distinct review replayed six affected IO/CLI/artifact groups, confirming close-once ownership, preserved old outputs and exact current JS and zlib delivery. Historical failed reproduction and old source-bound artifacts remain retained. [Change record](./runs/changes/2026-11-21-112301-existing-js-export-owned-fd-correction-901aaac6.json).
+- **Not claimed.** No upstream source, license or notice content changed. No new task count, original closure, full WASM/source linkage, global license or distribution admission. Normal shared build hooks and publication remain PM-owned.
+
+
 ### 2026-11-21-111134-exact-zlib-source-notice-delivery-90207ce3
 
 Recorded 2026-11-21T11:11:34.119740+00:00 · Contributor: Codex /root/seo; distinct review /root/web_camo · change

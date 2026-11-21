@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-112301-existing-js-export-owned-fd-correction-901aaac6",
+  "recorded_at": "2026-11-21T11:23:01.843488+00:00",
+  "author": "Codex /root/seo; distinct review /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "261f65b044c4f9233402c3f693f5d93f37da57ce",
+  "changed": "Fixed raw descriptor ownership in the existing selected JS source exporter after an actual constructor-failure leak; refreshed both source-bound manifests through exact cached replay.",
+  "proves": "39 focused controls and 8 actual artifact/cache/CLI controls pass. Distinct review replayed six affected IO/CLI/artifact groups, confirming close-once ownership, preserved old outputs and exact current JS and zlib delivery. Historical failed reproduction and old source-bound artifacts remain retained.",
+  "limits": "No upstream source, license or notice content changed. No new task count, original closure, full WASM/source linkage, global license or distribution admission. Normal shared build hooks and publication remain PM-owned.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/pyodide_js_sources.py": "5f964360f591fcfbe4fabe24a214d4430dc639c38e608818f8e5fe870c546e4e",
+    "tests/test_pyodide_js_sources.py": "b95b97ba570ac9654008bad377df0de189cbf3503502840da5951171c476764a",
+    "sbom/reviews/pyodide-js/manifest.json": "24263f38d4ada9e82533048d7aead0cb543a3f0f4cbd8bfd69316aefd53c57b6",
+    "sbom/reviews/zlib-runtime/manifest.json": "baf610ed2d6db1123e1e091cac13814e2f80cb08620924596d1b939c351f2709",
+    "runs/2026-11-21-js-export-fd-original.json": "1bcc562fb2217956177c64cce19f99a1a025fe18794f91329fce53a0267cbe83",
+    "runs/2026-11-21-js-export-owned-fd-corrected.json": "0caade71d3165db40328ee394810dc6bfd0a63ce2f41824db274671ebda7630a",
+    "runs/2026-11-21-js-export-owned-fd-independent-review.json": "033cb45a8ad9c9e0dd585d1a73a2e1caefb244b6784353658665d5cea864e18e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-js-export-owned-fd-corrected.json",
+      "sha256": "0caade71d3165db40328ee394810dc6bfd0a63ce2f41824db274671ebda7630a"
+    },
+    {
+      "path": "runs/2026-11-21-js-export-owned-fd-independent-review.json",
+      "sha256": "033cb45a8ad9c9e0dd585d1a73a2e1caefb244b6784353658665d5cea864e18e"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,37 @@
+{
+  "profile": "existing-js-export-constructor-fault/v1",
+  "captured_at": "2026-11-21T11:12:54.743880+00:00",
+  "pass": false,
+  "prepared_by": "Codex /root/seo",
+  "source_commit": "261f65b044c4f9233402c3f693f5d93f37da57ce",
+  "source_sha256": {
+    "tools/pyodide_js_sources.py": "e6702ea1949a46ccae76d1dbefaf5c5d76003a7b4f651d08d20b18ef64af2e00",
+    "scripts/pyodide-js-sources.py": "5dc7db3693a6cf2d02c888915dcd8aa3df2a4306005552392f23a2a656307d63",
+    "tests/test_pyodide_js_sources.py": "609ad2f8f709662767af677055f01333863dd78c95dcbf341154d6400202deb8",
+    "sbom/reviews/pyodide-js/manifest.json": "412dddb423851c9d60fff587679e883c36e89f76c92a932e369feace2b1c61ca"
+  },
+  "actual_wb_constructor_fault_reproduced": true,
+  "raw_descriptor_remained_open": true,
+  "target_present": false,
+  "owned_leaked_descriptor_closed_after_observation": true,
+  "normal_export_and_actual_five_runtime_three_artifact_pass_before_fault": true,
+  "prior_outputs": {
+    "PYODIDE-JS-SOURCES.zip": {
+      "bytes": 1632140,
+      "sha256": "0ab9f83496de972e9976677e2729d4931460f1c6cbb29b67de068454975fa412"
+    },
+    "NOTICES.txt": {
+      "bytes": 18300,
+      "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+    },
+    "index.json": {
+      "bytes": 3006,
+      "sha256": "1f8b9166d3e1d562560ec979c59da27ebe837b524735aa6c4a0f9873510fa779"
+    }
+  },
+  "source_unchanged": true,
+  "limits": [
+    "Owned synthetic file fault only; no source, shared hook, browser, model, service, credential or user-data mutation.",
+    "This is the actual unfixed source observation, not final delivery or legal clearance."
+  ]
+}

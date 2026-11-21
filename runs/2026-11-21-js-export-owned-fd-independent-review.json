@@ -1,0 +1,31 @@
+{
+  "profile": "selected-js-export-owned-fd-peer-review/v1",
+  "captured_at": "2026-11-21T11:19:29.030322+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/web_camo",
+  "source_sha256": {
+    "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+    "scripts/zlib-source-delivery.py": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe",
+    "sbom/reviews/pyodide-js/manifest.json": "24263f38d4ada9e82533048d7aead0cb543a3f0f4cbd8bfd69316aefd53c57b6",
+    "tests/test_pyodide_js_sources.py": "b95b97ba570ac9654008bad377df0de189cbf3503502840da5951171c476764a",
+    "tools/zlib_source_delivery.py": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a",
+    "tools/pyodide_js_sources.py": "5f964360f591fcfbe4fabe24a214d4430dc639c38e608818f8e5fe870c546e4e",
+    "scripts/pyodide-js-sources.py": "5dc7db3693a6cf2d02c888915dcd8aa3df2a4306005552392f23a2a656307d63",
+    "sbom/reviews/zlib-runtime/manifest.json": "baf610ed2d6db1123e1e091cac13814e2f80cb08620924596d1b939c351f2709"
+  },
+  "source_stable": true,
+  "author_receipt_sha256": "0caade71d3165db40328ee394810dc6bfd0a63ce2f41824db274671ebda7630a",
+  "actual_controls": [
+    "constructor_error_closes_raw_fd_preserves_existing_all3",
+    "close_after_release_attempted_once_reused_marker_survives_old_outputs_unchanged",
+    "normal_export_all3_exact_current_bytes",
+    "actual_CLI_constructor_failure_fixed_private_refusal",
+    "actual_current_js_5runtime_3artifact_gate_and_output_hashes",
+    "actual_current_zlib_5runtime_3artifact_gate_and_output_hashes"
+  ],
+  "limits": [
+    "Only six focused actual IO/CLI/artifact groups; no full39 or zlib32 repeat, archive reparse, browser, NodeVM, download or build.",
+    "Same minimal ownership repair; refreshed manifests bind changed producer, retained notices/source content unchanged.",
+    "No full WASM source/linkage, license/route clearance, independent accuracy, deployment or original requirement closure."
+  ]
+}

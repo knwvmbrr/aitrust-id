@@ -1,0 +1,220 @@
+{
+  "profile": "existing-js-owned-descriptor-correction/v1",
+  "captured_at": "2026-11-21T11:14:43.926774+00:00",
+  "pass": true,
+  "prepared_by": "Codex /root/seo",
+  "source_base": "261f65b044c4f9233402c3f693f5d93f37da57ce",
+  "source_sha256": {
+    "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+    "scripts/zlib-source-delivery.py": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe",
+    "sbom/reviews/pyodide-js/manifest.json": "24263f38d4ada9e82533048d7aead0cb543a3f0f4cbd8bfd69316aefd53c57b6",
+    "tests/test_pyodide_js_sources.py": "b95b97ba570ac9654008bad377df0de189cbf3503502840da5951171c476764a",
+    "tools/zlib_source_delivery.py": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a",
+    "tools/pyodide_js_sources.py": "5f964360f591fcfbe4fabe24a214d4430dc639c38e608818f8e5fe870c546e4e",
+    "scripts/pyodide-js-sources.py": "5dc7db3693a6cf2d02c888915dcd8aa3df2a4306005552392f23a2a656307d63",
+    "sbom/reviews/zlib-runtime/manifest.json": "baf610ed2d6db1123e1e091cac13814e2f80cb08620924596d1b939c351f2709"
+  },
+  "source_stable": true,
+  "actual_checks": [
+    {
+      "name": "historical_js_artifact_refuses_new_producer_binding",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "selected_runtime_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "historical_zlib_artifact_refuses_new_foundation_binding",
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      }
+    },
+    {
+      "name": "current_runtime-js-sources_export",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "artifacts": {
+          "PYODIDE-JS-SOURCES.zip": {
+            "bytes": 1632140,
+            "sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"
+          },
+          "NOTICES.txt": {
+            "bytes": 18300,
+            "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+          },
+          "index.json": {
+            "bytes": 3006,
+            "sha256": "1e26ef876d26f7aea469332d0e0b59779b70e63a0ecfb31a062320da96ce9f4e"
+          }
+        },
+        "full_wasm_corresponding_source": false,
+        "all_dependency_obligations": false,
+        "compiler_reproduced": false,
+        "signature_verified": false,
+        "legal_clearance": false,
+        "distribution_route_admitted": false
+      }
+    },
+    {
+      "name": "current_runtime-js-sources_exact_runtime_artifact_gate",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "profile": "selected-pyodide-js-source-notices/v1",
+        "preferred_source_files": 10,
+        "vendor_source_files": 2,
+        "verbatim_license_texts": 2,
+        "selected_runtime_members": 5,
+        "delivered_artifacts": 3,
+        "bundle_sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f",
+        "full_wasm_corresponding_source": false,
+        "all_dependency_obligations": false,
+        "compiler_reproduced": false,
+        "signature_verified": false,
+        "legal_clearance": false,
+        "distribution_route_admitted": false
+      }
+    },
+    {
+      "name": "current_runtime-zlib-sources_export",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "artifacts": {
+          "ZLIB-SOURCES.zip": {
+            "bytes": 1682541,
+            "sha256": "d022f0ff9d1a4436253939bdb9a9f837c6a134425511b34ebced63fa922407ac"
+          },
+          "NOTICES.txt": {
+            "bytes": 7912,
+            "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+          },
+          "index.json": {
+            "bytes": 1858,
+            "sha256": "fddd24058a4c744663b677423852dee4df55967696e361344b75fd477523c97c"
+          }
+        },
+        "full_wasm_corresponding_source": false,
+        "compiled_library_rebuilt": false,
+        "publisher_signature_verified": false,
+        "legal_clearance": false,
+        "global_distribution_admitted": false,
+        "complete_project_obligations": false
+      }
+    },
+    {
+      "name": "current_runtime-zlib-sources_exact_runtime_artifact_gate",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "profile": "selected-zlib-runtime-source-notices/v1",
+        "zlib_version": "1.3.1",
+        "runtime_members_checked": 5,
+        "delivery_artifacts_checked": 3,
+        "bundle_sha256": "d022f0ff9d1a4436253939bdb9a9f837c6a134425511b34ebced63fa922407ac",
+        "full_wasm_corresponding_source": false,
+        "compiled_library_rebuilt": false,
+        "publisher_signature_verified": false,
+        "legal_clearance": false,
+        "global_distribution_admitted": false,
+        "complete_project_obligations": false
+      }
+    },
+    {
+      "name": "exact_cached_js_replay",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "preferred_source_files": 10,
+        "verbatim_license_texts": 2,
+        "cached_npm_replayed": true,
+        "full_wasm_corresponding_source": false,
+        "all_dependency_obligations": false,
+        "compiler_reproduced": false,
+        "signature_verified": false,
+        "legal_clearance": false,
+        "distribution_route_admitted": false
+      }
+    },
+    {
+      "name": "exact_cached_zlib_recipe_replay",
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "cached_archives_replayed": 2,
+        "zlib_version": "1.3.1",
+        "full_wasm_corresponding_source": false,
+        "compiled_library_rebuilt": false,
+        "publisher_signature_verified": false,
+        "legal_clearance": false,
+        "global_distribution_admitted": false,
+        "complete_project_obligations": false
+      }
+    }
+  ],
+  "focused_tests": {
+    "argv": [
+      "python",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_pyodide_js_sources.py"
+    ],
+    "passed": 39,
+    "duration_seconds": 0.96,
+    "added_controls": [
+      "constructor failure closes raw descriptor",
+      "close-after-release never closes reused marker",
+      "actual CLI injected private failure is fixed refusal"
+    ]
+  },
+  "original_failure": "runs/2026-11-21-js-export-fd-original.json",
+  "actual_cached_regeneration": {
+    "selected_js_archives": 2,
+    "zlib_and_recipe_archives": 2,
+    "upstream_source_and_license_bytes_changed": false,
+    "source_bound_manifests_index_and_zip_refreshed": true,
+    "manual_hash_override": false
+  },
+  "carried_notice_bytes_unchanged": true,
+  "outputs": {
+    "js": {
+      "PYODIDE-JS-SOURCES.zip": {
+        "bytes": 1632140,
+        "sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"
+      },
+      "NOTICES.txt": {
+        "bytes": 18300,
+        "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+      },
+      "index.json": {
+        "bytes": 3006,
+        "sha256": "1e26ef876d26f7aea469332d0e0b59779b70e63a0ecfb31a062320da96ce9f4e"
+      }
+    },
+    "zlib": {
+      "ZLIB-SOURCES.zip": {
+        "bytes": 1682541,
+        "sha256": "d022f0ff9d1a4436253939bdb9a9f837c6a134425511b34ebced63fa922407ac"
+      },
+      "NOTICES.txt": {
+        "bytes": 7912,
+        "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+      },
+      "index.json": {
+        "bytes": 1858,
+        "sha256": "fddd24058a4c744663b677423852dee4df55967696e361344b75fd477523c97c"
+      }
+    }
+  },
+  "limits": [
+    "Current JS39focused and8actual artifact/CLI controls, no broad tag/browser/native matrix.",
+    "The prior32zlibfocused and separate runtime probe are historical exact-source evidence; unchanged upstream inputs and actual refreshed zlib exports are bound here.",
+    "Root normal shared hooks/publication remain pending. No fullWASM/build linkage, license/route clearance, independent accuracy or original closure."
+  ]
+}
