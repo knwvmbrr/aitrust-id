@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-091209-android-finite-malformed-intent-controls-d3580ce6
+
+Recorded 2026-11-21T09:12:09.891614+00:00 · Contributor: Codex · change
+
+- **Changed.** Added a separate zero-permission fixed synthetic sender and finite malformed Share ingress/refusal plus fresh valid recovery controls after the unchanged original nine Android controls.
+- **Evidence.** Twelve affected groups passed on existing Python3.12 and3.13, with actual existingJDK fixed Intent construction and distinct source review; original control/wait source unchanged, private diagnostics and default-APK sender exclusion fail closed. [Change record](./runs/changes/2026-11-21-091209-android-finite-malformed-intent-controls-d3580ce6.json).
+- **Not claimed.** Hosted Android transport/runtime is pending; JVM fixtures and inert driver tests are not Android framework evidence. No default checker or workflow changes, local SDK install, new terms, physical/human acceptance, independent accuracy or full original requirement closure.
+
+
 ### 2026-11-21-084217-pr138-reviewed-inventory-134c4898
 
 Recorded 2026-11-21T08:42:17.628757+00:00 · Contributor: Codex /root; inventory review /root/seo; code review /root/web_camo · change
