@@ -1,0 +1,80 @@
+{
+  "format": "ai-trust-id-android-intake-provenance-controls/v1",
+  "recorded_at": "2026-11-21T05:35:56.638594+00:00",
+  "base_commit": "ed8edefdc4ccf525efbfeb6bfa3f5b0d829f22a7",
+  "pass": true,
+  "focused_tests": {
+    "tests": 68,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "new_probe_tests": 12,
+    "adjacent_packaging_and_helper_tests": 56
+  },
+  "actual_jvm": {
+    "version": "OpenJDK 21.0.10 Homebrew",
+    "canonical_receive_and_clear_method_bodies_executed": true,
+    "diagnostic_wrapper_executed": true,
+    "process_executions": 5,
+    "controls": [
+      "Android16 custom-intent handoff reaches recreated Ready after accepted SEND",
+      "MAIN redelivery yields Ready without new instance",
+      "pause/resume clears input and remains Cleared",
+      "32-observation bound reports truncation",
+      "unknown dump argument cannot emit probe frame"
+    ],
+    "framework_lifecycle_is_a_model_not_android_runtime": true
+  },
+  "default_build": {
+    "source_selection_unchanged": true,
+    "wrapper_never_read_copied_or_compiled": true,
+    "production_activity_sha256": "2ab7df4100143e4e17e9c87db74f15c1641edf54fff7a986c30b463aa2c6266b",
+    "production_activity_matches_base": true,
+    "historical_default_apk_audit": {
+      "runtime_commit": "56b0294c8e22b456eface6dad0a8d1afe68d1450",
+      "apk_sha256": "7d257eb0179747c773d21627024cd9e43f85d8de20e2079d2a6aab2501bb3482",
+      "apk_bytes": 6444652,
+      "both_probe_markers_absent": true,
+      "probe_label_refused": true,
+      "new_current_default_apk_build": false
+    }
+  },
+  "pre_review_candidate_failure": {
+    "signature": "classes10.dex containing probe markers was ignored by default absence gate",
+    "source_sha256": "8c117268041b51cfcc9dff07f4f6eddbcd9f255cbac3d18801bebafe6f434508",
+    "synthetic_apk_sha256": "0e81309622bd96f147c9fce66ed6c930583318162f8047e6e25ce454f85efe6a",
+    "preserved": true,
+    "corrected_current_source_refuses": true
+  },
+  "diagnostic_variant": {
+    "separate_apk_name": true,
+    "only_production_declaration_renamed": true,
+    "max_process_observations": 32,
+    "bounded_read_seconds": 5,
+    "read_after_first_receive_on_pass_and_failure": true,
+    "acceptance_predicates_and_waits_unchanged": true,
+    "raw_text_or_hash_or_extras_or_uri_or_external_ids_recorded": false,
+    "app_storage_or_network_or_new_permission": false,
+    "default_apk_equivalence_claim": false
+  },
+  "previous_android_study": "runs/2026-11-20-android-three-vm-cold-start-result.json",
+  "historical_android_failure_cause": "UNKNOWN",
+  "product_fix_claim": false,
+  "new_android_runtime_executed": false,
+  "physical_device_evidence": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false,
+  "sdk_or_emulator_installed_locally": false,
+  "sources": {
+    "scripts/android-share-build.py": "8cb6ed20056bbf9d7f69dfb2fb19eaf9c5025eeb44ef8ea3f7d52576ffa1184e",
+    "scripts/verify-android-emulator.py": "740b64ffde7368ade2c5134fbf9e53f53cadb8ca677a38d48eba0373ebbe6e59",
+    "tests/android/CheckActivity.java": "f0de0ad8ea8848d584c4ace0afe11b5fff330df243c18f31225676bde956c63d",
+    "tests/test_android_intake_probe.py": "baf2b656e46ad681bec381e54558a0fc879a82ee518051509132cabab283fdad",
+    "tests/test_android_share.py": "6991a63dda1ad6817f85ab759f0e9f14149cbaa1e37fc1d08903bcd8541c9938",
+    "tests/test_android_emulator_prerequisites.py": "1f8187bf906fd0391cc63180fc03b1e37d91414273138b11b14429d2a43ad07d",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "2ab7df4100143e4e17e9c87db74f15c1641edf54fff7a986c30b463aa2c6266b",
+    "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+    "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+    "docs/android-intake-provenance-plan.md": "57c8d8d0b98f0d3155aae284614e0df9cbf0513d4ba4e8d6c02816abac71c08e"
+  }
+}

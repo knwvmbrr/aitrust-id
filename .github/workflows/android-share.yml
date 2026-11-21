@@ -1,5 +1,12 @@
 name: android-share
 on:
+  workflow_dispatch:
+    inputs:
+      intake_probe:
+        description: 'Build the separate finite intake-provenance diagnostic APK'
+        type: boolean
+        required: true
+        default: false
   push:
     branches: [main]
     tags: ['**']
@@ -54,6 +61,8 @@ jobs:
   offline-share:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
+    env:
+      AITRUST_INTAKE_PROBE: ${{ github.event_name == 'workflow_dispatch' && inputs.intake_probe && '1' || '0' }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with: {persist-credentials: false}
@@ -72,16 +81,23 @@ jobs:
         run: |
           python3 -B -m unittest discover -s tests -p test_android_share.py -v
           python3 -B -m unittest discover -s tests -p test_android_emulator_prerequisites.py -v
+          python3 -B -m unittest discover -s tests -p test_android_intake_probe.py -v
           python3 -B scripts/verify-android-session.py --java-home "$JAVA_HOME_17_X64"
       - name: Prepare exact offline PS assets and build an unsigned APK
-        run: python3 -B scripts/android-share-build.py --runtime-directory site/node_modules/pyodide --compile --sdk-root "$ANDROID_SDK_ROOT" --java-home "$JAVA_HOME_17_X64"
+        shell: bash
+        run: |
+          probe_args=()
+          if test "$AITRUST_INTAKE_PROBE" = 1; then probe_args+=(--intake-probe); fi
+          python3 -B scripts/android-share-build.py --runtime-directory site/node_modules/pyodide --compile --sdk-root "$ANDROID_SDK_ROOT" --java-home "$JAVA_HOME_17_X64" "${probe_args[@]}"
       - name: Execute the Android loader with the actual pinned WebAssembly engine
         run: node --experimental-vm-modules scripts/verify-android-engine.mjs
       - name: Sign only an ephemeral CI test APK
         shell: bash
         run: |
           "$JAVA_HOME_17_X64/bin/keytool" -genkeypair -noprompt -storetype PKCS12 -keystore "$RUNNER_TEMP/aitrust-ci.p12" -alias aitrust-ci -storepass android -keypass android -dname 'CN=AI Trust ID Ephemeral CI Test' -keyalg RSA -keysize 2048 -validity 1
-          "$ANDROID_SDK_ROOT/build-tools/36.0.0/apksigner" sign --ks "$RUNNER_TEMP/aitrust-ci.p12" --ks-key-alias aitrust-ci --ks-pass pass:android --out output/android-share/ai-trust-id-ci-test.apk output/android-share/ai-trust-id-unsigned.apk
+          unsigned=output/android-share/ai-trust-id-unsigned.apk
+          if test "$AITRUST_INTAKE_PROBE" = 1; then unsigned=output/android-share/ai-trust-id-intake-probe-unsigned.apk; fi
+          "$ANDROID_SDK_ROOT/build-tools/36.0.0/apksigner" sign --ks "$RUNNER_TEMP/aitrust-ci.p12" --ks-key-alias aitrust-ci --ks-pass pass:android --out output/android-share/ai-trust-id-ci-test.apk "$unsigned"
           "$ANDROID_SDK_ROOT/build-tools/36.0.0/apksigner" verify --verbose output/android-share/ai-trust-id-ci-test.apk
           rm -- "$RUNNER_TEMP/aitrust-ci.p12"
       - name: Verify Share on a disposable API 36 emulator when hosted prerequisites permit
@@ -93,7 +109,9 @@ jobs:
           if test -c /dev/kvm && command -v setfacl >/dev/null; then
             sudo -n setfacl -m "u:$(id -u):rw" /dev/kvm
           fi
-          python3 -B scripts/verify-android-emulator.py --sdk-root "$ANDROID_SDK_ROOT" --apk output/android-share/ai-trust-id-ci-test.apk
+          probe_args=()
+          if test "$AITRUST_INTAKE_PROBE" = 1; then probe_args+=(--intake-probe); fi
+          python3 -B scripts/verify-android-emulator.py --sdk-root "$ANDROID_SDK_ROOT" --apk output/android-share/ai-trust-id-ci-test.apk "${probe_args[@]}"
       - name: Preserve engineering evidence and the development APK
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()

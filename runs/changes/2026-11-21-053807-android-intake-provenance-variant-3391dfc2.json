@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-053807-android-intake-provenance-variant-3391dfc2",
+  "recorded_at": "2026-11-21T05:38:07.974192+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ed8edefdc4ccf525efbfeb6bfa3f5b0d829f22a7",
+  "changed": "Add an explicitly selected diagnostic Android APK with bounded positive intake lifecycle provenance while leaving production activity behavior unchanged.",
+  "proves": "68 focused controls pass, including actual JVM execution of production intake method bodies, exact overlay/default selection, bounded private provenance, preserved seven controls and a corrected compiled-DEX absence gate; retained default APK lacks probe markers.",
+  "limits": "No new Android runtime run or product fix is claimed. JVM lifecycle handoff is a model, historical first-receive cause remains unknown, diagnostic APK is not production-equivalent, and full Android physical/human acceptance remains open.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    ".github/workflows/android-share.yml": "e673479d729368e86e45b990f3c2f7649abbaac2b2698e2532e43042a2c15f6e",
+    "scripts/android-share-build.py": "8cb6ed20056bbf9d7f69dfb2fb19eaf9c5025eeb44ef8ea3f7d52576ffa1184e",
+    "scripts/verify-android-emulator.py": "740b64ffde7368ade2c5134fbf9e53f53cadb8ca677a38d48eba0373ebbe6e59",
+    "tests/android/CheckActivity.java": "f0de0ad8ea8848d584c4ace0afe11b5fff330df243c18f31225676bde956c63d",
+    "tests/test_android_intake_probe.py": "baf2b656e46ad681bec381e54558a0fc879a82ee518051509132cabab283fdad",
+    "docs/android-intake-provenance-plan.md": "57c8d8d0b98f0d3155aae284614e0df9cbf0513d4ba4e8d6c02816abac71c08e",
+    "runs/2026-11-21-android-intake-provenance-controls.json": "96d578b5ab2690361231eb2dc57b6042c3ea23c40fc88f1a90369c699c687332",
+    "runs/2026-11-21-android-intake-probe-dispatch-controls.json": "c7af1bcee00f11f9ed3d6d988dbd1d44432513be084e68f04464c5d062a5f001"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-intake-provenance-controls.json",
+      "sha256": "96d578b5ab2690361231eb2dc57b6042c3ea23c40fc88f1a90369c699c687332"
+    },
+    {
+      "path": "runs/2026-11-21-android-intake-probe-dispatch-controls.json",
+      "sha256": "c7af1bcee00f11f9ed3d6d988dbd1d44432513be084e68f04464c5d062a5f001"
+    }
+  ],
+  "checks": []
+}

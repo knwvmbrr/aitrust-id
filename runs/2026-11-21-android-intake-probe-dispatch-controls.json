@@ -1,0 +1,30 @@
+{
+  "format": "ai-trust-id-android-intake-probe-dispatch-controls/v1",
+  "recorded_at": "2026-11-21T05:38:07.933737+00:00",
+  "pass": true,
+  "checks": {
+    "yaml_parsed": true,
+    "all_shell_steps_bash_syntax": true,
+    "existing_pull_request_and_push_events_unchanged": true,
+    "readonly_permissions_unchanged": true,
+    "runner_and_15_minute_job_bound_unchanged": true,
+    "all_action_pins_unchanged": true,
+    "default_false_diagnostic_input": true,
+    "probe_enabled_only_on_explicit_dispatch_true": true,
+    "separately_named_unsigned_probe_apk": true,
+    "original_seven_control_predicates_and_waits_unchanged": true
+  },
+  "workflow": {
+    "path": ".github/workflows/android-share.yml",
+    "sha256": "e673479d729368e86e45b990f3c2f7649abbaac2b2698e2532e43042a2c15f6e"
+  },
+  "source_controls": {
+    "path": "runs/2026-11-21-android-intake-provenance-controls.json",
+    "sha256": "96d578b5ab2690361231eb2dc57b6042c3ea23c40fc88f1a90369c699c687332"
+  },
+  "hosted_probe_dispatched": false,
+  "new_android_runtime_evidence": false,
+  "historical_failure_cause": "UNKNOWN",
+  "product_fix": false,
+  "full_requirement_closure": false
+}

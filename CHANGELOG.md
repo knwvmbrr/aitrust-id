@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-053807-android-intake-provenance-variant-3391dfc2
+
+Recorded 2026-11-21T05:38:07.974192+00:00 · Contributor: Codex · change
+
+- **Changed.** Add an explicitly selected diagnostic Android APK with bounded positive intake lifecycle provenance while leaving production activity behavior unchanged.
+- **Evidence.** 68 focused controls pass, including actual JVM execution of production intake method bodies, exact overlay/default selection, bounded private provenance, preserved seven controls and a corrected compiled-DEX absence gate; retained default APK lacks probe markers. [Change record](./runs/changes/2026-11-21-053807-android-intake-provenance-variant-3391dfc2.json).
+- **Not claimed.** No new Android runtime run or product fix is claimed. JVM lifecycle handoff is a model, historical first-receive cause remains unknown, diagnostic APK is not production-equivalent, and full Android physical/human acceptance remains open.
+
+
 ### 2026-11-21-044036-android-three-vm-hold-f0faaa18
 
 Recorded 2026-11-21T04:40:36.152348+00:00 · Contributor: /root · change
