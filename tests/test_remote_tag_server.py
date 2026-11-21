@@ -11,9 +11,12 @@ import sys
 import unittest
 from unittest.mock import patch
 
-import httpx2 as httpx
-import uvicorn
-from mcp import Client
+try:
+    import httpx2 as httpx
+    import uvicorn
+    from mcp import Client
+except ModuleNotFoundError:
+    raise unittest.SkipTest('The remote connector requires the optional existing hashed MCP environment.')
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from tools import remote_tag_server as api
 

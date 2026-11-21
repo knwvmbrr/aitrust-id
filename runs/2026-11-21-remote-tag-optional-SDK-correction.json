@@ -1,0 +1,19 @@
+{
+  "profile": "remote-connector-optional-SDK-collection-correction/v1",
+  "captured_at": "2026-11-21T15:02:06.750976+00:00",
+  "pass": true,
+  "reported_by": "Codex /root integration",
+  "prior_source_commit": "789693271d8073cdb31566f62224500edcc1ee18",
+  "original_gap": "Unconditional optional SDK imports broke base/noSDK test collection; dedicated verification must not accept skipped controls.",
+  "source_sha256": {
+    "tests/test_remote_tag_server.py": "fb531d9a4441d0c3ab39d393dc4a76867154f6fbd2dc8d17d9bfd9923a49d834",
+    "scripts/verify-remote-tag-server.py": "443e0085b0c0cdef89f5ab2d7b1123a388bb15b43ef161226a2f9465f626a54d"
+  },
+  "runtime_module_unchanged_sha256": "50d23496e601e091c0a3375715c1b021cdb40071269a4c595b158cafbeaa8562",
+  "actual_stdlib_noSDK_collection_skips": true,
+  "actual_stdlib_dedicated_verifier_fixed_failure": true,
+  "required_dedicated_group_count": 14,
+  "prior_Linux14_source789_proof_preserved": true,
+  "corrected_Linux14_pending": true,
+  "new_original_closures": 0
+}
