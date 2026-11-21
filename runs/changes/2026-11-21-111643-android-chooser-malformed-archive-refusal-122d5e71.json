@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-111643-android-chooser-malformed-archive-refusal-122d5e71",
+  "recorded_at": "2026-11-21T11:16:43.047353+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3941603265c763de07d9f7d91e465e0832db39d1",
+  "changed": "Contained malformed APK archive failures in the new chooser control boundary with a fixed nonleaking refusal.",
+  "proves": "Ten affected control groups passed on both Python3.12 and3.13 including malformed archive privacy refusal; prior14-group evidence remains historical and unchanged.",
+  "limits": "Local controls and JDK construction do not establish Android Sharesheet behavior; hosted execution remains pending and no original requirement is closed.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "scripts/android-chooser-controls.py": "3bb0d3cb2117dca46554b49badecee240733466aeb9185a608c8a4a27ac86b34",
+    "tests/test_android_chooser_controls.py": "a26559c5807a0bf07535d804f7c64c1a1bb070afec79f4147789b6b5214bcaf9",
+    "runs/2026-11-21-android-chooser-local-refusal-controls.json": "4da3db945df654ece8546a72b9d817fc43fed32908ed2142461194454e5eacd2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-chooser-local-refusal-controls.json",
+      "sha256": "4da3db945df654ece8546a72b9d817fc43fed32908ed2142461194454e5eacd2"
+    }
+  ],
+  "checks": []
+}

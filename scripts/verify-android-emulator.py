@@ -728,6 +728,24 @@ def verify_intent_controls(sdk,apk,install,shell,wait,report):
         raise AndroidIntentRefusal(code) from None
 
 
+class AndroidChooserRefusal(ValueError):
+    def __init__(self,code):
+        self.code=code;super().__init__(code)
+
+
+def verify_chooser_controls(apk,shell,wait,report):
+    try:
+        spec=importlib.util.spec_from_file_location('owned_android_chooser_controls',ROOT/'scripts/android-chooser-controls.py')
+        module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        module.run_controls(apk,shell,wait,report)
+    except (OSError,ValueError,KeyError,TypeError,AttributeError,AssertionError,StopIteration,RuntimeError,ImportError,SyntaxError,subprocess.SubprocessError) as error:
+        allowed={'chooser_'+stage+'_unavailable' for stage in ('source','default_apk','uid','portrait','source_launch','source_ready','source_tap','system_target','receive','check','finding','task','source_return','cancel_tap','cancel_system','cancel_back','cancel_return','refocus','cleared')}
+        code=getattr(error,'code','chooser_workflow_unavailable')
+        if code not in allowed:code='chooser_workflow_unavailable'
+        report.update(status='FAILED',**{'pass':False})
+        raise AndroidChooserRefusal(code) from None
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--sdk-root',required=True);parser.add_argument('--apk',required=True)
@@ -811,10 +829,15 @@ def main():
             verify_intent_controls(sdk,Path(args.apk),
                 lambda apk:run([adb,'-s','emulator-5580','install','--no-streaming',apk],30),
                 shell,wait,report['intent_controls'])
+            report['phase']='chooser_controls'
+            report['chooser_controls']={}
+            verify_chooser_controls(Path(args.apk),shell,wait,report['chooser_controls'])
         permission_occurrences=shell(['dumpsys','package',PACKAGE]).decode().count('android.permission.INTERNET')
         if permission_occurrences:raise ValueError('Unexpected Android Internet permission')
         report.update(status='EXECUTED',phase='complete',**{'pass':True},api_level=shell(['getprop','ro.build.version.sdk']).decode().strip(),case_count=len(cases),internet_permission=False)
         return 0
+    except AndroidChooserRefusal as error:
+        report.update(status='FAILED',reason='An owned system Sharesheet control did not complete.',diagnostic_code=error.code);return 1
     except AndroidIntentRefusal as error:
         report.update(status='FAILED',reason='An owned synthetic Share ingress control did not complete.',diagnostic_code=error.code);return 1
     except MetadataRefusal as error:

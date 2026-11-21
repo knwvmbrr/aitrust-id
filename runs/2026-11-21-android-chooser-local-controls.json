@@ -1,0 +1,95 @@
+{
+  "format": "ai-trust-id-android-chooser-controls/v1",
+  "captured_at": "2026-11-21T11:14:35.194451+00:00",
+  "pass": true,
+  "source_base": "3941603265c763de07d9f7d91e465e0832db39d1",
+  "scope": [
+    "N-014"
+  ],
+  "method": "local focused inert driver and real JDK construction controls; no Android execution",
+  "checks": [
+    {
+      "python": "3.12.14",
+      "module": "test_android_chooser_controls.py",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.13.0",
+      "module": "test_android_chooser_controls.py",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.12.14",
+      "module": "test_android_intent_controls.py",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "python": "3.13.0",
+      "module": "test_android_intent_controls.py",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "construction_runtime": "existing OpenJDK21.0.10; no installation",
+  "prior_failed_control": {
+    "tests": 10,
+    "failures": 1,
+    "cause": "new JVM test stub used a field name hidden by the fixture private counter; test stub renamed; Android fixture unchanged",
+    "android_runtime_failure": false
+  },
+  "source_bindings": {
+    "scripts/android-chooser-controls.py": "3b28d4b4610a376d086550e893e3f98afa43d9ef7b6791ca2034e261e82d4c0f",
+    "scripts/android-intent-controls.py": "fe810635f94ccc9dda90063c73cca99724698d734794be34c4d39c75803dd69a",
+    "scripts/verify-android-emulator.py": "825c703e20ec3401d29c779294138e337d80b9d19ec920ef8ebf4d4d4c573e43",
+    "tests/android/intent-sender/ChooserActivity.java": "49029c0cf2f6ca951dfdf4291c84502a008502aa2fd01220cb0c591faa725719",
+    "tests/android/intent-sender/AndroidManifest.xml": "db418118d0a69ca8fa983b48644ed7d1f1947451168545e37883299ce840555b",
+    "tests/test_android_chooser_controls.py": "07aae915101121c32879c16341ec15aeb3be064c82cb12c1632407432862e0ee",
+    "tests/test_android_intent_controls.py": "fe0ef4c4572629cd15ef9e4514e398b8548c9176786453796b5b42f8e1718a26",
+    "docs/android-os-chooser-plan.md": "d8e4cc2bbdb3b4cbb0f52c8ccb19a4a7aba2b8a5e7f44cfd9981bb5bb4c0bbf3",
+    "docs/android-share-developer.md": "e80c6e1b27d2ed5fee8c77d2b7dd8d584ecf6980f13a4e5630bece5dc984173b"
+  },
+  "unchanged_sources": {
+    "tests/android/intent-sender/SenderActivity.java": "01db8ae344f8986d220d2be79d897cf051574eb6843b41ad4efc28f29e9d3e81",
+    "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+    "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+    "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+    "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+    "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+    "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+    "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+    "mobile/android/src/com/aitrustid/android/ConfigurationDraft.java": "5fb22a21a6c8ad36b4535e39955ecff4a6baede2e42c43c9648b8149dd52211a",
+    "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+    "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+    "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+    "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+    "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29"
+  },
+  "old_controls": {
+    "original_seven_and_configuration_two_and_wait_source_exact": true,
+    "malformed_nine_predicates_and_19_dispatch_source_exact": true
+  },
+  "hosted_chooser_executed": false,
+  "sdk_installed": false,
+  "terms_accepted": false,
+  "default_apk_modified": false,
+  "physical_device_evidence": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closed": false,
+  "limits": [
+    "System chooser layout, actual task behavior and cancellation remain pending on the owned licensed hosted emulator.",
+    "The ten new groups are local controls, not registered hosted focused tests.",
+    "Earlier failures and original acceptance remain unchanged."
+  ]
+}

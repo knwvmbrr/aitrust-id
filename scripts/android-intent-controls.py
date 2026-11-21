@@ -27,10 +27,11 @@ MARKER='owned synthetic ingress marker'
 HINT='Share text from another app, or paste it here.'
 UNSUPPORTED='Share one plain-text item, up to 20,000 characters. Files and multiple items are not supported.'
 RECEIVED='Text received. Review it, then tap Check.'
-FIXTURES=('tests/android/intent-sender/AndroidManifest.xml','tests/android/intent-sender/SenderActivity.java')
+FIXTURES=('tests/android/intent-sender/AndroidManifest.xml','tests/android/intent-sender/SenderActivity.java','tests/android/intent-sender/ChooserActivity.java')
 CASES=('missing_text','wrong_typed_text','send_multiple','stream_extra','data_uri','clip_uri','multiple_clip_items','over_limit_text','unpaired_utf16')
 SENDER_DEX=b'Lcom/aitrustid/synthetic/SenderActivity;'
 SENDER_FRAME=b'AITRUST_SYNTHETIC_V1:'
+CHOOSER_DEX=b'Lcom/aitrustid/synthetic/ChooserActivity;'
 
 class IntentControlRefusal(ValueError):
     STAGES=frozenset({'source','default_apk','build','install','uid','portrait','prime','send','dispatch','refusal','recovery','cleanup'})
@@ -86,7 +87,7 @@ def compile_sender(sdk,stage):
     classes=stage/'classes';dex=stage/'dex';classes.mkdir();dex.mkdir()
     base=stage/'resources.apk'
     command([tools/'aapt2','link','-o',base,'-I',platform,'--manifest',ROOT/FIXTURES[0]])
-    command([java/'bin/javac','-encoding','UTF-8','--release','8','-classpath',platform,'-d',classes,ROOT/FIXTURES[1]])
+    command([java/'bin/javac','-encoding','UTF-8','--release','8','-classpath',platform,'-d',classes,*[ROOT/name for name in FIXTURES[1:]]])
     command([tools/'d8','--release','--min-api','29','--lib',platform,'--output',dex,*sorted(classes.rglob('*.class'))])
     apk=stage/'sender-unsigned.apk';shutil.copyfile(base,apk)
     with zipfile.ZipFile(apk,'a',compression=zipfile.ZIP_DEFLATED) as archive:
@@ -99,7 +100,7 @@ def compile_sender(sdk,stage):
     permissions=command([tools/'aapt2','dump','permissions',signed]).decode('utf-8')
     if 'uses-permission:' in permissions or 'uses-permission-sdk-' in permissions:raise ValueError('Synthetic permission refused')
     payload=dex_bytes(signed)
-    if SENDER_DEX not in payload or SENDER_FRAME not in payload:raise ValueError('Synthetic sender identity unavailable')
+    if SENDER_DEX not in payload or SENDER_FRAME not in payload or CHOOSER_DEX not in payload:raise ValueError('Synthetic sender identity unavailable')
     if source_identity()!=sources:raise ValueError('Synthetic source changed')
     raw=read_regular(signed,1024*1024)
     return signed,{'variant':'synthetic-sender-only/v1','apk_sha256':hashlib.sha256(raw).hexdigest(),'apk_bytes':len(raw),'permission_count':0,'production_checker_modified':False,'sources':sources}
@@ -174,7 +175,7 @@ def run_controls(sdk,checker_apk,install,shell,wait,report):
     try:
         sources=source_identity();stage='default_apk'
         payload=dex_bytes(checker_apk)
-        if SENDER_DEX in payload or SENDER_FRAME in payload:raise ValueError('Sender leaked into checker')
+        if SENDER_DEX in payload or SENDER_FRAME in payload or CHOOSER_DEX in payload:raise ValueError('Sender leaked into checker')
         report['default_checker_excludes_sender']=True
         stage='build'
         with tempfile.TemporaryDirectory(prefix='aitrust-synthetic-sender-',dir=os.environ['RUNNER_TEMP']) as temporary:
