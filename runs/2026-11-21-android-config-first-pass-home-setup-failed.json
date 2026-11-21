@@ -1,0 +1,170 @@
+{
+  "format": "ai-trust-id-android-config-first-pass-home-setup-failed/v1",
+  "recorded_at": "2026-11-21T07:31:56.075660+00:00",
+  "source_commit": "e12de0c88821d5edae7354c8c2b69123d27bc0a0",
+  "run": {
+    "id": 44879801042,
+    "job_id": 136772365601,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44879801042",
+    "configuration_controls": true,
+    "intake_probe": false,
+    "conclusion": "failure",
+    "unchanged_retry": false
+  },
+  "artifact": {
+    "id": 14697591340,
+    "sha256": "527f98467ec98d2639860bf97842c942d3af2e61e1832c2a7dafb5be0e7ff483",
+    "bytes": 6386738,
+    "download_count": 1,
+    "raw_reports": {
+      "emulator.json": {
+        "sha256": "e26b14778d369837b5b411f4ebe3da02abb892be8d13febb8874a4f0d6453a2f",
+        "bytes": 5677
+      },
+      "build.json": {
+        "sha256": "0be14149b8034ce47a7adabb3f5b028e2f99640ee4a9ad6c661b79183a6010cc",
+        "bytes": 2255
+      },
+      "preparation.json": {
+        "sha256": "afbf7f191300260bc886af40bbfcb7e261e9d7da08984ba5e76f50a12af9580b",
+        "bytes": 546
+      },
+      "engine-parity.json": {
+        "sha256": "9db1922304061f3a889ff5a29c638773c20e3ba849931c17bc8a747cc46807ad",
+        "bytes": 685
+      }
+    }
+  },
+  "default_apk": {
+    "sha256": "87e52c1ad2ae326d8e11095bcb8534f822c09e8a8d0008f5c466bbd4df3141a3",
+    "bytes": 6444652,
+    "probe_markers_absent": true,
+    "native14_sources_match": true,
+    "activity_sha256": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74"
+  },
+  "runtime": {
+    "status": "FAILED",
+    "pass": false,
+    "original_case_count": 7,
+    "original_cases": [
+      {
+        "case": "receive_requires_explicit_check",
+        "pass": true
+      },
+      {
+        "case": "actual_offline_ps_finding",
+        "pass": true
+      },
+      {
+        "case": "edit_hides_previous_finding",
+        "pass": true
+      },
+      {
+        "case": "new_share_and_no_finding",
+        "pass": true
+      },
+      {
+        "case": "unsupported_mime_has_no_verdict",
+        "pass": true
+      },
+      {
+        "case": "clear_removes_input_and_result",
+        "pass": true
+      },
+      {
+        "case": "background_clears_text",
+        "pass": true
+      }
+    ],
+    "supplemental": {
+      "status": "FAILED",
+      "pass": false,
+      "cases": [
+        {
+          "case": "configuration_preserves_current_edited_review_without_result",
+          "pass": true
+        }
+      ],
+      "control_stage": "configuration_home",
+      "density_query_attempts": 3,
+      "gesture_target_state": "CONTENT_MARGIN_VALIDATED",
+      "effective_density_observed": true,
+      "gesture_observations": [
+        {
+          "direction": "UP",
+          "editor_observed_before": true,
+          "editor_observed_after": true,
+          "editor_bounds_changed": true,
+          "editor_moved_up": true,
+          "editor_moved_down": false,
+          "status_became_visible": true,
+          "rotation_stable": true
+        },
+        {
+          "direction": "DOWN",
+          "editor_observed_before": true,
+          "editor_observed_after": true,
+          "editor_bounds_changed": true,
+          "editor_moved_up": false,
+          "editor_moved_down": true,
+          "status_became_visible": false,
+          "rotation_stable": true
+        }
+      ],
+      "rotation_state": "COMPLETE",
+      "rotation_observation": {
+        "rotation": "1",
+        "editor_observed": true,
+        "editor_matches_edited_draft": true,
+        "status_node_observed": false,
+        "received_status_visible": false,
+        "result_tag_visible": false
+      },
+      "rotation_scroll_precondition": {
+        "rotation": "1",
+        "editor_observed": true,
+        "editor_matches_edited_draft": true,
+        "status_node_observed": false,
+        "received_status_visible": false,
+        "result_tag_visible": false
+      },
+      "owned_scrollable": true,
+      "gesture_geometry": {
+        "editor_horizontal_within_scroll": true,
+        "left_full_padding_observed": true,
+        "right_full_padding_observed": true,
+        "point_within_scroll": true,
+        "point_outside_editor": true,
+        "point_within_known_left_padding": true
+      },
+      "previous_edge_outside_known_content_band": true,
+      "content_margin_target_validated": true,
+      "gesture_outside_editor": true,
+      "rotation_scroll_actions": 2,
+      "rotation_receipt_observed": true,
+      "rotation_edited_reasserted": true,
+      "background": {
+        "control_stage": "background_receive"
+      },
+      "case_count": 1
+    },
+    "diagnostic_code": "configuration_home_unavailable",
+    "elapsed_seconds": 147.514,
+    "license_record_unchanged": true
+  },
+  "interpretation": {
+    "default_edited_draft_recreation_case_passed": true,
+    "actual_receipt_and_exact_postreceipt_reassertion_observed": true,
+    "actual_next_snapshot_up_and_down_motion_observed": true,
+    "system_edge_old_failure_hit_target_not_proved": true,
+    "second_case_failed_before_configuration_home_actions": true,
+    "fresh_background_marker_not_observed_by_existing_setup_wait": true,
+    "home_privacy_outcome": "NOT_EXECUTED",
+    "full_producer_stays_failed": true,
+    "no_overall_default9_acceptance": true
+  },
+  "physical_device_evidence": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false
+}

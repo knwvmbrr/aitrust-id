@@ -1,0 +1,44 @@
+{
+  "captured_at": "2026-11-21T07:29:09.057998+00:00",
+  "pass": true,
+  "profile": "nf-shared-integration-review/v1",
+  "reviewed_by": "/root/seo",
+  "implemented_by": "/root",
+  "method": "Read-only source, hash and actual author assertions review; reviewer performed no browser rerun.",
+  "source_sha256": {
+    ".github/workflows/ci.yml": "79e361877eee14df78269ab39aca590623ab34c89eadc3548a89f7de00994a45",
+    "eval/revalidation.json": "ae446a0a993ed5fd5f0c83d3de27df0bc0479939b89b12d4ab31c3bf780a2a7a",
+    "package.json": "2b14aff4498901a76075575f61f32a3c85e86e21ab3afcdeca336cedf1aacaa0",
+    "scripts/verify-route-boundaries.py": "eb2612d9bf05762ad3606d9d849804c1e9cf23c36c28fa3cccee7d438242721d",
+    "scripts/verify-site-accessibility.cjs": "d958022c034e9fb8baca572fadb222b018df5f68dfba7520c1fcda7000f5bace",
+    "scripts/verify-nf-client.cjs": "1aea69dcf9c9310685b9d88e663e5be59a8c66bb147215bfabaf7a4eeb862df0",
+    "site/scripts/prepare.mjs": "fa3b5e349cbcfb0ff8acdc128e61d41798098d01bbd391939eee38eafa698a02",
+    "site/src/main.jsx": "bb4c2a0bc4e23d3fcd86e42a2d18d07397c138982da2c01d0dc339eff0e115dd"
+  },
+  "actual_modal_evidence": {
+    "path": "runs/2026-11-21-nf-integrated-modal.json",
+    "sha256": "af304c247d5ac5d075fef7ff1166aeb41b5ef7c84770c16b22eb8f7f07dba09c"
+  },
+  "existing_website_commands_preserved": 52,
+  "new_website_commands": 3,
+  "total_website_commands": 55,
+  "existing_package_script_values_preserved": 79,
+  "mounted_only_in_NF_modal": true,
+  "exact_current_source_and_served_bindings": true,
+  "source_guide_copied_exactly": true,
+  "actual_engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "complete_actual_modal_records_per_engine": 3,
+  "optional_comparison_failure_preserves_literal_PS_MT": true,
+  "endpoint_or_permission_added": false,
+  "NF_tag_issued": false,
+  "protected_and_public_delivery_verified": false,
+  "physical_phone_tested": false,
+  "independent_accuracy_evidence": false,
+  "limits": [
+    "Independent source/core review and prototype21complete+12refused outcomes are distinct from this actual3record modal check.",
+    "No source authenticity, truth, full NF original acceptance or current publication is asserted."
+  ]
+}

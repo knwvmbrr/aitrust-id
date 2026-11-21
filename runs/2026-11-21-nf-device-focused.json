@@ -1,0 +1,50 @@
+{
+  "profile": "nf-device-focused-development/v1",
+  "captured_at": "2026-11-21T07:05:58.411732+00:00",
+  "python_version": "3.13.0",
+  "source_sha256": {
+    "tools/nf_device.py": "0a0285890cb608e7451ee72b03027b2ef4062b94a925c89d4e98a2f9f80da2e3",
+    "scripts/build-nf-device.py": "c710f27da70506ccb3e01c7e879a2c5e1e6a34503ba3ce8e46c056d4e3b852b6",
+    "site/src/nf-device-client.js": "473a8123917b1cde54fa4a0f29240d6808aac2e0ea11abcb167530cc6491c08d",
+    "site/src/nf-device-result.js": "140d9fa9e44df192c06c328fe100a99cf601dc442b83ed499b4dcbaeb9b849b5",
+    "site/src/nf-cosine-result.js": "8662e820c683e85294be5d49bc7bb8401d6c7ea92ad19236ff0034ee5d908a39",
+    "site/src/nf-device-worker.js": "076e042598209d2fbea18e5a3d6e55fd2901fdb5c3d482f122249f326cddc5b9",
+    "site/src/NFExplorer.jsx": "34de9e1ae5d603f4f260f179f44c757abfac64102e6bef9e30d11b8e08521d37",
+    "site/src/NFExplorerSlot.jsx": "c8d2d1eeaae63799161614e967ea7f0d92e404f2b4cce26708cc71b0cd19ca81",
+    "tests/test_nf_device.py": "b546480272c7322b44cb160f733c351a4e8be6b8d06f1bc0f726ec632559695d",
+    "tests/nf-device-client.mjs": "b5efbbb621820039c971f98bef78cf4f91f33c3d68900105b297c7d8cd20b5ba",
+    "scripts/nf-device-cases.py": "c313111c2a4f47a3cb23871108be11ba9d3f73524d0c7e5f23fa930e372819c0"
+  },
+  "commands": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_nf_device.py"
+      ],
+      "exit": 0,
+      "passed": 32,
+      "execution_before_optional_JS_rounding_correction": true
+    },
+    {
+      "argv": [
+        "node",
+        "tests/nf-device-client.mjs"
+      ],
+      "exit": 0,
+      "groups": 10,
+      "authored_canonical_cases": 33,
+      "includes_exact_ties_even_and_forged_alternative": true
+    }
+  ],
+  "initial_harness_failures": [
+    "Invalid await inside nonasync test callback corrected before controls ran.",
+    "Case generator needed explicit repository-root import path; corrected."
+  ],
+  "peer_review_corrections": "runs/2026-11-21-nf-device-first-review-findings.json",
+  "independent_accuracy_evidence": false,
+  "browser_execution_pending": true,
+  "full_original_requirement_closed": false
+}

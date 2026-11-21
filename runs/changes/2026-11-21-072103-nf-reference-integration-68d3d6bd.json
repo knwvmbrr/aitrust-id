@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-072103-nf-reference-integration-68d3d6bd",
+  "recorded_at": "2026-11-21T07:21:03.461520+00:00",
+  "author": "Codex /root integration; source /root/seo; review /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "319f982558d6eff3fbcc5b67872509dd04a56dfd",
+  "changed": "Integrated the independent NF reference preview into its own lazy modal, normal build, accessibility readiness, source inventory and executable CI gates.",
+  "proves": "The source is distinctly reviewed and prototype evidence covers21 complete records plus12 refusals per browser, with separate corrected native input controls. All52 existing website commands remain and three NF checks are added.",
+  "limits": "Current integrated modal, protected checks and public delivery pending. Matching or similar wording does not establish truth. No NF tag, independent accuracy, physical acceptance or original requirement closure.",
+  "scope_ids": [
+    "T-NF",
+    "F-035",
+    "F-142"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "79e361877eee14df78269ab39aca590623ab34c89eadc3548a89f7de00994a45",
+    "docs/delivery-wave-2026-11-21.md": "7574b1fb638ec7cfbeef0d2082bed272103822cfc7ba1f3125b34d331b2a7275",
+    "docs/scope-progress.json": "aaf27f72923e0c246ea2708c0227c731735c0ec90c0fb291432734381230fc8a",
+    "docs/session-delivery.json": "b0e048cc58b4152000afcf16f523cd694e36cdb4cd3635dbb3b0dcef67d4bfcf",
+    "eval/revalidation.json": "ae446a0a993ed5fd5f0c83d3de27df0bc0479939b89b12d4ab31c3bf780a2a7a",
+    "package.json": "2b14aff4498901a76075575f61f32a3c85e86e21ab3afcdeca336cedf1aacaa0",
+    "runs/2026-11-21-nf-device-independent-review.json": "072ba7640854b24692217de7d3021bb87106cf96c0021a25aad91c4faa06faa3",
+    "scripts/verify-nf-client.cjs": "1aea69dcf9c9310685b9d88e663e5be59a8c66bb147215bfabaf7a4eeb862df0",
+    "scripts/verify-route-boundaries.py": "eb2612d9bf05762ad3606d9d849804c1e9cf23c36c28fa3cccee7d438242721d",
+    "scripts/verify-site-accessibility.cjs": "d958022c034e9fb8baca572fadb222b018df5f68dfba7520c1fcda7000f5bace",
+    "site/scripts/prepare.mjs": "fa3b5e349cbcfb0ff8acdc128e61d41798098d01bbd391939eee38eafa698a02",
+    "site/src/main.jsx": "bb4c2a0bc4e23d3fcd86e42a2d18d07397c138982da2c01d0dc339eff0e115dd",
+    "state.json": "3111eb9ce693f6d745afa970383be861cb1296b18b41f1e1a9be82d8a6d5896c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nf-device-independent-review.json",
+      "sha256": "072ba7640854b24692217de7d3021bb87106cf96c0021a25aad91c4faa06faa3"
+    },
+    {
+      "path": "runs/2026-11-21-nf-device-correction-accounting.json",
+      "sha256": "493dfcd8fc96c1e511d3d01314f6664fa5f090377a68ac3b35501fb918fbe0df"
+    },
+    {
+      "path": "runs/2026-11-21-nf-input-corrected.json",
+      "sha256": "e21bede2a7659f842b99ef53bfdf6336ed26177c2fb6523ad3a8f3b7f9c43bc7"
+    }
+  ],
+  "checks": []
+}

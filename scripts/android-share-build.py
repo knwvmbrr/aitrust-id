@@ -3,9 +3,11 @@
 import argparse
 import hashlib
 import importlib.util
+import io
 import json
 import os
 from pathlib import Path
+import struct
 import shutil
 import subprocess
 import sys
@@ -77,7 +79,54 @@ def command(argv,timeout=120):
     if p.returncode:raise ValueError('Android SDK compilation failed; inspect private local build output rather than publishing input or host paths.')
     return p.stdout
 
-def compile_apk(sdk,java_home):
+def activity_sources(stage,intake_probe=False):
+    """The diagnostic variant changes only one exact class declaration.
+
+    Default builds never read or compile the wrapper. Method bodies, manifest,
+    permissions and resources are shared, but the probe APK is a distinct variant.
+    """
+    original=ROOT/'mobile/android/src/com/aitrustid/android/CheckActivity.java'
+    sources=sorted((ROOT/'mobile/android/src').rglob('*.java'))
+    if not intake_probe:return sources,None
+    raw=read_regular(original,65536)
+    declaration=b'public final class CheckActivity extends Activity {'
+    require(raw.count(declaration)==1 and raw.count(b'CheckActivity')==1)
+    overlay=Path(stage)/'intake-probe';overlay.mkdir()
+    base=overlay/'IntakeActivityBase.java'
+    base.write_bytes(raw.replace(declaration,b'class IntakeActivityBase extends Activity {',1))
+    wrapper=read_regular(ROOT/'tests/android/CheckActivity.java',16384)
+    target=overlay/'CheckActivity.java';target.write_bytes(wrapper)
+    return [p for p in sources if p!=original]+[base,target],{
+        'variant':'intake-provenance-only/v1','production_activity_sha256':digest(raw),
+        'wrapper_sha256':digest(wrapper),'compiled_base_sha256':digest(base.read_bytes()),
+        'production_equivalent_apk':False,
+    }
+
+
+def verify_probe_dex(apk,intake_probe):
+    """Refuse a mislabeled variant using fixed markers in the compiled DEX."""
+    raw=read_regular(Path(apk),64*1024*1024)
+    with io.BytesIO(raw) as stream:
+        require(len(raw)>=22)
+        # Bound classic ZIP entry count before ZipFile allocates its file list.
+        stream.seek(max(0,len(raw)-65557));tail=stream.read(65557)
+        index=tail.rfind(b'PK\x05\x06');require(index>=0 and len(tail)-index>=22)
+        signature,disk,central_disk,disk_count,count,size,offset,comment=struct.unpack('<4s4H2LH',tail[index:index+22])
+        require(disk==central_disk==0 and disk_count==count and 1<=count<=64)
+        require(len(tail)-index==22+comment and offset+size==len(raw)-22-comment)
+        with zipfile.ZipFile(stream) as archive:
+            rows=archive.infolist();names=[row.filename for row in rows]
+            require(len(rows)==count and len(set(names))==count and all(row.orig_filename==row.filename for row in rows))
+            require(sum(row.file_size for row in rows)<=64*1024*1024)
+            members=[row for row in rows if '/' not in row.filename and row.filename.lower().endswith('.dex')]
+            require(sorted(row.filename for row in members)==['classes.dex','classes2.dex','classes3.dex','classes4.dex'][:len(members)])
+            require(1<=len(members)<=4 and sum(row.file_size for row in members)<=16*1024*1024)
+            payload=b''.join(archive.read(row) for row in members)
+    present=[marker in payload for marker in (b'AITRUST_INTAKE_V1:',b'Lcom/aitrustid/android/IntakeActivityBase;')]
+    require(present==[intake_probe,intake_probe])
+
+
+def compile_apk(sdk,java_home,intake_probe=False):
     sdk=Path(sdk).resolve(strict=True);java_home=Path(java_home).resolve(strict=True)
     tools=sdk/'build-tools/36.0.0';platform=sdk/'platforms/android-36/android.jar'
     required=[tools/name for name in ('aapt2','d8','zipalign','apksigner')]+[platform,java_home/'bin/java',java_home/'bin/javac']
@@ -95,7 +144,8 @@ def compile_apk(sdk,java_home):
         for directory in (generated,classes,dex):directory.mkdir()
         run([tools/'aapt2','compile','--dir',ROOT/'mobile/android/res','-o',stage/'resources.zip'])
         run([tools/'aapt2','link','-o',stage/'resources.apk','-I',platform,'--manifest',ROOT/'mobile/android/AndroidManifest.xml','--java',generated,'-A',OUTPUT/'assets',stage/'resources.zip'])
-        sources=sorted((ROOT/'mobile/android/src').rglob('*.java'))+sorted((OUTPUT/'generated').rglob('*.java'))+sorted(generated.rglob('*.java'))
+        sources,probe=activity_sources(stage,intake_probe)
+        sources+=sorted((OUTPUT/'generated').rglob('*.java'))+sorted(generated.rglob('*.java'))
         # The Android stub JAR supplies platform types, not javac's compiler
         # bootstrap classes. D8 checks the Android platform and min API below.
         run([java_home/'bin/javac','-encoding','UTF-8','--release','8','-classpath',platform,'-d',classes,*sources])
@@ -103,25 +153,29 @@ def compile_apk(sdk,java_home):
         unsigned=stage/'unpacked.apk';shutil.copyfile(stage/'resources.apk',unsigned)
         with zipfile.ZipFile(unsigned,'a',compression=zipfile.ZIP_DEFLATED) as archive:
             for path in sorted(dex.glob('*.dex')):archive.write(path,path.name)
-        destination=OUTPUT/'ai-trust-id-unsigned.apk'
+        destination=OUTPUT/('ai-trust-id-intake-probe-unsigned.apk' if intake_probe else 'ai-trust-id-unsigned.apk')
         if destination.exists():require(destination.is_file() and not destination.is_symlink());destination.unlink()
         run([tools/'zipalign','-f','-P','16','4',unsigned,destination])
+        verify_probe_dex(destination,intake_probe)
         permissions=run([tools/'aapt2','dump','permissions',destination]).decode()
         require('uses-permission:' not in permissions and 'uses-permission-sdk-' not in permissions)
         result={'format':'ai-trust-id-android-build/v1','pass':True,'apk_sha256':digest(destination.read_bytes()),'apk_bytes':destination.stat().st_size,'sdk_platform':'android-36','build_tools':'36.0.0','permission_count':0,'signed':False,'preparation_sha256':digest((OUTPUT/'preparation.json').read_bytes()),'method_sha256':load(OUTPUT/'preparation.json')['method_sha256'],'emulator_executed':False,'physical_device_evidence':False,'independent_accuracy_evidence':False,'sources':{p.relative_to(ROOT).as_posix():digest(p.read_bytes()) for p in sorted((ROOT/'mobile/android').rglob('*')) if p.is_file()}}
+        if probe is not None:result['diagnostic_variant']=probe
         write(OUTPUT/'build.json',(json.dumps(result,indent=2)+'\n').encode());return result
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--runtime-directory',required=True)
     parser.add_argument('--compile',action='store_true')
+    parser.add_argument('--intake-probe',action='store_true',help='Compile a separately named diagnostic APK; never a production-equivalent proof.')
     parser.add_argument('--sdk-root');parser.add_argument('--java-home')
     args=parser.parse_args()
     try:
         result=prepare(args.runtime_directory)
+        require(not args.intake_probe or args.compile)
         if args.compile:
             if not args.sdk_root or not args.java_home:raise ValueError('Compilation requires an existing SDK root and JDK home; nothing was downloaded.')
-            result=compile_apk(args.sdk_root,args.java_home)
+            result=compile_apk(args.sdk_root,args.java_home,args.intake_probe)
         print(json.dumps(result,indent=2));return 0
     except (OSError,ValueError,KeyError,TypeError,RuntimeError,StopIteration,subprocess.SubprocessError):
         print('Android build unavailable: required installed tools or verified assets are missing or unsupported. No toolchain was downloaded.',file=sys.stderr);return 2

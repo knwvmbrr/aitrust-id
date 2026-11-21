@@ -1,0 +1,52 @@
+{
+  "profile": "nf-device-proof-label-and-ui-correction/v1",
+  "captured_at": "2026-11-21T07:13:16.265695+00:00",
+  "reviewed_by": "/root/seo",
+  "historical_browser_receipt": {
+    "path": "runs/2026-11-21-nf-device-browser-candidate-1.json",
+    "sha256": "cde61d7dd8f4f270e6125c1e10cd413af5d0e5c8018a6093eae491ab79ba5aba"
+  },
+  "correction": "Historical full_canonical_records33 label included12 refusal cases. Actual33 authored outcomes perengine comprised21 complete canonical records and12 refusals. Receipt preserved unchanged; no browser cohort rerun or rebinding.",
+  "actual_outcomes_per_engine": {
+    "Chromium": {
+      "authored_cases": 33,
+      "complete_records": 21,
+      "canonical_refusals": 12
+    },
+    "WebKit": {
+      "authored_cases": 33,
+      "complete_records": 21,
+      "canonical_refusals": 12
+    }
+  },
+  "canonical_runtime_sources_unchanged_since_browser_receipt": {
+    "tools/nf_device.py": "0a0285890cb608e7451ee72b03027b2ef4062b94a925c89d4e98a2f9f80da2e3",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "tools/nf_source_evidence.py": "c69d9bb1d555aa1c6048a4dede9312229fa01b5b4905e1ef912010b17885b046",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "site/src/nf-device-client.js": "473a8123917b1cde54fa4a0f29240d6808aac2e0ea11abcb167530cc6491c08d",
+    "site/src/nf-device-worker.js": "076e042598209d2fbea18e5a3d6e55fd2901fdb5c3d482f122249f326cddc5b9",
+    "site/src/nf-device-result.js": "140d9fa9e44df192c06c328fe100a99cf601dc442b83ed499b4dcbaeb9b849b5",
+    "site/src/nf-cosine-result.js": "8662e820c683e85294be5d49bc7bb8401d6c7ea92ad19236ff0034ee5d908a39",
+    "site/src/nf-device-manifest.json": "c4e43cc1dbb965bc1ecd4d85e4524bfd18b9f01d6ce071a98c900a334d123c38"
+  },
+  "ui_corrected_separately": {
+    "source": "site/src/NFExplorer.jsx",
+    "sha256": "8638194d959b25726d1ae0194226f652c27d5e0d120dfeb65d41980ff66c3935",
+    "actual_affected_proof": "runs/2026-11-21-nf-input-corrected.json",
+    "sha256_proof": "e21bede2a7659f842b99ef53bfdf6336ed26177c2fb6523ad3a8f3b7f9c43bc7",
+    "browser_methods": [
+      "Chromium",
+      "WebKit"
+    ],
+    "native_input_insertion_codepoints": 3000,
+    "full_input_retained_and_refused": true,
+    "field_specific_invalid_focus": true
+  },
+  "original_ui_defect": "runs/2026-11-21-nf-input-original.json",
+  "integrated_modal_helper_execution_pending_PM": true,
+  "independent_accuracy_evidence": false,
+  "full_original_requirement_closed": false
+}

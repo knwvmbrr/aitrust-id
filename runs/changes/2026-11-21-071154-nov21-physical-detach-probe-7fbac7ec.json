@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-071154-nov21-physical-detach-probe-7fbac7ec",
+  "recorded_at": "2026-11-21T07:11:54.159972+00:00",
+  "author": "Codex /root; source review /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2aa67779352fa11c303867f52799172ec73ee07c",
+  "changed": "Corrected the accessibility verifier to await physical node removal instead of role-locator invisibility, and preserved the failed closeout evidence.",
+  "proves": "The deterministic hidden-but-connected control reproduces the locator ambiguity. Actual deferred-data lifecycle and unchanged physical control-set mutation pass; a different reviewer checked the verifier-only patch.",
+  "limits": "Production UI and accessibility thresholds unchanged. Original timeout ordering unestablished. This is engineering verification, not human screen-reader or full WCAG acceptance; final integrated revalidation remains pending.",
+  "scope_ids": [
+    "F-035",
+    "F-142",
+    "T-NF"
+  ],
+  "files": {
+    "docs/delivery-wave-2026-11-21.md": "1c605483d12abe13702b155dd4af6af2d03e3e495165cca6b00871e6132cd030",
+    "docs/scope-progress.json": "8b8832364cfc32111adc4fed7a25fdf3d3db3a5dd5e1f1a07968770ddabe8118",
+    "docs/session-delivery.json": "59af3967c6a2eb3e62d9adcdd1fcecd8eef5742a944b7388ba87ca4a193a1f11",
+    "runs/2026-11-21-nov21-a11y-detach-review.json": "fe95e94586a4f5d110b90b9fcae8ed3ef08d8cb6805de1259069172eb9689321",
+    "runs/2026-11-21-nov21-a11y-physical-detach.json": "8f1147a95b18d3b2200d757bffd62485bfe868faef9dca9314a1de411de26231",
+    "runs/2026-11-21-nov21-accounting-current.json": "c327515a103f93a32e8450723286dfdb021fe31e3b07df07aef47901283c71b5",
+    "runs/2026-11-21-nov21-accounting-reference-correction.json": "af1a0329a7c21d189ba898e869ecef87976cc04542ab0dad5963f64c53ac817e",
+    "runs/2026-11-21-nov21-closeout-a11y-failure.json": "490bb2968014dc92cd15dd729d96294033865100da57b3f94fbb725bb7799d5f",
+    "runs/2026-11-21-nov21-closeout-build-guard.json": "bd5de82abffe6aac36d91a8d219507cf9654c4718844406f102cc1f76c94e8b3",
+    "runs/2026-11-21-nov21-closeout-protocol.json": "3ca03f3d55fc08215ea73931c7a7588b754b177ad1dafaa78a8d093630c328f7",
+    "runs/2026-11-21-nov21-closeout-website-corrected.json": "f08b5a2954c9138837cb62a794dbe537fced548bdf5962d227a68edfbe035064",
+    "runs/2026-11-21-nov21-closeout-website.json": "00cf9ba3d1598e7cef34d020b31f4cb90be6a3a0e8f44c4ee14fe755b10cb1dc",
+    "runs/2026-11-21-nov21-publication.json": "aad34c7a10bfa88b08bec132773425603bb953e296f34739ca79983a76df6b54",
+    "runs/2026-11-21-nov21-required-ci-review.json": "bfa3a0530f1f8824b9c040fd033652db5bf33a2406adee4f4327e5dce3ab74d7",
+    "runs/2026-11-21-nov21-web-closeout-counter-review.json": "01b483385c41cdf1000e9378dfca401b2348ca45e9d873e623e55be4d9b47f96",
+    "runs/2026-11-21-nov21-web-closeout-review.json": "95deee378bd8d4f31288cce3eaa6b003edb13eca31d4626c7f4191d6a9c6b4c1",
+    "scripts/verify-site-accessibility.cjs": "70a7a69c8601a1b6edf4eca361c64f0826e0fd28406f38eb808e065b6043102a",
+    "site/public/reference/public-scope.json": "3ccbbb2ba929b47f7284309e593b6f00f88bc408211bf63b77968b377df96ed9",
+    "site/src/public-scope.json": "3ccbbb2ba929b47f7284309e593b6f00f88bc408211bf63b77968b377df96ed9",
+    "site/src/scope-manifest.json": "f8a12c43e81feddabe8cd7a1855aa483d6d120dd0ed585810a23522622e456b6",
+    "state.json": "8bccc502786970caedf9bd940579ecd045ccc20544a1ccf1f63915ef754ac369"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nov21-closeout-a11y-failure.json",
+      "sha256": "490bb2968014dc92cd15dd729d96294033865100da57b3f94fbb725bb7799d5f"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-closeout-website-corrected.json",
+      "sha256": "f08b5a2954c9138837cb62a794dbe537fced548bdf5962d227a68edfbe035064"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-a11y-physical-detach.json",
+      "sha256": "8f1147a95b18d3b2200d757bffd62485bfe868faef9dca9314a1de411de26231"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-a11y-detach-review.json",
+      "sha256": "fe95e94586a4f5d110b90b9fcae8ed3ef08d8cb6805de1259069172eb9689321"
+    }
+  ],
+  "checks": []
+}

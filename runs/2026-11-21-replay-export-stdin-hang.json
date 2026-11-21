@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-11-21T07:39:32.989699+00:00",
+  "pass": false,
+  "profile": "owned-synthetic-replay-validation-hang/v1",
+  "source_sha256": "6dbf716c6e903ebc5f030f6ab83de236c62db337664bca2f5548757e0055099d",
+  "observed": "Owned synthetic browser export validator Python child remained in stdin read-all for several minutes; Node synchronous child invocation had no timeout.",
+  "native_sample_scope": "One-second stack sample of only the owned child; private raw sample retained outside source. No private input or local-service request.",
+  "root_cause": "UNESTABLISHED",
+  "action": "Terminate only the parent-verified owned validation child so the current engineering gate can record failure. Diagnose before changing or retrying.",
+  "product_replay_or_schema_failure_proven": false,
+  "independent_accuracy_evidence": false
+}

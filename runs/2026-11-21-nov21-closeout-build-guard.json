@@ -1,0 +1,56 @@
+{
+  "captured_at": "2026-11-21T06:59:52.270620+00:00",
+  "pass": false,
+  "profile": "nov21-closeout-build-guard/v1",
+  "failed_website_receipt": "runs/2026-11-21-nov21-closeout-website.json",
+  "failure": "fresh_matching_changelog_events_required_for_new_protocol_receipt_and_generated_scope_outputs",
+  "diagnosis": "The website rebuild correctly refused five new or derived files lacking a fresh attributed event. No product browser phase ran. A focused diagnostic invocation reproduced the guard; it did not constitute a website success.",
+  "phase_report": {
+    "schema_version": 1,
+    "kind": "website_build_phases",
+    "captured_at": "2026-11-21T06:59:34.643Z",
+    "pass": false,
+    "expected_phases": [
+      "private-file-controls",
+      "build",
+      "catalogue",
+      "performance",
+      "workflows",
+      "accessibility",
+      "mobile-payload",
+      "feedback",
+      "policies"
+    ],
+    "phases": [
+      {
+        "phase": "private-file-controls",
+        "started_at": "2026-11-21T06:59:19.535Z",
+        "finished_at": "2026-11-21T06:59:19.832Z",
+        "elapsed_ms": 297,
+        "exit_status": 0,
+        "signal": null,
+        "failure": null,
+        "pass": true
+      },
+      {
+        "phase": "build",
+        "started_at": "2026-11-21T06:59:19.832Z",
+        "finished_at": "2026-11-21T06:59:34.642Z",
+        "elapsed_ms": 14810,
+        "exit_status": 1,
+        "signal": null,
+        "failure": "child_exit_failed",
+        "pass": false
+      }
+    ],
+    "sequence_request_refused": false,
+    "controller_aborted": true,
+    "raw_child_output_included": false,
+    "command_arguments_included": false,
+    "independent_accuracy_evidence": false,
+    "human_accessibility_verified": false
+  },
+  "phase_report_sha256": "83c9861d2b76da0bb0e4c8038880d0517d216f371789f4c4f86ddc1018c309f2",
+  "correction": "Record exact current protocol receipt, preserved website failure and deterministic scope outputs before the corrected website execution. No guard or acceptance weakened.",
+  "full_original_closures": 0
+}

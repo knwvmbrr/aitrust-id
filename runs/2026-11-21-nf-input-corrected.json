@@ -1,0 +1,67 @@
+{
+  "profile": "nf-native-input-path/v1",
+  "captured_at": "2026-11-21T07:12:32.935Z",
+  "mode": "corrected_affected_controls",
+  "pass": true,
+  "sources_sha256": {
+    "site/src/NFExplorer.jsx": "8638194d959b25726d1ae0194226f652c27d5e0d120dfeb65d41980ff66c3935",
+    "scripts/verify-nf-input.cjs": "07350578400aabc9187c83530bbc5d81baeb1f70ae11a97b511f84b7a5308f08"
+  },
+  "served_component_sha256": {
+    "output/nf-device-fixture/assets/NFExplorer-CkBPXx06.js": "13a562f94d6a738d74e6f68886ff1ab18451c1f85f2ae2978317838422c259e2"
+  },
+  "engines": [
+    {
+      "engine": "Chromium",
+      "observations": [
+        {
+          "field": "claim",
+          "attempted_codepoints": 3000,
+          "retained_codepoints": 3000,
+          "refused_before_worker": true,
+          "correct_invalid_focus": true
+        },
+        {
+          "field": "passage",
+          "attempted_codepoints": 3000,
+          "retained_codepoints": 3000,
+          "refused_before_worker": true,
+          "correct_invalid_focus": true
+        }
+      ],
+      "bad_reference": {
+        "claim_invalid": null,
+        "reference_invalid": "true",
+        "focus": "reference"
+      },
+      "pass": true
+    },
+    {
+      "engine": "WebKit",
+      "observations": [
+        {
+          "field": "claim",
+          "attempted_codepoints": 3000,
+          "retained_codepoints": 3000,
+          "refused_before_worker": true,
+          "correct_invalid_focus": true
+        },
+        {
+          "field": "passage",
+          "attempted_codepoints": 3000,
+          "retained_codepoints": 3000,
+          "refused_before_worker": true,
+          "correct_invalid_focus": true
+        }
+      ],
+      "bad_reference": {
+        "claim_invalid": null,
+        "reference_invalid": "true",
+        "focus": "reference"
+      },
+      "pass": true
+    }
+  ],
+  "canonical_method_cohort_rerun": false,
+  "source_and_component_stable": true
+}

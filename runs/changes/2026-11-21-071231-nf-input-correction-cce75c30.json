@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-071231-nf-input-correction-cce75c30",
+  "recorded_at": "2026-11-21T07:12:31.829813+00:00",
+  "author": "Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2aa67779352fa11c303867f52799172ec73ee07c",
+  "changed": "Correct NF oversized-input preservation and field-specific invalid focus; clarify authored case counts.",
+  "proves": "Actual original Chromium input path retained only 2000 of 3000 emoji and accepted that clipped input; reference-only error focused Claim. Final affected controls pending.",
+  "limits": "Prior33-outcome browser evidence remains immutable:21 complete records and12 refusals per engine. No canonical method change, original closure or independent accuracy.",
+  "scope_ids": [
+    "T-NF",
+    "F-020a"
+  ],
+  "files": {
+    "site/src/NFExplorer.jsx": "8638194d959b25726d1ae0194226f652c27d5e0d120dfeb65d41980ff66c3935",
+    "scripts/verify-nf-device.cjs": "cf58be89fb1709aff3aeabfcfa679698ca57583787cee1cdcbb8c231be638f5a",
+    "scripts/verify-nf-input.cjs": "07350578400aabc9187c83530bbc5d81baeb1f70ae11a97b511f84b7a5308f08",
+    "scripts/nf-site-controls.cjs": "6646fbb5014255cc398d211ded04503036a7ac44110c99082982fbab2a4d5e13",
+    "scripts/verify-nf-site.cjs": "90bcc156552f957bb9c0242f598de9a1e8df4f2b036ca8a974ed2ed544e7446e",
+    "runs/2026-11-21-nf-input-original.json": "e46fd376c207cbbd9fc89ffab1665e6faa12f32da335f2bd1cd1b6b1c8e33e2f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nf-input-original.json",
+      "sha256": "e46fd376c207cbbd9fc89ffab1665e6faa12f32da335f2bd1cd1b6b1c8e33e2f"
+    }
+  ],
+  "checks": []
+}

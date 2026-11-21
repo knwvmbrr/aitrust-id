@@ -4,7 +4,7 @@ import {releasePolicy} from './policies.js';
 const descriptions = {
   PS: ['PS checks for commands that run downloaded or encoded code and explains what it finds.', 'An AI answer gives you an install command. PS points out supported download-and-run patterns before you use it.', 'A warning is about the command, not proof of a scam. No warning does not mean it is safe.'],
   PII_REDACTED: ['Keep detected personal details out of the local checker.', 'An answer includes an email address. The local service can remove detected values before checking the rest of the text.', 'Some sensitive details can be missed. This tag does not mean all private information is gone.'],
-  NF: ['See how an answer lines up with the references you choose.', 'Compare an answer with your handbook and see the passages that support its claims.', 'Planned. A match is only as reliable as the reference; it is not proof of truth.'],
+  NF: ['Compare a claim with a passage you choose.', 'Paste a sentence and a handbook passage to see exact matches or shared words.', 'Matching words can still disagree. This preview does not verify facts; the full NF tag is still planned.'],
   FI: ['See where an answer disagrees with your references.', 'Compare a claim with your handbook and read the passage that contradicts it.', 'Planned. A disagreement does not prove dishonesty, and the reference could be wrong.'],
   HP: ['Explore numbers and date-shaped details.', 'Paste a passage to see which numbers have a nearby URL or numbered reference.', 'This literal preview does not verify a claim or its source. The full HP tag is still planned.'],
   MT: ['Explore wording before you decide what it means.', 'Try a message with “act now,” or one that names an expert.', 'These phrase checks do not judge intent or verify a source. The full MT tag is still planned.'],
@@ -35,6 +35,7 @@ export function presentation(tag) {
       : tag.id==='PII_REDACTED' ? 'Local setup required. PII does not run in this website checker.'
       : tag.id==='MT' ? 'Planned tag · Wording-method preview available.'
       : tag.id==='HP' ? 'Planned tag · Literal-detail preview available.'
+      : tag.id==='NF' ? 'Planned tag · Reference comparison preview available.'
       : tag.audience==='person' ? 'Planned · No checker available yet.'
       : localOrganization ? 'Local software available. No team service is running.'
       : 'Planned offering. No team service is running.',

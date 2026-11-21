@@ -1,0 +1,114 @@
+{
+  "captured_at": "2026-11-21T07:05:19.652487+00:00",
+  "pass": false,
+  "profile": "nov21-a11y-lifecycle-diagnostic/v1",
+  "receipt": "runs/2026-11-21-nov21-closeout-website-corrected.json",
+  "actual_failure_report": {
+    "captured_at": "2026-11-21T07:01:47.840Z",
+    "pass": false,
+    "results": [],
+    "error": "AssertionError [ERR_ASSERTION]: Missing expected rejection.",
+    "failure_context": null,
+    "measurement_context": {
+      "surface": null,
+      "theme": null,
+      "action": "deferred_public_readiness",
+      "tagId": null,
+      "footerSlug": null,
+      "observed": null,
+      "observation_unavailable": true
+    },
+    "errors": [],
+    "full_wcag_conformance_asserted": false
+  },
+  "actual_phase_report": {
+    "schema_version": 1,
+    "kind": "website_build_phases",
+    "captured_at": "2026-11-21T07:01:47.867Z",
+    "pass": false,
+    "expected_phases": [
+      "private-file-controls",
+      "build",
+      "catalogue",
+      "performance",
+      "workflows",
+      "accessibility",
+      "mobile-payload",
+      "feedback",
+      "policies"
+    ],
+    "phases": [
+      {
+        "phase": "private-file-controls",
+        "started_at": "2026-11-21T07:00:35.353Z",
+        "finished_at": "2026-11-21T07:00:35.613Z",
+        "elapsed_ms": 260,
+        "exit_status": 0,
+        "signal": null,
+        "failure": null,
+        "pass": true
+      },
+      {
+        "phase": "build",
+        "started_at": "2026-11-21T07:00:35.613Z",
+        "finished_at": "2026-11-21T07:00:53.577Z",
+        "elapsed_ms": 17964,
+        "exit_status": 0,
+        "signal": null,
+        "failure": null,
+        "pass": true
+      },
+      {
+        "phase": "catalogue",
+        "started_at": "2026-11-21T07:00:53.584Z",
+        "finished_at": "2026-11-21T07:01:29.628Z",
+        "elapsed_ms": 36043,
+        "exit_status": 0,
+        "signal": null,
+        "failure": null,
+        "pass": true
+      },
+      {
+        "phase": "performance",
+        "started_at": "2026-11-21T07:01:29.628Z",
+        "finished_at": "2026-11-21T07:01:40.640Z",
+        "elapsed_ms": 11012,
+        "exit_status": 0,
+        "signal": null,
+        "failure": null,
+        "pass": true
+      },
+      {
+        "phase": "workflows",
+        "started_at": "2026-11-21T07:01:40.640Z",
+        "finished_at": "2026-11-21T07:01:46.633Z",
+        "elapsed_ms": 5993,
+        "exit_status": 0,
+        "signal": null,
+        "failure": null,
+        "pass": true
+      },
+      {
+        "phase": "accessibility",
+        "started_at": "2026-11-21T07:01:46.633Z",
+        "finished_at": "2026-11-21T07:01:47.866Z",
+        "elapsed_ms": 1233,
+        "exit_status": 1,
+        "signal": null,
+        "failure": "child_exit_failed",
+        "pass": false
+      }
+    ],
+    "sequence_request_refused": false,
+    "controller_aborted": true,
+    "raw_child_output_included": false,
+    "command_arguments_included": false,
+    "independent_accuracy_evidence": false,
+    "human_accessibility_verified": false
+  },
+  "plan": "Verifier-only: retain the physical download button handle and wait for its actual disconnection before asserting the control-set mutation. Add a deterministic authored hidden-but-connected control showing why a role locator reports detached early. Preserve the physical-node mutation assertion, production code and existing timeouts.",
+  "limits": [
+    "The observed failure is missing expected rejection at deferred readiness. The exact original native-toggle/React timing is unestablished.",
+    "No product behavior, accessibility threshold or scope criterion is changed."
+  ]
+}

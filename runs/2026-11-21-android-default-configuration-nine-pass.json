@@ -1,0 +1,316 @@
+{
+  "format": "ai-trust-id-android-default-configuration-nine-pass/v1",
+  "recorded_at": "2026-11-21T07:51:57.633215+00:00",
+  "source_commit": "3706f99294d4f0872ee87721d1dfbcd8cd965362",
+  "run": {
+    "id": 44881591785,
+    "job_id": 136777863823,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44881591785",
+    "attempt": 1,
+    "conclusion": "success",
+    "configuration_controls": true,
+    "intake_probe": false,
+    "unchanged_retry": false
+  },
+  "artifact": {
+    "id": 14697769275,
+    "sha256": "8f05133d2c3283f19c17388a5c584b522ec1d06e9a72d74a7480bdadf47ea153",
+    "bytes": 6386970,
+    "download_count": 1,
+    "raw_reports": {
+      "emulator.json": {
+        "sha256": "0b0b34c79d671bda1425a8cf775a07dad9d05e7c4309d02cd29dcdcce0741e4b",
+        "bytes": 7740
+      },
+      "build.json": {
+        "sha256": "a2c6245a60c4ae127e0e021ae73ba8a1e16389043c899a1c9a174b000df331a3",
+        "bytes": 2255
+      },
+      "preparation.json": {
+        "sha256": "afbf7f191300260bc886af40bbfcb7e261e9d7da08984ba5e76f50a12af9580b",
+        "bytes": 546
+      },
+      "engine-parity.json": {
+        "sha256": "3c70b888125a1e6e77e29d8c5041ec096a752342a894850aa546a68bfc149867",
+        "bytes": 685
+      }
+    },
+    "private_job_log": {
+      "sha256": "fcba2074704b215b59e01832a47e0e38de2dcf495e75243c636de9db03c2cc51",
+      "bytes": 61693
+    }
+  },
+  "default_apk": {
+    "variant": "default-production-source-ci-test-signed",
+    "signed_apk_sha256": "11f1c7674772be0206e4789f749f1ef5ab23fae47a07e8b7bc500ff794fc565b",
+    "signed_apk_bytes": 6444652,
+    "unsigned_build_apk_sha256": "7a97329d82f7f00fb58c8df3678e91738d6eb05ffec5a2df8edbe1a67c866a6a",
+    "unsigned_build_apk_bytes": 6435445,
+    "probe_markers_absent": true,
+    "probe_required_verification_refused": true,
+    "diagnostic_variant_absent_from_build": true,
+    "native14_sources_match": true,
+    "permission_count": 0,
+    "release_signing_or_store_acceptance": false
+  },
+  "runtime": {
+    "status": "EXECUTED",
+    "pass": true,
+    "api_level": "36",
+    "original_case_count": 7,
+    "original_cases": [
+      {
+        "case": "receive_requires_explicit_check",
+        "pass": true
+      },
+      {
+        "case": "actual_offline_ps_finding",
+        "pass": true
+      },
+      {
+        "case": "edit_hides_previous_finding",
+        "pass": true
+      },
+      {
+        "case": "new_share_and_no_finding",
+        "pass": true
+      },
+      {
+        "case": "unsupported_mime_has_no_verdict",
+        "pass": true
+      },
+      {
+        "case": "clear_removes_input_and_result",
+        "pass": true
+      },
+      {
+        "case": "background_clears_text",
+        "pass": true
+      }
+    ],
+    "supplemental": {
+      "status": "EXECUTED",
+      "pass": true,
+      "cases": [
+        {
+          "case": "configuration_preserves_current_edited_review_without_result",
+          "pass": true
+        },
+        {
+          "case": "configuration_immediate_home_refocus_does_not_revive_text",
+          "pass": true
+        }
+      ],
+      "control_stage": "configuration_final_rotation",
+      "density_query_attempts": 3,
+      "gesture_target_state": "CONTENT_MARGIN_VALIDATED",
+      "effective_density_observed": true,
+      "gesture_observations": [
+        {
+          "direction": "UP",
+          "editor_observed_before": true,
+          "editor_observed_after": true,
+          "editor_bounds_changed": true,
+          "editor_moved_up": true,
+          "editor_moved_down": false,
+          "status_became_visible": true,
+          "rotation_stable": true
+        },
+        {
+          "direction": "DOWN",
+          "editor_observed_before": true,
+          "editor_observed_after": true,
+          "editor_bounds_changed": true,
+          "editor_moved_up": false,
+          "editor_moved_down": true,
+          "status_became_visible": false,
+          "rotation_stable": true
+        }
+      ],
+      "rotation_state": "COMPLETE",
+      "rotation_observation": {
+        "rotation": "1",
+        "editor_observed": true,
+        "editor_matches_edited_draft": true,
+        "status_node_observed": false,
+        "received_status_visible": false,
+        "result_tag_visible": false
+      },
+      "expected_text_observed": true,
+      "rotation_scroll_precondition": {
+        "rotation": "1",
+        "editor_observed": true,
+        "editor_matches_edited_draft": true,
+        "status_node_observed": false,
+        "received_status_visible": false,
+        "result_tag_visible": false
+      },
+      "owned_scrollable": true,
+      "gesture_geometry": {
+        "editor_horizontal_within_scroll": true,
+        "left_full_padding_observed": true,
+        "right_full_padding_observed": true,
+        "point_within_scroll": true,
+        "point_outside_editor": true,
+        "point_within_known_left_padding": true
+      },
+      "previous_edge_outside_known_content_band": true,
+      "content_margin_target_validated": true,
+      "gesture_outside_editor": true,
+      "rotation_scroll_actions": 2,
+      "rotation_receipt_observed": true,
+      "rotation_edited_reasserted": true,
+      "background": {
+        "control_stage": "background_marker_absence",
+        "background_owned_task_matches": 5,
+        "background_observation": {
+          "owned_ui_present": true,
+          "ready_text_present": false,
+          "cleared_text_present": true,
+          "synthetic_marker_present": false
+        }
+      },
+      "background_receive_navigation": {
+        "density_query_attempts": 2,
+        "gesture_target_state": "CONTENT_MARGIN_VALIDATED",
+        "effective_density_observed": true,
+        "gesture_observations": [
+          {
+            "direction": "UP",
+            "editor_observed_before": true,
+            "editor_observed_after": true,
+            "editor_bounds_changed": true,
+            "editor_moved_up": true,
+            "editor_moved_down": false,
+            "status_became_visible": true,
+            "rotation_stable": true
+          }
+        ],
+        "rotation_state": "RECEIPT_CONFIRMED",
+        "rotation_observation": {
+          "rotation": "1",
+          "editor_observed": true,
+          "editor_matches_fresh_marker": true,
+          "status_node_observed": true,
+          "received_status_visible": true,
+          "result_tag_visible": false
+        },
+        "expected_text_observed": true,
+        "rotation_scroll_precondition": {
+          "rotation": "1",
+          "editor_observed": true,
+          "editor_matches_fresh_marker": true,
+          "status_node_observed": false,
+          "received_status_visible": false,
+          "result_tag_visible": false
+        },
+        "owned_scrollable": true,
+        "gesture_geometry": {
+          "editor_horizontal_within_scroll": true,
+          "left_full_padding_observed": true,
+          "right_full_padding_observed": true,
+          "point_within_scroll": true,
+          "point_outside_editor": true,
+          "point_within_known_left_padding": true
+        },
+        "previous_edge_outside_known_content_band": true,
+        "content_margin_target_validated": true,
+        "gesture_outside_editor": true,
+        "rotation_scroll_actions": 1,
+        "rotation_receipt_observed": true,
+        "fresh_marker_and_receipt_observed": true
+      },
+      "case_count": 2
+    },
+    "original_background_observation": {
+      "owned_ui_present": true,
+      "ready_text_present": false,
+      "cleared_text_present": true,
+      "synthetic_marker_present": false
+    },
+    "elapsed_seconds": 113.511,
+    "license_record_unchanged": true,
+    "internet_permission": false
+  },
+  "hosted_focused_tests": {
+    "groups": [
+      10,
+      46,
+      12,
+      20
+    ],
+    "total": 88,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "actual_jvm_fixture": true,
+    "android_framework_claim_from_jvm_fixture": false
+  },
+  "canonical_engine_parity": {
+    "cases": 137,
+    "invalid_controls": 3,
+    "network_attempts": 0,
+    "runtime": "314.0.7",
+    "method_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "bundle_sha256": "ecc04fa17135175a841e3ef7ddbffb013098c5c6b877611f3ae7347001b9c0c0",
+    "loader_sha256": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+    "node_filesystem_indexURL_adapter": true,
+    "native_android_execution_of_parity_runner": false,
+    "independent_accuracy_evidence": false
+  },
+  "source_bindings": {
+    "mobile/android/AndroidManifest.xml": "f4ed0cebdc2b9198702ef2c62015b0e70758082661e1edc7da8d0a51313c5a74",
+    "mobile/android/res/drawable/camouflage.xml": "92f183c3df0dd7c790b627f07523849f745757f9104051ff506d6d0200d8dbca",
+    "mobile/android/res/drawable/ic_tag.xml": "b0f3d896ef3be0239929857372d2249253d50a8d8efe1b4838bd2032bc8b68f2",
+    "mobile/android/res/values/colors.xml": "a02ea5c1dd1cdac67550685cb0d0ce4ad36c2f3ba47beb6badaa01d5551f9cb3",
+    "mobile/android/res/values/styles.xml": "2e11243a09e33148fee4dc180f39da3318fc9b3892f2b45ca7be6c1ef749322b",
+    "mobile/android/res/values-night/colors.xml": "2d51774a873ac59b53ac8ac9d83a969015fbcc112a8d41854fdf04527d244c3a",
+    "mobile/android/res/values-night/styles.xml": "323aeaa6e5cf6776e2e986ed51753799a06e691bcf9d9625a9d86a951400385d",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+    "mobile/android/src/com/aitrustid/android/ConfigurationDraft.java": "5fb22a21a6c8ad36b4535e39955ecff4a6baede2e42c43c9648b8149dd52211a",
+    "mobile/android/src/com/aitrustid/android/OfflineEngine.java": "5be1c6b878b6d8690e140d2d24b91dab11c16f1df4d683c8ef09c9c6b363b65f",
+    "mobile/android/src/com/aitrustid/android/ShareSession.java": "04ea340fad0984944e1f41220ba3803db4164a78efea79561112d9e2039c1332",
+    "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+    "mobile/android/web/bridge.mjs": "b499e790d92354cc6f247f5f4e74e56b0acc57eaa99b11623274809102bc09ad",
+    "mobile/android/web/index.html": "56aa15470255e8953463f10795fd8ba5641345111f5354e92671b4d5dd171a29",
+    "scripts/android-share-build.py": "8cb6ed20056bbf9d7f69dfb2fb19eaf9c5025eeb44ef8ea3f7d52576ffa1184e",
+    "scripts/verify-android-emulator.py": "8484ae525ef820937f562ce34619525443c7b1cf8053c1a2eddcbbe3f8f27f30",
+    ".github/workflows/android-share.yml": "536c97412669fa97527a026edd72297d82cf0ad849d6628ca6c0df4c4c923b5a",
+    "tests/test_android_share.py": "d30aa8ead3c9d09700251c6258ca9c193b5142ab2954bd1a652d1285c0bec2d9",
+    "tests/test_android_emulator_prerequisites.py": "1f8187bf906fd0391cc63180fc03b1e37d91414273138b11b14429d2a43ad07d",
+    "tests/test_android_intake_probe.py": "3ceccd81d04d864256a0f57ee6a35cf43529732bc111762356712be1afd16f9f",
+    "tests/test_android_configuration_controls.py": "996514248f6e2bc220d132627aa26fe3da77e405017ad66f0f513de871f9efcb",
+    "tests/android/CheckActivity.java": "76e847187c37bf216aaaffb7da71d7b663ffe1cba5c64c17eb4cf7f098d513e7",
+    "tests/android/ConfigurationLifecycleHarness.java": "3e5a6380c5b2b5d5c398a1f4ecacc6bd710c8e2f253f0c4eb3af42de273de707"
+  },
+  "distinct_review": {
+    "reviewer": "/root/web_camo",
+    "actual_retained_artifact_read_only": true,
+    "zip_raw_reports_native_sources_default_dex_checked": true,
+    "original7_and_separate2_confirmed": true,
+    "no_new_download_build_browser_or_runtime": true,
+    "result": "CLEAR within selected API36 synthetic execution"
+  },
+  "interpretation": {
+    "one_use_configuration_draft_actual_preservation_observed": true,
+    "fresh_exact_marker_and_receipt_required_before_home_actions": true,
+    "immediate_configuration_home_refocus_marker_absence_observed": true,
+    "generic_editor_nonempty_not_used_as_blank_input_proof": true,
+    "original_seven_and_wait_and_rotation_home_adjacency_unchanged": true,
+    "normal_pr_push_uses_same_manual_true_configuration_commands": true,
+    "historical_untraced_failure_causes_not_resolved": true,
+    "all_startup_paths_or_reliability_guarantee": false
+  },
+  "preserved_historical_receipts": {
+    "runs/2026-11-20-android-three-vm-cold-start-result.json": "980c4dbd36acaabe801c880dd6610a07936878867ef689d0b04c81699a6a0468",
+    "runs/2026-11-21-android-intake-three-hosted-result.json": "7186595c0d54315251916a4507a2b58ad57a3769506debfda3b730a9269b9c83",
+    "runs/2026-11-21-android-default-configuration-failed.json": "72149926339a209432cdbc35871fed884404ec310b446fcc9c8e2637854c82bd",
+    "runs/2026-11-21-android-scroll-candidate-failed.json": "de2394ea64ede98e679aed63a3e35560fa9cbb360a6e0847a304fd3913da4ca0",
+    "runs/2026-11-21-android-config-first-pass-home-setup-failed.json": "b41969e2ad091597743d5bfcb2bcbc8ffa809e9eb08d9f5bddfc5014d9e6e68d"
+  },
+  "physical_device_evidence": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false,
+  "scope_percentage_changed": false
+}

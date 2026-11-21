@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-070558-nf-device-reference-0f70bba8",
+  "recorded_at": "2026-11-21T07:05:58.452630+00:00",
+  "author": "Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2aa67779352fa11c303867f52799172ec73ee07c",
+  "changed": "Implement the independent on-device NF claim/reference preview and its authored canonical controls.",
+  "proves": "32 focused Python controls; 10 Node groups and 33 authored canonical/refusal cases, including exact ties-even score correction; actual browser evidence remains pending.",
+  "limits": "No NF tag, semantic support, independent accuracy, physical-device acceptance, production mount/publication or original closure. Canonical algorithms and CLI unchanged.",
+  "scope_ids": [
+    "T-NF",
+    "F-020a"
+  ],
+  "files": {
+    "tools/nf_device.py": "0a0285890cb608e7451ee72b03027b2ef4062b94a925c89d4e98a2f9f80da2e3",
+    "scripts/build-nf-device.py": "c710f27da70506ccb3e01c7e879a2c5e1e6a34503ba3ce8e46c056d4e3b852b6",
+    "scripts/build-nf-device-fixture.mjs": "e3d7e365c29710a8b55ffd96edb96202a0aef55a9f62a64f13818adfbca4ecac",
+    "scripts/verify-nf-device.cjs": "8f755b549fcd9e4ef7e89d9114684f04ed5bb48c712c94a7d75b1d9e91ea182f",
+    "scripts/nf-device-cases.py": "c313111c2a4f47a3cb23871108be11ba9d3f73524d0c7e5f23fa930e372819c0",
+    "site/src/NFExplorer.jsx": "34de9e1ae5d603f4f260f179f44c757abfac64102e6bef9e30d11b8e08521d37",
+    "site/src/NFExplorerSlot.jsx": "c8d2d1eeaae63799161614e967ea7f0d92e404f2b4cce26708cc71b0cd19ca81",
+    "site/src/nf-device-client.js": "473a8123917b1cde54fa4a0f29240d6808aac2e0ea11abcb167530cc6491c08d",
+    "site/src/nf-device-worker.js": "076e042598209d2fbea18e5a3d6e55fd2901fdb5c3d482f122249f326cddc5b9",
+    "site/src/nf-device-result.js": "140d9fa9e44df192c06c328fe100a99cf601dc442b83ed499b4dcbaeb9b849b5",
+    "site/src/nf-cosine-result.js": "8662e820c683e85294be5d49bc7bb8401d6c7ea92ad19236ff0034ee5d908a39",
+    "site/src/nf-device-manifest.json": "c4e43cc1dbb965bc1ecd4d85e4524bfd18b9f01d6ce071a98c900a334d123c38",
+    "site/public/nf-device": null,
+    "docs/nf-device-reference.md": "8715ee5fc08f278664cce2cf5658aa891241ee6e722e13412063f84e2797b407",
+    "docs/nf-device-reference-plan.md": "1db0bef2895497c22383c05fb6ddf451f8a58c65f6890304a44afc379780d6c6",
+    "tests/test_nf_device.py": "b546480272c7322b44cb160f733c351a4e8be6b8d06f1bc0f726ec632559695d",
+    "tests/nf-device-client.mjs": "b5efbbb621820039c971f98bef78cf4f91f33c3d68900105b297c7d8cd20b5ba",
+    "runs/2026-11-21-nf-device-focused.json": "5971ed190ab9e0767e92c2320f714cace9599beb18a09c4b9c15ad3cf8db1517",
+    "runs/2026-11-21-nf-device-first-review-findings.json": "6ebf5974c7f2e7278f7304ac3f44e9b536adba7bd3c8c5de81f5bfa798e06597"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nf-device-focused.json",
+      "sha256": "5971ed190ab9e0767e92c2320f714cace9599beb18a09c4b9c15ad3cf8db1517"
+    },
+    {
+      "path": "runs/2026-11-21-nf-device-first-review-findings.json",
+      "sha256": "6ebf5974c7f2e7278f7304ac3f44e9b536adba7bd3c8c5de81f5bfa798e06597"
+    }
+  ],
+  "checks": []
+}

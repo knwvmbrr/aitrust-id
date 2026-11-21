@@ -1,0 +1,12 @@
+{
+  "captured_at": "2026-11-21T06:54:59.196058+00:00",
+  "pass": false,
+  "profile": "nov21-accounting-reference-correction/v1",
+  "failure": "raw_CI_review_is_not_a_generic_pass_report",
+  "failed_board_sha256": "c17d14a1f473658b4d7dd0a0022d6761912e1b47f4a2b1098f03385cf7f463a2",
+  "correction": "Removed raw CI metadata from direct closure evidence. The immutable pass closeout review still verifies its exact hash,11requiredchecks and matching tested/merged trees; exact raw review remains in evidence map and scope. No schema or pass flag changed.",
+  "corrected_board_sha256": "59af3967c6a2eb3e62d9adcdd1fcecd8eef5742a944b7388ba87ca4a193a1f11",
+  "original_complete": 132,
+  "original_open": 70,
+  "original_closures": 0
+}

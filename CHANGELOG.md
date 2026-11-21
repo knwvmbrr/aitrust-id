@@ -2,6 +2,150 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-084217-pr138-reviewed-inventory-134c4898
+
+Recorded 2026-11-21T08:42:17.628757+00:00 · Contributor: Codex /root; inventory review /root/seo; code review /root/web_camo · change
+
+- **Changed.** Refreshed the reviewed personal-route source inventory and exact current browser proof references after the draft CI correctly refused the stale manifest.
+- **Evidence.** All five source-bound checks pass, including57 protocol and55 website commands. Distinct review covers1416tracked sources;36 positive/negative boundary controls pass with exact extension/website receipts. The earlier failedCI remains recorded. [Change record](./runs/changes/2026-11-21-084217-pr138-reviewed-inventory-134c4898.json).
+- **Not claimed.** Data/proof correction only; application code, permission boundaries and test thresholds are unchanged. Protected CI still requires the corrected head. No original requirement, independent detector accuracy, physical acceptance or release clearance is granted.
+
+
+### 2026-11-21-081551-nov21-final-prime-attribution-040c4cee
+
+Recorded 2026-11-21T08:15:51.755718+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Prepared deterministic current website assets and policy1.12 archives; marked the new integrated source checks pending instead of reusing older whole-source passes.
+- **Evidence.** The normal website build passes with the NF preview and precise availability copy. Reader scope is consistent at132complete/70open, N01480, and all prior v1.11 policy archives remain unchanged. Independent PS, PII and corrected extension source checks pass. [Change record](./runs/changes/2026-11-21-081551-nov21-final-prime-attribution-040c4cee.json).
+- **Not claimed.** Current protocol and website checks, protected merge and new NF public delivery remain pending. No original closure, detector accuracy, physical acceptance or legal clearance is inferred.
+
+
+### 2026-11-21-080800-nov21-scope-reader-sync-f27315f0
+
+Recorded 2026-11-21T08:08:00.088954+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Synchronized the reader scope ledger and task index with the source-matched Android80-percent milestone and the pending NF/protected delivery work.
+- **Evidence.** The full202-record scope check passes; jobs, outcomes, original acceptance and all tag contracts remain preserved. N014 has implemented mechanism, executable checks and selected runtime integration; final acceptance remains open. [Change record](./runs/changes/2026-11-21-080800-nov21-scope-reader-sync-f27315f0.json).
+- **Not claimed.** Original count remains132 complete and70 open. This does not close N014, release a detector, substitute emulator checks for physical/human acceptance or meet the60 goal.
+
+
+### 2026-11-21-080449-nov21-functional-integration-16da3cfb
+
+Recorded 2026-11-21T08:04:49.184759+00:00 · Contributor: Codex /root PM; Android /root/share_debugger; NF/replay /root/seo; review /root/web_camo · change
+
+- **Changed.** Integrated the source-matched Android Share configuration fix, actual default APK9-case evidence and NF reference workflow, plus finite replay-export verification and versioned factual privacy copy.
+- **Evidence.** All23 Android runtime bindings match the exact imported18targets; API36 original7 plus separate2 cases pass with distinct artifact review. NF actual modal passes both engines and keeps PS/MT operating after optional failures. Replay exact-byte/schema validation now has finite IO/process bounds. Prior policy archives and failed evidence remain intact. [Change record](./runs/changes/2026-11-21-080449-nov21-functional-integration-16da3cfb.json).
+- **Not claimed.** N014 advances20 to80; all70 original requirements remain open and no full tag accuracy release is granted. Final integrated source checks, protected publication and NF live delivery are pending. Physical, TalkBack, outside-user, full licensing/signing and independent accuracy gates remain unchanged.
+
+
+### 2026-11-21-075214-android-default-configuration-nine-pass-4dd57397
+
+Recorded 2026-11-21T07:52:14.988483+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the source-frozen default Android APK execution of all seven original Share controls and two configuration/privacy controls, with exact artifact/source bindings and retained failure history.
+- **Evidence.** Actual API36 run44881591785 passed original7 plus separate2, default probe-marker absence, exact edited draft after recreation and immediate configuration HOME/refocus marker absence; distinct read-only artifact review confirmed the selected evidence. [Change record](./runs/changes/2026-11-21-075214-android-default-configuration-nine-pass-4dd57397.json).
+- **Not claimed.** One selected synthetic API36 emulator execution; historical untraced causes remain qualified. No physical device, external sending-app chooser, human acceptance, independent accuracy, release acceptance, reliability guarantee or full original requirement closure; no scope percentage changed.
+
+
+### 2026-11-21-074832-replay-export-finite-transport-ed7af7c9
+
+Recorded 2026-11-21T07:48:32.115952+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Bound the synthetic browser replay-export validator and replace its writable stdin pipe with an owned finite regular-file descriptor.
+- **Evidence.** Exact downloaded-byte capture and child SHA/schema/source validation; 14 new transport controls plus8 existing unsafe receipt refusals; one actual Chromium replay export pass on the original selected public fixture. Bounded original pipes also passed, so hang cause remains unestablished. [Change record](./runs/changes/2026-11-21-074832-replay-export-finite-transport-ed7af7c9.json).
+- **Not claimed.** Engineering verifier correction only. No product/schema change, source-identity waiver, independent accuracy, reliability guarantee, or original requirement closure. Verification Python must be explicitly available.
+
+
+### 2026-11-21-072103-nf-reference-integration-68d3d6bd
+
+Recorded 2026-11-21T07:21:03.461520+00:00 · Contributor: Codex /root integration; source /root/seo; review /root/web_camo · change
+
+- **Changed.** Integrated the independent NF reference preview into its own lazy modal, normal build, accessibility readiness, source inventory and executable CI gates.
+- **Evidence.** The source is distinctly reviewed and prototype evidence covers21 complete records plus12 refusals per browser, with separate corrected native input controls. All52 existing website commands remain and three NF checks are added. [Change record](./runs/changes/2026-11-21-072103-nf-reference-integration-68d3d6bd.json).
+- **Not claimed.** Current integrated modal, protected checks and public delivery pending. Matching or similar wording does not establish truth. No NF tag, independent accuracy, physical acceptance or original requirement closure.
+
+
+### 2026-11-21-071539-nf-notice-byte-preservation-1d645558
+
+Recorded 2026-11-21T07:15:39.667784+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Preserve the exact copied NF source notice bytes through a single-file whitespace-check exception.
+- **Evidence.** The carried upstream notice bundle retains its original trailing blank line; source text was not normalized to satisfy a source-code whitespace rule. [Change record](./runs/changes/2026-11-21-071539-nf-notice-byte-preservation-1d645558.json).
+- **Not claimed.** Only site/public/nf-device/notices.txt is exempted from whitespace checking; no global exception, legal clearance or acceptance change.
+
+### 2026-11-21-071518-nf-generated-artifact-attribution-2bb2f5e4
+
+Recorded 2026-11-21T07:15:18.966253+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Bind each generated NF payload and exact notice artifact to the scoped implementation record.
+- **Evidence.** The generator created two separate source-bound method bundles and the complete copied source notices; preceding directory-only event did not cover individual generated files and was refused by the changelog gate. [Change record](./runs/changes/2026-11-21-071518-nf-generated-artifact-attribution-2bb2f5e4.json).
+- **Not claimed.** Attribution correction only; no product rerun, release approval or original closure. Actual input and canonical proof remain separately source-bound.
+
+### 2026-11-21-071433-nf-device-worker-handoff-ea2a818d
+
+Recorded 2026-11-21T07:14:33.154001+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Record the corrected NF input lifecycle proof and exact browser outcome accounting; provide the reusable integrated-modal verifier.
+- **Evidence.** Actual affected Chromium/WebKit native input controls retain3000 characters and refuse without workers; reference-only invalid focus repaired. Prior immutable canonical fixture evidence is accurately21 complete plus12 refused outcomes perengine. [Change record](./runs/changes/2026-11-21-071433-nf-device-worker-handoff-ea2a818d.json).
+- **Not claimed.** No unchanged33-case replay; reusable actual-modal helper is syntax-checked and awaits PM mount/build/protected/live verification. No NF verdict, independent accuracy, physical acceptance or original closure.
+
+### 2026-11-21-071231-nf-input-correction-cce75c30
+
+Recorded 2026-11-21T07:12:31.829813+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Correct NF oversized-input preservation and field-specific invalid focus; clarify authored case counts.
+- **Evidence.** Actual original Chromium input path retained only 2000 of 3000 emoji and accepted that clipped input; reference-only error focused Claim. Final affected controls pending. [Change record](./runs/changes/2026-11-21-071231-nf-input-correction-cce75c30.json).
+- **Not claimed.** Prior33-outcome browser evidence remains immutable:21 complete records and12 refusals per engine. No canonical method change, original closure or independent accuracy.
+
+### 2026-11-21-071154-nov21-physical-detach-probe-7fbac7ec
+
+Recorded 2026-11-21T07:11:54.159972+00:00 · Contributor: Codex /root; source review /root/web_camo · change
+
+- **Changed.** Corrected the accessibility verifier to await physical node removal instead of role-locator invisibility, and preserved the failed closeout evidence.
+- **Evidence.** The deterministic hidden-but-connected control reproduces the locator ambiguity. Actual deferred-data lifecycle and unchanged physical control-set mutation pass; a different reviewer checked the verifier-only patch. [Change record](./runs/changes/2026-11-21-071154-nov21-physical-detach-probe-7fbac7ec.json).
+- **Not claimed.** Production UI and accessibility thresholds unchanged. Original timeout ordering unestablished. This is engineering verification, not human screen-reader or full WCAG acceptance; final integrated revalidation remains pending.
+
+### 2026-11-21-070558-nf-device-reference-0f70bba8
+
+Recorded 2026-11-21T07:05:58.452630+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Implement the independent on-device NF claim/reference preview and its authored canonical controls.
+- **Evidence.** 32 focused Python controls; 10 Node groups and 33 authored canonical/refusal cases, including exact ties-even score correction; actual browser evidence remains pending. [Change record](./runs/changes/2026-11-21-070558-nf-device-reference-0f70bba8.json).
+- **Not claimed.** No NF tag, semantic support, independent accuracy, physical-device acceptance, production mount/publication or original closure. Canonical algorithms and CLI unchanged.
+
+### 2026-11-21-065952-nov21-closeout-generated-attribution-6bda4428
+
+Recorded 2026-11-21T06:59:52.307249+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Recorded successful current protocol checks, rebuilt scope derivatives and preserved the website attribution guard refusal before corrected website execution.
+- **Evidence.** The build guard refused unattributed new evidence and generated scope files. Exact current files now have a fresh matching attributed event before another build. [Change record](./runs/changes/2026-11-21-065952-nov21-closeout-generated-attribution-6bda4428.json).
+- **Not claimed.** The refused website run is not a browser success. No product or acceptance change; corrected website and Android runtime evidence remain pending.
+
+### 2026-11-21-065546-nov21-accounting-contract-4614272e
+
+Recorded 2026-11-21T06:55:46.333156+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Corrected closure evidence references to the delivery consumer contract while preserving exact raw CI metadata and every original acceptance criterion.
+- **Evidence.** The accounting gate now verifies fourteen fully delivered scoped jobs and still reports132 complete and70 open original requirements with the60 target unmet. [Change record](./runs/changes/2026-11-21-065546-nov21-accounting-contract-4614272e.json).
+- **Not claimed.** The earlier refused accounting result is preserved. No pass flag, schema, original acceptance or completion percentage was changed; newly assigned NF and Android verification remain incomplete.
+
+### 2026-11-21-065357-nov21-delivery-scope-165497e1
+
+Recorded 2026-11-21T06:53:57.363642+00:00 · Contributor: Codex /root PM with independent /root/seo closeout review · change
+
+- **Changed.** Recorded two fully delivered web software jobs and assigned the next independent NF on-device reference workflow; retained all original scope acceptance.
+- **Evidence.** Actual protected and live publication evidence supports two scoped closures, with a separate counter-review. The board records fourteen scoped jobs and seventy open original requirements. Android remains under runtime verification. [Change record](./runs/changes/2026-11-21-065357-nov21-delivery-scope-165497e1.json).
+- **Not claimed.** No full tag or original requirement closed. NF implementation is newly assigned, not complete. Physical, independent accuracy, licensing and human acceptance gates remain.
+
+### 2026-11-21-065204-nov21-web-publication-162801e9
+
+Recorded 2026-11-21T06:52:04.048788+00:00 · Contributor: Codex /root with /root/web_camo and /root/seo · change
+
+- **Changed.** Published the separately selected MT phone quotation preview and carried website code notices through protected main and verified the actual public delivery.
+- **Evidence.** The tested and merged trees match; eleven required checks pass. Twenty-six critical public files match built bytes across apex/www. Actual Chromium and WebKit run the MT preview, open the notice link and still run PS after optional MT failure. [Change record](./runs/changes/2026-11-21-065204-nov21-web-publication-162801e9.json).
+- **Not claimed.** Two bounded software deliveries only. Independent tag accuracy, physical phone acceptance, full dependency licensing and all seventy open original requirements remain uncompleted; held Android evidence remains separate.
+
+
 ### 2026-11-21-063125-nov21-final-engineering-3f4d2d3b
 
 Recorded 2026-11-21T06:31:25.861395+00:00 · Contributor: /root · change

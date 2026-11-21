@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-11-21T07:58:47.902593+00:00",
+  "pass": false,
+  "profile": "android-integration-guard-correction/v1",
+  "failure": "17_path_handoff_omitted_one_source_bound_test_module",
+  "missing_path": "tests/test_android_emulator_prerequisites.py",
+  "baseline_sha256": "0421e4ab0d4ace5a2c9c26ffece5ed7c1e6eaf3ae88a965074db2e90831a6cde",
+  "required_sha256": "1f8187bf906fd0391cc63180fc03b1e37d91414273138b11b14429d2a43ad07d",
+  "raw_runtime_receipt_unchanged": true,
+  "old_manifest_sha256": "14fbaaeb149c35c648dd47ad447a32af2aa8c05b85867b9fd84e250d63dc0830",
+  "corrected_18_manifest_sha256": "d7f374c9bdd39ed1da31f7eed0b993d35c992036ec480e3c86cf7ea7bf78de6a",
+  "correction": "Copied the exact already-executed frozen test module. All23 runtime bindings now match; no runtime rerun, source weakening or original closure.",
+  "full_requirement_closure": false
+}

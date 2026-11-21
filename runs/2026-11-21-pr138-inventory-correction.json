@@ -1,0 +1,32 @@
+{
+  "captured_at": "2026-11-21T08:42:16.802091+00:00",
+  "pass": true,
+  "profile": "reviewed-boundary-inventory-correction/v1",
+  "reviewed_by": "/root",
+  "distinct_inventory_reviewed_by": "/root/seo",
+  "old_required_CI_failure_preserved": "runs/2026-11-21-pr138-stale-inventory-ci.json",
+  "inventory_review": "runs/2026-11-21-pr138-boundary-inventory-review.json",
+  "reviewed_sources": 1416,
+  "prior_reviewed_sources": 1390,
+  "changed_source_hashes": 24,
+  "added_sources": 26,
+  "removed_sources": 0,
+  "boundary_negative_controls_passed": 36,
+  "boundary_proof": "runs/2026-11-21-nov21-functional-boundaries.json",
+  "all5_engineering_receipts_current": {
+    "PS": "runs/2026-11-21-nov21-next-PS.json",
+    "PII_REDACTED": "runs/2026-11-21-nov21-next-PII_REDACTED.json",
+    "extension": "runs/2026-11-21-nov21-next-extension-corrected.json",
+    "protocol": "runs/2026-11-21-nov21-functional-protocol.json",
+    "website": "runs/2026-11-21-nov21-functional-website.json"
+  },
+  "engineering_receipt_keys": [
+    "extension",
+    "website"
+  ],
+  "application_code_changed": false,
+  "guards_or_thresholds_waived": false,
+  "protected_CI_requires_new_head": true,
+  "full_original_closures": 0,
+  "independent_accuracy_evidence": false
+}

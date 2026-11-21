@@ -28,6 +28,8 @@ public final class CheckActivity extends Activity {
     private Button check,cancel,more;
     private OfflineEngine engine;
     private boolean settingText=false,detailsOpen=false;
+    private boolean viewsReady=false,userLeaving=false;
+    private ConfigurationDraft pendingDraft,transferredDraft;
     private String evidence="";
     private int dp(int value){return Math.round(value*getResources().getDisplayMetrics().density);}
     @SuppressWarnings("deprecation") private int color(int id){return getResources().getColor(id);}
@@ -69,7 +71,7 @@ public final class CheckActivity extends Activity {
             if(proposed.codePointCount(0,proposed.length())>ShareSession.MAX_CODEPOINTS){status.setText("Keep the text under 20,001 characters. The extra text was not added.");return "";}return null;
         }});
         column.addView(editor,new LinearLayout.LayoutParams(-1,dp(180)));
-        TextView privacy=text("Stays on this device. Text clears when you leave this screen.",14);privacy.setTextColor(color(R.color.muted));column.addView(privacy);
+        TextView privacy=text("Stays on this device. Screen changes can keep your draft. Leaving clears text and results. Tap Check for a new result.",14);privacy.setTextColor(color(R.color.muted));column.addView(privacy);
         LinearLayout actions=new LinearLayout(this);actions.setOrientation(LinearLayout.HORIZONTAL);
         check=button("Check PS",R.id.check);Button clear=button("Clear",R.id.clear);cancel=button("Cancel check",R.id.cancel);
         actions.addView(check,new LinearLayout.LayoutParams(0,-2,1));actions.addView(clear,new LinearLayout.LayoutParams(0,-2,1));column.addView(actions);
@@ -86,9 +88,11 @@ public final class CheckActivity extends Activity {
         cancel.setOnClickListener(v->{stopEngine();session.cancel();resetResult();status.setText("Check canceled. You can edit the text or try again.");refresh();});
         more.setOnClickListener(v->{detailsOpen=!detailsOpen;details.setVisibility(detailsOpen?View.VISIBLE:View.GONE);more.setText(detailsOpen?"Hide details":"Why this tag");});
         editor.addTextChangedListener(new TextWatcher(){public void beforeTextChanged(CharSequence s,int st,int c,int a){}public void onTextChanged(CharSequence s,int st,int before,int count){}public void afterTextChanged(Editable value){if(!settingText){stopEngine();session.replace(value.toString());resetResult();status.setText("Text changed. Tap Check for a new result.");refresh();}}});
-        receive(getIntent());
+        viewsReady=true;
+        receiveOrRestore(getIntent(),getLastNonConfigurationInstance());
     }
     private void receive(Intent intent){
+        discardConfigurationDraft();
         stopEngine();session.clear();setText("");resetResult();
         editor.clearFocus();
         ((android.view.inputmethod.InputMethodManager)getSystemService(INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(editor.getWindowToken(),0);
@@ -101,6 +105,16 @@ public final class CheckActivity extends Activity {
             String supplied=value.toString();session.replace(supplied);setText(supplied);status.setText("Text received. Review it, then tap Check.");
         }catch(RuntimeException unsupported){status.setText("Share one plain-text item, up to 20,000 characters. Files and multiple items are not supported.");}
         finally{setIntent(new Intent(Intent.ACTION_MAIN));refresh();}
+    }
+    private void receiveOrRestore(Intent intent,Object retained){
+        // Decide before receive consumes the activity's launch intent to MAIN.
+        boolean restore=intent!=null&&Intent.ACTION_MAIN.equals(intent.getAction());
+        String draft=retained instanceof ConfigurationDraft?((ConfigurationDraft)retained).take():null;
+        receive(intent);
+        if(restore&&ShareSession.validText(draft)){
+            session.replace(draft);setText(draft);resetResult();
+            status.setText("Text received. Review it, then tap Check.");refresh();
+        }
     }
     @Override protected void onNewIntent(Intent intent){super.onNewIntent(intent);receive(intent);}
     private void setText(String value){settingText=true;editor.setText(value);settingText=false;}
@@ -132,8 +146,36 @@ public final class CheckActivity extends Activity {
         engine.start();
     }
     private void stopEngine(){if(engine!=null){engine.stop();engine=null;}}
-    private void wipe(){stopEngine();session.clear();setText("");resetResult();status.setText("Cleared. Your text and result are no longer shown.");refresh();}
-    @Override protected void onStop(){wipe();super.onStop();}
-    @Override protected void onDestroy(){stopEngine();session.clear();super.onDestroy();}
+    private void discardConfigurationDraft(){
+        if(pendingDraft!=null){pendingDraft.discard();pendingDraft=null;}
+        if(transferredDraft!=null){transferredDraft.discard();transferredDraft=null;}
+    }
+    private void wipe(){
+        discardConfigurationDraft();stopEngine();session.clear();
+        if(!viewsReady)return;
+        setText("");resetResult();status.setText("Cleared. Your text and result are no longer shown.");refresh();
+    }
+    @Override protected void onResume(){discardConfigurationDraft();userLeaving=false;super.onResume();}
+    @Override protected void onUserLeaveHint(){userLeaving=true;wipe();super.onUserLeaveHint();}
+    @Override protected void onPause(){
+        ConfigurationDraft next=isChangingConfigurations()&&!isFinishing()&&!userLeaving&&ShareSession.validText(session.text())?new ConfigurationDraft(session.text()):null;
+        wipe();pendingDraft=next;super.onPause();
+    }
+    @Override protected void onStop(){
+        ConfigurationDraft next=isChangingConfigurations()&&!isFinishing()&&!userLeaving?pendingDraft:null;
+        if(next!=null)pendingDraft=null;
+        wipe();pendingDraft=next;super.onStop();
+    }
+    @Override public Object onRetainNonConfigurationInstance(){
+        if(!isChangingConfigurations()||isFinishing()||userLeaving){discardConfigurationDraft();return null;}
+        ConfigurationDraft next=pendingDraft;pendingDraft=null;
+        if(next!=null)transferredDraft=next;
+        return next;
+    }
+    @Override protected void onDestroy(){
+        if(pendingDraft!=null){pendingDraft.discard();pendingDraft=null;}
+        // Framework/new activity owns transferred data; old teardown cannot erase it.
+        transferredDraft=null;stopEngine();session.clear();viewsReady=false;super.onDestroy();
+    }
     @Override protected void onSaveInstanceState(Bundle state){super.onSaveInstanceState(state);state.clear();}
 }

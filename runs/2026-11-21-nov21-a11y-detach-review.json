@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-11-21T07:11:54.121158+00:00",
+  "pass": true,
+  "reviewed_by": "/root/web_camo",
+  "implemented_by": "/root",
+  "source_path": "scripts/verify-site-accessibility.cjs",
+  "source_sha256": "70a7a69c8601a1b6edf4eca361c64f0826e0fd28406f38eb808e065b6043102a",
+  "actual_focused_evidence": {
+    "path": "runs/2026-11-21-nov21-a11y-physical-detach.json",
+    "sha256": "8f1147a95b18d3b2200d757bffd62485bfe868faef9dca9314a1de411de26231"
+  },
+  "peer_scope": "Source review only: captured physical node disconnection wait retains strict control-set mutation; authored hidden-connected control reproduces role-locator ambiguity. No product/timeout/target/focus/height/threshold changes.",
+  "root_actual_execution": "Authored control and actual deferred public-data readiness/control-set mutation pass against the owned built fixture.",
+  "independent_accuracy_evidence": false,
+  "full_WCAG_or_human_acceptance": false
+}

@@ -1,0 +1,111 @@
+{
+  "format": "ai-trust-id-android-background-hosted-failure/v1",
+  "recorded_at": "2026-11-20T17:05:16.918913+00:00",
+  "author": "Codex Debugging Lead",
+  "records": [
+    "N-014"
+  ],
+  "run_id": 44778572444,
+  "job_id": 136434872044,
+  "source_commit": "12f795141370cfc3eff65fc7b1f903a9e50ff88a",
+  "helper_sha256": "10b37854e202aaf842fd7e45ea68bf997877cec97ae9062832f030b46262c31c",
+  "artifact_id": 14650379494,
+  "artifact_zip_bytes": 6385223,
+  "artifact_zip_sha256": "7f7dc94d67cbf5f65d8881c321453fdc815fa6eb557038a78416a474671dbc94",
+  "artifact_api_digest_verified": true,
+  "raw_emulator_report_sha256": "9a70369f1805c1780a0c6e5b2f8fd42af97611ccf60814be4e580329b35bb963",
+  "reported_result": {
+    "format": "ai-trust-id-android-emulator/v1",
+    "recorded_at": "2026-11-20T16:58:18.992989+00:00",
+    "status": "FAILED",
+    "pass": false,
+    "physical_device_evidence": false,
+    "independent_accuracy_evidence": false,
+    "cases": [
+      {
+        "case": "receive_requires_explicit_check",
+        "pass": true
+      },
+      {
+        "case": "actual_offline_ps_finding",
+        "pass": true
+      },
+      {
+        "case": "edit_hides_previous_finding",
+        "pass": true
+      },
+      {
+        "case": "new_share_and_no_finding",
+        "pass": true
+      },
+      {
+        "case": "unsupported_mime_has_no_verdict",
+        "pass": true
+      },
+      {
+        "case": "clear_removes_input_and_result",
+        "pass": true
+      }
+    ],
+    "prerequisites": {
+      "github_hosted_linux": true,
+      "sdkmanager": true,
+      "avdmanager": true,
+      "adb": true,
+      "emulator_preinstalled": false,
+      "aosp_image_preinstalled": false,
+      "kvm_device_exists": true,
+      "kvm_access": true,
+      "existing_license_record": true,
+      "metadata_license_hash_recorded": false,
+      "sdk_writable": true,
+      "sdk_free_bytes": 94242762752
+    },
+    "bound_revisions": {
+      "emulator": "37.3.10",
+      "system-images;android-36;default;x86_64": "2"
+    },
+    "requested_packages": [
+      "emulator",
+      "system-images;android-36;default;x86_64"
+    ],
+    "existing_license_record_sha256": "c43fa37686457c3f18caa3607945f4ec52a9d1beaaad8117e50dc4e863270c85",
+    "sdk_license_acceptance_inferred_from_metadata_hash": false,
+    "phase": "share_controls",
+    "metadata_reviews": [
+      {
+        "package": "emulator",
+        "metadata_sha256": "b97da160df8d80f0fe67739643cb53fbfcafd9c502ef57b78c038645062865ee",
+        "metadata_bytes": 433165,
+        "revision": "37.3.10",
+        "license_sha1": "efa68a6b3c661d18699d5c026771d5911cdc2f83"
+      },
+      {
+        "package": "system-images;android-36;default;x86_64",
+        "metadata_sha256": "7b119fdc282a65432aab52e8bbc64546f7fb6ec74e79e235633c60d06564b111",
+        "metadata_bytes": 189048,
+        "revision": "2",
+        "license_sha1": "efa68a6b3c661d18699d5c026771d5911cdc2f83"
+      }
+    ],
+    "license_record_unchanged": true,
+    "control_stage": "background_cleared_view",
+    "background_owned_task_matches": 5,
+    "background_observation": {
+      "owned_ui_present": true,
+      "ready_text_present": false,
+      "cleared_text_present": false,
+      "synthetic_marker_present": true
+    },
+    "reason": "The owned background-clear control did not complete.",
+    "diagnostic_code": "background_cleared_view_unavailable",
+    "elapsed_seconds": 130.51
+  },
+  "cause_limits": {
+    "onPause_dispatch_observed": false,
+    "onStop_dispatch_observed": false,
+    "lifecycle_root_cause_proven": false,
+    "full_seven_pass": false,
+    "runtime_failure_preserved": true
+  }
+}

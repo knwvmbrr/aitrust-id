@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-075214-android-default-configuration-nine-pass-4dd57397",
+  "recorded_at": "2026-11-21T07:52:14.988483+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3706f99294d4f0872ee87721d1dfbcd8cd965362",
+  "changed": "Recorded the source-frozen default Android APK execution of all seven original Share controls and two configuration/privacy controls, with exact artifact/source bindings and retained failure history.",
+  "proves": "Actual API36 run44881591785 passed original7 plus separate2, default probe-marker absence, exact edited draft after recreation and immediate configuration HOME/refocus marker absence; distinct read-only artifact review confirmed the selected evidence.",
+  "limits": "One selected synthetic API36 emulator execution; historical untraced causes remain qualified. No physical device, external sending-app chooser, human acceptance, independent accuracy, release acceptance, reliability guarantee or full original requirement closure; no scope percentage changed.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "docs/android-share-developer.md": "4dfc0a9015b182d5c103351c1b4188481adc1ad0f7516d17144acdca6cf6c84e",
+    "runs/2026-11-21-android-default-configuration-nine-pass.json": "f1e9170223d275f20f41ccf3101f1711c18edae2a0f0171748d7fb05498ec012"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-default-configuration-nine-pass.json",
+      "sha256": "f1e9170223d275f20f41ccf3101f1711c18edae2a0f0171748d7fb05498ec012"
+    }
+  ],
+  "checks": []
+}

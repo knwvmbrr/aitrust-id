@@ -1,0 +1,63 @@
+{
+  "captured_at": "2026-11-21T07:58:47.902593+00:00",
+  "pass": true,
+  "profile": "android-targeted-integration-review/v1",
+  "reviewed_by": "/root",
+  "implemented_by": "/root/share_debugger",
+  "independent_actual_artifact_reviewed_by": "/root/web_camo",
+  "frozen_runtime_commit": "3706f99294d4f0872ee87721d1dfbcd8cd965362",
+  "bookkeeping_commit": "761f5bd080c78c93d364f61f880ea1a3e9a92d93",
+  "raw_receipt": {
+    "path": "runs/2026-11-21-android-default-configuration-nine-pass.json",
+    "sha256": "f1e9170223d275f20f41ccf3101f1711c18edae2a0f0171748d7fb05498ec012"
+  },
+  "source_sha256": {
+    ".github/workflows/android-share.yml": "536c97412669fa97527a026edd72297d82cf0ad849d6628ca6c0df4c4c923b5a",
+    "docs/android-configuration-handoff-plan.md": "ddb61f7c24a9f66bb6d089070e08b502fe9482055294418763795e70b4d0d4f0",
+    "docs/android-configuration-home-setup-plan.md": "0655b02b9f4dc7e49b38fdd4d76184eb64474c5e6885c53fb51ab97be3edd741",
+    "docs/android-configuration-verifier-visibility-plan.md": "1c474c270aa74897f393446f0b97c72dcaf7784a7e5b71bcb626e58b4a1c57fe",
+    "docs/android-content-margin-gesture-plan.md": "106c45a0b704b09482c531aff414350005dec002333427d186cd35f19ef3790e",
+    "docs/android-intake-provenance-plan.md": "50e7c02e82a9887404610d831fa4006b72d4321f2497b51ff86de10859b5d945",
+    "docs/android-share-developer.md": "4dfc0a9015b182d5c103351c1b4188481adc1ad0f7516d17144acdca6cf6c84e",
+    "mobile/android/src/com/aitrustid/android/CheckActivity.java": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+    "mobile/android/src/com/aitrustid/android/ConfigurationDraft.java": "5fb22a21a6c8ad36b4535e39955ecff4a6baede2e42c43c9648b8149dd52211a",
+    "mobile/android/tests/ShareSessionTest.java": "8089af2b7968c748e82d027107937fb8046235e246f48f0cd3f5437b0ca51dd6",
+    "scripts/android-share-build.py": "8cb6ed20056bbf9d7f69dfb2fb19eaf9c5025eeb44ef8ea3f7d52576ffa1184e",
+    "scripts/verify-android-emulator.py": "8484ae525ef820937f562ce34619525443c7b1cf8053c1a2eddcbbe3f8f27f30",
+    "tests/android/CheckActivity.java": "76e847187c37bf216aaaffb7da71d7b663ffe1cba5c64c17eb4cf7f098d513e7",
+    "tests/android/ConfigurationLifecycleHarness.java": "3e5a6380c5b2b5d5c398a1f4ecacc6bd710c8e2f253f0c4eb3af42de273de707",
+    "tests/test_android_configuration_controls.py": "996514248f6e2bc220d132627aa26fe3da77e405017ad66f0f513de871f9efcb",
+    "tests/test_android_intake_probe.py": "3ceccd81d04d864256a0f57ee6a35cf43529732bc111762356712be1afd16f9f",
+    "tests/test_android_share.py": "d30aa8ead3c9d09700251c6258ca9c193b5142ab2954bd1a652d1285c0bec2d9",
+    "tests/test_android_emulator_prerequisites.py": "1f8187bf906fd0391cc63180fc03b1e37d91414273138b11b14429d2a43ad07d"
+  },
+  "all_runtime_source_bindings_match": true,
+  "runtime_source_bindings_count": 23,
+  "original7_and_separate2_pass": true,
+  "default_no_probe_or_permissions": true,
+  "hosted_focused_tests": {
+    "groups": [
+      10,
+      46,
+      12,
+      20
+    ],
+    "total": 88,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "actual_jvm_fixture": true,
+    "android_framework_claim_from_jvm_fixture": false
+  },
+  "historical_failures_reclassified": false,
+  "shared_state_or_old_pipeline_receipts_imported": false,
+  "physical_device_evidence": false,
+  "independent_accuracy_evidence": false,
+  "release_approved": false,
+  "full_original_closure": false,
+  "limits": [
+    "One API36 emulator execution; no all-startup, all-input-erasure or all-platform reliability guarantee.",
+    "Physical Android/TalkBack, outside-user and full original acceptance remain open.",
+    "Test signing is not production signing, store acceptance or distribution license clearance."
+  ]
+}

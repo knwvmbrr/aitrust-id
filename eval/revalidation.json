@@ -586,7 +586,12 @@
         "tests/test_android_emulator_prerequisites.py",
         "docs/android-share-plan.md",
         "docs/android-share-developer.md",
-        "docs/tag-wave-nov19-integration.md"
+        "docs/tag-wave-nov19-integration.md",
+        "tests/android/*",
+        "tests/test_android_intake_probe.py",
+        "tests/test_android_configuration_controls.py",
+        ".github/workflows/android-share.yml",
+        "docs/android-*.md"
       ],
       "commands": [
         [
@@ -954,6 +959,14 @@
           "tests/test_mt_quotation_workflow.py",
           "tests/test_android_share.py",
           "tests/test_android_emulator_prerequisites.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_android_intake_probe.py",
+          "tests/test_android_configuration_controls.py",
           "-q"
         ]
       ]
@@ -1576,7 +1589,25 @@
         "sbom/notices/manifest.json",
         "sbom/notices/*.txt",
         "sbom/reviews/web-js/**/*",
-        "site/public/web-licenses/*"
+        "site/public/web-licenses/*",
+        "tools/nf_device.py",
+        "scripts/build-nf-device.py",
+        "scripts/build-nf-device-fixture.mjs",
+        "scripts/nf-device-cases.py",
+        "scripts/nf-site-controls.cjs",
+        "scripts/verify-nf-client.cjs",
+        "scripts/verify-nf-device.cjs",
+        "scripts/verify-nf-input.cjs",
+        "scripts/verify-nf-site.cjs",
+        "tests/test_nf_device.py",
+        "tests/nf-device-client.mjs",
+        "site/src/NFExplorer.jsx",
+        "site/src/NFExplorerSlot.jsx",
+        "site/src/nf-*.js",
+        "site/src/nf-device-manifest.json",
+        "site/public/nf-device/*",
+        "site/public/reference/nf-device-reference.md",
+        "docs/nf-device-reference*.md"
       ],
       "commands": [
         [
@@ -1872,6 +1903,21 @@
         [
           "node",
           "scripts/verify-mt-mobile-site.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_nf_device.py",
+          "-q"
+        ],
+        [
+          "node",
+          "scripts/verify-nf-client.cjs"
+        ],
+        [
+          "node",
+          "scripts/verify-nf-site.cjs"
         ]
       ]
     }

@@ -12,6 +12,7 @@ import {presentation} from './presentation.js';
 import {usage} from './usage.js';
 import {MTExplorerSlot} from './MTExplorerSlot.jsx';
 import {HPExplorerSlot} from './HPExplorerSlot.jsx';
+import {NFExplorerSlot} from './NFExplorerSlot.jsx';
 import {CredentialFlowExplorerSlot} from './CredentialFlowExplorerSlot.jsx';
 import {catalogueExport} from './catalogue-export.js';
 import {Performance,PerformanceEvidence,performanceById} from './performance.jsx';
@@ -83,6 +84,7 @@ function TagDetails({tag}) {
   <p data-tag-availability className="mt-2 text-left text-xs leading-5 text-muted">{intro.availability}</p>
   {tag.id==='MT'&&<MTExplorerSlot/>}
   {tag.id==='HP'&&<HPExplorerSlot/>}
+  {tag.id==='NF'&&<NFExplorerSlot/>}
   <UseTag tag={tag}/>
   {tag.id==='PS'&&<PythonFlowPreview/>}
   {intro.working&&<section aria-label="Validation status" className="my-4 rounded-xl border border-line bg-canvas p-4">

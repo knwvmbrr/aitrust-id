@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-074832-replay-export-finite-transport-ed7af7c9",
+  "recorded_at": "2026-11-21T07:48:32.115952+00:00",
+  "author": "Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "319f982558d6eff3fbcc5b67872509dd04a56dfd",
+  "changed": "Bound the synthetic browser replay-export validator and replace its writable stdin pipe with an owned finite regular-file descriptor.",
+  "proves": "Exact downloaded-byte capture and child SHA/schema/source validation; 14 new transport controls plus8 existing unsafe receipt refusals; one actual Chromium replay export pass on the original selected public fixture. Bounded original pipes also passed, so hang cause remains unestablished.",
+  "limits": "Engineering verifier correction only. No product/schema change, source-identity waiver, independent accuracy, reliability guarantee, or original requirement closure. Verification Python must be explicitly available.",
+  "scope_ids": [
+    "F-120",
+    "F-119"
+  ],
+  "files": {
+    "scripts/verify-replay-export.cjs": "28da45c0900cbc824d716548c506d27b5698a5bcaa9fcd2f933c9ec2d0028c21",
+    "scripts/verify-replay-receipt-input.cjs": "d2b6dd6267787cf2f58f215e783c13c4ff438791444e36cdb53de039a7f1a593",
+    "runs/2026-11-21-replay-export-regular-fd-browser.json": "c527b6dfc2ea23898a7e83c88ab6b66774aba7465da9e8507250db0ac4fc0f8c",
+    "runs/2026-11-21-replay-export-transport-correction.json": "df28b22bb53eaac1680fdb3de7dc12d10a4a5b5d1d474e1fa733a7d42906fe1a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-replay-export-regular-fd-browser.json",
+      "sha256": "c527b6dfc2ea23898a7e83c88ab6b66774aba7465da9e8507250db0ac4fc0f8c"
+    },
+    {
+      "path": "runs/2026-11-21-replay-export-transport-correction.json",
+      "sha256": "df28b22bb53eaac1680fdb3de7dc12d10a4a5b5d1d474e1fa733a7d42906fe1a"
+    }
+  ],
+  "checks": []
+}

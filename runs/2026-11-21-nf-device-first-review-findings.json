@@ -1,0 +1,27 @@
+{
+  "profile": "nf-device-first-review-findings/v1",
+  "captured_at": "2026-11-21T07:04:28.298708+00:00",
+  "reviewed_by": "/root/web_camo",
+  "source_sha256": {
+    "site/src/nf-cosine-result.js": "5bb5bcefe23c11208d8e0a5d3c320fd8f05ef1556aa94792471e3e092bb222bb",
+    "site/src/NFExplorerSlot.jsx": "981b4c930d5e79d71475e24438694d5f6a5edc09938bb33e8a4f02842633d278"
+  },
+  "findings": [
+    {
+      "kind": "canonical_valid_score_refused",
+      "python_canonical_score": 0.991821289062,
+      "js_toFixed_score": 0.991821289063,
+      "exact_binary_cosine": 0.9918212890625,
+      "authored_claim": "63 x tokens + a0..a126",
+      "authored_passage": "127 x tokens + a0..a123 + b0..b130",
+      "fix": "Exact binary rational nearest-even12decimal rounding; canonical method unchanged."
+    },
+    {
+      "kind": "unavailable_fallback_guide_missing",
+      "original": "docs/nf-device-explorer.md",
+      "correct": "docs/nf-device-reference.md"
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "actual_browser_execution_claimed": false
+}

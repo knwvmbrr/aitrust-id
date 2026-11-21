@@ -32,6 +32,8 @@ fs.copyFileSync(path.join(repo,'docs/hp-device-explorer.md'),path.join(site,'pub
 execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[path.join(repo,'scripts/build-credential-device.py')],{stdio:'pipe'});
 fs.copyFileSync(path.join(repo,'docs/credential-flow-device.md'),path.join(site,'public/reference/credential-flow-device.md'));
 fs.copyFileSync(path.join(repo,'docs/nf-source-evidence.md'),path.join(site,'public/reference/nf-source-evidence.md'));
+execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[path.join(repo,'scripts/build-nf-device.py')],{stdio:'pipe'});
+fs.copyFileSync(path.join(repo,'docs/nf-device-reference.md'),path.join(site,'public/reference/nf-device-reference.md'));
 fs.copyFileSync(path.join(repo,'docs/fi-citation-sidecar.md'),path.join(site,'public/reference/fi-citation-sidecar.md'));
 fs.copyFileSync(path.join(repo,'docs/fi-citation-sidecar-plan.md'),path.join(site,'public/reference/fi-citation-sidecar-plan.md'));
 fs.copyFileSync(path.join(repo,'docs/mt-evidence-workflow.md'),path.join(site,'public/reference/mt-evidence-workflow.md'));
