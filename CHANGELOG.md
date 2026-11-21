@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-150636-governed-local-organization-policy-edd34e1e
+
+Recorded 2026-11-21T15:06:36.185720+00:00 · Contributor: Codex · change
+
+- **Changed.** Delivered a local owner-controlled tenant policy registry with role-scoped credentials, immutable job revisions, fresh bounded workers, governed private exports and explicit removal; public methods remain independent.
+- **Evidence.** Frozen Mac stdlib execution passed27 groups and73 recorded ordinary CLI operations, including all3 offerings, current authorization, stale/source/worker refusals, private I/O uncertainty and personal PS survival. Distinct source review verified18 bindings and3 affected groups. [Change record](./runs/changes/2026-11-21-150636-governed-local-organization-policy-edd34e1e.json).
+- **Not claimed.** This is a local technical control profile, not real organization identity, employee consent or commercial terms. Historical final human-operation/commercial-conformance acceptance remains open; no full N-010 closure. Linux proof and protected integration remain separate.
+
+
 ### 2026-11-21-151823-remote-connector-direct-linux-proof-a42c214e
 
 Recorded 2026-11-21T15:18:23.315790+00:00 · Contributor: Codex MT/API engineer · change
