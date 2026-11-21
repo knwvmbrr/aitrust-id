@@ -1,0 +1,24 @@
+// Bounded authored native input-path checks, separate from canonical method parity.
+'use strict';
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto'),assert=require('node:assert/strict');
+const {chromium,webkit}=require('playwright'),{startSiteFixture}=require('./site-fixture-server.cjs'),{writeReport}=require('./execution-report.cjs');
+const beforeMode=process.argv.length===3&&process.argv[2]==='--expect-before';if(process.argv.length!==(beforeMode?3:2))throw Error('Unsupported input proof arguments');
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const directory=path.resolve('output/nf-device-fixture');
+const files=fs.readdirSync(path.join(directory,'assets')).filter(p=>/^NFExplorer-.*\.js$/.test(p)).map(p=>'output/nf-device-fixture/assets/'+p);
+const source=['site/src/NFExplorer.jsx','scripts/verify-nf-input.cjs'];
+(async()=>{let fixture,browser;const report={profile:'nf-native-input-path/v1',captured_at:new Date().toISOString(),mode:beforeMode?'original_defect_reproduction':'corrected_affected_controls',pass:false,sources_sha256:Object.fromEntries(source.map(p=>[p,hash(p)])),served_component_sha256:Object.fromEntries(files.map(p=>[p,hash(p)])),engines:[],canonical_method_cohort_rerun:false};
+ try{fixture=await startSiteFixture({directory});for(const [name,engine] of (beforeMode?[['Chromium',chromium]]:[['Chromium',chromium],['WebKit',webkit]])){
+  browser=await engine.launch();const context=await browser.newContext();await context.addInitScript(()=>{window.__inputWorkers=0;const Original=window.Worker;window.Worker=class extends Original{constructor(...args){super(...args);window.__inputWorkers++;}};});const p=await context.newPage();await p.goto(fixture.url);const f=p.locator('[data-nf-explorer]');await f.waitFor();const claim=f.getByLabel('Claim',{exact:true}),passage=f.getByLabel('Reference passage',{exact:true}),run=f.getByRole('button',{name:'Compare passages',exact:true}),result=f.getByRole('region',{name:'Reference comparison result',exact:true});
+  const observations=[];for(const fieldName of (beforeMode?['claim']:['claim','passage'])){
+   await f.getByRole('button',{name:'Clear passages',exact:true}).click();await claim.fill('valid');await passage.fill('valid');const input=fieldName==='claim'?claim:passage;await input.fill('');await input.focus();await p.keyboard.insertText('😀'.repeat(3000));const retained=Array.from(await input.inputValue()).length;const workers=await p.evaluate(()=>window.__inputWorkers);await run.click();
+   if(beforeMode){assert.equal(retained,2000);await result.waitFor({timeout:50000});observations.push({field:fieldName,attempted_codepoints:3000,retained_codepoints:retained,accepted_clipped_result:true});}
+   else{assert.equal(retained,3000);await f.getByRole('alert').waitFor();assert.equal(await result.count(),0);assert.equal(await p.evaluate(()=>window.__inputWorkers),workers);assert(await input.evaluate(e=>e===document.activeElement));assert.equal(await input.getAttribute('aria-invalid'),'true');observations.push({field:fieldName,attempted_codepoints:3000,retained_codepoints:retained,refused_before_worker:true,correct_invalid_focus:true});}
+  }
+  await f.getByRole('button',{name:'Clear passages',exact:true}).click();await claim.fill('valid');await run.click();await f.getByRole('alert').waitFor();const badReference={claim_invalid:await claim.getAttribute('aria-invalid'),reference_invalid:await passage.getAttribute('aria-invalid'),focus:await claim.evaluate(e=>e===document.activeElement)?'claim':await passage.evaluate(e=>e===document.activeElement)?'reference':'other'};
+  if(beforeMode){assert.equal(badReference.claim_invalid,'true');assert.equal(badReference.focus,'claim');}else{assert.equal(badReference.claim_invalid,null);assert.equal(badReference.reference_invalid,'true');assert.equal(badReference.focus,'reference');const described=await passage.getAttribute('aria-describedby');assert(described.includes(await f.getByRole('alert').getAttribute('id')));}
+  report.engines.push({engine:name,observations,bad_reference:badReference,pass:true});await browser.close();browser=null;
+ }
+ assert.deepEqual(Object.fromEntries(source.map(p=>[p,hash(p)])),report.sources_sha256);assert.deepEqual(Object.fromEntries(files.map(p=>[p,hash(p)])),report.served_component_sha256);report.source_and_component_stable=true;report.pass=true;
+ }catch(error){report.error_sha256=crypto.createHash('sha256').update(String(error.message)).digest('hex');console.error('NF native input proof failed');process.exitCode=1;}finally{await browser?.close();await fixture?.close();writeReport(process.env.AITRUST_NF_INPUT_REPORT||'output/verification/nf-input.json',report);console.log(JSON.stringify({pass:report.pass,engines:report.engines,error_sha256:report.error_sha256}));}
+})();

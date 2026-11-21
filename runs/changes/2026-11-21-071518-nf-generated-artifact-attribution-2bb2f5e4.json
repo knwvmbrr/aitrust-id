@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-071518-nf-generated-artifact-attribution-2bb2f5e4",
+  "recorded_at": "2026-11-21T07:15:18.966253+00:00",
+  "author": "Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2aa67779352fa11c303867f52799172ec73ee07c",
+  "changed": "Bind each generated NF payload and exact notice artifact to the scoped implementation record.",
+  "proves": "The generator created two separate source-bound method bundles and the complete copied source notices; preceding directory-only event did not cover individual generated files and was refused by the changelog gate.",
+  "limits": "Attribution correction only; no product rerun, release approval or original closure. Actual input and canonical proof remain separately source-bound.",
+  "scope_ids": [
+    "T-NF",
+    "F-020a"
+  ],
+  "files": {
+    "site/public/nf-device/cosine-41334bcd5ff9a9fe1842fb1d35f8ebe076ab7f35c8b9d667d2d9523e35574332.json": "41334bcd5ff9a9fe1842fb1d35f8ebe076ab7f35c8b9d667d2d9523e35574332",
+    "site/public/nf-device/literal-c26434149b752d6eba0ba0aefb8cf0a3d9a334035426911f6d5e17896bccb5c7.json": "c26434149b752d6eba0ba0aefb8cf0a3d9a334035426911f6d5e17896bccb5c7",
+    "site/public/nf-device/notices.txt": "4e6aea2bb109f3296bf135b3174f7cad6ba4f13de1cc036c129d414eab0d488b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nf-device-focused.json",
+      "sha256": "5971ed190ab9e0767e92c2320f714cace9599beb18a09c4b9c15ad3cf8db1517"
+    },
+    {
+      "path": "runs/2026-11-21-nf-device-browser-candidate-1.json",
+      "sha256": "cde61d7dd8f4f270e6125c1e10cd413af5d0e5c8018a6093eae491ab79ba5aba"
+    }
+  ],
+  "checks": []
+}

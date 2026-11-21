@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-071433-nf-device-worker-handoff-ea2a818d",
+  "recorded_at": "2026-11-21T07:14:33.154001+00:00",
+  "author": "Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2aa67779352fa11c303867f52799172ec73ee07c",
+  "changed": "Record the corrected NF input lifecycle proof and exact browser outcome accounting; provide the reusable integrated-modal verifier.",
+  "proves": "Actual affected Chromium/WebKit native input controls retain3000 characters and refuse without workers; reference-only invalid focus repaired. Prior immutable canonical fixture evidence is accurately21 complete plus12 refused outcomes perengine.",
+  "limits": "No unchanged33-case replay; reusable actual-modal helper is syntax-checked and awaits PM mount/build/protected/live verification. No NF verdict, independent accuracy, physical acceptance or original closure.",
+  "scope_ids": [
+    "T-NF",
+    "F-020a"
+  ],
+  "files": {
+    "scripts/nf-site-controls.cjs": "6646fbb5014255cc398d211ded04503036a7ac44110c99082982fbab2a4d5e13",
+    "scripts/verify-nf-site.cjs": "90bcc156552f957bb9c0242f598de9a1e8df4f2b036ca8a974ed2ed544e7446e",
+    "scripts/verify-nf-input.cjs": "07350578400aabc9187c83530bbc5d81baeb1f70ae11a97b511f84b7a5308f08",
+    "scripts/verify-nf-device.cjs": "cf58be89fb1709aff3aeabfcfa679698ca57583787cee1cdcbb8c231be638f5a",
+    "site/src/NFExplorer.jsx": "8638194d959b25726d1ae0194226f652c27d5e0d120dfeb65d41980ff66c3935",
+    "docs/nf-device-reference-result.md": "2e6d1ea1f295d087aa4a8aae734d76593c65a3da9dd327c35b9b4576d6576a03",
+    "runs/2026-11-21-nf-input-corrected.json": "e21bede2a7659f842b99ef53bfdf6336ed26177c2fb6523ad3a8f3b7f9c43bc7",
+    "runs/2026-11-21-nf-device-correction-accounting.json": "493dfcd8fc96c1e511d3d01314f6664fa5f090377a68ac3b35501fb918fbe0df",
+    "runs/2026-11-21-nf-device-browser-candidate-1.json": "cde61d7dd8f4f270e6125c1e10cd413af5d0e5c8018a6093eae491ab79ba5aba"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nf-input-corrected.json",
+      "sha256": "e21bede2a7659f842b99ef53bfdf6336ed26177c2fb6523ad3a8f3b7f9c43bc7"
+    },
+    {
+      "path": "runs/2026-11-21-nf-device-correction-accounting.json",
+      "sha256": "493dfcd8fc96c1e511d3d01314f6664fa5f090377a68ac3b35501fb918fbe0df"
+    },
+    {
+      "path": "runs/2026-11-21-nf-device-browser-candidate-1.json",
+      "sha256": "cde61d7dd8f4f270e6125c1e10cd413af5d0e5c8018a6093eae491ab79ba5aba"
+    }
+  ],
+  "checks": []
+}

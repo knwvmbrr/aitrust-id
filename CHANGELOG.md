@@ -2,6 +2,38 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-071539-nf-notice-byte-preservation-1d645558
+
+Recorded 2026-11-21T07:15:39.667784+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Preserve the exact copied NF source notice bytes through a single-file whitespace-check exception.
+- **Evidence.** The carried upstream notice bundle retains its original trailing blank line; source text was not normalized to satisfy a source-code whitespace rule. [Change record](./runs/changes/2026-11-21-071539-nf-notice-byte-preservation-1d645558.json).
+- **Not claimed.** Only site/public/nf-device/notices.txt is exempted from whitespace checking; no global exception, legal clearance or acceptance change.
+
+### 2026-11-21-071518-nf-generated-artifact-attribution-2bb2f5e4
+
+Recorded 2026-11-21T07:15:18.966253+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Bind each generated NF payload and exact notice artifact to the scoped implementation record.
+- **Evidence.** The generator created two separate source-bound method bundles and the complete copied source notices; preceding directory-only event did not cover individual generated files and was refused by the changelog gate. [Change record](./runs/changes/2026-11-21-071518-nf-generated-artifact-attribution-2bb2f5e4.json).
+- **Not claimed.** Attribution correction only; no product rerun, release approval or original closure. Actual input and canonical proof remain separately source-bound.
+
+### 2026-11-21-071433-nf-device-worker-handoff-ea2a818d
+
+Recorded 2026-11-21T07:14:33.154001+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Record the corrected NF input lifecycle proof and exact browser outcome accounting; provide the reusable integrated-modal verifier.
+- **Evidence.** Actual affected Chromium/WebKit native input controls retain3000 characters and refuse without workers; reference-only invalid focus repaired. Prior immutable canonical fixture evidence is accurately21 complete plus12 refused outcomes perengine. [Change record](./runs/changes/2026-11-21-071433-nf-device-worker-handoff-ea2a818d.json).
+- **Not claimed.** No unchanged33-case replay; reusable actual-modal helper is syntax-checked and awaits PM mount/build/protected/live verification. No NF verdict, independent accuracy, physical acceptance or original closure.
+
+### 2026-11-21-071231-nf-input-correction-cce75c30
+
+Recorded 2026-11-21T07:12:31.829813+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Correct NF oversized-input preservation and field-specific invalid focus; clarify authored case counts.
+- **Evidence.** Actual original Chromium input path retained only 2000 of 3000 emoji and accepted that clipped input; reference-only error focused Claim. Final affected controls pending. [Change record](./runs/changes/2026-11-21-071231-nf-input-correction-cce75c30.json).
+- **Not claimed.** Prior33-outcome browser evidence remains immutable:21 complete records and12 refusals per engine. No canonical method change, original closure or independent accuracy.
+
 ### 2026-11-21-071154-nov21-physical-detach-probe-7fbac7ec
 
 Recorded 2026-11-21T07:11:54.159972+00:00 · Contributor: Codex /root; source review /root/web_camo · change
@@ -10,6 +42,13 @@ Recorded 2026-11-21T07:11:54.159972+00:00 · Contributor: Codex /root; source re
 - **Evidence.** The deterministic hidden-but-connected control reproduces the locator ambiguity. Actual deferred-data lifecycle and unchanged physical control-set mutation pass; a different reviewer checked the verifier-only patch. [Change record](./runs/changes/2026-11-21-071154-nov21-physical-detach-probe-7fbac7ec.json).
 - **Not claimed.** Production UI and accessibility thresholds unchanged. Original timeout ordering unestablished. This is engineering verification, not human screen-reader or full WCAG acceptance; final integrated revalidation remains pending.
 
+### 2026-11-21-070558-nf-device-reference-0f70bba8
+
+Recorded 2026-11-21T07:05:58.452630+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Implement the independent on-device NF claim/reference preview and its authored canonical controls.
+- **Evidence.** 32 focused Python controls; 10 Node groups and 33 authored canonical/refusal cases, including exact ties-even score correction; actual browser evidence remains pending. [Change record](./runs/changes/2026-11-21-070558-nf-device-reference-0f70bba8.json).
+- **Not claimed.** No NF tag, semantic support, independent accuracy, physical-device acceptance, production mount/publication or original closure. Canonical algorithms and CLI unchanged.
 
 ### 2026-11-21-065952-nov21-closeout-generated-attribution-6bda4428
 
@@ -19,7 +58,6 @@ Recorded 2026-11-21T06:59:52.307249+00:00 · Contributor: Codex /root · change
 - **Evidence.** The build guard refused unattributed new evidence and generated scope files. Exact current files now have a fresh matching attributed event before another build. [Change record](./runs/changes/2026-11-21-065952-nov21-closeout-generated-attribution-6bda4428.json).
 - **Not claimed.** The refused website run is not a browser success. No product or acceptance change; corrected website and Android runtime evidence remain pending.
 
-
 ### 2026-11-21-065546-nov21-accounting-contract-4614272e
 
 Recorded 2026-11-21T06:55:46.333156+00:00 · Contributor: Codex /root · change
@@ -28,7 +66,6 @@ Recorded 2026-11-21T06:55:46.333156+00:00 · Contributor: Codex /root · change
 - **Evidence.** The accounting gate now verifies fourteen fully delivered scoped jobs and still reports132 complete and70 open original requirements with the60 target unmet. [Change record](./runs/changes/2026-11-21-065546-nov21-accounting-contract-4614272e.json).
 - **Not claimed.** The earlier refused accounting result is preserved. No pass flag, schema, original acceptance or completion percentage was changed; newly assigned NF and Android verification remain incomplete.
 
-
 ### 2026-11-21-065357-nov21-delivery-scope-165497e1
 
 Recorded 2026-11-21T06:53:57.363642+00:00 · Contributor: Codex /root PM with independent /root/seo closeout review · change
@@ -36,7 +73,6 @@ Recorded 2026-11-21T06:53:57.363642+00:00 · Contributor: Codex /root PM with in
 - **Changed.** Recorded two fully delivered web software jobs and assigned the next independent NF on-device reference workflow; retained all original scope acceptance.
 - **Evidence.** Actual protected and live publication evidence supports two scoped closures, with a separate counter-review. The board records fourteen scoped jobs and seventy open original requirements. Android remains under runtime verification. [Change record](./runs/changes/2026-11-21-065357-nov21-delivery-scope-165497e1.json).
 - **Not claimed.** No full tag or original requirement closed. NF implementation is newly assigned, not complete. Physical, independent accuracy, licensing and human acceptance gates remain.
-
 
 ### 2026-11-21-065204-nov21-web-publication-162801e9
 

@@ -1,0 +1,34 @@
+{
+  "profile": "nf-native-input-path/v1",
+  "captured_at": "2026-11-21T07:12:04.291Z",
+  "mode": "original_defect_reproduction",
+  "pass": true,
+  "sources_sha256": {
+    "site/src/NFExplorer.jsx": "34de9e1ae5d603f4f260f179f44c757abfac64102e6bef9e30d11b8e08521d37",
+    "scripts/verify-nf-input.cjs": "07350578400aabc9187c83530bbc5d81baeb1f70ae11a97b511f84b7a5308f08"
+  },
+  "served_component_sha256": {
+    "output/nf-device-fixture/assets/NFExplorer-WG04YSO9.js": "e5580e2a6139d1c404c1ee9f980ce94b8cefb5b76198266496d1efb13ad9560b"
+  },
+  "engines": [
+    {
+      "engine": "Chromium",
+      "observations": [
+        {
+          "field": "claim",
+          "attempted_codepoints": 3000,
+          "retained_codepoints": 2000,
+          "accepted_clipped_result": true
+        }
+      ],
+      "bad_reference": {
+        "claim_invalid": "true",
+        "reference_invalid": "true",
+        "focus": "claim"
+      },
+      "pass": true
+    }
+  ],
+  "canonical_method_cohort_rerun": false,
+  "source_and_component_stable": true
+}

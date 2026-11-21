@@ -1,0 +1,45 @@
+{
+  "format": "nf-device-source-manifest/v1",
+  "runtime": "314.0.7",
+  "runtime_path": "/device/runtime-314.0.7/",
+  "checks": {
+    "literal": {
+      "path": "/nf-device/literal-c26434149b752d6eba0ba0aefb8cf0a3d9a334035426911f6d5e17896bccb5c7.json",
+      "bundle_sha256": "c26434149b752d6eba0ba0aefb8cf0a3d9a334035426911f6d5e17896bccb5c7",
+      "bundle_bytes": 168499,
+      "sources": {
+        "tools/nf_device.py": "0a0285890cb608e7451ee72b03027b2ef4062b94a925c89d4e98a2f9f80da2e3",
+        "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+        "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+        "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+        "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+        "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+        "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+        "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb"
+      },
+      "method": "corpus-query-case-sensitive-nonoverlapping/v1"
+    },
+    "cosine": {
+      "path": "/nf-device/cosine-41334bcd5ff9a9fe1842fb1d35f8ebe076ab7f35c8b9d667d2d9523e35574332.json",
+      "bundle_sha256": "41334bcd5ff9a9fe1842fb1d35f8ebe076ab7f35c8b9d667d2d9523e35574332",
+      "bundle_bytes": 173115,
+      "sources": {
+        "tools/nf_device.py": "0a0285890cb608e7451ee72b03027b2ef4062b94a925c89d4e98a2f9f80da2e3",
+        "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+        "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+        "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+        "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+        "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+        "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+        "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+        "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb"
+      },
+      "method": "corpus-support-ascii-cosine/1.0.0"
+    }
+  },
+  "normalization_id": "NFC-Unicode-15.0.0/v1",
+  "max_codepoints": 2000,
+  "max_bytes": 8000
+}

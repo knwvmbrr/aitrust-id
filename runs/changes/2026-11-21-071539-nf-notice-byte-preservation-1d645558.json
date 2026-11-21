@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-071539-nf-notice-byte-preservation-1d645558",
+  "recorded_at": "2026-11-21T07:15:39.667784+00:00",
+  "author": "Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2aa67779352fa11c303867f52799172ec73ee07c",
+  "changed": "Preserve the exact copied NF source notice bytes through a single-file whitespace-check exception.",
+  "proves": "The carried upstream notice bundle retains its original trailing blank line; source text was not normalized to satisfy a source-code whitespace rule.",
+  "limits": "Only site/public/nf-device/notices.txt is exempted from whitespace checking; no global exception, legal clearance or acceptance change.",
+  "scope_ids": [
+    "T-NF",
+    "F-057"
+  ],
+  "files": {
+    ".gitattributes": "26e1ea5c099c4978541fc98be3beed087636c4836b70768601385052ff50e7fd"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nf-device-browser-candidate-1.json",
+      "sha256": "cde61d7dd8f4f270e6125c1e10cd413af5d0e5c8018a6093eae491ab79ba5aba"
+    }
+  ],
+  "checks": []
+}
