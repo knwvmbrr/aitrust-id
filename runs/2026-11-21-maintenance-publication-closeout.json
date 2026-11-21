@@ -1,0 +1,38 @@
+{
+  "captured_at": "2026-11-21T12:42:16.374024+00:00",
+  "pass": true,
+  "kind": "existing_scope_maintenance_publication",
+  "source_commit": "872607f9ab409fbfec55dfee59cdbf62e265a04c",
+  "tested_head": "baace80600ed6fbd8feb3b2d37ee17246c789c09",
+  "protected_tested_tree_equal": true,
+  "original_complete": 132,
+  "original_open": 70,
+  "new_original_closures": 0,
+  "closed_scoped_jobs": 19,
+  "new_scoped_tasks": 0,
+  "goal60_met": false,
+  "enhancement_AI_tools_software_acceptance": 100,
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-pr141-required-ci-review.json",
+      "sha256": "88542899b4f87a21c8a8f30d86e9b1dc70d2a17e3091bcc24647682d71b30df5"
+    },
+    {
+      "path": "runs/2026-11-21-android-pr141-automatic-review.json",
+      "sha256": "000a7bcb0075dd86676e3258347f950cc98c262c79f37d65f7ce221abb12fe50"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-maintenance-publication.json",
+      "sha256": "353956701ddaa3cf9b1afad99b1ccbae6fb27b1c8095cba84908c2c1b1b0299e"
+    },
+    {
+      "path": "runs/2026-11-21-maintenance-portable-inventory-review.json",
+      "sha256": "4e6f4280805ddae20e5c7dd5cca3dbd353050eecf05247068ee499a4b6ff4a8c"
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "physical_phone_tested": false,
+  "human_screen_reader_tested": false,
+  "full_WASM_or_global_redistribution_clearance": false,
+  "claim": "MT full-input contract, source delivery and real Android Sharesheet software controls are protected/published; original semantic, independent, human and operating acceptance remains preserved."
+}

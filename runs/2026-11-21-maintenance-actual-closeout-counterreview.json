@@ -1,0 +1,71 @@
+{
+  "profile": "maintenance-public-closeout-distinct-peer-review/v1",
+  "captured_at": "2026-11-21T12:45:24.508164+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/web_camo",
+  "source_commit": "872607f9ab409fbfec55dfee59cdbf62e265a04c",
+  "tested_head": "baace80600ed6fbd8feb3b2d37ee17246c789c09",
+  "reviewed_evidence_and_metadata_sha256": {
+    "runs/2026-11-21-nov21-maintenance-publication.json": "353956701ddaa3cf9b1afad99b1ccbae6fb27b1c8095cba84908c2c1b1b0299e",
+    "runs/2026-11-21-pr141-required-ci-review.json": "88542899b4f87a21c8a8f30d86e9b1dc70d2a17e3091bcc24647682d71b30df5",
+    "runs/2026-11-21-android-pr141-automatic-review.json": "000a7bcb0075dd86676e3258347f950cc98c262c79f37d65f7ce221abb12fe50",
+    "runs/2026-11-21-maintenance-publication-closeout.json": "0bd2e9c060f6b893327d4f11098eddd44117f09f92f750d800b296af16ab09da",
+    "state.json": "89e47c11728ab765edd2834491ae5740c388cac0f33c24e6282678d8508cec18",
+    "docs/scope-progress.json": "e15e38624b1d5d00d30ae8a415843b9f148f96161057197a5420c64a4603cc6e",
+    "docs/session-delivery.json": "46cb759962dd80734c2d8eb8f240b9498143d2b242e6096b64781fe5be2f6a75"
+  },
+  "confirmed": {
+    "critical_HTTP_rows_exact_retained_dist": 72,
+    "origins": 2,
+    "actual_HP_MT_NF_both_engines": true,
+    "noJS_source_downloads": true,
+    "required_checks": 11,
+    "tested_and_merge_trees_equal": true,
+    "Android_focused": 112,
+    "Android_runtime_cases": 20,
+    "Android_source_bindings": 32,
+    "original_scope_records": 202,
+    "original_complete": 132,
+    "original_open": 70,
+    "scoped_jobs_closed": 19,
+    "new_tasks": 0,
+    "API_tools_enhancement": 100,
+    "API_original_completed_criterion_and_prior_nextfix_preserved": true,
+    "original_acceptance_percentages_and_master_unchanged": true,
+    "all_predeclared_task_criteria_preserved": true,
+    "prior_phase_metadata_fulfilled_by_actual872_source": true
+  },
+  "current_capability_receipts": {
+    "PS": {
+      "path": "runs/2026-11-21-maintenance-final-PS.json",
+      "sha256": "74359b1c622cf5a3a070375e85b7f924c9ecfec7762f70a1521846650470fa5b",
+      "commands": 7
+    },
+    "PII_REDACTED": {
+      "path": "runs/2026-11-21-maintenance-final-PII_REDACTED.json",
+      "sha256": "9a0052ab9c6d7080e00643526762b71547ac71b9d3684a4f991ab89d4771de93",
+      "commands": 6
+    },
+    "extension": {
+      "path": "runs/2026-11-21-maintenance-final-extension.json",
+      "sha256": "ed47acdea3cc98fbd000ce88fd359970928fcadc50ac5e8b79722801816be520",
+      "commands": 14
+    },
+    "protocol": {
+      "path": "runs/2026-11-21-maintenance-final-protocol-portable.json",
+      "sha256": "d11d6749dcef397bf85525ec05c0f1d03eef30f4198979864e46b07934a43634",
+      "commands": 61
+    },
+    "website": {
+      "path": "runs/2026-11-21-maintenance-final-website.json",
+      "sha256": "f9ad0b054af0aab6e65b8f41ade1a193458b486af07d3fabc89c288413fe44db",
+      "commands": 59
+    }
+  },
+  "reviewer_comparison_note": "Initial comparison incorrectly expected completed enhancement criterion to remain in open required_acceptance; verified its exact preservation under completed_acceptance and prior_next_fix. No product defect.",
+  "limits": [
+    "Read retained proof/source/metadata/localdist only; no new network/browser/tests/download/VM/SDK/build.",
+    "Critical selectedHTTP equivalence only, not fullsite artifact equivalence; pendingmetadatafollowup not a new runtime deployment.",
+    "Original60target remains unmet; no human/physical/independentaccuracy/globalWASMlicenseclearance/fulltagrelease."
+  ]
+}

@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-124849-verified-maintenance-publication-closeout-5175a661
+
+Recorded 2026-11-21T12:48:49.085713+00:00 · Contributor: Codex /root; reviews /root/web_camo and /root/share_debugger · change
+
+- **Changed.** Published and independently reconciled MT whole-input behavior, actual Android Sharesheet controls and exact runtime source/notice delivery after protected PR141.
+- **Evidence.** Actual live Chromium/WebKit HP/MT/NF workflows, source downloads with JavaScript disabled and72 selected HTTP byte comparisons pass. Exact-head Android112 plus all selected runtime cases and all11 protected checks pass; all five current-source receipts and1486-source boundary remain current. Scope remains132complete70open and19scoped; existing API/MCP enhancement100. [Change record](./runs/changes/2026-11-21-124849-verified-maintenance-publication-closeout-5175a661.json).
+- **Not claimed.** The60-open original goal is NOT MET. No new original/scoped task or full tag, physical/human, independent accuracy, global native/WASM or license clearance is credited. F030 DOM choice is authorized by its existing criterion but live interactive evidence remains pending.
+
+
+### 2026-11-21-123536-protected-maintenance-merge-review-cd3d2024
+
+Recorded 2026-11-21T12:35:36.355599+00:00 · Contributor: Codex /root; actual Android workflow reviewer /root/share_debugger · change
+
+- **Changed.** Recorded the normal protected PR141 merge and exact-head actual112-test Android emulator review before maintenance deployment.
+- **Evidence.** All eleven required checks pass onbaace806; merged872607f has the identical tested tree. Android112/112 plus all original/configuration/malformed/OSchooser cases executed with zero new permissions. Current five source receipts remain passing. [Change record](./runs/changes/2026-11-21-123536-protected-maintenance-merge-review-cd3d2024.json).
+- **Not claimed.** Actual public maintenance assets/browser workflows are the next gate. No independent accuracy, physical device/human or original requirement closure is claimed.
+
+
 ### 2026-11-21-121621-portable-protocol-current-evidence-sealed-72121f0a
 
 Recorded 2026-11-21T12:16:21.686982+00:00 · Contributor: Codex /root; inventory /root/seo; correction /root/share_debugger; review /root/web_camo · change
