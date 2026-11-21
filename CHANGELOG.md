@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-161541-api-packet-filter-probe-contract-7e43ca75
+
+Recorded 2026-11-21T16:15:41.620518+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Corrected the actual-isolation verifier to recognize bounded packet-filter timeout only with positive outside controls before and after.
+- **Evidence.** Actual first private activation retained correct limits/BPF/mount flags but timed out inside the cgroup while the same owned target connected outside.3 focused closed-record/refusal groups and distinct review pass; permission-only assumption is removed without changing unit/network policy. [Change record](./runs/changes/2026-11-21-161541-api-packet-filter-probe-contract-7e43ca75.json).
+- **Not claimed.** First activation refused before public firewall/proxy changes and was rolled back. This is one selected-target engineering probe, not universal network/kernel causation evidence; corrected activation/publicTLS remains pending.
+
+
 ### 2026-11-21-160614-remote-api-activation-guards-a7dbfbf3
 
 Recorded 2026-11-21T16:06:14.718026+00:00 · Contributor: Codex API deployment engineer · change
