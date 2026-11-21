@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-160024-prove-live-browser-tag-lifecycle-7bd7f4bf
+
+Recorded 2026-11-21T16:00:24.398118+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Observed the installed completed-response DOM adapter on the authorized existing public Homebrew answer, real temporary gateway outage, recovery and final pause.
+- **Evidence.** Actual Chrome attached compact PS and PII, opened PS details, removed stale findings on unavailable service, recovered on the same response and confirmed checks paused. [Change record](./runs/changes/2026-11-21-160024-prove-live-browser-tag-lifecycle-7bd7f4bf.json).
+- **Not claimed.** One supported live response; no stream-hook, independent accuracy, outside-user or physical-device acceptance. Full original closure awaits distinct review.
+
+
+### 2026-11-21-153129-prove-signed-capture-service-and-paused-source-2e22b53f
+
+Recorded 2026-11-21T15:31:29.063230+00:00 · Contributor: Codex PM /root; mounted-source review /root/seo · change
+
+- **Changed.** Restore a separately isolated signed current-source capture test service and reload the existing installed extension while keeping capture paused.
+- **Evidence.** Six authenticated schema and failure/recovery controls pass; distinct review matches sixteen source inputs in running containers, and the actual Chrome source path and paused reload are observed. [Change record](./runs/changes/2026-11-21-153129-prove-signed-capture-service-and-paused-source-2e22b53f.json).
+- **Not claimed.** The service is remote through a disclosed loopback SSH test forward; no live-vendor capture, new browser trust, human validation, production deployment or original closure is claimed.
+
+
 ### 2026-11-21-151957-local-policy-linux-executed-and-reviewed-8d495fcb
 
 Recorded 2026-11-21T15:19:57.010071+00:00 · Contributor: Codex · change

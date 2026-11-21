@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "kind": "candidate_dependency_ip_recovery",
+  "prior": {
+    "anonymizer": {
+      "configured_address_matched_running_peer": true
+    },
+    "evaluator": {
+      "configured_address_matched_running_peer": false
+    }
+  },
+  "after": {
+    "anonymizer": {
+      "explicit_static_address_configured": true
+    },
+    "evaluator": {
+      "explicit_static_address_configured": true
+    }
+  },
+  "existing_stack_targeted": false,
+  "evaluator_restart_address_stable": true,
+  "candidate_health_recovered": true,
+  "old_stack_healthy": true
+}

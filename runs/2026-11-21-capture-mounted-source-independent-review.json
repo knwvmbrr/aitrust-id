@@ -1,0 +1,70 @@
+{
+  "pass": true,
+  "role_bindings": {
+    "gateway": {
+      "actual_selected_file_sha256": {
+        "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+        "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+        "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+        "protocol/transport_signing.py": "381238a51b786ae394753e43c4f6fa2a99fa4f20e8e938980bb74203fa2e685c",
+        "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+        "services/gateway/app.py": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456",
+        "services/gateway/healthcheck.py": "315976f84ed54bd0de5c8a3b58bc73806a17de6ff16388528f79530ace1eaac3",
+        "services/gateway/requirements.lock": "230b685d1c222b0bb59562ee046090debc4e75ef55a7c651819f5ae066042b59"
+      },
+      "nonsecret_source_binds_readonly": true,
+      "selected_image_matches": true,
+      "owned_label_matches": true
+    },
+    "anonymizer": {
+      "actual_selected_file_sha256": {
+        "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+        "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+        "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+        "protocol/transport_signing.py": "381238a51b786ae394753e43c4f6fa2a99fa4f20e8e938980bb74203fa2e685c",
+        "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+        "services/anonymizer/app.py": "2df4afaeee0a2ca4ca2b2b0032f4b38e4b68e2e6c3e2f01361166f54291fd77c",
+        "services/anonymizer/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+        "services/anonymizer/requirements.lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+        "services/anonymizer/model_identity.py": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+        "services/anonymizer/replay_metadata.py": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5"
+      },
+      "nonsecret_source_binds_readonly": true,
+      "selected_image_matches": true,
+      "owned_label_matches": true
+    },
+    "evaluator": {
+      "actual_selected_file_sha256": {
+        "protocol/http_privacy.py": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+        "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+        "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+        "protocol/transport_signing.py": "381238a51b786ae394753e43c4f6fa2a99fa4f20e8e938980bb74203fa2e685c",
+        "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+        "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+        "services/evaluator/healthcheck.py": "bc841b0f02f1241fbebf94cda916594c7ddd2d6c2c7841cc9ee9e6bdc8a72c8b",
+        "services/evaluator/requirements.lock": "7c55a71d58bdc3587aff25f9d6fed9abf1b6b851fa4b0fe2c516f47ddb6a8af2"
+      },
+      "nonsecret_source_binds_readonly": true,
+      "selected_image_matches": true,
+      "owned_label_matches": true
+    }
+  },
+  "profile": "f030-actual-mounted-source-independent-review/v1",
+  "captured_at": "2026-11-21T15:15:29.450016+00:00",
+  "reviewer": "Codex /root/seo",
+  "qualified_service_receipt_sha256": "fdd79bca5e94ed2de2c83cea7975cd0d9226df50c88780f727282b71571278b5",
+  "source_base": "e8287050493f3f30b6c92967beed224a6c8b4dc3",
+  "distinct_current_source_count": 16,
+  "actual_role_file_occurrences": 26,
+  "actual_current_local_source_matches": true,
+  "source_stable": true,
+  "service_cases_repeated": false,
+  "service_mutated": false,
+  "old_stack_targeted": false,
+  "browser_used": false,
+  "F030_closed": false,
+  "limits": [
+    "Read-only exact-owned container inspect and selected-file hashing; no evaluation requests, credentials, browser, lifecycle or configuration changes.",
+    "The retained signed six-case qualifier is distinct execution evidence; these additional reads verify active mounted bytes, not vendor capture or full-original completion."
+  ]
+}
