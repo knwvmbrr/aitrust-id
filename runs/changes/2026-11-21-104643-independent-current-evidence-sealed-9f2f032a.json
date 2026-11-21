@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-104643-independent-current-evidence-sealed-9f2f032a",
+  "recorded_at": "2026-11-21T10:46:43.674973+00:00",
+  "author": "Codex /root; reviewers /root/seo /root/web_camo /root/share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "905e371591d025ea7124110acdede856d40f0411",
+  "changed": "Sealed all five passing current-source capability receipts and the independently reviewed 1467-file finite source inventory after correcting the stale HP SEO expectation.",
+  "proves": "PS 7, PII 6, extension 14, protocol 60 and website 59 command receipts pass against their current source fingerprints; the failed website candidate remains immutable.",
+  "limits": "Engineering checks only. Protected CI and public delivery remain pending. All 202 original acceptance contracts and 132 complete / 70 open counts remain unchanged.",
+  "scope_ids": [
+    "F-018",
+    "F-057",
+    "N-014",
+    "X-02"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "ca57f69702f9d4c0bfc29916d73d6c0b994687041f3123aba250dc9721c03c70",
+    "state.json": "024fc019706c402cb0c4aa35461a7e4a11c8884a401c52585e1495efa5f31218",
+    "runs/2026-11-21-independent-final-PS.json": "369a7ac3cd7e06d6df0033b8ffbdf88dc9f8c8a2a1f97d6b8730bdbb90a9ba95",
+    "runs/2026-11-21-independent-final-PII_REDACTED.json": "99a1347e71d4ace7aedc00c47a2648a151f0b4ac623a465165ba76a02770ac32",
+    "runs/2026-11-21-independent-final-extension.json": "296761b1039e94c34de48b333d7b0e8355784a856ced0f4d778e67e6dbcb5002",
+    "runs/2026-11-21-independent-final-protocol.json": "e8958a701bba3904817da57faa28be1476f734f0d1a1bf89d80c6e7854aead65",
+    "runs/2026-11-21-independent-final-website.json": "be50a0b4a2fbb4d7e61ef62d8d2cdf6914270ceb4f5bd8b38c95aa4a3ac0ec18",
+    "runs/2026-11-21-independent-finite-inventory-review.json": "59bde636ba800295e6d79c247c38c60d0780eeabe5348881d8db57834f45c051"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-independent-final-website.json",
+      "sha256": "be50a0b4a2fbb4d7e61ef62d8d2cdf6914270ceb4f5bd8b38c95aa4a3ac0ec18"
+    },
+    {
+      "path": "runs/2026-11-21-independent-finite-inventory-review.json",
+      "sha256": "59bde636ba800295e6d79c247c38c60d0780eeabe5348881d8db57834f45c051"
+    }
+  ],
+  "checks": []
+}

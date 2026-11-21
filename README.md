@@ -82,6 +82,7 @@ Native sharing is development work, not a public App Store/Play release. The
 [Android Share preview](docs/android-share-developer.md) includes source, exact
 offline assets and a hosted test-APK build; physical-phone/TalkBack acceptance
 remains open.
+The HP panel also has an optional [uncertainty-word explorer](docs/hp-uncertainty-device.md): open it, paste a passage and explicitly select its context. It counts listed words without deciding that a claim is true or needs hedging. The [selected browser-runtime JS source bundle](docs/pyodide-js-source-delivery.md) carries exact preferred files and notices; full dependency obligations remain separate.
 [Architecture, privacy boundaries and acceptance](docs/handheld-delivery.md).
 
 ## Try the local checker

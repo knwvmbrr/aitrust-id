@@ -2,6 +2,78 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-104643-independent-current-evidence-sealed-9f2f032a
+
+Recorded 2026-11-21T10:46:43.674973+00:00 · Contributor: Codex /root; reviewers /root/seo /root/web_camo /root/share_debugger · change
+
+- **Changed.** Sealed all five passing current-source capability receipts and the independently reviewed 1467-file finite source inventory after correcting the stale HP SEO expectation.
+- **Evidence.** PS 7, PII 6, extension 14, protocol 60 and website 59 command receipts pass against their current source fingerprints; the failed website candidate remains immutable. [Change record](./runs/changes/2026-11-21-104643-independent-current-evidence-sealed-9f2f032a.json).
+- **Not claimed.** Engineering checks only. Protected CI and public delivery remain pending. All 202 original acceptance contracts and 132 complete / 70 open counts remain unchanged.
+
+
+### 2026-11-21-103123-independent-seo-preview-copy-correction-ba2466f6
+
+Recorded 2026-11-21T10:31:23.855552+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Corrected SEO assertions that still expected the earlier number-only HP preview after adding the independently isolated uncertainty-word preview.
+- **Evidence.** Actual 11 SEO metadata controls and built36-page metadata/20tag summary checks now pass. Existing Coming Soon/formal-name/no-certification/no-truth-verification assertions are retained. The earlier failed59-command receipt is preserved. PS, PII, extension and60-command protocol receipts still match their exact fingerprints and are reused. [Change record](./runs/changes/2026-11-21-103123-independent-seo-preview-copy-correction-ba2466f6.json).
+- **Not claimed.** Only the affected website capability needs fresh execution; no product-method, accuracy, original acceptance or release gate was changed. Protected/public delivery and70-to60 target remain pending.
+
+
+### 2026-11-21-101944-independent-final-source-review-recorded-8f0f8ddb
+
+Recorded 2026-11-21T10:19:44.458037+00:00 · Contributor: Codex /root; final source reviews /root/web_camo, /root/seo and /root/share_debugger · change
+
+- **Changed.** Preserved all three distinct final source reviews and updated current pending-delivery state after source-contract corrections.
+- **Evidence.** All prior commands, original202criteria, policy history, worker snapshots and local/host rules remain required. The HP review omits only its private local worktree path, with exact original digest retained and no new execution claimed. [Change record](./runs/changes/2026-11-21-101944-independent-final-source-review-recorded-8f0f8ddb.json).
+- **Not claimed.** Current60-command protocol and59-command website final executions, protected integration and publication remain pending. Zero new original closures or independent/human/legal clearance.
+
+
+### 2026-11-21-101629-independent-final-disclosure-and-worker-accounting-86e3fa5d
+
+Recorded 2026-11-21T10:16:29.631580+00:00 · Contributor: Codex /root; review /root/web_camo and /root/share_debugger · change
+
+- **Changed.** Required the new HP disclosure only on HP, closed and unmounted by default, and preserved the stale Android active-worker assignment verbatim in history while making the current reviewed/unassigned route explicit.
+- **Evidence.** Static review caught the added-disclosure count mismatch and an ambiguous historical worker field before final execution. Every original record/criterion remains intact; previous active snapshot is retained as historical evidence, not erased. [Change record](./runs/changes/2026-11-21-101629-independent-final-disclosure-and-worker-accounting-86e3fa5d.json).
+- **Not claimed.** No new runtime, independent accuracy or original closure is asserted by these bookkeeping and expected-markup corrections. Global source execution and protected/public release remain pending.
+
+
+### 2026-11-21-101442-independent-wave-peer-guard-corrections-b08705fb
+
+Recorded 2026-11-21T10:14:42.041666+00:00 · Contributor: Codex /root; source review /root/web_camo and /root/share_debugger · change
+
+- **Changed.** Aligned the existing HP checks with the actual expanded planned-preview copy and included the real synthetic sender source directory in both Android workflow triggers.
+- **Evidence.** Peer source review caught two stale literal-only text expectations and a future sender-only trigger gap before global execution. Existing planned-tag/no-verdict checks, old runtime cases, SDK permissions and all deadlines remain required. [Change record](./runs/changes/2026-11-21-101442-independent-wave-peer-guard-corrections-b08705fb.json).
+- **Not claimed.** Source/coverage corrections, not new runtime or independent-accuracy evidence. Protected/current-source/public execution remains pending;70 original requirements stay open.
+
+
+### 2026-11-21-101211-independent-wave-reviewed-source-freeze-0b1b2f65
+
+Recorded 2026-11-21T10:12:11.181646+00:00 · Contributor: Codex /root integration; /root/seo NF profile; /root/web_camo and /root/share_debugger reviews · change
+
+- **Changed.** Combined reviewed HP/runtime/Android handoffs and the evidence-based capacity-gated NF verifier correction; retained all old commands, limits and acceptance, and updated current delivery status before final source execution.
+- **Evidence.** Integrated HP both-engine proof, actual Android7+2+9pairs, exact runtime5/3 artifact gate and distinct reviews pass. Selected hosted NF executes allcases within143.498seconds of the unchanged180-second deadline; local remains sequential. All202 records and132/70 accounting preserved;154 focused integration checks and12 inert controller checks pass. [Change record](./runs/changes/2026-11-21-101211-independent-wave-reviewed-source-freeze-0b1b2f65.json).
+- **Not claimed.** Historical failed metadataCI, serial deadline and workflow-context error remain visible; no retroactive product-cause, accuracy, physical/human, fullWASM or legal clearance. The three new software jobs remain in_review until protected/public delivery. Final all-capability source checks are still pending.
+
+
+### 2026-11-21-095325-independent-tag-current-checks-af2a0c34
+
+Recorded 2026-11-21T09:53:25.674891+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Registered additive HP/runtime/Android source checks while preserving every existing capability command; Android automatic path filters and preflight now include the new intent helper and its 14 focused groups.
+- **Evidence.** The actual integrated HP modal passes Chromium/WebKit canonical, refusal, privacy, cancellation, reflow and actual sibling-recovery controls. Normal built runtime exactly matches five pinned files and three source artifacts; policy1.12 archives remain unchanged. [Change record](./runs/changes/2026-11-21-095325-independent-tag-current-checks-af2a0c34.json).
+- **Not claimed.** Current whole-source capability execution, corrected Linux NF suite, protected integration and public delivery remain pending. This adds verification coverage, not independent accuracy or a full original closure.
+
+
+### 2026-11-21-094529-independent-hp-runtime-integration-6bb2a320
+
+Recorded 2026-11-21T09:45:29.439511+00:00 · Contributor: Codex /root PM; HP /root/web_camo; runtime /root/seo; review /root/share_debugger · change
+
+- **Changed.** Mounted a separate deferred HP uncertainty-word preview, added its build and guide flow, and carried the reviewed runtime JS source artifacts through exact postbuild/predeploy gates and public links.
+- **Evidence.** Standalone HP source and both-browser controls pass; selected runtime producer and actual artifact checks pass with corrected coherent-rebind refusal. Shared source review preserves prior commands and independence; a discovered relative guide target is now published, and both deferred forms retain absent-child/dead-expansion controls. [Change record](./runs/changes/2026-11-21-094529-independent-hp-runtime-integration-6bb2a320.json).
+- **Not claimed.** Integrated normal build/browser, current all-capability evidence, protected merge and public delivery remain pending. No full HP, contextual accuracy, physical or legal/WASM/global-distribution acceptance. Original70 target60 remains unmet.
+
+
 ### 2026-11-21-093723-android-malformed-hosted-eighteen-controls-abd3676e
 
 Recorded 2026-11-21T09:37:23.074562+00:00 · Contributor: Codex · change

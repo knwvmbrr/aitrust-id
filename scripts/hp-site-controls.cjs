@@ -25,7 +25,7 @@ async function verifyHPSite(browser,base){
   const response=await page.goto(base+'/#person/HP');
   assert(response.headers()['content-security-policy']?.includes("script-src 'self'"),'Built-site CSP missing');
   const modal=page.getByRole('dialog',{name:'Claim details',exact:true}),form=modal.locator('[data-hp-explorer]');await form.waitFor();
-  assert((await modal.locator('[data-tag-availability]').innerText()).includes('Planned tag · Literal-detail preview available.'),'HP preview availability misleading');
+  assert((await modal.locator('[data-tag-availability]').innerText()).includes('Planned tag · Detail and uncertainty-word previews available.'),'HP preview availability misleading');
   assert((await modal.locator('[data-tag-limit]').innerText()).includes('full HP tag is still planned'),'HP release claim changed');
   await modal.getByText('How it works',{exact:true}).click();assert((await modal.innerText()).includes('Formal tag name: Hallucination possible.'),'HP formal name lost');await modal.getByText('How it works',{exact:true}).click();
   assert((await form.innerText()).includes('No HP tag is issued.'),'HP preview lost the tag boundary');

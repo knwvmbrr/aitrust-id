@@ -1,0 +1,62 @@
+{
+  "profile": "android-malformed-hosted-independent-review/v1",
+  "captured_at": "2026-11-21T09:35:27.546244+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/web_camo",
+  "runtime_commit": "c5f6204f37bdf94ed7192bddec8428223eed21f0",
+  "run_id": 44889760925,
+  "inputs": {
+    "artifact.zip": {
+      "bytes": 6387930,
+      "sha256": "6d18af9982083aa8e8e92b91718738d878a4a4e58f486ed35aa029051f837a9b"
+    },
+    "emulator.json": {
+      "bytes": 13285,
+      "sha256": "d66c7e28d4d4e11b52fbd5adfe2b78c9ac4ea18f68243a2cdc33076ee5325dd4"
+    },
+    "build.json": {
+      "bytes": 2255,
+      "sha256": "7dcfc37c19aae2b57aac24f4dea6653c022cebbc9beb5af2903409c16b4085d3"
+    },
+    "preparation.json": {
+      "bytes": 546,
+      "sha256": "afbf7f191300260bc886af40bbfcb7e261e9d7da08984ba5e76f50a12af9580b"
+    },
+    "engine-parity.json": {
+      "bytes": 685,
+      "sha256": "99174cda72d43c01d00c3ec0c6f6077864f18806f9bf3b6d58dcf85d32d20e26"
+    },
+    "ai-trust-id-ci-test.apk": {
+      "bytes": 6444652,
+      "sha256": "9e8574c0043050f446b9e2b969a24a58c76e1b26d2a5108cb948c7a1d6d170f5"
+    },
+    "job.log": {
+      "bytes": 73300,
+      "sha256": "079dcae5a9beecaf1e93f0c1fbb5bbb30f0736ab7dc292c62595a15f53d5feb3"
+    }
+  },
+  "observed": {
+    "original7": true,
+    "configuration2": true,
+    "exact_edit_receipt_reassertion": true,
+    "fresh_marker_setup_HOME_absence": true,
+    "invalid_refusal_fresh_recovery_pairs": 9,
+    "strict_advancing_dispatch_frames": 19,
+    "first_create_then18_new_intent": true,
+    "differentUID": true,
+    "sender_permissions": 0,
+    "native_source_bindings": 14,
+    "intent_source_bindings": 6,
+    "all_bindings_match_immutable_runtime": true,
+    "defaultDEX_probe_and_sender_markers_absent": true,
+    "hosted_existing_tests": 88,
+    "new14tests_hosted_claimed": false
+  },
+  "limits": [
+    "One actual API36 hosted candidate; no physical phone, human accessibility, independent accuracy or broad Android reliability claim.",
+    "Sender START_RETURNED attests dispatch callback, not receipt; actual checker UI refusal/recovery predicates independently passed.",
+    "Build JSON binds unsigned APK; retained runtime APK is separately CI-signed and has its own SHA.",
+    "Prior failed first-pair candidate remains immutable; its product/driver root cause is not established.",
+    "No new download, browser, SDK, emulator or source mutation performed by reviewer."
+  ]
+}

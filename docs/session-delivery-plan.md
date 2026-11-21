@@ -1,3 +1,13 @@
+# Current independent integration — 2026-11-21T10:00:20.708615+00:00
+
+Three independently usable software jobs are in review: actual HP-modal uncertainty-word exploration, selected browser-runtime source/notice delivery, and Android malformed-Share refusal/recovery. The combined normal build, actual HP modal in both engines, exact runtime artifact gate and separate Android API36 execution pass with distinct review. These are not protected/public completion claims yet.
+
+**16 closed scoped jobs; 132 complete /70 open originals. No new original closure; target60 remains NOT MET.** The full original acceptance and prior failures remain intact. The website suite's Linux aggregate180-second budget stopped a progressing two-engine NF check. The bounded hosted-only correction completed every test on the measured4CPU host in143.498seconds under the unchanged180-second budget; local runs stay sequential and every assertion/deadline remains required. Source fixes and tests do not create independent accuracy or human evidence.
+
+Root owns shared integration and publication. HP and Android specialists have returned reviewed handoffs; their completed lanes are not background daemons. The NF verification follow-up is also reviewed; no specialist is being described as an always-running background process. [Architecture and risks](independent-delivery-nov21-next.md) · [Actual integrated HP proof](../runs/2026-11-21-hp-next-integrated-site.json) · [Distinct shared review](../runs/2026-11-21-hp-runtime-independent-review.json).
+
+## Preserved earlier dated snapshots
+
 # Current delivery — 2026-11-21T09:02:00.648138+00:00
 
 The repaired Android Share source is published after actual API36 execution of seven original controls and two separate configuration/privacy controls. Its draft now survives configuration-only recreation; prior results are discarded and the tested leaving/refocus path clears the synthetic marker. Physical Android/TalkBack, outside-user, broader startup/sender and production distribution acceptance remain open.

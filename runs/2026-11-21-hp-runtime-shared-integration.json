@@ -1,0 +1,55 @@
+{
+  "captured_at": "2026-11-21T09:50:23.457869+00:00",
+  "pass": true,
+  "implemented_by": "/root",
+  "specialists": [
+    "/root/web_camo",
+    "/root/seo",
+    "/root/share_debugger"
+  ],
+  "profile": "independent-hp-runtime-shared-integration/v1",
+  "actual_HP_modal": {
+    "path": "runs/2026-11-21-hp-next-integrated-site.json",
+    "sha256": "32b85fcf9a4f7314edc506bca3eadec9352695ba101ef52a9e38402bda1b31bf"
+  },
+  "actual_normal_build_exit": 0,
+  "actual_runtime_postbuild_gate": {
+    "exact_runtime_files": 5,
+    "exact_source_artifacts": 3,
+    "bundle_sha256": "0ab9f83496de972e9976677e2729d4931460f1c6cbb29b67de068454975fa412"
+  },
+  "HP_payload_members": 2,
+  "existing_policy1_12_immutable": {
+    "site/public/reference/policies/access/v1.12.txt": "d6afc6fbc68bea77ccaaa681398453b445e4879978b42370cd2edf5e8ad8ea9f",
+    "site/public/reference/policies/community/v1.12.txt": "d98c70c09efdcfdd68953cce0e2d708282f7c8f5d384fa1c00c671817d1f7e19",
+    "site/public/reference/policies/contributing/v1.12.txt": "53e97e855840439c96a5ea2e558ace96fd7bebd0b24ce47d3e3e4346a89467ab",
+    "site/public/reference/policies/governance/v1.12.txt": "f7157456afab204d0d29a6ffa782fa83b1158b0d0684e58368080ac70535dbbc",
+    "site/public/reference/policies/licenses/v1.12.txt": "2dd9602d34539ee61d080709c77cd91d8290e6e0a97c021482c73dc9642a5acd",
+    "site/public/reference/policies/privacy/v1.12.txt": "d82b1e4d950464296a78d1c1e285ebb242ec5fbe91889b39b1d772030a3b9a02",
+    "site/public/reference/policies/security/v1.12.txt": "ead8a8031d215f48f9c7aa4a165c35c0224c3bcf08bdc35d8d1f283153b0916f",
+    "site/public/reference/policies/terms/v1.12.txt": "3a7684e77885cc18be9a9e0bc228c90a0e2f69b5291e389fa81110887be488fd",
+    "site/public/reference/policies/validation/v1.12.txt": "0e99314db7b86c0b11bfc1c77ae7c407d0f79de923046aef63f6549cfaa6610f"
+  },
+  "new_policy_version": "1.13",
+  "new_collection_or_training_consent": false,
+  "new_service_or_capture_permissions": false,
+  "guide_relative_target_published": true,
+  "deferred_readiness_controls": {
+    "pass": true,
+    "tested_markers": [
+      "data-credential-method",
+      "data-hp-uncertainty-method"
+    ],
+    "authored_absent_child_reproduced": true,
+    "waited_for_actual_child": true,
+    "unchanged_height_assertion_passed": true,
+    "dead_expansion_still_refused": true,
+    "product_source_changed": false
+  },
+  "independent_accuracy_evidence": false,
+  "physical_device_acceptance": false,
+  "full_WASM_source_claim": false,
+  "legal_clearance": false,
+  "original_closures": 0,
+  "protected_public_delivery_pending": true
+}

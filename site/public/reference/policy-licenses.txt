@@ -1,5 +1,5 @@
 Licenses and notices
-AI TRUST ID · Version 1.12 · Effective 2026-11-21
+AI TRUST ID · Version 1.13 · Effective 2026-11-21
 Published by AI Trust ID.
 
 Actual texts governing source, specification, runtime and typeface.
@@ -18,9 +18,11 @@ Specification license notice: /reference/spec-license.txt
 CC BY 4.0 legal text: https://creativecommons.org/licenses/by/4.0/legalcode.en
 
 Browser runtime and font
-The device runtime and self-hosted typeface retain their upstream notices. Component licensing is separate from tag validation and from a future certification mark.
+The device runtime and self-hosted typeface retain their upstream notices. The selected JavaScript source bundle carries ten preferred source files, the pinned upstream source archive and verbatim MPL/MIT notices, including its vendored ports. This selected bundle does not assert full WASM corresponding-source coverage, compiler reproduction or overall license clearance. Component licensing is separate from tag validation and from a future certification mark.
 
 Pyodide MPL-2.0: /device-licenses/pyodide-MPL-2.0.txt
 Python notices: /device-licenses/python-license.txt
 Runtime provenance: /device-licenses/source.txt
+Selected runtime source bundle: /runtime-js-sources/PYODIDE-JS-SOURCES.zip
+Selected runtime notices: /runtime-js-sources/NOTICES.txt
 Nunito Sans SIL OFL: /fonts/OFL.txt

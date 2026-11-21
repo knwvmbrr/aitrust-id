@@ -1,5 +1,5 @@
 Privacy and data use
-AI TRUST ID · Version 1.12 · Effective 2026-11-21
+AI TRUST ID · Version 1.13 · Effective 2026-11-21
 Published by AI Trust ID.
 
 What stays on your device, what hosts receive and what sharing means.
@@ -46,13 +46,14 @@ PS input is processed in the page and a self-hosted browser worker. Answer text 
 Try PS: /#person/PS
 
 Optional on-device method previews
-The wording, literal-detail, Python-code and NF reference previews process the text you supply in separate browser workers. They do not upload your inputs, save them automatically or grant research or training permission. NF compares two passages you explicitly paste; it does not fetch or authenticate your reference. Runtime and selected method files are downloaded from this site.
+The wording, literal-detail, Python-code and NF reference previews process the text you supply in separate browser workers. They do not upload your inputs, save them automatically or grant research or training permission. NF compares two passages you explicitly paste; it does not fetch or authenticate your reference. The optional HP uncertainty-word check also uses your explicit choice of a whole passage as context; it does not infer where uncertainty is needed. Runtime and selected method files are downloaded from this site.
 
 Technical details stay closed until you choose to open them. They can include matching words, input fingerprints and character positions that may reveal or link information. Editing, clearing, changing the selected check or closing its preview cancels pending work and removes the prior result from that preview. This describes application state, not physical memory erasure. Similar wording does not establish factual support or truth.
 
 NF comparison guide: /reference/nf-device-reference.md
 Wording preview guide: /reference/mt-device-explorer.md
 Literal-detail guide: /reference/hp-device-explorer.md
+Uncertainty-word guide: /reference/hp-uncertainty-device.md
 Python-code preview guide: /reference/credential-flow-device.md
 
 Local service and extension

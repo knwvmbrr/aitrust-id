@@ -138,11 +138,11 @@
       "tag_id": "T-NF",
       "bot_id": "tag_nf",
       "actual_worker": null,
-      "status": "published",
-      "checked_at": "2026-11-21T09:02:00.648138+00:00",
-      "current_component_status": "Optional on-device selected claim/reference comparison is public and verified in Chromium/WebKit. Exact words and word overlap are separate observations, not an NF, truth or source-authenticity verdict.",
+      "status": "reviewed",
+      "checked_at": "2026-11-21T10:12:11.136863+00:00",
+      "current_component_status": "NF preview remains live. Its bounded hosted verifier completed every case in143.498seconds with unchanged180second budget on the measured4CPU host; explicithosted2only, local1default. No NF, accuracy or original-cause conclusion added.",
       "blocking_acceptance": "Selected reference/NLI and caller-declared citation components exist; claim-specific reference selection, contradiction-versus-missing-evidence labels, calibrated accepted tag mapping and supported human operation remain.",
-      "next_task": "Further contextual claim support and independent/human acceptance remain; optional preview does not issue NF."
+      "next_task": "PM completes current-source and protected/public integration of the reviewed verification profile."
     },
     {
       "tag_id": "T-FI",
@@ -157,12 +157,12 @@
     {
       "tag_id": "T-HP",
       "bot_id": "tag_hp",
-      "actual_worker": "/root/web_camo",
-      "status": "active",
-      "checked_at": "2026-11-21T09:02:00.648138+00:00",
-      "current_component_status": "Reviewed bounded method component published; full tag remains unvalidated.",
+      "actual_worker": null,
+      "status": "reviewed",
+      "checked_at": "2026-11-21T10:00:20.708615+00:00",
+      "current_component_status": "Both standalone and actual integrated HP-modal uncertainty-word controls pass; protected/public delivery pending. No HP, truth or inferred need-for-uncertainty verdict.",
       "blocking_acceptance": "Literal quantities/hedges and selected-pair NLI observations exist; expected uncertainty, contextual specificity, representative independent errors, accepted HP mapping and full human integration remain.",
-      "next_task": "New caller-selected uncertainty-word device explorer; unchanged canonical observation, explicit annotation, no inferred truth or HP verdict. Isolated worker lane; no final acceptance yet."
+      "next_task": "Complete current-source/protected/public delivery; preserve full independent/contextual/human criteria."
     },
     {
       "tag_id": "T-MT",
@@ -1005,7 +1005,7 @@
         "T-HP"
       ],
       "worker": "/root/web_camo",
-      "status": "active",
+      "status": "in_review",
       "deliverable": "Optional caller-selected on-device uncertainty-word explorer with explicit annotated passage; preserve canonical method and independent existing HP/PS/MT behavior.",
       "done_evidence": [
         "Architecture and limits before implementation; raw/frozen-NFC/source/annotation-bound closed canonical records.",
@@ -1015,7 +1015,9 @@
       "assigned_at": "2026-11-21T09:02:00.648138+00:00",
       "source_base": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
       "blocker": null,
-      "next_unblocked_task": "session-android-malformed-share"
+      "next_unblocked_task": "session-android-malformed-share",
+      "current_status": "Standalone21record/10refusal per-engine proof and actual HP-modal three-record/private/lifecycle/peer-recovery checks pass with distinct review. Closed/deferred UI, normal build and source/notice links work. Current-source global checks and protected/public delivery remain pending.",
+      "evidence_review": "runs/2026-11-21-hp-runtime-independent-review.json"
     },
     {
       "task_id": "session-android-malformed-share",
@@ -1024,7 +1026,7 @@
         "F-142"
       ],
       "worker": "/root/share_debugger",
-      "status": "active",
+      "status": "in_review",
       "deliverable": "Real default-APK malformed-intent refusal and valid fresh-Share recovery, using a separate owned zero-permission synthetic sender.",
       "done_evidence": [
         "Preserve original7 plus2 configuration/privacy controls unchanged; add separately named real hostile payload cases.",
@@ -1034,6 +1036,29 @@
       "assigned_at": "2026-11-21T09:02:00.648138+00:00",
       "source_base": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
       "blocker": null,
+      "next_unblocked_task": "session-hp-device-uncertainty",
+      "current_status": "Actual reviewed API36 old7+2 and new9 authored refusal/fresh-recovery pairs pass with19 advancing dispatch receipts. The failed zero-pair sender candidate is preserved. Integrated automatic workflow now includes14 focused groups; new source-bound/protected publication still pending.",
+      "evidence_review": "runs/2026-11-21-android-malformed-independent-review.json"
+    },
+    {
+      "task_id": "session-pyodide-js-source-delivery",
+      "original_ids": [
+        "F-057",
+        "X-02"
+      ],
+      "worker": "/root/seo",
+      "status": "in_review",
+      "deliverable": "Carry the selected pinned Pyodide JavaScript preferred sources and verbatim MPL/MIT notices in the actual website artifact, with an exact current-runtime consumer gate and discoverable source links.",
+      "done_evidence": [
+        "Pre-implementation plan and source-reviewed cached archive replay bind all five shipped runtime members, ten preferred source files and exact verbatim notice bytes.",
+        "Normal build emits the deterministic bounded bundle and exact three artifacts; postbuild/predeploy consumers refuse absent, altered, coherently rebound or extra artifacts. Retain the demonstrated bypass and correction.",
+        "Different source/actual-artifact review, current-source/protected checks and actual public file/link delivery precede software closure. No full WASM source, legal/global-route or full-original acceptance is claimed."
+      ],
+      "architecture": "docs/pyodide-js-source-plan.md",
+      "registered_at": "2026-11-21T10:00:20.708615+00:00",
+      "blocker": null,
+      "current_status": "36 focused and11 actual artifact controls plus distinct coherent-rebind review pass; normal combined build and actual5runtime/3outputs gate pass with source review. Protected/public delivery remains pending.",
+      "evidence_review": "runs/2026-11-21-pyodide-js-source-independent-review.json",
       "next_unblocked_task": "session-hp-device-uncertainty"
     }
   ],
@@ -5679,7 +5704,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-21T09:02:00.648138+00:00",
+  "updated_at": "2026-11-21T10:16:00.652798+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T09:02:00.648138+00:00",
     "protected_source_commit": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
@@ -5694,7 +5719,7 @@
     "wave_id": "2026-11-19-ps-mt-android",
     "started_at": "2026-11-19T18:24:57.745970+00:00",
     "source_commit": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-    "status": "NF on-device preview and repaired Android Share software published from protected source; HP uncertainty and malformed Android Share followups independently assigned. Original70/target60 unmet.",
+    "status": "Allthree specialist handoffs reviewed; PM final combined source/protected/public verification pending. Original70 target60 unmet.",
     "goal": "Advance original70 toward60; count only full functioning original acceptance. Skip final owner/external gates and continue independent engineering.",
     "immutable_session_baseline_retained": "3716233b9460efa57c1f0d01bfe30989395efcc4",
     "prior_closed_scoped_tasks_retained": 9,
@@ -5991,13 +6016,14 @@
     {
       "route": "Android Share",
       "original_id": "N-014",
-      "actual_worker": "/root/share_debugger",
-      "status": "active",
-      "checked_at": "2026-11-20T18:05:03.124014+00:00",
-      "task_id": "session-android-runtime-integration",
-      "scope": "Bounded diagnostic followup after first-receive failure. Owned Ready UI was observed without synthetic text; zero runtime cases completed and exact cause remains unestablished. No Android correction is accepted on this branch.",
-      "candidate_head": "cad8bfb28b44ab5257dcb07d0c5823275626b98b",
-      "hosted_run": 44787621743
+      "actual_worker": null,
+      "status": "reviewed",
+      "checked_at": "2026-11-21T10:16:00.652798+00:00",
+      "task_id": "session-android-malformed-share",
+      "scope": "Selected API36 old7+2 and9authored malformed/refusal/fresh-recovery pairs pass with19actual advancing dispatches and distinct review. Root current workflow adds14focused groups and complete trigger coverage; final protected/current-source publication remains pending. Physical/TalkBack/outside-user acceptance is still open.",
+      "candidate_head": "c5f6204f37bdf94ed7192bddec8428223eed21f0",
+      "hosted_run": 44889760925,
+      "evidence": "runs/2026-11-21-android-malformed-intent-hosted-pass.json"
     }
   ],
   "closeout_history": [
@@ -6042,6 +6068,25 @@
         "status": "active_at_snapshot",
         "scope": "One changed-source DEFAULT APK run with all original7 plus2 configuration/privacy controls. No owner input needed; real physical/TalkBack/outside acceptance stays open."
       }
+    }
+  ],
+  "delivery_route_assignment_history": [
+    {
+      "preserved_at": "2026-11-21T10:16:00.652525+00:00",
+      "assignments": [
+        {
+          "route": "Android Share",
+          "original_id": "N-014",
+          "actual_worker": "/root/share_debugger",
+          "status": "active",
+          "checked_at": "2026-11-20T18:05:03.124014+00:00",
+          "task_id": "session-android-runtime-integration",
+          "scope": "Bounded diagnostic followup after first-receive failure. Owned Ready UI was observed without synthetic text; zero runtime cases completed and exact cause remains unestablished. No Android correction is accepted on this branch.",
+          "candidate_head": "cad8bfb28b44ab5257dcb07d0c5823275626b98b",
+          "hosted_run": 44787621743
+        }
+      ],
+      "meaning": "Historical November20 failed diagnostic snapshot; not a current active worker."
     }
   ]
 }

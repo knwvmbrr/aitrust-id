@@ -377,6 +377,11 @@ jobs:
       - name: Device method parity, offline and private input boundaries
         run: npm run verify:device
       - name: Verify built catalogue and accessibility
+        env:
+          AITRUST_VERIFY_PYTHON: python3
+          AITRUST_NF_ENGINE_CONCURRENCY: '2'
+          AITRUST_CI_RUNNER_ENV: ${{ runner.environment }}
+          AITRUST_CI_RUNNER_OS: ${{ runner.os }}
         run: |
           node --test tests/site-fixture-server.cjs
           node scripts/site-fixture-server.cjs --directory site/dist --port 5174 > /tmp/site-server.log 2>&1 &
@@ -400,8 +405,12 @@ jobs:
           node scripts/verify-blind-review-browser.cjs
           node scripts/verify-mt-mobile-site.cjs
           python -m pytest tests/test_nf_device.py -q
+          node --test tests/nf-browser-diagnostics.cjs
           node scripts/verify-nf-client.cjs
           node scripts/verify-nf-site.cjs
+          python3 -m pytest tests/test_hp_uncertainty_device.py tests/test_pyodide_js_sources.py -q
+          node scripts/verify-hp-uncertainty-client.cjs
+          node scripts/verify-hp-uncertainty-site.cjs
 
   source-provenance:
     # Development-source provenance only. Independent tag-release gates stay separate.

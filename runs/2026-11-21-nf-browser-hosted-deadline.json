@@ -1,0 +1,218 @@
+{
+  "profile": "nf-browser-hosted-diagnostic-outcome/v1",
+  "captured_at": "2026-11-21T09:48:49.085389+00:00",
+  "pass": false,
+  "prepared_by": "Codex /root/seo",
+  "source_commit": "bc6c8c05a234defe86540374c4f9b607ba8beeb1",
+  "source_base": "17129391d95168b8fb15b849328464167cd91ca2",
+  "run": 44890818659,
+  "job": 136806010640,
+  "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44890818659",
+  "event": "push",
+  "hosted_attempts": 1,
+  "artifact": {
+    "id": 14702261152,
+    "bytes": 19938,
+    "sha256": "ce283558fb7ecdcba6d8cdfa357872cbae3844df3b0ee2d8781006cf99d22ac0",
+    "downloaded_once": true,
+    "members": {
+      "nf-device-stage.json": {
+        "bytes": 50402,
+        "sha256": "fa5432b33ec6c4be89e637254bdbb0df3dffcf9092fb67a088f0132f316a4975"
+      },
+      "nf-device-browser.json": {
+        "bytes": 35238,
+        "sha256": "48d8707f662d971771102eb01d988381bc78f7ddcf37a74c65072d0c66375121"
+      },
+      "nf-client-diagnostic.json": {
+        "bytes": 733,
+        "sha256": "b6af0941d32cd777c101ccc76d9ce2c384fd401e673b3c9ab4b412cc8247d426"
+      }
+    }
+  },
+  "raw_failed_log_sha256": "52a37b34d2951eef453cdfff2fd696a89f64cde0eaaf27bc96c17c91c08e332c",
+  "parent_diagnostic": {
+    "profile": "nf-client-process-diagnostic/v1",
+    "captured_at": "2026-11-21T09:43:26.119Z",
+    "pass": false,
+    "commands": [
+      {
+        "command_id": "fixture",
+        "timeout_ms": 90000,
+        "outcome": "success",
+        "error_code": null,
+        "signal": null,
+        "status": 0,
+        "elapsed_ms": 488
+      },
+      {
+        "command_id": "client_controls",
+        "timeout_ms": 30000,
+        "outcome": "success",
+        "error_code": null,
+        "signal": null,
+        "status": 0,
+        "elapsed_ms": 153
+      },
+      {
+        "command_id": "canonical_browser",
+        "timeout_ms": 180000,
+        "outcome": "deadline",
+        "error_code": "ETIMEDOUT",
+        "signal": null,
+        "status": 1,
+        "elapsed_ms": 180156
+      }
+    ]
+  },
+  "last_browser_checkpoint": {
+    "engine": "WebKit",
+    "stage": "chunk_import_render",
+    "substep": "render",
+    "authored_case_index": null,
+    "elapsed_ms": 175850,
+    "stage_elapsed_ms": 8777,
+    "since_previous_ms": 4621
+  },
+  "browser_checkpoint_count": 203,
+  "browser_failure": {
+    "engine": "WebKit",
+    "stage": "chunk_import_render",
+    "substep": "render",
+    "error_sha256": "e191aac66572642f085bb4439ee9d9d57715d5d94acd18c5b7d9c3e265286016"
+  },
+  "complete_engine_results": [
+    {
+      "engine": "Chromium",
+      "pass": true,
+      "authored_cases": 33,
+      "full_canonical_records": 21,
+      "canonical_refusals": 12,
+      "negation_similarity_not_truth": true,
+      "both_raw_and_frozen_nfc_bound": true,
+      "corrupt_records_refused": 8,
+      "optional_payload_and_validator_failures_then_literal_PS_MT": true,
+      "actual_NF_chunk_import_render_failure_then_PS_MT": true,
+      "edit_clear_cancel_unmount_terminate": true,
+      "default_no_worker_or_input_transfer": true,
+      "no_input_upload_storage_console": true,
+      "private_details_opt_in": true,
+      "reflow_320_at_200percent": true,
+      "light_dark": true,
+      "physical_phone": false,
+      "independent_accuracy_evidence": false
+    }
+  ],
+  "webkit_invalid_cosine_recovery": [
+    {
+      "engine": "WebKit",
+      "stage": "invalid_cosine_then_literal",
+      "substep": "cosine_fill",
+      "authored_case_index": null,
+      "elapsed_ms": 137779,
+      "stage_elapsed_ms": 0,
+      "since_previous_ms": 3980
+    },
+    {
+      "engine": "WebKit",
+      "stage": "invalid_cosine_then_literal",
+      "substep": "cosine_submit",
+      "authored_case_index": null,
+      "elapsed_ms": 137823,
+      "stage_elapsed_ms": 44,
+      "since_previous_ms": 44
+    },
+    {
+      "engine": "WebKit",
+      "stage": "invalid_cosine_then_literal",
+      "substep": "cosine_alert_wait",
+      "authored_case_index": null,
+      "elapsed_ms": 137857,
+      "stage_elapsed_ms": 78,
+      "since_previous_ms": 34
+    },
+    {
+      "engine": "WebKit",
+      "stage": "invalid_cosine_then_literal",
+      "substep": "cosine_alert_observed",
+      "authored_case_index": null,
+      "elapsed_ms": 139673,
+      "stage_elapsed_ms": 1894,
+      "since_previous_ms": 1816
+    },
+    {
+      "engine": "WebKit",
+      "stage": "invalid_cosine_then_literal",
+      "substep": "literal_select",
+      "authored_case_index": null,
+      "elapsed_ms": 139676,
+      "stage_elapsed_ms": 1896,
+      "since_previous_ms": 2
+    },
+    {
+      "engine": "WebKit",
+      "stage": "invalid_cosine_then_literal",
+      "substep": "literal_submit",
+      "authored_case_index": null,
+      "elapsed_ms": 139717,
+      "stage_elapsed_ms": 1938,
+      "since_previous_ms": 41
+    },
+    {
+      "engine": "WebKit",
+      "stage": "invalid_cosine_then_literal",
+      "substep": "literal_result_wait",
+      "authored_case_index": null,
+      "elapsed_ms": 139749,
+      "stage_elapsed_ms": 1970,
+      "since_previous_ms": 32
+    },
+    {
+      "engine": "WebKit",
+      "stage": "invalid_cosine_then_literal",
+      "substep": "literal_result_observed",
+      "authored_case_index": null,
+      "elapsed_ms": 141580,
+      "stage_elapsed_ms": 3801,
+      "since_previous_ms": 1831
+    }
+  ],
+  "webkit_started_at_ms": 84990,
+  "initial_browser_source_hashes_match_frozen_local_files": true,
+  "initial_source_sha256": {
+    "tools/nf_device.py": "0a0285890cb608e7451ee72b03027b2ef4062b94a925c89d4e98a2f9f80da2e3",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/corpus_support.py": "f196cf5bf7659fa2cdea878b81f2e5f3cb0d6aba6e7c3c22579f41dbaabd5cc8",
+    "tools/nf_source_evidence.py": "c69d9bb1d555aa1c6048a4dede9312229fa01b5b4905e1ef912010b17885b046",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb",
+    "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+    "scripts/build-nf-device.py": "c710f27da70506ccb3e01c7e879a2c5e1e6a34503ba3ce8e46c056d4e3b852b6",
+    "scripts/build-nf-device-fixture.mjs": "e3d7e365c29710a8b55ffd96edb96202a0aef55a9f62a64f13818adfbca4ecac",
+    "scripts/nf-device-cases.py": "c313111c2a4f47a3cb23871108be11ba9d3f73524d0c7e5f23fa930e372819c0",
+    "scripts/verify-nf-device.cjs": "a01d7298e1964054b16834e9f46ae9ec957e8a9d8ebab2038989329293ec0e34",
+    "scripts/verify-nf-client.cjs": "f32e64d3503c8df05e63b341ab5b7b4013a6882d997eb7788e74d8d0260c0047",
+    "site/src/NFExplorer.jsx": "8638194d959b25726d1ae0194226f652c27d5e0d120dfeb65d41980ff66c3935",
+    "site/src/NFExplorerSlot.jsx": "c8d2d1eeaae63799161614e967ea7f0d92e404f2b4cce26708cc71b0cd19ca81",
+    "site/src/nf-device-client.js": "473a8123917b1cde54fa4a0f29240d6808aac2e0ea11abcb167530cc6491c08d",
+    "site/src/nf-device-worker.js": "076e042598209d2fbea18e5a3d6e55fd2901fdb5c3d482f122249f326cddc5b9",
+    "site/src/nf-device-result.js": "140d9fa9e44df192c06c328fe100a99cf601dc442b83ed499b4dcbaeb9b849b5",
+    "site/src/nf-cosine-result.js": "8662e820c683e85294be5d49bc7bb8401d6c7ea92ad19236ff0034ee5d908a39",
+    "site/src/nf-device-manifest.json": "c4e43cc1dbb965bc1ecd4d85e4524bfd18b9f01d6ce071a98c900a334d123c38",
+    "site/public/nf-device/notices.txt": "4e6aea2bb109f3296bf135b3174f7cad6ba4f13de1cc036c129d414eab0d488b",
+    "tests/test_nf_device.py": "b546480272c7322b44cb160f733c351a4e8be6b8d06f1bc0f726ec632559695d",
+    "tests/nf-device-client.mjs": "b5efbbb621820039c971f98bef78cf4f91f33c3d68900105b297c7d8cd20b5ba",
+    "docs/nf-device-reference.md": "8715ee5fc08f278664cce2cf5658aa891241ee6e722e13412063f84e2797b407",
+    "site/public/nf-device/literal-c26434149b752d6eba0ba0aefb8cf0a3d9a334035426911f6d5e17896bccb5c7.json": "c26434149b752d6eba0ba0aefb8cf0a3d9a334035426911f6d5e17896bccb5c7",
+    "site/public/nf-device/cosine-41334bcd5ff9a9fe1842fb1d35f8ebe076ab7f35c8b9d667d2d9523e35574332.json": "41334bcd5ff9a9fe1842fb1d35f8ebe076ab7f35c8b9d667d2d9523e35574332"
+  },
+  "full_final_stability_checks_completed": false,
+  "observed_conclusion": "In this execution, the aggregate180second parent deadline interrupted a progressing WebKit final render-failure recovery. Both WebKit invalid-cosine and subsequent literal-result waits had already completed.",
+  "not_established": [
+    "The earlier PR139 failure has no preserved substep timing; its exact product/harness cause cannot be retroactively proven.",
+    "No full WebKit cohort pass, performance fix, product reliability guarantee, independent accuracy, requirement closure or release approval."
+  ],
+  "mutations_after_hosted_source_freeze": false,
+  "thresholds_or_cases_changed": false
+}

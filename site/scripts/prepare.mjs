@@ -29,6 +29,9 @@ fs.copyFileSync(path.join(repo,'docs/mt-device-explorer.md'),path.join(site,'pub
 fs.copyFileSync(path.join(repo,'docs/mt-mobile-quotation.md'),path.join(site,'public/reference/mt-mobile-quotation.md'));
 execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[path.join(repo,'scripts/build-hp-device.py')],{stdio:'pipe'});
 fs.copyFileSync(path.join(repo,'docs/hp-device-explorer.md'),path.join(site,'public/reference/hp-device-explorer.md'));
+execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[path.join(repo,'scripts/build-hp-uncertainty-device.py')],{stdio:'pipe'});
+fs.copyFileSync(path.join(repo,'docs/hp-uncertainty-device.md'),path.join(site,'public/reference/hp-uncertainty-device.md'));
+fs.copyFileSync(path.join(repo,'docs/language-observations.md'),path.join(site,'public/reference/language-observations.md'));
 execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[path.join(repo,'scripts/build-credential-device.py')],{stdio:'pipe'});
 fs.copyFileSync(path.join(repo,'docs/credential-flow-device.md'),path.join(site,'public/reference/credential-flow-device.md'));
 fs.copyFileSync(path.join(repo,'docs/nf-source-evidence.md'),path.join(site,'public/reference/nf-source-evidence.md'));

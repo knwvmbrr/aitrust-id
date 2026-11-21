@@ -9,22 +9,27 @@ async function waitTagProbeReady(tagId,dialog){
 // Wait for its actual form before judging expansion height; keep that assertion.
 async function waitDisclosureProbeReady(detail){
  if(await detail.getAttribute('data-credential-method')!==null)await detail.locator('[data-credential-explorer]').waitFor();
+ if(await detail.getAttribute('data-hp-uncertainty-method')!==null)await detail.locator('[data-hp-uncertainty]').waitFor();
 }
 // Authored delayed-child control: native open alone is not loaded content.
 async function verifyDisclosureReadinessControl(browser){
  const context=await browser.newContext({viewport:{width:320,height:760},reducedMotion:'reduce'});
  try{
   const page=await context.newPage();
-  const markup='<main><details data-credential-method><summary style="min-height:44px">Optional preview</summary></details></main>';
+  const tested=[];
+  for(const [method,child] of [['data-credential-method','data-credential-explorer'],['data-hp-uncertainty-method','data-hp-uncertainty']]){
+  const markup=`<main><details ${method}><summary style="min-height:44px">Optional preview</summary></details></main>`;
   await page.setContent(markup);const before=await probes.disclosures(page.locator('main'));assert.equal(before.failures.length,1,'Authored absent-child control did not expose premature height measurement');
   await page.setContent(markup);let completed=false;const checking=probes.disclosures(page.locator('main'),{afterExpand:waitDisclosureProbeReady}).then(result=>{completed=true;return result;});
   await page.waitForFunction(()=>document.querySelector('details').open);assert.equal(completed,false,'Readiness resolved before the deferred child');
-  await page.evaluate(()=>{const child=document.createElement('form');child.dataset.credentialExplorer='';child.textContent='Loaded preview content';child.style.minHeight='80px';document.querySelector('details').append(child);});
+  await page.evaluate(attribute=>{const child=document.createElement('form');child.setAttribute(attribute,'');child.textContent='Loaded preview content';child.style.minHeight='80px';document.querySelector('details').append(child);},child);
   const after=await checking;assert.deepEqual(after.failures,[],'Loaded deferred disclosure failed unchanged expansion assertion');
   await page.setContent(markup+'<style>details[open]{height:44px;overflow:hidden}</style>');
-  await page.evaluate(()=>{const child=document.createElement('form');child.dataset.credentialExplorer='';child.style.minHeight='80px';document.querySelector('details').append(child);});
+  await page.evaluate(attribute=>{const child=document.createElement('form');child.setAttribute(attribute,'');child.style.minHeight='80px';document.querySelector('details').append(child);},child);
   const broken=await probes.disclosures(page.locator('main'),{afterExpand:waitDisclosureProbeReady});assert.equal(broken.failures.length,1,'Readiness hid a genuinely non-expanding disclosure');
-  return {pass:true,authored_absent_child_reproduced:true,waited_for_actual_child:true,unchanged_height_assertion_passed:true,dead_expansion_still_refused:true,product_source_changed:false};
+  tested.push(method);
+  }
+  return {pass:true,tested_markers:tested,authored_absent_child_reproduced:true,waited_for_actual_child:true,unchanged_height_assertion_passed:true,dead_expansion_still_refused:true,product_source_changed:false};
  }finally{await context.close();}
 }
 // Wait for the real native toggle task, then the declared deferred public body.
@@ -38,6 +43,8 @@ async function expandForMeasurement(root){
  if(await privacy.count())await privacy.getByRole('button',{name:'Download details',exact:true}).waitFor();
  const credential=root.locator('[data-credential-method]');
  if(await credential.count())await credential.locator('[data-credential-explorer]').waitFor();
+ const uncertainty=root.locator('[data-hp-uncertainty-method][open]');
+ if(await uncertainty.count())await uncertainty.locator('[data-hp-uncertainty]').waitFor();
 }
 // Actual deferred public data: ready-first coverage and physical-node identity.
 // Native close is an authored lifecycle control, not a claim about the original
@@ -68,7 +75,7 @@ async function verifyDeferredReadinessControl(browser,base){
   await context.route(/\/assets\/public-scope-[^/]+\.json$/,async route=>{requests++;requested();await gate;await route.continue();});
   const page=await context.newPage();await page.goto(base+'/#person/PII_REDACTED',{waitUntil:'domcontentloaded'});
   const dialog=page.getByRole('dialog');await dialog.waitFor();assert.equal(requests,0,'Scope loaded before first disclosure open');
-  const disclosure=await probes.disclosures(dialog);assert.deepEqual(disclosure.failures,[]);
+  const disclosure=await probes.disclosures(dialog,{afterExpand:waitDisclosureProbeReady});assert.deepEqual(disclosure.failures,[]);
   let ready=false;const waiting=expandForMeasurement(dialog).then(()=>{ready=true;});await requestSeen;
   assert.equal(ready,false,'Public-body readiness resolved before actual data');
   assert.equal(await dialog.getByRole('button',{name:'Download details',exact:true}).count(),0);
@@ -109,7 +116,7 @@ async function verifyHPReadinessControl(browser,base){
    const after=await held.evaluate(el=>{const css=getComputedStyle(el);return {name:el.textContent.trim(),focused:el===document.activeElement,indicator:parseFloat(css.outlineWidth)>0&&css.outlineStyle!=='none'||css.boxShadow!=='none'};});
    assert.equal(after.name,'Source notices','Controlled insertion no longer reproduces the indexed-locator boundary');
    assert.notEqual(beforeName,after.name);assert.equal(after.focused,false);assert.equal(after.indicator,false);
-   await page.evaluate(()=>document.fonts.ready);const disclosure=await probes.disclosures(dialog);
+   await page.evaluate(()=>document.fonts.ready);const disclosure=await probes.disclosures(dialog,{afterExpand:waitDisclosureProbeReady});
    await expandForMeasurement(dialog);
    const targets=await probes.targetSizes(dialog,{surface:'HP controlled readiness',theme}),focus=await probes.focusVisibility(page,dialog,{surface:'HP controlled readiness',theme}),spacing=await probes.spacing(page,dialog);
    assert.deepEqual(disclosure.failures,[],'Ready HP disclosures');assert.deepEqual(targets.failures,[],'Ready HP targets');assert.deepEqual(focus.failures,[],'Ready HP focus');assert.deepEqual(spacing.clipped,[],'Ready HP clipping');assert.equal(spacing.horizontal_overflow,false,'Ready HP overflow');

@@ -85,7 +85,12 @@
     "build:nf-device": "python3 scripts/build-nf-device.py",
     "test:nf-device": "python3 -m pytest tests/test_nf_device.py -q && node --test tests/nf-device-client.mjs",
     "verify:nf-device": "node scripts/verify-nf-client.cjs",
-    "verify:nf-site": "node scripts/verify-nf-site.cjs"
+    "verify:nf-site": "node scripts/verify-nf-site.cjs",
+    "build:hp-uncertainty": "python3 scripts/build-hp-uncertainty-device.py",
+    "test:hp-uncertainty": "python3 -m pytest tests/test_hp_uncertainty_device.py -q && node --test tests/hp-uncertainty-client.mjs",
+    "verify:hp-uncertainty-site": "node scripts/verify-hp-uncertainty-site.cjs",
+    "verify:runtime-js-sources": "python3 scripts/pyodide-js-sources.py",
+    "verify:hp-uncertainty": "node scripts/verify-hp-uncertainty-client.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",

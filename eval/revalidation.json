@@ -591,7 +591,29 @@
         "tests/test_android_intake_probe.py",
         "tests/test_android_configuration_controls.py",
         ".github/workflows/android-share.yml",
-        "docs/android-*.md"
+        "docs/android-*.md",
+        "tools/hp_uncertainty_device.py",
+        "scripts/build-hp-uncertainty-device.py",
+        "scripts/build-hp-uncertainty-fixture.mjs",
+        "scripts/hp-uncertainty-cases.py",
+        "scripts/verify-hp-uncertainty-client.cjs",
+        "scripts/verify-hp-uncertainty-device.cjs",
+        "scripts/hp-uncertainty-site-controls.cjs",
+        "scripts/verify-hp-uncertainty-site.cjs",
+        "tests/test_hp_uncertainty_device.py",
+        "tests/hp-uncertainty-client.mjs",
+        "tools/pyodide_js_sources.py",
+        "scripts/pyodide-js-sources.py",
+        "tests/test_pyodide_js_sources.py",
+        "sbom/reviews/pyodide-js/**/*",
+        "docs/pyodide-js-source*.md",
+        "scripts/android-intent-controls.py",
+        "tests/test_android_intent_controls.py",
+        "tests/android/intent-sender/*",
+        "docs/android-malformed-intent-plan.md",
+        "tests/nf-browser-diagnostics.cjs",
+        "scripts/verify-nf-diagnostics.cjs",
+        "docs/nf-browser-diagnostic-plan.md"
       ],
       "commands": [
         [
@@ -968,6 +990,23 @@
           "tests/test_android_intake_probe.py",
           "tests/test_android_configuration_controls.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_android_intent_controls.py",
+          "tests/test_hp_uncertainty_device.py",
+          "tests/test_pyodide_js_sources.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/pyodide-js-sources.py"
+        ],
+        [
+          "node",
+          "scripts/verify-nf-diagnostics.cjs"
         ]
       ]
     },
@@ -1607,7 +1646,31 @@
         "site/src/nf-device-manifest.json",
         "site/public/nf-device/*",
         "site/public/reference/nf-device-reference.md",
-        "docs/nf-device-reference*.md"
+        "docs/nf-device-reference*.md",
+        "tools/hp_uncertainty_device.py",
+        "scripts/build-hp-uncertainty-device.py",
+        "scripts/build-hp-uncertainty-fixture.mjs",
+        "scripts/hp-uncertainty-cases.py",
+        "scripts/verify-hp-uncertainty-client.cjs",
+        "scripts/verify-hp-uncertainty-device.cjs",
+        "scripts/hp-uncertainty-site-controls.cjs",
+        "scripts/verify-hp-uncertainty-site.cjs",
+        "tests/test_hp_uncertainty_device.py",
+        "tests/hp-uncertainty-client.mjs",
+        "site/src/HPUncertaintyExplorer*.jsx",
+        "site/src/hp-uncertainty-*.js",
+        "site/src/hp-uncertainty-manifest.json",
+        "site/public/hp-uncertainty-device/*",
+        "site/public/reference/hp-uncertainty-device.md",
+        "docs/hp-uncertainty*.md",
+        "tools/pyodide_js_sources.py",
+        "scripts/pyodide-js-sources.py",
+        "tests/test_pyodide_js_sources.py",
+        "sbom/reviews/pyodide-js/**/*",
+        "docs/pyodide-js-source*.md",
+        "tests/nf-browser-diagnostics.cjs",
+        "scripts/verify-nf-diagnostics.cjs",
+        "docs/nf-browser-diagnostic-plan.md"
       ],
       "commands": [
         [
@@ -1918,6 +1981,26 @@
         [
           "node",
           "scripts/verify-nf-site.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_hp_uncertainty_device.py",
+          "tests/test_pyodide_js_sources.py",
+          "-q"
+        ],
+        [
+          "node",
+          "scripts/verify-hp-uncertainty-client.cjs"
+        ],
+        [
+          "node",
+          "scripts/verify-hp-uncertainty-site.cjs"
+        ],
+        [
+          "node",
+          "scripts/verify-nf-diagnostics.cjs"
         ]
       ]
     }
