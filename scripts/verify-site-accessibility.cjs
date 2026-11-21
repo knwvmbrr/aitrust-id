@@ -2,7 +2,7 @@ const {writeReport}=require('./execution-report.cjs');
 const fs=require('node:fs'),assert=require('node:assert/strict');const {chromium}=require('playwright');const probes=require('./accessibility-probes.cjs');
 // Lazy preview controls must exist before taking a physical control snapshot.
 async function waitTagProbeReady(tagId,dialog){
- const marker={MT:'[data-mt-explorer]',HP:'[data-hp-explorer]'}[tagId];
+ const marker={MT:'[data-mt-explorer]',HP:'[data-hp-explorer]',NF:'[data-nf-explorer]'}[tagId];
  if(marker)await dialog.locator(marker).waitFor();
 }
 // The native open attribute precedes this optional React/lazy child.

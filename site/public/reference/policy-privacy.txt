@@ -1,5 +1,5 @@
 Privacy and data use
-AI TRUST ID · Version 1.11 · Effective 2026-11-09
+AI TRUST ID · Version 1.12 · Effective 2026-11-21
 Published by AI Trust ID.
 
 What stays on your device, what hosts receive and what sharing means.
@@ -44,6 +44,16 @@ On-device checking
 PS input is processed in the page and a self-hosted browser worker. Answer text is not uploaded or stored by this app. Runtime files are downloaded from this site. Clear, editing the input or closing the checker clears/cancels application state; this is not a guarantee of physical memory erasure. The on-device PS route does not redact personal information.
 
 Try PS: /#person/PS
+
+Optional on-device method previews
+The wording, literal-detail, Python-code and NF reference previews process the text you supply in separate browser workers. They do not upload your inputs, save them automatically or grant research or training permission. NF compares two passages you explicitly paste; it does not fetch or authenticate your reference. Runtime and selected method files are downloaded from this site.
+
+Technical details stay closed until you choose to open them. They can include matching words, input fingerprints and character positions that may reveal or link information. Editing, clearing, changing the selected check or closing its preview cancels pending work and removes the prior result from that preview. This describes application state, not physical memory erasure. Similar wording does not establish factual support or truth.
+
+NF comparison guide: /reference/nf-device-reference.md
+Wording preview guide: /reference/mt-device-explorer.md
+Literal-detail guide: /reference/hp-device-explorer.md
+Python-code preview guide: /reference/credential-flow-device.md
 
 Local service and extension
 The optional local CLI sends text you choose to your authenticated loopback gateway. The Chrome extension starts paused. Saving its token does not enable capture; enable checks on ChatGPT explicitly in extension settings. While enabled, only supported assistant responses on chatgpt.com are sent to your authenticated local gateway at 127.0.0.1:8787. Pause cancels pending checks and removes tags. Reset removes local consent and the saved token; it does not revoke the gateway credential, delete a ChatGPT conversation, or recall downloaded files. Detected redaction precedes the evaluator and can miss sensitive information. This route is different from the on-device checker; it does not send text to this website or a research database. The selected service entrypoints return fixed input-validation errors, disable request URL access logs, and mark responses no-store. These are tested application boundaries; they do not cover your browser vendor, a compromised OS, every PII category or physical memory erasure.

@@ -399,6 +399,9 @@ jobs:
           npm run verify:policies
           node scripts/verify-blind-review-browser.cjs
           node scripts/verify-mt-mobile-site.cjs
+          python -m pytest tests/test_nf_device.py -q
+          node scripts/verify-nf-client.cjs
+          node scripts/verify-nf-site.cjs
 
   source-provenance:
     # Development-source provenance only. Independent tag-release gates stay separate.

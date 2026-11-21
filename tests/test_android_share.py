@@ -2,6 +2,7 @@
 import hashlib
 import importlib.util
 import json
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -77,5 +78,15 @@ class AndroidShare(unittest.TestCase):
         filters=activities[0].findall('intent-filter')
         types=[data.attrib[ns+'mimeType'] for item in filters for data in item.findall('data')]
         self.assertEqual(types,['text/plain'])
+
+    def test_pause_and_stop_both_wipe_before_delegating_lifecycle(self):
+        # Source wiring control only: actual Android callback dispatch and the
+        # unchanged HOME/fast-refocus privacy control still need the emulator.
+        source=(ROOT/'mobile/android/src/com/aitrustid/android/CheckActivity.java').read_text()
+        for callback in ['onPause','onStop']:
+            body=re.search(r'@Override\s+protected\s+void\s+'+callback+r'\(\)\s*\{([^{}]*)\}',source)
+            self.assertIsNotNone(body,'Required lifecycle wipe callback absent')
+            self.assertEqual(body.group(1).count('wipe();'),1)
+            self.assertLess(body.group(1).index('wipe();'),body.group(1).index('super.'+callback+'();'))
 
 if __name__=='__main__':unittest.main()

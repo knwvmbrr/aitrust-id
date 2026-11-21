@@ -137,10 +137,10 @@
     {
       "tag_id": "T-NF",
       "bot_id": "tag_nf",
-      "actual_worker": "/root/seo",
-      "status": "active",
-      "checked_at": "2026-11-21T06:53:57.320632+00:00",
-      "current_component_status": "Building an optional on-device claim/reference evidence preview; not a running truth detector or NF tag.",
+      "actual_worker": null,
+      "status": "reviewed",
+      "checked_at": "2026-11-21T07:21:03.412374+00:00",
+      "current_component_status": "Frozen independent on-device claim/reference preview and affected input fixes reviewed. Actual production-modal integration/public delivery pending. No NF tag or truth claim.",
       "blocking_acceptance": "Selected reference/NLI and caller-declared citation components exist; claim-specific reference selection, contradiction-versus-missing-evidence labels, calibrated accepted tag mapping and supported human operation remain.",
       "next_task": "Continue original-specific validation/next bounded engineering; preserve independent human/context gates."
     },
@@ -178,9 +178,9 @@
       "tag_id": "T-PS",
       "bot_id": "tag_ps",
       "actual_worker": null,
-      "status": "published",
-      "checked_at": "2026-11-20T17:08:16.518216+00:00",
-      "current_component_status": "Scoped method component published from protected04b11a12; full tag remains independently unvalidated.",
+      "status": "reviewed",
+      "checked_at": "2026-11-21T08:02:38.716681+00:00",
+      "current_component_status": "PS detector unchanged. Its selected Android Share route now passes9 API36 runtime controls; independent detector accuracy and physical/human acceptance remain open.",
       "blocking_acceptance": "Current development fixtures and blind-review tooling are present, but the independently coordinated representative holdout, actual blind human labels/adjudication, accepted calibration/abstention policy and applicable human route acceptance are not.",
       "next_task": "Advance remaining original-specific acceptance; do not rerun completed software jobs."
     },
@@ -748,24 +748,25 @@
         "F-142"
       ],
       "worker": "/root/share_debugger",
-      "status": "active",
+      "status": "in_review",
       "deliverable": "Reconcile and publish the existing compile-verified Android Share preview with strict current-source license/KVM preflight; obtain actual disposable runtime proof only if its existing licensed prerequisites are met.",
       "done_evidence": [
         "Exact source APK compiles/signature-verifies; Share/edit/clear/offline/lifecycle checks execute in an actual Android runtime with current method parity and zero extra permissions.",
         "Exact existing accepted license match and official package identities checked; no new license assent/local SDK download/production signing or phone install.",
         "Different reviewer verifies immutable actual evidence; physical device/TalkBack and full N014/F142 remain open until their actual acceptance."
       ],
-      "blocker": "A traced instance lost valid Share text during configuration recreation after consuming its intent. The one-use draft handoff preserves privacy; default candidate passed original7 but failed supplemental rotation visibility. Verifier-only bounded scroll correction reviewed; one changed-source default7+2 candidate pending.",
-      "next_unblocked_task": "session-f012-closure-adjudication",
+      "blocker": null,
+      "next_unblocked_task": "session-nf-device-reference",
       "assigned_at": "2026-11-19T18:24:57.745970+00:00",
       "source_base": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-      "current_status": "Actual causal configuration-recreation trace obtained; product correction and verifier correction independently reviewed. Full native runtime delivery not yet accepted.",
+      "current_status": "Actual default API36 APK executes all7original+2configuration/privacy controls; distinct artifact review and all23runtime source bindings match. Protected integrated source publication pending; full N014/F142 physical/human acceptance remains open.",
       "active_followup": {
-        "checked_at": "2026-11-21T06:53:27.169178+00:00",
-        "actual_worker": "/root/share_debugger",
-        "status": "active_at_snapshot",
-        "scope": "One changed-source DEFAULT APK run with all original7 plus2 configuration/privacy controls. No owner input needed; real physical/TalkBack/outside acceptance stays open."
-      }
+        "checked_at": "2026-11-21T08:02:38.716681+00:00",
+        "actual_worker": "/root",
+        "status": "integration_and_protected_delivery_active_at_snapshot",
+        "scope": "PM integrates exact18source/docs targets and immutable actual9case evidence; physical/human and full original gates stay open."
+      },
+      "evidence_review": "runs/2026-11-21-android-integration-pm-review.json"
     },
     {
       "task_id": "session-f012-closure-adjudication",
@@ -933,7 +934,7 @@
         "T-NF"
       ],
       "worker": "/root/seo",
-      "status": "active",
+      "status": "in_review",
       "deliverable": "First optional on-device NF claim/selected-reference comparison preview, reusing unchanged existing literal/word-overlap methods without a truth or NF verdict.",
       "done_evidence": [
         "Both bounded inputs bind raw UTF8 and frozen NFC plus canonical method/source/span identity; actual CLI and Chromium/WebKit whole records agree.",
@@ -944,7 +945,8 @@
       "next_unblocked_task": "session-android-runtime-integration",
       "assigned_at": "2026-11-21T06:53:57.320632+00:00",
       "source_base": "2aa67779352fa11c303867f52799172ec73ee07c",
-      "current_status": "Architecture and bounded implementation scope declared; assigned worker starts isolated source implementation."
+      "current_status": "Frozen worker source b582d1b with independent review; both browser engines and affected input fixes evidenced. PM shared integration and actual modal/protected/public delivery pending.",
+      "evidence_review": "runs/2026-11-21-nf-device-independent-review.json"
     }
   ],
   "original_open_requirements": [
@@ -4952,28 +4954,20 @@
         }
       ],
       "accountable_lane": "Native/mobile lanes; Michael and actual device/outside testers",
-      "blocker": {
-        "category": "physical_and_outside_operation",
-        "reason": "Physical phone/accessibility/outside-user acceptance remains. TestFlight distribution and browser emulation are not physical iPhone operation; Android compilation is not runtime Share/TalkBack acceptance.",
-        "criterion_source": [
-          "docs/scope-progress.json#N-014",
-          "docs/master-scope.json#N-014",
-          "docs/scope-delivery.json"
-        ],
-        "closure_ready": false
-      },
+      "blocker": "Selected emulator implementation/integration now evidenced; final full original acceptance still requires actual physical Android/TalkBack and outside-user operation.",
       "done_evidence": [
         "Original required acceptance: Deliver Native Android sharing into a tag check. Next package action: Complete real iPhone/Android and screen-reader/offline update/removal checks. Required outcome: A person checks shared text without manual copy-and-paste while retaining control of disclosure.",
         "Preserve original job/outcome, master and applicable package acceptance; satisfy the stable historical limits recorded above.",
         "Record new immutable source-bound supported/failure evidence and actual required acceptance; a distinct reviewer must inspect the full original result."
       ],
-      "next_unblocked_action": "Root: integrate existing Android PR108 source against current main and execute real hosted Share/lifecycle/offline controls only with exact preaccepted image license and temporary disposable KVM access; no local SDK install or license assent.",
+      "next_unblocked_action": "Finish protected publication of the reviewed API36 default9case source and guide. Skip physical Android/TalkBack, outside-user and production signing/distribution acceptance until the required people/device are available.",
       "evidence_scope_at_baseline": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
       "evidence_paths": [
         "docs/scope-delivery.md",
         "runs/2026-11-17-android-emulator-host-inventory.json"
       ],
-      "original_acceptance_sha256": "13afa5ea98f0bca08a78390427c7f4c356b63bf10ff56bb9128b4895178a7643"
+      "original_acceptance_sha256": "13afa5ea98f0bca08a78390427c7f4c356b63bf10ff56bb9128b4895178a7643",
+      "current_evidence_note": "N014 advanced20\u219280 on exact matched native/default source and9 actual runtime cases. Original acceptance and baseline next-fix snapshot are preserved."
     },
     {
       "id": "N-015",
@@ -5593,7 +5587,7 @@
     "runs/2026-11-21-nov21-required-ci-review.json": "bfa3a0530f1f8824b9c040fd033652db5bf33a2406adee4f4327e5dce3ab74d7",
     "runs/2026-11-21-nov21-web-closeout-counter-review.json": "01b483385c41cdf1000e9378dfca401b2348ca45e9d873e623e55be4d9b47f96"
   },
-  "updated_at": "2026-11-21T06:54:59.196058+00:00",
+  "updated_at": "2026-11-21T08:04:30.457446+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T06:53:27.169178+00:00",
     "protected_source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
@@ -5614,7 +5608,7 @@
     "wave_id": "2026-11-19-ps-mt-android",
     "started_at": "2026-11-19T18:24:57.745970+00:00",
     "source_commit": "eb7873ddc861bfadf921d50d338ab2d2607e0d8b",
-    "status": "Two additional predeclared software jobs publicly delivered; Android causal correction under default APK execution. Original70 target unmet.",
+    "status": "MT/notice software live; Android default9case runtime passes with reviewed integration; NF actual modal passes both engines; final protected/public delivery in progress. Original70 target unmet.",
     "goal": "Advance original70 toward60; count only full functioning original acceptance. Skip final owner/external gates and continue independent engineering.",
     "immutable_session_baseline_retained": "3716233b9460efa57c1f0d01bfe30989395efcc4",
     "prior_closed_scoped_tasks_retained": 9,

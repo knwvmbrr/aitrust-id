@@ -324,6 +324,8 @@ PATTERNS += ('tools/authority_mobile_quotation.py', 'tools/mt_mobile_device.py',
              'tests/test_web_distribution.py', 'sbom/reviews/web-js/**/*',
              'site/public/web-licenses/*')
 
+PATTERNS += ('tools/nf_device.py', 'scripts/build-nf-device.py', 'scripts/build-nf-device-fixture.mjs', 'scripts/nf-device-cases.py', 'scripts/nf-site-controls.cjs', 'scripts/verify-nf-client.cjs', 'scripts/verify-nf-device.cjs', 'scripts/verify-nf-input.cjs', 'scripts/verify-nf-site.cjs', 'tests/test_nf_device.py', 'tests/nf-device-client.mjs', 'site/src/NFExplorer.jsx', 'site/src/NFExplorerSlot.jsx', 'site/src/nf-*.js', 'site/src/nf-device-manifest.json', 'site/public/nf-device/*', 'site/public/reference/nf-device-reference.md', 'docs/nf-device-reference*.md')
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:

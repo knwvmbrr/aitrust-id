@@ -1,0 +1,139 @@
+{
+  "profile": "bounded-replay-download-transport-correction/v1",
+  "captured_at": "2026-11-21T07:48:32.070998+00:00",
+  "implemented_by": "/root/seo",
+  "reviewed_by": "/root/web_camo",
+  "source_sha256": {
+    "scripts/verify-replay-export.cjs": "28da45c0900cbc824d716548c506d27b5698a5bcaa9fcd2f933c9ec2d0028c21",
+    "scripts/verify-replay-receipt-input.cjs": "d2b6dd6267787cf2f58f215e783c13c4ff438791444e36cdb53de039a7f1a593",
+    "protocol/replay.py": "2948a7894bc9c82f653f4347a67708303a1632a78ba25f8769460f14d11abbe6",
+    "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+    "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+    "extension/src/content/badge.js": "fb66db5111dc7739c4fc360dca2085588bf6882062e5696995bed9ccb90d5a23"
+  },
+  "original_observation": {
+    "path": "runs/2026-11-21-replay-export-stdin-hang.json",
+    "sha256": "7adcdc802d793c6ec71be0ac0b897802592dd85c30b9254e87c45e6014070c03",
+    "source_sha256": "6dbf716c6e903ebc5f030f6ab83de236c62db337664bca2f5548757e0055099d",
+    "actual_hang_reported": true,
+    "causal_mechanism": "UNESTABLISHED"
+  },
+  "architecture_and_risks": {
+    "input": "Owned synthetic browser download only; regular no-follow held descriptor, single-link and max2MB before allocation; pread/captured-byte equality and pre/post metadata identity.",
+    "transport": "Child receives regularfile stdin with finite EOF, not a writable pipe or input/path argument. Exact raw SHA and existing inspect_record schema/source identity checks must pass.",
+    "bounds": {
+      "max_input_bytes": 2000000,
+      "max_output_bytes": 4096,
+      "child_wall_deadline_seconds": 10,
+      "timeout_signal": "SIGKILL"
+    },
+    "failure": "Fixed safe diagnostic; no child stderr/body forwarded, no acceptance on failure. Source/receipt/history changes are not repaired by this transport.",
+    "limits": "Same-UID hostile mutation and OS compromise are not independently excluded; one actual pass does not prove reliability or identify the old EOF cause."
+  },
+  "bounded_original_pipe_comparisons": [
+    {
+      "profile": "replay-stdin-bounded-comparison/v1",
+      "captured_at": "2026-11-21T07:41:36.157Z",
+      "script_sha256": "6dbf716c6e903ebc5f030f6ab83de236c62db337664bca2f5548757e0055099d",
+      "node_version": "v22.12.0",
+      "fixture_receipt": "runs/2026-11-18-protocol-import-hosted-replay.json",
+      "fixture_bytes": 9223,
+      "fixture_sha256": "1a6aeb458a7d35d0db922c44642541b17db209370d048c97f8e2fd5dffae0ed7",
+      "observations": [
+        {
+          "kind": "buffer_pipe",
+          "elapsed_ms": 284,
+          "status": 0,
+          "signal": null,
+          "error_code": null,
+          "validated": true,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "kind": "string_pipe",
+          "elapsed_ms": 150,
+          "status": 0,
+          "signal": null,
+          "error_code": null,
+          "validated": true,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "kind": "regular_fd",
+          "elapsed_ms": 150,
+          "status": 0,
+          "signal": null,
+          "error_code": null,
+          "validated": true,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "root_cause": "UNESTABLISHED",
+      "browser_rerun": false
+    },
+    {
+      "profile": "replay-original-selected-fixture-bounded/v1",
+      "captured_at": "2026-11-21T07:45:21.045Z",
+      "selected": "runs/2026-11-12-hidden-email-hosted-replay.json",
+      "fixture_bytes": 9223,
+      "fixture_sha256": "c9b1290a762fbd26dab3c44c09d119263bb291175c4c886a54c533fa5f2d1704",
+      "node_version": "v22.12.0",
+      "python_version": "3.12.14",
+      "python_binary_sha256": "c0ad12d399a2802704d57463e56939b50beace818b5b3629cc16b9c77e6af998",
+      "original_pipe": {
+        "elapsed_ms": 297,
+        "status": 0,
+        "signal": null,
+        "error_code": null,
+        "validated": true,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "root_cause": "UNESTABLISHED",
+      "browser_rerun": false,
+      "previous_comparison_used_default_route_fixture": "runs/2026-11-18-protocol-import-hosted-replay.json"
+    }
+  ],
+  "focused_actual_controls": {
+    "argv_template": [
+      "node",
+      "scripts/verify-replay-receipt-input.cjs"
+    ],
+    "declared_python": {
+      "version": "3.12.14",
+      "binary_sha256": "c0ad12d399a2802704d57463e56939b50beace818b5b3629cc16b9c77e6af998",
+      "selection": "Explicit existing verification environment, not an automatic interpreter search/install."
+    },
+    "exit": 0,
+    "existing_unsafe_receipts_refused": 8,
+    "new_transport_controls": 14,
+    "actual_finite_file_schema_and_digest": true,
+    "actual_40ms_hung_child_sigkill": true,
+    "actual_output_bound_refused": true,
+    "mutation_links_size_and_private_error_refused": true
+  },
+  "peer_review": {
+    "reported_by": "/root/web_camo",
+    "same_two_script_hashes": true,
+    "independent_actual_focused_controls_passed": true,
+    "browser_not_duplicated": true,
+    "initial_plain_interpreter_missing_dependencies_diagnosed_separately": true
+  },
+  "actual_browser": {
+    "path": "runs/2026-11-21-replay-export-regular-fd-browser.json",
+    "sha256": "c527b6dfc2ea23898a7e83c88ab6b66774aba7465da9e8507250db0ac4fc0f8c",
+    "argv_template": [
+      "node",
+      "scripts/verify-replay-export.cjs",
+      "--python",
+      "{declared_verification_python}",
+      "--receipt",
+      "runs/2026-11-12-hidden-email-hosted-replay.json"
+    ],
+    "exit": 0,
+    "download_sha256": "7a53858ad0b21f004bebc1ca58de047b5ff043f15f3d26420c85aa953494de2f",
+    "executed_once_after_source_correction": true
+  },
+  "product_routes_or_schema_modified": false,
+  "independent_accuracy_evidence": false,
+  "original_requirement_closed": false
+}

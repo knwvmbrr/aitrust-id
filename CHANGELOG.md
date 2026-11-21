@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-081551-nov21-final-prime-attribution-040c4cee
+
+Recorded 2026-11-21T08:15:51.755718+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Prepared deterministic current website assets and policy1.12 archives; marked the new integrated source checks pending instead of reusing older whole-source passes.
+- **Evidence.** The normal website build passes with the NF preview and precise availability copy. Reader scope is consistent at132complete/70open, N01480, and all prior v1.11 policy archives remain unchanged. Independent PS, PII and corrected extension source checks pass. [Change record](./runs/changes/2026-11-21-081551-nov21-final-prime-attribution-040c4cee.json).
+- **Not claimed.** Current protocol and website checks, protected merge and new NF public delivery remain pending. No original closure, detector accuracy, physical acceptance or legal clearance is inferred.
+
+
+### 2026-11-21-080800-nov21-scope-reader-sync-f27315f0
+
+Recorded 2026-11-21T08:08:00.088954+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Synchronized the reader scope ledger and task index with the source-matched Android80-percent milestone and the pending NF/protected delivery work.
+- **Evidence.** The full202-record scope check passes; jobs, outcomes, original acceptance and all tag contracts remain preserved. N014 has implemented mechanism, executable checks and selected runtime integration; final acceptance remains open. [Change record](./runs/changes/2026-11-21-080800-nov21-scope-reader-sync-f27315f0.json).
+- **Not claimed.** Original count remains132 complete and70 open. This does not close N014, release a detector, substitute emulator checks for physical/human acceptance or meet the60 goal.
+
+
+### 2026-11-21-080449-nov21-functional-integration-16da3cfb
+
+Recorded 2026-11-21T08:04:49.184759+00:00 · Contributor: Codex /root PM; Android /root/share_debugger; NF/replay /root/seo; review /root/web_camo · change
+
+- **Changed.** Integrated the source-matched Android Share configuration fix, actual default APK9-case evidence and NF reference workflow, plus finite replay-export verification and versioned factual privacy copy.
+- **Evidence.** All23 Android runtime bindings match the exact imported18targets; API36 original7 plus separate2 cases pass with distinct artifact review. NF actual modal passes both engines and keeps PS/MT operating after optional failures. Replay exact-byte/schema validation now has finite IO/process bounds. Prior policy archives and failed evidence remain intact. [Change record](./runs/changes/2026-11-21-080449-nov21-functional-integration-16da3cfb.json).
+- **Not claimed.** N014 advances20 to80; all70 original requirements remain open and no full tag accuracy release is granted. Final integrated source checks, protected publication and NF live delivery are pending. Physical, TalkBack, outside-user, full licensing/signing and independent accuracy gates remain unchanged.
+
+
+### 2026-11-21-075214-android-default-configuration-nine-pass-4dd57397
+
+Recorded 2026-11-21T07:52:14.988483+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the source-frozen default Android APK execution of all seven original Share controls and two configuration/privacy controls, with exact artifact/source bindings and retained failure history.
+- **Evidence.** Actual API36 run44881591785 passed original7 plus separate2, default probe-marker absence, exact edited draft after recreation and immediate configuration HOME/refocus marker absence; distinct read-only artifact review confirmed the selected evidence. [Change record](./runs/changes/2026-11-21-075214-android-default-configuration-nine-pass-4dd57397.json).
+- **Not claimed.** One selected synthetic API36 emulator execution; historical untraced causes remain qualified. No physical device, external sending-app chooser, human acceptance, independent accuracy, release acceptance, reliability guarantee or full original requirement closure; no scope percentage changed.
+
+
+### 2026-11-21-074832-replay-export-finite-transport-ed7af7c9
+
+Recorded 2026-11-21T07:48:32.115952+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Bound the synthetic browser replay-export validator and replace its writable stdin pipe with an owned finite regular-file descriptor.
+- **Evidence.** Exact downloaded-byte capture and child SHA/schema/source validation; 14 new transport controls plus8 existing unsafe receipt refusals; one actual Chromium replay export pass on the original selected public fixture. Bounded original pipes also passed, so hang cause remains unestablished. [Change record](./runs/changes/2026-11-21-074832-replay-export-finite-transport-ed7af7c9.json).
+- **Not claimed.** Engineering verifier correction only. No product/schema change, source-identity waiver, independent accuracy, reliability guarantee, or original requirement closure. Verification Python must be explicitly available.
+
+
+### 2026-11-21-072103-nf-reference-integration-68d3d6bd
+
+Recorded 2026-11-21T07:21:03.461520+00:00 · Contributor: Codex /root integration; source /root/seo; review /root/web_camo · change
+
+- **Changed.** Integrated the independent NF reference preview into its own lazy modal, normal build, accessibility readiness, source inventory and executable CI gates.
+- **Evidence.** The source is distinctly reviewed and prototype evidence covers21 complete records plus12 refusals per browser, with separate corrected native input controls. All52 existing website commands remain and three NF checks are added. [Change record](./runs/changes/2026-11-21-072103-nf-reference-integration-68d3d6bd.json).
+- **Not claimed.** Current integrated modal, protected checks and public delivery pending. Matching or similar wording does not establish truth. No NF tag, independent accuracy, physical acceptance or original requirement closure.
+
+
 ### 2026-11-21-071539-nf-notice-byte-preservation-1d645558
 
 Recorded 2026-11-21T07:15:39.667784+00:00 · Contributor: Codex /root/seo · change

@@ -40,7 +40,7 @@ input collection or proprietary dependency is introduced.
 ## Accounting
 
 Baseline remains132 complete /70 open originals. Target60 requires10 genuine
-full original closures. The current12 closed scoped jobs include earlier reviews
+full original closures. The baseline12 closed scoped jobs include earlier reviews
 and tools; they are not12 released tags. New software jobs close only after their
 predeclared full software acceptance. No original gate is removed or narrowed.
 
@@ -67,3 +67,9 @@ source search, endpoint, capture permission or storage are added. Optional metho
 failure must leave literal, MT and PS operating. Independent review and actual
 protected/public browser evidence precede the named software closure. T-NF stays
 open until its full contextual, independent-label and human criteria pass.
+
+NF integration retains all52 existing website checks and adds three executable
+checks: pure adapter/builder tests, source-bound client/fixture/native-input
+controls, and actual NF modal operation with PS/MT recovery. The normal build
+prepares both method bundles and source notices, and the generic accessibility
+probe waits for the actual lazy NF form. No catalogue tag is promoted.

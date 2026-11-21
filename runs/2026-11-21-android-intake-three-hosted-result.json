@@ -1,0 +1,470 @@
+{
+  "format": "ai-trust-id-android-intake-three-hosted/v1",
+  "recorded_at": "2026-11-21T06:15:50.619447+00:00",
+  "control_commit": "4e0ebf5b85fc0ea10cc61f71960385614e422030",
+  "runtime_commit": "78c634ba425e7ee1b4c2df3e97219cf0fef8cd33",
+  "run": {
+    "id": 44873573972,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44873573972",
+    "event": "workflow_dispatch",
+    "attempt": 1,
+    "conclusion": "failure",
+    "fresh_emulator_hosts": 3,
+    "ordinary_fourth_job": "skipped",
+    "invalid_request_job": "skipped",
+    "replacement_or_retry_hosts": 0
+  },
+  "artifacts": [
+    {
+      "name": "sample-1",
+      "id": 14695495484,
+      "bytes": 6390894,
+      "sha256": "3ae6ff6b35f0ceaa7afe9ac21cf7017c64d3f30ef61e29ff0af0c257adc511be"
+    },
+    {
+      "name": "sample-2",
+      "id": 14694394413,
+      "bytes": 6390942,
+      "sha256": "1f0374bdc3e706e8ef9d91128cd61e56e8b9c245567f06b9785d2afb62728c88"
+    },
+    {
+      "name": "sample-3",
+      "id": 14694962704,
+      "bytes": 6390940,
+      "sha256": "5918a52e5c350d108a982aefc3d15166f800ff5c415108513212b693c37d9972"
+    },
+    {
+      "name": "summary",
+      "id": 14695127242,
+      "bytes": 1353,
+      "sha256": "cdbf5dbf769a8a2acac016623f83db909df1447e062be80fada639d1a1dc54f6"
+    }
+  ],
+  "samples": [
+    {
+      "sample": 1,
+      "job_id": 136753231473,
+      "status": "FAILED",
+      "original_cases_executed": 0,
+      "cases": [],
+      "control_stage": "share_first_receive",
+      "diagnostic_code": "share_first_receive_unavailable",
+      "license_record_unchanged": true,
+      "first_receive_provenance": {
+        "state": "OBSERVED",
+        "scope": "diagnostic-variant-current-process-only",
+        "schema": 1,
+        "instances": 2,
+        "truncated": false,
+        "events": [
+          [
+            1,
+            "CREATE_BEGIN",
+            "SEND",
+            false,
+            "UNBUILT",
+            false
+          ],
+          [
+            1,
+            "CREATE_END",
+            "MAIN",
+            true,
+            "RECEIVED",
+            false
+          ],
+          [
+            1,
+            "RESUME_BEGIN",
+            "MAIN",
+            true,
+            "RECEIVED",
+            false
+          ],
+          [
+            1,
+            "RESUME_END",
+            "MAIN",
+            true,
+            "RECEIVED",
+            false
+          ],
+          [
+            1,
+            "PAUSE_BEGIN",
+            "MAIN",
+            true,
+            "RECEIVED",
+            true
+          ],
+          [
+            1,
+            "PAUSE_END",
+            "MAIN",
+            false,
+            "CLEARED",
+            true
+          ],
+          [
+            1,
+            "STOP_BEGIN",
+            "MAIN",
+            false,
+            "CLEARED",
+            true
+          ],
+          [
+            1,
+            "STOP_END",
+            "MAIN",
+            false,
+            "CLEARED",
+            true
+          ],
+          [
+            1,
+            "SAVE_BEGIN",
+            "MAIN",
+            false,
+            "CLEARED",
+            true
+          ],
+          [
+            1,
+            "SAVE_END",
+            "MAIN",
+            false,
+            "CLEARED",
+            true
+          ],
+          [
+            1,
+            "DESTROY_BEGIN",
+            "MAIN",
+            false,
+            "CLEARED",
+            true
+          ],
+          [
+            1,
+            "DESTROY_END",
+            "MAIN",
+            false,
+            "CLEARED",
+            true
+          ],
+          [
+            2,
+            "CREATE_BEGIN",
+            "MAIN",
+            false,
+            "UNBUILT",
+            false
+          ],
+          [
+            2,
+            "CREATE_END",
+            "MAIN",
+            false,
+            "READY",
+            false
+          ],
+          [
+            2,
+            "RESUME_BEGIN",
+            "MAIN",
+            false,
+            "READY",
+            false
+          ],
+          [
+            2,
+            "RESUME_END",
+            "MAIN",
+            false,
+            "READY",
+            false
+          ]
+        ]
+      },
+      "raw_reports": {
+        "emulator.json": {
+          "sha256": "b1f68d10d8167b5359f098107393daa6e2ca674af7c9bdc152deb7bcc98fb969",
+          "bytes": 4749
+        },
+        "build.json": {
+          "sha256": "5939e8d9faed00edc7a8c22c1ef4278b9cf21df4da743909e831aacb2bf7f96f",
+          "bytes": 2517
+        },
+        "preparation.json": {
+          "sha256": "afbf7f191300260bc886af40bbfcb7e261e9d7da08984ba5e76f50a12af9580b",
+          "bytes": 546
+        },
+        "engine-parity.json": {
+          "sha256": "74bf6823fe4e0d11c63c9760db23c7715e3acc1cdc749a1151849689dd2ec98c",
+          "bytes": 685
+        },
+        "study-source-start.json": {
+          "sha256": "7a9036d0dbf03c417fd4045b3156b571bae7029956437343254b2ee2d7db6e58",
+          "bytes": 3322
+        },
+        "study-source-end.json": {
+          "sha256": "4418403a4ac3501bdac5a365fdb074056c11db202e0084b1299098171fbf9a53",
+          "bytes": 3320
+        }
+      },
+      "frozen_source_and_variant_bindings_match": true
+    },
+    {
+      "sample": 2,
+      "job_id": 136753231307,
+      "status": "EXECUTED",
+      "original_cases_executed": 7,
+      "cases": [
+        {
+          "case": "receive_requires_explicit_check",
+          "pass": true
+        },
+        {
+          "case": "actual_offline_ps_finding",
+          "pass": true
+        },
+        {
+          "case": "edit_hides_previous_finding",
+          "pass": true
+        },
+        {
+          "case": "new_share_and_no_finding",
+          "pass": true
+        },
+        {
+          "case": "unsupported_mime_has_no_verdict",
+          "pass": true
+        },
+        {
+          "case": "clear_removes_input_and_result",
+          "pass": true
+        },
+        {
+          "case": "background_clears_text",
+          "pass": true
+        }
+      ],
+      "control_stage": "background_marker_absence",
+      "diagnostic_code": null,
+      "license_record_unchanged": true,
+      "first_receive_provenance": {
+        "state": "OBSERVED",
+        "scope": "diagnostic-variant-current-process-only",
+        "schema": 1,
+        "instances": 1,
+        "truncated": false,
+        "events": [
+          [
+            1,
+            "CREATE_BEGIN",
+            "SEND",
+            false,
+            "UNBUILT",
+            false
+          ],
+          [
+            1,
+            "CREATE_END",
+            "MAIN",
+            true,
+            "RECEIVED",
+            false
+          ],
+          [
+            1,
+            "RESUME_BEGIN",
+            "MAIN",
+            true,
+            "RECEIVED",
+            false
+          ],
+          [
+            1,
+            "RESUME_END",
+            "MAIN",
+            true,
+            "RECEIVED",
+            false
+          ]
+        ]
+      },
+      "raw_reports": {
+        "emulator.json": {
+          "sha256": "4ba0e6aadca0e7c45700913c5063370072abab5a2a4210118dade246ca512828",
+          "bytes": 4092
+        },
+        "build.json": {
+          "sha256": "605ad11932f6373c6e95221e6ed0d75a30df57eb8263529cae7de91caf1384e2",
+          "bytes": 2517
+        },
+        "preparation.json": {
+          "sha256": "afbf7f191300260bc886af40bbfcb7e261e9d7da08984ba5e76f50a12af9580b",
+          "bytes": 546
+        },
+        "engine-parity.json": {
+          "sha256": "2fddcf75acb4ecf033f667483c751932698c656079c2c27065e7c966db4ef01d",
+          "bytes": 685
+        },
+        "study-source-start.json": {
+          "sha256": "7a9036d0dbf03c417fd4045b3156b571bae7029956437343254b2ee2d7db6e58",
+          "bytes": 3322
+        },
+        "study-source-end.json": {
+          "sha256": "4418403a4ac3501bdac5a365fdb074056c11db202e0084b1299098171fbf9a53",
+          "bytes": 3320
+        }
+      },
+      "frozen_source_and_variant_bindings_match": true
+    },
+    {
+      "sample": 3,
+      "job_id": 136753231611,
+      "status": "EXECUTED",
+      "original_cases_executed": 7,
+      "cases": [
+        {
+          "case": "receive_requires_explicit_check",
+          "pass": true
+        },
+        {
+          "case": "actual_offline_ps_finding",
+          "pass": true
+        },
+        {
+          "case": "edit_hides_previous_finding",
+          "pass": true
+        },
+        {
+          "case": "new_share_and_no_finding",
+          "pass": true
+        },
+        {
+          "case": "unsupported_mime_has_no_verdict",
+          "pass": true
+        },
+        {
+          "case": "clear_removes_input_and_result",
+          "pass": true
+        },
+        {
+          "case": "background_clears_text",
+          "pass": true
+        }
+      ],
+      "control_stage": "background_marker_absence",
+      "diagnostic_code": null,
+      "license_record_unchanged": true,
+      "first_receive_provenance": {
+        "state": "OBSERVED",
+        "scope": "diagnostic-variant-current-process-only",
+        "schema": 1,
+        "instances": 1,
+        "truncated": false,
+        "events": [
+          [
+            1,
+            "CREATE_BEGIN",
+            "SEND",
+            false,
+            "UNBUILT",
+            false
+          ],
+          [
+            1,
+            "CREATE_END",
+            "MAIN",
+            true,
+            "RECEIVED",
+            false
+          ],
+          [
+            1,
+            "RESUME_BEGIN",
+            "MAIN",
+            true,
+            "RECEIVED",
+            false
+          ],
+          [
+            1,
+            "RESUME_END",
+            "MAIN",
+            true,
+            "RECEIVED",
+            false
+          ]
+        ]
+      },
+      "raw_reports": {
+        "emulator.json": {
+          "sha256": "9476efe81adff8da78f1e80c5786aa746b946c705b9f8eb63e2726a2f20defb0",
+          "bytes": 4093
+        },
+        "build.json": {
+          "sha256": "d3425f964fed661b7f188ebee6b01d1b8e496618934b679c72d31430b1c56eea",
+          "bytes": 2517
+        },
+        "preparation.json": {
+          "sha256": "afbf7f191300260bc886af40bbfcb7e261e9d7da08984ba5e76f50a12af9580b",
+          "bytes": 546
+        },
+        "engine-parity.json": {
+          "sha256": "d480f8e651c9f0beea9a3cb23ef18fa95d18b9f020f77097cd040be105a23a80",
+          "bytes": 685
+        },
+        "study-source-start.json": {
+          "sha256": "7a9036d0dbf03c417fd4045b3156b571bae7029956437343254b2ee2d7db6e58",
+          "bytes": 3322
+        },
+        "study-source-end.json": {
+          "sha256": "4418403a4ac3501bdac5a365fdb074056c11db202e0084b1299098171fbf9a53",
+          "bytes": 3320
+        }
+      },
+      "frozen_source_and_variant_bindings_match": true
+    }
+  ],
+  "aggregate": {
+    "job_id": 136753966888,
+    "pass": false,
+    "samples_executed_seven": 2,
+    "all_outcomes_required": true,
+    "raw_sha256": "6addb9d30ecc426ff7efc6524c4d826d2d8d8a7c30eebd0f6ce1227ff531cfe8",
+    "raw_bytes": 7671,
+    "actual_local_isolated_stdlib_replay_exit": 1,
+    "replay_byte_identical": true
+  },
+  "confirmed_this_failure": {
+    "sample": 1,
+    "positive_trace": "SEND accepted; configuration-changing pause cleared old view/session; stopped/saved/destroyed; second instance received consumed MAIN and displayed Ready.",
+    "activity_instances": 2,
+    "untruncated_events": 16,
+    "configuration_recreation_observed": true,
+    "not_merely_unreceived_send_or_stale_hierarchy": true,
+    "specific_configuration_trigger_not_recorded": true,
+    "earlier_untraced_failures_not_individually_explained": true
+  },
+  "product_fix_yet": false,
+  "production_equivalent_apk": false,
+  "default_apk_readiness": false,
+  "historical_failed_records_preserved": true,
+  "no_more_characterization_wave": true,
+  "new_product_fix_requires_own_source_and_default_apk_evidence": true,
+  "sources": {
+    ".github/workflows/android-share.yml": "4dc6d0e62f14782691a59c5db4493061f3b35c707273eefa819bf4949ae1b97a",
+    ".github/workflows/android-cold-start-study.yml": "038f12cd56bfb56e99db60939a29511b2d3bb4e81866de1d749bbb70201b6a7f",
+    "scripts/cold-start-study.py": "cf1c8c03e2991a380b1cf39e1def5d6fff4f2595f919e598db6521db634d5dc9",
+    "tests/test_cold_start_study.py": "caca1391a6b71908ef75c6fbff2b8c642accd5183ede23b88a84b8efd8baa8d4",
+    "docs/android-intake-provenance-wave-plan.md": "e7230dfde02279c67a200e81ae7bc2ad688cd4218a0ce8c066da14dfb0d1176b"
+  },
+  "physical_device_evidence": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false
+}

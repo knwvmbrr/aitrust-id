@@ -1,0 +1,99 @@
+{
+  "format": "ai-trust-id-independent-nf-device-review/v1",
+  "recorded_at": "2026-11-21T07:14:30.173027+00:00",
+  "reviewer": "/root/web_camo",
+  "producer": "/root/seo",
+  "verdict": "SCOPED_SOURCE_AND_EVIDENCE_CLEAR",
+  "scope_ids": [
+    "T-NF",
+    "F-020a"
+  ],
+  "producer_base_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
+  "source_sha256": {
+    "tools/nf_device.py": "0a0285890cb608e7451ee72b03027b2ef4062b94a925c89d4e98a2f9f80da2e3",
+    "scripts/build-nf-device.py": "c710f27da70506ccb3e01c7e879a2c5e1e6a34503ba3ce8e46c056d4e3b852b6",
+    "site/src/NFExplorer.jsx": "8638194d959b25726d1ae0194226f652c27d5e0d120dfeb65d41980ff66c3935",
+    "site/src/NFExplorerSlot.jsx": "c8d2d1eeaae63799161614e967ea7f0d92e404f2b4cce26708cc71b0cd19ca81",
+    "site/src/nf-device-client.js": "473a8123917b1cde54fa4a0f29240d6808aac2e0ea11abcb167530cc6491c08d",
+    "site/src/nf-device-worker.js": "076e042598209d2fbea18e5a3d6e55fd2901fdb5c3d482f122249f326cddc5b9",
+    "site/src/nf-device-result.js": "140d9fa9e44df192c06c328fe100a99cf601dc442b83ed499b4dcbaeb9b849b5",
+    "site/src/nf-cosine-result.js": "8662e820c683e85294be5d49bc7bb8401d6c7ea92ad19236ff0034ee5d908a39",
+    "site/src/nf-device-manifest.json": "c4e43cc1dbb965bc1ecd4d85e4524bfd18b9f01d6ce071a98c900a334d123c38",
+    "scripts/nf-site-controls.cjs": "6646fbb5014255cc398d211ded04503036a7ac44110c99082982fbab2a4d5e13",
+    "scripts/verify-nf-site.cjs": "90bcc156552f957bb9c0242f598de9a1e8df4f2b036ca8a974ed2ed544e7446e",
+    "scripts/verify-nf-device.cjs": "cf58be89fb1709aff3aeabfcfa679698ca57583787cee1cdcbb8c231be638f5a",
+    "scripts/verify-nf-input.cjs": "07350578400aabc9187c83530bbc5d81baeb1f70ae11a97b511f84b7a5308f08",
+    "docs/nf-device-reference.md": "8715ee5fc08f278664cce2cf5658aa891241ee6e722e13412063f84e2797b407"
+  },
+  "reviewed_receipt_sha256": {
+    "runs/2026-11-21-nf-device-browser-candidate-1.json": "cde61d7dd8f4f270e6125c1e10cd413af5d0e5c8018a6093eae491ab79ba5aba",
+    "runs/2026-11-21-nf-input-original.json": "e46fd376c207cbbd9fc89ffab1665e6faa12f32da335f2bd1cd1b6b1c8e33e2f",
+    "runs/2026-11-21-nf-input-corrected.json": "e21bede2a7659f842b99ef53bfdf6336ed26177c2fb6523ad3a8f3b7f9c43bc7",
+    "runs/2026-11-21-nf-device-correction-accounting.json": "493dfcd8fc96c1e511d3d01314f6664fa5f090377a68ac3b35501fb918fbe0df"
+  },
+  "reviewer_executed": {
+    "original_rounding_counterexample": {
+      "claim_tokens": "63 x plus a0..a126",
+      "reference_tokens": "127 x plus a0..a123 plus b0..b130",
+      "canonical_score": 0.991821289062,
+      "old_javascript_score": 0.991821289063,
+      "old_valid_record_refused": true,
+      "corrected_valid_record_accepted": true,
+      "forged_alternate_score_refused": true
+    },
+    "independent_node_python_control_groups": 8,
+    "control_coverage": [
+      "both original-byte/frozen-NFC input bindings",
+      "private fields/spans/omitted matches/source identity/tag promotion refused",
+      "negation overlap is not truth",
+      "wrong-input canonical fake-worker result refused",
+      "optional cosine import failure followed by functioning literal check",
+      "eight binary64 rounding boundaries equal Python",
+      "getter-bearing record refused"
+    ],
+    "previous_browser_artifact_identity_check": {
+      "historical_receipt_source_files": 25,
+      "historical_served_files": 272,
+      "matched_before_UI_correction": true,
+      "current_UI_artifact_not_rebound_to_old_receipt": true
+    },
+    "current_input_correction_identity_matches": true,
+    "unchanged_canonical_runtime_identity_matches": true
+  },
+  "author_browser_evidence_reviewed_not_rerun": {
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "authored_cases_per_engine": 33,
+    "complete_records_per_engine": 21,
+    "canonical_refusals_per_engine": 12,
+    "forged_records_per_engine": 8,
+    "optional_failures_then_real_literal_PS_MT": true,
+    "no_default_worker_or_input_upload_storage": true,
+    "private_details_opt_in": true,
+    "cancel_edit_clear_unmount": true,
+    "reflow320_at200percent_and_themes": true,
+    "current_native_input_correction": {
+      "retained_codepoints": 3000,
+      "fields": [
+        "claim",
+        "passage"
+      ],
+      "refused_before_worker": true,
+      "field_specific_invalid_and_focus": true
+    },
+    "immutable_historical_overcount_preserved_and_corrected_by_separate_receipt": true
+  },
+  "limits": {
+    "reviewer_browser_or_VM_run": false,
+    "integrated_modal_helper_syntax_only": true,
+    "PM_actual_production_route_and_build_execution_pending": true,
+    "independent_accuracy_evidence": false,
+    "physical_phone_tested": false,
+    "human_screen_reader_tested": false,
+    "NF_tag_issued": false,
+    "full_original_requirement_closed": false,
+    "producer_sources_edited_by_reviewer": false
+  }
+}
