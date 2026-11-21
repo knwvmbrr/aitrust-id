@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-221627-public-api-guide-published-873aed90",
+  "recorded_at": "2026-11-21T22:16:27.560800+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a0c59d27dc4597599422a9f356978901e597f49d",
+  "changed": "Published the API/MCP connection guide through protected source and normal Pages deployment; archived stale current publication aliases; recorded the separately reviewed JPEG development branch.",
+  "proves": "All11 required source checks and agent-tools passed with no unresolved findings;22 live selected HTTP files matched the build; Google verification remained intact; the live guide PS example returned FINDING without echoing input. JPEG committed source and independent review identities match its normal public branch.",
+  "limits": "133 original requirements complete69 open; target60 unmet. Five development-source outcomes are not full tag releases. No provider account connection, independent accuracy, physical-phone acceptance, global artifact equivalence or installed operator upgrade is claimed.",
+  "scope_ids": [
+    "WP-SITE",
+    "F-150",
+    "T-FA",
+    "T-PA",
+    "F-155"
+  ],
+  "files": {
+    "state.json": "8f2e95722056587402737f178825e9a7b7661cd5fa540c91753dbec135af2f35",
+    "runs/2026-11-21-public-connection-guide-publication.json": "1d71bb30627fd612eacce47b8b9f8a903d46aef0eb88b819465e0a5f4bca7e0a",
+    "runs/2026-11-21-public-guide-published-PS-example.json": "1f3e9f41c2a25ba6670070ac2e0b7616b6ad7ce019c7aaaa778eb1bb39ea097e",
+    "runs/2026-11-21-pr145-required-ci-review.json": "c878f986628c66123d2241b3799bf42be4de87f63a5552ffa17c1454040cea1d",
+    "runs/2026-11-21-additional-jpeg-development-handoff.json": "bd9fcedff6f898a9001f6cc56e1436ee74ee59489233dad6e353a8b119a8bc67"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-public-connection-guide-publication.json",
+      "sha256": "1d71bb30627fd612eacce47b8b9f8a903d46aef0eb88b819465e0a5f4bca7e0a"
+    },
+    {
+      "path": "runs/2026-11-21-public-guide-published-PS-example.json",
+      "sha256": "1f3e9f41c2a25ba6670070ac2e0b7616b6ad7ce019c7aaaa778eb1bb39ea097e"
+    },
+    {
+      "path": "runs/2026-11-21-pr145-required-ci-review.json",
+      "sha256": "c878f986628c66123d2241b3799bf42be4de87f63a5552ffa17c1454040cea1d"
+    },
+    {
+      "path": "runs/2026-11-21-additional-jpeg-development-handoff.json",
+      "sha256": "bd9fcedff6f898a9001f6cc56e1436ee74ee59489233dad6e353a8b119a8bc67"
+    }
+  ],
+  "checks": []
+}

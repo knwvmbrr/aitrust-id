@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-21T21:56:21.287194+00:00",
+  "updated": "2026-11-21T23:28:53.419129+00:00",
   "active_increment": "Public HTTPS/MCP service running; finish published connection instructions; requested Search Console verification completed.133 original requirements complete,69 open; no new test batches before implementation completion.",
-  "status": "public_remote_PS_preview_operational; Google_visibility_confirmed11URLs; Search_Console_verified_sitemap37_home_andPS_indexed",
+  "status": "public_API_connection_guide_published_and_live_example_working; original133_complete69_open_target60_unmet",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-11-21-nov21-publication.json",
+    "evidence": "runs/2026-11-21-public-connection-guide-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Host-specific MCP configuration and user-interface acceptance beyond the official SDK client",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://c19b26ec.aitrust-id.pages.dev",
+    "deployment_url": "https://544711b4.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-11-21-nov21-publication.json",
+    "publication_evidence": "runs/2026-11-21-public-connection-guide-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 37,
@@ -104,7 +104,7 @@
       "site_validation": "runs/2026-10-08-ps-use-local.json",
       "publication_verified": true
     },
-    "verification": "runs/2026-11-21-nov21-publication.json",
+    "verification": "runs/2026-11-21-public-guide-rollback-prepared-website.json",
     "footer_workflows": {
       "count": 8,
       "architecture": "docs/footer-workflows.md; docs/tag-system-upgrade.md",
@@ -318,10 +318,10 @@
       ],
       "deployment_url": "https://baff45df.aitrust-id.pages.dev"
     },
-    "published_source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
-    "public_static_source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
-    "deployment": "https://32f95adf.aitrust-id.pages.dev",
-    "source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
+    "published_source_commit": "a0c59d27dc4597599422a9f356978901e597f49d",
+    "public_static_source_commit": "a0c59d27dc4597599422a9f356978901e597f49d",
+    "deployment": "https://544711b4.aitrust-id.pages.dev",
+    "source_commit": "a0c59d27dc4597599422a9f356978901e597f49d",
     "ci_portability_publication": {
       "source_commit": "a2ba8551547cf707368774ce2fd58cf13ef73c68",
       "preview": "https://0a4b7796.aitrust-id.pages.dev",
@@ -330,7 +330,7 @@
       "engineering_release_only": true,
       "independent_tag_release": false
     },
-    "publication": "runs/2026-11-21-nov21-publication.json",
+    "publication": "runs/2026-11-21-public-connection-guide-publication.json",
     "prior_current_publication_fields": {
       "evidence": "runs/2026-10-13-ps-efficiency-publication.json",
       "publication_evidence": "runs/2026-10-11-choice-framing-publication.json",
@@ -395,20 +395,39 @@
           "deployment_url": "https://c198f50c.aitrust-id.pages.dev"
         },
         "reason": "Current2aa selected critical files and actual browser checks verified on apex/www; no whole-artifact equivalence claim."
+      },
+      {
+        "superseded_at": "2026-11-21T22:16:27.192571+00:00",
+        "prior_values": {
+          "evidence": "runs/2026-11-21-nov21-publication.json",
+          "publication_evidence": "runs/2026-11-21-nov21-publication.json",
+          "publication": "runs/2026-11-21-nov21-publication.json",
+          "verification": "runs/2026-11-21-nov21-publication.json",
+          "published_source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
+          "public_static_source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
+          "source_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
+          "deployment": "https://32f95adf.aitrust-id.pages.dev",
+          "deployment_url": "https://c19b26ec.aitrust-id.pages.dev",
+          "current_critical_HTTP_checks": 16,
+          "current_critical_assets_per_origin": 8,
+          "current_publication_origins": 2,
+          "critical_public_HTTP_checks": 26,
+          "pending_increment": {
+            "MT_mobile_quotation": true,
+            "website_JS_notices": true,
+            "published": true,
+            "tag_release_approved": false,
+            "NF_reference_preview_published": false
+          }
+        },
+        "reason": "Replace stale current aliases with the actual protected API guide deployment. The new HTTP proof covers11 selected files at apex and unique deployment, not all-site browser acceptance or whole-artifact equivalence."
       }
     ],
-    "current_critical_HTTP_checks": 16,
-    "current_critical_assets_per_origin": 8,
+    "current_critical_HTTP_checks": 22,
+    "current_critical_assets_per_origin": 11,
     "current_publication_origins": 2,
     "full_current_artifact_byte_equivalence_claimed": false,
-    "pending_increment": {
-      "MT_mobile_quotation": true,
-      "website_JS_notices": true,
-      "published": true,
-      "tag_release_approved": false,
-      "NF_reference_preview_published": false
-    },
-    "critical_public_HTTP_checks": 26,
+    "critical_public_HTTP_checks": 22,
     "verification_file_publication_evidence": "runs/2026-11-21-google-verification-publication.json"
   },
   "previous_runtime_verification": {
@@ -1199,12 +1218,12 @@
     "PS": "runs/2026-11-21-maintenance-final-PS.json",
     "PII_REDACTED": "runs/2026-11-21-maintenance-final-PII_REDACTED.json",
     "extension": "runs/2026-11-21-maintenance-final-extension.json",
-    "protocol": "runs/2026-11-21-public-guide-rollback-protocol.json",
-    "website": "runs/2026-11-21-public-guide-rollback-prepared-website.json",
+    "protocol": "runs/2026-11-21-six-outcomes-final-protocol.json",
+    "website": "runs/2026-11-21-six-outcomes-final-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-21T21:56:21.287194+00:00",
+  "updated_at": "2026-11-21T23:28:53.419129+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -4791,7 +4810,7 @@
   },
   "remote_tag_connection": {
     "enhancement_id": "ENH-REMOTE-TAG-CONNECTION",
-    "status": "public_HTTPS_MCP_preview_operational; refreshed_connection_instructions_ready_for_publication",
+    "status": "public_HTTPS_MCP_PS_development_preview_and_connection_guide_published",
     "remote_mode": "optional_selected_text_to_dedicated_server",
     "default_local_tools_changed": false,
     "remote_PII_available": false,
@@ -4807,7 +4826,9 @@
     "deployment_evidence": "runs/2026-11-21-api-deployment-complete.json",
     "distinct_review": "runs/2026-11-21-api-deployment-independent-review.json",
     "data_flow_policy_version": "1.14",
-    "independent_accuracy_validated": false
+    "independent_accuracy_validated": false,
+    "connection_guide_publication": "runs/2026-11-21-public-connection-guide-publication.json",
+    "published_guide_actual_PS_example": "runs/2026-11-21-public-guide-published-PS-example.json"
   },
   "current_sixty_open_wave": {
     "baseline_complete": 133,
@@ -4816,23 +4837,55 @@
     "actual_new_original_closures": 0,
     "audit": "docs/nov21-autonomous-closure-audit.json",
     "guide_source_independent_review": "runs/2026-11-21-public-api-guide-independent-review.json",
-    "guide_actual_publication_pending": true,
+    "guide_actual_publication_pending": false,
     "MT_additive_independent_candidate": "a14fe9738e3799ed9c738a40b83ae76daacd66eb",
     "MT_candidate_not_integrated_or_released": true,
     "guide_website_execution": "runs/2026-11-21-public-guide-rollback-prepared-website.json",
     "guide_rendered_example_execution": "runs/2026-11-21-public-guide-rendered-example.json",
-    "published_development_outcomes": 4
+    "published_development_outcomes": 6,
+    "guide_publication": "runs/2026-11-21-public-connection-guide-publication.json",
+    "protected_CI_review": "runs/2026-11-21-pr145-required-ci-review.json",
+    "guide_actual_example": "runs/2026-11-21-public-guide-published-PS-example.json",
+    "additional_JPEG_development_handoff": "runs/2026-11-21-additional-jpeg-development-handoff.json",
+    "original_complete": 133,
+    "original_open": 69,
+    "target_met": false,
+    "MT_browser_development_handoff": "runs/2026-11-21-mt-browser-development-handoff.json",
+    "six_outcomes_and_actual_target_evidence": "runs/2026-11-21-six-outcomes-strict-target-integration.json",
+    "public_source_availability": "runs/2026-11-21-public-source-archive-availability.json",
+    "final_repository_engineering_receipts": {
+      "protocol": "runs/2026-11-21-six-outcomes-final-protocol.json",
+      "website": "runs/2026-11-21-six-outcomes-final-website.json"
+    }
   },
   "independent_development_handoffs": "runs/2026-11-21-independent-tag-development-handoffs.json",
   "operator_ownership_correction": {
-    "status": "source_integrated_and_peer_reviewed; affected_protocol_and_website_checks_pass; protected_publication_pending",
+    "status": "reviewed_correction_protected_in_Git; live_historical_operator_unchanged",
     "evidence": "runs/2026-11-21-api-rollback-integrated-controls.json",
     "independent_review": "runs/2026-11-21-api-rollback-ownership-independent-review.json",
     "live_operator_modified": false,
     "legacy_record_migration_performed": false,
     "preserved_website_refusal": "runs/2026-11-21-public-guide-rollback-website-source-drift.json",
     "website_refusal_cause": "All 59 commands exited zero; prebuild regenerated two tracked scope projections after the initial fingerprint. Prepared final projections before the corrected source freeze.",
-    "finite_boundary_review": "runs/2026-11-21-public-guide-rollback-boundaries.json"
+    "finite_boundary_review": "runs/2026-11-21-public-guide-rollback-boundaries.json",
+    "protected_source_commit": "a0c59d27dc4597599422a9f356978901e597f49d"
   },
-  "pending_engineering_revalidation": []
+  "pending_engineering_revalidation": [],
+  "session_target_correction": {
+    "status": "source_integrated_and_distinctly_reviewed; affected_protocol_and_website_current; Git_publication_tracked_in_normal_branch_history",
+    "source_commit": "0d6240e3a496cd785b9fd74d337f4a38e81c5489",
+    "author_proof": "runs/2026-11-21-session-target-accountability-corrected.json",
+    "distinct_review": "runs/2026-11-21-session-target-accountability-independent-review.json",
+    "strict_target_open": 60,
+    "actual_open": 69,
+    "strict_goal_met": false,
+    "historical_minimum_closure_milestone_preserved": true,
+    "original_criteria_or_percentages_changed": false,
+    "integrated_accounting_and_scope_review": "runs/2026-11-21-six-outcomes-strict-target-integration.json",
+    "current_software_evidence": [
+      "runs/2026-11-21-six-outcomes-final-protocol.json",
+      "runs/2026-11-21-six-outcomes-final-website.json"
+    ],
+    "final_finite_boundary_review": "runs/2026-11-21-six-outcomes-final-boundaries.json"
+  }
 }

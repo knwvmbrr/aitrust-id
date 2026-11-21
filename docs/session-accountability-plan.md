@@ -18,9 +18,11 @@ finished scoped deliverables and full original requirement closures. It does
 not write the scope ledger, accept human/legal evidence or promote a tag.
 
 The ordinary inspection command succeeds only when the accounting is internally
-consistent. A separate session-goal check fails when the declared minimum
-original closure has not happened. A structurally sound board with zero closures
-must say **NOT MET**, even if useful component work finished. New task IDs,
+consistent. A separate session-goal check requires the numeric open target, the declared
+minimum original closures and named deliverables, and no reopened originals.
+Report the minimum-closure milestone separately. A structurally sound board
+with an unmet target or zero required closures must say **NOT MET**, even if
+useful component work finished. New task IDs,
 passing test totals and an old 100% record cannot lower the original count.
 
 Each closed task needs its declared outcome, distinct reviewer, timestamp and
@@ -62,3 +64,31 @@ records its board digest separately. Changing an agent assignment must not cause
 all detector regression suites to rerun or make an old accounting observation
 current. CI also runs the live guard against its checkout. Source changes still
 require the existing capability checks.
+
+## Strict open-target correction architecture — November 21, 2026
+
+The v1 minimum-one-original-closure gate is a milestone, not proof of the owner's
+60-open destination. Preserve its historical successful outcome and F-030's full
+closure. No prior receipt or original requirement is rewritten by this fix.
+
+The current board moves to `session-delivery-plan/v2`. Separate minimum-closure
+milestone and numeric open-target statuses. Strict original success requires the
+minimum closure count, current open count at or below its declared target, and
+no reopened originals. Session success also requires the named-deliverable goal.
+At 133 complete/69 open with target 60, milestone MET and target/session NOT MET
+must coexist. The ordinary command checks accounting consistency; only
+`--check-session` maps the strict goal to its nonzero outcome.
+
+Read v1 boards compatibly: validate their historical minimum-only recorded
+status and recorded session value, expose those as legacy observations, and
+recompute the current strict target result for both profiles. A v1 true boolean
+must never make the strict CLI pass at 69 versus 60. Reject inconsistent v2 status
+claims. Keep the same 202 IDs, baseline, closure/evidence records and percentages.
+
+Focused verification includes actual69→strict exit1, equality/below/above target,
+minimum versus numeric target versus scoped delivery, reopened originals and v1
+compatibility. The existing implementation/test paths are already CI and
+capability inputs; do not add an always-failing strict-session CI command or
+waive the user's target to obtain green checks. Refresh reviewed source hashes
+only where current code/doc bytes actually changed. No full website/native run
+or production mutation is part of this source-only accounting correction.

@@ -1,0 +1,61 @@
+{
+  "format": "session-target-accountability-independent-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-21T22:31:41.175155+00:00",
+  "reviewer": "seo",
+  "source_base": "a0c59d27dc4597599422a9f356978901e597f49d",
+  "source_sha256": {
+    "tools/session_delivery.py": "2e97fe071729f7abaae23c7b55cf09e0498c0f7af3258e01d4fcbd74039824ae",
+    "scripts/session-delivery.py": "e1d410770bd4b56d2673026cb93962b8d91a92c1633e3692fec94c9a19fa88b9",
+    "tests/test_session_delivery.py": "6a43b7ee46f5c4727dc5d4352c37b19592c08b22eab6678054a8ac89043ed9ea",
+    "docs/session-accountability-plan.md": "0b6f7f41191b779b646b23502bbbe304e733217c6cb7cbe9731a607a5bafd063",
+    "docs/session-delivery.json": "dc4b87ac12f7f00464bf9798e7f6361b8889c5d465186d6e41526dcaa1a54e32",
+    "docs/session-delivery-plan.md": "e951f0df6292c8f696313eafa964fccf06ad71b2fe351c2aaf4f37933398fd91",
+    "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
+    "docs/scope-progress.json": "582e0c4b1d7c0b3f365293ba3789b3ee5fe59851e587e194be0eb737be4b0a23",
+    "docs/scope-delivery.json": "45099ed70bd388d557c43bca64fcbc9b37ef523a9135af3f50a47e1fe251271f"
+  },
+  "source_stable": true,
+  "author_receipt": {
+    "path": "runs/2026-11-21-session-target-accountability-corrected.json",
+    "sha256": "f948620fb9c20a590621b3b8e1edb960fdd17f461ab5cfcf793c5fedd73cb4b0",
+    "actual_command_count": 3
+  },
+  "actual_review_controls": {
+    "focused_tests": 7,
+    "deselected": 47,
+    "seconds": 0.43,
+    "scope": [
+      "target below/equal/above actual open boundaries",
+      "target success cannot waive original-closure or scoped-deliverable minima",
+      "legacy v1 recorded milestone preserved while recomputed strict target fails"
+    ]
+  },
+  "actual_strict_CLI": {
+    "exit": 1,
+    "pass": true,
+    "original_open": 69,
+    "target_open": 60,
+    "closures_to_target": 9,
+    "minimum_original_closure_milestone_met": true,
+    "original_open_target_met": false,
+    "session_success": false,
+    "stdout_sha256": "09386d4bbba68cdef9f692022d1bbc0d2c9abef3b9e636887ea721f003af7467"
+  },
+  "preservation": {
+    "master202_ledger_delivery_bytes_match_base": true,
+    "original_full_criteria_unchanged": true,
+    "baseline_and_prior_tasks_and_F030_recommendation_unchanged": true,
+    "original_counts_133_69_unchanged": true
+  },
+  "source_review": [
+    "Numeric target, minimum-original milestone, no-reopens and scoped-delivery minimum remain distinct required predicates.",
+    "V2 stored board flags must equal strict computation; V1 old milestone meaning remains historical but cannot grant strict CLI success.",
+    "All prior criterion/evidence/counter/referee/privacy checks retained; no old evidence rewritten."
+  ],
+  "new_actionable_findings": [],
+  "limits": [
+    "Seven affected accounting checks and one actual strict CLI only, not another54/full-site or detector suite.",
+    "Accounting success is not actual full-acceptance approval; no scope closure or owner/human substitution."
+  ]
+}

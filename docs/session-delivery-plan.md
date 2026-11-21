@@ -1,3 +1,37 @@
+## Operational closeout snapshot — 2026-11-21T23:12:57.420401+00:00
+
+The [API connection guide](https://aitrustid.com/reference/remote-ai/) is live from
+protected source a0c59d27. Both published origins matched11 selected build files;
+the live guide example returned a PS finding without echoing its invented text.
+[Publication](../runs/2026-11-21-public-connection-guide-publication.json) ·
+[Actual example](../runs/2026-11-21-public-guide-published-PS-example.json).
+
+Six bounded development outcomes now have published source: MT additive CLI, PNG
+observations, FI practice, advisory PS review join, JPEG observations and standalone
+MT browser practice. Producer, separate reviewer, exact identities, completed time
+and remaining limits are in the current board and linked immutable handoffs.
+They are not full tag releases or main integration. The earlier MT combined
+deadline run remains failed with unknown WebKit cause; later positive engine
+observations are recorded separately. The specialists finished their bounded
+assignments; root owns protected integration of this closeout and target correction.
+
+**133 complete /69 open originals; target60 is NOT MET.** The old one-closure
+milestone is separate from the numeric goal. Strict session checking must return1
+at69; no criterion, percentage or original denominator changed. Full independent,
+human/device, operating and legal acceptance remains where recorded.
+
+## Earlier dated planning and delivery snapshots
+
+## Strict target accounting — November 21, 2026
+
+Current v2 board: **133 complete / 69 open; target 60; 9 closures still needed.**
+The historical minimum-one-closure milestone is MET through the fully evidenced
+F-030 closure. The numeric target is NOT MET and current session success is
+false. No original criterion, percentage, closure evidence or denominator changed.
+The ordinary accounting command can pass consistency while `--check-session`
+returns 1 for the unmet target. Historical v1 boards retain their minimum-only
+meaning; current inspection recomputes strict target success even for v1 input.
+
 ## Completed development source handoffs — November 21, 2026
 
 Four bounded CLIs are independently reviewed and published as exact downloadable

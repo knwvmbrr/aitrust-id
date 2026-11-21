@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-224017-enforce-original-open-session-target-9f362a99",
+  "recorded_at": "2026-11-21T22:40:17.914202+00:00",
+  "author": "Codex /root/web_camo accountability engineer",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a0c59d27dc4597599422a9f356978901e597f49d",
+  "changed": "Separated the preserved minimum-one-closure milestone from the strict60-open session target, versioned the current board as v2 and kept historical v1 interpretation without granting strict success.",
+  "proves": "Fifty-four focused controls pass. Actual ordinary inspection exits0, current and legacy-v1 strict checks each exit1 at69 open versus60 with F030 preserved; distinct review passes seven focused checks and an actual strict CLI. All202 master/ledger/delivery bytes and actual closure/task records remain unchanged; four existing reviewed-source hashes refreshed.",
+  "limits": "The60-open target is still NOT MET and current session_success is false; no extra closure, criterion waiver, fake label, denominator change, runtime/deployment or full-suite claim. Historical v1 minimum-only successes are retained as milestones, not relabeled target proof. Push and final capability revalidation remain root-owned.",
+  "scope_ids": [
+    "F-030"
+  ],
+  "files": {
+    "tools/session_delivery.py": "2e97fe071729f7abaae23c7b55cf09e0498c0f7af3258e01d4fcbd74039824ae",
+    "scripts/session-delivery.py": "e1d410770bd4b56d2673026cb93962b8d91a92c1633e3692fec94c9a19fa88b9",
+    "tests/test_session_delivery.py": "6a43b7ee46f5c4727dc5d4352c37b19592c08b22eab6678054a8ac89043ed9ea",
+    "docs/session-accountability-plan.md": "0b6f7f41191b779b646b23502bbbe304e733217c6cb7cbe9731a607a5bafd063",
+    "docs/session-delivery-plan.md": "e951f0df6292c8f696313eafa964fccf06ad71b2fe351c2aaf4f37933398fd91",
+    "docs/session-delivery.json": "dc4b87ac12f7f00464bf9798e7f6361b8889c5d465186d6e41526dcaa1a54e32",
+    "eval/route-boundaries.json": "301286becc3e77b5b14f5627611a2ed13f5a74a0ff18ea8766ee2a968be65abf",
+    "runs/2026-11-21-session-open-target-original.json": "46c822ab7c6ce9088132183531116e24f124c934a05d62d9354fcc0041d7d052",
+    "runs/2026-11-21-session-target-accountability-corrected.json": "f948620fb9c20a590621b3b8e1edb960fdd17f461ab5cfcf793c5fedd73cb4b0",
+    "runs/2026-11-21-session-target-accountability-independent-review.json": "a143f3b9cd543781ab4250891f3c2105b64a34fd56a778640088adf988815ca9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-session-open-target-original.json",
+      "sha256": "46c822ab7c6ce9088132183531116e24f124c934a05d62d9354fcc0041d7d052"
+    },
+    {
+      "path": "runs/2026-11-21-session-target-accountability-corrected.json",
+      "sha256": "f948620fb9c20a590621b3b8e1edb960fdd17f461ab5cfcf793c5fedd73cb4b0"
+    },
+    {
+      "path": "runs/2026-11-21-session-target-accountability-independent-review.json",
+      "sha256": "a143f3b9cd543781ab4250891f3c2105b64a34fd56a778640088adf988815ca9"
+    }
+  ],
+  "checks": []
+}
