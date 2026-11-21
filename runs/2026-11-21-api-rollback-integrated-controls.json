@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-11-21T21:25:38.507520+00:00",
+  "kind": "actual_integrated_operator_fix_and_finite_source_review",
+  "pass": true,
+  "producer_commit": "ea8ecc3771baccfca42f8866d2dd9739a6cca851",
+  "independent_review": "runs/2026-11-21-api-rollback-ownership-independent-review.json",
+  "affected_operator_unittest_count": 28,
+  "actual_unittest_exit": 0,
+  "runtime_sha256": "03ef82846753f990847f67db048ab2fcd931e544dd6f769000081639718f6e65",
+  "tests_sha256": "b200383952d7031372913ff52d4696d5ad5f2a94a89d14725b8027c8181d63f5",
+  "inventory_count": 1657,
+  "delta": {
+    "added": [
+      "docs/api-rollback-ownership-plan.md"
+    ],
+    "removed": [],
+    "changed": [
+      "deploy/ai-tools/README.md",
+      "deploy/ai-tools/activate.py",
+      "scripts/verify-route-boundaries.py",
+      "tests/test_ai_tools_activation.py"
+    ]
+  },
+  "live_operator_or_server_changed": false,
+  "source_bound_protocol_and_website_refresh_required": true,
+  "independent_accuracy_granted": false,
+  "original_closures": 0
+}

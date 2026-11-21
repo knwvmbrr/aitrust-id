@@ -1,3 +1,14 @@
+## Completed development source handoffs — November 21, 2026
+
+Four bounded CLIs are independently reviewed and published as exact downloadable
+development source: MT additive framing, PNG metadata observations, FI citation
+practice and the advisory PS review/prediction join. Producer, different reviewer,
+completion time, exact source/execution/review identities and download links are
+in [the handoff record](../runs/2026-11-21-independent-tag-development-handoffs.json).
+They are not main/runtime integration or full tag releases. All202 originals
+remain preserved at133 complete/69 open. Root owns API-guide publication and the
+reviewed rollback correction; no permanent background tag process is claimed.
+
 ## Current owner wave — November 21, 2026
 
 Baseline:133 original requirements complete,69 open. Requested target:60 open,

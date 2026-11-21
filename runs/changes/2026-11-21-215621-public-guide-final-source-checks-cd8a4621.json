@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-215621-public-guide-final-source-checks-cd8a4621",
+  "recorded_at": "2026-11-21T21:56:21.589649+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "90d653b4a1be27527786257843b63ede126d950e",
+  "changed": "Bound the public guide and reviewed rollback correction to the prepared source-stable website run and current finite route inventory.",
+  "proves": "All five exact engineering profiles assess current;61 protocol and59 website commands passed; finite1657-source boundary review passed.",
+  "limits": "A temporary Unicode-only ledger formatting edit was restored byte-for-byte to frozen source before these final checks. No independent accuracy, human device acceptance, original closure or live operator change is implied.",
+  "scope_ids": [
+    "WP-SITE",
+    "F-150"
+  ],
+  "files": {
+    "docs/scope-progress.json": "582e0c4b1d7c0b3f365293ba3789b3ee5fe59851e587e194be0eb737be4b0a23",
+    "eval/route-boundaries.json": "81cba21021bdea61ac61deeb9221017d16bc01c997c7144ad130d5fc31680cdd",
+    "state.json": "07d33b58d4fd6ddded8b918d999d5ab60016f846b1fa2e49b3f4a58603087ee8",
+    "runs/2026-11-21-public-guide-rollback-prepared-website.json": "c17a4e0015ee59d7517b1295d54de04a1924092e32f02252d7ad2a62d3e5f078",
+    "runs/2026-11-21-public-guide-rollback-boundaries.json": "02224c25527b61061544b51959d654127fe8100a645ee507ac6db3da5928f8c3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-public-guide-rollback-protocol.json",
+      "sha256": "02b3af4c321242c1dcd1741fc469897c32723118bc433377b26c305b761f2e82"
+    },
+    {
+      "path": "runs/2026-11-21-public-guide-rollback-prepared-website.json",
+      "sha256": "c17a4e0015ee59d7517b1295d54de04a1924092e32f02252d7ad2a62d3e5f078"
+    },
+    {
+      "path": "runs/2026-11-21-public-guide-rollback-boundaries.json",
+      "sha256": "02224c25527b61061544b51959d654127fe8100a645ee507ac6db3da5928f8c3"
+    }
+  ],
+  "checks": []
+}

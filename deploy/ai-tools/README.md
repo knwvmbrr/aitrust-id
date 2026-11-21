@@ -129,3 +129,22 @@ under sudo, not the host's optional-package-free Python. The private readiness
 probe reuses the already hash-locked httpx2 environment with a whole5second
 async deadline and a4096-byte streamed-body cap. It does not install or use a
 new dependency. Plan/rollback operations remain standard-library only.
+
+## Activation-record ownership and recovery
+
+Mutating commands serialize under one owned root-only lock. Each new invocation
+has an exclusive active-record lease and epoch. Rollback verifies the recorded
+unit identities, complete firewall-rule definition (apart from counter values)
+and persistence bytes before stopping services. It records terminal retirement
+before releasing its lease; an old record cannot manage a replacement.
+
+An interrupted rollback retains its lease. Only that same invocation may resume
+its recorded recovery phase. Uncertain state or ownership refuses further
+mutation and requires root-operator review. A terminal-state write failure does
+not authorize a replacement deployment. Dry-run planning creates no lock or lease.
+
+**Legacy records without a current ownership lease are refused.** Do not invent
+or edit a lease to make a historical record pass. Review historical snapshots and
+actual resources before any manual recovery. This source correction does not
+migrate the existing live deployment, replace its historical operator or change
+its running service. See [the ownership plan](../../docs/api-rollback-ownership-plan.md).

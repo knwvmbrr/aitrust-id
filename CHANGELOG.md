@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-215621-public-guide-final-source-checks-cd8a4621
+
+Recorded 2026-11-21T21:56:21.589649+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Bound the public guide and reviewed rollback correction to the prepared source-stable website run and current finite route inventory.
+- **Evidence.** All five exact engineering profiles assess current;61 protocol and59 website commands passed; finite1657-source boundary review passed. [Change record](./runs/changes/2026-11-21-215621-public-guide-final-source-checks-cd8a4621.json).
+- **Not claimed.** A temporary Unicode-only ledger formatting edit was restored byte-for-byte to frozen source before these final checks. No independent accuracy, human device acceptance, original closure or live operator change is implied.
+
+
+### 2026-11-21-214216-prepare-public-guide-scope-projections-c342700a
+
+Recorded 2026-11-21T21:42:16.877030+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Prepared final public scope projections before the website source freeze and preserved the first source-drift refusal.
+- **Evidence.** All 59 commands exited zero; exact comparison isolated two prebuild-regenerated scope projections as the refusal cause. [Change record](./runs/changes/2026-11-21-214216-prepare-public-guide-scope-projections-c342700a.json).
+- **Not claimed.** This refused receipt grants no current website pass, independent accuracy, or original requirement closure.
+
+
+### 2026-11-21-212901-rollback-protocol-refreshed-7363e040
+
+Recorded 2026-11-21T21:29:01.095887+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Refreshed protocol execution after the operator ownership correction and documented development handoffs.
+- **Evidence.** All 61 declared protocol commands passed on unchanged corrected sources; root operator controls and distinct lifecycle review remain separate linked evidence. [Change record](./runs/changes/2026-11-21-212901-rollback-protocol-refreshed-7363e040.json).
+- **Not claimed.** Website refresh and protected publication remain pending. Detector release accuracy, human acceptance and original counts are unchanged.
+
+
+### 2026-11-21-212619-rollback-candidate-state-67325aec
+
+Recorded 2026-11-21T21:26:19.484466+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Marked the integrated operator correction as awaiting affected source-bound execution while retaining the unchanged live deployment.
+- **Evidence.** The normal accountability guard confirms original counts and evidence chronology; both state timestamps now follow referenced operator and development handoff evidence. [Change record](./runs/changes/2026-11-21-212619-rollback-candidate-state-67325aec.json).
+- **Not claimed.** No server or historical activation record was migrated. Prior protocol/website receipts are historical for this changed source until refresh; unchanged detector and extension evidence is assessed separately.
+
+
+### 2026-11-21-212538-api-rollback-integrated-366a05b0
+
+Recorded 2026-11-21T21:25:38.579186+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Integrated the peer-reviewed rollback ownership and full-rule correction, documented legacy refusal and bound its plan and source inventory.
+- **Evidence.** All 28 affected operator controls pass in the integrated tree. The original stale-record and changed-rule counterexamples are preserved, with independent review and exact current source identities. [Change record](./runs/changes/2026-11-21-212538-api-rollback-integrated-366a05b0.json).
+- **Not claimed.** No live operator, server, service, firewall or historical activation record was changed. Protocol and website source-bound evidence is being refreshed; unchanged PS/privacy/extension evidence remains separate. No original closure.
+
+
+### 2026-11-21-212431-independent-tag-development-handoffs-64e7e8a8
+
+Recorded 2026-11-21T21:24:31.905241+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Recorded four independently reviewed, downloadable development workflows in the scope and delivery board without changing original completion.
+- **Evidence.** Normal remote refs confirm MT additive framing, bounded PNG observation, private FI citation practice and the advisory PS review join at exact commits, each with separate execution/reviewer identities. [Change record](./runs/changes/2026-11-21-212431-independent-tag-development-handoffs-64e7e8a8.json).
+- **Not claimed.** Development branches are not main or production integration, independent human accuracy or full tag release. All 202 originals remain at 133 complete and 69 open; the 60 target is unmet.
+
+
 ### 2026-11-21-212041-record-api-retirement-peer-review-285aac0d
 
 Recorded 2026-11-21T21:20:41.099363+00:00 · Contributor: Codex /root/web_camo API operator engineer · change

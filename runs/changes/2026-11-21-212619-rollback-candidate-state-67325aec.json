@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-212619-rollback-candidate-state-67325aec",
+  "recorded_at": "2026-11-21T21:26:19.484466+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "90d653b4a1be27527786257843b63ede126d950e",
+  "changed": "Marked the integrated operator correction as awaiting affected source-bound execution while retaining the unchanged live deployment.",
+  "proves": "The normal accountability guard confirms original counts and evidence chronology; both state timestamps now follow referenced operator and development handoff evidence.",
+  "limits": "No server or historical activation record was migrated. Prior protocol/website receipts are historical for this changed source until refresh; unchanged detector and extension evidence is assessed separately.",
+  "scope_ids": [
+    "WP-INTEGRATIONS",
+    "WP-SITE"
+  ],
+  "files": {
+    "state.json": "22edbbcded6aa4b4635503782faeb6c533a1d259286258199d48e40365f1f875"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-api-rollback-integrated-controls.json",
+      "sha256": "ea895f838909c333947b2d706fc100d0495a0b7156e1345eb0de116766221df3"
+    }
+  ],
+  "checks": []
+}

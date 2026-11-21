@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-212538-api-rollback-integrated-366a05b0",
+  "recorded_at": "2026-11-21T21:25:38.579186+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "90d653b4a1be27527786257843b63ede126d950e",
+  "changed": "Integrated the peer-reviewed rollback ownership and full-rule correction, documented legacy refusal and bound its plan and source inventory.",
+  "proves": "All 28 affected operator controls pass in the integrated tree. The original stale-record and changed-rule counterexamples are preserved, with independent review and exact current source identities.",
+  "limits": "No live operator, server, service, firewall or historical activation record was changed. Protocol and website source-bound evidence is being refreshed; unchanged PS/privacy/extension evidence remains separate. No original closure.",
+  "scope_ids": [
+    "WP-INTEGRATIONS",
+    "WP-SITE"
+  ],
+  "files": {
+    "deploy/ai-tools/README.md": "7d1ae8c2a7ebdb1a8805bdeebd7121180471306929c34607f1f13ec2ba831241",
+    "scripts/verify-route-boundaries.py": "a28422d13b1b10ef690ff6c960af24e1b9d60f452a7945993f37d7d43bc86d09",
+    "eval/route-boundaries.json": "6229c3829e9fb1534bd9428080dd3435444d241388eb5e680577598e2430a6e5",
+    "runs/2026-11-21-api-rollback-integrated-controls.json": "ea895f838909c333947b2d706fc100d0495a0b7156e1345eb0de116766221df3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-api-rollback-integrated-controls.json",
+      "sha256": "ea895f838909c333947b2d706fc100d0495a0b7156e1345eb0de116766221df3"
+    },
+    {
+      "path": "runs/2026-11-21-api-rollback-ownership-independent-review.json",
+      "sha256": "d4b34db4c9bf2d00ee02d2ba4fdc9f29c92fa54d079784fba1af2f5fbd3fa5d3"
+    }
+  ],
+  "checks": []
+}
