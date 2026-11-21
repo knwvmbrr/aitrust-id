@@ -7,8 +7,27 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import stat
+import urllib.parse
 HERE=Path(__file__).resolve().parent
 s=importlib.util.spec_from_file_location('render',HERE/'render.py');r=importlib.util.module_from_spec(s);s.loader.exec_module(r)
+
+def official_uri(value):
+    u=urllib.parse.urlsplit(value)
+    if u.scheme in ('http','https'):
+        return u.hostname in ('deb.debian.org','security.debian.org') and u.username is None and u.password is None and u.port in (None,80,443) and not u.query and not u.fragment
+    prefix='mirror+file:/etc/apt/mirrors/debian.list/'
+    if not value.startswith(prefix) or urllib.parse.unquote(value[len(prefix):])!='pool/main/c/caddy/caddy_2.11.2-1~bpo13+1_amd64.deb':return False
+    # Debian's own finite root-owned mirror-list transport, not an arbitrary file.
+    fd=os.open('/etc/apt/mirrors/debian.list',os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK)
+    try:
+        st=os.fstat(fd)
+        if not stat.S_ISREG(st.st_mode) or st.st_uid!=0 or st.st_mode&0o022 or st.st_size>8192:return False
+        raw=os.read(fd,8193)
+        if len(raw)>8192:return False
+    finally:owned=fd;fd=None;os.close(owned)
+    rows=[x.strip() for x in raw.decode('ascii').splitlines() if x.strip() and not x.lstrip().startswith('#')]
+    return bool(rows) and len(rows)<=8 and all(x in ('https://deb.debian.org/debian','http://deb.debian.org/debian','https://security.debian.org/debian-security') for x in rows)
 
 def fetch(destination):
     if os.getuid()==0:raise ValueError('Nonroot temporary extraction required')
@@ -23,9 +42,9 @@ def fetch(destination):
     # --print-uris asserts the configured download resolves to official Debian origin;
     # downloaded bytes must independently equal the pinned signed-index SHA.
     uri=subprocess.run(['apt-get','--print-uris','download','caddy='+r.CADDY_VERSION],cwd=destination,capture_output=True,timeout=15,check=True).stdout.decode()
-    import shlex,urllib.parse
+    import shlex
     rows=[shlex.split(x) for x in uri.splitlines() if x.startswith("'")]
-    if len(rows)!=1 or urllib.parse.urlsplit(rows[0][0]).hostname not in ('deb.debian.org','security.debian.org') or urllib.parse.urlsplit(rows[0][0]).scheme not in ('http','https'):raise ValueError('Refused')
+    if len(rows)!=1 or not official_uri(rows[0][0]):raise ValueError('Refused')
     p=subprocess.run(['apt-get','download','caddy='+r.CADDY_VERSION],cwd=destination,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=90)
     if p.returncode:raise ValueError('Download unavailable')
     packages=list(destination.glob('*.deb'))
