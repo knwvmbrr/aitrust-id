@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-153307-remote-proxy-explicit-loopback-bind-54224e5c
+
+Recorded 2026-11-21T15:33:07.129501+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Corrected the private Caddy proof listener to explicit loopback bind without an implicit conflicting IP Host matcher.
+- **Evidence.** Actual first requests exposed empty200 outside the intended route; a bounded diagnosis isolated site-address Host selection. The corrected fixture keeps provider Host checks and never binds publicly;9 focused controls pass. [Change record](./runs/changes/2026-11-21-153307-remote-proxy-explicit-loopback-bind-54224e5c.json).
+- **Not claimed.** The production provider-host configuration was not changed. Corrected real proxy execution remains pending, and historical failure receipts remain immutable.
+
+
 ### 2026-11-21-152958-remote-proxy-timeout-status-contract-c28b968f
 
 Recorded 2026-11-21T15:29:58.389370+00:00 · Contributor: Codex API deployment engineer · change

@@ -11,7 +11,8 @@ CADDY_SHA256='e11c13b0e0e62ec7b28a04add94b9af276c27fa8e7ee6c0da6165fb7cb8c3989'
 def caddyfile(front_port=None, app_port=8790):
     if type(app_port) is not int or not 1024<=app_port<=65535:raise ValueError('Configuration refused')
     if front_port is not None and (type(front_port) is not int or not 1024<=front_port<=65535 or front_port==app_port):raise ValueError('Configuration refused')
-    site=f'http://127.0.0.1:{front_port}' if front_port else 'https://'+HOST
+    site=f'http://:{front_port}' if front_port else 'https://'+HOST
+    bind='    bind 127.0.0.1\n' if front_port else ''
     tls='' if front_port else '''    tls {
         protocols tls1.2 tls1.3
         issuer acme {
@@ -58,7 +59,7 @@ def caddyfile(front_port=None, app_port=8790):
     }}
 }}
 {site} {{
-{tls}    route {{
+{bind}{tls}    route {{
         header {{
             -Server
             Cache-Control "no-store"
