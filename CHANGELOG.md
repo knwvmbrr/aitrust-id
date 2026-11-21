@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-152548-remote-connector-private-deployment-candidate-f6db55d9
+
+Recorded 2026-11-21T15:25:48.569192+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Added isolated provider-host deployment preparation, pinned temporary Caddy extraction and a real loopback proxy verifier.
+- **Evidence.** Eight focused source/preparation controls pass; source selection is tracked-only and exclusive, while rendered app/proxy units bound resources and retain a separate operator activation gate. [Change record](./runs/changes/2026-11-21-152548-remote-connector-private-deployment-candidate-f6db55d9.json).
+- **Not claimed.** Caddy/Linux proxy execution is pending; no public port, TLS issuance, DNS, global service, user, firewall or existing container change. Unit rendering is not enforced sandbox evidence.
+
+
 ### 2026-11-21-151823-remote-connector-direct-linux-proof-a42c214e
 
 Recorded 2026-11-21T15:18:23.315790+00:00 · Contributor: Codex MT/API engineer · change
