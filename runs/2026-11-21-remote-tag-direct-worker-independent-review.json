@@ -1,0 +1,37 @@
+{
+  "profile": "remote-mcp-direct-canonical-worker-independent-review/v1",
+  "captured_at": "2026-11-21T15:11:29.819994+00:00",
+  "pass": true,
+  "reviewer": "Codex /root/seo",
+  "source_sha256": {
+    "tools/remote_tag_server.py": "b656abfb64eb925f8e63789365590a35c652d35e16001da284fa8f827162a72d",
+    "tests/test_remote_tag_server.py": "39150e9b0a32320dfcf23732dc3bc465f15571cb890cc272d5582beb4d1f4a19",
+    "scripts/verify-remote-tag-server.py": "443e0085b0c0cdef89f5ab2d7b1123a388bb15b43ef161226a2f9465f626a54d",
+    "docs/remote-tag-connectors.md": "7026ed05f5f50460463e1cfa76bf327a7bf941775e4e4cbd88afc1f4bbb9a2e0"
+  },
+  "source_stable": true,
+  "canonical_check_ps_source_sha256": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+  "reviewed_delta": [
+    "Launch unchanged canonical --worker directly; no --json wrapper or second process group",
+    "Parent complete input/result validation and brief projection unchanged",
+    "Canonical10-second work ceiling or smaller remaining12-second request deadline retained"
+  ],
+  "actual_selected_group_count": 1,
+  "actual_group": "test_owned_worker_cancel_deadline_and_shutdown_reap",
+  "actual_controls": [
+    "controlled cancellation, worker deadline and shutdown reaping",
+    "real production canonical worker argv held by SIGSTOP before stdin; exactly one process/group and no descendants",
+    "actual owned-loopback HTTP disconnect kill/reap/fresh recovery",
+    "actual owned-loopback shutdown kill/reap and Unavailable result"
+  ],
+  "author_prior_targeted_receipt_sha256": "9428903dc1697ff6c2500f54556b877d4b8a0d028409051c5aa2613527b02d4d",
+  "author_receipt_test_source_historical": "1397916f8c28e78e2b899c7378b1cf2aa16efdff0fe215c8842062f1d056e598",
+  "reviewer_current_test_source": "39150e9b0a32320dfcf23732dc3bc465f15571cb890cc272d5582beb4d1f4a19",
+  "old_Linux14_is_current_runtime_evidence": false,
+  "new_full_current_Linux_execution_pending": true,
+  "limits": [
+    "One affected actual local group only, no complete14 or maximum-input parity repeat. The separately strengthened two-canonical-worker capacity test was inspected but not rerun by reviewer.",
+    "Prior author targeted receipt remains bound to its earlier test source; current runtime and guide are unchanged, and this review executes the current affected group.",
+    "No public hosting, TLS/proxy/account connection, independent accuracy, full licensing or original closure."
+  ]
+}

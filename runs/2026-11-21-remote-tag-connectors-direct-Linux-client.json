@@ -1,0 +1,49 @@
+{
+  "profile": "remote-PS-MCP-HTTP-engineering/v1",
+  "captured_at": "2026-11-21T15:12:32.055177+00:00",
+  "finished_at": "2026-11-21T15:12:48.327569+00:00",
+  "pass": true,
+  "source_sha256": {
+    "tools/remote_tag_server.py": "b656abfb64eb925f8e63789365590a35c652d35e16001da284fa8f827162a72d",
+    "scripts/remote-tag-server.py": "e759f37f66a119aab3ad1716bf35de547edfa07b926cb512e8059f9fd079a064",
+    "tests/test_remote_tag_server.py": "39150e9b0a32320dfcf23732dc3bc465f15571cb890cc272d5582beb4d1f4a19",
+    "scripts/verify-remote-tag-server.py": "443e0085b0c0cdef89f5ab2d7b1123a388bb15b43ef161226a2f9465f626a54d",
+    "docs/remote-tag-connectors-plan.md": "9d36a149dd7e40300e8e5948f5fb7f09a854470ba3784322da0d32f70ea84393",
+    "docs/remote-tag-connectors.md": "7026ed05f5f50460463e1cfa76bf327a7bf941775e4e4cbd88afc1f4bbb9a2e0",
+    "tools/tag_api.py": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e",
+    "scripts/check-tags.py": "c3cd8c05ad2969b023bb6f332331787b13b2ff6347913fc0f0c3144321279c96",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "integrations/mcp/requirements.lock": "82375e677571a53a1d3c8b5f13312ae8f81da2a05e4bea0ab59417d4486d95ea"
+  },
+  "source_stable": true,
+  "mcp_sdk": "2.3.0",
+  "python_version": "3.13.5",
+  "focused_test_groups": 14,
+  "expected_groups": 14,
+  "exit": 0,
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "57e78e0f55ace0251089c626adc479c3150b2ec066c391efc90fd74f32b319df",
+  "actual": [
+    "owned loopback ordinaryHTTP and official MCP modern2026-07-28+legacy clients",
+    "canonical briefrecords positive/no-finding parity; remotePII nevergateway",
+    "Host/Origin/path/query/headers/duplicateJSON/UTF8/body/output/framing/deadline refusals",
+    "two actualownedworkers busyadmission; one cancellation preserves other; health/listing saturation independence",
+    "actualsocketdisconnect ordinary/MCP and workerdeadline/shutdown/spawnrace reap",
+    "actualCLI NoAuth loopback/privacy-error/logging/shutdown; URLtext notfetched"
+  ],
+  "public_service_deployed": false,
+  "AI_host_account_connected": false,
+  "real_user_data_collected": false,
+  "tag_release_approved": false,
+  "independent_accuracy_evidence": false,
+  "new_original_closures": 0,
+  "limits": [
+    "Synthetic explicitlyselected examples on owned loopback; no externalChatGPT/Anthropic account connection.",
+    "No hostedTLS/proxy/operator-log verification, livepublicroute, distributedabuse/SLA guarantee or wholedependency clearance.",
+    "PII unavailable remotely; existinglocalstdio/ondevice remains separate."
+  ]
+}
