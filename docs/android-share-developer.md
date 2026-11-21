@@ -365,5 +365,31 @@ Official contracts reviewed: [Android task affinity and NEW_TASK](https://develo
 and the API36 AOSP [resumed task dump](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/android16-release/services/core/java/com/android/server/wm/Task.java)
 /[existing-task focus](https://android.googlesource.com/platform/frameworks/base/+/refs/heads/android16-release/services/core/java/com/android/server/am/ActivityManagerShellCommand.java)
 surface. Unknown system schema refuses instead of falling back to a checker
-launch. Actual hosted outcome is pending. Full N-014, physical-device, TalkBack,
+launch. The selected actual hosted outcome is recorded below. Full N-014, physical-device, TalkBack,
 outside-human and store-release gates remain open.
+
+
+### Selected actual Sharesheet result
+
+One ordinary existing-workflow dispatch at frozen source
+`e3c8c562845eec17d599bc3050676a10ef3f8cde` completed on the disposable API36
+emulator: [run44898547294](https://github.com/knwvmbrr/aitrust-id/actions/runs/44898547294).
+The original7, configuration2, all9 malformed/refusal/fresh recovery pairs and19
+advancing sender frames passed before both new system chooser cases passed.
+The source button opened the actual system target; exact text and Received
+preceded an explicit Check and the real offline PS finding. The second chooser
+was cancelled with Back, the source resumed, and direct existing-task refocus
+showed Cleared, empty/exact-hint input, disabled Check and no result/cancel marker.
+The APK remained the default variant with zero permissions; the separate test
+APK had a different UID, and both sender/chooser class markers were absent from
+the checker DEX. The existing license record remained unchanged.
+
+The actual workflow executed the existing102 focused groups. The new10 chooser
+groups passed locally on Python3.12/3.13 with the existing JDK and still require
+registration in the PM's protected integration, giving112 only after execution.
+`runs/2026-11-21-android-os-chooser-hosted-pass.json` binds the22 distinct actual
+native/helper inputs, build and loader/method identities and completed job-log
+hashes. A distinct reviewer compared the captured reports and frozen source;
+no duplicate runtime or artifact/APK download was used. This selected pass does
+not establish physical-device, outside-user, TalkBack, arbitrary-app, full-release
+or independent-accuracy acceptance, or explain every historical failed startup.

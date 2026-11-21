@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-112615-android-chooser-actual-hosted-outcome-35a1b895
+
+Recorded 2026-11-21T11:26:15.227778+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded one actual default-APK system Sharesheet selection, explicit offline Check and cancellation/existing-task privacy outcome with distinct captured-log review.
+- **Evidence.** Run44898547294 at frozen e3c8c56 executed original7/config2/malformed9 plus newchooser2,19senderframes and102registered focused controls;22runtime inputs match. Newchooser10 remain local only. [Change record](./runs/changes/2026-11-21-112615-android-chooser-actual-hosted-outcome-35a1b895.json).
+- **Not claimed.** One selected API36 emulator, no physical, outside-human, TalkBack, broad reliability or full N-014 closure. No APK/artifact download or unchanged rerun. Future protected integration must register and execute112.
+
+
 ### 2026-11-21-111643-android-chooser-malformed-archive-refusal-122d5e71
 
 Recorded 2026-11-21T11:16:43.047353+00:00 · Contributor: Codex · change
