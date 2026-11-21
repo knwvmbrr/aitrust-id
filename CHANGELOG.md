@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-152842-remote-proxy-debian-mirror-transport-ae4c5768
+
+Recorded 2026-11-21T15:28:42.909382+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Accepted the exact root-owned Debian mirror-list transport after its actual safe first refusal.
+- **Evidence.** The downloader keeps the exact package SHA/version/size and validates only a bounded no-follow root-owned mirror list of official Debian origins; private or writable mirror sources refuse. [Change record](./runs/changes/2026-11-21-152842-remote-proxy-debian-mirror-transport-ae4c5768.json).
+- **Not claimed.** The first setup failure is retained. This does not activate a service, prove TLS or grant a new download origin.
+
+
 ### 2026-11-21-152548-remote-connector-private-deployment-candidate-f6db55d9
 
 Recorded 2026-11-21T15:25:48.569192+00:00 · Contributor: Codex API deployment engineer · change

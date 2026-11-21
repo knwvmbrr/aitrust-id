@@ -11,7 +11,7 @@ from unittest.mock import patch
 ROOT=Path(__file__).resolve().parents[1]
 def load(name):
     s=importlib.util.spec_from_file_location(name,ROOT/'deploy/ai-tools'/f'{name}.py');m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
-render=load('render');prepare=load('prepare')
+render=load('render');prepare=load('prepare');fetch=load('fetch-caddy')
 class Deployment(unittest.TestCase):
     def test_closed_host_routes_tls_and_private_logging(self):
         s=render.caddyfile();self.assertIn('https://vps-18ef1326.vps.ovh.us',s);self.assertIn('admin off',s);self.assertIn('output discard',s);self.assertNotIn('\n    log\n',s);self.assertIn('disable_http_challenge',s);self.assertIn('auto_https disable_redirects',s);self.assertIn('path /healthz /v1/tags',s);self.assertIn('path /mcp /v1/check',s);self.assertNotIn('api.aitrustid.com',s)
@@ -47,6 +47,19 @@ class Deployment(unittest.TestCase):
             dest=Path(d)/('c'*40)
             with self.assertRaises(ValueError):prepare.prepare(ROOT,'c'*40,dest)
             self.assertFalse(dest.exists())
+    def test_official_direct_origin_and_exact_mirror_transport(self):
+        self.assertTrue(fetch.official_uri('https://deb.debian.org/debian/pool/main/c/caddy/file.deb'))
+        for value in ['https://evil.invalid/pkg','https://deb.debian.org.evil.invalid/pkg','https://user@deb.debian.org/pkg','file:/private','mirror+file:/private/data/pkg','https://deb.debian.org:9999/pkg']:
+            self.assertFalse(fetch.official_uri(value))
+        import types,stat
+        uri='mirror+file:/etc/apt/mirrors/debian.list/pool/main/c/caddy/caddy_2.11.2-1%7ebpo13%2b1_amd64.deb'
+        info=types.SimpleNamespace(st_mode=stat.S_IFREG|0o644,st_uid=0,st_size=34)
+        with patch.object(os,'open',return_value=42),patch.object(os,'fstat',return_value=info),patch.object(os,'read',return_value=b'https://deb.debian.org/debian\n'),patch.object(os,'close') as close:
+            self.assertTrue(fetch.official_uri(uri));close.assert_called_once_with(42)
+        info.st_mode|=0o002
+        with patch.object(os,'open',return_value=42),patch.object(os,'fstat',return_value=info),patch.object(os,'read',side_effect=AssertionError('unsafe mirror not read')),patch.object(os,'close'):
+            self.assertFalse(fetch.official_uri(uri))
+
     def test_actual_tracked_source_prepare_no_activation_or_install(self):
         commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT).decode().strip()
         with tempfile.TemporaryDirectory() as d:

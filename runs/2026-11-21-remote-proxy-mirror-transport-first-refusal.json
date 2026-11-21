@@ -1,0 +1,16 @@
+{
+  "pass": false,
+  "captured_at": "2026-11-21T15:26:55.967924+00:00",
+  "profile": "private-proxy-setup-first-candidate",
+  "source_commit": "7ec1ad72096e174b85c39a0a5b87156b9ed4d967",
+  "stage": "official_Caddy_download_origin_validation",
+  "reason": "Debian signed apt metadata selected its root-owned mirror+file transport; initial direct-origin allowlist refused before any package download.",
+  "observed": {
+    "locked_venv_setup_succeeded": true,
+    "package_downloaded": false,
+    "proxy_started": false,
+    "public_changes": false
+  },
+  "diagnosis": "The exact /etc/apt/mirrors/debian.list regular root-owned file contains only the official Debian HTTPS mirror. The correction validates this finite transport and keeps package SHA/version/size unchanged.",
+  "original_closures": 0
+}
