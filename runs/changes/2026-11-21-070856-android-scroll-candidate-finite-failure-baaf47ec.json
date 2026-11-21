@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-070856-android-scroll-candidate-finite-failure-baaf47ec",
+  "recorded_at": "2026-11-21T07:08:56.508703+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "613408a603ed11862602e3de7b20dbcc2378973d",
+  "changed": "Preserve the failed bounded-scroll default candidate and its positive rotation/current-draft observations.",
+  "proves": "The actual default APK passed seven originals and observed rotation1 with exact edited text before and after two gesture attempts, but receipt/post-reassertion/HOME proof did not complete.",
+  "limits": "Producer remains failed. Actual touch delivery/content motion and why status stayed absent are unknown; system-inset interception is only a source-supported risk. No configuration readiness, physical/human or full-original closure is claimed.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "runs/2026-11-21-android-scroll-candidate-failed.json": "de2394ea64ede98e679aed63a3e35560fa9cbb360a6e0847a304fd3913da4ca0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-scroll-candidate-failed.json",
+      "sha256": "de2394ea64ede98e679aed63a3e35560fa9cbb360a6e0847a304fd3913da4ca0"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,129 @@
+{
+  "format": "ai-trust-id-android-scroll-candidate-failed/v1",
+  "recorded_at": "2026-11-21T07:08:45.215402+00:00",
+  "source_commit": "613408a603ed11862602e3de7b20dbcc2378973d",
+  "run": {
+    "id": 44877819595,
+    "job_id": 136766315449,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44877819595",
+    "configuration_controls": true,
+    "intake_probe": false,
+    "conclusion": "failure",
+    "unchanged_retry": false
+  },
+  "artifact": {
+    "id": 14696852117,
+    "sha256": "06b02b2635866156ec7f3fb6df4c8dff550b538b9d2e872081aa38765bec84fd",
+    "bytes": 6386377,
+    "download_count": 1,
+    "raw_reports": {
+      "emulator.json": {
+        "sha256": "5eb2362fe9bc36f179873787df5067e57a1df40ecb5c01670ac9caef22da4aa6",
+        "bytes": 4189
+      },
+      "build.json": {
+        "sha256": "b23c5d80d012c7e5a7a3d73ddf862842d1afaf5be2a5634e05d96eafff58c913",
+        "bytes": 2255
+      },
+      "preparation.json": {
+        "sha256": "afbf7f191300260bc886af40bbfcb7e261e9d7da08984ba5e76f50a12af9580b",
+        "bytes": 546
+      },
+      "engine-parity.json": {
+        "sha256": "14925295f78f73f3bc468764dc61b5bec4280236618bbeaf0e468b51003f7013",
+        "bytes": 685
+      }
+    }
+  },
+  "default_apk": {
+    "sha256": "b927e70d2591f24a2f6df28dd294b0ff1c8325e80e1881fca08f33fbd0df8d11",
+    "bytes": 6444652,
+    "both_probe_markers_absent": true,
+    "all14_native_sources_match": true,
+    "activity_sha256": "4be745562080ff9504273355fc715ba903c095eaaa292216cb2777b052be5c74",
+    "method_sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+  },
+  "runtime": {
+    "status": "FAILED",
+    "pass": false,
+    "original_case_count": 7,
+    "original_cases": [
+      {
+        "case": "receive_requires_explicit_check",
+        "pass": true
+      },
+      {
+        "case": "actual_offline_ps_finding",
+        "pass": true
+      },
+      {
+        "case": "edit_hides_previous_finding",
+        "pass": true
+      },
+      {
+        "case": "new_share_and_no_finding",
+        "pass": true
+      },
+      {
+        "case": "unsupported_mime_has_no_verdict",
+        "pass": true
+      },
+      {
+        "case": "clear_removes_input_and_result",
+        "pass": true
+      },
+      {
+        "case": "background_clears_text",
+        "pass": true
+      }
+    ],
+    "supplemental": {
+      "status": "FAILED",
+      "pass": false,
+      "cases": [],
+      "control_stage": "configuration_rotate",
+      "rotation_state": "RECEIPT",
+      "rotation_observation": {
+        "rotation": "1",
+        "editor_observed": true,
+        "editor_matches_edited_draft": true,
+        "status_node_observed": false,
+        "received_status_visible": false,
+        "result_tag_visible": false
+      },
+      "rotation_scroll_precondition": {
+        "rotation": "1",
+        "editor_observed": true,
+        "editor_matches_edited_draft": true,
+        "status_node_observed": false,
+        "received_status_visible": false,
+        "result_tag_visible": false
+      },
+      "rotation_scroll_actions": 2,
+      "case_count": 0
+    },
+    "diagnostic_code": "configuration_rotate_unavailable",
+    "elapsed_seconds": 115.325,
+    "existing_license_unchanged": true
+  },
+  "interpretation": {
+    "actual_rotation_one_and_exact_edited_draft_observed": true,
+    "status_receipt_observed": false,
+    "final_postreceipt_reassertion_or_home_case_executed": false,
+    "gesture_delivery_or_content_motion": "UNMEASURED",
+    "why_status_not_revealed": "UNKNOWN",
+    "system_inset_edge_interception": "SOURCE_SUPPORTED_RISK_NOT_DEMONSTRATED_CAUSE",
+    "product_rollback_not_justified_by_this_failure": true,
+    "default_configuration_acceptance_pending": true
+  },
+  "sources": {
+    "scripts/verify-android-emulator.py": "51ff2fa179f2914e29a3d805c2bc7ccd096ad2aa65da2e514e1eee68fd9d8bb0",
+    ".github/workflows/android-share.yml": "536c97412669fa97527a026edd72297d82cf0ad849d6628ca6c0df4c4c923b5a",
+    "tests/test_android_configuration_controls.py": "eec9f76bd487960892220fd7badb22a394b6021f2044ea1104fd545cd7846fb2"
+  },
+  "producer_stays_failed": true,
+  "physical_device_evidence": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false
+}

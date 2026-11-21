@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-070856-android-scroll-candidate-finite-failure-baaf47ec
+
+Recorded 2026-11-21T07:08:56.508703+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserve the failed bounded-scroll default candidate and its positive rotation/current-draft observations.
+- **Evidence.** The actual default APK passed seven originals and observed rotation1 with exact edited text before and after two gesture attempts, but receipt/post-reassertion/HOME proof did not complete. [Change record](./runs/changes/2026-11-21-070856-android-scroll-candidate-finite-failure-baaf47ec.json).
+- **Not claimed.** Producer remains failed. Actual touch delivery/content motion and why status stayed absent are unknown; system-inset interception is only a source-supported risk. No configuration readiness, physical/human or full-original closure is claimed.
+
+
 ### 2026-11-21-065329-android-bounded-configuration-navigation-9f314fc6
 
 Recorded 2026-11-21T06:53:29.790323+00:00 · Contributor: Codex · change
