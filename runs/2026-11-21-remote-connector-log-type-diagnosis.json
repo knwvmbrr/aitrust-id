@@ -1,0 +1,11 @@
+{
+  "profile": "remote-connector-authored-log-type-failure/v1",
+  "captured_at": "2026-11-21T14:44:26.308031+00:00",
+  "pass": false,
+  "original_failed_receipt": "runs/2026-11-21-remote-tag-connectors-candidate.json",
+  "original_sha256": "8b739fa39230c9c833b92b0eb3381c8629b85692a772a7c831a00f77944da4f3",
+  "diagnostic_target": "test_actual_CLI_private_errors_logs_shutdown_and_no_URL_fetch",
+  "error": "TypeError: authored test compared string canary with binary captured logs.",
+  "runtime_or_canonical_failure": false,
+  "fix": "Compare encoded synthetic canary to captured bytes; preserve actual CLI shutdown and no-fetch assertions."
+}

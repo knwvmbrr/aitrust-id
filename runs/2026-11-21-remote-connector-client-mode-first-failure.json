@@ -1,0 +1,11 @@
+{
+  "profile": "remote-connector-authored-client-mode-failure/v1",
+  "captured_at": "2026-11-21T14:40:50.138748+00:00",
+  "pass": false,
+  "test_source_sha256": "ae4965549f43b649ee2e9f635939a37934e6063b61bb113068d2d9ab4b2525fe",
+  "controls_passed": 6,
+  "controls_error": 1,
+  "error": "ValueError: installed SDK requires concrete protocol date2026-07-28, not the authored modern shorthand.",
+  "runtime_or_canonical_failure": false,
+  "next_fix": "Use installed SDK supported concrete protocol date and retain legacy path."
+}

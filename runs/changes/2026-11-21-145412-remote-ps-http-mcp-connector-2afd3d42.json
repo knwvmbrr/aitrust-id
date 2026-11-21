@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-145412-remote-ps-http-mcp-connector-2afd3d42",
+  "recorded_at": "2026-11-21T14:54:12.550048+00:00",
+  "author": "Codex /root/web_camo; distinct review /root/seo; PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e8287050493f3f30b6c92967beed224a6c8b4dc3",
+  "changed": "Implemented a separate runnable PS-only ordinary HTTP API and official stateless MCP Streamable HTTP connector with unchanged canonical evidence, bounded workers and explicit remote privacy unavailability.",
+  "proves": "Fourteen source-stable owned-loopback groups pass, including official modern2026-07-28 and legacy clients, full brief canonical parity, actual cancellation/admission/reaping/privacy/framing/refusal/recovery. Distinct peer replay verified repeated cancellation and string IDs. Existing selected SDK lock versions match; earlier failures remain immutable.",
+  "limits": "PM integration, isolated Linux CI, approved HTTPS deployment, proxy/privacy controls and actual host-account connections remain pending. No public hostname, hosted PII, model API, stored input, independent accuracy, global distribution clearance or original requirement closure.",
+  "scope_ids": [
+    "T-PS"
+  ],
+  "files": {
+    "docs/remote-tag-connectors-plan.md": "9d36a149dd7e40300e8e5948f5fb7f09a854470ba3784322da0d32f70ea84393",
+    "docs/remote-tag-connectors-result.md": "f26944e99e354970f2b51751594ae1d0dd5fabdd8b59cd47ea77d07d43b56020",
+    "docs/remote-tag-connectors.md": "0ae80f88caebaaddc343f079a2b1ba6399f42ffe90fbc6c33bbcbbb3e71e106a",
+    "runs/2026-11-21-remote-connector-SIGTERM-diagnosis.json": "cecef94ae62432aa86f5d0f093c5fdeeab0adeb881cb7c5e6ea3613eef1f36e7",
+    "runs/2026-11-21-remote-connector-client-mode-first-failure.json": "9d64f1520e22504c61f69c48aecae7365256c0e29653625b14a2ffb4cf7e2df3",
+    "runs/2026-11-21-remote-connector-log-type-diagnosis.json": "fca7b50677eba47f469bc022a8622251ff3a42c64ae4c448e96b9326088a7e0d",
+    "runs/2026-11-21-remote-connector-peer-original-findings.json": "345229af6378e526b3bfaf6f063dd156d3443eabe5d8411456c6c1db158df5f8",
+    "runs/2026-11-21-remote-connector-repeated-cancel-first-correction.json": "36a2e825a69caa393282138f684a8458e49a1ea8f2b6946bc9d775ff025ad5c7",
+    "runs/2026-11-21-remote-tag-connectors-candidate.json": "8b739fa39230c9c833b92b0eb3381c8629b85692a772a7c831a00f77944da4f3",
+    "runs/2026-11-21-remote-tag-connectors-corrected.json": "de99c2ecf962253edf140bdbc7d9585dc432fb65ed47dcc93c52ce7539286edb",
+    "runs/2026-11-21-remote-tag-connectors-final.json": "dd6fb8a41b2c90baaa4a157a56b9bf8c53b468ea11bcd8edc74c320128cd91d4",
+    "runs/2026-11-21-remote-tag-connectors-independent-review.json": "f6e9367fa2fc6c6fbb3151f51e647c926a01c9d026d297fa160bd623a907db0d",
+    "runs/2026-11-21-remote-tag-connectors-peer-corrected.json": "0df6aff4d47307178e6f83b62cd6078c3ea5880ff06b37ce4b142cbb7d8e730d",
+    "runs/2026-11-21-remote-tag-connectors-source-frozen.json": "136c79c8ccc0bf95af758876a631f3495dfcd26d0542e586cd49f86dd97720d0",
+    "runs/2026-11-21-remote-tag-sdk-environment.json": "bbe8cddbb181b9a25e14e7034c0f221703569917a7ab3c79ffb8c828c550b137",
+    "scripts/remote-tag-server.py": "e759f37f66a119aab3ad1716bf35de547edfa07b926cb512e8059f9fd079a064",
+    "scripts/verify-remote-tag-server.py": "181f8150984c21e3af5d5fe0e2590a6b5924b0681d6d08ff2f61ad3feeb94131",
+    "tests/test_remote_tag_server.py": "b531fce08e1a3638535b8968c5525ee168193398153deabf33b6cd64ccb9d2f9",
+    "tools/remote_tag_server.py": "50d23496e601e091c0a3375715c1b021cdb40071269a4c595b158cafbeaa8562"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-remote-tag-connectors-peer-corrected.json",
+      "sha256": "0df6aff4d47307178e6f83b62cd6078c3ea5880ff06b37ce4b142cbb7d8e730d"
+    },
+    {
+      "path": "runs/2026-11-21-remote-tag-connectors-independent-review.json",
+      "sha256": "f6e9367fa2fc6c6fbb3151f51e647c926a01c9d026d297fa160bd623a907db0d"
+    },
+    {
+      "path": "runs/2026-11-21-remote-tag-sdk-environment.json",
+      "sha256": "bbe8cddbb181b9a25e14e7034c0f221703569917a7ab3c79ffb8c828c550b137"
+    }
+  ],
+  "checks": []
+}
