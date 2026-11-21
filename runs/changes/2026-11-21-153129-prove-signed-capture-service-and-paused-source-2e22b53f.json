@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-153129-prove-signed-capture-service-and-paused-source-2e22b53f",
+  "recorded_at": "2026-11-21T15:31:29.063230+00:00",
+  "author": "Codex PM /root; mounted-source review /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6ea4800b4ade14d1639df5c5c58ae6801cb74636",
+  "changed": "Restore a separately isolated signed current-source capture test service and reload the existing installed extension while keeping capture paused.",
+  "proves": "Six authenticated schema and failure/recovery controls pass; distinct review matches sixteen source inputs in running containers, and the actual Chrome source path and paused reload are observed.",
+  "limits": "The service is remote through a disclosed loopback SSH test forward; no live-vendor capture, new browser trust, human validation, production deployment or original closure is claimed.",
+  "scope_ids": [
+    "F-030"
+  ],
+  "files": {
+    "runs/2026-11-21-current-signed-capture-service.json": "fdd79bca5e94ed2de2c83cea7975cd0d9226df50c88780f727282b71571278b5",
+    "runs/2026-11-21-capture-static-address-recovery.json": "cffcd71231c243bfc634d52a3da647f60f221331ed89846b606e36f16e36a106",
+    "runs/2026-11-21-capture-mounted-source-independent-review.json": "eb0c9fb3be41ced9c2014c87dd3ea9a43e1d49624240d2a85fb738260d21b643",
+    "runs/2026-11-21-installed-extension-source-paused.json": "6e9df68e0dbae791d8e5540aec2e0f8bc2f35be9df3292a4f2a783b5b6ae2f7a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-current-signed-capture-service.json",
+      "sha256": "fdd79bca5e94ed2de2c83cea7975cd0d9226df50c88780f727282b71571278b5"
+    },
+    {
+      "path": "runs/2026-11-21-capture-static-address-recovery.json",
+      "sha256": "cffcd71231c243bfc634d52a3da647f60f221331ed89846b606e36f16e36a106"
+    },
+    {
+      "path": "runs/2026-11-21-capture-mounted-source-independent-review.json",
+      "sha256": "eb0c9fb3be41ced9c2014c87dd3ea9a43e1d49624240d2a85fb738260d21b643"
+    },
+    {
+      "path": "runs/2026-11-21-installed-extension-source-paused.json",
+      "sha256": "6e9df68e0dbae791d8e5540aec2e0f8bc2f35be9df3292a4f2a783b5b6ae2f7a"
+    }
+  ],
+  "checks": []
+}

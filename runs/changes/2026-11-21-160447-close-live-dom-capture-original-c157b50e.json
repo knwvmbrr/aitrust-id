@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-160447-close-live-dom-capture-original-c157b50e",
+  "recorded_at": "2026-11-21T16:04:47.207422+00:00",
+  "author": "Codex /root; distinct original acceptance reviewer /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "da3ad4350acec3bf825990578d34bd65a19079e7",
+  "changed": "Closed the full accepted F030 DOM alternative from actual installed Chrome lifecycle evidence, preserved prior acceptance and stream limits, updated133/69 accounting, and registered the implemented remote MCP verifier in its dedicated CI job.",
+  "proves": "Distinct source-bound acceptance and exact original baseline accounting pass; live browser attachment, honest outage, recovery and final pause work. Dedicated CI now executes remote HTTP/MCP controls instead of relying on local stdio checks.",
+  "limits": "Target60 still needs9 full original closures. Remote public activation and hosted CI remain pending; N010 human/commercial gates and independent tag accuracy remain open. No other original is closed.",
+  "scope_ids": [
+    "F-030",
+    "WP-INTEGRATIONS"
+  ],
+  "files": {
+    "docs/scope-progress.json": "eba5c18f0c63b60d83e62bf78f4e24aa00c1c263262705f1dd104c2ac8a5c6dc",
+    "docs/scope-progress.md": "1fecdfe1f587f28bddc3d858c69a15565d9a5e773f3ea01aab67aee91d1cfd0a",
+    "docs/scope-task-index.md": "cc95d6c2256fc27f8f427824c8e9a528b6279846dbcc0eb1fe1b3d5749c2a53a",
+    "docs/session-delivery.json": "d353d13bf24aed3db1b7b6856d983b7c4fded60793c63cf2d6dca125df586537",
+    "docs/session-delivery-plan.md": "c7a4db69219b7c9da7f310543b9d91be315a0029f7082a659ee60d1d85303422",
+    "scripts/scope-progress.py": "124fd02f003472563badcc5293af9da4161cbce6a293b57031d3f546e6f522a6",
+    "state.json": "95ef720e7baa639fb2f7df8703761d43a0184c1f087af6e8d8c5203363673957",
+    "docs/f030-dom-replacement-result.md": "1d7ce661b5b7a47fface2abb34293fccc76fa44cf768c190089a48fccc60fbfa",
+    "runs/2026-11-21-f030-dom-replacement-independent-review.json": "e54a7c4bc671207eb0f979839cca01c902b63a4c1fa039e9810c1894df7a50db",
+    ".github/workflows/ai-tools.yml": "6c638fbe2aa8ce8c09ef91c67e9cec48757e8a681e60a0fb12ca4751ab016fa4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-installed-live-capture-lifecycle.json",
+      "sha256": "726e8e5976fd5ae1b9fcd393c377c22ce69ea517043ac8643e94fce9236c81d6"
+    },
+    {
+      "path": "runs/2026-11-21-f030-dom-replacement-independent-review.json",
+      "sha256": "e54a7c4bc671207eb0f979839cca01c902b63a4c1fa039e9810c1894df7a50db"
+    },
+    {
+      "path": "runs/2026-11-21-remote-tag-connectors-direct-Linux-execution.json",
+      "sha256": "fff3bbc1d03be82184f44273fef67da9bfc21ab1694b3e7cdfb643612439a23a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/session-delivery.py",
+        "--check-session"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T16:04:47.757197+00:00"
+    }
+  ]
+}

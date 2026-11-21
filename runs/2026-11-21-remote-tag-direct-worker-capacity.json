@@ -1,0 +1,20 @@
+{
+  "profile": "remote-tag-real-canonical-worker-capacity/v1",
+  "captured_at": "2026-11-21T15:11:07.091932+00:00",
+  "pass": true,
+  "source_sha256": {
+    "tools/remote_tag_server.py": "b656abfb64eb925f8e63789365590a35c652d35e16001da284fa8f827162a72d",
+    "tests/test_remote_tag_server.py": "39150e9b0a32320dfcf23732dc3bc465f15571cb890cc272d5582beb4d1f4a19"
+  },
+  "groups_executed": 1,
+  "actual_production_worker_argv_preserved": true,
+  "SIGSTOP_only_owned_canonical_processes": true,
+  "actual_two_worker_admission": true,
+  "third_check_busy_no_third_child": true,
+  "health_and_listing_available": true,
+  "cancel_one_preserves_other": true,
+  "both_owned_children_reaped": true,
+  "public_host_deployed": false,
+  "prior_two_affected_groups": "runs/2026-11-21-remote-tag-direct-worker-targeted.json",
+  "new_original_closures": 0
+}

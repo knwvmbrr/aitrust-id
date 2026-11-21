@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-160512-preserve-readable-scope-encoding-99c025e8",
+  "recorded_at": "2026-11-21T16:05:12.094888+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "da3ad4350acec3bf825990578d34bd65a19079e7",
+  "changed": "Retained existing readable Unicode serialization in the updated machine-readable scope, board and state.",
+  "proves": "The same202 immutable original identities and original acceptance hash still verify at133 complete69 open; reduces unrelated formatting churn.",
+  "limits": "Encoding only; no additional requirement completion, source behavior or public delivery.",
+  "scope_ids": [
+    "F-030"
+  ],
+  "files": {
+    "docs/scope-progress.json": "016b839837d9a68c096a5061e02d0b82ec3e50848d8fb9c459ee80fe5279021a",
+    "docs/session-delivery.json": "de5a51204c05fd6f3fe64ba5b098c1067b89ed51190edf68cf7e6bdbc63154a3",
+    "state.json": "9b9c9796de7769fa4f264c32679775ac3e6196cf59de65ffd459c4a05556fed4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-f030-dom-replacement-independent-review.json",
+      "sha256": "e54a7c4bc671207eb0f979839cca01c902b63a4c1fa039e9810c1894df7a50db"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/session-delivery.py",
+        "--check-session"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T16:05:12.639252+00:00"
+    }
+  ]
+}

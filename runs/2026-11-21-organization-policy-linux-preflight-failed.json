@@ -1,0 +1,19 @@
+{
+  "format": "ai-trust-id-organization-policy-linux-preflight/v1",
+  "captured_at": "2026-11-21T15:15:04.831445+00:00",
+  "pass": false,
+  "source_commit": "4e06a3310acecaf9fca8ea0e148c584cb1102e60",
+  "stage": "read_only_staging_preservation_preflight",
+  "reason": "The private wrapper used the JSON key Id as a Go-template field; official Podman InspectContainerData names its Go field ID and tags it as JSON Id.",
+  "tests_executed": 0,
+  "policy_worker_executed": false,
+  "service_mutating_commands_used": false,
+  "staging_preservation_snapshot_completed": false,
+  "only_owned_temporary_directory_removed": true,
+  "transport_log_sha256": "9735d6d418218f0b440fd48cb63db815a2beeb329c5f36bd2e0cd8a547fda443",
+  "transport_log_bytes": 1401,
+  "correction_primary_source": "https://github.com/podman-container-tools/podman/blob/main/libpod/define/container_inspect.go",
+  "product_source_changed": false,
+  "independent_accuracy_evidence": false,
+  "full_N010_closed": false
+}

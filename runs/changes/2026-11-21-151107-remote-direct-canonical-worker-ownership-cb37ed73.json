@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-151107-remote-direct-canonical-worker-ownership-cb37ed73",
+  "recorded_at": "2026-11-21T15:11:07.139257+00:00",
+  "author": "Codex /root/web_camo; independent review /root/seo; PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d0b76e6aa211ca89ea5774bc170e3694442c135c",
+  "changed": "Removed a nested CLI process group by invoking the unchanged canonical PS worker directly, preserving the ten-second method ceiling inside the shared request budget.",
+  "proves": "Three affected actual Mac groups pass: genuine canonical SIGSTOP worker disconnect/shutdown reap, real two-worker capacity and isolated cancellation, plus complete brief canonical parity at maximum text/byte boundaries. Prior clean Linux evidence is retained separately; source review finding and prior limits are explicit.",
+  "limits": "Fresh final Linux fourteen-control proof and distinct corrected-source review remain pending. Earlier fake-sleeper cancellation proof did not establish nested descendant cleanup. No public deployment, AI account connection, independent accuracy, hosted PII or original closure.",
+  "scope_ids": [
+    "T-PS"
+  ],
+  "files": {
+    "tools/remote_tag_server.py": "b656abfb64eb925f8e63789365590a35c652d35e16001da284fa8f827162a72d",
+    "tests/test_remote_tag_server.py": "39150e9b0a32320dfcf23732dc3bc465f15571cb890cc272d5582beb4d1f4a19",
+    "docs/remote-tag-connectors.md": "7026ed05f5f50460463e1cfa76bf327a7bf941775e4e4cbd88afc1f4bbb9a2e0",
+    "docs/remote-tag-connectors-result.md": "8fb6d981454f442c8104738c8825c0581fc40125a3af3da58add211ab5eb7677",
+    "runs/2026-11-21-remote-tag-connectors-corrected-Linux-execution.json": "8276bde14aea8f626c0cd28e3dbf33d92efa1861e7b6cbaf0feef8b127a0ce1d",
+    "runs/2026-11-21-remote-tag-connectors-corrected-Linux-client.json": "551b7846958abba75f34e71c4653efb9b6be41ba5abf4bfda9c3201478ae2c49",
+    "runs/2026-11-21-remote-tag-connectors-corrected-Linux-cleanup.json": "1995b35224327b1a64d77f09f576e57f981e8042d6dde0118b6b68948e05154b",
+    "runs/2026-11-21-remote-tag-nested-worker-ownership-finding.json": "c48181d216790b5032d8588b07eaa0bc8dab7b9e69554b91091a8fcc6876fbfb",
+    "runs/2026-11-21-remote-tag-direct-worker-targeted.json": "9428903dc1697ff6c2500f54556b877d4b8a0d028409051c5aa2613527b02d4d",
+    "runs/2026-11-21-remote-tag-direct-worker-capacity.json": "ef0008df644ae90ffd363d9b664d4e4663ac6c07699f6bf0e161f21be428a6aa"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-remote-tag-direct-worker-targeted.json",
+      "sha256": "9428903dc1697ff6c2500f54556b877d4b8a0d028409051c5aa2613527b02d4d"
+    },
+    {
+      "path": "runs/2026-11-21-remote-tag-direct-worker-capacity.json",
+      "sha256": "ef0008df644ae90ffd363d9b664d4e4663ac6c07699f6bf0e161f21be428a6aa"
+    },
+    {
+      "path": "runs/2026-11-21-remote-tag-connectors-corrected-Linux-execution.json",
+      "sha256": "8276bde14aea8f626c0cd28e3dbf33d92efa1861e7b6cbaf0feef8b127a0ce1d"
+    }
+  ],
+  "checks": []
+}

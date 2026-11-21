@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-160643-pause-owned-live-test-runtime-4a5f1e99",
+  "recorded_at": "2026-11-21T16:06:43.326652+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "68f9d74256aeace7d0624556d7965e2d96243821",
+  "changed": "Stopped only the three ownership-labeled temporary browser-test containers and closed their owned SSH forward after final UI pause.",
+  "proves": "All temporary test containers stopped, forward closed and existing dedicated staging remained healthy.",
+  "limits": "Private recovery/configuration artifacts retained; no production service, global Docker or original scope count changed.",
+  "scope_ids": [
+    "F-030"
+  ],
+  "files": {
+    "runs/2026-11-21-live-capture-temporary-service-paused.json": "c1801b46da118c3cfd9c847558a2ba60142ad9c65eaf0d8ede522bc6af1a0021"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-live-capture-temporary-service-paused.json",
+      "sha256": "c1801b46da118c3cfd9c847558a2ba60142ad9c65eaf0d8ede522bc6af1a0021"
+    }
+  ],
+  "checks": []
+}

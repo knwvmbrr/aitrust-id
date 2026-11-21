@@ -1,0 +1,154 @@
+name: organization-policy-local
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/organization_policy_registry.py'
+      - 'tools/organization_policy_io.py'
+      - 'tools/organization_policy_worker.py'
+      - 'scripts/organization-policy.py'
+      - 'tests/test_organization_policy_registry.py'
+      - 'tests/test_organization_policy_cli.py'
+      - 'docs/organization-policy-registry*.md'
+      - 'tools/private_policy.py'
+      - 'protocol/corpus.py'
+      - 'protocol/evidence.py'
+      - 'protocol/normalization.py'
+      - 'protocol/unicode15-data.json'
+      - 'spec/vocabulary.json'
+      - 'scripts/worker_process.py'
+      - 'scripts/check-ps.py'
+      - 'scripts/build-device-detector.py'
+      - 'services/evaluator/app.py'
+      - '.github/workflows/organization-policy.yml'
+  pull_request:
+    paths:
+      - 'tools/organization_policy_registry.py'
+      - 'tools/organization_policy_io.py'
+      - 'tools/organization_policy_worker.py'
+      - 'scripts/organization-policy.py'
+      - 'tests/test_organization_policy_registry.py'
+      - 'tests/test_organization_policy_cli.py'
+      - 'docs/organization-policy-registry*.md'
+      - 'tools/private_policy.py'
+      - 'protocol/corpus.py'
+      - 'protocol/evidence.py'
+      - 'protocol/normalization.py'
+      - 'protocol/unicode15-data.json'
+      - 'spec/vocabulary.json'
+      - 'scripts/worker_process.py'
+      - 'scripts/check-ps.py'
+      - 'scripts/build-device-detector.py'
+      - 'services/evaluator/app.py'
+      - '.github/workflows/organization-policy.yml'
+permissions:
+  contents: read
+jobs:
+  governed-local-policy:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.13'}
+      - name: Execute all local tenant-policy controls without project dependency installs
+        timeout-minutes: 2
+        shell: bash
+        run: |
+          python -I -S -B - <<'PY'
+          import contextlib,datetime,hashlib,io,json,os,resource,sqlite3,stat,sys,time,unittest
+          from pathlib import Path
+
+          # These are the exact eighteen executed source/test/guide inputs. No
+          # historical Git objects or external registry/service are required.
+          FILES=(
+              'tools/organization_policy_registry.py','tools/organization_policy_io.py',
+              'tools/organization_policy_worker.py','scripts/organization-policy.py',
+              'tests/test_organization_policy_registry.py','tests/test_organization_policy_cli.py',
+              'docs/organization-policy-registry-plan.md','docs/organization-policy-registry.md',
+              'tools/private_policy.py','protocol/corpus.py','protocol/evidence.py',
+              'protocol/normalization.py','protocol/unicode15-data.json','spec/vocabulary.json',
+              'scripts/worker_process.py','scripts/check-ps.py','scripts/build-device-detector.py',
+              'services/evaluator/app.py')
+          root=Path.cwd()
+          output=root/'output/verification/organization-policy-ci.json'
+          output.parent.mkdir(parents=True,exist_ok=True)
+          report={'format':'ai-trust-id-organization-policy-ci/v1',
+              'captured_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              'pass':False,'status':'RUNNING','tests':None,'failures':None,'errors':None,'skipped':None,
+              'full_N010_closed':False,'human_or_commercial_acceptance':False,
+              'project_dependencies_installed':False,'service_or_container_started':False}
+          def save():
+              temporary=output.with_suffix('.tmp')
+              temporary.write_text(json.dumps(report,indent=2)+'\n')
+              os.replace(temporary,output)
+          class PrivateLog(io.TextIOBase):
+              def __init__(self):self.digest=hashlib.sha256();self.bytes=0
+              def write(self,text):
+                  raw=text.encode('utf-8','replace');self.bytes+=len(raw)
+                  if self.bytes>1_000_000:raise RuntimeError('Bounded test log exceeded')
+                  self.digest.update(raw);return len(text)
+          def snapshot():
+              rows={};total=0
+              for name in (*FILES,'.github/workflows/organization-policy.yml'):
+                  path=root/name
+                  fd=os.open(path,os.O_RDONLY|os.O_NOFOLLOW|os.O_NONBLOCK)
+                  try:
+                      before=os.fstat(fd)
+                      assert stat.S_ISREG(before.st_mode) and before.st_nlink==1 and 0<before.st_size<=2_000_000
+                      total+=before.st_size;assert total<=4_000_000
+                      digest=hashlib.sha256();length=0
+                      while True:
+                          chunk=os.read(fd,65536)
+                          if not chunk:break
+                          length+=len(chunk);assert length<=before.st_size;digest.update(chunk)
+                      assert length==before.st_size
+                      def state(value):return value.st_dev,value.st_ino,value.st_size,value.st_mtime_ns,value.st_ctime_ns,value.st_mode,value.st_nlink
+                      assert state(before)==state(os.fstat(fd))==state(os.stat(path,follow_symlinks=False))
+                      rows[name]=digest.hexdigest()
+                  finally:os.close(fd)
+              return rows
+          save();log=PrivateLog();start=time.monotonic()
+          try:
+              assert sys.platform=='linux' and os.geteuid()!=0 and sys.version_info[:2]==(3,13)
+              assert sys.flags.isolated and sys.flags.no_site and sys.flags.dont_write_bytecode
+              assert 'site' not in sys.modules and not any('site-packages' in p or 'dist-packages' in p for p in sys.path)
+              assert len(FILES)==len(set(FILES))==18
+              resource.setrlimit(resource.RLIMIT_CORE,(0,0))
+              resource.setrlimit(resource.RLIMIT_AS,(512*1024**2,512*1024**2))
+              resource.setrlimit(resource.RLIMIT_CPU,(30,30))
+              resource.setrlimit(resource.RLIMIT_NOFILE,(256,256))
+              resource.setrlimit(resource.RLIMIT_FSIZE,(32*1024**2,32*1024**2))
+              before=snapshot();sys.path.insert(0,str(root))
+              with contextlib.redirect_stdout(log),contextlib.redirect_stderr(log):
+                  loader=unittest.TestLoader();suite=unittest.TestSuite()
+                  for pattern in ('test_organization_policy_registry.py','test_organization_policy_cli.py'):
+                      suite.addTests(loader.discover(str(root/'tests'),pattern=pattern))
+                  result=unittest.TextTestRunner(stream=log,verbosity=2).run(suite)
+              after=snapshot()
+              report.update(tests=result.testsRun,failures=len(result.failures),errors=len(result.errors),skipped=len(result.skipped),
+                  python='.'.join(map(str,sys.version_info[:3])),sqlite=sqlite3.sqlite_version,non_root=True,
+                  isolated_stdlib=True,source_inputs=before,source_bytes_stable=before==after,
+                  failure_case_ids=[case.id() for case,_ in result.failures+result.errors])
+              assert result.testsRun==27 and result.wasSuccessful() and not result.skipped
+              assert before==after and time.monotonic()-start<=90
+              report.update(status='EXECUTED',**{'pass':True})
+          except BaseException:
+              report.update(status='FAILED',code='organization_policy_ci_unavailable')
+          finally:
+              report.update(elapsed_seconds=round(time.monotonic()-start,3),
+                  private_test_log_sha256=log.digest.hexdigest(),private_test_log_bytes=log.bytes)
+              save()
+          print(json.dumps({key:report[key] for key in ('pass','status','tests','failures','errors','skipped')}))
+          raise SystemExit(0 if report['pass'] else 1)
+          PY
+      - name: Retain only minimized software evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: organization-policy-local-software
+          path: output/verification/organization-policy-ci.json
+          if-no-files-found: error
+          retention-days: 7

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-151823-remote-connector-direct-linux-proof-a42c214e",
+  "recorded_at": "2026-11-21T15:18:23.315790+00:00",
+  "author": "Codex MT/API engineer",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8294f49107262e4f2b5604632a81503d293c0956",
+  "changed": "Retained final direct-worker Linux execution, cleanup and distinct reviews for the optional remote connector.",
+  "proves": "An exact tracked-source archive ran all 14 official-client and owned-worker groups on Python 3.13 Linux with all 30 locked versions; the private workspace was removed with zero owned processes and prior staging healthy.",
+  "limits": "No public HTTPS deployment, account connection, independent detector accuracy, dependency clearance or original requirement completion; discarded inner-log canary checks remain author-observed.",
+  "scope_ids": [
+    "T-PS"
+  ],
+  "files": {
+    "docs/remote-tag-connectors-result.md": "5e5a95226215082110046adb4eae3ee27ef876c9261f13b6ccdfa965ff50b021",
+    "runs/2026-11-21-remote-tag-connectors-direct-Linux-cleanup.json": "4e25558a9937ab201ca70ead9e293ddbd52275968337962ee8c1163a69e0b75b",
+    "runs/2026-11-21-remote-tag-connectors-direct-Linux-client.json": "037fbbac7a30bd757e8d68c2adf355ad8fa1af2c62761bdfead97aba5b85eb4f",
+    "runs/2026-11-21-remote-tag-connectors-direct-Linux-execution.json": "fff3bbc1d03be82184f44273fef67da9bfc21ab1694b3e7cdfb643612439a23a",
+    "runs/2026-11-21-remote-tag-direct-worker-independent-review.json": "8ccec405a13d302fc8b566da4caf51387b2c4bba4d2dc38ca9ad7c99ac1ea830",
+    "runs/2026-11-21-remote-tag-direct-Linux-independent-review.json": "e6fc77fa1056578c4d7308e6b0b533944abe6dd99df05d9b1795b671e3d07920"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-remote-tag-connectors-direct-Linux-execution.json",
+      "sha256": "fff3bbc1d03be82184f44273fef67da9bfc21ab1694b3e7cdfb643612439a23a"
+    },
+    {
+      "path": "runs/2026-11-21-remote-tag-connectors-direct-Linux-client.json",
+      "sha256": "037fbbac7a30bd757e8d68c2adf355ad8fa1af2c62761bdfead97aba5b85eb4f"
+    },
+    {
+      "path": "runs/2026-11-21-remote-tag-connectors-direct-Linux-cleanup.json",
+      "sha256": "4e25558a9937ab201ca70ead9e293ddbd52275968337962ee8c1163a69e0b75b"
+    },
+    {
+      "path": "runs/2026-11-21-remote-tag-direct-Linux-independent-review.json",
+      "sha256": "e6fc77fa1056578c4d7308e6b0b533944abe6dd99df05d9b1795b671e3d07920"
+    }
+  ],
+  "checks": []
+}

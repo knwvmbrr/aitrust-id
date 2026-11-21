@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-150908-local-policy-source-whitespace-identity-5e3f15c6",
+  "recorded_at": "2026-11-21T15:09:08.348120+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "85e7772758a89213151e5f9f1c827aba50d28bb7",
+  "changed": "Removed trailing blank lines from the new owned I/O helper and captured the corrected exact-source Mac workflow; prior execution remains historical.",
+  "proves": "Code body equals the reviewed helper after stripping only trailing newline bytes. Exact-source Mac27 groups and73 recorded ordinary CLI operations pass with zero failures/errors/skips; no behavior changed.",
+  "limits": "Source identity refresh only, no original closure or outside-human/commercial acceptance. Authorized isolated Linux proof and protected integration remain pending.",
+  "scope_ids": [
+    "N-010"
+  ],
+  "files": {
+    "tools/organization_policy_io.py": "7a3577c837a3582f1076ef8170edcf303314f98da3eb566bbb6326a9ced59a16",
+    "runs/2026-11-21-organization-policy-mac-final-operation.json": "9af25cb7b6cf47629fca1535c41a6a0b52ce9a6be60103c9b2f0d9051058509c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-organization-policy-mac-final-operation.json",
+      "sha256": "9af25cb7b6cf47629fca1535c41a6a0b52ce9a6be60103c9b2f0d9051058509c"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "aitrust-original-requirement-acceptance-review-1",
+  "captured_at": "2026-11-21T16:02:03.014434+00:00",
+  "pass": true,
+  "id": "F-030",
+  "reviewed_by": "Codex /root/seo",
+  "performed_by": "Codex /root through actual native Chrome UI",
+  "baseline_commit": "3716233b9460efa57c1f0d01bfe30989395efcc4",
+  "original_acceptance_sha256": "75abf08fb9359243b772e146f24299296aeb347c5a6d99df79f22971468e3248",
+  "criterion_unchanged": true,
+  "original_required_acceptance": [
+    "Prove MAIN-world stream capture on a live supported vendor or explicitly replace that route with the demonstrated DOM adapter; do not count DOM success as fetch-patch validation."
+  ],
+  "master_original_job": "Specify and deliver mV3 MAIN-world capture \u2014 fetch patch plus ReadableStream.tee().",
+  "master_original_outcome": "Labels appear where you already read AI output, with no copy-paste",
+  "reviewed_source_sha256": {
+    "extension/manifest.json": "6a9457a6e13187e7da98236178fd0f75d7e5cdebfc2b2c2545f69f4cc204a7ba",
+    "extension/src/shared/contract.js": "5250bacc684a6aae6a55d1f3f9c86e12e1422cf0520880e2507a0baa69efecd7",
+    "extension/src/shared/transport.js": "a012bb6405353a8fda04f90b34c1bc0ec22dcbdb6577a1746f53bbd88f19c352",
+    "extension/src/adapters/chatgpt.js": "483094b7a0149cf4862c437441628151d106f6c3c4360f53be8eb4e7ddae0a1c",
+    "extension/src/content/badge.js": "fb66db5111dc7739c4fc360dca2085588bf6882062e5696995bed9ccb90d5a23",
+    "extension/src/content/bridge.js": "c1f6ec8cdef417609635709664576c706abc94cf808cce0333c937d4251650f1",
+    "extension/src/sw/service-worker.js": "c135a5e367f0dfb976becd05fff27e175b58760f1149d56827fc8a3c07c32c5e",
+    "extension/src/options.html": "44edfdf585957b3c9b00ed245c30c28b74a25f3de5431ed4b8802c4551325146",
+    "extension/src/options.js": "2e0c4848e6913c8e979ec7af124118bd23ddfbcdc748cf541113a07406790b64"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-installed-live-capture-lifecycle.json",
+      "sha256": "726e8e5976fd5ae1b9fcd393c377c22ce69ea517043ac8643e94fce9236c81d6"
+    },
+    {
+      "path": "runs/2026-11-21-installed-extension-source-paused.json",
+      "sha256": "6e9df68e0dbae791d8e5540aec2e0f8bc2f35be9df3292a4f2a783b5b6ae2f7a"
+    },
+    {
+      "path": "runs/2026-11-21-current-signed-capture-service.json",
+      "sha256": "fdd79bca5e94ed2de2c83cea7975cd0d9226df50c88780f727282b71571278b5"
+    },
+    {
+      "path": "runs/2026-11-21-capture-static-address-recovery.json",
+      "sha256": "cffcd71231c243bfc634d52a3da647f60f221331ed89846b606e36f16e36a106"
+    },
+    {
+      "path": "runs/2026-11-21-capture-mounted-source-independent-review.json",
+      "sha256": "eb0c9fb3be41ced9c2014c87dd3ea9a43e1d49624240d2a85fb738260d21b643"
+    }
+  ],
+  "decision": "Recommend verified_complete for F-030 via its explicitly enumerated demonstrated completed-response DOM replacement. No ledger or completion counter changed by reviewer.",
+  "acceptance_mapping": {
+    "supported_case": "Actual installed current Chrome adapter attached PS and PII below the existing authorized public completed assistant answer; PS details and deliberate Recheck were inspected.",
+    "failure_case": "Actual stopped owned signed gateway: Recheck removed stale PS/PII findings and exposed authenticated-service Unavailable; no safe/no-findings assertion.",
+    "recovery": "The same owned gateway restarted, health200 and deliberate Recheck restored findings beneath the same response.",
+    "consent_containment": "Final checkbox0/Checks paused and page navigation without tags observed.",
+    "versioned_evidence": "Nine installed-source files match current root, canonical loaded source and immutable e828 base; four linked signed-service/source/prerequisite receipts match exact hashes."
+  },
+  "historical_route_interpretation": "The unchanged Oct9 acceptance explicitly permits DOM replacement. Nov19 f030-live-stream-plan.md scoped a MAIN-world implementation experiment and correctly says DOM cannot prove that stream route; it did not replace the accepted OR. PM explicitly selected the existing DOM branch. Fetch/tee prototype and mixed-stream route remain inactive and unverified historical/future work, never relabeled as validated fetch capture.",
+  "review_method": [
+    "Read full current master, required acceptance, package capture contract, session plan and historical stream plan.",
+    "Called actual tools/session_delivery.py acceptance_hash on immutable baseline and current records and compared exact equality.",
+    "Matched actual operator observations, five lifecycle outcomes, installed-source and four supporting receipt digests. No new browser/service/test action by reviewer."
+  ],
+  "limits": [
+    "Distinct source/evidence acceptance review of actual operator-observed UI, not a second browser reenactment or independent detector validation.",
+    "One completed authorized public Homebrew response only; no broad vendor/regeneration/multiresponse compatibility claimed.",
+    "No public screenshot retained because native view includes unrelated account/tabs; UI conclusions are attributed to root observation.",
+    "Localhost SSH forward reaches an explicitly disclosed dedicated remote test service; this is not a local-inference/default data-path claim.",
+    "F-037/F-097 outside-user, F-035/accessibility, F-142 installation, PS/PII independent accuracy, physical phones and all other original criteria remain unchanged/open.",
+    "Only F-030 recommended; root owns ledger/state/session accounting/protected publication."
+  ],
+  "other_original_closures_recommended": []
+}

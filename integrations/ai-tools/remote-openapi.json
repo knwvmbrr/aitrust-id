@@ -1,0 +1,674 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "AI Trust ID selected-text JSON API",
+    "version": "1.0.0-preview",
+    "description": "Open-source engineering preview for explicitly selected text, with public reachability and host-specific installation verified separately on the connection page. This manifest adds no endpoint and grants no AI-host approval. Ordinary JSON calls only; MCP is separate. No account or authorization token is required or accepted. Selected text reaches the operator server; application input storage and automatic research collection are disabled. Do not send secrets. No safety, truth, AI-origin, certification or independent accuracy claim."
+  },
+  "servers": [
+    {
+      "url": "https://vps-18ef1326.vps.ovh.us",
+      "description": "Engineering preview; public reachability and host account installation are verified separately. See the connection page for current status. No availability or host approval is asserted by this manifest."
+    }
+  ],
+  "security": [],
+  "paths": {
+    "/v1/check": {
+      "post": {
+        "operationId": "checkSelectedText",
+        "summary": "Check explicitly selected text",
+        "description": "Engineering preview for supported command-risk patterns only. Text reaches this server; no application input storage or automatic research upload. PS is not independently validated. PII_REDACTED may be requested but is always Unavailable remotely. HTTP 200 may be COMPLETE, PARTIAL or UNAVAILABLE; NO_FINDING is not safe.",
+        "responses": {
+          "200": {
+            "description": "JSON result. Inspect its state; HTTP success is not safety or validation approval.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CheckResult"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Request refused: malformed or duplicate-key JSON, unsupported fields/type/text, query, credentials, compression, framing or Origin at the proxy. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "403": {
+            "description": "Host or application Origin refused. No browser CORS grant is provided. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "404": {
+            "description": "Unknown path or unsupported method at the public proxy. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "405": {
+            "description": "Unsupported method when talking directly to the application; public proxy may instead return 404. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "413": {
+            "description": "Body exceeds the 256000-byte wire limit. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "421": {
+            "description": "TLS server-name and HTTP Host mismatch refused by the proxy. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "429": {
+            "description": "Finite shared rate limit reached. Retry deliberately; no request-identity tracking. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "503": {
+            "description": "Busy admission or service unavailable; no valid check completed. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "504": {
+            "description": "Request or upstream deadline expired; no valid check completed. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "502": {
+            "description": "Reverse proxy cannot obtain an upstream response. No valid check completed. Refusal bodies can be fixed plain text rather than application JSON."
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "description": "Send only text deliberately chosen for disclosure. Nonempty after Unicode whitespace stripping; at most 20000 Unicode code points and 80000 UTF-8 bytes. Unpaired surrogates refuse. JSON body at most 256000 bytes; duplicate keys, NaN/Infinity, depth above 20, extra fields and duplicate tags refuse. Use application/json without compression, credentials or URL/query content. Code enforces these wire constraints beyond object-schema validation.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CheckRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/v1/tags": {
+      "get": {
+        "operationId": "listRemoteTagAvailability",
+        "summary": "List remote check availability",
+        "description": "Discover remote availability without sending content. PS is a development check; PII_REDACTED is unavailable on this server.",
+        "responses": {
+          "200": {
+            "description": "JSON result. Inspect its state; HTTP success is not safety or validation approval.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TagCatalog"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Request refused: malformed or duplicate-key JSON, unsupported fields/type/text, query, credentials, compression, framing or Origin at the proxy. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "403": {
+            "description": "Host or application Origin refused. No browser CORS grant is provided. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "404": {
+            "description": "Unknown path or unsupported method at the public proxy. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "405": {
+            "description": "Unsupported method when talking directly to the application; public proxy may instead return 404. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "413": {
+            "description": "Body exceeds the 256000-byte wire limit. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "421": {
+            "description": "TLS server-name and HTTP Host mismatch refused by the proxy. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "429": {
+            "description": "Finite shared rate limit reached. Retry deliberately; no request-identity tracking. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "503": {
+            "description": "Busy admission or service unavailable; no valid check completed. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "504": {
+            "description": "Request or upstream deadline expired; no valid check completed. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "502": {
+            "description": "Reverse proxy cannot obtain an upstream response. No valid check completed. Refusal bodies can be fixed plain text rather than application JSON."
+          }
+        }
+      }
+    },
+    "/healthz": {
+      "get": {
+        "operationId": "getRemoteHealth",
+        "summary": "Check service liveness",
+        "description": "Liveness only. Does not prove a tag method, privacy recognition, independent accuracy or availability of every dependency.",
+        "responses": {
+          "200": {
+            "description": "JSON result. Inspect its state; HTTP success is not safety or validation approval.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Health"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Request refused: malformed or duplicate-key JSON, unsupported fields/type/text, query, credentials, compression, framing or Origin at the proxy. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "403": {
+            "description": "Host or application Origin refused. No browser CORS grant is provided. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "404": {
+            "description": "Unknown path or unsupported method at the public proxy. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "405": {
+            "description": "Unsupported method when talking directly to the application; public proxy may instead return 404. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "413": {
+            "description": "Body exceeds the 256000-byte wire limit. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "421": {
+            "description": "TLS server-name and HTTP Host mismatch refused by the proxy. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "429": {
+            "description": "Finite shared rate limit reached. Retry deliberately; no request-identity tracking. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "503": {
+            "description": "Busy admission or service unavailable; no valid check completed. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "504": {
+            "description": "Request or upstream deadline expired; no valid check completed. Refusal bodies can be fixed plain text from the proxy or JSON from the application; do not parse them as successful checks."
+          },
+          "502": {
+            "description": "Reverse proxy cannot obtain an upstream response. No valid check completed. Refusal bodies can be fixed plain text rather than application JSON."
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CheckRequest": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20000
+          },
+          "tags": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 2,
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "PS",
+                "PII_REDACTED"
+              ]
+            },
+            "default": [
+              "PS"
+            ]
+          }
+        },
+        "required": [
+          "text"
+        ],
+        "additionalProperties": false
+      },
+      "Method": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "revision": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "sha256",
+          "revision"
+        ],
+        "additionalProperties": false
+      },
+      "EvidenceCount": {
+        "type": "object",
+        "properties": {
+          "signal_id": {
+            "type": "string"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "signal_id",
+          "count"
+        ],
+        "additionalProperties": false
+      },
+      "Check": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "enum": [
+              "PS",
+              "PII_REDACTED"
+            ]
+          },
+          "state": {
+            "enum": [
+              "FINDING",
+              "NO_FINDING",
+              "UNAVAILABLE"
+            ]
+          },
+          "message": {
+            "type": "string"
+          },
+          "method": {
+            "type": "array",
+            "maxItems": 1,
+            "items": {
+              "$ref": "#/components/schemas/Method"
+            }
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EvidenceCount"
+            }
+          }
+        },
+        "required": [
+          "code",
+          "state",
+          "message",
+          "method",
+          "evidence"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "code": {
+                  "const": "PII_REDACTED"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "const": "UNAVAILABLE"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "state": {
+                  "const": "UNAVAILABLE"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "method": {
+                  "maxItems": 0
+                },
+                "evidence": {
+                  "maxItems": 0
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "state": {
+                  "const": "NO_FINDING"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "method": {
+                  "minItems": 1
+                },
+                "evidence": {
+                  "maxItems": 0
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "state": {
+                  "const": "FINDING"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "method": {
+                  "minItems": 1
+                },
+                "evidence": {
+                  "minItems": 1
+                }
+              }
+            }
+          }
+        ]
+      },
+      "CheckResult": {
+        "type": "object",
+        "properties": {
+          "format": {
+            "const": "ai-trust-id-tool-result/v1"
+          },
+          "state": {
+            "enum": [
+              "COMPLETE",
+              "PARTIAL",
+              "UNAVAILABLE"
+            ]
+          },
+          "checks": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 2,
+            "uniqueItems": true,
+            "items": {
+              "$ref": "#/components/schemas/Check"
+            }
+          },
+          "reason": {
+            "enum": [
+              null,
+              "busy"
+            ]
+          },
+          "independently_validated": {
+            "const": false
+          },
+          "safety_clearance": {
+            "const": false
+          },
+          "text_included": {
+            "const": false
+          },
+          "subject_identity_included": {
+            "const": false
+          },
+          "research_submitted": {
+            "const": false
+          }
+        },
+        "required": [
+          "format",
+          "state",
+          "checks",
+          "reason",
+          "independently_validated",
+          "safety_clearance",
+          "text_included",
+          "subject_identity_included",
+          "research_submitted"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "state": {
+                  "const": "COMPLETE"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "reason": {
+                  "const": null
+                },
+                "checks": {
+                  "maxItems": 1,
+                  "items": {
+                    "properties": {
+                      "code": {
+                        "const": "PS"
+                      },
+                      "state": {
+                        "enum": [
+                          "FINDING",
+                          "NO_FINDING"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "state": {
+                  "const": "UNAVAILABLE"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "checks": {
+                  "items": {
+                    "properties": {
+                      "state": {
+                        "const": "UNAVAILABLE"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "state": {
+                  "const": "PARTIAL"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "reason": {
+                  "const": null
+                },
+                "checks": {
+                  "minItems": 2,
+                  "contains": {
+                    "properties": {
+                      "code": {
+                        "const": "PS"
+                      },
+                      "state": {
+                        "enum": [
+                          "FINDING",
+                          "NO_FINDING"
+                        ]
+                      }
+                    }
+                  },
+                  "allOf": [
+                    {
+                      "contains": {
+                        "properties": {
+                          "code": {
+                            "const": "PII_REDACTED"
+                          },
+                          "state": {
+                            "const": "UNAVAILABLE"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      "TagAvailability": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "enum": [
+              "PS",
+              "PII_REDACTED"
+            ]
+          },
+          "job": {
+            "type": "string"
+          },
+          "setup": {
+            "enum": [
+              "remote_python",
+              "unavailable_on_remote_service"
+            ]
+          },
+          "status": {
+            "const": "development"
+          },
+          "independently_validated": {
+            "const": false
+          },
+          "available": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "code",
+          "job",
+          "setup",
+          "status",
+          "independently_validated",
+          "available"
+        ],
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "code": {
+                  "const": "PS"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "available": {
+                  "const": true
+                },
+                "setup": {
+                  "const": "remote_python"
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "code": {
+                  "const": "PII_REDACTED"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "available": {
+                  "const": false
+                },
+                "setup": {
+                  "const": "unavailable_on_remote_service"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "TagCatalog": {
+        "type": "object",
+        "properties": {
+          "format": {
+            "const": "ai-trust-id-tool-catalog/v1"
+          },
+          "tags": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "$ref": "#/components/schemas/TagAvailability"
+            }
+          },
+          "checking_requires_account": {
+            "const": false
+          },
+          "automated_research_submission": {
+            "const": false
+          },
+          "transport": {
+            "const": "remote_stateless_http"
+          },
+          "text_processing": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "format",
+          "tags",
+          "checking_requires_account",
+          "automated_research_submission",
+          "transport",
+          "text_processing"
+        ],
+        "additionalProperties": false
+      },
+      "Health": {
+        "type": "object",
+        "properties": {
+          "ok": {
+            "const": true
+          },
+          "profile": {
+            "const": "ai-trust-id-remote-ps/v1"
+          },
+          "PII_available": {
+            "const": false
+          }
+        },
+        "required": [
+          "ok",
+          "profile",
+          "PII_available"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Open source and local/remote connector boundaries",
+    "url": "https://github.com/knwvmbrr/aitrust-id/blob/main/docs/remote-tag-connectors.md"
+  },
+  "x-aitrust-source-sha256": {
+    "tools/remote_tag_server.py": "b656abfb64eb925f8e63789365590a35c652d35e16001da284fa8f827162a72d",
+    "tools/tag_api.py": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e",
+    "deploy/ai-tools/render.py": "d7d994babf384201d3285b509a281faa417e154f84790853055291f17b4faa89"
+  },
+  "x-aitrust-transport-limits": {
+    "wire_bytes": 256000,
+    "text_utf8_bytes": 80000,
+    "request_seconds": 12,
+    "ps_seconds": 10,
+    "json_depth": 20
+  },
+  "x-aitrust-mcp-excluded": true
+}

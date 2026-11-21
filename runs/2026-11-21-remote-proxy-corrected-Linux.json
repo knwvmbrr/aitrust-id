@@ -1,0 +1,52 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T15:36:05.950365+00:00",
+  "profile": "ai-tools-private-proxy-1",
+  "groups": [
+    "actual_production_and_loopback_adapt_validate",
+    "actual_owned_loopback_processes",
+    "actual_HTTP_canonical_positive_and_no_finding",
+    "official_MCP_modern_and_legacy_through_actual_proxy",
+    "host_origin_query_credentials_path_method_encoding_size_JSON_refusal",
+    "actual_wire_chunked_and_duplicate_length_refusal",
+    "actual_proxy_disconnect_direct_canonical_worker_reap_and_recovery",
+    "actual_incomplete_body_finite_deadline",
+    "actual_private_TLS_correct_pair_and_SNI_Host_mismatch_421",
+    "proxy_and_app_shutdown_no_owned_workers",
+    "request_canary_absent_from_captured_logs_source_stable"
+  ],
+  "group_count": 11,
+  "source_sha256": {
+    "deploy/ai-tools/render.py": "d7d994babf384201d3285b509a281faa417e154f84790853055291f17b4faa89",
+    "deploy/ai-tools/prepare.py": "308a7879fffcfd1e4ec6b5c181d7e34154c088dc099e2e1cd04be45e54e3ce33",
+    "deploy/ai-tools/fetch-caddy.py": "45c1ea3ad679bad9fe480f29857427d9899e792398522d7e783d21215f583845",
+    "deploy/ai-tools/verify-loopback.py": "8132f626cb34c67b49fdb8f43ca46ae8f4f1868b5fc3e560b4e0b38d64cd25e3",
+    "deploy/ai-tools/README.md": "95d90a4e83827504245a6a65c05432e45f0b3c47e502280b7dd44555012275ac",
+    "tools/remote_tag_server.py": "b656abfb64eb925f8e63789365590a35c652d35e16001da284fa8f827162a72d",
+    "scripts/remote-tag-server.py": "e759f37f66a119aab3ad1716bf35de547edfa07b926cb512e8059f9fd079a064",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "tools/tag_api.py": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e",
+    "scripts/check-tags.py": "c3cd8c05ad2969b023bb6f332331787b13b2ff6347913fc0f0c3144321279c96",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "integrations/mcp/requirements.lock": "82375e677571a53a1d3c8b5f13312ae8f81da2a05e4bea0ab59417d4486d95ea"
+  },
+  "source_stable": true,
+  "caddy_binary_sha256": "6d1dc61710d336c37fb5aca50260bf017bf10e948a31e8b381a7d03ddede1543",
+  "config_sha256": "a651cac6e07b9dad2958a81e396f2338ca5c580ad28505b095b846f709f69cad",
+  "production_config_sha256": "c51fded42a40ca28189b9b17d77baf05423eebdde47751964dce56d3192992a1",
+  "adapted_config_sha256": [
+    "0b71ebd9f45e3199ef0da2458079e058349ca26a89bca301e25ed26c5e506da8",
+    "5461acba7eb5e1a4fbb7f924f20781b01e210fd157c4d8e3719203e1b3ebfe8e"
+  ],
+  "captured_log_bytes": 0,
+  "captured_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "request_canary_absent": true,
+  "public_ports_opened": false,
+  "trusted_public_TLS_proved": false,
+  "systemd_sandbox_activated": false,
+  "original_closures": 0,
+  "finished_at": "2026-11-21T15:36:21.723093+00:00"
+}

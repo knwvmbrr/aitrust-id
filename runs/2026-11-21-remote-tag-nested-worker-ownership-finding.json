@@ -1,0 +1,18 @@
+{
+  "profile": "remote-tag-nested-worker-source-ownership-finding/v1",
+  "captured_at": "2026-11-21T15:06:54.916806+00:00",
+  "pass": false,
+  "identified_by": "Codex /root/web_camo",
+  "source_commit": "d0b76e6aa211ca89ea5774bc170e3694442c135c",
+  "source_sha256": {
+    "tools/remote_tag_server.py": "50d23496e601e091c0a3375715c1b021cdb40071269a4c595b158cafbeaa8562",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd"
+  },
+  "finding": "Supervisor launchescheck-ps--json; canonicalCLI check() launches--worker throughrun_worker(start_new_session=True). Outerprocessgroup kill doesnotownnestedgroup.",
+  "evidence_type": "Exactfrozen sourcecallchain; no historicalactualorphan is claimed.",
+  "prior_tests_limit": "Fake-sleeper cancellation controls verifyouterownedchild only, not the actualCLI nestedprocessgroup. PriorMac/Linuxfunctionalityreceipts remainimmutable; completeworker-treecleanup notestablished.",
+  "proposed_fix": "Invokeunchanged canonical--worker entrydirectly and preserveexisting10-secondPSdeadlinewithinrequest12; parent validatesfullrecord andprojectsunchanged.",
+  "deployment_hold": true,
+  "new_original_closures": 0
+}

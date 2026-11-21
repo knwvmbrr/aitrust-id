@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-143337-start-full-original-closure-wave-0a706c6f",
+  "recorded_at": "2026-11-21T14:33:37.180705+00:00",
+  "author": "Codex PM /root; task-list review /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e8287050493f3f30b6c92967beed224a6c8b4dc3",
+  "changed": "Select full original capture and tenant-policy acceptance targets; preserve every historical gate and assign a separate open AI-client connection implementation.",
+  "proves": "Fresh queue classification and live native UI/service prerequisite checks identify concrete work and exact configuration blockers; accounting remains valid.",
+  "limits": "No original closed, no endpoint deployed, no capture or signing trust enabled, no independent human or accuracy acceptance inferred.",
+  "scope_ids": [
+    "F-030",
+    "N-010"
+  ],
+  "files": {
+    "docs/original-closure-wave-nov21.md": "5b5f64fc202c22d43f280fb6faba8a308ac041346a419b43f2e623d3fb3cd9b6",
+    "docs/session-delivery.json": "585a9cec92bd1218d0829258e19604facccc738fb988ad20be0f24d243dac19e",
+    "docs/session-delivery-plan.md": "c6f70fe95ec98469aa7f4f39340c6738ab799e2007f045d9ea06966e1ca03f76",
+    "state.json": "805342556131a2e6d543ee3afa27acf91405060f2fcd931ab52bd04e56720d25"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/session-delivery.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T14:33:37.646611+00:00"
+    }
+  ]
+}

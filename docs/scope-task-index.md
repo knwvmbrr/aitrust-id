@@ -61,7 +61,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-085 | No application-controlled content persistence | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-086 | No telemetry, no analytics, no phone-home — in the extension or the services | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-087 | Capture trust boundary, published plainly | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-030 | MV3 MAIN-world capture — fetch patch plus ReadableStream.tee() | [WP-CAPTURE](scope-delivery.md#wp-capture) | 40% · [evidence/fix](scope-progress.md) |
+| TASK-F-030 | MV3 MAIN-world capture — fetch patch plus ReadableStream.tee() | [WP-CAPTURE](scope-delivery.md#wp-capture) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-031 | DOM observer fallback for sites the fetch patch misses | [WP-CAPTURE](scope-delivery.md#wp-capture) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-088 | Response identity and revision binding | [WP-CAPTURE](scope-delivery.md#wp-capture) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-089 | Duplicate suppression — one badge per response | [WP-CAPTURE](scope-delivery.md#wp-capture) | 100% · [evidence/fix](scope-progress.md) |
@@ -197,7 +197,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-N-007 | No automated promotional AI content network | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-008 | No child-safety report hosting | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-009 | No rogue-AI verdict inferred from output | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-N-010 | Personal/team/enterprise/proprietary tag offering boundaries | [ORG-PRIVATE](scope-delivery.md#org-private) | 60% · [evidence/fix](scope-progress.md) |
+| TASK-N-010 | Personal/team/enterprise/proprietary tag offering boundaries | [ORG-PRIVATE](scope-delivery.md#org-private) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-T-UC | Unsafe Command | [TAG-UC](scope-delivery.md#tag-uc) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-T-SC | Scam Pattern | [TAG-SC](scope-delivery.md#tag-sc) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-T-BT | Automation Pattern | [TAG-BT](scope-delivery.md#tag-bt) | 20% · [evidence/fix](scope-progress.md) |

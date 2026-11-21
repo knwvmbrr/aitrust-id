@@ -1,0 +1,24 @@
+{
+  "profile": "remote-tag-direct-canonical-worker-targeted/v1",
+  "captured_at": "2026-11-21T15:09:23.510166+00:00",
+  "pass": true,
+  "source_sha256": {
+    "tools/remote_tag_server.py": "b656abfb64eb925f8e63789365590a35c652d35e16001da284fa8f827162a72d",
+    "tests/test_remote_tag_server.py": "1397916f8c28e78e2b899c7378b1cf2aa16efdff0fe215c8842062f1d056e598",
+    "scripts/verify-remote-tag-server.py": "443e0085b0c0cdef89f5ab2d7b1123a388bb15b43ef161226a2f9465f626a54d",
+    "docs/remote-tag-connectors.md": "7026ed05f5f50460463e1cfa76bf327a7bf941775e4e4cbd88afc1f4bbb9a2e0"
+  },
+  "groups_executed": 2,
+  "actual_controls": [
+    "Production unchanged--worker argv, SIGSTOPgenuinecanonicalchild, oneprocess/group/nodecendant; HTTPdisconnect kill/reap/recovery andshutdownkill/reap.",
+    "Full brief canonical parity at20kASCII,20kemoji80kUTF8bytes,20kpositive; existingordinaryHTTP/PIIrefusal/recovery retained."
+  ],
+  "canonical_source_unchanged": true,
+  "worker_ceiling_seconds": 10,
+  "whole_request_ceiling_seconds": 12,
+  "prior_nested_ownership_finding": "runs/2026-11-21-remote-tag-nested-worker-ownership-finding.json",
+  "full_current14_group_execution_pending": true,
+  "independent_accuracy_evidence": false,
+  "public_service_deployed": false,
+  "new_original_closures": 0
+}
