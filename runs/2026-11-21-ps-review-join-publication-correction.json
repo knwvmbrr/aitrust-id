@@ -1,0 +1,33 @@
+{
+  "format": "ps-review-join-publication-correction/v1",
+  "pass": true,
+  "captured_at": "2026-11-21T21:11:00.410093+00:00",
+  "historical_peer_finding_sha256": "b07d04aeb29223a038be208dbe7bbecbfd91e99f1a2feef256e7a87174d9157b",
+  "current_sources": {
+    "tools/ps_review_join.py": "e2d1bdbbc3f534c2872474c9b58492844e7933f74dda7c5fad3ccbf2d5894598",
+    "scripts/ps-review-join.py": "410407167bab23297a1074a258ae64d3d2b0712dfa99940917489af2381f2d6e",
+    "tests/test_ps_review_join.py": "253fde82a31e250b9a7a1512742539aafa4ced9b5c1444d423d423c9447085c9"
+  },
+  "actual_affected_controls": {
+    "passed": 3,
+    "deselected": 20,
+    "seconds": 0.05,
+    "cases": [
+      "actual_close_after_release_reports_uncertainty_and_never_retries_fd",
+      "owned_write_failure_rolls_back_new_outputs",
+      "final_postsync_stability_failure_rolls_back_new_outputs"
+    ]
+  },
+  "correction": "Fixed ExportUncertain distinguishes an unconfirmed private export from ordinary input/refusal. Final directory FD ownership is cleared before exactly one close; incomplete rollback also reports output may remain.",
+  "historical_case_two_limitation": "Peer original second case patched os.unlink, changing supports_dir_fd identity; it failed preflight before directory creation and does not establish cleanup-failure behavior. Only first case establishes original defect.",
+  "actual_cli_receipt": {
+    "path": "runs/2026-11-21-ps-review-join-actual-cli.json",
+    "sha256": "e3d9a9ae8abfb947ac544d1958733c774e7f34513893ddcd0ded03b1db35ce20"
+  },
+  "distinct_corrected_peer_review_pending": true,
+  "limits": [
+    "Original peer failure retained byte-for-byte.",
+    "Actual seven current-source CLI commands passed; initial21 focused checks are historical before final stability/uncertainty changes, plus one affected stability check and three affected publication checks.",
+    "Evidence is authored engineering only; no real independent labels, sampling, calibration or original requirement closure."
+  ]
+}

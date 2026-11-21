@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-211100-ps-advisory-review-join-82461250
+
+Recorded 2026-11-21T21:11:00.449077+00:00 · Contributor: seo · change
+
+- **Changed.** Added a usable private explicit-adjudication to current PS prediction CLI with blank-template preparation, exact packet/returned-form/item bindings, bounded independent workers and existing-harness advisory output.
+- **Evidence.** Seven actual current-source CLI commands pass, including existing harness consuming the output and refusing release. Original packet/labels remain byte-identical. Initial21 focused controls and affected final-stability/publication controls are scoped separately; actual close-after-release defect now reports export uncertainty without retrying an owned descriptor. [Change record](./runs/changes/2026-11-21-211100-ps-advisory-review-join-82461250.json).
+- **Not claimed.** Advisory software only. Every rating/decision is synthetic engineering; independence/sampling/calibration/release flags remain false. No human label, original requirement closure or probability claim. Distinct final corrected peer review is pending while reviewer handles blocking operator correction.
+
+
 ### 2026-11-21-193957-google-verification-reviewed-payload-8377c5d8
 
 Recorded 2026-11-21T19:39:57.552918+00:00 · Contributor: Codex /root reviewer; /root/seo publication engineer · change

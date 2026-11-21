@@ -1,0 +1,121 @@
+{
+  "format": "ps-advisory-review-join-actual-cli/v1",
+  "captured_at": "2026-11-21T21:09:56.823448+00:00",
+  "pass": true,
+  "author": "seo",
+  "source_base": "ee8db51846d9f6dd7d93a5b9366edf84444833a8",
+  "source_sha256": {
+    "tools/ps_review_join.py": "e2d1bdbbc3f534c2872474c9b58492844e7933f74dda7c5fad3ccbf2d5894598",
+    "scripts/ps-review-join.py": "410407167bab23297a1074a258ae64d3d2b0712dfa99940917489af2381f2d6e",
+    "tests/test_ps_review_join.py": "253fde82a31e250b9a7a1512742539aafa4ced9b5c1444d423d423c9447085c9",
+    "docs/ps-review-join-plan.md": "25210116fc0a3186b70d38f40da2a87c785b6cf160f6bb0b41ba454bb7f9de25",
+    "docs/ps-review-join.md": "48680a2f617422ab37c55c7908f1bfec351332e548ac1577d750179ec9ee2a99",
+    "scripts/prepare-ps-review.py": "d42f0ded28be966ed9f98be57327c8c808b996a5faca3b30e9af61c13c07e475",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "tools/review_execution.py": "a100fbd3ba79d583423e9398937e5a218588fe699b6a084e00a6947f5506578a",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "eval/harness.py": "4d5c16f3081347ba0dcf793301ffdc6406be66450024f662efe9f3902b082c84",
+    "eval/gates.yaml": "b56568b012c8aef8b0db4169aaec3709b2ca00ab5750546cdc812091026eaa96"
+  },
+  "source_stable": true,
+  "python": "3.12.14",
+  "platform": "darwin",
+  "actual_cli_commands": [
+    {
+      "case": "actual_prepare_blank_no_predictions",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "e339aae16939e3a8a109193f5a82e4ff7c6b857aba0247279ad6135cbfcb69ad",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "blank_decisions_refused",
+      "exit": 1,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "1b7d4c58c2c797afd9b5b6c69e209d0ab070672c442ecacbd12f2b3ca84acf95"
+    },
+    {
+      "case": "actual_explicit_synthetic_decision_join",
+      "exit": 0,
+      "pass": true,
+      "stdout_sha256": "9c97e3c77236c3fe7bdcaa61283c6061ac254fac51244d11af83ed8fb058293c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "existing_harness_consumes_and_refuses_release",
+      "exit": 1,
+      "pass": true,
+      "stdout_sha256": "540dce46e5344903e66c3080d27cff3ac8cd3496a7c7f7962720b2584f15021b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "existing_output_no_overwrite",
+      "exit": 1,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "1b7d4c58c2c797afd9b5b6c69e209d0ab070672c442ecacbd12f2b3ca84acf95"
+    },
+    {
+      "case": "unresolved_missing_decision_no_export",
+      "exit": 1,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "1b7d4c58c2c797afd9b5b6c69e209d0ab070672c442ecacbd12f2b3ca84acf95"
+    },
+    {
+      "case": "unknown_private_argv_fixed_diagnostic",
+      "exit": 2,
+      "pass": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "290f40cc262b4dd3ee211893ea7008addf3c7de430e366ef129809883117a38c"
+    }
+  ],
+  "actual_cli_command_count": 7,
+  "elapsed_seconds": 2.076,
+  "actual_counts": {
+    "tp": 1,
+    "fp": 0,
+    "fn": 0,
+    "tn": 1,
+    "explicitly_ambiguous": 1
+  },
+  "disagreement_preserved": true,
+  "blank_decisions_not_auto_filled": true,
+  "existing_harness_consumed": true,
+  "evaluation_gate_pass": false,
+  "original_packet_and_labels_unchanged": true,
+  "output_modes": {
+    "report.json": "0o600",
+    "predictions.json": "0o600"
+  },
+  "synthetic_ratings_only": true,
+  "independence_verified": false,
+  "human_adjudication_verified": false,
+  "sampling_accepted": false,
+  "calibration_supplied": false,
+  "release_assessed": false,
+  "original_requirement_closed": false,
+  "focused_checks": [
+    {
+      "passed": 21,
+      "seconds": 7.14,
+      "source_scope": "candidate before final post-fsync stability call"
+    },
+    {
+      "passed": 1,
+      "deselected": 21,
+      "seconds": 0.05,
+      "source_scope": "affected final-export rollback control on current source"
+    }
+  ],
+  "limits": [
+    "All labels/reasons/decisions and text authored for engineering; no real people or independent labels.",
+    "Actual offline standalone PS projection is distinct from the frozen full Python recipe and gateway/browser service route; source consistency does not attest trusted people or chronology.",
+    "No independent accuracy, probability calibration, signed adjudication, networking sandbox or original requirement closure."
+  ]
+}

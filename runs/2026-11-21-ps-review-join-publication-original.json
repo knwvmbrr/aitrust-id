@@ -1,0 +1,31 @@
+{
+  "pass": false,
+  "captured_at": "2026-11-21T21:06:32.455776+00:00",
+  "kind": "PS_advisory_join_publication_uncertainty_review",
+  "source_sha256": {
+    "tools/ps_review_join.py": "b808993832c72db77bf3dcb2c43d378aaaa391da80437cd2c729e4c4bfd8cc3f",
+    "scripts/ps-review-join.py": "a2a8e604e2744e34c1f599aba9200326506733b39a9bcb3c8f58714d7a2a470d"
+  },
+  "observations": [
+    {
+      "case": "postpublication_directory_close_error",
+      "exit_status": 1,
+      "complete_private_output_present": true,
+      "explicit_output_uncertainty": false,
+      "generic_fixed_unavailable": true
+    },
+    {
+      "case": "write_failure_cleanup_unconfirmed",
+      "exit_status": 1,
+      "private_output_remains": false,
+      "explicit_output_uncertainty": false,
+      "generic_fixed_unavailable": true
+    }
+  ],
+  "source_stable": true,
+  "limits": [
+    "Only publication was exercised with two tiny synthetic fixed JSON files; join prediction/input path mocked to isolate publisher.",
+    "No source edits, actual PS workers, broad suite, network or real reviewer data.",
+    "No source path/input was exposed in generic error; issue is truthful output existence/cleanup contract, not external data exposure."
+  ]
+}

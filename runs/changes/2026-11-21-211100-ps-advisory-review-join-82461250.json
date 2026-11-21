@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-211100-ps-advisory-review-join-82461250",
+  "recorded_at": "2026-11-21T21:11:00.449077+00:00",
+  "author": "seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ee8db51846d9f6dd7d93a5b9366edf84444833a8",
+  "changed": "Added a usable private explicit-adjudication to current PS prediction CLI with blank-template preparation, exact packet/returned-form/item bindings, bounded independent workers and existing-harness advisory output.",
+  "proves": "Seven actual current-source CLI commands pass, including existing harness consuming the output and refusing release. Original packet/labels remain byte-identical. Initial21 focused controls and affected final-stability/publication controls are scoped separately; actual close-after-release defect now reports export uncertainty without retrying an owned descriptor.",
+  "limits": "Advisory software only. Every rating/decision is synthetic engineering; independence/sampling/calibration/release flags remain false. No human label, original requirement closure or probability claim. Distinct final corrected peer review is pending while reviewer handles blocking operator correction.",
+  "scope_ids": [
+    "F-108",
+    "N-015",
+    "T-PS",
+    "F-010",
+    "F-011",
+    "F-014"
+  ],
+  "files": {
+    "tools/ps_review_join.py": "e2d1bdbbc3f534c2872474c9b58492844e7933f74dda7c5fad3ccbf2d5894598",
+    "scripts/ps-review-join.py": "410407167bab23297a1074a258ae64d3d2b0712dfa99940917489af2381f2d6e",
+    "tests/test_ps_review_join.py": "253fde82a31e250b9a7a1512742539aafa4ced9b5c1444d423d423c9447085c9",
+    "docs/ps-review-join-plan.md": "25210116fc0a3186b70d38f40da2a87c785b6cf160f6bb0b41ba454bb7f9de25",
+    "docs/ps-review-join.md": "48680a2f617422ab37c55c7908f1bfec351332e548ac1577d750179ec9ee2a99",
+    "runs/2026-11-21-ps-review-join-actual-cli.json": "e3d9a9ae8abfb947ac544d1958733c774e7f34513893ddcd0ded03b1db35ce20",
+    "runs/2026-11-21-ps-review-join-publication-original.json": "b07d04aeb29223a038be208dbe7bbecbfd91e99f1a2feef256e7a87174d9157b",
+    "runs/2026-11-21-ps-review-join-publication-correction.json": "36a9fa5d93a5976a830657ba292fa0e18fafac2f4cb1dc3df39bdaa6d5194232"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-ps-review-join-actual-cli.json",
+      "sha256": "e3d9a9ae8abfb947ac544d1958733c774e7f34513893ddcd0ded03b1db35ce20"
+    },
+    {
+      "path": "runs/2026-11-21-ps-review-join-publication-original.json",
+      "sha256": "b07d04aeb29223a038be208dbe7bbecbfd91e99f1a2feef256e7a87174d9157b"
+    },
+    {
+      "path": "runs/2026-11-21-ps-review-join-publication-correction.json",
+      "sha256": "36a9fa5d93a5976a830657ba292fa0e18fafac2f4cb1dc3df39bdaa6d5194232"
+    }
+  ],
+  "checks": []
+}
