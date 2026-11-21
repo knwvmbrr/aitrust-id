@@ -6,6 +6,8 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import java.io.FileDescriptor;
+import java.io.PrintWriter;
 
 /** CI-only synthetic sender. Never reads caller text, paths, URIs or targets. */
 public final class SenderActivity extends Activity {
@@ -35,11 +37,32 @@ public final class SenderActivity extends Activity {
         }
         return send;
     }
+    private int counter=0,lastSelection=-1;
+    private String outcome="NONE",callback="NONE";
+    private synchronized void dispatch(Intent delivered,String from){
+        if(counter>=32){lastSelection=-1;outcome="LIMIT";return;}
+        counter++;lastSelection=-1;callback=from;outcome="START_REFUSED";
+        try{
+            int selection=delivered==null?-1:delivered.getIntExtra("selection",-1);
+            if(selection<0||selection>9)return;
+            lastSelection=selection;
+            startActivity(selected(selection));outcome="START_RETURNED";
+        }catch(RuntimeException unsupported){outcome="START_REFUSED";}
+        finally{setIntent(new Intent(Intent.ACTION_MAIN));}
+    }
     @Override public void onCreate(Bundle saved){
-        super.onCreate(null);
-        // Only an enumerated integer is read. Nothing from the incoming intent
-        // can replace a synthetic payload, recipient, URI or permission flags.
-        try{startActivity(selected(getIntent().getIntExtra("selection",-1)));}
-        finally{finish();}
+        super.onCreate(null);dispatch(getIntent(),"CREATE");
+    }
+    @Override protected void onNewIntent(Intent delivered){
+        super.onNewIntent(delivered);dispatch(delivered,"NEW_INTENT");
+    }
+    @Override public synchronized void dump(String prefix,FileDescriptor fd,PrintWriter writer,String[] args){
+        if(args==null||args.length!=1||!"synthetic-ingress-v1".equals(args[0])){
+            super.dump(prefix,fd,writer,args);return;
+        }
+        // Only code-owned enums and a bounded counter; never general Intent data.
+        writer.println(prefix+"AITRUST_SYNTHETIC_V1:{\"schema\":1,\"counter\":"+counter+
+            ",\"selection\":"+lastSelection+",\"outcome\":\""+outcome+"\",\"callback\":\""+callback+"\"}");
+        lastSelection=-1;outcome="NONE";callback="NONE";
     }
 }

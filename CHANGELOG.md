@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-092726-android-attested-synthetic-dispatch-365549be
+
+Recorded 2026-11-21T09:27:26.290318+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved the failed first synthetic ingress run and corrected the test-only sender to process fresh singleTask callbacks with exact monotonically advancing one-use dispatch receipts before checker UI assertions.
+- **Evidence.** Fourteen affected groups passed on existing Python3.12 and3.13, including realJDK fresh-callback and consumed-intent models; distinct review confirmed fixed privacy/schema/UID/DEX guards and stale-dispatch refusal before UI. [Change record](./runs/changes/2026-11-21-092726-android-attested-synthetic-dispatch-365549be.json).
+- **Not claimed.** Original cause is unestablished. Old nine passed but zero new pairs completed in the preserved failed producer. No product/defaultAPK/workflow change; START_RETURNED is not target receipt, so actual new refusal/recovery execution remains pending. No physical/human/accuracy/full requirement acceptance.
+
+
 ### 2026-11-21-091209-android-finite-malformed-intent-controls-d3580ce6
 
 Recorded 2026-11-21T09:12:09.891614+00:00 · Contributor: Codex · change

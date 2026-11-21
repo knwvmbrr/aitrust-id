@@ -1,0 +1,79 @@
+{
+  "format": "ai-trust-id-android-synthetic-dispatch-controls/v1",
+  "recorded_at": "2026-11-21T09:27:15.525268+00:00",
+  "pass": true,
+  "preserved_failed_producer": {
+    "path": "runs/2026-11-21-android-malformed-first-host-failed.json",
+    "sha256": "a41dc4510772ab0aecd564b666a14f2ba6808e7f477605cdb47d28f63c4c0d83",
+    "original_controls_passed": 9,
+    "new_completed_pairs": 0,
+    "stays_failed": true,
+    "sender_task_reuse_cause_not_proven": true,
+    "product_parser_defect_not_established": true
+  },
+  "current_affected_tests": [
+    {
+      "python": "3.12.14",
+      "groups": 14,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "python": "3.13.0",
+      "groups": 14,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    }
+  ],
+  "actual_preexisting_jdk": {
+    "version": "21.0.10",
+    "target_release": 8,
+    "fixed_synthetic_intents": 10,
+    "fresh_callback_intent_used_instead_of_stale_getIntent": true,
+    "incoming_selection_consumed_to_main": true,
+    "one_use_frame_cleared_after_export": true,
+    "stub_framework_not_android_execution": true
+  },
+  "inert_driver_controls": {
+    "stale_task_bring_to_front_model_refused_before_checker_assertion": true,
+    "fresh_sequence_counters": 19,
+    "exact_selection_and_returned_start_required_every_time": true,
+    "duplicate_unknown_private_boolean_numeric_or_missing_frame_refused": true,
+    "no_timeout_increase_or_retry": true
+  },
+  "invariants": {
+    "single_task_sender_only": true,
+    "no_product_or_default_apk_source_change": true,
+    "sender_descriptor_and_frame_excluded_from_default_dex": true,
+    "original_seven_configuration_two_and_wait_exact_source_guard_unchanged": true,
+    "uid_source_permission_build_caps_and_ui_assertions_preserved": true,
+    "new_ui_refusal_and_recovery_still_required": true,
+    "no_caller_text_uri_or_target_read_or_exported": true,
+    "fixed_counter_and_selection_only_not_private_ids": true,
+    "current_host_execution_pending": true,
+    "workflow_or_license_rules_changed": false
+  },
+  "sources": {
+    "scripts/verify-android-emulator.py": "3460a2d0c3cc3ca69838d41dab9d28f296f280fd97027249a1124476fff8250b",
+    "scripts/android-intent-controls.py": "30dfa5104578d584515f816387ff284766ec859ed20cc538027f1c453721b370",
+    "tests/android/intent-sender/AndroidManifest.xml": "e4451b9f502ab31b8e13a8686f565c3a883df51ad95c87cae463ea9f5435cc47",
+    "tests/android/intent-sender/SenderActivity.java": "01db8ae344f8986d220d2be79d897cf051574eb6843b41ad4efc28f29e9d3e81",
+    "tests/test_android_intent_controls.py": "207faad8e6e6df40bc85f3ff9231be72b6ecfff7d4651e066d048f1164732258",
+    "docs/android-malformed-intent-plan.md": "2b9dfe024c847c065f1205a48a27712a34f109a86baa92b9ff3c63fc7833409b",
+    "docs/android-share-developer.md": "cc7289402c48b29171971dbbfe2a705561afff63f5fe9b04599579d50421f319"
+  },
+  "distinct_review": {
+    "reviewer": "/root/web_camo",
+    "result": "CLEAR for one changed-source hosted experiment",
+    "all_frozen_hashes_checked": true,
+    "dispatch_handshake_groups_independently_passed": 2,
+    "python": "3.12.14",
+    "sdk_emulator_browser_download_or_jvm_executed": false
+  },
+  "physical_device_evidence": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false
+}

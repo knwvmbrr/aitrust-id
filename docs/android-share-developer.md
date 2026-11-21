@@ -270,3 +270,18 @@ is installed, no caller input is executed or uploaded, and no SDK/terms are
 installed or accepted locally. The fixture APK and disposable key use an owned
 private temporary directory and normal cleanup; a host cleanup failure remains
 a failure rather than a claim that private files were necessarily removed.
+
+
+The first sender candidate, run44888523549, passed the unchanged original nine
+but completed zero new pairs: missing-text refusal was not observed and the old
+valid marker remained. That failed report stays failed. It did not capture the
+sender callback, so it does not prove either malformed checker acceptance or a
+particular task-reuse cause. The corrected test-only sender remains singleTask,
+processes the fresh onNewIntent argument explicitly and consumes its incoming
+selection. Before every checker assertion, the driver requires the next exact
+bounded dispatch counter, requested selection and START_RETURNED from a one-use
+closed sender frame. The frame contains no arbitrary intent fields, text, URI,
+UID, task ID or paths and clears its pending enums after export. Stale/missing
+callback data remains a failed case. A returned start alone still cannot satisfy
+the checker refusal or fresh recovery assertions. Default checker/source and
+original nine control paths remain unchanged; new actual execution is pending.
