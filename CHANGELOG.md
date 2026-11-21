@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-043925-android-three-vm-study-result-2ce65627
+
+Recorded 2026-11-21T04:39:25.946547+00:00 · Contributor: Codex · change
+
+- **Changed.** Finish the predeclared three-VM Android characterization and retain every outcome with a strict failing aggregate.
+- **Evidence.** At immutable56b source, samples1 and3 execute all seven controls, while sample2 fails first receive on an owned Ready UI. All source guards/artifact hashes are verified; local aggregate replay is byte-identical and exits1. Exactly3 samples ran. [Change record](./runs/changes/2026-11-21-043925-android-three-vm-study-result-2ce65627.json).
+- **Not claimed.** Lifecycle metadata found no matching owned events and cannot prove absent callbacks or recreation. Root cause and startup reliability remain unknown; no fourth wave, runtime fix, Android software-task13, full N-014, physical/human/accuracy or original closure.
+
+
 ### 2026-11-21-042626-android-cold-start-study-predeclaration-66564139
 
 Recorded 2026-11-21T04:26:26.801880+00:00 · Contributor: Codex · change
