@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-222454-mt-choice-browser-practice-9f4165a0",
+  "recorded_at": "2026-11-21T22:24:54.039404+00:00",
+  "author": "Codex share_debugger MT worker",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a14fe9738e3799ed9c738a40b83ae76daacd66eb",
+  "changed": "Added a standalone optional local choice-wording practice page using the unchanged canonical additive and legacy method, private fresh workers and explicit selected-input identity.",
+  "proves": "Current Chromium and WebKit each match eleven complete native canonical records except disclosed runtime metadata and pass the actual practice, privacy, lifecycle, failure, reflow and accessibility controls.",
+  "limits": "Experimental standalone source only, not mounted or deployed; no MT verdict, independent accuracy, physical or human acceptance, full WASM source clearance or original requirement closure. Historical failed controls and WebKit picker failure are preserved.",
+  "scope_ids": [
+    "F-019b",
+    "T-MT"
+  ],
+  "files": {
+    "docs/mt-choice-browser-plan.md": "5be686f90df2e86572a7f59412f084bdd9a0cace32fba1f52680794308fcc9a5",
+    "docs/mt-choice-browser.md": "f59fc7b3d6826679bb8393836ef3393c5fc41854f06212043f772248af00cf79",
+    "runs/2026-11-21-mt-choice-browser-corrected.json": "a8def6238f1e1514587b4a36fd73eb0e1dd8d6a904b7f2e6f9df0b44dded4d93",
+    "runs/2026-11-21-mt-choice-browser-first-controls.json": "3376e0c2d5689fe53e911a6b7c7cfb54c035cb68f10904b7bc508fd5434e064a",
+    "runs/2026-11-21-mt-choice-browser-first.json": "315e64b4deb0c18b9fffa4ac07052a4431a8a3a86da22c611479442e0a6b8e54",
+    "runs/2026-11-21-mt-choice-browser-implementation.json": "901d8082f4b93325c564628cc4861c70e4b1fc7ad6899279430502d1a3a34d46",
+    "scripts/build-mt-choice-practice.py": "60d2183afbb3fe103de2fe85b35a1e0e45c1ff4fc1ed40db2b6143b567e2e178",
+    "scripts/mt-choice-browser-cases.py": "316d52c299e1fd1f158cf176a80e3e0a93ba241545e1364bff38eeb31c950df3",
+    "scripts/verify-mt-choice-browser.cjs": "c9b4d0741ed481ae140f8fa65faf4291258c80d4a781d4a2b3c1c17a4a628299",
+    "site/src/mt-choice-client.mjs": "2678f49fde27d3d9f24c9060639f30045d35760cf9e70b7014d78641cfc902d7",
+    "site/src/mt-choice-practice.css": "8481f625764fff821a58a3c4f5c05af8af46b665d353c4bd80d7de4d6c06f8e6",
+    "site/src/mt-choice-practice.html": "09940d30a4a699ad5de0c53e9db76a972d2096884e1111db04949f50905a8699",
+    "site/src/mt-choice-practice.mjs": "2c582282aa20f8c6dfe06f5541b3dcdd2305473f4d58d4ac537c3a1358446120",
+    "site/src/mt-choice-result.mjs": "20ab4c3efba74960f0a35275b285d0ff91eb1c5f95bcb12d9f2befe8d63aa2b2",
+    "site/src/mt-choice-worker.mjs": "b310f1f8ea3a319b0e6aa620efc5d4049660c499327f79e46a255b980220cd2e",
+    "tests/mt-choice-client.mjs": "4c21f04b62cc6477aecf06c0f34575b182a89f806f84760e8967e07ee6281ea3",
+    "tests/test_mt_choice_device.py": "a1a2d55630c0ac3102a33c16863435b9453713151750bd6897ab4ee257c4c17c",
+    "tools/mt_choice_device.py": "e71f7b125abd2084858a73cdb545c31c73b249336ed2dbded74e42575621a189"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-mt-choice-browser-corrected.json",
+      "sha256": "a8def6238f1e1514587b4a36fd73eb0e1dd8d6a904b7f2e6f9df0b44dded4d93"
+    },
+    {
+      "path": "runs/2026-11-21-mt-choice-browser-implementation.json",
+      "sha256": "901d8082f4b93325c564628cc4861c70e4b1fc7ad6899279430502d1a3a34d46"
+    },
+    {
+      "path": "runs/2026-11-21-mt-choice-browser-first.json",
+      "sha256": "315e64b4deb0c18b9fffa4ac07052a4431a8a3a86da22c611479442e0a6b8e54"
+    },
+    {
+      "path": "runs/2026-11-21-mt-choice-browser-first-controls.json",
+      "sha256": "3376e0c2d5689fe53e911a6b7c7cfb54c035cb68f10904b7bc508fd5434e064a"
+    }
+  ],
+  "checks": []
+}

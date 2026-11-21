@@ -1,0 +1,20 @@
+{
+  "format": "mt-choice-browser-first-controls/v1",
+  "captured_at": "2026-11-21T22:05:27.033652+00:00",
+  "pass": false,
+  "python_controls": "Collection refused before execution: missing whitespace in one test-only conditional expression.",
+  "node_controls": {
+    "pass": true,
+    "groups": 8,
+    "canonical_cases": 10,
+    "corrupt_records_refused": 10
+  },
+  "source_hashes": {
+    "tests/test_mt_choice_device.py": "807d37a4ccb83478e5d1c82202f9e290bb42b32f804596745417c2777cb7f950",
+    "tools/mt_choice_device.py": "e71f7b125abd2084858a73cdb545c31c73b249336ed2dbded74e42575621a189",
+    "site/src/mt-choice-result.mjs": "a3de0e1bb767424921b953b3c21f1713c7f054c2a55dc1d4444560752a3ac2e3",
+    "site/src/mt-choice-client.mjs": "2678f49fde27d3d9f24c9060639f30045d35760cf9e70b7014d78641cfc902d7"
+  },
+  "next_fix": "Correct the test syntax, execute its first real collection, and retain this failed attempt. No runtime method correction inferred.",
+  "independent_accuracy_evidence": false
+}

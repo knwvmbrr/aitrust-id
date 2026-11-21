@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-222454-mt-choice-browser-practice-9f4165a0
+
+Recorded 2026-11-21T22:24:54.039404+00:00 · Contributor: Codex share_debugger MT worker · change
+
+- **Changed.** Added a standalone optional local choice-wording practice page using the unchanged canonical additive and legacy method, private fresh workers and explicit selected-input identity.
+- **Evidence.** Current Chromium and WebKit each match eleven complete native canonical records except disclosed runtime metadata and pass the actual practice, privacy, lifecycle, failure, reflow and accessibility controls. [Change record](./runs/changes/2026-11-21-222454-mt-choice-browser-practice-9f4165a0.json).
+- **Not claimed.** Experimental standalone source only, not mounted or deployed; no MT verdict, independent accuracy, physical or human acceptance, full WASM source clearance or original requirement closure. Historical failed controls and WebKit picker failure are preserved.
+
+
 ### 2026-11-21-203332-mt-additive-peer-reviewed-source-ed902677
 
 Recorded 2026-11-21T20:33:32.240715+00:00 · Contributor: Codex /root integration · change
