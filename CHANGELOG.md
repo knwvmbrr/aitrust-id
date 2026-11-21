@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-060609-web-js-independent-source-review-68e89229
+
+Recorded 2026-11-21T06:06:09.467431+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Record independent read-only review of corrected website notice packaging and its actual carried artifact, preserving the allocation finding and narrow refusal replays.
+- **Evidence.** Reviewed frozen producer238f952/current56214c9; cap1000 stops before notice reads and append remains521bytes, repeated logical notice copies are charged. Actual source-derived built consumer and35 notice spans match;34 archive packages plus1explicit unverified supplement; SPDX NOASSERTION and PS policy independence remain. [Change record](./runs/changes/2026-11-21-060609-web-js-independent-source-review-68e89229.json).
+- **Not claimed.** No producer edits, broad/archive/browser/build reruns, full dependency graph/source offers, exact2.3.8 correspondence, legal clearance, release approval or F057/X02 closure. Prior PS artifact execution remains historical; reviewer freshly checked policy only.
+
+
 ### 2026-11-21-054909-mt-mobile-result-formatting-6f4bc998
 
 Recorded 2026-11-21T05:49:09.459844+00:00 · Contributor: Codex / web_camo · change

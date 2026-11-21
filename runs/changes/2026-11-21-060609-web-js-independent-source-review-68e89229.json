@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-060609-web-js-independent-source-review-68e89229",
+  "recorded_at": "2026-11-21T06:06:09.467431+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "220c2edcb2cde0a0603842a32a446bac8f6d157b",
+  "changed": "Record independent read-only review of corrected website notice packaging and its actual carried artifact, preserving the allocation finding and narrow refusal replays.",
+  "proves": "Reviewed frozen producer238f952/current56214c9; cap1000 stops before notice reads and append remains521bytes, repeated logical notice copies are charged. Actual source-derived built consumer and35 notice spans match;34 archive packages plus1explicit unverified supplement; SPDX NOASSERTION and PS policy independence remain.",
+  "limits": "No producer edits, broad/archive/browser/build reruns, full dependency graph/source offers, exact2.3.8 correspondence, legal clearance, release approval or F057/X02 closure. Prior PS artifact execution remains historical; reviewer freshly checked policy only.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "runs/2026-11-21-web-js-independent-review.json": "4592352a1043a749ae44a0f920dc19d169a44548b319d3b2d575f9826f9cc755"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-web-js-independent-review.json",
+      "sha256": "4592352a1043a749ae44a0f920dc19d169a44548b319d3b2d575f9826f9cc755"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-21T06:06:09.598708+00:00"
+    }
+  ]
+}
