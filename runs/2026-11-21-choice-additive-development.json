@@ -1,0 +1,63 @@
+{
+  "format": "choice-additive-development/v1",
+  "captured_at": "2026-11-21T20:15:40.835920+00:00",
+  "pass": true,
+  "attribution": "Codex authored engineering controls",
+  "profile": "caller-bound-choice-framing-observation/1.3.0",
+  "source_base": "abe7d64be77b03d19f51143f774fa51b59717e59",
+  "focused_executions": [
+    {
+      "stage": "first_parser_cli_and_consumer_increment",
+      "passed": 117,
+      "failures": 0,
+      "elapsed_seconds": 0.69,
+      "scope": [
+        "tests/test_choice_additive.py (initial29cases)",
+        "tests/test_choice_framing.py",
+        "tests/test_choice_framing_cli.py",
+        "tests/test_mt_workflow.py::test_real_choice_packet_binds_same_frozen_subject_and_reference",
+        "tests/test_mt_workflow.py::test_missing_choice_context_is_partial_not_a_finding_or_global_failure"
+      ],
+      "later_changes": [
+        "Finite optional additive demo preparer",
+        "Four additional additive/preparer controls and guide copy"
+      ],
+      "full_current_source_suite_claimed": false
+    },
+    {
+      "stage": "final_affected_preparer_and_mixed_controls",
+      "passed": 5,
+      "failures": 0,
+      "elapsed_seconds": 0.44,
+      "scope": [
+        "test_mixed_additive_and_legacy_counts_and_brief_stay_separate",
+        "test_actual_preparer_fixed_examples_are_complete_private_and_usable (binary/additive)",
+        "test_preparer_unknown_example_uses_fixed_private_error",
+        "existing test_demo_is_private_valid_synthetic_and_exclusive"
+      ],
+      "source_hashes": {
+        "scripts/prepare-choice-demo.py": "bd4a32a709b9e0977c9c2a2a2ed2922c404164373e2c965ca35e31f924db8cde",
+        "tests/test_choice_additive.py": "c8635ff3a2df04df43ab97655360de8f27548e1ea004f04071ce4dfd473cc0bd",
+        "tests/test_choice_framing_cli.py": "2618d847830bf059a1ca44746b92880f4a89a653caac87f16a27124b37510f82"
+      }
+    }
+  ],
+  "actual_final_source_execution": {
+    "path": "runs/2026-11-21-choice-additive-actual-cli.json",
+    "sha256": "6d430e4adfd5bc2b361e6a6ad4bda55d35f3913db84fe7d75027564be04a710d",
+    "actual_cli_invocations": 17,
+    "source_stable": true
+  },
+  "requirement_status": {
+    "F-019b_closed": false,
+    "T-MT_closed": false,
+    "remaining_original_F019b_acceptance": "Full contextual/grammatical and additional-alternative validation, representative independent held-out labeling, accepted MT mapping, selected integration and required human operation.",
+    "scope_or_percentages_changed": false
+  },
+  "limits": [
+    "Counts are phased authored executions, not summed distinct tests or independent accuracy.",
+    "Actual final17commands bind18current source/test/guide inputs; earlier1.2baseline and phased controls remain distinct evidence.",
+    "No current Linux, browser, phone, human, intent, truth, feasible-alternative or releasedMT claim.",
+    "An additive construction always has no false-dilemma signal proposal; existing personal methods remain independent."
+  ]
+}

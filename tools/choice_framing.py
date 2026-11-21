@@ -43,26 +43,42 @@ def observe(original,record,context):
         kind=leading.group(1).casefold() if leading else None
         expected={'either':'or','only':'or','neither':'nor','between':'and'}.get(kind)
         connector=re.fullmatch(r'[\s,]*'+expected+r'[\s,:]*',gap,re.I) if expected else None
-        if leading is None or connector is None:
-            unmatched.append([left,right]);continue
-        trailing=re.search(r'\b'+expected+r'\b',gap,re.I)
-        construction=kind+'_'+expected
-        markers=[[left+leading.start(),left+leading.end(1)],
-                 [first[1]+trailing.start(),first[1]+trailing.end()]]
+        # Additive correlative wording does not present exclusive alternatives.
+        # lower(), rather than casefold(), preserves refusal of long-s and other
+        # Unicode case confusables accepted by Python's re.I matching.
+        additive=re.search(r'\b(not\s+only)\s+$',prefix,re.I)
+        additive_connector=re.fullmatch(r'[\s,]+(but\s+also)[\s,:]+',gap,re.I)
+        is_additive=bool(additive and additive_connector
+            and additive.group(1).lower().split()==['not','only']
+            and additive_connector.group(1).lower().split()==['but','also'])
+        if is_additive:
+            kind='additive';construction='not_only_but_also'
+            markers=[[left+additive.start(1),left+additive.end(1)],
+                     [first[1]+additive_connector.start(1),first[1]+additive_connector.end(1)]]
+        else:
+            if leading is None or connector is None:
+                unmatched.append([left,right]);continue
+            trailing=re.search(r'\b'+expected+r'\b',gap,re.I)
+            construction=kind+'_'+expected
+            markers=[[left+leading.start(),left+leading.end(1)],
+                     [first[1]+trailing.start(),first[1]+trailing.end()]]
         negation=[[left+m.start(),left+m.end()] for m in
                   re.finditer(r'\b(?:not|neither|nor)\b',subject[left:right],re.I)
                   if m.group().casefold() in ('not','neither','nor')]
         # "Between" also introduces continuous ranges and ordinary preferences.
         # The new literal form never nominates a false-dilemma signal.
-        rows.append({'proposed_signal':None if negation or kind=='between' else 'sig.false_dilemma.v1','frame_span':[left,right],
-            'choice_spans':[list(first),list(second)],'binary_marker_spans':markers,
+        row={'proposed_signal':None if negation or kind in ('between','additive') else 'sig.false_dilemma.v1','frame_span':[left,right],
+            'choice_spans':[list(first),list(second)],'binary_marker_spans':[] if is_additive else markers,
             'construction':construction,'negation_marker_spans':negation,
             'negation_scope_resolved':False,
             'additional_reference':{**ref,'normalized_source_sha256':source_hash},
-            'meaning':'caller_selected_two_mentioned_choices_with_caller_nominated_additional_passage',
+            'meaning':('caller_selected_additive_mentions_not_exclusive_alternatives_with_caller_nominated_passage'
+                if is_additive else 'caller_selected_two_mentioned_choices_with_caller_nominated_additional_passage'),
             'additional_option_verified':False,'exhaustiveness_established':False,
-            'quoted_or_recommended_resolved':False,'manipulation_established':False})
-    return {'profile':'caller-bound-choice-framing-observation/1.2.0',
+            'quoted_or_recommended_resolved':False,'manipulation_established':False}
+        if is_additive:row['additive_marker_spans']=markers
+        rows.append(row)
+    return {'profile':'caller-bound-choice-framing-observation/1.3.0',
         'state':'OBSERVATIONS' if rows else 'NO_SUPPORTED_PATTERN','language':'en',
         'subject_sha256':digest(subject),'manifest_sha256':record['manifest_sha256'],
         'method_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

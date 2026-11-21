@@ -18,10 +18,13 @@ class Parser(argparse.ArgumentParser):
 
 def summary(result,saved):
     count=len(result['observations'])
+    additive=sum(row['construction']=='not_only_but_also' for row in result['observations'])
     return {'profile':result['profile'],'state':result['state'],
         'selected_frames_checked':count+len(result['unmatched_selected_frames']),
-        'supported_binary_patterns':count,
-        'result':('Selected wording mentions two choices. The extra passage is your nominated context, not a verified alternative.'
+        'supported_binary_patterns':count-additive,'supported_additive_patterns':additive,
+        'result':('Selected wording additively mentions two items, not exclusive alternatives. The extra passage is your nominated context, not a verified alternative.'
+            if additive==count and count else 'Selected wording includes additive mentions and two-choice markers. These do not establish exclusive alternatives or manipulation.'
+            if additive else 'Selected wording mentions two choices. The extra passage is your nominated context, not a verified alternative.'
             if count else 'No supported paired choice markers matched your selected frames. This does not clear the wording or judge its intent.'),
         'detailed_output_saved':saved,'additional_options_verified':False,
         'manipulation_established':False,'truth_established':False,

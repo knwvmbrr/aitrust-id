@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-201555-distinguish-additive-choice-wording-539df325",
+  "recorded_at": "2026-11-21T20:15:55.016631+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "abe7d64be77b03d19f51143f774fa51b59717e59",
+  "changed": "Added literal not-only/but-also additive evidence with distinct markers, zero additive-only binary count and no false-dilemma proposal; complete private example and independent choice-worker consumer use version1.3.",
+  "proves": "Actual17 isolated-stdlib macOS CLI calls pass with current18source bindings, private exports, stale/no-overwrite refusal and full legacy record comparisons apart from declared version/source identity. Affected development stages passed117 then5 controls with their source-stage limits recorded.",
+  "limits": "Authored finite English grammar/software evidence, not semantic intent, feasible alternatives, independent accuracy, current Linux/browser/phone or human acceptance. F-019b and T-MT full original acceptance remain open; no scope, state, production tag mapping or publication changed.",
+  "scope_ids": [
+    "F-019b",
+    "T-MT"
+  ],
+  "files": {
+    "docs/choice-framing.md": "9369caad234d413770c6a51532524543a1b1889f2320ed7ca68a95e06c48390f",
+    "docs/choice-additive-plan.md": "b10fc0d20210c83e337e6e2a9cd4058ea53236ac4d54a143ee82e790a5ed1343",
+    "scripts/check-choice-framing.py": "4b397aa383765119e16676ecf9e84d3695e26a718e3b2ac6072ff480d456982b",
+    "scripts/mt-evidence-worker.py": "b48786fbca7724e99df55d53bef319147f72a8646a9034db225f56bc6cdd01ef",
+    "scripts/prepare-choice-demo.py": "bd4a32a709b9e0977c9c2a2a2ed2922c404164373e2c965ca35e31f924db8cde",
+    "tests/test_choice_framing.py": "ea441907b0a8de0e0473d727c5f165f4e36f4cc396b2cd46f94dbc58dd247234",
+    "tests/test_choice_additive.py": "c8635ff3a2df04df43ab97655360de8f27548e1ea004f04071ce4dfd473cc0bd",
+    "tools/choice_framing.py": "105f75d7518bf1acdc77f628b1da0dfefe0850d7b468adcd8f4332df17026da4",
+    "tools/mt_workflow.py": "73dbe9b95821e7d21931d37f5557b39ef225fd2821156bfef4aa3e7acdecaf71",
+    "runs/2026-11-21-choice-additive-actual-cli.json": "6d430e4adfd5bc2b361e6a6ad4bda55d35f3913db84fe7d75027564be04a710d",
+    "runs/2026-11-21-choice-additive-baseline.json": "892f52be8fedb6a97896f66b707c8df65eeb70a7b624870519f6a035bf9922d1",
+    "runs/2026-11-21-choice-additive-development.json": "3ccb347aec1d34519be79522bdbcae05941e38e2c3b9e6c986f19dff61b4c265"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-choice-additive-actual-cli.json",
+      "sha256": "6d430e4adfd5bc2b361e6a6ad4bda55d35f3913db84fe7d75027564be04a710d"
+    },
+    {
+      "path": "runs/2026-11-21-choice-additive-baseline.json",
+      "sha256": "892f52be8fedb6a97896f66b707c8df65eeb70a7b624870519f6a035bf9922d1"
+    },
+    {
+      "path": "runs/2026-11-21-choice-additive-development.json",
+      "sha256": "3ccb347aec1d34519be79522bdbcae05941e38e2c3b9e6c986f19dff61b4c265"
+    }
+  ],
+  "checks": []
+}

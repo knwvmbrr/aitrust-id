@@ -40,7 +40,7 @@ def execute(request):
         method = result['profile']
         for item in result['observations']:
             ref = item['additional_reference']
-            rows.append({'subject_spans': item['choice_spans'] + item['binary_marker_spans'],
+            rows.append({'subject_spans': item['choice_spans'] + item.get('additive_marker_spans', item['binary_marker_spans']),
                          'context_span': item['frame_span'], 'construction': item['construction'],
                          'reference': {'sha256': ref['document_sha256'],
                                        'normalized_sha256': ref['normalized_source_sha256'],

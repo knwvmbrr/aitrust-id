@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-201555-distinguish-additive-choice-wording-539df325
+
+Recorded 2026-11-21T20:15:55.016631+00:00 · Contributor: Codex · change
+
+- **Changed.** Added literal not-only/but-also additive evidence with distinct markers, zero additive-only binary count and no false-dilemma proposal; complete private example and independent choice-worker consumer use version1.3.
+- **Evidence.** Actual17 isolated-stdlib macOS CLI calls pass with current18source bindings, private exports, stale/no-overwrite refusal and full legacy record comparisons apart from declared version/source identity. Affected development stages passed117 then5 controls with their source-stage limits recorded. [Change record](./runs/changes/2026-11-21-201555-distinguish-additive-choice-wording-539df325.json).
+- **Not claimed.** Authored finite English grammar/software evidence, not semantic intent, feasible alternatives, independent accuracy, current Linux/browser/phone or human acceptance. F-019b and T-MT full original acceptance remain open; no scope, state, production tag mapping or publication changed.
+
+
 ### 2026-11-21-165656-freeze-passing-api-core-delivery-55894707
 
 Recorded 2026-11-21T16:56:56.162616+00:00 · Contributor: Codex /root · change

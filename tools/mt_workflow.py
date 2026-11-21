@@ -114,7 +114,7 @@ def validate(row, kind, text, sources, *, replay_timeout=DEADLINE):
         raise ValueError('Invalid worker contract')
     methods = {'urgency': 'english-context-observations/1.1.0',
                'authority': 'english-context-observations/1.0.0',
-               'choice': 'caller-bound-choice-framing-observation/1.2.0'}
+               'choice': 'caller-bound-choice-framing-observation/1.3.0'}
     if row['method'] != methods[kind]:
         raise ValueError('Unexpected method')
     rows = row['observations']
@@ -134,7 +134,7 @@ def validate(row, kind, text, sources, *, replay_timeout=DEADLINE):
             raise ValueError('Invalid observation structure')
         if kind == 'choice':
             ref = item['reference']
-            if (item['construction'] not in ('either_or', 'only_or', 'neither_nor', 'between_and')
+            if (item['construction'] not in ('either_or', 'only_or', 'neither_nor', 'between_and', 'not_only_but_also')
                     or not isinstance(ref, dict) or set(ref) != {'sha256', 'normalized_sha256', 'span'}
                     or not valid_hash(ref['sha256']) or not valid_hash(ref['normalized_sha256'])
                     or not valid_span(ref['span'], 200000) or ref['span'][1] - ref['span'][0] > 2000):
@@ -212,4 +212,12 @@ def brief(row):
                 + str(counts['outside_supported_quotes_without_marker']) + ' outside phrase(s) without a local marker; '
                 + str(counts['outside_supported_quotes_with_marker']) + ' outside phrase(s) with a marker. '
                 'Placement does not establish endorsement; sources are not verified.')
+    if row['component'] == 'choice' and row['state'] == 'OBSERVATIONS':
+        additive=sum(item['construction']=='not_only_but_also' for item in row['observations'])
+        if additive==len(row['observations']):
+            return ('Choice: your selection additively mentions two items, not exclusive alternatives. '
+                    'Your extra passage is unverified context.')
+        if additive:
+            return ('Choice: your selections include additive mentions and two-choice markers. '
+                    'These do not establish exclusive alternatives or manipulation; your extra passage is unverified context.')
     return row['component'].capitalize() + ': ' + MESSAGES[row['component']][row['state'] != 'OBSERVATIONS']

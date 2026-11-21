@@ -87,7 +87,7 @@ def test_all_context_validates_before_any_output():
 def test_distinct_marker_constructions_keep_exact_locations_without_intent(text,construction,markers,negation):
     record,context=packet(text)
     result=module.observe(text,record,context);row=result['observations'][0]
-    assert result['profile']=='caller-bound-choice-framing-observation/1.2.0'
+    assert result['profile']=='caller-bound-choice-framing-observation/1.3.0'
     assert row['construction']==construction
     assert [text[a:b] for a,b in row['binary_marker_spans']]==markers
     assert [text[a:b] for a,b in row['negation_marker_spans']]==negation

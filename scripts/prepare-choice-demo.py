@@ -15,15 +15,21 @@ class Parser(argparse.ArgumentParser):
 
 def main(argv=None):
     parser=Parser(description=__doc__);parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--example',choices=['binary','additive'],default='binary',
+        help='Choose a fixed invented example; no caller text is read.')
     args=parser.parse_args(argv)
     try:
         subject='Either agree or oppose.';reference='You can remain undecided.'
+        choices=[[7,12],[16,22]]
+        if args.example=='additive':
+            subject='Not only tea but also coffee.';reference='Water is also listed.'
+            choices=[[subject.index(word),subject.index(word)+len(word)]for word in ('tea','coffee')]
         doc={'id':'reference','text':reference,'sha256':corpus.sha(reference.encode())}
         content={'format':corpus.VERSION,'documents':[doc]}
         record={**content,'manifest_sha256':corpus.sha(corpus.encoded(content))}
         context={'format':'choice-frame-context/v1','language':'en','subject_sha256':digest(subject),
             'manifest_sha256':record['manifest_sha256'],'frames':[{'span':[0,len(subject)],
-            'choices':[[7,12],[16,22]],'additional_reference':{'document_id':'reference',
+            'choices':choices,'additional_reference':{'document_id':'reference',
             'document_sha256':doc['sha256'],'source_span':[0,len(reference)]}}]}
         observe(subject,record,context)
         create(args.output,ROOT,{'subject.txt':subject.encode(),'corpus.json':corpus.encoded(record),

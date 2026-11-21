@@ -28,9 +28,35 @@ python3 scripts/check-choice-framing.py --packet "$practice/demo"
 
 The result means: **the selected wording mentions two choices; the extra passage is nominated context, not a verified alternative.** The practice example is deliberately simple. Success demonstrates this command path, not its real-world accuracy.
 
+## Try additive wording without calling it an exclusive choice
+
+Create a separate invented menu example, then inspect it:
+
+```sh
+python3 scripts/prepare-choice-demo.py --example additive --output "$practice/additive"
+python3 scripts/check-choice-framing.py --packet "$practice/additive"
+```
+
+The result reports `supported_additive_patterns: 1` and
+`supported_binary_patterns: 0`. Its brief says the items are additively mentioned,
+not exclusive alternatives. No false-dilemma signal is nominated for this form.
+It does not decide the writer's intent or verify the extra passage.
+
+The same packet works in the existing separately supervised MT workflow:
+
+```sh
+python3 scripts/check-mt-evidence.py --language en --check choice \
+  --choice-packet "$practice/additive" < "$practice/additive/subject.txt"
+```
+
+A failed choice worker stays Unavailable; other selected MT components remain
+separate. This new profile has actual authored macOS CLI controls; historical
+Mac/Linux executions of version1.2.0 do not establish current Linux execution.
+The phone-browser wording preview does not consume this choice component.
+
 ## See the exact locations
 
-Add `--details "$practice/details"` to the check command. The new private folder contains `choice-observations.json`. It records the selected frame, two choice locations, paired markers, construction name, literal negation locations, nominated reference locations, source fingerprints, method fingerprint and actual Python/Unicode version. It does not include the source text. Fingerprints and locations can still reveal or link information; keep the result private. Existing folders are never overwritten.
+Add `--details "$practice/details"` to the check command. The new private folder contains `choice-observations.json`. It records the selected frame, two choice locations, paired markers, construction name, literal negation locations, additive marker locations when applicable, nominated reference locations, source fingerprints, method fingerprint and actual Python/Unicode version. It does not include the source text. Fingerprints and locations can still reveal or link information; keep the result private. Existing folders are never overwritten.
 
 The short console result leaves out text, fingerprints, raw locations and runtime details. No result is automatically stored on our server, shared, enrolled or used for training. Deleting the practice folder removes its local inputs and any deliberately saved results. There is no background service to uninstall.
 
@@ -44,7 +70,9 @@ The observer checks at most 16 ordered frames in 8,000 subject characters. A fra
 
 ## What remains to validate
 
-The caller-selected English forms `either A or B`, `only A or B`, `neither A nor B`, and `between A and B` are supported. Research profile 1.2.0 keeps the same bound v1 input context. Details distinguish the constructions and record literal `not`, `neither` and `nor` locations. Negated selections carry no proposed false-dilemma signal. The new `between … and …` form also always carries no proposed signal: it can describe an ordinary preference or a continuous range, not just two discrete options. The tool records the spans you selected; it does not resolve that meaning.
+The caller-selected English forms `either A or B`, `only A or B`, `neither A nor B`, and `between A and B` are supported. Research profile 1.3.0 adds the distinct `not only A but also B` additive form and keeps the same bound v1 input context. Details distinguish the constructions and record literal `not`, `neither` and `nor` locations. Negated selections carry no proposed false-dilemma signal. The new `between … and …` form also always carries no proposed signal: it can describe an ordinary preference or a continuous range, not just two discrete options. The tool records the spans you selected; it does not resolve that meaning.
+
+The additive form requires the complete literal `not only` and `but also` pair, with whitespace before the first selected item and whitespace/comma separators around the connector (a trailing colon is also supported). Select items without surrounding separators. Its `binary_marker_spans` is empty, its separate `additive_marker_spans` has the two exact paired markers, and its `proposed_signal` is always null. Incomplete or embedded-word pairs and Unicode case confusables are unsupported. The four prior constructions retain their record fields and meanings; source/profile identity changes to1.3.0. Old receipts remain historical, not current-source acceptance.
 
 General negation scope, other exclusive wording, automatic selection, feasibility, source freshness, quotation/use context and independent error measurement remain open. Urgent safety advice, quoted examples, ordinary choices and numeric ranges are retained as controls, without a manipulation verdict. The older unnegated forms retain their research proposal for `sig.false_dilemma.v1`; no tag mapping is accepted or activated.
 
