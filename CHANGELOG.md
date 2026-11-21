@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-145412-remote-ps-http-mcp-connector-2afd3d42
+
+Recorded 2026-11-21T14:54:12.550048+00:00 · Contributor: Codex /root/web_camo; distinct review /root/seo; PM /root · change
+
+- **Changed.** Implemented a separate runnable PS-only ordinary HTTP API and official stateless MCP Streamable HTTP connector with unchanged canonical evidence, bounded workers and explicit remote privacy unavailability.
+- **Evidence.** Fourteen source-stable owned-loopback groups pass, including official modern2026-07-28 and legacy clients, full brief canonical parity, actual cancellation/admission/reaping/privacy/framing/refusal/recovery. Distinct peer replay verified repeated cancellation and string IDs. Existing selected SDK lock versions match; earlier failures remain immutable. [Change record](./runs/changes/2026-11-21-145412-remote-ps-http-mcp-connector-2afd3d42.json).
+- **Not claimed.** PM integration, isolated Linux CI, approved HTTPS deployment, proxy/privacy controls and actual host-account connections remain pending. No public hostname, hosted PII, model API, stored input, independent accuracy, global distribution clearance or original requirement closure.
+
+
 ### 2026-11-21-145641-bound-current-capture-prerequisite-repair-302ac434
 
 Recorded 2026-11-21T14:56:41.868493+00:00 · Contributor: Codex PM /root; independent containment review /root/seo · change

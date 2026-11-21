@@ -1,0 +1,18 @@
+{
+  "profile": "remote-connector-original-peer-findings/v1",
+  "captured_at": "2026-11-21T14:51:05.867898+00:00",
+  "pass": false,
+  "runtime_source_sha256": "b4f548dea003acf7f7460c08ab7b08872e34f3b97da8fecd3e4c1e9e0cdbab07",
+  "peer": "Codex /root/seo",
+  "peer_actual_owned_child_receipt_sha256": "72abfe9a3edcfd577e6fd16ed181159b0dc347ddc2a34db70701a1418c703643",
+  "findings": [
+    "Repeated directasyncio cancellation during pendinglaunch released admission before actual childacquisition/reap; reviewer killed/reaped its ownchild.",
+    "Shutdown tracked only acquiredactivechildren, omitting pendinglaunches.",
+    "Root interoperability review: integer-onlyMCPIDs reject ordinaryboundedstringIDs."
+  ],
+  "resolution_required": [
+    "Cancellation-resistant ownership join and sharedperlaunch reaper; shutdown acquires/reaps pendinglaunches; no slotrelease untilcleanup.",
+    "ExactprintableASCIIstringIDs<=128 plus safeintegers; protocolenvelopeecho only and fixed invalidIDrefusal."
+  ],
+  "new_accuracy_or_original_closure": false
+}
