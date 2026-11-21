@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-151823-remote-connector-direct-linux-proof-a42c214e
+
+Recorded 2026-11-21T15:18:23.315790+00:00 · Contributor: Codex MT/API engineer · change
+
+- **Changed.** Retained final direct-worker Linux execution, cleanup and distinct reviews for the optional remote connector.
+- **Evidence.** An exact tracked-source archive ran all 14 official-client and owned-worker groups on Python 3.13 Linux with all 30 locked versions; the private workspace was removed with zero owned processes and prior staging healthy. [Change record](./runs/changes/2026-11-21-151823-remote-connector-direct-linux-proof-a42c214e.json).
+- **Not claimed.** No public HTTPS deployment, account connection, independent detector accuracy, dependency clearance or original requirement completion; discarded inner-log canary checks remain author-observed.
+
+
 ### 2026-11-21-151107-remote-direct-canonical-worker-ownership-cb37ed73
 
 Recorded 2026-11-21T15:11:07.139257+00:00 · Contributor: Codex /root/web_camo; independent review /root/seo; PM /root · change
