@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-091209-android-finite-malformed-intent-controls-d3580ce6",
+  "recorded_at": "2026-11-21T09:12:09.891614+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
+  "changed": "Added a separate zero-permission fixed synthetic sender and finite malformed Share ingress/refusal plus fresh valid recovery controls after the unchanged original nine Android controls.",
+  "proves": "Twelve affected groups passed on existing Python3.12 and3.13, with actual existingJDK fixed Intent construction and distinct source review; original control/wait source unchanged, private diagnostics and default-APK sender exclusion fail closed.",
+  "limits": "Hosted Android transport/runtime is pending; JVM fixtures and inert driver tests are not Android framework evidence. No default checker or workflow changes, local SDK install, new terms, physical/human acceptance, independent accuracy or full original requirement closure.",
+  "scope_ids": [
+    "N-014"
+  ],
+  "files": {
+    "scripts/verify-android-emulator.py": "2ad588de8dc8e6e402014fa6ad928799b9f84dfb7f1bb16d5a626097044a1119",
+    "scripts/android-intent-controls.py": "2df966e2a77ed859d78708480555d9226e4c50a78d34f4dce2636966f0df3a6c",
+    "tests/android/intent-sender/AndroidManifest.xml": "d3da94675e71314891cb2ff90b0e1d51ff0fa40df048eb2a7ee44df9b591f988",
+    "tests/android/intent-sender/SenderActivity.java": "012bd2fb8f39d411f844cf57f193ae63a958628e011cf6fbc75910b03e45e7bb",
+    "tests/test_android_intent_controls.py": "2240d74bb46b6d4b7c9f825a11cf475aa61bd9a4a3738432c6e73cbfbc5eaf39",
+    "docs/android-malformed-intent-plan.md": "e331d73e66cd831fc1fa3bff278d9f0d37b86b82710b17048f244796bffa20a0",
+    "docs/android-share-developer.md": "0b3f0b9f6efd368ff34e788796241367db17a26e4e8a634c97e3da8f1a06c637",
+    "runs/2026-11-21-android-malformed-intent-controls.json": "209b91101847e0bb6825aa39e75fd058ffe21324a7e5867013a6d91a133714a3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-android-malformed-intent-controls.json",
+      "sha256": "209b91101847e0bb6825aa39e75fd058ffe21324a7e5867013a6d91a133714a3"
+    }
+  ],
+  "checks": []
+}

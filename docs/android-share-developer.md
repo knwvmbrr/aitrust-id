@@ -233,3 +233,40 @@ startup paths, external sending-app/chooser compatibility, physical devices,
 TalkBack or outside-human acceptance, independent detector accuracy, Play release
 readiness, or a full original requirement closure. No original scope percentage
 is changed by this record.
+
+
+## Finite synthetic external-UID ingress controls
+
+The existing original seven and configuration two remain separate, unchanged
+controls. With `--configuration-controls`, the verifier now subsequently builds a
+**separate synthetic sender APK** using only the existing SDK/JDK, signs that
+fixture with its own disposable CI key and installs it on the owned emulator.
+No sender class, manifest, asset or probe is added to the default checker APK.
+Both apps have zero requested permissions, and their installed UIDs must differ.
+
+The sender accepts only a fixed integer selection, never caller text, URI,
+recipient or code. Nine hard-coded invalid forms cover missing/wrong-typed text,
+SEND_MULTIPLE, stream/data URI, URI/multiple-item ClipData, over-limit text and
+unpaired UTF16. Each must produce the owned unsupported-input message, empty or
+exact-hint editor, disabled Check and no result. A fresh exact synthetic valid
+Share is required after every refusal. A stale refusal, old marker, arbitrary
+editor hint or merely successful shell return cannot count as a pass.
+
+New results live in the separate `intent_controls` object. Only completed
+invalid/recovery pairs are counted; fixed diagnostics and closed boolean flags
+replace raw errors, app dumps, payload text, URIs, private paths and UID numbers.
+The existing40-second per-state UI deadline and original nine acceptance paths
+are unchanged. These controls run on ordinary PR/push default-APK jobs because
+that existing path enables configuration controls; no workflow or SDK/license
+rules change. Sender source/DEX/permission drift, equal UID, wrong orientation,
+build/install failures or missing UI assertions fail this extra suite and cannot
+turn it into a zero-findings result. Runtime evidence remains pending until an
+actual source-bound hosted report records execution of all nine new pairs.
+
+Explicit component addressing tests exported Android intent/Parcelable ingress.
+It does not test real third-party chooser discovery, every sending app, physical
+phones, TalkBack, independent accuracy or full N-014 acceptance. No URI provider
+is installed, no caller input is executed or uploaded, and no SDK/terms are
+installed or accepted locally. The fixture APK and disposable key use an owned
+private temporary directory and normal cleanup; a host cleanup failure remains
+a failure rather than a claim that private files were necessarily removed.

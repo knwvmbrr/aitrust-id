@@ -1,0 +1,112 @@
+{
+  "format": "ai-trust-id-android-malformed-intent-controls/v1",
+  "recorded_at": "2026-11-21T09:11:56.508957+00:00",
+  "base_commit": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
+  "pass": true,
+  "current_affected_tests": [
+    {
+      "python": "3.12.14",
+      "groups": 12,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "python": "3.13.0",
+      "groups": 12,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    }
+  ],
+  "actual_preexisting_jdk": {
+    "version": "21.0.10",
+    "release_target": 8,
+    "fixed_sender_intent_constructors": 10,
+    "lifecycle_and_constructor_models_not_android_execution": true,
+    "install_or_download": false
+  },
+  "prior_adjacent_execution": {
+    "python": "3.13.0",
+    "tests": 100,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "log_sha256": "573814e114eb82957970d49d35165ad120c24213fa04157907d58697d64031cc",
+    "test_source_before_portability_fix": "729dd496665821c4814868635dacbd2d768d843ad0ea1fa3dbbb22b433150320",
+    "other_six_sources_unchanged": true
+  },
+  "preserved_before_counterexample": {
+    "kind": "interpreter-specific ast.dump optional-empty-field formatting",
+    "python": "3.12.14",
+    "actual_failed_guard": true,
+    "test_sha256": "729dd496665821c4814868635dacbd2d768d843ad0ea1fa3dbbb22b433150320",
+    "log_sha256": "d716fb73fdff59306cb1fe86e993461c5a853714276720f0c0c77547f940681b",
+    "correction": "Strict source-segment hashes for original control functions; passes both interpreters without rebaselining one interpreter."
+  },
+  "scope": {
+    "new_invalid_forms": 9,
+    "each_requires_fresh_valid_recovery": true,
+    "original_seven_plus_configuration_two_unchanged": true,
+    "original_wait_source_unchanged": true,
+    "new_suite_after_original_nine": true,
+    "existing_configuration_true_path_used": true,
+    "workflow_changed": false,
+    "default_checker_source_or_assets_changed": false,
+    "synthetic_sender_separate_apk": true,
+    "sender_permission_count": 0,
+    "distinct_installed_uid_required": true,
+    "default_checker_dex_excludes_sender_required": true,
+    "hosted_execution_pending": true,
+    "new_focused_tests_registered_in_existing_hosted_workflow": false
+  },
+  "negative_controls": [
+    "dropped invalid send",
+    "dropped recovery",
+    "retained old text",
+    "stale unsupported screen",
+    "unknown hint",
+    "Check enabled after refusal",
+    "missing or nonboolean Check enabled attribute",
+    "duplicate editor",
+    "exposed tag or details",
+    "source drift",
+    "SDK command failure",
+    "permission drift",
+    "malformed and oversized ZIP inventory",
+    "equal UID",
+    "wrong rotation",
+    "sender class in checker",
+    "lazy helper import failure"
+  ],
+  "privacy": {
+    "arbitrary_caller_subject_code_uri_or_target_accepted": false,
+    "program_execution": false,
+    "input_network_upload_or_storage": false,
+    "raw_input_uri_uid_hostpath_or_native_error_in_report": false,
+    "explicit_uri_provider_or_grant_api": false,
+    "framework_transport_flags_not_inferred": true
+  },
+  "sources": {
+    "scripts/verify-android-emulator.py": "2ad588de8dc8e6e402014fa6ad928799b9f84dfb7f1bb16d5a626097044a1119",
+    "scripts/android-intent-controls.py": "2df966e2a77ed859d78708480555d9226e4c50a78d34f4dce2636966f0df3a6c",
+    "tests/android/intent-sender/AndroidManifest.xml": "d3da94675e71314891cb2ff90b0e1d51ff0fa40df048eb2a7ee44df9b591f988",
+    "tests/android/intent-sender/SenderActivity.java": "012bd2fb8f39d411f844cf57f193ae63a958628e011cf6fbc75910b03e45e7bb",
+    "tests/test_android_intent_controls.py": "2240d74bb46b6d4b7c9f825a11cf475aa61bd9a4a3738432c6e73cbfbc5eaf39",
+    "docs/android-malformed-intent-plan.md": "e331d73e66cd831fc1fa3bff278d9f0d37b86b82710b17048f244796bffa20a0",
+    "docs/android-share-developer.md": "0b3f0b9f6efd368ff34e788796241367db17a26e4e8a634c97e3da8f1a06c637"
+  },
+  "distinct_review": {
+    "reviewer": "/root/web_camo",
+    "result": "CLEAR for one changed-source hosted default-APK experiment",
+    "inert_groups_independently_passed": 10,
+    "corrected_guard_passed_python312_and313": true,
+    "sdk_emulator_browser_or_jvm_executed_by_reviewer": false,
+    "malformed_transport_rejection_or_normalization_must_remain_failed": true
+  },
+  "physical_device_evidence": false,
+  "human_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "full_requirement_closure": false,
+  "scope_percentage_changed": false
+}
