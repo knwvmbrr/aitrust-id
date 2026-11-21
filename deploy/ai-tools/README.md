@@ -43,8 +43,8 @@ application has no need for outbound internet, database or home access.
 
 Use `prepare.py --help`. It creates a NEW exclusive destination, never adopts or
 overwrites an existing directory, and accepts an exact Git commit. It writes
-selected sources, a release-source manifest, rendered unit/config candidates
-and an activation plan. Optional venv provisioning uses only the existing
+selected sources, a release-source manifest and rendered unit/config candidates.
+This guide contains the separate activation plan. Optional venv provisioning uses only the existing
 hash-locked binary-wheel cohort from official PyPI. Preparation does not invoke
 systemctl, change users, write `/etc`, install packages or change firewall rules.
 Its failure leaves the private candidate available for inspection; remove only
@@ -97,3 +97,5 @@ traffic and SSH22. Record the exact rule handle. Do not reload or flush the
 ruleset or container tables. Persistent configuration edits require a prior
 snapshot and an atomic, separately reviewed addition to the existing file.
 Neither candidate preparation nor its proof performs this action.
+
+`strict_sni_host on` makes a valid provider-SNI connection with a different HTTP Host a transport refusal (421), before route execution. The private TLS control substitutes only an ephemeral self-signed provider-SAN certificate and a loopback/random listener for ACME/public443; it proves this routing policy, not a publicly trusted certificate or internet reachability. No wildcard or alternate-host certificate is requested.

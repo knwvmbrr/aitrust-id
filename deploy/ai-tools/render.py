@@ -49,6 +49,7 @@ def caddyfile(front_port=None, app_port=8790):
     grace_period 15s
     servers {{
         protocols h1 h2
+        strict_sni_host on
         max_header_size 8192
         timeouts {{
             read_header 3s
