@@ -181,7 +181,7 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
   assert(!homeHTML.includes('noindex'),'Home blocked from indexing');
   const robots=await (await context.request.get(base+'/robots.txt')).text();assert(robots.includes('Allow: /')&&robots.includes('Sitemap: https://aitrustid.com/sitemap.xml'),'Crawler policy missing');
   const sitemap=await (await context.request.get(base+'/sitemap.xml')).text();const canonicalURLs=[...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m=>m[1]);
-  assert(canonicalURLs.length===36&&new Set(canonicalURLs).size===36&&canonicalURLs.includes('https://aitrustid.com/reference/conformance/'),'Sitemap omits or duplicates tag URLs');
+  assert(canonicalURLs.length===37&&new Set(canonicalURLs).size===37&&canonicalURLs.includes('https://aitrustid.com/reference/conformance/')&&canonicalURLs.includes('https://aitrustid.com/reference/remote-ai/'),'Sitemap omits or duplicates tag URLs');
   const canonicalTitles=new Set();const canonicalDescriptions=new Set();
   for(const url of canonicalURLs){
    const response=await context.request.get(base+new URL(url).pathname);assert(response.status()===200,'Crawlable page not served: '+url);
@@ -191,6 +191,12 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
    assert(!json.includes('aggregateRating')&&!json.includes('Review')&&!json.includes('offers'),'Invented commercial/rating metadata');
    if(new URL(url).pathname.startsWith('/tags/'))assert(html.includes('Every tag must pass its own published validation gate before release.'),'Reference drops release rule');assert(!html.includes('No tag is independently release validated, and no certification program is operating.'),'Blanket status copy reintroduced');
    assert(html.includes('property="og:image" content="https://aitrustid.com/share-card.png"'),'Share image metadata missing');
+  }
+  const connection=await context.request.get(base+'/reference/remote-ai/');
+  const connectionHTML=await connection.text();
+  assert(connection.status()===200&&connectionHTML.includes('remote checks send that text to the server.')&&connectionHTML.includes('/reference/remote-openapi.json'),'Connection page omits disclosure or API download');
+  for(const [url,file] of [['/reference/remote-openapi.json','integrations/ai-tools/remote-openapi.json'],['/reference/remote-ai-connections.md','docs/remote-ai-connections.md']]){
+   const response=await context.request.get(base+url);assert(response.status()===200&&(await response.text())===fs.readFileSync(file,'utf8'),'Connection download differs from reviewed source: '+url);
   }
   const share=await context.request.get(base+'/share-card.png');const png=await share.body();assert(share.status()===200&&png.readUInt32BE(16)===1200&&png.readUInt32BE(20)===630,'Social PNG missing or wrong size');
   const plainReferences=await browser.newContext({javaScriptEnabled:false});const staticPage=await plainReferences.newPage();

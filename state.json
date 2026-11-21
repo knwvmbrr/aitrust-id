@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-21T16:10:18.458650+00:00",
+  "updated": "2026-11-21T16:56:56.068072+00:00",
   "active_increment": "Live completed-response browser capture accepted;133 complete/69 open. Public API activation and independent organization-policy integration continue toward60 without retiring human gates.",
   "status": "F030_live_DOM_alternative_verified;69_original_open_target60_pending",
   "scope": "docs/master-scope.json",
@@ -69,7 +69,7 @@
     "publication_evidence": "runs/2026-11-21-nov21-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
-      "sitemap_canonical_urls": 36,
+      "sitemap_canonical_urls": 37,
       "robots_url": "https://aitrustid.com/robots.txt",
       "sitemap_url": "https://aitrustid.com/sitemap.xml",
       "canonical_origin": "https://aitrustid.com",
@@ -1189,15 +1189,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-21-nov21-next-PS.json",
-    "PII_REDACTED": "runs/2026-11-21-nov21-next-PII_REDACTED.json",
-    "extension": "runs/2026-11-21-nov21-next-extension-corrected.json",
-    "protocol": "runs/2026-11-21-nov21-functional-protocol.json",
-    "website": "runs/2026-11-21-nov21-functional-website.json",
+    "PS": "runs/2026-11-21-maintenance-final-PS.json",
+    "PII_REDACTED": "runs/2026-11-21-maintenance-final-PII_REDACTED.json",
+    "extension": "runs/2026-11-21-maintenance-final-extension.json",
+    "protocol": "runs/2026-11-21-api-core-final-protocol.json",
+    "website": "runs/2026-11-21-api-core-final-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-21T16:10:18.458650+00:00",
+  "updated_at": "2026-11-21T16:56:56.068072+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -2150,14 +2150,14 @@
     "android_selected_runtime_evidence": "runs/2026-11-21-android-default-configuration-nine-pass.json"
   },
   "organization_policy": {
-    "status": "offline_literal_component_development_only",
+    "status": "governed_local_registry_development_only; human_commercial_acceptance_open",
     "record": "N-010",
-    "milestone_percent": 60,
-    "architecture": "docs/private-policy-plan.md",
-    "result": "docs/private-policy-result.md",
-    "guide": "docs/private-policy.md",
-    "mac_controls": "runs/2026-10-11-private-policy-mac-controls.json",
-    "linux_controls": "runs/2026-10-11-private-policy-linux-controls.json",
+    "milestone_percent": 80,
+    "architecture": "docs/organization-policy-registry-plan.md",
+    "result": "docs/organization-policy-registry-result.md",
+    "guide": "docs/organization-policy-registry.md",
+    "mac_controls": "runs/2026-11-21-organization-policy-mac-final-operation.json",
+    "linux_controls": "runs/2026-11-21-organization-policy-linux-operation.json",
     "organization_service_running": false,
     "standard_namespace_adopted": false,
     "requirements_closed": 0,
@@ -2177,6 +2177,19 @@
       "public_organization_service_running": false,
       "real_identity_or_employee_consent_claimed": false,
       "original_closed": false
+    },
+    "literal_prototype_history": {
+      "status": "offline_literal_component_development_only",
+      "record": "N-010",
+      "milestone_percent": 60,
+      "architecture": "docs/private-policy-plan.md",
+      "result": "docs/private-policy-result.md",
+      "guide": "docs/private-policy.md",
+      "mac_controls": "runs/2026-10-11-private-policy-mac-controls.json",
+      "linux_controls": "runs/2026-10-11-private-policy-linux-controls.json",
+      "organization_service_running": false,
+      "standard_namespace_adopted": false,
+      "requirements_closed": 0
     }
   },
   "selected_asset_notice_evidence": {
@@ -3928,6 +3941,25 @@
       "boundary_source_files": 1416,
       "evidence": "runs/2026-11-21-pr138-inventory-correction.json",
       "independent_accuracy_evidence": false
+    },
+    "api_core": {
+      "PS": "runs/2026-11-21-maintenance-final-PS.json",
+      "PII_REDACTED": "runs/2026-11-21-maintenance-final-PII_REDACTED.json",
+      "extension": "runs/2026-11-21-maintenance-final-extension.json",
+      "protocol": "runs/2026-11-21-api-core-final-protocol.json",
+      "website": "runs/2026-11-21-api-core-final-website.json",
+      "boundaries": "runs/2026-11-21-api-core-boundaries.json",
+      "source_bound_checks_passed": true,
+      "reused_unchanged_capabilities": [
+        "PS",
+        "PII_REDACTED",
+        "extension"
+      ],
+      "protocol_commands": 61,
+      "website_commands": 59,
+      "independent_accuracy_evidence": false,
+      "release_approved": false,
+      "protected_publication_pending": true
     }
   },
   "mt_evidence_workflow": {
@@ -4038,7 +4070,7 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-21-nov21-functional-boundaries.json",
+  "current_route_boundaries": "runs/2026-11-21-api-core-boundaries.json",
   "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json",
   "agent_tag_tools": {
     "status": "published_local_development_integration",
@@ -4724,6 +4756,7 @@
     "actual_remote_MCP_groups": 14,
     "actual_private_proxy_groups": 11,
     "AI_host_account_connected": false,
-    "public_endpoint_verified": false
+    "public_endpoint_verified": false,
+    "protocol_execution": "runs/2026-11-21-api-core-final-protocol.json"
   }
 }

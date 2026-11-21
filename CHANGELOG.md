@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-165656-freeze-passing-api-core-delivery-55894707
+
+Recorded 2026-11-21T16:56:56.162616+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Captured the passing59-command website execution and1650-source boundary review, refreshed current protocol/website pointers and reused only fingerprint-matching PS/privacy/extension receipts.
+- **Evidence.** All five current capability receipts match exact current inputs;61 protocol and59 website commands pass with stable source; actual catalogue/download/accessibility checks pass. Scope remains133 complete69 open. [Change record](./runs/changes/2026-11-21-165656-freeze-passing-api-core-delivery-55894707.json).
+- **Not claimed.** ProtectedGitHub checks/public website delivery are next. Public API and provider-account connections remain held/pending; no independent accuracy or additional original closure.
+
+
+### 2026-11-21-163925-correct-connection-catalogue-contract-6986f0a5
+
+Recorded 2026-11-21T16:39:25.342003+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Preserved actual build-success/catalogue-failure evidence and updated the exact sitemap assertion for the added connection page, with source-byte checks for both downloads.
+- **Evidence.** Actual unmodified catalogue execution reproduced the old36-versus-new37 assertion. The corrected contract retains uniqueness and required reference pages and adds exact schema/guide delivery checks. [Change record](./runs/changes/2026-11-21-163925-correct-connection-catalogue-contract-6986f0a5.json).
+- **Not claimed.** The corrected focused and full website executions must still pass. No existing failure, independent accuracy or pending activation is relabeled complete.
+
+
+### 2026-11-21-163541-record-website-interpreter-diagnosis-30ffa733
+
+Recorded 2026-11-21T16:35:41.431673+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Preserved the actual first website build failure and diagnosed the Node child interpreter mismatch.
+- **Evidence.** Build stopped on missing pydantic in the system Python; the parent source-bound verifier had used the approved venv by absolute path without propagating that interpreter selection to build children. [Change record](./runs/changes/2026-11-21-163541-record-website-interpreter-diagnosis-30ffa733.json).
+- **Not claimed.** Environment repair is selected, not yet a passing build. No source behavior, acceptance or public API exposure changed.
+
+
+### 2026-11-21-163225-bind-api-core-protocol-and-public-metadata-a7a61fed
+
+Recorded 2026-11-21T16:32:25.244280+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Captured all61 source-bound protocol commands and prepared current133/69 public scope,37 sitemap URLs and current version1.14 policy aliases while preserving versioned archives.
+- **Evidence.** Frozen protocol input fingerprint stayed stable and still matches after actual site data preparation. Public data derives from current preserved202 records. [Change record](./runs/changes/2026-11-21-163225-bind-api-core-protocol-and-public-metadata-a7a61fed.json).
+- **Not claimed.** Website execution, protectedCI and actual publication remain next; public API stillheld and other original/human/accuracy gates remain open.
+
+
+### 2026-11-21-162644-freeze-optional-api-integration-0f7f6e7e
+
+Recorded 2026-11-21T16:26:44.438723+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Bound new remote and governed-local sources in the reviewed inventory, registered real OpenAPI tests in CI, added the exact API download and displayed current accepted scope titles without changing original records.
+- **Evidence.** Actual integrated8-contract checks and SDK-free verifier pass; distinct bounded integration review preserves202 original identities and full acceptance. Governed80 state retains the literal60 prototype as history. [Change record](./runs/changes/2026-11-21-162644-freeze-optional-api-integration-0f7f6e7e.json).
+- **Not claimed.** Source freeze before fresh protocol/website execution and protected publication. API activation remains held; no provider UI, accuracy, human acceptance or extra original closure.
+
+
 ### 2026-11-21-162223-openapi-stable-status-977eb6b0
 
 Recorded 2026-11-21T16:22:23.832976+00:00 · Contributor: Codex API contract engineer · change

@@ -335,6 +335,18 @@ PATTERNS += ('tools/zlib_source_delivery.py', 'scripts/zlib-source-delivery.py',
 
 PATTERNS += ('scripts/android-chooser-controls.py', 'tests/test_android_chooser_controls.py', 'docs/android-os-chooser-plan.md')
 
+# Optional remote and governed-local entry points have separate execution proofs;
+# inventory identity does not grant tag accuracy or public deployment acceptance.
+PATTERNS += ('tools/remote_tag_server.py', 'scripts/remote-tag-server.py',
+             'scripts/verify-remote-tag-server.py', 'tests/test_remote_tag_server.py',
+             'deploy/ai-tools/*', 'docs/remote-tag-connectors*.md',
+             'docs/remote-ai-connections.md', 'docs/f030-dom-replacement-result.md',
+             'tools/organization_policy_*.py', 'scripts/organization-policy.py',
+             'tests/test_organization_policy_*.py', 'docs/organization-policy-*.md',
+             'site/public/reference/policies/*/*.txt',
+             'scripts/verify-remote-openapi.py', 'tests/test_remote_openapi.py',
+             'docs/remote-openapi-plan.md')
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:

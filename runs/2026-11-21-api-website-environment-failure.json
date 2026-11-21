@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-11-21T16:35:01.169901+00:00",
+  "pass": false,
+  "kind": "api_website_first_build_diagnosis",
+  "actual_failed_phase": "build",
+  "actual_completed_website_commands": 3,
+  "source_unchanged": true,
+  "error_signature": "ModuleNotFoundError: No module named pydantic",
+  "cause": "The verified parent used the approved venv by absolute interpreter path, but inherited PATH still resolved Node build children python3 to the dependency-free system interpreter.",
+  "fix": "Run the same frozen website verifier with the existing approved verification-venv/bin prepended to PATH; install no dependencies and change no product source.",
+  "private_diagnostic_log_sha256": "824f47e7b1fd2b6a28c7112055d62a1d902beb061f5378e5e9a23778b0b126fb",
+  "public_activation_performed": false
+}

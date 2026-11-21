@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-11-21T16:39:01.306370+00:00",
+  "pass": false,
+  "kind": "api_connection_catalogue_contract_diagnosis",
+  "prior_environment_repair_verified": true,
+  "actual_build_passed": true,
+  "source_stable_during_failed_run": true,
+  "error_signature": "Sitemap omits or duplicates tag URLs at verify-site.cjs:184",
+  "actual_sitemap_URL_count": 37,
+  "old_expected_count": 36,
+  "diagnosis": "The new connection page added one canonical URL; the existing exact catalogue assertion still required36. A focused run of the actual built catalogue reproduced that exact assertion.",
+  "fix": "Keep an exact37 unique URLs and explicitly require the new connection page; fetch its two downloads and compare exact reviewed source bytes. No assertion or route was removed.",
+  "diagnostic_log_sha256": "c1a7b2e5b5c0fe5c3f816dc9736174e6223a3364b5264fd90910f0ce1b4d0f3c",
+  "public_activation_performed": false,
+  "limits": "Corrected catalogue and full website execution remain pending."
+}

@@ -1,0 +1,55 @@
+{
+  "captured_at": "2026-11-21T16:26:44.122753+00:00",
+  "pass": true,
+  "kind": "integrated_remote_OpenAPI_contract_execution",
+  "performed_by": "Codex /root distinct from author /root/seo",
+  "source_sha256": {
+    "integrations/ai-tools/remote-openapi.json": "f8af27c8727131496a99c6194d2bf69dd9791c106a8fc1565ce8e20f43c3c953",
+    "scripts/verify-remote-openapi.py": "dd8b983a64da448aba59935359da539b3220aab372ee173b437aeda5c7be7e28",
+    "tests/test_remote_openapi.py": "dc6c5ebd0c078e83fbeae1c09437a6c66171d4f02b9c014e661b33497e6ddc26",
+    "tools/remote_tag_server.py": "b656abfb64eb925f8e63789365590a35c652d35e16001da284fa8f827162a72d",
+    "tools/tag_api.py": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e",
+    "deploy/ai-tools/render.py": "d7d994babf384201d3285b509a281faa417e154f84790853055291f17b4faa89"
+  },
+  "actual_commands": [
+    {
+      "argv": [
+        "verification-venv/python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_remote_openapi.py",
+        "-v"
+      ],
+      "exit": 0,
+      "actual_tests": 8,
+      "failures": 0,
+      "skips": 0,
+      "observed_elapsed_seconds": 0.517
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "scripts/verify-remote-openapi.py"
+      ],
+      "exit": 0,
+      "SDK_imported": false,
+      "network_used": false
+    }
+  ],
+  "ordinary_operations": 3,
+  "MCP_described_as_OpenAPI": false,
+  "API_runtime_changed": false,
+  "public_activation_verified": false,
+  "AI_host_approval_verified": false,
+  "independent_accuracy_evidence": false,
+  "original_requirement_closed": false,
+  "limits": "Offline source/schema/actual canonical-output contract only; no public endpoint or AI-provider UI approval."
+}
