@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-084217-pr138-reviewed-inventory-134c4898
+
+Recorded 2026-11-21T08:42:17.628757+00:00 · Contributor: Codex /root; inventory review /root/seo; code review /root/web_camo · change
+
+- **Changed.** Refreshed the reviewed personal-route source inventory and exact current browser proof references after the draft CI correctly refused the stale manifest.
+- **Evidence.** All five source-bound checks pass, including57 protocol and55 website commands. Distinct review covers1416tracked sources;36 positive/negative boundary controls pass with exact extension/website receipts. The earlier failedCI remains recorded. [Change record](./runs/changes/2026-11-21-084217-pr138-reviewed-inventory-134c4898.json).
+- **Not claimed.** Data/proof correction only; application code, permission boundaries and test thresholds are unchanged. Protected CI still requires the corrected head. No original requirement, independent detector accuracy, physical acceptance or release clearance is granted.
+
+
 ### 2026-11-21-081551-nov21-final-prime-attribution-040c4cee
 
 Recorded 2026-11-21T08:15:51.755718+00:00 · Contributor: Codex /root · change

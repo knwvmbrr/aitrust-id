@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-21T08:15:51.714631+00:00",
+  "updated": "2026-11-21T08:42:16.802091+00:00",
   "active_increment": "Publish the source-matched Android Share fix and independent NF reference preview; all70 original requirements remain open, with N014 advanced20 to80 and physical/human acceptance preserved.",
-  "status": "published_site_retained; Android9case_and_NF_modal_integrated; final_source_checks_and_protected_publication_pending",
+  "status": "all5_current_source_checks_and_personal_boundaries_pass; protected_CI_and_new_public_delivery_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -1189,17 +1189,13 @@
   "current_engineering_revalidation": {
     "PS": "runs/2026-11-21-nov21-next-PS.json",
     "PII_REDACTED": "runs/2026-11-21-nov21-next-PII_REDACTED.json",
-    "protocol": "runs/2026-11-21-nov21-current-protocol.json",
     "extension": "runs/2026-11-21-nov21-next-extension-corrected.json",
-    "website": "runs/2026-11-21-nov21-current-website.json",
+    "protocol": "runs/2026-11-21-nov21-functional-protocol.json",
+    "website": "runs/2026-11-21-nov21-functional-website.json",
     "independent_accuracy_evidence": false,
-    "release_approved": false,
-    "pending_capabilities": [
-      "protocol",
-      "website"
-    ]
+    "release_approved": false
   },
-  "updated_at": "2026-11-21T08:15:51.714631+00:00",
+  "updated_at": "2026-11-21T08:42:16.802091+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3898,8 +3894,10 @@
       "android_runtime_accepted": false
     },
     "nov21_native_NF_integration": {
-      "status": "PS_PII_extension_current; protocol_website_pending; protected_publication_pending",
-      "all5_current": false,
+      "status": "all5_current_and_boundary36_pass; protected_CI_pending_after_inventory_correction",
+      "all5_current": true,
+      "boundary_source_files": 1416,
+      "evidence": "runs/2026-11-21-pr138-inventory-correction.json",
       "independent_accuracy_evidence": false
     }
   },
@@ -3963,7 +3961,18 @@
     "full_requirement_accepted": false,
     "source_bindings_matching": 23,
     "actual_hosted_focused_tests": 88,
-    "current_source_path_count": 18
+    "current_source_path_count": 18,
+    "automatic_PR_runtime": {
+      "pull_request": 138,
+      "head": "d48957355ba07aece773e4a15a1bac62a9b937e5",
+      "run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722214",
+      "executed_original": 7,
+      "executed_configuration": 2,
+      "pass": true,
+      "source_bindings_identical_to_retained_run": true,
+      "additional_artifact_download": false,
+      "additional_VM_launched_by_reviewer": false
+    }
   },
   "nested_runtime_notices": {
     "status": "web release merged and verified live",
@@ -3997,7 +4006,7 @@
     "production_verification": "runs/2026-11-17-phone-seo-production.json",
     "social_draft_workflow_verified": true
   },
-  "current_route_boundaries": "runs/2026-11-20-tag-wave2-boundaries.json",
+  "current_route_boundaries": "runs/2026-11-21-nov21-functional-boundaries.json",
   "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json",
   "agent_tag_tools": {
     "status": "published_local_development_integration",
@@ -4369,7 +4378,7 @@
     }
   },
   "nov21_delivery": {
-    "status": "Android9case_and_NF_modal_integrated; final_protocol57_website55_protected_public_checks_pending",
+    "status": "all5_current_source_checks_and_boundaries_pass; protected_CI_pending",
     "plan": "docs/delivery-wave-2026-11-21.md",
     "MT_implementation": "220c2edcb2cde0a0603842a32a446bac8f6d157b",
     "MT_review": "runs/2026-11-21-mt-mobile-pm-review.json",
@@ -4381,13 +4390,13 @@
     "independent_accuracy_evidence": false,
     "production_publication_pending": false,
     "receipts": {
-      "PS": "runs/2026-11-21-nov21-final-PS.json",
-      "PII_REDACTED": "runs/2026-11-21-nov21-final-PII_REDACTED.json",
-      "extension": "runs/2026-11-21-nov21-final-extension.json",
-      "protocol": "runs/2026-11-21-nov21-current-protocol.json",
-      "website": "runs/2026-11-21-nov21-current-website.json"
+      "PS": "runs/2026-11-21-nov21-next-PS.json",
+      "PII_REDACTED": "runs/2026-11-21-nov21-next-PII_REDACTED.json",
+      "extension": "runs/2026-11-21-nov21-next-extension-corrected.json",
+      "protocol": "runs/2026-11-21-nov21-functional-protocol.json",
+      "website": "runs/2026-11-21-nov21-functional-website.json"
     },
-    "boundary_evidence": "runs/2026-11-21-nov21-final-boundaries.json",
+    "boundary_evidence": "runs/2026-11-21-nov21-functional-boundaries.json",
     "all_original_criteria_preserved": true,
     "publication_evidence": "runs/2026-11-21-nov21-publication.json",
     "protected_merge": "2aa67779352fa11c303867f52799172ec73ee07c",
@@ -4401,7 +4410,8 @@
       "runs/2026-11-21-nov21-closeout-a11y-failure.json"
     ],
     "android_integration_evidence": "runs/2026-11-21-android-integration-pm-review.json",
-    "NF_integration_evidence": "runs/2026-11-21-nf-integrated-modal.json"
+    "NF_integration_evidence": "runs/2026-11-21-nf-integrated-modal.json",
+    "inventory_correction": "runs/2026-11-21-pr138-inventory-correction.json"
   },
   "nf_device_preview": {
     "status": "actual_integrated_modal_passes_both_engines; protected_public_delivery_pending",
@@ -4418,9 +4428,11 @@
     "independent_accuracy_evidence": false,
     "physical_phone_tested": false,
     "publicly_published": false,
-    "integrated_modal_evidence": "runs/2026-11-21-nf-integrated-modal.json",
+    "integrated_modal_evidence": "runs/2026-11-21-nf-final-integrated-modal.json",
     "shared_review": "runs/2026-11-21-nf-shared-integration-review.json",
-    "copy_privacy_review": "runs/2026-11-21-nf-copy-dataflow-review.json"
+    "copy_privacy_review": "runs/2026-11-21-nf-copy-dataflow-review.json",
+    "current_browser_evidence": "runs/2026-11-21-nf-final-device-browser.json",
+    "current_input_controls": "runs/2026-11-21-nf-final-input.json"
   },
   "android_share_candidate_history": [
     {

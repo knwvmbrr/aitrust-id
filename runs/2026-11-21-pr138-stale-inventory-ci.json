@@ -1,0 +1,135 @@
+{
+  "profile": "pr-required-engineering-review/v1",
+  "captured_at": "2026-11-21T08:30:57.163408+00:00",
+  "reviewed_by": "/root/seo",
+  "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/138",
+  "head": "d48957355ba07aece773e4a15a1bac62a9b937e5",
+  "required_checks": [
+    {
+      "name": "accessibility",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787406981",
+      "completedAt": "2026-11-21T08:25:57Z"
+    },
+    {
+      "name": "change-records",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787406839",
+      "completedAt": "2026-11-21T08:24:37Z"
+    },
+    {
+      "name": "device-builder (3.12)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787407074",
+      "completedAt": "2026-11-21T08:24:28Z"
+    },
+    {
+      "name": "device-builder (3.13)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787407001",
+      "completedAt": "2026-11-21T08:24:28Z"
+    },
+    {
+      "name": "device-builder (3.14)",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787407029",
+      "completedAt": "2026-11-21T08:24:34Z"
+    },
+    {
+      "name": "host-config",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787406968",
+      "completedAt": "2026-11-21T08:24:49Z"
+    },
+    {
+      "name": "no-egress",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787406910",
+      "completedAt": "2026-11-21T08:29:38Z"
+    },
+    {
+      "name": "regressions",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787407036",
+      "completedAt": "2026-11-21T08:24:34Z"
+    },
+    {
+      "name": "scope-plan",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787407022",
+      "completedAt": "2026-11-21T08:24:44Z"
+    },
+    {
+      "name": "site",
+      "status": "COMPLETED",
+      "conclusion": "FAILURE",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787407133",
+      "completedAt": "2026-11-21T08:25:13Z"
+    },
+    {
+      "name": "spec",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787406993",
+      "completedAt": "2026-11-21T08:27:20Z"
+    }
+  ],
+  "required_pass_count": 10,
+  "required_fail_count": 1,
+  "required_all_pass": false,
+  "unresolved_review_threads": 0,
+  "failure": {
+    "job": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787407133",
+    "phase": "tests/test_route_boundaries.py",
+    "counts": {
+      "failed": 9,
+      "passed": 27
+    },
+    "root_cause": "Committed reviewed-source manifest predates current combined source.",
+    "committed_reviewed_at": "2026-11-21T06:30:06.322028+00:00",
+    "manifest_entry_count": 1390,
+    "listed_hash_mismatches": 24,
+    "manifest_NF_entries": 0,
+    "all_manifest_paths_tracked": true,
+    "NF_site_commands_reached": false,
+    "replay_browser_command_reached": false
+  },
+  "no_egress": {
+    "run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722161/job/136787406910",
+    "passed": 5546,
+    "skipped": 14,
+    "seconds": 301.4,
+    "new_NF_python_tests_in_unfiltered_suite": "The command includes all tests except route-boundaries; no per-NF result breakout was printed."
+  },
+  "android": {
+    "run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44884722214/job/136787407067",
+    "conclusion": "SUCCESS",
+    "actual_status": "EXECUTED",
+    "original_share_cases_passed": 7,
+    "configuration_cases_passed": 2,
+    "wasm_engine_cases": 137,
+    "installed_JVM": "Temurin17.0.21",
+    "artifact_downloaded_by_this_reviewer": false,
+    "physical_or_independent_accuracy": false
+  },
+  "nonrequired_gates": "FAILURE; independent holdout/confidence-bound/calibration release evidence remains unmet.",
+  "private_job_log_sha256": {
+    "pr138-android.log": "1cf3ad08342b92a71d9bf38cf1ed11fb3fb343193abe7a7210a44d253ec4548e",
+    "pr138-no-egress.log": "3401fed78a2e7536faa029f8e0059725cbbc8446e00ade5a3a503531d42a0fd0",
+    "pr138-site.log": "76482ab75ac2028420bdc02d00a4fd7337d947497c0a833db987ca54a91c726b"
+  },
+  "limits": [
+    "Read-only API/log/Git source comparisons; no retries, comments, thread resolutions, source mutation, merge or publication.",
+    "The failed required site check blocks source approval regardless of optional Android success.",
+    "No browser-local or hosted independent detector release claim."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-084217-pr138-reviewed-inventory-134c4898",
+  "recorded_at": "2026-11-21T08:42:17.628757+00:00",
+  "author": "Codex /root; inventory review /root/seo; code review /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d48957355ba07aece773e4a15a1bac62a9b937e5",
+  "changed": "Refreshed the reviewed personal-route source inventory and exact current browser proof references after the draft CI correctly refused the stale manifest.",
+  "proves": "All five source-bound checks pass, including57 protocol and55 website commands. Distinct review covers1416tracked sources;36 positive/negative boundary controls pass with exact extension/website receipts. The earlier failedCI remains recorded.",
+  "limits": "Data/proof correction only; application code, permission boundaries and test thresholds are unchanged. Protected CI still requires the corrected head. No original requirement, independent detector accuracy, physical acceptance or release clearance is granted.",
+  "scope_ids": [
+    "N-014",
+    "T-NF",
+    "F-035",
+    "F-142",
+    "X-01",
+    "X-02"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "03ae026cb42cf268e94ab6eebd8724f7d177380f9ea9650c914315fe7350a3e8",
+    "runs/2026-11-21-nf-final-device-browser.json": "2a670a1c9c4ef8c5d6b013b2dd646e92f4dad81de94f4cfac049b7597c33a52c",
+    "runs/2026-11-21-nf-final-input.json": "56b3bbb342cb0410753cca866bd55309150888bf6d9b8490d14ea9a6453ad025",
+    "runs/2026-11-21-nf-final-integrated-modal.json": "13b9c0d73ac5b9dd11f7e0f689cd478b8288a55ebc37c19a6ef8834e70e2820a",
+    "runs/2026-11-21-nov21-functional-boundaries.json": "a1f79084f24136e79f6b8a9c9fba0ba0a9e725770f2be7180635ae780b217719",
+    "runs/2026-11-21-nov21-functional-protocol.json": "d92a4c321685b0e955697beaab9328db678c38371f83cfbbc465e5bd1bea84e3",
+    "runs/2026-11-21-nov21-functional-website.json": "4e722e41f8c6d40c0fe849d324a7cf66405921aad4310cf14d125e0b769756b6",
+    "runs/2026-11-21-pr138-boundary-inventory-review.json": "4b874427854b9cc6b213f8a199d473a6cec21ed08d78cc4bc7a93d2cd6f7cd25",
+    "runs/2026-11-21-pr138-inventory-correction.json": "ffea8050002f435023aaec5f4b4f3ed220b960bef3efcfdece4d9b8ccbcb612b",
+    "runs/2026-11-21-pr138-stale-inventory-ci.json": "445223a7ccb4f33c7d375cc14cf4a1ffb42eb0ed06403bdd99f0c06fc955419f",
+    "state.json": "99d6db2fac51b6ae52c3b995fa48166bd080453ea2129de0b2801196f746321a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-pr138-stale-inventory-ci.json",
+      "sha256": "445223a7ccb4f33c7d375cc14cf4a1ffb42eb0ed06403bdd99f0c06fc955419f"
+    },
+    {
+      "path": "runs/2026-11-21-pr138-boundary-inventory-review.json",
+      "sha256": "4b874427854b9cc6b213f8a199d473a6cec21ed08d78cc4bc7a93d2cd6f7cd25"
+    },
+    {
+      "path": "runs/2026-11-21-pr138-inventory-correction.json",
+      "sha256": "ffea8050002f435023aaec5f4b4f3ed220b960bef3efcfdece4d9b8ccbcb612b"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-functional-protocol.json",
+      "sha256": "d92a4c321685b0e955697beaab9328db678c38371f83cfbbc465e5bd1bea84e3"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-functional-website.json",
+      "sha256": "4e722e41f8c6d40c0fe849d324a7cf66405921aad4310cf14d125e0b769756b6"
+    },
+    {
+      "path": "runs/2026-11-21-nov21-functional-boundaries.json",
+      "sha256": "a1f79084f24136e79f6b8a9c9fba0ba0a9e725770f2be7180635ae780b217719"
+    }
+  ],
+  "checks": []
+}
