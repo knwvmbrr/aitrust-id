@@ -13,7 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 LIMIT = 4 * 1024 * 1024
 SHA = re.compile(r'[a-f0-9]{64}')
 COMMIT = re.compile(r'[a-f0-9]{40}')
-PROFILE = 'session-delivery-plan/v1'
+PROFILE = 'session-delivery-plan/v2'
+LEGACY_PROFILE = 'session-delivery-plan/v1'
 
 
 class DeliveryError(ValueError):
@@ -182,8 +183,10 @@ def evidence(items, root, since):
 
 
 def inspect(board, baseline, baseline_master, current, current_master, root=ROOT):
-    require(type(board) is dict and board.get('schema_version') == 1
-            and board.get('profile') == PROFILE)
+    require(type(board) is dict and board.get('profile') in (PROFILE, LEGACY_PROFILE))
+    legacy = board['profile'] == LEGACY_PROFILE
+    require(type(board.get('schema_version')) is int
+            and board['schema_version'] == (1 if legacy else 2))
     started = moment(board['recorded_at'])
     before, after = rows(baseline), rows(current)
     old_master, new_master = rows(baseline_master), rows(current_master)
@@ -285,18 +288,35 @@ def inspect(board, baseline, baseline_master, current, current_master, root=ROOT
     for field in ('minimum_finished_named_deliverables', 'minimum_original_requirement_closures'):
         require(type(goals[field]) is int and 1 <= goals[field] <= 202)
     require(type(goals['original_open_target']) is int and 0 <= goals['original_open_target'] <= 202)
-    original_met = len(transitions) >= goals['minimum_original_requirement_closures'] and not reopened
+    closure_milestone_met = len(transitions) >= goals['minimum_original_requirement_closures']
+    original_open = len(after) - len(new_done)
+    target_met = original_open <= goals['original_open_target']
+    no_reopens = not reopened
+    original_met = closure_milestone_met and target_met and no_reopens
     tasks_met = len(finished) >= goals['minimum_finished_named_deliverables']
-    require(goals['requirement_goal_status'] == ('MET' if original_met else 'NOT MET')
+    strict_success = original_met and tasks_met
+    # V1 recorded the minimum-closure milestone. Preserve its historical meaning,
+    # but never use that boolean as authority for the strict numeric target.
+    recorded_original_met = closure_milestone_met and no_reopens if legacy else original_met
+    require(goals['requirement_goal_status'] == ('MET' if recorded_original_met else 'NOT MET')
             and type(board['session_success']) is bool
-            and board['session_success'] == (original_met and tasks_met))
+            and board['session_success'] == (recorded_original_met and tasks_met))
+    if not legacy:
+        require(goals['original_closure_milestone_status'] == ('MET' if closure_milestone_met else 'NOT MET')
+                and goals['original_open_target_status'] == ('MET' if target_met else 'NOT MET'))
     return {'captured_at': datetime.now(timezone.utc).isoformat(), 'pass': True,
             'kind': 'session_delivery_accounting', 'session_id': board['session_id'],
             'baseline_original_complete': len(old_done), 'original_complete': len(new_done),
-            'original_open': len(after) - len(new_done),
+            'original_open': original_open,
             'new_original_closures': sorted(transitions), 'reopened_originals': sorted(reopened),
             'finished_scoped_tasks': finished, 'original_requirement_goal_met': original_met,
-            'scoped_delivery_goal_met': tasks_met, 'session_success': original_met and tasks_met,
+            'scoped_delivery_goal_met': tasks_met, 'session_success': strict_success,
+            'original_closure_milestone_met': closure_milestone_met,
+            'original_open_target_met': target_met, 'no_original_reopens': no_reopens,
+            'requirement_goal_status': 'MET' if original_met else 'NOT MET',
+            'board_profile': board['profile'],
+            'board_recorded_session_success': board['session_success'],
+            'board_recorded_status_scope': 'minimum-closure-milestone/v1' if legacy else 'strict-open-target/v2',
             'target_open': goals['original_open_target'],
             'closures_to_target': max(0, len(after) - len(new_done) - goals['original_open_target']),
             'tag_bots': len(bots), 'active_tag_assignments_at_snapshot': len(workers),

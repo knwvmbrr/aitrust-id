@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inspect task delivery; --check-session refuses an unmet original-closure goal."""
+"""Inspect delivery; --check-session requires the strict open target and all minima."""
 import argparse
 from pathlib import Path
 import subprocess

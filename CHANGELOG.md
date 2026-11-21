@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-224017-enforce-original-open-session-target-9f362a99
+
+Recorded 2026-11-21T22:40:17.914202+00:00 · Contributor: Codex /root/web_camo accountability engineer · change
+
+- **Changed.** Separated the preserved minimum-one-closure milestone from the strict60-open session target, versioned the current board as v2 and kept historical v1 interpretation without granting strict success.
+- **Evidence.** Fifty-four focused controls pass. Actual ordinary inspection exits0, current and legacy-v1 strict checks each exit1 at69 open versus60 with F030 preserved; distinct review passes seven focused checks and an actual strict CLI. All202 master/ledger/delivery bytes and actual closure/task records remain unchanged; four existing reviewed-source hashes refreshed. [Change record](./runs/changes/2026-11-21-224017-enforce-original-open-session-target-9f362a99.json).
+- **Not claimed.** The60-open target is still NOT MET and current session_success is false; no extra closure, criterion waiver, fake label, denominator change, runtime/deployment or full-suite claim. Historical v1 minimum-only successes are retained as milestones, not relabeled target proof. Push and final capability revalidation remain root-owned.
+
+
 ### 2026-11-21-221627-public-api-guide-published-873aed90
 
 Recorded 2026-11-21T22:16:27.560800+00:00 · Contributor: Codex PM /root · change

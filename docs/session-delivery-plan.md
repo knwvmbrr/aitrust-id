@@ -1,3 +1,13 @@
+## Strict target accounting — November 21, 2026
+
+Current v2 board: **133 complete / 69 open; target 60; 9 closures still needed.**
+The historical minimum-one-closure milestone is MET through the fully evidenced
+F-030 closure. The numeric target is NOT MET and current session success is
+false. No original criterion, percentage, closure evidence or denominator changed.
+The ordinary accounting command can pass consistency while `--check-session`
+returns 1 for the unmet target. Historical v1 boards retain their minimum-only
+meaning; current inspection recomputes strict target success even for v1 input.
+
 ## Completed development source handoffs — November 21, 2026
 
 Four bounded CLIs are independently reviewed and published as exact downloadable

@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "profile": "session-delivery-plan/v1",
+  "schema_version": 2,
+  "profile": "session-delivery-plan/v2",
   "session_id": "2026-11-19-original-closure-70-to-60",
   "recorded_at": "2026-11-19T15:20:45.481757+00:00",
   "base_commit": "3716233b9460efa57c1f0d01bfe30989395efcc4",
@@ -119,9 +119,11 @@
     "minimum_finished_named_deliverables": 1,
     "minimum_original_requirement_closures": 1,
     "original_open_target": 60,
-    "requirement_goal_status": "MET"
+    "requirement_goal_status": "NOT MET",
+    "original_closure_milestone_status": "MET",
+    "original_open_target_status": "NOT MET"
   },
-  "session_success": true,
+  "session_success": false,
   "owners": {
     "pm": "/root",
     "task_list_lead": "/root/seo",

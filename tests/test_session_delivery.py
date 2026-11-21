@@ -24,6 +24,8 @@ def case(tmp_path):
     board['closure_recommendations'] = []
     board['counters'] = dict(finished_scoped_tasks=0, original_requirement_closures=0)
     board['goals']['requirement_goal_status'] = 'NOT MET'
+    board['goals']['original_closure_milestone_status'] = 'NOT MET'
+    board['goals']['original_open_target_status'] = 'NOT MET'
     board['session_success'] = False
     proof = tmp_path / 'runs' / 'reviewed.json'
     proof.parent.mkdir()
@@ -60,8 +62,10 @@ def close_original(case):
         reviewed_by='reviewer', verified_at=now, original_acceptance_sha256=tool.acceptance_hash(
             tool.rows(case['baseline_master'])[key], old), evidence=proof(case))]
     board['counters']['original_requirement_closures'] = 1
-    board['goals']['requirement_goal_status'] = 'MET'
-    board['session_success'] = board['counters']['finished_scoped_tasks'] == 1
+    board['goals']['original_closure_milestone_status'] = 'MET'
+    board['goals']['original_open_target_status'] = 'NOT MET'
+    board['goals']['requirement_goal_status'] = 'NOT MET'
+    board['session_success'] = False
 
 
 def test_component_completion_never_reduces_original_count(case):
@@ -80,9 +84,78 @@ def test_new_original_and_component_are_counted_separately(case):
     result = tool.inspect(**case)
     assert result['new_original_closures'] == ['T-HP']
     assert result['original_open'] == 69
-    assert result['session_success'] is True
+    assert result['original_closure_milestone_met'] is True
+    assert result['original_open_target_met'] is False
+    assert result['closures_to_target'] == 9
+    assert result['session_success'] is False
     assert result['scope_approval_granted'] is False
     assert result['independent_accuracy_evidence'] is False
+
+
+@pytest.mark.parametrize('target,expected', [(68, False), (69, True), (70, True), (0, False), (202, True)])
+def test_strict_target_above_equal_below_actual_open_count(case, target, expected):
+    close_task(case); close_original(case)
+    case['board']['goals'].update(original_open_target=target,
+        original_open_target_status='MET' if expected else 'NOT MET',
+        requirement_goal_status='MET' if expected else 'NOT MET')
+    case['board']['session_success'] = expected
+    result = tool.inspect(**case)
+    assert result['original_open'] == 69
+    assert result['original_closure_milestone_met'] is True
+    assert result['original_open_target_met'] is expected
+    assert result['original_requirement_goal_met'] is expected
+    assert result['session_success'] is expected
+
+
+def test_target_met_does_not_waive_closure_or_scoped_minima(case):
+    close_task(case); close_original(case)
+    goals=case['board']['goals']; goals.update(original_open_target=69, original_open_target_status='MET',
+        minimum_original_requirement_closures=2, original_closure_milestone_status='NOT MET')
+    result=tool.inspect(**case)
+    assert result['original_open_target_met'] and not result['original_closure_milestone_met']
+    assert not result['session_success']
+    goals.update(minimum_original_requirement_closures=1, original_closure_milestone_status='MET',
+        requirement_goal_status='MET', minimum_finished_named_deliverables=2)
+    result=tool.inspect(**case)
+    assert result['original_requirement_goal_met'] and not result['scoped_delivery_goal_met']
+    assert not result['session_success']
+
+
+def test_reopened_original_refuses_success_even_when_numeric_target_and_milestone_met(case):
+    close_task(case); close_original(case)
+    key=next(row['id'] for row in case['baseline']['records'] if row['percent_complete']==100)
+    reopened=tool.rows(case['current'])[key]
+    reopened.update(percent_complete=80, queue='open', completed_by=None, completed_at=None,
+        required_acceptance=['Revalidate the preserved original acceptance'], next_fix='Revalidate', next_owner='builder')
+    case['board']['goals'].update(original_open_target=70, original_open_target_status='MET')
+    result=tool.inspect(**case)
+    assert result['reopened_originals']==[key]
+    assert result['original_open_target_met'] and result['original_closure_milestone_met']
+    assert not result['no_original_reopens'] and not result['session_success']
+
+
+def test_legacy_v1_minimum_success_is_historical_not_target_success(case):
+    close_task(case); close_original(case)
+    board=case['board'];board.update(profile=tool.LEGACY_PROFILE,schema_version=1,session_success=True)
+    board['goals']['requirement_goal_status']='MET'
+    board['goals'].pop('original_closure_milestone_status');board['goals'].pop('original_open_target_status')
+    result=tool.inspect(**case)
+    assert result['board_recorded_session_success'] is True
+    assert result['board_recorded_status_scope']=='minimum-closure-milestone/v1'
+    assert result['original_closure_milestone_met'] is True
+    assert result['original_open_target_met'] is False and result['session_success'] is False
+
+
+@pytest.mark.parametrize('schema,profile',[(1,tool.PROFILE),(2,tool.LEGACY_PROFILE),(True,tool.LEGACY_PROFILE),(2,'unknown')])
+def test_board_profile_version_mismatch_is_refused(case,schema,profile):
+    case['board'].update(schema_version=schema,profile=profile)
+    with pytest.raises(ValueError):tool.inspect(**case)
+
+
+def test_v2_cannot_relabel_minimum_milestone_as_strict_success(case):
+    close_task(case);close_original(case)
+    case['board']['goals']['requirement_goal_status']='MET';case['board']['session_success']=True
+    with pytest.raises(ValueError):tool.inspect(**case)
 
 
 @pytest.mark.parametrize('change', [

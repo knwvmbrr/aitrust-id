@@ -1,0 +1,67 @@
+{
+  "pass": false,
+  "captured_at": "2026-11-21T22:26:31.263991+00:00",
+  "kind": "session_open_target_ignored_original",
+  "source_commit": "a0c59d27dc4597599422a9f356978901e597f49d",
+  "source_sha256": {
+    "tools/session_delivery.py": "7d612f8eb684922b4e211b580cffd2bdc8eabbb513ce311ef73d4a8add45977f",
+    "scripts/session-delivery.py": "98e91a6e2ce2d4227578dae01b0d445b1f6e3f111b4ea20fcef9ffe103ae6720",
+    "docs/session-delivery.json": "04b2c0a4ffe830d0f03808f366ca6d55635a5a605ec372380ef1766a57c25009",
+    "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
+    "docs/scope-progress.json": "582e0c4b1d7c0b3f365293ba3789b3ee5fe59851e587e194be0eb737be4b0a23",
+    "docs/scope-delivery.json": "45099ed70bd388d557c43bca64fcbc9b37ef523a9135af3f50a47e1fe251271f"
+  },
+  "actual_strict_cli_exit_status": 0,
+  "actual_report": {
+    "active_tag_assignments_at_snapshot": 0,
+    "activity_is_live_heartbeat": false,
+    "baseline_commit": "3716233b9460efa57c1f0d01bfe30989395efcc4",
+    "baseline_original_complete": 132,
+    "board_sha256": "ff8dc7913dca6be6b718ecbc9d0ab533d66a79d812904cc11dc79282ec05c6a7",
+    "captured_at": "2026-11-21T22:26:31.258005+00:00",
+    "closures_to_target": 9,
+    "finished_scoped_tasks": [
+      "session-original-acceptance-audit",
+      "session-nf-explicit-passage",
+      "session-hp-detail-explorer",
+      "session-nf-independent-crossreview",
+      "session-hp-independent-crossreview",
+      "session-delivery-accounting",
+      "session-hp-accessibility-readiness",
+      "session-nf-unavailable-count",
+      "session-security-header-fixture",
+      "session-ps-credential-context",
+      "session-mt-authority-quotation",
+      "session-android-runtime-integration",
+      "session-public-credential-device",
+      "session-mt-mobile-quotation",
+      "session-web-js-notices",
+      "session-nf-device-reference",
+      "session-hp-device-uncertainty",
+      "session-android-malformed-share",
+      "session-pyodide-js-source-delivery"
+    ],
+    "independent_accuracy_evidence": false,
+    "kind": "session_delivery_accounting",
+    "new_original_closures": [
+      "F-030"
+    ],
+    "original_complete": 133,
+    "original_open": 69,
+    "original_requirement_goal_met": true,
+    "pass": true,
+    "reopened_originals": [],
+    "scope": "Identity, evidence hashes and delivery accounting only; full acceptance remains a review judgment.",
+    "scope_approval_granted": false,
+    "scoped_delivery_goal_met": true,
+    "session_id": "2026-11-19-original-closure-70-to-60",
+    "session_success": true,
+    "tag_bots": 14,
+    "target_open": 60
+  },
+  "finding": "The minimum-one-closure milestone was interpreted as session success despite the separately declared60-open target remaining unmet.",
+  "limits": [
+    "Public project accounting only; no acceptance, percentages or original criteria changed.",
+    "F030 genuine closure is preserved; this failure is goal-accounting, not a claim that the closure was invalid."
+  ]
+}
