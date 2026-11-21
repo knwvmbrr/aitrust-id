@@ -1,0 +1,79 @@
+{
+  "profile": "selected-pyodide-js-normal-preparation/v1",
+  "captured_at": "2026-11-21T09:29:52.714088+00:00",
+  "pass": true,
+  "prepared_by": "Codex /root/seo",
+  "source_commit_before_hook": "9bcbde78933ac0afd208ce7a1d7c59bc115f47f8",
+  "source_sha256": {
+    "site/scripts/prepare-device.mjs": "0e932c26b59fac4d3cb43288a2ca29f33a3e281c0a2559697ff8befb3a683ff5",
+    "tools/pyodide_js_sources.py": "e6702ea1949a46ccae76d1dbefaf5c5d76003a7b4f651d08d20b18ef64af2e00",
+    "scripts/pyodide-js-sources.py": "5dc7db3693a6cf2d02c888915dcd8aa3df2a4306005552392f23a2a656307d63",
+    "sbom/reviews/pyodide-js/manifest.json": "412dddb423851c9d60fff587679e883c36e89f76c92a932e369feace2b1c61ca"
+  },
+  "actual_commands": [
+    {
+      "argv": [
+        "node",
+        "site/scripts/prepare-device.mjs"
+      ],
+      "exit": 0,
+      "build_python_explicit": true,
+      "build_python_version": "3.12.14",
+      "result": "Existing PS projection and pinned runtime preparation completed, then exact three source/notice outputs exported."
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/pyodide-js-sources.py",
+        "--check-built",
+        "site/public"
+      ],
+      "exit": 0,
+      "result": {
+        "pass": true,
+        "profile": "selected-pyodide-js-source-notices/v1",
+        "preferred_source_files": 10,
+        "vendor_source_files": 2,
+        "verbatim_license_texts": 2,
+        "selected_runtime_members": 5,
+        "delivered_artifacts": 3,
+        "bundle_sha256": "0ab9f83496de972e9976677e2729d4931460f1c6cbb29b67de068454975fa412",
+        "full_wasm_corresponding_source": false,
+        "all_dependency_obligations": false,
+        "compiler_reproduced": false,
+        "signature_verified": false,
+        "legal_clearance": false,
+        "distribution_route_admitted": false
+      }
+    }
+  ],
+  "output_artifacts": {
+    "PYODIDE-JS-SOURCES.zip": {
+      "bytes": 1632140,
+      "sha256": "0ab9f83496de972e9976677e2729d4931460f1c6cbb29b67de068454975fa412"
+    },
+    "NOTICES.txt": {
+      "bytes": 18300,
+      "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+    },
+    "index.json": {
+      "bytes": 3006,
+      "sha256": "1f8b9166d3e1d562560ec979c59da27ebe837b524735aa6c4a0f9873510fa779"
+    }
+  },
+  "scope": "Only preparation hook and current prepared source tree; no whole website build, browser or public origin execution.",
+  "shared_producer_source_unchanged": true,
+  "claims": {
+    "full_wasm_corresponding_source": false,
+    "all_dependency_obligations": false,
+    "compiler_reproduced": false,
+    "signature_verified": false,
+    "legal_clearance": false,
+    "distribution_route_admitted": false
+  },
+  "generated_public_files_staged": false,
+  "limits": [
+    "Root owns post-Vite built-artifact gate, discoverable links, offline carriage, inventories, state and public publication.",
+    "No original closure, whole WASM source, global legal clearance or route admission."
+  ]
+}

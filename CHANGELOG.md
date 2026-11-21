@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-092952-pyodide-source-normal-build-hook-039e604d
+
+Recorded 2026-11-21T09:29:52.855488+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Added the selected source/notice exporter after existing pinned runtime preparation in the normal website build path.
+- **Evidence.** Actual prepare-device execution with the approved existing Python passes; exact current prepared runtime plus all three source/notice outputs pass the artifact gate without altering producer pins. [Change record](./runs/changes/2026-11-21-092952-pyodide-source-normal-build-hook-039e604d.json).
+- **Not claimed.** Only preparation integrated here; PM owns post-build gate, public links, offline handling and protected publication. No whole website test, legal clearance, full WASM or original closure claimed.
+
+
 ### 2026-11-21-092814-hp-uncertainty-browser-delivery-07aab8ec
 
 Recorded 2026-11-21T09:28:14.801687+00:00 · Contributor: Codex /root/web_camo · change
