@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-150238-remote-connector-linux-proof-and-optional-collection-2c41e2e3
+
+Recorded 2026-11-21T15:02:38.752281+00:00 · Contributor: Codex /root/web_camo; integration finding /root · change
+
+- **Changed.** Recorded actual clean nonroot Linux connector execution and cleanup; corrected optional SDK test collection while retaining strict dedicated fourteen-control verification.
+- **Evidence.** Exact789 tracked archive passed14 actual Linux groups with20 stable source identities and30 matching locked versions, private canary absent and owned workspace cleaned. Actual no-SDK stdlib import skips optional tests; dedicated verifier refuses without the SDK. [Change record](./runs/changes/2026-11-21-150238-remote-connector-linux-proof-and-optional-collection-2c41e2e3.json).
+- **Not claimed.** First Linux proof remains exact789 historical. Corrected test/verifier source needs fresh Linux execution; no runtime semantic change, public hosting, AI-account connection, hosted PII, accuracy or original closure.
+
+
 ### 2026-11-21-145412-remote-ps-http-mcp-connector-2afd3d42
 
 Recorded 2026-11-21T14:54:12.550048+00:00 · Contributor: Codex /root/web_camo; distinct review /root/seo; PM /root · change
