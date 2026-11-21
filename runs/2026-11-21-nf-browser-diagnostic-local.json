@@ -1,0 +1,70 @@
+{
+  "profile": "nf-browser-closed-diagnostics-local/v1",
+  "captured_at": "2026-11-21T09:41:30.426219+00:00",
+  "pass": true,
+  "prepared_by": "Codex /root/seo",
+  "source_base": "17129391d95168b8fb15b849328464167cd91ca2",
+  "source_sha256": {
+    "scripts/verify-nf-client.cjs": "f32e64d3503c8df05e63b341ab5b7b4013a6882d997eb7788e74d8d0260c0047",
+    "scripts/verify-nf-device.cjs": "a01d7298e1964054b16834e9f46ae9ec957e8a9d8ebab2038989329293ec0e34",
+    "tests/nf-browser-diagnostics.cjs": "838e19f3639faa9734658f85e1d812e232d005d50db38745c5fecd7e4646fb63",
+    ".github/workflows/nf-browser-diagnostic.yml": "84f8370e95492ebb6eb409af135e8513519df27b00da97aa2ce54f02085d6167"
+  },
+  "focused_controls": {
+    "argv": [
+      "node",
+      "--test",
+      "tests/nf-browser-diagnostics.cjs"
+    ],
+    "passed": 8,
+    "duration_ms": 2635.68775,
+    "executed_components": [
+      "scripts/verify-nf-client.cjs",
+      "tests/nf-browser-diagnostics.cjs"
+    ],
+    "actual_inert_child_deadline_ms": 80,
+    "no_browser_executed": true
+  },
+  "current_browser_syntax_check": {
+    "argv": [
+      "node",
+      "--check",
+      "scripts/verify-nf-device.cjs"
+    ],
+    "exit": 0
+  },
+  "distinct_review": {
+    "reviewed_by": "Codex /root/web_camo",
+    "source_review_pass": true,
+    "browser_execution_by_reviewer": false,
+    "finding_corrected": "Final checkpoint write now precedes browser pass=true, and catch forces false; diagnostic IO cannot leave a contradictory success receipt."
+  },
+  "retained_checks": {
+    "authored_cases": 33,
+    "forged_result_cases": 8,
+    "browser_engines": 2,
+    "canonical_browser_outer_timeout_ms": 180000,
+    "explicit_UI_wait_timeout_ms": 50000,
+    "privacy_UI_lifecycle_and_other_tag_recovery_preserved": true
+  },
+  "hosted_execution": {
+    "status": "pending",
+    "runs_requested": 0,
+    "trigger": "Push to exact owned codex/nf-browser-diagnostic branch only",
+    "required_checks_modified": false,
+    "secrets_or_production_access": false
+  },
+  "original_failure": {
+    "source_head": "17129391d95168b8fb15b849328464167cd91ca2",
+    "run": 44888792342,
+    "attempt": 2,
+    "job": 136800694176,
+    "stage": "WebKit/invalid_cosine_then_literal",
+    "prior_log_sha256": "fc8d0a23bcac022b24b4ee095b510ddd8ba4cb012dd8de58e869f3dfef32ff14",
+    "root_cause_established": false
+  },
+  "limits": [
+    "Diagnostics only; unchanged acceptance and budgets.",
+    "No product reliability fix, independent detector accuracy, original requirement closure or release approval."
+  ]
+}

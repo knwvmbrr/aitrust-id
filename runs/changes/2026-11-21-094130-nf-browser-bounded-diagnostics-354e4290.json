@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-094130-nf-browser-bounded-diagnostics-354e4290",
+  "recorded_at": "2026-11-21T09:41:30.477234+00:00",
+  "author": "Codex /root/seo; distinct source review /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "17129391d95168b8fb15b849328464167cd91ca2",
+  "changed": "Added fixed nonraw process outcomes and browser stage/substep checkpoints to the bounded NF engineering verifier, with an isolated owned-branch nonrequired diagnostic job.",
+  "proves": "Eight focused diagnostic controls pass, including actual finite inert-child timeout, typed safe refusal and capped interrupted-progress persistence. Distinct review confirms all33cases,8forgeries,privacy/UI/recovery checks and original180/50second limits remain unchanged.",
+  "limits": "One actual Linux diagnostic execution is pending. No product root cause, reliability fix, independent accuracy, original closure or release approval is claimed. Branch-only diagnostic workflow is not a proposed automatic main integration.",
+  "scope_ids": [
+    "T-NF"
+  ],
+  "files": {
+    "scripts/verify-nf-client.cjs": "f32e64d3503c8df05e63b341ab5b7b4013a6882d997eb7788e74d8d0260c0047",
+    "scripts/verify-nf-device.cjs": "a01d7298e1964054b16834e9f46ae9ec957e8a9d8ebab2038989329293ec0e34",
+    "tests/nf-browser-diagnostics.cjs": "838e19f3639faa9734658f85e1d812e232d005d50db38745c5fecd7e4646fb63",
+    ".github/workflows/nf-browser-diagnostic.yml": "84f8370e95492ebb6eb409af135e8513519df27b00da97aa2ce54f02085d6167",
+    "docs/nf-browser-diagnostic-plan.md": "660f2f86bbb4a5d15a975f9435b6060e4c2aee649b8b1a7f157e90207c21ad50",
+    "runs/2026-11-21-nf-browser-diagnostic-local.json": "11dc8deea790f3a2622d470d102c974631d5c84c3fd0c5e8d4e4665f782e2218"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-nf-browser-diagnostic-local.json",
+      "sha256": "11dc8deea790f3a2622d470d102c974631d5c84c3fd0c5e8d4e4665f782e2218"
+    }
+  ],
+  "checks": []
+}

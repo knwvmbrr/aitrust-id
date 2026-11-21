@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-094130-nf-browser-bounded-diagnostics-354e4290
+
+Recorded 2026-11-21T09:41:30.477234+00:00 · Contributor: Codex /root/seo; distinct source review /root/web_camo · change
+
+- **Changed.** Added fixed nonraw process outcomes and browser stage/substep checkpoints to the bounded NF engineering verifier, with an isolated owned-branch nonrequired diagnostic job.
+- **Evidence.** Eight focused diagnostic controls pass, including actual finite inert-child timeout, typed safe refusal and capped interrupted-progress persistence. Distinct review confirms all33cases,8forgeries,privacy/UI/recovery checks and original180/50second limits remain unchanged. [Change record](./runs/changes/2026-11-21-094130-nf-browser-bounded-diagnostics-354e4290.json).
+- **Not claimed.** One actual Linux diagnostic execution is pending. No product root cause, reliability fix, independent accuracy, original closure or release approval is claimed. Branch-only diagnostic workflow is not a proposed automatic main integration.
+
+
 ### 2026-11-21-091323-nov21-final-closeout-source-evidence-f038e00f
 
 Recorded 2026-11-21T09:13:23.050944+00:00 · Contributor: Codex /root; exact inventory review /root/seo · change
