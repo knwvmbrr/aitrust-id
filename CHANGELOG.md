@@ -16,6 +16,15 @@ Recorded 2026-11-21T04:38:19.116678+00:00 · Contributor: Codex / web_camo · ch
 - **Changed.** Add failure-only bounded dialog/route identity context and operation-stage attribution to the existing accessibility verifier, with isolated privacy controls.
 - **Evidence.** Four focused unchanged actual MTdark-to-IV checks pass without reproducing historical timeout. Final source-hashed browser controls suppress private DOM/input/hash/context values, discriminate expected dialog identity and bound closed/missing/hung-page failure observation. [Change record](./runs/changes/2026-11-21-043819-dialog-measurement-failure-context-5b677ad1.json).
 - **Not claimed.** Diagnostic-only; historical timeout cause UNESTABLISHED. Product/router source, successful site operations, waits, predicates and thresholds unchanged. No full-site rerun, workaround, original requirement closure, physical-phone, human or independent accuracy claim.
+### 2026-11-21-060609-web-js-independent-source-review-68e89229
+
+Recorded 2026-11-21T06:06:09.467431+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Record independent read-only review of corrected website notice packaging and its actual carried artifact, preserving the allocation finding and narrow refusal replays.
+- **Evidence.** Reviewed frozen producer238f952/current56214c9; cap1000 stops before notice reads and append remains521bytes, repeated logical notice copies are charged. Actual source-derived built consumer and35 notice spans match;34 archive packages plus1explicit unverified supplement; SPDX NOASSERTION and PS policy independence remain. [Change record](./runs/changes/2026-11-21-060609-web-js-independent-source-review-68e89229.json).
+- **Not claimed.** No producer edits, broad/archive/browser/build reruns, full dependency graph/source offers, exact2.3.8 correspondence, legal clearance, release approval or F057/X02 closure. Prior PS artifact execution remains historical; reviewer freshly checked policy only.
+
+
 ### 2026-11-21-054909-mt-mobile-result-formatting-6f4bc998
 
 Recorded 2026-11-21T05:49:09.459844+00:00 · Contributor: Codex / web_camo · change
