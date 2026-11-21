@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-173145-public-api-connection-instructions-e85fbbae",
+  "recorded_at": "2026-11-21T17:31:45.067742+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "abe7d64be77b03d19f51143f774fa51b59717e59",
+  "changed": "Published simple three-step optional MCP instructions and copyable HTTP request for the actually activated dedicated OVHcloud API while retaining local routes and the OpenAPI download.",
+  "proves": "Deployment worker supplied actual external trusted-chain and hostname HTTPS, health200/no-store, official MCP2.3.0 discovery of two tools and one PS example without submitted-text echo. Exact operational receipt preserved.",
+  "limits": "No new tests, browser checks or suites were run for this copy change. Root validation and website publication remain pending. ChatGPT/Claude account interfaces, provider approval, availability guarantees, independent accuracy and original requirement closure are not claimed.",
+  "scope_ids": [
+    "F-007",
+    "F-096"
+  ],
+  "files": {
+    "docs/remote-ai-connections.md": "0632e4155dd00ad0807615bf0cf11180a7e5ca3122132f931fd12daab4a5c77f",
+    "site/scripts/render-reference.mjs": "842892ef602e0a26e84c28c4d3518a0da96ed87b7538cb1ef234c95ed81aace9",
+    "runs/2026-11-21-public-api-connection-operational.json": "3051bf91bebc1e602f2bd736c67344025146e0c65cf40c7ba40e921231694cd1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-public-api-connection-operational.json",
+      "sha256": "3051bf91bebc1e602f2bd736c67344025146e0c65cf40c7ba40e921231694cd1"
+    }
+  ],
+  "checks": []
+}

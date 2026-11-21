@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-173145-public-api-connection-instructions-e85fbbae
+
+Recorded 2026-11-21T17:31:45.067742+00:00 · Contributor: Codex · change
+
+- **Changed.** Published simple three-step optional MCP instructions and copyable HTTP request for the actually activated dedicated OVHcloud API while retaining local routes and the OpenAPI download.
+- **Evidence.** Deployment worker supplied actual external trusted-chain and hostname HTTPS, health200/no-store, official MCP2.3.0 discovery of two tools and one PS example without submitted-text echo. Exact operational receipt preserved. [Change record](./runs/changes/2026-11-21-173145-public-api-connection-instructions-e85fbbae.json).
+- **Not claimed.** No new tests, browser checks or suites were run for this copy change. Root validation and website publication remain pending. ChatGPT/Claude account interfaces, provider approval, availability guarantees, independent accuracy and original requirement closure are not claimed.
+
+
 ### 2026-11-21-171829-google-search-discovery-status-974bb2b1
 
 Recorded 2026-11-21T17:18:29.540533+00:00 · Contributor: Codex /root observed; /root/seo documented · change
