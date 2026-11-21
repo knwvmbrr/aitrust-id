@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-163005-api-private-public-stage-boundary-78ebb2cd
+
+Recorded 2026-11-21T16:30:05.160474+00:00 · Contributor: Codex API deployment engineer · change
+
+- **Changed.** Separated private preparation from explicitly authorized public resume, anchored canonical unit records, and bounded complete startup health IO.
+- **Evidence.** 16 focused activation guards and distinct affected counterreview pass. Actual private service isolation passes with attached BPF, enforced limits and mount controls; actual hold inventory confirms no443/proxy exposure, unchanged persistence and healthy old staging. Private preparation cannot open public ingress; publication is a separate command. [Change record](./runs/changes/2026-11-21-163005-api-private-public-stage-boundary-78ebb2cd.json).
+- **Not claimed.** Root public-disclosure hold remains; no publicTLS or AI-host account connection yet. Historical generic private_app_started failure causes remain unestablished; separate verifier defects and rollbacks are retained. Runtime/units unchanged; no original closure.
+
+
 ### 2026-11-21-161541-api-packet-filter-probe-contract-7e43ca75
 
 Recorded 2026-11-21T16:15:41.620518+00:00 · Contributor: Codex API deployment engineer · change

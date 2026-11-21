@@ -4,7 +4,7 @@ import os
 from pathlib import Path
 import tempfile
 import unittest
-from unittest.mock import patch
+from unittest.mock import patch,Mock,MagicMock
 ROOT=Path(__file__).resolve().parents[1]
 s=importlib.util.spec_from_file_location('activate',ROOT/'deploy/ai-tools/activate.py');a=importlib.util.module_from_spec(s);s.loader.exec_module(a)
 class Activation(unittest.TestCase):
@@ -81,6 +81,48 @@ class Activation(unittest.TestCase):
             if mode=='missing':del changed['source_sha256']['NOTICE']
             self.assertFalse(a.approved_projection(a.APPROVED_COMMIT,changed))
         self.assertFalse(a.approved_projection('0'*40,manifest))
+
+    def test_readiness_waits_for_positive_health_with_fixed_budget(self):
+        import asyncio
+        calls=[]
+        async def attempt():calls.append(1);return len(calls)==2
+        with patch.object(a,'health_attempt',side_effect=attempt):self.assertEqual(a.wait_private_health(),{'ready':True,'attempts':2})
+        async def blocked():await asyncio.sleep(1);return True
+        with patch.object(a,'health_attempt',side_effect=blocked):
+            with self.assertRaisesRegex(ValueError,'private_health_unavailable'):a.wait_private_health(.02)
+    def test_late_positive_is_refused_after_absolute_deadline(self):
+        clock=[0]
+        async def late():clock[0]=6;return True
+        with patch.object(a,'ready_now',side_effect=lambda:clock[0]),patch.object(a,'health_attempt',side_effect=late):
+            with self.assertRaisesRegex(ValueError,'private_health_unavailable'):a.wait_private_health(5)
+    def test_canonical_unit_record_refuses_coherent_rebind(self):
+        import copy
+        hashes={n:a.digest(t.encode())for n,t in a.render.units(a.APPROVED_COMMIT).items()}
+        state={'commit':a.APPROVED_COMMIT,'unit_sha256':hashes,'installed_units':list(a.UNITS)};plan={'release_commit':a.APPROVED_COMMIT,'unit_sha256':copy.deepcopy(hashes),'release_source_sha256':a.APPROVED_SOURCE,'caddyfile_sha256':a.digest(a.render.caddyfile().encode()),'rule_tag':a.TAG,'public_port':443,'host':a.render.HOST}
+        self.assertTrue(a.approved_record(state,plan));badstate=copy.deepcopy(state);badplan=copy.deepcopy(plan);badstate['unit_sha256'][a.UNITS[0]]='0'*64;badplan['unit_sha256'][a.UNITS[0]]='0'*64;self.assertFalse(a.approved_record(badstate,badplan))
+    def test_private_preparation_cannot_insert_rule_or_start_proxy(self):
+        with tempfile.TemporaryDirectory()as d:
+            base=Path(d).resolve();files={'Caddyfile':a.render.caddyfile(),**a.render.units(a.APPROVED_COMMIT)};commands=[];units={};real=a.exclusive;exists=Path.exists;islink=Path.is_symlink
+            def ex(path,data,mode=0o600):
+                if str(path).startswith('/etc/systemd/system/'):
+                    units[path.name]=data;return
+                return real(path,data,mode)
+            def run(argv,timeout=20):
+                commands.append(argv)
+                return b'not-found'if argv[:2]==['systemctl','show']else b''
+            def present(path):
+                if str(path).startswith('/etc/systemd/system/aitrustid-ai-tools')or str(path)=='/var/lib/aitrustid-ai-tools-proxy':return False
+                return exists(path)
+            def linked(path):
+                if str(path).startswith('/etc/systemd/system/aitrustid-ai-tools'):return False
+                return islink(path)
+            def read(path,limit=131072):return b'base'if str(path)=='/etc/nftables.conf'else Path(path).read_bytes()
+            with patch.object(a,'BASE',base),patch.object(a,'checked_release',return_value=(base,{'source_sha256':a.APPROVED_SOURCE},files)),patch.object(a,'input_rules',return_value=[]),patch.object(a,'run',side_effect=run),patch.object(a,'read_regular',side_effect=read),patch.object(a,'exclusive',side_effect=ex),patch.object(a,'wait_private_health',return_value={'ready':True,'attempts':2}),patch.object(a,'isolation_proof',return_value={'pass':True}),patch.object(Path,'exists',present),patch.object(Path,'is_symlink',linked):
+                result=a.activate(a.APPROVED_COMMIT,True,'192.0.2.1')
+            self.assertTrue(result['pass']);self.assertEqual(result['phase'],'private_isolation_ready');self.assertFalse(result['public_activation_performed']);self.assertEqual(set(units),set(a.UNITS));self.assertFalse([x for x in commands if x[0]=='nft'and'-c'not in x]);self.assertNotIn(['systemctl','start',a.UNITS[1]],commands)
+    def test_public_resume_refuses_incomplete_private_stage_before_mutation(self):
+        with patch.object(a,'checked_record',return_value=(Path('/owned'),{'phase':'private_app_started'},{})),patch.object(a,'run',side_effect=AssertionError('must not mutate')):
+            with self.assertRaisesRegex(ValueError,'private_acceptance_unavailable'):a.publish('/owned','192.0.2.1')
 
     def test_invalid_release_identity_stops_before_any_external_command(self):
         with patch.object(a,'run',side_effect=AssertionError('must not execute')):
