@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-203332-mt-additive-peer-reviewed-source-ed902677
+
+Recorded 2026-11-21T20:33:32.240715+00:00 · Contributor: Codex /root integration · change
+
+- **Changed.** Recorded the distinct corrected-construction review for the standalone MT additive-language development tool.
+- **Evidence.** The separate reviewer reproduced refusal of the original construction forgery, checked genuine and boundary cases, and matched all 18 authored CLI proof source bindings at corrected commit dfdf5b81. [Change record](./runs/changes/2026-11-21-203332-mt-additive-peer-reviewed-source-ed902677.json).
+- **Not claimed.** This makes reviewed development source available for inspection; it is not an MT tag release, human accuracy validation, phone/browser delivery, main integration or F-019b/T-MT completion.
+
+
 ### 2026-11-21-202323-bind-choice-construction-before-brief-ec804bc4
 
 Recorded 2026-11-21T20:23:23.663870+00:00 · Contributor: Codex · change

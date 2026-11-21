@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-21-203332-mt-additive-peer-reviewed-source-ed902677",
+  "recorded_at": "2026-11-21T20:33:32.240715+00:00",
+  "author": "Codex /root integration",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "dfdf5b81e079fc35d00bd503410785032d3e1e98",
+  "changed": "Recorded the distinct corrected-construction review for the standalone MT additive-language development tool.",
+  "proves": "The separate reviewer reproduced refusal of the original construction forgery, checked genuine and boundary cases, and matched all 18 authored CLI proof source bindings at corrected commit dfdf5b81.",
+  "limits": "This makes reviewed development source available for inspection; it is not an MT tag release, human accuracy validation, phone/browser delivery, main integration or F-019b/T-MT completion.",
+  "scope_ids": [
+    "F-019b",
+    "T-MT"
+  ],
+  "files": {
+    "runs/2026-11-21-mt-additive-independent-review.json": "503f54bb3b277b013f0c8c0c40e4ab62b8dff7d6280f55a34048e66ca79b69fc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-mt-additive-independent-review.json",
+      "sha256": "503f54bb3b277b013f0c8c0c40e4ab62b8dff7d6280f55a34048e66ca79b69fc"
+    },
+    {
+      "path": "runs/2026-11-21-choice-additive-actual-cli-corrected.json",
+      "sha256": "8a21aca093a29163f790cf7a13f2f8964c5061bdd616bf59c9f9f20adf7e7fd8"
+    }
+  ],
+  "checks": []
+}

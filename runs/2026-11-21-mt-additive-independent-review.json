@@ -1,0 +1,51 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-21T20:27:33.024469+00:00",
+  "kind": "MT_additive_construction_corrected_independent_review",
+  "source_commit": "dfdf5b81e079fc35d00bd503410785032d3e1e98",
+  "source_hashes": {
+    "tools/choice_framing.py": "01ec221400300a302d561cfd88e6df7000465040966875a6ece25c6a4f4bbf36",
+    "tools/mt_workflow.py": "af66b65a8a6ee4028fb33da7a1435b771811e883da63e3ef230792efc133814d",
+    "scripts/check-choice-framing.py": "4b397aa383765119e16676ecf9e84d3695e26a718e3b2ac6072ff480d456982b",
+    "scripts/mt-evidence-worker.py": "b48786fbca7724e99df55d53bef319147f72a8646a9034db225f56bc6cdd01ef",
+    "scripts/prepare-choice-demo.py": "bd4a32a709b9e0977c9c2a2a2ed2922c404164373e2c965ca35e31f924db8cde",
+    "scripts/check-mt-evidence.py": "d7587045e92e79b670a3b7b9599651cbe4fe05e74229045b841d0bfddf478208",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "tests/test_choice_additive.py": "3be42d002e60200d39b77b3f3a2f871155a94bc5b9affeb3649dca6787290b7a",
+    "tests/test_choice_framing.py": "ea441907b0a8de0e0473d727c5f165f4e36f4cc396b2cd46f94dbc58dd247234",
+    "tests/test_choice_framing_cli.py": "2618d847830bf059a1ca44746b92880f4a89a653caac87f16a27124b37510f82",
+    "docs/choice-framing.md": "977dab3c662b4a3360b4e28b495ad4fd0b76e08f3b8e3e36ea2db0ccc6b52986",
+    "docs/choice-additive-plan.md": "d7d727e762c05f42abce2f032b874b9cc26b74181869283541eab0097dae147e"
+  },
+  "author_actual_cli_receipt": {
+    "path": "runs/2026-11-21-choice-additive-actual-cli-corrected.json",
+    "sha256": "8a21aca093a29163f790cf7a13f2f8964c5061bdd616bf59c9f9f20adf7e7fd8",
+    "actual_invocations": 17,
+    "all_bound_sources_match": true
+  },
+  "historical_failure_sha256": "1465198f997dfe0d564ede40fd03a3ec21a4b0209a6c6f22de14acb609f0eb00",
+  "executed_command": "python -B -m pytest -q tests/test_choice_additive.py -k \"consumer_replays_canonical_construction_before_specific_brief or optional_parent_grammar_replay_import_failure\"",
+  "actual_result": {
+    "exit": 0,
+    "passed": 7,
+    "deselected": 33,
+    "pytest_seconds": 0.34
+  },
+  "verified": [
+    "Original either_or to additive construction forgery refused before specific brief.",
+    "Reverse construction, both marker span edits, choice and context boundary edits refused; each genuine canonical record accepted.",
+    "Selected optional grammar import failure leaves authority usable and choice recovers.",
+    "Producer and consumer share one bounded finite marker recognizer, original worker/deadline retained."
+  ],
+  "source_stable": true,
+  "limits": [
+    "Focused authored synthetic engineering checks, not independent accuracy or manipulation/intent proof.",
+    "No full117 suite, Linux/browser/phone execution, production rollout or full original requirement closure by reviewer."
+  ]
+}
