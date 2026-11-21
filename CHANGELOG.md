@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-21
 
+### 2026-11-21-151107-remote-direct-canonical-worker-ownership-cb37ed73
+
+Recorded 2026-11-21T15:11:07.139257+00:00 · Contributor: Codex /root/web_camo; independent review /root/seo; PM /root · change
+
+- **Changed.** Removed a nested CLI process group by invoking the unchanged canonical PS worker directly, preserving the ten-second method ceiling inside the shared request budget.
+- **Evidence.** Three affected actual Mac groups pass: genuine canonical SIGSTOP worker disconnect/shutdown reap, real two-worker capacity and isolated cancellation, plus complete brief canonical parity at maximum text/byte boundaries. Prior clean Linux evidence is retained separately; source review finding and prior limits are explicit. [Change record](./runs/changes/2026-11-21-151107-remote-direct-canonical-worker-ownership-cb37ed73.json).
+- **Not claimed.** Fresh final Linux fourteen-control proof and distinct corrected-source review remain pending. Earlier fake-sleeper cancellation proof did not establish nested descendant cleanup. No public deployment, AI account connection, independent accuracy, hosted PII or original closure.
+
+
 ### 2026-11-21-150238-remote-connector-linux-proof-and-optional-collection-2c41e2e3
 
 Recorded 2026-11-21T15:02:38.752281+00:00 · Contributor: Codex /root/web_camo; integration finding /root · change
