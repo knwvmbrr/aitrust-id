@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-22
+
+### 2026-11-22-023659-synthid-reference-vendor-input-3dd4f5a4
+
+Recorded 2026-11-22T02:36:59.850353+00:00 · Contributor: Codex /root/web_camo; independent reviewer /root/seo · change
+
+- **Changed.** Delivered optional official SynthID Text0.3 token-only vendor evidence in the existing personal checks CLI, pinned source/notices/offline runtime, bounded owned worker and exact supported profile.
+- **Evidence.** Actual official tournament controls and15CLI cases with6canonical full-record comparisons; actual Mac offline install/use/removal, PS after SDK removal; focused failure/cleanup controls and different full-contract review. [Change record](./runs/changes/2026-11-22-023659-synthid-reference-vendor-input-3dd4f5a4.json).
+- **Not claimed.** Research statistics only; unbound token vs personal-text subjects; no threshold, tag, AI/human origin, Google production-key or independent accuracy claim. Protected integration and original ledger acceptance remain PM-owned.
+
+
 ## Unreleased — 2026-11-21
 
 ### 2026-11-21-232853-final-closeout-source-and-public-access-3b570971

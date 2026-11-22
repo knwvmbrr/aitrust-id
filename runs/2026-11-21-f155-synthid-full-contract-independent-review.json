@@ -1,0 +1,66 @@
+{
+  "captured_at": "2026-11-22T02:36:29.796389+00:00",
+  "pass": true,
+  "reviewed_by": "Codex /root/seo",
+  "profile": "F155-selected-SynthID-input-full-contract-review/v1",
+  "baseline_commit": "40d85dfabcd6a3d97b84977992d0523b0995c0d9",
+  "original_acceptance_sha256": "3d22d11ab22ee4f2aa4f32778a8695522c6ea92534b028873bdadcc771e5e665",
+  "master_contract": {
+    "baseline_job": "Specify and deliver synthID and vendor watermarking.",
+    "outcome": "The application extends supported tags without disabling the personal workflow.",
+    "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+    "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags."
+  },
+  "required_acceptance": [
+    "Deliver SynthID and vendor watermarking. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
+  ],
+  "current_source_sha256": {
+    "tools/synthid_input.py": "b51e0cd8022d72b3efee3e2ef8aed803298ea6f907329d58375912ac0c120e38",
+    "scripts/inspect-synthid-input.py": "0033624c6896fb90ea1bd06c011e18d744a7c22d472bc3e0478abd735a4dffb5",
+    "scripts/setup-synthid-reference.py": "bbdf4b56aaf9255438e8b7a50990cef5a0d82bab09d5ff4bdfa45ba75524287b",
+    "scripts/synthid-reference-practice.py": "6d79bdce38875f7bda742e1c3187466ddd7ef4297340c55f66f549d253deb267",
+    "scripts/check-tags.py": "bb57e5e49b1f6a305eabc84e04df771402c6ad9cf8119c6acc94037d1fd184d0",
+    "tests/test_synthid_input.py": "2bea469e6bca4c3060b981d777bad79dcd06d2f741b1174f5376e730d168e55b",
+    "docs/synthid-vendor-input.md": "ee1ff575217ceac64e66e7f98f2e02c4ec1040d8f84be75bbff1f401d446bbd2",
+    "docs/synthid-vendor-input-plan.md": "a1f3ff8195921c82111890760098e844c862130d8b53455777206a6ad7c54154",
+    "integrations/synthid-reference/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "integrations/synthid-reference/NOTICE": "137c4c9abf37757cbb9a11daaa0e32beccd895bd1f0d45fa31fbb44a2527341b",
+    "integrations/synthid-reference/UPSTREAM-README.md": "4601bb5c928d211f84e48af0242bf74ad955e4fe1407074915b965b5201e73b0",
+    "integrations/synthid-reference/requirements-macos-arm64.lock": "3bc9a88a03e35696e73877f60dd477676695de867a6cf3a4cfaa636aeedd539a",
+    "integrations/synthid-reference/sources.json": "e6abc9476ba0e5ad94b94bc85b0095c7055fe1a6cdb67782472b41f66e363503",
+    "integrations/synthid-reference/synthid_text/detector_frequentist.py": "a8a8092b2f741307579be4c82aeaa96a8c6712a0b8f254eddb0be8a344600ec7",
+    "integrations/synthid-reference/synthid_text/hashing_function.py": "8be617a6e1a302eda10135aa09312db8d3fb80ab1b3bf71c70538f1ded204b04",
+    "integrations/synthid-reference/synthid_text/logits_processing.py": "fcf4d2c3902dbf52e646c189bc508fa1ed5b7cf4e55c595cf5fbd9972036226b",
+    "integrations/synthid-reference/wheel-origins-macos-arm64.json": "261180b7da04249423f4a71bb954db2089ba0f86a050e1ec269601497a1b4bb8",
+    "tests/fixtures/synthid-reference/unmarked.json": "20fbd8332ff577c752b3cc9cd5f518cda30af9a0cb0dc31e3c955c49fa34a7e7",
+    "tests/fixtures/synthid-reference/watermarked.json": "daa1e57cfdaf1c57bc616b33d5515502841a0970c1713f0af963606ec6d606f7"
+  },
+  "retained_receipts": {
+    "runs/2026-11-21-synthid-current-cli.json": "83fdcb3a6a0deb974fdee9ad3d2b235f8674fd944b42390472b95b198914126c",
+    "runs/2026-11-21-synthid-install-removal-current.json": "cfedbb0ad24b7a7a2507e2b4a1fdf9b2b8e0937148026960afb23851ef1e8ad9",
+    "runs/2026-11-21-synthid-final-portability-and-guide.json": "c94f01a1dac4f88f3a73b223ecea3de7f348c317fb97770f8fb55ad31aa5693b"
+  },
+  "receipt_integrity": {
+    "19_execution_bindings_before_after_equal": true,
+    "current17_runtime_and_other_bindings_equal": true,
+    "two_later_test_guide_deltas_exactly_declared": true,
+    "actual15cases_six_full_records_correctly_counted": true,
+    "actual_owned_optional_runtime_absent_at_review": true
+  },
+  "actual_reviewer_execution": "Previously recorded2transport controls: original actual selector-constructor fault child reaped and normal finite transport succeeds, exactb51e source. No SDK or lifecycle rerun by reviewer.",
+  "corrected_process_review_sha256": "f523fd7ec75e88b6e235a908680b1f05cb3e8d277d6e2459afc257c66068ef51",
+  "assessment": "No remaining original software-contract gap identified FOR ROOT integration and protected supported-source publication. Recommend full original F155 software acceptance after exact integration/source registration/protected checks/publication complete; no ledger edit by reviewer.",
+  "full_contract_map": {
+    "actual_vendor_input": "Exact official reference computation, declared token/key/config, raw p-value/positions, versioned source-bound supported+failure observations. No generic empty envelope.",
+    "no_blanket_truth": "Unverified/no tag/origin; token subject UNBOUND from personal text, research conditional statistics rather than AI probability or production key verification.",
+    "install_use_removal": "Actual selected macOS27.2 arm64 CPython3.12.14 private offline40package install/use/remove, source-bound evidence and owned path absent. Other platforms not executed.",
+    "outage_and_independent_personal_checks": "Missing SDK/invalid input/import/worker faults remain vendor-only; actual postremovePSFINDING and legacydefaultrecordequal.",
+    "support_permissions_privacy": "Guide declares selected limits/compatibility/operator-trusted runtime, no model/account/service/storage/upload, explicit linkableJSON only.",
+    "numeric_tag_gates": "No tag/threshold is introduced; preaccepted input-only contract does not invent a numeric tag decision."
+  },
+  "limits": [
+    "Retained author SDK/lifecycle evidence inspected, not independently rerun. Whole-record parity uses same official source, not independent scientific validation.",
+    "No Gemini production watermark, decoded credential, FA/PA, AI/human origin, factual truth, accuracy, broad vendor/media support or global license clearance.",
+    "Original full criteria not changed; source publication and PM full acceptance remain separate required integration actions."
+  ]
+}
