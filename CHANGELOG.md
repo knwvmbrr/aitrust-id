@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-064651-expose-reference-programme-without-claiming-authority-0cfd9183
+
+Recorded 2026-11-22T06:46:51.651467+00:00 · Contributor: Codex /root/share_debugger; integration lead owns acceptance and publication · change
+
+- **Changed.** Added reference-programme README practice, About links, three exact public reference copies and a dedicated read-only CI verifier without altering frozen programme runtime.
+- **Evidence.** Executed actual reference-copy block and verified all three exact outputs/link targets; shell/module/JSX/YAML/embedded-Python syntax and full current source-trigger coverage pass. All eight existing39-test/30-command runtime source hashes remain unchanged. [Change record](./runs/changes/2026-11-22-064651-expose-reference-programme-without-claiming-authority-0cfd9183.json).
+- **Not claimed.** No unchanged runtime batch repeated, hosted job, integrated browser/build or public delivery performed. No accreditation, actual certifier, mark authority, independent accuracy, institution activation or original-count change. Distinct discovery review requested.
+
+
 ### 2026-11-22-063017-integrate-complete-reference-programme-151ab741
 
 Recorded 2026-11-22T06:30:17.151077+00:00 · Contributor: Codex PM /root; author /root/seo; reviewer /root/web_camo · change

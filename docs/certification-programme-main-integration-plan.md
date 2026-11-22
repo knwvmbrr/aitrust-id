@@ -27,3 +27,26 @@ identity; hash linkage is not a signature or tamper-proof journal. Preserve
 explicit false authority flags, no-overwrite/private output limits, terminal
 withdrawal rules, fresh-ID migration and fixed source/policy identity. Do not
 weaken privacy, conflict, missing-evidence or independent-accuracy gates.
+
+## Discovery and CI implementation plan — before edits
+
+Isolated branch `codex/f145-discovery`, base `d3e0cb93`. Keep the eight reviewed
+programme runtime/test/guide inputs unchanged. Add a README practice quickstart,
+copy only the programme design, usage guide and policy matrix through the existing
+reference allowlist, and link the design/guide from the existing About workflow.
+Use existing layout, typography and links; do not add a mark, new public service,
+operating institution claim, policy archive revision or tag dependency.
+
+A dedicated read-only GitHub job uses pinned checkout/Python/upload actions and
+the existing stdlib-only verifier on Python3.13. No project package/model/service
+installation is needed. Trigger on the actual programme and its consumed
+conformance/source dependencies, and preserve false authority/privacy claims.
+The job's actual actor is GitHub Actions; the verifier's historical hardcoded
+author field is source attribution, not authentication of the runtime operator.
+
+Risks are dead reference links, discoverability copy implying accreditation,
+accidentally changing frozen source/evidence and CI admitting partial operation.
+Verify the actual new reference-copy block in isolation, link targets, syntax and
+workflow source/guards, and compare all eight bytes to the existing39-test/30-CLI
+root receipt. Do not rerun those unchanged runtime batches. PM owns the integrated
+browser/build, shared source inventories, publication and original acceptance.
