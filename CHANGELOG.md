@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-055521-record-current-delivery-engineering-packet-f5ca3c80
+
+Recorded 2026-11-22T05:55:21.266447+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded the complete current-source engineering packet, refreshed the finite boundary inventory and set actual verification state before normal publication.
+- **Evidence.** All five selected capability receipts and7840source boundary are current; the original scope remains135complete67open with only N-001/N-010 newly completed. [Change record](./runs/changes/2026-11-22-055521-record-current-delivery-engineering-packet-f5ca3c80.json).
+- **Not claimed.** Independent tag release remains unapproved. The reviewed F145 design is a separate public candidate, not yet integrated or counted. Protected merge, real artifact signing and live site verification remain pending.
+
+
+### 2026-11-22-054954-checked-site-website-26b9d3bf
+
+Recorded 2026-11-22T05:49:54.767672+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated website execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-054954-checked-site-website-26b9d3bf.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
 ### 2026-11-22-053704-prepare-current-host-performance-projections-3289d127
 
 Recorded 2026-11-22T05:37:04.752563+00:00 · Contributor: Codex PM /root · change
