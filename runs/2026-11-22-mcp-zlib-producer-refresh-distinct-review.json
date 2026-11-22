@@ -1,0 +1,58 @@
+{
+  "profile": "bounded-retained-evidence-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T14:55:23.032814+00:00",
+  "reviewed_by": "/root/seo",
+  "author_evidence": {
+    "path": "runs/2026-11-22-mcp-zlib-producer-refresh.json",
+    "sha256": "36b24ebc1bf8d45ed1b6dcea9b421d1967b133677b6cd82ea7d9e3d74d3f27de"
+  },
+  "original_manifest_sha256": "baf610ed2d6db1123e1e091cac13814e2f80cb08620924596d1b939c351f2709",
+  "current_manifest_sha256": "e813ca64d1b0d021ee2a9df2d32034f68718bfb73a0bab8085554dde03dc42e4",
+  "findings": [],
+  "observed": {
+    "original_history_bytes_equal_immutable_pre_refresh_git": true,
+    "only_manifest_value_changed": "producer_sha256.tools/dependency_policy.py",
+    "current_producer_and_retained_input_hashes_verified": 11,
+    "unchanged_producer_cli_and_foundation_git_bytes": 3,
+    "existing_five_runtime_sizes_hashes_and_manifest_projection_match": true,
+    "qualified_hosted_source_bindings_current": 439,
+    "producer_claimed_in_memory_deterministic_outputs": {
+      "NOTICES.txt": {
+        "bytes": 7912,
+        "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+      },
+      "ZLIB-SOURCES.zip": {
+        "bytes": 1682541,
+        "sha256": "4d5162fda2a3b0b64b627f0cac619b585bc5b0b20f4d075b6c00d0dd59143569"
+      },
+      "index.json": {
+        "bytes": 1858,
+        "sha256": "cae62e752eb614410c233289b1069795e6779db91a294256aecb9ad5bd2d4789"
+      }
+    },
+    "author_actual_default_cli_before_exit": 2,
+    "author_actual_default_cli_after_exit": 0
+  },
+  "source_sha256": {
+    "scripts/zlib-source-delivery.py": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe",
+    "tools/dependency_policy.py": "7a7f084eb44046feccf01cc208ac862393204886326d3cd3bb136992d3337833",
+    "tools/pyodide_js_sources.py": "5f964360f591fcfbe4fabe24a214d4430dc639c38e608818f8e5fe870c546e4e",
+    "tools/zlib_source_delivery.py": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a",
+    "sbom/reviews/zlib-runtime/sources/d3d8ca9a7caac82fa68e4984e47c03386093b8fa2b068e8e9eccedd3aa406926.py": "d3d8ca9a7caac82fa68e4984e47c03386093b8fa2b068e8e9eccedd3aa406926",
+    "sbom/reviews/zlib-runtime/sources/620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86.txt": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+    "sbom/reviews/zlib-runtime/sources/3fdaedb6b2d1bb6d88754183f94f7af33c17eb3fea084bb12bde3f6321a54089.json": "3fdaedb6b2d1bb6d88754183f94f7af33c17eb3fea084bb12bde3f6321a54089",
+    "sbom/reviews/zlib-runtime/sources/17e88863f3600672ab49182f217281b6fc4d3c762bde361935e436a95214d05c.tar.gz": "17e88863f3600672ab49182f217281b6fc4d3c762bde361935e436a95214d05c",
+    "sbom/reviews/zlib-runtime/sources/fbab901f75feb30106921191b00a52ed14fb439e49ad0e42bc7b329438c34d24.txt": "fbab901f75feb30106921191b00a52ed14fb439e49ad0e42bc7b329438c34d24",
+    "sbom/reviews/zlib-runtime/sources/8a5579af72ea4f427ff00a4150f0ccb3fc5c1e4379f726e101133b1ab9fc600c.h": "8a5579af72ea4f427ff00a4150f0ccb3fc5c1e4379f726e101133b1ab9fc600c",
+    "sbom/reviews/zlib-runtime/sources/845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243.txt": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+  },
+  "limits": [
+    "Reviewer performed source, Git identity and retained byte/hash checks only; did not execute producer, CLI, WASM, browser, downloads, installs or site build.",
+    "Author in-memory producer/ZIP inspection is retained execution evidence; not independently rerun and not a filesystem export or check-built.",
+    "The qualification itself binds439 inputs; author refresh additionally reports440 qualified bindings. Reviewer verifies the439-row qualification map and does not invent a440th row.",
+    "A guessed reviewer site runtime path was absent; corrected to author-specified existing pinned package files, all five verified. No product failure inferred.",
+    "Historical WASM observation not freshly executed; no full WASM correspondence, global route admission, license clearance, signature, protected publication or original closure."
+  ],
+  "public_safe": true
+}

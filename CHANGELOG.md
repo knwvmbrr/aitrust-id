@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-145557-mcp-zlib-refresh-distinct-review-c3215762
+
+Recorded 2026-11-22T14:55:57.896527+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Retained distinct source/input review of the current selected zlib producer refresh.
+- **Evidence.** Reviewer verified the exact immutable old manifest, sole policy-hash delta,11 producer/input identities, five installed runtime file identities and439 hosted qualification bindings. The author440-file refresh comparison additionally includes its locally frozen architecture plan. [Change record](./runs/changes/2026-11-22-145557-mcp-zlib-refresh-distinct-review-c3215762.json).
+- **Not claimed.** Read-only byte review without a producer rerun, filesystem export, site build or WASM execution. Actual hosted delivery, route admission, cryptographic attestation, legal clearance and full F057/X02 remain pending.
+
+
+### 2026-11-22-145450-mcp-zlib-current-producer-replay-df4272ec
+
+Recorded 2026-11-22T14:54:50.215407+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Replayed the selected zlib source/notice producer against the current optional MCP policy-helper source while preserving its exact historical manifest.
+- **Evidence.** Existing expected_manifest, checked and outputs executed on retained pinned source, recipe, grants and old runtime observation. Only the actual policy producer hash differs; default verification changes from refusal to pass, two in-memory output generations agree, six ZIP members verify, five existing runtime files match, and440 MCP bindings remain unchanged. [Change record](./runs/changes/2026-11-22-145450-mcp-zlib-current-producer-replay-df4272ec.json).
+- **Not claimed.** Below2GiB reserve: no filesystem export, built-site check, WASM execution, full Emscripten archive replay, acquisition or install. Current hosted site delivery still pending. No source code, route admission, signature, license clearance or full F057/X02 closure.
+
+
+### 2026-11-22-144957-mcp-four-target-distinct-review-4055dde6
+
+Recorded 2026-11-22T14:49:57.087826+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Preserved distinct retained-artifact review of the actual four-target MCP qualification.
+- **Evidence.** Reviewer compared all4 API artifact hashes,40 JSON members,439 source bindings, actual target observations and44/30/940/8 per-target results; selected SPDX denial occurred before zero signer invocations. [Change record](./runs/changes/2026-11-22-144957-mcp-four-target-distinct-review-4055dde6.json).
+- **Not claimed.** Source/evidence review without a repeat install, download, artifact reconstruction or cryptographic signature check. Runtime ZIP and SPDX payloads were not uploaded. MCP admission, shared integration, legal clearance and full F057/X02 remain open.
+
+
+### 2026-11-22-144648-mcp-four-target-hosted-qualification-2e04ba2d
+
+Recorded 2026-11-22T14:46:48.417758+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Recorded actual first-attempt four-target offline MCP qualification on a draft development PR.
+- **Evidence.** Four selected hosted targets each passed44 focused controls without skips, exact30-package offline installation,940 payload checks and8 fixed SDK controls;439 shared source bindings and artifact/SPDX identities match, and managed release is refused before any signature verifier. [Change record](./runs/changes/2026-11-22-144648-mcp-four-target-hosted-qualification-2e04ba2d.json).
+- **Not claimed.** Actual checkout is PR synthetic merge c5b83d6ddc9198b36cee67d717c56c06582147d4 for head782807ca4aa589e324dad9cf8aeded278af8b9c3. No signature, admission, main merge, legal clearance, independent accuracy or full F057/X02 closure. Raw bounded artifacts remain private; shared integration/source-cap review remains pending.
+
+
 ### 2026-11-22-143752-mcp-offline-runtime-distribution-a0dd03dd
 
 Recorded 2026-11-22T14:37:52.660566+00:00 · Contributor: Codex / share_debugger · change
