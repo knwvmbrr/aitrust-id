@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-123035-image-private-diagnostic-capture-b8955f3d",
+  "recorded_at": "2026-11-22T12:30:35.859692+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8186929ec7a54ac749ba234fb865ac418c200150",
+  "changed": "Added a fixed fault-case label to mobile verification failures and preserved detailed image delivery diagnoses.",
+  "proves": "The diagnostic keeps the same assertions and timeouts; actual focused mobile fault/recovery controls pass, while earlier failed full candidates remain failed with unknown causes.",
+  "limits": "No production behavior repair or reliability guarantee. Full current website execution, protected checks and public delivery remain pending.",
+  "scope_ids": [
+    "F-035",
+    "F-120"
+  ],
+  "files": {
+    "docs/image-release-diagnostics-plan.md": "4b449b073a6cbf1c80d83e3701ca556e8bc6757cb19733c0774993ce306e2038",
+    "scripts/verify-mobile-payload.cjs": "5b68534bfd7157954069620d3059806724ca324afb287974827267b488b2e27f",
+    "runs/2026-11-22-image-detailed-build-mobile-diagnosis.json": "2c838874e032bcaf72905a00d9ace9429d5027db550983df356dd7e4a9e3bbbd"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-image-detailed-build-mobile-diagnosis.json",
+      "sha256": "2c838874e032bcaf72905a00d9ace9429d5027db550983df356dd7e4a9e3bbbd"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-115547-image-second-catalogue-failure-f9473e57",
+  "recorded_at": "2026-11-22T11:55:47.014786+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8186929ec7a54ac749ba234fb865ac418c200150",
+  "changed": "Recorded the second failed integrated image website candidate before further build diagnosis.",
+  "proves": "The full combined website check still fails at catalogue despite a focused catalogue pass. Both original failure records are retained.",
+  "limits": "Root cause remains under diagnosis; no image deployment or release approval. The later detailed run correctly refused an uncovered new run record in prebuild.",
+  "scope_ids": [
+    "F-035",
+    "F-120"
+  ],
+  "files": {
+    "runs/2026-11-22-image-final-website.json": "15a6f3c177d83aaef60a55500a0b1802dd3c39bf71d76233141419d495fb99b5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-image-final-website.json",
+      "sha256": "15a6f3c177d83aaef60a55500a0b1802dd3c39bf71d76233141419d495fb99b5"
+    }
+  ],
+  "checks": []
+}

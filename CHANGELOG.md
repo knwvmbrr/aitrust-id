@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-141351-image-current-delivery-packet-f6448d4f
+
+Recorded 2026-11-22T14:13:51.115076+00:00 · Contributor: Codex · change
+
+- **Changed.** Accepted all five current image delivery capability checks, preserved failures and refreshed the complete66-original audit.
+- **Evidence.** All64 current website commands pass on unchanged sources, including actual FA browser records. Current PS, PII, extension and protocol receipts pass. Accessibility selection now fails solely for four missing real human reviews. [Change record](./runs/changes/2026-11-22-141351-image-current-delivery-packet-f6448d4f.json).
+- **Not claimed.** Protected/public image delivery remains pending. FA remains planned, no independent detector accuracy or human accessibility approval; original scope136complete/66open, target60 not met.
+
+
+### 2026-11-22-135920-fa-discovery-preview-regression-2ae5df4f
+
+Recorded 2026-11-22T13:59:20.183756+00:00 · Contributor: Codex · change
+
+- **Changed.** Corrected stale FA discovery regression while preserving planned-tag and no-AI-origin boundaries.
+- **Evidence.** The unchanged FA preview copy now has its own strict discovery contract using its actual presentation state; other unavailable tags retain no-checker assertions. Focused SEO tests pass. [Change record](./runs/changes/2026-11-22-135920-fa-discovery-preview-regression-2ae5df4f.json).
+- **Not claimed.** No FA release or accuracy claim; prior failed full and continued executions remain immutable. Fresh website validation remains required; the first authored assertion read the wrong layer and was corrected before acceptance.
+
+
+### 2026-11-22-123035-image-private-diagnostic-capture-b8955f3d
+
+Recorded 2026-11-22T12:30:35.859692+00:00 · Contributor: Codex · change
+
+- **Changed.** Added a fixed fault-case label to mobile verification failures and preserved detailed image delivery diagnoses.
+- **Evidence.** The diagnostic keeps the same assertions and timeouts; actual focused mobile fault/recovery controls pass, while earlier failed full candidates remain failed with unknown causes. [Change record](./runs/changes/2026-11-22-123035-image-private-diagnostic-capture-b8955f3d.json).
+- **Not claimed.** No production behavior repair or reliability guarantee. Full current website execution, protected checks and public delivery remain pending.
+
+
+### 2026-11-22-115547-image-second-catalogue-failure-f9473e57
+
+Recorded 2026-11-22T11:55:47.014786+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the second failed integrated image website candidate before further build diagnosis.
+- **Evidence.** The full combined website check still fails at catalogue despite a focused catalogue pass. Both original failure records are retained. [Change record](./runs/changes/2026-11-22-115547-image-second-catalogue-failure-f9473e57.json).
+- **Not claimed.** Root cause remains under diagnosis; no image deployment or release approval. The later detailed run correctly refused an uncovered new run record in prebuild.
+
+
+### 2026-11-22-110615-image-website-first-diagnosis-76c2639c
+
+Recorded 2026-11-22T11:06:15.919853+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved the first combined website failure and the owned-fixture catalogue diagnosis.
+- **Evidence.** The current catalogue passes focused execution after a failed integrated catalogue phase; the original failing receipt and unknown root cause remain explicit. [Change record](./runs/changes/2026-11-22-110615-image-website-first-diagnosis-76c2639c.json).
+- **Not claimed.** No source fix or known root cause is claimed. A complete fresh website execution remains required before publication.
+
+
+### 2026-11-22-102725-image-current-four-capabilities-984cfe0a
+
+Recorded 2026-11-22T10:27:25.814985+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current image-delivery PS, PII, extension and protocol execution, preserving earlier observations.
+- **Evidence.** All four selected capability runs pass with unchanged sources; the final protocol run includes the accessibility evidence-selection repair. [Change record](./runs/changes/2026-11-22-102725-image-current-four-capabilities-984cfe0a.json).
+- **Not claimed.** Website64 and protected/public image delivery remain pending. No new original closure or independent tag accuracy.
+
+
 ### 2026-11-22-102301-consume-real-automated-accessibility-receipts-ecb53264
 
 Recorded 2026-11-22T10:23:01.769390+00:00 · Contributor: Codex PM /root · change
