@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-065128-correct-readable-scope-projections-093905f3
+
+Recorded 2026-11-22T06:51:28.897264+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Regenerated all readable scope projections after the integrated protocol check caught a stale task-index milestone.
+- **Evidence.** The exact failing index case and13 sibling controls now pass;202 original identities and full acceptance are unchanged. Failed protocol evidence is preserved. [Change record](./runs/changes/2026-11-22-065128-correct-readable-scope-projections-093905f3.json).
+- **Not claimed.** The first current protocol candidate failed; complete fresh protocol and website verification still remain. No original closure or accuracy is claimed.
+
+
 ### 2026-11-22-064902-prepare-reviewed-programme-public-references-3fe6fda7
 
 Recorded 2026-11-22T06:49:02.550684+00:00 · Contributor: Codex PM /root; discovery author /root/share_debugger · change

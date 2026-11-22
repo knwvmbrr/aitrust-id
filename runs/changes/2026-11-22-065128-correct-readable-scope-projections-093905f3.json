@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-065128-correct-readable-scope-projections-093905f3",
+  "recorded_at": "2026-11-22T06:51:28.897264+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8e659116835a719f4efaa50c8f2eb09ef20d1495",
+  "changed": "Regenerated all readable scope projections after the integrated protocol check caught a stale task-index milestone.",
+  "proves": "The exact failing index case and13 sibling controls now pass;202 original identities and full acceptance are unchanged. Failed protocol evidence is preserved.",
+  "limits": "The first current protocol candidate failed; complete fresh protocol and website verification still remain. No original closure or accuracy is claimed.",
+  "scope_ids": [
+    "F-145"
+  ],
+  "files": {
+    "docs/scope-progress.md": "4662e846b7848ca31ad71aa150c9664a9560148c05fff09fdce0e9f2c5cdea13",
+    "docs/scope-task-index.md": "2639b1cc8025c84dced42b0a1c6bbfb898b5a7e2096e04a2ea687bd48529972e",
+    "runs/2026-11-22-programme-mt-protocol.json": "c78a3815fcbafbeb7ba7c9856b9ff4bf37996d6ffbe87195c96b718bf80acbe6",
+    "runs/2026-11-22-programme-mt-scope-projection-correction.json": "14d8ae03fbd1c0568011b1fe9cde6cdf3294214c3db1aaea156738470e459f7e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-programme-mt-protocol.json",
+      "sha256": "c78a3815fcbafbeb7ba7c9856b9ff4bf37996d6ffbe87195c96b718bf80acbe6"
+    },
+    {
+      "path": "runs/2026-11-22-programme-mt-scope-projection-correction.json",
+      "sha256": "14d8ae03fbd1c0568011b1fe9cde6cdf3294214c3db1aaea156738470e459f7e"
+    }
+  ],
+  "checks": []
+}
