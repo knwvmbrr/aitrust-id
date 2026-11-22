@@ -1,0 +1,73 @@
+{
+  "captured_at": "2026-11-22T07:02:49.675964+00:00",
+  "author": "Codex / web_camo",
+  "profile": "image-device-initial-source-controls/v1",
+  "pass": true,
+  "executed_controls": {
+    "Python_focused": {
+      "passed": 9,
+      "seconds": 0.19,
+      "command": [
+        "/Users/raashad/Downloads/aitrust-id-coordination/verification-venv/bin/python",
+        "-m",
+        "pytest",
+        "tests/test_image_device.py",
+        "-q"
+      ]
+    },
+    "Node_client": {
+      "groups": 10,
+      "canonical_records": 16,
+      "corrupt_records_refused": 11,
+      "private_getter_reads": 0,
+      "preallocation_gate_before_reader_worker": true,
+      "capture_abort_deadline": true,
+      "command": [
+        "node",
+        "--test",
+        "tests/image-metadata-client.mjs"
+      ]
+    },
+    "actual_static_builder": {
+      "exit_code": 0,
+      "five_existing_runtime_files_hashed": true,
+      "runtime_or_SDK_executed": false,
+      "new_dependencies_installed": false
+    }
+  },
+  "source_identity_captured_after_controls": true,
+  "sources": {
+    "docs/image-device-guide.md": "b0cab95374056e25ece9113ad9f9d75c15d4ff48bcb92ba2799a4ef1b4ebda1b",
+    "docs/image-device-plan.md": "b8a28cf9563e6a1916a70e493731586995a8809206fa458645634fb45cdcfab9",
+    "integrations/image-metadata-reference/1.0.0/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "integrations/image-metadata-reference/1.0.0/NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "integrations/image-metadata-reference/1.0.0/projection.json": "1b52bfa875ae2bbc638aca600c49ceb66e2eb6d73cff5755db2e32720cfe1dea",
+    "integrations/image-metadata-reference/1.0.0/source.json": "3e66d919b4a6a289772266bd5cf5f6bfbfe9b144caf490b30c7c63dec902feeb",
+    "integrations/image-metadata-reference/1.0.0/tools/jpeg_metadata.py": "c7e8fcb58acd2087a35c886a32b7df1fa390c74c52c023e9b137bdf1dd90872a",
+    "integrations/image-metadata-reference/1.0.0/tools/png_metadata.py": "addd35028617f2d5c2cd01dc19106cec9946686cfe35139beb923af3973d6994",
+    "scripts/build-image-metadata-device.py": "2ba006ffb69b856d6cae93611872013e7ca1660e8ce81eca0db662a147f29882",
+    "scripts/build-image-metadata-fixture.mjs": "91df61d84c35ba3771607a0d2850745ed4dd987678ab90a2434215fc5ceb9fa5",
+    "scripts/image-metadata-device-cases.py": "d3382c9c211b42882172666590ae9cc4bec5d155a3695fdf9792a4e3860d165c",
+    "site/image-metadata-fixture.html": "34b8633c289d1e8c958bce3a14e72754b14e05d9b85d965460bfef2f8b72c171",
+    "site/src/ImageMetadataExplorer.jsx": "6d25cd9bad90687ee6cb7d810c3b6d2b0d27bda232ecb0060493431da90065ff",
+    "site/src/ImageMetadataExplorerSlot.jsx": "c08fe234f18be550f4827b2b3a2c9c4b5be0cb69c9567c83dcf12b3be6b1389f",
+    "site/src/image-metadata-client.mjs": "00013a2cb593d0fc40957da17a11cbffc05c15a3d5afe2e9915e42f55ca771ca",
+    "site/src/image-metadata-fixture.jsx": "790955274bab2c91b0ca1b5fd86faed958839b33e33669eecdb99397d438ff8e",
+    "site/src/image-metadata-result.mjs": "ec7e59257768fb96d4c4a03f1cf352504cdbbe8ccc89b42d2e03e8d99de300fd",
+    "site/src/image-metadata-worker.mjs": "d0efb21f127fd183b53abaacaf4fc2a15ac61f41feace64e56d83a33a5321ce9",
+    "tests/image-metadata-client.mjs": "bb597472352da192574939ef41ee41132ad24e40c19675844b1820269cc9fada",
+    "tests/test_image_device.py": "df7b84dc44985ef40667c536072c937a913cf12ae2ac1a38ccb08b3cc9cee248"
+  },
+  "artifact_hashes": {
+    "site/public/device/image-metadata/image-metadata-worker.mjs": "d0efb21f127fd183b53abaacaf4fc2a15ac61f41feace64e56d83a33a5321ce9",
+    "site/public/device/image-metadata/manifest.json": "e8a1eabd2cc8aaeb83b726a288f3fcefc1517ba3d846342dec32b9e493225bea",
+    "site/public/device/image-metadata/method-04fe19cbc1e4e712be393acc5ffc746e94f36ba78802ad18588a883c01d68a9f.json": "04fe19cbc1e4e712be393acc5ffc746e94f36ba78802ad18588a883c01d68a9f",
+    "site/public/device/image-metadata/project-notices.txt": "0ac0a3ad02d7f85fb3256353422683d40b988d283367271066280b03f1d46946"
+  },
+  "attribution_chronology": "Initial change-record attempt lacked a gate/evidence and was refused before writing. Static source build completed; this fresh actual-control record precedes the successful attributed build/commit record.",
+  "browser_execution": "PENDING root sequential slot; not a browser/component acceptance",
+  "main_site_integration": false,
+  "AI_origin_claimed": false,
+  "tag_issued": false,
+  "original_requirement_closed": false
+}

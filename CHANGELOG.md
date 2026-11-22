@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-070939-image-device-source-freeze-2b62f0f5
+
+Recorded 2026-11-22T07:09:39.953221+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Freeze complete standalone image metadata component, reviewed pure source cohort, actual file-capture/result boundaries and runnable fixture verifier for scheduled browser execution.
+- **Evidence.** Current11 focused Python tests pass including16 canonical projected cases, pixel/metadata/inflate caps, AST/source rebinding and publication uncertainty;10 Node groups validate16 records/11 refusals and abortable capture/worker bounds;3 JSX modules parse with pinned local compiler. Static method inputs and5runtime file pins remain current. [Change record](./runs/changes/2026-11-22-070939-image-device-source-freeze-2b62f0f5.json).
+- **Not claimed.** Source implementation frozen; actual WASM/browser execution, complete component acceptance and root integration remain pending. No image-origin/signature/accuracy/tag/original closure.
+
+
+### 2026-11-22-070249-image-device-fixed-canonical-source-9a623445
+
+Recorded 2026-11-22T07:02:49.718693+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Implement separate on-device PNG/JPEG metadata input with fixed canonical AST projections, bounded private capture and isolated worker, without a new image tag.
+- **Evidence.** Actual9 focused Python controls compare16 native/projected records and fixed-source/AST/IO refusals;10 Node groups compare16 records and11 corruption refusals with preallocation/capture/worker bounds. Existing5runtime files statically hashed; design projection separately reviewed. [Change record](./runs/changes/2026-11-22-070249-image-device-fixed-canonical-source-9a623445.json).
+- **Not claimed.** Browser execution and full component acceptance pending root slot. No main-site integration, origin/signature/watermark/authenticity/accuracy/tag/original closure.
+
+
 ### 2026-11-22-070807-accept-complete-programme-mt-engineering-packet-fd3a1103
 
 Recorded 2026-11-22T07:08:07.708071+00:00 · Contributor: Codex PM /root; authors /root/seo and /root/web_camo and /root/share_debugger · change
