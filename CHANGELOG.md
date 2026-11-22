@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-155919-jpeg-fixed-signing-diagnostics
+
+Recorded 2026-11-22T15:59:19.980637+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Added closed native-load and synthetic-signing diagnostic steps without modifying JPEG runtime, SDK, workflow or acceptance.
+- **Evidence.** Two source-stable inert diagnostic controls and distinct source review pass; second hosted run confirms actual isolation, dropped privileges, ten locked versions and17controls but no accepted credential case. [Change record](./runs/changes/2026-11-22-155919-jpeg-fixed-signing-diagnostics.json).
+- **Not claimed.** Raw second-run nativefalse flag was set late and does not establish no native call; retained failure explicitly qualifies it. Fixed error enums expose no raw exception, input, report or certificate data. No tag release, original closure or native success claimed.
+
+
 ### 2026-11-22-155225-jpeg-qualification-namespace-witness
 
 Recorded 2026-11-22T15:52:25.793170+00:00 · Contributor: Codex / web_camo · change

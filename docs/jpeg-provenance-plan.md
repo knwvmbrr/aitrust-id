@@ -211,3 +211,17 @@ capability sets and sets no-new-privileges before the driver. The driver require
 actual effective capabilities zero, no-new-privileges one and no supplementary
 groups. Inert current tests refuse a missing/same namespace identity, root UID,
 retained capability, missing no-new-privileges or retained group before SDK work.
+
+## Diagnostic-only amendment after second hosted failure
+
+Run45040709157 proved actual namespace/nonroot/empty-capabilities/empty-groups/
+no-new-privileges and all17 focused controls, then failed in synthetic signing.
+Its native-executed flag was set only after generation returned, so false at that
+stage does not prove native code was absent. Preserve that raw record with this
+qualification; no native success is accepted. Add closed fixed SDK-load and
+fixture certificate/context/signer/builder/sign checkpoints plus a fixed error
+category (and enumerated internal refusal reason only), never exception prose.
+Mark SDK execution unknown during loader entry and true immediately after the
+verified SDK returns. No parser, runtime, SDK pin, resource budget or acceptance
+assertion changes. A reviewed changed-source diagnostic is needed to locate the
+actual failed operation before a functional correction.

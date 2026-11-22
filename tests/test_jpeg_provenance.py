@@ -160,6 +160,21 @@ class JPEGTests(unittest.TestCase):
             with mock.patch.object(q.sys,'platform','linux'),mock.patch.dict(os.environ,{'JPEG_QUALIFICATION_ORIGINAL_NETNS':'net:[78]'}),mock.patch.object(q.os,'geteuid',return_value=1001),mock.patch.object(q.os,'getgroups',return_value=groups),mock.patch.object(q.os,'readlink',return_value='net:[77]'),mock.patch('builtins.open',mock.mock_open(read_data=status)),mock.patch.object(q,'inventory') as inventory,contextlib.redirect_stdout(output):
                 self.assertEqual(q.main(),1);inventory.assert_not_called()
             self.assertEqual(json.loads(output.getvalue())['stage'],'privilege_drop')
+    def test_qualification_closed_signing_checkpoints(self):
+        spec=importlib.util.spec_from_file_location('jpeg_qualification',ROOT/'scripts/verify-jpeg-provenance.py')
+        q=importlib.util.module_from_spec(spec);spec.loader.exec_module(q)
+        report={}
+        for stage in q.FIXTURE_STAGES:q.fixture_checkpoint(report,stage);self.assertEqual(report['stage'],stage)
+        for stage in ('PRIVATE_CANARY',None,{},123):
+            saved=dict(report)
+            with self.assertRaises(Refused):q.fixture_checkpoint(report,stage)
+            self.assertEqual(saved,report)
+    def test_qualification_fixed_error_categories(self):
+        spec=importlib.util.spec_from_file_location('jpeg_qualification',ROOT/'scripts/verify-jpeg-provenance.py')
+        q=importlib.util.module_from_spec(spec);spec.loader.exec_module(q)
+        for error,code in [(PermissionError('PRIVATE_CANARY'),'os_permission'),(OSError('PRIVATE_CANARY'),'os_error'),(AttributeError('PRIVATE_CANARY'),'attribute_error'),(Refused('sdk_pin_mismatch'),'sdk_pin_mismatch'),(Refused('PRIVATE_CANARY'),'internal_refusal'),(RuntimeError('PRIVATE_CANARY'),'other_error')]:
+            self.assertEqual(q.failure_code(error),code)
+            self.assertNotIn('PRIVATE_CANARY',q.failure_code(error))
     def test_actual_missing_sdk_and_private_cli_refusal(self):
         with tempfile.TemporaryDirectory() as d:
             path=Path(d).resolve()/'PRIVATE_CANARY.jpg';path.write_bytes(f.blank())

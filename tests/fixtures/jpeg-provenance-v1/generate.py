@@ -27,7 +27,8 @@ def blank():
         +segment(0xDA, b'\1\1\0\0\x3f\0')+b'\x3f\xff\xd9')
 
 
-def generate(directory):
+def generate(directory, checkpoint=lambda stage: None):
+    checkpoint('fixture_imports')
     import c2pa
     from cryptography import x509
     from cryptography.x509.oid import NameOID, ExtendedKeyUsageOID
@@ -35,6 +36,7 @@ def generate(directory):
     from cryptography.hazmat.primitives.asymmetric import ec
     destination = Path(directory)
     destination.mkdir(mode=0o700, exist_ok=False)
+    checkpoint('fixture_certificates')
     now = datetime.datetime.now(datetime.timezone.utc)
     def names(text):
         return x509.Name([x509.NameAttribute(NameOID.COMMON_NAME, text)])
@@ -62,17 +64,22 @@ def generate(directory):
                 'core': {'allowed_network_hosts': [], 'decode_identity_assertions': False},
                 'builder': {'thumbnail': {'enabled': False}}}
     values = {'unsigned.jpg': blank()}
+    checkpoint('fixture_context')
     with c2pa.Context.from_dict(settings) as context:
         for name, action, source in [('creation', 'c2pa.created', CREATION), ('edit', 'c2pa.edited', EDIT),
                                      ('ordinary', 'c2pa.created', 'http://cv.iptc.org/newscodes/digitalsourcetype/digitalCapture')]:
             definition = {'claim_generator': 'AI TRUST ID synthetic JPEG test', 'title': CANARY, 'format': 'image/jpeg',
                 'assertions': [{'label': 'c2pa.actions', 'data': {'actions': [{'action': action, 'digitalSourceType': source}]}},
                                {'label': 'org.aitrust.synthetic', 'data': {'private_note': CANARY}}]}
+            checkpoint('fixture_signer_'+name)
             out = io.BytesIO()
             with c2pa.Signer.from_info(c2pa.C2paSignerInfo('es256', public_chain, private, None)) as signer:
+                checkpoint('fixture_builder_'+name)
                 with c2pa.Builder(definition, context=context) as builder:
+                    checkpoint('fixture_sign_'+name)
                     builder.sign(signer, 'image/jpeg', io.BytesIO(blank()), out)
             values[name+'.jpg'] = out.getvalue()
+    checkpoint('fixture_altered_and_private_files')
     signed = values['creation.jpg']
     marker = segment(0xDB, b'\0'+b'\1'*64)
     assert signed.count(marker) == 1

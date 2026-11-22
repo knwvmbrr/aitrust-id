@@ -35,6 +35,25 @@ def inventory():
     return {p: hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in sorted(set(PATHS))}
 
 
+FIXTURE_STAGES={'fixture_imports','fixture_certificates','fixture_context',
+                'fixture_altered_and_private_files',
+                *{'fixture_'+operation+'_'+name for operation in ('signer','builder','sign')
+                  for name in ('creation','edit','ordinary')}}
+
+
+def fixture_checkpoint(report, stage):
+    need(type(stage) is str and stage in FIXTURE_STAGES)
+    report['stage']=stage
+
+
+def failure_code(error):
+    if isinstance(error, j.Refused):
+        return error.reason if error.reason in actions.REASONS else 'internal_refusal'
+    return next((code for cls,code in ((PermissionError,'os_permission'),
+        (OSError,'os_error'),(ImportError,'import_error'),(AttributeError,'attribute_error'),
+        (TypeError,'type_error'),(ValueError,'value_error')) if isinstance(error,cls)),'other_error')
+
+
 def main():
     report = {'profile': 'jpeg-provenance-qualification/1.0.0',
         'captured_at': datetime.now(timezone.utc).isoformat(), 'pass': False, 'stage': 'environment',
@@ -83,11 +102,12 @@ def main():
         fixture=importlib.util.module_from_spec(spec);spec.loader.exec_module(fixture)
         with tempfile.TemporaryDirectory(prefix='aitrust-jpeg-qualification-') as private:
             base=Path(private).resolve();base.chmod(0o700);folder=base/'synthetic'
-            report['stage']='synthetic_signing'
+            report['stage']='sdk_load'
+            report['native_sdk_executed']=None
             with ExitStack() as stack:
                 sdk, profile, pins = j.loader.sdk(stack)
-                generation=fixture.generate(folder)
                 report['native_sdk_executed']=True
+                generation=fixture.generate(folder,lambda stage: fixture_checkpoint(report,stage))
                 report['fixture_generation']=generation
                 report['sdk_profile']=profile;report['sdk_sources']=pins
             def call(name, *, roots=False, text=False, expected=0, sdk_absent=False):
@@ -174,7 +194,8 @@ def main():
         report['source_unchanged_during_execution']=True
         report['case_count']=len(report['cases']);need(report['case_count']==14)
         report['stage']='complete';report['pass']=True
-    except BaseException:
+    except BaseException as error:
+        report['error_code']=failure_code(error)
         # No raw exception, source path, report data, subject or certificate output.
         report['pass']=False;report['error']='qualification_failed'
     print(json.dumps(report,sort_keys=True,indent=2))
