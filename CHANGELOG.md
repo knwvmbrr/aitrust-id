@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-102301-consume-real-automated-accessibility-receipts-ecb53264
+
+Recorded 2026-11-22T10:23:01.769390+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Connected the existing CI accessibility release assessor to explicit current website/extension receipt selections instead of absent default files; made launch documentation clearly date-scoped with a current-state pointer.
+- **Evidence.** Only evidence selection changes: fixed runs JSON paths, regular/no-link checks and existing assessor/exit semantics remain; actual-human and statistical gates are unchanged. Previous source692 publication proof is retained. [Change record](./runs/changes/2026-11-22-102301-consume-real-automated-accessibility-receipts-ecb53264.json).
+- **Not claimed.** Current combined-source assessment remains pending; no human accessibility or release pass is claimed. This does not close the broader original requirements or change136/66.
+
+
 ### 2026-11-22-093836-prepare-current-image-policy-and-scope-projections-8df49c82
 
 Recorded 2026-11-22T09:38:36.161575+00:00 · Contributor: Codex PM /root · change

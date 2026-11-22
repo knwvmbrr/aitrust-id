@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-102301-consume-real-automated-accessibility-receipts-ecb53264",
+  "recorded_at": "2026-11-22T10:23:01.769390+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ccb1250bf9f972bf228ee6e6bfaa0ca2ad5c07ca",
+  "changed": "Connected the existing CI accessibility release assessor to explicit current website/extension receipt selections instead of absent default files; made launch documentation clearly date-scoped with a current-state pointer.",
+  "proves": "Only evidence selection changes: fixed runs JSON paths, regular/no-link checks and existing assessor/exit semantics remain; actual-human and statistical gates are unchanged. Previous source692 publication proof is retained.",
+  "limits": "Current combined-source assessment remains pending; no human accessibility or release pass is claimed. This does not close the broader original requirements or change136/66.",
+  "scope_ids": [
+    "F-035",
+    "F-050",
+    "F-120"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "27495175094ab2ab5f74bafee564c574cad2720cf58383e41e78c54dcd34816f",
+    "docs/accessibility-evidence-selection-plan.md": "fc07f153aed28fdfdf32ea3bbe2dc27b04774ce24af8a7590b62565840dc7029",
+    "docs/live-launch-status.md": "af3d0165ff37b0cd5b9be48967c11daece04b9fa7d993b58cb61e8a0db7f293d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-pr148-protected-delivery-review.json",
+      "sha256": "1a970b410e2e4f38aff349d1f0e0184af0e90ed56fb5da83a8c6539838af8857"
+    }
+  ],
+  "checks": []
+}
