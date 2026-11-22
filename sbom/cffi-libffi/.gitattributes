@@ -1,0 +1,12 @@
+# Exact retained upstream bytes; no normalization or global exception.
+LIBFFI-NOTICES.txt -whitespace
+sources/cffi-2.1.1-LICENSE -whitespace
+sources/cffi-2.1.1-ci.yaml -whitespace
+sources/cffi-2.1.1-setup-py -whitespace
+sources/libffi-runtime/include/ffi_common.h -whitespace
+sources/libffi-runtime/src/dlmalloc.c -whitespace
+sources/libffi-runtime/src/raw_api.c -whitespace
+sources/libffi-runtime/src/x86/unix64.S -whitespace
+sources/libffi-3.4.6-configure-ac -whitespace
+# Upstream README has a seven-equals Setext heading, not a merge conflict.
+sources/libffi-3.4.6-README-md conflict-marker-size=32

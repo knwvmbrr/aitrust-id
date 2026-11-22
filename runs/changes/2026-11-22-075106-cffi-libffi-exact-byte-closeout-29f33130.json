@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-075106-cffi-libffi-exact-byte-closeout-29f33130",
+  "recorded_at": "2026-11-22T07:51:06.181658+00:00",
+  "author": "Codex / seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "cd3beab02774fa939e3a2bd8a0d87913d9e8fd81",
+  "changed": "Preserved exact upstream CFFI/libffi source bytes through narrowly scoped whitespace and Setext-heading marker attributes; qualified the current documentation and source bindings.",
+  "proves": "Normal staged Git diff check passes without normalizing upstream source or notice content. Current 40-file binding map differs from the earlier evidence snapshot in only local attributes and explanatory documentation.",
+  "limits": "No package/native execution or artifact integration rerun; original wheel/source/notice observations remain immutable. No route, legal, compiled-closure or original acceptance claim.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "sbom/cffi-libffi/.gitattributes": "fc3638809c593622d39980410f95d4ac28016d720816459c5a63ad12c7db6506",
+    "docs/cffi-libffi-obligations.md": "37fdc9dde736a1e9f3874512f2778b2e56dff9ec2643c387a5967492c3c61606",
+    "runs/2026-11-22-cffi-libffi-byte-preservation.json": "a2259ef41d74ce028b749c08f770726734e6e8533dee675fe49a22713d2f847e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-cffi-libffi-byte-preservation.json",
+      "sha256": "a2259ef41d74ce028b749c08f770726734e6e8533dee675fe49a22713d2f847e"
+    }
+  ],
+  "checks": []
+}

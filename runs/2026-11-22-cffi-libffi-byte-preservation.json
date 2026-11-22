@@ -1,0 +1,84 @@
+{
+  "profile": "cffi-libffi-byte-preservation-closeout/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T07:51:06.143450+00:00",
+  "author": "Codex / seo",
+  "prior_execution_receipt": {
+    "path": "runs/2026-11-22-cffi-libffi-source-notices.json",
+    "sha256": "c760226916bff4fd67f79e94fcdfdf45b68841b5e0d239492cf46e4186e3a4bb",
+    "status": "Immutable source-acquisition/ELF/RECORD execution evidence; only two non-runtime metadata bindings superseded here."
+  },
+  "changed_metadata": {
+    "sbom/cffi-libffi/.gitattributes": {
+      "prior": "b4b603a7d68f8e555be855f47a5ff707b3157942bbd459ff101131dc5fa1f191",
+      "current": "fc3638809c593622d39980410f95d4ac28016d720816459c5a63ad12c7db6506"
+    },
+    "docs/cffi-libffi-obligations.md": {
+      "prior": "39aecdd1fad25ab13696f779442888dd411fbd551787a2195a6c659386f996a1",
+      "current": "37fdc9dde736a1e9f3874512f2778b2e56dff9ec2643c387a5967492c3c61606"
+    }
+  },
+  "current_source_sha256": {
+    "sbom/cffi-libffi/.gitattributes": "fc3638809c593622d39980410f95d4ac28016d720816459c5a63ad12c7db6506",
+    "sbom/cffi-libffi/LIBFFI-NOTICES.txt": "2fe3318a85b19fea32d1e5801e7406a7868dc9768f0637c1838821fc1ece7386",
+    "sbom/cffi-libffi/manifest.json": "4e9b49cfff92b2f0aa117a95f0c852b5ff0dde9a75636308aaa79269a7135dc8",
+    "sbom/cffi-libffi/retrieval.json": "dc10f12ea78470ac653c7588adb3f0c8417809f4bd347f5c49adfeedcc790813",
+    "sbom/cffi-libffi/runtime-source-index.json": "6b869bdf488676aae5c76bd29708886569e2aaadd9e8939e2efa0cfeb0a237c9",
+    "sbom/cffi-libffi/sources/cffi-2.1.1-LICENSE": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63",
+    "sbom/cffi-libffi/sources/cffi-2.1.1-ci.yaml": "b1910ddbfc69d2fbe41f1493cb564658d0970522bfeb5e6fe93d3288c802736c",
+    "sbom/cffi-libffi/sources/cffi-2.1.1-pyproject-toml": "5319b77e4b41ab9bab0f352a3e2ef6277b0626c4c239a0736f9e15dbc417d693",
+    "sbom/cffi-libffi/sources/cffi-2.1.1-setup-py": "f4205f108b2fc7798e854724918a2790951137200980b65b6a5e652d612b07f7",
+    "sbom/cffi-libffi/sources/cffi-pypi.json": "2255e530e3f80593a354e3d84a29966924d0e10309d1e3a6d50f845ab7d8df66",
+    "sbom/cffi-libffi/sources/cffi-tag.json": "beb7681a2a41d97289acccef59d3608af3dfa0e43e2c3c201893f43b06215ad1",
+    "sbom/cffi-libffi/sources/libffi-3.4.6-LICENSE": "67894089811f93fca47a76f85e017da6f8582d4ba0905963c6e0f1ad6df7a195",
+    "sbom/cffi-libffi/sources/libffi-3.4.6-README-md": "fc6d34e3cb17ffe1d097f78897168c42648942013a8c14c48453d327f85c5983",
+    "sbom/cffi-libffi/sources/libffi-3.4.6-configure-ac": "bcff3a3a4f3f28d6eb9505dbd2fc351e5b8d0cf91a4521e7f4c17176d5fef385",
+    "sbom/cffi-libffi/sources/libffi-runtime/Makefile.am": "7ff2842499a927c7e1c3a86a1195909fda1cb4fc8564e38e2254e5fe0c89d46c",
+    "sbom/cffi-libffi/sources/libffi-runtime/configure.host": "58c58b97e8958fae921339f7e0bf4157c717fe0a5d8b3897db044203d052033a",
+    "sbom/cffi-libffi/sources/libffi-runtime/include/ffi.h.in": "ffb87630163c48c995404306eb676a90fb482acbdce02b989215bc99ec273228",
+    "sbom/cffi-libffi/sources/libffi-runtime/include/ffi_cfi.h": "165495aafcdb15ad48340b8b9906514032c284db3db372c31e3f4d6b35888dc5",
+    "sbom/cffi-libffi/sources/libffi-runtime/include/ffi_common.h": "f8c65573c44b095b85dfe6cd60f628596a930b3384b67e218d8cf499e2421840",
+    "sbom/cffi-libffi/sources/libffi-runtime/include/tramp.h": "ef20dace99925672167a5f3b3898299d462ace170f0b90ca47fd36b30cfc7fbf",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/closures.c": "d1ec65cff10dfaaf35726842d5ec17f12d46b21cd4b917202da4cf7ce9bf24b4",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/debug.c": "a9ee942885ee97b3448dda2ab74a8a02be3e0c8baeaed1f90d61cc69e0498dba",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/dlmalloc.c": "a4719777bea8b7ed7e1ea6519a2136aaf7ded18e30f39ad505f4cf2c491228aa",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/java_raw_api.c": "5c3886d8c20ba1238135835aa132ad9c017af5f9e5c55e2167d3ad047def1bd6",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/prep_cif.c": "6a902ea43fa441c480e7a352d78b2ed929e6c6d00e6c936a87cbc1cca838108c",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/raw_api.c": "d7ea1c81fc13e9fceb0dc431bc865e224d7be1e84483039eb4ad79144ef29c34",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/tramp.c": "49fed5b711f5cbf3495772654a6fe8e48c65f2671b2b9362fbce0ffa76502011",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/types.c": "4ac9032fce88023c9f1c4dffe4017e260dc4f75eab778df59ad7d233c735fe4f",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/asmnames.h": "b1a0c704a97aa9bb3a998f7d55cae8bf8181e355249da19a53269a10d03edb8e",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/ffi64.c": "125d9a406408c187fd8890b66c3a019b313899017d9b065f38eaccbe96913c17",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/ffitarget.h": "45e4fd2585aaed711e4fa3d1377b70c8e54dcdc56bdf402fa23a8816d19cc58a",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/ffiw64.c": "2c31bfeaf808f694433edb0c6c1a45901c1cc48bac784aeb6f4fbd6ca05f33ca",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/internal.h": "faf2d20939ecf17ce73e288e38162de47119bb5f7bdd4994aa434b4b7dea6591",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/internal64.h": "6618077c8aa7874ee279bb1f6a2aeae50c9d2828a16befeba59af27b1c4b489c",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/unix64.S": "8a3686659532c51af9cc9b27ef2566068a4eb9b2bce02e3c738df5c339a1efd0",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/win64.S": "456f93fb44eb8a669baf615db1043d57721191d801c5c5ccbdab05dae085de82",
+    "sbom/cffi-libffi/sources/libffi-tag.json": "499d83833402aaad4180b1f2c1344f0a64eab54d4402bc6a6af40ac69998b5f3",
+    "sbom/cffi-libffi/wheel-observations.json": "eb5ffdff91318d0c62f655f7e0433dc51cb901cc593a042201f91d637f7c19e4",
+    "docs/cffi-libffi-obligation-plan.md": "e73fa4278b074aef08e50d4eb3719a4d38fe006ad5763ea6d7d39c58fefa46af",
+    "docs/cffi-libffi-obligations.md": "37fdc9dde736a1e9f3874512f2778b2e56dff9ec2643c387a5967492c3c61606"
+  },
+  "actual_current_checks": {
+    "git_staged_diff_check": {
+      "exit_code": 0,
+      "method": "Exact local attributes preserve all upstream bytes; one configure source has inherited space-before-tab and the upstream README seven-equals Setext heading is not a merge conflict."
+    },
+    "publisher_source_grant_notice_wheel_observation_bytes_unchanged": true,
+    "source_module_or_native_execution": false
+  },
+  "claims": {
+    "independent_compiled_closure_proved": false,
+    "wheel_build_attestation_verified": false,
+    "source_rebuilt_or_native_executed": false,
+    "full_route_admission": false,
+    "legal_clearance": false,
+    "original_requirement_closed": false
+  },
+  "limits": [
+    "No wheel/notice/source changes, no runtime reexecution or fresh compiled provenance; only metadata and Git handling of exact upstream bytes changed.",
+    "Initial diff check correctly exposed inherited whitespace plus a false merge-marker diagnostic. Neither was fixed by altering upstream source/notice content.",
+    "Normal attributed source commit remains distinct from actual MCP distribution artifact integration."
+  ]
+}

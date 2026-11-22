@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-075106-cffi-libffi-exact-byte-closeout-29f33130
+
+Recorded 2026-11-22T07:51:06.181658+00:00 · Contributor: Codex / seo · change
+
+- **Changed.** Preserved exact upstream CFFI/libffi source bytes through narrowly scoped whitespace and Setext-heading marker attributes; qualified the current documentation and source bindings.
+- **Evidence.** Normal staged Git diff check passes without normalizing upstream source or notice content. Current 40-file binding map differs from the earlier evidence snapshot in only local attributes and explanatory documentation. [Change record](./runs/changes/2026-11-22-075106-cffi-libffi-exact-byte-closeout-29f33130.json).
+- **Not claimed.** No package/native execution or artifact integration rerun; original wheel/source/notice observations remain immutable. No route, legal, compiled-closure or original acceptance claim.
+
+
+### 2026-11-22-074932-cffi-libffi-source-notice-mapping-89466c96
+
+Recorded 2026-11-22T07:49:32.809063+00:00 · Contributor: Codex / seo · change
+
+- **Changed.** Mapped the two approved Linux CFFI 2.1.1 wheels to the publisher-declared static libffi 3.4.6 recipe and retained full grant/copyright notices for the MCP artifact producer.
+- **Evidence.** Exact wheel SHA/size and all30 hashed RECORD entries per wheel validate; ELF defined static-recipe symbol corroborates mapping; official release-source files match sdist;22 source/build/header records and16 source-specific notices are byte-bound. [Change record](./runs/changes/2026-11-22-074932-cffi-libffi-source-notice-mapping-89466c96.json).
+- **Not claimed.** Evidence/data only: actual MCP artifact notice inclusion remains pending. Recipe correspondence is not wheel build attestation, exhaustive compiled closure, reproducibility, legal clearance, route admission or original closure. No package import, install, build, native execution or service action.
+
+
 ### 2026-11-22-055521-record-current-delivery-engineering-packet-f5ca3c80
 
 Recorded 2026-11-22T05:55:21.266447+00:00 · Contributor: Codex PM /root · change

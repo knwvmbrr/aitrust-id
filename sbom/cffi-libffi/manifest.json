@@ -1,0 +1,151 @@
+{
+  "profile": "cffi-libffi-publisher-mapping/v1",
+  "status": "DECLARED_SOURCE_AND_NOTICES_MAPPED",
+  "pass": true,
+  "captured_at": "2026-11-22T07:47:08.359883+00:00",
+  "author": "Codex / seo",
+  "inputs": {
+    "sbom/cffi-libffi/LIBFFI-NOTICES.txt": "2fe3318a85b19fea32d1e5801e7406a7868dc9768f0637c1838821fc1ece7386",
+    "sbom/cffi-libffi/retrieval.json": "dc10f12ea78470ac653c7588adb3f0c8417809f4bd347f5c49adfeedcc790813",
+    "sbom/cffi-libffi/runtime-source-index.json": "6b869bdf488676aae5c76bd29708886569e2aaadd9e8939e2efa0cfeb0a237c9",
+    "sbom/cffi-libffi/sources/cffi-2.1.1-LICENSE": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63",
+    "sbom/cffi-libffi/sources/cffi-2.1.1-ci.yaml": "b1910ddbfc69d2fbe41f1493cb564658d0970522bfeb5e6fe93d3288c802736c",
+    "sbom/cffi-libffi/sources/cffi-2.1.1-pyproject-toml": "5319b77e4b41ab9bab0f352a3e2ef6277b0626c4c239a0736f9e15dbc417d693",
+    "sbom/cffi-libffi/sources/cffi-2.1.1-setup-py": "f4205f108b2fc7798e854724918a2790951137200980b65b6a5e652d612b07f7",
+    "sbom/cffi-libffi/sources/cffi-pypi.json": "2255e530e3f80593a354e3d84a29966924d0e10309d1e3a6d50f845ab7d8df66",
+    "sbom/cffi-libffi/sources/cffi-tag.json": "beb7681a2a41d97289acccef59d3608af3dfa0e43e2c3c201893f43b06215ad1",
+    "sbom/cffi-libffi/sources/libffi-3.4.6-LICENSE": "67894089811f93fca47a76f85e017da6f8582d4ba0905963c6e0f1ad6df7a195",
+    "sbom/cffi-libffi/sources/libffi-3.4.6-README-md": "fc6d34e3cb17ffe1d097f78897168c42648942013a8c14c48453d327f85c5983",
+    "sbom/cffi-libffi/sources/libffi-3.4.6-configure-ac": "bcff3a3a4f3f28d6eb9505dbd2fc351e5b8d0cf91a4521e7f4c17176d5fef385",
+    "sbom/cffi-libffi/sources/libffi-runtime/Makefile.am": "7ff2842499a927c7e1c3a86a1195909fda1cb4fc8564e38e2254e5fe0c89d46c",
+    "sbom/cffi-libffi/sources/libffi-runtime/configure.host": "58c58b97e8958fae921339f7e0bf4157c717fe0a5d8b3897db044203d052033a",
+    "sbom/cffi-libffi/sources/libffi-runtime/include/ffi.h.in": "ffb87630163c48c995404306eb676a90fb482acbdce02b989215bc99ec273228",
+    "sbom/cffi-libffi/sources/libffi-runtime/include/ffi_cfi.h": "165495aafcdb15ad48340b8b9906514032c284db3db372c31e3f4d6b35888dc5",
+    "sbom/cffi-libffi/sources/libffi-runtime/include/ffi_common.h": "f8c65573c44b095b85dfe6cd60f628596a930b3384b67e218d8cf499e2421840",
+    "sbom/cffi-libffi/sources/libffi-runtime/include/tramp.h": "ef20dace99925672167a5f3b3898299d462ace170f0b90ca47fd36b30cfc7fbf",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/closures.c": "d1ec65cff10dfaaf35726842d5ec17f12d46b21cd4b917202da4cf7ce9bf24b4",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/debug.c": "a9ee942885ee97b3448dda2ab74a8a02be3e0c8baeaed1f90d61cc69e0498dba",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/dlmalloc.c": "a4719777bea8b7ed7e1ea6519a2136aaf7ded18e30f39ad505f4cf2c491228aa",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/java_raw_api.c": "5c3886d8c20ba1238135835aa132ad9c017af5f9e5c55e2167d3ad047def1bd6",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/prep_cif.c": "6a902ea43fa441c480e7a352d78b2ed929e6c6d00e6c936a87cbc1cca838108c",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/raw_api.c": "d7ea1c81fc13e9fceb0dc431bc865e224d7be1e84483039eb4ad79144ef29c34",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/tramp.c": "49fed5b711f5cbf3495772654a6fe8e48c65f2671b2b9362fbce0ffa76502011",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/types.c": "4ac9032fce88023c9f1c4dffe4017e260dc4f75eab778df59ad7d233c735fe4f",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/asmnames.h": "b1a0c704a97aa9bb3a998f7d55cae8bf8181e355249da19a53269a10d03edb8e",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/ffi64.c": "125d9a406408c187fd8890b66c3a019b313899017d9b065f38eaccbe96913c17",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/ffitarget.h": "45e4fd2585aaed711e4fa3d1377b70c8e54dcdc56bdf402fa23a8816d19cc58a",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/ffiw64.c": "2c31bfeaf808f694433edb0c6c1a45901c1cc48bac784aeb6f4fbd6ca05f33ca",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/internal.h": "faf2d20939ecf17ce73e288e38162de47119bb5f7bdd4994aa434b4b7dea6591",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/internal64.h": "6618077c8aa7874ee279bb1f6a2aeae50c9d2828a16befeba59af27b1c4b489c",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/unix64.S": "8a3686659532c51af9cc9b27ef2566068a4eb9b2bce02e3c738df5c339a1efd0",
+    "sbom/cffi-libffi/sources/libffi-runtime/src/x86/win64.S": "456f93fb44eb8a669baf615db1043d57721191d801c5c5ccbdab05dae085de82",
+    "sbom/cffi-libffi/sources/libffi-tag.json": "499d83833402aaad4180b1f2c1344f0a64eab54d4402bc6a6af40ac69998b5f3",
+    "sbom/cffi-libffi/wheel-observations.json": "eb5ffdff91318d0c62f655f7e0433dc51cb901cc593a042201f91d637f7c19e4"
+  },
+  "artifacts": [
+    {
+      "target": "cp312-linux_x86_64_glibc_2_34",
+      "filename": "cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "c1453022f490d2459a11819d83ad1d586e9ff65a12ac3e705ffebd46d3685dcf",
+      "bytes": 221822,
+      "url": "https://files.pythonhosted.org/packages/b1/db/dceb9dd5b231e1da801793f8acc9f3c52a7e1afe40bb1aae37e02b0faad5/cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "native_member": "_cffi_backend.cpython-312-x86_64-linux-gnu.so",
+      "native_sha256": "9bc1d08072255a5ec2db10fc75df1dd9e73097a75cd9150cfe875ebd6712f17c"
+    },
+    {
+      "target": "cp313-linux_x86_64_glibc_2_34",
+      "filename": "cffi-2.1.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "sha256": "a931079504ecc49efed7744c476a5c343a92fabf66dec2db95edb1b2fdc770e2",
+      "bytes": 221824,
+      "url": "https://files.pythonhosted.org/packages/95/95/86342356ff5953b3fb06f7ef7c5bee212d45e770abc7218d451b9148313c/cffi-2.1.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+      "native_member": "_cffi_backend.cpython-313-x86_64-linux-gnu.so",
+      "native_sha256": "dac8151545022cc3561fbb7a8fffacf68fdb7273a9418552d6a18dda5e986a34"
+    }
+  ],
+  "packages": [
+    {
+      "id": "libffi:3.4.6:linux-x86_64:publisher-declared",
+      "name": "libffi",
+      "version": "3.4.6",
+      "source_identity": {
+        "repository": "https://github.com/libffi/libffi",
+        "tag_observed": "v3.4.6",
+        "commit": "3d0ce1e6fcf19f853894862abcbac0ae78a7be60",
+        "archive_url": "https://codeload.github.com/libffi/libffi/tar.gz/3d0ce1e6fcf19f853894862abcbac0ae78a7be60",
+        "archive_sha256": "148ebda16fc2dde2f0538541e7078ecf24628bbbf716fb5367e047192ebb806f",
+        "archive_bytes": 598576
+      },
+      "license_declared": "MIT with source-specific copyrights; dlmalloc publisher public-domain dedication",
+      "grant_evidence_paths": [
+        "sbom/cffi-libffi/sources/libffi-3.4.6-LICENSE",
+        "sbom/cffi-libffi/runtime-source-index.json"
+      ],
+      "notice_paths": [
+        "sbom/cffi-libffi/LIBFFI-NOTICES.txt"
+      ],
+      "term_actions": [
+        {
+          "action": "Carry complete upstream copyright and permission notice in distributed copies/substantial portions, including the retained source-specific copyright attributions.",
+          "fulfilled_by_future_artifact": false,
+          "required_bundle_file": "sbom/cffi-libffi/LIBFFI-NOTICES.txt"
+        },
+        {
+          "action": "Retain CFFI root MIT-0 notice/exception scope; do not relabel embedded libffi as MIT-0.",
+          "fulfilled_in_publisher_wheel": true
+        },
+        {
+          "action": "No source-disclosure or source-offer condition appears in these retained MIT/public-domain grants; source retention here is provenance evidence, not a newly invented copyleft obligation.",
+          "source_offer_required_by_retained_grants": false
+        }
+      ],
+      "dependency_ids": [],
+      "evidence_paths": [
+        "sbom/cffi-libffi/wheel-observations.json",
+        "sbom/cffi-libffi/sources/cffi-2.1.1-ci.yaml"
+      ]
+    }
+  ],
+  "mapping": {
+    "CFFI_tag_commit": "fd33e7700f0ebafe6f30bd5053f13327221b77a2",
+    "recipe_path": ".github/workflows/ci.yaml",
+    "recipe_static_build_lines": [
+      167,
+      180
+    ],
+    "release_source_files_match_sdist": [
+      "setup.py",
+      "LICENSE",
+      "pyproject.toml"
+    ],
+    "recipe_declares_libffi_v3_4_6": true,
+    "recipe_disables_shared_library": true,
+    "recipe_renamed_ffi_call_is_defined_in_both_exact_binaries": true,
+    "ELF_DT_NEEDED_lacks_libffi_observed": true,
+    "separate_libffi_notice_in_wheel": false,
+    "mapping_evidence_role": "Immutable publisher release recipe plus exact selected binary defined-symbol correspondence; not independent build reproduction or exhaustive compiled closure."
+  },
+  "coverage": {
+    "selected_Linux_wheels": 2,
+    "all_hashed_RECORD_entries_verified_per_wheel": 30,
+    "retained_libffi_runtime_build_header_sources": 22,
+    "source_header_notice_segments": 16,
+    "retained_runtime_source_bytes": 364891,
+    "declared_x86_64_selection": "Common Makefile.am sources plus X86_64 configure.host sources and directly relevant headers; optional debug/dlmalloc/conditional ABI code retained as a qualified superset, not asserted all compiled.",
+    "notice_source_selection_is_independent_of_filename_presence": true
+  },
+  "unresolved": [
+    {
+      "id": "exact-wheel-build-provenance",
+      "fact": "Both exact PyPI wheel provenance URLs returned404 at observation. Publisher recipe selects a versioned Git tag without an archive checksum, and build tools/container versions are not all immutable. The retained binary has no3.4.6 version literal.",
+      "limit": "Do not claim a verified wheel-to-exact-source build attestation or independently exhaustive compiled closure. This absence is not invented as a requirement for reproducible binaries or legal-professional approval."
+    }
+  ],
+  "claims": {
+    "independent_compiled_closure_proved": false,
+    "wheel_build_attestation_verified": false,
+    "source_rebuilt_or_native_executed": false,
+    "full_route_admission": false,
+    "legal_clearance": false,
+    "original_requirement_closed": false
+  }
+}
