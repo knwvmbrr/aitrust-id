@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-064100-update-reviewed-programme-milestones-65b65940",
+  "recorded_at": "2026-11-22T06:41:00.773536+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "dc0e608224a84bfa58869dea97376dc6f30e1691",
+  "changed": "Updated scope and dated team board for the actual integrated reference programme and independent MT browser work, retaining135complete67open.",
+  "proves": "F145 now has four evidenced milestones from current39focused controls and30CLI operations plus distinct review; all202 original IDs and full historical acceptance remain.",
+  "limits": "No new original closure or MT tag release. Final F145 protected/public delivery and current integrated checks remain pending; physical/human/legal gates stay open.",
+  "scope_ids": [
+    "F-145",
+    "T-MT"
+  ],
+  "files": {
+    "docs/scope-progress.json": "a91aa61f1be513fce3599de359301723594c89a6ab2d0e4bb6d51b46f854d0f2",
+    "docs/session-delivery-plan.md": "4755bddc87235c83b737e8d778e9b3509da7aa43b37c03cb1c52c9ff07a7052e",
+    "docs/session-delivery.json": "d896024edddc21e081dc996c51edc863a21c55052aad29a224a438f437401564"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-f145-root-integration.json",
+      "sha256": "d1e0bcfe79ba84d03574af1c36c07f9634383680ab13c7169229bc23ab81a462"
+    },
+    {
+      "path": "runs/2026-11-22-f145-distinct-review.json",
+      "sha256": "2896f28ce5fb41c368bab815a75976cd7ed3b507768a83e6651a8239f7c7c38d"
+    }
+  ],
+  "checks": []
+}

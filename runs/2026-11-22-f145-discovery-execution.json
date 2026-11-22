@@ -1,0 +1,97 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-22T06:46:51.584911+00:00",
+  "profile": "F145-reference-programme-discovery-delivery/v1",
+  "source_base": "d3e0cb93461c6ed8cde7bb043e17377f3b21df45",
+  "source_sha256": {
+    "README.md": "8bd728fc9988cf09725cda27a6c51ed6e44d920a95ef7b79f9e4882814394c48",
+    "site/scripts/prepare.mjs": "05cbc79f1f0512ff76b60a2914f352df26e230e9b8135b5bf64131a367e68be5",
+    "site/src/workflows/About.jsx": "11df4bcdd8f64609d8ef6d54afbbb44fcf48b2c2c2f37379372ebb828cdf424e",
+    ".github/workflows/certification-programme.yml": "cd7637b7cccc4b05734d545d36cafc511d919a6b632f5141e9322b7d86817975",
+    "docs/certification-programme-main-integration-plan.md": "ee1400683317afd030ceb97b33943d9906c5c9890c7133602d0096691f3c1e9a",
+    "docs/certification-programme-main-integration-result.md": "078c7bbd540231d6b705b6eef4746f04dfca1d74ecd61508b961f47c6adbb89a"
+  },
+  "actual_production_reference_copy_and_links": {
+    "pass": true,
+    "captured_at": "2026-11-22T06:45:42.115Z",
+    "profile": "F145-actual-discovery-copy-and-links/v1",
+    "actual_production_copy_block_executed": true,
+    "copied": {
+      "certification-programme.md": {
+        "source": "docs/certification-programme.md",
+        "sha256": "91b0f17b0c88bc1cc7a65561152ea95ced811e2ed50152ee74b1f230e1a0af14",
+        "bytes": 15714
+      },
+      "certification-programme-guide.md": {
+        "source": "docs/certification-programme-guide.md",
+        "sha256": "5e78d2e28a924e2b327966c3d5d2d11b39943ce5b674b0b8af4316967c5e8b59",
+        "bytes": 7085
+      },
+      "certification-programme.json": {
+        "source": "eval/certification-programme.json",
+        "sha256": "852df2d38ba5de55b2ffd0e8bbcc0fd293d27579ca1171c5528c95e1773588a6",
+        "bytes": 3126
+      }
+    },
+    "about_urls": [
+      "/reference/certification-programme.md",
+      "/reference/certification-programme-guide.md",
+      "/reference/certification-programme.json"
+    ],
+    "readme_shell_syntax_valid": true,
+    "programme_runtime_executed_again": false,
+    "browser_or_full_build_executed": false,
+    "private_copy_directory_removed": true,
+    "source_block_sha256": "d3810d6d6fd08508d9592bf8500408cb6a4e46cdff86286a6662fc806844f611"
+  },
+  "actual_workflow_source_and_runtime_retention": {
+    "pass": true,
+    "captured_at": "2026-11-22T06:45:42.273429+00:00",
+    "profile": "F145-discovery-workflow-and-retention/v1",
+    "unchanged_root_runtime_inputs": {
+      "tools/certification_programme.py": "20b8fdca81a5c9fd79230dfb71df9bbc94352cdc788779f2fc2384b0d52143ad",
+      "scripts/certification-programme.py": "0b1b37dd258fdb46a0cd36a41ab8e66b57c9965b31b46fd43a1474f41351a4cc",
+      "scripts/verify-certification-programme.py": "2ae5e1f8ca6ebb66865869c4e1616be98ba2d17e8ac0455d61dd117bcf22df76",
+      "tests/test_certification_programme.py": "683ce82d651869a30f5322bcdd9d0df510afdccb1c291318fff933a693290c6e",
+      "eval/certification-programme.json": "852df2d38ba5de55b2ffd0e8bbcc0fd293d27579ca1171c5528c95e1773588a6",
+      "docs/certification-programme-plan.md": "b99b6536b728c6f54714e9d4a7b84f28ccb0f8ba1de4ae3ffea95a2d4fdaaad1",
+      "docs/certification-programme.md": "91b0f17b0c88bc1cc7a65561152ea95ced811e2ed50152ee74b1f230e1a0af14",
+      "docs/certification-programme-guide.md": "5e78d2e28a924e2b327966c3d5d2d11b39943ce5b674b0b8af4316967c5e8b59"
+    },
+    "root_runtime_receipt": "runs/2026-11-22-f145-root-integration.json",
+    "root_runtime_tests_reexecuted": false,
+    "yaml_parsed": true,
+    "embedded_ci_python_compiled": true,
+    "captured_source_paths_covered_by_both_triggers": 28,
+    "read_only_permissions": true,
+    "actions_sha_pinned": true,
+    "project_dependencies_installed": false,
+    "ci_executed": false
+  },
+  "actual_jsx_syntax_transform": {
+    "pass": true,
+    "captured_at": "2026-11-22T06:46:51.548Z",
+    "actual_existing_vite_jsx_transform": true,
+    "source_sha256": "11df4bcdd8f64609d8ef6d54afbbb44fcf48b2c2c2f37379372ebb828cdf424e",
+    "generated_code_sha256": "1502ecd3ef52772eb01cad6efec6aae1044b240714b7089a01e754f9461a2096",
+    "new_dependency_installed": false,
+    "browser_executed": false
+  },
+  "prepare_module_node_check": true,
+  "check_record_sha256": {
+    "f145-discovery-reference-check.json": "5a3f47dfa3775bca6ed18db71f20032db7ba0a394e106bbfe690d0d7f6f238c6",
+    "f145-discovery-source-check.json": "4b1b6791ec50f64bd3bde6bc5b17090ec043681aee1ef3d2703886067aacb621",
+    "f145-discovery-jsx-check.json": "443aa20a2a973b88f95ab61be4de99b200750f91e145300c8a066392a5f3fe09"
+  },
+  "actual_frozen_programme_39tests_30commands_rerun": false,
+  "reused_root_runtime_evidence_sha256": "d1e0bcfe79ba84d03574af1c36c07f9634383680ab13c7169229bc23ab81a462",
+  "browser_or_full_build_executed": false,
+  "hosted_workflow_executed": false,
+  "public_delivery_executed": false,
+  "institution_operating": false,
+  "accreditation_granted": false,
+  "certification_granted": false,
+  "mark_or_legal_authority_granted": false,
+  "independent_accuracy_evidence": false,
+  "original_count_changed": false
+}

@@ -404,6 +404,8 @@ jobs:
           npm run verify:policies
           node scripts/verify-blind-review-browser.cjs
           node scripts/verify-mt-mobile-site.cjs
+          python -m pytest tests/test_mt_choice_integration.py -q
+          node scripts/verify-mt-choice-site.cjs
           python -m pytest tests/test_nf_device.py -q
           node --test tests/nf-browser-diagnostics.cjs
           node scripts/verify-nf-client.cjs

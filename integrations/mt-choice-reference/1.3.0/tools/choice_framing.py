@@ -1,0 +1,104 @@
+"""Caller-bound binary framing observations; additional options are not verified."""
+import hashlib,re,platform,unicodedata
+from pathlib import Path
+from protocol import corpus
+from protocol.normalization import normalize_nfc,NORMALIZATION_ID
+from tools.language_observations import subject_text,digest
+
+class FrameError(ValueError):pass
+
+def require(value):
+    if not value:raise FrameError('Choice framing input or context refused')
+
+def span(value,text,limit):
+    require(isinstance(value,list) and len(value)==2 and all(type(n) is int for n in value))
+    start,end=value;require(0<=start<end<=len(text) and end-start<=limit and text[start:end].strip())
+    return start,end
+
+def paired_markers(subject,frame,choices):
+    """Canonical finite grammar over already-frozen selected NFC locations."""
+    left,right=span(frame,subject,2000)
+    require(isinstance(choices,list) and len(choices)==2)
+    first,second=[span(value,subject,256) for value in choices]
+    require(left<=first[0]<first[1]<=second[0]<second[1]<=right)
+    require(subject[first[0]:first[1]].strip().casefold()!=subject[second[0]:second[1]].strip().casefold())
+    prefix=subject[left:first[0]];gap=subject[first[1]:second[0]]
+    leading=re.search(r'\b(either|only|neither|between)\s*$',prefix,re.I)
+    kind=leading.group(1).casefold() if leading else None
+    expected={'either':'or','only':'or','neither':'nor','between':'and'}.get(kind)
+    connector=re.fullmatch(r'[\s,]*'+expected+r'[\s,:]*',gap,re.I) if expected else None
+    # Additive correlative wording does not present exclusive alternatives.
+    # lower(), rather than casefold(), preserves refusal of long-s and other
+    # Unicode case confusables accepted by Python's re.I matching.
+    additive=re.search(r'\b(not\s+only)\s+$',prefix,re.I)
+    additive_connector=re.fullmatch(r'[\s,]+(but\s+also)[\s,:]+',gap,re.I)
+    is_additive=bool(additive and additive_connector
+        and additive.group(1).lower().split()==['not','only']
+        and additive_connector.group(1).lower().split()==['but','also'])
+    if is_additive:
+        kind='additive';construction='not_only_but_also'
+        markers=[[left+additive.start(1),left+additive.end(1)],
+                 [first[1]+additive_connector.start(1),first[1]+additive_connector.end(1)]]
+    else:
+        if leading is None or connector is None:
+            return None
+        trailing=re.search(r'\b'+expected+r'\b',gap,re.I)
+        construction=kind+'_'+expected
+        markers=[[left+leading.start(),left+leading.end(1)],
+                 [first[1]+trailing.start(),first[1]+trailing.end()]]
+    return kind,construction,markers
+
+def observe(original,record,context):
+    subject=subject_text(original,'en');record=corpus.parse(corpus.encoded(record))
+    require(isinstance(context,dict) and set(context)=={'format','language','subject_sha256','manifest_sha256','frames'})
+    require(context['format']=='choice-frame-context/v1' and context['language']=='en' and context['subject_sha256']==digest(subject) and context['manifest_sha256']==record['manifest_sha256'])
+    frames=context['frames'];require(isinstance(frames,list) and 1<=len(frames)<=16)
+    documents={d['id']:d for d in record['documents']};prepared=[];previous=-1
+    for frame in frames:
+        require(isinstance(frame,dict) and set(frame)=={'span','choices','additional_reference'})
+        left,right=span(frame['span'],subject,2000);require(left>=previous);previous=right
+        choices=frame['choices'];require(isinstance(choices,list) and len(choices)==2)
+        first,second=[span(s,subject,256) for s in choices]
+        require(left<=first[0]<first[1]<=second[0]<second[1]<=right)
+        words=[subject[a:b].strip().casefold() for a,b in [first,second]];require(words[0]!=words[1])
+        ref=frame['additional_reference'];require(isinstance(ref,dict) and set(ref)=={'document_id','document_sha256','source_span'})
+        require(isinstance(ref['document_id'],str) and ref['document_id'] in documents)
+        doc=documents[ref['document_id']];require(doc['sha256']==ref['document_sha256'])
+        source=normalize_nfc(doc['text']);a,b=span(ref['source_span'],source,2000)
+        require(source[a:b].strip().casefold() not in words)
+        prepared.append((left,right,first,second,dict(ref),digest(source)))
+    rows=[];unmatched=[]
+    for left,right,first,second,ref,source_hash in prepared:
+        # These positions are an explicit caller selection, not an automatic
+        # parse, quotation classification or proof that other options work.
+        parsed=paired_markers(subject,[left,right],[list(first),list(second)])
+        if parsed is None:
+            unmatched.append([left,right]);continue
+        kind,construction,markers=parsed
+        is_additive=kind=='additive'
+        negation=[[left+m.start(),left+m.end()] for m in
+                  re.finditer(r'\b(?:not|neither|nor)\b',subject[left:right],re.I)
+                  if m.group().casefold() in ('not','neither','nor')]
+        # "Between" also introduces continuous ranges and ordinary preferences.
+        # The new literal form never nominates a false-dilemma signal.
+        row={'proposed_signal':None if negation or kind in ('between','additive') else 'sig.false_dilemma.v1','frame_span':[left,right],
+            'choice_spans':[list(first),list(second)],'binary_marker_spans':[] if is_additive else markers,
+            'construction':construction,'negation_marker_spans':negation,
+            'negation_scope_resolved':False,
+            'additional_reference':{**ref,'normalized_source_sha256':source_hash},
+            'meaning':('caller_selected_additive_mentions_not_exclusive_alternatives_with_caller_nominated_passage'
+                if is_additive else 'caller_selected_two_mentioned_choices_with_caller_nominated_additional_passage'),
+            'additional_option_verified':False,'exhaustiveness_established':False,
+            'quoted_or_recommended_resolved':False,'manipulation_established':False}
+        if is_additive:row['additive_marker_spans']=markers
+        rows.append(row)
+    return {'profile':'caller-bound-choice-framing-observation/1.3.0',
+        'state':'OBSERVATIONS' if rows else 'NO_SUPPORTED_PATTERN','language':'en',
+        'subject_sha256':digest(subject),'manifest_sha256':record['manifest_sha256'],
+        'method_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        'runtime':{'implementation':platform.python_implementation(),'python_version':platform.python_version(),'unicode_runtime':unicodedata.unidata_version},
+        'normalization_id':NORMALIZATION_ID,'span_units':'NFC_unicode_codepoints',
+        'selection':'caller_selected_two_choices_and_additional_reference',
+        'observations':rows,'unmatched_selected_frames':unmatched,
+        'source_freshness':'unestablished','truth_established':False,
+        'independent_corroboration':False,'tag_asserted':False,'release_approved':False}

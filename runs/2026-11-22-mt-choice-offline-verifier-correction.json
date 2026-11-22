@@ -1,0 +1,36 @@
+{
+  "captured_at": "2026-11-22T06:14:24.031377+00:00",
+  "author": "Codex / web_camo",
+  "profile": "mt-choice-offline-verifier-correction/v1",
+  "pass": true,
+  "prior_candidate": "runs/2026-11-22-mt-choice-site-candidate-1.json",
+  "observations": {
+    "emulated_offline": {
+      "owned_cache_populated": true,
+      "service_worker_controls_page": true,
+      "correct_MT_hash": true,
+      "legacy_module_present": false,
+      "request_failure_code": "webkit_internal_error"
+    },
+    "owned_server_stopped": {
+      "profile": "mt-offline-webkit-owned-server-stopped/v1",
+      "pass": true,
+      "owned_server_stopped": true,
+      "method": "caller-bound-choice-framing-observation/1.3.0",
+      "counts": {
+        "additive_frames": 1,
+        "matched_frames": 1,
+        "other_paired_frames": 0,
+        "unmatched_frames": 0
+      },
+      "failures": []
+    }
+  },
+  "raw_observation_sha256": {
+    "mt-offline-webkit-navigation-diagnosis": "48005f01007eff00a7b93e322a76523fc74c6da0ccb1fad2e527b748c0a942b7",
+    "mt-offline-webkit-server-stopped": "36d5b9e886ce4cfb59b7935251726442269465b20c932050b6b0e0d52b573515"
+  },
+  "correction": "Runner uses a separate owned fixture per engine and stops only that HTTP server after existing Save installation; live helper has no offline server by default.",
+  "product_or_service_worker_changed": false,
+  "universal_browser_offline_claimed": false
+}

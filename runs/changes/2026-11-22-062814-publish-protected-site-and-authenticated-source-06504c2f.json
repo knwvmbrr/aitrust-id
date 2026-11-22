@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-062814-publish-protected-site-and-authenticated-source-06504c2f",
+  "recorded_at": "2026-11-22T06:28:14.936301+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "cd3beab02774fa939e3a2bd8a0d87913d9e8fd81",
+  "changed": "Deployed protected source cd3beab0, verified selected public build bytes and independently authenticated the exact public PS source download.",
+  "proves": "All11required checks passed before normal merge;70selected files match on each of2origins. Actual main signing and independent detached verification with separately retrieved roots pass for the admitted PS source route.",
+  "limits": "This authenticates source bytes only. Independent detector accuracy, full F057/X02 license coverage and all other distribution-route approvals remain open. Current original scope135complete67open; later framework/MT candidates are separate.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "T-FI",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "runs/2026-11-22-actual-protected-ps-source-verification.json": "8ac8c8b6c44c940e6bfd28c62ca90601ef0e4044f35fb7ec9bc6ba82899a0a18",
+    "runs/2026-11-22-actual-ps-source-attestation-provenance.json": "9a3cdcdf53090fea724e43ad79c2282aff9f82a678910dfeda7cbdafae016fb7",
+    "runs/2026-11-22-current-protected-site-publication.json": "93e12c38622b67aa148db13fedeffb1b058d7875d2cf6ecc23555c93ee5053e0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-current-protected-site-publication.json",
+      "sha256": "93e12c38622b67aa148db13fedeffb1b058d7875d2cf6ecc23555c93ee5053e0"
+    },
+    {
+      "path": "runs/2026-11-22-actual-protected-ps-source-verification.json",
+      "sha256": "8ac8c8b6c44c940e6bfd28c62ca90601ef0e4044f35fb7ec9bc6ba82899a0a18"
+    },
+    {
+      "path": "runs/2026-11-22-actual-ps-source-attestation-provenance.json",
+      "sha256": "9a3cdcdf53090fea724e43ad79c2282aff9f82a678910dfeda7cbdafae016fb7"
+    }
+  ],
+  "checks": []
+}

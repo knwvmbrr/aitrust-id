@@ -680,7 +680,13 @@
         "runs/2026-11-22-conformance-worker-ownership.json",
         ".github/workflows/host-capture.yml",
         "docs/remaining-worker-evidence-refresh-plan.md",
-        "docs/remaining-worker-evidence-refresh-result.md"
+        "docs/remaining-worker-evidence-refresh-result.md",
+        "tools/certification_programme.py",
+        "scripts/certification-programme.py",
+        "scripts/verify-certification-programme.py",
+        "tests/test_certification_programme.py",
+        "eval/certification-programme.json",
+        "docs/certification-programme*.md"
       ],
       "commands": [
         [
@@ -1119,6 +1125,19 @@
           "pytest",
           "tests/test_citation_demo.py",
           "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_certification_programme.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-certification-programme.py",
+          "--output",
+          "output/verification/certification-programme-current.json"
         ]
       ]
     },
@@ -1818,7 +1837,20 @@
         ".github/workflows/host-capture.yml",
         "docs/remaining-worker-evidence-refresh-plan.md",
         "docs/remaining-worker-evidence-refresh-result.md",
-        "tests/test_organization_audit.py"
+        "tests/test_organization_audit.py",
+        "scripts/build-mt-choice-device.py",
+        "scripts/mt-choice-device-cases.py",
+        "scripts/mt-choice-site-controls.cjs",
+        "scripts/verify-mt-choice-site.cjs",
+        "scripts/verify-mt-choice-outage.cjs",
+        "tests/test_mt_choice_integration.py",
+        "tests/mt-choice-modal-client.mjs",
+        "tools/certification_programme.py",
+        "scripts/certification-programme.py",
+        "scripts/verify-certification-programme.py",
+        "tests/test_certification_programme.py",
+        "eval/certification-programme.json",
+        "docs/certification-programme*.md"
       ],
       "commands": [
         [
@@ -2150,6 +2182,17 @@
         [
           "node",
           "scripts/verify-nf-diagnostics.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_mt_choice_integration.py",
+          "-q"
+        ],
+        [
+          "node",
+          "scripts/verify-mt-choice-site.cjs"
         ]
       ]
     }

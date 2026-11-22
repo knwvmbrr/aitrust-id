@@ -1,0 +1,44 @@
+{
+  "captured_at": "2026-11-22T07:08:07.644537+00:00",
+  "profile": "programme-mt-current-integration-packet/v1",
+  "pass": true,
+  "five_current_capabilities": {
+    "PS": {
+      "path": "runs/2026-11-22-programme-mt-ps.json",
+      "sha256": "ab431f6ebf13055ed2c13955e0347eebba8a32e174f286bbfa037bdaa4c4465f"
+    },
+    "PII_REDACTED": {
+      "path": "runs/2026-11-22-programme-mt-pii_redacted.json",
+      "sha256": "ec2c1b27b49c97718cd81ceb6336510f9ce126645ce00aaf1f0831a1fb82c8d5"
+    },
+    "extension": {
+      "path": "runs/2026-11-22-programme-mt-extension.json",
+      "sha256": "8c0cd209ee4f29b144ec21bfb54e5456d742cf224954b15cc9875e42ea714d0a"
+    },
+    "protocol": {
+      "path": "runs/2026-11-22-programme-mt-corrected-protocol.json",
+      "sha256": "ffc9a43414e7a2a20b68db5f8d1db95af9b4e86418d6958a526a1d5846f41927"
+    },
+    "website": {
+      "path": "runs/2026-11-22-programme-mt-website.json",
+      "sha256": "1701f814b6ddf4a3f922045be98fb45eb780cce3e2f5b4eb412f7d32bba12444"
+    }
+  },
+  "boundary": {
+    "path": "runs/2026-11-22-programme-mt-boundaries.json",
+    "sha256": "dbc6b2970fee7cf6e7012297801b1e2cf6e21a1f27a71b4e008c004a6b707413"
+  },
+  "actual_MT_browser": {
+    "path": "runs/2026-11-22-programme-mt-current-browser.json",
+    "sha256": "f4e898ba2e80c094221412d2167ffeda1b29b159783ce0a6ec44190c28f34bef"
+  },
+  "complete_reference_programme": true,
+  "F145_final_public_delivery_pending": true,
+  "MT_tag_released": false,
+  "original_complete": 135,
+  "original_open": 67,
+  "target_open": 60,
+  "independent_accuracy_evidence": false,
+  "physical_phone_acceptance": false,
+  "protected_merge_and_live_publication_pending": true
+}

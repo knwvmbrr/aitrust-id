@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-063811-record-actual-protected-delivery-state-9a0b9dcf",
+  "recorded_at": "2026-11-22T06:38:11.555646+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d3e0cb93461c6ed8cde7bb043e17377f3b21df45",
+  "changed": "Updated current machine state to actual protected cd3 publication, independently verified PS source attestation and unchanged135complete67open accounting.",
+  "proves": "Actual140 selected HTTP responses match the protected build; public PS source ZIP matches the workflow artifact and passes independently rooted verification.",
+  "limits": "Source identity is not independent tag accuracy, full distribution clearance or a new original closure. Next F145 and MT integrated sources require fresh acceptance.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "state.json": "0272f8d5deb60b747fd66bd09289481d6aa273be0ce61b3cb7bcaf2933ef2e73"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-current-protected-site-publication.json",
+      "sha256": "93e12c38622b67aa148db13fedeffb1b058d7875d2cf6ecc23555c93ee5053e0"
+    },
+    {
+      "path": "runs/2026-11-22-actual-ps-source-attestation-provenance.json",
+      "sha256": "9a3cdcdf53090fea724e43ad79c2282aff9f82a678910dfeda7cbdafae016fb7"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-064651-expose-reference-programme-without-claiming-authority-0cfd9183",
+  "recorded_at": "2026-11-22T06:46:51.651467+00:00",
+  "author": "Codex /root/share_debugger; integration lead owns acceptance and publication",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d3e0cb93461c6ed8cde7bb043e17377f3b21df45",
+  "changed": "Added reference-programme README practice, About links, three exact public reference copies and a dedicated read-only CI verifier without altering frozen programme runtime.",
+  "proves": "Executed actual reference-copy block and verified all three exact outputs/link targets; shell/module/JSX/YAML/embedded-Python syntax and full current source-trigger coverage pass. All eight existing39-test/30-command runtime source hashes remain unchanged.",
+  "limits": "No unchanged runtime batch repeated, hosted job, integrated browser/build or public delivery performed. No accreditation, actual certifier, mark authority, independent accuracy, institution activation or original-count change. Distinct discovery review requested.",
+  "scope_ids": [
+    "F-145"
+  ],
+  "files": {
+    "README.md": "8bd728fc9988cf09725cda27a6c51ed6e44d920a95ef7b79f9e4882814394c48",
+    "site/scripts/prepare.mjs": "05cbc79f1f0512ff76b60a2914f352df26e230e9b8135b5bf64131a367e68be5",
+    "site/src/workflows/About.jsx": "11df4bcdd8f64609d8ef6d54afbbb44fcf48b2c2c2f37379372ebb828cdf424e",
+    ".github/workflows/certification-programme.yml": "cd7637b7cccc4b05734d545d36cafc511d919a6b632f5141e9322b7d86817975",
+    "docs/certification-programme-main-integration-plan.md": "ee1400683317afd030ceb97b33943d9906c5c9890c7133602d0096691f3c1e9a",
+    "docs/certification-programme-main-integration-result.md": "078c7bbd540231d6b705b6eef4746f04dfca1d74ecd61508b961f47c6adbb89a",
+    "runs/2026-11-22-f145-discovery-execution.json": "e33cea12c977418148115ed70c5f85d51e39f8b34020c0c8508b127ec389a23a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-f145-discovery-execution.json",
+      "sha256": "e33cea12c977418148115ed70c5f85d51e39f8b34020c0c8508b127ec389a23a"
+    },
+    {
+      "path": "runs/2026-11-22-f145-root-integration.json",
+      "sha256": "d1e0bcfe79ba84d03574af1c36c07f9634383680ab13c7169229bc23ab81a462"
+    }
+  ],
+  "checks": []
+}

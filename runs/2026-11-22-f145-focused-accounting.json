@@ -1,0 +1,45 @@
+{
+  "profile": "F145-focused-execution-accounting/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T05:37:57.564462+00:00",
+  "current_test_methods": 39,
+  "earlier_source_execution": {
+    "passed": 37,
+    "seconds": 0.6,
+    "runtime_before_peer_revalidation_correction": true,
+    "log_sha256": "dc0fa52c86f4af52814ae6cd08f65c93123e948cd24239df80d6c01dc14d6ee0"
+  },
+  "current_affected_controls": {
+    "passed": 8,
+    "groups": [
+      {
+        "passed": 7,
+        "seconds": 0.13,
+        "log_sha256": "94879f8ac0473768d3b00746d947ef056ce014f2c96d76741749dbc28bf69107"
+      },
+      {
+        "passed": 1,
+        "seconds": 0.09,
+        "log_sha256": "59907462a8d5fd93406cdf4c7d1eb2f7b7a96664ae85c4ec202693d419cd019e"
+      }
+    ]
+  },
+  "all39_repeated_currently": false,
+  "source_sha256": {
+    "tools/certification_programme.py": "20b8fdca81a5c9fd79230dfb71df9bbc94352cdc788779f2fc2384b0d52143ad",
+    "scripts/certification-programme.py": "0b1b37dd258fdb46a0cd36a41ab8e66b57c9965b31b46fd43a1474f41351a4cc",
+    "scripts/verify-certification-programme.py": "2ae5e1f8ca6ebb66865869c4e1616be98ba2d17e8ac0455d61dd117bcf22df76",
+    "tests/test_certification_programme.py": "683ce82d651869a30f5322bcdd9d0df510afdccb1c291318fff933a693290c6e",
+    "eval/certification-programme.json": "852df2d38ba5de55b2ffd0e8bbcc0fd293d27579ca1171c5528c95e1773588a6",
+    "docs/certification-programme-plan.md": "b99b6536b728c6f54714e9d4a7b84f28ccb0f8ba1de4ae3ffea95a2d4fdaaad1",
+    "docs/certification-programme.md": "91b0f17b0c88bc1cc7a65561152ea95ced811e2ed50152ee74b1f230e1a0af14",
+    "docs/certification-programme-guide.md": "5e78d2e28a924e2b327966c3d5d2d11b39943ce5b674b0b8af4316967c5e8b59"
+  },
+  "actual_current_30_CLI_receipt_sha256": "78ccc9858a6b7f59065323fc3a79f23ae37ec127684c6fc18d9551f8aa731676",
+  "initial_failure_records": [
+    "runs/2026-11-22-f145-initial-focused-failure.json",
+    "runs/2026-11-22-f145-first-cli-harness-failure.json",
+    "runs/2026-11-22-f145-revalidation-review-failure.json"
+  ],
+  "independent_accuracy_accreditation_or_original_closure": false
+}

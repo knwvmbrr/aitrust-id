@@ -1,0 +1,164 @@
+{
+  "captured_at": "2026-11-22T06:10:28.036Z",
+  "author": "Codex / web_camo",
+  "profile": "mt-selected-wording-production-route/v1",
+  "pass": false,
+  "before": {
+    "sources": {
+      "integrations/mt-choice-reference/1.3.0/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "integrations/mt-choice-reference/1.3.0/NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+      "integrations/mt-choice-reference/1.3.0/eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "integrations/mt-choice-reference/1.3.0/protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+      "integrations/mt-choice-reference/1.3.0/protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "integrations/mt-choice-reference/1.3.0/protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "integrations/mt-choice-reference/1.3.0/source.json": "a91443529c521f1ee4a0097eee91ae7da867a319076efd6608ec78cebbdfaad4",
+      "integrations/mt-choice-reference/1.3.0/tools/choice_framing.py": "01ec221400300a302d561cfd88e6df7000465040966875a6ece25c6a4f4bbf36",
+      "integrations/mt-choice-reference/1.3.0/tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+      "integrations/mt-choice-reference/1.3.0/tools/mt_choice_device.py": "e71f7b125abd2084858a73cdb545c31c73b249336ed2dbded74e42575621a189",
+      "scripts/build-mt-choice-device.py": "ceaee08bc647a2ae1946842cffc7eb0330e7af00ca6fa00909838a4648026456",
+      "scripts/mt-choice-device-cases.py": "556fd63a15086dae42c95806a6d89265ae9cf07e3cedf9efe808d6bb6cdad0f7",
+      "scripts/mt-choice-site-controls.cjs": "025356db3553743591535a467d16fdabadf212370c526f71ee7b49752484c8dc",
+      "scripts/verify-mt-choice-site.cjs": "9df3eade428bb0b99c5dafa9d34d52065119533cd0a243dae4893715707baae7",
+      "site/src/MTChoiceExplorer.jsx": "8fd7c00cf6e81955a0d256beb95c564a1addf2521dc3b51568519a4f5f960362",
+      "site/src/MTChoiceExplorerSlot.jsx": "a238e3fe901d6a0a272a08b41bbb50dc8f6efa91c445c8fc2a599ac5024132d9",
+      "site/src/mt-choice-client.mjs": "e7a0633543f7edac601ccf7cb532294a52691255ab67beb76e2d010e956e37d1",
+      "site/src/mt-choice-result.mjs": "00501f506dd596583e59dd4bd182d2e8d50f88fd94c18ff94a1ca5f51f4f7953",
+      "site/src/mt-choice-worker.mjs": "69ae0025b6187c49dfbe821b04ea868d2ddb20ad3bd2866616d64664cf001f94",
+      "site/src/main.jsx": "2e039618f197f4d9e641c4f52fc1b9898701f83580058a04bec07f3ebdbdd155",
+      "site/scripts/prepare.mjs": "56fefc21f22b30e1e282d451ee0b97b0858b50557c1f01a5f452510269f40225",
+      "scripts/verify-site-accessibility.cjs": "30ca46e02ca35464b6c36646a2c73e404ef90bcec8b6ca809e522c892c0653c3",
+      "scripts/verify-site.cjs": "1eacc26054d573e4bda5ed77b28138def7297f75a8e95aa9e17b1a159ca8ac24",
+      "site/scripts/prepare-offline.mjs": "59294d4a5670d42eb0f3aa0e9fc8d82f315312e867ea4cce5dd839bff2f86916",
+      "tests/test_mt_choice_integration.py": "fe3d5c5e65437b6f9a625d118e61e237f09302253fd28d91156f66d7d157dfd7",
+      "tests/mt-choice-modal-client.mjs": "0375860f350bae66f7c0a77e10c8fbdad430429fd57151afb364e224361c552b",
+      "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb",
+      "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+      "sbom/nested-runtime/pyodide-wasm-release.json": "fda0196c527b3920744261e27ac93cb71637ad36cf127e450aeaf49f425dd86f",
+      "docs/mt-choice-device.md": "a52669ee4687c8e7565338a66c187d2144228b96ad9167c316fe4ace3aa7f103",
+      "docs/mt-choice-modal-integration-plan.md": "d2c5f7b464bf14e38a2b08774d2f6c8b946e47ee7aa3d5a0bd7c4dd28114ef46",
+      "tools/choice_framing.py": "0ba444f77f832fa7dc7967f0ada24457f21340f58d62597ec527fc44cfb2c122",
+      "tools/mt_workflow.py": "454549459f33e94caf5522ee59bc6ec2678dfe38b40844f10d659b71efe7f7a7",
+      "site/src/MTExplorer.jsx": "3ef945ff120e977cb9860bc3a15136df8d3b1db200df58bc128de5b468855032",
+      "site/src/mt-device-client.js": "c4ae3168af3d705e3707ef6ba143a35fc042a047c142dd6e6bbc05c6c3bb8c2e",
+      "site/src/mt-device-result.js": "24bfe35426849f6f85a3682eec732cb9a4ea73d54d749a42017d7b485ac80cc8",
+      "site/src/mt-device-worker.js": "99cd033c5da6468c34de8c3c27dab663cd48dbad6a97c40577418b29e7b75197"
+    },
+    "served": {
+      "index.html": "6a6c4e9463b4dede91ac38aba2e4c5c1299f51d8d774633da3ce1a3855282181",
+      "_headers": "a40aac80dbcc3744229866b382828bbf0a381ec2662f313c54f5e328eb8f96ce",
+      "offline-worker.js": "6097dece0d5041a52e6c07ffaa09353ee527b800cbc1c5c5af0761e3ce394fd3",
+      "offline-release.json": "e10fad6190f27040b8976cd67f05271a7ba180cafdd3d0a8c1914c4d93a03f74",
+      "reference/mt-choice-device.md": "a52669ee4687c8e7565338a66c187d2144228b96ad9167c316fe4ace3aa7f103",
+      "device/mt-choice/manifest.json": "43c9b73ce95d6ffb7ac3a5113b9cafa78439a348f15aebc8a81422d197c3a526",
+      "device/mt-choice/method-a8c876a44dcae65ed92e3bc417fcdde46c6444d4e6f9bc6a9048df91d82841b7.json": "a8c876a44dcae65ed92e3bc417fcdde46c6444d4e6f9bc6a9048df91d82841b7",
+      "device/mt-choice/mt-choice-worker.mjs": "69ae0025b6187c49dfbe821b04ea868d2ddb20ad3bd2866616d64664cf001f94",
+      "device/mt-choice/project-notices.txt": "add6ca345d4a483aed3f5ec5b2c07e23369085158dfef6a0f8e8a146abbd6d51",
+      "assets/CredentialFlowExplorer-CDpMtoUg.js": "d329eaef7f51a2f42b47c80daf57180fec089d7f3f6bd0bfe8a72a5177842030",
+      "assets/HPExplorer-q0IsPQWp.js": "458958e1ad905cd4ff371352238de1cb46708429537a113bdd066f14c6a0c4ac",
+      "assets/HPUncertaintyExplorer-BpvDjFlt.js": "21ebc82f66394dc1d73a4febe46866052f11008bbca10c0f916d11e36d760acb",
+      "assets/MTChoiceExplorer-ByW4KL7E.js": "d3ba1cd560ae3446732d60eb55ac01fd3b3f3d8f94c6be750d337513cc98a4cf",
+      "assets/MTExplorer-C89dimXA.js": "db640ce2c78e4e58b08c93a815bebc9deb721a82789fd0162c8849ad8d40eb6b",
+      "assets/NFExplorer-Blo-CeOx.js": "f04f95fbce405bf8811ee68676e309cfea1245a19091d708a33ccd22cfb82eff",
+      "assets/credential-device-worker-IB4hBigb.js": "bab56f40502b0223681d34756715e628915102dd104515beb0a79b70a3bedb8d",
+      "assets/device-worker-CYlrzLLK.js": "4ccf9842437c5fb613d04a6e3ab268fbf369f84a2a767b62416aafb9baf32269",
+      "assets/hp-device-worker-Ckw2-Whn.js": "04f97ef2dae6e5afb5573bd7e0465b1d72886fb656e8dbcd02d0a9f28bef2a1d",
+      "assets/hp-uncertainty-worker-RW14Xkr0.js": "4ff06f16be4582ce3ab909008d09a586638a46f0942878f91daf39f64d82c12b",
+      "assets/index-5Gd6eAZK.js": "a244a5cfb9a35750fc8ae64f219bfa377520d9cad80cea812d90346afbc0be59",
+      "assets/index-DLYpHH1R.css": "7382f713a93bff05d9e9b86ae7e9c2c4e9bd07c4499cc0e899c4f4d1020e353c",
+      "assets/mt-device-worker-BFy14zjg.js": "d698f7329c667d52ae217ff49cbed7ead8ae427765a552e5a624e65e6f77cdcc",
+      "assets/mt-mobile-device-result-Dc10EE6c.js": "e50b4a45e75a4f11d550b37485d21912165be3003aece34a02b7d61a7db67af4",
+      "assets/nf-cosine-result-D7cPZF7H.js": "3e97f434a924feb21fef7b9a910918bb1209015194561d5ca6d559108d1a0ee5",
+      "assets/nf-device-worker-C0Au7N2H.js": "e9b6f123170823651c0fd72453940666f57bf48bccdc1373af3aa5eeb2de72ca",
+      "device/runtime-314.0.7/pyodide.mjs": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+      "device/runtime-314.0.7/pyodide.asm.mjs": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+      "device/runtime-314.0.7/pyodide.asm.wasm": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+      "device/runtime-314.0.7/python_stdlib.zip": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+      "device/runtime-314.0.7/pyodide-lock.json": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010"
+    }
+  },
+  "engines": [
+    {
+      "engine": "Chromium",
+      "pass": true,
+      "full_canonical_worker_records": 11,
+      "full_actual_UI_records": 3,
+      "source_runtime_metadata": {
+        "native": {
+          "implementation": "CPython",
+          "python_version": "3.12.14",
+          "unicode_runtime": "15.0.0"
+        },
+        "browser": {
+          "implementation": "CPython",
+          "python_version": "3.14.2",
+          "unicode_runtime": "16.0.0"
+        }
+      },
+      "record_digests": [
+        "2441d943f28c2bd7f491269bd28d12f81e5222391874811f2a988ab19123fc2e",
+        "bedc86148ddf84795aaeca5569b59e2b0c0ae99616bc1ecaeacb161660efbef8",
+        "de9a6435364b9d68c5d787980a87cd424cbf6586cc0457dc53d321a95cadb93c",
+        "ae55963c476182b5cf32c7bc10bc1c45568fb8f6703f44c13978b7d235148f82",
+        "f39a75de03a24a957b83a5954ae36c8d404cbf2cc178d903893252484fede0a2",
+        "1f78fe19537d409cff4c03578927df5e8b1efbf663d75bd6b74c58f2290fcc54",
+        "a1bf42b1ba50cce63a703969dda90ad9ae40c77744d0afa9dc5e2e4ea51ce014",
+        "53ea970382ba62ad9645f30251199820759a1f80883959e6bacc2c827e164439",
+        "07756ed67a492bf5c83cfd69cd5fe123ed1fdcd95ed8469263fd16729f82a5cc",
+        "ba8cc2f6c8920f0d45ea2a2386319071d771828ac65f61ba7cc29badaee0820c",
+        "dc4462135d5e10ac837bd309dd974a9f2fed2649b1cb1aa4cab437938608b0b4"
+      ],
+      "corrupt_actual_UI_records_refused": 2,
+      "no_automatic_worker": true,
+      "details_opt_in": true,
+      "complete_oversize_refusal": true,
+      "clear_edit_cancel_close_dispose": true,
+      "rapid_close_reopen_discards_draft": true,
+      "sibling_drafts_unchanged": true,
+      "mobile320_text200": true,
+      "minimum44px": true,
+      "theme_variants": true,
+      "no_input_upload_or_storage_observed": true,
+      "storage": {
+        "local": [],
+        "session": [],
+        "caches": [],
+        "databases": []
+      },
+      "optional_failures": [
+        {
+          "kind": "chunk",
+          "unavailable": true,
+          "actual_legacy_MT_and_PS_recovered": true
+        },
+        {
+          "kind": "payload",
+          "unavailable": true,
+          "actual_legacy_MT_and_PS_recovered": true
+        }
+      ],
+      "offline": {
+        "executed": true,
+        "existing_save_control": true,
+        "cold_selected_worker_record_matches_native": true,
+        "public_files_only": true
+      },
+      "physical_phone_tested": false,
+      "independent_accuracy_evidence": false,
+      "MT_tag_issued": false
+    }
+  ],
+  "errors": [
+    {
+      "engine": "WebKit",
+      "error_sha256": "21313479013155e8599575f0f7c6bab8596100c8c52248be980fea60b6b540d0"
+    }
+  ],
+  "artifact_mode": "isolated_normal_build",
+  "production_publication_claimed": false,
+  "full_MT_acceptance_claimed": false,
+  "independent_accuracy_evidence": false,
+  "physical_phone_tested": false,
+  "actual_CSP": true,
+  "fixture_closed": true,
+  "finalized_at": "2026-11-22T06:11:42.462Z"
+}

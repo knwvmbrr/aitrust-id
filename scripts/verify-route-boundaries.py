@@ -360,6 +360,18 @@ PATTERNS += ('tools/remote_tag_server.py', 'scripts/remote-tag-server.py',
              'scripts/verify-remote-openapi.py', 'tests/test_remote_openapi.py',
              'docs/remote-openapi-plan.md', 'docs/api-rollback-ownership-plan.md')
 
+# Optional programme preparation and selected-wording UI share no tag result dependency.
+PATTERNS += ('tools/certification_programme.py', 'scripts/certification-programme.py',
+             'scripts/verify-certification-programme.py', 'tests/test_certification_programme.py',
+             'eval/certification-programme.json', 'docs/certification-programme*.md',
+             '.github/workflows/certification-programme.yml',
+             'integrations/mt-choice-reference/1.3.0/**/*',
+             'scripts/build-mt-choice-device.py', 'scripts/mt-choice-device-cases.py',
+             'scripts/mt-choice-site-controls.cjs', 'scripts/verify-mt-choice-site.cjs',
+             'scripts/verify-mt-choice-outage.cjs', 'tests/test_mt_choice_integration.py',
+             'tests/mt-choice-modal-client.mjs', 'docs/mt-choice-*.md',
+             'docs/reviewed-programme-mt-delivery-plan.md')
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:

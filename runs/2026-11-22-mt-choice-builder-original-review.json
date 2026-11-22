@@ -1,0 +1,17 @@
+{
+  "profile": "MT-choice-builder-outer-close-finding/v1",
+  "pass": false,
+  "captured_at": "2026-11-22T05:58:37.201005+00:00",
+  "reviewed_by": "/root/seo",
+  "result": {
+    "raised_class": "BuildError",
+    "typed_output_uncertain": false,
+    "four_complete_outputs_remain": true,
+    "source_close_injected_once": true,
+    "source_sha256": "1b1713cb853ee3c7d945e5bdd905eda3c65fa3dd5f34340a499d3815038bcac5"
+  },
+  "finding": "Output commit uncertainty does not cover outer source Capture close after complete publication.",
+  "actual_existing_runtime_read_only": true,
+  "runtime_or_browser_execution": false,
+  "temporary_outputs_removed_on_context_exit": true
+}
