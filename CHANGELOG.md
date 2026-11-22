@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-065604-preserve-account-free-ps-provenance-downloads-6a8b738a
+
+Recorded 2026-11-22T06:56:04.589688+00:00 · Contributor: Codex /root/share_debugger; protected verification and delivery remain separate · change
+
+- **Changed.** Added immutable commit-specific public PS ZIP/SPDX/preparation/bundle/observation downloads and a separate independent-trust guide; preserved all five original protected artifacts byte-for-byte.
+- **Evidence.** Actual detached verification succeeds with empty HOME/GitHub configuration and no credentials; trusted roots obtained independently without login. Signed predicate/subject, exact copies, private-path/token scans and guide syntax pass. [Change record](./runs/changes/2026-11-22-065604-preserve-account-free-ps-provenance-downloads-6a8b738a.json).
+- **Not claimed.** Static delivery candidate only; no HTTP publication tested or new signature generated. Raw preparation remains unverified, past observation is unsigned, no trust roots shipped. No all-project licensing, accuracy or full original completion.
+
+
 ### 2026-11-22-055521-record-current-delivery-engineering-packet-f5ca3c80
 
 Recorded 2026-11-22T05:55:21.266447+00:00 · Contributor: Codex PM /root · change

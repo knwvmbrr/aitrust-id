@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-065604-preserve-account-free-ps-provenance-downloads-6a8b738a",
+  "recorded_at": "2026-11-22T06:56:04.589688+00:00",
+  "author": "Codex /root/share_debugger; protected verification and delivery remain separate",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "cd3beab02774fa939e3a2bd8a0d87913d9e8fd81",
+  "changed": "Added immutable commit-specific public PS ZIP/SPDX/preparation/bundle/observation downloads and a separate independent-trust guide; preserved all five original protected artifacts byte-for-byte.",
+  "proves": "Actual detached verification succeeds with empty HOME/GitHub configuration and no credentials; trusted roots obtained independently without login. Signed predicate/subject, exact copies, private-path/token scans and guide syntax pass.",
+  "limits": "Static delivery candidate only; no HTTP publication tested or new signature generated. Raw preparation remains unverified, past observation is unsigned, no trust roots shipped. No all-project licensing, accuracy or full original completion.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "docs/ps-source-provenance-downloads-plan.md": "29bb74915ab85338f6b6b485fd7ef48838c442e8ea6b2b5268e1005fb5160287",
+    "docs/ps-source-provenance-downloads.md": "c830877eb32db8955e42cc4518edb58e22c8e4f39a53fafd68e72edc5eaa355a",
+    "site/public/downloads/provenance/cd3beab02774fa939e3a2bd8a0d87913d9e8fd81/VERIFY.md": "c830877eb32db8955e42cc4518edb58e22c8e4f39a53fafd68e72edc5eaa355a",
+    "site/public/downloads/provenance/cd3beab02774fa939e3a2bd8a0d87913d9e8fd81/artifact.spdx.json": "0425cc829b7dc89485158cc5bbfe9eddd303143cc56a6c3c9b38e42e470a708a",
+    "site/public/downloads/provenance/cd3beab02774fa939e3a2bd8a0d87913d9e8fd81/checker.zip": "1720be1015f7ab1e295de97dbc503723b486209b2f7dc09e2ebd6130c6fb42d1",
+    "site/public/downloads/provenance/cd3beab02774fa939e3a2bd8a0d87913d9e8fd81/evidence.json": "060775af5eda155f2e4921466f33f3c360ac12a2f4a5ff8dfdf19bbf1232aeec",
+    "site/public/downloads/provenance/cd3beab02774fa939e3a2bd8a0d87913d9e8fd81/manifest.json": "5b695e648b862f7627b6d79ae86b9aa95c33502114188e1adaeaa19d24c440f7",
+    "site/public/downloads/provenance/cd3beab02774fa939e3a2bd8a0d87913d9e8fd81/sbom.sigstore.json": "3ed92413ce241addeb71ac4320a1009c6e966a945509dc8dee378c4779f28475",
+    "site/public/downloads/provenance/cd3beab02774fa939e3a2bd8a0d87913d9e8fd81/verified-observation.json": "8ac8c8b6c44c940e6bfd28c62ca90601ef0e4044f35fb7ec9bc6ba82899a0a18",
+    "runs/2026-11-22-ps-source-provenance-downloads-execution.json": "34d94aa0f5940be773f3e3a4723a907980e2d00861a68608869e2e91c0161f8d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-ps-source-provenance-downloads-execution.json",
+      "sha256": "34d94aa0f5940be773f3e3a4723a907980e2d00861a68608869e2e91c0161f8d"
+    }
+  ],
+  "checks": []
+}
