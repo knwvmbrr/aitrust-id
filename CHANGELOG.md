@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-163209-record-actual-source-snapshot-v3-qualification-4acf2675
+
+Recorded 2026-11-22T16:32:09.237308+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Recorded actual hosted source snapshot v3 qualification and its distinct retained-evidence review.
+- **Evidence.** All16 controls passed; the actual128339526-byte12829-file committed-source archive passed v3 and was refused by unchanged v2. Current graph/SPDX reconstruction passed with per-process RSS maxima233656KiB under an inherited768MiB address-space limit. [Change record](./runs/changes/2026-11-22-163209-record-actual-source-snapshot-v3-qualification-4acf2675.json).
+- **Not claimed.** Qualified source is b75f434b only; later metadata/integrated source requires fresh measurement and signing. First4d failure remains preserved, host exception unknown. Packet16MB cap unchanged and near headroom. No signature, route admission, legal clearance, independent accuracy or full F057/X02 closure.
+
+
 ### 2026-11-22-162339-correct-isolated-source-cli-bootstrap-def36e9e
 
 Recorded 2026-11-22T16:23:39.965913+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
