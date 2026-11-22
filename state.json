@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-22T06:38:11.516183+00:00",
+  "updated": "2026-11-22T06:49:02.510506+00:00",
   "active_increment": "Protected source cd3 and actual public site verified;135 complete67 open. Integrating complete reviewed F145 reference design and optional independent selected-pair MT browser preview; no additional original closure counted yet.",
   "status": "protected_live135complete67open; reviewed_F145_and_MT_integrated_for_next_delivery;target60_unmet",
   "scope": "docs/master-scope.json",
@@ -1224,7 +1224,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-22T06:38:11.516183+00:00",
+  "updated_at": "2026-11-22T06:49:02.510506+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3852,149 +3852,7 @@
       "NF": "Published offline selected-passage literal/cosine methods; no NF tag release"
     }
   },
-  "current_engineering_revalidation_status": {
-    "latest_published_evidence_increment": {
-      "captured_at": "2026-11-19T17:24:33.190085+00:00",
-      "source_commit": "92be88d00e967d53d4b8604b8f90561088efc903",
-      "deployment_url": "https://f19cd9fe.aitrust-id.pages.dev",
-      "evidence": "runs/2026-11-19-tag-bots-live-publication.json",
-      "matching_artifacts": 644,
-      "independent_release_validated": false
-    },
-    "agent_integration": {
-      "PS": "runs/2026-11-19-agent-tools-host-stop-PS.json",
-      "PII_REDACTED": "runs/2026-11-19-agent-tools-host-stop-PII_REDACTED.json",
-      "protocol": "runs/2026-11-19-agent-tools-host-stop-protocol.json",
-      "extension": "runs/2026-11-19-agent-tools-host-stop-extension.json",
-      "website": "runs/2026-11-19-agent-tools-host-stop-website.json",
-      "boundaries": "runs/2026-11-19-agent-tools-host-stop-boundaries.json",
-      "independent_accuracy_evidence": false,
-      "source_bound_checks_passed": true,
-      "protected_publication_pending": false,
-      "protected_publication": "runs/2026-11-19-agent-tools-protected-merge.json",
-      "live_publication": "runs/2026-11-19-agent-tools-trust-live-publication.json"
-    },
-    "ps_source_distribution": {
-      "PS": "runs/2026-11-19-ps-source-notice-PS.json",
-      "PII_REDACTED": "runs/2026-11-19-ps-source-notice-PII_REDACTED.json",
-      "protocol": "runs/2026-11-19-ps-source-notice-protocol.json",
-      "extension": "runs/2026-11-19-ps-source-notice-extension.json",
-      "website": "runs/2026-11-19-ps-source-notice-website.json",
-      "boundaries": "runs/2026-11-19-ps-source-notice-boundaries.json",
-      "independent_accuracy_evidence": false,
-      "source_bound_checks_passed": true,
-      "protected_publication_pending": false,
-      "protected_publication": "runs/2026-11-19-ps-source-protected-merge.json",
-      "live_publication": "runs/2026-11-19-ps-source-live-publication.json"
-    },
-    "mt_cohort_integration": {
-      "PS": "runs/2026-11-19-mt-cohorts-PS.json",
-      "PII_REDACTED": "runs/2026-11-19-mt-cohorts-PII_REDACTED.json",
-      "protocol": "runs/2026-11-19-mt-cohorts-protocol.json",
-      "extension": "runs/2026-11-19-mt-cohorts-extension.json",
-      "website": "runs/2026-11-19-mt-cohorts-website.json",
-      "boundaries": "runs/2026-11-19-mt-cohorts-boundaries.json",
-      "source_bound_checks_passed": true,
-      "independent_accuracy_evidence": false,
-      "protected_publication_pending": false,
-      "protected_publication": "runs/2026-11-19-mt-protected-merge.json",
-      "live_publication": "runs/2026-11-19-mt-live-publication.json"
-    },
-    "fi_citation_integration": {
-      "PS": "runs/2026-11-19-fi-citation-PS.json",
-      "PII_REDACTED": "runs/2026-11-19-fi-citation-PII_REDACTED.json",
-      "protocol": "runs/2026-11-19-fi-citation-opaque-protocol.json",
-      "extension": "runs/2026-11-19-fi-citation-extension.json",
-      "website": "runs/2026-11-19-fi-citation-opaque-website.json",
-      "boundaries": "runs/2026-11-19-fi-citation-opaque-boundaries.json",
-      "source_bound_checks_passed": true,
-      "independent_accuracy_evidence": false,
-      "protected_publication_pending": false,
-      "protected_publication": "runs/2026-11-19-fi-protected-merge.json",
-      "live_publication": "runs/2026-11-19-fi-live-publication.json"
-    },
-    "tag_bot_integration": {
-      "PS": "runs/2026-11-19-tag-bots-fixed-PS.json",
-      "PII_REDACTED": "runs/2026-11-19-tag-bots-fixed-PII_REDACTED.json",
-      "extension": "runs/2026-11-19-tag-bots-fixed-extension.json",
-      "protocol": "runs/2026-11-19-tag-bots-fixed-protocol.json",
-      "website": "runs/2026-11-19-tag-bots-closeout-website.json",
-      "boundaries": "runs/2026-11-19-tag-bots-closeout-boundaries.json",
-      "source_bound_checks_passed": true,
-      "independent_accuracy_evidence": false,
-      "protected_publication_pending": false,
-      "retained_failed_website_candidates": [
-        "runs/2026-11-19-tag-bots-website.json",
-        "runs/2026-11-19-tag-bots-corrected-website.json"
-      ],
-      "built_site_evidence": "runs/2026-11-19-tag-bots-corrected-site-ready.json",
-      "accounting_inspection_goal_is_not_release": true,
-      "correction_pending": [],
-      "failed_protected_run": 44565992666,
-      "failed_protected_head": "3f8f0f84b737556f36756b6329a4d3077c698fa9",
-      "required_pass_at_failed_head": 10,
-      "required_total": 11,
-      "current_focused_python_controls": 175,
-      "shared_fixture_controls": 10,
-      "root_cause_corrections": [
-        "NF unknown count",
-        "reviewed CI headers",
-        "exactly-once fixture descriptor cleanup"
-      ],
-      "protected_publication": "runs/2026-11-19-tag-bots-protected-merge.json",
-      "live_publication": "runs/2026-11-19-tag-bots-live-publication.json",
-      "bookkeeping_website_revalidation_pending": false
-    },
-    "credential_delivery": {
-      "source_bound_checks_passed": true,
-      "protected_publication_pending": false,
-      "protected_publication": "runs/2026-11-20-credential-protected-ci-review.json",
-      "live_publication": "runs/2026-11-20-credential-publication.json",
-      "source_commit": "04b11a12b094fc4a770381aae96645dc78d01533",
-      "independent_accuracy_evidence": false
-    },
-    "credential_closeout_operations": {
-      "PS": "runs/2026-11-20-credential-integrated-PS.json",
-      "PII_REDACTED": "runs/2026-11-20-credential-integrated-PII_REDACTED.json",
-      "protocol": "runs/2026-11-20-credential-integrated-protocol.json",
-      "extension": "runs/2026-11-20-credential-integrated-extension.json",
-      "website": "runs/2026-11-20-independent-closeout-website.json",
-      "boundaries": "runs/2026-11-20-independent-closeout-boundaries.json",
-      "source_bound_checks_passed": true,
-      "website_command_count": 49,
-      "unchanged_capabilities_assessed_without_rerun": true,
-      "protected_publication_pending": true,
-      "product_deployment_unchanged": "04b11a12b094fc4a770381aae96645dc78d01533",
-      "independent_accuracy_evidence": false,
-      "android_runtime_accepted": false
-    },
-    "nov21_native_NF_integration": {
-      "status": "all5_current_and_boundary36_pass; protected_CI_pending_after_inventory_correction",
-      "all5_current": true,
-      "boundary_source_files": 1416,
-      "evidence": "runs/2026-11-21-pr138-inventory-correction.json",
-      "independent_accuracy_evidence": false
-    },
-    "api_core": {
-      "PS": "runs/2026-11-21-maintenance-final-PS.json",
-      "PII_REDACTED": "runs/2026-11-21-maintenance-final-PII_REDACTED.json",
-      "extension": "runs/2026-11-21-maintenance-final-extension.json",
-      "protocol": "runs/2026-11-21-api-core-final-protocol.json",
-      "website": "runs/2026-11-21-api-core-final-website.json",
-      "boundaries": "runs/2026-11-21-api-core-boundaries.json",
-      "source_bound_checks_passed": true,
-      "reused_unchanged_capabilities": [
-        "PS",
-        "PII_REDACTED",
-        "extension"
-      ],
-      "protocol_commands": 61,
-      "website_commands": 59,
-      "independent_accuracy_evidence": false,
-      "release_approved": false,
-      "protected_publication_pending": true
-    }
-  },
+  "current_engineering_revalidation_status": "PS, PII and extension current after manifest change; protocol and website pending for programme/MT delivery.",
   "mt_evidence_workflow": {
     "status": "merged and published research workflow",
     "implemented_by": "Codex PM",
@@ -4935,8 +4793,9 @@
     "next_F145_reference_design": {
       "source_commit": "228ebf458853628c78112204790bd70525ec5f5d",
       "public_branch": "codex/f145-reference-program",
-      "status": "reviewed author integrated;39 current focused controls and30 actual CLI commands pass; discoverability/CI and protected publication pending",
-      "operating_accreditation_claimed": false
+      "status": "Complete reference runtime and discoverability integrated; current code review and prepared reference copies accepted. Current integrated CI/browser and protected/public delivery pending.",
+      "operating_accreditation_claimed": false,
+      "discovery_review": "runs/2026-11-22-f145-discovery-distinct-integration.json"
     },
     "production_publication": "runs/2026-11-22-current-protected-site-publication.json"
   },

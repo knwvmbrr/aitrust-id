@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-064902-prepare-reviewed-programme-public-references-3fe6fda7
+
+Recorded 2026-11-22T06:49:02.550684+00:00 · Contributor: Codex PM /root; discovery author /root/share_debugger · change
+
+- **Changed.** Prepared exact public programme/design/checklist copies, generated current80percent scope projections and recorded distinct discovery/workflow integration review.
+- **Evidence.** Root source review, unchanged eight runtime inputs and actual three reference-copy byte comparisons pass; no method or legal authority changes. [Change record](./runs/changes/2026-11-22-064902-prepare-reviewed-programme-public-references-3fe6fda7.json).
+- **Not claimed.** Hosted Linux, full current site/browser verification, protected merge and actual public guide delivery remain pending;135complete67open remains.
+
+
 ### 2026-11-22-064715-inventory-optional-delivery-boundaries-66cdab05
 
 Recorded 2026-11-22T06:47:15.551622+00:00 · Contributor: Codex PM /root · change
