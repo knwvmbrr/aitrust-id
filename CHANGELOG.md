@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-160342-jpeg-required-inception-fixture
+
+Recorded 2026-11-22T16:03:42.714815+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Corrected the synthetic JPEG edit fixture to contain its required software-creation inception followed by editing and explicit current-claim attribution.
+- **Evidence.** One source-stable pure definition control and distinct source review pass. Actual diagnostic identified fixture_sign_edit after SDK and creation signing returned; normal-manifest structure matches the existing pinned PNG fixture and published C2PA requirement. Runtime,14native acceptance checks, budgets and workflow remain unchanged. [Change record](./runs/changes/2026-11-22-160342-jpeg-required-inception-fixture.json).
+- **Not claimed.** This fixes authored synthetic input, not a production detector or SDK defect. Exact prior native error prose is unknown; no CLI credential case accepted from failed run. Corrected native qualification is pending.
+
+
 ### 2026-11-22-155919-jpeg-fixed-signing-diagnostics
 
 Recorded 2026-11-22T15:59:19.980637+00:00 · Contributor: Codex / web_camo · change

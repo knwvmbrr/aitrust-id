@@ -38,6 +38,14 @@ def report():
 
 
 class JPEGTests(unittest.TestCase):
+    def test_synthetic_edit_has_required_inception_and_explicit_attribution(self):
+        for action,source,count in [('c2pa.created',f.CREATION,1),('c2pa.edited',f.EDIT,2)]:
+            assertion=f.definition(action,source)['assertions'][0]
+            self.assertIs(assertion['created'],True)
+            rows=assertion['data']['actions'];self.assertEqual(len(rows),count)
+            self.assertEqual(sum(x['action'] in ('c2pa.created','c2pa.opened') for x in rows),1)
+            self.assertEqual(rows[-1],{'action':action,'digitalSourceType':source})
+            if action=='c2pa.edited':self.assertTrue(rows[0]['digitalSourceType'].endswith('/softwareImage'))
     def test_pinned_preflight_and_supported_subset(self):
         self.assertEqual(j.loader.preflight(f.blank()), {'width': 1, 'height': 1, 'precision': 8, 'components': 1})
         for raw, reason in [(f.blank()[:-1], 'malformed_structure'),

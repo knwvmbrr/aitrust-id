@@ -27,6 +27,16 @@ def blank():
         +segment(0xDA, b'\1\1\0\0\x3f\0')+b'\x3f\xff\xd9')
 
 
+def definition(action, source):
+    actions = [{'action': action, 'digitalSourceType': source}]
+    if action == 'c2pa.edited':
+        actions.insert(0, {'action': 'c2pa.created', 'digitalSourceType':
+            'http://cv.iptc.org/newscodes/digitalsourcetype/softwareImage'})
+    return {'claim_generator': 'AI TRUST ID synthetic JPEG test', 'title': CANARY, 'format': 'image/jpeg',
+        'assertions': [{'label': 'c2pa.actions', 'created': True, 'data': {'actions': actions}},
+                       {'label': 'org.aitrust.synthetic', 'data': {'private_note': CANARY}}]}
+
+
 def generate(directory, checkpoint=lambda stage: None):
     checkpoint('fixture_imports')
     import c2pa
@@ -68,14 +78,12 @@ def generate(directory, checkpoint=lambda stage: None):
     with c2pa.Context.from_dict(settings) as context:
         for name, action, source in [('creation', 'c2pa.created', CREATION), ('edit', 'c2pa.edited', EDIT),
                                      ('ordinary', 'c2pa.created', 'http://cv.iptc.org/newscodes/digitalsourcetype/digitalCapture')]:
-            definition = {'claim_generator': 'AI TRUST ID synthetic JPEG test', 'title': CANARY, 'format': 'image/jpeg',
-                'assertions': [{'label': 'c2pa.actions', 'data': {'actions': [{'action': action, 'digitalSourceType': source}]}},
-                               {'label': 'org.aitrust.synthetic', 'data': {'private_note': CANARY}}]}
+            claim = definition(action, source)
             checkpoint('fixture_signer_'+name)
             out = io.BytesIO()
             with c2pa.Signer.from_info(c2pa.C2paSignerInfo('es256', public_chain, private, None)) as signer:
                 checkpoint('fixture_builder_'+name)
-                with c2pa.Builder(definition, context=context) as builder:
+                with c2pa.Builder(claim, context=context) as builder:
                     checkpoint('fixture_sign_'+name)
                     builder.sign(signer, 'image/jpeg', io.BytesIO(blank()), out)
             values[name+'.jpg'] = out.getvalue()

@@ -225,3 +225,18 @@ Mark SDK execution unknown during loader entry and true immediately after the
 verified SDK returns. No parser, runtime, SDK pin, resource budget or acceptance
 assertion changes. A reviewed changed-source diagnostic is needed to locate the
 actual failed operation before a functional correction.
+
+## Actual edit-fixture definition correction
+
+Diagnostic run45041309306 returned at `fixture_sign_edit`, after the verified
+SDK/context and creation signing returned. The edit fixture supplied only an
+editing action. C2PA2.5section14.10.1.2 requires a normal manifest to have exactly
+one creation/opening inception action. Existing pinned, actually exercised PNG
+declaration fixtures use softwareImage creation followed by editing and explicit
+`created: true` attribution on the actions assertion. Correct this synthetic
+JPEG input to that same supported structure. This is an authored fixture defect;
+the exact native exception text/code was not emitted and is not invented. Add a
+pure definition control before another reviewed hosted run. Preserve all parser,
+SDK, resource, full canonical projection and trust/context assertions. No real
+image origin claim, no tag promotion and no accepted CLI credential case from
+the failed run.

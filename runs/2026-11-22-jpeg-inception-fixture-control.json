@@ -1,0 +1,28 @@
+{
+  "captured_at": "2026-11-22T16:02:15.160090+00:00",
+  "pass": true,
+  "sources_before": {
+    "tests/fixtures/jpeg-provenance-v1/generate.py": "f0ca1f46a46ba6678b5ed4c81d0851b28478e69d27ae6e3ceef4f9a5bc242eff",
+    "tests/test_jpeg_provenance.py": "6edf4cdd9f4d84318bff110cb0a7d19db017e5ff5578165ed05449c4567b736e",
+    "docs/jpeg-provenance-plan.md": "5eb58fcbb992c400d3b5df460739848a3704b423b2bb6946f7bcf266304990c9"
+  },
+  "sources_after": {
+    "tests/fixtures/jpeg-provenance-v1/generate.py": "f0ca1f46a46ba6678b5ed4c81d0851b28478e69d27ae6e3ceef4f9a5bc242eff",
+    "tests/test_jpeg_provenance.py": "6edf4cdd9f4d84318bff110cb0a7d19db017e5ff5578165ed05449c4567b736e",
+    "docs/jpeg-provenance-plan.md": "5eb58fcbb992c400d3b5df460739848a3704b423b2bb6946f7bcf266304990c9"
+  },
+  "source_unchanged_during_execution": true,
+  "current_affected_tests": 1,
+  "purpose": "Require exactly one synthetic normal-manifest inception before SDK signing, preserve requested final action/source type and explicit current-claim attribution.",
+  "prior_failure": {
+    "path": "runs/2026-11-22-jpeg-native-candidate-3-diagnosed.json",
+    "sha256": "ee0b628df678ff524c5bd19362e656fa50b07c8878aa2689be2c5d8cc4269620"
+  },
+  "runtime_and_qualification_driver_unchanged": true,
+  "native_sdk_executed_here": false,
+  "next_hosted_qualification": "PENDING_SOURCE_REVIEW",
+  "limits": [
+    "No exact native error prose/code inferred; actual fixed stage was fixture_sign_edit.",
+    "Fixture declarations are intentionally authored synthetic statements, not origin ground truth."
+  ]
+}
