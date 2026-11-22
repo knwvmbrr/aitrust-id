@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-22T17:43:30.524257+00:00",
+  "updated": "2026-11-22T18:09:39.344438+00:00",
   "active_increment": "Completed F145 whole nonoperating reference-programme job after protected/public verification.136originalscomplete66open. Optional MT preview live; image metadata production integration and qualified MCP artifact packaging continue independently.",
   "status": "136complete66open_target60_unmet; F145_reference_programme_complete_and_MT_preview_live;image_and_MCP_work_active",
   "scope": "docs/master-scope.json",
@@ -1217,15 +1217,15 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-22-image-ready-ps.json",
-    "PII_REDACTED": "runs/2026-11-22-image-ready-pii_redacted.json",
-    "extension": "runs/2026-11-22-image-ready-extension.json",
-    "protocol": "runs/2026-11-22-image-final-protocol.json",
-    "website": "runs/2026-11-22-image-corrected-website.json",
+    "extension": "runs/2026-11-22-combined-linux-current-extension.json",
+    "protocol": "runs/2026-11-22-combined-linux-current-protocol.json",
+    "PS": "runs/2026-11-22-combined-linux-current-ps.json",
+    "PII_REDACTED": "runs/2026-11-22-combined-linux-current-pii_redacted.json",
+    "website": "runs/2026-11-22-combined-linux-current-website.json",
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-22T17:43:30.524257+00:00",
+  "updated_at": "2026-11-22T18:09:39.344438+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3854,7 +3854,7 @@
       "NF": "Published offline selected-passage literal/cosine methods; no NF tag release"
     }
   },
-  "current_engineering_revalidation_status": "New profile/source registration changes the common manifest. All five prior capability receipts are historical until the exact PS7/PII6/extension14/protocol71/website64 capabilities execute against the final frozen source on disposable Linux. Original human/statistical gates remain unchanged.",
+  "current_engineering_revalidation_status": "All5exact current source-bound capabilities passed on standardUbuntuLinux: PS7,PII6,extension14,protocol71,website64. Protected/public delivery and independent/human release remain separate.",
   "mt_evidence_workflow": {
     "status": "merged and published research workflow",
     "implemented_by": "Codex PM",
@@ -4838,13 +4838,7 @@
     "finite_boundary_review": "runs/2026-11-21-public-guide-rollback-boundaries.json",
     "protected_source_commit": "a0c59d27dc4597599422a9f356978901e597f49d"
   },
-  "pending_engineering_revalidation": [
-    "PS",
-    "PII_REDACTED",
-    "extension",
-    "protocol",
-    "website"
-  ],
+  "pending_engineering_revalidation": [],
   "session_target_correction": {
     "status": "source_integrated_and_distinctly_reviewed; affected_protocol_and_website_current; Git_publication_tracked_in_normal_branch_history",
     "source_commit": "0d6240e3a496cd785b9fd74d337f4a38e81c5489",
@@ -4992,7 +4986,7 @@
   "hosted_delivery_evidence": {
     "plan": "docs/hosted-delivery-revalidation-plan.md",
     "workflow": ".github/workflows/delivery-revalidation.yml",
-    "status": "138dd8 capacity qualification passed within caps; artifact controls exposed two older context-close expectations now corrected. Obsolete heavy jobs cancelled; final corrected5capabilities and protected/public delivery pending.",
+    "status": "Actual all5current source-bound profiles passed and assessed; protected/public publication pending.",
     "capabilities": [
       "PS",
       "PII_REDACTED",
@@ -5007,7 +5001,10 @@
     "final_inventory_delta_review": "runs/2026-11-22-artifact-io-final-inventory-delta-distinct-review.json",
     "prebuild_range": "Same explicit actual PR/push changelog base/default-ref as protected CI; missing-range refusal preserved.",
     "prior_attempt_diagnosis": "runs/2026-11-22-combined-hosted-parent-expectation-diagnosis.json",
-    "latest_frozen_review": "runs/2026-11-22-delivery-workflow-changelog-env-final-inventory-review.json"
+    "latest_frozen_review": "runs/2026-11-22-delivery-workflow-changelog-env-final-inventory-review.json",
+    "retrieval": "runs/2026-11-22-combined-five-hosted-retrieval.json",
+    "current_distinct_review": "runs/2026-11-22-combined-five-current-selection-distinct-review.json",
+    "current_boundaries": "runs/2026-11-22-combined-current-boundaries.json"
   },
   "source_archive_capacity": {
     "observed_commit": "2f03b9de83daab98ed8633c80c12e9217a822799",
@@ -5016,8 +5013,8 @@
     "legacy_max_source_bytes": 128000000,
     "legacy_archive_capacity_exceeded": true,
     "older_versions_to_remain_immutable": true,
-    "next_action": "Versioned bounded source serializer and actual hosted boundary/compatibility checks before protected publication. Existing download692 remains current.",
-    "status": "Versioned source serializer integrated after actual Linux qualification; exact combined-tree packet/capacity and protected publication pending.",
+    "next_action": "Complete normal protected/public delivery; existing692source download stays current until actual fresh signature/publication.",
+    "status": "Current combined source archive qualified on standardLinux; v3 and14sourcebindings,12925files128892653bytes, packet15040872within16MB. Protected/public delivery pending.",
     "serializer": "scripts/source_snapshot_v3.py",
     "new_source_cap_decimal_bytes": 256000000,
     "metadata_cap_decimal_bytes": 5000000,
@@ -5027,11 +5024,25 @@
     "source_binding": "runs/2026-11-22-v3-merged-source-binding.json",
     "actual_hosted_receipt": "runs/2026-11-22-source-snapshot-v3-hosted-raw.json",
     "distinct_review": "runs/2026-11-22-source-snapshot-v3-hosted-distinct-review.json",
-    "actual_qualified_source_bytes": 128339526,
+    "actual_qualified_source_bytes": 128892653,
     "actual_focused_controls": 16,
     "license_or_original_closure": false,
-    "latest_combined_hosted": "runs/2026-11-22-source-v3-combined-138dd8-hosted.json",
-    "current_combined_packet_bytes_at_138dd8": 15032833
+    "latest_combined_hosted": "runs/2026-11-22-source-v3-current-3f199-hosted.json",
+    "current_combined_packet_bytes_at_138dd8": 15032833,
+    "current_combined_packet_bytes": 15040872,
+    "current_distinct_review": "runs/2026-11-22-current-artifact51-v3-hosted-distinct-review.json",
+    "qualification_history": [
+      {
+        "source_commit": "b75f434b7d1b82d7641b8fefd44e3013328f1c77",
+        "source_bytes": 128339526,
+        "receipt": "runs/2026-11-22-source-snapshot-v3-hosted-raw.json"
+      },
+      {
+        "candidate": "138dd8a8dbe2ea0c9601ff29055573080e9641a5",
+        "source_bytes": 128870658,
+        "receipt": "runs/2026-11-22-source-v3-combined-138dd8-hosted.json"
+      }
+    ]
   },
   "jpeg_credential_actions": {
     "status": "Merged independently Linux-qualified component; protected source publication pending. No FA/PA tag issued.",
@@ -5062,7 +5073,7 @@
     "tag_or_accuracy_release": false
   },
   "shared_artifact_io": {
-    "status": "Integrated owned-temp/private-boundary correction;15 focused actual-filesystem controls and6 distinct actual controls passed.51 combined artifact controls and current source-bound hosted/public checks pending.",
+    "status": "Actual Linux51controls passed after two context-close expectation corrections; full5capabilities also passed. Protected/public publication pending.",
     "execution": "runs/2026-11-22-artifact-io-ownership-execution.json",
     "review": "runs/2026-11-22-artifact-io-ownership-distinct-review.json",
     "new_original_closures": 0,
@@ -5070,6 +5081,22 @@
     "current_two_drift_controls": "runs/2026-11-22-artifact-parent-close-refusal-actual.json",
     "full51_local_observation": "runs/2026-11-22-artifact51-parent-refusal-controls.json",
     "full51_local_pass": false,
-    "local_failure_limit": "Four fixture expectations require crypto staging reserve2GiB; actual verifier refuses at unchanged disk guard. Two corrected parent-drift controls pass. Final51 on Linux pending."
-  }
+    "local_failure_limit": "Four fixture expectations require crypto staging reserve2GiB; actual verifier refuses at unchanged disk guard. Two corrected parent-drift controls pass. Final51 on Linux pending.",
+    "current_linux51": "runs/2026-11-22-artifact51-current-linux.json"
+  },
+  "engineering_selection_history": [
+    {
+      "superseded_at": "2026-11-22T18:06:42.410657+00:00",
+      "selection": {
+        "PS": "runs/2026-11-22-image-ready-ps.json",
+        "PII_REDACTED": "runs/2026-11-22-image-ready-pii_redacted.json",
+        "extension": "runs/2026-11-22-image-ready-extension.json",
+        "protocol": "runs/2026-11-22-image-final-protocol.json",
+        "website": "runs/2026-11-22-image-corrected-website.json",
+        "independent_accuracy_evidence": false,
+        "release_approved": false
+      },
+      "reason": "New exact combined hosted5capabilities; no historical proof rewritten."
+    }
+  ]
 }

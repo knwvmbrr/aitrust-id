@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-180939-current-five-hosted-selection-3523dfa7
+
+Recorded 2026-11-22T18:09:39.509702+00:00 · Contributor: Codex PM /root; distinct hosted reviews /root/web_camo and /root/seo · change
+
+- **Changed.** Preserve and select five actual final source-bound Linux capability receipts; bind current browser deployment guards and actual source-capacity/artifact controls to their exact observed source. Retain historical selections and failures.
+- **Evidence.** Actual PS7,PII6,extension14,protocol71 andwebsite64 complete commands pass and pure fingerprint/ordering assessment remains current after selection. Distinct API/artifact/raw-byte reviews and current7962-source boundary check pass. Actual51artifact controls and v3 capacity pass within unchanged limits. [Change record](./runs/changes/2026-11-22-180939-current-five-hosted-selection-3523dfa7.json).
+- **Not claimed.** Protected merge and exact live publication remain pending. Independent statistics, human/physical acceptance, other distribution permissions and original66-open ledger remain unchanged. First local boundary invocation used plainPython missingpydantic; corrected command uses existing verified environment, with no installation or product source change.
+
+
 ### 2026-11-22-174330-artifact-drift-close-and-ci-range-9167fa53
 
 Recorded 2026-11-22T17:43:30.696773+00:00 · Contributor: Codex PM /root; distinct review /root/seo · change
