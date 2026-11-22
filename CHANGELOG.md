@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-064301-verify-retained-independent-routes-8c3d47a0
+
+Recorded 2026-11-22T06:43:01.685913+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded current source-bound PS, PII and extension checks after integration of optional MT and programme inputs.
+- **Evidence.** All registered commands passed on current source; no complete tag, statistical accuracy or physical acceptance is inferred. [Change record](./runs/changes/2026-11-22-064301-verify-retained-independent-routes-8c3d47a0.json).
+- **Not claimed.** Protocol, website, protected merge and next public delivery remain pending. The original count remains135complete67open.
+
+
 ### 2026-11-22-064100-update-reviewed-programme-milestones-65b65940
 
 Recorded 2026-11-22T06:41:00.773536+00:00 · Contributor: Codex PM /root · change
