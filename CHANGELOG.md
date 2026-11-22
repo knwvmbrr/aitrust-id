@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-093836-prepare-current-image-policy-and-scope-projections-8df49c82
+
+Recorded 2026-11-22T09:38:36.161575+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Prepared current136/66 public scope data and new policy1.15 plain-text/download archives before complete image-source verification.
+- **Evidence.** All9newarchives match current source text; all9old1.14archive bytes remain unchanged. Current-accountability and source registration remain reviewed; no additional original closure. [Change record](./runs/changes/2026-11-22-093836-prepare-current-image-policy-and-scope-projections-8df49c82.json).
+- **Not claimed.** Combined64-command site execution, protected merge and actual public image/counter/download verification remain pending. No AI-origin, offline, physical/human or fulllicense clearance claim.
+
+
 ### 2026-11-22-084630-align-current-scope-state-and-image-handoff-b8de0261
 
 Recorded 2026-11-22T08:46:30.308502+00:00 · Contributor: Codex PM /root; distinct registration reviewer /root/web_camo · change
