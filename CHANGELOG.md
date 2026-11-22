@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-174330-artifact-drift-close-and-ci-range-9167fa53
+
+Recorded 2026-11-22T17:43:30.696773+00:00 · Contributor: Codex PM /root; distinct review /root/seo · change
+
+- **Changed.** Align exactly two replaced-parent tests with the strengthened close-time refusal while retaining no-final/all-descriptors-close assertions. Carry the existing CI explicit changelog event range into hosted source qualification. Refresh exact source inventory and preserve actual failures/cancellations.
+- **Evidence.** Actual two changed controls pass. Larger source qualification ran16controls and12918-node packet15032833bytes under unchanged cap. Distinct source review preserves51 count; older51local run failed four crypto staging reserves, actual unwrapped trace identifies unchanged2GiB guard. [Change record](./runs/changes/2026-11-22-174330-artifact-drift-close-and-ci-range-9167fa53.json).
+- **Not claimed.** Full current51 Linux and all5 final source-bound checks remain pending. No disk guard bypass, helper behavior change, independent accuracy, original completion or current public release is asserted.
+
+
 ### 2026-11-22-173440-combined-visual-review-source-freeze-c1d570dd
 
 Recorded 2026-11-22T17:34:40.074169+00:00 · Contributor: Codex PM /root with /root/seo, /root/web_camo and /root/share_debugger · change

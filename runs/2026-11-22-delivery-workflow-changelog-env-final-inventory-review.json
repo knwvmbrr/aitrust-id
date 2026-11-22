@@ -1,0 +1,92 @@
+{
+  "profile": "delivery-workflow-changelog-environment-delta-review/v1",
+  "captured_at": "2026-11-22T17:42:53.999279+00:00",
+  "pass": true,
+  "reviewed_by": "Codex /root/seo",
+  "integration_head": "138dd8a8dbe2ea0c9601ff29055573080e9641a5",
+  "prior_review_sha256": "0422a9a1ebe1f079c3a70ef7320980c4f1cec26f7c96b62f8dd6fc5df9889975",
+  "source_sha256": {
+    ".github/workflows/delivery-revalidation.yml": "c9a2ca4c79fa03bd19f5557377df02bd13651ab59563132ce15d16a3f39271b9",
+    "docs/hosted-delivery-revalidation-plan.md": "a9ed142c07db237793cc687cb9b84d1ac674066df6d701f395401a2555374579",
+    ".github/workflows/ci.yml": "27495175094ab2ab5f74bafee564c574cad2720cf58383e41e78c54dcd34816f",
+    "scripts/verify-changelog.py": "952d2c0a3ac5ca9b71ffaef8f4ef224b3af2653c32356901df9771dbc6237c30",
+    "scripts/verify-changelog.cjs": "abfb30687514dfeece5580b2f7ae4e0db69bb349809cf3353c5c6ddeee3b5a28",
+    "protocol/revalidation.py": "a8ea8d3b6fadf0cc0023234496fa00a0b7f7cf582ceff8ed38c9db8c93297379",
+    "scripts/revalidate.py": "148996a10cb67c5c5978d5d129618b9bf1a2fe2838104088aa747aa0d0509dfb",
+    "site/package.json": "8b1962dba1b731bab560511a526e35384c9f1a83b94d4ad1f337ae33247644ee",
+    "site/scripts/prepare.mjs": "7a3b52f684b3d7a92c110564b8d4b4f05af6ced9a0195274a94aca726cf9941d",
+    "site/scripts/prepare-device.mjs": "2a20a63f3ac341eb7375c85f4a547c733fc3a3837ced00b11f87e59fefba0450",
+    "site/scripts/prepare-performance.mjs": "67fd775c7f0387297202f5be901d4380f15fa89143e9349b5b1fdfe865d0d340",
+    "site/scripts/prepare-offline.mjs": "59294d4a5670d42eb0f3aa0e9fc8d82f315312e867ea4cce5dd839bff2f86916",
+    "site/scripts/render-reference.mjs": "90ebb9649c645272aa2dad2ab18891448f03f5a2afd1afc8d0fe88d46295abb8",
+    "scripts/verify-nf-client.cjs": "4c01c71f81617eec55946a90966de6dda0424c29b1a5b05cef8cda802657a5d5",
+    "scripts/verify-replay-export.cjs": "28da45c0900cbc824d716548c506d27b5698a5bcaa9fcd2f933c9ec2d0028c21",
+    "scripts/ci-ubuntu-mirror.py": "433df28df2bded20badc5b8b7edccca5eac919376f8dd6532b51bc3230056669",
+    "scripts/android-intent-controls.py": "fe810635f94ccc9dda90063c73cca99724698d734794be34c4d39c75803dd69a"
+  },
+  "exact_delta": {
+    "reviewed_source_files": [
+      ".github/workflows/delivery-revalidation.yml",
+      "docs/hosted-delivery-revalidation-plan.md"
+    ],
+    "workflow_only_two_added_job_env_keys": true,
+    "keys": [
+      "AITRUST_CHANGELOG_DEFAULT_REF",
+      "AITRUST_CHANGELOG_BASE"
+    ],
+    "values_exact_existing_ci": true,
+    "plan_append_only": true,
+    "commands_steps_permissions_triggers_limits_unchanged": true
+  },
+  "implicit_environment_source_review": {
+    "changelog_guard": "npm prebuild wrapper invokes verify-changelog.py; CI refuses absent explicit range. Same actual PR base or push before and default-branch ref now inherited by all5cap commands; fetch-depth0 preserved.",
+    "expression_context": "Only github.event fields, available at job env scope; no runner/secrets expression in added job env. Same-repository guard/main-only push preserved.",
+    "python": "setup-python provides python3; verify interpreter explicitlypython3, changelog/build/scope/replay fallbacks python3; inherited PATH preserved. No private local venv path required.",
+    "node_browsers": "Pinned Node22, npm root/site locks and existing Playwright engines preserved; no extra optional SDK.",
+    "java": "Existing runner Java/compiler preflight exports JAVA_HOME/GITHUB_PATH; Android controls retain installedJava17 fallback; RUNNER_TEMP platformprovided.",
+    "nf_and_apt": "Explicit NF2 remains, runner environment/OS only step env, apt source dir explicitlyset. Capacity/mirror gates failclosed.",
+    "platform": "CI/GITHUB_REF/event file/runner temp platformprovided; no user secret/credential/private input added.",
+    "full_runtime_dependency_proof_claimed": false
+  },
+  "inventory": {
+    "producer": "scripts/verify-route-boundaries.py inventory(root)",
+    "prior_manifest_sha256": "d9a7861b47352e8ab3acfcb86f1abf2ecff3ccc97cfb3c125c23f5d404e2071b",
+    "current_manifest_sha256": "07a75feea5b8ba13e7c1ab9782417da67f6796ed8a35a13a69154fcb00adb095",
+    "source_count": 7962,
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "path": ".github/workflows/delivery-revalidation.yml",
+        "prior_sha256": "95d28b20957946843e6d404152f59cec775113808dc996ec5e2ff507df7c4c81",
+        "sha256": "c9a2ca4c79fa03bd19f5557377df02bd13651ab59563132ce15d16a3f39271b9"
+      }
+    ],
+    "doublecapture_and_postwrite_equal": true,
+    "plan_is_not_boundary_pattern": true,
+    "plan_is_website_docs_source_bound": true,
+    "engineering_receipts_unchanged_historical": {
+      "website": "runs/2026-11-22-image-corrected-website.json",
+      "extension": "runs/2026-11-22-image-ready-extension.json"
+    }
+  },
+  "accounting": {
+    "originals": 202,
+    "complete": 136,
+    "open": 66,
+    "scoped_closed": 25,
+    "components_in_review": 3,
+    "no_criteria_or_board_change": true
+  },
+  "claims": {
+    "new_tests_or_installs": false,
+    "actual5profile_pass": false,
+    "protected_publication": false,
+    "release_or_license_admission": false
+  },
+  "limits": [
+    "Source read/exact delta/hash capture only; no tests/browser/install/deploy.",
+    "Fresh actual all5source-bound observations still required; no missing environment requirement waived.",
+    "Source review covers2files, actual boundaryproducer delta1file; no invented inventory membership."
+  ]
+}

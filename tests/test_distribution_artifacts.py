@@ -196,9 +196,15 @@ class ArtifactWorkflow(unittest.TestCase):
         self.assertEqual(json.loads(out.read_bytes()),r)
     def test_source_reader_replaced_parent_and_all_close_attempts(self):
         folder=self.base/'parent';folder.mkdir(mode=0o700);x=folder/'input';x.write_bytes(b'INPUT');x.chmod(0o600)
-        with io.Capture()as c:
-            c.read(x,100);folder.rename(self.base/'old');folder.mkdir(mode=0o700)
-            with self.assertRaises(ValueError):c.check()
+        c=io.Capture()
+        with self.assertRaises(io.PrivateInputError):
+            with c:
+                c.read(x,100);owned=list(c.fds)
+                folder.rename(self.base/'old');folder.mkdir(mode=0o700)
+                with self.assertRaises(ValueError):c.check()
+        self.assertTrue(c.closed);self.assertEqual(c.fds,[])
+        for fd in owned:
+            with self.assertRaises(OSError):os.fstat(fd)
         c=io.Capture();c.read(self.artifact,1000000);owned=list(c.fds);realclose=io.os.close;seen=[]
         def close(fd):
             seen.append(fd);realclose(fd)
@@ -342,8 +348,14 @@ except io.OutputCommitUncertain:
     def test_output_parent_drift_during_source_recheck_refuses_before_link(self):
         parent=self.base/'destination';parent.mkdir(mode=0o700);output=parent/'record.json'
         def changed():parent.rename(self.base/'old-destination');parent.mkdir(mode=0o700)
-        with io.Capture()as c:
-            with self.assertRaises(ValueError):c.save(output,{'state':'COMPLETE'},1000,prepublish=changed)
+        c=io.Capture()
+        with self.assertRaises(io.PrivateInputError):
+            with c:
+                with self.assertRaises(ValueError):c.save(output,{'state':'COMPLETE'},1000,prepublish=changed)
+                owned=list(c.fds)
+        self.assertTrue(c.closed);self.assertEqual(c.fds,[])
+        for fd in owned:
+            with self.assertRaises(OSError):os.fstat(fd)
         self.assertFalse(output.exists());self.assertFalse((self.base/'old-destination/record.json').exists())
 
     def test_post_link_corruption_is_uncertain_and_never_rolled_back(self):

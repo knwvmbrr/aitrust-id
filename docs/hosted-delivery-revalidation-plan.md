@@ -50,3 +50,8 @@ three smaller capabilities too; never relabel their older receipts as current.
 New component sources and focused/CLI controls are explicitly registered in the
 protocol manifest and reviewed route inventory. Native JPEG qualification stays
 separate: this workflow does not install its optional SDK or claim native parity.
+
+The workflow carries the same actual PR/push changelog base and default-branch
+reference as existing CI. CI builds refuse a missing explicit range; an empty
+range must never silently skip the change-record guard. These are GitHub event
+contexts available before job scheduling, with no runner context or new secret.
