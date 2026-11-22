@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-041111-record-complete-artifact-sbom-packaging-proof-df44c23b
+
+Recorded 2026-11-22T04:11:11.638354+00:00 · Contributor: Codex /root/share_debugger; distinct evidence reviewer /root/web_camo · change
+
+- **Changed.** Recorded actual full combined source packaging, all14 source graph/SPDX schema checks, current PS artifact and all13 managed policy refusals after the measured representation correction.
+- **Evidence.** 37 actual CLI controls pass on frozen31b;6172 source bindings match the exact committed tree. Full12484-file archive and14.47MB packet fit retained byte budgets. Distinct source/artifact read confirms both real artifacts and all14 predicate projections. [Change record](./runs/changes/2026-11-22-041111-record-complete-artifact-sbom-packaging-proof-df44c23b.json).
+- **Not claimed.** The other12 candidates are inert, not built platform artifacts. No new protected Sigstore execution or fullF057/X02/permission approval. Source archive proof remains exactly31b; this later commit adds immutable evidence only. Comprehensive native/source-offer obligations stay open.
+
+
 ### 2026-11-22-040113-compact-complete-spdx-without-dropping-source-3523ca5d
 
 Recorded 2026-11-22T04:01:13.895973+00:00 · Contributor: Codex /root/share_debugger; distinct reviewer /root/web_camo · change

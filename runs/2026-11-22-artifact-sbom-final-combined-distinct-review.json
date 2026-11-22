@@ -1,0 +1,47 @@
+{
+  "format": "ai-trust-id-artifact-sbom-final-combined-distinct-review/v1",
+  "captured_at": "2026-11-22T04:07:56.772897+00:00",
+  "pass": true,
+  "commit": "31b116419e58652b9c797e38888d229584950290",
+  "producer_receipt_sha256": "69f18b86ec8bd4efc494f926ccfab094e82b34c863ab37f9c89c5533302d650c",
+  "public_receipt_equals_retained_private_actual": true,
+  "controller_exact_sha256": "c0708e1aaa7e4fc56346c38686ba81d59e73a86eec0cb71053891773a936ecec",
+  "current_and_committed_source_bindings_independently_compared": 6172,
+  "source_bytes_compared": 36273006,
+  "all_selected_sources_stable": true,
+  "actual_retained_artifacts_hashed": {
+    "PS": {
+      "route": "ps-source",
+      "sha256": "1720be1015f7ab1e295de97dbc503723b486209b2f7dc09e2ebd6130c6fb42d1",
+      "bytes": 131039,
+      "canonical_nine_source_notice_members_verified": true
+    },
+    "whole_source": {
+      "files": 12484,
+      "git_listing_with_sizes_bytes": 1669100,
+      "source_bytes": 114087904,
+      "largest_source_bytes": 3427741,
+      "archive_sha256": "e9935eaff3b69589c88c8a492039a0ee3451fcbec9e22f832ca26589843c7103",
+      "archive_bytes": 33162347,
+      "packet_bytes": 14474139,
+      "spdx_bytes": 8936029,
+      "all_sources_included": true
+    }
+  },
+  "fourteen_packet_graph_digest_subject_reference_and_false_claim_checks": true,
+  "actual_schema_predicates_independently_checked": [
+    "ps-source",
+    "source-snapshot"
+  ],
+  "other12_candidates_explicitly_inert_PS_zip": true,
+  "producer37_commands_and13_preverifier_policy_refusals_recorded_consistently": true,
+  "reviewer_did_not_repeat_cli_or_archive_build": true,
+  "protected_signature_verified_by_reviewer": false,
+  "limits": [
+    "Artifact byte hashes/sizes independently matched; whole-source member inclusion comes from author source builder/controller and committed-tree count, not a second full archive-member replay.",
+    "Other12scope candidates are inert sourceZIPs, not actual APK/iOS/OCI/web/model platform artifacts.",
+    "Only two real-artifact predicates were independently schema-validated; author14schema result is inspected, not repeated.",
+    "No real Sigstore/main workflow, fullF057/X02/source-offer/native completeness/license or detector accuracy approval."
+  ],
+  "prior_source_delta_review_sha256": "b8a5a0d04296749384d9e142fa32509ee1bc2274f40e842b43a31fd0456971b4"
+}
