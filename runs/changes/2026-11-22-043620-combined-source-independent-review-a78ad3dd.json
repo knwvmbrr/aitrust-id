@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-043620-combined-source-independent-review-a78ad3dd",
+  "recorded_at": "2026-11-22T04:36:20.606361+00:00",
+  "author": "Codex PM /root; distinct reviewer /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7785095ed7409cc9d3c8b5633b9469aca671c290",
+  "changed": "Retained the distinct read-only integration review of exact source 7785095.",
+  "proves": "All 202 original criteria remain preserved, with only N-001 and N-010 newly completed and F-155 still open; earlier source-bound components are qualified.",
+  "limits": "Static integration review only, not runtime revalidation, original licensing clearance, tag accuracy or publication. Current 135 complete and 67 open remains unchanged.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "runs/2026-11-22-pm-component-integration-independent-review.json": "4f5550bd9780a9e8e674cc04d82a9e74106292327d2a91f22a1593f082e3f8e6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-pm-component-integration-independent-review.json",
+      "sha256": "4f5550bd9780a9e8e674cc04d82a9e74106292327d2a91f22a1593f082e3f8e6"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-053704-prepare-current-host-performance-projections-3289d127",
+  "recorded_at": "2026-11-22T05:37:04.752563+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8dacd40e8d3d71101822f5ba2218043a490e119a",
+  "changed": "Prepared and attributed both generated performance JSON copies and the static index for the accepted20-case HOST observations before source verification.",
+  "proves": "The current performance model, generated data and static content describe the same accepted20 controls; other verification thresholds and no-accuracy boundaries are unchanged.",
+  "limits": "Full website execution remains pending. This is deterministic metadata preparation, not additional measured accuracy or a requirement closure.",
+  "scope_ids": [
+    "F-160"
+  ],
+  "files": {
+    "runs/2026-11-22-current-host-performance-assertion-correction.json": "ddd9862237b3237d25ca8ddd9620d1c555850f8e8c6b2d4db020898161733a9d",
+    "runs/2026-11-22-current-site-website.json": "af12c24cf3774acbbacbbb9499a2d001e233d5be06e208436dbe0b2a5383fa2c",
+    "scripts/verify-performance.cjs": "f587c6cb3446be96ea44c1dac1a9cad908c7ac8d81b29b8f3ea2c6a57ec32cbb",
+    "site/index.html": "b147fef4d3e4891cfeee9916ed7b747d63267e5a42f505f7ed69e7c0cf8bbc0d",
+    "site/public/reference/tag-performance.json": "3a1379928c39bdc18f799bdbc2feb253e4b5226d968c91dc1efacc017bf73c3d",
+    "site/src/tag-performance.json": "3a1379928c39bdc18f799bdbc2feb253e4b5226d968c91dc1efacc017bf73c3d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-current-host-performance-assertion-correction.json",
+      "sha256": "ddd9862237b3237d25ca8ddd9620d1c555850f8e8c6b2d4db020898161733a9d"
+    },
+    {
+      "path": "runs/2026-11-22-host-current-actual-distinct-review.json",
+      "sha256": "54af709057ebb9881f7d9cd23e60877c012829cf3b606d2361f6ea21ae7bb169"
+    }
+  ],
+  "checks": []
+}

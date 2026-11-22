@@ -1,9 +1,10 @@
 name: organization-directory-software
 on:
+  workflow_dispatch:
   push:
-    paths: ['tools/organization_directory*.py', 'scripts/*organization-directory*.py', 'scripts/directory-device-browser.cjs', 'tests/test_organization_directory*.py', '.github/workflows/organization-directory.yml']
+    paths: ['scripts/worker_process.py', 'tools/organization_directory*.py', 'scripts/*organization-directory*.py', 'scripts/directory-device-browser.cjs', 'tests/test_organization_directory*.py', '.github/workflows/organization-directory.yml']
   pull_request:
-    paths: ['tools/organization_directory*.py', 'scripts/*organization-directory*.py', 'scripts/directory-device-browser.cjs', 'tests/test_organization_directory*.py', '.github/workflows/organization-directory.yml']
+    paths: ['scripts/worker_process.py', 'tools/organization_directory*.py', 'scripts/*organization-directory*.py', 'scripts/directory-device-browser.cjs', 'tests/test_organization_directory*.py', '.github/workflows/organization-directory.yml']
 permissions:
   contents: read
 jobs:

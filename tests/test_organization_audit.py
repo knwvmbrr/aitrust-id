@@ -138,3 +138,19 @@ def test_visible_event_time_and_shape_are_bound_without_a_checkpoint(device_reco
     elif mutation=='extra':event['display_time']='2020-01-01'
     else:event['seq']=True
     with pytest.raises(ValueError):verify_export(packet)
+
+
+@pytest.mark.parametrize('profile', [
+    ('postgres (PostgreSQL) 18.0', 'pgBackRest 2.59.3'),
+    ('postgres (PostgreSQL) 18.7 (Ubuntu 18.7-1.pgdg24.04+5)', 'pgBackRest 2.59.3'),
+    ('postgres (PostgreSQL) 18.6', 'pgBackRest 2.60.1'),
+    ('postgres (PostgreSQL) 18.7 (Ubuntu 18.7-1.pgdg24.04+5)', 'pgBackRest 2.60.2'),
+])
+def test_selected_actual_audit_environment_does_not_accept_old_or_unknown_versions(profile):
+    import importlib.util
+    spec=importlib.util.spec_from_file_location('audit_environment_evidence',ROOT/'scripts/verify-organization-audit-evidence.py')
+    gate=importlib.util.module_from_spec(spec);spec.loader.exec_module(gate)
+    row=json.loads((ROOT/gate.EVIDENCE).read_bytes())
+    assert gate.verify(row)['pass'] is True
+    row['postgresql_version'],row['pgbackrest_version']=profile
+    with pytest.raises(ValueError):gate.verify(row)

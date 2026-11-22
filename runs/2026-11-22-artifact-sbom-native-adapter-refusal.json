@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-11-22T03:04:01.325625+00:00",
+  "pass": false,
+  "stage": "new_native_source_adapter",
+  "dependency_commit": "41b8d52ebb6bdadb7bafa2c0fb81cf06bdc14403",
+  "dependency_manifest_sha256": "5e9e5e45c13013f727a1fb8a098b6e70db7bb363c2b43bff16cfc834c2ff4a14",
+  "core_source_sha256": "ccfb86bdb0e001acb20dd09422f783013a8c200b8cd03191599d5fc7f6618a03",
+  "finding": "The exact verified source index includes one observed empty source text; the adapter incorrectly required every retained source text to be nonempty.",
+  "next_fix": "Permit zero-length retained observations only with the exact empty SHA256. This is not a notice or licensing grant and remains unapproved."
+}

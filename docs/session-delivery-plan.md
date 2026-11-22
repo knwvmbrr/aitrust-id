@@ -1,3 +1,43 @@
+## Current delivery snapshot — 2026-11-22T04:37:29.411744+00:00
+
+**135 complete / 67 open original requirements; target60 remains unmet.**
+N-010's governed organization-policy software and N-001's accepted offline
+assertion migration satisfy their unchanged original contracts. F-155's optional
+SynthID input is working software at60%, while its supported tag outcome remains
+open. No independent tag accuracy, operating legal entity, certification or
+commercial service is implied.
+
+The source and notice work for C2PA/NLI and the artifact-linked SPDX publisher
+is integrated. Full F-057/X-02 licensing and distribution obligations stay open.
+FI now also has a private two-command citation-practice path linked from its
+existing instructions. It reports declared associations, with no FI/truth verdict.
+Publication and current-source verification are tracked separately in
+[state.json](../state.json) under `current_sixty_open_wave`.
+
+Current bounded workers: `/root/share_debugger` separates the expanded source
+snapshot serializer from immutable historical observers; `/root/seo` independently
+reviews that compatibility repair; `/root/web_camo` checks remaining full-original
+closure candidates. Root owns shared state, scope, changelog and publication.
+These are actual assignments for this wave, not permanent background agents.
+
+The failed integrated protocol candidate is preserved in
+[its dated receipt](../runs/2026-11-22-combined-current-protocol.json).
+An unrelated source-archive file-count change invalidated old dependency observer
+bindings. The repair preserves those original observations and version-controls
+the expanded serializer, with no fabricated replay or changed licensing result.
+
+All selected current worker observations are now accepted: actual Mac and hosted
+Linux Fleet, directory, inbox, agent view/output, host capture, conformance and
+retained exact-source audit evidence. Their original historical records remain
+unchanged. These refreshes restore engineering evidence after the shared worker
+repair; they do not add original completions or independent detector accuracy.
+
+Accounting `input_sha256` values identify the immutable baseline commit, not the
+current working ledger. Current completion transitions and evidence are read
+separately; updating a record must never rebind that historical baseline.
+
+## Earlier dated snapshots
+
 ## Operational closeout snapshot — 2026-11-21T23:12:57.420401+00:00
 
 The [API connection guide](https://aitrustid.com/reference/remote-ai/) is live from

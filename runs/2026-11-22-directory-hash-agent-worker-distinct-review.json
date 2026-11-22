@@ -1,0 +1,197 @@
+{
+  "profile": "directory-hash-agent-current-worker-evidence-distinct-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T04:58:01.363564+00:00",
+  "reviewed_by": "/root/seo",
+  "findings": [],
+  "provenance": {
+    "path": "runs/2026-11-22-hosted-worker-refresh-provenance.json",
+    "sha256": "1ff54724f7bd79a21923666a60a989cfbf3ce63c9255fc91f9aee24151b2667e",
+    "hosted_runs": [
+      {
+        "id": 44986961537,
+        "name": "organization-directory-software",
+        "head": "1644b9daf1d912c0709ff375a9577393fa94c5f4",
+        "actual_controls": 28,
+        "real_provider_and_database": true
+      },
+      {
+        "id": 44987087958,
+        "name": "private-hash-inbox-software",
+        "head": "b504286aad2b74613e86c95a169c9a7d53f1dbf2",
+        "actual_hash_cases": 29,
+        "actual_agent_tests": 33
+      }
+    ]
+  },
+  "current_receipts": [
+    {
+      "path": "runs/2026-11-22-directory-worker-ownership-linux.json",
+      "sha256": "8fd5413a4f9937b51a5625f87e9403b413879e6701811d75286a15505a1f9fca",
+      "source_count": 27,
+      "platform": "linux",
+      "result": {
+        "pass": true,
+        "actual_provider_controls": 28,
+        "sources_current": true,
+        "hosted_service_enabled": false,
+        "human_acceptance": false,
+        "independent_accuracy_evidence": false
+      },
+      "source_reference": "1644b9daf1d912c0709ff375a9577393fa94c5f4",
+      "comparison_role": "actual hosted source head"
+    },
+    {
+      "path": "runs/2026-11-22-hash-inbox-macos.json",
+      "sha256": "ddd0c9506312c0c203cece555535fe86a0e4e738dd534408ed0af75def8130b5",
+      "source_count": 22,
+      "platform": "darwin",
+      "result": {
+        "pass": true,
+        "platform": "darwin",
+        "cases": 29,
+        "sources_current": true,
+        "company_collection_enabled": false
+      },
+      "source_reference": "b504286aad2b74613e86c95a169c9a7d53f1dbf2",
+      "comparison_role": "Linux execution commit identity; Mac source compatibility, not Mac hosted execution"
+    },
+    {
+      "path": "runs/2026-11-22-hash-inbox-linux.json",
+      "sha256": "a803e89f93397480b033c1e873c8bfc96dcd843169ea5b66f7a1937dd938d3de",
+      "source_count": 22,
+      "platform": "linux",
+      "result": {
+        "pass": true,
+        "platform": "linux",
+        "cases": 29,
+        "sources_current": true,
+        "company_collection_enabled": false
+      },
+      "source_reference": "b504286aad2b74613e86c95a169c9a7d53f1dbf2",
+      "comparison_role": "actual hosted source head"
+    },
+    {
+      "path": "runs/2026-11-22-agent-output-macos.json",
+      "sha256": "c9629852c35fd720fec9470ca48711dfc5240fa4ff0bbe7c1538b355dbca5f93",
+      "source_count": 17,
+      "platform": "darwin",
+      "result": {
+        "pass": true,
+        "platform": "darwin",
+        "tests": 33,
+        "sources_current": true,
+        "outside_person_acceptance": false,
+        "independent_accuracy_evidence": false,
+        "certification": false
+      },
+      "source_reference": "b504286aad2b74613e86c95a169c9a7d53f1dbf2",
+      "comparison_role": "Linux execution commit identity; Mac source compatibility, not Mac hosted execution"
+    },
+    {
+      "path": "runs/2026-11-22-agent-output-linux.json",
+      "sha256": "811aac86568f809c85b374fb4e74a25afbd0017e2455b32d95ff47125eb91987",
+      "source_count": 17,
+      "platform": "linux",
+      "result": {
+        "pass": true,
+        "platform": "linux",
+        "tests": 33,
+        "sources_current": true,
+        "outside_person_acceptance": false,
+        "independent_accuracy_evidence": false,
+        "certification": false
+      },
+      "source_reference": "b504286aad2b74613e86c95a169c9a7d53f1dbf2",
+      "comparison_role": "actual hosted source head"
+    }
+  ],
+  "current_agent_view": {
+    "path": "runs/2026-11-22-agent-output-view.json",
+    "sha256": "6f1591dd78e39bec1e62dc603e97755d77d3cbd09de3cdd9f0de8fb63c8423e1",
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "current_source_bindings": 10,
+    "browser_rerun_by_reviewer": false
+  },
+  "historical_receipts_unchanged_and_refused": [
+    "runs/2026-11-09-directory-rollover-linux.json",
+    "runs/2026-11-09-hash-inbox-current-macos.json",
+    "runs/2026-11-09-hash-inbox-current-linux.json",
+    "runs/2026-11-06-agent-output-macos.json",
+    "runs/2026-11-06-agent-output-linux.json"
+  ],
+  "source_sha256": {
+    "tools/organization_directory.py": "7c294b80142eb25f583f2e5566bc91dbc8bf92ff86ccb8d175f62e1718cec47f",
+    "tools/organization_directory_lab.py": "4f58501f705df9a917675d53eb6adae52899b3753828c4138a628ea5184f0209",
+    "scripts/organization-directory.py": "4a8f13f6a6fffe5bb73910e95118a02749d3c0a6e47fbb89c338108d59fe2bbb",
+    "scripts/verify-organization-directory.py": "74159f0ff30dc3c9e3daa8f052e2b817a90807685c82419efd0fd75f8c3ff5fd",
+    "scripts/directory-device-browser.cjs": "b9e3a888df7da67b36acc21ec5e7fcddb837f2bf621b5af1a86c35923fbd8c73",
+    "tests/test_organization_directory.py": "a4c5a612661490c10ce5c7ed01cb5d0adf4e15bbd1dc0dcc0aaa80b1eb4eefe0",
+    "docs/organization-directory-plan.md": "d5751c2d05e8ae36184253ded42243bdc2edf54ae1fa7bf7aaff800990ec9d02",
+    "docs/organization-directory.md": "03d9aafc07df1b2fb9235429c8f4e0c82f3935cc6b34ebf8d332e5506393763e",
+    "tools/organization_audit.py": "8a4c5c85c7225788e227a843e85d055e5cc7981e9240f6a6bd7479e287586e91",
+    "tools/organization_audit_store.py": "476957577728d3f17fd54f93a43eb37c9b053b693b2b37829a811e64390da97d",
+    "deploy/audit/store.sql": "aff20a33fa64b6f7257448e133187f76be9b69ff763968bc7fe208639a0cfa10",
+    "spec/organization-audit-metadata.schema.json": "ddc883924d3620161eb2d74dbbc59e2188cf72e90ee9bc5424af94ba462ca651",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "package-lock.json": "ef289169d3eba2944df961e4169310aadc16328d29ed45205f36d766a29e9576",
+    ".github/workflows/organization-directory.yml": "230fb710e56d38d7fbb01758e4603cf121adcb96b261bf3eeaa07b54a59f58cb",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    "tools/backup_retention.py": "ee585f1a50c0f41a0f9338777fbf0b6a5237ec1a2cf5f66f52411da496c52f64",
+    "deploy/backup/restore.py": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+    "eval/requirements.lock": "d6020252107ce24dfc97f98976ee6a203f412078919cce0cd7027c806890e384",
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "tools/hash_reports.py": "7031f192399e51e4d5a5c35f153d04877cc7d04edda935d4da1e928cd0babe58",
+    "scripts/hash-reports.py": "a0784a8c5a61a04491d40eb55f17f997617ccfdcfea501b48a18c2ee246534a7",
+    "tests/test_hash_reports.py": "670ba2bed7fd7203b02a91ecdeabed22def5270c0be2ea7672d6b83aa5c671b2",
+    "scripts/verify-hash-reports.py": "345ab4b361594a1aac8cccde995d11f8c1ddeb9b10b8b7b6eafb1f3c1db957eb",
+    "scripts/verify-hash-reports-linux.py": "57d85c874861e73cbdaada383398e8ed4c796b4266cc8a7840be4419543d2372",
+    "scripts/verify-hash-reports-evidence.py": "08fa99c3dad42b61639c360d0125b5f0ce6616cb8bad0ad86922f9f50acabd2a",
+    "tests/test_hash_reports_evidence.py": "3f9d61025bf5d6498c10cc895ec59ebdd340388f795d2b75d10dbef49b0a99b2",
+    "docs/hash-report-intake-plan.md": "a3cce5bbbc7637b9d9bab804b74f781f8bf8a90fa139819e7348759826404ef1",
+    "docs/hash-report-intake.md": "352971e22ae07af6928de1c96998948da950cb91718a5a4fd2599cc0e9680857",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+    ".github/workflows/hash-reports.yml": "b114ec6f7afa92b89b732d5d3d4147afde162b13ef18d938c5f07053aa013b14",
+    "tools/agent_output.py": "9eb283f5c66ae408a4ee4f768ad2e5c6dcac33b694aa26178bd0fbaaac066247",
+    "scripts/agent-output.py": "4127bb578b7be1c3aef3a2d2f24b027ca03a43c6cce6c621c2baa11025c78e2d",
+    "scripts/agent-signature.cjs": "7654f96f1d080e6c6025b98258c123e952ffc1daeb9c49e35f8eb1a6ee168ccc",
+    "protocol/receipts.cjs": "d807903771a2616e0a437259adc8ac8bf85717b42407224b82f5f9e6799feb59",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/verify-agent-output.py": "78d011a0d0e8ed236f5d5372f1fa397c73fece87ec9651db8183a9f1dd65613c",
+    "tests/test_agent_output.py": "b35a49b1a79c088dfb4f1291f8207fab1d40864c74741fa5b5698550c184c18b",
+    "docs/agent-output-plan.md": "518218894187780b436bdd69baa6afe3d773de71e838ebe1c2c0ce2a44a4036c",
+    "docs/agent-output.md": "3aa21bb6aa8d08c1fdb9d743a3b3cb0442628217769b1d3d069f33e4dabd8256",
+    "scripts/verify-agent-output-view.cjs": "03ccf44210a9f6c404e2514cc594e609d3b7749824e90eae37a3921baf991c6c",
+    "scripts/verify-organization-directory-evidence.py": "8e788ce79620637c3fe4bb47ab2441047bd6c0d57f91ffd34480f02e0cde0924"
+  },
+  "selected_source_bytes_stable": true,
+  "preserved_contracts": {
+    "directory_real_provider_database_28_cases": true,
+    "hash_29_cases_each_OS": true,
+    "agent_33_tests_each_OS": true,
+    "all_current_source_maps_match": true,
+    "source_controls_and_privacy_no_promotion_guards_unchanged": true,
+    "one_hash_workflow_job_contents_read_Node24_existing_locked_eval_and_namespace_drop": true,
+    "agent_job_runs_nonroot_but_no_network_namespace_claim": true,
+    "manual_private_collection_or_real_organization_activation": false,
+    "new_original_closures": 0
+  },
+  "limits": [
+    "Read-only receipt/Git/source comparison and existing pure evidence-verifier functions; no producer, service, browser, test suite or hosted job rerun.",
+    "Host execution/run identities are reviewed from retained parent provenance; reviewer did not independently query GitHub or re-download raw artifacts.",
+    "Agent view is two Chromium themes and engineering accessibility checks, not two browser engines, physical phone or independent human acceptance.",
+    "Parent owns current generated reference mappings, capability refresh and protected/public delivery."
+  ],
+  "review_role": "Reviewer authored the earlier directory/Fleet dated-selector refresh, not the directory runtime, fresh hosted receipts, hash/agent maintenance or Mac/view observations. This is distinct retained-execution/source-binding review, not independent review of reviewer-authored selectors."
+}

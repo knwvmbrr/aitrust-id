@@ -1,0 +1,27 @@
+{
+  "captured_at": "2026-11-22T02:28:49.759409+00:00",
+  "pass": false,
+  "reviewed_by": "Codex /root/seo",
+  "profile": "synthid-vendor-input-early-source-review/v1",
+  "source_sha256": {
+    "tools/synthid_input.py": "8b80f7a53f6633242c8e1a3f04951a43d7cff5529c3c0206a574d5218668b8e8",
+    "scripts/inspect-synthid-input.py": "0033624c6896fb90ea1bd06c011e18d744a7c22d472bc3e0478abd735a4dffb5",
+    "scripts/setup-synthid-reference.py": "bbdf4b56aaf9255438e8b7a50990cef5a0d82bab09d5ff4bdfa45ba75524287b",
+    "scripts/check-tags.py": "bb57e5e49b1f6a305eabc84e04df771402c6ad9cf8119c6acc94037d1fd184d0"
+  },
+  "finding": {
+    "priority": "P2",
+    "location": "tools/synthid_input.py:_run",
+    "summary": "Selector construction occurs after owned child launch but before cleanup protection. Constructor failure leaks the launched child.",
+    "actual_owned_child": true,
+    "synthetic_failure": "selectors.DefaultSelector raises OSError",
+    "child_still_running_after_return": true,
+    "reviewer_cleanup": "Killed and joined only the actual owned test process group; returncode populated.",
+    "remaining_owned_processes": 0
+  },
+  "limits": [
+    "One bounded actual process-ownership fault only; no detector, SDK or browser execution.",
+    "No source edits, downloads, install, service changes or full test suite.",
+    "Full F155 acceptance not yet granted; install/use/removal evidence still author-pending."
+  ]
+}

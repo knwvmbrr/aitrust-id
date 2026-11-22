@@ -1,0 +1,30 @@
+[package]
+name = "xml-no-std"
+version = "0.8.26"
+authors = ["Vladimir Matveev <vmatveev@citrine.cc>"]
+license = "MIT"
+description = "An XML library in pure Rust"
+repository = "https://github.com/6d7a/xml-no-std"
+homepage = "https://lib.rs/crates/xml-no-std"
+documentation = "https://docs.rs/xml-no-std/"
+readme = "README.md"
+keywords = ["xml", "parser", "sax", "parsing", "writer"]
+categories = ["parser-implementations", "no-std"]
+edition = "2021"
+rust-version = "1.59"
+include = ["src/**", "LICENSE", "README.md"]
+
+[lib]
+name = "xml_no_std"
+path = "src/lib.rs"
+
+[badges]
+maintenance = { status = "actively-developed" }
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+rustdoc-args = ["--generate-link-to-definition"]
+
+[package.metadata.release]
+tag-name = "{{version}}"
+tag-message = ""

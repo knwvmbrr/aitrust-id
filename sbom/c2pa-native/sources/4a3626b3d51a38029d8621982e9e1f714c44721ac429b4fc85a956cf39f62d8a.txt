@@ -1,0 +1,18 @@
+[package]
+name = "rasn-derive"
+version.workspace = true
+categories = ["encoding", "no-std", "parser-implementations"]
+edition.workspace = true
+description = "Derive macros for rasn."
+license.workspace = true
+exclude = ["fuzzing"]
+keywords = ["asn1", "der", "ber", "cer", "per"]
+repository.workspace = true
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = { version = "2.0.79", features = ["extra-traits"] }
+proc-macro2 = "1.0.88"
+rasn-derive-impl = { version = "0.28.14", path = "macros_impl" }

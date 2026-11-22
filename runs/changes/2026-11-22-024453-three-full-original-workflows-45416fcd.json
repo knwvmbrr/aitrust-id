@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-024453-three-full-original-workflows-45416fcd",
+  "recorded_at": "2026-11-22T02:44:53.939675+00:00",
+  "author": "Codex PM /root; SynthID author /root/web_camo; distinct review /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "40d85dfabcd6a3d97b84977992d0523b0995c0d9",
+  "changed": "Delivered complete-identity offline assertion migration and the official optional SynthID research-input path, alongside governed organization-policy boundaries; original acceptance and separate reviews preserved.",
+  "proves": "Three functioning original software jobs accepted:136 complete,66 open. Actual conversion/refusal/current consumers/private publication and selected official SDK install-use-removal pass; personal PS/privacy remain independent.",
+  "limits": "Target60 remains unmet. No tag release, production0.2 adoption, Gemini verification, independent accuracy, legal/customer approval or already-passed hosted publication claimed. Final protected checks and supported source/site publication remain separate delivery actions.",
+  "scope_ids": [
+    "N-010",
+    "N-001",
+    "F-155"
+  ],
+  "files": {
+    "docs/assertion-migration.md": "84721a591596dc1f6fb6de707849468301d349de9de383bd66ae62893a109385",
+    "docs/protocol-migration-contract.json": "0af74701cd59616ece044f4ff09fe67a9b32ead9331902bbf164118d27b71f8d",
+    "docs/protocol-migration-plan.md": "585145a020c20a6ce3b5abdc6a7f1a865e61ab0a97a270b42019b35cd8254600",
+    "protocol/migration.py": "93f5aef9b3766545baa5540a5425dd001b288552627b1df38fde10eb583fe0fd",
+    "protocol/migration_io.py": "8883dae3dda4809b605810b90b2ccea97f3451754be8cb7e06404150a1d2702e",
+    "scripts/migrate-assertion.py": "114010eb7fd8c873ae6b93124fe6ce7a386391d05f42f88c9a2978b8f1410e89",
+    "scripts/verify-assertion-migration.py": "f28588f1594b9d40bc725a6d5aece45273b0858cc28de5be220ed1c25143820e",
+    "spec/versions/0.2.0/assertion.schema.json": "868509d90049ee839e050615bdc3256ef91fc1837d18767323f052ed24e2aa48",
+    "tests/test_assertion_migration.py": "c9d01f4aae4ae635640cd4631bef7ce9b41a3d6c4562f4caaf394c6259dc6350",
+    "tests/migration-reference.cjs": "8993f75015aa057815160d01af5f3aa23c4d3a55b2328df86048876b325c55e3",
+    "tests/fixtures/migration/complete.json": "32af2bcb4f24d7f09c5979ce0498aef7dc6d9e3291c2ccc4afb7e56f7aeaae91",
+    "tests/fixtures/migration/large-integer.json": "e2fb6cc6322143679b3314a61dcce9e7419e91a649b4d1ee4f6ebce2eb8d90f4",
+    "tests/fixtures/migration/README.md": "ad4d168c45359919945eaae921a9a3e15851db8811c6b16d252385d33cee0bfc",
+    "README.md": "518dcb1733ad73d1702f79c5e76feb14db2f42f84dcb984d7d5fb88008dce322",
+    "package.json": "1249ccf91a392e2b3e5420082e3b44f666a8d8f115b3a334ff77700e43f32f12",
+    "eval/revalidation.json": "4a7975a4f3e588aa7d72805a682c6c1499535be350196b730fbcec17474d1228",
+    "scripts/verify-route-boundaries.py": "0f776b321f4c0c231abee135f52eae0c898c9c3b9b4df7d92a80798cbf1fada6",
+    "docs/scope-progress.json": "b5051d6d7647341beea2463c843fc3eeea0a6effc251a777447ccfdd19e9a51a",
+    "docs/scope-progress.md": "d0ad9ffa1c103ccaea91a0b3421e6aaaaa37127923e9cc97b3d87041e491ccdc",
+    "docs/scope-task-index.md": "cc90c842a1af894ecc075152fe0a1c287dc127c6c25c17b412c10973e63494a9",
+    "docs/session-delivery.json": "cc1478a2d55ca2c68e4c2d5d5c9d791b105dc86492f4501b757820b9e253f977",
+    "state.json": "fc75e02c7c156977db22492bea279d4f00d5df721ef0d48ab3af3b939a3530d8",
+    "site/src/catalog.js": "5fde140e356b2d768ecdc3722926f614089989c2d0dfd10ba8cb522dae629478",
+    "site/scripts/prepare.mjs": "13327dc09cb1a3148eab2fa633553afaba966931c595c2aa4c8062f51cd3ef96",
+    "site/index.html": "6cf1f99d14374889ccdc532347612522da8ded06775d3473ad750233e2075926",
+    "site/src/public-scope.json": "43aa0932418e20be9f6fa6f29862c2b6773f40775d9e9d6bc192b37ba34b21a1",
+    "site/src/scope-manifest.json": "dd7c869d71e8b35360399bb3c08a7bbe6c12bf6c5595436f80a03fde9a842e97",
+    "site/public/reference/public-scope.json": "43aa0932418e20be9f6fa6f29862c2b6773f40775d9e9d6bc192b37ba34b21a1",
+    "site/public/reference/organization-policy-registry.md": "c1f183d4b6691cb0c5ccc804338eadc4a2c5b97e6cbef1a721bf331464ef72e1",
+    "site/public/reference/organization-policy-acceptance.md": "f93a9c87b215cfcf66334c4e3199feaaea5aa81d841c238e242fd899cb819ed6",
+    "site/public/reference/assertion-migration.md": "84721a591596dc1f6fb6de707849468301d349de9de383bd66ae62893a109385",
+    "site/public/reference/synthid-vendor-input.md": "ee1ff575217ceac64e66e7f98f2e02c4ec1040d8f84be75bbff1f401d446bbd2",
+    "runs/2026-11-22-n001-full-original-independent-review.json": "c3c32fdbff95e184583c990c0462909291b885ac7463f57e855d1035c9ea002d",
+    "runs/2026-11-22-assertion-migration-final-execution.json": "1d52fecc0b06057049684cef71fb607d37325b93543a0386d33e5df901ef92d0",
+    "runs/2026-11-22-n001-full-original-acceptance.json": "25f34a47ea1d3b75bd7d9973ee8576a3eecd4ceda83c1aa42406603e8ff1e86a",
+    "runs/2026-11-22-f155-full-original-acceptance.json": "82b5bc7e2738cb5afd570c22c6c75ea8b56f1e7fc6498211d3dacd1e930c62fd",
+    "runs/2026-11-22-f155-root-integration.json": "4e670fbf6d090f6c47ca2ab3bfc97d4c549a5e410365cf37313f935a5d409479"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-n001-full-original-acceptance.json",
+      "sha256": "25f34a47ea1d3b75bd7d9973ee8576a3eecd4ceda83c1aa42406603e8ff1e86a"
+    },
+    {
+      "path": "runs/2026-11-22-f155-full-original-acceptance.json",
+      "sha256": "82b5bc7e2738cb5afd570c22c6c75ea8b56f1e7fc6498211d3dacd1e930c62fd"
+    },
+    {
+      "path": "runs/2026-11-22-f155-root-integration.json",
+      "sha256": "4e670fbf6d090f6c47ca2ab3bfc97d4c549a5e410365cf37313f935a5d409479"
+    }
+  ],
+  "checks": []
+}

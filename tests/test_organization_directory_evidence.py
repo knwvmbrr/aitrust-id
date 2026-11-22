@@ -26,6 +26,12 @@ def test_bad_evidence_refused(mutation):
 def test_full_scope_closure_requires_the_actual_receipt():
     row=next(r for r in json.loads((ROOT/'docs/scope-progress.json').read_bytes())['records'] if r['id']=='F-162')
     if row['percent_complete']==100:
-        receipt=json.loads((ROOT/'runs/2026-11-09-directory-rollover-linux.json').read_bytes());assert v['verify'](receipt)['pass'] is True
+        receipt=json.loads(v['RECEIPT'].read_bytes());assert v['verify'](receipt)['pass'] is True
         assert row['required_acceptance']==[] and row['completed_by'] and row['completed_at']
     else:assert row['required_acceptance'] and row['completed_at'] is None
+
+
+def test_current_default_selects_new_observation_and_old_worker_receipt_refuses():
+    assert v['RECEIPT'].name=='2026-11-22-directory-worker-ownership-linux.json'
+    row=json.loads((ROOT/'runs/2026-11-09-directory-rollover-linux.json').read_bytes())
+    with pytest.raises(ValueError):v['verify'](row)

@@ -1,0 +1,42 @@
+{
+  "captured_at": "2026-11-22T04:59:45.338259+00:00",
+  "performed_by": "Codex /root/web_camo distinct source-only review",
+  "profile": "remaining-worker-refresh-source-distinct-review/v1",
+  "pass": true,
+  "reviewed_source_sha256": {
+    "docs/remaining-worker-evidence-refresh-plan.md": "c27de52c06fa93a1deac927737382bc4b64a78230a8847713a5032a9cd58e4a2",
+    ".github/workflows/host-capture.yml": "4410513638d0847430d905e4420e52ddae4190e38acab53100e3f75f65a3c584",
+    "scripts/verify-conformance-delivery.py": "5c04be61586aae55671f6b6389c6d4f8f275ebaf4377c2246c3ff70b83655b21",
+    "scripts/verify-host-capture-evidence.py": "1f85dbd9678568a33ea329ed886b1a6f0b3289fe28eab84e851a91b34c9dec10",
+    "scripts/verify-organization-audit-evidence.py": "c0255f016d9b71597547274c5657db0e9eaa7587527e7c7ad3240cf7c30af464"
+  },
+  "consumer_changes_only_new_immutable_receipt_paths": true,
+  "all_existing_acceptance_gates_unchanged": true,
+  "host_workflow": {
+    "one_job": true,
+    "read_only_contents": true,
+    "pinned_actions": true,
+    "ubuntu": "24.04",
+    "python": "3.13",
+    "timeout_minutes": 5,
+    "fresh_network_namespace": true,
+    "drop_to_existing_nonroot_user": true,
+    "environment_cleared": true,
+    "private_HOME_TMPDIR": true,
+    "all_12_source_paths_trigger_covered": true,
+    "existing_cases": 20,
+    "new_dependencies_or_secrets": false,
+    "owned_temp_EXIT_cleanup": true,
+    "failed_outcomes_uploaded": true,
+    "artifact_retention_days": 7
+  },
+  "source_stable": true,
+  "reviewer_tests_or_runtime_executed": 0,
+  "limits": [
+    "Read-only source/workflow/selector review; actual host workflow execution not repeated or claimed.",
+    "runuser selects the existing runner user; this review does not claim NoNewPrivs or absence of user sudo rights.",
+    "Network namespace and nonroot execution remain verified by the unchanged producer/consumer, not inferred solely from YAML.",
+    "No real user data, service change, physical/human/accuracy or new full original credit.",
+    "Root owns actual run provenance and complete current consumer outcomes."
+  ]
+}

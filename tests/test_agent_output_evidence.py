@@ -6,7 +6,7 @@ import pytest
 ROOT=Path(__file__).resolve().parents[1]
 spec=importlib.util.spec_from_file_location('agent_evidence',ROOT/'scripts/verify-agent-output.py')
 gate=importlib.util.module_from_spec(spec);spec.loader.exec_module(gate)
-def receipt():return json.loads((ROOT/'runs/2026-11-06-agent-output-macos.json').read_bytes())
+def receipt():return json.loads((ROOT/'runs/2026-11-22-agent-output-macos.json').read_bytes())
 def test_current_actual_software_execution():
     assert gate.verify(receipt(),'darwin')['tests']==33
 @pytest.mark.parametrize('change',[
@@ -29,8 +29,8 @@ def test_full_scope_closure_requires_actual_current_os_and_view_evidence():
     row=next(r for r in json.loads((ROOT/'docs/scope-progress.json').read_bytes())['records'] if r['id']=='F-158')
     if row['percent_complete']==100:
         for label,host in [('macos','darwin'),('linux','linux')]:
-            gate.verify(json.loads((ROOT/('runs/2026-11-06-agent-output-'+label+'.json')).read_bytes()),host)
-        view=json.loads((ROOT/'runs/2026-11-06-agent-output-view-current.json').read_bytes())
+            gate.verify(json.loads((ROOT/('runs/2026-11-22-agent-output-'+label+'.json')).read_bytes()),host)
+        view=json.loads((ROOT/'runs/2026-11-22-agent-output-view.json').read_bytes())
         assert view['pass'] is view['source_unchanged'] is True
         assert set(view['sources'])==set(gate.a.SOURCES)|{'scripts/verify-agent-output-view.cjs','package-lock.json'}
         assert len(view['checks'])==2 and {r['theme'] for r in view['checks']}=={'light','dark'}
@@ -42,3 +42,9 @@ def test_full_scope_closure_requires_actual_current_os_and_view_evidence():
         for name,expected in view['sources'].items():assert gate.a.sha((ROOT/name).read_bytes())==expected
     else:
         assert row['completed_at'] is None and row['required_acceptance']
+
+@pytest.mark.parametrize('platform,label',[('darwin','macos'),('linux','linux')])
+def test_historical_worker_receipts_remain_stale(platform,label):
+    old=json.loads((ROOT/('runs/2026-11-06-agent-output-'+label+'.json')).read_bytes())
+    assert old['sources']['scripts/worker_process.py']!=gate.hashes()['scripts/worker_process.py']
+    with pytest.raises(ValueError):gate.verify(old,platform)

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-034555-nli-native-upstream-heading-preservation-35892ab5",
+  "recorded_at": "2026-11-22T03:45:55.429765+00:00",
+  "author": "Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "40d85dfabcd6a3d97b84977992d0523b0995c0d9",
+  "changed": "Preserve seven exact upstream RST heading files without treating their equals underlines as Git merge conflicts.",
+  "proves": "Inspected all seven original heading contexts; current core, source data and actual548-archive proof remain unchanged. Only Git conflict-marker metadata changes.",
+  "limits": "Exact source-only CAS paths; no global merge or whitespace rule, no source normalization, no new archive execution or distribution permission.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "WP-RELEASE"
+  ],
+  "files": {
+    "sbom/nli-native/.gitattributes": "e65d42ea77a6bb014615c15eb0ed317b53d36344f20832f59e84ae1e5085896f",
+    "runs/2026-11-22-nli-native-upstream-heading-metadata.json": "fc1aba63770f100a6ab5a771aec93c827fa138a7074e4823ede880dcc35b11bb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-nli-native-upstream-heading-metadata.json",
+      "sha256": "fc1aba63770f100a6ab5a771aec93c827fa138a7074e4823ede880dcc35b11bb"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-11-22T03:22:32.942149+00:00",
+  "pass": true,
+  "kind": "F155_original_completion_claim_withdrawal",
+  "scope_id": "F-155",
+  "review": "GitHub PR147 unresolved P1 review on docs/scope-progress.json; exact finding retained in private review snapshot.",
+  "supersedes_as_completion_basis": "runs/2026-11-22-f155-full-original-acceptance.json",
+  "original_outcome": "The application extends supported tags without disabling the personal workflow.",
+  "finding": "A working unbound SDK research statistic is not yet a supported tag workflow. The accepted input-only engineering contract did not authorize narrowing the original outcome. No source or schema claim can turn an empty tag result into completed tag support.",
+  "correction": "Retain actual input component and execution/review evidence; restore original full tag-workflow acceptance and markF155open.",
+  "component_still_operational": true,
+  "retained_component_evidence": [
+    {
+      "path": "runs/2026-11-22-f155-root-integration.json",
+      "sha256": "4e670fbf6d090f6c47ca2ab3bfc97d4c549a5e410365cf37313f935a5d409479"
+    },
+    {
+      "path": "runs/2026-11-21-synthid-current-cli.json",
+      "sha256": "83fdcb3a6a0deb974fdee9ad3d2b235f8674fd944b42390472b95b198914126c"
+    },
+    {
+      "path": "runs/2026-11-21-synthid-install-removal-current.json",
+      "sha256": "cfedbb0ad24b7a7a2507e2b4a1fdf9b2b8e0937148026960afb23851ef1e8ad9"
+    }
+  ],
+  "original_required_acceptance_restored_exactly": [
+    "Deliver SynthID and vendor watermarking. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
+  ],
+  "original_requirements_complete": 135,
+  "original_requirements_open": 67,
+  "new_original_closures_this_wave": [
+    "N-010",
+    "N-001"
+  ],
+  "independent_accuracy_evidence": false,
+  "new_tag_released": false
+}

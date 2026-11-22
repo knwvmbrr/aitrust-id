@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-053426-correct-current-host-performance-assertion-bf78f3bc",
+  "recorded_at": "2026-11-22T05:34:26.306867+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8dacd40e8d3d71101822f5ba2218043a490e119a",
+  "changed": "Updated the existing performance-view assertion to the exact20 current accepted HOST controls.",
+  "proves": "The preserved actual browser failure isolated its stale19-case expected text; the accepted records and public summary both contain20. Syntax passes; independent-review/human/no-accuracy restrictions remain unchanged.",
+  "limits": "Full corrected website execution is pending; no previous failure is relabeled. No product method or original completion changed.",
+  "scope_ids": [
+    "F-160"
+  ],
+  "files": {
+    "scripts/verify-performance.cjs": "f587c6cb3446be96ea44c1dac1a9cad908c7ac8d81b29b8f3ea2c6a57ec32cbb",
+    "runs/2026-11-22-current-host-performance-assertion-correction.json": "ddd9862237b3237d25ca8ddd9620d1c555850f8e8c6b2d4db020898161733a9d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-current-host-performance-assertion-correction.json",
+      "sha256": "ddd9862237b3237d25ca8ddd9620d1c555850f8e8c6b2d4db020898161733a9d"
+    },
+    {
+      "path": "runs/2026-11-22-host-current-actual-distinct-review.json",
+      "sha256": "54af709057ebb9881f7d9cd23e60877c012829cf3b606d2361f6ea21ae7bb169"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "scripts/verify-performance.cjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-22T05:34:26.534562+00:00"
+    }
+  ]
+}

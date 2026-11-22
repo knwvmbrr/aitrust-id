@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-035015-artifact-bound-fourteen-scope-sbom-e9cfad75",
+  "recorded_at": "2026-11-22T03:50:15.496519+00:00",
+  "author": "Codex /root/share_debugger; distinct core reviewer /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7578060b65f5db35612a00133916fb3a40108160",
+  "changed": "Implemented exact-artifact SPDX and source graphs for all14 routes, detached trusted-workflow verification and policy-first managed authorization, owned process supervision, protected signing workflow and measured whole-source capacity.",
+  "proves": "Actual33 combined focused controls pass; all14 adapters bind reviewed C2PA441 and NLI650 source/notice graphs. Distinct actual process faults and workflow/Git-identity review pass. Existing PS stays admitted; other13 managed routes remain refused.",
+  "limits": "No new protected Sigstore run, comprehensive embedded/native coverage, source-offer completion, legal clearance or full original closure. Final actual combined archive and current CLI proof follow frozen source commit. Historical failures preserved.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".github/workflows/artifact-sbom.yml": "ec50206bd5a3db1d871a6ef547f19469b202893f870c41e6a74403ac4ab94168",
+    "tools/distribution_artifacts.py": "d48ba973ec8ec2f4595a8d665dfeeb324d34341940b804d548a4fc8e9328895e",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tools/artifact_process.py": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86",
+    "scripts/distribution-artifact.py": "15fb26b1fa0ef927e3bda554bf55f8cf011935a81cb660bead236f1d07be9d0a",
+    "scripts/source_snapshot.py": "a40b35ba3fb34b57de8fd5c260918ac122df9a9278e2a4f6e3ff758ea6c53225",
+    "tests/test_distribution_artifacts.py": "bdd1416e6e67a9aeb3d0f23e8bee237c32c3c3d408437adea9c5a95eb3c24eef",
+    "tests/test_artifact_process.py": "b3681ca1908e39d33276c23dca0cf486f69f86251c8d17b1f6b621cd23163a4a",
+    "tests/test_artifact_workflow.py": "c06c3f0e183db5916e448b718a60fa6763e880eed2b282a99e6e796a8568090c",
+    "docs/distribution-artifact-sbom-plan.md": "5d8a39c35a257bcdde130e73acede70cbd5f158f1afb850b38d4fbb4fe5aaa64",
+    "docs/distribution-artifact-sbom.md": "30dca2c601b1ddaf8516ac799943ec5c313ac9660b14cd545a51402f306d190f",
+    "runs/2026-11-22-artifact-sbom-first-adapters.json": "84acea2d6a686d85a1189cc4e39a39a33316895d0a3bcd3844078a50802a084f",
+    "runs/2026-11-22-artifact-sbom-native-adapter-refusal.json": "6d8913444d978e8b5ddd1da8608a7af91af0c639220c4cd079c60dc6636b04aa",
+    "runs/2026-11-22-artifact-sbom-first-complete-cli.json": "67c525b9589d0110e865cddd376403e44d4402636be7173bfd67414d4273c93d",
+    "runs/2026-11-22-artifact-sbom-current-cli.json": "b698be6bfe4a20a053bdeab07aaf64fcc60218c9585835a427682c47bbcba85b",
+    "runs/2026-11-22-artifact-sbom-peer-findings.json": "198892996561c321399febf8fb56f5a6eec0db1af989ee29ffad99286285bcb7",
+    "runs/2026-11-22-artifact-sbom-peer-corrected-focused.json": "5ed72c1daec9e04661c6d738ca9c3eee96e0cec20efce11f1803052276715b5f",
+    "runs/2026-11-22-artifact-sbom-corrected-core-distinct-review.json": "32c70f94349179318088c827657f5187864b6b11624d69ddc22f7f85577828f4",
+    "runs/2026-11-22-artifact-sbom-source-capacity-measurement.json": "9d36f9fd7dc8618a829860c704a0d34e06363742cd520b52dd1b7d93d392b79e",
+    "runs/2026-11-22-artifact-sbom-combined-focused.json": "435b0d8be0534846da99ce2b69fc44f8af6429afe72cc6cd0c44851ef0648d2e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-artifact-sbom-combined-focused.json",
+      "sha256": "435b0d8be0534846da99ce2b69fc44f8af6429afe72cc6cd0c44851ef0648d2e"
+    },
+    {
+      "path": "runs/2026-11-22-artifact-sbom-corrected-core-distinct-review.json",
+      "sha256": "32c70f94349179318088c827657f5187864b6b11624d69ddc22f7f85577828f4"
+    },
+    {
+      "path": "runs/2026-11-22-artifact-sbom-source-capacity-measurement.json",
+      "sha256": "9d36f9fd7dc8618a829860c704a0d34e06363742cd520b52dd1b7d93d392b79e"
+    }
+  ],
+  "checks": []
+}

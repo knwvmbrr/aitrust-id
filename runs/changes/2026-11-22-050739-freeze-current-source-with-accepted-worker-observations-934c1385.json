@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-050739-freeze-current-source-with-accepted-worker-observations-934c1385",
+  "recorded_at": "2026-11-22T05:07:39.423974+00:00",
+  "author": "Codex PM /root; distinct reviewer /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fdca8b8de4c19b0598e175d0140bdaa7b93196ec",
+  "changed": "Completed all selected actual worker-observation refreshes, copied current public evidence, and froze the source and scope for final capability verification.",
+  "proves": "Both host platforms retain20 original cases and12 exact sources; all seven current evidence consumers accept actual records. Original202criteria and135/67 counts remain unchanged.",
+  "limits": "The independent accuracy/release gate still refuses; source-bound software checks, protected merge, real signing and site deployment remain separate next steps. No additional original closure.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "T-FI",
+    "F-057",
+    "F-119",
+    "F-120",
+    "F-160",
+    "F-161",
+    "F-096"
+  ],
+  "files": {
+    "docs/remaining-worker-evidence-refresh-result.md": "661d83eaf8884fd625d5e6fe22fbd4799ac14dbe9abc53343e4d7b97b3bb5aef",
+    "docs/scope-progress.json": "49b62778b29cea7587fa8ed90bd9ba9741a49830ca5be23457468967166113b1",
+    "docs/session-delivery-plan.md": "26e7243c6a83dbba38b22b3efa795a5fb406ab88676efc72acce9bc2d0711b78",
+    "docs/session-delivery.json": "146bde7ce6f43f3528348cc15c9b726a61c9fa76fd2ff5ce18588b67ac07d1d3",
+    "eval/revalidation.json": "e7a52b8dcc95ad697517b12921976c355349e559aba3546bd47a149fcb9bd5d7",
+    "runs/2026-11-22-current-worker-observer-acceptance.json": "0b1d56ff46a893d1f8e1f8a892969dbb000d77ce90aed9698042d18443f958cf",
+    "runs/2026-11-22-host-current-actual-distinct-review.json": "54af709057ebb9881f7d9cd23e60877c012829cf3b606d2361f6ea21ae7bb169",
+    "runs/2026-11-22-host-worker-ownership-linux-provenance.json": "784ead0c473188fa8d8e07717642388632c38f00221a4a2c27a69e611cca05d5",
+    "runs/2026-11-22-host-worker-ownership-linux.json": "96d364c6d6e53e056de5ba6ef5da83c3dd3755eee5ca58e20064188344cf56f7",
+    "scripts/verify-route-boundaries.py": "d76e247cb7006bd8baae0eb1ed6d152f06f253ecd3370b266ec3f0787c733633",
+    "site/public/reference/host-capture-linux.json": "96d364c6d6e53e056de5ba6ef5da83c3dd3755eee5ca58e20064188344cf56f7",
+    "site/public/reference/host-capture-macos.json": "68547e3f728249c9473294423d33cb65e0023efbf93e7ce1371088e4eeb043df",
+    "site/public/reference/organization-audit-linux.json": "350884ab64d60c372a975db99a4490005966a53e68ea169bbe21319785a6e4a7",
+    "site/public/reference/public-scope.json": "b1b9ba32a71ba9fa968dde7bd4bee0baba10346aae3ce4ce6826995bca6e458f",
+    "site/src/public-scope.json": "b1b9ba32a71ba9fa968dde7bd4bee0baba10346aae3ce4ce6826995bca6e458f",
+    "site/src/scope-manifest.json": "f8db2ebf4711c5289e05895f58854df9e4e6e4d36e69aa712006c579a8621a50",
+    "state.json": "affe7541fde71d6cbab6b87d0da541dff39567845961026b666a516e5c59aa30"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-host-worker-ownership-linux-provenance.json",
+      "sha256": "784ead0c473188fa8d8e07717642388632c38f00221a4a2c27a69e611cca05d5"
+    },
+    {
+      "path": "runs/2026-11-22-host-current-actual-distinct-review.json",
+      "sha256": "54af709057ebb9881f7d9cd23e60877c012829cf3b606d2361f6ea21ae7bb169"
+    },
+    {
+      "path": "runs/2026-11-22-current-worker-observer-acceptance.json",
+      "sha256": "0b1d56ff46a893d1f8e1f8a892969dbb000d77ce90aed9698042d18443f958cf"
+    }
+  ],
+  "checks": []
+}

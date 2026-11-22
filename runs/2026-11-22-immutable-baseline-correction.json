@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-11-22T05:13:31.030893+00:00",
+  "profile": "immutable-delivery-baseline-correction/v1",
+  "pass": true,
+  "cause": "PM incorrectly updated a baseline digest to a current ledger digest. The accounting guard correctly refused it.",
+  "restored_baseline_commit": "3716233b9460efa57c1f0d01bfe30989395efcc4",
+  "restored_scope_progress_sha256": "698755ac9761146a7b5bbac896334d746a3ce73d59f0ffb6650f816388ddb32a",
+  "checks": [
+    {
+      "argv": [
+        "{python}",
+        "scripts/session-delivery.py"
+      ],
+      "exit": 0,
+      "expected_exit": 0,
+      "stdout_sha256": "a6f669fe4aaf8b70d7df340d8387d07f8116dd4ecd414bf3e768b3f1266f6033",
+      "accounting_valid": true,
+      "session_success": false
+    },
+    {
+      "argv": [
+        "{python}",
+        "scripts/session-delivery.py",
+        "--check-session"
+      ],
+      "exit": 1,
+      "expected_exit": 1,
+      "stdout_sha256": "ef14db85f470268d133a3662fa8820d3abefc26cc5d9e632ceaad923d4bcccb9",
+      "accounting_valid": true,
+      "session_success": false
+    }
+  ],
+  "previous_failure": "runs/2026-11-22-delivery-ready-protocol.json",
+  "all202original_contracts_preserved": true,
+  "new_original_closures": 0,
+  "original_complete": 135,
+  "original_open": 67,
+  "target60_met": false,
+  "new_runtime_code": false
+}

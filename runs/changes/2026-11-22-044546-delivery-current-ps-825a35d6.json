@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-044546-delivery-current-ps-825a35d6",
+  "recorded_at": "2026-11-22T04:45:46.220388+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "755040c0fef91b44a534d297b7e3e357b069eefd",
+  "changed": "Recorded actual integrated PS execution after the versioned serializer and FI practice integration.",
+  "proves": "All registered commands and source identity checks passed.",
+  "limits": "Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155",
+    "F-057",
+    "X-02",
+    "T-FI"
+  ],
+  "files": {
+    "runs/2026-11-22-delivery-current-ps.json": "4e10bbf3d655e8d506783d76397bd5a3ff57db771ef64fa52ed8c14ac2a74b95"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-delivery-current-ps.json",
+      "sha256": "4e10bbf3d655e8d506783d76397bd5a3ff57db771ef64fa52ed8c14ac2a74b95"
+    }
+  ],
+  "checks": []
+}

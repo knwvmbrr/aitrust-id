@@ -1,0 +1,124 @@
+{
+  "format": "ai-trust-id-c2pa-native-actual-cli/v1",
+  "captured_at": "2026-11-22T02:56:18.650661+00:00",
+  "pass": true,
+  "cases": [
+    {
+      "case": "checkout_only_consistency_not_fresh_archive_credit",
+      "pass": true,
+      "exit_status": 0,
+      "elapsed_seconds": 0.846,
+      "result": {
+        "actual_archive_replay": false,
+        "claims": {
+          "distribution_approved": false,
+          "independent_accuracy": false,
+          "permission_cleared": false,
+          "source_build_reproduced": false
+        },
+        "dependency_edges": 1131,
+        "native_build_graph_proven": false,
+        "native_labels_replayed": false,
+        "packages": 441,
+        "pass": true,
+        "permission_cleared": false,
+        "profile": "c2pa-native-dependency-observations/v1",
+        "retained_sources": 2518
+      }
+    },
+    {
+      "case": "all441_exact_archives_and_both_native_label_replay",
+      "pass": true,
+      "exit_status": 0,
+      "elapsed_seconds": 2.604,
+      "result": {
+        "actual_archive_replay": true,
+        "claims": {
+          "distribution_approved": false,
+          "independent_accuracy": false,
+          "permission_cleared": false,
+          "source_build_reproduced": false
+        },
+        "dependency_edges": 1131,
+        "native_build_graph_proven": false,
+        "native_labels_replayed": true,
+        "packages": 441,
+        "pass": true,
+        "permission_cleared": false,
+        "profile": "c2pa-native-dependency-observations/v1",
+        "retained_sources": 2518
+      }
+    },
+    {
+      "case": "actual_wrong_archive_checksum_refused_without_echo",
+      "pass": true,
+      "exit_status": 1,
+      "elapsed_seconds": 0.698,
+      "result": null
+    },
+    {
+      "case": "actual_unknown_retained_source_refused_without_echo",
+      "pass": true,
+      "exit_status": 1,
+      "elapsed_seconds": 0.613,
+      "result": null
+    },
+    {
+      "case": "malformed_argument_fixed_refusal_no_echo",
+      "pass": true,
+      "exit_status": 1,
+      "elapsed_seconds": 0.083,
+      "result": null
+    }
+  ],
+  "case_count": 5,
+  "source_before": {
+    "tools/c2pa_native_obligations.py": "134d8b7010a9dbab91004f2ffaaf66f3ead26817520b54fed56b811e4f751f7e",
+    "scripts/verify-c2pa-native-obligations.py": "d473390bf18392f6bf8e61d012680cc65bc3e03c67be5ca0d7a37d779c5fe322",
+    "tests/test_c2pa_native_obligations.py": "1fd437c4f75baf83a18795e7301bf5c29dbbfb9326332e21556dddfcebe11223",
+    "sbom/c2pa-native/manifest.json": "5e9e5e45c13013f727a1fb8a098b6e70db7bb363c2b43bff16cfc834c2ff4a14",
+    "sbom/c2pa-native/notice-supplements.json": "3938247d6f8d0f5f1cb7403c2b8040181280c6686da003284efd8a3e9d8948c8",
+    "sbom/c2pa-native/native-labels.json": "20a01a31f8516c271cf1b53bd50d95465369aff0bced3f9d77882a0a3c2c89f9",
+    "docs/c2pa-native-obligations-plan.md": "92f3f17a2d5e154f60ac67aa49b8faa173d76a380275d11a10c9dc5b19a7906d",
+    "sbom/c2pa-native/.gitattributes": "7099b96144b8a9305b9f47594c6bf8f8936fcc87d766b0f5870133ec9a4619ba"
+  },
+  "source_after": {
+    "tools/c2pa_native_obligations.py": "134d8b7010a9dbab91004f2ffaaf66f3ead26817520b54fed56b811e4f751f7e",
+    "scripts/verify-c2pa-native-obligations.py": "d473390bf18392f6bf8e61d012680cc65bc3e03c67be5ca0d7a37d779c5fe322",
+    "tests/test_c2pa_native_obligations.py": "1fd437c4f75baf83a18795e7301bf5c29dbbfb9326332e21556dddfcebe11223",
+    "sbom/c2pa-native/manifest.json": "5e9e5e45c13013f727a1fb8a098b6e70db7bb363c2b43bff16cfc834c2ff4a14",
+    "sbom/c2pa-native/notice-supplements.json": "3938247d6f8d0f5f1cb7403c2b8040181280c6686da003284efd8a3e9d8948c8",
+    "sbom/c2pa-native/native-labels.json": "20a01a31f8516c271cf1b53bd50d95465369aff0bced3f9d77882a0a3c2c89f9",
+    "docs/c2pa-native-obligations-plan.md": "92f3f17a2d5e154f60ac67aa49b8faa173d76a380275d11a10c9dc5b19a7906d",
+    "sbom/c2pa-native/.gitattributes": "7099b96144b8a9305b9f47594c6bf8f8936fcc87d766b0f5870133ec9a4619ba"
+  },
+  "sources_stable": true,
+  "package_count": 441,
+  "dependency_edges": 1131,
+  "retained_sources": 2518,
+  "retained_source_bytes": 8639460,
+  "archive_bytes": 69450783,
+  "private_cache_archive_count": 441,
+  "native_label_counts": {
+    "darwin-arm64": 135,
+    "linux-x86_64": 135
+  },
+  "native_labels_all_in_published_lock": true,
+  "source_supplement_packages": 16,
+  "package_code_executed": false,
+  "native_code_executed": false,
+  "builds_or_installs": false,
+  "model_downloads": false,
+  "source_cache_within_256MiB": true,
+  "free_bytes_at_capture": 3006754816,
+  "permission_cleared": false,
+  "complete_native_dependency_graph": false,
+  "source_build_reproduced": false,
+  "original_requirement_closed": false,
+  "limits": [
+    "Published Cargo union graph includes optional/build/dev/platform alternatives, not exact incorporated native closure.",
+    "Embedded registry labels are positive non-exhaustive source-version observations, not proof of compiler, full linkage or source equivalence.",
+    "Pinned source supplements are not represented as shipped crate members; raw declarations and unresolved obligations remain visible.",
+    "No legal/global distribution/accuracy or tag approval is granted."
+  ]
+}

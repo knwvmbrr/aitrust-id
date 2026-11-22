@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-055521-record-current-delivery-engineering-packet-f5ca3c80",
+  "recorded_at": "2026-11-22T05:55:21.266447+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8e0e1c666d0988d1670b9667970a9e6e30ebee17",
+  "changed": "Recorded the complete current-source engineering packet, refreshed the finite boundary inventory and set actual verification state before normal publication.",
+  "proves": "All five selected capability receipts and7840source boundary are current; the original scope remains135complete67open with only N-001/N-010 newly completed.",
+  "limits": "Independent tag release remains unapproved. The reviewed F145 design is a separate public candidate, not yet integrated or counted. Protected merge, real artifact signing and live site verification remain pending.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155",
+    "T-FI",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "bcea03ae60d9a76b28a3979d97f0b0c4dc42459be15c01f7c8cf6a23554701fe",
+    "runs/2026-11-22-checked-site-website.json": "b439d1b9fb06bed34347820d9fb81f08ecac59ede554977ac8436f38e9d44a95",
+    "runs/2026-11-22-current-delivery-boundaries.json": "cd7dab421aee292b8232d8fd36bd973b138b5dd1a7863aa6ef0690a01e7bbb40",
+    "runs/2026-11-22-current-delivery-engineering-packet.json": "020fe0a675b0e5d8096343431da3f30bea0e612d714b61abd0de3fcf974f289f",
+    "state.json": "53f8c195c090387b3f4478f9469be76ced1098f27361fb0be4d9611021669866"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-current-delivery-engineering-packet.json",
+      "sha256": "020fe0a675b0e5d8096343431da3f30bea0e612d714b61abd0de3fcf974f289f"
+    },
+    {
+      "path": "runs/2026-11-22-current-delivery-boundaries.json",
+      "sha256": "cd7dab421aee292b8232d8fd36bd973b138b5dd1a7863aa6ef0690a01e7bbb40"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,21 @@
+[package]
+name = "bitvec-nom2"
+version = "0.2.1"
+edition = "2018"
+description = "Bit level parsing for nom with bitvec"
+license = "MIT"
+authors = [ "contact@geoffroycouprie.com" ]
+repository = "https://github.com/rust-bakery/nom-bitvec"
+readme = "README.md"
+documentation = "https://docs.rs/nom-bitvec"
+keywords = ["parser", "parser-combinators", "bit"]
+categories = ["parsing"]
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bitvec = { version = "1", default-features = false, features = ["alloc"] }
+nom = { version = "7.0.0", default-features = false }
+
+[features]
+alloc = []
+default = ["alloc"]

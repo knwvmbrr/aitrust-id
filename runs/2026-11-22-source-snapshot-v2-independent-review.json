@@ -1,0 +1,108 @@
+{
+  "profile": "source-snapshot-version-split-independent-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T04:41:25.694545+00:00",
+  "reviewed_by": "/root/seo",
+  "findings": [],
+  "source_sha256": {
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/build-source-snapshot.py": "a07d3642d5921e804277c12c16ad22cf388d65bae114810877b2b08e52ce6706",
+    "scripts/verify-source-provenance.py": "cc0e9bbb83f1c844a9ca7cca69b063352a53c1ac311bef02d354f92bb5194215",
+    "tools/distribution_artifacts.py": "3540e7a5c9326148eef2183638fa5767259284d470701619e562fd2f14528be8",
+    "tests/test_source_provenance.py": "566fa10f9d11f3da9d1c0e0677a914a84bcfea3b4e51fea5bd8893a776492f6f",
+    "tests/test_distribution_artifacts.py": "032ac09a86a4622d06d03911aaa1cfbfcdd2598de169f88ce5b345d4ebd58c33",
+    "sbom/native/manifest.json": "b73adf17026164ae36fa227e2807aa6a1e30de4c3bc47bb62a2eb53b6dffe860",
+    "sbom/nested-runtime/manifest.json": "9452abdfd81cafdc2f0b9a0b2e45cb4206aa40c51ab41edcb61d3552f33a05d6",
+    "tools/native_inventory.py": "a839c3043e3a542634ecba6e3a289dd5035efbf66081ccd33974445b740c2bf9",
+    "tools/nested_runtime_inventory.py": "7e90fb0d63d24155db0f8b7dfd317c6958b657b530691c023a7d7fc152cd11b9",
+    "tools/conformance_vectors.py": "fa06f80172fb314876c7d202c67888a888d866097206f28dbbdea23737b55d45",
+    "eval/conformance/assertion-v1.json": "aa30aef56eeff6657b68b315dc4f64b1756ee9eb8c9c54db76159a633c09b745"
+  },
+  "source_stable": true,
+  "checks": [
+    {
+      "id": "four_targeted_parity_global_ownership_capacity_controls",
+      "returncode": 0,
+      "elapsed_seconds": 0.774,
+      "stdout_sha256": "f3ff0520e279ec6c149e89699e3211b55be2a422d4179b812a22c9237834275e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": "....                                                                     [100%]\n4 passed in 0.54s"
+    },
+    {
+      "id": "historical_native_default",
+      "returncode": 0,
+      "elapsed_seconds": 0.299,
+      "stdout_sha256": "0d77d66faf20875c957a28d91618c5d9fa0ccfa9e302f3aeccd9b3783158bf36",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": {
+        "pass": true,
+        "profile": "npm-native-observations/1.0.0",
+        "artifacts": 205,
+        "archive_replay": false,
+        "binary_bytes_replayed": false,
+        "observation_authenticated": false,
+        "permission_cleared": false
+      }
+    },
+    {
+      "id": "historical_nested_default",
+      "returncode": 0,
+      "elapsed_seconds": 0.27,
+      "stdout_sha256": "73529be1931a4191457da1d5a571010a97a0e652bc886ebb193f6b317d8d1ae7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": {
+        "pass": true,
+        "profile": "pinned-runtime-source-notice-observation/v1",
+        "permission_cleared": false
+      }
+    },
+    {
+      "id": "conformance_vector_load_only",
+      "returncode": 0,
+      "elapsed_seconds": 0.034,
+      "stdout_sha256": "d05288aa56dbe0d42819f608c0746d5f5bfccabd859584f8ab4b0904bc2c66c5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": {
+        "pass": true,
+        "vectors": 14,
+        "legacy_hash": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee"
+      }
+    }
+  ],
+  "reviewed_author_records": [
+    {
+      "path": "output/coordination/source-snapshot-v2-native.json",
+      "sha256": "79e04b3b4d6186bfb5710c575500a01bb85b257fe0c51c2138989a993c75c9ec"
+    },
+    {
+      "path": "output/coordination/source-snapshot-v2-nested.json",
+      "sha256": "0c109e4810c7627e23b7b6bff6395dc277e7fc90220829c7df3d35e86ab0d1df"
+    },
+    {
+      "path": "output/coordination/source-snapshot-v2-retained-archive.json",
+      "sha256": "fbea146aebff2ff94c359a760e5c3e13bed59cfd978a0da513f13cffdd22f0ff"
+    },
+    {
+      "path": "output/coordination/source-snapshot-v2-first-refusal.json",
+      "sha256": "3b7a09401712ceedafaf7cf37142f860598efd7f01cd981c5985b4420151bf3a"
+    }
+  ],
+  "source_contract": {
+    "v1_exact_historical_40d85_bytes": true,
+    "v1_10000_and_v2_16384_no_global_mutation": true,
+    "v2_owns_build_inspect_and_aliases_unchanged_helpers_constants": true,
+    "format_unchanged_small_archive_bytes_and_inspection_equal": true,
+    "builder_and_cryptographic_verifier_both_select_v2": true,
+    "artifact_route_binds_v1_v2_builder_verifier": true,
+    "legacy_native_nested_manifests_unchanged_from_7785095": true,
+    "historical_observer_sources_not_rebound": true,
+    "byte_path_time_limits_retained": true
+  },
+  "limits": [
+    "Only four targeted controls, native/nested default checks and conformance source/vector loading executed by reviewer. No cache/native replay, full80 suite, big source archive build/inspection, browser or hosted signing repeated.",
+    "Retained author record reports inspection of existing12484-file31b archive; reviewer read its report only.",
+    "Versioned source serialization is not license clearance, detector approval or a new original closure."
+  ],
+  "final_integration_metadata_and_protected_publication_pending": true
+}

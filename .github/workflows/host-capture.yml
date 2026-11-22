@@ -1,0 +1,78 @@
+name: foreground-host-capture
+on:
+  pull_request:
+    paths:
+      - 'tools/host_capture.py'
+      - 'scripts/host-capture.py'
+      - 'tools/blind_review_io.py'
+      - 'protocol/normalization.py'
+      - 'protocol/unicode15-data.json'
+      - 'scripts/build-device-detector.py'
+      - 'scripts/check-ps.py'
+      - 'scripts/worker_process.py'
+      - 'services/evaluator/app.py'
+      - 'tests/test_host_capture.py'
+      - 'tests/test_host_capture_evidence.py'
+      - 'scripts/verify-host-capture*.py'
+      - 'docs/host-capture.md'
+      - '.github/workflows/host-capture.yml'
+  push:
+    paths:
+      - 'tools/host_capture.py'
+      - 'scripts/host-capture.py'
+      - 'tools/blind_review_io.py'
+      - 'protocol/normalization.py'
+      - 'protocol/unicode15-data.json'
+      - 'scripts/build-device-detector.py'
+      - 'scripts/check-ps.py'
+      - 'scripts/worker_process.py'
+      - 'services/evaluator/app.py'
+      - 'tests/test_host_capture.py'
+      - 'tests/test_host_capture_evidence.py'
+      - 'scripts/verify-host-capture*.py'
+      - 'docs/host-capture.md'
+      - '.github/workflows/host-capture.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: foreground-host-capture-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  actual-linux-foreground:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {fetch-depth: 1, persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.13'}
+      - name: Execute all twenty actual foreground controls as the ordinary user
+        shell: bash
+        run: |
+          set -euo pipefail
+          proof_root=$(mktemp -d "$RUNNER_TEMP/aitrust-host-capture.XXXXXXXX")
+          trap 'rm -rf -- "$proof_root"' EXIT
+          mkdir -m 0700 -- "$proof_root/home" "$proof_root/tmp"
+          sudo unshare --net -- /usr/sbin/runuser -u "$(id -un)" -- /usr/bin/env -i \
+            HOME="$proof_root/home" TMPDIR="$proof_root/tmp" PATH=/usr/bin:/bin \
+            LANG=C.UTF-8 LC_ALL=C.UTF-8 "$(command -v python)" -I -S -B \
+            scripts/verify-host-capture.py --output output/verification/host-capture-linux.json
+      - name: Require exact current twenty-case Linux evidence and isolation flags
+        run: |
+          python -I -S -B - <<'PYTHON'
+          import importlib.util,json,pathlib,sys
+          root=pathlib.Path.cwd();sys.path.insert(0,str(root))
+          spec=importlib.util.spec_from_file_location('host_evidence',root/'scripts/verify-host-capture-evidence.py')
+          gate=importlib.util.module_from_spec(spec);spec.loader.exec_module(gate)
+          row=json.loads((root/'output/verification/host-capture-linux.json').read_bytes())
+          assert gate.verify(row,'linux')
+          PYTHON
+      - name: Retain the actual outcome, including failed controls
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: actual-linux-foreground-host-capture
+          path: output/verification/host-capture-linux.json
+          if-no-files-found: error
+          retention-days: 7

@@ -76,3 +76,75 @@ def test_unsupported_control_platform_fails_before_spawn(monkeypatch):
     monkeypatch.setattr(w.os,'name','unsupported')
     monkeypatch.setattr(w.subprocess,'Popen',lambda *args,**kw:pytest.fail('Unsupported worker spawned'))
     with pytest.raises(ValueError):run('pass')
+
+
+def test_selector_startup_failure_reaps_owned_child_and_closes_pipes(monkeypatch):
+    created=[];spawn=w.subprocess.Popen
+    def capture(*args,**kwargs):
+        child=spawn(*args,**kwargs);created.append(child);return child
+    monkeypatch.setattr(w.subprocess,'Popen',capture)
+    def failed_selector():raise OSError('Synthetic selector startup failure')
+    monkeypatch.setattr(w.selectors,'DefaultSelector',failed_selector)
+    with pytest.raises(OSError):run('import time;time.sleep(30)')
+    assert len(created)==1 and created[0].returncode is not None
+    assert created[0].stdin.closed and created[0].stdout.closed
+
+
+def test_post_reap_failure_never_signals_released_process_group(monkeypatch):
+    created=[];signals=[];spawn=w.subprocess.Popen;kill=w.os.killpg
+    def capture(*args,**kwargs):
+        child=spawn(*args,**kwargs);created.append(child);wait=child.wait
+        def after_wait(*a,**kw):
+            wait(*a,**kw)
+            raise OSError('Synthetic failure after actual reap')
+        child.wait=after_wait
+        return child
+    def guarded_signal(pid,sig):
+        signals.append((pid,sig))
+        # Never send a real signal to an already released identifier in a test.
+        if created[0].returncode is None:kill(pid,sig)
+    monkeypatch.setattr(w.subprocess,'Popen',capture)
+    monkeypatch.setattr(w.os,'killpg',guarded_signal)
+    with pytest.raises(OSError):run('pass')
+    assert created[0].returncode==0 and signals==[]
+    assert created[0].stdin.closed and created[0].stdout.closed
+
+
+def test_selector_close_failure_still_closes_both_owned_pipes(monkeypatch):
+    created=[];spawn=w.subprocess.Popen;select=w.selectors.DefaultSelector
+    def capture(*args,**kwargs):
+        child=spawn(*args,**kwargs);created.append(child);return child
+    def closing_selector():
+        selector=select();close=selector.close
+        def failed_close():
+            close();raise OSError('Synthetic selector close failure')
+        selector.close=failed_close
+        return selector
+    monkeypatch.setattr(w.subprocess,'Popen',capture)
+    monkeypatch.setattr(w.selectors,'DefaultSelector',closing_selector)
+    with pytest.raises(OSError):run('pass')
+    assert created[0].returncode==0
+    assert created[0].stdin.closed and created[0].stdout.closed
+
+
+def test_clock_start_failure_occurs_before_any_child_is_spawned(monkeypatch):
+    def failed_clock():raise OSError('Synthetic clock startup failure')
+    monkeypatch.setattr(w.time,'monotonic',failed_clock)
+    monkeypatch.setattr(w.subprocess,'Popen',lambda *args,**kw:pytest.fail('Clock failure spawned a worker'))
+    with pytest.raises(OSError):run('pass')
+
+
+def test_clock_failure_inside_pipe_loop_reaps_owned_child(monkeypatch):
+    created=[];spawn=w.subprocess.Popen;clock=w.time.monotonic;calls=0
+    def capture(*args,**kwargs):
+        child=spawn(*args,**kwargs);created.append(child);return child
+    def failed_second_clock():
+        nonlocal calls
+        calls+=1
+        if calls>1:raise OSError('Synthetic clock loop failure')
+        return clock()
+    monkeypatch.setattr(w.subprocess,'Popen',capture)
+    monkeypatch.setattr(w.time,'monotonic',failed_second_clock)
+    with pytest.raises(OSError):run('import time;time.sleep(30)')
+    assert created[0].returncode is not None
+    assert created[0].stdin.closed and created[0].stdout.closed

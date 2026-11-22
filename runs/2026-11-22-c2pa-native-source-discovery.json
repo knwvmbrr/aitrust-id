@@ -1,0 +1,56 @@
+{
+  "format": "ai-trust-id-c2pa-native-source-discovery/v1",
+  "captured_at": "2026-11-22T02:58:18.051295+00:00",
+  "pass": true,
+  "git_lock_observation": {
+    "official_url": "https://raw.githubusercontent.com/contentauth/c2pa-rs/e7cc666c3409bdaf4cea8e49046dfbf8290dff89/Cargo.lock",
+    "http_status": 404,
+    "response_bytes": 14,
+    "response_sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+  },
+  "separate_published_lock": {
+    "crate_url": "https://static.crates.io/crates/c2pa-c-ffi/c2pa-c-ffi-0.91.0.crate",
+    "crate_sha256": "612bffa120fdb58b5b6767602b0c0c77a20e139a7102b3e13e85236308ee49f4",
+    "Cargo.lock_sha256": "0625bfce6060f01e9777fc88846fe85ba6a8b958c79d1d6da38b9857be236d59",
+    "packages": 441,
+    "edges": 1131,
+    "role": "published_package_resolution_not_release_binary_build_lock"
+  },
+  "packages_without_shipped_notice_filename": [
+    "alloc-stdlib@0.2.4",
+    "asn1-rs-impl@0.2.0",
+    "btree-range-map@0.7.2",
+    "c2pa-c-ffi@0.91.0",
+    "c2pa@0.91.0",
+    "defmt-parser@1.0.0",
+    "delegate@0.8.0",
+    "iref-core@3.2.2",
+    "jfifdump@0.6.0",
+    "range-traits@0.3.2",
+    "rasn-cms@0.28.14",
+    "rasn-ocsp@0.28.14",
+    "rasn-pkix@0.28.14",
+    "static-regular-grammar@2.0.2"
+  ],
+  "packages_with_separate_pinned_source_notice": [
+    "alloc-stdlib@0.2.4",
+    "asn1-rs-impl@0.2.0",
+    "c2pa-c-ffi@0.91.0",
+    "c2pa@0.91.0",
+    "defmt-parser@1.0.0",
+    "delegate@0.8.0",
+    "iref-core@3.2.2",
+    "jfifdump@0.6.0",
+    "rasn-cms@0.28.14",
+    "rasn-ocsp@0.28.14",
+    "rasn-pkix@0.28.14"
+  ],
+  "packages_without_shipped_or_pinned_license_file": [
+    "btree-range-map@0.7.2",
+    "range-traits@0.3.2",
+    "static-regular-grammar@2.0.2"
+  ],
+  "remaining_alternative_declarations_retained": "README and Cargo.toml license expressions remain evidence, not fabricated missing notice files.",
+  "permission_cleared": false,
+  "original_requirement_closed": false
+}

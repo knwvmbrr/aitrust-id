@@ -1,9 +1,10 @@
 name: fleet-software
 on:
+  workflow_dispatch:
   push:
-    paths: ['tools/fleet.py', 'scripts/fleet.py', 'scripts/*fleet*.py', 'tests/test_fleet*.py', 'docs/fleet-deployment*.md', '.github/workflows/fleet.yml']
+    paths: ['scripts/worker_process.py', 'tools/fleet.py', 'scripts/fleet.py', 'scripts/*fleet*.py', 'tests/test_fleet*.py', 'docs/fleet-deployment*.md', '.github/workflows/fleet.yml']
   pull_request:
-    paths: ['tools/fleet.py', 'scripts/fleet.py', 'scripts/*fleet*.py', 'tests/test_fleet*.py', 'docs/fleet-deployment*.md', '.github/workflows/fleet.yml']
+    paths: ['scripts/worker_process.py', 'tools/fleet.py', 'scripts/fleet.py', 'scripts/*fleet*.py', 'tests/test_fleet*.py', 'docs/fleet-deployment*.md', '.github/workflows/fleet.yml']
 permissions:
   contents: read
 jobs:

@@ -1,0 +1,1295 @@
+{
+  "format": "ai-trust-id-onnxruntime-shipped-notice-section-map/v1",
+  "captured_at": "2026-11-22T03:13:08.729638+00:00",
+  "source": {
+    "path": "sbom/reviews/nli/notices/143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3.txt",
+    "sha256": "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3",
+    "bytes": 338088
+  },
+  "wheel_bindings": [
+    {
+      "platform": "linux",
+      "filename": "onnxruntime-1.31.0-cp313-cp313-manylinux_2_28_x86_64.whl",
+      "sha256": "37fd78cee5160c7a43a1730ccb3682ffd880af9c9e80385d625c0c2f8b125809"
+    },
+    {
+      "platform": "mac",
+      "filename": "onnxruntime-1.31.0-cp312-cp312-macosx_14_0_arm64.whl",
+      "sha256": "aaab9b3af536b06ca27ab5e35e3d429c97457ce76cf298af103f687e8b9975c0"
+    }
+  ],
+  "preamble": {
+    "start_byte": 0,
+    "end_byte": 636,
+    "sha256": "04d66f17a435029ca0cae04ea447e0550eb3517a083f9a79a0217be087a28ede",
+    "source_portal_url": "https://3rdpartysource.microsoft.com",
+    "publisher_mail_source_offer_mentioned": true
+  },
+  "section_count": 70,
+  "sections": [
+    {
+      "ordinal": 1,
+      "heading": "Intel Math Kernel Library (Intel MKL)",
+      "start_byte": 641,
+      "end_byte": 5030,
+      "bytes": 4389,
+      "sha256": "5565874694b680c3f56feef641cbc51f3bfd2a1f11da496d6d80067b43729b0a",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 1,
+        "no_reverse_engineering": 1
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 2,
+      "heading": "protocolbuffers/protobuf",
+      "start_byte": 5035,
+      "end_byte": 6798,
+      "bytes": 1763,
+      "sha256": "79acb81019f48af0df7d93374ce7de4768379c914c97b7752b7b58cd7774dc71",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 3,
+      "heading": "madler/zlib",
+      "start_byte": 6803,
+      "end_byte": 8611,
+      "bytes": 1808,
+      "sha256": "07208c24619c251804ebc3b8567666d92e6eec75f2a343533b45cfca51a21d5f",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 4,
+      "heading": "pybind/pybind11",
+      "start_byte": 8616,
+      "end_byte": 10312,
+      "bytes": 1696,
+      "sha256": "bd95b9c179c5faea9897077b782582a4c9590654d0458202869da6c3bea884d5",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 5,
+      "heading": "onnx",
+      "start_byte": 10317,
+      "end_byte": 21790,
+      "bytes": 11473,
+      "sha256": "2d4e1fefe9c88e2538d18c383d24c0a8db068382064d55baab59730122ee0e86",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 6,
+      "heading": "Eigen",
+      "start_byte": 21795,
+      "end_byte": 38545,
+      "bytes": 16750,
+      "sha256": "c011d5c10938d81a9e27fce8c6fa97c041f8101f781e8c819aeeb046ed51a4a3",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 2,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 14,
+        "executable_form": 7,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 7,
+      "heading": "intel/dnnl",
+      "start_byte": 38550,
+      "end_byte": 51373,
+      "bytes": 12823,
+      "sha256": "8ab4a16a3813b3aef9f3d7c59bf35e307b71a83293ad61bbec79f3f85ba8e0ab",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 8,
+      "heading": "Microsoft GSL",
+      "start_byte": 51378,
+      "end_byte": 52535,
+      "bytes": 1157,
+      "sha256": "0245674b69c6e0104aadf04a3ae6eca7a4b15c57a33953aefee0e7f35eefafe5",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 9,
+      "heading": "Tensorflow",
+      "start_byte": 52540,
+      "end_byte": 62950,
+      "bytes": 10410,
+      "sha256": "04b0e26d20da727b4e48649429d5459ec6b435c5de9775ee5646bda919fdced9",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 10,
+      "heading": "Microsoft Cognitive Toolkit (CNTK)",
+      "start_byte": 62955,
+      "end_byte": 64089,
+      "bytes": 1134,
+      "sha256": "fe7ac7cc710b7bff0c955d8c6f98e006657e0bc7cb6e9c46e00b07d1c718f45c",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 11,
+      "heading": "NumPy License",
+      "start_byte": 64094,
+      "end_byte": 65604,
+      "bytes": 1510,
+      "sha256": "44520de1623d28a6216a0c89174ba316bce41bd11ff3f382262e903d511acb74",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 12,
+      "heading": "Pytorch / Caffe2",
+      "start_byte": 65609,
+      "end_byte": 68769,
+      "bytes": 3160,
+      "sha256": "b58b9a2cdcbe0cd4f5df3b358090308453fcffc46dd8e914c261a5227cdf2bf8",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 13,
+      "heading": "Caffe",
+      "start_byte": 68774,
+      "end_byte": 70873,
+      "bytes": 2099,
+      "sha256": "10758b3d4e39fd41955590b4775dc4f5010ba4a0d7c99710ddbb29d96bb7a9b5",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 14,
+      "heading": "The LLVM Compiler Infrastructure",
+      "start_byte": 70878,
+      "end_byte": 74107,
+      "bytes": 3229,
+      "sha256": "0f21ffc679ed8bcb923a6a17b0d05cd8fc196fa94ada35f4aadd91ecde50f7a0",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 15,
+      "heading": "google/benchmark",
+      "start_byte": 74112,
+      "end_byte": 89845,
+      "bytes": 15733,
+      "sha256": "e1cf73af48da1c9d230cae985d7d2e7ba74028e5755c5b6cb6a96e0af1a7557f",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 16,
+      "heading": "HalideIR",
+      "start_byte": 89850,
+      "end_byte": 91044,
+      "bytes": 1194,
+      "sha256": "2ad134a1e60abd3239a885c76bdef3033b8517206fa7ff02b8a20e06e7d0b90e",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 17,
+      "heading": "Distributed Machine Learning Common Codebase",
+      "start_byte": 91049,
+      "end_byte": 91657,
+      "bytes": 608,
+      "sha256": "a9caf3c50dd2b3c3344c41cfcc1cf43ea0db41cbb50da9350b391ad7f30b69fd",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 18,
+      "heading": "DLPack: Open In Memory Tensor Structure",
+      "start_byte": 91662,
+      "end_byte": 103051,
+      "bytes": 11389,
+      "sha256": "61dc3933070d7655aa484fc56667a9d86192ff6f0df79ebfb0b2c005169d1007",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 19,
+      "heading": "HowardHinnant/date",
+      "start_byte": 103056,
+      "end_byte": 104716,
+      "bytes": 1660,
+      "sha256": "934cf3e6ab87e7e8ebf386b785ee94db628974c4a5bf09819f0e1f2cccfccb44",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 20,
+      "heading": "FreeBSD: getopt.c file",
+      "start_byte": 104721,
+      "end_byte": 106253,
+      "bytes": 1532,
+      "sha256": "043f51177356fa73937e2d741d882e6f5adb2923aa4d6f63a96b56162696dded",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 21,
+      "heading": "google/googletest",
+      "start_byte": 106258,
+      "end_byte": 107756,
+      "bytes": 1498,
+      "sha256": "2b5b9a5ead38a228151e2675019c299b442c802f9f98a836f672286b5465053e",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 22,
+      "heading": "G3log : Asynchronous logger with Dynamic Sinks",
+      "start_byte": 107761,
+      "end_byte": 109022,
+      "bytes": 1261,
+      "sha256": "27894a6a426633c1f4030b910dc6552cce6627e65e6a5f95207dab8fb4a25026",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 1,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 23,
+      "heading": "Scikit-learn",
+      "start_byte": 109027,
+      "end_byte": 110584,
+      "bytes": 1557,
+      "sha256": "dd73bd57aa6f47f28a62ae3f6b9aa8bb50cbd70a10a25daded9ce0da7d6c6bb4",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 24,
+      "heading": "google/re2",
+      "start_byte": 110589,
+      "end_byte": 112083,
+      "bytes": 1494,
+      "sha256": "016ef4998d1892db94eaa214446eb2f1ea389473944925d8d5c7d7d48efcc0b9",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 25,
+      "heading": "onnx/onnx-tensorrt",
+      "start_byte": 112088,
+      "end_byte": 113256,
+      "bytes": 1168,
+      "sha256": "e67f42dbc3eebf46b42b0b559c10f1dd800598616c89bb61376000c6694a5d52",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 26,
+      "heading": "nvidia/cutlass",
+      "start_byte": 113261,
+      "end_byte": 114826,
+      "bytes": 1565,
+      "sha256": "7fc4533cd0b869e9f13f273015117ed8b95af783c7e56c9430c260607002309f",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 27,
+      "heading": "Boost",
+      "start_byte": 114831,
+      "end_byte": 116179,
+      "bytes": 1348,
+      "sha256": "0b87bbd2678850e2f495344bf6803baae40b3e53d2d4157c9255db20544d8f63",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 28,
+      "heading": "JDAI-CV/DNNLibrary",
+      "start_byte": 116184,
+      "end_byte": 127559,
+      "bytes": 11375,
+      "sha256": "b3577d51d73c0a57f4e95c486ce3c23565ffca8604e4e92f29c6787fb9bae62b",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 29,
+      "heading": "google/flatbuffers",
+      "start_byte": 127564,
+      "end_byte": 138930,
+      "bytes": 11366,
+      "sha256": "ac228491ecdd96e87743bdd9d383d89eccf3d1e8fe564925498e26c95be0a1b8",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 30,
+      "heading": "google/glog",
+      "start_byte": 138935,
+      "end_byte": 142166,
+      "bytes": 3231,
+      "sha256": "14176c2c32aff26c3176f9da6679d8efcec299f3bf326b2d29ecff41c6d918c6",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 31,
+      "heading": "abseil-cpp",
+      "start_byte": 142171,
+      "end_byte": 153583,
+      "bytes": 11412,
+      "sha256": "906536b1ddf2f9d730067a073b8a80222982b0c598fa24f099b2fe1a67459a86",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 32,
+      "heading": "microsoft/wil",
+      "start_byte": 153588,
+      "end_byte": 154700,
+      "bytes": 1112,
+      "sha256": "66e775e52d940cc7d2c0541dec74a93c749e8d71822709dabf117b4ef2abfd77",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 33,
+      "heading": "nlohmann/json",
+      "start_byte": 154705,
+      "end_byte": 155798,
+      "bytes": 1093,
+      "sha256": "4a311363d5ca8e3aaf367643954f0c9dd6794fd03f4a33f7f470b083914d6d0d",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 34,
+      "heading": "dcleblanc/SafeInt",
+      "start_byte": 155803,
+      "end_byte": 156891,
+      "bytes": 1088,
+      "sha256": "98ff4c8048d7b651843f580d1560d1cd170dee2a27591a5cf0e0be61013741bc",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 35,
+      "heading": "Open MPI",
+      "start_byte": 156896,
+      "end_byte": 162370,
+      "bytes": 5474,
+      "sha256": "04b5a532a4735343bc2fdf1e5a6c813602a3b19ffbdf830af07460f5949322ae",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 36,
+      "heading": "The Android Open Source Project",
+      "start_byte": 162375,
+      "end_byte": 180189,
+      "bytes": 17814,
+      "sha256": "04104938d76cc087ffdcf87fc90e5a23c00830fb4d5c3accd467c39fce6cd12c",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 37,
+      "heading": "mpi4py",
+      "start_byte": 180194,
+      "end_byte": 181743,
+      "bytes": 1549,
+      "sha256": "24fdab950a48203e6678464fe6d73de25150e54c5333455ace9d57ad2f116012",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 38,
+      "heading": "huggingface/transformers",
+      "start_byte": 181748,
+      "end_byte": 193132,
+      "bytes": 11384,
+      "sha256": "f56f123e5cc774186b528c483e964b854722e430af54d38a9215dac64efba707",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 39,
+      "heading": "msgpack/msgpack-python",
+      "start_byte": 193137,
+      "end_byte": 193775,
+      "bytes": 638,
+      "sha256": "bd71c8322ad9c593e9ea4dfc62ba4439792444fd6be2b63c30db972700e654e7",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 40,
+      "heading": "lanpa/tensorboardX",
+      "start_byte": 193780,
+      "end_byte": 194871,
+      "bytes": 1091,
+      "sha256": "6b6f90d4974e09a9fa0d9739f0863047b1142ba4d0775fc6cd8341978a38cb28",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 41,
+      "heading": "tensorflow/tensorboard",
+      "start_byte": 194876,
+      "end_byte": 206319,
+      "bytes": 11443,
+      "sha256": "45b2e01f891ba7fef987f362e58650fa5705b807e59890911906259a0cd76a3c",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 42,
+      "heading": "cerberus",
+      "start_byte": 206324,
+      "end_byte": 207166,
+      "bytes": 842,
+      "sha256": "20a11d7596ce856d726c6cc31c020abfc15ec98faa0f9c86c82e04ed558dc974",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 43,
+      "heading": "MurmurHash3",
+      "start_byte": 207171,
+      "end_byte": 207640,
+      "bytes": 469,
+      "sha256": "0ad2097e4ff45570c6b8b63528b89b79d1d8c0b708828b55be69fa2be839147e",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 44,
+      "heading": "gtest-ios-framework",
+      "start_byte": 207645,
+      "end_byte": 208778,
+      "bytes": 1133,
+      "sha256": "94895dd14ae073452e0b1f2147f7462e1b1f5be331d7d6f86783c8177efbb172",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 45,
+      "heading": "DLPack",
+      "start_byte": 208783,
+      "end_byte": 220171,
+      "bytes": 11388,
+      "sha256": "2cc40357fd1e20c2809736abd1caaee3af9186b3f758ba8f3a2cfb7477561257",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 46,
+      "heading": "emsdk",
+      "start_byte": 220176,
+      "end_byte": 221573,
+      "bytes": 1397,
+      "sha256": "e95c2f6343b05e3ed4d89f3c18121ab4f18a2c5b65e14862e741666546e3daaa",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 47,
+      "heading": "coremltools",
+      "start_byte": 221578,
+      "end_byte": 223161,
+      "bytes": 1583,
+      "sha256": "aba8be31a94174ed293a53e835a8aeb2f4e53975932885cd028a27573ce4b9a4",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 48,
+      "heading": "react-native",
+      "start_byte": 223166,
+      "end_byte": 224311,
+      "bytes": 1145,
+      "sha256": "de06b0611cda9c94b2f4c1ec303a8e84a1854123b094191b642b4db0718b7093",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 49,
+      "heading": "pytorch/cpuinfo",
+      "start_byte": 224316,
+      "end_byte": 225831,
+      "bytes": 1515,
+      "sha256": "ad782b552eee6408b96bb159f802520ca1b004a2684ac09e4a4bf2a790abfacd",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 50,
+      "heading": "SQLite Is Public Domain",
+      "start_byte": 225836,
+      "end_byte": 227345,
+      "bytes": 1509,
+      "sha256": "e962e201d4161c2f3cc94b9d7381bc9d0c4409a56369131f55a57c0253219d14",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 51,
+      "heading": "google/XNNPACK",
+      "start_byte": 227350,
+      "end_byte": 228929,
+      "bytes": 1579,
+      "sha256": "4e6ed0b0b09b3ddf919d0c7114392eadecb9850f87476c40913481f32373ad54",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 52,
+      "heading": "google/sentencepiece, https://github.com/google/sentencepiece",
+      "start_byte": 228934,
+      "end_byte": 240419,
+      "bytes": 11485,
+      "sha256": "a75ecfde7a1f5ea9d49df708e899898b4b0f28bfe029b60b7e65b6f1693be188",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 53,
+      "heading": "dlfcn-win32/dlfcn-win32 is licensed under the MIT License",
+      "start_byte": 240424,
+      "end_byte": 241509,
+      "bytes": 1085,
+      "sha256": "6ab18f4aa35d7c9bb335b9204afd59e42a61198f5c6e49a5db965803176c22be",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 54,
+      "heading": "The Python Imaging Library (PIL) is",
+      "start_byte": 241514,
+      "end_byte": 242961,
+      "bytes": 1447,
+      "sha256": "e1c24a74230109def56e7d93a763ed126b3206d48723823a31ebf879a580d5d1",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 55,
+      "heading": "openssl/openssl, https://github.com/openssl/openssl",
+      "start_byte": 242966,
+      "end_byte": 253196,
+      "bytes": 10230,
+      "sha256": "775b7045a907a96cfd6512842aa860e581036c85245475ea9d5575d54cfe234f",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 56,
+      "heading": "Tencent/rapidjson, https://github.com/Tencent/rapidjson",
+      "start_byte": 253201,
+      "end_byte": 258406,
+      "bytes": 5205,
+      "sha256": "1a19984619e0d540641c7f2162548327611a65da065710945db835026589d4ee",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 57,
+      "heading": "boostorg/boost, https://github.com/boostorg/boost",
+      "start_byte": 258411,
+      "end_byte": 259803,
+      "bytes": 1392,
+      "sha256": "ae955bab5c7d4f4e1e29b8ec7db2544365633fd59db6719216de2939ba081b79",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 58,
+      "heading": "libb64/libb64, https://github.com/libb64/libb64",
+      "start_byte": 259808,
+      "end_byte": 261539,
+      "bytes": 1731,
+      "sha256": "5bd9c1b0f3cec5aea3a8c2804bb3ab082d1aecb944b1702d7d3c9ac3faa32533",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 59,
+      "heading": "posix pthread library, https://sourceforge.net/projects/pthreads4w",
+      "start_byte": 261544,
+      "end_byte": 272973,
+      "bytes": 11429,
+      "sha256": "dc8f8eb18d938600f3d3db5c5019257f8288d5ae136b66d6bf3f2f8261aa11a9",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 60,
+      "heading": "Triton Inference Server & Client, https://github.com/triton-inference-server",
+      "start_byte": 272978,
+      "end_byte": 274544,
+      "bytes": 1566,
+      "sha256": "46b961fa411fd0dad4ffb88e18d633d89fe638d644acabf6acfaaeb0b8c15c39",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 61,
+      "heading": "microsoft/mimalloc, https://github.com/microsoft/mimalloc",
+      "start_byte": 274549,
+      "end_byte": 275707,
+      "bytes": 1158,
+      "sha256": "6cba5fd5279adf15d805e8534028197b1a8970becabb28212d08230b48c9c52c",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 62,
+      "heading": "TensorFlow.js",
+      "start_byte": 275712,
+      "end_byte": 288244,
+      "bytes": 12532,
+      "sha256": "007cde35236b0e551912a7aa23df55162cab0d0c93344bd5177b528081b121fd",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 63,
+      "heading": "Mbed TLS",
+      "start_byte": 288249,
+      "end_byte": 288573,
+      "bytes": 324,
+      "sha256": "5d148fe0ca66d5f51c16e3625db8a3f34b05a7817c80c265caa9c802677f1b47",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 64,
+      "heading": "Intel neural-compressor",
+      "start_byte": 288578,
+      "end_byte": 300010,
+      "bytes": 11432,
+      "sha256": "4cf25dbb7ae8c52cf5d3a208e2e4962a61c17e2195afa49975c7b9552c4ef054",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 65,
+      "heading": "FlashAttention, https://github.com/Dao-AILab/flash-attention",
+      "start_byte": 300015,
+      "end_byte": 301638,
+      "bytes": 1623,
+      "sha256": "102b637355d9ba72aef218e510c50b5e16512f7e0346f913aeb40a1397dd92b8",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 66,
+      "heading": "neural-speed",
+      "start_byte": 301643,
+      "end_byte": 313006,
+      "bytes": 11363,
+      "sha256": "9ed3acf6f26878a28570f9d73a2203e02ae6cfb1a05e653d08e96775c5331c2b",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 67,
+      "heading": "dawn",
+      "start_byte": 313011,
+      "end_byte": 314632,
+      "bytes": 1621,
+      "sha256": "df3a0b7f44cc0eb37f06c3e3bfb436ccf6b3e4e10f1d07d14b92f9ef467f59fd",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 68,
+      "heading": "KleidiAI",
+      "start_byte": 314637,
+      "end_byte": 325384,
+      "bytes": 10747,
+      "sha256": "af309a39f19b4fb017fe1f4c5d876ca248a77e6c5043874c12b915410999e1f2",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 69,
+      "heading": "microsoft/cpp_client_telemetry, https://github.com/microsoft/cpp_client_telemetry/",
+      "start_byte": 325389,
+      "end_byte": 336907,
+      "bytes": 11518,
+      "sha256": "68f42c68589d309dcf96d4f6d7bfec9f3f3fcf4b0e913c2f39423505a5b5f38f",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    },
+    {
+      "ordinal": 70,
+      "heading": "DeepSeek DeepGEMM (https://github.com/deepseek-ai/DeepGEMM)",
+      "start_byte": 336912,
+      "end_byte": 338088,
+      "bytes": 1176,
+      "sha256": "28ed770d1a917890cd37460aa60f899e96032f6e94ec4505c7445cefb06f70a6",
+      "literal_term_marker_counts": {
+        "mozilla_public_license": 0,
+        "gnu_lesser_general_public_license": 0,
+        "source_code_form": 0,
+        "executable_form": 0,
+        "intel_simplified_software_license": 0,
+        "no_reverse_engineering": 0
+      },
+      "incorporation_in_selected_native_artifacts": "UNESTABLISHED_FROM_NOTICE_ALONE",
+      "component_source_version_inferred": false
+    }
+  ],
+  "all_bytes_accounted_for": true,
+  "role": "literal_shipped_notice_inventory_not_build_applicability_or_legal_approval",
+  "permission_cleared": false,
+  "complete_native_source_coverage": false
+}

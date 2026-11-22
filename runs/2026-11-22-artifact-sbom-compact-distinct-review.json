@@ -1,0 +1,51 @@
+{
+  "format": "ai-trust-id-artifact-sbom-compact-delta-distinct-review/v1",
+  "captured_at": "2026-11-22T04:00:41.049194+00:00",
+  "pass": true,
+  "source_before": {
+    "tools/distribution_artifacts.py": "f4a652cb7daa5c06231d508075d613abb6b8319aa88f6ea48b9981e9c2b4469c",
+    "tests/test_distribution_artifacts.py": "c1525fc69df30be91aca6752d1398ee55e4da75fa374b87af2b58877c977d119",
+    ".github/workflows/artifact-sbom.yml": "ddee07cc10c2ab04d7306bf91b6d1f625026ea61b4968d05fefe3eab5a505177"
+  },
+  "source_after": {
+    "tools/distribution_artifacts.py": "f4a652cb7daa5c06231d508075d613abb6b8319aa88f6ea48b9981e9c2b4469c",
+    "tests/test_distribution_artifacts.py": "c1525fc69df30be91aca6752d1398ee55e4da75fa374b87af2b58877c977d119",
+    ".github/workflows/artifact-sbom.yml": "ddee07cc10c2ab04d7306bf91b6d1f625026ea61b4968d05fefe3eab5a505177"
+  },
+  "sources_stable": true,
+  "actual_controls": [
+    {
+      "case": "independent_identical_display_names_distinct_fullkeys",
+      "pass": true,
+      "scope": "Sorted full-key ordinal IDs unique; actual DEPENDS_ON retains correct key mapping, deterministic bytes and explicit OTHER noncontainment."
+    },
+    {
+      "case": "selected_actual_coherent_nodekey_relationship_forgery_refusals",
+      "pass": true
+    },
+    {
+      "case": "selected_actual_5MB_plus_bundle_stage_16MB_boundary_and_5MB_roots",
+      "pass": true,
+      "scope": "Injected verifier only; exact fixed jq and staged bytes checked,16MB+1 bundle and5MB+1 roots refuse before verifier."
+    }
+  ],
+  "selected_unittest_count": 2,
+  "selected_unittest_seconds": 0.104,
+  "new_fullsuite_or_14graph_replay": false,
+  "source_only_checks": [
+    "Full graph/source OID/source-input hashes and all DEPENDS_ON edges unchanged; only local SPDX labels and repeated noncontainment copy are compacted.",
+    "Namespace still binds complete graph, artifact and created metadata; shorter IDs do not replace any digest.",
+    "Fixed --jq map({verificationResult: .verificationResult}) retains complete verificationResult including certificate/timestamps/statement; identity/source/issuer/predicate/subject flags unchanged.",
+    "16MB bundle matches existing packet/output bound;5MB separately selected roots and16MB helper result limits unchanged.",
+    "Workflow change only registers36 controls after three added methods; protected-main signer conditions unchanged."
+  ],
+  "primary_cli_reference": "https://cli.github.com/manual/gh_attestation_verify",
+  "official_format_semantics_observed": "On successful verification --format=json outputsverification;--jq filtersJSONoutput.",
+  "limits": [
+    "No real GitHub/Sigstore signature or protected workflow executed by reviewer.",
+    "Final new-commit combined archive,14graphs and actualCLI evidence remain author-pending.",
+    "The one measured pre-fix packet refusal remains historical; no source omission or byte-cap waiver is claimed.",
+    "No fullF057/X02, license/source-offer, native completeness or tag accuracy approval."
+  ],
+  "actionable_blockers_found": []
+}

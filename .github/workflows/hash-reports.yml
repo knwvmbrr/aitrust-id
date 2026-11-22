@@ -1,9 +1,9 @@
 name: private-hash-inbox-software
 on:
   push:
-    paths: ['tools/hash_reports.py', 'scripts/*hash-reports*.py', 'tests/test_hash_reports*.py', 'docs/hash-report-intake*.md', '.github/workflows/hash-reports.yml']
+    paths: ['tools/hash_reports.py', 'scripts/*hash-reports*.py', 'tests/test_hash_reports*.py', 'docs/hash-report-intake*.md', 'tools/agent_output.py', 'scripts/*agent-output*.py', 'scripts/agent-signature.cjs', 'tests/test_agent_output*.py', 'docs/agent-output*.md', 'scripts/worker_process.py', 'scripts/source_snapshot.py', '.github/workflows/hash-reports.yml']
   pull_request:
-    paths: ['tools/hash_reports.py', 'scripts/*hash-reports*.py', 'tests/test_hash_reports*.py', 'docs/hash-report-intake*.md', '.github/workflows/hash-reports.yml']
+    paths: ['tools/hash_reports.py', 'scripts/*hash-reports*.py', 'tests/test_hash_reports*.py', 'docs/hash-report-intake*.md', 'tools/agent_output.py', 'scripts/*agent-output*.py', 'scripts/agent-signature.cjs', 'tests/test_agent_output*.py', 'docs/agent-output*.md', 'scripts/worker_process.py', 'scripts/source_snapshot.py', '.github/workflows/hash-reports.yml']
 permissions:
   contents: read
 jobs:
@@ -14,12 +14,20 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: '3.13' }
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with: { node-version: '24' }
+      - name: Install existing hash-locked verification dependencies
+        run: python -m pip install --require-hashes -r eval/requirements.lock
       - name: Exercise private local software without host networking or root
         run: sudo unshare --net -- "$(command -v python)" scripts/verify-hash-reports-linux.py --run-as "$(id -un)" --output output/verification/hash-inbox-linux.json
+      - name: Exercise private agent output on the same clean Linux runner
+        run: python scripts/verify-agent-output.py --execute --output output/verification/agent-output-linux.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: private-hash-inbox-linux
-          path: output/verification/hash-inbox-linux.json
+          path: |
+            output/verification/hash-inbox-linux.json
+            output/verification/agent-output-linux.json
           if-no-files-found: error
           retention-days: 7

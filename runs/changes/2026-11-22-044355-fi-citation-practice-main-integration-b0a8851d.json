@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-044355-fi-citation-practice-main-integration-b0a8851d",
+  "recorded_at": "2026-11-22T04:43:55.757417+00:00",
+  "author": "Codex PM /root; FI integration author /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7785095ed7409cc9d3c8b5633b9469aca671c290",
+  "changed": "Integrated the reviewed private FI citation practice in ordinary main-source downloads and linked its guide from FI instructions.",
+  "proves": "Actual preparation, canonical check, private output permissions, no-overwrite and refusal recovery ran; all19 sibling instruction objects are unchanged.",
+  "limits": "Fixed invented CLI practice only, no FI or truth verdict, no phone/browser checker or new tag release. FI remains20% open;135 complete/67 open unchanged. Independent source review and protected/public delivery pending.",
+  "scope_ids": [
+    "T-FI",
+    "F-020a"
+  ],
+  "files": {
+    "scripts/prepare-citation-demo.py": "8ef51715bfb5980d8f81f217d3b5e3b966be78f21d0174fddca30d5641310f5a",
+    "tests/test_citation_demo.py": "f285672fc7a785a4dde34ccf295cf061a8c55d4cc3a4e72e07fafc05d4044572",
+    "docs/fi-citation-practice.md": "ae3babdd229fd86ae88ee7f3b3229ad585d6a400189088c431bd87725cd03e3f",
+    "docs/fi-citation-practice-plan.md": "efdf5c6df7d626208bf9e85c1e0fe059d0fd35875f0f69c135746e21d2354fc1",
+    "docs/fi-citation-practice-main-integration-plan.md": "c648bfd4bf8014df9e0359e31e2a32c31ebfad90e7842239f0580dd0f3769e48",
+    "site/scripts/prepare.mjs": "6955d680da4c27ad4c4786b0da00c32765f1d96837cf4660be27aeff824768aa",
+    "site/src/usage.js": "bd7631abcebe931fce31d140f73e703ddfb3dba08ffcc5085ac17f26cc690264",
+    "site/public/reference/fi-citation-practice.md": "ae3babdd229fd86ae88ee7f3b3229ad585d6a400189088c431bd87725cd03e3f",
+    "runs/2026-11-22-fi-private-practice-main-integration.json": "a75f203f08788c97a700d2490f8c434230480e06f297cb5027344bfd3438e3ae"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-fi-private-practice-main-integration.json",
+      "sha256": "a75f203f08788c97a700d2490f8c434230480e06f297cb5027344bfd3438e3ae"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,35 @@
+[package]
+name = "non-empty-string"
+version = "0.2.6"
+edition = "2021"
+authors = ["Midas Lambrichts <midaslamb@gmail.com>"]
+license = "MIT OR Apache-2.0"
+description = "A simple type for non empty Strings, similar to NonZeroUsize and friends."
+repository = "https://github.com/MidasLamb/non-empty-string"
+keywords = ["nonemptystring", "string", "str", "non-empty", "nonempty"]
+
+[package.metadata."docs.rs"]
+all-features = true
+
+[lib]
+name = "non_empty_string"
+
+[dependencies]
+serde = { version = "1", optional = true }
+delegate = { version = "0.8" }
+
+[dev-dependencies]
+assert_matches = "1.5.0"
+serde_json = { version = "1" }
+serde = { version = "1", features = ["derive"] }
+
+[features]
+default = []
+macros = []
+serde = ["dep:serde"]
+
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = [
+    'cfg(no_global_oom_handling)', # Stop cargo clippy from complaining about this cfg that is copied from the std.
+] }

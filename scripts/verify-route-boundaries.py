@@ -44,7 +44,7 @@ PATTERNS += ('scripts/dependency_pins.py', 'scripts/verify-dependencies.py',
 PATTERNS += ('scripts/spdx_inventory.py', 'scripts/verify-runtime-sbom.py',
              'scripts/verify-runtime-sbom-standard.py', 'tests/test_spdx_inventory.py',
              'spec/vendor/spdx-2.3.1/*', 'eval/dependencies/runtime-sbom.json', 'sbom/runtime/*')
-PATTERNS += ('scripts/source_snapshot.py', 'scripts/build-source-snapshot.py',
+PATTERNS += ('scripts/source_snapshot.py', 'scripts/source_snapshot_v2.py', 'scripts/build-source-snapshot.py',
              'scripts/verify-source-provenance.py', 'tests/test_source_provenance.py')
 PATTERNS += ('scripts/independent_timestamp.py', 'scripts/timestamp-artifact.py',
              'tests/test_independent_timestamp.py', 'tests/fixtures/timestamp-freetsa-2026/*')
@@ -224,6 +224,19 @@ PATTERNS += ('AGENTS.md', 'tools/session_delivery.py', 'scripts/session-delivery
              'scripts/check-nf-source-evidence.py', 'scripts/nf-source-worker.py',
              'tests/test_nf_source_evidence.py', 'docs/nf-source-evidence.md',
              'docs/nf-source-evidence-plan.md', 'site/public/reference/nf-source-evidence.md')
+
+PATTERNS += ('scripts/migrate-assertion.py','scripts/verify-assertion-migration.py','spec/versions/*/assertion.schema.json','tests/test_assertion_migration.py','tests/migration-reference.cjs','tests/fixtures/migration/*','docs/protocol-migration-contract.json','docs/protocol-migration-plan.md','docs/assertion-migration.md','docs/organization-policy-acceptance.md')
+
+PATTERNS += ('tools/synthid_input.py','scripts/inspect-synthid-input.py','scripts/setup-synthid-reference.py','scripts/synthid-reference-practice.py','integrations/synthid-reference/**/*','tests/test_synthid_input.py','tests/fixtures/synthid-reference/**/*','docs/synthid-vendor-input*.md')
+
+PATTERNS += ('site/public/reference/organization-policy-registry.md','site/public/reference/organization-policy-acceptance.md','site/public/reference/assertion-migration.md','site/public/reference/synthid-vendor-input.md')
+
+PATTERNS += ('runs/2026-11-22-fleet-worker-ownership-macos.json', 'runs/2026-11-22-fleet-worker-ownership-linux.json', 'runs/2026-11-22-directory-worker-ownership-linux.json', 'docs/enterprise-worker-evidence-refresh-plan.md')
+PATTERNS += ('runs/2026-11-22-hash-inbox-macos.json', 'runs/2026-11-22-hash-inbox-linux.json', 'runs/2026-11-22-agent-output-macos.json', 'runs/2026-11-22-agent-output-linux.json', 'runs/2026-11-22-agent-output-view.json', 'docs/hash-agent-worker-evidence-refresh-plan.md')
+PATTERNS += ('runs/2026-11-22-host-worker-ownership-macos.json', 'runs/2026-11-22-host-worker-ownership-linux.json', 'runs/2026-11-22-organization-audit-worker-ownership-linux.json', 'runs/2026-11-22-conformance-worker-ownership.json', '.github/workflows/host-capture.yml', 'docs/remaining-worker-evidence-refresh-plan.md')
+PATTERNS += ('docs/remaining-worker-evidence-refresh-result.md', 'tests/test_organization_audit.py')
+PATTERNS += ('scripts/prepare-citation-demo.py', 'tests/test_citation_demo.py', 'docs/fi-citation-practice*.md', 'site/public/reference/fi-citation-practice.md')
+PATTERNS += ('tools/c2pa_native_obligations.py', 'scripts/verify-c2pa-native-obligations.py', 'tests/test_c2pa_native_obligations.py', 'sbom/c2pa-native/**/*', 'docs/c2pa-native-obligations*.md', 'tools/nli_native_obligations.py', 'scripts/verify-nli-native-obligations.py', 'tests/test_nli_native_obligations.py', 'sbom/nli-native/**/*', 'docs/nli-native-obligations*.md', 'tools/distribution_artifacts.py', 'tools/artifact_evidence_io.py', 'tools/artifact_process.py', 'scripts/distribution-artifact.py', 'tests/test_distribution_artifacts.py', 'tests/test_artifact_process.py', 'tests/test_artifact_workflow.py', '.github/workflows/artifact-sbom.yml', 'docs/distribution-artifact-sbom*.md', 'docs/worker-supervision-recovery-plan.md', 'docs/source-snapshot-v2-plan.md')
 
 def read_json(file):
     return read_evidence(file)

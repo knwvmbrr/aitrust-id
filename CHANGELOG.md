@@ -1,5 +1,511 @@
 # Changelog
 
+## Unreleased — 2026-11-22
+
+### 2026-11-22-055521-record-current-delivery-engineering-packet-f5ca3c80
+
+Recorded 2026-11-22T05:55:21.266447+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded the complete current-source engineering packet, refreshed the finite boundary inventory and set actual verification state before normal publication.
+- **Evidence.** All five selected capability receipts and7840source boundary are current; the original scope remains135complete67open with only N-001/N-010 newly completed. [Change record](./runs/changes/2026-11-22-055521-record-current-delivery-engineering-packet-f5ca3c80.json).
+- **Not claimed.** Independent tag release remains unapproved. The reviewed F145 design is a separate public candidate, not yet integrated or counted. Protected merge, real artifact signing and live site verification remain pending.
+
+
+### 2026-11-22-054954-checked-site-website-26b9d3bf
+
+Recorded 2026-11-22T05:49:54.767672+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated website execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-054954-checked-site-website-26b9d3bf.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-053704-prepare-current-host-performance-projections-3289d127
+
+Recorded 2026-11-22T05:37:04.752563+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Prepared and attributed both generated performance JSON copies and the static index for the accepted20-case HOST observations before source verification.
+- **Evidence.** The current performance model, generated data and static content describe the same accepted20 controls; other verification thresholds and no-accuracy boundaries are unchanged. [Change record](./runs/changes/2026-11-22-053704-prepare-current-host-performance-projections-3289d127.json).
+- **Not claimed.** Full website execution remains pending. This is deterministic metadata preparation, not additional measured accuracy or a requirement closure.
+
+
+### 2026-11-22-053426-correct-current-host-performance-assertion-bf78f3bc
+
+Recorded 2026-11-22T05:34:26.306867+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Updated the existing performance-view assertion to the exact20 current accepted HOST controls.
+- **Evidence.** The preserved actual browser failure isolated its stale19-case expected text; the accepted records and public summary both contain20. Syntax passes; independent-review/human/no-accuracy restrictions remain unchanged. [Change record](./runs/changes/2026-11-22-053426-correct-current-host-performance-assertion-bf78f3bc.json).
+- **Not claimed.** Full corrected website execution is pending; no previous failure is relabeled. No product method or original completion changed.
+
+
+### 2026-11-22-052957-current-site-website-d9dcea0f
+
+Recorded 2026-11-22T05:29:57.659064+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated website execution after the versioned serializer and FI practice integration.
+- **Evidence.** Failed candidate preserved; no pass is claimed. [Change record](./runs/changes/2026-11-22-052957-current-site-website-d9dcea0f.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-052637-record-generated-host20-site-metadata-c95de168
+
+Recorded 2026-11-22T05:26:37.850832+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded the generated index metadata accompanying the current20-control HOST summaries and FI practice browser guard.
+- **Evidence.** Prepared public metadata derives from the accepted20-case host evidence; the separate catalogue proof remains bounded to its actual build. [Change record](./runs/changes/2026-11-22-052637-record-generated-host20-site-metadata-c95de168.json).
+- **Not claimed.** Current complete website verification remains required; no new original closure or detector accuracy is claimed.
+
+
+### 2026-11-22-052544-verify-fi-practice-and-current-host-evidence-cd5ae678
+
+Recorded 2026-11-22T05:25:44.097552+00:00 · Contributor: Codex PM /root; catalogue verifier author /root/web_camo · change
+
+- **Changed.** Extended the catalogue guard for the working FI practice download and current exact20-case HOST evidence; updated the two public HOST summaries to20.
+- **Evidence.** Actual catalogue proof covers20modals, exactFIguide/source links, planned/no-verdict boundaries, private evidence and no unexpected outbound requests. The four other current capability receipts still match source. [Change record](./runs/changes/2026-11-22-052544-verify-fi-practice-and-current-host-evidence-cd5ae678.json).
+- **Not claimed.** Targeted proof used the previous built19-case summary; the new20-copy requires the next complete website build/check. Failed website and first targeted candidates are preserved. No original or tag-accuracy closure.
+
+
+### 2026-11-22-051814-delivery-final-website-a18fb04e
+
+Recorded 2026-11-22T05:18:14.012116+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated website execution after the versioned serializer and FI practice integration.
+- **Evidence.** Failed candidate preserved; no pass is claimed. [Change record](./runs/changes/2026-11-22-051814-delivery-final-website-a18fb04e.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-051703-delivery-final-protocol-6f3af4c9
+
+Recorded 2026-11-22T05:17:03.536110+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated protocol execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-051703-delivery-final-protocol-6f3af4c9.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-051331-restore-immutable-delivery-baseline-binding-46325b86
+
+Recorded 2026-11-22T05:13:31.077502+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Corrected the PM metadata error that replaced an immutable baseline digest with the current ledger digest.
+- **Evidence.** Actual accounting CLI now returns0 for valid135/67 accounting and1 for the unmet strict60-open goal. The original baseline and all original criteria are unchanged. [Change record](./runs/changes/2026-11-22-051331-restore-immutable-delivery-baseline-binding-46325b86.json).
+- **Not claimed.** No runtime method or acceptance threshold changed; failed protocol candidate is preserved. Only protocol and website sources need new execution; existing PS/privacy/extension receipts require source reassessment, not repeated execution.
+
+
+### 2026-11-22-051048-delivery-ready-protocol-d9c5b0e6
+
+Recorded 2026-11-22T05:10:48.528610+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated protocol execution after the versioned serializer and FI practice integration.
+- **Evidence.** Failed candidate preserved; no pass is claimed. [Change record](./runs/changes/2026-11-22-051048-delivery-ready-protocol-d9c5b0e6.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-050914-delivery-ready-extension-2e2b0e0a
+
+Recorded 2026-11-22T05:09:14.434744+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated extension execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-050914-delivery-ready-extension-2e2b0e0a.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-050833-delivery-ready-pii-redacted-719e2c2c
+
+Recorded 2026-11-22T05:08:33.129366+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated PII_REDACTED execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-050833-delivery-ready-pii-redacted-719e2c2c.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-050825-delivery-ready-ps-cb39fd6e
+
+Recorded 2026-11-22T05:08:25.201748+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated PS execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-050825-delivery-ready-ps-cb39fd6e.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-050739-freeze-current-source-with-accepted-worker-observations-934c1385
+
+Recorded 2026-11-22T05:07:39.423974+00:00 · Contributor: Codex PM /root; distinct reviewer /root/web_camo · change
+
+- **Changed.** Completed all selected actual worker-observation refreshes, copied current public evidence, and froze the source and scope for final capability verification.
+- **Evidence.** Both host platforms retain20 original cases and12 exact sources; all seven current evidence consumers accept actual records. Original202criteria and135/67 counts remain unchanged. [Change record](./runs/changes/2026-11-22-050739-freeze-current-source-with-accepted-worker-observations-934c1385.json).
+- **Not claimed.** The independent accuracy/release gate still refuses; source-bound software checks, protected merge, real signing and site deployment remain separate next steps. No additional original closure.
+
+
+### 2026-11-22-050321-retain-current-conformance-host-and-audit-observations-7418da39
+
+Recorded 2026-11-22T05:03:21.035145+00:00 · Contributor: Codex PM /root; author /root/share_debugger; reviewer /root/web_camo · change
+
+- **Changed.** Retained actual current conformance and Mac host executions, reused an exact matching actual audit artifact, and selected its explicit auxiliary test profile.
+- **Evidence.** Conformance28+12 and host20 passed. Audit31 actual controls and22current source bindings match the retained hosted artifact; exact18.7/2.60.1 profile and wrong-profile refusals pass without rerunning the database lab. [Change record](./runs/changes/2026-11-22-050321-retain-current-conformance-host-and-audit-observations-7418da39.json).
+- **Not claimed.** Current host Linux20 still pending. No old observation was rewritten, production upgraded, legal approval issued or original count reduced beyond135 complete/67 open.
+
+
+### 2026-11-22-050018-refresh-remaining-current-worker-observers-5974d7a2
+
+Recorded 2026-11-22T05:00:18.635272+00:00 · Contributor: Codex PM /root; author /root/share_debugger; reviewer /root/web_camo · change
+
+- **Changed.** Selected new immutable conformance/host/audit observations and added the bounded isolated host-capture producer workflow.
+- **Evidence.** Actual conformance28reference plus12focused passed. Separate source review confirms the host workflow retains20cases, source bindings and least privilege without new package installs or secrets. [Change record](./runs/changes/2026-11-22-050018-refresh-remaining-current-worker-observers-5974d7a2.json).
+- **Not claimed.** Actual new host Linux run and exact-version audit acceptance are pending. Old observations remain unchanged; no new original closure or accuracy is claimed.
+
+
+### 2026-11-22-045859-retain-directory-hash-agent-current-review-e1a8c565
+
+Recorded 2026-11-22T04:58:59.112199+00:00 · Contributor: Codex PM /root; distinct reviewer /root/seo · change
+
+- **Changed.** Retained distinct source, execution-head, old-refusal and bounded privacy review of the fresh directory, inbox and agent observations.
+- **Evidence.** Pure evidence validators accept current actual records and reject unchanged older-source records; source identity and the selected two-theme view remain exact. [Change record](./runs/changes/2026-11-22-045859-retain-directory-hash-agent-current-review-e1a8c565.json).
+- **Not claimed.** Engineering observation review only, no operating commercial service, real organization/user enrollment or new original closure.135 complete/67 open.
+
+
+### 2026-11-22-045746-retain-current-isolated-worker-executions-ab141d68
+
+Recorded 2026-11-22T04:57:46.877727+00:00 · Contributor: Codex PM /root; authors and reviewers /root/seo and /root/web_camo · change
+
+- **Changed.** Retained actual current Mac/Linux worker observations and selected their source-bound website evidence without changing old receipts.
+- **Evidence.** Hosted Fleet33, real directory28, private inbox29 and agent33 passed against exact current bound sources; Mac and two-theme view are separately recorded. Actual enterprise panel acceptance now passes. [Change record](./runs/changes/2026-11-22-045746-retain-current-isolated-worker-executions-ab141d68.json).
+- **Not claimed.** Remaining host-capture, conformance and audit proof refreshes and final complete publication checks remain pending. No new original closure or detector accuracy claim;135 complete/67 open.
+
+
+### 2026-11-22-045416-refresh-hash-and-agent-evidence-selectors-aca2b4ea
+
+Recorded 2026-11-22T04:54:16.576020+00:00 · Contributor: Codex PM /root; hash and agent recovery author /root/web_camo · change
+
+- **Changed.** Selected new dated hash-inbox and agent-output observations and extended the existing isolated hosted job to produce both actual Linux records.
+- **Evidence.** The changed Python consumers parse; source-bound observers will require fresh actual execution rather than reusing the earlier worker hash. Existing isolation, least privilege and hashed environment remain required. [Change record](./runs/changes/2026-11-22-045416-refresh-hash-and-agent-evidence-selectors-aca2b4ea.json).
+- **Not claimed.** Syntax and implementation record only; pending actual Mac/Linux/view results are not claimed. No original closure, collection, enterprise service or tag accuracy change.
+
+
+### 2026-11-22-045216-require-fresh-enterprise-worker-observations-8b9adf33
+
+Recorded 2026-11-22T04:52:16.315141+00:00 · Contributor: Codex PM /root; enterprise recovery author /root/seo · change
+
+- **Changed.** Selected new dated enterprise observation paths and retained the actual current Mac Fleet and committed-source artifact results.
+- **Evidence.** Actual Mac Fleet33 and actual7550 source-archive build, v2 inspection, artifact preparation, SPDX and reconstruction passed. Existing hosted workflows can execute their current supervisors without changing permissions. [Change record](./runs/changes/2026-11-22-045216-require-fresh-enterprise-worker-observations-8b9adf33.json).
+- **Not claimed.** Fresh LinuxFleet and directory executions remain pending. Old observations are immutable; no licensing, accuracy or additional original closure is claimed;135 complete/67 open.
+
+
+### 2026-11-22-044943-preserve-current-publication-refusals-66bf3859
+
+Recorded 2026-11-22T04:49:43.645968+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Preserved actual publication candidate refusals and corrected the two state timestamp fields consistently.
+- **Evidence.** Actual state chronology now passes; the earlier source-bound Fleet/SSO observations are correctly rejected after their worker code changed. [Change record](./runs/changes/2026-11-22-044943-preserve-current-publication-refusals-66bf3859.json).
+- **Not claimed.** Fresh enterprise producers and complete current-source verification remain required. Browser export passed a separate diagnostic rerun with original transient cause unresolved; no failure was overwritten or converted into a pass.135 complete/67 open unchanged.
+
+
+### 2026-11-22-044626-delivery-current-extension-9cff9e1c
+
+Recorded 2026-11-22T04:46:26.245379+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated extension execution after the versioned serializer and FI practice integration.
+- **Evidence.** Failed candidate preserved; no pass is claimed. [Change record](./runs/changes/2026-11-22-044626-delivery-current-extension-9cff9e1c.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-044553-delivery-current-pii-redacted-e005860a
+
+Recorded 2026-11-22T04:45:53.628158+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated PII_REDACTED execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-044553-delivery-current-pii-redacted-e005860a.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-044546-delivery-current-ps-825a35d6
+
+Recorded 2026-11-22T04:45:46.220388+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated PS execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-044546-delivery-current-ps-825a35d6.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-044451-retain-fi-distinct-acceptance-review-3f472c8d
+
+Recorded 2026-11-22T04:44:51.830816+00:00 · Contributor: Codex PM /root; distinct reviewer /root/seo · change
+
+- **Changed.** Retained the distinct FI practice acceptance review and current scope projection.
+- **Evidence.** Independent actual private preparation/check/no-overwrite controls and unchanged19 sibling instructions passed with no FI verdict. [Change record](./runs/changes/2026-11-22-044451-retain-fi-distinct-acceptance-review-3f472c8d.json).
+- **Not claimed.** Component acceptance only; originalFI remains20% open. Source/current build and public delivery remain separate;135 complete/67 open.
+
+
+### 2026-11-22-044406-register-current-delivery-scope-and-source-bindings-150062b2
+
+Recorded 2026-11-22T04:44:06.255443+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Updated the current135/67 delivery snapshot, preserved original acceptance, registered new serializer/FI inputs and refreshed their public scope projections.
+- **Evidence.** The scope and board describe actual implemented components separately from the two full original closures; all five source-bound profile commands retain earlier checks. [Change record](./runs/changes/2026-11-22-044406-register-current-delivery-scope-and-source-bindings-150062b2.json).
+- **Not claimed.** Full current verification and protected/public publication pending. Target60 unmet; no independent accuracy, legal formation or certification claim.
+
+
+### 2026-11-22-044355-fi-citation-practice-main-integration-b0a8851d
+
+Recorded 2026-11-22T04:43:55.757417+00:00 · Contributor: Codex PM /root; FI integration author /root/web_camo · change
+
+- **Changed.** Integrated the reviewed private FI citation practice in ordinary main-source downloads and linked its guide from FI instructions.
+- **Evidence.** Actual preparation, canonical check, private output permissions, no-overwrite and refusal recovery ran; all19 sibling instruction objects are unchanged. [Change record](./runs/changes/2026-11-22-044355-fi-citation-practice-main-integration-b0a8851d.json).
+- **Not claimed.** Fixed invented CLI practice only, no FI or truth verdict, no phone/browser checker or new tag release. FI remains20% open;135 complete/67 open unchanged. Independent source review and protected/public delivery pending.
+
+
+### 2026-11-22-044155-source-snapshot-versioned-recovery-dbcf3110
+
+Recorded 2026-11-22T04:41:55.424421+00:00 · Contributor: Codex PM /root; serializer author /root/share_debugger; distinct reviewer /root/seo · change
+
+- **Changed.** Versioned the expanded source serializer and restored the immutable historical dependency observer source.
+- **Evidence.** Current focused serializer and artifact controls pass; historical native, nested and conformance observations remain valid without inventing fresh archive replay. Actual retained larger source archive inspects with v2. [Change record](./runs/changes/2026-11-22-044155-source-snapshot-versioned-recovery-dbcf3110.json).
+- **Not claimed.** Preserved initial failure. No complete license clearance, native source rebuild, new tag release or original closure; current 135 complete and 67 open.
+
+
+### 2026-11-22-043620-combined-source-independent-review-a78ad3dd
+
+Recorded 2026-11-22T04:36:20.606361+00:00 · Contributor: Codex PM /root; distinct reviewer /root/seo · change
+
+- **Changed.** Retained the distinct read-only integration review of exact source 7785095.
+- **Evidence.** All 202 original criteria remain preserved, with only N-001 and N-010 newly completed and F-155 still open; earlier source-bound components are qualified. [Change record](./runs/changes/2026-11-22-043620-combined-source-independent-review-a78ad3dd.json).
+- **Not claimed.** Static integration review only, not runtime revalidation, original licensing clearance, tag accuracy or publication. Current 135 complete and 67 open remains unchanged.
+
+
+### 2026-11-22-043047-combined-protocol-execution-d6286692
+
+Recorded 2026-11-22T04:30:47.441631+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated protocol source-bound execution before subsequent build steps.
+- **Evidence.** Failed current candidate preserved without claiming a pass. [Change record](./runs/changes/2026-11-22-043047-combined-protocol-execution-d6286692.json).
+- **Not claimed.** Engineering evidence only; original135/67 unchanged, no tag accuracy or global licensing approval. Protected source/signing/live publication remain pending.
+
+
+### 2026-11-22-043008-combined-extension-execution-babaf954
+
+Recorded 2026-11-22T04:30:08.520830+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated extension source-bound execution before subsequent build steps.
+- **Evidence.** Current selected capability checks passed. [Change record](./runs/changes/2026-11-22-043008-combined-extension-execution-babaf954.json).
+- **Not claimed.** Engineering evidence only; original135/67 unchanged, no tag accuracy or global licensing approval. Protected source/signing/live publication remain pending.
+
+
+### 2026-11-22-042929-combined-pii-redacted-execution-9758db9f
+
+Recorded 2026-11-22T04:29:29.294123+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated PII_REDACTED source-bound execution before subsequent build steps.
+- **Evidence.** Current selected capability checks passed. [Change record](./runs/changes/2026-11-22-042929-combined-pii-redacted-execution-9758db9f.json).
+- **Not claimed.** Engineering evidence only; original135/67 unchanged, no tag accuracy or global licensing approval. Protected source/signing/live publication remain pending.
+
+
+### 2026-11-22-042921-combined-ps-execution-d2c58617
+
+Recorded 2026-11-22T04:29:21.829771+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated PS source-bound execution before subsequent build steps.
+- **Evidence.** Current selected capability checks passed. [Change record](./runs/changes/2026-11-22-042921-combined-ps-execution-d2c58617.json).
+- **Not claimed.** Engineering evidence only; original135/67 unchanged, no tag accuracy or global licensing approval. Protected source/signing/live publication remain pending.
+
+
+### 2026-11-22-042510-integrate-reviewed-source-components-with-original-gates-open-532c5b40
+
+Recorded 2026-11-22T04:25:10.161963+00:00 · Contributor: Codex PM /root; /root/web_camo; /root/seo; /root/share_debugger · change
+
+- **Changed.** Integrated reviewed C2PA/NLI native-source graphs, fourteen artifact/SBOM adapters and protected signing workflow; registered their bounded checks and refreshed the current PS source download after worker hardening.
+- **Evidence.** Two full new originals remain complete (N010/N001):135 complete,67 open. Actual37 CLI proof at31b distinguishes two actual archives from12 inert candidates; source graphs retain native/notice gaps. Current Linux organization workflow passes27 groups with19 matching source bindings. [Change record](./runs/changes/2026-11-22-042510-integrate-reviewed-source-components-with-original-gates-open-532c5b40.json).
+- **Not claimed.** F155 tag outcome and fullF057/X02 remain open. The guide-only source/graph-limit paragraph was clarified after the frozen31b proof; runtime bytes unchanged. Final current source-bound validation, actual protected signing and live publication remain pending.
+
+
+### 2026-11-22-041111-record-complete-artifact-sbom-packaging-proof-df44c23b
+
+Recorded 2026-11-22T04:11:11.638354+00:00 · Contributor: Codex /root/share_debugger; distinct evidence reviewer /root/web_camo · change
+
+- **Changed.** Recorded actual full combined source packaging, all14 source graph/SPDX schema checks, current PS artifact and all13 managed policy refusals after the measured representation correction.
+- **Evidence.** 37 actual CLI controls pass on frozen31b;6172 source bindings match the exact committed tree. Full12484-file archive and14.47MB packet fit retained byte budgets. Distinct source/artifact read confirms both real artifacts and all14 predicate projections. [Change record](./runs/changes/2026-11-22-041111-record-complete-artifact-sbom-packaging-proof-df44c23b.json).
+- **Not claimed.** The other12 candidates are inert, not built platform artifacts. No new protected Sigstore execution or fullF057/X02/permission approval. Source archive proof remains exactly31b; this later commit adds immutable evidence only. Comprehensive native/source-offer obligations stay open.
+
+
+### 2026-11-22-040113-compact-complete-spdx-without-dropping-source-3523ca5d
+
+Recorded 2026-11-22T04:01:13.895973+00:00 · Contributor: Codex /root/share_debugger; distinct reviewer /root/web_camo · change
+
+- **Changed.** Preserved the real combined archive and16MB packet refusal; compacted document-local SPDX IDs/comments without omitting sources, and bounded detached bundles/verified-result projection to represent the measured predicate.
+- **Evidence.** Six affected controls pass; distinct source and actual targeted controls reject coherent key/relationship forgeries, enforce one-to-one local IDs and retain complete verification results. Current measured packet fits unchanged16MB cap. [Change record](./runs/changes/2026-11-22-040113-compact-complete-spdx-without-dropping-source-3523ca5d.json).
+- **Not claimed.** Final current committed archive/fourteen-packet CLI proof follows this code freeze. No actual new Sigstore signing, comprehensive obligations clearance or fullF057/X02 acceptance. Prior import-harness and capacity failures remain immutable.
+
+
+### 2026-11-22-035015-artifact-bound-fourteen-scope-sbom-e9cfad75
+
+Recorded 2026-11-22T03:50:15.496519+00:00 · Contributor: Codex /root/share_debugger; distinct core reviewer /root/web_camo · change
+
+- **Changed.** Implemented exact-artifact SPDX and source graphs for all14 routes, detached trusted-workflow verification and policy-first managed authorization, owned process supervision, protected signing workflow and measured whole-source capacity.
+- **Evidence.** Actual33 combined focused controls pass; all14 adapters bind reviewed C2PA441 and NLI650 source/notice graphs. Distinct actual process faults and workflow/Git-identity review pass. Existing PS stays admitted; other13 managed routes remain refused. [Change record](./runs/changes/2026-11-22-035015-artifact-bound-fourteen-scope-sbom-e9cfad75.json).
+- **Not claimed.** No new protected Sigstore run, comprehensive embedded/native coverage, source-offer completion, legal clearance or full original closure. Final actual combined archive and current CLI proof follow frozen source commit. Historical failures preserved.
+
+
+### 2026-11-22-034555-nli-native-upstream-heading-preservation-35892ab5
+
+Recorded 2026-11-22T03:45:55.429765+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Preserve seven exact upstream RST heading files without treating their equals underlines as Git merge conflicts.
+- **Evidence.** Inspected all seven original heading contexts; current core, source data and actual548-archive proof remain unchanged. Only Git conflict-marker metadata changes. [Change record](./runs/changes/2026-11-22-034555-nli-native-upstream-heading-preservation-35892ab5.json).
+- **Not claimed.** Exact source-only CAS paths; no global merge or whitespace rule, no source normalization, no new archive execution or distribution permission.
+
+
+### 2026-11-22-034211-nli-native-source-obligations-d9a614ee
+
+Recorded 2026-11-22T03:42:11.187920+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Add an offline pinned NLI native source and notice graph, exact source-cache replay and complete supplemental license records.
+- **Evidence.** Nine focused controls and three current actual CLI cases pass, including all548 source archives; distinct core and retained-evidence reviews bind the exact sources. Initial collection and isolated-test harness failures are preserved. [Change record](./runs/changes/2026-11-22-034211-nli-native-source-obligations-d9a614ee.json).
+- **Not claimed.** Published source unions are not compiled linkage or distribution approval. Actual GNU and ORT source-offer limits remain; no model/package execution, global license clearance, tag accuracy or original requirement completion.
+
+
+### 2026-11-22-034501-recover-owned-workers-without-released-group-signals-2b140be4
+
+Recorded 2026-11-22T03:45:01.863731+00:00 · Contributor: Codex PM /root; distinct fault review /root/web_camo · change
+
+- **Changed.** Fixed optional-worker startup and post-reap ownership; rebound only the reviewed first-party helper bytes in the existing PS source distribution profile.
+- **Evidence.** 17 current Mac controls plus6 independent actual fault/normal controls pass. Startup failure spawns none or reaps the owned child; post-reap failure sends no group signal; close faults still close both pipes. All14 policy routes audit coherently and onlyPSsource remains admitted. [Change record](./runs/changes/2026-11-22-034501-recover-owned-workers-without-released-group-signals-2b140be4.json).
+- **Not claimed.** Zero original closures. Preserve existingv1 reviewed_by Codex token; detailed attribution is here and in the peer receipt. Linux/caller/source-bound revalidation pending; no crash recovery, tag accuracy or global licensing claim.
+
+
+### 2026-11-22-032350-restore-full-synthid-tag-outcome-17ef6def
+
+Recorded 2026-11-22T03:23:50.430311+00:00 · Contributor: Codex PM /root; substantive PR review and independent /root/seo correction · change
+
+- **Changed.** Withdrew the premature fullF155 completion claim and restored its original supported-tag workflow acceptance; retained the functioning research-input component and all historical evidence.
+- **Evidence.** OnlyN010 andN001 are full new original closures:135 complete,67 open. The existing tag code allowlist remains unchanged; unbound statistics do not issue tags. [Change record](./runs/changes/2026-11-22-032350-restore-full-synthid-tag-outcome-17ef6def.json).
+- **Not claimed.** Earlier fullF155 reviews/acceptance records remain historical and explicitly superseded. Current protocol/website receipts require fresh metadata validation; target60 not met.
+
+
+### 2026-11-22-031259-verified-reference-artifact-boundaries-3aa83df4
+
+Recorded 2026-11-22T03:12:59.290586+00:00 · Contributor: Codex PM /root; artifact correction review /root/seo · change
+
+- **Changed.** Recorded passing1694-source boundaries and the distinct correction for committed derived reference artifacts.
+- **Evidence.** Four generated reference copies are byte-identical to their bound originals and protected against later source-copy drift. Prior Git-ignore wording is explicitly corrected; all five capability receipts remain current. [Change record](./runs/changes/2026-11-22-031259-verified-reference-artifact-boundaries-3aa83df4.json).
+- **Not claimed.** No original count changes, legal clearance or hosted publication claimed; actual deployment bytes still require verification.
+
+
+### 2026-11-22-031101-bind-derived-reference-copy-drift-71fdaef0
+
+Recorded 2026-11-22T03:11:01.904184+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Bound four committed generated reference copies into the predeploy drift inventory, alongside their existing source-guide and builder bindings.
+- **Evidence.** Derived references are regenerated by the normal build; adding literal artifact paths makes later copied-file drift visible before deployment. No runtime interface or capability command changed. [Change record](./runs/changes/2026-11-22-031101-bind-derived-reference-copy-drift-71fdaef0.json).
+- **Not claimed.** These are generated tracked artifacts, not Git-ignored files. Full original counts stay136/66; fresh boundary verification and actual deployment parity remain required.
+
+
+### 2026-11-22-030931-verified-three-originals-before-protected-publication-93934447
+
+Recorded 2026-11-22T03:09:31.677562+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded current passing source-bound capability receipts and1690-source route boundary verification before protected publication.
+- **Evidence.** All5 existing capability profiles assess current;136 original jobs complete and66 remain open, with only three full software closures in this wave. [Change record](./runs/changes/2026-11-22-030931-verified-three-originals-before-protected-publication-93934447.json).
+- **Not claimed.** No independent tag accuracy, comprehensive licensing or hosted publication is inferred. Normal protected merge and exact live artifact verification remain pending.
+
+
+### 2026-11-22-030830-correct-route-inventory-registration-8e391716
+
+Recorded 2026-11-22T03:08:30.779121+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Actually registered the current route inventory and current extension/website receipts after correcting a missing helper argument.
+- **Evidence.** The prior registration helper stopped before writing; the earlier event wording about binding was premature. This event binds the actual new manifest bytes. [Change record](./runs/changes/2026-11-22-030830-correct-route-inventory-registration-8e391716.json).
+- **Not claimed.** No passing boundary execution or hosted publication is claimed by registration alone; prior failed private attempt retained.
+
+
+### 2026-11-22-030755-current-website-and-route-inventory-01d79ef7
+
+Recorded 2026-11-22T03:07:55.399118+00:00 · Contributor: Codex PM /root; independent integration review /root/seo · change
+
+- **Changed.** Recorded all59 passing website workflow programs and bound the reviewed current personal route inventory to fresh browser receipts.
+- **Evidence.** All five current source-bound capability profiles pass; no live0.2, new public tag, permission or endpoint introduced. [Change record](./runs/changes/2026-11-22-030755-current-website-and-route-inventory-01d79ef7.json).
+- **Not claimed.** Independent accuracy and full licensing remain open. Normal protected source publication and live artifact parity still pending.
+
+
+### 2026-11-22-025517-record-corrected-protocol-and-full-review-b1dbdeb5
+
+Recorded 2026-11-22T02:55:17.405390+00:00 · Contributor: Codex PM /root; distinct integration review /root/seo · change
+
+- **Changed.** Recorded current protocol execution and distinct final integration review before website prebuild.
+- **Evidence.** All63 protocol check programs pass on current metadata and source; independent review preserves all202 original criteria and only the three full-functioning software transitions. [Change record](./runs/changes/2026-11-22-025517-record-corrected-protocol-and-full-review-b1dbdeb5.json).
+- **Not claimed.** Website corrected run, protected source publication and actual live artifact equality are still pending; target60 unmet.
+
+
+### 2026-11-22-025232-record-executions-before-site-prebuild-7dc9aa45
+
+Recorded 2026-11-22T02:52:32.925791+00:00 · Contributor: Codex PM /root; stale narrative review /root/seo · change
+
+- **Changed.** Attributed the four completed source-bound executions and preserved the website prebuild refusal; corrected stale current counter narratives.
+- **Evidence.** The prebuild changelog guard correctly refused five unattributed new reports. Current ledgers consistently report136 complete and66 open. [Change record](./runs/changes/2026-11-22-025232-record-executions-before-site-prebuild-7dc9aa45.json).
+- **Not claimed.** Failed website candidate remains failed; corrected source-bound protocol/website runs and normal publication still required. No new original closure from bookkeeping.
+
+
+### 2026-11-22-024557-record-current-functioning-closure-state-554e780a
+
+Recorded 2026-11-22T02:45:57.491902+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded the current functioning software closure state and pending publication checks.
+- **Evidence.** 136 original records complete,66 remain open; three full software closures in this wave. [Change record](./runs/changes/2026-11-22-024557-record-current-functioning-closure-state-554e780a.json).
+- **Not claimed.** Target60 remains unmet; no public tag independently validated or owner/human gates retired.
+
+
+### 2026-11-22-024556-register-complete-workflow-inputs-b4e7f777
+
+Recorded 2026-11-22T02:45:56.646732+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Registered all migration/vendor-input controls and generated reference-source dependencies; corrected the catalogue to use actual generated reference routes.
+- **Evidence.** Current personal routes remain unchanged; private offering links resolve through the allowlisted site builder; original target remains66 open. [Change record](./runs/changes/2026-11-22-024556-register-complete-workflow-inputs-b4e7f777.json).
+- **Not claimed.** No hosted deployment, new tag validation or comprehensive licensing closure implied.
+
+
+### 2026-11-22-024453-three-full-original-workflows-45416fcd
+
+Recorded 2026-11-22T02:44:53.939675+00:00 · Contributor: Codex PM /root; SynthID author /root/web_camo; distinct review /root/seo · change
+
+- **Changed.** Delivered complete-identity offline assertion migration and the official optional SynthID research-input path, alongside governed organization-policy boundaries; original acceptance and separate reviews preserved.
+- **Evidence.** Three functioning original software jobs accepted:136 complete,66 open. Actual conversion/refusal/current consumers/private publication and selected official SDK install-use-removal pass; personal PS/privacy remain independent. [Change record](./runs/changes/2026-11-22-024453-three-full-original-workflows-45416fcd.json).
+- **Not claimed.** Target60 remains unmet. No tag release, production0.2 adoption, Gemini verification, independent accuracy, legal/customer approval or already-passed hosted publication claimed. Final protected checks and supported source/site publication remain separate delivery actions.
+
+
+### 2026-11-22-023659-synthid-reference-vendor-input-3dd4f5a4
+
+Recorded 2026-11-22T02:36:59.850353+00:00 · Contributor: Codex /root/web_camo; independent reviewer /root/seo · change
+
+- **Changed.** Delivered optional official SynthID Text0.3 token-only vendor evidence in the existing personal checks CLI, pinned source/notices/offline runtime, bounded owned worker and exact supported profile.
+- **Evidence.** Actual official tournament controls and15CLI cases with6canonical full-record comparisons; actual Mac offline install/use/removal, PS after SDK removal; focused failure/cleanup controls and different full-contract review. [Change record](./runs/changes/2026-11-22-023659-synthid-reference-vendor-input-3dd4f5a4.json).
+- **Not claimed.** Research statistics only; unbound token vs personal-text subjects; no threshold, tag, AI/human origin, Google production-key or independent accuracy claim. Protected integration and original ledger acceptance remain PM-owned.
+
+
+### 2026-11-22-023658-owned-compiler-cache-reclamation-8a8370fd
+
+Recorded 2026-11-22T02:36:58.462592+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Reclaimed only known disposable project Xcode compiler and SDK caches to restore the disk reserve for actual implementation.
+- **Evidence.** Preserved 18529 noncache file identities including archives, build products, logs, test results, source and credentials; no active xcodebuild. [Change record](./runs/changes/2026-11-22-023658-owned-compiler-cache-reclamation-8a8370fd.json).
+- **Not claimed.** Operational maintenance only; zero original requirement closures, no new native build or phone acceptance.
+
+
+### 2026-11-22-023402-organization-boundaries-original-acceptance-47c651ab
+
+Recorded 2026-11-22T02:34:02.844165+00:00 · Contributor: Codex PM /root; implementation /root/share_debugger; independent review /root/seo · change
+
+- **Changed.** Accepted the original organization-policy software boundaries after provenance review; made the governed tenant workflow discoverable.
+- **Evidence.** Unchanged original acceptance mapped to current source-matching Mac/Linux execution, separately reviewed; 134 original complete and 68 open. [Change record](./runs/changes/2026-11-22-023402-organization-boundaries-original-acceptance-47c651ab.json).
+- **Not claimed.** No organization identity, employee consent, counsel, sale, hosted service or independent tag accuracy claimed. Customer scope, ownership and licensing still must be agreed before sale. Target 60 remains unmet.
+
+
+### 2026-11-22-030006-c2pa-native-published-source-graph-4fb27b8a
+
+Recorded 2026-11-22T03:00:06.408545+00:00 · Contributor: Codex /root/web_camo; distinct reviewer /root/seo · change
+
+- **Changed.** Derived the exact published C2PA FFI Cargo resolution and441checksummed source/license records, separate pinned source-notice supplements and native registry-label observations; added offline/cache verifier.
+- **Evidence.** Actual441archive replay,1131dependency edges,2518retained texts,2native135label scans and5CLI controls; different checkout review with precise non-replay credit. [Change record](./runs/changes/2026-11-22-030006-c2pa-native-published-source-graph-4fb27b8a.json).
+- **Not claimed.** Published union graph is not exact compiled native closure, publisher authentication, binary reproduction, permission clearance, global license approval or a tag/full original closure. Shared policy consumer and ledger remain PM-owned.
+
+
 ## Unreleased — 2026-11-21
 
 ### 2026-11-21-232853-final-closeout-source-and-public-access-3b570971

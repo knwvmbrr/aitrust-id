@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-050833-delivery-ready-pii-redacted-719e2c2c",
+  "recorded_at": "2026-11-22T05:08:33.129366+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f336c31e792e9581b9f3ca0ad63610e882fd928d",
+  "changed": "Recorded actual integrated PII_REDACTED execution after the versioned serializer and FI practice integration.",
+  "proves": "All registered commands and source identity checks passed.",
+  "limits": "Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155",
+    "F-057",
+    "X-02",
+    "T-FI"
+  ],
+  "files": {
+    "runs/2026-11-22-delivery-ready-pii_redacted.json": "e91c523fa66b124dfb5fcea43bacf9b197dc1726b4445620f9e089eb67c6eb69"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-delivery-ready-pii_redacted.json",
+      "sha256": "e91c523fa66b124dfb5fcea43bacf9b197dc1726b4445620f9e089eb67c6eb69"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-040113-compact-complete-spdx-without-dropping-source-3523ca5d",
+  "recorded_at": "2026-11-22T04:01:13.895973+00:00",
+  "author": "Codex /root/share_debugger; distinct reviewer /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e49b8e24d58ded048d8af2f84c8dd17ad99bdf3d",
+  "changed": "Preserved the real combined archive and16MB packet refusal; compacted document-local SPDX IDs/comments without omitting sources, and bounded detached bundles/verified-result projection to represent the measured predicate.",
+  "proves": "Six affected controls pass; distinct source and actual targeted controls reject coherent key/relationship forgeries, enforce one-to-one local IDs and retain complete verification results. Current measured packet fits unchanged16MB cap.",
+  "limits": "Final current committed archive/fourteen-packet CLI proof follows this code freeze. No actual new Sigstore signing, comprehensive obligations clearance or fullF057/X02 acceptance. Prior import-harness and capacity failures remain immutable.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/distribution_artifacts.py": "f4a652cb7daa5c06231d508075d613abb6b8319aa88f6ea48b9981e9c2b4469c",
+    "tests/test_distribution_artifacts.py": "c1525fc69df30be91aca6752d1398ee55e4da75fa374b87af2b58877c977d119",
+    ".github/workflows/artifact-sbom.yml": "ddee07cc10c2ab04d7306bf91b6d1f625026ea61b4968d05fefe3eab5a505177",
+    "docs/distribution-artifact-sbom-plan.md": "b01895a7a361bd88e53e4b250424f19fdd4bce8c864fe987f42dccdf2c63b4d8",
+    "docs/distribution-artifact-sbom.md": "b5e0464f8928bc75761180d2dace6e1fd82d40df540dbe61356bcdf1872bc419",
+    "runs/2026-11-22-artifact-sbom-combined-controller-refusal.json": "36350569c59cbda7f1a07610942d72f4db6947305ff168d183f7c575beceb53c",
+    "runs/2026-11-22-artifact-sbom-combined-packet-refusal.json": "6a67796429f08f57bc3c79a34e58c8bdb02c3db79e5a2cf10526193b9444cb20",
+    "runs/2026-11-22-artifact-sbom-capacity-corrected-focused.json": "09189537879d09653e2a4a6be0c5227fc9c8e28ca42bf40693f679b0e33d64ff",
+    "runs/2026-11-22-artifact-sbom-compact-distinct-review.json": "b8a5a0d04296749384d9e142fa32509ee1bc2274f40e842b43a31fd0456971b4"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-artifact-sbom-capacity-corrected-focused.json",
+      "sha256": "09189537879d09653e2a4a6be0c5227fc9c8e28ca42bf40693f679b0e33d64ff"
+    },
+    {
+      "path": "runs/2026-11-22-artifact-sbom-compact-distinct-review.json",
+      "sha256": "b8a5a0d04296749384d9e142fa32509ee1bc2274f40e842b43a31fd0456971b4"
+    },
+    {
+      "path": "runs/2026-11-22-artifact-sbom-combined-packet-refusal.json",
+      "sha256": "6a67796429f08f57bc3c79a34e58c8bdb02c3db79e5a2cf10526193b9444cb20"
+    }
+  ],
+  "checks": []
+}

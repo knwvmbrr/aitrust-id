@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-032350-restore-full-synthid-tag-outcome-17ef6def",
+  "recorded_at": "2026-11-22T03:23:50.430311+00:00",
+  "author": "Codex PM /root; substantive PR review and independent /root/seo correction",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "031c9e669518f99c85b829f329368b6f70ac22e2",
+  "changed": "Withdrew the premature fullF155 completion claim and restored its original supported-tag workflow acceptance; retained the functioning research-input component and all historical evidence.",
+  "proves": "OnlyN010 andN001 are full new original closures:135 complete,67 open. The existing tag code allowlist remains unchanged; unbound statistics do not issue tags.",
+  "limits": "Earlier fullF155 reviews/acceptance records remain historical and explicitly superseded. Current protocol/website receipts require fresh metadata validation; target60 not met.",
+  "scope_ids": [
+    "F-155",
+    "N-001",
+    "N-010"
+  ],
+  "files": {
+    "README.md": "cb75a7774cad7756c7ef3ef181b1723d17893f357266f31cfcc89f44d7369994",
+    "docs/synthid-vendor-input-status.md": "244c08d01fa8abf5844176a9073d5e20445ca1a274bb3981a58b29539177f01c",
+    "docs/scope-progress.json": "e40ae7d4c542815594213911b1c2c5f6cdb48f15cb11b74f3edb2669bd861a94",
+    "docs/scope-progress.md": "68b4f27cea3120b9c4aaf1dcf7be140664aae10d33557c06a319da2ddce71227",
+    "docs/scope-task-index.md": "2b3aca9bec4f7994b7b2cb0fdee1f4fddbd805a4c8fd802c8fe4d56cc23e8992",
+    "docs/session-delivery.json": "47b55d9e2cca3060e29688d5c981ad7c1ba322c90f0d26be1a879e58b47dd8be",
+    "state.json": "9036d0392c5f80fc5a4dd418eebe1bdd0c9b355505dc48428b87d8d340bc7af0",
+    "site/index.html": "6cf1f99d14374889ccdc532347612522da8ded06775d3473ad750233e2075926",
+    "site/src/public-scope.json": "b0794ec4f9a7f4a9e9c5f4e2b456be9830bcb6e1bd216f9aab6076606daf8f9d",
+    "site/src/scope-manifest.json": "8d41febdd83f6b28db7a98b1e09666cc5bd81ef6e93db395187be1d1ee51992a",
+    "site/public/reference/public-scope.json": "b0794ec4f9a7f4a9e9c5f4e2b456be9830bcb6e1bd216f9aab6076606daf8f9d",
+    "runs/2026-11-22-f155-original-completion-correction.json": "4b56ee67302eae486d0102b54909b9cc079ad047ccc21f084c65f04b66e5ae17",
+    "runs/2026-11-22-f155-closure-review-correction.json": "9d20aa08e95f547ce8f842dcec8887a528eedaa5ea34612bf2b8b83c2eaea303"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-f155-original-completion-correction.json",
+      "sha256": "4b56ee67302eae486d0102b54909b9cc079ad047ccc21f084c65f04b66e5ae17"
+    },
+    {
+      "path": "runs/2026-11-22-f155-closure-review-correction.json",
+      "sha256": "9d20aa08e95f547ce8f842dcec8887a528eedaa5ea34612bf2b8b83c2eaea303"
+    }
+  ],
+  "checks": []
+}

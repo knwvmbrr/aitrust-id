@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-045416-refresh-hash-and-agent-evidence-selectors-aca2b4ea",
+  "recorded_at": "2026-11-22T04:54:16.576020+00:00",
+  "author": "Codex PM /root; hash and agent recovery author /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1644b9daf1d912c0709ff375a9577393fa94c5f4",
+  "changed": "Selected new dated hash-inbox and agent-output observations and extended the existing isolated hosted job to produce both actual Linux records.",
+  "proves": "The changed Python consumers parse; source-bound observers will require fresh actual execution rather than reusing the earlier worker hash. Existing isolation, least privilege and hashed environment remain required.",
+  "limits": "Syntax and implementation record only; pending actual Mac/Linux/view results are not claimed. No original closure, collection, enterprise service or tag accuracy change.",
+  "scope_ids": [
+    "F-044",
+    "F-096"
+  ],
+  "files": {
+    ".github/workflows/hash-reports.yml": "b114ec6f7afa92b89b732d5d3d4147afde162b13ef18d938c5f07053aa013b14",
+    "scripts/verify-agent-output.py": "78d011a0d0e8ed236f5d5372f1fa397c73fece87ec9651db8183a9f1dd65613c",
+    "scripts/verify-hash-reports-evidence.py": "08fa99c3dad42b61639c360d0125b5f0ce6616cb8bad0ad86922f9f50acabd2a",
+    "tests/test_agent_output_evidence.py": "49c214fb3cd605bc88752b7cedb003b76f5da6bcdcf84d69042fd0980de5ba18",
+    "tests/test_hash_reports_evidence.py": "3f9d61025bf5d6498c10cc895ec59ebdd340388f795d2b75d10dbef49b0a99b2",
+    "docs/hash-agent-worker-evidence-refresh-plan.md": "e87bb8e9e2a393a33b8b5cedcaaacaa1db3f82aefa847ee4b7f7fe390a0d9cb8"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "py_compile",
+        "scripts/verify-agent-output.py",
+        "scripts/verify-hash-reports-evidence.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-22T04:54:16.637525+00:00"
+    }
+  ]
+}

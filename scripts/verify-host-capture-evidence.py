@@ -9,8 +9,8 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 spec=importlib.util.spec_from_file_location('host_capture_verification',ROOT/'scripts/verify-host-capture.py')
 implementation=importlib.util.module_from_spec(spec);spec.loader.exec_module(implementation)
 EVIDENCE={
- 'darwin':'runs/2026-11-18-host-stop-launch-macos.json',
- 'linux':'runs/2026-11-19-host-stop-launch-linux.json',
+ 'darwin':'runs/2026-11-22-host-worker-ownership-macos.json',
+ 'linux':'runs/2026-11-22-host-worker-ownership-linux.json',
 }
 CASES={
  'test_ctrl_z_stops_instead_of_creating_a_background_capture_job',

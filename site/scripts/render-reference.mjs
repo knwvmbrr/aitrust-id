@@ -66,13 +66,13 @@ for(const name of ['mark-usage','author-choice','image-provenance-boundary','cor
 
 fs.copyFileSync(path.join(root,'integrations/ai-tools/remote-openapi.json'),path.join(dist,'reference/remote-openapi.json'));
 fs.copyFileSync(path.join(root,'docs/conformance-runner.md'),path.join(dist,'reference/conformance-runner.md'));
-fs.copyFileSync(path.join(root,'runs/2026-11-06-conformance-software-execution.json'),path.join(dist,'reference/conformance-software-execution.json'));
+fs.copyFileSync(path.join(root,'runs/2026-11-22-conformance-worker-ownership.json'),path.join(dist,'reference/conformance-software-execution.json'));
 
-fs.copyFileSync(path.join(root,'runs/2026-11-09-directory-rollover-linux.json'),path.join(dist,'reference/directory-software-linux.json'));
+fs.copyFileSync(path.join(root,'runs/2026-11-22-directory-worker-ownership-linux.json'),path.join(dist,'reference/directory-software-linux.json'));
 
-for(const [sourceName,targetName] of [["docs/fleet-deployment.md","fleet-deployment.md"],["runs/2026-11-09-fleet-root-guard-macos.json","fleet-macos.json"],["runs/2026-11-09-fleet-root-guard-linux.json","fleet-linux.json"]]) fs.copyFileSync(path.join(root,sourceName),path.join(dist,'reference',targetName));
+for(const [sourceName,targetName] of [["docs/fleet-deployment.md","fleet-deployment.md"],["runs/2026-11-22-fleet-worker-ownership-macos.json","fleet-macos.json"],["runs/2026-11-22-fleet-worker-ownership-linux.json","fleet-linux.json"]]) fs.copyFileSync(path.join(root,sourceName),path.join(dist,'reference',targetName));
 
-for(const [sourceName,targetName] of [["docs/hash-report-intake.md","hash-report-intake.md"],["runs/2026-11-09-hash-inbox-current-macos.json","hash-inbox-macos.json"],["runs/2026-11-09-hash-inbox-current-linux.json","hash-inbox-linux.json"]]) fs.copyFileSync(path.join(root,sourceName),path.join(dist,'reference',targetName));
+for(const [sourceName,targetName] of [["docs/hash-report-intake.md","hash-report-intake.md"],["runs/2026-11-22-hash-inbox-macos.json","hash-inbox-macos.json"],["runs/2026-11-22-hash-inbox-linux.json","hash-inbox-linux.json"]]) fs.copyFileSync(path.join(root,sourceName),path.join(dist,'reference',targetName));
 
 fs.copyFileSync(path.join(root,'docs/legal/execution-packet.md'),path.join(dist,'reference/legal-execution-packet.md'));
 fs.copyFileSync(path.join(root,'docs/legal/michigan-llc-packet.md'),path.join(dist,'reference/michigan-llc-packet.md'));

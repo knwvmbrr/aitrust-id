@@ -18,11 +18,13 @@ def run_worker(argv,*,input,timeout,output_limit):
             or type(timeout) not in (int,float) or not math.isfinite(timeout) or not 0<timeout<=60
             or type(output_limit) is not int or not 0<output_limit<=2_000_000):
         raise ValueError('Unsupported bounded worker request')
+    selector=None;complete=False
+    output=bytearray();offset=0;deadline=time.monotonic()+timeout
     child=subprocess.Popen(argv,stdin=subprocess.PIPE,stdout=subprocess.PIPE,
         stderr=subprocess.DEVNULL,bufsize=0,start_new_session=True,close_fds=True)
-    selector=selectors.DefaultSelector();complete=False
-    output=bytearray();offset=0;deadline=time.monotonic()+timeout
     try:
+        # Ownership begins immediately after spawn, including selector startup.
+        selector=selectors.DefaultSelector()
         os.set_blocking(child.stdin.fileno(),False);os.set_blocking(child.stdout.fileno(),False)
         selector.register(child.stdout,selectors.EVENT_READ,'output')
         if input:selector.register(child.stdin,selectors.EVENT_WRITE,'input')
@@ -53,9 +55,18 @@ def run_worker(argv,*,input,timeout,output_limit):
     finally:
         # Do not poll/reap before signaling a failed group: its unreaped leader
         # reserves the ID so an unrelated reused PID cannot be targeted.
-        if not complete:
-            try:os.killpg(child.pid,signal.SIGKILL)
-            except ProcessLookupError:pass
-            child.wait(timeout=5)
-        selector.close()
-        child.stdin.close();child.stdout.close()
+        try:
+            # wait() can reap before a later exception is delivered. A reaped
+            # leader no longer reserves its numeric process-group identifier.
+            if not complete and child.returncode is None:
+                try:
+                    try:os.killpg(child.pid,signal.SIGKILL)
+                    except ProcessLookupError:pass
+                finally:
+                    child.wait(timeout=5)
+        finally:
+            try:
+                if selector is not None:selector.close()
+            finally:
+                try:child.stdin.close()
+                finally:child.stdout.close()

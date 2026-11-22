@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-042921-combined-ps-execution-d2c58617",
+  "recorded_at": "2026-11-22T04:29:21.829771+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7785095ed7409cc9d3c8b5633b9469aca671c290",
+  "changed": "Recorded actual integrated PS source-bound execution before subsequent build steps.",
+  "proves": "Current selected capability checks passed.",
+  "limits": "Engineering evidence only; original135/67 unchanged, no tag accuracy or global licensing approval. Protected source/signing/live publication remain pending.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155",
+    "F-057",
+    "X-02",
+    "F-096"
+  ],
+  "files": {
+    "runs/2026-11-22-combined-current-ps.json": "ba20b48d770dad08d0543ab30422bb3b9b86cdb40c250954720be123443a522c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-combined-current-ps.json",
+      "sha256": "ba20b48d770dad08d0543ab30422bb3b9b86cdb40c250954720be123443a522c"
+    }
+  ],
+  "checks": []
+}

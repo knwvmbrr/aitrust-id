@@ -1,0 +1,57 @@
+{
+  "format": "ai-trust-id-shared-worker-distinct-corrected-review/v1",
+  "captured_at": "2026-11-22T03:40:10.523025+00:00",
+  "pass": true,
+  "source_before": {
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "tests/test_worker_process.py": "2e3cf2a34ed8de35f3d6a372a4116675ba83fcc7e3f5e0a79c4dffd8d1e33d24",
+    "docs/worker-supervision-recovery-plan.md": "ef228f9a78f72e4c79b21d5531dad04f8c51e6854fa0056364ea63a453d3da23"
+  },
+  "source_after": {
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "tests/test_worker_process.py": "2e3cf2a34ed8de35f3d6a372a4116675ba83fcc7e3f5e0a79c4dffd8d1e33d24",
+    "docs/worker-supervision-recovery-plan.md": "ef228f9a78f72e4c79b21d5531dad04f8c51e6854fa0056364ea63a453d3da23"
+  },
+  "sources_stable": true,
+  "actual_controls": [
+    {
+      "case": "initial_clock_fault_before_spawn",
+      "pass": true,
+      "children_spawned": 0
+    },
+    {
+      "case": "actual_loop_clock_fault_owned_reap_and_pipe_close",
+      "pass": true,
+      "children_reaped": 1
+    },
+    {
+      "case": "actual_postwait_fault_no_reaped_group_signal",
+      "pass": true,
+      "signals_attempted": 0
+    },
+    {
+      "case": "actual_selector_constructor_fault_reaped_and_pipes_closed",
+      "pass": true
+    },
+    {
+      "case": "actual_selector_close_fault_all_pipes_closed",
+      "pass": true
+    },
+    {
+      "case": "actual_normal_stdin_stdout_roundtrip_unchanged",
+      "pass": true
+    }
+  ],
+  "actual_control_count": 6,
+  "scope": "Narrow exact startup/postreap/close/normal ownership controls; no full17/shared-caller suite repeated.",
+  "original_clock_failure_sha256": "a6e61e808949da5fc129e3b33a6cc912770acb33070a9288608769ad551af4ad",
+  "original_artifact_postwait_failure_sha256": "ac6d8eb32b992f48d564ccbc420ed8bf3a08e8cdcdde01db2e74e04b982fb45a",
+  "owned_children_left_running": false,
+  "new_sdk_or_native_execution": false,
+  "source_edits_by_reviewer": false,
+  "limits": [
+    "No forceful-parent-kill/host-crash recovery claim.",
+    "Existing supervisor CPU/input/output/deadline semantics retained except initialization before spawn now includes spawn in wall budget.",
+    "Protected artifact Sigstore and fullF057/X02 remain pending; this is a foundational process-lifecycle review only."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-043008-combined-extension-execution-babaf954",
+  "recorded_at": "2026-11-22T04:30:08.520830+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7785095ed7409cc9d3c8b5633b9469aca671c290",
+  "changed": "Recorded actual integrated extension source-bound execution before subsequent build steps.",
+  "proves": "Current selected capability checks passed.",
+  "limits": "Engineering evidence only; original135/67 unchanged, no tag accuracy or global licensing approval. Protected source/signing/live publication remain pending.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155",
+    "F-057",
+    "X-02",
+    "F-096"
+  ],
+  "files": {
+    "runs/2026-11-22-combined-current-extension.json": "4c0dd1d5f2febc8eb363ce03d90d2cb96d6cc4761e07db76ca44610a35ca530e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-combined-current-extension.json",
+      "sha256": "4c0dd1d5f2febc8eb363ce03d90d2cb96d6cc4761e07db76ca44610a35ca530e"
+    }
+  ],
+  "checks": []
+}

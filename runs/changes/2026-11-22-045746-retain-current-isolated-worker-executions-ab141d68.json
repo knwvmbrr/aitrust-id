@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-045746-retain-current-isolated-worker-executions-ab141d68",
+  "recorded_at": "2026-11-22T04:57:46.877727+00:00",
+  "author": "Codex PM /root; authors and reviewers /root/seo and /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b504286aad2b74613e86c95a169c9a7d53f1dbf2",
+  "changed": "Retained actual current Mac/Linux worker observations and selected their source-bound website evidence without changing old receipts.",
+  "proves": "Hosted Fleet33, real directory28, private inbox29 and agent33 passed against exact current bound sources; Mac and two-theme view are separately recorded. Actual enterprise panel acceptance now passes.",
+  "limits": "Remaining host-capture, conformance and audit proof refreshes and final complete publication checks remain pending. No new original closure or detector accuracy claim;135 complete/67 open.",
+  "scope_ids": [
+    "F-159",
+    "F-162",
+    "F-044",
+    "F-096",
+    "F-057"
+  ],
+  "files": {
+    "runs/2026-11-22-fleet-worker-ownership-linux.json": "6014c5e950018bf47c4d325b2978a71ba8456966fcc0ef1e45df7241dcc607cd",
+    "runs/2026-11-22-directory-worker-ownership-linux.json": "8fd5413a4f9937b51a5625f87e9403b413879e6701811d75286a15505a1f9fca",
+    "runs/2026-11-22-hash-inbox-macos.json": "ddd0c9506312c0c203cece555535fe86a0e4e738dd534408ed0af75def8130b5",
+    "runs/2026-11-22-hash-inbox-linux.json": "a803e89f93397480b033c1e873c8bfc96dcd843169ea5b66f7a1937dd938d3de",
+    "runs/2026-11-22-agent-output-macos.json": "c9629852c35fd720fec9470ca48711dfc5240fa4ff0bbe7c1538b355dbca5f93",
+    "runs/2026-11-22-agent-output-linux.json": "811aac86568f809c85b374fb4e74a25afbd0017e2455b32d95ff47125eb91987",
+    "runs/2026-11-22-agent-output-view.json": "6f1591dd78e39bec1e62dc603e97755d77d3cbd09de3cdd9f0de8fb63c8423e1",
+    "runs/2026-11-22-hosted-worker-refresh-provenance.json": "1ff54724f7bd79a21923666a60a989cfbf3ce63c9255fc91f9aee24151b2667e",
+    "runs/2026-11-22-fleet-current-evidence-distinct-review.json": "dbc3c0133e896e706f5cbde4937dd93300ebf9b3da52ad1475d5ef1e28a7bb8c",
+    "runs/2026-11-22-source-snapshot-current-artifact-distinct-review.json": "50b35124fc8d6b8be4d425091cb32990657934e761863b18eee77bc70fc86d46",
+    "site/scripts/prepare.mjs": "82411ae1f718ccc37988de6113ec975b54fb6e3245a06cefb99ecadd3a23e96c",
+    "site/scripts/render-reference.mjs": "eb89651d034ae746d424e62b6c73eb5d1110e60fa055c68c552dcf8926a2e310",
+    "eval/revalidation.json": "f92401fb580dcff291b148d69abdacc4cc701263a4f43f4232b1fe9ac5fa277e",
+    "scripts/verify-route-boundaries.py": "98a09f12ee8b61e08b6d9ddff59f5e372c9c957abf0582dd1f213c8101df01f3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-hosted-worker-refresh-provenance.json",
+      "sha256": "1ff54724f7bd79a21923666a60a989cfbf3ce63c9255fc91f9aee24151b2667e"
+    },
+    {
+      "path": "runs/2026-11-22-fleet-current-evidence-distinct-review.json",
+      "sha256": "dbc3c0133e896e706f5cbde4937dd93300ebf9b3da52ad1475d5ef1e28a7bb8c"
+    },
+    {
+      "path": "runs/2026-11-22-source-snapshot-current-artifact-distinct-review.json",
+      "sha256": "50b35124fc8d6b8be4d425091cb32990657934e761863b18eee77bc70fc86d46"
+    },
+    {
+      "path": "runs/2026-11-22-agent-output-view.json",
+      "sha256": "6f1591dd78e39bec1e62dc603e97755d77d3cbd09de3cdd9f0de8fb63c8423e1"
+    }
+  ],
+  "checks": []
+}

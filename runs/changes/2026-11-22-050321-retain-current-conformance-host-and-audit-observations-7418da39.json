@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-050321-retain-current-conformance-host-and-audit-observations-7418da39",
+  "recorded_at": "2026-11-22T05:03:21.035145+00:00",
+  "author": "Codex PM /root; author /root/share_debugger; reviewer /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b504286aad2b74613e86c95a169c9a7d53f1dbf2",
+  "changed": "Retained actual current conformance and Mac host executions, reused an exact matching actual audit artifact, and selected its explicit auxiliary test profile.",
+  "proves": "Conformance28+12 and host20 passed. Audit31 actual controls and22current source bindings match the retained hosted artifact; exact18.7/2.60.1 profile and wrong-profile refusals pass without rerunning the database lab.",
+  "limits": "Current host Linux20 still pending. No old observation was rewritten, production upgraded, legal approval issued or original count reduced beyond135 complete/67 open.",
+  "scope_ids": [
+    "F-119",
+    "F-120",
+    "F-160",
+    "F-161",
+    "F-096"
+  ],
+  "files": {
+    ".github/workflows/host-capture.yml": "4410513638d0847430d905e4420e52ddae4190e38acab53100e3f75f65a3c584",
+    "docs/remaining-worker-evidence-refresh-plan.md": "726300635e70cfe94ed251945b179075399de565ddd64573aa809b34a54a9cca",
+    "docs/remaining-worker-evidence-refresh-result.md": "456dada570970f51ad8a0dbf1e4991298ed65f6ddc9f0240ec874379173c9777",
+    "eval/revalidation.json": "5626e55f79b04a061d12d2d3055ee64024dccb4fa1404be687baf5ab871f59ac",
+    "runs/2026-11-22-agent-output-linux.json": "811aac86568f809c85b374fb4e74a25afbd0017e2455b32d95ff47125eb91987",
+    "runs/2026-11-22-agent-output-macos.json": "c9629852c35fd720fec9470ca48711dfc5240fa4ff0bbe7c1538b355dbca5f93",
+    "runs/2026-11-22-agent-output-view.json": "6f1591dd78e39bec1e62dc603e97755d77d3cbd09de3cdd9f0de8fb63c8423e1",
+    "runs/2026-11-22-audit-tuple-distinct-review.json": "cfb8c07f572d705c8f62a9e47e900c0a9958095b39466728e3fa9b7599c0cd87",
+    "runs/2026-11-22-conformance-worker-ownership.json": "98616922bcb78d07a8608310f70edd7a1c0153ef62245621ecc52e6999047efb",
+    "runs/2026-11-22-directory-hash-agent-worker-distinct-review.json": "82a0e69c5d339d7fc200cc93b062570980287e4e6eafd8ede1384a4dde32cf77",
+    "runs/2026-11-22-directory-worker-ownership-linux.json": "8fd5413a4f9937b51a5625f87e9403b413879e6701811d75286a15505a1f9fca",
+    "runs/2026-11-22-fleet-current-evidence-distinct-review.json": "dbc3c0133e896e706f5cbde4937dd93300ebf9b3da52ad1475d5ef1e28a7bb8c",
+    "runs/2026-11-22-fleet-worker-ownership-linux.json": "6014c5e950018bf47c4d325b2978a71ba8456966fcc0ef1e45df7241dcc607cd",
+    "runs/2026-11-22-hash-inbox-linux.json": "a803e89f93397480b033c1e873c8bfc96dcd843169ea5b66f7a1937dd938d3de",
+    "runs/2026-11-22-hash-inbox-macos.json": "ddd0c9506312c0c203cece555535fe86a0e4e738dd534408ed0af75def8130b5",
+    "runs/2026-11-22-host-worker-ownership-macos.json": "68547e3f728249c9473294423d33cb65e0023efbf93e7ce1371088e4eeb043df",
+    "runs/2026-11-22-hosted-worker-refresh-provenance.json": "1ff54724f7bd79a21923666a60a989cfbf3ce63c9255fc91f9aee24151b2667e",
+    "runs/2026-11-22-organization-audit-worker-ownership-linux.json": "350884ab64d60c372a975db99a4490005966a53e68ea169bbe21319785a6e4a7",
+    "runs/2026-11-22-remaining-worker-evidence-refresh-execution.json": "2b7aca2411de14eb6fdc6ed746619a33925d7affa17e6b90b4f6013f0c554cb1",
+    "runs/2026-11-22-remaining-worker-refresh-source-distinct-review.json": "075e2cb67824c521f3deed85a744a3b6da309538918dcf08d42cbe683331a7fe",
+    "runs/2026-11-22-source-snapshot-current-artifact-distinct-review.json": "50b35124fc8d6b8be4d425091cb32990657934e761863b18eee77bc70fc86d46",
+    "scripts/verify-conformance-delivery.py": "5c04be61586aae55671f6b6389c6d4f8f275ebaf4377c2246c3ff70b83655b21",
+    "scripts/verify-host-capture-evidence.py": "1f85dbd9678568a33ea329ed886b1a6f0b3289fe28eab84e851a91b34c9dec10",
+    "scripts/verify-organization-audit-evidence.py": "f8b4e4a32958c06be988bda455a6f2a149a4b0a287e39cfcc2f28c01104fd1c2",
+    "scripts/verify-route-boundaries.py": "ebd2f759f711092556090b4d559bfb74f5b1292e413e9e7a5aeccaa3acc7869e",
+    "site/public/reference/directory-software-linux.json": "8fd5413a4f9937b51a5625f87e9403b413879e6701811d75286a15505a1f9fca",
+    "site/public/reference/fleet-linux.json": "6014c5e950018bf47c4d325b2978a71ba8456966fcc0ef1e45df7241dcc607cd",
+    "site/public/reference/fleet-macos.json": "05a4847aaa6c00213efd0150270247aa1337b051d9a88cb3918fbb9956b07f6c",
+    "site/public/reference/hash-inbox-linux.json": "a803e89f93397480b033c1e873c8bfc96dcd843169ea5b66f7a1937dd938d3de",
+    "site/public/reference/hash-inbox-macos.json": "ddd0c9506312c0c203cece555535fe86a0e4e738dd534408ed0af75def8130b5",
+    "site/scripts/prepare.mjs": "e6551ba623be3a170e5ae8acffe6992e58ebe1ebd22eded675047883d20cfb3d",
+    "site/scripts/render-reference.mjs": "90ebb9649c645272aa2dad2ab18891448f03f5a2afd1afc8d0fe88d46295abb8",
+    "tests/test_organization_audit.py": "660292b60366f858e7dd9c77ea18b5516d9f6f81312ed00ae88b23c5a21b8c23"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-remaining-worker-evidence-refresh-execution.json",
+      "sha256": "2b7aca2411de14eb6fdc6ed746619a33925d7affa17e6b90b4f6013f0c554cb1"
+    },
+    {
+      "path": "runs/2026-11-22-audit-tuple-distinct-review.json",
+      "sha256": "cfb8c07f572d705c8f62a9e47e900c0a9958095b39466728e3fa9b7599c0cd87"
+    }
+  ],
+  "checks": []
+}

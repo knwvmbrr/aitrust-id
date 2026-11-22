@@ -1,0 +1,51 @@
+{
+  "format": "ai-trust-id-onnxruntime-bounded-wheel-prefix-witness/v1",
+  "captured_at": "2026-11-22T03:14:36.285332+00:00",
+  "pass": true,
+  "collector_sha256": "9016fabc6e85e8433eb3669e51cce0968e338dcb9805113beecb129deb315b71",
+  "wheel": {
+    "filename": "onnxruntime-1.31.0-cp313-cp313-manylinux_2_28_x86_64.whl",
+    "sha256": "37fd78cee5160c7a43a1730ccb3682ffd880af9c9e80385d625c0c2f8b125809",
+    "bytes": 23760708
+  },
+  "native_member_prefixes": [
+    {
+      "member": "onnxruntime/capi/libonnxruntime.so.1.31.0",
+      "member_bytes": 29352200,
+      "scanned_start_byte": 0,
+      "scanned_end_byte": 20971520,
+      "scanned_sha256": "021be682ca140f4fac0a31ad347604b4db6236f06aef8a45f03f073ec0dfee9e",
+      "matching_explicit_build_git_literal_count": 0,
+      "whole_member_scanned": false,
+      "absence_of_build_identity_inferred": false
+    },
+    {
+      "member": "onnxruntime/capi/onnxruntime_pybind11_state.cpython-313-x86_64-linux-gnu.so",
+      "member_bytes": 30958696,
+      "scanned_start_byte": 0,
+      "scanned_end_byte": 20971520,
+      "scanned_sha256": "ad96ecaed92ca61e29ae3f3403123923599fbc207b105f61528c8f210e9595ce",
+      "matching_explicit_build_git_literal_count": 0,
+      "whole_member_scanned": false,
+      "absence_of_build_identity_inferred": false
+    }
+  ],
+  "package_build_info": {
+    "bytes": 52,
+    "sha256": "502b54b206e5a5994f3fda02dbcee4c16042a94fd246a3e1aa9d8cd19bd1452a",
+    "declares_package_and_version_only": true
+  },
+  "metadata": {
+    "bytes": 5745,
+    "sha256": "49d642d98f88dc138508e87888dea36d54ea9a3cd2865ed0a97ce599a9d39428",
+    "exact_version_release_link_present": true,
+    "source_commit_established": false
+  },
+  "notice_section_map_verified": true,
+  "section_count": 70,
+  "local_bytes_read": 66047633,
+  "local_read_limit": 67108864,
+  "native_code_executed": false,
+  "packages_installed": false,
+  "unseen_native_bytes_do_not_establish_absence": true
+}

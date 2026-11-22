@@ -1,0 +1,91 @@
+name: artifact-linked-sbom
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: artifact-sbom-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  refuse-untrusted-manual-signing:
+    if: github.event_name == 'workflow_dispatch' && (github.repository != 'knwvmbrr/aitrust-id' || github.ref != 'refs/heads/main')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 1
+    permissions: {}
+    steps:
+      - run: |
+          echo 'Artifact signing dispatch requires the protected project main ref.' >&2
+          exit 1
+  artifact-controls:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {fetch-depth: 1, persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.13'}
+      - name: Execute artifact, fourteen-graph and refusal controls without installs
+        run: |
+          python -I -S -B - <<'PY'
+          import os,pathlib,sys,unittest
+          assert os.geteuid()!=0 and sys.platform=='linux'
+          root=pathlib.Path.cwd();sys.path.insert(0,str(root))
+          suite=unittest.TestSuite(unittest.defaultTestLoader.discover(str(root/'tests'),pattern=p) for p in ('test_distribution_artifacts.py','test_artifact_process.py','test_artifact_workflow.py'))
+          result=unittest.TextTestRunner(verbosity=2).run(suite)
+          assert result.testsRun==36 and result.wasSuccessful() and not result.skipped
+          PY
+  attest-eligible-artifact:
+    needs: artifact-controls
+    if: github.repository == 'knwvmbrr/aitrust-id' && github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+    env:
+      SOURCE_COMMIT: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {fetch-depth: 1, persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.13'}
+      - name: Build actual eligible source and its bound SPDX predicate
+        run: |
+          ARTIFACT_DIR="$RUNNER_TEMP/aitrust-source-artifact-sbom"
+          printf 'ARTIFACT_DIR=%s\n' "$ARTIFACT_DIR" >> "$GITHUB_ENV"
+          mkdir -m 0700 -- "$ARTIFACT_DIR"
+          python -I -S -B scripts/export-ps-source.py build --output "$ARTIFACT_DIR/checker.zip"
+          python -I -S -B scripts/distribution-artifact.py prepare --route ps-source --artifact "$ARTIFACT_DIR/checker.zip" --commit "$SOURCE_COMMIT" --output "$ARTIFACT_DIR/evidence.json"
+          python -I -S -B scripts/distribution-artifact.py spdx --route ps-source --artifact "$ARTIFACT_DIR/checker.zip" --commit "$SOURCE_COMMIT" --packet "$ARTIFACT_DIR/evidence.json" --output "$ARTIFACT_DIR/artifact.spdx.json"
+      - name: Attest this actual artifact and exact SPDX predicate
+        id: sbom
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6
+        with:
+          subject-path: ${{ env.ARTIFACT_DIR }}/checker.zip
+          sbom-path: ${{ env.ARTIFACT_DIR }}/artifact.spdx.json
+      - name: Capture bundle and independently obtained trust roots
+        env:
+          BUNDLE_PATH: ${{ steps.sbom.outputs.bundle-path }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test ! -e "$ARTIFACT_DIR/sbom.sigstore.json"
+          cp -- "$BUNDLE_PATH" "$ARTIFACT_DIR/sbom.sigstore.json"
+          chmod 0600 "$ARTIFACT_DIR/sbom.sigstore.json"
+          (set -o noclobber; gh attestation trusted-root > "$ARTIFACT_DIR/trusted-root.jsonl")
+          chmod 0600 "$ARTIFACT_DIR/trusted-root.jsonl"
+      - name: Actual detached verification and current-policy release authorization
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -I -S -B scripts/distribution-artifact.py authorize-release --route ps-source --artifact "$ARTIFACT_DIR/checker.zip" --commit "$SOURCE_COMMIT" --packet "$ARTIFACT_DIR/evidence.json" --sbom "$ARTIFACT_DIR/artifact.spdx.json" --bundle "$ARTIFACT_DIR/sbom.sigstore.json" --trusted-root "$ARTIFACT_DIR/trusted-root.jsonl" --output "$ARTIFACT_DIR/verified.json"
+      - name: Offer only the actually authenticated artifact and its outside-user evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: reviewed-ps-source-artifact-sbom
+          path: ${{ env.ARTIFACT_DIR }}/
+          if-no-files-found: error
+          retention-days: 30

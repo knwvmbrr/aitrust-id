@@ -1,0 +1,55 @@
+{
+  "format": "ai-trust-id-nli-native-core-distinct-review/v1",
+  "captured_at": "2026-11-22T03:34:18.105241+00:00",
+  "pass": true,
+  "reviewed_runtime_sha256": "9bda146dc50f0be54fcc88f986098f4a0bc5a5d45719a53e53870da1ea114764",
+  "source_before": {
+    "tools/nli_native_obligations.py": "9bda146dc50f0be54fcc88f986098f4a0bc5a5d45719a53e53870da1ea114764",
+    "scripts/verify-nli-native-obligations.py": "c34b0b5cebe6e722794c36fb923c3f44ccd36cd185b41ed64db447047d2d4e1f",
+    "tests/test_nli_native_obligations.py": "1f80cbd71855b12a1b10e6243808cbf37555778c66756f559e773975516a9a4a",
+    "sbom/nli-native/manifest.json": "b3332fa5f473cadce44a257b78acb1be471ebd990b72bd5dcf21761d4966fbc5",
+    "sbom/nli-native/evidence.json": "5b6d4fd0b88eff23fe2d3512f551f42649e3af7b71aa60865e07605955696b32"
+  },
+  "source_after": {
+    "tools/nli_native_obligations.py": "9bda146dc50f0be54fcc88f986098f4a0bc5a5d45719a53e53870da1ea114764",
+    "scripts/verify-nli-native-obligations.py": "c34b0b5cebe6e722794c36fb923c3f44ccd36cd185b41ed64db447047d2d4e1f",
+    "tests/test_nli_native_obligations.py": "1f80cbd71855b12a1b10e6243808cbf37555778c66756f559e773975516a9a4a",
+    "sbom/nli-native/manifest.json": "b3332fa5f473cadce44a257b78acb1be471ebd990b72bd5dcf21761d4966fbc5",
+    "sbom/nli-native/evidence.json": "5b6d4fd0b88eff23fe2d3512f551f42649e3af7b71aa60865e07605955696b32"
+  },
+  "sources_stable": true,
+  "actual_controls": [
+    {
+      "case": "actual_checkout_source_graph",
+      "pass": true,
+      "packages": 650,
+      "edges": 1561,
+      "retained_sources": 3571,
+      "fresh_archive_replay": false
+    },
+    {
+      "case": "coherent_source_evidence_index_rebind",
+      "pass": true,
+      "outcome": "refused_by_code_anchor"
+    },
+    {
+      "case": "distribution_source_offer_complete_promotion",
+      "pass": true,
+      "outcome": "refused_by_exact_reconstruction"
+    }
+  ],
+  "source_review": [
+    "Fixed old-cohort and evidence-index anchors, exact reconstruction of package/notice/edge coverage and false approval flags.",
+    "Bounded pre-PAX decompression, path/type/count/retained-total controls and no-follow/drift-check file ownership.",
+    "Published Rust union vs compiled linkage, exact-source acquisition vs published source offers, GNU/ORT unresolved applicability remain separate.",
+    "Native build/compiler reproduction and professional legal approval are not invented prerequisites for the source evidence tool."
+  ],
+  "independence": "Reviewer authored only the finite ORT retrieval/notice map input; not this NLI core, graph assembly, replay, source cache or GNU/other-family source implementation.",
+  "scope_limits": [
+    "No full9-method or540-archive repeat by reviewer.",
+    "Actual current complete cache CLI replay is author-pending and not credited by this review.",
+    "No package/model/native execution, installation, download or source edit.",
+    "No global distribution permission, fullF057/X02, tag or independent accuracy clearance."
+  ],
+  "actionable_blockers_found": []
+}

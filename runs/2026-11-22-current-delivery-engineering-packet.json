@@ -1,0 +1,57 @@
+{
+  "captured_at": "2026-11-22T05:55:21.215815+00:00",
+  "profile": "current-delivery-engineering-packet/v1",
+  "pass": true,
+  "capabilities": {
+    "PS": {
+      "path": "runs/2026-11-22-delivery-ready-ps.json",
+      "sha256": "b7bb666b1143d047ab6292d2cb09744ef483ba2ffa491cdfdead6b54e360d46a",
+      "executed_commands": 7,
+      "current_source_assessment_pass": true
+    },
+    "PII_REDACTED": {
+      "path": "runs/2026-11-22-delivery-ready-pii_redacted.json",
+      "sha256": "e91c523fa66b124dfb5fcea43bacf9b197dc1726b4445620f9e089eb67c6eb69",
+      "executed_commands": 6,
+      "current_source_assessment_pass": true
+    },
+    "extension": {
+      "path": "runs/2026-11-22-delivery-ready-extension.json",
+      "sha256": "b2b54431d5cac829ab26a651508f513dd6b878c1cbcc07a7cc0a988b78efaf79",
+      "executed_commands": 14,
+      "current_source_assessment_pass": true
+    },
+    "protocol": {
+      "path": "runs/2026-11-22-delivery-final-protocol.json",
+      "sha256": "526bd61b5b56d2d351726c6ec98a804761d2b84e4ea3d9b18514351f576c7e07",
+      "executed_commands": 67,
+      "current_source_assessment_pass": true
+    },
+    "website": {
+      "path": "runs/2026-11-22-checked-site-website.json",
+      "sha256": "b439d1b9fb06bed34347820d9fb81f08ecac59ede554977ac8436f38e9d44a95",
+      "executed_commands": 59,
+      "current_source_assessment_pass": true
+    }
+  },
+  "boundary": {
+    "path": "runs/2026-11-22-current-delivery-boundaries.json",
+    "sha256": "cd7dab421aee292b8232d8fd36bd973b138b5dd1a7863aa6ef0690a01e7bbb40",
+    "source_files": 7840,
+    "pass": true
+  },
+  "full_original_closures": [
+    "N-001",
+    "N-010"
+  ],
+  "original_complete": 135,
+  "original_open": 67,
+  "target_open": 60,
+  "target_met": false,
+  "F155_original_open_percent": 60,
+  "F145_separate_unintegrated_candidate": "228ebf458853628c78112204790bd70525ec5f5d",
+  "independent_tag_accuracy_evidence": false,
+  "tag_release_approved": false,
+  "protected_publication_pending": true,
+  "production_site_updated_by_this_packet": false
+}

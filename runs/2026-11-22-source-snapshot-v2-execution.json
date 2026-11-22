@@ -1,0 +1,154 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-22T04:41:30.398640+00:00",
+  "profile": "versioned-source-snapshot-current-execution/v1",
+  "source_base": "7785095ed7409cc9d3c8b5633b9469aca671c290",
+  "selected_working_source_bytes": true,
+  "source_sha256": {
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/build-source-snapshot.py": "a07d3642d5921e804277c12c16ad22cf388d65bae114810877b2b08e52ce6706",
+    "scripts/verify-source-provenance.py": "cc0e9bbb83f1c844a9ca7cca69b063352a53c1ac311bef02d354f92bb5194215",
+    "tools/distribution_artifacts.py": "3540e7a5c9326148eef2183638fa5767259284d470701619e562fd2f14528be8",
+    "tests/test_source_provenance.py": "566fa10f9d11f3da9d1c0e0677a914a84bcfea3b4e51fea5bd8893a776492f6f",
+    "tests/test_distribution_artifacts.py": "032ac09a86a4622d06d03911aaa1cfbfcdd2598de169f88ce5b345d4ebd58c33",
+    "docs/distribution-artifact-sbom.md": "9850d93399dae6464278013af7ecf5ee958c9d02f4bd108f2ee3945cd51bc627",
+    "docs/source-snapshot-v2-plan.md": "05628fb13142c3ce8031df9980df65f43fb020d7eed23497c25b6920e9cddadb"
+  },
+  "historical_observations_preserved": {
+    "sbom/native/manifest.json": {
+      "sha256": "b73adf17026164ae36fa227e2807aa6a1e30de4c3bc47bb62a2eb53b6dffe860",
+      "observed_by": "Codex",
+      "captured_at": "2026-11-19T03:42:45.527606+00:00",
+      "byte_identical_to_source_base": true
+    },
+    "sbom/nested-runtime/manifest.json": {
+      "sha256": "9452abdfd81cafdc2f0b9a0b2e45cb4206aa40c51ab41edcb61d3552f33a05d6",
+      "observed_by": "Codex",
+      "captured_at": "2026-11-19T03:42:59.385737+00:00",
+      "byte_identical_to_source_base": true
+    }
+  },
+  "initial_failure": {
+    "pass": false,
+    "captured_at": "2026-11-22T04:39:16.435379+00:00",
+    "stage": "initial_v2_focused",
+    "passed": 79,
+    "failed": 1,
+    "signature": "v2 omitted public template constant alias used by active serializer consumer test",
+    "log_sha256": "863f6e2e2a97771b8f894faaf763a3a20b0d18a2f45052bd2a4e2e10fea0cc91",
+    "historical_observation_data_changed": false
+  },
+  "correction": "Add the missing immutable PUBLIC_TEMPLATE and PUBLIC_TEMPLATE_SHA256 aliases; legacy helper bytes/globals and archive data format remain unchanged.",
+  "actual_focused_execution": {
+    "serializer_current": {
+      "executed": 80,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 6.5
+    },
+    "post_alias_affected": {
+      "executed": 4,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 0.53
+    },
+    "artifact_current": {
+      "executed": 3,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    }
+  },
+  "checks": [
+    "exact legacy module SHA256 restoration",
+    "v1/v2 small archive byte and inspection parity",
+    "v2 capacity refusal does not override legacy globals",
+    "16385 Git rows refused before blob reads/node construction",
+    "Git OIDs remain source identity rather than plain content checksums",
+    "actual PS artifact and canonical packet replay",
+    "current205-artifact native inventory consistency",
+    "current559-module nested runtime consistency",
+    "retained12484-file31b archive v2 inspection with legacy count refusal"
+  ],
+  "native_verification": {
+    "captured_at": "2026-11-22T04:39:17.365669+00:00",
+    "pass": true,
+    "profile": "npm-native-observations/1.0.0",
+    "artifacts": 205,
+    "native_candidates": 146,
+    "licensing_declarations": 54,
+    "version_declarations": 14,
+    "uninspected_nested_archives": 1,
+    "archive_replay": false,
+    "binary_bytes_replayed": false,
+    "inventory_sha256": "b73adf17026164ae36fa227e2807aa6a1e30de4c3bc47bb62a2eb53b6dffe860",
+    "observation_authenticated": false,
+    "permission_cleared": false,
+    "complete_transitive_coverage": false,
+    "independent_accuracy_evidence": false
+  },
+  "nested_verification": {
+    "captured_at": "2026-11-22T04:39:17.608698+00:00",
+    "pass": true,
+    "profile": "pinned-runtime-source-notice-observation/v1",
+    "archive_bytes_replayed": false,
+    "entries": 614,
+    "files": 567,
+    "python_modules": 559,
+    "explicit_spdx_modules": 7,
+    "vendored_source_hash_matches": 4,
+    "expanded_bytes": 9596411,
+    "notice_bindings_checked": 6,
+    "prepared_runtime_members_checked": 0,
+    "notice_bundle_sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321",
+    "notice_bundle_bytes": 245510,
+    "permission_cleared": false,
+    "complete_transitive_coverage": false,
+    "full_corresponding_source_established": false,
+    "independent_accuracy_evidence": false
+  },
+  "retained_archive_verification": {
+    "pass": true,
+    "retained_source_commit": "31b116419e58652b9c797e38888d229584950290",
+    "archive_sha256": "e9935eaff3b69589c88c8a492039a0ee3451fcbec9e22f832ca26589843c7103",
+    "v2_inspection": {
+      "profile": "aitrust-development-source/1.0.0",
+      "source_commit": "31b116419e58652b9c797e38888d229584950290",
+      "source_files": 12484,
+      "source_bytes": 114087904,
+      "sha256": "e9935eaff3b69589c88c8a492039a0ee3451fcbec9e22f832ca26589843c7103",
+      "tag_release_validated": false,
+      "installed_dependencies_authenticated": false
+    },
+    "legacy_large_archive_refused": true,
+    "legacy_globals_unchanged": true,
+    "new_source_archive_built": false,
+    "new_sigstore_executed": false
+  },
+  "log_sha256": {
+    "source-snapshot-v2-focused.log": "863f6e2e2a97771b8f894faaf763a3a20b0d18a2f45052bd2a4e2e10fea0cc91",
+    "source-snapshot-v2-affected-correction.log": "6939de554df961d0b37e2417c6287e97cc36883b27cce9626de30f96249cf60a",
+    "source-snapshot-v2-current-focused.log": "75fcb27cec3c96f676329799accd1fe58b6d240e1d2517bd0f4252c32599b8bc",
+    "source-snapshot-v2-artifact-controls.log": "c0842d180a1431cfb60d7001ff71744f78230492b9aa0b650158d361d0395a61",
+    "source-snapshot-v2-current-artifact-controls.log": "076341623c51abd355f9e866797fcc4650174bc5fb2cdfc27a6fc6c6801519be",
+    "source-snapshot-v2-native.json": "79e04b3b4d6186bfb5710c575500a01bb85b257fe0c51c2138989a993c75c9ec",
+    "source-snapshot-v2-nested.json": "0c109e4810c7627e23b7b6bff6395dc277e7fc90220829c7df3d35e86ab0d1df",
+    "source-snapshot-v2-retained-archive.json": "fbea146aebff2ff94c359a760e5c3e13bed59cfd978a0da513f13cffdd22f0ff"
+  },
+  "active_entrypoints_use_v2": true,
+  "artifact_graph_binds_both_modules_builder_verifier": true,
+  "legacy_global_MAX_FILES": 10000,
+  "active_v2_MAX_FILES": 16384,
+  "archive_profile_unchanged": "aitrust-development-source/1.0.0",
+  "new_source_archive_built": false,
+  "native_archive_bytes_freshly_replayed": false,
+  "nested_archive_bytes_freshly_replayed": false,
+  "new_sigstore_executed": false,
+  "old37_cli_receipt_promoted_to_current": false,
+  "full_F057_closed": false,
+  "full_X02_closed": false,
+  "original_required_acceptance_changed": false
+}

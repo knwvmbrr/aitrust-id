@@ -1,0 +1,76 @@
+{
+  "captured_at": "2026-11-22T02:54:14.898498+00:00",
+  "pass": true,
+  "reviewed_by": "Codex /root/seo",
+  "profile": "three-originals-shared-integration-readonly/v2",
+  "scope": "Source/registration/criteria/claim integration review, not current final engineering or deployment acceptance.",
+  "source_sha256": {
+    "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
+    "docs/scope-progress.json": "b5051d6d7647341beea2463c843fc3eeea0a6effc251a777447ccfdd19e9a51a",
+    "docs/session-delivery.json": "47e71338160c9d18aa534112daea0c447c329838d480c86cdad10a93c5d63103",
+    "state.json": "b7c9c4f02699604ef9b7fb8fece765ef9a5b2cde10413b9aa810b617a1c35278",
+    "eval/revalidation.json": "81a08703393e6e85333ebbed4261d671c6a8aa9078694f24da281105cc3e7d48",
+    "package.json": "1249ccf91a392e2b3e5420082e3b44f666a8d8f115b3a334ff77700e43f32f12",
+    "scripts/check-tags.py": "bb57e5e49b1f6a305eabc84e04df771402c6ad9cf8119c6acc94037d1fd184d0",
+    "scripts/verify-route-boundaries.py": "0f776b321f4c0c231abee135f52eae0c898c9c3b9b4df7d92a80798cbf1fada6",
+    "site/scripts/prepare.mjs": "13327dc09cb1a3148eab2fa633553afaba966931c595c2aa4c8062f51cd3ef96",
+    "site/src/catalog.js": "5fde140e356b2d768ecdc3722926f614089989c2d0dfd10ba8cb522dae629478",
+    "README.md": "518dcb1733ad73d1702f79c5e76feb14db2f42f84dcb984d7d5fb88008dce322",
+    "protocol/migration.py": "93f5aef9b3766545baa5540a5425dd001b288552627b1df38fde10eb583fe0fd",
+    "protocol/migration_io.py": "8883dae3dda4809b605810b90b2ccea97f3451754be8cb7e06404150a1d2702e",
+    "scripts/migrate-assertion.py": "114010eb7fd8c873ae6b93124fe6ce7a386391d05f42f88c9a2978b8f1410e89",
+    "scripts/verify-assertion-migration.py": "f28588f1594b9d40bc725a6d5aece45273b0858cc28de5be220ed1c25143820e",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+    "spec/versions/0.2.0/assertion.schema.json": "868509d90049ee839e050615bdc3256ef91fc1837d18767323f052ed24e2aa48",
+    "tools/synthid_input.py": "b51e0cd8022d72b3efee3e2ef8aed803298ea6f907329d58375912ac0c120e38",
+    "scripts/inspect-synthid-input.py": "0033624c6896fb90ea1bd06c011e18d744a7c22d472bc3e0478abd735a4dffb5",
+    "scripts/setup-synthid-reference.py": "bbdf4b56aaf9255438e8b7a50990cef5a0d82bab09d5ff4bdfa45ba75524287b",
+    "scripts/synthid-reference-practice.py": "6d79bdce38875f7bda742e1c3187466ddd7ef4297340c55f66f549d253deb267",
+    "tools/organization_policy_registry.py": "71e8332710b21dcd72645c45600fa9fb3ea9a5afb48b68c0dc90f6da913e647d",
+    "tools/organization_policy_io.py": "7a3577c837a3582f1076ef8170edcf303314f98da3eb566bbb6326a9ced59a16",
+    "tools/organization_policy_worker.py": "3253de9583b517dfcd79c327229302f1e46b1f572c364b4f3891d7ec7f551058",
+    "scripts/organization-policy.py": "9941f91d343ff89af687e0bf7c508665f166a134bca847e543d6d90cb5af22c6",
+    "extension/src/shared/contract.js": "5250bacc684a6aae6a55d1f3f9c86e12e1422cf0520880e2507a0baa69efecd7",
+    "scripts/check-assertion.py": "478dcc71e9b795233c34dceeac38aea60e01ea58070528bc697ff893d759c955",
+    "protocol/replay.py": "2948a7894bc9c82f653f4347a67708303a1632a78ba25f8769460f14d11abbe6",
+    "services/gateway/app.py": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456"
+  },
+  "original_criteria": {
+    "base": "40d85dfabcd6a3d97b84977992d0523b0995c0d9",
+    "records": 202,
+    "complete": 136,
+    "open": 66,
+    "master_job_outcome_acceptance_exact": true,
+    "open_required_or_completed_fulfilled_required_exact": true,
+    "only_percent_changes": [
+      "F-155",
+      "N-001",
+      "N-010"
+    ],
+    "target60_met": false
+  },
+  "findings": {
+    "actionable_remaining": [],
+    "narrative_counts": "Previously identified stalecurrent133/69 and69/9 narrative now corrected to136/66 and66/6.",
+    "derived_guides": "Four ignored generatedreferencecopies currentlyexactsourcebytes. They are derivedoutputs, not cleanclonesourceinputs. Sourceoriginals+prepare bound; PMcommits to postbuild dist/source parity plusactualapex/uniquedeploymentHTTPbytes. No request to addgeneratedsourcepatterns or rerunprofiles."
+  },
+  "integration_checks": {
+    "protocol63_preserves_original61_commands_in_order": true,
+    "website59_commands_unchanged": true,
+    "new_module_CLI_schema_tests_vendor_sources_in_boundary_inventory": true,
+    "migration_module_IO_and_test_bound_by_existing_protocol_patterns": true,
+    "PRIVATE_catalogue_local_authority_not_real_organization_or_sale": true,
+    "source_guides_reference_copies_byte_exact": true,
+    "default_personal_route_and_live01_allowlists_unchanged": true,
+    "no_new_HTTP_or_browser_permission_or_tag_adoption": true,
+    "current_01_schema_and_live_consumer_sources_identical_to_base": true,
+    "new_feature_mechanism_bytes_match_their_distinct_reviews": true
+  },
+  "limits": [
+    "No expensive functional, browser, model or native suite executed by reviewer.",
+    "Finalwebsite profile was inprogress at review; protected source CI andactualsitepublication remain PM actions.",
+    "This review does not certify independent accuracy, legal clearance, realcompanyidentity or commercial agreement.",
+    "No root/sharedsource,scope,state,counter orreceipt edited by reviewer."
+  ],
+  "prior_review_sha256": "c5e7dd5594f86117075877bf1d1db54096522ae82fae767fcf002e79031b4cef"
+}

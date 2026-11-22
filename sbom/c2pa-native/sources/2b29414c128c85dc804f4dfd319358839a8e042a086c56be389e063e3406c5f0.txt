@@ -1,0 +1,26 @@
+[package]
+name = "pix"
+version = "0.14.0"
+description = "Pixel / raster image library"
+license = "MIT OR Apache-2.0"
+documentation = "https://docs.rs/pix"
+homepage = "https://github.com/DougLau/pix"
+repository = "https://github.com/DougLau/pix"
+readme = "README.md"
+keywords = ["pixel", "image", "rgb", "color"]
+edition = "2024"
+include = [
+    "src/**/*", "Cargo.*", "LICENSE-*", "README.md", "CHANGELOG.md",
+    "build.rs", "benches/**/*",
+]
+
+[dev-dependencies]
+criterion = "0.5"
+
+[[bench]]
+name = "src_over"
+harness = false
+
+[[bench]]
+name = "rgba_to_rgb"
+harness = false

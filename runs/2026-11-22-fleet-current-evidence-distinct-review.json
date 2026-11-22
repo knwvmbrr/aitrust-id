@@ -1,0 +1,65 @@
+{
+  "captured_at": "2026-11-22T04:56:56.815289+00:00",
+  "performed_by": "Codex /root/web_camo distinct read-only review",
+  "profile": "fleet-current-actual-evidence-distinct-review/v1",
+  "pass": true,
+  "source_commit_exact_compared": "1644b9daf1d912c0709ff375a9577393fa94c5f4",
+  "current_root_commit_at_review": "b504286aad2b74613e86c95a169c9a7d53f1dbf2",
+  "source_sha256": {
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "tools/fleet.py": "7b8d50160cf0f8e29698b77b70c01af5606e8876817435900bb9168fa0f89b16",
+    "scripts/fleet.py": "a9c25344c6eb889ecd2c477d9f465fc2fa24f9a27b4b2a07669363bacb18b9e6",
+    "tests/test_fleet.py": "be633693d7ed0a7178f8d4af4ff7ed42339a0005ffd8ad81bbf51521e3b83881",
+    "scripts/verify-fleet.py": "0a2a15a4196246ca3d0ac8dce81a62c45a9b3784cedbd57ae22040b9688de7d7",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "docs/fleet-deployment-plan.md": "5869ec331d653bef31874e6f1d75827b79fa103bf88daa79865866bd4d153253",
+    "docs/fleet-deployment.md": "8ae9fd2f0da39ba7c4bd65f2c5b8f966d4bd901678aa8892f30e7d250e1949b2",
+    "eval/requirements.lock": "d6020252107ce24dfc97f98976ee6a203f412078919cce0cd7027c806890e384",
+    "scripts/verify-fleet-linux.py": "2bb23d7f163fb2880281f8aeb13d4352b2483499ba1a2c88b216aaebf29020d3",
+    "scripts/verify-fleet-evidence.py": "a866ddd3b01d5dc336eee12cfb611d37f4bbd9562886cd43ee585152c6717cc1",
+    "tests/test_fleet_evidence.py": "02b50c21b268aee2b57483bb5b0c63dee2eed8c151b9b6824a7e71510d67a18f",
+    "tools/backup_retention.py": "ee585f1a50c0f41a0f9338777fbf0b6a5237ec1a2cf5f66f52411da496c52f64",
+    "deploy/backup/restore.py": "59df3bc4fcaf9b94c5751d639f285912079f45f9db5a1e824e950d59abd08cbc",
+    "protocol/reports.py": "838593296c9bf39cd26ef533a2509e669231cc6d02856d38f8c64e925f3f8a3d",
+    ".github/workflows/fleet.yml": "47dde968820c0dce081377865e346572e93be525f7ef8ecd39befbde71ff02f3"
+  },
+  "actual_receipts": {
+    "macos": {
+      "receipt_sha256": "05a4847aaa6c00213efd0150270247aa1337b051d9a88cb3918fbb9956b07f6c",
+      "captured_at": "2026-11-22T04:51:38.804703+00:00",
+      "platform": "darwin",
+      "python_version": "3.12.14",
+      "actual_case_names": 33,
+      "non_root": true,
+      "isolated_network_namespace": false
+    },
+    "linux": {
+      "receipt_sha256": "6014c5e950018bf47c4d325b2978a71ba8456966fcc0ef1e45df7241dcc607cd",
+      "captured_at": "2026-11-22T04:53:37.830652+00:00",
+      "platform": "linux",
+      "python_version": "3.13.18",
+      "actual_case_names": 33,
+      "non_root": true,
+      "isolated_network_namespace": true
+    }
+  },
+  "linux_public_copy_equals_retained_artifact": true,
+  "retained_job_status_sha256": "e68707f396c589d167e46c635a6be4185482069a5a5e713642fc1213e8b48a05",
+  "retained_successful_run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44986961563/job/137099523459",
+  "source_stable": true,
+  "reviewer_new_tests_or_runtime": 0,
+  "limits": [
+    "Retained job metadata/artifact inspected, no fresh network attestation or download. Root adds full authenticated GitHub source-head provenance.",
+    "Mac may precede source commit; its24actual source bytes equal immutable1644 and current source, no execution chronology rewrite.",
+    "33original selected synthetic CLI cases eachOS, not enrolled devices/commercial activation/human acceptance/physical phones or independent accuracy.",
+    "No full original reopening/closure or general availability assertion introduced."
+  ]
+}

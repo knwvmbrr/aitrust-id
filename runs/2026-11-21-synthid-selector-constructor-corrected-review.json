@@ -1,0 +1,30 @@
+{
+  "captured_at": "2026-11-22T02:31:46.810172+00:00",
+  "pass": true,
+  "reviewed_by": "Codex /root/seo",
+  "profile": "synthid-owned-process-correction-review/v1",
+  "source_sha256": {
+    "tools/synthid_input.py": "b51e0cd8022d72b3efee3e2ef8aed803298ea6f907329d58375912ac0c120e38"
+  },
+  "supersedes_finding_sha256": "afdfa61bc0c9d53c4ce70e0e5e47d877bf71791941a3bf3d227ba9b1d1bc5ceb",
+  "actual_controls": [
+    {
+      "case": "Original selector-constructor OSError after actual owned child launch",
+      "pass": true,
+      "child_reaped_before_return": true,
+      "returncode_populated": true
+    },
+    {
+      "case": "One real ordinary finite stdin/stdout worker",
+      "pass": true,
+      "exact_input_output_bytes_match": true
+    }
+  ],
+  "remaining_owned_children": 0,
+  "source_review": "Immediate try/finally now owns child before selector construction; optional selector and both pipes closed in nested cleanup; known-reaped PID guard retained.",
+  "limits": [
+    "Transport-only stdlib controls, no duplicate SDK/canonical matrix or full suite.",
+    "No source edits, installs, removal, network, services or browser execution by reviewer.",
+    "Full original F155 recommendation remains pending actual final install/use/removal/independent-personal-workflow evidence and integrated publication/source gates."
+  ]
+}

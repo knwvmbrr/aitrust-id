@@ -1,0 +1,65 @@
+{
+  "profile": "source-snapshot-v2-current-artifact-distinct-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T04:53:51.744665+00:00",
+  "reviewed_by": "/root/seo",
+  "findings": [],
+  "source_commit": "755040c0fef91b44a534d297b7e3e357b069eefd",
+  "author_receipt": {
+    "path": "runs/2026-11-22-source-snapshot-v2-current-artifact.json",
+    "sha256": "76972a705ed05851133279971da603f054aa8126d26a1685c0b5ec06dc122c2b"
+  },
+  "retained_private_receipt_byte_equals_public": true,
+  "bound_sources_match_current_and_exact_git_commit": 16,
+  "source_sha256": {
+    ".github/workflows/artifact-sbom.yml": "ddee07cc10c2ab04d7306bf91b6d1f625026ea61b4968d05fefe3eab5a505177",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "docs/distribution-artifact-sbom.md": "9850d93399dae6464278013af7ecf5ee958c9d02f4bd108f2ee3945cd51bc627",
+    "docs/source-snapshot-v2-plan.md": "05628fb13142c3ce8031df9980df65f43fb020d7eed23497c25b6920e9cddadb",
+    "eval/dependency-policy.json": "84cd00d8856954afcb0fd46920e528d0cc0372dc93141a5be544cd2540747951",
+    "scripts/build-source-snapshot.py": "a07d3642d5921e804277c12c16ad22cf388d65bae114810877b2b08e52ce6706",
+    "scripts/distribution-artifact.py": "15fb26b1fa0ef927e3bda554bf55f8cf011935a81cb660bead236f1d07be9d0a",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/verify-source-provenance.py": "cc0e9bbb83f1c844a9ca7cca69b063352a53c1ac311bef02d354f92bb5194215",
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tools/artifact_process.py": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86",
+    "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+    "tools/distribution_artifacts.py": "3540e7a5c9326148eef2183638fa5767259284d470701619e562fd2f14528be8"
+  },
+  "retained_artifacts": {
+    "source.tar.gz": {
+      "bytes": 33788351,
+      "sha256": "fe1f0eae013a06d13439762fb5c9158ba5d15f63789eba82c0a0f48fef20d8a1"
+    },
+    "source-binding.json": {
+      "bytes": 14585302,
+      "sha256": "74050cc71533655c6f570eaefb04b2d1b605a7fddc0ba09ff71e73578a1fbed3"
+    },
+    "source.spdx.json": {
+      "bytes": 8996070,
+      "sha256": "637cbaaacd3bebb9cb5d9283b7ff6db182ea84b082918794fc0991b55ce7ec43"
+    }
+  },
+  "exact_git_blob_oid_mode_node_projection_checked": 12516,
+  "source_bytes": 116452533,
+  "packet_spdx_graph_and_subject_bindings_match": true,
+  "actual_five_exit_records_match_retained_progress": true,
+  "all_five_actual_stdout_hashes_independently_reproduced_from_retained_products": true,
+  "initial_controller_and_post_product_reporting_failures_preserved": true,
+  "review_harness_correction": {
+    "initial_readonly_assertion_failed": "Compared SPDX canonical-object hash without its required emitted newline to the file digest.",
+    "correction": "Compared exact canonical-object-plus-newline bytes and digest; no producer command executed or product change."
+  },
+  "release_authorized": false,
+  "actual_sigstore_executed": false,
+  "license_clearance": false,
+  "full_F057_or_X02_closed": false,
+  "limits": [
+    "Read-only hash/JSON/Git tree/projection comparison; no build, producer command, archive decompression, native cache, SDK/browser/network/signing or test repeated.",
+    "Source artifact is exact755040c evidence; later enterprise receipt-refresh edits are separate and not covered as part of this earlier artifact.",
+    "Old37 controls and admittedPS export were not promoted or claimed newly executed."
+  ]
+}

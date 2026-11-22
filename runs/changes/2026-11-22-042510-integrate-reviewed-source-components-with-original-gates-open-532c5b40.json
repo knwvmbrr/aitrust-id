@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-042510-integrate-reviewed-source-components-with-original-gates-open-532c5b40",
+  "recorded_at": "2026-11-22T04:25:10.161963+00:00",
+  "author": "Codex PM /root; /root/web_camo; /root/seo; /root/share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d572882f4cb9b580aba9985e2f6a3b49382b74da",
+  "changed": "Integrated reviewed C2PA/NLI native-source graphs, fourteen artifact/SBOM adapters and protected signing workflow; registered their bounded checks and refreshed the current PS source download after worker hardening.",
+  "proves": "Two full new originals remain complete (N010/N001):135 complete,67 open. Actual37 CLI proof at31b distinguishes two actual archives from12 inert candidates; source graphs retain native/notice gaps. Current Linux organization workflow passes27 groups with19 matching source bindings.",
+  "limits": "F155 tag outcome and fullF057/X02 remain open. The guide-only source/graph-limit paragraph was clarified after the frozen31b proof; runtime bytes unchanged. Final current source-bound validation, actual protected signing and live publication remain pending.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155",
+    "F-057",
+    "X-02",
+    "F-096"
+  ],
+  "files": {
+    "docs/distribution-artifact-sbom.md": "672acc04e3dff8a50688de2d4a6b340a674e8aefe3ddb3916d8669d8f5b29cf0",
+    "docs/scope-progress.json": "9adcaa889d16744bb3e2866fa098a55844993126f4322019dec57cb889e04b54",
+    "docs/scope-progress.md": "f8d2865d3383dd70e11be4a30a8cf96bf1bfa1d25bce8cb26d3c0f361c4bc15f",
+    "docs/session-delivery.json": "f6e5dc658163beae1046b40ad7a1be0f7b5b54120c44fea46724d3c3752be0ff",
+    "eval/revalidation.json": "f02a236a2d6d97a7e1d3d55c57d674575f917bf35de9fbdfbab873e89adb8b6e",
+    "scripts/verify-route-boundaries.py": "921b8c57a386ba8f2d852d9eb3ae73db730ab6da8f3e07190574983ced6b679a",
+    "site/public/downloads/aitrust-id-ps-source.zip": "1720be1015f7ab1e295de97dbc503723b486209b2f7dc09e2ebd6130c6fb42d1",
+    "site/public/downloads/aitrust-id-ps-source.zip.sha256": "995957df20afaab5ed25a3bbdc0c90e5d9c3eb3c40b6319ed4c70a02d628849c",
+    "site/public/reference/public-scope.json": "eeccb836a4c7cf2fa554cac3a0acf9ce2167f42fbf0212e5a44174385a6bd880",
+    "site/src/public-scope.json": "eeccb836a4c7cf2fa554cac3a0acf9ce2167f42fbf0212e5a44174385a6bd880",
+    "site/src/scope-manifest.json": "7961c937c8126cf49ad0cc1aade4d4855c5b87beb756b1ca43a0692812253c2d",
+    "state.json": "cbc0824fccc664e1009380a4a3e20ab4bf216ad5c88a2328dcbb11cb7f84f6a9",
+    "runs/2026-11-22-organization-policy-worker-linux-ci.json": "60d7ef07e74b51ed604772f0b6af4f96cc85e3097d435e963ac047aa1f09dd2c",
+    "runs/2026-11-22-organization-policy-worker-linux-provenance.json": "c78a51d51c898a13d727bcc1e3bdf86a331f7356a195b37c3ed572284e06adbe"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-artifact-sbom-final-combined-cli.json",
+      "sha256": "69f18b86ec8bd4efc494f926ccfab094e82b34c863ab37f9c89c5533302d650c"
+    },
+    {
+      "path": "runs/2026-11-22-artifact-sbom-final-combined-distinct-review.json",
+      "sha256": "8c7ca7ab20403a53659603c5b56ccc28db11d7cc8d24124895bcdeb0c2b226d3"
+    },
+    {
+      "path": "runs/2026-11-22-organization-policy-worker-linux-provenance.json",
+      "sha256": "c78a51d51c898a13d727bcc1e3bdf86a331f7356a195b37c3ed572284e06adbe"
+    }
+  ],
+  "checks": []
+}

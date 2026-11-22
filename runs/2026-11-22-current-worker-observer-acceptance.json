@@ -1,0 +1,75 @@
+{
+  "captured_at": "2026-11-22T05:05:22.681136+00:00",
+  "profile": "current-observer-acceptance/v1",
+  "pass": true,
+  "checks": [
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-fleet-evidence.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "7805acffc2e456ab72908085045d9752a388735fb48a20cb7c7ac2be36e8c2e7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-organization-directory-evidence.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "b955e81730a460e9be051d3e5fcca85ed4316d8d8e6f59d942bce2536bad8881",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-hash-reports-evidence.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "d6a4a5e74474f94650fa9def1f7201ed0b7e6b4172f4bab1dc0edc91bdf904da",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-agent-output.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "e7cdc4dd281879403caced6ff2bcef0130d612d13c9847439efa140eb5d8b75f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-host-capture-evidence.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "02966605f457d8836aad5fd6db0fb275d68cb0bf456e0022f34b0302993d50da",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-conformance-delivery.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "2317748f4910787b0e120a2e3c56fc8d23cc6f27633d19ff9c8a16be6da444b8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "{python}",
+        "scripts/verify-organization-audit-evidence.py"
+      ],
+      "exit": 0,
+      "stdout_sha256": "38cb5190972038d779b529b2b0d24be1416d2c16a27ed708fc61f2240b5a1154",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "purpose": "Validate actual current observations before complete capability checks; no producer, database or browser run repeated.",
+  "new_original_closures": 0,
+  "independent_accuracy_evidence": false,
+  "original_complete": 135,
+  "original_open": 67
+}

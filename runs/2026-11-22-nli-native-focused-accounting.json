@@ -1,0 +1,46 @@
+{
+  "captured_at": "2026-11-22T03:40:25.458573+00:00",
+  "pass": true,
+  "format": "nli-native-focused-and-candidate-accounting/v1",
+  "current_focused": {
+    "methods": 9,
+    "pass": true,
+    "elapsed_seconds": 3.294,
+    "log_sha256": "e839e5eec5e5cff13138eba9efd8645aa84e8337cc806bf0f6a97a9fbebb6739"
+  },
+  "source_sha256": {
+    "tools/nli_native_obligations.py": "9bda146dc50f0be54fcc88f986098f4a0bc5a5d45719a53e53870da1ea114764",
+    "scripts/verify-nli-native-obligations.py": "c34b0b5cebe6e722794c36fb923c3f44ccd36cd185b41ed64db447047d2d4e1f",
+    "tests/test_nli_native_obligations.py": "1f80cbd71855b12a1b10e6243808cbf37555778c66756f559e773975516a9a4a",
+    "sbom/nli-native/manifest.json": "b3332fa5f473cadce44a257b78acb1be471ebd990b72bd5dcf21761d4966fbc5",
+    "sbom/nli-native/evidence.json": "5b6d4fd0b88eff23fe2d3512f551f42649e3af7b71aa60865e07605955696b32"
+  },
+  "preserved_initials": [
+    {
+      "stage": "isolated_test_discovery",
+      "outcome": "ImportError before any feature test executed; test harness now adds own repository root",
+      "log_sha256": "efd59a1f68c0ed48ed748d944a6b5b1bd80db996a517a01dbd57eb2c33f50672",
+      "feature_groups_executed": 0
+    },
+    {
+      "stage": "private_collection_metadata",
+      "outcome": "Interpret only root Cargo.toml for license-file selection; retain nested fixture bytes as opaque source data.",
+      "initial_error_class": "TOMLDecodeError"
+    },
+    {
+      "stage": "published_windows_source_expansion",
+      "initial_result": "bounded refusal before completing source parse; no package code executed",
+      "archive_sha256": "527fadee13e0c05939a6a05d5bd6eec6cd2e3dbd648b9f8e447c6518133d8580",
+      "initial_producer_sha256": "10dcc0bf36848e371197f15abc0705a4a00009165fdcef31a875f1756ecb441d",
+      "initial_expansion_cap": 100663296,
+      "correction": "Explicit128MiB streaming profile accepted before final collection; current actual complete replay succeeds."
+    },
+    {
+      "stage": "first_expected_graph_data",
+      "outcome": "Correctly refused unreferenced retained ORT publisher metadata; final evidence index explicitly binds that record."
+    }
+  ],
+  "no_first_attempt_all_pass_claim": true,
+  "package_or_model_code_executed": false,
+  "original_requirement_closed": false
+}
