@@ -7,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from tools.organization_audit_lab import hashes
 from tools.organization_audit import parse,require
 
-EVIDENCE='runs/2026-10-15-organization-audit-reviewed-linux.json'
+EVIDENCE='runs/2026-11-22-organization-audit-worker-ownership-linux.json'
 CASES={
  'actual_dedicated_database_install','existing_database_reinstall_refused','privileged_principal_enrollment_refused',
  'database_owner_cannot_be_tenant_principal','unaccepted_policy_refused','concurrent_first_append_serialized',
@@ -28,7 +28,7 @@ def verify(receipt):
     when=datetime.fromisoformat(receipt['captured_at']);require(when.tzinfo is not None and when<=datetime.now(timezone.utc))
     require(receipt['sources']==hashes())
     controls=receipt['controls'];require(len(controls)==len(CASES) and {c['case'] for c in controls}==CASES and all(c['pass'] is True for c in controls))
-    require(receipt['postgresql_version'].startswith('postgres (PostgreSQL) 18.') and receipt['pgbackrest_version']=='pgBackRest 2.59.3')
+    require((receipt['postgresql_version'],receipt['pgbackrest_version'])==('postgres (PostgreSQL) 18.7 (Ubuntu 18.7-1.pgdg24.04+5)','pgBackRest 2.60.1'))
     return {'pass':True,'actual_linux_controls':len(CASES),'executed_sources_current':True,'independent_tag_accuracy_evidence':False,'company_collection_enabled':False}
 
 def main():

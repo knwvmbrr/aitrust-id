@@ -1,0 +1,79 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-22T05:02:39.255420+00:00",
+  "profile": "selected-owned-worker-evidence-refresh/v1",
+  "completed_local_and_reused_profiles_only": true,
+  "source_sha256": {
+    "docs/remaining-worker-evidence-refresh-plan.md": "726300635e70cfe94ed251945b179075399de565ddd64573aa809b34a54a9cca",
+    "docs/remaining-worker-evidence-refresh-result.md": "456dada570970f51ad8a0dbf1e4991298ed65f6ddc9f0240ec874379173c9777",
+    ".github/workflows/host-capture.yml": "4410513638d0847430d905e4420e52ddae4190e38acab53100e3f75f65a3c584",
+    "scripts/verify-conformance-delivery.py": "5c04be61586aae55671f6b6389c6d4f8f275ebaf4377c2246c3ff70b83655b21",
+    "scripts/verify-host-capture-evidence.py": "1f85dbd9678568a33ea329ed886b1a6f0b3289fe28eab84e851a91b34c9dec10",
+    "scripts/verify-organization-audit-evidence.py": "f8b4e4a32958c06be988bda455a6f2a149a4b0a287e39cfcc2f28c01104fd1c2",
+    "tests/test_organization_audit.py": "660292b60366f858e7dd9c77ea18b5516d9f6f81312ed00ae88b23c5a21b8c23"
+  },
+  "selected_receipts": {
+    "runs/2026-11-22-conformance-worker-ownership.json": "98616922bcb78d07a8608310f70edd7a1c0153ef62245621ecc52e6999047efb",
+    "runs/2026-11-22-host-worker-ownership-macos.json": "68547e3f728249c9473294423d33cb65e0023efbf93e7ce1371088e4eeb043df",
+    "runs/2026-11-22-organization-audit-worker-ownership-linux.json": "350884ab64d60c372a975db99a4490005966a53e68ea169bbe21319785a6e4a7"
+  },
+  "conformance_actual": {
+    "reference_checks": 28,
+    "focused_tests": 12,
+    "source_unchanged": true,
+    "selector_frozen_before_capture": true
+  },
+  "host_macos_actual": {
+    "tests": 20,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source_unchanged": true,
+    "actual_foreground_pty": true
+  },
+  "audit_actual_reuse": {
+    "run": 44982217342,
+    "source_commit": "01fcec9bca21fe7023a3f0d2a2315618802d59b6",
+    "artifact_id": 14738700391,
+    "artifact_bytes": 7618,
+    "artifact_sha256": "0b10ecbfe7f909e433f51f1855a4fc084c2034c00c7fdfb40e164c65565b9510",
+    "original_captured_at": "2026-11-22T03:48:44.164456+00:00",
+    "original_receipt_bytes_preserved": true,
+    "actual_controls": 31,
+    "all22_current_sources_match": true,
+    "database_lab_rerun": false,
+    "selected_exact_environment": [
+      "postgres (PostgreSQL) 18.7 (Ubuntu 18.7-1.pgdg24.04+5)",
+      "pgBackRest 2.60.1"
+    ]
+  },
+  "actual_focused_controls": {
+    "audit_existing_and_exact_profile_refusals": 10,
+    "conformance_selector_controls": 12,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "preserved_audit_version_refusal": {
+    "actual_pgbackrest": "pgBackRest 2.60.1",
+    "previous_guard_required": "pgBackRest 2.59.3",
+    "subsequent_PM_technical_profile_approval": true,
+    "old_receipts_and_guides_unchanged": true
+  },
+  "host_linux_current_execution_pending": true,
+  "new_host_workflow_source_checks_only": true,
+  "new_host_workflow_executed": false,
+  "all_active_worker_evidence_current": false,
+  "historical_receipts_rewritten": false,
+  "new_credentials_or_services": false,
+  "production_changes": false,
+  "outside_person_acceptance": false,
+  "independent_accuracy_evidence": false,
+  "original_required_acceptance_changed": false,
+  "log_sha256": {
+    "conformance-worker-ownership-actual.log": "2317748f4910787b0e120a2e3c56fc8d23cc6f27633d19ff9c8a16be6da444b8",
+    "host-worker-ownership-macos-actual.log": "5cad025138272a0845943704df8647833e891481b86f5dff545d924f697c5783",
+    "remaining-worker-selectors-focused.log": "9fb44bf36c480d2b70f8d5ffb0dfbb55317c9848a1674c922141054e4496af4f",
+    "conformance-worker-selector-focused.log": "7a31e66378c8cfe7c15128f94cc1506ce059a413da978d80115e1e55e5e976e5"
+  }
+}

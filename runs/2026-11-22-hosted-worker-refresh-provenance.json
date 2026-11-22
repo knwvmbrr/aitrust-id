@@ -1,0 +1,59 @@
+{
+  "captured_at": "2026-11-22T04:56:40.593221+00:00",
+  "profile": "actual-current-hosted-worker-refresh/v1",
+  "pass": true,
+  "observations": [
+    {
+      "path": "runs/2026-11-22-directory-worker-ownership-linux.json",
+      "sha256": "8fd5413a4f9937b51a5625f87e9403b413879e6701811d75286a15505a1f9fca",
+      "source_files": 27,
+      "captured_at": "2026-11-22T04:55:19.018813+00:00"
+    },
+    {
+      "path": "runs/2026-11-22-hash-inbox-linux.json",
+      "sha256": "a803e89f93397480b033c1e873c8bfc96dcd843169ea5b66f7a1937dd938d3de",
+      "source_files": 22,
+      "captured_at": "2026-11-22T04:55:07.915262+00:00"
+    },
+    {
+      "path": "runs/2026-11-22-agent-output-linux.json",
+      "sha256": "811aac86568f809c85b374fb4e74a25afbd0017e2455b32d95ff47125eb91987",
+      "source_files": 17,
+      "captured_at": "2026-11-22T04:55:17.039912+00:00"
+    },
+    {
+      "path": "runs/2026-11-22-fleet-worker-ownership-linux.json",
+      "sha256": "6014c5e950018bf47c4d325b2978a71ba8456966fcc0ef1e45df7241dcc607cd",
+      "source_files": 24
+    }
+  ],
+  "hosted_runs": [
+    {
+      "id": 44986961563,
+      "name": "fleet-software",
+      "head": "1644b9daf1d912c0709ff375a9577393fa94c5f4",
+      "actual_cases": 33
+    },
+    {
+      "id": 44986961537,
+      "name": "organization-directory-software",
+      "head": "1644b9daf1d912c0709ff375a9577393fa94c5f4",
+      "actual_controls": 28,
+      "real_provider_and_database": true
+    },
+    {
+      "id": 44987087958,
+      "name": "private-hash-inbox-software",
+      "head": "b504286aad2b74613e86c95a169c9a7d53f1dbf2",
+      "actual_hash_cases": 29,
+      "actual_agent_tests": 33
+    }
+  ],
+  "all_current_bound_sources_verified": true,
+  "raw_artifact_bytes_preserved": true,
+  "old_receipts_modified": false,
+  "production_changed": false,
+  "real_person_or_organization_enrolled": false,
+  "independent_accuracy_evidence": false,
+  "additional_original_requirements_closed": 0
+}

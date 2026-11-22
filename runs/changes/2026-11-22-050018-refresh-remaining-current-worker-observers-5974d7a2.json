@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-050018-refresh-remaining-current-worker-observers-5974d7a2",
+  "recorded_at": "2026-11-22T05:00:18.635272+00:00",
+  "author": "Codex PM /root; author /root/share_debugger; reviewer /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "b504286aad2b74613e86c95a169c9a7d53f1dbf2",
+  "changed": "Selected new immutable conformance/host/audit observations and added the bounded isolated host-capture producer workflow.",
+  "proves": "Actual conformance28reference plus12focused passed. Separate source review confirms the host workflow retains20cases, source bindings and least privilege without new package installs or secrets.",
+  "limits": "Actual new host Linux run and exact-version audit acceptance are pending. Old observations remain unchanged; no new original closure or accuracy is claimed.",
+  "scope_ids": [
+    "F-119",
+    "F-120",
+    "F-160",
+    "F-161",
+    "F-096"
+  ],
+  "files": {
+    ".github/workflows/host-capture.yml": "4410513638d0847430d905e4420e52ddae4190e38acab53100e3f75f65a3c584",
+    "scripts/verify-conformance-delivery.py": "5c04be61586aae55671f6b6389c6d4f8f275ebaf4377c2246c3ff70b83655b21",
+    "scripts/verify-host-capture-evidence.py": "1f85dbd9678568a33ea329ed886b1a6f0b3289fe28eab84e851a91b34c9dec10",
+    "scripts/verify-organization-audit-evidence.py": "c0255f016d9b71597547274c5657db0e9eaa7587527e7c7ad3240cf7c30af464",
+    "docs/remaining-worker-evidence-refresh-plan.md": "c27de52c06fa93a1deac927737382bc4b64a78230a8847713a5032a9cd58e4a2",
+    "runs/2026-11-22-conformance-worker-ownership.json": "98616922bcb78d07a8608310f70edd7a1c0153ef62245621ecc52e6999047efb",
+    "runs/2026-11-22-remaining-worker-refresh-source-distinct-review.json": "075e2cb67824c521f3deed85a744a3b6da309538918dcf08d42cbe683331a7fe"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-conformance-worker-ownership.json",
+      "sha256": "98616922bcb78d07a8608310f70edd7a1c0153ef62245621ecc52e6999047efb"
+    },
+    {
+      "path": "runs/2026-11-22-remaining-worker-refresh-source-distinct-review.json",
+      "sha256": "075e2cb67824c521f3deed85a744a3b6da309538918dcf08d42cbe683331a7fe"
+    }
+  ],
+  "checks": []
+}

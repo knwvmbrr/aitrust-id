@@ -1,0 +1,38 @@
+{
+  "captured_at": "2026-11-22T05:02:32.546591+00:00",
+  "performed_by": "Codex /root/web_camo distinct read-only review",
+  "profile": "organization-audit-exact-auxiliary-tuple-review/v1",
+  "pass": true,
+  "reviewed_source_sha256": {
+    "scripts/verify-organization-audit-evidence.py": "f8b4e4a32958c06be988bda455a6f2a149a4b0a287e39cfcc2f28c01104fd1c2",
+    "docs/remaining-worker-evidence-refresh-plan.md": "726300635e70cfe94ed251945b179075399de565ddd64573aa809b34a54a9cca"
+  },
+  "actual_receipt_sha256": "350884ab64d60c372a975db99a4490005966a53e68ea169bbe21319785a6e4a7",
+  "actual_archive_sha256": "0b10ecbfe7f909e433f51f1855a4fc084c2034c00c7fdfb40e164c65565b9510",
+  "actual_archive_bytes": 7618,
+  "raw_receipt_equals_original_zip_member": true,
+  "actual_captured_at_preserved": "2026-11-22T03:48:44.164456+00:00",
+  "provided_hosted_run_id": 44982217342,
+  "source_commit_all22_compared": "01fcec9bca21fe7023a3f0d2a2315618802d59b6",
+  "current_sources_match_all22": true,
+  "exact_control_names_and_passes": 31,
+  "auxiliary_profile_exact": {
+    "PostgreSQL": "postgres (PostgreSQL) 18.7 (Ubuntu 18.7-1.pgdg24.04+5)",
+    "pgBackRest": "pgBackRest 2.60.1"
+  },
+  "pure_validation_controls": {
+    "current_actual_receipt_accepted": true,
+    "wrong_exact_tuples_refused": 2
+  },
+  "all_other_guard_logic_unchanged": true,
+  "isolation_cleanup_false_claim_guards_retained": true,
+  "source_stable": true,
+  "reviewer_database_or_producer_runs": 0,
+  "prior_review075_is_historical_before_tuple_selection": true,
+  "limits": [
+    "Version selection is explicitly PM-approved auxiliary Linux evidence only, not a production upgrade or broad version allowance.",
+    "No database/network/download/native test rerun; source identity and retained artifact compared. Root supplies authenticated hosted source-head provenance.",
+    "private_log_sha256 remains recorded evidence; original private log bytes were not inspected by this reviewer.",
+    "No physical erasure, real participant collection, independent accuracy, original-count or global license claim."
+  ]
+}

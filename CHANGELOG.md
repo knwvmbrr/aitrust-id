@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-050321-retain-current-conformance-host-and-audit-observations-7418da39
+
+Recorded 2026-11-22T05:03:21.035145+00:00 · Contributor: Codex PM /root; author /root/share_debugger; reviewer /root/web_camo · change
+
+- **Changed.** Retained actual current conformance and Mac host executions, reused an exact matching actual audit artifact, and selected its explicit auxiliary test profile.
+- **Evidence.** Conformance28+12 and host20 passed. Audit31 actual controls and22current source bindings match the retained hosted artifact; exact18.7/2.60.1 profile and wrong-profile refusals pass without rerunning the database lab. [Change record](./runs/changes/2026-11-22-050321-retain-current-conformance-host-and-audit-observations-7418da39.json).
+- **Not claimed.** Current host Linux20 still pending. No old observation was rewritten, production upgraded, legal approval issued or original count reduced beyond135 complete/67 open.
+
+
+### 2026-11-22-050018-refresh-remaining-current-worker-observers-5974d7a2
+
+Recorded 2026-11-22T05:00:18.635272+00:00 · Contributor: Codex PM /root; author /root/share_debugger; reviewer /root/web_camo · change
+
+- **Changed.** Selected new immutable conformance/host/audit observations and added the bounded isolated host-capture producer workflow.
+- **Evidence.** Actual conformance28reference plus12focused passed. Separate source review confirms the host workflow retains20cases, source bindings and least privilege without new package installs or secrets. [Change record](./runs/changes/2026-11-22-050018-refresh-remaining-current-worker-observers-5974d7a2.json).
+- **Not claimed.** Actual new host Linux run and exact-version audit acceptance are pending. Old observations remain unchanged; no new original closure or accuracy is claimed.
+
+
+### 2026-11-22-045859-retain-directory-hash-agent-current-review-e1a8c565
+
+Recorded 2026-11-22T04:58:59.112199+00:00 · Contributor: Codex PM /root; distinct reviewer /root/seo · change
+
+- **Changed.** Retained distinct source, execution-head, old-refusal and bounded privacy review of the fresh directory, inbox and agent observations.
+- **Evidence.** Pure evidence validators accept current actual records and reject unchanged older-source records; source identity and the selected two-theme view remain exact. [Change record](./runs/changes/2026-11-22-045859-retain-directory-hash-agent-current-review-e1a8c565.json).
+- **Not claimed.** Engineering observation review only, no operating commercial service, real organization/user enrollment or new original closure.135 complete/67 open.
+
+
+### 2026-11-22-045746-retain-current-isolated-worker-executions-ab141d68
+
+Recorded 2026-11-22T04:57:46.877727+00:00 · Contributor: Codex PM /root; authors and reviewers /root/seo and /root/web_camo · change
+
+- **Changed.** Retained actual current Mac/Linux worker observations and selected their source-bound website evidence without changing old receipts.
+- **Evidence.** Hosted Fleet33, real directory28, private inbox29 and agent33 passed against exact current bound sources; Mac and two-theme view are separately recorded. Actual enterprise panel acceptance now passes. [Change record](./runs/changes/2026-11-22-045746-retain-current-isolated-worker-executions-ab141d68.json).
+- **Not claimed.** Remaining host-capture, conformance and audit proof refreshes and final complete publication checks remain pending. No new original closure or detector accuracy claim;135 complete/67 open.
+
+
 ### 2026-11-22-045416-refresh-hash-and-agent-evidence-selectors-aca2b4ea
 
 Recorded 2026-11-22T04:54:16.576020+00:00 · Contributor: Codex PM /root; hash and agent recovery author /root/web_camo · change

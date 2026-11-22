@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from tools.conformance_vectors import load,sources,decode,EXITS
 from protocol.reports import write_report
-EVIDENCE='runs/2026-11-06-conformance-software-execution.json'
+EVIDENCE='runs/2026-11-22-conformance-worker-ownership.json'
 EXTRA=('scripts/verify-conformance-delivery.py','services/gateway/requirements.lock','eval/requirements.lock','package-lock.json')
 
 def require(value):
