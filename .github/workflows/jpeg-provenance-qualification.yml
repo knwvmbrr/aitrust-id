@@ -1,0 +1,55 @@
+name: jpeg-provenance-qualification
+on:
+  workflow_dispatch:
+  push:
+    branches: [codex/visual-evidence-baseline]
+    paths:
+      - 'tools/jpeg_provenance*.py'
+      - 'scripts/inspect-jpeg-provenance.py'
+      - 'scripts/verify-jpeg-provenance.py'
+      - 'tests/test_jpeg_provenance.py'
+      - 'tests/fixtures/jpeg-provenance-v1/**'
+      - 'docs/jpeg-provenance*.md'
+      - 'eval/c2pa-inspection.lock'
+      - 'eval/dependencies/c2pa-inspection.json'
+      - '.github/workflows/jpeg-provenance-qualification.yml'
+permissions:
+  contents: read
+jobs:
+  jpeg-native-qualification:
+    if: github.repository == 'knwvmbrr/aitrust-id'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.13'}
+      - name: Install existing hash-locked optional environment
+        run: |
+          set -eu
+          test "${GITHUB_REF}" = 'refs/heads/codex/visual-evidence-baseline'
+          python -m venv "$RUNNER_TEMP/jpeg-sdk"
+          "$RUNNER_TEMP/jpeg-sdk/bin/python" -m pip install --disable-pip-version-check --no-cache-dir --require-hashes -r eval/c2pa-inspection.lock
+      - name: Focused JPEG safety controls
+        run: |
+          set -eu
+          "$RUNNER_TEMP/jpeg-sdk/bin/python" -I -S -B -m unittest discover -s tests -p test_jpeg_provenance.py
+      - name: Actual synthetic signing and read-only CLI without network
+        run: |
+          set -eu
+          umask 077
+          mkdir -p output/verification
+          sudo unshare -n sh -c 'set -eu
+          test "$(readlink /proc/self/ns/net)" != "$(readlink /proc/1/ns/net)"
+          exec setpriv --reuid "$1" --regid "$2" --init-groups "$3" -I -B scripts/verify-jpeg-provenance.py' _ "$(id -u)" "$(id -g)" "$RUNNER_TEMP/jpeg-sdk/bin/python" > output/verification/jpeg-provenance-qualification.json
+      - name: Remove only owned disposable environment
+        if: always()
+        run: rm -rf -- "$RUNNER_TEMP/jpeg-sdk"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: jpeg-provenance-qualification
+          path: output/verification/jpeg-provenance-qualification.json
+          if-no-files-found: error
+          retention-days: 7

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-154604-jpeg-credential-native-candidate
+
+Recorded 2026-11-22T15:46:04.654981+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Added an isolated bounded JPEG credential/action CLI candidate and a read-only native qualification workflow using the existing locked optional SDK.
+- **Evidence.** Fifteen preliminary stdlib controls and one source-stable finite-report correction control pass; distinct source/workflow review is clear. Private bytes, source pins, action/signature/binding axes and owned child cleanup are explicit; PNG and text sources are unchanged. [Change record](./runs/changes/2026-11-22-154604-jpeg-credential-native-candidate.json).
+- **Not claimed.** Native signature, per-call public-anchor behavior and complete working acceptance remain pending the one approved disposable hosted run. No origin classification, FA/PA tag, full original closure, model, endpoint, account or local native installation.
+
+
 ### 2026-11-22-150014-nf-cleanup-correction-integration-4904c1a8
 
 Recorded 2026-11-22T15:00:14.939077+00:00 · Contributor: Codex · change
