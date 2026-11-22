@@ -1,0 +1,78 @@
+{
+  "format": "assertion-migration-execution/v1",
+  "captured_at": "2026-11-22T02:39:47.798450+00:00",
+  "pass": true,
+  "sources": {
+    "protocol/migration.py": "93f5aef9b3766545baa5540a5425dd001b288552627b1df38fde10eb583fe0fd",
+    "protocol/migration_io.py": "8883dae3dda4809b605810b90b2ccea97f3451754be8cb7e06404150a1d2702e",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "protocol/assertions.py": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb",
+    "protocol/replay_identity.py": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "scripts/migrate-assertion.py": "114010eb7fd8c873ae6b93124fe6ce7a386391d05f42f88c9a2978b8f1410e89",
+    "scripts/verify-assertion-migration.py": "f28588f1594b9d40bc725a6d5aece45273b0858cc28de5be220ed1c25143820e",
+    "scripts/check-assertion.py": "478dcc71e9b795233c34dceeac38aea60e01ea58070528bc697ff893d759c955",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+    "extension/src/shared/contract.js": "5250bacc684a6aae6a55d1f3f9c86e12e1422cf0520880e2507a0baa69efecd7",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+    "spec/versions/0.2.0/assertion.schema.json": "868509d90049ee839e050615bdc3256ef91fc1837d18767323f052ed24e2aa48",
+    "tests/test_assertion_migration.py": "c9d01f4aae4ae635640cd4631bef7ce9b41a3d6c4562f4caaf394c6259dc6350",
+    "tests/migration-reference.cjs": "8993f75015aa057815160d01af5f3aa23c4d3a55b2328df86048876b325c55e3",
+    "tests/fixtures/migration/complete.json": "32af2bcb4f24d7f09c5979ce0498aef7dc6d9e3291c2ccc4afb7e56f7aeaae91",
+    "tests/fixtures/migration/large-integer.json": "e2fb6cc6322143679b3314a61dcce9e7419e91a649b4d1ee4f6ebce2eb8d90f4",
+    "tests/fixtures/migration/README.md": "ad4d168c45359919945eaae921a9a3e15851db8811c6b16d252385d33cee0bfc",
+    "docs/protocol-migration-contract.json": "0af74701cd59616ece044f4ff09fe67a9b32ead9331902bbf164118d27b71f8d",
+    "docs/protocol-migration-plan.md": "585145a020c20a6ce3b5abdc6a7f1a865e61ab0a97a270b42019b35cd8254600",
+    "docs/assertion-migration.md": "84721a591596dc1f6fb6de707849468301d349de9de383bd66ae62893a109385",
+    "eval/requirements.lock": "d6020252107ce24dfc97f98976ee6a203f412078919cce0cd7027c806890e384",
+    "scripts/check-tags.py": "bb57e5e49b1f6a305eabc84e04df771402c6ad9cf8119c6acc94037d1fd184d0",
+    "scripts/worker_process.py": "ee73563027d7481f8990cc37ba57732f6eaef5c56ed476831f04612c468a82dd",
+    "scripts/aitrust.py": "0fb8dcbd48a80caa456f467d535c7ff079397fa9ed9505fed75aabcbfeaea5ab",
+    "services/gateway/app.py": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456",
+    "tests/test_draft_privacy.py": "bde3cf98b1555894215cf1e1d17a6de73990ef6bd35a429db144e69bffb0758f",
+    "tests/test_gateway_integration.py": "053d4ba1ee0a71fc161fd0b41501464a91d67f61459ff77f9af076e7b0e691c7",
+    "tests/test_gateway_cancellation.py": "7b71636f6c7de4b4e27b4f5c113ce1da47c2dce41be62fe02a698eaf21f34e45",
+    "tests/test_local_cli.py": "575d86b1f93e3915a056d70fdb059be98c9b1a015ec6938a62d6d506a10c663d",
+    "tests/replay_fixture.py": "293c963d5cd9e34f9583ed81ca39e82e987b3a97a703506d6e5b2f672770528a"
+  },
+  "source_unchanged_during_execution": true,
+  "checks": [
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_assertion_migration.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "5ebb29576b3ea5c0cf3b60838cff0f08b88bed5f202977ec62b8c8c02122b446"
+    },
+    {
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_draft_privacy.py::test_privacy_uses_only_redactor_and_exact_identity",
+        "tests/test_draft_privacy.py::test_privacy_never_bypasses_existing_controls",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "ea87cc94bd41bca2c7811342bce714dc408308e4020515bc88b75a0ec2741cf3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "exit_code": 0,
+  "synthetic_protocol_vectors_only": true,
+  "independent_accuracy_evidence": false,
+  "privacy_gateway_uses_synthetic_upstream": true,
+  "actual_recognizer_accuracy_measured": false,
+  "production_version_changed": false,
+  "release_approved": false
+}

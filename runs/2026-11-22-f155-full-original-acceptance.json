@@ -1,0 +1,44 @@
+{
+  "captured_at": "2026-11-22T02:43:28.345017+00:00",
+  "pass": true,
+  "scope_id": "F-155",
+  "kind": "full_original_functioning_software_acceptance",
+  "implementation_by": "/root/web_camo",
+  "reviewed_by": "/root/seo",
+  "accepted_by": "Codex PM /root under delegated engineering scope",
+  "original_master_unchanged": true,
+  "original_acceptance_sha256": "3d22d11ab22ee4f2aa4f32778a8695522c6ea92534b028873bdadcc771e5e665",
+  "original_required_acceptance": [
+    "Deliver SynthID and vendor watermarking. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
+  ],
+  "outcome": "Official bounded SynthID research input via existing CLI; actual selected-platform install/use/removal, full SDK parity and independent personal checks.",
+  "preimplementation_technical_contract": "docs/synthid-vendor-input-plan.md",
+  "evidence": [
+    {
+      "path": "runs/2026-11-21-f155-synthid-full-contract-independent-review.json",
+      "sha256": "2818b49090c129e4c553f8c9443c86dc72e31e0b02a277592d1d3075b387f580"
+    },
+    {
+      "path": "runs/2026-11-22-f155-root-integration.json",
+      "sha256": "4e670fbf6d090f6c47ca2ab3bfc97d4c549a5e410365cf37313f935a5d409479"
+    },
+    {
+      "path": "runs/2026-11-21-synthid-current-cli.json",
+      "sha256": "83fdcb3a6a0deb974fdee9ad3d2b235f8674fd944b42390472b95b198914126c"
+    },
+    {
+      "path": "runs/2026-11-21-synthid-install-removal-current.json",
+      "sha256": "cfedbb0ad24b7a7a2507e2b4a1fdf9b2b8e0937148026960afb23851ef1e8ad9"
+    },
+    {
+      "path": "runs/2026-11-21-synthid-final-portability-and-guide.json",
+      "sha256": "c94f01a1dac4f88f3a73b223ecea3de7f348c317fb97770f8fb55ad31aa5693b"
+    }
+  ],
+  "scope_or_acceptance_weakened": false,
+  "human_or_legal_acceptance_claimed": false,
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false,
+  "production_protocol_changed": false,
+  "normal_protected_publication": "Separate required final delivery action before reporting this batch delivered; this receipt does not claim a hosted CI or publication result."
+}

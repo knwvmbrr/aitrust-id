@@ -1,0 +1,18 @@
+{
+  "captured_at": "2026-11-22T02:52:32.881613+00:00",
+  "pass": true,
+  "kind": "website_prebuild_failure_diagnosis",
+  "failed_candidate": "runs/2026-11-22-three-originals-final-website.json",
+  "failed_candidate_sha256": "138f15be0016646b7fe5e5dbb91df9d0dfdc557ddd9a558f723c0e19ab8b5ff0",
+  "root_cause": "Website prebuild correctly refused five newly generated execution records lacking fresh changelog events. Runtime/site source failure was not established.",
+  "actual_changelog_errors": [
+    "New change missing fresh matching event: runs/2026-11-22-three-originals-final-extension.json",
+    "New change missing fresh matching event: runs/2026-11-22-three-originals-final-pii_redacted.json",
+    "New change missing fresh matching event: runs/2026-11-22-three-originals-final-protocol.json",
+    "New change missing fresh matching event: runs/2026-11-22-three-originals-final-ps.json",
+    "New change missing fresh matching event: runs/2026-11-22-three-originals-final-website.json"
+  ],
+  "correction": "Attribute completed execution records before website prebuild; record the protocol/website metadata correction before replacement executions. Preserve failed candidate unchanged.",
+  "original_requirements_closed_by_this_correction": 0,
+  "independent_accuracy_evidence": false
+}

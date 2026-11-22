@@ -112,8 +112,8 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 19,
-    "original_requirement_closures": 1
+    "finished_scoped_tasks": 22,
+    "original_requirement_closures": 4
   },
   "goals": {
     "minimum_finished_named_deliverables": 1,
@@ -1119,6 +1119,99 @@
           {
             "path": "runs/2026-11-21-android-pr140-automatic-review.json",
             "sha256": "0ee734c7351d591fd0db1155c5ead031cdea07e0b7254ca690ecce731a86a75b"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "session-n010-original-boundaries",
+      "original_ids": [
+        "N-010"
+      ],
+      "worker": "/root/share_debugger",
+      "status": "closed",
+      "deliverable": "Full original noncommercial personal/team/enterprise/proprietary policy-boundary contract, with original authority provenance and pre-sale conditions preserved.",
+      "done_evidence": [
+        "All original and applicable package clauses matched to functioning source and actual current Mac/Linux/normal hosted execution.",
+        "Distinct nonauthor original-contract review and explicit delegated technical authority adjudication; no human/company/sale/accuracy implication."
+      ],
+      "registered_at": "2026-11-22T02:25:06.195994+00:00",
+      "architecture": "docs/organization-policy-registry-plan.md",
+      "closure_record": {
+        "closed_at": "2026-11-22T02:25:06.195994+00:00",
+        "completed_by": "/root/share_debugger",
+        "verified_by": "/root/seo",
+        "integration_completed_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-22-n010-original-full-acceptance.json",
+            "sha256": "8d6f1450bba4593a06548b50b2ba34c8083a7a45e2587e1dd2df673b4de8e9ef"
+          },
+          {
+            "path": "runs/2026-11-22-n010-original-contract-distinct-review.json",
+            "sha256": "42c2b052126f1785aaaabb6c0f07919bdd71f8bdc423c8cbd1ef702f8444ad77"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "session-n001-full-original",
+      "original_ids": [
+        "N-001"
+      ],
+      "worker": "/root",
+      "status": "closed",
+      "deliverable": "Offline complete-identity migration, accepted before implementation; actual supported/refused private conversions, numeric roundtrips, current consumer compatibility and PS/privacy isolation.",
+      "done_evidence": [
+        "Complete current supported/failure execution, versioned sources and privacy/isolation controls.",
+        "Different full original-contract review; unchanged master and retained acceptance hash."
+      ],
+      "registered_at": "2026-11-22T02:43:28.345017+00:00",
+      "architecture": "docs/protocol-migration-plan.md",
+      "closure_record": {
+        "closed_at": "2026-11-22T02:43:28.345017+00:00",
+        "completed_by": "/root",
+        "verified_by": "/root/seo",
+        "integration_completed_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-22-n001-full-original-acceptance.json",
+            "sha256": "25f34a47ea1d3b75bd7d9973ee8576a3eecd4ceda83c1aa42406603e8ff1e86a"
+          },
+          {
+            "path": "runs/2026-11-22-n001-full-original-independent-review.json",
+            "sha256": "c3c32fdbff95e184583c990c0462909291b885ac7463f57e855d1035c9ea002d"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "session-f155-full-original",
+      "original_ids": [
+        "F-155"
+      ],
+      "worker": "/root/web_camo",
+      "status": "closed",
+      "deliverable": "Official bounded SynthID research input via existing CLI; actual selected-platform install/use/removal, full SDK parity and independent personal checks.",
+      "done_evidence": [
+        "Complete current supported/failure execution, versioned sources and privacy/isolation controls.",
+        "Different full original-contract review; unchanged master and retained acceptance hash."
+      ],
+      "registered_at": "2026-11-22T02:43:28.345017+00:00",
+      "architecture": "docs/synthid-vendor-input-plan.md",
+      "closure_record": {
+        "closed_at": "2026-11-22T02:43:28.345017+00:00",
+        "completed_by": "/root/web_camo",
+        "verified_by": "/root/seo",
+        "integration_completed_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-22-f155-full-original-acceptance.json",
+            "sha256": "82b5bc7e2738cb5afd570c22c6c75ea8b56f1e7fc6498211d3dacd1e930c62fd"
+          },
+          {
+            "path": "runs/2026-11-21-f155-synthid-full-contract-independent-review.json",
+            "sha256": "2818b49090c129e4c553f8c9443c86dc72e31e0b02a277592d1d3075b387f580"
           }
         ]
       }
@@ -5217,6 +5310,57 @@
           "sha256": "e54a7c4bc671207eb0f979839cca01c902b63a4c1fa039e9810c1894df7a50db"
         }
       ]
+    },
+    {
+      "id": "N-010",
+      "status": "verified_complete",
+      "reviewed_by": "/root/seo",
+      "verified_at": "2026-11-22T02:25:06.195994+00:00",
+      "original_acceptance_sha256": "86412bf6b6daeb348895e00223e83c8f45f3aa59f526a8d36c684e3b32281555",
+      "evidence": [
+        {
+          "path": "runs/2026-11-22-n010-original-full-acceptance.json",
+          "sha256": "8d6f1450bba4593a06548b50b2ba34c8083a7a45e2587e1dd2df673b4de8e9ef"
+        },
+        {
+          "path": "runs/2026-11-22-n010-original-contract-distinct-review.json",
+          "sha256": "42c2b052126f1785aaaabb6c0f07919bdd71f8bdc423c8cbd1ef702f8444ad77"
+        }
+      ]
+    },
+    {
+      "id": "N-001",
+      "status": "verified_complete",
+      "reviewed_by": "/root/seo",
+      "verified_at": "2026-11-22T02:43:28.345017+00:00",
+      "original_acceptance_sha256": "73292f15669bf0aded98f640a764ef19b899c87ba9d439968de90eca27e1295f",
+      "evidence": [
+        {
+          "path": "runs/2026-11-22-n001-full-original-acceptance.json",
+          "sha256": "25f34a47ea1d3b75bd7d9973ee8576a3eecd4ceda83c1aa42406603e8ff1e86a"
+        },
+        {
+          "path": "runs/2026-11-22-n001-full-original-independent-review.json",
+          "sha256": "c3c32fdbff95e184583c990c0462909291b885ac7463f57e855d1035c9ea002d"
+        }
+      ]
+    },
+    {
+      "id": "F-155",
+      "status": "verified_complete",
+      "reviewed_by": "/root/seo",
+      "verified_at": "2026-11-22T02:43:28.345017+00:00",
+      "original_acceptance_sha256": "3d22d11ab22ee4f2aa4f32778a8695522c6ea92534b028873bdadcc771e5e665",
+      "evidence": [
+        {
+          "path": "runs/2026-11-22-f155-full-original-acceptance.json",
+          "sha256": "82b5bc7e2738cb5afd570c22c6c75ea8b56f1e7fc6498211d3dacd1e930c62fd"
+        },
+        {
+          "path": "runs/2026-11-21-f155-synthid-full-contract-independent-review.json",
+          "sha256": "2818b49090c129e4c553f8c9443c86dc72e31e0b02a277592d1d3075b387f580"
+        }
+      ]
     }
   ],
   "primary_original_target": {
@@ -5784,7 +5928,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-21T23:12:57.420401+00:00",
+  "updated_at": "2026-11-22T02:43:28.345017+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -6297,36 +6441,36 @@
     "baseline_original_open": 69,
     "requested_original_open": 60,
     "required_new_original_closures": 9,
-    "actual_new_original_closures": 0,
+    "actual_new_original_closures": 3,
     "pm": "/root",
     "tasks": [
       {
         "worker": "/root",
-        "outcome": "Publish actual public API connection guide and exact downloads through protected source and Pages",
-        "status": "Guide actually published544711b4 and live example verified; strict-target correction integrated with separate review; shared protected closeout pending."
+        "outcome": "Three full originals accepted; publish integrated registry, protocol migration and optional vendor input through normal protected source and updated site.",
+        "status": "Final source-bound checks/publication in progress; target60 unmet."
       },
       {
         "worker": "/root/seo",
-        "outcome": "Audit all69 unchanged original acceptance contracts and implement any truly autonomous original closure",
-        "status": "All69/full202 acceptance audit complete; PS join published; distinct operator, JPEG, MT browser and strict-target code reviews complete. Worker finished."
+        "outcome": "Distinct full-original reviews and remaining-acceptance provenance audit.",
+        "status": "N010,N001,F155 reviewed; no real-human/accuracy/owner gates waived."
       },
       {
         "worker": "/root/share_debugger",
-        "outcome": "Independent MT additive grammar evidence distinguishes not-only/but-also from exclusive framing",
-        "status": "MT/FI CLI and separate MT browser development source published after distinct reviews. Worker finished; original release gates remain."
+        "outcome": "Complete actual14-route artifact/SBOM graphs and attestation verification; comprehensive licensing obligations preserved.",
+        "status": "Implementation active; no full F057/X02 closure claimed."
       },
       {
         "worker": "/root/web_camo",
-        "outcome": "Independent bounded image/provenance capability from actual existing source",
-        "status": "PNG/JPEG development source published; operator and strict-target corrections implemented and separately reviewed. Worker finished."
+        "outcome": "Exact official C2PA published dependency/source graph for independent image distribution and notice evidence.",
+        "status": "Implementation active; publishedcrate lock recovered, binary target/feature correspondence still bounded."
       }
     ],
     "historical_session_baseline_preserved": true,
     "acceptance_changes_permitted": false,
     "blocked_owner_and_independent_human_gates": "Skip for implementation; preserve in original acceptance and count.",
     "audit_evidence": "docs/nov21-autonomous-closure-audit.json",
-    "full_autonomous_original_candidates_found": 0,
-    "target_status": "NOT MET: all69 full originals retain unmet acceptance; no criteria were changed.",
+    "full_autonomous_original_candidates_found": 3,
+    "target_status": "NOT MET:66 originals remain open;6 more full closures needed.",
     "named_software_outcomes": [
       {
         "id": "MT-additive-CLI",
@@ -6446,8 +6590,32 @@
         "original_closure": false
       }
     ],
-    "updated_at": "2026-11-21T23:12:57.420401+00:00",
+    "updated_at": "2026-11-22T02:52:32.881613+00:00",
     "published_development_outcomes": 6,
-    "strict_target_status": "NOT MET:69originals open;9 full closures remain; minimum milestone is separate."
+    "strict_target_status": "NOT MET:66 originals open;6 full closures remain; minimum milestone is separate.",
+    "publication_status": "Local functioning acceptance complete; final source-bound checks and normal protected source publication pending.",
+    "prior_tasks_snapshot": [
+      {
+        "worker": "/root",
+        "outcome": "Publish actual public API connection guide and exact downloads through protected source and Pages",
+        "status": "Guide actually published544711b4 and live example verified; strict-target correction integrated with separate review; shared protected closeout pending."
+      },
+      {
+        "worker": "/root/seo",
+        "outcome": "Audit all69 unchanged original acceptance contracts and implement any truly autonomous original closure",
+        "status": "All69/full202 acceptance audit complete; PS join published; distinct operator, JPEG, MT browser and strict-target code reviews complete. Worker finished."
+      },
+      {
+        "worker": "/root/share_debugger",
+        "outcome": "Independent MT additive grammar evidence distinguishes not-only/but-also from exclusive framing",
+        "status": "MT/FI CLI and separate MT browser development source published after distinct reviews. Worker finished; original release gates remain."
+      },
+      {
+        "worker": "/root/web_camo",
+        "outcome": "Independent bounded image/provenance capability from actual existing source",
+        "status": "PNG/JPEG development source published; operator and strict-target corrections implemented and separately reviewed. Worker finished."
+      }
+    ],
+    "candidate_audit_correction": "Earlier zero-candidate audit was too broad. Original-contract provenance and complete implementations support N010,N001,F155; full202 IDs/remaining human gates preserved."
   }
 }

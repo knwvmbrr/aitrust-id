@@ -225,6 +225,12 @@ PATTERNS += ('AGENTS.md', 'tools/session_delivery.py', 'scripts/session-delivery
              'tests/test_nf_source_evidence.py', 'docs/nf-source-evidence.md',
              'docs/nf-source-evidence-plan.md', 'site/public/reference/nf-source-evidence.md')
 
+PATTERNS += ('scripts/migrate-assertion.py','scripts/verify-assertion-migration.py','spec/versions/*/assertion.schema.json','tests/test_assertion_migration.py','tests/migration-reference.cjs','tests/fixtures/migration/*','docs/protocol-migration-contract.json','docs/protocol-migration-plan.md','docs/assertion-migration.md','docs/organization-policy-acceptance.md')
+
+PATTERNS += ('tools/synthid_input.py','scripts/inspect-synthid-input.py','scripts/setup-synthid-reference.py','scripts/synthid-reference-practice.py','integrations/synthid-reference/**/*','tests/test_synthid_input.py','tests/fixtures/synthid-reference/**/*','docs/synthid-vendor-input*.md')
+
+PATTERNS += ('site/public/reference/organization-policy-registry.md','site/public/reference/organization-policy-acceptance.md','site/public/reference/assertion-migration.md','site/public/reference/synthid-vendor-input.md')
+
 def read_json(file):
     return read_evidence(file)
 

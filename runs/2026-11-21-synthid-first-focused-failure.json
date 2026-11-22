@@ -1,0 +1,24 @@
+{
+  "format": "ai-trust-id-engineering-result/v1",
+  "captured_at": "2026-11-22T02:25:34.910977+00:00",
+  "pass": false,
+  "phase": "first_focused_controls",
+  "tests": 13,
+  "passed": 9,
+  "failures": 2,
+  "errors": 2,
+  "diagnosis": [
+    "Three temp-file fixtures used macOS symlinked /var parent, correctly refused by no-follow profile. Use owned regular-directory temporary fixtures.",
+    "Optional import fixture failed to remove already-cached package attribute; force the selected import boundary instead."
+  ],
+  "source_sha256": {
+    "tools/synthid_input.py": "8b80f7a53f6633242c8e1a3f04951a43d7cff5529c3c0206a574d5218668b8e8",
+    "scripts/inspect-synthid-input.py": "aea23746b7a427117388ba4ad6605042e6927aa0a7a867aa3cb393ee91f6f449",
+    "scripts/check-tags.py": "bb57e5e49b1f6a305eabc84e04df771402c6ad9cf8119c6acc94037d1fd184d0",
+    "scripts/setup-synthid-reference.py": "bbdf4b56aaf9255438e8b7a50990cef5a0d82bab09d5ff4bdfa45ba75524287b",
+    "tests/test_synthid_input.py": "7592c0f79478f8642260f98a3dbaaf2072e6e40f17599e411246bb92dcf723a9"
+  },
+  "log_sha256": "a0e9caf6355b6b7524a1be5feb5bb447b14426c8c2c54f016cc99fadfad7999d",
+  "runtime_claim": false,
+  "original_requirement_closed": false
+}

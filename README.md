@@ -570,13 +570,17 @@ Optional [encrypted key backup and recovery](docs/key-recovery.md) runs offline,
 
 [Local reference similarity](docs/corpus-support.md) identifies matched passages without a truth verdict or NF/FI issuance.
 
+[Offline assertion migration](docs/assertion-migration.md) converts complete unsigned records between the existing format and a separate complete-identity format. Only the version changes; signed or incomplete history is refused. Production consumers stay on `0.1.0`.
+
+The optional [SynthID research input](docs/synthid-vendor-input.md) runs the pinned official reference computation on explicitly supplied generated token IDs. It is separate from personal text and tag results. It does not check pasted Gemini text, authenticate origin or issue a watermark tag. Personal PS keeps working if the optional SDK is missing or removed.
+
 The [staging pipeline timing tool](docs/pipeline-performance.md) measures the complete local redaction-plus-tagging route with synthetic inputs. Its 12 measured profiles keep phone/emulated timing, detector-only speed and full service duration separate; no latency budget or independent accuracy is claimed.
 
 The [reviewer-agreement tool](docs/reviewer-agreement.md) compares supplied MT
 labels locally and exports aggregate counts only. Run `python3 scripts/reviewer-agreement.py /path/to/private/ratings.json`.
 It checks consistency, not correctness or reviewer independence; MT remains planned.
 
-The optional [organization term-check component](docs/private-policy.md) applies a reviewed, file-bound literal policy locally. Its qualified private observations cannot rewrite public assertions. Run `python3 scripts/prepare-private-policy-demo.py --output /path/to/new/private/practice`, inspect the invented policy, then use `python3 scripts/check-private-policy.py --packet /path/to/new/private/practice --reviewed-policy`. Organization rollout and ownership remain open.
+The optional [local organization policy registry](docs/organization-policy-registry.md) separates tenant namespaces, credentials, policy revisions and per-job permissions. Run `python3 scripts/organization-policy.py --help`, then follow the invented practice workflow. A tenant pause or broken optional policy job cannot rewrite public tags or disable personal PS. [Technical acceptance](docs/organization-policy-acceptance.md) covers the original N-010 software boundaries; real organization identity, employee consent, legal ownership and terms agreed before sale remain separate obligations. No organization service is running or sold. The [earlier literal-term component](docs/private-policy.md) remains available.
 
 The [native engine verification guide](docs/native-engine-checks.md) separates exact bundled PS engine checks from phone acceptance. The [native Share developer workflow](docs/native-share-developer.md) passes five actual simulator UI workflows, including offline privacy/license access. The separate [App Store preparation](docs/app-store-readiness.md) has a saved app record and an inspected unsigned device archive. Signing, upload, physical-phone and independent tag acceptance remain open; no signed native phone app is offered.
 

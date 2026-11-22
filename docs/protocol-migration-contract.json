@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "kind": "preimplementation_technical_migration_acceptance",
+  "accepted_at": "2026-11-22T02:21:57.847306+00:00",
+  "accepted_by": "Codex PM /root under delegated engineering scope",
+  "authority": "Owner instructed continued implementation of full requirements without further owner involvement where already authorized. Governance fourteen-day rule applies to taxonomy; this offline schema conversion changes no taxonomy or live version allowlist. No Michael vote, institutional conformance or production adoption is claimed.",
+  "scope_id": "N-001",
+  "source_schema": {
+    "path": "spec/assertion.schema.json",
+    "wire_version": "0.1.0",
+    "sha256": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c"
+  },
+  "target_schema": {
+    "path": "spec/versions/0.2.0/assertion.schema.json",
+    "wire_version": "0.2.0",
+    "sha256": "868509d90049ee839e050615bdc3256ef91fc1837d18767323f052ed24e2aa48"
+  },
+  "routes": [
+    "0.1.0 -> 0.2.0",
+    "0.2.0 -> 0.1.0"
+  ],
+  "transformation": "Deep-copy record, replace only spec_version; every subject/tag/abstention/evaluator field and numeric representation type/precision is retained. Both endpoints validated.",
+  "supported_input": "Exact unsigned source-version records with every serialized preprocessing/configuration field present, self-consistent existing PipelineIdentity and no normalization/coercion required.",
+  "refusal_table": {
+    "missing_preprocessing": "Unavailable; legacy record unchanged, no identity fabricated",
+    "missing_defaulted_identity_field": "Unavailable; no defaults synthesized",
+    "signature_member_any_value": "Unavailable; no signature stripped or retained over changed bytes",
+    "unknown_version": "Unsupported before interpreting unknown fields",
+    "unknown_codes_or_invalid_source_schema": "Invalid; not invented abstention",
+    "external_schema_reference": "Unavailable; no resolution/network",
+    "schema_changed_or_missing_dependency": "Unavailable",
+    "existing_destination_or_unsafe_private_IO": "Unavailable; no overwrite",
+    "post_publication_durability_or_close_failure": "Unavailable with output_may_exist; no false rollback/retry promise"
+  },
+  "roundtrip": "Canonical JSON semantic object and exact int/float values/types survive unsigned1->2->1 and2->1->2; arbitrary source whitespace/key order is not preserved. Original file bytes never changed.",
+  "runtime_boundaries": [
+    "No current gateway/evaluator/extension/replay version allowlist changed.",
+    "Existing consumers must explicitly refuse0.2; downgrade produces current0.1-compatible record where that current consumer supports the unchanged capabilities.",
+    "No detector rerun, confidence change, signature verification, identity authenticity or historical replay availability inferred.",
+    "No HTTP endpoint, key creation, network/model call or raw response-text collection."
+  ],
+  "IO": "2MiB bounded scalar UTF8 unique-key finite JSON/depth64. Private no-follow captured input and explicit600 no-overwrite output in owned700 parent; default brief summary without record, path, hashes or exceptions.",
+  "acceptance": [
+    "Execute actual upgrade/downgrade/roundtrips on complete supported assertions.",
+    "Refuse signed/null-signature, incomplete identity, unknown/future versions, malformed/duplicate/nonfinite/surrogate/overlimit input without output or mutation.",
+    "Independently implemented Node lexical transformation agrees with Python on published canonical vectors, including0.0/int distinctions and integers beyond JS safe range.",
+    "Exercise existing Python schema/extension consumers and actual JS contract:0.2 unsupported, downgraded supported0.1 accepts.",
+    "Fault-check private publication uncertainty/FD lifecycle and preserve input/target schema fingerprints.",
+    "Run unrelated PS/privacy/capability paths under missing/invalid migration inputs; migration never changes their interfaces or availability.",
+    "Different reviewer verifies full original contract against executed source-bound evidence before any completion claim."
+  ],
+  "numeric_tag_gates": "Not applicable: no tag decision, score or method behavior changes."
+}

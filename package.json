@@ -90,7 +90,9 @@
     "test:hp-uncertainty": "python3 -m pytest tests/test_hp_uncertainty_device.py -q && node --test tests/hp-uncertainty-client.mjs",
     "verify:hp-uncertainty-site": "node scripts/verify-hp-uncertainty-site.cjs",
     "verify:runtime-js-sources": "python3 scripts/pyodide-js-sources.py",
-    "verify:hp-uncertainty": "node scripts/verify-hp-uncertainty-client.cjs"
+    "verify:hp-uncertainty": "node scripts/verify-hp-uncertainty-client.cjs",
+    "verify:migration": "python3 scripts/verify-assertion-migration.py --report output/verification/assertion-migration.json",
+    "migrate:assertion": "python3 scripts/migrate-assertion.py"
   },
   "devDependencies": {
     "playwright": "1.62.1",
