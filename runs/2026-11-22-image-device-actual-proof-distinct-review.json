@@ -1,0 +1,89 @@
+{
+  "profile": "image-device-actual-proof-distinct-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T07:20:13.527034+00:00",
+  "reviewed_by": "Codex / seo",
+  "reviewed_commit": "2460f154f097cf4b47306897fe152663e0c9f2f2",
+  "findings": [],
+  "source_review_sha256": "9d6a614b56f243e90f6b0f6db6a302da42892fab234bfc716765a12facea5105",
+  "author_receipt": {
+    "path": "runs/2026-11-22-image-device-browser-candidate-1.json",
+    "sha256": "e4ff049e12485078febc85a28cf7eb7b027aba54ffc5eb8c0b1b015845c14942",
+    "execution_started_at": "2026-11-22T07:16:58.431Z",
+    "finalized_at": "2026-11-22T07:17:43.704Z"
+  },
+  "independent_read_only_comparisons": {
+    "before_after_maps_equal": true,
+    "current_source_files_hashed": 34,
+    "served_files_hashed": 313,
+    "prior_reviewed_sources_unchanged": 19,
+    "manifest_build_inputs_current": 11,
+    "five_runtime_bytes_and_hashes_match": true,
+    "actual_bundle_sha256": "04fe19cbc1e4e712be393acc5ffc746e94f36ba78802ad18588a883c01d68a9f",
+    "actual_bundle_bytes": 26270,
+    "both_projected_modules_exact_selected_AST_segments": true
+  },
+  "actual_author_evidence_reviewed": {
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "whole_canonical_records_per_engine": 16,
+    "case_composition_from_fixed_source": {
+      "OBSERVED": 7,
+      "UNAVAILABLE": 9
+    },
+    "actual_File_UI_records_per_engine": 3,
+    "corrupt_UI_refusals_per_engine": 4,
+    "optional_chunk_and_payload_failures_each_restore_actual_MT_and_PS": true,
+    "intrinsic_size_preallocation_cancel_edit_clear_unmount_and_sibling_draft_controls": true,
+    "same_origin_GET_no_body_query_canary_and_empty_input_storage_observed": true,
+    "320px_text200_and_action44_light_dark": true,
+    "browser_finally_close_and_fixture_close_source_read": true,
+    "one_retained_WebKit_light_screenshot_visually_inspected": true
+  },
+  "source_sha256": {
+    "docs/image-device-plan.md": "97d63399537bb471f41dc0887bf6fd18cfbf916d1de2215b0635d4c4d067329b",
+    "docs/image-device-guide.md": "f6fe138f7bd4ee357b82149682724537ca6556cbb6eacb5ce6dd0397c5f71e8c",
+    "scripts/build-image-metadata-device.py": "2ba006ffb69b856d6cae93611872013e7ca1660e8ce81eca0db662a147f29882",
+    "scripts/build-image-metadata-fixture.mjs": "f304f628564b252aadc91bb520ebac5b8519c3956c0f1e60d70dd62f318f061c",
+    "scripts/image-metadata-device-cases.py": "07891e3d66e2675a292359add1cda33fc5613c6c22465f6b158c56e5441ebc17",
+    "scripts/verify-image-metadata-device.cjs": "fb9b48d12fec33a2bc6f86b1ce9245954a96921198f71224e980e98483e3e34a",
+    "site/image-metadata-fixture.html": "34b8633c289d1e8c958bce3a14e72754b14e05d9b85d965460bfef2f8b72c171",
+    "site/src/image-metadata-fixture.jsx": "790955274bab2c91b0ca1b5fd86faed958839b33e33669eecdb99397d438ff8e",
+    "site/src/ImageMetadataExplorer.jsx": "0e557a7dcf646e915e02b89b92ad949082f7d4c6d9ef99c0446a15136d88aa7a",
+    "site/src/ImageMetadataExplorerSlot.jsx": "c08fe234f18be550f4827b2b3a2c9c4b5be0cb69c9567c83dcf12b3be6b1389f",
+    "site/src/image-metadata-client.mjs": "00013a2cb593d0fc40957da17a11cbffc05c15a3d5afe2e9915e42f55ca771ca",
+    "site/src/image-metadata-result.mjs": "ec7e59257768fb96d4c4a03f1cf352504cdbbe8ccc89b42d2e03e8d99de300fd",
+    "site/src/image-metadata-worker.mjs": "d0efb21f127fd183b53abaacaf4fc2a15ac61f41feace64e56d83a33a5321ce9",
+    "tests/test_image_device.py": "017b6f453f801f384772fe3c64b8dd8df5e828d3e4088bb542bb53c6d9883fb2",
+    "tests/image-metadata-client.mjs": "bb597472352da192574939ef41ee41132ad24e40c19675844b1820269cc9fada",
+    "tests/image-fixture-output.mjs": "321bf9c79b53fbbbed7f4fad79f369db10b64fcab6b147e006d78ffd53239db2",
+    "integrations/image-metadata-reference/1.0.0/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "integrations/image-metadata-reference/1.0.0/NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "integrations/image-metadata-reference/1.0.0/projection.json": "1b52bfa875ae2bbc638aca600c49ceb66e2eb6d73cff5755db2e32720cfe1dea",
+    "integrations/image-metadata-reference/1.0.0/source.json": "3e66d919b4a6a289772266bd5cf5f6bfbfe9b144caf490b30c7c63dec902feeb",
+    "integrations/image-metadata-reference/1.0.0/tools/__pycache__/jpeg_metadata.cpython-312.pyc": "8128f78e45204ab35e0a72a98f9f9af7579191211124070a261bc21663a23945",
+    "integrations/image-metadata-reference/1.0.0/tools/__pycache__/png_metadata.cpython-312.pyc": "54084ae46789a4b77b33f5ec609ed196c52b58844608ca6caf53d54f662134b2",
+    "integrations/image-metadata-reference/1.0.0/tools/jpeg_metadata.py": "c7e8fcb58acd2087a35c886a32b7df1fa390c74c52c023e9b137bdf1dd90872a",
+    "integrations/image-metadata-reference/1.0.0/tools/png_metadata.py": "addd35028617f2d5c2cd01dc19106cec9946686cfe35139beb923af3973d6994",
+    "site/src/MTExplorer.jsx": "3ef945ff120e977cb9860bc3a15136df8d3b1db200df58bc128de5b468855032",
+    "site/src/mt-device-client.js": "c4ae3168af3d705e3707ef6ba143a35fc042a047c142dd6e6bbc05c6c3bb8c2e",
+    "site/src/mt-device-worker.js": "99cd033c5da6468c34de8c3c27dab663cd48dbad6a97c40577418b29e7b75197",
+    "site/src/handheld.jsx": "438815d794b55490d9ac68c209469d9f98f299c229f77315685a447457c9fbf8",
+    "site/src/device-client.js": "53e6e8fe5de3f6650bbd894f4af9138e92a7c697e0d827bdce13921edf3e39c5",
+    "site/src/device-worker.js": "b327e1c5984d954e3a2a6f369e3462b6ccc13d3e6d6db7fe56dd2dccfb0d39ee",
+    "site/src/styles.css": "baec654b988d03fa229ec32bfce4ec29a272430a278c832e585d4ef6015c58c7",
+    "site/src/mt-device-manifest.json": "171bc67cf7d6761bc7788eab238051f73402a1b72f35b62fcc1d128a1cd7abda",
+    "site/src/device-manifest.json": "b6bf6ffb3c662b88ff1c59b06e58ee442201803357a1c506b4b14844982e482f",
+    "sbom/nested-runtime/pyodide-wasm-release.json": "fda0196c527b3920744261e27ac93cb71637ad36cf127e450aeaf49f425dd86f"
+  },
+  "served_manifest_sha256": "e8a1eabd2cc8aaeb83b726a288f3fcefc1517ba3d846342dec32b9e493225bea",
+  "limits": [
+    "No independent browser/test/build/WASM/parser execution or network; read-only source/evidence/artifact comparison only.",
+    "Full-record comparison is against the frozen native canonical method, not an independent semantic or image-validity oracle. Sixteen canonical records include nine explicit unavailability outcomes, not sixteen supported image profiles.",
+    "One initial reviewer artifact-check harness assumed filename keys rather than actual png/jpeg keys; corrected harness passed without producer/source modification.",
+    "Generated existing PS manifest was expected fixture output and is source-bound in the actual receipt; no claim canonical/shared main source changed.",
+    "Standalone fixture acceptance only: production/main-site integration, publication, physical phones/Safari, image validity/authorship/AI-origin, credentials/watermark verification and original closure remain unclaimed."
+  ]
+}

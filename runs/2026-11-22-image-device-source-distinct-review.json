@@ -1,0 +1,63 @@
+{
+  "profile": "image-device-source-distinct-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T07:15:07.805722+00:00",
+  "reviewed_by": "Codex / seo",
+  "reviewed_commit": "2460f154f097cf4b47306897fe152663e0c9f2f2",
+  "findings": [],
+  "sources": {
+    "scripts/build-image-metadata-device.py": "2ba006ffb69b856d6cae93611872013e7ca1660e8ce81eca0db662a147f29882",
+    "scripts/build-image-metadata-fixture.mjs": "f304f628564b252aadc91bb520ebac5b8519c3956c0f1e60d70dd62f318f061c",
+    "scripts/verify-image-metadata-device.cjs": "fb9b48d12fec33a2bc6f86b1ce9245954a96921198f71224e980e98483e3e34a",
+    "scripts/image-metadata-device-cases.py": "07891e3d66e2675a292359add1cda33fc5613c6c22465f6b158c56e5441ebc17",
+    "site/src/image-metadata-client.mjs": "00013a2cb593d0fc40957da17a11cbffc05c15a3d5afe2e9915e42f55ca771ca",
+    "site/src/image-metadata-result.mjs": "ec7e59257768fb96d4c4a03f1cf352504cdbbe8ccc89b42d2e03e8d99de300fd",
+    "site/src/image-metadata-worker.mjs": "d0efb21f127fd183b53abaacaf4fc2a15ac61f41feace64e56d83a33a5321ce9",
+    "site/src/ImageMetadataExplorer.jsx": "0e557a7dcf646e915e02b89b92ad949082f7d4c6d9ef99c0446a15136d88aa7a",
+    "site/src/ImageMetadataExplorerSlot.jsx": "c08fe234f18be550f4827b2b3a2c9c4b5be0cb69c9567c83dcf12b3be6b1389f",
+    "site/src/image-metadata-fixture.jsx": "790955274bab2c91b0ca1b5fd86faed958839b33e33669eecdb99397d438ff8e",
+    "tests/image-fixture-output.mjs": "321bf9c79b53fbbbed7f4fad79f369db10b64fcab6b147e006d78ffd53239db2",
+    "tests/image-metadata-client.mjs": "bb597472352da192574939ef41ee41132ad24e40c19675844b1820269cc9fada",
+    "tests/test_image_device.py": "017b6f453f801f384772fe3c64b8dd8df5e828d3e4088bb542bb53c6d9883fb2",
+    "docs/image-device-plan.md": "97d63399537bb471f41dc0887bf6fd18cfbf916d1de2215b0635d4c4d067329b",
+    "docs/image-device-guide.md": "f6fe138f7bd4ee357b82149682724537ca6556cbb6eacb5ce6dd0397c5f71e8c",
+    "integrations/image-metadata-reference/1.0.0/projection.json": "1b52bfa875ae2bbc638aca600c49ceb66e2eb6d73cff5755db2e32720cfe1dea",
+    "integrations/image-metadata-reference/1.0.0/source.json": "3e66d919b4a6a289772266bd5cf5f6bfbfe9b144caf490b30c7c63dec902feeb",
+    "integrations/image-metadata-reference/1.0.0/tools/png_metadata.py": "addd35028617f2d5c2cd01dc19106cec9946686cfe35139beb923af3973d6994",
+    "integrations/image-metadata-reference/1.0.0/tools/jpeg_metadata.py": "c7e8fcb58acd2087a35c886a32b7df1fa390c74c52c023e9b137bdf1dd90872a"
+  },
+  "author_evidence": [
+    {
+      "path": "runs/2026-11-22-image-device-frozen-source-controls.json",
+      "sha256": "abdb7f698b0cbe20598d271d2843dc15c8b79d972c32d84d02fff23f6adfb089"
+    },
+    {
+      "path": "runs/2026-11-22-image-fixture-owned-output-controls.json",
+      "sha256": "d8d81b4c927f77bf446fe6a0f3e4c3a598cd8d337f884d156765f88e3f6272b7"
+    }
+  ],
+  "prior_projection_review_sha256": "13374c5801dbbade26208ad24824de5d0e656b7726403914fce174da66a6b7ba",
+  "independent_actual_controls": {
+    "fixed_projection_baselines": 2,
+    "source_or_node_rebind_refusals": 4,
+    "client_inert_groups": 3,
+    "intrinsic_Blob_size_spoof_refused_before_capture": true,
+    "cancel_aborts_capture_once": true,
+    "late_capture_after_deadline_creates_no_worker": true,
+    "existing_fixture_marker_preserved_on_refusal": true
+  },
+  "reviewed_boundaries": [
+    "Full original-source and every-node digest allowlist precedes projection; no arbitrary source or OS/process supervisor selected.",
+    "Fixed native dependency closure; bounded 10 MiB encoded input, 4 million header pixels, 32 MiB PNG inflated scanlines, metadata/chunk/marker/output caps. JPEG entropy is not decoded.",
+    "Fresh fixed-origin worker per explicit check; 10s manifest, 45s capture/startup, 6s evaluation; source/raw identity and closed primitive-only result validation, no raw metadata or filename result.",
+    "No input upload/storage/AI-origin inference/tag or C2PA authenticity claim; cancel/edit/clear/unmount stop ownership and discard stale results.",
+    "Static publisher spans outer-close uncertainty and never retries a released numeric descriptor. Fixture exclusively creates a 0700 output directory and never empties an existing namespace.",
+    "Fixture correction changes verifier source-list coverage and guide command only; canonical/client/worker/UI are unchanged."
+  ],
+  "limits": [
+    "Source/design clearance for one parent-authorized sequential Chromium/WebKit validation, not actual browser acceptance.",
+    "No full 11 Python/10 Node repeat, native image parser run, Pyodide/WASM, browser, network, build or installation by this reviewer.",
+    "Full-method equivalence remains the author native/projected controls plus pending actual browser parity; source binding is not cryptographic attestation of an observation.",
+    "No main-site integration, original-requirement closure, image validity, legal/accuracy/credential-authenticity or physical-device claim."
+  ]
+}

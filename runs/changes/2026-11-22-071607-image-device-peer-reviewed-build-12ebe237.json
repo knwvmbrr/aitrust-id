@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-071607-image-device-peer-reviewed-build-12ebe237",
+  "recorded_at": "2026-11-22T07:16:07.334207+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2460f154f097cf4b47306897fe152663e0c9f2f2",
+  "changed": "Bind the distinct frozen image component source review before its authorized standalone build and sequential browser execution.",
+  "proves": "Independent projection/source-pin/client/owned-output controls clear exact2460f154 source. Browser execution is next, not implied by source review.",
+  "limits": "No original/tag/main integration or image-origin claim; exact prior failures and source evidence remain historical.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA",
+    "F-155"
+  ],
+  "files": {
+    "runs/2026-11-22-image-device-source-distinct-review.json": "9d6a614b56f243e90f6b0f6db6a302da42892fab234bfc716765a12facea5105"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-image-device-source-distinct-review.json",
+      "sha256": "9d6a614b56f243e90f6b0f6db6a302da42892fab234bfc716765a12facea5105"
+    }
+  ],
+  "checks": []
+}

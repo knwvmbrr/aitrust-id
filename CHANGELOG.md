@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-072123-image-device-actual-browser-component-f071cd7a
+
+Recorded 2026-11-22T07:21:23.793717+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Finish the standalone private PNG/JPEG metadata workflow and retain exact actual Chromium/WebKit proof with a distinct source/artifact review.
+- **Evidence.** Actual firstbuild and firstbrowsercandidate pass: eachengine16 whole canonical records,3file-picker UI cases,4 corruptions refused, source/subject/size/privacy/lifecycle controls, optionalchunk/payloadfailure followedby real independentMT/PS findings.34sources/313servedfiles stable; distinctreview clears currentartifact. [Change record](./runs/changes/2026-11-22-072123-image-device-actual-browser-component-f071cd7a.json).
+- **Not claimed.** Standalone component only; no main/production integration, offline/physical/human/accuracy/origin/signature/tag/fulloriginal closure. New resultdoc is post-execution prose, not rebound UI proof.
+
+
+### 2026-11-22-071607-image-device-peer-reviewed-build-12ebe237
+
+Recorded 2026-11-22T07:16:07.334207+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Bind the distinct frozen image component source review before its authorized standalone build and sequential browser execution.
+- **Evidence.** Independent projection/source-pin/client/owned-output controls clear exact2460f154 source. Browser execution is next, not implied by source review. [Change record](./runs/changes/2026-11-22-071607-image-device-peer-reviewed-build-12ebe237.json).
+- **Not claimed.** No original/tag/main integration or image-origin claim; exact prior failures and source evidence remain historical.
+
+
 ### 2026-11-22-071403-image-fixture-exclusive-output-cbc49933
 
 Recorded 2026-11-22T07:14:03.205456+00:00 · Contributor: Codex / web_camo · change
