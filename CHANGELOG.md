@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-161407-version-bounded-source-snapshot-v3-aa4da53e
+
+Recorded 2026-11-22T16:14:07.047383+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Added a versioned256MB raw-source serializer with separate5MB metadata, streaming bounded inspection and unchanged historical v1/v2 modules.
+- **Evidence.** Small Git archive byte/result parity, exact metadata and framing controls passed; independent source reviews accept immutable historical modules, active consumers and one read-only hosted qualification workflow. [Change record](./runs/changes/2026-11-22-161407-version-bounded-source-snapshot-v3-aa4da53e.json).
+- **Not claimed.** Actual current greater-than128MB archive, full16 boundary controls,768MiB measured execution and graph/SPDX reconstruction remain pending on disposable Linux. No local large build, policy admission, source-signature claim, legal clearance or full F057/X02 completion.
+
+
 ### 2026-11-22-150014-nf-cleanup-correction-integration-4904c1a8
 
 Recorded 2026-11-22T15:00:14.939077+00:00 · Contributor: Codex · change

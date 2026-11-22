@@ -14,7 +14,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-import source_snapshot_v2 as source
+import source_snapshot_v3 as source
 import importlib.util
 spec = importlib.util.spec_from_file_location('verify_source', ROOT / 'scripts/verify-source-provenance.py')
 verifier = importlib.util.module_from_spec(spec)
@@ -361,7 +361,9 @@ def test_legacy_observer_module_stays_exact_and_v2_reuses_only_helpers():
     assert source.build is not source.legacy.build
     assert source.inspect is not source.legacy.inspect
     assert source.MAX_FILE == source.legacy.MAX_FILE == 32_000_000
-    assert source.MAX_TOTAL == source.legacy.MAX_TOTAL == 128_000_000
+    assert source.legacy.MAX_TOTAL == 128_000_000
+    assert source.MAX_TOTAL == 256_000_000
+    assert source.MAX_METADATA == 5_000_000
     assert source.MAX_ARCHIVE == source.legacy.MAX_ARCHIVE == 64_000_000
 
 
@@ -369,7 +371,8 @@ def test_v1_v2_small_archive_bytes_and_inspection_match(repo):
     sha = source.git(repo, 'rev-parse', 'HEAD').decode().strip()
     legacy_raw = source.legacy.build(repo, sha)
     current_raw = source.build(repo, sha)
-    assert current_raw == legacy_raw
+    import source_snapshot_v2 as previous
+    assert current_raw == legacy_raw == previous.build(repo, sha)
     assert source.inspect(current_raw, sha) == source.legacy.inspect(legacy_raw, sha)
     assert source.legacy.MAX_FILES == 10_000
 

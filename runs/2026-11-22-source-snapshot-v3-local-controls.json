@@ -1,0 +1,103 @@
+{
+  "actual_large_source_qualified": false,
+  "actual_local_controls": [
+    {
+      "core_sha256": "aa3d1579a624fc24145616463fb202d52dc4186132de0537f6fe940ac9eed793",
+      "errors": 0,
+      "failures": 0,
+      "role": "Pre-header-delta small source/parity/metadata controls",
+      "seconds": 0.349,
+      "tests": 4
+    },
+    {
+      "core_sha256": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+      "errors": 0,
+      "failures": 0,
+      "role": "Current header delta: actual small Git v1/v2/v3 byte parity and valid-baseline framing/header mutants",
+      "seconds": 0.176,
+      "tests": 2
+    }
+  ],
+  "actual_syntax": {
+    "python_sources_compiled": true,
+    "workflow_bash_syntax_checked": true,
+    "workflow_inline_python_compiled": true,
+    "workflow_yaml_parsed": true
+  },
+  "author": "Codex / share_debugger",
+  "captured_at": "2026-11-22T16:13:21.541922+00:00",
+  "independent_accuracy_evidence": false,
+  "legal_clearance": false,
+  "limits": [
+    "No local large archive, full16 boundary run, expansion/per-file/count/raw/compressed-cap execution, graph/SPDX regeneration, package install or browser/native work. Those are prepared for disposable Linux.",
+    "No active inventory or capability receipt was rewritten. Historical v1/v2 producer/source observations remain unchanged.",
+    "No protected signature, route permission, complete licensed distribution, independent accuracy or full F057/X02/original closure."
+  ],
+  "measured_base": {
+    "canonical_metadata_bytes": 2347273,
+    "earlier_128MiB_assumption_corrected": true,
+    "old_decimal_raw_limit": 128000000,
+    "raw_source_bytes": 128272227,
+    "source_files": 12817,
+    "v2_inspection_aggregate_bytes": 130619500
+  },
+  "peer_reviews": [
+    {
+      "path": "runs/2026-11-22-source-snapshot-v3-distinct-source-review.json",
+      "sha256": "160923eaee1c95bd2b56d74bc5f98168e6c0b04ee11465c77b470a1cc44c2067"
+    },
+    {
+      "path": "runs/2026-11-22-source-snapshot-v3-header-distinct-review.json",
+      "sha256": "c60e26080c6833ea6cb596961549b5f73b3702f4e165669bd9277ba628ef05bf"
+    }
+  ],
+  "prepared_hosted_qualification": {
+    "actual_current_source_bytes_must_exceed": 128000000,
+    "actual_graph_and_spdx_reconstruction_required": true,
+    "address_space_limit_bytes": 805306368,
+    "executed": false,
+    "focused_groups_expected": 16,
+    "json_report_limit_bytes": 64000,
+    "old_v2_actual_refusal_required": true,
+    "path": ".github/workflows/source-snapshot-v3.yml",
+    "trigger": "One ordinary push to exact codex/source-snapshot-v3; same-repository read-only filtered PRs also supported."
+  },
+  "preserved_findings": [
+    {
+      "correction": "Start a valid canonical one-byte source archive; baseline must pass before seven corruptions.",
+      "finding": "Generic framing negatives originally used an already-invalid empty source archive.",
+      "source": "Independent reviewer"
+    },
+    {
+      "correction": "Use a real different regular-member linkname header and assert actual bytes changed; current two groups pass.",
+      "finding": "Two-group header test first had one failure because tarfile ignores devmajor for regular-file serialization, making that supposed corruption identical.",
+      "product_failure": false,
+      "source": "Author inert fixture"
+    }
+  ],
+  "profile": "source-snapshot-v3-local-inert-controls/v1",
+  "release_authorized": false,
+  "source_base": "2f03b9de83daab98ed8633c80c12e9217a822799",
+  "source_sha256": {
+    ".github/workflows/source-snapshot-v3.yml": "61bc2a3017842c3884c4ace2b8b51edadf2bd06d9a44ad96028a3ea2c12c3922",
+    "docs/source-snapshot-v3-plan.md": "fccf74477c6bf68132a6af0afc1c0049a39b80edc19584b28fda8a4cd10a3126",
+    "scripts/build-source-snapshot.py": "2b5ab41bcf4a2ec72bd4baa835865c73bdfeda3df57122de175c13d78da772de",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+    "scripts/verify-source-provenance.py": "254dd2c351ffb6213e7530b57ea30b904fd0f1c5e6cc45a6a584e11b5bb42fa3",
+    "tests/test_distribution_artifacts.py": "584db6beb7fd03c4efb46195ddf42386fefbc6e8ccc3a2bf84cc42714ab30af4",
+    "tests/test_source_provenance.py": "8686ec115a3e02c8e28bbc5c0259bfc37b50148d167206d470046239138e3fe5",
+    "tests/test_source_snapshot_v3.py": "ad964f65d440228710a0ac360b84a3d215647cc616094e393a9fdfb419bf0896",
+    "tools/distribution_artifacts.py": "36d25317bf1a9f1557894fb62f8f6a36c62a7c3d8391fa5e7d8d539d928de8ab"
+  },
+  "v3_limits": {
+    "compressed_bytes": 64000000,
+    "file_bytes": 32000000,
+    "files": 16384,
+    "legacy_modules_modified": false,
+    "metadata_bytes_separate": 5000000,
+    "raw_source_bytes": 256000000,
+    "same_wire_profile": "aitrust-development-source/1.0.0"
+  }
+}

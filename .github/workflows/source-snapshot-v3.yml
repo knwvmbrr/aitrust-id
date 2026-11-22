@@ -1,0 +1,106 @@
+name: Bounded source snapshot v3
+on:
+  push:
+    branches: ['codex/source-snapshot-v3']
+  pull_request:
+    paths:
+      - '.github/workflows/source-snapshot-v3.yml'
+      - 'scripts/source_snapshot*.py'
+      - 'scripts/build-source-snapshot.py'
+      - 'scripts/verify-source-provenance.py'
+      - 'tools/distribution_artifacts.py'
+      - 'tests/test_source_snapshot_v3.py'
+      - 'tests/test_source_provenance.py'
+      - 'tests/test_distribution_artifacts.py'
+      - 'docs/source-snapshot-v3-plan.md'
+permissions:
+  contents: read
+jobs:
+  capacity:
+    if: github.repository == 'knwvmbrr/aitrust-id' && ((github.event_name == 'push' && github.ref == 'refs/heads/codex/source-snapshot-v3') || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {fetch-depth: 1, persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.13'}
+      - name: Execute bounded controls and a real larger committed-source artifact
+        timeout-minutes: 18
+        shell: bash
+        run: |
+          python -I -S -B - <<'PY'
+          import contextlib,datetime,hashlib,io,json,os,resource,shutil,subprocess,sys,unittest
+          from pathlib import Path
+          resource.setrlimit(resource.RLIMIT_CORE,(0,0))
+          resource.setrlimit(resource.RLIMIT_AS,(768*1024**2,768*1024**2))
+          root=Path.cwd();sys.path[:0]=[str(root),str(root/'scripts')]
+          import source_snapshot_v3 as source
+          import source_snapshot_v2 as previous
+          from tools import distribution_artifacts as a
+          stage=Path(os.environ['RUNNER_TEMP'])/'aitrust-source-v3';stage.mkdir(mode=0o700)
+          reports=root/'output/verification/source-capacity';reports.mkdir(parents=True)
+          result={'profile':'source-snapshot-v3-actual-ci/v1','captured_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            'pass':False,'actual_source_archive_executed':False,'protected_attestation_verified':False,
+            'license_clearance':False,'release_authorized':False,'independent_accuracy_evidence':False}
+          source_paths=['scripts/source_snapshot.py','scripts/source_snapshot_v2.py','scripts/source_snapshot_v3.py',
+            'scripts/build-source-snapshot.py','scripts/verify-source-provenance.py','tools/distribution_artifacts.py',
+            'tests/test_source_snapshot_v3.py','tests/test_source_provenance.py','tests/test_distribution_artifacts.py',
+            '.github/workflows/source-snapshot-v3.yml','docs/source-snapshot-v3-plan.md']
+          before={p:hashlib.sha256((root/p).read_bytes()).hexdigest()for p in source_paths}
+          result['failure_stage']='focused_controls'
+          try:
+            log=io.StringIO()
+            with contextlib.redirect_stdout(log),contextlib.redirect_stderr(log):
+              suite=unittest.defaultTestLoader.discover('tests',pattern='test_source_snapshot_v3.py')
+              tested=unittest.TextTestRunner(stream=log,verbosity=2).run(suite)
+            result['focused']={'tests':tested.testsRun,'failures':len(tested.failures),'errors':len(tested.errors),
+              'skipped':len(tested.skipped),'failed_test_ids':[str(t)for t,_ in tested.failures+tested.errors],'log_sha256':hashlib.sha256(log.getvalue().encode()).hexdigest()}
+            assert tested.testsRun==16 and tested.wasSuccessful()and not tested.skipped
+            assert shutil.disk_usage(stage).free>2*1024**3+64_000_000
+            result['failure_stage']='actual_source_build'
+            commit=source.git(root,'rev-parse','HEAD').decode().strip();artifact=stage/'source.tar.gz'
+            completed=subprocess.run([sys.executable,'-I','-S','-B','scripts/build-source-snapshot.py',
+              '--commit',commit,'--output',str(artifact)],capture_output=True,timeout=600,check=False)
+            assert len(completed.stdout)<16_000 and len(completed.stderr)<16_000
+            result['build_cli']={'exit':completed.returncode,'stdout_sha256':hashlib.sha256(completed.stdout).hexdigest(),
+              'stderr_sha256':hashlib.sha256(completed.stderr).hexdigest()}
+            assert completed.returncode==0
+            raw=source.read_file(artifact,source.MAX_ARCHIVE);observed=source.inspect(raw,commit)
+            assert observed['source_bytes']>previous.MAX_TOTAL
+            assert observed=={k:v for k,v in json.loads(completed.stdout).items()if k!='pass'}
+            result['failure_stage']='legacy_capacity_refusal'
+            try:previous.inspect(raw,commit)
+            except ValueError:result['legacy_v2_larger_archive_refused']=True
+            else:raise AssertionError('Historical capacity must not be silently changed')
+            result['failure_stage']='current_graph_and_spdx'
+            packet=a.prepare('source-snapshot',artifact,commit)
+            a.publish_bound(packet,artifact,'source-snapshot',commit,stage/'packet.json')
+            a.verify_packet(packet,artifact,'source-snapshot',commit)
+            a.publish_bound(packet,artifact,'source-snapshot',commit,stage/'spdx.json',spdx_only=True)
+            result.update(actual_source_archive_executed=True,source_commit=commit,event_sha=os.environ['GITHUB_SHA'],
+              artifact=observed,packet_sha256=hashlib.sha256((stage/'packet.json').read_bytes()).hexdigest(),
+              spdx_sha256=hashlib.sha256((stage/'spdx.json').read_bytes()).hexdigest(),
+              graph_nodes=len(packet['graph']['nodes']),packet_bytes=(stage/'packet.json').stat().st_size,
+              spdx_bytes=(stage/'spdx.json').stat().st_size,source_sha256=before)
+            assert packet['policy']['release_allowed']is False and packet['release_authorized']is False
+            result['source_stable']=before=={p:hashlib.sha256((root/p).read_bytes()).hexdigest()for p in source_paths}
+            assert result['source_stable']
+            result['pass']=True
+            result.pop('failure_stage',None)
+          finally:
+            result['peak_self_rss_kib']=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+            result['peak_children_rss_kib']=resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss
+            result['address_space_limit_bytes']=768*1024**2
+            body=json.dumps(result,sort_keys=True)+'\n'
+            assert len(body.encode())<=64_000
+            (reports/'result.json').write_text(body)
+          PY
+      - name: Retain only bounded qualification JSON
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: source-capacity-v3-proof
+          path: output/verification/source-capacity/result.json
+          if-no-files-found: error
+          retention-days: 7
