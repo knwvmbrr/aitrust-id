@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-22T07:08:07.646829+00:00",
-  "active_increment": "Protected source cd3 and actual public site verified;135 complete67 open. Integrating complete reviewed F145 reference design and optional independent selected-pair MT browser preview; no additional original closure counted yet.",
-  "status": "protected_live135complete67open; reviewed_F145_and_MT_integrated_for_next_delivery;target60_unmet",
+  "updated": "2026-11-22T07:46:12.328357+00:00",
+  "active_increment": "Completed F145 whole nonoperating reference-programme job after protected/public verification.136originalscomplete66open. Optional MT preview live; image metadata production integration and qualified MCP artifact packaging continue independently.",
+  "status": "136complete66open_target60_unmet; F145_reference_programme_complete_and_MT_preview_live;image_and_MCP_work_active",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-11-22-current-protected-site-publication.json",
+    "evidence": "runs/2026-11-22-programme-mt-live-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Host-specific MCP configuration and user-interface acceptance beyond the official SDK client",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://cf4df1d6.aitrust-id.pages.dev",
+    "deployment_url": "https://f0c559e3.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-11-22-current-protected-site-publication.json",
+    "publication_evidence": "runs/2026-11-22-programme-mt-live-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 37,
@@ -1224,7 +1224,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-22T07:08:07.646829+00:00",
+  "updated_at": "2026-11-22T07:46:12.328357+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3207,21 +3207,21 @@
     "publication": "runs/2026-11-06-agent-protected-publication.json"
   },
   "last_protected_publication": {
-    "merge_commit": "cd3beab02774fa939e3a2bd8a0d87913d9e8fd81",
+    "merge_commit": "69298f3656ece0a0c419348085c486ff706e3aa0",
     "publicly_verified": true,
     "required_checks_passed": 11,
-    "evidence": "runs/2026-11-22-current-protected-site-publication.json",
+    "evidence": "runs/2026-11-22-pr148-protected-delivery-review.json",
     "normal_protected_merge": true
   },
   "scope_target_current": {
     "records": 202,
-    "complete": 135,
-    "open": 67,
+    "complete": 136,
+    "open": 66,
     "target_open": 0,
-    "closures_needed": 67,
+    "closures_needed": 66,
     "ledger": "docs/scope-progress.json",
     "intermediate_target_open": 60,
-    "intermediate_closures_needed": 7,
+    "intermediate_closures_needed": 6,
     "completion_objective": "Zero open original requirements, with actual full acceptance; owner/external steps remain explicit while other engineering continues.",
     "immediate_target_source": "docs/session-delivery.json"
   },
@@ -3277,22 +3277,23 @@
     "publication": "runs/2026-11-07-scope-72-live-publication.json"
   },
   "production_publication": {
-    "status": "protected_main_live_selected_artifacts_byte_verified",
-    "source_commit": "cd3beab02774fa939e3a2bd8a0d87913d9e8fd81",
-    "deployment_url": "https://cf4df1d6.aitrust-id.pages.dev",
+    "status": "protected_source_live_HTTP_and_actual_MT_browser_verified",
+    "source_commit": "69298f3656ece0a0c419348085c486ff706e3aa0",
+    "deployment_url": "https://f0c559e3.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-22-current-protected-site-publication.json",
-    "selected_files_per_origin": 70,
-    "matched_http_responses": 140,
+    "evidence": "runs/2026-11-22-programme-mt-live-publication.json",
+    "browser_evidence": "runs/2026-11-22-programme-mt-live-browser.json",
+    "protected_review": "runs/2026-11-22-pr148-protected-delivery-review.json",
+    "selected_files_per_origin": 63,
+    "matched_http_responses": 126,
     "origins": 2,
-    "full_artifact_byte_equivalence_claimed": false,
     "scope_records": 202,
-    "completed_requirements": 135,
-    "open_requirements": 67,
+    "published_scope_complete": 135,
+    "published_scope_open": 67,
+    "next_scope_projection_update_pending": true,
     "independent_tag_accuracy_approved": false,
-    "real_collection_enabled": false,
     "public_app_store_released": false,
-    "formation_filed": false
+    "real_collection_enabled": false
   },
   "pii_separator_correction": {
     "status": "source_and_website_published_verified",
@@ -4370,6 +4371,24 @@
       "public_app_store_released": false,
       "formation_filed": false,
       "metadata_only_followup": true
+    },
+    {
+      "status": "protected_main_live_selected_artifacts_byte_verified",
+      "source_commit": "cd3beab02774fa939e3a2bd8a0d87913d9e8fd81",
+      "deployment_url": "https://cf4df1d6.aitrust-id.pages.dev",
+      "public_url": "https://aitrustid.com",
+      "evidence": "runs/2026-11-22-current-protected-site-publication.json",
+      "selected_files_per_origin": 70,
+      "matched_http_responses": 140,
+      "origins": 2,
+      "full_artifact_byte_equivalence_claimed": false,
+      "scope_records": 202,
+      "completed_requirements": 135,
+      "open_requirements": 67,
+      "independent_tag_accuracy_approved": false,
+      "real_collection_enabled": false,
+      "public_app_store_released": false,
+      "formation_filed": false
     }
   ],
   "session_delivery_closeout": {
@@ -4655,48 +4674,23 @@
     ]
   },
   "original_closure_wave": {
-    "recorded_at": "2026-11-21T14:33:27.554593+00:00",
-    "architecture": "docs/original-closure-wave-nov21.md",
-    "board": "docs/session-delivery.json",
-    "original_complete": 135,
-    "original_open": 67,
+    "updated_at": "2026-11-22T07:46:12.309925+00:00",
+    "baseline_complete": 132,
+    "baseline_open": 70,
+    "original_complete": 136,
+    "original_open": 66,
     "target_open": 60,
-    "F030_status": "Accepted completed-response DOM alternative; actual live attachment, outage, recovery and final pause verified.",
-    "N010_status": "Full unchanged technical organization-policy boundary contract accepted; presale legal ownership and no operating commercial service remain explicit.",
-    "open_AI_client_connection": "Public trusted HTTPS/MCP service operational; updated address instructions ready for publication; actual provider-account connection separate.",
-    "no_original_closure_claimed": false,
     "new_original_closures": [
       "F-030",
       "N-010",
-      "N-001"
+      "N-001",
+      "F-145"
     ],
-    "remaining_to60": 7,
-    "updated_at": "2026-11-22T04:37:29.411744+00:00",
-    "prior_state_snapshot": {
-      "recorded_at": "2026-11-21T14:33:27.554593+00:00",
-      "architecture": "docs/original-closure-wave-nov21.md",
-      "board": "docs/session-delivery.json",
-      "original_complete": 133,
-      "original_open": 69,
-      "target_open": 60,
-      "F030_status": "current local service unavailable; installed capture off and key unselected; no unsigned or changed-source substitution",
-      "N010_status": "independent tenant policy implementation assigned",
-      "open_AI_client_connection": "remote HTTP/MCP implementation assigned; existing published tools are local only",
-      "no_original_closure_claimed": true,
-      "new_original_closures": [
-        "F-030"
-      ],
-      "remaining_to60": 9
-    },
-    "original_closures_verified": 3,
-    "new_full_originals_this_increment": [
-      "N-010",
-      "N-001"
-    ],
-    "F155_status": "Optional SDK input functioning; supported tag workflow absent; original open at60.",
-    "publication_pending": false,
-    "current_protocol_failure": "runs/2026-11-22-combined-current-protocol.json",
-    "repair": "Version expanded source serializer while preserving exact immutable v1 observer source and observations."
+    "original_closures_verified": 4,
+    "remaining_to60": 6,
+    "full_F145_acceptance": "runs/2026-11-22-f145-full-original-acceptance.json",
+    "independent_tag_release_claimed": false,
+    "next_scope_projection_publication_pending": true
   },
   "remote_tag_connection": {
     "enhancement_id": "ENH-REMOTE-TAG-CONNECTION",
@@ -4724,7 +4718,7 @@
     "baseline_complete": 133,
     "baseline_open": 69,
     "target_open": 60,
-    "actual_new_original_closures": 2,
+    "actual_new_original_closures": 3,
     "audit": "docs/nov21-autonomous-closure-audit.json",
     "guide_source_independent_review": "runs/2026-11-21-public-api-guide-independent-review.json",
     "guide_actual_publication_pending": false,
@@ -4737,8 +4731,8 @@
     "protected_CI_review": "runs/2026-11-21-pr145-required-ci-review.json",
     "guide_actual_example": "runs/2026-11-21-public-guide-published-PS-example.json",
     "additional_JPEG_development_handoff": "runs/2026-11-21-additional-jpeg-development-handoff.json",
-    "original_complete": 135,
-    "original_open": 67,
+    "original_complete": 136,
+    "original_open": 66,
     "target_met": false,
     "MT_browser_development_handoff": "runs/2026-11-21-mt-browser-development-handoff.json",
     "six_outcomes_and_actual_target_evidence": "runs/2026-11-21-six-outcomes-strict-target-integration.json",
@@ -4746,9 +4740,10 @@
     "N010_full_original_acceptance": "runs/2026-11-22-n010-original-full-acceptance.json",
     "full_functioning_closures": [
       "N-010",
-      "N-001"
+      "N-001",
+      "F-145"
     ],
-    "publication_status": "protected cd3 merged; actual70 selected files on both public origins match; next F145 and MT delivery integrated locally",
+    "publication_status": "Programme and MT source692 protected/public delivery verified. Ledger136/66 projection awaits next protected publication.",
     "current_boundary_evidence": "runs/2026-11-22-three-originals-reference-boundaries.json",
     "F155_component_not_full_original": "runs/2026-11-22-f155-original-completion-correction.json",
     "source_component_integration": "d572882f4cb9b580aba9985e2f6a3b49382b74da",
@@ -4793,7 +4788,7 @@
     "next_F145_reference_design": {
       "source_commit": "228ebf458853628c78112204790bd70525ec5f5d",
       "public_branch": "codex/f145-reference-program",
-      "status": "Complete reference runtime and discoverability integrated; current code review and prepared reference copies accepted. Current integrated CI/browser and protected/public delivery pending.",
+      "status": "Full unchanged original completed after actual protected/public source and guide delivery; no operating institution/accreditation.",
       "operating_accreditation_claimed": false,
       "discovery_review": "runs/2026-11-22-f145-discovery-distinct-integration.json"
     },
@@ -4806,7 +4801,8 @@
       "protocol": "runs/2026-11-22-programme-mt-corrected-protocol.json",
       "website": "runs/2026-11-22-programme-mt-website.json"
     },
-    "programme_MT_current_boundary": "runs/2026-11-22-programme-mt-boundaries.json"
+    "programme_MT_current_boundary": "runs/2026-11-22-programme-mt-boundaries.json",
+    "F145_full_original_acceptance": "runs/2026-11-22-f145-full-original-acceptance.json"
   },
   "independent_development_handoffs": "runs/2026-11-21-independent-tag-development-handoffs.json",
   "operator_ownership_correction": {
@@ -4872,6 +4868,50 @@
         "remaining_to60": 9
       },
       "original_closures_verified": 1
+    },
+    {
+      "recorded_at": "2026-11-21T14:33:27.554593+00:00",
+      "architecture": "docs/original-closure-wave-nov21.md",
+      "board": "docs/session-delivery.json",
+      "original_complete": 135,
+      "original_open": 67,
+      "target_open": 60,
+      "F030_status": "Accepted completed-response DOM alternative; actual live attachment, outage, recovery and final pause verified.",
+      "N010_status": "Full unchanged technical organization-policy boundary contract accepted; presale legal ownership and no operating commercial service remain explicit.",
+      "open_AI_client_connection": "Public trusted HTTPS/MCP service operational; updated address instructions ready for publication; actual provider-account connection separate.",
+      "no_original_closure_claimed": false,
+      "new_original_closures": [
+        "F-030",
+        "N-010",
+        "N-001"
+      ],
+      "remaining_to60": 7,
+      "updated_at": "2026-11-22T04:37:29.411744+00:00",
+      "prior_state_snapshot": {
+        "recorded_at": "2026-11-21T14:33:27.554593+00:00",
+        "architecture": "docs/original-closure-wave-nov21.md",
+        "board": "docs/session-delivery.json",
+        "original_complete": 133,
+        "original_open": 69,
+        "target_open": 60,
+        "F030_status": "current local service unavailable; installed capture off and key unselected; no unsigned or changed-source substitution",
+        "N010_status": "independent tenant policy implementation assigned",
+        "open_AI_client_connection": "remote HTTP/MCP implementation assigned; existing published tools are local only",
+        "no_original_closure_claimed": true,
+        "new_original_closures": [
+          "F-030"
+        ],
+        "remaining_to60": 9
+      },
+      "original_closures_verified": 3,
+      "new_full_originals_this_increment": [
+        "N-010",
+        "N-001"
+      ],
+      "F155_status": "Optional SDK input functioning; supported tag workflow absent; original open at60.",
+      "publication_pending": false,
+      "current_protocol_failure": "runs/2026-11-22-combined-current-protocol.json",
+      "repair": "Version expanded source serializer while preserving exact immutable v1 observer source and observations."
     }
   ]
 }

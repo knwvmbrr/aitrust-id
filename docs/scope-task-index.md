@@ -141,7 +141,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-075 | Two-entity structure — independent foundation holds spec and mark; implementations compete on top | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-143 | Certification-mark ownership and filing work | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-144 | Mark usage guidelines and a conformance statement template | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-145 | Certification programme — what a certifier must test, and how one is accredited | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-F-145 | Certification programme — what a certifier must test, and how one is accredited | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-146 | Nonprofit formation and filings | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-F-147 | Conflict-of-interest recusal rule for maintainers with a commercial interest | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-148 | Qualified legal review of every biometric and privacy assurance | [WP-GOVERNANCE](scope-delivery.md#wp-governance) | 20% · [evidence/fix](scope-progress.md) |

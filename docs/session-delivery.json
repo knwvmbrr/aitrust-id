@@ -112,8 +112,8 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 22,
-    "original_requirement_closures": 3
+    "finished_scoped_tasks": 24,
+    "original_requirement_closures": 4
   },
   "goals": {
     "minimum_finished_named_deliverables": 1,
@@ -1212,6 +1212,61 @@
           {
             "path": "runs/2026-11-22-f155-original-completion-correction.json",
             "sha256": "4b56ee67302eae486d0102b54909b9cc079ad047ccc21f084c65f04b66e5ae17"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "reference-programme-full-delivery",
+      "original_ids": [
+        "F-145"
+      ],
+      "worker": "/root/seo",
+      "status": "closed",
+      "deliverable": "Complete nonoperating reference programme and actual private lifecycle with public source/guide delivery.",
+      "done_evidence": [
+        "Actual supported and refusal cases, versioned source identity, distinct review, protected merge and real public delivery."
+      ],
+      "closure_record": {
+        "closed_at": "2026-11-22T07:46:12.309925+00:00",
+        "completed_by": "/root/seo",
+        "verified_by": "/root/web_camo",
+        "evidence": [
+          {
+            "path": "runs/2026-11-22-f145-full-original-acceptance.json",
+            "sha256": "1a4f2a5e19d8597ccf5fa7d60b3f2d10dbdb28efe052bfbd0448a3588266b01d"
+          },
+          {
+            "path": "runs/2026-11-22-f145-full-original-design-recommendation.json",
+            "sha256": "6ead9a1f6d5eb7c41472528b5dd4337479fa5cf7e1e6e7ba44e8f3453adc59fa"
+          }
+        ]
+      }
+    },
+    {
+      "task_id": "selected-wording-production-preview",
+      "original_ids": [
+        "T-MT",
+        "F-019b"
+      ],
+      "worker": "/root/web_camo",
+      "status": "closed",
+      "deliverable": "Optional independently supervised selected-pair MT browser preview, exact canonical method and actual public/private/fault/recovery workflow.",
+      "done_evidence": [
+        "Actual supported and refusal cases, versioned source identity, distinct review, protected merge and real public delivery."
+      ],
+      "closure_record": {
+        "closed_at": "2026-11-22T07:46:12.309925+00:00",
+        "completed_by": "/root/web_camo",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-22-programme-mt-live-browser.json",
+            "sha256": "53ef9e60c34b6f579b13362d574f7ff6081d3090c6f843bed402fb5f5453defa"
+          },
+          {
+            "path": "runs/2026-11-22-programme-mt-current-engineering-packet.json",
+            "sha256": "16e30079ea51c1b80410f49c4d4312956527edaf177f800e96b408f20024405b"
           }
         ]
       }
@@ -5344,6 +5399,23 @@
           "sha256": "c3c32fdbff95e184583c990c0462909291b885ac7463f57e855d1035c9ea002d"
         }
       ]
+    },
+    {
+      "id": "F-145",
+      "status": "verified_complete",
+      "reviewed_by": "/root/web_camo",
+      "verified_at": "2026-11-22T07:46:12.309925+00:00",
+      "original_acceptance_sha256": "0abadea701d6e508c65fd2a59a96755a715d80ed4d7a85848df22a37b4de01d5",
+      "evidence": [
+        {
+          "path": "runs/2026-11-22-f145-full-original-acceptance.json",
+          "sha256": "1a4f2a5e19d8597ccf5fa7d60b3f2d10dbdb28efe052bfbd0448a3588266b01d"
+        },
+        {
+          "path": "runs/2026-11-22-f145-full-original-design-recommendation.json",
+          "sha256": "6ead9a1f6d5eb7c41472528b5dd4337479fa5cf7e1e6e7ba44e8f3453adc59fa"
+        }
+      ]
     }
   ],
   "primary_original_target": {
@@ -5911,7 +5983,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-22T06:41:00.311902+00:00",
+  "updated_at": "2026-11-22T07:46:12.309925+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -6424,7 +6496,7 @@
     "baseline_original_open": 69,
     "requested_original_open": 60,
     "required_new_original_closures": 9,
-    "actual_new_original_closures": 2,
+    "actual_new_original_closures": 3,
     "pm": "/root",
     "tasks": [
       {
@@ -6453,7 +6525,7 @@
     "blocked_owner_and_independent_human_gates": "Skip for implementation; preserve in original acceptance and count.",
     "audit_evidence": "docs/nov21-autonomous-closure-audit.json",
     "full_autonomous_original_candidates_found": 2,
-    "target_status": "NOT MET:67 originals open;7 full closures remain.",
+    "target_status": "NOT MET:66 originals open;6 full closures remain.",
     "named_software_outcomes": [
       {
         "id": "MT-additive-CLI",
@@ -6626,12 +6698,12 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-22T06:41:00.311902+00:00",
-    "original_complete": 135,
-    "original_open": 67,
+    "recorded_at": "2026-11-22T07:46:12.309925+00:00",
+    "original_complete": 136,
+    "original_open": 66,
     "target_open": 60,
-    "remaining_full_closures": 7,
-    "status": "protected cd3 live; current F145 and optional MT integration in progress; no new original counted",
+    "remaining_full_closures": 6,
+    "status": "F145 complete after actual protected/public delivery; MT preview live; image production integration and MCP runtime packaging underway.",
     "assignments": [
       {
         "worker": "/root",
@@ -6658,7 +6730,7 @@
         "status": "active_planning"
       }
     ],
-    "pending_F145_final_delivery": true,
+    "pending_F145_final_delivery": false,
     "MT_original_closed": false,
     "all202_preserved": true,
     "baseline_hashes_unchanged": true

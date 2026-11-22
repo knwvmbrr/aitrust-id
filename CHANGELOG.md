@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-074612-complete-original-reference-programme-ae4738be
+
+Recorded 2026-11-22T07:46:12.838102+00:00 · Contributor: Codex PM /root; authors /root/seo and /root/share_debugger; reviewer /root/web_camo · change
+
+- **Changed.** Closed the whole original F145 reference-programme job after protected source and actual public guide delivery; updated scope, attribution and task accounting to136complete66open.
+- **Evidence.** Eleven required checks and actual30-command Linux workflow pass;126 publicHTTP responses match protected source692, actual MT works in both engines. Current private programme lifecycle/refusals and distinct original-contract review satisfy the unchanged job. [Change record](./runs/changes/2026-11-22-074612-complete-original-reference-programme-ae4738be.json).
+- **Not claimed.** 60 remains unmet. This is a nonoperating reference programme, not actual accreditation, legal/mark adoption, independent tag validation or physical/human accessibility. Live scope counter projection still awaits the next protected publication.
+
+
 ### 2026-11-22-070807-accept-complete-programme-mt-engineering-packet-fd3a1103
 
 Recorded 2026-11-22T07:08:07.708071+00:00 · Contributor: Codex PM /root; authors /root/seo and /root/web_camo and /root/share_debugger · change
