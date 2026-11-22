@@ -372,6 +372,18 @@ PATTERNS += ('tools/certification_programme.py', 'scripts/certification-programm
              'tests/mt-choice-modal-client.mjs', 'docs/mt-choice-*.md',
              'docs/reviewed-programme-mt-delivery-plan.md')
 
+PATTERNS += ('integrations/image-metadata-reference/1.0.0/**/*',
+             'scripts/build-image-metadata-device.py', 'scripts/build-image-metadata-fixture.mjs',
+             'scripts/image-metadata-device-cases.py', 'scripts/image-metadata-site-controls.cjs',
+             'scripts/verify-image-metadata-device.cjs', 'scripts/verify-image-metadata-site.cjs',
+             'scripts/verify-image-metadata-client.cjs', 'tests/test_image_device.py',
+             'tests/image-metadata-client.mjs', 'tests/image-fixture-output.mjs',
+             'tests/fa-image-main-integration.cjs', 'tests/fixtures/fa-image-main-baseline.json',
+             'site/image-metadata-fixture.html', 'docs/image-*.md',
+             'docs/fa-image-main-integration*.md',
+             'site/public/downloads/provenance/cd3beab02774fa939e3a2bd8a0d87913d9e8fd81/*',
+             'docs/ps-source-provenance-downloads*.md')
+
 def inventory(root):
     found = {}
     for pattern in PATTERNS:

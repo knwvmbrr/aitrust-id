@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-081125-register-private-image-current-delivery-3d25f2b7
+
+Recorded 2026-11-22T08:11:25.788568+00:00 · Contributor: Codex PM /root; image author /root/web_camo; source reviewer /root/seo · change
+
+- **Changed.** Registered the reviewed optional image source/clients/lifecycle/current FA route in source-bound checks and existing CI; preserved all61 earlier website commands and strict command allowlist.
+- **Evidence.** Bounded Node wrapper syntax passes; actual author normal-build/FA route and distinct proof reviews are retained. Privacy wording explicitly distinguishes browser storage from temporary application state. [Change record](./runs/changes/2026-11-22-081125-register-private-image-current-delivery-3d25f2b7.json).
+- **Not claimed.** Registration is not execution on this combined scope/policy1.15 source. All current receipts, public counters/downloads and live FA activation require the next protected delivery. FA and fullF057 remain open;136complete66open.
+
+
 ### 2026-11-22-080109-disclose-private-image-preview-data-flow-7389596b
 
 Recorded 2026-11-22T08:01:09.820436+00:00 · Contributor: Codex PM /root · change

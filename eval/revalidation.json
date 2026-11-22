@@ -1850,7 +1850,21 @@
         "scripts/verify-certification-programme.py",
         "tests/test_certification_programme.py",
         "eval/certification-programme.json",
-        "docs/certification-programme*.md"
+        "docs/certification-programme*.md",
+        "integrations/image-metadata-reference/1.0.0/**/*",
+        "scripts/build-image-metadata-device.py",
+        "scripts/build-image-metadata-fixture.mjs",
+        "scripts/image-metadata-device-cases.py",
+        "scripts/image-metadata-site-controls.cjs",
+        "scripts/verify-image-metadata-device.cjs",
+        "scripts/verify-image-metadata-site.cjs",
+        "scripts/verify-image-metadata-client.cjs",
+        "tests/test_image_device.py",
+        "tests/image-metadata-client.mjs",
+        "tests/image-fixture-output.mjs",
+        "tests/fa-image-main-integration.cjs",
+        "tests/fixtures/fa-image-main-baseline.json",
+        "site/image-metadata-fixture.html"
       ],
       "commands": [
         [
@@ -2193,6 +2207,21 @@
         [
           "node",
           "scripts/verify-mt-choice-site.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_image_device.py",
+          "-q"
+        ],
+        [
+          "node",
+          "scripts/verify-image-metadata-client.cjs"
+        ],
+        [
+          "node",
+          "scripts/verify-image-metadata-site.cjs"
         ]
       ]
     }
