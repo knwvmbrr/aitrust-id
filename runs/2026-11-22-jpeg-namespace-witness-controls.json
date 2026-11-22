@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-11-22T15:50:47.627088+00:00",
+  "pass": true,
+  "sources_before": {
+    "scripts/verify-jpeg-provenance.py": "0467386df3bcbed0f158e1809450828d28f1b7547ba63cf941f1d164b3e17d32",
+    ".github/workflows/jpeg-provenance-qualification.yml": "0ee147fca08aac01d5d071317edf7eadd3b6836bcd9436e3085f991f4507b9fc",
+    "tests/test_jpeg_provenance.py": "38bfd5af8db6224a4753e14cff637cf64f9a1f457a530e887c8dfb71bd341ca0",
+    "docs/jpeg-provenance-plan.md": "a7151a900d58e6eb372a260f1237ac26adc23f653f9339fdcabd0c5048cad594"
+  },
+  "sources_after": {
+    "scripts/verify-jpeg-provenance.py": "0467386df3bcbed0f158e1809450828d28f1b7547ba63cf941f1d164b3e17d32",
+    ".github/workflows/jpeg-provenance-qualification.yml": "0ee147fca08aac01d5d071317edf7eadd3b6836bcd9436e3085f991f4507b9fc",
+    "tests/test_jpeg_provenance.py": "38bfd5af8db6224a4753e14cff637cf64f9a1f457a530e887c8dfb71bd341ca0",
+    "docs/jpeg-provenance-plan.md": "a7151a900d58e6eb372a260f1237ac26adc23f653f9339fdcabd0c5048cad594"
+  },
+  "source_unchanged_during_execution": true,
+  "current_tests": 2,
+  "seconds": 0.04542108403984457,
+  "syntax_shell_blocks": 4,
+  "actual_native_sdk_executed": false,
+  "first_hosted_failure": {
+    "path": "runs/2026-11-22-jpeg-native-candidate-1-failed.json",
+    "sha256": "f8ef7702611a80f1a1915bf0688e6d2f885c7e6b966f61352d62a0b572d871a7",
+    "native_sdk_executed": false
+  },
+  "limits": [
+    "Inert qualification-witness controls only; no Linux kernel/SDK executed locally.",
+    "No application/parser/CLI/worker source or budget change.",
+    "Changed-source hosted qualification pending peer review."
+  ]
+}

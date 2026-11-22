@@ -40,9 +40,11 @@ jobs:
           set -eu
           umask 077
           mkdir -p output/verification
+          outside=$(readlink /proc/self/ns/net)
           sudo unshare -n sh -c 'set -eu
-          test "$(readlink /proc/self/ns/net)" != "$(readlink /proc/1/ns/net)"
-          exec setpriv --reuid "$1" --regid "$2" --init-groups "$3" -I -B scripts/verify-jpeg-provenance.py' _ "$(id -u)" "$(id -g)" "$RUNNER_TEMP/jpeg-sdk/bin/python" > output/verification/jpeg-provenance-qualification.json
+          test "$(readlink /proc/self/ns/net)" != "$4"
+          export JPEG_QUALIFICATION_ORIGINAL_NETNS="$4"
+          exec setpriv --reuid "$1" --regid "$2" --clear-groups --no-new-privs --bounding-set=-all --inh-caps=-all --ambient-caps=-all "$3" -I -B scripts/verify-jpeg-provenance.py' _ "$(id -u)" "$(id -g)" "$RUNNER_TEMP/jpeg-sdk/bin/python" "$outside" > output/verification/jpeg-provenance-qualification.json
       - name: Remove only owned disposable environment
         if: always()
         run: rm -rf -- "$RUNNER_TEMP/jpeg-sdk"

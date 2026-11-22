@@ -2,6 +2,7 @@
 import contextlib
 import hashlib
 import importlib.util
+import io
 import json
 import os
 from pathlib import Path
@@ -136,6 +137,29 @@ class JPEGTests(unittest.TestCase):
         with mock.patch.object(p.subprocess,'Popen',side_effect=spawn),mock.patch.object(p.os,'killpg') as kill:
             with self.assertRaises(OSError):p.run([sys.executable,'-I','-S','-c','print("{}")'],b'')
             self.assertEqual(children[-1].returncode,0);kill.assert_not_called()
+    def test_qualification_namespace_witness_and_permission_boundary(self):
+        spec=importlib.util.spec_from_file_location('jpeg_qualification',ROOT/'scripts/verify-jpeg-provenance.py')
+        q=importlib.util.module_from_spec(spec);spec.loader.exec_module(q)
+        def links(path):
+            if path=='/proc/1/ns/net':raise PermissionError('PRIVATE')
+            return 'net:[77]'
+        for outside,uid,expected in [('net:[78]',1001,True),('net:[77]',1001,False),('',1001,False),('net:[78]',0,False)]:
+            output=io.StringIO()
+            with mock.patch.object(q.sys,'platform','linux'),mock.patch.dict(os.environ,{'JPEG_QUALIFICATION_ORIGINAL_NETNS':outside}),mock.patch.object(q.os,'geteuid',return_value=uid),mock.patch.object(q.os,'getgroups',return_value=[]),mock.patch.object(q.os,'readlink',side_effect=links),mock.patch('builtins.open',mock.mock_open(read_data='CapEff: 0000000000000000\nNoNewPrivs: 1\n')),mock.patch.object(q.socket,'socket') as socket,mock.patch.object(q,'inventory',side_effect=ValueError('STOP_BEFORE_SDK')),contextlib.redirect_stdout(output):
+                socket.return_value.__enter__.return_value.connect.side_effect=OSError('NO_ROUTE')
+                self.assertEqual(q.main(),1)
+            value=json.loads(output.getvalue())
+            self.assertEqual(value.get('network_namespace_isolated',False),expected)
+            self.assertFalse(value['native_sdk_executed']);self.assertNotIn('net:[',output.getvalue())
+            if expected:self.assertEqual(value['init_namespace_read'],'permission_denied')
+    def test_qualification_refuses_retained_privileges(self):
+        spec=importlib.util.spec_from_file_location('jpeg_qualification',ROOT/'scripts/verify-jpeg-provenance.py')
+        q=importlib.util.module_from_spec(spec);spec.loader.exec_module(q)
+        for status,groups in [('CapEff: 0000000000000001\nNoNewPrivs: 1\n',[]),('CapEff: 0000000000000000\nNoNewPrivs: 0\n',[]),('CapEff: 0000000000000000\nNoNewPrivs: 1\n',[1001])]:
+            output=io.StringIO()
+            with mock.patch.object(q.sys,'platform','linux'),mock.patch.dict(os.environ,{'JPEG_QUALIFICATION_ORIGINAL_NETNS':'net:[78]'}),mock.patch.object(q.os,'geteuid',return_value=1001),mock.patch.object(q.os,'getgroups',return_value=groups),mock.patch.object(q.os,'readlink',return_value='net:[77]'),mock.patch('builtins.open',mock.mock_open(read_data=status)),mock.patch.object(q,'inventory') as inventory,contextlib.redirect_stdout(output):
+                self.assertEqual(q.main(),1);inventory.assert_not_called()
+            self.assertEqual(json.loads(output.getvalue())['stage'],'privilege_drop')
     def test_actual_missing_sdk_and_private_cli_refusal(self):
         with tempfile.TemporaryDirectory() as d:
             path=Path(d).resolve()/'PRIVATE_CANARY.jpg';path.write_bytes(f.blank())

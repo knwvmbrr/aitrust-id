@@ -1,0 +1,48 @@
+{
+  "profile": "bounded-jpeg-namespace-qualification-correction-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T15:51:56.645041+00:00",
+  "reviewed_by": "/root/seo",
+  "baseline_source": "079e2b1597318b427c7fe3485928378bafb8bc13",
+  "corrected_source_sha256": {
+    "scripts/verify-jpeg-provenance.py": "0467386df3bcbed0f158e1809450828d28f1b7547ba63cf941f1d164b3e17d32",
+    ".github/workflows/jpeg-provenance-qualification.yml": "0ee147fca08aac01d5d071317edf7eadd3b6836bcd9436e3085f991f4507b9fc",
+    "tests/test_jpeg_provenance.py": "38bfd5af8db6224a4753e14cff637cf64f9a1f457a530e887c8dfb71bd341ca0",
+    "docs/jpeg-provenance-plan.md": "a7151a900d58e6eb372a260f1237ac26adc23f653f9339fdcabd0c5048cad594"
+  },
+  "source_change_scope": "Only qualification driver/workflow, affected inert tests and pre-code amendment. CLI/parser/actions/SDK loader/worker/budgets unchanged.",
+  "evidence_reviewed": [
+    {
+      "path": "runs/2026-11-22-jpeg-namespace-witness-controls.json",
+      "sha256": "90e828f049a65c43ad96bc3a168c879b71740627113e9d86cda9b5b4e4bc905a",
+      "scope": "Author two current inert groups; four source hashes stable. Reviewer did not execute them."
+    },
+    {
+      "path": "runs/2026-11-22-jpeg-native-candidate-1-failed.json",
+      "sha256": "f8ef7702611a80f1a1915bf0688e6d2f885c7e6b966f61352d62a0b572d871a7",
+      "scope": "Retained first environment failure;415byte artifact identity recorded, zero cases and native_sdk_executed false. No raw artifact download or independent kernel execution in this review."
+    }
+  ],
+  "findings": [],
+  "reviewed": {
+    "outer_original_namespace_captured_before_unshare": true,
+    "inside_privileged_shell_requires_actual_self_namespace_difference": true,
+    "after_privilege_drop_verifier_requires_fixed_original_identity_and_actual_self_difference": true,
+    "no_hardcoded_success_or_missing_witness_bypass": true,
+    "init_namespace_read_permission_denied_is_optional_observation_only": true,
+    "kernel_external_and_loopback_refusal_probes_retained": true,
+    "nonroot_effective_uid_required": true,
+    "supplementary_groups_cleared_and_verified_empty": true,
+    "no_new_privileges_requested_and_verified": true,
+    "all_bounding_inheritable_ambient_capabilities_dropped_by_fixed_command": true,
+    "effective_capabilities_verified_zero_before_SDK": true,
+    "exact_owned_branch_pinned_readonly_workflow_retained": true,
+    "native_success_or_prior_exact_syscall_cause_claimed": false
+  },
+  "limits": [
+    "Source and retained minimized receipt inspection only; no runtime, tests, SDK imports, native install, browser, network or CI retry by reviewer.",
+    "First failure established environment-stage refusal before native, not the precise failing syscall or a product/native defect.",
+    "Corrected namespace/privilege semantics still need the one parent-approved changed-source hosted qualification; this CLEAR is not that execution result.",
+    "No source admission, production signing, protected/publication approval, AI-origin/FA/PA/verdict or original closure."
+  ]
+}

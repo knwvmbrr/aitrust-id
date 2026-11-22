@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-155225-jpeg-qualification-namespace-witness
+
+Recorded 2026-11-22T15:52:25.793170+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Replaced a nonportable privileged-proc namespace read with the actual outer namespace witness and stricter dropped-privilege checks in the disposable JPEG qualification only.
+- **Evidence.** Two source-stable inert controls and distinct source review accept the different actual-self witness contract and refuse missing/same identity, root, retained capabilities/groups or missing no-new-privileges. First hosted run installed the exact lock and passed15 controls, then failed before SDK execution; its415-byte artifact is retained. [Change record](./runs/changes/2026-11-22-155225-jpeg-qualification-namespace-witness.json).
+- **Not claimed.** First environment exception was not captured and is not called an SDK defect. No application, parser, worker, timeout or tag behavior changed; native qualification awaits the authorized changed-source hosted run.
+
+
 ### 2026-11-22-154604-jpeg-credential-native-candidate
 
 Recorded 2026-11-22T15:46:04.654981+00:00 · Contributor: Codex / web_camo · change

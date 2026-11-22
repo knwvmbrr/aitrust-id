@@ -193,3 +193,21 @@ c2pa0.38.0/SDK0.91.0 lock bytes. Do not change PNG source, PS/MT, applications,
 gateway, shared state or existing workflows. Native qualification is pending
 review of a narrowly read-only hosted workflow; no local install/build below the
 2GiB reserve. Preserve all historical sources and20percent FA/PA gates.
+
+## Qualification-only amendment after first hosted failure
+
+Run45040187485 installed the exact existing lock and passed15 focused controls,
+then stopped at the environment check before native execution. The nonroot
+`/proc/1/ns/net` read depends on procfs ptrace permissions and was an unsuitable
+mandatory witness. Exact exception was not captured, so the first failure's
+specific syscall is not asserted. Capture the original namespace identity in the
+outer reviewed shell, verify a different self namespace inside unshare, and pass
+that fixed-format identity to the dropped-privilege driver for its own self check.
+The driver also records only a fixed accessible/permission-denied result for the
+init-namespace read. This does not waive nonroot/network isolation or change any
+CLI/parser/action/timeout behavior. First artifact and source remain immutable.
+The amended qualification additionally clears supplementary groups, drops all
+capability sets and sets no-new-privileges before the driver. The driver requires
+actual effective capabilities zero, no-new-privileges one and no supplementary
+groups. Inert current tests refuse a missing/same namespace identity, root UID,
+retained capability, missing no-new-privileges or retained group before SDK work.

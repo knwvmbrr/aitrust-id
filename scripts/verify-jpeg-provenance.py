@@ -41,8 +41,25 @@ def main():
         'cases': [], 'native_sdk_executed': False, 'independent_accuracy_evidence': False,
         'new_tag_releases': 0, 'ai_origin_established': False, 'complete_security_sandbox': False}
     try:
+        report['stage']='namespace_identity'
+        outside=os.environ.get('JPEG_QUALIFICATION_ORIGINAL_NETNS', '')
         need(sys.platform == 'linux' and os.geteuid() != 0
-             and os.readlink('/proc/self/ns/net') != os.readlink('/proc/1/ns/net'))
+             and re.fullmatch(r'net:\[[0-9]{1,20}\]', outside) is not None
+             and os.readlink('/proc/self/ns/net') != outside)
+        try:
+            report['init_namespace_read']='accessible' if os.readlink('/proc/1/ns/net') else 'unavailable'
+        except PermissionError:
+            report['init_namespace_read']='permission_denied'
+        report['stage']='privilege_drop'
+        with open('/proc/self/status', encoding='ascii') as status:
+            privileges=status.read(8193)
+        need(len(privileges)<=8192 and re.search(r'^CapEff:\s+0+$', privileges, re.M) is not None
+             and re.search(r'^NoNewPrivs:\s+1$', privileges, re.M) is not None
+             and os.getgroups()==[])
+        report['effective_capabilities_empty']=True
+        report['no_new_privileges']=True
+        report['supplementary_groups_empty']=True
+        report['stage']='namespace_network_probe'
         # Namespace must lack both external routing and a reachable loopback service.
         refused = []
         for address in [('1.1.1.1', 443), ('127.0.0.1', 8787)]:
@@ -53,7 +70,9 @@ def main():
                 else: refused.append(False)
         need(all(refused))
         report['network_namespace_isolated'] = True
+        report['stage']='source_inventory'
         before = inventory(); report['sources_before'] = before
+        report['stage']='locked_versions'
         lock = (ROOT/'eval/c2pa-inspection.lock').read_text()
         versions = dict(re.findall(r'^([A-Za-z0-9_-]+)==([0-9A-Za-z.+-]+)', lock, re.M))
         need(len(versions) == 10)
