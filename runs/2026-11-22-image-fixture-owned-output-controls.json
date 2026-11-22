@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-11-22T07:14:03.167357+00:00",
+  "author": "Codex / web_camo",
+  "profile": "owned-image-fixture-output-controls/v1",
+  "pass": true,
+  "prior_source_commit": "72536eb6028c92f605702df4a0a1a76978c5d95c",
+  "reason": "Prevent erasing an unrelated existing output namespace: exclusive owned directory creation and no Vite emptyOutDir clearing. No actual prior build or deletion occurred.",
+  "actual_controls": {
+    "groups": 3,
+    "preexisting_marker_preserved": true,
+    "linked_parent_refused": true,
+    "held_directory_identity_drift_refused": true,
+    "temporary_files_only": true,
+    "Vite_or_browser_executed": false
+  },
+  "source_sha256": {
+    "scripts/build-image-metadata-fixture.mjs": "f304f628564b252aadc91bb520ebac5b8519c3956c0f1e60d70dd62f318f061c",
+    "tests/image-fixture-output.mjs": "321bf9c79b53fbbbed7f4fad79f369db10b64fcab6b147e006d78ffd53239db2",
+    "scripts/verify-image-metadata-device.cjs": "fb9b48d12fec33a2bc6f86b1ce9245954a96921198f71224e980e98483e3e34a",
+    "docs/image-device-guide.md": "f6fe138f7bd4ee357b82149682724537ca6556cbb6eacb5ce6dd0397c5f71e8c"
+  },
+  "canonical_parser_client_worker_or_UI_changed": false,
+  "main_site_or_infrastructure_changed": false,
+  "browser_acceptance_pending": true
+}

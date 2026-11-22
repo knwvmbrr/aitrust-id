@@ -76,6 +76,7 @@ No image SDK, account, model, Docker or new dependency is required.
 ```sh
 python3 -m pytest tests/test_image_device.py -q
 node --test tests/image-metadata-client.mjs
+node --test tests/image-fixture-output.mjs
 node scripts/build-image-metadata-fixture.mjs
 node scripts/verify-image-metadata-device.cjs
 ```

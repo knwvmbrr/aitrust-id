@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-071403-image-fixture-exclusive-output-cbc49933
+
+Recorded 2026-11-22T07:14:03.205456+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Make standalone fixture output exclusive and preserve any existing directory or failed candidate instead of clearing it. Bind the new focused ownership control.
+- **Evidence.** Three actual temporary-filesystem controls pass for prior-output preservation, linked-parent refusal and held-directory identity drift; no Vite/browser/runtime ran. Core image methods/client/worker/UI are unchanged. [Change record](./runs/changes/2026-11-22-071403-image-fixture-exclusive-output-cbc49933.json).
+- **Not claimed.** Preventative test-fixture safety change; no prior deletion/exposure reproduced. Actual browser acceptance remains pending. No tag/original closure.
+
+
 ### 2026-11-22-070939-image-device-source-freeze-2b62f0f5
 
 Recorded 2026-11-22T07:09:39.953221+00:00 · Contributor: Codex / web_camo · change
