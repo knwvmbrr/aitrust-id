@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-162339-correct-isolated-source-cli-bootstrap-def36e9e
+
+Recorded 2026-11-22T16:23:39.965913+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Corrected both active source-archive CLIs to import their trusted sibling serializer under isolated Python.
+- **Evidence.** Two isolated help entrypoints and a real six-file owned Git-fixture CLI build pass from an unrelated working directory. Distinct source review passes; the first hosted16-control pass and subsequent unclassified builder failure are preserved without claiming lost stderr. [Change record](./runs/changes/2026-11-22-162339-correct-isolated-source-cli-bootstrap-def36e9e.json).
+- **Not claimed.** Archive core and all limits remain unchanged. Actual larger-source archive,768MiB execution and graph/SPDX qualification remain pending one changed-source hosted run. No source-signature, route admission, legal clearance or full F057/X02 claim.
+
+
 ### 2026-11-22-161407-version-bounded-source-snapshot-v3-aa4da53e
 
 Recorded 2026-11-22T16:14:07.047383+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change

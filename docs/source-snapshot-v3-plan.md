@@ -79,3 +79,20 @@ from filtered future same-repository PRs; no main signing or dispatch is added.
 Its single Ubuntu job uses existing standard Python setup, no project installs,
 all 16 focused controls without skips and one actual committed-source artifact.
 Only a fixed bounded JSON summary is retained, not the archive, SPDX or source.
+
+
+## Isolated CLI bootstrap correction after the first hosted attempt
+
+The first exact 4d494944 candidate passed all 16 hosted controls but its actual
+source-builder CLI returned exit 1 before an archive was qualified. Its original
+stderr was retained only as a digest, so the hosted exception category remains
+unknown. Independent safe `-I -S -B --help` reproductions found both active CLIs
+cannot import their sibling v3 module: isolated Python omits the script directory.
+Add only the trusted resolved `__file__.parent` to their module path before the
+sibling import. Keep isolation flags, immutable v1/v2 and archive limits intact.
+The existing small positive test also invokes both real help entrypoints and
+performs a real isolated CLI build in a separate owned Git fixture, from an
+unrelated working directory. No caller input is executed. A future failed CI
+builder reports only an allowlisted exception type, not raw stderr/private paths.
+This concrete correction justifies one changed-source qualification; it is not
+a claim to know the lost first hosted stderr or a memory-limit relaxation.

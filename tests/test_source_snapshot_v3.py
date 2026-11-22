@@ -72,6 +72,31 @@ class SmallCompatibility(unittest.TestCase):
 
     def test_actual_small_git_archive_bytes_and_results_match(self):
         self.small_archive()
+        with tempfile.TemporaryDirectory(prefix='owned-isolated-source-cli-') as temp:
+            stage = Path(temp).resolve()
+            repo = stage/'project';scripts = repo/'scripts';scripts.mkdir(parents=True)
+            names = ('source_snapshot.py', 'source_snapshot_v2.py', 'source_snapshot_v3.py',
+                     'build-source-snapshot.py', 'verify-source-provenance.py')
+            for name in names:
+                (scripts/name).write_bytes((ROOT/'scripts'/name).read_bytes())
+            (repo/'README.md').write_bytes(b'Owned synthetic CLI source.\n')
+            subprocess.run(['git', 'init', '-q', str(repo)], check=True)
+            subprocess.run(['git', '-C', str(repo), 'add', '.'], check=True)
+            subprocess.run(['git', '-C', str(repo), '-c', 'user.name=Owned CLI fixture',
+                            '-c', 'user.email=fixture@example.invalid', 'commit', '-qm', 'Synthetic'], check=True)
+            commit = s.git(repo, 'rev-parse', 'HEAD').decode().strip()
+            for name in ('build-source-snapshot.py', 'verify-source-provenance.py'):
+                help_result = subprocess.run([sys.executable, '-I', '-S', '-B', str(scripts/name), '--help'],
+                    cwd=stage, capture_output=True, timeout=10)
+                self.assertEqual(help_result.returncode, 0)
+                self.assertEqual(help_result.stderr, b'')
+            output = stage/'public-source.tar.gz'
+            result = subprocess.run([sys.executable, '-I', '-S', '-B', str(scripts/'build-source-snapshot.py'),
+                '--commit', commit, '--output', str(output)], cwd=stage, capture_output=True, timeout=15)
+            self.assertEqual(result.returncode, 0)
+            self.assertEqual(result.stderr, b'')
+            self.assertEqual(json.loads(result.stdout), {'pass': True, **s.inspect(output.read_bytes(), commit)})
+            self.assertEqual(json.loads(result.stdout)['source_files'], 6)
 
     def test_source_metadata_separate_accounting_and_old_globals(self):
         raw, commit = self.small_archive()

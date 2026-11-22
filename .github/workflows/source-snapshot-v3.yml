@@ -30,7 +30,7 @@ jobs:
         shell: bash
         run: |
           python -I -S -B - <<'PY'
-          import contextlib,datetime,hashlib,io,json,os,resource,shutil,subprocess,sys,unittest
+          import contextlib,datetime,hashlib,io,json,os,re,resource,shutil,subprocess,sys,unittest
           from pathlib import Path
           resource.setrlimit(resource.RLIMIT_CORE,(0,0))
           resource.setrlimit(resource.RLIMIT_AS,(768*1024**2,768*1024**2))
@@ -65,6 +65,10 @@ jobs:
             assert len(completed.stdout)<16_000 and len(completed.stderr)<16_000
             result['build_cli']={'exit':completed.returncode,'stdout_sha256':hashlib.sha256(completed.stdout).hexdigest(),
               'stderr_sha256':hashlib.sha256(completed.stderr).hexdigest()}
+            if completed.returncode:
+              match=re.search(rb'(?m)^(MemoryError|ModuleNotFoundError|ImportError|TypeError|AttributeError|RecursionError|ValueError|OSError)(?::|$)',completed.stderr)
+              result['build_cli']['observed_exception_type']=match[1].decode()if match else'UNCLASSIFIED'
+              result['build_cli']['raw_stderr_included']=False
             assert completed.returncode==0
             raw=source.read_file(artifact,source.MAX_ARCHIVE);observed=source.inspect(raw,commit)
             assert observed['source_bytes']>previous.MAX_TOTAL

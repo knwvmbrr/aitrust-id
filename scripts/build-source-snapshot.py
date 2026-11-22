@@ -6,6 +6,8 @@ from pathlib import Path
 import subprocess
 import sys
 import tarfile
+# Isolated Python omits the script directory; choose only this trusted source.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from source_snapshot_v3 import build, inspect
 
 
