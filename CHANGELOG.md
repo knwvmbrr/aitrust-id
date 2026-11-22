@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-082000-mcp-rust-stdlib-source-notices-8f1a556f
+
+Recorded 2026-11-22T08:20:00.849325+00:00 · Contributor: Codex / seo · change
+
+- **Changed.** Mapped selected native-wheel Rust standard-library sources to specific Unicode, backtrace, compiler-builtins/LLVM-exception, libm and locked dependency grants; retained exact source-specific notices for MCP packaging.
+- **Evidence.** Ten wheel/native hashes and532 source-path literals checked;176 REUSE/generated-metadata records agree;18 lock archive checksums verify with13cache reuses;159 shared libm runtime source blobs and74 notice segments match; complete qualified111113-byte attribution artifact is source-bound. [Change record](./runs/changes/2026-11-22-082000-mcp-rust-stdlib-source-notices-8f1a556f.json).
+- **Not claimed.** Source/evidence inputs only: actual MCP artifact notice inclusion remains pending. No target import/install/build/native execution, whole compiler/LLVM/GCC distribution, exhaustive compiled closure, build attestation, legal clearance, route admission, tag accuracy or original closure.
+
+
 ### 2026-11-22-075106-cffi-libffi-exact-byte-closeout-29f33130
 
 Recorded 2026-11-22T07:51:06.181658+00:00 · Contributor: Codex / seo · change
