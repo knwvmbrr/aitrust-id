@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-034501-recover-owned-workers-without-released-group-signals-2b140be4
+
+Recorded 2026-11-22T03:45:01.863731+00:00 · Contributor: Codex PM /root; distinct fault review /root/web_camo · change
+
+- **Changed.** Fixed optional-worker startup and post-reap ownership; rebound only the reviewed first-party helper bytes in the existing PS source distribution profile.
+- **Evidence.** 17 current Mac controls plus6 independent actual fault/normal controls pass. Startup failure spawns none or reaps the owned child; post-reap failure sends no group signal; close faults still close both pipes. All14 policy routes audit coherently and onlyPSsource remains admitted. [Change record](./runs/changes/2026-11-22-034501-recover-owned-workers-without-released-group-signals-2b140be4.json).
+- **Not claimed.** Zero original closures. Preserve existingv1 reviewed_by Codex token; detailed attribution is here and in the peer receipt. Linux/caller/source-bound revalidation pending; no crash recovery, tag accuracy or global licensing claim.
+
+
 ### 2026-11-22-032350-restore-full-synthid-tag-outcome-17ef6def
 
 Recorded 2026-11-22T03:23:50.430311+00:00 · Contributor: Codex PM /root; substantive PR review and independent /root/seo correction · change

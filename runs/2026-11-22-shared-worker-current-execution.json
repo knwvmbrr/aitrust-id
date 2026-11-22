@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-11-22T03:43:00.411877+00:00",
+  "pass": true,
+  "kind": "shared_optional_worker_ownership_recovery",
+  "sources": {
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "tests/test_worker_process.py": "2e3cf2a34ed8de35f3d6a372a4116675ba83fcc7e3f5e0a79c4dffd8d1e33d24",
+    "docs/worker-supervision-recovery-plan.md": "ef228f9a78f72e4c79b21d5531dad04f8c51e6854fa0056364ea63a453d3da23"
+  },
+  "source_unchanged_during_execution": true,
+  "actual_controls": 17,
+  "exit_code": 0,
+  "stdout_sha256": "d7b90c77027481712107cb1b5912b80dd66b186005fb50790ebf7bb57330c90a",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "distinct_review": "runs/2026-11-22-shared-worker-distinct-corrected-review.json",
+  "supported_platform_executed": "macOS POSIX; Linux protected CI remains required",
+  "ownership_fix": "Allocate/init before spawn; construct selector in owned guard; signal only unreaped owned child; close all owned pipes through nested cleanup.",
+  "ABI_and_normal_output_unchanged": true,
+  "deadline_now_includes_spawn": true,
+  "original_requirements_closed": 0,
+  "independent_accuracy_evidence": false,
+  "host_crash_or_forceful_parent_kill_recovery": false
+}
