@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-054137-deliver-complete-reference-certification-programme-ba315aec
+
+Recorded 2026-11-22T05:41:37.156328+00:00 · Contributor: Codex /root/seo; distinct reviewer /root/web_camo · change
+
+- **Changed.** Delivered the complete nonoperating F145 reference-programme design and consumed private application/review/appeal/correction/renewal/withdrawal workflow, with exact source/programme/evidence bindings.
+- **Evidence.** Actual30 current CLI controls passed, including separate declared-role decisions, contested/corrected outcomes, unsupported-scope/source/authority/no-overwrite refusals and personal PS recovery. Distinct reviewer ran four affected controls and three private CLI checks. All original criteria unchanged. [Change record](./runs/changes/2026-11-22-054137-deliver-complete-reference-certification-programme-ba315aec.json).
+- **Not claimed.** No actual accreditation, institution, role identity, mark/legal adoption, independent accuracy or tag release.37 earlier-source controls and8 affected current controls are separately recorded; no all39 current claim. Protected/public delivery and original counters remain parent-owned and pending.
+
+
 ### 2026-11-22-051331-restore-immutable-delivery-baseline-binding-46325b86
 
 Recorded 2026-11-22T05:13:31.077502+00:00 · Contributor: Codex PM /root · change

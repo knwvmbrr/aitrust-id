@@ -1,0 +1,79 @@
+{
+  "profile": "F145-corrected-reference-design-distinct-review/v1",
+  "captured_at": "2026-11-22T05:39:43.431197+00:00",
+  "performed_by": "Codex /root/web_camo distinct reviewer",
+  "pass": true,
+  "source_sha256": {
+    "tools/certification_programme.py": "20b8fdca81a5c9fd79230dfb71df9bbc94352cdc788779f2fc2384b0d52143ad",
+    "scripts/certification-programme.py": "0b1b37dd258fdb46a0cd36a41ab8e66b57c9965b31b46fd43a1474f41351a4cc",
+    "scripts/verify-certification-programme.py": "2ae5e1f8ca6ebb66865869c4e1616be98ba2d17e8ac0455d61dd117bcf22df76",
+    "tests/test_certification_programme.py": "683ce82d651869a30f5322bcdd9d0df510afdccb1c291318fff933a693290c6e",
+    "eval/certification-programme.json": "852df2d38ba5de55b2ffd0e8bbcc0fd293d27579ca1171c5528c95e1773588a6",
+    "docs/certification-programme-plan.md": "b99b6536b728c6f54714e9d4a7b84f28ccb0f8ba1de4ae3ffea95a2d4fdaaad1",
+    "docs/certification-programme.md": "91b0f17b0c88bc1cc7a65561152ea95ced811e2ed50152ee74b1f230e1a0af14",
+    "docs/certification-programme-guide.md": "5e78d2e28a924e2b327966c3d5d2d11b39943ce5b674b0b8af4316967c5e8b59"
+  },
+  "actual_author_cli_receipt_sha256": "78ccc9858a6b7f59065323fc3a79f23ae37ec127684c6fc18d9551f8aa731676",
+  "author_actual_commands_inspected": 30,
+  "current_28_interface_receipt_digest_compared_not_reexecuted": {
+    "path": "runs/2026-11-22-conformance-worker-ownership.json",
+    "sha256": "98616922bcb78d07a8608310f70edd7a1c0153ef62245621ecc52e6999047efb"
+  },
+  "preserved_original_revalidation_failure_sha256": "d549247cb7196d7c9444fd7d4909d2fd302c177a08a2bf5029aa013449335f70",
+  "corrected_boundary_controls": {
+    "actual_selected_focused_tests": 4,
+    "elapsed_seconds": 0.14,
+    "broad_tests_not_repeated": 35,
+    "cases": [
+      "current withdrawn stored-state-only forgery refused before output",
+      "unreplayable old sources same identity refused; different identity starts with no actions",
+      "late directory close-after-release stays explicitly uncertain and never retries reused numeric FD",
+      "constructor failure closes owned descriptor and leaves no output"
+    ]
+  },
+  "reviewer_actual_cli_operations": [
+    {
+      "operation": "practice",
+      "exit": 0,
+      "state": "PRACTICE_APPLICATION_SAVED",
+      "stdout_sha256": "e58712b5d608da99e6bf3ad79701293021caa2607663a6931a929cd6d933c269",
+      "stderr_bytes": 0
+    },
+    {
+      "operation": "start",
+      "exit": 0,
+      "state": "APPLICATION_RECORDED",
+      "stdout_sha256": "9492a5b828eb357f9207bc38610ed42577b09d51e5beed64a6f3040678395e9f",
+      "stderr_bytes": 0
+    },
+    {
+      "operation": "inspect",
+      "exit": 0,
+      "state": "APPLICATION_RECORDED",
+      "stdout_sha256": "9492a5b828eb357f9207bc38610ed42577b09d51e5beed64a6f3040678395e9f",
+      "stderr_bytes": 0
+    }
+  ],
+  "private_0700_parent_and_0600_files": true,
+  "owned_private_records_removed": true,
+  "source_stable": true,
+  "full_original_contract_interpretation_review_sha256": "a164e6c3a6f0ba3d942e5d200843b96c50306d00678f34d196ed2f848f3644ba",
+  "design_acceptance_review": {
+    "what_certifier_tests_three_scopes_explicit": true,
+    "how_qualified_and_accredited_future_authority_steps_explicit": true,
+    "separate_application_assessor_decision_appeal_correction_expiry_renewal_suspension_withdrawal": true,
+    "exact_fixed_policy_and_current_conformance_consumer": true,
+    "unfilled_conflicted_roles_not_autoappointed": true,
+    "claim_scope_borrowing_refused": true,
+    "closed_private_bounded_nooverwrite_no_user_code_or_network": true,
+    "all_actual_authority_identity_accuracy_flags_false": true,
+    "legal_mark_institution_adoption_boundaries_retained": true,
+    "no_remaining_actionable_software_gap_found_for_protected_integration": true
+  },
+  "limits": [
+    "Distinct source/claim/actual bounded localCLI review; no full39-suite, full30-controller, conformance28, Linux/browser/database rerun.",
+    "Checklist completeness and reference-review state do not authenticate declared roles/documents/execution or grant actual accreditation/certification/mark/accuracy authority.",
+    "F145 is the complete nonoperating reference programme design job only; future adoption/actual institutions/F143/F075/F076/F108/WP-GOVERNANCE remain separate.",
+    "Root must finish actual protected/public source+guide delivery and final original acceptance; no counter change or original closure performed by reviewer."
+  ]
+}
