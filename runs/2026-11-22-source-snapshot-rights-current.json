@@ -1,0 +1,241 @@
+{
+  "profile": "source-snapshot-rights-current-engineering/v1",
+  "captured_at": "2026-11-22T18:38:00.721398+00:00",
+  "pass": true,
+  "author": "Codex /root/seo",
+  "contract_authority": "PM-selected maintained closed path/grant contract recorded before feature code in docs/source-snapshot-rights-plan.md; no legal/mark/institution adoption.",
+  "sources_before": {
+    "tools/source_release_policy.py": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6",
+    "eval/dependencies/source-snapshot-release.json": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+    "docs/source-snapshot-rights-plan.md": "8d65d291ef7bc24856ad32f5e4c6cdb3dd7d0d7ea87640fe9ae1201c79c97317",
+    "tests/test_source_release_policy.py": "8dc2898408fb3d0ac66bd82877f3b0a6d76b5abe06afdcd150234f724323f22f",
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3"
+  },
+  "sources_after": {
+    "tools/source_release_policy.py": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6",
+    "eval/dependencies/source-snapshot-release.json": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+    "docs/source-snapshot-rights-plan.md": "8d65d291ef7bc24856ad32f5e4c6cdb3dd7d0d7ea87640fe9ae1201c79c97317",
+    "tests/test_source_release_policy.py": "8dc2898408fb3d0ac66bd82877f3b0a6d76b5abe06afdcd150234f724323f22f",
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3"
+  },
+  "source_unchanged_during_cli": true,
+  "focused_controls": {
+    "tests": 18,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 1.63,
+    "command": [
+      "python",
+      "-I",
+      "-S",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_source_release_policy.py",
+      "-v"
+    ],
+    "binding_limit": "Current hashes observed after that completed control invocation; separate CLI before/after maps are retained. No before-map was retained for the18-control invocation."
+  },
+  "actual_cli_cases": 5,
+  "cases": [
+    {
+      "id": "baseline_current",
+      "exit": 0,
+      "elapsed_seconds": 0.338602,
+      "stdout_sha256": "5c8ad3aa93a8c32b3b17e7f8ba8526b40d5b08fa0531f377e429c0572a39702a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": {
+        "category_counts": {
+          "authored-fixtures": 34,
+          "build-source-terms": 21,
+          "c2pa-source": 2518,
+          "c2pa-source-root": 70,
+          "fonts": 8,
+          "native-notices": 56,
+          "nli-notices": 49,
+          "nli-source": 3571,
+          "other-retained-terms": 45,
+          "project-asset": 2,
+          "project-grant": 3,
+          "project-text": 6235,
+          "public-cryptographic-facts": 16,
+          "pyodide-js-source": 14,
+          "reference-copies": 21,
+          "selected-ps-container": 2,
+          "spdx-schema": 3,
+          "spec": 14,
+          "synthid-reference": 9,
+          "unicode": 3,
+          "wheel-notices": 224,
+          "zlib-source": 7
+        },
+        "changed_project_text_files": 0,
+        "checkout_commit": "3f199c6450da73335a9d2c5e2c1501ac3c946e14",
+        "compiled_runtime_permission": false,
+        "complete_project_obligations": false,
+        "files": 12925,
+        "independent_accuracy_evidence": false,
+        "introduced_named_project_text_files": 0,
+        "legal_clearance": false,
+        "method_sha256": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6",
+        "pass": true,
+        "policy_sha256": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+        "profile": "source-snapshot-copy-obligations/v1",
+        "release_authorized": false,
+        "source_bytes": 128892653,
+        "source_commit": "3f199c6450da73335a9d2c5e2c1501ac3c946e14",
+        "source_copy_profile_satisfied": true,
+        "status": "SOURCE_COPY_PROFILE_SATISFIED",
+        "worker_sha256": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3"
+      }
+    },
+    {
+      "id": "maintained_current_root",
+      "exit": 0,
+      "elapsed_seconds": 0.823238,
+      "stdout_sha256": "52eb328fed8ab1801018a88ce0052dc38f55b991ab466f499f543454f1b2229e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": {
+        "category_counts": {
+          "authored-fixtures": 34,
+          "build-source-terms": 21,
+          "c2pa-source": 2518,
+          "c2pa-source-root": 70,
+          "fonts": 8,
+          "native-notices": 56,
+          "nli-notices": 49,
+          "nli-source": 3571,
+          "other-retained-terms": 45,
+          "project-asset": 2,
+          "project-grant": 3,
+          "project-text": 6248,
+          "public-cryptographic-facts": 16,
+          "pyodide-js-source": 14,
+          "reference-copies": 21,
+          "selected-ps-container": 2,
+          "spdx-schema": 3,
+          "spec": 14,
+          "synthid-reference": 9,
+          "unicode": 3,
+          "wheel-notices": 224,
+          "zlib-source": 7
+        },
+        "changed_project_text_files": 3,
+        "checkout_commit": "3f199c6450da73335a9d2c5e2c1501ac3c946e14",
+        "compiled_runtime_permission": false,
+        "complete_project_obligations": false,
+        "files": 12938,
+        "independent_accuracy_evidence": false,
+        "introduced_named_project_text_files": 13,
+        "legal_clearance": false,
+        "method_sha256": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6",
+        "pass": true,
+        "policy_sha256": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+        "profile": "source-snapshot-copy-obligations/v1",
+        "release_authorized": false,
+        "source_bytes": 130354423,
+        "source_commit": "032671e54bbf6a0466977d7b48e6dfa6fd9c4afc",
+        "source_copy_profile_satisfied": true,
+        "status": "SOURCE_COPY_PROFILE_SATISFIED",
+        "worker_sha256": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3"
+      }
+    },
+    {
+      "id": "tree_not_commit",
+      "exit": 2,
+      "elapsed_seconds": 0.111861,
+      "stdout_sha256": "4f75c24314444f696a0d559451074b8654ee3cfbc00333286143b9a5f2aeeaa3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": {
+        "compiled_runtime_permission": false,
+        "complete_project_obligations": false,
+        "independent_accuracy_evidence": false,
+        "legal_clearance": false,
+        "pass": false,
+        "profile": "source-snapshot-copy-obligations/v1",
+        "reason": "unsupported_source_commit",
+        "release_authorized": false,
+        "source_copy_profile_satisfied": false,
+        "status": "UNAVAILABLE"
+      }
+    },
+    {
+      "id": "private_argument",
+      "exit": 2,
+      "elapsed_seconds": 0.099502,
+      "stdout_sha256": "4f75c24314444f696a0d559451074b8654ee3cfbc00333286143b9a5f2aeeaa3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": {
+        "compiled_runtime_permission": false,
+        "complete_project_obligations": false,
+        "independent_accuracy_evidence": false,
+        "legal_clearance": false,
+        "pass": false,
+        "profile": "source-snapshot-copy-obligations/v1",
+        "reason": "unsupported_source_commit",
+        "release_authorized": false,
+        "source_copy_profile_satisfied": false,
+        "status": "UNAVAILABLE"
+      }
+    },
+    {
+      "id": "unmapped_actual_MCP_source",
+      "exit": 2,
+      "elapsed_seconds": 0.215632,
+      "stdout_sha256": "c30dd77360a5ad1b4d7acf23f1da02145b76e94a88f872d701dd90a16ef26e0c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": {
+        "compiled_runtime_permission": false,
+        "complete_project_obligations": false,
+        "independent_accuracy_evidence": false,
+        "legal_clearance": false,
+        "pass": false,
+        "profile": "source-snapshot-copy-obligations/v1",
+        "reason": "unknown_path",
+        "release_authorized": false,
+        "source_copy_profile_satisfied": false,
+        "status": "UNAVAILABLE"
+      }
+    }
+  ],
+  "fact_scope": {
+    "base_paths": 12925,
+    "categories": 22,
+    "explicit_named_new_project_paths": 22,
+    "declared_source_grant_component_records": 1019,
+    "selected_PS_containers": 2,
+    "OFL_font_files": 5,
+    "synthetic_C2PA_PNGs": 10,
+    "copyrighted_spec_copy_lineage_preserved": 4,
+    "public_cryptographic_facts_separate_from_project_software": true
+  },
+  "preserved_failures": [
+    {
+      "path": "runs/2026-11-22-source-snapshot-rights-first-controls.json",
+      "sha256": "e93184433fc1499e1369d8d89bf621b38f6a197f27ba405682d99d76c93b75c2"
+    },
+    {
+      "path": "runs/2026-11-22-source-snapshot-rights-copy-origin-original.json",
+      "sha256": "6dc2b4e48e06db72e12f0d63f07805bd33a1ce99565dd6387326c35205b36038"
+    }
+  ],
+  "claims": {
+    "distribution_admitted": false,
+    "protected_source_published": false,
+    "runtime_or_model_licenses_approved": false,
+    "complete_compiled_closure": false,
+    "license_or_legal_clearance": false,
+    "new_original_closure": false
+  },
+  "limits": [
+    "Only stdlib/fixed localGit source reads and tiny filesystem/worker controls. No SDK/install/download/sourcearchivebuild or native code.",
+    "First-party provenance is the explicitly scoped existing repository contribution/grant contract, not forensic authorship verification. Unknown new paths or changed third-party/grant bytes refuse.",
+    "Current-source profile satisfaction is computed by this isolated helper, not existing globalpolicy admission. Shared policy/graph/signer/rootinventory untouched.",
+    "Distinct facts/source review and normalprotected integration remain before managed eligibility can be relied upon."
+  ]
+}

@@ -1,0 +1,14 @@
+# Managed MCP and source-rights integration — November 22
+
+PM architecture before shared integration. Protected085106c1 is live and verified.
+Keep all202originals, current136/66 and every original acceptance unchanged.
+
+1. Integrate the normally committed MCP531b75 handoff. Preserve its exact four-target wheel/runtime source bindings, all historical attempts, current PS nine-file contract, other12refused distribution profiles and main-only signer identity. Real managed signature/installation remains mandatory after protected main integration.
+2. Integrate the independently reviewed source-rights checker2932bb as a standalone finite development tool. It has positive baseline/current named-project cases and explicit unknown/new/third-party refusal. Its baseline map does not admit the new MCP tree or an arbitrary archive. Do not wire source-snapshot permission or claim legal clearance from this helper.
+3. Integrate the researched camera/classifier notea79c57. It acquires no weights/data, runs no model and adopts no new tag, modality or accuracy threshold. Routine free engineering uses rights/capacity gates; it does not create another unnecessary owner-permission loop.
+4. Record protected149/public delivery and close only its three predeclared complete component jobs: JPEG credentials, bounded v3 source archives, private MT review preparation. Preserve136/66 originals and statistical/human/physical gates.
+5. Register new runtime/permission/helper sources and focused executable controls in the existing source-bound profile and finite boundary inventory. Inspect actual current source-graph/packet size under the unchanged16MB bound before qualification. Source bindings, not an older branch name or test count, govern reuse.
+6. Freeze once, obtain distinct source review and current affected capability receipts on standard hosted Linux. Keep the new26 managed controls/51 existing artifact controls, original timeouts and eleven required protected checks. Do not install SDKs/models or run a full local archive/browser matrix below the Mac reserve.
+7. Reuse draftPR150 through a normal fast-forward source push. After protected merge actually execute main-only MCP signing, independently selected-root verification and a fresh installed SDK probe. Preserve unavailable/failed records, never authorize a received artifact to choose its own trust. Offer exact public bytes with the privacy-aware instructions only after this works.
+
+Root owns shared policy/profile/inventory/state/changelog/publication. Separate workers own their frozen handoffs. Model/data acquisition, source-archive admission and unrelated distribution profiles are future bounded jobs; none is declared complete by this integration. Private connections, credentials, owner files and raw human inputs never enter source or public artifacts.

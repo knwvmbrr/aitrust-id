@@ -1,0 +1,142 @@
+{
+  "actual_checkout": "e6073bc41e686ed47eb2c60789a4c8a0c08bc9a5",
+  "actual_checkout_tree": "aa7b0910d52d312bf030fc20e9456c122c342dd4",
+  "api_commit_parents": [
+    "085106c1d40e86b071a25a7b9e4e56b965a31044",
+    "531b75aeac918be855a762d494711d1e0aca43ce"
+  ],
+  "captured_at": "2026-11-22T23:09:10.905434+00:00",
+  "checks": [
+    "API run and artifact metadata inspected independently; retained ZIP digests and sizes equal API",
+    "Raw 10 members per ZIP and embedded step hashes match exact public and parsed reports",
+    "All 449 source paths current-byte hashes and source-head Git modes/OIDs/blob hashes match",
+    "API synthetic-merge parents/tree independently checked; source-head local Git tree equals that tree",
+    "Current technical policy allowed while unsigned managed release refuses before zero verifier calls",
+    "Separate workflow has successful 26 and 51 control jobs; actual signing jobs skipped"
+  ],
+  "limits": [
+    "No SDK, native runtime, installation, rebuild or artifact download performed by reviewer",
+    "Only retained JSON/log evidence independently compared; runtime bundle/SPDX payloads were not fetched",
+    "Prior CFFI/Rust evidence authorship is acknowledged; this review adds no independent grant adoption for those authored inputs",
+    "No signature, managed release authorization, exhaustive compiled provenance, global license clearance, independent accuracy, tag or original closure claim"
+  ],
+  "pass": true,
+  "per_target": {
+    "bundle_members": 465,
+    "errors": 0,
+    "failures": 0,
+    "focused_tests": 44,
+    "installed_distributions": 30,
+    "installed_payloads": 940,
+    "sdk_cases": 8,
+    "skipped": 0
+  },
+  "profile": "mcp-current-four-target-retained-evidence-distinct-review/v1",
+  "public_receipt_sha256": "5507093fb2448efae55427dcf8e92ccc80e50b38f4d4ee24d9f7a95d1992793c",
+  "reviewed_by": "/root/seo",
+  "run_id": 45080226384,
+  "separate_control_logs": [
+    {
+      "file": "managed-controls.log",
+      "sha256": "a455269730cb7d2341be40cdf6e44aab4233137bd311337b1362176b558ed5f0",
+      "tests": 26
+    },
+    {
+      "file": "artifact-controls.log",
+      "sha256": "672ba3bdad209a6fba1505b446f52039769d2d4f3c6df1c6a1f4366fcc1fb936",
+      "tests": 51
+    }
+  ],
+  "source_bindings_current_git_blob_and_all_four_reports": 449,
+  "source_head": "531b75aeac918be855a762d494711d1e0aca43ce",
+  "verified_target_artifacts": [
+    {
+      "bytes": 26966,
+      "prerequisite": {
+        "gil_disabled": false,
+        "implementation": "CPython",
+        "libc": [
+          "glibc",
+          "2.39"
+        ],
+        "machine": "x86_64",
+        "macos": "",
+        "platform": "linux",
+        "pointer_bits": 64,
+        "version": [
+          3,
+          12
+        ]
+      },
+      "runtime": "3.12.16",
+      "target": "cp312-linux_x86_64_glibc_2_34",
+      "zip_sha256": "551bd919231a7df808429660415c8b1770e17c0c96367e2d845964f239009cf8"
+    },
+    {
+      "bytes": 26877,
+      "prerequisite": {
+        "gil_disabled": false,
+        "implementation": "CPython",
+        "libc": [
+          "",
+          ""
+        ],
+        "machine": "arm64",
+        "macos": "15.8.2",
+        "platform": "darwin",
+        "pointer_bits": 64,
+        "version": [
+          3,
+          12
+        ]
+      },
+      "runtime": "3.12.10",
+      "target": "cp312-macosx_11_0_arm64",
+      "zip_sha256": "616bd008150ede3771e4710b2de7a4214380d3465da46f79f592ce14a9d54ab1"
+    },
+    {
+      "bytes": 26971,
+      "prerequisite": {
+        "gil_disabled": false,
+        "implementation": "CPython",
+        "libc": [
+          "glibc",
+          "2.39"
+        ],
+        "machine": "x86_64",
+        "macos": "",
+        "platform": "linux",
+        "pointer_bits": 64,
+        "version": [
+          3,
+          13
+        ]
+      },
+      "runtime": "3.13.18",
+      "target": "cp313-linux_x86_64_glibc_2_34",
+      "zip_sha256": "e8b428de53f97de17d976687108e42d715c803f4d649f5d37b7294342414b5de"
+    },
+    {
+      "bytes": 26873,
+      "prerequisite": {
+        "gil_disabled": false,
+        "implementation": "CPython",
+        "libc": [
+          "",
+          ""
+        ],
+        "machine": "arm64",
+        "macos": "15.8.2",
+        "platform": "darwin",
+        "pointer_bits": 64,
+        "version": [
+          3,
+          13
+        ]
+      },
+      "runtime": "3.13.17",
+      "target": "cp313-macosx_11_0_arm64",
+      "zip_sha256": "e1aeebb25b57e99ee519f38d78c80469588bfc13b4628e5b716f7225532b2d10"
+    }
+  ]
+}

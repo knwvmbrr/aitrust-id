@@ -1,0 +1,68 @@
+{
+  "profile": "protected-image-jpeg-mt-v3-delivery/v1",
+  "captured_at": "2026-11-22T22:54:05.655516+00:00",
+  "pass": true,
+  "source_commit": "085106c1d40e86b071a25a7b9e4e56b965a31044",
+  "source_pr": "https://github.com/knwvmbrr/aitrust-id/pull/149",
+  "merge_parent_candidate": "032671e54bbf6a0466977d7b48e6dfa6fd9c4afc",
+  "merged_at": "2026-11-22T18:27:46Z",
+  "deployment_url": "https://33d84e7e.aitrust-id.pages.dev",
+  "production_origin": "https://aitrustid.com",
+  "publication_observed_at": "2026-11-22T18:30:09.615023+00:00",
+  "full_source_tree_equal_to_protected_candidate": true,
+  "implemented_by": [
+    "Codex PM /root",
+    "Codex /root/web_camo",
+    "Codex /root/share_debugger"
+  ],
+  "distinct_reviewers": [
+    "Codex /root/seo",
+    "Codex /root/web_camo",
+    "Codex /root/share_debugger"
+  ],
+  "required_protected_checks": 11,
+  "all_required_checks_passed_before_merge": true,
+  "unresolved_review_threads_before_merge": 0,
+  "actual_HTTP_comparisons": 180,
+  "selected_files_per_origin": 90,
+  "all_project_artifacts_verified": false,
+  "actual_browser_engines": [
+    "Chromium",
+    "WebKit"
+  ],
+  "actual_public_file_UI_records_per_engine": 2,
+  "public_PS_independence_observed": true,
+  "public_FA_tag_state": "Planned; helper produces observations only",
+  "optional_image_unavailable_fault_matrix": "Already executed before publication in the full source-bound website capability; not replayed in small public smoke.",
+  "canonical_checkout_fast_forwarded_to_source": true,
+  "owner_untracked_files_preserved": 12,
+  "original_scope_total": 202,
+  "original_complete": 136,
+  "original_open": 66,
+  "new_original_closures": 0,
+  "independent_accuracy_evidence": false,
+  "human_or_physical_acceptance": false,
+  "legal_or_global_distribution_clearance": false,
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-pr149-required-premerge.json",
+      "sha256": "1f8709208168ca2755322e5e41d46b4ce52449bfbca6321bfa221672638dbf38"
+    },
+    {
+      "path": "runs/2026-11-22-image-review-live-artifacts.json",
+      "sha256": "53f7971a7f77a7c4e352dd454d17c518aef788af7613dfe8a4e7760f91639b3a"
+    },
+    {
+      "path": "runs/2026-11-22-image-review-live-browser.json",
+      "sha256": "de5fd8e1e98e6eb1b8059dc90dce1cba69897a3c3b082ab27614a19e3a0a33c6"
+    },
+    {
+      "path": "runs/2026-11-22-combined-five-current-selection-distinct-review.json",
+      "sha256": "2c13feec1c9a2b13fc699a5d3da48555e78be0b668202d4194fb4736b923f666"
+    },
+    {
+      "path": "runs/2026-11-22-current-artifact51-v3-hosted-distinct-review.json",
+      "sha256": "ed0d75c2343901a53e21b3bc27aa4a487bf8af8a078e44830a9a740dc8127825"
+    }
+  ]
+}

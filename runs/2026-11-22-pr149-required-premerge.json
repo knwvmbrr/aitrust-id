@@ -1,0 +1,102 @@
+{
+  "captured_at": "2026-11-22T18:27:41.943207+00:00",
+  "profile": "pr149-required-checks-premerge/v1",
+  "pass": true,
+  "head": "032671e54bbf6a0466977d7b48e6dfa6fd9c4afc",
+  "required": [
+    "accessibility",
+    "change-records",
+    "device-builder (3.12)",
+    "device-builder (3.13)",
+    "device-builder (3.14)",
+    "host-config",
+    "no-egress",
+    "regressions",
+    "scope-plan",
+    "site",
+    "spec"
+  ],
+  "checks": [
+    {
+      "name": "change-records",
+      "conclusion": "SUCCESS",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137303621024"
+    },
+    {
+      "name": "host-config",
+      "conclusion": "SUCCESS",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137303621111"
+    },
+    {
+      "name": "scope-plan",
+      "conclusion": "SUCCESS",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137303621150"
+    },
+    {
+      "name": "spec",
+      "conclusion": "SUCCESS",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137303620992"
+    },
+    {
+      "name": "no-egress",
+      "conclusion": "SUCCESS",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137303621114"
+    },
+    {
+      "name": "regressions",
+      "conclusion": "SUCCESS",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137303621026"
+    },
+    {
+      "name": "gates",
+      "conclusion": "FAILURE",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137303621015"
+    },
+    {
+      "name": "accessibility",
+      "conclusion": "SUCCESS",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137303620741"
+    },
+    {
+      "name": "device-builder (3.12)",
+      "conclusion": "SUCCESS",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137303621151"
+    },
+    {
+      "name": "device-builder (3.13)",
+      "conclusion": "SUCCESS",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137303621109"
+    },
+    {
+      "name": "device-builder (3.14)",
+      "conclusion": "SUCCESS",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137303621099"
+    },
+    {
+      "name": "site",
+      "conclusion": "SUCCESS",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137303621100"
+    },
+    {
+      "name": "source-provenance",
+      "conclusion": "SKIPPED",
+      "status": "COMPLETED",
+      "detailsUrl": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45053514296/job/137308501853"
+    }
+  ],
+  "unresolved_threads": 0,
+  "independent_release_gate": "FAILURE; preserved and non-required for declared development-source publication",
+  "independent_accuracy_evidence": false
+}

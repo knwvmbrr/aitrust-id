@@ -1,0 +1,33 @@
+{
+  "profile": "bounded-live-image-and-ps-smoke/v1",
+  "started_at": "2026-11-22T18:34:29.963Z",
+  "captured_at": "2026-11-22T18:34:49.864Z",
+  "pass": true,
+  "source_commit": "085106c1d40e86b071a25a7b9e4e56b965a31044",
+  "origin": "https://aitrustid.com",
+  "engines": [
+    {
+      "engine": "Chromium",
+      "pass": true,
+      "exact_canonical_file_UI_records": 2,
+      "default_exact_record_hidden": true,
+      "FA_still_Planned": true,
+      "independent_PS_finding": true,
+      "observed_requests_same_origin_GET_without_query_or_body": true
+    },
+    {
+      "engine": "WebKit",
+      "pass": true,
+      "exact_canonical_file_UI_records": 2,
+      "default_exact_record_hidden": true,
+      "FA_still_Planned": true,
+      "independent_PS_finding": true,
+      "observed_requests_same_origin_GET_without_query_or_body": true
+    }
+  ],
+  "no_browser_package_install": true,
+  "full_regression_replayed": false,
+  "independent_accuracy_evidence": false,
+  "physical_phone": false,
+  "FA_tag_issued": false
+}
