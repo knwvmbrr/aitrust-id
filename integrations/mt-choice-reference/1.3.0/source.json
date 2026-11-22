@@ -1,0 +1,44 @@
+{
+  "profile": "published-mt-choice-reference-source/v1",
+  "source_commit": "b896cb4f1c303cb2a2bcd8a5ef5e5ba5a9b7acf8",
+  "method": "caller-bound-choice-framing-observation/1.3.0",
+  "source_files": {
+    "tools/mt_choice_device.py": {
+      "sha256": "e71f7b125abd2084858a73cdb545c31c73b249336ed2dbded74e42575621a189",
+      "bytes": 4192
+    },
+    "tools/choice_framing.py": {
+      "sha256": "01ec221400300a302d561cfd88e6df7000465040966875a6ece25c6a4f4bbf36",
+      "bytes": 6934
+    },
+    "tools/language_observations.py": {
+      "sha256": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+      "bytes": 8771
+    },
+    "protocol/corpus.py": {
+      "sha256": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+      "bytes": 8414
+    },
+    "protocol/normalization.py": {
+      "sha256": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "bytes": 2419
+    },
+    "protocol/unicode15-data.json": {
+      "sha256": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "bytes": 59614
+    },
+    "LICENSE": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "NOTICE": {
+      "sha256": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+      "bytes": 1134
+    },
+    "eval/vectors/unicode/LICENSE.txt": {
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "bytes": 1995
+    }
+  },
+  "native_or_independent_accuracy_claim": false
+}

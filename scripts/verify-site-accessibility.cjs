@@ -10,6 +10,7 @@ async function waitTagProbeReady(tagId,dialog){
 async function waitDisclosureProbeReady(detail){
  if(await detail.getAttribute('data-credential-method')!==null)await detail.locator('[data-credential-explorer]').waitFor();
  if(await detail.getAttribute('data-hp-uncertainty-method')!==null)await detail.locator('[data-hp-uncertainty]').waitFor();
+ if(await detail.getAttribute('data-mt-choice-method')!==null)await detail.locator('[data-mt-choice-explorer]').waitFor();
 }
 // Authored delayed-child control: native open alone is not loaded content.
 async function verifyDisclosureReadinessControl(browser){
@@ -17,7 +18,7 @@ async function verifyDisclosureReadinessControl(browser){
  try{
   const page=await context.newPage();
   const tested=[];
-  for(const [method,child] of [['data-credential-method','data-credential-explorer'],['data-hp-uncertainty-method','data-hp-uncertainty']]){
+  for(const [method,child] of [['data-credential-method','data-credential-explorer'],['data-hp-uncertainty-method','data-hp-uncertainty'],['data-mt-choice-method','data-mt-choice-explorer']]){
   const markup=`<main><details ${method}><summary style="min-height:44px">Optional preview</summary></details></main>`;
   await page.setContent(markup);const before=await probes.disclosures(page.locator('main'));assert.equal(before.failures.length,1,'Authored absent-child control did not expose premature height measurement');
   await page.setContent(markup);let completed=false;const checking=probes.disclosures(page.locator('main'),{afterExpand:waitDisclosureProbeReady}).then(result=>{completed=true;return result;});
@@ -45,6 +46,8 @@ async function expandForMeasurement(root){
  if(await credential.count())await credential.locator('[data-credential-explorer]').waitFor();
  const uncertainty=root.locator('[data-hp-uncertainty-method][open]');
  if(await uncertainty.count())await uncertainty.locator('[data-hp-uncertainty]').waitFor();
+ const selected=root.locator('[data-mt-choice-method][open]');
+ if(await selected.count())await selected.locator('[data-mt-choice-explorer]').waitFor();
 }
 // Actual deferred public data: ready-first coverage and physical-node identity.
 // Native close is an authored lifecycle control, not a claim about the original

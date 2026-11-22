@@ -1,0 +1,19 @@
+{
+  "captured_at": "2026-11-22T06:00:33.488774+00:00",
+  "pass": true,
+  "profile": "MT-choice-whole-build-close-boundary-correction/v1",
+  "builder_sha256": "ceaee08bc647a2ae1946842cffc7eb0330e7af00ca6fa00909838a4648026456",
+  "test_sha256": "fe3d5c5e65437b6f9a625d118e61e237f09302253fd28d91156f66d7d157dfd7",
+  "original_distinct_failure_sha256": "d4f5d19f11e3ce54dcce2cd943d3e451dd9dd5da249288d8210283e7e2821479",
+  "affected_controls": 3,
+  "affected_elapsed_seconds": 0.07,
+  "actual_pinned_static_build_passed": true,
+  "manifest_sha256": "a4672bd8c0dc24c0bfad4cca1f38e579af0dd1f11e868a7f9b6b0d768c04c779",
+  "source_pins_current": true,
+  "runtime_code_executed": false,
+  "limits": [
+    "Static source/runtime-byte capture only, no WASM/browser executed.",
+    "Outer source/runtime close after publication is typed uncertain; no rollback/crossfile/crash atomicity promise.",
+    "Three affected descriptor/publication controls use explicit inert runtime bytes; actual normal static build reads allfive pinned real cache files."
+  ]
+}
