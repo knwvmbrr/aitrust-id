@@ -40,7 +40,13 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
     assert(await dialog.locator('[data-tag-summary]').innerText()&&await dialog.locator('[data-tag-limit]').innerText(),id+' missing plain-language summary or limitation');
     assert(await dialog.locator('[data-tag-example]').innerText(),id+' missing everyday example');
     const working=['PS','PII_REDACTED'].includes(id);const validation=dialog.getByRole('region',{name:'Validation status'});assert(await validation.count()===(working?1:0),'Wrong validation card visibility');if(working)assert((await validation.innerText()).includes('Validation in progress'),'Working preview stage missing');assert((await dialog.locator('[data-tag-availability]').innerText()).includes(working?(id==='PS'?'preview':'Local setup'):(id==='MT'?'Wording-method preview available':id==='HP'?'Detail and uncertainty-word previews available':id==='NF'?'Reference comparison preview available':audience==='person'?'No checker':'No team service')),'Availability hidden');
-    assert(await dialog.locator('details:not([data-service-timing]):not([data-redaction-recognition])').count()===(id==='PS'?7:id==='PII_REDACTED'||id==='HP'||id==='MT'?4:3),id+' must have its compact disclosures and applicable setup');
+    assert(await dialog.locator('details:not([data-service-timing]):not([data-redaction-recognition])').count()===(id==='PS'?7:id==='PII_REDACTED'||id==='HP'||id==='MT'||id==='FA'?4:3),id+' must have its compact disclosures and applicable setup');
+    assert(await dialog.locator('[data-image-device-method]').count()===(id==='FA'?1:0),id+' must isolate image details in FA');
+    if(id==='FA'){
+     assert(await dialog.locator('[data-image-device-method]').evaluate(e=>!e.open),'Image helper must start closed');
+     assert(await dialog.locator('[data-image-metadata-explorer]').count()===0,'Closed image helper must not mount or read files');
+     assert((await dialog.locator('[data-tag-availability]').innerText()).startsWith('Planned tag')&&(await dialog.locator('[data-tag-limit]').innerText()).includes('full FA tag is still planned'),'Image helper promoted the FA tag');
+    }
     assert(await dialog.locator('[data-mt-choice-method]').count()===(id==='MT'?1:0),id+' must isolate selected-wording practice in MT');
     if(id==='MT'){assert(await dialog.locator('[data-mt-choice-method]').evaluate(e=>!e.open),'Selected wording must start closed');assert(await dialog.locator('[data-mt-choice-explorer]').count()===0,'Closed selected wording must not mount its editor');}
     assert(await dialog.locator('[data-credential-method]').count()===(id==='PS'?1:0),id+' must isolate the optional Python method in PS');
@@ -49,6 +55,13 @@ const scopeIds=JSON.parse(fs.readFileSync('docs/master-scope.json','utf8')).reco
     if(id==='HP'){assert(await dialog.locator('[data-hp-uncertainty-method]').evaluate(e=>!e.open),'Optional uncertainty editor must start closed');assert(await dialog.locator('[data-hp-uncertainty]').count()===0,'Closed uncertainty preview must not mount its editor');}
     assert(await dialog.locator('[data-redaction-recognition]').count()===(id==='PII_REDACTED'?1:0),id+' must retain its independent redaction breakdown only when applicable');
     const use=dialog.locator('[data-tag-usage]');assert(await use.count()===1,id+' use instructions missing');
+    if(id==='FA'){
+      assert(await use.getByRole('link',{name:'Private image-details guide',exact:true}).getAttribute('href')==='/reference/image-device-guide.md','FA private guide missing');
+      const response=await context.request.get(base+'/reference/image-device-guide.md');
+      assert(response.status()===200&&(await response.body()).equals(fs.readFileSync('docs/image-device-guide.md')),'Image guide differs from reviewed source');
+      assert((await use.innerText()).includes('does not determine AI origin or issue FA'),'Image use copy claims an origin verdict');
+      assert(await dialog.getByRole('region',{name:'Validation status'}).count()===0,'Planned FA acquired an active detector validation card');
+    }
     if(id==='HP'){
       assert(await use.getByRole('link',{name:'Literal-detail preview guide',exact:true}).getAttribute('href')==='/reference/hp-device-explorer.md','HP preview guide missing');
       assert((await dialog.locator('[data-tag-limit]').innerText()).includes('full HP tag is still planned'),'HP method preview promoted the full tag');

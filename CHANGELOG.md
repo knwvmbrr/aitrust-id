@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-075325-fa-private-image-route-integration-114e4a97
+
+Recorded 2026-11-22T07:53:25.016241+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Prepared the reviewed private PNG/JPEG container preview in the planned FA modal, with source-bound integration guards and a production-route verifier.
+- **Evidence.** Five focused Node integration groups, six temporary-filesystem groups, syntax and pinned JSX transformation pass; the canonical image component is unchanged. [Change record](./runs/changes/2026-11-22-075325-fa-private-image-route-integration-114e4a97.json).
+- **Not claimed.** Engineering component only. FA remains Planned and working=false; no origin, watermark, credential or original-closure claim. Current normal-build and browser proof and protected-publication base comparison remain pending.
+
+
 ### 2026-11-22-072123-image-device-actual-browser-component-f071cd7a
 
 Recorded 2026-11-22T07:21:23.793717+00:00 · Contributor: Codex / web_camo · change

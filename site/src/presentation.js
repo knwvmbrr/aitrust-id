@@ -9,7 +9,7 @@ const descriptions = {
   HP: ['Look more closely at details and wording.', 'Find number-shaped details, or choose a passage to look for words such as “may” or “likely.”', 'These literal previews do not decide whether a statement is true or needs uncertainty. The full HP tag is still planned.'],
   MT: ['Explore wording before you decide what it means.', 'Try a message with “act now,” or one that names an expert.', 'These phrase checks do not judge intent or verify a source. The full MT tag is still planned.'],
   IV: ['See what an independent person actually checked.', 'Read a reviewer’s evidence, what they reviewed and what their review did not cover.', 'Planned. A signature records a review; it does not guarantee every claim is true.'],
-  FA: ['See evidence that AI generated the content.', 'Inspect a recorded generation event or authenticated content credential tied to the item.', 'Planned. Writing style or missing human evidence cannot prove AI origin.'],
+  FA: ['Read a local image’s container details.', 'Choose a PNG or JPEG to see supported header facts and metadata-section counts privately.', 'This preview does not establish AI origin or verify a credential. The full FA tag is still planned.'],
   PA: ['See recorded AI contributions and later edits.', 'Follow a consented record of an AI draft and the editing that happened afterward.', 'Planned. It describes observed contributions, not a person’s identity or integrity.'],
   UNK: ['Know when there is not enough evidence to decide.', 'A check finishes, but the available evidence does not support a conclusion.', 'Planned as a tag. Uncertainty is different from a check that failed or could not run.'],
   PII_OUTBOUND: ['Catch detected personal details before you send a message.', 'Notice an email address in a draft, then choose whether to edit it or send it.', 'Planned. Detection can miss details; the choice to edit or send stays yours.'],
@@ -36,6 +36,7 @@ export function presentation(tag) {
       : tag.id==='MT' ? 'Planned tag · Wording-method preview available.'
       : tag.id==='HP' ? 'Planned tag · Detail and uncertainty-word previews available.'
       : tag.id==='NF' ? 'Planned tag · Reference comparison preview available.'
+      : tag.id==='FA' ? 'Planned tag · Local image-details preview available.'
       : tag.audience==='person' ? 'Planned · No checker available yet.'
       : localOrganization ? 'Local software available. No team service is running.'
       : 'Planned offering. No team service is running.',

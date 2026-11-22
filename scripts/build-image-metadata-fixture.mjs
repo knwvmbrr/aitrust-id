@@ -24,6 +24,19 @@ export async function prepareFixtureOutput(destination=output){
   return {directory:absolute,async check(){if(!handle||!same(await handle.stat(),identity)||!same(await lstat(absolute),identity))throw Error('Owned directory changed');},async close(){const owned=handle;handle=null;await owned?.close();}};
  }catch{const owned=handle;handle=null;await owned?.close();throw Error('Owned fixture output unavailable. Existing output was not cleared.');}
 }
+async function boundedGuide(file){
+ const handle=await open(file,constants.O_RDONLY|constants.O_NOFOLLOW|constants.O_NONBLOCK);
+ try{const before=await handle.stat();if(!before.isFile()||before.size<1||before.size>200000||before.nlink!==1)throw Error('Guide unavailable');const parts=[];let size=0;while(true){const part=Buffer.alloc(Math.min(65536,200001-size));const {bytesRead}=await handle.read(part,0,part.length,null);if(!bytesRead)break;size+=bytesRead;if(size>200000)throw Error('Guide too large');parts.push(part.subarray(0,bytesRead));}const after=await handle.stat();if(!same(before,after)||before.size!==size||before.mtimeMs!==after.mtimeMs)throw Error('Guide changed');return Buffer.concat(parts,size);}finally{await handle.close();}
+}
+export async function copyFixtureGuide(owned,sourceFile){
+ await owned.check();const reference=path.join(owned.directory,'reference'),target=path.join(reference,'image-device-guide.md');
+ try{await mkdir(reference,{mode:0o700});}catch(error){if(error.code!=='EEXIST')throw error;}
+ const parent=await lstat(reference);if(!parent.isDirectory()||parent.isSymbolicLink())throw Error('Guide directory unavailable');
+ const expected=await boundedGuide(sourceFile);await owned.check();
+ try{await lstat(target);const current=await boundedGuide(target);if(!current.equals(expected))throw Error('Existing guide differs');}
+ catch(error){if(error.code!=='ENOENT')throw error;await writeFile(target,expected,{flag:'wx'});}
+ const after=await lstat(reference);if(!same(parent,after))throw Error('Guide directory changed');await owned.check();
+}
 async function main(){
  const owned=await prepareFixtureOutput();
  try{
@@ -47,7 +60,7 @@ async function main(){
    }finally{await file.close();}
    await owned.check();await writeFile(path.join(target,name),bytes,{flag:'wx'});
   }
-  await owned.check();await mkdir(path.join(output,'reference'),{recursive:true});await writeFile(path.join(output,'reference/image-device-guide.md'),await readFile(path.join(root,'docs/image-device-guide.md')),{flag:'wx'});
+  await copyFixtureGuide(owned,path.join(root,'docs/image-device-guide.md'));
   await owned.check();console.log(JSON.stringify({state:'STANDALONE_IMAGE_FIXTURE_BUILT',shared_site_hooks_changed:false,runtime_files:5,runtime_execution:false}));
  }finally{await owned.close();}
 }

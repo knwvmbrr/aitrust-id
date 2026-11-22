@@ -3,12 +3,12 @@
 This experimental on-device preview inspects selected PNG and JPEG container
 facts. It does not determine whether an image was made by AI, whether it is
 true, who made it, or whether it is a valid/safe image. No tag is issued.
-It is a standalone development component; main-site integration and publication
-are separate. The existing C2PA SDK inspector remains a different tool.
+The full FA tag remains Planned: this optional helper supplies container facts,
+not its origin claim. The existing C2PA SDK inspector remains a different tool.
 
 ## Use it
 
-Open **Image details · preview**, choose an ordinary PNG or JPEG using the file
+Open the **FA** modal and **Image details · preview**, choose an ordinary PNG or JPEG using the file
 picker, then choose **Inspect image**. Selecting a file alone does not read its
 contents or start a worker. Header dimensions and fixed metadata-section counts
 appear after a supported check. Private embedded names, comments, GPS, URLs and
@@ -77,13 +77,14 @@ No image SDK, account, model, Docker or new dependency is required.
 python3 -m pytest tests/test_image_device.py -q
 node --test tests/image-metadata-client.mjs
 node --test tests/image-fixture-output.mjs
-node scripts/build-image-metadata-fixture.mjs
-node scripts/verify-image-metadata-device.cjs
+npm run build:site
+node scripts/verify-image-metadata-site.cjs
 ```
 
 `AITRUST_BUILD_PYTHON` and `AITRUST_VERIFY_PYTHON` select the existing trusted
 build/reference interpreters. They are operator configuration, never file content.
-The standalone build uses an owned output directory and existing runtime cache.
-The verifier serves it only on an owned random loopback fixture with the reviewed
-headers. Browser proof, distinct review and protected integration/publication are
+The normal build reuses the existing runtime cache. The production-route
+verifier serves that build only on an owned random loopback fixture with the
+reviewed headers. The source also retains a standalone engineering fixture; its
+builder refuses an existing output directory instead of clearing it. Browser proof, distinct review and protected integration/publication are
 recorded separately; no physical-phone or full FA/PA/F-155 completion is implied.
