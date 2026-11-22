@@ -49,7 +49,11 @@ CONSUMERS={
  'nli-macos-arm64':('research/nli/backend.py','research/nli/requirements-mac.lock'),
  'c2pa-linux-x86_64':('scripts/inspect-manifest.py','tools/manifest_inspection.py'),
  'c2pa-macos-arm64':('scripts/inspect-manifest.py','tools/manifest_inspection.py'),
- 'mcp-stdio':('scripts/ai-tools-server.py','integrations/mcp/requirements.lock'),
+ 'mcp-stdio':('scripts/ai-tools-server.py','integrations/mcp/requirements.lock',
+  'tools/mcp_distribution.py','scripts/mcp-distribution.py','tools/mcp_runtime_obligations.py',
+  'scripts/collect-mcp-notices.py','sbom/mcp-runtime/targets.json','sbom/mcp-runtime/manifest.json',
+  'sbom/mcp-runtime/source-inputs.json','sbom/mcp-runtime/obligations.json.gz',
+  'sbom/mcp-runtime/THIRD-PARTY-NOTICES.txt','sbom/mcp-runtime/SCHEMA-ATTRIBUTION.txt'),
  'node-build-tools':('package.json','site/package.json'),
 }
 need(set(CONSUMERS)==set(ROUTES))
@@ -88,9 +92,10 @@ def label(value,limit=500):
 
 
 class Graph:
-    def __init__(self,route,root,capture):
+    def __init__(self,route,root,capture,artifact_target=None):
         need(route in ROUTES);self.route=route;self.root=Path(root);self.c=capture
         self.inputs={};self.raws={};self.nodes={};self.edges=set();self.gaps=[];self.commit=None
+        self.artifact_target=artifact_target
     def read(self,path):
         path_name(path)
         need(not any(p=='.git'or p=='.env'or p.startswith('.env.')for p in path.split('/'))or path=='deploy/.env.example')
@@ -245,6 +250,103 @@ class Graph:
             for target in row['dependency_ids']:self.edge(keys[row['id']],keys[target])
         self.gaps.append(kind+'_published_source_graph_is_not_a_complete_compiled_dependency_claim')
 
+    def mcp(self):
+        from tools import mcp_distribution as m
+        profile_raw,profile=m.load(self.c,self.root)
+        self.read(m.PROFILE_FILE)
+        need(sha(profile_raw)==self.inputs[m.PROFILE_FILE])
+        for path in sorted(m.SOURCES):
+            raw=self.read(path)
+            declared='CC-BY-4.0'if path=='spec/assertion.schema.json'else 'Unicode-3.0'if path=='protocol/unicode15-data.json'else None
+            self.node('mcp-source:'+path,path,None,'mcp-project-source-or-notice',path,[('SHA256',sha(raw))],declared)
+        self.read('sbom/mcp-runtime/obligations.json.gz')
+        data=m.read_obligations(self.c,self.root)
+        evidence,_=m.supplement_evidence(self.root)
+        for row in evidence:
+            need(row['path']not in self.inputs or self.inputs[row['path']]==row['sha256'])
+            self.inputs[row['path']]=row['sha256']
+        source_keys={}
+        for package in data['source_packages']:
+            key='mcp-native-source:'+package['id'];source_keys[package['id']]=key
+            self.node(key,package['id'],None,'exact-publisher-source-notice-observation',
+                'sbom/mcp-runtime/obligations.json.gz',[('SHA256',package['archive_sha256'])],package['selected_grant'],
+                {'official_source':package['url'],'source_archive_bytes':package['archive_bytes'],
+                 'notice_sha256':package['notice_sha256'],'complete_compiled_closure':False})
+        ffi=self.data('sbom/cffi-libffi/manifest.json')['packages'][0]
+        ffi_key='mcp-native-source:libffi@3.4.6'
+        self.node(ffi_key,'libffi','3.4.6','publisher-static-build-recipe-and-symbol-correspondence',
+            'sbom/cffi-libffi/manifest.json',[('SHA256',ffi['source_identity']['archive_sha256'])],'MIT',
+            {'source_identity':ffi['source_identity'],'notice_sha256':data['libffi_evidence']['notice_sha256'],
+             'complete_compiled_closure':False,'publisher_attestation_verified':False})
+        rust=self.data('sbom/mcp-rust-stdlib/manifest.json')
+        rust_keys={}
+        for commit in rust['source_commits']:
+            key='mcp-rust-runtime-source:'+commit;rust_keys[commit]=key
+            self.node(key,'Rust standard-library source',commit,'native-source-path-and-scoped-publisher-grant-observation',
+                'sbom/mcp-rust-stdlib/manifest.json',declared='MIT OR Apache-2.0',
+                details={'source_commit_observed':commit,'scoped_runtime_exceptions':rust['grant_scopes'],
+                         'notice_sha256':data['rust_stdlib_evidence']['notice_sha256'],
+                         'complete_compiled_closure':False})
+        for scope in rust['grant_scopes']:
+            if scope['id']in('rust-standard-library','std-lock-registry-candidates'):continue
+            key='mcp-rust-runtime-grant:'+scope['id']
+            declaration='MIT'if scope['id']=='compiler-builtins-libm-runtime-source'else scope['grant']
+            self.node(key,scope['id'],scope.get('version'),'scoped-rust-runtime-source-grant',
+                'sbom/mcp-rust-stdlib/manifest.json',declared=declaration,
+                details={'source_scope':scope,'notice_sha256':data['rust_stdlib_evidence']['notice_sha256'],
+                         'conservative_runtime_source_scope_not_a_linkage_assertion':True})
+            for root_key in rust_keys.values():self.edge(root_key,key)
+        registry_path='sbom/mcp-rust-stdlib/registry-candidate-grants.json'
+        registry=self.data(registry_path)
+        need(type(registry['packages'])is list and len(registry['packages'])==18)
+        for package in registry['packages']:
+            key='mcp-rust-stdlib-candidate:'+package['name']+'@'+package['version']
+            self.node(key,package['name'],package['version'],'rust-stdlib-lock-source-notice-candidate',
+                registry_path,[('SHA256',package['archive_sha256'])],package['license_declared'],
+                {'official_source':package['url'],'source_locks':package['rust_commit_locks'],
+                 'actual_linkage_not_asserted':True})
+            for commit in package['rust_commit_locks']:self.edge(rust_keys[commit],key)
+        targets=[self.artifact_target]if self.artifact_target is not None else sorted(m.TARGETS)
+        need(all(target in m.TARGETS for target in targets))
+        filenames={row['filename']for target in targets for row in profile['targets'][target]}
+        records={w['filename']:w for w in profile['wheels']if w['filename']in filenames}
+        component_keys={}
+        for filename,w in sorted(records.items()):
+            key='mcp-wheel:'+filename
+            declaration='MIT'if w['name']=='rfc3339-validator'and w['license_declared']=='MIT license'else w['license_declared']
+            self.node(key,w['name'],w['version'],'source-bound-publisher-wheel-observation',m.PROFILE_FILE,
+                [('SHA256',w['sha256'])],declaration,
+                {'filename':filename,'bytes':w['bytes'],'publisher_bytes_unmodified':True,
+                 'native_members':w['native_members'],'notice_members':w['notice_members']})
+            if w['sha256']in data['libffi_evidence']['applies_to_wheel_sha256']:
+                self.edge(key,ffi_key)
+            for observed in w['rust_runtime_observations']:
+                for commit in observed['source_commits']:
+                    self.edge(key,rust_keys[commit])
+            for graph in w['publisher_graphs']:
+                for component in graph['components']:
+                    identity=component['id'];root=component['source_root_id']
+                    if root in source_keys:
+                        destination=source_keys[root]
+                    else:
+                        destination='mcp-native-declared:'+identity
+                        if destination not in self.nodes:
+                            self.node(destination,component['name'],component['version'],'wheel-publisher-native-declaration',
+                                m.PROFILE_FILE,details={'source_root_id':root,'declaration_only':True})
+                    component_keys[identity]=destination
+                    self.edge(key,destination)
+        for filename,w in sorted(records.items()):
+            for graph in w['publisher_graphs']:
+                for a,b in graph['dependency_edges']:
+                    self.edge(component_keys[a],component_keys[b])
+        for target in targets:
+            names={x['name']:'mcp-wheel:'+x['filename']for x in profile['targets'][target]}
+            for a,b in profile['dependencies'][target]['edges']:
+                self.edge(names[a],names[b])
+        self.gaps.extend(['mcp_target_runtime_and_distribution_review_pending',
+            'publisher_source_and_native_declarations_are_not_exhaustive_compiled_coverage',
+            'source_notice_asset_contains_a_conservative_cross_target_source_notice_set'])
+
     def committed_tree(self):
         head=run_worker(['git','--no-replace-objects','-C',str(self.root),'rev-parse','--verify','HEAD^{commit}'],input=b'',timeout=20,output_limit=100)
         need(head.returncode==0);self.commit=head.stdout.decode('ascii').strip();need(COMMIT.fullmatch(self.commit))
@@ -273,7 +375,7 @@ class Graph:
         elif self.route.endswith('-linux-amd64'):self.image()
         elif self.route.startswith('nli-'):self.nli()
         elif self.route.startswith('c2pa-'):self.c2pa()
-        elif self.route=='mcp-stdio':self.python_lock('integrations/mcp/requirements.lock')
+        elif self.route=='mcp-stdio':self.mcp()
         elif self.route=='node-build-tools':
             for path in NPM_FILES:self.npm(path)
             self.read('sbom/native/manifest.json');self.gaps.append('all_native_optional_platform_obligations_unreviewed')
@@ -328,16 +430,23 @@ def prepare(route,artifact,source_commit,root=ROOT,created=None):
     created=created or datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00','Z')
     try:
         with Capture()as c:
-            g=Graph(route,root,c).finish();value=c.artifact(artifact)
+            mcp=None
+            if route=='mcp-stdio':
+                from tools.mcp_distribution import verify_file
+                mcp=verify_file(artifact,root)
+            g=Graph(route,root,c,artifact_target=mcp['target']if mcp else None).finish();value=c.artifact(artifact)
             # The actually admitted source route is also checked against canonical contents.
             if route=='ps-source':
                 from tools.ps_source_distribution import verify_file
                 verify_file(artifact,root)
+            if mcp is not None:
+                need(mcp['sha256']==value['sha256']and mcp['bytes']==value['bytes']and
+                     mcp['profile_sha256']==g['source_sha256']['sbom/mcp-runtime/manifest.json'])
             if route=='source-snapshot':need(g['committed_tree']==source_commit)
             sbom=spdx(route,value,g,created);policy=evaluate(route,root)
             record={'profile':PROFILE,'route':route,'source_commit':source_commit,'artifact':value,'created':created,
                 'graph':g,'spdx':sbom,'spdx_sha256':sha(encoded(sbom)+b'\n'),'graph_sha256':sha(encoded(g)),
-                'policy':policy,'artifact_format_verified':route=='ps-source','attestation_verified':False,'release_authorized':False,
+                'policy':policy,'artifact_format_verified':route in('ps-source','mcp-stdio'),'attestation_verified':False,'release_authorized':False,
                 'license_clearance':False,'complete_project_obligations':False}
             need(len(encoded(record))<=MAX_PACKET);c.check();return record
     except (ValueError,OSError,KeyError,TypeError,RecursionError,UnicodeError):raise PrivateInputError('Artifact evidence unavailable.')from None

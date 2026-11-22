@@ -1,0 +1,30 @@
+{
+  "captured_at": "2026-11-22T14:01:33.229471+00:00",
+  "reviewer": "Codex / web_camo",
+  "profile": "MCP-installed-interpreter-target-original-counterexample/v1",
+  "pass": true,
+  "source_sha256": "f23efa6ad379ef8bdf6022a62403c23ef9323d6ae97700936d54ac237dcaad8d",
+  "actual_trusted_interpreter_version": [
+    3,
+    13,
+    0
+  ],
+  "declared_artifact_target": "cp312-macosx_11_0_arm64",
+  "actual_venv_python_resolves_to_trusted_interpreter": true,
+  "configuration_verified_despite_minor_mismatch": true,
+  "fixed_runtime_probe_calls": 0,
+  "mocks": [
+    "Accepted archive projection from trusted verifier",
+    "Existing materialized artifact byte checks",
+    "Existing installed payload hash acceptance at940; this isolates missing interpreter target condition rather than alleging payload bypass"
+  ],
+  "real_boundaries": [
+    "Private owned temporary directory/archive/config",
+    "Actual venv launcher symlink to current explicit trusted CPython3.13",
+    "Actual no-system-site pyvenv.cfg",
+    "Capture descriptor/path/close checks"
+  ],
+  "SDK_or_archive_code_executed": false,
+  "release_authorized": false,
+  "temp_removed": true
+}

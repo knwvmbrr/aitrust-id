@@ -223,6 +223,17 @@ def _evaluate(route, root):
         identity = dependency['component']
         status, reason = component_status(identity, value['components'][identity], root)
         components.append({'id': identity, 'status': status, 'reason': reason})
+    if route == 'mcp-stdio':
+        # Finite runtime format/source verification is separate from permission.
+        # This lazy optional consumer cannot poison the admitted personal route.
+        try:
+            from tools.mcp_distribution import inspect_profile
+            inspect_profile(root)
+        except (OSError, ValueError, TypeError, KeyError, ImportError, RuntimeError, RecursionError):
+            reason = 'mcp_runtime_profile_invalid_or_unavailable'
+        else:
+            reason = 'mcp_runtime_notice_target_and_distinct_review_pending'
+        components.append({'id': 'mcp-runtime-distribution', 'status': 'blocked_unknown', 'reason': reason})
     # A reviewed source component cannot be reused to bless another artifact's
     # platform, compiled code, transitive graph or redistribution arrangement.
     if (route != 'ps-source' or selected['kind'] != 'source-only' or

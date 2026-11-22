@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-143752-mcp-offline-runtime-distribution-a0dd03dd
+
+Recorded 2026-11-22T14:37:52.660566+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Add exact four-target offline MCP wheel bundles, installed-runtime verification, scoped source notices and a read-only runtime CI proposal.
+- **Evidence.** Preserved publisher wheel bytes; finite source/notice mapping; current profile validation keeps PS admitted and MCP blocked. Historical selected Mac8/8 and four-target deterministic formats are separately bound; narrow target, gzip, capacity and workflow reviews are retained. [Change record](./runs/changes/2026-11-22-143752-mcp-offline-runtime-distribution-a0dd03dd.json).
+- **Not claimed.** No current four-target runtime execution, protected signing, MCP admission, compiled-closure/legal clearance, independent accuracy, full F057/X02 completion or global scope change. Local runtime paused below disk reserve; historical failure and source identities preserved.
+
+
 ### 2026-11-22-082000-mcp-rust-stdlib-source-notices-8f1a556f
 
 Recorded 2026-11-22T08:20:00.849325+00:00 · Contributor: Codex / seo · change
