@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-075604-fa-image-availability-guard-correction-0907c4b0
+
+Recorded 2026-11-22T07:56:04.670946+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Corrected the generic FA availability expectation before the first integration build and added exact-expression compatibility coverage.
+- **Evidence.** The original source-only mismatch is retained; current five integration groups pass for all20 availability expressions with19 sibling expectations preserved. Seven named base inputs match protected69298f and root9ac868. [Change record](./runs/changes/2026-11-22-075604-fa-image-availability-guard-correction-0907c4b0.json).
+- **Not claimed.** Verifier-only correction; no current normal-build/browser or publication credit and no FA/original closure.
+
+
 ### 2026-11-22-075325-fa-private-image-route-integration-114e4a97
 
 Recorded 2026-11-22T07:53:25.016241+00:00 · Contributor: Codex / web_camo · change

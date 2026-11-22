@@ -83,3 +83,12 @@ build/current production-route Chromium then WebKit execution with root after
 source freeze. Preserve every failed candidate; diagnose before changed-source
 replay. Root performs exact integrated required/protected/public checks later.
 Physical-device/human accessibility and full FA/PA/F155 gates stay open.
+
+## Source-review amendment before correction
+
+The pure availability expression still expected No checker for FA despite the
+explicit Planned image preview. Preserve the original counterexample, add only
+its FA phrase to the existing ternary, and evaluate that exact current expression
+against all20 actual records in the focused integration control. Product/core
+bytes and all sibling expectations stay unchanged. No browser rerun is needed
+for this source-only correction before the first integration build.
