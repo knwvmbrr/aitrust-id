@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-065424-accept-current-programme-protocol-execution-160cdb36
+
+Recorded 2026-11-22T06:54:24.629606+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded complete current protocol execution after correcting the stale readable scope projection.
+- **Evidence.** All69 registered commands passed with unchanged current sources, including the complete programme focused controls and actual private lifecycle. [Change record](./runs/changes/2026-11-22-065424-accept-current-programme-protocol-execution-160cdb36.json).
+- **Not claimed.** This engineering packet does not establish an operating certifier, independent tag accuracy or physical/human acceptance. Current website and protected/public delivery remain pending.
+
+
 ### 2026-11-22-065128-correct-readable-scope-projections-093905f3
 
 Recorded 2026-11-22T06:51:28.897264+00:00 · Contributor: Codex PM /root · change
