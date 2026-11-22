@@ -21,7 +21,7 @@ def verify(row,platform):
     stamp=datetime.fromisoformat(row['captured_at']);require(stamp.tzinfo is not None and stamp<=datetime.now(timezone.utc))
     return {'pass':True,'platform':platform,'cases':row['test_count'],'sources_current':True,'company_collection_enabled':False}
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--macos',type=Path,default=ROOT/'runs/2026-11-09-hash-inbox-current-macos.json');p.add_argument('--linux',type=Path,default=ROOT/'runs/2026-11-09-hash-inbox-current-linux.json');a=p.parse_args()
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--macos',type=Path,default=ROOT/'runs/2026-11-22-hash-inbox-macos.json');p.add_argument('--linux',type=Path,default=ROOT/'runs/2026-11-22-hash-inbox-linux.json');a=p.parse_args()
     try:print(json.dumps({'pass':True,'profiles':[verify(read_evidence(a.macos),'darwin'),verify(read_evidence(a.linux),'linux')]}));return 0
     except Exception:print('{"pass":false,"reason":"hash_inbox_execution_missing_or_stale"}');return 1
 if __name__=='__main__':raise SystemExit(main())

@@ -20,6 +20,12 @@ def test_altered_or_overstated_receipt_refused(mutation):
 def test_full_intake_software_acceptance_requires_both_actual_profiles():
     row=next(r for r in json.loads((ROOT/'docs/scope-progress.json').read_bytes())['records'] if r['id']=='F-045')
     if row['percent_complete']==100:
-        for platform,name in [('darwin','macos'),('linux','linux')]:assert v['verify'](json.loads((ROOT/('runs/2026-11-09-hash-inbox-current-'+name+'.json')).read_bytes()),platform)['pass']
+        for platform,name in [('darwin','macos'),('linux','linux')]:assert v['verify'](json.loads((ROOT/('runs/2026-11-22-hash-inbox-'+name+'.json')).read_bytes()),platform)['pass']
         assert row['completed_at'] and row['completed_by'] and not row['required_acceptance']
     else:assert row['required_acceptance'] and not row['completed_at']
+
+@pytest.mark.parametrize('platform,label',[('darwin','macos'),('linux','linux')])
+def test_historical_worker_receipts_remain_stale(platform,label):
+    old=json.loads((ROOT/('runs/2026-11-09-hash-inbox-current-'+label+'.json')).read_bytes())
+    assert old['sources']['scripts/worker_process.py']!=v['h']()['scripts/worker_process.py']
+    with pytest.raises(ValueError):v['verify'](old,platform)

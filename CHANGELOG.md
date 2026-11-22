@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-045416-refresh-hash-and-agent-evidence-selectors-aca2b4ea
+
+Recorded 2026-11-22T04:54:16.576020+00:00 · Contributor: Codex PM /root; hash and agent recovery author /root/web_camo · change
+
+- **Changed.** Selected new dated hash-inbox and agent-output observations and extended the existing isolated hosted job to produce both actual Linux records.
+- **Evidence.** The changed Python consumers parse; source-bound observers will require fresh actual execution rather than reusing the earlier worker hash. Existing isolation, least privilege and hashed environment remain required. [Change record](./runs/changes/2026-11-22-045416-refresh-hash-and-agent-evidence-selectors-aca2b4ea.json).
+- **Not claimed.** Syntax and implementation record only; pending actual Mac/Linux/view results are not claimed. No original closure, collection, enterprise service or tag accuracy change.
+
+
 ### 2026-11-22-045216-require-fresh-enterprise-worker-observations-8b9adf33
 
 Recorded 2026-11-22T04:52:16.315141+00:00 · Contributor: Codex PM /root; enterprise recovery author /root/seo · change

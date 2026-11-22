@@ -73,7 +73,7 @@ def main():
         if args.execute:row=execute()
         elif args.receipt and args.platform:row=verify(json.loads(args.receipt.read_bytes()),args.platform)
         else:
-            checks=[verify(json.loads((ROOT/('runs/2026-11-06-agent-output-'+label+'.json')).read_bytes()),host)
+            checks=[verify(json.loads((ROOT/('runs/2026-11-22-agent-output-'+label+'.json')).read_bytes()),host)
                     for host,label in [('darwin','macos'),('linux','linux')]]
             row={'pass':True,'supported_os_checks':checks,'independent_accuracy_evidence':False,'certification':False}
         if args.output:write_report(args.output,row)
