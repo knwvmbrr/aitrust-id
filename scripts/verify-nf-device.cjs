@@ -4,7 +4,7 @@ const {execFileSync}=require('node:child_process');
 const {chromium,webkit}=require('playwright');
 const {startSiteFixture}=require('./site-fixture-server.cjs');
 const {writeReport}=require('./execution-report.cjs');
-const {createStageDiagnostics,hostCapacity,engineExecution,settleEngineChecks,publicStageEvent}=require('./verify-nf-client.cjs');
+const {createStageDiagnostics,hostCapacity,engineExecution,settleEngineChecks,closeWithDiagnostics,publicStageEvent}=require('./verify-nf-client.cjs');
 const cases=JSON.parse(execFileSync(process.env.AITRUST_VERIFY_PYTHON||'python3',['scripts/nf-device-cases.py'],{encoding:'utf8'}));
 const manifest=JSON.parse(fs.readFileSync('site/src/nf-device-manifest.json'));
 const sources=['tools/nf_device.py','protocol/corpus.py','protocol/corpus_support.py','tools/nf_source_evidence.py','protocol/normalization.py','protocol/unicode15-data.json','protocol/normalization.mjs','protocol/normalization-core.js','scripts/build-nf-device.py','scripts/build-nf-device-fixture.mjs','scripts/nf-device-cases.py','scripts/verify-nf-device.cjs','scripts/verify-nf-client.cjs','site/src/NFExplorer.jsx','site/src/NFExplorerSlot.jsx','site/src/nf-device-client.js','site/src/nf-device-worker.js','site/src/nf-device-result.js','site/src/nf-cosine-result.js','site/src/nf-device-manifest.json','site/public/nf-device/notices.txt','tests/test_nf_device.py','tests/nf-device-client.mjs','docs/nf-device-reference.md',...Object.values(manifest.checks).map(v=>'site/public'+v.path)];
@@ -64,15 +64,16 @@ async function peers(page,mark){mark('peer_checks_begin');await page.exposeBindi
    stage='chunk_import_render';mark();for(const mode of ['chunk','import','render']){mark(mode);
     mark('fault_context_begin');const c=await browser.newContext();const p=await c.newPage();mark('fault_context_ready');if(mode==='chunk')await p.route('**/assets/NFExplorer-*.js',r=>r.fulfill({status:404,body:'Unavailable'}));
     mark('fault_navigation_begin');await p.goto(fixture.url);mark('fault_navigation_complete');if(mode!=='chunk'){mark('fault_trigger_begin');await p.getByRole('button',{name:mode==='import'?'Import failure':'Render failure',exact:true}).click();mark('fault_trigger_complete');}
-    mark('fault_fallback_wait');await p.locator('[data-nf-unavailable]').waitFor();mark('fault_fallback_observed');assert(await peers(p,mark));mark('fault_context_close_begin');await c.close();mark('fault_context_close_complete');
+    mark('fault_fallback_wait');await p.locator('[data-nf-unavailable]').waitFor();mark('fault_fallback_observed');assert(await peers(p,mark));const closed=await closeWithDiagnostics(()=>c.close(),mark,'fault_context_close_begin','fault_context_close_complete');if(closed.error)throw closed.error;
    }
    outcome.result={engine:name,pass:true,authored_cases:cases.length,full_canonical_records:cases.filter(v=>v.expected).length,canonical_refusals:cases.filter(v=>!v.expected).length,negation_similarity_not_truth:true,both_raw_and_frozen_nfc_bound:true,corrupt_records_refused:8,optional_payload_and_validator_failures_then_literal_PS_MT:true,actual_NF_chunk_import_render_failure_then_PS_MT:true,edit_clear_cancel_unmount_terminate:true,default_no_worker_or_input_transfer:true,no_input_upload_storage_console:true,private_details_opt_in:true,reflow_320_at_200percent:true,light_dark:true,physical_phone:false,independent_accuracy_evidence:false};outcome.pass=true;
 
   }catch(error){outcome.pass=false;outcome.failure={engine:engineName,stage,substep:lastSubstep,error_sha256:hash(String(error.message))};}
   finally{
    outcome.browser_cleanup={attempted:Boolean(browser),complete:false};
-   try{mark('browser_close_begin');await browser?.close();outcome.browser_cleanup.complete=true;mark('browser_close_complete');}
-   catch(error){outcome.pass=false;delete outcome.result;outcome.failure={engine:engineName,stage:'cleanup',substep:'browser_close',error_sha256:hash(String(error.message))};}
+   const closed=await closeWithDiagnostics(()=>browser?.close(),mark,'browser_close_begin','browser_close_complete');
+   outcome.browser_cleanup.complete=closed.complete;outcome.browser_cleanup.diagnostics_complete=closed.diagnostics_complete;
+   if(closed.error){outcome.pass=false;delete outcome.result;outcome.cleanup_failure={engine:engineName,stage:'cleanup',substep:'browser_close',error_sha256:hash(String(closed.error?.message||'Cleanup unavailable'))};outcome.failure??=outcome.cleanup_failure;}
   }
   return outcome;
  }
@@ -81,7 +82,7 @@ async function peers(page,mark){mark('peer_checks_begin');await page.exposeBindi
   stage='server';mark();fixture=await startSiteFixture({directory:root});
   const settled=await settleEngineChecks(report.execution.concurrency,runEngine);
   const outcomes=settled.map((value,i)=>value.status==='fulfilled'?value.value:{engine:['Chromium','WebKit'][i],pass:false,browser_cleanup:{attempted:true,complete:false},failure:{engine:['Chromium','WebKit'][i],stage:'cleanup',substep:'browser_close',error_sha256:hash(String(value.reason?.message||'Engine rejected'))}});
-  report.engine_outcomes=outcomes.map(({engine,pass,browser_cleanup,failure})=>({engine,pass,browser_cleanup,...(failure?{failure}:{})})).sort((a,b)=>a.engine.localeCompare(b.engine));
+  report.engine_outcomes=outcomes.map(({engine,pass,browser_cleanup,failure,cleanup_failure})=>({engine,pass,browser_cleanup,...(failure?{failure}:{}),...(cleanup_failure?{cleanup_failure}:{})})).sort((a,b)=>a.engine.localeCompare(b.engine));
   report.engines=outcomes.filter(v=>v.pass).map(v=>v.result).sort((a,b)=>a.engine.localeCompare(b.engine));
   report.completed_engines=report.engines.map(v=>v.engine);
   stage='source_stability';mark();assert.deepEqual(inventory(),before);assert.deepEqual(Object.fromEntries(artifact(root)),served);report.source_unchanged_during_execution=true;report.served_unchanged_during_execution=true;

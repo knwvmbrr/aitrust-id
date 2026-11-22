@@ -2,6 +2,23 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-150014-nf-cleanup-correction-integration-4904c1a8
+
+Recorded 2026-11-22T15:00:14.939077+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrated the independently reviewed diagnostic cleanup correction before hosted NF measurement.
+- **Evidence.** Diagnostic failures cannot skip owned browser/context closure or mask a primary failure. Original application sources, cases, result waits and180s release wrapper remain unchanged. [Change record](./runs/changes/2026-11-22-150014-nf-cleanup-correction-integration-4904c1a8.json).
+- **Not claimed.** Twenty inert controls and distinct source review do not claim browser or hosted success. Separate300s diagnostic remains measurement-only; protocol/website remain pending.
+
+
+### 2026-11-22-145825-nf-diagnostics-independent-cleanup-8c683dc3
+
+Recorded 2026-11-22T14:58:25.236227+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Made browser and context closure independent of diagnostic checkpoint failures, retaining primary and cleanup failure evidence.
+- **Evidence.** Final20inert controls pass including begin/end/both checkpoint refusal, actual stub close error, context/browser backstop, async/falsy failures and close-once. Original180sCOMMANDS,300sdiagnosticworkflow and fixturehook bytes unchanged. [Change record](./runs/changes/2026-11-22-145825-nf-diagnostics-independent-cleanup-8c683dc3.json).
+- **Not claimed.** Originalf638/source-onlyP2finding retained; no actualbrowser/build/SDK/hostedrun or release acceptance, no timeoutwaiver.
+
 ### 2026-11-22-145037-nf-timing-diagnostic-integration-4e7d10d3
 
 Recorded 2026-11-22T14:50:37.206946+00:00 · Contributor: Codex · change

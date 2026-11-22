@@ -55,3 +55,21 @@ uploads only the two fixed JSON paths. Existing canonical fixture90s and inert
 controls30s setup bounds are retained. Setup and browser dependency installation
 are separate bounded steps on the disposable public runner. No local runtime or
 SDK installation occurs.
+
+## Peer cleanup correction before hosted launch
+
+The f638 candidate placed the browser-close begin marker inside the same try as
+close. A marker's report/console failure could therefore skip close entirely.
+Preserve the original source-control-flow finding; it was not a browser runtime
+reproduction. Before correction, make cleanup independent of both begin/end
+checkpoint success: catch checkpoint failures, always attempt the owned close
+exactly once, emit completion only after successful close, and keep diagnostic
+failure distinct from actual-close completion. Either failure invalidates the
+cohort. Apply the same helper to fault-context close; browser-finally remains the
+backstop for failures at any earlier marker. No assertion, application, worker,
+180s wrapper or50s wait changes. Prove begin/end/both checkpoint faults, real
+stub close refusal, context-to-browser backstop and ordinary cleanup with inert
+objects only; no local browser/native/SDK run.
+
+Treat even null/undefined/falsy JavaScript throws as failures; diagnostic failure
+truth must not depend on a thrown value being truthy.

@@ -1,0 +1,62 @@
+{
+  "profile": "bounded-source-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T14:59:05.006333+00:00",
+  "reviewed_by": "/root/seo",
+  "baseline_commit": "7174a3f49a3365ceff241d2b3ff5bd74d1be5598",
+  "reviewed_original_commit": "f638f8c2904d6991dc4c056427c9acaf86937bc6",
+  "corrected_source_sha256": {
+    "scripts/verify-nf-device.cjs": "ede0b13deccad0133e7b055c0072fe0fa1712e60d860fef70d19c620f0a9865e",
+    "scripts/verify-nf-client.cjs": "4c01c71f81617eec55946a90966de6dda0424c29b1a5b05cef8cda802657a5d5",
+    "scripts/build-nf-device-fixture.mjs": "5cfa8d810054bc995bab92fe86e39be42825ee603f27565fcfac5a8dce86f58e",
+    "tests/nf-browser-diagnostics.cjs": "1a322e6d10f86994a8735bf3f54990acb09e2c8e109f028c8f11e4e52caf00c0",
+    ".github/workflows/nf-browser-diagnostic.yml": "088a35e115490a8dc8df20e5a9c3a168244cb4190c118413434e63c0a2c9a060",
+    "docs/nf-pr149-diagnostic-plan.md": "3be2334a44a892a9dee1c541c32b5058402c316d1358c0609011be018c1eee41",
+    "scripts/execution-report.cjs": "368ea02355526b62fffb9e2410febff6442ee79acc45b4f71f442e3c37b178ba",
+    "scripts/nf-device-cases.py": "c313111c2a4f47a3cb23871108be11ba9d3f73524d0c7e5f23fa930e372819c0"
+  },
+  "historical_finding_sha256": "679c4a89d114419e4609706111a1478c7e276fa9d9f786abae0cbb4421b7be6b",
+  "finding_resolution": "closeWithDiagnostics catches begin/end checkpoint faults, attempts owned close exactly once regardless of begin failure, emits completion only after successful close, and fails diagnostic outcome without replacing primary failure. Browser finally remains independent context-cleanup backstop. Falsy throws cannot become success.",
+  "preserved": {
+    "release_commands_byte_exact": true,
+    "release_browser_deadline_ms": 180000,
+    "runtime_waits_ms": 50000,
+    "canonical_cases_and_product_git_diff_empty": [
+      "scripts/nf-device-cases.py",
+      "site/src/NFExplorer.jsx",
+      "site/src/nf-device-client.js",
+      "site/src/nf-device-worker.js",
+      "site/src/nf-device-result.js",
+      "site/src/nf-cosine-result.js"
+    ],
+    "authored_cases": 33,
+    "corruptions": 8,
+    "actual_PS_MT_assertions_retained": true,
+    "fixture_fixed_callback_no_inputs_or_results": true,
+    "callback_failure_runs_original_peer_finally": true,
+    "closed_enum_numeric_public_progress": true,
+    "default_local_engine_concurrency": 1
+  },
+  "workflow_scope": {
+    "same_repository_pr_only": true,
+    "unique_nonrequired_job": true,
+    "permissions": "contents:read",
+    "pinned_actions_and_locked_dependencies": true,
+    "preflight_cpu_threads": 4,
+    "preflight_total_memory_min_bytes": 16106127360,
+    "measurement_only_deadline_ms": 300000,
+    "term_kill_margin_ms": 5000,
+    "artifact_json_paths": 2,
+    "artifact_retention_days": 7,
+    "release_gate_pass": false,
+    "signing_or_release_mutation": false
+  },
+  "findings": [],
+  "limits": [
+    "Source/control-flow and immutable Git comparison only; no reviewer tests, browser, runtime, downloads, installs or network.",
+    "Some unchanged product paths are omitted by sparse checkout; their unchanged Git/index diff is checked, not a claim of runtime file capture.",
+    "Author reports20 inert groups; reviewer read affected controls but did not execute or promote them as reviewer executions.",
+    "Corrected files source-frozen atop f638; normal correction commit and actual hosted measurement still pending.",
+    "No assertion of the cause of prior PR149 failure, runtime speed guarantee, release success, tag accuracy, admission, production publication or original closure."
+  ]
+}
