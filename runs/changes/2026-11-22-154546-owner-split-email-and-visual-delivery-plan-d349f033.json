@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-154546-owner-split-email-and-visual-delivery-plan-d349f033",
+  "recorded_at": "2026-11-22T15:45:46.551129+00:00",
+  "author": "Codex PM /root; task-list /root/seo; workflow reviewer /root/share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2f03b9de83daab98ed8633c80c12e9217a822799",
+  "changed": "Separated every remaining original into owner/external and engineering actions, sent the requested owner email, and prepared executable visual/video/spatial and delivery plans.",
+  "proves": "All202 original record objects and criteria are unchanged,136complete/66open. Exact66-way ownership split and SENT email have distinct review. Board records25 named deliveries separately from4 originals. Actual2f03 NF diagnostic completes125900ms below180s; actual current source inventory7935 refreshed through its real producer. Corrected read-only Linux workflow uses existing full69/64 capabilities and passed separate syntax/inert review.",
+  "limits": "No new original closure, tag release, human validation, inbox-read confirmation, public image activation, hosted new-workflow success or source-archive admission. Current archive exceeds128000000 bytes; versioned capacity repair and fresh affected checks remain. SEO observations dated; zero social accounts connected.",
+  "scope_ids": [
+    "F-150",
+    "WP-RELEASE",
+    "WP-SITE",
+    "T-FA",
+    "T-PA",
+    "T-MT",
+    "F-057"
+  ],
+  "files": {
+    "docs/scope-progress.json": "64268f2e27bb10adbbfe9d542944ac4ad1235a35bfd65a3a356a200a080c7741",
+    "docs/scope-progress.md": "7159dc1578b6ed32c8063fc6e16d464ad3386dabb9d2aff2364e2ade019e5707",
+    "docs/session-delivery.json": "38d9fdd41ecffb3d54725d734d5907b180ff754eba3a88725cb2c4f416ea38a7",
+    "docs/session-delivery-plan.md": "85a1f033f0399a92991d53a112b36a40492c881e01a9101e46c093151bafe947",
+    "state.json": "7413ac78e51fdab6e6b2a0a48a2627b20cdfefad9008b592fffa8bf95bb6d34e",
+    "docs/agent-delivery-status.md": "07550e5faa4495ca25b02b5d1c6c1d497b5a5ad9bf9fda1b6d9a138473e6a6df",
+    "docs/execution-ownership.json": "6dc5d7bfe0fd298287f5037d01535df4737f1d7f0a45bd0da753b7679ee40c19",
+    "docs/owner-actions.md": "b2da613d8017c10e0d0cc48e7a641278837a5b7955e47295aeac52385f3ed197",
+    "docs/visual-tag-execution-plan.md": "7162139b16494e3bff74a9a735cc68f3da41a16e710f5c93b046fd4220a4b4e7",
+    "docs/hosted-delivery-revalidation-plan.md": "67b9e898ceeb467511d3bda63973de66c331a15e9a6a152c680980faee964286",
+    ".github/workflows/delivery-revalidation.yml": "8e86bc6fbe099267f5c52ce1a19b8b53f21f886ab625fb65860bd3413381cfc1",
+    "eval/route-boundaries.json": "917d1adf6bd95ec97879497a65c15f49fdf8e434a21142fd58ea8cd54a05f8bf",
+    "runs/2026-11-22-owner-action-email.json": "0c284126fef9634b51a8470c06df391eeb106f344979ca6b2fe3980ae1ad9461",
+    "runs/2026-11-22-owner-handoff-source-distinct-review.json": "bfffde17c06e871225a077d2a7763130678fa6c92afbb774a3ee38db28f7c112",
+    "runs/2026-11-22-nf-actual-hosted-diagnosis.json": "db968bb34b20ad7091ec55efaf51d14b3cdd3222b785820f21dbcfcd787dfdb0",
+    "runs/2026-11-22-hosted-delivery-workflow-source-review.json": "599892bee31c2a06b1891bf7f42f9b56102a0babfab09fba3b0da2b9abd1ced8",
+    "runs/2026-11-22-route-boundaries-7935-source-review.json": "860d970b842b3078c49bab7bb4e9b1c2717d23afd94ebe0988106d7efeb9ee2a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-owner-action-email.json",
+      "sha256": "0c284126fef9634b51a8470c06df391eeb106f344979ca6b2fe3980ae1ad9461"
+    },
+    {
+      "path": "runs/2026-11-22-owner-handoff-source-distinct-review.json",
+      "sha256": "bfffde17c06e871225a077d2a7763130678fa6c92afbb774a3ee38db28f7c112"
+    },
+    {
+      "path": "runs/2026-11-22-nf-actual-hosted-diagnosis.json",
+      "sha256": "db968bb34b20ad7091ec55efaf51d14b3cdd3222b785820f21dbcfcd787dfdb0"
+    },
+    {
+      "path": "runs/2026-11-22-hosted-delivery-workflow-source-review.json",
+      "sha256": "599892bee31c2a06b1891bf7f42f9b56102a0babfab09fba3b0da2b9abd1ced8"
+    },
+    {
+      "path": "runs/2026-11-22-route-boundaries-7935-source-review.json",
+      "sha256": "860d970b842b3078c49bab7bb4e9b1c2717d23afd94ebe0988106d7efeb9ee2a"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-22T15:45:47.363801+00:00"
+    }
+  ]
+}

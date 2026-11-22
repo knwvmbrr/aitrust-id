@@ -1,0 +1,136 @@
+{
+  "profile": "nf-pr149-actual-diagnosis/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T15:38:13.911534+00:00",
+  "reviewed_by": "/root/seo",
+  "scope": "Retained source/execution evidence diagnosis, not a release pass.",
+  "prior_release_failure": {
+    "head": "7174a3f49a3365ceff241d2b3ff5bd74d1be5598",
+    "run_id": 45031773489,
+    "job_id": 137236718966,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45031773489/job/137236718966",
+    "failed_step": "Verify built catalogue and accessibility",
+    "command": "canonical_browser",
+    "timeout_ms": 180000,
+    "outcome": "deadline",
+    "error_code": "ETIMEDOUT",
+    "elapsed_ms": 180266,
+    "last_coarse_failure": {
+      "engine": "Chromium",
+      "stage": "chunk_import_render",
+      "substep": "render"
+    },
+    "exact_inner_operation_cause_established": false,
+    "raw_log_sha256": "8058cf350d6be08aa2e6f1db5ccfc40ca4c6cdfbbb4fd434422c5497913d5bc5"
+  },
+  "current_site_failure": {
+    "head": "2f03b9de83daab98ed8633c80c12e9217a822799",
+    "actual_checkout": "4b8fa8515ecb9d1d114deafcfc526b3c01e4a4ec",
+    "run_id": 45036146440,
+    "job_id": 137250217347,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45036146440/job/137250217347",
+    "failed_step": "Exercise current-route deployment boundaries and violating profiles",
+    "failed": 9,
+    "passed": 27,
+    "assertion": "Current route differs from reviewed source inventory",
+    "NF_executed_in_this_site_job": false,
+    "raw_log_sha256": "242fdb057af5ab839e38c055118d94bc4e10b6bf37be67115be9d99721ff9874"
+  },
+  "independent_diagnostic": {
+    "head": "2f03b9de83daab98ed8633c80c12e9217a822799",
+    "actual_checkout": "4b8fa8515ecb9d1d114deafcfc526b3c01e4a4ec",
+    "run_id": 45036146486,
+    "job_id": 137250217053,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45036146486/job/137250217053",
+    "status": "success",
+    "artifact_id": 14759818188,
+    "archive_bytes": 25566,
+    "archive_sha256": "a4f4478360d282567598f9208057218fba8053402675dc2f4d517dd4b7972533",
+    "downloaded_once": true,
+    "exact_json_members": {
+      "nf-pr149-browser.json": {
+        "bytes": 42803,
+        "sha256": "40d1d7a8cc8ee95bfec86c7d475646dbfd19be80a5bf83870d4048834e66aa9b"
+      },
+      "nf-pr149-stage.json": {
+        "bytes": 91995,
+        "sha256": "fde46f95e47c1f60132198e085d617c5de26acc71d02485eca1b46e208c45e73"
+      }
+    },
+    "source_bindings_current_and_exact_head_git": 26,
+    "served_hashes_reported": 331,
+    "events": 327,
+    "both_case_sequences_exact_0_through32": true,
+    "total_elapsed_ms": 125900,
+    "below_unchanged_release_deadline_by_ms": 54100,
+    "per_engine_cleanup_complete": [
+      {
+        "engine": "Chromium",
+        "pass": true,
+        "browser_cleanup": {
+          "attempted": true,
+          "complete": true,
+          "diagnostics_complete": true
+        }
+      },
+      {
+        "engine": "WebKit",
+        "pass": true,
+        "browser_cleanup": {
+          "attempted": true,
+          "complete": true,
+          "diagnostics_complete": true
+        }
+      }
+    ],
+    "per_engine_last_elapsed_ms": {
+      "Chromium": 104012,
+      "WebKit": 125854
+    },
+    "per_engine_authored_cases": 33,
+    "per_engine_complete_records": 21,
+    "per_engine_canonical_refusals": 12,
+    "per_engine_corruptions": 8,
+    "actual_PS_MT_failure_recovery_reported": true,
+    "host_capacity": {
+      "platform": "linux",
+      "available_cpu_threads": 4,
+      "total_memory_bytes": 16464293888,
+      "available_memory_bytes": 14889627648,
+      "constrained_memory_bytes": null
+    },
+    "source_and_served_stable_reported": true,
+    "fixture_cleanup": true,
+    "diagnostic_limit_ms": 300000,
+    "release_gate_pass": false
+  },
+  "finite_inventory_observation_before_next_root_freeze": {
+    "old_manifest_sha256": "43dbc6f6e049a64041958b59866ea4907b29dd929dbe25e95741a4f48400304f",
+    "old_source_count": 7933,
+    "current_double_capture_source_count": 7934,
+    "added": [
+      ".github/workflows/nf-browser-diagnostic.yml"
+    ],
+    "changed": [
+      "scripts/build-nf-device-fixture.mjs",
+      "scripts/verify-nf-client.cjs",
+      "scripts/verify-nf-device.cjs",
+      "tests/nf-browser-diagnostics.cjs"
+    ],
+    "removed": [],
+    "untracked_source_paths": [],
+    "final_inventory_refresh_pending_parent_workflow_freeze": true
+  },
+  "recommendation": {
+    "change_timeouts": false,
+    "claim_prior_product_cause_fixed": false,
+    "concrete_architecture_correction": "Sequence final source freeze, real inventory(root) regeneration and distinct finite delta review, then execute the unchanged protocol/website commands on that exact checkout and bind their fresh receipts. Keep per-operation diagnostics and independent cleanup. Current failure is source/evidence assembly ordering, not an established NF algorithm or deadline defect.",
+    "optional_future_performance_work": "Only a newly localized actual operation would justify changing resource ownership/caching or cohort scheduling. Preserve all33 cases,8corruptions,PS/MT assertions,fresh workers,50second waits and180second release budget; no deduplication or diagnostic success promotion."
+  },
+  "limits": [
+    "Only the authorized25566byte twoJSON artifact was downloaded once with API size and SHA verification. No runtime ZIPs, browser, local tests, installs, build, native execution or CI rerun.",
+    "Source hashes match26 current files and exact2f03 Git blobs;331 served artifact hashes are reported by the retained producer, not independently rehydrated from downloaded artifacts.",
+    "One successful125.900second diagnostic observation does not explain the earlier180.266second timeout, prove a speed guarantee, or approve the current site release.",
+    "Below-reserve local storage contains small reports/logs only; no heavy working copy or runtime artifacts acquired."
+  ]
+}
