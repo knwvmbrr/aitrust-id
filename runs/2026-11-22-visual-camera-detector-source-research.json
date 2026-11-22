@@ -1,0 +1,140 @@
+{
+  "captured_at": "2026-11-22T18:01:23.238645+00:00",
+  "corrections": [
+    "Routine authorized free engineering uses rights/capacity/worker-plan checks, not repeated owner permission. Owner decisions remain new costs, credentials, terms acceptance, legal representation or adopted numeric tag policy.",
+    "First DNG is 12.19MP, exceeding current4MP JPEG subset; conversion/downsampling needs a separately versioned profile and is not drop-in."
+  ],
+  "document": {
+    "path": "docs/visual-camera-detector-candidates.md",
+    "sha256": "d7d16fdcb49f638b38dd73dc021c6366d10445dc20aecf56643704df8bed75c1"
+  },
+  "limits": [
+    "Camera samples are contributor-declared, not independently established origin truth.",
+    "License notices do not grant training/evaluation image rights or certify native dependency closure.",
+    "CLIP deployment guidance and task-specific independent evaluation remain material limits.",
+    "Weights, runtime memory, throughput and native output parity are unexecuted.",
+    "Current root publication freeze is unaffected; isolated branch handoff only."
+  ],
+  "metadata_registration_correction": "Initial event attempt refused unknown research labels V05/V06 as scope IDs; no event or changelog was written. Existing T-FA/T-PA scope IDs are used; research labels remain separate, no scope change.",
+  "pass": true,
+  "prior_ignored_research": {
+    "preserved_unchanged": true,
+    "raw_scrapes_published": false,
+    "receipt_sha256": "4fc1e0ab2bd0dbe133c54c788a45d73c0534887b6bab02382ef3ae6115379c96",
+    "recommendation_sha256": "f294f0dae3e3c45e12069350ffc6be0f4a086596126e8e79fe796b7baad4edfc",
+    "source_retrieval_evidence_sha256": "2c366d1be9362b7470f392cea337f5cc4945497949833c9bbc171805855660d2"
+  },
+  "profile": "visual-camera-detector-source-research/v1",
+  "research_task_ids": [
+    "V05",
+    "V06"
+  ],
+  "scope_ids": [
+    "T-FA",
+    "T-PA"
+  ],
+  "sources": [
+    {
+      "id": "camera_catalogue",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 11248,
+      "retrieved_markdown_sha256": "09271661a93911301ba2b433ac226f239a133dbcfb8520bff6cb2ee33923e283",
+      "url": "https://raw.pixls.us/"
+    },
+    {
+      "id": "camera_legacy_warning",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 27353,
+      "retrieved_markdown_sha256": "230ad6235804e0ff33daaddbfe138430d2447f2a79e234dc6aa9ba0633a2d61d",
+      "url": "https://pixls.us/blog/2017/09/keep-the-raws-coming/"
+    },
+    {
+      "id": "cc0_deed",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 3879,
+      "retrieved_markdown_sha256": "cd05f3dc04ad22a0ce9226e85ab89d1524b56d31a76996276dffc78966cab555",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "id": "detector_license_pinned",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 1091,
+      "retrieved_markdown_sha256": "923dbc0fe040cc826122491e98b20d6f401e510d50c8b666de908e59ebf2f2b2",
+      "url": "https://raw.githubusercontent.com/WisconsinAIVision/UniversalFakeDetect/030495aea3300a8b54c0ec37ec7fe1dd7e63c619/LICENSE"
+    },
+    {
+      "id": "detector_readme",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 5349,
+      "retrieved_markdown_sha256": "b349f2ab1f882023427b5863d2ede50f6804287db482afe04053d8fbb3666e6a",
+      "url": "https://raw.githubusercontent.com/WisconsinAIVision/UniversalFakeDetect/main/README.md"
+    },
+    {
+      "id": "detector_tree_pinned",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 17896,
+      "retrieved_markdown_sha256": "5bc09faa07cd1931d30f6e5d6e0d426f301419523b70a3f04122388afd2c0ca6",
+      "url": "https://api.github.com/repos/WisconsinAIVision/UniversalFakeDetect/git/trees/030495aea3300a8b54c0ec37ec7fe1dd7e63c619?recursive=1"
+    },
+    {
+      "id": "detector_evaluator",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 9849,
+      "retrieved_markdown_sha256": "9ab4021cc6f85002a8b8cd0fc28baa9b4861b59bffcfbd98e10d02b08c42b2d6",
+      "url": "https://raw.githubusercontent.com/WisconsinAIVision/UniversalFakeDetect/main/validate.py"
+    },
+    {
+      "id": "detector_model",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 643,
+      "retrieved_markdown_sha256": "57ce5898bf0bc7ff52b5922a0aefae8bc34a9237e4d59e4a1615ff5d8c6ff7a6",
+      "url": "https://raw.githubusercontent.com/WisconsinAIVision/UniversalFakeDetect/main/models/clip_models.py"
+    },
+    {
+      "id": "detector_backbone_loader_pinned",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 9396,
+      "retrieved_markdown_sha256": "c3f1c09abe0a0d9c429e0d47f2b8d4a4ec09dbd11eec3d7dd9846babd717e43b",
+      "url": "https://raw.githubusercontent.com/WisconsinAIVision/UniversalFakeDetect/030495aea3300a8b54c0ec37ec7fe1dd7e63c619/models/clip/clip.py"
+    },
+    {
+      "id": "clip_license",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 1064,
+      "retrieved_markdown_sha256": "987e63b32f6c89ff5160e429458a872ff048e6860b590a3912e938f9da8f14db",
+      "url": "https://raw.githubusercontent.com/openai/CLIP/main/LICENSE"
+    },
+    {
+      "id": "clip_model_card",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 7733,
+      "retrieved_markdown_sha256": "7baf04f60c6234b301ec2c9ca39e67a3ca54b47c05e9509bddf732cbcbec8b7f",
+      "url": "https://raw.githubusercontent.com/openai/CLIP/main/model-card.md"
+    },
+    {
+      "id": "clip_head_pin",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 21630,
+      "retrieved_markdown_sha256": "fdf04632659b29ceedb2c4dad10d93610837001c45760e2d69f1a1285a95670a",
+      "url": "https://github.com/openai/CLIP"
+    },
+    {
+      "id": "rejected_ladeda_license",
+      "retrieval_representation": "retrieved_markdown_not_raw_file_bytes",
+      "retrieved_markdown_bytes": 7069,
+      "retrieved_markdown_sha256": "de90be4a3fba0bf09f8ce98bbf21f5063d0ae5188ffa7c6ee47ac074d0d018e6",
+      "url": "https://raw.githubusercontent.com/barcavia/RealTime-DeepfakeDetection-in-the-RealWorld/e734562bbb6763f5bb2951099e9dc9a38df5e7dd/LICENSE"
+    }
+  ],
+  "verification": {
+    "acquisition_ready": false,
+    "benchmark_or_accuracy_claimed": false,
+    "current_root_modified": false,
+    "fa_pa_or_original_completion_claimed": false,
+    "image_model_dataset_binary_acquired": false,
+    "model_installed_or_executed": false,
+    "source_document_review_only": true,
+    "tests_executed": false,
+    "tests_required": false
+  }
+}
