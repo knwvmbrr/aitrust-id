@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-063944-bind-programme-and-mt-delivery-c385f7ac
+
+Recorded 2026-11-22T06:39:44.259300+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Bound the complete reference programme and optional selected-pair MT preview to current engineering manifests and the existing site CI job.
+- **Evidence.** Registered actual current verification commands and all new method/builder/client inputs without changing release thresholds or adopted tags. [Change record](./runs/changes/2026-11-22-063944-bind-programme-and-mt-delivery-c385f7ac.json).
+- **Not claimed.** Registration is not execution. Current integrated capability checks, protected publication and final full-original acceptance remain pending.
+
+
 ### 2026-11-22-063811-record-actual-protected-delivery-state-9a0b9dcf
 
 Recorded 2026-11-22T06:38:11.555646+00:00 · Contributor: Codex PM /root · change

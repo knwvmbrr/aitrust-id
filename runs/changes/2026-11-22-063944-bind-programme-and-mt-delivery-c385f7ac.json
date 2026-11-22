@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-063944-bind-programme-and-mt-delivery-c385f7ac",
+  "recorded_at": "2026-11-22T06:39:44.259300+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "adcdf8915f0ccf53dc4c50f25a122e295b05e327",
+  "changed": "Bound the complete reference programme and optional selected-pair MT preview to current engineering manifests and the existing site CI job.",
+  "proves": "Registered actual current verification commands and all new method/builder/client inputs without changing release thresholds or adopted tags.",
+  "limits": "Registration is not execution. Current integrated capability checks, protected publication and final full-original acceptance remain pending.",
+  "scope_ids": [
+    "F-145",
+    "T-MT",
+    "F-019b"
+  ],
+  "files": {
+    "docs/reviewed-programme-mt-delivery-plan.md": "a5f3d50530e926908672bd1b0efc043d12865df8f0ca53680dd288b8ca90353e",
+    "eval/revalidation.json": "aa28d16bb1c3648e33d8a78363a2dd492e9cce95a1bf887a20a8bdc828faf801",
+    ".github/workflows/ci.yml": "9fda3eef4aea8f6e5e2f9f070f29f6f26deec83e1ef8adb7834cb7b469d08665"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-f145-root-integration.json",
+      "sha256": "d1e0bcfe79ba84d03574af1c36c07f9634383680ab13c7169229bc23ab81a462"
+    },
+    {
+      "path": "runs/2026-11-22-mt-selected-wording-final-composed.json",
+      "sha256": "f398987752cdc569e0291ee8a697c23fc5a61807ed34f8d4b7739e8db6d9476e"
+    }
+  ],
+  "checks": []
+}
