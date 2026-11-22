@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-144716-nf-pr149-closed-timing-diagnostic-afd8e78b
+
+Recorded 2026-11-22T14:47:16.948763+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Added closed fault/peer/cleanup timing to NF verification and a read-only hosted300s diagnostic workflow without changing the180s release wrapper.
+- **Evidence.** 15 inert diagnostics pass; syntax and workflow blocks parse. ExactPSthenMT input/order/default records and finally cleanup preserved, unknown/private/getter progress refused, original COMMANDS and50000 result waits unchanged. [Change record](./runs/changes/2026-11-22-144716-nf-pr149-closed-timing-diagnostic-afd8e78b.json).
+- **Not claimed.** No localbrowser/build/SDK or hostedexecution. Diagnostic300s is timing-only and cannot clear180s release gate, PR149, tagaccuracy or original requirements.
+
+
 ### 2026-11-22-141351-image-current-delivery-packet-f6448d4f
 
 Recorded 2026-11-22T14:13:51.115076+00:00 · Contributor: Codex · change

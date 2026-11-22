@@ -11,7 +11,7 @@ const COMMANDS=Object.freeze([
 ]);
 const ENGINES=new Set(['setup','Chromium','WebKit']);
 const STAGES=new Set(['configuration','server','launch','mount','whole_record_parity','form_negation_and_privacy','invalid_cosine_then_literal','appearance','privacy','optional_failures','lifecycle','corrupt_closed_records','chunk_import_render','source_stability','cleanup','complete']);
-const SUBSTEPS=new Set(['start','complete','case_begin','case_complete','negation_submit','negation_result','details','private_submit','private_result','cosine_fill','cosine_submit','cosine_alert_wait','cosine_alert_observed','literal_select','literal_submit','literal_result_wait','literal_result_observed','payload','validator','edit','clear','cancel','unmount','claim_raw','passage_raw','claim_nfc','passage_nfc','unknown','source','omitted','score','chunk','import','render','browser_close']);
+const SUBSTEPS=new Set(['start','complete','case_begin','case_complete','negation_submit','negation_result','details','private_submit','private_result','cosine_fill','cosine_submit','cosine_alert_wait','cosine_alert_observed','literal_select','literal_submit','literal_result_wait','literal_result_observed','payload','validator','edit','clear','cancel','unmount','claim_raw','passage_raw','claim_nfc','passage_nfc','unknown','source','omitted','score','chunk','import','render','browser_close','fault_context_begin','fault_context_ready','fault_navigation_begin','fault_navigation_complete','fault_trigger_begin','fault_trigger_complete','fault_fallback_wait','fault_fallback_observed','peer_checks_begin','peer_ps_begin','peer_ps_complete','peer_mt_begin','peer_mt_complete','peer_checks_complete','fault_context_close_begin','fault_context_close_complete','browser_close_begin','browser_close_complete']);
 const SIGNALS=new Set(['SIGTERM','SIGKILL','SIGABRT','SIGSEGV','SIGINT','SIGHUP','SIGQUIT','SIGILL','SIGBUS','SIGFPE','SIGPIPE']);
 const CODES=new Set(['ETIMEDOUT','ENOENT','EACCES','EIO','ENOBUFS','E2BIG','EINVAL']);
 function ms(value){if(typeof value!=='number'||!Number.isFinite(value)||value<0)throw Error('Invalid diagnostic timing');return Math.round(value);}
@@ -46,6 +46,13 @@ async function settleEngineChecks(concurrency,run){
  if(concurrency===2)return Promise.allSettled(names.map(name=>run(name)));
  const settled=[];for(const name of names)settled.push(...await Promise.allSettled([Promise.resolve().then(()=>run(name))]));return settled;
 }
+function publicStageEvent(event){
+ const fields=['engine','stage','substep','authored_case_index','elapsed_ms','engine_elapsed_ms','stage_elapsed_ms','since_previous_ms'];
+ if(!event||typeof event!=='object'||Array.isArray(event)||Object.getPrototypeOf(event)!==Object.prototype||Object.keys(event).sort().join(',')!==[...fields].sort().join(','))throw Error('Invalid diagnostic event');
+ const descriptors=Object.getOwnPropertyDescriptors(event);if(Object.values(descriptors).some(d=>!('value'in d)))throw Error('Invalid diagnostic event');
+ if(!ENGINES.has(event.engine)||!STAGES.has(event.stage)||!SUBSTEPS.has(event.substep)||!(event.authored_case_index===null||Number.isInteger(event.authored_case_index)&&event.authored_case_index>=0&&event.authored_case_index<33)||fields.slice(4).some(k=>!Number.isSafeInteger(event[k])||event[k]<0))throw Error('Invalid diagnostic event');
+ return Object.fromEntries(fields.map(k=>[k,event[k]]));
+}
 function createStageDiagnostics({clock=()=>performance.now(),record=()=>{}}={}){
  const started=clock(),states=new Map(),events=[];
  return {enter(engine,stage,substep='start',item=null){
@@ -72,5 +79,5 @@ function runCommands({spawn=spawnSync,clock=()=>performance.now(),record=value=>
  }
  return true;
 }
-module.exports={COMMANDS,classifyChild,hostCapacity,engineExecution,settleEngineChecks,createStageDiagnostics,runCommands};
+module.exports={COMMANDS,classifyChild,hostCapacity,engineExecution,settleEngineChecks,publicStageEvent,createStageDiagnostics,runCommands};
 if(require.main===module){try{if(!runCommands())process.exitCode=1;}catch{console.error('NF diagnostic recording unavailable');process.exitCode=1;}}

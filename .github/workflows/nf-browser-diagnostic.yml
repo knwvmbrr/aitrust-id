@@ -1,0 +1,105 @@
+name: NF PR149 timing diagnostic (not a release gate)
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/nf-browser-diagnostic.yml'
+      - 'scripts/verify-nf-device.cjs'
+      - 'scripts/verify-nf-client.cjs'
+      - 'scripts/build-nf-device-fixture.mjs'
+      - 'tests/nf-browser-diagnostics.cjs'
+      - 'docs/nf-pr149-diagnostic-plan.md'
+
+permissions:
+  contents: read
+
+jobs:
+  nf-browser-diagnostic:
+    if: github.repository == 'knwvmbrr/aitrust-id' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      AITRUST_NF_ENGINE_CONCURRENCY: '2'
+      AITRUST_VERIFY_PYTHON: python3
+      AITRUST_NF_STAGE_REPORT: output/verification/nf-pr149-stage.json
+      AITRUST_NF_DEVICE_REPORT: output/verification/nf-pr149-browser.json
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with: {node-version: '22'}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.12'}
+      - name: Require comparable hosted capacity and initialize unavailable reports
+        timeout-minutes: 1
+        env:
+          AITRUST_CI_RUNNER_ENV: ${{ runner.environment }}
+          AITRUST_CI_RUNNER_OS: ${{ runner.os }}
+        run: |
+          node - <<'JS'
+          const assert=require('node:assert/strict');
+          const {engineExecution}=require('./scripts/verify-nf-client.cjs');
+          const {writeReport}=require('./scripts/execution-report.cjs');
+          const execution=engineExecution();
+          assert.equal(execution.mode,'hosted_parallel_two');
+          assert.equal(execution.host_capacity.available_cpu_threads,4);
+          assert(execution.host_capacity.total_memory_bytes>=15*1024**3);
+          const value={profile:'nf-pr149-diagnostic-not-started/v1',pass:false,
+            measurement_only:true,release_gate_pass:false,execution};
+          writeReport(process.env.AITRUST_NF_STAGE_REPORT,value);
+          writeReport(process.env.AITRUST_NF_DEVICE_REPORT,value);
+          console.log(JSON.stringify({nf_pr149_capacity:execution,release_gate_pass:false}));
+          JS
+      - name: Install the existing hash-locked evaluation and browser tooling
+        timeout-minutes: 4
+        run: |
+          python -m pip install --require-hashes -r eval/requirements.lock
+          npm ci
+          npm ci --prefix site
+      - name: Prepare the same signed Ubuntu archive for browser dependencies
+        timeout-minutes: 1
+        env:
+          AITRUST_CI_RUNNER_ENV: ${{ runner.environment }}
+          AITRUST_CI_RUNNER_OS: ${{ runner.os }}
+        run: |
+          nf_diag_apt_dir="$(mktemp -d "$RUNNER_TEMP/aitrust-nf-apt.XXXXXXXX")"
+          AITRUST_CI_SOURCE_DIR="$nf_diag_apt_dir" python3 scripts/ci-ubuntu-mirror.py --output "$nf_diag_apt_dir/aitrust-ubuntu.sources"
+          sudo install -o root -g root -m 0644 -- "$nf_diag_apt_dir/aitrust-ubuntu.sources" /etc/apt/sources.list.d/ubuntu.sources
+      - name: Install the locked Playwright Chromium and WebKit engines
+        timeout-minutes: 4
+        run: npx playwright install --with-deps chromium webkit
+      - name: Exercise inert diagnostics and prepare the unchanged canonical fixture
+        timeout-minutes: 2
+        run: |
+          timeout --signal=TERM --kill-after=5s 30s node --test tests/nf-browser-diagnostics.cjs
+          timeout --signal=TERM --kill-after=5s 90s node scripts/build-nf-device-fixture.mjs
+      - name: Measure the full canonical cohort once beyond the release deadline
+        timeout-minutes: 6
+        env:
+          AITRUST_CI_RUNNER_ENV: ${{ runner.environment }}
+          AITRUST_CI_RUNNER_OS: ${{ runner.os }}
+        run: |
+          # Diagnostic only. The existing verify-nf-client release wrapper remains180s.
+          set +e
+          timeout --signal=TERM --kill-after=5s 300s node scripts/verify-nf-device.cjs
+          nf_diag_status=$?
+          set -e
+          NF_DIAG_STATUS="$nf_diag_status" node - <<'JS'
+          const value=Number(process.env.NF_DIAG_STATUS);
+          const status=Number.isInteger(value)&&value>=0&&value<=255?value:null;
+          const outcome=status===0?'completed':status===124||status===137?'deadline':'failed';
+          console.log(JSON.stringify({nf_pr149_measurement:{timeout_ms:300000,
+            term_to_kill_margin_ms:5000,status,outcome,release_wrapper_timeout_ms:180000,
+            release_gate_pass:false,acceptance_promoted:false}}));
+          JS
+          exit "$nf_diag_status"
+      - name: Retain only the two bounded timing and browser JSON records
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nf-pr149-timing-diagnostic-${{ github.run_attempt }}
+          path: |
+            output/verification/nf-pr149-stage.json
+            output/verification/nf-pr149-browser.json
+          if-no-files-found: error
+          retention-days: 7
