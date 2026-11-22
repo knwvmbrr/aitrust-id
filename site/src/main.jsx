@@ -11,6 +11,7 @@ import {publisher} from './policies.js';
 import {presentation} from './presentation.js';
 import {usage} from './usage.js';
 import {MTExplorerSlot} from './MTExplorerSlot.jsx';
+import {MTChoiceExplorerSlot} from './MTChoiceExplorerSlot.jsx';
 import {HPExplorerSlot} from './HPExplorerSlot.jsx';
 import {HPUncertaintyExplorerSlot} from './HPUncertaintyExplorerSlot.jsx';
 import {NFExplorerSlot} from './NFExplorerSlot.jsx';
@@ -66,6 +67,24 @@ function UncertaintyWordingPreview(){
   {open&&<HPUncertaintyExplorerSlot/>}
  </details>;
 }
+function SelectedWordingPreview(){
+ const [open,setOpen]=useState(false),[generation,setGeneration]=useState(0),element=useRef(null);
+ useEffect(()=>{
+  const node=element.current;
+  // Native toggle events can coalesce close/reopen. Observe each attribute
+  // removal so the closed draft/worker is disposed even when reopened quickly.
+  const observer=new MutationObserver(records=>{
+   if(records.some(record=>record.oldValue!==null))setGeneration(value=>value+1);
+   setOpen(node.open);
+  });
+  observer.observe(node,{attributes:true,attributeFilter:['open'],attributeOldValue:true});
+  return()=>observer.disconnect();
+ },[]);
+ return <details ref={element} data-mt-choice-method className="tag-disclosure my-4 border-y border-line py-1" onToggle={event=>setOpen(event.currentTarget.open)}>
+  <summary className="flex min-h-12 cursor-pointer items-center justify-between gap-3 py-3 text-sm font-semibold"><span>Choose two items · preview</span><span aria-hidden="true" className="disclosure-symbol text-lg">+</span></summary>
+  {open&&<MTChoiceExplorerSlot key={generation}/>}
+ </details>;
+}
 function UseTag({tag}) {
  const use=usage(tag);const [message,setMessage]=useState('');
  async function copy(command){try{await navigator.clipboard.writeText(command);setMessage('Commands copied. Review them before running in Terminal.');}catch{setMessage('Copy is unavailable. Select the commands, or open the full setup guide.');}}
@@ -91,6 +110,7 @@ function TagDetails({tag}) {
   <p data-tag-limit className="mt-2 text-sm leading-6 text-muted">{intro.limit}</p>
   <p data-tag-availability className="mt-2 text-left text-xs leading-5 text-muted">{intro.availability}</p>
   {tag.id==='MT'&&<MTExplorerSlot/>}
+  {tag.id==='MT'&&<SelectedWordingPreview/>}
   {tag.id==='HP'&&<HPExplorerSlot/>}
   {tag.id==='HP'&&<UncertaintyWordingPreview/>}
   {tag.id==='NF'&&<NFExplorerSlot/>}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-064301-verify-retained-independent-routes-8c3d47a0",
+  "recorded_at": "2026-11-22T06:43:01.685913+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c4b19e92a0c4b212e326dcdda29bb1da43daa05b",
+  "changed": "Recorded current source-bound PS, PII and extension checks after integration of optional MT and programme inputs.",
+  "proves": "All registered commands passed on current source; no complete tag, statistical accuracy or physical acceptance is inferred.",
+  "limits": "Protocol, website, protected merge and next public delivery remain pending. The original count remains135complete67open.",
+  "scope_ids": [
+    "T-PS",
+    "T-PII",
+    "F-030"
+  ],
+  "files": {
+    "runs/2026-11-22-programme-mt-extension.json": "8c0cd209ee4f29b144ec21bfb54e5456d742cf224954b15cc9875e42ea714d0a",
+    "runs/2026-11-22-programme-mt-pii_redacted.json": "ec2c1b27b49c97718cd81ceb6336510f9ce126645ce00aaf1f0831a1fb82c8d5",
+    "runs/2026-11-22-programme-mt-ps.json": "ab431f6ebf13055ed2c13955e0347eebba8a32e174f286bbfa037bdaa4c4465f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-programme-mt-ps.json",
+      "sha256": "ab431f6ebf13055ed2c13955e0347eebba8a32e174f286bbfa037bdaa4c4465f"
+    },
+    {
+      "path": "runs/2026-11-22-programme-mt-pii_redacted.json",
+      "sha256": "ec2c1b27b49c97718cd81ceb6336510f9ce126645ce00aaf1f0831a1fb82c8d5"
+    },
+    {
+      "path": "runs/2026-11-22-programme-mt-extension.json",
+      "sha256": "8c0cd209ee4f29b144ec21bfb54e5456d742cf224954b15cc9875e42ea714d0a"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,18 @@
+{
+  "captured_at": "2026-11-22T06:51:28.870243+00:00",
+  "profile": "scope-derived-projection-failure-correction/v1",
+  "pass": true,
+  "root_cause": "PM updated the ledger and public scope JSON but initially ran scope-progress without --render; the derived readable task index retained the old F145 milestone.",
+  "failed_execution": "runs/2026-11-22-programme-mt-protocol.json",
+  "failed_execution_preserved": true,
+  "reproduction": "tests/test_scope_index.py::test_current_all_202_percentages_agree failed;13 sibling focused tests passed.",
+  "correction": "Ran the existing scope-progress.py --render command to regenerate the readable ledger, task index and scope delivery plan from unchanged original jobs and current milestones.",
+  "affected_controls": {
+    "passed": 14,
+    "log_sha256": "20b81ed3ab84a3c872d611ddec7c03a98254f770c0c22579404f9b560773267b"
+  },
+  "original_requirements_complete": 135,
+  "original_requirements_open": 67,
+  "full_current_protocol_execution_pending": true,
+  "criteria_changed": false
+}

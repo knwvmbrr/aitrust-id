@@ -1,0 +1,13 @@
+{
+  "profile": "F145-first-actual-harness-failure/v1",
+  "pass": false,
+  "captured_at": "2026-11-22T05:35:50.693741+00:00",
+  "phase": "personal_checker_post_refusal_projection",
+  "failure": "Verification harness expected tags; canonical standalone PS exports state/candidates. Actual PS exited0 without stderr before projection assertion.",
+  "prior_reference_commands_asserted": 29,
+  "full_independently_retained_command_receipt_available": false,
+  "producer_source_sha256": "67400905ee60692ad42f2d58c0847552c3aa3f3d44c6708a89d2921a78fb2c5c",
+  "product_runtime_changed": false,
+  "owned_temporary_directory_context_exited": true,
+  "correction": "Check canonical state FINDING and candidate codePS; execute fresh bounded producer, preserve first failure."
+}

@@ -114,6 +114,28 @@ decision: 28 interface checks and 12 focused runner tests. Actual outside-user
 acceptance stays under F-142, independent accuracy under F-108. Check the current
 source-bound receipt with `python3 scripts/verify-conformance-delivery.py`.
 
+## Prepare a reference programme review
+
+Read the [reference certification programme](docs/certification-programme.md)
+and its [private workflow guide](docs/certification-programme-guide.md) to see
+what a certifier would need to examine and how assessment, separate decisions,
+appeals and corrections are documented. This is a nonoperating reference design;
+it grants no accreditation, certificate, mark rights or tag approval.
+
+From this source checkout, create a disposable private practice folder:
+
+```sh
+programme_dir="$(python3 -c 'import tempfile;from pathlib import Path;print(Path(tempfile.mkdtemp(prefix="aitrust-programme-")).resolve())')"
+python3 -I -S -B scripts/certification-programme.py practice --output "$programme_dir/application.json"
+python3 -I -S -B scripts/certification-programme.py start --application "$programme_dir/application.json" --output "$programme_dir/review.json"
+python3 -I -S -B scripts/certification-programme.py inspect --record "$programme_dir/review.json"
+```
+
+The example uses invented documents and declared roles, stays on your computer,
+and never replaces existing files. The guide covers review events and removal;
+checklist completeness does not establish competence or real authority. Personal
+checking stays free and independent of this optional workflow.
+
 ## Attach your own references
 
 The [local corpus tool](docs/local-reference-corpus.md) imports plain-text or

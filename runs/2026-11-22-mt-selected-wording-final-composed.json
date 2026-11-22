@@ -1,0 +1,40 @@
+{
+  "captured_at": "2026-11-22T06:20:06.178560+00:00",
+  "author": "Codex / web_camo",
+  "profile": "mt-selected-wording-composed-acceptance/v1",
+  "pass": true,
+  "matrix_execution": {
+    "path": "runs/2026-11-22-mt-choice-site-candidate-2.json",
+    "sha256": "abecde08e301ef0483b15e5c9c0d72e62c579c4d392b024414949b76d5efc59b",
+    "source_map": "before.sources in that immutable receipt",
+    "whole_records_per_engine": 11,
+    "actual_UI_records_per_engine": 3,
+    "latest_observer_reexecuted_normal_matrix": false
+  },
+  "affected_outage_execution": {
+    "path": "runs/2026-11-22-mt-choice-owned-outage-observation.json",
+    "sha256": "52c1028c5521b356263d67352896ac95f04392b276c1f6e232f35db2e9508980",
+    "source_map": "before.sources in that immutable receipt",
+    "network_outage_profile": "owned_origin_unreachable",
+    "external_requests_per_engine": 0,
+    "input_body_query_requests_per_engine": 0,
+    "cold_lazy_panel_and_worker_full_record": true
+  },
+  "same_actual_served_bytes": true,
+  "current_observer_sources": {
+    "scripts/mt-choice-site-controls.cjs": "9f95b6c187a399bce732831c77e8f28459de4aec42aa5c51c4a872c069fb6e46",
+    "scripts/verify-mt-choice-site.cjs": "e2aff85d60b98a3a38a69c93075a215276230154c1f96668969efa22083ff794",
+    "scripts/verify-mt-choice-outage.cjs": "ae1a18831197df3fbfc04a298173d7e60c5f978858a934f49b4bd949055f4d60",
+    "docs/mt-choice-modal-integration-plan.md": "fc72dde49049a8897df5debb340b1bac0daf1fc5a42e981bea2358644ef2af80"
+  },
+  "unchanged_product_runtime_sources_equal_matrix_execution": true,
+  "live_helper_offline": "NOT_ASSESSED when no held owned offline fixture is supplied",
+  "physical_Safari_or_phone_verified": false,
+  "emulated_WebKit_offline_limitation_preserved": "runs/2026-11-22-mt-choice-site-candidate-1.json",
+  "legacy1_2_or_PS_method_changed": false,
+  "MT_tag_issued": false,
+  "independent_accuracy_evidence": false,
+  "full_original_requirement_closed": false,
+  "production_publication_claimed": false,
+  "root_integration_current_full_helper_run_required": true
+}

@@ -1,0 +1,29 @@
+{
+  "profile": "F145-current-revalidation-stored-state-finding/v1",
+  "pass": false,
+  "captured_at": "2026-11-22T05:37:18.939030+00:00",
+  "reviewer": "/root/web_camo",
+  "reproduced_by": "/root/seo",
+  "finding": "Changing only current withdrawn record state allowed same-ID revalidate because prior actions were not replayed.",
+  "actual_result": {
+    "state": "APPLICATION_RECORDED",
+    "checklist_complete": true,
+    "missing_requirement_count": 0,
+    "actions_recorded": 0,
+    "scope": "software-interface",
+    "accreditation_granted": false,
+    "certification_granted": false,
+    "mark_authorized": false,
+    "independent_accuracy_verified": false,
+    "actual_role_identity_verified": false,
+    "institution_operating": false,
+    "evidence_authenticity_verified": false,
+    "declared_roles_only": true
+  },
+  "source_sha256": {
+    "tools/certification_programme.py": "a924f721d838795348b20c4b48171457fe12e7b1d5b88a00210fbb43cde2429c",
+    "scripts/certification-programme.py": "0b1b37dd258fdb46a0cd36a41ab8e66b57c9965b31b46fd43a1474f41351a4cc"
+  },
+  "synthetic_only": true,
+  "temporary_records_removed_on_context_exit": true
+}

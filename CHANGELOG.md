@@ -36,6 +36,129 @@ Recorded 2026-11-22T07:49:32.809063+00:00 · Contributor: Codex / seo · change
 - **Changed.** Mapped the two approved Linux CFFI 2.1.1 wheels to the publisher-declared static libffi 3.4.6 recipe and retained full grant/copyright notices for the MCP artifact producer.
 - **Evidence.** Exact wheel SHA/size and all30 hashed RECORD entries per wheel validate; ELF defined static-recipe symbol corroborates mapping; official release-source files match sdist;22 source/build/header records and16 source-specific notices are byte-bound. [Change record](./runs/changes/2026-11-22-074932-cffi-libffi-source-notice-mapping-89466c96.json).
 - **Not claimed.** Evidence/data only: actual MCP artifact notice inclusion remains pending. Recipe correspondence is not wheel build attestation, exhaustive compiled closure, reproducibility, legal clearance, route admission or original closure. No package import, install, build, native execution or service action.
+### 2026-11-22-070807-accept-complete-programme-mt-engineering-packet-fd3a1103
+
+Recorded 2026-11-22T07:08:07.708071+00:00 · Contributor: Codex PM /root; authors /root/seo and /root/web_camo and /root/share_debugger · change
+
+- **Changed.** Recorded the complete current programme/MT engineering packet and refreshed finite source/privacy boundaries after actual built-route browser execution.
+- **Evidence.** All five capability receipts are current; all61websitecommands and9build phases passed. Actual MT canonical/private/fault/outage controls pass in Chromium and WebKit; unchanged older MT and PS survive optional failures. [Change record](./runs/changes/2026-11-22-070807-accept-complete-programme-mt-engineering-packet-fd3a1103.json).
+- **Not claimed.** F145 final public delivery and protected checks remain pending;135complete67open. No MT tag, independent accuracy, real certifier, legal adoption or physical/human acceptance is inferred.
+
+
+### 2026-11-22-065424-accept-current-programme-protocol-execution-160cdb36
+
+Recorded 2026-11-22T06:54:24.629606+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded complete current protocol execution after correcting the stale readable scope projection.
+- **Evidence.** All69 registered commands passed with unchanged current sources, including the complete programme focused controls and actual private lifecycle. [Change record](./runs/changes/2026-11-22-065424-accept-current-programme-protocol-execution-160cdb36.json).
+- **Not claimed.** This engineering packet does not establish an operating certifier, independent tag accuracy or physical/human acceptance. Current website and protected/public delivery remain pending.
+
+
+### 2026-11-22-065128-correct-readable-scope-projections-093905f3
+
+Recorded 2026-11-22T06:51:28.897264+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Regenerated all readable scope projections after the integrated protocol check caught a stale task-index milestone.
+- **Evidence.** The exact failing index case and13 sibling controls now pass;202 original identities and full acceptance are unchanged. Failed protocol evidence is preserved. [Change record](./runs/changes/2026-11-22-065128-correct-readable-scope-projections-093905f3.json).
+- **Not claimed.** The first current protocol candidate failed; complete fresh protocol and website verification still remain. No original closure or accuracy is claimed.
+
+
+### 2026-11-22-064902-prepare-reviewed-programme-public-references-3fe6fda7
+
+Recorded 2026-11-22T06:49:02.550684+00:00 · Contributor: Codex PM /root; discovery author /root/share_debugger · change
+
+- **Changed.** Prepared exact public programme/design/checklist copies, generated current80percent scope projections and recorded distinct discovery/workflow integration review.
+- **Evidence.** Root source review, unchanged eight runtime inputs and actual three reference-copy byte comparisons pass; no method or legal authority changes. [Change record](./runs/changes/2026-11-22-064902-prepare-reviewed-programme-public-references-3fe6fda7.json).
+- **Not claimed.** Hosted Linux, full current site/browser verification, protected merge and actual public guide delivery remain pending;135complete67open remains.
+
+
+### 2026-11-22-064715-inventory-optional-delivery-boundaries-66cdab05
+
+Recorded 2026-11-22T06:47:15.551622+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Extended finite source review inventory to the optional programme and selected-wording implementation, exact cohort, privacy controls and workflow.
+- **Evidence.** New optional source inputs are explicitly included for the next boundary review; existing personal/refusal rules are unchanged. [Change record](./runs/changes/2026-11-22-064715-inventory-optional-delivery-boundaries-66cdab05.json).
+- **Not claimed.** This inventory change is not a completed security audit, accuracy evidence or full original closure. The next manifest refresh requires current matching capability receipts.
+
+
+### 2026-11-22-064523-preserve-original-closure-gates-c22baf94
+
+Recorded 2026-11-22T06:45:23.386279+00:00 · Contributor: Codex PM /root; literal-criteria reviewer /root/seo · change
+
+- **Changed.** Recorded the next-original review and preserved initial UC context/evidence acceptance instead of counting later proposal wording as tag completion.
+- **Evidence.** Identified concrete substantial artifact/source and contextual-provenance engineering work; rejected unsupported additional full-closure recommendations. [Change record](./runs/changes/2026-11-22-064523-preserve-original-closure-gates-c22baf94.json).
+- **Not claimed.** Audit is not a product closure or claim that all67 need the owner. F145/MT delivery and independent image work continue.
+
+
+### 2026-11-22-064301-verify-retained-independent-routes-8c3d47a0
+
+Recorded 2026-11-22T06:43:01.685913+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded current source-bound PS, PII and extension checks after integration of optional MT and programme inputs.
+- **Evidence.** All registered commands passed on current source; no complete tag, statistical accuracy or physical acceptance is inferred. [Change record](./runs/changes/2026-11-22-064301-verify-retained-independent-routes-8c3d47a0.json).
+- **Not claimed.** Protocol, website, protected merge and next public delivery remain pending. The original count remains135complete67open.
+
+
+### 2026-11-22-064100-update-reviewed-programme-milestones-65b65940
+
+Recorded 2026-11-22T06:41:00.773536+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Updated scope and dated team board for the actual integrated reference programme and independent MT browser work, retaining135complete67open.
+- **Evidence.** F145 now has four evidenced milestones from current39focused controls and30CLI operations plus distinct review; all202 original IDs and full historical acceptance remain. [Change record](./runs/changes/2026-11-22-064100-update-reviewed-programme-milestones-65b65940.json).
+- **Not claimed.** No new original closure or MT tag release. Final F145 protected/public delivery and current integrated checks remain pending; physical/human/legal gates stay open.
+
+
+### 2026-11-22-063944-bind-programme-and-mt-delivery-c385f7ac
+
+Recorded 2026-11-22T06:39:44.259300+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Bound the complete reference programme and optional selected-pair MT preview to current engineering manifests and the existing site CI job.
+- **Evidence.** Registered actual current verification commands and all new method/builder/client inputs without changing release thresholds or adopted tags. [Change record](./runs/changes/2026-11-22-063944-bind-programme-and-mt-delivery-c385f7ac.json).
+- **Not claimed.** Registration is not execution. Current integrated capability checks, protected publication and final full-original acceptance remain pending.
+
+
+### 2026-11-22-063811-record-actual-protected-delivery-state-9a0b9dcf
+
+Recorded 2026-11-22T06:38:11.555646+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Updated current machine state to actual protected cd3 publication, independently verified PS source attestation and unchanged135complete67open accounting.
+- **Evidence.** Actual140 selected HTTP responses match the protected build; public PS source ZIP matches the workflow artifact and passes independently rooted verification. [Change record](./runs/changes/2026-11-22-063811-record-actual-protected-delivery-state-9a0b9dcf.json).
+- **Not claimed.** Source identity is not independent tag accuracy, full distribution clearance or a new original closure. Next F145 and MT integrated sources require fresh acceptance.
+
+
+### 2026-11-22-062814-publish-protected-site-and-authenticated-source-06504c2f
+
+Recorded 2026-11-22T06:28:14.936301+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Deployed protected source cd3beab0, verified selected public build bytes and independently authenticated the exact public PS source download.
+- **Evidence.** All11required checks passed before normal merge;70selected files match on each of2origins. Actual main signing and independent detached verification with separately retrieved roots pass for the admitted PS source route. [Change record](./runs/changes/2026-11-22-062814-publish-protected-site-and-authenticated-source-06504c2f.json).
+- **Not claimed.** This authenticates source bytes only. Independent detector accuracy, full F057/X02 license coverage and all other distribution-route approvals remain open. Current original scope135complete67open; later framework/MT candidates are separate.
+
+### 2026-11-22-064651-expose-reference-programme-without-claiming-authority-0cfd9183
+
+Recorded 2026-11-22T06:46:51.651467+00:00 · Contributor: Codex /root/share_debugger; integration lead owns acceptance and publication · change
+
+- **Changed.** Added reference-programme README practice, About links, three exact public reference copies and a dedicated read-only CI verifier without altering frozen programme runtime.
+- **Evidence.** Executed actual reference-copy block and verified all three exact outputs/link targets; shell/module/JSX/YAML/embedded-Python syntax and full current source-trigger coverage pass. All eight existing39-test/30-command runtime source hashes remain unchanged. [Change record](./runs/changes/2026-11-22-064651-expose-reference-programme-without-claiming-authority-0cfd9183.json).
+- **Not claimed.** No unchanged runtime batch repeated, hosted job, integrated browser/build or public delivery performed. No accreditation, actual certifier, mark authority, independent accuracy, institution activation or original-count change. Distinct discovery review requested.
+
+
+### 2026-11-22-063017-integrate-complete-reference-programme-151ab741
+
+Recorded 2026-11-22T06:30:17.151077+00:00 · Contributor: Codex PM /root; author /root/seo; reviewer /root/web_camo · change
+
+- **Changed.** Integrated the complete reviewed reference certification programme, preserving exact runtime and both changelog histories.
+- **Evidence.** Current integrated39focused controls and30actual private workflow commands pass; the selected interface evidence is kept separate from tag accuracy and organization service claims. [Change record](./runs/changes/2026-11-22-063017-integrate-complete-reference-programme-151ab741.json).
+- **Not claimed.** No institution, actual accreditation, legal/mark authority or human identity is established. The original ledger remains unchanged pending exact full acceptance and protected/public delivery.
+
+
+### 2026-11-22-054137-deliver-complete-reference-certification-programme-ba315aec
+
+Recorded 2026-11-22T05:41:37.156328+00:00 · Contributor: Codex /root/seo; distinct reviewer /root/web_camo · change
+
+- **Changed.** Delivered the complete nonoperating F145 reference-programme design and consumed private application/review/appeal/correction/renewal/withdrawal workflow, with exact source/programme/evidence bindings.
+- **Evidence.** Actual30 current CLI controls passed, including separate declared-role decisions, contested/corrected outcomes, unsupported-scope/source/authority/no-overwrite refusals and personal PS recovery. Distinct reviewer ran four affected controls and three private CLI checks. All original criteria unchanged. [Change record](./runs/changes/2026-11-22-054137-deliver-complete-reference-certification-programme-ba315aec.json).
+- **Not claimed.** No actual accreditation, institution, role identity, mark/legal adoption, independent accuracy or tag release.37 earlier-source controls and8 affected current controls are separately recorded; no all39 current claim. Protected/public delivery and original counters remain parent-owned and pending.
 
 
 ### 2026-11-22-055521-record-current-delivery-engineering-packet-f5ca3c80
@@ -81,6 +204,31 @@ Recorded 2026-11-22T05:29:57.659064+00:00 · Contributor: Codex PM /root · chan
 - **Changed.** Recorded actual integrated website execution after the versioned serializer and FI practice integration.
 - **Evidence.** Failed candidate preserved; no pass is claimed. [Change record](./runs/changes/2026-11-22-052957-current-site-website-d9dcea0f.json).
 - **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+### 2026-11-22-062029-mt-selected-wording-actual-browser-handoff-e4143847
+
+Recorded 2026-11-22T06:20:29.506906+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Finish the optional selected-pair wording modal with exact published method1.3, production-route controls and separately observed owned-origin outage checks. Preserve both failed candidates and typed builder publication uncertainty.
+- **Evidence.** Normal site build passed;14 focused integration tests and10 client groups passed. Actual Chromium/WebKit each matched11 canonical records and3 UI records, refused corrupt results, preserved legacyMT/PS under optional faults, and completed cold offline-worker records after stopping only held-owned fixtures. Distinct source/evidence review clears the composed observations. [Change record](./runs/changes/2026-11-22-062029-mt-selected-wording-actual-browser-handoff-e4143847.json).
+- **Not claimed.** Candidate2 binds its oldobserver; the new outage-only receipt binds currentobserver and unchanged servedbytes. No physicalSafari, independentaccuracy, MT tag, fulloriginal closure or productionpublication; root performs current integrated required checks.
+
+
+### 2026-11-22-061001-mt-selected-public-worker-packaging-0620b28c
+
+Recorded 2026-11-22T06:10:01.784642+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Keep the exact copied public MT worker outside Vite worker rebundling and record generated guide/index/performance projections from the first normal build.
+- **Evidence.** The first normal build failure is preserved; corrected public worker URL passes all10 focused client groups with11 canonical records and9 corruption refusals. No canonical method/runtime bytes changed. [Change record](./runs/changes/2026-11-22-061001-mt-selected-public-worker-packaging-0620b28c.json).
+- **Not claimed.** Actual production-route browser execution is pending; generated projections reflect isolated base8dac only and do not supersede root current HOST20 copy. No MT release or original closure.
+
+
+### 2026-11-22-060839-mt-selected-wording-modal-23150b02
+
+Recorded 2026-11-22T06:08:39.747981+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Integrate the exact independently published selected-pair wording method1.3 as a closed optional MT-modal preview with a separate bounded worker and existing offline installation path.
+- **Evidence.** Fourteen focused integration controls pass; exact cohort/notices are retained, legacy1.2 is unchanged, and independent actual descriptor-fault review clears the builder publication boundary. Actual production-route browser verification follows this source freeze. [Change record](./runs/changes/2026-11-22-060839-mt-selected-wording-modal-23150b02.json).
+- **Not claimed.** Literal observations only; no MT tag, intent, truth, accuracy or full original requirement closure. No production publication.
 
 
 ### 2026-11-22-052637-record-generated-host20-site-metadata-c95de168

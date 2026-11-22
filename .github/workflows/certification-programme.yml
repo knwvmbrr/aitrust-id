@@ -1,0 +1,127 @@
+name: reference-certification-programme
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'tools/certification_programme.py'
+      - 'scripts/*certification-programme.py'
+      - 'tests/test_certification_programme.py'
+      - 'eval/certification-programme.json'
+      - 'docs/certification-programme*.md'
+      - 'tools/citation_resolution.py'
+      - 'tools/conformance_vectors.py'
+      - 'scripts/check-conformance-vectors.py'
+      - 'scripts/verify-conformance-delivery.py'
+      - 'runs/*conformance*.json'
+      - 'eval/conformance/assertion-v1.json'
+      - 'tests/test_conformance_vectors.py'
+      - 'scripts/worker_process.py'
+      - 'scripts/check-ps.py'
+      - 'scripts/build-device-detector.py'
+      - 'services/evaluator/app.py'
+      - 'scripts/source_snapshot.py'
+      - 'protocol/corpus.py'
+      - 'protocol/evidence.py'
+      - 'protocol/normalization.py'
+      - 'protocol/unicode15-data.json'
+      - 'scripts/check-assertion.py'
+      - 'protocol/assertions.py'
+      - 'spec/assertion.schema.json'
+      - 'extension/src/shared/contract.js'
+      - 'services/gateway/requirements.lock'
+      - 'eval/requirements.lock'
+      - 'package-lock.json'
+      - 'GOVERNANCE.md'
+      - 'MAINTAINERS.md'
+      - 'docs/mark-usage.md'
+      - '.github/workflows/certification-programme.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tools/certification_programme.py'
+      - 'scripts/*certification-programme.py'
+      - 'tests/test_certification_programme.py'
+      - 'eval/certification-programme.json'
+      - 'docs/certification-programme*.md'
+      - 'tools/citation_resolution.py'
+      - 'tools/conformance_vectors.py'
+      - 'scripts/check-conformance-vectors.py'
+      - 'scripts/verify-conformance-delivery.py'
+      - 'runs/*conformance*.json'
+      - 'eval/conformance/assertion-v1.json'
+      - 'tests/test_conformance_vectors.py'
+      - 'scripts/worker_process.py'
+      - 'scripts/check-ps.py'
+      - 'scripts/build-device-detector.py'
+      - 'services/evaluator/app.py'
+      - 'scripts/source_snapshot.py'
+      - 'protocol/corpus.py'
+      - 'protocol/evidence.py'
+      - 'protocol/normalization.py'
+      - 'protocol/unicode15-data.json'
+      - 'scripts/check-assertion.py'
+      - 'protocol/assertions.py'
+      - 'spec/assertion.schema.json'
+      - 'extension/src/shared/contract.js'
+      - 'services/gateway/requirements.lock'
+      - 'eval/requirements.lock'
+      - 'package-lock.json'
+      - 'GOVERNANCE.md'
+      - 'MAINTAINERS.md'
+      - 'docs/mark-usage.md'
+      - '.github/workflows/certification-programme.yml'
+permissions:
+  contents: read
+concurrency:
+  group: reference-programme-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  private-reference-workflow:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {fetch-depth: 1, persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.13'}
+      - name: Exercise the private synthetic reference workflow without project installs
+        timeout-minutes: 2
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -I -S -B scripts/verify-certification-programme.py --output output/verification/certification-programme.json
+          python -I -S -B - <<'PYTHON'
+          import datetime,hashlib,json,os,pathlib,sys
+          assert os.geteuid()!=0 and sys.platform=='linux' and sys.version_info[:2]==(3,13)
+          assert sys.flags.isolated and sys.flags.no_site and sys.flags.dont_write_bytecode
+          root=pathlib.Path.cwd()
+          report_path=root/'output/verification/certification-programme.json'
+          raw=report_path.read_bytes();assert 0<len(raw)<=1_000_000
+          report=json.loads(raw)
+          assert report['profile']=='F145-actual-reference-workflow/v1'
+          assert report['pass'] is True and report['source_unchanged'] is True
+          assert type(report['actual_commands'])is int and report['actual_commands']==len(report['controls'])==30
+          assert report['temporary_records_removed'] is True
+          assert report['private_parent_mode']=='0700' and report['private_files_mode']=='0600'
+          for flag in ('accreditation_granted','certification_granted','real_role_identity_or_independence_verified','mark_or_legal_adoption','independent_accuracy_evidence','full_original_closure_claimed'):
+              assert report[flag] is False
+          for name,digest in report['source_sha256'].items():
+              assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest
+          context={'pass':True,'captured_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+              'executed_by':'GitHub Actions','workflow_sha256':hashlib.sha256((root/'.github/workflows/certification-programme.yml').read_bytes()).hexdigest(),
+              'verifier_report_sha256':hashlib.sha256(raw).hexdigest(),
+              'verifier_author_field_is_source_attribution_not_runtime_identity':True,
+              'project_dependencies_installed':False,'institution_operating':False,'certification_granted':False,'independent_accuracy_evidence':False}
+          output=root/'output/verification/certification-programme-ci-context.json'
+          with output.open('x')as stream:stream.write(json.dumps(context,indent=2)+'\n')
+          PYTHON
+      - name: Retain the actual result without granting authority
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: reference-certification-programme
+          path: |
+            output/verification/certification-programme.json
+            output/verification/certification-programme-ci-context.json
+          if-no-files-found: error
+          retention-days: 7

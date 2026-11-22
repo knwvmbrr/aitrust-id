@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-11-22T06:09:49.416575+00:00",
+  "author": "Codex / web_camo",
+  "profile": "mt-choice-first-normal-build/v1",
+  "pass": false,
+  "exit_code": 1,
+  "stage": "vite_worker_import",
+  "error_code": "public_worker_was_rebundled",
+  "log_sha256": "a35c8639b43b6c926569f3ef9777376aeed3e899faeb36b3954cdca8f1d36368",
+  "client_sha256": "31065de14f8259ddfb99166ce537630d6fe896342c9f328a5cb3b4923e425d0d",
+  "diagnosis": "Vite interpreted new Worker(new URL(publicPath,import.meta.url)) as a bundled worker and could not resolve the copied worker runtime import. Fixed public worker URL must be constructed without the bundler URL transform.",
+  "canonical_method_changed": false,
+  "production_published": false
+}

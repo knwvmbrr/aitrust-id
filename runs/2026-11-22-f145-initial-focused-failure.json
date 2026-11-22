@@ -1,0 +1,18 @@
+{
+  "profile": "F145-initial-focused-failure/v1",
+  "pass": false,
+  "captured_at": "2026-11-22T05:30:57.551622+00:00",
+  "attempted": 35,
+  "passed": 34,
+  "failed": 1,
+  "failure": "Pure record builder returned the policy claims mapping by reference; test mutation also changed expected policy.",
+  "source_sha256": {
+    "tools/certification_programme.py": "00766bc34d5e8c95bcebb9d80a0d9f83192c376924b27a5455c6d391f3e858cd",
+    "scripts/certification-programme.py": "0b1b37dd258fdb46a0cd36a41ab8e66b57c9965b31b46fd43a1474f41351a4cc",
+    "tests/test_certification_programme.py": "26704e2f5b1552d35959849f703cb8c1f4b416d8a406119d8bbaa4e0d2148fdf",
+    "eval/certification-programme.json": "852df2d38ba5de55b2ffd0e8bbcc0fd293d27579ca1171c5528c95e1773588a6"
+  },
+  "private_log_sha256": "2b562d651e561fde8223de1fcb30ec42fb9054f9a9f8c047a6780469a23fa5e5",
+  "production_changed": false,
+  "accreditation_or_original_closure": false
+}

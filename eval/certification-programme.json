@@ -1,0 +1,99 @@
+{
+  "profile": "certification-programme-design/v1",
+  "version": "1.0.0",
+  "operating": false,
+  "original_acceptance_sha256": "0abadea701d6e508c65fd2a59a96755a715d80ed4d7a85848df22a37b4de01d5",
+  "requirements": [
+    {
+      "id": "scope",
+      "requirement": "Exact implementation, version, permitted claim and excluded scopes."
+    },
+    {
+      "id": "competence",
+      "requirement": "Scope-specific assessor competence, limitations and qualification evidence."
+    },
+    {
+      "id": "test_plan",
+      "requirement": "Supported, failure, unsupported, privacy and isolation procedures with expected outcomes."
+    },
+    {
+      "id": "evidence",
+      "requirement": "Source/configuration/subject/evidence identity and reproducible executed results."
+    },
+    {
+      "id": "impartiality",
+      "requirement": "Declared interests, separate assessors/decision/appeal roles, recusal and unfilled-role refusal."
+    },
+    {
+      "id": "decision",
+      "requirement": "Written reasons, scope/validity limitations and separate accountable decision review."
+    },
+    {
+      "id": "appeals",
+      "requirement": "Applicant correction, contest/appeal, separate reviewer and remand procedure."
+    },
+    {
+      "id": "surveillance",
+      "requirement": "Expiry, renewal, source/scope change revalidation, suspension and withdrawal."
+    },
+    {
+      "id": "privacy",
+      "requirement": "Private evidence minimization, access, retention, correction and deletion responsibility."
+    },
+    {
+      "id": "authority",
+      "requirement": "Separate actual institution/mark/legal/role-adoption prerequisites; no unsupported accreditation."
+    }
+  ],
+  "scopes": {
+    "software-interface": {
+      "evidence_profile": "ai-trust-id-conformance-software-acceptance/v1",
+      "selected_checks": 28,
+      "not_established": [
+        "complete_protocol",
+        "independent_accuracy",
+        "private_organization_conformance",
+        "accreditation"
+      ]
+    },
+    "tag-accuracy": {
+      "additional_requirements": [
+        "adopted_tag_and_numeric_gates",
+        "independent_label_provenance_and_holdout",
+        "error_budgets_calibration_and_uncertainty",
+        "accepted_subject_method_mapping"
+      ],
+      "automatically_established": false
+    },
+    "organization-service": {
+      "additional_requirements": [
+        "actual_custom_scope_ownership_licensing",
+        "tenant_job_permissions_and_export_isolation",
+        "service_privacy_retention_removal_and_recovery",
+        "actual_operator_and_applicable_agreements"
+      ],
+      "automatically_established": false
+    }
+  },
+  "lifecycle": [
+    "application",
+    "assessment",
+    "separate_decision_review",
+    "correction",
+    "appeal",
+    "remand",
+    "suspension",
+    "withdrawal",
+    "renewal",
+    "revalidation"
+  ],
+  "maximum_reference_validity_days": 365,
+  "claims": {
+    "accreditation_granted": false,
+    "certification_granted": false,
+    "mark_authorized": false,
+    "independent_accuracy_verified": false,
+    "actual_role_identity_verified": false,
+    "institution_operating": false
+  }
+}

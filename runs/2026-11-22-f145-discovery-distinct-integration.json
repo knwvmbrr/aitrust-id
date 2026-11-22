@@ -1,0 +1,32 @@
+{
+  "captured_at": "2026-11-22T06:49:02.508733+00:00",
+  "profile": "F145-distinct-discovery-integration-review/v1",
+  "pass": true,
+  "reviewed_by": "Codex PM /root",
+  "author": "Codex /root/share_debugger",
+  "reviewed_commit": "be888fd17e70b50ed8ecd93e98ac33a97109ec43",
+  "source_sha256": {
+    "README.md": "8bd728fc9988cf09725cda27a6c51ed6e44d920a95ef7b79f9e4882814394c48",
+    "site/scripts/prepare.mjs": "05cbc79f1f0512ff76b60a2914f352df26e230e9b8135b5bf64131a367e68be5",
+    "site/src/workflows/About.jsx": "11df4bcdd8f64609d8ef6d54afbbb44fcf48b2c2c2f37379372ebb828cdf424e",
+    ".github/workflows/certification-programme.yml": "cd7637b7cccc4b05734d545d36cafc511d919a6b632f5141e9322b7d86817975",
+    "docs/certification-programme-main-integration-plan.md": "ee1400683317afd030ceb97b33943d9906c5c9890c7133602d0096691f3c1e9a",
+    "docs/certification-programme-main-integration-result.md": "078c7bbd540231d6b705b6eef4746f04dfca1d74ecd61508b961f47c6adbb89a"
+  },
+  "review": [
+    "Actual README quickstart and guide links target real source; private practice semantics and no authority claims retained.",
+    "About adds only a reference/preparation section, without mark/accreditation or product release claim.",
+    "Read-only pinned CI job uses existing stdlib verifier without packages/secrets; asserts actual30CLI cases and all false authority flags.",
+    "All eight previously reviewed method/test/guide inputs retain their exact current accepted identities.",
+    "Root actual site preparation copied all three public design/checklist files byte-identically."
+  ],
+  "public_reference_sha256": {
+    "site/public/reference/certification-programme.md": "91b0f17b0c88bc1cc7a65561152ea95ced811e2ed50152ee74b1f230e1a0af14",
+    "site/public/reference/certification-programme-guide.md": "5e78d2e28a924e2b327966c3d5d2d11b39943ce5b674b0b8af4316967c5e8b59",
+    "site/public/reference/certification-programme.json": "852df2d38ba5de55b2ffd0e8bbcc0fd293d27579ca1171c5528c95e1773588a6"
+  },
+  "hosted_workflow_executed": false,
+  "browser_build_and_publication_pending": true,
+  "original_closed": false,
+  "independent_accuracy_evidence": false
+}
