@@ -318,6 +318,7 @@ except io.OutputCommitUncertain:
     def test_partial_or_corrupt_temporary_write_never_publishes(self):
         r=self.record()
         for short in (True,False):
+            before_temps=set(self.base.glob('.artifact-evidence-*'))
             output=self.base/('short.json'if short else'corrupt.json')
             class BrokenStream:
                 def __init__(self,fd):self.fd=fd
@@ -328,7 +329,16 @@ except io.OutputCommitUncertain:
                 def flush(self):pass
             with mock.patch.object(io.os,'fdopen',side_effect=lambda fd,*args,**kw:BrokenStream(fd)):
                 with self.assertRaises(ValueError):a.save_packet(r,output)
-            self.assertFalse(output.exists());self.assertEqual(list(self.base.glob('.artifact-evidence-*')),[])
+            self.assertFalse(output.exists())
+            # Failed staging bytes remain private rather than risk deleting a
+            # successor pathname. No partial/corrupt final record is published.
+            after_temps=set(self.base.glob('.artifact-evidence-*'))
+            self.assertTrue(before_temps.issubset(after_temps))
+            retained=after_temps-before_temps;self.assertEqual(len(retained),1)
+            info=next(iter(retained)).lstat()
+            self.assertTrue(stat.S_ISREG(info.st_mode));self.assertEqual(info.st_mode&0o777,0o600)
+            self.assertEqual(info.st_uid,os.getuid());self.assertEqual(info.st_nlink,1)
+            self.assertEqual(info.st_size,1 if short else len(io.encoded(r))+1)
     def test_output_parent_drift_during_source_recheck_refuses_before_link(self):
         parent=self.base/'destination';parent.mkdir(mode=0o700);output=parent/'record.json'
         def changed():parent.rename(self.base/'old-destination');parent.mkdir(mode=0o700)

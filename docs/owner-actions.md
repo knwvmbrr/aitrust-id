@@ -8,6 +8,16 @@ classifies each open original once: 16 currently await outside final actions,
 work and a separate later outside gate. Engineering retains those 48 software
 jobs; Michael is not being assigned their implementation.
 
+Under the retained acceptance criteria, even completing both engineering-owned
+originals would leave64 open. Reaching60 also needs at least four externally
+accepted originals once their engineering is ready. One genuine handoff may
+support several requirements, but each must satisfy its own unchanged criteria.
+This is a best-case arithmetic bound, not a guarantee that either engineering
+path is already ready or that sending this list completes an acceptance.
+Public/provider records that we can obtain ourselves stay on our worklist. The
+current bound is revisited when evidence changes; it is not a request for four
+new owner actions or a fixed limit on what the agents can finish.
+
 ## Do first
 
 1. **Arrange the first blind PS review.** Recruit two independent reviewers and

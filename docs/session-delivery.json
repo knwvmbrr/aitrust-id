@@ -139,12 +139,12 @@
     {
       "tag_id": "T-NF",
       "bot_id": "tag_nf",
-      "actual_worker": "/root/seo",
-      "status": "active",
-      "checked_at": "2026-11-22T15:36:31.607734+00:00",
-      "current_component_status": "Source-only diagnosis and reviewed inventory refresh active.45036146486 completed both engines in125.900seconds; prior7174 failed180second wrapper remains historical, cause unestablished.2f03 site failed source inventory before NF; original180seconds unchanged.",
+      "actual_worker": null,
+      "status": "reviewed",
+      "checked_at": "2026-11-22T16:58:10.565070+00:00",
+      "current_component_status": "Same-budget diagnostic and cleanup source review delivered; prior timeout cause unestablished. Root owns final current hosted release checks.",
       "blocking_acceptance": "Selected reference/NLI and caller-declared citation components exist; claim-specific reference selection, contradiction-versus-missing-evidence labels, calibrated accepted tag mapping and supported human operation remain.",
-      "next_task": "Finish exact source inventory and same-budget current-source release execution; no full NF claim."
+      "next_task": "Preserve full NF reference/independent acceptance; source inventory is a task-list assignment, not an active NF method process."
     },
     {
       "tag_id": "T-FI",
@@ -170,11 +170,11 @@
       "tag_id": "T-MT",
       "bot_id": "tag_mt",
       "actual_worker": null,
-      "status": "published",
-      "checked_at": "2026-11-22T08:46:29.075082+00:00",
-      "current_component_status": "Selected-pair wording preview protected and live; full MT tag remains planned and independent validation open.",
+      "status": "reviewed",
+      "checked_at": "2026-11-22T16:58:10.565070+00:00",
+      "current_component_status": "Published wording preview unchanged; four-axis private review preparation integrated IN_REVIEW. Only synthetic files, no independent human labels.",
       "blocking_acceptance": "Published literal wording and private choice workflows do not establish contextual use/mention, feasible alternatives, attribution, actual independent MT agreement/error rates or accepted tag mapping.",
-      "next_task": "Preserve independent contextual labels, disagreement policy and full MT acceptance; maintain the whole-input contract."
+      "next_task": "Protected source delivery, then actual independent contextual review and accepted full MT evidence; no numeric gate adopted by preparation."
     },
     {
       "tag_id": "T-PS",
@@ -199,12 +199,12 @@
     {
       "tag_id": "T-FA",
       "bot_id": "tag_fa",
-      "actual_worker": "/root/web_camo",
-      "status": "active",
-      "checked_at": "2026-11-22T15:36:31.607734+00:00",
-      "current_component_status": "FA remains Planned. Bounded independent JPEG credential/action component engineering active in isolated checkout; metadata is not AI origin. Root owns image/protected/public delivery.",
+      "actual_worker": null,
+      "status": "reviewed",
+      "checked_at": "2026-11-22T16:58:10.565070+00:00",
+      "current_component_status": "Linux JPEG credential/action component engineering and distinct review complete; protected source delivery pending. FA remains Planned.",
       "blocking_acceptance": "Image/signature integrity, experimental adjudication and revision-diff observations do not yet deliver independently supported generation/edit origin or outside-session knowledge claims for an adopted workflow.",
-      "next_task": "Complete source-bound supported/refused JPEG observations and distinct review; do not issue FA or assert publication."
+      "next_task": "Preserve full image-origin evidence and independent acceptance; component metadata is not an FA verdict."
     },
     {
       "tag_id": "T-PA",
@@ -1369,6 +1369,96 @@
         "inbox_or_read_confirmed": false,
         "purpose": "Actual notification evidence; not a pass-shaped execution or owner-gate completion receipt."
       }
+    },
+    {
+      "task_id": "session-jpeg-credential-actions",
+      "original_ids": [
+        "T-FA",
+        "T-PA",
+        "F-155"
+      ],
+      "worker": "/root/web_camo",
+      "status": "in_review",
+      "deliverable": "Bounded Linux JPEG credential/action observations, exact encoded-file binding and optional-root trust distinction; no AI-origin verdict.",
+      "registered_at": "2026-11-22T16:58:10.565070+00:00",
+      "preimplementation_contract": "docs/jpeg-provenance-plan.md",
+      "done_evidence": [
+        "Complete the predeclared supported/refused/privacy/resource workflow with source-bound execution.",
+        "Obtain distinct source/evidence review and normal protected source delivery before closure.",
+        "Preserve full original criteria and separate component outcomes from tag/accuracy/legal authority."
+      ],
+      "current_evidence": [
+        {
+          "path": "runs/2026-11-22-jpeg-merged-source-binding.json",
+          "sha256": "77c617eed5efaa481aa55a6498aa61145608374fbb7466728acb2a2cdb2ac99a"
+        },
+        {
+          "path": "runs/2026-11-22-jpeg-linux-actual-distinct-review.json",
+          "sha256": "60c50d78c63f019bb2ae70c9070700b1769581d28d9b256c990d2f3945bfda76"
+        }
+      ],
+      "current_status": "Pre-code criterion7 explicitly requires protected source publication; actual native proof and peer review do not complete that step.",
+      "protected_source_publication_complete": false,
+      "original_requirement_closed": false
+    },
+    {
+      "task_id": "session-source-snapshot-v3",
+      "original_ids": [
+        "F-057"
+      ],
+      "worker": "/root/share_debugger",
+      "status": "in_review",
+      "deliverable": "Versioned bounded source archive capacity with immutable v1/v2, separate raw/metadata budgets, streaming inspection and actual >128000000-byte hosted source proof.",
+      "registered_at": "2026-11-22T16:58:10.565070+00:00",
+      "preimplementation_contract": "docs/source-snapshot-v3-plan.md",
+      "done_evidence": [
+        "Complete the predeclared supported/refused/privacy/resource workflow with source-bound execution.",
+        "Obtain distinct source/evidence review and normal protected source delivery before closure.",
+        "Preserve full original criteria and separate component outcomes from tag/accuracy/legal authority."
+      ],
+      "current_evidence": [
+        {
+          "path": "runs/2026-11-22-v3-merged-source-binding.json",
+          "sha256": "2d8ab9443a23ef313e8f37706dd45828de928ece97ed3707e0944e91239cdd41"
+        },
+        {
+          "path": "runs/2026-11-22-source-snapshot-v3-hosted-distinct-review.json",
+          "sha256": "954f841c8a933f553d0de01e314a600f5d344e4bc6cf1805ff6343148d49cdef"
+        }
+      ],
+      "current_status": "Normal protected source delivery and combined-tree packet measurement remain; no license/admission/full-original claim.",
+      "protected_source_publication_complete": false,
+      "original_requirement_closed": false
+    },
+    {
+      "task_id": "session-mt-private-label-preparation",
+      "original_ids": [
+        "T-MT",
+        "F-056"
+      ],
+      "worker": "/root/web_camo",
+      "status": "in_review",
+      "deliverable": "Usable private prepare/validate/compare workflow with four candidate context axes, whole original replay, blinded blank forms and explicit uncertain/insufficient coverage.",
+      "registered_at": "2026-11-22T16:58:10.565070+00:00",
+      "preimplementation_contract": "docs/mt-label-preparation-plan.md",
+      "done_evidence": [
+        "Complete the predeclared supported/refused/privacy/resource workflow with source-bound execution.",
+        "Obtain distinct source/evidence review and normal protected source delivery before closure.",
+        "Preserve full original criteria and separate component outcomes from tag/accuracy/legal authority."
+      ],
+      "current_evidence": [
+        {
+          "path": "runs/2026-11-22-mt-label-merged-source-binding.json",
+          "sha256": "06259b7d0b1a2769c82398602f1a672351c9d514e6778d2b70ef74c4be5f62c2"
+        },
+        {
+          "path": "runs/2026-11-22-mt-label-corrected-distinct-review.json",
+          "sha256": "4cf6ccf36ee12c0f5806709b3683c9441fd967af7e46353dfa9e6101c778f680"
+        }
+      ],
+      "current_status": "Engineering handoff complete; protected source publication remains. Two synthetic rater files are zero people; no adopted labels, agreement gate, MT verdict or original closure.",
+      "protected_source_publication_complete": false,
+      "original_requirement_closed": false
     }
   ],
   "original_open_requirements": [
@@ -6082,7 +6172,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-22T15:36:31.607734+00:00",
+  "updated_at": "2026-11-22T16:58:10.565070+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -6797,36 +6887,36 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-22T15:36:31.607734+00:00",
+    "recorded_at": "2026-11-22T16:58:10.565070+00:00",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
-    "status": "Owner/engineering register and requested email handoff complete; no new original closure. NF diagnostic completed in125.900seconds, latest site blocked earlier by stale reviewed inventory. Current-source protected/public image and MCP delivery remain separate.",
+    "status": "Three qualified components integrated and IN_REVIEW pending normal protected source publication; no new scoped or original closures. Current-source hosted checks pending.",
     "assignments": [
       {
         "worker": "/root",
-        "role": "PM/NF and protected delivery integration",
+        "role": "PM/protected combined delivery integration",
         "status": "active",
-        "outcome": "Freeze source and current inventory, obtain existing protocol/site observations on safe hosted capacity, then protected/live delivery. No timeout waiver."
+        "outcome": "Register and freeze qualified JPEG, v3 source archives and MT review preparation; obtain unchanged-budget hosted checks and normal protected publication."
       },
       {
         "worker": "/root/seo",
-        "role": "NF retained-evidence and source-inventory reviewer; task-list lead",
+        "role": "task-list and finite source-inventory reviewer",
         "status": "active",
-        "outcome": "Diagnose actual site/diagnostic evidence, update board and reviewed source inventory after final freeze; no heavy local execution."
+        "outcome": "Record in-review handoffs and actual reviewed inventory; independently inspect factual MCP grants/notices next."
       },
       {
         "worker": "/root/share_debugger",
-        "role": "MCP runtime distribution engineer",
+        "role": "MCP managed runtime distribution engineer",
         "status": "active",
-        "outcome": "Finish exact four-target artifact/source/SBOM consumer and applicable reviewed admission/signing controls. Four-target qualification is not full F057/X02."
+        "outcome": "Implement reviewed managed consumer and exact factual permission/signing prerequisites; existing public API is separate."
       },
       {
         "worker": "/root/web_camo",
-        "role": "bounded JPEG credential/action component engineer",
-        "status": "active",
-        "outcome": "Implement independently bounded JPEG component in own checkout; no image-origin tag, production or full-original claim."
+        "role": "bounded JPEG and MT review-preparation engineer",
+        "status": "completed",
+        "outcome": "Linux-qualified JPEG and corrected private MT preparation source and evidence handed off; protected delivery pending. No standing process."
       }
     ],
     "owner_handoff_task": "session-owner-engineering-action-handoff",
@@ -6836,7 +6926,8 @@
     "all202_preserved": true,
     "baseline_hashes_unchanged": true,
     "agents_permanent": false,
-    "all50_engineering_bearing_are_autonomous_full_closable": false
+    "all50_engineering_bearing_are_autonomous_full_closable": false,
+    "components_protected_publication_complete": false
   },
   "execution_wave_history": [
     {
@@ -6876,6 +6967,48 @@
       "MT_original_closed": false,
       "all202_preserved": true,
       "baseline_hashes_unchanged": true
+    },
+    {
+      "recorded_at": "2026-11-22T15:36:31.607734+00:00",
+      "original_complete": 136,
+      "original_open": 66,
+      "target_open": 60,
+      "remaining_full_closures": 6,
+      "status": "Owner/engineering register and requested email handoff complete; no new original closure. NF diagnostic completed in125.900seconds, latest site blocked earlier by stale reviewed inventory. Current-source protected/public image and MCP delivery remain separate.",
+      "assignments": [
+        {
+          "worker": "/root",
+          "role": "PM/NF and protected delivery integration",
+          "status": "active",
+          "outcome": "Freeze source and current inventory, obtain existing protocol/site observations on safe hosted capacity, then protected/live delivery. No timeout waiver."
+        },
+        {
+          "worker": "/root/seo",
+          "role": "NF retained-evidence and source-inventory reviewer; task-list lead",
+          "status": "active",
+          "outcome": "Diagnose actual site/diagnostic evidence, update board and reviewed source inventory after final freeze; no heavy local execution."
+        },
+        {
+          "worker": "/root/share_debugger",
+          "role": "MCP runtime distribution engineer",
+          "status": "active",
+          "outcome": "Finish exact four-target artifact/source/SBOM consumer and applicable reviewed admission/signing controls. Four-target qualification is not full F057/X02."
+        },
+        {
+          "worker": "/root/web_camo",
+          "role": "bounded JPEG credential/action component engineer",
+          "status": "active",
+          "outcome": "Implement independently bounded JPEG component in own checkout; no image-origin tag, production or full-original claim."
+        }
+      ],
+      "owner_handoff_task": "session-owner-engineering-action-handoff",
+      "owner_email_sent_not_inbox_or_read": true,
+      "scoped_tasks_closed": 25,
+      "original_closures_since_baseline": 4,
+      "all202_preserved": true,
+      "baseline_hashes_unchanged": true,
+      "agents_permanent": false,
+      "all50_engineering_bearing_are_autonomous_full_closable": false
     }
   ]
 }

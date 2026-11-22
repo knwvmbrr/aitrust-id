@@ -8,8 +8,17 @@ function baseline(){
 (async()=>{
  const [catalog,presentation,usage]=await Promise.all([import('../site/src/catalog.js'),import('../site/src/presentation.js'),import('../site/src/usage.js')]);
  const original=baseline(),oldBy=new Map(original.records.map(r=>[r.id,r]));let siblings=0;
- for(const tag of catalog.allTags){const before=oldBy.get(tag.id);assert(before);if(tag.id==='FA')continue;assert.deepEqual(tag,before);assert.deepEqual(presentation.presentation(tag),original.projections[tag.id].presentation);assert.deepEqual(usage.usage(tag),original.projections[tag.id].usage);assert.equal(usage.usageHTML(tag,String),original.projections[tag.id].usageHTML);siblings++;}assert.equal(siblings,19);
- const fa=catalog.allTags.find(t=>t.id==='FA'),prior=oldBy.get('FA');for(const key of ['id','code','name','status','scopeId','claim','outcome','job','floor','release','validation','features','proposed'])assert.deepEqual(fa[key],prior[key]);assert.equal(presentation.presentation(fa).working,false);assert.equal(presentation.presentation(fa).stage,'Planned');assert(presentation.presentation(fa).availability.startsWith('Planned tag'));assert(presentation.presentation(fa).limit.includes('full FA tag is still planned'));assert.equal(usage.usage(fa).available,false);assert.deepEqual(usage.usage(fa).links,[{label:'Private image-details guide',href:'/reference/image-device-guide.md'}]);assert(!usage.usage(fa).links.some(l=>l.label==='Download source'));
+ for(const tag of catalog.allTags){const before=oldBy.get(tag.id);assert(before);if(tag.id==='FA')continue;assert.deepEqual(tag,before);assert.deepEqual(presentation.presentation(tag),original.projections[tag.id].presentation);const expectedUse=structuredClone(original.projections[tag.id].usage);let expectedHTML=original.projections[tag.id].usageHTML;
+  if(tag.id==='MT'){
+   const oldNext='Try two wording checks here, or open the local guide. These previews do not issue an MT tag.';
+   const next='Try the wording checks here. For a review team, open Prepare private reviews. These previews do not issue an MT tag.';
+   const link={label:'Prepare private reviews',href:'https://github.com/knwvmbrr/aitrust-id/blob/main/docs/mt-label-preparation.md'};
+   assert.equal(expectedUse.next,oldNext);assert(expectedHTML.includes(oldNext));assert(expectedHTML.endsWith('</p></section>'));
+   expectedUse.next=next;expectedUse.links.push(link);
+   expectedHTML=expectedHTML.replace(oldNext,next).replace('</p></section>',` · <a href="${link.href}">${link.label}</a></p></section>`);
+  }
+  assert.deepEqual(usage.usage(tag),expectedUse);assert.equal(usage.usageHTML(tag,String),expectedHTML);siblings++;}assert.equal(siblings,19);
+ const fa=catalog.allTags.find(t=>t.id==='FA'),prior=oldBy.get('FA');for(const key of ['id','code','name','status','scopeId','claim','outcome','job','floor','release','validation','features','proposed'])assert.deepEqual(fa[key],prior[key]);assert.equal(presentation.presentation(fa).working,false);assert.equal(presentation.presentation(fa).stage,'Planned');assert(presentation.presentation(fa).availability.startsWith('Planned tag'));assert(presentation.presentation(fa).limit.includes('full FA tag is still planned'));assert.equal(usage.usage(fa).available,false);assert.deepEqual(usage.usage(fa).links,[{label:'Private image-details guide',href:'/reference/image-device-guide.md'},{label:'JPEG credentials (Linux)',href:'https://github.com/knwvmbrr/aitrust-id/blob/main/docs/jpeg-provenance-guide.md'}]);assert(!usage.usage(fa).links.some(l=>l.label==='Download source'));
  const verifier=fs.readFileSync(path.join(ROOT,'scripts/verify-site.cjs'),'utf8');
  const availabilityExpression=verifier.match(/[.]includes\((working\?\(id==='PS'\?[^\n]+?)\),'Availability hidden'\)/);assert(availabilityExpression,'Actual catalogue availability expression missing');
  const expectedAvailability=new Function('id','audience','working','return ('+availabilityExpression[1]+')');
@@ -24,5 +33,5 @@ function baseline(){
  const prepare=fs.readFileSync(path.join(ROOT,'site/scripts/prepare.mjs'),'utf8');assert(prepare.includes("scripts/build-image-metadata-device.py")&&prepare.includes("docs/image-device-guide.md"));
 
  const guide=fs.readFileSync(path.join(ROOT,'docs/image-device-guide.md'),'utf8');assert(guide.includes('**FA** modal')&&guide.includes('full FA tag remains Planned')&&guide.includes('encoded-file SHA256')&&guide.includes('does not by itself\nguarantee offline availability'));
- console.log(JSON.stringify({pass:true,groups:5,sibling_records_preserved:siblings,PA_unchanged:true,FA_Planned_not_issued:true,closed_epoch_mount:true,ready_control_gate:true,baseline_pinned_portable_no_git:true,production_browser_executed:false}));
+ console.log(JSON.stringify({pass:true,groups:5,sibling_records_preserved:siblings,sibling_usage_preserved:18,MT_usage_exact_review_route:true,FA_named_Linux_guide:true,PA_unchanged:true,FA_Planned_not_issued:true,closed_epoch_mount:true,ready_control_gate:true,baseline_pinned_portable_no_git:true,production_browser_executed:false}));
 })().catch(error=>{console.error(error);process.exitCode=1;});

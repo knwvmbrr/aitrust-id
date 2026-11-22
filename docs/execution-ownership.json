@@ -879,5 +879,13 @@
   ],
   "no_new_original_closures": true,
   "no_new_tag_codes_adopted": true,
-  "source_ledger_identity_semantics": "The source hash names the classification-time ledger before enhancement-only planning links were added; all202 original record objects and original acceptance hashes are unchanged."
+  "source_ledger_identity_semantics": "The source hash names the classification-time ledger before enhancement-only planning links. At that audit all202 original record objects were unchanged. Later implementation/evidence updates live in the ledger and changelog; the original IDs and acceptance hashes remain canonical.",
+  "goal_feasibility_without_external_acceptance": {
+    "best_case_original_open_floor": 64,
+    "target_original_open": 60,
+    "minimum_additional_external_full_acceptances_to_target": 4,
+    "basis": "66 open minus at most2 full engineering-owned contract paths. The other64 retain at least one outside/owner acceptance. This is a theoretical floor, not a claim either engineering path is complete or guaranteed solvable. Engineering on48 mixed items stays AI-owned.",
+    "public_evidence_retrieval_is_engineering_owned": true,
+    "classification_limits": "This is the present-audit floor while retained external gates/evidence remain absent, not an immutable limit or four new owner actions. Agents must retrieve suitable public/provider evidence themselves where possible and revisit classifications when facts change."
+  }
 }

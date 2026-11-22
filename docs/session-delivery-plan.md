@@ -1,3 +1,32 @@
+## Current combined handoff — 2026-11-22T16:58:10.565070+00:00
+
+**136 originals complete /66 open; target60 remains unmet by6.** Scoped closed
+tasks remain25; original closures since baseline remain4. Three named component
+jobs are **IN_REVIEW**, with no additional closure credit:
+
+- `session-jpeg-credential-actions`: selected Linux actual14 native cases and
+  distinct review complete; pre-code criterion7 still requires protected source
+  publication. No FA/PA/origin or full-original claim.
+- `session-source-snapshot-v3`: actual16 hosted controls and a128339526-byte source
+  tree qualify the versioned serializer. Combined-tree packet measurement and
+  protected delivery remain; legacy v1/v2 stay immutable and no admission follows.
+- `session-mt-private-label-preparation`: corrected private prepare/validate/compare
+  and fresh11 CLI cases are reviewed. Two synthetic files represent zero human
+  raters; candidate axes/agreement thresholds are unadopted. Protected source
+  publication remains before the named integration handoff closes.
+
+Dated assignments: `/root` integrates and publishes; `/root/seo` reviews the board,
+finite inventory and factual MCP grant mapping; `/root/share_debugger` implements
+the managed MCP consumer. `/root/web_camo` has finished these bounded JPEG/MT
+engineering handoffs and is not recorded as continuously running. Logical tag
+queues and historical snapshots below are not permanent agent processes.
+
+All202 original acceptance clauses, current percentages, baseline hashes,25 prior
+closed records and four original closure recommendations remain unchanged. The
+existing reviewed engineering receipts remain historical until fresh source-bound
+hosted checks actually finish. This board grants no owner/legal/tag adoption and
+claims no new runtime execution, protected publication or detector accuracy.
+
 ## Current ownership and engineering snapshot — 2026-11-22T15:36:31.607734+00:00
 
 **136 original requirements complete /66 open; target60 remains unmet by6.**

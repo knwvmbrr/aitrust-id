@@ -1,0 +1,169 @@
+{
+  "profile": "artifact-io-final-integration-inventory-delta-review/v1",
+  "captured_at": "2026-11-22T17:30:08.416591+00:00",
+  "pass": true,
+  "reviewed_by": "Codex /root/seo",
+  "integration_head": "f382a3b46683e795a5d502d3f865cb2d388a33c6",
+  "prior_review_sha256": "1a3c835139aab986b62d0e590dd020471034d71f42bd0378baf29118801f98cd",
+  "original_workflow_count_finding_sha256": "f700fc03a6efd7a64e7159e9cd9fc160e7aac68f9cbf3dc95101c606ecf902fa",
+  "finding_correction": "Existing36 controls plus15new retained; workflow count36 corrected to51 before finalcapture. Source-only method inventory, no51-test rerun.",
+  "source_sha256": {
+    ".github/workflows/artifact-sbom.yml": "9669b5f65306e96e4267909ef1c3723adf8dcac2f021ab7e5891f316dac7333f",
+    ".github/workflows/source-snapshot-v3.yml": "981964136593568ba87e89d74e2a456df63157d821023d5de8665e79d259ffea",
+    "docs/artifact-io-ownership-plan.md": "fd18ec9fe0438fb828921ce88bf0120c4129c440406b6dec8d096cecc7bc2ad2",
+    "docs/distribution-artifact-sbom.md": "78a18114e6d8afdc190cfc5d222e71c693aa61ddcc2fa521dda8ff5f82bfe5be",
+    "eval/revalidation.json": "82c094d9bb3afa965d2c01dae570ae4c63220878b4b565867093b9cd55b1cb9f",
+    "scripts/verify-route-boundaries.py": "1382e37af32a189b3b312ec1ea95bb41dc54769b26718e9c3f1098b7468469a0",
+    "tests/fa-image-main-integration.cjs": "11ae944c7d83397b37c52fbfd0eded0e9fc1c98627b410ab0ed4846bb83df6d2",
+    "tests/test_artifact_evidence_io.py": "adc631878d155c4cb2649e730f8a4446ff50838fb504b4030888c18ca347619f",
+    "tests/test_distribution_artifacts.py": "23b44bccad5d45754157057af675aa8c6dd61e55a43021a009a18dc5fbf3c35c",
+    "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e"
+  },
+  "source_review": {
+    "helper_sha256": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+    "peer_receipt": "runs/2026-11-22-artifact-io-ownership-distinct-review.json",
+    "peer_sha256": "61dfa595dba1d9393027fb2e44908b6fc65f5cb61599dbc969e4452fe33e98ce",
+    "retained_peer_actual_filesystem_controls": 6,
+    "retained_author_controls": 15,
+    "failed_successor_not_unlinked": true,
+    "postcallback_alias_content_recheck": true,
+    "private_boundary_rechecked_on_exit": true,
+    "close_once_all_descriptors_attempted": true,
+    "postpublication_uncertainty_preserved": true,
+    "hostile_same_UID_concurrent_race_not_claimed": true
+  },
+  "workflow_review": {
+    "old3_suites_retained": true,
+    "source_test_method_counts": {
+      "test_distribution_artifacts.py": 27,
+      "test_artifact_process.py": 7,
+      "test_artifact_workflow.py": 2,
+      "test_artifact_evidence_io.py": 15
+    },
+    "expected_total": 51,
+    "artifact_signer_permissions_identity_gates_unchanged": true,
+    "v3_observer_additionally_binds": [
+      "tools/artifact_evidence_io.py",
+      "tests/test_artifact_evidence_io.py",
+      "docs/artifact-io-ownership-plan.md"
+    ],
+    "no_new_runtime_budget_or_secrets": true,
+    "protected_execution_pending": true
+  },
+  "registration": {
+    "commands": {
+      "PS": 7,
+      "PII_REDACTED": 6,
+      "protocol": 71,
+      "extension": 14,
+      "website": 64
+    },
+    "old_ordered_commands_retained": true,
+    "protocol_pytest4_exact_files": true,
+    "helper_test_plan_covered_protocol_website_boundary": true,
+    "all5_old_receipts_stale_until_new_actual": true
+  },
+  "inventory": {
+    "producer": "scripts/verify-route-boundaries.py inventory(root)",
+    "prior_manifest_sha256": "b823c1260766e930ee85cc38de5102213ac0a0810297b394b7d8dcade266be5e",
+    "current_manifest_sha256": "c359681fa68ec4c739c8165fa77976ea34cdfc9f2c6dffbb4258f43be737263b",
+    "prior_source_count": 7960,
+    "current_source_count": 7962,
+    "equal_double_capture_and_postwrite": true,
+    "all_current_paths_tracked": true,
+    "added": [
+      {
+        "path": "docs/artifact-io-ownership-plan.md",
+        "sha256": "fd18ec9fe0438fb828921ce88bf0120c4129c440406b6dec8d096cecc7bc2ad2"
+      },
+      {
+        "path": "tests/test_artifact_evidence_io.py",
+        "sha256": "adc631878d155c4cb2649e730f8a4446ff50838fb504b4030888c18ca347619f"
+      }
+    ],
+    "changed": [
+      {
+        "path": ".github/workflows/artifact-sbom.yml",
+        "prior_sha256": "ddee07cc10c2ab04d7306bf91b6d1f625026ea61b4968d05fefe3eab5a505177",
+        "sha256": "9669b5f65306e96e4267909ef1c3723adf8dcac2f021ab7e5891f316dac7333f"
+      },
+      {
+        "path": ".github/workflows/source-snapshot-v3.yml",
+        "prior_sha256": "5d11fad8c366e6ba5dde89b7e3c2d84b44f3bf7d174299739b8c5f86c85de2b7",
+        "sha256": "981964136593568ba87e89d74e2a456df63157d821023d5de8665e79d259ffea"
+      },
+      {
+        "path": "docs/distribution-artifact-sbom.md",
+        "prior_sha256": "9850d93399dae6464278013af7ecf5ee958c9d02f4bd108f2ee3945cd51bc627",
+        "sha256": "78a18114e6d8afdc190cfc5d222e71c693aa61ddcc2fa521dda8ff5f82bfe5be"
+      },
+      {
+        "path": "eval/revalidation.json",
+        "prior_sha256": "4f59ba022d094facb851dd40ab4ed69fa3307a5d36369ddb1437f08ac6b94385",
+        "sha256": "82c094d9bb3afa965d2c01dae570ae4c63220878b4b565867093b9cd55b1cb9f"
+      },
+      {
+        "path": "scripts/verify-route-boundaries.py",
+        "prior_sha256": "8ae70982b6eb04fc439d5be5e7e93190865091980e1cd736ef46a388d01d741b",
+        "sha256": "1382e37af32a189b3b312ec1ea95bb41dc54769b26718e9c3f1098b7468469a0"
+      },
+      {
+        "path": "tests/fa-image-main-integration.cjs",
+        "prior_sha256": "084bd384188ddfa4b3522bee4bd986b74b3942deabf5d791f6cbd125c94bbb3c",
+        "sha256": "11ae944c7d83397b37c52fbfd0eded0e9fc1c98627b410ab0ed4846bb83df6d2"
+      },
+      {
+        "path": "tests/test_distribution_artifacts.py",
+        "prior_sha256": "584db6beb7fd03c4efb46195ddf42386fefbc6e8ccc3a2bf84cc42714ab30af4",
+        "sha256": "23b44bccad5d45754157057af675aa8c6dd61e55a43021a009a18dc5fbf3c35c"
+      },
+      {
+        "path": "tools/artifact_evidence_io.py",
+        "prior_sha256": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+        "sha256": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e"
+      }
+    ],
+    "removed": [],
+    "engineering_receipts_preserved_historical": {
+      "website": "runs/2026-11-22-image-corrected-website.json",
+      "extension": "runs/2026-11-22-image-ready-extension.json"
+    }
+  },
+  "additional_reviewed_delta": [
+    "FA test retains19 sibling catalogue/presentation and18 unchanged usage baselines, adds exactFA andMT expected guide/brief changes; no tag/status change.",
+    "Artifact guide explicitly describes failed private temporary retention/no rollback. Existing partial/corrupt-write test now asserts no final output plus exactly one owned0600singlelink retained temp with expectedsize, instead of expecting risky deletion; same27tests."
+  ],
+  "historical_v3_qualification": {
+    "executed_commit": "b75f434b7d1b82d7641b8fefd44e3013328f1c77",
+    "all11_bound_sources_still_match": false,
+    "current_different_bound_paths": [
+      ".github/workflows/source-snapshot-v3.yml",
+      "tests/test_distribution_artifacts.py"
+    ],
+    "product_serializer_core_unchanged": true,
+    "fresh_expanded_observer_and_actual_IO_Graph_proof_pending": true,
+    "old_proof_not_rebound": true
+  },
+  "accounting": {
+    "original_total": 202,
+    "complete": 136,
+    "open": 66,
+    "all_acceptances_percentages_preserved": true,
+    "closed_scoped": 25,
+    "components_in_review": 3,
+    "board2filehashes_unchanged": true
+  },
+  "claims": {
+    "new_runtime_or_test_execution": false,
+    "current5_profile_pass": false,
+    "protected_publication": false,
+    "source_legality_or_admission": false,
+    "new_original_closure": false
+  },
+  "limits": [
+    "15author+6peer actual controls source/hash reviewed, not rerun.",
+    "Fresh combined hosted5-profile observations and currentGraph/source/packet measurement remain rootdelivery.",
+    "Initial7960 review and historical receipts retained.",
+    "First reviewer finite-delta guard caught2additional unannounced source paths (guide/test) before any write; both inspected and exactdelta expanded, no product test failure."
+  ]
+}

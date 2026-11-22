@@ -10,13 +10,14 @@ Python/npm/browser dependencies. No paid runner or new service is introduced.
 
 ## Outcome and boundaries
 
-Run the existing `scripts/revalidate.py` protocol and website capabilities
-serially against one checkout. Preserve their full ordered commands, source
+Run the existing `scripts/revalidate.py` PS, privacy, extension, protocol and
+website capabilities serially against one checkout. Preserve their full ordered commands, source
 fingerprints, per-command exit/output digests and unchanged product/test limits.
 Do not construct receipts from a different subset of CI logs. The current
-manifest has69 protocol commands and64 website commands; the manifest remains
+manifest has71 protocol commands and64 website commands after registering the
+new JPEG, MT and archive controls; the manifest remains
 the authority rather than hardcoding these counts as a new acceptance rule.
-Assess both actual reports against the unchanged checkout before declaring the
+Assess all five actual reports against the unchanged checkout before declaring the
 job successful. The11 protected checks and independent release gates stay intact.
 
 A read-only same-repository pull-request workflow qualifies the candidate;
@@ -25,7 +26,7 @@ and protected main commits have different identities: report both actual Git
 HEAD and event SHA and never call the former the latter. Run no signing, secrets,
 production calls, private examples, uploads of user input or deployment.
 
-Preserve only the two existing source-bound JSON receipts in an artifact; use the
+Preserve only the five existing source-bound JSON receipts in an artifact; use the
 existing bounded unique-key evidence reader before export. Never upload the build,
 source tree, home, workspace, screenshots or private logs. Retain reports for7days.
 Use GitHub's actual run/head/merge identities when reviewing the artifact; reports
@@ -43,3 +44,9 @@ retain reports privately for review and avoid metadata-only pushes while it runs
 Report hashes establish source/byte identity, not accuracy, human accessibility,
 legal approval or permission to enable a tag. No original requirement closes
 from this pipeline alone.
+
+A common manifest change invalidates all five old source fingerprints. Run the
+three smaller capabilities too; never relabel their older receipts as current.
+New component sources and focused/CLI controls are explicitly registered in the
+protocol manifest and reviewed route inventory. Native JPEG qualification stays
+separate: this workflow does not install its optional SDK or claim native parity.

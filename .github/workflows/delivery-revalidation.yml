@@ -32,7 +32,7 @@ jobs:
           python3 - <<'PY'
           import json, pathlib
           from protocol.reports import write_report
-          for name in ('protocol','website'):
+          for name in ('PS','PII_REDACTED','extension','protocol','website'):
               write_report('output/delivery/'+name+'.json', {
                   'profile':'delivery-not-started/v1', 'capability':name,
                   'pass':False, 'release_approved':False,
@@ -77,6 +77,15 @@ jobs:
       - name: Install existing locked browser engines
         timeout-minutes: 10
         run: npx playwright install --with-deps chromium webkit
+      - name: Execute current PS privacy and extension capabilities
+        timeout-minutes: 10
+        env:
+          AITRUST_CI_RUNNER_ENV: ${{ runner.environment }}
+          AITRUST_CI_RUNNER_OS: ${{ runner.os }}
+        run: |
+          python3 scripts/revalidate.py PS --output output/delivery/PS.json
+          python3 scripts/revalidate.py PII_REDACTED --output output/delivery/PII_REDACTED.json
+          python3 scripts/revalidate.py extension --output output/delivery/extension.json
       - name: Execute the complete current protocol capability
         timeout-minutes: 12
         env:
@@ -89,26 +98,32 @@ jobs:
           AITRUST_CI_RUNNER_ENV: ${{ runner.environment }}
           AITRUST_CI_RUNNER_OS: ${{ runner.os }}
         run: python3 scripts/revalidate.py website --output output/delivery/website.json
-      - name: Assess both exact receipts
+      - name: Assess all five exact receipts
         timeout-minutes: 1
         run: |
+          python3 scripts/revalidate.py PS --receipt output/delivery/PS.json
+          python3 scripts/revalidate.py PII_REDACTED --receipt output/delivery/PII_REDACTED.json
+          python3 scripts/revalidate.py extension --receipt output/delivery/extension.json
           python3 scripts/revalidate.py protocol --receipt output/delivery/protocol.json
           python3 scripts/revalidate.py website --receipt output/delivery/website.json
-      - name: Bound the two report files before export
+      - name: Bound the five report files before export
         id: bound_reports
         if: always()
         run: |
           python3 - <<'PYTHON'
           from protocol.evidence import read_evidence
-          for name in ('protocol','website'):
+          for name in ('PS','PII_REDACTED','extension','protocol','website'):
               read_evidence('output/delivery/'+name+'.json')
           PYTHON
-      - name: Retain only the two bounded JSON receipts
+      - name: Retain only the five bounded JSON receipts
         if: ${{ always() && steps.bound_reports.outcome == 'success' }}
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: current-delivery-evidence-${{ github.run_attempt }}
           path: |
+            output/delivery/PS.json
+            output/delivery/PII_REDACTED.json
+            output/delivery/extension.json
             output/delivery/protocol.json
             output/delivery/website.json
           if-no-files-found: error

@@ -1,0 +1,283 @@
+{
+  "profile": "combined-component-source-inventory-distinct-review/v1",
+  "captured_at": "2026-11-22T17:06:29.313245+00:00",
+  "pass": true,
+  "reviewed_by": "Codex /root/seo",
+  "integration_head": "bd1610329fc22bba9c3e91fd0ade9dd5c7c176ab",
+  "scope": "Finite registration, board, source identity and additive workflow review; no detector/native/browser/profile rerun or protected publication.",
+  "inventory": {
+    "producer": "scripts/verify-route-boundaries.py inventory(root)",
+    "producer_sha256": "8ae70982b6eb04fc439d5be5e7e93190865091980e1cd736ef46a388d01d741b",
+    "prior_manifest_sha256": "917d1adf6bd95ec97879497a65c15f49fdf8e434a21142fd58ea8cd54a05f8bf",
+    "current_manifest_sha256": "b823c1260766e930ee85cc38de5102213ac0a0810297b394b7d8dcade266be5e",
+    "prior_source_count": 7935,
+    "current_source_count": 7960,
+    "equal_double_capture_and_postwrite_capture": true,
+    "all_current_paths_tracked": true,
+    "added": [
+      {
+        "path": ".github/workflows/jpeg-provenance-qualification.yml",
+        "sha256": "0ee147fca08aac01d5d071317edf7eadd3b6836bcd9436e3085f991f4507b9fc"
+      },
+      {
+        "path": ".github/workflows/source-snapshot-v3.yml",
+        "sha256": "5d11fad8c366e6ba5dde89b7e3c2d84b44f3bf7d174299739b8c5f86c85de2b7"
+      },
+      {
+        "path": "LICENSE",
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+      },
+      {
+        "path": "docs/jpeg-provenance-guide.md",
+        "sha256": "7a75d2053e01258b6aa626bba48c0e3e7e91b675caacb59691a75c5346581bcc"
+      },
+      {
+        "path": "docs/jpeg-provenance-plan.md",
+        "sha256": "5eb58fcbb992c400d3b5df460739848a3704b423b2bb6946f7bcf266304990c9"
+      },
+      {
+        "path": "docs/mt-annotation-guide.md",
+        "sha256": "0639bb151ebc542357efac67cefc4c3473eb59fe905531530d43214be7653acc"
+      },
+      {
+        "path": "docs/mt-label-preparation-plan.md",
+        "sha256": "f060dcd0b8a2cca9aff6ec6923b415e62ac9061af2c7744aa40874e9bd6cd1a5"
+      },
+      {
+        "path": "docs/mt-label-preparation.md",
+        "sha256": "f0a7ef75af4d8305afa28093ee05a8e74ef56b0b3b73df8304fe1375528fecc6"
+      },
+      {
+        "path": "docs/source-snapshot-v3-plan.md",
+        "sha256": "e779b6b20334d8a72742fd2b258681db6335d67aa627dccabbf482ef37465eee"
+      },
+      {
+        "path": "scripts/inspect-jpeg-provenance.py",
+        "sha256": "f3389b8b14e2af09e708a76e0d0f7b5a15b874c6daab59d8ccfde18a78be5148"
+      },
+      {
+        "path": "scripts/mt-label-preparation.py",
+        "sha256": "e79e2058f28735ea0c8c01fa7c390423dcb8b977dc1967bad249c1b6900d7a45"
+      },
+      {
+        "path": "scripts/source_snapshot_v3.py",
+        "sha256": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8"
+      },
+      {
+        "path": "scripts/verify-jpeg-provenance.py",
+        "sha256": "423bed83370a51c22da8b492a63025dad1c3da9a6e6bc31b054a08cea740faca"
+      },
+      {
+        "path": "scripts/verify-mt-label-preparation.py",
+        "sha256": "770b965af10c2337945705508680b8c65a83ee9514b7834f89ee668ecd06319c"
+      },
+      {
+        "path": "tests/fixtures/jpeg-provenance-v1/generate.py",
+        "sha256": "f0ca1f46a46ba6678b5ed4c81d0851b28478e69d27ae6e3ceef4f9a5bc242eff"
+      },
+      {
+        "path": "tests/test_jpeg_provenance.py",
+        "sha256": "6edf4cdd9f4d84318bff110cb0a7d19db017e5ff5578165ed05449c4567b736e"
+      },
+      {
+        "path": "tests/test_mt_label_preparation.py",
+        "sha256": "23cdb72e8d732a3db40765213f9a839b8b748a10c260875ddb961af731e61159"
+      },
+      {
+        "path": "tests/test_source_snapshot_v3.py",
+        "sha256": "79664360e4df25954a0e3186a98234a08fd43c22b20dd2e7a4530ef2d25ac0c3"
+      },
+      {
+        "path": "tools/jpeg_provenance.py",
+        "sha256": "2be9bc95a3aca62750bc23e49c1923fc61c00aa336c8edc3dabeaec6364fd8df"
+      },
+      {
+        "path": "tools/jpeg_provenance_actions.py",
+        "sha256": "e4cf4cd2661c2e4c257017f4d4cc3a87880f9002f73c44243e75e6b1cf4bf5d2"
+      },
+      {
+        "path": "tools/jpeg_provenance_io.py",
+        "sha256": "65ab199c54571a077898246266da6dfa52e7148d59f93479175ee6a88655abfa"
+      },
+      {
+        "path": "tools/jpeg_provenance_process.py",
+        "sha256": "1eac62ab9bc14dddba14f58dda4acb31f0e1a536436fdb7f27bdaea48d23c156"
+      },
+      {
+        "path": "tools/jpeg_provenance_sdk.py",
+        "sha256": "b6cb1faa9543fdb71c80e41676446dce1dc0bc84f3dcd19401dc222b8cd277e5"
+      },
+      {
+        "path": "tools/mt_label_io.py",
+        "sha256": "58333a54a9a3630b6ac010f202c0f1a4aef887a1a44f8d16dfe4b91455d3e533"
+      },
+      {
+        "path": "tools/mt_label_preparation.py",
+        "sha256": "bee37abc9e185ba2a2954e8594e0cd348e261000957c018fc39781599e04249a"
+      }
+    ],
+    "changed": [
+      {
+        "path": ".github/workflows/delivery-revalidation.yml",
+        "prior_sha256": "8e86bc6fbe099267f5c52ce1a19b8b53f21f886ab625fb65860bd3413381cfc1",
+        "sha256": "95d28b20957946843e6d404152f59cec775113808dc996ec5e2ff507df7c4c81"
+      },
+      {
+        "path": "eval/revalidation.json",
+        "prior_sha256": "52e0777b1d86a7fe42934583cee4e566951247f9c69300b39e3e826fe7141dbc",
+        "sha256": "4f59ba022d094facb851dd40ab4ed69fa3307a5d36369ddb1437f08ac6b94385"
+      },
+      {
+        "path": "scripts/build-source-snapshot.py",
+        "prior_sha256": "a07d3642d5921e804277c12c16ad22cf388d65bae114810877b2b08e52ce6706",
+        "sha256": "865dee30bb6f2908014fdcee17aac41aa4e0fa149d50d01677c30c7a5a838d56"
+      },
+      {
+        "path": "scripts/verify-route-boundaries.py",
+        "prior_sha256": "a08e867cccf3023a966f565299b414bf1140a0c58157c8dd8e8bf659e6bc4d40",
+        "sha256": "8ae70982b6eb04fc439d5be5e7e93190865091980e1cd736ef46a388d01d741b"
+      },
+      {
+        "path": "scripts/verify-source-provenance.py",
+        "prior_sha256": "cc0e9bbb83f1c844a9ca7cca69b063352a53c1ac311bef02d354f92bb5194215",
+        "sha256": "cb5ec29a98a4a1c05ad1ef06c0675c05e9d4ffd6347e2832f2405da005b86ab2"
+      },
+      {
+        "path": "site/index.html",
+        "prior_sha256": "8ced6e2367fe5ce48f4fd8e15614fd7e2d3b31b51d44302c049fd31853902ab8",
+        "sha256": "725a255edd3a0e9cdefc335eaa5e632f32c70e4f8982e3e9e279c4ab706763ec"
+      },
+      {
+        "path": "site/src/public-scope.json",
+        "prior_sha256": "39649aa09c48a3b8e019a2877b34a15bd71f11b5e71eb34b9ea8d8cb619b1711",
+        "sha256": "a70bbfc91fa05adee5f513879ffff47aa486af74de84f525ffe02bf1286a0a42"
+      },
+      {
+        "path": "site/src/scope-manifest.json",
+        "prior_sha256": "311c1dbd3f9c6cdea3758bf102fdf2f473e67d228f652974ab8a4eb1895e2ade",
+        "sha256": "74f5b3e2279721c8ecac52b49ee4cfe633fe9e124df3bbde9fd2141aa23caa6b"
+      },
+      {
+        "path": "site/src/usage.js",
+        "prior_sha256": "18c166efe76f2cbe0c2ae2b1d6178798c6d7647baff01d3ac2321de4e1a81fcc",
+        "sha256": "378f36a2a5f421527caf6b3420eab0c7dc95d4ee359d68d154dd74e861fbc17f"
+      },
+      {
+        "path": "tests/test_distribution_artifacts.py",
+        "prior_sha256": "032ac09a86a4622d06d03911aaa1cfbfcdd2598de169f88ce5b345d4ebd58c33",
+        "sha256": "584db6beb7fd03c4efb46195ddf42386fefbc6e8ccc3a2bf84cc42714ab30af4"
+      },
+      {
+        "path": "tests/test_source_provenance.py",
+        "prior_sha256": "566fa10f9d11f3da9d1c0e0677a914a84bcfea3b4e51fea5bd8893a776492f6f",
+        "sha256": "8686ec115a3e02c8e28bbc5c0259bfc37b50148d167206d470046239138e3fe5"
+      },
+      {
+        "path": "tools/distribution_artifacts.py",
+        "prior_sha256": "3540e7a5c9326148eef2183638fa5767259284d470701619e562fd2f14528be8",
+        "sha256": "36d25317bf1a9f1557894fb62f8f6a36c62a7c3d8391fa5e7d8d539d928de8ab"
+      }
+    ],
+    "removed": [],
+    "engineering_receipts_unchanged_historical": {
+      "website": "runs/2026-11-22-image-corrected-website.json",
+      "extension": "runs/2026-11-22-image-ready-extension.json"
+    }
+  },
+  "qualified_binding_counts": {
+    "runs/2026-11-22-jpeg-native-linux-actual.json": 17,
+    "runs/2026-11-22-mt-label-git-corrected-cli.json": 13,
+    "runs/2026-11-22-source-snapshot-v3-hosted-raw.json": 11
+  },
+  "qualified_union_count": 39,
+  "all_qualified_source_hashes_match_and_boundary_covered": true,
+  "source_sha256": {
+    "docs/session-delivery.json": "7a085e387343b6ef3d5934788198d4480005b1eb9b757efdd17ab3e36d267263",
+    "docs/session-delivery-plan.md": "03baf6f225472dde9821045883dc7f9978a3da0572b95aaed53bc2fffa262640",
+    "eval/revalidation.json": "4f59ba022d094facb851dd40ab4ed69fa3307a5d36369ddb1437f08ac6b94385",
+    ".github/workflows/delivery-revalidation.yml": "95d28b20957946843e6d404152f59cec775113808dc996ec5e2ff507df7c4c81",
+    "docs/hosted-delivery-revalidation-plan.md": "93aea7a57ce48cfdbbdda8ac2e9fe3a65c1691b739d7de731b64425d78582cb0",
+    "site/src/usage.js": "378f36a2a5f421527caf6b3420eab0c7dc95d4ee359d68d154dd74e861fbc17f",
+    "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
+    "docs/agent-delivery-status.md": "a0984c94f5f7ad822be728a886f67d2f5f169b1503ef2b26945d29a40e22e791",
+    "docs/execution-ownership.json": "756db3f4232b573796ea5198a8fe9db98178ec100d03ad4fce09aa9e350d2468",
+    "docs/owner-actions.md": "9a09c140a89cd529cc345e7d6962cb64e0e01dd2c33c9d72831491504dc8c941"
+  },
+  "registration": {
+    "current_commands": {
+      "PS": 7,
+      "PII_REDACTED": 6,
+      "protocol": 71,
+      "extension": 14,
+      "website": 64
+    },
+    "all_old_ordered_commands_retained": true,
+    "all_old_patterns_retained": true,
+    "all41_qualified_inputs_in_protocol_and_website": true,
+    "new_protocol_commands": [
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_jpeg_provenance.py",
+        "tests/test_mt_label_preparation.py",
+        "tests/test_source_snapshot_v3.py",
+        "-q"
+      ],
+      [
+        "{python}",
+        "scripts/verify-mt-label-preparation.py"
+      ]
+    ],
+    "common_manifest_change_invalidates_all_old_receipts": true
+  },
+  "workflow_review": {
+    "same_readonly_pinned_actions_and_same_repo_guards": true,
+    "runner_expressions_at_step_env_scope": true,
+    "all5_execute_serially_and_then_assess": true,
+    "reports_only": [
+      "output/delivery/PS.json",
+      "output/delivery/PII_REDACTED.json",
+      "output/delivery/extension.json",
+      "output/delivery/protocol.json",
+      "output/delivery/website.json"
+    ],
+    "retention_days": 7,
+    "no_new_secrets_signing_permissions_or_runtime_timeout": true,
+    "actual_hosted_execution_pending": true
+  },
+  "board": {
+    "prior_tasks_preserved": 26,
+    "new_in_review_tasks": 3,
+    "closed_scoped_tasks": 25,
+    "original_closures_since_baseline": 4,
+    "original_total": 202,
+    "original_complete": 136,
+    "original_open": 66,
+    "target_open": 60,
+    "session_success": false,
+    "all202_acceptances_and_percentages_unchanged": true,
+    "three_component_protected_publication_pending": true,
+    "temporary_assignments_not_permanent_processes": true
+  },
+  "usage_source_review": {
+    "20_catalogue_records_compared": true,
+    "only_FA_MT_usage_objects_change": true,
+    "availability_unchanged": true,
+    "18_sibling_outputs_including_PS_PII_unchanged": true,
+    "two_named_guides_exist": true,
+    "main_guide_links_become_current_on_protected_publication_not_yet_claimed": true
+  },
+  "claims": {
+    "new_runtime_execution": false,
+    "all5_current_receipts_pass": false,
+    "protected_publication": false,
+    "new_original_or_tag_closure": false,
+    "license_or_accuracy_approval": false
+  },
+  "limits": [
+    "Inventory and hash equality establish reviewed source identity, not method accuracy.",
+    "Retained author receipts qualify their executed source trees; final combined packet and hosted5-profile checks remain root delivery.",
+    "Old engineering_receipts selectors preserved intentionally as historical until fresh actual checks, not rebound."
+  ]
+}
