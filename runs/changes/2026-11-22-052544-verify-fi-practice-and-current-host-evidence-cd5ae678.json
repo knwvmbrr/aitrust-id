@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-052544-verify-fi-practice-and-current-host-evidence-cd5ae678",
+  "recorded_at": "2026-11-22T05:25:44.097552+00:00",
+  "author": "Codex PM /root; catalogue verifier author /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a9b2aeda043d82a8c97577d15ac20ec0129cc502",
+  "changed": "Extended the catalogue guard for the working FI practice download and current exact20-case HOST evidence; updated the two public HOST summaries to20.",
+  "proves": "Actual catalogue proof covers20modals, exactFIguide/source links, planned/no-verdict boundaries, private evidence and no unexpected outbound requests. The four other current capability receipts still match source.",
+  "limits": "Targeted proof used the previous built19-case summary; the new20-copy requires the next complete website build/check. Failed website and first targeted candidates are preserved. No original or tag-accuracy closure.",
+  "scope_ids": [
+    "T-FI",
+    "F-160",
+    "F-096"
+  ],
+  "files": {
+    "scripts/verify-site.cjs": "ca63e64c8185877df8803899da383461a27cc003ec20dad1f61207126da7706d",
+    "site/src/catalog.js": "a1225ee05be83522aec2b37b055e2e303e7e92b7622ff716c7477cdd9f1dd9ae",
+    "site/src/performance-model.js": "6520ee80a2d3e4113000a98c66c8a0d0c14905534104be97feaaeff3772eef92",
+    "site/src/tag-performance.json": "862f9b80bf5a571537a42d40e8aa902c2027b36164a61d426c115e43c1788cc3",
+    "runs/2026-11-22-fi-host-catalogue-verifier-correction.json": "719ada7c619c44fa3976e9560743db897e45afd0bd8a61125f123128d7214e6a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-fi-host-catalogue-verifier-correction.json",
+      "sha256": "719ada7c619c44fa3976e9560743db897e45afd0bd8a61125f123128d7214e6a"
+    },
+    {
+      "path": "runs/2026-11-22-host-current-actual-distinct-review.json",
+      "sha256": "54af709057ebb9881f7d9cd23e60877c012829cf3b606d2361f6ea21ae7bb169"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-051703-delivery-final-protocol-6f3af4c9",
+  "recorded_at": "2026-11-22T05:17:03.536110+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a9b2aeda043d82a8c97577d15ac20ec0129cc502",
+  "changed": "Recorded actual integrated protocol execution after the versioned serializer and FI practice integration.",
+  "proves": "All registered commands and source identity checks passed.",
+  "limits": "Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155",
+    "F-057",
+    "X-02",
+    "T-FI"
+  ],
+  "files": {
+    "runs/2026-11-22-delivery-final-protocol.json": "526bd61b5b56d2d351726c6ec98a804761d2b84e4ea3d9b18514351f576c7e07"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-delivery-final-protocol.json",
+      "sha256": "526bd61b5b56d2d351726c6ec98a804761d2b84e4ea3d9b18514351f576c7e07"
+    }
+  ],
+  "checks": []
+}

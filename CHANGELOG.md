@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-052637-record-generated-host20-site-metadata-c95de168
+
+Recorded 2026-11-22T05:26:37.850832+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded the generated index metadata accompanying the current20-control HOST summaries and FI practice browser guard.
+- **Evidence.** Prepared public metadata derives from the accepted20-case host evidence; the separate catalogue proof remains bounded to its actual build. [Change record](./runs/changes/2026-11-22-052637-record-generated-host20-site-metadata-c95de168.json).
+- **Not claimed.** Current complete website verification remains required; no new original closure or detector accuracy is claimed.
+
+
+### 2026-11-22-052544-verify-fi-practice-and-current-host-evidence-cd5ae678
+
+Recorded 2026-11-22T05:25:44.097552+00:00 · Contributor: Codex PM /root; catalogue verifier author /root/web_camo · change
+
+- **Changed.** Extended the catalogue guard for the working FI practice download and current exact20-case HOST evidence; updated the two public HOST summaries to20.
+- **Evidence.** Actual catalogue proof covers20modals, exactFIguide/source links, planned/no-verdict boundaries, private evidence and no unexpected outbound requests. The four other current capability receipts still match source. [Change record](./runs/changes/2026-11-22-052544-verify-fi-practice-and-current-host-evidence-cd5ae678.json).
+- **Not claimed.** Targeted proof used the previous built19-case summary; the new20-copy requires the next complete website build/check. Failed website and first targeted candidates are preserved. No original or tag-accuracy closure.
+
+
+### 2026-11-22-051814-delivery-final-website-a18fb04e
+
+Recorded 2026-11-22T05:18:14.012116+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated website execution after the versioned serializer and FI practice integration.
+- **Evidence.** Failed candidate preserved; no pass is claimed. [Change record](./runs/changes/2026-11-22-051814-delivery-final-website-a18fb04e.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-051703-delivery-final-protocol-6f3af4c9
+
+Recorded 2026-11-22T05:17:03.536110+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated protocol execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-051703-delivery-final-protocol-6f3af4c9.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
 ### 2026-11-22-051331-restore-immutable-delivery-baseline-binding-46325b86
 
 Recorded 2026-11-22T05:13:31.077502+00:00 · Contributor: Codex PM /root · change
