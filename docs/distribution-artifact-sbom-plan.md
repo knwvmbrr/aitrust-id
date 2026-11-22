@@ -100,3 +100,27 @@ source, 64MB compressed archive, and all subprocess time/output limits. No sourc
 or notice is omitted. A final actual combined committed-tree/archive/SPDX replay
 must measure real packet and archive sizes and refuse if any unchanged byte cap
 is exceeded. Counts alone do not authorize a release or resolve a license gap.
+
+## Actual packet-size correction (before implementation)
+
+The first real combined archive at `e49b8e24` contains 12,479 files and
+114,071,280 raw source bytes; its archive is 33,154,743 bytes. The full graph is
+5,534,809 bytes, but repetitive SPDX identifiers/comments make its binding packet
+16,826,961 bytes, correctly exceeding the retained 16MB packet ceiling. The
+failed actual run is preserved. No source or term may be dropped to fit.
+
+Use deterministic document-local `SPDXRef-Component-NNNNN` identifiers assigned in
+sorted full-node-key order, with one-to-one uniqueness enforced. Preserve full
+keys, Git OIDs/modes, sourceInfo, graph SHA256, notices and every exact relationship.
+These document-local labels are not digests or authenticity evidence. Shorten the
+repeated OTHER relationship comment while keeping its explicit non-containment
+meaning and full document-level qualifications. Namespace derivation stays bound
+to the full canonical graph/artifact/date. Keep the 16MB packet/output cap.
+
+The measured 11.29MB SPDX predicate also cannot fit a 5MB base64 attestation bundle.
+Permit at most 16MB for that separately captured bundle; trust roots remain 5MB.
+The fixed official `gh --jq` expression retains the entire verificationResult
+(certificate, timestamps and statement), omitting only its duplicate raw bundle.
+It changes neither verification flags nor identity, source/predicate/subject
+checks. The dedicated verifier output stays 16MB; general child output stays 2MB.
+All signing remains pending an actual protected-main execution.

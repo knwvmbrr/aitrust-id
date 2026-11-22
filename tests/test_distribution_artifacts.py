@@ -65,6 +65,41 @@ class ArtifactWorkflow(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'Committed source limit'):source.build(ROOT,'a'*40)
             self.assertEqual(calls.call_count,2)
         self.assertEqual(source.MAX_FILES,16384);self.assertEqual(a.MAX_NODES,16384)
+    def test_spdx_local_ids_unique_sorted_key_mapping_and_deterministic(self):
+        g=a.graph('ps-source');artifact={'sha256':'0'*64};created='2026-11-21T00:00:00Z'
+        first=a.spdx('ps-source',artifact,g,created);second=a.spdx('ps-source',artifact,copy.deepcopy(g),created)
+        self.assertEqual(first,second)
+        expected={n['name']:'SPDXRef-Component-'+str(i).zfill(5)for i,n in enumerate(sorted(g['nodes'],key=lambda n:n['key']),1)}
+        actual={p['name']:p['SPDXID']for p in first['packages'][1:]}
+        self.assertEqual(actual,expected);self.assertEqual(len(set(actual.values())),len(g['nodes']))
+        relations=[row for row in first['relationships']if row['relationshipType']=='OTHER']
+        self.assertEqual({r['relatedSpdxElement']for r in relations},set(actual.values()))
+        self.assertTrue(all('not a containment claim'in r['comment']for r in relations))
+        duplicate=copy.deepcopy(g);duplicate['nodes'].append(copy.deepcopy(g['nodes'][0]))
+        with self.assertRaises(ValueError):a.spdx('ps-source',artifact,duplicate,created)
+    def test_forged_full_node_key_or_exact_relationship_cannot_rebind_local_ids(self):
+        r=self.record()
+        for key in ('node_key','relationship'):
+            b=copy.deepcopy(r)
+            if key=='node_key':b['graph']['nodes'][0]['key']+='-FORGED'
+            else:b['graph']['relationships'].append({'from':b['graph']['nodes'][0]['key'],'to':b['graph']['nodes'][1]['key'],'type':'DEPENDS_ON'})
+            b['graph_sha256']=a.sha(a.encoded(b['graph']))
+            b['spdx']=a.spdx('ps-source',b['artifact'],b['graph'],b['created'])
+            b['spdx_sha256']=a.sha(a.encoded(b['spdx'])+b'\n')
+            with self.assertRaises(ValueError):a.verify_packet(b,self.artifact,'ps-source',COMMIT)
+    def test_large_bounded_bundle_and_complete_verification_result_projection(self):
+        r,s,b,t=self.verification_inputs();b.write_bytes(b'x'*5_000_001)
+        good=self.verifier(r)
+        def selected(argv,**kwargs):
+            self.assertEqual(argv[-2:],['--jq','map({verificationResult: .verificationResult})'])
+            stage=Path(argv[argv.index('--bundle')+1]);self.assertEqual(stage.read_bytes(),b.read_bytes())
+            return good(argv,**kwargs)
+        value=a.verify_attestation(r,self.artifact,s,b,t,'ps-source',COMMIT,runner=selected)
+        self.assertTrue(value['attestation_verified']);self.assertFalse(value['release_authorized'])
+        b.write_bytes(b'x'*16_000_001)
+        with self.assertRaises(ValueError):a.verify_attestation(r,self.artifact,s,b,t,'ps-source',COMMIT,runner=lambda *args,**kw:self.fail('oversize must refuse before verifier'))
+        b.write_bytes(b'{}');t.write_bytes(b'x'*5_000_001)
+        with self.assertRaises(ValueError):a.verify_attestation(r,self.artifact,s,b,t,'ps-source',COMMIT,runner=lambda *args,**kw:self.fail('root cap unchanged'))
     def test_actual_ps_artifact_sbom_and_exact_packet_replay(self):
         r=self.record();a.save_packet(r,self.base/'packet.json')
         self.assertEqual(a.verify_packet(r,self.artifact,'ps-source',COMMIT),r)

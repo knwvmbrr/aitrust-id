@@ -1,0 +1,14 @@
+{
+  "pass": false,
+  "captured_at": "2026-11-22T03:52:11.984332+00:00",
+  "profile": "combined-source-archive-controller-import-refusal/v1",
+  "source_commit": "e49b8e24d58ded048d8af2f84c8dd17ad99bdf3d",
+  "phase": "controller_supported_cli_invocation",
+  "new_artifact_created": false,
+  "signature": "existing archive CLI cannot import its script-directory helper under Python -I",
+  "controller_sha256": "fb9d47777e32b5101b1c591db63190a1dda4e8ea8e502de5da9148525ec9d47c",
+  "actual_log_sha256": "3033ec9fc472df39b34358009455e1f51c7ff2b1b0906c663aa606e8df54e4ed",
+  "isolated_import_repro_log_sha256": "6e6caa26c8ced48a7fc0a25a2d2e5505222e62a6eddf8c3a79bc516868a848bb",
+  "correction": "Use existing supported stdlib-only -S-B source-archive entrypoint; new artifact CLI retains -I-S-B. No product source/timeout/size change.",
+  "full_F057_closed": false
+}

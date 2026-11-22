@@ -1,0 +1,48 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-22T03:59:19.113379+00:00",
+  "profile": "artifact-sbom-measured-capacity-correction-affected-controls/v1",
+  "source_base": "e49b8e24d58ded048d8af2f84c8dd17ad99bdf3d",
+  "source_sha256": {
+    "tools/distribution_artifacts.py": "f4a652cb7daa5c06231d508075d613abb6b8319aa88f6ea48b9981e9c2b4469c",
+    "tools/artifact_process.py": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tests/test_distribution_artifacts.py": "c1525fc69df30be91aca6752d1398ee55e4da75fa374b87af2b58877c977d119",
+    "tests/test_artifact_process.py": "b3681ca1908e39d33276c23dca0cf486f69f86251c8d17b1f6b621cd23163a4a",
+    ".github/workflows/artifact-sbom.yml": "ddee07cc10c2ab04d7306bf91b6d1f625026ea61b4968d05fefe3eab5a505177",
+    "docs/distribution-artifact-sbom-plan.md": "b01895a7a361bd88e53e4b250424f19fdd4bce8c864fe987f42dccdf2c63b4d8",
+    "docs/distribution-artifact-sbom.md": "b5e0464f8928bc75761180d2dace6e1fd82d40df540dbe61356bcdf1872bc419"
+  },
+  "executed": 6,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 0.694,
+  "log_sha256": "229a86a0117e18d3cbd80bc3e8172c142093c19262754f87c22f2dbd8837b0ef",
+  "controls": [
+    "unique sorted full-key mapping/deterministic local SPDX labels",
+    "coherent full-key and exact-relationship forgery refused by canonical replay",
+    "large bounded bundle accepted by injected verifier only;16MB+1bundle and5MB+1roots refused before verifier",
+    "exact predicate/subject/identity checks retained",
+    "actual owned fakeGH child/capture path; NOT actual crypto",
+    "actual PS artifact and packet replay"
+  ],
+  "installed_gh_version": "gh version 2.87.3 (2026-02-23)",
+  "installed_gh_help_sha256": "65e2bfd5da639a9e7a3bacc03266efe284c245005ea288041f9c305bbb6ddd51",
+  "installed_gh_supports_format_json_and_jq": true,
+  "official_cli_manual": "https://cli.github.com/manual/gh_attestation_verify",
+  "unmodified_general_worker_stdout_limit": 2000000,
+  "dedicated_verifier_stdout_file_limit": 16000000,
+  "packet_limit": 16000000,
+  "bundle_limit": 16000000,
+  "trust_roots_limit": 5000000,
+  "existing_tree_measurement": {
+    "nodes": 12479,
+    "packet_bytes": 14468432,
+    "spdx_bytes": 8932480,
+    "not_final_new_commit_proof": true
+  },
+  "new_actual_sigstore_executed": false,
+  "full_F057_closed": false,
+  "full_X02_closed": false
+}

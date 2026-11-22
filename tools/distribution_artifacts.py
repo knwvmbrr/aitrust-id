@@ -301,7 +301,9 @@ def spdx(route,artifact,graph,created):
        'filesAnalyzed':False,'checksums':[{'algorithm':'SHA256','checksumValue':artifact['sha256']}],
        'licenseConcluded':'NOASSERTION','licenseDeclared':'NOASSERTION','copyrightText':'NOASSERTION',
        'comment':'Exact supplied artifact bytes. Source-derived dependencies below are declared/observed evidence, not a complete embedded-content or permission claim.'}]
-    ids={n['key']:'SPDXRef-Component-'+sha(n['key'].encode())for n in graph['nodes']}
+    ordered=sorted(graph['nodes'],key=lambda n:n['key'])
+    need(len({n['key']for n in ordered})==len(ordered))
+    ids={n['key']:'SPDXRef-Component-'+str(i).zfill(5)for i,n in enumerate(ordered,1)}
     relationships=[{'spdxElementId':'SPDXRef-DOCUMENT','relationshipType':'DESCRIBES','relatedSpdxElement':'SPDXRef-Artifact'}]
     for n in graph['nodes']:
         p={'SPDXID':ids[n['key']],'name':n['name'],'downloadLocation':'NOASSERTION','filesAnalyzed':False,
@@ -311,7 +313,7 @@ def spdx(route,artifact,graph,created):
         if n['checksums']:p['checksums']=n['checksums']
         if n['origin']=='committed-git-blob':
             p['sourceInfo']='Git blob object identity (includes Git object header; not a plain file checksum): '+n['details']['git_blob_oid']+'; mode '+n['details']['mode']
-        packages.append(p);relationships.append({'spdxElementId':'SPDXRef-Artifact','relationshipType':'OTHER','relatedSpdxElement':p['SPDXID'],'comment':'Associated declared/observed source material; not a claim this component is installed or embedded in the supplied artifact.'})
+        packages.append(p);relationships.append({'spdxElementId':'SPDXRef-Artifact','relationshipType':'OTHER','relatedSpdxElement':p['SPDXID'],'comment':'Associated source evidence; not a containment claim.'})
     for edge in graph['relationships']:relationships.append({'spdxElementId':ids[edge['from']],'relationshipType':'DEPENDS_ON','relatedSpdxElement':ids[edge['to']]})
     return {'spdxVersion':'SPDX-2.3','dataLicense':'CC0-1.0','SPDXID':'SPDXRef-DOCUMENT',
       'name':'AI Trust ID '+route+' artifact/source evidence','documentNamespace':'urn:uuid:'+str(uuid.uuid5(uuid.NAMESPACE_OID,seed)),
@@ -391,7 +393,7 @@ def verify_attestation(record,artifact,sbom,bundle,trusted_root,route,source_com
     with Capture()as c:
         expected=encoded(record['spdx'])+b'\n'
         need(c.read(sbom,MAX_PACKET,private=False)==expected)
-        bundle_raw=c.read(bundle,5_000_000,private=False);trust_raw=c.read(trusted_root,5_000_000,private=False)
+        bundle_raw=c.read(bundle,MAX_PACKET,private=False);trust_raw=c.read(trusted_root,5_000_000,private=False)
         # Roots are separately selected. No carried artifact/packet can choose verifier identity.
         with tempfile.TemporaryDirectory(prefix='aitrust-artifact-verify-')as temp:
             stage=Path(temp).resolve();stage.chmod(0o700)
@@ -403,7 +405,8 @@ def verify_attestation(record,artifact,sbom,bundle,trusted_root,route,source_com
             argv=['gh','attestation','verify',str(stage/'artifact.bin'),'--bundle',str(stage/'bundle.json'),
               '--custom-trusted-root',str(stage/'trusted-root.jsonl'),'--repo',REPO,'--cert-identity',IDENTITY,
               '--cert-oidc-issuer','https://token.actions.githubusercontent.com','--source-digest',record['source_commit'],
-              '--source-ref','refs/heads/main','--deny-self-hosted-runners','--predicate-type',SPDX_TYPE,'--format','json']
+              '--source-ref','refs/heads/main','--deny-self-hosted-runners','--predicate-type',SPDX_TYPE,'--format','json',
+              '--jq','map({verificationResult: .verificationResult})']
             result=runner(argv,timeout=60,output_limit=16_000_000)
             need(result.returncode==0);verified=parse(result.stdout);need(type(verified)is list and 0<len(verified)<=10)
             for result in verified:
@@ -412,7 +415,7 @@ def verify_attestation(record,artifact,sbom,bundle,trusted_root,route,source_com
                      encoded(statement['predicate'])==encoded(record['spdx'])and any(s.get('digest')=={'sha256':record['artifact']['sha256']}for s in statement['subject']))
             with Capture()as staged:
                 need(staged.artifact(stage/'artifact.bin')==record['artifact'])
-                need(staged.read(stage/'bundle.json',5_000_000)==bundle_raw and staged.read(stage/'trusted-root.jsonl',5_000_000)==trust_raw)
+                need(staged.read(stage/'bundle.json',MAX_PACKET)==bundle_raw and staged.read(stage/'trusted-root.jsonl',5_000_000)==trust_raw)
                 staged.check()
         c.check()
     verify_packet(record,artifact,route,source_commit,root)

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-040113-compact-complete-spdx-without-dropping-source-3523ca5d
+
+Recorded 2026-11-22T04:01:13.895973+00:00 · Contributor: Codex /root/share_debugger; distinct reviewer /root/web_camo · change
+
+- **Changed.** Preserved the real combined archive and16MB packet refusal; compacted document-local SPDX IDs/comments without omitting sources, and bounded detached bundles/verified-result projection to represent the measured predicate.
+- **Evidence.** Six affected controls pass; distinct source and actual targeted controls reject coherent key/relationship forgeries, enforce one-to-one local IDs and retain complete verification results. Current measured packet fits unchanged16MB cap. [Change record](./runs/changes/2026-11-22-040113-compact-complete-spdx-without-dropping-source-3523ca5d.json).
+- **Not claimed.** Final current committed archive/fourteen-packet CLI proof follows this code freeze. No actual new Sigstore signing, comprehensive obligations clearance or fullF057/X02 acceptance. Prior import-harness and capacity failures remain immutable.
+
+
 ### 2026-11-22-035015-artifact-bound-fourteen-scope-sbom-e9cfad75
 
 Recorded 2026-11-22T03:50:15.496519+00:00 · Contributor: Codex /root/share_debugger; distinct core reviewer /root/web_camo · change

@@ -151,3 +151,13 @@ Whole-source archives and graphs admit at most16,384 committed files/nodes,
 with the existing byte, path and wall-time limits retained. The measured union
 requires this finite capacity; it does not claim an executed combined artifact
 until a final source-bound replay is recorded.
+
+SPDX component IDs are deterministic document-local labels in sorted full-node-key
+order. The complete graph, source OIDs and exact relationships remain bound; these
+short labels do not replace any digest. Repeated relationship copy is compact,
+with the explicit associated-source and non-containment meaning preserved.
+
+A detached bundle is capped at 16MB (trust roots stay 5MB). The fixed official
+GitHub CLI projection retains the complete verificationResult, including its
+certificate, timestamps and statement, while omitting only the duplicate raw
+bundle in stdout. All identity and exact-predicate checks remain mandatory.
