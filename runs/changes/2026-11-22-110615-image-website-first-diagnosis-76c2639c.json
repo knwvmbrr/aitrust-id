@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-110615-image-website-first-diagnosis-76c2639c",
+  "recorded_at": "2026-11-22T11:06:15.919853+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8186929ec7a54ac749ba234fb865ac418c200150",
+  "changed": "Preserved the first combined website failure and the owned-fixture catalogue diagnosis.",
+  "proves": "The current catalogue passes focused execution after a failed integrated catalogue phase; the original failing receipt and unknown root cause remain explicit.",
+  "limits": "No source fix or known root cause is claimed. A complete fresh website execution remains required before publication.",
+  "scope_ids": [
+    "F-035",
+    "F-120"
+  ],
+  "files": {
+    "runs/2026-11-22-image-ready-website.json": "6b53bfe824ecb86d857286b7c2fd6282e2de291c12193b64a6f72fe6d86320b3",
+    "runs/2026-11-22-image-first-website-diagnosis.json": "085b483ed7cb9f569f8f18fe169033d6431c610a52c03adae8cc5e22311c487a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-image-ready-website.json",
+      "sha256": "6b53bfe824ecb86d857286b7c2fd6282e2de291c12193b64a6f72fe6d86320b3"
+    },
+    {
+      "path": "runs/2026-11-22-image-first-website-diagnosis.json",
+      "sha256": "085b483ed7cb9f569f8f18fe169033d6431c610a52c03adae8cc5e22311c487a"
+    }
+  ],
+  "checks": []
+}

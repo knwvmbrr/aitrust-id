@@ -1,0 +1,52 @@
+{
+  "captured_at": "2026-11-22T14:58:25.154799+00:00",
+  "author": "Codex / web_camo",
+  "profile": "NF-observability-cleanup-corrected-controls/v1",
+  "pass": true,
+  "original_candidate": "f638f8c2904d6991dc4c056427c9acaf86937bc6",
+  "original_finding": {
+    "path": "runs/2026-11-22-nf-browser-cleanup-original-source-finding.json",
+    "sha256": "679c4a89d114419e4609706111a1478c7e276fa9d9f786abae0cbb4421b7be6b",
+    "evidence_kind": "source-control-flow; no actual launched browser counterexample claimed"
+  },
+  "sources": {
+    "scripts/verify-nf-device.cjs": "ede0b13deccad0133e7b055c0072fe0fa1712e60d860fef70d19c620f0a9865e",
+    "scripts/verify-nf-client.cjs": "4c01c71f81617eec55946a90966de6dda0424c29b1a5b05cef8cda802657a5d5",
+    "scripts/build-nf-device-fixture.mjs": "5cfa8d810054bc995bab92fe86e39be42825ee603f27565fcfac5a8dce86f58e",
+    "tests/nf-browser-diagnostics.cjs": "1a322e6d10f86994a8735bf3f54990acb09e2c8e109f028c8f11e4e52caf00c0",
+    "docs/nf-pr149-diagnostic-plan.md": "3be2334a44a892a9dee1c541c32b5058402c316d1358c0609011be018c1eee41",
+    ".github/workflows/nf-browser-diagnostic.yml": "088a35e115490a8dc8df20e5a9c3a168244cb4190c118413434e63c0a2c9a060"
+  },
+  "actual_focused_controls": {
+    "count": 20,
+    "pass": 20,
+    "fail": 0,
+    "skipped": 0,
+    "elapsed_ms": 2335,
+    "log_sha256": "10c1cd14c4d1debc13f2498f03ee77f0a8e872d934c2e1d97f9fd6c59005be8a",
+    "browser_stub_close_once_after_begin_end_both_checkpoint_faults": true,
+    "stub_actual_close_error_invalid_no_complete_marker": true,
+    "context_refusal_then_independent_browser_finally_close": true,
+    "ordinary_and_async_checkpoint_outcomes": true,
+    "falsy_throws_cannot_report_success": true,
+    "primary_failure_retained_with_separate_cleanup_failure": true
+  },
+  "history": {
+    "initial19_control_log_sha256": "101e9ef7796a91d0b424b5b2bd3217d8eab8a0ceac563187dacb85ca68e58ad0",
+    "intermediate20_control_log_sha256": "57034cfec1e5b87c1836e01f6e9a63258c96a6fd057686e483baf27569148f4d",
+    "scope": "Intermediate implementation controls preserved privately; final source identity/test evidence only in final20 above. Original f638 receipt unchanged."
+  },
+  "preserved": {
+    "release_wrapper_COMMANDS_budgets_byte_exact": true,
+    "diagnostic_workflow_byte_exact": true,
+    "fixture_callbacks_byte_exact": true,
+    "application_workers_or_method_changed": false,
+    "original33cases8corruptions_and50s_wait_assertions_unchanged": true
+  },
+  "limits": [
+    "Only inert stubs/diagnostic tests/syntax/source comparisons; no local browser, build, SDK, hosted run or acceptance.",
+    "Same300s measurement workflow; original180s release command remains unchanged.",
+    "Failure of either diagnostics or close invalidates outcome; completed close is separately reported.",
+    "Known original deadline operation remains unestablished until hosted diagnostic evidence."
+  ]
+}

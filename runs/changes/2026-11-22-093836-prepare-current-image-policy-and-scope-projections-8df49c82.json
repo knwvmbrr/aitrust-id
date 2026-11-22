@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-093836-prepare-current-image-policy-and-scope-projections-8df49c82",
+  "recorded_at": "2026-11-22T09:38:36.161575+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e065650757d2da710538d5e1f622752021b22bed",
+  "changed": "Prepared current136/66 public scope data and new policy1.15 plain-text/download archives before complete image-source verification.",
+  "proves": "All9newarchives match current source text; all9old1.14archive bytes remain unchanged. Current-accountability and source registration remain reviewed; no additional original closure.",
+  "limits": "Combined64-command site execution, protected merge and actual public image/counter/download verification remain pending. No AI-origin, offline, physical/human or fulllicense clearance claim.",
+  "scope_ids": [
+    "F-145",
+    "T-FA",
+    "N-007",
+    "N-008"
+  ],
+  "files": {
+    "runs/2026-11-22-image-policy-and-scope-projection-preparation.json": "cc8dc3db464e90b068b31a45eefa41e39c9cbe13639744e26bbe7809125dba5d",
+    "site/public/reference/policies/access/v1.15.txt": "82034132e936dd4888ddaa877d802afecaf38af5a8d1d9307286e7cdac0bc2d8",
+    "site/public/reference/policies/community/v1.15.txt": "e059835c64d6a2647278993566c6f0bbebc236c3aa8ba42b42452ef8a014f462",
+    "site/public/reference/policies/contributing/v1.15.txt": "ea502fb020f0e45f0ff943b6fa7bfbf11de4bc9063803c31bfb6448dfac2b812",
+    "site/public/reference/policies/governance/v1.15.txt": "09a9665bb67eb96c064153daef7213127c11728f48108de405bcc9db3dfb5fb3",
+    "site/public/reference/policies/licenses/v1.15.txt": "4d632a44dbd5532d5a993668f597307eaed93cda8beb9a45c3d0a257694c400d",
+    "site/public/reference/policies/privacy/v1.15.txt": "4042fbaac4d59a1a80f3dabc899efe73995a029d71ca937cf89ec2f6d4bd3d02",
+    "site/public/reference/policies/security/v1.15.txt": "6d25518cb8a6120bf17920daace732f0a5c9218d02cdca3ffb5fa2fa616b33b6",
+    "site/public/reference/policies/terms/v1.15.txt": "239d90ab42597a074c409f55ec29b444e097a9ff3faa3d0fc6bb8305f914e3b5",
+    "site/public/reference/policies/validation/v1.15.txt": "f434161df89cdc2bf52a86770224bd6982dc7afb53ab934f0d76c91d4bf6395c",
+    "site/public/reference/policy-access.txt": "82034132e936dd4888ddaa877d802afecaf38af5a8d1d9307286e7cdac0bc2d8",
+    "site/public/reference/policy-community.txt": "e059835c64d6a2647278993566c6f0bbebc236c3aa8ba42b42452ef8a014f462",
+    "site/public/reference/policy-contributing.txt": "ea502fb020f0e45f0ff943b6fa7bfbf11de4bc9063803c31bfb6448dfac2b812",
+    "site/public/reference/policy-governance.txt": "09a9665bb67eb96c064153daef7213127c11728f48108de405bcc9db3dfb5fb3",
+    "site/public/reference/policy-licenses.txt": "4d632a44dbd5532d5a993668f597307eaed93cda8beb9a45c3d0a257694c400d",
+    "site/public/reference/policy-privacy.txt": "4042fbaac4d59a1a80f3dabc899efe73995a029d71ca937cf89ec2f6d4bd3d02",
+    "site/public/reference/policy-security.txt": "6d25518cb8a6120bf17920daace732f0a5c9218d02cdca3ffb5fa2fa616b33b6",
+    "site/public/reference/policy-terms.txt": "239d90ab42597a074c409f55ec29b444e097a9ff3faa3d0fc6bb8305f914e3b5",
+    "site/public/reference/policy-validation.txt": "f434161df89cdc2bf52a86770224bd6982dc7afb53ab934f0d76c91d4bf6395c",
+    "site/public/reference/public-scope.json": "39649aa09c48a3b8e019a2877b34a15bd71f11b5e71eb34b9ea8d8cb619b1711",
+    "site/src/public-scope.json": "39649aa09c48a3b8e019a2877b34a15bd71f11b5e71eb34b9ea8d8cb619b1711",
+    "site/src/scope-manifest.json": "311c1dbd3f9c6cdea3758bf102fdf2f473e67d228f652974ab8a4eb1895e2ade"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-image-policy-and-scope-projection-preparation.json",
+      "sha256": "cc8dc3db464e90b068b31a45eefa41e39c9cbe13639744e26bbe7809125dba5d"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-11-22T07:04:31.016263+00:00",
+  "profile": "PS-provenance-distinct-source-trust-review/v1",
+  "pass": true,
+  "author": "Codex /root/share_debugger",
+  "reviewed_by": "Codex PM /root",
+  "reviewed_commit": "364c3cdcd744a8f2ef1466102835327b1c634398",
+  "actual_five_protected_file_comparisons": {
+    "checker.zip": "1720be1015f7ab1e295de97dbc503723b486209b2f7dc09e2ebd6130c6fb42d1",
+    "evidence.json": "060775af5eda155f2e4921466f33f3c360ac12a2f4a5ff8dfdf19bbf1232aeec",
+    "artifact.spdx.json": "0425cc829b7dc89485158cc5bbfe9eddd303143cc56a6c3c9b38e42e470a708a",
+    "sbom.sigstore.json": "3ed92413ce241addeb71ac4320a1009c6e966a945509dc8dee378c4779f28475",
+    "verified-observation.json": "8ac8c8b6c44c940e6bfd28c62ca90601ef0e4044f35fb7ec9bc6ba82899a0a18"
+  },
+  "review": [
+    "Guide requires separately selected repository, exact protected commit and official workflow identity before downloading/executing verifier.",
+    "No artifact-selected trust roots shipped. Root retrieval is explicit and independent.",
+    "Prepared false flags remain captured; saved success observation and manifest explicitly unsigned and not trust anchors.",
+    "Exact files match the already root-independently-verified protected artifact; this review adds no new runtime/cryptographic or account-free execution claim.",
+    "Guide uses owner-private fresh output outside Git, fixed HTTPS files, no existing-file overwrite by verifier and refusal/uncertain-publication handling.",
+    "No submitted checker text, personal data collection, new credentials, services, tag approval or full F057/X02 completion."
+  ],
+  "additional_cryptographic_run_executed": false,
+  "public_HTTP_delivery_pending": true,
+  "full_original_closed": false
+}

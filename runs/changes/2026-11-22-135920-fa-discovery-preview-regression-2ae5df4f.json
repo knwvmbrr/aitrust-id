@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-135920-fa-discovery-preview-regression-2ae5df4f",
+  "recorded_at": "2026-11-22T13:59:20.183756+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8186929ec7a54ac749ba234fb865ac418c200150",
+  "changed": "Corrected stale FA discovery regression while preserving planned-tag and no-AI-origin boundaries.",
+  "proves": "The unchanged FA preview copy now has its own strict discovery contract using its actual presentation state; other unavailable tags retain no-checker assertions. Focused SEO tests pass.",
+  "limits": "No FA release or accuracy claim; prior failed full and continued executions remain immutable. Fresh website validation remains required; the first authored assertion read the wrong layer and was corrected before acceptance.",
+  "scope_ids": [
+    "T-FA",
+    "F-120"
+  ],
+  "files": {
+    "docs/fa-discovery-preview-plan.md": "110b4c662613d238a6f78dc981623be91c70f7e626a4f7e62049f4127095aca5",
+    "tests/seo-metadata.mjs": "d52a3d4bf9338952b3dca78f0122c50ed8a68047d92bfe144b5eac6f28099173",
+    "runs/2026-11-22-image-recorded-website.json": "21f59ca339a1b74afd2704dc905dcffecb86cc6bb68c3324dedbd5412cddc440",
+    "runs/2026-11-22-image-continued-website.json": "b3e4bf28187a4c9504568628c53d6549533699053879ddf72e5de0216bd59078"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-image-recorded-website.json",
+      "sha256": "21f59ca339a1b74afd2704dc905dcffecb86cc6bb68c3324dedbd5412cddc440"
+    },
+    {
+      "path": "runs/2026-11-22-image-continued-website.json",
+      "sha256": "b3e4bf28187a4c9504568628c53d6549533699053879ddf72e5de0216bd59078"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--test",
+        "tests/seo-metadata.mjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-22T13:59:20.695450+00:00"
+    }
+  ]
+}

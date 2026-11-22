@@ -1,0 +1,107 @@
+{
+  "captured_at": "2026-11-22T12:30:35.821423+00:00",
+  "profile": "image-detailed-build-and-mobile-diagnosis/v1",
+  "executed_by": "Codex PM /root",
+  "detailed_build_pass": false,
+  "catalogue_pass_observed": true,
+  "accessibility_pass_observed": true,
+  "failure": "mobile-payload expected fault-refusal UI not visible within unchanged30s",
+  "failed_fault_case_not_recorded": true,
+  "root_cause_established": false,
+  "detailed_log_sha256": "68c99d940d6e792d4e59edda058b1620d508250fb527f37ca665dcd06dbcedd3",
+  "subsequent_focused_mobile": {
+    "captured_at": "2026-11-22T12:14:18.457Z",
+    "pass": true,
+    "sources": {
+      "site/src/scope-data.js": "a56cc5ee7ad7bec8de819500ffc890cf8e994449c72a26c1d3646eafd35f9660",
+      "site/src/ScopeData.jsx": "e67edb907545613754d0b1790aeb5a832e8de3cdc6163286fdd971ae9fa86a9d",
+      "site/src/scope-manifest.json": "311c1dbd3f9c6cdea3758bf102fdf2f473e67d228f652974ab8a4eb1895e2ade",
+      "site/src/public-scope.json": "39649aa09c48a3b8e019a2877b34a15bd71f11b5e71eb34b9ea8d8cb619b1711",
+      "site/src/main.jsx": "0429b8b79ca76838319e8226ecc89a4fbe8078cc5f4d22f515d744eaadf46b23",
+      "site/src/workflows/Scope.jsx": "c85846944aa5d32146075a4904ace115f0db97734d9d1cd7a1413385fe8d5f7f",
+      "site/scripts/prepare.mjs": "7a3b52f684b3d7a92c110564b8d4b4f05af6ced9a0195274a94aca726cf9941d",
+      "site/scripts/prepare-offline.mjs": "59294d4a5670d42eb0f3aa0e9fc8d82f315312e867ea4cce5dd839bff2f86916",
+      "scripts/verify-mobile-payload.cjs": "b182d1564e5df0b76f444b0477bebeccc7a452b904916e309918aff881b49dac"
+    },
+    "source_unchanged_during_execution": true,
+    "initial_javascript_bytes": 584845,
+    "initial_budget_bytes": 600000,
+    "full_scope_asset_bytes": 740548,
+    "preserved_records": 202,
+    "engines": [
+      {
+        "engine": "chromium",
+        "viewport_width": 390,
+        "no_eager_scope_request": true,
+        "complete_export_records": 14,
+        "scope_search": true,
+        "verified_scope_cache": true,
+        "page_errors": []
+      },
+      {
+        "engine": "webkit",
+        "viewport_width": 390,
+        "no_eager_scope_request": true,
+        "complete_export_records": 14,
+        "scope_search": true,
+        "verified_scope_cache": true,
+        "page_errors": []
+      }
+    ],
+    "controls": [
+      {
+        "fault": "network",
+        "refused": true,
+        "checker_available": true,
+        "retry_with_complete_export": true
+      },
+      {
+        "fault": "http",
+        "refused": true,
+        "checker_available": true,
+        "retry_with_complete_export": true
+      },
+      {
+        "fault": "truncated",
+        "refused": true,
+        "checker_available": true,
+        "retry_with_complete_export": true
+      },
+      {
+        "fault": "oversized",
+        "refused": true,
+        "checker_available": true,
+        "retry_with_complete_export": true
+      },
+      {
+        "fault": "altered",
+        "refused": true,
+        "checker_available": true,
+        "retry_with_complete_export": true
+      },
+      {
+        "fault": "timeout",
+        "refused": true,
+        "checker_available": true,
+        "retry_with_complete_export": true
+      },
+      {
+        "fault": "actual_cacheable_corrupt_response",
+        "playwright_routes_used": false,
+        "origin_requests": 2,
+        "retry_with_complete_export": true
+      },
+      {
+        "fault": "offline_after_install",
+        "complete_export": true,
+        "frozen_scope_asset": true
+      }
+    ],
+    "physical_phone": false,
+    "human_accessibility_acceptance": false,
+    "independent_accuracy_evidence": false
+  },
+  "instrumentation": "Fixed DIAG_FAULT labels only added in memory; same assertions/timeouts/source and actual owned fixture. Not a full website receipt.",
+  "product_source_changed": false,
+  "original_requirement_closed": false
+}

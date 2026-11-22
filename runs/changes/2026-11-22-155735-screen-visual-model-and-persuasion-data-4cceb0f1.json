@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-155735-screen-visual-model-and-persuasion-data-4cceb0f1",
+  "recorded_at": "2026-11-22T15:57:35.808790+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e2dc1f234d0568ca294ce7653f47138ee0418558",
+  "changed": "Grounded the visual execution plan in an official small-VLM candidate and explicit persuasion-data access and reuse restrictions.",
+  "proves": "Primary model card and official SemEval task/terms were read. The candidate descriptive job, hardware measurement, source/weight rights, isolation, dataset split and independent claim-specific evaluation actions are explicit. Accountability still preserves136complete/66open.",
+  "limits": "Research/planning only. No model/data download, registration, corpus redistribution, training, hardware benchmark, authenticity accuracy, tag adoption or original closure.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA",
+    "T-MT",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "docs/visual-model-data-screening.md": "574c3df45ab41b18718f555a28545cf14be3754abe4ac091910570d896a80b0c",
+    "docs/visual-tag-execution-plan.md": "7058f3802024cecbac5d9b78a49a7293637fc7c352ad7834e6f2573a60d9a7cd"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-22T15:57:36.606420+00:00"
+    }
+  ]
+}

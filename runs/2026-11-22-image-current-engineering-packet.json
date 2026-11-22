@@ -1,0 +1,61 @@
+{
+  "captured_at": "2026-11-22T14:13:51.051000+00:00",
+  "profile": "image-current-integration-packet/v1",
+  "executed_by": "Codex PM /root",
+  "pass": true,
+  "five_current_capabilities": {
+    "PS": {
+      "path": "runs/2026-11-22-image-ready-ps.json",
+      "sha256": "31c448f723cdd79c6ac9edd5e97a595ee6ca8e4f26a0c1447f7083d6de6abcdf"
+    },
+    "PII_REDACTED": {
+      "path": "runs/2026-11-22-image-ready-pii_redacted.json",
+      "sha256": "d743ec98aa56638a9dfdd4c55a70503baf5d21a487b63a7556614d66ca7185d0"
+    },
+    "extension": {
+      "path": "runs/2026-11-22-image-ready-extension.json",
+      "sha256": "1f13ffb10ba9f3ba435f85371bdce018dd3514362c174050fa502219f385b1d6"
+    },
+    "protocol": {
+      "path": "runs/2026-11-22-image-final-protocol.json",
+      "sha256": "adfc46c8366862c1f1e963ed7d69b4bb6a732922812a7a219d3ed0428e2e1b77"
+    },
+    "website": {
+      "path": "runs/2026-11-22-image-corrected-website.json",
+      "sha256": "dbbf121dbba92e3404a5655b85596ead7eee05c79930b22d53bdf342e5398a57"
+    }
+  },
+  "boundary": {
+    "path": "runs/2026-11-22-image-current-boundaries.json",
+    "sha256": "5e83f9de0b06f4fdce0e49e94bdfe87075db30c3ca22f4997740fa51400c5f58"
+  },
+  "actual_image_browser": {
+    "path": "runs/2026-11-22-image-current-built-browser.json",
+    "sha256": "ca206784246e55c28ff30c2639ef6840e29fd7d61c1981fcbbe0ed3da97008d5"
+  },
+  "receipt_selection_distinct_review": {
+    "path": "runs/2026-11-22-accessibility-receipt-selection-distinct-review.json",
+    "sha256": "39c1f9bbb1c871ec99e4c35b95fe669ec1c3906323d25f70aad514c0254465cb"
+  },
+  "human_accessibility_release_status": {
+    "path": "runs/2026-11-22-image-accessibility-release-status.json",
+    "sha256": "b9bed21bdf8626fada9c5dd2fb0b37fe4699b9d60f02715c8839e966af8c373f"
+  },
+  "original_audit": {
+    "path": "runs/2026-11-22-current-66-original-audit.json",
+    "sha256": "c42621f60f8668050582f2de6ce3377b9f80e4f1d9eff81e2c73c2fb90d2cc75"
+  },
+  "FA_discovery_distinct_review": {
+    "path": "runs/2026-11-22-fa-discovery-seo-distinct-review.json",
+    "sha256": "7d3ee976a1c1f6c2418119c0156e6d732e6fa7b48122c0b107aaa7853263cbb2"
+  },
+  "prior_failed_executions_preserved": true,
+  "earlier_timeout_root_causes_established": false,
+  "original_complete": 136,
+  "original_open": 66,
+  "target_open": 60,
+  "FA_tag_released": false,
+  "independent_accuracy_evidence": false,
+  "physical_phone_acceptance": false,
+  "protected_merge_and_live_publication_pending": true
+}

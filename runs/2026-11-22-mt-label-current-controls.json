@@ -1,0 +1,50 @@
+{
+  "captured_at": "2026-11-22T16:31:53.981705+00:00",
+  "pass": true,
+  "sources_before": {
+    "tools/mt_label_io.py": "69a179aa35c846884ce25a9f11e3052e2892877731f0a74ada9fa32805dfd4d9",
+    "tools/mt_label_preparation.py": "07d34822582a0bc5dc33ef7db3e57116a1265322632f0f4bba7d2ff484d44810",
+    "scripts/mt-label-preparation.py": "e79e2058f28735ea0c8c01fa7c390423dcb8b977dc1967bad249c1b6900d7a45",
+    "scripts/verify-mt-label-preparation.py": "770b965af10c2337945705508680b8c65a83ee9514b7834f89ee668ecd06319c",
+    "tests/test_mt_label_preparation.py": "6ac9e75ffa5c1789376157752adf2ecf0520d351cb2bb6003ca0d9600f8c5178",
+    "docs/mt-annotation-guide.md": "0639bb151ebc542357efac67cefc4c3473eb59fe905531530d43214be7653acc",
+    "docs/mt-label-preparation.md": "f0a7ef75af4d8305afa28093ee05a8e74ef56b0b3b73df8304fe1375528fecc6",
+    "docs/mt-label-preparation-plan.md": "7705ba8aeb9aeddea432c257bbaeaa0d4e0c3137cceb17af13747d1808a6407b",
+    "tools/reviewer_agreement.py": "4b7937b8210a5f0d2d1e2979822d18a1c7c48b738b6f419ce145da9cca069052",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+  },
+  "sources_after": {
+    "tools/mt_label_io.py": "69a179aa35c846884ce25a9f11e3052e2892877731f0a74ada9fa32805dfd4d9",
+    "tools/mt_label_preparation.py": "07d34822582a0bc5dc33ef7db3e57116a1265322632f0f4bba7d2ff484d44810",
+    "scripts/mt-label-preparation.py": "e79e2058f28735ea0c8c01fa7c390423dcb8b977dc1967bad249c1b6900d7a45",
+    "scripts/verify-mt-label-preparation.py": "770b965af10c2337945705508680b8c65a83ee9514b7834f89ee668ecd06319c",
+    "tests/test_mt_label_preparation.py": "6ac9e75ffa5c1789376157752adf2ecf0520d351cb2bb6003ca0d9600f8c5178",
+    "docs/mt-annotation-guide.md": "0639bb151ebc542357efac67cefc4c3473eb59fe905531530d43214be7653acc",
+    "docs/mt-label-preparation.md": "f0a7ef75af4d8305afa28093ee05a8e74ef56b0b3b73df8304fe1375528fecc6",
+    "docs/mt-label-preparation-plan.md": "7705ba8aeb9aeddea432c257bbaeaa0d4e0c3137cceb17af13747d1808a6407b",
+    "tools/reviewer_agreement.py": "4b7937b8210a5f0d2d1e2979822d18a1c7c48b738b6f419ce145da9cca069052",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+  },
+  "source_unchanged_during_execution": true,
+  "focused_test_count": 19,
+  "focused_exit": 0,
+  "test_log_sha256": "1eab4004c16bc7c454c03b4c2741ee7ae112de3d1cdaa126f5e77d0b0f8372b0",
+  "actual_cli_cases": 11,
+  "actual_cli": {
+    "path": "runs/2026-11-22-mt-label-current-cli.json",
+    "sha256": "54816be27afc0bb5a713058a19099f2ebee4173d02f45eb7ee68954b7e9ed5f8"
+  },
+  "human_raters_executed": 0,
+  "synthetic_rater_files": 2,
+  "original_requirements_closed": 0,
+  "MT_tag_issued": false,
+  "method_source_changed": false,
+  "limits": [
+    "Candidate annotation preparation and supplied-label comparison only.",
+    "No human independence/sampling/accuracy/calibration/accepted protocol or release.",
+    "Constant uncertainty retains Unavailable alpha and zero decisive coverage.",
+    "Private item/response/report data removed after actual CLI exercise."
+  ]
+}

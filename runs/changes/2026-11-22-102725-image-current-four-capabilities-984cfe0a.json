@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-102725-image-current-four-capabilities-984cfe0a",
+  "recorded_at": "2026-11-22T10:27:25.814985+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8186929ec7a54ac749ba234fb865ac418c200150",
+  "changed": "Recorded current image-delivery PS, PII, extension and protocol execution, preserving earlier observations.",
+  "proves": "All four selected capability runs pass with unchanged sources; the final protocol run includes the accessibility evidence-selection repair.",
+  "limits": "Website64 and protected/public image delivery remain pending. No new original closure or independent tag accuracy.",
+  "scope_ids": [
+    "F-035",
+    "F-050",
+    "F-120"
+  ],
+  "files": {
+    "runs/2026-11-22-image-ready-ps.json": "31c448f723cdd79c6ac9edd5e97a595ee6ca8e4f26a0c1447f7083d6de6abcdf",
+    "runs/2026-11-22-image-ready-pii_redacted.json": "d743ec98aa56638a9dfdd4c55a70503baf5d21a487b63a7556614d66ca7185d0",
+    "runs/2026-11-22-image-ready-extension.json": "1f13ffb10ba9f3ba435f85371bdce018dd3514362c174050fa502219f385b1d6",
+    "runs/2026-11-22-image-ready-protocol.json": "fe1b44fe9842afb06bdb93f54f32ba39b7bc6d47b0334c35667414e2b3ab9816",
+    "runs/2026-11-22-image-final-protocol.json": "adfc46c8366862c1f1e963ed7d69b4bb6a732922812a7a219d3ed0428e2e1b77"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-image-ready-ps.json",
+      "sha256": "31c448f723cdd79c6ac9edd5e97a595ee6ca8e4f26a0c1447f7083d6de6abcdf"
+    },
+    {
+      "path": "runs/2026-11-22-image-ready-pii_redacted.json",
+      "sha256": "d743ec98aa56638a9dfdd4c55a70503baf5d21a487b63a7556614d66ca7185d0"
+    },
+    {
+      "path": "runs/2026-11-22-image-ready-extension.json",
+      "sha256": "1f13ffb10ba9f3ba435f85371bdce018dd3514362c174050fa502219f385b1d6"
+    },
+    {
+      "path": "runs/2026-11-22-image-ready-protocol.json",
+      "sha256": "fe1b44fe9842afb06bdb93f54f32ba39b7bc6d47b0334c35667414e2b3ab9816"
+    },
+    {
+      "path": "runs/2026-11-22-image-final-protocol.json",
+      "sha256": "adfc46c8366862c1f1e963ed7d69b4bb6a732922812a7a219d3ed0428e2e1b77"
+    }
+  ],
+  "checks": []
+}

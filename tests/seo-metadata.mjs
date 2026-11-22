@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {allTags} from '../site/src/catalog.js';
+import {presentation} from '../site/src/presentation.js';
 import {metadata,tagDescription,siteTitle,siteDescription} from '../site/scripts/seo.mjs';
 
 const tag=id=>allTags.find(item=>item.id===id);
@@ -16,11 +17,19 @@ test('local privacy setup is not described as a website capability',()=>{
  assert.match(tagDescription(tag('PII_REDACTED')),/Local setup required\. PII does not run in this website checker/);
 });
 test('unavailable adopted tags do not appear as available development checkers',()=>{
- for(const id of ['FI','IV','FA','PA','UNK','PII_OUTBOUND']){
+ for(const id of ['FI','IV','PA','UNK','PII_OUTBOUND']){
   const description=tagDescription(tag(id));
   assert.match(description,/Planned · No checker available yet/,id);
   assert.doesNotMatch(description,/Development preview|Works here/,id);
  }
+});
+test('FA discovery distinguishes private container details from an AI-origin tag',()=>{
+ const item=tag('FA'),description=tagDescription(item);
+ assert.equal(item.status,'Coming Soon');
+ assert.equal(presentation(item).working,false);
+ assert.match(description,/Read a local image’s container details/);
+ assert.match(description,/Planned tag · Local image-details preview available/);
+ assert.doesNotMatch(description,/No checker|Works here|certified|independently validated|detects AI|verifies origin|accuracy guarantee/i);
 });
 test('HP discovery distinguishes detail and uncertainty-word exploration from tag release',()=>{
  const description=tagDescription(tag('HP'));

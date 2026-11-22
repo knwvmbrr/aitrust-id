@@ -1,0 +1,78 @@
+{
+  "captured_at": "2026-11-22T10:28:48.401222+00:00",
+  "author": "Codex / web_camo",
+  "profile": "accessibility-receipt-selection-source-distinct-review/v1",
+  "pass": true,
+  "reviewed_root_commit": "8186929ec7a54ac749ba234fb865ac418c200150",
+  "source_parent": "ccb1250bf9f972bf228ee6e6bfaa0ca2ad5c07ca",
+  "source_hashes_before": {
+    ".github/workflows/ci.yml": "27495175094ab2ab5f74bafee564c574cad2720cf58383e41e78c54dcd34816f",
+    "docs/live-launch-status.md": "af3d0165ff37b0cd5b9be48967c11daece04b9fa7d993b58cb61e8a0db7f293d",
+    "docs/accessibility-evidence-selection-plan.md": "fc07f153aed28fdfdf32ea3bbe2dc27b04774ce24af8a7590b62565840dc7029",
+    "scripts/verify-accessibility-release.py": "74d2b4b88fbbd7d61c58e29557ea89afb0177845a5d237110c19e06b1d7e9b59",
+    "protocol/accessibility_release.py": "5e1dc8ad1f584c14fffab5cf4b0d6b7b300b50248ae0a8e99c0f72dae460b95d",
+    "protocol/revalidation.py": "a8ea8d3b6fadf0cc0023234496fa00a0b7f7cf582ceff8ed38c9db8c93297379",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "tests/test_release_policy.py": "69fd31c303485918911df8251209c56bc1346df111e848bd7745a3f40847a2fd",
+    "state.json": "8475f330ffd5b452c0bea8e4d249063453a23276f3d45ca5ea0b4dfbbda8ef21",
+    "runs/2026-11-22-programme-mt-live-publication.json": "5d40db9aee667f238b95ba09a658a396e50b8c54b9196f08608c7e2cde3c3fb7",
+    "runs/2026-11-22-programme-mt-live-browser.json": "53ef9e60c34b6f579b13362d574f7ff6081d3090c6f843bed402fb5f5453defa",
+    "runs/2026-11-22-pr148-protected-delivery-review.json": "1a970b410e2e4f38aff349d1f0e0184af0e90ed56fb5da83a8c6539838af8857"
+  },
+  "source_hashes_after": {
+    ".github/workflows/ci.yml": "27495175094ab2ab5f74bafee564c574cad2720cf58383e41e78c54dcd34816f",
+    "docs/live-launch-status.md": "af3d0165ff37b0cd5b9be48967c11daece04b9fa7d993b58cb61e8a0db7f293d",
+    "docs/accessibility-evidence-selection-plan.md": "fc07f153aed28fdfdf32ea3bbe2dc27b04774ce24af8a7590b62565840dc7029",
+    "scripts/verify-accessibility-release.py": "74d2b4b88fbbd7d61c58e29557ea89afb0177845a5d237110c19e06b1d7e9b59",
+    "protocol/accessibility_release.py": "5e1dc8ad1f584c14fffab5cf4b0d6b7b300b50248ae0a8e99c0f72dae460b95d",
+    "protocol/revalidation.py": "a8ea8d3b6fadf0cc0023234496fa00a0b7f7cf582ceff8ed38c9db8c93297379",
+    "protocol/evidence.py": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9",
+    "tests/test_release_policy.py": "69fd31c303485918911df8251209c56bc1346df111e848bd7745a3f40847a2fd",
+    "state.json": "8475f330ffd5b452c0bea8e4d249063453a23276f3d45ca5ea0b4dfbbda8ef21",
+    "runs/2026-11-22-programme-mt-live-publication.json": "5d40db9aee667f238b95ba09a658a396e50b8c54b9196f08608c7e2cde3c3fb7",
+    "runs/2026-11-22-programme-mt-live-browser.json": "53ef9e60c34b6f579b13362d574f7ff6081d3090c6f843bed402fb5f5453defa",
+    "runs/2026-11-22-pr148-protected-delivery-review.json": "1a970b410e2e4f38aff349d1f0e0184af0e90ed56fb5da83a8c6539838af8857"
+  },
+  "unchanged_assessor_contract": {
+    "same_verify_accessibility_release_CLI": true,
+    "same_assess_reviews_and_current_source_assessor": true,
+    "same_default_manual_reviews_path": "docs/manual-accessibility/reviews.json",
+    "manual_review_file_absent_before_and_after": true,
+    "absent_human_review_is_not_a_pass": true,
+    "NVDA_and_VoiceOver_both_surfaces": true,
+    "human_performed_consent_fingerprint_all6tasks_no_unresolved_issues_required": true,
+    "no_automation_or_fixture_substitution_for_humans": true,
+    "same_nonzero_failure_return_propagated": true
+  },
+  "selected_paths_source_read": {
+    "website_extension_only_from_state": {
+      "website": "runs/2026-11-22-programme-mt-website.json",
+      "extension": "runs/2026-11-22-programme-mt-extension.json"
+    },
+    "flat_runs_JSON_regex_no_absolute_slash_or_traversal_components": true,
+    "link_parent_link_missing_nonregular_refuse": true,
+    "existing_bounded_unique_key_finite_JSON_reader_unchanged": true,
+    "no_shell_or_packet_selected_program": true,
+    "missing_malformed_keys_JSON_raise_nonzero": true,
+    "stale_failed_receipts_still_assessed_not_waived": true
+  },
+  "workflow": {
+    "same_job_permissions_install_steps": true,
+    "same_statistical_assessment_always_step": true,
+    "human_release_gate_may_remain_failed": true
+  },
+  "dated_status_copy": {
+    "Nov22_numbers_match_retained_protected_HTTP_browser_records": true,
+    "current_state_link_not_historical_deployment_promotion": true,
+    "historical_snapshots_explicitly_dated": true,
+    "no_offline_physical_or_independent_tag_release_claim": true
+  },
+  "review_harness_note": "Initial reviewer hash inventory assumed the default manual-review file exists; read stopped before gate execution. Corrected inventory records actual unchanged absence, which existing gate treats as missing human evidence. No source change or acceptance waiver.",
+  "findings": [],
+  "product_runtime_executed": false,
+  "limits": [
+    "Read-only source and retained JSON/byte comparisons only; no product scripts, tests, browsers, network or SDK run.",
+    "This confirms no weakened assessor/human criteria; it does not make selected receipts fresh or replace missing human reviews.",
+    "Root fresh website64/protected/live and final selection-state update remain separate."
+  ]
+}

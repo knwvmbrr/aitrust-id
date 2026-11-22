@@ -1,0 +1,113 @@
+{
+  "actual_provider_run": {
+    "conclusion": "success",
+    "created_at": "2026-11-22T17:44:00Z",
+    "event": "pull_request",
+    "head_branch": "codex/nov22-scope-and-image-delivery",
+    "head_sha": "3f199c6450da73335a9d2c5e2c1501ac3c946e14",
+    "id": 45051089650,
+    "path": ".github/workflows/delivery-revalidation.yml",
+    "run_attempt": 1,
+    "status": "completed",
+    "updated_at": "2026-11-22T18:04:52Z"
+  },
+  "all_ordered_commands_and_current_fingerprints_match_after_selection": true,
+  "api_selected_metadata_sha256": "c8f7c7d1a116935fdcd1b4087e367cf5d7aa31db5c797a03df6c28f1b0ae2400",
+  "captured_at": "2026-11-22T18:09:02.991323+00:00",
+  "event_merge": {
+    "api_url": "https://api.github.com/repos/knwvmbrr/aitrust-id/git/commits/886670c4e87c558bb13c560776219358cd1b584f",
+    "parents": [
+      "69298f3656ece0a0c419348085c486ff706e3aa0",
+      "3f199c6450da73335a9d2c5e2c1501ac3c946e14"
+    ],
+    "sha": "886670c4e87c558bb13c560776219358cd1b584f",
+    "tree": "a2f7df70f9883c8abda3049a315d3c8e6c087db2"
+  },
+  "event_merge_tree_equals_run_head": true,
+  "findings": [],
+  "limits": {
+    "browser_or_native_or_build_execution": false,
+    "independent_accuracy_evidence": false,
+    "internal_hashed_stdout_stderr_logs_independently_compared": false,
+    "new_artifact_download": false,
+    "original_scope_closures": 0,
+    "protected_main_merge_or_publication_verified": false,
+    "release_approved": false,
+    "test_replay": false
+  },
+  "pass": true,
+  "profile": "combined-five-hosted-current-selection-distinct-review/v1",
+  "provider_artifact": {
+    "api_digest_matched": true,
+    "bytes": 381039,
+    "id": 14766218310,
+    "sha256": "58f7883f36b7e2f3223e4fb331353a62c64fec8b9b95acb8c16ea8b0b0130378"
+  },
+  "provider_job_id": 137296139093,
+  "receipts": {
+    "PII_REDACTED": {
+      "actual_ordered_commands": 6,
+      "assessment_pass": true,
+      "bytes": 13249,
+      "current_after_selection": true,
+      "fingerprint_sha256": "fe0625ff9d004fa63d7178f740ab47ccdcd4a37f232ddd81f8b2183b7ed842e6",
+      "path": "runs/2026-11-22-combined-linux-current-pii_redacted.json",
+      "sha256": "4805f5cc40afefd119e506aad33c77dec9c51061841a5c88f3003df1bc8eca7a",
+      "source_entries": 84
+    },
+    "PS": {
+      "actual_ordered_commands": 7,
+      "assessment_pass": true,
+      "bytes": 11210,
+      "current_after_selection": true,
+      "fingerprint_sha256": "b908d9625226a334562dc3c21595bad4ece64bf40fceb881b9b4adfeede5f64b",
+      "path": "runs/2026-11-22-combined-linux-current-ps.json",
+      "sha256": "0e896388ec8f8fce7a7bfa795f0ffcf5d7f8038387746ab48359d375c4ed8add",
+      "source_entries": 70
+    },
+    "extension": {
+      "actual_ordered_commands": 14,
+      "assessment_pass": true,
+      "bytes": 17333,
+      "current_after_selection": true,
+      "fingerprint_sha256": "cd5c1d4312d04509f957cd51b64fd9594a33d7f5fc10844ec1155453e0118d26",
+      "path": "runs/2026-11-22-combined-linux-current-extension.json",
+      "sha256": "c682b28d32597c93d2b9137af485adc81efcbf294d5bbd3e06e4f3967ec5215d",
+      "source_entries": 94
+    },
+    "protocol": {
+      "actual_ordered_commands": 71,
+      "assessment_pass": true,
+      "bytes": 1176768,
+      "current_after_selection": true,
+      "fingerprint_sha256": "57fc26f854ac4f8dc332b800ae21c5b3d3702d04809a50b226d23c184af208eb",
+      "path": "runs/2026-11-22-combined-linux-current-protocol.json",
+      "sha256": "49f92ce96136951bf8cf6cd45ef073f910f81fe36d60592097dd780111c15101",
+      "source_entries": 6921
+    },
+    "website": {
+      "actual_ordered_commands": 64,
+      "assessment_pass": true,
+      "bytes": 216135,
+      "current_after_selection": true,
+      "fingerprint_sha256": "5a30165bd541cf145b8568ceb2b748a777bea70bc9ec0da5276611a112012d5f",
+      "path": "runs/2026-11-22-combined-linux-current-website.json",
+      "sha256": "5a99c88a196f2273130d05f1a354ba68e6fa422cc219377c6d45ef4afcc0c42d",
+      "source_entries": 1523
+    }
+  },
+  "retrieval": {
+    "path": "runs/2026-11-22-combined-five-hosted-retrieval.json",
+    "sha256": "65cc499672ee3557461ce5b09c05688edd1fb3b5c39f82a811a521f5efd9eccd"
+  },
+  "reviewed_metadata_and_assessor_sha256": {
+    ".github/workflows/delivery-revalidation.yml": "c9a2ca4c79fa03bd19f5557377df02bd13651ab59563132ce15d16a3f39271b9",
+    "eval/revalidation.json": "82c094d9bb3afa965d2c01dae570ae4c63220878b4b565867093b9cd55b1cb9f",
+    "eval/route-boundaries.json": "453de9ce7de6793c50947747141713859ecc167426b950b39f9c99c877ddb0ad",
+    "protocol/revalidation.py": "a8ea8d3b6fadf0cc0023234496fa00a0b7f7cf582ceff8ed38c9db8c93297379",
+    "runs/2026-11-22-combined-five-hosted-retrieval.json": "65cc499672ee3557461ce5b09c05688edd1fb3b5c39f82a811a521f5efd9eccd",
+    "state.json": "982b07b63f2b484e5f9a57bf5e10400ab9f93f568813d5b13e22fdded171ad5f"
+  },
+  "source_and_selection_stable_before_after_review": true,
+  "zip_exact_five_regular_unencrypted_bounded_members": true
+}

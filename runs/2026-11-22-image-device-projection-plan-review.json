@@ -1,0 +1,51 @@
+{
+  "profile": "image-device-fixed-projection-plan-distinct-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T06:49:23.906433+00:00",
+  "reviewed_by": "/root/seo",
+  "source_sha256": {
+    "docs/image-device-plan.md": "b8a28cf9563e6a1916a70e493731586995a8809206fa458645634fb45cdcfab9",
+    "integrations/image-metadata-reference/1.0.0/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "integrations/image-metadata-reference/1.0.0/source.json": "3e66d919b4a6a289772266bd5cf5f6bfbfe9b144caf490b30c7c63dec902feeb",
+    "integrations/image-metadata-reference/1.0.0/projection.json": "1b52bfa875ae2bbc638aca600c49ceb66e2eb6d73cff5755db2e32720cfe1dea",
+    "integrations/image-metadata-reference/1.0.0/NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "integrations/image-metadata-reference/1.0.0/tools/png_metadata.py": "addd35028617f2d5c2cd01dc19106cec9946686cfe35139beb923af3973d6994",
+    "integrations/image-metadata-reference/1.0.0/tools/jpeg_metadata.py": "c7e8fcb58acd2087a35c886a32b7df1fa390c74c52c023e9b137bdf1dd90872a"
+  },
+  "published_source_commit": "8e1b1a23a1bef0659bf1ec567ceef647b5cd76a5",
+  "four_published_full_modules_and_notices_exact": true,
+  "projection_checks": [
+    {
+      "module": "png",
+      "all_top_level_nodes": 44,
+      "included_nodes": 30,
+      "projection_bytes": 12113,
+      "projection_sha256": "59c5a09534b8ff7ff0e4598024a02a4a0e84447dfee408ce37b2b9c4df14c6f1",
+      "unresolved_global_names": [],
+      "forbidden_OS_process_dynamic_code_dependencies": []
+    },
+    {
+      "module": "jpeg",
+      "all_top_level_nodes": 42,
+      "included_nodes": 28,
+      "projection_bytes": 13607,
+      "projection_sha256": "2670acac47e6cd567ed46643b905b202491d99bc12d4c490815044422597a7f2",
+      "unresolved_global_names": [],
+      "forbidden_OS_process_dynamic_code_dependencies": []
+    }
+  ],
+  "architecture_assessment": "Bounded fixed projection design is suitable to implement; not a clearance of not-yet-frozen builder/client or actual browser behavior.",
+  "required_before_source_clear": [
+    "Builder pins full originals/source manifest/projection specification with independently selected constants, verifies EVERY node kind/name/index/digest and exact projection-byte digest; coherent edits cannot authorize arbitrary source.",
+    "Intrinsic realBlob encoded size<=10MiB before arrayBuffer; header/pixel/decompression/metadata/field/segment/output limits enforced before each allocation/expansion.",
+    "Startup covers file capture/hash/method binding; fresh worker per explicit check, cancel/change/clear/unmount kills owned worker and late replies cannot render.",
+    "Whole records bound to exact encoded bytes/source projection; unsupported, malformed and runtime failure remain distinct; no origin/authorship/watermark/signature/truth conclusion or FA/PA tag.",
+    "Actual full-native versus fixed-projection parser parity and changed-node/unknown-node refusal controls before browser scheduling; browser proof separate."
+  ],
+  "execution_limits": [
+    "Only AST parsing, exact segment reconstruction, symbol-table dependency analysis and Git/source digest comparison. No selected module, native parser, image, browser, WASM, package or network executed.",
+    "Projection reconstructs exact selected source segments joined by two newlines plus finalnewline; review does not accept arbitrary source based only on names.",
+    "Current plan/profile design clear; runtime source and actual execution remain pending."
+  ],
+  "findings": []
+}

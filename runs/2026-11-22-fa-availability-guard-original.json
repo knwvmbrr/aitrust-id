@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-11-22T07:55:16.089161+00:00",
+  "author": "Codex / web_camo",
+  "pass": true,
+  "profile": "FA-availability-review-counterexample/v1",
+  "source_sha256": "f8331dd1aebd4f6dd70a4646428c5c7be6f9428799ea34e5a5774de671b2171d",
+  "reviewed_commit": "c80eec2af75949f8819dce6c444222f5b2d8a4d3",
+  "before": {
+    "actual_FA_availability": "Planned tag \u00b7 Local image-details preview available.",
+    "generic_verifier_expected": "No checker",
+    "matches": false
+  },
+  "runtime_or_product_failure_claimed": false,
+  "correction_plan": "Add explicit FA preview phrase only in existing generic availability ternary. Evaluate the exact source expression for all20 actual records in focused integration test; retain sibling expectations. No browser needed for this counterexample."
+}

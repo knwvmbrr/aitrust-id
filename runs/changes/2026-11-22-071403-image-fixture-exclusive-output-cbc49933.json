@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-071403-image-fixture-exclusive-output-cbc49933",
+  "recorded_at": "2026-11-22T07:14:03.205456+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "72536eb6028c92f605702df4a0a1a76978c5d95c",
+  "changed": "Make standalone fixture output exclusive and preserve any existing directory or failed candidate instead of clearing it. Bind the new focused ownership control.",
+  "proves": "Three actual temporary-filesystem controls pass for prior-output preservation, linked-parent refusal and held-directory identity drift; no Vite/browser/runtime ran. Core image methods/client/worker/UI are unchanged.",
+  "limits": "Preventative test-fixture safety change; no prior deletion/exposure reproduced. Actual browser acceptance remains pending. No tag/original closure.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA",
+    "F-155"
+  ],
+  "files": {
+    "scripts/build-image-metadata-fixture.mjs": "f304f628564b252aadc91bb520ebac5b8519c3956c0f1e60d70dd62f318f061c",
+    "tests/image-fixture-output.mjs": "321bf9c79b53fbbbed7f4fad79f369db10b64fcab6b147e006d78ffd53239db2",
+    "scripts/verify-image-metadata-device.cjs": "fb9b48d12fec33a2bc6f86b1ce9245954a96921198f71224e980e98483e3e34a",
+    "docs/image-device-guide.md": "f6fe138f7bd4ee357b82149682724537ca6556cbb6eacb5ce6dd0397c5f71e8c",
+    "runs/2026-11-22-image-fixture-owned-output-controls.json": "d8d81b4c927f77bf446fe6a0f3e4c3a598cd8d337f884d156765f88e3f6272b7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-image-fixture-owned-output-controls.json",
+      "sha256": "d8d81b4c927f77bf446fe6a0f3e4c3a598cd8d337f884d156765f88e3f6272b7"
+    }
+  ],
+  "checks": []
+}

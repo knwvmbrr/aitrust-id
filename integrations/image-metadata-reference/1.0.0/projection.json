@@ -1,0 +1,624 @@
+{
+  "format": "image-metadata-fixed-projection/v1",
+  "source_commit": "8e1b1a23a1bef0659bf1ec567ceef647b5cd76a5",
+  "modules": {
+    "png": {
+      "source_path": "tools/png_metadata.py",
+      "source_sha256": "addd35028617f2d5c2cd01dc19106cec9946686cfe35139beb923af3973d6994",
+      "nodes": [
+        {
+          "index": 0,
+          "kind": "Expr",
+          "name": "__doc__",
+          "sha256": "d7985da45ea9882e37fb02055a2050e6559badc0bdf2236d4ab8892790182f12",
+          "include": true
+        },
+        {
+          "index": 1,
+          "kind": "Import",
+          "name": "hashlib",
+          "sha256": "ada1d9e0a360cda0fd1c8757d297aa74a4fc8d7193a69d3c28b43afc6950e9f9",
+          "include": true
+        },
+        {
+          "index": 2,
+          "kind": "Import",
+          "name": "json",
+          "sha256": "ff3e4d4dcf7250cae8d622d77c9a6d69aefcf4ab04ef9920218fafe93c0f1991",
+          "include": true
+        },
+        {
+          "index": 3,
+          "kind": "Import",
+          "name": "os",
+          "sha256": "de2abade832c8e350a1bdc98cfcdb1e202ac4749c5fc51a4a970d41736b6df5c",
+          "include": false
+        },
+        {
+          "index": 4,
+          "kind": "ImportFrom",
+          "name": "pathlib:Path",
+          "sha256": "6d69f2ac09017b8a49d050ab336e953b8fa02ae08c24396916ea7ea42418e627",
+          "include": false
+        },
+        {
+          "index": 5,
+          "kind": "Import",
+          "name": "re",
+          "sha256": "66ec018201fb03f10df19f1a56a1264beb2654e8f07c2f163f023ebd53a751e4",
+          "include": true
+        },
+        {
+          "index": 6,
+          "kind": "Import",
+          "name": "selectors",
+          "sha256": "385a620a3c2f63074dc133c9ca6e5d5983064ceb7f19c12881b2fecaf68f217b",
+          "include": false
+        },
+        {
+          "index": 7,
+          "kind": "Import",
+          "name": "signal",
+          "sha256": "10f4eea8db43494c2dac862c74fe855e285da947f5228dffb3480b571b7574ef",
+          "include": false
+        },
+        {
+          "index": 8,
+          "kind": "Import",
+          "name": "stat",
+          "sha256": "f9e42ccd54cc9de18179025fa0bf90642c41392da38ee9faa647e9e85573f63e",
+          "include": false
+        },
+        {
+          "index": 9,
+          "kind": "Import",
+          "name": "struct",
+          "sha256": "185e51a4866b9b513a9bcbb463e30c9c0681d5ca877d1730878df315fa26bf23",
+          "include": true
+        },
+        {
+          "index": 10,
+          "kind": "Import",
+          "name": "subprocess",
+          "sha256": "7d8752c4c7ea34c2c6d04a15aa31a1f25f62848f8c3c82528fd62439c01a225b",
+          "include": false
+        },
+        {
+          "index": 11,
+          "kind": "Import",
+          "name": "sys",
+          "sha256": "9e77b3746ea081eb4c557e71cc84ca29dc66a89d18a07e85dba66a336e7310ae",
+          "include": false
+        },
+        {
+          "index": 12,
+          "kind": "Import",
+          "name": "tempfile",
+          "sha256": "09d25239ae3d62e91c70b74fa5baa1d52a22c5c2397a785935889e61f91a8557",
+          "include": false
+        },
+        {
+          "index": 13,
+          "kind": "Import",
+          "name": "time",
+          "sha256": "4f9b8491ba4deee622e6c29ca383c71279fa604b7aff389b0bf5ba279f4453c3",
+          "include": false
+        },
+        {
+          "index": 14,
+          "kind": "Import",
+          "name": "zlib",
+          "sha256": "fb13e8690a2e9705e04cad7ad4a2958269186f6bc24bff331f76f8f01f9e5875",
+          "include": true
+        },
+        {
+          "index": 15,
+          "kind": "Assign",
+          "name": "PROFILE",
+          "sha256": "01c79a3d1eb77b885a7a450255c8d92b634ce71c5378a940421735a042a35994",
+          "include": true
+        },
+        {
+          "index": 16,
+          "kind": "Assign",
+          "name": "MAX_INPUT",
+          "sha256": "f21547aaa8feef6a8aa1994ab2a36e9cf2c14c17b9338716d07224c70c3789c7",
+          "include": true
+        },
+        {
+          "index": 17,
+          "kind": "Assign",
+          "name": "MAX_PIXELS",
+          "sha256": "d65bda91fcc9f726c8d5dc31d8db16becda2b289c0c7ea2a48bd51837162cc11",
+          "include": true
+        },
+        {
+          "index": 18,
+          "kind": "Assign",
+          "name": "MAX_EXPANDED",
+          "sha256": "934aec244f47f08b1e1619560652659d7bd57e2c8a3347d0e336b983c7f9f877",
+          "include": true
+        },
+        {
+          "index": 19,
+          "kind": "Assign",
+          "name": "MAX_METADATA",
+          "sha256": "023d3d3932fde0322ab828863e6ab3da5604e6d8d9627ac28a8255f82cf51777",
+          "include": true
+        },
+        {
+          "index": 20,
+          "kind": "Assign",
+          "name": "MAX_TEXT",
+          "sha256": "79f6c3510d12164e12d21cea0bf87f58af0eb21a516c2dc22e9bc633df78670f",
+          "include": true
+        },
+        {
+          "index": 21,
+          "kind": "Assign",
+          "name": "MAX_TEXT_FIELDS",
+          "sha256": "db1473736b58bdb94e4c23ade936f4604af2373a33ba370357f9e0430f1c787a",
+          "include": true
+        },
+        {
+          "index": 22,
+          "kind": "Assign",
+          "name": "MAX_CHUNKS",
+          "sha256": "a174d55bd982c815a6f602ff07434cd90cef83b10ddd4eeb2a1abaffd07086d3",
+          "include": true
+        },
+        {
+          "index": 23,
+          "kind": "Assign",
+          "name": "MAX_OUTPUT",
+          "sha256": "b7c73ecf8a6a540e6fd7620557171227221bccfade46d5e616a041daccec51e4",
+          "include": true
+        },
+        {
+          "index": 24,
+          "kind": "Assign",
+          "name": "WALL_SECONDS",
+          "sha256": "419456b5dc84b232a8183fdb59e7929726c93930fa4b59c1ddfe49fc2885e11d",
+          "include": false
+        },
+        {
+          "index": 25,
+          "kind": "Assign",
+          "name": "ROOT",
+          "sha256": "7559160bb7b5afc9b7dcdcdf2e6dd2d79f8ff50b739d0517862e2f2cdf75592b",
+          "include": false
+        },
+        {
+          "index": 26,
+          "kind": "Assign",
+          "name": "SIGNATURE",
+          "sha256": "ed5b52ae5459ad70d46b8492dd09ed86edb7733fa0776ef7fe4cedb03e550da4",
+          "include": true
+        },
+        {
+          "index": 27,
+          "kind": "Assign",
+          "name": "COLORS",
+          "sha256": "839d5e2f00aa977988a5058f6eeb03d3811df10cd45369984c18c678f8d4f1a3",
+          "include": true
+        },
+        {
+          "index": 28,
+          "kind": "Assign",
+          "name": "REASONS",
+          "sha256": "41f726197fcdfb0ed0162855e540584abc9b06a597012e0a19b6fd0b26d9bab3",
+          "include": true
+        },
+        {
+          "index": 29,
+          "kind": "Assign",
+          "name": "META_KEYS",
+          "sha256": "8d8727917e2c9331f4eea6fa28e157fbf38ae9b93ae2567cdc62442d732c1bef",
+          "include": true
+        },
+        {
+          "index": 30,
+          "kind": "Assign",
+          "name": "CATEGORIES",
+          "sha256": "fa927f6f749c670a299e65d8131adcda91731d37061feae82eb02397f92a9150",
+          "include": true
+        },
+        {
+          "index": 31,
+          "kind": "ClassDef",
+          "name": "ImageError",
+          "sha256": "79e96dbf5251a94ddb66ab1b81e738053a800feb4f692be5b7f971e613843c72",
+          "include": true
+        },
+        {
+          "index": 32,
+          "kind": "FunctionDef",
+          "name": "need",
+          "sha256": "1edb999994009c02a4c5d9691e2e1b858372678408e0aa4039f64723f1b31009",
+          "include": true
+        },
+        {
+          "index": 33,
+          "kind": "FunctionDef",
+          "name": "inflate",
+          "sha256": "6bdfd6d85a98de4eb00cd288b97355bf537ea14b8c7de9ce036524f3b2054285",
+          "include": true
+        },
+        {
+          "index": 34,
+          "kind": "FunctionDef",
+          "name": "keyword",
+          "sha256": "3c3e339712c1ee218eca7db111903eb5cb6ec8030e20e0a8ea78fd14cd9c07ee",
+          "include": true
+        },
+        {
+          "index": 35,
+          "kind": "FunctionDef",
+          "name": "text_info",
+          "sha256": "d65dd651d2f6b2e68d89e2a12ebd1cf906fa339a100bd8c531da1a1627ff43c9",
+          "include": true
+        },
+        {
+          "index": 36,
+          "kind": "FunctionDef",
+          "name": "inspect_bytes",
+          "sha256": "001355296be1ad3b55bf327208b9903cb9078e75ed84517267ddae3e8f6aac8a",
+          "include": true
+        },
+        {
+          "index": 37,
+          "kind": "FunctionDef",
+          "name": "unavailable",
+          "sha256": "8b3ee30826a615ad7dd6dcdc9010a37740a0c6ec14f11a2b2849b5ebf7b13368",
+          "include": true
+        },
+        {
+          "index": 38,
+          "kind": "FunctionDef",
+          "name": "validate_shape",
+          "sha256": "5a6a0b249d1f9bb1aa7d32ebc09e0ce693b8546fe27f3911984fe7ced109f86b",
+          "include": true
+        },
+        {
+          "index": 39,
+          "kind": "FunctionDef",
+          "name": "validate_record",
+          "sha256": "ec545aad1b64c3bcd3a1a244be60c443b16123e242b5fdb946a27521e2fae646",
+          "include": true
+        },
+        {
+          "index": 40,
+          "kind": "FunctionDef",
+          "name": "identity",
+          "sha256": "d0e882bf07380d3009de342260bc8a3c669e9d7c1b7bcc5822ec1f117ca30a07",
+          "include": false
+        },
+        {
+          "index": 41,
+          "kind": "FunctionDef",
+          "name": "inspect_file",
+          "sha256": "2911475999180c7180647723c72704df10ad8b672001bc54ffaf52f3715eb00b",
+          "include": false
+        },
+        {
+          "index": 42,
+          "kind": "FunctionDef",
+          "name": "worker_record",
+          "sha256": "0dafd4cc31255913175c1750462eba991d86ce3d515ccd99f005615298d0206e",
+          "include": false
+        },
+        {
+          "index": 43,
+          "kind": "FunctionDef",
+          "name": "text_result",
+          "sha256": "f3afd7874ef95f49d3380c603f6d7b07a36eb8d93c985837f0cbe6f5d3e41eba",
+          "include": true
+        }
+      ],
+      "projection_sha256": "59c5a09534b8ff7ff0e4598024a02a4a0e84447dfee408ce37b2b9c4df14c6f1",
+      "projection_bytes": 12113
+    },
+    "jpeg": {
+      "source_path": "tools/jpeg_metadata.py",
+      "source_sha256": "c7e8fcb58acd2087a35c886a32b7df1fa390c74c52c023e9b137bdf1dd90872a",
+      "nodes": [
+        {
+          "index": 0,
+          "kind": "Expr",
+          "name": "__doc__",
+          "sha256": "72772ee9b4eeab2a877330bc28db7441be0a4301651274b1fcb58b9403d3ecc7",
+          "include": true
+        },
+        {
+          "index": 1,
+          "kind": "Import",
+          "name": "hashlib",
+          "sha256": "ada1d9e0a360cda0fd1c8757d297aa74a4fc8d7193a69d3c28b43afc6950e9f9",
+          "include": true
+        },
+        {
+          "index": 2,
+          "kind": "Import",
+          "name": "json",
+          "sha256": "ff3e4d4dcf7250cae8d622d77c9a6d69aefcf4ab04ef9920218fafe93c0f1991",
+          "include": true
+        },
+        {
+          "index": 3,
+          "kind": "Import",
+          "name": "os",
+          "sha256": "de2abade832c8e350a1bdc98cfcdb1e202ac4749c5fc51a4a970d41736b6df5c",
+          "include": false
+        },
+        {
+          "index": 4,
+          "kind": "ImportFrom",
+          "name": "pathlib:Path",
+          "sha256": "6d69f2ac09017b8a49d050ab336e953b8fa02ae08c24396916ea7ea42418e627",
+          "include": false
+        },
+        {
+          "index": 5,
+          "kind": "Import",
+          "name": "re",
+          "sha256": "66ec018201fb03f10df19f1a56a1264beb2654e8f07c2f163f023ebd53a751e4",
+          "include": true
+        },
+        {
+          "index": 6,
+          "kind": "Import",
+          "name": "selectors",
+          "sha256": "385a620a3c2f63074dc133c9ca6e5d5983064ceb7f19c12881b2fecaf68f217b",
+          "include": false
+        },
+        {
+          "index": 7,
+          "kind": "Import",
+          "name": "signal",
+          "sha256": "10f4eea8db43494c2dac862c74fe855e285da947f5228dffb3480b571b7574ef",
+          "include": false
+        },
+        {
+          "index": 8,
+          "kind": "Import",
+          "name": "stat",
+          "sha256": "f9e42ccd54cc9de18179025fa0bf90642c41392da38ee9faa647e9e85573f63e",
+          "include": false
+        },
+        {
+          "index": 9,
+          "kind": "Import",
+          "name": "struct",
+          "sha256": "185e51a4866b9b513a9bcbb463e30c9c0681d5ca877d1730878df315fa26bf23",
+          "include": true
+        },
+        {
+          "index": 10,
+          "kind": "Import",
+          "name": "subprocess",
+          "sha256": "7d8752c4c7ea34c2c6d04a15aa31a1f25f62848f8c3c82528fd62439c01a225b",
+          "include": false
+        },
+        {
+          "index": 11,
+          "kind": "Import",
+          "name": "sys",
+          "sha256": "9e77b3746ea081eb4c557e71cc84ca29dc66a89d18a07e85dba66a336e7310ae",
+          "include": false
+        },
+        {
+          "index": 12,
+          "kind": "Import",
+          "name": "tempfile",
+          "sha256": "09d25239ae3d62e91c70b74fa5baa1d52a22c5c2397a785935889e61f91a8557",
+          "include": false
+        },
+        {
+          "index": 13,
+          "kind": "Import",
+          "name": "time",
+          "sha256": "4f9b8491ba4deee622e6c29ca383c71279fa604b7aff389b0bf5ba279f4453c3",
+          "include": false
+        },
+        {
+          "index": 14,
+          "kind": "Assign",
+          "name": "PROFILE",
+          "sha256": "a35fcfd6d04854a343eb45582958dc1a15768164741ff40fec51c5abc6c6082d",
+          "include": true
+        },
+        {
+          "index": 15,
+          "kind": "Assign",
+          "name": "MAX_INPUT",
+          "sha256": "d590a33822495529cf371909dbd5fe00efc2dac1db86fa4680a09bacddb0f2e3",
+          "include": true
+        },
+        {
+          "index": 16,
+          "kind": "Assign",
+          "name": "MAX_PIXELS",
+          "sha256": "395d5580c82446542c3418b04e2e17376fb72fe1bafb339de8fe6ed8f64fef75",
+          "include": true
+        },
+        {
+          "index": 17,
+          "kind": "Assign",
+          "name": "MAX_MARKERS",
+          "sha256": "5e8c354504672a02c2bc36f49c56fd51dcb089cf787f9b4060d2f8fff66d5b13",
+          "include": true
+        },
+        {
+          "index": 18,
+          "kind": "Assign",
+          "name": "MAX_TABLES",
+          "sha256": "48a18aebe8d26d70f59359ec7901672a50587c6654155e6deb9a009b620017ee",
+          "include": true
+        },
+        {
+          "index": 19,
+          "kind": "Assign",
+          "name": "MAX_METADATA",
+          "sha256": "c9ade4db7a792ce1723852597b25f4347320a127e8be534e2e796830d3ea869f",
+          "include": true
+        },
+        {
+          "index": 20,
+          "kind": "Assign",
+          "name": "MAX_METADATA_SECTIONS",
+          "sha256": "99b8fb51a998d3ac18825387b87dfdb453c4704db141fcd1123181f22a0d826b",
+          "include": true
+        },
+        {
+          "index": 21,
+          "kind": "Assign",
+          "name": "MAX_OUTPUT",
+          "sha256": "78faa64ac96c4a0810148690cdd11f8c32d7d0c6f37e85df7d6a649393f5c2cf",
+          "include": true
+        },
+        {
+          "index": 22,
+          "kind": "Assign",
+          "name": "WALL_SECONDS",
+          "sha256": "a64b624a63964c75aa052318fb75dc4e428fe58211dbe7de1c69b7b07738d960",
+          "include": false
+        },
+        {
+          "index": 23,
+          "kind": "Assign",
+          "name": "ROOT",
+          "sha256": "368e0b19b5c2054e768091e0f4a14f5009340b92571f3e578aca9185f278b094",
+          "include": false
+        },
+        {
+          "index": 24,
+          "kind": "Assign",
+          "name": "META_KEYS",
+          "sha256": "51fb2c02feb98fe12716c052bdbc09b85f5251aa3f71a71c364a57294fcc1416",
+          "include": true
+        },
+        {
+          "index": 25,
+          "kind": "Assign",
+          "name": "REASONS",
+          "sha256": "6a4182165e62a3e459f67c43d463a76952e6b75797af481a27ebeefca3662dac",
+          "include": true
+        },
+        {
+          "index": 26,
+          "kind": "Assign",
+          "name": "FLAGS",
+          "sha256": "724b4bc9b33d8b563b2c7e4764ba51b716b6aaae85e0acf633500e82ab821a16",
+          "include": true
+        },
+        {
+          "index": 27,
+          "kind": "ClassDef",
+          "name": "ImageError",
+          "sha256": "7de52c4c960c533b52ce9e18ae14820b203f5c91c0d1186d086cf869def638b4",
+          "include": true
+        },
+        {
+          "index": 28,
+          "kind": "FunctionDef",
+          "name": "need",
+          "sha256": "dd377e7efa63db53b8c26076e385567cca4e4e3617a34015b9df2c1854293fd0",
+          "include": true
+        },
+        {
+          "index": 29,
+          "kind": "FunctionDef",
+          "name": "marker",
+          "sha256": "c6010c8d59fb91f005eb93c43d9e20c19329aa1f2b51e72e3f914d9d3651c3dc",
+          "include": true
+        },
+        {
+          "index": 30,
+          "kind": "FunctionDef",
+          "name": "segment",
+          "sha256": "bbf5ce5f1cc23b8d337f090a7f70d4261ccf72b6b4d5ff20dbb7d1e0735d567f",
+          "include": true
+        },
+        {
+          "index": 31,
+          "kind": "FunctionDef",
+          "name": "frame_info",
+          "sha256": "175704146f8d6e715adc3346ee9e0c3c80ec9d86f05d5fd515dca5bf1e4a1a3a",
+          "include": true
+        },
+        {
+          "index": 32,
+          "kind": "FunctionDef",
+          "name": "tables",
+          "sha256": "8fa612933fd335472598be8a6b0563dca315dec3c157b3ada29ccacbc9a757f6",
+          "include": true
+        },
+        {
+          "index": 33,
+          "kind": "FunctionDef",
+          "name": "scan",
+          "sha256": "edd6c246a8344e887f00e595391655ba239630270070309d69f520afc18a3517",
+          "include": true
+        },
+        {
+          "index": 34,
+          "kind": "FunctionDef",
+          "name": "inspect_bytes",
+          "sha256": "6684ec780bc4934395fa5418fe9d04cac77e65e09922bd801c10e4c4de1a39eb",
+          "include": true
+        },
+        {
+          "index": 35,
+          "kind": "FunctionDef",
+          "name": "unavailable",
+          "sha256": "b0737367ec93b28797b57457237691edd0e7702e63397afe4afb6519e8e907a8",
+          "include": true
+        },
+        {
+          "index": 36,
+          "kind": "FunctionDef",
+          "name": "validate_shape",
+          "sha256": "af32a4b393e308acacef742f3a3764007827c22d6985757698440d13ea41bf3e",
+          "include": true
+        },
+        {
+          "index": 37,
+          "kind": "FunctionDef",
+          "name": "validate_record",
+          "sha256": "9191b64b7fe370f86eef906d37207b9805525a0112b90526e2046251e1756200",
+          "include": true
+        },
+        {
+          "index": 38,
+          "kind": "FunctionDef",
+          "name": "identity",
+          "sha256": "487af287dc457d9964a41d49beb9fec2d0bdb50eb1c3d7661877f92fa60d1c80",
+          "include": false
+        },
+        {
+          "index": 39,
+          "kind": "FunctionDef",
+          "name": "inspect_file",
+          "sha256": "d7980b358374388d4f184600d8004680d92adfac3cabf4ed717a8971fd0600bb",
+          "include": false
+        },
+        {
+          "index": 40,
+          "kind": "FunctionDef",
+          "name": "worker_record",
+          "sha256": "f9850d8d7e9c8c9aea5d843cf17d5c0e2aa9c405a23b07363c81fea827772022",
+          "include": false
+        },
+        {
+          "index": 41,
+          "kind": "FunctionDef",
+          "name": "text_result",
+          "sha256": "e28690105c98b55d58bf346a27015c7e1ebece62757036bf3c03223c5d358bfb",
+          "include": true
+        }
+      ],
+      "projection_sha256": "2670acac47e6cd567ed46643b905b202491d99bc12d4c490815044422597a7f2",
+      "projection_bytes": 13607
+    }
+  }
+}

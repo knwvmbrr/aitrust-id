@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-161407-version-bounded-source-snapshot-v3-aa4da53e",
+  "recorded_at": "2026-11-22T16:14:07.047383+00:00",
+  "author": "Codex / share_debugger; distinct reviewer Codex / seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2f03b9de83daab98ed8633c80c12e9217a822799",
+  "changed": "Added a versioned256MB raw-source serializer with separate5MB metadata, streaming bounded inspection and unchanged historical v1/v2 modules.",
+  "proves": "Small Git archive byte/result parity, exact metadata and framing controls passed; independent source reviews accept immutable historical modules, active consumers and one read-only hosted qualification workflow.",
+  "limits": "Actual current greater-than128MB archive, full16 boundary controls,768MiB measured execution and graph/SPDX reconstruction remain pending on disposable Linux. No local large build, policy admission, source-signature claim, legal clearance or full F057/X02 completion.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".github/workflows/source-snapshot-v3.yml": "61bc2a3017842c3884c4ace2b8b51edadf2bd06d9a44ad96028a3ea2c12c3922",
+    "docs/source-snapshot-v3-plan.md": "fccf74477c6bf68132a6af0afc1c0049a39b80edc19584b28fda8a4cd10a3126",
+    "runs/2026-11-22-source-snapshot-v3-distinct-source-review.json": "160923eaee1c95bd2b56d74bc5f98168e6c0b04ee11465c77b470a1cc44c2067",
+    "runs/2026-11-22-source-snapshot-v3-header-distinct-review.json": "c60e26080c6833ea6cb596961549b5f73b3702f4e165669bd9277ba628ef05bf",
+    "runs/2026-11-22-source-snapshot-v3-local-controls.json": "c9a552998315c7804caa9ae53c5e78180c1c46cb2d547793f741d3e84a827c2b",
+    "scripts/build-source-snapshot.py": "2b5ab41bcf4a2ec72bd4baa835865c73bdfeda3df57122de175c13d78da772de",
+    "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+    "scripts/verify-source-provenance.py": "254dd2c351ffb6213e7530b57ea30b904fd0f1c5e6cc45a6a584e11b5bb42fa3",
+    "tests/test_distribution_artifacts.py": "584db6beb7fd03c4efb46195ddf42386fefbc6e8ccc3a2bf84cc42714ab30af4",
+    "tests/test_source_provenance.py": "8686ec115a3e02c8e28bbc5c0259bfc37b50148d167206d470046239138e3fe5",
+    "tests/test_source_snapshot_v3.py": "ad964f65d440228710a0ac360b84a3d215647cc616094e393a9fdfb419bf0896",
+    "tools/distribution_artifacts.py": "36d25317bf1a9f1557894fb62f8f6a36c62a7c3d8391fa5e7d8d539d928de8ab"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-source-snapshot-v3-local-controls.json",
+      "sha256": "c9a552998315c7804caa9ae53c5e78180c1c46cb2d547793f741d3e84a827c2b"
+    },
+    {
+      "path": "runs/2026-11-22-source-snapshot-v3-header-distinct-review.json",
+      "sha256": "c60e26080c6833ea6cb596961549b5f73b3702f4e165669bd9277ba628ef05bf"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-172028-artifact-io-owned-publication-e7cbea41",
+  "recorded_at": "2026-11-22T17:20:28.592009+00:00",
+  "author": "Codex / share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bd1610329fc22bba9c3e91fd0ade9dd5c7c176ab",
+  "changed": "Retain refused private artifact temporaries instead of unlinking successor names; revalidate descriptor bytes and held private boundaries through publication and close.",
+  "proves": "Fifteen tiny filesystem controls passed and a distinct reviewer replayed six original, corrected and positive cases with every owned descriptor closed.",
+  "limits": "No universal hostile concurrent same-UID race guarantee, SDK, archive build, signing, permission, detector accuracy or original requirement closure; failed private bytes may remain.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+    "tests/test_artifact_evidence_io.py": "adc631878d155c4cb2649e730f8a4446ff50838fb504b4030888c18ca347619f",
+    "docs/artifact-io-ownership-plan.md": "fd18ec9fe0438fb828921ce88bf0120c4129c440406b6dec8d096cecc7bc2ad2",
+    "runs/2026-11-22-artifact-io-ownership-execution.json": "10d336d1fca07be19c754a5407bc8803c255925e150e058f6f991b2b38376040",
+    "runs/2026-11-22-artifact-temp-successor-cleanup-original.json": "defd50f6f42d1cf94f29fad9aa9efcda0e0826504bda0e61ff440b55e8b4881c",
+    "runs/2026-11-22-artifact-io-ownership-distinct-review.json": "61dfa595dba1d9393027fb2e44908b6fc65f5cb61599dbc969e4452fe33e98ce"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-artifact-io-ownership-execution.json",
+      "sha256": "10d336d1fca07be19c754a5407bc8803c255925e150e058f6f991b2b38376040"
+    },
+    {
+      "path": "runs/2026-11-22-artifact-io-ownership-distinct-review.json",
+      "sha256": "61dfa595dba1d9393027fb2e44908b6fc65f5cb61599dbc969e4452fe33e98ce"
+    },
+    {
+      "path": "runs/2026-11-22-artifact-temp-successor-cleanup-original.json",
+      "sha256": "defd50f6f42d1cf94f29fad9aa9efcda0e0826504bda0e61ff440b55e8b4881c"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,142 @@
+{
+  "captured_at": "2026-11-22T08:15:40.329222+00:00",
+  "author": "Codex / web_camo, distinct root-registration reviewer",
+  "profile": "root-FA-policy-registration-source-review/v1",
+  "pass": true,
+  "root_head": "556bdf5c41a987e9c9a404af5c51bb11d488864b",
+  "authored_image_base": "50fb836a2d26230f1d85eb5109014b160207c376",
+  "sources_before": {
+    "site/src/policies.js": "bacd5f7d30598a055674f8fa2fb846a94bfa4525bd7b33bf2286636f92667c53",
+    "eval/revalidation.json": "52e0777b1d86a7fe42934583cee4e566951247f9c69300b39e3e826fe7141dbc",
+    "scripts/verify-image-metadata-client.cjs": "809118578a6f502a7b2796f9cf001d387bd8ee22101124a6f55c2ed0ec287825",
+    "scripts/verify-route-boundaries.py": "a08e867cccf3023a966f565299b414bf1140a0c58157c8dd8e8bf659e6bc4d40",
+    ".github/workflows/ci.yml": "ed6d927e6eba03f0647c8c8620f92110ceaed2297c2732d5c9d975c9a961594a",
+    "protocol/revalidation.py": "a8ea8d3b6fadf0cc0023234496fa00a0b7f7cf582ceff8ed38c9db8c93297379",
+    "docs/image-current-delivery-registration-plan.md": "8c3f810f2c3657796b54280ad1b83977a2a75e055669afe7221ee98951706d03",
+    "docs/image-privacy-activation-plan.md": "faaca776c74d9399965288c271d7c3e4e1545466a5e2f2fffb7db0c7c7d4b3ae",
+    "runs/2026-11-22-image-policy-body-and-archive-retention.json": "180b751fd74721eb05e49bc9163b1b3245d7ca18ab2852c2d17c3e8996288b87"
+  },
+  "sources_after": {
+    "site/src/policies.js": "bacd5f7d30598a055674f8fa2fb846a94bfa4525bd7b33bf2286636f92667c53",
+    "eval/revalidation.json": "52e0777b1d86a7fe42934583cee4e566951247f9c69300b39e3e826fe7141dbc",
+    "scripts/verify-image-metadata-client.cjs": "809118578a6f502a7b2796f9cf001d387bd8ee22101124a6f55c2ed0ec287825",
+    "scripts/verify-route-boundaries.py": "a08e867cccf3023a966f565299b414bf1140a0c58157c8dd8e8bf659e6bc4d40",
+    ".github/workflows/ci.yml": "ed6d927e6eba03f0647c8c8620f92110ceaed2297c2732d5c9d975c9a961594a",
+    "protocol/revalidation.py": "a8ea8d3b6fadf0cc0023234496fa00a0b7f7cf582ceff8ed38c9db8c93297379",
+    "docs/image-current-delivery-registration-plan.md": "8c3f810f2c3657796b54280ad1b83977a2a75e055669afe7221ee98951706d03",
+    "docs/image-privacy-activation-plan.md": "faaca776c74d9399965288c271d7c3e4e1545466a5e2f2fffb7db0c7c7d4b3ae",
+    "runs/2026-11-22-image-policy-body-and-archive-retention.json": "180b751fd74721eb05e49bc9163b1b3245d7ca18ab2852c2d17c3e8996288b87"
+  },
+  "policy_structure": {
+    "other_policy_bodies_preserved": 8,
+    "all_old_privacy_sections_preserved": true,
+    "new_image_section_only": true
+  },
+  "v1_14_archive_bytes_preserved": {
+    "site/public/reference/policies/terms/v1.14.txt": "10459a8f67c140438618fadd1e7ec2ff2b5a7c0a8a3ada6e18ab2feb22038e6d",
+    "site/public/reference/policies/privacy/v1.14.txt": "875d3d60ae935de4fef614708afd451145673753fd9a9991eec3c51be7a5d4a0",
+    "site/public/reference/policies/validation/v1.14.txt": "e31da27975d3f34af301dc1a7478e3edb2d7e09a40caec7d88e4c5a5463969ae",
+    "site/public/reference/policies/community/v1.14.txt": "bd86320821019af0c37cc5774fc793ed4226086421daffc7524821678d8cb408",
+    "site/public/reference/policies/security/v1.14.txt": "8a836f0d85b8ed848cec1e1dd55ce9bbc870de3ecf40b29ba319bfbe2b670835",
+    "site/public/reference/policies/governance/v1.14.txt": "e855d8c89430468f7bfd6e6f29df9264c47c98232fb68819dcfd8558b69a6947",
+    "site/public/reference/policies/contributing/v1.14.txt": "9033b8bcb7a5608952a9a78915052fd707e70cb3c766b7392f53851aa4232ae6",
+    "site/public/reference/policies/licenses/v1.14.txt": "096d40a99a20cefa3cf3f2cd24ac7a491fefcbd17333751f2d40d0873943e917",
+    "site/public/reference/policies/access/v1.14.txt": "b37c26776b51d91e9e86adae12977b5c84e823c17da1acd20c4564a31e2dda5a"
+  },
+  "image_core_and_shared_mount_bytes_unchanged": {
+    "site/src/ImageMetadataExplorer.jsx": "0e557a7dcf646e915e02b89b92ad949082f7d4c6d9ef99c0446a15136d88aa7a",
+    "site/src/ImageMetadataExplorerSlot.jsx": "c08fe234f18be550f4827b2b3a2c9c4b5be0cb69c9567c83dcf12b3be6b1389f",
+    "site/src/image-metadata-client.mjs": "00013a2cb593d0fc40957da17a11cbffc05c15a3d5afe2e9915e42f55ca771ca",
+    "site/src/image-metadata-result.mjs": "ec7e59257768fb96d4c4a03f1cf352504cdbbe8ccc89b42d2e03e8d99de300fd",
+    "site/src/image-metadata-worker.mjs": "d0efb21f127fd183b53abaacaf4fc2a15ac61f41feace64e56d83a33a5321ce9",
+    "scripts/build-image-metadata-device.py": "2ba006ffb69b856d6cae93611872013e7ca1660e8ce81eca0db662a147f29882",
+    "scripts/image-metadata-site-controls.cjs": "80cd06060f89df4727bc8a63b84e7f90937e5f2dd61550c76ae4f33b8a22b13d",
+    "scripts/verify-image-metadata-site.cjs": "bd3686a77af6c59bbeb4e8dfa18dcfd7c64f24eebab46c1691cb4e80176ee6d0",
+    "site/src/main.jsx": "0429b8b79ca76838319e8226ecc89a4fbe8078cc5f4d22f515d744eaadf46b23",
+    "site/src/catalog.js": "7dc81cb7dc650a31f9ad2aacd0c6dd030a530ffbce36f964b3e1b6cd29be7077",
+    "site/src/presentation.js": "b21e026675f2b6d02b583b71b24a2c660beac44fdff5799bded6d3194deceb35",
+    "site/src/usage.js": "18c166efe76f2cbe0c2ae2b1d6178798c6d7647baff01d3ac2321de4e1a81fcc",
+    "site/scripts/prepare.mjs": "7a3b52f684b3d7a92c110564b8d4b4f05af6ced9a0195274a94aca726cf9941d",
+    "scripts/verify-site.cjs": "96245768720356b2b56a2073bd19343dd9f828e32f94bc64a3a691a810f2d606",
+    "scripts/verify-site-accessibility.cjs": "68842cc299d2b13590601aed8b2c2f5ef00767b987ffdac28aad4d9c0e465376"
+  },
+  "website_commands": {
+    "old": 61,
+    "current": 64,
+    "first61_exactly_preserved": true,
+    "added": [
+      [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_image_device.py",
+        "-q"
+      ],
+      [
+        "node",
+        "scripts/verify-image-metadata-client.cjs"
+      ],
+      [
+        "node",
+        "scripts/verify-image-metadata-site.cjs"
+      ]
+    ],
+    "other4_capabilities_unchanged": true
+  },
+  "bounded_Node_wrapper": {
+    "fixed3_test_paths": true,
+    "timeout_ms": 30000,
+    "nonzero_signal_error_refuse": true,
+    "script_only_command_allowlist_unchanged": true
+  },
+  "CI": {
+    "exact_only3_added_execution_lines": true,
+    "jobs_permissions_install_steps_unchanged": true
+  },
+  "source_registration": {
+    "new_website_patterns": [
+      "integrations/image-metadata-reference/1.0.0/**/*",
+      "scripts/build-image-metadata-device.py",
+      "scripts/build-image-metadata-fixture.mjs",
+      "scripts/image-metadata-device-cases.py",
+      "scripts/image-metadata-site-controls.cjs",
+      "scripts/verify-image-metadata-device.cjs",
+      "scripts/verify-image-metadata-site.cjs",
+      "scripts/verify-image-metadata-client.cjs",
+      "tests/test_image_device.py",
+      "tests/image-metadata-client.mjs",
+      "tests/image-fixture-output.mjs",
+      "tests/fa-image-main-integration.cjs",
+      "tests/fixtures/fa-image-main-baseline.json",
+      "site/image-metadata-fixture.html"
+    ],
+    "all14_present": true,
+    "existing_patterns_preserved": true,
+    "route_boundary_addition_only": true,
+    "canonical_cohort_and_new_helper_test_paths_included": true,
+    "site_src_and_docs_existing_globs_cover_UI_guide": true
+  },
+  "dataflow_source_read": {
+    "explicit_file_then_Inspect": true,
+    "default_no_hash_raw_metadata": true,
+    "exactJSON_separate_optin_with_linkability_warning": true,
+    "no_auto_export_or_sharing": true,
+    "no_input_storage_upload_or_remote_image_fetch": true,
+    "reader_failure_local_to_FA": true,
+    "existing5_runtime_files_reused": true,
+    "website_no_optional_C2PA_SDK_or_cache_requirement": true,
+    "FA_Planned_PA_unchanged": true
+  },
+  "findings": [],
+  "review_harness_correction": {
+    "path": "output/verification/root-fa-registration-review-harness-correction.json",
+    "sha256": "196357ab6297211d2faedc9286d11a24d3b6d8b51c07de516d5e82dab70f246c",
+    "scope": "Initial review-script assumed15 entries, corrected to actual14; no source changes or runtime execution."
+  },
+  "limits": [
+    "Source and immutable-byte comparison only; no new build/browser/test/SDK/network execution.",
+    "Previous actual FA proof remains its own source/1.14 snapshot; this does not validate a new root build or public route.",
+    "Policy1.15 source is factual product disclosure, not legal clearance. Root current integrated/protected/public checks pending.",
+    "No offline, physical-phone, accuracy, AI-origin, tag-release or original-closure credit."
+  ]
+}

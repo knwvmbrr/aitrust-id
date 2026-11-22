@@ -1,0 +1,127 @@
+{
+  "captured_at": "2026-11-22T16:01:58.119589+00:00",
+  "pass": false,
+  "head_sha": "ba89912f0283b8fa5c2e1ce1598c8dd2474370c9",
+  "run_id": 45041309306,
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45041309306",
+  "artifact": {
+    "id": 14761444012,
+    "bytes": 1579,
+    "sha256": "6e2708300a19eafeb7d8b6ac6b3b441b9dff1098e9dec9eecbd11e9f74d47447"
+  },
+  "actual_report": {
+    "ai_origin_established": false,
+    "captured_at": "2026-11-22T15:59:55.120554+00:00",
+    "cases": [],
+    "complete_security_sandbox": false,
+    "effective_capabilities_empty": true,
+    "error": "qualification_failed",
+    "error_code": "other_error",
+    "independent_accuracy_evidence": false,
+    "init_namespace_read": "permission_denied",
+    "installed_locked_versions": {
+      "c2pa-python": "0.38.0",
+      "certifi": "2026.7.22",
+      "cffi": "2.1.1",
+      "charset-normalizer": "3.5.2",
+      "cryptography": "50.0.2",
+      "idna": "3.20",
+      "pycparser": "3.11",
+      "requests": "2.32.5",
+      "toml": "0.10.2",
+      "urllib3": "2.8.0"
+    },
+    "native_sdk_executed": true,
+    "network_namespace_isolated": true,
+    "new_tag_releases": 0,
+    "no_new_privileges": true,
+    "pass": false,
+    "profile": "jpeg-provenance-qualification/1.0.0",
+    "sources_before": {
+      ".github/workflows/jpeg-provenance-qualification.yml": "0ee147fca08aac01d5d071317edf7eadd3b6836bcd9436e3085f991f4507b9fc",
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+      "docs/jpeg-provenance-guide.md": "7a75d2053e01258b6aa626bba48c0e3e7e91b675caacb59691a75c5346581bcc",
+      "docs/jpeg-provenance-plan.md": "1ccdfa6e6c485ed885222e9c4855bf88790047c5f4f2aa3e706ea37b0e9df625",
+      "eval/c2pa-inspection.lock": "bcc909d3ccef13cbb4758e7e45bdd00b7e1065eb50dae19cc62e6d74e5c32e0a",
+      "eval/dependencies/c2pa-inspection.json": "28861a1b7035e42e8c40ffb4d14bf4dabc9b326e7f945a5bafe523c41f15c129",
+      "integrations/image-metadata-reference/1.0.0/tools/jpeg_metadata.py": "c7e8fcb58acd2087a35c886a32b7df1fa390c74c52c023e9b137bdf1dd90872a",
+      "scripts/inspect-jpeg-provenance.py": "f3389b8b14e2af09e708a76e0d0f7b5a15b874c6daab59d8ccfde18a78be5148",
+      "scripts/verify-jpeg-provenance.py": "423bed83370a51c22da8b492a63025dad1c3da9a6e6bc31b054a08cea740faca",
+      "tests/fixtures/jpeg-provenance-v1/generate.py": "2655fd36a5e80f125ebe17b4d0607c2d8147cc9f9d76d79ec036bcddefe69f95",
+      "tests/test_jpeg_provenance.py": "45426318957bfda38eb6762274b255dde275d6572dd111b812b722973ed2e90b",
+      "tools/jpeg_provenance.py": "2be9bc95a3aca62750bc23e49c1923fc61c00aa336c8edc3dabeaec6364fd8df",
+      "tools/jpeg_provenance_actions.py": "e4cf4cd2661c2e4c257017f4d4cc3a87880f9002f73c44243e75e6b1cf4bf5d2",
+      "tools/jpeg_provenance_io.py": "65ab199c54571a077898246266da6dfa52e7148d59f93479175ee6a88655abfa",
+      "tools/jpeg_provenance_process.py": "1eac62ab9bc14dddba14f58dda4acb31f0e1a536436fdb7f27bdaea48d23c156",
+      "tools/jpeg_provenance_sdk.py": "b6cb1faa9543fdb71c80e41676446dce1dc0bc84f3dcd19401dc222b8cd277e5"
+    },
+    "stage": "fixture_sign_edit",
+    "supplementary_groups_empty": true
+  },
+  "job_steps": [
+    {
+      "name": "Set up job",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Install existing hash-locked optional environment",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Focused JPEG safety controls",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Actual synthetic signing and read-only CLI without network",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "Remove only owned disposable environment",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+      "status": "completed",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "raw_report_sha256": "3897fdb9059838788e092817d6f04cf2ae4bfdcb60bfe388655578b63ef4ace6",
+  "job_log_sha256": "c7950cf968be08c93c00187f4e34cfaa9ed86e01c874d3036df0707b92b258a8",
+  "diagnosis": "Actual failure is at fixture_sign_edit after SDK load and synthetic creation signing returned. Edit fixture contains no c2pa.created/opened inception, unlike the existing accepted PNG generator and normal-manifest action requirements. Exact native exception was not emitted and is not asserted.",
+  "focused_controls_passed": 19,
+  "accepted_cli_credential_cases": 0,
+  "native_sdk_executed": true,
+  "next_action": "Correct only the synthetic edit definition to softwareImage creation plus editing, with explicit current-claim attribution; preserve all runtime and full canonical acceptance assertions.",
+  "new_tag_releases": 0
+}

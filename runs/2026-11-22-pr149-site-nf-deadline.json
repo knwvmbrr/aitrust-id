@@ -1,0 +1,38 @@
+{
+  "captured_at": "2026-11-22T14:38:36.526591+00:00",
+  "profile": "actual-hosted-NF-release-blocker/v1",
+  "observed_by": "Codex PM /root",
+  "source": {
+    "conclusion": "failure",
+    "event": "pull_request",
+    "head_sha": "7174a3f49a3365ceff241d2b3ff5bd74d1be5598",
+    "html_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45031773489",
+    "status": "completed"
+  },
+  "site_job": 137236718966,
+  "site_duration_seconds": 1043,
+  "pass": false,
+  "failed_command": "node scripts/verify-nf-client.cjs",
+  "failed_child": "canonical_browser",
+  "configured_child_timeout_ms": 180000,
+  "observed_elapsed_ms": 180266,
+  "hosted_profile": "hosted_parallel_two",
+  "host_cpu_threads": 4,
+  "host_total_memory_bytes": 16760344576,
+  "reported_last_context": {
+    "engine": "Chromium",
+    "stage": "chunk_import_render",
+    "substep": "render"
+  },
+  "stage_covers_multiple_operations": true,
+  "exact_blocked_operation_established": false,
+  "React_error_boundary_defect_established": false,
+  "root_cause_established": false,
+  "source_log_sha256": "8058cf350d6be08aa2e6f1db5ccfc40ca4c6cdfbbb4fd434422c5497913d5bc5",
+  "other_ten_required_checks_pass": true,
+  "local_64_observation_remains_historical_and_current_for_7174": true,
+  "merge_and_publication_blocked": true,
+  "next_step": "Closed inner-stage timings and narrowly bounded disposable-host diagnostic; preserve the original180s release wrapper and all original acceptance criteria.",
+  "independent_accuracy_evidence": false,
+  "original_requirement_closed": false
+}

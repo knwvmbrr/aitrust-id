@@ -1,5 +1,5 @@
 Privacy and data use
-AI TRUST ID · Version 1.14 · Effective 2026-11-21
+AI TRUST ID · Version 1.15 · Effective 2026-11-22
 Published by AI Trust ID.
 
 What stays on your device, what hosts receive and what sharing means.
@@ -55,6 +55,14 @@ Wording preview guide: /reference/mt-device-explorer.md
 Literal-detail guide: /reference/hp-device-explorer.md
 Uncertainty-word guide: /reference/hp-uncertainty-device.md
 Python-code preview guide: /reference/credential-flow-device.md
+
+Optional image details
+Choose a supported PNG or JPEG and then Inspect to read its supported file details on this device. This preview does not upload the image or save its bytes, filename or result in browser storage. It grants no research or training permission. Public runtime and method files are downloaded from this site. Your original image is unchanged; this is not a metadata-removal tool or an AI-origin detector.
+
+The summary omits the filename and file hash. Show exact image record is a separate choice: its JSON includes the encoded-file hash, byte length, method identity and bounded counts, which can identify or link copies. Raw metadata values are not returned. No automatic export or sharing is provided. Clearing, changing the file or closing the preview cancels work and removes its prior application state, not physical memory or disk traces.
+
+Image details instructions: /reference/image-device-guide.md
+Planned FA tag and optional preview: /#person/FA
 
 Local service and extension
 The optional local CLI sends text you choose to your authenticated loopback gateway. The Chrome extension starts paused. Saving its token does not enable capture; enable checks on ChatGPT explicitly in extension settings. While enabled, only supported assistant responses on chatgpt.com are sent to your authenticated local gateway at 127.0.0.1:8787. Pause cancels pending checks and removes tags. Reset removes local consent and the saved token; it does not revoke the gateway credential, delete a ChatGPT conversation, or recall downloaded files. Detected redaction precedes the evaluator and can miss sensitive information. This route is different from the on-device checker; it does not send text to this website or a research database. The selected service entrypoints return fixed input-validation errors, disable request URL access logs, and mark responses no-store. These are tested application boundaries; they do not cover your browser vendor, a compromised OS, every PII category or physical memory erasure.

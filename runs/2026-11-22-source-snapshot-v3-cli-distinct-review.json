@@ -1,0 +1,47 @@
+{
+  "profile": "source-snapshot-v3-isolated-bootstrap-delta-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T16:22:53.003948+00:00",
+  "reviewed_by": "/root/seo",
+  "previous_source_review_sha256": "c60e26080c6833ea6cb596961549b5f73b3702f4e165669bd9277ba628ef05bf",
+  "current_source_sha256": {
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+    "scripts/build-source-snapshot.py": "865dee30bb6f2908014fdcee17aac41aa4e0fa149d50d01677c30c7a5a838d56",
+    "scripts/verify-source-provenance.py": "cb5ec29a98a4a1c05ad1ef06c0675c05e9d4ffd6347e2832f2405da005b86ab2",
+    "tools/distribution_artifacts.py": "36d25317bf1a9f1557894fb62f8f6a36c62a7c3d8391fa5e7d8d539d928de8ab",
+    "tests/test_source_snapshot_v3.py": "79664360e4df25954a0e3186a98234a08fd43c22b20dd2e7a4530ef2d25ac0c3",
+    "tests/test_source_provenance.py": "8686ec115a3e02c8e28bbc5c0259bfc37b50148d167206d470046239138e3fe5",
+    "tests/test_distribution_artifacts.py": "584db6beb7fd03c4efb46195ddf42386fefbc6e8ccc3a2bf84cc42714ab30af4",
+    ".github/workflows/source-snapshot-v3.yml": "5d11fad8c366e6ba5dde89b7e3c2d84b44f3bf7d174299739b8c5f86c85de2b7",
+    "docs/source-snapshot-v3-plan.md": "e779b6b20334d8a72742fd2b258681db6335d67aa627dccabbf482ef37465eee"
+  },
+  "changed_paths": [
+    ".github/workflows/source-snapshot-v3.yml",
+    "docs/source-snapshot-v3-plan.md",
+    "scripts/build-source-snapshot.py",
+    "scripts/verify-source-provenance.py",
+    "tests/test_source_snapshot_v3.py"
+  ],
+  "findings": [],
+  "reviewed": [
+    "Both active CLI entrypoints add only their trusted resolved script parent before importing the sibling v3 module; isolated flags remain and caller CWD/input/archive cannot select code.",
+    "One existing test group now exercises both real isolated help entrypoints and a real6file synthetic Git build from an unrelated working directory; same16groups.",
+    "Workflow only adds a fixed exception-type allowlist/UNCLASSIFIED enum on future builder failure, never raw stderr. No source quotas, deadline, assertions, permission, trigger, signing or artifact scope changed.",
+    "Old v1/v2/core/header canonicalization and graph bindings unchanged. First hosted16control success/buildexit1 remains failed, lost raw exception not retrospectively claimed as observed ModuleNotFoundError."
+  ],
+  "reviewer_actual_affected_control": {
+    "groups": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "pass": true,
+    "scope": "small v1/v2/v3 parity plus2isolatedhelps and6file realCLI build; no current source archive or large control"
+  },
+  "limits": [
+    "Source/hash review and one tiny owned synthetic CLI control only; no current128MB+ archive, large streams, native/dependency installs, network or browser.",
+    "Actual changed-source hosted current-repository capacity,768MiB/RSS,oldv2refusal andGraph/SPDX still pending.",
+    "No independent cryptographic attestation, full license/source clearance, release admission, protected/publication or original closure."
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "profile": "mt-label-private-git-boundary-counterexample/v1",
+  "captured_at": "2026-11-22T16:33:55.387840+00:00",
+  "reviewed_by": "/root/seo",
+  "pass": false,
+  "source_sha256": {
+    "tools/mt_label_io.py": "69a179aa35c846884ce25a9f11e3052e2892877731f0a74ada9fa32805dfd4d9"
+  },
+  "actual_counterexample": {
+    "late_git_marker_refused": false,
+    "error_type": null,
+    "published_output_remained": true,
+    "marker_added_after_exclusive_output_creation": true
+  },
+  "meaning": "Final private output ancestor .git absence is not rechecked; published output can complete after the ancestor becomes a Git-marked directory. No real private data or actual Git repository used.",
+  "limits": [
+    "One tiny owned resolved0700temp directory and synthetic output only, removed after probe. No full19suite, detector, native/browser/network or real user examples.",
+    "This demonstrates a documented private-path integrity gap, not an observed automatic upload/commit/content disclosure."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "profile": "artifact-workflow-suite-count-source-finding/v1",
+  "captured_at": "2026-11-22T17:26:16.625741+00:00",
+  "finding": "Added15-test IO suite but exact testsRun assertion remains36; all51 passing tests would still fail the workflow.",
+  "source_sha256": {
+    ".github/workflows/artifact-sbom.yml": "9669b5f65306e96e4267909ef1c3723adf8dcac2f021ab7e5891f316dac7333f",
+    "tests/test_distribution_artifacts.py": "584db6beb7fd03c4efb46195ddf42386fefbc6e8ccc3a2bf84cc42714ab30af4",
+    "tests/test_artifact_process.py": "b3681ca1908e39d33276c23dca0cf486f69f86251c8d17b1f6b621cd23163a4a",
+    "tests/test_artifact_workflow.py": "c06c3f0e183db5916e448b718a60fa6763e880eed2b282a99e6e796a8568090c",
+    "tests/test_artifact_evidence_io.py": "adc631878d155c4cb2649e730f8a4446ff50838fb504b4030888c18ca347619f"
+  },
+  "ast_test_method_counts": {
+    "tests/test_distribution_artifacts.py": 27,
+    "tests/test_artifact_process.py": 7,
+    "tests/test_artifact_workflow.py": 2,
+    "tests/test_artifact_evidence_io.py": 15
+  },
+  "expected_total": 51,
+  "retained_assertion": 36,
+  "execution_performed": false,
+  "severity": "P2",
+  "required_correction": "Retain old36 controls and assert all51, or separately assert old36 plus new15 without skipping any."
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-141351-image-current-delivery-packet-f6448d4f",
+  "recorded_at": "2026-11-22T14:13:51.115076+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8186929ec7a54ac749ba234fb865ac418c200150",
+  "changed": "Accepted all five current image delivery capability checks, preserved failures and refreshed the complete66-original audit.",
+  "proves": "All64 current website commands pass on unchanged sources, including actual FA browser records. Current PS, PII, extension and protocol receipts pass. Accessibility selection now fails solely for four missing real human reviews.",
+  "limits": "Protected/public image delivery remains pending. FA remains planned, no independent detector accuracy or human accessibility approval; original scope136complete/66open, target60 not met.",
+  "scope_ids": [
+    "T-FA",
+    "F-035",
+    "F-050",
+    "F-120",
+    "F-145"
+  ],
+  "files": {
+    "state.json": "705c4508f3720d56ad5857ac56ed4bd0977d34574bcab4a402456d10c046129b",
+    "eval/route-boundaries.json": "43dbc6f6e049a64041958b59866ea4907b29dd929dbe25e95741a4f48400304f",
+    "runs/2026-11-22-image-corrected-website.json": "dbbf121dbba92e3404a5655b85596ead7eee05c79930b22d53bdf342e5398a57",
+    "runs/2026-11-22-image-current-built-browser.json": "ca206784246e55c28ff30c2639ef6840e29fd7d61c1981fcbbe0ed3da97008d5",
+    "runs/2026-11-22-image-accessibility-release-status.json": "b9bed21bdf8626fada9c5dd2fb0b37fe4699b9d60f02715c8839e966af8c373f",
+    "runs/2026-11-22-image-current-boundaries.json": "5e83f9de0b06f4fdce0e49e94bdfe87075db30c3ca22f4997740fa51400c5f58",
+    "runs/2026-11-22-image-current-engineering-packet.json": "a4a7e97c5ed80189ab60264f19d61791b89db6fae22e7cfbcf4fa0198c6dc04d",
+    "runs/2026-11-22-accessibility-receipt-selection-distinct-review.json": "39c1f9bbb1c871ec99e4c35b95fe669ec1c3906323d25f70aad514c0254465cb",
+    "runs/2026-11-22-current-66-original-audit.json": "c42621f60f8668050582f2de6ce3377b9f80e4f1d9eff81e2c73c2fb90d2cc75",
+    "runs/2026-11-22-website-continuation-contract-review.json": "a375347fa6561594a367be843a285d0246af95658141f1f8c16b816608cef46e",
+    "runs/2026-11-22-fa-discovery-seo-distinct-review.json": "7d3ee976a1c1f6c2418119c0156e6d732e6fa7b48122c0b107aaa7853263cbb2"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-image-current-engineering-packet.json",
+      "sha256": "a4a7e97c5ed80189ab60264f19d61791b89db6fae22e7cfbcf4fa0198c6dc04d"
+    },
+    {
+      "path": "runs/2026-11-22-image-current-boundaries.json",
+      "sha256": "5e83f9de0b06f4fdce0e49e94bdfe87075db30c3ca22f4997740fa51400c5f58"
+    },
+    {
+      "path": "runs/2026-11-22-image-corrected-website.json",
+      "sha256": "dbbf121dbba92e3404a5655b85596ead7eee05c79930b22d53bdf342e5398a57"
+    },
+    {
+      "path": "runs/2026-11-22-image-accessibility-release-status.json",
+      "sha256": "b9bed21bdf8626fada9c5dd2fb0b37fe4699b9d60f02715c8839e966af8c373f"
+    }
+  ],
+  "checks": []
+}

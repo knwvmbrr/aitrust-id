@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-081125-register-private-image-current-delivery-3d25f2b7",
+  "recorded_at": "2026-11-22T08:11:25.788568+00:00",
+  "author": "Codex PM /root; image author /root/web_camo; source reviewer /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9ac41eb1e368ec7d73f7bb1a18c9547380b7a328",
+  "changed": "Registered the reviewed optional image source/clients/lifecycle/current FA route in source-bound checks and existing CI; preserved all61 earlier website commands and strict command allowlist.",
+  "proves": "Bounded Node wrapper syntax passes; actual author normal-build/FA route and distinct proof reviews are retained. Privacy wording explicitly distinguishes browser storage from temporary application state.",
+  "limits": "Registration is not execution on this combined scope/policy1.15 source. All current receipts, public counters/downloads and live FA activation require the next protected delivery. FA and fullF057 remain open;136complete66open.",
+  "scope_ids": [
+    "T-FA",
+    "F-155",
+    "F-057"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "ed6d927e6eba03f0647c8c8620f92110ceaed2297c2732d5c9d975c9a961594a",
+    "docs/image-current-delivery-registration-plan.md": "8c3f810f2c3657796b54280ad1b83977a2a75e055669afe7221ee98951706d03",
+    "eval/revalidation.json": "52e0777b1d86a7fe42934583cee4e566951247f9c69300b39e3e826fe7141dbc",
+    "scripts/verify-image-metadata-client.cjs": "809118578a6f502a7b2796f9cf001d387bd8ee22101124a6f55c2ed0ec287825",
+    "scripts/verify-route-boundaries.py": "a08e867cccf3023a966f565299b414bf1140a0c58157c8dd8e8bf659e6bc4d40",
+    "site/src/policies.js": "bacd5f7d30598a055674f8fa2fb846a94bfa4525bd7b33bf2286636f92667c53"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-fa-image-production-distinct-review.json",
+      "sha256": "613a18379144ab12ad2921f4fe1f2054fac523fa6eccb17c4d9534519d9ce3b4"
+    },
+    {
+      "path": "runs/2026-11-22-fa-image-normal-build-and-browser.json",
+      "sha256": "edc84bc758c602cf292d04148cad756b10b8a55162e97db967172141d7bdc33d"
+    }
+  ],
+  "checks": []
+}

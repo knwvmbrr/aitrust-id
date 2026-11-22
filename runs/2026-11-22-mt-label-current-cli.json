@@ -1,0 +1,186 @@
+{
+  "accuracy_assessed": false,
+  "agreement_observations": {
+    "authority": {
+      "alpha": {
+        "exact_fraction": "26/37",
+        "value": 0.7027027027027027
+      },
+      "candidate_comparison": "UNADOPTED_CANDIDATE_ONLY",
+      "coverage": {
+        "decisive_rating_count": 11,
+        "decisive_rating_fraction": {
+          "denominator": 12,
+          "numerator": 11
+        },
+        "insufficient_context_rating_count": 1,
+        "joint_decisive_unit_count": 5,
+        "supplied_rating_count": 12,
+        "uncertain_rating_count": 0,
+        "unit_count": 6
+      },
+      "state": "AVAILABLE"
+    },
+    "choice": {
+      "alpha": {
+        "exact_fraction": "1/1",
+        "value": 1.0
+      },
+      "candidate_comparison": "UNADOPTED_CANDIDATE_ONLY",
+      "coverage": {
+        "decisive_rating_count": 12,
+        "decisive_rating_fraction": {
+          "denominator": 12,
+          "numerator": 12
+        },
+        "insufficient_context_rating_count": 0,
+        "joint_decisive_unit_count": 6,
+        "supplied_rating_count": 12,
+        "uncertain_rating_count": 0,
+        "unit_count": 6
+      },
+      "state": "AVAILABLE"
+    },
+    "pressure": {
+      "alpha": {
+        "exact_fraction": "38/49",
+        "value": 0.7755102040816326
+      },
+      "candidate_comparison": "UNADOPTED_CANDIDATE_ONLY",
+      "coverage": {
+        "decisive_rating_count": 11,
+        "decisive_rating_fraction": {
+          "denominator": 12,
+          "numerator": 11
+        },
+        "insufficient_context_rating_count": 0,
+        "joint_decisive_unit_count": 5,
+        "supplied_rating_count": 12,
+        "uncertain_rating_count": 1,
+        "unit_count": 6
+      },
+      "state": "AVAILABLE"
+    },
+    "use_context": {
+      "alpha": {
+        "exact_fraction": "1/1",
+        "value": 1.0
+      },
+      "candidate_comparison": "UNADOPTED_CANDIDATE_ONLY",
+      "coverage": {
+        "decisive_rating_count": 12,
+        "decisive_rating_fraction": {
+          "denominator": 12,
+          "numerator": 12
+        },
+        "insufficient_context_rating_count": 0,
+        "joint_decisive_unit_count": 6,
+        "supplied_rating_count": 12,
+        "uncertain_rating_count": 0,
+        "unit_count": 6
+      },
+      "state": "AVAILABLE"
+    }
+  },
+  "calibration_assessed": false,
+  "captured_at": "2026-11-22T16:31:53.426571+00:00",
+  "case_count": 11,
+  "cases": [
+    {
+      "exit": 0,
+      "id": "prepare",
+      "state": "PREPARED"
+    },
+    {
+      "exit": 2,
+      "id": "no_overwrite",
+      "state": "UNAVAILABLE"
+    },
+    {
+      "exit": 0,
+      "id": "validate_A",
+      "state": "RESPONSE_COMPLETE"
+    },
+    {
+      "exit": 0,
+      "id": "validate_B",
+      "state": "RESPONSE_COMPLETE"
+    },
+    {
+      "exit": 0,
+      "id": "compare_two_synthetic_files",
+      "state": "COMPLETE"
+    },
+    {
+      "exit": 2,
+      "id": "missing_answer",
+      "state": "UNAVAILABLE"
+    },
+    {
+      "exit": 2,
+      "id": "altered_form",
+      "state": "UNAVAILABLE"
+    },
+    {
+      "exit": 2,
+      "id": "raw_nfc_equivalent_source_changed",
+      "state": "UNAVAILABLE"
+    },
+    {
+      "exit": 2,
+      "id": "response_permission",
+      "state": "UNAVAILABLE"
+    },
+    {
+      "exit": 0,
+      "id": "recovery",
+      "state": "RESPONSE_COMPLETE"
+    },
+    {
+      "exit": 0,
+      "id": "constant_unknowns_not_validation",
+      "state": "COMPLETE"
+    }
+  ],
+  "human_labels_verified": false,
+  "human_raters_executed": 0,
+  "independence_verified": false,
+  "original_requirements_closed": 0,
+  "pass": true,
+  "predictions_run": false,
+  "release_approved": false,
+  "scope": "authored_two_synthetic_rater_cli_engineering_only",
+  "source_unchanged_during_execution": true,
+  "sources_after": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "docs/mt-annotation-guide.md": "0639bb151ebc542357efac67cefc4c3473eb59fe905531530d43214be7653acc",
+    "docs/mt-label-preparation-plan.md": "7705ba8aeb9aeddea432c257bbaeaa0d4e0c3137cceb17af13747d1808a6407b",
+    "docs/mt-label-preparation.md": "f0a7ef75af4d8305afa28093ee05a8e74ef56b0b3b73df8304fe1375528fecc6",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "scripts/mt-label-preparation.py": "e79e2058f28735ea0c8c01fa7c390423dcb8b977dc1967bad249c1b6900d7a45",
+    "scripts/verify-mt-label-preparation.py": "770b965af10c2337945705508680b8c65a83ee9514b7834f89ee668ecd06319c",
+    "tests/test_mt_label_preparation.py": "6ac9e75ffa5c1789376157752adf2ecf0520d351cb2bb6003ca0d9600f8c5178",
+    "tools/mt_label_io.py": "69a179aa35c846884ce25a9f11e3052e2892877731f0a74ada9fa32805dfd4d9",
+    "tools/mt_label_preparation.py": "07d34822582a0bc5dc33ef7db3e57116a1265322632f0f4bba7d2ff484d44810",
+    "tools/reviewer_agreement.py": "4b7937b8210a5f0d2d1e2979822d18a1c7c48b738b6f419ce145da9cca069052"
+  },
+  "sources_before": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "docs/mt-annotation-guide.md": "0639bb151ebc542357efac67cefc4c3473eb59fe905531530d43214be7653acc",
+    "docs/mt-label-preparation-plan.md": "7705ba8aeb9aeddea432c257bbaeaa0d4e0c3137cceb17af13747d1808a6407b",
+    "docs/mt-label-preparation.md": "f0a7ef75af4d8305afa28093ee05a8e74ef56b0b3b73df8304fe1375528fecc6",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "scripts/mt-label-preparation.py": "e79e2058f28735ea0c8c01fa7c390423dcb8b977dc1967bad249c1b6900d7a45",
+    "scripts/verify-mt-label-preparation.py": "770b965af10c2337945705508680b8c65a83ee9514b7834f89ee668ecd06319c",
+    "tests/test_mt_label_preparation.py": "6ac9e75ffa5c1789376157752adf2ecf0520d351cb2bb6003ca0d9600f8c5178",
+    "tools/mt_label_io.py": "69a179aa35c846884ce25a9f11e3052e2892877731f0a74ada9fa32805dfd4d9",
+    "tools/mt_label_preparation.py": "07d34822582a0bc5dc33ef7db3e57116a1265322632f0f4bba7d2ff484d44810",
+    "tools/reviewer_agreement.py": "4b7937b8210a5f0d2d1e2979822d18a1c7c48b738b6f419ce145da9cca069052"
+  },
+  "stage": "complete",
+  "temporary_private_files_removed": true
+}

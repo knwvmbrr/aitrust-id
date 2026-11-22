@@ -1,0 +1,51 @@
+{
+  "profile": "bounded-jpeg-inception-fixture-correction-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T16:03:15.761651+00:00",
+  "reviewed_by": "/root/seo",
+  "baseline_source": "ba89912f0283b8fa5c2e1ce1598c8dd2474370c9",
+  "corrected_source_sha256": {
+    "tests/fixtures/jpeg-provenance-v1/generate.py": "f0ca1f46a46ba6678b5ed4c81d0851b28478e69d27ae6e3ceef4f9a5bc242eff",
+    "tests/test_jpeg_provenance.py": "6edf4cdd9f4d84318bff110cb0a7d19db017e5ff5578165ed05449c4567b736e",
+    "docs/jpeg-provenance-plan.md": "5eb58fcbb992c400d3b5df460739848a3704b423b2bb6946f7bcf266304990c9"
+  },
+  "unchanged_runtime_driver_workflow_sha256": {
+    "scripts/verify-jpeg-provenance.py": "423bed83370a51c22da8b492a63025dad1c3da9a6e6bc31b054a08cea740faca",
+    "tools/jpeg_provenance.py": "2be9bc95a3aca62750bc23e49c1923fc61c00aa336c8edc3dabeaec6364fd8df",
+    "tools/jpeg_provenance_actions.py": "e4cf4cd2661c2e4c257017f4d4cc3a87880f9002f73c44243e75e6b1cf4bf5d2",
+    "tools/jpeg_provenance_io.py": "65ab199c54571a077898246266da6dfa52e7148d59f93479175ee6a88655abfa",
+    "tools/jpeg_provenance_process.py": "1eac62ab9bc14dddba14f58dda4acb31f0e1a536436fdb7f27bdaea48d23c156",
+    "tools/jpeg_provenance_sdk.py": "b6cb1faa9543fdb71c80e41676446dce1dc0bc84f3dcd19401dc222b8cd277e5",
+    "scripts/inspect-jpeg-provenance.py": "f3389b8b14e2af09e708a76e0d0f7b5a15b874c6daab59d8ccfde18a78be5148",
+    ".github/workflows/jpeg-provenance-qualification.yml": "0ee147fca08aac01d5d071317edf7eadd3b6836bcd9436e3085f991f4507b9fc"
+  },
+  "existing_reference": {
+    "path": "tests/fixtures/c2pa-declarations-2026/generate.py",
+    "sha256": "29ed56a07c0f0f234006dd3ba0d93d81bc408357b19d0675ff6a6a87c63fb3a8",
+    "observed": "Existing PNG edit fixture uses softwareImage creation then edit and explicit created:true action assertion."
+  },
+  "evidence_reviewed": [
+    {
+      "path": "runs/2026-11-22-jpeg-inception-fixture-control.json",
+      "sha256": "11387a37945d5ecdb611357af8413de9796eb56d336168004fec1f25afaa40c5",
+      "scope": "One author pure fixture-definition control, three stable source bindings; reviewer did not rerun."
+    },
+    {
+      "path": "runs/2026-11-22-jpeg-native-candidate-3-diagnosed.json",
+      "sha256": "ee0b628df678ff524c5bd19362e656fa50b07c8878aa2689be2c5d8cc4269620",
+      "scope": "Actual retained diagnostic reports fixture_sign_edit with native true and zero accepted CLI cases; exact native exception not claimed."
+    }
+  ],
+  "findings": [],
+  "reviewed": [
+    "Synthetic edit has exactly one inception, a softwareImage creation followed by the requested generative-edit action; creation and ordinary fixtures preserve one inception.",
+    "Action assertion explicit created:true scopes declarations to the current signed claim; it does not create true AI-origin ground truth.",
+    "All14 native whole-projection/trust/failure/privacy/recovery assertions, interpreter/SDK/worker budgets and qualification isolation/workflow remain byte-identical to baseline.",
+    "Diagnostic failure retained; no accepted native CLI case or exact native exception inferred from failed signing."
+  ],
+  "limits": [
+    "Read-only source/Git/hash/retained minimized evidence review only; no local tests, SDK/native imports, browser, network, installs or hosted retry by reviewer.",
+    "Source CLEAR allows the one parent-approved corrected-fixture measurement; actual successful signing/CLI/trust behavior still pending.",
+    "No AI-origin/FA/PA/full-tag release, independent accuracy, source admission, production signing/publication or original closure."
+  ]
+}

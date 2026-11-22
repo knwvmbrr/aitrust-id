@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-155919-jpeg-fixed-signing-diagnostics",
+  "recorded_at": "2026-11-22T15:59:19.980637+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bf0639ff15fe104ff142db27b721d28f663ed19f",
+  "changed": "Added closed native-load and synthetic-signing diagnostic steps without modifying JPEG runtime, SDK, workflow or acceptance.",
+  "proves": "Two source-stable inert diagnostic controls and distinct source review pass; second hosted run confirms actual isolation, dropped privileges, ten locked versions and17controls but no accepted credential case.",
+  "limits": "Raw second-run nativefalse flag was set late and does not establish no native call; retained failure explicitly qualifies it. Fixed error enums expose no raw exception, input, report or certificate data. No tag release, original closure or native success claimed.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "scripts/verify-jpeg-provenance.py": "423bed83370a51c22da8b492a63025dad1c3da9a6e6bc31b054a08cea740faca",
+    "tests/fixtures/jpeg-provenance-v1/generate.py": "2655fd36a5e80f125ebe17b4d0607c2d8147cc9f9d76d79ec036bcddefe69f95",
+    "tests/test_jpeg_provenance.py": "45426318957bfda38eb6762274b255dde275d6572dd111b812b722973ed2e90b",
+    "docs/jpeg-provenance-plan.md": "1ccdfa6e6c485ed885222e9c4855bf88790047c5f4f2aa3e706ea37b0e9df625",
+    "runs/2026-11-22-jpeg-native-candidate-2-failed.json": "9830684fc79f45d34842b028b28d56c9c4b50795e027f08d77a09f65c6cb4c32",
+    "runs/2026-11-22-jpeg-signing-diagnostics-controls.json": "7f1b26b22318723a9166c4ad2fab717186213354a291b097e2e9141dc173750a",
+    "runs/2026-11-22-jpeg-signing-diagnostics-distinct-review.json": "3d575b939b246a1c7084020af6582c8029040876d99aca5015c1bb9b492d7c57"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-jpeg-native-candidate-2-failed.json",
+      "sha256": "9830684fc79f45d34842b028b28d56c9c4b50795e027f08d77a09f65c6cb4c32"
+    },
+    {
+      "path": "runs/2026-11-22-jpeg-signing-diagnostics-controls.json",
+      "sha256": "7f1b26b22318723a9166c4ad2fab717186213354a291b097e2e9141dc173750a"
+    },
+    {
+      "path": "runs/2026-11-22-jpeg-signing-diagnostics-distinct-review.json",
+      "sha256": "3d575b939b246a1c7084020af6582c8029040876d99aca5015c1bb9b492d7c57"
+    }
+  ],
+  "checks": []
+}
