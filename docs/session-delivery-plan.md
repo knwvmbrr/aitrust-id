@@ -1,5 +1,22 @@
 ## Current delivery snapshot — 2026-11-22T04:37:29.411744+00:00
 
+## Current execution snapshot — 2026-11-22T08:46:29.075082+00:00
+
+**136 original requirements complete / 66 open. Six full closures remain to60.**
+F145 is complete after whole reference-programme operation on Mac/Linux, distinct
+review and protected/public source/guide delivery at69298f36. This is not an
+operating institution or actual accreditation. MT's optional selected-pair
+preview is live; no independent MT tag release is claimed.
+
+The FA-only private image-details helper and durable account-free PS verification
+downloads are integrated candidates. FA stays Planned, PA unchanged; actual
+current policy1.15/build/protected/live checks remain before activation. Root
+owns those checks and the public136/66 counter refresh. Image author/reviewer
+work is delivered; MCP runtime packaging continues in its isolated engineering
+lane with actual wheels and native notice/source mapping. Older snapshots below
+are historical, not current counts or permanent agent heartbeats.
+
+
 ## Current execution snapshot — 2026-11-22T06:41:00.311902+00:00
 
 Protected source cd3 and the public site are verified: **135 complete / 67 open;

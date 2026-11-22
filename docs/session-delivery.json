@@ -170,9 +170,9 @@
       "tag_id": "T-MT",
       "bot_id": "tag_mt",
       "actual_worker": null,
-      "status": "reviewed",
-      "checked_at": "2026-11-21T23:12:57.420401+00:00",
-      "current_component_status": "MT CLI and standalone browser practice source published with code review; no live MT verdict, independent accuracy or full original closure.",
+      "status": "published",
+      "checked_at": "2026-11-22T08:46:29.075082+00:00",
+      "current_component_status": "Selected-pair wording preview protected and live; full MT tag remains planned and independent validation open.",
       "blocking_acceptance": "Published literal wording and private choice workflows do not establish contextual use/mention, feasible alternatives, attribution, actual independent MT agreement/error rates or accepted tag mapping.",
       "next_task": "Preserve independent contextual labels, disagreement policy and full MT acceptance; maintain the whole-input contract."
     },
@@ -199,10 +199,10 @@
     {
       "tag_id": "T-FA",
       "bot_id": "tag_fa",
-      "actual_worker": null,
-      "status": "reviewed",
-      "checked_at": "2026-11-21T23:12:57.420401+00:00",
-      "current_component_status": "PNG and JPEG metadata-observation development source published independently; no image AI-origin verdict or full original closure.",
+      "actual_worker": "/root",
+      "status": "active",
+      "checked_at": "2026-11-22T08:46:29.075082+00:00",
+      "current_component_status": "Reviewed private PNG/JPEG details helper integrated in FA only; original FA remains20/planned, no tag issued. Root current-check/publication work active.",
       "blocking_acceptance": "Image/signature integrity, experimental adjudication and revision-diff observations do not yet deliver independently supported generation/edit origin or outside-session knowledge claims for an adopted workflow.",
       "next_task": "Implement positive event/manifest evidence and exact observation-window coverage without using absent human evidence or text differences as authorship proof."
     },
@@ -5983,7 +5983,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-22T07:46:12.309925+00:00",
+  "updated_at": "2026-11-22T08:46:29.075082+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -6698,36 +6698,36 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-22T07:46:12.309925+00:00",
+    "recorded_at": "2026-11-22T08:46:29.075082+00:00",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
-    "status": "F145 complete after actual protected/public delivery; MT preview live; image production integration and MCP runtime packaging underway.",
+    "status": "F145 whole reference workflow complete;136/66 ledger accepted. MT preview live. Image/PS provenance candidate integrated; fresh checks and publiccounter projection pending.",
     "assignments": [
       {
         "worker": "/root",
-        "role": "PM/integration",
-        "outcome": "Current integrated source verification, protected merge, actual reference/browser publication and exact original acceptance",
-        "status": "active"
-      },
-      {
-        "worker": "/root/seo",
-        "role": "task-list lead",
-        "outcome": "Literal-criteria audit for next fully finishable original, without transferring owner/human gates",
-        "status": "active_read_only"
-      },
-      {
-        "worker": "/root/share_debugger",
-        "role": "programme delivery engineer",
-        "outcome": "F145 source/reference discoverability and minimal independent CI workflow",
-        "status": "active_isolated_worktree"
+        "role": "PM/current image and scope integration",
+        "status": "active",
+        "outcome": "Fresh combined checks, protected release, live FA/source-download/counter verification."
       },
       {
         "worker": "/root/web_camo",
-        "role": "independent tag engineer",
-        "outcome": "Review next independent tag outcome and preserve initial detector/independent-evidence conditions",
-        "status": "active_planning"
+        "role": "image engineer and distinct registration reviewer",
+        "status": "completed",
+        "outcome": "FA-only source, actual normal-built Chromium/WebKit route and root policy/registry source review delivered."
+      },
+      {
+        "worker": "/root/share_debugger",
+        "role": "MCP runtime distribution engineer",
+        "status": "active",
+        "outcome": "Four-target real offline SDK bundle, applicable native grants/notices, exact artifact/SPDX/runtime proof; no current admission."
+      },
+      {
+        "worker": "/root/seo",
+        "role": "task-list and native source-obligation reviewer",
+        "status": "completed_available_for_review",
+        "outcome": "Original criteria audit, image peer proofs and CFFI/Rust scoped grant/notice data delivered."
       }
     ],
     "pending_F145_final_delivery": false,

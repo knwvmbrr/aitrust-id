@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-084630-align-current-scope-state-and-image-handoff-b8de0261
+
+Recorded 2026-11-22T08:46:30.308502+00:00 · Contributor: Codex PM /root; distinct registration reviewer /root/web_camo · change
+
+- **Changed.** Aligned every current scope-count alias and latest team snapshot with136complete66open, linked usable image/source verification guides and recorded distinct root-registration review.
+- **Evidence.** Actual accountability and session accounting pass; no current state/ledger count contradiction. The current source1.15/data-flow/64-command registration review is clear, while prior verified692 delivery remains a separate snapshot. [Change record](./runs/changes/2026-11-22-084630-align-current-scope-state-and-image-handoff-b8de0261.json).
+- **Not claimed.** All five combined-source receipts and next public counter/image/download activation remain pending. No FA/MT release, fullF057 or human/physical/legal acceptance is inferred.
+
+
 ### 2026-11-22-081125-register-private-image-current-delivery-3d25f2b7
 
 Recorded 2026-11-22T08:11:25.788568+00:00 · Contributor: Codex PM /root; image author /root/web_camo; source reviewer /root/seo · change
