@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-164504-mt-private-label-preparation
+
+Recorded 2026-11-22T16:45:04.200630+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Added a candidate four-axis MT annotation guide and complete private offline blank-packet, response validation and per-axis agreement/review-queue workflow.
+- **Evidence.** Fresh full23 focused engineering controls and source-stable11actual CLI cases pass; exact separate review clears corrected code/evidence. Whole original raw/NFC text/context and fixed rubric/source replay, neutral blank forms, complete responses, uncertain/insufficient counts, decisive coverage and original constant-alpha Unavailable behavior are explicit. Typed identity and lateGit failures are retained and corrected. [Change record](./runs/changes/2026-11-22-164504-mt-private-label-preparation.json).
+- **Not claimed.** Two synthetic response files, zero human raters; old19 and4affected executions remain historical. Candidate guide/0.55 remain unadopted; no human independence, sampling, adjudicated truth, accuracy, calibration, MT tag, full original closure, detector/model/network, shared source or live policy change. Private late failures disclose possible remaining output.
+
+
 ### 2026-11-22-161517-jpeg-credential-linux-working-delivery
 
 Recorded 2026-11-22T16:15:17.592246+00:00 · Contributor: Codex / web_camo · change

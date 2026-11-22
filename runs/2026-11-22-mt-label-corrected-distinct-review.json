@@ -1,0 +1,64 @@
+{
+  "profile": "mt-label-preparation-corrected-distinct-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T16:39:47.920640+00:00",
+  "reviewed_by": "/root/seo",
+  "base_commit": "8391161a354f3af1aa8fa8a5bc92c63bb0fc9aa8",
+  "current_source_sha256": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "docs/mt-annotation-guide.md": "0639bb151ebc542357efac67cefc4c3473eb59fe905531530d43214be7653acc",
+    "docs/mt-label-preparation-plan.md": "f060dcd0b8a2cca9aff6ec6923b415e62ac9061af2c7744aa40874e9bd6cd1a5",
+    "docs/mt-label-preparation.md": "f0a7ef75af4d8305afa28093ee05a8e74ef56b0b3b73df8304fe1375528fecc6",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+    "scripts/mt-label-preparation.py": "e79e2058f28735ea0c8c01fa7c390423dcb8b977dc1967bad249c1b6900d7a45",
+    "scripts/verify-mt-label-preparation.py": "770b965af10c2337945705508680b8c65a83ee9514b7834f89ee668ecd06319c",
+    "tests/test_mt_label_preparation.py": "23cdb72e8d732a3db40765213f9a839b8b748a10c260875ddb961af731e61159",
+    "tools/mt_label_io.py": "58333a54a9a3630b6ac010f202c0f1a4aef887a1a44f8d16dfe4b91455d3e533",
+    "tools/mt_label_preparation.py": "bee37abc9e185ba2a2954e8594e0cd348e261000957c018fc39781599e04249a",
+    "tools/reviewer_agreement.py": "4b7937b8210a5f0d2d1e2979822d18a1c7c48b738b6f419ce145da9cca069052"
+  },
+  "evidence_reviewed": [
+    {
+      "path": "runs/2026-11-22-mt-label-git-corrected-controls.json",
+      "sha256": "731663cbe5c87037e58be1e63beac83d4ff5d04fd72fd54979e2929f9b445b1f",
+      "scope": "Author4current affected groups; old19/11historical not relabeled as23current tests."
+    },
+    {
+      "path": "runs/2026-11-22-mt-label-git-corrected-cli.json",
+      "sha256": "6f79e264efb6a6e00e482fea4d96ef3247e8282a341154b7b1483b5eeb6d9d56",
+      "scope": "Fresh11actualCLI engineering cases, two authored synthetic rating files, zero people;13source bindings stable."
+    }
+  ],
+  "resolved_original_counterexample_sha256": "7f08e670426cd3735ca3d045ad3fb28164dcda804e17ca5c9ea2568cea06269e",
+  "reviewer_actual_affected_probe": {
+    "exact_late_git_marker_after_create": "OutputUncertain",
+    "remaining_private_output_honestly_disclosed": true,
+    "normal_private_output_complete": true,
+    "reserved_git_destination_refused_before_creation": true,
+    "scope": "One tiny owned synthetic Capture-only probe, no real Git repository or user text."
+  },
+  "reviewed_contract": [
+    "Prepare/validate/compare complete supplied-label workflow, original private input required again; whole canonical items/rubric/manifest/currentguide/source+raw/NFC bindings replayed, not self-attested mutable packet hashes.",
+    "Neutral unit ordinals and independently shuffled blank forms contain no predictions/originalsource IDs; no identity/independence/sampling authentication claimed.",
+    "Four separate fixed axes, complete labels/reasons and NFC codepoint spans; omission/duplicate/unknown/typed identity/coherent-rebind checks. No contextual correctness inferred from merely valid schema.",
+    "Existing unchanged nominal agreement consumed independently per axis; uncertainty/insufficient-context retained as categories, explicit decisive/joint coverage and private disagreement queue. Constant labels alphaUnavailable; candidate_met never promotes any accepted gate.",
+    "Private0700/0600 regular nofollow files and held ancestors with256FD cap; .git absence now rechecked including created output on check/successfulExit, reserved.git destination refuses beforemkdir.",
+    "Bounded directory enumeration and exact6packet members before responses, no other rater file read; private input2MiB/output8MiB, duplicate/depth/finite values and source consistency guards.",
+    "RawFD owned across fdopen(closefd=False), all closes attempted once and records cleared first; publication/lateclose/boundary failures explicitly OutputUncertain, no crashatomic rollback claim.",
+    "Console omits examples/reasons/IDs/paths/inputhash; only controlled aggregates; no detector/model, fetch/upload, autonomous labels, telemetry or real-label collection performed."
+  ],
+  "findings": [],
+  "unchanged_foundations": [
+    "tools/reviewer_agreement.py",
+    "protocol/normalization.py",
+    "protocol/unicode15-data.json"
+  ],
+  "limits": [
+    "Reviewer read source/guide/CLI proof and checked hashes plus exact tiny late.git/normal/reserved-destination probe only; no full19/23suite, complete CLI rerun, native/browser/install/network or root edit.",
+    "Source/Git facts do not verify real human independence or label truth. Eleven author CLI cases use two synthetic files and zero people; no MT alpha/accuracy/category error/calibration/independent label/release claim.",
+    "Guide/protocol/0.55 remain unadopted; no TMT/F019/F056/original closure.",
+    "Protected/main integration and public delivery not claimed by this review. Named task closure must respect the actual predeclared scope rather than retroactively narrowing it."
+  ]
+}
