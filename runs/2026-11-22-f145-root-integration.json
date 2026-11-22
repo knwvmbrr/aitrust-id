@@ -1,0 +1,271 @@
+{
+  "captured_at": "2026-11-22T06:30:17.054951+00:00",
+  "profile": "f145-exact-source-main-integration/v1",
+  "pass": true,
+  "author_commit": "228ebf458853628c78112204790bd70525ec5f5d",
+  "protected_base": "fbc4137c34d0bce76fbe532692e8ae522dfd0105",
+  "actual_focused_tests": 39,
+  "actual_focused_stdout_sha256": "f6524712c0367c6561a01870a60c9f690797032e080e1c3992fafdea7513875c",
+  "actual_private_workflow_commands": 30,
+  "actual_workflow_report_sha256": "553bfbc36008b6544c52b08511c73e778fc82c183e1327b301e1c8cfc121e873",
+  "actual_workflow": {
+    "profile": "F145-actual-reference-workflow/v1",
+    "pass": true,
+    "captured_at": "2026-11-22T06:09:27.102116+00:00",
+    "performed_by": "Codex /root/seo",
+    "source_sha256": {
+      "tools/certification_programme.py": "20b8fdca81a5c9fd79230dfb71df9bbc94352cdc788779f2fc2384b0d52143ad",
+      "scripts/certification-programme.py": "0b1b37dd258fdb46a0cd36a41ab8e66b57c9965b31b46fd43a1474f41351a4cc",
+      "scripts/verify-certification-programme.py": "2ae5e1f8ca6ebb66865869c4e1616be98ba2d17e8ac0455d61dd117bcf22df76",
+      "tests/test_certification_programme.py": "683ce82d651869a30f5322bcdd9d0df510afdccb1c291318fff933a693290c6e",
+      "eval/certification-programme.json": "852df2d38ba5de55b2ffd0e8bbcc0fd293d27579ca1171c5528c95e1773588a6",
+      "docs/certification-programme-plan.md": "b99b6536b728c6f54714e9d4a7b84f28ccb0f8ba1de4ae3ffea95a2d4fdaaad1",
+      "docs/certification-programme.md": "91b0f17b0c88bc1cc7a65561152ea95ced811e2ed50152ee74b1f230e1a0af14",
+      "docs/certification-programme-guide.md": "5e78d2e28a924e2b327966c3d5d2d11b39943ce5b674b0b8af4316967c5e8b59"
+    },
+    "source_unchanged": true,
+    "actual_commands": 30,
+    "controls": [
+      {
+        "case": "invented_practice",
+        "exit": 0,
+        "state": "PRACTICE_APPLICATION_SAVED",
+        "stdout_sha256": "e58712b5d608da99e6bf3ad79701293021caa2607663a6931a929cd6d933c269",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "start_complete_documentation",
+        "exit": 0,
+        "state": "APPLICATION_RECORDED",
+        "stdout_sha256": "9492a5b828eb357f9207bc38610ed42577b09d51e5beed64a6f3040678395e9f",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "assess_recommend",
+        "exit": 0,
+        "state": "ASSESSOR_RECOMMENDED",
+        "stdout_sha256": "47aa45b3a4eb0d85bfdab7440df56efa29ee4ac6d8b9e207cb41f008550cb6df",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "decide_complete",
+        "exit": 0,
+        "state": "REFERENCE_REVIEW_COMPLETE",
+        "stdout_sha256": "069838d6be2fa88d501ab2dfb55246c259b52d1c35de7e38279677b15e4d9199",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "inspect_complete",
+        "exit": 0,
+        "state": "REFERENCE_REVIEW_COMPLETE",
+        "stdout_sha256": "069838d6be2fa88d501ab2dfb55246c259b52d1c35de7e38279677b15e4d9199",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "appeal",
+        "exit": 0,
+        "state": "APPEAL_PENDING",
+        "stdout_sha256": "26a669a831a511e44cbc475654f5c591c566eb745362d2e41bed84fdf2dc63b6",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "appeal_decide_remand",
+        "exit": 0,
+        "state": "CHANGES_REQUIRED",
+        "stdout_sha256": "36c9103ae29197e011c7e84447abaaceebc56023b6720b441e6f1f09b5d0ed93",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "correct",
+        "exit": 0,
+        "state": "CHANGES_REQUIRED",
+        "stdout_sha256": "d288f2e92a675321b45e721dc14973cf21658a8a877f91a11e23d1d99c82ce52",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "assess_recommend",
+        "exit": 0,
+        "state": "ASSESSOR_RECOMMENDED",
+        "stdout_sha256": "eefaf4aee018e6598bab362382589466c6a31122b21c5a60d940c951f0aa5900",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "decide_complete",
+        "exit": 0,
+        "state": "REFERENCE_REVIEW_COMPLETE",
+        "stdout_sha256": "dc3dd03b5c44f9fb480d9243e3386246615f7efb522fc5ae7f20a7bf7cdd2bd8",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "suspend",
+        "exit": 0,
+        "state": "SUSPENDED",
+        "stdout_sha256": "ac00813739bc6f6bf2945fb67bf6b288593b3616a474e0f8fec72d44f8077ecc",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "assess_recommend",
+        "exit": 2,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "48086cce7be979956149717e7fca8a99df772f812a4ef90f1237e78a74fa0334",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "correct",
+        "exit": 0,
+        "state": "CHANGES_REQUIRED",
+        "stdout_sha256": "91c35a9318f94b29f95888114f0f9230fef3eebca416dfe0078b6fa2a56bbf80",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "assess_recommend",
+        "exit": 0,
+        "state": "ASSESSOR_RECOMMENDED",
+        "stdout_sha256": "3d0460288e8c1d8bbc4ea98ff61b9ff38ebe9277c6cb83230a031deaeae4f61d",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "decide_complete",
+        "exit": 0,
+        "state": "REFERENCE_REVIEW_COMPLETE",
+        "stdout_sha256": "ee2858a28b314c6bcdd83ea89aee95b2c57b247ff49803197f24b994d4252685",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "renew",
+        "exit": 0,
+        "state": "CHANGES_REQUIRED",
+        "stdout_sha256": "86c3bf53dde6e1447182ff2c1430777669458e060ab5329dc34dc02ef5c56600",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "decide_complete",
+        "exit": 2,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "48086cce7be979956149717e7fca8a99df772f812a4ef90f1237e78a74fa0334",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "assess_recommend",
+        "exit": 0,
+        "state": "ASSESSOR_RECOMMENDED",
+        "stdout_sha256": "e111942e75a4a436f5d1a3e2ed209c7622303e217e5973fcdec03cdc12dbf059",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "decide_complete",
+        "exit": 0,
+        "state": "REFERENCE_REVIEW_COMPLETE",
+        "stdout_sha256": "1ce74ea703c6df51412ecbb1bb53dbf5bd006f3d8aa440f68adfa78c4d8e5b91",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "withdraw",
+        "exit": 0,
+        "state": "WITHDRAWN",
+        "stdout_sha256": "cfcb4d5c88c23f14ab38a81061102ea687070e41b723b9d68b485fb646ec106a",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "assess_recommend",
+        "exit": 2,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "48086cce7be979956149717e7fca8a99df772f812a4ef90f1237e78a74fa0334",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "withdrawn_same_id_revalidation_refuses",
+        "exit": 2,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "48086cce7be979956149717e7fca8a99df772f812a4ef90f1237e78a74fa0334",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "fresh_after_withdrawal_no_inherited_actions",
+        "exit": 0,
+        "state": "APPLICATION_RECORDED",
+        "stdout_sha256": "9492a5b828eb357f9207bc38610ed42577b09d51e5beed64a6f3040678395e9f",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "incomplete_application_remains_visible",
+        "exit": 0,
+        "state": "APPLICATION_RECORDED",
+        "stdout_sha256": "e17816eca7158b65f2f7b9e647069330342481be667fd0de4b48beafec0c2836",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "tag-accuracy_not_satisfied_by_28",
+        "exit": 0,
+        "state": "APPLICATION_RECORDED",
+        "stdout_sha256": "a7483a38a324841e740020d0820ff22cf7ebf40a6697f76d48caaa86064a9bbf",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "organization-service_not_satisfied_by_28",
+        "exit": 0,
+        "state": "APPLICATION_RECORDED",
+        "stdout_sha256": "626f66172c90cc248112c24fda7070ba0d2aec4f18e6ab63e839c4021917dc6f",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "no_overwrite",
+        "exit": 2,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "48086cce7be979956149717e7fca8a99df772f812a4ef90f1237e78a74fa0334",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "forged_authority_refused",
+        "exit": 2,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "48086cce7be979956149717e7fca8a99df772f812a4ef90f1237e78a74fa0334",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "stale_source_refused",
+        "exit": 2,
+        "state": "UNAVAILABLE",
+        "stdout_sha256": "48086cce7be979956149717e7fca8a99df772f812a4ef90f1237e78a74fa0334",
+        "stderr_bytes": 0
+      },
+      {
+        "case": "personal_PS_after_optional_refusals",
+        "exit": 0,
+        "state": "FINDING",
+        "stdout_sha256": "4d88750f2f2ce09d4cae6a14d6086d2d508e77d096a3301b6596b1d52f636317",
+        "stderr_bytes": 0
+      }
+    ],
+    "private_parent_mode": "0700",
+    "private_files_mode": "0600",
+    "temporary_records_removed": true,
+    "synthetic_qualification_and_role_documents": true,
+    "existing_28_interface_evidence_consumed_not_reexecuted": {
+      "path": "runs/2026-11-22-conformance-worker-ownership.json",
+      "sha256": "98616922bcb78d07a8608310f70edd7a1c0153ef62245621ecc52e6999047efb"
+    },
+    "accreditation_granted": false,
+    "certification_granted": false,
+    "real_role_identity_or_independence_verified": false,
+    "mark_or_legal_adoption": false,
+    "independent_accuracy_evidence": false,
+    "full_original_closure_claimed": false,
+    "platform": "darwin",
+    "python": "3.12.14",
+    "elapsed_seconds": 1.808,
+    "limits": [
+      "Local actual CLI, not browser/Linux/hosted/physical/human qualification proof.",
+      "Reference review is not certification, legal clearance, actual role adoption, all protocol behavior or independent accuracy.",
+      "Parent owns protected/public delivery and original completion; another reviewer must inspect current source and execution."
+    ]
+  },
+  "independent_review": "runs/2026-11-22-f145-distinct-review.json",
+  "merge_conflict": "CHANGELOG.md only; preserved both actual attributed entries",
+  "institution_operating": false,
+  "accreditation_granted": false,
+  "legal_or_mark_authority_granted": false,
+  "independent_tag_accuracy_evidence": false,
+  "original_requirement_count_changed": false,
+  "protected_public_design_delivery_pending": true
+}

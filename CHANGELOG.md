@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-063017-integrate-complete-reference-programme-151ab741
+
+Recorded 2026-11-22T06:30:17.151077+00:00 · Contributor: Codex PM /root; author /root/seo; reviewer /root/web_camo · change
+
+- **Changed.** Integrated the complete reviewed reference certification programme, preserving exact runtime and both changelog histories.
+- **Evidence.** Current integrated39focused controls and30actual private workflow commands pass; the selected interface evidence is kept separate from tag accuracy and organization service claims. [Change record](./runs/changes/2026-11-22-063017-integrate-complete-reference-programme-151ab741.json).
+- **Not claimed.** No institution, actual accreditation, legal/mark authority or human identity is established. The original ledger remains unchanged pending exact full acceptance and protected/public delivery.
+
+
+### 2026-11-22-054137-deliver-complete-reference-certification-programme-ba315aec
+
+Recorded 2026-11-22T05:41:37.156328+00:00 · Contributor: Codex /root/seo; distinct reviewer /root/web_camo · change
+
+- **Changed.** Delivered the complete nonoperating F145 reference-programme design and consumed private application/review/appeal/correction/renewal/withdrawal workflow, with exact source/programme/evidence bindings.
+- **Evidence.** Actual30 current CLI controls passed, including separate declared-role decisions, contested/corrected outcomes, unsupported-scope/source/authority/no-overwrite refusals and personal PS recovery. Distinct reviewer ran four affected controls and three private CLI checks. All original criteria unchanged. [Change record](./runs/changes/2026-11-22-054137-deliver-complete-reference-certification-programme-ba315aec.json).
+- **Not claimed.** No actual accreditation, institution, role identity, mark/legal adoption, independent accuracy or tag release.37 earlier-source controls and8 affected current controls are separately recorded; no all39 current claim. Protected/public delivery and original counters remain parent-owned and pending.
+
+
 ### 2026-11-22-055521-record-current-delivery-engineering-packet-f5ca3c80
 
 Recorded 2026-11-22T05:55:21.266447+00:00 · Contributor: Codex PM /root · change

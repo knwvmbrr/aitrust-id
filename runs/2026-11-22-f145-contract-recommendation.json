@@ -1,0 +1,168 @@
+{
+  "profile": "F145-original-contract-preimplementation-recommendation/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T05:11:53.810549+00:00",
+  "reviewed_by": "/root/seo",
+  "review_kind": "Read-only original-contract interpretation and proposed acceptance; not implemented or independently operating programme.",
+  "original_id": "F-145",
+  "original_acceptance_sha256": "0abadea701d6e508c65fd2a59a96755a715d80ed4d7a85848df22a37b4de01d5",
+  "baseline": "40d85dfabcd6a3d97b84977992d0523b0995c0d9",
+  "unchanged_original_criteria": {
+    "master": {
+      "baseline_job": "Specify and deliver certification programme \u2014 what a certifier must test, and how one is accredited.",
+      "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
+      "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation."
+    },
+    "required_acceptance": [
+      "Deliver Certification programme \u2014 what a certifier must test, and how one is accredited. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
+    ]
+  },
+  "provenance": [
+    {
+      "commit": "a0428c46",
+      "path": "docs/master-scope.json",
+      "finding": "Initial master baseline job/outcome/acceptance equal retained current F145 clauses."
+    },
+    {
+      "commit": "1517302e",
+      "path": "docs/scope-progress.json",
+      "finding": "First retained required_acceptance is the same delivery/publisher-separation/documented-responsibilities sentence; no unconditional operating institution, accredited applicant or outside-person task."
+    },
+    {
+      "commit": "127ffcf",
+      "path": "docs/scope-delivery.json",
+      "finding": "Package establishes preparatory governance work and conditional professional/filing/accreditation/taxonomy claim boundaries; package completion is not inferred from one member."
+    },
+    {
+      "commit": "b54b4a0f",
+      "path": "GOVERNANCE.md",
+      "finding": "Current future-institution paragraph preserves qualified review/adoption for asset transfer, certification-mark ownership and conflict rules; a draft does not establish operation."
+    }
+  ],
+  "source_sha256": {
+    "GOVERNANCE.md": "97964ebd616af7b3c0f4f4c1fa36f728038f9101677d13f7ced277e2a0f69c7c",
+    "MAINTAINERS.md": "e6f73d49932e3c1ded3e79e5de7796a2ae0ed9f21105f9809dbc41ae3469d975",
+    "DECISIONS.md": "b1b96b462d67b9773856e9e3c992b48de01df04a2dfc72968a94fb0ead26187e",
+    "docs/mark-usage.md": "579611c0c16371c73ed4ef168812dfaec2861834c7a7754c03f925bdfe9237e1",
+    "docs/scope-delivery.json": "45099ed70bd388d557c43bca64fcbc9b37ef523a9135af3f50a47e1fe251271f",
+    "docs/conformance-runner.md": "45a8f2758c877c0c2fa7699bfe5a5451163ba1c31f6f9bb1cd99bdb9b563a687",
+    "docs/conformance-recusal.md": "8414b75583ca8ede586bf6a226501312703779b8d68caf32b16409e9f1b01f97",
+    "docs/conformance-acceptance-plan.md": "16dfba78d295d98a566e3486181c5e9584b59e44016b37f22e30944a2564f702",
+    "eval/conformance/assertion-v1.json": "aa30aef56eeff6657b68b315dc4f64b1756ee9eb8c9c54db76159a633c09b745",
+    "tools/conformance_vectors.py": "fa06f80172fb314876c7d202c67888a888d866097206f28dbbdea23737b55d45",
+    "tools/conformance_recusal.py": "af0b047e8d4d708c5232bc4abfd1b92973e5b0e4a12d326056871144ce82df43"
+  },
+  "literal_constraints": [
+    {
+      "path": "docs/scope-delivery.md:1154",
+      "quote": "Codex implements; Claude reviews claims; Michael accepts; independent human/professional judgment is obtained where required.",
+      "interpretation": "Do not invent accepted independent certifiers, real human judgments or Michael votes. A technical design review is identified as such."
+    },
+    {
+      "path": "docs/scope-delivery.md:1157",
+      "quote": "Prepare qualified review of formation, mark usage, privacy and certification boundaries.",
+      "interpretation": "Complete a concrete review-ready boundary/questions/evidence packet. This does not itself require or supply a professional legal opinion for an unoperated reference design."
+    },
+    {
+      "path": "docs/scope-delivery.md:1162",
+      "quote": "Professional legal conclusions require qualified review, not agent assurance.",
+      "interpretation": "Any legal conclusion remains withheld until qualified review."
+    },
+    {
+      "path": "docs/scope-delivery.md:1163",
+      "quote": "No filing/asset transfer or accredited certifier is claimed without documentary evidence.",
+      "interpretation": "Conditional prohibition on unsupported claims, not a requirement to file, transfer assets or accredit a real person before documenting the programme."
+    },
+    {
+      "path": "docs/scope-delivery.md:1164",
+      "quote": "No live taxonomy adoption before the applicable owner/RFC decision.",
+      "interpretation": "No taxonomy, tag code, floor or production allowlist change."
+    },
+    {
+      "path": "GOVERNANCE.md:24",
+      "quote": "Any asset transfer, certification-mark ownership and conflict rules require a separate qualified review and actual adoption.",
+      "interpretation": "Do not adopt or operate future institutional ownership/conflict authority through this delivery. Document the future decision gates and reuse the already documented recusal rule without pretending new institutional adoption."
+    },
+    {
+      "path": "GOVERNANCE.md:25",
+      "quote": "No certification program or charitable status is operating merely because a draft exists.",
+      "interpretation": "A complete delivered reference design must remain explicitly nonoperating; no live accreditation/certificate/mark permission follows."
+    },
+    {
+      "path": "docs/mark-usage.md:75",
+      "quote": "A future programme needs adopted standards, an accountable mark holder, actual certifier qualifications, impartial decisions, appeals and explicit licenses.",
+      "interpretation": "Specify each required process, evidence and responsible role in the design; operating any such programme still requires those actual inputs."
+    }
+  ],
+  "judgment": {
+    "operating_institution_unconditionally_required_by_F145": false,
+    "actual_accredited_certifier_unconditionally_required_by_F145": false,
+    "earlier_blanket_operating_legal_blocker_overbundled": true,
+    "complete_contestable_reference_programme_design_is_plausible_full_original_job": true,
+    "current_original_complete": false,
+    "reason_not_complete_now": "Current mark-use/self-declaration, interface vector and recusal tools explicitly do not deliver the complete certifier test and accreditation process. No full programme specification/application-review workflow or supported/refused end-to-end evidence is present.",
+    "required_prior_to_implementation": "Parent records this technical design acceptance after distinct review; it authorizes preparation/testing only, not live institution/policy/mark/accreditation adoption."
+  },
+  "proposed_full_deliverable": {
+    "programme_specification": [
+      "Versioned scope, actual individual publisher, prospective institution/mark holder clearly unselected, accountable preparation/review/appeal roles and authority limits.",
+      "Closed claim-scope matrix: selected protocol/interface conformance; per-tag empirical validation; private organization-policy/service scope. No borrowing one scope\u2019s evidence to grant another.",
+      "What a certifier must examine: exact implementation/source/configuration, supported/unsupported/failure/privacy/independence cases, source-bound evidence integrity and reproducible procedure. Per-tag independent labels, accepted numeric gates and uncertainty/calibration remain required where tag accuracy is claimed.",
+      "How a certifier is accredited: documented competence and scope, assessor independence/disclosures, evidence review, separation of assessor and decision-maker, review/appeal/complaint, expiry/renewal/scope change/suspension/revocation, record custody and explicit future authority/adoption prerequisites. No invented actual appointments.",
+      "Complete applicant/operator/reviewer instructions, explicit access/cost and free personal workflow boundary, private evidence minimization, withdrawal/correction and contestability.",
+      "Boundary annex prepared for qualified review of mark use, ownership, certification wording and privacy. No legal assurance, fees/mark license or actual institution is adopted."
+    ],
+    "executable_component": "A bounded offline application/evidence checklist verifier for the versioned reference design. Exact approved profile/source hashes, closed typed inputs and required field/check coverage; no user-selected argv, network, badge, signature-based truth, imported approval flags or hidden automatic certification. Report checklist completeness separately from unresolved independent/human/legal decisions.",
+    "output_meaning": "READY_FOR_INDEPENDENT_REVIEW describes a complete reference application/checklist only; INCOMPLETE lists fixed missing requirements; UNAVAILABLE refuses malformed/tampered/unknown source/profile. All certification/accreditation/mark_authorization/independent_accuracy flags stay false. No claim is admitted merely because the checklist is complete.",
+    "consumer": "The documented certifier preparation/review workflow must actually consume this output and let a reader inspect/contest all requirements; an unconsumed report or new wrapper alone is insufficient.",
+    "possible_owned_paths": [
+      "docs/certification-programme.md",
+      "docs/certification-programme-boundaries.md",
+      "eval/certification-programme.json",
+      "tools/certification_programme.py",
+      "scripts/check-certification-programme.py",
+      "tests/test_certification_programme.py"
+    ]
+  },
+  "preimplementation_acceptance": [
+    {
+      "id": "supported_complete_reference_case",
+      "required": "Execute a fully populated explicitly synthetic application for the adopted reference design, retaining exact source/profile/evidence identities and readable scope-specific outcomes. Inspect that every programme responsibility and future accreditation step is represented, versioned and contestable; no real accreditation is asserted."
+    },
+    {
+      "id": "supported_interface_scope",
+      "required": "An eligible software-interface application can include all14 versioned vectors under both profiles (28 checks), with exact source/digests and supported/failure outcomes. Describe these as selected interface checks only, never full protocol proof, independent accuracy, tag release, or private organization-service certification."
+    },
+    {
+      "id": "independent_accuracy_missing",
+      "required": "A tag-accuracy application with only those28 interface checks remains incomplete; missing accepted tag gates, independent labels/holdout/error analysis/calibration cannot be fabricated, satisfied by author fixtures or silently marked not-applicable."
+    },
+    {
+      "id": "organization_scope_not_borrowed",
+      "required": "Personal PS/protocol results cannot satisfy private organization policy/service permissions, tenant boundaries or custom job claims; explicitly declare absent scope and withhold those claims."
+    },
+    {
+      "id": "refused_case",
+      "required": "Execute incomplete evidence, source/profile drift, unknown/duplicate/nonfinite/oversized fields, forged authority/accreditation fields and conflicting/unfilled review role cases. No approved/certified/accuracy result may be emitted, and unrelated personal workflows stay unchanged."
+    },
+    {
+      "id": "decision_and_dispute",
+      "required": "Demonstrate separate application, assessor recommendation, contest/correction/appeal and final authority prerequisite. A signed record or multiple keys does not prove real-person independence or an adopted certifier role."
+    },
+    {
+      "id": "delivery_and_review",
+      "required": "Distinct source/claim review plus versioned actual supported/refused execution and normal protected/public publication of the complete programme design/instructions. Closure recommendation must quote unchanged original criteria and state nonoperating limits. No counter change before complete evidence."
+    }
+  ],
+  "no_original_scope_reallocation": [
+    "F143 actual clearance/mark/assignment decisions remain untouched.",
+    "F075/F076 actual institution/role adoption and other governance obligations remain untouched.",
+    "F108 independent accuracy and outside-person requirements remain untouched.",
+    "WP-GOVERNANCE as a whole is not completed by F145.",
+    "F145 design delivery must not be relabeled as an accredited institution or100-percent tag release."
+  ],
+  "execution_performed": false,
+  "original_counters_changed": false,
+  "root_files_changed": false,
+  "recommendation_status": "Ready for another reviewer to challenge before implementation; not an original completion recommendation."
+}
