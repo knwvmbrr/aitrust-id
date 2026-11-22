@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-032350-restore-full-synthid-tag-outcome-17ef6def
+
+Recorded 2026-11-22T03:23:50.430311+00:00 · Contributor: Codex PM /root; substantive PR review and independent /root/seo correction · change
+
+- **Changed.** Withdrew the premature fullF155 completion claim and restored its original supported-tag workflow acceptance; retained the functioning research-input component and all historical evidence.
+- **Evidence.** OnlyN010 andN001 are full new original closures:135 complete,67 open. The existing tag code allowlist remains unchanged; unbound statistics do not issue tags. [Change record](./runs/changes/2026-11-22-032350-restore-full-synthid-tag-outcome-17ef6def.json).
+- **Not claimed.** Earlier fullF155 reviews/acceptance records remain historical and explicitly superseded. Current protocol/website receipts require fresh metadata validation; target60 not met.
+
+
 ### 2026-11-22-031259-verified-reference-artifact-boundaries-3aa83df4
 
 Recorded 2026-11-22T03:12:59.290586+00:00 · Contributor: Codex PM /root; artifact correction review /root/seo · change

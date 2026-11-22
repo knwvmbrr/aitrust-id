@@ -10593,30 +10593,25 @@
         "id": "F-155",
         "kind": "requirement",
         "title": "SynthID and vendor watermarking",
-        "percent_complete": 100,
+        "percent_complete": 60,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
-          "executable_checks",
-          "selected_integration",
-          "final_acceptance"
+          "executable_checks"
         ],
-        "audited_at": "2026-11-22T02:43:28.345017+00:00",
-        "checked_by": "Codex PM /root; distinct original-contract review /root/seo",
+        "audited_at": "2026-11-22T03:22:32.942149+00:00",
+        "checked_by": "Codex PM /root after substantive PR147 original-outcome review",
         "implemented_by": [
           "Codex /root/web_camo — official SynthID vendor-input CLI, owned-worker correction and actual install/use/removal, commit13515ae11817ad890db3d31a1264a6e48055e652; Codex PM /root exact integration."
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [
-          "/root/web_camo",
-          "Codex PM /root integration and delegated technical acceptance"
-        ],
-        "completed_at": "2026-11-22T02:43:28.345017+00:00",
-        "completion_timestamp_basis": "Actual complete functioning supported/failure workflow, exact current source and different full-original reviewer; protected publication is separately tracked before delivery.",
-        "next_fix": null,
-        "next_owner": null,
+        "completed_by": [],
+        "completed_at": null,
+        "completion_timestamp_basis": null,
+        "next_fix": "Integrate supported vendor watermark/origin evidence into its explicit tag workflow, with accepted claim boundaries, subject binding and claim-specific validation before issuance. The working unbound research statistic is a component; it does not complete supported tag outcomes.",
+        "next_owner": "Codex",
         "evidence": [
           "docs/scope-delivery.md",
           "runs/2026-11-21-f155-synthid-full-contract-independent-review.json",
@@ -10624,18 +10619,23 @@
           "runs/2026-11-21-synthid-current-cli.json",
           "runs/2026-11-21-synthid-install-removal-current.json",
           "runs/2026-11-21-synthid-final-portability-and-guide.json",
-          "runs/2026-11-22-f155-full-original-acceptance.json"
+          "runs/2026-11-22-f155-full-original-acceptance.json",
+          "runs/2026-11-22-f155-original-completion-correction.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Full original functioning software job accepted with source-bound execution and a distinct review. No complete detection tag, independent accuracy, live protocol adoption or legal/human acceptance is inferred.",
-        "required_acceptance": [],
-        "queue": "completed",
-        "fulfilled_required_acceptance": [
+        "evidence_scope": "Actual optional SDK input component works and remains separately evidenced. Full F-155 tag-workflow outcome is open; earlier full completion claim was withdrawn without changing the original acceptance.",
+        "required_acceptance": [
           "Deliver SynthID and vendor watermarking. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
         ],
+        "queue": "open",
         "completion_limits": [
           "Only declared generated token-ID research configuration on actually executed Macarm64/CPython3.12 platform.",
           "No Gemini production key, text-to-token binding, origin/truth verdict, FA/PA or watermark-tag release, independent accuracy or global license clearance."
-        ]
+        ],
+        "withdrawn_completion": {
+          "original_acceptance_record": "runs/2026-11-22-f155-full-original-acceptance.json",
+          "correction": "runs/2026-11-22-f155-original-completion-correction.json",
+          "reason": "A working unbound SDK research statistic is not yet a supported tag workflow. The accepted input-only engineering contract did not authorize narrowing the original outcome. No source or schema claim can turn an empty tag result into completed tag support."
+        }
       }
     },
     {

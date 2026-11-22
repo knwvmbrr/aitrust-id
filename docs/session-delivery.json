@@ -113,7 +113,7 @@
   },
   "counters": {
     "finished_scoped_tasks": 22,
-    "original_requirement_closures": 4
+    "original_requirement_closures": 3
   },
   "goals": {
     "minimum_finished_named_deliverables": 1,
@@ -1186,16 +1186,16 @@
       }
     },
     {
-      "task_id": "session-f155-full-original",
+      "task_id": "session-f155-vendor-input-component",
       "original_ids": [
         "F-155"
       ],
       "worker": "/root/web_camo",
       "status": "closed",
-      "deliverable": "Official bounded SynthID research input via existing CLI; actual selected-platform install/use/removal, full SDK parity and independent personal checks.",
+      "deliverable": "Working optional official SynthID research-input component; full F155 supported-tag outcome remains open.",
       "done_evidence": [
-        "Complete current supported/failure execution, versioned sources and privacy/isolation controls.",
-        "Different full original-contract review; unchanged master and retained acceptance hash."
+        "Actual selected-platform SDK install/use/removal and independent PS operation.",
+        "Only this bounded input component is complete; original tag-workflow acceptance retained."
       ],
       "registered_at": "2026-11-22T02:43:28.345017+00:00",
       "architecture": "docs/synthid-vendor-input-plan.md",
@@ -1206,12 +1206,12 @@
         "integration_completed_by": "/root",
         "evidence": [
           {
-            "path": "runs/2026-11-22-f155-full-original-acceptance.json",
-            "sha256": "82b5bc7e2738cb5afd570c22c6c75ea8b56f1e7fc6498211d3dacd1e930c62fd"
+            "path": "runs/2026-11-22-f155-root-integration.json",
+            "sha256": "4e670fbf6d090f6c47ca2ab3bfc97d4c549a5e410365cf37313f935a5d409479"
           },
           {
-            "path": "runs/2026-11-21-f155-synthid-full-contract-independent-review.json",
-            "sha256": "2818b49090c129e4c553f8c9443c86dc72e31e0b02a277592d1d3075b387f580"
+            "path": "runs/2026-11-22-f155-original-completion-correction.json",
+            "sha256": "4b56ee67302eae486d0102b54909b9cc079ad047ccc21f084c65f04b66e5ae17"
           }
         ]
       }
@@ -5344,23 +5344,6 @@
           "sha256": "c3c32fdbff95e184583c990c0462909291b885ac7463f57e855d1035c9ea002d"
         }
       ]
-    },
-    {
-      "id": "F-155",
-      "status": "verified_complete",
-      "reviewed_by": "/root/seo",
-      "verified_at": "2026-11-22T02:43:28.345017+00:00",
-      "original_acceptance_sha256": "3d22d11ab22ee4f2aa4f32778a8695522c6ea92534b028873bdadcc771e5e665",
-      "evidence": [
-        {
-          "path": "runs/2026-11-22-f155-full-original-acceptance.json",
-          "sha256": "82b5bc7e2738cb5afd570c22c6c75ea8b56f1e7fc6498211d3dacd1e930c62fd"
-        },
-        {
-          "path": "runs/2026-11-21-f155-synthid-full-contract-independent-review.json",
-          "sha256": "2818b49090c129e4c553f8c9443c86dc72e31e0b02a277592d1d3075b387f580"
-        }
-      ]
     }
   ],
   "primary_original_target": {
@@ -5928,7 +5911,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-22T02:43:28.345017+00:00",
+  "updated_at": "2026-11-22T03:22:32.942149+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -6441,12 +6424,12 @@
     "baseline_original_open": 69,
     "requested_original_open": 60,
     "required_new_original_closures": 9,
-    "actual_new_original_closures": 3,
+    "actual_new_original_closures": 2,
     "pm": "/root",
     "tasks": [
       {
         "worker": "/root",
-        "outcome": "Three full originals accepted; publish integrated registry, protocol migration and optional vendor input through normal protected source and updated site.",
+        "outcome": "Two full originals accepted plus an optional vendor-input component; normal protected publication pending.",
         "status": "Final source-bound checks/publication in progress; target60 unmet."
       },
       {
@@ -6469,8 +6452,8 @@
     "acceptance_changes_permitted": false,
     "blocked_owner_and_independent_human_gates": "Skip for implementation; preserve in original acceptance and count.",
     "audit_evidence": "docs/nov21-autonomous-closure-audit.json",
-    "full_autonomous_original_candidates_found": 3,
-    "target_status": "NOT MET:66 originals remain open;6 more full closures needed.",
+    "full_autonomous_original_candidates_found": 2,
+    "target_status": "NOT MET:67 originals open;7 full closures remain.",
     "named_software_outcomes": [
       {
         "id": "MT-additive-CLI",
@@ -6590,9 +6573,9 @@
         "original_closure": false
       }
     ],
-    "updated_at": "2026-11-22T02:52:32.881613+00:00",
+    "updated_at": "2026-11-22T03:22:32.942149+00:00",
     "published_development_outcomes": 6,
-    "strict_target_status": "NOT MET:66 originals open;6 full closures remain; minimum milestone is separate.",
+    "strict_target_status": "NOT MET:67 originals open;7 full closures remain; minimum milestone is separate.",
     "publication_status": "Local functioning acceptance complete; final source-bound checks and normal protected source publication pending.",
     "prior_tasks_snapshot": [
       {
@@ -6616,6 +6599,29 @@
         "status": "PNG/JPEG development source published; operator and strict-target corrections implemented and separately reviewed. Worker finished."
       }
     ],
-    "candidate_audit_correction": "Earlier zero-candidate audit was too broad. Original-contract provenance and complete implementations support N010,N001,F155; full202 IDs/remaining human gates preserved."
-  }
+    "candidate_audit_correction": "Original-contract provenance supports fullN010 andN001. F155input component is delivered but originaltag-workflow outcome remains open; earlier fullF155claim withdrawn."
+  },
+  "withdrawn_closure_recommendations": [
+    {
+      "recommendation": {
+        "id": "F-155",
+        "status": "verified_complete",
+        "reviewed_by": "/root/seo",
+        "verified_at": "2026-11-22T02:43:28.345017+00:00",
+        "original_acceptance_sha256": "3d22d11ab22ee4f2aa4f32778a8695522c6ea92534b028873bdadcc771e5e665",
+        "evidence": [
+          {
+            "path": "runs/2026-11-22-f155-full-original-acceptance.json",
+            "sha256": "82b5bc7e2738cb5afd570c22c6c75ea8b56f1e7fc6498211d3dacd1e930c62fd"
+          },
+          {
+            "path": "runs/2026-11-21-f155-synthid-full-contract-independent-review.json",
+            "sha256": "2818b49090c129e4c553f8c9443c86dc72e31e0b02a277592d1d3075b387f580"
+          }
+        ]
+      },
+      "withdrawn_at": "2026-11-22T03:22:32.942149+00:00",
+      "correction": "runs/2026-11-22-f155-original-completion-correction.json"
+    }
+  ]
 }

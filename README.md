@@ -572,7 +572,7 @@ Optional [encrypted key backup and recovery](docs/key-recovery.md) runs offline,
 
 [Offline assertion migration](docs/assertion-migration.md) converts complete unsigned records between the existing format and a separate complete-identity format. Only the version changes; signed or incomplete history is refused. Production consumers stay on `0.1.0`.
 
-The optional [SynthID research input](docs/synthid-vendor-input.md) runs the pinned official reference computation on explicitly supplied generated token IDs. It is separate from personal text and tag results. It does not check pasted Gemini text, authenticate origin or issue a watermark tag. Personal PS keeps working if the optional SDK is missing or removed.
+The optional [SynthID research input](docs/synthid-vendor-input.md) runs the pinned official reference computation on explicitly supplied generated token IDs. It is separate from personal text and tag results. It does not check pasted Gemini text, authenticate origin or issue a watermark tag. Personal PS keeps working if the optional SDK is missing or removed. [F-155 remains open](docs/synthid-vendor-input-status.md) until this evidence supports its validated tag workflow.
 
 The [staging pipeline timing tool](docs/pipeline-performance.md) measures the complete local redaction-plus-tagging route with synthetic inputs. Its 12 measured profiles keep phone/emulated timing, detector-only speed and full service duration separate; no latency budget or independent accuracy is claimed.
 

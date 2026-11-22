@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-22T03:12:59.240794+00:00",
-  "active_increment": "Three full original software workflows completed: organization boundaries, offline assertion migration and optional SynthID research input.136 original requirements complete,66 open; target60 unmet. Final protected source/site delivery in progress.",
-  "status": "three_full_original_software_closures_verified;136complete66open_target60_unmet;normal_protected_publication_pending",
+  "updated": "2026-11-22T03:22:32.942149+00:00",
+  "active_increment": "Two full original software workflows completed: organization boundaries and offline assertion migration. Optional SynthID input works; original tag-workflow remains open.135 original requirements complete,67 open; target60 unmet. Protected publication pending.",
+  "status": "two_full_originals_and_working_vendor_input_component;135complete67open_target60_unmet;protected_publication_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -861,9 +861,9 @@
   "scope_completion": {
     "reader": "docs/scope-progress.md",
     "source": "docs/scope-progress.json",
-    "audited_at": "2026-11-22T02:43:28.345017+00:00",
-    "completed_records": 136,
-    "open_records": 66,
+    "audited_at": "2026-11-22T03:22:32.942149+00:00",
+    "completed_records": 135,
+    "open_records": 67,
     "records_preserved": 202,
     "packages": 39,
     "subtasks": 117,
@@ -882,7 +882,7 @@
     "open_subtasks": 114,
     "target_open_records": 0,
     "target_start_open_records": 78,
-    "target_remaining_closures": 66,
+    "target_remaining_closures": 67,
     "publication_pending": true,
     "verification": "runs/2026-10-10-timestamp-scope-acceptance.json",
     "target_plan": "docs/scope-60-execution.md",
@@ -893,8 +893,7 @@
     "latest_owner_direction_date": "2026-11-21",
     "latest_increment_completed_ids": [
       "N-010",
-      "N-001",
-      "F-155"
+      "N-001"
     ],
     "previous_increment_publication": "runs/2026-10-13-accepted-contracts-live-publication.json",
     "target_history": [
@@ -927,7 +926,7 @@
       "X-02"
     ],
     "intermediate_target_open_records": 60,
-    "intermediate_remaining_closures": 6,
+    "intermediate_remaining_closures": 7,
     "latest_component_evidence": [
       "runs/2026-11-19-tag-components-integrated.json",
       "runs/2026-11-19-hp-production-site-final.json",
@@ -1225,7 +1224,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-22T03:12:59.240794+00:00",
+  "updated_at": "2026-11-22T03:22:32.942149+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -4836,7 +4835,7 @@
     "baseline_complete": 133,
     "baseline_open": 69,
     "target_open": 60,
-    "actual_new_original_closures": 3,
+    "actual_new_original_closures": 2,
     "audit": "docs/nov21-autonomous-closure-audit.json",
     "guide_source_independent_review": "runs/2026-11-21-public-api-guide-independent-review.json",
     "guide_actual_publication_pending": false,
@@ -4849,8 +4848,8 @@
     "protected_CI_review": "runs/2026-11-21-pr145-required-ci-review.json",
     "guide_actual_example": "runs/2026-11-21-public-guide-published-PS-example.json",
     "additional_JPEG_development_handoff": "runs/2026-11-21-additional-jpeg-development-handoff.json",
-    "original_complete": 136,
-    "original_open": 66,
+    "original_complete": 135,
+    "original_open": 67,
     "target_met": false,
     "MT_browser_development_handoff": "runs/2026-11-21-mt-browser-development-handoff.json",
     "six_outcomes_and_actual_target_evidence": "runs/2026-11-21-six-outcomes-strict-target-integration.json",
@@ -4865,11 +4864,11 @@
     "N010_full_original_acceptance": "runs/2026-11-22-n010-original-full-acceptance.json",
     "full_functioning_closures": [
       "N-010",
-      "N-001",
-      "F-155"
+      "N-001"
     ],
     "publication_status": "pending normal protected source publication",
-    "current_boundary_evidence": "runs/2026-11-22-three-originals-reference-boundaries.json"
+    "current_boundary_evidence": "runs/2026-11-22-three-originals-reference-boundaries.json",
+    "F155_component_not_full_original": "runs/2026-11-22-f155-original-completion-correction.json"
   },
   "independent_development_handoffs": "runs/2026-11-21-independent-tag-development-handoffs.json",
   "operator_ownership_correction": {
@@ -4883,7 +4882,10 @@
     "finite_boundary_review": "runs/2026-11-21-public-guide-rollback-boundaries.json",
     "protected_source_commit": "a0c59d27dc4597599422a9f356978901e597f49d"
   },
-  "pending_engineering_revalidation": [],
+  "pending_engineering_revalidation": [
+    "protocol",
+    "website"
+  ],
   "session_target_correction": {
     "status": "source_integrated_and_distinctly_reviewed; affected_protocol_and_website_current; Git_publication_tracked_in_normal_branch_history",
     "source_commit": "0d6240e3a496cd785b9fd74d337f4a38e81c5489",
