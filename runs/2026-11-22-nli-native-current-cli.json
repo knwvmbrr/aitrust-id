@@ -1,0 +1,154 @@
+{
+  "format": "nli-native-obligations-actual-cli/v1",
+  "captured_at": "2026-11-22T03:38:56.001015+00:00",
+  "pass": true,
+  "source_before": {
+    "tools/nli_native_obligations.py": "9bda146dc50f0be54fcc88f986098f4a0bc5a5d45719a53e53870da1ea114764",
+    "scripts/verify-nli-native-obligations.py": "c34b0b5cebe6e722794c36fb923c3f44ccd36cd185b41ed64db447047d2d4e1f",
+    "tests/test_nli_native_obligations.py": "1f80cbd71855b12a1b10e6243808cbf37555778c66756f559e773975516a9a4a",
+    "docs/nli-native-obligations-plan.md": "d9c59b9a7733cde0ba1750c5b9a7db27351e9c644d63bd1cd34b6d26a89e8605",
+    "docs/nli-native-obligations.md": "c8be6a25da0d3db4f13379d37c1aa553917298eb1d826b683f88b4af40122bc4",
+    "sbom/nli-native/evidence.json": "5b6d4fd0b88eff23fe2d3512f551f42649e3af7b71aa60865e07605955696b32",
+    "sbom/nli-native/manifest.json": "b3332fa5f473cadce44a257b78acb1be471ebd990b72bd5dcf21761d4966fbc5",
+    "sbom/nli-native/.gitattributes": "0a7dfc4cfde606026e2b222142f3c14ee647c0f6785ca838e3c908ee04731541",
+    "sbom/reviews/nli/manifest.json": "c1c2cd50b49421ee8b12f45183698d1e6995a67b1a016b482c7d41aad9efada2",
+    "research/nli/requirements-mac.lock": "02960b1ea4f3a0b8d31ecba9ca376261383abefc6111dc3054f2f3fe5115e88c",
+    "research/nli/requirements-linux.lock": "e149a6705f77d47139d66e93b159db048c28dbb8be3e79f32c58e567f820701d",
+    "research/nli/wheel-provenance-mac.json": "58a70430251ee95c37bdbc692b3e98a0738ebacbb5206f671e8afc9534ebe339",
+    "research/nli/wheel-provenance-linux.json": "978e017c6024ab926739765b7600b93062b8556f99741f41412ed691ae72f9f3"
+  },
+  "source_after": {
+    "tools/nli_native_obligations.py": "9bda146dc50f0be54fcc88f986098f4a0bc5a5d45719a53e53870da1ea114764",
+    "scripts/verify-nli-native-obligations.py": "c34b0b5cebe6e722794c36fb923c3f44ccd36cd185b41ed64db447047d2d4e1f",
+    "tests/test_nli_native_obligations.py": "1f80cbd71855b12a1b10e6243808cbf37555778c66756f559e773975516a9a4a",
+    "docs/nli-native-obligations-plan.md": "d9c59b9a7733cde0ba1750c5b9a7db27351e9c644d63bd1cd34b6d26a89e8605",
+    "docs/nli-native-obligations.md": "c8be6a25da0d3db4f13379d37c1aa553917298eb1d826b683f88b4af40122bc4",
+    "sbom/nli-native/evidence.json": "5b6d4fd0b88eff23fe2d3512f551f42649e3af7b71aa60865e07605955696b32",
+    "sbom/nli-native/manifest.json": "b3332fa5f473cadce44a257b78acb1be471ebd990b72bd5dcf21761d4966fbc5",
+    "sbom/nli-native/.gitattributes": "0a7dfc4cfde606026e2b222142f3c14ee647c0f6785ca838e3c908ee04731541",
+    "sbom/reviews/nli/manifest.json": "c1c2cd50b49421ee8b12f45183698d1e6995a67b1a016b482c7d41aad9efada2",
+    "research/nli/requirements-mac.lock": "02960b1ea4f3a0b8d31ecba9ca376261383abefc6111dc3054f2f3fe5115e88c",
+    "research/nli/requirements-linux.lock": "e149a6705f77d47139d66e93b159db048c28dbb8be3e79f32c58e567f820701d",
+    "research/nli/wheel-provenance-mac.json": "58a70430251ee95c37bdbc692b3e98a0738ebacbb5206f671e8afc9534ebe339",
+    "research/nli/wheel-provenance-linux.json": "978e017c6024ab926739765b7600b93062b8556f99741f41412ed691ae72f9f3"
+  },
+  "sources_stable": true,
+  "case_count": 3,
+  "cases": [
+    {
+      "case": "actual_default_checkout_no_fresh_archive_credit",
+      "pass": true,
+      "command_template": [
+        "{python}",
+        "-I",
+        "-S",
+        "-B",
+        "scripts/verify-nli-native-obligations.py"
+      ],
+      "exit_status": 0,
+      "elapsed_seconds": 1.325,
+      "stdout_sha256": "aab9ee3b91ebf0abe6bbee6026a5f4795f3af1f213988c610840a876ec8916b8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": {
+        "actual_source_archive_replay": false,
+        "archives_replayed": 0,
+        "claims": {
+          "distribution_approved": false,
+          "independent_accuracy": false,
+          "permission_cleared": false,
+          "source_build_reproduced": false
+        },
+        "complete_native_dependency_graph": false,
+        "dependency_edges": 1561,
+        "native_binary_executed": false,
+        "native_wheel_occurrences": 16,
+        "packages": 650,
+        "pass": true,
+        "permission_cleared": false,
+        "profile": "nli-native-dependency-observations/v1",
+        "retained_bytes": 11363903,
+        "retained_sources": 3571
+      }
+    },
+    {
+      "case": "actual_all548_exact_source_archive_replay",
+      "pass": true,
+      "command_template": [
+        "{python}",
+        "-I",
+        "-S",
+        "-B",
+        "scripts/verify-nli-native-obligations.py",
+        "--source-cache",
+        "{owned_source_cache}",
+        "--crate-cache",
+        "{retained_crate_cache}"
+      ],
+      "exit_status": 0,
+      "elapsed_seconds": 3.864,
+      "stdout_sha256": "437e77d704da7f40fc1eaea1685b02431c23a6c64d094e1c3e74a5acea925188",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "result": {
+        "actual_source_archive_replay": true,
+        "archives_replayed": 548,
+        "claims": {
+          "distribution_approved": false,
+          "independent_accuracy": false,
+          "permission_cleared": false,
+          "source_build_reproduced": false
+        },
+        "complete_native_dependency_graph": false,
+        "dependency_edges": 1561,
+        "native_binary_executed": false,
+        "native_wheel_occurrences": 16,
+        "packages": 650,
+        "pass": true,
+        "permission_cleared": false,
+        "profile": "nli-native-dependency-observations/v1",
+        "retained_bytes": 11363903,
+        "retained_sources": 3571
+      }
+    },
+    {
+      "case": "actual_tampered_archive_checksum_refusal",
+      "pass": true,
+      "command_template": [
+        "{python}",
+        "-I",
+        "-S",
+        "-B",
+        "scripts/verify-nli-native-obligations.py",
+        "--source-cache",
+        "{owned_inert_negative_cache}"
+      ],
+      "exit_status": 1,
+      "elapsed_seconds": 0.754,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "8ad3e4e94015648fbe4d2c1431aa5d704d9577c8b0b65d5a62d8e860639669a3",
+      "result": null
+    }
+  ],
+  "network_requests_during_verification": false,
+  "new_dependency_installs": false,
+  "global_services_changed": false,
+  "claims": {
+    "permission_cleared": false,
+    "source_build_reproduced": false,
+    "distribution_approved": false,
+    "original_requirement_closed": false
+  },
+  "limits": [
+    "Source archive and retained notice/metadata replay only, not fresh whole-wheel/native replay or binary equivalence.",
+    "Seven exactPyPIsdists+LibYAML+540registryarchives; two publishedRustuniongraphs, optional/dev/targetnot incorporatedclosure.",
+    "ORTsource retrieval failure andGNUcorrespondingsource/relinking/offer limitations remain explicit.",
+    "No verifier network call exists in the inspected code; no universal OS network sandbox or independently traced socket-attempt count is claimed."
+  ],
+  "execution_completed_at": "2026-11-22T03:36:49.402165+00:00",
+  "upstream_package_native_or_model_code_executed": false,
+  "network_sandbox_enforced": false,
+  "metadata_correction": {
+    "prior_unpublished_candidate_sha256": "1e64c8eb85a0e99b96365a263ce44a8e461c24792c8d4da91f7505e26811cd23",
+    "fact": "Clarified that only upstream package/native/model execution is excluded; the verification Python program did execute. No source or execution rerun.",
+    "corrected_at": "2026-11-22T03:38:56.001015+00:00"
+  }
+}

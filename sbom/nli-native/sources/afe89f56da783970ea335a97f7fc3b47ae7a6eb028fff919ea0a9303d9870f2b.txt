@@ -1,0 +1,261 @@
+{
+  "format": "ai-trust-id-onnxruntime-exact-source-provenance-observations/v1",
+  "captured_at": "2026-11-22T03:13:08.730345+00:00",
+  "pass": true,
+  "requested_version": "1.31.0",
+  "collector_sha256": "61a4071c6de5d680b347157bc82e69f8d6f490153cab10fe1a8ef1f8b5704857",
+  "official_queries": [
+    {
+      "label": "repository_endpoint",
+      "requested_url": "https://api.github.com/repos/microsoft/onnxruntime",
+      "resolved_url": "https://api.github.com/repos/microsoft/onnxruntime",
+      "http_status": 404,
+      "response_bytes": 118,
+      "response_sha256": "4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9",
+      "retained_path": "sources/4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9.txt",
+      "retained_sha256": "4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9",
+      "retained_bytes": 118,
+      "public_download_url_queries_removed": false,
+      "retention_scope": "public_safe_status_or_sanitized_publisher_response"
+    },
+    {
+      "label": "exact_tag",
+      "requested_url": "https://api.github.com/repos/microsoft/onnxruntime/git/ref/tags/v1.31.0",
+      "resolved_url": "https://api.github.com/repos/microsoft/onnxruntime/git/ref/tags/v1.31.0",
+      "http_status": 404,
+      "response_bytes": 114,
+      "response_sha256": "e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a",
+      "retained_path": "sources/e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a.txt",
+      "retained_sha256": "e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a",
+      "retained_bytes": 114,
+      "public_download_url_queries_removed": false,
+      "retention_scope": "public_safe_status_or_sanitized_publisher_response"
+    },
+    {
+      "label": "exact_release_branch",
+      "requested_url": "https://api.github.com/repos/microsoft/onnxruntime/git/ref/heads/rel-1.31.0",
+      "resolved_url": "https://api.github.com/repos/microsoft/onnxruntime/git/ref/heads/rel-1.31.0",
+      "http_status": 404,
+      "response_bytes": 114,
+      "response_sha256": "e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a",
+      "retained_path": "sources/e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a.txt",
+      "retained_sha256": "e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a",
+      "retained_bytes": 114,
+      "public_download_url_queries_removed": false,
+      "retention_scope": "public_safe_status_or_sanitized_publisher_response"
+    },
+    {
+      "label": "exact_release",
+      "requested_url": "https://api.github.com/repos/microsoft/onnxruntime/releases/tags/v1.31.0",
+      "resolved_url": "https://api.github.com/repos/microsoft/onnxruntime/releases/tags/v1.31.0",
+      "http_status": 404,
+      "response_bytes": 133,
+      "response_sha256": "010563d2cfb8f1e87f700936ce59ee3a33364da46e3db41b0049227918ece74d",
+      "retained_path": "sources/010563d2cfb8f1e87f700936ce59ee3a33364da46e3db41b0049227918ece74d.txt",
+      "retained_sha256": "010563d2cfb8f1e87f700936ce59ee3a33364da46e3db41b0049227918ece74d",
+      "retained_bytes": 133,
+      "public_download_url_queries_removed": false,
+      "retention_scope": "public_safe_status_or_sanitized_publisher_response"
+    },
+    {
+      "label": "historical_unwitnessed_short_identifier",
+      "requested_url": "https://api.github.com/repos/microsoft/onnxruntime/commits/402979a",
+      "resolved_url": "https://api.github.com/repos/microsoft/onnxruntime/commits/402979a",
+      "http_status": 404,
+      "response_bytes": 118,
+      "response_sha256": "c391981e33b3d73d489d22c8ae4da47417d407010e28de24ee4b1a1673554ba5",
+      "retained_path": "sources/c391981e33b3d73d489d22c8ae4da47417d407010e28de24ee4b1a1673554ba5.txt",
+      "retained_sha256": "c391981e33b3d73d489d22c8ae4da47417d407010e28de24ee4b1a1673554ba5",
+      "retained_bytes": 118,
+      "public_download_url_queries_removed": false,
+      "retention_scope": "public_safe_status_or_sanitized_publisher_response"
+    },
+    {
+      "label": "exact_wheel_attestation_linux",
+      "requested_url": "https://pypi.org/integrity/onnxruntime/1.31.0/onnxruntime-1.31.0-cp313-cp313-manylinux_2_28_x86_64.whl/provenance",
+      "resolved_url": "https://pypi.org/integrity/onnxruntime/1.31.0/onnxruntime-1.31.0-cp313-cp313-manylinux_2_28_x86_64.whl/provenance",
+      "http_status": 404,
+      "response_bytes": 98,
+      "response_sha256": "ac66aa9675a9ea43d094871ed00d665ca1fcd52f216b17df1215e8535b2814a2",
+      "retained_path": "sources/ac66aa9675a9ea43d094871ed00d665ca1fcd52f216b17df1215e8535b2814a2.txt",
+      "retained_sha256": "ac66aa9675a9ea43d094871ed00d665ca1fcd52f216b17df1215e8535b2814a2",
+      "retained_bytes": 98,
+      "public_download_url_queries_removed": false,
+      "retention_scope": "public_safe_status_or_sanitized_publisher_response"
+    },
+    {
+      "label": "exact_wheel_attestation_mac",
+      "requested_url": "https://pypi.org/integrity/onnxruntime/1.31.0/onnxruntime-1.31.0-cp312-cp312-macosx_14_0_arm64.whl/provenance",
+      "resolved_url": "https://pypi.org/integrity/onnxruntime/1.31.0/onnxruntime-1.31.0-cp312-cp312-macosx_14_0_arm64.whl/provenance",
+      "http_status": 404,
+      "response_bytes": 94,
+      "response_sha256": "d8ebb218cee12e69a109685bfa7305febd23756083fe2235fbcf832352246340",
+      "retained_path": "sources/d8ebb218cee12e69a109685bfa7305febd23756083fe2235fbcf832352246340.txt",
+      "retained_sha256": "d8ebb218cee12e69a109685bfa7305febd23756083fe2235fbcf832352246340",
+      "retained_bytes": 94,
+      "public_download_url_queries_removed": false,
+      "retention_scope": "public_safe_status_or_sanitized_publisher_response"
+    },
+    {
+      "label": "publisher_source_portal",
+      "requested_url": "https://opensource.microsoft.com/3pc/",
+      "resolved_url": "https://opensource.microsoft.com/3pc/",
+      "http_status": 200,
+      "response_bytes": 568,
+      "response_sha256": "c8f9a89b762c96cf8bd97fe99cecff425901cc0cd84ec411c426195b258fc77c",
+      "retained_path": null,
+      "retained_sha256": "c8f9a89b762c96cf8bd97fe99cecff425901cc0cd84ec411c426195b258fc77c",
+      "retained_bytes": 568,
+      "public_download_url_queries_removed": false,
+      "retention_scope": "private_observation_only_unrelated_portal_application_not_product_source"
+    },
+    {
+      "label": "observed_portal_client_contract",
+      "requested_url": "https://opensource.microsoft.com/3pc/assets/index-B25mwSWc.js",
+      "resolved_url": "https://opensource.microsoft.com/3pc/assets/index-B25mwSWc.js",
+      "http_status": 200,
+      "response_bytes": 707170,
+      "response_sha256": "898b7c5f164414b4ffbfcad7a8e2aa9ba19247fcbb5458ab47724f360bb9cfd5",
+      "retained_path": null,
+      "retained_sha256": "898b7c5f164414b4ffbfcad7a8e2aa9ba19247fcbb5458ab47724f360bb9cfd5",
+      "retained_bytes": 707170,
+      "public_download_url_queries_removed": false,
+      "retention_scope": "private_observation_only_unrelated_portal_application_not_product_source"
+    },
+    {
+      "label": "portal_query_onnxruntime",
+      "requested_url": "https://opensource.microsoft.com/3pc/downloads?page=0&size=25&q=onnxruntime",
+      "resolved_url": "https://opensource.microsoft.com/3pc/downloads?page=0&size=25&q=onnxruntime",
+      "http_status": 200,
+      "response_bytes": 637,
+      "response_sha256": "3422d5451e9bca60d49271c8b028c0c154313bb9ad1aa3d619c22988024ec89f",
+      "retained_path": "sources/6b6c83b81a63300be3130972e8d6d09a0be4814bf0528bad3ab809f03f60122a.txt",
+      "retained_sha256": "6b6c83b81a63300be3130972e8d6d09a0be4814bf0528bad3ab809f03f60122a",
+      "retained_bytes": 568,
+      "public_download_url_queries_removed": true,
+      "retention_scope": "public_safe_status_or_sanitized_publisher_response"
+    },
+    {
+      "label": "portal_query_ONNX Runtime",
+      "requested_url": "https://opensource.microsoft.com/3pc/downloads?page=0&size=25&q=ONNX+Runtime",
+      "resolved_url": "https://opensource.microsoft.com/3pc/downloads?page=0&size=25&q=ONNX+Runtime",
+      "http_status": 200,
+      "response_bytes": 1389,
+      "response_sha256": "418771b6abe5b29488afc5eebcfa16d3654404d87d7ed2568f4a7c9d008563b2",
+      "retained_path": "sources/dbc7c466134d3090811d2b88adc35ca04d412a9a491d254f70c65ce64f8f2d1a.txt",
+      "retained_sha256": "dbc7c466134d3090811d2b88adc35ca04d412a9a491d254f70c65ce64f8f2d1a",
+      "retained_bytes": 1142,
+      "public_download_url_queries_removed": true,
+      "retention_scope": "public_safe_status_or_sanitized_publisher_response"
+    },
+    {
+      "label": "portal_query_1.31.0",
+      "requested_url": "https://opensource.microsoft.com/3pc/downloads?page=0&size=25&q=1.31.0",
+      "resolved_url": "https://opensource.microsoft.com/3pc/downloads?page=0&size=25&q=1.31.0",
+      "http_status": 200,
+      "response_bytes": 66,
+      "response_sha256": "8c839e37dfad2ea6c3b90842c7446b7d8ffa87b2713df2c790ba9e4231f9db6e",
+      "retained_path": "sources/78ed80f7e28d7c4c398295266cd822bc55e4a5b3b6d567a5d8c7aa283c85b935.txt",
+      "retained_sha256": "78ed80f7e28d7c4c398295266cd822bc55e4a5b3b6d567a5d8c7aa283c85b935",
+      "retained_bytes": 88,
+      "public_download_url_queries_removed": true,
+      "retention_scope": "public_safe_status_or_sanitized_publisher_response"
+    }
+  ],
+  "new_http_response_bytes": 710619,
+  "per_record_limit_bytes": 22020096,
+  "aggregate_limit_bytes": 67108864,
+  "source_portal_results": [
+    {
+      "query": "onnxruntime",
+      "total": 1,
+      "partial": false,
+      "items": [
+        {
+          "name": "Azure Kinect Body Tracking SDK/0.9.0/onnxruntime-71cbd7679cad585681f29881684a37808e2e6985.zip",
+          "product": "Azure Kinect Body Tracking SDK",
+          "release": "0.9.0",
+          "dependency": "onnxruntime-71cbd7679cad585681f29881684a37808e2e6985.zip",
+          "platform": null,
+          "url": "https://3rdpartycodeprod.blob.core.windows.net/download/Azure%20Kinect%20Body%20Tracking%20SDK/0.9.0/onnxruntime-71cbd7679cad585681f29881684a37808e2e6985.zip"
+        }
+      ]
+    },
+    {
+      "query": "ONNX Runtime",
+      "total": 3,
+      "partial": false,
+      "items": [
+        {
+          "name": "ONNX Runtime/0.4.0/Third Party Notices.txt",
+          "product": "ONNX Runtime",
+          "release": "0.4.0",
+          "dependency": "Third Party Notices.txt",
+          "platform": null,
+          "url": "https://3rdpartycodeprod.blob.core.windows.net/download/ONNX%20Runtime/0.4.0/Third%20Party%20Notices.txt"
+        },
+        {
+          "name": "ONNX Runtime/0.4.0/eigen-1456fe2fac0cd074bbbb8630ba003a7c325d015b.zip",
+          "product": "ONNX Runtime",
+          "release": "0.4.0",
+          "dependency": "eigen-1456fe2fac0cd074bbbb8630ba003a7c325d015b.zip",
+          "platform": null,
+          "url": "https://3rdpartycodeprod.blob.core.windows.net/download/ONNX%20Runtime/0.4.0/eigen-1456fe2fac0cd074bbbb8630ba003a7c325d015b.zip"
+        },
+        {
+          "name": "ONNX Runtime/Preview/eigen version 3.3.4.zip",
+          "product": "ONNX Runtime",
+          "release": "Preview",
+          "dependency": "eigen version 3.3.4.zip",
+          "platform": null,
+          "url": "https://3rdpartycodeprod.blob.core.windows.net/download/ONNX%20Runtime/Preview/eigen%20version%203.3.4.zip"
+        }
+      ]
+    },
+    {
+      "query": "1.31.0",
+      "total": 0,
+      "partial": false,
+      "items": []
+    }
+  ],
+  "exact_source_commit_recovered": false,
+  "exact_source_archive_recovered": false,
+  "short_identifier_402979a": {
+    "role": "historical_queried_identifier_only",
+    "actual_wheel_build_identity_established": false,
+    "reason": "No retained wheel member/offset or publisher metadata witness; indexed search snippet is not current source evidence."
+  },
+  "qualified_result": "Exact repository/tag/release/branch/short-identifier endpoints returned404; repository endpoint itself was inaccessible in this observation. This does not prove source never existed or proprietary licensing.",
+  "portal_result": "Actual public portal queries finished partial:false; version1.31.0 query had0results. Other returned versions were not substituted or downloaded.",
+  "native_prefix_observation": {
+    "platform": "linux",
+    "wheel_sha256": "37fd78cee5160c7a43a1730ccb3682ffd880af9c9e80385d625c0c2f8b125809",
+    "members": [
+      "onnxruntime/capi/libonnxruntime.so.1.31.0",
+      "onnxruntime/capi/onnxruntime_pybind11_state.cpython-313-x86_64-linux-gnu.so"
+    ],
+    "bytes_scanned_per_member": 20971520,
+    "explicit_git_build_literal_found_in_scanned_prefix": false,
+    "whole_member_absence_inferred": false
+  },
+  "notice_map": {
+    "file": "notice-sections.json",
+    "sha256": "35e741eec7c0a4ca895ac8075c5428ee3bd55a571e23e394aebf5c59efbfbd67",
+    "sections": 70,
+    "source_sha256": "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3"
+  },
+  "native_execution": false,
+  "package_installation": false,
+  "alternate_version_or_main_source_substitution": false,
+  "permission_cleared": false,
+  "source_available_guarantee": false,
+  "limits": [
+    "Official retrieval observations only; no global source-absence conclusion.",
+    "The broad shipped notice does not establish that MKL or any listed component is incorporated in these exact CPU wheels.",
+    "Term markers are literal text counts, not legal conclusions or source/relinking compliance.",
+    "No new source commit is invented; all prior failed observations remain unchanged."
+  ],
+  "assembled_at": "2026-11-22T03:15:07.780804+00:00",
+  "original_private_observation_sha256": "7f314d263991d1799d7db969c705312975d7ce268817e7eefaa4f58d619a632a"
+}

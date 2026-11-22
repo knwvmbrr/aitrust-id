@@ -1,5 +1,25 @@
 # Changelog
 
+## Unreleased — 2026-11-22
+
+### 2026-11-22-034555-nli-native-upstream-heading-preservation-35892ab5
+
+Recorded 2026-11-22T03:45:55.429765+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Preserve seven exact upstream RST heading files without treating their equals underlines as Git merge conflicts.
+- **Evidence.** Inspected all seven original heading contexts; current core, source data and actual548-archive proof remain unchanged. Only Git conflict-marker metadata changes. [Change record](./runs/changes/2026-11-22-034555-nli-native-upstream-heading-preservation-35892ab5.json).
+- **Not claimed.** Exact source-only CAS paths; no global merge or whitespace rule, no source normalization, no new archive execution or distribution permission.
+
+
+### 2026-11-22-034211-nli-native-source-obligations-d9a614ee
+
+Recorded 2026-11-22T03:42:11.187920+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Add an offline pinned NLI native source and notice graph, exact source-cache replay and complete supplemental license records.
+- **Evidence.** Nine focused controls and three current actual CLI cases pass, including all548 source archives; distinct core and retained-evidence reviews bind the exact sources. Initial collection and isolated-test harness failures are preserved. [Change record](./runs/changes/2026-11-22-034211-nli-native-source-obligations-d9a614ee.json).
+- **Not claimed.** Published source unions are not compiled linkage or distribution approval. Actual GNU and ORT source-offer limits remain; no model/package execution, global license clearance, tag accuracy or original requirement completion.
+
+
 ## Unreleased — 2026-11-21
 
 ### 2026-11-21-232853-final-closeout-source-and-public-access-3b570971
