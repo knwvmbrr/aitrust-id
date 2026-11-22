@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-044155-source-snapshot-versioned-recovery-dbcf3110",
+  "recorded_at": "2026-11-22T04:41:55.424421+00:00",
+  "author": "Codex PM /root; serializer author /root/share_debugger; distinct reviewer /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7785095ed7409cc9d3c8b5633b9469aca671c290",
+  "changed": "Versioned the expanded source serializer and restored the immutable historical dependency observer source.",
+  "proves": "Current focused serializer and artifact controls pass; historical native, nested and conformance observations remain valid without inventing fresh archive replay. Actual retained larger source archive inspects with v2.",
+  "limits": "Preserved initial failure. No complete license clearance, native source rebuild, new tag release or original closure; current 135 complete and 67 open.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-096"
+  ],
+  "files": {
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/build-source-snapshot.py": "a07d3642d5921e804277c12c16ad22cf388d65bae114810877b2b08e52ce6706",
+    "scripts/verify-source-provenance.py": "cc0e9bbb83f1c844a9ca7cca69b063352a53c1ac311bef02d354f92bb5194215",
+    "tests/test_source_provenance.py": "566fa10f9d11f3da9d1c0e0677a914a84bcfea3b4e51fea5bd8893a776492f6f",
+    "tests/test_distribution_artifacts.py": "032ac09a86a4622d06d03911aaa1cfbfcdd2598de169f88ce5b345d4ebd58c33",
+    "tools/distribution_artifacts.py": "3540e7a5c9326148eef2183638fa5767259284d470701619e562fd2f14528be8",
+    "docs/distribution-artifact-sbom.md": "9850d93399dae6464278013af7ecf5ee958c9d02f4bd108f2ee3945cd51bc627",
+    "docs/source-snapshot-v2-plan.md": "05628fb13142c3ce8031df9980df65f43fb020d7eed23497c25b6920e9cddadb",
+    "runs/2026-11-22-source-snapshot-v2-execution.json": "58f8c2822cf647c5e8918dd2179a81641ec16cc8127af202fda14a52f4225411",
+    "runs/2026-11-22-source-snapshot-v2-independent-review.json": "054e0936cfe2beceb26619cf5f720cb4402aea8d9057303684465a2cbce53af0"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-source-snapshot-v2-execution.json",
+      "sha256": "58f8c2822cf647c5e8918dd2179a81641ec16cc8127af202fda14a52f4225411"
+    },
+    {
+      "path": "runs/2026-11-22-source-snapshot-v2-independent-review.json",
+      "sha256": "054e0936cfe2beceb26619cf5f720cb4402aea8d9057303684465a2cbce53af0"
+    }
+  ],
+  "checks": []
+}

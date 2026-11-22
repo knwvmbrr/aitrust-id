@@ -58,8 +58,11 @@ class ArtifactWorkflow(unittest.TestCase):
             self.assertEqual(graph.nodes,{})
             self.assertEqual(calls.call_count,2)
         import importlib.util
-        spec=importlib.util.spec_from_file_location('owned_source_capacity',ROOT/'scripts/source_snapshot.py')
-        source=importlib.util.module_from_spec(spec);spec.loader.exec_module(source)
+        spec=importlib.util.spec_from_file_location('owned_source_capacity',ROOT/'scripts/source_snapshot_v2.py')
+        source=importlib.util.module_from_spec(spec)
+        sys.path.insert(0,str(ROOT/'scripts'))
+        try:spec.loader.exec_module(source)
+        finally:sys.path.pop(0)
         listing=(b'100644 blob '+b'a'*40+b' 1\tfixed.txt\0')*16385
         with mock.patch.object(source,'git',side_effect=[b'a'*40+b'\n',listing])as calls:
             with self.assertRaisesRegex(ValueError,'Committed source limit'):source.build(ROOT,'a'*40)

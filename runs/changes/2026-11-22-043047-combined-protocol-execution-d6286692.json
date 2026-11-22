@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-043047-combined-protocol-execution-d6286692",
+  "recorded_at": "2026-11-22T04:30:47.441631+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7785095ed7409cc9d3c8b5633b9469aca671c290",
+  "changed": "Recorded actual integrated protocol source-bound execution before subsequent build steps.",
+  "proves": "Failed current candidate preserved without claiming a pass.",
+  "limits": "Engineering evidence only; original135/67 unchanged, no tag accuracy or global licensing approval. Protected source/signing/live publication remain pending.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155",
+    "F-057",
+    "X-02",
+    "F-096"
+  ],
+  "files": {
+    "runs/2026-11-22-combined-current-protocol.json": "4ecb97f0e0e7b24d216de06106e30e7a0ade5af73ba145cac7073f3b4cce4fa3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-combined-current-protocol.json",
+      "sha256": "4ecb97f0e0e7b24d216de06106e30e7a0ade5af73ba145cac7073f3b4cce4fa3"
+    }
+  ],
+  "checks": []
+}

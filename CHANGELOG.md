@@ -2,6 +2,87 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-044451-retain-fi-distinct-acceptance-review-3f472c8d
+
+Recorded 2026-11-22T04:44:51.830816+00:00 · Contributor: Codex PM /root; distinct reviewer /root/seo · change
+
+- **Changed.** Retained the distinct FI practice acceptance review and current scope projection.
+- **Evidence.** Independent actual private preparation/check/no-overwrite controls and unchanged19 sibling instructions passed with no FI verdict. [Change record](./runs/changes/2026-11-22-044451-retain-fi-distinct-acceptance-review-3f472c8d.json).
+- **Not claimed.** Component acceptance only; originalFI remains20% open. Source/current build and public delivery remain separate;135 complete/67 open.
+
+
+### 2026-11-22-044406-register-current-delivery-scope-and-source-bindings-150062b2
+
+Recorded 2026-11-22T04:44:06.255443+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Updated the current135/67 delivery snapshot, preserved original acceptance, registered new serializer/FI inputs and refreshed their public scope projections.
+- **Evidence.** The scope and board describe actual implemented components separately from the two full original closures; all five source-bound profile commands retain earlier checks. [Change record](./runs/changes/2026-11-22-044406-register-current-delivery-scope-and-source-bindings-150062b2.json).
+- **Not claimed.** Full current verification and protected/public publication pending. Target60 unmet; no independent accuracy, legal formation or certification claim.
+
+
+### 2026-11-22-044355-fi-citation-practice-main-integration-b0a8851d
+
+Recorded 2026-11-22T04:43:55.757417+00:00 · Contributor: Codex PM /root; FI integration author /root/web_camo · change
+
+- **Changed.** Integrated the reviewed private FI citation practice in ordinary main-source downloads and linked its guide from FI instructions.
+- **Evidence.** Actual preparation, canonical check, private output permissions, no-overwrite and refusal recovery ran; all19 sibling instruction objects are unchanged. [Change record](./runs/changes/2026-11-22-044355-fi-citation-practice-main-integration-b0a8851d.json).
+- **Not claimed.** Fixed invented CLI practice only, no FI or truth verdict, no phone/browser checker or new tag release. FI remains20% open;135 complete/67 open unchanged. Independent source review and protected/public delivery pending.
+
+
+### 2026-11-22-044155-source-snapshot-versioned-recovery-dbcf3110
+
+Recorded 2026-11-22T04:41:55.424421+00:00 · Contributor: Codex PM /root; serializer author /root/share_debugger; distinct reviewer /root/seo · change
+
+- **Changed.** Versioned the expanded source serializer and restored the immutable historical dependency observer source.
+- **Evidence.** Current focused serializer and artifact controls pass; historical native, nested and conformance observations remain valid without inventing fresh archive replay. Actual retained larger source archive inspects with v2. [Change record](./runs/changes/2026-11-22-044155-source-snapshot-versioned-recovery-dbcf3110.json).
+- **Not claimed.** Preserved initial failure. No complete license clearance, native source rebuild, new tag release or original closure; current 135 complete and 67 open.
+
+
+### 2026-11-22-043620-combined-source-independent-review-a78ad3dd
+
+Recorded 2026-11-22T04:36:20.606361+00:00 · Contributor: Codex PM /root; distinct reviewer /root/seo · change
+
+- **Changed.** Retained the distinct read-only integration review of exact source 7785095.
+- **Evidence.** All 202 original criteria remain preserved, with only N-001 and N-010 newly completed and F-155 still open; earlier source-bound components are qualified. [Change record](./runs/changes/2026-11-22-043620-combined-source-independent-review-a78ad3dd.json).
+- **Not claimed.** Static integration review only, not runtime revalidation, original licensing clearance, tag accuracy or publication. Current 135 complete and 67 open remains unchanged.
+
+
+### 2026-11-22-043047-combined-protocol-execution-d6286692
+
+Recorded 2026-11-22T04:30:47.441631+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated protocol source-bound execution before subsequent build steps.
+- **Evidence.** Failed current candidate preserved without claiming a pass. [Change record](./runs/changes/2026-11-22-043047-combined-protocol-execution-d6286692.json).
+- **Not claimed.** Engineering evidence only; original135/67 unchanged, no tag accuracy or global licensing approval. Protected source/signing/live publication remain pending.
+
+
+### 2026-11-22-043008-combined-extension-execution-babaf954
+
+Recorded 2026-11-22T04:30:08.520830+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated extension source-bound execution before subsequent build steps.
+- **Evidence.** Current selected capability checks passed. [Change record](./runs/changes/2026-11-22-043008-combined-extension-execution-babaf954.json).
+- **Not claimed.** Engineering evidence only; original135/67 unchanged, no tag accuracy or global licensing approval. Protected source/signing/live publication remain pending.
+
+
+### 2026-11-22-042929-combined-pii-redacted-execution-9758db9f
+
+Recorded 2026-11-22T04:29:29.294123+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated PII_REDACTED source-bound execution before subsequent build steps.
+- **Evidence.** Current selected capability checks passed. [Change record](./runs/changes/2026-11-22-042929-combined-pii-redacted-execution-9758db9f.json).
+- **Not claimed.** Engineering evidence only; original135/67 unchanged, no tag accuracy or global licensing approval. Protected source/signing/live publication remain pending.
+
+
+### 2026-11-22-042921-combined-ps-execution-d2c58617
+
+Recorded 2026-11-22T04:29:21.829771+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated PS source-bound execution before subsequent build steps.
+- **Evidence.** Current selected capability checks passed. [Change record](./runs/changes/2026-11-22-042921-combined-ps-execution-d2c58617.json).
+- **Not claimed.** Engineering evidence only; original135/67 unchanged, no tag accuracy or global licensing approval. Protected source/signing/live publication remain pending.
+
+
 ### 2026-11-22-042510-integrate-reviewed-source-components-with-original-gates-open-532c5b40
 
 Recorded 2026-11-22T04:25:10.161963+00:00 · Contributor: Codex PM /root; /root/web_camo; /root/seo; /root/share_debugger · change

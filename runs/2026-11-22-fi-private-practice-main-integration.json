@@ -1,0 +1,158 @@
+{
+  "captured_at": "2026-11-22T04:42:53.776581+00:00",
+  "performed_by": "Codex /root/web_camo",
+  "kind": "actual_FI_private_practice_main_integration",
+  "pass": true,
+  "source_reference": "a0e6c766d1d07af55d5541fefa51d7e8900c41fb",
+  "scope_ids": [
+    "T-FI"
+  ],
+  "owned_sources": {
+    "scripts/prepare-citation-demo.py": "8ef51715bfb5980d8f81f217d3b5e3b966be78f21d0174fddca30d5641310f5a",
+    "tests/test_citation_demo.py": "f285672fc7a785a4dde34ccf295cf061a8c55d4cc3a4e72e07fafc05d4044572",
+    "docs/fi-citation-practice.md": "ae3babdd229fd86ae88ee7f3b3229ad585d6a400189088c431bd87725cd03e3f",
+    "docs/fi-citation-practice-plan.md": "efdf5c6df7d626208bf9e85c1e0fe059d0fd35875f0f69c135746e21d2354fc1",
+    "site/src/usage.js": "bd7631abcebe931fce31d140f73e703ddfb3dba08ffcc5085ac17f26cc690264",
+    "site/scripts/prepare.mjs": "6955d680da4c27ad4c4786b0da00c32765f1d96837cf4660be27aeff824768aa",
+    "docs/fi-citation-practice-main-integration-plan.md": "c648bfd4bf8014df9e0359e31e2a32c31ebfad90e7842239f0580dd0f3769e48"
+  },
+  "canonical_dependencies_unchanged": {
+    "tools/citation_resolution.py": "7581a6684f1db434069b876beac3883746d6e537729249e0cf2d66e03277bb71",
+    "scripts/citation-resolution.py": "ae9b685cae0781350944bf18e754aaba87c03e396fdcec8463768b9c7c23190c",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+  },
+  "actual_CLI": {
+    "profile": "fi-private-practice-main-integration/v1",
+    "captured_at": "2026-11-22T04:42:09.153896+00:00",
+    "pass": true,
+    "performed_by": "Codex /root/web_camo",
+    "published_source": "a0e6c766d1d07af55d5541fefa51d7e8900c41fb",
+    "source_sha256": {
+      "scripts/prepare-citation-demo.py": "8ef51715bfb5980d8f81f217d3b5e3b966be78f21d0174fddca30d5641310f5a",
+      "tests/test_citation_demo.py": "f285672fc7a785a4dde34ccf295cf061a8c55d4cc3a4e72e07fafc05d4044572",
+      "docs/fi-citation-practice.md": "ae3babdd229fd86ae88ee7f3b3229ad585d6a400189088c431bd87725cd03e3f",
+      "docs/fi-citation-practice-plan.md": "efdf5c6df7d626208bf9e85c1e0fe059d0fd35875f0f69c135746e21d2354fc1",
+      "site/src/usage.js": "bd7631abcebe931fce31d140f73e703ddfb3dba08ffcc5085ac17f26cc690264",
+      "site/scripts/prepare.mjs": "6955d680da4c27ad4c4786b0da00c32765f1d96837cf4660be27aeff824768aa",
+      "docs/fi-citation-practice-main-integration-plan.md": "c648bfd4bf8014df9e0359e31e2a32c31ebfad90e7842239f0580dd0f3769e48",
+      "tools/citation_resolution.py": "7581a6684f1db434069b876beac3883746d6e537729249e0cf2d66e03277bb71",
+      "scripts/citation-resolution.py": "ae9b685cae0781350944bf18e754aaba87c03e396fdcec8463768b9c7c23190c",
+      "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+    },
+    "published_four_files_exact": true,
+    "canonical_five_sources_exact_unchanged": true,
+    "source_stable": true,
+    "actual_CLI_operations": 5,
+    "controls": [
+      {
+        "entrypoint": "scripts/prepare-citation-demo.py",
+        "exit": 0,
+        "stdout_sha256": "10225e66fbf2a1f9927a3fe1c5366c37965e390d5f2d1a9f3ef2536db7bf25bf",
+        "stderr_bytes": 0
+      },
+      {
+        "entrypoint": "scripts/citation-resolution.py",
+        "exit": 0,
+        "stdout_sha256": "77df5c352e3b32e04e8c48d275ff39ee897ebc114030ed2412af012cd6bf4d5d",
+        "stderr_bytes": 0
+      },
+      {
+        "entrypoint": "scripts/prepare-citation-demo.py",
+        "exit": 2,
+        "stdout_sha256": "c30c4ce489398ad31c689e0e22bc25ce0815043d328b487a1246fdaaa74ff171",
+        "stderr_bytes": 0
+      },
+      {
+        "entrypoint": "scripts/prepare-citation-demo.py",
+        "exit": 2,
+        "stdout_sha256": "c30c4ce489398ad31c689e0e22bc25ce0815043d328b487a1246fdaaa74ff171",
+        "stderr_bytes": 0
+      },
+      {
+        "entrypoint": "scripts/citation-resolution.py",
+        "exit": 0,
+        "stdout_sha256": "77df5c352e3b32e04e8c48d275ff39ee897ebc114030ed2412af012cd6bf4d5d",
+        "stderr_bytes": 0
+      }
+    ],
+    "focused_producer_tests": {
+      "passed": 18,
+      "elapsed_seconds": 0.16
+    },
+    "private_directory_mode": "0700",
+    "private_files_mode": "0600",
+    "packet_files": 3,
+    "counts": {
+      "resolved-in-attached-corpus": 1,
+      "unresolved-in-attached-corpus": 1,
+      "unsupported": 1
+    },
+    "existing_packet_unchanged": true,
+    "unsafe_parent_refused_before_creation": true,
+    "canonical_recovery_after_optional_refusal": true,
+    "temporary_packet_removed": true,
+    "tags": [],
+    "limits": [
+      "No FI/NF/truth/source-support or accuracy release.",
+      "No Linux/physical/browser proof; actualCLI macOS only.",
+      "No broad suite, service, dependency installation, upload or real private data.",
+      "Root owns generated site build/publication; new guide copy and usage source checked separately."
+    ]
+  },
+  "usage_controls": {
+    "profile": "FI-use-source-integration-controls/v1",
+    "captured_at": "2026-11-22T04:42:29.417Z",
+    "pass": true,
+    "sibling_usage_records_unchanged": 19,
+    "sibling_rendered_use_sections_unchanged": 19,
+    "FI_available": false,
+    "FI_guide_and_main_source_links": true,
+    "FI_no_verdict_copy": true,
+    "guide_two_actual_commands": true,
+    "explicit_prepare_guide_copy": true,
+    "source_sha256": {
+      "site/src/usage.js": "bd7631abcebe931fce31d140f73e703ddfb3dba08ffcc5085ac17f26cc690264",
+      "site/scripts/prepare.mjs": "6955d680da4c27ad4c4786b0da00c32765f1d96837cf4660be27aeff824768aa",
+      "docs/fi-citation-practice.md": "ae3babdd229fd86ae88ee7f3b3229ad585d6a400189088c431bd87725cd03e3f"
+    },
+    "limits": [
+      "Source-only UI/render/control checks; no browser or full preparation/build executed.",
+      "Root owns final generated public reference and publication verification."
+    ]
+  },
+  "syntax_checks": {
+    "site/src/usage.js": "PASS",
+    "site/scripts/prepare.mjs": "PASS"
+  },
+  "preserved_first_harness_failure": {
+    "captured_at": "2026-11-22T04:42:08.853230+00:00",
+    "profile": "fi-main-review-harness-first-attempt/v1",
+    "pass": false,
+    "failure": "review_harness_expected_unquoted_text_counts_but_canonical_stdout_is_JSON",
+    "product_failure_established": false,
+    "actual_commands_executed": 2,
+    "actual_command_exits": [
+      0,
+      0
+    ],
+    "temporary_packet_cleanup": "TemporaryDirectory exited after assertion",
+    "script_sha256": "2e89cf0aba2671159fad90594e739d4f288fa145fea624df786bac9b4a4e95ef",
+    "correction": "Parse actual canonical JSON and compare exact counts/state/no-verdict fields; no product source change."
+  },
+  "source_stable": true,
+  "different_review_pending": true,
+  "main_integration_is_unpublished": true,
+  "generated_reference_build_pending": true,
+  "full_FI_or_original_closure": false,
+  "tags_issued": [],
+  "limits": [
+    "Five actual CLI operations and18focused tests on macOS, no new Linux/browser/native/service execution.",
+    "Resolved association is not correctness, truth, source support, contradiction or an FI tag.",
+    "Optional preparer does not become a dependency of existing checker, PS or sibling tags.",
+    "Root owns source registration, attributed changelog, final generated artifacts and protected/public publication."
+  ]
+}

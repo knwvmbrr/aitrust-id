@@ -1,0 +1,68 @@
+{
+  "profile": "FI-private-practice-main-distinct-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T04:44:11.429191+00:00",
+  "reviewed_by": "/root/seo",
+  "findings": [],
+  "author_receipt": {
+    "path": "runs/2026-11-22-fi-private-practice-main-integration.json",
+    "sha256": "a75f203f08788c97a700d2490f8c434230480e06f297cb5027344bfd3438e3ae"
+  },
+  "source_sha256": {
+    "scripts/prepare-citation-demo.py": "8ef51715bfb5980d8f81f217d3b5e3b966be78f21d0174fddca30d5641310f5a",
+    "tests/test_citation_demo.py": "f285672fc7a785a4dde34ccf295cf061a8c55d4cc3a4e72e07fafc05d4044572",
+    "docs/fi-citation-practice.md": "ae3babdd229fd86ae88ee7f3b3229ad585d6a400189088c431bd87725cd03e3f",
+    "docs/fi-citation-practice-plan.md": "efdf5c6df7d626208bf9e85c1e0fe059d0fd35875f0f69c135746e21d2354fc1",
+    "site/src/usage.js": "bd7631abcebe931fce31d140f73e703ddfb3dba08ffcc5085ac17f26cc690264",
+    "site/scripts/prepare.mjs": "6955d680da4c27ad4c4786b0da00c32765f1d96837cf4660be27aeff824768aa",
+    "docs/fi-citation-practice-main-integration-plan.md": "c648bfd4bf8014df9e0359e31e2a32c31ebfad90e7842239f0580dd0f3769e48",
+    "tools/citation_resolution.py": "7581a6684f1db434069b876beac3883746d6e537729249e0cf2d66e03277bb71",
+    "scripts/citation-resolution.py": "ae9b685cae0781350944bf18e754aaba87c03e396fdcec8463768b9c7c23190c",
+    "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+  },
+  "source_bytes_stable": true,
+  "imported_four_and_canonical_five_exact_published_source": "a0e6c766d1d07af55d5541fefa51d7e8900c41fb",
+  "independent_actual_controls": [
+    {
+      "id": "actual_private_prepare",
+      "exit": 0,
+      "elapsed_seconds": 0.081,
+      "stdout_sha256": "10225e66fbf2a1f9927a3fe1c5366c37965e390d5f2d1a9f3ef2536db7bf25bf"
+    },
+    {
+      "id": "actual_canonical_check",
+      "exit": 0,
+      "elapsed_seconds": 0.026,
+      "stdout_sha256": "77df5c352e3b32e04e8c48d275ff39ee897ebc114030ed2412af012cd6bf4d5d"
+    },
+    {
+      "id": "existing_output_refusal_preserves_packet",
+      "exit": 2,
+      "elapsed_seconds": 0.026,
+      "stdout_sha256": "c30c4ce489398ad31c689e0e22bc25ce0815043d328b487a1246fdaaa74ff171"
+    }
+  ],
+  "usage_control": {
+    "pass": true,
+    "unchanged_sibling_usage": 19,
+    "FI_available": false
+  },
+  "privacy_and_result_contract": {
+    "new_private0700_packet_exact3_regular0600_files": true,
+    "counts_one_resolved_one_unmapped_one_unsupported": true,
+    "no_truth_source_support_or_FI_verdict": true,
+    "existing_output_preserved": true,
+    "private_path_or_text_not_echoed": true,
+    "no_runtime_dependency_added_to_canonical_or_sibling_tags": true,
+    "explicit_normal_prepare_guide_copy": true,
+    "FI_remains_planned": true
+  },
+  "limits": [
+    "Reviewer ran only three synthetic stdlib CLI commands and one source-based Node sibling-usage comparison; no18-test/full website/browser/network/service repetition.",
+    "Actual generated guide/artifact parity and protected/main/public download delivery remain parent-owned and pending.",
+    "Resolved declared citation association does not establish truth, contradiction, source support, accuracy, FI tag release or original requirement completion."
+  ],
+  "full_FI_or_original_closure": false
+}

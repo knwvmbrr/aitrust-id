@@ -163,3 +163,9 @@ A detached bundle is capped at 16MB (trust roots stay 5MB). The fixed official
 GitHub CLI projection retains the complete verificationResult, including its
 certificate, timestamps and statement, while omitting only the duplicate raw
 bundle in stdout. All identity and exact-predicate checks remain mandatory.
+
+The active source builder and authentication reader use source_snapshot_v2.py
+for the measured 16,384-file capacity. It preserves the v1 archive data format
+and reuses immutable v1 safety helpers. The historical source_snapshot.py remains
+byte-identical for existing native/runtime observations; their original observer,
+time and hashes are unchanged. Both source modules are bound by the artifact graph.

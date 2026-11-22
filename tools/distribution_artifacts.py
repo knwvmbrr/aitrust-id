@@ -38,7 +38,7 @@ WEB_EVIDENCE=('sbom/assets/notices.json','sbom/nested-runtime/pyodide-wasm-relea
  'sbom/nested-runtime/manifest.json','sbom/reviews/pyodide-js/manifest.json','sbom/reviews/zlib-runtime/manifest.json')
 CONSUMERS={
  'ps-source':('tools/ps_source_distribution.py','scripts/export-ps-source.py'),
- 'source-snapshot':('scripts/source_snapshot.py','scripts/build-source-snapshot.py'),
+ 'source-snapshot':('scripts/source_snapshot.py','scripts/source_snapshot_v2.py','scripts/build-source-snapshot.py','scripts/verify-source-provenance.py'),
  'web-checker':('site/package.json','site/scripts/prepare.mjs','tools/web_distribution.py'),
  'ios-app':('scripts/build-ios-project.py','scripts/verify-ios-archive.py','mobile/ios/Source/Assets.swift'),
  'android-app':('scripts/android-share-build.py','mobile/android/AndroidManifest.xml'),
@@ -250,7 +250,7 @@ class Graph:
         need(head.returncode==0);self.commit=head.stdout.decode('ascii').strip();need(COMMIT.fullmatch(self.commit))
         result=run_worker(['git','--no-replace-objects','-C',str(self.root),'ls-tree','-r','-z','--full-tree',self.commit],input=b'',timeout=20,output_limit=2_000_000)
         need(result.returncode==0);rows=result.stdout.split(b'\0');need(rows[-1:]==[b''] and len(rows)-1<=MAX_NODES)
-        evidence='scripts/source_snapshot.py';self.read(evidence)
+        evidence='scripts/source_snapshot_v2.py';self.read(evidence);self.read('scripts/source_snapshot.py')
         for row in rows:
             if not row:continue
             meta,name=row.split(b'\t',1);mode,kind,oid=meta.decode('ascii').split(' ');name=name.decode('ascii');path_name(name)

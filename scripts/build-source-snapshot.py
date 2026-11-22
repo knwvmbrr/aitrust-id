@@ -6,7 +6,7 @@ from pathlib import Path
 import subprocess
 import sys
 import tarfile
-from source_snapshot import build, inspect
+from source_snapshot_v2 import build, inspect
 
 
 def main():

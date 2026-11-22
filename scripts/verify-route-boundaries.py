@@ -44,7 +44,7 @@ PATTERNS += ('scripts/dependency_pins.py', 'scripts/verify-dependencies.py',
 PATTERNS += ('scripts/spdx_inventory.py', 'scripts/verify-runtime-sbom.py',
              'scripts/verify-runtime-sbom-standard.py', 'tests/test_spdx_inventory.py',
              'spec/vendor/spdx-2.3.1/*', 'eval/dependencies/runtime-sbom.json', 'sbom/runtime/*')
-PATTERNS += ('scripts/source_snapshot.py', 'scripts/build-source-snapshot.py',
+PATTERNS += ('scripts/source_snapshot.py', 'scripts/source_snapshot_v2.py', 'scripts/build-source-snapshot.py',
              'scripts/verify-source-provenance.py', 'tests/test_source_provenance.py')
 PATTERNS += ('scripts/independent_timestamp.py', 'scripts/timestamp-artifact.py',
              'tests/test_independent_timestamp.py', 'tests/fixtures/timestamp-freetsa-2026/*')
@@ -231,7 +231,8 @@ PATTERNS += ('tools/synthid_input.py','scripts/inspect-synthid-input.py','script
 
 PATTERNS += ('site/public/reference/organization-policy-registry.md','site/public/reference/organization-policy-acceptance.md','site/public/reference/assertion-migration.md','site/public/reference/synthid-vendor-input.md')
 
-PATTERNS += ('tools/c2pa_native_obligations.py', 'scripts/verify-c2pa-native-obligations.py', 'tests/test_c2pa_native_obligations.py', 'sbom/c2pa-native/**/*', 'docs/c2pa-native-obligations*.md', 'tools/nli_native_obligations.py', 'scripts/verify-nli-native-obligations.py', 'tests/test_nli_native_obligations.py', 'sbom/nli-native/**/*', 'docs/nli-native-obligations*.md', 'tools/distribution_artifacts.py', 'tools/artifact_evidence_io.py', 'tools/artifact_process.py', 'scripts/distribution-artifact.py', 'tests/test_distribution_artifacts.py', 'tests/test_artifact_process.py', 'tests/test_artifact_workflow.py', '.github/workflows/artifact-sbom.yml', 'docs/distribution-artifact-sbom*.md', 'docs/worker-supervision-recovery-plan.md')
+PATTERNS += ('scripts/prepare-citation-demo.py', 'tests/test_citation_demo.py', 'docs/fi-citation-practice*.md', 'site/public/reference/fi-citation-practice.md')
+PATTERNS += ('tools/c2pa_native_obligations.py', 'scripts/verify-c2pa-native-obligations.py', 'tests/test_c2pa_native_obligations.py', 'sbom/c2pa-native/**/*', 'docs/c2pa-native-obligations*.md', 'tools/nli_native_obligations.py', 'scripts/verify-nli-native-obligations.py', 'tests/test_nli_native_obligations.py', 'sbom/nli-native/**/*', 'docs/nli-native-obligations*.md', 'tools/distribution_artifacts.py', 'tools/artifact_evidence_io.py', 'tools/artifact_process.py', 'scripts/distribution-artifact.py', 'tests/test_distribution_artifacts.py', 'tests/test_artifact_process.py', 'tests/test_artifact_workflow.py', '.github/workflows/artifact-sbom.yml', 'docs/distribution-artifact-sbom*.md', 'docs/worker-supervision-recovery-plan.md', 'docs/source-snapshot-v2-plan.md')
 
 def read_json(file):
     return read_evidence(file)

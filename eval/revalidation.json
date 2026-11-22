@@ -657,7 +657,13 @@
         "tests/test_artifact_workflow.py",
         ".github/workflows/artifact-sbom.yml",
         "docs/distribution-artifact-sbom*.md",
-        "docs/worker-supervision-recovery-plan.md"
+        "docs/worker-supervision-recovery-plan.md",
+        "scripts/source_snapshot_v2.py",
+        "docs/source-snapshot-v2-plan.md",
+        "scripts/prepare-citation-demo.py",
+        "tests/test_citation_demo.py",
+        "docs/fi-citation-practice-main-integration-plan.md",
+        "docs/fi-citation-practice*.md"
       ],
       "commands": [
         [
@@ -1089,6 +1095,13 @@
         [
           "{python}",
           "scripts/verify-nli-native-obligations.py"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_citation_demo.py",
+          "-q"
         ]
       ]
     },
@@ -1763,7 +1776,14 @@
         "docs/organization-policy-registry.md",
         "docs/organization-policy-acceptance.md",
         "docs/assertion-migration.md",
-        "docs/synthid-vendor-input.md"
+        "docs/synthid-vendor-input.md",
+        "scripts/source_snapshot_v2.py",
+        "docs/source-snapshot-v2-plan.md",
+        "scripts/prepare-citation-demo.py",
+        "tests/test_citation_demo.py",
+        "docs/fi-citation-practice-main-integration-plan.md",
+        "docs/fi-citation-practice*.md",
+        "site/public/reference/fi-citation-practice.md"
       ],
       "commands": [
         [

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-044406-register-current-delivery-scope-and-source-bindings-150062b2",
+  "recorded_at": "2026-11-22T04:44:06.255443+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7785095ed7409cc9d3c8b5633b9469aca671c290",
+  "changed": "Updated the current135/67 delivery snapshot, preserved original acceptance, registered new serializer/FI inputs and refreshed their public scope projections.",
+  "proves": "The scope and board describe actual implemented components separately from the two full original closures; all five source-bound profile commands retain earlier checks.",
+  "limits": "Full current verification and protected/public publication pending. Target60 unmet; no independent accuracy, legal formation or certification claim.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "T-FI",
+    "F-057",
+    "X-02",
+    "F-155"
+  ],
+  "files": {
+    "docs/scope-progress.json": "bd61ba09e785e8a8e0b29a41b4c38da2f3df26d312030499a3f10739457b9276",
+    "docs/scope-progress.md": "96465138a5f453d16a78140afb295758290d65e0fed397ff72914f5cd844e431",
+    "docs/session-delivery-plan.md": "f0546588280a6934d8b55510e83448616b4bd186f52060c7c307401986313702",
+    "docs/session-delivery.json": "30f93cc331bcd665ebdec981383d24e505e7a0f6fb58569a70c9395268acc833",
+    "eval/revalidation.json": "2c323c8fb32f52fe463e78e7177ae2059893817b61bef8d744d8162e2e04f84a",
+    "scripts/verify-route-boundaries.py": "e66c2d5f16738dcab126276e3f4bf4e37e64d97c7c0919038bcab72568564aed",
+    "site/index.html": "f377e7506e95350ce10cbf249a43e7df80c4296da1e0b8f94cc4d01d5d088e1c",
+    "site/public/reference/public-scope.json": "3eb9d52449334337b04662f84bc204c1891f03e7c28e208d2169c46a6966db11",
+    "site/src/public-scope.json": "3eb9d52449334337b04662f84bc204c1891f03e7c28e208d2169c46a6966db11",
+    "site/src/scope-manifest.json": "20119bef419293a20c6d5cb59b0722e242d4e2e0a73f4bf39fde0289d074a0bc",
+    "state.json": "7beb5fe7c58d2dad3ee15b3a19b658f6be948872a8fc007574d141a1bcfea9dd"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-source-snapshot-v2-execution.json",
+      "sha256": "58f8c2822cf647c5e8918dd2179a81641ec16cc8127af202fda14a52f4225411"
+    },
+    {
+      "path": "runs/2026-11-22-fi-private-practice-main-integration.json",
+      "sha256": "a75f203f08788c97a700d2490f8c434230480e06f297cb5027344bfd3438e3ae"
+    }
+  ],
+  "checks": []
+}

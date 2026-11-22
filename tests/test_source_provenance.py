@@ -14,7 +14,7 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
-import source_snapshot as source
+import source_snapshot_v2 as source
 import importlib.util
 spec = importlib.util.spec_from_file_location('verify_source', ROOT / 'scripts/verify-source-provenance.py')
 verifier = importlib.util.module_from_spec(spec)
@@ -350,3 +350,35 @@ def test_exact_read_limit_and_midread_mutation(tmp_path, monkeypatch):
         return result
     monkeypatch.setattr(source.os,'read',read)
     with pytest.raises(ValueError,match='changed'):source.read_file(path,3)
+
+
+def test_legacy_observer_module_stays_exact_and_v2_reuses_only_helpers():
+    import hashlib
+    assert hashlib.sha256((ROOT/'scripts/source_snapshot.py').read_bytes()).hexdigest() == '24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee'
+    assert source.legacy.MAX_FILES == 10_000
+    assert source.MAX_FILES == 16_384
+    assert source.read_file is source.legacy.read_file
+    assert source.build is not source.legacy.build
+    assert source.inspect is not source.legacy.inspect
+    assert source.MAX_FILE == source.legacy.MAX_FILE == 32_000_000
+    assert source.MAX_TOTAL == source.legacy.MAX_TOTAL == 128_000_000
+    assert source.MAX_ARCHIVE == source.legacy.MAX_ARCHIVE == 64_000_000
+
+
+def test_v1_v2_small_archive_bytes_and_inspection_match(repo):
+    sha = source.git(repo, 'rev-parse', 'HEAD').decode().strip()
+    legacy_raw = source.legacy.build(repo, sha)
+    current_raw = source.build(repo, sha)
+    assert current_raw == legacy_raw
+    assert source.inspect(current_raw, sha) == source.legacy.inspect(legacy_raw, sha)
+    assert source.legacy.MAX_FILES == 10_000
+
+
+def test_v2_refusal_never_overrides_legacy_module_globals(repo, monkeypatch):
+    sha = source.git(repo, 'rev-parse', 'HEAD').decode().strip()
+    before = source.legacy.MAX_FILES
+    monkeypatch.setattr(source, 'MAX_FILES', 1)
+    with pytest.raises(ValueError, match='Committed source limit'):
+        source.build(repo, sha)
+    assert source.legacy.MAX_FILES == before == 10_000
+    assert source.legacy.inspect(source.legacy.build(repo, sha), sha)['source_files'] == 2

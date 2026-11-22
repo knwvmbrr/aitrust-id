@@ -1,0 +1,124 @@
+{
+  "profile": "final-integration-readonly-peer-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T04:32:45.837271+00:00",
+  "reviewed_by": "/root/seo",
+  "root_head": "7785095ed7409cc9d3c8b5633b9469aca671c290",
+  "baseline": "40d85dfabcd6a3d97b84977992d0523b0995c0d9",
+  "reviewed_pm_delta": "d572882f4cb9b580aba9985e2f6a3b49382b74da..7785095ed7409cc9d3c8b5633b9469aca671c290",
+  "findings": [],
+  "original_contracts": {
+    "master_count": 202,
+    "all_baseline_job_outcome_acceptance_identical": true,
+    "all_open_and_fulfilled_required_acceptance_preserved": true,
+    "complete": 135,
+    "open": 67,
+    "percent_transitions": [
+      {
+        "id": "F-155",
+        "before": 20,
+        "after": 60
+      },
+      {
+        "id": "N-001",
+        "before": 80,
+        "after": 100
+      },
+      {
+        "id": "N-010",
+        "before": 80,
+        "after": 100
+      }
+    ],
+    "new_full_originals": [
+      "N-001",
+      "N-010"
+    ],
+    "F155_full_original_open": true,
+    "F057_X02_full_originals_open": true,
+    "target_60_met": false
+  },
+  "capability_commands": {
+    "PS": 7,
+    "PII_REDACTED": 6,
+    "extension": 14,
+    "protocol": 66,
+    "website": 59,
+    "all_prior_commands_preserved_in_order": true,
+    "added_protocol_commands": 3
+  },
+  "workflow_review": {
+    "actual_declared_test_methods": {
+      "tests/test_distribution_artifacts.py": 27,
+      "tests/test_artifact_process.py": 7,
+      "tests/test_artifact_workflow.py": 2
+    },
+    "total": 36,
+    "count_verified_statically_not_executed_by_reviewer": true,
+    "pull_request_controls_no_signing": true,
+    "attestation_only_project_main_push_or_manual": true,
+    "manual_nonmain_refusal": true,
+    "pinned_actions_and_minimal_job_permissions": true,
+    "source_commit_and_exact_artifact_spdx_policy_verification_retained": true
+  },
+  "source_obligations": {
+    "NLI_frozen_659caad_core_data_exact": true,
+    "C2PA_frozen_reviewed_core_data_exact": true,
+    "bounded_16384_source_and_graph_count_with_byte_time_limits_retained": true,
+    "declared_observed_graph_not_complete_embedded_or_license_claim": true,
+    "cohort_claims_false_and_unresolved_source_offers_visible": true,
+    "thirteen_unknown_release_scopes_remain_refused": true
+  },
+  "retained_execution_identity": {
+    "N010_actual_report_groups": 27,
+    "N010_current_source_bindings": 19,
+    "N010_run_id": 44982217404,
+    "N010_fresh_execution_by_reviewer": false,
+    "combined_author_commands": 37,
+    "combined_bound_inputs": 6172,
+    "combined_current_binding_exception": {
+      "path": "docs/distribution-artifact-sbom.md",
+      "reason": "Explicit doc-only direct-capture versus retained-cohort/count-limit clarification after execution. Historical producer receipt is not relabeled as current all-input execution."
+    },
+    "actual_main_sigstore_workflow_execution": false,
+    "PS_zip_sha256": "1720be1015f7ab1e295de97dbc503723b486209b2f7dc09e2ebd6130c6fb42d1"
+  },
+  "limits": [
+    "Read-only source, AST/count, retained receipt and digest review only; no suites, browser, host or source-cache execution repeated.",
+    "Current final five revalidations, protected publication, main signing, and production delivery are parent-owned and pending; not asserted by this review.",
+    "Source identities, SPDX and signatures do not establish license clearance, complete corresponding source, detector accuracy or tag release."
+  ],
+  "source_sha256": {
+    "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
+    "docs/scope-progress.json": "9adcaa889d16744bb3e2866fa098a55844993126f4322019dec57cb889e04b54",
+    "docs/session-delivery.json": "f6e5dc658163beae1046b40ad7a1be0f7b5b54120c44fea46724d3c3752be0ff",
+    "state.json": "cbc0824fccc664e1009380a4a3e20ab4bf216ad5c88a2328dcbb11cb7f84f6a9",
+    "eval/revalidation.json": "f02a236a2d6d97a7e1d3d55c57d674575f917bf35de9fbdfbab873e89adb8b6e",
+    "scripts/verify-route-boundaries.py": "921b8c57a386ba8f2d852d9eb3ae73db730ab6da8f3e07190574983ced6b679a",
+    ".github/workflows/artifact-sbom.yml": "ddee07cc10c2ab04d7306bf91b6d1f625026ea61b4968d05fefe3eab5a505177",
+    "tools/distribution_artifacts.py": "f4a652cb7daa5c06231d508075d613abb6b8319aa88f6ea48b9981e9c2b4469c",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tools/artifact_process.py": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86",
+    "scripts/source_snapshot.py": "a40b35ba3fb34b57de8fd5c260918ac122df9a9278e2a4f6e3ff758ea6c53225",
+    "tools/nli_native_obligations.py": "9bda146dc50f0be54fcc88f986098f4a0bc5a5d45719a53e53870da1ea114764",
+    "scripts/verify-nli-native-obligations.py": "c34b0b5cebe6e722794c36fb923c3f44ccd36cd185b41ed64db447047d2d4e1f",
+    "tests/test_nli_native_obligations.py": "1f80cbd71855b12a1b10e6243808cbf37555778c66756f559e773975516a9a4a",
+    "sbom/nli-native/manifest.json": "b3332fa5f473cadce44a257b78acb1be471ebd990b72bd5dcf21761d4966fbc5",
+    "sbom/nli-native/evidence.json": "5b6d4fd0b88eff23fe2d3512f551f42649e3af7b71aa60865e07605955696b32",
+    "tools/c2pa_native_obligations.py": "134d8b7010a9dbab91004f2ffaaf66f3ead26817520b54fed56b811e4f751f7e",
+    "scripts/verify-c2pa-native-obligations.py": "d473390bf18392f6bf8e61d012680cc65bc3e03c67be5ca0d7a37d779c5fe322",
+    "tests/test_c2pa_native_obligations.py": "1fd437c4f75baf83a18795e7301bf5c29dbbfb9326332e21556dddfcebe11223",
+    "sbom/c2pa-native/manifest.json": "5e9e5e45c13013f727a1fb8a098b6e70db7bb363c2b43bff16cfc834c2ff4a14",
+    "docs/distribution-artifact-sbom.md": "672acc04e3dff8a50688de2d4a6b340a674e8aefe3ddb3916d8669d8f5b29cf0",
+    "runs/2026-11-22-organization-policy-worker-linux-ci.json": "60d7ef07e74b51ed604772f0b6af4f96cc85e3097d435e963ac047aa1f09dd2c",
+    "runs/2026-11-22-organization-policy-worker-linux-provenance.json": "c78a51d51c898a13d727bcc1e3bdf86a331f7356a195b37c3ed572284e06adbe",
+    "runs/2026-11-22-artifact-sbom-final-combined-cli.json": "69f18b86ec8bd4efc494f926ccfab094e82b34c863ab37f9c89c5533302d650c",
+    "runs/2026-11-22-artifact-sbom-final-combined-distinct-review.json": "8c7ca7ab20403a53659603c5b56ccc28db11d7cc8d24124895bcdeb0c2b226d3",
+    "site/public/downloads/aitrust-id-ps-source.zip": "1720be1015f7ab1e295de97dbc503723b486209b2f7dc09e2ebd6130c6fb42d1",
+    "site/public/downloads/aitrust-id-ps-source.zip.sha256": "995957df20afaab5ed25a3bbdc0c90e5d9c3eb3c40b6319ed4c70a02d628849c",
+    "tests/test_distribution_artifacts.py": "c1525fc69df30be91aca6752d1398ee55e4da75fa374b87af2b58877c977d119",
+    "tests/test_artifact_process.py": "b3681ca1908e39d33276c23dca0cf486f69f86251c8d17b1f6b621cd23163a4a",
+    "tests/test_artifact_workflow.py": "c06c3f0e183db5916e448b718a60fa6763e880eed2b282a99e6e796a8568090c"
+  },
+  "selected_source_bytes_stable": true
+}
