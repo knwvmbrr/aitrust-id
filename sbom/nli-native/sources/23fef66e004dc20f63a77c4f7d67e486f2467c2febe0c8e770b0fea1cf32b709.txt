@@ -1,0 +1,189 @@
+{
+  "format": "ai-trust-id-onnxruntime-source-provenance-handoff/v1",
+  "captured_at": "2026-11-22T03:15:07.781460+00:00",
+  "pass": true,
+  "source_provenance": {
+    "path": "provenance-public.json",
+    "sha256": "afe89f56da783970ea335a97f7fc3b47ae7a6eb028fff919ea0a9303d9870f2b"
+  },
+  "notice_map": {
+    "path": "notice-sections.json",
+    "sha256": "35e741eec7c0a4ca895ac8075c5428ee3bd55a571e23e394aebf5c59efbfbd67"
+  },
+  "actual_native_prefix_witness": {
+    "path": "native-prefix-witness.json",
+    "sha256": "6f7aec1cc8071f349d7dacbe9cf5e21d631be85f5582f9cdbc45eb3d744ea92b"
+  },
+  "public_source_response_records": [
+    {
+      "label": "repository_endpoint",
+      "requested_url": "https://api.github.com/repos/microsoft/onnxruntime",
+      "resolved_url": "https://api.github.com/repos/microsoft/onnxruntime",
+      "http_status": 404,
+      "response_bytes": 118,
+      "response_sha256": "4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9",
+      "retained_path": "sources/4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9.txt",
+      "retained_sha256": "4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9",
+      "retained_bytes": 118,
+      "public_download_url_queries_removed": false
+    },
+    {
+      "label": "exact_tag",
+      "requested_url": "https://api.github.com/repos/microsoft/onnxruntime/git/ref/tags/v1.31.0",
+      "resolved_url": "https://api.github.com/repos/microsoft/onnxruntime/git/ref/tags/v1.31.0",
+      "http_status": 404,
+      "response_bytes": 114,
+      "response_sha256": "e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a",
+      "retained_path": "sources/e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a.txt",
+      "retained_sha256": "e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a",
+      "retained_bytes": 114,
+      "public_download_url_queries_removed": false
+    },
+    {
+      "label": "exact_release_branch",
+      "requested_url": "https://api.github.com/repos/microsoft/onnxruntime/git/ref/heads/rel-1.31.0",
+      "resolved_url": "https://api.github.com/repos/microsoft/onnxruntime/git/ref/heads/rel-1.31.0",
+      "http_status": 404,
+      "response_bytes": 114,
+      "response_sha256": "e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a",
+      "retained_path": "sources/e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a.txt",
+      "retained_sha256": "e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a",
+      "retained_bytes": 114,
+      "public_download_url_queries_removed": false
+    },
+    {
+      "label": "exact_release",
+      "requested_url": "https://api.github.com/repos/microsoft/onnxruntime/releases/tags/v1.31.0",
+      "resolved_url": "https://api.github.com/repos/microsoft/onnxruntime/releases/tags/v1.31.0",
+      "http_status": 404,
+      "response_bytes": 133,
+      "response_sha256": "010563d2cfb8f1e87f700936ce59ee3a33364da46e3db41b0049227918ece74d",
+      "retained_path": "sources/010563d2cfb8f1e87f700936ce59ee3a33364da46e3db41b0049227918ece74d.txt",
+      "retained_sha256": "010563d2cfb8f1e87f700936ce59ee3a33364da46e3db41b0049227918ece74d",
+      "retained_bytes": 133,
+      "public_download_url_queries_removed": false
+    },
+    {
+      "label": "historical_unwitnessed_short_identifier",
+      "requested_url": "https://api.github.com/repos/microsoft/onnxruntime/commits/402979a",
+      "resolved_url": "https://api.github.com/repos/microsoft/onnxruntime/commits/402979a",
+      "http_status": 404,
+      "response_bytes": 118,
+      "response_sha256": "c391981e33b3d73d489d22c8ae4da47417d407010e28de24ee4b1a1673554ba5",
+      "retained_path": "sources/c391981e33b3d73d489d22c8ae4da47417d407010e28de24ee4b1a1673554ba5.txt",
+      "retained_sha256": "c391981e33b3d73d489d22c8ae4da47417d407010e28de24ee4b1a1673554ba5",
+      "retained_bytes": 118,
+      "public_download_url_queries_removed": false
+    },
+    {
+      "label": "exact_wheel_attestation_linux",
+      "requested_url": "https://pypi.org/integrity/onnxruntime/1.31.0/onnxruntime-1.31.0-cp313-cp313-manylinux_2_28_x86_64.whl/provenance",
+      "resolved_url": "https://pypi.org/integrity/onnxruntime/1.31.0/onnxruntime-1.31.0-cp313-cp313-manylinux_2_28_x86_64.whl/provenance",
+      "http_status": 404,
+      "response_bytes": 98,
+      "response_sha256": "ac66aa9675a9ea43d094871ed00d665ca1fcd52f216b17df1215e8535b2814a2",
+      "retained_path": "sources/ac66aa9675a9ea43d094871ed00d665ca1fcd52f216b17df1215e8535b2814a2.txt",
+      "retained_sha256": "ac66aa9675a9ea43d094871ed00d665ca1fcd52f216b17df1215e8535b2814a2",
+      "retained_bytes": 98,
+      "public_download_url_queries_removed": false
+    },
+    {
+      "label": "exact_wheel_attestation_mac",
+      "requested_url": "https://pypi.org/integrity/onnxruntime/1.31.0/onnxruntime-1.31.0-cp312-cp312-macosx_14_0_arm64.whl/provenance",
+      "resolved_url": "https://pypi.org/integrity/onnxruntime/1.31.0/onnxruntime-1.31.0-cp312-cp312-macosx_14_0_arm64.whl/provenance",
+      "http_status": 404,
+      "response_bytes": 94,
+      "response_sha256": "d8ebb218cee12e69a109685bfa7305febd23756083fe2235fbcf832352246340",
+      "retained_path": "sources/d8ebb218cee12e69a109685bfa7305febd23756083fe2235fbcf832352246340.txt",
+      "retained_sha256": "d8ebb218cee12e69a109685bfa7305febd23756083fe2235fbcf832352246340",
+      "retained_bytes": 94,
+      "public_download_url_queries_removed": false
+    },
+    {
+      "label": "portal_query_onnxruntime",
+      "requested_url": "https://opensource.microsoft.com/3pc/downloads?page=0&size=25&q=onnxruntime",
+      "resolved_url": "https://opensource.microsoft.com/3pc/downloads?page=0&size=25&q=onnxruntime",
+      "http_status": 200,
+      "response_bytes": 637,
+      "response_sha256": "3422d5451e9bca60d49271c8b028c0c154313bb9ad1aa3d619c22988024ec89f",
+      "retained_path": "sources/6b6c83b81a63300be3130972e8d6d09a0be4814bf0528bad3ab809f03f60122a.txt",
+      "retained_sha256": "6b6c83b81a63300be3130972e8d6d09a0be4814bf0528bad3ab809f03f60122a",
+      "retained_bytes": 568,
+      "public_download_url_queries_removed": true
+    },
+    {
+      "label": "portal_query_ONNX Runtime",
+      "requested_url": "https://opensource.microsoft.com/3pc/downloads?page=0&size=25&q=ONNX+Runtime",
+      "resolved_url": "https://opensource.microsoft.com/3pc/downloads?page=0&size=25&q=ONNX+Runtime",
+      "http_status": 200,
+      "response_bytes": 1389,
+      "response_sha256": "418771b6abe5b29488afc5eebcfa16d3654404d87d7ed2568f4a7c9d008563b2",
+      "retained_path": "sources/dbc7c466134d3090811d2b88adc35ca04d412a9a491d254f70c65ce64f8f2d1a.txt",
+      "retained_sha256": "dbc7c466134d3090811d2b88adc35ca04d412a9a491d254f70c65ce64f8f2d1a",
+      "retained_bytes": 1142,
+      "public_download_url_queries_removed": true
+    },
+    {
+      "label": "portal_query_1.31.0",
+      "requested_url": "https://opensource.microsoft.com/3pc/downloads?page=0&size=25&q=1.31.0",
+      "resolved_url": "https://opensource.microsoft.com/3pc/downloads?page=0&size=25&q=1.31.0",
+      "http_status": 200,
+      "response_bytes": 66,
+      "response_sha256": "8c839e37dfad2ea6c3b90842c7446b7d8ffa87b2713df2c790ba9e4231f9db6e",
+      "retained_path": "sources/78ed80f7e28d7c4c398295266cd822bc55e4a5b3b6d567a5d8c7aa283c85b935.txt",
+      "retained_sha256": "78ed80f7e28d7c4c398295266cd822bc55e4a5b3b6d567a5d8c7aa283c85b935",
+      "retained_bytes": 88,
+      "public_download_url_queries_removed": true
+    }
+  ],
+  "private_only_observed_portal_client_records": [
+    {
+      "label": "publisher_source_portal",
+      "requested_url": "https://opensource.microsoft.com/3pc/",
+      "resolved_url": "https://opensource.microsoft.com/3pc/",
+      "http_status": 200,
+      "response_bytes": 568,
+      "response_sha256": "c8f9a89b762c96cf8bd97fe99cecff425901cc0cd84ec411c426195b258fc77c",
+      "retained_path": "sources/c8f9a89b762c96cf8bd97fe99cecff425901cc0cd84ec411c426195b258fc77c.txt",
+      "retained_sha256": "c8f9a89b762c96cf8bd97fe99cecff425901cc0cd84ec411c426195b258fc77c",
+      "retained_bytes": 568,
+      "public_download_url_queries_removed": false
+    },
+    {
+      "label": "observed_portal_client_contract",
+      "requested_url": "https://opensource.microsoft.com/3pc/assets/index-B25mwSWc.js",
+      "resolved_url": "https://opensource.microsoft.com/3pc/assets/index-B25mwSWc.js",
+      "http_status": 200,
+      "response_bytes": 707170,
+      "response_sha256": "898b7c5f164414b4ffbfcad7a8e2aa9ba19247fcbb5458ab47724f360bb9cfd5",
+      "retained_path": "sources/898b7c5f164414b4ffbfcad7a8e2aa9ba19247fcbb5458ab47724f360bb9cfd5.txt",
+      "retained_sha256": "898b7c5f164414b4ffbfcad7a8e2aa9ba19247fcbb5458ab47724f360bb9cfd5",
+      "retained_bytes": 707170,
+      "public_download_url_queries_removed": false
+    }
+  ],
+  "no_source_commit_or_archive_recovered": true,
+  "old402979a_query_not_build_identity": true,
+  "no_alternate_version_or_main_substitution": true,
+  "no_proprietary_or_source_never_existed_inference": true,
+  "license_applicability_not_established_by_notice": true,
+  "total_new_http_bytes": 710619,
+  "permission_cleared": false,
+  "original_requirement_closed": false,
+  "original_private_observation_sha256": "7f314d263991d1799d7db969c705312975d7ce268817e7eefaa4f58d619a632a",
+  "public_safe_files": [
+    "handoff.json",
+    "provenance-public.json",
+    "notice-sections.json",
+    "native-prefix-witness.json",
+    "sources/010563d2cfb8f1e87f700936ce59ee3a33364da46e3db41b0049227918ece74d.txt",
+    "sources/4f50e254a719a6b1b06b529bdaa08980e4acf0878aad0090cba7771f6ebdf0b9.txt",
+    "sources/6b6c83b81a63300be3130972e8d6d09a0be4814bf0528bad3ab809f03f60122a.txt",
+    "sources/78ed80f7e28d7c4c398295266cd822bc55e4a5b3b6d567a5d8c7aa283c85b935.txt",
+    "sources/ac66aa9675a9ea43d094871ed00d665ca1fcd52f216b17df1215e8535b2814a2.txt",
+    "sources/c391981e33b3d73d489d22c8ae4da47417d407010e28de24ee4b1a1673554ba5.txt",
+    "sources/d8ebb218cee12e69a109685bfa7305febd23756083fe2235fbcf832352246340.txt",
+    "sources/dbc7c466134d3090811d2b88adc35ca04d412a9a491d254f70c65ce64f8f2d1a.txt",
+    "sources/e2e3c64edab172132f77ce89a0e8c190db1cd30936a096344f45893bd5b75f8a.txt"
+  ]
+}
