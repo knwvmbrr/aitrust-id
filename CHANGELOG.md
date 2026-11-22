@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-163209-record-actual-source-snapshot-v3-qualification-4acf2675
+
+Recorded 2026-11-22T16:32:09.237308+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Recorded actual hosted source snapshot v3 qualification and its distinct retained-evidence review.
+- **Evidence.** All16 controls passed; the actual128339526-byte12829-file committed-source archive passed v3 and was refused by unchanged v2. Current graph/SPDX reconstruction passed with per-process RSS maxima233656KiB under an inherited768MiB address-space limit. [Change record](./runs/changes/2026-11-22-163209-record-actual-source-snapshot-v3-qualification-4acf2675.json).
+- **Not claimed.** Qualified source is b75f434b only; later metadata/integrated source requires fresh measurement and signing. First4d failure remains preserved, host exception unknown. Packet16MB cap unchanged and near headroom. No signature, route admission, legal clearance, independent accuracy or full F057/X02 closure.
+
+
+### 2026-11-22-162339-correct-isolated-source-cli-bootstrap-def36e9e
+
+Recorded 2026-11-22T16:23:39.965913+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Corrected both active source-archive CLIs to import their trusted sibling serializer under isolated Python.
+- **Evidence.** Two isolated help entrypoints and a real six-file owned Git-fixture CLI build pass from an unrelated working directory. Distinct source review passes; the first hosted16-control pass and subsequent unclassified builder failure are preserved without claiming lost stderr. [Change record](./runs/changes/2026-11-22-162339-correct-isolated-source-cli-bootstrap-def36e9e.json).
+- **Not claimed.** Archive core and all limits remain unchanged. Actual larger-source archive,768MiB execution and graph/SPDX qualification remain pending one changed-source hosted run. No source-signature, route admission, legal clearance or full F057/X02 claim.
+
+
+### 2026-11-22-161407-version-bounded-source-snapshot-v3-aa4da53e
+
+Recorded 2026-11-22T16:14:07.047383+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Added a versioned256MB raw-source serializer with separate5MB metadata, streaming bounded inspection and unchanged historical v1/v2 modules.
+- **Evidence.** Small Git archive byte/result parity, exact metadata and framing controls passed; independent source reviews accept immutable historical modules, active consumers and one read-only hosted qualification workflow. [Change record](./runs/changes/2026-11-22-161407-version-bounded-source-snapshot-v3-aa4da53e.json).
+- **Not claimed.** Actual current greater-than128MB archive, full16 boundary controls,768MiB measured execution and graph/SPDX reconstruction remain pending on disposable Linux. No local large build, policy admission, source-signature claim, legal clearance or full F057/X02 completion.
+
+
 ### 2026-11-22-161517-jpeg-credential-linux-working-delivery
 
 Recorded 2026-11-22T16:15:17.592246+00:00 · Contributor: Codex / web_camo · change

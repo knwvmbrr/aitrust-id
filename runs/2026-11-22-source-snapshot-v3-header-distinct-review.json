@@ -1,0 +1,37 @@
+{
+  "profile": "source-snapshot-v3-header-canonicalization-delta-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T16:12:22.295086+00:00",
+  "reviewed_by": "/root/seo",
+  "prior_source_review_sha256": "160923eaee1c95bd2b56d74bc5f98168e6c0b04ee11465c77b470a1cc44c2067",
+  "prior_review_is_historical": true,
+  "current_source_sha256": {
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+    "scripts/build-source-snapshot.py": "2b5ab41bcf4a2ec72bd4baa835865c73bdfeda3df57122de175c13d78da772de",
+    "scripts/verify-source-provenance.py": "254dd2c351ffb6213e7530b57ea30b904fd0f1c5e6cc45a6a584e11b5bb42fa3",
+    "tools/distribution_artifacts.py": "36d25317bf1a9f1557894fb62f8f6a36c62a7c3d8391fa5e7d8d539d928de8ab",
+    "tests/test_source_snapshot_v3.py": "ad964f65d440228710a0ac360b84a3d215647cc616094e393a9fdfb419bf0896",
+    "tests/test_source_provenance.py": "8686ec115a3e02c8e28bbc5c0259bfc37b50148d167206d470046239138e3fe5",
+    "tests/test_distribution_artifacts.py": "584db6beb7fd03c4efb46195ddf42386fefbc6e8ccc3a2bf84cc42714ab30af4",
+    ".github/workflows/source-snapshot-v3.yml": "61bc2a3017842c3884c4ace2b8b51edadf2bd06d9a44ad96028a3ea2c12c3922",
+    "docs/source-snapshot-v3-plan.md": "fccf74477c6bf68132a6af0afc1c0049a39b80edc19584b28fda8a4cd10a3126"
+  },
+  "findings": [],
+  "delta": "Canonical header reconstructed using a fresh TarInfo with only builder-approved name,size,mode andzero identity fields, so unbound linkname/unused fields cannot inherit into canonical comparison. Canonical builder bytes unchanged; quotas/streaming/consumer/workflow same as prior reviewed source.",
+  "reviewer_actual_affected_control": {
+    "groups": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "pass": true,
+    "scope": "tiny valid canonical baseline plus7framing/header mutations, including genuinely distinct regular-header linkname; no large streams/source builds/native execution"
+  },
+  "limits": [
+    "Two-file source delta and all remaining9bindings checked. Prior160923 source review remains historical, not silently current.",
+    "Author reports2small affected groups; reviewer ran only1tiny framing group. No full16/current repository artifact/768MiB/RSS qualification yet.",
+    "The ineffective initial devmajor mutant is explicitly a rejected identical fixture, not a production failure.",
+    "No new license/signing/admission, protected/public release or original closure."
+  ]
+}

@@ -58,7 +58,7 @@ class ArtifactWorkflow(unittest.TestCase):
             self.assertEqual(graph.nodes,{})
             self.assertEqual(calls.call_count,2)
         import importlib.util
-        spec=importlib.util.spec_from_file_location('owned_source_capacity',ROOT/'scripts/source_snapshot_v2.py')
+        spec=importlib.util.spec_from_file_location('owned_source_capacity',ROOT/'scripts/source_snapshot_v3.py')
         source=importlib.util.module_from_spec(spec)
         sys.path.insert(0,str(ROOT/'scripts'))
         try:spec.loader.exec_module(source)

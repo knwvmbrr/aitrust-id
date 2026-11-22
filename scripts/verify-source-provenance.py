@@ -10,7 +10,9 @@ from pathlib import Path
 import subprocess
 import sys
 import tarfile
-from source_snapshot_v2 import COMMIT, MAX_ARCHIVE, inspect, read_file, unique
+# Isolated Python omits the script directory; choose only this trusted source.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from source_snapshot_v3 import COMMIT, MAX_ARCHIVE, inspect, read_file, unique
 
 REPO = 'knwvmbrr/aitrust-id'
 WORKFLOW = REPO + '/.github/workflows/ci.yml'
