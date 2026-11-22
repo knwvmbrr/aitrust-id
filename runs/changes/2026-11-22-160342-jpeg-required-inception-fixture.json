@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-160342-jpeg-required-inception-fixture",
+  "recorded_at": "2026-11-22T16:03:42.714815+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "ba89912f0283b8fa5c2e1ce1598c8dd2474370c9",
+  "changed": "Corrected the synthetic JPEG edit fixture to contain its required software-creation inception followed by editing and explicit current-claim attribution.",
+  "proves": "One source-stable pure definition control and distinct source review pass. Actual diagnostic identified fixture_sign_edit after SDK and creation signing returned; normal-manifest structure matches the existing pinned PNG fixture and published C2PA requirement. Runtime,14native acceptance checks, budgets and workflow remain unchanged.",
+  "limits": "This fixes authored synthetic input, not a production detector or SDK defect. Exact prior native error prose is unknown; no CLI credential case accepted from failed run. Corrected native qualification is pending.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "tests/fixtures/jpeg-provenance-v1/generate.py": "f0ca1f46a46ba6678b5ed4c81d0851b28478e69d27ae6e3ceef4f9a5bc242eff",
+    "tests/test_jpeg_provenance.py": "6edf4cdd9f4d84318bff110cb0a7d19db017e5ff5578165ed05449c4567b736e",
+    "docs/jpeg-provenance-plan.md": "5eb58fcbb992c400d3b5df460739848a3704b423b2bb6946f7bcf266304990c9",
+    "runs/2026-11-22-jpeg-native-candidate-3-diagnosed.json": "ee0b628df678ff524c5bd19362e656fa50b07c8878aa2689be2c5d8cc4269620",
+    "runs/2026-11-22-jpeg-inception-fixture-control.json": "11387a37945d5ecdb611357af8413de9796eb56d336168004fec1f25afaa40c5",
+    "runs/2026-11-22-jpeg-inception-fixture-distinct-review.json": "a64a9938182b114edbded04194f46eadd0b6123dbb7bf93c5243b1dc7ad792a6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-jpeg-native-candidate-3-diagnosed.json",
+      "sha256": "ee0b628df678ff524c5bd19362e656fa50b07c8878aa2689be2c5d8cc4269620"
+    },
+    {
+      "path": "runs/2026-11-22-jpeg-inception-fixture-control.json",
+      "sha256": "11387a37945d5ecdb611357af8413de9796eb56d336168004fec1f25afaa40c5"
+    },
+    {
+      "path": "runs/2026-11-22-jpeg-inception-fixture-distinct-review.json",
+      "sha256": "a64a9938182b114edbded04194f46eadd0b6123dbb7bf93c5243b1dc7ad792a6"
+    }
+  ],
+  "checks": []
+}

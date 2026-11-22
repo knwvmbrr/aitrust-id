@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-161517-jpeg-credential-linux-working-delivery
+
+Recorded 2026-11-22T16:15:17.592246+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Recorded the functioning selected Linux JPEG credential/action CLI qualification and distinct retained-evidence review, preserving three failed candidates and unchanged PNG/text behavior.
+- **Evidence.** Actual hosted45041728639 passed20focused groups and14qualification cases, including4whole public SDK projections, signed creation/edit, altered binding with matching signature, caller-root context isolation, unknown revocation, unsigned/refusal, SDK absence with actual PS survival and recovery. Seventeen source pre/post/current/Git hashes match; tenlocked versions, nonroot isolated namespace, empty capabilities/groups, no-new-privileges and temporaryenvironment cleanup are recorded. [Change record](./runs/changes/2026-11-22-161517-jpeg-credential-linux-working-delivery.json).
+- **Not claimed.** Synthetic engineering evidence only; selected Ubuntu24 x64 CPython3.13.18, SDK0.38/native0.91. No Mac/phone/browser qualification, origin/authorship/truth/overallValid, FA/PA issuance, full original closure, public endpoint, complete native sandbox or license-clearance claim. Result prose is post-proof; runtime unchanged.
+
+
+### 2026-11-22-160342-jpeg-required-inception-fixture
+
+Recorded 2026-11-22T16:03:42.714815+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Corrected the synthetic JPEG edit fixture to contain its required software-creation inception followed by editing and explicit current-claim attribution.
+- **Evidence.** One source-stable pure definition control and distinct source review pass. Actual diagnostic identified fixture_sign_edit after SDK and creation signing returned; normal-manifest structure matches the existing pinned PNG fixture and published C2PA requirement. Runtime,14native acceptance checks, budgets and workflow remain unchanged. [Change record](./runs/changes/2026-11-22-160342-jpeg-required-inception-fixture.json).
+- **Not claimed.** This fixes authored synthetic input, not a production detector or SDK defect. Exact prior native error prose is unknown; no CLI credential case accepted from failed run. Corrected native qualification is pending.
+
+
+### 2026-11-22-155919-jpeg-fixed-signing-diagnostics
+
+Recorded 2026-11-22T15:59:19.980637+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Added closed native-load and synthetic-signing diagnostic steps without modifying JPEG runtime, SDK, workflow or acceptance.
+- **Evidence.** Two source-stable inert diagnostic controls and distinct source review pass; second hosted run confirms actual isolation, dropped privileges, ten locked versions and17controls but no accepted credential case. [Change record](./runs/changes/2026-11-22-155919-jpeg-fixed-signing-diagnostics.json).
+- **Not claimed.** Raw second-run nativefalse flag was set late and does not establish no native call; retained failure explicitly qualifies it. Fixed error enums expose no raw exception, input, report or certificate data. No tag release, original closure or native success claimed.
+
+
+### 2026-11-22-155225-jpeg-qualification-namespace-witness
+
+Recorded 2026-11-22T15:52:25.793170+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Replaced a nonportable privileged-proc namespace read with the actual outer namespace witness and stricter dropped-privilege checks in the disposable JPEG qualification only.
+- **Evidence.** Two source-stable inert controls and distinct source review accept the different actual-self witness contract and refuse missing/same identity, root, retained capabilities/groups or missing no-new-privileges. First hosted run installed the exact lock and passed15 controls, then failed before SDK execution; its415-byte artifact is retained. [Change record](./runs/changes/2026-11-22-155225-jpeg-qualification-namespace-witness.json).
+- **Not claimed.** First environment exception was not captured and is not called an SDK defect. No application, parser, worker, timeout or tag behavior changed; native qualification awaits the authorized changed-source hosted run.
+
+
+### 2026-11-22-154604-jpeg-credential-native-candidate
+
+Recorded 2026-11-22T15:46:04.654981+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Added an isolated bounded JPEG credential/action CLI candidate and a read-only native qualification workflow using the existing locked optional SDK.
+- **Evidence.** Fifteen preliminary stdlib controls and one source-stable finite-report correction control pass; distinct source/workflow review is clear. Private bytes, source pins, action/signature/binding axes and owned child cleanup are explicit; PNG and text sources are unchanged. [Change record](./runs/changes/2026-11-22-154604-jpeg-credential-native-candidate.json).
+- **Not claimed.** Native signature, per-call public-anchor behavior and complete working acceptance remain pending the one approved disposable hosted run. No origin classification, FA/PA tag, full original closure, model, endpoint, account or local native installation.
+
+
 ### 2026-11-22-155735-screen-visual-model-and-persuasion-data-4cceb0f1
 
 Recorded 2026-11-22T15:57:35.808790+00:00 · Contributor: Codex PM /root · change

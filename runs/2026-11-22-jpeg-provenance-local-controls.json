@@ -1,0 +1,43 @@
+{
+  "captured_at": "2026-11-22T15:40:36.424649+00:00",
+  "pass": true,
+  "claim": "local stdlib engineering controls only",
+  "source_base": "2f03b9de83daab98ed8633c80c12e9217a822799",
+  "test_command": "python3 -B -m unittest tests.test_jpeg_provenance -v",
+  "test_count": 15,
+  "test_exit": 0,
+  "test_seconds": 0.294,
+  "source_snapshot_timing": "captured after the recorded focused execution; no before/after stability claim for this preliminary receipt",
+  "sources": {
+    ".github/workflows/jpeg-provenance-qualification.yml": "3872d7e612db737b83817b5c3b743c215c64638c446452fa4ecec55a28288a18",
+    "docs/jpeg-provenance-guide.md": "7a75d2053e01258b6aa626bba48c0e3e7e91b675caacb59691a75c5346581bcc",
+    "docs/jpeg-provenance-plan.md": "939856f3fe93f235c2d90ba05e7fd96dc781ae38ef8fa5fc398bb438490afd9b",
+    "scripts/inspect-jpeg-provenance.py": "f3389b8b14e2af09e708a76e0d0f7b5a15b874c6daab59d8ccfde18a78be5148",
+    "scripts/verify-jpeg-provenance.py": "35565094cd79e14ad4cd1bf1d5c0504e0f5cf7b09e8be3a27b2fae34cc21fc74",
+    "tests/fixtures/jpeg-provenance-v1/generate.py": "393348bf5d5911192cef6747148b781f6ca066179cc4328ec2e25f0c4d047ac8",
+    "tests/test_jpeg_provenance.py": "eda79a9ec14eb7e1c332fe08eee87cfd059bc4fbbd4854bbd67fd5637789f13f",
+    "tools/jpeg_provenance.py": "2be9bc95a3aca62750bc23e49c1923fc61c00aa336c8edc3dabeaec6364fd8df",
+    "tools/jpeg_provenance_actions.py": "e4cf4cd2661c2e4c257017f4d4cc3a87880f9002f73c44243e75e6b1cf4bf5d2",
+    "tools/jpeg_provenance_io.py": "65ab199c54571a077898246266da6dfa52e7148d59f93479175ee6a88655abfa",
+    "tools/jpeg_provenance_process.py": "1eac62ab9bc14dddba14f58dda4acb31f0e1a536436fdb7f27bdaea48d23c156",
+    "tools/jpeg_provenance_sdk.py": "9e2594c368e89a4029c39cb73cd876df1fffacec978750ec73f2d7ba3bc24061"
+  },
+  "syntax": {
+    "python": true,
+    "yaml": true,
+    "bash_blocks": 4
+  },
+  "actual_native_sdk_executed": false,
+  "actual_native_qualification": "PENDING_REVIEWED_DISPOSABLE_CI",
+  "original_requirements_closed": 0,
+  "FA_PA_tags_issued": false,
+  "prior_failed_harness": {
+    "path": "output/verification/jpeg-first-focused-harness-failure.json",
+    "sha256": "097cf0f5edae2ef5868982527b3457c30c17ac07cc28e142998c6471825b8263"
+  },
+  "limits": [
+    "Synthetic report projections are not native signature validation.",
+    "No SDK install, model, browser, endpoint or existing sibling change.",
+    "Per-invocation trust anchor behavior is candidate pending actual native proof."
+  ]
+}

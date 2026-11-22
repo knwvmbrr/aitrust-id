@@ -1,0 +1,91 @@
+{
+  "captured_at": "2026-11-22T15:49:27.308191+00:00",
+  "pass": false,
+  "head_sha": "079e2b1597318b427c7fe3485928378bafb8bc13",
+  "run_id": 45040187485,
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45040187485",
+  "conclusion": "failure",
+  "artifact": {
+    "id": 14760874418,
+    "bytes": 415,
+    "sha256": "bb33b357724d408353ad56c9010fae0f7d0e347d4d68ee6559d0acf284041f23"
+  },
+  "actual_report": {
+    "ai_origin_established": false,
+    "captured_at": "2026-11-22T15:47:16.671453+00:00",
+    "cases": [],
+    "complete_security_sandbox": false,
+    "error": "qualification_failed",
+    "independent_accuracy_evidence": false,
+    "native_sdk_executed": false,
+    "new_tag_releases": 0,
+    "pass": false,
+    "profile": "jpeg-provenance-qualification/1.0.0",
+    "stage": "environment"
+  },
+  "job_steps": [
+    {
+      "name": "Set up job",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Install existing hash-locked optional environment",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Focused JPEG safety controls",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Actual synthetic signing and read-only CLI without network",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "name": "Remove only owned disposable environment",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Run actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065",
+      "status": "completed",
+      "conclusion": "skipped"
+    },
+    {
+      "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "raw_report_sha256": "138b58a2d8e3abc44bc96de5089dda94a20c53838439b63a6fdc5f9b018edd19",
+  "job_log_sha256": "2f74604378bfb9a4fbeaa781e95e4d4660216bfb8994cfb4522c31725d88c00c",
+  "diagnosis": "Failure occurred before the driver set network_namespace_isolated. The nonroot /proc/1 namespace read is not portable across procfs access policy; exact exception was intentionally not emitted and is not claimed observed.",
+  "next_change": "Qualification-only original-namespace witness captured before unshare, compared to actual self namespace after dropping privilege; closed substeps and permission witness. No application/runtime change.",
+  "sdk_install_pass": true,
+  "focused_tests_passed": 15,
+  "native_claims_accepted": false,
+  "new_tag_releases": 0
+}
