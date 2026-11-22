@@ -64,6 +64,13 @@ Recorded 2026-11-22T06:28:14.936301+00:00 · Contributor: Codex PM /root · chan
 - **Evidence.** All11required checks passed before normal merge;70selected files match on each of2origins. Actual main signing and independent detached verification with separately retrieved roots pass for the admitted PS source route. [Change record](./runs/changes/2026-11-22-062814-publish-protected-site-and-authenticated-source-06504c2f.json).
 - **Not claimed.** This authenticates source bytes only. Independent detector accuracy, full F057/X02 license coverage and all other distribution-route approvals remain open. Current original scope135complete67open; later framework/MT candidates are separate.
 
+### 2026-11-22-064651-expose-reference-programme-without-claiming-authority-0cfd9183
+
+Recorded 2026-11-22T06:46:51.651467+00:00 · Contributor: Codex /root/share_debugger; integration lead owns acceptance and publication · change
+
+- **Changed.** Added reference-programme README practice, About links, three exact public reference copies and a dedicated read-only CI verifier without altering frozen programme runtime.
+- **Evidence.** Executed actual reference-copy block and verified all three exact outputs/link targets; shell/module/JSX/YAML/embedded-Python syntax and full current source-trigger coverage pass. All eight existing39-test/30-command runtime source hashes remain unchanged. [Change record](./runs/changes/2026-11-22-064651-expose-reference-programme-without-claiming-authority-0cfd9183.json).
+- **Not claimed.** No unchanged runtime batch repeated, hosted job, integrated browser/build or public delivery performed. No accreditation, actual certifier, mark authority, independent accuracy, institution activation or original-count change. Distinct discovery review requested.
 
 
 ### 2026-11-22-063017-integrate-complete-reference-programme-151ab741
