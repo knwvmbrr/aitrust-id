@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-180148-visual-camera-detector-candidates-15569089",
+  "recorded_at": "2026-11-22T18:01:48.656695+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a11fd24656383e65d93f0ee58965c190c8534b17",
+  "changed": "Recorded primary-source camera-cohort and image-detector candidate research with exact source identities and separate data, code and weight boundaries.",
+  "proves": "Source-only review identifies per-file CC0 camera samples and a pinned UniversalFakeDetect/CLIP research candidate, documents unsafe upstream loading/evaluation paths and proposes a bounded offline score qualification job. Original ignored research remains immutable; routine authorized engineering uses rights, capacity and worker-plan checks.",
+  "limits": "No images, weights, datasets or packages acquired; no runtime, benchmark, detector accuracy, product integration, tag or original closure. The first12.19MP DNG exceeds the current4MP JPEG profile and needs a separately versioned conversion. Acquisition remains pending engineering rights/capacity checks; owner decisions apply only to new costs, credentials, terms, legal representation or adopted numeric-tag policy.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "docs/visual-camera-detector-candidates.md": "d7d16fdcb49f638b38dd73dc021c6366d10445dc20aecf56643704df8bed75c1",
+    "runs/2026-11-22-visual-camera-detector-source-research.json": "4fd512b0d3751e2c6094eb875e6b392adbf15a639fff8967f4b7dc72430d3b3c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-visual-camera-detector-source-research.json",
+      "sha256": "4fd512b0d3751e2c6094eb875e6b392adbf15a639fff8967f4b7dc72430d3b3c"
+    }
+  ],
+  "checks": []
+}

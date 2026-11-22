@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-180148-visual-camera-detector-candidates-15569089
+
+Recorded 2026-11-22T18:01:48.656695+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Recorded primary-source camera-cohort and image-detector candidate research with exact source identities and separate data, code and weight boundaries.
+- **Evidence.** Source-only review identifies per-file CC0 camera samples and a pinned UniversalFakeDetect/CLIP research candidate, documents unsafe upstream loading/evaluation paths and proposes a bounded offline score qualification job. Original ignored research remains immutable; routine authorized engineering uses rights, capacity and worker-plan checks. [Change record](./runs/changes/2026-11-22-180148-visual-camera-detector-candidates-15569089.json).
+- **Not claimed.** No images, weights, datasets or packages acquired; no runtime, benchmark, detector accuracy, product integration, tag or original closure. The first12.19MP DNG exceeds the current4MP JPEG profile and needs a separately versioned conversion. Acquisition remains pending engineering rights/capacity checks; owner decisions apply only to new costs, credentials, terms, legal representation or adopted numeric-tag policy.
+
+
 ### 2026-11-22-164504-mt-private-label-preparation
 
 Recorded 2026-11-22T16:45:04.200630+00:00 · Contributor: Codex / web_camo · change
