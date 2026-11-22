@@ -63,6 +63,31 @@ Recorded 2026-11-22T05:29:57.659064+00:00 · Contributor: Codex PM /root · chan
 - **Changed.** Recorded actual integrated website execution after the versioned serializer and FI practice integration.
 - **Evidence.** Failed candidate preserved; no pass is claimed. [Change record](./runs/changes/2026-11-22-052957-current-site-website-d9dcea0f.json).
 - **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+### 2026-11-22-062029-mt-selected-wording-actual-browser-handoff-e4143847
+
+Recorded 2026-11-22T06:20:29.506906+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Finish the optional selected-pair wording modal with exact published method1.3, production-route controls and separately observed owned-origin outage checks. Preserve both failed candidates and typed builder publication uncertainty.
+- **Evidence.** Normal site build passed;14 focused integration tests and10 client groups passed. Actual Chromium/WebKit each matched11 canonical records and3 UI records, refused corrupt results, preserved legacyMT/PS under optional faults, and completed cold offline-worker records after stopping only held-owned fixtures. Distinct source/evidence review clears the composed observations. [Change record](./runs/changes/2026-11-22-062029-mt-selected-wording-actual-browser-handoff-e4143847.json).
+- **Not claimed.** Candidate2 binds its oldobserver; the new outage-only receipt binds currentobserver and unchanged servedbytes. No physicalSafari, independentaccuracy, MT tag, fulloriginal closure or productionpublication; root performs current integrated required checks.
+
+
+### 2026-11-22-061001-mt-selected-public-worker-packaging-0620b28c
+
+Recorded 2026-11-22T06:10:01.784642+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Keep the exact copied public MT worker outside Vite worker rebundling and record generated guide/index/performance projections from the first normal build.
+- **Evidence.** The first normal build failure is preserved; corrected public worker URL passes all10 focused client groups with11 canonical records and9 corruption refusals. No canonical method/runtime bytes changed. [Change record](./runs/changes/2026-11-22-061001-mt-selected-public-worker-packaging-0620b28c.json).
+- **Not claimed.** Actual production-route browser execution is pending; generated projections reflect isolated base8dac only and do not supersede root current HOST20 copy. No MT release or original closure.
+
+
+### 2026-11-22-060839-mt-selected-wording-modal-23150b02
+
+Recorded 2026-11-22T06:08:39.747981+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Integrate the exact independently published selected-pair wording method1.3 as a closed optional MT-modal preview with a separate bounded worker and existing offline installation path.
+- **Evidence.** Fourteen focused integration controls pass; exact cohort/notices are retained, legacy1.2 is unchanged, and independent actual descriptor-fault review clears the builder publication boundary. Actual production-route browser verification follows this source freeze. [Change record](./runs/changes/2026-11-22-060839-mt-selected-wording-modal-23150b02.json).
+- **Not claimed.** Literal observations only; no MT tag, intent, truth, accuracy or full original requirement closure. No production publication.
 
 
 ### 2026-11-22-052637-record-generated-host20-site-metadata-c95de168

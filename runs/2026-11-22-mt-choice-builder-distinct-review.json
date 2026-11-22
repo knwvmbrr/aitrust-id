@@ -1,0 +1,36 @@
+{
+  "profile": "MT-choice-whole-build-close-distinct-correction-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T06:01:37.900792+00:00",
+  "reviewed_by": "/root/seo",
+  "findings": [],
+  "source_sha256": {
+    "scripts/build-mt-choice-device.py": "ceaee08bc647a2ae1946842cffc7eb0330e7af00ca6fa00909838a4648026456",
+    "tests/test_mt_choice_integration.py": "fe3d5c5e65437b6f9a625d118e61e237f09302253fd28d91156f66d7d157dfd7"
+  },
+  "original_finding_sha256": "d4f5d19f11e3ce54dcce2cd943d3e451dd9dd5da249288d8210283e7e2821479",
+  "actual_affected_controls": [
+    {
+      "target": "source",
+      "typed_output_uncertain": true,
+      "four_outputs_remain": true,
+      "release_close_attempts": 1,
+      "new_owned_marker_descriptor_survives": true
+    },
+    {
+      "target": "runtime",
+      "typed_output_uncertain": true,
+      "four_outputs_remain": true,
+      "release_close_attempts": 1,
+      "new_owned_marker_descriptor_survives": true
+    }
+  ],
+  "retained_normal_static_manifest_sha256": "a4672bd8c0dc24c0bfad4cca1f38e579af0dd1f11e868a7f9b6b0d768c04c779",
+  "all_normal_manifest_inputs_bundle_worker_match": true,
+  "source_bytes_stable": true,
+  "limits": [
+    "Only two real-descriptor close fault replays with exact existing cached runtime bytes and new temporary outputs; no VM/browser/native code, download, fullsuite or normal build repeated.",
+    "This clears the bounded builder correction only. Final browser/integrated route evidence, remaining verifier source freeze and publication still pending.",
+    "No MT tag, independent accuracy, accreditation or original closure claim."
+  ]
+}

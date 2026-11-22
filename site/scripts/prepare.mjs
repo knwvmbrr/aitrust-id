@@ -41,6 +41,8 @@ fs.copyFileSync(path.join(repo,'docs/fi-citation-sidecar.md'),path.join(site,'pu
 fs.copyFileSync(path.join(repo,'docs/fi-citation-practice.md'),path.join(site,'public/reference/fi-citation-practice.md'));
 fs.copyFileSync(path.join(repo,'docs/fi-citation-sidecar-plan.md'),path.join(site,'public/reference/fi-citation-sidecar-plan.md'));
 fs.copyFileSync(path.join(repo,'docs/mt-evidence-workflow.md'),path.join(site,'public/reference/mt-evidence-workflow.md'));
+execFileSync(process.env.AITRUST_BUILD_PYTHON||'python3',[path.join(repo,'scripts/build-mt-choice-device.py')],{stdio:'pipe'});
+fs.copyFileSync(path.join(repo,'docs/mt-choice-device.md'),path.join(site,'public/reference/mt-choice-device.md'));
 const scope=JSON.parse(fs.readFileSync(path.join(repo,'docs/master-scope.json')));
 execFileSync(process.env.AITRUST_SCOPE_PYTHON||'python3',[path.join(repo,'scripts/scope-progress.py')],{stdio:'pipe'});
 const progress=JSON.parse(fs.readFileSync(path.join(repo,'docs/scope-progress.json')));
