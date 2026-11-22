@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-181410-managed-mcp-protected-consumer-c02365d7",
+  "recorded_at": "2026-11-22T18:14:10.113247+00:00",
+  "author": "Codex / share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "88a5db2bba96af4a09058a4ea8ee3a080c97778b",
+  "changed": "Implement an optional managed MCP consumer, source-bound finite grant assessment and protected-main producer; retain failed private workspaces and preserve prior runtime and failure evidence.",
+  "proves": "Twenty-six new managed-source controls plus two existing workflow-context controls pass; both workflows parse, sixteen shell and nine Python blocks pass syntax checks, and distinct source/grant reviews cover the fixed facts and producer authority.",
+  "limits": "Source-only implementation: no new SDK runtime, artifact assembly, protected signature or actual managed admission. Prior four-target44-case runtime receipts and88a5zlib filesystem evidence stay historical; current branch awaits protected fixed-I/O base. No full F057/X02, legal, compiled-closure or accuracy acceptance.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".github/workflows/artifact-sbom.yml": "8dcb1fde56d68303ad736de64962483c7a0a1c36942ab2a389e9162c9877bd9d",
+    ".github/workflows/mcp-runtime-distribution.yml": "db18c744209e13cefd564e9f9d3a095eb16e924813df6d621a35fdf7a1c0e306",
+    "docs/mcp-managed-release-plan.md": "0d8c6d5faf6c91f72e73b732b9101cebe81abb2fcfb927c98af80b0de15956f7",
+    "docs/mcp-managed-release-result.md": "e3eb24b352f07df668b7a1af3f5a710c7c87a291e587148c9dd68fd79b539f64",
+    "docs/mcp-managed-release.md": "67faadae2047ae4cd3c9ac0aef090ac698be76132c98e1245f299492faa3038a",
+    "docs/mcp-stdio-distribution.md": "cf77502a33ffb85a1890e00f29f98d8f3e84f25639084f96d8505b7d1d777b4c",
+    "eval/dependencies/mcp-runtime-release.json": "d0488a93ce395eb7b03aed1161977a87a81782f6af7a4bd66ba890c0f4c22c38",
+    "eval/dependency-policy.json": "31e3f2927faaf51c044e361cded59369852a0fddaf97b93fa93bf7394074adce",
+    "runs/2026-11-22-artifact-temp-successor-cleanup-original.json": "defd50f6f42d1cf94f29fad9aa9efcda0e0826504bda0e61ff440b55e8b4881c",
+    "runs/2026-11-22-mcp-carried-grant-pin-distinct-review.json": "1aa8774a6fa73ebc6ca820ed1ada75eb30a259e76e5fdf5749847812a44d29fe",
+    "runs/2026-11-22-mcp-cffi-rust-notice-facts-distinct-review.json": "80b39cb342718c8f8c475db93d2f0a07e32f5356c3285140618c26829d8cd68e",
+    "runs/2026-11-22-mcp-cleanup-source-metadata-refresh.json": "672b1c31d5f068b8cb447fbaab82e81f69adb29b2f649f7c5a493dbc05600d78",
+    "runs/2026-11-22-mcp-finite-assessment-before-chronology.json": "cd74dd7b3c0ecc5eb3cf684bd28a56f5df5a646ae8cc348de83b4696c4305586",
+    "runs/2026-11-22-mcp-finite-assessment-original.json": "e7512f624fa7a04f2d56867737b30c240b869188328310991df1471cbc8c4f0a",
+    "runs/2026-11-22-mcp-finite-policy-distinct-review.json": "380217c3535dff0302c5b483f9b58949ce81f33349115894aee8d7dac2225fd6",
+    "runs/2026-11-22-mcp-grant-chronology-distinct-review.json": "34215b0a2354e4535a1d8569130b4640bc69492aeb6c62314791d1dfb75277f1",
+    "runs/2026-11-22-mcp-managed-consumer-author-execution.json": "6567babbd75b9a9114c7c9744b66d9d531e691852d7278be128466b875c608cf",
+    "runs/2026-11-22-mcp-managed-consumer-corrected-execution.json": "4c66168fce564b216547e47fc98cd587bd9afb0765b33e73ffe6aaa65bb51648",
+    "runs/2026-11-22-mcp-managed-final-source-execution.json": "dd178b31a27518ecada491f4b8e124e53dbfe4053c2434d2bec77511d34ce185",
+    "runs/2026-11-22-mcp-managed-guide-status-delta.json": "f3a56096ee16dfad1e9cfc830f4cca5f2939c716e623b27cd41290234352a06c",
+    "runs/2026-11-22-mcp-managed-late-git-corrected-review.json": "6d82ba0b7c9dddab07e195f41f3e87bc289c562d6b87a54542ae2a45cfcf588e",
+    "runs/2026-11-22-mcp-managed-late-git-original.json": "6d95937525252a62a31c9cff4e20ff4361990182913f5c91e8aa6d7cf851c365",
+    "runs/2026-11-22-mcp-managed-policy-producer-source-execution.json": "9d7baa4b2e53b78362b58275f4a12d9808e7d3b6c3cb156d635c6c4cdc56d59f",
+    "runs/2026-11-22-mcp-managed-stage-successor-original.json": "3da33b88349425d8bd715a0293e3f05b63b3362c77c684fe042a0ffc3ead5882",
+    "runs/2026-11-22-mcp-managed-workflow-distinct-source-review.json": "2ff61e32586a1a3aa316e7f9ca2c851e81e4a5ef8f67069d063628297dbe15e3",
+    "runs/2026-11-22-mcp-pending-policy-source-binding-refresh.json": "e6b61f76ccec65287a01fe21411a365253bb1fd10c04be1c9d2dfef531958283",
+    "runs/2026-11-22-mcp-project-license-fact-omission-original.json": "7f593b29003ebc5fd758e86c2d10a9b46fe90fb9ad7139ed28518d5f07550d24",
+    "runs/2026-11-22-mcp-retained-grants-distinct-review.json": "5a74863249f73a7c092f8bbed08156b8add5ec2231e1b7e526b01a19459c23d1",
+    "runs/2026-11-22-mcp-runtime-workspace-successor-original.json": "bd1d033d68ee2bb67430fbc8cbbcc0ecd39d4553d0ea768004a73ac9934df37f",
+    "runs/2026-11-22-mcp-stage-successor-corrected-review.json": "a0074dde8337404a310a4c530f9433b52e56df2375a3d10d4f90cda57f596ee5",
+    "runs/2026-11-22-mcp-zlib-hosted-filesystem-result.json": "328d33d2bb73020ec701ff410305a612a5e635ebbbe97a068c7a9ba11e45222c",
+    "sbom/mcp-runtime/manifest.json": "b68066a0362a1e0c0729f53fcd33656e9c816ec424469c5cb72adf7a5a74628e",
+    "scripts/install-managed-mcp.py": "2af2ffef148f2141dc6af9cf812bbaaa55fc9a9e0ceb726e286703f113ed6424",
+    "tests/test_artifact_workflow.py": "9408d2c53f72c8d5f6a9f1df2008d960f82c86e6e91f385f19383eef71d2372c",
+    "tests/test_dependency_policy.py": "9dd6d2589a40916616bbc797a2079baa11723ccf16a3f8146d42db7a77577655",
+    "tests/test_managed_mcp_policy.py": "13f692516d06287837a829bcf2ca5dfbe4ee1422abdd1b8715c6f0baf5721961",
+    "tests/test_managed_mcp_release.py": "adc8787dbba805a3412c44292199be499ac423db91316b62b29e94ef417eaa83",
+    "tests/test_managed_mcp_runtime_cleanup.py": "eb2bd068d9c3c34f6a3194c4c28870eda0bae09732433514c805f3854e32b801",
+    "tests/test_managed_mcp_workflow.py": "a68e1248ba204b85c49e8efc665da62d1e8867121abcb0afcd2e982a845c6655",
+    "tools/dependency_policy.py": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+    "tools/distribution_artifacts.py": "3c4046d10b00712d9ddb60d79bc48ad576755353137cbf928ccb8c93ceb1da00",
+    "tools/mcp_distribution.py": "9f87c59d5884200872c15829babd4a6080842ceb2a9f7a151bd9c1f4b3bd341a",
+    "tools/mcp_managed_release.py": "1f2699df547894402a42cf187cfadc806a99a350bf7f6ea4ca82b2abe18d2679",
+    "tools/mcp_release_policy.py": "2c986c5652c064b8a0cdb328786dbbcd23e0a0988cde96b0e3030e001656fbfd"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-mcp-managed-final-source-execution.json",
+      "sha256": "dd178b31a27518ecada491f4b8e124e53dbfe4053c2434d2bec77511d34ce185"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-retained-grants-distinct-review.json",
+      "sha256": "5a74863249f73a7c092f8bbed08156b8add5ec2231e1b7e526b01a19459c23d1"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-cffi-rust-notice-facts-distinct-review.json",
+      "sha256": "80b39cb342718c8f8c475db93d2f0a07e32f5356c3285140618c26829d8cd68e"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-finite-policy-distinct-review.json",
+      "sha256": "380217c3535dff0302c5b483f9b58949ce81f33349115894aee8d7dac2225fd6"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-managed-workflow-distinct-source-review.json",
+      "sha256": "2ff61e32586a1a3aa316e7f9ca2c851e81e4a5ef8f67069d063628297dbe15e3"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-grant-chronology-distinct-review.json",
+      "sha256": "34215b0a2354e4535a1d8569130b4640bc69492aeb6c62314791d1dfb75277f1"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-cleanup-source-metadata-refresh.json",
+      "sha256": "672b1c31d5f068b8cb447fbaab82e81f69adb29b2f649f7c5a493dbc05600d78"
+    }
+  ],
+  "checks": []
+}

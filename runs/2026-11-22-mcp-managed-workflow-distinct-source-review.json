@@ -1,0 +1,60 @@
+{
+  "captured_at": "2026-11-22T17:52:33.077533+00:00",
+  "facts": {
+    "acquisition_pinned_index_checksum_size_no_redirect_and_finite_limits_source_reviewed": true,
+    "exact_owned_main_push_or_dispatch_only": true,
+    "existing_ps_workflow_prefix_byte_identical_to_HEAD": true,
+    "finite_cp313_linux_target_with_30_pinned_wheels": true,
+    "four_target_qualification_preserved_and_unsigned_refusal_distinct_from_policy": true,
+    "grant_assessment_and_policy_code_unchanged_since_prior_review": true,
+    "guide_change_one_contiguous_paragraph_only": true,
+    "managed_controls_static_method_count": 25,
+    "no_pr_signer_or_caller_selected_target": true,
+    "old_guide_reconstructed_and_digest_verified_not_separately_retained": true,
+    "policy_change_exact_guide_hash_and_size_row_only": true,
+    "read_only_default_scoped_signer_permissions": true,
+    "six_exact_public_outputs_no_private_consumer": [
+      "checker.zip",
+      "evidence.json",
+      "artifact.spdx.json",
+      "sbom.sigstore.json",
+      "trusted-root.jsonl",
+      "managed-verified.json"
+    ],
+    "source_packet_and_spdx_before_attest_before_actual_managed_consumer": true,
+    "yaml_parsed_independently": true
+  },
+  "findings": [],
+  "limits": {
+    "actual_25_controls_run_by_reviewer": false,
+    "actual_signature_or_admission_verified": false,
+    "all_target_managed_qualification": false,
+    "global_legal_clearance": false,
+    "hosted_workflow_executed_by_reviewer": false,
+    "installer_execution": false,
+    "original_requirement_closure": false,
+    "sdk_or_native_execution": false,
+    "source_only": true
+  },
+  "pass": true,
+  "prior_policy_review_sha256": "380217c3535dff0302c5b483f9b58949ce81f33349115894aee8d7dac2225fd6",
+  "profile": "mcp-managed-workflow-distinct-source-review/v1",
+  "review_harness_correction": {
+    "correction": "use unchanged original insertion order; prior workflow source checks were not runtime tests",
+    "initial_attempt": "policy byte reconstruction used sorted keys rather than preserving actual insertion order",
+    "product_failure": false
+  },
+  "reviewed_sources_sha256": {
+    ".github/workflows/artifact-sbom.yml": "d760f6e81cddcc458175fafd9bbef57e1d26a73f3c6135dc94275db892636e7a",
+    ".github/workflows/mcp-runtime-distribution.yml": "db18c744209e13cefd564e9f9d3a095eb16e924813df6d621a35fdf7a1c0e306",
+    "docs/mcp-managed-release.md": "67faadae2047ae4cd3c9ac0aef090ac698be76132c98e1245f299492faa3038a",
+    "eval/dependencies/mcp-runtime-release.json": "e7512f624fa7a04f2d56867737b30c240b869188328310991df1471cbc8c4f0a",
+    "eval/dependency-policy.json": "1df4392e08995ae0e77313ce594cfa8dae2b2a8d7521730d8b7e31cf9e985e50",
+    "tests/test_artifact_workflow.py": "9408d2c53f72c8d5f6a9f1df2008d960f82c86e6e91f385f19383eef71d2372c",
+    "tests/test_managed_mcp_workflow.py": "a68e1248ba204b85c49e8efc665da62d1e8867121abcb0afcd2e982a845c6655",
+    "tools/dependency_policy.py": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+    "tools/distribution_artifacts.py": "3c4046d10b00712d9ddb60d79bc48ad576755353137cbf928ccb8c93ceb1da00",
+    "tools/mcp_release_policy.py": "0e234f042810612e44de99c7928cd4f7493a511f7e1e05bb48ca321fbcc72021"
+  },
+  "source_stable": true
+}

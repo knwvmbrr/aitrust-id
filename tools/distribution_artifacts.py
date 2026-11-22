@@ -53,7 +53,11 @@ CONSUMERS={
   'tools/mcp_distribution.py','scripts/mcp-distribution.py','tools/mcp_runtime_obligations.py',
   'scripts/collect-mcp-notices.py','sbom/mcp-runtime/targets.json','sbom/mcp-runtime/manifest.json',
   'sbom/mcp-runtime/source-inputs.json','sbom/mcp-runtime/obligations.json.gz',
-  'sbom/mcp-runtime/THIRD-PARTY-NOTICES.txt','sbom/mcp-runtime/SCHEMA-ATTRIBUTION.txt'),
+  'sbom/mcp-runtime/THIRD-PARTY-NOTICES.txt','sbom/mcp-runtime/SCHEMA-ATTRIBUTION.txt',
+  'tools/mcp_release_policy.py','eval/dependencies/mcp-runtime-release.json',
+  'tools/mcp_managed_release.py','scripts/install-managed-mcp.py','docs/mcp-managed-release.md',
+  'runs/2026-11-22-mcp-retained-grants-distinct-review.json',
+  'runs/2026-11-22-mcp-cffi-rust-notice-facts-distinct-review.json'),
  'node-build-tools':('package.json','site/package.json'),
 }
 need(set(CONSUMERS)==set(ROUTES))

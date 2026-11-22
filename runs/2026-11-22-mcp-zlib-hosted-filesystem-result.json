@@ -1,0 +1,93 @@
+{
+  "actual_checkout_commit": "e558c3fceaf836ce7023c1b2bf1940c0426d2c49",
+  "actual_hosted_check_built": {
+    "bundle_sha256": "4d5162fda2a3b0b64b627f0cac619b585bc5b0b20f4d075b6c00d0dd59143569",
+    "compiled_library_rebuilt": false,
+    "complete_project_obligations": false,
+    "delivery_artifacts_checked": 3,
+    "full_wasm_corresponding_source": false,
+    "global_distribution_admitted": false,
+    "legal_clearance": false,
+    "pass": true,
+    "profile": "selected-zlib-runtime-source-notices/v1",
+    "publisher_signature_verified": false,
+    "runtime_members_checked": 5,
+    "zlib_version": "1.3.1"
+  },
+  "actual_hosted_export": {
+    "artifacts": {
+      "NOTICES.txt": {
+        "bytes": 7912,
+        "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+      },
+      "ZLIB-SOURCES.zip": {
+        "bytes": 1682541,
+        "sha256": "4d5162fda2a3b0b64b627f0cac619b585bc5b0b20f4d075b6c00d0dd59143569"
+      },
+      "index.json": {
+        "bytes": 1858,
+        "sha256": "cae62e752eb614410c233289b1069795e6779db91a294256aecb9ad5bd2d4789"
+      }
+    },
+    "compiled_library_rebuilt": false,
+    "complete_project_obligations": false,
+    "full_wasm_corresponding_source": false,
+    "global_distribution_admitted": false,
+    "legal_clearance": false,
+    "pass": true,
+    "publisher_signature_verified": false
+  },
+  "all_three_output_digests_match_prior_in_memory_prediction": true,
+  "author": "Codex / share_debugger",
+  "automatic_second_matrix": {
+    "cancelled": false,
+    "conclusion": "success",
+    "id": 45035627619,
+    "manually_retried": false,
+    "reference": "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#git-diff-comparisons",
+    "reused_runtime_claim": false,
+    "role": "Separate actual automatically triggered matrix. No new artifact download or full-report reinspection claimed.",
+    "target_jobs_passed": 4,
+    "trigger_reason": "Pull-request path filters inspect the cumulative three-dot base/head diff, which still contains original MCP inputs; commit-local no-match is insufficient.",
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45035627619"
+  },
+  "captured_at": "2026-11-22T15:01:48.172843+00:00",
+  "checkout_role": "GitHub pull-request synthetic merge, as printed by pinned checkout git log.",
+  "draft_pr": "https://github.com/knwvmbrr/aitrust-id/pull/150",
+  "following_boundary_check": {
+    "error": "Current route differs from reviewed source inventory",
+    "failed": 9,
+    "inventory_refusal_waived": false,
+    "passed": 27,
+    "reached_browser_install_or_runtime": false
+  },
+  "head_commit": "88a5db2bba96af4a09058a4ea8ee3a080c97778b",
+  "legal_clearance": false,
+  "limits": [
+    "Selected source/notice filesystem delivery is now observed on hosted CI; entire site job still FAILED at unchanged source-inventory enforcement.",
+    "All 439 qualified MCP runtime input hashes remain unchanged; this metadata/data commit adds no source behavior.",
+    "No further push/rerun, inventory waiver, production deploy, route admission, protected signature, legal clearance, full F057/X02 or original closure is implied."
+  ],
+  "mcp_route_admitted": false,
+  "profile": "mcp-zlib-hosted-filesystem-observation/v1",
+  "protected_attestation_verified": false,
+  "release_authorized": false,
+  "retained_log": {
+    "bytes": 156225,
+    "sha256": "2abeb04cbc5bed0df567ec648f688b7c3c689de476b5066ce72b05074342a1a8"
+  },
+  "site_pass": false,
+  "site_run": {
+    "conclusion": "failure",
+    "id": 45035627643,
+    "job_id": 137248630454,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45035627643/job/137248630454"
+  },
+  "source_sha256": {
+    "sbom/reviews/zlib-runtime/manifest.json": "e813ca64d1b0d021ee2a9df2d32034f68718bfb73a0bab8085554dde03dc42e4",
+    "scripts/zlib-source-delivery.py": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe",
+    "tools/dependency_policy.py": "7a7f084eb44046feccf01cc208ac862393204886326d3cd3bb136992d3337833",
+    "tools/pyodide_js_sources.py": "5f964360f591fcfbe4fabe24a214d4430dc639c38e608818f8e5fe870c546e4e",
+    "tools/zlib_source_delivery.py": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a"
+  }
+}

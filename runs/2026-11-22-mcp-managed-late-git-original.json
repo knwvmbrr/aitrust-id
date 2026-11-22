@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-11-22T17:05:39.701487+00:00",
+  "pass": false,
+  "sources_before": {
+    "tools/mcp_managed_release.py": "c85ee9a726d3d62793a4bc00baf1c67c42aea8bba15c4e45fb6fdc5a90911464",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tests/test_managed_mcp_release.py": "f7553c37870e7e23533b1c22a68846565e21933378664af142fb7242e83afb3d"
+  },
+  "sources_after": {
+    "tools/mcp_managed_release.py": "c85ee9a726d3d62793a4bc00baf1c67c42aea8bba15c4e45fb6fdc5a90911464",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tests/test_managed_mcp_release.py": "f7553c37870e7e23533b1c22a68846565e21933378664af142fb7242e83afb3d"
+  },
+  "source_unchanged": true,
+  "actual": {
+    "actual_state": "INSTALLED",
+    "new_git_marker_present": true,
+    "final_connection_published": true,
+    "mode0600": true
+  },
+  "scope": "ONE owned-temp/inert managed recheck callback, no SDK/signature/network/install",
+  "finding": "A .git marker added to the held private output ancestor during the last runtime recheck is not rechecked by Capture.check; final connection is published and reported INSTALLED.",
+  "limits": "Not a real Git repository/upload or user-data exposure claim; both inputs and authorization/runtime were synthetic controls. Exact original outside-Git boundary is violated."
+}

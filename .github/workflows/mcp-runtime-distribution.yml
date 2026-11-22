@@ -5,9 +5,14 @@ on:
   pull_request:
     paths:
       - '.github/workflows/mcp-runtime-distribution.yml'
+      - '.github/workflows/artifact-sbom.yml'
       - 'tools/mcp_distribution.py'
       - 'tools/mcp_runtime_obligations.py'
       - 'tools/mcp_runtime_probe.py'
+      - 'tools/mcp_managed_release.py'
+      - 'tools/mcp_release_policy.py'
+      - 'scripts/install-managed-mcp.py'
+      - 'eval/dependencies/mcp-runtime-release.json'
       - 'tools/tag_api.py'
       - 'tools/dependency_policy.py'
       - 'tools/distribution_artifacts.py'
@@ -46,6 +51,10 @@ on:
       - 'tests/test_mcp_distribution.py'
       - 'tests/test_mcp_runtime_obligations.py'
       - 'docs/mcp-stdio-distribution.md'
+      - 'docs/mcp-managed-release.md'
+      - 'docs/distribution-artifact-sbom.md'
+      - 'runs/2026-11-22-mcp-retained-grants-distinct-review.json'
+      - 'runs/2026-11-22-mcp-cffi-rust-notice-facts-distinct-review.json'
 
 permissions:
   contents: read
@@ -80,6 +89,8 @@ jobs:
           from pathlib import Path
           sys.path.insert(0,str(Path.cwd()))
           from tools import mcp_distribution as m
+          from tools.mcp_release_policy import COMPONENT_FILES
+          from tools.distribution_artifacts import graph
           task=Path(os.environ['RUNNER_TEMP'])/('aitrust-mcp-'+os.environ['MCP_TARGET'])
           task.mkdir(mode=0o700)
           (task/'wheels').mkdir(mode=0o700)
@@ -88,6 +99,8 @@ jobs:
             'eval/dependency-policy.json','tests/test_mcp_distribution.py','tests/test_mcp_runtime_obligations.py',
             '.github/workflows/mcp-runtime-distribution.yml'}
           profile=json.loads(Path(m.PROFILE_FILE).read_bytes())
+          paths.update(COMPONENT_FILES)
+          paths.update(graph('mcp-stdio')['source_sha256'])
           paths.update(x['path'] for x in profile['evidence_files'])
           source={p:hashlib.sha256(Path(p).read_bytes()).hexdigest()for p in sorted(paths)}
           (task/'reports/source-before.json').write_text(json.dumps(source,sort_keys=True)+'\n')
@@ -169,21 +182,22 @@ jobs:
           a.publish_bound(packet,artifact,'mcp-stdio',commit,task/'packet.json')
           a.verify_packet(packet,artifact,'mcp-stdio',commit)
           a.publish_bound(packet,artifact,'mcp-stdio',commit,task/'spdx.json',spdx_only=True)
-          assert packet['policy']['release_allowed']is False and packet['artifact_format_verified']is True
+          assert type(packet['policy']['release_allowed'])is bool and packet['artifact_format_verified']is True
           calls=[]
           def forbidden_verifier(*args,**kwargs):
             calls.append(True)
-            raise AssertionError('Blocked route must not invoke signature verifier')
+            raise AssertionError('Missing detached evidence must not invoke signature verifier')
           try:
             a.authorize_release(packet,artifact,task/'spdx.json',task/'absent-bundle.json',task/'absent-roots.json',
                                 'mcp-stdio',commit,runner=forbidden_verifier)
           except PrivateInputError:pass
-          else:raise AssertionError('Unadmitted route was authorized')
+          else:raise AssertionError('Unsigned development artifact was authorized')
           assert not calls
           result={'artifact':packet['artifact'],'profile_sha256':packet['graph']['source_sha256']['sbom/mcp-runtime/manifest.json'],
             'graph_sha256':packet['graph_sha256'],'spdx_sha256':packet['spdx_sha256'],
             'packet_sha256':hashlib.sha256((task/'packet.json').read_bytes()).hexdigest(),
             'source_commit':commit,'target':os.environ['MCP_TARGET'],'packet_reconstructed':True,
+            'current_policy_allowed':packet['policy']['release_allowed'],
             'spdx_bytes':(task/'spdx.json').stat().st_size,'managed_release_refused':True,
             'signature_verifier_invocations':len(calls),'release_authorized':False}
           (task/'reports/spdx.json').write_text(json.dumps(result,sort_keys=True)+'\n')

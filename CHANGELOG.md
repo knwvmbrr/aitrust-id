@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-181410-managed-mcp-protected-consumer-c02365d7
+
+Recorded 2026-11-22T18:14:10.113247+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Implement an optional managed MCP consumer, source-bound finite grant assessment and protected-main producer; retain failed private workspaces and preserve prior runtime and failure evidence.
+- **Evidence.** Twenty-six new managed-source controls plus two existing workflow-context controls pass; both workflows parse, sixteen shell and nine Python blocks pass syntax checks, and distinct source/grant reviews cover the fixed facts and producer authority. [Change record](./runs/changes/2026-11-22-181410-managed-mcp-protected-consumer-c02365d7.json).
+- **Not claimed.** Source-only implementation: no new SDK runtime, artifact assembly, protected signature or actual managed admission. Prior four-target44-case runtime receipts and88a5zlib filesystem evidence stay historical; current branch awaits protected fixed-I/O base. No full F057/X02, legal, compiled-closure or accuracy acceptance.
+
+
 ### 2026-11-22-145557-mcp-zlib-refresh-distinct-review-c3215762
 
 Recorded 2026-11-22T14:55:57.896527+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change

@@ -79,3 +79,12 @@ and small replayable source evidence. The format verifies these assets; all-targ
 runtime and distinct review still control later distribution admission.
 Nothing here is full F-057/X-02, independent accuracy, safety clearance, or an
 operating organization/privacy service approval.
+
+### Failed workspace retention
+
+The installer retains its private `.mcp-install-*` workspace when an attempt
+fails. Inspect it explicitly before retrying. It does not recursively roll back
+a pathname after an inode check: replacement between those operations could
+otherwise delete a different workspace. This does not permit overwriting a
+connection or publishing an incomplete connection. Old runtime qualification
+receipts predate this cleanup correction and remain historical.

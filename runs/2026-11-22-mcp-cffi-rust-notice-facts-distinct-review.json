@@ -1,0 +1,54 @@
+{
+  "captured_at": "2026-11-22T17:15:04.902172+00:00",
+  "pass": true,
+  "sources_before": {
+    "tools/mcp_distribution.py": "9f87c59d5884200872c15829babd4a6080842ceb2a9f7a151bd9c1f4b3bd341a",
+    "sbom/cffi-libffi/manifest.json": "4e9b49cfff92b2f0aa117a95f0c852b5ff0dde9a75636308aaa79269a7135dc8",
+    "sbom/cffi-libffi/runtime-source-index.json": "6b869bdf488676aae5c76bd29708886569e2aaadd9e8939e2efa0cfeb0a237c9",
+    "sbom/cffi-libffi/LIBFFI-NOTICES.txt": "2fe3318a85b19fea32d1e5801e7406a7868dc9768f0637c1838821fc1ece7386",
+    "sbom/mcp-rust-stdlib/manifest.json": "47328f3158803a8f1271194c7cc94976ca2de3c6f3f060a89dbac2aafbde2857",
+    "sbom/mcp-rust-stdlib/notice-text-index.json": "f702bd87e905e2f8a3295a096ed8147e60a7121ce9cdaf4f25ecd8a9e386e6c5",
+    "sbom/mcp-rust-stdlib/libm-extracted-notices.json": "ef4c42a6f6849b16692e1c77bb7886aa1a75acbb6a9a9dd64087f6ee6516bd8c",
+    "sbom/mcp-rust-stdlib/path-grant-map.json": "9007697b8608860dd07597b27ff2d112d02dacc3f705b9c01ae8f3bbf7b99a6a",
+    "sbom/mcp-rust-stdlib/RUST-STDLIB-NOTICES.txt": "dfe5411072f6745ae8a41d4d5a00ab834551173360b3e93d2dd5ed7cd486cf90",
+    "sbom/mcp-runtime/manifest.json": "b68066a0362a1e0c0729f53fcd33656e9c816ec424469c5cb72adf7a5a74628e"
+  },
+  "sources_after": {
+    "tools/mcp_distribution.py": "9f87c59d5884200872c15829babd4a6080842ceb2a9f7a151bd9c1f4b3bd341a",
+    "sbom/cffi-libffi/manifest.json": "4e9b49cfff92b2f0aa117a95f0c852b5ff0dde9a75636308aaa79269a7135dc8",
+    "sbom/cffi-libffi/runtime-source-index.json": "6b869bdf488676aae5c76bd29708886569e2aaadd9e8939e2efa0cfeb0a237c9",
+    "sbom/cffi-libffi/LIBFFI-NOTICES.txt": "2fe3318a85b19fea32d1e5801e7406a7868dc9768f0637c1838821fc1ece7386",
+    "sbom/mcp-rust-stdlib/manifest.json": "47328f3158803a8f1271194c7cc94976ca2de3c6f3f060a89dbac2aafbde2857",
+    "sbom/mcp-rust-stdlib/notice-text-index.json": "f702bd87e905e2f8a3295a096ed8147e60a7121ce9cdaf4f25ecd8a9e386e6c5",
+    "sbom/mcp-rust-stdlib/libm-extracted-notices.json": "ef4c42a6f6849b16692e1c77bb7886aa1a75acbb6a9a9dd64087f6ee6516bd8c",
+    "sbom/mcp-rust-stdlib/path-grant-map.json": "9007697b8608860dd07597b27ff2d112d02dacc3f705b9c01ae8f3bbf7b99a6a",
+    "sbom/mcp-rust-stdlib/RUST-STDLIB-NOTICES.txt": "dfe5411072f6745ae8a41d4d5a00ab834551173360b3e93d2dd5ed7cd486cf90",
+    "sbom/mcp-runtime/manifest.json": "b68066a0362a1e0c0729f53fcd33656e9c816ec424469c5cb72adf7a5a74628e"
+  },
+  "source_unchanged": true,
+  "facts": {
+    "CFFI_bound_inputs": 36,
+    "Rust_bound_inputs": 357,
+    "libffi_runtime_sources": 22,
+    "libffi_exact_leading_notice_segments": 16,
+    "libffi_retained_copyright_lines_all_in_notice": true,
+    "libffi_root_license_complete_in_notice": true,
+    "Rust_complete_scoped_grant_texts": 50,
+    "libm_exact_source_notice_ranges": 74,
+    "publisher_REUSE_path_scope_matches": 176,
+    "exact_prepared_supplement_members": 393,
+    "current_profile_evidence_files_bytes_and_hashes_match": true
+  },
+  "grant_scope_read": [
+    "CFFI MIT-0 exception preserves separate libffi MIT/public-domain notice scope.",
+    "Rust MIT OR Apache-2.0 does not erase Unicode, backtrace, compiler-builtins AND/LLVM-exception and libm source-specific notices.",
+    "All retained complete scoped texts and source ranges checked here are present in supplemental member bytes."
+  ],
+  "inspection_harness_note": "Initial structural inspection assumed a supplemental_evidence field and stopped before final profile comparison; final bounded scan verifies the actual evidence_files field. No prior passing receipt or runtime execution is inferred.",
+  "limits": [
+    "Source/notice factual review only; no wheel/native/archive execution, download, SDK or binary reproduction.",
+    "Prepared members/current profile inclusion verified; no new managed archive or protected signature exists in this control.",
+    "Published source/recipe/path observations are not independently exhaustive compiled closure or exact wheel-build attestation.",
+    "No concrete missing grant/notice identified in this finite CFFI/Rust retained map; no blanket legal clearance, project permission issuance, whole F057/X02 or other route claim."
+  ]
+}

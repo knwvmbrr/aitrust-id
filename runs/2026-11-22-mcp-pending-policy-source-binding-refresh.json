@@ -1,0 +1,41 @@
+{
+  "actual_current_source_updates": [
+    {
+      "after": {
+        "bytes": 51554,
+        "path": "tools/mcp_distribution.py",
+        "sha256": "9f87c59d5884200872c15829babd4a6080842ceb2a9f7a151bd9c1f4b3bd341a"
+      },
+      "before": {
+        "bytes": 51806,
+        "path": "tools/mcp_distribution.py",
+        "sha256": "c6f7551709b2ad6a4a12c3c554ab7084291dfa16f0a4a81249877a0333a3ecd5"
+      }
+    },
+    {
+      "after": {
+        "bytes": 510765,
+        "path": "sbom/mcp-runtime/manifest.json",
+        "sha256": "b68066a0362a1e0c0729f53fcd33656e9c816ec424469c5cb72adf7a5a74628e"
+      },
+      "before": {
+        "bytes": 510765,
+        "path": "sbom/mcp-runtime/manifest.json",
+        "sha256": "08604a609b9a78eecd2f780ed3f1d7d1fd3264ea2b3890635655ba932f640038"
+      }
+    }
+  ],
+  "assessment_retained": "pending",
+  "captured_at": "2026-11-22T17:07:54.424364+00:00",
+  "limits": [
+    "Source hash rows updated only after actual collect and inspect_profile.",
+    "No route admission, actual runtime replay or protected signing claimed.",
+    "PS component and selected PS route projection are unchanged."
+  ],
+  "policy_after_sha256": "96f4f57900427e4a3532f67520ff693a33ef490515c838f4959308ea220127cd",
+  "policy_before_sha256": "0077b150136a12e5fd4971aa83fce460e0f83b53ca2ca048c7b3aa40af217093",
+  "profile": "mcp-pending-policy-source-binding-refresh/v1",
+  "release_authorized": false,
+  "route_permission_changed": false,
+  "source_metadata_producer_receipt": "runs/2026-11-22-mcp-cleanup-source-metadata-refresh.json"
+}

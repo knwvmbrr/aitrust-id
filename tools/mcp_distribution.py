@@ -902,8 +902,9 @@ def verify_runtime_files(workspace, target, profile):
 def install(archive, output, *, python=sys.executable, pip_python, root=ROOT):
     """Private owned install plus explicit launch JSON; never release admission.
 
-    A failed prepublication attempt may leave private temporary bytes when the
-    filesystem refuses cleanup. No existing destination/workspace is removed.
+    Failed attempts retain private workspace bytes for operator inspection.
+    No recursive rollback can safely delete a pathname after an inode check;
+    no existing destination or successor workspace is removed.
     """
     need(Path(python).is_absolute() and Path(pip_python).is_absolute())
     with Capture() as capture:
@@ -962,16 +963,11 @@ def install(archive, output, *, python=sys.executable, pip_python, root=ROOT):
                     'runtime_payload_count': payload_count,
                     'configuration_included_in_stdout': False}
         finally:
-            # Never follow/remove a replaced workspace or a previously supplied
-            # user destination. A successfully published configuration owns its
-            # workspace; uncertain publication also retains it for inspection.
-            if not capture.output_may_exist:
-                try:
-                    current = os.stat(workspace_name, dir_fd=parent, follow_symlinks=False)
-                    if identity(current) == workspace_id:
-                        shutil.rmtree(workspace)
-                except OSError:
-                    pass
+            # Keep failed private workspaces for inspection. An inode check
+            # followed by pathname rmtree can delete a swapped successor. No
+            # automatic recursive deletion is safe at this ownership boundary.
+            pass
+
 
 
 @refusal

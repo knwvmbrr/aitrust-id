@@ -89,3 +89,133 @@ jobs:
           path: ${{ env.ARTIFACT_DIR }}/
           if-no-files-found: error
           retention-days: 30
+  managed-mcp-controls:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {fetch-depth: 1, persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.13'}
+      - name: Execute managed ordering permission and cleanup controls without SDK installation
+        run: |
+          python -I -S -B - <<'PY'
+          import os,pathlib,sys,unittest
+          assert os.geteuid()!=0 and sys.platform=='linux'
+          root=pathlib.Path.cwd();sys.path.insert(0,str(root))
+          suite=unittest.TestSuite(unittest.defaultTestLoader.discover(str(root/'tests'),pattern=p) for p in (
+            'test_managed_mcp_release.py','test_managed_mcp_runtime_cleanup.py','test_managed_mcp_policy.py',
+            'test_managed_mcp_workflow.py'))
+          result=unittest.TextTestRunner(verbosity=2).run(suite)
+          assert result.testsRun==26 and result.wasSuccessful() and not result.skipped
+          PY
+  attest-managed-mcp:
+    needs: [artifact-controls, managed-mcp-controls]
+    if: github.repository == 'knwvmbrr/aitrust-id' && github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+    env:
+      SOURCE_COMMIT: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {fetch-depth: 1, persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        id: python
+        with: {python-version: '3.13'}
+      - name: Require current finite permission before acquiring wheels or signing
+        timeout-minutes: 1
+        run: |
+          python -I -S -B - <<'PY'
+          import os,pathlib,sys
+          sys.path.insert(0,str(pathlib.Path.cwd()))
+          from tools.dependency_policy import evaluate
+          assert os.geteuid()!=0 and sys.platform=='linux'
+          assert evaluate('mcp-stdio')['release_allowed']is True,'Finite MCP permission unavailable'
+          task=pathlib.Path(os.environ['RUNNER_TEMP'])/'aitrust-mcp-managed-release'
+          task.mkdir(mode=0o700)
+          for name in ('wheels','publish','consumer'): (task/name).mkdir(mode=0o700)
+          with open(os.environ['GITHUB_ENV'],'a')as f:f.write('MCP_RELEASE_DIR='+str(task)+'\n')
+          PY
+      - name: Acquire only the reviewed Linux CPython 3.13 publisher wheels
+        timeout-minutes: 4
+        run: |
+          python -I -S -B - <<'PY'
+          import hashlib,os,pathlib,shutil,sys,tempfile,time,urllib.parse,urllib.request
+          sys.path.insert(0,str(pathlib.Path.cwd()))
+          from tools import mcp_distribution as m
+          from tools.artifact_evidence_io import Capture
+          task=pathlib.Path(os.environ['MCP_RELEASE_DIR']);target='cp313-linux_x86_64_glibc_2_34'
+          actual=m.decode(m.command([sys.executable,'-I','-S','-B','-c',m.RUNTIME_PROBE],task_directory=task,timeout=5))
+          assert m.target_for_runtime(actual)==target
+          with Capture()as c:index,_=m.index(c,pathlib.Path.cwd());c.check()
+          rows=index['targets'][target];assert len(rows)==30 and sum(r['bytes']for r in rows)<12_000_000
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+            def redirect_request(self,*a,**k):raise ValueError('Wheel redirect refused')
+          opener=urllib.request.build_opener(NoRedirect);deadline=time.monotonic()+180
+          for row in rows:
+            url=urllib.parse.urlsplit(row['url'])
+            assert url.scheme=='https'and url.hostname=='files.pythonhosted.org'and not url.query and not url.fragment
+            assert urllib.parse.unquote(url.path.rsplit('/',1)[-1])==row['filename']
+            assert shutil.disk_usage(task).free>=2*1024**3+128*1024**2
+            assert time.monotonic()<deadline
+            fd,name=tempfile.mkstemp(prefix='.acquire-',dir=task/'wheels');count=0;digest=hashlib.sha256()
+            try:
+              with os.fdopen(fd,'wb')as stream,opener.open(row['url'],timeout=min(15,max(.1,deadline-time.monotonic())))as response:
+                assert response.status==200 and response.url==row['url']
+                while True:
+                  assert time.monotonic()<deadline
+                  block=response.read(65536)
+                  if not block:break
+                  count+=len(block);assert count<=row['bytes'];digest.update(block);stream.write(block)
+                stream.flush();os.fsync(stream.fileno())
+              assert count==row['bytes']and digest.hexdigest()==row['sha256']
+              os.link(name,task/'wheels'/row['filename'])
+            finally:os.unlink(name)
+          PY
+      - name: Build actual MCP artifact and reconstruct its source-bound SPDX
+        timeout-minutes: 2
+        run: |
+          python -I -S -B scripts/mcp-distribution.py build --target cp313-linux_x86_64_glibc_2_34 --wheelhouse "$MCP_RELEASE_DIR/wheels" --output "$MCP_RELEASE_DIR/publish/checker.zip"
+          python -I -S -B scripts/distribution-artifact.py prepare --route mcp-stdio --artifact "$MCP_RELEASE_DIR/publish/checker.zip" --commit "$SOURCE_COMMIT" --output "$MCP_RELEASE_DIR/publish/evidence.json"
+          python -I -S -B scripts/distribution-artifact.py spdx --route mcp-stdio --artifact "$MCP_RELEASE_DIR/publish/checker.zip" --commit "$SOURCE_COMMIT" --packet "$MCP_RELEASE_DIR/publish/evidence.json" --output "$MCP_RELEASE_DIR/publish/artifact.spdx.json"
+      - name: Attest exact MCP bytes and SPDX using the protected project identity
+        id: mcp-sbom
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6
+        with:
+          subject-path: ${{ env.MCP_RELEASE_DIR }}/publish/checker.zip
+          sbom-path: ${{ env.MCP_RELEASE_DIR }}/publish/artifact.spdx.json
+      - name: Retain detached MCP signature and separately obtained trust roots
+        timeout-minutes: 1
+        env:
+          BUNDLE_PATH: ${{ steps.mcp-sbom.outputs.bundle-path }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test ! -e "$MCP_RELEASE_DIR/publish/sbom.sigstore.json"
+          cp -- "$BUNDLE_PATH" "$MCP_RELEASE_DIR/publish/sbom.sigstore.json"
+          chmod 0600 "$MCP_RELEASE_DIR/publish/sbom.sigstore.json"
+          (set -o noclobber; gh attestation trusted-root > "$MCP_RELEASE_DIR/publish/trusted-root.jsonl")
+          chmod 0600 "$MCP_RELEASE_DIR/publish/trusted-root.jsonl"
+      - name: Actual protected verification fresh offline install and eight tool checks
+        timeout-minutes: 4
+        env:
+          MCP_PYTHON: ${{ steps.python.outputs.python-path }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          "$MCP_PYTHON" -I -S -B scripts/install-managed-mcp.py --artifact "$MCP_RELEASE_DIR/publish/checker.zip" --packet "$MCP_RELEASE_DIR/publish/evidence.json" --spdx "$MCP_RELEASE_DIR/publish/artifact.spdx.json" --bundle "$MCP_RELEASE_DIR/publish/sbom.sigstore.json" --trusted-root "$MCP_RELEASE_DIR/publish/trusted-root.jsonl" --source-commit "$SOURCE_COMMIT" --python "$MCP_PYTHON" --pip-python "$MCP_PYTHON" --output "$MCP_RELEASE_DIR/consumer/connection.json" > "$MCP_RELEASE_DIR/publish/managed-verified.json"
+      - name: Offer only authenticated MCP bytes evidence and fixed verification summary
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: managed-mcp-cp313-linux-artifact-sbom
+          path: |
+            ${{ env.MCP_RELEASE_DIR }}/publish/checker.zip
+            ${{ env.MCP_RELEASE_DIR }}/publish/evidence.json
+            ${{ env.MCP_RELEASE_DIR }}/publish/artifact.spdx.json
+            ${{ env.MCP_RELEASE_DIR }}/publish/sbom.sigstore.json
+            ${{ env.MCP_RELEASE_DIR }}/publish/trusted-root.jsonl
+            ${{ env.MCP_RELEASE_DIR }}/publish/managed-verified.json
+          if-no-files-found: error
+          retention-days: 30
