@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-11-22T03:35:18.452089+00:00",
+  "pass": false,
+  "profile": "artifact-sbom-distinct-review-findings/v1",
+  "core_sha256": "b84306f4e68fdf195de824515c4408337dc5fcac85cf14f8615502f312307b28",
+  "workflow_sha256": "cf01395e8d2b6039bc58631c15b95dc23718449b831be455357e19a5c0a07b70",
+  "findings": [
+    {
+      "priority": "P2",
+      "case": "postwait_reaped_process_group",
+      "description": "The reused supervisor attempted a signal after the owned child had been reaped and a post-wait error occurred. Reviewer intercepted the signal; no unrelated process was signaled. Selector construction also preceded ownership cleanup.",
+      "peer_counter_sha256": "ac6d8eb32b992f48d564ccbc420ed8bf3a08e8cdcdde01db2e74e04b982fb45a",
+      "next_fix": "Owned artifact-only supervisor; signal only while child.returncode is None, own selector creation and all pipe cleanup."
+    },
+    {
+      "priority": "P1",
+      "case": "workflow_context_availability",
+      "description": "runner context is unavailable at jobs.<id>.env, so the new workflow would refuse before executing its signing job.",
+      "primary_source": "https://docs.github.com/en/actions/reference/workflows-and-actions/contexts#context-availability",
+      "next_fix": "Initialize fixed ARTIFACT_DIR inside build step using RUNNER_TEMP and GITHUB_ENV; keep github.sha at job env."
+    }
+  ],
+  "actual_new_workflow_executed": false,
+  "runtime_or_source_policy_root_changed": false
+}

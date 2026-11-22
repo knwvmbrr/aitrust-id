@@ -1,0 +1,39 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-22T03:49:49.949405+00:00",
+  "profile": "combined-artifact-sbom-focused-controls/v1",
+  "dependency_merge_commit": "7578060b65f5db35612a00133916fb3a40108160",
+  "root_dependency": "01fcec9bca21fe7023a3f0d2a2315618802d59b6",
+  "c2pa_dependency": "41b8d52ebb6bdadb7bafa2c0fb81cf06bdc14403",
+  "nli_dependency": "659caad5b6abb791a38e69d6b7c004d4c1b5585b",
+  "source_sha256": {
+    "tools/distribution_artifacts.py": "d48ba973ec8ec2f4595a8d665dfeeb324d34341940b804d548a4fc8e9328895e",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tools/artifact_process.py": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86",
+    "scripts/distribution-artifact.py": "15fb26b1fa0ef927e3bda554bf55f8cf011935a81cb660bead236f1d07be9d0a",
+    "scripts/source_snapshot.py": "a40b35ba3fb34b57de8fd5c260918ac122df9a9278e2a4f6e3ff758ea6c53225",
+    "tests/test_distribution_artifacts.py": "bdd1416e6e67a9aeb3d0f23e8bee237c32c3c3d408437adea9c5a95eb3c24eef",
+    "tests/test_artifact_process.py": "b3681ca1908e39d33276c23dca0cf486f69f86251c8d17b1f6b621cd23163a4a",
+    "tests/test_artifact_workflow.py": "c06c3f0e183db5916e448b718a60fa6763e880eed2b282a99e6e796a8568090c",
+    ".github/workflows/artifact-sbom.yml": "ec50206bd5a3db1d871a6ef547f19469b202893f870c41e6a74403ac4ab94168"
+  },
+  "executed": 33,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 6.533,
+  "log_sha256": "8056f0841ab432be095602269a63fec8a67d2bc6de2a935ec5f0e3a5b17a7d0c",
+  "coverage": [
+    "all fourteen real graph adapters including independently checked C2PA/NLI retained-source graphs",
+    "actual PS packaging and replay",
+    "private publication/fd/parent/source-drift refusal and uncertainty",
+    "actual owned-child fault/cap/deadline controls",
+    "Git OID source identity; no plain-file SHA1 misrepresentation",
+    "16385-source-list early refusal with unchanged byte caps",
+    "workflow context source guard; not actual hosted signing"
+  ],
+  "actual_sigstore_executed": false,
+  "actual_combined_archive_executed": false,
+  "full_F057_closed": false,
+  "full_X02_closed": false
+}

@@ -1,0 +1,74 @@
+{
+  "format": "ai-trust-id-artifact-sbom-corrected-distinct-review/v1",
+  "captured_at": "2026-11-22T03:45:49.378995+00:00",
+  "pass": true,
+  "source_before": {
+    "tools/distribution_artifacts.py": "d48ba973ec8ec2f4595a8d665dfeeb324d34341940b804d548a4fc8e9328895e",
+    "tools/artifact_process.py": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "scripts/distribution-artifact.py": "15fb26b1fa0ef927e3bda554bf55f8cf011935a81cb660bead236f1d07be9d0a",
+    ".github/workflows/artifact-sbom.yml": "ec50206bd5a3db1d871a6ef547f19469b202893f870c41e6a74403ac4ab94168",
+    "scripts/source_snapshot.py": "a40b35ba3fb34b57de8fd5c260918ac122df9a9278e2a4f6e3ff758ea6c53225"
+  },
+  "source_after": {
+    "tools/distribution_artifacts.py": "d48ba973ec8ec2f4595a8d665dfeeb324d34341940b804d548a4fc8e9328895e",
+    "tools/artifact_process.py": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "scripts/distribution-artifact.py": "15fb26b1fa0ef927e3bda554bf55f8cf011935a81cb660bead236f1d07be9d0a",
+    ".github/workflows/artifact-sbom.yml": "ec50206bd5a3db1d871a6ef547f19469b202893f870c41e6a74403ac4ab94168",
+    "scripts/source_snapshot.py": "a40b35ba3fb34b57de8fd5c260918ac122df9a9278e2a4f6e3ff758ea6c53225"
+  },
+  "sources_stable": true,
+  "actual_controls": [
+    {
+      "case": "postwait",
+      "pass": true,
+      "actual_owned_child_reaped": true,
+      "pipes_closed": true,
+      "numeric_group_signal_after_reap": false,
+      "cryptographic_verification_claimed": false
+    },
+    {
+      "case": "selector_start",
+      "pass": true,
+      "actual_owned_child_reaped": true,
+      "pipes_closed": true,
+      "numeric_group_signal_after_reap": false,
+      "cryptographic_verification_claimed": false
+    },
+    {
+      "case": "clock",
+      "pass": true,
+      "actual_owned_child_reaped": true,
+      "pipes_closed": true,
+      "numeric_group_signal_after_reap": false,
+      "cryptographic_verification_claimed": false
+    },
+    {
+      "case": "normal",
+      "pass": true,
+      "actual_owned_child_reaped": true,
+      "pipes_closed": true,
+      "numeric_group_signal_after_reap": false,
+      "cryptographic_verification_claimed": false
+    }
+  ],
+  "actual_control_count": 4,
+  "source_only_checks": [
+    "Job-level unsupported runner expression removed; trusted RUNNER_TEMP initialized in step and GITHUB_ENV used for subsequent actions.",
+    "Protected same-repository/main identity, fixed certificate/source/predicate, permission separation and pinned actions retained.",
+    "Git object OID represented as sourceInfo/detail rather than a plain SPDX file-content SHA1 checksum.",
+    "Measured 16384-file count bound remains coupled to 2MB Git output/16MBpacket/unchanged archive byte limits; no source omitted."
+  ],
+  "prior_findings": {
+    "postwait_original_sha256": "ac6d8eb32b992f48d564ccbc420ed8bf3a08e8cdcdde01db2e74e04b982fb45a",
+    "interim_review_sha256": "1d0e7e87a06e1087f7a174528402421765a1b2ba137bba9810bc61a5fbb1e898"
+  },
+  "limits": [
+    "Owned fake gh executable tests actual process/IO behavior only; no actual Sigstore signature or protected workflow was executed by reviewer.",
+    "Final combined NLI/current-source14graph/SPDX/CLI proof remains author-pending and is not credited by this review.",
+    "No broad24/33-control or native/SDK/browser/sourcecode execution repeated; Python project/tool code only.",
+    "FullF057/X02 requires actual retained artifact/obligation/attestation acceptance; this review does not close either original."
+  ],
+  "actionable_blockers_remaining": []
+}

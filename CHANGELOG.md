@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-035015-artifact-bound-fourteen-scope-sbom-e9cfad75
+
+Recorded 2026-11-22T03:50:15.496519+00:00 · Contributor: Codex /root/share_debugger; distinct core reviewer /root/web_camo · change
+
+- **Changed.** Implemented exact-artifact SPDX and source graphs for all14 routes, detached trusted-workflow verification and policy-first managed authorization, owned process supervision, protected signing workflow and measured whole-source capacity.
+- **Evidence.** Actual33 combined focused controls pass; all14 adapters bind reviewed C2PA441 and NLI650 source/notice graphs. Distinct actual process faults and workflow/Git-identity review pass. Existing PS stays admitted; other13 managed routes remain refused. [Change record](./runs/changes/2026-11-22-035015-artifact-bound-fourteen-scope-sbom-e9cfad75.json).
+- **Not claimed.** No new protected Sigstore run, comprehensive embedded/native coverage, source-offer completion, legal clearance or full original closure. Final actual combined archive and current CLI proof follow frozen source commit. Historical failures preserved.
+
+
 ### 2026-11-22-034555-nli-native-upstream-heading-preservation-35892ab5
 
 Recorded 2026-11-22T03:45:55.429765+00:00 · Contributor: Codex /root/seo · change

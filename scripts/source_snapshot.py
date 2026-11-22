@@ -13,7 +13,7 @@ from pathlib import Path, PurePosixPath
 PROFILE = 'aitrust-development-source/1.0.0'
 META = '.aitrust-source.json'
 PREFIX = 'aitrust-id/'
-MAX_FILES = 10_000
+MAX_FILES = 16_384
 MAX_FILE = 32_000_000
 MAX_TOTAL = 128_000_000
 MAX_ARCHIVE = 64_000_000
@@ -71,6 +71,8 @@ def build(root, commit):
     if actual != commit:
         raise ValueError('Source identity mismatch')
     entries = git(root, 'ls-tree', '-rzl', commit).split(b'\0')
+    if entries[-1:] != [b''] or len(entries) - 1 > MAX_FILES:
+        raise ValueError('Committed source limit')
     files = []
     total = 0
     for entry in entries:

@@ -1,0 +1,63 @@
+{
+  "captured_at": "2026-11-22T03:44:53.181973+00:00",
+  "pass": true,
+  "profile": "artifact-sbom-peer-correction-focused-controls/v1",
+  "sources": {
+    "tools/distribution_artifacts.py": "d48ba973ec8ec2f4595a8d665dfeeb324d34341940b804d548a4fc8e9328895e",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tools/artifact_process.py": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86",
+    "scripts/distribution-artifact.py": "15fb26b1fa0ef927e3bda554bf55f8cf011935a81cb660bead236f1d07be9d0a",
+    "scripts/source_snapshot.py": "a40b35ba3fb34b57de8fd5c260918ac122df9a9278e2a4f6e3ff758ea6c53225",
+    "tests/test_distribution_artifacts.py": "bdd1416e6e67a9aeb3d0f23e8bee237c32c3c3d408437adea9c5a95eb3c24eef",
+    "tests/test_artifact_process.py": "b3681ca1908e39d33276c23dca0cf486f69f86251c8d17b1f6b621cd23163a4a",
+    "tests/test_artifact_workflow.py": "c06c3f0e183db5916e448b718a60fa6763e880eed2b282a99e6e796a8568090c",
+    ".github/workflows/artifact-sbom.yml": "ec50206bd5a3db1d871a6ef547f19469b202893f870c41e6a74403ac4ab94168",
+    "docs/distribution-artifact-sbom.md": "355b9ed3e9a7c544dc7987444788d7f0ccb399811ac8cce45d04796a2ac9a71e",
+    "docs/distribution-artifact-sbom-plan.md": "5d8a39c35a257bcdde130e73acede70cbd5f158f1afb850b38d4fbb4fe5aaa64"
+  },
+  "controls": [
+    {
+      "group": "artifact-core",
+      "executed": 24,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "group": "owned-process",
+      "executed": 7,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "group": "workflow-context-source",
+      "executed": 2,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "group": "existing-source-archive-affected",
+      "executed": 3,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    }
+  ],
+  "log_sha256": {
+    "output/artifact-core-corrected.log": "7df1c7a46d3041cf39d8feb48701f1dda7f7c1132be7bc0103bcc205abd30f04",
+    "output/artifact-process-focused.log": "8b9edc5d8d16272e8110addc1fe93e055ea26b263e535d2a876da7dac9a2116a",
+    "output/artifact-workflow-focused.log": "4e0766dc7dda35545e23906fcd88b0706a930fdbc5ee662482bf953f3c890178",
+    "output/artifact-source-archive-affected.log": "774206a8e43ea99de0526cc105addf585b9471f410b58ccbb08f6e32b8783c7d"
+  },
+  "workflow_context_original_refused": true,
+  "postwait_reaped_group_signals": 0,
+  "owned_processes_reaped_in_fault_controls": true,
+  "git_blob_oid_not_plain_content_checksum": true,
+  "source_count16385_refused_before_blob_reads": true,
+  "actual_sigstore_executed": false,
+  "actual_combined_nli_tree_executed": false,
+  "full_F057_closed": false,
+  "full_X02_closed": false
+}

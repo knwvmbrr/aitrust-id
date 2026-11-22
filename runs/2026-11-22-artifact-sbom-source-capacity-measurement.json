@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-22T03:42:58.281905+00:00",
+  "profile": "measured-union-before-source-capacity-amendment/v1",
+  "inputs": {
+    "root_commit": "1626cced2c4996859bef11edf364b18cd2474b03",
+    "c2pa_commit": "41b8d52ebb6bdadb7bafa2c0fb81cf06bdc14403",
+    "nli": "current frozen owned files; final commit pending",
+    "artifact_core": "current own untracked feature files"
+  },
+  "source_files": 12467,
+  "git_listing_bytes": 1567202,
+  "source_bytes": 113431132,
+  "largest_source_bytes": 3427741,
+  "proposed_max_source_files": 16384,
+  "existing_git_listing_limit": 2000000,
+  "actual_combined_commit_executed": false,
+  "pending_root_files_not_included": true,
+  "notes": [
+    "Whole union measurement; no retained notices omitted.",
+    "Pending root files and eventual event metadata require final committed-tree replay.",
+    "Packet/SPDX actual sizes to be measured after final integration."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-11-22T02:38:27.387954+00:00",
+  "pass": false,
+  "stage": "initial14route-adapter-execution",
+  "route_counts": {
+    "android-app": 222,
+    "ios-app": 222,
+    "web-checker": 222,
+    "ps-source": 9,
+    "node-build-tools": 205,
+    "nli-linux-x86_64": 48,
+    "c2pa-linux-x86_64": 10,
+    "c2pa-macos-arm64": 10
+  },
+  "unavailable_routes": [
+    "anonymizer-linux-amd64",
+    "evaluator-linux-amd64",
+    "gateway-linux-amd64",
+    "mcp-stdio",
+    "nli-macos-arm64",
+    "source-snapshot"
+  ],
+  "source_sha256": {
+    "tools/distribution_artifacts.py": "3daa88faa41ae24091dc9844875a74a30f3e69e1e74af87e34cdae65a2dc18ee",
+    "tools/artifact_evidence_io.py": "1849f6437ba6510285eaf4a6279ad545387b948f08ce81e9ded6d44f583dd2d6",
+    "scripts/distribution-artifact.py": "9dae4536d073792887a80973045cf8e861d6a602988a98a6ca8e89aed4137dfc"
+  },
+  "limits": "New adapter source only; no existing consumer, deployment or original acceptance changed."
+}
