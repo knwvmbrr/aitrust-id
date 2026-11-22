@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-22T05:55:21.215815+00:00",
-  "active_increment": "Two full original workflows completed (N010/N001),67 original requirements remain open. Optional SynthID input and native/source/SBOM components are functioning; F155 tag outcome and F057/X02 remain open. Safe worker supervision integrated; final validation and protected publication pending.",
-  "status": "integrated_two_original_workflows_and_working_source_components;135complete67open_target60_unmet;final_validation_pending",
+  "updated": "2026-11-22T06:38:11.516183+00:00",
+  "active_increment": "Protected source cd3 and actual public site verified;135 complete67 open. Integrating complete reviewed F145 reference design and optional independent selected-pair MT browser preview; no additional original closure counted yet.",
+  "status": "protected_live135complete67open; reviewed_F145_and_MT_integrated_for_next_delivery;target60_unmet",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-11-21-public-connection-guide-publication.json",
+    "evidence": "runs/2026-11-22-current-protected-site-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Host-specific MCP configuration and user-interface acceptance beyond the official SDK client",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://544711b4.aitrust-id.pages.dev",
+    "deployment_url": "https://cf4df1d6.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-11-21-public-connection-guide-publication.json",
+    "publication_evidence": "runs/2026-11-22-current-protected-site-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 37,
@@ -745,7 +745,7 @@
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
     "candidate_source": "https://theailab.org/ai-trust-registry",
-    "observed_mark": "AI Trust ID\u2122",
+    "observed_mark": "AI Trust ID™",
     "registration_priority_and_legal_conflict_verified": false
   },
   "market_research": {
@@ -1224,7 +1224,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-22T05:55:21.215815+00:00",
+  "updated_at": "2026-11-22T06:38:11.516183+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1567,7 +1567,7 @@
     "active_retention_days": 30,
     "backup_expiry_days": 7,
     "invitation_only": true,
-    "owner_role": "Michael \u2014 accepted accountable pilot operator and access approver",
+    "owner_role": "Michael — accepted accountable pilot operator and access approver",
     "owner_decision": "runs/2026-10-13-metadata-pilot-owner-decision.json",
     "policy": "deploy/research/metadata-pilot-policy.json"
   },
@@ -3207,20 +3207,21 @@
     "publication": "runs/2026-11-06-agent-protected-publication.json"
   },
   "last_protected_publication": {
-    "evidence": "runs/2026-11-21-nov21-required-ci-review.json",
-    "merge_commit": "2aa67779352fa11c303867f52799172ec73ee07c",
+    "merge_commit": "cd3beab02774fa939e3a2bd8a0d87913d9e8fd81",
     "publicly_verified": true,
-    "required_checks_passed": 11
+    "required_checks_passed": 11,
+    "evidence": "runs/2026-11-22-current-protected-site-publication.json",
+    "normal_protected_merge": true
   },
   "scope_target_current": {
     "records": 202,
-    "complete": 133,
-    "open": 69,
+    "complete": 135,
+    "open": 67,
     "target_open": 0,
-    "closures_needed": 69,
+    "closures_needed": 67,
     "ledger": "docs/scope-progress.json",
     "intermediate_target_open": 60,
-    "intermediate_closures_needed": 9,
+    "intermediate_closures_needed": 7,
     "completion_objective": "Zero open original requirements, with actual full acceptance; owner/external steps remain explicit while other engineering continues.",
     "immediate_target_source": "docs/session-delivery.json"
   },
@@ -3276,23 +3277,22 @@
     "publication": "runs/2026-11-07-scope-72-live-publication.json"
   },
   "production_publication": {
-    "status": "live_and_verified_critical_assets_and_actual_checker",
-    "source_commit": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
-    "deployment_url": "https://26f7b904.aitrust-id.pages.dev",
+    "status": "protected_main_live_selected_artifacts_byte_verified",
+    "source_commit": "cd3beab02774fa939e3a2bd8a0d87913d9e8fd81",
+    "deployment_url": "https://cf4df1d6.aitrust-id.pages.dev",
     "public_url": "https://aitrustid.com",
-    "evidence": "runs/2026-11-21-nov21-functional-publication.json",
-    "protected_merge": "runs/2026-11-21-pr138-required-ci-review.json",
-    "critical_HTTP_checks": 34,
+    "evidence": "runs/2026-11-22-current-protected-site-publication.json",
+    "selected_files_per_origin": 70,
+    "matched_http_responses": 140,
     "origins": 2,
     "full_artifact_byte_equivalence_claimed": false,
     "scope_records": 202,
-    "completed_requirements": 132,
-    "open_requirements": 70,
+    "completed_requirements": 135,
+    "open_requirements": 67,
     "independent_tag_accuracy_approved": false,
     "real_collection_enabled": false,
     "public_app_store_released": false,
-    "formation_filed": false,
-    "metadata_only_followup": true
+    "formation_filed": false
   },
   "pii_separator_correction": {
     "status": "source_and_website_published_verified",
@@ -4194,10 +4194,10 @@
     "meaning": "Records the verified implementation deployment; subsequent operations records remain in Git and do not rewrite the deployed implementation changelog."
   },
   "ps_source_distribution": {
-    "status": "live_source_only_development_download_verified",
+    "status": "public_source_zip_matches_protected_workflow_and_independently_verified_attestation;source_only_policy_admitted",
     "artifact": "site/public/downloads/aitrust-id-ps-source.zip",
-    "sha256": "c305d9176263b6d150c86e0d7950bb61ad651354c6b0b1ed612737e925c71624",
-    "bytes": 130542,
+    "sha256": "1720be1015f7ab1e295de97dbc503723b486209b2f7dc09e2ebd6130c6fb42d1",
+    "bytes": 131039,
     "source_members": 9,
     "generated_manifest_members": 1,
     "prerequisites": "Existing CPython 3.12+ on macOS or Linux; interpreter and OS not bundled",
@@ -4218,10 +4218,12 @@
     "applicable_project_notice_retained": true,
     "notice_removal_with_rehashed_policy_refused": true,
     "public_url": "https://aitrustid.com/downloads/aitrust-id-ps-source.zip",
-    "publication": "runs/2026-11-19-ps-source-live-publication.json",
+    "publication": "runs/2026-11-22-current-protected-site-publication.json",
     "protected_merge": "runs/2026-11-19-ps-source-protected-merge.json",
     "current_verifier_evidence": "runs/2026-11-19-ps-source-canonical-linux.json",
-    "public_artifact_bytes_unchanged_by_verifier_hardening": true
+    "public_artifact_bytes_unchanged_by_verifier_hardening": true,
+    "actual_signed_source_verification": "runs/2026-11-22-actual-ps-source-attestation-provenance.json",
+    "source_commit": "cd3beab02774fa939e3a2bd8a0d87913d9e8fd81"
   },
   "dependency_conflict_policy": {
     "profile": "technical-dependency-conflict-policy/v1",
@@ -4491,6 +4493,25 @@
         "metadata_only_followup": true
       },
       "reason": "Repaired Android source and optional NF browser workflow protected and published."
+    },
+    {
+      "status": "live_and_verified_critical_assets_and_actual_checker",
+      "source_commit": "f5c03183b2e6176cb64a798664a5c7ee7d4a5e5a",
+      "deployment_url": "https://26f7b904.aitrust-id.pages.dev",
+      "public_url": "https://aitrustid.com",
+      "evidence": "runs/2026-11-21-nov21-functional-publication.json",
+      "protected_merge": "runs/2026-11-21-pr138-required-ci-review.json",
+      "critical_HTTP_checks": 34,
+      "origins": 2,
+      "full_artifact_byte_equivalence_claimed": false,
+      "scope_records": 202,
+      "completed_requirements": 132,
+      "open_requirements": 70,
+      "independent_tag_accuracy_approved": false,
+      "real_collection_enabled": false,
+      "public_app_store_released": false,
+      "formation_filed": false,
+      "metadata_only_followup": true
     }
   ],
   "session_delivery_closeout": {
@@ -4815,7 +4836,7 @@
       "N-001"
     ],
     "F155_status": "Optional SDK input functioning; supported tag workflow absent; original open at60.",
-    "publication_pending": true,
+    "publication_pending": false,
     "current_protocol_failure": "runs/2026-11-22-combined-current-protocol.json",
     "repair": "Version expanded source serializer while preserving exact immutable v1 observer source and observations."
   },
@@ -4869,7 +4890,7 @@
       "N-010",
       "N-001"
     ],
-    "publication_status": "pending normal protected merge and actual site deployment",
+    "publication_status": "protected cd3 merged; actual70 selected files on both public origins match; next F145 and MT delivery integrated locally",
     "current_boundary_evidence": "runs/2026-11-22-three-originals-reference-boundaries.json",
     "F155_component_not_full_original": "runs/2026-11-22-f155-original-completion-correction.json",
     "source_component_integration": "d572882f4cb9b580aba9985e2f6a3b49382b74da",
@@ -4881,11 +4902,11 @@
       "protocol": "runs/2026-11-22-three-originals-corrected-protocol.json",
       "website": "runs/2026-11-22-three-originals-corrected-website.json"
     },
-    "repository_engineering_status": "All five current source-bound capability checks and finite boundary review passed; protected/public publication pending.",
+    "repository_engineering_status": "Five exact-source capability receipts accepted for protected cd3; next-source validation pending",
     "current_failed_protocol_execution": "runs/2026-11-22-combined-current-protocol.json",
     "pending_repository_engineering_capabilities": [],
     "FI_private_citation_practice": {
-      "status": "integrated_component_pending_current_verification_and_publication",
+      "status": "protected source and guide publicly delivered; no FI tag issued",
       "author_source": "a0e6c766d1d07af55d5541fefa51d7e8900c41fb",
       "evidence": "runs/2026-11-22-fi-private-practice-main-integration.json",
       "tag_issued": false,
@@ -4894,7 +4915,7 @@
       "distinct_review": "runs/2026-11-22-fi-private-practice-main-distinct-review.json"
     },
     "worker_observation_refresh": {
-      "status": "all_seven_current_observation_consumers_accept; full_capability_checks_pending",
+      "status": "all seven observation consumers accepted in protected cd3; actual required checks passed",
       "acceptance": "runs/2026-11-22-current-worker-observer-acceptance.json",
       "host_linux": "runs/2026-11-22-host-worker-ownership-linux-provenance.json",
       "other_linux": "runs/2026-11-22-hosted-worker-refresh-provenance.json",
@@ -4914,9 +4935,10 @@
     "next_F145_reference_design": {
       "source_commit": "228ebf458853628c78112204790bd70525ec5f5d",
       "public_branch": "codex/f145-reference-program",
-      "status": "separate reviewed candidate, not integrated or counted complete",
+      "status": "reviewed author integrated;39 current focused controls and30 actual CLI commands pass; discoverability/CI and protected publication pending",
       "operating_accreditation_claimed": false
-    }
+    },
+    "production_publication": "runs/2026-11-22-current-protected-site-publication.json"
   },
   "independent_development_handoffs": "runs/2026-11-21-independent-tag-development-handoffs.json",
   "operator_ownership_correction": {

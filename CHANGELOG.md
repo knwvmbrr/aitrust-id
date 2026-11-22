@@ -2,6 +2,25 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-063811-record-actual-protected-delivery-state-9a0b9dcf
+
+Recorded 2026-11-22T06:38:11.555646+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Updated current machine state to actual protected cd3 publication, independently verified PS source attestation and unchanged135complete67open accounting.
+- **Evidence.** Actual140 selected HTTP responses match the protected build; public PS source ZIP matches the workflow artifact and passes independently rooted verification. [Change record](./runs/changes/2026-11-22-063811-record-actual-protected-delivery-state-9a0b9dcf.json).
+- **Not claimed.** Source identity is not independent tag accuracy, full distribution clearance or a new original closure. Next F145 and MT integrated sources require fresh acceptance.
+
+
+### 2026-11-22-062814-publish-protected-site-and-authenticated-source-06504c2f
+
+Recorded 2026-11-22T06:28:14.936301+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Deployed protected source cd3beab0, verified selected public build bytes and independently authenticated the exact public PS source download.
+- **Evidence.** All11required checks passed before normal merge;70selected files match on each of2origins. Actual main signing and independent detached verification with separately retrieved roots pass for the admitted PS source route. [Change record](./runs/changes/2026-11-22-062814-publish-protected-site-and-authenticated-source-06504c2f.json).
+- **Not claimed.** This authenticates source bytes only. Independent detector accuracy, full F057/X02 license coverage and all other distribution-route approvals remain open. Current original scope135complete67open; later framework/MT candidates are separate.
+
+
+
 ### 2026-11-22-063017-integrate-complete-reference-programme-151ab741
 
 Recorded 2026-11-22T06:30:17.151077+00:00 · Contributor: Codex PM /root; author /root/seo; reviewer /root/web_camo · change
