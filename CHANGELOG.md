@@ -2,6 +2,23 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-145037-nf-timing-diagnostic-integration-4e7d10d3
+
+Recorded 2026-11-22T14:50:37.206946+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrated separately reviewed NF timing-only instrumentation without changing release acceptance.
+- **Evidence.** Application and worker sources, canonical cases and the180s release wrapper are preserved. Existing PS/PII/extension receipts remain source-current; protocol and website are explicitly pending fresh checks. [Change record](./runs/changes/2026-11-22-145037-nf-timing-diagnostic-integration-4e7d10d3.json).
+- **Not claimed.** The new300s hosted workflow measures timing only and has not run. No original closure, image publication, tag release or deadline waiver.
+
+
+### 2026-11-22-144716-nf-pr149-closed-timing-diagnostic-afd8e78b
+
+Recorded 2026-11-22T14:47:16.948763+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Added closed fault/peer/cleanup timing to NF verification and a read-only hosted300s diagnostic workflow without changing the180s release wrapper.
+- **Evidence.** 15 inert diagnostics pass; syntax and workflow blocks parse. ExactPSthenMT input/order/default records and finally cleanup preserved, unknown/private/getter progress refused, original COMMANDS and50000 result waits unchanged. [Change record](./runs/changes/2026-11-22-144716-nf-pr149-closed-timing-diagnostic-afd8e78b.json).
+- **Not claimed.** No localbrowser/build/SDK or hostedexecution. Diagnostic300s is timing-only and cannot clear180s release gate, PR149, tagaccuracy or original requirements.
+
 ### 2026-11-22-143836-pr149-nf-hosted-release-blocker-4a0ffc2c
 
 Recorded 2026-11-22T14:38:36.705211+00:00 · Contributor: Codex · change

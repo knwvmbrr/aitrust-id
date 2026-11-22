@@ -1,0 +1,58 @@
+{
+  "captured_at": "2026-11-22T14:47:16.877527+00:00",
+  "author": "Codex / web_camo",
+  "profile": "NF-PR149-observability-focused-controls/v1",
+  "pass": true,
+  "base_commit": "7174a3f49a3365ceff241d2b3ff5bd74d1be5598",
+  "sources": {
+    "scripts/verify-nf-device.cjs": "285218db83353029353e465861a91430a77d649d4e9ba1a5356e1ea3cad2a235",
+    "scripts/verify-nf-client.cjs": "85ed59a2822494aa9b5c1553c2dab95ceb5612a6b677c279989a3319ff99ef47",
+    "scripts/build-nf-device-fixture.mjs": "5cfa8d810054bc995bab92fe86e39be42825ee603f27565fcfac5a8dce86f58e",
+    "tests/nf-browser-diagnostics.cjs": "d1dbc35573f5c9a85a903a86f9428b3e1f9b182a01cda0bd8df656995c900082",
+    "docs/nf-pr149-diagnostic-plan.md": "2684ddc034111e9f4c2ef0e4c89f3837abb1a83c965debb8a6588ed842df97fd",
+    ".github/workflows/nf-browser-diagnostic.yml": "088a35e115490a8dc8df20e5a9c3a168244cb4190c118413434e63c0a2c9a060"
+  },
+  "executed": {
+    "inert_Node_diagnostics": 15,
+    "pass": 15,
+    "fail": 0,
+    "skipped": 0,
+    "elapsed_ms": 2593,
+    "Node_module_syntax": 3,
+    "workflow_YAML_parsed": true,
+    "workflow_bash_syntax_blocks": 6,
+    "workflow_inline_Node_syntax_blocks": 2
+  },
+  "source_comparisons": {
+    "release_wrapper_commands_and_budgets_byte_exact": true,
+    "all_original50000_result_waits_retained": true,
+    "fixture_exact_PS_then_MT_inputs_order_records_default_hook_and_stops_preserved_by_actual_inert_execution": true,
+    "callback_refusal_stops_both_no_success": true,
+    "closed_private_unknown_getter_progress_refusal": true,
+    "event_cap512_unchanged": true
+  },
+  "scope": {
+    "application_or_method_worker_edits": false,
+    "local_browser_build_SDK_install": false,
+    "release_deadline_raised": false,
+    "diagnostic_only_full_cohort_ms": 300000,
+    "SIGTERM_to_KILL_margin_ms": 5000,
+    "release_wrapper_ms": 180000,
+    "new_workflow_nonrelease_readonly_own_PR_filtered": true,
+    "fixed_failure_artifacts_JSON_count": 2,
+    "artifact_retention_days": 7
+  },
+  "harness_note": "All syntax/source assertions completed; first evidence write alone failed because sparse checkout lacked runs directory. Added runs to own sparse checkout and serialized this fresh record; no feature/source correction or runtime replay.",
+  "actual_hosted_execution": "PENDING root review and normal source push; no performance cause/fix or PR149 acceptance inferred",
+  "preserved_failure": {
+    "source_commit": "7174a3f49a3365ceff241d2b3ff5bd74d1be5598",
+    "actual_command_elapsed_ms": 180266,
+    "last_marker": "Chromium/chunk_import_render/render",
+    "underlying_operation": "UNESTABLISHED"
+  },
+  "limits": [
+    "No state/scope/parent worktree or original acceptance changes.",
+    "300s diagnostic completion cannot waive180s release wrapper.",
+    "Future measurements must bind this exact changed observer/fixture source; earlier records remain historical."
+  ]
+}
