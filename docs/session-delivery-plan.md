@@ -11,7 +11,8 @@ The source and notice work for C2PA/NLI and the artifact-linked SPDX publisher
 is integrated. Full F-057/X-02 licensing and distribution obligations stay open.
 FI now also has a private two-command citation-practice path linked from its
 existing instructions. It reports declared associations, with no FI/truth verdict.
-Protected publication and current-source release checks remain pending.
+Publication and current-source verification are tracked separately in
+[state.json](../state.json) under `current_sixty_open_wave`.
 
 Current bounded workers: `/root/share_debugger` separates the expanded source
 snapshot serializer from immutable historical observers; `/root/seo` independently
@@ -24,6 +25,12 @@ The failed integrated protocol candidate is preserved in
 An unrelated source-archive file-count change invalidated old dependency observer
 bindings. The repair preserves those original observations and version-controls
 the expanded serializer, with no fabricated replay or changed licensing result.
+
+All selected current worker observations are now accepted: actual Mac and hosted
+Linux Fleet, directory, inbox, agent view/output, host capture, conformance and
+retained exact-source audit evidence. Their original historical records remain
+unchanged. These refreshes restore engineering evidence after the shared worker
+repair; they do not add original completions or independent detector accuracy.
 
 ## Earlier dated snapshots
 

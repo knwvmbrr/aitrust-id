@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-050739-freeze-current-source-with-accepted-worker-observations-934c1385
+
+Recorded 2026-11-22T05:07:39.423974+00:00 · Contributor: Codex PM /root; distinct reviewer /root/web_camo · change
+
+- **Changed.** Completed all selected actual worker-observation refreshes, copied current public evidence, and froze the source and scope for final capability verification.
+- **Evidence.** Both host platforms retain20 original cases and12 exact sources; all seven current evidence consumers accept actual records. Original202criteria and135/67 counts remain unchanged. [Change record](./runs/changes/2026-11-22-050739-freeze-current-source-with-accepted-worker-observations-934c1385.json).
+- **Not claimed.** The independent accuracy/release gate still refuses; source-bound software checks, protected merge, real signing and site deployment remain separate next steps. No additional original closure.
+
+
 ### 2026-11-22-050321-retain-current-conformance-host-and-audit-observations-7418da39
 
 Recorded 2026-11-22T05:03:21.035145+00:00 · Contributor: Codex PM /root; author /root/share_debugger; reviewer /root/web_camo · change

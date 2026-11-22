@@ -29,3 +29,13 @@ The producer, original cases/deadlines and twelve source inputs are unchanged.
 The workflow adds no project dependencies and requires the actual current Linux
 receipt, non-root execution and network-namespace flags before succeeding. No
 current full two-OS capture claim is made until that actual receipt is selected.
+
+## Later actual hosted Linux capture
+
+The push workflow44987736789 at fdca8b8d completed successfully. Its original
+20 foreground cases ran nonroot in a fresh network namespace, with all12 current
+source bindings unchanged. The original output bytes are retained in
+`runs/2026-11-22-host-worker-ownership-linux.json`; the separate provenance record
+names the actual run and source. All seven selected observation consumers now
+accept the current records without repeating their producers. Full capability
+checks and protected/public publication remain separate.
