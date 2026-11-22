@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-161517-jpeg-credential-linux-working-delivery
+
+Recorded 2026-11-22T16:15:17.592246+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Recorded the functioning selected Linux JPEG credential/action CLI qualification and distinct retained-evidence review, preserving three failed candidates and unchanged PNG/text behavior.
+- **Evidence.** Actual hosted45041728639 passed20focused groups and14qualification cases, including4whole public SDK projections, signed creation/edit, altered binding with matching signature, caller-root context isolation, unknown revocation, unsigned/refusal, SDK absence with actual PS survival and recovery. Seventeen source pre/post/current/Git hashes match; tenlocked versions, nonroot isolated namespace, empty capabilities/groups, no-new-privileges and temporaryenvironment cleanup are recorded. [Change record](./runs/changes/2026-11-22-161517-jpeg-credential-linux-working-delivery.json).
+- **Not claimed.** Synthetic engineering evidence only; selected Ubuntu24 x64 CPython3.13.18, SDK0.38/native0.91. No Mac/phone/browser qualification, origin/authorship/truth/overallValid, FA/PA issuance, full original closure, public endpoint, complete native sandbox or license-clearance claim. Result prose is post-proof; runtime unchanged.
+
+
 ### 2026-11-22-160342-jpeg-required-inception-fixture
 
 Recorded 2026-11-22T16:03:42.714815+00:00 · Contributor: Codex / web_camo · change
