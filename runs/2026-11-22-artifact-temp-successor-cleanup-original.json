@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-11-22T17:08:53.903349+00:00",
+  "pass": false,
+  "source_sha256": {
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36"
+  },
+  "source_unchanged": true,
+  "actual": {
+    "replacement_marker_survived": false,
+    "original_temp_retained": true,
+    "final_published": false
+  },
+  "scope": "ONE owned-temp foundation save/prepublish refusal callback; no MCP/SDK/signature/network",
+  "finding": "After the owned temporary name is replaced during a refused prepublish callback, unconditional cleanup unlinks the replacement. Original held inode remains at another owned name.",
+  "limits": [
+    "Both old/new files are reviewer-created synthetic data; no user or foreign file touched.",
+    "This is an inherited foundation namespace issue requiring owner scope/contract decision, not a new managed-policy or license claim.",
+    "Arbitrary same-UID races cannot be universally solved by another pathname stat-before-unlink; no such guarantee is suggested."
+  ]
+}

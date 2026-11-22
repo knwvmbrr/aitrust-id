@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-172028-artifact-io-owned-publication-e7cbea41
+
+Recorded 2026-11-22T17:20:28.592009+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Retain refused private artifact temporaries instead of unlinking successor names; revalidate descriptor bytes and held private boundaries through publication and close.
+- **Evidence.** Fifteen tiny filesystem controls passed and a distinct reviewer replayed six original, corrected and positive cases with every owned descriptor closed. [Change record](./runs/changes/2026-11-22-172028-artifact-io-owned-publication-e7cbea41.json).
+- **Not claimed.** No universal hostile concurrent same-UID race guarantee, SDK, archive build, signing, permission, detector accuracy or original requirement closure; failed private bytes may remain.
+
+
 ### 2026-11-22-164504-mt-private-label-preparation
 
 Recorded 2026-11-22T16:45:04.200630+00:00 · Contributor: Codex / web_camo · change
