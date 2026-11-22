@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-source-snapshot-rights-profile
+
+Recorded 2026-11-22T22:50:06.479816+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Add a closed source-copy obligation helper with immutable third-party/grant assets, named maintained first-party paths, and pinned copied-spec attribution.
+- **Evidence.** 18 focused stdlib controls and5 source-stable CLI cases cover baseline/current032 source, unsupported tree/private selector and actual unmappedMCP refusal. Distinct source/maintained-contract review is retained;1019 source-grant component records exclude the separately mapped2 PS containers. [Change record](./runs/changes/2026-11-22-source-snapshot-rights-profile.json).
+- **Not claimed.** No shared policy/graph/signer admission, SDK/archive build, global license/legal opinion, compiled-runtime permission, tag accuracy or original closure. First-party provenance relies on the explicitly reviewed contributor contract. Initial fixture and copied-spec classification failures remain immutable; earlier progress shorthand1021 combined unlike source-record/container units. Unit18 has after-observed source identities; separate CLI before/after maps are retained.
+
+
 ### 2026-11-22-174330-artifact-drift-close-and-ci-range-9167fa53
 
 Recorded 2026-11-22T17:43:30.696773+00:00 · Contributor: Codex PM /root; distinct review /root/seo · change
