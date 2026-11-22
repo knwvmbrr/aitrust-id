@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-145825-nf-diagnostics-independent-cleanup-8c683dc3
+
+Recorded 2026-11-22T14:58:25.236227+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Made browser and context closure independent of diagnostic checkpoint failures, retaining primary and cleanup failure evidence.
+- **Evidence.** Final20inert controls pass including begin/end/both checkpoint refusal, actual stub close error, context/browser backstop, async/falsy failures and close-once. Original180sCOMMANDS,300sdiagnosticworkflow and fixturehook bytes unchanged. [Change record](./runs/changes/2026-11-22-145825-nf-diagnostics-independent-cleanup-8c683dc3.json).
+- **Not claimed.** Originalf638/source-onlyP2finding retained; no actualbrowser/build/SDK/hostedrun or release acceptance, no timeoutwaiver.
+
+
 ### 2026-11-22-144716-nf-pr149-closed-timing-diagnostic-afd8e78b
 
 Recorded 2026-11-22T14:47:16.948763+00:00 · Contributor: Codex / web_camo · change

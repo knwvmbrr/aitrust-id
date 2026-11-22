@@ -1,7 +1,7 @@
 const test=require('node:test'),assert=require('node:assert/strict');
 const {spawnSync}=require('node:child_process');
 const fs=require('node:fs'),os=require('node:os'),path=require('node:path');
-const {classifyChild,createStageDiagnostics,runCommands,engineExecution,settleEngineChecks,publicStageEvent}=require('../scripts/verify-nf-client.cjs');
+const {classifyChild,createStageDiagnostics,runCommands,engineExecution,settleEngineChecks,closeWithDiagnostics,publicStageEvent}=require('../scripts/verify-nf-client.cjs');
 const {writeReport}=require('../scripts/execution-report.cjs');
 test('typed outcomes distinguish deadline, startup, signal and ordinary exit without diagnostic text',()=>{
  const rows=[
@@ -101,4 +101,22 @@ test('fixture diagnostic hook preserves exact PS then MT inputs whole records an
 test('failing fixture diagnostic callback cannot report success or leave either peer client running',async()=>{
  const trace=[];const run=fixturePeerHook({deviceChecker(){return {async check(){trace.push('PS');return {};},stop(){trace.push('stopPS');}};},mtDeviceClient(){return {async check(){trace.push('MT');return {};},stop(){trace.push('stopMT');}};}});
  await assert.rejects(run(token=>{if(token==='peer_ps_complete')throw Error('Synthetic diagnostic refusal');}),/Synthetic diagnostic refusal/);assert.deepEqual(trace,['PS','stopPS','stopMT']);
+});
+
+
+test('begin end and both diagnostic failures never skip or retry the owned browser close',async()=>{
+ for(const mode of ['begin','end','both']){let closes=0;const trace=[];const value=await closeWithDiagnostics(async()=>{closes++;trace.push('close');},step=>{trace.push(step);if(mode==='both'||mode===step)throw Error('Synthetic diagnostic unavailable');},'begin','end');assert.equal(closes,1);assert.deepEqual(trace,['begin','close','end']);assert.equal(value.complete,true);assert.equal(value.diagnostics_complete,false);assert(value.error);}
+});
+test('an actual close error is failed exactly once and never emits successful completion',async()=>{
+ let closes=0;const trace=[],failure=Error('Synthetic close failure');const value=await closeWithDiagnostics(async()=>{closes++;throw failure;},step=>trace.push(step),'begin','end');assert.equal(closes,1);assert.deepEqual(trace,['begin']);assert.equal(value.complete,false);assert.equal(value.error,failure);
+});
+test('context diagnostic refusal preserves failure and browser finally remains an independent cleanup backstop',async()=>{
+ let contextCloses=0,browserCloses=0;await assert.rejects((async()=>{try{const value=await closeWithDiagnostics(async()=>{contextCloses++;},()=>{throw Error('Synthetic context diagnostic unavailable');},'begin','end');if(value.error)throw value.error;}finally{const final=await closeWithDiagnostics(async()=>{browserCloses++;},()=>{throw Error('Synthetic browser diagnostic unavailable');},'begin','end');assert.equal(final.complete,true);assert.equal(final.diagnostics_complete,false);}})(),/Synthetic context diagnostic unavailable/);assert.equal(contextCloses,1);assert.equal(browserCloses,1);const verifier=fs.readFileSync(path.resolve(__dirname,'../scripts/verify-nf-device.cjs'),'utf8');assert(verifier.includes('outcome.failure??=outcome.cleanup_failure'));assert(verifier.includes('...(cleanup_failure?{cleanup_failure}:{})'));
+});
+test('ordinary cleanup and rejected asynchronous checkpoints remain truthful without suppressing close',async()=>{
+ let closes=0;const ordinary=await closeWithDiagnostics(async()=>{closes++;},()=>{},'begin','end');assert.deepEqual(ordinary,{complete:true,diagnostics_complete:true,error:null});const refused=await closeWithDiagnostics(async()=>{closes++;},async()=>{throw Error('Synthetic asynchronous checkpoint refusal');},'begin','end');assert.equal(closes,2);assert.equal(refused.complete,true);assert.equal(refused.diagnostics_complete,false);assert(refused.error);
+});
+
+test('falsy diagnostic or close throws cannot be mistaken for successful cleanup',async()=>{
+ for(const thrown of [null,undefined,false,0,'']){let closes=0;const markFailed=await closeWithDiagnostics(async()=>{closes++;},()=>{throw thrown;},'begin','end');assert.equal(closes,1);assert.equal(markFailed.complete,true);assert.equal(markFailed.diagnostics_complete,false);assert(markFailed.error);const closeFailed=await closeWithDiagnostics(async()=>{closes++;throw thrown;},()=>{},'begin','end');assert.equal(closes,2);assert.equal(closeFailed.complete,false);assert(closeFailed.error);}
 });

@@ -46,6 +46,13 @@ async function settleEngineChecks(concurrency,run){
  if(concurrency===2)return Promise.allSettled(names.map(name=>run(name)));
  const settled=[];for(const name of names)settled.push(...await Promise.allSettled([Promise.resolve().then(()=>run(name))]));return settled;
 }
+async function closeWithDiagnostics(close,mark,begin,end){
+ let diagnosticError=null,closeError=null;
+ try{await mark(begin);}catch(error){diagnosticError=error||Error('Diagnostic checkpoint failed');}
+ try{await close();}catch(error){closeError=error||Error('Owned close failed');}
+ if(closeError===null){try{await mark(end);}catch(error){diagnosticError??=error||Error('Diagnostic checkpoint failed');}}
+ return {complete:closeError===null,diagnostics_complete:diagnosticError===null,error:closeError||diagnosticError};
+}
 function publicStageEvent(event){
  const fields=['engine','stage','substep','authored_case_index','elapsed_ms','engine_elapsed_ms','stage_elapsed_ms','since_previous_ms'];
  if(!event||typeof event!=='object'||Array.isArray(event)||Object.getPrototypeOf(event)!==Object.prototype||Object.keys(event).sort().join(',')!==[...fields].sort().join(','))throw Error('Invalid diagnostic event');
@@ -79,5 +86,5 @@ function runCommands({spawn=spawnSync,clock=()=>performance.now(),record=value=>
  }
  return true;
 }
-module.exports={COMMANDS,classifyChild,hostCapacity,engineExecution,settleEngineChecks,publicStageEvent,createStageDiagnostics,runCommands};
+module.exports={COMMANDS,classifyChild,hostCapacity,engineExecution,settleEngineChecks,closeWithDiagnostics,publicStageEvent,createStageDiagnostics,runCommands};
 if(require.main===module){try{if(!runCommands())process.exitCode=1;}catch{console.error('NF diagnostic recording unavailable');process.exitCode=1;}}

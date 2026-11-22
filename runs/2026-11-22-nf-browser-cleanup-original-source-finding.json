@@ -1,0 +1,25 @@
+{
+  "profile": "bounded-source-review/v1",
+  "captured_at": "2026-11-22T14:53:34.349521+00:00",
+  "reviewed_by": "/root/seo",
+  "pass": false,
+  "reviewed_commit": "f638f8c2904d6991dc4c056427c9acaf86937bc6",
+  "source_sha256": {
+    "scripts/verify-nf-device.cjs": "285218db83353029353e465861a91430a77d649d4e9ba1a5356e1ea3cad2a235",
+    "scripts/verify-nf-client.cjs": "85ed59a2822494aa9b5c1553c2dab95ceb5612a6b677c279989a3319ff99ef47",
+    "scripts/execution-report.cjs": "368ea02355526b62fffb9e2410febff6442ee79acc45b4f71f442e3c37b178ba"
+  },
+  "finding": {
+    "priority": "P2",
+    "path": "scripts/verify-nf-device.cjs",
+    "boundary": "runEngine finally browser cleanup",
+    "cause": "The diagnostic checkpoint is called before browser.close inside one try. Diagnostic I/O or event-recording failure bypasses browser.close and is caught without another cleanup attempt.",
+    "required_correction": "Attempt owned browser close independently and exactly once even when the begin diagnostic checkpoint throws; fail the outcome on diagnostic or close failure.",
+    "evidence_kind": "source control-flow inspection; no injected fault or browser execution performed"
+  },
+  "limits": [
+    "No runtime, browser, test, download, build or network execution performed.",
+    "No claim about the prior PR149 timeout cause.",
+    "No release, tag, accuracy, legal or source admission approval."
+  ]
+}
