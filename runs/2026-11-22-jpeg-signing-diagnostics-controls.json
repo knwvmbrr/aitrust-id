@@ -1,0 +1,37 @@
+{
+  "captured_at": "2026-11-22T15:57:42.399841+00:00",
+  "pass": true,
+  "sources_before": {
+    "scripts/verify-jpeg-provenance.py": "423bed83370a51c22da8b492a63025dad1c3da9a6e6bc31b054a08cea740faca",
+    "tests/fixtures/jpeg-provenance-v1/generate.py": "2655fd36a5e80f125ebe17b4d0607c2d8147cc9f9d76d79ec036bcddefe69f95",
+    "tests/test_jpeg_provenance.py": "45426318957bfda38eb6762274b255dde275d6572dd111b812b722973ed2e90b",
+    "docs/jpeg-provenance-plan.md": "1ccdfa6e6c485ed885222e9c4855bf88790047c5f4f2aa3e706ea37b0e9df625"
+  },
+  "sources_after": {
+    "scripts/verify-jpeg-provenance.py": "423bed83370a51c22da8b492a63025dad1c3da9a6e6bc31b054a08cea740faca",
+    "tests/fixtures/jpeg-provenance-v1/generate.py": "2655fd36a5e80f125ebe17b4d0607c2d8147cc9f9d76d79ec036bcddefe69f95",
+    "tests/test_jpeg_provenance.py": "45426318957bfda38eb6762274b255dde275d6572dd111b812b722973ed2e90b",
+    "docs/jpeg-provenance-plan.md": "1ccdfa6e6c485ed885222e9c4855bf88790047c5f4f2aa3e706ea37b0e9df625"
+  },
+  "source_unchanged_during_execution": true,
+  "current_affected_tests": 2,
+  "seconds": 0.0006043330067768693,
+  "unchanged_runtime_cli_workflow": {
+    "tools/jpeg_provenance.py": "2be9bc95a3aca62750bc23e49c1923fc61c00aa336c8edc3dabeaec6364fd8df",
+    "tools/jpeg_provenance_io.py": "65ab199c54571a077898246266da6dfa52e7148d59f93479175ee6a88655abfa",
+    "tools/jpeg_provenance_process.py": "1eac62ab9bc14dddba14f58dda4acb31f0e1a536436fdb7f27bdaea48d23c156",
+    "tools/jpeg_provenance_sdk.py": "b6cb1faa9543fdb71c80e41676446dce1dc0bc84f3dcd19401dc222b8cd277e5",
+    "tools/jpeg_provenance_actions.py": "e4cf4cd2661c2e4c257017f4d4cc3a87880f9002f73c44243e75e6b1cf4bf5d2",
+    "scripts/inspect-jpeg-provenance.py": "f3389b8b14e2af09e708a76e0d0f7b5a15b874c6daab59d8ccfde18a78be5148",
+    ".github/workflows/jpeg-provenance-qualification.yml": "0ee147fca08aac01d5d071317edf7eadd3b6836bcd9436e3085f991f4507b9fc"
+  },
+  "prior_failure": {
+    "path": "runs/2026-11-22-jpeg-native-candidate-2-failed.json",
+    "sha256": "9830684fc79f45d34842b028b28d56c9c4b50795e027f08d77a09f65c6cb4c32"
+  },
+  "limits": [
+    "Fixed diagnostics only; no native execution or successful credential claim.",
+    "native_sdk_executed is unknown during loader entry; true only after fixed native version probe returned.",
+    "No runtime/parser, SDK, timeout, assertion or workflow changes."
+  ]
+}

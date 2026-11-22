@@ -1,0 +1,44 @@
+{
+  "actual_scope": [
+    "Tiny owned filesystem files, no SDK or archive.",
+    "Refused and returning callback swaps preserve original and successor, final destination absent.",
+    "Post-link temporary successor remains, complete final retained with explicit uncertainty.",
+    "Normal atomic no-replace 0600 publication and exact bytes.",
+    "Raw-fd construction/write failures and all-owned-close attempts, no descriptor retry.",
+    "Late Git markers and owner/private-mode changes refuse or become uncertain after publication."
+  ],
+  "base_commit": "bd1610329fc22bba9c3e91fd0ade9dd5c7c176ab",
+  "captured_at": "2026-11-22T17:18:52.546373+00:00",
+  "checks": [
+    {
+      "command": "python3 -I -S -B -m unittest discover -s tests -p test_artifact_evidence_io.py -v",
+      "errors": 0,
+      "failures": 0,
+      "log_sha256": "c91f2342a80757f6a4dc8a7816f0ab25fde71314380402f78199201fac13c94c",
+      "seconds": 0.016,
+      "skipped": 0,
+      "tests": 15
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0
+    }
+  ],
+  "complete_project_obligations": false,
+  "limits": [
+    "No universal guarantee against a hostile concurrent same-UID filesystem writer.",
+    "Failure retains private temporary bytes for explicit inspection; no rollback promise.",
+    "No SDK, package installation, build, archive creation, network, account, model or daemon execution.",
+    "No original requirement, permission, legal/accuracy or attestation acceptance.",
+    "Historical whole-helper producer bindings require actual integration refresh; not edited here."
+  ],
+  "old_helper_sha256": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+  "pass": true,
+  "profile": "artifact-evidence-io-ownership-execution/v1",
+  "release_authorized": false,
+  "source_sha256": {
+    "docs/artifact-io-ownership-plan.md": "fd18ec9fe0438fb828921ce88bf0120c4129c440406b6dec8d096cecc7bc2ad2",
+    "tests/test_artifact_evidence_io.py": "adc631878d155c4cb2649e730f8a4446ff50838fb504b4030888c18ca347619f",
+    "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e"
+  }
+}

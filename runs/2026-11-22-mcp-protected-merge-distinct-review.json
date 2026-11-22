@@ -1,0 +1,80 @@
+{
+  "captured_at": "2026-11-22T18:36:14.628831+00:00",
+  "findings": [],
+  "limits": {
+    "attestation_or_managed_artifact_authorization": false,
+    "four_target_runtime_qualification": false,
+    "full_original_or_whole_license_clearance": false,
+    "previous_receipts_rebound": false,
+    "sdk_native_or_archive_execution": false,
+    "source_review_not_full_component_execution": true
+  },
+  "mcp_head": "9f878d2fc4c06e8acd5cf39c56323a0775aa1d96",
+  "merge_uncommitted_at_review": true,
+  "observations": {
+    "actual_current_finite_assessment": {
+      "assessment_sha256": "d0488a93ce395eb7b03aed1161977a87a81782f6af7a4bd66ba890c0f4c22c38",
+      "complete_compiled_closure": false,
+      "complete_project_obligations": false,
+      "fact_sha256": "477a4b16c6c8e3100e1be3713a48b904328a202fc083a63573417c111af5d574",
+      "legal_clearance": false,
+      "route": "mcp-stdio",
+      "runtime_source_profile_verified": true,
+      "targets": [
+        "cp312-linux_x86_64_glibc_2_34",
+        "cp312-macosx_11_0_arm64",
+        "cp313-linux_x86_64_glibc_2_34",
+        "cp313-macosx_11_0_arm64"
+      ]
+    },
+    "actual_current_route_permissions": {
+      "android-app": false,
+      "anonymizer-linux-amd64": false,
+      "c2pa-linux-x86_64": false,
+      "c2pa-macos-arm64": false,
+      "evaluator-linux-amd64": false,
+      "gateway-linux-amd64": false,
+      "ios-app": false,
+      "mcp-stdio": true,
+      "nli-linux-x86_64": false,
+      "nli-macos-arm64": false,
+      "node-build-tools": false,
+      "ps-source": true,
+      "source-snapshot": false,
+      "web-checker": false
+    },
+    "actual_fixed_io_selected": true,
+    "dated_changelog_event_id_exact_parent_union_no_duplicates": true,
+    "grant_assessment_and_permission_code_and_sdk_producer_unchanged": true,
+    "managed_26_controls_and_main_only_appendix_exact_own_parent": true,
+    "managed_only_one_terminal_newline_trimmed": true,
+    "old_new_profile_only_io_source_row_changed": true,
+    "other_profile_fields_all_equal": true,
+    "policy_only_three_declared_source_rows_changed": true,
+    "prior_mcp_graph_function_preserved": true,
+    "root_51_controls_and_ps_job_exact_prefix_preserved": true,
+    "root_three_serializers_and_committed_tree_function_preserved": true,
+    "unchanged_ps_nine_source_contract": true
+  },
+  "pass": true,
+  "profile": "mcp-protected-merge-semantic-source-distinct-review/v1",
+  "protected_merge_head": "085106c1d40e86b071a25a7b9e4e56b965a31044",
+  "source_stable": true,
+  "sources_sha256": {
+    ".github/workflows/artifact-sbom.yml": "3cdd8535b902ad162ded6572b17c789ab6bc370d925e6e79ca973d1f131c94fe",
+    "CHANGELOG.md": "a35033c37d041eee1c83845c863ff06d97748857cba9e6cee41db2d20f0d2f7b",
+    "eval/dependencies/mcp-runtime-release.json": "d0488a93ce395eb7b03aed1161977a87a81782f6af7a4bd66ba890c0f4c22c38",
+    "eval/dependency-policy.json": "672ccf547dd1615145dbc37bbae214f15c4570e1f76052aa28171d7e35b3595a",
+    "runs/2026-11-22-mcp-protected-base-source-refresh.json": "7bd41ebc68644711e0d8a9236d76e9a4503a09be4e49c68b27fab076ef3a6ab2",
+    "sbom/mcp-runtime/manifest.json": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+    "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+    "tools/dependency_policy.py": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+    "tools/distribution_artifacts.py": "40dc711f41b4454dbbc792797d5b7b7d567f8cbff1a4293933e79d2a1efc47bb",
+    "tools/mcp_distribution.py": "9f87c59d5884200872c15829babd4a6080842ceb2a9f7a151bd9c1f4b3bd341a",
+    "tools/mcp_managed_release.py": "53ae57247fa6e1069aae769b7cb1cd4222588e3180404118909416fefea61e01",
+    "tools/mcp_release_policy.py": "2c986c5652c064b8a0cdb328786dbbcd23e0a0988cde96b0e3030e001656fbfd"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "actual_finite_assessment": {
+    "assessment_sha256": "d0488a93ce395eb7b03aed1161977a87a81782f6af7a4bd66ba890c0f4c22c38",
+    "complete_compiled_closure": false,
+    "complete_project_obligations": false,
+    "fact_sha256": "477a4b16c6c8e3100e1be3713a48b904328a202fc083a63573417c111af5d574",
+    "legal_clearance": false,
+    "route": "mcp-stdio",
+    "runtime_source_profile_verified": true,
+    "targets": [
+      "cp312-linux_x86_64_glibc_2_34",
+      "cp312-macosx_11_0_arm64",
+      "cp313-linux_x86_64_glibc_2_34",
+      "cp313-macosx_11_0_arm64"
+    ]
+  },
+  "actual_route_permission": {
+    "android-app": false,
+    "anonymizer-linux-amd64": false,
+    "c2pa-linux-x86_64": false,
+    "c2pa-macos-arm64": false,
+    "evaluator-linux-amd64": false,
+    "gateway-linux-amd64": false,
+    "ios-app": false,
+    "mcp-stdio": true,
+    "nli-linux-x86_64": false,
+    "nli-macos-arm64": false,
+    "node-build-tools": false,
+    "ps-source": true,
+    "source-snapshot": false,
+    "web-checker": false
+  },
+  "all_other_profile_fields_equal": true,
+  "attestation_verified": false,
+  "captured_at": "2026-11-22T18:31:09.328327+00:00",
+  "changed_source_rows": {
+    "tools/artifact_evidence_io.py": {
+      "after": {
+        "bytes": 12720,
+        "path": "tools/artifact_evidence_io.py",
+        "sha256": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e"
+      },
+      "before": {
+        "bytes": 10990,
+        "path": "tools/artifact_evidence_io.py",
+        "sha256": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36"
+      }
+    }
+  },
+  "complete_project_obligations": false,
+  "component_source_row_updates": [
+    {
+      "after": {
+        "bytes": 510765,
+        "path": "sbom/mcp-runtime/manifest.json",
+        "sha256": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8"
+      },
+      "before": {
+        "bytes": 510765,
+        "path": "sbom/mcp-runtime/manifest.json",
+        "sha256": "b68066a0362a1e0c0729f53fcd33656e9c816ec424469c5cb72adf7a5a74628e"
+      }
+    },
+    {
+      "after": {
+        "bytes": 12720,
+        "path": "tools/artifact_evidence_io.py",
+        "sha256": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e"
+      },
+      "before": {
+        "bytes": 10990,
+        "path": "tools/artifact_evidence_io.py",
+        "sha256": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36"
+      }
+    },
+    {
+      "after": {
+        "bytes": 8809,
+        "path": "tools/mcp_managed_release.py",
+        "sha256": "53ae57247fa6e1069aae769b7cb1cd4222588e3180404118909416fefea61e01"
+      },
+      "before": {
+        "bytes": 8810,
+        "path": "tools/mcp_managed_release.py",
+        "sha256": "1f2699df547894402a42cf187cfadc806a99a350bf7f6ea4ca82b2abe18d2679"
+      }
+    }
+  ],
+  "current_format_inspection": {
+    "profile": "ai-trust-id-mcp-wheel-bundle/v1",
+    "profile_sha256": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8",
+    "release_authorized": false,
+    "source_inputs_verified": true,
+    "target_count": 4,
+    "unique_wheel_count": 40,
+    "wheels_per_target": 30
+  },
+  "license_clearance": false,
+  "limits": [
+    "Source metadata producer replay over existing exact40wheel cache; no acquisition, archive assembly or SDK installation.",
+    "Technical route permission is now observed for this exact source, not a managed artifact authorization or legal/global clearance.",
+    "Protected Sigstore, fresh target installation and changed-source4target execution remain pending.",
+    "No previous runtime or source test counts are promoted; immutable old records remain historical."
+  ],
+  "managed_release_authorized": false,
+  "manifest_bytes": 510765,
+  "mcp_parent_commit": "9f878d2fc4c06e8acd5cf39c56323a0775aa1d96",
+  "new_manifest_sha256": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8",
+  "old_manifest_sha256": "b68066a0362a1e0c0729f53fcd33656e9c816ec424469c5cb72adf7a5a74628e",
+  "policy_after_sha256": "672ccf547dd1615145dbc37bbae214f15c4570e1f76052aa28171d7e35b3595a",
+  "policy_before_sha256": "31e3f2927faaf51c044e361cded59369852a0fddaf97b93fa93bf7394074adce",
+  "producer": "tools.mcp_distribution.collect",
+  "producer_sha256": "9f87c59d5884200872c15829babd4a6080842ceb2a9f7a151bd9c1f4b3bd341a",
+  "profile": "mcp-protected-base-source-refresh/v1",
+  "protected_base_commit": "085106c1d40e86b071a25a7b9e4e56b965a31044",
+  "ps_source_contract_files": 9
+}

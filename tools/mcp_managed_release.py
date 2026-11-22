@@ -172,4 +172,3 @@ def install_managed(artifact, packet, spdx, bundle, trusted_root, output, *,
         if final_may_exist or capture.output_may_exist:
             raise ManagedReleaseUncertain() from None
         raise ManagedReleaseUnavailable() from None
-

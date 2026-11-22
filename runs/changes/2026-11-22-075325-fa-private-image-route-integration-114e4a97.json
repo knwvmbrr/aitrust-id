@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-075325-fa-private-image-route-integration-114e4a97",
+  "recorded_at": "2026-11-22T07:53:25.016241+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "47a2f176e9ad6a4f0bab3a95bf5627169430436a",
+  "changed": "Prepared the reviewed private PNG/JPEG container preview in the planned FA modal, with source-bound integration guards and a production-route verifier.",
+  "proves": "Five focused Node integration groups, six temporary-filesystem groups, syntax and pinned JSX transformation pass; the canonical image component is unchanged.",
+  "limits": "Engineering component only. FA remains Planned and working=false; no origin, watermark, credential or original-closure claim. Current normal-build and browser proof and protected-publication base comparison remain pending.",
+  "scope_ids": [
+    "T-FA",
+    "F-155"
+  ],
+  "files": {
+    "docs/fa-image-main-integration-plan.md": "f730b791c3c782d3910bd7df0a8a9d3867cf2b75d7fa38fb28e7067d97e80e41",
+    "docs/fa-image-main-integration-result.md": "d795a3253b8f739a193b82e809c3f530c01450f6d75013f5eb6bc67bb973016f",
+    "docs/image-device-guide.md": "9bf5b7f2a7f192f23e5dc2a10c0d0d18e2fbe5bb147139cf6c41acb0220d54a8",
+    "runs/2026-11-22-fa-image-integration-focused.json": "87b1d7ba71ceec122065bb774927bd2a1c641b461707efafa2d3a9da0d6d2d57",
+    "runs/2026-11-22-fa-image-integration-source-freeze.json": "8236a6de35f3b040e8906796fab7551d573dfe6679b98dd93e123848dd3066f8",
+    "scripts/build-image-metadata-fixture.mjs": "c2c8f18c488d7ea652d562e268bff86ffb68af5907bfd3aa991355dc7561b3a2",
+    "scripts/image-metadata-site-controls.cjs": "80cd06060f89df4727bc8a63b84e7f90937e5f2dd61550c76ae4f33b8a22b13d",
+    "scripts/verify-image-metadata-site.cjs": "bd3686a77af6c59bbeb4e8dfa18dcfd7c64f24eebab46c1691cb4e80176ee6d0",
+    "scripts/verify-site-accessibility.cjs": "68842cc299d2b13590601aed8b2c2f5ef00767b987ffdac28aad4d9c0e465376",
+    "scripts/verify-site.cjs": "f8331dd1aebd4f6dd70a4646428c5c7be6f9428799ea34e5a5774de671b2171d",
+    "site/scripts/prepare.mjs": "7a3b52f684b3d7a92c110564b8d4b4f05af6ced9a0195274a94aca726cf9941d",
+    "site/src/catalog.js": "7dc81cb7dc650a31f9ad2aacd0c6dd030a530ffbce36f964b3e1b6cd29be7077",
+    "site/src/main.jsx": "0429b8b79ca76838319e8226ecc89a4fbe8078cc5f4d22f515d744eaadf46b23",
+    "site/src/presentation.js": "b21e026675f2b6d02b583b71b24a2c660beac44fdff5799bded6d3194deceb35",
+    "site/src/usage.js": "18c166efe76f2cbe0c2ae2b1d6178798c6d7647baff01d3ac2321de4e1a81fcc",
+    "tests/fa-image-main-integration.cjs": "87b6110a767392cf9187be1081b95ab1661cd76b8bc79ec3755deee8358af3e8",
+    "tests/fixtures/fa-image-main-baseline.json": "7567b8d6ff6229f73e274badbfa4beff3cd691c3bf6f523f7ea72c164af6621a",
+    "tests/image-fixture-output.mjs": "a74c5da9404cd91c4ea4ef6ddc78e25b5c2e30c8314ededc65b671640169934d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-fa-image-integration-source-freeze.json",
+      "sha256": "8236a6de35f3b040e8906796fab7551d573dfe6679b98dd93e123848dd3066f8"
+    }
+  ],
+  "checks": []
+}

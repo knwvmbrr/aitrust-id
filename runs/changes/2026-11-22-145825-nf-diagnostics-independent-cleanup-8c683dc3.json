@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-145825-nf-diagnostics-independent-cleanup-8c683dc3",
+  "recorded_at": "2026-11-22T14:58:25.236227+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f638f8c2904d6991dc4c056427c9acaf86937bc6",
+  "changed": "Made browser and context closure independent of diagnostic checkpoint failures, retaining primary and cleanup failure evidence.",
+  "proves": "Final20inert controls pass including begin/end/both checkpoint refusal, actual stub close error, context/browser backstop, async/falsy failures and close-once. Original180sCOMMANDS,300sdiagnosticworkflow and fixturehook bytes unchanged.",
+  "limits": "Originalf638/source-onlyP2finding retained; no actualbrowser/build/SDK/hostedrun or release acceptance, no timeoutwaiver.",
+  "scope_ids": [
+    "T-NF",
+    "F-017"
+  ],
+  "files": {
+    "scripts/verify-nf-client.cjs": "4c01c71f81617eec55946a90966de6dda0424c29b1a5b05cef8cda802657a5d5",
+    "scripts/verify-nf-device.cjs": "ede0b13deccad0133e7b055c0072fe0fa1712e60d860fef70d19c620f0a9865e",
+    "tests/nf-browser-diagnostics.cjs": "1a322e6d10f86994a8735bf3f54990acb09e2c8e109f028c8f11e4e52caf00c0",
+    "docs/nf-pr149-diagnostic-plan.md": "3be2334a44a892a9dee1c541c32b5058402c316d1358c0609011be018c1eee41",
+    "runs/2026-11-22-nf-browser-cleanup-original-source-finding.json": "679c4a89d114419e4609706111a1478c7e276fa9d9f786abae0cbb4421b7be6b",
+    "runs/2026-11-22-nf-cleanup-corrected-controls.json": "8db241874db88b8191e53a5e31a2555748c795fcc31d23ab3343baa9f4879537"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-nf-cleanup-corrected-controls.json",
+      "sha256": "8db241874db88b8191e53a5e31a2555748c795fcc31d23ab3343baa9f4879537"
+    }
+  ],
+  "checks": []
+}

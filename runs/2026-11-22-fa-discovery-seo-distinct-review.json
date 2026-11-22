@@ -1,0 +1,33 @@
+{
+  "profile": "FA-discovery-SEO-test-source-distinct-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T14:00:08.752290+00:00",
+  "reviewed_by": "Codex / seo",
+  "root_head_observed": "8186929ec7a54ac749ba234fb865ac418c200150",
+  "source_sha256": {
+    "tests/seo-metadata.mjs": "d52a3d4bf9338952b3dca78f0122c50ed8a68047d92bfe144b5eac6f28099173",
+    "docs/fa-discovery-preview-plan.md": "110b4c662613d238a6f78dc981623be91c70f7e626a4f7e62049f4127095aca5",
+    "site/scripts/seo.mjs": "13596d28b2574b6a20fb5a8457da4085d7a2cfaa942d9dfcd1c8600d6441bdf0",
+    "site/src/presentation.js": "b21e026675f2b6d02b583b71b24a2c660beac44fdff5799bded6d3194deceb35",
+    "site/src/catalog.js": "7dc81cb7dc650a31f9ad2aacd0c6dd030a530ffbce36f964b3e1b6cd29be7077"
+  },
+  "reviewed_delta": {
+    "new_presentation_import": true,
+    "only_FA_removed_from_generic_unavailable_list": true,
+    "all_other_test_bytes_equal_HEAD_when_exact_FA_delta_reversed": true,
+    "new_FA_ComingSoon_and_presentation_working_false_assertions": true,
+    "strict_preview_summary_availability_and_no_origin_certification_accuracy_claim_assertions": true,
+    "new_plan_preserves_original_failure_and_first_wrong_layer_assertion": true
+  },
+  "findings": [],
+  "executed_by_reviewer": "Pure read-only source/Git byte comparison; no test/runtime/browser/build execution.",
+  "author_reported_focused_execution": {
+    "passed": 12,
+    "independently_rerun": false
+  },
+  "limits": [
+    "Test contract correction only, not a product/search-copy fix or new tag availability claim.",
+    "Current complete website receipt must bind the new test/doc fingerprint; prior source receipts are historical and cannot be relabeled current.",
+    "No root/source/state/ledger/public edits or closure/release/accuracy claim by reviewer."
+  ]
+}

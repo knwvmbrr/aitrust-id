@@ -1,0 +1,1030 @@
+{
+  "captured_at": "2026-11-22T07:39:27.943233+00:00",
+  "started_at": "2026-11-22T07:39:23.738677+00:00",
+  "profile": "protected-live-selected-artifact-verification/v1",
+  "pass": true,
+  "source_commit": "69298f3656ece0a0c419348085c486ff706e3aa0",
+  "deployment_url": "https://f0c559e3.aitrust-id.pages.dev",
+  "production_origin": "https://aitrustid.com",
+  "origins": [
+    "https://aitrustid.com",
+    "https://f0c559e3.aitrust-id.pages.dev"
+  ],
+  "selected_files_per_origin": 63,
+  "matched_http_responses": 126,
+  "checks": [
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/CredentialFlowExplorer-C1hhp4RK.js",
+      "status": 200,
+      "bytes": 13821,
+      "sha256": "893084316ed28a27718c11706011a1d38981d7e71304dd5e9ba6f3fb85f239f0",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/HPExplorer-BzKGP3If.js",
+      "status": 200,
+      "bytes": 14866,
+      "sha256": "461cdba870df4f173b0b280df48abc1032a39114680f46bcb86072ee03862d58",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/HPUncertaintyExplorer-DJueG_-S.js",
+      "status": 200,
+      "bytes": 14772,
+      "sha256": "1a3f895735dbdd6aac5c9b90143ddbc063ac33262f7145c013cd252307d67246",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/MTChoiceExplorer-DVEC4IPw.js",
+      "status": 200,
+      "bytes": 24099,
+      "sha256": "df3d4690f205079e98db9bb79198b5de5701c87fc84794bcaa4d0b9bfa33b43a",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/MTExplorer-B93dO4Eg.js",
+      "status": 200,
+      "bytes": 21253,
+      "sha256": "a2f49e65d191a97ca34f288480f4dfc55dd65a0a5dc04fb3b51ddd5727fc2139",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/NFExplorer-BNv3ifAA.js",
+      "status": 200,
+      "bytes": 14896,
+      "sha256": "53f55a525920bfc26773c7c6882146fcc4073718aeff512a8396892ddb5c71a0",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/credential-device-worker-IB4hBigb.js",
+      "status": 200,
+      "bytes": 3649,
+      "sha256": "bab56f40502b0223681d34756715e628915102dd104515beb0a79b70a3bedb8d",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/device-worker-CYlrzLLK.js",
+      "status": 200,
+      "bytes": 1554,
+      "sha256": "4ccf9842437c5fb613d04a6e3ab268fbf369f84a2a767b62416aafb9baf32269",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/hp-device-worker-Ckw2-Whn.js",
+      "status": 200,
+      "bytes": 3614,
+      "sha256": "04f97ef2dae6e5afb5573bd7e0465b1d72886fb656e8dbcd02d0a9f28bef2a1d",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/hp-uncertainty-worker-RW14Xkr0.js",
+      "status": 200,
+      "bytes": 3594,
+      "sha256": "4ff06f16be4582ce3ab909008d09a586638a46f0942878f91daf39f64d82c12b",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/index-Cnjp_h_V.js",
+      "status": 200,
+      "bytes": 581257,
+      "sha256": "bf44c6c3f1f973cfc5d6f60cb061c1a4896301fa4c877d428eff194a489b27f4",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/index-DLYpHH1R.css",
+      "status": 200,
+      "bytes": 25241,
+      "sha256": "7382f713a93bff05d9e9b86ae7e9c2c4e9bd07c4499cc0e899c4f4d1020e353c",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/mt-device-worker-BFy14zjg.js",
+      "status": 200,
+      "bytes": 6391,
+      "sha256": "d698f7329c667d52ae217ff49cbed7ead8ae427765a552e5a624e65e6f77cdcc",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/mt-mobile-device-result-BKAlXGRT.js",
+      "status": 200,
+      "bytes": 6335,
+      "sha256": "5ba555ddeb168fcf6c0df2c24c1c1f09954add76f9986704d3be680160749feb",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/nf-cosine-result-zeIM3alq.js",
+      "status": 200,
+      "bytes": 2943,
+      "sha256": "86c57138c0dbcbff90c7dc5691c633f1a48c7bf67cce43ecaf86aadffb103355",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/assets/nf-device-worker-C0Au7N2H.js",
+      "status": 200,
+      "bytes": 4746,
+      "sha256": "e9b6f123170823651c0fd72453940666f57bf48bccdc1373af3aa5eeb2de72ca",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/device/mt-choice/manifest.json",
+      "status": 200,
+      "bytes": 4019,
+      "sha256": "43c9b73ce95d6ffb7ac3a5113b9cafa78439a348f15aebc8a81422d197c3a526",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/device/mt-choice/method-a8c876a44dcae65ed92e3bc417fcdde46c6444d4e6f9bc6a9048df91d82841b7.json",
+      "status": 200,
+      "bytes": 99104,
+      "sha256": "a8c876a44dcae65ed92e3bc417fcdde46c6444d4e6f9bc6a9048df91d82841b7",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/device/mt-choice/mt-choice-worker.mjs",
+      "status": 200,
+      "bytes": 3788,
+      "sha256": "69ae0025b6187c49dfbe821b04ea868d2ddb20ad3bd2866616d64664cf001f94",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/device/mt-choice/project-notices.txt",
+      "status": 200,
+      "bytes": 14662,
+      "sha256": "add6ca345d4a483aed3f5ec5b2c07e23369085158dfef6a0f8e8a146abbd6d51",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/downloads/aitrust-id-ps-source.zip",
+      "status": 200,
+      "bytes": 131039,
+      "sha256": "1720be1015f7ab1e295de97dbc503723b486209b2f7dc09e2ebd6130c6fb42d1",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/downloads/aitrust-id-ps-source.zip.sha256",
+      "status": 200,
+      "bytes": 91,
+      "sha256": "995957df20afaab5ed25a3bbdc0c90e5d9c3eb3c40b6319ed4c70a02d628849c",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/googlefd96956266acb393.html",
+      "status": 200,
+      "bytes": 53,
+      "sha256": "9044d09734a758ef85446bad2f71c13fc9090a06d73663d4be5d0bd3eee94677",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/index.html",
+      "status": 200,
+      "bytes": 136398,
+      "sha256": "6d0b6de45d72effe03486798562f8690bd7cde131e43fc8dfc22d7ab8340f01d",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/offline-release.json",
+      "status": 200,
+      "bytes": 2160,
+      "sha256": "1e5aa0155a100921d2984982aec7551302853787722d554cbc43d34a72a0c129",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/offline-worker.js",
+      "status": 200,
+      "bytes": 2559,
+      "sha256": "cd69859c60fc133f64558ca55583d189970a0132243528bfd1d2e1debcfbec18",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/policies/access/index.html",
+      "status": 200,
+      "bytes": 7149,
+      "sha256": "72fa19fe43f8034b4d8cc93813704fb29ceeaf10707359fab2a0fd0693ee4d61",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/policies/community/index.html",
+      "status": 200,
+      "bytes": 7298,
+      "sha256": "68bf9addc2a81ab7dec21591cf8bd90eb9472fad5ff0cc389e815995d1d79adf",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/policies/contributing/index.html",
+      "status": 200,
+      "bytes": 7194,
+      "sha256": "0ff9d2a8ea46ffcdc815524a99c9a4eff302749dd85a3259f709b0ebc51a3e1a",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/policies/governance/index.html",
+      "status": 200,
+      "bytes": 7324,
+      "sha256": "b648a979fd90955648dd05fc1dd68cd7d55f20fa54015313f1b5db53c8b1dc30",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/policies/licenses/index.html",
+      "status": 200,
+      "bytes": 8210,
+      "sha256": "521a492d6c3192bc0cab89726156e8c93094b2691813df517ad37b47a2a23237",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/policies/privacy/index.html",
+      "status": 200,
+      "bytes": 21863,
+      "sha256": "c5137627b11154e6155429fa9b2dc7fd8d23ae7b14307c80145bdb92fa9fc050",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/policies/security/index.html",
+      "status": 200,
+      "bytes": 8045,
+      "sha256": "b61fa017a50b9cb47d14c53968fe746a9a8ce3abda820681cc84c02600a5b743",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/policies/terms/index.html",
+      "status": 200,
+      "bytes": 9722,
+      "sha256": "ccabcb76d89e9b281690a55cf144eb5a6dd34fc9a8639d7184a85b33bcb885d8",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/policies/validation/index.html",
+      "status": 200,
+      "bytes": 8161,
+      "sha256": "3fc90518ddc880b0c63d9c7ebbad393a8c34b1ee9e97ea8fb7f544eb5cd8f3a9",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/reference/certification-programme-guide.md",
+      "status": 200,
+      "bytes": 7085,
+      "sha256": "5e78d2e28a924e2b327966c3d5d2d11b39943ce5b674b0b8af4316967c5e8b59",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/reference/certification-programme.json",
+      "status": 200,
+      "bytes": 3126,
+      "sha256": "852df2d38ba5de55b2ffd0e8bbcc0fd293d27579ca1171c5528c95e1773588a6",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/reference/certification-programme.md",
+      "status": 200,
+      "bytes": 15714,
+      "sha256": "91b0f17b0c88bc1cc7a65561152ea95ced811e2ed50152ee74b1f230e1a0af14",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/reference/mt-choice-device.md",
+      "status": 200,
+      "bytes": 5122,
+      "sha256": "a52669ee4687c8e7565338a66c187d2144228b96ad9167c316fe4ace3aa7f103",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/reference/public-scope.json",
+      "status": 200,
+      "bytes": 739723,
+      "sha256": "5faa0a6d76182764364d26e0c984f02000c84837e85d72cc2e48b3a031e91929",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/reference/remote-ai-connections.md",
+      "status": 200,
+      "bytes": 5966,
+      "sha256": "0632e4155dd00ad0807615bf0cf11180a7e5ca3122132f931fd12daab4a5c77f",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/robots.txt",
+      "status": 200,
+      "bytes": 67,
+      "sha256": "47f5ce379fa6370f31d72721997c0f5807256d2d0149ba4e1ae1ca227d9959b5",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "bytes": 2339,
+      "sha256": "61dc3fb7e66479b0c75b1125f7e9d58394c2ff59b4ef30457fd11264ddb3cab4",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/audit/index.html",
+      "status": 200,
+      "bytes": 13929,
+      "sha256": "e231e86d864a7adf084a3511bffd953e020eaf6492b9b9b5fd256560af2572dc",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/bt/index.html",
+      "status": 200,
+      "bytes": 11808,
+      "sha256": "34feb8d0b58f00dc4a517c7cadb46cfdeb7f736b86a17808ad0b59d26bfe61a8",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/fa/index.html",
+      "status": 200,
+      "bytes": 11794,
+      "sha256": "bfa6b9decce15b795de416c0c467921fa449a19ac049ad95171125a3c04fabb1",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/fi/index.html",
+      "status": 200,
+      "bytes": 12073,
+      "sha256": "78293d95990b68a318223a4f77de1438a31266ca96f2b33a3bb336110bc582dc",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/fleet/index.html",
+      "status": 200,
+      "bytes": 13859,
+      "sha256": "8590bfb508b96a2e492b8b9e14f78b876a2d5b969e0066ef64e19c803340d8c6",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/host/index.html",
+      "status": 200,
+      "bytes": 13663,
+      "sha256": "544b25e428d121fe62217d03c5cf26ce7747128a53485bc09c5a3bddf1ec2a7f",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/hp/index.html",
+      "status": 200,
+      "bytes": 13227,
+      "sha256": "7c2598eb4ff43477ac0cbdb8ea88fc61110311dd0acf49d85b350a89c5329e61",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/iv/index.html",
+      "status": 200,
+      "bytes": 11204,
+      "sha256": "0e36f9ec0779cac23a9ba6b88cb9f8e89bd1ed4ceafdfa018faf5506e92294b1",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/mt/index.html",
+      "status": 200,
+      "bytes": 12103,
+      "sha256": "11393f4cd9f1abc61cd0aae88d0bbc593cbcb944966ff7602c38effc8d46e805",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/nf/index.html",
+      "status": 200,
+      "bytes": 12202,
+      "sha256": "cbd423158710b08ef6fa002bcc8c886d6eeacfc8d533b8c62104dc8e7f7eff40",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/pa/index.html",
+      "status": 200,
+      "bytes": 13962,
+      "sha256": "55a2ef8bd6440dec99450cc10da866a1d7b4681c4dd1a878c867cbe918a28f71",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/pii-outbound/index.html",
+      "status": 200,
+      "bytes": 11503,
+      "sha256": "b2d592196f6fa16e43c2b76435ca057409aa699d48306ef46c397af98deefb2c",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/pii-redacted/index.html",
+      "status": 200,
+      "bytes": 21305,
+      "sha256": "8b821cb23d4c7ed921737d22ee6e290d13097a03aafd5a1ca861ad4035ee8556",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/proprietary/index.html",
+      "status": 200,
+      "bytes": 13987,
+      "sha256": "b4b4ef6a38aa5a079f80c8c9f3536b2a36bc3abdd873314e411a9018b487c2ed",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/ps/index.html",
+      "status": 200,
+      "bytes": 24602,
+      "sha256": "16e71dacffae79ddbeb37b67aae9d38d1d482d604830a81ec9f3a1075b8a8fbf",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/sc/index.html",
+      "status": 200,
+      "bytes": 10962,
+      "sha256": "1f3afa7d908e4930136ed0c75d0047a16408ef1ac3c1fe7523cfeea9753c73ee",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/sso/index.html",
+      "status": 200,
+      "bytes": 13867,
+      "sha256": "b388cba903a9f13d806cfdbef3c71235d213e80cb209749b54d799c4167b0008",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/support/index.html",
+      "status": 200,
+      "bytes": 12454,
+      "sha256": "81fe3d0e73ff9b522212fa88754edce34ab7a9e5db54fac087352c8cf9cd9cd0",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/uc/index.html",
+      "status": 200,
+      "bytes": 11503,
+      "sha256": "5badab45e02d3be0fba252b2524311c7c423e0c0e248266f15a65e2256ba60ad",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://aitrustid.com",
+      "path": "/tags/unk/index.html",
+      "status": 200,
+      "bytes": 11186,
+      "sha256": "43b8e8951c280bfa93c1221b7501adfc210cd6684adeff5468025331b12269d1",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/CredentialFlowExplorer-C1hhp4RK.js",
+      "status": 200,
+      "bytes": 13821,
+      "sha256": "893084316ed28a27718c11706011a1d38981d7e71304dd5e9ba6f3fb85f239f0",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/HPExplorer-BzKGP3If.js",
+      "status": 200,
+      "bytes": 14866,
+      "sha256": "461cdba870df4f173b0b280df48abc1032a39114680f46bcb86072ee03862d58",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/HPUncertaintyExplorer-DJueG_-S.js",
+      "status": 200,
+      "bytes": 14772,
+      "sha256": "1a3f895735dbdd6aac5c9b90143ddbc063ac33262f7145c013cd252307d67246",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/MTChoiceExplorer-DVEC4IPw.js",
+      "status": 200,
+      "bytes": 24099,
+      "sha256": "df3d4690f205079e98db9bb79198b5de5701c87fc84794bcaa4d0b9bfa33b43a",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/MTExplorer-B93dO4Eg.js",
+      "status": 200,
+      "bytes": 21253,
+      "sha256": "a2f49e65d191a97ca34f288480f4dfc55dd65a0a5dc04fb3b51ddd5727fc2139",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/NFExplorer-BNv3ifAA.js",
+      "status": 200,
+      "bytes": 14896,
+      "sha256": "53f55a525920bfc26773c7c6882146fcc4073718aeff512a8396892ddb5c71a0",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/credential-device-worker-IB4hBigb.js",
+      "status": 200,
+      "bytes": 3649,
+      "sha256": "bab56f40502b0223681d34756715e628915102dd104515beb0a79b70a3bedb8d",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/device-worker-CYlrzLLK.js",
+      "status": 200,
+      "bytes": 1554,
+      "sha256": "4ccf9842437c5fb613d04a6e3ab268fbf369f84a2a767b62416aafb9baf32269",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/hp-device-worker-Ckw2-Whn.js",
+      "status": 200,
+      "bytes": 3614,
+      "sha256": "04f97ef2dae6e5afb5573bd7e0465b1d72886fb656e8dbcd02d0a9f28bef2a1d",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/hp-uncertainty-worker-RW14Xkr0.js",
+      "status": 200,
+      "bytes": 3594,
+      "sha256": "4ff06f16be4582ce3ab909008d09a586638a46f0942878f91daf39f64d82c12b",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/index-Cnjp_h_V.js",
+      "status": 200,
+      "bytes": 581257,
+      "sha256": "bf44c6c3f1f973cfc5d6f60cb061c1a4896301fa4c877d428eff194a489b27f4",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/index-DLYpHH1R.css",
+      "status": 200,
+      "bytes": 25241,
+      "sha256": "7382f713a93bff05d9e9b86ae7e9c2c4e9bd07c4499cc0e899c4f4d1020e353c",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/mt-device-worker-BFy14zjg.js",
+      "status": 200,
+      "bytes": 6391,
+      "sha256": "d698f7329c667d52ae217ff49cbed7ead8ae427765a552e5a624e65e6f77cdcc",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/mt-mobile-device-result-BKAlXGRT.js",
+      "status": 200,
+      "bytes": 6335,
+      "sha256": "5ba555ddeb168fcf6c0df2c24c1c1f09954add76f9986704d3be680160749feb",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/nf-cosine-result-zeIM3alq.js",
+      "status": 200,
+      "bytes": 2943,
+      "sha256": "86c57138c0dbcbff90c7dc5691c633f1a48c7bf67cce43ecaf86aadffb103355",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/assets/nf-device-worker-C0Au7N2H.js",
+      "status": 200,
+      "bytes": 4746,
+      "sha256": "e9b6f123170823651c0fd72453940666f57bf48bccdc1373af3aa5eeb2de72ca",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/device/mt-choice/manifest.json",
+      "status": 200,
+      "bytes": 4019,
+      "sha256": "43c9b73ce95d6ffb7ac3a5113b9cafa78439a348f15aebc8a81422d197c3a526",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/device/mt-choice/method-a8c876a44dcae65ed92e3bc417fcdde46c6444d4e6f9bc6a9048df91d82841b7.json",
+      "status": 200,
+      "bytes": 99104,
+      "sha256": "a8c876a44dcae65ed92e3bc417fcdde46c6444d4e6f9bc6a9048df91d82841b7",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/device/mt-choice/mt-choice-worker.mjs",
+      "status": 200,
+      "bytes": 3788,
+      "sha256": "69ae0025b6187c49dfbe821b04ea868d2ddb20ad3bd2866616d64664cf001f94",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/device/mt-choice/project-notices.txt",
+      "status": 200,
+      "bytes": 14662,
+      "sha256": "add6ca345d4a483aed3f5ec5b2c07e23369085158dfef6a0f8e8a146abbd6d51",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/downloads/aitrust-id-ps-source.zip",
+      "status": 200,
+      "bytes": 131039,
+      "sha256": "1720be1015f7ab1e295de97dbc503723b486209b2f7dc09e2ebd6130c6fb42d1",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/downloads/aitrust-id-ps-source.zip.sha256",
+      "status": 200,
+      "bytes": 91,
+      "sha256": "995957df20afaab5ed25a3bbdc0c90e5d9c3eb3c40b6319ed4c70a02d628849c",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/googlefd96956266acb393.html",
+      "status": 200,
+      "bytes": 53,
+      "sha256": "9044d09734a758ef85446bad2f71c13fc9090a06d73663d4be5d0bd3eee94677",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/index.html",
+      "status": 200,
+      "bytes": 136398,
+      "sha256": "6d0b6de45d72effe03486798562f8690bd7cde131e43fc8dfc22d7ab8340f01d",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/offline-release.json",
+      "status": 200,
+      "bytes": 2160,
+      "sha256": "1e5aa0155a100921d2984982aec7551302853787722d554cbc43d34a72a0c129",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/offline-worker.js",
+      "status": 200,
+      "bytes": 2559,
+      "sha256": "cd69859c60fc133f64558ca55583d189970a0132243528bfd1d2e1debcfbec18",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/policies/access/index.html",
+      "status": 200,
+      "bytes": 7149,
+      "sha256": "72fa19fe43f8034b4d8cc93813704fb29ceeaf10707359fab2a0fd0693ee4d61",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/policies/community/index.html",
+      "status": 200,
+      "bytes": 7298,
+      "sha256": "68bf9addc2a81ab7dec21591cf8bd90eb9472fad5ff0cc389e815995d1d79adf",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/policies/contributing/index.html",
+      "status": 200,
+      "bytes": 7194,
+      "sha256": "0ff9d2a8ea46ffcdc815524a99c9a4eff302749dd85a3259f709b0ebc51a3e1a",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/policies/governance/index.html",
+      "status": 200,
+      "bytes": 7324,
+      "sha256": "b648a979fd90955648dd05fc1dd68cd7d55f20fa54015313f1b5db53c8b1dc30",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/policies/licenses/index.html",
+      "status": 200,
+      "bytes": 8210,
+      "sha256": "521a492d6c3192bc0cab89726156e8c93094b2691813df517ad37b47a2a23237",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/policies/privacy/index.html",
+      "status": 200,
+      "bytes": 21863,
+      "sha256": "c5137627b11154e6155429fa9b2dc7fd8d23ae7b14307c80145bdb92fa9fc050",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/policies/security/index.html",
+      "status": 200,
+      "bytes": 8045,
+      "sha256": "b61fa017a50b9cb47d14c53968fe746a9a8ce3abda820681cc84c02600a5b743",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/policies/terms/index.html",
+      "status": 200,
+      "bytes": 9722,
+      "sha256": "ccabcb76d89e9b281690a55cf144eb5a6dd34fc9a8639d7184a85b33bcb885d8",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/policies/validation/index.html",
+      "status": 200,
+      "bytes": 8161,
+      "sha256": "3fc90518ddc880b0c63d9c7ebbad393a8c34b1ee9e97ea8fb7f544eb5cd8f3a9",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/reference/certification-programme-guide.md",
+      "status": 200,
+      "bytes": 7085,
+      "sha256": "5e78d2e28a924e2b327966c3d5d2d11b39943ce5b674b0b8af4316967c5e8b59",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/reference/certification-programme.json",
+      "status": 200,
+      "bytes": 3126,
+      "sha256": "852df2d38ba5de55b2ffd0e8bbcc0fd293d27579ca1171c5528c95e1773588a6",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/reference/certification-programme.md",
+      "status": 200,
+      "bytes": 15714,
+      "sha256": "91b0f17b0c88bc1cc7a65561152ea95ced811e2ed50152ee74b1f230e1a0af14",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/reference/mt-choice-device.md",
+      "status": 200,
+      "bytes": 5122,
+      "sha256": "a52669ee4687c8e7565338a66c187d2144228b96ad9167c316fe4ace3aa7f103",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/reference/public-scope.json",
+      "status": 200,
+      "bytes": 739723,
+      "sha256": "5faa0a6d76182764364d26e0c984f02000c84837e85d72cc2e48b3a031e91929",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/reference/remote-ai-connections.md",
+      "status": 200,
+      "bytes": 5966,
+      "sha256": "0632e4155dd00ad0807615bf0cf11180a7e5ca3122132f931fd12daab4a5c77f",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/robots.txt",
+      "status": 200,
+      "bytes": 67,
+      "sha256": "47f5ce379fa6370f31d72721997c0f5807256d2d0149ba4e1ae1ca227d9959b5",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/sitemap.xml",
+      "status": 200,
+      "bytes": 2339,
+      "sha256": "61dc3fb7e66479b0c75b1125f7e9d58394c2ff59b4ef30457fd11264ddb3cab4",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/audit/index.html",
+      "status": 200,
+      "bytes": 13929,
+      "sha256": "e231e86d864a7adf084a3511bffd953e020eaf6492b9b9b5fd256560af2572dc",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/bt/index.html",
+      "status": 200,
+      "bytes": 11808,
+      "sha256": "34feb8d0b58f00dc4a517c7cadb46cfdeb7f736b86a17808ad0b59d26bfe61a8",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/fa/index.html",
+      "status": 200,
+      "bytes": 11794,
+      "sha256": "bfa6b9decce15b795de416c0c467921fa449a19ac049ad95171125a3c04fabb1",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/fi/index.html",
+      "status": 200,
+      "bytes": 12073,
+      "sha256": "78293d95990b68a318223a4f77de1438a31266ca96f2b33a3bb336110bc582dc",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/fleet/index.html",
+      "status": 200,
+      "bytes": 13859,
+      "sha256": "8590bfb508b96a2e492b8b9e14f78b876a2d5b969e0066ef64e19c803340d8c6",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/host/index.html",
+      "status": 200,
+      "bytes": 13663,
+      "sha256": "544b25e428d121fe62217d03c5cf26ce7747128a53485bc09c5a3bddf1ec2a7f",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/hp/index.html",
+      "status": 200,
+      "bytes": 13227,
+      "sha256": "7c2598eb4ff43477ac0cbdb8ea88fc61110311dd0acf49d85b350a89c5329e61",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/iv/index.html",
+      "status": 200,
+      "bytes": 11204,
+      "sha256": "0e36f9ec0779cac23a9ba6b88cb9f8e89bd1ed4ceafdfa018faf5506e92294b1",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/mt/index.html",
+      "status": 200,
+      "bytes": 12103,
+      "sha256": "11393f4cd9f1abc61cd0aae88d0bbc593cbcb944966ff7602c38effc8d46e805",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/nf/index.html",
+      "status": 200,
+      "bytes": 12202,
+      "sha256": "cbd423158710b08ef6fa002bcc8c886d6eeacfc8d533b8c62104dc8e7f7eff40",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/pa/index.html",
+      "status": 200,
+      "bytes": 13962,
+      "sha256": "55a2ef8bd6440dec99450cc10da866a1d7b4681c4dd1a878c867cbe918a28f71",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/pii-outbound/index.html",
+      "status": 200,
+      "bytes": 11503,
+      "sha256": "b2d592196f6fa16e43c2b76435ca057409aa699d48306ef46c397af98deefb2c",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/pii-redacted/index.html",
+      "status": 200,
+      "bytes": 21305,
+      "sha256": "8b821cb23d4c7ed921737d22ee6e290d13097a03aafd5a1ca861ad4035ee8556",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/proprietary/index.html",
+      "status": 200,
+      "bytes": 13987,
+      "sha256": "b4b4ef6a38aa5a079f80c8c9f3536b2a36bc3abdd873314e411a9018b487c2ed",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/ps/index.html",
+      "status": 200,
+      "bytes": 24602,
+      "sha256": "16e71dacffae79ddbeb37b67aae9d38d1d482d604830a81ec9f3a1075b8a8fbf",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/sc/index.html",
+      "status": 200,
+      "bytes": 10962,
+      "sha256": "1f3afa7d908e4930136ed0c75d0047a16408ef1ac3c1fe7523cfeea9753c73ee",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/sso/index.html",
+      "status": 200,
+      "bytes": 13867,
+      "sha256": "b388cba903a9f13d806cfdbef3c71235d213e80cb209749b54d799c4167b0008",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/support/index.html",
+      "status": 200,
+      "bytes": 12454,
+      "sha256": "81fe3d0e73ff9b522212fa88754edce34ab7a9e5db54fac087352c8cf9cd9cd0",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/uc/index.html",
+      "status": 200,
+      "bytes": 11503,
+      "sha256": "5badab45e02d3be0fba252b2524311c7c423e0c0e248266f15a65e2256ba60ad",
+      "matches_protected_build": true
+    },
+    {
+      "origin": "https://f0c559e3.aitrust-id.pages.dev",
+      "path": "/tags/unk/index.html",
+      "status": 200,
+      "bytes": 11186,
+      "sha256": "43b8e8951c280bfa93c1221b7501adfc210cd6684adeff5468025331b12269d1",
+      "matches_protected_build": true
+    }
+  ],
+  "local_selected_build_bytes_stable": true,
+  "scope_records": 202,
+  "independent_accuracy_evidence": false,
+  "physical_phone_tested": false,
+  "full_project_artifacts_verified": false
+}

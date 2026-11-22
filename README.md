@@ -30,6 +30,10 @@ comparative superiority are not established.
 
 The PS panel also has an optional **Inspect Python code** preview: paste a supported Python snippet to inspect credential-related data flow on your device. It never runs the snippet and does not issue a PS tag. [Method and limits](docs/credential-flow-device.md).
 
+The FA panel has an optional **Image details · preview**: choose a supported PNG or JPEG and press Inspect to read file details locally. It does not upload or change the image, verify AI origin or issue FA. [Use, limits and privacy](docs/image-device-guide.md).
+
+The PS source package also has [versioned verification files and an account-free guide](docs/ps-source-provenance-downloads.md). Source identity is separate from detector accuracy.
+
 ## Deploy approved local checker versions
 
 The [offline fleet tool](docs/fleet-deployment.md) enrolls private macOS/Linux

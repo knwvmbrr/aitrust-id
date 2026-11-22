@@ -1,0 +1,20 @@
+{
+  "captured_at": "2026-11-22T15:37:14.091189+00:00",
+  "pass": false,
+  "tests": 15,
+  "passed": 12,
+  "errors": 3,
+  "failure": "authored temp paths used macOS /var symlink; descriptor reader correctly refused; drift test also needs expected teardown refusal",
+  "native_sdk_executed": false,
+  "sources": {
+    "scripts/inspect-jpeg-provenance.py": "f3389b8b14e2af09e708a76e0d0f7b5a15b874c6daab59d8ccfde18a78be5148",
+    "tests/fixtures/jpeg-provenance-v1/generate.py": "393348bf5d5911192cef6747148b781f6ca066179cc4328ec2e25f0c4d047ac8",
+    "tests/test_jpeg_provenance.py": "54945b55da9f476d735c09b58337ae46366db1e5ec5783464b2efd7572385365",
+    "tools/jpeg_provenance.py": "2be9bc95a3aca62750bc23e49c1923fc61c00aa336c8edc3dabeaec6364fd8df",
+    "tools/jpeg_provenance_actions.py": "e4cf4cd2661c2e4c257017f4d4cc3a87880f9002f73c44243e75e6b1cf4bf5d2",
+    "tools/jpeg_provenance_io.py": "65ab199c54571a077898246266da6dfa52e7148d59f93479175ee6a88655abfa",
+    "tools/jpeg_provenance_process.py": "371d5a0b5afc1b53049451cf42aca36b439767bdb00b97f53c13c7227b089ce3",
+    "tools/jpeg_provenance_sdk.py": "9e2594c368e89a4029c39cb73cd876df1fffacec978750ec73f2d7ba3bc24061"
+  },
+  "missing_sdk_test_not_yet_accepted": "input path refused before SDK lookup; fix test to require exact sdk_unavailable"
+}

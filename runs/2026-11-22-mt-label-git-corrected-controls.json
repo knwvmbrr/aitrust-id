@@ -1,0 +1,35 @@
+{
+  "captured_at": "2026-11-22T16:36:46.115539+00:00",
+  "pass": true,
+  "sources_before": {
+    "tools/mt_label_io.py": "58333a54a9a3630b6ac010f202c0f1a4aef887a1a44f8d16dfe4b91455d3e533",
+    "tools/mt_label_preparation.py": "bee37abc9e185ba2a2954e8594e0cd348e261000957c018fc39781599e04249a",
+    "tests/test_mt_label_preparation.py": "23cdb72e8d732a3db40765213f9a839b8b748a10c260875ddb961af731e61159",
+    "docs/mt-label-preparation-plan.md": "f060dcd0b8a2cca9aff6ec6923b415e62ac9061af2c7744aa40874e9bd6cd1a5"
+  },
+  "sources_after": {
+    "tools/mt_label_io.py": "58333a54a9a3630b6ac010f202c0f1a4aef887a1a44f8d16dfe4b91455d3e533",
+    "tools/mt_label_preparation.py": "bee37abc9e185ba2a2954e8594e0cd348e261000957c018fc39781599e04249a",
+    "tests/test_mt_label_preparation.py": "23cdb72e8d732a3db40765213f9a839b8b748a10c260875ddb961af731e61159",
+    "docs/mt-label-preparation-plan.md": "f060dcd0b8a2cca9aff6ec6923b415e62ac9061af2c7744aa40874e9bd6cd1a5"
+  },
+  "source_unchanged_during_execution": true,
+  "current_affected_tests": 4,
+  "prior19_current_execution": false,
+  "actual_cli_cases": 11,
+  "actual_cli": {
+    "path": "runs/2026-11-22-mt-label-git-corrected-cli.json",
+    "sha256": "6f79e264efb6a6e00e482fea4d96ef3247e8282a341154b7b1483b5eeb6d9d56"
+  },
+  "original_peer_counter": {
+    "path": "runs/2026-11-22-mt-label-late-git-original-review.json",
+    "sha256": "7f08e670426cd3735ca3d045ad3fb28164dcda804e17ca5c9ea2568cea06269e"
+  },
+  "human_raters_executed": 0,
+  "original_requirements_closed": 0,
+  "limits": [
+    "Four affected controls plus fresh11command synthetic workflow, not a repeat or new claim of full23test execution.",
+    "No detector methods, agreement formula or acceptance gates changed.",
+    "Private outputs may remain after a late boundary/cleanup failure; typed uncertainty is required."
+  ]
+}

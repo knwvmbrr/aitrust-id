@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-183950-mcp-protected-base-source-refresh-268f912f",
+  "recorded_at": "2026-11-22T18:39:50.465972+00:00",
+  "author": "Codex / share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9f878d2fc4c06e8acd5cf39c56323a0775aa1d96",
+  "changed": "Merge protected085 main into the isolated MCP source, retain both histories and51artifact controls, trim one EOF byte and replay only affected current source metadata.",
+  "proves": "The exact fixed2d808I/O helper is selected; actual40-wheel metadata collection changes only its source row. Fourteen grant facts remain exact, PS and finite MCP technical permission pass with12other routes blocked, PS retains9files,28small controls pass and distinct semantic review confirms the merge.",
+  "limits": "No SDK or four-target execution, archive/build/install, signature or managed artifact authorization. Earlier source/runtime receipts remain historical; F057/X02, legal/global and accuracy completion are not claimed. Normal commit waits for the measured disk guard.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".github/workflows/artifact-sbom.yml": "3cdd8535b902ad162ded6572b17c789ab6bc370d925e6e79ca973d1f131c94fe",
+    "tools/distribution_artifacts.py": "40dc711f41b4454dbbc792797d5b7b7d567f8cbff1a4293933e79d2a1efc47bb",
+    "tools/mcp_managed_release.py": "53ae57247fa6e1069aae769b7cb1cd4222588e3180404118909416fefea61e01",
+    "sbom/mcp-runtime/manifest.json": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8",
+    "eval/dependency-policy.json": "672ccf547dd1615145dbc37bbae214f15c4570e1f76052aa28171d7e35b3595a",
+    "docs/mcp-managed-release-plan.md": "c8068b2fa08a3bcf24b3d7736886ba1ce7ee6a02340eb41d744348a6e53ea998",
+    "docs/mcp-managed-release-result.md": "6643b6775f09856f0146d73df1839508ded8349a299a23d2cb469d59be1c2c67",
+    "runs/2026-11-22-mcp-protected-base-source-refresh.json": "7bd41ebc68644711e0d8a9236d76e9a4503a09be4e49c68b27fab076ef3a6ab2",
+    "runs/2026-11-22-mcp-protected-base-source-controls.json": "3593b7d73fe203a2691152481f8119b53ca4f195dea4aecd788e774681d2f660",
+    "runs/2026-11-22-mcp-protected-merge-distinct-review.json": "ab4617d41da49596a9bfea70c6d8107a4fb64e830896036b9f8dab35e8714b3c",
+    "runs/2026-11-22-mcp-protected-base-eof-delta.json": "0fb01bb3e7fd30323070706943f84ac778a894723dc76847ca532a36b76dde94"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-mcp-protected-base-source-refresh.json",
+      "sha256": "7bd41ebc68644711e0d8a9236d76e9a4503a09be4e49c68b27fab076ef3a6ab2"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-protected-base-source-controls.json",
+      "sha256": "3593b7d73fe203a2691152481f8119b53ca4f195dea4aecd788e774681d2f660"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-protected-merge-distinct-review.json",
+      "sha256": "ab4617d41da49596a9bfea70c6d8107a4fb64e830896036b9f8dab35e8714b3c"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-protected-base-eof-delta.json",
+      "sha256": "0fb01bb3e7fd30323070706943f84ac778a894723dc76847ca532a36b76dde94"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-145037-nf-timing-diagnostic-integration-4e7d10d3",
+  "recorded_at": "2026-11-22T14:50:37.206946+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e95f677527d5a8c00f5ced5124521e42bdc9ad2a",
+  "changed": "Integrated separately reviewed NF timing-only instrumentation without changing release acceptance.",
+  "proves": "Application and worker sources, canonical cases and the180s release wrapper are preserved. Existing PS/PII/extension receipts remain source-current; protocol and website are explicitly pending fresh checks.",
+  "limits": "The new300s hosted workflow measures timing only and has not run. No original closure, image publication, tag release or deadline waiver.",
+  "scope_ids": [
+    "T-NF",
+    "T-FA",
+    "F-120"
+  ],
+  "files": {
+    "state.json": "3207c8948a93f40e4769fb55cb2b4ced1c69d8b7a68c7054c87be3ed6593050a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-nf-pr149-observability-controls.json",
+      "sha256": "d4309d4faca5ad50c888c2fd54b628b637661bbac8dcb45ae5f5a54e506a9c56"
+    },
+    {
+      "path": "runs/2026-11-22-pr149-site-nf-deadline.json",
+      "sha256": "78860030d358ef9e75bcd30a0d880bac93c518cbe1aa83cdf84231c3cc277674"
+    }
+  ],
+  "checks": []
+}

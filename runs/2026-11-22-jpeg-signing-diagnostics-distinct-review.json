@@ -1,0 +1,48 @@
+{
+  "profile": "bounded-jpeg-signing-diagnostic-source-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T15:58:38.096410+00:00",
+  "reviewed_by": "/root/seo",
+  "base_commit": "bf0639ff15fe104ff142db27b721d28f663ed19f",
+  "source_sha256": {
+    "scripts/verify-jpeg-provenance.py": "423bed83370a51c22da8b492a63025dad1c3da9a6e6bc31b054a08cea740faca",
+    "tests/fixtures/jpeg-provenance-v1/generate.py": "2655fd36a5e80f125ebe17b4d0607c2d8147cc9f9d76d79ec036bcddefe69f95",
+    "tests/test_jpeg_provenance.py": "45426318957bfda38eb6762274b255dde275d6572dd111b812b722973ed2e90b",
+    "docs/jpeg-provenance-plan.md": "1ccdfa6e6c485ed885222e9c4855bf88790047c5f4f2aa3e706ea37b0e9df625"
+  },
+  "unchanged_runtime_cli_workflow": {
+    "tools/jpeg_provenance.py": "2be9bc95a3aca62750bc23e49c1923fc61c00aa336c8edc3dabeaec6364fd8df",
+    "tools/jpeg_provenance_io.py": "65ab199c54571a077898246266da6dfa52e7148d59f93479175ee6a88655abfa",
+    "tools/jpeg_provenance_process.py": "1eac62ab9bc14dddba14f58dda4acb31f0e1a536436fdb7f27bdaea48d23c156",
+    "tools/jpeg_provenance_sdk.py": "b6cb1faa9543fdb71c80e41676446dce1dc0bc84f3dcd19401dc222b8cd277e5",
+    "tools/jpeg_provenance_actions.py": "e4cf4cd2661c2e4c257017f4d4cc3a87880f9002f73c44243e75e6b1cf4bf5d2",
+    "scripts/inspect-jpeg-provenance.py": "f3389b8b14e2af09e708a76e0d0f7b5a15b874c6daab59d8ccfde18a78be5148",
+    ".github/workflows/jpeg-provenance-qualification.yml": "0ee147fca08aac01d5d071317edf7eadd3b6836bcd9436e3085f991f4507b9fc"
+  },
+  "evidence_reviewed": [
+    {
+      "path": "runs/2026-11-22-jpeg-signing-diagnostics-controls.json",
+      "sha256": "7f1b26b22318723a9166c4ad2fab717186213354a291b097e2e9141dc173750a",
+      "scope": "Two author current inert diagnostic groups with four stable source bindings; not executed by reviewer."
+    },
+    {
+      "path": "runs/2026-11-22-jpeg-native-candidate-2-failed.json",
+      "sha256": "9830684fc79f45d34842b028b28d56c9c4b50795e027f08d77a09f65c6cb4c32",
+      "scope": "Retained second signing-stage qualification failure; old false native flag cannot establish absence of native execution."
+    }
+  ],
+  "findings": [],
+  "reviewed_diagnostic_contract": [
+    "Exactly13 fixed fixture stages, no arbitrary values accepted; diagnostic callback receives only fixed enum tokens.",
+    "SDK load starts unknown native state, true only after loader native version probe returns; generation failure cannot falsely claim native absent.",
+    "Checkpoints preserve context manager cleanup for signer/builder/context on callback or native exception; no new external I/O/cleanup checkpoint preceding release.",
+    "Failure classification uses fixed class categories or enumerated internal Refused reasons only; no exception prose, source paths, certificate values, image bytes or raw report exported.",
+    "Only qualification driver, synthetic fixture callback, affected tests and pre-code amendment changed. The14case acceptance assertions, reader/parser/SDK/worker/CLI/workflow/namespace/privilege limits remain unchanged."
+  ],
+  "limits": [
+    "Source/immutable Git/evidence hash checks only. No tests, SDK import, native execution, installs, downloads, browser or hosted retry by reviewer.",
+    "The second failed hosted artifact is retained author evidence; no new API fetch/artifact download performed in this source review.",
+    "This CLEAR is for the one parent-authorized changed-source diagnostic measurement, not successful native qualification or a finding that the product defect/cause has been identified.",
+    "No runtime release approval, source admission, production signing, AI-origin/FA/PA/tag/original closure."
+  ]
+}

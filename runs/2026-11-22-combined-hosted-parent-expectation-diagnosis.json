@@ -1,0 +1,21 @@
+{
+  "profile": "combined-hosted-parent-expectation-diagnosis/v1",
+  "captured_at": "2026-11-22T17:39:24.279360+00:00",
+  "source_head": "138dd8a8dbe2ea0c9601ff29055573080e9641a5",
+  "artifact_run": 45050325245,
+  "actual_control_count": 51,
+  "errors": 2,
+  "failed_tests": [
+    "test_source_reader_replaced_parent_and_all_close_attempts",
+    "test_output_parent_drift_during_source_recheck_refuses_before_link"
+  ],
+  "diagnosis": "Old tests caught prepublication drift internally then expected context-close success. Strengthened unchanged helper rechecks ancestry at close and correctly refuses. Tests now preserve the inner refusal and require outer PrivateInputError, every FD closed and no final publication.",
+  "original_artifact_failure_log_sha256": "5b65b210fe440a8e55d3d4536271e0af16df2a78835d776fd6881ff89e8b53ed",
+  "cancelled_obsolete_full_delivery_run": 45050325270,
+  "cancelled_obsolete_ci_run": 45050325193,
+  "cancelled_duplicate_nf_diagnostic": 45050325179,
+  "cancellation_reason": "Exact source expectation correction makes old full-source receipts stale; stop superseded heavy work rather than rerun unchanged failure.",
+  "component_capacity_run": 45050325187,
+  "current_51_hosted_success": false,
+  "original_scope_closures": 0
+}

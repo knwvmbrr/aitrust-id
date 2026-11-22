@@ -36,7 +36,8 @@
         "scripts/check-tags.py",
         "tests/test_independent_tag_batch.py",
         "scripts/worker_process.py",
-        "tests/test_worker_process.py"
+        "tests/test_worker_process.py",
+        ".github/workflows/delivery-revalidation.yml"
       ],
       "commands": [
         [
@@ -139,7 +140,8 @@
         "docs/pii-separator-correction-plan.md",
         "runs/2026-11-09-pan-service-linux.json",
         "runs/2026-11-12-hidden-email-hosted-replay.json",
-        "runs/2026-11-12-hidden-email-clean-setup-linux.json"
+        "runs/2026-11-12-hidden-email-clean-setup-linux.json",
+        ".github/workflows/delivery-revalidation.yml"
       ],
       "commands": [
         [
@@ -686,7 +688,44 @@
         "scripts/verify-certification-programme.py",
         "tests/test_certification_programme.py",
         "eval/certification-programme.json",
-        "docs/certification-programme*.md"
+        "docs/certification-programme*.md",
+        ".github/workflows/delivery-revalidation.yml",
+        ".github/workflows/jpeg-provenance-qualification.yml",
+        ".github/workflows/source-snapshot-v3.yml",
+        "LICENSE",
+        "docs/jpeg-provenance-guide.md",
+        "docs/jpeg-provenance-plan.md",
+        "docs/mt-annotation-guide.md",
+        "docs/mt-label-preparation-plan.md",
+        "docs/mt-label-preparation.md",
+        "docs/source-snapshot-v3-plan.md",
+        "eval/c2pa-inspection.lock",
+        "eval/dependencies/c2pa-inspection.json",
+        "eval/revalidation.json",
+        "integrations/image-metadata-reference/1.0.0/tools/jpeg_metadata.py",
+        "scripts/build-source-snapshot.py",
+        "scripts/inspect-jpeg-provenance.py",
+        "scripts/mt-label-preparation.py",
+        "scripts/source_snapshot.py",
+        "scripts/source_snapshot_v3.py",
+        "scripts/verify-jpeg-provenance.py",
+        "scripts/verify-mt-label-preparation.py",
+        "scripts/verify-source-provenance.py",
+        "tests/fixtures/jpeg-provenance-v1/generate.py",
+        "tests/test_jpeg_provenance.py",
+        "tests/test_mt_label_preparation.py",
+        "tests/test_source_provenance.py",
+        "tests/test_source_snapshot_v3.py",
+        "tools/jpeg_provenance.py",
+        "tools/jpeg_provenance_actions.py",
+        "tools/jpeg_provenance_io.py",
+        "tools/jpeg_provenance_process.py",
+        "tools/jpeg_provenance_sdk.py",
+        "tools/mt_label_io.py",
+        "tools/mt_label_preparation.py",
+        "tools/reviewer_agreement.py",
+        "tests/test_artifact_evidence_io.py",
+        "docs/artifact-io-ownership-plan.md"
       ],
       "commands": [
         [
@@ -1138,6 +1177,20 @@
           "scripts/verify-certification-programme.py",
           "--output",
           "output/verification/certification-programme-current.json"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_jpeg_provenance.py",
+          "tests/test_mt_label_preparation.py",
+          "tests/test_source_snapshot_v3.py",
+          "tests/test_artifact_evidence_io.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/verify-mt-label-preparation.py"
         ]
       ]
     },
@@ -1207,7 +1260,8 @@
         "runs/2026-10-14-tag-isolation-bounded-batch-linux.json",
         "scripts/verify-replay-receipt-input.cjs",
         "scripts/worker_process.py",
-        "tests/test_worker_process.py"
+        "tests/test_worker_process.py",
+        ".github/workflows/delivery-revalidation.yml"
       ],
       "commands": [
         [
@@ -1850,7 +1904,60 @@
         "scripts/verify-certification-programme.py",
         "tests/test_certification_programme.py",
         "eval/certification-programme.json",
-        "docs/certification-programme*.md"
+        "docs/certification-programme*.md",
+        "integrations/image-metadata-reference/1.0.0/**/*",
+        "scripts/build-image-metadata-device.py",
+        "scripts/build-image-metadata-fixture.mjs",
+        "scripts/image-metadata-device-cases.py",
+        "scripts/image-metadata-site-controls.cjs",
+        "scripts/verify-image-metadata-device.cjs",
+        "scripts/verify-image-metadata-site.cjs",
+        "scripts/verify-image-metadata-client.cjs",
+        "tests/test_image_device.py",
+        "tests/image-metadata-client.mjs",
+        "tests/image-fixture-output.mjs",
+        "tests/fa-image-main-integration.cjs",
+        "tests/fixtures/fa-image-main-baseline.json",
+        "site/image-metadata-fixture.html",
+        ".github/workflows/delivery-revalidation.yml",
+        ".github/workflows/jpeg-provenance-qualification.yml",
+        ".github/workflows/source-snapshot-v3.yml",
+        "docs/jpeg-provenance-guide.md",
+        "docs/jpeg-provenance-plan.md",
+        "docs/mt-annotation-guide.md",
+        "docs/mt-label-preparation-plan.md",
+        "docs/mt-label-preparation.md",
+        "docs/source-snapshot-v3-plan.md",
+        "eval/c2pa-inspection.lock",
+        "eval/dependencies/c2pa-inspection.json",
+        "eval/revalidation.json",
+        "integrations/image-metadata-reference/1.0.0/tools/jpeg_metadata.py",
+        "scripts/build-source-snapshot.py",
+        "scripts/inspect-jpeg-provenance.py",
+        "scripts/mt-label-preparation.py",
+        "scripts/source_snapshot.py",
+        "scripts/source_snapshot_v3.py",
+        "scripts/verify-jpeg-provenance.py",
+        "scripts/verify-mt-label-preparation.py",
+        "scripts/verify-source-provenance.py",
+        "tests/fixtures/jpeg-provenance-v1/generate.py",
+        "tests/test_distribution_artifacts.py",
+        "tests/test_jpeg_provenance.py",
+        "tests/test_mt_label_preparation.py",
+        "tests/test_source_provenance.py",
+        "tests/test_source_snapshot_v3.py",
+        "tools/distribution_artifacts.py",
+        "tools/jpeg_provenance.py",
+        "tools/jpeg_provenance_actions.py",
+        "tools/jpeg_provenance_io.py",
+        "tools/jpeg_provenance_process.py",
+        "tools/jpeg_provenance_sdk.py",
+        "tools/mt_label_io.py",
+        "tools/mt_label_preparation.py",
+        "tools/reviewer_agreement.py",
+        "tools/artifact_evidence_io.py",
+        "tests/test_artifact_evidence_io.py",
+        "docs/artifact-io-ownership-plan.md"
       ],
       "commands": [
         [
@@ -2193,6 +2300,21 @@
         [
           "node",
           "scripts/verify-mt-choice-site.cjs"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_image_device.py",
+          "-q"
+        ],
+        [
+          "node",
+          "scripts/verify-image-metadata-client.cjs"
+        ],
+        [
+          "node",
+          "scripts/verify-image-metadata-site.cjs"
         ]
       ]
     }

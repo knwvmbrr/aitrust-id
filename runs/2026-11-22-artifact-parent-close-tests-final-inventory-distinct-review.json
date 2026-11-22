@@ -1,0 +1,75 @@
+{
+  "profile": "artifact-parent-close-test-expectation-delta-distinct-review/v1",
+  "captured_at": "2026-11-22T17:39:38.242123+00:00",
+  "pass": true,
+  "reviewed_by": "Codex /root/seo",
+  "integration_head": "138dd8a8dbe2ea0c9601ff29055573080e9641a5",
+  "prior_review_sha256": "96fcf05d604180be6ff572777dd533a05a69442a82f36e620cae9a03201baa91",
+  "source_delta": {
+    "only_changed_path": "tests/test_distribution_artifacts.py",
+    "prior_sha256": "23b44bccad5d45754157057af675aa8c6dd61e55a43021a009a18dc5fbf3c35c",
+    "sha256": "815b366bb0705683993d36199601ac7b629ca2e82721554391b1b7fde54ae82e",
+    "exact_ast_methods_changed": [
+      "test_source_reader_replaced_parent_and_all_close_attempts",
+      "test_output_parent_drift_during_source_recheck_refuses_before_link"
+    ],
+    "all_other_AST_unchanged": true,
+    "helper_unchanged_sha256": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e"
+  },
+  "review_findings": {
+    "prepublication_original_drift_refusal_preserved": true,
+    "explicit_context_exit_PrivateInputError_expected": true,
+    "closed_flag_and_empty_fd_ownership_asserted": true,
+    "each_original_descriptor_fstat_refused": true,
+    "no_final_output_after_prepublication_refusal_asserted": true,
+    "remaining_close_error_all_attempts_control_unchanged": true,
+    "test_count_remains51": true,
+    "no_product_or_budget_or_reserve_change": true
+  },
+  "retained_actual_author_evidence": {
+    "two_affected_control_receipt": "runs/2026-11-22-artifact-parent-close-refusal-actual.json",
+    "sha256": "39787bb7f30e87cf16ca1a4b8dd9b04e7f24fde142237b8473e5206b41866617",
+    "tests": 2,
+    "pass": true,
+    "full51_receipt": "runs/2026-11-22-artifact51-parent-refusal-controls.json",
+    "full51_sha256": "501e2ba96b18bd4da8a28d85e6e9dbba99ef9dc9467175e45d383fb58f17c433",
+    "full51_pass": false,
+    "full51_errors": 4,
+    "diagnosis": "Retained root unwrapped trace reaches the existing verifier disk-reserve guard with887730176bytes available versus2147483648required; reserve preserved. This is not a local51pass.",
+    "reviewer_reran_tests": false
+  },
+  "inventory": {
+    "producer": "scripts/verify-route-boundaries.py inventory(root)",
+    "prior_manifest_sha256": "c359681fa68ec4c739c8165fa77976ea34cdfc9f2c6dffbb4258f43be737263b",
+    "current_manifest_sha256": "d9a7861b47352e8ab3acfcb86f1abf2ecff3ccc97cfb3c125c23f5d404e2071b",
+    "prior_source_count": 7962,
+    "current_source_count": 7962,
+    "added": [],
+    "removed": [],
+    "changed": [
+      {
+        "path": "tests/test_distribution_artifacts.py",
+        "prior_sha256": "23b44bccad5d45754157057af675aa8c6dd61e55a43021a009a18dc5fbf3c35c",
+        "sha256": "815b366bb0705683993d36199601ac7b629ca2e82721554391b1b7fde54ae82e"
+      }
+    ],
+    "doublecapture_and_postwrite_equal": true,
+    "engineering_receipts_unchanged_historical": {
+      "website": "runs/2026-11-22-image-corrected-website.json",
+      "extension": "runs/2026-11-22-image-ready-extension.json"
+    }
+  },
+  "accounting": {
+    "originals": 202,
+    "complete": 136,
+    "open": 66,
+    "scoped_closed": 25,
+    "components_in_review": 3,
+    "no_board_or_original_criterion_changes": true
+  },
+  "limits": [
+    "Source and retained authored evidence only; no local51repeat/native/install/download.",
+    "Hosted45050325245 original2-error candidate remains failed/historical; new full hosted51 result not yet observed.",
+    "All5 current-source profiles and protected delivery remain root work; no release/legal/admission/tag/original authority granted."
+  ]
+}

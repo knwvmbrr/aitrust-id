@@ -5,12 +5,19 @@ async function waitTagProbeReady(tagId,dialog){
  const marker={MT:'[data-mt-explorer]',HP:'[data-hp-explorer]',NF:'[data-nf-explorer]'}[tagId];
  if(marker)await dialog.locator(marker).waitFor();
 }
+async function waitImageProbeReady(detail){
+ await detail.locator('[data-image-metadata-explorer]').waitFor();
+ // The manifest enables Inspect after mount. Wait before physical controls are
+ // enumerated so an enabled submit cannot join midway through focus probes.
+ await detail.locator('[data-image-metadata-explorer] button[type="submit"]:not([disabled])').waitFor();
+}
 // The native open attribute precedes this optional React/lazy child.
 // Wait for its actual form before judging expansion height; keep that assertion.
 async function waitDisclosureProbeReady(detail){
  if(await detail.getAttribute('data-credential-method')!==null)await detail.locator('[data-credential-explorer]').waitFor();
  if(await detail.getAttribute('data-hp-uncertainty-method')!==null)await detail.locator('[data-hp-uncertainty]').waitFor();
  if(await detail.getAttribute('data-mt-choice-method')!==null)await detail.locator('[data-mt-choice-explorer]').waitFor();
+ if(await detail.getAttribute('data-image-device-method')!==null)await waitImageProbeReady(detail);
 }
 // Authored delayed-child control: native open alone is not loaded content.
 async function verifyDisclosureReadinessControl(browser){
@@ -18,15 +25,15 @@ async function verifyDisclosureReadinessControl(browser){
  try{
   const page=await context.newPage();
   const tested=[];
-  for(const [method,child] of [['data-credential-method','data-credential-explorer'],['data-hp-uncertainty-method','data-hp-uncertainty'],['data-mt-choice-method','data-mt-choice-explorer']]){
+  for(const [method,child] of [['data-credential-method','data-credential-explorer'],['data-hp-uncertainty-method','data-hp-uncertainty'],['data-mt-choice-method','data-mt-choice-explorer'],['data-image-device-method','data-image-metadata-explorer']]){
   const markup=`<main><details ${method}><summary style="min-height:44px">Optional preview</summary></details></main>`;
   await page.setContent(markup);const before=await probes.disclosures(page.locator('main'));assert.equal(before.failures.length,1,'Authored absent-child control did not expose premature height measurement');
   await page.setContent(markup);let completed=false;const checking=probes.disclosures(page.locator('main'),{afterExpand:waitDisclosureProbeReady}).then(result=>{completed=true;return result;});
   await page.waitForFunction(()=>document.querySelector('details').open);assert.equal(completed,false,'Readiness resolved before the deferred child');
-  await page.evaluate(attribute=>{const child=document.createElement('form');child.setAttribute(attribute,'');child.textContent='Loaded preview content';child.style.minHeight='80px';document.querySelector('details').append(child);},child);
+  await page.evaluate(attribute=>{const child=document.createElement('form');child.setAttribute(attribute,'');child.textContent='Loaded preview content';child.style.minHeight='80px';if(attribute==='data-image-metadata-explorer'){const button=document.createElement('button');button.type='submit';button.textContent='Inspect image';child.append(button);}document.querySelector('details').append(child);},child);
   const after=await checking;assert.deepEqual(after.failures,[],'Loaded deferred disclosure failed unchanged expansion assertion');
   await page.setContent(markup+'<style>details[open]{height:44px;overflow:hidden}</style>');
-  await page.evaluate(attribute=>{const child=document.createElement('form');child.setAttribute(attribute,'');child.style.minHeight='80px';document.querySelector('details').append(child);},child);
+  await page.evaluate(attribute=>{const child=document.createElement('form');child.setAttribute(attribute,'');child.style.minHeight='80px';if(attribute==='data-image-metadata-explorer'){const button=document.createElement('button');button.type='submit';button.textContent='Inspect image';child.append(button);}document.querySelector('details').append(child);},child);
   const broken=await probes.disclosures(page.locator('main'),{afterExpand:waitDisclosureProbeReady});assert.equal(broken.failures.length,1,'Readiness hid a genuinely non-expanding disclosure');
   tested.push(method);
   }
@@ -48,6 +55,8 @@ async function expandForMeasurement(root){
  if(await uncertainty.count())await uncertainty.locator('[data-hp-uncertainty]').waitFor();
  const selected=root.locator('[data-mt-choice-method][open]');
  if(await selected.count())await selected.locator('[data-mt-choice-explorer]').waitFor();
+ const image=root.locator('[data-image-device-method][open]');
+ if(await image.count())await waitImageProbeReady(image);
 }
 // Actual deferred public data: ready-first coverage and physical-node identity.
 // Native close is an authored lifecycle control, not a claim about the original
@@ -161,7 +170,7 @@ async function verifyFailureContextControl(browser){
   return {pass:true,original_failure_observed:true,expected_and_actual_identity_discriminated:true,unknown_route_not_echoed:true,no_labels_text_or_input_values:true,unknown_context_keys_not_echoed:true,closed_or_missing_page_bounded_unavailable:true,product_source_changed:false};
  }finally{await context.close();}
 }
-module.exports={waitTagProbeReady,waitDisclosureProbeReady,verifyHPReadinessControl,expandForMeasurement,verifyDeferredReadinessControl,verifyDisclosureReadinessControl,measurementFailureContext,verifyFailureContextControl,waitPhysicalDetach,verifyPhysicalDetachControl};
+module.exports={waitImageProbeReady,waitTagProbeReady,waitDisclosureProbeReady,verifyHPReadinessControl,expandForMeasurement,verifyDeferredReadinessControl,verifyDisclosureReadinessControl,measurementFailureContext,verifyFailureContextControl,waitPhysicalDetach,verifyPhysicalDetachControl};
 if(require.main===module)(async()=>{
  const {allTags}=await import('../site/src/catalog.js');
  // Workflow navigation is declared in a JSX file; use the existing user-facing routes.

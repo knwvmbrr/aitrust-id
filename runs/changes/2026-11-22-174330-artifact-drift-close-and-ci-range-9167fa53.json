@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-174330-artifact-drift-close-and-ci-range-9167fa53",
+  "recorded_at": "2026-11-22T17:43:30.696773+00:00",
+  "author": "Codex PM /root; distinct review /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "138dd8a8dbe2ea0c9601ff29055573080e9641a5",
+  "changed": "Align exactly two replaced-parent tests with the strengthened close-time refusal while retaining no-final/all-descriptors-close assertions. Carry the existing CI explicit changelog event range into hosted source qualification. Refresh exact source inventory and preserve actual failures/cancellations.",
+  "proves": "Actual two changed controls pass. Larger source qualification ran16controls and12918-node packet15032833bytes under unchanged cap. Distinct source review preserves51 count; older51local run failed four crypto staging reserves, actual unwrapped trace identifies unchanged2GiB guard.",
+  "limits": "Full current51 Linux and all5 final source-bound checks remain pending. No disk guard bypass, helper behavior change, independent accuracy, original completion or current public release is asserted.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".github/workflows/delivery-revalidation.yml": "c9a2ca4c79fa03bd19f5557377df02bd13651ab59563132ce15d16a3f39271b9",
+    "docs/hosted-delivery-revalidation-plan.md": "a9ed142c07db237793cc687cb9b84d1ac674066df6d701f395401a2555374579",
+    "eval/route-boundaries.json": "07a75feea5b8ba13e7c1ab9782417da67f6796ed8a35a13a69154fcb00adb095",
+    "state.json": "cf5a6a98cfc98834b166493e30ab7a8d31602dfdf6baf53cf758ad51f5935f24",
+    "tests/test_distribution_artifacts.py": "815b366bb0705683993d36199601ac7b629ca2e82721554391b1b7fde54ae82e",
+    "runs/2026-11-22-artifact-parent-close-refusal-actual.json": "39787bb7f30e87cf16ca1a4b8dd9b04e7f24fde142237b8473e5206b41866617",
+    "runs/2026-11-22-artifact-parent-close-tests-final-inventory-distinct-review.json": "0422a9a1ebe1f079c3a70ef7320980c4f1cec26f7c96b62f8dd6fc5df9889975",
+    "runs/2026-11-22-artifact51-parent-refusal-controls.json": "501e2ba96b18bd4da8a28d85e6e9dbba99ef9dc9467175e45d383fb58f17c433",
+    "runs/2026-11-22-combined-hosted-parent-expectation-diagnosis.json": "5031ab92ff592f5a5dcb70059ffc6b576d2851f6c97745f3ad339dc0f9b2dda3",
+    "runs/2026-11-22-delivery-workflow-changelog-env-final-inventory-review.json": "20d0c7db28176f0a3c67ca2ae6c201f6d999e3580b3164b04c6e65014a59ac19",
+    "runs/2026-11-22-source-v3-combined-138dd8-hosted.json": "44aec322c7dfccbd4f0d4e6bddd1908ad92deeb22ae4da7448d45d999b3b3192"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-combined-hosted-parent-expectation-diagnosis.json",
+      "sha256": "5031ab92ff592f5a5dcb70059ffc6b576d2851f6c97745f3ad339dc0f9b2dda3"
+    },
+    {
+      "path": "runs/2026-11-22-artifact-parent-close-refusal-actual.json",
+      "sha256": "39787bb7f30e87cf16ca1a4b8dd9b04e7f24fde142237b8473e5206b41866617"
+    },
+    {
+      "path": "runs/2026-11-22-artifact-parent-close-tests-final-inventory-distinct-review.json",
+      "sha256": "0422a9a1ebe1f079c3a70ef7320980c4f1cec26f7c96b62f8dd6fc5df9889975"
+    },
+    {
+      "path": "runs/2026-11-22-delivery-workflow-changelog-env-final-inventory-review.json",
+      "sha256": "20d0c7db28176f0a3c67ca2ae6c201f6d999e3580b3164b04c6e65014a59ac19"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-22T17:43:31.506655+00:00"
+    }
+  ]
+}

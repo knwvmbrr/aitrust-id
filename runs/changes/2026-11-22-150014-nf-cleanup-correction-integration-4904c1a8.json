@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-150014-nf-cleanup-correction-integration-4904c1a8",
+  "recorded_at": "2026-11-22T15:00:14.939077+00:00",
+  "author": "Codex",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "364015fa75d2e7e56232fb4614d4a5375fe6dd78",
+  "changed": "Integrated the independently reviewed diagnostic cleanup correction before hosted NF measurement.",
+  "proves": "Diagnostic failures cannot skip owned browser/context closure or mask a primary failure. Original application sources, cases, result waits and180s release wrapper remain unchanged.",
+  "limits": "Twenty inert controls and distinct source review do not claim browser or hosted success. Separate300s diagnostic remains measurement-only; protocol/website remain pending.",
+  "scope_ids": [
+    "T-NF",
+    "F-120"
+  ],
+  "files": {
+    "runs/2026-11-22-nf-corrected-observability-distinct-review.json": "c9e99eee59d030281218ac028d257476e1a6ab8d258bdbb8975c006ee05b7c9a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-nf-cleanup-corrected-controls.json",
+      "sha256": "8db241874db88b8191e53a5e31a2555748c795fcc31d23ab3343baa9f4879537"
+    },
+    {
+      "path": "runs/2026-11-22-nf-corrected-observability-distinct-review.json",
+      "sha256": "c9e99eee59d030281218ac028d257476e1a6ab8d258bdbb8975c006ee05b7c9a"
+    }
+  ],
+  "checks": []
+}

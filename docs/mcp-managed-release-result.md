@@ -24,9 +24,11 @@ clearance or original F-057/X-02 completion follows from this source handoff.
 - Existing Ruby parsed both workflow files; `bash -n` checked 16 shell blocks and
   Python AST parsing checked nine embedded Python blocks. The read-only current
   MCP graph contains 257 nodes and 446 source-file identities.
-- Actual current policy in this isolated branch still allows only PS source.
-  MCP requires the fixed I/O helper from the separately reviewed protected-base
-  repair, plus a current source profile. No caller flag can replace that condition.
+- At the original `9f878` source handoff, this isolated branch allowed only PS
+  source. Following the normal protected `085106c1` base merge and actual source
+  metadata refresh, PS and finite MCP technical permission both pass; the other
+  twelve routes remain blocked. This is not artifact authorization, a signature
+  or a fresh SDK runtime result. No caller flag replaces the fixed-source checks.
 
 The exact source execution and independent reviews are in
 [final source execution](../runs/2026-11-22-mcp-managed-final-source-execution.json),
@@ -45,10 +47,12 @@ it is not copied or silently rebound into this branch's old SDK qualification.
 
 ## Actual completion sequence
 
-After normal protected-main base integration, collect the source metadata with
-the existing producer over the same exact wheel cache, preserving the previous
-profile and old execution records. Reconstruct the current source graph, confirm
-the fixed helper and finite permission, and distinctly review the source freeze.
+The protected-base source refresh used the existing producer over the same exact
+wheel cache, preserving the previous profile and old execution records. Only the
+I/O helper source row changed in that bundle profile; the one-byte managed-module
+EOF trim and its matching component row are separately recorded in
+[the protected-base refresh](../runs/2026-11-22-mcp-protected-base-source-refresh.json).
+Reconstruct the current source graph and distinctly review the source freeze.
 The changed-source four-target workflow must execute its current identities.
 
 The protected project workflow then builds the first managed target, Linux

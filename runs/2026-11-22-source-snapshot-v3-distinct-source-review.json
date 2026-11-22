@@ -1,0 +1,79 @@
+{
+  "profile": "source-snapshot-v3-bounded-distinct-source-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T16:10:44.927640+00:00",
+  "reviewed_by": "/root/seo",
+  "base_commit": "2f03b9de83daab98ed8633c80c12e9217a822799",
+  "source_sha256": {
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/source_snapshot_v3.py": "aa3d1579a624fc24145616463fb202d52dc4186132de0537f6fe940ac9eed793",
+    "scripts/build-source-snapshot.py": "2b5ab41bcf4a2ec72bd4baa835865c73bdfeda3df57122de175c13d78da772de",
+    "scripts/verify-source-provenance.py": "254dd2c351ffb6213e7530b57ea30b904fd0f1c5e6cc45a6a584e11b5bb42fa3",
+    "tools/distribution_artifacts.py": "36d25317bf1a9f1557894fb62f8f6a36c62a7c3d8391fa5e7d8d539d928de8ab",
+    "tests/test_source_snapshot_v3.py": "4fd252c5d282a847eb7c8cb32ce60adae7efb6b4c389dab92d0cca6726595458",
+    "tests/test_source_provenance.py": "8686ec115a3e02c8e28bbc5c0259bfc37b50148d167206d470046239138e3fe5",
+    "tests/test_distribution_artifacts.py": "584db6beb7fd03c4efb46195ddf42386fefbc6e8ccc3a2bf84cc42714ab30af4",
+    ".github/workflows/source-snapshot-v3.yml": "61bc2a3017842c3884c4ace2b8b51edadf2bd06d9a44ad96028a3ea2c12c3922",
+    "docs/source-snapshot-v3-plan.md": "fccf74477c6bf68132a6af0afc1c0049a39b80edc19584b28fda8a4cd10a3126"
+  },
+  "findings": [],
+  "resolved_review_finding": {
+    "original": "Framing negative cohort began with files=[] and no source members, already invalid; generic ValueError could mask missing framing protections.",
+    "correction": "One valid canonical metadata+x.txt source is positively accepted before truncation/CRC/concatenation/trailing/hidden-content/padding mutations. Same16groups; production core unchanged.",
+    "reviewer_actual_affected_control": {
+      "command": "python3 -I -S -B: one unittest RefusalBoundaries.test_truncation_crc_concat_trailing_hidden_data_refuse",
+      "groups": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "elapsed_seconds": 0.0012224160018377006,
+      "pass": true,
+      "large_source_or_native_execution": false
+    }
+  },
+  "architecture_review": {
+    "legacy_v1_v2_bytes_immutable": true,
+    "legacy_global_mutation_absent": true,
+    "same_wire_and_canonical_small_archive_contract_retained": true,
+    "active_builder_and_authentication_reader_use_v3": true,
+    "graph_binds_all_three_serializers_plus_builder_and_authentication_reader": true,
+    "raw_limit_decimal_bytes": 256000000,
+    "metadata_separate_limit_bytes": 5000000,
+    "source_file_count_limit": 16384,
+    "per_source_file_limit_bytes": 32000000,
+    "compressed_limit_bytes": 64000000,
+    "expanded_framing_upper_bound_bytes": 277773118,
+    "decompression_increment_bytes": 65536,
+    "raw_quota_before_payload_reads": true,
+    "metadata_size_checked_before_collection_and_parse": true,
+    "bounded_compressed_writer_before_growth": true,
+    "no_complete_expanded_tar_copy_in_inspector": true,
+    "strict_crc_eof_single_gzip_member_and_no_trailing_data": true,
+    "canonical_USTAR_headers_modes_order_end_and_zero_padding": true,
+    "canonical_metadata_recomputed_from_observed_rows_and_commit": true,
+    "bool_float_whitespace_key_order_aliases_refused": true
+  },
+  "workflow_review": {
+    "same_repo_owned_branch_push_only": "codex/source-snapshot-v3",
+    "future_pr_trigger_filtered_same_repo_only": true,
+    "contents_permission": "read",
+    "pinned_checkout_setup_upload": true,
+    "credentials_persisted": false,
+    "large_execution_hosted_only": true,
+    "declared_address_space_limit_bytes": 805306368,
+    "focused_groups_required_without_skips": 16,
+    "actual_head_source_build_inspect_old_v2_refusal_graph_spdx_expected": true,
+    "source_stability_required": true,
+    "artifact": "one bounded<=64000byte JSON summary,7days",
+    "release_or_signing_permission": false
+  },
+  "limits": [
+    "Reviewer performed source/control-flow/immutable Git and11file hash checks plus one tiny valid-baseline framing control only. No large streams, source archive build, dependency/native code, download, install or browser execution locally.",
+    "Author four earlier local small controls and corrected framing control are retained claims; reviewer did not repeat full16 or existing source/graph suites.",
+    "Actual>128000000byte source build/inspection, legacy refusal, Graph/SPDX success, peak RSS and768MiB behavior remain pending the one parent-approved disposable hosted execution. Source CLEAR does not prove the envelope empirically.",
+    "Core quotas are finite design limits, not a promise every combination below an individual quota fits every downstream packet/memory limit. All existing downstream16MB packet/gap/admission guards remain.",
+    "Old whole-file-bound native/nested observers and old attestations are not rewritten or newly observed. Larger compatible-format archives correctly remain refused by legacy bounded readers.",
+    "No new endpoint/permission, license clearance, complete compiled-source claim, Sigstore verification/admission, main/protected/public release, tag accuracy or F057/X02/original closure."
+  ]
+}

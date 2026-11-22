@@ -130,8 +130,9 @@ is printed. Only requested private output includes identifying hashes and source
 metadata. Source/artifact drift, unknown scope, duplicate/malformed JSON, wrong
 subject/predicate/source/identity, missing prerequisites, links and existing
 outputs refuse with fixed `UNAVAILABLE`/exit2. No refusal becomes zero or safe.
-Prepublication refusal creates no new final output; a cleanup failure can retain
-private `.artifact-evidence-*` temporary bytes. After publication is attempted,
+Prepublication refusal creates no new final output. Failed writes deliberately
+retain private `.artifact-evidence-*` temporary bytes rather than risk deleting a
+replacement file; inspect the private output folder after a failed command. After publication is attempted,
 cleanup/fsync/close failures report `output_commit_uncertain` and
 `output_may_exist:true`; inspect the requested destination and private directory
 before retrying. The tool never promises rollback or forensic deletion.

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-075657-integrate-account-free-provenance-downloads-48da5673",
+  "recorded_at": "2026-11-22T07:56:57.164157+00:00",
+  "author": "Codex PM /root; author /root/share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9ac86811a3f3f0c007edc539a435a11cfb6a6ed2",
+  "changed": "Integrated durable versioned PS source/SPDX/attestation downloads and linked their account-free verification guide from About.",
+  "proves": "Distinct source/trust-model review confirms five exact files match the already independently verified protected artifact; no downloaded manifest or saved observation is used as a trust anchor.",
+  "limits": "Public download bytes and link activation await the next protected deployment. Full F057/X02 and independent tag accuracy remain open;136complete66open is unchanged.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "site/src/workflows/About.jsx": "a3c6b5295dc13c76c4d5be31ce880ebe2907e12241429fcddf7be048149c4319",
+    "runs/2026-11-22-ps-provenance-distinct-source-review.json": "a081a462f6e66288bdc32e813371a83c47c15dcb5ab2b445e2bf147927bfe9a6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-ps-provenance-distinct-source-review.json",
+      "sha256": "a081a462f6e66288bdc32e813371a83c47c15dcb5ab2b445e2bf147927bfe9a6"
+    },
+    {
+      "path": "runs/2026-11-22-ps-source-provenance-downloads-execution.json",
+      "sha256": "34d94aa0f5940be773f3e3a4723a907980e2d00861a68608869e2e91c0161f8d"
+    }
+  ],
+  "checks": []
+}

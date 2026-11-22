@@ -1,4 +1,84 @@
+## Current combined handoff — 2026-11-22T16:58:10.565070+00:00
+
+**136 originals complete /66 open; target60 remains unmet by6.** Scoped closed
+tasks remain25; original closures since baseline remain4. Three named component
+jobs are **IN_REVIEW**, with no additional closure credit:
+
+- `session-jpeg-credential-actions`: selected Linux actual14 native cases and
+  distinct review complete; pre-code criterion7 still requires protected source
+  publication. No FA/PA/origin or full-original claim.
+- `session-source-snapshot-v3`: actual16 hosted controls and a128339526-byte source
+  tree qualify the versioned serializer. Combined-tree packet measurement and
+  protected delivery remain; legacy v1/v2 stay immutable and no admission follows.
+- `session-mt-private-label-preparation`: corrected private prepare/validate/compare
+  and fresh11 CLI cases are reviewed. Two synthetic files represent zero human
+  raters; candidate axes/agreement thresholds are unadopted. Protected source
+  publication remains before the named integration handoff closes.
+
+Dated assignments: `/root` integrates and publishes; `/root/seo` reviews the board,
+finite inventory and factual MCP grant mapping; `/root/share_debugger` implements
+the managed MCP consumer. `/root/web_camo` has finished these bounded JPEG/MT
+engineering handoffs and is not recorded as continuously running. Logical tag
+queues and historical snapshots below are not permanent agent processes.
+
+All202 original acceptance clauses, current percentages, baseline hashes,25 prior
+closed records and four original closure recommendations remain unchanged. The
+existing reviewed engineering receipts remain historical until fresh source-bound
+hosted checks actually finish. This board grants no owner/legal/tag adoption and
+claims no new runtime execution, protected publication or detector accuracy.
+
+## Current ownership and engineering snapshot — 2026-11-22T15:36:31.607734+00:00
+
+**136 original requirements complete /66 open; target60 remains unmet by6.**
+The exact owner/engineering register classifies16 external-final items,2 unfinished
+autonomous engineering paths and48 mixed items. Fifty engineering-bearing
+originals are not fifty independently finishable originals. Every mixed software
+job stays assigned to engineering; the owner receives only its separate outside
+action. Existing security/conduct/abuse/admin inboxes are not requested again;
+press is unverified. Social accounts remain a separate enhancement handoff.
+
+The named `session-owner-engineering-action-handoff` coordination packet is
+complete: exact66 mapping, owner checklist/visual/agent boundaries, actual approved
+admin email SENT and distinct source review. This moves scoped coordination
+deliveries24→25, not original requirements. Inbox delivery/read and completion of
+any owner gate are unclaimed. All24 prior closed task records, baseline hashes,
+original criteria and four original closure recommendations are preserved.
+[Register](execution-ownership.json) · [Owner actions](owner-actions.md) ·
+[Email receipt](../runs/2026-11-22-owner-action-email.json) ·
+[Distinct review](../runs/2026-11-22-owner-handoff-source-distinct-review.json).
+
+Dated active assignments: root coordinates NF/protected delivery; `/root/seo`
+reviews NF retained evidence and inventory; `/root/share_debugger` engineers MCP
+runtime distribution; `/root/web_camo` engineers the bounded JPEG component.
+These are four temporary assignments, not permanent background services or
+fourteen running tag processes. Broader visual/image/MT claims remain Planned.
+
+Actual current site CI45036146440 failed the reviewed source inventory before
+NF. Separate diagnostic45036146486 completed both NF engines in125.900seconds;
+the earlier7174 release run hit its unchanged180second wrapper. Its precise
+operation cause remains unestablished. No timeout was raised and diagnostic
+success does not approve the protected site release. Final inventory and fresh
+unchanged-budget source-bound delivery checks remain pending; no heavy local
+build is authorized below the disk reserve. Older snapshots below are historical.
+
 ## Current delivery snapshot — 2026-11-22T04:37:29.411744+00:00
+
+## Current execution snapshot — 2026-11-22T08:46:29.075082+00:00
+
+**136 original requirements complete / 66 open. Six full closures remain to60.**
+F145 is complete after whole reference-programme operation on Mac/Linux, distinct
+review and protected/public source/guide delivery at69298f36. This is not an
+operating institution or actual accreditation. MT's optional selected-pair
+preview is live; no independent MT tag release is claimed.
+
+The FA-only private image-details helper and durable account-free PS verification
+downloads are integrated candidates. FA stays Planned, PA unchanged; actual
+current policy1.15/build/protected/live checks remain before activation. Root
+owns those checks and the public136/66 counter refresh. Image author/reviewer
+work is delivered; MCP runtime packaging continues in its isolated engineering
+lane with actual wheels and native notice/source mapping. Older snapshots below
+are historical, not current counts or permanent agent heartbeats.
+
 
 ## Current execution snapshot — 2026-11-22T06:41:00.311902+00:00
 

@@ -1,0 +1,78 @@
+{
+  "profile": "finite-reviewed-source-inventory-refresh/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T15:44:34.828969+00:00",
+  "reviewed_by": "/root/seo",
+  "root_head_before_commit": "2f03b9de83daab98ed8633c80c12e9217a822799",
+  "producer": "scripts/verify-route-boundaries.py::inventory(root)",
+  "producer_sha256": "a08e867cccf3023a966f565299b414bf1140a0c58157c8dd8e8bf659e6bc4d40",
+  "source_captures_equal": true,
+  "source_capture_after_write_equal": true,
+  "prior_manifest_sha256": "43dbc6f6e049a64041958b59866ea4907b29dd929dbe25e95741a4f48400304f",
+  "new_manifest_sha256": "917d1adf6bd95ec97879497a65c15f49fdf8e434a21142fd58ea8cd54a05f8bf",
+  "prior_source_count": 7933,
+  "current_source_count": 7935,
+  "added": [
+    {
+      "path": ".github/workflows/delivery-revalidation.yml",
+      "sha256": "8e86bc6fbe099267f5c52ce1a19b8b53f21f886ab625fb65860bd3413381cfc1"
+    },
+    {
+      "path": ".github/workflows/nf-browser-diagnostic.yml",
+      "sha256": "088a35e115490a8dc8df20e5a9c3a168244cb4190c118413434e63c0a2c9a060"
+    }
+  ],
+  "changed": [
+    {
+      "path": "scripts/build-nf-device-fixture.mjs",
+      "prior_sha256": "e3d7e365c29710a8b55ffd96edb96202a0aef55a9f62a64f13818adfbca4ecac",
+      "current_sha256": "5cfa8d810054bc995bab92fe86e39be42825ee603f27565fcfac5a8dce86f58e"
+    },
+    {
+      "path": "scripts/verify-nf-client.cjs",
+      "prior_sha256": "02d7f8242217551202e543117b4af55f41557bcf9fa7b5a63bb63cbc786979d4",
+      "current_sha256": "4c01c71f81617eec55946a90966de6dda0424c29b1a5b05cef8cda802657a5d5"
+    },
+    {
+      "path": "scripts/verify-nf-device.cjs",
+      "prior_sha256": "1e219b066d18f37d716551e1de92dad06d5b1669ce0608b0bbb8c816ba3e0f06",
+      "current_sha256": "ede0b13deccad0133e7b055c0072fe0fa1712e60d860fef70d19c620f0a9865e"
+    },
+    {
+      "path": "tests/nf-browser-diagnostics.cjs",
+      "prior_sha256": "a9b5352bdff6364fcc4a5dbb90c6beba894580af5a3cc8f7654d2fc272232c30",
+      "current_sha256": "1a322e6d10f86994a8735bf3f54990acb09e2c8e109f028c8f11e4e52caf00c0"
+    }
+  ],
+  "removed": [],
+  "untracked_current_source_paths_pending_parent_normal_commit": [
+    ".github/workflows/delivery-revalidation.yml"
+  ],
+  "only_manifest_fields_changed": [
+    "sources",
+    "reviewed_at",
+    "reviewed_by"
+  ],
+  "historical_engineering_receipts_preserved": {
+    "website": "runs/2026-11-22-image-corrected-website.json",
+    "extension": "runs/2026-11-22-image-ready-extension.json"
+  },
+  "independent_release_approval": false,
+  "source_review_basis": [
+    "NF observability source/control-flow review c9e99eee after independent cleanup fix; unchanged cases/assertions/deadlines.",
+    "Hosted exact-tool delivery workflow source review599892be at8e86bc6f; no release/admission/deployment."
+  ],
+  "owner_handoff_post_review_metadata_delta": {
+    "historical_classification_source_hash_semantics_added": true,
+    "actual_dated_agent_assignments_clarified": true,
+    "all66_identity_and_engineering_mapping_unchanged": true,
+    "status": "bounded CLEAR; bfff remains historical original-byte review"
+  },
+  "limits": [
+    "Source inventory capture only, not evaluate()/verify() boundary pass or runtime/revalidation execution.",
+    "Existing selected website/protocol receipts remain historical/stale until actual current-source hosted execution; no old pass was rebound or relabeled current.",
+    "Parent normal commit must track the one newly added workflow and retain all source identities; CI/protected merge/publication remain pending.",
+    "No new permission, endpoint, license/signing/admission, independent accuracy, tag/original closure or owner action performed.",
+    "Below-reserve local work contains only small metadata and read-only hashing; no heavy builds/downloads/native/browser/tests."
+  ]
+}

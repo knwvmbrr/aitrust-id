@@ -280,8 +280,22 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
       - run: pip install --require-hashes -r eval/requirements.lock
-      - name: Require actual accessibility release evidence
-        run: python scripts/verify-accessibility-release.py
+      - name: Require current selected automation and actual human accessibility reviews
+        run: |
+          python - <<'PYTHON'
+          import json,pathlib,re,subprocess,sys
+          selected=json.loads(pathlib.Path('state.json').read_text())['current_engineering_revalidation']
+          command=[sys.executable,'scripts/verify-accessibility-release.py']
+          for surface in ('website','extension'):
+              name=selected[surface]
+              if not isinstance(name,str) or not re.fullmatch(r'runs/[A-Za-z0-9_.-]+\.json',name):
+                  raise SystemExit('Unavailable accessibility evidence selection')
+              path=pathlib.Path(name)
+              if path.is_symlink() or path.parent.is_symlink() or not path.is_file():
+                  raise SystemExit('Unavailable accessibility evidence file')
+              command.extend(['--'+surface+'-receipt',name])
+          raise SystemExit(subprocess.run(command,check=False).returncode)
+          PYTHON
       - name: Assess statistical evidence even when accessibility refuses release
         if: always()
         run: python eval/harness.py --gates eval/gates.yaml --fixtures eval/datasets/unsafe_code/ps_v1.jsonl --output eval/report.json
@@ -406,6 +420,9 @@ jobs:
           node scripts/verify-mt-mobile-site.cjs
           python -m pytest tests/test_mt_choice_integration.py -q
           node scripts/verify-mt-choice-site.cjs
+          python -m pytest tests/test_image_device.py -q
+          node scripts/verify-image-metadata-client.cjs
+          node scripts/verify-image-metadata-site.cjs
           python -m pytest tests/test_nf_device.py -q
           node --test tests/nf-browser-diagnostics.cjs
           node scripts/verify-nf-client.cjs

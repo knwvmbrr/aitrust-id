@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-075604-fa-image-availability-guard-correction-0907c4b0",
+  "recorded_at": "2026-11-22T07:56:04.670946+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c80eec2af75949f8819dce6c444222f5b2d8a4d3",
+  "changed": "Corrected the generic FA availability expectation before the first integration build and added exact-expression compatibility coverage.",
+  "proves": "The original source-only mismatch is retained; current five integration groups pass for all20 availability expressions with19 sibling expectations preserved. Seven named base inputs match protected69298f and root9ac868.",
+  "limits": "Verifier-only correction; no current normal-build/browser or publication credit and no FA/original closure.",
+  "scope_ids": [
+    "T-FA",
+    "F-155"
+  ],
+  "files": {
+    "scripts/verify-site.cjs": "96245768720356b2b56a2073bd19343dd9f828e32f94bc64a3a691a810f2d606",
+    "tests/fa-image-main-integration.cjs": "084bd384188ddfa4b3522bee4bd986b74b3942deabf5d791f6cbd125c94bbb3c",
+    "docs/fa-image-main-integration-plan.md": "9ecee37e1d4f12ea08fc4a0ba4d00dfde22861d1325d1245c24eb33407bf808f",
+    "runs/2026-11-22-fa-availability-guard-original.json": "d119a93308e484fcc3098d4c17a19fc2fc94db3deb2866215df2f0c98139ebf3",
+    "runs/2026-11-22-fa-image-availability-corrected.json": "1353fcd8d9774d23abbef7fefa8fa40c41f7f61d0e6ce5fb3406d13eb86f0b7d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-fa-image-availability-corrected.json",
+      "sha256": "1353fcd8d9774d23abbef7fefa8fa40c41f7f61d0e6ce5fb3406d13eb86f0b7d"
+    }
+  ],
+  "checks": []
+}

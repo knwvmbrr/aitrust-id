@@ -1,0 +1,27 @@
+{
+  "profile": "artifact51-current-linux-hosted/v1",
+  "captured_at": "2026-11-22T17:44:50.765674+00:00",
+  "pass": true,
+  "run_id": 45051089706,
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45051089706",
+  "run_head": "3f199c6450da73335a9d2c5e2c1501ac3c946e14",
+  "workflow": ".github/workflows/artifact-sbom.yml",
+  "job": "artifact-controls",
+  "actual_tests": 51,
+  "actual_seconds": 5.541,
+  "actual_errors": 0,
+  "actual_failures": 0,
+  "actual_skips": 0,
+  "log_sha256": "0353cd73fb733e692e30e123835f68d382deb00cc63da4162269d602bad58098",
+  "source_sha256": {
+    ".github/workflows/artifact-sbom.yml": "9669b5f65306e96e4267909ef1c3723adf8dcac2f021ab7e5891f316dac7333f",
+    "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+    "tests/test_distribution_artifacts.py": "815b366bb0705683993d36199601ac7b629ca2e82721554391b1b7fde54ae82e",
+    "tests/test_artifact_process.py": "b3681ca1908e39d33276c23dca0cf486f69f86251c8d17b1f6b621cd23163a4a",
+    "tests/test_artifact_workflow.py": "c06c3f0e183db5916e448b718a60fa6763e880eed2b282a99e6e796a8568090c",
+    "tests/test_artifact_evidence_io.py": "adc631878d155c4cb2649e730f8a4446ff50838fb504b4030888c18ca347619f"
+  },
+  "SDK_or_install_executed": false,
+  "real_cryptographic_attestation_claimed": false,
+  "original_requirement_closed": false
+}

@@ -1,0 +1,64 @@
+{
+  "captured_at": "2026-11-22T07:09:39.916480+00:00",
+  "author": "Codex / web_camo",
+  "profile": "image-device-frozen-source-controls/v1",
+  "pass": true,
+  "base_commit": "cd3beab02774fa939e3a2bd8a0d87913d9e8fd81",
+  "canonical_source_commit": "8e1b1a23a1bef0659bf1ec567ceef647b5cd76a5",
+  "sources": {
+    "docs/image-device-guide.md": "b0cab95374056e25ece9113ad9f9d75c15d4ff48bcb92ba2799a4ef1b4ebda1b",
+    "docs/image-device-plan.md": "97d63399537bb471f41dc0887bf6fd18cfbf916d1de2215b0635d4c4d067329b",
+    "integrations/image-metadata-reference/1.0.0/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "integrations/image-metadata-reference/1.0.0/NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "integrations/image-metadata-reference/1.0.0/projection.json": "1b52bfa875ae2bbc638aca600c49ceb66e2eb6d73cff5755db2e32720cfe1dea",
+    "integrations/image-metadata-reference/1.0.0/source.json": "3e66d919b4a6a289772266bd5cf5f6bfbfe9b144caf490b30c7c63dec902feeb",
+    "integrations/image-metadata-reference/1.0.0/tools/jpeg_metadata.py": "c7e8fcb58acd2087a35c886a32b7df1fa390c74c52c023e9b137bdf1dd90872a",
+    "integrations/image-metadata-reference/1.0.0/tools/png_metadata.py": "addd35028617f2d5c2cd01dc19106cec9946686cfe35139beb923af3973d6994",
+    "scripts/build-image-metadata-device.py": "2ba006ffb69b856d6cae93611872013e7ca1660e8ce81eca0db662a147f29882",
+    "scripts/build-image-metadata-fixture.mjs": "91df61d84c35ba3771607a0d2850745ed4dd987678ab90a2434215fc5ceb9fa5",
+    "scripts/image-metadata-device-cases.py": "07891e3d66e2675a292359add1cda33fc5613c6c22465f6b158c56e5441ebc17",
+    "scripts/verify-image-metadata-device.cjs": "45bd6b67f1b9a4b647c082d0b67a29859c06075336d725479967be585d98e4c2",
+    "site/image-metadata-fixture.html": "34b8633c289d1e8c958bce3a14e72754b14e05d9b85d965460bfef2f8b72c171",
+    "site/src/ImageMetadataExplorer.jsx": "0e557a7dcf646e915e02b89b92ad949082f7d4c6d9ef99c0446a15136d88aa7a",
+    "site/src/ImageMetadataExplorerSlot.jsx": "c08fe234f18be550f4827b2b3a2c9c4b5be0cb69c9567c83dcf12b3be6b1389f",
+    "site/src/image-metadata-client.mjs": "00013a2cb593d0fc40957da17a11cbffc05c15a3d5afe2e9915e42f55ca771ca",
+    "site/src/image-metadata-fixture.jsx": "790955274bab2c91b0ca1b5fd86faed958839b33e33669eecdb99397d438ff8e",
+    "site/src/image-metadata-result.mjs": "ec7e59257768fb96d4c4a03f1cf352504cdbbe8ccc89b42d2e03e8d99de300fd",
+    "site/src/image-metadata-worker.mjs": "d0efb21f127fd183b53abaacaf4fc2a15ac61f41feace64e56d83a33a5321ce9",
+    "tests/image-metadata-client.mjs": "bb597472352da192574939ef41ee41132ad24e40c19675844b1820269cc9fada",
+    "tests/test_image_device.py": "017b6f453f801f384772fe3c64b8dd8df5e828d3e4088bb542bb53c6d9883fb2"
+  },
+  "executed": {
+    "Python_current_focused": {
+      "passed": 11,
+      "seconds": 0.19
+    },
+    "Node_client": {
+      "groups": 10,
+      "canonical_records": 16,
+      "corrupt_records_refused": 11,
+      "private_getter_reads": 0,
+      "intrinsic_size_gate_before_reader_and_worker": true,
+      "abortable_capture_deadline_and_cancel": true
+    },
+    "JSX_pinned_transform": {
+      "sources": 3,
+      "pass": true
+    },
+    "actual_static_builder": {
+      "state": "STATIC_SOURCES_BUILT",
+      "five_existing_runtime_files_hashed": true,
+      "build_input_hashes_still_current": true,
+      "runtime_executed": false
+    }
+  },
+  "prior_source_record": "runs/2026-11-22-image-device-first-focused-source.json",
+  "new_fixture_clarifications": [
+    "One-pixel Adam7 unsupported fixture has valid selected framing; extended sequential JPEG uses SOF1 instead of an invalid progressive scan example.",
+    "New input failures use polite inline status and invalid-field semantics distinct from runtime failure."
+  ],
+  "browser_and_standalone_build": "PENDING distinct source review then root-granted sequential slot",
+  "shared_main_catalogue_prepare_package_state_scope_or_CI_changed": false,
+  "new_dependencies_or_model_installed": false,
+  "tag_or_original_requirement_completion_claimed": false
+}

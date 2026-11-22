@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-164504-mt-private-label-preparation",
+  "recorded_at": "2026-11-22T16:45:04.200630+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8391161a354f3af1aa8fa8a5bc92c63bb0fc9aa8",
+  "changed": "Added a candidate four-axis MT annotation guide and complete private offline blank-packet, response validation and per-axis agreement/review-queue workflow.",
+  "proves": "Fresh full23 focused engineering controls and source-stable11actual CLI cases pass; exact separate review clears corrected code/evidence. Whole original raw/NFC text/context and fixed rubric/source replay, neutral blank forms, complete responses, uncertain/insufficient counts, decisive coverage and original constant-alpha Unavailable behavior are explicit. Typed identity and lateGit failures are retained and corrected.",
+  "limits": "Two synthetic response files, zero human raters; old19 and4affected executions remain historical. Candidate guide/0.55 remain unadopted; no human independence, sampling, adjudicated truth, accuracy, calibration, MT tag, full original closure, detector/model/network, shared source or live policy change. Private late failures disclose possible remaining output.",
+  "scope_ids": [
+    "T-MT",
+    "F-019a",
+    "F-019b",
+    "F-019c",
+    "F-056"
+  ],
+  "files": {
+    "docs/mt-annotation-guide.md": "0639bb151ebc542357efac67cefc4c3473eb59fe905531530d43214be7653acc",
+    "docs/mt-label-preparation-plan.md": "f060dcd0b8a2cca9aff6ec6923b415e62ac9061af2c7744aa40874e9bd6cd1a5",
+    "docs/mt-label-preparation-result.md": "b89077e67f48eced04969b547ebf944d081fd8f59fe62527e0e3477d1fca96b5",
+    "docs/mt-label-preparation.md": "f0a7ef75af4d8305afa28093ee05a8e74ef56b0b3b73df8304fe1375528fecc6",
+    "runs/2026-11-22-mt-label-cli-candidate-1.json": "1cc7070e093ba2a2dd674f00eac197a716680e96e69357f424a31a62d62a57cf",
+    "runs/2026-11-22-mt-label-corrected-distinct-review.json": "4cf6ccf36ee12c0f5806709b3683c9441fd967af7e46353dfa9e6101c778f680",
+    "runs/2026-11-22-mt-label-current-cli.json": "54816be27afc0bb5a713058a19099f2ebee4173d02f45eb7ee68954b7e9ed5f8",
+    "runs/2026-11-22-mt-label-current-controls.json": "0905f58380b033dc47a8aa6f30f2c3c257546bdb95794f8a707706415fe955cb",
+    "runs/2026-11-22-mt-label-full23-current-controls.json": "ac6b74204bb26faccf62f2a41c7dd0e45297d4101af77ae1b8129b26ef6200fd",
+    "runs/2026-11-22-mt-label-git-corrected-cli.json": "6f79e264efb6a6e00e482fea4d96ef3247e8282a341154b7b1483b5eeb6d9d56",
+    "runs/2026-11-22-mt-label-git-corrected-controls.json": "731663cbe5c87037e58be1e63beac83d4ff5d04fd72fd54979e2929f9b445b1f",
+    "runs/2026-11-22-mt-label-late-git-original-review.json": "7f08e670426cd3735ca3d045ad3fb28164dcda804e17ca5c9ea2568cea06269e",
+    "runs/2026-11-22-mt-label-typed-identity-original.json": "0452cfcb5f771c66909c517d19ca9023e0372b61cbbe658ed38f5a5c8829279f",
+    "scripts/mt-label-preparation.py": "e79e2058f28735ea0c8c01fa7c390423dcb8b977dc1967bad249c1b6900d7a45",
+    "scripts/verify-mt-label-preparation.py": "770b965af10c2337945705508680b8c65a83ee9514b7834f89ee668ecd06319c",
+    "tests/test_mt_label_preparation.py": "23cdb72e8d732a3db40765213f9a839b8b748a10c260875ddb961af731e61159",
+    "tools/mt_label_io.py": "58333a54a9a3630b6ac010f202c0f1a4aef887a1a44f8d16dfe4b91455d3e533",
+    "tools/mt_label_preparation.py": "bee37abc9e185ba2a2954e8594e0cd348e261000957c018fc39781599e04249a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-mt-label-git-corrected-controls.json",
+      "sha256": "731663cbe5c87037e58be1e63beac83d4ff5d04fd72fd54979e2929f9b445b1f"
+    },
+    {
+      "path": "runs/2026-11-22-mt-label-git-corrected-cli.json",
+      "sha256": "6f79e264efb6a6e00e482fea4d96ef3247e8282a341154b7b1483b5eeb6d9d56"
+    },
+    {
+      "path": "runs/2026-11-22-mt-label-corrected-distinct-review.json",
+      "sha256": "4cf6ccf36ee12c0f5806709b3683c9441fd967af7e46353dfa9e6101c778f680"
+    },
+    {
+      "path": "runs/2026-11-22-mt-label-full23-current-controls.json",
+      "sha256": "ac6b74204bb26faccf62f2a41c7dd0e45297d4101af77ae1b8129b26ef6200fd"
+    }
+  ],
+  "checks": []
+}

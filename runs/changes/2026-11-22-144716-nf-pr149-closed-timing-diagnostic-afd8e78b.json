@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-144716-nf-pr149-closed-timing-diagnostic-afd8e78b",
+  "recorded_at": "2026-11-22T14:47:16.948763+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7174a3f49a3365ceff241d2b3ff5bd74d1be5598",
+  "changed": "Added closed fault/peer/cleanup timing to NF verification and a read-only hosted300s diagnostic workflow without changing the180s release wrapper.",
+  "proves": "15 inert diagnostics pass; syntax and workflow blocks parse. ExactPSthenMT input/order/default records and finally cleanup preserved, unknown/private/getter progress refused, original COMMANDS and50000 result waits unchanged.",
+  "limits": "No localbrowser/build/SDK or hostedexecution. Diagnostic300s is timing-only and cannot clear180s release gate, PR149, tagaccuracy or original requirements.",
+  "scope_ids": [
+    "T-NF",
+    "F-017"
+  ],
+  "files": {
+    "scripts/verify-nf-device.cjs": "285218db83353029353e465861a91430a77d649d4e9ba1a5356e1ea3cad2a235",
+    "scripts/verify-nf-client.cjs": "85ed59a2822494aa9b5c1553c2dab95ceb5612a6b677c279989a3319ff99ef47",
+    "scripts/build-nf-device-fixture.mjs": "5cfa8d810054bc995bab92fe86e39be42825ee603f27565fcfac5a8dce86f58e",
+    "tests/nf-browser-diagnostics.cjs": "d1dbc35573f5c9a85a903a86f9428b3e1f9b182a01cda0bd8df656995c900082",
+    "docs/nf-pr149-diagnostic-plan.md": "2684ddc034111e9f4c2ef0e4c89f3837abb1a83c965debb8a6588ed842df97fd",
+    ".github/workflows/nf-browser-diagnostic.yml": "088a35e115490a8dc8df20e5a9c3a168244cb4190c118413434e63c0a2c9a060",
+    "runs/2026-11-22-nf-pr149-observability-controls.json": "d4309d4faca5ad50c888c2fd54b628b637661bbac8dcb45ae5f5a54e506a9c56"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-nf-pr149-observability-controls.json",
+      "sha256": "d4309d4faca5ad50c888c2fd54b628b637661bbac8dcb45ae5f5a54e506a9c56"
+    }
+  ],
+  "checks": []
+}

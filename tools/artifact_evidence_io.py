@@ -70,7 +70,26 @@ class Capture:
         self.output_may_exist = False
         self.total_read = 0
         self.directory_cache = {}
+        self.private_directories = {}
         self.closed = False
+
+    def private_boundary(self, fd, owner_private=False):
+        """Revalidate held private ancestry, including cached public descriptors."""
+        try:
+            os.stat('.git', dir_fd=fd, follow_symlinks=False)
+        except FileNotFoundError:
+            pass
+        else:
+            raise PrivateInputError('Artifact evidence unavailable.')
+        if owner_private:
+            info = os.fstat(fd)
+            need(stat.S_ISDIR(info.st_mode) and info.st_uid == os.getuid()
+                 and stat.S_IMODE(info.st_mode) == 0o700)
+
+    def remember_private(self, fd, owner_private=False):
+        owner_private = owner_private or self.private_directories.get(fd, False)
+        self.private_boundary(fd, owner_private)
+        self.private_directories[fd] = owner_private
 
     def parent(self, path, private=True):
         need(not self.closed)
@@ -84,6 +103,8 @@ class Capture:
             self.directory_cache[key] = (fd, identity(os.fstat(fd)))
         fd, expected = self.directory_cache[key]
         need(identity(os.fstat(fd)) == expected)
+        if private:
+            self.remember_private(fd)
         for part in path.parts[1:-1]:
             key = (*key, part)
             if key not in self.directory_cache:
@@ -97,15 +118,9 @@ class Capture:
             need(identity(os.fstat(child)) == expected == identity(os.stat(part, dir_fd=fd, follow_symlinks=False)))
             fd = child
             if private:
-                try:
-                    os.stat('.git', dir_fd=fd, follow_symlinks=False)
-                except FileNotFoundError:
-                    pass
-                else:
-                    raise PrivateInputError('Artifact evidence unavailable.')
+                self.remember_private(fd)
         if private:
-            info = os.fstat(fd)
-            need(info.st_uid == os.getuid() and stat.S_IMODE(info.st_mode) == 0o700)
+            self.remember_private(fd, owner_private=True)
         return fd, path.name
 
     def read(self, path, limit, private=True):
@@ -161,12 +176,7 @@ class Capture:
         need(identity(info) == expected == identity(os.stat(name, dir_fd=parent, follow_symlinks=False)))
         need(stat.S_ISDIR(info.st_mode) and info.st_uid == os.getuid()
              and stat.S_IMODE(info.st_mode) == 0o700)
-        try:
-            os.stat('.git', dir_fd=fd, follow_symlinks=False)
-        except FileNotFoundError:
-            pass
-        else:
-            raise PrivateInputError('Artifact evidence unavailable.')
+        self.remember_private(fd, owner_private=True)
         return fd
 
     def check(self):
@@ -174,6 +184,8 @@ class Capture:
             need(identity(os.fstat(fd)) == expected == identity(os.stat(name, dir_fd=parent, follow_symlinks=False)))
         for parent, name, fd, expected in self.files:
             need(snapshot(os.fstat(fd)) == expected == snapshot(os.stat(name, dir_fd=parent, follow_symlinks=False)))
+        for fd, owner_private in self.private_directories.items():
+            self.private_boundary(fd, owner_private)
 
     def save(self, output, value, limit, prepublish=None):
         path = Path(output).absolute()
@@ -207,6 +219,14 @@ class Capture:
             self.check()
             if prepublish is not None:prepublish()
             self.check()
+            # A callback can rename, replace or modify the temporary. Never
+            # publish its successor, even if the callback returns normally.
+            temporary_info = os.stat(temporary, dir_fd=parent, follow_symlinks=False)
+            owned = os.fstat(fd)
+            need(identity(temporary_info) == identity(owned)
+                 and stat.S_ISREG(owned.st_mode) and owned.st_uid == os.getuid()
+                 and stat.S_IMODE(owned.st_mode) == 0o600 and owned.st_nlink == 1)
+            verify_written(fd, raw)
             # Atomic no-replace publication of complete bytes. An unexpected
             # link error can itself have an uncertain filesystem outcome.
             try:
@@ -219,12 +239,18 @@ class Capture:
             may_exist = self.output_may_exist = True
         except BaseException as failure:
             error = failure
-        # Attempt temporary cleanup exactly once. Never remove a final file or
-        # assert rollback after crossing the publication boundary.
-        try:
-            os.unlink(temporary, dir_fd=parent)
-        except BaseException as failure:
-            if error is None:
+        # On failure retain private bytes. A refused callback may have replaced
+        # the temporary name, so blindly unlinking it could delete other data.
+        # Success-only cleanup checks aliases immediately before one unlink;
+        # portable checks are not a universal hostile-same-UID race defense.
+        if error is None and may_exist:
+            try:
+                need(identity(os.stat(temporary, dir_fd=parent, follow_symlinks=False))
+                     == identity(os.fstat(fd))
+                     == identity(os.stat(name, dir_fd=parent, follow_symlinks=False)))
+                self.check()
+                os.unlink(temporary, dir_fd=parent)
+            except BaseException as failure:
                 error = failure
         if error is None and may_exist:
             try:
@@ -240,11 +266,18 @@ class Capture:
             raise error
 
     def close(self):
+        if self.closed:
+            return
+        error = None
+        try:
+            self.check()
+        except BaseException as failure:
+            error = failure
         self.closed = True
         self.directory_cache = {}
+        self.private_directories = {}
         owned = self.fds
         self.fds = []
-        error = None
         for fd in reversed(owned):
             try:
                 os.close(fd)

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-155225-jpeg-qualification-namespace-witness",
+  "recorded_at": "2026-11-22T15:52:25.793170+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "079e2b1597318b427c7fe3485928378bafb8bc13",
+  "changed": "Replaced a nonportable privileged-proc namespace read with the actual outer namespace witness and stricter dropped-privilege checks in the disposable JPEG qualification only.",
+  "proves": "Two source-stable inert controls and distinct source review accept the different actual-self witness contract and refuse missing/same identity, root, retained capabilities/groups or missing no-new-privileges. First hosted run installed the exact lock and passed15 controls, then failed before SDK execution; its415-byte artifact is retained.",
+  "limits": "First environment exception was not captured and is not called an SDK defect. No application, parser, worker, timeout or tag behavior changed; native qualification awaits the authorized changed-source hosted run.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "scripts/verify-jpeg-provenance.py": "0467386df3bcbed0f158e1809450828d28f1b7547ba63cf941f1d164b3e17d32",
+    ".github/workflows/jpeg-provenance-qualification.yml": "0ee147fca08aac01d5d071317edf7eadd3b6836bcd9436e3085f991f4507b9fc",
+    "tests/test_jpeg_provenance.py": "38bfd5af8db6224a4753e14cff637cf64f9a1f457a530e887c8dfb71bd341ca0",
+    "docs/jpeg-provenance-plan.md": "a7151a900d58e6eb372a260f1237ac26adc23f653f9339fdcabd0c5048cad594",
+    "runs/2026-11-22-jpeg-native-candidate-1-failed.json": "f8ef7702611a80f1a1915bf0688e6d2f885c7e6b966f61352d62a0b572d871a7",
+    "runs/2026-11-22-jpeg-namespace-witness-controls.json": "90e828f049a65c43ad96bc3a168c879b71740627113e9d86cda9b5b4e4bc905a",
+    "runs/2026-11-22-jpeg-namespace-witness-distinct-review.json": "1397dc0991b6fcf6d956a46e9cb451c27b15e475e34c553a255194797d90c079"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-jpeg-native-candidate-1-failed.json",
+      "sha256": "f8ef7702611a80f1a1915bf0688e6d2f885c7e6b966f61352d62a0b572d871a7"
+    },
+    {
+      "path": "runs/2026-11-22-jpeg-namespace-witness-controls.json",
+      "sha256": "90e828f049a65c43ad96bc3a168c879b71740627113e9d86cda9b5b4e4bc905a"
+    },
+    {
+      "path": "runs/2026-11-22-jpeg-namespace-witness-distinct-review.json",
+      "sha256": "1397dc0991b6fcf6d956a46e9cb451c27b15e475e34c553a255194797d90c079"
+    }
+  ],
+  "checks": []
+}

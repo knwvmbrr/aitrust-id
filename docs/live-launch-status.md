@@ -1,6 +1,31 @@
-# Live launch status — 2026-10-11
+# Live launch evidence and dated snapshots
 
-The current published website source is
+Read [current machine state](../state.json), especially `production_publication`,
+and the [scope ledger](scope-progress.md) for the latest source, delivery and
+counts. The immutable observations below apply to their named sources; an old
+snapshot is not a claim about a later deployment.
+
+## Verified publication snapshot — 2026-11-22
+
+Protected source `69298f3656ece0a0c419348085c486ff706e3aa0` delivered the
+complete nonoperating reference programme and optional selected-pair MT preview.
+All eleven required checks and the dedicated30-command Linux programme workflow
+passed. Actual126 selected HTTP responses across two origins matched the build;
+Chromium/WebKit each exercised11 canonical MT records and three UI cases, with
+private-input and optional-failure recovery checks. No offline or physical-phone
+acceptance is inferred. [Publication](../runs/2026-11-22-programme-mt-live-publication.json)
+· [Actual live browser](../runs/2026-11-22-programme-mt-live-browser.json)
+· [Protected checks and retained release gaps](../runs/2026-11-22-pr148-protected-delivery-review.json).
+
+F145 full-original acceptance followed that actual source/guide delivery. The
+current ledger records136 complete /66 open; that snapshot published the earlier
+135/67 projection. The next counter/image/privacy1.15 publication is tracked
+separately in state. No actual certification institution or independent tag
+release is supplied by this reference workflow.
+
+## Historical verified publication snapshot — 2026-10-11
+
+The website source published in this dated snapshot was
 `64e056963c31990a1cf213ae76c370b16b84a670`, the protected merge of PR 29.
 All 229 served files match the tested build on the preview address,
 aitrustid.com and www.aitrustid.com; all three have the checked security headers.

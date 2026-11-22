@@ -1,0 +1,37 @@
+{
+  "profile": "artifact-parent-close-refusal-actual/v1",
+  "captured_at": "2026-11-22T17:38:35.812884+00:00",
+  "pass": true,
+  "tests": 2,
+  "errors": 0,
+  "failures": 0,
+  "source_sha256": "815b366bb0705683993d36199601ac7b629ca2e82721554391b1b7fde54ae82e",
+  "full51_observation": "runs/2026-11-22-artifact51-parent-refusal-controls.json",
+  "full51_pass": false,
+  "full51_errors": 4,
+  "remaining_errors_diagnosis": {
+    "actual_unwrapped_verifier_exception": "PrivateInputError",
+    "actual_frames": [
+      {
+        "file": "<stdin>",
+        "function": "<module>",
+        "line": 9
+      },
+      {
+        "file": "distribution_artifacts.py",
+        "function": "verify_attestation",
+        "line": 400
+      },
+      {
+        "file": "artifact_evidence_io.py",
+        "function": "need",
+        "line": 33
+      }
+    ],
+    "free_bytes_observed": 887730176,
+    "required_crypto_staging_reserve_bytes": 2147483648,
+    "reserve_not_overridden": true
+  },
+  "platform": "darwin",
+  "new_original_closures": 0
+}

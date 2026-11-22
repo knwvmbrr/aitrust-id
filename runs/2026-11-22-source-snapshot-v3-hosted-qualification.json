@@ -1,0 +1,90 @@
+{
+  "actual_report": {
+    "actual_source_archive_executed": true,
+    "address_space_limit_bytes": 805306368,
+    "artifact": {
+      "installed_dependencies_authenticated": false,
+      "profile": "aitrust-development-source/1.0.0",
+      "sha256": "552a8ef19448d7b51ac8dca6c2c67138f7900e4a3e146933b59a5d6cf551b53e",
+      "source_bytes": 128339526,
+      "source_commit": "b75f434b7d1b82d7641b8fefd44e3013328f1c77",
+      "source_files": 12829,
+      "tag_release_validated": false
+    },
+    "build_cli": {
+      "exit": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e355ac4f7c0347367c3e45e81591b66168aa45c029daa5ddd3657eaa4f4bef77"
+    },
+    "captured_at": "2026-11-22T16:24:18.225982+00:00",
+    "event_sha": "b75f434b7d1b82d7641b8fefd44e3013328f1c77",
+    "focused": {
+      "errors": 0,
+      "failed_test_ids": [],
+      "failures": 0,
+      "log_sha256": "4715cd1735a760efdcc85bcf5446d921cdee6ea5efb8906b0422ca131ac870ab",
+      "skipped": 0,
+      "tests": 16
+    },
+    "graph_nodes": 12829,
+    "independent_accuracy_evidence": false,
+    "legacy_v2_larger_archive_refused": true,
+    "license_clearance": false,
+    "packet_bytes": 14935218,
+    "packet_sha256": "ecf9fbe254ebbfdf85cdceed491f386f1a96c335e9354135fac22e0da5a0d03b",
+    "pass": true,
+    "peak_children_rss_kib": 233656,
+    "peak_self_rss_kib": 233656,
+    "profile": "source-snapshot-v3-actual-ci/v1",
+    "protected_attestation_verified": false,
+    "release_authorized": false,
+    "source_commit": "b75f434b7d1b82d7641b8fefd44e3013328f1c77",
+    "source_sha256": {
+      ".github/workflows/source-snapshot-v3.yml": "5d11fad8c366e6ba5dde89b7e3c2d84b44f3bf7d174299739b8c5f86c85de2b7",
+      "docs/source-snapshot-v3-plan.md": "e779b6b20334d8a72742fd2b258681db6335d67aa627dccabbf482ef37465eee",
+      "scripts/build-source-snapshot.py": "865dee30bb6f2908014fdcee17aac41aa4e0fa149d50d01677c30c7a5a838d56",
+      "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+      "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+      "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+      "scripts/verify-source-provenance.py": "cb5ec29a98a4a1c05ad1ef06c0675c05e9d4ffd6347e2832f2405da005b86ab2",
+      "tests/test_distribution_artifacts.py": "584db6beb7fd03c4efb46195ddf42386fefbc6e8ccc3a2bf84cc42714ab30af4",
+      "tests/test_source_provenance.py": "8686ec115a3e02c8e28bbc5c0259bfc37b50148d167206d470046239138e3fe5",
+      "tests/test_source_snapshot_v3.py": "79664360e4df25954a0e3186a98234a08fd43c22b20dd2e7a4530ef2d25ac0c3",
+      "tools/distribution_artifacts.py": "36d25317bf1a9f1557894fb62f8f6a36c62a7c3d8391fa5e7d8d539d928de8ab"
+    },
+    "source_stable": true,
+    "spdx_bytes": 9216070,
+    "spdx_sha256": "ae996c8f2641858dd475134d5f623103839eed6de57e855b646a79da703e39cd"
+  },
+  "api_artifact": {
+    "bytes": 1469,
+    "id": 14763175408,
+    "sha256": "c716186d34b884540cdad1c1c11d70b29b8d8b9cf7fb7c9f6381519781dc0b17"
+  },
+  "attempt": 1,
+  "author": "Codex / share_debugger",
+  "captured_at": "2026-11-22T16:26:31.752577+00:00",
+  "conclusion": "success",
+  "event": "push",
+  "independent_accuracy_evidence": false,
+  "job_id": 137273289236,
+  "license_clearance": false,
+  "limits": [
+    "First4d hosted failure remains preserved and its exact lost stderr category unknown; local bootstrap reproduction justified this changed-source attempt.",
+    "The source archive, packet and SPDX payloads remained private to the disposable runner; this retained artifact contains only the bounded JSON report.",
+    "Packet14935218bytes leaves1064782bytes under the existing16MB packet cap; future merged source/graph must be measured again, especially with MCP/cohort additions.",
+    "No protected attestation, route admission, whole-project legal clearance, independent accuracy, all14distribution completion or full F057/X02/original closure."
+  ],
+  "meaning": "Actual complete committed-source archive above the old128000000-byte limit, streamed v3 inspection, old-reader refusal and current artifact/graph/SPDX reconstruction under a768MiB address-space limit. No source was extracted or executed.",
+  "profile": "source-snapshot-v3-hosted-qualified/v1",
+  "protected_attestation_verified": false,
+  "raw_report": {
+    "path": "runs/2026-11-22-source-snapshot-v3-hosted-raw.json",
+    "sha256": "a9403bdad98fc1d0a481ea7fa75ffe7d6ade993b39c71dfa6772d37150aff251"
+  },
+  "release_authorized": false,
+  "run_id": 45043627100,
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45043627100",
+  "source_bindings_verified_current_and_git": true,
+  "source_commit": "b75f434b7d1b82d7641b8fefd44e3013328f1c77"
+}

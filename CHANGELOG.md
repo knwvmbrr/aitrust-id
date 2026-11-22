@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-183950-mcp-protected-base-source-refresh-268f912f
+
+Recorded 2026-11-22T18:39:50.465972+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Merge protected085 main into the isolated MCP source, retain both histories and51artifact controls, trim one EOF byte and replay only affected current source metadata.
+- **Evidence.** The exact fixed2d808I/O helper is selected; actual40-wheel metadata collection changes only its source row. Fourteen grant facts remain exact, PS and finite MCP technical permission pass with12other routes blocked, PS retains9files,28small controls pass and distinct semantic review confirms the merge. [Change record](./runs/changes/2026-11-22-183950-mcp-protected-base-source-refresh-268f912f.json).
+- **Not claimed.** No SDK or four-target execution, archive/build/install, signature or managed artifact authorization. Earlier source/runtime receipts remain historical; F057/X02, legal/global and accuracy completion are not claimed. Normal commit waits for the measured disk guard.
+
+
 ### 2026-11-22-181410-managed-mcp-protected-consumer-c02365d7
 
 Recorded 2026-11-22T18:14:10.113247+00:00 · Contributor: Codex / share_debugger · change
@@ -81,6 +90,380 @@ Recorded 2026-11-22T07:49:32.809063+00:00 · Contributor: Codex / seo · change
 - **Changed.** Mapped the two approved Linux CFFI 2.1.1 wheels to the publisher-declared static libffi 3.4.6 recipe and retained full grant/copyright notices for the MCP artifact producer.
 - **Evidence.** Exact wheel SHA/size and all30 hashed RECORD entries per wheel validate; ELF defined static-recipe symbol corroborates mapping; official release-source files match sdist;22 source/build/header records and16 source-specific notices are byte-bound. [Change record](./runs/changes/2026-11-22-074932-cffi-libffi-source-notice-mapping-89466c96.json).
 - **Not claimed.** Evidence/data only: actual MCP artifact notice inclusion remains pending. Recipe correspondence is not wheel build attestation, exhaustive compiled closure, reproducibility, legal clearance, route admission or original closure. No package import, install, build, native execution or service action.
+### 2026-11-22-180939-current-five-hosted-selection-3523dfa7
+
+Recorded 2026-11-22T18:09:39.509702+00:00 · Contributor: Codex PM /root; distinct hosted reviews /root/web_camo and /root/seo · change
+
+- **Changed.** Preserve and select five actual final source-bound Linux capability receipts; bind current browser deployment guards and actual source-capacity/artifact controls to their exact observed source. Retain historical selections and failures.
+- **Evidence.** Actual PS7,PII6,extension14,protocol71 andwebsite64 complete commands pass and pure fingerprint/ordering assessment remains current after selection. Distinct API/artifact/raw-byte reviews and current7962-source boundary check pass. Actual51artifact controls and v3 capacity pass within unchanged limits. [Change record](./runs/changes/2026-11-22-180939-current-five-hosted-selection-3523dfa7.json).
+- **Not claimed.** Protected merge and exact live publication remain pending. Independent statistics, human/physical acceptance, other distribution permissions and original66-open ledger remain unchanged. First local boundary invocation used plainPython missingpydantic; corrected command uses existing verified environment, with no installation or product source change.
+
+
+### 2026-11-22-174330-artifact-drift-close-and-ci-range-9167fa53
+
+Recorded 2026-11-22T17:43:30.696773+00:00 · Contributor: Codex PM /root; distinct review /root/seo · change
+
+- **Changed.** Align exactly two replaced-parent tests with the strengthened close-time refusal while retaining no-final/all-descriptors-close assertions. Carry the existing CI explicit changelog event range into hosted source qualification. Refresh exact source inventory and preserve actual failures/cancellations.
+- **Evidence.** Actual two changed controls pass. Larger source qualification ran16controls and12918-node packet15032833bytes under unchanged cap. Distinct source review preserves51 count; older51local run failed four crypto staging reserves, actual unwrapped trace identifies unchanged2GiB guard. [Change record](./runs/changes/2026-11-22-174330-artifact-drift-close-and-ci-range-9167fa53.json).
+- **Not claimed.** Full current51 Linux and all5 final source-bound checks remain pending. No disk guard bypass, helper behavior change, independent accuracy, original completion or current public release is asserted.
+
+
+### 2026-11-22-173440-combined-visual-review-source-freeze-c1d570dd
+
+Recorded 2026-11-22T17:34:40.074169+00:00 · Contributor: Codex PM /root with /root/seo, /root/web_camo and /root/share_debugger · change
+
+- **Changed.** Integrate independently qualified JPEG credential actions, private MT annotation preparation and versioned bounded archives; register focused and full hosted source-bound checks, owned failed-temporary behavior, strict per-tag guide routes and the reviewed7962-source inventory. Preserve owner/email and model/data-rights handoffs.
+- **Evidence.** Distinct source reviews bind the exact merged components and inventory. Scope and session accounting executed at136complete66open. Shared I/O filesystem controls and the focused old failed-write expectation passed after correction. Hosted workflow count corrected51 before any execution; original finding preserved. [Change record](./runs/changes/2026-11-22-173440-combined-visual-review-source-freeze-c1d570dd.json).
+- **Not claimed.** All five final source-bound capability receipts and current combined archive/packet measurement remain pending actual hosted execution. Older proofs stay historical; local boundary check correctly rejects stale browser receipts. No full original closure, independent labels, tag adoption, native-phone or legal clearance.
+
+
+### 2026-11-22-172028-artifact-io-owned-publication-e7cbea41
+
+Recorded 2026-11-22T17:20:28.592009+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Retain refused private artifact temporaries instead of unlinking successor names; revalidate descriptor bytes and held private boundaries through publication and close.
+- **Evidence.** Fifteen tiny filesystem controls passed and a distinct reviewer replayed six original, corrected and positive cases with every owned descriptor closed. [Change record](./runs/changes/2026-11-22-172028-artifact-io-owned-publication-e7cbea41.json).
+- **Not claimed.** No universal hostile concurrent same-UID race guarantee, SDK, archive build, signing, permission, detector accuracy or original requirement closure; failed private bytes may remain.
+
+
+### 2026-11-22-164504-mt-private-label-preparation
+
+Recorded 2026-11-22T16:45:04.200630+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Added a candidate four-axis MT annotation guide and complete private offline blank-packet, response validation and per-axis agreement/review-queue workflow.
+- **Evidence.** Fresh full23 focused engineering controls and source-stable11actual CLI cases pass; exact separate review clears corrected code/evidence. Whole original raw/NFC text/context and fixed rubric/source replay, neutral blank forms, complete responses, uncertain/insufficient counts, decisive coverage and original constant-alpha Unavailable behavior are explicit. Typed identity and lateGit failures are retained and corrected. [Change record](./runs/changes/2026-11-22-164504-mt-private-label-preparation.json).
+- **Not claimed.** Two synthetic response files, zero human raters; old19 and4affected executions remain historical. Candidate guide/0.55 remain unadopted; no human independence, sampling, adjudicated truth, accuracy, calibration, MT tag, full original closure, detector/model/network, shared source or live policy change. Private late failures disclose possible remaining output.
+
+
+### 2026-11-22-163209-record-actual-source-snapshot-v3-qualification-4acf2675
+
+Recorded 2026-11-22T16:32:09.237308+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Recorded actual hosted source snapshot v3 qualification and its distinct retained-evidence review.
+- **Evidence.** All16 controls passed; the actual128339526-byte12829-file committed-source archive passed v3 and was refused by unchanged v2. Current graph/SPDX reconstruction passed with per-process RSS maxima233656KiB under an inherited768MiB address-space limit. [Change record](./runs/changes/2026-11-22-163209-record-actual-source-snapshot-v3-qualification-4acf2675.json).
+- **Not claimed.** Qualified source is b75f434b only; later metadata/integrated source requires fresh measurement and signing. First4d failure remains preserved, host exception unknown. Packet16MB cap unchanged and near headroom. No signature, route admission, legal clearance, independent accuracy or full F057/X02 closure.
+
+
+### 2026-11-22-162339-correct-isolated-source-cli-bootstrap-def36e9e
+
+Recorded 2026-11-22T16:23:39.965913+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Corrected both active source-archive CLIs to import their trusted sibling serializer under isolated Python.
+- **Evidence.** Two isolated help entrypoints and a real six-file owned Git-fixture CLI build pass from an unrelated working directory. Distinct source review passes; the first hosted16-control pass and subsequent unclassified builder failure are preserved without claiming lost stderr. [Change record](./runs/changes/2026-11-22-162339-correct-isolated-source-cli-bootstrap-def36e9e.json).
+- **Not claimed.** Archive core and all limits remain unchanged. Actual larger-source archive,768MiB execution and graph/SPDX qualification remain pending one changed-source hosted run. No source-signature, route admission, legal clearance or full F057/X02 claim.
+
+
+### 2026-11-22-161407-version-bounded-source-snapshot-v3-aa4da53e
+
+Recorded 2026-11-22T16:14:07.047383+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Added a versioned256MB raw-source serializer with separate5MB metadata, streaming bounded inspection and unchanged historical v1/v2 modules.
+- **Evidence.** Small Git archive byte/result parity, exact metadata and framing controls passed; independent source reviews accept immutable historical modules, active consumers and one read-only hosted qualification workflow. [Change record](./runs/changes/2026-11-22-161407-version-bounded-source-snapshot-v3-aa4da53e.json).
+- **Not claimed.** Actual current greater-than128MB archive, full16 boundary controls,768MiB measured execution and graph/SPDX reconstruction remain pending on disposable Linux. No local large build, policy admission, source-signature claim, legal clearance or full F057/X02 completion.
+
+
+### 2026-11-22-161517-jpeg-credential-linux-working-delivery
+
+Recorded 2026-11-22T16:15:17.592246+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Recorded the functioning selected Linux JPEG credential/action CLI qualification and distinct retained-evidence review, preserving three failed candidates and unchanged PNG/text behavior.
+- **Evidence.** Actual hosted45041728639 passed20focused groups and14qualification cases, including4whole public SDK projections, signed creation/edit, altered binding with matching signature, caller-root context isolation, unknown revocation, unsigned/refusal, SDK absence with actual PS survival and recovery. Seventeen source pre/post/current/Git hashes match; tenlocked versions, nonroot isolated namespace, empty capabilities/groups, no-new-privileges and temporaryenvironment cleanup are recorded. [Change record](./runs/changes/2026-11-22-161517-jpeg-credential-linux-working-delivery.json).
+- **Not claimed.** Synthetic engineering evidence only; selected Ubuntu24 x64 CPython3.13.18, SDK0.38/native0.91. No Mac/phone/browser qualification, origin/authorship/truth/overallValid, FA/PA issuance, full original closure, public endpoint, complete native sandbox or license-clearance claim. Result prose is post-proof; runtime unchanged.
+
+
+### 2026-11-22-160342-jpeg-required-inception-fixture
+
+Recorded 2026-11-22T16:03:42.714815+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Corrected the synthetic JPEG edit fixture to contain its required software-creation inception followed by editing and explicit current-claim attribution.
+- **Evidence.** One source-stable pure definition control and distinct source review pass. Actual diagnostic identified fixture_sign_edit after SDK and creation signing returned; normal-manifest structure matches the existing pinned PNG fixture and published C2PA requirement. Runtime,14native acceptance checks, budgets and workflow remain unchanged. [Change record](./runs/changes/2026-11-22-160342-jpeg-required-inception-fixture.json).
+- **Not claimed.** This fixes authored synthetic input, not a production detector or SDK defect. Exact prior native error prose is unknown; no CLI credential case accepted from failed run. Corrected native qualification is pending.
+
+
+### 2026-11-22-155919-jpeg-fixed-signing-diagnostics
+
+Recorded 2026-11-22T15:59:19.980637+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Added closed native-load and synthetic-signing diagnostic steps without modifying JPEG runtime, SDK, workflow or acceptance.
+- **Evidence.** Two source-stable inert diagnostic controls and distinct source review pass; second hosted run confirms actual isolation, dropped privileges, ten locked versions and17controls but no accepted credential case. [Change record](./runs/changes/2026-11-22-155919-jpeg-fixed-signing-diagnostics.json).
+- **Not claimed.** Raw second-run nativefalse flag was set late and does not establish no native call; retained failure explicitly qualifies it. Fixed error enums expose no raw exception, input, report or certificate data. No tag release, original closure or native success claimed.
+
+
+### 2026-11-22-155225-jpeg-qualification-namespace-witness
+
+Recorded 2026-11-22T15:52:25.793170+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Replaced a nonportable privileged-proc namespace read with the actual outer namespace witness and stricter dropped-privilege checks in the disposable JPEG qualification only.
+- **Evidence.** Two source-stable inert controls and distinct source review accept the different actual-self witness contract and refuse missing/same identity, root, retained capabilities/groups or missing no-new-privileges. First hosted run installed the exact lock and passed15 controls, then failed before SDK execution; its415-byte artifact is retained. [Change record](./runs/changes/2026-11-22-155225-jpeg-qualification-namespace-witness.json).
+- **Not claimed.** First environment exception was not captured and is not called an SDK defect. No application, parser, worker, timeout or tag behavior changed; native qualification awaits the authorized changed-source hosted run.
+
+
+### 2026-11-22-154604-jpeg-credential-native-candidate
+
+Recorded 2026-11-22T15:46:04.654981+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Added an isolated bounded JPEG credential/action CLI candidate and a read-only native qualification workflow using the existing locked optional SDK.
+- **Evidence.** Fifteen preliminary stdlib controls and one source-stable finite-report correction control pass; distinct source/workflow review is clear. Private bytes, source pins, action/signature/binding axes and owned child cleanup are explicit; PNG and text sources are unchanged. [Change record](./runs/changes/2026-11-22-154604-jpeg-credential-native-candidate.json).
+- **Not claimed.** Native signature, per-call public-anchor behavior and complete working acceptance remain pending the one approved disposable hosted run. No origin classification, FA/PA tag, full original closure, model, endpoint, account or local native installation.
+
+
+### 2026-11-22-155735-screen-visual-model-and-persuasion-data-4cceb0f1
+
+Recorded 2026-11-22T15:57:35.808790+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Grounded the visual execution plan in an official small-VLM candidate and explicit persuasion-data access and reuse restrictions.
+- **Evidence.** Primary model card and official SemEval task/terms were read. The candidate descriptive job, hardware measurement, source/weight rights, isolation, dataset split and independent claim-specific evaluation actions are explicit. Accountability still preserves136complete/66open. [Change record](./runs/changes/2026-11-22-155735-screen-visual-model-and-persuasion-data-4cceb0f1.json).
+- **Not claimed.** Research/planning only. No model/data download, registration, corpus redistribution, training, hardware benchmark, authenticity accuracy, tag adoption or original closure.
+
+
+### 2026-11-22-155230-visual-model-input-is-not-tool-authority-85f33827
+
+Recorded 2026-11-22T15:52:30.699317+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Added an explicit input-to-authority boundary to the planned VLM/image method baseline.
+- **Evidence.** The execution plan requires instruction-bearing-image controls, escaped explanations and no tool/file/network/device authority from OCR or model text. Existing accountability checks confirm unchanged original completion and retained evidence chronology. [Change record](./runs/changes/2026-11-22-155230-visual-model-input-is-not-tool-authority-85f33827.json).
+- **Not claimed.** Planning only; no VLM is deployed, no implemented security control, tag accuracy or original closure is claimed.
+
+
+### 2026-11-22-154546-owner-split-email-and-visual-delivery-plan-d349f033
+
+Recorded 2026-11-22T15:45:46.551129+00:00 · Contributor: Codex PM /root; task-list /root/seo; workflow reviewer /root/share_debugger · change
+
+- **Changed.** Separated every remaining original into owner/external and engineering actions, sent the requested owner email, and prepared executable visual/video/spatial and delivery plans.
+- **Evidence.** All202 original record objects and criteria are unchanged,136complete/66open. Exact66-way ownership split and SENT email have distinct review. Board records25 named deliveries separately from4 originals. Actual2f03 NF diagnostic completes125900ms below180s; actual current source inventory7935 refreshed through its real producer. Corrected read-only Linux workflow uses existing full69/64 capabilities and passed separate syntax/inert review. [Change record](./runs/changes/2026-11-22-154546-owner-split-email-and-visual-delivery-plan-d349f033.json).
+- **Not claimed.** No new original closure, tag release, human validation, inbox-read confirmation, public image activation, hosted new-workflow success or source-archive admission. Current archive exceeds128000000 bytes; versioned capacity repair and fresh affected checks remain. SEO observations dated; zero social accounts connected.
+
+
+### 2026-11-22-150014-nf-cleanup-correction-integration-4904c1a8
+
+Recorded 2026-11-22T15:00:14.939077+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrated the independently reviewed diagnostic cleanup correction before hosted NF measurement.
+- **Evidence.** Diagnostic failures cannot skip owned browser/context closure or mask a primary failure. Original application sources, cases, result waits and180s release wrapper remain unchanged. [Change record](./runs/changes/2026-11-22-150014-nf-cleanup-correction-integration-4904c1a8.json).
+- **Not claimed.** Twenty inert controls and distinct source review do not claim browser or hosted success. Separate300s diagnostic remains measurement-only; protocol/website remain pending.
+
+
+### 2026-11-22-145825-nf-diagnostics-independent-cleanup-8c683dc3
+
+Recorded 2026-11-22T14:58:25.236227+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Made browser and context closure independent of diagnostic checkpoint failures, retaining primary and cleanup failure evidence.
+- **Evidence.** Final20inert controls pass including begin/end/both checkpoint refusal, actual stub close error, context/browser backstop, async/falsy failures and close-once. Original180sCOMMANDS,300sdiagnosticworkflow and fixturehook bytes unchanged. [Change record](./runs/changes/2026-11-22-145825-nf-diagnostics-independent-cleanup-8c683dc3.json).
+- **Not claimed.** Originalf638/source-onlyP2finding retained; no actualbrowser/build/SDK/hostedrun or release acceptance, no timeoutwaiver.
+
+### 2026-11-22-145037-nf-timing-diagnostic-integration-4e7d10d3
+
+Recorded 2026-11-22T14:50:37.206946+00:00 · Contributor: Codex · change
+
+- **Changed.** Integrated separately reviewed NF timing-only instrumentation without changing release acceptance.
+- **Evidence.** Application and worker sources, canonical cases and the180s release wrapper are preserved. Existing PS/PII/extension receipts remain source-current; protocol and website are explicitly pending fresh checks. [Change record](./runs/changes/2026-11-22-145037-nf-timing-diagnostic-integration-4e7d10d3.json).
+- **Not claimed.** The new300s hosted workflow measures timing only and has not run. No original closure, image publication, tag release or deadline waiver.
+
+
+### 2026-11-22-144716-nf-pr149-closed-timing-diagnostic-afd8e78b
+
+Recorded 2026-11-22T14:47:16.948763+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Added closed fault/peer/cleanup timing to NF verification and a read-only hosted300s diagnostic workflow without changing the180s release wrapper.
+- **Evidence.** 15 inert diagnostics pass; syntax and workflow blocks parse. ExactPSthenMT input/order/default records and finally cleanup preserved, unknown/private/getter progress refused, original COMMANDS and50000 result waits unchanged. [Change record](./runs/changes/2026-11-22-144716-nf-pr149-closed-timing-diagnostic-afd8e78b.json).
+- **Not claimed.** No localbrowser/build/SDK or hostedexecution. Diagnostic300s is timing-only and cannot clear180s release gate, PR149, tagaccuracy or original requirements.
+
+### 2026-11-22-143836-pr149-nf-hosted-release-blocker-4a0ffc2c
+
+Recorded 2026-11-22T14:38:36.705211+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved the actual hosted NF deadline that blocks PR149 and image publication.
+- **Evidence.** Ten required checks passed, but hosted site fails at the canonical NF child180s deadline. Local64 is not promoted to protected delivery; exact blocked operation is unknown. [Change record](./runs/changes/2026-11-22-143836-pr149-nf-hosted-release-blocker-4a0ffc2c.json).
+- **Not claimed.** No new tag release, public update, timeout waiver or original closure. Narrow diagnostic source is being prepared independently.
+
+
+### 2026-11-22-141351-image-current-delivery-packet-f6448d4f
+
+Recorded 2026-11-22T14:13:51.115076+00:00 · Contributor: Codex · change
+
+- **Changed.** Accepted all five current image delivery capability checks, preserved failures and refreshed the complete66-original audit.
+- **Evidence.** All64 current website commands pass on unchanged sources, including actual FA browser records. Current PS, PII, extension and protocol receipts pass. Accessibility selection now fails solely for four missing real human reviews. [Change record](./runs/changes/2026-11-22-141351-image-current-delivery-packet-f6448d4f.json).
+- **Not claimed.** Protected/public image delivery remains pending. FA remains planned, no independent detector accuracy or human accessibility approval; original scope136complete/66open, target60 not met.
+
+
+### 2026-11-22-135920-fa-discovery-preview-regression-2ae5df4f
+
+Recorded 2026-11-22T13:59:20.183756+00:00 · Contributor: Codex · change
+
+- **Changed.** Corrected stale FA discovery regression while preserving planned-tag and no-AI-origin boundaries.
+- **Evidence.** The unchanged FA preview copy now has its own strict discovery contract using its actual presentation state; other unavailable tags retain no-checker assertions. Focused SEO tests pass. [Change record](./runs/changes/2026-11-22-135920-fa-discovery-preview-regression-2ae5df4f.json).
+- **Not claimed.** No FA release or accuracy claim; prior failed full and continued executions remain immutable. Fresh website validation remains required; the first authored assertion read the wrong layer and was corrected before acceptance.
+
+
+### 2026-11-22-123035-image-private-diagnostic-capture-b8955f3d
+
+Recorded 2026-11-22T12:30:35.859692+00:00 · Contributor: Codex · change
+
+- **Changed.** Added a fixed fault-case label to mobile verification failures and preserved detailed image delivery diagnoses.
+- **Evidence.** The diagnostic keeps the same assertions and timeouts; actual focused mobile fault/recovery controls pass, while earlier failed full candidates remain failed with unknown causes. [Change record](./runs/changes/2026-11-22-123035-image-private-diagnostic-capture-b8955f3d.json).
+- **Not claimed.** No production behavior repair or reliability guarantee. Full current website execution, protected checks and public delivery remain pending.
+
+
+### 2026-11-22-115547-image-second-catalogue-failure-f9473e57
+
+Recorded 2026-11-22T11:55:47.014786+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded the second failed integrated image website candidate before further build diagnosis.
+- **Evidence.** The full combined website check still fails at catalogue despite a focused catalogue pass. Both original failure records are retained. [Change record](./runs/changes/2026-11-22-115547-image-second-catalogue-failure-f9473e57.json).
+- **Not claimed.** Root cause remains under diagnosis; no image deployment or release approval. The later detailed run correctly refused an uncovered new run record in prebuild.
+
+
+### 2026-11-22-110615-image-website-first-diagnosis-76c2639c
+
+Recorded 2026-11-22T11:06:15.919853+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved the first combined website failure and the owned-fixture catalogue diagnosis.
+- **Evidence.** The current catalogue passes focused execution after a failed integrated catalogue phase; the original failing receipt and unknown root cause remain explicit. [Change record](./runs/changes/2026-11-22-110615-image-website-first-diagnosis-76c2639c.json).
+- **Not claimed.** No source fix or known root cause is claimed. A complete fresh website execution remains required before publication.
+
+
+### 2026-11-22-102725-image-current-four-capabilities-984cfe0a
+
+Recorded 2026-11-22T10:27:25.814985+00:00 · Contributor: Codex · change
+
+- **Changed.** Recorded current image-delivery PS, PII, extension and protocol execution, preserving earlier observations.
+- **Evidence.** All four selected capability runs pass with unchanged sources; the final protocol run includes the accessibility evidence-selection repair. [Change record](./runs/changes/2026-11-22-102725-image-current-four-capabilities-984cfe0a.json).
+- **Not claimed.** Website64 and protected/public image delivery remain pending. No new original closure or independent tag accuracy.
+
+
+### 2026-11-22-102301-consume-real-automated-accessibility-receipts-ecb53264
+
+Recorded 2026-11-22T10:23:01.769390+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Connected the existing CI accessibility release assessor to explicit current website/extension receipt selections instead of absent default files; made launch documentation clearly date-scoped with a current-state pointer.
+- **Evidence.** Only evidence selection changes: fixed runs JSON paths, regular/no-link checks and existing assessor/exit semantics remain; actual-human and statistical gates are unchanged. Previous source692 publication proof is retained. [Change record](./runs/changes/2026-11-22-102301-consume-real-automated-accessibility-receipts-ecb53264.json).
+- **Not claimed.** Current combined-source assessment remains pending; no human accessibility or release pass is claimed. This does not close the broader original requirements or change136/66.
+
+
+### 2026-11-22-093836-prepare-current-image-policy-and-scope-projections-8df49c82
+
+Recorded 2026-11-22T09:38:36.161575+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Prepared current136/66 public scope data and new policy1.15 plain-text/download archives before complete image-source verification.
+- **Evidence.** All9newarchives match current source text; all9old1.14archive bytes remain unchanged. Current-accountability and source registration remain reviewed; no additional original closure. [Change record](./runs/changes/2026-11-22-093836-prepare-current-image-policy-and-scope-projections-8df49c82.json).
+- **Not claimed.** Combined64-command site execution, protected merge and actual public image/counter/download verification remain pending. No AI-origin, offline, physical/human or fulllicense clearance claim.
+
+
+### 2026-11-22-084630-align-current-scope-state-and-image-handoff-b8de0261
+
+Recorded 2026-11-22T08:46:30.308502+00:00 · Contributor: Codex PM /root; distinct registration reviewer /root/web_camo · change
+
+- **Changed.** Aligned every current scope-count alias and latest team snapshot with136complete66open, linked usable image/source verification guides and recorded distinct root-registration review.
+- **Evidence.** Actual accountability and session accounting pass; no current state/ledger count contradiction. The current source1.15/data-flow/64-command registration review is clear, while prior verified692 delivery remains a separate snapshot. [Change record](./runs/changes/2026-11-22-084630-align-current-scope-state-and-image-handoff-b8de0261.json).
+- **Not claimed.** All five combined-source receipts and next public counter/image/download activation remain pending. No FA/MT release, fullF057 or human/physical/legal acceptance is inferred.
+
+
+### 2026-11-22-081125-register-private-image-current-delivery-3d25f2b7
+
+Recorded 2026-11-22T08:11:25.788568+00:00 · Contributor: Codex PM /root; image author /root/web_camo; source reviewer /root/seo · change
+
+- **Changed.** Registered the reviewed optional image source/clients/lifecycle/current FA route in source-bound checks and existing CI; preserved all61 earlier website commands and strict command allowlist.
+- **Evidence.** Bounded Node wrapper syntax passes; actual author normal-build/FA route and distinct proof reviews are retained. Privacy wording explicitly distinguishes browser storage from temporary application state. [Change record](./runs/changes/2026-11-22-081125-register-private-image-current-delivery-3d25f2b7.json).
+- **Not claimed.** Registration is not execution on this combined scope/policy1.15 source. All current receipts, public counters/downloads and live FA activation require the next protected delivery. FA and fullF057 remain open;136complete66open.
+
+
+### 2026-11-22-080109-disclose-private-image-preview-data-flow-7389596b
+
+Recorded 2026-11-22T08:01:09.820436+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Versioned factual policy set1.15 for the optional local image-details preview while preserving all prior privacy sections and every1.14 archive.
+- **Evidence.** Actual module/body comparisons retain the other8policy bodies, publisher/release rule, all old privacy sections and9archive hashes. New copy describes explicit Inspect, no upload/storage, hidden default hash, optional exact record and no automatic export. [Change record](./runs/changes/2026-11-22-080109-disclose-private-image-preview-data-flow-7389596b.json).
+- **Not claimed.** Policy candidate is not public activation or professional clearance. Image/FA remain planned; no AI-origin verdict, research permission, physical erasure or independent validation is claimed. Protected/browser delivery remains pending.
+
+
+### 2026-11-22-075657-integrate-account-free-provenance-downloads-48da5673
+
+Recorded 2026-11-22T07:56:57.164157+00:00 · Contributor: Codex PM /root; author /root/share_debugger · change
+
+- **Changed.** Integrated durable versioned PS source/SPDX/attestation downloads and linked their account-free verification guide from About.
+- **Evidence.** Distinct source/trust-model review confirms five exact files match the already independently verified protected artifact; no downloaded manifest or saved observation is used as a trust anchor. [Change record](./runs/changes/2026-11-22-075657-integrate-account-free-provenance-downloads-48da5673.json).
+- **Not claimed.** Public download bytes and link activation await the next protected deployment. Full F057/X02 and independent tag accuracy remain open;136complete66open is unchanged.
+
+
+### 2026-11-22-074612-complete-original-reference-programme-ae4738be
+
+Recorded 2026-11-22T07:46:12.838102+00:00 · Contributor: Codex PM /root; authors /root/seo and /root/share_debugger; reviewer /root/web_camo · change
+
+- **Changed.** Closed the whole original F145 reference-programme job after protected source and actual public guide delivery; updated scope, attribution and task accounting to136complete66open.
+- **Evidence.** Eleven required checks and actual30-command Linux workflow pass;126 publicHTTP responses match protected source692, actual MT works in both engines. Current private programme lifecycle/refusals and distinct original-contract review satisfy the unchanged job. [Change record](./runs/changes/2026-11-22-074612-complete-original-reference-programme-ae4738be.json).
+- **Not claimed.** 60 remains unmet. This is a nonoperating reference programme, not actual accreditation, legal/mark adoption, independent tag validation or physical/human accessibility. Live scope counter projection still awaits the next protected publication.
+### 2026-11-22-080241-fa-image-normal-build-production-proof-206fc14a
+
+Recorded 2026-11-22T08:02:41.128135+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Recorded the actual normal-build FA image workflow and exact independent reviews, with required generated guide/index outputs.
+- **Evidence.** Normal build and both source-notice postbuild gates pass. First Chromium and WebKit actual FA route each match16canonical records,3fileUI and4corrupt refusals, private lifecycle/mobile controls and2optional failures followed by realMT/PS recovery.34source and29served bytes stable; distinct reviewer matched all bindings. [Change record](./runs/changes/2026-11-22-080241-fa-image-normal-build-production-proof-206fc14a.json).
+- **Not claimed.** FA remains Planned; no origin, watermark, credential, offline, physical-phone, accuracy, public activation or original closure. Root must regenerate current ledger outputs and complete protected, policy and public gates.
+
+
+### 2026-11-22-075604-fa-image-availability-guard-correction-0907c4b0
+
+Recorded 2026-11-22T07:56:04.670946+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Corrected the generic FA availability expectation before the first integration build and added exact-expression compatibility coverage.
+- **Evidence.** The original source-only mismatch is retained; current five integration groups pass for all20 availability expressions with19 sibling expectations preserved. Seven named base inputs match protected69298f and root9ac868. [Change record](./runs/changes/2026-11-22-075604-fa-image-availability-guard-correction-0907c4b0.json).
+- **Not claimed.** Verifier-only correction; no current normal-build/browser or publication credit and no FA/original closure.
+
+
+### 2026-11-22-075325-fa-private-image-route-integration-114e4a97
+
+Recorded 2026-11-22T07:53:25.016241+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Prepared the reviewed private PNG/JPEG container preview in the planned FA modal, with source-bound integration guards and a production-route verifier.
+- **Evidence.** Five focused Node integration groups, six temporary-filesystem groups, syntax and pinned JSX transformation pass; the canonical image component is unchanged. [Change record](./runs/changes/2026-11-22-075325-fa-private-image-route-integration-114e4a97.json).
+- **Not claimed.** Engineering component only. FA remains Planned and working=false; no origin, watermark, credential or original-closure claim. Current normal-build and browser proof and protected-publication base comparison remain pending.
+
+
+### 2026-11-22-072123-image-device-actual-browser-component-f071cd7a
+
+Recorded 2026-11-22T07:21:23.793717+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Finish the standalone private PNG/JPEG metadata workflow and retain exact actual Chromium/WebKit proof with a distinct source/artifact review.
+- **Evidence.** Actual firstbuild and firstbrowsercandidate pass: eachengine16 whole canonical records,3file-picker UI cases,4 corruptions refused, source/subject/size/privacy/lifecycle controls, optionalchunk/payloadfailure followedby real independentMT/PS findings.34sources/313servedfiles stable; distinctreview clears currentartifact. [Change record](./runs/changes/2026-11-22-072123-image-device-actual-browser-component-f071cd7a.json).
+- **Not claimed.** Standalone component only; no main/production integration, offline/physical/human/accuracy/origin/signature/tag/fulloriginal closure. New resultdoc is post-execution prose, not rebound UI proof.
+
+
+### 2026-11-22-071607-image-device-peer-reviewed-build-12ebe237
+
+Recorded 2026-11-22T07:16:07.334207+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Bind the distinct frozen image component source review before its authorized standalone build and sequential browser execution.
+- **Evidence.** Independent projection/source-pin/client/owned-output controls clear exact2460f154 source. Browser execution is next, not implied by source review. [Change record](./runs/changes/2026-11-22-071607-image-device-peer-reviewed-build-12ebe237.json).
+- **Not claimed.** No original/tag/main integration or image-origin claim; exact prior failures and source evidence remain historical.
+
+
+### 2026-11-22-071403-image-fixture-exclusive-output-cbc49933
+
+Recorded 2026-11-22T07:14:03.205456+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Make standalone fixture output exclusive and preserve any existing directory or failed candidate instead of clearing it. Bind the new focused ownership control.
+- **Evidence.** Three actual temporary-filesystem controls pass for prior-output preservation, linked-parent refusal and held-directory identity drift; no Vite/browser/runtime ran. Core image methods/client/worker/UI are unchanged. [Change record](./runs/changes/2026-11-22-071403-image-fixture-exclusive-output-cbc49933.json).
+- **Not claimed.** Preventative test-fixture safety change; no prior deletion/exposure reproduced. Actual browser acceptance remains pending. No tag/original closure.
+
+
+### 2026-11-22-070939-image-device-source-freeze-2b62f0f5
+
+Recorded 2026-11-22T07:09:39.953221+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Freeze complete standalone image metadata component, reviewed pure source cohort, actual file-capture/result boundaries and runnable fixture verifier for scheduled browser execution.
+- **Evidence.** Current11 focused Python tests pass including16 canonical projected cases, pixel/metadata/inflate caps, AST/source rebinding and publication uncertainty;10 Node groups validate16 records/11 refusals and abortable capture/worker bounds;3 JSX modules parse with pinned local compiler. Static method inputs and5runtime file pins remain current. [Change record](./runs/changes/2026-11-22-070939-image-device-source-freeze-2b62f0f5.json).
+- **Not claimed.** Source implementation frozen; actual WASM/browser execution, complete component acceptance and root integration remain pending. No image-origin/signature/accuracy/tag/original closure.
+
+
+### 2026-11-22-070249-image-device-fixed-canonical-source-9a623445
+
+Recorded 2026-11-22T07:02:49.718693+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Implement separate on-device PNG/JPEG metadata input with fixed canonical AST projections, bounded private capture and isolated worker, without a new image tag.
+- **Evidence.** Actual9 focused Python controls compare16 native/projected records and fixed-source/AST/IO refusals;10 Node groups compare16 records and11 corruption refusals with preallocation/capture/worker bounds. Existing5runtime files statically hashed; design projection separately reviewed. [Change record](./runs/changes/2026-11-22-070249-image-device-fixed-canonical-source-9a623445.json).
+- **Not claimed.** Browser execution and full component acceptance pending root slot. No main-site integration, origin/signature/watermark/authenticity/accuracy/tag/original closure.
+
+
 ### 2026-11-22-070807-accept-complete-programme-mt-engineering-packet-fd3a1103
 
 Recorded 2026-11-22T07:08:07.708071+00:00 · Contributor: Codex PM /root; authors /root/seo and /root/web_camo and /root/share_debugger · change
@@ -204,6 +587,13 @@ Recorded 2026-11-22T05:41:37.156328+00:00 · Contributor: Codex /root/seo; disti
 - **Changed.** Delivered the complete nonoperating F145 reference-programme design and consumed private application/review/appeal/correction/renewal/withdrawal workflow, with exact source/programme/evidence bindings.
 - **Evidence.** Actual30 current CLI controls passed, including separate declared-role decisions, contested/corrected outcomes, unsupported-scope/source/authority/no-overwrite refusals and personal PS recovery. Distinct reviewer ran four affected controls and three private CLI checks. All original criteria unchanged. [Change record](./runs/changes/2026-11-22-054137-deliver-complete-reference-certification-programme-ba315aec.json).
 - **Not claimed.** No actual accreditation, institution, role identity, mark/legal adoption, independent accuracy or tag release.37 earlier-source controls and8 affected current controls are separately recorded; no all39 current claim. Protected/public delivery and original counters remain parent-owned and pending.
+### 2026-11-22-065604-preserve-account-free-ps-provenance-downloads-6a8b738a
+
+Recorded 2026-11-22T06:56:04.589688+00:00 · Contributor: Codex /root/share_debugger; protected verification and delivery remain separate · change
+
+- **Changed.** Added immutable commit-specific public PS ZIP/SPDX/preparation/bundle/observation downloads and a separate independent-trust guide; preserved all five original protected artifacts byte-for-byte.
+- **Evidence.** Actual detached verification succeeds with empty HOME/GitHub configuration and no credentials; trusted roots obtained independently without login. Signed predicate/subject, exact copies, private-path/token scans and guide syntax pass. [Change record](./runs/changes/2026-11-22-065604-preserve-account-free-ps-provenance-downloads-6a8b738a.json).
+- **Not claimed.** Static delivery candidate only; no HTTP publication tested or new signature generated. Raw preparation remains unverified, past observation is unsigned, no trust roots shipped. No all-project licensing, accuracy or full original completion.
 
 
 ### 2026-11-22-055521-record-current-delivery-engineering-packet-f5ca3c80

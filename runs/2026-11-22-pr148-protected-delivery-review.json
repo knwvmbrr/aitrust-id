@@ -1,0 +1,93 @@
+{
+  "captured_at": "2026-11-22T07:46:12.309925+00:00",
+  "profile": "actual-protected-source-delivery-review/v1",
+  "pass": true,
+  "reviewed_by": "Codex PM /root",
+  "pull_request": "https://github.com/knwvmbrr/aitrust-id/pull/148",
+  "source_head": "026634ea7715c205d5fc6ec4e805409f6dfe573c",
+  "merge_commit": "69298f3656ece0a0c419348085c486ff706e3aa0",
+  "merged_at": "2026-11-22T07:31:49Z",
+  "normal_merge_no_bypass": true,
+  "all11required_checks": [
+    {
+      "name": "change-records",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44996893180/job/137129749347"
+    },
+    {
+      "name": "host-config",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44996893180/job/137129749262"
+    },
+    {
+      "name": "scope-plan",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44996893180/job/137129749282"
+    },
+    {
+      "name": "spec",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44996893180/job/137129749337"
+    },
+    {
+      "name": "no-egress",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44996893180/job/137129749034"
+    },
+    {
+      "name": "regressions",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44996893180/job/137129749417"
+    },
+    {
+      "name": "accessibility",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44996893180/job/137129749432"
+    },
+    {
+      "name": "device-builder (3.12)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44996893180/job/137129749395"
+    },
+    {
+      "name": "device-builder (3.13)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44996893180/job/137129749314"
+    },
+    {
+      "name": "device-builder (3.14)",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44996893180/job/137129749480"
+    },
+    {
+      "name": "site",
+      "conclusion": "SUCCESS",
+      "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44996893180/job/137129749348"
+    }
+  ],
+  "unresolved_review_threads": 0,
+  "dedicated_programme_workflow": {
+    "run": 44996893223,
+    "event": "pull_request",
+    "head": "026634ea7715c205d5fc6ec4e805409f6dfe573c",
+    "success": true,
+    "actual_Linux_commands": 30,
+    "raw_report": {
+      "path": "runs/2026-11-22-f145-hosted-reference-workflow.json",
+      "sha256": "5a1c01c51b23cee8c2fa73a244205f776a7db0cf53f18100cc1e2c6727997713"
+    },
+    "execution_context": {
+      "path": "runs/2026-11-22-f145-hosted-execution-context.json",
+      "sha256": "0c1c0fe03a22e8339a9a5620b7d29f76cb5c2b2c755fe73a46003ea5dfc5cf04"
+    },
+    "source_author_fields_are_not_runtime_identity": true
+  },
+  "all_optional_release_gates_passed": false,
+  "retained_release_gate_failures": [
+    "Independent frozen holdout/method absent; PS precision lower bound below0.93; recall lower bound below0.75; calibration evidence missing.",
+    "Full accessibility release aggregate has stale/missing selected automated receipts and requires actual NVDA/VoiceOver human reviews."
+  ],
+  "independent_tag_release_approved": false,
+  "exact_merge_tree_matches_tested_head": true,
+  "canonical12untracked_files_preserved": true
+}

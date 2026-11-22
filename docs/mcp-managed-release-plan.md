@@ -115,9 +115,11 @@ source issue under review; no new runtime claim covers it.
 Both cleanup counters were subsequently reproduced and corrected; failed private
 workspaces are retained. The shared primitive was repaired separately at
 f382a3b46683e795a5d502d3f865cb2d388a33c6, helper SHA256 2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e.
-The finite permission module requires those exact fixed helper bytes. This MCP
-branch still has the older protected base, so its actual route remains refused
-until normal protected-main integration and current metadata collection.
+The finite permission module requires those exact fixed helper bytes. The first
+MCP source handoff had the older protected base and refused permission. A later
+normal protected `085106c1` merge and actual metadata refresh selected the fixed
+helper and admitted finite technical MCP permission; signatures and fresh runtime
+execution remain separate conditions.
 
 The factual pure-wheel/OpenSSL review and a distinct CFFI/Rust review found no
 missing retained grant/attribution within their declared scopes. The trusted

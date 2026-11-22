@@ -1,0 +1,63 @@
+{
+  "actual_inert_controls": {
+    "bash_blocks_syntax_valid": 9,
+    "inline_python_blocks_compiled": 2,
+    "jdk_selection_fixtures": [
+      {
+        "case": "missing",
+        "pass": true,
+        "real_jvm_executed": false
+      },
+      {
+        "case": "fallback",
+        "pass": true,
+        "real_jvm_executed": false
+      },
+      {
+        "case": "newline",
+        "pass": true,
+        "real_jvm_executed": false
+      }
+    ],
+    "yaml_parsed": true
+  },
+  "captured_at": "2026-11-22T15:42:43.232458+00:00",
+  "limits": [
+    "Source and inert guard review only; actual hosted dependencies, timings and both current source-bound receipts remain pending.",
+    "No current inventory, receipt hash, approval, original count, protected signature or release admission was changed."
+  ],
+  "not_executed": [
+    "hosted workflow",
+    "69-command protocol profile",
+    "64-command website profile",
+    "real Java compile or version command",
+    "package/browser installation",
+    "site build or browser",
+    "actual receipt size/host capacity/source stability"
+  ],
+  "pass": true,
+  "profile": "hosted-delivery-workflow-source-review/v1",
+  "resolved_findings": [
+    "runner context moved from unsupported job.env to supported step.env",
+    "artifact upload gated on successful bounded unique-key JSON reader",
+    "existing Java compiler presence required to prevent silent JVM fixture skips"
+  ],
+  "reviewer": "Codex / share_debugger",
+  "reviewer_harness_initial_failure": {
+    "class": "AttributeError",
+    "product_failure": false,
+    "reason": "PyYAML1.1 parses on as a boolean key; initial reviewer assertion called startswith directly. Corrected assertion stringifies key; workflow source unchanged."
+  },
+  "source_review": [
+    "same-repository read-only PR and protected main-push triggers; pinned setup/upload actions; no signing/deploy/secrets",
+    "only existing locked Python/npm/browser dependencies; no JDK install",
+    "existing full69 protocol then64 website ordered command profiles; assess both actual receipts",
+    "two fresh explicit unavailable placeholders, original deadlines and50-minute job cap; interrupted work cannot pass",
+    "literal two JSON upload paths, existing2MB evidence-reader limit per file and7-day retention; no dist/log/source/user-data upload"
+  ],
+  "source_sha256": {
+    ".github/workflows/delivery-revalidation.yml": "8e86bc6fbe099267f5c52ce1a19b8b53f21f886ab625fb65860bd3413381cfc1",
+    "docs/hosted-delivery-revalidation-plan.md": "67b9e898ceeb467511d3bda63973de66c331a15e9a6a152c680980faee964286"
+  },
+  "source_stable": true
+}

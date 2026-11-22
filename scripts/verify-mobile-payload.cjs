@@ -74,7 +74,7 @@ async function main(){
         await page.unroute(base+asset);await dialog.getByRole('button',{name:'Try loading again',exact:true}).click();
         await dialog.getByRole('button',{name:'Download details',exact:true}).waitFor();await exportDetails(page,dialog,ps);
         failures.push({fault,refused:true,checker_available:true,retry_with_complete_export:true});
-      }finally{await context.close();}
+      }catch(error){error.mobileFault=fault;throw error;}finally{await context.close();}
     }
     // Browser routing disables its HTTP cache. This real owned server does not:
     // return one corrupt cacheable 200, repair the origin, then require recovery.

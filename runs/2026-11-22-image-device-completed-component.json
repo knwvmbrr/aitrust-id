@@ -1,0 +1,71 @@
+{
+  "captured_at": "2026-11-22T07:21:23.755010+00:00",
+  "author": "Codex / web_camo",
+  "profile": "standalone-image-device-completed-component/v1",
+  "pass": true,
+  "source_commit": "2460f154f097cf4b47306897fe152663e0c9f2f2",
+  "canonical_source_commit": "8e1b1a23a1bef0659bf1ec567ceef647b5cd76a5",
+  "execution": {
+    "path": "runs/2026-11-22-image-device-browser-candidate-1.json",
+    "sha256": "e4ff049e12485078febc85a28cf7eb7b027aba54ffc5eb8c0b1b015845c14942"
+  },
+  "distinct_review": {
+    "path": "runs/2026-11-22-image-device-actual-proof-distinct-review.json",
+    "sha256": "03c60565dc0ed02dc085f3ad7f74e950597c47cde79969769b608e9742182529",
+    "reviewer": "Codex / seo",
+    "role": "source and actual evidence review; not independent human image-origin labels"
+  },
+  "current_source_matches_execution": true,
+  "source_before_after_stable": true,
+  "served_before_after_stable": true,
+  "source_files": 34,
+  "served_files": 313,
+  "each_engine": {
+    "complete_canonical_records": 16,
+    "canonical_record_states": {
+      "OBSERVED": 7,
+      "UNAVAILABLE": 9
+    },
+    "actual_file_UI_records": 3,
+    "corrupt_actual_worker_refusals": 4,
+    "input_size_gate_before_FileReader_and_worker": true,
+    "optional_chunk_and_payload_failure_followed_by_actual_MT_PS": true
+  },
+  "focused": {
+    "Python_current": 11,
+    "Node_client_groups": 10,
+    "Node_corrupt_refusals": 11,
+    "Node_canonical_records": 16,
+    "owned_fixture_output_groups": 3,
+    "JSX_transform_sources": 3
+  },
+  "build": {
+    "exit_code": 0,
+    "log_sha256": "3d6f3f2190f0419fae5ea88efe747e5d5f0dae89badc0b7bfb645ff14d3daff4",
+    "source_runtime_files_verified": 5,
+    "runtime_copy_namespaces": 1,
+    "new_package_or_model_install": false,
+    "normal_public_website_build_claimed": false
+  },
+  "screenshots": {
+    "output/verification/image-device-screenshots/webkit/light-320.png": "2da109d3d900d24db870307207dab742e55ab222af93ca83b61a52795cf7726d",
+    "output/verification/image-device-screenshots/webkit/dark-320.png": "53d441bf65901589e60d172275f0e80746237146a10f82ab713527e3757ca874",
+    "output/verification/image-device-screenshots/chromium/light-320.png": "1727274a6c5475db5981cd18d9bf7826fe6228052d5dba050b3c939f76bd5451",
+    "output/verification/image-device-screenshots/chromium/dark-320.png": "a6cede800ca14fdf3509d0fe7d495459cb3d8829f32579474735d55a7ba2e4e7"
+  },
+  "post_execution_documentation": {
+    "path": "docs/image-device-result.md",
+    "sha256": "9973f3f3ae00899c298368206d7b7480bb51ca469b050aa6885b309755c778b7",
+    "not_represented_as_executed_UI_source": true
+  },
+  "limits": [
+    "Standalone development component; root shared mount/prepare/catalogue/policy/CI integration and protected/public execution remain pending.",
+    "No offline installation/use, physical phone, human screen-reader or general device coverage established.",
+    "Selected container observations only; no pixel validity, origin, watermark/signature, authenticity/truth, FA/PA/tag or full original closure.",
+    "Default hides hashes/raw metadata; deliberate exact records contain linkable encoded-byte identity.",
+    "Existing public runtime source/notice and dependency-policy gates remain required at production integration; no global licensing clearance."
+  ],
+  "tag_issued": false,
+  "original_requirement_closed": false,
+  "production_published": false
+}

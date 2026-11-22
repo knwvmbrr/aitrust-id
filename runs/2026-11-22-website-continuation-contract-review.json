@@ -1,0 +1,65 @@
+{
+  "profile": "website-same-source-continuation-contract-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T13:46:33.577140+00:00",
+  "reviewed_by": "Codex / seo",
+  "assessment": "Source-only clearance of explicit same-source continuation under current authoritative revalidation contract; not actual completion or a product-fix claim.",
+  "framework": {
+    "path": "protocol/revalidation.py",
+    "sha256": "a8ea8d3b6fadf0cc0023234496fa00a0b7f7cf582ceff8ed38c9db8c93297379",
+    "execute_lines": [
+      66,
+      82
+    ],
+    "assess_lines": [
+      84,
+      98
+    ],
+    "contract": "execute uses current ordered commands, interpreter substitution and600s. assess requires source_unchanged true, current complete fingerprint, exact complete ordered command list, integer-zero exits and output digests. It does not require one uninterrupted invocation."
+  },
+  "prior_actual_evidence": {
+    "path": "runs/2026-11-22-image-recorded-website.json",
+    "sha256": "21f59ca339a1b74afd2704dc905dcffecb86cc6bb68c3324dedbd5412cddc440",
+    "captured_at": "2026-11-22T13:04:19.344835+00:00",
+    "actual_passing_prefix_checks": 22,
+    "known_failed_1_based_index": 23,
+    "failed_command": {
+      "command": [
+        "node",
+        "scripts/verify-agent-output-view.cjs"
+      ],
+      "exit": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "8d153df3e52d834a3c3878b83129584c30635c30b21b479cf1894b9b059c3f06"
+    },
+    "full_required_commands": 64,
+    "source_unchanged_recorded": true
+  },
+  "reviewed_private_observer": {
+    "path": "output/coordination/continue-image-website.py",
+    "sha256": "023d66b3f169132fb2824b35225c53ca0fbc43b2db5871b38cd67d23d8a45c2a",
+    "actual_expected_prior_SHA_guard": true,
+    "actual_expected23checks_and_start22_guards": true,
+    "before_and_after_full_source_fingerprint_equality_required": true,
+    "prior_passFalse_schema_and_accuracy_releaseFalse_checked": true,
+    "original22_passing_check_objects_retained_verbatim": true,
+    "failed23_and_remainder_executed_again_same_arguments_and600s": true,
+    "final_assess_called_before_any_PASS": true,
+    "output_exclusive_new_receipt": true,
+    "explicit_continued_from_SHA_timestamp_and_new_indices": true,
+    "raw_output_logs_under_exclusive0700private_directory": true,
+    "original_failed_receipt_preserved": true
+  },
+  "required_final_review": [
+    "Actual continuation must finish indices23\u201364 with all integer-zero exits, full current fingerprint equality and assessPASS; retain current helper identity and all private logs.",
+    "If source/check fingerprints change or any command fails, new final receipt remains failed; no retained prefix may be relabeled against a changed source.",
+    "Final receipt must retain continuation provenance and describe22earlier+42new actual checks; do not call it a wholly fresh64-command run or root-cause repair of original30s child timeout."
+  ],
+  "findings": [],
+  "limits": [
+    "No source edits/tests/revalidation/browser execution or root/public writes by reviewer.",
+    "Parent reports original22 actual execution and current unchanged fingerprint; reviewer independently inspected immutable receipt/check identities and observer/framework source, not rerun checks.",
+    "The timeout retry stage is preserved, not explained as a proven product defect/fix. Future timeout partial stdout/stderr retention is diagnostic improvement, not a required pass-waiver change under current contract.",
+    "Current review does not claim continuation has completed or passed."
+  ]
+}
