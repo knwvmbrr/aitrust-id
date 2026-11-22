@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-143836-pr149-nf-hosted-release-blocker-4a0ffc2c
+
+Recorded 2026-11-22T14:38:36.705211+00:00 · Contributor: Codex · change
+
+- **Changed.** Preserved the actual hosted NF deadline that blocks PR149 and image publication.
+- **Evidence.** Ten required checks passed, but hosted site fails at the canonical NF child180s deadline. Local64 is not promoted to protected delivery; exact blocked operation is unknown. [Change record](./runs/changes/2026-11-22-143836-pr149-nf-hosted-release-blocker-4a0ffc2c.json).
+- **Not claimed.** No new tag release, public update, timeout waiver or original closure. Narrow diagnostic source is being prepared independently.
+
+
 ### 2026-11-22-141351-image-current-delivery-packet-f6448d4f
 
 Recorded 2026-11-22T14:13:51.115076+00:00 · Contributor: Codex · change
