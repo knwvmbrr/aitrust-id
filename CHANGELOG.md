@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-064100-update-reviewed-programme-milestones-65b65940
+
+Recorded 2026-11-22T06:41:00.773536+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Updated scope and dated team board for the actual integrated reference programme and independent MT browser work, retaining135complete67open.
+- **Evidence.** F145 now has four evidenced milestones from current39focused controls and30CLI operations plus distinct review; all202 original IDs and full historical acceptance remain. [Change record](./runs/changes/2026-11-22-064100-update-reviewed-programme-milestones-65b65940.json).
+- **Not claimed.** No new original closure or MT tag release. Final F145 protected/public delivery and current integrated checks remain pending; physical/human/legal gates stay open.
+
+
 ### 2026-11-22-063944-bind-programme-and-mt-delivery-c385f7ac
 
 Recorded 2026-11-22T06:39:44.259300+00:00 · Contributor: Codex PM /root · change

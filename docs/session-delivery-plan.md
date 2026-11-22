@@ -1,5 +1,24 @@
 ## Current delivery snapshot — 2026-11-22T04:37:29.411744+00:00
 
+## Current execution snapshot — 2026-11-22T06:41:00.311902+00:00
+
+Protected source cd3 and the public site are verified: **135 complete / 67 open;
+60 remains unmet**. N-001 and N-010 are fully completed software jobs. F-145 is
+at80: its whole nonoperating programme and private reference lifecycle function,
+with39current focused controls,30actual CLI commands and distinct review. Public
+guide/discoverability, current CI and protected delivery remain before final
+acceptance. Its legal/institution/mark activation gates stay separate and open.
+The optional MT selected-pair preview is integrated, with its own worker and
+unchanged older MT/PS; this is not a complete MT tag or accuracy claim.
+
+The PM owns integration/publication and counters; /root/share_debugger is building
+programme discoverability in an isolated checkout; /root/seo audits the next whole
+originals; /root/web_camo plans the next independent tag outcome. These are dated
+assignments, not permanently running bots. The historical snapshots below are
+preserved; their old counts and blanket F145 classification are superseded by
+this exact-contract review and current evidence, not erased or weakened.
+
+
 **135 complete / 67 open original requirements; target60 remains unmet.**
 N-010's governed organization-policy software and N-001's accepted offline
 assertion migration satisfy their unchanged original contracts. F-155's optional
