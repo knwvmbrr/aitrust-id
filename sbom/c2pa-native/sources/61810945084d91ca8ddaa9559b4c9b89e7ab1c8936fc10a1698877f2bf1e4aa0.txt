@@ -1,0 +1,21 @@
+[package]
+name = "abnf"
+description = "A nom-based parser for ABNF."
+version = "0.13.0"
+authors = ["Damian Poddebniak <poddebniak@fh-muenster.de>"]
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+edition = "2018"
+
+repository = "https://github.com/duesee/abnf"
+keywords = ["abnf", "parser", "nom"]
+
+[dependencies]
+nom = "7"
+abnf-core = "0.5"
+
+[dev-dependencies]
+quickcheck        = "1"
+quickcheck_macros = "1"
+rand              = "0.8"
+rand_distr        = "0.4"

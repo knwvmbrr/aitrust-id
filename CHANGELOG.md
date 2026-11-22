@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-22
+
+### 2026-11-22-030006-c2pa-native-published-source-graph-4fb27b8a
+
+Recorded 2026-11-22T03:00:06.408545+00:00 · Contributor: Codex /root/web_camo; distinct reviewer /root/seo · change
+
+- **Changed.** Derived the exact published C2PA FFI Cargo resolution and441checksummed source/license records, separate pinned source-notice supplements and native registry-label observations; added offline/cache verifier.
+- **Evidence.** Actual441archive replay,1131dependency edges,2518retained texts,2native135label scans and5CLI controls; different checkout review with precise non-replay credit. [Change record](./runs/changes/2026-11-22-030006-c2pa-native-published-source-graph-4fb27b8a.json).
+- **Not claimed.** Published union graph is not exact compiled native closure, publisher authentication, binary reproduction, permission clearance, global license approval or a tag/full original closure. Shared policy consumer and ledger remain PM-owned.
+
+
 ## Unreleased — 2026-11-21
 
 ### 2026-11-21-232853-final-closeout-source-and-public-access-3b570971

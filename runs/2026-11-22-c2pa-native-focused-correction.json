@@ -1,0 +1,31 @@
+{
+  "format": "ai-trust-id-c2pa-native-focused-correction/v1",
+  "captured_at": "2026-11-22T02:58:42.382298+00:00",
+  "pass": true,
+  "initial_focused": {
+    "tests": 11,
+    "passed": 10,
+    "errors": 1,
+    "log_sha256": "6ecd22df73e8e05a1ac2a56f2861b6bfff223f4c60a3774ad39cd33aecff1b34",
+    "historical_source_only": true
+  },
+  "affected_final": {
+    "tests": 3,
+    "pass": true,
+    "elapsed_seconds": 1.441,
+    "cases": [
+      "Exact fixed root lock rejects replacement independently of mutable manifest.",
+      "Actual441-node retained-source graph consistency.",
+      "Forged license/dependency/clearance and typed coverage refuse."
+    ],
+    "log_sha256": "b160afc30b2533fff471f363ddaadce9f8e094f736d8812e9e2be5e7d99f2dc8"
+  },
+  "current_source_sha256": {
+    "tools/c2pa_native_obligations.py": "134d8b7010a9dbab91004f2ffaaf66f3ead26817520b54fed56b811e4f751f7e",
+    "scripts/verify-c2pa-native-obligations.py": "d473390bf18392f6bf8e61d012680cc65bc3e03c67be5ca0d7a37d779c5fe322",
+    "tests/test_c2pa_native_obligations.py": "1fd437c4f75baf83a18795e7301bf5c29dbbfb9326332e21556dddfcebe11223",
+    "sbom/c2pa-native/manifest.json": "5e9e5e45c13013f727a1fb8a098b6e70db7bb363c2b43bff16cfc834c2ff4a14"
+  },
+  "no_package_or_native_execution": true,
+  "original_requirement_closed": false
+}

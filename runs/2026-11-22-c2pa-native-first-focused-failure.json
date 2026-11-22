@@ -1,0 +1,14 @@
+{
+  "format": "ai-trust-id-c2pa-native-focused-first/v1",
+  "captured_at": "2026-11-22T02:54:31.194650+00:00",
+  "pass": false,
+  "tests": 11,
+  "passed": 10,
+  "errors": 1,
+  "failure_signature": "Expected ValueError but actual missing-cache path properly raised FileNotFoundError before parsing.",
+  "diagnosis": "Test fixture must accept the existing OSError refusal family, not alter producer failure behavior.",
+  "producer_sha256": "9d33c88b2a1f8d7b9284a937f194a27e285cf20f5f4573a03e10c82549670e25",
+  "test_sha256": "18d6b0ad0934cf6b18857f9f531100384187ce8d9f0b203fb03aa7b932bbc7c0",
+  "log_sha256": "6ecd22df73e8e05a1ac2a56f2861b6bfff223f4c60a3774ad39cd33aecff1b34",
+  "original_requirement_closed": false
+}

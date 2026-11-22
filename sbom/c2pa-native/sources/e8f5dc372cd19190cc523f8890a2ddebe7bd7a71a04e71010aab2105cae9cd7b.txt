@@ -1,0 +1,43 @@
+[package]
+name = "parsenic"
+version = "0.2.1"
+edition = "2021"
+license = "Apache-2.0 OR BSL-1.0 OR MIT"
+description = "A simple no-std/no-alloc I/O and parsing crate"
+repository = "https://github.com/ardaku/parsenic"
+documentation = "https://docs.rs/parsenic"
+homepage = "https://github.com/ardaku/parsenic/blob/v0/CHANGELOG.md"
+include = [
+    "/README.md",
+    "/src/",
+    "/LICENSE_APACHE",
+    "/LICENSE_BOOST",
+    "/LICENSE_MIT",
+]
+keywords = ["parsing", "encoding", "decoding", "format", "io"]
+categories = [
+    "no-std",
+    "no-std::no-alloc",
+    "rust-patterns",
+    "parsing",
+    "filesystem",
+]
+readme = "README.md"
+rust-version = "1.70"
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies.traitful]
+version = "0.3.0"
+
+[features]
+# Enable the `io` module, MSRV 1.84 for `Pin::as_deref_mut()`
+# 
+# Unstable API has no stability guarantees
+unstable-io = []
+
+# Enable usage of the `Error` trait in core, MSRV 1.81
+# 
+# Unstable API has no stability guarantees
+unstable-error = []

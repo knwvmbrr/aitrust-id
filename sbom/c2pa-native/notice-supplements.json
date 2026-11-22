@@ -1,0 +1,416 @@
+{
+  "format": "c2pa-native-pinned-source-notice-supplements/v1",
+  "captured_at": "2026-11-22T02:49:23.715893+00:00",
+  "packages": [
+    {
+      "package_id": "alloc-stdlib@0.2.4",
+      "repository": "https://github.com/dropbox/rust-alloc-no-stdlib",
+      "upstream_commit": "ae42d22078b98549e987d2f03d12df7b984fde47",
+      "vcs_path": "alloc-stdlib",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/8d80f7e29bc3026a1da617d5840bd6a1b015bfbe0dadbbb62d40de7dcb990344.txt",
+        "sha256": "8d80f7e29bc3026a1da617d5840bd6a1b015bfbe0dadbbb62d40de7dcb990344",
+        "bytes": 1981,
+        "official_url": "https://api.github.com/repos/dropbox/rust-alloc-no-stdlib/git/trees/ae42d22078b98549e987d2f03d12df7b984fde47"
+      },
+      "notices": [
+        {
+          "upstream_path": "LICENSE",
+          "official_url": "https://raw.githubusercontent.com/dropbox/rust-alloc-no-stdlib/ae42d22078b98549e987d2f03d12df7b984fde47/LICENSE",
+          "git_blob_sha1": "cd496ba72eb37e83a44958358d1f89a8a28cbc15",
+          "path": "sbom/c2pa-native/sources/c0c56f26d9c051cac4d200c34c84e7ae9aaa853e01a982a1df08b09931e518ae.txt",
+          "sha256": "c0c56f26d9c051cac4d200c34c84e7ae9aaa853e01a982a1df08b09931e518ae",
+          "bytes": 1483,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        }
+      ]
+    },
+    {
+      "package_id": "asn1-rs-impl@0.2.0",
+      "repository": "https://github.com/rusticata/asn1-rs",
+      "upstream_commit": "a20e5f7319c896737ad0f2557037817b91ad854f",
+      "vcs_path": "impl",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/50fb90236926095e8d4ae79063be848b8d0efa280bf913bac49113d1263018e2.txt",
+        "sha256": "50fb90236926095e8d4ae79063be848b8d0efa280bf913bac49113d1263018e2",
+        "bytes": 2917,
+        "official_url": "https://api.github.com/repos/rusticata/asn1-rs/git/trees/a20e5f7319c896737ad0f2557037817b91ad854f"
+      },
+      "notices": [
+        {
+          "upstream_path": "LICENSE-APACHE",
+          "official_url": "https://raw.githubusercontent.com/rusticata/asn1-rs/a20e5f7319c896737ad0f2557037817b91ad854f/LICENSE-APACHE",
+          "git_blob_sha1": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+          "path": "sbom/c2pa-native/sources/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        },
+        {
+          "upstream_path": "LICENSE-MIT",
+          "official_url": "https://raw.githubusercontent.com/rusticata/asn1-rs/a20e5f7319c896737ad0f2557037817b91ad854f/LICENSE-MIT",
+          "git_blob_sha1": "290e7b9be19d39a81c8eb24c75a6b5f1e57fea71",
+          "path": "sbom/c2pa-native/sources/a5c61b93b6ee1d104af9920cf020ff3c7efe818e31fe562c72261847a728f513.txt",
+          "sha256": "a5c61b93b6ee1d104af9920cf020ff3c7efe818e31fe562c72261847a728f513",
+          "bytes": 1060,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        }
+      ]
+    },
+    {
+      "package_id": "btree-range-map@0.7.2",
+      "repository": "https://github.com/timothee-haudebourg/btree-range-map",
+      "upstream_commit": "ad2af35cd1fe34a3bee5a95a0db1537846368c23",
+      "vcs_path": "",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/7cef53e4b00a5e1b383ca84d27702fd4f17c88c33f35f1ceed34021c65af8553.txt",
+        "sha256": "7cef53e4b00a5e1b383ca84d27702fd4f17c88c33f35f1ceed34021c65af8553",
+        "bytes": 2265,
+        "official_url": "https://api.github.com/repos/timothee-haudebourg/btree-range-map/git/trees/ad2af35cd1fe34a3bee5a95a0db1537846368c23"
+      },
+      "notices": []
+    },
+    {
+      "package_id": "c2pa-c-ffi@0.91.0",
+      "repository": "https://github.com/contentauth/c2pa-rs",
+      "upstream_commit": "e7cc666c3409bdaf4cea8e49046dfbf8290dff89",
+      "vcs_path": "c2pa_c_ffi",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/b863fdfa12064290026b72024d6485d78e4b6d68bfc93ecf09e103db1eeda541.txt",
+        "sha256": "b863fdfa12064290026b72024d6485d78e4b6d68bfc93ecf09e103db1eeda541",
+        "bytes": 5444,
+        "official_url": "https://api.github.com/repos/contentauth/c2pa-rs/git/trees/e7cc666c3409bdaf4cea8e49046dfbf8290dff89"
+      },
+      "notices": [
+        {
+          "upstream_path": "LICENSE-APACHE",
+          "official_url": "https://raw.githubusercontent.com/contentauth/c2pa-rs/e7cc666c3409bdaf4cea8e49046dfbf8290dff89/LICENSE-APACHE",
+          "git_blob_sha1": "758d439916bc780a7fa5c90aebc94863527f904d",
+          "path": "sbom/c2pa-native/sources/86bdd5dafab77451044b6fd6d2efab23e3410ce658eb097f04c04f4f54aed62f.txt",
+          "sha256": "86bdd5dafab77451044b6fd6d2efab23e3410ce658eb097f04c04f4f54aed62f",
+          "bytes": 11335,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        },
+        {
+          "upstream_path": "LICENSE-MIT",
+          "official_url": "https://raw.githubusercontent.com/contentauth/c2pa-rs/e7cc666c3409bdaf4cea8e49046dfbf8290dff89/LICENSE-MIT",
+          "git_blob_sha1": "e1e3bd7e9efec69f22be9f88fb8c37f6649a99d3",
+          "path": "sbom/c2pa-native/sources/89375a50de90d2dcaa04406086da832ad452ebcaf6ab402ef3d51b8401a67c71.txt",
+          "sha256": "89375a50de90d2dcaa04406086da832ad452ebcaf6ab402ef3d51b8401a67c71",
+          "bytes": 1083,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        }
+      ]
+    },
+    {
+      "package_id": "c2pa@0.91.0",
+      "repository": "https://github.com/contentauth/c2pa-rs",
+      "upstream_commit": "e7cc666c3409bdaf4cea8e49046dfbf8290dff89",
+      "vcs_path": "sdk",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/b863fdfa12064290026b72024d6485d78e4b6d68bfc93ecf09e103db1eeda541.txt",
+        "sha256": "b863fdfa12064290026b72024d6485d78e4b6d68bfc93ecf09e103db1eeda541",
+        "bytes": 5444,
+        "official_url": "https://api.github.com/repos/contentauth/c2pa-rs/git/trees/e7cc666c3409bdaf4cea8e49046dfbf8290dff89"
+      },
+      "notices": [
+        {
+          "upstream_path": "LICENSE-APACHE",
+          "official_url": "https://raw.githubusercontent.com/contentauth/c2pa-rs/e7cc666c3409bdaf4cea8e49046dfbf8290dff89/LICENSE-APACHE",
+          "git_blob_sha1": "758d439916bc780a7fa5c90aebc94863527f904d",
+          "path": "sbom/c2pa-native/sources/86bdd5dafab77451044b6fd6d2efab23e3410ce658eb097f04c04f4f54aed62f.txt",
+          "sha256": "86bdd5dafab77451044b6fd6d2efab23e3410ce658eb097f04c04f4f54aed62f",
+          "bytes": 11335,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        },
+        {
+          "upstream_path": "LICENSE-MIT",
+          "official_url": "https://raw.githubusercontent.com/contentauth/c2pa-rs/e7cc666c3409bdaf4cea8e49046dfbf8290dff89/LICENSE-MIT",
+          "git_blob_sha1": "e1e3bd7e9efec69f22be9f88fb8c37f6649a99d3",
+          "path": "sbom/c2pa-native/sources/89375a50de90d2dcaa04406086da832ad452ebcaf6ab402ef3d51b8401a67c71.txt",
+          "sha256": "89375a50de90d2dcaa04406086da832ad452ebcaf6ab402ef3d51b8401a67c71",
+          "bytes": 1083,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        }
+      ]
+    },
+    {
+      "package_id": "defmt-parser@1.0.0",
+      "repository": "https://github.com/knurling-rs/defmt",
+      "upstream_commit": "4a8cdb44891ed57b8ff5a023b6bec7137c48708f",
+      "vcs_path": "parser",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/3a8edee41c11ca37bec1970a712b2c9072a5d9a0ccb3d14d11affb023af25dc6.txt",
+        "sha256": "3a8edee41c11ca37bec1970a712b2c9072a5d9a0ccb3d14d11affb023af25dc6",
+        "bytes": 4804,
+        "official_url": "https://api.github.com/repos/knurling-rs/defmt/git/trees/4a8cdb44891ed57b8ff5a023b6bec7137c48708f"
+      },
+      "notices": [
+        {
+          "upstream_path": "LICENSE-APACHE",
+          "official_url": "https://raw.githubusercontent.com/knurling-rs/defmt/4a8cdb44891ed57b8ff5a023b6bec7137c48708f/LICENSE-APACHE",
+          "git_blob_sha1": "11069edd79019f7dafbe3138841cf289209270dd",
+          "path": "sbom/c2pa-native/sources/8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90.txt",
+          "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90",
+          "bytes": 10850,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        },
+        {
+          "upstream_path": "LICENSE-MIT",
+          "official_url": "https://raw.githubusercontent.com/knurling-rs/defmt/4a8cdb44891ed57b8ff5a023b6bec7137c48708f/LICENSE-MIT",
+          "git_blob_sha1": "e68a7ab37c8accca023db5f1505d48e4375d4324",
+          "path": "sbom/c2pa-native/sources/2710a622a896bba67356913d4d0492cab5465f61b2ecce6d880aeb483834fb50.txt",
+          "sha256": "2710a622a896bba67356913d4d0492cab5465f61b2ecce6d880aeb483834fb50",
+          "bytes": 1053,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        }
+      ]
+    },
+    {
+      "package_id": "delegate@0.8.0",
+      "repository": "https://github.com/kobzol/rust-delegate",
+      "upstream_commit": "e2880cf7b69684aaab86855aa128d9fb0321b0c9",
+      "vcs_path": "",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/5631fa10d5a28eb7badff7f4c9f278a7467f291780efdd28b5feb49d3c88deb6.txt",
+        "sha256": "5631fa10d5a28eb7badff7f4c9f278a7467f291780efdd28b5feb49d3c88deb6",
+        "bytes": 2137,
+        "official_url": "https://api.github.com/repos/kobzol/rust-delegate/git/trees/e2880cf7b69684aaab86855aa128d9fb0321b0c9"
+      },
+      "notices": [
+        {
+          "upstream_path": "LICENSE-APACHE",
+          "official_url": "https://raw.githubusercontent.com/kobzol/rust-delegate/e2880cf7b69684aaab86855aa128d9fb0321b0c9/LICENSE-APACHE",
+          "git_blob_sha1": "8dada3edaf50dbc082c9a125058f25def75e625a",
+          "path": "sbom/c2pa-native/sources/b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1.txt",
+          "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+          "bytes": 11357,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        },
+        {
+          "upstream_path": "LICENSE-MIT",
+          "official_url": "https://raw.githubusercontent.com/kobzol/rust-delegate/e2880cf7b69684aaab86855aa128d9fb0321b0c9/LICENSE-MIT",
+          "git_blob_sha1": "688d43f92fad946c826ac49c4edf7ec280fdad66",
+          "path": "sbom/c2pa-native/sources/be7ee8aa49dc586023669a0c600a0536fce6a9f61264a53a67cdd842564ed899.txt",
+          "sha256": "be7ee8aa49dc586023669a0c600a0536fce6a9f61264a53a67cdd842564ed899",
+          "bytes": 1078,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        }
+      ]
+    },
+    {
+      "package_id": "iref-core@3.2.2",
+      "repository": "https://github.com/timothee-haudebourg/iref",
+      "upstream_commit": "28add683f31d48caad073dcf6bd29fcc0ef90ee8",
+      "vcs_path": "crates/core",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/e0a1e2df78052a7291e7c111aeb31ce91af2c042cb68f252e86f57e5981d0c04.txt",
+        "sha256": "e0a1e2df78052a7291e7c111aeb31ce91af2c042cb68f252e86f57e5981d0c04",
+        "bytes": 3055,
+        "official_url": "https://api.github.com/repos/timothee-haudebourg/iref/git/trees/28add683f31d48caad073dcf6bd29fcc0ef90ee8"
+      },
+      "notices": [
+        {
+          "upstream_path": "LICENSE-APACHE",
+          "official_url": "https://raw.githubusercontent.com/timothee-haudebourg/iref/28add683f31d48caad073dcf6bd29fcc0ef90ee8/LICENSE-APACHE",
+          "git_blob_sha1": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+          "path": "sbom/c2pa-native/sources/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt",
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          "bytes": 10847,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        },
+        {
+          "upstream_path": "LICENSE-MIT",
+          "official_url": "https://raw.githubusercontent.com/timothee-haudebourg/iref/28add683f31d48caad073dcf6bd29fcc0ef90ee8/LICENSE-MIT",
+          "git_blob_sha1": "31aa79387f27e730e33d871925e152e35e428031",
+          "path": "sbom/c2pa-native/sources/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          "bytes": 1023,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        }
+      ]
+    },
+    {
+      "package_id": "jfifdump@0.6.0",
+      "repository": "https://github.com/vstroebel/jfifdump",
+      "upstream_commit": "013c03f3e5a7405974ddd1469d0ce4219c8b225b",
+      "vcs_path": "jfifdump",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/62524e5ee5eae59e736a033e0f37bda3029901e4210c897f15946681942b8b44.txt",
+        "sha256": "62524e5ee5eae59e736a033e0f37bda3029901e4210c897f15946681942b8b44",
+        "bytes": 2108,
+        "official_url": "https://api.github.com/repos/vstroebel/jfifdump/git/trees/013c03f3e5a7405974ddd1469d0ce4219c8b225b"
+      },
+      "notices": [
+        {
+          "upstream_path": "LICENSE-APACHE",
+          "official_url": "https://raw.githubusercontent.com/vstroebel/jfifdump/013c03f3e5a7405974ddd1469d0ce4219c8b225b/LICENSE-APACHE",
+          "git_blob_sha1": "dae69698150efd4026872d3b2c04c2418a6b5c77",
+          "path": "sbom/c2pa-native/sources/85a884980abd6032fc6b5439ba918ab16db9ac9051b5cf18db9c27c587df07c0.txt",
+          "sha256": "85a884980abd6032fc6b5439ba918ab16db9ac9051b5cf18db9c27c587df07c0",
+          "bytes": 10701,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        },
+        {
+          "upstream_path": "LICENSE-MIT",
+          "official_url": "https://raw.githubusercontent.com/vstroebel/jfifdump/013c03f3e5a7405974ddd1469d0ce4219c8b225b/LICENSE-MIT",
+          "git_blob_sha1": "6a4eb87467907c9eb8622bdbe58cb0bb798b23e3",
+          "path": "sbom/c2pa-native/sources/4d022727ea392ebba2fe5e9a5f78c610a0eae506b491f3db29c78b6d430d6503.txt",
+          "sha256": "4d022727ea392ebba2fe5e9a5f78c610a0eae506b491f3db29c78b6d430d6503",
+          "bytes": 1088,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        }
+      ]
+    },
+    {
+      "package_id": "r-efi@5.3.0",
+      "repository": "https://github.com/r-efi/r-efi",
+      "upstream_commit": "97b55bed1c2c91dcbf787674849f05337ff80b33",
+      "vcs_path": "",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/19ad8623c70b607c47ab182135792ac711515171b01aec75dca55c0cc12c136f.txt",
+        "sha256": "19ad8623c70b607c47ab182135792ac711515171b01aec75dca55c0cc12c136f",
+        "bytes": 2036,
+        "official_url": "https://api.github.com/repos/r-efi/r-efi/git/trees/97b55bed1c2c91dcbf787674849f05337ff80b33"
+      },
+      "notices": []
+    },
+    {
+      "package_id": "r-efi@6.0.0",
+      "repository": "https://github.com/r-efi/r-efi",
+      "upstream_commit": "7e1b0322d31d625f81a5656096330934f9cd835d",
+      "vcs_path": "",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/74f37b016d310d60e28d27eea3db7f82c55877e30f96c945f0cc8ceece09795b.txt",
+        "sha256": "74f37b016d310d60e28d27eea3db7f82c55877e30f96c945f0cc8ceece09795b",
+        "bytes": 2036,
+        "official_url": "https://api.github.com/repos/r-efi/r-efi/git/trees/7e1b0322d31d625f81a5656096330934f9cd835d"
+      },
+      "notices": []
+    },
+    {
+      "package_id": "range-traits@0.3.2",
+      "repository": "https://github.com/timothee-haudebourg/range-traits",
+      "upstream_commit": "19926504c0387a590f87ddc20c70de03cd3df72d",
+      "vcs_path": "",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/727b0e8e1953af6128e3ea25ded21c752e453c00dd194824e32c7fd75cbee59f.txt",
+        "sha256": "727b0e8e1953af6128e3ea25ded21c752e453c00dd194824e32c7fd75cbee59f",
+        "bytes": 1799,
+        "official_url": "https://api.github.com/repos/timothee-haudebourg/range-traits/git/trees/19926504c0387a590f87ddc20c70de03cd3df72d"
+      },
+      "notices": []
+    },
+    {
+      "package_id": "rasn-cms@0.28.14",
+      "repository": "https://github.com/librasn/rasn",
+      "upstream_commit": "398c530cb0a4e1a2ab9515eac5da79111dd3014e",
+      "vcs_path": "standards/cms",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/8437ddaae12ddcd14f42a40090bb1c98aafa73e14b5485d12a9ffd1467c5b732.txt",
+        "sha256": "8437ddaae12ddcd14f42a40090bb1c98aafa73e14b5485d12a9ffd1467c5b732",
+        "bytes": 3482,
+        "official_url": "https://api.github.com/repos/librasn/rasn/git/trees/398c530cb0a4e1a2ab9515eac5da79111dd3014e"
+      },
+      "notices": [
+        {
+          "upstream_path": "LICENCE-APACHE",
+          "official_url": "https://raw.githubusercontent.com/librasn/rasn/398c530cb0a4e1a2ab9515eac5da79111dd3014e/LICENCE-APACHE",
+          "git_blob_sha1": "edb4fd4715a4bc51827da2952627e55eeb653ea2",
+          "path": "sbom/c2pa-native/sources/ebd8153ef4d2d160d0bdc76a1821ac2a0eb1f57e8c056f3674032f8140c41745.txt",
+          "sha256": "ebd8153ef4d2d160d0bdc76a1821ac2a0eb1f57e8c056f3674032f8140c41745",
+          "bytes": 551,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        },
+        {
+          "upstream_path": "LICENCE-MIT",
+          "official_url": "https://raw.githubusercontent.com/librasn/rasn/398c530cb0a4e1a2ab9515eac5da79111dd3014e/LICENCE-MIT",
+          "git_blob_sha1": "39ec9b8397de5cbfcdead9f72f9773434e925f73",
+          "path": "sbom/c2pa-native/sources/ee1201a73de9b44ad1ef02a2f9f82705b1350b878e2bab3c3fb6282daf038a73.txt",
+          "sha256": "ee1201a73de9b44ad1ef02a2f9f82705b1350b878e2bab3c3fb6282daf038a73",
+          "bytes": 1073,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        }
+      ]
+    },
+    {
+      "package_id": "rasn-ocsp@0.28.14",
+      "repository": "https://github.com/librasn/rasn",
+      "upstream_commit": "398c530cb0a4e1a2ab9515eac5da79111dd3014e",
+      "vcs_path": "standards/ocsp",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/8437ddaae12ddcd14f42a40090bb1c98aafa73e14b5485d12a9ffd1467c5b732.txt",
+        "sha256": "8437ddaae12ddcd14f42a40090bb1c98aafa73e14b5485d12a9ffd1467c5b732",
+        "bytes": 3482,
+        "official_url": "https://api.github.com/repos/librasn/rasn/git/trees/398c530cb0a4e1a2ab9515eac5da79111dd3014e"
+      },
+      "notices": [
+        {
+          "upstream_path": "LICENCE-APACHE",
+          "official_url": "https://raw.githubusercontent.com/librasn/rasn/398c530cb0a4e1a2ab9515eac5da79111dd3014e/LICENCE-APACHE",
+          "git_blob_sha1": "edb4fd4715a4bc51827da2952627e55eeb653ea2",
+          "path": "sbom/c2pa-native/sources/ebd8153ef4d2d160d0bdc76a1821ac2a0eb1f57e8c056f3674032f8140c41745.txt",
+          "sha256": "ebd8153ef4d2d160d0bdc76a1821ac2a0eb1f57e8c056f3674032f8140c41745",
+          "bytes": 551,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        },
+        {
+          "upstream_path": "LICENCE-MIT",
+          "official_url": "https://raw.githubusercontent.com/librasn/rasn/398c530cb0a4e1a2ab9515eac5da79111dd3014e/LICENCE-MIT",
+          "git_blob_sha1": "39ec9b8397de5cbfcdead9f72f9773434e925f73",
+          "path": "sbom/c2pa-native/sources/ee1201a73de9b44ad1ef02a2f9f82705b1350b878e2bab3c3fb6282daf038a73.txt",
+          "sha256": "ee1201a73de9b44ad1ef02a2f9f82705b1350b878e2bab3c3fb6282daf038a73",
+          "bytes": 1073,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        }
+      ]
+    },
+    {
+      "package_id": "rasn-pkix@0.28.14",
+      "repository": "https://github.com/librasn/rasn",
+      "upstream_commit": "398c530cb0a4e1a2ab9515eac5da79111dd3014e",
+      "vcs_path": "standards/pkix",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/8437ddaae12ddcd14f42a40090bb1c98aafa73e14b5485d12a9ffd1467c5b732.txt",
+        "sha256": "8437ddaae12ddcd14f42a40090bb1c98aafa73e14b5485d12a9ffd1467c5b732",
+        "bytes": 3482,
+        "official_url": "https://api.github.com/repos/librasn/rasn/git/trees/398c530cb0a4e1a2ab9515eac5da79111dd3014e"
+      },
+      "notices": [
+        {
+          "upstream_path": "LICENCE-APACHE",
+          "official_url": "https://raw.githubusercontent.com/librasn/rasn/398c530cb0a4e1a2ab9515eac5da79111dd3014e/LICENCE-APACHE",
+          "git_blob_sha1": "edb4fd4715a4bc51827da2952627e55eeb653ea2",
+          "path": "sbom/c2pa-native/sources/ebd8153ef4d2d160d0bdc76a1821ac2a0eb1f57e8c056f3674032f8140c41745.txt",
+          "sha256": "ebd8153ef4d2d160d0bdc76a1821ac2a0eb1f57e8c056f3674032f8140c41745",
+          "bytes": 551,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        },
+        {
+          "upstream_path": "LICENCE-MIT",
+          "official_url": "https://raw.githubusercontent.com/librasn/rasn/398c530cb0a4e1a2ab9515eac5da79111dd3014e/LICENCE-MIT",
+          "git_blob_sha1": "39ec9b8397de5cbfcdead9f72f9773434e925f73",
+          "path": "sbom/c2pa-native/sources/ee1201a73de9b44ad1ef02a2f9f82705b1350b878e2bab3c3fb6282daf038a73.txt",
+          "sha256": "ee1201a73de9b44ad1ef02a2f9f82705b1350b878e2bab3c3fb6282daf038a73",
+          "bytes": 1073,
+          "role": "upstream_source_notice_not_present_in_selected_crate"
+        }
+      ]
+    },
+    {
+      "package_id": "static-regular-grammar@2.0.2",
+      "repository": "https://github.com/timothee-haudebourg/static-regular-grammar",
+      "upstream_commit": "31bcc76bb370f74c267eaef29562e87fb968c712",
+      "vcs_path": "",
+      "tree_evidence": {
+        "path": "sbom/c2pa-native/sources/986ce9043b118aa978f037b085cd9eff4c9b5b7038db33d86db0bc2513375db8.txt",
+        "sha256": "986ce9043b118aa978f037b085cd9eff4c9b5b7038db33d86db0bc2513375db8",
+        "bytes": 1865,
+        "official_url": "https://api.github.com/repos/timothee-haudebourg/static-regular-grammar/git/trees/31bcc76bb370f74c267eaef29562e87fb968c712"
+      },
+      "notices": []
+    }
+  ],
+  "role": "exact_upstream_commit_notices_not_claimed_as_crate_members",
+  "permission_cleared": false
+}
