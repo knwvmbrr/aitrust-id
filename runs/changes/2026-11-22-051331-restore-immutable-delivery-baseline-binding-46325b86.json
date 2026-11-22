@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-051331-restore-immutable-delivery-baseline-binding-46325b86",
+  "recorded_at": "2026-11-22T05:13:31.077502+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f336c31e792e9581b9f3ca0ad63610e882fd928d",
+  "changed": "Corrected the PM metadata error that replaced an immutable baseline digest with the current ledger digest.",
+  "proves": "Actual accounting CLI now returns0 for valid135/67 accounting and1 for the unmet strict60-open goal. The original baseline and all original criteria are unchanged.",
+  "limits": "No runtime method or acceptance threshold changed; failed protocol candidate is preserved. Only protocol and website sources need new execution; existing PS/privacy/extension receipts require source reassessment, not repeated execution.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "T-FI"
+  ],
+  "files": {
+    "docs/session-delivery.json": "f6e5dc658163beae1046b40ad7a1be0f7b5b54120c44fea46724d3c3752be0ff",
+    "docs/session-delivery-plan.md": "23150dae7d16bea738d3f37e5b7b8a16e97b22b43fd93bcd850519b08cbbf06f",
+    "runs/2026-11-22-immutable-baseline-correction.json": "47379b3eb1fb8bf38b5bee65e3ea1b34c2361d141c69fcfd9c27c8a8e1d07b5a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-immutable-baseline-correction.json",
+      "sha256": "47379b3eb1fb8bf38b5bee65e3ea1b34c2361d141c69fcfd9c27c8a8e1d07b5a"
+    }
+  ],
+  "checks": []
+}

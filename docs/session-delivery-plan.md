@@ -32,6 +32,10 @@ retained exact-source audit evidence. Their original historical records remain
 unchanged. These refreshes restore engineering evidence after the shared worker
 repair; they do not add original completions or independent detector accuracy.
 
+Accounting `input_sha256` values identify the immutable baseline commit, not the
+current working ledger. Current completion transitions and evidence are read
+separately; updating a record must never rebind that historical baseline.
+
 ## Earlier dated snapshots
 
 ## Operational closeout snapshot — 2026-11-21T23:12:57.420401+00:00

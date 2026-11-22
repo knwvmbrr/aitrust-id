@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-051331-restore-immutable-delivery-baseline-binding-46325b86
+
+Recorded 2026-11-22T05:13:31.077502+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Corrected the PM metadata error that replaced an immutable baseline digest with the current ledger digest.
+- **Evidence.** Actual accounting CLI now returns0 for valid135/67 accounting and1 for the unmet strict60-open goal. The original baseline and all original criteria are unchanged. [Change record](./runs/changes/2026-11-22-051331-restore-immutable-delivery-baseline-binding-46325b86.json).
+- **Not claimed.** No runtime method or acceptance threshold changed; failed protocol candidate is preserved. Only protocol and website sources need new execution; existing PS/privacy/extension receipts require source reassessment, not repeated execution.
+
+
+### 2026-11-22-051048-delivery-ready-protocol-d9c5b0e6
+
+Recorded 2026-11-22T05:10:48.528610+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated protocol execution after the versioned serializer and FI practice integration.
+- **Evidence.** Failed candidate preserved; no pass is claimed. [Change record](./runs/changes/2026-11-22-051048-delivery-ready-protocol-d9c5b0e6.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-050914-delivery-ready-extension-2e2b0e0a
+
+Recorded 2026-11-22T05:09:14.434744+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated extension execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-050914-delivery-ready-extension-2e2b0e0a.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-050833-delivery-ready-pii-redacted-719e2c2c
+
+Recorded 2026-11-22T05:08:33.129366+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated PII_REDACTED execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-050833-delivery-ready-pii-redacted-719e2c2c.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-050825-delivery-ready-ps-cb39fd6e
+
+Recorded 2026-11-22T05:08:25.201748+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated PS execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-050825-delivery-ready-ps-cb39fd6e.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
 ### 2026-11-22-050739-freeze-current-source-with-accepted-worker-observations-934c1385
 
 Recorded 2026-11-22T05:07:39.423974+00:00 · Contributor: Codex PM /root; distinct reviewer /root/web_camo · change

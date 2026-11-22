@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-050914-delivery-ready-extension-2e2b0e0a",
+  "recorded_at": "2026-11-22T05:09:14.434744+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f336c31e792e9581b9f3ca0ad63610e882fd928d",
+  "changed": "Recorded actual integrated extension execution after the versioned serializer and FI practice integration.",
+  "proves": "All registered commands and source identity checks passed.",
+  "limits": "Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155",
+    "F-057",
+    "X-02",
+    "T-FI"
+  ],
+  "files": {
+    "runs/2026-11-22-delivery-ready-extension.json": "b2b54431d5cac829ab26a651508f513dd6b878c1cbcc07a7cc0a988b78efaf79"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-delivery-ready-extension.json",
+      "sha256": "b2b54431d5cac829ab26a651508f513dd6b878c1cbcc07a7cc0a988b78efaf79"
+    }
+  ],
+  "checks": []
+}
