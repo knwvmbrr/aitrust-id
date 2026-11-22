@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-155230-visual-model-input-is-not-tool-authority-85f33827
+
+Recorded 2026-11-22T15:52:30.699317+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Added an explicit input-to-authority boundary to the planned VLM/image method baseline.
+- **Evidence.** The execution plan requires instruction-bearing-image controls, escaped explanations and no tool/file/network/device authority from OCR or model text. Existing accountability checks confirm unchanged original completion and retained evidence chronology. [Change record](./runs/changes/2026-11-22-155230-visual-model-input-is-not-tool-authority-85f33827.json).
+- **Not claimed.** Planning only; no VLM is deployed, no implemented security control, tag accuracy or original closure is claimed.
+
+
 ### 2026-11-22-154546-owner-split-email-and-visual-delivery-plan-d349f033
 
 Recorded 2026-11-22T15:45:46.551129+00:00 · Contributor: Codex PM /root; task-list /root/seo; workflow reviewer /root/share_debugger · change
