@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-080109-disclose-private-image-preview-data-flow-7389596b
+
+Recorded 2026-11-22T08:01:09.820436+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Versioned factual policy set1.15 for the optional local image-details preview while preserving all prior privacy sections and every1.14 archive.
+- **Evidence.** Actual module/body comparisons retain the other8policy bodies, publisher/release rule, all old privacy sections and9archive hashes. New copy describes explicit Inspect, no upload/storage, hidden default hash, optional exact record and no automatic export. [Change record](./runs/changes/2026-11-22-080109-disclose-private-image-preview-data-flow-7389596b.json).
+- **Not claimed.** Policy candidate is not public activation or professional clearance. Image/FA remain planned; no AI-origin verdict, research permission, physical erasure or independent validation is claimed. Protected/browser delivery remains pending.
+
+
 ### 2026-11-22-075657-integrate-account-free-provenance-downloads-48da5673
 
 Recorded 2026-11-22T07:56:57.164157+00:00 · Contributor: Codex PM /root; author /root/share_debugger · change
