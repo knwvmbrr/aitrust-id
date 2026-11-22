@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-023658-owned-compiler-cache-reclamation-8a8370fd",
+  "recorded_at": "2026-11-22T02:36:58.462592+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "40d85dfabcd6a3d97b84977992d0523b0995c0d9",
+  "changed": "Reclaimed only known disposable project Xcode compiler and SDK caches to restore the disk reserve for actual implementation.",
+  "proves": "Preserved 18529 noncache file identities including archives, build products, logs, test results, source and credentials; no active xcodebuild.",
+  "limits": "Operational maintenance only; zero original requirement closures, no new native build or phone acceptance.",
+  "scope_ids": [
+    "N-013"
+  ],
+  "files": {
+    "runs/2026-11-22-owned-compiler-cache-reclamation.json": "b6c0c1022bda07e8ae1e0160700574cb6b34729d480a3a65bb2a85432197736a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-owned-compiler-cache-reclamation.json",
+      "sha256": "b6c0c1022bda07e8ae1e0160700574cb6b34729d480a3a65bb2a85432197736a"
+    }
+  ],
+  "checks": []
+}

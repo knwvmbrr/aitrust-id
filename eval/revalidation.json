@@ -621,7 +621,23 @@
         "docs/zlib-source-delivery*.md",
         "scripts/android-chooser-controls.py",
         "tests/test_android_chooser_controls.py",
-        "docs/android-os-chooser-plan.md"
+        "docs/android-os-chooser-plan.md",
+        "scripts/migrate-assertion.py",
+        "scripts/verify-assertion-migration.py",
+        "spec/versions/*/assertion.schema.json",
+        "tests/migration-reference.cjs",
+        "tests/fixtures/migration/*",
+        "docs/protocol-migration-contract.json",
+        "docs/protocol-migration-plan.md",
+        "docs/assertion-migration.md",
+        "tools/synthid_input.py",
+        "scripts/inspect-synthid-input.py",
+        "scripts/setup-synthid-reference.py",
+        "scripts/synthid-reference-practice.py",
+        "integrations/synthid-reference/**/*",
+        "tests/test_synthid_input.py",
+        "tests/fixtures/synthid-reference/**/*",
+        "docs/synthid-vendor-input*.md"
       ],
       "commands": [
         [
@@ -1021,6 +1037,19 @@
         [
           "{python}",
           "scripts/zlib-source-delivery.py"
+        ],
+        [
+          "{python}",
+          "scripts/verify-assertion-migration.py",
+          "--report",
+          "output/verification/assertion-migration.json"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_synthid_input.py",
+          "-q"
         ]
       ]
     },
@@ -1691,7 +1720,11 @@
         "scripts/zlib-source-delivery.py",
         "tests/test_zlib_source_delivery.py",
         "sbom/reviews/zlib-runtime/**/*",
-        "docs/zlib-source-delivery*.md"
+        "docs/zlib-source-delivery*.md",
+        "docs/organization-policy-registry.md",
+        "docs/organization-policy-acceptance.md",
+        "docs/assertion-migration.md",
+        "docs/synthid-vendor-input.md"
       ],
       "commands": [
         [

@@ -93,12 +93,34 @@ def main(argv=None):
     parser.add_argument('--env-file',type=Path,default=DEFAULT_ENV,help='Used only for the selected privacy route')
     parser.add_argument('--json',action='store_true',help='Explicit full record export; hashes/offsets may link to input')
     parser.add_argument('--fail-on-finding',action='store_true')
+    parser.add_argument('--vendor-input',type=Path,help='Explicit SynthID research token packet, separate from selected text')
+    parser.add_argument('--vendor-runtime',type=Path,help='Trusted installed reference runtime Python; never read from packet')
     args=parser.parse_args(argv)
     try:
         if args.file=='-':text=read_input(sys.stdin.buffer)
         else:
             with open(args.file,'rb') as stream:text=read_input(stream)
         result=check_tags(text,args.tag,args.env_file,None if args.json else lambda row:print(brief(row),flush=True))
+        if args.vendor_input is not None:
+            # Optional dependency/import failure cannot suppress the personal result.
+            try:
+                from tools import synthid_input as vendor
+                try:packet=vendor.read_packet(args.vendor_input)
+                except (OSError,ValueError,TypeError):packet=None
+                observation=vendor.inspect(packet,args.vendor_runtime) if packet is not None and args.vendor_runtime else vendor.empty('UNSUPPORTED','invalid_or_unsupported_packet')
+                message=vendor.brief(observation)
+            except Exception:
+                observation={'format':'ai-trust-id-vendor-input/v1','state':'UNAVAILABLE',
+                    'reason':'optional_vendor_input_unavailable','verified':False,'tags':[],
+                    'text_relationship':'UNBOUND','origin_established':False}
+                message='SynthID reference: unavailable. Your personal checks remain separate.'
+            personal=result
+            unavailable=observation['state'] in ('UNAVAILABLE','UNSUPPORTED')
+            result={'format':'ai-trust-id-personal-and-vendor-inputs/v1',
+                'state':'PARTIAL' if unavailable or personal['state']!='COMPLETE' else 'COMPLETE',
+                'checks':personal['checks'],'personal_checks':personal,'vendor_input':observation,
+                'vendor_text_relationship':'UNBOUND','independently_validated':False,'text_included':False}
+            if not args.json:print(message,flush=True)
         if args.json:print(json.dumps(result,indent=2,ensure_ascii=False,allow_nan=False))
         else:print('Development checks only. PS performs no redaction; nothing is submitted to a training database.')
         if result['state']=='UNAVAILABLE':return 1

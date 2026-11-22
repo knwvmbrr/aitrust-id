@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-030830-correct-route-inventory-registration-8e391716",
+  "recorded_at": "2026-11-22T03:08:30.779121+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "40d85dfabcd6a3d97b84977992d0523b0995c0d9",
+  "changed": "Actually registered the current route inventory and current extension/website receipts after correcting a missing helper argument.",
+  "proves": "The prior registration helper stopped before writing; the earlier event wording about binding was premature. This event binds the actual new manifest bytes.",
+  "limits": "No passing boundary execution or hosted publication is claimed by registration alone; prior failed private attempt retained.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "96935241790688a064bee9bc105e252c11847e98104c0dfccf9ce69af092814b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-three-originals-corrected-website.json",
+      "sha256": "7810f8ded0a0a7e3dd0d5960c5a376891cd7284cc72fb1932eba835b971ae5dc"
+    }
+  ],
+  "checks": []
+}

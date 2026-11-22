@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-024556-register-complete-workflow-inputs-b4e7f777",
+  "recorded_at": "2026-11-22T02:45:56.646732+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "40d85dfabcd6a3d97b84977992d0523b0995c0d9",
+  "changed": "Registered all migration/vendor-input controls and generated reference-source dependencies; corrected the catalogue to use actual generated reference routes.",
+  "proves": "Current personal routes remain unchanged; private offering links resolve through the allowlisted site builder; original target remains66 open.",
+  "limits": "No hosted deployment, new tag validation or comprehensive licensing closure implied.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155"
+  ],
+  "files": {
+    "eval/revalidation.json": "81a08703393e6e85333ebbed4261d671c6a8aa9078694f24da281105cc3e7d48",
+    "site/scripts/prepare.mjs": "13327dc09cb1a3148eab2fa633553afaba966931c595c2aa4c8062f51cd3ef96",
+    "site/src/catalog.js": "5fde140e356b2d768ecdc3722926f614089989c2d0dfd10ba8cb522dae629478",
+    "docs/session-delivery.json": "cc1478a2d55ca2c68e4c2d5d5c9d791b105dc86492f4501b757820b9e253f977"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-n001-full-original-acceptance.json",
+      "sha256": "25f34a47ea1d3b75bd7d9973ee8576a3eecd4ceda83c1aa42406603e8ff1e86a"
+    },
+    {
+      "path": "runs/2026-11-22-f155-root-integration.json",
+      "sha256": "4e670fbf6d090f6c47ca2ab3bfc97d4c549a5e410365cf37313f935a5d409479"
+    }
+  ],
+  "checks": []
+}

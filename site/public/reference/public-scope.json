@@ -10593,29 +10593,49 @@
         "id": "F-155",
         "kind": "requirement",
         "title": "SynthID and vendor watermarking",
-        "percent_complete": 20,
+        "percent_complete": 60,
         "milestones_passed": [
-          "bounded_contract"
+          "bounded_contract",
+          "implemented_mechanism",
+          "executable_checks"
         ],
-        "audited_at": "2026-10-09T13:29:52.810894+00:00",
-        "checked_by": "Codex",
-        "implemented_by": [],
+        "audited_at": "2026-11-22T03:22:32.942149+00:00",
+        "checked_by": "Codex PM /root after substantive PR147 original-outcome review",
+        "implemented_by": [
+          "Codex /root/web_camo — official SynthID vendor-input CLI, owned-worker correction and actual install/use/removal, commit13515ae11817ad890db3d31a1264a6e48055e652; Codex PM /root exact integration."
+        ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
         "completed_by": [],
         "completed_at": null,
         "completion_timestamp_basis": null,
-        "next_fix": "Deliver SynthID and vendor watermarking. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow.",
+        "next_fix": "Integrate supported vendor watermark/origin evidence into its explicit tag workflow, with accepted claim boundaries, subject binding and claim-specific validation before issuance. The working unbound research statistic is a component; it does not complete supported tag outcomes.",
         "next_owner": "Codex",
         "evidence": [
-          "docs/scope-delivery.md"
+          "docs/scope-delivery.md",
+          "runs/2026-11-21-f155-synthid-full-contract-independent-review.json",
+          "runs/2026-11-22-f155-root-integration.json",
+          "runs/2026-11-21-synthid-current-cli.json",
+          "runs/2026-11-21-synthid-install-removal-current.json",
+          "runs/2026-11-21-synthid-final-portability-and-guide.json",
+          "runs/2026-11-22-f155-full-original-acceptance.json",
+          "runs/2026-11-22-f155-original-completion-correction.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
+        "evidence_scope": "Actual optional SDK input component works and remains separately evidenced. Full F-155 tag-workflow outcome is open; earlier full completion claim was withdrawn without changing the original acceptance.",
         "required_acceptance": [
           "Deliver SynthID and vendor watermarking. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
         ],
-        "queue": "open"
+        "queue": "open",
+        "completion_limits": [
+          "Only declared generated token-ID research configuration on actually executed Macarm64/CPython3.12 platform.",
+          "No Gemini production key, text-to-token binding, origin/truth verdict, FA/PA or watermark-tag release, independent accuracy or global license clearance."
+        ],
+        "withdrawn_completion": {
+          "original_acceptance_record": "runs/2026-11-22-f155-full-original-acceptance.json",
+          "correction": "runs/2026-11-22-f155-original-completion-correction.json",
+          "reason": "A working unbound SDK research statistic is not yet a supported tag workflow. The accepted input-only engineering contract did not authorize narrowing the original outcome. No source or schema claim can turn an empty tag result into completed tag support."
+        }
       }
     },
     {
@@ -12864,26 +12884,30 @@
         "id": "N-001",
         "kind": "requirement",
         "title": "Protocol compatibility and schema migration",
-        "percent_complete": 80,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
           "executable_checks",
-          "selected_integration"
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-10-10T13:47:05.800829+00:00",
-        "checked_by": "Codex",
+        "audited_at": "2026-11-22T02:43:28.345017+00:00",
+        "checked_by": "Codex PM /root; distinct original-contract review /root/seo",
         "implemented_by": [
-          "Codex — bounded consumer profile, offline conformance CLI and current six-state fixture integration, 2026-10-10T13:47:05.800829+00:00"
+          "Codex — bounded consumer profile, offline conformance CLI and current six-state fixture integration, 2026-10-10T13:47:05.800829+00:00",
+          "Codex PM /root — preaccepted complete-identity offline migration, private export/refusal, numeric-loss correction, independent vectors and current capability/privacy integration, 2026-11-22 UTC."
         ],
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Accept any successor-version migration before implementing it; exercise the accepted transformation and evidence-loss/round-trip contract. Current version checks and unknown-version refusal work; no successor migration or proposal adoption is claimed.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex PM /root"
+        ],
+        "completed_at": "2026-11-22T02:43:28.345017+00:00",
+        "completion_timestamp_basis": "Actual complete functioning supported/failure workflow, exact current source and different full-original reviewer; protected publication is separately tracked before delivery.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "docs/scope-delivery.md",
           "docs/extension-consumer-plan.md",
@@ -12891,13 +12915,21 @@
           "scripts/check-assertion.py",
           "tests/test_assertion_conformance.py",
           "runs/2026-10-10-six-state-consumer-browser.json",
-          "runs/2026-10-10-consumer-schema-python-corrected.json"
+          "runs/2026-10-10-consumer-schema-python-corrected.json",
+          "runs/2026-11-22-n001-full-original-independent-review.json",
+          "runs/2026-11-22-assertion-migration-final-execution.json",
+          "runs/2026-11-22-n001-full-original-acceptance.json"
         ],
-        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation",
-        "required_acceptance": [
+        "evidence_scope": "Only the identified job and milestone; document, simulation and historical runtime evidence are not independent tag validation Full original functioning software job accepted with source-bound execution and a distinct review. No complete detection tag, independent accuracy, live protocol adoption or legal/human acceptance is inferred.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "fulfilled_required_acceptance": [
           "Accept any successor-version migration before implementing it; exercise the accepted transformation and evidence-loss/round-trip contract. Current version checks and unknown-version refusal work; no successor migration or proposal adoption is claimed."
         ],
-        "queue": "open"
+        "completion_limits": [
+          "Only unsigned complete self-consistent histories with no numeric loss; signed/incomplete/unknown records are preserved and refused.",
+          "Production remains0.1; no tag, authenticity or replay-availability claim."
+        ]
       }
     },
     {
@@ -13509,15 +13541,16 @@
         "id": "N-010",
         "kind": "requirement",
         "title": "Personal/team/enterprise/proprietary tag offering boundaries",
-        "percent_complete": 80,
+        "percent_complete": 100,
         "milestones_passed": [
           "bounded_contract",
           "implemented_mechanism",
           "executable_checks",
-          "selected_integration"
+          "selected_integration",
+          "final_acceptance"
         ],
-        "audited_at": "2026-11-21T16:10:18.458650+00:00",
-        "checked_by": "Codex /root integration; distinct /root/seo review",
+        "audited_at": "2026-11-22T02:25:06.195994+00:00",
+        "checked_by": "Codex PM /root; distinct original-contract review /root/seo",
         "implemented_by": [
           "Codex — prior session/run attribution",
           "Codex — published UI/evidence reconciliation and change-accountability implementation, recorded 2026-10-09T17:06:15.922874+00:00",
@@ -13527,11 +13560,14 @@
         "planning_contributors": [
           "Codex — scope normalization and package contract"
         ],
-        "completed_by": [],
-        "completed_at": null,
-        "completion_timestamp_basis": null,
-        "next_fix": "Complete retained actual human organization operation and full commercial conformance before commercial rollout; require protected hosted CI for integrated software. Governed local registry works without a running organization service.",
-        "next_owner": "Codex",
+        "completed_by": [
+          "Codex /root/share_debugger",
+          "Codex PM /root integration and delegated technical acceptance"
+        ],
+        "completed_at": "2026-11-22T02:25:06.195994+00:00",
+        "completion_timestamp_basis": "Current full original technical contract adjudicated against unchanged source-bound Mac/Linux/hosted execution and separate review; not new execution or commercial/human acceptance.",
+        "next_fix": null,
+        "next_owner": null,
         "evidence": [
           "site/src/policies.js",
           "docs/scope-delivery.md",
@@ -13551,13 +13587,27 @@
           "docs/organization-policy-registry-result.md",
           "runs/2026-11-21-organization-policy-mac-final-operation.json",
           "runs/2026-11-21-organization-policy-linux-operation.json",
-          "runs/2026-11-21-organization-policy-linux-independent-review.json"
+          "runs/2026-11-21-organization-policy-linux-independent-review.json",
+          "runs/2026-11-22-n010-original-contract-recommendation.json",
+          "runs/2026-11-22-n010-original-contract-distinct-review.json",
+          "runs/2026-11-22-n010-original-full-acceptance.json"
         ],
-        "evidence_scope": "Governed local registry: technical tenant acceptance, per-role capabilities, immutable revisions, supervised workers and permissioned export.27 control groups/73 actual CLI operations per Mac/Linux platform and distinct source-bound review. Real organization identity, employee consent, human operation and full commercial conformance remain unaccepted.",
-        "required_acceptance": [
+        "evidence_scope": "Governed local registry: technical tenant acceptance, per-role capabilities, immutable revisions, supervised workers and permissioned export.27 control groups/73 actual CLI operations per Mac/Linux platform and distinct source-bound review. Real organization identity, employee consent, human operation and full commercial conformance remain unaccepted. Full original technical-boundary acceptance is now evidenced by the separate original-contract provenance decision and exact current executed source. Historical human/commercial cautions remain, with actual scope/ownership/license agreement still required before sale; no real company/human/commercial acceptance is claimed.",
+        "required_acceptance": [],
+        "queue": "completed",
+        "fulfilled_required_acceptance": [
           "Accept organization namespaces and ownership boundaries; implement per-tenant custom policy and validate each job separately. No organization service is running or sold."
         ],
-        "queue": "open"
+        "completion_limits": [
+          "No actual company/global namespace identity verification.",
+          "No employee consent or human commercial operation tested or accepted.",
+          "No customer contract, legal opinion, license negotiation or sale.",
+          "No hosted organization service, SSO service, commercial subscription or fleet rollout.",
+          "Local OS owner/admin and selected source are trusted; no OS-account isolation, anti-rollback authority, compliance or independent accuracy guarantee.",
+          "Historical documents and failed executions must remain immutable.",
+          "Acceptance-role boilerplate and historical caution are not silently waived; PM must explicitly adopt this original-contract interpretation with distinct review.",
+          "Actual custom scope, ownership and licensing must be agreed before ANY sale. This condition remains in the unchanged package. No organization service is running or sold, so it is untriggered here."
+        ]
       }
     },
     {

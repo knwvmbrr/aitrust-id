@@ -1,0 +1,43 @@
+{
+  "captured_at": "2026-11-22T03:22:35.427555+00:00",
+  "pass": true,
+  "profile": "F155-original-closure-review-correction/v1",
+  "reviewed_by": "Codex /root/seo",
+  "original_acceptance_sha256": "3d22d11ab22ee4f2aa4f32778a8695522c6ea92534b028873bdadcc771e5e665",
+  "original_contract": {
+    "baseline_job": "Specify and deliver synthID and vendor watermarking.",
+    "outcome": "The application extends supported tags without disabling the personal workflow.",
+    "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation."
+  },
+  "required_acceptance": [
+    "Deliver SynthID and vendor watermarking. Next package action: Treat vendor origin/watermark evidence as inputs, not blanket truth. Required outcome: The application extends supported tags without disabling the personal workflow."
+  ],
+  "review_finding": {
+    "thread_id": "PRRT_kwDOVBYh3s66fpYN",
+    "comment_id": "PRRC_kwDOVBYh3s8AAAABFYr0eQ",
+    "pr": 147,
+    "head": "031c9e669518f99c85b829f329368b6f70ac22e2",
+    "path": "docs/scope-progress.json",
+    "priority": "P1",
+    "assessment": "Valid: an unbound research statistic does not fulfil the original application supported-tag extension outcome."
+  },
+  "source_sha256": {
+    "scripts/check-tags.py": "bb57e5e49b1f6a305eabc84e04df771402c6ad9cf8119c6acc94037d1fd184d0",
+    "tools/synthid_input.py": "b51e0cd8022d72b3efee3e2ef8aed803298ea6f907329d58375912ac0c120e38",
+    "docs/synthid-vendor-input-plan.md": "a1f3ff8195921c82111890760098e844c862130d8b53455777206a6ad7c54154"
+  },
+  "correction": "Withdraw the full-original F155 completion recommendation in earlier review2818b490. The preaccepted input-only component contract authorized useful engineering but did not authorize narrowing the original outcome. Prior source/process/lifecycle/whole-SDK-parity evidence remains valid only for its stated component scope.",
+  "earlier_review_sha256": "2818b49090c129e4c553f8c9443c86dc72e31e0b02a277592d1d3075b387f580",
+  "finding_evidence": [
+    "check-tags supports only PS and PII_REDACTED; vendor result is an opt-in separate envelope.",
+    "SynthID observer returns tags[]/verifiedfalse/text_relationshipUNBOUND and cannot produce an accepted trusted WATERMARK input.",
+    "Its own accepted plan excludes a tag, protocolassertion and strong WATERMARKinput; no new supportedtag outcome was executed."
+  ],
+  "recommendation": "Restore F155 open80 with all original acceptance retained; keep the full-original task unclosed and removeF155 from completed-original/recommendation counters. N010 andN001 technical acceptance unaffected. Current original totals135complete67open, target60 NOTMET.",
+  "remaining_full_job": "Deliver and validate an accepted vendor-evidence-to-supported-tag workflow with genuine subject/configuration binding and appropriate adopted claim/decision gates. Do not fabricate a tag, verification, calibration, Gemini key or origin guarantee from this p-value.",
+  "limits": [
+    "Read-only source/PRfinding review only; no new functionaltests, model/networkruntime, SDKinstall or source/ledger/thread mutations.",
+    "No independentaccuracy, productionkey, subjectbinding, trustedWATERMARK or tagrelease claimed.",
+    "Historical original review/proof must remain unchanged, explicitly superseded for full-original conclusion."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-034501-recover-owned-workers-without-released-group-signals-2b140be4",
+  "recorded_at": "2026-11-22T03:45:01.863731+00:00",
+  "author": "Codex PM /root; distinct fault review /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1626cced2c4996859bef11edf364b18cd2474b03",
+  "changed": "Fixed optional-worker startup and post-reap ownership; rebound only the reviewed first-party helper bytes in the existing PS source distribution profile.",
+  "proves": "17 current Mac controls plus6 independent actual fault/normal controls pass. Startup failure spawns none or reaps the owned child; post-reap failure sends no group signal; close faults still close both pipes. All14 policy routes audit coherently and onlyPSsource remains admitted.",
+  "limits": "Zero original closures. Preserve existingv1 reviewed_by Codex token; detailed attribution is here and in the peer receipt. Linux/caller/source-bound revalidation pending; no crash recovery, tag accuracy or global licensing claim.",
+  "scope_ids": [
+    "F-096",
+    "N-001",
+    "N-010",
+    "F-155"
+  ],
+  "files": {
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "tests/test_worker_process.py": "2e3cf2a34ed8de35f3d6a372a4116675ba83fcc7e3f5e0a79c4dffd8d1e33d24",
+    "docs/worker-supervision-recovery-plan.md": "ef228f9a78f72e4c79b21d5531dad04f8c51e6854fa0056364ea63a453d3da23",
+    "eval/dependency-policy.json": "84cd00d8856954afcb0fd46920e528d0cc0372dc93141a5be544cd2540747951",
+    "runs/2026-11-22-shared-worker-current-execution.json": "4790e731daab2c1db3c422e0c911a022934fcbda441554e4c7cca205804b9991",
+    "runs/2026-11-22-shared-worker-distinct-corrected-review.json": "cf884a56479f1a91509ff1f7dfa104b561ca19a35292ec9e74470c0cf7c7de5e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-shared-worker-current-execution.json",
+      "sha256": "4790e731daab2c1db3c422e0c911a022934fcbda441554e4c7cca205804b9991"
+    },
+    {
+      "path": "runs/2026-11-22-shared-worker-distinct-corrected-review.json",
+      "sha256": "cf884a56479f1a91509ff1f7dfa104b561ca19a35292ec9e74470c0cf7c7de5e"
+    }
+  ],
+  "checks": []
+}

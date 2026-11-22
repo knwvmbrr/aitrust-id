@@ -1,0 +1,9 @@
+# Local organization policy boundaries: acceptance and limits
+
+On 2026-11-22 UTC, the PM accepted the original N-010 software requirement after a separate review. Its job is to deliver personal/team/enterprise/proprietary offering boundaries, local namespace and ownership authority, and separately validated tenant jobs. The unchanged original acceptance and the clause-by-clause evidence are preserved in [the full acceptance record](../runs/2026-11-22-n010-original-full-acceptance.json).
+
+The actual current mechanism is the [local organization policy registry](organization-policy-registry.md). Existing source-matching Mac and isolated Linux receipts each cover 27 control groups and 73 actual CLI checks. These are historical executions checked against current source hashes, not newly rerun tests. The recorded normal-main Linux CI execution used the same source and workflow bytes. The author recommendation and distinct review are linked from the acceptance record.
+
+The earlier prototype and registry guides explicitly left full N-010 acceptance to the PM. Those documents and receipts remain unchanged as historical artifacts. The PM examined the original contract and its history: actual custom scope, ownership and licensing must be agreed **before sale**. That conditional obligation does not require a sale or launch to complete the local software job. The acceptance records that adjudication; it does not claim Michael, a customer, an employer or counsel approved a commercial arrangement.
+
+No organization service is running or sold. OS-owner authority is not real organization identity, employee consent, legal ownership, anti-coercion certification or compliance. Hosted deployment, actual customer agreements and future private-policy accuracy each retain their own gates. Public personal methods remain free and independent.

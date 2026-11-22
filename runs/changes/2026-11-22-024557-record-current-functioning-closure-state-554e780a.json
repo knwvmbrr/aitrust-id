@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-024557-record-current-functioning-closure-state-554e780a",
+  "recorded_at": "2026-11-22T02:45:57.491902+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "40d85dfabcd6a3d97b84977992d0523b0995c0d9",
+  "changed": "Recorded the current functioning software closure state and pending publication checks.",
+  "proves": "136 original records complete,66 remain open; three full software closures in this wave.",
+  "limits": "Target60 remains unmet; no public tag independently validated or owner/human gates retired.",
+  "scope_ids": [
+    "N-001",
+    "N-010",
+    "F-155"
+  ],
+  "files": {
+    "state.json": "27695c019ae905242753f50f70af04853276f8beee730febfd2901460345c66a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-n001-full-original-acceptance.json",
+      "sha256": "25f34a47ea1d3b75bd7d9973ee8576a3eecd4ceda83c1aa42406603e8ff1e86a"
+    },
+    {
+      "path": "runs/2026-11-22-f155-full-original-acceptance.json",
+      "sha256": "82b5bc7e2738cb5afd570c22c6c75ea8b56f1e7fc6498211d3dacd1e930c62fd"
+    }
+  ],
+  "checks": []
+}

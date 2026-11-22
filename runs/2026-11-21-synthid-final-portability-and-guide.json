@@ -1,0 +1,34 @@
+{
+  "format": "ai-trust-id-synthid-final-nonruntime-adjustment/v1",
+  "captured_at": "2026-11-22T02:35:29.312167+00:00",
+  "pass": true,
+  "runtime_and_sdk_sources_unchanged": true,
+  "snapshot_deltas": {
+    "tests/test_synthid_input.py": {
+      "executed_snapshot_sha256": "7e41c54b9c3432b57f020970741456380b4fb73ea298a24f38a505c32b806c6e",
+      "current_sha256": "2bea469e6bca4c3060b981d777bad79dcd06d2f741b1174f5376e730d168e55b"
+    },
+    "docs/synthid-vendor-input.md": {
+      "executed_snapshot_sha256": "df72f65e5f7fc4703982e8f85f2f9d5becb4885ef891ea767d1816d84708f68b",
+      "current_sha256": "ee1ff575217ceac64e66e7f98f2e02c4ec1040d8f84be75bbff1f401d446bbd2"
+    }
+  },
+  "test_changes": [
+    "Use resolved actual system temporary parent so clean clone needs no output directory; retain source/parent no-follow refusals.",
+    "Use a fresh stdlib-only venv without pip for real absent-SDK condition independent of test runner packages."
+  ],
+  "guide_changes": [
+    "Differentiate executed macOS27.2/CPython3.12.14 from compatible macOS14+ wheel profile.",
+    "Explicitly distinguish12s worker execution and5s owned cleanup allowance."
+  ],
+  "affected_tests": {
+    "count": 4,
+    "pass": true,
+    "elapsed_seconds": 0.454,
+    "log_sha256": "1b6b1cd4f2bb60131da96ba35e3ab00cb1615fcbe48f4688b49a667e9c0410c9"
+  },
+  "prior_execution": "runs/2026-11-21-synthid-current-cli.json",
+  "prior_lifecycle": "runs/2026-11-21-synthid-install-removal-current.json",
+  "no_new_sdk_execution": true,
+  "original_requirement_closed": false
+}

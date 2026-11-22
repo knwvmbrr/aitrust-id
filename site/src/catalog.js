@@ -120,17 +120,17 @@ export const enterpriseTags=[
   job:'Define organization-specific tag workflows and policy extensions.',
   outcome:'Apply a private policy with clear provenance and claim boundaries.',
   claim:'A private extension capability, bounded so that a private policy can add obligations but never weaken a public claim.',
-  method:'A separate offline development tool finds exact terms in text you choose. Its private policy cannot change public tag methods. Organization rollout is planned.',
-  inputs:'Your reviewed policy, a private text file and a selection that binds both files. The practice example is invented.',
-  outputs:'Optional private details identify the selected namespace, policy revision and matching locations. Namespace ownership is unverified; a match is not a policy-violation verdict.',
-  today:"Try the separate term-check practice guide on a Mac or Linux computer. Nothing is uploaded and no account is required. The tool refuses public-code reuse, hidden limits, required receipts and public-threshold settings. The organization service is still planned.",
-  supported:["Available now — optional local practice with a reviewed literal-term policy", "Available now — exact policy/text bindings and qualified private observations", "Available now — refused public-code and privacy-weakening controls", "Planned — organization ownership, each custom workflow and rollout acceptance"],
+  method:'An optional local registry separates tenant namespaces, credentials, policy revisions and permissions for each literal-policy job. Private rules cannot change public tag methods. A hosted organization service is planned.',
+  inputs:'A local operator authority, tenant credential, reviewed policy, private text file and a selection binding the exact job and revision. The practice example is invented.',
+  outputs:'A brief occurrence count, or optional permission-controlled private details for the selected tenant, job and revision. Local authority is checked; real organization ownership is not verified. A match is not a policy-violation verdict.',
+  today:"Use the local organization policy practice guide on Mac or Linux. Enroll separate tenants, grant limited permissions, select a reviewed job, pause or restore access, export privately and remove the registry. Nothing is uploaded. The hosted organization service is still planned.",
+  supported:["Available now — separate local tenant authority and per-job selections", "Available now — limited credentials, revision binding, pause and revocation", "Available now — permission-controlled exports and isolated literal-policy checks", "Required before sale — agreed ownership, licensing and the actual customer scope"],
   limits:['Display names here are offering names, not adopted standard codes','A private policy must not dilute or misrepresent the public standard, and must never reuse a public tag code for a different claim','A private extension is not a private fork of the evidence standard; thresholds move one way only, upward','Underlying personal detection and evidence remain free'],
-  validation:"The development component passed 96 focused tests and 24 actual command controls on Mac and isolated Linux. These checks cover the selected literal workflow; they do not establish namespace ownership, employee consent or independent real-world accuracy.",
+  validation:"The governed local registry passed 27 control groups and 73 actual command checks on both Mac and isolated Linux. A separate review accepted the original software boundaries. These results do not verify real organization identity, employee consent, commercial terms or independent accuracy.",
   privacy:"A private policy must preserve consent and the public privacy commitments. Team payment does not waive no-telemetry (F-086) or capture boundaries (F-087) for the people whose content is checked.",
-  release:'Complete organization ownership, agreed custom workflows, permission/export acceptance and the full conformance review before commercial rollout. The local literal prototype tests the four prohibitions; it does not validate every future private policy job.',
+  release:'The local software boundaries are accepted. Before a commercial service or sale, agree the actual customer scope, ownership and licensing, and complete the applicable consent, deployment and conformance checks. Future private policies each need their own validation.',
   features:['N-010','F-086','F-087'],
   dependencies:['Accepted privacy terms (WP-PRIVACY)','Record version contract (WP-PROTOCOL)','Independent validation (WP-VALIDATION)'],
-  references:['/reference/public-scope.json','/reference/private-policy.md']})
+  references:['/reference/public-scope.json','/reference/organization-policy-registry.md','/reference/organization-policy-acceptance.md']})
 ];
 export const allTags=[...personTags,...enterpriseTags];

@@ -158,7 +158,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-062 | video | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-063 | document | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-154 | text and code subject contracts | [WP-MODALITIES](scope-delivery.md#wp-modalities) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-F-155 | SynthID and vendor watermarking | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 20% · [evidence/fix](scope-progress.md) |
+| TASK-F-155 | SynthID and vendor watermarking | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 60% · [evidence/fix](scope-progress.md) |
 | TASK-F-156 | Additional browser and site adapters | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 80% · [evidence/fix](scope-progress.md) |
 | TASK-F-157 | Newsroom integration — labels in an editorial workflow | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-158 | Agent identity — labelling output from autonomous agents | [WP-INTEGRATIONS](scope-delivery.md#wp-integrations) | 100% · [evidence/fix](scope-progress.md) |
@@ -188,7 +188,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-F-021 | Legacy grouping for T-FA, T-PA | [TAG-FA](scope-delivery.md#tag-fa), [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-022 | Legacy grouping for T-IV | [TAG-IV](scope-delivery.md#tag-iv) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-F-029 | Legacy grouping for F-029a, F-029b, F-029c | [TAG-PA](scope-delivery.md#tag-pa) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-N-001 | Protocol compatibility and schema migration | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-N-001 | Protocol compatibility and schema migration | [WP-PROTOCOL](scope-delivery.md#wp-protocol) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-002 | Separate pending, uncertain, unsupported, unavailable, and no-finding states | [TAG-UNK](scope-delivery.md#tag-unk) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-003 | Detector resource limits, cancellation, concurrency, and failure containment | [WP-SERVICE](scope-delivery.md#wp-service) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-004 | Consent, per-site pause, capture boundaries, reset and deletion | [WP-PRIVACY](scope-delivery.md#wp-privacy) | 100% · [evidence/fix](scope-progress.md) |
@@ -197,7 +197,7 @@ All 202 source IDs remain covered. This is a crosswalk into the [one execution p
 | TASK-N-007 | No automated promotional AI content network | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-008 | No child-safety report hosting | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-N-009 | No rogue-AI verdict inferred from output | [WP-BOUNDARIES](scope-delivery.md#wp-boundaries) | 100% · [evidence/fix](scope-progress.md) |
-| TASK-N-010 | Personal/team/enterprise/proprietary tag offering boundaries | [ORG-PRIVATE](scope-delivery.md#org-private) | 80% · [evidence/fix](scope-progress.md) |
+| TASK-N-010 | Personal/team/enterprise/proprietary tag offering boundaries | [ORG-PRIVATE](scope-delivery.md#org-private) | 100% · [evidence/fix](scope-progress.md) |
 | TASK-T-UC | Unsafe Command | [TAG-UC](scope-delivery.md#tag-uc) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-T-SC | Scam Pattern | [TAG-SC](scope-delivery.md#tag-sc) | 20% · [evidence/fix](scope-progress.md) |
 | TASK-T-BT | Automation Pattern | [TAG-BT](scope-delivery.md#tag-bt) | 20% · [evidence/fix](scope-progress.md) |

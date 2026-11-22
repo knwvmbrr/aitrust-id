@@ -1,0 +1,46 @@
+{
+  "captured_at": "2026-11-22T03:12:02.709205+00:00",
+  "pass": true,
+  "reviewed_by": "Codex /root/seo",
+  "profile": "three-originals-reference-artifact-review-correction/v1",
+  "prior_review_sha256": "a8122671ebb687be0b4829035d3f2c86145a5155a5e5071ba2e78773c89a9c49",
+  "correction": "Earlier reviewer accepted the mistaken description that four new generated guide copies were Git-ignored. They are untracked derived outputs intended for normal source commit, as independently checked now. This corrects Git-state wording, not the already verified source/output byte equality. Preserve prior review as historical.",
+  "boundary_constant_delta": "Four exact publicguidepaths added to PATTERNS only; source/sourceguide regeneration and capabilityprofiles unchanged.",
+  "boundary_verifier_sha256": "c370111731c40ef3f02a2071f4d38e07965cf5aa7c250dc7aa5f126ae7285eef",
+  "copies": [
+    {
+      "path": "site/public/reference/organization-policy-registry.md",
+      "sha256": "c1f183d4b6691cb0c5ccc804338eadc4a2c5b97e6cbef1a721bf331464ef72e1",
+      "source": "docs/organization-policy-registry.md",
+      "source_byte_exact": true,
+      "git_ignored": false
+    },
+    {
+      "path": "site/public/reference/organization-policy-acceptance.md",
+      "sha256": "f93a9c87b215cfcf66334c4e3199feaaea5aa81d841c238e242fd899cb819ed6",
+      "source": "docs/organization-policy-acceptance.md",
+      "source_byte_exact": true,
+      "git_ignored": false
+    },
+    {
+      "path": "site/public/reference/assertion-migration.md",
+      "sha256": "84721a591596dc1f6fb6de707849468301d349de9de383bd66ae62893a109385",
+      "source": "docs/assertion-migration.md",
+      "source_byte_exact": true,
+      "git_ignored": false
+    },
+    {
+      "path": "site/public/reference/synthid-vendor-input.md",
+      "sha256": "ee1ff575217ceac64e66e7f98f2e02c4ec1040d8f84be75bbff1f401d446bbd2",
+      "source": "docs/synthid-vendor-input.md",
+      "source_byte_exact": true,
+      "git_ignored": false
+    }
+  ],
+  "unchanged_assessment": "Original full202 criteria preservation and onlythree acceptedpercenttransitions remain as independentlychecked; no product/schema/permission/endpoint changes in this correction.",
+  "limits": [
+    "No functionaltest/browser/model/native suite or network executed.",
+    "Boundaryexecution/1694count is PM evidence, not executed or claimed by this review.",
+    "Postcommitdist/source andactualapex/uniquedeploymentHTTPparity remain PM delivery actions."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "captured_at": "2026-11-22T02:43:28.345017+00:00",
+  "pass": true,
+  "scope_id": "N-001",
+  "kind": "full_original_functioning_software_acceptance",
+  "implementation_by": "/root",
+  "reviewed_by": "/root/seo",
+  "accepted_by": "Codex PM /root under delegated engineering scope",
+  "original_master_unchanged": true,
+  "original_acceptance_sha256": "73292f15669bf0aded98f640a764ef19b899c87ba9d439968de90eca27e1295f",
+  "original_required_acceptance": [
+    "Accept any successor-version migration before implementing it; exercise the accepted transformation and evidence-loss/round-trip contract. Current version checks and unknown-version refusal work; no successor migration or proposal adoption is claimed."
+  ],
+  "outcome": "Offline complete-identity migration, accepted before implementation; actual supported/refused private conversions, numeric roundtrips, current consumer compatibility and PS/privacy isolation.",
+  "preimplementation_technical_contract": "docs/protocol-migration-plan.md",
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-n001-full-original-independent-review.json",
+      "sha256": "c3c32fdbff95e184583c990c0462909291b885ac7463f57e855d1035c9ea002d"
+    },
+    {
+      "path": "runs/2026-11-22-assertion-migration-final-execution.json",
+      "sha256": "1d52fecc0b06057049684cef71fb607d37325b93543a0386d33e5df901ef92d0"
+    }
+  ],
+  "scope_or_acceptance_weakened": false,
+  "human_or_legal_acceptance_claimed": false,
+  "independent_accuracy_evidence": false,
+  "tag_release_approved": false,
+  "production_protocol_changed": false,
+  "normal_protected_publication": "Separate required final delivery action before reporting this batch delivered; this receipt does not claim a hosted CI or publication result."
+}
