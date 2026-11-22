@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-155735-screen-visual-model-and-persuasion-data-4cceb0f1
+
+Recorded 2026-11-22T15:57:35.808790+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Grounded the visual execution plan in an official small-VLM candidate and explicit persuasion-data access and reuse restrictions.
+- **Evidence.** Primary model card and official SemEval task/terms were read. The candidate descriptive job, hardware measurement, source/weight rights, isolation, dataset split and independent claim-specific evaluation actions are explicit. Accountability still preserves136complete/66open. [Change record](./runs/changes/2026-11-22-155735-screen-visual-model-and-persuasion-data-4cceb0f1.json).
+- **Not claimed.** Research/planning only. No model/data download, registration, corpus redistribution, training, hardware benchmark, authenticity accuracy, tag adoption or original closure.
+
+
 ### 2026-11-22-155230-visual-model-input-is-not-tool-authority-85f33827
 
 Recorded 2026-11-22T15:52:30.699317+00:00 · Contributor: Codex PM /root · change

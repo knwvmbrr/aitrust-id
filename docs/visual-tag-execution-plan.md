@@ -58,6 +58,10 @@ oracle. Its hierarchy includes 22 techniques. Rights, representation and label
 transfer still require review before using its data.
 [Primary task paper](https://aclanthology.org/2024.semeval-1.275/).
 
+The first concrete model/data screening and its blocked rights are recorded in
+[visual model and data screening](visual-model-data-screening.md). No model or
+corpus is selected merely because it is mentioned in a paper or model card.
+
 ## Release standard, applied separately to each tag
 
 1. **Lock the job first.** Publish the exact question, positive evidence, rejected
