@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-075657-integrate-account-free-provenance-downloads-48da5673
+
+Recorded 2026-11-22T07:56:57.164157+00:00 · Contributor: Codex PM /root; author /root/share_debugger · change
+
+- **Changed.** Integrated durable versioned PS source/SPDX/attestation downloads and linked their account-free verification guide from About.
+- **Evidence.** Distinct source/trust-model review confirms five exact files match the already independently verified protected artifact; no downloaded manifest or saved observation is used as a trust anchor. [Change record](./runs/changes/2026-11-22-075657-integrate-account-free-provenance-downloads-48da5673.json).
+- **Not claimed.** Public download bytes and link activation await the next protected deployment. Full F057/X02 and independent tag accuracy remain open;136complete66open is unchanged.
+
+
 ### 2026-11-22-074612-complete-original-reference-programme-ae4738be
 
 Recorded 2026-11-22T07:46:12.838102+00:00 · Contributor: Codex PM /root; authors /root/seo and /root/share_debugger; reviewer /root/web_camo · change
@@ -134,6 +143,13 @@ Recorded 2026-11-22T05:41:37.156328+00:00 · Contributor: Codex /root/seo; disti
 - **Changed.** Delivered the complete nonoperating F145 reference-programme design and consumed private application/review/appeal/correction/renewal/withdrawal workflow, with exact source/programme/evidence bindings.
 - **Evidence.** Actual30 current CLI controls passed, including separate declared-role decisions, contested/corrected outcomes, unsupported-scope/source/authority/no-overwrite refusals and personal PS recovery. Distinct reviewer ran four affected controls and three private CLI checks. All original criteria unchanged. [Change record](./runs/changes/2026-11-22-054137-deliver-complete-reference-certification-programme-ba315aec.json).
 - **Not claimed.** No actual accreditation, institution, role identity, mark/legal adoption, independent accuracy or tag release.37 earlier-source controls and8 affected current controls are separately recorded; no all39 current claim. Protected/public delivery and original counters remain parent-owned and pending.
+### 2026-11-22-065604-preserve-account-free-ps-provenance-downloads-6a8b738a
+
+Recorded 2026-11-22T06:56:04.589688+00:00 · Contributor: Codex /root/share_debugger; protected verification and delivery remain separate · change
+
+- **Changed.** Added immutable commit-specific public PS ZIP/SPDX/preparation/bundle/observation downloads and a separate independent-trust guide; preserved all five original protected artifacts byte-for-byte.
+- **Evidence.** Actual detached verification succeeds with empty HOME/GitHub configuration and no credentials; trusted roots obtained independently without login. Signed predicate/subject, exact copies, private-path/token scans and guide syntax pass. [Change record](./runs/changes/2026-11-22-065604-preserve-account-free-ps-provenance-downloads-6a8b738a.json).
+- **Not claimed.** Static delivery candidate only; no HTTP publication tested or new signature generated. Raw preparation remains unverified, past observation is unsigned, no trust roots shipped. No all-project licensing, accuracy or full original completion.
 
 
 ### 2026-11-22-055521-record-current-delivery-engineering-packet-f5ca3c80

@@ -1,0 +1,46 @@
+{
+  "profile": "immutable-PS-source-provenance-download/v1",
+  "source_repository": "knwvmbrr/aitrust-id",
+  "source_commit": "cd3beab02774fa939e3a2bd8a0d87913d9e8fd81",
+  "protected_run": "https://github.com/knwvmbrr/aitrust-id/actions/runs/44992617061",
+  "signer_workflow_ref": "knwvmbrr/aitrust-id/.github/workflows/artifact-sbom.yml@refs/heads/main",
+  "files": {
+    "checker.zip": {
+      "bytes": 131039,
+      "sha256": "1720be1015f7ab1e295de97dbc503723b486209b2f7dc09e2ebd6130c6fb42d1",
+      "role": "signed PS source subject"
+    },
+    "artifact.spdx.json": {
+      "bytes": 6994,
+      "sha256": "0425cc829b7dc89485158cc5bbfe9eddd303143cc56a6c3c9b38e42e470a708a",
+      "role": "exact signed SPDX predicate"
+    },
+    "evidence.json": {
+      "bytes": 13445,
+      "sha256": "060775af5eda155f2e4921466f33f3c360ac12a2f4a5ff8dfdf19bbf1232aeec",
+      "role": "unchanged unverified preparation packet"
+    },
+    "sbom.sigstore.json": {
+      "bytes": 19001,
+      "sha256": "3ed92413ce241addeb71ac4320a1009c6e966a945509dc8dee378c4779f28475",
+      "role": "actual protected Sigstore bundle"
+    },
+    "verified-observation.json": {
+      "bytes": 543,
+      "sha256": "8ac8c8b6c44c940e6bfd28c62ca90601ef0e4044f35fb7ec9bc6ba82899a0a18",
+      "role": "unsigned earlier successful verification observation"
+    },
+    "VERIFY.md": {
+      "bytes": 5607,
+      "sha256": "c830877eb32db8955e42cc4518edb58e22c8e4f39a53fafd68e72edc5eaa355a",
+      "role": "account-free independent verification guide"
+    }
+  },
+  "manifest_is_not_signed_or_a_trust_anchor": true,
+  "trusted_roots_included": false,
+  "original_preparation_flags_preserved": true,
+  "independent_accuracy_evidence": false,
+  "all_project_license_clearance": false,
+  "full_F057_closed": false,
+  "full_X02_closed": false
+}
