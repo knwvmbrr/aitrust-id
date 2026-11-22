@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-045216-require-fresh-enterprise-worker-observations-8b9adf33
+
+Recorded 2026-11-22T04:52:16.315141+00:00 · Contributor: Codex PM /root; enterprise recovery author /root/seo · change
+
+- **Changed.** Selected new dated enterprise observation paths and retained the actual current Mac Fleet and committed-source artifact results.
+- **Evidence.** Actual Mac Fleet33 and actual7550 source-archive build, v2 inspection, artifact preparation, SPDX and reconstruction passed. Existing hosted workflows can execute their current supervisors without changing permissions. [Change record](./runs/changes/2026-11-22-045216-require-fresh-enterprise-worker-observations-8b9adf33.json).
+- **Not claimed.** Fresh LinuxFleet and directory executions remain pending. Old observations are immutable; no licensing, accuracy or additional original closure is claimed;135 complete/67 open.
+
+
+### 2026-11-22-044943-preserve-current-publication-refusals-66bf3859
+
+Recorded 2026-11-22T04:49:43.645968+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Preserved actual publication candidate refusals and corrected the two state timestamp fields consistently.
+- **Evidence.** Actual state chronology now passes; the earlier source-bound Fleet/SSO observations are correctly rejected after their worker code changed. [Change record](./runs/changes/2026-11-22-044943-preserve-current-publication-refusals-66bf3859.json).
+- **Not claimed.** Fresh enterprise producers and complete current-source verification remain required. Browser export passed a separate diagnostic rerun with original transient cause unresolved; no failure was overwritten or converted into a pass.135 complete/67 open unchanged.
+
+
+### 2026-11-22-044626-delivery-current-extension-9cff9e1c
+
+Recorded 2026-11-22T04:46:26.245379+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated extension execution after the versioned serializer and FI practice integration.
+- **Evidence.** Failed candidate preserved; no pass is claimed. [Change record](./runs/changes/2026-11-22-044626-delivery-current-extension-9cff9e1c.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-044553-delivery-current-pii-redacted-e005860a
+
+Recorded 2026-11-22T04:45:53.628158+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated PII_REDACTED execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-044553-delivery-current-pii-redacted-e005860a.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
+### 2026-11-22-044546-delivery-current-ps-825a35d6
+
+Recorded 2026-11-22T04:45:46.220388+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated PS execution after the versioned serializer and FI practice integration.
+- **Evidence.** All registered commands and source identity checks passed. [Change record](./runs/changes/2026-11-22-044546-delivery-current-ps-825a35d6.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
 ### 2026-11-22-044451-retain-fi-distinct-acceptance-review-3f472c8d
 
 Recorded 2026-11-22T04:44:51.830816+00:00 · Contributor: Codex PM /root; distinct reviewer /root/seo · change

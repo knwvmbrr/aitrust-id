@@ -1,0 +1,36 @@
+{
+  "captured_at": "2026-11-22T04:49:19.200420+00:00",
+  "profile": "current-publication-refusals/v1",
+  "source_commit": "755040c0fef91b44a534d297b7e3e357b069eefd",
+  "pass": false,
+  "hosted_workflow_run": 44986451493,
+  "findings": [
+    {
+      "job": "scope-plan",
+      "reason": "state updated and updated_at disagreed",
+      "repair": "Set both timestamp fields to the actual same current UTC instant; actual state chronology verifier now passes."
+    },
+    {
+      "job": "site",
+      "reason": "FLEET Mac/Linux and SSO retained observations bind the old shared worker source.",
+      "repair": "Prepare fresh actual producers on Mac and isolated hosted Linux, preserve old observations and use new dated receipts."
+    },
+    {
+      "job": "gates",
+      "reason": "Independent tag release statistical/accessibility evidence remains unmet.",
+      "repair": "Keep the release refusal and existing thresholds; this job is not among the 11 required engineering integration checks."
+    },
+    {
+      "job": "local-extension",
+      "reason": "Browser replay export returned1 in current five-profile execution, then the same exact command returned0 without source changes. Original failure stderr was hashed, not retained; its cause is unresolved.",
+      "repair": "Preserve failed receipt and separate diagnostic pass; require a fresh complete extension run before publication."
+    }
+  ],
+  "state_chronology_repair_actual_pass": true,
+  "state_chronology_log_sha256": "490e4383820742b201aeeb1e73349b3010f7562d8413ab35a845ef3261545dbd",
+  "diagnostic_export_pass_sha256": "c69d9a7a9d720c90e5b7edcb84ffabfecce2d7b1d08fa7c5388cede1516b1f2d",
+  "original_complete": 135,
+  "original_open": 67,
+  "tag_release_approved": false,
+  "old_receipts_rewritten": false
+}

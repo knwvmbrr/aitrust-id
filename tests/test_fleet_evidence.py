@@ -29,6 +29,15 @@ def test_full_fleet_requirement_requires_both_actual_profiles():
     ledger=json.loads((ROOT/'docs/scope-progress.json').read_bytes());row=next(r for r in ledger['records'] if r['id']=='F-159')
     if row['percent_complete']==100:
         for platform,name in [('darwin','macos'),('linux','linux')]:
-            assert v['verify'](json.loads((ROOT/('runs/2026-11-09-fleet-root-guard-'+name+'.json')).read_bytes()),platform)['pass']
+            assert v['verify'](json.loads(v['RECEIPTS'][platform].read_bytes()),platform)['pass']
         assert row['completed_at'] and row['completed_by'] and not row['required_acceptance']
     else:assert row['required_acceptance'] and not row['completed_at']
+
+
+def test_current_defaults_select_new_observations_and_old_worker_receipts_refuse():
+    assert {k:p.name for k,p in v['RECEIPTS'].items()}=={
+        'darwin':'2026-11-22-fleet-worker-ownership-macos.json',
+        'linux':'2026-11-22-fleet-worker-ownership-linux.json'}
+    for platform,name in [('darwin','macos'),('linux','linux')]:
+        row=json.loads((ROOT/('runs/2026-11-09-fleet-root-guard-'+name+'.json')).read_bytes())
+        with pytest.raises(ValueError):v['verify'](row,platform)

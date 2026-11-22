@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-044943-preserve-current-publication-refusals-66bf3859",
+  "recorded_at": "2026-11-22T04:49:43.645968+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "755040c0fef91b44a534d297b7e3e357b069eefd",
+  "changed": "Preserved actual publication candidate refusals and corrected the two state timestamp fields consistently.",
+  "proves": "Actual state chronology now passes; the earlier source-bound Fleet/SSO observations are correctly rejected after their worker code changed.",
+  "limits": "Fresh enterprise producers and complete current-source verification remain required. Browser export passed a separate diagnostic rerun with original transient cause unresolved; no failure was overwritten or converted into a pass.135 complete/67 open unchanged.",
+  "scope_ids": [
+    "N-010",
+    "F-057",
+    "F-096"
+  ],
+  "files": {
+    "state.json": "4be60d623a9481f038f58b97e216692f8a86849d6f643d43d4a3db36ba749607",
+    "runs/2026-11-22-current-publication-candidate-refusals.json": "2e2e78b2ffadb4045b76b6d5ee8d9528698be8e43ece8cd1179df67c05149cb1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-current-publication-candidate-refusals.json",
+      "sha256": "2e2e78b2ffadb4045b76b6d5ee8d9528698be8e43ece8cd1179df67c05149cb1"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,112 @@
+{
+  "pass": true,
+  "captured_at": "2026-11-22T04:50:51.116560+00:00",
+  "profile": "current-v2-committed-source-artifact-execution/v1",
+  "source_commit": "755040c0fef91b44a534d297b7e3e357b069eefd",
+  "source_sha256": {
+    ".github/workflows/artifact-sbom.yml": "ddee07cc10c2ab04d7306bf91b6d1f625026ea61b4968d05fefe3eab5a505177",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "docs/distribution-artifact-sbom.md": "9850d93399dae6464278013af7ecf5ee958c9d02f4bd108f2ee3945cd51bc627",
+    "docs/source-snapshot-v2-plan.md": "05628fb13142c3ce8031df9980df65f43fb020d7eed23497c25b6920e9cddadb",
+    "eval/dependency-policy.json": "84cd00d8856954afcb0fd46920e528d0cc0372dc93141a5be544cd2540747951",
+    "scripts/build-source-snapshot.py": "a07d3642d5921e804277c12c16ad22cf388d65bae114810877b2b08e52ce6706",
+    "scripts/distribution-artifact.py": "15fb26b1fa0ef927e3bda554bf55f8cf011935a81cb660bead236f1d07be9d0a",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/verify-source-provenance.py": "cc0e9bbb83f1c844a9ca7cca69b063352a53c1ac311bef02d354f92bb5194215",
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tools/artifact_process.py": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86",
+    "tools/dependency_policy.py": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+    "tools/distribution_artifacts.py": "3540e7a5c9326148eef2183638fa5767259284d470701619e562fd2f14528be8"
+  },
+  "all_bound_inputs_match_exact_committed_tree": true,
+  "current_bound_inputs_match_prepare_snapshot": true,
+  "actual_cli_count": 5,
+  "actual_cli": [
+    {
+      "operation": "committed_source_archive",
+      "exit": 0,
+      "stdout_sha256": "78c5780b68f444a1db098e36ed6891bc3cf29367068cfb2b2507788aad67bb5b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "operation": "explicit_v2_inspection",
+      "exit": 0,
+      "stdout_sha256": "0d4f14584a601d75bf5636fc62933eee0eb9410d937a84065c803c535a31c72e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "operation": "source_binding_prepare",
+      "exit": 0,
+      "stdout_sha256": "5cc7f369cad94e4c4cfa5bdc83c38425b22143fd82dcd6bf441da81da7ebc5d7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "operation": "source_spdx_export",
+      "exit": 0,
+      "stdout_sha256": "c47beb703fa39eee196241aa094a2fde20382ae39e74be873bf6252691ac771a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "operation": "source_binding_reconstruct_inspect",
+      "exit": 0,
+      "stdout_sha256": "c47beb703fa39eee196241aa094a2fde20382ae39e74be873bf6252691ac771a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "whole_source_artifact": {
+    "sha256": "fe1f0eae013a06d13439762fb5c9158ba5d15f63789eba82c0a0f48fef20d8a1",
+    "bytes": 33788351,
+    "source_files": 12516,
+    "source_bytes": 116452533,
+    "git_listing_with_sizes_bytes": 1672969,
+    "packet_sha256": "74050cc71533655c6f570eaefb04b2d1b605a7fddc0ba09ff71e73578a1fbed3",
+    "packet_bytes": 14585302,
+    "spdx_sha256": "637cbaaacd3bebb9cb5d9283b7ff6db182ea84b082918794fc0991b55ce7ec43",
+    "spdx_bytes": 8996070,
+    "graph_sha256": "d6fc7a37ed07992cfc2dc039fdd92102165dbd89c370fe6624efbcbcc3a07f3e",
+    "independent_v2_inspection_matches_builder_fields": true,
+    "actual_builder_wrapper_pass_true": true,
+    "packet_reconstructed_after_exports": true,
+    "managed_release_allowed": false
+  },
+  "all_products_current_stdlib_only": true,
+  "source_archive_uses_supported_S_B_entrypoint": true,
+  "other_four_cli_use_I_S_B": true,
+  "admitted_PS_not_repeated": true,
+  "no_product_build_or_cli_retried": true,
+  "controller_failures_preserved": [
+    {
+      "pass": false,
+      "captured_at": "2026-11-22T04:47:24.707660+00:00",
+      "phase": "private_controller_compile",
+      "product_commands_executed": 0,
+      "signature": "missing whitespace in conditional timeout expression",
+      "controller_sha256": "d3c9d4b8d2332c6a4f8a17f60e9258fb278a03eae0e15e0c884f4de582f6f48f"
+    },
+    {
+      "pass": false,
+      "phase": "post_product_reporting_comparison",
+      "product_commands_completed_successfully": 5,
+      "signature": "Builder adds pass:true wrapper to identical plain v2 inspection fields.",
+      "correction": "Retained actual stdout digests reproduce both exact JSON forms; compare shared inspection fields, not unequal wrappers. No product rerun.",
+      "log_sha256": "f662f4e2c81dc8b03c35be2c4aa479df28eb965e2fc9dd743f96fe4120865dd0"
+    }
+  ],
+  "retained_byte_caps": {
+    "packet": 16000000,
+    "compressed_archive": 64000000,
+    "source": 128000000,
+    "source_file": 32000000,
+    "source_files": 16384
+  },
+  "private_product_controller_sha256": "fec999a8d19fcd8b93d2177992cd66db6fb78d21c25d1690a242ac9b954cec3c",
+  "actual_new_sigstore_executed": false,
+  "fresh_native_or_model_archive_replay": false,
+  "old37_controls_promoted_to_current": false,
+  "full_F057_closed": false,
+  "full_X02_closed": false,
+  "original_required_acceptance_changed": false
+}

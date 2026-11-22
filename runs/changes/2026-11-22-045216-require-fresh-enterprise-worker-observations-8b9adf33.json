@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-045216-require-fresh-enterprise-worker-observations-8b9adf33",
+  "recorded_at": "2026-11-22T04:52:16.315141+00:00",
+  "author": "Codex PM /root; enterprise recovery author /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "755040c0fef91b44a534d297b7e3e357b069eefd",
+  "changed": "Selected new dated enterprise observation paths and retained the actual current Mac Fleet and committed-source artifact results.",
+  "proves": "Actual Mac Fleet33 and actual7550 source-archive build, v2 inspection, artifact preparation, SPDX and reconstruction passed. Existing hosted workflows can execute their current supervisors without changing permissions.",
+  "limits": "Fresh LinuxFleet and directory executions remain pending. Old observations are immutable; no licensing, accuracy or additional original closure is claimed;135 complete/67 open.",
+  "scope_ids": [
+    "F-159",
+    "F-162",
+    "F-096"
+  ],
+  "files": {
+    ".github/workflows/fleet.yml": "47dde968820c0dce081377865e346572e93be525f7ef8ecd39befbde71ff02f3",
+    ".github/workflows/organization-directory.yml": "230fb710e56d38d7fbb01758e4603cf121adcb96b261bf3eeaa07b54a59f58cb",
+    "scripts/verify-fleet-evidence.py": "a866ddd3b01d5dc336eee12cfb611d37f4bbd9562886cd43ee585152c6717cc1",
+    "scripts/verify-organization-directory-evidence.py": "8e788ce79620637c3fe4bb47ab2441047bd6c0d57f91ffd34480f02e0cde0924",
+    "scripts/verify-enterprise.cjs": "8271e534e5e0bc82c626525e670a7ea82fad0ef97069ea860ed2f3ecdb711e2b",
+    "tests/test_fleet_evidence.py": "02b50c21b268aee2b57483bb5b0c63dee2eed8c151b9b6824a7e71510d67a18f",
+    "tests/test_organization_directory_evidence.py": "9a52a5b831ea7ebccceaac20c21aff76202ec162ae84bf51258d6b1b25b3881a",
+    "docs/enterprise-worker-evidence-refresh-plan.md": "ebd84b0e3d6ab41036754272ba79c5ef72340b84d80f5acab47b41f42c5a7e6b",
+    "site/scripts/prepare.mjs": "d90e4a40ce194bc7c649d607f4d60d362190f9f6aae8cf2cdf4661c59681ad15",
+    "site/scripts/render-reference.mjs": "772710774fe6b3112c2f8c0f74a595b65e9dff17af503c43d19a4dfed199fb5c",
+    "eval/revalidation.json": "37ddc94f43ca48ea693963cffc0db11ddfdb5d0f40bf74f64bdb464b21764519",
+    "scripts/verify-route-boundaries.py": "5972f42646707dae3edbd7b56d42b706f3ab90677a868101611e151daa03cb41",
+    "runs/2026-11-22-fleet-worker-ownership-macos.json": "05a4847aaa6c00213efd0150270247aa1337b051d9a88cb3918fbb9956b07f6c",
+    "runs/2026-11-22-source-snapshot-v2-current-artifact.json": "76972a705ed05851133279971da603f054aa8126d26a1685c0b5ec06dc122c2b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-fleet-worker-ownership-macos.json",
+      "sha256": "05a4847aaa6c00213efd0150270247aa1337b051d9a88cb3918fbb9956b07f6c"
+    },
+    {
+      "path": "runs/2026-11-22-source-snapshot-v2-current-artifact.json",
+      "sha256": "76972a705ed05851133279971da603f054aa8126d26a1685c0b5ec06dc122c2b"
+    }
+  ],
+  "checks": []
+}
