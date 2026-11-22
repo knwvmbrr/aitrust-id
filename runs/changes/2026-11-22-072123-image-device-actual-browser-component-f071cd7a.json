@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-072123-image-device-actual-browser-component-f071cd7a",
+  "recorded_at": "2026-11-22T07:21:23.793717+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2460f154f097cf4b47306897fe152663e0c9f2f2",
+  "changed": "Finish the standalone private PNG/JPEG metadata workflow and retain exact actual Chromium/WebKit proof with a distinct source/artifact review.",
+  "proves": "Actual firstbuild and firstbrowsercandidate pass: eachengine16 whole canonical records,3file-picker UI cases,4 corruptions refused, source/subject/size/privacy/lifecycle controls, optionalchunk/payloadfailure followedby real independentMT/PS findings.34sources/313servedfiles stable; distinctreview clears currentartifact.",
+  "limits": "Standalone component only; no main/production integration, offline/physical/human/accuracy/origin/signature/tag/fulloriginal closure. New resultdoc is post-execution prose, not rebound UI proof.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA",
+    "F-155"
+  ],
+  "files": {
+    "docs/image-device-result.md": "9973f3f3ae00899c298368206d7b7480bb51ca469b050aa6885b309755c778b7",
+    "runs/2026-11-22-image-device-source-distinct-review.json": "9d6a614b56f243e90f6b0f6db6a302da42892fab234bfc716765a12facea5105",
+    "runs/2026-11-22-image-device-browser-candidate-1.json": "e4ff049e12485078febc85a28cf7eb7b027aba54ffc5eb8c0b1b015845c14942",
+    "runs/2026-11-22-image-device-actual-proof-distinct-review.json": "03c60565dc0ed02dc085f3ad7f74e950597c47cde79969769b608e9742182529",
+    "runs/2026-11-22-image-device-completed-component.json": "feb24c8cdafffbfef95d04cbb887058ae58b695895437040f2e59c98758b8439"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-image-device-completed-component.json",
+      "sha256": "feb24c8cdafffbfef95d04cbb887058ae58b695895437040f2e59c98758b8439"
+    },
+    {
+      "path": "runs/2026-11-22-image-device-actual-proof-distinct-review.json",
+      "sha256": "03c60565dc0ed02dc085f3ad7f74e950597c47cde79969769b608e9742182529"
+    }
+  ],
+  "checks": []
+}

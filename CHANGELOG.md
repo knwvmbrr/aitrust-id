@@ -27,6 +27,76 @@ Recorded 2026-11-22T07:46:12.838102+00:00 · Contributor: Codex PM /root; author
 - **Changed.** Closed the whole original F145 reference-programme job after protected source and actual public guide delivery; updated scope, attribution and task accounting to136complete66open.
 - **Evidence.** Eleven required checks and actual30-command Linux workflow pass;126 publicHTTP responses match protected source692, actual MT works in both engines. Current private programme lifecycle/refusals and distinct original-contract review satisfy the unchanged job. [Change record](./runs/changes/2026-11-22-074612-complete-original-reference-programme-ae4738be.json).
 - **Not claimed.** 60 remains unmet. This is a nonoperating reference programme, not actual accreditation, legal/mark adoption, independent tag validation or physical/human accessibility. Live scope counter projection still awaits the next protected publication.
+### 2026-11-22-080241-fa-image-normal-build-production-proof-206fc14a
+
+Recorded 2026-11-22T08:02:41.128135+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Recorded the actual normal-build FA image workflow and exact independent reviews, with required generated guide/index outputs.
+- **Evidence.** Normal build and both source-notice postbuild gates pass. First Chromium and WebKit actual FA route each match16canonical records,3fileUI and4corrupt refusals, private lifecycle/mobile controls and2optional failures followed by realMT/PS recovery.34source and29served bytes stable; distinct reviewer matched all bindings. [Change record](./runs/changes/2026-11-22-080241-fa-image-normal-build-production-proof-206fc14a.json).
+- **Not claimed.** FA remains Planned; no origin, watermark, credential, offline, physical-phone, accuracy, public activation or original closure. Root must regenerate current ledger outputs and complete protected, policy and public gates.
+
+
+### 2026-11-22-075604-fa-image-availability-guard-correction-0907c4b0
+
+Recorded 2026-11-22T07:56:04.670946+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Corrected the generic FA availability expectation before the first integration build and added exact-expression compatibility coverage.
+- **Evidence.** The original source-only mismatch is retained; current five integration groups pass for all20 availability expressions with19 sibling expectations preserved. Seven named base inputs match protected69298f and root9ac868. [Change record](./runs/changes/2026-11-22-075604-fa-image-availability-guard-correction-0907c4b0.json).
+- **Not claimed.** Verifier-only correction; no current normal-build/browser or publication credit and no FA/original closure.
+
+
+### 2026-11-22-075325-fa-private-image-route-integration-114e4a97
+
+Recorded 2026-11-22T07:53:25.016241+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Prepared the reviewed private PNG/JPEG container preview in the planned FA modal, with source-bound integration guards and a production-route verifier.
+- **Evidence.** Five focused Node integration groups, six temporary-filesystem groups, syntax and pinned JSX transformation pass; the canonical image component is unchanged. [Change record](./runs/changes/2026-11-22-075325-fa-private-image-route-integration-114e4a97.json).
+- **Not claimed.** Engineering component only. FA remains Planned and working=false; no origin, watermark, credential or original-closure claim. Current normal-build and browser proof and protected-publication base comparison remain pending.
+
+
+### 2026-11-22-072123-image-device-actual-browser-component-f071cd7a
+
+Recorded 2026-11-22T07:21:23.793717+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Finish the standalone private PNG/JPEG metadata workflow and retain exact actual Chromium/WebKit proof with a distinct source/artifact review.
+- **Evidence.** Actual firstbuild and firstbrowsercandidate pass: eachengine16 whole canonical records,3file-picker UI cases,4 corruptions refused, source/subject/size/privacy/lifecycle controls, optionalchunk/payloadfailure followedby real independentMT/PS findings.34sources/313servedfiles stable; distinctreview clears currentartifact. [Change record](./runs/changes/2026-11-22-072123-image-device-actual-browser-component-f071cd7a.json).
+- **Not claimed.** Standalone component only; no main/production integration, offline/physical/human/accuracy/origin/signature/tag/fulloriginal closure. New resultdoc is post-execution prose, not rebound UI proof.
+
+
+### 2026-11-22-071607-image-device-peer-reviewed-build-12ebe237
+
+Recorded 2026-11-22T07:16:07.334207+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Bind the distinct frozen image component source review before its authorized standalone build and sequential browser execution.
+- **Evidence.** Independent projection/source-pin/client/owned-output controls clear exact2460f154 source. Browser execution is next, not implied by source review. [Change record](./runs/changes/2026-11-22-071607-image-device-peer-reviewed-build-12ebe237.json).
+- **Not claimed.** No original/tag/main integration or image-origin claim; exact prior failures and source evidence remain historical.
+
+
+### 2026-11-22-071403-image-fixture-exclusive-output-cbc49933
+
+Recorded 2026-11-22T07:14:03.205456+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Make standalone fixture output exclusive and preserve any existing directory or failed candidate instead of clearing it. Bind the new focused ownership control.
+- **Evidence.** Three actual temporary-filesystem controls pass for prior-output preservation, linked-parent refusal and held-directory identity drift; no Vite/browser/runtime ran. Core image methods/client/worker/UI are unchanged. [Change record](./runs/changes/2026-11-22-071403-image-fixture-exclusive-output-cbc49933.json).
+- **Not claimed.** Preventative test-fixture safety change; no prior deletion/exposure reproduced. Actual browser acceptance remains pending. No tag/original closure.
+
+
+### 2026-11-22-070939-image-device-source-freeze-2b62f0f5
+
+Recorded 2026-11-22T07:09:39.953221+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Freeze complete standalone image metadata component, reviewed pure source cohort, actual file-capture/result boundaries and runnable fixture verifier for scheduled browser execution.
+- **Evidence.** Current11 focused Python tests pass including16 canonical projected cases, pixel/metadata/inflate caps, AST/source rebinding and publication uncertainty;10 Node groups validate16 records/11 refusals and abortable capture/worker bounds;3 JSX modules parse with pinned local compiler. Static method inputs and5runtime file pins remain current. [Change record](./runs/changes/2026-11-22-070939-image-device-source-freeze-2b62f0f5.json).
+- **Not claimed.** Source implementation frozen; actual WASM/browser execution, complete component acceptance and root integration remain pending. No image-origin/signature/accuracy/tag/original closure.
+
+
+### 2026-11-22-070249-image-device-fixed-canonical-source-9a623445
+
+Recorded 2026-11-22T07:02:49.718693+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Implement separate on-device PNG/JPEG metadata input with fixed canonical AST projections, bounded private capture and isolated worker, without a new image tag.
+- **Evidence.** Actual9 focused Python controls compare16 native/projected records and fixed-source/AST/IO refusals;10 Node groups compare16 records and11 corruption refusals with preallocation/capture/worker bounds. Existing5runtime files statically hashed; design projection separately reviewed. [Change record](./runs/changes/2026-11-22-070249-image-device-fixed-canonical-source-9a623445.json).
+- **Not claimed.** Browser execution and full component acceptance pending root slot. No main-site integration, origin/signature/watermark/authenticity/accuracy/tag/original closure.
 
 
 ### 2026-11-22-070807-accept-complete-programme-mt-engineering-packet-fd3a1103
