@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-080241-fa-image-normal-build-production-proof-206fc14a",
+  "recorded_at": "2026-11-22T08:02:41.128135+00:00",
+  "author": "Codex / web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0a4429354bcb37490e70269a2c76a38303b71972",
+  "changed": "Recorded the actual normal-build FA image workflow and exact independent reviews, with required generated guide/index outputs.",
+  "proves": "Normal build and both source-notice postbuild gates pass. First Chromium and WebKit actual FA route each match16canonical records,3fileUI and4corrupt refusals, private lifecycle/mobile controls and2optional failures followed by realMT/PS recovery.34source and29served bytes stable; distinct reviewer matched all bindings.",
+  "limits": "FA remains Planned; no origin, watermark, credential, offline, physical-phone, accuracy, public activation or original closure. Root must regenerate current ledger outputs and complete protected, policy and public gates.",
+  "scope_ids": [
+    "T-FA",
+    "F-155"
+  ],
+  "files": {
+    "docs/fa-image-main-integration-result.md": "ff9352a7738577e22abb23db3e4710d20cc2ee1cc5fe9756813ee2d3898ac895",
+    "runs/2026-11-22-fa-image-normal-build-and-browser.json": "edc84bc758c602cf292d04148cad756b10b8a55162e97db967172141d7bdc33d",
+    "runs/2026-11-22-fa-image-production-candidate-1.json": "d7e7abfd9f5f7d9c402db52e111cd01bd62f806538e8b14cbc2927f14996386d",
+    "runs/2026-11-22-fa-image-source-distinct-review.json": "05c430ad3f1b6c206cd4e8817726450d2ef2494d67d0af368e4c4ec732216302",
+    "runs/2026-11-22-fa-image-production-distinct-review.json": "613a18379144ab12ad2921f4fe1f2054fac523fa6eccb17c4d9534519d9ce3b4",
+    "site/index.html": "8ced6e2367fe5ce48f4fd8e15614fd7e2d3b31b51d44302c049fd31853902ab8",
+    "site/public/reference/image-device-guide.md": "9bf5b7f2a7f192f23e5dc2a10c0d0d18e2fbe5bb147139cf6c41acb0220d54a8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-fa-image-normal-build-and-browser.json",
+      "sha256": "edc84bc758c602cf292d04148cad756b10b8a55162e97db967172141d7bdc33d"
+    },
+    {
+      "path": "runs/2026-11-22-fa-image-production-candidate-1.json",
+      "sha256": "d7e7abfd9f5f7d9c402db52e111cd01bd62f806538e8b14cbc2927f14996386d"
+    },
+    {
+      "path": "runs/2026-11-22-fa-image-production-distinct-review.json",
+      "sha256": "613a18379144ab12ad2921f4fe1f2054fac523fa6eccb17c4d9534519d9ce3b4"
+    }
+  ],
+  "checks": []
+}

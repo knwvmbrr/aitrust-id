@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-080241-fa-image-normal-build-production-proof-206fc14a
+
+Recorded 2026-11-22T08:02:41.128135+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Recorded the actual normal-build FA image workflow and exact independent reviews, with required generated guide/index outputs.
+- **Evidence.** Normal build and both source-notice postbuild gates pass. First Chromium and WebKit actual FA route each match16canonical records,3fileUI and4corrupt refusals, private lifecycle/mobile controls and2optional failures followed by realMT/PS recovery.34source and29served bytes stable; distinct reviewer matched all bindings. [Change record](./runs/changes/2026-11-22-080241-fa-image-normal-build-production-proof-206fc14a.json).
+- **Not claimed.** FA remains Planned; no origin, watermark, credential, offline, physical-phone, accuracy, public activation or original closure. Root must regenerate current ledger outputs and complete protected, policy and public gates.
+
+
 ### 2026-11-22-075604-fa-image-availability-guard-correction-0907c4b0
 
 Recorded 2026-11-22T07:56:04.670946+00:00 · Contributor: Codex / web_camo · change

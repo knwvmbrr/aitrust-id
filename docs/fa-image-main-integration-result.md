@@ -41,10 +41,31 @@ Six actual temporary-filesystem groups pass for fixture output/copy boundaries.
 The sibling baseline is exact immutable026634ea data with a fixed SHA; runtime
 checks require no Git history, making shallow CI/source-ZIP use possible.
 
-These are focused source controls. The standalone component's earlier actual
-16-record browser proof remains its exact historical evidence. Fresh normal-build
-FA-route and current source/served-browser proof are still pending and must not
-be inferred from those earlier source hashes. Heavy execution is root-scheduled.
+The original generic availability guard still expected No checker for FA. The
+reviewer caught this before browser execution. Its counterexample is immutable;
+the corrected FA-only phrase and exact20-record expression check pass, preserving
+all19 sibling expectations. The corrected source commit is
+0a4429354bcb37490e70269a2c76a38303b71972.
+
+The scheduled normal site build passed, including both existing JS/zlib
+source-notice postbuild gates. The first actual FA-route Chromium then WebKit run
+passed:16 full canonical records each (7 OBSERVED,9 UNAVAILABLE),3 actual file UI
+records,4 corrupt-result refusals, intrinsic10MiB refusal before reading, private
+opt-in details, Clear/file-change/cancel/disclosure and modal close/reopen,
+PA isolation,320px/200percent/light-dark/44px actions. Both optional chunk and
+payload404 controls leave actual MT urgency and PS observations usable. Normal
+captured requests are same-origin GET without input body/query/canary, and the
+selected context had no input storage. All34 source and29 served-file hashes
+remained stable; owned browser and fixture processes closed.
+
+The exact execution record is
+runs/2026-11-22-fa-image-production-candidate-1.json; its normal-build envelope is
+runs/2026-11-22-fa-image-normal-build-and-browser.json. These are actual isolated
+normal-build route controls, not final root/protected/publication proof. The
+standalone earlier proof and earlier source-only records remain exact historical
+evidence. Offline is NOT ASSESSED; no physical-phone or human accessibility claim.
+This result-document update follows execution and is not silently rebound into
+its earlier source-freeze record.
 
 ## Factual privacy paragraph proposed for the root policy owner
 
@@ -71,10 +92,16 @@ advice/clearance or a replacement for the open professional review requirement.
 
 ## Remaining integration/publication gates
 
-After the first protected programme/MT publication, recompare exact named base
-inputs and reconcile only authorized source differences before handoff. Coordinate
-a normal build and actual Chromium then WebKit FA-route controls after source
-freeze and peer review. Root registers exact sources/commands, executes current
-required/protected checks, reviews any policy update and publishes only afterward.
+The protected first-delivery head69298f3656ece0a0c419348085c486ff706e3aa0
+has the exact026634ea tree. All seven named base inputs at that head and root
+9ac86811 were independently compared and remain byte-identical. The source-review
+counterexample and corrected comparison receipt preserve that chronology.
+
+Root must merge/register exact sources and commands, regenerate its current ledger
+and derived site files, execute required/protected integrated checks, publish the
+new-version privacy disclosure before activation and then verify the public route.
+Own derived build outputs reflect the isolated original base, not the later root
+ledger metadata. Existing1.14 archives are unchanged. This is a functioning image
+component, not a FA/PA release or full original requirement closure.
 No offline installation, physical-phone/human accessibility, independent origin
 accuracy, licence clearance, tag mapping or full original closure is claimed.

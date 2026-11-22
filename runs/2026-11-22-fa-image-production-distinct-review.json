@@ -1,0 +1,63 @@
+{
+  "profile": "FA-image-normal-route-proof-distinct-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T08:01:52.603007+00:00",
+  "reviewed_by": "Codex / seo",
+  "executed_source_commit": "0a4429354bcb37490e70269a2c76a38303b71972",
+  "source_review_sha256": "05c430ad3f1b6c206cd4e8817726450d2ef2494d67d0af368e4c4ec732216302",
+  "author_evidence": [
+    {
+      "path": "runs/2026-11-22-fa-image-production-candidate-1.json",
+      "sha256": "d7e7abfd9f5f7d9c402db52e111cd01bd62f806538e8b14cbc2927f14996386d"
+    },
+    {
+      "path": "runs/2026-11-22-fa-image-normal-build-and-browser.json",
+      "sha256": "edc84bc758c602cf292d04148cad756b10b8a55162e97db967172141d7bdc33d"
+    }
+  ],
+  "independent_read_only_checks": {
+    "before_after_maps_equal": true,
+    "current_sources_verified": 34,
+    "current_served_artifacts_verified": 29,
+    "retained_screenshots_hashed": 4,
+    "derived_outputs_verified": 2,
+    "normal_build_log_digest_verified": true,
+    "two_source_notice_postbuild_PASS_records_read": true,
+    "actual_manifest_sha256": "e8a1eabd2cc8aaeb83b726a288f3fcefc1517ba3d846342dec32b9e493225bea",
+    "actual_method_bundle_sha256": "04fe19cbc1e4e712be393acc5ffc746e94f36ba78802ad18588a883c01d68a9f",
+    "actual_method_bundle_bytes": 26270,
+    "both_projected_module_texts_equal_exact_AST_segments": true,
+    "all5runtime_byte_hashes_pinned": true,
+    "WebKit_dark320_screenshot_visually_inspected": true
+  },
+  "actual_author_proof_reviewed": {
+    "engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "full_canonical_records_per_engine": 16,
+    "states_per_engine": {
+      "OBSERVED": 7,
+      "UNAVAILABLE": 9
+    },
+    "actual_file_UI_records_per_engine": 3,
+    "forged_UI_refusals_per_engine": 4,
+    "optional_faults_each_followed_by_actual_MT_and_PS": 2,
+    "FA_Planned_and_no_validation_verdict_PA_unchanged": true,
+    "intrinsic_cap_before_capture_and_cancel_change_clear_close_reopen": true,
+    "same_origin_GET_no_input_query_body_canary_and_no_storage_observed": true,
+    "320px_text200_action44_and_light_dark": true,
+    "finally_browser_and_fixture_cleanup_controls_read": true
+  },
+  "post_proof_metadata_only_delta": {
+    "docs/fa-image-main-integration-result.md": "ff9352a7738577e22abb23db3e4710d20cc2ee1cc5fe9756813ee2d3898ac895"
+  },
+  "findings": [],
+  "limits": [
+    "No reviewer browser, build, native/WASM parser, network, installer or full suite repeat; independent read-only bytes/source/assertion/log review only.",
+    "Normal built website route on owned local fixture, not deployed public verification. Root policy1.15/currentledger/protected/main/publication remain separate.",
+    "Post-proof result-document prose is deliberately not rebound into earlier16-source freeze; all34actual execution-bound sources and29served files remain current.",
+    "Method/native whole-record equivalence is not independent origin/accuracy/credential validity evidence;16records include9explicit unavailable outcomes.",
+    "No offline, physical phone/Safari, FA/PA issuance, original closure, fullsource/legal/distribution clearance or root edits claimed."
+  ]
+}
