@@ -118,8 +118,10 @@ interface or the route count.
 ## Safety and failure
 
 Artifact input is a regular singly linked file, at most1GB, hashed in64KiB chunks.
-Source/metadata reads are at most16MB each,64MB total and256files. Graphs have at
-most12,000nodes/30,000edges, with bounded source labels and JSON. The complete
+Direct source/metadata captures are at most16MB each,64MB total and256files.
+The separate source-cohort verifiers additionally bind their declared retained
+text sets. Graphs have at most16,384nodes/30,000edges, with bounded source labels
+and JSON. The complete
 packet is at most16MB. The tool reads trusted repository graph evidence; it does
 not accept caller-supplied license approvals or arbitrary graph adapters.
 

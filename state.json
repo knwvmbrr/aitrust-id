@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-22T03:22:32.942149+00:00",
-  "active_increment": "Two full original software workflows completed: organization boundaries and offline assertion migration. Optional SynthID input works; original tag-workflow remains open.135 original requirements complete,67 open; target60 unmet. Protected publication pending.",
-  "status": "two_full_originals_and_working_vendor_input_component;135complete67open_target60_unmet;protected_publication_pending",
+  "updated": "2026-11-22T04:19:07.277676+00:00",
+  "active_increment": "Two full original workflows completed (N010/N001),67 original requirements remain open. Optional SynthID input and native/source/SBOM components are functioning; F155 tag outcome and F057/X02 remain open. Safe worker supervision integrated; final validation and protected publication pending.",
+  "status": "integrated_two_original_workflows_and_working_source_components;135complete67open_target60_unmet;final_validation_pending",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -1224,7 +1224,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-22T03:22:32.942149+00:00",
+  "updated_at": "2026-11-22T04:19:07.277676+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -4868,7 +4868,9 @@
     ],
     "publication_status": "pending normal protected source publication",
     "current_boundary_evidence": "runs/2026-11-22-three-originals-reference-boundaries.json",
-    "F155_component_not_full_original": "runs/2026-11-22-f155-original-completion-correction.json"
+    "F155_component_not_full_original": "runs/2026-11-22-f155-original-completion-correction.json",
+    "source_component_integration": "d572882f4cb9b580aba9985e2f6a3b49382b74da",
+    "source_components_are_not_original_closures": true
   },
   "independent_development_handoffs": "runs/2026-11-21-independent-tag-development-handoffs.json",
   "operator_ownership_correction": {
@@ -4883,7 +4885,10 @@
     "protected_source_commit": "a0c59d27dc4597599422a9f356978901e597f49d"
   },
   "pending_engineering_revalidation": [
+    "PS",
+    "PII_REDACTED",
     "protocol",
+    "extension",
     "website"
   ],
   "session_target_correction": {

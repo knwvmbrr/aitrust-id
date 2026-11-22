@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-042510-integrate-reviewed-source-components-with-original-gates-open-532c5b40
+
+Recorded 2026-11-22T04:25:10.161963+00:00 · Contributor: Codex PM /root; /root/web_camo; /root/seo; /root/share_debugger · change
+
+- **Changed.** Integrated reviewed C2PA/NLI native-source graphs, fourteen artifact/SBOM adapters and protected signing workflow; registered their bounded checks and refreshed the current PS source download after worker hardening.
+- **Evidence.** Two full new originals remain complete (N010/N001):135 complete,67 open. Actual37 CLI proof at31b distinguishes two actual archives from12 inert candidates; source graphs retain native/notice gaps. Current Linux organization workflow passes27 groups with19 matching source bindings. [Change record](./runs/changes/2026-11-22-042510-integrate-reviewed-source-components-with-original-gates-open-532c5b40.json).
+- **Not claimed.** F155 tag outcome and fullF057/X02 remain open. The guide-only source/graph-limit paragraph was clarified after the frozen31b proof; runtime bytes unchanged. Final current source-bound validation, actual protected signing and live publication remain pending.
+
+
 ### 2026-11-22-041111-record-complete-artifact-sbom-packaging-proof-df44c23b
 
 Recorded 2026-11-22T04:11:11.638354+00:00 · Contributor: Codex /root/share_debugger; distinct evidence reviewer /root/web_camo · change
