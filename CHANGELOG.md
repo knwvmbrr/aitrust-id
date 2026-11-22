@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-064715-inventory-optional-delivery-boundaries-66cdab05
+
+Recorded 2026-11-22T06:47:15.551622+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Extended finite source review inventory to the optional programme and selected-wording implementation, exact cohort, privacy controls and workflow.
+- **Evidence.** New optional source inputs are explicitly included for the next boundary review; existing personal/refusal rules are unchanged. [Change record](./runs/changes/2026-11-22-064715-inventory-optional-delivery-boundaries-66cdab05.json).
+- **Not claimed.** This inventory change is not a completed security audit, accuracy evidence or full original closure. The next manifest refresh requires current matching capability receipts.
+
+
 ### 2026-11-22-064523-preserve-original-closure-gates-c22baf94
 
 Recorded 2026-11-22T06:45:23.386279+00:00 · Contributor: Codex PM /root; literal-criteria reviewer /root/seo · change

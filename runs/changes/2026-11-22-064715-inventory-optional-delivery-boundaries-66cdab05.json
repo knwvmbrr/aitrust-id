@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-064715-inventory-optional-delivery-boundaries-66cdab05",
+  "recorded_at": "2026-11-22T06:47:15.551622+00:00",
+  "author": "Codex PM /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0aefd204be13307a09c366f3dede1d7efcfea532",
+  "changed": "Extended finite source review inventory to the optional programme and selected-wording implementation, exact cohort, privacy controls and workflow.",
+  "proves": "New optional source inputs are explicitly included for the next boundary review; existing personal/refusal rules are unchanged.",
+  "limits": "This inventory change is not a completed security audit, accuracy evidence or full original closure. The next manifest refresh requires current matching capability receipts.",
+  "scope_ids": [
+    "F-145",
+    "T-MT",
+    "X-03",
+    "X-14"
+  ],
+  "files": {
+    "scripts/verify-route-boundaries.py": "a950129b4805bb9f70bdaf3220f40751eb21456fc01423198fdf1e5ad9438d1f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-f145-root-integration.json",
+      "sha256": "d1e0bcfe79ba84d03574af1c36c07f9634383680ab13c7169229bc23ab81a462"
+    },
+    {
+      "path": "runs/2026-11-22-mt-selected-wording-final-composed.json",
+      "sha256": "f398987752cdc569e0291ee8a697c23fc5a61807ed34f8d4b7739e8db6d9476e"
+    }
+  ],
+  "checks": []
+}
