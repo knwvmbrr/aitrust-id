@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-11-22T05:34:26.267699+00:00",
+  "profile": "current-host-performance-assertion-correction/v1",
+  "pass": false,
+  "prior_website_failure": "runs/2026-11-22-current-site-website.json",
+  "actual_failed_performance_output_sha256": "36387190848c896c69a422e8dbe30e1ff4eca8efa0dcc6e89fd2ad339703a156",
+  "actual_completed_modals_before_failure": 15,
+  "reason": "Existing performance assertion still required19 while the current accepted HOST observations and displayed summary are20.",
+  "verifier_before_sha256": "4d775b95c5a79740cb9cb929454341dfa355422e950cef85146ffb53c0cfbfbe",
+  "verifier_after_sha256": "f587c6cb3446be96ea44c1dac1a9cad908c7ac8d81b29b8f3ea2c6a57ec32cbb",
+  "changed_assertion_only": "19 terminal controls to20; not-accuracy and independent-review/human gates unchanged",
+  "full_corrected_website_pass_claimed": false,
+  "tag_accuracy_claimed": false,
+  "new_original_closures": 0
+}

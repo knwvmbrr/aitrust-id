@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-053704-prepare-current-host-performance-projections-3289d127
+
+Recorded 2026-11-22T05:37:04.752563+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Prepared and attributed both generated performance JSON copies and the static index for the accepted20-case HOST observations before source verification.
+- **Evidence.** The current performance model, generated data and static content describe the same accepted20 controls; other verification thresholds and no-accuracy boundaries are unchanged. [Change record](./runs/changes/2026-11-22-053704-prepare-current-host-performance-projections-3289d127.json).
+- **Not claimed.** Full website execution remains pending. This is deterministic metadata preparation, not additional measured accuracy or a requirement closure.
+
+
+### 2026-11-22-053426-correct-current-host-performance-assertion-bf78f3bc
+
+Recorded 2026-11-22T05:34:26.306867+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Updated the existing performance-view assertion to the exact20 current accepted HOST controls.
+- **Evidence.** The preserved actual browser failure isolated its stale19-case expected text; the accepted records and public summary both contain20. Syntax passes; independent-review/human/no-accuracy restrictions remain unchanged. [Change record](./runs/changes/2026-11-22-053426-correct-current-host-performance-assertion-bf78f3bc.json).
+- **Not claimed.** Full corrected website execution is pending; no previous failure is relabeled. No product method or original completion changed.
+
+
+### 2026-11-22-052957-current-site-website-d9dcea0f
+
+Recorded 2026-11-22T05:29:57.659064+00:00 · Contributor: Codex PM /root · change
+
+- **Changed.** Recorded actual integrated website execution after the versioned serializer and FI practice integration.
+- **Evidence.** Failed candidate preserved; no pass is claimed. [Change record](./runs/changes/2026-11-22-052957-current-site-website-d9dcea0f.json).
+- **Not claimed.** Engineering evidence only. Original135 complete/67 open remains unchanged; no independent tag accuracy, license permission or physical-human acceptance is implied.
+
+
 ### 2026-11-22-052637-record-generated-host20-site-metadata-c95de168
 
 Recorded 2026-11-22T05:26:37.850832+00:00 · Contributor: Codex PM /root · change
