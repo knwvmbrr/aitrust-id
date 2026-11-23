@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-030727-select-managed-current-five-capabilities-fc70d7a1
+
+Recorded 2026-11-23T03:07:27.935405+00:00 · Contributor: Codex PM; current hosted evidence collected and selection reviewed by Codex /root/seo · change
+
+- **Changed.** Selected the actual current five hosted capability receipts after source-rights and generated-output corrections; preserved all older selections and failures.
+- **Evidence.** Actual7/6/14/72/65 commands passed on hostedLinux. One bounded artifact retrieved once;8365unique source bindings and exact Git checkout verified. Allfive assess current afterselection; actual8397-source boundary review passes; independent selection review clear. [Change record](./runs/changes/2026-11-23-030727-select-managed-current-five-capabilities-fc70d7a1.json).
+- **Not claimed.** Engineering evidence only. Final protected checks, actual main-only MCP signature and fresh managed installation remain mandatory; independent tag accuracy, human/device acceptance and original60target remain unmet. Original136complete66open unchanged.
+
+
 ### 2026-11-23-023101-managed-generated-scope-notices-sync-e632d6b8
 
 Recorded 2026-11-23T02:31:01.721522+00:00 · Contributor: Codex PM · change

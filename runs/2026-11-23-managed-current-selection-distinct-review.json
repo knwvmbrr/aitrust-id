@@ -1,0 +1,272 @@
+{
+  "PM_actual_guard_manifest_hash_matches_current": true,
+  "PM_actual_guard_receipt_sha256": "f97b7373d78f687e940b2d5a2ad26af7d85ce5ca3851c54b62749afe185fcb9f",
+  "active_increment_current_selection_and_remaining_gates_accurate": true,
+  "all5_fingerprints_and_commands_still_equal_collected_source": true,
+  "boundary_selector_exact_website_extension_only": true,
+  "boundary_source_inventory_unchanged": 8397,
+  "captured_at": "2026-11-23T03:05:26.331550+00:00",
+  "collection_receipt_sha256": "3ce9f1fee3665c6c5cfada23af18e6e479f8f15ce8f11f6daa0c352e57ad9ddf",
+  "frozen_source_head": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+  "independent_accuracy_evidence": false,
+  "limits": [
+    "No new artifact download, Git-blob8365 sweep, functional checks, SDK, browser, install, root edits or independent semantic-accuracy claim",
+    "Only5requested local assess calls were executed; PM boundary execution was inspected as retained evidence, not rerun",
+    "Protected source checks/merge, actual managed signing/install and publication remain separate mandatory parent work",
+    "Source helper/tests previously authored by this reviewer are not newly independently approved by this selection review"
+  ],
+  "metadata_unchanged_after5assess": true,
+  "original_scope": {
+    "all_master_progress_package_session_files_equal_frozen_HEAD": [
+      {
+        "path": "docs/master-scope.json",
+        "sha256": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf"
+      },
+      {
+        "path": "docs/scope-progress.json",
+        "sha256": "ba2e2780adf67396c7c77a0fe205ff91112e32bb98558e404b316bf8730b40e0"
+      },
+      {
+        "path": "docs/scope-delivery.json",
+        "sha256": "45099ed70bd388d557c43bca64fcbc9b37ef523a9135af3f50a47e1fe251271f"
+      },
+      {
+        "path": "docs/session-delivery.json",
+        "sha256": "80294b85a81a732bdef9aa928e94a3ae721f427e4ee57211577bf94157d9b157"
+      },
+      {
+        "path": "docs/session-delivery-plan.md",
+        "sha256": "d5ccc6fbcb75e133a6e52d8fc2452d0e015fa9242d0d78d9133c9fbf012c6cbf"
+      }
+    ],
+    "complete": 136,
+    "open": 66,
+    "total": 202
+  },
+  "pass": true,
+  "prior_private_review_preserved": {
+    "filename": "PM-selection-distinct-review.json",
+    "sha256": "8bb9b625d9c4d40105ed0a3673aa9a935e60dd705f038c2f934f96e4cde53a1f"
+  },
+  "prior_raw_receipts_retained": [
+    {
+      "capability": "extension",
+      "path": "runs/2026-11-22-combined-linux-current-extension.json",
+      "sha256": "c682b28d32597c93d2b9137af485adc81efcbf294d5bbd3e06e4f3967ec5215d"
+    },
+    {
+      "capability": "protocol",
+      "path": "runs/2026-11-22-combined-linux-current-protocol.json",
+      "sha256": "49f92ce96136951bf8cf6cd45ef073f910f81fe36d60592097dd780111c15101"
+    },
+    {
+      "capability": "PS",
+      "path": "runs/2026-11-22-combined-linux-current-ps.json",
+      "sha256": "0e896388ec8f8fce7a7bfa795f0ffcf5d7f8038387746ab48359d375c4ed8add"
+    },
+    {
+      "capability": "PII_REDACTED",
+      "path": "runs/2026-11-22-combined-linux-current-pii_redacted.json",
+      "sha256": "4805f5cc40afefd119e506aad33c77dec9c51061841a5c88f3003df1bc8eca7a"
+    },
+    {
+      "capability": "website",
+      "path": "runs/2026-11-22-combined-linux-current-website.json",
+      "sha256": "5a99c88a196f2273130d05f1a354ba68e6fa422cc219377c6d45ef4afcc0c42d"
+    }
+  ],
+  "prior_selection_history_appended_exact": true,
+  "profile": "managed-five-current-PM-selection-distinct-review/v1",
+  "public_actual_guard_copy_sha256": "f97b7373d78f687e940b2d5a2ad26af7d85ce5ca3851c54b62749afe185fcb9f",
+  "release_approved": false,
+  "reviewed_by": "/root/seo",
+  "reviewed_metadata_sha256": {
+    "eval/route-boundaries.json": "dbdeb3fe33d7b325d8a975e573daf8dbce1b9f77cedcf2c5d73ac2f0a051c6fc",
+    "state.json": "92d81f67fb6e12dad11b80ececc4d2f3a5d9dae66204d8dd43daba6dd00030b5"
+  },
+  "scope": "PM receipt selection, preservation and current-source identity only; prior collection authorship is explicitly retained",
+  "selected_receipts": [
+    {
+      "assess": {
+        "capability": "PS",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "capability": "PS",
+      "commands": 7,
+      "path": "runs/2026-11-23-managed-current-ps.json",
+      "sha256": "2ccf21d767b092a16fd5bb7d8fdee72b46e4ef1dae6f2845328abeb653fd8712"
+    },
+    {
+      "assess": {
+        "capability": "PII_REDACTED",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "capability": "PII_REDACTED",
+      "commands": 6,
+      "path": "runs/2026-11-23-managed-current-pii_redacted.json",
+      "sha256": "bb3f1dfedb7b3cdb8e182b000631682059d086c78057a8f44bc27efd0278b892"
+    },
+    {
+      "assess": {
+        "capability": "extension",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "capability": "extension",
+      "commands": 14,
+      "path": "runs/2026-11-23-managed-current-extension.json",
+      "sha256": "541c88f58040b4041a99af3796aa94af1a6916718cf705ba272abbabe53b7faa"
+    },
+    {
+      "assess": {
+        "capability": "protocol",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "capability": "protocol",
+      "commands": 72,
+      "path": "runs/2026-11-23-managed-current-protocol.json",
+      "sha256": "5dce002ef7c9e47194d4528d1b5b7a5dc7b43846bca315ec9350e6e8f8563403"
+    },
+    {
+      "assess": {
+        "capability": "website",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "capability": "website",
+      "commands": 65,
+      "path": "runs/2026-11-23-managed-current-website.json",
+      "sha256": "5a8c8384565a3eb96cf71646b6e3888757a0e6973d3ebfebf6852899be232015"
+    }
+  ],
+  "updated_reference_identities": [
+    {
+      "key": "state.independent_timestamp.current_boundaries",
+      "path": "runs/2026-10-10-timestamp-final-boundaries.json",
+      "sha256": "13298f861faf34bda370802605954c373d2d5076f61a88e973b0296bd4fc5d74"
+    },
+    {
+      "key": "state.group_receipts.current_boundaries",
+      "path": "runs/2026-10-10-group-vector-boundaries.json",
+      "sha256": "d0d9f2aa5dcbcfcc79ee50cc24f1590fed2298d44ae5e7b56e7270d3caecc20a"
+    },
+    {
+      "key": "state.offline_revocation.current_boundaries",
+      "path": "runs/2026-10-11-revocation-current-boundaries.json",
+      "sha256": "71a923939d1edba01f52231f129b0312b4b8ed1e4467268f073b48508386b936"
+    },
+    {
+      "key": "state.authenticated_gateway_results.current_boundaries",
+      "path": "runs/2026-10-11-authenticated-current-boundaries.json",
+      "sha256": "2e18f1810ab7926fdbc197c2b0b6bc86fc4083c53cb7394c3ce988583e363cda"
+    },
+    {
+      "key": "state.independent_signal_components.current_boundaries",
+      "path": "runs/2026-10-11-independent-signals-boundaries-reviewed.json",
+      "sha256": "3281c535b88a88903ec74b42db1ad0a1a3baf9a8f0b7f74e37800566126a5b26"
+    },
+    {
+      "key": "state.mobile_scope_payload.current_boundaries",
+      "path": "runs/2026-10-11-mobile-payload-boundaries-cache-corrected.json",
+      "sha256": "a145cc1163cc1dd6b4513c4010de96d7a02e6db31ca1532d5f067c110309ad8a"
+    },
+    {
+      "key": "state.manifest_inspection.current_boundaries",
+      "path": "runs/2026-10-11-manifest-workflow-boundaries.json",
+      "sha256": "172c409bf9602b56693bf6a9967dbf81ab2e9db318d4acaa43c0230d96559b09"
+    },
+    {
+      "key": "state.dependency_notice_evidence.current_boundaries",
+      "path": "runs/2026-10-11-notices-checkout-boundaries.json",
+      "sha256": "cf9db2297f9fb12aa6ac0fb217c2ead59644df28691c8b789fb8eed79a1b2e24"
+    },
+    {
+      "key": "state.metadata_storage_controls.current_boundaries",
+      "path": "runs/2026-10-11-metadata-storage-diagnostics-boundaries.json",
+      "sha256": "c46e7e1e5958015a4b12f00624b6947ab09b0fc95416eb75697aa0d755f74acb"
+    },
+    {
+      "key": "state.pipeline_performance.current_boundaries",
+      "path": "runs/2026-10-14-draft-privacy-current-boundaries.json",
+      "sha256": "fe070e3287d14e5967f481928f5ada3a8f5e9775e320328ea34400f2cc4f068b"
+    },
+    {
+      "key": "state.reviewer_agreement.current_boundaries",
+      "path": "runs/2026-10-11-workflow-boundaries.json",
+      "sha256": "7656b140d0174982b2b084aa44b756af514754f7b3f2e368979f0ed101fe2952"
+    },
+    {
+      "key": "state.blind_review_privacy.current_boundaries",
+      "path": "runs/2026-10-11-blind-private-current-boundaries.json",
+      "sha256": "a5705cfb7a2b71d80bd436cde2a8cf17bc97169db0e19c946b00f1c047547148"
+    },
+    {
+      "key": "state.source_input_capture.current_boundaries",
+      "path": "runs/2026-10-11-source-captured-boundaries.json",
+      "sha256": "5105c57696d33fb45bbf8b50fcbc2da985ff71ccc39101006e23f6d0dc6e1b78"
+    },
+    {
+      "key": "state.nli_sentence_pairs.current_boundaries",
+      "path": "runs/2026-10-11-nli-current-boundaries.json",
+      "sha256": "52e3e8bac1fa4870f1428129d441ccbad91c3a4824c5254942e7ffdb563ebf72"
+    },
+    {
+      "key": "state.nli_reference_comparison.current_boundaries",
+      "path": "runs/2026-10-11-nli-reference-current-boundaries.json",
+      "sha256": "43dd4d5924897ee7776a59a08fd944fed8223fad2fe55dc1af91274c437c93ea"
+    },
+    {
+      "key": "state.choice_framing.current_boundaries",
+      "path": "runs/2026-10-11-choice-framing-current-boundaries.json",
+      "sha256": "71057a2f2549376640f7cfd6067c5a8a678ebc21abf8f5e444b7d6fc2571db22"
+    },
+    {
+      "key": "state.draft_privacy.current_boundaries",
+      "path": "runs/2026-10-14-draft-privacy-current-boundaries.json",
+      "sha256": "fe070e3287d14e5967f481928f5ada3a8f5e9775e320328ea34400f2cc4f068b"
+    },
+    {
+      "key": "state.community_workbench.current_boundaries",
+      "path": "runs/2026-11-17-community-integrated-boundaries.json",
+      "sha256": "a756a9a87d2846a6441103f5e2a4b7395c7ac312b66e2b82ecbe6f644c0e6cbe"
+    },
+    {
+      "key": "state.hosted_delivery_evidence.retrieval",
+      "path": "runs/2026-11-23-managed-current-five-hosted-collection.json",
+      "sha256": "3ce9f1fee3665c6c5cfada23af18e6e479f8f15ce8f11f6daa0c352e57ad9ddf"
+    },
+    {
+      "key": "state.hosted_delivery_evidence.current_boundaries",
+      "path": "runs/2026-11-23-managed-current-final-boundaries.json",
+      "sha256": "f97b7373d78f687e940b2d5a2ad26af7d85ce5ca3851c54b62749afe185fcb9f"
+    },
+    {
+      "key": "state.managed_MCP_integration.current_five_collection",
+      "path": "runs/2026-11-23-managed-current-five-hosted-collection.json",
+      "sha256": "3ce9f1fee3665c6c5cfada23af18e6e479f8f15ce8f11f6daa0c352e57ad9ddf"
+    },
+    {
+      "key": "state.managed_MCP_integration.current_boundaries",
+      "path": "runs/2026-11-23-managed-current-final-boundaries.json",
+      "sha256": "f97b7373d78f687e940b2d5a2ad26af7d85ce5ca3851c54b62749afe185fcb9f"
+    }
+  ]
+}
