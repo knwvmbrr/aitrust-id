@@ -1,0 +1,29 @@
+{
+  "profile": "source-copy-archive-first-transport-refusal/v1",
+  "captured_at": "2026-11-23T18:09:51.002359+00:00",
+  "pass": false,
+  "stage": "composed_consumer_transport_before_binding_child",
+  "actual_exit_status": 2,
+  "result": {
+    "accuracy": false,
+    "compiled_runtime_permission": false,
+    "complete_F057_X02": false,
+    "legal_clearance": false,
+    "pass": false,
+    "profile": "source-copy-archive-obligations/v2",
+    "reason": "unavailable",
+    "release_authorized": false,
+    "signature_verified": false,
+    "source_archive_admitted": false,
+    "source_copy_profile_satisfied": false,
+    "status": "UNAVAILABLE",
+    "trusted_git_bytes_matched": false
+  },
+  "result_sha256": "087afc6ff58dbca9cc7115903895c4917b68b5744ec7cca5cbdd1f2d22eaefb7",
+  "source_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "method_sha256": "fb7df81a98c2763c69bbc2314df76b651d114c60044d6d098debed3cde45fb70",
+  "archive_bytes": 40864663,
+  "archive_sha256": "f3b69aed5339784e5d5700289c808832c8ed377316b8bcfa4c2ba95716524cfe",
+  "diagnosis": "The composition supplied the full archive to unchanged worker_process.run_worker, whose explicit1,000,000-byte input check raises before Popen. Actual source archive build and inline V3 inspection passed; no binding child consumed this archive.",
+  "correction": "Use the separately pinned binding helper existing streaming supervisor for this already bounded64MB archive path. Keep neutral worker1MB unchanged, binding/serializer sources unchanged and preserve this failed outcome."
+}

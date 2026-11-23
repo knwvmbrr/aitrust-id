@@ -1,0 +1,31 @@
+{
+  "profile": "image-shared-budget-initial-source-freeze/v1",
+  "captured_at": "2026-11-23T19:43:05.003837+00:00",
+  "source_base": "1efd3bd2ce07f51c3844a5efd1585cc5cd467286",
+  "source_sha256": {
+    "tools/visual_score_budget.py": "81418026552016d85c9d30fa6450e0c743c9f314944d3c4e6dfbacf0de52a7f8",
+    "scripts/run-visual-score-phase.py": "34d061d1f43e11217aef2af417788a3a95866f939d42b49ce3ba97242b6a53d2",
+    "tools/visual_score_qualification.py": "4e039737bd328adf17812815a1eac976bd077b0c2fc7c96996b66cf407f411fd",
+    "tests/test_visual_score_budget.py": "7701be7e89f52be82277606dc7329d94932aa068e4668676f6d04ce8e145fcd5",
+    "tests/test_visual_score_qualification.py": "20cd23907743c66a47e99c040d1facb545c4afe0c820867ad3c05755bcf9008f",
+    "tests/test_visual_score_workflow.py": "9f05a61a9684c88efd79c749a3e099aafb5e6c3eeb416b454529106924a1b5bf",
+    ".github/workflows/visual-score-qualification.yml": "a22894ffa956615d717b676f0c1e5b25f1eea126cbcd7c582b787c1aeaf3268a",
+    "docs/offline-image-score-qualification-plan.md": "8392bfb1811cd98876ed6fb5e65b07fcb87ed43fe4f91ee72f2db74937e9d78b"
+  },
+  "checks": {
+    "budget23": {
+      "stderr_sha256": "c4aff43ed46e8587705661d6006a3d7e9715acb93ad43e298716aef200080b60",
+      "stderr_text": ".......................\n----------------------------------------------------------------------\nRan 23 tests in 0.508s\n\nOK\n"
+    },
+    "workflow5": {
+      "stderr_sha256": "9f169aa04896ef0203477ff61d8d57406ec0dab00b71ec15cf38cdae22509147",
+      "stderr_text": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.008s\n\nOK\n"
+    },
+    "affectedSource2": {
+      "stderr_sha256": "f4ef0e2104c264174f597233683a1bc007c941f9b1ddbbf6e9f546ff7e11e025",
+      "stderr_text": "test_source_map_tracks_external_card_not_copied_body (qualification_affected_only.QualificationTests.test_source_map_tracks_external_card_not_copied_body) ... ok\ntest_workflow_no_secret_signer_or_required_gate (qualification_affected_only.QualificationTests.test_workflow_no_secret_signer_or_required_gate) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.053s\n\nOK\n"
+    }
+  },
+  "pending": "ROOT narrow historicalHFasset test fix not duplicated; overall oldsource suite notclaimed current",
+  "no_acquisition_native_SDK_install_network": true
+}

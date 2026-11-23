@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-190334-reconcile-active-wave-state-and-current-policy-e90d2dd8",
+  "recorded_at": "2026-11-23T19:03:34.526149+00:00",
+  "author": "Codex /root; task board maintained by Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "changed": "Updated current state to distinguish the active unvalidated integration from the preserved last public deployment, corrected the current public policy version to1.15 and retained earlier policy observations as history.",
+  "proves": "Actual source policy exports1.15 and the existing production receipt verifies its nine text copies. The board retains136complete/66open,30bounded scoped jobs complete and managed consumer integration pending real protected authorization.",
+  "limits": "Bookkeeping correction only; selected engineering receipts are historical until the five current profiles run. No new policy adoption, company formation, accuracy approval, source-route release or original closure.",
+  "scope_ids": [
+    "F-140",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "state.json": "b4c763d8b297840f8e091cdd70ea69d4b4f285d992a87881eb6546b16c1bd4dc",
+    "docs/session-delivery.json": "14129620991ccc9924e6369131d4b74a183cc435f528b5e818e2ccbad7743d95",
+    "docs/session-delivery-plan.md": "af3a6b9a66df97ed00766ab5a9e5322f60ac9668bbeba01cddc03e63fb62b199"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-public-records-production.json",
+      "sha256": "823b37d791f78ecb7daaaa16235b5b5f9132946f3a603edb3046955680c8f0ef"
+    },
+    {
+      "path": "runs/2026-11-23-managed-source-reserve-corrected-controls.json",
+      "sha256": "bb63df5ed4dc66fefc83a8ead1061608e38c22ad188ad1bfa83009c3fd225f89"
+    },
+    {
+      "path": "runs/2026-11-23-managed-source-final-distinct-review.json",
+      "sha256": "cd032cf0ef4c91bc0434bd79449e70f05ff97b1e2c92236d976f98554cfa10da"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/session-delivery.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T19:03:34.972674+00:00"
+    }
+  ]
+}

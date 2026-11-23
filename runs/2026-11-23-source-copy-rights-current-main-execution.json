@@ -1,0 +1,217 @@
+{
+  "profile": "current-protected-source-copy-archive-execution/v1",
+  "captured_at": "2026-11-23T18:12:31.640860+00:00",
+  "pass": true,
+  "selected_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "selected_tree": "e2ad43304f0d53194c2b4456ce176ac72fa4968b",
+  "source_bindings": {
+    "tools/source_release_policy_v2.py": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c",
+    "eval/dependencies/source-snapshot-release-v2.json": "2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d",
+    "tools/source_release_policy.py": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6",
+    "eval/dependencies/source-snapshot-release.json": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+    "tools/source_snapshot_binding.py": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "scripts/build-source-snapshot.py": "865dee30bb6f2908014fdcee17aac41aa4e0fa149d50d01677c30c7a5a838d56",
+    "tests/test_source_release_policy_v2.py": "6151ba84e310a5726b623901f67d797e9deada3c5ba635d26815ad5ed941d182",
+    "tests/test_source_release_policy_v2_archive.py": "4cc65a60dc2f42d5507f6885eeb0d867ede0f70f450712da6c569632568e049f",
+    "docs/source-snapshot-rights-current-main-plan.md": "aa5932d1c59785b3916ef762e0ae7d90a54713ddb98dcb569bd11b7d244caa5d",
+    "docs/source-snapshot-rights-current-main.md": "a1ec74a81037ad0d8544f715e89ee041ef71fd0fb55261adac570269b2a463e9",
+    "docs/source-snapshot-rights-v2.md": "b8efb5a5fe2f08430962d327b93ca842db1fa5aa08bbd55c2f009e821286cba4",
+    "eval/dependencies/source-copy-v2-history/source-snapshot-release-v2-b5ffe6abefe80a0b42fcfb3516dc11845e337b21f8612bd14b83f57269a49809.json": "b5ffe6abefe80a0b42fcfb3516dc11845e337b21f8612bd14b83f57269a49809",
+    "eval/dependencies/source-copy-v2-history/source_release_policy_v2-1438edcb8a7f363fd8da77432d6693b33da529f4dbee17f92655f098d95387fc.py": "1438edcb8a7f363fd8da77432d6693b33da529f4dbee17f92655f098d95387fc",
+    "eval/dependencies/source-copy-v2-history/source_release_policy_v2-fb7df81a98c2763c69bbc2314df76b651d114c60044d6d098debed3cde45fb70.py": "fb7df81a98c2763c69bbc2314df76b651d114c60044d6d098debed3cde45fb70"
+  },
+  "initial_selected_tree_gap": {
+    "old_selected": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+    "new_named_files": 34,
+    "changed_existing_project_files": 20,
+    "missing_paths": 0,
+    "changed_third_party_categories": 0,
+    "selected_files": 13502,
+    "selected_raw_bytes": 142114658,
+    "delta_rows": 615,
+    "origins": 327,
+    "one_exact_legal_prose_marker_transition": true
+  },
+  "actual_archive": {
+    "sha256": "f3b69aed5339784e5d5700289c808832c8ed377316b8bcfa4c2ba95716524cfe",
+    "bytes": 40864663,
+    "private": true,
+    "public_release": false,
+    "constructed_once": true,
+    "extracted_tree": false
+  },
+  "operations": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "scripts/build-source-snapshot.py",
+        "--commit",
+        "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+        "--output",
+        "{private}/source.tar.gz"
+      ],
+      "exit_status": 0,
+      "stdout_sha256": "8a96626f0620536e52e29e3b9cc692a7dc3a3538c683fe34620a1fd969c72035",
+      "stderr_bytes": 0,
+      "result": {
+        "pass": true,
+        "profile": "aitrust-development-source/1.0.0",
+        "source_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+        "source_files": 13502,
+        "source_bytes": 142114658,
+        "sha256": "f3b69aed5339784e5d5700289c808832c8ed377316b8bcfa4c2ba95716524cfe",
+        "tag_release_validated": false,
+        "installed_dependencies_authenticated": false
+      }
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "tools/source_release_policy_v2.py",
+        "--source-commit",
+        "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+        "--archive",
+        "{private}/source.tar.gz"
+      ],
+      "exit_status": 2,
+      "stdout_sha256": "087afc6ff58dbca9cc7115903895c4917b68b5744ec7cca5cbdd1f2d22eaefb7",
+      "stderr_bytes": 0,
+      "result": {
+        "accuracy": false,
+        "compiled_runtime_permission": false,
+        "complete_F057_X02": false,
+        "legal_clearance": false,
+        "pass": false,
+        "profile": "source-copy-archive-obligations/v2",
+        "reason": "unavailable",
+        "release_authorized": false,
+        "signature_verified": false,
+        "source_archive_admitted": false,
+        "source_copy_profile_satisfied": false,
+        "status": "UNAVAILABLE",
+        "trusted_git_bytes_matched": false
+      },
+      "diagnosis_receipt": "runs/2026-11-23-source-copy-archive-first-transport-refusal.json"
+    },
+    {
+      "argv": [
+        "caffeinate",
+        "-i",
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "tools/source_release_policy_v2.py",
+        "--source-commit",
+        "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+        "--archive",
+        "{private}/source.tar.gz"
+      ],
+      "exit_status": 0,
+      "stdout_sha256": "902cdde900489a5712689bf63a83f28847a716deaf42f1be3c31140546d0f362",
+      "stderr_bytes": 0,
+      "result": {
+        "accuracy": false,
+        "archive_bytes": 40864663,
+        "archive_sha256": "f3b69aed5339784e5d5700289c808832c8ed377316b8bcfa4c2ba95716524cfe",
+        "binding_method_sha256": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb",
+        "compiled_runtime_permission": false,
+        "complete_F057_X02": false,
+        "legal_clearance": false,
+        "method_sha256": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c",
+        "pass": true,
+        "policy_sha256": "2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d",
+        "profile": "source-copy-archive-obligations/v2",
+        "release_authorized": false,
+        "signature_verified": false,
+        "source_archive_admitted": false,
+        "source_bytes": 142114658,
+        "source_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+        "source_copy_profile_satisfied": true,
+        "source_files": 13502,
+        "source_tree": "e2ad43304f0d53194c2b4456ce176ac72fa4968b",
+        "status": "COPY_OBLIGATIONS_AND_GIT_BYTES_BOUND",
+        "trusted_git_bytes_matched": true
+      },
+      "source_changed_for_correction": true,
+      "archive_rebuilt": false
+    }
+  ],
+  "focused_checks": [
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_source_release_policy_v2",
+        "tests.test_source_release_policy_v2_archive",
+        "-v"
+      ],
+      "core_sha256": "fb7df81a98c2763c69bbc2314df76b651d114c60044d6d098debed3cde45fb70",
+      "methods": 22,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 2.26,
+      "scope": "Fourteen updated classification controls and eight initial tiny composition controls; actual large transport had not yet been qualified."
+    },
+    {
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_source_release_policy_v2_archive",
+        "-v"
+      ],
+      "core_sha256": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c",
+      "methods": 9,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 0.847,
+      "scope": "Affected corrected composition controls only; actual>1MB streaming, canonical/forgery, capture-to-exec poison and strict type/refusal boundaries."
+    }
+  ],
+  "capacity": {
+    "before": {
+      "free_bytes_before": 71273730048,
+      "minimum_reserve_bytes": 2147483648,
+      "bounded_output_allowance_bytes": 134217728,
+      "required_free_bytes": 2281701376,
+      "pass": true,
+      "source_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+      "source_raw_bytes": 142114658,
+      "source_files": 13502,
+      "archive_compressed_cap_bytes": 64000000,
+      "no_extracted_tree": true
+    },
+    "free_bytes_after": 70114177024,
+    "source_archive_file_retained": true,
+    "reserve_bytes": 2147483648,
+    "process_scoped_idle_sleep_assertion": "Attached after initial build phase to owned build PID, auto-ended. Corrected verification ran under caffeinate -i tied to its owned command; no system power preferences changed."
+  },
+  "history": {
+    "v1_helper_and_table_unchanged": true,
+    "old_v2_helper_and_table_preserved_exact": true,
+    "failed_composition_source": "Exact fb7 bytes reconstructed from the recorded transport-only source delta and verified against the executed method digest; retained under digest-named history.",
+    "all_prior_receipts_unchanged": true
+  },
+  "limits": [
+    "Source-copy profile plus actual trusted Git-byte binding only; no attestation, signature, managed release authorization or full project rights clearance.",
+    "Exact selected protected6d752cd0 only; future image/metadata/feature paths are not silently added.",
+    "No source extraction, SDK/model/browser/runtime install, paid resource, network, policy admission or root/shared integration changes.",
+    "Full F-057/X-02 remain open across the retained distribution scopes."
+  ]
+}

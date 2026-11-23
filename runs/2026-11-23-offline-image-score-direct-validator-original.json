@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-11-23T03:24:52.440733+00:00",
+  "pass": false,
+  "finding": "direct validate() relied on prior decode() for format/origin/tags; full synthetic wire case accepted FA when bypassing decode",
+  "actual_direct_validate_accepted_forged_tag": true,
+  "normal_check_decode_rejects_forged_tag": true,
+  "production_tag_issued": false,
+  "native_model_executed": false,
+  "source_sha256": "822c71638b31f37eddb5134df1c179bff6e6a26a0111ab3d9c0e8c1f23344ea3"
+}

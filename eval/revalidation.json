@@ -758,7 +758,36 @@
         "tools/source_snapshot_binding.py",
         "tests/test_source_snapshot_binding.py",
         "docs/source-snapshot-binding-plan.md",
-        "tests/test_dependency_registry_integration.py"
+        "tests/test_dependency_registry_integration.py",
+        "tools/visual_score*.py",
+        "scripts/inspect-visual-score.py",
+        "scripts/prepare-visual-score-qualification.py",
+        "scripts/verify-visual-score-qualification.py",
+        "tests/test_visual_score.py",
+        "tests/test_visual_score_qualification.py",
+        "tests/test_visual_score_workflow.py",
+        "integrations/visual-score-reference/**/*",
+        ".github/workflows/visual-score-qualification.yml",
+        "docs/offline-image-score*.md",
+        "docs/image-score-cleanup-ownership-correction-plan.md",
+        "tools/source_release_policy_v2.py",
+        "eval/dependencies/source-snapshot-release-v2.json",
+        "tests/test_source_release_policy_v2.py",
+        "tests/test_source_release_policy_v2_archive.py",
+        "tools/source_snapshot_admission.py",
+        "tools/source_snapshot_managed.py",
+        "scripts/verify-managed-source.py",
+        "tests/test_source_snapshot_admission.py",
+        "tests/test_source_snapshot_managed.py",
+        "docs/source-snapshot-managed-integration-plan.md",
+        "docs/source-snapshot-managed-consumer.md",
+        "tools/source_release_policy_v3.py",
+        "eval/dependencies/source-snapshot-additions-v3.json",
+        "tests/test_source_release_policy_v3.py",
+        "tests/test_source_snapshot_workflow.py",
+        "tools/visual_score_budget.py",
+        "scripts/run-visual-score-phase.py",
+        "tests/test_visual_score_budget.py"
       ],
       "commands": [
         [
@@ -1238,6 +1267,51 @@
           "tests/test_source_release_policy.py",
           "tests/test_source_snapshot_binding.py",
           "tests/test_dependency_registry_integration.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_visual_score.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_visual_score_qualification.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_visual_score_workflow.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_visual_score_budget.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "scripts/prepare-visual-score-qualification.py",
+          "check-lock"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_source_release_policy_v2.py",
+          "tests/test_source_release_policy_v2_archive.py",
+          "tests/test_source_snapshot_admission.py",
+          "tests/test_source_snapshot_managed.py",
+          "tests/test_source_release_policy_v3.py",
+          "tests/test_source_snapshot_workflow.py",
           "-q"
         ]
       ]
@@ -2040,7 +2114,25 @@
         "tools/source_snapshot_binding.py",
         "tests/test_source_snapshot_binding.py",
         "docs/source-snapshot-binding-plan.md",
-        "tests/test_dependency_registry_integration.py"
+        "tests/test_dependency_registry_integration.py",
+        "tools/source_release_policy_v2.py",
+        "eval/dependencies/source-snapshot-release-v2.json",
+        "tests/test_source_release_policy_v2.py",
+        "tests/test_source_release_policy_v2_archive.py",
+        "tools/source_snapshot_admission.py",
+        "tools/source_snapshot_managed.py",
+        "scripts/verify-managed-source.py",
+        "tests/test_source_snapshot_admission.py",
+        "tests/test_source_snapshot_managed.py",
+        "docs/source-snapshot-managed-integration-plan.md",
+        "docs/source-snapshot-managed-consumer.md",
+        "tools/source_release_policy_v3.py",
+        "eval/dependencies/source-snapshot-additions-v3.json",
+        "tests/test_source_release_policy_v3.py",
+        "tests/test_source_snapshot_workflow.py",
+        "tools/visual_score_budget.py",
+        "scripts/run-visual-score-phase.py",
+        "tests/test_visual_score_budget.py"
       ],
       "commands": [
         [
@@ -2412,6 +2504,18 @@
           "tests/test_source_release_policy.py",
           "tests/test_source_snapshot_binding.py",
           "tests/test_dependency_registry_integration.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_source_release_policy_v2.py",
+          "tests/test_source_release_policy_v2_archive.py",
+          "tests/test_source_snapshot_admission.py",
+          "tests/test_source_snapshot_managed.py",
+          "tests/test_source_release_policy_v3.py",
+          "tests/test_source_snapshot_workflow.py",
           "-q"
         ]
       ]

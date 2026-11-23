@@ -46,8 +46,9 @@ def test_real_source_route_is_nonempty_and_other_scopes_are_not_approved():
             assert row['release_allowed'] is fixed_base
             assert row['status'] == ('allowed' if fixed_base else 'blocked_unknown')
             continue
-        assert row['release_allowed'] is (route == 'ps-source')
-        assert row['status'] == ('allowed' if route == 'ps-source' else 'blocked_unknown')
+        expected = route in {'ps-source', 'source-snapshot'}
+        assert row['release_allowed'] is expected
+        assert row['status'] == ('allowed' if expected else 'blocked_unknown')
 
 
 @pytest.mark.parametrize('change,expected', [

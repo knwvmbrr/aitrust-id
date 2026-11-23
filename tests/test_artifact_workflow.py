@@ -14,7 +14,7 @@ def job_environment(source):
                 if child and not child.startswith('      '):break
                 if child.strip():block.append(child.strip())
             blocks.append(block)
-    if blocks!=[['SOURCE_COMMIT: ${{ github.sha }}']]*2:raise ValueError('Unsupported job context')
+    if blocks!=[['SOURCE_COMMIT: ${{ github.sha }}']]*3:raise ValueError('Unsupported job context')
     if 'ARTIFACT_DIR="$RUNNER_TEMP/aitrust-source-artifact-sbom"'not in source or '>> "$GITHUB_ENV"'not in source:
         raise ValueError('Runner-local artifact path not exported')
 

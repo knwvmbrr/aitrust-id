@@ -80,34 +80,124 @@
       "review_scope": "The existing frozen Unicode-derived NFC tables with their complete retained Unicode License V3 notice included in this source distribution; no other data or runtime is approved."
     },
     "source-snapshot-unreviewed": {
-      "assessment": "pending",
-      "license_expression": null,
-      "source_available": null,
-      "required_processing_payment": null,
+      "assessment": "reviewed_source_distribution",
+      "license_expression": "LicenseRef-Source-Snapshot-Finite-Copy-Grants",
+      "source_available": true,
+      "required_processing_payment": false,
       "files": [
         {
-          "path": "sbom/assets/notices.json",
-          "sha256": "5c165aea3c716a183174a10ce8be0b5e0894554a8ad5492171e5141dc642facd",
-          "bytes": 11659
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "bytes": 11358
         },
         {
-          "path": "sbom/native/manifest.json",
-          "sha256": "b73adf17026164ae36fa227e2807aa6a1e30de4c3bc47bb62a2eb53b6dffe860",
-          "bytes": 156949
+          "path": "NOTICE",
+          "sha256": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+          "bytes": 1134
+        },
+        {
+          "path": "docs/source-snapshot-managed-consumer.md",
+          "sha256": "015cf08a60f9b5477d70669ebe201d65cfc4f4e933b915041101466fd2cd6d42",
+          "bytes": 10354
+        },
+        {
+          "path": "eval/dependencies/source-snapshot-additions-v3.json",
+          "sha256": "3bd727fef18736bcd259fa4f1e21fd25fa8629f361b25289dc0016f48394db3e",
+          "bytes": 142724
+        },
+        {
+          "path": "eval/dependencies/source-snapshot-release-v2.json",
+          "sha256": "2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d",
+          "bytes": 410005
+        },
+        {
+          "path": "eval/dependencies/source-snapshot-release.json",
+          "sha256": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+          "bytes": 3049927
+        },
+        {
+          "path": "eval/vectors/unicode/LICENSE.txt",
+          "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+          "bytes": 1995
         },
         {
           "path": "scripts/build-source-snapshot.py",
-          "sha256": "710a58149f3126af87a24e2e1380606ac90efab3fa6521cf837a53b9d1405c99",
-          "bytes": 1242
+          "sha256": "865dee30bb6f2908014fdcee17aac41aa4e0fa149d50d01677c30c7a5a838d56",
+          "bytes": 1381
         },
         {
           "path": "scripts/source_snapshot.py",
           "sha256": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
           "bytes": 10055
+        },
+        {
+          "path": "scripts/source_snapshot_v2.py",
+          "sha256": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+          "bytes": 6849
+        },
+        {
+          "path": "scripts/source_snapshot_v3.py",
+          "sha256": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+          "bytes": 12110
+        },
+        {
+          "path": "scripts/verify-managed-source.py",
+          "sha256": "d8e03339f4b4a19e4615928173ef9c809558e9e276e76e40801983ac6bd12355",
+          "bytes": 1492
+        },
+        {
+          "path": "scripts/worker_process.py",
+          "sha256": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+          "bytes": 3483
+        },
+        {
+          "path": "spec/LICENSE",
+          "sha256": "dc5be08778ad83fc1be1c18c28788bee9e7848ac3bd68ef33129f402205f6e77",
+          "bytes": 338
+        },
+        {
+          "path": "tools/artifact_evidence_io.py",
+          "sha256": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+          "bytes": 12720
+        },
+        {
+          "path": "tools/source_release_policy.py",
+          "sha256": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6",
+          "bytes": 17412
+        },
+        {
+          "path": "tools/source_release_policy_v2.py",
+          "sha256": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c",
+          "bytes": 22383
+        },
+        {
+          "path": "tools/source_release_policy_v3.py",
+          "sha256": "26a6bb8be66cab5a355bfbe6fcfbd16cefe994d1e7ade8b26b3cd227f0f82d41",
+          "bytes": 24924
+        },
+        {
+          "path": "tools/source_snapshot_admission.py",
+          "sha256": "ac86572e674ab4dc9d8a27fa967df465264929a04508142604c1b5e18bb9e273",
+          "bytes": 4903
+        },
+        {
+          "path": "tools/source_snapshot_binding.py",
+          "sha256": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb",
+          "bytes": 14697
+        },
+        {
+          "path": "tools/source_snapshot_managed.py",
+          "sha256": "b251bab9f84654062ea484ed34da2d2cdfbfac105de6359e5a5b2cd94fe5fdb0",
+          "bytes": 15977
         }
       ],
-      "notice_paths": [],
-      "review_scope": "Current scope registration only. Existing inventories or source labels do not establish complete native, model, platform, redistribution or source-offer obligations. Refuse a reviewed release until this exact distribution receives its own supported profile."
+      "notice_paths": [
+        "LICENSE",
+        "NOTICE",
+        "spec/LICENSE",
+        "eval/vectors/unicode/LICENSE.txt"
+      ],
+      "review_scope": "Canonical whole-repository source snapshot with finite per-component copy grants, trusted-Git byte binding and retained notices; no bundled runtime, platform or model permission, whole-project legal clearance or independent tag accuracy."
     },
     "web-checker-unreviewed": {
       "assessment": "pending",
@@ -532,12 +622,14 @@
         }
       ],
       "prerequisites": [
-        "Platform/runtime and transitive obligations remain unreviewed for this distribution; this registration grants no exception."
+        "Independently obtained CPython 3.12 or newer and a supported POSIX OS; no interpreter or OS is bundled.",
+        "Only exact committed source copying with the finite reviewed grants and carried notices is admitted; runtime, SDK, model and compiled redistribution rights remain separate.",
+        "Managed use requires the caller-selected trusted Git commit, protected-main artifact attestation, separately trusted roots and successful finite source-entry-point probes."
       ],
       "entrypoints": [
         "scripts/build-source-snapshot.py"
       ],
-      "release_scope": "Registered source-snapshot scope is blocked pending its own complete technical dependency and applicable distribution review. It is not covered by the PS-only source profile."
+      "release_scope": "Canonical whole-repository source snapshot with finite per-component copy grants, trusted-Git byte binding and retained notices; no bundled runtime, platform or model permission, whole-project legal clearance or independent tag accuracy."
     },
     "web-checker": {
       "kind": "bundled-runtime",

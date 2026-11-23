@@ -1,0 +1,10 @@
+{
+  "captured_at": "2026-11-23T03:08:28.256941+00:00",
+  "pass": false,
+  "finding": "read-only open of FIFO blocks before regular-file fstat; parent input boundary needs O_NONBLOCK",
+  "before_open_marker_observed": true,
+  "actual_owned_child_blocked": true,
+  "owned_child_reaped": true,
+  "original_source_sha256": "11ce730bcaafbe3da8e4a96e8325f668df4bcc40ad041785d6216285c29b6bb8",
+  "native_model_executed": false
+}

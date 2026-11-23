@@ -1,0 +1,230 @@
+{
+  "actual_commands": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "tools/source_release_policy_v2.py"
+      ],
+      "exit": 0,
+      "result": {
+        "accuracy": false,
+        "changed_named_project_text_files": 0,
+        "checkout_commit": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+        "compiled_runtime_permission": false,
+        "complete_F057_X02": false,
+        "files": 13468,
+        "introduced_named_project_text_files": 0,
+        "legacy_policy_sha256": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+        "legal_clearance": false,
+        "method_sha256": "1438edcb8a7f363fd8da77432d6693b33da529f4dbee17f92655f098d95387fc",
+        "pass": true,
+        "policy_sha256": "b5ffe6abefe80a0b42fcfb3516dc11845e337b21f8612bd14b83f57269a49809",
+        "profile": "source-snapshot-copy-obligations/v2",
+        "protected_baseline_commit": "085106c1d40e86b071a25a7b9e4e56b965a31044",
+        "release_authorized": false,
+        "selected_profile_base_is_protected_release": false,
+        "source_archive_admitted": false,
+        "source_bytes": 139954777,
+        "source_commit": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+        "source_copy_profile_satisfied": true,
+        "status": "SOURCE_COPY_PROFILE_SATISFIED"
+      },
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "afebfb4b1c7b9968b7c8597070ad32215f60040b87f128179fb87347c487627c"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "tools/source_release_policy_v2.py",
+        "--source-commit",
+        "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341"
+      ],
+      "exit": 0,
+      "result": {
+        "accuracy": false,
+        "changed_named_project_text_files": 0,
+        "checkout_commit": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+        "compiled_runtime_permission": false,
+        "complete_F057_X02": false,
+        "files": 13468,
+        "introduced_named_project_text_files": 0,
+        "legacy_policy_sha256": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+        "legal_clearance": false,
+        "method_sha256": "1438edcb8a7f363fd8da77432d6693b33da529f4dbee17f92655f098d95387fc",
+        "pass": true,
+        "policy_sha256": "b5ffe6abefe80a0b42fcfb3516dc11845e337b21f8612bd14b83f57269a49809",
+        "profile": "source-snapshot-copy-obligations/v2",
+        "protected_baseline_commit": "085106c1d40e86b071a25a7b9e4e56b965a31044",
+        "release_authorized": false,
+        "selected_profile_base_is_protected_release": false,
+        "source_archive_admitted": false,
+        "source_bytes": 139954777,
+        "source_commit": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+        "source_copy_profile_satisfied": true,
+        "status": "SOURCE_COPY_PROFILE_SATISFIED"
+      },
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "afebfb4b1c7b9968b7c8597070ad32215f60040b87f128179fb87347c487627c"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "tools/source_release_policy_v2.py",
+        "--source-commit",
+        "PRIVATE_ARGUMENT_CANARY"
+      ],
+      "exit": 2,
+      "result": {
+        "accuracy": false,
+        "compiled_runtime_permission": false,
+        "complete_F057_X02": false,
+        "legal_clearance": false,
+        "pass": false,
+        "profile": "source-snapshot-copy-obligations/v2",
+        "reason": "unsupported_source_commit",
+        "release_authorized": false,
+        "source_archive_admitted": false,
+        "source_copy_profile_satisfied": false,
+        "status": "UNAVAILABLE"
+      },
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4b0d3dd67beeb6fa6e3f0a12e8bbea86c633106a3389cf91d4ad6e73e024c605"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "tools/source_release_policy_v2.py",
+        "--source-commit",
+        "0000000000000000000000000000000000000000"
+      ],
+      "exit": 2,
+      "result": {
+        "accuracy": false,
+        "compiled_runtime_permission": false,
+        "complete_F057_X02": false,
+        "legal_clearance": false,
+        "pass": false,
+        "profile": "source-snapshot-copy-obligations/v2",
+        "reason": "git_unavailable",
+        "release_authorized": false,
+        "source_archive_admitted": false,
+        "source_copy_profile_satisfied": false,
+        "status": "UNAVAILABLE"
+      },
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3216d53eeedd2675e80863ae4207549c3214f806f57ab4dfb6793b2b1c70193b"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "tools/source_release_policy_v2.py",
+        "--unknown=PRIVATE_ARGUMENT_CANARY"
+      ],
+      "exit": 2,
+      "result": {
+        "accuracy": false,
+        "compiled_runtime_permission": false,
+        "complete_F057_X02": false,
+        "legal_clearance": false,
+        "pass": false,
+        "profile": "source-snapshot-copy-obligations/v2",
+        "reason": "invalid_request",
+        "release_authorized": false,
+        "source_archive_admitted": false,
+        "status": "UNAVAILABLE"
+      },
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ad5eec6c52d6a0d32985486f7683b38f03fbf21bad8c420656133523edfceff1"
+    }
+  ],
+  "author": "Codex / share_debugger",
+  "author_record_writer_correction": "Initial record write found runs directory absent in the reused sparse checkout after its five actual commands; created only that output parent and recaptured current commands. No source checker failure or runtime retry.",
+  "captured_at": "2026-11-23T03:06:01.705440+00:00",
+  "checkout_commit": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+  "classification": {
+    "all393supplemental_grant_source_files_rehashed": true,
+    "all449MCPsource_identities_verified_against_selectedGit": true,
+    "changed_existing_paths": 24,
+    "cohort_files": 403,
+    "explicit_delta_rows": 567,
+    "legacy_categories_unchanged": true,
+    "legacy_files": 12925,
+    "legacy_immutable_metadata_overrides": [
+      "sbom/reviews/zlib-runtime/manifest.json",
+      "site/public/web-licenses/packages.json",
+      "site/public/web-licenses/web-runtime.spdx.json"
+    ],
+    "metadata_override_basis": [
+      "runs/2026-11-22-mcp-current-registry-zlib-repair.json",
+      "runs/2026-11-23-managed-generated-output-diagnosis.json"
+    ],
+    "new_paths_compared_to_legacy_table": 543,
+    "origin_grant_records": 292,
+    "selected_files": 13468,
+    "selected_raw_bytes": 139954777,
+    "unknown_under_v1": 521
+  },
+  "focused_controls": {
+    "argv": [
+      "python3",
+      "-I",
+      "-S",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_source_release_policy_v2.py",
+      "-v"
+    ],
+    "elapsed_seconds": 1.465,
+    "errors": 0,
+    "failures": 0,
+    "pass": true,
+    "skips": 0,
+    "tests": 14
+  },
+  "initial_bounded_producer_refusal": "Initial mapping refused Rust wheel-source-paths.json because that authored factual record was not explicitly named. Inspected and enumerated the exact file; no prefix/suffix permission added.",
+  "limits": {
+    "SDK_or_model_install": false,
+    "accuracy": false,
+    "compiled_runtime_permission": false,
+    "download": false,
+    "full_F057_X02_closed": false,
+    "legal_clearance": false,
+    "native_or_archive_execution": false,
+    "release_authorized": false,
+    "shared_policy_or_consumer_changed": false,
+    "source_archive_route_admitted": false
+  },
+  "producer_sha256": "1419f2d7b1cbc3ed6433ed4afc79c3614c081e86ff73a15fbbfd6c20d195c18f",
+  "profile": "source-copy-rights-v2-author-execution/v1",
+  "protected_baseline": "085106c1d40e86b071a25a7b9e4e56b965a31044",
+  "selected_commit": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+  "selected_commit_protected": false,
+  "source_sha256": {
+    "docs/source-snapshot-rights-v2-plan.md": "558039f86c93231171f36447819cd5ee3912b123cba2a6356d5985395e1a0b34",
+    "docs/source-snapshot-rights-v2.md": "7d7eb799f78c2f59e37a518b20c248717b5a785da11f0bfbc85dfaa47d2fe80d",
+    "eval/dependencies/source-snapshot-release-v2.json": "b5ffe6abefe80a0b42fcfb3516dc11845e337b21f8612bd14b83f57269a49809",
+    "tests/test_source_release_policy_v2.py": "93fb5a92f737ad62d5b0286c1930a1b7bdf9d9124e226883ce9caa2b843aaa2b",
+    "tools/source_release_policy_v2.py": "1438edcb8a7f363fd8da77432d6693b33da529f4dbee17f92655f098d95387fc"
+  },
+  "source_stable": true
+}

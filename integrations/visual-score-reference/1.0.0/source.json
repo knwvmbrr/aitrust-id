@@ -1,0 +1,119 @@
+{
+  "format": "visual-score-source-cohort/v1",
+  "retrieval": {
+    "captured_at": "2026-11-23T02:53:06.063538+00:00",
+    "source_text_only": true,
+    "weights_acquired": false,
+    "total_bytes": 49660,
+    "sources": [
+      {
+        "path": "ufd-license.txt",
+        "url": "https://raw.githubusercontent.com/WisconsinAIVision/UniversalFakeDetect/030495aea3300a8b54c0ec37ec7fe1dd7e63c619/LICENSE",
+        "bytes": 1091,
+        "sha256": "923dbc0fe040cc826122491e98b20d6f401e510d50c8b666de908e59ebf2f2b2",
+        "git_blob_sha1": "7bcf6bcca73c769ede1f597bb73794e567039fb8"
+      },
+      {
+        "path": "ufd-clip-models.py",
+        "url": "https://raw.githubusercontent.com/WisconsinAIVision/UniversalFakeDetect/030495aea3300a8b54c0ec37ec7fe1dd7e63c619/models/clip_models.py",
+        "bytes": 643,
+        "sha256": "57ce5898bf0bc7ff52b5922a0aefae8bc34a9237e4d59e4a1615ff5d8c6ff7a6",
+        "git_blob_sha1": "44de4db8ee4dd77690970fc76eb671b1b3a43882"
+      },
+      {
+        "path": "ufd-validate.py",
+        "url": "https://raw.githubusercontent.com/WisconsinAIVision/UniversalFakeDetect/030495aea3300a8b54c0ec37ec7fe1dd7e63c619/validate.py",
+        "bytes": 9849,
+        "sha256": "9ab4021cc6f85002a8b8cd0fc28baa9b4861b59bffcfbd98e10d02b08c42b2d6",
+        "git_blob_sha1": "4887014457e584b5801e868a229db98bbd70117c"
+      },
+      {
+        "path": "ufd-head-metadata.json",
+        "url": "https://api.github.com/repos/WisconsinAIVision/UniversalFakeDetect/contents/pretrained_weights?ref=030495aea3300a8b54c0ec37ec7fe1dd7e63c619",
+        "bytes": 1199,
+        "sha256": "db3ba20dbc85d13085aa60b997dbd1c760430d1128ce284e0be0625d2553690b",
+        "git_blob_sha1": "980a0fc7e37276353e2e0374ce80d47ee4e2d956"
+      },
+      {
+        "path": "clip-license.txt",
+        "url": "https://raw.githubusercontent.com/openai/CLIP/d05afc436d78f1c48dc0dbf8e5980a9d471f35f6/LICENSE",
+        "bytes": 1064,
+        "sha256": "987e63b32f6c89ff5160e429458a872ff048e6860b590a3912e938f9da8f14db",
+        "git_blob_sha1": "4e97f0b45803b7c04ae89548934af4f257a97501"
+      },
+      {
+        "path": "clip-model.py",
+        "url": "https://raw.githubusercontent.com/openai/CLIP/d05afc436d78f1c48dc0dbf8e5980a9d471f35f6/clip/model.py",
+        "bytes": 17374,
+        "sha256": "9902cbe5ee90a1da2aa3e6f043e8a23dc1f8831193b963785c9af03d5c7bef2c",
+        "git_blob_sha1": "232b7792eb97440642547bd462cf128df9243933"
+      },
+      {
+        "path": "clip-model-card.md",
+        "url": "https://raw.githubusercontent.com/openai/CLIP/d05afc436d78f1c48dc0dbf8e5980a9d471f35f6/model-card.md",
+        "bytes": 7733,
+        "sha256": "7baf04f60c6234b301ec2c9ca39e67a3ca54b47c05e9509bddf732cbcbec8b7f",
+        "git_blob_sha1": "6db1ca46f0706d2276e0c95578f4aa4dc0136e58"
+      },
+      {
+        "path": "hf-config.json",
+        "url": "https://huggingface.co/openai/clip-vit-large-patch14/raw/32bd64288804d66eefd0ccbe215aa642df71cc41/config.json",
+        "bytes": 4519,
+        "sha256": "8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a",
+        "git_blob_sha1": "2c19f6666e0e163c7954df66cb901353fcad088e"
+      },
+      {
+        "path": "hf-metadata.json",
+        "url": "https://huggingface.co/api/models/openai/clip-vit-large-patch14/revision/32bd64288804d66eefd0ccbe215aa642df71cc41?blobs=true",
+        "bytes": 6188,
+        "sha256": "c89d81f20b6a35523af447f3d9f407607ccca85ee90eae18f6a90f2725e2e871",
+        "git_blob_sha1": "161a7281158ab8902b881b172879d5407aa219dc"
+      }
+    ],
+    "inventory_scope": "Currently retained upstream bodies from the original capture; not a new retrieval.",
+    "original_capture_total_bytes": 57607
+  },
+  "projection": {
+    "format": "visual-score-projection/v1",
+    "upstream_commit": "d05afc436d78f1c48dc0dbf8e5980a9d471f35f6",
+    "source_sha256": "9902cbe5ee90a1da2aa3e6f043e8a23dc1f8831193b963785c9af03d5c7bef2c",
+    "nodes": {
+      "LayerNorm": "bf13f581a4e61d51e45090c33d306de5e7a5c1251c53c98498f68e0c694582bf",
+      "QuickGELU": "23fb2dc3a596685eb389103d32769112901d321295374af1575a3d7daa0e8af4",
+      "ResidualAttentionBlock": "445b536b8a6109c6f8c70c08762d69db60f2579678b460863630eab97287b58f",
+      "Transformer": "58298fc06e86823406383e0f3abd666b42205e964edd6573460512d6b719be0e",
+      "VisionTransformer": "476926e19f83b50015cbbc8091f4d973e7ca64a9a232d44f2600f1e832b62a65"
+    },
+    "bootstrap_globals": [
+      "torch",
+      "nn",
+      "OrderedDict"
+    ],
+    "import_upstream_module": false
+  },
+  "weights_acquired": false,
+  "code_license_facts": {
+    "ufd": "MIT; copyright2025Wisconsin AI and Vision Lab",
+    "clip": "MIT; copyright2021OpenAI"
+  },
+  "model_card_suitability": "research; not production-admitted",
+  "data_rights_inferred": false,
+  "legal_clearance": false,
+  "external_references": [
+    {
+      "path": "hf-model-card-reference.json",
+      "bytes": 1006,
+      "sha256": "7ba894d89271710d574456154041d8dc98e0cb90af0929ce2ea77af782718621",
+      "kind": "authored_factual_external_reference",
+      "new_network_retrieval_performed": false,
+      "original_body_included": false,
+      "original_capture_source": {
+        "path": "hf-model-card.md",
+        "url": "https://huggingface.co/openai/clip-vit-large-patch14/raw/32bd64288804d66eefd0ccbe215aa642df71cc41/README.md",
+        "bytes": 7947,
+        "sha256": "de4274ec48590ab3aa1c239720ff55e99a37f4165c117ba3ad7af2b7df72687c",
+        "git_blob_sha1": "4ccd659d4a0f649d10686540ea4a2b20ff276eda"
+      }
+    }
+  ]
+}

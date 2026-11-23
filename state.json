@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-23T17:00:23.789183+00:00",
-  "active_increment": "Signed managed Linux MCP connection published and anonymous bytes verified; keep independent tag development moving.136originalscomplete/66open; target60unmet.",
-  "status": "136complete66open_target60_unmet;managed_Linux_MCP_public_delivery_verified",
+  "updated": "2026-11-23T21:30:51.019970+00:00",
+  "active_increment": "Current whole-source distribution binding and independent image qualification integration;136 originals complete/66 open; target60 unmet.",
+  "status": "136complete66open_target60_unmet;source_snapshot_and_image_integration_active",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -36,7 +36,7 @@
     "remote_intake_connected": false,
     "published": true,
     "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-11-22-image-jpeg-mt-v3-publication.json",
+    "evidence": "runs/2026-11-23-public-records-production.json",
     "remaining": [
       "Human screen-reader review",
       "Host-specific MCP configuration and user-interface acceptance beyond the official SDK client",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://33d84e7e.aitrust-id.pages.dev",
+    "deployment_url": "https://03ae906d.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-11-22-image-jpeg-mt-v3-publication.json",
+    "publication_evidence": "runs/2026-11-23-public-records-production.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 37,
@@ -125,39 +125,22 @@
     },
     "naming_evidence_review": "docs/name-evidence-review.md",
     "public_policies": {
-      "version": "1.10",
-      "effective_date": "2026-10-10",
+      "version": "1.15",
+      "effective_date": "2026-11-22",
       "index": "https://aitrustid.com/policies/",
       "page_count": 9,
       "source": "site/src/policies.js",
       "text_downloads": true,
-      "current_services_only": true,
       "published": true,
-      "verification": "runs/2026-10-11-key-backup-policies-local.json",
-      "policy_pages_verified": 9,
-      "no_script_verified": true,
-      "matching_text_downloads_verified": true,
-      "automated_axe_violations": 0,
-      "manual_legal_enforceability_review": false,
-      "actual_download_clicks_verified": 9,
-      "prior_version_archive": "1.0",
-      "publisher_named": true,
-      "prior_version_archives": [
-        "1.0",
-        "1.1",
-        "1.2",
-        "1.3",
-        "1.4",
-        "1.5",
-        "1.6",
-        "1.7",
-        "1.8",
-        "1.9"
-      ],
+      "last_published_version": "1.15",
       "publication_pending": false,
-      "last_published_version": "1.10",
-      "verification_scope": "Actual live nine policies and nine clicked matching text downloads; narrow/200%-enlarged, light/dark automated accessibility. Human/counsel acceptance separate.",
-      "public_evidence": "runs/2026-10-11-consent-live-policies.json"
+      "public_evidence": "runs/2026-11-23-public-records-production.json",
+      "verification_scope": "Nine current policy text files matched actual production responses at the recorded source. Earlier click, HTML and automated accessibility observations remain separately dated; this record does not repeat those checks.",
+      "policy_text_copies_verified": 9,
+      "manual_legal_enforceability_review": false,
+      "publisher_named": true,
+      "operator_entity_formed": false,
+      "new_policy_adoption_in_this_wave": false
     },
     "validation_language": "Every tag must pass its own published validation gate before release; individual current stages remain visible",
     "product_differentiation": "docs/product-differentiation.md",
@@ -428,7 +411,46 @@
     "current_publication_origins": 2,
     "full_current_artifact_byte_equivalence_claimed": false,
     "critical_public_HTTP_checks": 22,
-    "verification_file_publication_evidence": "runs/2026-11-21-google-verification-publication.json"
+    "verification_file_publication_evidence": "runs/2026-11-21-google-verification-publication.json",
+    "last_verified_public_source": "f3503e8623959c725c1f7a69ac32acb487531c6f",
+    "working_source_revalidation_pending": true,
+    "public_policy_verification_history": [
+      {
+        "version": "1.10",
+        "effective_date": "2026-10-10",
+        "index": "https://aitrustid.com/policies/",
+        "page_count": 9,
+        "source": "site/src/policies.js",
+        "text_downloads": true,
+        "current_services_only": true,
+        "published": true,
+        "verification": "runs/2026-10-11-key-backup-policies-local.json",
+        "policy_pages_verified": 9,
+        "no_script_verified": true,
+        "matching_text_downloads_verified": true,
+        "automated_axe_violations": 0,
+        "manual_legal_enforceability_review": false,
+        "actual_download_clicks_verified": 9,
+        "prior_version_archive": "1.0",
+        "publisher_named": true,
+        "prior_version_archives": [
+          "1.0",
+          "1.1",
+          "1.2",
+          "1.3",
+          "1.4",
+          "1.5",
+          "1.6",
+          "1.7",
+          "1.8",
+          "1.9"
+        ],
+        "publication_pending": false,
+        "last_published_version": "1.10",
+        "verification_scope": "Actual live nine policies and nine clicked matching text downloads; narrow/200%-enlarged, light/dark automated accessibility. Human/counsel acceptance separate.",
+        "public_evidence": "runs/2026-10-11-consent-live-policies.json"
+      }
+    ]
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -1217,15 +1239,13 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-23-managed-current-ps.json",
-    "PII_REDACTED": "runs/2026-11-23-managed-current-pii_redacted.json",
-    "extension": "runs/2026-11-23-managed-current-extension.json",
-    "protocol": "runs/2026-11-23-managed-current-protocol.json",
-    "website": "runs/2026-11-23-public-records-final-website.json",
-    "independent_accuracy_evidence": false,
-    "release_approved": false
+    "PS": "runs/2026-11-23-source-image-current-ps.json",
+    "PII_REDACTED": "runs/2026-11-23-source-image-current-pii-redacted.json",
+    "extension": "runs/2026-11-23-source-image-current-extension.json",
+    "protocol": "runs/2026-11-23-source-image-current-protocol.json",
+    "website": "runs/2026-11-23-source-image-current-website.json"
   },
-  "updated_at": "2026-11-23T17:00:23.789183+00:00",
+  "updated_at": "2026-11-23T21:30:51.019970+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3854,7 +3874,7 @@
       "NF": "Published offline selected-passage literal/cosine methods; no NF tag release"
     }
   },
-  "current_engineering_revalidation_status": "All five selected engineering capabilities assess current. Website actual 65-command execution passed after the public-policy/private-company records correction, with source unchanged. Managed Linux MCP signing, fresh installation and public downloads are separately evidenced. Independent tag accuracy and human release approval remain separate.",
+  "current_engineering_revalidation_status": "Integration sources changed. Prior selected receipts remain preserved; all five capabilities require fresh exact-source execution before publication. No current-engineering pass, independent accuracy or new release approval is claimed.",
   "mt_evidence_workflow": {
     "status": "merged and published research workflow",
     "implemented_by": "Codex PM",
@@ -3974,7 +3994,7 @@
     ],
     "all_sitemap_URLs_indexed_verified": false
   },
-  "current_route_boundaries": "runs/2026-11-21-api-core-boundaries.json",
+  "current_route_boundaries": "runs/2026-11-23-source-image-current-boundaries.json",
   "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json",
   "agent_tag_tools": {
     "status": "published_local_development_integration",
@@ -4089,11 +4109,16 @@
     "profile": "technical-dependency-conflict-policy/v1",
     "admitted_source_scope": "ps-source",
     "registered_scopes": 14,
-    "other_scopes_blocked": 13,
+    "other_scopes_blocked": 12,
     "enforced_consumer": "scripts/export-ps-source.py",
     "existing_preview_consumers_promoted": false,
     "complete_project_obligations": false,
-    "legal_clearance": false
+    "legal_clearance": false,
+    "admitted_scopes": [
+      "ps-source",
+      "mcp-stdio"
+    ],
+    "source_snapshot_status": "Integration pending: current whole-source copy additions, exact generated-metadata transitions and actual protected consumer execution are not yet admitted."
   },
   "dependency_source_cohorts": {
     "status": "integrated_bounded_observations; distribution_obligations_unresolved",
@@ -5254,5 +5279,176 @@
       "Peer-reviewed image qualification cleanup correction, source-only; actual model qualification pending",
       "Peer-reviewed Firefox response-only package alongside Chrome candidate; integration, registration and current Firefox runtime qualification pending"
     ]
-  }
+  },
+  "nov23_scope_execution": {
+    "recorded_at": "2026-11-23T20:46:31.305534+00:00",
+    "base_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+    "plan": "docs/source-snapshot-managed-integration-plan.md",
+    "original_complete": 136,
+    "original_open": 66,
+    "target_open": 60,
+    "original_closures_this_wave": 0,
+    "source_snapshot": "Actual bounded full archive/Git/graph/SPDX passed hosted45258115933. Protected signing and actual managed consumer pending.",
+    "image": "Reviewed operation budget/source counts integrated; hosted spec source controls passed. Native manual qualification and independent accuracy remain pending.",
+    "owner_gates_preserved": true,
+    "scoped_jobs_closed": 30,
+    "scoped_task_records": 32,
+    "consumer": "Reviewed 21-control implementation imported; real protected-source authorization and finite PS probes still pending.",
+    "copy_rights": "V2 actual archive composition imported; finite V3 additions and exact metadata transitions in progress.",
+    "current_original_closures": 0,
+    "target_met": false,
+    "source_copy_adapter": {
+      "status": "Actual current assembled source capacity, archive binding and copy permission passed; protected managed authorization still pending.",
+      "registered_routes": 14,
+      "copy_or_runtime_cohort_routes_admitted_by_registry": [
+        "ps-source",
+        "mcp-stdio",
+        "source-snapshot"
+      ],
+      "managed_source_release_authorized": false,
+      "other_cohort_routes_still_blocked": 11,
+      "current_dependency_policy_sha256": "8db769dbd924e0b4c5ec4b5d92f4e953b0b4cf4cf78656f1dca3a544949ed2b6",
+      "evidence": "runs/2026-11-23-source-image-integration-controls.json",
+      "receipt_scope": "Actual hosted source45258115933 plus source controls. No real protected-main signature or managed consumer claimed."
+    },
+    "independent_image_work": {
+      "worker": "Codex /root/web_camo",
+      "different_reviewer": "Codex /root/seo",
+      "status_at_snapshot": "Reviewed4a7+df727 image source integrated; additive registration and future manual-only ref selected, native run still pending",
+      "native_qualification_executed": false,
+      "model_or_packages_acquired_locally": false,
+      "manual_dispatch_only": true,
+      "future_dedicated_ref": "refs/heads/codex/nov23-image-native-qualification",
+      "public_records_are_conditional_not_qualification": true,
+      "original_scope_closed": false,
+      "author_source_commits": [
+        "4a7cc4b4152c8645b0e096ad4fbd5bb50ba39e6e",
+        "df7277102cf87c666970868a0187378d52f37b88"
+      ]
+    },
+    "first_hosted_findings": {
+      "source_commit": "f23504d166dd450a81cd35dbc15397b13815de21",
+      "candidate_passed": false,
+      "receipt": "runs/2026-11-23-source-image-first-hosted-failures.json",
+      "correction": "Two test contracts and four explicit workflow trigger paths; no production safety relaxation",
+      "fresh_five_reports_pending": true
+    },
+    "later_hosted_contract_findings": {
+      "candidate_source_commit": "298bbbb9c73e0fe5b038f448329503ed3051e324",
+      "capacity_run": 45252698929,
+      "capacity_failure_stage": "current_graph_and_spdx",
+      "corrected_integration": "Full Git history for actual finite baseline; source-copy permission distinct from signature; image commands contiguous and once without owning global tail.",
+      "hosted_source_controls58_passed": true,
+      "hosted_image_qualification33_passed": true,
+      "current_revalidation_still_pending": true
+    },
+    "current_protocol_commands": 78,
+    "source_profile_continuation": {
+      "recorded_at": "2026-11-23T20:46:31.305534+00:00",
+      "prior_run": 45258115999,
+      "prior_overall_conclusion": "failure",
+      "successful_combined_step": "Execute current PS privacy and extension capabilities",
+      "reusable_current_complete_profiles": [
+        "PS",
+        "PII_REDACTED",
+        "extension"
+      ],
+      "pending_complete_profiles": [
+        "protocol",
+        "website"
+      ],
+      "new_runner": ".github/workflows/source-profile-continuation.yml",
+      "protocol_failure": "obsolete MCP test assumed source-snapshot must be blocked; corrected to compare all13 sibling records exactly",
+      "focused_corrected_controls": 5,
+      "original_closures": 0,
+      "protected_publication_complete": false,
+      "later_prerequisite_correction": {
+        "source": "bfcdc734977f8f8fb70a1e3374455ca191462693",
+        "managed_mcp_job": 138004665463,
+        "scope_job": 138004666032,
+        "fix": "Full actual Git history for control prepositive; pair actual state timestamps. No policy or acceptance weakening.",
+        "cancelled_superseded_source_run": 45263634950
+      }
+    },
+    "evidence_index_repair": {
+      "status": "Actual standalone current index succeeded over all5 selected reports and8484files; focused controls and distinct source review passed.",
+      "genuine_declared_empty_source_supported": true,
+      "global_operation_seconds": 60,
+      "retained_bytes_limit": 134217728,
+      "unique_input_limit": 16384,
+      "common_source_contract_changed": false,
+      "actual_original_closures": 0,
+      "final_source_review_sha256": "112d68afc4a4572b6f8dbab910d387c191ac86767a1cd378139456a3631f660d",
+      "source_bound_current_profiles": 5,
+      "empty_source_is_not_a_license_grant": true,
+      "actual_selected_current_cli": {
+        "captured_at": "2026-11-23T21:29:32.722021+00:00",
+        "exit": 0,
+        "elapsed_seconds": 10.553140875010286,
+        "packet_valid": true,
+        "engineering_checks_current": true,
+        "five_receipts": 5,
+        "files": 8484,
+        "records": 202,
+        "original_open": 66,
+        "stdout_bytes": 1293459,
+        "stdout_sha256": "e3afeaf70bba56ab85d80813394bac007161ebd89df90e5dccb13e37f94b4e14",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "release_approved": false,
+        "source_hashes": {
+          "tools/evidence_packet.py": "2fc2234ee8e992c4cecd37730498a22da8c84268ad4c7ae4245088aee61f2504",
+          "tests/test_evidence_packet.py": "c6369586e26438b5b18c6551a196a866920bede0b03e11d0694f8ff034e94189"
+        },
+        "scope": "Actual standalone current index over the five selected full engineering reports. No executed embedded command, cryptographic release or independent acceptance."
+      }
+    },
+    "current_source_profile_selection": {
+      "recorded_at": "2026-11-23T21:24:18.514405+00:00",
+      "state": "all_five_complete_reports_current_after_selection",
+      "reports": {
+        "PS": {
+          "path": "runs/2026-11-23-source-image-current-ps.json",
+          "sha256": "f90ed334e3570e90d06f7c6a85b3a632eeec3dfed11cf42459e7fea037ec043d",
+          "commands": 7,
+          "execution_captured_at": "2026-11-23T20:21:23.569243+00:00",
+          "actual_run": 45258115999
+        },
+        "PII_REDACTED": {
+          "path": "runs/2026-11-23-source-image-current-pii-redacted.json",
+          "sha256": "9ceeebbb7e8e8b036cdc4d38d05a3a5ac33d21b65f2a5e7c18e4af77b4f6e465",
+          "commands": 6,
+          "execution_captured_at": "2026-11-23T20:21:33.090386+00:00",
+          "actual_run": 45258115999
+        },
+        "extension": {
+          "path": "runs/2026-11-23-source-image-current-extension.json",
+          "sha256": "7bfa92bcf1949944e510049b70b0cb095495320549cc3688a7078a487bc5f5b8",
+          "commands": 14,
+          "execution_captured_at": "2026-11-23T20:22:25.879713+00:00",
+          "actual_run": 45258115999
+        },
+        "protocol": {
+          "path": "runs/2026-11-23-source-image-current-protocol.json",
+          "sha256": "9488da653d37325013a1530bb9dbe4bd426d479f2b6b040cf11152b92177bef3",
+          "commands": 78,
+          "execution_captured_at": "2026-11-23T21:04:50.693311+00:00",
+          "actual_run": 45265152508
+        },
+        "website": {
+          "path": "runs/2026-11-23-source-image-current-website.json",
+          "sha256": "9073353c5f8260cd5884a479960c20d58200d44724c9d6f5dd4cd30df3ec3c86",
+          "commands": 66,
+          "execution_captured_at": "2026-11-23T21:20:33.680453+00:00",
+          "actual_run": 45265152508
+        }
+      },
+      "actual_later_successful_run": 45265152508,
+      "earlier_three_step_successful_in_overall_failed_run": 45258115999,
+      "same_run_for_all_five": false,
+      "independent_accuracy": false,
+      "protected_source_authorization_pending": true,
+      "evidence": "runs/2026-11-23-source-image-current-selection.json"
+    }
+  },
+  "current_route_boundaries_status": "Actual reviewed source/access boundary verification passed after current5receipt selection; independent tag accuracy and protected source release remain separate."
 }

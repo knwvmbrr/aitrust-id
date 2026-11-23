@@ -219,7 +219,7 @@ def _evaluate(route, root):
     # route. Validate the chosen graph; --all audits every declared selection.
     validate_route(selected, value['components'])
     components = []
-    mcp_scope = False
+    reviewed_scope = False
     for dependency in selected['dependencies']:
         identity = dependency['component']
         status, reason = component_status(identity, value['components'][identity], root)
@@ -229,13 +229,20 @@ def _evaluate(route, root):
             try:
                 from tools.mcp_release_policy import component_status as mcp_status
                 status, reason = mcp_status(value['components'][identity], selected, root)
-                mcp_scope = status == 'allowed'
+                reviewed_scope = status == 'allowed'
             except (OSError, ValueError, TypeError, KeyError, ImportError, RuntimeError, RecursionError):
                 status, reason = 'blocked_unknown', 'mcp_release_review_unavailable'
+        if route == 'source-snapshot' and identity == 'source-snapshot-unreviewed' and status not in {'paid', 'prohibited'}:
+            try:
+                from tools.source_snapshot_admission import component_status as source_status
+                status, reason = source_status(value['components'][identity], selected, root)
+                reviewed_scope = status == 'allowed'
+            except (OSError, ValueError, TypeError, KeyError, ImportError, RuntimeError, RecursionError):
+                status, reason = 'blocked_unknown', 'source_copy_review_unavailable'
         components.append({'id': identity, 'status': status, 'reason': reason})
     # A reviewed source component cannot be reused to bless another artifact's
     # platform, compiled code, transitive graph or redistribution arrangement.
-    if not mcp_scope and (route != 'ps-source' or selected['kind'] != 'source-only' or
+    if not reviewed_scope and (route != 'ps-source' or selected['kind'] != 'source-only' or
             {row['component'] for row in selected['dependencies']} != set(REVIEWS) or
             selected['entrypoints'] != ['python3 -I -S -B scripts/check-ps.py'] or
             selected['prerequisites'] != PS_PREREQUISITES):

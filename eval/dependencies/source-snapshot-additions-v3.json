@@ -1,0 +1,2122 @@
+{
+  "base_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "claims": {
+    "accuracy": false,
+    "compiled_runtime_permission": false,
+    "complete_F057_X02": false,
+    "legal_clearance": false,
+    "release_authorized": false,
+    "source_archive_admitted": false
+  },
+  "copied_files": [
+    {
+      "bytes": 1064,
+      "git_blob_oid": "4e97f0b45803b7c04ae89548934af4f257a97501",
+      "mode": "100644",
+      "origin": "clip-publisher-source",
+      "path": "integrations/visual-score-reference/1.0.0/clip-license.txt",
+      "sha256": "987e63b32f6c89ff5160e429458a872ff048e6860b590a3912e938f9da8f14db"
+    },
+    {
+      "bytes": 7733,
+      "git_blob_oid": "6db1ca46f0706d2276e0c95578f4aa4dc0136e58",
+      "mode": "100644",
+      "origin": "clip-publisher-source",
+      "path": "integrations/visual-score-reference/1.0.0/clip-model-card.md",
+      "sha256": "7baf04f60c6234b301ec2c9ca39e67a3ca54b47c05e9509bddf732cbcbec8b7f"
+    },
+    {
+      "bytes": 17374,
+      "git_blob_oid": "232b7792eb97440642547bd462cf128df9243933",
+      "mode": "100644",
+      "origin": "clip-publisher-source",
+      "path": "integrations/visual-score-reference/1.0.0/clip-model.py",
+      "sha256": "9902cbe5ee90a1da2aa3e6f043e8a23dc1f8831193b963785c9af03d5c7bef2c"
+    },
+    {
+      "bytes": 4519,
+      "git_blob_oid": "2c19f6666e0e163c7954df66cb901353fcad088e",
+      "mode": "100644",
+      "origin": "clip-publisher-source",
+      "path": "integrations/visual-score-reference/1.0.0/hf-config.json",
+      "sha256": "8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a"
+    },
+    {
+      "bytes": 6188,
+      "git_blob_oid": "161a7281158ab8902b881b172879d5407aa219dc",
+      "mode": "100644",
+      "origin": "clip-publisher-source",
+      "path": "integrations/visual-score-reference/1.0.0/hf-metadata.json",
+      "sha256": "c89d81f20b6a35523af447f3d9f407607ccca85ee90eae18f6a90f2725e2e871"
+    },
+    {
+      "bytes": 1934,
+      "git_blob_oid": "0116b14ecb1a00975acf8b3913553925011f9127",
+      "mode": "100644",
+      "origin": "torchvision-reference-source",
+      "path": "integrations/visual-score-reference/1.0.0/torchvision-center-crop.py.txt",
+      "sha256": "fc1e04cda9e231a1fb72036f6b3d6e9a3ae6dd494842b9036e70471fbf83ca0a"
+    },
+    {
+      "bytes": 1517,
+      "git_blob_oid": "1edcf92c3317b90fedd187e2eaad101bd1c1efc5",
+      "mode": "100644",
+      "origin": "torchvision-reference-source",
+      "path": "integrations/visual-score-reference/1.0.0/torchvision-license.txt",
+      "sha256": "6502f676851cfe25f8af75531dfb32375b7325b73c37e7b43741fa422893e71d"
+    },
+    {
+      "bytes": 643,
+      "git_blob_oid": "44de4db8ee4dd77690970fc76eb671b1b3a43882",
+      "mode": "100644",
+      "origin": "ufd-publisher-source",
+      "path": "integrations/visual-score-reference/1.0.0/ufd-clip-models.py",
+      "sha256": "57ce5898bf0bc7ff52b5922a0aefae8bc34a9237e4d59e4a1615ff5d8c6ff7a6"
+    },
+    {
+      "bytes": 1199,
+      "git_blob_oid": "980a0fc7e37276353e2e0374ce80d47ee4e2d956",
+      "mode": "100644",
+      "origin": "ufd-publisher-source",
+      "path": "integrations/visual-score-reference/1.0.0/ufd-head-metadata.json",
+      "sha256": "db3ba20dbc85d13085aa60b997dbd1c760430d1128ce284e0be0625d2553690b"
+    },
+    {
+      "bytes": 1091,
+      "git_blob_oid": "7bcf6bcca73c769ede1f597bb73794e567039fb8",
+      "mode": "100644",
+      "origin": "ufd-publisher-source",
+      "path": "integrations/visual-score-reference/1.0.0/ufd-license.txt",
+      "sha256": "923dbc0fe040cc826122491e98b20d6f401e510d50c8b666de908e59ebf2f2b2"
+    },
+    {
+      "bytes": 9849,
+      "git_blob_oid": "4887014457e584b5801e868a229db98bbd70117c",
+      "mode": "100644",
+      "origin": "ufd-publisher-source",
+      "path": "integrations/visual-score-reference/1.0.0/ufd-validate.py",
+      "sha256": "9ab4021cc6f85002a8b8cd0fc28baa9b4861b59bffcfbd98e10d02b08c42b2d6"
+    },
+    {
+      "bytes": 6516,
+      "git_blob_oid": "d162dc81d27f56c4b7add382e32082f311ba1f09",
+      "mode": "100644",
+      "origin": "publisher-metadata:annotated-doc@0.0.5",
+      "path": "integrations/visual-score-reference/qualification-metadata/annotated-doc.metadata",
+      "sha256": "8c24d70c5d9153d22123353a906042fd7603df2d15c2196290b0f8a962558c46"
+    },
+    {
+      "bytes": 15009,
+      "git_blob_oid": "eb5a08847f8a91e58ad8325a7059715e9be44ed6",
+      "mode": "100644",
+      "origin": "publisher-metadata:annotated-types@0.8.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/annotated-types.metadata",
+      "sha256": "614985b278f601b8ef863f82783b991cc3ada4b89f592eb71c7c48c5f2ef2298"
+    },
+    {
+      "bytes": 4733,
+      "git_blob_oid": "14bd6158be52ed04df94afc63abf9abcafe0428c",
+      "mode": "100644",
+      "origin": "publisher-metadata:anyio@4.16.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/anyio.metadata",
+      "sha256": "b184ac9cd097e2bb7f90d42799346cc91c276095d000d95d7f7ddd407d0c887e"
+    },
+    {
+      "bytes": 2567,
+      "git_blob_oid": "6824783287d9682c74ca23341e9c588d4020e36d",
+      "mode": "100644",
+      "origin": "publisher-metadata:click@8.5.1",
+      "path": "integrations/visual-score-reference/qualification-metadata/click.metadata",
+      "sha256": "63d23e734a4c63191d956c85a399291729141377c9af847dcd2b4b450e0b81cc"
+    },
+    {
+      "bytes": 2264,
+      "git_blob_oid": "1b5e981628287a44a4a5f34d6b58dce9139d38d9",
+      "mode": "100644",
+      "origin": "publisher-metadata:filelock@4.2.10",
+      "path": "integrations/visual-score-reference/qualification-metadata/filelock.metadata",
+      "sha256": "25f914c3860cb8434342d9c17e8d9d28277ddc166ac9047ce26ab6d38fd901eb"
+    },
+    {
+      "bytes": 10609,
+      "git_blob_oid": "492ec37aa4976eaa6b21bbed40bd70b67dfb1014",
+      "mode": "100644",
+      "origin": "publisher-metadata:fsspec@2026.9.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/fsspec.metadata",
+      "sha256": "68f5a262767510638e9b1933b1493f2baadc9616fe1e696f62aedd59c8c0a37c"
+    },
+    {
+      "bytes": 8348,
+      "git_blob_oid": "8a2f639061cc4a203f7109d8335d28076442c61d",
+      "mode": "100644",
+      "origin": "publisher-metadata:h11@0.16.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/h11.metadata",
+      "sha256": "28f326098ac09fcba79b8f180f96087c841fe2456215cb7b872a9c7d5cd19d64"
+    },
+    {
+      "bytes": 4882,
+      "git_blob_oid": "f56d969ff57cf869301a7fbbbe2f80fdcce2e10d",
+      "mode": "100644",
+      "origin": "publisher-metadata:hf-xet@1.8.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/hf-xet.metadata",
+      "sha256": "04d03dbf3d08734ec5a7cc8cfd7d93c05dda453a9ed0b20d83683ecdd64942e7"
+    },
+    {
+      "bytes": 27552,
+      "git_blob_oid": "c02d62ba5faef01257f192f9f79e347987c74185",
+      "mode": "100644",
+      "origin": "publisher-metadata:httpcore2@2.16.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/httpcore2.metadata",
+      "sha256": "c073bd68b2bd543fbc2bab3763b42ed1e70666536d32c1bf39ef2764fd50b0a4"
+    },
+    {
+      "bytes": 10019,
+      "git_blob_oid": "cd581369bfe7f7aba932e2a22e4199add51b79ba",
+      "mode": "100644",
+      "origin": "publisher-metadata:httpx2@2.16.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/httpx2.metadata",
+      "sha256": "192f20046200ff50911a7278c21dfbee1e1a4c6fa7943227afe9231d28defc3f"
+    },
+    {
+      "bytes": 16212,
+      "git_blob_oid": "493de4cd0eec4b8ddd2e3e6febcd5d747f508474",
+      "mode": "100644",
+      "origin": "publisher-metadata:huggingface_hub@2.4.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/huggingface-hub.metadata",
+      "sha256": "b575d5eabe0b381489db2c163bb382f4ef44588ffbf468a4052719bf161b4211"
+    },
+    {
+      "bytes": 7207,
+      "git_blob_oid": "edbc446bb4ec693451e3aaaa64b0185f2f7ce511",
+      "mode": "100644",
+      "origin": "publisher-metadata:idna@3.20",
+      "path": "integrations/visual-score-reference/qualification-metadata/idna.metadata",
+      "sha256": "dbd8c14c1e4ca1e0c9824a6dbc7cbbf78884f38eb52d91148cd3025f671e4b85"
+    },
+    {
+      "bytes": 2871,
+      "git_blob_oid": "ffef2ff3bfa0c42b6e6e3eefda700391d181c9a0",
+      "mode": "100644",
+      "origin": "publisher-metadata:Jinja2@3.1.6",
+      "path": "integrations/visual-score-reference/qualification-metadata/jinja2.metadata",
+      "sha256": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8"
+    },
+    {
+      "bytes": 7410,
+      "git_blob_oid": "c44604a66772697fba39a4e24d69d0f3d7bb3c1b",
+      "mode": "100644",
+      "origin": "publisher-metadata:markdown-it-py@4.2.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/markdown-it-py.metadata",
+      "sha256": "72c36ff516755443b1ecb61e17b2567a990230b49a504b0eb0c42d5f82448a9c"
+    },
+    {
+      "bytes": 2690,
+      "git_blob_oid": "1e42cf77f0442240273c631fd73ccd68d762aea5",
+      "mode": "100644",
+      "origin": "publisher-metadata:MarkupSafe@3.0.4",
+      "path": "integrations/visual-score-reference/qualification-metadata/markupsafe.metadata",
+      "sha256": "66767d76388ece15d49d50dafb655891ef5d868715e7128e7f7d737a70b353c4"
+    },
+    {
+      "bytes": 1638,
+      "git_blob_oid": "b4670e86b6dc207c944c55c5d3b84911fb41157a",
+      "mode": "100644",
+      "origin": "publisher-metadata:mdurl@0.1.2",
+      "path": "integrations/visual-score-reference/qualification-metadata/mdurl.metadata",
+      "sha256": "b53b29d48f499367053fda3c81e7ce27d2558380ebbf83e66023b02eb7ddd25d"
+    },
+    {
+      "bytes": 8630,
+      "git_blob_oid": "994b48acdba5cd0fdfb28cd1fbb0a84ebf81cba5",
+      "mode": "100644",
+      "origin": "publisher-metadata:mpmath@1.3.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/mpmath.metadata",
+      "sha256": "44b66ea444b9c0d19ae94815d356bf047ae6b680c19268b5c265687cd6a81406"
+    },
+    {
+      "bytes": 6719,
+      "git_blob_oid": "b7bd8a7b2ce51b8345871c8ad4da767ce61c1190",
+      "mode": "100644",
+      "origin": "publisher-metadata:networkx@3.7",
+      "path": "integrations/visual-score-reference/qualification-metadata/networkx.metadata",
+      "sha256": "ffcf42a343af6ffc54ff9cc4c09cf9638cd73b131370f395abd11b630186c90c"
+    },
+    {
+      "bytes": 6635,
+      "git_blob_oid": "67f75cfd38ef1362500b73452aae882c6705fb75",
+      "mode": "100644",
+      "origin": "publisher-metadata:numpy@2.5.4",
+      "path": "integrations/visual-score-reference/qualification-metadata/numpy.metadata",
+      "sha256": "e2b909d6a37d76c2bc130f528d7fed0c517322bce16dc7846b6a6df30e200403"
+    },
+    {
+      "bytes": 3544,
+      "git_blob_oid": "9a85a75b1f53f042eedc6731042e96f5a96ed6da",
+      "mode": "100644",
+      "origin": "publisher-metadata:packaging@26.3",
+      "path": "integrations/visual-score-reference/qualification-metadata/packaging.metadata",
+      "sha256": "70fdb89fc4d4a9a043bf7372b8972bcc883fddff34ab55e9cf80d73875384763"
+    },
+    {
+      "bytes": 9118,
+      "git_blob_oid": "cbbb08c9636391fce1dce6e1fb4d81689efa7f33",
+      "mode": "100644",
+      "origin": "publisher-metadata:pillow@13.0.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/pillow.metadata",
+      "sha256": "dba7fdfe24e302f46bae562f55d66cc367c0618abae9894a1ebec93dc8f0e511"
+    },
+    {
+      "bytes": 6568,
+      "git_blob_oid": "2fd9cc8b6861721b36bd933a9c354d33b62593f8",
+      "mode": "100644",
+      "origin": "publisher-metadata:pydantic_core@2.50.4",
+      "path": "integrations/visual-score-reference/qualification-metadata/pydantic-core.metadata",
+      "sha256": "bb1956097beb504f190f8ea20c859b5dfea567679a247ce252d7813dd73f361d"
+    },
+    {
+      "bytes": 141528,
+      "git_blob_oid": "8171419f76e1ffdf8848eae098c8d23e9883aa19",
+      "mode": "100644",
+      "origin": "publisher-metadata:pydantic@2.14.3",
+      "path": "integrations/visual-score-reference/qualification-metadata/pydantic.metadata",
+      "sha256": "c3eb8984172bedc8e056655e1419351f4497374a91b7b709dbc4a1340f50e1e9"
+    },
+    {
+      "bytes": 2527,
+      "git_blob_oid": "cc4e5734b999d8563bf83b1911a47270c4976913",
+      "mode": "100644",
+      "origin": "publisher-metadata:Pygments@2.21.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/pygments.metadata",
+      "sha256": "1dde075570136774c706bf0009183a793fe0ee262e4a5590cc6eff8453eedd43"
+    },
+    {
+      "bytes": 2351,
+      "git_blob_oid": "702ee6da5865b50b297705b077ea7d5904fead58",
+      "mode": "100644",
+      "origin": "publisher-metadata:PyYAML@6.0.3",
+      "path": "integrations/visual-score-reference/qualification-metadata/pyyaml.metadata",
+      "sha256": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34"
+    },
+    {
+      "bytes": 40513,
+      "git_blob_oid": "53fae7c4b1907dc85f64b37f1684f38641ecab55",
+      "mode": "100644",
+      "origin": "publisher-metadata:regex@2026.11.9",
+      "path": "integrations/visual-score-reference/qualification-metadata/regex.metadata",
+      "sha256": "9d4652369c84b7ccd4071445ccf421f2e1e31c4470d6736e6d5c9c49cba6d954"
+    },
+    {
+      "bytes": 18445,
+      "git_blob_oid": "574ddfb0ed75fea2532f0c08ad5a00059414ce6d",
+      "mode": "100644",
+      "origin": "publisher-metadata:rich@15.0.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/rich.metadata",
+      "sha256": "fad34fc603fac4481bf81f8dd629492fc302c0ec31909c86644751512afb2e3b"
+    },
+    {
+      "bytes": 4189,
+      "git_blob_oid": "f80b2cd63ca6773be266d79265142e2746a95dbf",
+      "mode": "100644",
+      "origin": "publisher-metadata:safetensors@0.8.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/safetensors.metadata",
+      "sha256": "645be7b8d55e91534f991d144dc9e279581ea8dbea1a8c5b0be14e529d01e345"
+    },
+    {
+      "bytes": 6581,
+      "git_blob_oid": "cd7d140b3c1dada3331a70620243845b743284d9",
+      "mode": "100644",
+      "origin": "publisher-metadata:setuptools@84.2.1",
+      "path": "integrations/visual-score-reference/qualification-metadata/setuptools.metadata",
+      "sha256": "24939b84ead30ff4581918c8d5a95aafd377f6a8afc61f30ea18358a8786bfa4"
+    },
+    {
+      "bytes": 3461,
+      "git_blob_oid": "52118f1e5c83bd7ef39196a749651fc87d176812",
+      "mode": "100644",
+      "origin": "publisher-metadata:shellingham@1.5.4",
+      "path": "integrations/visual-score-reference/qualification-metadata/shellingham.metadata",
+      "sha256": "183d80220a37493262795739dd357cc5bb3f49bd390cc9198d5180e5451a07fa"
+    },
+    {
+      "bytes": 12816,
+      "git_blob_oid": "5883009e816c08a2672bc24096295aa8b3252a51",
+      "mode": "100644",
+      "origin": "publisher-metadata:sympy@1.14.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/sympy.metadata",
+      "sha256": "b756c2fbfd5be05ac5bdb0ebca61f55618f30f633ed92d88a5687429313a7595"
+    },
+    {
+      "bytes": 9830,
+      "git_blob_oid": "e62e5837eedf191bdb5032930a2874538a52654c",
+      "mode": "100644",
+      "origin": "publisher-metadata:tokenizers@0.23.3",
+      "path": "integrations/visual-score-reference/qualification-metadata/tokenizers.metadata",
+      "sha256": "87032ea29ec14be956ce0f15d164a8f436d6f1adbe19b261d6c179d9184f5cba"
+    },
+    {
+      "bytes": 35446,
+      "git_blob_oid": "0e751a4d492d3288b47b620be8e9cea16a5b8809",
+      "mode": "100644",
+      "origin": "publisher-metadata:torch@2.15.0+cpu",
+      "path": "integrations/visual-score-reference/qualification-metadata/torch.metadata",
+      "sha256": "8bbf94c86c3be6cf586385861d476b78cb66d19b67fef49ece4f7d68ca428cc3"
+    },
+    {
+      "bytes": 57366,
+      "git_blob_oid": "0ab47b047680ae0434cf9e70e0b9b9e49035cdb4",
+      "mode": "100644",
+      "origin": "publisher-metadata:tqdm@4.70.1",
+      "path": "integrations/visual-score-reference/qualification-metadata/tqdm.metadata",
+      "sha256": "a5da70b966afea3a759716041bad7187f2ece02c22348cf9e7c0a512bbf15f57"
+    },
+    {
+      "bytes": 31228,
+      "git_blob_oid": "cd4fad3b23aeb6e4e614ef0d0d277e1aa19f7133",
+      "mode": "100644",
+      "origin": "publisher-metadata:transformers@5.22.2",
+      "path": "integrations/visual-score-reference/qualification-metadata/transformers.metadata",
+      "sha256": "6adeb6ebffd05a916183bfb054630b9e435b1e4c582ec4dcf17df3aaf236eead"
+    },
+    {
+      "bytes": 4515,
+      "git_blob_oid": "9bc076af4599bfb71cde3dc14f89b0e60a1cde1a",
+      "mode": "100644",
+      "origin": "publisher-metadata:truststore@0.10.5",
+      "path": "integrations/visual-score-reference/qualification-metadata/truststore.metadata",
+      "sha256": "1fd496f290853214e630d96f7163d2dd916f84ebe634b58aa827d6853e8f8610"
+    },
+    {
+      "bytes": 16513,
+      "git_blob_oid": "629e3c06f95c920b97f7b0cf6b27bb79afb4cadd",
+      "mode": "100644",
+      "origin": "publisher-metadata:typer@0.29.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/typer.metadata",
+      "sha256": "49d8f3c9a1ec4001ce800ed4f2c4fd0745de054d354253878a8e76746743c49a"
+    },
+    {
+      "bytes": 3310,
+      "git_blob_oid": "97fd818b909551186a659e13240c49c2187d0cdc",
+      "mode": "100644",
+      "origin": "publisher-metadata:typing_extensions@4.16.0",
+      "path": "integrations/visual-score-reference/qualification-metadata/typing-extensions.metadata",
+      "sha256": "b05084ca1d50879865178d9fff9fabeab61bdfb1f361bfbde95421ffc8f9be46"
+    },
+    {
+      "bytes": 2554,
+      "git_blob_oid": "24b11ea85a29a9982e794b4b12b45b97f7df16a6",
+      "mode": "100644",
+      "origin": "publisher-metadata:typing-inspection@0.4.5",
+      "path": "integrations/visual-score-reference/qualification-metadata/typing-inspection.metadata",
+      "sha256": "7306933907768b0098784e56dfd678242f52383ff3e35c10a4c150539393d6ec"
+    },
+    {
+      "bytes": 7885,
+      "git_blob_oid": "0744f229d697ca3ed1b1b257bfdb70e3eecf0b9e",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286",
+      "path": "sbom/visual-score-source-copy/grants/07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286.txt",
+      "sha256": "07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286"
+    },
+    {
+      "bytes": 10174,
+      "git_blob_oid": "f433b1a53f5b830a205fd2df78e2b34974656c7b",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+      "path": "sbom/visual-score-source-copy/grants/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "bytes": 1457,
+      "git_blob_oid": "c011511a4ab6bd2bc901608e6b4c0fad95fc410f",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b",
+      "path": "sbom/visual-score-source-copy/grants/15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b.txt",
+      "sha256": "15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b"
+    },
+    {
+      "bytes": 1541,
+      "git_blob_oid": "f706835ab3a5dd709a6e1f57aee0a94ae1415df6",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+      "path": "sbom/visual-score-source-copy/grants/1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04.txt",
+      "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+    },
+    {
+      "bytes": 1543,
+      "git_blob_oid": "f37a12cc4cccf83af4517809791777e71c1df2a9",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:1be1df33863f97a7bc1c4d67980bd6c69c9a6fef0a5ee76e6ad6cb91e56e8491",
+      "path": "sbom/visual-score-source-copy/grants/1be1df33863f97a7bc1c4d67980bd6c69c9a6fef0a5ee76e6ad6cb91e56e8491.txt",
+      "sha256": "1be1df33863f97a7bc1c4d67980bd6c69c9a6fef0a5ee76e6ad6cb91e56e8491"
+    },
+    {
+      "bytes": 1080,
+      "git_blob_oid": "0716871caabdbbb3e77a0371d49936cef1923ea1",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a",
+      "path": "sbom/visual-score-source-copy/grants/2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a.txt",
+      "sha256": "2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a"
+    },
+    {
+      "bytes": 1513,
+      "git_blob_oid": "67590a5e5be5a5a2dde3fe53a7512e404a896c22",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94",
+      "path": "sbom/visual-score-source-copy/grants/2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94.txt",
+      "sha256": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94"
+    },
+    {
+      "bytes": 1086,
+      "git_blob_oid": "7ec568c1136eb8ec86aa05cf7abacfb54c3e5ead",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+      "path": "sbom/visual-score-source-copy/grants/33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca.txt",
+      "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+    },
+    {
+      "bytes": 1124,
+      "git_blob_oid": "8f080eae848f759c9173bfc0c79506357ebe5090",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
+      "path": "sbom/visual-score-source-copy/grants/37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361.txt",
+      "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361"
+    },
+    {
+      "bytes": 13936,
+      "git_blob_oid": "f26bcf4d2de6eb136e31006ca3ab447d5e488adf",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+      "path": "sbom/visual-score-source-copy/grants/3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf.txt",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+    },
+    {
+      "bytes": 1475,
+      "git_blob_oid": "c37cae49ec77ad6ebb25568c1605f1fee5313cfb",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b",
+      "path": "sbom/visual-score-source-copy/grants/3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b.txt",
+      "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b"
+    },
+    {
+      "bytes": 16726,
+      "git_blob_oid": "d0a1fa1482eea82e19510e7920cbe3a03e41f691",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04",
+      "path": "sbom/visual-score-source-copy/grants/3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04.txt",
+      "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04"
+    },
+    {
+      "bytes": 1475,
+      "git_blob_oid": "9d227a0cc43c3268d15722b763bd94ad298645a1",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+      "path": "sbom/visual-score-source-copy/grants/489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea.txt",
+      "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea"
+    },
+    {
+      "bytes": 1078,
+      "git_blob_oid": "582ddf59e08277fe6e78cee924d2c84805fe36fe",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484",
+      "path": "sbom/visual-score-source-copy/grants/4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484.txt",
+      "sha256": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484"
+    },
+    {
+      "bytes": 1081,
+      "git_blob_oid": "104eebf5a3002fccdaceef3a4cb936173c1c2035",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0",
+      "path": "sbom/visual-score-source-copy/grants/5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0.txt",
+      "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0"
+    },
+    {
+      "bytes": 1086,
+      "git_blob_oid": "a7694736cf37716aafec14b24aa8d6316ebe07a3",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49",
+      "path": "sbom/visual-score-source-copy/grants/58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49.txt",
+      "sha256": "58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49"
+    },
+    {
+      "bytes": 1763,
+      "git_blob_oid": "02547fc890c22287c5cacfc4ec6bfc384e6ce785",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:6025f323ea29dc2f0ee0abd9523bf910186f55b0e148e6ebf646c55566278e2e",
+      "path": "sbom/visual-score-source-copy/grants/6025f323ea29dc2f0ee0abd9523bf910186f55b0e148e6ebf646c55566278e2e.txt",
+      "sha256": "6025f323ea29dc2f0ee0abd9523bf910186f55b0e148e6ebf646c55566278e2e"
+    },
+    {
+      "bytes": 1088,
+      "git_blob_oid": "291919c0b6f41d014767f6c877af9f7595fcff99",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48",
+      "path": "sbom/visual-score-source-copy/grants/608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48.txt",
+      "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48"
+    },
+    {
+      "bytes": 3381,
+      "git_blob_oid": "64f1298e9597af7b4f6f7b21753c533e97b67209",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:69b5d7d41a6ece3b20c6a77774f567948766d8643f7646e3f65474692cce5c15",
+      "path": "sbom/visual-score-source-copy/grants/69b5d7d41a6ece3b20c6a77774f567948766d8643f7646e3f65474692cce5c15.txt",
+      "sha256": "69b5d7d41a6ece3b20c6a77774f567948766d8643f7646e3f65474692cce5c15"
+    },
+    {
+      "bytes": 11048,
+      "git_blob_oid": "4794e296f491b1f4b59244eaff5251c07e01a817",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f",
+      "path": "sbom/visual-score-source-copy/grants/71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f.txt",
+      "sha256": "71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f"
+    },
+    {
+      "bytes": 11418,
+      "git_blob_oid": "68b7d66c97d66c58de883ed0c451af2b3183e6f3",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049",
+      "path": "sbom/visual-score-source-copy/grants/77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049.txt",
+      "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049"
+    },
+    {
+      "bytes": 1073,
+      "git_blob_oid": "7ffa058cb78f8fb9beb974d9fd429004d2d2e585",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+      "path": "sbom/visual-score-source-copy/grants/792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473.txt",
+      "sha256": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473"
+    },
+    {
+      "bytes": 2338,
+      "git_blob_oid": "2a920c59d8abdd485a774087915986448495fd7c",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955",
+      "path": "sbom/visual-score-source-copy/grants/7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955.txt",
+      "sha256": "7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955"
+    },
+    {
+      "bytes": 1589,
+      "git_blob_oid": "23b0ee02a488b0f2b49bd4199709daba331b0b03",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30",
+      "path": "sbom/visual-score-source-copy/grants/7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30.txt",
+      "sha256": "7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30"
+    },
+    {
+      "bytes": 1090,
+      "git_blob_oid": "e825ad51621c5e34d370ba64f13f6854d89456a6",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3",
+      "path": "sbom/visual-score-source-copy/grants/804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3.txt",
+      "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+    },
+    {
+      "bytes": 55779,
+      "git_blob_oid": "1062f3bf743c0a37bcde05b1afc1ba5e98a95822",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d",
+      "path": "sbom/visual-score-source-copy/grants/82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d.txt",
+      "sha256": "82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d"
+    },
+    {
+      "bytes": 1023,
+      "git_blob_oid": "1bb5a44356f00884a71ceeefd24ded6caaba2418",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+      "path": "sbom/visual-score-source-copy/grants/86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741.txt",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+    },
+    {
+      "bytes": 1101,
+      "git_blob_oid": "2f1b8e15e5627d92f0521605c9870bc8e5505cb4",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4",
+      "path": "sbom/visual-score-source-copy/grants/8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4.txt",
+      "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4"
+    },
+    {
+      "bytes": 1475,
+      "git_blob_oid": "d12a849186982399c537c5b9a8fd77bf2edd5eab",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+      "path": "sbom/visual-score-source-copy/grants/9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d.txt",
+      "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+    },
+    {
+      "bytes": 1331,
+      "git_blob_oid": "446a1a805c8a949579fb8a9799f2bec7777349dc",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+      "path": "sbom/visual-score-source-copy/grants/a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17.txt",
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+    },
+    {
+      "bytes": 1129,
+      "git_blob_oid": "488c6260c10f2e88fa1fae58a63fccec8d600cd1",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+      "path": "sbom/visual-score-source-copy/grants/a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3.txt",
+      "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+    },
+    {
+      "bytes": 1344,
+      "git_blob_oid": "42ce7b75c92fb01a3f6ed17eea363f756b7da582",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+      "path": "sbom/visual-score-source-copy/grants/b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5.txt",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+    },
+    {
+      "bytes": 3464,
+      "git_blob_oid": "c23172f7aff0254e4f0f163fb2e6e355cbaec5f4",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43",
+      "path": "sbom/visual-score-source-copy/grants/bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43.txt",
+      "sha256": "bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43"
+    },
+    {
+      "bytes": 11584,
+      "git_blob_oid": "99c19cf844141395a87c34325da3a537f1e95815",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d",
+      "path": "sbom/visual-score-source-copy/grants/bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d.txt",
+      "sha256": "bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d"
+    },
+    {
+      "bytes": 1537,
+      "git_blob_oid": "9ecdc7586d08805bc984539f6672476e86e538b6",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7",
+      "path": "sbom/visual-score-source-copy/grants/c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7.txt",
+      "sha256": "c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7"
+    },
+    {
+      "bytes": 1599,
+      "git_blob_oid": "88e61a11bf877529df71203f7864af2b6a250677",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9",
+      "path": "sbom/visual-score-source-copy/grants/c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9.txt",
+      "sha256": "c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9"
+    },
+    {
+      "bytes": 11357,
+      "git_blob_oid": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "path": "sbom/visual-score-source-copy/grants/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "bytes": 197,
+      "git_blob_oid": "6f62d44e4ef733c0e713afcd2371fed7f2b3de67",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+      "path": "sbom/visual-score-source-copy/grants/cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48.txt",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+    },
+    {
+      "bytes": 1056,
+      "git_blob_oid": "4415505566f261c802b671426be529a31f914137",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+      "path": "sbom/visual-score-source-copy/grants/deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15.txt",
+      "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+    },
+    {
+      "bytes": 751,
+      "git_blob_oid": "b9077766e9b9bdcae49ea5c8fced750ed13ec8f7",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+      "path": "sbom/visual-score-source-copy/grants/f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d.txt",
+      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+    },
+    {
+      "bytes": 1985,
+      "git_blob_oid": "194caf554f8f10ba4cac8a81b631a61d0d81f60d",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de",
+      "path": "sbom/visual-score-source-copy/grants/fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de.txt",
+      "sha256": "fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de"
+    },
+    {
+      "bytes": 1083,
+      "git_blob_oid": "d99323a9965f146d5b0888c4ca1bf0727e12b04f",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d",
+      "path": "sbom/visual-score-source-copy/grants/fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d.txt",
+      "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+    },
+    {
+      "bytes": 1086,
+      "git_blob_oid": "7a254464cc78ccea32b3ded00513c44c4e4da412",
+      "mode": "100644",
+      "origin": "retained-source-copy-grant:fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf",
+      "path": "sbom/visual-score-source-copy/grants/fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf.txt",
+      "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf"
+    }
+  ],
+  "metadata_transitions": {
+    "evidence": {
+      "path": "runs/2026-11-23-source-current-generated-metadata.json",
+      "sha256": "9fd60e3fbd6297c9e491bbc822093a2de4698c65f523e6608d2b8f6fd5233b3b"
+    },
+    "new_producer_sha256": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408",
+    "old_producer_sha256": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+    "producer_path": "tools/dependency_policy.py",
+    "rows": [
+      {
+        "json_path": [
+          "producer_sha256",
+          "tools/dependency_policy.py"
+        ],
+        "new": {
+          "bytes": 3744,
+          "git_blob_oid": "f2e3e7ec379d8cd09c117207d629e302b3da2c48",
+          "mode": "100644",
+          "sha256": "1befd6a3cfe5fc91ca9729f84cb7c2302af15e66ae20d5f2971d76d5de379ddd"
+        },
+        "new_value": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408",
+        "old": {
+          "bytes": 3744,
+          "category": "other-retained-terms",
+          "git_blob_oid": "9de962e94cddae37de462f55a8ea2ca274c11481",
+          "mode": "100644",
+          "origin": "inherited-category:other-retained-terms",
+          "sha256": "bde99d53feb686f82c2f12b957cf77a84b0e4a015f6ea9b2e7b87f3156870835"
+        },
+        "old_value": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+        "path": "sbom/reviews/zlib-runtime/manifest.json"
+      },
+      {
+        "json_path": [
+          "sources_sha256",
+          "tools/dependency_policy.py"
+        ],
+        "new": {
+          "bytes": 38531,
+          "git_blob_oid": "076c6fdcb1d5677a76758b1dc12a7ba8fffae6d3",
+          "mode": "100644",
+          "sha256": "2de807eaf15cccd340e22dd49679d15c94df5499602c939808c1e4a75c70e1c7"
+        },
+        "new_value": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408",
+        "old": {
+          "bytes": 38531,
+          "category": "other-retained-terms",
+          "git_blob_oid": "4a4c9e0242d23ed1c55787089bd0ebf0c97109ea",
+          "mode": "100644",
+          "origin": "inherited-category:other-retained-terms",
+          "sha256": "e3f618c21bf815b4dc99d8711ef9e5d6d082078163f37794e7d69139f898a490"
+        },
+        "old_value": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+        "path": "site/public/web-licenses/packages.json"
+      },
+      {
+        "json_path": [
+          "documentNamespace"
+        ],
+        "new": {
+          "bytes": 28936,
+          "git_blob_oid": "22a6fc42d1f56e73009e42489e94d903e3329bb4",
+          "mode": "100644",
+          "sha256": "772adbbf234df5db3fad800a22fd6b22b80b59e8895a5384c6407bb10e3d4e25"
+        },
+        "new_value": "urn:aitrustid:spdx:web-npm:053e44cb841ce3c5ddfaeaa4c7c9bc27019dd724ac69ee2c72c4e09e6e21b5bc",
+        "old": {
+          "bytes": 28936,
+          "category": "other-retained-terms",
+          "git_blob_oid": "998505c0c6207694d9c82bfd2fb5e25b8c105101",
+          "mode": "100644",
+          "origin": "inherited-category:other-retained-terms",
+          "sha256": "3492d33fd2582f0ab8dd428893226ccf4388a4e18de34327e9dac98d20d02ff8"
+        },
+        "old_value": "urn:aitrustid:spdx:web-npm:5eb8371f6a03462c90692125a3ec365ce35f4bd49cd41dc0f8f5031252a209c9",
+        "path": "site/public/web-licenses/web-runtime.spdx.json"
+      }
+    ]
+  },
+  "origins": {
+    "clip-publisher-source": {
+      "copy_scope": "Exact source/license/original card and factual publisher config/hash metadata only; no model/weight/data or runtime grant inferred.",
+      "license": "MIT for original OpenAI CLIP source/card; factual API/config observations do not assert exclusive ownership",
+      "required_anchors": [
+        {
+          "path": "integrations/visual-score-reference/1.0.0/clip-license.txt",
+          "sha256": "987e63b32f6c89ff5160e429458a872ff048e6860b590a3912e938f9da8f14db"
+        }
+      ],
+      "source_evidence": "OpenAI CLIP commitd05afc436d78f1c48dc0dbf8e5980a9d471f35f6 and retained official model config/API revision32bd64288804d66eefd0ccbe215aa642df71cc41.",
+      "unresolved": []
+    },
+    "publisher-metadata:Jinja2@3.1.6": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b.txt",
+          "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record jinja2@3.1.6 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:MarkupSafe@3.0.4": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea.txt",
+          "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record markupsafe@3.0.4 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:PyYAML@6.0.3": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4.txt",
+          "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record pyyaml@6.0.3 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:Pygments@2.21.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-2-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f.txt",
+          "sha256": "71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17.txt",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record pygments@2.21.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:annotated-doc@0.0.5": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf.txt",
+          "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record annotated-doc@0.0.5 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:annotated-types@0.8.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d.txt",
+          "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record annotated-types@0.8.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:anyio@4.16.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0.txt",
+          "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record anyio@4.16.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:click@8.5.1": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record click@8.5.1 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:filelock@4.2.10": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48.txt",
+          "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record filelock@4.2.10 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:fsspec@2026.9.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94.txt",
+          "sha256": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record fsspec@2026.9.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:h11@0.16.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361.txt",
+          "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record h11@0.16.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:hf-xet@1.8.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "Apache-2.0",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record hf-xet@1.8.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:httpcore2@2.16.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9.txt",
+          "sha256": "c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record httpcore2@2.16.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:httpx2@2.16.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30.txt",
+          "sha256": "7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record httpx2@2.16.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:huggingface_hub@2.4.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "Apache-2.0",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record huggingface-hub@2.4.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:idna@3.20": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04.txt",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record idna@3.20 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:markdown-it-py@4.2.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484.txt",
+          "sha256": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473.txt",
+          "sha256": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record markdown-it-py@4.2.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:mdurl@0.1.2": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955.txt",
+          "sha256": "7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record mdurl@0.1.2 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:mpmath@1.3.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7.txt",
+          "sha256": "c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record mpmath@1.3.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:networkx@3.7": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/6025f323ea29dc2f0ee0abd9523bf910186f55b0e148e6ebf646c55566278e2e.txt",
+          "sha256": "6025f323ea29dc2f0ee0abd9523bf910186f55b0e148e6ebf646c55566278e2e"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record networkx@3.7 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:numpy@2.5.4": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/1be1df33863f97a7bc1c4d67980bd6c69c9a6fef0a5ee76e6ad6cb91e56e8491.txt",
+          "sha256": "1be1df33863f97a7bc1c4d67980bd6c69c9a6fef0a5ee76e6ad6cb91e56e8491"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record numpy@2.5.4 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:packaging@26.3": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "Apache-2.0 OR BSD-2-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5.txt",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48.txt",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record packaging@26.3 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:pillow@13.0.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT-CMU",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b.txt",
+          "sha256": "15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record pillow@13.0.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:pydantic@2.14.3": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3.txt",
+          "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record pydantic@2.14.3 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:pydantic_core@2.50.4": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a.txt",
+          "sha256": "2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record pydantic-core@2.50.4 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:regex@2026.11.9": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "Apache-2.0 AND CNRI-Python",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/69b5d7d41a6ece3b20c6a77774f567948766d8643f7646e3f65474692cce5c15.txt",
+          "sha256": "69b5d7d41a6ece3b20c6a77774f567948766d8643f7646e3f65474692cce5c15"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d.txt",
+          "sha256": "bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record regex@2026.11.9 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:rich@15.0.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15.txt",
+          "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record rich@15.0.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:safetensors@0.8.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "Apache-2.0",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record safetensors@0.8.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:setuptools@84.2.1": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741.txt",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record setuptools@84.2.1 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:shellingham@1.5.4": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "ISC",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d.txt",
+          "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record shellingham@1.5.4 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:sympy@1.14.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286.txt",
+          "sha256": "07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d.txt",
+          "sha256": "82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record sympy@1.14.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:tokenizers@0.23.3": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "Apache-2.0",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record tokenizers@0.23.3 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:torch@2.15.0+cpu": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43.txt",
+          "sha256": "bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record torch@2.15.0+cpu in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:tqdm@4.70.1": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MPL-2.0 AND MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04.txt",
+          "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de.txt",
+          "sha256": "fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record tqdm@4.70.1 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:transformers@5.22.2": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "Apache-2.0",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049.txt",
+          "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record transformers@5.22.2 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:truststore@0.10.5": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca.txt",
+          "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record truststore@0.10.5 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:typer@0.29.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49.txt",
+          "sha256": "58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record typer@0.29.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:typing-inspection@0.4.5": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3.txt",
+          "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record typing-inspection@0.4.5 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "publisher-metadata:typing_extensions@4.16.0": {
+      "copy_scope": "exact metadata/description copying. Preserve unmodified METADATA/description and every listed full grant/author notice; no publisher endorsement or binary/native/model/data permission inferred.",
+      "license": "PSF-2.0",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf.txt",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+        }
+      ],
+      "source_evidence": "Exact retained source-copy fact record typing-extensions@4.16.0 in sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 at author commit b4fddc235b8813021fd21b7a470ec4fcbf99d865. Full primary grant/author provenance and declared observations remain separate in that record.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286.txt",
+          "sha256": "07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d.txt",
+          "sha256": "82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286; complete primary source/member provenance retained there. Associated records: sympy@1.14.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: Apache-2.0 OR BSD-2-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5.txt",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48.txt",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594; complete primary source/member provenance retained there. Associated records: packaging@26.3.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT-CMU",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b.txt",
+          "sha256": "15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 15181e7363dca9aed78b79bebebc7fde7f1814b8bd311ea3b87ae8ccadfc185b; complete primary source/member provenance retained there. Associated records: pillow@13.0.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04.txt",
+          "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04; complete primary source/member provenance retained there. Associated records: idna@3.20.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:1be1df33863f97a7bc1c4d67980bd6c69c9a6fef0a5ee76e6ad6cb91e56e8491": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/1be1df33863f97a7bc1c4d67980bd6c69c9a6fef0a5ee76e6ad6cb91e56e8491.txt",
+          "sha256": "1be1df33863f97a7bc1c4d67980bd6c69c9a6fef0a5ee76e6ad6cb91e56e8491"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 1be1df33863f97a7bc1c4d67980bd6c69c9a6fef0a5ee76e6ad6cb91e56e8491; complete primary source/member provenance retained there. Associated records: numpy@2.5.4.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a.txt",
+          "sha256": "2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a; complete primary source/member provenance retained there. Associated records: pydantic-core@2.50.4.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94.txt",
+          "sha256": "2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 2dc35496ce53a7307915c008a844aad53e772b49b34cdd00445067691407ec94; complete primary source/member provenance retained there. Associated records: fsspec@2026.9.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca.txt",
+          "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca; complete primary source/member provenance retained there. Associated records: truststore@0.10.5.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361.txt",
+          "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361; complete primary source/member provenance retained there. Associated records: h11@0.16.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: PSF-2.0",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf.txt",
+          "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf; complete primary source/member provenance retained there. Associated records: typing-extensions@4.16.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b.txt",
+          "sha256": "3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 3b49dcee4105eb37bac10faf1be260408fe85d252b8e9df2e0979fc1e094437b; complete primary source/member provenance retained there. Associated records: jinja2@3.1.6.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MPL-2.0 AND MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04.txt",
+          "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de.txt",
+          "sha256": "fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04; complete primary source/member provenance retained there. Associated records: tqdm@4.70.1.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea.txt",
+          "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea; complete primary source/member provenance retained there. Associated records: markupsafe@3.0.4.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484.txt",
+          "sha256": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473.txt",
+          "sha256": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484; complete primary source/member provenance retained there. Associated records: markdown-it-py@4.2.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0.txt",
+          "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0; complete primary source/member provenance retained there. Associated records: anyio@4.16.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49.txt",
+          "sha256": "58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 58992cebcf8dfb6e40c4e2112ed12126c243666dca3912a3d78b7ecac4859d49; complete primary source/member provenance retained there. Associated records: typer@0.29.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:6025f323ea29dc2f0ee0abd9523bf910186f55b0e148e6ebf646c55566278e2e": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/6025f323ea29dc2f0ee0abd9523bf910186f55b0e148e6ebf646c55566278e2e.txt",
+          "sha256": "6025f323ea29dc2f0ee0abd9523bf910186f55b0e148e6ebf646c55566278e2e"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 6025f323ea29dc2f0ee0abd9523bf910186f55b0e148e6ebf646c55566278e2e; complete primary source/member provenance retained there. Associated records: networkx@3.7.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48.txt",
+          "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48; complete primary source/member provenance retained there. Associated records: filelock@4.2.10.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:69b5d7d41a6ece3b20c6a77774f567948766d8643f7646e3f65474692cce5c15": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: Apache-2.0 AND CNRI-Python",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/69b5d7d41a6ece3b20c6a77774f567948766d8643f7646e3f65474692cce5c15.txt",
+          "sha256": "69b5d7d41a6ece3b20c6a77774f567948766d8643f7646e3f65474692cce5c15"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d.txt",
+          "sha256": "bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 69b5d7d41a6ece3b20c6a77774f567948766d8643f7646e3f65474692cce5c15; complete primary source/member provenance retained there. Associated records: regex@2026.11.9.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-2-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f.txt",
+          "sha256": "71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17.txt",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f; complete primary source/member provenance retained there. Associated records: pygments@2.21.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: Apache-2.0",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049.txt",
+          "sha256": "77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 77fd4710def9ec3c0f6225800e0235f15a425abd4a8b03559127fcd782612049; complete primary source/member provenance retained there. Associated records: transformers@5.22.2.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484.txt",
+          "sha256": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473.txt",
+          "sha256": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473; complete primary source/member provenance retained there. Associated records: markdown-it-py@4.2.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955.txt",
+          "sha256": "7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955; complete primary source/member provenance retained there. Associated records: mdurl@0.1.2.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30.txt",
+          "sha256": "7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30; complete primary source/member provenance retained there. Associated records: httpx2@2.16.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3.txt",
+          "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3; complete primary source/member provenance retained there. Associated records: typing-inspection@0.4.5.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286.txt",
+          "sha256": "07a5e9819f727b4986ad2829c7a29a6320d42575f720eb24d71b7fef573a0286"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d.txt",
+          "sha256": "82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 82b1038521b0696c63c90b31ed4a0a2c9c4c16871c648b157b07ca44b6f18f8d; complete primary source/member provenance retained there. Associated records: sympy@1.14.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741.txt",
+          "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741; complete primary source/member provenance retained there. Associated records: setuptools@84.2.1.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4.txt",
+          "sha256": "8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4; complete primary source/member provenance retained there. Associated records: pyyaml@6.0.3.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d.txt",
+          "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record 9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d; complete primary source/member provenance retained there. Associated records: click@8.5.1.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-2-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f.txt",
+          "sha256": "71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17.txt",
+          "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17; complete primary source/member provenance retained there. Associated records: pygments@2.21.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3.txt",
+          "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3; complete primary source/member provenance retained there. Associated records: pydantic@2.14.3.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: Apache-2.0 OR BSD-2-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5.txt",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48.txt",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5; complete primary source/member provenance retained there. Associated records: packaging@26.3.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43.txt",
+          "sha256": "bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43; complete primary source/member provenance retained there. Associated records: torch@2.15.0+cpu.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: Apache-2.0 AND CNRI-Python",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/69b5d7d41a6ece3b20c6a77774f567948766d8643f7646e3f65474692cce5c15.txt",
+          "sha256": "69b5d7d41a6ece3b20c6a77774f567948766d8643f7646e3f65474692cce5c15"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d.txt",
+          "sha256": "bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record bff55ef4cdcc8c14ce259f8e8ab60e264418440d6335f4dc138273fbd506144d; complete primary source/member provenance retained there. Associated records: regex@2026.11.9.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7.txt",
+          "sha256": "c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record c26cae81da4508e5e249985777a33821f183223ebb74d7f8cfbf90fe7eef2fb7; complete primary source/member provenance retained there. Associated records: mpmath@1.3.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: BSD-3-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9.txt",
+          "sha256": "c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9; complete primary source/member provenance retained there. Associated records: httpcore2@2.16.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: Apache-2.0",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4; complete primary source/member provenance retained there. Associated records: hf-xet@1.8.0, huggingface-hub@2.4.0, safetensors@0.8.0, tokenizers@0.23.3.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: Apache-2.0 OR BSD-2-Clause",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt",
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5.txt",
+          "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48.txt",
+          "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48; complete primary source/member provenance retained there. Associated records: packaging@26.3.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15.txt",
+          "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15; complete primary source/member provenance retained there. Associated records: rich@15.0.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: ISC",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d.txt",
+          "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d; complete primary source/member provenance retained there. Associated records: shellingham@1.5.4.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MPL-2.0 AND MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04.txt",
+          "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04"
+        },
+        {
+          "path": "sbom/visual-score-source-copy/grants/fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de.txt",
+          "sha256": "fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record fcff87c3a47ce8028a8512aa182d4fcf0ad1c90544ee75cf9b343684cac194de; complete primary source/member provenance retained there. Associated records: tqdm@4.70.1.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d.txt",
+          "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d; complete primary source/member provenance retained there. Associated records: annotated-types@0.8.0.",
+      "unresolved": []
+    },
+    "retained-source-copy-grant:fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf": {
+      "copy_scope": "verbatim copyright, grant, license conditions, disclaimer and named author attribution carried to support exact publisher metadata/description copying; no package code execution or binary/model admission",
+      "license": "Verbatim carried grant/author text; associated exact metadata source-copy expressions: MIT",
+      "required_anchors": [
+        {
+          "path": "sbom/visual-score-source-copy/grants/fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf.txt",
+          "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf"
+        }
+      ],
+      "source_evidence": "Exact immutable text from sbom/visual-score-source-copy/manifest.json SHA256 68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2 grant record fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf; complete primary source/member provenance retained there. Associated records: annotated-doc@0.0.5.",
+      "unresolved": []
+    },
+    "torchvision-reference-source": {
+      "copy_scope": "Exact retained source excerpt/license only, not installed torchvision or a binary/algorithm accuracy claim.",
+      "license": "BSD-3-Clause; exact carried torchvision project terms",
+      "required_anchors": [
+        {
+          "path": "integrations/visual-score-reference/1.0.0/torchvision-license.txt",
+          "sha256": "6502f676851cfe25f8af75531dfb32375b7325b73c37e7b43741fa422893e71d"
+        }
+      ],
+      "source_evidence": "PyTorch vision v0.14.1 retained CenterCrop excerpt and project license; preprocessing record binds full-source/excerpt hashes.",
+      "unresolved": []
+    },
+    "ufd-publisher-source": {
+      "copy_scope": "Copied UFD code/license and factual repository metadata only; no weights, runtime dependency, training/data or accuracy grant inferred.",
+      "license": "MIT; exact carried UFD project license",
+      "required_anchors": [
+        {
+          "path": "integrations/visual-score-reference/1.0.0/ufd-license.txt",
+          "sha256": "923dbc0fe040cc826122491e98b20d6f401e510d50c8b666de908e59ebf2f2b2"
+        }
+      ],
+      "source_evidence": "WisconsinAIVision/UniversalFakeDetect commit030495aea3300a8b54c0ec37ec7fe1dd7e63c619; existing reviewed pinned source retrieval.",
+      "unresolved": []
+    }
+  },
+  "profile": "source-copy-additions/v3",
+  "project_files": [
+    ".github/workflows/source-profile-continuation.yml",
+    ".github/workflows/visual-score-qualification.yml",
+    "docs/hf-model-card-reference-plan.md",
+    "docs/image-score-cleanup-ownership-correction-plan.md",
+    "docs/offline-image-score-guide.md",
+    "docs/offline-image-score-hosted-source-plan.md",
+    "docs/offline-image-score-integration-plan.md",
+    "docs/offline-image-score-plan.md",
+    "docs/offline-image-score-qualification-plan.md",
+    "docs/offline-image-score-registration-amendment.md",
+    "docs/offline-image-score-result.md",
+    "docs/source-image-integration-result.md",
+    "docs/source-profile-continuation-plan.md",
+    "docs/source-snapshot-managed-consumer.md",
+    "docs/source-snapshot-managed-integration-plan.md",
+    "docs/source-snapshot-rights-current-main-plan.md",
+    "docs/source-snapshot-rights-current-main.md",
+    "docs/source-snapshot-rights-v2-plan.md",
+    "docs/source-snapshot-rights-v2.md",
+    "docs/source-snapshot-rights-v3-additions-plan.md",
+    "docs/source-snapshot-rights-v3-metadata-transitions-plan.md",
+    "docs/source-snapshot-rights-v3.md",
+    "docs/visual-score-source-copy-grants.md",
+    "eval/dependencies/source-copy-v2-history/source-snapshot-release-v2-b5ffe6abefe80a0b42fcfb3516dc11845e337b21f8612bd14b83f57269a49809.json",
+    "eval/dependencies/source-copy-v2-history/source_release_policy_v2-1438edcb8a7f363fd8da77432d6693b33da529f4dbee17f92655f098d95387fc.py",
+    "eval/dependencies/source-copy-v2-history/source_release_policy_v2-fb7df81a98c2763c69bbc2314df76b651d114c60044d6d098debed3cde45fb70.py",
+    "eval/dependencies/source-copy-v3-history/source-snapshot-additions-v3-25911bcd411e63c2c07a5128e06382c53c93921544c5abb0341bf0b1533550f6.json",
+    "eval/dependencies/source-copy-v3-history/source_release_policy_v3-0ed9484fa65142bd714b23ce697d85ceade18db38eacf272ad44ff74a5c6c0f1.py",
+    "eval/dependencies/source-copy-v3-history/test_source_release_policy_v3-bd7192016baf1e322d5d639142de8c3a5e11d708c0915c0ce3bb2796d329d810.py",
+    "eval/dependencies/source-snapshot-additions-v3.json",
+    "eval/dependencies/source-snapshot-release-v2.json",
+    "integrations/visual-score-reference/1.0.0/hf-model-card-reference.json",
+    "integrations/visual-score-reference/1.0.0/preprocess-reference.json",
+    "integrations/visual-score-reference/1.0.0/projection.json",
+    "integrations/visual-score-reference/1.0.0/runtime-candidates.json",
+    "integrations/visual-score-reference/1.0.0/source.json",
+    "integrations/visual-score-reference/qualification-linux-cp313.json",
+    "integrations/visual-score-reference/qualification-linux-cp313.lock",
+    "integrations/visual-score-reference/qualification-notice-inventory.json",
+    "runs/2026-11-23-hf-card-factual-reference-distinct-review.json",
+    "runs/2026-11-23-hf-card-reference-correction.json",
+    "runs/2026-11-23-image-budget-final-source-distinct-review.json",
+    "runs/2026-11-23-image-budget-initial-source-controls.json",
+    "runs/2026-11-23-image-budget-preimplementation-distinct-review.json",
+    "runs/2026-11-23-image-budget-publication-corrected-distinct-controls.json",
+    "runs/2026-11-23-image-budget-publication-original-counter.json",
+    "runs/2026-11-23-image-score-cleanup-corrected-distinct-review.json",
+    "runs/2026-11-23-image-score-cleanup-original-peer.json",
+    "runs/2026-11-23-image-score-cleanup-owned-correction.json",
+    "runs/2026-11-23-image-score-hosted-source-prior-review.json",
+    "runs/2026-11-23-image-score-inert-current-base.json",
+    "runs/2026-11-23-image-score-inert-import-manifest.json",
+    "runs/2026-11-23-image-score-inert-integration-distinct-review.json",
+    "runs/2026-11-23-image-score-manual-registration-distinct-review.json",
+    "runs/2026-11-23-image-score-manual-registration-first-failure.json",
+    "runs/2026-11-23-image-score-manual-registration-source.json",
+    "runs/2026-11-23-image-shared-budget-source-controls.json",
+    "runs/2026-11-23-image-source-suite-count-followup.json",
+    "runs/2026-11-23-managed-source-current-controls.json",
+    "runs/2026-11-23-managed-source-final-distinct-review.json",
+    "runs/2026-11-23-managed-source-first-controls-failure.json",
+    "runs/2026-11-23-managed-source-initial-syntax.json",
+    "runs/2026-11-23-managed-source-reserve-corrected-controls.json",
+    "runs/2026-11-23-managed-source-workflow-controls.json",
+    "runs/2026-11-23-offline-image-score-cli-echo-nonproof.json",
+    "runs/2026-11-23-offline-image-score-cli-echo-substantiated.json",
+    "runs/2026-11-23-offline-image-score-direct-validator-original.json",
+    "runs/2026-11-23-offline-image-score-fifo-original.json",
+    "runs/2026-11-23-offline-image-score-final-source-controls.json",
+    "runs/2026-11-23-offline-image-score-home-corrected-source.json",
+    "runs/2026-11-23-offline-image-score-home-original-peer.json",
+    "runs/2026-11-23-offline-image-score-hosted-source-phase.json",
+    "runs/2026-11-23-offline-image-score-prequalification-distinct-review.json",
+    "runs/2026-11-23-offline-image-score-prior25-source-controls.json",
+    "runs/2026-11-23-offline-image-score-prior26-source-controls.json",
+    "runs/2026-11-23-offline-image-score-source-handoff.json",
+    "runs/2026-11-23-offline-image-score-wheel-metadata-distinct-review.json",
+    "runs/2026-11-23-source-copy-archive-first-transport-refusal.json",
+    "runs/2026-11-23-source-copy-current-merge-attribution.json",
+    "runs/2026-11-23-source-copy-rights-current-main-distinct-review.json",
+    "runs/2026-11-23-source-copy-rights-current-main-execution.json",
+    "runs/2026-11-23-source-copy-rights-current-main-handoff.json",
+    "runs/2026-11-23-source-copy-rights-v2-distinct-review.json",
+    "runs/2026-11-23-source-copy-rights-v2-execution.json",
+    "runs/2026-11-23-source-copy-v3-distinct-review.json",
+    "runs/2026-11-23-source-copy-v3-execution.json",
+    "runs/2026-11-23-source-current-generated-metadata-distinct-review.json",
+    "runs/2026-11-23-source-current-generated-metadata.json",
+    "runs/2026-11-23-source-image-current-boundaries.json",
+    "runs/2026-11-23-source-image-current-extension.json",
+    "runs/2026-11-23-source-image-current-pii-redacted.json",
+    "runs/2026-11-23-source-image-current-protocol.json",
+    "runs/2026-11-23-source-image-current-ps.json",
+    "runs/2026-11-23-source-image-current-selection.json",
+    "runs/2026-11-23-source-image-current-website.json",
+    "runs/2026-11-23-source-image-distinct-review.json",
+    "runs/2026-11-23-source-image-first-hosted-failures.json",
+    "runs/2026-11-23-source-image-integration-controls.json",
+    "runs/2026-11-23-source-image-protected-source-consumer.json",
+    "runs/2026-11-23-source-image-publication.json",
+    "runs/2026-11-23-visual-metadata-source-copy-distinct-review.json",
+    "runs/2026-11-23-visual-metadata-source-copy-plan-review.json",
+    "runs/2026-11-23-visual-metadata-source-copy-recovery.json",
+    "runs/changes/2026-11-23-034320-offline-image-score-reference-source-89f847f8.json",
+    "runs/changes/2026-11-23-153209-image-score-linux-source-a680d5de.json",
+    "runs/changes/2026-11-23-162819-image-score-cleanup-efae071b.json",
+    "runs/changes/2026-11-23-171418-image-score-inert-integration-19a72cf2.json",
+    "runs/changes/2026-11-23-180830-image-score-manual-source-registration-18a8770b.json",
+    "runs/changes/2026-11-23-180943-plan-current-source-and-image-integration-f07490c4.json",
+    "runs/changes/2026-11-23-181547-current-source-copy-archive-consumer-b4bac8c4.json",
+    "runs/changes/2026-11-23-181740-implement-source-admission-and-managed-producer-2b6eec80.json",
+    "runs/changes/2026-11-23-181922-preserve-protected-main-merge-attribution-182aac1c.json",
+    "runs/changes/2026-11-23-183101-managed-source-consumer-9dc18e47.json",
+    "runs/changes/2026-11-23-185602-hf-card-factual-reference-def88dc5.json",
+    "runs/changes/2026-11-23-190334-reconcile-active-wave-state-and-current-policy-e90d2dd8.json",
+    "runs/changes/2026-11-23-190824-visual-metadata-copy-grants-9cf5c314.json",
+    "runs/changes/2026-11-23-195613-image-shared-budget-d72c41b9.json",
+    "runs/changes/2026-11-23-image-budget-current-registration.json",
+    "runs/changes/2026-11-23-image-source-suite-count-followup.json",
+    "runs/changes/2026-11-23-source-capacity-consumer-contract.json",
+    "runs/changes/2026-11-23-source-copy-rights-v2-profile.json",
+    "runs/changes/2026-11-23-source-copy-v3-finite-additions.json",
+    "runs/changes/2026-11-23-source-image-hosted-engineering-selection.json",
+    "runs/changes/2026-11-23-source-image-integrated-source.json",
+    "runs/changes/2026-11-23-source-image-linux-contract-correction.json",
+    "runs/changes/2026-11-23-source-image-protected-publication.json",
+    "runs/changes/2026-11-23-source-profile-ci-prerequisites.json",
+    "runs/changes/2026-11-23-source-profile-continuation.json",
+    "sbom/visual-score-source-copy/manifest.json",
+    "scripts/inspect-visual-score.py",
+    "scripts/prepare-visual-score-qualification.py",
+    "scripts/run-visual-score-phase.py",
+    "scripts/verify-managed-source.py",
+    "scripts/verify-visual-score-qualification.py",
+    "tests/test_source_release_policy_v2.py",
+    "tests/test_source_release_policy_v2_archive.py",
+    "tests/test_source_release_policy_v3.py",
+    "tests/test_source_snapshot_admission.py",
+    "tests/test_source_snapshot_managed.py",
+    "tests/test_source_snapshot_workflow.py",
+    "tests/test_visual_score.py",
+    "tests/test_visual_score_budget.py",
+    "tests/test_visual_score_qualification.py",
+    "tests/test_visual_score_workflow.py",
+    "tools/source_release_policy_v2.py",
+    "tools/source_release_policy_v3.py",
+    "tools/source_snapshot_admission.py",
+    "tools/source_snapshot_managed.py",
+    "tools/visual_score.py",
+    "tools/visual_score_assets.py",
+    "tools/visual_score_budget.py",
+    "tools/visual_score_process.py",
+    "tools/visual_score_qualification.py",
+    "tools/visual_score_reference.py",
+    "tools/visual_score_runtime.py"
+  ],
+  "source_observation": {
+    "candidate_is_protected": false,
+    "committed_head": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+    "hf_copied_card_removed_by_actual_producer": true,
+    "hf_factual_reference_commit": "1efd3bd2ce07f51c3844a5efd1585cc5cd467286",
+    "image_source_commit": "916103dd8f04b561e4f9ae850fd77aaa0904e17a",
+    "manifest_sha256": "d82363309e41d4e3d36c82d9d90a90b4a76af9acdcdecc3dcfe6427be2f4102f",
+    "metadata_grant_author_commit": "b4fddc235b8813021fd21b7a470ec4fcbf99d865",
+    "metadata_grant_distinct_review_sha256": "725a8450034e6a66f85ec1e48dec21104bb4fee54f54308d1845ce1dbf3070a0",
+    "metadata_grant_manifest_sha256": "68f943d79806e53432bc2472426541bbf05fe50d502597e7cd68afdd4732c2f2",
+    "scope": "Finite reviewed source-copy additions; protected6d remains the base. Current integration candidate is unprotected until separately observed producer evidence. Absence of a named future proof is not an execution claim."
+  },
+  "v2_method_sha256": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c",
+  "v2_policy_sha256": "2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d"
+}

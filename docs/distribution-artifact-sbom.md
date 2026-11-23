@@ -10,8 +10,11 @@ uploaded or executed during local preparation. Python3.12+ is required.
 A hash or valid signature identifies bytes and a signer; it does not grant
 licenses, approve every dependency or establish detector accuracy. Metadata is
 not silently promoted to complete embedded/native coverage. `NOASSERTION` stays
-visible. The existing X-02 route policy remains independent: only the exact
-PS source distribution is currently admitted. Unknown routes may be inspected
+visible. The existing X-02 route policy remains independent: the exact PS source
+distribution and finite reviewed MCP wheel distributions have separate profiles.
+The whole-source route additionally requires its current finite copy assessment
+and complete archive-to-trusted-Git binding; a source grant approves copying,
+not the bundled execution of its optional models or platform runtimes. Unknown routes may be inspected
 or authentically attested, but cannot pass the managed-release authorization.
 Existing personal checks and ordinary development builds are unchanged.
 
@@ -49,7 +52,10 @@ Use `graph --route ROUTE` for a brief count; add an explicit private `--output`
 to inspect source paths, hashes, components, relationships and gaps. Supported:
 
 - `ps-source`: nine admitted source/notice members and canonical ZIP checks.
-- `source-snapshot`: all committed Git blob identities, not a PS-only package.
+- `source-snapshot`: all committed Git blob identities, with the complete received
+  canonical source archive independently compared to the caller-selected trusted
+  Git commit before format verification. The current finite source-copy profile
+  is required separately; runtime and accuracy permission is not inferred.
 - `web-checker`, `ios-app`, `android-app`: locked website packages plus pinned
   assets/runtime, retained notices and selected source evidence.
 - `gateway-linux-amd64`, `evaluator-linux-amd64`, `anonymizer-linux-amd64`: each
@@ -114,6 +120,15 @@ managed-release consumer for all14scope IDs. Passing authenticity alone returns
 not an automatic call to this managed-release authorization. Broader consumer
 integration and unknown obligations cannot be claimed complete from an unused
 interface or the route count.
+
+The managed whole-source consumer is described in
+[its own guide](source-snapshot-managed-consumer.md). It captures the full archive
+and exact signature evidence, authenticates the protected release, then
+materializes only the finite standalone PS source cohort and its notices for
+fresh positive, negative and refusal probes. This is a working source-entry-point
+check, not execution or validation of every tag or platform in the repository.
+The protected producer offers bytes only after that consumer succeeds. Local
+control results are not a claim that a protected signing run has happened.
 
 ## Safety and failure
 

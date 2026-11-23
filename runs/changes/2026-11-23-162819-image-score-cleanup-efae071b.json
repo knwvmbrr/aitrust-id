@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-162819-image-score-cleanup-efae071b",
+  "recorded_at": "2026-11-23T16:28:19.244346+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4221c5e0f67ac52bced0ad6acbb13a14a8a6680f",
+  "changed": "Replaced multi-component cleanup traversal with held nofollow directory descriptors, single-component mutations and checked parent relations; preserved original failure and corrected private-filesystem proofs.",
+  "proves": "The original immutable4221 counter deletes the outside hardlink; corrected code preserves outside sentinel, replacement link and original with CleanupUncertain. Thirteen affected author controls pass; separate peer replay clears original, normal and open-fault boundaries. All83 current source bindings are stable;80 prior bindings remain unchanged.",
+  "limits": "SOURCE ONLY. No asset/SDK/model acquisition, install, native inference, workflow launch, push, accuracy, FA/PA or original closure. Whole acquisition remains pending ROOT review; no universal hostile concurrent same-UID race, parent SIGKILL or host-crash guarantee. Uncertain cleanup can retain private bytes. Author receipt predates corrected peer review; both immutable observations are retained separately. Initial normal commit hook refused malformed check-summary metadata; only that event schema was corrected, with code/evidence unchanged.",
+  "scope_ids": [
+    "T-FA"
+  ],
+  "files": {
+    "tools/visual_score_qualification.py": "1fc07096a24e04e1c1412c349071f5c2300975a89d4732642396e345b01f99d5",
+    "tests/test_visual_score_qualification.py": "37a1eaad17e84226505cafc054ffdff54f0ff69f9db7c9af48eff7fb2b14273d",
+    "docs/image-score-cleanup-ownership-correction-plan.md": "f8a379f393891ecb2adab82a1b08a8fb6cc31b90af71c49229984f79300ffbf8",
+    "runs/2026-11-23-image-score-cleanup-owned-correction.json": "56af4a2481beb693e942888c331719674c4eccc32be7cab8f7364a210128ca43",
+    "runs/2026-11-23-image-score-cleanup-original-peer.json": "d4539e63098b8c99bd78f9d41ebdfae865a3ce66d779fb7b469953f4e82c9098",
+    "runs/2026-11-23-image-score-hosted-source-prior-review.json": "5b0230919246329702623b5a1eecb26b928720d4641d6cda27c51c35481e7b31",
+    "runs/2026-11-23-image-score-cleanup-corrected-distinct-review.json": "cd94b43754db54d57423bb77e33b0979100845055ad0489fd22a40df87c67b7c"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-image-score-cleanup-owned-correction.json",
+      "sha256": "56af4a2481beb693e942888c331719674c4eccc32be7cab8f7364a210128ca43"
+    },
+    {
+      "path": "runs/2026-11-23-image-score-cleanup-original-peer.json",
+      "sha256": "d4539e63098b8c99bd78f9d41ebdfae865a3ce66d779fb7b469953f4e82c9098"
+    },
+    {
+      "path": "runs/2026-11-23-image-score-hosted-source-prior-review.json",
+      "sha256": "5b0230919246329702623b5a1eecb26b928720d4641d6cda27c51c35481e7b31"
+    },
+    {
+      "path": "runs/2026-11-23-image-score-cleanup-corrected-distinct-review.json",
+      "sha256": "cd94b43754db54d57423bb77e33b0979100845055ad0489fd22a40df87c67b7c"
+    }
+  ],
+  "checks": []
+}

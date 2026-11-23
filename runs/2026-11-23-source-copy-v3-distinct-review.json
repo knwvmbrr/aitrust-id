@@ -1,0 +1,107 @@
+{
+  "profile": "source-copy-v3-final-finite-data-distinct-review/v1",
+  "captured_at": "2026-11-23T19:13:20.188341+00:00",
+  "reviewed_by": "/root/seo",
+  "pass": true,
+  "conclusion": "CLEAR for final finite data assembly and the literal-only core/test changes over previously reviewed mechanism. Actual integrated ROOT source candidate/archive verification, admission and protected publication remain subsequent.",
+  "reviewed_sources_sha256": {
+    "tools/source_release_policy_v3.py": "eff79d895ad1b398931577d45787d4a61fc5fb8a9543ca846bd839869a6a6a81",
+    "eval/dependencies/source-snapshot-additions-v3.json": "253897094cefa1fe41c7e79195ac4a28425de8abe10618c8e6e4395a044cca00",
+    "tests/test_source_release_policy_v3.py": "f493820a1b3b8c6ac6878eb25b476f8c0f24677ab17619efbc618f405b3c1843",
+    "docs/source-snapshot-rights-v3-additions-plan.md": "9618e9f3abbe89e98521a07dd890e66f2f0b7582dd6422f2a620176b9cb94977",
+    "docs/source-snapshot-rights-v3-metadata-transitions-plan.md": "55c4406e61b8d0b7fa6013129734f197e52adb5f1ebdf79530c35ca44ad96c74",
+    "docs/source-snapshot-rights-v3.md": "716b7e9919f30786edf158275993e01c3631a0f88a87c5b6e4047d4ac077ca51"
+  },
+  "prior_mechanism_review_sha256": "c4856c7724b9308c98d0ac6b1e629828dd908946eb578696f9ec5ce7653488ea",
+  "grant_review_sha256": "725a8450034e6a66f85ec1e48dec21104bb4fee54f54308d1845ce1dbf3070a0",
+  "checks": [
+    {
+      "id": "core_exact_diff_only_fixed_policy_sha_and_approved128to160_project_limit",
+      "pass": true
+    },
+    {
+      "id": "test_exact_diff_only161_name_refusal_added_to_existing_method",
+      "pass": true
+    },
+    {
+      "id": "135_unique_literal_project_union_matches_capacity_plan_actual_HF_and_grant_added_commit_paths",
+      "pass": true
+    },
+    {
+      "id": "all39_metadata_identity_license_and_required_anchors_equal_reviewed68f943_manifest",
+      "pass": true
+    },
+    {
+      "id": "all43_grant_identity_and_union_of_associated_package_anchor_sets_equal_reviewed_manifest",
+      "pass": true
+    },
+    {
+      "id": "93_copied_bytes_match_actual916_or_b4fddc_Git_blobs",
+      "pass": true
+    },
+    {
+      "id": "copied_table_delta43_grants_added_oldHF_card_removed_zero_changed_prior_remaining_copied_rows",
+      "pass": true
+    },
+    {
+      "id": "fixed3_metadata_transition_object_exact_equal_prior_ceb336",
+      "pass": true
+    },
+    {
+      "id": "all85_origins_explicit_no_unresolved_and_false_claims_preserved",
+      "pass": true
+    },
+    {
+      "id": "V1_V2_method_and_table_bytes_unchanged",
+      "pass": true
+    },
+    {
+      "id": "prior239_ca16_ceb_snapshot_names_match_actual_content_SHA256",
+      "pass": true
+    }
+  ],
+  "counts": {
+    "literal_project_names": 135,
+    "project_capacity": 160,
+    "immutable_copied_rows": 93,
+    "origins": 85,
+    "unresolved_origins": 0,
+    "new_grant_rows": 43,
+    "independently_reviewed_metadata_rows": 39
+  },
+  "preserved_limits": {
+    "whole_files": 16384,
+    "whole_source_bytes": 256000000,
+    "archive_bytes": 64000000,
+    "copied_capacity": 256,
+    "origin_capacity": 256,
+    "classification_deadline_seconds": 30,
+    "per_inspected_blob_bytes": 2000000,
+    "shared_inspection_bytes": 64000000,
+    "archive_outer_seconds": 95,
+    "archive_child_seconds": 60
+  },
+  "role_boundaries": {
+    "independent": "Current literal core/test diff, finite table assembly, exact grant manifest mapping, immutable snapshot preservation and current data/schema/refusal boundaries.",
+    "authored_facts_excluded": "Reviewer authored V1/CFFI/Rust/HF factual-reference change. No independent adoption of those facts here. HF producer removal/reference bytes separately reviewed by ROOT c81742135b10ea00fc75c24e58e44321dce4855a1f0544702464761b45a486c5; prior original-source grants remain inherited, not new independent cohort credit."
+  },
+  "findings": [],
+  "limits": [
+    "No full24 rerun, source archive construction/inspection, SDK/model/native/runtime execution, acquisition, install, network, workflow launch or source edit. Data comparisons used retained JSON and literal Git show/diff reads only.",
+    "135 names include explicitly predeclared future ROOT proof/event paths. Naming permits only the reviewed project-text contract when present; it does not claim those future proofs have executed or exist.",
+    "39 grant facts retain exact metadata-copy scope, all full notices/conditions and original spelling qualifications. No compiled-native/model/data rights follow.",
+    "Current integrated source snapshot may differ from protected6d base. Actual all-file unknown-path classification and trusted-Git archive binding must execute against the final candidate before route admission.",
+    "Initial reviewer guessed table filename source-snapshot-release-v3.json and stopped on FileNotFoundError; actual source-fixed path source-snapshot-additions-v3.json subsequently inspected. No product failure."
+  ],
+  "claims": {
+    "legal_clearance": false,
+    "compiled_runtime_permission": false,
+    "model_rights_complete": false,
+    "actual_final_candidate_archive_qualified": false,
+    "source_route_admitted": false,
+    "protected_publication": false,
+    "signature_observed": false,
+    "tag_accuracy": false,
+    "original_requirement_closed": false
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "pass": true,
+  "captured_at": "2026-11-23T18:50:30.098514+00:00",
+  "kind": "actual_retained_source_metadata_producers",
+  "implemented_by": "Codex /root",
+  "source_baseline": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "producer_source_sha256": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408",
+  "rows": [
+    {
+      "path": "sbom/reviews/zlib-runtime/manifest.json",
+      "old": {
+        "bytes": 3744,
+        "sha256": "bde99d53feb686f82c2f12b957cf77a84b0e4a015f6ea9b2e7b87f3156870835",
+        "git_blob_oid": "9de962e94cddae37de462f55a8ea2ca274c11481"
+      },
+      "new": {
+        "bytes": 3744,
+        "sha256": "1befd6a3cfe5fc91ca9729f84cb7c2302af15e66ae20d5f2971d76d5de379ddd",
+        "git_blob_oid": "f2e3e7ec379d8cd09c117207d629e302b3da2c48"
+      },
+      "complete_json_differences": [
+        {
+          "path": [
+            "producer_sha256",
+            "tools/dependency_policy.py"
+          ],
+          "old": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+          "new": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408"
+        }
+      ],
+      "content_changed": true
+    },
+    {
+      "path": "site/public/web-licenses/packages.json",
+      "old": {
+        "bytes": 38531,
+        "sha256": "e3f618c21bf815b4dc99d8711ef9e5d6d082078163f37794e7d69139f898a490",
+        "git_blob_oid": "4a4c9e0242d23ed1c55787089bd0ebf0c97109ea"
+      },
+      "new": {
+        "bytes": 38531,
+        "sha256": "2de807eaf15cccd340e22dd49679d15c94df5499602c939808c1e4a75c70e1c7",
+        "git_blob_oid": "076c6fdcb1d5677a76758b1dc12a7ba8fffae6d3"
+      },
+      "complete_json_differences": [
+        {
+          "path": [
+            "sources_sha256",
+            "tools/dependency_policy.py"
+          ],
+          "old": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+          "new": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408"
+        }
+      ],
+      "content_changed": true
+    },
+    {
+      "path": "site/public/web-licenses/web-runtime.spdx.json",
+      "old": {
+        "bytes": 28936,
+        "sha256": "3492d33fd2582f0ab8dd428893226ccf4388a4e18de34327e9dac98d20d02ff8",
+        "git_blob_oid": "998505c0c6207694d9c82bfd2fb5e25b8c105101"
+      },
+      "new": {
+        "bytes": 28936,
+        "sha256": "772adbbf234df5db3fad800a22fd6b22b80b59e8895a5384c6407bb10e3d4e25",
+        "git_blob_oid": "22a6fc42d1f56e73009e42489e94d903e3329bb4"
+      },
+      "complete_json_differences": [
+        {
+          "path": [
+            "documentNamespace"
+          ],
+          "old": "urn:aitrustid:spdx:web-npm:5eb8371f6a03462c90692125a3ec365ce35f4bd49cd41dc0f8f5031252a209c9",
+          "new": "urn:aitrustid:spdx:web-npm:053e44cb841ce3c5ddfaeaa4c7c9bc27019dd724ac69ee2c72c4e09e6e21b5bc"
+        }
+      ],
+      "content_changed": true
+    },
+    {
+      "path": "site/public/web-licenses/THIRD-PARTY-NOTICES.txt",
+      "old": {
+        "bytes": 47849,
+        "sha256": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab",
+        "git_blob_oid": "71ec4db01ff37ca49feb119e4909dc1247ba803d"
+      },
+      "new": {
+        "bytes": 47849,
+        "sha256": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab",
+        "git_blob_oid": "71ec4db01ff37ca49feb119e4909dc1247ba803d"
+      },
+      "complete_json_differences": [],
+      "content_changed": false
+    }
+  ],
+  "web_actual_result": {
+    "profile": "website-npm-notice-delivery/v1",
+    "pass": true,
+    "action": "prepared",
+    "packages": 35,
+    "archive_notice_packages": 34,
+    "supplemental_project_notice_packages": 1,
+    "exact_release_notice_gap_packages": [
+      "react-remove-scroll-bar@2.3.8"
+    ],
+    "artifacts": {
+      "THIRD-PARTY-NOTICES.txt": {
+        "bytes": 47849,
+        "sha256": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab"
+      },
+      "packages.json": {
+        "bytes": 38531,
+        "sha256": "2de807eaf15cccd340e22dd49679d15c94df5499602c939808c1e4a75c70e1c7"
+      },
+      "web-runtime.spdx.json": {
+        "bytes": 28936,
+        "sha256": "772adbbf234df5db3fad800a22fd6b22b80b59e8895a5384c6407bb10e3d4e25"
+      }
+    },
+    "sources_sha256": {
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+      "sbom/notices/0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138.txt": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138",
+      "sbom/notices/210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751.txt": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+      "sbom/notices/30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9.txt": "30f0cfddf483d1128e3610205020f2041a6c5e837aa999e0aa82e5576187d4a9",
+      "sbom/notices/54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8.txt": "54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8",
+      "sbom/notices/9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97.txt": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+      "sbom/notices/acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05.txt": "acf3b087b348d2f2e731b9d4131af185aad694c1204ce14a46909483fd42da05",
+      "sbom/notices/d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5.txt": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5",
+      "sbom/notices/da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93.txt": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+      "sbom/notices/manifest.json": "8a19f0328c542c610fb5028e78313c80e7bf40c2d4e51f281a144883ee95bb58",
+      "sbom/reviews/web-js/react-remove-scroll-bar-2.3.8.json": "3c57078bb1141ad9836c165831193adf40845e091f1becb65f18a721b47a9072",
+      "sbom/reviews/web-js/sources/a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84.txt": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84",
+      "scripts/web-distribution.py": "a866e414fc288b3b4c17bea307c23e8bb302b5aad658f70c190f4f6d5beed5e2",
+      "site/package-lock.json": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e",
+      "site/package.json": "8b1962dba1b731bab560511a526e35384c9f1a83b94d4ad1f337ae33247644ee",
+      "tools/dependency_policy.py": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408",
+      "tools/web_distribution.py": "56214c9e270c6c9ac05860a74931400fa7135fc43f2afb2c013add2bf6c66215"
+    },
+    "legal_clearance": false,
+    "complete_bundle_graph": false,
+    "complete_source_offers": false,
+    "release_approved": false,
+    "independent_accuracy_evidence": false,
+    "old_output_cleanup_complete": true
+  },
+  "grants_notices_packages_runtime_and_limitations_unchanged": true,
+  "network_used": false,
+  "package_or_model_executed": false,
+  "new_runtime_probe_claimed": false,
+  "distribution_admitted": false,
+  "full_original_closed": false
+}

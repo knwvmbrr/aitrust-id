@@ -146,6 +146,14 @@ PATTERNS += ('tools/citation_resolution.py','scripts/citation-resolution.py',
              'docs/fi-citation-sidecar-plan.md','scripts/verify-seo.cjs',
              'scripts/verify-seo.mjs','tests/seo-metadata.mjs')
 
+PATTERNS += ('tools/source_release_policy_v2.py', 'eval/dependencies/source-snapshot-release-v2.json', 'tests/test_source_release_policy_v2.py', 'tests/test_source_release_policy_v2_archive.py', 'tools/source_snapshot_admission.py', 'tools/source_snapshot_managed.py', 'scripts/verify-managed-source.py', 'tests/test_source_snapshot_admission.py', 'tests/test_source_snapshot_managed.py', 'docs/source-snapshot-managed-integration-plan.md', 'docs/source-snapshot-managed-consumer.md')
+
+PATTERNS += ('tools/source_release_policy_v3.py', 'eval/dependencies/source-snapshot-additions-v3.json', 'tests/test_source_release_policy_v3.py')
+
+PATTERNS += ('tests/test_source_snapshot_workflow.py',)
+
+PATTERNS += ('tools/visual_score_budget.py', 'scripts/run-visual-score-phase.py', 'tests/test_visual_score_budget.py')
+
 HOST_RENDERED_ASSET = 'site/public/share-card.png'
 
 PATTERNS += ('mobile/ios/**/*', 'scripts/native_bundle.py', 'scripts/native-probe-cases.py',
@@ -249,6 +257,9 @@ PATTERNS += ('.github/workflows/artifact-sbom.yml', '.github/workflows/mcp-runti
 
 # Archive/Git identity is independent of source rights and route admission.
 PATTERNS += ('tools/source_snapshot_binding.py', 'tests/test_source_snapshot_binding.py', 'docs/source-snapshot-binding-plan.md', 'tests/test_dependency_registry_integration.py')
+
+# Optional offline image-score source only; native qualification remains separate.
+PATTERNS += ('tools/visual_score*.py', 'scripts/inspect-visual-score.py', 'scripts/prepare-visual-score-qualification.py', 'scripts/verify-visual-score-qualification.py', 'tests/test_visual_score.py', 'tests/test_visual_score_qualification.py', 'tests/test_visual_score_workflow.py', 'integrations/visual-score-reference/**/*', '.github/workflows/visual-score-qualification.yml', 'docs/offline-image-score*.md', 'docs/image-score-cleanup-ownership-correction-plan.md')
 
 def read_json(file):
     return read_evidence(file)

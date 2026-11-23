@@ -1,0 +1,28 @@
+{
+  "profile": "image-budget-publication-original-counter/v1",
+  "captured_at": "2026-11-23T19:44:36.954297+00:00",
+  "reviewed_by": "/root/seo",
+  "finding_reproduced": true,
+  "source_sha256": {
+    "tools/visual_score_budget.py": "81418026552016d85c9d30fa6450e0c743c9f314944d3c4e6dfbacf0de52a7f8",
+    "scripts/run-visual-score-phase.py": "34d061d1f43e11217aef2af417788a3a95866f939d42b49ce3ba97242b6a53d2"
+  },
+  "actual_owned_temp_facts": {
+    "exit_code": 2,
+    "injected_after_actual_complete_private_publication": true,
+    "qualification_pass": true,
+    "cleanup_pass": true,
+    "explicit_uncertainty_in_uploaded_qualification": false,
+    "source_and_forward_are_synthetic_boundary_only": true,
+    "no_child_spawned": true
+  },
+  "inert_substitutions": [
+    "arguments and validbudget record supplied directly; fixed internal run_owned replaced with nochild return",
+    "synthetic private positivecandidate only; no actual forward or qualification claimed",
+    "actual write_private persisted completebytes then injected OSError modelingpostpublication close/identity failure"
+  ],
+  "limits": [
+    "NoSDK/model/native/network/child/acquisition/install/browser; no production qualification result.",
+    "This tests controller failure/publication semantics only. Existing actualsource frozen unchanged."
+  ]
+}

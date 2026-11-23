@@ -89,12 +89,109 @@ jobs:
           path: ${{ env.ARTIFACT_DIR }}/
           if-no-files-found: error
           retention-days: 30
+  managed-source-controls:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {fetch-depth: 0, persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.13'}
+      - name: Execute source admission and authentication-before-use controls without installs
+        run: |
+          python -I -S -B - <<'PYTHON'
+          import os,pathlib,sys,unittest
+          assert os.geteuid()!=0 and sys.platform=='linux'
+          root=pathlib.Path.cwd();sys.path.insert(0,str(root))
+          suites=[]
+          for pattern,count in (('test_source_snapshot_admission.py',10),('test_source_snapshot_managed.py',21),('test_source_snapshot_workflow.py',4),('test_source_release_policy_v3.py',24)):
+            suite=unittest.defaultTestLoader.discover(str(root/'tests'),pattern=pattern)
+            assert suite.countTestCases()==count,(pattern,suite.countTestCases())
+            suites.append(suite)
+          result=unittest.TextTestRunner(verbosity=2).run(unittest.TestSuite(suites))
+          assert result.testsRun==59 and result.wasSuccessful() and not result.skipped
+          PYTHON
+  attest-managed-source:
+    needs: [artifact-controls, managed-source-controls]
+    if: github.repository == 'knwvmbrr/aitrust-id' && github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+    env:
+      SOURCE_COMMIT: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {fetch-depth: 0, persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        with: {python-version: '3.13'}
+      - name: Require finite copy permission before building a whole-source archive
+        timeout-minutes: 2
+        run: |
+          python -I -S -B - <<'PYTHON'
+          import os,pathlib,shutil,sys
+          sys.path.insert(0,str(pathlib.Path.cwd()))
+          from tools.dependency_policy import evaluate
+          assert os.geteuid()!=0 and sys.platform=='linux'
+          assert evaluate('source-snapshot')['release_allowed']is True,'Finite source-copy permission unavailable'
+          parent=pathlib.Path(os.environ['RUNNER_TEMP'])
+          assert shutil.disk_usage(parent).free>=2*1024**3+512*1024**2
+          task=parent/'aitrust-whole-source-managed-release'
+          task.mkdir(mode=0o700)
+          for name in ('publish','consumer'): (task/name).mkdir(mode=0o700)
+          with open(os.environ['GITHUB_ENV'],'a')as f:f.write('SOURCE_RELEASE_DIR='+str(task)+'\n')
+          PYTHON
+      - name: Build exact committed source and derive the artifact-bound SPDX
+        timeout-minutes: 6
+        run: |
+          python -I -S -B scripts/build-source-snapshot.py --commit "$SOURCE_COMMIT" --output "$SOURCE_RELEASE_DIR/publish/source.tar.gz"
+          chmod 0600 "$SOURCE_RELEASE_DIR/publish/source.tar.gz"
+          python -I -S -B scripts/distribution-artifact.py prepare --route source-snapshot --artifact "$SOURCE_RELEASE_DIR/publish/source.tar.gz" --commit "$SOURCE_COMMIT" --output "$SOURCE_RELEASE_DIR/publish/evidence.json"
+          python -I -S -B scripts/distribution-artifact.py spdx --route source-snapshot --artifact "$SOURCE_RELEASE_DIR/publish/source.tar.gz" --commit "$SOURCE_COMMIT" --packet "$SOURCE_RELEASE_DIR/publish/evidence.json" --output "$SOURCE_RELEASE_DIR/publish/artifact.spdx.json"
+      - name: Attest exact source bytes and SPDX with the protected project identity
+        id: source-sbom
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6
+        with:
+          subject-path: ${{ env.SOURCE_RELEASE_DIR }}/publish/source.tar.gz
+          sbom-path: ${{ env.SOURCE_RELEASE_DIR }}/publish/artifact.spdx.json
+      - name: Retain source signature and separately obtained trust roots
+        timeout-minutes: 1
+        env:
+          BUNDLE_PATH: ${{ steps.source-sbom.outputs.bundle-path }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test ! -e "$SOURCE_RELEASE_DIR/publish/sbom.sigstore.json"
+          cp -- "$BUNDLE_PATH" "$SOURCE_RELEASE_DIR/publish/sbom.sigstore.json"
+          chmod 0600 "$SOURCE_RELEASE_DIR/publish/sbom.sigstore.json"
+          (set -o noclobber; gh attestation trusted-root > "$SOURCE_RELEASE_DIR/publish/trusted-root.jsonl")
+          chmod 0600 "$SOURCE_RELEASE_DIR/publish/trusted-root.jsonl"
+      - name: Authenticate actual source release before fresh finite source-entry-point probes
+        timeout-minutes: 5
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -I -S -B scripts/verify-managed-source.py --artifact "$SOURCE_RELEASE_DIR/publish/source.tar.gz" --packet "$SOURCE_RELEASE_DIR/publish/evidence.json" --spdx "$SOURCE_RELEASE_DIR/publish/artifact.spdx.json" --bundle "$SOURCE_RELEASE_DIR/publish/sbom.sigstore.json" --trusted-root "$SOURCE_RELEASE_DIR/publish/trusted-root.jsonl" --source-commit "$SOURCE_COMMIT" --output "$SOURCE_RELEASE_DIR/publish/managed-verified.json"
+      - name: Offer only authenticated whole-source bytes and exact limited consumer evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: managed-source-snapshot-artifact-sbom
+          path: |
+            ${{ env.SOURCE_RELEASE_DIR }}/publish/source.tar.gz
+            ${{ env.SOURCE_RELEASE_DIR }}/publish/evidence.json
+            ${{ env.SOURCE_RELEASE_DIR }}/publish/artifact.spdx.json
+            ${{ env.SOURCE_RELEASE_DIR }}/publish/sbom.sigstore.json
+            ${{ env.SOURCE_RELEASE_DIR }}/publish/trusted-root.jsonl
+            ${{ env.SOURCE_RELEASE_DIR }}/publish/managed-verified.json
+          if-no-files-found: error
+          retention-days: 30
   managed-mcp-controls:
     runs-on: ubuntu-24.04
     timeout-minutes: 3
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-        with: {fetch-depth: 1, persist-credentials: false}
+        with: {fetch-depth: 0, persist-credentials: false}
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with: {python-version: '3.13'}
       - name: Execute managed ordering permission and cleanup controls without SDK installation
@@ -219,3 +316,4 @@ jobs:
             ${{ env.MCP_RELEASE_DIR }}/publish/managed-verified.json
           if-no-files-found: error
           retention-days: 30
+

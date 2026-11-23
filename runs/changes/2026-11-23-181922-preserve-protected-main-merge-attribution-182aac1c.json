@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-181922-preserve-protected-main-merge-attribution-182aac1c",
+  "recorded_at": "2026-11-23T18:19:22.710657+00:00",
+  "author": "Codex /root/share_debugger; inherited protected source authored and reviewed in PR151",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "80ec95238398343c35f7da8570485e67848ba58b",
+  "changed": "Record exact protected6d display/navigation inheritance during the source-copy V2 continuation merge after the normal staged guard required fresh matching attribution.",
+  "proves": "All five inherited files match protected6d bytes exactly. The first normal hook refusal is preserved; no code changed or behavior test repeated for this administrative correction.",
+  "limits": "Merge attribution only, no new display authorship, browser qualification, rights clearance, admission, signature, accuracy or original closure.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "site/index.html": "bc5cc8df87041e8c9f291384497e6d96b2063e173590083509477f22f6b1075d",
+    "site/scripts/owner-guide.mjs": "afbea9a66984959ee8cfa5a4a8048405e1f852c4672f2d13a4450df2d0151581",
+    "site/scripts/prepare.mjs": "388c87c62423fac7d9e2902b63337700148571f22d3884c144c8b8e241ef9937",
+    "site/scripts/render-reference.mjs": "3e3fef43a4d5acc0fe3316507ca4460bea58f739b29904d587951c3add4310b4",
+    "site/src/main.jsx": "c050af7299831d0216fd7940f5e4753fc683ef4fed594af0263ca0e821315f17",
+    "runs/2026-11-23-source-copy-current-merge-attribution.json": "0013b994e521b81549df7d21de47db09729cd580bed33704a192b9ac8ab318fc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-source-copy-current-merge-attribution.json",
+      "sha256": "0013b994e521b81549df7d21de47db09729cd580bed33704a192b9ac8ab318fc"
+    }
+  ],
+  "checks": []
+}

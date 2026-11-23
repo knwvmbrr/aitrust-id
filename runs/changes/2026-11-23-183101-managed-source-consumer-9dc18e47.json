@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-183101-managed-source-consumer-9dc18e47",
+  "recorded_at": "2026-11-23T18:31:01.963528+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "changed": "Implemented a private managed source consumer that requires actual release authorization before finite PS source materialization/execution, streams bounded archive inputs and retains staged evidence with explicit publication uncertainty.",
+  "proves": "Current21 focused source/IO/probe controls pass with19 stable bindings, including real finite PS subprocesses after test-only simulated authority. Separate review clears auth order, fixed10filecohort, exact record parity,2GiB+256MiB preflight,64KiB decoder buffer, no-overwrite and uncertainty. Prior20 and initial assertion-index failure remain immutable.",
+  "limits": "No real signature or managed source permission success is claimed from injected unit authority. Protected base source route remains refused until ROOT integrates the current copy/Git adapter,V2IO and producer. No archive/model/SDK acquisition, install, network, push, workflow, native platform, detector accuracy, legal clearance, all14 routes or full F-057/X-02 closure. Failed/private stages are retained; no universal hostile-sameUID or host-crash guarantee.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/source_snapshot_managed.py": "25985f6c2c0da9afcbe301cfc0712d7057af4671efb8e1dfae8632cc3e0ad0bd",
+    "scripts/verify-managed-source.py": "d8e03339f4b4a19e4615928173ef9c809558e9e276e76e40801983ac6bd12355",
+    "tests/test_source_snapshot_managed.py": "c813f03112ea6d1aaf07d83da5a8c7ebcf5ec0d93dd3e3ca5d025a491ec8a0df",
+    "docs/source-snapshot-managed-consumer.md": "015cf08a60f9b5477d70669ebe201d65cfc4f4e933b915041101466fd2cd6d42",
+    "runs/2026-11-23-managed-source-first-controls-failure.json": "5e3cc953df530baa78c5101b6b1fff3f445e61885d00d1a866ad15ec14fed904",
+    "runs/2026-11-23-managed-source-current-controls.json": "fd5c5fbaaa4d7633f4054e0152ece9bd7435ef02db69df0356efdad4e3fd327e",
+    "runs/2026-11-23-managed-source-reserve-corrected-controls.json": "bb63df5ed4dc66fefc83a8ead1061608e38c22ad188ad1bfa83009c3fd225f89",
+    "runs/2026-11-23-managed-source-final-distinct-review.json": "cd032cf0ef4c91bc0434bd79449e70f05ff97b1e2c92236d976f98554cfa10da"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-managed-source-first-controls-failure.json",
+      "sha256": "5e3cc953df530baa78c5101b6b1fff3f445e61885d00d1a866ad15ec14fed904"
+    },
+    {
+      "path": "runs/2026-11-23-managed-source-current-controls.json",
+      "sha256": "fd5c5fbaaa4d7633f4054e0152ece9bd7435ef02db69df0356efdad4e3fd327e"
+    },
+    {
+      "path": "runs/2026-11-23-managed-source-reserve-corrected-controls.json",
+      "sha256": "bb63df5ed4dc66fefc83a8ead1061608e38c22ad188ad1bfa83009c3fd225f89"
+    },
+    {
+      "path": "runs/2026-11-23-managed-source-final-distinct-review.json",
+      "sha256": "cd032cf0ef4c91bc0434bd79449e70f05ff97b1e2c92236d976f98554cfa10da"
+    }
+  ],
+  "checks": []
+}

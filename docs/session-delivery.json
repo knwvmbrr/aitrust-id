@@ -112,7 +112,7 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 28,
+    "finished_scoped_tasks": 30,
     "original_requirement_closures": 4
   },
   "goals": {
@@ -1519,6 +1519,191 @@
             "sha256": "2c13feec1c9a2b13fc699a5d3da48555e78be0b668202d4194fb4736b923f666"
           }
         ]
+      }
+    },
+    {
+      "task_id": "session-image-reference-inert-source-handoff",
+      "original_ids": [
+        "T-FA"
+      ],
+      "worker": "/root/web_camo",
+      "status": "closed",
+      "deliverable": "Reviewed inert image-score reference source integration and manual-only qualification registration, with no native inference or automatic acquisition.",
+      "registered_at": "2026-11-23T18:23:15.282528+00:00",
+      "preimplementation_contract": "docs/offline-image-score-registration-amendment.md",
+      "done_evidence": [
+        "Preserve exact approved numerical/runtime sources and shared inputs through the isolated source integration; execute bounded current-base source/missing-model/PS-independence controls.",
+        "Register only the finite source cohort and four source-only protocol/CI commands; manual qualification requires exact repository/ref/event/expected commit and actual checkout identity.",
+        "Obtain distinct source/integration/guard review and normal authored handoff commit. Native qualification, global affected-profile refresh, source-rights admission and protected delivery are separate ROOT work, not this source-only handoff criterion."
+      ],
+      "current_evidence": [
+        {
+          "path": "runs/2026-11-23-image-score-inert-current-base.json",
+          "sha256": "90848a7a8cae7d18de0b531771889f885e7c6eaa4d45b09e2a8b40713d14f0c9"
+        },
+        {
+          "path": "runs/2026-11-23-image-score-inert-integration-distinct-review.json",
+          "sha256": "f6bd468d5fecb67cd5d27fd7b2de9f93567b729311db1955189d5bd643480b60"
+        },
+        {
+          "path": "runs/2026-11-23-image-score-manual-registration-source.json",
+          "sha256": "2f29c4aea6b4c8ef05f641ae5affb455bc1e4364cd9e1d2d079fcaf0e95645b3"
+        },
+        {
+          "path": "runs/2026-11-23-image-score-manual-registration-distinct-review.json",
+          "sha256": "423f931ff735cf93a545e22b0dc6fad0ff8773f50dd59bbd2afe8747a9292efd"
+        }
+      ],
+      "source_handoff_commit": "916103dd8f04b561e4f9ae850fd77aaa0904e17a",
+      "source_commit_completed_at": "2026-11-23T13:08:39-05:00",
+      "source_binding_rows_verified_on_import": 88,
+      "current_status": "Complete source-only engineering handoff and exact ROOT import. All five historical global fingerprints are stale after the COMMON registration change; no new current qualification, acquisition or native inference is claimed.",
+      "protected_source_publication_complete": false,
+      "original_requirement_closed": false,
+      "closure_record": {
+        "closed_at": "2026-11-23T18:23:15.282528+00:00",
+        "completed_by": "/root/web_camo",
+        "verified_by": "/root/seo",
+        "evidence": [
+          {
+            "path": "runs/2026-11-23-image-score-inert-integration-distinct-review.json",
+            "sha256": "f6bd468d5fecb67cd5d27fd7b2de9f93567b729311db1955189d5bd643480b60"
+          },
+          {
+            "path": "runs/2026-11-23-image-score-manual-registration-source.json",
+            "sha256": "2f29c4aea6b4c8ef05f641ae5affb455bc1e4364cd9e1d2d079fcaf0e95645b3"
+          },
+          {
+            "path": "runs/2026-11-23-image-score-manual-registration-distinct-review.json",
+            "sha256": "423f931ff735cf93a545e22b0dc6fad0ff8773f50dd59bbd2afe8747a9292efd"
+          }
+        ]
+      },
+      "limits": [
+        "Source-only named job, not a supported FA/PA tag, model validation, source-policy admission or original completion.",
+        "No asset/model/SDK acquisition, install, native inference, workflow dispatch, accuracy, global current capability or protected publication."
+      ],
+      "registration_time_basis": "Actual machine-board registration/acceptance; preimplementation contract is separately linked, not backdated to this board entry.",
+      "preimplementation_contract_time_basis": "Plan declares architecture before its feature changes; exact pre-code clock is not invented.",
+      "preimplementation_contract_recorded_at": "2026-11-23T17:59:34.379782+00:00"
+    },
+    {
+      "task_id": "session-current-source-copy-archive-handoff",
+      "original_ids": [
+        "F-057",
+        "X-02"
+      ],
+      "worker": "/root/share_debugger",
+      "status": "closed",
+      "deliverable": "Finite current6d source-copy profile plus consumer-ready trusted-Git archive binding, preserved history and actual same-archive positive/refusal proof.",
+      "registered_at": "2026-11-23T18:23:15.282528+00:00",
+      "preimplementation_contract": "docs/source-snapshot-rights-current-main-plan.md",
+      "done_evidence": [
+        "Review exact new/changed source paths and explicit origins without widening immutable third-party grants or admitting unknown future paths; preserve V1 and prior V2 bytes/history.",
+        "Classify independently selected protected6d source and bind actual canonical archive to every trusted Git blob/mode/size under unchanged bounds; retain the failed generic1MB transport and corrected same-archive proof.",
+        "Obtain distinct source/consumer/retained-evidence review and normal authored handoff commit. Current ROOT additions, full source-route admission, protected signature/managed execution and other distribution scopes are excluded from this finite handoff."
+      ],
+      "current_evidence": [
+        {
+          "path": "runs/2026-11-23-source-copy-rights-current-main-execution.json",
+          "sha256": "69c504319c429143cc17695d47a5b73d04d2fd2d01c9805f4b373951f406b433"
+        },
+        {
+          "path": "runs/2026-11-23-source-copy-rights-current-main-distinct-review.json",
+          "sha256": "dcaddc5f9e9637cecee6c64c5b18f21c11cf5419bfd1ce61e608b3c7e485fbbe"
+        },
+        {
+          "path": "runs/2026-11-23-source-copy-rights-current-main-handoff.json",
+          "sha256": "3089298edc6f65cbb2e8447cdbd365ee2438d7e597f7db1ab9c7109af58614ca"
+        }
+      ],
+      "source_handoff_commit": "936e2a2c1ca6545073d7c03f5e63ec2ab8402fdf",
+      "source_commit_completed_at": "2026-11-23T13:19:41-05:00",
+      "selected_source_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+      "source_binding_rows_verified_on_import": 18,
+      "current_status": "Complete exact6d copy/binding handoff and ROOT import. The new ROOT/image/consumer source paths need their separately reviewed finite profile; no admission/signature/runtime permission or F057/X02 closure is inherited.",
+      "protected_source_publication_complete": false,
+      "original_requirement_closed": false,
+      "closure_record": {
+        "closed_at": "2026-11-23T18:23:15.282528+00:00",
+        "completed_by": "/root/share_debugger",
+        "verified_by": "/root/seo",
+        "evidence": [
+          {
+            "path": "runs/2026-11-23-source-copy-rights-current-main-execution.json",
+            "sha256": "69c504319c429143cc17695d47a5b73d04d2fd2d01c9805f4b373951f406b433"
+          },
+          {
+            "path": "runs/2026-11-23-source-copy-rights-current-main-distinct-review.json",
+            "sha256": "dcaddc5f9e9637cecee6c64c5b18f21c11cf5419bfd1ce61e608b3c7e485fbbe"
+          },
+          {
+            "path": "runs/2026-11-23-source-copy-rights-current-main-handoff.json",
+            "sha256": "3089298edc6f65cbb2e8447cdbd365ee2438d7e597f7db1ab9c7109af58614ca"
+          }
+        ]
+      },
+      "limits": [
+        "Selected13502files/142114658rawbytes; actual40864663-byte archive built once. This is source-copy identity only.",
+        "No source extraction, SDK/model/native/browser install, attestation, globalprofile freshness, managed release authorization, whole-project rights/accuracy or original closure.",
+        "Separate reviewer authored earlier CFFI/Rust/V1 facts; present independence concerns new selection/composition/evidence, not renewed independent legal approval of own input facts."
+      ],
+      "registration_time_basis": "Actual machine-board registration/acceptance; preimplementation contract is separately linked, not backdated to this board entry.",
+      "preimplementation_contract_time_basis": "Plan declares architecture before its feature changes; exact pre-code clock is not invented."
+    },
+    {
+      "task_id": "session-managed-source-consumer-integration",
+      "original_ids": [
+        "F-057",
+        "X-02"
+      ],
+      "worker": "/root/web_camo",
+      "status": "in_review",
+      "deliverable": "Authenticate the actual protected whole-source release through the integrated finite current-copy policy and perform the exact finite PS source exercises before publishing a private verified summary.",
+      "registered_at": "2026-11-23T18:43:54.542963+00:00",
+      "registration_time_basis": "Actual machine-board acceptance; pre-code architecture time recorded separately.",
+      "preimplementation_contract": "docs/source-snapshot-managed-consumer.md",
+      "preimplementation_contract_recorded_at": "2026-11-23T18:16:00.619353+00:00",
+      "done_evidence": [
+        "Complete exact source/consumer, capture, ownership, resource and refusal controls with separate review; preserve current21author controls and distinct3affectedcontrols as source readiness only.",
+        "Integrate complete applicable current-source grant profile/actual archive-Git binding and protected producer. Execute a REAL positive protected artifact/SPDX/root authorization followed by all three finite PS probes. Mock authority is not this acceptance.",
+        "Obtain actual source-bound integrated/protected positive evidence, exact output JSON and truthful scope before closing this end-to-end consumer job. Preserve all source/accuracy/legal/human/original gates."
+      ],
+      "current_evidence": [
+        {
+          "path": "runs/2026-11-23-managed-source-reserve-corrected-controls.json",
+          "sha256": "bb63df5ed4dc66fefc83a8ead1061608e38c22ad188ad1bfa83009c3fd225f89"
+        },
+        {
+          "path": "runs/2026-11-23-managed-source-final-distinct-review.json",
+          "sha256": "cd032cf0ef4c91bc0434bd79449e70f05ff97b1e2c92236d976f98554cfa10da"
+        }
+      ],
+      "source_handoff_commit": "f86bfd4f199281da4553eb2695cd709aa580e760",
+      "source_commit_completed_at": "2026-11-23T13:31:24-05:00",
+      "owned_source_sha256_on_import": {
+        "tools/source_snapshot_managed.py": "25985f6c2c0da9afcbe301cfc0712d7057af4671efb8e1dfae8632cc3e0ad0bd",
+        "scripts/verify-managed-source.py": "d8e03339f4b4a19e4615928173ef9c809558e9e276e76e40801983ac6bd12355",
+        "tests/test_source_snapshot_managed.py": "c813f03112ea6d1aaf07d83da5a8c7ebcf5ec0d93dd3e3ca5d025a491ec8a0df",
+        "docs/source-snapshot-managed-consumer.md": "015cf08a60f9b5477d70669ebe201d65cfc4f4e933b915041101466fd2cd6d42"
+      },
+      "author_receipt_source_bindings": 19,
+      "owned_current_import_bindings_verified": 4,
+      "current_status": "Source handoff/four owned files/21author controls/distinct affected review complete; job IN_REVIEW pending actual integrated protected positive authorization and finite PS exercise. Source-level success is not end-to-end managed release.",
+      "protected_source_publication_complete": false,
+      "original_requirement_closed": false,
+      "limits": [
+        "Current21focused controls execute genuine stdlib fixed PS subprocesses after simulated authority only; no real Sigstore/source-route positive permission.",
+        "Final2GiB+256MiB preflight accounts for own+nested capped payloads; decoderbuffer64KiB; all processingcaps unchanged.",
+        "No wholearchive/native/SDK/model/browser/download/network/install/signing/admission/publication/all14routes or F057/X02 closure."
+      ],
+      "handoff_review": {
+        "reviewed_by": "/root/seo",
+        "source_controls_completed_by": "/root/web_camo",
+        "source_handoff_commit": "f86bfd4f199281da4553eb2695cd709aa580e760",
+        "status": "reviewed_source_handoff_integration_pending",
+        "positive_authority_substituted_only_in_tests": true,
+        "actual_protected_positive_authorization_and_probe_flow_completed": false
       }
     }
   ],
@@ -6233,7 +6418,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-23T15:16:14.889674+00:00",
+  "updated_at": "2026-11-23T20:58:36.038455+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -6948,45 +7133,180 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-23T15:16:14.889674+00:00",
+    "recorded_at": "2026-11-23T20:58:36.038455+00:00",
+    "source_baseline_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
-    "status": "Protected signed Linux MCP distribution and anonymous public download verified; no original closure.",
+    "status": "Current actual source-capacity run45263635249 passed; full protocol candidate passed before website cancellation, now source-stale after diagnosed shallow Git prerequisite correction. Fresh2profile run pending; actual3unchanged prior reports retained.136complete66open; target60 unmet.",
     "assignments": [
       {
         "worker": "/root",
-        "role": "PM/shared integration and publication",
-        "status": "active",
-        "outcome": "Record actual managed delivery and keep original scope unchanged."
+        "role": "PM/source-route integration and protected delivery",
+        "status": "active_bounded_assignment_at_snapshot",
+        "outcome": "Publish source-current protocol/website receipts and actual protected-main source signing/managed consumer; then independently integrate MT and web obligations."
       },
       {
         "worker": "/root/seo",
-        "role": "independent public-download reviewer",
-        "status": "completed",
-        "outcome": "Six anonymous asset bodies, release identity and tag source verified; no runtime reexecution."
+        "role": "Task-list lead, image design reviewer and exact web grant researcher",
+        "status": "active_bounded_assignment_at_snapshot",
+        "outcome": "Review exact scoped runner authority and independently check MT/runtime source handoffs; keep actual original criteria and current counts."
       },
       {
         "worker": "/root/share_debugger",
-        "role": "managed production evidence reviewer",
-        "status": "active",
-        "outcome": "Inspect actual signature, production graph and fresh installed SDK evidence; no duplicated installation."
+        "role": "Different source reviewer and next web/runtime obligations engineer",
+        "status": "active_bounded_assignment_at_snapshot",
+        "outcome": "Finite web runtime/source-offer verification; correcting actual resource and I/O review findings before normal isolated commit."
       },
       {
         "worker": "/root/web_camo",
-        "role": "independent image-score qualification engineer",
-        "status": "active",
-        "outcome": "Prepare reviewed complete Linux CPU lock and isolated workflow; actual assets/native inference/accuracy remain unqualified."
+        "role": "Independent MT supported-analysis export engineer",
+        "status": "completed_source_handoff_integration_pending",
+        "outcome": "Clean c7168d2, reviewed by /root/seo; separate optional export uncertainty preserves valid quotation analysis. Bundle/source integration and current evidence remain pending."
       }
     ],
-    "scoped_tasks_closed": 28,
+    "scoped_tasks_closed": 30,
+    "scoped_task_records": 32,
     "original_closures_since_baseline": 4,
     "all202_preserved": true,
     "baseline_hashes_unchanged": true,
     "agents_permanent": false,
-    "owner_email_sent_not_inbox_or_read": true,
-    "delivery_result": "docs/mcp-publication-result.md"
+    "assignments_are_live_heartbeats": false,
+    "owner_actions_unchanged": true,
+    "feasibility": {
+      "status": "All 66 literal contracts reviewed; no six autonomous closures or guaranteed two-closure feasibility established.",
+      "unfinished_autonomous_contract_paths": [
+        "F-057",
+        "X-02"
+      ],
+      "open_floor_if_both_fully_complete": 64,
+      "minimum_additional_full_acceptances_to_target_after_those_two": 4,
+      "six_autonomous_closures_promised": false,
+      "floor_is_conditional_not_a_completion_claim": true,
+      "paths_are_engineering_first_candidates_not_guaranteed_autonomous_closures": true,
+      "actual_rights_feasibility_unresolved": true,
+      "platform_condition": "Current policy records proprietary Apple SDK prerequisites and unresolved terms; no exception or payment approval is inferred. Actual applicable rights or a functional permitted replacement must be established."
+    },
+    "completed_source_only_handoffs": [
+      "session-image-reference-inert-source-handoff",
+      "session-current-source-copy-archive-handoff"
+    ],
+    "current_open_requirement_ids": [
+      "F-004",
+      "F-005",
+      "F-076",
+      "T-NF",
+      "T-FI",
+      "T-HP",
+      "T-MT",
+      "T-PS",
+      "T-IV",
+      "T-FA",
+      "T-PA",
+      "T-UNK",
+      "T-PII",
+      "T-OUT",
+      "F-010",
+      "F-011",
+      "F-012",
+      "F-013",
+      "F-014",
+      "F-015",
+      "F-016",
+      "F-018",
+      "F-019a",
+      "F-019b",
+      "F-019c",
+      "F-020b",
+      "F-029a",
+      "F-023",
+      "F-024",
+      "F-037",
+      "F-035",
+      "F-097",
+      "F-050",
+      "F-108",
+      "F-056",
+      "F-113",
+      "F-114",
+      "F-057",
+      "F-120",
+      "F-125",
+      "F-129",
+      "F-130",
+      "F-135",
+      "F-136",
+      "F-137",
+      "F-074",
+      "F-138",
+      "F-141",
+      "F-142",
+      "F-075",
+      "F-143",
+      "F-146",
+      "F-148",
+      "F-155",
+      "F-156",
+      "F-163",
+      "X-02",
+      "N-005",
+      "T-UC",
+      "T-SC",
+      "T-BT",
+      "N-011",
+      "N-012",
+      "N-013",
+      "N-014",
+      "N-015"
+    ],
+    "current_open_queue_basis": "Current docs/scope-progress.json records with percent_complete<100; original_open_requirements remains historical70-open baseline.",
+    "integration_pending_tasks": [
+      "session-managed-source-consumer-integration"
+    ],
+    "reviewed_image_component_handoff": {
+      "commits": [
+        "4a7cc4b4152c8645b0e096ad4fbd5bb50ba39e6e",
+        "df7277102cf87c666970868a0187378d52f37b88"
+      ],
+      "author": "Codex /root/web_camo",
+      "different_reviewer": "Codex /root/seo",
+      "source_evidence": "runs/2026-11-23-image-shared-budget-source-controls.json",
+      "source_suite_followup": "runs/2026-11-23-image-source-suite-count-followup.json",
+      "native_execution": false,
+      "tag_or_original_closed": false,
+      "new_scoped_task_closure_count": 0
+    },
+    "source_profile_continuation": {
+      "recorded_at": "2026-11-23T20:46:31.305534+00:00",
+      "prior_run": 45258115999,
+      "prior_overall_conclusion": "failure",
+      "successful_combined_step": "Execute current PS privacy and extension capabilities",
+      "reusable_current_complete_profiles": [
+        "PS",
+        "PII_REDACTED",
+        "extension"
+      ],
+      "pending_complete_profiles": [
+        "protocol",
+        "website"
+      ],
+      "new_runner": ".github/workflows/source-profile-continuation.yml",
+      "protocol_failure": "obsolete MCP test assumed source-snapshot must be blocked; corrected to compare all13 sibling records exactly",
+      "focused_corrected_controls": 5,
+      "original_closures": 0,
+      "protected_publication_complete": false
+    },
+    "current_prerequisite_correction": {
+      "managed_mcp_job": 138004665463,
+      "old_checkout_depth": 1,
+      "new_checkout_depth": 0,
+      "actual_original_baseline_required": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+      "test_or_policy_weakened": false,
+      "state_timestamps_paired": true,
+      "superseded_run": 45263634950,
+      "fresh_complete_protocol_and_website_pending": true
+    }
   },
   "execution_wave_history": [
     {
@@ -7151,6 +7471,104 @@
       "baseline_hashes_unchanged": true,
       "agents_permanent": false,
       "owner_email_sent_not_inbox_or_read": true
+    },
+    {
+      "recorded_at": "2026-11-23T15:16:14.889674+00:00",
+      "original_complete": 136,
+      "original_open": 66,
+      "target_open": 60,
+      "remaining_full_closures": 6,
+      "status": "Protected signed Linux MCP distribution and anonymous public download verified; no original closure.",
+      "assignments": [
+        {
+          "worker": "/root",
+          "role": "PM/shared integration and publication",
+          "status": "active",
+          "outcome": "Record actual managed delivery and keep original scope unchanged."
+        },
+        {
+          "worker": "/root/seo",
+          "role": "independent public-download reviewer",
+          "status": "completed",
+          "outcome": "Six anonymous asset bodies, release identity and tag source verified; no runtime reexecution."
+        },
+        {
+          "worker": "/root/share_debugger",
+          "role": "managed production evidence reviewer",
+          "status": "active",
+          "outcome": "Inspect actual signature, production graph and fresh installed SDK evidence; no duplicated installation."
+        },
+        {
+          "worker": "/root/web_camo",
+          "role": "independent image-score qualification engineer",
+          "status": "active",
+          "outcome": "Prepare reviewed complete Linux CPU lock and isolated workflow; actual assets/native inference/accuracy remain unqualified."
+        }
+      ],
+      "scoped_tasks_closed": 28,
+      "original_closures_since_baseline": 4,
+      "all202_preserved": true,
+      "baseline_hashes_unchanged": true,
+      "agents_permanent": false,
+      "owner_email_sent_not_inbox_or_read": true,
+      "delivery_result": "docs/mcp-publication-result.md"
+    },
+    {
+      "recorded_at": "2026-11-23T18:00:48.901008+00:00",
+      "source_baseline_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+      "original_complete": 136,
+      "original_open": 66,
+      "target_open": 60,
+      "remaining_full_closures": 6,
+      "status": "Fresh full-original contract audit and source/image engineering underway; no new original closure or six-closure promise.",
+      "assignments": [
+        {
+          "worker": "/root",
+          "role": "PM/shared integration and protected delivery",
+          "status": "active",
+          "outcome": "Assign and integrate whole-contract work; preserve owner gates, original criteria and truthful publication status."
+        },
+        {
+          "worker": "/root/seo",
+          "role": "task-list lead and independent contract reviewer",
+          "status": "active",
+          "outcome": "Audit all 66 literal open contracts, rank complete closure paths, and maintain dated board assignments; keep mixed engineering with engineering."
+        },
+        {
+          "worker": "/root/share_debugger",
+          "role": "source-distribution engineering",
+          "status": "active",
+          "outcome": "Advance source/artifact rights and distribution obligations toward full F-057/X-02 contracts; a signed MCP component alone is not either full closure."
+        },
+        {
+          "worker": "/root/web_camo",
+          "role": "independent image engineering",
+          "status": "active",
+          "outcome": "Advance the reviewed image source/qualification path within separately authorized bounds; native execution, accuracy and tag release remain separate."
+        }
+      ],
+      "scoped_tasks_closed": 28,
+      "scoped_task_records": 29,
+      "original_closures_since_baseline": 4,
+      "all202_preserved": true,
+      "baseline_hashes_unchanged": true,
+      "agents_permanent": false,
+      "assignments_are_live_heartbeats": false,
+      "owner_actions_unchanged": true,
+      "feasibility": {
+        "status": "All 66 literal contracts reviewed; no six autonomous closures or guaranteed two-closure feasibility established.",
+        "unfinished_autonomous_contract_paths": [
+          "F-057",
+          "X-02"
+        ],
+        "open_floor_if_both_fully_complete": 64,
+        "minimum_additional_full_acceptances_to_target_after_those_two": 4,
+        "six_autonomous_closures_promised": false,
+        "floor_is_conditional_not_a_completion_claim": true,
+        "paths_are_engineering_first_candidates_not_guaranteed_autonomous_closures": true,
+        "actual_rights_feasibility_unresolved": true,
+        "platform_condition": "Current policy records proprietary Apple SDK prerequisites and unresolved terms; no exception or payment approval is inferred. Actual applicable rights or a functional permitted replacement must be established."
+      }
     }
   ]
 }

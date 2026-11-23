@@ -1,0 +1,18 @@
+{
+  "format": "visual-score-projection/v1",
+  "upstream_commit": "d05afc436d78f1c48dc0dbf8e5980a9d471f35f6",
+  "source_sha256": "9902cbe5ee90a1da2aa3e6f043e8a23dc1f8831193b963785c9af03d5c7bef2c",
+  "nodes": {
+    "LayerNorm": "bf13f581a4e61d51e45090c33d306de5e7a5c1251c53c98498f68e0c694582bf",
+    "QuickGELU": "23fb2dc3a596685eb389103d32769112901d321295374af1575a3d7daa0e8af4",
+    "ResidualAttentionBlock": "445b536b8a6109c6f8c70c08762d69db60f2579678b460863630eab97287b58f",
+    "Transformer": "58298fc06e86823406383e0f3abd666b42205e964edd6573460512d6b719be0e",
+    "VisionTransformer": "476926e19f83b50015cbbc8091f4d973e7ca64a9a232d44f2600f1e832b62a65"
+  },
+  "bootstrap_globals": [
+    "torch",
+    "nn",
+    "OrderedDict"
+  ],
+  "import_upstream_module": false
+}

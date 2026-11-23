@@ -106,6 +106,13 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install --require-hashes -r services/gateway/requirements.lock
       - run: pip install --require-hashes -r eval/requirements.lock
+      - name: Verify image reference source without models or optional SDKs
+        run: |
+          python -m pytest tests/test_visual_score.py -q
+          python -m pytest tests/test_visual_score_qualification.py -q
+          python -m pytest tests/test_visual_score_workflow.py -q
+          python -m pytest tests/test_visual_score_budget.py -q
+          python scripts/prepare-visual-score-qualification.py check-lock
       - run: python -m pytest tests/test_gateway_integration.py -q
       - name: Keep tag routes independent under real HTTP saturation and worker failures
         run: |

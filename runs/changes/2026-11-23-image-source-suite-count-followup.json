@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-image-source-suite-count-followup",
+  "recorded_at": "2026-11-23T20:10:35.603958+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "4a7cc4b4152c8645b0e096ad4fbd5bb50ba39e6e",
+  "changed": "Pinned exact33/33/5/27 source-suite counts. All four discoveries must match before any suite or check-lock executes, and each executed count must match in addition to existing success/no-skips checks.",
+  "proves": "The actual old zero-suite inert counter admitted check-lock. One corrected grouped regression covers eight preflight zero/partial refusals, four post-run partial refusals and one known complete mock-runner case. Different review independently checks four inert cases and87 stable before/after bindings. AST changes are only the literal count table/source phase and one grouped test; budget/helper/workflow/shared8 stay exact4a. Author/reviewer raw JSON bytes are separately preserved by UTF8/digest in one final assembly.",
+  "limits": "No full98-source or27-budget suite, child/native/SDK/model execution, acquisition, install, network, push, dispatch or ROOT writes. Counts establish admission completeness, not accuracy, calibration, human labels, tags or original completion. All87 paths/resource caps/public prepared-only contract remain. ROOT handles registrations and final source/native decisions. Older source proofs/counter stay historical.",
+  "scope_ids": [
+    "T-FA"
+  ],
+  "files": {
+    "scripts/run-visual-score-phase.py": "32dd71c7895f35572085c2b2c3f6d669497cda994da1306c31856ebdbe2a0aab",
+    "tests/test_visual_score_budget.py": "6531a03aa3115ac37aa34c7204e6e96d6edfda09f80b8957ed839e76d8cf42ba",
+    "docs/offline-image-score-qualification-plan.md": "298c1d6e80e0c2d6ba65c68c1746112fe2ef86c713bd7e3dd9f244a250451d19",
+    "runs/2026-11-23-image-source-suite-count-followup.json": "4d10c63ea0e1df7d29ad1b9e9166b77ec85c7ec4f1b4bb096ad31e4ff4e80c09"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-image-source-suite-count-followup.json",
+      "sha256": "4d10c63ea0e1df7d29ad1b9e9166b77ec85c7ec4f1b4bb096ad31e4ff4e80c09"
+    }
+  ],
+  "checks": []
+}

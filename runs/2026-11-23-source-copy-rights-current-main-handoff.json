@@ -1,0 +1,88 @@
+{
+  "profile": "current-source-copy-archive-handoff/v1",
+  "captured_at": "2026-11-23T18:15:47.819296+00:00",
+  "pass": true,
+  "old_v2_head": "80ec95238398343c35f7da8570485e67848ba58b",
+  "protected_parent": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "selected_archive_source": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "owned_files": {
+    "tools/source_release_policy_v2.py": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c",
+    "eval/dependencies/source-snapshot-release-v2.json": "2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d",
+    "tests/test_source_release_policy_v2.py": "6151ba84e310a5726b623901f67d797e9deada3c5ba635d26815ad5ed941d182",
+    "tests/test_source_release_policy_v2_archive.py": "4cc65a60dc2f42d5507f6885eeb0d867ede0f70f450712da6c569632568e049f",
+    "docs/source-snapshot-rights-v2.md": "b8efb5a5fe2f08430962d327b93ca842db1fa5aa08bbd55c2f009e821286cba4",
+    "docs/source-snapshot-rights-current-main-plan.md": "aa5932d1c59785b3916ef762e0ae7d90a54713ddb98dcb569bd11b7d244caa5d",
+    "docs/source-snapshot-rights-current-main.md": "a1ec74a81037ad0d8544f715e89ee041ef71fd0fb55261adac570269b2a463e9",
+    "runs/2026-11-23-source-copy-archive-first-transport-refusal.json": "a3ee3614cf702b4eee93b67af54bddc540fabaef3bff738b907213cb255e9f0b",
+    "runs/2026-11-23-source-copy-rights-current-main-execution.json": "69c504319c429143cc17695d47a5b73d04d2fd2d01c9805f4b373951f406b433",
+    "runs/2026-11-23-source-copy-rights-current-main-distinct-review.json": "dcaddc5f9e9637cecee6c64c5b18f21c11cf5419bfd1ce61e608b3c7e485fbbe",
+    "eval/dependencies/source-copy-v2-history/source-snapshot-release-v2-b5ffe6abefe80a0b42fcfb3516dc11845e337b21f8612bd14b83f57269a49809.json": "b5ffe6abefe80a0b42fcfb3516dc11845e337b21f8612bd14b83f57269a49809",
+    "eval/dependencies/source-copy-v2-history/source_release_policy_v2-1438edcb8a7f363fd8da77432d6693b33da529f4dbee17f92655f098d95387fc.py": "1438edcb8a7f363fd8da77432d6693b33da529f4dbee17f92655f098d95387fc",
+    "eval/dependencies/source-copy-v2-history/source_release_policy_v2-fb7df81a98c2763c69bbc2314df76b651d114c60044d6d098debed3cde45fb70.py": "fb7df81a98c2763c69bbc2314df76b651d114c60044d6d098debed3cde45fb70"
+  },
+  "API": {
+    "module": "tools/source_release_policy_v2.py",
+    "classification": "verify(root=ROOT, source_commit=None) -> fixed dict; require pass is True and source_copy_profile_satisfied is True. Commit must be independently selected. root must equal trusted module ROOT.",
+    "classification_fields": [
+      "source_commit",
+      "files",
+      "source_bytes",
+      "policy_sha256",
+      "method_sha256",
+      "legacy_policy_sha256",
+      "protected_baseline_commit",
+      "selected_profile_base_is_protected_release"
+    ],
+    "archive_composition": "verify_archive(raw: bytes, *, source_commit: str) -> fixed dict; require pass is True, source_copy_profile_satisfied is True and trusted_git_bytes_matched is True. root is the trusted module ROOT; archive cannot select it.",
+    "archive_success_fields": [
+      "source_commit",
+      "source_tree",
+      "source_files",
+      "source_bytes",
+      "archive_sha256",
+      "archive_bytes",
+      "policy_sha256",
+      "method_sha256",
+      "binding_method_sha256"
+    ],
+    "signature_verified": false,
+    "source_archive_admitted": false,
+    "release_authorized": false,
+    "legal_clearance": false,
+    "compiled_runtime_permission": false,
+    "complete_F057_X02": false,
+    "unavailable": "pass False with closed fixed reason; no measured-zero counts invented."
+  },
+  "selected_result": {
+    "source_files": 13502,
+    "source_bytes": 142114658,
+    "archive_bytes": 40864663,
+    "archive_sha256": "f3b69aed5339784e5d5700289c808832c8ed377316b8bcfa4c2ba95716524cfe"
+  },
+  "review_sha256": "dcaddc5f9e9637cecee6c64c5b18f21c11cf5419bfd1ce61e608b3c7e485fbbe",
+  "execution_sha256": "69c504319c429143cc17695d47a5b73d04d2fd2d01c9805f4b373951f406b433",
+  "integration_preservation": {
+    "shared_files_exact_protected_parent": [
+      "docs/master-scope.json",
+      "docs/scope-progress.json",
+      "state.json",
+      "eval/revalidation.json",
+      "eval/dependency-policy.json",
+      "tools/distribution_artifacts.py",
+      ".github/workflows/artifact-sbom.yml"
+    ],
+    "only_conflict": "Understood CHANGELOG union, both attributed parent entries preserved verbatim.",
+    "no_push_or_shared_route_policy_edit": true
+  },
+  "root_registration_next": [
+    "Register current V2 helper/table, history, two test modules and new documentation/receipts in the appropriate source inventory and capability graph.",
+    "Focused future command: python3 -m pytest tests/test_source_release_policy_v2.py tests/test_source_release_policy_v2_archive.py -q (23 current methods). Author ran22 prior controls then9 affected corrected controls; no invented fresh23-suite claim.",
+    "Keep protected signature, exact authenticated source predicate, finite dependency policy, Graph/SPDX and managed consumer authorization as separate actual gates.",
+    "Future root/image/metadata paths are UNKNOWN unless individually reviewed and named; this profile is not automatic clearance of a later root HEAD."
+  ],
+  "limits": [
+    "Source-copy obligations and actual received-source/Git binding for exact6d only; no extraction, SDK/model/native/browser install or public artifact distribution.",
+    "Full F-057/X-02 remain open across all retained routes.",
+    "Original V1, old V2 data/receipts and first large-input composition refusal preserved."
+  ]
+}

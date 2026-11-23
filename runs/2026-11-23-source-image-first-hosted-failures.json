@@ -1,0 +1,65 @@
+{
+  "profile": "source-image-first-hosted-failures/v1",
+  "recorded_at": "2026-11-23T19:43:28.367630+00:00",
+  "candidate_source_commit": "f23504d166dd450a81cd35dbc15397b13815de21",
+  "pull_request": 153,
+  "candidate_passed": false,
+  "failures": [
+    {
+      "run": 45250778804,
+      "job": 137959501471,
+      "name": "managed-source-controls",
+      "signature": "PrivateInputError from Capture.directory(self.dir) before injected write fault",
+      "root_cause": "The fixture immediate parent is Linux /tmp mode1777; private-boundary enforcement correctly requires0700.",
+      "correction": "Fixture owns a0700child inside its existing0700directory; production permissions and all descriptor-close assertions preserved."
+    },
+    {
+      "run": 45250778777,
+      "job": 137959500993,
+      "name": "spec",
+      "signature": "QualificationTests.test_production_source_unchanged_from_source_stage expected historical assets2158189 but observed reviewed520aa3",
+      "root_cause": "Historical equality test did not account for the separately reviewed factual SOURCE_PINS-only HF reference correction.",
+      "correction": "Verify exact current peer-bound bytes, undo only two reviewed factual literals in-memory and hash the entire reconstructed module against its original receipt; other three production modules still exact."
+    }
+  ],
+  "raw_public_ci_log_identity": {
+    "137959500993": {
+      "bytes": 55964,
+      "sha256": "6450bb827c98d6fa52ce2a600400079572830e0f3b77f475e8449edab08a1785"
+    },
+    "137959501471": {
+      "bytes": 53757,
+      "sha256": "1feb3b807bf649dbf4615ca9705734f0028c993478ae2e2e49453c3a7d1c6839"
+    }
+  },
+  "corrected_focused_controls": {
+    "tests": 2,
+    "exit_status": 0,
+    "seconds": 0.021,
+    "physical_linux_execution_of_correction": false
+  },
+  "source_preflight": {
+    "source_commit": "f23504d166dd450a81cd35dbc15397b13815de21",
+    "actual_git_files": 13719,
+    "source_bytes": 145367740,
+    "archive_bytes": 41518397,
+    "archive_sha256": "788068d72c13076b2f188f2259abdbf46629ec835489074131841617ad55bc4d",
+    "canonical_git_binding_passed": true,
+    "complete_packet_bytes": 15446307,
+    "spdx_bytes": 9341675,
+    "real_signature_verified": false
+  },
+  "precode_different_reviewer": "Codex /root/seo",
+  "precode_review_sha256": "195f6cef5f8c2c3f8e14768e49858ce010092c1afb77143ca316e601ffecb084",
+  "existing_revalidation_run": {
+    "id": 45250778768,
+    "invalidated_source_cancel_requested": true,
+    "fresh_reports_adopted": false
+  },
+  "unchanged_human_and_independent_gates": true,
+  "original_complete": 136,
+  "original_open": 66,
+  "target60_met": false,
+  "tag_release_approved": false,
+  "scope_weakened": false
+}

@@ -24,7 +24,7 @@ def verify():
             any(row.get('reason') == 'invalid_or_unavailable_policy' for row in decisions)):
         raise ValueError('Invalid route graph')
     selected = require_route('ps-source', ROOT)
-    allowed = {'ps-source', 'mcp-stdio'}
+    allowed = {'ps-source', 'mcp-stdio', 'source-snapshot'}
     for row in decisions:
         expected = row['route'] in allowed
         if (type(row.get('release_allowed')) is not bool or
@@ -37,9 +37,10 @@ def verify():
     if (len(selected['files']) != 9 or selected['route'] != 'ps-source'):
         raise ValueError('Changed PS source export contract')
     return {'pass': True, 'profile': value['profile'], 'registered_routes': len(decisions),
-            'allowed_source_routes': ['ps-source'],
+            'allowed_source_routes': ['ps-source', 'source-snapshot'],
             'allowed_routes': sorted(allowed),
             'managed_mcp_consumer': 'scripts/install-managed-mcp.py',
+            'managed_source_consumer': 'scripts/verify-managed-source.py',
             'managed_release_signature_verified_by_registry': False,
             'blocked_routes': [row['route'] for row in decisions if not row['release_allowed']],
             'source_files': len(selected['files']),
