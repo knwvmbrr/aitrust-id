@@ -1,0 +1,26 @@
+{
+  "captured_at": "2026-11-23T01:39:05.305218+00:00",
+  "profile": "managed-distribution-integration-refusals/v1",
+  "source_head": "531b75aeac918be855a762d494711d1e0aca43ce",
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45080226484",
+  "actual_failures": [
+    {
+      "job": "spec",
+      "observation": "dependency_registry_refused",
+      "diagnosis": "Complete-registry verifier still requires exactly one allowed PS route; reviewed finite MCP route now also allowed. Fixed exact two-route checks and twelve refusals required, not a skip."
+    },
+    {
+      "job": "no-egress",
+      "observation": "Selected zlib source/notice check refused",
+      "diagnosis": "Producer identity in selected manifest still points to earlier policy helper; regenerate with existing producer and preserve prior manifest."
+    },
+    {
+      "operation": "PM local boundary verification after manifest edits",
+      "observation": "Missing or stale browser execution",
+      "diagnosis": "New current manifest deliberately invalidates old selected capability receipts. All five hosted source-bound profiles required before selection."
+    }
+  ],
+  "release_approved": false,
+  "independent_accuracy_evidence": false,
+  "failures_preserved": true
+}

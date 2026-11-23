@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-013905-managed-source-bound-registration-0f59ddee",
+  "recorded_at": "2026-11-23T01:39:05.459779+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1709bcf0aae8fc5e11c60bfdc6a7b0afff790d4d",
+  "changed": "Registered finite MCP/source-rights inputs and focused controls in current capability and route-boundary inventories; trigger hosted qualification when its manifest changes; corrected public085 delivery state.",
+  "proves": "8392 current boundary inputs; all449 installed-MCP sources exactly unchanged; actual source metadata preflight below16MB. Initial real CI and stale-evidence refusals retained and diagnosed.",
+  "limits": "Metadata preflight uses an explicit synthetic artifact descriptor, not an archive execution. Current five capability selection and original60 target pending; no managed signature, original closure or independent accuracy granted.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-007",
+    "N-008"
+  ],
+  "files": {
+    "eval/revalidation.json": "44fc7f6e50ac306dfb5b52c52d6cee8597d6f966f99eb2591b13f39f44bf9d6f",
+    "eval/route-boundaries.json": "16e900583e1b5db3a25f71aae71ee083b0c50d173e1ad792044b5dea72127d00",
+    "scripts/verify-route-boundaries.py": "533db7cf3195230d41880224fe3de76e67285cb6efebef092493ae1a6b3092a0",
+    ".github/workflows/delivery-revalidation.yml": "e1f358ffcfd4be95864be60dc9bfe64c96aae7ed5aade2dcd299517e86c62b3f",
+    "state.json": "9bdbdc7a837f7e235a96f9fd230e7f3de8333917209f2e0db7c67db607cb4916",
+    "runs/2026-11-22-managed-source-metadata-preflight.json": "db063ab8f2620c4b35174681d07bd84034a2211a8f324cb847c1b38b7723f055",
+    "runs/2026-11-22-managed-integration-initial-refusals.json": "6eefa387b273b1ce3ea7ac6799a2287b0f9ed8dac41f597c933466043f4e0354",
+    "runs/2026-11-22-managed-mcp-integration-binding-assessment.json": "6cbb63c98b30fb67bd48d0c4946f1c5ab0d03e528316e430e90ccc5bbbe8b827"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-managed-source-metadata-preflight.json",
+      "sha256": "db063ab8f2620c4b35174681d07bd84034a2211a8f324cb847c1b38b7723f055"
+    },
+    {
+      "path": "runs/2026-11-22-managed-integration-initial-refusals.json",
+      "sha256": "6eefa387b273b1ce3ea7ac6799a2287b0f9ed8dac41f597c933466043f4e0354"
+    },
+    {
+      "path": "runs/2026-11-22-managed-mcp-integration-binding-assessment.json",
+      "sha256": "6cbb63c98b30fb67bd48d0c4946f1c5ab0d03e528316e430e90ccc5bbbe8b827"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T01:39:06.323524+00:00"
+    }
+  ]
+}

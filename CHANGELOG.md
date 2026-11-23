@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-23
+
+### 2026-11-23-013905-managed-source-bound-registration-0f59ddee
+
+Recorded 2026-11-23T01:39:05.459779+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Registered finite MCP/source-rights inputs and focused controls in current capability and route-boundary inventories; trigger hosted qualification when its manifest changes; corrected public085 delivery state.
+- **Evidence.** 8392 current boundary inputs; all449 installed-MCP sources exactly unchanged; actual source metadata preflight below16MB. Initial real CI and stale-evidence refusals retained and diagnosed. [Change record](./runs/changes/2026-11-23-013905-managed-source-bound-registration-0f59ddee.json).
+- **Not claimed.** Metadata preflight uses an explicit synthetic artifact descriptor, not an archive execution. Current five capability selection and original60 target pending; no managed signature, original closure or independent accuracy granted.
+
+
 ## Unreleased — 2026-11-22
 
 ### 2026-11-22-180148-visual-camera-detector-candidates-15569089
