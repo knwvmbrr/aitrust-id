@@ -36,6 +36,59 @@ function ownEntries(object, limit) {
   return result;
 }
 
+/** A deliberately strict HTML profile: balanced tags, no executable inline bodies. */
+function* htmlComments(text) {
+  const voids=new Set(['area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr']);
+  const names=/[A-Za-z][A-Za-z0-9:-]*/y,attributes=/[A-Za-z_:][A-Za-z0-9_:.-]*/y;
+  const stack=[];let at=0,tokens=0;
+  const space=()=>{const start=at;while(at<text.length && /[\t\n\r\f ]/.test(text[at]))at++;return at>start;};
+  while(at<text.length) {
+    if(text[at]!=='<'){at++;continue;}
+    need(++tokens<=10000);
+    if(text.startsWith('<!--',at)) {
+      const start=at,end=text.indexOf('-->',at+4);need(end>=0 && !text.slice(at+4,end).includes('<!--'));
+      at=end+3;yield {index:start,0:text.slice(start,at)};continue;
+    }
+    if(/^<!doctype html>/i.test(text.slice(at,at+15))){need(stack.length===0);at+=15;continue;}
+    at++;const closing=text[at]==='/';if(closing)at++;
+    names.lastIndex=at;const match=names.exec(text);need(match);const tag=match[0].toLowerCase();at=names.lastIndex;
+    need(tag!=='style');const attrs=new Map();let selfClosing=false,ended=false;
+    while(at<text.length) {
+      const separated=space();
+      if(text[at]==='>'){at++;ended=true;break;}
+      if(text[at]==='/' && text[at+1]==='>'){selfClosing=true;at+=2;ended=true;break;}
+      need(!closing && separated);attributes.lastIndex=at;const name=attributes.exec(text);need(name);at=attributes.lastIndex;
+      const key=name[0].toLowerCase();need(!attrs.has(key));let value=null;const afterName=at;
+      space();
+      if(text[at]==='=') {
+        at++;space();need(at<text.length);const quote=text[at];
+        if(quote==='"' || quote==="'") {
+          const start=++at;while(at<text.length && text[at]!==quote){need(text[at]!=='<');at++;}
+          need(at<text.length);value=text.slice(start,at);at++;
+        } else {
+          const start=at;while(at<text.length && !/[\t\n\r\f >]/.test(text[at])){need(!/["'<=`]/.test(text[at]));at++;}
+          need(at>start);value=text.slice(start,at);
+        }
+      } else at=afterName;
+      attrs.set(key,value);
+      // Preserve the separator for the next attribute instead of accepting concatenated names.
+      if(at<text.length && !/[\t\n\r\f />]/.test(text[at]))fail();
+    }
+    need(ended);
+    if(closing){need(!selfClosing && attrs.size===0 && stack.pop()===tag);continue;}
+    if(voids.has(tag))continue;
+    need(!selfClosing);
+    if(tag==='script') {
+      const close=/<\/script[\t\n\r\f ]*>/ig;close.lastIndex=at;const found=close.exec(text);need(found);
+      const body=text.slice(at,found.index);
+      if(body.trim()) {need(attrs.get('type')==='application/ld+json' && !attrs.has('src'));JSON.parse(body);}
+      at=close.lastIndex;continue;
+    }
+    need(stack.length<32);stack.push(tag);
+  }
+  need(stack.length===0);
+}
+
 export function createWebBuildObserver({root=repository, sourceCommit, sourceTree}={}) {
   root=fs.realpathSync(root);
   need(typeof sourceCommit==='string' && /^[a-f0-9]{40}$/.test(sourceCommit)
@@ -60,11 +113,14 @@ export function createWebBuildObserver({root=repository, sourceCommit, sourceTre
       snapshots.set(name,stable(before));return raw;
     } finally {if(fd!==undefined)fs.closeSync(fd);}
   }
-  function notices(raw) {
+  function notices(raw,syntax="javascript") {
     const text=raw.toString('utf8');
     if(!Buffer.from(text).equals(raw))return {text_source:false,notices:[]};
+    if(syntax==='json'){JSON.parse(text);return {text_source:true,notices:[]};}
+    need(syntax==='javascript' || syntax==='html');
     const result=[];let cursor=0,byteCursor=0,retained=0;
-    for(const match of text.matchAll(/\/\*[\s\S]*?\*\/|\/\/[^\r\n]*/g)) {
+    const comments=syntax==='html'?htmlComments(text):text.matchAll(/\/\*[\s\S]*?\*\/|\/\/[^\r\n]*/g);
+    for(const match of comments) {
       tick();const value=Buffer.from(match[0]);const offset=byteCursor+Buffer.byteLength(text.slice(cursor,match.index));
       cursor=match.index+match[0].length;byteCursor=offset+value.length;
       if(!/copyright|permission|licen[sc]e|SPDX/i.test(match[0]))continue;
@@ -76,7 +132,7 @@ export function createWebBuildObserver({root=repository, sourceCommit, sourceTre
   }
   function source(name) {
     if(!Object.hasOwn(sourceInputs,name)) {
-      const raw=read(name);sourceInputs[name]={bytes:raw.length,sha256:hash(raw),git_blob_oid:blob(raw),...notices(raw)};
+      const raw=read(name);sourceInputs[name]={bytes:raw.length,sha256:hash(raw),git_blob_oid:blob(raw),...notices(raw,name.endsWith('.html')?'html':name.endsWith('.json')?'json':'javascript')};
     }
     return sourceInputs[name];
   }

@@ -81,3 +81,24 @@ A different reviewer inspects exact actual source and evidence. Scope, paired
 state timestamps, fresh change records and human changelog entries must be
 updated before build, commit or publication. No account, telemetry, new endpoint,
 paid service, automation of external messages or taxonomy adoption is added.
+
+## Observed whole-build refusal and finite parser correction
+
+The genuine observer build at365b5f2a transformed146 modules, then refused in
+notice extraction. A private diagnostic copy preserved the original failure stack
+and identified site/index.html (137426 bytes): the JavaScript comment regex
+treated an HTML https:// URL and the long fallback line as a license comment.
+The original16KiB per-file limit correctly refused; no provenance was accepted.
+The diagnostic copy and its outputs cannot establish compiled provenance.
+
+Before the next genuine build, select notice syntax from the actual source name.
+JSON must parse as JSON and has no lexical comments; its complete legal/source
+data remains carried and governed by the exact source/grant map. HTML uses HTML
+comments. Refuse inline style and nonempty executable inline scripts; allow only
+empty/external scripts or valid application/ld+json data. Do not silently omit
+inline executable comments. Existing JavaScript/CSS scanning and virtual-module
+handling, byte/count/read/deadline caps, full-source hashes and permission flags
+remain unchanged. Future unsupported HTML refuses rather than receiving a
+generic source grant. Focused regressions cover the actual long HTML URL shape,
+retained HTML/JS legal comments, JSON data and explicit unsupported inline code.
+Different pre-code and exact-source review precede genuine requalification.

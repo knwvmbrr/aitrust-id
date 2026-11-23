@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-web-observer-html-json-repair
+
+Recorded 2026-11-23T22:50:30.865446+00:00 · Contributor: Codex /root implementation; Codex /root/seo distinct source/counter review · change
+
+- **Changed.** Corrected source notice parsing so HTML URLs and JSON data do not masquerade as JavaScript comments; retained conservative inline-code refusal and all original notice limits.
+- **Evidence.** The real365b build failed after146 transformed modules; bounded diagnostic copies identified137426-byte HTML URL pseudo-comments. Current nine inert author groups and three distinct peer controls pass, including actual current HTML, inline-code refusal and65-comment refusal. Exact reviewed sources are recorded before genuine build2. [Change record](./runs/changes/2026-11-23-web-observer-html-json-repair.json).
+- **Not claimed.** The original failed build and diagnostic-copy output are not accepted provenance. Whole-site build, actual artifact, current web admission, protected signature/consumer, all fourteen obligations and original closures remain pending.136complete66open; target60 unmet.
+
+
 ### 2026-11-23-tag-runtime-integration
 
 Recorded 2026-11-23T22:33:41.247686+00:00 · Contributor: Codex /root integration; /root/seo review; /root/web_camo MT/image; /root/share_debugger runtime · change

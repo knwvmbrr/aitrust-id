@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-23T22:50:30.865446+00:00",
+  "pass": true,
+  "profile": "source-aware-web-observer-repair/v1",
+  "source_base": "365b5f2ac71158c39f1070533d1400f37a8b6efd",
+  "reviews_and_execution": {
+    "author": {
+      "sha256": "5adeebc28866c9b45f0ae980f77258fa39217178ca4d02fc2413dd8e1cc87e0b",
+      "record": {
+        "captured_at": "2026-11-23T22:47:20.786303+00:00",
+        "pass": true,
+        "scope": "Nine inert builtin-only changed observer groups; no native builder or whole-site evidence.",
+        "source_sha256": {
+          "scripts/web-checker-build-observer.mjs": "ccb9e61eb43d5c9b0422f31dd87a635446f3b892fe7bd518b13ad73d91602c89",
+          "tests/web-checker-build-observer.mjs": "17aec005720ca087dbd788cbcb9a87afcd4d4399803b8b297fc94d38156acc31",
+          "docs/tag-runtime-integration-plan.md": "04e3c1cbdd16b529d1f207485679fc75e50d635134a372da3d4890e2734328d7"
+        },
+        "argv": [
+          "node",
+          "tests/web-checker-build-observer.mjs"
+        ],
+        "exit_code": 0,
+        "groups": 9,
+        "existing_groups_preserved": 5,
+        "new_groups": 4,
+        "actual_first_failed_build": {
+          "captured_at": "2026-11-23T22:39:27.465361+00:00",
+          "source_commit": "365b5f2ac71158c39f1070533d1400f37a8b6efd",
+          "steps": [
+            {
+              "argv": [
+                "node",
+                "scripts/verify-changelog.cjs"
+              ],
+              "cwd": "repository",
+              "exit_code": 0,
+              "seconds": 18.6392,
+              "log_bytes": 178,
+              "log_sha256": "1e4b14f3f37af788c6fa1c8455c1422e50abb036da76b20bc4accaa3ba888d72"
+            },
+            {
+              "argv": [
+                "node",
+                "node_modules/vite/bin/vite.js",
+                "build",
+                "--config",
+                "../scripts/web-checker-build-observer.mjs"
+              ],
+              "cwd": "site",
+              "exit_code": 1,
+              "seconds": 1.4125,
+              "log_bytes": 2362,
+              "log_sha256": "fa7b5cc49d0499f050812fb5afb753559dafbdf3dbe2dbe68d34cffe8b89d74a"
+            }
+          ],
+          "pass": false,
+          "peak_child_rss_bytes": 285442048,
+          "dependency_install": false,
+          "network_download": false,
+          "compiled_release_admitted": false
+        },
+        "diagnosis": {
+          "actual_source": "site/index.html",
+          "bytes": 137426,
+          "reason": "JavaScript // extraction swallowed an HTML URL/fallback and hit the original16KiB notice cap.",
+          "diagnostic_clones_not_provenance": true
+        },
+        "limits": {
+          "cap_increase": false,
+          "new_route_admission": false,
+          "complete_build_observed": false,
+          "independent_accuracy": false
+        }
+      }
+    },
+    "precode": {
+      "sha256": "55f807fc3b186e68e256dc06fae32142c3606d34bc4069478701b5e4320132cb",
+      "record": {
+        "actual_ROOT_counter": "Genuine observer build stopped after146modules:137426-byte site/index.html contains https:// in long single-line fallback. Generic // scanner consumed URL-through-legal prose and exceeded existing16384-byte per-file notice cap. ROOT diagnostic clone/stack is private, not accepted provenance.",
+        "approved_delta": [
+          "notices(raw,syntax); source name selects strict JSON or bounded HTML handling; JS/CSS and virtual transformed JS scanner unchanged.",
+          "JSON.parse must succeed; lexical comments absent in strict JSON. Full copied legal data still remains in source bytes and finite grant mapping.",
+          "HTML extracts only actual <!-- --> comments; case-insensitive conservative tag/attribute parsing rejects malformed/unclosed/ambiguous constructs. Inline style or executable script unsupported.",
+          "Only empty/external script or exact application/ld+json with successful JSON.parse may pass. No arbitrary new virtual/provider/origin scope.",
+          "Existing64comments/16384B-per-file/256000B-total/source/deadline bounds remain unchanged."
+        ],
+        "captured_at": "2026-11-23T22:43:33.784177+00:00",
+        "conclusion": "CLEAR finite source-aware repair with conservative HTML parsing/refusal",
+        "limits": {
+          "build_or_tests_or_network_by_reviewer": false,
+          "compiled_permission_granted": false,
+          "new_provenance_admitted": false
+        },
+        "observed_index": {
+          "bytes": 137426,
+          "sha256": "5ab69a1f80f137d715aa19318dd87b8d47af88892e75096b0f583bab60c46c67"
+        },
+        "profile": "web-observer-HTML-JSON-notice-repair-precode-review/v1",
+        "required_focused_controls": [
+          "real long HTML URL fallback succeeds without fake notice retention",
+          "actual HTML and JS legal comments remain exact",
+          "inline executable/style and malformed JSON refuse",
+          "JSON URL/legal data does not become lexical comment",
+          "notice64/16384 and total caps still refuse over-limit input"
+        ],
+        "reviewer": "Codex /root/seo"
+      }
+    },
+    "final_peer": {
+      "sha256": "54a4c0d1e7156fc64015b46fadbe28440ad86188a7d085fd28fe03c10c746997",
+      "record": {
+        "profile": "web-observer-HTML-JSON-repair-final-distinct-review/v1",
+        "captured_at": "2026-11-23T22:48:09.962Z",
+        "reviewer": "Codex /root/seo",
+        "conclusion": "CLEAR frozen source-aware notice extraction repair; genuine whole build and artifact/admission still pending",
+        "source_sha256": {
+          "scripts/web-checker-build-observer.mjs": "ccb9e61eb43d5c9b0422f31dd87a635446f3b892fe7bd518b13ad73d91602c89",
+          "tests/web-checker-build-observer.mjs": "17aec005720ca087dbd788cbcb9a87afcd4d4399803b8b297fc94d38156acc31",
+          "docs/tag-runtime-integration-plan.md": "04e3c1cbdd16b529d1f207485679fc75e50d635134a372da3d4890e2734328d7"
+        },
+        "own_actual_controls": [
+          {
+            "case": "actual_current_index_source_parses_without_URL_pseudocomment",
+            "pass": true,
+            "bytes": 137426,
+            "source_sha256": "5ab69a1f80f137d715aa19318dd87b8d47af88892e75096b0f583bab60c46c67",
+            "actual_legal_HTML_comments": 0
+          },
+          {
+            "case": "mixed_case_inline_executable_refuses_no_observation",
+            "pass": true
+          },
+          {
+            "case": "65_actual_HTML_notices_refuse_at_unchanged_count_cap",
+            "pass": true
+          }
+        ],
+        "source_notes": [
+          "Closed balanced HTML parser recognizes case-insensitive script/style and bounded quoted/unquoted attributes; malformed/duplicate/unclosed/ambiguous constructs refuse.",
+          "Only lexical HTML comments retained; inline STYLE refuses; nonempty SCRIPT requires exact application/ld+json, no src and successful strict JSON parse.",
+          "JSON strict parse has no lexical comment extraction; full raw source bytes and grant/source associations remain unchanged.",
+          "JavaScript/CSS and transformed virtual handling, source/deadline and64/16384/256000 notice bounds remain unchanged."
+        ],
+        "limits": {
+          "actual_whole_build_executed": false,
+          "native_or_SDK_imported": false,
+          "permission_or_provenance_admitted": false,
+          "original_closed": false
+        }
+      }
+    }
+  },
+  "scope": "Corrected trusted observer source only; nine inert author groups and three separate affected peer controls. Actual original build failed and still has no provenance.",
+  "source_sha256": {
+    "scripts/web-checker-build-observer.mjs": "ccb9e61eb43d5c9b0422f31dd87a635446f3b892fe7bd518b13ad73d91602c89",
+    "tests/web-checker-build-observer.mjs": "17aec005720ca087dbd788cbcb9a87afcd4d4399803b8b297fc94d38156acc31",
+    "docs/tag-runtime-integration-plan.md": "04e3c1cbdd16b529d1f207485679fc75e50d635134a372da3d4890e2734328d7"
+  },
+  "limits": {
+    "notice_caps_increased": false,
+    "actual_whole_build_completed": false,
+    "compiled_permission_or_provenance_admitted": false,
+    "independent_accuracy": false,
+    "original_closed": false
+  }
+}

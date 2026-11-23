@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-web-observer-html-json-repair",
+  "recorded_at": "2026-11-23T22:50:30.865446+00:00",
+  "author": "Codex /root implementation; Codex /root/seo distinct source/counter review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "365b5f2ac71158c39f1070533d1400f37a8b6efd",
+  "changed": "Corrected source notice parsing so HTML URLs and JSON data do not masquerade as JavaScript comments; retained conservative inline-code refusal and all original notice limits.",
+  "proves": "The real365b build failed after146 transformed modules; bounded diagnostic copies identified137426-byte HTML URL pseudo-comments. Current nine inert author groups and three distinct peer controls pass, including actual current HTML, inline-code refusal and65-comment refusal. Exact reviewed sources are recorded before genuine build2.",
+  "limits": "The original failed build and diagnostic-copy output are not accepted provenance. Whole-site build, actual artifact, current web admission, protected signature/consumer, all fourteen obligations and original closures remain pending.136complete66open; target60 unmet.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "docs/tag-runtime-integration-plan.md": "04e3c1cbdd16b529d1f207485679fc75e50d635134a372da3d4890e2734328d7",
+    "runs/2026-11-23-web-observer-html-json-repair.json": "0947a8fe2b31fbfa7e63d3a227b37f7a7066aa9b5231897a830e2ffb6d48a838",
+    "scripts/web-checker-build-observer.mjs": "ccb9e61eb43d5c9b0422f31dd87a635446f3b892fe7bd518b13ad73d91602c89",
+    "state.json": "575d8febceaa72040d76fac7c9585c9a877b68b8650fc3c790253b915e008934",
+    "tests/web-checker-build-observer.mjs": "17aec005720ca087dbd788cbcb9a87afcd4d4399803b8b297fc94d38156acc31"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-web-observer-html-json-repair.json",
+      "sha256": "0947a8fe2b31fbfa7e63d3a227b37f7a7066aa9b5231897a830e2ffb6d48a838"
+    }
+  ],
+  "checks": []
+}
