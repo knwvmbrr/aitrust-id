@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-source-image-hosted-engineering-selection
+
+Recorded 2026-11-23T21:21:00.213499+00:00 · Contributor: Codex /root implementation; Codex /root/seo independent source review · change
+
+- **Changed.** Selected five complete source-current engineering reports from their actual successful capability steps, and fixed the evidence index to safely represent declared empty sources under an original operation budget without executing recorded commands.
+- **Evidence.** Actual hosted45265152508 completed full protocol78 and website66 successfully. The prior successful PS7/privacy6/extension14 reports remain byte-identical and current despite their later overall run failure. All five assess current;24 initial controls,5 deadline-boundary controls and the actual repository/CLI integration control pass. Distinct current-source review is CLEAR. Actual current boundary verification passes, and the standalone evidence CLI exits0 with all5 reports current across8484capturedfiles in10.553seconds. [Change record](./runs/changes/2026-11-23-source-image-hosted-engineering-selection.json).
+- **Not claimed.** No protected-main source signature/consumer, anonymous release, independent tag accuracy or outside/human acceptance is implied. Source-bound board/plan snapshots remain unchanged to preserve the successful hosted fingerprints.136complete66open; target60 unmet; no original closure. Earlier9.956-second partial/stale and10.437-second corrected/stale diagnostics are historical observations, not a demonstrated speedup.
+
+
 ### 2026-11-23-source-profile-ci-prerequisites
 
 Recorded 2026-11-23T20:59:34.677845+00:00 · Contributor: Codex /root implementation; Codex /root/seo distinct review · change

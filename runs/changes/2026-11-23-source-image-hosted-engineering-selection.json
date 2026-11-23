@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-source-image-hosted-engineering-selection",
+  "recorded_at": "2026-11-23T21:21:00.213499+00:00",
+  "author": "Codex /root implementation; Codex /root/seo independent source review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "5e8ca298d8eb2dbb9cdfe1844bcb7658136ea80f",
+  "changed": "Selected five complete source-current engineering reports from their actual successful capability steps, and fixed the evidence index to safely represent declared empty sources under an original operation budget without executing recorded commands.",
+  "proves": "Actual hosted45265152508 completed full protocol78 and website66 successfully. The prior successful PS7/privacy6/extension14 reports remain byte-identical and current despite their later overall run failure. All five assess current;24 initial controls,5 deadline-boundary controls and the actual repository/CLI integration control pass. Distinct current-source review is CLEAR. Actual current boundary verification passes, and the standalone evidence CLI exits0 with all5 reports current across8484capturedfiles in10.553seconds.",
+  "limits": "No protected-main source signature/consumer, anonymous release, independent tag accuracy or outside/human acceptance is implied. Source-bound board/plan snapshots remain unchanged to preserve the successful hosted fingerprints.136complete66open; target60 unmet; no original closure. Earlier9.956-second partial/stale and10.437-second corrected/stale diagnostics are historical observations, not a demonstrated speedup.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-120"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "ad11d552ec3ff3ccc32b3a5f756cb5daf46fd574c11542a72177c30980678db8",
+    "runs/2026-11-23-source-image-current-boundaries.json": "13bb145774b694245e43db8b02cd9c50762be6fd5ce71ab41a2139e641e138fd",
+    "runs/2026-11-23-source-image-current-extension.json": "7bfa92bcf1949944e510049b70b0cb095495320549cc3688a7078a487bc5f5b8",
+    "runs/2026-11-23-source-image-current-pii-redacted.json": "9ceeebbb7e8e8b036cdc4d38d05a3a5ac33d21b65f2a5e7c18e4af77b4f6e465",
+    "runs/2026-11-23-source-image-current-protocol.json": "9488da653d37325013a1530bb9dbe4bd426d479f2b6b040cf11152b92177bef3",
+    "runs/2026-11-23-source-image-current-ps.json": "f90ed334e3570e90d06f7c6a85b3a632eeec3dfed11cf42459e7fea037ec043d",
+    "runs/2026-11-23-source-image-current-selection.json": "b790f812e79a7da0350a1b653d29a6dde160941b345f765db7d16b323c755a1e",
+    "runs/2026-11-23-source-image-current-website.json": "9073353c5f8260cd5884a479960c20d58200d44724c9d6f5dd4cd30df3ec3c86",
+    "state.json": "bc00f1d627447ca23afbb67995a9d3cbd50fd03f66cd2415e157b0ef385e2851",
+    "tests/test_evidence_packet.py": "c6369586e26438b5b18c6551a196a866920bede0b03e11d0694f8ff034e94189",
+    "tools/evidence_packet.py": "2fc2234ee8e992c4cecd37730498a22da8c84268ad4c7ae4245088aee61f2504"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-source-image-current-boundaries.json",
+      "sha256": "13bb145774b694245e43db8b02cd9c50762be6fd5ce71ab41a2139e641e138fd"
+    },
+    {
+      "path": "runs/2026-11-23-source-image-current-extension.json",
+      "sha256": "7bfa92bcf1949944e510049b70b0cb095495320549cc3688a7078a487bc5f5b8"
+    },
+    {
+      "path": "runs/2026-11-23-source-image-current-pii-redacted.json",
+      "sha256": "9ceeebbb7e8e8b036cdc4d38d05a3a5ac33d21b65f2a5e7c18e4af77b4f6e465"
+    },
+    {
+      "path": "runs/2026-11-23-source-image-current-protocol.json",
+      "sha256": "9488da653d37325013a1530bb9dbe4bd426d479f2b6b040cf11152b92177bef3"
+    },
+    {
+      "path": "runs/2026-11-23-source-image-current-ps.json",
+      "sha256": "f90ed334e3570e90d06f7c6a85b3a632eeec3dfed11cf42459e7fea037ec043d"
+    },
+    {
+      "path": "runs/2026-11-23-source-image-current-selection.json",
+      "sha256": "b790f812e79a7da0350a1b653d29a6dde160941b345f765db7d16b323c755a1e"
+    },
+    {
+      "path": "runs/2026-11-23-source-image-current-website.json",
+      "sha256": "9073353c5f8260cd5884a479960c20d58200d44724c9d6f5dd4cd30df3ec3c86"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_evidence_packet.py",
+        "-k",
+        "not actual_current_repository",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T21:21:00.213499+00:00"
+    },
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_evidence_packet.py",
+        "-k",
+        "base_read_deadline or json_read_deadline",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T21:28:03.665213+00:00"
+    },
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_evidence_packet.py::test_actual_current_repository_packet_and_cli",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T21:28:03.665213+00:00"
+    },
+    {
+      "argv": [
+        "python",
+        "scripts/verify-route-boundaries.py",
+        "--output",
+        "runs/2026-11-23-source-image-current-boundaries.json"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T21:30:51.019970+00:00"
+    },
+    {
+      "argv": [
+        "python",
+        "scripts/build-evidence-packet.py",
+        "--require-current"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T21:29:32.722021+00:00"
+    }
+  ],
+  "selection_state": "all_five_actual_complete_reports_current",
+  "private_precode": {
+    "plan": {
+      "sha256": "a83a57435bf2e8c73edf5696db449e359330377f5601e4d1ad7c4a4fd1d9c80f",
+      "raw_utf8": "{\n  \"profile\": \"evidence-packet-repair-before-code/v1\",\n  \"recorded_at\": \"2026-11-23T21:16:07.894100+00:00\",\n  \"author\": \"Codex /root\",\n  \"scope_ids\": [\n    \"F-120\"\n  ],\n  \"source_base\": \"5e8ca298d8eb2dbb9cdfe1844bcb7658136ea80f\",\n  \"actual_findings\": [\n    \"Actual no-egress job138010007545:6286pass/1fail/15skipped; evidence CLI exceeds its test-only15s subprocess deadline. No production15s contract exists in its plan or CLI.\",\n    \"Single local unmodified diagnostic:9.9558s, validpacket/staleselectedreceiptsexpected.\",\n    \"Current protocol7453inputs include a genuine declared empty source sbom/c2pa-native/sources/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.txt. Generic read_file intentionally refuses empty files, so protocol row is wrongly Unavailable even with a validreceipt.\",\n    \"All5current source sets9765members/8475unique/63,323,287rawbytes. CLI repeats descriptor capture for sharedsources.\"\n  ],\n  \"owned_existing_paths\": [\n    \"tools/evidence_packet.py\",\n    \"tests/test_evidence_packet.py\"\n  ],\n  \"changes\": [\n    \"Preserve COMMON assess/fingerprint and shared read_file unchanged. Add local safe capture for ONLY zero-length source with exact expected empty SHA; real NOFOLLOW/NONBLOCK descriptor chain, single regular link, before/after identity and no byte; never allow emptyJSON/absent/hardlink/link/FIFO.\",\n    \"Reuse alreadycaptured sourcebytes only when hash agrees with current percapability snapshot; retain exact5before+5assess+5after fingerprints and final safe actualrecapture of every unionfile. Conflicting current snapshots or anyactualfinaldriftrefuse. No crossoperation cache or permissioninfer.\",\n    \"Add explicit60s original-monotonic build deadline and limits16,384unique inputs/128MiB aggregate retained source bytes, perfile32M and evidence2M unchanged. Check deadlines before/after every fingerprint/assess/read and beforefinalresult; no resets. Deadline returns existing CLI Unavailable/exit2, nevercurrent/safe.\",\n    \"Change ONLY actual repository CLI integration test supervisor15\\u219265, covering new production60s operation plus unwind. This is not a relaxation of a declared product15s budget; preserve everyassertion and measure actualruntime.\",\n    \"Add meaningfulempty-source/malformed-node/unionreuse/drift/resource/deadline controls in existingtestfile; execute affectedcontrols then actualvalidcurrentpacket afterfinal5selection. Preserve actualhostedfailure andsinglelocaldiagnostic.\"\n  ],\n  \"constraints\": [\n    \"No helper module/newendpoint/dependency/auth/scope/gate/numericaldetector/COMMON/sharedcapture edits.\",\n    \"New source/module/test are NOT fingerprint inputs of any5capability, verified current maps; current hosted2profile run may finish unchanged.\",\n    \"Planandobservations remain private until exactnestedpublic selection event already finitelyreserved; no extra V3names/pin/registrychanges.\",\n    \"No repeated hostedretrybefore actualnewsourcepatch/review; original66unchanged.\"\n  ]\n}\n"
+    },
+    "peer": {
+      "sha256": "fcf59439028d72b8a8304f51e0e2056c32a22dcf54b6148b5af04c91e60b9853",
+      "raw_utf8": "{\n  \"profile\": \"evidence-packet-repair-precode-distinct-review/v1\",\n  \"pass\": true,\n  \"captured_at\": \"2026-11-23T21:17:29.771158+00:00\",\n  \"reviewed_by\": \"Codex /root/seo\",\n  \"plan_sha256\": \"a83a57435bf2e8c73edf5696db449e359330377f5601e4d1ad7c4a4fd1d9c80f\",\n  \"reviewed_old_sources\": {\n    \"tools/evidence_packet.py\": \"67007cd587505c3a719c523792b5a9685b127d70111efa455fc3b4b095a4f343\",\n    \"tests/test_evidence_packet.py\": \"f1bbc831a709951cf0e6f73eeb311a7d47f05d65279ceeefa99f13a96a56c92e\"\n  },\n  \"contract\": [\n    \"Empty-source admission ONLY for snapshotdeclaredSHA256empty/zero regularsinglelink descriptorchain beforeafteridentity; neverJSON/absent/symlink/hardlink/FIFO; genericread_file staysunchanged.\",\n    \"Oneoperation unioncache reuses bytesonlywhen everycapabilitysnapshot agrees; conflictingdigest marks persistentdrift; everyactualunionfile recapturedfinally.\",\n    \"Retain all15actualfingerprints5before+5assess+5after, no copied/fabricated assessment or cached finalrecapture.\",\n    \"One60s originalmonotonicdeadline/16384uniqueinputs/128MiBretainedsourcebytes,perfile/evidence limits unchanged; budget/deadline mustreach finalCLIUnavailable/exit2, not swallowed into packetvalidtrue rows.\",\n    \"Only2existingunboundfiles; supervisor65covers explicitprod60andunwind, not relaxeddeclared15productbudget.\",\n    \"Retain priorhostedfailure/localdiagnostic; no COMMON/registry/policy/newnames/originalchanges.\"\n  ],\n  \"limits\": [\n    \"Pre-code source/architecture review, no hostedlogdownload/suite/SDK/archive/ROOTedit.\",\n    \"Final frozenimplementation and meaningfulcontrols stillrequire separate review.\"\n  ],\n  \"findings\": []\n}\n"
+    }
+  },
+  "original_closures": 0,
+  "preserved_actual_failure": {
+    "run": 45265152517,
+    "job": 138010007545,
+    "passed": 6286,
+    "failed": 1,
+    "skipped": 15,
+    "actual_subprocess_timeout_seconds": 15,
+    "failure": "test_actual_current_repository_packet_and_cli",
+    "no_production15second_contract_in_adopted_plan": true
+  },
+  "distinct_final_index_review": {
+    "sha256": "112d68afc4a4572b6f8dbab910d387c191ac86767a1cd378139456a3631f660d",
+    "raw_utf8": "{\n  \"profile\": \"evidence-packet-final-source-distinct-review/v1\",\n  \"pass\": true,\n  \"captured_at\": \"2026-11-23T21:26:58.398689+00:00\",\n  \"reviewed_by\": \"Codex /root/seo\",\n  \"source_commit\": \"5e8ca298d8eb2dbb9cdfe1844bcb7658136ea80f\",\n  \"source_hashes\": {\n    \"tools/evidence_packet.py\": \"2fc2234ee8e992c4cecd37730498a22da8c84268ad4c7ae4245088aee61f2504\",\n    \"tests/test_evidence_packet.py\": \"c6369586e26438b5b18c6551a196a866920bede0b03e11d0694f8ff034e94189\"\n  },\n  \"precode_review_sha256\": \"fcf59439028d72b8a8304f51e0e2056c32a22dcf54b6148b5af04c91e60b9853\",\n  \"current_three_tiny_controls_sha256\": \"e4a52c9f6208e55632aa25bb6ceefe828ec3671b2ddaaa49aebc839ec755bf0e\",\n  \"historical_four_tiny_controls_sha256\": \"d3f891d29b44a74cf5a65fb1f6c1e88f3d76bb9b5f7f3e4f896fd6918fb96410\",\n  \"original_boundary_counter_sha256\": \"e3293907ccfe86d708add79eb26e8cfa9b859e968281539999d7371473c42258\",\n  \"observations\": [\n    \"Onlysnapshot-declaredemptySHA routes to localemptyreader; regularsinglelinkzero FD+nobyte/beforeafteridentity, rootednofollowchain<=64FD, allcloseattemptsonce; noemptyJSON/links/FIFO adoption.\",\n    \"Oneoperation unioncache digestconflict marks persistentdrift and actualfinalunionrecapture unchanged;5before+5assess+5afterfingerprint semantics preserved onvalidfull inputs.\",\n    \"60s originalmonotonic budget nowcheckedbeforeafterBASE/state/ledger/receipt/master/source reads andJSONparse; incrementalBASEretain andO1bytecount/16384unique/128MiBretained cap,32Msource/2Mevidence unchanged.\",\n    \"DedicatedInspectionBoundError propagatesabove stale-row fallback to unchangedCLIUnavailableexit2; doesnotyield falselyvalidcurrentpacket.\",\n    \"Test-only15\\u219265 coversnewexplicit60operation+unwind; no claimed15productcontract or broadoriginalfailurewaiver.\",\n    \"Bothfeaturefiles absentfromall5actuallyselectedrawfingerprint maps; COMMON/sharedsourcecapture/master/progress bytes unchanged fromcurrentHEAD.\",\n    \"Allrelease/accuracy/certification flags remainfalse; retainedall202requiredcriteria and136/66not modified.\"\n  ],\n  \"selected_fingerprint_exclusion_observations\": {\n    \"PS\": {\n      \"receipt\": \"runs/2026-11-23-source-image-current-ps.json\",\n      \"receipt_sha256\": \"f90ed334e3570e90d06f7c6a85b3a632eeec3dfed11cf42459e7fea037ec043d\",\n      \"neither_feature_file_in_receipt_sources\": true\n    },\n    \"PII_REDACTED\": {\n      \"receipt\": \"runs/2026-11-23-source-image-current-pii-redacted.json\",\n      \"receipt_sha256\": \"9ceeebbb7e8e8b036cdc4d38d05a3a5ac33d21b65f2a5e7c18e4af77b4f6e465\",\n      \"neither_feature_file_in_receipt_sources\": true\n    },\n    \"extension\": {\n      \"receipt\": \"runs/2026-11-23-source-image-current-extension.json\",\n      \"receipt_sha256\": \"7bfa92bcf1949944e510049b70b0cb095495320549cc3688a7078a487bc5f5b8\",\n      \"neither_feature_file_in_receipt_sources\": true\n    },\n    \"protocol\": {\n      \"receipt\": \"runs/2026-11-23-source-image-current-protocol.json\",\n      \"receipt_sha256\": \"9488da653d37325013a1530bb9dbe4bd426d479f2b6b040cf11152b92177bef3\",\n      \"neither_feature_file_in_receipt_sources\": true\n    },\n    \"website\": {\n      \"receipt\": \"runs/2026-11-23-source-image-current-website.json\",\n      \"receipt_sha256\": \"9073353c5f8260cd5884a479960c20d58200d44724c9d6f5dd4cd30df3ec3c86\",\n      \"neither_feature_file_in_receipt_sources\": true\n    }\n  },\n  \"findings\": [],\n  \"limits\": [\n    \"Author24focused+5laterclockcases read as retained/source-reported evidence; reviewer didnotrepeat those suites or currentfullrepositorypacketCLI.\",\n    \"Owncurrent3tinycontrols andhistorical4tinycontrols use explicitfixture/clock/assessment substitutions; noindependentaccuracy/adoption/providerclaim.\",\n    \"Actualfullrepositorypreviousfailingcontrol andCLI outcome remainROOTobservation pending/separate; this is finalsource/differentreview only.\",\n    \"No ROOT edits/bounddocs/registry/V3/COMMON changes or SDK/native/browser/network.\"\n  ]\n}\n"
+  },
+  "actual_index_controls": {
+    "initial_focused": 24,
+    "initial_seconds": 0.21,
+    "post_review_deadline_boundary_cases": 5,
+    "boundary_seconds": 0.1,
+    "full_repository_method": 1,
+    "full_repository_seconds": 20.39,
+    "full30_method_rerun_claimed": false,
+    "failed_pre_correction_deadline_counter_sha256": "e3293907ccfe86d708add79eb26e8cfa9b859e968281539999d7371473c42258",
+    "original_failed_counter_reads": 10,
+    "corrected_first_expired_read_stops_after": 1
+  },
+  "selection_proof": "runs/2026-11-23-source-image-current-selection.json",
+  "actual_selected_current_cli": {
+    "captured_at": "2026-11-23T21:29:32.722021+00:00",
+    "exit": 0,
+    "elapsed_seconds": 10.553140875010286,
+    "packet_valid": true,
+    "engineering_checks_current": true,
+    "five_receipts": 5,
+    "files": 8484,
+    "records": 202,
+    "original_open": 66,
+    "stdout_bytes": 1293459,
+    "stdout_sha256": "e3afeaf70bba56ab85d80813394bac007161ebd89df90e5dccb13e37f94b4e14",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "release_approved": false,
+    "source_hashes": {
+      "tools/evidence_packet.py": "2fc2234ee8e992c4cecd37730498a22da8c84268ad4c7ae4245088aee61f2504",
+      "tests/test_evidence_packet.py": "c6369586e26438b5b18c6551a196a866920bede0b03e11d0694f8ff034e94189"
+    },
+    "scope": "Actual standalone current index over the five selected full engineering reports. No executed embedded command, cryptographic release or independent acceptance."
+  },
+  "distinct_actual_selection_review": {
+    "sha256": "dda59a2b3c6e9a5a2d89c330fba84e2822d8082136ae1911d0686aa1f1b4cf91",
+    "raw_utf8": "{\n  \"profile\": \"source-image-final-selection-distinct-review/v1\",\n  \"pass\": true,\n  \"captured_at\": \"2026-11-23T21:34:30.663105+00:00\",\n  \"reviewed_by\": \"Codex /root/seo\",\n  \"hosted_source_head\": \"5e8ca298d8eb2dbb9cdfe1844bcb7658136ea80f\",\n  \"selection_sha256\": \"b790f812e79a7da0350a1b653d29a6dde160941b345f765db7d16b323c755a1e\",\n  \"current_assessments\": {\n    \"PS\": {\n      \"path\": \"runs/2026-11-23-source-image-current-ps.json\",\n      \"sha256\": \"f90ed334e3570e90d06f7c6a85b3a632eeec3dfed11cf42459e7fea037ec043d\",\n      \"commands\": 7,\n      \"fingerprint_sha256\": \"b1b5e181a84689451ab2672b868582675e26fdaf66b14d221e62959a405f1da2\",\n      \"actual_run\": 45258115999,\n      \"current_assessment\": {\n        \"pass\": true,\n        \"capability\": \"PS\",\n        \"revalidation_required\": false,\n        \"failures\": [],\n        \"independent_accuracy_evidence\": false,\n        \"release_approved\": false\n      }\n    },\n    \"PII_REDACTED\": {\n      \"path\": \"runs/2026-11-23-source-image-current-pii-redacted.json\",\n      \"sha256\": \"9ceeebbb7e8e8b036cdc4d38d05a3a5ac33d21b65f2a5e7c18e4af77b4f6e465\",\n      \"commands\": 6,\n      \"fingerprint_sha256\": \"8f5bd71180ea04598595475f0c32a070d2e424d4600b97d0149cf16cd4e7444b\",\n      \"actual_run\": 45258115999,\n      \"current_assessment\": {\n        \"pass\": true,\n        \"capability\": \"PII_REDACTED\",\n        \"revalidation_required\": false,\n        \"failures\": [],\n        \"independent_accuracy_evidence\": false,\n        \"release_approved\": false\n      }\n    },\n    \"extension\": {\n      \"path\": \"runs/2026-11-23-source-image-current-extension.json\",\n      \"sha256\": \"7bfa92bcf1949944e510049b70b0cb095495320549cc3688a7078a487bc5f5b8\",\n      \"commands\": 14,\n      \"fingerprint_sha256\": \"7502c3c8a720b691c680f1e8e7412f2cab423c6fb0487ccbf277ea767430b52b\",\n      \"actual_run\": 45258115999,\n      \"current_assessment\": {\n        \"pass\": true,\n        \"capability\": \"extension\",\n        \"revalidation_required\": false,\n        \"failures\": [],\n        \"independent_accuracy_evidence\": false,\n        \"release_approved\": false\n      }\n    },\n    \"protocol\": {\n      \"path\": \"runs/2026-11-23-source-image-current-protocol.json\",\n      \"sha256\": \"9488da653d37325013a1530bb9dbe4bd426d479f2b6b040cf11152b92177bef3\",\n      \"commands\": 78,\n      \"fingerprint_sha256\": \"b02e3ea2703f06390e9097a6b40b6c8c5f43c2dc00bcd0ca30875a69016a3ed0\",\n      \"actual_run\": 45265152508,\n      \"current_assessment\": {\n        \"pass\": true,\n        \"capability\": \"protocol\",\n        \"revalidation_required\": false,\n        \"failures\": [],\n        \"independent_accuracy_evidence\": false,\n        \"release_approved\": false\n      }\n    },\n    \"website\": {\n      \"path\": \"runs/2026-11-23-source-image-current-website.json\",\n      \"sha256\": \"9073353c5f8260cd5884a479960c20d58200d44724c9d6f5dd4cd30df3ec3c86\",\n      \"commands\": 66,\n      \"fingerprint_sha256\": \"f2af1b0ccdd18042287b287ad002a0458aa4f576344f893ff7873f6466de27f3\",\n      \"actual_run\": 45265152508,\n      \"current_assessment\": {\n        \"pass\": true,\n        \"capability\": \"website\",\n        \"revalidation_required\": false,\n        \"failures\": [],\n        \"independent_accuracy_evidence\": false,\n        \"release_approved\": false\n      }\n    }\n  },\n  \"provider_identities\": {\n    \"earlier_run\": 45258115999,\n    \"earlier_job\": 137985205939,\n    \"earlier_overall_conclusion\": \"failure\",\n    \"earlier_combined_three_step\": \"success\",\n    \"later_run\": 45265152508,\n    \"later_job\": 138010006830,\n    \"later_conclusion\": \"success\",\n    \"later_attempt\": 1,\n    \"later_workflow\": \".github/workflows/source-profile-continuation.yml\",\n    \"earlier_artifact\": 14857934086,\n    \"later_artifact\": 14862984147\n  },\n  \"boundary_receipt_sha256\": \"13bb145774b694245e43db8b02cd9c50762be6fd5ce71ab41a2139e641e138fd\",\n  \"boundary_source_files\": 8495,\n  \"actual_standalone_CLI\": {\n    \"observer\": \"ROOT actualexecution; retainedrawbytesindependentlycheckedbyreviewer\",\n    \"observation_sha256\": \"576db38550705114cbe37511c83b707a26d7ba01ccbb915234301351fde93043\",\n    \"stdout_sha256\": \"e3afeaf70bba56ab85d80813394bac007161ebd89df90e5dccb13e37f94b4e14\",\n    \"exit\": 0,\n    \"elapsed_seconds\": 10.553140875010286,\n    \"current\": true,\n    \"files\": 8484,\n    \"reports\": 5,\n    \"records\": 202,\n    \"open\": 66,\n    \"separately_reviewed_unbound_feature_sources\": {\n      \"tools/evidence_packet.py\": \"2fc2234ee8e992c4cecd37730498a22da8c84268ad4c7ae4245088aee61f2504\",\n      \"tests/test_evidence_packet.py\": \"c6369586e26438b5b18c6551a196a866920bede0b03e11d0694f8ff034e94189\"\n    }\n  },\n  \"findings\": [],\n  \"API_metadata_sha256\": {\n    \"earlier\": {\n      \"job-api.json\": \"551388dd28f12b0baa7cdf000817ba9a715f701405ce50c3e43ac91c52ab285e\",\n      \"artifact-api.json\": \"394532529507728d0c636d6d3e2288355dacea6546299a024b0e8c5a7914ba53\"\n    },\n    \"later\": {\n      \"job-api.json\": \"e24dea9116930c84c9f8d64c0112742a2c3b8a921c1c282514cb0524c4b5afe1\",\n      \"artifact-api.json\": \"3da0417e2a3cad2c57edc2a98f4a2205da4aab5fb36ad942899f127ecfe82cbd\"\n    }\n  },\n  \"observations\": [\n    \"Fivefullraws byteexactprivate\\u2192public;7/6/14/78/66completecommands allsuccessful. Freshassess all5passes againstcurrentROOT, without executingprofiles/tests.\",\n    \"Twoactualruns explicitlydistinct; oldoverallfailure neverrelabeled. Old3successfulcombinedstep/fullreports validonlybecausecurrentfingerprintsstillmatch.\",\n    \"Priorselectedrawbytes retainedexactinGitHEADhistory; boundboard/plan/result unchanged againstwebsitefingerprint. All202requiredacceptances+percentages equalprotected6dbaseline136/66; no closures.\",\n    \"BoundaryPASS observedcurrentmanifesthash/browserreceiptpointers, no boundarysuite repeat.\",\n    \"ActualstandaloneCLI exit0/10.553s/1293459B retainedstdout hashverified withall5current/8484files; exact2fc/c636unboundrepair independentlyreviewed; doesnotclaimthatrepairraninhosted5e8job.\",\n    \"Source_head denotesactualhostedbase, notnewuncommittedbookkeeping/repaircommit or protectedsourceproducer. Protectedmain signature/managedpositive/publicsource release remainsseparate.\"\n  ],\n  \"limits\": [\n    \"RetainedproviderAPIrecords inspected; no newauthenticatedproviderquery. ZIPbodiesnotretained: APIzipSHArecords matchselection, but actualcompressedsize/digest/memberverification is ROOT actualbounded in-memory retrieval observation, NOT a newreviewerZIPmeasurement.\",\n    \"Sourcecurrentengineering only, no independentaccuracy/human/physical/legal/certification/release/originalapproval.\",\n    \"Twoearlierprivate reviewharnessstops wereSyntaxErrorbeforeexecution and thenoldstatebooleanmetadatahistoryloopTypeErrorafter5assesspassed; corrected5capabilitykeyhistoryloop. No featurechange; actualtoolfailuresretained.\",\n    \"No ROOTwrites/bounddocmutation/SDK/model/native/browser/install/network or profile/test execution.\"\n  ]\n}\n",
+    "zip_body_reverification_claimed": false
+  }
+}

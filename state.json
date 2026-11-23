@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-23T20:58:36.038455+00:00",
+  "updated": "2026-11-23T21:30:51.019970+00:00",
   "active_increment": "Current whole-source distribution binding and independent image qualification integration;136 originals complete/66 open; target60 unmet.",
   "status": "136complete66open_target60_unmet;source_snapshot_and_image_integration_active",
   "scope": "docs/master-scope.json",
@@ -1239,15 +1239,13 @@
     "native_download_evidence": "runs/2026-10-10-target-100-offline-download-public.json"
   },
   "current_engineering_revalidation": {
-    "PS": "runs/2026-11-23-managed-current-ps.json",
-    "PII_REDACTED": "runs/2026-11-23-managed-current-pii_redacted.json",
-    "extension": "runs/2026-11-23-managed-current-extension.json",
-    "protocol": "runs/2026-11-23-managed-current-protocol.json",
-    "website": "runs/2026-11-23-public-records-final-website.json",
-    "independent_accuracy_evidence": false,
-    "release_approved": false
+    "PS": "runs/2026-11-23-source-image-current-ps.json",
+    "PII_REDACTED": "runs/2026-11-23-source-image-current-pii-redacted.json",
+    "extension": "runs/2026-11-23-source-image-current-extension.json",
+    "protocol": "runs/2026-11-23-source-image-current-protocol.json",
+    "website": "runs/2026-11-23-source-image-current-website.json"
   },
-  "updated_at": "2026-11-23T20:58:36.038455+00:00",
+  "updated_at": "2026-11-23T21:30:51.019970+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -3996,7 +3994,7 @@
     ],
     "all_sitemap_URLs_indexed_verified": false
   },
-  "current_route_boundaries": "runs/2026-11-21-api-core-boundaries.json",
+  "current_route_boundaries": "runs/2026-11-23-source-image-current-boundaries.json",
   "pyodide_release_origin_replay": "runs/2026-11-18-pyodide-release-origin.json",
   "agent_tag_tools": {
     "status": "published_local_development_integration",
@@ -5371,7 +5369,86 @@
         "fix": "Full actual Git history for control prepositive; pair actual state timestamps. No policy or acceptance weakening.",
         "cancelled_superseded_source_run": 45263634950
       }
+    },
+    "evidence_index_repair": {
+      "status": "Actual standalone current index succeeded over all5 selected reports and8484files; focused controls and distinct source review passed.",
+      "genuine_declared_empty_source_supported": true,
+      "global_operation_seconds": 60,
+      "retained_bytes_limit": 134217728,
+      "unique_input_limit": 16384,
+      "common_source_contract_changed": false,
+      "actual_original_closures": 0,
+      "final_source_review_sha256": "112d68afc4a4572b6f8dbab910d387c191ac86767a1cd378139456a3631f660d",
+      "source_bound_current_profiles": 5,
+      "empty_source_is_not_a_license_grant": true,
+      "actual_selected_current_cli": {
+        "captured_at": "2026-11-23T21:29:32.722021+00:00",
+        "exit": 0,
+        "elapsed_seconds": 10.553140875010286,
+        "packet_valid": true,
+        "engineering_checks_current": true,
+        "five_receipts": 5,
+        "files": 8484,
+        "records": 202,
+        "original_open": 66,
+        "stdout_bytes": 1293459,
+        "stdout_sha256": "e3afeaf70bba56ab85d80813394bac007161ebd89df90e5dccb13e37f94b4e14",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "release_approved": false,
+        "source_hashes": {
+          "tools/evidence_packet.py": "2fc2234ee8e992c4cecd37730498a22da8c84268ad4c7ae4245088aee61f2504",
+          "tests/test_evidence_packet.py": "c6369586e26438b5b18c6551a196a866920bede0b03e11d0694f8ff034e94189"
+        },
+        "scope": "Actual standalone current index over the five selected full engineering reports. No executed embedded command, cryptographic release or independent acceptance."
+      }
+    },
+    "current_source_profile_selection": {
+      "recorded_at": "2026-11-23T21:24:18.514405+00:00",
+      "state": "all_five_complete_reports_current_after_selection",
+      "reports": {
+        "PS": {
+          "path": "runs/2026-11-23-source-image-current-ps.json",
+          "sha256": "f90ed334e3570e90d06f7c6a85b3a632eeec3dfed11cf42459e7fea037ec043d",
+          "commands": 7,
+          "execution_captured_at": "2026-11-23T20:21:23.569243+00:00",
+          "actual_run": 45258115999
+        },
+        "PII_REDACTED": {
+          "path": "runs/2026-11-23-source-image-current-pii-redacted.json",
+          "sha256": "9ceeebbb7e8e8b036cdc4d38d05a3a5ac33d21b65f2a5e7c18e4af77b4f6e465",
+          "commands": 6,
+          "execution_captured_at": "2026-11-23T20:21:33.090386+00:00",
+          "actual_run": 45258115999
+        },
+        "extension": {
+          "path": "runs/2026-11-23-source-image-current-extension.json",
+          "sha256": "7bfa92bcf1949944e510049b70b0cb095495320549cc3688a7078a487bc5f5b8",
+          "commands": 14,
+          "execution_captured_at": "2026-11-23T20:22:25.879713+00:00",
+          "actual_run": 45258115999
+        },
+        "protocol": {
+          "path": "runs/2026-11-23-source-image-current-protocol.json",
+          "sha256": "9488da653d37325013a1530bb9dbe4bd426d479f2b6b040cf11152b92177bef3",
+          "commands": 78,
+          "execution_captured_at": "2026-11-23T21:04:50.693311+00:00",
+          "actual_run": 45265152508
+        },
+        "website": {
+          "path": "runs/2026-11-23-source-image-current-website.json",
+          "sha256": "9073353c5f8260cd5884a479960c20d58200d44724c9d6f5dd4cd30df3ec3c86",
+          "commands": 66,
+          "execution_captured_at": "2026-11-23T21:20:33.680453+00:00",
+          "actual_run": 45265152508
+        }
+      },
+      "actual_later_successful_run": 45265152508,
+      "earlier_three_step_successful_in_overall_failed_run": 45258115999,
+      "same_run_for_all_five": false,
+      "independent_accuracy": false,
+      "protected_source_authorization_pending": true,
+      "evidence": "runs/2026-11-23-source-image-current-selection.json"
     }
   },
-  "current_route_boundaries_status": "Current source inventory refreshed; prior engineering selection retained pending full protocol and website receipts."
+  "current_route_boundaries_status": "Actual reviewed source/access boundary verification passed after current5receipt selection; independent tag accuracy and protected source release remain separate."
 }
