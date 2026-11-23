@@ -25,15 +25,15 @@ def workflow_tree():
 
 
 def test_complete_native_summary():
-    assert verifier['accepted_summary']({'result': 'Passed', 'totalTestCount': 6,
-                                        'passedTests': 6, 'failedTests': 0, 'skippedTests': 0})
+    assert verifier['accepted_summary']({'result': 'Passed', 'totalTestCount': 7,
+                                        'passedTests': 7, 'failedTests': 0, 'skippedTests': 0})
 
 
 @pytest.mark.parametrize('field,value', [('result', 'Failed'), ('totalTestCount', 4),
-    ('totalTestCount', 7), ('totalTestCount', 6.0), ('passedTests', 5), ('failedTests', 1),
+    ('totalTestCount', 6), ('totalTestCount', 8), ('totalTestCount', 7.0), ('passedTests', 5), ('failedTests', 1),
     ('failedTests', False), ('skippedTests', 1), ('skippedTests', False), ('testFailures', ['failure'])])
 def test_incomplete_summary_refused(field, value):
-    summary = {'result': 'Passed', 'totalTestCount': 6, 'passedTests': 6, 'failedTests': 0, 'skippedTests': 0}
+    summary = {'result': 'Passed', 'totalTestCount': 7, 'passedTests': 7, 'failedTests': 0, 'skippedTests': 0}
     summary[field] = value
     assert not verifier['accepted_summary'](summary)
 
@@ -273,7 +273,7 @@ def lifecycle_run(tmp_path, monkeypatch):
                 name, value = 'workflows', json.dumps(workflow_tree())
             elif argv[1:5] == ['xcresulttool', 'get', 'test-results', 'summary']:
                 name, value = 'summary', json.dumps(summary if summary is not None else {
-                    'result': 'Passed', 'totalTestCount': 6, 'passedTests': 6,
+                    'result': 'Passed', 'totalTestCount': 7, 'passedTests': 7,
                     'failedTests': 0, 'skippedTests': 0})
             elif argv[0] == '/usr/sbin/sysctl': name, value = 'capacity', '7516192768\n3\n'
             elif argv[0] == 'xcodebuild': name, value = 'xcode-version', 'Synthetic Xcode'
@@ -305,7 +305,7 @@ def test_completed_ui_is_reclaimed_before_exact_summary_and_final_identity(lifec
     assert trace.count('inventory') == trace.count('delete') == 1
     assert proof['post_ui_sources'] == proof['attempted_sources'] == proof['final_sources']
     assert proof['post_ui_source_unchanged'] is proof['source_unchanged_during_execution'] is True
-    assert proof['owned_simulator_removed'] is True and proof['test_count'] == 6
+    assert proof['owned_simulator_removed'] is True and proof['test_count'] == 7
     assert proof['workflow_ids'] == list(verifier['WORKFLOW_IDS'])
     assert proof['owned_simulator_delete_passed'] is proof['owned_simulator_inventory_absent'] is True
     for name, timeout in [('ui', 780), ('summary', 30), ('workflows', 30), ('delete', 90), ('inventory', 15)]:
@@ -454,3 +454,13 @@ def test_cleanup_can_finish_below_capacity_reserve(tmp_path, monkeypatch):
     assert result == 'synthetic cleanup'
     assert report['command_events'][0]['outcome'] == 'passed'
     assert report['command_events'][0]['cleanup'] is True
+
+
+def test_historical_six_and_new_seventh_exact_identity():
+    old = ('testBackgroundClearsInputAndResult', 'testEditInvalidatesOldFinding',
+           'testExplicitPSCheckAndClear', 'testNativePracticeShareRequiresExplicitCheck',
+           'testPrivacyNoticesPageNavigation', 'testShareClearDuringCheckAndRepeat')
+    assert set(verifier['WORKFLOW_IDS']) == {f'UIFlows/{n}()' for n in (*old, 'testPublicSourceExportAndCancel')}
+    assert not verifier['accepted_summary']({'result':'Passed','totalTestCount':6,'passedTests':6,'failedTests':0,'skippedTests':0})
+    tree=workflow_tree();tree['testNodes'][0]['children']=[n for n in tree['testNodes'][0]['children'] if 'testPublicSourceExportAndCancel' not in n['nodeIdentifier']]
+    assert not verifier['accepted_workflows'](tree)

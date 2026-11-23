@@ -11836,3 +11836,11 @@ Recorded 2026-11-23T23:35:56.345865+00:00 · Contributor: Codex /root/share_debu
 - **Changed.** Activated finite V4 source-copy review and archive verification without fallback, added exactly two source bindings to component and graph consumers, refreshed actual source-component rows and configured79 protected source controls. Preserved historical6d/V3 proof alongside activeQ/V4 and prospective literal bookkeeping paths.
 - **Evidence.** Actual16 affected controls pass26.640s; actual current source-only registry evaluate passes11.766s. Different final review checks exact registry/sibling preservation, names-only table, active callers and four independent forged-report controls. [Change record](./runs/changes/2026-11-23-source-v4-admission-integration.json).
 - **Not claimed.** No whole current source archive, protected signature, managed consumer, full79 hosted execution, web pin modification, compiled/runtime/model permission, legal/accuracy/human acceptance or full F-057/X-02 closure. New prospective record slots are not executions. Immutable classifiers/serializers, dependency_policy CODE and PS consumer remain unchanged.
+
+### 2026-11-23-ios-runtime-obligations
+
+Recorded 2026-11-23T23:21:18.537217+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Project exact17 runtime notices and bundled preferred-source offers into App and Share resources, with fixed public-only source access, bounded received-resource inspection and strict private output ownership.
+- **Evidence.** Current source-only CLI projection, private preparation and46 selected resource checks pass; old real IPA verifies ten runtime copies then refuses24 missing resources. Corrected read accounting, physical role identities and final membership rechecks pass focused controls and different source review. Historical fixtures/failures remain explicitly attributed. [Change record](./runs/changes/2026-11-23-ios-runtime-obligations.json).
+- **Not claimed.** No Swift or SDK execution, compiled UI, signing/upload, whole IPA admission, new Apple assent, independent accuracy, legal clearance, policy adoption or original requirement closure. Historical30/37/full fixture records are not relabeled as a current34-test or native run.

@@ -145,6 +145,39 @@ final class UIFlows: XCTestCase {
         app.scrollViews.firstMatch.swipeDown()
         XCTAssertTrue(app.textViews["selected-text"].exists)
     }
+    func testPublicSourceExportAndCancel() {
+        let app = launch()
+        let input = app.textViews["selected-text"]
+        focus(input, in: app); input.typeText("Invented private draft not for source sharing.")
+        app.scrollViews.firstMatch.swipeUp()
+        app.buttons["privacy-notices"].tap()
+        func offerAndCancel() {
+            let source = app.descendants(matching: .any).matching(identifier: "privacy-source-js").firstMatch
+            if !source.isHittable { app.tables.firstMatch.swipeUp() }
+            XCTAssertTrue(source.waitForExistence(timeout: 10)); source.tap()
+            let sheet = app.otherElements["public-runtime-source-share"]
+            XCTAssertTrue(sheet.waitForExistence(timeout: 10))
+            XCTAssertFalse(sheet.staticTexts["Invented private draft not for source sharing."].exists)
+            let cancel = app.buttons["Cancel"].firstMatch
+            XCTAssertTrue(cancel.waitForExistence(timeout: 10)); cancel.tap()
+            XCTAssertTrue(app.buttons["privacy-done"].waitForExistence(timeout: 10))
+            app.buttons["privacy-done"].tap()
+        }
+        offerAndCancel()
+        app.scrollViews.firstMatch.swipeDown()
+        XCTAssertTrue((input.value as? String ?? "").contains("Invented private draft"))
+        XCTAssertFalse(app.staticTexts["check-result"].exists)
+        app.buttons["clear"].tap(); assertEmpty(input)
+        openShare(app)
+        app.scrollViews.firstMatch.swipeUp()
+        app.buttons["share-privacy-notices"].tap()
+        offerAndCancel()
+        app.scrollViews.firstMatch.swipeDown()
+        XCTAssertTrue((app.textViews["share-selected-text"].value as? String ?? "").contains("example.invalid"))
+        XCTAssertFalse(app.staticTexts["share-check-result"].exists)
+        finishShare(app)
+    }
+
     func testExplicitPSCheckAndClear() {
         let app = launch()
         let input = app.textViews["selected-text"]
