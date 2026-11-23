@@ -754,7 +754,11 @@
         "tools/source_release_policy.py",
         "sbom/cffi-libffi/**/*",
         "sbom/mcp-runtime/**/*",
-        "sbom/mcp-rust-stdlib/**/*"
+        "sbom/mcp-rust-stdlib/**/*",
+        "tools/source_snapshot_binding.py",
+        "tests/test_source_snapshot_binding.py",
+        "docs/source-snapshot-binding-plan.md",
+        "tests/test_dependency_registry_integration.py"
       ],
       "commands": [
         [
@@ -1232,6 +1236,8 @@
           "tests/test_mcp_distribution.py",
           "tests/test_mcp_runtime_obligations.py",
           "tests/test_source_release_policy.py",
+          "tests/test_source_snapshot_binding.py",
+          "tests/test_dependency_registry_integration.py",
           "-q"
         ]
       ]
@@ -2030,7 +2036,11 @@
         "tools/source_release_policy.py",
         "sbom/cffi-libffi/**/*",
         "sbom/mcp-runtime/**/*",
-        "sbom/mcp-rust-stdlib/**/*"
+        "sbom/mcp-rust-stdlib/**/*",
+        "tools/source_snapshot_binding.py",
+        "tests/test_source_snapshot_binding.py",
+        "docs/source-snapshot-binding-plan.md",
+        "tests/test_dependency_registry_integration.py"
       ],
       "commands": [
         [
@@ -2400,6 +2410,8 @@
           "tests/test_mcp_distribution.py",
           "tests/test_mcp_runtime_obligations.py",
           "tests/test_source_release_policy.py",
+          "tests/test_source_snapshot_binding.py",
+          "tests/test_dependency_registry_integration.py",
           "-q"
         ]
       ]

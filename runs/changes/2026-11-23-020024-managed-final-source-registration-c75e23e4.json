@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-020024-managed-final-source-registration-c75e23e4",
+  "recorded_at": "2026-11-23T02:00:24.997571+00:00",
+  "author": "Codex PM with independent MCP and archive identity workers",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e0ad116fb665035933c1c5e593bccbb845f32176",
+  "changed": "Integrated the exact corrected registry/zlib producer and standalone captured-source archive/Git binding; registered8397source boundaries and their focused controls; updated actual worker status.",
+  "proves": "14tiny archive identity controls and7actual cases with distinct source/fixture review; real registry and source-notice CLI positives and injected refusals. Current449MCPqualified inputs remain unchanged.",
+  "limits": "All5current hosted source-bound capability checks and protected managed signing/install remain pending. Standalone identity/rights helpers do not admit a source archive or assert legal clearance. No original requirement is newly closed;136complete66open.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-024"
+  ],
+  "files": {
+    "eval/revalidation.json": "1b85395da28066f0ab23c250dba4c01721190ab7d4881b9924b31e56a6b173b8",
+    "eval/route-boundaries.json": "d38aef6f54a105081e4675c8055d3737ab846be411c33c5ac4ac2acff9ba014b",
+    "scripts/verify-route-boundaries.py": "39727efc70fcfd1963cfb32a9d3c438ffc758d3b1b11870c47844eef80b099ec",
+    "state.json": "5ea29a9e725d5c846e14c2ffc276345342bc6c5bced40c75f85e521a2be84fbe",
+    "docs/agent-delivery-status.md": "2e0b6cdc36b3f7bb41aa7fb96838ef74a0b46ee34adc0466740207d1c3ec9c74"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-source-snapshot-binding-pinned-load-current.json",
+      "sha256": "1f324d40fb469f4565f8c1f05b236602690129c3ce921f24090fa3d070b059ed"
+    },
+    {
+      "path": "runs/2026-11-22-source-snapshot-binding-distinct-review.json",
+      "sha256": "5dca57a643e78c0308bb2eebe7bc40c8e4f364b6c2c99fead779877e6a81ead8"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-current-registry-zlib-repair.json",
+      "sha256": "3ddb82a9991531db3fbff71547e5ba121bbdd0616bfcfb03ca0c8a7a73569f1a"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-registry-zlib-current-distinct-review.json",
+      "sha256": "7130fd6993b737a82a6634fba6d56dd4cac042fe13228c992c8a0e6633f9461b"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T02:00:25.904936+00:00"
+    }
+  ]
+}

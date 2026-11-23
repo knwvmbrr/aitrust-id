@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-020024-managed-final-source-registration-c75e23e4
+
+Recorded 2026-11-23T02:00:24.997571+00:00 · Contributor: Codex PM with independent MCP and archive identity workers · change
+
+- **Changed.** Integrated the exact corrected registry/zlib producer and standalone captured-source archive/Git binding; registered8397source boundaries and their focused controls; updated actual worker status.
+- **Evidence.** 14tiny archive identity controls and7actual cases with distinct source/fixture review; real registry and source-notice CLI positives and injected refusals. Current449MCPqualified inputs remain unchanged. [Change record](./runs/changes/2026-11-23-020024-managed-final-source-registration-c75e23e4.json).
+- **Not claimed.** All5current hosted source-bound capability checks and protected managed signing/install remain pending. Standalone identity/rights helpers do not admit a source archive or assert legal clearance. No original requirement is newly closed;136complete66open.
+
+
 ### 2026-11-22-source-snapshot-trusted-git-binding
 
 Recorded 2026-11-23T01:50:14.765663+00:00 · Contributor: Codex /root/seo; distinct reviewer Codex /root/web_camo · change
