@@ -1,3 +1,9 @@
+## Current operational delivery — 2026-11-23T15:16:14.889674+00:00
+
+Signed [Linux MCP connection](mcp-linux-release.md) now has actual protected-main production, fresh offline installation and eight synthetic SDK cases. All six public assets were anonymously downloaded and match the signed bytes. See the [dated scope/delivery result](mcp-publication-result.md).
+
+**136 originals complete / 66 open; target60 is not met.** No original criterion or percentage changed. The historical28 named closures remain28; this later operational outcome is recorded separately. Image-score native qualification, compose-privacy integration and finite source-rights V2 continue as independent engineering paths. Older snapshots below retain their original observations and timestamps.
+
 ## Current combined handoff — 2026-11-22T16:58:10.565070+00:00
 
 ## Latest verified delivery — November 22

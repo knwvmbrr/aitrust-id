@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-151932-retain-managed-mcp-public-evidence-996c5cf6
+
+Recorded 2026-11-23T15:19:32.161291+00:00 · Contributor: Codex /root; evidence reviews /root/share_debugger and /root/seo · change
+
+- **Changed.** Retained the five exact public-safe production, separate-root authorization and anonymous-download observations as versioned source evidence.
+- **Evidence.** Each new evidence file is explicitly attributed; all original scope acceptance and136/66 counts remain unchanged. [Change record](./runs/changes/2026-11-23-151932-retain-managed-mcp-public-evidence-996c5cf6.json).
+- **Not claimed.** The first normal commit guard correctly refused five proof files listed only as evidence rather than explicit changed files; no commit or push occurred. This record supplies exact file attribution without bypassing the guard.
+
+
+### 2026-11-23-151727-verified-linux-mcp-public-download-e3c220ca
+
+Recorded 2026-11-23T15:17:27.142373+00:00 · Contributor: Codex /root; production review /root/share_debugger; public-download review /root/seo · change
+
+- **Changed.** Published the protected-source signed Linux CPython3.13 MCP engineering preview with six exact public assets; updated current scope execution state and installation guidance.
+- **Evidence.** Actual main-only signing, current finite permission, fresh offline installation and eight SDK cases passed; anonymous public downloads match all six original asset hashes. [Change record](./runs/changes/2026-11-23-151727-verified-linux-mcp-public-download-e3c220ca.json).
+- **Not claimed.** No independent tag accuracy, other managed platform, broad license clearance or full-original closure.136 originals complete/66 open; website documentation source receipt requires its own refresh.
+
+
 ### 2026-11-23-031046-include-corrective-source-review-evidence-c0a4a863
 
 Recorded 2026-11-23T03:10:46.947348+00:00 · Contributor: Codex PM; review authored by Codex /root/share_debugger · change

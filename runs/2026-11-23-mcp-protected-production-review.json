@@ -1,0 +1,127 @@
+{
+  "all_managed_steps_success": true,
+  "artifact": {
+    "expires_at": "2026-12-23T15:06:48Z",
+    "id": 14830254646,
+    "private_connection_or_env_file_observed": false,
+    "public_files": {
+      "artifact.spdx.json": {
+        "bytes": 233283,
+        "sha256": "ded9f2dade3f5f299df31f17ca44d96ec944e4daf0b141ef88abfde90fbf4230"
+      },
+      "checker.zip": {
+        "bytes": 15519015,
+        "sha256": "8165f051203df50dc5f33a613f43dc1a3f613aae48224fd154053ba419d04aa5"
+      },
+      "evidence.json": {
+        "bytes": 586910,
+        "sha256": "2d41043bc1b5f6f52979bfb94dc1c749021af9e9da3d5a0e4f216221120048f5"
+      },
+      "managed-verified.json": {
+        "bytes": 438,
+        "sha256": "38e7662ccadab65c267c9a461c684fd9de5f8b7f0ffd919c666aec6dcc54c19b"
+      },
+      "sbom.sigstore.json": {
+        "bytes": 320956,
+        "sha256": "3b7cae1f1e5063ab97edd4b6ef60915cd2b1ee14f731a44bd8d980453b136c34"
+      },
+      "trusted-root.jsonl": {
+        "bytes": 34634,
+        "sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c"
+      }
+    },
+    "retained_once_by_PM": true,
+    "reviewer_downloaded_again": false,
+    "runtime_archive_members": 465,
+    "six_members_safe_exact": true,
+    "transport_bytes": 11270394,
+    "transport_sha256": "2534ff8dacb2bd8351494b305a1bf0dfdd5782487cdfb4c57c2b874468383930"
+  },
+  "attempt": 1,
+  "captured_at": "2026-11-23T15:16:23.676629+00:00",
+  "conclusion": "success",
+  "event": "push",
+  "fresh_install": {
+    "SDK_version_required": "2.3.0",
+    "actual_summary": {
+      "artifact_sha256": "8165f051203df50dc5f33a613f43dc1a3f613aae48224fd154053ba419d04aa5",
+      "attestation_verified": true,
+      "complete_project_obligations": false,
+      "configuration_included_in_stdout": false,
+      "license_clearance": false,
+      "profile": "mcp-managed-connection/v1",
+      "release_authorized": true,
+      "sdk_cases": 8,
+      "source_commit": "7986680cdf9edda736a488d7fa0a26d04d5290b1",
+      "state": "INSTALLED",
+      "target": "cp313-linux_x86_64_glibc_2_34"
+    },
+    "all_eight_pass_enforced_before_summary": true,
+    "eight_case_ids_required_by_executed_trusted_code": [
+      "exact_two_read_only_tools",
+      "implemented_capabilities_only",
+      "canonical_full_record_finding_no_echo",
+      "no_finding_is_not_clearance",
+      "missing_optional_privacy_preserves_ps",
+      "invalid_fields_refused_without_echo",
+      "oversized_input_refused_without_echo",
+      "legacy_full_record_parity"
+    ],
+    "individual_case_runtime_report_exported": false,
+    "local_rerun": false
+  },
+  "limits": {
+    "account_host_UI_approval": false,
+    "all_four_targets_managed_signed": false,
+    "full_F057_X02_closed": false,
+    "independent_accuracy": false,
+    "no_installs_SDK_models_or_asset_execution": true
+  },
+  "managed_job": 137785477700,
+  "pass": true,
+  "profile": "protected-managed-mcp-retained-execution-review/v1",
+  "release_notes": {
+    "glibc_minimum_matches_2_34": true,
+    "normal_GIL_64bit_CPython313_and_pip22_3_explicit": true,
+    "public_prerelease_not_yet_claimed": true,
+    "remaining_prerequisite": "Publish only the six original files at the fixed-source engineering prerelease, then independently fetch/hash public asset bytes. Current Actions offer expires after30days. Independently select source and roots; carried roots are producer evidence only.",
+    "sha256": "04e857d29cab18267dc92a8961329787cc4bc61c09d159d6d22ccdeb1d7811f9",
+    "six_asset_hashes_and_sizes_match": true,
+    "source_or_signed_asset_changes_needed": false
+  },
+  "review_scope": "Retained execution, protected identity and PM publication assembly review. Reviewer authored MCP implementation/workflow; no independent implementation review, local SDK rerun or new local signature verification is claimed. Existing distinct component reviews remain separate.",
+  "reviewer": "Codex / share_debugger",
+  "reviewer_correction": "Initial assertion expected449 graph inputs; actual production graph446 excludes only the qualification workflow and its two tests. All449 protected source comparisons passed; corrected the subset expectation using the source contract. A subsequent notes assertion was corrected to accept the already-present capitalized Free-threaded wording. Same retained bytes, no product/source change or download/runtime retry.",
+  "run_id": 45201307837,
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45201307837",
+  "signature_observations": {
+    "PM_separate_actual_authorization_sha256": "9fb34301de59a23102b1427c13f14eb630ad0764416634bf995a4aaac2c3fd9f",
+    "actual_producer_verifier_and_authorization_passed": true,
+    "certificate_SAN": "https://github.com/knwvmbrr/aitrust-id/.github/workflows/artifact-sbom.yml@refs/heads/main",
+    "certificate_inspection_is_data_parsing_not_crypto_verification": true,
+    "certificate_sha256": "d8404796a36ac4db8e22af77714a448e94afbfb43e6776c9628f937dd3060eab",
+    "issuer": "https://token.actions.githubusercontent.com",
+    "predicate_exact_SPDX_and_packet": true,
+    "predicate_type": "https://spdx.dev/Document/v2.3",
+    "runner": "github-hosted",
+    "source_digest": "7986680cdf9edda736a488d7fa0a26d04d5290b1",
+    "source_ref": "refs/heads/main",
+    "subject_digest_exact_runtime_bundle": true,
+    "transparency_entries": 1
+  },
+  "source_commit": "7986680cdf9edda736a488d7fa0a26d04d5290b1",
+  "source_policy": {
+    "finite_policy_admitted": true,
+    "graph_shared_SHA_exact": true,
+    "legal_or_complete_project_clearance": false,
+    "prepared_packet_flags_are_preverification_false": true,
+    "production_graph_source_count": 446,
+    "qualification_only_sources_excluded_from_production_graph": [
+      ".github/workflows/mcp-runtime-distribution.yml",
+      "tests/test_mcp_distribution.py",
+      "tests/test_mcp_runtime_obligations.py"
+    ],
+    "qualified449_SHA_and_GitOID_modes_match_protected_source": true,
+    "qualified_source_count": 449
+  }
+}
