@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-013931-mcp-registry-zlib-current-integration-5521e2ff",
+  "recorded_at": "2026-11-23T01:39:31.102499+00:00",
+  "author": "Codex / share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "531b75aeac918be855a762d494711d1e0aca43ce",
+  "changed": "Corrected the registry integration guard for the reviewed PS and MCP routes and regenerated the selected zlib provenance with the existing producer.",
+  "proves": "Actual before refusals become two passing isolated CLIs; exact two admissions and twelve refusals retain the PS nine-file contract. Four focused registry groups and ten selected zlib controls pass. Only the actual zlib policy producer hash changes; all449 qualified MCP inputs remain unchanged. Distinct reviewer replayed bounded typed/promotion/privacy refusal cases and source bindings.",
+  "limits": "No SDK rerun, filesystem export, site build, WASM execution, acquisition, signature, release or full F057/X02 closure. Existing hosted runtime reports retain their source identities; current hosted integration checks remain pending.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "scripts/verify-dependency-policy.py": "baeabab0f7e4f59009c529cc76f8dc862d4a6caf6e92f9dd5bc96bc7d78c0e0b",
+    "sbom/reviews/zlib-runtime/manifest.json": "bde99d53feb686f82c2f12b957cf77a84b0e4a015f6ea9b2e7b87f3156870835",
+    "sbom/reviews/zlib-runtime/history/manifest-e813ca64d1b0d021ee2a9df2d32034f68718bfb73a0bab8085554dde03dc42e4.json": "e813ca64d1b0d021ee2a9df2d32034f68718bfb73a0bab8085554dde03dc42e4",
+    "docs/mcp-current-registry-zlib-repair-plan.md": "0c8938e3626467ded39679aa4bf9113761563c6c79087901a7ed77ab1a41107d",
+    "tests/test_dependency_registry_integration.py": "9f80006e66b778b6adc4ebcc427285c786f70c38f2242dd972283693a48dd1ee",
+    "runs/2026-11-22-mcp-current-registry-zlib-repair.json": "3ddb82a9991531db3fbff71547e5ba121bbdd0616bfcfb03ca0c8a7a73569f1a",
+    "runs/2026-11-22-mcp-registry-zlib-current-distinct-review.json": "7130fd6993b737a82a6634fba6d56dd4cac042fe13228c992c8a0e6633f9461b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-mcp-current-registry-zlib-repair.json",
+      "sha256": "3ddb82a9991531db3fbff71547e5ba121bbdd0616bfcfb03ca0c8a7a73569f1a"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-registry-zlib-current-distinct-review.json",
+      "sha256": "7130fd6993b737a82a6634fba6d56dd4cac042fe13228c992c8a0e6633f9461b"
+    }
+  ],
+  "checks": []
+}
