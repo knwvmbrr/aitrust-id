@@ -1,0 +1,150 @@
+{
+  "actual_checkout": "6d75c8ee0bf14c8fda93163f18d095f15f540c11",
+  "actual_checkout_parents": [
+    "085106c1d40e86b071a25a7b9e4e56b965a31044",
+    "bbba64492df3519d2bb1b04aa04368f0dcea2c17"
+  ],
+  "actual_checkout_tree": "c56fc7c6802dca256d958ebe480ff4adc4605f81",
+  "artifact_downloaded": false,
+  "captured_at": "2026-11-23T02:15:52.864300+00:00",
+  "current_source_matches_precollection": {
+    "PII_REDACTED": true,
+    "PS": true,
+    "extension": true,
+    "protocol": true,
+    "website": true
+  },
+  "decoded_job_log": {
+    "HTTP_raw_log_digest_not_available": true,
+    "bytes": 1419122,
+    "retrieved_once_via_connected_GitHub": true,
+    "sha256": "f51667e9c364392b1ae87962bbc49025757e1c030a2de44c719c9f3cc01c8613"
+  },
+  "head_sha": "bbba64492df3519d2bb1b04aa04368f0dcea2c17",
+  "head_tree_equal_actual_checkout": true,
+  "identity_basis": "Actual checkout SHA from decoded checkout log; tree/parents independently read from GitHub Git commit API and compared with local head Git tree",
+  "independent_accuracy_evidence": false,
+  "job_conclusion": "failure",
+  "job_id": 137442216052,
+  "limits": [
+    "No workflow/test rerun, SDK, browser, installation, root source edit or artifact download",
+    "The failed command captured stdout hashes only; exact individual assertion output is unavailable in the job log and not invented",
+    "Four JSON receipts are copied from decoded log lines, not represented as byte-identical ZIP members",
+    "Only PS7/PII6/extension14 passed; protocol72 ends in exit1 and website65 did not execute",
+    "No overall five-capability success, signed release, global rights/admission, accuracy or original closure"
+  ],
+  "pass": false,
+  "profile": "source-bound-delivery-failed-run-investigation/v1",
+  "receipts_from_decoded_log": [
+    {
+      "assess_current_root": {
+        "capability": "PS",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "capability": "PS",
+      "checks": 7,
+      "commands": 7,
+      "failed_checks": [],
+      "pass": true,
+      "raw_json_from_decoded_log_sha256": "c6a906933a098da7796a820f095f1134d76907da79604997f246c8d0eaa14cf7",
+      "source_unchanged_during_execution": true
+    },
+    {
+      "assess_current_root": {
+        "capability": "PII_REDACTED",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "capability": "PII_REDACTED",
+      "checks": 6,
+      "commands": 6,
+      "failed_checks": [],
+      "pass": true,
+      "raw_json_from_decoded_log_sha256": "69dd6f9f584a639b4a7db557df8976e962b6f08ff255b3384dfce25d136b7546",
+      "source_unchanged_during_execution": true
+    },
+    {
+      "assess_current_root": {
+        "capability": "extension",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "capability": "extension",
+      "checks": 14,
+      "commands": 14,
+      "failed_checks": [],
+      "pass": true,
+      "raw_json_from_decoded_log_sha256": "92e03daa3207db3a8ccd30a06057e66ad887db67dd454aec02531066b4a894d3",
+      "source_unchanged_during_execution": true
+    },
+    {
+      "assess_current_root": {
+        "capability": "protocol",
+        "failures": [
+          "invalid_or_failed_receipt",
+          "incomplete_execution_evidence"
+        ],
+        "independent_accuracy_evidence": false,
+        "pass": false,
+        "release_approved": false,
+        "revalidation_required": true
+      },
+      "capability": "protocol",
+      "checks": 72,
+      "commands": 72,
+      "failed_checks": [
+        {
+          "command": [
+            "{python}",
+            "-m",
+            "pytest",
+            "tests/test_managed_mcp_release.py",
+            "tests/test_managed_mcp_runtime_cleanup.py",
+            "tests/test_managed_mcp_policy.py",
+            "tests/test_managed_mcp_workflow.py",
+            "tests/test_mcp_distribution.py",
+            "tests/test_mcp_runtime_obligations.py",
+            "tests/test_source_release_policy.py",
+            "tests/test_source_snapshot_binding.py",
+            "tests/test_dependency_registry_integration.py",
+            "-q"
+          ],
+          "exit": 1,
+          "index": 72,
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "stdout_sha256": "81f55fdc5e91fc7e30a3f0d99f4b0aa44045104d0f692f7cf82418717bd855a8"
+        }
+      ],
+      "pass": false,
+      "raw_json_from_decoded_log_sha256": "4674f6060101d1c291e9049fa07b6e9160152897df1a49ef042fd9d3486a08af",
+      "source_unchanged_during_execution": true
+    }
+  ],
+  "release_approved": false,
+  "reviewed_by": "/root/seo",
+  "root_fingerprint_before_sha256": "5099199102cd4031d78095697963fd2585f5d67f9caa7e8071f58eaa56dabe70",
+  "run_id": 45098054849,
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45098054849",
+  "source_derived_diagnosis": {
+    "actual_individual_pytest_failures_not_exposed": true,
+    "closed_profile_will_refuse_current_tree": "unknown_path",
+    "conflicting_tests": [
+      "RightsControls.test_actual_sparse_checkout_profile_and_source_id_are_current",
+      "RightsControls.test_actual_cli_bootstrap_from_unrelated_cwd_and_fixed_private_refusal"
+    ],
+    "proposed_correction": "Keep immutable rights/profile boundary; use exact reviewed supported source commit for positive CLI/API tests and explicitly assert current unmapped source refusal. Do not turn unknown paths into allowed rights.",
+    "reason": "Both assert default current-root eligibility, while the maintained closed contract intentionally refuses newly unmapped MCP/binding paths. This static contradiction is independent of which test failed first.",
+    "unknown_current_source_paths": 511
+  },
+  "website_status": "NOT_EXECUTED_AFTER_PROTOCOL_FAILURE"
+}

@@ -1,0 +1,163 @@
+{
+  "boundary_inventory": {
+    "all_current_sha256_match": true,
+    "count": 8397,
+    "inventory_sha256": "a25f696c87689e40e43d4ad4962ece579ea48cf3768eaa8e5104d759984c5475",
+    "new_pattern_group_counts": [
+      35,
+      4
+    ]
+  },
+  "capability_registration": {
+    "PII_REDACTED": {
+      "added_patterns_count": 0,
+      "commands_before": 6,
+      "commands_current": 6,
+      "new_command": null
+    },
+    "PS": {
+      "added_patterns_count": 0,
+      "commands_before": 7,
+      "commands_current": 7,
+      "new_command": null
+    },
+    "extension": {
+      "added_patterns_count": 0,
+      "commands_before": 14,
+      "commands_current": 14,
+      "new_command": null
+    },
+    "protocol": {
+      "added_patterns_count": 33,
+      "commands_before": 71,
+      "commands_current": 72,
+      "new_command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_managed_mcp_release.py",
+        "tests/test_managed_mcp_runtime_cleanup.py",
+        "tests/test_managed_mcp_policy.py",
+        "tests/test_managed_mcp_workflow.py",
+        "tests/test_mcp_distribution.py",
+        "tests/test_mcp_runtime_obligations.py",
+        "tests/test_source_release_policy.py",
+        "tests/test_source_snapshot_binding.py",
+        "tests/test_dependency_registry_integration.py",
+        "-q"
+      ]
+    },
+    "website": {
+      "added_patterns_count": 35,
+      "commands_before": 64,
+      "commands_current": 65,
+      "new_command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "tests/test_managed_mcp_release.py",
+        "tests/test_managed_mcp_runtime_cleanup.py",
+        "tests/test_managed_mcp_policy.py",
+        "tests/test_managed_mcp_workflow.py",
+        "tests/test_mcp_distribution.py",
+        "tests/test_mcp_runtime_obligations.py",
+        "tests/test_source_release_policy.py",
+        "tests/test_source_snapshot_binding.py",
+        "tests/test_dependency_registry_integration.py",
+        "-q"
+      ]
+    }
+  },
+  "captured_at": "2026-11-23T02:03:20.296647+00:00",
+  "component_bindings": {
+    "docs/mcp-current-registry-zlib-repair-plan.md": {
+      "commit": "6aecb07c438293e2eef7d551a494c51efa403dff",
+      "sha256": "0c8938e3626467ded39679aa4bf9113761563c6c79087901a7ed77ab1a41107d"
+    },
+    "docs/source-snapshot-binding-plan.md": {
+      "commit": "39c054ee39eca62c5878821a23955c8723fbbe69",
+      "sha256": "5eb031629ea118b07681a5880c5f016441c2e58710b942f633cf2ce719a0980e"
+    },
+    "sbom/reviews/zlib-runtime/manifest.json": {
+      "commit": "6aecb07c438293e2eef7d551a494c51efa403dff",
+      "sha256": "bde99d53feb686f82c2f12b957cf77a84b0e4a015f6ea9b2e7b87f3156870835"
+    },
+    "scripts/verify-dependency-policy.py": {
+      "commit": "6aecb07c438293e2eef7d551a494c51efa403dff",
+      "sha256": "baeabab0f7e4f59009c529cc76f8dc862d4a6caf6e92f9dd5bc96bc7d78c0e0b"
+    },
+    "tests/test_dependency_registry_integration.py": {
+      "commit": "6aecb07c438293e2eef7d551a494c51efa403dff",
+      "sha256": "9f80006e66b778b6adc4ebcc427285c786f70c38f2242dd972283693a48dd1ee"
+    },
+    "tests/test_source_snapshot_binding.py": {
+      "commit": "39c054ee39eca62c5878821a23955c8723fbbe69",
+      "sha256": "412a066de7a225c98083f1ef76ebde733bacaa7f8216aa91b2fcd0a48b5f2e1b"
+    },
+    "tools/source_snapshot_binding.py": {
+      "commit": "39c054ee39eca62c5878821a23955c8723fbbe69",
+      "sha256": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb"
+    }
+  },
+  "current_state_and_board_counts_match": true,
+  "delivery_workflow_delta": "Only eval/revalidation.json added to existing pull_request and main push path filters; all other bytes identical to085106c1.",
+  "executed_checks": "Read-only AST/JSON/source/hash/Git metadata comparisons; no repository verifier or tests executed.",
+  "four_managed_component_test_sources": {
+    "tests/test_managed_mcp_policy.py": {
+      "executed_by_this_reviewer": false,
+      "sha256": "13f692516d06287837a829bcf2ca5dfbe4ee1422abdd1b8715c6f0baf5721961",
+      "test_methods_static_count": 7
+    },
+    "tests/test_managed_mcp_release.py": {
+      "executed_by_this_reviewer": false,
+      "sha256": "adc8787dbba805a3412c44292199be499ac423db91316b62b29e94ef417eaa83",
+      "test_methods_static_count": 15
+    },
+    "tests/test_managed_mcp_runtime_cleanup.py": {
+      "executed_by_this_reviewer": false,
+      "sha256": "eb2bd068d9c3c34f6a3194c4c28870eda0bae09732433514c805f3854e32b801",
+      "test_methods_static_count": 1
+    },
+    "tests/test_managed_mcp_workflow.py": {
+      "executed_by_this_reviewer": false,
+      "sha256": "a68e1248ba204b85c49e8efc665da62d1e8867121abcb0afcd2e982a845c6655",
+      "test_methods_static_count": 3
+    }
+  },
+  "limits": {
+    "archive_build_or_execution": false,
+    "current_five_hosted_capabilities_pending": true,
+    "full_F057_X02_closure": false,
+    "sdk_rerun": false,
+    "signing_or_managed_install": false,
+    "source_unchanged_during_review": true
+  },
+  "no_firstparty_193_contract": "PM clarified193 was a typo; no such contract/count is asserted.",
+  "original_contracts": {
+    "all_required_acceptance_and_percent_values_unchanged": true,
+    "complete": 136,
+    "master_byte_identical_to_protected085": true,
+    "master_records": 202,
+    "open": 66,
+    "original_scope_total": 202
+  },
+  "pass": true,
+  "profile": "managed-mcp-final-pm-assembly-source-review/v1",
+  "public_or_hosted_execution_claimed": false,
+  "qualified_mcp_binding_count": 449,
+  "qualified_mcp_raw_sha_git_blob_oid_and_mode_unchanged": true,
+  "review_scope": "Distinct from PM registration/assembly only; reviewer authored MCP component and registry/zlib fix. Existing component peer reviews retained; this is not independent review of own implementation.",
+  "reviewed_commit": "bbba64492df3519d2bb1b04aa04368f0dcea2c17",
+  "reviewer": "Codex / share_debugger",
+  "source_archive_route_admitted": false,
+  "source_sha256": {
+    ".github/workflows/delivery-revalidation.yml": "e1f358ffcfd4be95864be60dc9bfe64c96aae7ed5aade2dcd299517e86c62b3f",
+    "docs/master-scope.json": "aa77c90853c83c0f47916ab8b780b26fe8122512bb8b0444fe0714b3fa94decf",
+    "docs/scope-progress.json": "ba2e2780adf67396c7c77a0fe205ff91112e32bb98558e404b316bf8730b40e0",
+    "docs/session-delivery.json": "80294b85a81a732bdef9aa928e94a3ae721f427e4ee57211577bf94157d9b157",
+    "eval/revalidation.json": "1b85395da28066f0ab23c250dba4c01721190ab7d4881b9924b31e56a6b173b8",
+    "eval/route-boundaries.json": "d38aef6f54a105081e4675c8055d3737ab846be411c33c5ac4ac2acff9ba014b",
+    "scripts/verify-route-boundaries.py": "39727efc70fcfd1963cfb32a9d3c438ffc758d3b1b11870c47844eef80b099ec",
+    "state.json": "5ea29a9e725d5c846e14c2ffc276345342bc6c5bced40c75f85e521a2be84fbe"
+  }
+}

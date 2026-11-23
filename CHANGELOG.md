@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-023101-managed-generated-scope-notices-sync-e632d6b8
+
+Recorded 2026-11-23T02:31:01.721522+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Built current static output with existing dependencies and bound deterministic generated scope/license metadata before recapturing the review inventory.
+- **Evidence.** Actual full site build and both selected source-notice postbuild checks pass. Exact generated JSON deltas are one policy-producer hash, its derived SPDX namespace and sixrecords evidence/attribution projections; all202jobs, acceptance and percentages unchanged. [Change record](./runs/changes/2026-11-23-023101-managed-generated-scope-notices-sync-e632d6b8.json).
+- **Not claimed.** This build and inventory correction do not replace current full hosted capability selection, protected checks, managed signing/install, independent accuracy or full original acceptance. Original136/66 unchanged; no installs/models/Docker.
+
+
+### 2026-11-23-022809-managed-source-rights-consumer-correction-1fc7f71a
+
+Recorded 2026-11-23T02:28:09.128608+00:00 · Contributor: Codex PM and source-rights author with distinct corrective review · change
+
+- **Changed.** Corrected two source-rights consumer tests to select the exact reviewed baseline while requiring new unmapped source trees to refuse; retained actual failed hosted checks and current source-capacity evidence.
+- **Evidence.** Original hosted no-egress failures confirmed exactly those two stale positive assumptions; corrected affected106-source-control command passes. Actual hosted archive packet15,650,740bytes remains within unchanged16MB bound. No helper/policy or rights expansion. [Change record](./runs/changes/2026-11-23-022809-managed-source-rights-consumer-correction-1fc7f71a.json).
+- **Not claimed.** Current full protocol/website evidence and protected signing/install remain pending. Site inventory-after-build drift is being diagnosed; no boundary or global clearance assertion is bypassed. Original136/66 counts unchanged.
+
+
 ### 2026-11-23-020024-managed-final-source-registration-c75e23e4
 
 Recorded 2026-11-23T02:00:24.997571+00:00 · Contributor: Codex PM with independent MCP and archive identity workers · change

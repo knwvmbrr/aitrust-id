@@ -1,0 +1,62 @@
+{
+  "actual_before_edit_diagnosis_sha256": "cc49a9637042dcf991b40c96d8540f03df088a4d8ccf1adac8a1aa12b1b8ae8d",
+  "actual_targeted_execution": {
+    "argv": [
+      "-I",
+      "-B",
+      "-m",
+      "pytest",
+      "tests/test_source_release_policy.py",
+      "-q",
+      "-k",
+      "actual_sparse_checkout_profile_and_source_id_are_current or actual_cli_bootstrap_from_unrelated_cwd_and_fixed_private_refusal"
+    ],
+    "deselected": 16,
+    "exit": 0,
+    "passed": 2,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "9044bdbc8d75ed568b4441e597635b36dc1ddc05c0a55df30fcd8c642b3122fb"
+  },
+  "authored_by": "/root/seo",
+  "captured_at": "2026-11-23T02:18:49.892113+00:00",
+  "contract_preserved": [
+    "Literal reviewed3f199 is selected separately for supported API/CLI cases",
+    "source_commit equals selected reviewed base; checkout_commit equals actual current HEAD without relabeling",
+    "Actual current default must refuse unknown_path whenever trusted currentGit tree contains unmapped paths",
+    "Malformed private argument refusal/noecho cases retained",
+    "Immutable helper897d, data2e555, worker941 and all old execution receipts remain unchanged"
+  ],
+  "current_source_after_sha256": {
+    "eval/dependencies/source-snapshot-release.json": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "tests/test_source_release_policy.py": "c6ce003e4abfa0c3b70b0a8604551eb9651156e79e42517a2343c54c82b4dab6",
+    "tools/source_release_policy.py": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6"
+  },
+  "current_source_before_sha256": {
+    "eval/dependencies/source-snapshot-release.json": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "tests/test_source_release_policy.py": "c6ce003e4abfa0c3b70b0a8604551eb9651156e79e42517a2343c54c82b4dab6",
+    "tools/source_release_policy.py": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6"
+  },
+  "execution_started_at": "2026-11-23T02:18:48.273056+00:00",
+  "first_targeted_execution_retained": {
+    "source_binding_limit": "Current-test identity observed after first execution; second2-case execution above includes actual before/after maps. These are2 unique corrected cases, not4 unique controls.",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "1a1da1dd94f01ed7fcbb276c75c25b2dccdeb4bdccfcc2bbdbd0b6cbb5c81fe7"
+  },
+  "limits": [
+    "Only2affected test methods changed; no helper/data/policy/manifest/graph/signer/code or source-rights admission change",
+    "No full command72 suite/workflow rerun, SDK/install/archive/build or accuracy/original closure claim",
+    "Actual hosted failing assertion output remains hashed-only; additional failures in command72 are not ruled out"
+  ],
+  "old_test_source_sha256": "8dc2898408fb3d0ac66bd82877f3b0a6d76b5abe06afdcd150234f724323f22f",
+  "only_changed_AST_methods": [
+    "test_actual_sparse_checkout_profile_and_source_id_are_current",
+    "test_actual_cli_bootstrap_from_unrelated_cwd_and_fixed_private_refusal"
+  ],
+  "pass": true,
+  "profile": "source-rights-exact-two-test-correction/v1",
+  "root_head": "bbba64492df3519d2bb1b04aa04368f0dcea2c17",
+  "source_unchanged_during_targeted_execution": true,
+  "test_method_count_unchanged": 18
+}

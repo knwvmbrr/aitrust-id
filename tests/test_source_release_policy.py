@@ -187,13 +187,29 @@ class RightsControls(unittest.TestCase):
                 real(reused[0])
 
     def test_actual_sparse_checkout_profile_and_source_id_are_current(self):
-        value = p.verify()
+        reviewed_commit = '3f199c6450da73335a9d2c5e2c1501ac3c946e14'
+        policy = p.policy(p.file_bytes(ROOT/p.POLICY, p.MAX_POLICY))
+        self.assertEqual(policy['base_commit'], reviewed_commit)
+        head = subprocess.check_output(['/usr/bin/git', '--no-replace-objects', '-C',
+                                        str(ROOT), 'rev-parse', '--verify', 'HEAD^{commit}']).decode().strip()
+        value = p.verify(source_commit=reviewed_commit)
         self.assertTrue(value['pass'], value)
         self.assertFalse(value['release_authorized'])
         self.assertFalse(value['legal_clearance'])
         self.assertFalse(value['compiled_runtime_permission'])
-        self.assertEqual(value['source_commit'], value['checkout_commit'])
+        self.assertEqual(value['source_commit'], reviewed_commit)
+        self.assertEqual(value['checkout_commit'], head)
         self.assertGreaterEqual(value['files'], 12925)
+        current_names = set(subprocess.check_output(
+            ['/usr/bin/git', '--no-replace-objects', '-C', str(ROOT),
+             'ls-tree', '-r', '-z', '--name-only', head]).decode().rstrip('\0').split('\0'))
+        permitted = {row[0] for row in policy['files']} | set(policy['introduced_first_party'])
+        current = p.verify()
+        if current_names - permitted:
+            self.assertFalse(current['pass'])
+            self.assertEqual(current['reason'], 'unknown_path')
+        else:
+            self.assertTrue(current['pass'], current)
         with tempfile.TemporaryDirectory() as other:
             value = p.verify(root=Path(other))
             self.assertFalse(value['pass'])
@@ -201,12 +217,36 @@ class RightsControls(unittest.TestCase):
 
     def test_actual_cli_bootstrap_from_unrelated_cwd_and_fixed_private_refusal(self):
         script = str(ROOT/'tools/source_release_policy.py')
+        reviewed_commit = '3f199c6450da73335a9d2c5e2c1501ac3c946e14'
+        policy = p.policy(p.file_bytes(ROOT/p.POLICY, p.MAX_POLICY))
+        self.assertEqual(policy['base_commit'], reviewed_commit)
+        head = subprocess.check_output(['/usr/bin/git', '--no-replace-objects', '-C',
+                                        str(ROOT), 'rev-parse', '--verify', 'HEAD^{commit}']).decode().strip()
         with tempfile.TemporaryDirectory() as other:
-            result = subprocess.run([sys.executable, '-I', '-S', '-B', script], cwd=other,
+            result = subprocess.run([sys.executable, '-I', '-S', '-B', script,
+                                     '--source-commit', reviewed_commit], cwd=other,
                                     stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=40)
             self.assertEqual(result.returncode, 0)
             self.assertEqual(result.stderr, b'')
-            self.assertTrue(json.loads(result.stdout)['pass'])
+            selected = json.loads(result.stdout)
+            self.assertTrue(selected['pass'])
+            self.assertEqual(selected['source_commit'], reviewed_commit)
+            self.assertEqual(selected['checkout_commit'], head)
+            current_names = set(subprocess.check_output(
+                ['/usr/bin/git', '--no-replace-objects', '-C', str(ROOT),
+                 'ls-tree', '-r', '-z', '--name-only', head]).decode().rstrip('\0').split('\0'))
+            permitted = {row[0] for row in policy['files']} | set(policy['introduced_first_party'])
+            current = subprocess.run([sys.executable, '-I', '-S', '-B', script], cwd=other,
+                                     stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=40)
+            self.assertEqual(current.stderr, b'')
+            current_report = json.loads(current.stdout)
+            if current_names - permitted:
+                self.assertEqual(current.returncode, 2)
+                self.assertFalse(current_report['pass'])
+                self.assertEqual(current_report['reason'], 'unknown_path')
+            else:
+                self.assertEqual(current.returncode, 0)
+                self.assertTrue(current_report['pass'])
             for args in [['--unknown=PRIVATE_ARGUMENT_CANARY'],
                          ['--source-commit', 'PRIVATE_ARGUMENT_CANARY']]:
                 result = subprocess.run([sys.executable, '-I', '-S', '-B', script, *args], cwd=other,
