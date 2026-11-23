@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-tag-runtime-integration
+
+Recorded 2026-11-23T22:33:41.247686+00:00 · Contributor: Codex /root integration; /root/seo review; /root/web_camo MT/image; /root/share_debugger runtime · change
+
+- **Changed.** Integrated the reviewed MT private-export repair and mobile source binding, browser runtime obligations/artifact component and bounded image failure diagnostics; recorded actual source-consumer task completion and selected evidence milestone.
+- **Evidence.** All five exact authored commits remain ancestors and every imported changed input matches its author. Integrated MT eight affected checks and runtime source-fact verification pass. Distinct source-consumer review supports31/32 scoped tasks closed and F120 selected integration80%; original full acceptance is preserved. Scope rendering verifies202 records with136complete66open. The expected stale Q web registry pin is now explicitly rebound with a distinct pre-code review; the exact additional MT method row preserves its legacy sibling. Actual web sources now pass for35 npm packages,14 runtime companions and three source-generator packages. Three fixed additional static notice/source files match trusted producer bytes; two plain links expose them. The board accepts a limited wrapper over immutable actual raw consumer facts; no validator change. [Change record](./runs/changes/2026-11-23-tag-runtime-integration.json).
+- **Not claimed.** No original closure, independent accuracy, whole-site observed build, new web admission, image native inference or physical/human acceptance. One web source registry pin is expected-stale and refuses; source-map integration and actual build are next. Six more original closures are required for60; existing Q authenticated source release remains usable.
+
+
 ### 2026-11-23-image-acquisition-diagnostics
 
 Recorded 2026-11-23T22:28:03.791736+00:00 · Contributor: Codex /root/web_camo · change

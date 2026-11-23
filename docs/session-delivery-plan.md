@@ -1,3 +1,35 @@
+## Completed authenticated source consumer and public delivery — 2026-11-23T22:29:05.223367+00:00
+
+**31 scoped jobs complete / 32 task records. Originals remain 136 complete /
+66 open; target60 is unmet. No original requirement closes in this update.**
+The existing `session-managed-source-consumer-integration` now meets its
+predeclared end-to-end acceptance. Protected main `9c98ac50` produced and signed
+the exact whole-source release; the real Linux consumer authenticated it and
+completed all three finite PS source probes. An outside Mac consumer independently
+retrieved trusted roots, exited0 and produced the same2,405-byte verified summary.
+The public engineering prerelease contains six exact assets; all six anonymous
+HTTP downloads matched their sizes and digests. Implementation credit remains
+`/root/web_camo` with ROOT integration/execution and `/root/seo` distinct review.
+The earlier `f86bfd4f` source handoff and simulated-authority controls remain
+separate historical observations.
+
+[Actual protected consumer](../runs/2026-11-23-source-image-protected-source-consumer.json) ·
+[Production, outside consumer, publication and distinct reviews](../runs/2026-11-23-source-image-publication.json).
+The release is source-copy permission plus finite standalone PS source exercise;
+it does not complete all fourteen routes, F-057/X-02, tag accuracy, independent
+human acceptance, certification or legal clearance.
+
+
+[Selected-job acceptance report](../runs/2026-11-23-source-image-consumer-acceptance.json) records this closure in the existing delivery evidence schema. The first direct raw-consumer reference was refused because that immutable execution result has no `pass`/`captured_at` acceptance envelope. Raw consumer/publication evidence and the validator are unchanged; no new execution or original acceptance is claimed.
+
+Dated assignments: ROOT integrates MT/runtime and finite V4; `/root/seo` maintains
+literal task accounting and reviews current source/proofs; `/root/share_debugger`
+works on the web artifact component and V4 architecture, with genuine web admission
+pending; `/root/web_camo` hands off reviewed acquisition-diagnostic source. The
+first actual image acquisition failed before inference; its exact cause is not
+yet established. No worker is claimed permanently running. Older dated snapshots
+below preserve their observations and acceptance conditions.
+
 ## Hosted prerequisite correction — 2026-11-23T20:58:36.038455+00:00
 
 Originals remain **136 complete / 66 open**; no original closure. Actual source
