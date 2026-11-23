@@ -784,7 +784,10 @@
         "tools/source_release_policy_v3.py",
         "eval/dependencies/source-snapshot-additions-v3.json",
         "tests/test_source_release_policy_v3.py",
-        "tests/test_source_snapshot_workflow.py"
+        "tests/test_source_snapshot_workflow.py",
+        "tools/visual_score_budget.py",
+        "scripts/run-visual-score-phase.py",
+        "tests/test_visual_score_budget.py"
       ],
       "commands": [
         [
@@ -1285,6 +1288,13 @@
           "-m",
           "pytest",
           "tests/test_visual_score_workflow.py",
+          "-q"
+        ],
+        [
+          "{python}",
+          "-m",
+          "pytest",
+          "tests/test_visual_score_budget.py",
           "-q"
         ],
         [
@@ -2119,7 +2129,10 @@
         "tools/source_release_policy_v3.py",
         "eval/dependencies/source-snapshot-additions-v3.json",
         "tests/test_source_release_policy_v3.py",
-        "tests/test_source_snapshot_workflow.py"
+        "tests/test_source_snapshot_workflow.py",
+        "tools/visual_score_budget.py",
+        "scripts/run-visual-score-phase.py",
+        "tests/test_visual_score_budget.py"
       ],
       "commands": [
         [

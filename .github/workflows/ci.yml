@@ -111,6 +111,7 @@ jobs:
           python -m pytest tests/test_visual_score.py -q
           python -m pytest tests/test_visual_score_qualification.py -q
           python -m pytest tests/test_visual_score_workflow.py -q
+          python -m pytest tests/test_visual_score_budget.py -q
           python scripts/prepare-visual-score-qualification.py check-lock
       - run: python -m pytest tests/test_gateway_integration.py -q
       - name: Keep tag routes independent under real HTTP saturation and worker failures

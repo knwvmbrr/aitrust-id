@@ -152,6 +152,8 @@ PATTERNS += ('tools/source_release_policy_v3.py', 'eval/dependencies/source-snap
 
 PATTERNS += ('tests/test_source_snapshot_workflow.py',)
 
+PATTERNS += ('tools/visual_score_budget.py', 'scripts/run-visual-score-phase.py', 'tests/test_visual_score_budget.py')
+
 HOST_RENDERED_ASSET = 'site/public/share-card.png'
 
 PATTERNS += ('mobile/ios/**/*', 'scripts/native_bundle.py', 'scripts/native-probe-cases.py',

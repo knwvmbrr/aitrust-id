@@ -21,7 +21,8 @@ class QualificationTests(unittest.TestCase):
   self.assertNotIn('integrations/visual-score-reference/1.0.0/hf-model-card.md',paths)
   self.assertEqual(q.SOURCE_PATHS.count(new),1)
   self.assertEqual(paths[new],hashlib.sha256((ROOT/new).read_bytes()).hexdigest())
-  self.assertEqual(len(paths),83)
+  self.assertEqual(len(paths),87)
+  self.assertTrue({'tools/visual_score_budget.py','scripts/run-visual-score-phase.py','tests/test_visual_score_budget.py','tests/test_visual_score_workflow.py'}<=set(paths))
  def test_complete_retained_lock(self):
   d=q.selection();self.assertEqual(len(d['packages']),39);self.assertEqual(sum(x['wheel']['size'] for x in d['packages']),272974128)
   self.assertEqual(d['role_counts'],{'runtime':8,'runtime_and_reference':4,'qualification_reference_only':27})
@@ -139,9 +140,9 @@ class QualificationTests(unittest.TestCase):
   self.assertFalse(any(x.endswith(('torch.load','jit.load','from_pretrained','urlopen')) for x in calls));self.assertIn('CLIPVisionModelWithProjection',calls)
  def test_workflow_no_secret_signer_or_required_gate(self):
   s=(ROOT/'.github/workflows/visual-score-qualification.yml').read_text()
-  self.assertIn('contents: read',s);self.assertIn("github.ref == 'refs/heads/codex/nov23-image-source-integration'",s);self.assertIn("github.event_name == 'workflow_dispatch'",s);self.assertIn("inputs.expected_commit == github.sha",s)
+  self.assertIn('contents: read',s);self.assertIn("github.ref == 'refs/heads/codex/nov23-image-native-qualification'",s);self.assertIn("github.event_name == 'workflow_dispatch'",s);self.assertIn("inputs.expected_commit == github.sha",s)
   for bad in ['id-token:','secrets.','pull_request_target','rm -rf','torch.load','pip install --upgrade']:self.assertNotIn(bad,s)
-  self.assertIn('retention-days: 7',s);self.assertIn('--clear-groups --no-new-privs --bounding-set=-all',s);self.assertIn('inventory-sha256',s)
+  self.assertIn('retention-days: 7',s);self.assertIn('--clear-groups --no-new-privs --bounding-set=-all',s);self.assertIn('inventory-sha256',(ROOT/'scripts/run-visual-score-phase.py').read_text())
  def test_production_source_unchanged_from_source_stage(self):
   frozen=json.loads((ROOT/'runs/2026-11-23-offline-image-score-final-source-controls.json').read_text())
   # Author proof structure is deliberately inspected, not inferred as numerical execution.

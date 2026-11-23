@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-23T19:55:05.117330+00:00",
+  "updated": "2026-11-23T20:14:55.609459+00:00",
   "active_increment": "Current whole-source distribution binding and independent image qualification integration;136 originals complete/66 open; target60 unmet.",
   "status": "136complete66open_target60_unmet;source_snapshot_and_image_integration_active",
   "scope": "docs/master-scope.json",
@@ -1247,7 +1247,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-23T19:55:05.117330+00:00",
+  "updated_at": "2026-11-23T20:14:55.609459+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -5309,17 +5309,24 @@
       ],
       "managed_source_release_authorized": false,
       "other_cohort_routes_still_blocked": 11,
-      "current_dependency_policy_sha256": "e050f7ad5f9579e76787faf77fe6600a1c553d011097e7c7488b203d1ca87602",
+      "current_dependency_policy_sha256": "6f40ec7876e1bcea8913938b5997b518935d6d3a0f7fe1829c00a2faeef77056",
       "evidence": "runs/2026-11-23-source-image-integration-controls.json",
       "receipt_scope": "Historical58 controls plus corrected production wrapper and actual simulated-authority probes; final inert wrapper test also passed; real signature is pending"
     },
     "independent_image_work": {
       "worker": "Codex /root/web_camo",
       "different_reviewer": "Codex /root/seo",
-      "status_at_snapshot": "preimplementation shared-deadline/cleanup-reserve amendment in isolated branch",
-      "runtime_qualification_executed": false,
+      "status_at_snapshot": "Reviewed4a7+df727 image source integrated; additive registration and future manual-only ref selected, native run still pending",
+      "native_qualification_executed": false,
       "model_or_packages_acquired_locally": false,
-      "tag_release_approved": false
+      "manual_dispatch_only": true,
+      "future_dedicated_ref": "refs/heads/codex/nov23-image-native-qualification",
+      "public_records_are_conditional_not_qualification": true,
+      "original_scope_closed": false,
+      "author_source_commits": [
+        "4a7cc4b4152c8645b0e096ad4fbd5bb50ba39e6e",
+        "df7277102cf87c666970868a0187378d52f37b88"
+      ]
     },
     "first_hosted_findings": {
       "source_commit": "f23504d166dd450a81cd35dbc15397b13815de21",
@@ -5336,7 +5343,8 @@
       "hosted_source_controls58_passed": true,
       "hosted_image_qualification33_passed": true,
       "current_revalidation_still_pending": true
-    }
+    },
+    "current_protocol_commands": 78
   },
   "current_route_boundaries_status": "Previous selection retained; fresh current-source inventory and boundary execution pending after integration freeze."
 }

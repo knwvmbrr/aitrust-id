@@ -6,6 +6,33 @@
 
 
 
+
+
+
+### 2026-11-23-image-budget-current-registration
+
+Recorded 2026-11-23T20:15:48.527603+00:00 · Contributor: Codex /root integration; Codex /root/web_camo implementation; Codex /root/seo review · change
+
+- **Changed.** Integrated reviewed shared image-operation deadlines, reserved cleanup and conditional publication plus exact preflight/executed source-suite counts; registered its source controls additively and selected only the future manual qualification ref.
+- **Evidence.** Driver, budget and budget tests match df727 byte-for-byte;87 current source paths are present. The composed98 attempt passed97 and caught one stale identity digest after the planned ref change; the corrected single guard passes and reconstructs the entire prior guard using only the old ref literal. Every previous command and its relative order remains, with one new protocol budget command. [Change record](./runs/changes/2026-11-23-image-budget-current-registration.json).
+- **Not claimed.** No new ref created, dispatch, SDK/model acquisition or native inference. Prepared files never self-approve qualification; exact successful hosted job and cross-bound actual artifacts are still required. Fresh current profiles, protected source delivery and independent tag acceptance remain pending.136complete66open; no original or scoped task-count increase.
+
+### 2026-11-23-image-source-suite-count-followup
+
+Recorded 2026-11-23T20:10:35.603958+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Pinned exact33/33/5/27 source-suite counts. All four discoveries must match before any suite or check-lock executes, and each executed count must match in addition to existing success/no-skips checks.
+- **Evidence.** The actual old zero-suite inert counter admitted check-lock. One corrected grouped regression covers eight preflight zero/partial refusals, four post-run partial refusals and one known complete mock-runner case. Different review independently checks four inert cases and87 stable before/after bindings. AST changes are only the literal count table/source phase and one grouped test; budget/helper/workflow/shared8 stay exact4a. Author/reviewer raw JSON bytes are separately preserved by UTF8/digest in one final assembly. [Change record](./runs/changes/2026-11-23-image-source-suite-count-followup.json).
+- **Not claimed.** No full98-source or27-budget suite, child/native/SDK/model execution, acquisition, install, network, push, dispatch or ROOT writes. Counts establish admission completeness, not accuracy, calibration, human labels, tags or original completion. All87 paths/resource caps/public prepared-only contract remain. ROOT handles registrations and final source/native decisions. Older source proofs/counter stay historical.
+
+### 2026-11-23-195613-image-shared-budget-d72c41b9
+
+Recorded 2026-11-23T19:56:13.120257+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Implemented one fixed monotonic qualification budget with reserved cleanup inside the unchanged35-minute job, clean fixed-phase process ownership, actual capacity observations and fail-closed prepared-only public evidence; imported ROOT exact historical-HF guard repair.
+- **Evidence.** Initial23 budget,5workflow,2source controls retain their exact source snapshot; corrected5publication/preseal/latecandidate and3ROOT-patch/source controls pass separately. Different reviewer replays original postwrite fault, normalpreparedpair and latepublication refusal against87 stable current inputs. Supervisor function ASTs, eight shared inputs and nine method/entrypoint/lock files remain exact; publisher errors leave only outerpassfalse conditional observations, never self-attested acceptance. [Change record](./runs/changes/2026-11-23-195613-image-shared-budget-d72c41b9.json).
+- **Not claimed.** Source-only engineering component, not native image qualification. No all26-current/old31/32 suite claim or rebinding of initial proofs. ROOT must verify actual exact-source jobSUCCESS plus source/artifact/candidate/terminal identities before separate positive qualification. No SDK/model/wheel acquisition, install, native inference, network, push, workflow dispatch, binary/model redistribution approval, legal clearance, FA/PA/origin/accuracy or original completion. Frozen916 stays unchanged; dedicated native ref and ROOT source registrations/protected integration remain future work. Initial AST editing failure and original publication counter are retained.
+
 ### 2026-11-23-source-capacity-consumer-contract
 
 Recorded 2026-11-23T19:55:05.117330+00:00 · Contributor: Codex /root; separate pre-code review by Codex /root/seo · change

