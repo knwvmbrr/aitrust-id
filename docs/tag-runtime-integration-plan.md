@@ -134,3 +134,18 @@ restoration attempt. Keep the same single deadline and supported-thread/timer
 preconditions. Focused pre-arm/post-real-arm/teardown fault controls must retain
 the original failure and restore actual process state, with no AUTH or budget
 expansion. No interrupted output is promoted to accepted artifact evidence.
+
+## Actual chunk-only built-in runtime composition
+
+Build3 passed prior corrections, then found the existing known
+NULrolldown/runtime.js in chunk.modules but absent from getModuleIds/getModuleInfo.
+The actual RenderedModule has code:string and renderedLength1441. Admit only
+this exact already supported virtual identity from the chunk table, recording
+the actual bounded nonnull code under the same canonical Rolldown provider and
+source_path:null. The union of graph and this built-in stays within2048 modules.
+An established graph record wins; repeated chunk-only occurrences must have
+identical actual code. Every other missing or unknown chunk ID, differing repeat
+and excessive source refuses. Preserve the existing schema/association/output
+bounds and full provider grant; invent no source file or new provider. Three
+inert scenarios and a different exact-source review precede actual build4. The
+failed third build and diagnostic replay remain unaccepted provenance.

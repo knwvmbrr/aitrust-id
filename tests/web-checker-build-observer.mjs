@@ -50,6 +50,27 @@ run('actual_pinned_Vite_resolved_polyfill_alias_uses_existing_provider',()=>fixt
   const record=JSON.parse(fs.readFileSync(path.join(root,'site/dist/web-build-observations.json')));
   assert.equal(record.modules['virtual:vite-modulepreload'].provider,'vite');assert.equal(Object.keys(record.modules).length,2);
 }));
+run('actual_chunk_only_Rolldown_runtime_keeps_existing_virtual_origin',()=>fixture(({root,bundle,context,plugin})=>{
+  const id='\0rolldown/runtime.js',code='/* Copyright built-in runtime fixture */';
+  bundle['fixture.js'].modules[id]={renderedLength:code.length,code};
+  bundle['same.js']={...bundle['fixture.js'],fileName:'same.js',modules:{[id]:{renderedLength:code.length,code}}};
+  fs.writeFileSync(path.join(root,'site/dist/same.js'),bundle['same.js'].code);
+  plugin().writeBundle.call(context,{dir:path.join(root,'site/dist')},bundle);
+  const record=JSON.parse(fs.readFileSync(path.join(root,'site/dist/web-build-observations.json'))),row=record.modules['virtual:rolldown-runtime'];
+  assert.equal(row.provider,'rolldown');assert.equal(row.source_path,null);assert.equal(row.transformed.bytes,Buffer.byteLength(code));assert.equal(row.source_notices[0].text,code);
+}));
+run('chunk_only_unknown_virtual_ID_still_refuses',()=>fixture(({root,bundle,context,plugin})=>{
+  bundle['fixture.js'].modules['\0unknown/runtime.js']={renderedLength:1,code:'x'};
+  assert.throws(()=>plugin().writeBundle.call(context,{dir:path.join(root,'site/dist')},bundle),BuildObservationUnavailable);
+  assert.ok(!fs.existsSync(path.join(root,'site/dist/web-build-observations.json')));
+}));
+run('different_chunk_only_runtime_code_refuses_instead_of_first_wins',()=>fixture(({root,bundle,context,plugin})=>{
+  const id='\0rolldown/runtime.js';bundle['fixture.js'].modules[id]={renderedLength:1,code:'a'};
+  bundle['second.js']={...bundle['fixture.js'],fileName:'second.js',modules:{[id]:{renderedLength:1,code:'b'}}};
+  fs.writeFileSync(path.join(root,'site/dist/second.js'),bundle['second.js'].code);
+  assert.throws(()=>plugin().writeBundle.call(context,{dir:path.join(root,'site/dist')},bundle),BuildObservationUnavailable);
+  assert.ok(!fs.existsSync(path.join(root,'site/dist/web-build-observations.json')));
+}));
 run('unknown_virtual_refuses_no_record',()=>fixture(({root,context,bundle,plugin})=>{
   context.getModuleIds=()=>['\0unknown/provider'];
   assert.throws(()=>plugin().writeBundle.call(context,{dir:path.join(root,'site/dist')},bundle),BuildObservationUnavailable);

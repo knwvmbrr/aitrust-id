@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-23T23:17:33.976469+00:00",
+  "pass": true,
+  "profile": "known-Rolldown-chunk-runtime-source-integration/v1",
+  "source_base": "ce25c74c2428db48dd6d58587265b6713414366f",
+  "source_sha256": {
+    "scripts/web-checker-build-observer.mjs": "cbbe2012c0329d5ced65cdd709afd43a8b46c8f195feb1e303182aef6581e6b8",
+    "tests/web-checker-build-observer.mjs": "5c7f3d3d991e786af2f11fd20b97956700351bdf5f014fde438dc2ace9f684f1",
+    "docs/tag-runtime-integration-plan.md": "a665c7ea36ce58a8a61017c4ca8557c65e77685916de0c42d8876275e969e6ae"
+  },
+  "actual_failed_build3": {
+    "captured_at": "2026-11-23T23:06:47.322176+00:00",
+    "source_commit": "ce25c74c2428db48dd6d58587265b6713414366f",
+    "pass": false,
+    "steps": [
+      {
+        "argv": [
+          "node",
+          "site/scripts/prepare.mjs"
+        ],
+        "cwd": "repository",
+        "exit_code": 0,
+        "seconds": 1.3323,
+        "log_bytes": 176,
+        "log_sha256": "119d4d7240caaa644995e635f8d389f077dc88a39e76b48a7219002e0fb1a354"
+      },
+      {
+        "argv": [
+          "git",
+          "diff",
+          "--exit-code"
+        ],
+        "cwd": "repository",
+        "exit_code": 0,
+        "seconds": 0.1327,
+        "log_bytes": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "node",
+          "scripts/verify-changelog.cjs"
+        ],
+        "cwd": "repository",
+        "exit_code": 0,
+        "seconds": 20.3776,
+        "log_bytes": 178,
+        "log_sha256": "ac00f1f0e2523c2acf372c50776cb7a61f17de2be07508a6f739cce557bc21d2"
+      },
+      {
+        "argv": [
+          "node",
+          "node_modules/vite/bin/vite.js",
+          "build",
+          "--config",
+          "../scripts/web-checker-build-observer.mjs"
+        ],
+        "cwd": "site",
+        "exit_code": 1,
+        "seconds": 1.539,
+        "log_bytes": 2362,
+        "log_sha256": "01398f838f9990f721d98a08ef47f5184c04a354b76a89ed77aa0764c4f9d2b7"
+      }
+    ],
+    "peak_child_rss_bytes": 277479424,
+    "dependency_install": false,
+    "network_download": false,
+    "compiled_release_admitted": false
+  },
+  "actual_failed_build3_sha256": "5615c332b8bc3a3b7f73beee2c8536f4edbf67846a3a05a3a86fad9f4bc7197b",
+  "diagnosis": {
+    "id": "\u0000rolldown/runtime.js",
+    "actual_getModuleInfo": null,
+    "listed_by_getModuleIds": false,
+    "chunk_rendered_length": 1441,
+    "chunk_code_type": "string",
+    "diagnostic_not_accepted_provenance": true
+  },
+  "different_reviews": {
+    "final_peer": {
+      "sha256": "a3ebe2044e6a95e6f9f56ad626042af4729747368244314375594f4b8ca7d3b3",
+      "record": {
+        "profile": "web-chunk-only-runtime-final-distinct-source-review/v1",
+        "captured_at": "2026-11-23T23:13:55.892Z",
+        "reviewer": "Codex /root/seo",
+        "conclusion": "CLEAR exact closed chunk-only runtime composition; actual whole-build census/admission still pending",
+        "source_sha256": {
+          "scripts/web-checker-build-observer.mjs": "cbbe2012c0329d5ced65cdd709afd43a8b46c8f195feb1e303182aef6581e6b8",
+          "tests/web-checker-build-observer.mjs": "bfdd1113cc02cd11feae891a84cc56f0d31cbcea8b5366c4f117c05f1d65a202",
+          "docs/tag-runtime-integration-plan.md": "a665c7ea36ce58a8a61017c4ca8557c65e77685916de0c42d8876275e969e6ae"
+        },
+        "own_actual_controls": [
+          {
+            "case": "identical_repeated_chunk_only",
+            "pass": true,
+            "both_output_files_present": true
+          },
+          {
+            "case": "different_repeated_chunk_only",
+            "pass": true,
+            "both_output_files_present": true
+          },
+          {
+            "case": "unknown_chunk_only",
+            "pass": true,
+            "both_output_files_present": true
+          },
+          {
+            "case": "graph_record_wins",
+            "pass": true,
+            "both_output_files_present": true
+          }
+        ],
+        "scope_notes": [
+          "Only exact NULrolldown/runtime.js may supplement a missing graph record, under existing canonical virtual:rolldown-runtime and retained Rolldown grant.",
+          "Nonnull bounded actual RenderedModule.code is recorded; same-code repeats accepted and differing chunk-only repeats refused. Graph records take precedence.",
+          "Combined record count2048/output/source/association caps, all other unknown-ID refusal, schema/provider set/source_path:null and false permission flags unchanged.",
+          "Own differing-repeat negative has both physical outputs present and a passing identical-repeat baseline, so missing-file refusal cannot mask the intended condition."
+        ],
+        "limits": {
+          "Vite_or_native_builder_imported": false,
+          "actual_whole_build_executed": false,
+          "route_or_original_accepted": false
+        }
+      }
+    },
+    "test_addendum": {
+      "sha256": "3a971003eec8444370e01ab7a841a181628f32a700c8582d78f907ee70a5532e",
+      "record": {
+        "actual_delta": "Authored different-repeat negative now writes second.js; identical-repeat positive includes physically present same.js. Both positive and negative exercise repeated actual chunk module code, not missing-output rejection.",
+        "captured_at": "2026-11-23T23:15:18.789342+00:00",
+        "conclusion": "CLEAR test-only prerequisite strengthening; reviewed production observer unchanged",
+        "observer_sha256": "cbbe2012c0329d5ced65cdd709afd43a8b46c8f195feb1e303182aef6581e6b8",
+        "permission_or_source_scope_changed": false,
+        "prior_actual_review_sha256": "a3ebe2044e6a95e6f9f56ad626042af4729747368244314375594f4b8ca7d3b3",
+        "profile": "web-chunk-runtime-fixture-prerequisite-final-addendum/v1",
+        "reviewer": "Codex /root/seo",
+        "reviewer_repeated13_or4_or_Vite": false,
+        "test_groups_declared": 13,
+        "test_sha256": "5c7f3d3d991e786af2f11fd20b97956700351bdf5f014fde438dc2ace9f684f1"
+      }
+    }
+  },
+  "actual_author_inert_groups": 13,
+  "actual_peer_affected_controls": 4,
+  "scope": "Only the existing known generated Rolldown runtime may enter the same canonical provider from actual chunk code; graph records win, differing repeats and unknown IDs refuse. Physical second output fixtures qualify the repeated-code controls.",
+  "limits": {
+    "full_genuine_build_completed": false,
+    "new_provider_or_permission": false,
+    "caps_increased": false,
+    "compiled_release_admitted": false,
+    "original_requirement_closed": false
+  }
+}

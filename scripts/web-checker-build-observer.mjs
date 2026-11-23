@@ -169,7 +169,7 @@ export function createWebBuildObserver({root=repository, sourceCommit, sourceTre
           const metadata=JSON.parse(read(name).toString('utf8'));
           need(metadata && metadata.name===provider && metadata.version===version);
         }
-        const ids=[], records={}, outputs={},translated=new Map();let associations=0;
+        const ids=[], records={}, outputs={},translated=new Map(),chunkOnly=new Map();let associations=0;
         for(const id of this.getModuleIds()){need(ids.length<LIMITS.modules);ids.push(id);}
         for(const id of ids){const record=moduleRecord(id,this.getModuleInfo(id));need(!Object.hasOwn(records,record.id));records[record.id]=record;translated.set(id,record.id);}
         for(const [name,value] of ownEntries(bundle,LIMITS.files)) {
@@ -178,6 +178,15 @@ export function createWebBuildObserver({root=repository, sourceCommit, sourceTre
           if(value.type==='chunk') {
             need(typeof value.code==='string');need(Buffer.byteLength(value.code)<=12_000_000);raw=Buffer.from(value.code);
             for(const [id,item] of ownEntries(value.modules,LIMITS.modules)) {
+              if(!translated.has(id)) {
+                // Rolldown's generated runtime can be absent from its module graph.
+                // Only this existing provider identity may come from actual chunk code.
+                need(id==='\0rolldown/runtime.js' && item && typeof item.code==='string');
+                need(Object.keys(records).length<LIMITS.modules);
+                const record=moduleRecord(id,{code:item.code});need(!Object.hasOwn(records,record.id));
+                records[record.id]=record;translated.set(id,record.id);chunkOnly.set(id,item.code);
+              }
+              if(chunkOnly.has(id))need(item && item.code===chunkOnly.get(id));
               need(translated.has(id) && item && Number.isSafeInteger(item.renderedLength) && item.renderedLength>=0);
               need(++associations<=8192 && item.renderedLength<=12_000_000);
               modules.push({id:translated.get(id),rendered_length:item.renderedLength});

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-web-chunk-runtime-integration
+
+Recorded 2026-11-23T23:18:13.652840+00:00 · Contributor: Codex /root integration; Codex /root/seo distinct actual-case source review · change
+
+- **Changed.** Handled the actual chunk-only Rolldown runtime under its existing virtual provider and refreshed four original scope evidence histories without changing acceptance or completion.
+- **Evidence.** Thirteen inert author groups and four distinct affected peer controls pass. Identical runtime repetition succeeds with both outputs physically present; differing code and every other unknown chunk ID refuse. Graph-supplied records win. Actual build3 remains a failed observation; exact root scope rendering retains202 records and136complete66open. [Change record](./runs/changes/2026-11-23-web-chunk-runtime-integration.json).
+- **Not claimed.** No new provider, generic virtual prefix, cap expansion, complete build, release admission, image qualification, independent accuracy or original closure. Whole genuine build4 and artifact inspection remain next; existing Q source release is separate.
+
+
 ### 2026-11-23-tag-runtime-followup
 
 Recorded 2026-11-23T23:04:51.341094+00:00 · Contributor: Codex /root fixes; Codex /root/seo distinct source and actual-evidence review · change
