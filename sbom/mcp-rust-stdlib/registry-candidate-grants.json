@@ -1,0 +1,1017 @@
+{
+  "profile": "rust-stdlib-lock-candidate-grants/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T08:09:11.840281+00:00",
+  "author": "Codex / seo",
+  "packages": [
+    {
+      "name": "addr2line",
+      "version": "0.25.1",
+      "archive_sha256": "1b5d307320b3181d6d7954e663bd7c774a838b8220fe0593c86d9fb09f498b4b",
+      "archive_bytes": 43134,
+      "url": "https://static.crates.io/crates/addr2line/addr2line-0.25.1.crate",
+      "rust_commit_locks": [
+        "48a229ceaefd4985c50990b14116b6d856af0985"
+      ],
+      "license_declared": "Apache-2.0 OR MIT",
+      "cache_reused": true,
+      "source_member_count": 16,
+      "retained_texts": [
+        {
+          "source_member": "addr2line-0.25.1/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.25.1/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "70f22e279a4a1b2697dfc1b53ead965a913faa3d2604545c439b28a24bf5eaf5"
+        },
+        {
+          "source_member": "addr2line-0.25.1/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.25.1/Cargo.toml",
+          "bytes": 3012,
+          "sha256": "6c371cb14bed07740324acb5b126bd58cf87771be72d4d88366b000f138b8001"
+        },
+        {
+          "source_member": "addr2line-0.25.1/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.25.1/Cargo.toml.orig",
+          "bytes": 2751,
+          "sha256": "1ce22b0b31c6bd077501c96cd568a95ee894042d651b0db9245a2f4395d12872"
+        },
+        {
+          "source_member": "addr2line-0.25.1/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.25.1/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source_member": "addr2line-0.25.1/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.25.1/LICENSE-MIT",
+          "bytes": 1069,
+          "sha256": "e99d88d232bf57d70f0fb87f6b496d44b6653f99f8a63d250a54c61ea4bcde40"
+        },
+        {
+          "source_member": "addr2line-0.25.1/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.25.1/README.md",
+          "bytes": 2485,
+          "sha256": "c635ed91d7b0c87ff2f0f311cd1a31336d2cbc4d011965d3b58afaca073538d9"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "addr2line",
+      "version": "0.27.1",
+      "archive_sha256": "e567177890eb1617b1f774005b66b26b2377afd138a2ca37aae7d8f0c81429d4",
+      "archive_bytes": 43584,
+      "url": "https://static.crates.io/crates/addr2line/addr2line-0.27.1.crate",
+      "rust_commit_locks": [
+        "58cf8f9c35b355199727627d07ae34a4e2846d67",
+        "b940084d7eb6a299eb4bfeb8e34901bc051e7ac4"
+      ],
+      "license_declared": "Apache-2.0 OR MIT",
+      "cache_reused": false,
+      "source_member_count": 16,
+      "retained_texts": [
+        {
+          "source_member": "addr2line-0.27.1/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.27.1/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "579e6935aef9963d8b3188263afbe6f3ee8bd1d15c825400507538c2fa4346be"
+        },
+        {
+          "source_member": "addr2line-0.27.1/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.27.1/Cargo.toml",
+          "bytes": 3012,
+          "sha256": "12c81b86f703c7bd66fea490f17ed659dfc7ba9aff15feb71f8e73fb04d6ecd3"
+        },
+        {
+          "source_member": "addr2line-0.27.1/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.27.1/Cargo.toml.orig",
+          "bytes": 2751,
+          "sha256": "47198ad52fdfbbd73fd3098346c23c5b27c03395e84e51678dc3e1885dd85c6f"
+        },
+        {
+          "source_member": "addr2line-0.27.1/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.27.1/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source_member": "addr2line-0.27.1/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.27.1/LICENSE-MIT",
+          "bytes": 1069,
+          "sha256": "e99d88d232bf57d70f0fb87f6b496d44b6653f99f8a63d250a54c61ea4bcde40"
+        },
+        {
+          "source_member": "addr2line-0.27.1/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.27.1/README.md",
+          "bytes": 2481,
+          "sha256": "26732c033f4dfc18be2f8f07f67436a33f08166806857cd0415ac7ad78f1654b"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "adler2",
+      "version": "2.0.1",
+      "archive_sha256": "320119579fcad9c21884f5c4861d16174d0e06250625266f50fe6898340abefa",
+      "archive_bytes": 13366,
+      "url": "https://static.crates.io/crates/adler2/adler2-2.0.1.crate",
+      "rust_commit_locks": [
+        "48a229ceaefd4985c50990b14116b6d856af0985",
+        "58cf8f9c35b355199727627d07ae34a4e2846d67",
+        "b940084d7eb6a299eb4bfeb8e34901bc051e7ac4"
+      ],
+      "license_declared": "0BSD OR MIT OR Apache-2.0",
+      "cache_reused": true,
+      "source_member_count": 13,
+      "retained_texts": [
+        {
+          "source_member": "adler2-2.0.1/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "08071a308400282ad18ca2de0df6d1f2dc270475f69aa483740ce311af3f63e0"
+        },
+        {
+          "source_member": "adler2-2.0.1/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/Cargo.toml",
+          "bytes": 2148,
+          "sha256": "8f30dbd092f3acc475b9d339736cd7b64c6489bc47cd234a7f2232fc52e2d490"
+        },
+        {
+          "source_member": "adler2-2.0.1/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/Cargo.toml.orig",
+          "bytes": 2242,
+          "sha256": "077df9094ac86443a4d05305f74782bd237c1f15fa39640463e4c62e9e4a310a"
+        },
+        {
+          "source_member": "adler2-2.0.1/LICENSE-0BSD",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/LICENSE-0BSD",
+          "bytes": 665,
+          "sha256": "861399f8c21c042b110517e76dc6b63a2b334276c8cf17412fc3c8908ca8dc17"
+        },
+        {
+          "source_member": "adler2-2.0.1/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/LICENSE-APACHE",
+          "bytes": 10860,
+          "sha256": "8ada45cd9f843acf64e4722ae262c622a2b3b3007c7310ef36ac1061a30f6adb"
+        },
+        {
+          "source_member": "adler2-2.0.1/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/LICENSE-MIT",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        },
+        {
+          "source_member": "adler2-2.0.1/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/README.md",
+          "bytes": 1979,
+          "sha256": "cd955d5d6a49161e6f7a04df4a5963581b66ed43fd5096b2dedca8e295efe4f9"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.4",
+      "archive_sha256": "9330f8b2ff13f34540b44e946ef35111825727b38d33286ef986142615121801",
+      "archive_bytes": 9360,
+      "url": "https://static.crates.io/crates/cfg-if/cfg-if-1.0.4.crate",
+      "rust_commit_locks": [
+        "48a229ceaefd4985c50990b14116b6d856af0985",
+        "58cf8f9c35b355199727627d07ae34a4e2846d67",
+        "b940084d7eb6a299eb4bfeb8e34901bc051e7ac4"
+      ],
+      "license_declared": "MIT OR Apache-2.0",
+      "cache_reused": true,
+      "source_member_count": 14,
+      "retained_texts": [
+        {
+          "source_member": "cfg-if-1.0.4/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/cfg-if-1.0.4/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "65840ba044457862e25b2d7d53f4a2de232adf933bd31aba8f2bd6a1f51a6881"
+        },
+        {
+          "source_member": "cfg-if-1.0.4/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/cfg-if-1.0.4/Cargo.toml",
+          "bytes": 1239,
+          "sha256": "281d508beb1fe3927cf03d3f2f8c9a5117b1e4fe97ae21b9026cf318e8c35273"
+        },
+        {
+          "source_member": "cfg-if-1.0.4/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/cfg-if-1.0.4/Cargo.toml.orig",
+          "bytes": 580,
+          "sha256": "5a17ee17da78f5179373b8324a1180e71efe2bcf3e3c9ca18c1bdb1e3faa9792"
+        },
+        {
+          "source_member": "cfg-if-1.0.4/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/cfg-if-1.0.4/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source_member": "cfg-if-1.0.4/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/cfg-if-1.0.4/LICENSE-MIT",
+          "bytes": 1057,
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        },
+        {
+          "source_member": "cfg-if-1.0.4/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/cfg-if-1.0.4/README.md",
+          "bytes": 1436,
+          "sha256": "cd565d563a2c70d197bb6fee1678e122214e22af7bdb046b80f52c1d953cd72f"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "foldhash",
+      "version": "0.2.0",
+      "archive_sha256": "77ce24cb58228fbb8aa041425bb1050850ac19177686ea6e0f41a70416f56fdb",
+      "archive_bytes": 23329,
+      "url": "https://static.crates.io/crates/foldhash/foldhash-0.2.0.crate",
+      "rust_commit_locks": [
+        "48a229ceaefd4985c50990b14116b6d856af0985",
+        "58cf8f9c35b355199727627d07ae34a4e2846d67",
+        "b940084d7eb6a299eb4bfeb8e34901bc051e7ac4"
+      ],
+      "license_declared": "Zlib",
+      "cache_reused": true,
+      "source_member_count": 12,
+      "retained_texts": [
+        {
+          "source_member": "foldhash-0.2.0/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/foldhash-0.2.0/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "5fe3916c8cc3fa6dab42352cec91217e071ece146a4c10d38b8c608de2d2925d"
+        },
+        {
+          "source_member": "foldhash-0.2.0/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/foldhash-0.2.0/Cargo.toml",
+          "bytes": 1551,
+          "sha256": "0a76cc29da1c33f4bdb505f5828ecdc20859c4cb9faa402e000f5f10511a27cc"
+        },
+        {
+          "source_member": "foldhash-0.2.0/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/foldhash-0.2.0/Cargo.toml.orig",
+          "bytes": 839,
+          "sha256": "04350078f390441844a35994ad83f2873b685a023c433ecb14eda200a5cb2f90"
+        },
+        {
+          "source_member": "foldhash-0.2.0/LICENSE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/foldhash-0.2.0/LICENSE",
+          "bytes": 856,
+          "sha256": "b1181a40b2a7b25cf66fd01481713bc1005df082c53ef73e851e55071b102744"
+        },
+        {
+          "source_member": "foldhash-0.2.0/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/foldhash-0.2.0/README.md",
+          "bytes": 18110,
+          "sha256": "e96613be984ff637c725f3f9abba366eb2d03a772695bed2d49dc61d330027ac"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "gimli",
+      "version": "0.32.3",
+      "archive_sha256": "e629b9b98ef3dd8afe6ca2bd0f89306cec16d43d907889945bc5d6687f2f13c7",
+      "archive_bytes": 289789,
+      "url": "https://static.crates.io/crates/gimli/gimli-0.32.3.crate",
+      "rust_commit_locks": [
+        "48a229ceaefd4985c50990b14116b6d856af0985"
+      ],
+      "license_declared": "MIT OR Apache-2.0",
+      "cache_reused": true,
+      "source_member_count": 53,
+      "retained_texts": [
+        {
+          "source_member": "gimli-0.32.3/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.32.3/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "bae9b5923acc9a419e4bc7060b19314aac48dc12f7ba31b7b0cb42edae19eb80"
+        },
+        {
+          "source_member": "gimli-0.32.3/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.32.3/Cargo.toml",
+          "bytes": 2280,
+          "sha256": "2b0d60ffc8705bf1de535e36ffa090511284747388d84056d5d96a5acbb0704a"
+        },
+        {
+          "source_member": "gimli-0.32.3/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.32.3/Cargo.toml.orig",
+          "bytes": 1854,
+          "sha256": "96b821d1b85daa2afbbdd21c1260dbbc5dce9ee72e53eff1a8bfc11ee12c8a01"
+        },
+        {
+          "source_member": "gimli-0.32.3/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.32.3/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source_member": "gimli-0.32.3/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.32.3/LICENSE-MIT",
+          "bytes": 1071,
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+        },
+        {
+          "source_member": "gimli-0.32.3/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.32.3/README.md",
+          "bytes": 3305,
+          "sha256": "79fc2aa247ebf7b8a3562632aa2bfc466cd655a0886717d47e4bc693166e9745"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "gimli",
+      "version": "0.34.0",
+      "archive_sha256": "1033caf0b349c518623b5396bfb2cf0bddf44f0306d543a250e5743297aafd10",
+      "archive_bytes": 335386,
+      "url": "https://static.crates.io/crates/gimli/gimli-0.34.0.crate",
+      "rust_commit_locks": [
+        "58cf8f9c35b355199727627d07ae34a4e2846d67",
+        "b940084d7eb6a299eb4bfeb8e34901bc051e7ac4"
+      ],
+      "license_declared": "MIT OR Apache-2.0",
+      "cache_reused": false,
+      "source_member_count": 56,
+      "retained_texts": [
+        {
+          "source_member": "gimli-0.34.0/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.34.0/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "97bc2962d365bb44e5d56d0a5e82710327a03f889585f8bbea803842e2ccb772"
+        },
+        {
+          "source_member": "gimli-0.34.0/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.34.0/Cargo.toml",
+          "bytes": 2472,
+          "sha256": "212db9e1be4465a4d2d4c53f657ca2ada4171eca9f52f08cf0a686b44fb6b444"
+        },
+        {
+          "source_member": "gimli-0.34.0/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.34.0/Cargo.toml.orig",
+          "bytes": 2045,
+          "sha256": "18c14493188302fc9aac1821f7b7493e8b7693b32840f7dc6e6b4a028564f5cb"
+        },
+        {
+          "source_member": "gimli-0.34.0/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.34.0/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source_member": "gimli-0.34.0/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.34.0/LICENSE-MIT",
+          "bytes": 1071,
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+        },
+        {
+          "source_member": "gimli-0.34.0/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.34.0/README.md",
+          "bytes": 2822,
+          "sha256": "d8305de205cdc5bbadba49bf213f7408fde9ab91943a6d0dfa15ecf8c75e2b76"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.17.1",
+      "archive_sha256": "ed5909b6e89a2db4456e54cd5f673791d7eca6732202bbf2a9cc504fe2f9b84a",
+      "archive_bytes": 155512,
+      "url": "https://static.crates.io/crates/hashbrown/hashbrown-0.17.1.crate",
+      "rust_commit_locks": [
+        "48a229ceaefd4985c50990b14116b6d856af0985",
+        "58cf8f9c35b355199727627d07ae34a4e2846d67",
+        "b940084d7eb6a299eb4bfeb8e34901bc051e7ac4"
+      ],
+      "license_declared": "MIT OR Apache-2.0",
+      "cache_reused": true,
+      "source_member_count": 50,
+      "retained_texts": [
+        {
+          "source_member": "hashbrown-0.17.1/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/hashbrown-0.17.1/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "b41a5623404ae232c5432fb7dfeb74f93c40f532ae057179b9a8b00982a006d4"
+        },
+        {
+          "source_member": "hashbrown-0.17.1/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/hashbrown-0.17.1/Cargo.toml",
+          "bytes": 3847,
+          "sha256": "afcb0e62d498f756bd4ddf69785c8282d01ee4fa40016158c7eac12ceb302f8c"
+        },
+        {
+          "source_member": "hashbrown-0.17.1/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/hashbrown-0.17.1/Cargo.toml.orig",
+          "bytes": 3896,
+          "sha256": "3e1f9929f381f46f969ea49faab281dc3c6ee08b24ef41f3ac8e2eec209ca078"
+        },
+        {
+          "source_member": "hashbrown-0.17.1/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/hashbrown-0.17.1/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source_member": "hashbrown-0.17.1/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/hashbrown-0.17.1/LICENSE-MIT",
+          "bytes": 1060,
+          "sha256": "ff8f68cb076caf8cefe7a6430d4ac086ce6af2ca8ce2c4e5a2004d4552ef52a2"
+        },
+        {
+          "source_member": "hashbrown-0.17.1/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/hashbrown-0.17.1/README.md",
+          "bytes": 3482,
+          "sha256": "d58265d24271a49876da9c77eaaa00093e01e41011e7e603da1f738ecdec4f47"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "libc",
+      "version": "0.2.185",
+      "archive_sha256": "52ff2c0fe9bc6cb6b14a0592c2ff4fa9ceb83eea9db979b0487cd054946a2b8f",
+      "archive_bytes": 821775,
+      "url": "https://static.crates.io/crates/libc/libc-0.2.185.crate",
+      "rust_commit_locks": [
+        "48a229ceaefd4985c50990b14116b6d856af0985"
+      ],
+      "license_declared": "MIT OR Apache-2.0",
+      "cache_reused": true,
+      "source_member_count": 360,
+      "retained_texts": [
+        {
+          "source_member": "libc-0.2.185/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.185/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "0bbebb7f1d27737bd569e11d5f934243e59f0df3569b4a050f19aa104ed2dd89"
+        },
+        {
+          "source_member": "libc-0.2.185/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.185/Cargo.toml",
+          "bytes": 6241,
+          "sha256": "89d682c2bf38c3051425fd0fc4319e31d55d4d20082fc6f3445f4681e95a4b8d"
+        },
+        {
+          "source_member": "libc-0.2.185/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.185/Cargo.toml.orig",
+          "bytes": 6725,
+          "sha256": "e6b107bb3de87b26953d9f7f5c97330d1d4e0c828a076c09fcc2e85cae040cb7"
+        },
+        {
+          "source_member": "libc-0.2.185/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.185/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source_member": "libc-0.2.185/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.185/LICENSE-MIT",
+          "bytes": 1066,
+          "sha256": "123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e"
+        },
+        {
+          "source_member": "libc-0.2.185/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.185/README.md",
+          "bytes": 4384,
+          "sha256": "0795294e9f08f32259a9ea3d694a867998f35cbccf38263205555d2dbc1ed2a5"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "libc",
+      "version": "0.2.189",
+      "archive_sha256": "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2",
+      "archive_bytes": 851502,
+      "url": "https://static.crates.io/crates/libc/libc-0.2.189.crate",
+      "rust_commit_locks": [
+        "58cf8f9c35b355199727627d07ae34a4e2846d67",
+        "b940084d7eb6a299eb4bfeb8e34901bc051e7ac4"
+      ],
+      "license_declared": "MIT OR Apache-2.0",
+      "cache_reused": true,
+      "source_member_count": 404,
+      "retained_texts": [
+        {
+          "source_member": "libc-0.2.189/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.189/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "3ae25e402263c1d372a9c6a0b09d4f63d6744a1f8d7912108191c3b6276ceb4f"
+        },
+        {
+          "source_member": "libc-0.2.189/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.189/Cargo.toml",
+          "bytes": 6072,
+          "sha256": "95159789ef9c9aaee8230b13be5c89594833a7bf2db299e61eb23b512cb67144"
+        },
+        {
+          "source_member": "libc-0.2.189/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.189/Cargo.toml.orig",
+          "bytes": 6440,
+          "sha256": "cba73b06128539455a57f7432e466ba583358ecb83ef8eda60731751b8a9f5cc"
+        },
+        {
+          "source_member": "libc-0.2.189/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.189/LICENSE-APACHE",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "source_member": "libc-0.2.189/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.189/LICENSE-MIT",
+          "bytes": 1066,
+          "sha256": "123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e"
+        },
+        {
+          "source_member": "libc-0.2.189/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.189/README.md",
+          "bytes": 3719,
+          "sha256": "5af805465cb8cfa4186cb75df07f4aebd35a3d88f497ed71d189b74ecf8cbcdc"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "memchr",
+      "version": "2.7.6",
+      "archive_sha256": "f52b00d39961fc5b2736ea853c9cc86238e165017a493d1d5c8eac6bdc4cc273",
+      "archive_bytes": 97616,
+      "url": "https://static.crates.io/crates/memchr/memchr-2.7.6.crate",
+      "rust_commit_locks": [
+        "48a229ceaefd4985c50990b14116b6d856af0985"
+      ],
+      "license_declared": "Unlicense OR MIT",
+      "cache_reused": false,
+      "source_member_count": 57,
+      "retained_texts": [
+        {
+          "source_member": "memchr-2.7.6/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "32184fbeeef54a11ecc1ee09a2bedd94706767377f431a528f48134f56cd3b6f"
+        },
+        {
+          "source_member": "memchr-2.7.6/COPYING",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/COPYING",
+          "bytes": 126,
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "source_member": "memchr-2.7.6/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/Cargo.toml",
+          "bytes": 1833,
+          "sha256": "5750ca97e8b2643f2ba1d7e98f54dcf54518c0176899e547876a59eb736198a5"
+        },
+        {
+          "source_member": "memchr-2.7.6/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/Cargo.toml.orig",
+          "bytes": 2560,
+          "sha256": "b919c7322ecc6da819546cb677da938730e5df32fdfe9ef5d7c2dc54cc768526"
+        },
+        {
+          "source_member": "memchr-2.7.6/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/LICENSE-MIT",
+          "bytes": 1081,
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        },
+        {
+          "source_member": "memchr-2.7.6/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/README.md",
+          "bytes": 9870,
+          "sha256": "92a74aaffe011bdaa06fbc34a01686a6eba58ca1322e976759417a547fddf734"
+        },
+        {
+          "source_member": "memchr-2.7.6/UNLICENSE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/UNLICENSE",
+          "bytes": 1211,
+          "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "memchr",
+      "version": "2.8.3",
+      "archive_sha256": "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98",
+      "archive_bytes": 99165,
+      "url": "https://static.crates.io/crates/memchr/memchr-2.8.3.crate",
+      "rust_commit_locks": [
+        "58cf8f9c35b355199727627d07ae34a4e2846d67",
+        "b940084d7eb6a299eb4bfeb8e34901bc051e7ac4"
+      ],
+      "license_declared": "Unlicense OR MIT",
+      "cache_reused": true,
+      "source_member_count": 59,
+      "retained_texts": [
+        {
+          "source_member": "memchr-2.8.3/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "739b57f156ae78ce5ad0f2bc44ff727f1a9d48e743bc266e8e3ab8c35baa5ecb"
+        },
+        {
+          "source_member": "memchr-2.8.3/COPYING",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/COPYING",
+          "bytes": 126,
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "source_member": "memchr-2.8.3/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/Cargo.toml",
+          "bytes": 1833,
+          "sha256": "a14f68b8fa55f15fd03b15dced37bcf66a0a628f568eedc82817cdb7f9281951"
+        },
+        {
+          "source_member": "memchr-2.8.3/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/Cargo.toml.orig",
+          "bytes": 2560,
+          "sha256": "2d004168044e88b00f971e65d7e6c988a555aa00d7ef4d0ceb5b5a9c228fb0c9"
+        },
+        {
+          "source_member": "memchr-2.8.3/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/LICENSE-MIT",
+          "bytes": 1081,
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        },
+        {
+          "source_member": "memchr-2.8.3/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/README.md",
+          "bytes": 9870,
+          "sha256": "92a74aaffe011bdaa06fbc34a01686a6eba58ca1322e976759417a547fddf734"
+        },
+        {
+          "source_member": "memchr-2.8.3/UNLICENSE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/UNLICENSE",
+          "bytes": 1211,
+          "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "miniz_oxide",
+      "version": "0.8.9",
+      "archive_sha256": "1fa76a2c86f704bdb222d66965fb3d63269ce38518b83cb0575fca855ebb6316",
+      "archive_bytes": 67132,
+      "url": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.8.9.crate",
+      "rust_commit_locks": [
+        "48a229ceaefd4985c50990b14116b6d856af0985"
+      ],
+      "license_declared": "MIT OR Zlib OR Apache-2.0",
+      "cache_reused": true,
+      "source_member_count": 23,
+      "retained_texts": [
+        {
+          "source_member": "miniz_oxide-0.8.9/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/.cargo_vcs_info.json",
+          "bytes": 105,
+          "sha256": "63ec91898b26d8ad1c575376009d0dedc8e81dba4fc6a312ed21be764bbbe524"
+        },
+        {
+          "source_member": "miniz_oxide-0.8.9/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/Cargo.toml",
+          "bytes": 2057,
+          "sha256": "f0d2683434f1c0d3cd9b8080031e82aa5089c9be1779cc5101e065883258d77d"
+        },
+        {
+          "source_member": "miniz_oxide-0.8.9/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/Cargo.toml.orig",
+          "bytes": 2015,
+          "sha256": "cd14ac8745b43145dab0cbbfa9e425f4778eb30d521a71d6c535fdcd9f00d3ca"
+        },
+        {
+          "source_member": "miniz_oxide-0.8.9/LICENSE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/LICENSE",
+          "bytes": 1213,
+          "sha256": "4108245a1f2df9d4e94df8abed5b4ba0759bb2f9b40a6b939f1be141077ae50b"
+        },
+        {
+          "source_member": "miniz_oxide-0.8.9/LICENSE-APACHE.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/LICENSE-APACHE.md",
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "source_member": "miniz_oxide-0.8.9/LICENSE-MIT.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/LICENSE-MIT.md",
+          "bytes": 1212,
+          "sha256": "799e9ca9d179295ef372f25d3769cdda7d25bb2668add6a6a1e22d1e4c678b8d"
+        },
+        {
+          "source_member": "miniz_oxide-0.8.9/LICENSE-ZLIB.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/LICENSE-ZLIB.md",
+          "bytes": 984,
+          "sha256": "0a54e647fe54104658b5e563c04c6f9edf251710e47bce692e0bd990a4ddaa39"
+        },
+        {
+          "source_member": "miniz_oxide-0.8.9/Readme.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/Readme.md",
+          "bytes": 4489,
+          "sha256": "223adc19e791c521f7cbc160c6f77959c74a86c58450855fead310461839fdd9"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "miniz_oxide",
+      "version": "0.9.1",
+      "archive_sha256": "b63fbc4a50860e98e7b2aa7804ded1db5cbc3aff9193adaff57a6931bf7c4b4c",
+      "archive_bytes": 70519,
+      "url": "https://static.crates.io/crates/miniz_oxide/miniz_oxide-0.9.1.crate",
+      "rust_commit_locks": [
+        "58cf8f9c35b355199727627d07ae34a4e2846d67",
+        "b940084d7eb6a299eb4bfeb8e34901bc051e7ac4"
+      ],
+      "license_declared": "MIT OR Zlib OR Apache-2.0",
+      "cache_reused": true,
+      "source_member_count": 23,
+      "retained_texts": [
+        {
+          "source_member": "miniz_oxide-0.9.1/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/.cargo_vcs_info.json",
+          "bytes": 105,
+          "sha256": "be3ba6d6a990751cc8b518e317cc96ad12b8d67a53a49b1ca592732716608bea"
+        },
+        {
+          "source_member": "miniz_oxide-0.9.1/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/Cargo.toml",
+          "bytes": 2114,
+          "sha256": "50b7813993bf57d2ece90fa780a330d1d5177723b8606c7d214f51d265d30c74"
+        },
+        {
+          "source_member": "miniz_oxide-0.9.1/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/Cargo.toml.orig",
+          "bytes": 2062,
+          "sha256": "99266263fe2cb880c3e84bf138d96789362aec0419cc222fdada012da7c12fab"
+        },
+        {
+          "source_member": "miniz_oxide-0.9.1/LICENSE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/LICENSE",
+          "bytes": 1213,
+          "sha256": "4108245a1f2df9d4e94df8abed5b4ba0759bb2f9b40a6b939f1be141077ae50b"
+        },
+        {
+          "source_member": "miniz_oxide-0.9.1/LICENSE-APACHE.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/LICENSE-APACHE.md",
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "source_member": "miniz_oxide-0.9.1/LICENSE-MIT.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/LICENSE-MIT.md",
+          "bytes": 1212,
+          "sha256": "799e9ca9d179295ef372f25d3769cdda7d25bb2668add6a6a1e22d1e4c678b8d"
+        },
+        {
+          "source_member": "miniz_oxide-0.9.1/LICENSE-ZLIB.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/LICENSE-ZLIB.md",
+          "bytes": 984,
+          "sha256": "0a54e647fe54104658b5e563c04c6f9edf251710e47bce692e0bd990a4ddaa39"
+        },
+        {
+          "source_member": "miniz_oxide-0.9.1/Readme.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/Readme.md",
+          "bytes": 4489,
+          "sha256": "223adc19e791c521f7cbc160c6f77959c74a86c58450855fead310461839fdd9"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "object",
+      "version": "0.37.3",
+      "archive_sha256": "ff76201f031d8863c38aa7f905eca4f53abbfa15f609db4277d44cd8938f33fe",
+      "archive_bytes": 344032,
+      "url": "https://static.crates.io/crates/object/object-0.37.3.crate",
+      "rust_commit_locks": [
+        "48a229ceaefd4985c50990b14116b6d856af0985"
+      ],
+      "license_declared": "Apache-2.0 OR MIT",
+      "cache_reused": true,
+      "source_member_count": 106,
+      "retained_texts": [
+        {
+          "source_member": "object-0.37.3/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.37.3/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "4cf7cc3e0606b7b7a5e5efeda6166c7b09efd9d7a3d8917254ef629a9abd3363"
+        },
+        {
+          "source_member": "object-0.37.3/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.37.3/Cargo.toml",
+          "bytes": 3600,
+          "sha256": "9373632c541767e8e6575ee1809ac4397a9e0bc6091691620ef7cefc11454a73"
+        },
+        {
+          "source_member": "object-0.37.3/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.37.3/Cargo.toml.orig",
+          "bytes": 4817,
+          "sha256": "c74258a94919c8978e1d3e29a4d3b77256dfa35b4352d1b0eac9c10388e3d029"
+        },
+        {
+          "source_member": "object-0.37.3/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.37.3/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source_member": "object-0.37.3/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.37.3/LICENSE-MIT",
+          "bytes": 1064,
+          "sha256": "0b74dfa0bcee5c420c6b7f67b4b2658f9ab8388c97b8e733975f2cecbdd668a6"
+        },
+        {
+          "source_member": "object-0.37.3/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.37.3/README.md",
+          "bytes": 2259,
+          "sha256": "287c6a1b30c7d64d91cdc02a7daaa7c840b97b20f999d3bd958993fb11c1a0ed"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "object",
+      "version": "0.39.1",
+      "archive_sha256": "2e5a6c098c7a3b6547378093f5cc30bc54fd361ce711e05293a5cc589562739b",
+      "archive_bytes": 360376,
+      "url": "https://static.crates.io/crates/object/object-0.39.1.crate",
+      "rust_commit_locks": [
+        "58cf8f9c35b355199727627d07ae34a4e2846d67",
+        "b940084d7eb6a299eb4bfeb8e34901bc051e7ac4"
+      ],
+      "license_declared": "Apache-2.0 OR MIT",
+      "cache_reused": false,
+      "source_member_count": 110,
+      "retained_texts": [
+        {
+          "source_member": "object-0.39.1/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.39.1/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "2756b3da39c43798560ad0af5140f8d649ca74ca2f70bcde52d5d8c02e87a248"
+        },
+        {
+          "source_member": "object-0.39.1/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.39.1/Cargo.toml",
+          "bytes": 3420,
+          "sha256": "373aa1a7d2fd042ac630d54e405147141e7a3da961e6a81d449c056fa3ae6152"
+        },
+        {
+          "source_member": "object-0.39.1/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.39.1/Cargo.toml.orig",
+          "bytes": 4362,
+          "sha256": "9754bed3e1671ccde0d380211d72cb113de78eb806ac2dfbea33da2909b4d768"
+        },
+        {
+          "source_member": "object-0.39.1/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.39.1/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source_member": "object-0.39.1/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.39.1/LICENSE-MIT",
+          "bytes": 1064,
+          "sha256": "0b74dfa0bcee5c420c6b7f67b4b2658f9ab8388c97b8e733975f2cecbdd668a6"
+        },
+        {
+          "source_member": "object-0.39.1/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.39.1/README.md",
+          "bytes": 3167,
+          "sha256": "2ab3c7e4d9d73298bd970eca9a56aaac93c48d5e44aa81b536b0f3a06f3f167a"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "rustc-demangle",
+      "version": "0.1.27",
+      "archive_sha256": "b50b8869d9fc858ce7266cce0194bd74df58b9d0e3f6df3a9fc8eb470d95c09d",
+      "archive_bytes": 30448,
+      "url": "https://static.crates.io/crates/rustc-demangle/rustc-demangle-0.1.27.crate",
+      "rust_commit_locks": [
+        "48a229ceaefd4985c50990b14116b6d856af0985"
+      ],
+      "license_declared": "MIT/Apache-2.0",
+      "cache_reused": true,
+      "source_member_count": 16,
+      "retained_texts": [
+        {
+          "source_member": "rustc-demangle-0.1.27/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.27/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "46bfe802e20ef53e8b3570185e39d8b2ec02a4d7ad30fe3825d4b73c917210fc"
+        },
+        {
+          "source_member": "rustc-demangle-0.1.27/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.27/Cargo.toml",
+          "bytes": 1273,
+          "sha256": "ec462e775f134cf7646d9dda346c43bbc2c0cd44def02e3af5b678bb6a9d879c"
+        },
+        {
+          "source_member": "rustc-demangle-0.1.27/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.27/Cargo.toml.orig",
+          "bytes": 889,
+          "sha256": "98e1276c12dad174fa66dd20d14272f8a68708ae4f0fd8a3502a0284ea752674"
+        },
+        {
+          "source_member": "rustc-demangle-0.1.27/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.27/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source_member": "rustc-demangle-0.1.27/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.27/LICENSE-MIT",
+          "bytes": 1057,
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        },
+        {
+          "source_member": "rustc-demangle-0.1.27/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.27/README.md",
+          "bytes": 1763,
+          "sha256": "80516de273102806427d87f02043b657ba0b327a7c651b0c33a94c0cd395f3de"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    },
+    {
+      "name": "rustc-demangle",
+      "version": "0.1.28",
+      "archive_sha256": "b74b56ffa8bb2830709a538c2cbcae9aa062db0d2a42563bfb09bdaae44020eb",
+      "archive_bytes": 30857,
+      "url": "https://static.crates.io/crates/rustc-demangle/rustc-demangle-0.1.28.crate",
+      "rust_commit_locks": [
+        "58cf8f9c35b355199727627d07ae34a4e2846d67",
+        "b940084d7eb6a299eb4bfeb8e34901bc051e7ac4"
+      ],
+      "license_declared": "MIT/Apache-2.0",
+      "cache_reused": false,
+      "source_member_count": 16,
+      "retained_texts": [
+        {
+          "source_member": "rustc-demangle-0.1.28/.cargo_vcs_info.json",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.28/.cargo_vcs_info.json",
+          "bytes": 94,
+          "sha256": "ad7401e19330b24724cf931d8278c030d824157fcdb70a377cbd1a1230f3e935"
+        },
+        {
+          "source_member": "rustc-demangle-0.1.28/Cargo.toml",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.28/Cargo.toml",
+          "bytes": 1273,
+          "sha256": "7ec9986ac171ec3eed0c2ae12b655b390bd7533f9e505005cc378b02be43a3e0"
+        },
+        {
+          "source_member": "rustc-demangle-0.1.28/Cargo.toml.orig",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.28/Cargo.toml.orig",
+          "bytes": 889,
+          "sha256": "1a9cf92ffbb4e47f0f98860d1207db75cf1a5558af55f46a829f51352155e5e9"
+        },
+        {
+          "source_member": "rustc-demangle-0.1.28/LICENSE-APACHE",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.28/LICENSE-APACHE",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "source_member": "rustc-demangle-0.1.28/LICENSE-MIT",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.28/LICENSE-MIT",
+          "bytes": 1057,
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        },
+        {
+          "source_member": "rustc-demangle-0.1.28/README.md",
+          "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.28/README.md",
+          "bytes": 1763,
+          "sha256": "80516de273102806427d87f02043b657ba0b327a7c651b0c33a94c0cd395f3de"
+        }
+      ],
+      "evidence_role": "Exact std-workspace lock-selected dependency grant candidate for supported Unix targets; optional/default features and linker reachability are not established by lock presence alone.",
+      "compiled_into_each_wheel": false
+    }
+  ],
+  "new_archive_bytes": 867819,
+  "cached_archives_reused": 13,
+  "retained_text_bytes": 369234,
+  "no_build_import_install_or_native_execution": true
+}

@@ -1,0 +1,63 @@
+{
+  "all_other_profile_fields_equal": true,
+  "base_commit": "88a5db2bba96af4a09058a4ea8ee3a080c97778b",
+  "captured_at": "2026-11-22T17:07:32.378894+00:00",
+  "changed_source_rows": {
+    "docs/mcp-stdio-distribution.md": {
+      "after": {
+        "bytes": 5699,
+        "path": "docs/mcp-stdio-distribution.md",
+        "sha256": "cf77502a33ffb85a1890e00f29f98d8f3e84f25639084f96d8505b7d1d777b4c"
+      },
+      "before": {
+        "bytes": 5217,
+        "path": "docs/mcp-stdio-distribution.md",
+        "sha256": "ad7d74049fd3b2bcce7dfff386b8e1fac0dbcfed9ccb449bc3bae9c6428ab9d9"
+      }
+    },
+    "tools/mcp_distribution.py": {
+      "after": {
+        "bytes": 51554,
+        "path": "tools/mcp_distribution.py",
+        "sha256": "9f87c59d5884200872c15829babd4a6080842ceb2a9f7a151bd9c1f4b3bd341a"
+      },
+      "before": {
+        "bytes": 51806,
+        "path": "tools/mcp_distribution.py",
+        "sha256": "c6f7551709b2ad6a4a12c3c554ab7084291dfa16f0a4a81249877a0333a3ecd5"
+      }
+    }
+  },
+  "current_source_inspection": {
+    "profile": "ai-trust-id-mcp-wheel-bundle/v1",
+    "profile_sha256": "b68066a0362a1e0c0729f53fcd33656e9c816ec424469c5cb72adf7a5a74628e",
+    "release_authorized": false,
+    "source_inputs_verified": true,
+    "target_count": 4,
+    "unique_wheel_count": 40,
+    "wheels_per_target": 30
+  },
+  "limits": [
+    "Actual source metadata producer over retained exact publisher wheels only.",
+    "No SDK install, archive assembly, filesystem export, build or network acquisition.",
+    "Old four-target artifact/runtime receipts remain historical; new artifact hashes not computed.",
+    "No permission/admission, signature, full F057/X02 or whole compiled closure."
+  ],
+  "new_manifest_bytes": 510765,
+  "new_manifest_sha256": "b68066a0362a1e0c0729f53fcd33656e9c816ec424469c5cb72adf7a5a74628e",
+  "old_manifest_immutable_git_commit": "782807ca4aa589e324dad9cf8aeded278af8b9c3",
+  "old_manifest_sha256": "08604a609b9a78eecd2f780ed3f1d7d1fd3264ea2b3890635655ba932f640038",
+  "producer": "tools.mcp_distribution.collect",
+  "producer_sha256": "9f87c59d5884200872c15829babd4a6080842ceb2a9f7a151bd9c1f4b3bd341a",
+  "profile": "mcp-source-metadata-cleanup-refresh/v1",
+  "publisher_wheel_bytes_read": 21811126,
+  "publisher_wheels": 40,
+  "release_authorized": false,
+  "unchanged_fields": [
+    "targets",
+    "dependencies",
+    "wheels",
+    "evidence_files",
+    "claims"
+  ]
+}

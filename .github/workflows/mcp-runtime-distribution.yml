@@ -1,0 +1,261 @@
+name: Optional MCP runtime distribution
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/mcp-runtime-distribution.yml'
+      - '.github/workflows/artifact-sbom.yml'
+      - 'tools/mcp_distribution.py'
+      - 'tools/mcp_runtime_obligations.py'
+      - 'tools/mcp_runtime_probe.py'
+      - 'tools/mcp_managed_release.py'
+      - 'tools/mcp_release_policy.py'
+      - 'scripts/install-managed-mcp.py'
+      - 'eval/dependencies/mcp-runtime-release.json'
+      - 'tools/tag_api.py'
+      - 'tools/dependency_policy.py'
+      - 'tools/distribution_artifacts.py'
+      - 'tools/artifact_evidence_io.py'
+      - 'tools/artifact_process.py'
+      - 'scripts/distribution-artifact.py'
+      - 'scripts/mcp-distribution.py'
+      - 'scripts/collect-mcp-notices.py'
+      - 'scripts/ai-tools-server.py'
+      - 'scripts/tag-api.py'
+      - 'scripts/check-tags.py'
+      - 'scripts/check-ps.py'
+      - 'scripts/worker_process.py'
+      - 'scripts/build-device-detector.py'
+      - 'scripts/aitrust.py'
+      - 'integrations/mcp/requirements.lock'
+      - 'eval/dependency-policy.json'
+      - 'protocol/normalization.py'
+      - 'protocol/unicode15-data.json'
+      - 'protocol/assertions.py'
+      - 'protocol/replay_identity.py'
+      - 'spec/assertion.schema.json'
+      - 'spec/LICENSE'
+      - 'services/evaluator/app.py'
+      - 'services/gateway/app.py'
+      - 'services/anonymizer/app.py'
+      - 'services/anonymizer/model_identity.py'
+      - 'services/anonymizer/requirements.lock'
+      - 'services/anonymizer/replay_metadata.py'
+      - 'LICENSE'
+      - 'NOTICE'
+      - 'eval/vectors/unicode/LICENSE.txt'
+      - 'sbom/mcp-runtime/**'
+      - 'sbom/cffi-libffi/**'
+      - 'sbom/mcp-rust-stdlib/**'
+      - 'tests/test_mcp_distribution.py'
+      - 'tests/test_mcp_runtime_obligations.py'
+      - 'docs/mcp-stdio-distribution.md'
+      - 'docs/mcp-managed-release.md'
+      - 'docs/distribution-artifact-sbom.md'
+      - 'runs/2026-11-22-mcp-retained-grants-distinct-review.json'
+      - 'runs/2026-11-22-mcp-cffi-rust-notice-facts-distinct-review.json'
+
+permissions:
+  contents: read
+
+jobs:
+  runtime:
+    name: ${{ matrix.target }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {runner: macos-15, python: '3.12', target: cp312-macosx_11_0_arm64}
+          - {runner: macos-15, python: '3.13', target: cp313-macosx_11_0_arm64}
+          - {runner: ubuntu-24.04, python: '3.12', target: cp312-linux_x86_64_glibc_2_34}
+          - {runner: ubuntu-24.04, python: '3.13', target: cp313-linux_x86_64_glibc_2_34}
+    env:
+      MCP_TARGET: ${{ matrix.target }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
+        id: python
+        with: {python-version: '${{ matrix.python }}'}
+      - name: Prepare private scope and exact source identity
+        timeout-minutes: 1
+        shell: bash
+        run: |
+          python -I -S -B - <<'PY'
+          import hashlib,json,os,sys
+          from pathlib import Path
+          sys.path.insert(0,str(Path.cwd()))
+          from tools import mcp_distribution as m
+          from tools.mcp_release_policy import COMPONENT_FILES
+          from tools.distribution_artifacts import graph
+          task=Path(os.environ['RUNNER_TEMP'])/('aitrust-mcp-'+os.environ['MCP_TARGET'])
+          task.mkdir(mode=0o700)
+          (task/'wheels').mkdir(mode=0o700)
+          (task/'reports').mkdir(mode=0o700)
+          paths=set(m.SOURCES)|{m.PROFILE_FILE,'tools/dependency_policy.py','tools/distribution_artifacts.py',
+            'eval/dependency-policy.json','tests/test_mcp_distribution.py','tests/test_mcp_runtime_obligations.py',
+            '.github/workflows/mcp-runtime-distribution.yml'}
+          profile=json.loads(Path(m.PROFILE_FILE).read_bytes())
+          paths.update(COMPONENT_FILES)
+          paths.update(graph('mcp-stdio')['source_sha256'])
+          paths.update(x['path'] for x in profile['evidence_files'])
+          source={p:hashlib.sha256(Path(p).read_bytes()).hexdigest()for p in sorted(paths)}
+          (task/'reports/source-before.json').write_text(json.dumps(source,sort_keys=True)+'\n')
+          actual=m.decode(m.command([sys.executable,'-I','-S','-B','-c',m.RUNTIME_PROBE],task_directory=task,timeout=5))
+          assert m.target_for_runtime(actual)==os.environ['MCP_TARGET']
+          (task/'reports/prerequisite.json').write_text(json.dumps({'target':os.environ['MCP_TARGET'],'observed':actual})+'\n')
+          with open(os.environ['GITHUB_ENV'],'a')as f:f.write('MCP_TASK_DIR='+str(task)+'\n')
+          PY
+      - name: Execute all focused standard-library controls
+        timeout-minutes: 2
+        shell: bash
+        run: |
+          python -I -S -B - <<'PY'
+          import contextlib,io,json,os,sys,unittest
+          from pathlib import Path
+          sys.path.insert(0,str(Path.cwd()))
+          output=io.StringIO()
+          with contextlib.redirect_stdout(output),contextlib.redirect_stderr(output):
+            suite=unittest.defaultTestLoader.discover('tests',pattern='test_mcp_*.py')
+            result=unittest.TextTestRunner(stream=output).run(suite)
+          value={'tests':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'skipped':len(result.skipped)}
+          (Path(os.environ['MCP_TASK_DIR'])/'reports/focused.json').write_text(json.dumps(value)+'\n')
+          assert value=={'tests':44,'failures':0,'errors':0,'skipped':0},'Focused controls did not complete'
+          PY
+      - name: Acquire only exact selected publisher wheels
+        timeout-minutes: 4
+        shell: bash
+        run: |
+          python -I -S -B - <<'PY'
+          import hashlib,json,os,shutil,tempfile,time,urllib.parse,urllib.request,sys
+          from pathlib import Path
+          sys.path.insert(0,str(Path.cwd()))
+          from tools import mcp_distribution as m
+          from tools.artifact_evidence_io import Capture
+          task=Path(os.environ['MCP_TASK_DIR']);target=os.environ['MCP_TARGET'];deadline=time.monotonic()+180
+          with Capture()as c:index,_=m.index(c,Path.cwd());c.check()
+          rows=index['targets'][target];assert len(rows)==30 and sum(r['bytes']for r in rows)<12_000_000
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+            def redirect_request(self,*a,**k):raise ValueError('Wheel redirect refused')
+          opener=urllib.request.build_opener(NoRedirect);observed=[]
+          for row in rows:
+            parsed=urllib.parse.urlsplit(row['url'])
+            assert parsed.scheme=='https'and parsed.hostname=='files.pythonhosted.org'and not parsed.query and not parsed.fragment
+            assert urllib.parse.unquote(parsed.path.rsplit('/',1)[-1])==row['filename']
+            assert shutil.disk_usage(task).free>2*1024**3+32*1024**2
+            assert time.monotonic()<deadline
+            fd,temp=tempfile.mkstemp(prefix='.acquire-',dir=task/'wheels');count=0;digest=hashlib.sha256()
+            try:
+              with os.fdopen(fd,'wb')as stream,opener.open(row['url'],timeout=min(15,max(.1,deadline-time.monotonic())))as response:
+                assert response.status==200 and response.url==row['url']
+                while True:
+                  assert time.monotonic()<deadline
+                  block=response.read(65536)
+                  if not block:break
+                  count+=len(block);assert count<=row['bytes'];digest.update(block);stream.write(block)
+                stream.flush();os.fsync(stream.fileno())
+              assert count==row['bytes']and digest.hexdigest()==row['sha256']
+              os.link(temp,task/'wheels'/row['filename'])
+            finally:os.unlink(temp)
+            observed.append({'filename':row['filename'],'bytes':count,'sha256':digest.hexdigest()})
+          (task/'reports/wheels.json').write_text(json.dumps({'count':len(observed),'files':observed})+'\n')
+          PY
+      - name: Build inspect and exercise the actual offline installation
+        timeout-minutes: 4
+        shell: bash
+        env:
+          MCP_PYTHON: ${{ steps.python.outputs.python-path }}
+        run: |
+          "$MCP_PYTHON" -I -S -B scripts/mcp-distribution.py build --target "$MCP_TARGET" --wheelhouse "$MCP_TASK_DIR/wheels" --output "$MCP_TASK_DIR/checker.zip" > "$MCP_TASK_DIR/reports/build.json"
+          "$MCP_PYTHON" -I -S -B scripts/mcp-distribution.py verify "$MCP_TASK_DIR/checker.zip" > "$MCP_TASK_DIR/reports/format.json"
+          "$MCP_PYTHON" -I -S -B - <<'PY'
+          import hashlib,json,os,sys
+          from pathlib import Path
+          sys.path.insert(0,str(Path.cwd()))
+          from tools import distribution_artifacts as a
+          from tools.artifact_evidence_io import PrivateInputError
+          task=Path(os.environ['MCP_TASK_DIR']);artifact=task/'checker.zip';commit=os.environ['GITHUB_SHA']
+          packet=a.prepare('mcp-stdio',artifact,commit)
+          a.publish_bound(packet,artifact,'mcp-stdio',commit,task/'packet.json')
+          a.verify_packet(packet,artifact,'mcp-stdio',commit)
+          a.publish_bound(packet,artifact,'mcp-stdio',commit,task/'spdx.json',spdx_only=True)
+          assert type(packet['policy']['release_allowed'])is bool and packet['artifact_format_verified']is True
+          calls=[]
+          def forbidden_verifier(*args,**kwargs):
+            calls.append(True)
+            raise AssertionError('Missing detached evidence must not invoke signature verifier')
+          try:
+            a.authorize_release(packet,artifact,task/'spdx.json',task/'absent-bundle.json',task/'absent-roots.json',
+                                'mcp-stdio',commit,runner=forbidden_verifier)
+          except PrivateInputError:pass
+          else:raise AssertionError('Unsigned development artifact was authorized')
+          assert not calls
+          result={'artifact':packet['artifact'],'profile_sha256':packet['graph']['source_sha256']['sbom/mcp-runtime/manifest.json'],
+            'graph_sha256':packet['graph_sha256'],'spdx_sha256':packet['spdx_sha256'],
+            'packet_sha256':hashlib.sha256((task/'packet.json').read_bytes()).hexdigest(),
+            'source_commit':commit,'target':os.environ['MCP_TARGET'],'packet_reconstructed':True,
+            'current_policy_allowed':packet['policy']['release_allowed'],
+            'spdx_bytes':(task/'spdx.json').stat().st_size,'managed_release_refused':True,
+            'signature_verifier_invocations':len(calls),'release_authorized':False}
+          (task/'reports/spdx.json').write_text(json.dumps(result,sort_keys=True)+'\n')
+          PY
+          "$MCP_PYTHON" -I -S -B scripts/mcp-distribution.py install "$MCP_TASK_DIR/checker.zip" --output "$MCP_TASK_DIR/connection.json" --python "$MCP_PYTHON" --pip-python "$MCP_PYTHON" > "$MCP_TASK_DIR/reports/install.json"
+          "$MCP_PYTHON" -I -S -B scripts/mcp-distribution.py probe "$MCP_TASK_DIR/checker.zip" --connection "$MCP_TASK_DIR/connection.json" --python "$MCP_PYTHON" > "$MCP_TASK_DIR/reports/runtime.json"
+      - name: Record every outcome without publishing an unadmitted runtime
+        if: always()
+        timeout-minutes: 1
+        shell: bash
+        env:
+          MCP_JOB_STATUS: ${{ job.status }}
+        run: |
+          python -I -S -B - <<'PY'
+          import datetime,hashlib,json,os,sys
+          from pathlib import Path
+          task=Path(os.environ['RUNNER_TEMP'])/('aitrust-mcp-'+os.environ['MCP_TARGET']);reports=task/'reports'
+          reports.mkdir(mode=0o700,parents=True,exist_ok=True)
+          result={'profile':'mcp-runtime-ci/v1','captured_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
+            'source_commit':os.environ['GITHUB_SHA'],'target':os.environ['MCP_TARGET'],'job_status':os.environ['MCP_JOB_STATUS'],
+            'pass':False,'source_stable':False,'steps':{},'release_authorized':False,'independent_accuracy_evidence':False}
+          try:
+            before=json.loads((reports/'source-before.json').read_text())
+            result['source_stable']=all(hashlib.sha256(Path(p).read_bytes()).hexdigest()==h for p,h in before.items())
+            for name in ('prerequisite','focused','wheels','build','format','spdx','install','runtime'):
+              raw=(reports/(name+'.json')).read_bytes();assert len(raw)<=128_000
+              result['steps'][name]={'sha256':hashlib.sha256(raw).hexdigest(),'result':json.loads(raw)}
+            r={k:v['result']for k,v in result['steps'].items()}
+            assert r['focused']=={'tests':44,'failures':0,'errors':0,'skipped':0}and r['wheels']['count']==30
+            assert r['build']==r['format']and r['build']['target']==result['target']and r['build']['member_count']<=512
+            assert r['prerequisite']['target']==result['target']
+            for stage in ('install','runtime'):
+              assert all(r[stage][key]==r['build'][key]for key in ('sha256','bytes','profile_sha256','target','wheel_count','member_count'))
+            assert r['install']['runtime_distribution_count']==30 and r['runtime']['runtime_target_verified']is True
+            assert r['spdx']['artifact']=={'sha256':r['build']['sha256'],'bytes':r['build']['bytes']}
+            assert r['spdx']['profile_sha256']==r['build']['profile_sha256']and r['spdx']['source_commit']==result['source_commit']
+            assert r['spdx']['target']==result['target']and r['spdx']['packet_reconstructed']is True
+            assert r['spdx']['managed_release_refused']is True and r['spdx']['signature_verifier_invocations']==0
+            assert r['runtime']['runtime']['pass']is True and len(r['runtime']['runtime']['cases'])==8
+            assert r['runtime']['runtime']['cases']==[{'id':name,'status':'PASS'}for name in (
+              'exact_two_read_only_tools','implemented_capabilities_only','canonical_full_record_finding_no_echo',
+              'no_finding_is_not_clearance','missing_optional_privacy_preserves_ps','invalid_fields_refused_without_echo',
+              'oversized_input_refused_without_echo','legacy_full_record_parity')]
+            assert r['runtime']['runtime']['sdk_version']=='2.3.0'
+            assert r['runtime']['runtime']['same_canonical_mechanism']is True
+            assert all(r['runtime']['runtime'][key]is False for key in (
+              'text_returned','independent_accuracy_evidence','privacy_service_executed','release_authorized'))
+            assert all(r[k]['release_authorized']is False for k in ('build','format','install','runtime'))
+            result['pass']=result['job_status']=='success'and result['source_stable']
+          except Exception:pass
+          (reports/'result.json').write_text(json.dumps(result,sort_keys=True)+'\n')
+          assert result['pass'],'Optional MCP runtime target is unavailable'
+          PY
+      - name: Retain bounded proof only
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: mcp-runtime-${{ matrix.target }}
+          path: ${{ runner.temp }}/aitrust-mcp-${{ matrix.target }}/reports/*.json
+          if-no-files-found: error
+          retention-days: 7

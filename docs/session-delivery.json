@@ -112,7 +112,7 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 25,
+    "finished_scoped_tasks": 28,
     "original_requirement_closures": 4
   },
   "goals": {
@@ -1378,7 +1378,7 @@
         "F-155"
       ],
       "worker": "/root/web_camo",
-      "status": "in_review",
+      "status": "closed",
       "deliverable": "Bounded Linux JPEG credential/action observations, exact encoded-file binding and optional-root trust distinction; no AI-origin verdict.",
       "registered_at": "2026-11-22T16:58:10.565070+00:00",
       "preimplementation_contract": "docs/jpeg-provenance-plan.md",
@@ -1397,9 +1397,28 @@
           "sha256": "60c50d78c63f019bb2ae70c9070700b1769581d28d9b256c990d2f3945bfda76"
         }
       ],
-      "current_status": "Pre-code criterion7 explicitly requires protected source publication; actual native proof and peer review do not complete that step.",
-      "protected_source_publication_complete": false,
-      "original_requirement_closed": false
+      "current_status": "Full named component contract accepted after exact qualified execution, distinct reviews, normal protected149 source delivery and actual public verification. Original tag/statistical/human/legal acceptance remains separate.",
+      "protected_source_publication_complete": true,
+      "original_requirement_closed": false,
+      "closure_record": {
+        "closed_at": "2026-11-22T23:02:34.195633+00:00",
+        "completed_by": "/root/web_camo",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-22-image-jpeg-mt-v3-publication.json",
+            "sha256": "453f45035c5af1f061149d713cc49baad37af337402be57584ba86922be0d2c4"
+          },
+          {
+            "path": "runs/2026-11-22-pr149-publication-path-distinct-review.json",
+            "sha256": "7bd4aae7afdb120827895ccacc50978a26eb58a23cbef46e3aaeb5a4b08794c0"
+          },
+          {
+            "path": "runs/2026-11-22-combined-five-current-selection-distinct-review.json",
+            "sha256": "2c13feec1c9a2b13fc699a5d3da48555e78be0b668202d4194fb4736b923f666"
+          }
+        ]
+      }
     },
     {
       "task_id": "session-source-snapshot-v3",
@@ -1407,7 +1426,7 @@
         "F-057"
       ],
       "worker": "/root/share_debugger",
-      "status": "in_review",
+      "status": "closed",
       "deliverable": "Versioned bounded source archive capacity with immutable v1/v2, separate raw/metadata budgets, streaming inspection and actual >128000000-byte hosted source proof.",
       "registered_at": "2026-11-22T16:58:10.565070+00:00",
       "preimplementation_contract": "docs/source-snapshot-v3-plan.md",
@@ -1426,9 +1445,32 @@
           "sha256": "954f841c8a933f553d0de01e314a600f5d344e4bc6cf1805ff6343148d49cdef"
         }
       ],
-      "current_status": "Normal protected source delivery and combined-tree packet measurement remain; no license/admission/full-original claim.",
-      "protected_source_publication_complete": false,
-      "original_requirement_closed": false
+      "current_status": "Full named component contract accepted after exact qualified execution, distinct reviews, normal protected149 source delivery and actual public verification. Original tag/statistical/human/legal acceptance remains separate.",
+      "protected_source_publication_complete": true,
+      "original_requirement_closed": false,
+      "closure_record": {
+        "closed_at": "2026-11-22T23:02:34.195633+00:00",
+        "completed_by": "/root/share_debugger",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-22-image-jpeg-mt-v3-publication.json",
+            "sha256": "453f45035c5af1f061149d713cc49baad37af337402be57584ba86922be0d2c4"
+          },
+          {
+            "path": "runs/2026-11-22-pr149-publication-path-distinct-review.json",
+            "sha256": "7bd4aae7afdb120827895ccacc50978a26eb58a23cbef46e3aaeb5a4b08794c0"
+          },
+          {
+            "path": "runs/2026-11-22-combined-five-current-selection-distinct-review.json",
+            "sha256": "2c13feec1c9a2b13fc699a5d3da48555e78be0b668202d4194fb4736b923f666"
+          },
+          {
+            "path": "runs/2026-11-22-protected-v3-source-authentication.json",
+            "sha256": "0250b3c71149a494ecef3d2da05af0b7cc2bb19aa236ff8aae5863c25c8caad2"
+          }
+        ]
+      }
     },
     {
       "task_id": "session-mt-private-label-preparation",
@@ -1437,7 +1479,7 @@
         "F-056"
       ],
       "worker": "/root/web_camo",
-      "status": "in_review",
+      "status": "closed",
       "deliverable": "Usable private prepare/validate/compare workflow with four candidate context axes, whole original replay, blinded blank forms and explicit uncertain/insufficient coverage.",
       "registered_at": "2026-11-22T16:58:10.565070+00:00",
       "preimplementation_contract": "docs/mt-label-preparation-plan.md",
@@ -1456,9 +1498,28 @@
           "sha256": "4cf6ccf36ee12c0f5806709b3683c9441fd967af7e46353dfa9e6101c778f680"
         }
       ],
-      "current_status": "Engineering handoff complete; protected source publication remains. Two synthetic rater files are zero people; no adopted labels, agreement gate, MT verdict or original closure.",
-      "protected_source_publication_complete": false,
-      "original_requirement_closed": false
+      "current_status": "Full named component contract accepted after exact qualified execution, distinct reviews, normal protected149 source delivery and actual public verification. Original tag/statistical/human/legal acceptance remains separate.",
+      "protected_source_publication_complete": true,
+      "original_requirement_closed": false,
+      "closure_record": {
+        "closed_at": "2026-11-22T23:02:34.195633+00:00",
+        "completed_by": "/root/web_camo",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-22-image-jpeg-mt-v3-publication.json",
+            "sha256": "453f45035c5af1f061149d713cc49baad37af337402be57584ba86922be0d2c4"
+          },
+          {
+            "path": "runs/2026-11-22-pr149-publication-path-distinct-review.json",
+            "sha256": "7bd4aae7afdb120827895ccacc50978a26eb58a23cbef46e3aaeb5a4b08794c0"
+          },
+          {
+            "path": "runs/2026-11-22-combined-five-current-selection-distinct-review.json",
+            "sha256": "2c13feec1c9a2b13fc699a5d3da48555e78be0b668202d4194fb4736b923f666"
+          }
+        ]
+      }
     }
   ],
   "original_open_requirements": [
@@ -6172,7 +6233,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-22T16:58:10.565070+00:00",
+  "updated_at": "2026-11-22T23:02:34.195633+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -6887,47 +6948,44 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-22T16:58:10.565070+00:00",
+    "recorded_at": "2026-11-22T23:02:34.195633+00:00",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
-    "status": "Three qualified components integrated and IN_REVIEW pending normal protected source publication; no new scoped or original closures. Current-source hosted checks pending.",
+    "status": "Three predeclared component jobs CLOSED after protected149/public delivery; MCP managed distribution and standalone source-rights integration continue, with no new original closure.",
     "assignments": [
       {
         "worker": "/root",
-        "role": "PM/protected combined delivery integration",
+        "role": "PM/shared integration and publication",
         "status": "active",
-        "outcome": "Register and freeze qualified JPEG, v3 source archives and MT review preparation; obtain unchanged-budget hosted checks and normal protected publication."
+        "outcome": "Integrate qualified MCP, finite source-rights checker, camera/classifier action note and current scope/changelog; obtain exact source-bound/protected delivery."
       },
       {
         "worker": "/root/seo",
-        "role": "task-list and finite source-inventory reviewer",
-        "status": "active",
-        "outcome": "Record in-review handoffs and actual reviewed inventory; independently inspect factual MCP grants/notices next."
+        "role": "task-list/source-rights engineer",
+        "status": "completed_available_for_review",
+        "outcome": "Finite closed-source-copy checker, source facts,18controls/5CLI and distinct source review handed off; no global legal or artifact admission."
       },
       {
         "worker": "/root/share_debugger",
-        "role": "MCP managed runtime distribution engineer",
+        "role": "API/MCP distribution engineer",
         "status": "active",
-        "outcome": "Implement reviewed managed consumer and exact factual permission/signing prerequisites; existing public API is separate."
+        "outcome": "New actual four-target531qualification handoff; protected signing and fresh managed installation still pending."
       },
       {
         "worker": "/root/web_camo",
-        "role": "bounded JPEG and MT review-preparation engineer",
-        "status": "completed",
-        "outcome": "Linux-qualified JPEG and corrected private MT preparation source and evidence handed off; protected delivery pending. No standing process."
+        "role": "bounded visual research and distinct delivery review",
+        "status": "completed_available_for_review",
+        "outcome": "Camera/classifier source-only action note and distinct public149 review complete; no model run or standing process."
       }
     ],
-    "owner_handoff_task": "session-owner-engineering-action-handoff",
-    "owner_email_sent_not_inbox_or_read": true,
-    "scoped_tasks_closed": 25,
+    "scoped_tasks_closed": 28,
     "original_closures_since_baseline": 4,
     "all202_preserved": true,
     "baseline_hashes_unchanged": true,
     "agents_permanent": false,
-    "all50_engineering_bearing_are_autonomous_full_closable": false,
-    "components_protected_publication_complete": false
+    "owner_email_sent_not_inbox_or_read": true
   },
   "execution_wave_history": [
     {
@@ -7009,6 +7067,49 @@
       "baseline_hashes_unchanged": true,
       "agents_permanent": false,
       "all50_engineering_bearing_are_autonomous_full_closable": false
+    },
+    {
+      "recorded_at": "2026-11-22T16:58:10.565070+00:00",
+      "original_complete": 136,
+      "original_open": 66,
+      "target_open": 60,
+      "remaining_full_closures": 6,
+      "status": "Three qualified components integrated and IN_REVIEW pending normal protected source publication; no new scoped or original closures. Current-source hosted checks pending.",
+      "assignments": [
+        {
+          "worker": "/root",
+          "role": "PM/protected combined delivery integration",
+          "status": "active",
+          "outcome": "Register and freeze qualified JPEG, v3 source archives and MT review preparation; obtain unchanged-budget hosted checks and normal protected publication."
+        },
+        {
+          "worker": "/root/seo",
+          "role": "task-list and finite source-inventory reviewer",
+          "status": "active",
+          "outcome": "Record in-review handoffs and actual reviewed inventory; independently inspect factual MCP grants/notices next."
+        },
+        {
+          "worker": "/root/share_debugger",
+          "role": "MCP managed runtime distribution engineer",
+          "status": "active",
+          "outcome": "Implement reviewed managed consumer and exact factual permission/signing prerequisites; existing public API is separate."
+        },
+        {
+          "worker": "/root/web_camo",
+          "role": "bounded JPEG and MT review-preparation engineer",
+          "status": "completed",
+          "outcome": "Linux-qualified JPEG and corrected private MT preparation source and evidence handed off; protected delivery pending. No standing process."
+        }
+      ],
+      "owner_handoff_task": "session-owner-engineering-action-handoff",
+      "owner_email_sent_not_inbox_or_read": true,
+      "scoped_tasks_closed": 25,
+      "original_closures_since_baseline": 4,
+      "all202_preserved": true,
+      "baseline_hashes_unchanged": true,
+      "agents_permanent": false,
+      "all50_engineering_bearing_are_autonomous_full_closable": false,
+      "components_protected_publication_complete": false
     }
   ]
 }

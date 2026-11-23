@@ -1,0 +1,29 @@
+{
+  "captured_at": "2026-11-22T17:07:22.958474+00:00",
+  "pass": true,
+  "sources_before": {
+    "tools/mcp_managed_release.py": "1f2699df547894402a42cf187cfadc806a99a350bf7f6ea4ca82b2abe18d2679",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tests/test_managed_mcp_release.py": "adc8787dbba805a3412c44292199be499ac423db91316b62b29e94ef417eaa83"
+  },
+  "sources_after": {
+    "tools/mcp_managed_release.py": "1f2699df547894402a42cf187cfadc806a99a350bf7f6ea4ca82b2abe18d2679",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tests/test_managed_mcp_release.py": "adc8787dbba805a3412c44292199be499ac423db91316b62b29e94ef417eaa83"
+  },
+  "source_unchanged": true,
+  "affected_controls": 2,
+  "actual": {
+    "late_git_refused": true,
+    "final_may_exist_claim": false,
+    "no_final_connection": true,
+    "marker_preserved": true,
+    "normal_inert_publication": true
+  },
+  "scope": "Exact original lateGit callback + normal inert publication; no SDK/install/crypto/network",
+  "original_counter_sha256": "6d95937525252a62a31c9cff4e20ff4361990182913f5c91e8aa6d7cf851c365",
+  "limits": [
+    "Authorization/runtime/probe remain injected controls, not release admission or439qualification.",
+    "This reviews new managed post-recheck private boundary; no universal same-UID mutation or shared foundation claim."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-source-snapshot-trusted-git-binding",
+  "recorded_at": "2026-11-23T01:50:14.765663+00:00",
+  "author": "Codex /root/seo; distinct reviewer Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2932bb420e8a868b057bb31703372e29deaf78b8",
+  "changed": "Add a bounded received-source archive to caller-trusted Git binding helper without changing serializers, rights policy, graph or signer.",
+  "proves": "14 focused controls and7 actual tiny command cases pass at the frozen captured-source loader. Canonical source matches; self-consistent same-commit byte, path, mode and size forgeries refuse. A distinct reviewer independently replayed canonical binary/empty source, equal-length coherent forgery and captured-foundation import isolation.",
+  "limits": "No large repository archive, SDK, network, extraction, received code execution, signing, route admission, rights approval or original closure. Whole operation60s with owned5s cleanup; immutable serializers and previously reviewed rights files remain unchanged. Earlier13-control/7-case snapshot and the pre-product sparse-checkout harness failure remain historical; large qualification remains future Linux work.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/source_snapshot_binding.py": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb",
+    "tests/test_source_snapshot_binding.py": "412a066de7a225c98083f1ef76ebde733bacaa7f8216aa91b2fcd0a48b5f2e1b",
+    "docs/source-snapshot-binding-plan.md": "5eb031629ea118b07681a5880c5f016441c2e58710b942f633cf2ce719a0980e",
+    "runs/2026-11-22-source-snapshot-binding-current.json": "2eea1aa680b76c7ca40646bacce18b932fc3c45d6ad6c29719a1757e97e32912",
+    "runs/2026-11-22-source-snapshot-binding-pinned-load-current.json": "1f324d40fb469f4565f8c1f05b236602690129c3ce921f24090fa3d070b059ed",
+    "runs/2026-11-22-source-snapshot-binding-distinct-review.json": "5dca57a643e78c0308bb2eebe7bc40c8e4f364b6c2c99fead779877e6a81ead8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-source-snapshot-binding-current.json",
+      "sha256": "2eea1aa680b76c7ca40646bacce18b932fc3c45d6ad6c29719a1757e97e32912"
+    },
+    {
+      "path": "runs/2026-11-22-source-snapshot-binding-pinned-load-current.json",
+      "sha256": "1f324d40fb469f4565f8c1f05b236602690129c3ce921f24090fa3d070b059ed"
+    },
+    {
+      "path": "runs/2026-11-22-source-snapshot-binding-distinct-review.json",
+      "sha256": "5dca57a643e78c0308bb2eebe7bc40c8e4f364b6c2c99fead779877e6a81ead8"
+    }
+  ],
+  "checks": []
+}

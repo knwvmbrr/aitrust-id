@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-022809-managed-source-rights-consumer-correction-1fc7f71a",
+  "recorded_at": "2026-11-23T02:28:09.128608+00:00",
+  "author": "Codex PM and source-rights author with distinct corrective review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bbba64492df3519d2bb1b04aa04368f0dcea2c17",
+  "changed": "Corrected two source-rights consumer tests to select the exact reviewed baseline while requiring new unmapped source trees to refuse; retained actual failed hosted checks and current source-capacity evidence.",
+  "proves": "Original hosted no-egress failures confirmed exactly those two stale positive assumptions; corrected affected106-source-control command passes. Actual hosted archive packet15,650,740bytes remains within unchanged16MB bound. No helper/policy or rights expansion.",
+  "limits": "Current full protocol/website evidence and protected signing/install remain pending. Site inventory-after-build drift is being diagnosed; no boundary or global clearance assertion is bypassed. Original136/66 counts unchanged.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-007",
+    "N-008"
+  ],
+  "files": {
+    "tests/test_source_release_policy.py": "c6ce003e4abfa0c3b70b0a8604551eb9651156e79e42517a2343c54c82b4dab6",
+    "eval/route-boundaries.json": "bd7e64ad31d96e6a42c4546be7c289e82d8d6ed3f1fc4123dd17fa9b7e1eceaf",
+    "state.json": "514c544e698f32b9d1f3ba48b709602cf7113d16221a76369565271021389953",
+    "runs/2026-11-22-mcp-final-pm-registration-source-review.json": "10f6b7bf5dbaeff4ffc6f92fcf092533ba120c39c5baa35bf160c5c33ec64193",
+    "runs/2026-11-23-managed-first-delivery-failure.json": "4801e8de3242bb2993bde0f57c425bbf4f166951a59b296fa11def2313e470dd",
+    "runs/2026-11-23-managed-source-capacity-bbba.json": "5fed4323b511b20b7d068ef74fd2409b1a5286de3ef1766a96d860d6914a3027",
+    "runs/2026-11-23-managed-source-capacity-observation.json": "c528f4717c1c1705d74f94dde6ec2d9e332469b504d22865cc6e2426acfde23f",
+    "runs/2026-11-23-managed-source-group106-current.json": "b795e7781a129e89c94ff1b70b6ca95eff2aa5991d946fccda8b8b5e3b3026ec",
+    "runs/2026-11-23-source-rights-current-tree-test-correction.json": "bf3d9a0fa0755c9fd3f14ccfe2fb7a3b025fab160d91d314590d542593b371a7",
+    "runs/2026-11-23-source-rights-test-contract-distinct-review.json": "8471d8857855f739724119eb8d760720569a7f7e2b5c2ce6940438b9a4888882"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-managed-first-delivery-failure.json",
+      "sha256": "4801e8de3242bb2993bde0f57c425bbf4f166951a59b296fa11def2313e470dd"
+    },
+    {
+      "path": "runs/2026-11-23-managed-source-capacity-bbba.json",
+      "sha256": "5fed4323b511b20b7d068ef74fd2409b1a5286de3ef1766a96d860d6914a3027"
+    },
+    {
+      "path": "runs/2026-11-23-managed-source-group106-current.json",
+      "sha256": "b795e7781a129e89c94ff1b70b6ca95eff2aa5991d946fccda8b8b5e3b3026ec"
+    },
+    {
+      "path": "runs/2026-11-23-source-rights-current-tree-test-correction.json",
+      "sha256": "bf3d9a0fa0755c9fd3f14ccfe2fb7a3b025fab160d91d314590d542593b371a7"
+    },
+    {
+      "path": "runs/2026-11-23-source-rights-test-contract-distinct-review.json",
+      "sha256": "8471d8857855f739724119eb8d760720569a7f7e2b5c2ce6940438b9a4888882"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T02:28:10.040843+00:00"
+    }
+  ]
+}

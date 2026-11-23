@@ -1,0 +1,71 @@
+{
+  "MCP449raw_SHA_and_GitOID_modes_unchanged": true,
+  "boundary_inventory_all_current_sha256_match": true,
+  "boundary_inventory_count": 8397,
+  "captured_at": "2026-11-23T02:33:46.118613+00:00",
+  "generated_changes": {
+    "SPDX_only_delta": "documentNamespace derived exactly from canonical source hashes",
+    "actual_policy_sha256": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+    "all202criteria_percentages_jobs_unchanged": true,
+    "packages_json_only_delta": "sources_sha256.tools/dependency_policy.py actual rawSHA",
+    "public_reference_exact_source_copy": true,
+    "public_scope_changed_ids": [
+      "T-MT",
+      "T-FA",
+      "T-PA",
+      "F-056",
+      "F-057",
+      "X-02"
+    ],
+    "public_scope_only_append_only_fields": [
+      "progress.evidence",
+      "progress.implemented_by"
+    ],
+    "scope_manifest_only_sha_and_bytes": true,
+    "web_index_claims_all_typed_false": true
+  },
+  "limits": {
+    "SDK_or_archive_execution": false,
+    "fresh_hosted5capabilities": false,
+    "legal_or_accuracy_clearance": false,
+    "original_requirement_closed": false,
+    "signature_or_managed_install": false,
+    "source_stable_during_review": true,
+    "tests_or_build_rerun": false
+  },
+  "original_counts": {
+    "complete": 136,
+    "open": 66,
+    "total": 202
+  },
+  "pass": true,
+  "profile": "managed-corrective-pm-assembly-staged-source-review/v1",
+  "reviewed_head": "bbba64492df3519d2bb1b04aa04368f0dcea2c17",
+  "reviewed_state": "Staged corrective files, not yet committed; digests identify this review.",
+  "reviewer": "Codex / share_debugger",
+  "scope": "Independent of PM registration/assembly and SEO two-test correction; reviewer authored MCP/runtime and earlier zlib components, not independent approval of own implementation.",
+  "source_rights_test_correction": {
+    "actual_checkout_identity_separate": true,
+    "affected106_receipt_matches_current_sources": true,
+    "all_other_method_AST_and_names_retained": true,
+    "changed_methods": [
+      "test_actual_sparse_checkout_profile_and_source_id_are_current",
+      "test_actual_cli_bootstrap_from_unrelated_cwd_and_fixed_private_refusal"
+    ],
+    "current_default_unknown_path_refusal_retained": true,
+    "explicit_reviewed_positive_commit": "3f199c6450da73335a9d2c5e2c1501ac3c946e14",
+    "helper_and_policy_unchanged": true,
+    "tests_executed_by_this_reviewer": false
+  },
+  "source_sha256": {
+    "docs/nov22-managed-distribution-integration-plan.md": "9af3702d74ac212c2a339db2c95133e9ef559e1238032daba2e78c5d983bc70d",
+    "eval/route-boundaries.json": "4951751fd8b589ec7b720390f687681ca72edd27c6b1bc8e14788f60d7db89a4",
+    "site/public/reference/public-scope.json": "471cfc32202ac1771f255f84cef4409f56d4efd4b57e2ed89e65ac7a654c74e7",
+    "site/public/web-licenses/packages.json": "e3f618c21bf815b4dc99d8711ef9e5d6d082078163f37794e7d69139f898a490",
+    "site/public/web-licenses/web-runtime.spdx.json": "3492d33fd2582f0ab8dd428893226ccf4388a4e18de34327e9dac98d20d02ff8",
+    "site/src/public-scope.json": "471cfc32202ac1771f255f84cef4409f56d4efd4b57e2ed89e65ac7a654c74e7",
+    "site/src/scope-manifest.json": "540525d680e31f2e8ca6fd662f57be2c8d1da94b5ee56c545c18457a04a4a2e6",
+    "state.json": "bc2616c9f2eac47dd5a5fe516f545100421a18b8c5de586ebd8b737cc3fc4d57",
+    "tests/test_source_release_policy.py": "c6ce003e4abfa0c3b70b0a8604551eb9651156e79e42517a2343c54c82b4dab6"
+  }
+}

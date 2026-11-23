@@ -244,6 +244,12 @@ PATTERNS += ('.github/workflows/delivery-revalidation.yml', '.github/workflows/j
 # Failed artifact temporaries retain ownership; private boundaries stay checked.
 PATTERNS += ('tools/artifact_evidence_io.py', 'tests/test_artifact_evidence_io.py', 'docs/artifact-io-ownership-plan.md')
 
+# Finite managed MCP grant/runtime producer and standalone source-rights checker.
+PATTERNS += ('.github/workflows/artifact-sbom.yml', '.github/workflows/mcp-runtime-distribution.yml', 'docs/mcp-managed-release-plan.md', 'docs/mcp-managed-release-result.md', 'docs/mcp-managed-release.md', 'docs/mcp-stdio-distribution-plan.md', 'docs/mcp-stdio-distribution.md', 'docs/mcp-zlib-producer-refresh-plan.md', 'docs/source-snapshot-rights-plan.md', 'eval/dependencies/mcp-runtime-release.json', 'eval/dependencies/source-snapshot-release.json', 'eval/dependency-policy.json', 'scripts/collect-mcp-notices.py', 'scripts/install-managed-mcp.py', 'scripts/mcp-distribution.py', 'tests/test_artifact_workflow.py', 'tests/test_dependency_policy.py', 'tests/test_managed_mcp_policy.py', 'tests/test_managed_mcp_release.py', 'tests/test_managed_mcp_runtime_cleanup.py', 'tests/test_managed_mcp_workflow.py', 'tests/test_mcp_distribution.py', 'tests/test_mcp_runtime_obligations.py', 'tests/test_source_release_policy.py', 'tools/dependency_policy.py', 'tools/distribution_artifacts.py', 'tools/mcp_distribution.py', 'tools/mcp_managed_release.py', 'tools/mcp_release_policy.py', 'tools/mcp_runtime_obligations.py', 'tools/mcp_runtime_probe.py', 'tools/source_release_policy.py', 'sbom/cffi-libffi/**/*', 'sbom/mcp-runtime/**/*', 'sbom/mcp-rust-stdlib/**/*')
+
+# Archive/Git identity is independent of source rights and route admission.
+PATTERNS += ('tools/source_snapshot_binding.py', 'tests/test_source_snapshot_binding.py', 'docs/source-snapshot-binding-plan.md', 'tests/test_dependency_registry_integration.py')
+
 def read_json(file):
     return read_evidence(file)
 

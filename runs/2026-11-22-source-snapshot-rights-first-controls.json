@@ -1,0 +1,18 @@
+{
+  "profile": "source-rights-initial-focused-controls/v1",
+  "captured_at": "2026-11-22T18:27:54.283173+00:00",
+  "pass": false,
+  "tests": 17,
+  "failures": 1,
+  "errors": 0,
+  "skips": 0,
+  "failure": "Authored large-text fixture asserted docs/scope-progress.json>2000000; actual selected baseline file is779830bytes. Assertion failed before its blob-summary call; no product defect established.",
+  "source_sha256_observed_after_execution": {
+    "tools/source_release_policy.py": "372aa2b456c0af9a7632650fe34e23a01b07ba5f2aa30e539a6d891735233b10",
+    "tests/test_source_release_policy.py": "c28f452ab76f554f8445b581e0f6a313158679e14e19683b3b2bc9cab22891c1",
+    "eval/dependencies/source-snapshot-release.json": "bf9260a040578fa983e43bd2c36bd52f4b4f0593a6719135ed3f8d0d1927c1a2",
+    "docs/source-snapshot-rights-plan.md": "e304c410ea096f9e0d6c4dd07e74638398f719796931febbcf6649e13de1701b"
+  },
+  "before_map_retained": false,
+  "SDK_or_archive_executed": false
+}

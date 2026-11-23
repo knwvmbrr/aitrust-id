@@ -1,0 +1,32 @@
+{
+  "all449_hosted_sources_still_current": true,
+  "author_receipt_sha256": "3ddb82a9991531db3fbff71547e5ba121bbdd0616bfcfb03ca0c8a7a73569f1a",
+  "captured_at": "2026-11-23T01:39:02.369185+00:00",
+  "controls": {
+    "actual_current_policy_source_hash_matches": true,
+    "actual_current_registry_two_allowed_twelve_blocked_PS9": true,
+    "actual_isolated_CLI_unavailable_fixed_private_refusal": true,
+    "all_retained_zlib_input_hashes_match": true,
+    "extra_source_snapshot_admission_refused": true,
+    "global_claim_numeric_alias_refused": true,
+    "historical_manifest_equals_original_Git_bytes": true,
+    "manifest_sole_semantic_change": "producer_sha256.tools/dependency_policy.py",
+    "numeric_boolean_alias_refused": true
+  },
+  "limits": [
+    "Author executed existing expected_manifest/checked/default CLI and deterministic in-memory outputs; reviewer compared retained source/receipt identities without regenerating them",
+    "No filesystem export, full test suite, site/WASM/native execution, SDK, download, signature or managed release admission",
+    "No full F057/X02, exhaustive compiled provenance, global legal clearance or tag-accuracy claim"
+  ],
+  "pass": true,
+  "profile": "mcp-registry-zlib-current-integration-distinct-review/v1",
+  "reviewed_by": "/root/seo",
+  "source_head": "531b75aeac918be855a762d494711d1e0aca43ce",
+  "source_sha256": {
+    "docs/mcp-current-registry-zlib-repair-plan.md": "0c8938e3626467ded39679aa4bf9113761563c6c79087901a7ed77ab1a41107d",
+    "sbom/reviews/zlib-runtime/history/manifest-e813ca64d1b0d021ee2a9df2d32034f68718bfb73a0bab8085554dde03dc42e4.json": "e813ca64d1b0d021ee2a9df2d32034f68718bfb73a0bab8085554dde03dc42e4",
+    "sbom/reviews/zlib-runtime/manifest.json": "bde99d53feb686f82c2f12b957cf77a84b0e4a015f6ea9b2e7b87f3156870835",
+    "scripts/verify-dependency-policy.py": "baeabab0f7e4f59009c529cc76f8dc862d4a6caf6e92f9dd5bc96bc7d78c0e0b",
+    "tests/test_dependency_registry_integration.py": "9f80006e66b778b6adc4ebcc427285c786f70c38f2242dd972283693a48dd1ee"
+  }
+}

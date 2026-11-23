@@ -1,0 +1,25 @@
+{
+  "captured_at": "2026-11-22T16:57:44.668528+00:00",
+  "pass": false,
+  "source_before": {
+    "tools/mcp_managed_release.py": "9f342d2ecb5d56fd23a3cb43dea2e4244039ecc07dae6fcd7ce59cb61952ef2b",
+    "scripts/install-managed-mcp.py": "2af2ffef148f2141dc6af9cf812bbaaa55fc9a9e0ceb726e286703f113ed6424",
+    "tests/test_mcp_managed_release.py": "0a9fe62fbf341d4b6585b07851dd012c71b505b06c3a7737e89a76a3b5b67eae",
+    "docs/mcp-managed-release-plan.md": "435fb90ea7d28aa6afa894529b1135d25d30c75033f9fde26192b5607c570dac"
+  },
+  "source_after": {
+    "tools/mcp_managed_release.py": "9f342d2ecb5d56fd23a3cb43dea2e4244039ecc07dae6fcd7ce59cb61952ef2b",
+    "scripts/install-managed-mcp.py": "2af2ffef148f2141dc6af9cf812bbaaa55fc9a9e0ceb726e286703f113ed6424",
+    "tests/test_mcp_managed_release.py": "0a9fe62fbf341d4b6585b07851dd012c71b505b06c3a7737e89a76a3b5b67eae",
+    "docs/mcp-managed-release-plan.md": "435fb90ea7d28aa6afa894529b1135d25d30c75033f9fde26192b5607c570dac"
+  },
+  "source_unchanged": true,
+  "actual": {
+    "replacement_existed_before_remove": true,
+    "replacement_marker_survived": false,
+    "original_owned_directory_retained": true
+  },
+  "scope": "ONE owned-temp filesystem race control; no SDK/signature/network/install",
+  "finding": "The identity check occurs before pathname rmtree; swapping the directory at that boundary deletes a successor directory. Both directories were created solely for this review; no foreign/user files were touched.",
+  "limits": "Injected precise scheduling boundary, not a claim this raced in production or a cryptographic review."
+}

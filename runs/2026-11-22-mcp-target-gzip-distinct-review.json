@@ -1,0 +1,84 @@
+{
+  "captured_at": "2026-11-22T14:09:15.585126+00:00",
+  "reviewer": "Codex / web_camo",
+  "profile": "MCP-selected-target-and-source-encoding-corrected-review/v1",
+  "pass": true,
+  "sources_before": {
+    "tools/mcp_distribution.py": "d8d225a17ddbe8d3a86e62ccc32686e396517647f96f331f636d3701ea92bfd4",
+    "tools/mcp_runtime_obligations.py": "458c3a21381e88fef2e0d3b22ec9ee02a41a912eb25d2f29a5f902222fb106b9",
+    "tools/mcp_runtime_probe.py": "9141e1669a5e7bc2e9103757aa815783812c50f414e141e54dadf8479d3dbc7d",
+    "scripts/mcp-distribution.py": "9eee370e13eaef4913c55be8451c2af759251122c9866e36d63700c4b672f5d7",
+    "scripts/collect-mcp-notices.py": "406c3f527e2384dc5bcbc2c26f5ba5b1d9dbdb289d67e65524b652a0788570ab",
+    "tools/dependency_policy.py": "7a7f084eb44046feccf01cc208ac862393204886326d3cd3bb136992d3337833",
+    "tools/distribution_artifacts.py": "c3c2bdc1b8692bef35c8855752bdd8035d3e4a46b6f8a511bcea36cdf4f4f3c2",
+    "tests/test_mcp_distribution.py": "231c9246c73717730e1ab990784884bf0c51c3c5ff35388f8aadae31ed47a0c3",
+    "tests/test_mcp_runtime_obligations.py": "5fe2984af372037789eb3875b93b042f44da1c20ca4a43c66cd7ed356a8a4455",
+    "sbom/mcp-runtime/manifest.json": "981dd6de63e70d1ab1f058881f0a7d7f1d34e834c8c58ccdfca94fc014a24470",
+    "sbom/mcp-runtime/THIRD-PARTY-NOTICES.txt": "6e7b55ee737769110ed6d2bac56dd77cf39081d2ac175405fa2d66dc2450dfdb",
+    "sbom/mcp-runtime/obligations.json.gz": "7d2289b4a9b13a2d4711f96833090dbce19993d6c706362ffad35c52918d7b46"
+  },
+  "sources_after": {
+    "tools/mcp_distribution.py": "d8d225a17ddbe8d3a86e62ccc32686e396517647f96f331f636d3701ea92bfd4",
+    "tools/mcp_runtime_obligations.py": "458c3a21381e88fef2e0d3b22ec9ee02a41a912eb25d2f29a5f902222fb106b9",
+    "tools/mcp_runtime_probe.py": "9141e1669a5e7bc2e9103757aa815783812c50f414e141e54dadf8479d3dbc7d",
+    "scripts/mcp-distribution.py": "9eee370e13eaef4913c55be8451c2af759251122c9866e36d63700c4b672f5d7",
+    "scripts/collect-mcp-notices.py": "406c3f527e2384dc5bcbc2c26f5ba5b1d9dbdb289d67e65524b652a0788570ab",
+    "tools/dependency_policy.py": "7a7f084eb44046feccf01cc208ac862393204886326d3cd3bb136992d3337833",
+    "tools/distribution_artifacts.py": "c3c2bdc1b8692bef35c8855752bdd8035d3e4a46b6f8a511bcea36cdf4f4f3c2",
+    "tests/test_mcp_distribution.py": "231c9246c73717730e1ab990784884bf0c51c3c5ff35388f8aadae31ed47a0c3",
+    "tests/test_mcp_runtime_obligations.py": "5fe2984af372037789eb3875b93b042f44da1c20ca4a43c66cd7ed356a8a4455",
+    "sbom/mcp-runtime/manifest.json": "981dd6de63e70d1ab1f058881f0a7d7f1d34e834c8c58ccdfca94fc014a24470",
+    "sbom/mcp-runtime/THIRD-PARTY-NOTICES.txt": "6e7b55ee737769110ed6d2bac56dd77cf39081d2ac175405fa2d66dc2450dfdb",
+    "sbom/mcp-runtime/obligations.json.gz": "7d2289b4a9b13a2d4711f96833090dbce19993d6c706362ffad35c52918d7b46"
+  },
+  "original_counterexample": {
+    "path": "output/verification/mcp-installed-runtime-target-original.json",
+    "sha256": "f34d22ab5ae78c3c1beb961540f26e1fb2648224c3d41017df7358c70a1a7133"
+  },
+  "actual_target_controls": [
+    {
+      "declared": "cp312-macosx_11_0_arm64",
+      "actual_python": [
+        3,
+        13,
+        0
+      ],
+      "refused": true
+    },
+    {
+      "declared": "cp313-macosx_11_0_arm64",
+      "actual_python": [
+        3,
+        13,
+        0
+      ],
+      "configuration_and_runtime_target_verified": true,
+      "SDK_probe_executed": false
+    }
+  ],
+  "target_control_scope": "Actual private tempFS/launchsymlink/no-system-site cfg and real fixed5s isolated stdlib interpreter probe; trusted archive/materialized/payload checks mocked accepted to isolate target boundary. No SDK code executed.",
+  "gzip_controls": {
+    "count": 4,
+    "pass": true,
+    "exact_expanded_graph_c26b_preserved": true,
+    "truncated_trailing_concat_refused": true,
+    "2MB_input_cap_before_inflate": true,
+    "4MB_expansion_cap_before_JSON": true,
+    "raw_test_log_sha256": "d038d3554271712e6331d270589124e0ecc1ae980c6de5e6a43806011b138544"
+  },
+  "source_review": {
+    "40_publisher_wheels_and30_target_rows_pinned": true,
+    "RECORD_and_native_notice_source_projections_bound": true,
+    "ZIP_preflight_before_central_allocation": true,
+    "private_nooverwrite_and_publication_uncertainty": true,
+    "fixed_offline_installer_no_HOME_redirection_credentials_or_HTTP": true,
+    "optional_policy_import_keeps_personal_PS_independent": true,
+    "no_route_admission_or_signature_claim": true
+  },
+  "remaining_limits": [
+    "Only6 affected controls, no full43/source150/fourplatform/SDKinstall/browser repeat.",
+    "Earlier candidate2 actual Mac8of8 remains historical with its own exactsource; corrected artifact/runtime evidence pending author.",
+    "ExactSDK starts server in detached session; inner25s shielded cleanup precedes outer45s, but abnormal hardtimeout/unkillableOS detached-server reaping is not guaranteed and no healthy proof claimed.",
+    "Whole MCP route remains BLOCKED pending remaining actualtarget, licensing/source, distinctreview/protected criteria; no F057/X02/globalclearance."
+  ]
+}

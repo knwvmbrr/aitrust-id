@@ -1,0 +1,231 @@
+{
+  "actual_result": {
+    "actual_compressed_source_archive_bytes": null,
+    "actual_source_archive_executed": true,
+    "address_space_limit_bytes": 805306368,
+    "artifact_sha256": "ccbb30ec1d3c9df0d19943f4c69a6ee469307c53c351e3efdd804e1b303ed8fd",
+    "build_cli": {
+      "exit": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "26cbd18d8f8cbe2a1c49678109b9acab76d7afcb93674e947dcfbec26a007a57"
+    },
+    "compressed_size_limitations": "The JSON report does not retain the generated source.tar.gz byte length; it was not downloaded or inferred. API artifact ZIP size refers only to the JSON report.",
+    "focused": {
+      "errors": 0,
+      "failed_test_ids": [],
+      "failures": 0,
+      "log_sha256": "731f311752f4356a28aea288b57899798533366ec9349b66d8e336421f26287d",
+      "skipped": 0,
+      "tests": 16
+    },
+    "graph_nodes": 13458,
+    "old_v2_refused": true,
+    "os_from_actual_job_log": "Ubuntu24.04.5 LTS",
+    "packet_bytes": 15650740,
+    "packet_decimal_16MB_headroom": 349260,
+    "packet_sha256": "d9dc5965be11dd27dcd5669ccc8c68ef01934137a5e8e42e3c27044d03013bfc",
+    "peak_children_rss_kib": 248424,
+    "peak_self_rss_kib": 248424,
+    "python_version_from_actual_setup_log": "3.13.18",
+    "raw_source_bytes": 139902870,
+    "rss_limitations": "Per-process maxima are not concurrent aggregate memory measurements.",
+    "source_files": 13458,
+    "source_stable": true,
+    "spdx_bytes": 9662357,
+    "spdx_sha256": "6c12c553d5893ded8d8936c4aac1c98029501702e8956781337abd9bc4e81625"
+  },
+  "artifact_api": {
+    "api_digest": "sha256:631a22bad8f5274714f44cec02bd8ee522118b0ee79bc9d140be51a4d7f79ffb",
+    "downloaded_once_via_GitHub_connector": true,
+    "encrypted_link_special_or_extra_members": false,
+    "id": 14784018734,
+    "members": [
+      {
+        "bytes": 2988,
+        "name": "result.json",
+        "sha256": "5fed4323b511b20b7d068ef74fd2409b1a5286de3ef1766a96d860d6914a3027"
+      }
+    ],
+    "name": "source-capacity-v3-proof",
+    "zip_bytes": 1618,
+    "zip_sha256": "631a22bad8f5274714f44cec02bd8ee522118b0ee79bc9d140be51a4d7f79ffb"
+  },
+  "artifact_controls": {
+    "actual_jobs": {
+      "artifact-controls": "success",
+      "attest-eligible-artifact": "skipped",
+      "attest-managed-mcp": "skipped",
+      "managed-mcp-controls": "success",
+      "refuse-untrusted-manual-signing": "skipped"
+    },
+    "actual_logged_counts": {
+      "artifact-controls": 51,
+      "managed-mcp-controls": 26
+    },
+    "event": "pull_request",
+    "head": "bbba64492df3519d2bb1b04aa04368f0dcea2c17",
+    "protected_signing_executed": false,
+    "run_id": 45098054894,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45098054894"
+  },
+  "captured_at": "2026-11-23T02:13:39.193015+00:00",
+  "current_frozen_bindings_raw_sha_and_git_identity_match": true,
+  "independent_serializer_review": false,
+  "limits": {
+    "F057_X02_closed": false,
+    "independent_accuracy": false,
+    "license_clearance": false,
+    "local_archive_build": false,
+    "local_native_or_SDK_execution": false,
+    "managed_install": false,
+    "other_capability_results_not_inferred": true,
+    "release_authorized": false,
+    "signature": false,
+    "source_archive_packet_or_SPDX_payload_downloaded": false
+  },
+  "pass": true,
+  "producer_captured_at": "2026-11-23T02:04:21.387688+00:00",
+  "profile": "bbba-source-capacity-retained-observation/v1",
+  "retained_log_identities": {
+    "137442215787": {
+      "bytes": 25076,
+      "os": "Ubuntu24.04.5 LTS",
+      "role": "Connector-decoded log retained as UTF-8; not a raw-log API checksum.",
+      "selected_cpython": "3.13.18",
+      "sha256": "5d9c29b9bfe587e950b2d8aa1f2aaaa9488880f99421f8b50c015f22e75c24fb"
+    },
+    "137442216410": {
+      "bytes": 20411,
+      "os": "Ubuntu24.04.5 LTS",
+      "role": "Connector-decoded log retained as UTF-8; not a raw-log API checksum.",
+      "selected_cpython": "3.13.18",
+      "sha256": "238fb580aee721c3486053c1d80b8d9dba3d270b83570f73f57e88ddf637dc61"
+    },
+    "137442216578": {
+      "bytes": 25642,
+      "os": "Ubuntu24.04.5 LTS",
+      "role": "Connector-decoded log retained as UTF-8; not a raw-log API checksum.",
+      "selected_cpython": "3.13.18",
+      "sha256": "60d784044d408656d2026239b658be85ef34cdf62eeccc39f64871e2a612565e"
+    }
+  },
+  "review_scope": "Retained hosted execution, API artifact and current frozen-input identity observation. Reviewer previously authored the v3 serializer/capacity workflow; this does not claim independent review of that implementation or reproduce the archive locally. Existing separate component peer reviews remain historical at their recorded identities.",
+  "reviewer": "Codex / share_debugger",
+  "reviewer_correction": "Initial local ZIP inspection expected proof.json, stopped after retaining the one downloaded ZIP; corrected to workflow-declared result.json against identical retained bytes. No redownload or product failure. A guessed workflow filename was likewise corrected via repository inventory.",
+  "run": {
+    "actual_checkout": "6d75c8ee0bf14c8fda93163f18d095f15f540c11",
+    "actual_checkout_parents": [
+      "085106c1d40e86b071a25a7b9e4e56b965a31044",
+      "bbba64492df3519d2bb1b04aa04368f0dcea2c17"
+    ],
+    "actual_merge_tree_equals_head_tree": true,
+    "attempt": 1,
+    "conclusion": "success",
+    "event": "pull_request",
+    "head": "bbba64492df3519d2bb1b04aa04368f0dcea2c17",
+    "id": 45098054905,
+    "merge_tree": "c56fc7c6802dca256d958ebe480ff4adc4605f81",
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45098054905"
+  },
+  "source_bindings": [
+    {
+      "bytes": 7386,
+      "git_blob_oid": "5aab28b54d9e16f15508cc760157872b6d446513",
+      "git_mode": "100644",
+      "path": ".github/workflows/source-snapshot-v3.yml",
+      "sha256": "981964136593568ba87e89d74e2a456df63157d821023d5de8665e79d259ffea"
+    },
+    {
+      "bytes": 2942,
+      "git_blob_oid": "6cb997de8a342b645c690742c3c97c07ba3a236e",
+      "git_mode": "100644",
+      "path": "docs/artifact-io-ownership-plan.md",
+      "sha256": "fd18ec9fe0438fb828921ce88bf0120c4129c440406b6dec8d096cecc7bc2ad2"
+    },
+    {
+      "bytes": 6233,
+      "git_blob_oid": "1ab6e501f396cb914cca9b23974761f458f250cd",
+      "git_mode": "100644",
+      "path": "docs/source-snapshot-v3-plan.md",
+      "sha256": "e779b6b20334d8a72742fd2b258681db6335d67aa627dccabbf482ef37465eee"
+    },
+    {
+      "bytes": 1381,
+      "git_blob_oid": "5428a2fa36e524d1c662f064c5cf0b1a4b493161",
+      "git_mode": "100644",
+      "path": "scripts/build-source-snapshot.py",
+      "sha256": "865dee30bb6f2908014fdcee17aac41aa4e0fa149d50d01677c30c7a5a838d56"
+    },
+    {
+      "bytes": 10055,
+      "git_blob_oid": "cc2bdf26338e79ded25402f61299e8f3dd0e308a",
+      "git_mode": "100644",
+      "path": "scripts/source_snapshot.py",
+      "sha256": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee"
+    },
+    {
+      "bytes": 6849,
+      "git_blob_oid": "8c08b580386da0d4efd7291539d6b1e7fe7f797c",
+      "git_mode": "100644",
+      "path": "scripts/source_snapshot_v2.py",
+      "sha256": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46"
+    },
+    {
+      "bytes": 12110,
+      "git_blob_oid": "90f353ab395f6b8a4a183d79f40eb46012ef013a",
+      "git_mode": "100644",
+      "path": "scripts/source_snapshot_v3.py",
+      "sha256": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8"
+    },
+    {
+      "bytes": 5070,
+      "git_blob_oid": "0d0115691f33dba2e35d574e7ab564e774d8db07",
+      "git_mode": "100644",
+      "path": "scripts/verify-source-provenance.py",
+      "sha256": "cb5ec29a98a4a1c05ad1ef06c0675c05e9d4ffd6347e2832f2405da005b86ab2"
+    },
+    {
+      "bytes": 10676,
+      "git_blob_oid": "91a600a85f358d24d37a07fa0fd31595e0a2bf42",
+      "git_mode": "100644",
+      "path": "tests/test_artifact_evidence_io.py",
+      "sha256": "adc631878d155c4cb2649e730f8a4446ff50838fb504b4030888c18ca347619f"
+    },
+    {
+      "bytes": 26332,
+      "git_blob_oid": "a57d567ff32b340544056e28e9bd85e397b44b4d",
+      "git_mode": "100644",
+      "path": "tests/test_distribution_artifacts.py",
+      "sha256": "815b366bb0705683993d36199601ac7b629ca2e82721554391b1b7fde54ae82e"
+    },
+    {
+      "bytes": 17016,
+      "git_blob_oid": "7d7cc303215fa74993abc8b936d2d31a7760decf",
+      "git_mode": "100644",
+      "path": "tests/test_source_provenance.py",
+      "sha256": "8686ec115a3e02c8e28bbc5c0259bfc37b50148d167206d470046239138e3fe5"
+    },
+    {
+      "bytes": 13182,
+      "git_blob_oid": "bdf0f6b7b916999c0fa75b0669c337d61e12b618",
+      "git_mode": "100644",
+      "path": "tests/test_source_snapshot_v3.py",
+      "sha256": "79664360e4df25954a0e3186a98234a08fd43c22b20dd2e7a4530ef2d25ac0c3"
+    },
+    {
+      "bytes": 12720,
+      "git_blob_oid": "cb24bd93d9aa222d2d0fb75817f2c306211125a2",
+      "git_mode": "100644",
+      "path": "tools/artifact_evidence_io.py",
+      "sha256": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e"
+    },
+    {
+      "bytes": 37148,
+      "git_blob_oid": "7df83717fc4c7b918350c090928052c35f301b79",
+      "git_mode": "100644",
+      "path": "tools/distribution_artifacts.py",
+      "sha256": "40dc711f41b4454dbbc792797d5b7b7d567f8cbff1a4293933e79d2a1efc47bb"
+    }
+  ],
+  "whole_Git_tree_count_and_raw_size_match": true
+}

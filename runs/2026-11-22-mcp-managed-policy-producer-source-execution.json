@@ -1,0 +1,76 @@
+{
+  "actual_checks": {
+    "current_policy": {
+      "android-app": false,
+      "anonymizer-linux-amd64": false,
+      "c2pa-linux-x86_64": false,
+      "c2pa-macos-arm64": false,
+      "evaluator-linux-amd64": false,
+      "gateway-linux-amd64": false,
+      "ios-app": false,
+      "mcp-stdio": false,
+      "nli-linux-x86_64": false,
+      "nli-macos-arm64": false,
+      "node-build-tools": false,
+      "ps-source": true,
+      "source-snapshot": false,
+      "web-checker": false
+    },
+    "focused": {
+      "authorization_and_sdk_positive_boundaries_injected": true,
+      "errors": 0,
+      "failures": 0,
+      "log_sha256": "3c06113a39fa4ff356a599c93a80397b396b1476952e79c5786affbcf1af7c2b",
+      "skipped": 0,
+      "tests": 27
+    },
+    "python_blocks_ast_parse": 9,
+    "read_only_mcp_graph": {
+      "nodes": 257,
+      "sha256": "78e9b8a7385085b72af568b52ebd0f0dd4bbf1eb699277270ecdc3906e431f4e",
+      "source_files": 446
+    },
+    "shell_blocks_bash_syntax": 16,
+    "yaml_parser": "existing Ruby2.6 Psych safe_load"
+  },
+  "base_commit": "88a5db2bba96af4a09058a4ea8ee3a080c97778b",
+  "captured_at": "2026-11-22T17:47:40.649454+00:00",
+  "complete_project_obligations": false,
+  "license_clearance": false,
+  "limits": [
+    "No GitHub workflow executed, SDK install, artifact build, network acquisition or signature verification success.",
+    "Actual MCP permission remains refused because this branch lacks the protected fixed-I/O base; the PS route remains allowed and all13 others refused.",
+    "Protected signer implementation is source-only pending normal reviewed main integration and actual current-source attestation/install.",
+    "Earlier four-target runtime receipts remain historical; neither their439bindings nor newsource controls are treated as newruntime proof.",
+    "No full F057/X02, compiled closure, global/legal or independent-accuracy claim."
+  ],
+  "pass": true,
+  "preserved_observations": [
+    "Initial optional PyYAML parser attempt was unavailable in the pre-existing SDK environment; no package installed, existing Ruby parser then validated both current workflows.",
+    "Initial13/16 consumer evidence and original cleanup/private-boundary findings remain immutable separate files."
+  ],
+  "profile": "mcp-managed-policy-producer-source-execution/v1",
+  "release_authorized": false,
+  "source_sha256": {
+    ".github/workflows/artifact-sbom.yml": "d760f6e81cddcc458175fafd9bbef57e1d26a73f3c6135dc94275db892636e7a",
+    ".github/workflows/mcp-runtime-distribution.yml": "db18c744209e13cefd564e9f9d3a095eb16e924813df6d621a35fdf7a1c0e306",
+    "docs/mcp-managed-release-plan.md": "0d8c6d5faf6c91f72e73b732b9101cebe81abb2fcfb927c98af80b0de15956f7",
+    "docs/mcp-managed-release.md": "67faadae2047ae4cd3c9ac0aef090ac698be76132c98e1245f299492faa3038a",
+    "eval/dependencies/mcp-runtime-release.json": "e7512f624fa7a04f2d56867737b30c240b869188328310991df1471cbc8c4f0a",
+    "eval/dependency-policy.json": "1df4392e08995ae0e77313ce594cfa8dae2b2a8d7521730d8b7e31cf9e985e50",
+    "sbom/mcp-runtime/manifest.json": "b68066a0362a1e0c0729f53fcd33656e9c816ec424469c5cb72adf7a5a74628e",
+    "scripts/install-managed-mcp.py": "2af2ffef148f2141dc6af9cf812bbaaa55fc9a9e0ceb726e286703f113ed6424",
+    "tests/test_artifact_workflow.py": "9408d2c53f72c8d5f6a9f1df2008d960f82c86e6e91f385f19383eef71d2372c",
+    "tests/test_dependency_policy.py": "9dd6d2589a40916616bbc797a2079baa11723ccf16a3f8146d42db7a77577655",
+    "tests/test_managed_mcp_policy.py": "89e24fb6c8a28793ca8b331defdc4374e51faa54efc44fddb05cbbecee87fd62",
+    "tests/test_managed_mcp_release.py": "adc8787dbba805a3412c44292199be499ac423db91316b62b29e94ef417eaa83",
+    "tests/test_managed_mcp_runtime_cleanup.py": "eb2bd068d9c3c34f6a3194c4c28870eda0bae09732433514c805f3854e32b801",
+    "tests/test_managed_mcp_workflow.py": "a68e1248ba204b85c49e8efc665da62d1e8867121abcb0afcd2e982a845c6655",
+    "tools/dependency_policy.py": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+    "tools/distribution_artifacts.py": "3c4046d10b00712d9ddb60d79bc48ad576755353137cbf928ccb8c93ceb1da00",
+    "tools/mcp_distribution.py": "9f87c59d5884200872c15829babd4a6080842ceb2a9f7a151bd9c1f4b3bd341a",
+    "tools/mcp_managed_release.py": "1f2699df547894402a42cf187cfadc806a99a350bf7f6ea4ca82b2abe18d2679",
+    "tools/mcp_release_policy.py": "0e234f042810612e44de99c7928cd4f7493a511f7e1e05bb48ca321fbcc72021"
+  },
+  "sources_unchanged": true
+}

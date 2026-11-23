@@ -1,0 +1,171 @@
+{
+  "actual_commands": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "scripts/zlib-source-delivery.py"
+      ],
+      "exit": 2,
+      "result": {
+        "pass": false,
+        "reason": "zlib_source_notice_unavailable"
+      },
+      "role": "before_actual_refresh",
+      "stdout_sha256": "75c33466112b360f7f7cca37f25ca115b60917afa8d23b92a0146606f75789a0"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "scripts/zlib-source-delivery.py"
+      ],
+      "exit": 0,
+      "result": {
+        "compiled_library_rebuilt": false,
+        "complete_project_obligations": false,
+        "full_wasm_corresponding_source": false,
+        "global_distribution_admitted": false,
+        "legal_clearance": false,
+        "pass": true,
+        "publisher_signature_verified": false,
+        "zlib_version": "1.3.1"
+      },
+      "role": "after_actual_refresh",
+      "stdout_sha256": "e59f85bbc794740a444beef2bb384c172151d815e0415fc99922e57839183125"
+    }
+  ],
+  "actual_producer": "Existing expected_manifest, checked and outputs executed on unchanged committed exact archives/recipe/grants/historical observation; no manually substituted digest.",
+  "architecture_plan": "docs/mcp-zlib-producer-refresh-plan.md",
+  "author": "Codex / share_debugger",
+  "built_site_checked": false,
+  "captured_at": "2026-11-22T14:53:20.994490+00:00",
+  "compiled_library_rebuilt": false,
+  "complete_project_obligations": false,
+  "current_manifest": {
+    "bytes": 3744,
+    "path": "sbom/reviews/zlib-runtime/manifest.json",
+    "sha256": "e813ca64d1b0d021ee2a9df2d32034f68718bfb73a0bab8085554dde03dc42e4"
+  },
+  "current_policy_sha256": "7a7f084eb44046feccf01cc208ac862393204886326d3cd3bb136992d3337833",
+  "disk_guard": {
+    "filesystem_export_deferred": true,
+    "heavy_write_or_install": false,
+    "observed_free_bytes_before": 1299533824,
+    "reserve_bytes": 2147483648
+  },
+  "existing_five_runtime_files_hashed": {
+    "pyodide-lock.json": {
+      "bytes": 119077,
+      "sha256": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010"
+    },
+    "pyodide.asm.mjs": {
+      "bytes": 1250344,
+      "sha256": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635"
+    },
+    "pyodide.asm.wasm": {
+      "bytes": 9598218,
+      "sha256": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6"
+    },
+    "pyodide.mjs": {
+      "bytes": 17931,
+      "sha256": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109"
+    },
+    "python_stdlib.zip": {
+      "bytes": 2545637,
+      "sha256": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a"
+    }
+  },
+  "full_wasm_corresponding_source": false,
+  "global_distribution_admitted": false,
+  "historical_runtime_observation_preserved": {
+    "freshly_executed": false,
+    "sha256": "3fdaedb6b2d1bb6d88754183f94f7af33c17eb3fea084bb12bde3f6321a54089"
+  },
+  "in_memory_outputs": {
+    "NOTICES.txt": {
+      "bytes": 7912,
+      "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+    },
+    "ZLIB-SOURCES.zip": {
+      "bytes": 1682541,
+      "sha256": "4d5162fda2a3b0b64b627f0cac619b585bc5b0b20f4d075b6c00d0dd59143569"
+    },
+    "index.json": {
+      "bytes": 1858,
+      "sha256": "cae62e752eb614410c233289b1069795e6779db91a294256aecb9ad5bd2d4789"
+    }
+  },
+  "legal_clearance": false,
+  "limits": [
+    "No filesystem export or check-built/site build executed locally below reserve; current changed-source hosted site execution remains pending.",
+    "No WASM/library execution, cache replay of the full Emscripten archive, network acquisition or install; exact retained recipe/source bytes and existing five runtime files were verified.",
+    "No qualified MCP source changed, signer ran, route admitted, production deployed, legal clearance or full F057/X02 closure."
+  ],
+  "only_manifest_value_changed": "producer_sha256.tools/dependency_policy.py",
+  "original_manifest": {
+    "bytes": 3744,
+    "path": "sbom/reviews/zlib-runtime/history/manifest-baf610ed2d6db1123e1e091cac13814e2f80cb08620924596d1b939c351f2709.json",
+    "sha256": "baf610ed2d6db1123e1e091cac13814e2f80cb08620924596d1b939c351f2709"
+  },
+  "original_policy_sha256": "b44bd28309e9ed324a452e5779ab38a1d13cc6f808af65b7a4d1b26f69c0c402",
+  "producer_sha256": {
+    "scripts/zlib-source-delivery.py": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe",
+    "tools/dependency_policy.py": "7a7f084eb44046feccf01cc208ac862393204886326d3cd3bb136992d3337833",
+    "tools/pyodide_js_sources.py": "5f964360f591fcfbe4fabe24a214d4430dc639c38e608818f8e5fe870c546e4e",
+    "tools/zlib_source_delivery.py": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a"
+  },
+  "profile": "mcp-zlib-producer-source-refresh/v1",
+  "publisher_signature_verified": false,
+  "qualified_mcp_source_bindings_unchanged": 440,
+  "release_input_sha256": {
+    "release_manifest_sha256": "fda0196c527b3920744261e27ac93cb71637ad36cf127e450aeaf49f425dd86f",
+    "selected_lock_package_sha256": "9b6b433c2b043ef31ffaaee0c984445add79108339ad490c7e426bda68de3d43"
+  },
+  "retained_inputs_verified": {
+    "emscripten_recipe": {
+      "bytes": 1506,
+      "path": "sbom/reviews/zlib-runtime/sources/d3d8ca9a7caac82fa68e4984e47c03386093b8fa2b068e8e9eccedd3aa406926.py",
+      "sha256": "d3d8ca9a7caac82fa68e4984e47c03386093b8fa2b068e8e9eccedd3aa406926"
+    },
+    "emscripten_recipe_license": {
+      "bytes": 5093,
+      "path": "sbom/reviews/zlib-runtime/sources/620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86.txt",
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86"
+    },
+    "runtime_observation": {
+      "bytes": 903,
+      "path": "sbom/reviews/zlib-runtime/sources/3fdaedb6b2d1bb6d88754183f94f7af33c17eb3fea084bb12bde3f6321a54089.json",
+      "sha256": "3fdaedb6b2d1bb6d88754183f94f7af33c17eb3fea084bb12bde3f6321a54089"
+    },
+    "zlib_archive": {
+      "bytes": 1572744,
+      "path": "sbom/reviews/zlib-runtime/sources/17e88863f3600672ab49182f217281b6fc4d3c762bde361935e436a95214d05c.tar.gz",
+      "sha256": "17e88863f3600672ab49182f217281b6fc4d3c762bde361935e436a95214d05c"
+    },
+    "zlib_header_notice": {
+      "bytes": 1327,
+      "path": "sbom/reviews/zlib-runtime/sources/fbab901f75feb30106921191b00a52ed14fb439e49ad0e42bc7b329438c34d24.txt",
+      "sha256": "fbab901f75feb30106921191b00a52ed14fb439e49ad0e42bc7b329438c34d24"
+    },
+    "zlib_header_source": {
+      "bytes": 96829,
+      "path": "sbom/reviews/zlib-runtime/sources/8a5579af72ea4f427ff00a4150f0ccb3fc5c1e4379f726e101133b1ab9fc600c.h",
+      "sha256": "8a5579af72ea4f427ff00a4150f0ccb3fc5c1e4379f726e101133b1ab9fc600c"
+    },
+    "zlib_license": {
+      "bytes": 1002,
+      "path": "sbom/reviews/zlib-runtime/sources/845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243.txt",
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+    }
+  },
+  "second_generation_byte_identical": true,
+  "source_commit_before_refresh": "782807ca4aa589e324dad9cf8aeded278af8b9c3",
+  "source_offer_exported_to_disk": false,
+  "source_zip_members": 6,
+  "source_zip_members_inspected": true
+}

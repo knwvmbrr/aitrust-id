@@ -1,0 +1,80 @@
+{
+  "profile": "source-rights-own-copy-origin-classification-finding/v1",
+  "captured_at": "2026-11-22T18:34:50.047769+00:00",
+  "pass": false,
+  "finding": "Initial path classifier assigned4 byte-identical CC-BY-4.0 spec copies under public/reference to mutable projectApache instead of preserving their source grant. Existing rootNOTICE/specLICENSE identify the separate spec grant. No source release/admission occurred.",
+  "affected_copies": [
+    {
+      "copy": "site/public/reference/signal-registry.json",
+      "origin": "spec/signal-registry.json",
+      "git_blob_oid": "b9231bc597f3358a792ca85ee25a5c8fe376d691"
+    },
+    {
+      "copy": "site/public/reference/signals.md",
+      "origin": "spec/signals.md",
+      "git_blob_oid": "e1efe4ea416fc7535de46b08e2cc19b479a2ab7f"
+    },
+    {
+      "copy": "site/public/reference/spec-license.txt",
+      "origin": "spec/LICENSE",
+      "git_blob_oid": "cb4efa272d6418cc08a78d33fc148dbe36744678"
+    },
+    {
+      "copy": "site/public/reference/taxonomy.md",
+      "origin": "spec/taxonomy.md",
+      "git_blob_oid": "1a031dbe89667cb1210358899fc4643840fc53b0"
+    }
+  ],
+  "source_sha256": {
+    "tools/source_release_policy.py": "7c06ebac473794ad2eedf642d25e6f6174c92ec5a448c1470651fef0c576e529",
+    "eval/dependencies/source-snapshot-release.json": "8d989b123e025dd8292186769f7388b725cd3c36fce5f049a5b394d9d2078f8f",
+    "docs/source-snapshot-rights-plan.md": "a340b648dbf35cbf17c4aca98507f0610e1418f80c2ec0521a7b18c871b41fb9",
+    "tests/test_source_release_policy.py": "c54b8daf51ac3772407a2b6fa0ff02aded9e48622cdb82a3bd6586f93eb29bbf"
+  },
+  "actual_initial_helper_result": {
+    "profile": "source-snapshot-copy-obligations/v1",
+    "pass": true,
+    "source_copy_profile_satisfied": true,
+    "status": "SOURCE_COPY_PROFILE_SATISFIED",
+    "legal_clearance": false,
+    "release_authorized": false,
+    "complete_project_obligations": false,
+    "compiled_runtime_permission": false,
+    "independent_accuracy_evidence": false,
+    "source_commit": "032671e54bbf6a0466977d7b48e6dfa6fd9c4afc",
+    "checkout_commit": "3f199c6450da73335a9d2c5e2c1501ac3c946e14",
+    "source_bytes": 130354423,
+    "files": 12938,
+    "changed_project_text_files": 3,
+    "introduced_named_project_text_files": 13,
+    "category_counts": {
+      "project-text": 6253,
+      "project-grant": 2,
+      "unicode": 3,
+      "reference-copies": 21,
+      "synthid-reference": 9,
+      "project-asset": 2,
+      "public-cryptographic-facts": 16,
+      "nli-notices": 49,
+      "other-retained-terms": 45,
+      "c2pa-source": 2518,
+      "c2pa-source-root": 70,
+      "native-notices": 56,
+      "nli-source": 3571,
+      "wheel-notices": 224,
+      "pyodide-js-source": 14,
+      "build-source-terms": 21,
+      "zlib-source": 7,
+      "selected-ps-container": 2,
+      "fonts": 8,
+      "spec": 10,
+      "spdx-schema": 3,
+      "authored-fixtures": 34
+    },
+    "policy_sha256": "8d989b123e025dd8292186769f7388b725cd3c36fce5f049a5b394d9d2078f8f",
+    "method_sha256": "7c06ebac473794ad2eedf642d25e6f6174c92ec5a448c1470651fef0c576e529",
+    "worker_sha256": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3"
+  },
+  "required_correction": "Propagate separately licensed source origin to these exact copied paths; pin copiedlicense texts and add source-copy lineage regression.",
+  "root_source_changed": false
+}

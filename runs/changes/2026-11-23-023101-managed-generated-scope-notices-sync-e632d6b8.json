@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-023101-managed-generated-scope-notices-sync-e632d6b8",
+  "recorded_at": "2026-11-23T02:31:01.721522+00:00",
+  "author": "Codex PM",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bbba64492df3519d2bb1b04aa04368f0dcea2c17",
+  "changed": "Built current static output with existing dependencies and bound deterministic generated scope/license metadata before recapturing the review inventory.",
+  "proves": "Actual full site build and both selected source-notice postbuild checks pass. Exact generated JSON deltas are one policy-producer hash, its derived SPDX namespace and sixrecords evidence/attribution projections; all202jobs, acceptance and percentages unchanged.",
+  "limits": "This build and inventory correction do not replace current full hosted capability selection, protected checks, managed signing/install, independent accuracy or full original acceptance. Original136/66 unchanged; no installs/models/Docker.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-007",
+    "N-008"
+  ],
+  "files": {
+    "docs/nov22-managed-distribution-integration-plan.md": "9af3702d74ac212c2a339db2c95133e9ef559e1238032daba2e78c5d983bc70d",
+    "runs/2026-11-23-managed-generated-output-diagnosis.json": "404147f9776ddd4926ec3668e75238a69aad07985b18123e5c72f910c7b48257",
+    "site/public/web-licenses/packages.json": "e3f618c21bf815b4dc99d8711ef9e5d6d082078163f37794e7d69139f898a490",
+    "site/public/web-licenses/web-runtime.spdx.json": "3492d33fd2582f0ab8dd428893226ccf4388a4e18de34327e9dac98d20d02ff8",
+    "site/src/public-scope.json": "471cfc32202ac1771f255f84cef4409f56d4efd4b57e2ed89e65ac7a654c74e7",
+    "site/src/scope-manifest.json": "540525d680e31f2e8ca6fd662f57be2c8d1da94b5ee56c545c18457a04a4a2e6",
+    "site/public/reference/public-scope.json": "471cfc32202ac1771f255f84cef4409f56d4efd4b57e2ed89e65ac7a654c74e7",
+    "eval/route-boundaries.json": "4951751fd8b589ec7b720390f687681ca72edd27c6b1bc8e14788f60d7db89a4",
+    "state.json": "bc2616c9f2eac47dd5a5fe516f545100421a18b8c5de586ebd8b737cc3fc4d57"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-managed-generated-output-diagnosis.json",
+      "sha256": "404147f9776ddd4926ec3668e75238a69aad07985b18123e5c72f910c7b48257"
+    },
+    {
+      "path": "runs/2026-11-23-managed-source-group106-current.json",
+      "sha256": "b795e7781a129e89c94ff1b70b6ca95eff2aa5991d946fccda8b8b5e3b3026ec"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T02:31:02.630614+00:00"
+    }
+  ]
+}

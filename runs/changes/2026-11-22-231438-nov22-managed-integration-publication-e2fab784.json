@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-231438-nov22-managed-integration-publication-e2fab784",
+  "recorded_at": "2026-11-22T23:14:38.910257+00:00",
+  "author": "Codex PM with source-rights, MCP and publication reviewers",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "531b75aeac918be855a762d494711d1e0aca43ce",
+  "changed": "Recorded protected149 public delivery, accepted three completed named engineering components and integrated reviewed finite source-rights helper plus source-bound four-target MCP evidence.",
+  "proves": "Protected085 public HTTP and small browser evidence, actual ci.yml source authentication, four-target installed SDK checks and independent reviews have exact immutable references. Three component jobs delivered; original count remains136 complete66 open.",
+  "limits": "Original60-open target unmet. Main-only managed MCP signing/fresh signed installation pending. Source-rights helper is standalone, refuses unrecognized inputs and grants no source-snapshot route admission, accuracy or global legal clearance.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-108",
+    "F-119"
+  ],
+  "files": {
+    "docs/agent-delivery-status.md": "2a097711da1ef80bbdecd712d0f1456857677801dc12e14bd0c011aad3cee821",
+    "docs/scope-progress.json": "ba2e2780adf67396c7c77a0fe205ff91112e32bb98558e404b316bf8730b40e0",
+    "docs/scope-progress.md": "720422bf7560593095a4b73b08652983ce8cf10e0eb61dccdc44f198825b63dd",
+    "docs/session-delivery-plan.md": "d5ccc6fbcb75e133a6e52d8fc2452d0e015fa9242d0d78d9133c9fbf012c6cbf",
+    "docs/session-delivery.json": "80294b85a81a732bdef9aa928e94a3ae721f427e4ee57211577bf94157d9b157",
+    "state.json": "31dca8bd74fd79956ee29e01c17c3080fc2401ccd6d1b59d29eff01aea61b143",
+    "docs/nov22-managed-distribution-integration-plan.md": "c81b84873ea5a1ec62b1f8874f70362fedd308e45e4df5639ab18412583234da",
+    "runs/2026-11-22-image-jpeg-mt-v3-publication.json": "453f45035c5af1f061149d713cc49baad37af337402be57584ba86922be0d2c4",
+    "runs/2026-11-22-image-review-live-artifacts.json": "53f7971a7f77a7c4e352dd454d17c518aef788af7613dfe8a4e7760f91639b3a",
+    "runs/2026-11-22-image-review-live-browser.json": "de5fd8e1e98e6eb1b8059dc90dce1cba69897a3c3b082ab27614a19e3a0a33c6",
+    "runs/2026-11-22-pr149-publication-path-distinct-review.json": "7bd4aae7afdb120827895ccacc50978a26eb58a23cbef46e3aaeb5a4b08794c0",
+    "runs/2026-11-22-pr149-required-premerge.json": "1f8709208168ca2755322e5e41d46b4ce52449bfbca6321bfa221672638dbf38",
+    "runs/2026-11-22-protected-v3-source-authentication.json": "0250b3c71149a494ecef3d2da05af0b7cc2bb19aa236ff8aae5863c25c8caad2",
+    "runs/2026-11-22-mcp-current-four-target-hosted-qualification.json": "5507093fb2448efae55427dcf8e92ccc80e50b38f4d4ee24d9f7a95d1992793c",
+    "runs/2026-11-22-mcp-current-four-target-distinct-review.json": "dfb0047f302a11c1d86849845c38d4d503472b0d488a4594eb01840845f407ad"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-image-jpeg-mt-v3-publication.json",
+      "sha256": "453f45035c5af1f061149d713cc49baad37af337402be57584ba86922be0d2c4"
+    },
+    {
+      "path": "runs/2026-11-22-pr149-publication-path-distinct-review.json",
+      "sha256": "7bd4aae7afdb120827895ccacc50978a26eb58a23cbef46e3aaeb5a4b08794c0"
+    },
+    {
+      "path": "runs/2026-11-22-protected-v3-source-authentication.json",
+      "sha256": "0250b3c71149a494ecef3d2da05af0b7cc2bb19aa236ff8aae5863c25c8caad2"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-current-four-target-hosted-qualification.json",
+      "sha256": "5507093fb2448efae55427dcf8e92ccc80e50b38f4d4ee24d9f7a95d1992793c"
+    },
+    {
+      "path": "runs/2026-11-22-mcp-current-four-target-distinct-review.json",
+      "sha256": "dfb0047f302a11c1d86849845c38d4d503472b0d488a4594eb01840845f407ad"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-22T23:14:39.772082+00:00"
+    }
+  ]
+}

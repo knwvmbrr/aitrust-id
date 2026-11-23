@@ -40,6 +40,12 @@ def test_real_source_route_is_nonempty_and_other_scopes_are_not_approved():
     for route in policy.ROUTES:
         row = policy.evaluate(route)
         assert not row['legal_clearance'] and not row['independent_accuracy_evidence']
+        if route == 'mcp-stdio':
+            from tools.mcp_release_policy import FIXED_IO_SHA256
+            fixed_base = hashlib.sha256((ROOT / 'tools/artifact_evidence_io.py').read_bytes()).hexdigest() == FIXED_IO_SHA256
+            assert row['release_allowed'] is fixed_base
+            assert row['status'] == ('allowed' if fixed_base else 'blocked_unknown')
+            continue
         assert row['release_allowed'] is (route == 'ps-source')
         assert row['status'] == ('allowed' if route == 'ps-source' else 'blocked_unknown')
 

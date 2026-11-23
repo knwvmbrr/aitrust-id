@@ -1,0 +1,62 @@
+{
+  "base_commit": "88a5db2bba96af4a09058a4ea8ee3a080c97778b",
+  "captured_at": "2026-11-22T16:57:46.745241+00:00",
+  "checks": [
+    {
+      "actual_cli_subprocesses": 3,
+      "command": "python3 -I -S -B -m unittest discover -s tests -p test_mcp_managed_release.py -v",
+      "errors": 0,
+      "failures": 0,
+      "id": "focused-inert-managed-consumer",
+      "log_sha256": "460a064b634569bef3e55340d010c2cfc7ffb0b0e77bbb17b0a3c203a039c94c",
+      "seconds": 0.154,
+      "signature_and_sdk_success_boundaries_injected": true,
+      "skipped": 0,
+      "tests": 13
+    },
+    {
+      "command": "isolated standard-library evaluate(mcp-stdio)",
+      "id": "actual-current-route-policy",
+      "release_allowed": false,
+      "status": "blocked_unknown"
+    },
+    {
+      "command": "python3 -I -S -B scripts/install-managed-mcp.py --help",
+      "exit": 0,
+      "id": "isolated-cli-help",
+      "stdout_sha256": "670a7c5b249e246666768d04f84cf71ecad2cd4099e9b7a8167a7c11d4f01b37"
+    },
+    {
+      "command": "git diff --check",
+      "exit": 0,
+      "id": "diff-whitespace"
+    }
+  ],
+  "complete_project_obligations": false,
+  "historical_initial_fixture_failure": {
+    "diagnosis": "TemporaryDirectory path used a macOS symlink ancestor refused by nofollow Capture; fixture now resolves its owned temporary parent. No nofollow relaxation.",
+    "errors": 2,
+    "failures": 4,
+    "product_signature_or_sdk_executed": false,
+    "source_identity_not_retained": true,
+    "tests": 12
+  },
+  "license_clearance": false,
+  "limits": [
+    "13 groups are inert managed-consumer controls; no SDK install or cryptographic success occurred.",
+    "Actual CLI checks cover help, malformed arguments and refusal, not an authenticated install.",
+    "Earlier four-target 44-control runtime proof is unchanged historical developer-bundle evidence.",
+    "Route admission, protected-main MCP attestation and actual managed install remain unexecuted.",
+    "No local archive/build/install or disk reserve waiver occurred.",
+    "No whole F057/X02 or other original closure claimed."
+  ],
+  "profile": "mcp-managed-consumer-author-execution/v1",
+  "release_authorized": false,
+  "source_sha256": {
+    "docs/mcp-managed-release-plan.md": "435fb90ea7d28aa6afa894529b1135d25d30c75033f9fde26192b5607c570dac",
+    "docs/mcp-managed-release.md": "0cf319145a2420cedd0092937bd30661ce7b50d75d3917734133c055c002a021",
+    "scripts/install-managed-mcp.py": "2af2ffef148f2141dc6af9cf812bbaaa55fc9a9e0ceb726e286703f113ed6424",
+    "tests/test_mcp_managed_release.py": "0a9fe62fbf341d4b6585b07851dd012c71b505b06c3a7737e89a76a3b5b67eae",
+    "tools/mcp_managed_release.py": "9f342d2ecb5d56fd23a3cb43dea2e4244039ecc07dae6fcd7ce59cb61952ef2b"
+  }
+}

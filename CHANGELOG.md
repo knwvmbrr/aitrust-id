@@ -1,7 +1,198 @@
 # Changelog
 
+## Unreleased — 2026-11-23
+
+### 2026-11-23-031046-include-corrective-source-review-evidence-c0a4a863
+
+Recorded 2026-11-23T03:10:46.947348+00:00 · Contributor: Codex PM; review authored by Codex /root/share_debugger · change
+
+- **Changed.** Included the exact corrective assembly review already referenced by current state, closing one staging omission before protected merge.
+- **Evidence.** The required public-safe report has its reviewed45b5aa digest; all current state evidence references are checked against the staged source index before push. [Change record](./runs/changes/2026-11-23-031046-include-corrective-source-review-evidence-c0a4a863.json).
+- **Not claimed.** Metadata completeness only; no code, source fingerprint, original percentage, license or accuracy clearance change. Protected checks and actual main-only managed installation still required.
+
+
+### 2026-11-23-030727-select-managed-current-five-capabilities-fc70d7a1
+
+Recorded 2026-11-23T03:07:27.935405+00:00 · Contributor: Codex PM; current hosted evidence collected and selection reviewed by Codex /root/seo · change
+
+- **Changed.** Selected the actual current five hosted capability receipts after source-rights and generated-output corrections; preserved all older selections and failures.
+- **Evidence.** Actual7/6/14/72/65 commands passed on hostedLinux. One bounded artifact retrieved once;8365unique source bindings and exact Git checkout verified. Allfive assess current afterselection; actual8397-source boundary review passes; independent selection review clear. [Change record](./runs/changes/2026-11-23-030727-select-managed-current-five-capabilities-fc70d7a1.json).
+- **Not claimed.** Engineering evidence only. Final protected checks, actual main-only MCP signature and fresh managed installation remain mandatory; independent tag accuracy, human/device acceptance and original60target remain unmet. Original136complete66open unchanged.
+
+
+### 2026-11-23-023101-managed-generated-scope-notices-sync-e632d6b8
+
+Recorded 2026-11-23T02:31:01.721522+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Built current static output with existing dependencies and bound deterministic generated scope/license metadata before recapturing the review inventory.
+- **Evidence.** Actual full site build and both selected source-notice postbuild checks pass. Exact generated JSON deltas are one policy-producer hash, its derived SPDX namespace and sixrecords evidence/attribution projections; all202jobs, acceptance and percentages unchanged. [Change record](./runs/changes/2026-11-23-023101-managed-generated-scope-notices-sync-e632d6b8.json).
+- **Not claimed.** This build and inventory correction do not replace current full hosted capability selection, protected checks, managed signing/install, independent accuracy or full original acceptance. Original136/66 unchanged; no installs/models/Docker.
+
+
+### 2026-11-23-022809-managed-source-rights-consumer-correction-1fc7f71a
+
+Recorded 2026-11-23T02:28:09.128608+00:00 · Contributor: Codex PM and source-rights author with distinct corrective review · change
+
+- **Changed.** Corrected two source-rights consumer tests to select the exact reviewed baseline while requiring new unmapped source trees to refuse; retained actual failed hosted checks and current source-capacity evidence.
+- **Evidence.** Original hosted no-egress failures confirmed exactly those two stale positive assumptions; corrected affected106-source-control command passes. Actual hosted archive packet15,650,740bytes remains within unchanged16MB bound. No helper/policy or rights expansion. [Change record](./runs/changes/2026-11-23-022809-managed-source-rights-consumer-correction-1fc7f71a.json).
+- **Not claimed.** Current full protocol/website evidence and protected signing/install remain pending. Site inventory-after-build drift is being diagnosed; no boundary or global clearance assertion is bypassed. Original136/66 counts unchanged.
+
+
+### 2026-11-23-020024-managed-final-source-registration-c75e23e4
+
+Recorded 2026-11-23T02:00:24.997571+00:00 · Contributor: Codex PM with independent MCP and archive identity workers · change
+
+- **Changed.** Integrated the exact corrected registry/zlib producer and standalone captured-source archive/Git binding; registered8397source boundaries and their focused controls; updated actual worker status.
+- **Evidence.** 14tiny archive identity controls and7actual cases with distinct source/fixture review; real registry and source-notice CLI positives and injected refusals. Current449MCPqualified inputs remain unchanged. [Change record](./runs/changes/2026-11-23-020024-managed-final-source-registration-c75e23e4.json).
+- **Not claimed.** All5current hosted source-bound capability checks and protected managed signing/install remain pending. Standalone identity/rights helpers do not admit a source archive or assert legal clearance. No original requirement is newly closed;136complete66open.
+
+
+### 2026-11-22-source-snapshot-trusted-git-binding
+
+Recorded 2026-11-23T01:50:14.765663+00:00 · Contributor: Codex /root/seo; distinct reviewer Codex /root/web_camo · change
+
+- **Changed.** Add a bounded received-source archive to caller-trusted Git binding helper without changing serializers, rights policy, graph or signer.
+- **Evidence.** 14 focused controls and7 actual tiny command cases pass at the frozen captured-source loader. Canonical source matches; self-consistent same-commit byte, path, mode and size forgeries refuse. A distinct reviewer independently replayed canonical binary/empty source, equal-length coherent forgery and captured-foundation import isolation. [Change record](./runs/changes/2026-11-22-source-snapshot-trusted-git-binding.json).
+- **Not claimed.** No large repository archive, SDK, network, extraction, received code execution, signing, route admission, rights approval or original closure. Whole operation60s with owned5s cleanup; immutable serializers and previously reviewed rights files remain unchanged. Earlier13-control/7-case snapshot and the pre-product sparse-checkout harness failure remain historical; large qualification remains future Linux work.
+
+
+### 2026-11-23-013931-mcp-registry-zlib-current-integration-5521e2ff
+
+Recorded 2026-11-23T01:39:31.102499+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Corrected the registry integration guard for the reviewed PS and MCP routes and regenerated the selected zlib provenance with the existing producer.
+- **Evidence.** Actual before refusals become two passing isolated CLIs; exact two admissions and twelve refusals retain the PS nine-file contract. Four focused registry groups and ten selected zlib controls pass. Only the actual zlib policy producer hash changes; all449 qualified MCP inputs remain unchanged. Distinct reviewer replayed bounded typed/promotion/privacy refusal cases and source bindings. [Change record](./runs/changes/2026-11-23-013931-mcp-registry-zlib-current-integration-5521e2ff.json).
+- **Not claimed.** No SDK rerun, filesystem export, site build, WASM execution, acquisition, signature, release or full F057/X02 closure. Existing hosted runtime reports retain their source identities; current hosted integration checks remain pending.
+
+
+## Unreleased — 2026-11-23
+
+### 2026-11-23-013905-managed-source-bound-registration-0f59ddee
+
+Recorded 2026-11-23T01:39:05.459779+00:00 · Contributor: Codex PM · change
+
+- **Changed.** Registered finite MCP/source-rights inputs and focused controls in current capability and route-boundary inventories; trigger hosted qualification when its manifest changes; corrected public085 delivery state.
+- **Evidence.** 8392 current boundary inputs; all449 installed-MCP sources exactly unchanged; actual source metadata preflight below16MB. Initial real CI and stale-evidence refusals retained and diagnosed. [Change record](./runs/changes/2026-11-23-013905-managed-source-bound-registration-0f59ddee.json).
+- **Not claimed.** Metadata preflight uses an explicit synthetic artifact descriptor, not an archive execution. Current five capability selection and original60 target pending; no managed signature, original closure or independent accuracy granted.
+
+
 ## Unreleased — 2026-11-22
 
+### 2026-11-22-180148-visual-camera-detector-candidates-15569089
+
+Recorded 2026-11-22T18:01:48.656695+00:00 · Contributor: Codex / web_camo · change
+
+- **Changed.** Recorded primary-source camera-cohort and image-detector candidate research with exact source identities and separate data, code and weight boundaries.
+- **Evidence.** Source-only review identifies per-file CC0 camera samples and a pinned UniversalFakeDetect/CLIP research candidate, documents unsafe upstream loading/evaluation paths and proposes a bounded offline score qualification job. Original ignored research remains immutable; routine authorized engineering uses rights, capacity and worker-plan checks. [Change record](./runs/changes/2026-11-22-180148-visual-camera-detector-candidates-15569089.json).
+- **Not claimed.** No images, weights, datasets or packages acquired; no runtime, benchmark, detector accuracy, product integration, tag or original closure. The first12.19MP DNG exceeds the current4MP JPEG profile and needs a separately versioned conversion. Acquisition remains pending engineering rights/capacity checks; owner decisions apply only to new costs, credentials, terms, legal representation or adopted numeric-tag policy.
+
+
+### 2026-11-22-231438-nov22-managed-integration-publication-e2fab784
+
+Recorded 2026-11-22T23:14:38.910257+00:00 · Contributor: Codex PM with source-rights, MCP and publication reviewers · change
+
+- **Changed.** Recorded protected149 public delivery, accepted three completed named engineering components and integrated reviewed finite source-rights helper plus source-bound four-target MCP evidence.
+- **Evidence.** Protected085 public HTTP and small browser evidence, actual ci.yml source authentication, four-target installed SDK checks and independent reviews have exact immutable references. Three component jobs delivered; original count remains136 complete66 open. [Change record](./runs/changes/2026-11-22-231438-nov22-managed-integration-publication-e2fab784.json).
+- **Not claimed.** Original60-open target unmet. Main-only managed MCP signing/fresh signed installation pending. Source-rights helper is standalone, refuses unrecognized inputs and grants no source-snapshot route admission, accuracy or global legal clearance.
+
+
+### 2026-11-22-source-snapshot-rights-profile
+
+Recorded 2026-11-22T22:50:06.479816+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Add a closed source-copy obligation helper with immutable third-party/grant assets, named maintained first-party paths, and pinned copied-spec attribution.
+- **Evidence.** 18 focused stdlib controls and5 source-stable CLI cases cover baseline/current032 source, unsupported tree/private selector and actual unmappedMCP refusal. Distinct source/maintained-contract review is retained;1019 source-grant component records exclude the separately mapped2 PS containers. [Change record](./runs/changes/2026-11-22-source-snapshot-rights-profile.json).
+- **Not claimed.** No shared policy/graph/signer admission, SDK/archive build, global license/legal opinion, compiled-runtime permission, tag accuracy or original closure. First-party provenance relies on the explicitly reviewed contributor contract. Initial fixture and copied-spec classification failures remain immutable; earlier progress shorthand1021 combined unlike source-record/container units. Unit18 has after-observed source identities; separate CLI before/after maps are retained.
+
+
+### 2026-11-22-183950-mcp-protected-base-source-refresh-268f912f
+
+Recorded 2026-11-22T18:39:50.465972+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Merge protected085 main into the isolated MCP source, retain both histories and51artifact controls, trim one EOF byte and replay only affected current source metadata.
+- **Evidence.** The exact fixed2d808I/O helper is selected; actual40-wheel metadata collection changes only its source row. Fourteen grant facts remain exact, PS and finite MCP technical permission pass with12other routes blocked, PS retains9files,28small controls pass and distinct semantic review confirms the merge. [Change record](./runs/changes/2026-11-22-183950-mcp-protected-base-source-refresh-268f912f.json).
+- **Not claimed.** No SDK or four-target execution, archive/build/install, signature or managed artifact authorization. Earlier source/runtime receipts remain historical; F057/X02, legal/global and accuracy completion are not claimed. Normal commit waits for the measured disk guard.
+
+
+### 2026-11-22-181410-managed-mcp-protected-consumer-c02365d7
+
+Recorded 2026-11-22T18:14:10.113247+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Implement an optional managed MCP consumer, source-bound finite grant assessment and protected-main producer; retain failed private workspaces and preserve prior runtime and failure evidence.
+- **Evidence.** Twenty-six new managed-source controls plus two existing workflow-context controls pass; both workflows parse, sixteen shell and nine Python blocks pass syntax checks, and distinct source/grant reviews cover the fixed facts and producer authority. [Change record](./runs/changes/2026-11-22-181410-managed-mcp-protected-consumer-c02365d7.json).
+- **Not claimed.** Source-only implementation: no new SDK runtime, artifact assembly, protected signature or actual managed admission. Prior four-target44-case runtime receipts and88a5zlib filesystem evidence stay historical; current branch awaits protected fixed-I/O base. No full F057/X02, legal, compiled-closure or accuracy acceptance.
+
+
+### 2026-11-22-145557-mcp-zlib-refresh-distinct-review-c3215762
+
+Recorded 2026-11-22T14:55:57.896527+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Retained distinct source/input review of the current selected zlib producer refresh.
+- **Evidence.** Reviewer verified the exact immutable old manifest, sole policy-hash delta,11 producer/input identities, five installed runtime file identities and439 hosted qualification bindings. The author440-file refresh comparison additionally includes its locally frozen architecture plan. [Change record](./runs/changes/2026-11-22-145557-mcp-zlib-refresh-distinct-review-c3215762.json).
+- **Not claimed.** Read-only byte review without a producer rerun, filesystem export, site build or WASM execution. Actual hosted delivery, route admission, cryptographic attestation, legal clearance and full F057/X02 remain pending.
+
+
+### 2026-11-22-145450-mcp-zlib-current-producer-replay-df4272ec
+
+Recorded 2026-11-22T14:54:50.215407+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Replayed the selected zlib source/notice producer against the current optional MCP policy-helper source while preserving its exact historical manifest.
+- **Evidence.** Existing expected_manifest, checked and outputs executed on retained pinned source, recipe, grants and old runtime observation. Only the actual policy producer hash differs; default verification changes from refusal to pass, two in-memory output generations agree, six ZIP members verify, five existing runtime files match, and440 MCP bindings remain unchanged. [Change record](./runs/changes/2026-11-22-145450-mcp-zlib-current-producer-replay-df4272ec.json).
+- **Not claimed.** Below2GiB reserve: no filesystem export, built-site check, WASM execution, full Emscripten archive replay, acquisition or install. Current hosted site delivery still pending. No source code, route admission, signature, license clearance or full F057/X02 closure.
+
+
+### 2026-11-22-144957-mcp-four-target-distinct-review-4055dde6
+
+Recorded 2026-11-22T14:49:57.087826+00:00 · Contributor: Codex / share_debugger; distinct reviewer Codex / seo · change
+
+- **Changed.** Preserved distinct retained-artifact review of the actual four-target MCP qualification.
+- **Evidence.** Reviewer compared all4 API artifact hashes,40 JSON members,439 source bindings, actual target observations and44/30/940/8 per-target results; selected SPDX denial occurred before zero signer invocations. [Change record](./runs/changes/2026-11-22-144957-mcp-four-target-distinct-review-4055dde6.json).
+- **Not claimed.** Source/evidence review without a repeat install, download, artifact reconstruction or cryptographic signature check. Runtime ZIP and SPDX payloads were not uploaded. MCP admission, shared integration, legal clearance and full F057/X02 remain open.
+
+
+### 2026-11-22-144648-mcp-four-target-hosted-qualification-2e04ba2d
+
+Recorded 2026-11-22T14:46:48.417758+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Recorded actual first-attempt four-target offline MCP qualification on a draft development PR.
+- **Evidence.** Four selected hosted targets each passed44 focused controls without skips, exact30-package offline installation,940 payload checks and8 fixed SDK controls;439 shared source bindings and artifact/SPDX identities match, and managed release is refused before any signature verifier. [Change record](./runs/changes/2026-11-22-144648-mcp-four-target-hosted-qualification-2e04ba2d.json).
+- **Not claimed.** Actual checkout is PR synthetic merge c5b83d6ddc9198b36cee67d717c56c06582147d4 for head782807ca4aa589e324dad9cf8aeded278af8b9c3. No signature, admission, main merge, legal clearance, independent accuracy or full F057/X02 closure. Raw bounded artifacts remain private; shared integration/source-cap review remains pending.
+
+
+### 2026-11-22-143752-mcp-offline-runtime-distribution-a0dd03dd
+
+Recorded 2026-11-22T14:37:52.660566+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Add exact four-target offline MCP wheel bundles, installed-runtime verification, scoped source notices and a read-only runtime CI proposal.
+- **Evidence.** Preserved publisher wheel bytes; finite source/notice mapping; current profile validation keeps PS admitted and MCP blocked. Historical selected Mac8/8 and four-target deterministic formats are separately bound; narrow target, gzip, capacity and workflow reviews are retained. [Change record](./runs/changes/2026-11-22-143752-mcp-offline-runtime-distribution-a0dd03dd.json).
+- **Not claimed.** No current four-target runtime execution, protected signing, MCP admission, compiled-closure/legal clearance, independent accuracy, full F057/X02 completion or global scope change. Local runtime paused below disk reserve; historical failure and source identities preserved.
+
+
+### 2026-11-22-082000-mcp-rust-stdlib-source-notices-8f1a556f
+
+Recorded 2026-11-22T08:20:00.849325+00:00 · Contributor: Codex / seo · change
+
+- **Changed.** Mapped selected native-wheel Rust standard-library sources to specific Unicode, backtrace, compiler-builtins/LLVM-exception, libm and locked dependency grants; retained exact source-specific notices for MCP packaging.
+- **Evidence.** Ten wheel/native hashes and532 source-path literals checked;176 REUSE/generated-metadata records agree;18 lock archive checksums verify with13cache reuses;159 shared libm runtime source blobs and74 notice segments match; complete qualified111113-byte attribution artifact is source-bound. [Change record](./runs/changes/2026-11-22-082000-mcp-rust-stdlib-source-notices-8f1a556f.json).
+- **Not claimed.** Source/evidence inputs only: actual MCP artifact notice inclusion remains pending. No target import/install/build/native execution, whole compiler/LLVM/GCC distribution, exhaustive compiled closure, build attestation, legal clearance, route admission, tag accuracy or original closure.
+
+
+### 2026-11-22-075106-cffi-libffi-exact-byte-closeout-29f33130
+
+Recorded 2026-11-22T07:51:06.181658+00:00 · Contributor: Codex / seo · change
+
+- **Changed.** Preserved exact upstream CFFI/libffi source bytes through narrowly scoped whitespace and Setext-heading marker attributes; qualified the current documentation and source bindings.
+- **Evidence.** Normal staged Git diff check passes without normalizing upstream source or notice content. Current 40-file binding map differs from the earlier evidence snapshot in only local attributes and explanatory documentation. [Change record](./runs/changes/2026-11-22-075106-cffi-libffi-exact-byte-closeout-29f33130.json).
+- **Not claimed.** No package/native execution or artifact integration rerun; original wheel/source/notice observations remain immutable. No route, legal, compiled-closure or original acceptance claim.
+
+
+### 2026-11-22-074932-cffi-libffi-source-notice-mapping-89466c96
+
+Recorded 2026-11-22T07:49:32.809063+00:00 · Contributor: Codex / seo · change
+
+- **Changed.** Mapped the two approved Linux CFFI 2.1.1 wheels to the publisher-declared static libffi 3.4.6 recipe and retained full grant/copyright notices for the MCP artifact producer.
+- **Evidence.** Exact wheel SHA/size and all30 hashed RECORD entries per wheel validate; ELF defined static-recipe symbol corroborates mapping; official release-source files match sdist;22 source/build/header records and16 source-specific notices are byte-bound. [Change record](./runs/changes/2026-11-22-074932-cffi-libffi-source-notice-mapping-89466c96.json).
+- **Not claimed.** Evidence/data only: actual MCP artifact notice inclusion remains pending. Recipe correspondence is not wheel build attestation, exhaustive compiled closure, reproducibility, legal clearance, route admission or original closure. No package import, install, build, native execution or service action.
 ### 2026-11-22-180939-current-five-hosted-selection-3523dfa7
 
 Recorded 2026-11-22T18:09:39.509702+00:00 · Contributor: Codex PM /root; distinct hosted reviews /root/web_camo and /root/seo · change

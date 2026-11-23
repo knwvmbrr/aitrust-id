@@ -1,0 +1,74 @@
+{
+  "captured_at": "2026-11-22T14:37:01.260426+00:00",
+  "reviewer": "Codex / web_camo",
+  "profile": "MCP-capacity-and-hosted-workflow-source-review/v1",
+  "pass": true,
+  "source_hashes_before": {
+    "tools/mcp_distribution.py": "c6f7551709b2ad6a4a12c3c554ab7084291dfa16f0a4a81249877a0333a3ecd5",
+    "scripts/mcp-distribution.py": "954e1c505a015aa86721a590d762b0818391cf48c6acc1d36c040b23b54a6bc0",
+    "tests/test_mcp_distribution.py": "091902499e010c6008a18369552a13cbc2d3b2f83e3a55be4cfb920448c70195",
+    "sbom/mcp-runtime/manifest.json": "08604a609b9a78eecd2f780ed3f1d7d1fd3264ea2b3890635655ba932f640038",
+    ".github/workflows/mcp-runtime-distribution.yml": "f94ffcf47f4bb446c9a4474685704e5dd1ca6d13fd6ca8146a7d9bcabaff4370"
+  },
+  "source_hashes_after": {
+    "tools/mcp_distribution.py": "c6f7551709b2ad6a4a12c3c554ab7084291dfa16f0a4a81249877a0333a3ecd5",
+    "scripts/mcp-distribution.py": "954e1c505a015aa86721a590d762b0818391cf48c6acc1d36c040b23b54a6bc0",
+    "tests/test_mcp_distribution.py": "091902499e010c6008a18369552a13cbc2d3b2f83e3a55be4cfb920448c70195",
+    "sbom/mcp-runtime/manifest.json": "08604a609b9a78eecd2f780ed3f1d7d1fd3264ea2b3890635655ba932f640038",
+    ".github/workflows/mcp-runtime-distribution.yml": "f94ffcf47f4bb446c9a4474685704e5dd1ca6d13fd6ca8146a7d9bcabaff4370"
+  },
+  "preserved_prior_corrected_review": {
+    "path": "output/verification/mcp-target-and-gzip-corrected-distinct-review.json",
+    "sha256": "9b58f9606df37ffe209a2e2e593767e7f77d0917f0d9c11df1c578a42c0035ec"
+  },
+  "capacity_delta": {
+    "typed_refusal_preserved_through_wrapper": true,
+    "before_workspace_creation_and_spawn": true,
+    "same_reserve_2GiB_plus128MiB": true,
+    "fixed_nonpath_CLI_reason": true,
+    "authored_inert_control_traps_mkdir_and_child": true
+  },
+  "workflow_source": {
+    "four_fixed_matrix_rows": [
+      "- {runner: macos-15, python: '3.12', target: cp312-macosx_11_0_arm64}",
+      "- {runner: macos-15, python: '3.13', target: cp313-macosx_11_0_arm64}",
+      "- {runner: ubuntu-24.04, python: '3.12', target: cp312-linux_x86_64_glibc_2_34}",
+      "- {runner: ubuntu-24.04, python: '3.13', target: cp313-linux_x86_64_glibc_2_34}"
+    ],
+    "read_only_contents_no_secrets_or_signing": true,
+    "immutable_action_pins_persist_credentials_false": true,
+    "actual_fixed_runtime_target_probe_before_acquisition": true,
+    "official_exact30_wheels_hashes_private_offline_install": true,
+    "HOME_unchanged_no_global_pip": true,
+    "no_skips_exact44_source_methods": {
+      "tests/test_mcp_distribution.py": 36,
+      "tests/test_mcp_runtime_obligations.py": 8
+    },
+    "cross_step_exact_artifact_SHA_bytes_profile_target_wheels_members": true,
+    "fixed8_case_ids_and_SDK2_3_0": [
+      "exact_two_read_only_tools",
+      "implemented_capabilities_only",
+      "canonical_full_record_finding_no_echo",
+      "no_finding_is_not_clearance",
+      "missing_optional_privacy_preserves_ps",
+      "invalid_fields_refused_without_echo",
+      "oversized_input_refused_without_echo",
+      "legacy_full_record_parity"
+    ],
+    "selected_SPDX_reconstruction_and_policy_refusal_before_signature_verifier": true,
+    "source_before_after_checked": true,
+    "only_report_JSON_7day_upload_no_connection_venv_ZIP": true
+  },
+  "profile_metadata": {
+    "40_wheels_4_targets_30_each": true,
+    "distribution_approved": false
+  },
+  "findings": [],
+  "actual_runtime_or_workflow_executed_by_reviewer": false,
+  "limits": [
+    "Read-only source/hash/AST comparisons only; no44-suite/SDKinstall/archive150/browser/network/hostedexecution.",
+    "Earlier selected Mac8of8 remains historical; current selected-target installed/runtime and all4hosted outcomes pending.",
+    "Whole route admission stillBLOCKED; no signature, licensing/globalclearance, F057/X02 closure or independent accuracy approval.",
+    "Abnormal hardtimeout SDK-detached-server reaping limitation from previous review remains."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-22-145450-mcp-zlib-current-producer-replay-df4272ec",
+  "recorded_at": "2026-11-22T14:54:50.215407+00:00",
+  "author": "Codex / share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "782807ca4aa589e324dad9cf8aeded278af8b9c3",
+  "changed": "Replayed the selected zlib source/notice producer against the current optional MCP policy-helper source while preserving its exact historical manifest.",
+  "proves": "Existing expected_manifest, checked and outputs executed on retained pinned source, recipe, grants and old runtime observation. Only the actual policy producer hash differs; default verification changes from refusal to pass, two in-memory output generations agree, six ZIP members verify, five existing runtime files match, and440 MCP bindings remain unchanged.",
+  "limits": "Below2GiB reserve: no filesystem export, built-site check, WASM execution, full Emscripten archive replay, acquisition or install. Current hosted site delivery still pending. No source code, route admission, signature, license clearance or full F057/X02 closure.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "docs/mcp-zlib-producer-refresh-plan.md": "a676eb38d1c7b3c20305a1c7b95fd2136dd082c879bd2a5b1c0743d77bb4b241",
+    "sbom/reviews/zlib-runtime/manifest.json": "e813ca64d1b0d021ee2a9df2d32034f68718bfb73a0bab8085554dde03dc42e4",
+    "sbom/reviews/zlib-runtime/history/manifest-baf610ed2d6db1123e1e091cac13814e2f80cb08620924596d1b939c351f2709.json": "baf610ed2d6db1123e1e091cac13814e2f80cb08620924596d1b939c351f2709",
+    "runs/2026-11-22-mcp-zlib-producer-refresh.json": "36b24ebc1bf8d45ed1b6dcea9b421d1967b133677b6cd82ea7d9e3d74d3f27de"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-22-mcp-zlib-producer-refresh.json",
+      "sha256": "36b24ebc1bf8d45ed1b6dcea9b421d1967b133677b6cd82ea7d9e3d74d3f27de"
+    }
+  ],
+  "checks": []
+}

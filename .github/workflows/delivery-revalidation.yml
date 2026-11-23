@@ -4,10 +4,12 @@ on:
   pull_request:
     paths:
       - '.github/workflows/delivery-revalidation.yml'
+      - 'eval/revalidation.json'
   push:
     branches: [main]
     paths:
       - '.github/workflows/delivery-revalidation.yml'
+      - 'eval/revalidation.json'
 
 permissions:
   contents: read

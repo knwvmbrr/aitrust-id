@@ -1,0 +1,3435 @@
+{
+  "actual_checkout": "e6073bc41e686ed47eb2c60789a4c8a0c08bc9a5",
+  "actual_checkout_parents": [
+    "085106c1d40e86b071a25a7b9e4e56b965a31044",
+    "531b75aeac918be855a762d494711d1e0aca43ce"
+  ],
+  "actual_checkout_tree": "aa7b0910d52d312bf030fc20e9456c122c342dd4",
+  "artifact_archive_total_bytes": 107687,
+  "artifacts_downloaded_once": true,
+  "attestation_verified": false,
+  "author_inspection_correction": "Initial read-only validation script used an unsuffixed install key although retained members end in .json; it stopped before source verification, then was corrected against the same retained bytes. No product change/download/runtime retry.",
+  "captured_at": "2026-11-22T23:03:37.408227+00:00",
+  "complete_project_obligations": false,
+  "current_source_bindings": [
+    {
+      "git_blob_oid": "b0c61b26a99b74f8f8c289b6c20e193924ad61ec",
+      "git_mode": "100644",
+      "path": ".github/workflows/artifact-sbom.yml",
+      "sha256": "3cdd8535b902ad162ded6572b17c789ab6bc370d925e6e79ca973d1f131c94fe"
+    },
+    {
+      "git_blob_oid": "b1b04fe69d6cf237c15f2d4e3b1b1b77545f6ecc",
+      "git_mode": "100644",
+      "path": ".github/workflows/mcp-runtime-distribution.yml",
+      "sha256": "db18c744209e13cefd564e9f9d3a095eb16e924813df6d621a35fdf7a1c0e306"
+    },
+    {
+      "git_blob_oid": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "git_mode": "100644",
+      "path": "LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "git_blob_oid": "c5b5cc13670740a0a4a07e5ad6a40a7281d25c55",
+      "git_mode": "100644",
+      "path": "NOTICE",
+      "sha256": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6"
+    },
+    {
+      "git_blob_oid": "31bb862b003d932d42eb5bd5002798ae140c0dbd",
+      "git_mode": "100644",
+      "path": "docs/distribution-artifact-sbom.md",
+      "sha256": "78a18114e6d8afdc190cfc5d222e71c693aa61ddcc2fa521dda8ff5f82bfe5be"
+    },
+    {
+      "git_blob_oid": "562c63ab2315612f31933be55b0878bed62bc9cb",
+      "git_mode": "100644",
+      "path": "docs/mcp-managed-release.md",
+      "sha256": "67faadae2047ae4cd3c9ac0aef090ac698be76132c98e1245f299492faa3038a"
+    },
+    {
+      "git_blob_oid": "9e93c2386106b1622aa3ebb2f5783465c0e39fc3",
+      "git_mode": "100644",
+      "path": "docs/mcp-stdio-distribution.md",
+      "sha256": "cf77502a33ffb85a1890e00f29f98d8f3e84f25639084f96d8505b7d1d777b4c"
+    },
+    {
+      "git_blob_oid": "aa57fe4ebec2bcf21c7d8c82ce66d96d94e854ad",
+      "git_mode": "100644",
+      "path": "eval/dependencies/mcp-runtime-release.json",
+      "sha256": "d0488a93ce395eb7b03aed1161977a87a81782f6af7a4bd66ba890c0f4c22c38"
+    },
+    {
+      "git_blob_oid": "be7664abd1d9ac949ea0e20405c4449c3ee8fd94",
+      "git_mode": "100644",
+      "path": "eval/dependency-policy.json",
+      "sha256": "672ccf547dd1615145dbc37bbae214f15c4570e1f76052aa28171d7e35b3595a"
+    },
+    {
+      "git_blob_oid": "56da58912807030b451a4700687d5bd02c72d6ed",
+      "git_mode": "100644",
+      "path": "eval/vectors/unicode/LICENSE.txt",
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    },
+    {
+      "git_blob_oid": "34faa4e87e6e05f8babc35e761a1b16f4bb8826d",
+      "git_mode": "100644",
+      "path": "integrations/mcp/requirements.lock",
+      "sha256": "82375e677571a53a1d3c8b5f13312ae8f81da2a05e4bea0ab59417d4486d95ea"
+    },
+    {
+      "git_blob_oid": "86b141d019923ad74ecaca239b15ce2f05e1ed32",
+      "git_mode": "100644",
+      "path": "protocol/assertions.py",
+      "sha256": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb"
+    },
+    {
+      "git_blob_oid": "606b95338544313f14bd3375e67e34108e249e0d",
+      "git_mode": "100644",
+      "path": "protocol/normalization.py",
+      "sha256": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1"
+    },
+    {
+      "git_blob_oid": "54da795ddae95068b7e050afc35bf5a1e0024c0c",
+      "git_mode": "100644",
+      "path": "protocol/replay_identity.py",
+      "sha256": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00"
+    },
+    {
+      "git_blob_oid": "68912f3decf2c9a986363027ea18bf22837c7b4c",
+      "git_mode": "100644",
+      "path": "protocol/unicode15-data.json",
+      "sha256": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+    },
+    {
+      "git_blob_oid": "9dfab528f6805a6e3430a64d590acb92b5f5c232",
+      "git_mode": "100644",
+      "path": "runs/2026-11-22-mcp-cffi-rust-notice-facts-distinct-review.json",
+      "sha256": "80b39cb342718c8f8c475db93d2f0a07e32f5356c3285140618c26829d8cd68e"
+    },
+    {
+      "git_blob_oid": "35030e042339afa1423ef3c2065413a1a276268d",
+      "git_mode": "100644",
+      "path": "runs/2026-11-22-mcp-retained-grants-distinct-review.json",
+      "sha256": "5a74863249f73a7c092f8bbed08156b8add5ec2231e1b7e526b01a19459c23d1"
+    },
+    {
+      "git_blob_oid": "0233db9083b40db2828f7abd515d42ff4a310bb2",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/LIBFFI-NOTICES.txt",
+      "sha256": "2fe3318a85b19fea32d1e5801e7406a7868dc9768f0637c1838821fc1ece7386"
+    },
+    {
+      "git_blob_oid": "2970f2b533bb7ca61c9d88661397c0c9e87e3e74",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/manifest.json",
+      "sha256": "4e9b49cfff92b2f0aa117a95f0c852b5ff0dde9a75636308aaa79269a7135dc8"
+    },
+    {
+      "git_blob_oid": "de0869d422f91622d36eb32d10a47ff34e3fb2e7",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/retrieval.json",
+      "sha256": "dc10f12ea78470ac653c7588adb3f0c8417809f4bd347f5c49adfeedcc790813"
+    },
+    {
+      "git_blob_oid": "a20b0595480da910300917f3cef0d3db66810281",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/runtime-source-index.json",
+      "sha256": "6b869bdf488676aae5c76bd29708886569e2aaadd9e8939e2efa0cfeb0a237c9"
+    },
+    {
+      "git_blob_oid": "0a1dbfb017c2e0afcaac48ba6750d32539335e41",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/cffi-2.1.1-LICENSE",
+      "sha256": "5ba24ddc57067f9249add644c3afc41a5d6dc37e23433ef759d95df370b0af63"
+    },
+    {
+      "git_blob_oid": "78944d4f71fc10c237f7626826be889e1460b97b",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/cffi-2.1.1-ci.yaml",
+      "sha256": "b1910ddbfc69d2fbe41f1493cb564658d0970522bfeb5e6fe93d3288c802736c"
+    },
+    {
+      "git_blob_oid": "5cac01388d8bd591a5a0e6d6e1b13676ef084d40",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/cffi-2.1.1-pyproject-toml",
+      "sha256": "5319b77e4b41ab9bab0f352a3e2ef6277b0626c4c239a0736f9e15dbc417d693"
+    },
+    {
+      "git_blob_oid": "50b487ea42720219ccbf4b8d3dec472efdb5cbaf",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/cffi-2.1.1-setup-py",
+      "sha256": "f4205f108b2fc7798e854724918a2790951137200980b65b6a5e652d612b07f7"
+    },
+    {
+      "git_blob_oid": "6a9deac291cd40a2c3a135140fdcadd55fcd5fc9",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/cffi-pypi.json",
+      "sha256": "2255e530e3f80593a354e3d84a29966924d0e10309d1e3a6d50f845ab7d8df66"
+    },
+    {
+      "git_blob_oid": "319a21876f5bffd7f5b04f68a5d53f5aa13dd577",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/cffi-tag.json",
+      "sha256": "beb7681a2a41d97289acccef59d3608af3dfa0e43e2c3c201893f43b06215ad1"
+    },
+    {
+      "git_blob_oid": "7282e798c20b91abedfabd749fbb653ef6cc4f4f",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-3.4.6-LICENSE",
+      "sha256": "67894089811f93fca47a76f85e017da6f8582d4ba0905963c6e0f1ad6df7a195"
+    },
+    {
+      "git_blob_oid": "5552473fb9fdcf731f839ba4c0f9e0e688d39c86",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-3.4.6-README-md",
+      "sha256": "fc6d34e3cb17ffe1d097f78897168c42648942013a8c14c48453d327f85c5983"
+    },
+    {
+      "git_blob_oid": "816bfd666a019f79b1f9123136804e111e8d7e3f",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-3.4.6-configure-ac",
+      "sha256": "bcff3a3a4f3f28d6eb9505dbd2fc351e5b8d0cf91a4521e7f4c17176d5fef385"
+    },
+    {
+      "git_blob_oid": "3de0bea4737dff791df08d6b0c2fe357f1532a18",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/Makefile.am",
+      "sha256": "7ff2842499a927c7e1c3a86a1195909fda1cb4fc8564e38e2254e5fe0c89d46c"
+    },
+    {
+      "git_blob_oid": "4cc69be4fe294ff0c005c15bf575499709ac526f",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/configure.host",
+      "sha256": "58c58b97e8958fae921339f7e0bf4157c717fe0a5d8b3897db044203d052033a"
+    },
+    {
+      "git_blob_oid": "e5c1daef3948140a8e79e84050de2f4bc558eeaa",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/include/ffi.h.in",
+      "sha256": "ffb87630163c48c995404306eb676a90fb482acbdce02b989215bc99ec273228"
+    },
+    {
+      "git_blob_oid": "f4c292d004049d031cbe4bd0ba16097da14b30a3",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/include/ffi_cfi.h",
+      "sha256": "165495aafcdb15ad48340b8b9906514032c284db3db372c31e3f4d6b35888dc5"
+    },
+    {
+      "git_blob_oid": "a9839b344d5fd1b60a840c12276c8e10cd660c35",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/include/ffi_common.h",
+      "sha256": "f8c65573c44b095b85dfe6cd60f628596a930b3384b67e218d8cf499e2421840"
+    },
+    {
+      "git_blob_oid": "e14e463e83a6e04c119bf6d9ba0ebe7b7c2b6b51",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/include/tramp.h",
+      "sha256": "ef20dace99925672167a5f3b3898299d462ace170f0b90ca47fd36b30cfc7fbf"
+    },
+    {
+      "git_blob_oid": "67a94a822ca0cbe34ae0890833209edd96290039",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/closures.c",
+      "sha256": "d1ec65cff10dfaaf35726842d5ec17f12d46b21cd4b917202da4cf7ce9bf24b4"
+    },
+    {
+      "git_blob_oid": "63321dc013cc276d80e4ce425fa359eccb90b7b5",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/debug.c",
+      "sha256": "a9ee942885ee97b3448dda2ab74a8a02be3e0c8baeaed1f90d61cc69e0498dba"
+    },
+    {
+      "git_blob_oid": "c61ef9240abf33bb9e72ad3f9017fa28bc7cc88e",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/dlmalloc.c",
+      "sha256": "a4719777bea8b7ed7e1ea6519a2136aaf7ded18e30f39ad505f4cf2c491228aa"
+    },
+    {
+      "git_blob_oid": "114d3e47fcdef36a29172a23e8b5acad30cdd584",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/java_raw_api.c",
+      "sha256": "5c3886d8c20ba1238135835aa132ad9c017af5f9e5c55e2167d3ad047def1bd6"
+    },
+    {
+      "git_blob_oid": "0e2d58e5e5c1c5d38767156d7e2b06c01e4db50f",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/prep_cif.c",
+      "sha256": "6a902ea43fa441c480e7a352d78b2ed929e6c6d00e6c936a87cbc1cca838108c"
+    },
+    {
+      "git_blob_oid": "be156116cb0d99fe1e635823e9fec93b782cd7ad",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/raw_api.c",
+      "sha256": "d7ea1c81fc13e9fceb0dc431bc865e224d7be1e84483039eb4ad79144ef29c34"
+    },
+    {
+      "git_blob_oid": "8ec08486875702e9f50fe6ec7a0e6184a2f84e17",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/tramp.c",
+      "sha256": "49fed5b711f5cbf3495772654a6fe8e48c65f2671b2b9362fbce0ffa76502011"
+    },
+    {
+      "git_blob_oid": "c1c27f38d3463bced9d8f95b232b6d2f49724636",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/types.c",
+      "sha256": "4ac9032fce88023c9f1c4dffe4017e260dc4f75eab778df59ad7d233c735fe4f"
+    },
+    {
+      "git_blob_oid": "7551021e17ebab8f168b2b9359fb6f67ccc6f3b8",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/x86/asmnames.h",
+      "sha256": "b1a0c704a97aa9bb3a998f7d55cae8bf8181e355249da19a53269a10d03edb8e"
+    },
+    {
+      "git_blob_oid": "6a8e37fc5679682715bfc5a202d8c1f292fdda8e",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/x86/ffi64.c",
+      "sha256": "125d9a406408c187fd8890b66c3a019b313899017d9b065f38eaccbe96913c17"
+    },
+    {
+      "git_blob_oid": "5a3399d80982b1f63e6a9b34e775fd0dd814ec1b",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/x86/ffitarget.h",
+      "sha256": "45e4fd2585aaed711e4fa3d1377b70c8e54dcdc56bdf402fa23a8816d19cc58a"
+    },
+    {
+      "git_blob_oid": "2be8b99279ab8e92fb1197b4cd04e8609acb848c",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/x86/ffiw64.c",
+      "sha256": "2c31bfeaf808f694433edb0c6c1a45901c1cc48bac784aeb6f4fbd6ca05f33ca"
+    },
+    {
+      "git_blob_oid": "23be7a2232692df72833440227f7ffc2401e407a",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/x86/internal.h",
+      "sha256": "faf2d20939ecf17ce73e288e38162de47119bb5f7bdd4994aa434b4b7dea6591"
+    },
+    {
+      "git_blob_oid": "282b408027444e9abf3dda04257c17626ddb83b2",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/x86/internal64.h",
+      "sha256": "6618077c8aa7874ee279bb1f6a2aeae50c9d2828a16befeba59af27b1c4b489c"
+    },
+    {
+      "git_blob_oid": "d9c5bd4c720db1b2feda988dd5b1854331c163ad",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/x86/unix64.S",
+      "sha256": "8a3686659532c51af9cc9b27ef2566068a4eb9b2bce02e3c738df5c339a1efd0"
+    },
+    {
+      "git_blob_oid": "58ec6a155e3d076e507b1c00e8fccb83d040be46",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-runtime/src/x86/win64.S",
+      "sha256": "456f93fb44eb8a669baf615db1043d57721191d801c5c5ccbdab05dae085de82"
+    },
+    {
+      "git_blob_oid": "7386520ff0933d38d945c3a53cfa3c1de0d485cc",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/sources/libffi-tag.json",
+      "sha256": "499d83833402aaad4180b1f2c1344f0a64eab54d4402bc6a6af40ac69998b5f3"
+    },
+    {
+      "git_blob_oid": "e8526079d235c7c6fbdf8960435b90b5dbfe485d",
+      "git_mode": "100644",
+      "path": "sbom/cffi-libffi/wheel-observations.json",
+      "sha256": "eb5ffdff91318d0c62f655f7e0433dc51cb901cc593a042201f91d637f7c19e4"
+    },
+    {
+      "git_blob_oid": "933c4045a97fbc3fa60a8177ce8a6a57db93e043",
+      "git_mode": "100644",
+      "path": "sbom/mcp-runtime/SCHEMA-ATTRIBUTION.txt",
+      "sha256": "6beb436170ee08a56908fc69f69bc8ee8a72aeda383694c089048e29db9b90bf"
+    },
+    {
+      "git_blob_oid": "391ed4dddba4ad13434a86ce7f6efac9ed2e3599",
+      "git_mode": "100644",
+      "path": "sbom/mcp-runtime/THIRD-PARTY-NOTICES.txt",
+      "sha256": "6e7b55ee737769110ed6d2bac56dd77cf39081d2ac175405fa2d66dc2450dfdb"
+    },
+    {
+      "git_blob_oid": "4033b496bf3e825c2670325242fb84a321f37d6a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-runtime/manifest.json",
+      "sha256": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8"
+    },
+    {
+      "git_blob_oid": "d5e9308353799ff705654baea3d633f3d63081e3",
+      "git_mode": "100644",
+      "path": "sbom/mcp-runtime/obligations.json.gz",
+      "sha256": "7d2289b4a9b13a2d4711f96833090dbce19993d6c706362ffad35c52918d7b46"
+    },
+    {
+      "git_blob_oid": "0ae814c3bc53dabf2e42588ff9988f6c91a30bac",
+      "git_mode": "100644",
+      "path": "sbom/mcp-runtime/source-inputs.json",
+      "sha256": "d03511a97bc046bae63b5d801192e329858bb751ebc3b9f13c8d79a2029e80b6"
+    },
+    {
+      "git_blob_oid": "6e5c3d9a7284e082d1279df3e5453ce318042ee0",
+      "git_mode": "100644",
+      "path": "sbom/mcp-runtime/targets.json",
+      "sha256": "882635362b7129b2fa8842d995a211ba85f537e60c548d400c459c8e004390d1"
+    },
+    {
+      "git_blob_oid": "b5b4c08ec74fec8770c9ced533a693dd087f8aa0",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/.gitattributes",
+      "sha256": "55a4c7f1a2fb6d91de6a84e207e281700c35de3c0e1cf0ad36ba1aa0cba971b3"
+    },
+    {
+      "git_blob_oid": "8f95c326bfaea45e8664d9aa1020d37c12e57dc4",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/RUST-STDLIB-NOTICES.txt",
+      "sha256": "dfe5411072f6745ae8a41d4d5a00ab834551173360b3e93d2dd5ed7cd486cf90"
+    },
+    {
+      "git_blob_oid": "3beb05bd23c6d070e9fe99957d60ec71c66598ae",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/libm-extracted-notices.json",
+      "sha256": "ef4c42a6f6849b16692e1c77bb7886aa1a75acbb6a9a9dd64087f6ee6516bd8c"
+    },
+    {
+      "git_blob_oid": "d9f9511bc8bcc3eb8cc69b377bc6481248b5a459",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/libm-source-notice-index.json",
+      "sha256": "c2a746f528a0278a745342db0f7757bceae4259e97cd2d8886bf9dfc14a9f82d"
+    },
+    {
+      "git_blob_oid": "03cd9b9a8f55bbb48c51afe6959f94571a328fd7",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/manifest.json",
+      "sha256": "47328f3158803a8f1271194c7cc94976ca2de3c6f3f060a89dbac2aafbde2857"
+    },
+    {
+      "git_blob_oid": "11daa1c74551e4abe8d6728be43513b8790df2b1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/notice-text-index.json",
+      "sha256": "f702bd87e905e2f8a3295a096ed8147e60a7121ce9cdaf4f25ecd8a9e386e6c5"
+    },
+    {
+      "git_blob_oid": "1f28ddc1eb6999e559454c1c2a2bf39c8fad9455",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/observed-path-summary.json",
+      "sha256": "701b43391998ced7f892df42af80b83462ca57eb3e778a73f99d408af0f9078e"
+    },
+    {
+      "git_blob_oid": "61149a1d7595378ed200057baae97cbd7747b2f0",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/path-grant-map.json",
+      "sha256": "9007697b8608860dd07597b27ff2d112d02dacc3f705b9c01ae8f3bbf7b99a6a"
+    },
+    {
+      "git_blob_oid": "e11f9d497609e143b4422104e521d2e6c2f16449",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/registry-candidate-grants.json",
+      "sha256": "b18421e06012d658e897a3d70c2c4e9df87ababfe3b07fcc127f9c32368bfc0a"
+    },
+    {
+      "git_blob_oid": "43a45a735ec52c4c543bb7ed83ca7ef02bd885d8",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/retrieval.json",
+      "sha256": "a0b2659a7b10475ee05b6c65cb173f7b35d6292bf7e34d07f380a61c34d4ff5b"
+    },
+    {
+      "git_blob_oid": "9f9d57366824566f41a93e28f25677cace1db182",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/.gitmodules",
+      "sha256": "fbae3199e4330c38d6051f76c6db15772a60a3d296ea5cad4e2161f9471cc3f3"
+    },
+    {
+      "git_blob_oid": "4dad74f234eaaaa3c311ca031216e16fc9c4e940",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/COPYRIGHT",
+      "sha256": "172020dbfd5b53a226dfde77616190a48dcff519b0bc0e6deb91a8450782c4af"
+    },
+    {
+      "git_blob_oid": "1b5ec8b78e237b5c3b3d812a7c0a6589d0f7161d",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "git_blob_oid": "a2070c4be7acd5316f8d0357ca3c12419a2f3c62",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/LICENSE-MIT",
+      "sha256": "b71bd43a069ca0641a9ecfe585ca7b3c53b5cc1608f8b68321168698e28b5ea1"
+    },
+    {
+      "git_blob_oid": "5ee913426a142f4f542bc31cc8d6e82e62ea777e",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/REUSE.toml",
+      "sha256": "6d9f80349a29388841413ecb3d20473b6440768c2fdfa06d0456eb56d516daf3"
+    },
+    {
+      "git_blob_oid": "01b63ece18fe78f40200e06196037d81c83605a1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/backtrace-gitlink.json",
+      "sha256": "67fe9989cde75c91d87a3c1ffbde3c77ff2e2467e9bbbe476aab18e50d1f2939"
+    },
+    {
+      "git_blob_oid": "b9f7bb0fae1bfcaff881c8c151acb9cf3394ae14",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/libm-directory.json",
+      "sha256": "ac84d967b64e6e97ef0ad1d4fb0e2b32b843fe6e51e23caaeb055e6d2f43653e"
+    },
+    {
+      "git_blob_oid": "c30ed6dc30c5581ef28d898acc0fcd9a877c9b71",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/Cargo.lock",
+      "sha256": "d1c5dbdf53bfebd7de60f26a171819db3b28ebfd75f3fa99c3286893a5a7b7a6"
+    },
+    {
+      "git_blob_oid": "b32e5e991cc748d2ae9605c4a90835ead22d4969",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/alloc/Cargo.toml",
+      "sha256": "3a0273fc73bd77700c12cacb61a751cffd3ab24d26899af33d5d7109b252f6f4"
+    },
+    {
+      "git_blob_oid": "00ae6140bd54e1b538d833f60438e11ed8be12cf",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/compiler-builtins/LICENSE.txt",
+      "sha256": "ab6eec6caf0fa5775e411c7a8bc6a45c4ef2956b0980b157ab74fc5cd62a928b"
+    },
+    {
+      "git_blob_oid": "b2f1443f2eb09d297b62c7b44fce9e31d71b10a2",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/compiler-builtins/compiler-builtins/Cargo.toml",
+      "sha256": "d89e31fed70f2cad9c6e91b787bf4c0fb680c631196b2a7215c81745aaf7fb7e"
+    },
+    {
+      "git_blob_oid": "9e847206caf19313b2e7ed68d0938a3d8d153e7a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/compiler-builtins/compiler-builtins/src/lib.rs",
+      "sha256": "9a1094d65dc886b962b5173ac51fc956a5758c2c5ddf6c865bbf02fc8db127bc"
+    },
+    {
+      "git_blob_oid": "2f8e41f147472510b05e0adeadf350df6f5a6b96",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/compiler-builtins/libm/LICENSE.txt",
+      "sha256": "3823dda7cf046602f4b4e77ec8e227863dc4736037cc85bb33d9f19febe16bb7"
+    },
+    {
+      "git_blob_oid": "5421b1d2a2652a434a31f70fb855e875d293bef5",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/core/Cargo.toml",
+      "sha256": "9a1f7eeda16fd95c9baf64b6b9c06644fd8a648a68dd9a28e2920a82216adcd7"
+    },
+    {
+      "git_blob_oid": "76b8d416ee0f127133e1e76560de03f7f28d85d0",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/num/imp/dec2flt/mod.rs",
+      "sha256": "7198e238c554b692405537a446b3526ad66805ec2900cd0e299f10c51402a44a"
+    },
+    {
+      "git_blob_oid": "1e1053583a617f5c1e3b50658ba9db2a288e65e5",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/slice/memchr.rs",
+      "sha256": "c2bc761de734a9e25e02b45b199be8ec4cf3d8730da70b0d6847e4a02745eae7"
+    },
+    {
+      "git_blob_oid": "ca3a276b89d90911822f27798f84903cc64d62c1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/core/src/unicode/unicode_data.rs",
+      "sha256": "d3d218b7574f08efe423e9d4b6b539e700046aca4f2a2793d38164ec5a1b00b2"
+    },
+    {
+      "git_blob_oid": "72c1041b4679523255be84437b3f7a052f750773",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/panic_unwind/Cargo.toml",
+      "sha256": "d5948340cf4057cc27a57d81afc2235949344a11615b5e99e257dc85c46a778b"
+    },
+    {
+      "git_blob_oid": "4c433d4970cda2579c3835c49663da9b4fa182a5",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/std/Cargo.toml",
+      "sha256": "ff5272b18cb16a9e67256a1045dc35d9d08ae38916a218f684a2ae2f4360f078"
+    },
+    {
+      "git_blob_oid": "a6785bb20555dbae92f6ae9fb9801aeb1e453f64",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/std_detect/Cargo.toml",
+      "sha256": "7e42961094ca6980d4852bb5b38350ac505542df04d71a66d86b4f3ff72dd72f"
+    },
+    {
+      "git_blob_oid": "1293c469d11c1bf31d4211cf2fa120a1172c5784",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/unwind/Cargo.toml",
+      "sha256": "a3b46027b621941c8296b5aa129ca4b31f78280e2a5dc0b8d8af1cba7880468f"
+    },
+    {
+      "git_blob_oid": "cb4a3593c51d6081baa8094c2752790244d67cb5",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/library/unwind/src/lib.rs",
+      "sha256": "100fee67ea83b2e149f5bd6e10eec3af336f14c046901da764aec0ff38886630"
+    },
+    {
+      "git_blob_oid": "b58329b2ccc19d0071ca61e9a8a767adb96d167f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/48a229ceaefd4985c50990b14116b6d856af0985/license-metadata.json",
+      "sha256": "7bed295fb8d5ddc54ef9e7c795b18207d8da747513ae83fce9748e840200b40c"
+    },
+    {
+      "git_blob_oid": "9d04fae2375057b34c905bdb022347353fe90766",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/.gitmodules",
+      "sha256": "0f9d35b4321ab622a83b40ea3ac792b75ff746e7e8b4cc6a1869ce219177276b"
+    },
+    {
+      "git_blob_oid": "4dad74f234eaaaa3c311ca031216e16fc9c4e940",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/COPYRIGHT",
+      "sha256": "172020dbfd5b53a226dfde77616190a48dcff519b0bc0e6deb91a8450782c4af"
+    },
+    {
+      "git_blob_oid": "1b5ec8b78e237b5c3b3d812a7c0a6589d0f7161d",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "git_blob_oid": "a2070c4be7acd5316f8d0357ca3c12419a2f3c62",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/LICENSE-MIT",
+      "sha256": "b71bd43a069ca0641a9ecfe585ca7b3c53b5cc1608f8b68321168698e28b5ea1"
+    },
+    {
+      "git_blob_oid": "7d72caa6d5c45de02d4115134329d6195c757e5b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/REUSE.toml",
+      "sha256": "9b4c672ff5029c0e075d1ff32e1d4d1e45af4164beaee0018c122961613599e0"
+    },
+    {
+      "git_blob_oid": "9c4e903c848ff3938380b218b35984766012fe62",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/backtrace-gitlink.json",
+      "sha256": "83c41b04c12d7e0ea820b39d432c75aa6c7de3b29cefafbb7ae5b24b1dcb1af4"
+    },
+    {
+      "git_blob_oid": "c9d46fb96f212a2ace83d41132d78cffe5bdd34b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/libm-directory.json",
+      "sha256": "2a95f94a625df18f17b1b4a448d890e964b8d42c77b976ca06e299e2c7325733"
+    },
+    {
+      "git_blob_oid": "d029173e807a49f22771eeb1acd840878ea9f31e",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/Cargo.lock",
+      "sha256": "53d9ccff0c906de434b65af90d5c30063894b940fc839261f1fb06ef2e69e3d3"
+    },
+    {
+      "git_blob_oid": "b32e5e991cc748d2ae9605c4a90835ead22d4969",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/alloc/Cargo.toml",
+      "sha256": "3a0273fc73bd77700c12cacb61a751cffd3ab24d26899af33d5d7109b252f6f4"
+    },
+    {
+      "git_blob_oid": "00ae6140bd54e1b538d833f60438e11ed8be12cf",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/compiler-builtins/LICENSE.txt",
+      "sha256": "ab6eec6caf0fa5775e411c7a8bc6a45c4ef2956b0980b157ab74fc5cd62a928b"
+    },
+    {
+      "git_blob_oid": "b2f1443f2eb09d297b62c7b44fce9e31d71b10a2",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/compiler-builtins/compiler-builtins/Cargo.toml",
+      "sha256": "d89e31fed70f2cad9c6e91b787bf4c0fb680c631196b2a7215c81745aaf7fb7e"
+    },
+    {
+      "git_blob_oid": "9e847206caf19313b2e7ed68d0938a3d8d153e7a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/compiler-builtins/compiler-builtins/src/lib.rs",
+      "sha256": "9a1094d65dc886b962b5173ac51fc956a5758c2c5ddf6c865bbf02fc8db127bc"
+    },
+    {
+      "git_blob_oid": "2f8e41f147472510b05e0adeadf350df6f5a6b96",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/compiler-builtins/libm/LICENSE.txt",
+      "sha256": "3823dda7cf046602f4b4e77ec8e227863dc4736037cc85bb33d9f19febe16bb7"
+    },
+    {
+      "git_blob_oid": "3f5f9f454a99d3fe1e6bdde581157e167e439a8a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/core/Cargo.toml",
+      "sha256": "abfb9b4577f90c4612adec34447df1af9eba81d14e6c4837590cf118daf63580"
+    },
+    {
+      "git_blob_oid": "76b8d416ee0f127133e1e76560de03f7f28d85d0",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/core/src/num/imp/dec2flt/mod.rs",
+      "sha256": "7198e238c554b692405537a446b3526ad66805ec2900cd0e299f10c51402a44a"
+    },
+    {
+      "git_blob_oid": "fb99e86139d7ecd08e35cc4dc373e855b3622f2b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/core/src/slice/memchr.rs",
+      "sha256": "f18cfa48aa5cc6ecb054ec030df382de33677f9af374df4ff16f11192ff54f93"
+    },
+    {
+      "git_blob_oid": "ca3a276b89d90911822f27798f84903cc64d62c1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/core/src/unicode/unicode_data.rs",
+      "sha256": "d3d218b7574f08efe423e9d4b6b539e700046aca4f2a2793d38164ec5a1b00b2"
+    },
+    {
+      "git_blob_oid": "72c1041b4679523255be84437b3f7a052f750773",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/panic_unwind/Cargo.toml",
+      "sha256": "d5948340cf4057cc27a57d81afc2235949344a11615b5e99e257dc85c46a778b"
+    },
+    {
+      "git_blob_oid": "f216d8a1d2874324dd881f63abed0355732b65ad",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/std/Cargo.toml",
+      "sha256": "2dbf2cd3b78c1b72e5e3ae211f886dd791c3a10cb9ded9fc722552deeef40ae0"
+    },
+    {
+      "git_blob_oid": "a6785bb20555dbae92f6ae9fb9801aeb1e453f64",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/std_detect/Cargo.toml",
+      "sha256": "7e42961094ca6980d4852bb5b38350ac505542df04d71a66d86b4f3ff72dd72f"
+    },
+    {
+      "git_blob_oid": "628b9d5e8c3ec2b0101f4a99df8081e93ab12f80",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/unwind/Cargo.toml",
+      "sha256": "6c5d0e8cdb54971414d2aba0b361f05997a5e806354c7b8d3b15708238a906f0"
+    },
+    {
+      "git_blob_oid": "69b5e81a392152805364d14182ec8dc448586f6a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/library/unwind/src/lib.rs",
+      "sha256": "453f0ee523d693e4f4b057a79e384b656d3c94bb927dfc909766bb9b2cf270a0"
+    },
+    {
+      "git_blob_oid": "b58329b2ccc19d0071ca61e9a8a767adb96d167f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/58cf8f9c35b355199727627d07ae34a4e2846d67/license-metadata.json",
+      "sha256": "7bed295fb8d5ddc54ef9e7c795b18207d8da747513ae83fce9748e840200b40c"
+    },
+    {
+      "git_blob_oid": "ee8e69b233293872fcb4d6d4930ec196b63626e7",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/Unicode-3.0.txt",
+      "sha256": "f5062c9a188d81dfe66b56db4182dcf9e4b17c0d9b0d311a8e20b3a1b075c443"
+    },
+    {
+      "git_blob_oid": "9d04fae2375057b34c905bdb022347353fe90766",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/.gitmodules",
+      "sha256": "0f9d35b4321ab622a83b40ea3ac792b75ff746e7e8b4cc6a1869ce219177276b"
+    },
+    {
+      "git_blob_oid": "4dad74f234eaaaa3c311ca031216e16fc9c4e940",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/COPYRIGHT",
+      "sha256": "172020dbfd5b53a226dfde77616190a48dcff519b0bc0e6deb91a8450782c4af"
+    },
+    {
+      "git_blob_oid": "1b5ec8b78e237b5c3b3d812a7c0a6589d0f7161d",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "git_blob_oid": "a2070c4be7acd5316f8d0357ca3c12419a2f3c62",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/LICENSE-MIT",
+      "sha256": "b71bd43a069ca0641a9ecfe585ca7b3c53b5cc1608f8b68321168698e28b5ea1"
+    },
+    {
+      "git_blob_oid": "7d72caa6d5c45de02d4115134329d6195c757e5b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/REUSE.toml",
+      "sha256": "9b4c672ff5029c0e075d1ff32e1d4d1e45af4164beaee0018c122961613599e0"
+    },
+    {
+      "git_blob_oid": "badc789c047f0a75c1da8b1454e0450602464b44",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/backtrace-gitlink.json",
+      "sha256": "5c97b608be82f64c664cb7afb3651dcb9fd8e905d8a159d934966c156509440e"
+    },
+    {
+      "git_blob_oid": "13f945ce71b00deb3eb29ee16018aa1e1c0e18ed",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/libm-directory.json",
+      "sha256": "6eb3af286120ae7d652361af504a3dc813b752d22cc38d6292d833e9c5d9bed5"
+    },
+    {
+      "git_blob_oid": "d029173e807a49f22771eeb1acd840878ea9f31e",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/Cargo.lock",
+      "sha256": "53d9ccff0c906de434b65af90d5c30063894b940fc839261f1fb06ef2e69e3d3"
+    },
+    {
+      "git_blob_oid": "b32e5e991cc748d2ae9605c4a90835ead22d4969",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/alloc/Cargo.toml",
+      "sha256": "3a0273fc73bd77700c12cacb61a751cffd3ab24d26899af33d5d7109b252f6f4"
+    },
+    {
+      "git_blob_oid": "00ae6140bd54e1b538d833f60438e11ed8be12cf",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/compiler-builtins/LICENSE.txt",
+      "sha256": "ab6eec6caf0fa5775e411c7a8bc6a45c4ef2956b0980b157ab74fc5cd62a928b"
+    },
+    {
+      "git_blob_oid": "b2f1443f2eb09d297b62c7b44fce9e31d71b10a2",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/compiler-builtins/compiler-builtins/Cargo.toml",
+      "sha256": "d89e31fed70f2cad9c6e91b787bf4c0fb680c631196b2a7215c81745aaf7fb7e"
+    },
+    {
+      "git_blob_oid": "9e847206caf19313b2e7ed68d0938a3d8d153e7a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/compiler-builtins/compiler-builtins/src/lib.rs",
+      "sha256": "9a1094d65dc886b962b5173ac51fc956a5758c2c5ddf6c865bbf02fc8db127bc"
+    },
+    {
+      "git_blob_oid": "2f8e41f147472510b05e0adeadf350df6f5a6b96",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/compiler-builtins/libm/LICENSE.txt",
+      "sha256": "3823dda7cf046602f4b4e77ec8e227863dc4736037cc85bb33d9f19febe16bb7"
+    },
+    {
+      "git_blob_oid": "3f5f9f454a99d3fe1e6bdde581157e167e439a8a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/Cargo.toml",
+      "sha256": "abfb9b4577f90c4612adec34447df1af9eba81d14e6c4837590cf118daf63580"
+    },
+    {
+      "git_blob_oid": "76b8d416ee0f127133e1e76560de03f7f28d85d0",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/num/imp/dec2flt/mod.rs",
+      "sha256": "7198e238c554b692405537a446b3526ad66805ec2900cd0e299f10c51402a44a"
+    },
+    {
+      "git_blob_oid": "fb99e86139d7ecd08e35cc4dc373e855b3622f2b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/slice/memchr.rs",
+      "sha256": "f18cfa48aa5cc6ecb054ec030df382de33677f9af374df4ff16f11192ff54f93"
+    },
+    {
+      "git_blob_oid": "ca3a276b89d90911822f27798f84903cc64d62c1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/core/src/unicode/unicode_data.rs",
+      "sha256": "d3d218b7574f08efe423e9d4b6b539e700046aca4f2a2793d38164ec5a1b00b2"
+    },
+    {
+      "git_blob_oid": "72c1041b4679523255be84437b3f7a052f750773",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/panic_unwind/Cargo.toml",
+      "sha256": "d5948340cf4057cc27a57d81afc2235949344a11615b5e99e257dc85c46a778b"
+    },
+    {
+      "git_blob_oid": "f216d8a1d2874324dd881f63abed0355732b65ad",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std/Cargo.toml",
+      "sha256": "2dbf2cd3b78c1b72e5e3ae211f886dd791c3a10cb9ded9fc722552deeef40ae0"
+    },
+    {
+      "git_blob_oid": "a6785bb20555dbae92f6ae9fb9801aeb1e453f64",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/std_detect/Cargo.toml",
+      "sha256": "7e42961094ca6980d4852bb5b38350ac505542df04d71a66d86b4f3ff72dd72f"
+    },
+    {
+      "git_blob_oid": "628b9d5e8c3ec2b0101f4a99df8081e93ab12f80",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/unwind/Cargo.toml",
+      "sha256": "6c5d0e8cdb54971414d2aba0b361f05997a5e806354c7b8d3b15708238a906f0"
+    },
+    {
+      "git_blob_oid": "69b5e81a392152805364d14182ec8dc448586f6a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/library/unwind/src/lib.rs",
+      "sha256": "453f0ee523d693e4f4b057a79e384b656d3c94bb927dfc909766bb9b2cf270a0"
+    },
+    {
+      "git_blob_oid": "b58329b2ccc19d0071ca61e9a8a767adb96d167f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/b940084d7eb6a299eb4bfeb8e34901bc051e7ac4/license-metadata.json",
+      "sha256": "7bed295fb8d5ddc54ef9e7c795b18207d8da747513ae83fce9748e840200b40c"
+    },
+    {
+      "git_blob_oid": "1a32f286f3923e824add64ad939b014b4bbe6e20",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/backtrace/d902726a1dcdc1e1c66f73d1162181b5423c645b/Cargo.toml",
+      "sha256": "88f61931ab9a172abc1b9080c9115a2bda8bd93a897e4cf54a64421a232011c1"
+    },
+    {
+      "git_blob_oid": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/backtrace/d902726a1dcdc1e1c66f73d1162181b5423c645b/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "git_blob_oid": "39e0ed6602151f235148e6c08413aa7eda5b9038",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/backtrace/d902726a1dcdc1e1c66f73d1162181b5423c645b/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    {
+      "git_blob_oid": "85ed5e2c9fc6350d9fbf8eb091f6e987471dbc14",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/lib.rs",
+      "sha256": "73b3271cbceb4fb071ea014a212553ce23a5c04033945269433f0c8312e020a5"
+    },
+    {
+      "git_blob_oid": "f2c4daed561ecd9633f7810a922eb0c92e1f7862",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/libm_helper.rs",
+      "sha256": "dc73d1dad06ce4f4d201dcfe3d0f22f0bb90c3f0226a88165d3d19fc79dd5f4e"
+    },
+    {
+      "git_blob_oid": "89b2e7c5f30e101a2889da58784aa519d137e81f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/acos.rs",
+      "sha256": "efd83a6138061209867f06421c6a756b8ca3aab5c6c0a85c4aba31bedb299da5"
+    },
+    {
+      "git_blob_oid": "d263b3f2ce33cb2b60ae1dca8b3219e297efca12",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/acosf.rs",
+      "sha256": "c5c9c74d267725bbe5f9319e6f4a396af6ce46c890b601d3f963a5d74d12e4c3"
+    },
+    {
+      "git_blob_oid": "2904fc0ed5201b7f2200eeb759fb7f6b645c5667",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/acosh.rs",
+      "sha256": "756e1e1eadb401924b1fc0f89ae084ee3cb218bca37bd8750f3a5213b700384f"
+    },
+    {
+      "git_blob_oid": "d9aafaabdef431059464bfd263aeb42cac63328b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/acoshf.rs",
+      "sha256": "9c7f031e32957ae596c4c10f88d485330fc026de2bf33268370ba8e431a03469"
+    },
+    {
+      "git_blob_oid": "7b371feb96b6dc071cb795483d7b34a96b4bf143",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/approx/cbrtf64.rs",
+      "sha256": "7344cf87169de41ffcf2f94d356603cf5093353e7e9b52bfbfb3c34206d5264e"
+    },
+    {
+      "git_blob_oid": "c0b2a19370cd7a2bebdf8d2ec2e693d6b332b776",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/approx/hypot.rs",
+      "sha256": "411edd6d95d4d5efc4b0ebfcd97820e337f4c8108dfea53957258cd411c7cd58"
+    },
+    {
+      "git_blob_oid": "da0d0bf39efc4d0b2c3cea73b459c671ea08886f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/approx/mod.rs",
+      "sha256": "4f2ffc2d67b2f1e74ca0909ba0c14dffc38b7e2e957d007a191bc34d666cd985"
+    },
+    {
+      "git_blob_oid": "9fd574fad37d2b383bd7e6299a154d82457b059f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/aarch64/fma.rs",
+      "sha256": "7f6286b4a12d4c0f159bbfd4a1c82a10adb2b3ebc22593746e4555ee35f7088e"
+    },
+    {
+      "git_blob_oid": "0192a3d442aece5c89ec0e6fce8de7786ebcbda7",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/aarch64/mod.rs",
+      "sha256": "f1228f1e991df0e90c81a7d9c37cb0e27a00722df11ee177857d47bb6a241fc6"
+    },
+    {
+      "git_blob_oid": "255e8e85b2f0bc4a15747a7b9bfe0098c3dde323",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/aarch64/rounding.rs",
+      "sha256": "776becbe0c807a548917b9638cb80cdc33d3b4452518ebc7d3ffd7ce0d952aa9"
+    },
+    {
+      "git_blob_oid": "e3743dfd558aa47132763f01b815ce8f0a7b3c32",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/aarch64/sqrt.rs",
+      "sha256": "a88beb5a8031f42590ead3768300e3f3cf6a65b52a52fe031fc96fa991eeea02"
+    },
+    {
+      "git_blob_oid": "020b5c057daafb3580fad6b1bf8af28d57509a1d",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/i586/exp_all.rs",
+      "sha256": "9fe4e1ddb9c88ba3fdb367d10f1cb1e63045f76672e1e4275d619b439a9e45c0"
+    },
+    {
+      "git_blob_oid": "f80be49fc4b3fe80b39c58ec9ad9b94dd8fdae59",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/i586/mod.rs",
+      "sha256": "d63e9aad64d21fe918a125295a28187fe3ced73935aec53a3e6a2b91ce7daca6"
+    },
+    {
+      "git_blob_oid": "45bf0adafd3047f3c6c8523d68c4ca0a45753a1a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/i586/rounding.rs",
+      "sha256": "2ed2bfa49ad2cbac35a0a867a9f747c41caacde7999525e61737695e587661fe"
+    },
+    {
+      "git_blob_oid": "1bed464cfa7d68ca5ca0b88a47225e79b1ecd997",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/mod.rs",
+      "sha256": "9b383ed45aa7a3a08c748d0ba7a4774a91411cd17f10467bfb6670316ccfc182"
+    },
+    {
+      "git_blob_oid": "1f5ff3f28131b1d5c0d3762bd4ac98221169c022",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/wasm32/fabs.rs",
+      "sha256": "3644eb8511bc99c3514ad1a9c7cf7741659b9a9adbfc8e00f1f44d1009b2add4"
+    },
+    {
+      "git_blob_oid": "b262e0108155e052ff86da3f6e55755bfe1dc924",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/wasm32/mod.rs",
+      "sha256": "607e8adafec127b70ba00696d040a4b0973630ab5cf089b1718fe0c8f585ba64"
+    },
+    {
+      "git_blob_oid": "1c8914e4561c139d36afc2de516f6f5ef0f146a7",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/wasm32/rounding.rs",
+      "sha256": "ae692c0571a40fda0cf908c5fee45a6596d75b072f1513c8def68f6fb7f929de"
+    },
+    {
+      "git_blob_oid": "1d73e4ddcfe96ca17a72530251c7f15d07d4df0a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/wasm32/sqrt.rs",
+      "sha256": "8a0b1de2617469502bac2c0c3cf881b01c430d6dcf76381b8784c4841ca7e785"
+    },
+    {
+      "git_blob_oid": "983818b5b5e47b5a07283cfd1340dc434b390646",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/x86/detect.rs",
+      "sha256": "ff4194637ff0afb046b3c4394e99853315a452f5fde993083d19e7af454b9dec"
+    },
+    {
+      "git_blob_oid": "43ac187792d84335e4ac0522a836cfccfc9aa717",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/x86/fma.rs",
+      "sha256": "c5fb77e560e1012f211532c5668c8b8022d04d55a2489419a32e843c16267ad9"
+    },
+    {
+      "git_blob_oid": "279bf35b9c9e0ef61f6b3873a12c8a81bc1f8d24",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/x86/mod.rs",
+      "sha256": "5cfdfd0af0216ba12c218a4eb6fff98e38aa03d88566b48c65261101ad872801"
+    },
+    {
+      "git_blob_oid": "d172e1239f1a91fd413dacaed77b3af159cc463a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/arch/x86/sqrt.rs",
+      "sha256": "7353c8ac31cfc5802a3f388caf79007470bc2cf94e6f857f15ec0b78ddebf1a0"
+    },
+    {
+      "git_blob_oid": "9554a3eacc2421721ae8b5bcb566fb638c08cc79",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/asin.rs",
+      "sha256": "9693a7cb61674ec6fe22be9db8fe20276729c48b1562fd86d5421e372a0a12e4"
+    },
+    {
+      "git_blob_oid": "2dfe2a6d486d60ec83fffb439acfd23dc674cc0a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/asinf.rs",
+      "sha256": "25f6b7bbf46fc5aac4ebdd9e00118239747dcd28a79b90b858ddc4633d773d65"
+    },
+    {
+      "git_blob_oid": "d63bc0aa9c35d9ae88bb9ae296271936fd16ccb5",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/asinh.rs",
+      "sha256": "8fd9431978e06904ed810d873f3de5bc097130d4b681a727644aa82d4f0fc627"
+    },
+    {
+      "git_blob_oid": "3ca2d44894dbc9c731e201f62d783f0a857a539a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/asinhf.rs",
+      "sha256": "ce78c74e4c806c68cbf974c1d2be131ce70aee6e27f178bcc9d082cfe4768799"
+    },
+    {
+      "git_blob_oid": "a303ebd42f0d2fdf7ccc30815c49e459bf5f0169",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/atan.rs",
+      "sha256": "54181dbddf4f77b90b32b9f6819ac989da570dc02b791f3685d20a23d51324be"
+    },
+    {
+      "git_blob_oid": "19be7584bbf07d27d9eb32e70be1e26bd59d8027",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/atan2.rs",
+      "sha256": "bb042e1e1b9f080bba1c7b29947f6c4ec9413807fae95000df2c4b50ab97650b"
+    },
+    {
+      "git_blob_oid": "0f46c9f3906be4bc78d2fa89a67791f9506f20b9",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/atan2f.rs",
+      "sha256": "b9497b5adb75e2788c404fd121aa64dcfa0e9357b67af3b3e7e6d4624dae1ca1"
+    },
+    {
+      "git_blob_oid": "58568d9a81f24fbeb9786427f6b2ee4045264798",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/atanf.rs",
+      "sha256": "197762f16ed5951236e17d0869c529e857acc329cc287df019ff69e5401f3b4d"
+    },
+    {
+      "git_blob_oid": "883ff150fd6c9185bbd52557dc1180fabd79900f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/atanh.rs",
+      "sha256": "84d3fe8b2674a9681f553b7afd950bea47f498c38f81af9d58115d52e833178e"
+    },
+    {
+      "git_blob_oid": "e4e356d18d83dee51ab4742c70fe377bd3fd749f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/atanhf.rs",
+      "sha256": "3a0643b0a4c7a112c0069f2ed455c7f295df88eef01bc76327173e74b0870d0c"
+    },
+    {
+      "git_blob_oid": "b6d24c807eb003b78ec5a3caf57f086d61c60fff",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/cbrt.rs",
+      "sha256": "6f25fdb3b8c5cb5950f8d82e28c36a099865bbd4048cf7924e70b72b6f997822"
+    },
+    {
+      "git_blob_oid": "6916ca6735b63f40fe446c80924e071f704cf8de",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/cbrtf.rs",
+      "sha256": "7a2b4f190e8618c52cb23b47c040a4b4eacca739c68393cf14fb3f5d73988127"
+    },
+    {
+      "git_blob_oid": "c8fb17e7ddca17575d165e1f6805dde25327ea4a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/ceil.rs",
+      "sha256": "11bd4aa09828cf80425e709e0e05ee8ecd79eae4fb5ee69bf49b23af23ad5be1"
+    },
+    {
+      "git_blob_oid": "591a87a940e2f9058f0d476f92bdabf68fbbc759",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/copysign.rs",
+      "sha256": "40e2d5e1dcfaad56bcfce1d708ed929c3130411faf4f95477a0eedcd4cbb21a8"
+    },
+    {
+      "git_blob_oid": "b2f786323f4d79b8259c49f7d1b5c8512b7e9983",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/cos.rs",
+      "sha256": "6e81752899c471bd42d04bdf08e0b22bc10a29f92fa2a343281b995fd342f035"
+    },
+    {
+      "git_blob_oid": "bf5cb9196a3673779f66290abde792eeaf87f5bb",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/cosf.rs",
+      "sha256": "f48aa954f199fe4f54fd73b4e7886a75f2c08afba7fc31c6a36db5b5f90ced69"
+    },
+    {
+      "git_blob_oid": "01081cfc77e01a6ce5a2add8e58f8ad756a15514",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/cosh.rs",
+      "sha256": "71aed40077a04e659c15c2d2cc6e4faba89a89957e61ecacb7f6f5516bed1753"
+    },
+    {
+      "git_blob_oid": "dc039a3117cb8a5110a0f94f6d65cec21648691e",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/coshf.rs",
+      "sha256": "fdf0524d221c62ecaa0b4e2fdaa3eb5194c4d84f0c1e3afaa04dc58cd3692834"
+    },
+    {
+      "git_blob_oid": "6c78440afcf547a6990aea2d9fdd1b54e36cece3",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/erf.rs",
+      "sha256": "5a69f440d5ca88a5c4a45119837c45b14238836a036675230e10fec41d293a3b"
+    },
+    {
+      "git_blob_oid": "2a7680275b9fe78273568e98e0aa250a1576a72a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/erff.rs",
+      "sha256": "62c30876390e532d7dc9ac1f1f1c1f654065fba2b2e534e531964d79e1766196"
+    },
+    {
+      "git_blob_oid": "05203985bf3136293c0dc85603d6ec8d6c1ea4eb",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/exp.rs",
+      "sha256": "f48970e2b92d4cc0e997abcd9d54bfaf6b8dd689a8b62916ff1fcc396f6ef700"
+    },
+    {
+      "git_blob_oid": "452b29a2c3d14424e30a2bf2f5bb6c0cb1b998f9",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/exp10.rs",
+      "sha256": "9cdb27305a1bfaf81c461efabb8eed31867dab2e6d8380858a9163e4540f8e07"
+    },
+    {
+      "git_blob_oid": "4b9e949fbbe97291e8bafb43aa9499e6cfc5738c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/exp10f.rs",
+      "sha256": "391a421dfd1f43534c4464880a30c552bd5898d0c3b9da7dfe5e04df65861784"
+    },
+    {
+      "git_blob_oid": "cc2aa434c4e9d6e58b10102e774fea8528fd186f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/exp2.rs",
+      "sha256": "7e73d7528d1407670d123a17a207242e98eb2f829a9b0dc91071200379adf63c"
+    },
+    {
+      "git_blob_oid": "44872d74b0ca814bf64f48d2583b87bc35125e45",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/exp2f.rs",
+      "sha256": "1c0f02200a85a01e37b4657076963e0c6670f8f3d9dd1db80a64cec268d40027"
+    },
+    {
+      "git_blob_oid": "d1185ff2c4621074bc7d617e26d99c36fed67c33",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/expf.rs",
+      "sha256": "983bf3922bed804ec889890a0e7d31641fd7098588645dad47920915c2753950"
+    },
+    {
+      "git_blob_oid": "3ce1d886bb1940ea09de06c89184e5e0da205707",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/expm1.rs",
+      "sha256": "6cc612ca7cf1384dc15f541b301a1f176efbc79536aff1293408b3121cc30ad3"
+    },
+    {
+      "git_blob_oid": "388da3f30173d821d32f5d28472e832354684f83",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/expm1f.rs",
+      "sha256": "2b517f1bcb6279c906aad737f08c83ac30d7871e3beff266ea50a01fa18ccc81"
+    },
+    {
+      "git_blob_oid": "ce90858ec070f65c399f9fae539e15904ebe79f4",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/expo2.rs",
+      "sha256": "abd80ec291bebe24d3e0401f5600469f6248052be97f06885c32451fae57d3a8"
+    },
+    {
+      "git_blob_oid": "7344e21a18bde6ce6cf5662aa3fc824e4e6683a3",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/fabs.rs",
+      "sha256": "17bcbb25ac98e6b2ebc10c5eb39bda7590825b66d484c36f2ef74dce2a8a69dd"
+    },
+    {
+      "git_blob_oid": "dac409e86b1355282d8ca78a103cfb60a8ff2ca5",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/fdim.rs",
+      "sha256": "2531e8f3537ecd75c773fa6b036a2f1988c62946acfa597678e65c4679998300"
+    },
+    {
+      "git_blob_oid": "2b1e31c0564b0662e5ddacacde3956d1d823bdbc",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/floor.rs",
+      "sha256": "73076d17352249964215ccf4766a7337ee5eb544ef93791116ddf40f80aa2b51"
+    },
+    {
+      "git_blob_oid": "513921d530fafe5c754fe09ab14df48fdd20dfc9",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/fma.rs",
+      "sha256": "680cf8fa506f9438b6b97afd1868c9c5860629047f79acf4ce474045dd7af06b"
+    },
+    {
+      "git_blob_oid": "8d1c5bccf852751f6ee86988a56f1bb49ee3c62f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/fmaf16.rs",
+      "sha256": "b2f1e0cf98f87bcf4b08e8071aa29dc715591a7099d0e25ccd2a99f96d0167c2"
+    },
+    {
+      "git_blob_oid": "64ad79928f7a0c939c9a1a5b0956c1657af8e52d",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/fmin_fmax.rs",
+      "sha256": "34a2e4aaa4a105a73118247fcc011334a3921eab4224bfbb2072e224a7a51c73"
+    },
+    {
+      "git_blob_oid": "59d9af317674f4550019c590420f73168f592f99",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/fminimum_fmaximum.rs",
+      "sha256": "9d87b754f9986715c5f4f4fcc25b66b0b5594b2967b175409647f7c794481c17"
+    },
+    {
+      "git_blob_oid": "51b20b736d2ca2deefd882a059b7fef0495fa6e2",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/fminimum_fmaximum_num.rs",
+      "sha256": "8f688163149308d751d5b3e3a1a4dc505601144719fd93c60b44a6e8585d04ad"
+    },
+    {
+      "git_blob_oid": "6ae1be5608355e0e8ca9053ca5623214e2e8099a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/fmod.rs",
+      "sha256": "8f4ca9162b8520e9b4b3e7fca6284b4c43573136b36e2edeb06faa45d606bf81"
+    },
+    {
+      "git_blob_oid": "af38915a3ac69fb3a60063bd5f7042dda24b293e",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/frexp.rs",
+      "sha256": "c4267b022a56f3e0458c2586c682c9c2bb0b1bef5c0df42a9275963689e9c616"
+    },
+    {
+      "git_blob_oid": "944cb4d4c72597632f862157f7257677219ff8b7",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/ceil.rs",
+      "sha256": "bf033f078eee7ad8b2d4c4ebe16316a050c00ca1344ef58501a91dc84a62f92e"
+    },
+    {
+      "git_blob_oid": "da9ce3878852103e68077a5479770ba36e349211",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/copysign.rs",
+      "sha256": "c3fac45e8d84876204e5b11363ec77d6fc30010e0c32ab7558f2da538747e9d3"
+    },
+    {
+      "git_blob_oid": "0adfa57d91b3362ff0d493c15790686692389a87",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/fabs.rs",
+      "sha256": "1381a8807d2c27b76996248bfcce6a2dc8982bdceee26febb15218e571b87908"
+    },
+    {
+      "git_blob_oid": "289e5fd96f86ab8a78ed25afc8d0a6c1bbf739e6",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/fdim.rs",
+      "sha256": "5fbb1f6a4022aeb8989967e7957b82ef589875ec09860027c241c4083e2b3525"
+    },
+    {
+      "git_blob_oid": "a99d192831e3c34082ddc88f2a16e87034206ce6",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/floor.rs",
+      "sha256": "d736b5f56a5623a9c8f08eb3adeef6ff022977fa3de693b74cb249adf1ce8c62"
+    },
+    {
+      "git_blob_oid": "aaf459d1b6147b3cb4e059c101a6bc59401db804",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/fma.rs",
+      "sha256": "ba44930a56d7c1953ab0c96c7c767911c9dc6967083700c8ef02f43672c8482f"
+    },
+    {
+      "git_blob_oid": "a2ef59d3e3d6f46a6f6337c8a6ba3ab70a00af7e",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/fma_wide.rs",
+      "sha256": "2cf995ff5646c019b46661061c13b42ed3409ff3ce406782c94e2183245bd7d3"
+    },
+    {
+      "git_blob_oid": "bdd46cc38a818d790b2c155d4f5080060cc41f5c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/fmax.rs",
+      "sha256": "36bf5260cfcff74e2e59972fcadd066496036ef888b60c94510be503832c52b4"
+    },
+    {
+      "git_blob_oid": "1fa48f964804ea0f921bf3a7a564bb95c0c60e81",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/fmaximum.rs",
+      "sha256": "d085799dc1a625d96158ed9595447c157fe75cd183da75edccb02f2cb6c7224c"
+    },
+    {
+      "git_blob_oid": "c7ca50a89dc8d84b20dede683e4a0126cf2b9f05",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/fmaximum_num.rs",
+      "sha256": "ad9a820c227d7e7d493cccf14856ba9928a7dc5f973660ee9865938aeff6b086"
+    },
+    {
+      "git_blob_oid": "e7755e82345c6750d17f6a11ede3d6d5b647e3ef",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/fmin.rs",
+      "sha256": "92dc4c0889bcde4c42e99329e179c945f6e824b2775a5162152fb1b58dd823a5"
+    },
+    {
+      "git_blob_oid": "82e72d644064915780546084ad2fe915cc98fba1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/fminimum.rs",
+      "sha256": "3071d662c6c4c9c8129c46b63f32b979430e823359ee4c95cf3619e81fbc5be6"
+    },
+    {
+      "git_blob_oid": "5b5271b123badc9d3a77e1f6d80e2f05dd473631",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/fminimum_num.rs",
+      "sha256": "81aabcbadce6b93d15ae02d6eecd50aeec8c7bd24dc919881e6ca3648a6da7ca"
+    },
+    {
+      "git_blob_oid": "3c3fd44b27cc2b875550575f570caa9c44e1612f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/fmod.rs",
+      "sha256": "11aae62d08d656d815184eafd78a3b2d5764b6ce308b89e3819cd049bc491fe7"
+    },
+    {
+      "git_blob_oid": "cbf5b100ba0f8ebe29598443fc7959b514c4cfe3",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/frexp.rs",
+      "sha256": "63a7f4169f15140c80c0ba0d2aa99dd3ae0ff242ab84e270952f94b4a4261b28"
+    },
+    {
+      "git_blob_oid": "02a7d6b30b10315bf53c7239213e226be3d72b32",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/ilogb.rs",
+      "sha256": "c4ad59f4dd53c587d105f166bfdd939ad65ee38e92a46587a04b7394c0a96ff4"
+    },
+    {
+      "git_blob_oid": "7a26295e39077cc61329ed9a7e0ba04d41926139",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/mod.rs",
+      "sha256": "0368283ffbd410f439f90428d901970ee05820fd91c73a47af83c063281f7ec5"
+    },
+    {
+      "git_blob_oid": "aa3d94e9a30d8eca41db988537ebc8afedcd1fe8",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/rint.rs",
+      "sha256": "7340d5558ca3237701fefac52d0c384339a6a3b1ab022d5c3d78220bc8d4ee78"
+    },
+    {
+      "git_blob_oid": "9cab1e22c2c6c9565d3b5839b036d479885c5176",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/round.rs",
+      "sha256": "235df1d9c1e7f16dc5d4a0689c2154fb0fa375e9da4a776a42b5bfaf4e247cd7"
+    },
+    {
+      "git_blob_oid": "68de41757913ac8efb91a25c328008b01d6431ba",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/scalbn.rs",
+      "sha256": "986e37f19c6cdf76867a365e1bc936050c238accda3fb327abccc488551ebf28"
+    },
+    {
+      "git_blob_oid": "013f6c097487f42faef7b69f8579126a68b99aa4",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/sqrt.rs",
+      "sha256": "0cc77367ada05e7b8622c991af0b989ed97c7630ac7a2e9fd192b969203a2705"
+    },
+    {
+      "git_blob_oid": "0b252fab94ae1d54aac4df8d5ab6f7a2e919bd32",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/generic/trunc.rs",
+      "sha256": "3a3ca091cd1d750276601dc2dfeb2a8ff058636ea2b66a748c55a1804bc8f00a"
+    },
+    {
+      "git_blob_oid": "e8bd44ca975d5e88e2f193ea29e4779c905a2c1e",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/hypot.rs",
+      "sha256": "9fe0c6983bd0ab90984b40ff7905d17caee6423a772264846e6ae54e2e8f4403"
+    },
+    {
+      "git_blob_oid": "dfb36d4b23eda816b07feb70f0761efcf197e18c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/hypotf.rs",
+      "sha256": "285a8b7e7d2869d5068857637b934dd237684b6c493a0535064d6537559a87a1"
+    },
+    {
+      "git_blob_oid": "4c3f0a6aa0452994d5685b067cfa646feb7dd999",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/ilogb.rs",
+      "sha256": "22341efedd5930f1cf8b2e5e2eaa6baf79c463d6f8dd045e2badaa3847bb662b"
+    },
+    {
+      "git_blob_oid": "7b0800477b3cdcde6a1ed290332cc109ca7908a5",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/j0.rs",
+      "sha256": "1cb991f0151a626744ad1832d4aedfaca681bcfcecc797de5ac5e9baf2342006"
+    },
+    {
+      "git_blob_oid": "1c6a7c344623b1131d3ee03bbe4b2951b46a9c34",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/j0f.rs",
+      "sha256": "de97374b6a0019fd8b3d1f553be1708018546491d3b4a5fc650ee2dcdfc9620e"
+    },
+    {
+      "git_blob_oid": "7d304ba10b7b34923ac27816d2ddb702e04f2095",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/j1.rs",
+      "sha256": "e0a10746fd11a458d55ee61e758d9f016ff0f2203a07eb9907b5aca709a40469"
+    },
+    {
+      "git_blob_oid": "d545a8635b1274e5926fa3b5cd3c1b10f40da76a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/j1f.rs",
+      "sha256": "b747ee287cdddd6d0d0d3f65a186e6605fe6b79bc9c55ffbd27a9205b7a3d07c"
+    },
+    {
+      "git_blob_oid": "b87aeaf1cc3d6d69712e90d2cd27eba53050b05c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/jn.rs",
+      "sha256": "ba36d25d4bbada83aadb3b2986879b7d88b91adb7b502061d21bf96ff3942194"
+    },
+    {
+      "git_blob_oid": "34fdc5112dce01d4fb374f9fe5f90ec7b2332cae",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/jnf.rs",
+      "sha256": "b3861e19644ae669fe17db81d91aeaee9c9f9051b59957ab674017684c98fe32"
+    },
+    {
+      "git_blob_oid": "1a2ebabe334372becd20b0a531398dc5269d036c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/k_cos.rs",
+      "sha256": "d4867527877c846aa8e2a0b43cf06f03e2d94c321a548acaf8d5171c09ff4057"
+    },
+    {
+      "git_blob_oid": "68f568c2425743ca588020779d304736da9d3e22",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/k_cosf.rs",
+      "sha256": "8f76089d014e217b96c9eca520271e64d467dc0d6542bf313dd70eb96c040f7f"
+    },
+    {
+      "git_blob_oid": "7b63952d255fa6ed522a8474c4e238a7fc232899",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/k_expo2.rs",
+      "sha256": "0e08b00b774731da6f16fd3ac8282a727a493e47b7a7292172b6136c04bd5dd4"
+    },
+    {
+      "git_blob_oid": "02213cec4549831411705726d05f17ce3c00db06",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/k_expo2f.rs",
+      "sha256": "bdbde40f3a4bd0bee11f7d8bcbba2f5df2dbf6378f0eec7a54de4e03c3d00828"
+    },
+    {
+      "git_blob_oid": "2f8542945136ed6a73adf03a361c7e4853e53a4a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/k_sin.rs",
+      "sha256": "dfe6524cb2d530ec51eb1a2ab233aeb65b3f12177c1fb2f50f044ea41170f5d8"
+    },
+    {
+      "git_blob_oid": "297d88bbbbe12722e85bca9a672c340dbf1449d1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/k_sinf.rs",
+      "sha256": "cf0e8bbe8d73a6704b7f1f710f5b9d31f190f1c633e894d4f69c4e3bc359eba3"
+    },
+    {
+      "git_blob_oid": "ac48d661fd620cec021245e5f35fb288ac039532",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/k_tan.rs",
+      "sha256": "dc3f8ece9187bbd65792a7d1068e676092e9c2a0886f28c80579f9bd94d744b7"
+    },
+    {
+      "git_blob_oid": "79382f57bf68f724f94b3ad8e461956c99348144",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/k_tanf.rs",
+      "sha256": "3381d2d4865bfc98e87aadb96bd8986f7691a389569a58fb1cb8db74fb5d9c20"
+    },
+    {
+      "git_blob_oid": "b32b8d5241b1180d541ca1f6dfaa3b0405212ab1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/ldexp.rs",
+      "sha256": "8d1a7e01d36fd1ce08810d90d011c357cf2a71eeba8a57b1ac762322828323a3"
+    },
+    {
+      "git_blob_oid": "da7ce5c983b95255b34f96f146dbbf7249ac1762",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/lgamma.rs",
+      "sha256": "669b3da03c58ffbe702f18c0fd99dc9e7226049ec84b92c8f1cb92a28c3991b7"
+    },
+    {
+      "git_blob_oid": "f3c6fef1464d8163dd899822821dfa22dbd72cf1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/lgamma_r.rs",
+      "sha256": "46d8850ccb72445128e5fd1c15235730298cd1a5e0726abd946f6d0d3605a12d"
+    },
+    {
+      "git_blob_oid": "920acfed2a0592713e4faae2f4286f9ead315c78",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/lgammaf.rs",
+      "sha256": "9f0dcde424de7f678208b0c8a1f63b6574d2abbf9e335c926cd6b027ec9ac3db"
+    },
+    {
+      "git_blob_oid": "5c087f14d7df2522453394eba8cf03e2c102cf7f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/lgammaf_r.rs",
+      "sha256": "c77d6d8a3c9e6f306bfdad3930fb7d96d57fca8fa8c1b666fc65f4db18e190f4"
+    },
+    {
+      "git_blob_oid": "9499c56d8adea904daab8e35fc1f902406a83416",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/log.rs",
+      "sha256": "df5f4d1325e89621bfcd9cf7788d0d7e20a6ef7f429110fe35b370b3c9362615"
+    },
+    {
+      "git_blob_oid": "228c00a5b2ffb71d3c54ac2999373b5b4919aeb1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/log10.rs",
+      "sha256": "4a96dd2b6a2a505497f2bb7ea956a50491d068dab1b6055a573aec1724a52e40"
+    },
+    {
+      "git_blob_oid": "f72fcf9e1e27c9582d760668b02edc5fc98bf0e1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/log10f.rs",
+      "sha256": "784a576dd4a4071f4f67c670eb9b221cb03014818c4b2d71afbcbd2211431caf"
+    },
+    {
+      "git_blob_oid": "c2f9eb89be609f13594740698ce392368da9c679",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/log1p.rs",
+      "sha256": "bb8ce741e54d8f001d9c12450a14a663bd413014da2ade9ba1f5fbc9ff0c9a88"
+    },
+    {
+      "git_blob_oid": "2e4775b8de9042bdaa0e61ba33764902c9b05b9c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/log1pf.rs",
+      "sha256": "8736222a9b9004b061f1339bb819c63c6b54414d4a01ef79d5f5a5f0a70677b5"
+    },
+    {
+      "git_blob_oid": "0f72fe0b84dc97a24e505e3866fe507760769d9b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/log2.rs",
+      "sha256": "1ec0cdd94bf4435ff0402d209089b1bdbcb1ba9a4cd5f77807f9c84cf534f980"
+    },
+    {
+      "git_blob_oid": "78673675a915b5d1c5238b34f9367cec9a8067b7",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/log2f.rs",
+      "sha256": "7b3b17ba08df6b5a57dacf6f945bfe1a3c088bee0eb11e201ac5affc7f65925a"
+    },
+    {
+      "git_blob_oid": "cd7a7b0ba00d4f67734b1915db1fe74b41b67480",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/logf.rs",
+      "sha256": "c7dfa5e89fcca0411624fdc594f64c62d5dfa3b91f061fcb7ac3aea18414f238"
+    },
+    {
+      "git_blob_oid": "809d5e5d180929353f753645343b788add4d6c38",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/mod.rs",
+      "sha256": "a08de4b4223a299d54da5081bca5fefe337744d21a9f08eea022adda171f9d5f"
+    },
+    {
+      "git_blob_oid": "a92a83dc5d107db36b68bb21694d158ac6cafe7d",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/modf.rs",
+      "sha256": "4bbf583606b7a2da0ddab13092c23e561daae87c4940cb059beae4e9a365edbd"
+    },
+    {
+      "git_blob_oid": "691f351ca8d7b6cdc2f65a5d454aa624b9036e2b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/modff.rs",
+      "sha256": "b5dc061b852f8dc84a45ec4269f596a07606a3eaba86ad254897199c7aebc860"
+    },
+    {
+      "git_blob_oid": "f4408468cc926e57c11763305bce385c7525e069",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/nextafter.rs",
+      "sha256": "7fed9cbc58b41ef391a016ee361d3c3f315cc7e12c2d35d46bbeed832f2519e4"
+    },
+    {
+      "git_blob_oid": "c15eb9de28183ee5cf5deec30597b1117cafec0c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/nextafterf.rs",
+      "sha256": "d3b2b7bd9bc2f762408d1231ae3e7a2a059668918cd4bcc519b04b5d36c81e6a"
+    },
+    {
+      "git_blob_oid": "87eaab3c7c727c07669bb7f497d335dc340cc668",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/pow.rs",
+      "sha256": "581efb544966f82f440137757bbbdec99d873c3121efde0294493c4a9fc9d259"
+    },
+    {
+      "git_blob_oid": "17772ae872d3373ab1aa2fb60c8fd1ee519b4f8f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/powf.rs",
+      "sha256": "819971cb8e927d80113aded3cfe90dcd501c031e0eb1c562b58842fddd1751be"
+    },
+    {
+      "git_blob_oid": "d2be3957358ae6c55b86127c785ac07673b16866",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/rem_pio2.rs",
+      "sha256": "931b9b421bc9c485893d5ab1b8c19c67c263ad5e1adab507a00abda5c773336d"
+    },
+    {
+      "git_blob_oid": "8212c1a0a9f42a0f0fd98c814d6010176128efa6",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/rem_pio2_large.rs",
+      "sha256": "494513e8a741239b0e783c5dbf3399ad770e9c8646163ee8694372049b94099a"
+    },
+    {
+      "git_blob_oid": "bbf8042752137c09632cfe9dd45b1cff3391ba3a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/rem_pio2f.rs",
+      "sha256": "e0716d71239538ef8cfa59292bb807d72d43a039a63822b18bd6c2f9a4027116"
+    },
+    {
+      "git_blob_oid": "54152df32f151b13f72c15607553a6df59033b65",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/remainder.rs",
+      "sha256": "23584372f9438cf02d163d48ce24d64b2d2151f2a2c5e5ef949cd8ad4b8832c2"
+    },
+    {
+      "git_blob_oid": "21f62921428078abefe3100bcec1c1dda14fa340",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/remainderf.rs",
+      "sha256": "0e3cc8ae3f8143eaab628e1c647267dc8d20c1e70d2a1534a3f109e974cae4e8"
+    },
+    {
+      "git_blob_oid": "f13b092373e5ff0947ed362ae8d20a1c77b1e4b2",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/remquo.rs",
+      "sha256": "e1739d4247337aab9924e5e5c3488ffff11f39a22699531b20237f22f08c8cfb"
+    },
+    {
+      "git_blob_oid": "cc7863a096f98378231c36cf0d08f14170045af5",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/remquof.rs",
+      "sha256": "e957bd96aa7c4e8a26b6959743fb22d24f2822715d7bbaf974b67b7a8ae3a197"
+    },
+    {
+      "git_blob_oid": "75c46acc0e85616d14a1e893e4b26b509c372455",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/rint.rs",
+      "sha256": "39c077b961df256b6558da0c37998b44c0385a0b59ebec05b6d89e6fbae5d130"
+    },
+    {
+      "git_blob_oid": "091cd801ad6b4c3d2a1cc402f5336adf6467f2fc",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/round.rs",
+      "sha256": "30e0c05e32e973cffc2e51d2e6f820da8716f9d0047cb95242fba2a51656de14"
+    },
+    {
+      "git_blob_oid": "4cedd0c16b82d844375ac37fa954fde846814e7c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/roundeven.rs",
+      "sha256": "06460fbb7df906a182e15693a8481d76ef45f42af6d35715e409bf60b292fc9d"
+    },
+    {
+      "git_blob_oid": "f1a67cb7f82f53dd686cd5f780ce3ea3780489c0",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/scalbn.rs",
+      "sha256": "9b0297d108a8dcc38abf8c10d391d990bca7a503e3cfcb7afd66378541125c05"
+    },
+    {
+      "git_blob_oid": "2f54074c25ef0d8bc304d77cea91095fbcd7804e",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/sin.rs",
+      "sha256": "9a3779d0b2a59cbafcfba0cf1c07ef42747f145b1e149c7d4ad3beb2bbda3fa0"
+    },
+    {
+      "git_blob_oid": "a364f73759d5411e9c8c21eb035494530839032d",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/sincos.rs",
+      "sha256": "a9c414e828c2e78b6bce4d5e4237b1baa93e81d78421aed5cedeab43df64067f"
+    },
+    {
+      "git_blob_oid": "1d15abe543067e370a7c31c7f32bd07c3a9f314c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/sincosf.rs",
+      "sha256": "af8b801067bc05f25763c2c6530330540bc5cb2d6014f400ec41c2706d62c537"
+    },
+    {
+      "git_blob_oid": "b4edf6769d30a2bc16903902369b81eb9737e561",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/sinf.rs",
+      "sha256": "b17db34d5da39a0f336d831abcb700fab69402c915321823870f1845e66c03d2"
+    },
+    {
+      "git_blob_oid": "900dd6ca4d8e3b84f1a103986a778cc7da1c6c4a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/sinh.rs",
+      "sha256": "95cb1019a76c82312a5a65b3dd5f8a6a8b9b77aed1934c7254eafb94604b94a0"
+    },
+    {
+      "git_blob_oid": "501acea302873be51deba8c4d97a5c8e7478f893",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/sinhf.rs",
+      "sha256": "bc447f1b913c90de2b7d3ca58c0734992e8d932a4a0f1525288bbe24888fabdd"
+    },
+    {
+      "git_blob_oid": "10edf397a0a0a661074d99feac532a03b8c3c35f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/sqrt.rs",
+      "sha256": "7b4180602efa992ab225feb16041a982b61fd1375df0fbacf1ea7e8a996c9c1b"
+    },
+    {
+      "git_blob_oid": "c316d93f524ab9df139d3b7d6132a1c81a18d6a4",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/support/big.rs",
+      "sha256": "5701a69fc37bed4f5464a73679f7cde3c9645d34ab687da8b588f5f7f45f7a33"
+    },
+    {
+      "git_blob_oid": "0ac8f9721a4dd442f9ef0cad1f70f14765082b54",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/support/big/tests.rs",
+      "sha256": "c431233abf40bfdd5d4e8d7a4a3b05567c3de2ca4be9138ddf2b2c82e311bc76"
+    },
+    {
+      "git_blob_oid": "0f89799ed9189fd279c117acdd4e0e5687cafd76",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/support/env.rs",
+      "sha256": "9c9d0d0f08861e1e71e7d6d175f58d5444fbd4fad52ac1689247cba18025f7b6"
+    },
+    {
+      "git_blob_oid": "9ebd434a5f85754b02972d5fc2f62e08ce860217",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/support/feature_detect.rs",
+      "sha256": "a1d08bbc2db9fcfe7e9ad94f11ccebf79841826f9315b0ecb43d851c658cbf98"
+    },
+    {
+      "git_blob_oid": "7bc9734a20994d27f50deb04005d647f5376aa45",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/support/float_traits.rs",
+      "sha256": "6f439e86fee28cfd733e01ac0952823dc1172d302881e63cd5745b9c03d81b7f"
+    },
+    {
+      "git_blob_oid": "e1100a4a119f0aabe3b1fdf5ed25e5e5a1d0b9d4",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/support/hex_float.rs",
+      "sha256": "dbb57964bc3d5be5d7a3dc28602f6376b14e67903a1829a36c0ba4fb86a67f13"
+    },
+    {
+      "git_blob_oid": "f113f9d62d143a50e18c50522194e89d997d96ba",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/support/int_traits.rs",
+      "sha256": "94dc5734b105384decc980694dccec342c4a598b1158378722e09d77291c9427"
+    },
+    {
+      "git_blob_oid": "e76fc5ae9f4ca76cf7f42cc7b4bd75505849ac5c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/support/int_traits/narrowing_div.rs",
+      "sha256": "5f5378e33f1da56090d0dce2514926ab465dce65b89ad4ee2f7da07a92f8d5de"
+    },
+    {
+      "git_blob_oid": "f1bfa21eec7f7aa4c2783c649b14ee06ebf24150",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/support/macros.rs",
+      "sha256": "ef912e86a944d9479e40494e6305a8239ff1e35b2bc1ab7cdabc977c67608e0d"
+    },
+    {
+      "git_blob_oid": "61999a1f94059e78043c064112304800637e2d4a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/support/mod.rs",
+      "sha256": "673f53c5fe616cb4f87264199db61f31ec116583b3f863949aee26d0839d5edb"
+    },
+    {
+      "git_blob_oid": "cc0edf2f2bc040d9584c2484ccd2aa28efebccac",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/support/modular.rs",
+      "sha256": "cf6a562d6bdf16336f31d41c59e828ad47f85388849d20d6d3b59fc1c3e388a2"
+    },
+    {
+      "git_blob_oid": "79c1bad563e2f2fc5c630083f9600b6ebdc4d83f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/tan.rs",
+      "sha256": "2ea87ca18526753db6d149635ed6c895c8fbafd1e0fa7a9c04f7dc44b4eae986"
+    },
+    {
+      "git_blob_oid": "a615573d87a5cc0f739f280ae89d23f4a6ffd1f4",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/tanf.rs",
+      "sha256": "f7140c4193a57709acde5d290c8f83435562da42924c54cab0aa3a4f26095190"
+    },
+    {
+      "git_blob_oid": "c99cc2a70b15dc77c3ada7e19c67399fadba3678",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/tanh.rs",
+      "sha256": "c81ff9f4aa902d8fc63922f17d7d9e395983a6582c4587cbbeb194b613dd90c6"
+    },
+    {
+      "git_blob_oid": "3cbd5917f07a92e32b8855cdd35a27aeb80b8dce",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/tanhf.rs",
+      "sha256": "41f6703a0ad8f032b0468fbd70c9ebc470fc6a6b3fd190522cca4cb34eeb4d9a"
+    },
+    {
+      "git_blob_oid": "c526842470c85ac249523c157235d9aef33c1ba8",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/tgamma.rs",
+      "sha256": "4900326b5c888acc2e5bde368bf927fb1833b2d6b863e0e7fee5c46b791af919"
+    },
+    {
+      "git_blob_oid": "a63a2a31862c1798fc06d4d795003fb99f916794",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/tgammaf.rs",
+      "sha256": "9bca4ea70be9fa1d8088e7dee325c15ca611c48f33fe0942b01b64a26aee5763"
+    },
+    {
+      "git_blob_oid": "9eb902ea578f87588d8236619a67ab7db72c8ba8",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-runtime-source/math/trunc.rs",
+      "sha256": "ef59952a1a80ec93be27eb78c977189084ff7fcae0e8f782d60b5947e1de141c"
+    },
+    {
+      "git_blob_oid": "561e5bfb42beafbfff4c9222a7b775df58aab52f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/libm-source-tree.json",
+      "sha256": "c7a8733b63577d3563043ae41d27c1f7e2eb4ea0a093f5157b4fd289605a8072"
+    },
+    {
+      "git_blob_oid": "1c33eaf6da88396a85a964078e2889b72ec36e6b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.25.1/.cargo_vcs_info.json",
+      "sha256": "70f22e279a4a1b2697dfc1b53ead965a913faa3d2604545c439b28a24bf5eaf5"
+    },
+    {
+      "git_blob_oid": "c734b4c67f83d6bbedd8d8304aef39309f113892",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.25.1/Cargo.toml",
+      "sha256": "6c371cb14bed07740324acb5b126bd58cf87771be72d4d88366b000f138b8001"
+    },
+    {
+      "git_blob_oid": "d155a159267bd8c35042058c859ac35c2c93d8cd",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.25.1/Cargo.toml.orig",
+      "sha256": "1ce22b0b31c6bd077501c96cd568a95ee894042d651b0db9245a2f4395d12872"
+    },
+    {
+      "git_blob_oid": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.25.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "git_blob_oid": "3a03f1f850c6499b38e173654bb54e3dcc46c408",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.25.1/LICENSE-MIT",
+      "sha256": "e99d88d232bf57d70f0fb87f6b496d44b6653f99f8a63d250a54c61ea4bcde40"
+    },
+    {
+      "git_blob_oid": "74cf3336c84d251dd3257d56e3e040404811e843",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.25.1/README.md",
+      "sha256": "c635ed91d7b0c87ff2f0f311cd1a31336d2cbc4d011965d3b58afaca073538d9"
+    },
+    {
+      "git_blob_oid": "ff8f887a63f2bb560b9b00f5d5c788e089e6d5d2",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.27.1/.cargo_vcs_info.json",
+      "sha256": "579e6935aef9963d8b3188263afbe6f3ee8bd1d15c825400507538c2fa4346be"
+    },
+    {
+      "git_blob_oid": "cfcfd00f697ba1543d65ae1c492b7ea4cd5d1886",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.27.1/Cargo.toml",
+      "sha256": "12c81b86f703c7bd66fea490f17ed659dfc7ba9aff15feb71f8e73fb04d6ecd3"
+    },
+    {
+      "git_blob_oid": "97902d225a732b6eaef6df058c0eeeb4891d0385",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.27.1/Cargo.toml.orig",
+      "sha256": "47198ad52fdfbbd73fd3098346c23c5b27c03395e84e51678dc3e1885dd85c6f"
+    },
+    {
+      "git_blob_oid": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.27.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "git_blob_oid": "3a03f1f850c6499b38e173654bb54e3dcc46c408",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.27.1/LICENSE-MIT",
+      "sha256": "e99d88d232bf57d70f0fb87f6b496d44b6653f99f8a63d250a54c61ea4bcde40"
+    },
+    {
+      "git_blob_oid": "569e2e0ae96a3b2f5b0ca263fd1d7fd29b5116f8",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/addr2line-0.27.1/README.md",
+      "sha256": "26732c033f4dfc18be2f8f07f67436a33f08166806857cd0415ac7ad78f1654b"
+    },
+    {
+      "git_blob_oid": "23ea6655f84feb052d82ca61e303fb68900cf631",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/.cargo_vcs_info.json",
+      "sha256": "08071a308400282ad18ca2de0df6d1f2dc270475f69aa483740ce311af3f63e0"
+    },
+    {
+      "git_blob_oid": "d137e3d9309c2366ca7ff8e590e03169604625c8",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/Cargo.toml",
+      "sha256": "8f30dbd092f3acc475b9d339736cd7b64c6489bc47cd234a7f2232fc52e2d490"
+    },
+    {
+      "git_blob_oid": "78ffd9a9d9ec0bb22dd11599f51fa92f926b3e87",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/Cargo.toml.orig",
+      "sha256": "077df9094ac86443a4d05305f74782bd237c1f15fa39640463e4c62e9e4a310a"
+    },
+    {
+      "git_blob_oid": "89336aaca55db49ae6dda7103d17456235e745a3",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/LICENSE-0BSD",
+      "sha256": "861399f8c21c042b110517e76dc6b63a2b334276c8cf17412fc3c8908ca8dc17"
+    },
+    {
+      "git_blob_oid": "c98d27d4f32d56e56f13de73a08ab44b2947ccf5",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/LICENSE-APACHE",
+      "sha256": "8ada45cd9f843acf64e4722ae262c622a2b3b3007c7310ef36ac1061a30f6adb"
+    },
+    {
+      "git_blob_oid": "31aa79387f27e730e33d871925e152e35e428031",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/LICENSE-MIT",
+      "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+    },
+    {
+      "git_blob_oid": "25e7571d489521dd7b9c7d50b3fe4c5b3d643b7d",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/adler2-2.0.1/README.md",
+      "sha256": "cd955d5d6a49161e6f7a04df4a5963581b66ed43fd5096b2dedca8e295efe4f9"
+    },
+    {
+      "git_blob_oid": "d4bec315ac6e9d0f9f7f67c295b3b151e524c0b1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/cfg-if-1.0.4/.cargo_vcs_info.json",
+      "sha256": "65840ba044457862e25b2d7d53f4a2de232adf933bd31aba8f2bd6a1f51a6881"
+    },
+    {
+      "git_blob_oid": "450f7a2df1e06c4282574348554c634f5acbc8d1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/cfg-if-1.0.4/Cargo.toml",
+      "sha256": "281d508beb1fe3927cf03d3f2f8c9a5117b1e4fe97ae21b9026cf318e8c35273"
+    },
+    {
+      "git_blob_oid": "6a98924eaea247f15cde362682433fe27c305497",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/cfg-if-1.0.4/Cargo.toml.orig",
+      "sha256": "5a17ee17da78f5179373b8324a1180e71efe2bcf3e3c9ca18c1bdb1e3faa9792"
+    },
+    {
+      "git_blob_oid": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/cfg-if-1.0.4/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "git_blob_oid": "39e0ed6602151f235148e6c08413aa7eda5b9038",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/cfg-if-1.0.4/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    {
+      "git_blob_oid": "d174b6eda69c5da25708c685a3f968002312cddb",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/cfg-if-1.0.4/README.md",
+      "sha256": "cd565d563a2c70d197bb6fee1678e122214e22af7bdb046b80f52c1d953cd72f"
+    },
+    {
+      "git_blob_oid": "23aaf2afcd5fa5c96b5e04bc39d3ba6dc469b8e0",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/foldhash-0.2.0/.cargo_vcs_info.json",
+      "sha256": "5fe3916c8cc3fa6dab42352cec91217e071ece146a4c10d38b8c608de2d2925d"
+    },
+    {
+      "git_blob_oid": "64cc1fe26ebd109eb607e2beb72b0990e0b7f16b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/foldhash-0.2.0/Cargo.toml",
+      "sha256": "0a76cc29da1c33f4bdb505f5828ecdc20859c4cb9faa402e000f5f10511a27cc"
+    },
+    {
+      "git_blob_oid": "a0a0c58d96f31fe54275957a7ac0741f035ecbb5",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/foldhash-0.2.0/Cargo.toml.orig",
+      "sha256": "04350078f390441844a35994ad83f2873b685a023c433ecb14eda200a5cb2f90"
+    },
+    {
+      "git_blob_oid": "2f65b0a366d4a8492175794e3bd3485fdd693c03",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/foldhash-0.2.0/LICENSE",
+      "sha256": "b1181a40b2a7b25cf66fd01481713bc1005df082c53ef73e851e55071b102744"
+    },
+    {
+      "git_blob_oid": "4fe9d6e4927e4b54d25765485658f94ba60891e7",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/foldhash-0.2.0/README.md",
+      "sha256": "e96613be984ff637c725f3f9abba366eb2d03a772695bed2d49dc61d330027ac"
+    },
+    {
+      "git_blob_oid": "1f7dc46585cc03414676ca6b67b668a18abb1207",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.32.3/.cargo_vcs_info.json",
+      "sha256": "bae9b5923acc9a419e4bc7060b19314aac48dc12f7ba31b7b0cb42edae19eb80"
+    },
+    {
+      "git_blob_oid": "2041bdb9677cf5d51db9a97f8a811b8b44366252",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.32.3/Cargo.toml",
+      "sha256": "2b0d60ffc8705bf1de535e36ffa090511284747388d84056d5d96a5acbb0704a"
+    },
+    {
+      "git_blob_oid": "6baee9c66ba26de1e9847054dbd232d410531fef",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.32.3/Cargo.toml.orig",
+      "sha256": "96b821d1b85daa2afbbdd21c1260dbbc5dce9ee72e53eff1a8bfc11ee12c8a01"
+    },
+    {
+      "git_blob_oid": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.32.3/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "git_blob_oid": "e69282e381bc07152cc7598f21f3162e4bbb1f22",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.32.3/LICENSE-MIT",
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+    },
+    {
+      "git_blob_oid": "03bf6b8c663dcff81233158f318001b924d74602",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.32.3/README.md",
+      "sha256": "79fc2aa247ebf7b8a3562632aa2bfc466cd655a0886717d47e4bc693166e9745"
+    },
+    {
+      "git_blob_oid": "ee4201cdafa18b0e347838650bc86ce46cf838af",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.34.0/.cargo_vcs_info.json",
+      "sha256": "97bc2962d365bb44e5d56d0a5e82710327a03f889585f8bbea803842e2ccb772"
+    },
+    {
+      "git_blob_oid": "a743e7fbb507b3d67b87c13a60093b64d5dd3b1c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.34.0/Cargo.toml",
+      "sha256": "212db9e1be4465a4d2d4c53f657ca2ada4171eca9f52f08cf0a686b44fb6b444"
+    },
+    {
+      "git_blob_oid": "1b0336fcfbe25b10ec85f5dcd8effea210dbd8ce",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.34.0/Cargo.toml.orig",
+      "sha256": "18c14493188302fc9aac1821f7b7493e8b7693b32840f7dc6e6b4a028564f5cb"
+    },
+    {
+      "git_blob_oid": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.34.0/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "git_blob_oid": "e69282e381bc07152cc7598f21f3162e4bbb1f22",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.34.0/LICENSE-MIT",
+      "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+    },
+    {
+      "git_blob_oid": "5892a07e2c6a4e7f9df046d14336ec87009b9ca5",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/gimli-0.34.0/README.md",
+      "sha256": "d8305de205cdc5bbadba49bf213f7408fde9ab91943a6d0dfa15ecf8c75e2b76"
+    },
+    {
+      "git_blob_oid": "017ccccdaa68e5b4e762f3b866f23908bd8063e7",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/hashbrown-0.17.1/.cargo_vcs_info.json",
+      "sha256": "b41a5623404ae232c5432fb7dfeb74f93c40f532ae057179b9a8b00982a006d4"
+    },
+    {
+      "git_blob_oid": "ce7e0b35d7ded0587844bf5fc1df694d4adadea5",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/hashbrown-0.17.1/Cargo.toml",
+      "sha256": "afcb0e62d498f756bd4ddf69785c8282d01ee4fa40016158c7eac12ceb302f8c"
+    },
+    {
+      "git_blob_oid": "518758388c63da14bf5ce3397942b1d6ca1f357b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/hashbrown-0.17.1/Cargo.toml.orig",
+      "sha256": "3e1f9929f381f46f969ea49faab281dc3c6ee08b24ef41f3ac8e2eec209ca078"
+    },
+    {
+      "git_blob_oid": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/hashbrown-0.17.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "git_blob_oid": "5afc2a7b0acabd34676023f9ebe3912ea2643ac2",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/hashbrown-0.17.1/LICENSE-MIT",
+      "sha256": "ff8f68cb076caf8cefe7a6430d4ac086ce6af2ca8ce2c4e5a2004d4552ef52a2"
+    },
+    {
+      "git_blob_oid": "ce19947e4b9cf43874d3cd456e5d5cdcb81486dc",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/hashbrown-0.17.1/README.md",
+      "sha256": "d58265d24271a49876da9c77eaaa00093e01e41011e7e603da1f738ecdec4f47"
+    },
+    {
+      "git_blob_oid": "f3ca026a9591ae705e21c36a11e3884348218f47",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.185/.cargo_vcs_info.json",
+      "sha256": "0bbebb7f1d27737bd569e11d5f934243e59f0df3569b4a050f19aa104ed2dd89"
+    },
+    {
+      "git_blob_oid": "6aeb7adc0e0f105b939f9281183a7bfa8b4fd1a7",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.185/Cargo.toml",
+      "sha256": "89d682c2bf38c3051425fd0fc4319e31d55d4d20082fc6f3445f4681e95a4b8d"
+    },
+    {
+      "git_blob_oid": "1e05a83c0e0a2b127a90a0396c91cbf99801ee59",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.185/Cargo.toml.orig",
+      "sha256": "e6b107bb3de87b26953d9f7f5c97330d1d4e0c828a076c09fcc2e85cae040cb7"
+    },
+    {
+      "git_blob_oid": "1b5ec8b78e237b5c3b3d812a7c0a6589d0f7161d",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.185/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "git_blob_oid": "f4095b2fa2d9b6b96341d85c5e8d4943edf7a079",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.185/LICENSE-MIT",
+      "sha256": "123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e"
+    },
+    {
+      "git_blob_oid": "69aff2cae166d4e5956a44add909c805f9a70548",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.185/README.md",
+      "sha256": "0795294e9f08f32259a9ea3d694a867998f35cbccf38263205555d2dbc1ed2a5"
+    },
+    {
+      "git_blob_oid": "62453f28b440076ed81ce836e1a2ad398ea9503a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.189/.cargo_vcs_info.json",
+      "sha256": "3ae25e402263c1d372a9c6a0b09d4f63d6744a1f8d7912108191c3b6276ceb4f"
+    },
+    {
+      "git_blob_oid": "381f64ebbbc8151254cb96fc6cd01c00a253cab6",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.189/Cargo.toml",
+      "sha256": "95159789ef9c9aaee8230b13be5c89594833a7bf2db299e61eb23b512cb67144"
+    },
+    {
+      "git_blob_oid": "380dd89fb693f0452da11fe9a844a740503eaea8",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.189/Cargo.toml.orig",
+      "sha256": "cba73b06128539455a57f7432e466ba583358ecb83ef8eda60731751b8a9f5cc"
+    },
+    {
+      "git_blob_oid": "1b5ec8b78e237b5c3b3d812a7c0a6589d0f7161d",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.189/LICENSE-APACHE",
+      "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+    },
+    {
+      "git_blob_oid": "f4095b2fa2d9b6b96341d85c5e8d4943edf7a079",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.189/LICENSE-MIT",
+      "sha256": "123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e"
+    },
+    {
+      "git_blob_oid": "b05a52d113ecb98649a178cefbf5419bb55773d0",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/libc-0.2.189/README.md",
+      "sha256": "5af805465cb8cfa4186cb75df07f4aebd35a3d88f497ed71d189b74ecf8cbcdc"
+    },
+    {
+      "git_blob_oid": "97ecb131fc6c45c7f7702618cf6b43af2c84c56a",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/.cargo_vcs_info.json",
+      "sha256": "32184fbeeef54a11ecc1ee09a2bedd94706767377f431a528f48134f56cd3b6f"
+    },
+    {
+      "git_blob_oid": "bb9c20a094e41b7632d63bcff20c0b4b95e80777",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/COPYING",
+      "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+    },
+    {
+      "git_blob_oid": "bd76618cb11fa357b8a40f3db79b3e24a30a016e",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/Cargo.toml",
+      "sha256": "5750ca97e8b2643f2ba1d7e98f54dcf54518c0176899e547876a59eb736198a5"
+    },
+    {
+      "git_blob_oid": "6c9b87b458b0388d961baa46eb0889191df30561",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/Cargo.toml.orig",
+      "sha256": "b919c7322ecc6da819546cb677da938730e5df32fdfe9ef5d7c2dc54cc768526"
+    },
+    {
+      "git_blob_oid": "3b0a5dc09c1e16357459ddc9182a50f360f3cdba",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/LICENSE-MIT",
+      "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+    },
+    {
+      "git_blob_oid": "db00ebbc9356485fe1b2aa471513338259981b49",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/README.md",
+      "sha256": "92a74aaffe011bdaa06fbc34a01686a6eba58ca1322e976759417a547fddf734"
+    },
+    {
+      "git_blob_oid": "68a49daad8ff7e35068f2b7a97d643aab440eaec",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.7.6/UNLICENSE",
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+    },
+    {
+      "git_blob_oid": "eeb3b560ef6d56bc6a8ae9ed49b7ed33633e2f08",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/.cargo_vcs_info.json",
+      "sha256": "739b57f156ae78ce5ad0f2bc44ff727f1a9d48e743bc266e8e3ab8c35baa5ecb"
+    },
+    {
+      "git_blob_oid": "bb9c20a094e41b7632d63bcff20c0b4b95e80777",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/COPYING",
+      "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+    },
+    {
+      "git_blob_oid": "a03a2ad681ea9ba680b5b2f7801d8f2888ab2cfb",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/Cargo.toml",
+      "sha256": "a14f68b8fa55f15fd03b15dced37bcf66a0a628f568eedc82817cdb7f9281951"
+    },
+    {
+      "git_blob_oid": "5459969670e252bfccfefd5db75f31645a06bd1c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/Cargo.toml.orig",
+      "sha256": "2d004168044e88b00f971e65d7e6c988a555aa00d7ef4d0ceb5b5a9c228fb0c9"
+    },
+    {
+      "git_blob_oid": "3b0a5dc09c1e16357459ddc9182a50f360f3cdba",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/LICENSE-MIT",
+      "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+    },
+    {
+      "git_blob_oid": "db00ebbc9356485fe1b2aa471513338259981b49",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/README.md",
+      "sha256": "92a74aaffe011bdaa06fbc34a01686a6eba58ca1322e976759417a547fddf734"
+    },
+    {
+      "git_blob_oid": "68a49daad8ff7e35068f2b7a97d643aab440eaec",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/memchr-2.8.3/UNLICENSE",
+      "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+    },
+    {
+      "git_blob_oid": "5bffd83e76cdc127fe3054406208502748497f36",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/.cargo_vcs_info.json",
+      "sha256": "63ec91898b26d8ad1c575376009d0dedc8e81dba4fc6a312ed21be764bbbe524"
+    },
+    {
+      "git_blob_oid": "4e6fb857fd23f0d9640dd3a2fe1355c7b32e85f9",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/Cargo.toml",
+      "sha256": "f0d2683434f1c0d3cd9b8080031e82aa5089c9be1779cc5101e065883258d77d"
+    },
+    {
+      "git_blob_oid": "3880267bdac2047b132d2498e3fb8f9b85d47f86",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/Cargo.toml.orig",
+      "sha256": "cd14ac8745b43145dab0cbbfa9e425f4778eb30d521a71d6c535fdcd9f00d3ca"
+    },
+    {
+      "git_blob_oid": "a1980025c32d27c14c8a2e76b5bec7cbac5fef9c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/LICENSE",
+      "sha256": "4108245a1f2df9d4e94df8abed5b4ba0759bb2f9b40a6b939f1be141077ae50b"
+    },
+    {
+      "git_blob_oid": "f433b1a53f5b830a205fd2df78e2b34974656c7b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/LICENSE-APACHE.md",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "git_blob_oid": "ec71b31cc0ff3e17780f885da6295c85a4ab7d5d",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/LICENSE-MIT.md",
+      "sha256": "799e9ca9d179295ef372f25d3769cdda7d25bb2668add6a6a1e22d1e4c678b8d"
+    },
+    {
+      "git_blob_oid": "92871cd249d270d8482d75df6852a09796fd0a97",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/LICENSE-ZLIB.md",
+      "sha256": "0a54e647fe54104658b5e563c04c6f9edf251710e47bce692e0bd990a4ddaa39"
+    },
+    {
+      "git_blob_oid": "cd7917de72147a19e9c3f7dff4924ea4375c2335",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.8.9/Readme.md",
+      "sha256": "223adc19e791c521f7cbc160c6f77959c74a86c58450855fead310461839fdd9"
+    },
+    {
+      "git_blob_oid": "1776eb2b093a903a913dc6bd10c7fd7967b8f7dc",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/.cargo_vcs_info.json",
+      "sha256": "be3ba6d6a990751cc8b518e317cc96ad12b8d67a53a49b1ca592732716608bea"
+    },
+    {
+      "git_blob_oid": "ae413585c781a882099812a8153210bd7e8ad894",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/Cargo.toml",
+      "sha256": "50b7813993bf57d2ece90fa780a330d1d5177723b8606c7d214f51d265d30c74"
+    },
+    {
+      "git_blob_oid": "3e6c92cf688318aae5fd192e5d486b6115b6e6fc",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/Cargo.toml.orig",
+      "sha256": "99266263fe2cb880c3e84bf138d96789362aec0419cc222fdada012da7c12fab"
+    },
+    {
+      "git_blob_oid": "a1980025c32d27c14c8a2e76b5bec7cbac5fef9c",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/LICENSE",
+      "sha256": "4108245a1f2df9d4e94df8abed5b4ba0759bb2f9b40a6b939f1be141077ae50b"
+    },
+    {
+      "git_blob_oid": "f433b1a53f5b830a205fd2df78e2b34974656c7b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/LICENSE-APACHE.md",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "git_blob_oid": "ec71b31cc0ff3e17780f885da6295c85a4ab7d5d",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/LICENSE-MIT.md",
+      "sha256": "799e9ca9d179295ef372f25d3769cdda7d25bb2668add6a6a1e22d1e4c678b8d"
+    },
+    {
+      "git_blob_oid": "92871cd249d270d8482d75df6852a09796fd0a97",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/LICENSE-ZLIB.md",
+      "sha256": "0a54e647fe54104658b5e563c04c6f9edf251710e47bce692e0bd990a4ddaa39"
+    },
+    {
+      "git_blob_oid": "cd7917de72147a19e9c3f7dff4924ea4375c2335",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/miniz_oxide-0.9.1/Readme.md",
+      "sha256": "223adc19e791c521f7cbc160c6f77959c74a86c58450855fead310461839fdd9"
+    },
+    {
+      "git_blob_oid": "bad791e93424e10f12aed3d5a261c3a522def3f4",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.37.3/.cargo_vcs_info.json",
+      "sha256": "4cf7cc3e0606b7b7a5e5efeda6166c7b09efd9d7a3d8917254ef629a9abd3363"
+    },
+    {
+      "git_blob_oid": "a478df3c18a7dd9cca094b630d012426ca87d016",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.37.3/Cargo.toml",
+      "sha256": "9373632c541767e8e6575ee1809ac4397a9e0bc6091691620ef7cefc11454a73"
+    },
+    {
+      "git_blob_oid": "142e09eefd00c87e817e0ba4693fa594d6b2d888",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.37.3/Cargo.toml.orig",
+      "sha256": "c74258a94919c8978e1d3e29a4d3b77256dfa35b4352d1b0eac9c10388e3d029"
+    },
+    {
+      "git_blob_oid": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.37.3/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "git_blob_oid": "8440c7e95fb8e4966340137f9b95a494a01b0cef",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.37.3/LICENSE-MIT",
+      "sha256": "0b74dfa0bcee5c420c6b7f67b4b2658f9ab8388c97b8e733975f2cecbdd668a6"
+    },
+    {
+      "git_blob_oid": "beef0ac351a2669de5e2e50d25972cd9e54c6db4",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.37.3/README.md",
+      "sha256": "287c6a1b30c7d64d91cdc02a7daaa7c840b97b20f999d3bd958993fb11c1a0ed"
+    },
+    {
+      "git_blob_oid": "632d671ebda554bcba34f7027458f11f948fa9cd",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.39.1/.cargo_vcs_info.json",
+      "sha256": "2756b3da39c43798560ad0af5140f8d649ca74ca2f70bcde52d5d8c02e87a248"
+    },
+    {
+      "git_blob_oid": "7cc699073abdc686759f36ae51b930c092336160",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.39.1/Cargo.toml",
+      "sha256": "373aa1a7d2fd042ac630d54e405147141e7a3da961e6a81d449c056fa3ae6152"
+    },
+    {
+      "git_blob_oid": "59b75913d058eeda92f9dde3bd20a45d29659fed",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.39.1/Cargo.toml.orig",
+      "sha256": "9754bed3e1671ccde0d380211d72cb113de78eb806ac2dfbea33da2909b4d768"
+    },
+    {
+      "git_blob_oid": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.39.1/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "git_blob_oid": "8440c7e95fb8e4966340137f9b95a494a01b0cef",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.39.1/LICENSE-MIT",
+      "sha256": "0b74dfa0bcee5c420c6b7f67b4b2658f9ab8388c97b8e733975f2cecbdd668a6"
+    },
+    {
+      "git_blob_oid": "7b4ade072def61d92f8be5c15050a4b2acb124d6",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/object-0.39.1/README.md",
+      "sha256": "2ab3c7e4d9d73298bd970eca9a56aaac93c48d5e44aa81b536b0f3a06f3f167a"
+    },
+    {
+      "git_blob_oid": "1f9d702206b5e70c02639609fffddd0a53e17b94",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.27/.cargo_vcs_info.json",
+      "sha256": "46bfe802e20ef53e8b3570185e39d8b2ec02a4d7ad30fe3825d4b73c917210fc"
+    },
+    {
+      "git_blob_oid": "99c60dfb9445298773636e4df391fdcd80c9c9a3",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.27/Cargo.toml",
+      "sha256": "ec462e775f134cf7646d9dda346c43bbc2c0cd44def02e3af5b678bb6a9d879c"
+    },
+    {
+      "git_blob_oid": "af6fe2a8dcd19a39f00fc12ff9abb965e5125a40",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.27/Cargo.toml.orig",
+      "sha256": "98e1276c12dad174fa66dd20d14272f8a68708ae4f0fd8a3502a0284ea752674"
+    },
+    {
+      "git_blob_oid": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.27/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "git_blob_oid": "39e0ed6602151f235148e6c08413aa7eda5b9038",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.27/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    {
+      "git_blob_oid": "62cb80b039d7c595b1847e70b8330d48a745d156",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.27/README.md",
+      "sha256": "80516de273102806427d87f02043b657ba0b327a7c651b0c33a94c0cd395f3de"
+    },
+    {
+      "git_blob_oid": "d592cf84977b739dccc12b9f9e70cb87fbe83447",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.28/.cargo_vcs_info.json",
+      "sha256": "ad7401e19330b24724cf931d8278c030d824157fcdb70a377cbd1a1230f3e935"
+    },
+    {
+      "git_blob_oid": "088d0f8cc2c1c88f030d4737a745089d3ed8a61f",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.28/Cargo.toml",
+      "sha256": "7ec9986ac171ec3eed0c2ae12b655b390bd7533f9e505005cc378b02be43a3e0"
+    },
+    {
+      "git_blob_oid": "de2cae794cb3222c40cc3b6905cfc01ed2d8571b",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.28/Cargo.toml.orig",
+      "sha256": "1a9cf92ffbb4e47f0f98860d1207db75cf1a5558af55f46a829f51352155e5e9"
+    },
+    {
+      "git_blob_oid": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.28/LICENSE-APACHE",
+      "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+    },
+    {
+      "git_blob_oid": "39e0ed6602151f235148e6c08413aa7eda5b9038",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.28/LICENSE-MIT",
+      "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+    },
+    {
+      "git_blob_oid": "62cb80b039d7c595b1847e70b8330d48a745d156",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/sources/registry/rustc-demangle-0.1.28/README.md",
+      "sha256": "80516de273102806427d87f02043b657ba0b327a7c651b0c33a94c0cd395f3de"
+    },
+    {
+      "git_blob_oid": "51100fb2c5371afd6961d7b6b803388eace70253",
+      "git_mode": "100644",
+      "path": "sbom/mcp-rust-stdlib/wheel-source-paths.json",
+      "sha256": "fd24d795b45f443b2f9dbb22313a57305dd6100e96aa5947d23bfc8abc72248c"
+    },
+    {
+      "git_blob_oid": "6b4c0b39959204dae5976161912b5de6e7a6bb54",
+      "git_mode": "100644",
+      "path": "scripts/ai-tools-server.py",
+      "sha256": "1b07224d2f809de4e5da19c606bd5f9900706fc7fd5ccec61e1351d12bf5f8c0"
+    },
+    {
+      "git_blob_oid": "e0a50f901649e14d18e8fab346a29643ec516a51",
+      "git_mode": "100644",
+      "path": "scripts/aitrust.py",
+      "sha256": "0fb8dcbd48a80caa456f467d535c7ff079397fa9ed9505fed75aabcbfeaea5ab"
+    },
+    {
+      "git_blob_oid": "19169118e78470a71e427602de82a1dd51c9f62b",
+      "git_mode": "100644",
+      "path": "scripts/build-device-detector.py",
+      "sha256": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3"
+    },
+    {
+      "git_blob_oid": "116a6f1aeee85855fd238c0da80221d1a9d30214",
+      "git_mode": "100644",
+      "path": "scripts/check-ps.py",
+      "sha256": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240"
+    },
+    {
+      "git_blob_oid": "ac25b0fcc4421552ceb6eb5529298efb1e5ed44e",
+      "git_mode": "100644",
+      "path": "scripts/check-tags.py",
+      "sha256": "bb57e5e49b1f6a305eabc84e04df771402c6ad9cf8119c6acc94037d1fd184d0"
+    },
+    {
+      "git_blob_oid": "76d02b62e6c2a69c20ab772aad0d674ea27f63a6",
+      "git_mode": "100644",
+      "path": "scripts/collect-mcp-notices.py",
+      "sha256": "406c3f527e2384dc5bcbc2c26f5ba5b1d9dbdb289d67e65524b652a0788570ab"
+    },
+    {
+      "git_blob_oid": "9700fd11ff81a1df668f5fd87cbee9fb98cce614",
+      "git_mode": "100644",
+      "path": "scripts/distribution-artifact.py",
+      "sha256": "15fb26b1fa0ef927e3bda554bf55f8cf011935a81cb660bead236f1d07be9d0a"
+    },
+    {
+      "git_blob_oid": "0704af1254c3c46e4b8a582cb9e17c37623eee2d",
+      "git_mode": "100644",
+      "path": "scripts/install-managed-mcp.py",
+      "sha256": "2af2ffef148f2141dc6af9cf812bbaaa55fc9a9e0ceb726e286703f113ed6424"
+    },
+    {
+      "git_blob_oid": "339a3cccffcb3590f41074812a697c597df846e2",
+      "git_mode": "100644",
+      "path": "scripts/mcp-distribution.py",
+      "sha256": "954e1c505a015aa86721a590d762b0818391cf48c6acc1d36c040b23b54a6bc0"
+    },
+    {
+      "git_blob_oid": "a7dc5bf85f0293f13ff3400a6b6d0debb11afc18",
+      "git_mode": "100644",
+      "path": "scripts/tag-api.py",
+      "sha256": "5d716e4db502e468dabcefba77e6d4f82605f23f57e3b8951a312461faec924a"
+    },
+    {
+      "git_blob_oid": "2f3164958b6a04768a57c3f5367c6b4b1b5da18f",
+      "git_mode": "100644",
+      "path": "scripts/worker_process.py",
+      "sha256": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3"
+    },
+    {
+      "git_blob_oid": "64518304af962cc87d35c8f0b846388912800a54",
+      "git_mode": "100644",
+      "path": "services/anonymizer/app.py",
+      "sha256": "2df4afaeee0a2ca4ca2b2b0032f4b38e4b68e2e6c3e2f01361166f54291fd77c"
+    },
+    {
+      "git_blob_oid": "8a9d6880c7283a2c9d6515dd77bd94d88936ada6",
+      "git_mode": "100644",
+      "path": "services/anonymizer/model_identity.py",
+      "sha256": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29"
+    },
+    {
+      "git_blob_oid": "8a0fe8cad90eee3fd4cc73ba090fc5d7fe9ac6a1",
+      "git_mode": "100644",
+      "path": "services/anonymizer/replay_metadata.py",
+      "sha256": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5"
+    },
+    {
+      "git_blob_oid": "605a28f6992a6d4fd4851726f83e0865681811b3",
+      "git_mode": "100644",
+      "path": "services/anonymizer/requirements.lock",
+      "sha256": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887"
+    },
+    {
+      "git_blob_oid": "2a20faf1d8c815be56fa19cd1b848af5497c5da6",
+      "git_mode": "100644",
+      "path": "services/evaluator/app.py",
+      "sha256": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+    },
+    {
+      "git_blob_oid": "5405baef2a0912a48fb0fe04d33d417145528b76",
+      "git_mode": "100644",
+      "path": "services/gateway/app.py",
+      "sha256": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456"
+    },
+    {
+      "git_blob_oid": "cb4efa272d6418cc08a78d33fc148dbe36744678",
+      "git_mode": "100644",
+      "path": "spec/LICENSE",
+      "sha256": "dc5be08778ad83fc1be1c18c28788bee9e7848ac3bd68ef33129f402205f6e77"
+    },
+    {
+      "git_blob_oid": "9f1a69b9f0b172068a1cc0a570823c347b27b7eb",
+      "git_mode": "100644",
+      "path": "spec/assertion.schema.json",
+      "sha256": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c"
+    },
+    {
+      "git_blob_oid": "41cc058abea95b8acbcb727894823a474df11a55",
+      "git_mode": "100644",
+      "path": "tests/test_mcp_distribution.py",
+      "sha256": "091902499e010c6008a18369552a13cbc2d3b2f83e3a55be4cfb920448c70195"
+    },
+    {
+      "git_blob_oid": "c9fb617e0492685e406077a968ddd12d524d6e83",
+      "git_mode": "100644",
+      "path": "tests/test_mcp_runtime_obligations.py",
+      "sha256": "5fe2984af372037789eb3875b93b042f44da1c20ca4a43c66cd7ed356a8a4455"
+    },
+    {
+      "git_blob_oid": "cb24bd93d9aa222d2d0fb75817f2c306211125a2",
+      "git_mode": "100644",
+      "path": "tools/artifact_evidence_io.py",
+      "sha256": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e"
+    },
+    {
+      "git_blob_oid": "2329e9ebd65f46001e49fc2369ad03a092837982",
+      "git_mode": "100644",
+      "path": "tools/artifact_process.py",
+      "sha256": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86"
+    },
+    {
+      "git_blob_oid": "642612bd4a28674ce8d3e5cb0b0b0b06b49d0afe",
+      "git_mode": "100644",
+      "path": "tools/dependency_policy.py",
+      "sha256": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a"
+    },
+    {
+      "git_blob_oid": "7df83717fc4c7b918350c090928052c35f301b79",
+      "git_mode": "100644",
+      "path": "tools/distribution_artifacts.py",
+      "sha256": "40dc711f41b4454dbbc792797d5b7b7d567f8cbff1a4293933e79d2a1efc47bb"
+    },
+    {
+      "git_blob_oid": "40fb5fbf1b572ee9e1f80396b85fa6d845ea1e1f",
+      "git_mode": "100644",
+      "path": "tools/mcp_distribution.py",
+      "sha256": "9f87c59d5884200872c15829babd4a6080842ceb2a9f7a151bd9c1f4b3bd341a"
+    },
+    {
+      "git_blob_oid": "b231374154eb381f26d7356541a696aef1e44d71",
+      "git_mode": "100644",
+      "path": "tools/mcp_managed_release.py",
+      "sha256": "53ae57247fa6e1069aae769b7cb1cd4222588e3180404118909416fefea61e01"
+    },
+    {
+      "git_blob_oid": "3c569ec60e9361148946159513eaaef869b36a9b",
+      "git_mode": "100644",
+      "path": "tools/mcp_release_policy.py",
+      "sha256": "2c986c5652c064b8a0cdb328786dbbcd23e0a0988cde96b0e3030e001656fbfd"
+    },
+    {
+      "git_blob_oid": "02bae762740666f903166664af111013293ab487",
+      "git_mode": "100644",
+      "path": "tools/mcp_runtime_obligations.py",
+      "sha256": "458c3a21381e88fef2e0d3b22ec9ee02a41a912eb25d2f29a5f902222fb106b9"
+    },
+    {
+      "git_blob_oid": "fe0f631ec1029efec0a0cda5fdec890c02256575",
+      "git_mode": "100644",
+      "path": "tools/mcp_runtime_probe.py",
+      "sha256": "9141e1669a5e7bc2e9103757aa815783812c50f414e141e54dadf8479d3dbc7d"
+    },
+    {
+      "git_blob_oid": "6254dd2587914db42a62f9946d3c90007b616289",
+      "git_mode": "100644",
+      "path": "tools/tag_api.py",
+      "sha256": "d12d162a549d0f8c430eee5be05a8db0f874bf2062acc04fd9d717b257b35b2e"
+    }
+  ],
+  "event": "pull_request",
+  "head_tree_identical": true,
+  "independent_accuracy_evidence": false,
+  "license_clearance": false,
+  "limits": [
+    "Actual current four-target developer-bundle format/offline install/tool proof, not a protected managed release.",
+    "Every target44tests/30packages/940payloads/8SDKcases is independently present; counts are not inherited from old450342 or450356.",
+    "The archive artifacts contain only JSON reports; actual runtime ZIP, packet and SPDX payload bytes were not retained or locally reconstructed here.",
+    "Technical policy allowed, but the unsigned candidate refused managed authorization before0signature-verifier invocations.",
+    "Both privileged producer jobs skipped onPR; no protected attestation or actual managed-signature install has executed.",
+    "Same canonical PS mechanism, not independent accuracy, service PII execution, exhaustive compiled closure or legal/global/fullF057X02 acceptance."
+  ],
+  "managed_release_authorized": false,
+  "pass": true,
+  "profile": "mcp-four-target-current-hosted-qualification/v1",
+  "repository": "knwvmbrr/aitrust-id",
+  "run_id": 45080226384,
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45080226384",
+  "separate_control_workflow": {
+    "actual_logs": [
+      {
+        "bytes": 20411,
+        "job_id": 137386479197,
+        "name": "managed-controls",
+        "sha256": "a455269730cb7d2341be40cdf6e44aab4233137bd311337b1362176b558ed5f0",
+        "tests": 26
+      },
+      {
+        "bytes": 25635,
+        "job_id": 137386479409,
+        "name": "artifact-controls",
+        "sha256": "672ba3bdad209a6fba1505b446f52039769d2d4f3c6df1c6a1f4366fcc1fb936",
+        "tests": 51
+      }
+    ],
+    "both_signing_jobs": "SKIPPED",
+    "read_only_controls_pass": true,
+    "run_id": 45080226415,
+    "source_head": "531b75aeac918be855a762d494711d1e0aca43ce"
+  },
+  "source_binding_count": 449,
+  "source_bindings_current_and_git_verified": true,
+  "source_head": "531b75aeac918be855a762d494711d1e0aca43ce",
+  "targets": [
+    {
+      "built_format": {
+        "bytes": 15520261,
+        "format_verified": true,
+        "member_count": 465,
+        "native_obligations_complete": false,
+        "pass": true,
+        "profile": "ai-trust-id-mcp-wheel-bundle/v1",
+        "profile_sha256": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8",
+        "release_authorized": false,
+        "sha256": "6eec848e0e2802b9b0d11ef1be9cb07f49378f2cc15204d0b2146d1c5addcf70",
+        "target": "cp312-linux_x86_64_glibc_2_34",
+        "wheel_count": 30
+      },
+      "focused": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 44
+      },
+      "github_json_artifact": {
+        "artifact_id": 14776882746,
+        "bytes": 26966,
+        "sha256": "551bd919231a7df808429660415c8b1770e17c0c96367e2d845964f239009cf8",
+        "target": "cp312-linux_x86_64_glibc_2_34"
+      },
+      "installed_distribution_count": 30,
+      "installed_payload_count": 940,
+      "job_status": "success",
+      "members": [
+        {
+          "bytes": 419,
+          "name": "build.json",
+          "sha256": "bca0cad6849105539c46790f02fadcf7c7467837714fa9d4985a5c7ae70f5aad"
+        },
+        {
+          "bytes": 56,
+          "name": "focused.json",
+          "sha256": "eea23e2b342dfa5834889c27048a320c898a183d91d424ce91ca3c4435e6e39b"
+        },
+        {
+          "bytes": 419,
+          "name": "format.json",
+          "sha256": "bca0cad6849105539c46790f02fadcf7c7467837714fa9d4985a5c7ae70f5aad"
+        },
+        {
+          "bytes": 545,
+          "name": "install.json",
+          "sha256": "85409945b613debc3f820f0ac4ce4e105f1b45727c81025a045e55ddcdccad40"
+        },
+        {
+          "bytes": 232,
+          "name": "prerequisite.json",
+          "sha256": "64034ba9cbf2ba6e68a06bba02ae3d3a1fc8184def7079ebcfd49a5f1e9a3230"
+        },
+        {
+          "bytes": 9465,
+          "name": "result.json",
+          "sha256": "d548f11b198a95d4b63f03753acfb4338cf4a248921ea9403abc7403266d9d2b"
+        },
+        {
+          "bytes": 1359,
+          "name": "runtime.json",
+          "sha256": "470105c8c4b589ed3c59e1409151530753bc96a0ed9ad0354eaea1e8a3f612a8"
+        },
+        {
+          "bytes": 61241,
+          "name": "source-before.json",
+          "sha256": "e391265658fcba13fa095ad8bc9936050f6b7e1df539f4b0f36b2bd0e3794ff7"
+        },
+        {
+          "bytes": 737,
+          "name": "spdx.json",
+          "sha256": "1bf9f8b4596b818f2fe5fdab522ca0a3d4093851f326437c3ab77deffc7d4e6b"
+        },
+        {
+          "bytes": 4554,
+          "name": "wheels.json",
+          "sha256": "b8478793917e177c0d467a217d0cea54274dd02f1b56efe38833224d66803163"
+        }
+      ],
+      "pass": true,
+      "prerequisite": {
+        "observed": {
+          "gil_disabled": false,
+          "implementation": "CPython",
+          "libc": [
+            "glibc",
+            "2.39"
+          ],
+          "machine": "x86_64",
+          "macos": "",
+          "platform": "linux",
+          "pointer_bits": 64,
+          "version": [
+            3,
+            12
+          ]
+        },
+        "target": "cp312-linux_x86_64_glibc_2_34"
+      },
+      "runtime": {
+        "cases": [
+          {
+            "id": "exact_two_read_only_tools",
+            "status": "PASS"
+          },
+          {
+            "id": "implemented_capabilities_only",
+            "status": "PASS"
+          },
+          {
+            "id": "canonical_full_record_finding_no_echo",
+            "status": "PASS"
+          },
+          {
+            "id": "no_finding_is_not_clearance",
+            "status": "PASS"
+          },
+          {
+            "id": "missing_optional_privacy_preserves_ps",
+            "status": "PASS"
+          },
+          {
+            "id": "invalid_fields_refused_without_echo",
+            "status": "PASS"
+          },
+          {
+            "id": "oversized_input_refused_without_echo",
+            "status": "PASS"
+          },
+          {
+            "id": "legacy_full_record_parity",
+            "status": "PASS"
+          }
+        ],
+        "independent_accuracy_evidence": false,
+        "machine": "x86_64",
+        "pass": true,
+        "privacy_service_executed": false,
+        "profile": "mcp-installed-synthetic-runtime-proof/v1",
+        "python_version": "3.12.16",
+        "release_authorized": false,
+        "same_canonical_mechanism": true,
+        "sdk_version": "2.3.0",
+        "system": "linux",
+        "text_returned": false
+      },
+      "runtime_target_verified": true,
+      "source_stable": true,
+      "spdx_observation": {
+        "artifact": {
+          "bytes": 15520261,
+          "sha256": "6eec848e0e2802b9b0d11ef1be9cb07f49378f2cc15204d0b2146d1c5addcf70"
+        },
+        "current_policy_allowed": true,
+        "graph_sha256": "88eb8825d33b618f07088a9128d33d7d7d18ae5886d1ad30086367ed4af39431",
+        "managed_release_refused": true,
+        "packet_reconstructed": true,
+        "packet_sha256": "9c5ae7f23b0c6c961b564bb2d6c7301f2691719ea9201a4b63dcfe9f76fdc81e",
+        "profile_sha256": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8",
+        "release_authorized": false,
+        "signature_verifier_invocations": 0,
+        "source_commit": "e6073bc41e686ed47eb2c60789a4c8a0c08bc9a5",
+        "spdx_bytes": 233652,
+        "spdx_sha256": "3d6d806f8a181ebcfd494fe317886eace8bf26a4d82ae89e11a5c17f7004322f",
+        "target": "cp312-linux_x86_64_glibc_2_34"
+      },
+      "target": "cp312-linux_x86_64_glibc_2_34"
+    },
+    {
+      "built_format": {
+        "bytes": 14461604,
+        "format_verified": true,
+        "member_count": 465,
+        "native_obligations_complete": false,
+        "pass": true,
+        "profile": "ai-trust-id-mcp-wheel-bundle/v1",
+        "profile_sha256": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8",
+        "release_authorized": false,
+        "sha256": "1127c92adb65834312817b2bf7f30900661945eb8901d75db32573b7118e3799",
+        "target": "cp312-macosx_11_0_arm64",
+        "wheel_count": 30
+      },
+      "focused": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 44
+      },
+      "github_json_artifact": {
+        "artifact_id": 14776134368,
+        "bytes": 26877,
+        "sha256": "616bd008150ede3771e4710b2de7a4214380d3465da46f79f592ce14a9d54ab1",
+        "target": "cp312-macosx_11_0_arm64"
+      },
+      "installed_distribution_count": 30,
+      "installed_payload_count": 940,
+      "job_status": "success",
+      "members": [
+        {
+          "bytes": 413,
+          "name": "build.json",
+          "sha256": "f2c8717cdcbee671ee7989f1bb37ffa75340f1013109833abb5e2daea45bf947"
+        },
+        {
+          "bytes": 56,
+          "name": "focused.json",
+          "sha256": "eea23e2b342dfa5834889c27048a320c898a183d91d424ce91ca3c4435e6e39b"
+        },
+        {
+          "bytes": 413,
+          "name": "format.json",
+          "sha256": "f2c8717cdcbee671ee7989f1bb37ffa75340f1013109833abb5e2daea45bf947"
+        },
+        {
+          "bytes": 539,
+          "name": "install.json",
+          "sha256": "7b80622721a174d1f063d03ad29665bbdea42a95451ea73b0936efc34087205f"
+        },
+        {
+          "bytes": 223,
+          "name": "prerequisite.json",
+          "sha256": "1d39a18bdcb41fa91f811486cbe932a5a36cea6fd15eb7df044785dd8f3ec584"
+        },
+        {
+          "bytes": 9341,
+          "name": "result.json",
+          "sha256": "af78ffe2f4f387a8d6a5d3a96f2c70eb6bcfbdb64cfb5502e42db666e0b265cb"
+        },
+        {
+          "bytes": 1353,
+          "name": "runtime.json",
+          "sha256": "f2236cb248bffe9432be4a3116bc760a63e520b4129c9326a2ce91eb2a760798"
+        },
+        {
+          "bytes": 61241,
+          "name": "source-before.json",
+          "sha256": "e391265658fcba13fa095ad8bc9936050f6b7e1df539f4b0f36b2bd0e3794ff7"
+        },
+        {
+          "bytes": 731,
+          "name": "spdx.json",
+          "sha256": "17cb25d7f9b8f869e1f4cbcfd39433cf92498786f1c3cf15e78743c6ddadd360"
+        },
+        {
+          "bytes": 4475,
+          "name": "wheels.json",
+          "sha256": "9868a226cdfea2acac7bd3ac04c439ba1f13aecb74cd286ddd905a07cf2003af"
+        }
+      ],
+      "pass": true,
+      "prerequisite": {
+        "observed": {
+          "gil_disabled": false,
+          "implementation": "CPython",
+          "libc": [
+            "",
+            ""
+          ],
+          "machine": "arm64",
+          "macos": "15.8.2",
+          "platform": "darwin",
+          "pointer_bits": 64,
+          "version": [
+            3,
+            12
+          ]
+        },
+        "target": "cp312-macosx_11_0_arm64"
+      },
+      "runtime": {
+        "cases": [
+          {
+            "id": "exact_two_read_only_tools",
+            "status": "PASS"
+          },
+          {
+            "id": "implemented_capabilities_only",
+            "status": "PASS"
+          },
+          {
+            "id": "canonical_full_record_finding_no_echo",
+            "status": "PASS"
+          },
+          {
+            "id": "no_finding_is_not_clearance",
+            "status": "PASS"
+          },
+          {
+            "id": "missing_optional_privacy_preserves_ps",
+            "status": "PASS"
+          },
+          {
+            "id": "invalid_fields_refused_without_echo",
+            "status": "PASS"
+          },
+          {
+            "id": "oversized_input_refused_without_echo",
+            "status": "PASS"
+          },
+          {
+            "id": "legacy_full_record_parity",
+            "status": "PASS"
+          }
+        ],
+        "independent_accuracy_evidence": false,
+        "machine": "arm64",
+        "pass": true,
+        "privacy_service_executed": false,
+        "profile": "mcp-installed-synthetic-runtime-proof/v1",
+        "python_version": "3.12.10",
+        "release_authorized": false,
+        "same_canonical_mechanism": true,
+        "sdk_version": "2.3.0",
+        "system": "darwin",
+        "text_returned": false
+      },
+      "runtime_target_verified": true,
+      "source_stable": true,
+      "spdx_observation": {
+        "artifact": {
+          "bytes": 14461604,
+          "sha256": "1127c92adb65834312817b2bf7f30900661945eb8901d75db32573b7118e3799"
+        },
+        "current_policy_allowed": true,
+        "graph_sha256": "30e8af77bdcb67321fc2eebeb7ae281ad0e2c00a6323f4d9bbd149c009a8a58b",
+        "managed_release_refused": true,
+        "packet_reconstructed": true,
+        "packet_sha256": "f52f27c01cc6ae49c5a38b843b7ffbebd118d67ae425b8f145210944a23b56f4",
+        "profile_sha256": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8",
+        "release_authorized": false,
+        "signature_verifier_invocations": 0,
+        "source_commit": "e6073bc41e686ed47eb2c60789a4c8a0c08bc9a5",
+        "spdx_bytes": 233529,
+        "spdx_sha256": "454066789ae101fd532068896eb206b0e7f5f469c0b8b6e5aa038632a69db037",
+        "target": "cp312-macosx_11_0_arm64"
+      },
+      "target": "cp312-macosx_11_0_arm64"
+    },
+    {
+      "built_format": {
+        "bytes": 15519015,
+        "format_verified": true,
+        "member_count": 465,
+        "native_obligations_complete": false,
+        "pass": true,
+        "profile": "ai-trust-id-mcp-wheel-bundle/v1",
+        "profile_sha256": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8",
+        "release_authorized": false,
+        "sha256": "8165f051203df50dc5f33a613f43dc1a3f613aae48224fd154053ba419d04aa5",
+        "target": "cp313-linux_x86_64_glibc_2_34",
+        "wheel_count": 30
+      },
+      "focused": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 44
+      },
+      "github_json_artifact": {
+        "artifact_id": 14775984598,
+        "bytes": 26971,
+        "sha256": "e8b428de53f97de17d976687108e42d715c803f4d649f5d37b7294342414b5de",
+        "target": "cp313-linux_x86_64_glibc_2_34"
+      },
+      "installed_distribution_count": 30,
+      "installed_payload_count": 940,
+      "job_status": "success",
+      "members": [
+        {
+          "bytes": 419,
+          "name": "build.json",
+          "sha256": "829d6603958c0c649cf91e947bc21720cb113c0565d896cd681b97e8ed932162"
+        },
+        {
+          "bytes": 56,
+          "name": "focused.json",
+          "sha256": "eea23e2b342dfa5834889c27048a320c898a183d91d424ce91ca3c4435e6e39b"
+        },
+        {
+          "bytes": 419,
+          "name": "format.json",
+          "sha256": "829d6603958c0c649cf91e947bc21720cb113c0565d896cd681b97e8ed932162"
+        },
+        {
+          "bytes": 545,
+          "name": "install.json",
+          "sha256": "0c16d52f8d2aaba10b90a0b7099881a95e30711a5ae4d346209fe627aefafdae"
+        },
+        {
+          "bytes": 232,
+          "name": "prerequisite.json",
+          "sha256": "17275d7f671282004a6ec36b88dad1d7fa194f437e9b5671595e7c07c11c6b12"
+        },
+        {
+          "bytes": 9465,
+          "name": "result.json",
+          "sha256": "b359a138a881f7367cf2b712947715b55058fe7ffa1c22235ca7268404dc3bd6"
+        },
+        {
+          "bytes": 1359,
+          "name": "runtime.json",
+          "sha256": "c9573d0b7c67187eb71ead18ebf1ca5703a79908a4fc59d76252cf4d181d8e84"
+        },
+        {
+          "bytes": 61241,
+          "name": "source-before.json",
+          "sha256": "e391265658fcba13fa095ad8bc9936050f6b7e1df539f4b0f36b2bd0e3794ff7"
+        },
+        {
+          "bytes": 737,
+          "name": "spdx.json",
+          "sha256": "e1c3287d108dd72ffae4a5f55f678adb15be03a519d289a40ba49d439fb9125f"
+        },
+        {
+          "bytes": 4554,
+          "name": "wheels.json",
+          "sha256": "78ed327e81482f08ffb39de3ef60786e9a65b7fd2d4eb2e8ac8e40ad90aa8746"
+        }
+      ],
+      "pass": true,
+      "prerequisite": {
+        "observed": {
+          "gil_disabled": false,
+          "implementation": "CPython",
+          "libc": [
+            "glibc",
+            "2.39"
+          ],
+          "machine": "x86_64",
+          "macos": "",
+          "platform": "linux",
+          "pointer_bits": 64,
+          "version": [
+            3,
+            13
+          ]
+        },
+        "target": "cp313-linux_x86_64_glibc_2_34"
+      },
+      "runtime": {
+        "cases": [
+          {
+            "id": "exact_two_read_only_tools",
+            "status": "PASS"
+          },
+          {
+            "id": "implemented_capabilities_only",
+            "status": "PASS"
+          },
+          {
+            "id": "canonical_full_record_finding_no_echo",
+            "status": "PASS"
+          },
+          {
+            "id": "no_finding_is_not_clearance",
+            "status": "PASS"
+          },
+          {
+            "id": "missing_optional_privacy_preserves_ps",
+            "status": "PASS"
+          },
+          {
+            "id": "invalid_fields_refused_without_echo",
+            "status": "PASS"
+          },
+          {
+            "id": "oversized_input_refused_without_echo",
+            "status": "PASS"
+          },
+          {
+            "id": "legacy_full_record_parity",
+            "status": "PASS"
+          }
+        ],
+        "independent_accuracy_evidence": false,
+        "machine": "x86_64",
+        "pass": true,
+        "privacy_service_executed": false,
+        "profile": "mcp-installed-synthetic-runtime-proof/v1",
+        "python_version": "3.13.18",
+        "release_authorized": false,
+        "same_canonical_mechanism": true,
+        "sdk_version": "2.3.0",
+        "system": "linux",
+        "text_returned": false
+      },
+      "runtime_target_verified": true,
+      "source_stable": true,
+      "spdx_observation": {
+        "artifact": {
+          "bytes": 15519015,
+          "sha256": "8165f051203df50dc5f33a613f43dc1a3f613aae48224fd154053ba419d04aa5"
+        },
+        "current_policy_allowed": true,
+        "graph_sha256": "80399fceab2fc3c5b5ee68b7a34d5bb68b63b90faa873fcaf727306d7a137762",
+        "managed_release_refused": true,
+        "packet_reconstructed": true,
+        "packet_sha256": "784a0b4812333cbde0e22d886736cabc665a2f1f0391ac46bc9445ced8ca8d7b",
+        "profile_sha256": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8",
+        "release_authorized": false,
+        "signature_verifier_invocations": 0,
+        "source_commit": "e6073bc41e686ed47eb2c60789a4c8a0c08bc9a5",
+        "spdx_bytes": 233283,
+        "spdx_sha256": "7fe556532ea10e59a8e800b191e3941e7886e78d9de893cfe24168d9ba5928d8",
+        "target": "cp313-linux_x86_64_glibc_2_34"
+      },
+      "target": "cp313-linux_x86_64_glibc_2_34"
+    },
+    {
+      "built_format": {
+        "bytes": 14461061,
+        "format_verified": true,
+        "member_count": 465,
+        "native_obligations_complete": false,
+        "pass": true,
+        "profile": "ai-trust-id-mcp-wheel-bundle/v1",
+        "profile_sha256": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8",
+        "release_authorized": false,
+        "sha256": "3579d94fcc726baaa12289d3b492e0c704e3c889feb96e28ebf2f1b7ca85c568",
+        "target": "cp313-macosx_11_0_arm64",
+        "wheel_count": 30
+      },
+      "focused": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 44
+      },
+      "github_json_artifact": {
+        "artifact_id": 14776054380,
+        "bytes": 26873,
+        "sha256": "e1aeebb25b57e99ee519f38d78c80469588bfc13b4628e5b716f7225532b2d10",
+        "target": "cp313-macosx_11_0_arm64"
+      },
+      "installed_distribution_count": 30,
+      "installed_payload_count": 940,
+      "job_status": "success",
+      "members": [
+        {
+          "bytes": 413,
+          "name": "build.json",
+          "sha256": "fa0c8a0cac1feea6255fd3fe0326487d82dd945f9ceebcad4dacc58fcfc95f25"
+        },
+        {
+          "bytes": 56,
+          "name": "focused.json",
+          "sha256": "eea23e2b342dfa5834889c27048a320c898a183d91d424ce91ca3c4435e6e39b"
+        },
+        {
+          "bytes": 413,
+          "name": "format.json",
+          "sha256": "fa0c8a0cac1feea6255fd3fe0326487d82dd945f9ceebcad4dacc58fcfc95f25"
+        },
+        {
+          "bytes": 539,
+          "name": "install.json",
+          "sha256": "992187b8b2b9b0f2e6a4f0658f05700b9e32c000bfa5c075a105de925539b387"
+        },
+        {
+          "bytes": 223,
+          "name": "prerequisite.json",
+          "sha256": "8c62a303de4018e2e3a33401a70cd05aa07643e7ea7c115c08b52c00e2dfc1f7"
+        },
+        {
+          "bytes": 9341,
+          "name": "result.json",
+          "sha256": "0d8d3e341a83827b3f83a42e3ad5d9c4ca5de4d999a9222d61a3fbc059401c29"
+        },
+        {
+          "bytes": 1353,
+          "name": "runtime.json",
+          "sha256": "60c215e01c91097c4ff199d6365ac63cd07c4efad1d45bd395eeeb2b5098a507"
+        },
+        {
+          "bytes": 61241,
+          "name": "source-before.json",
+          "sha256": "e391265658fcba13fa095ad8bc9936050f6b7e1df539f4b0f36b2bd0e3794ff7"
+        },
+        {
+          "bytes": 731,
+          "name": "spdx.json",
+          "sha256": "5b078e840a9aae06a10477e8f0bad5739c78a3b342969543f712b8ab9ddc040b"
+        },
+        {
+          "bytes": 4475,
+          "name": "wheels.json",
+          "sha256": "ae094a3cc72130c8ac5db8e5caa0552c3c3c265d76cf46c7a83f408a141bed7e"
+        }
+      ],
+      "pass": true,
+      "prerequisite": {
+        "observed": {
+          "gil_disabled": false,
+          "implementation": "CPython",
+          "libc": [
+            "",
+            ""
+          ],
+          "machine": "arm64",
+          "macos": "15.8.2",
+          "platform": "darwin",
+          "pointer_bits": 64,
+          "version": [
+            3,
+            13
+          ]
+        },
+        "target": "cp313-macosx_11_0_arm64"
+      },
+      "runtime": {
+        "cases": [
+          {
+            "id": "exact_two_read_only_tools",
+            "status": "PASS"
+          },
+          {
+            "id": "implemented_capabilities_only",
+            "status": "PASS"
+          },
+          {
+            "id": "canonical_full_record_finding_no_echo",
+            "status": "PASS"
+          },
+          {
+            "id": "no_finding_is_not_clearance",
+            "status": "PASS"
+          },
+          {
+            "id": "missing_optional_privacy_preserves_ps",
+            "status": "PASS"
+          },
+          {
+            "id": "invalid_fields_refused_without_echo",
+            "status": "PASS"
+          },
+          {
+            "id": "oversized_input_refused_without_echo",
+            "status": "PASS"
+          },
+          {
+            "id": "legacy_full_record_parity",
+            "status": "PASS"
+          }
+        ],
+        "independent_accuracy_evidence": false,
+        "machine": "arm64",
+        "pass": true,
+        "privacy_service_executed": false,
+        "profile": "mcp-installed-synthetic-runtime-proof/v1",
+        "python_version": "3.13.17",
+        "release_authorized": false,
+        "same_canonical_mechanism": true,
+        "sdk_version": "2.3.0",
+        "system": "darwin",
+        "text_returned": false
+      },
+      "runtime_target_verified": true,
+      "source_stable": true,
+      "spdx_observation": {
+        "artifact": {
+          "bytes": 14461061,
+          "sha256": "3579d94fcc726baaa12289d3b492e0c704e3c889feb96e28ebf2f1b7ca85c568"
+        },
+        "current_policy_allowed": true,
+        "graph_sha256": "40f9d270159aa9787006d0561659774dfeb717a72d8b8f0f0f32b18dfda8c4c5",
+        "managed_release_refused": true,
+        "packet_reconstructed": true,
+        "packet_sha256": "96ccbca1fcda5fa25cd3b39d5ce035ef0b46eb8052c52fe94a93e8ee56947c22",
+        "profile_sha256": "bd98b8cf8f82f6af65edab886da3fa0055396c228dc13a277ad5dd44ecf390b8",
+        "release_authorized": false,
+        "signature_verifier_invocations": 0,
+        "source_commit": "e6073bc41e686ed47eb2c60789a4c8a0c08bc9a5",
+        "spdx_bytes": 233160,
+        "spdx_sha256": "a954a8a7d86a8e18036eb5252b99fac88b67102e77e6699818c0d5545c0ff8a4",
+        "target": "cp313-macosx_11_0_arm64"
+      },
+      "target": "cp313-macosx_11_0_arm64"
+    }
+  ]
+}

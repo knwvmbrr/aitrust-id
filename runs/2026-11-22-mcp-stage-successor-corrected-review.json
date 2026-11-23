@@ -1,0 +1,35 @@
+{
+  "captured_at": "2026-11-22T17:04:27.117406+00:00",
+  "pass": true,
+  "sources_before": {
+    "tools/mcp_managed_release.py": "c85ee9a726d3d62793a4bc00baf1c67c42aea8bba15c4e45fb6fdc5a90911464",
+    "tools/mcp_distribution.py": "9f87c59d5884200872c15829babd4a6080842ceb2a9f7a151bd9c1f4b3bd341a",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tests/test_managed_mcp_release.py": "f7553c37870e7e23533b1c22a68846565e21933378664af142fb7242e83afb3d"
+  },
+  "sources_after": {
+    "tools/mcp_managed_release.py": "c85ee9a726d3d62793a4bc00baf1c67c42aea8bba15c4e45fb6fdc5a90911464",
+    "tools/mcp_distribution.py": "9f87c59d5884200872c15829babd4a6080842ceb2a9f7a151bd9c1f4b3bd341a",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+    "tests/test_managed_mcp_release.py": "f7553c37870e7e23533b1c22a68846565e21933378664af142fb7242e83afb3d"
+  },
+  "source_unchanged": true,
+  "actual": {
+    "managed_original_and_successor_retained": true,
+    "managed_no_final_connection": true,
+    "managed_normal_inert_publication": true,
+    "runtime_original_and_successor_retained": true,
+    "runtime_no_final_connection": true
+  },
+  "affected_controls": 3,
+  "scope": "Three tiny actual temp-FS scheduling/publication controls with authorization/runtime/probe injected; no SDK/pip/signature/network",
+  "review_harness_corrections": [
+    "First attempt referenced removed managed identity/_owned_stage names and stopped before managed execution.",
+    "Second attempt stopped before execution when the authored test file was renamed; final probe uses current frozen filename."
+  ],
+  "limits": [
+    "Failed private workspaces intentionally remain; no recursive cleanup/rollback promise.",
+    "Normal managed result is injected ordering proof, NOT actual authorization or SDK qualification.",
+    "No current439/runtime requalification or policy admission."
+  ]
+}

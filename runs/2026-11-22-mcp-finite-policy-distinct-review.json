@@ -1,0 +1,50 @@
+{
+  "actual_io_sha256": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36",
+  "captured_at": "2026-11-22T17:36:03.506476+00:00",
+  "controls": {
+    "actual_fourteen_routes_only_ps_admitted_old_io_refuses_mcp": true,
+    "coherently_changed_assessment_refuses_before_profile_read": true,
+    "entrypoint_kind_and_scope_escape_refused": true,
+    "injected_review_boundary_exact_route_positive_only": true,
+    "integer_boolean_required_payment_and_byte_count_refused": true,
+    "optional_import_failure_keeps_ps_available": true,
+    "other_route_reusing_component_still_requires_distribution_scope": true,
+    "thirteen_sibling_routes_components_and_global_false_claims_unchanged": true
+  },
+  "controls_count": 8,
+  "findings": [],
+  "fixed_required_io_sha256": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+  "limits": {
+    "actual_mcp_permission_in_this_checkout": false,
+    "complete_compiled_closure": false,
+    "full_author_suite_repeated": false,
+    "global_legal_clearance": false,
+    "managed_release_admission": false,
+    "original_requirement_closure": false,
+    "runtime_install": false,
+    "sdk_or_native_execution": false,
+    "signing_or_attestation_verification": false
+  },
+  "pass": true,
+  "profile": "mcp-finite-policy-distinct-review/v1",
+  "review_harness_correction": {
+    "correction": "resolve owned temporary root before nofollow capture; prior completed controls not counted as a separate run",
+    "initial_attempt": "stopped at temp assessment setup because macOS /var symlink was not resolved",
+    "product_failure": false
+  },
+  "reviewed_grant_evidence_sha256": {
+    "runs/2026-11-22-mcp-cffi-rust-notice-facts-distinct-review.json": "80b39cb342718c8f8c475db93d2f0a07e32f5356c3285140618c26829d8cd68e",
+    "runs/2026-11-22-mcp-retained-grants-distinct-review.json": "5a74863249f73a7c092f8bbed08156b8add5ec2231e1b7e526b01a19459c23d1"
+  },
+  "reviewed_sources_sha256": {
+    "eval/dependencies/mcp-runtime-release.json": "e7512f624fa7a04f2d56867737b30c240b869188328310991df1471cbc8c4f0a",
+    "eval/dependency-policy.json": "8d8d38c3b6de7f7aa2aaa4f24556f8cdeed12e9d4688b482a1be6c64e66513bb",
+    "tests/test_managed_mcp_policy.py": "89e24fb6c8a28793ca8b331defdc4374e51faa54efc44fddb05cbbecee87fd62",
+    "tools/dependency_policy.py": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+    "tools/distribution_artifacts.py": "3c4046d10b00712d9ddb60d79bc48ad576755353137cbf928ccb8c93ceb1da00",
+    "tools/mcp_release_policy.py": "0e234f042810612e44de99c7928cd4f7493a511f7e1e05bb48ca321fbcc72021"
+  },
+  "scope": "Finite MCP policy source and eight bounded independent controls; source-authority acceptance is distinct from artifact cryptographic authorization.",
+  "source_commit": "88a5db2bba96af4a09058a4ea8ee3a080c97778b",
+  "source_stable": true
+}

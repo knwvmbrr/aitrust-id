@@ -1,0 +1,152 @@
+{
+  "actual_checkout": "29b85b4e5316267e54f3b538bda0cbf43d9f8340",
+  "actual_checkout_parents": [
+    "085106c1d40e86b071a25a7b9e4e56b965a31044",
+    "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341"
+  ],
+  "actual_checkout_tree": "224c6199ebd275516e2905f338c8dd917dcfa222",
+  "actual_checkout_tree_equals_source_head": true,
+  "artifact": {
+    "api_digest": "sha256:e6599ca6b60df6ec86480d0fac701458b8c172b3610e35a587b27112cfe050ac",
+    "archive_paths_extracted": false,
+    "bytes": 417308,
+    "download_body_count": 1,
+    "exact_five_bounded_json_members": true,
+    "id": 14786316724,
+    "name": "current-delivery-evidence-1",
+    "sha256": "e6599ca6b60df6ec86480d0fac701458b8c172b3610e35a587b27112cfe050ac"
+  },
+  "captured_at": "2026-11-23T02:59:21.633661+00:00",
+  "identity_evidence": "Actual checkout SHA from successful decoded checkout log; GitHub Git commit API tree/parents compared with frozen local head Git tree",
+  "independent_accuracy_evidence": false,
+  "job_conclusion": "success",
+  "job_id": 137451696828,
+  "limits": [
+    "OnlyAPImetadata, one JSON-only artifact and one decoded joblog retrieved; no runtime payload, SDK, installation, browser, test rerun or root source edit",
+    "Receipt collection/source identity review is not independent semantic approval of source helpers partly authored by this reviewer",
+    "No cryptographic artifact attestation, managed release admission, global legal clearance, tag accuracy, physical-device or original requirement closure claim",
+    "Older failed45098054849 evidence remains immutable; it is not relabeled as success",
+    "This receipt assembles later than all referenced execution/retrieval evidence; production publication and receipt selection remain parent-owned"
+  ],
+  "pass": true,
+  "private_retained_evidence": {
+    "api_artifacts_sha256": "1a7869ebdc2c095b36bdc08d74e044bf075b476c8ea735957d392aed71b82765",
+    "api_checkout_commit_sha256": "19557bc3d4fdf884e1a4538ff2e3124f1474feedb1f747426621f9755c95bce8",
+    "api_jobs_sha256": "d0bc552eb4b1c4a300bc03090d9cf1e393ca972aef82424d11573a099f25cf11",
+    "api_run_sha256": "a0f1216a2a53a1d8249f613c6dfa792894f5971aa5654d3d4fc1019ef3818fde",
+    "archive_verification_sha256": "debfae186487ce95147a502b5f4e563bb7dc804d75da4aa1652a687218596a65",
+    "decoded_job_log_sha256": "cabea6015aee3ab93796f86ff9d31cd4460ee8eca7cbb0c0d77b2dc766db38d0",
+    "retrieval_controller_sha256": "74fcfb10e643bf344bd3cb85c3d835a22ca396363c81cdedb4a530d6cf1c3e15",
+    "root_before_sha256": "2ac4bc87f15a231445d2eebbbb2da334d0a3ed1537b823979e90ecf5e479f039"
+  },
+  "profile": "source-bound-five-capability-hosted-collection/v1",
+  "receipts": [
+    {
+      "actual_command_count": 7,
+      "bytes": 11210,
+      "capability": "PS",
+      "captured_at": "2026-11-23T02:37:45.106845+00:00",
+      "fingerprint_sha256": "9472a1ee866ef3917718199041f09cc7bd767a2ecba490058ec945c6c96b9a6c",
+      "local_assess": {
+        "capability": "PS",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "path_name": "PS.json",
+      "sha256": "2ccf21d767b092a16fd5bb7d8fdee72b46e4ef1dae6f2845328abeb653fd8712",
+      "source_count": 70
+    },
+    {
+      "actual_command_count": 6,
+      "bytes": 13249,
+      "capability": "PII_REDACTED",
+      "captured_at": "2026-11-23T02:37:54.689497+00:00",
+      "fingerprint_sha256": "c15b01be62528836dddb1b4350641f2fd62b7f9ad603b81caef6c5a1ae5dec89",
+      "local_assess": {
+        "capability": "PII_REDACTED",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "path_name": "PII_REDACTED.json",
+      "sha256": "bb3f1dfedb7b3cdb8e182b000631682059d086c78057a8f44bc27efd0278b892",
+      "source_count": 84
+    },
+    {
+      "actual_command_count": 14,
+      "bytes": 17333,
+      "capability": "extension",
+      "captured_at": "2026-11-23T02:38:46.598356+00:00",
+      "fingerprint_sha256": "7a70c98b6750cd294dd078fab330d141d253dfa8770a572eaf848d5b1bb7e242",
+      "local_assess": {
+        "capability": "extension",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "path_name": "extension.json",
+      "sha256": "541c88f58040b4041a99af3796aa94af1a6916718cf705ba272abbabe53b7faa",
+      "source_count": 94
+    },
+    {
+      "actual_command_count": 72,
+      "bytes": 1240783,
+      "capability": "protocol",
+      "captured_at": "2026-11-23T02:41:06.483925+00:00",
+      "fingerprint_sha256": "06748ae118adb0a0345f071080b40f4e756253700dfe9dabb24a0c01458a8006",
+      "local_assess": {
+        "capability": "protocol",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "path_name": "protocol.json",
+      "sha256": "5dce002ef7c9e47194d4528d1b5b7a5dc7b43846bca315ec9350e6e8f8563403",
+      "source_count": 7356
+    },
+    {
+      "actual_command_count": 65,
+      "bytes": 281187,
+      "capability": "website",
+      "captured_at": "2026-11-23T02:56:35.431919+00:00",
+      "fingerprint_sha256": "27e725e06ca2be2ac3bfd3259b0e5e79851d0ecaea839935149def8aad437267",
+      "local_assess": {
+        "capability": "website",
+        "failures": [],
+        "independent_accuracy_evidence": false,
+        "pass": true,
+        "release_approved": false,
+        "revalidation_required": false
+      },
+      "path_name": "website.json",
+      "sha256": "5a8c8384565a3eb96cf71646b6e3888757a0e6973d3ebfebf6852899be232015",
+      "source_count": 1967
+    }
+  ],
+  "release_approved": false,
+  "reviewed_by": "/root/seo",
+  "run_attempt": 1,
+  "run_id": 45101036151,
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45101036151",
+  "source_head": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+  "source_integrity": {
+    "all5_assess_current_root_pass": true,
+    "all5_fingerprints_and_exact_commands_equal_before_hosted_and_current": true,
+    "derived_untracked_sources": [],
+    "git_blob_hashes_equal_receipt_and_current_bytes": true,
+    "root_head_after": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+    "root_head_before": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+    "tracked_root_clean": true,
+    "tracked_source_git_blobs_compared": 8365,
+    "unique_sources": 8365
+  }
+}

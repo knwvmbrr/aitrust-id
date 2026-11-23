@@ -146,7 +146,7 @@ def validate_component(component):
         'assessment', 'license_expression', 'source_available', 'required_processing_payment',
         'files', 'notice_paths', 'review_scope',
     })
-    require(component['assessment'] in {'reviewed_source_distribution', 'pending'} and
+    require(component['assessment'] in {'reviewed_source_distribution', 'reviewed_bundled_distribution', 'pending'} and
             (component['license_expression'] is None or
              type(component['license_expression']) is str and 0 < len(component['license_expression']) <= 160))
     for key in ('source_available', 'required_processing_payment'):
@@ -219,13 +219,23 @@ def _evaluate(route, root):
     # route. Validate the chosen graph; --all audits every declared selection.
     validate_route(selected, value['components'])
     components = []
+    mcp_scope = False
     for dependency in selected['dependencies']:
         identity = dependency['component']
         status, reason = component_status(identity, value['components'][identity], root)
+        if route == 'mcp-stdio' and identity == 'mcp-stdio-unreviewed' and status not in {'paid', 'prohibited'}:
+            # Optional, exact finite permission is independently source-bound.
+            # Import failure cannot poison the personal PS source route.
+            try:
+                from tools.mcp_release_policy import component_status as mcp_status
+                status, reason = mcp_status(value['components'][identity], selected, root)
+                mcp_scope = status == 'allowed'
+            except (OSError, ValueError, TypeError, KeyError, ImportError, RuntimeError, RecursionError):
+                status, reason = 'blocked_unknown', 'mcp_release_review_unavailable'
         components.append({'id': identity, 'status': status, 'reason': reason})
     # A reviewed source component cannot be reused to bless another artifact's
     # platform, compiled code, transitive graph or redistribution arrangement.
-    if (route != 'ps-source' or selected['kind'] != 'source-only' or
+    if not mcp_scope and (route != 'ps-source' or selected['kind'] != 'source-only' or
             {row['component'] for row in selected['dependencies']} != set(REVIEWS) or
             selected['entrypoints'] != ['python3 -I -S -B scripts/check-ps.py'] or
             selected['prerequisites'] != PS_PREREQUISITES):

@@ -1,0 +1,22 @@
+{
+  "actual_observation": {
+    "carried_grant_paths_missing_from_fact_inputs": [
+      "LICENSE",
+      "NOTICE",
+      "spec/LICENSE",
+      "eval/vectors/unicode/LICENSE.txt"
+    ],
+    "fact_sha256": "8670e220be792e5b08bc4537cdb5f22296b7e3bbc200621526fa78ca32a09783",
+    "profile_license_row_changed_but_fact_fingerprint_equal": true
+  },
+  "assessment_sha256": "e7512f624fa7a04f2d56867737b30c240b869188328310991df1471cbc8c4f0a",
+  "captured_at": "2026-11-22T18:00:40.094147+00:00",
+  "finding": "Pin carried project/schema/Unicode grants and attribution before adopting finite runtime permission, rather than relying only on mutable producer source rows.",
+  "limits": [
+    "Actual facts() boundary only; no filesystem license replacement or complete forged-route authorization was attempted.",
+    "Current MCP policy remains blocked by its old I/O base.",
+    "No SDK, signature, archive, network or legal-clearance claim."
+  ],
+  "policy_module_sha256": "0e234f042810612e44de99c7928cd4f7493a511f7e1e05bb48ca321fbcc72021",
+  "profile": "mcp-project-license-fact-omission-original/v1"
+}

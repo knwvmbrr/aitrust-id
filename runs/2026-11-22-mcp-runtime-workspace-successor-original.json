@@ -1,0 +1,23 @@
+{
+  "captured_at": "2026-11-22T16:59:23.233239+00:00",
+  "pass": false,
+  "source_before": {
+    "tools/mcp_distribution.py": "c6f7551709b2ad6a4a12c3c554ab7084291dfa16f0a4a81249877a0333a3ecd5",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36"
+  },
+  "source_after": {
+    "tools/mcp_distribution.py": "c6f7551709b2ad6a4a12c3c554ab7084291dfa16f0a4a81249877a0333a3ecd5",
+    "tools/artifact_evidence_io.py": "af985f359f58c49ad181b82f5d7eeac70a11660846eceed52eeeb09915e32f36"
+  },
+  "source_unchanged": true,
+  "actual": {
+    "replacement_existed_before_remove": true,
+    "command_boundaries_intercepted": 1,
+    "replacement_marker_survived": false,
+    "original_workspace_retained": true,
+    "final_config_exists": false
+  },
+  "scope": "ONE actual owned-temp FS cleanup race with format probe/capacity/command mocked; no SDK/native/pip/signature/network",
+  "finding": "Existing developer install checks workspace identity then path-rmtree can delete a successor swapped before traversal. Both trees were newly owned by this review; no user/foreign files touched.",
+  "limits": "Not a full installer/crypto qualification. Historical439/runtime success evidence is not rebound current."
+}

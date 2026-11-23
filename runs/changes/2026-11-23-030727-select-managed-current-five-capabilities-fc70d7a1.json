@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-030727-select-managed-current-five-capabilities-fc70d7a1",
+  "recorded_at": "2026-11-23T03:07:27.935405+00:00",
+  "author": "Codex PM; current hosted evidence collected and selection reviewed by Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+  "changed": "Selected the actual current five hosted capability receipts after source-rights and generated-output corrections; preserved all older selections and failures.",
+  "proves": "Actual7/6/14/72/65 commands passed on hostedLinux. One bounded artifact retrieved once;8365unique source bindings and exact Git checkout verified. Allfive assess current afterselection; actual8397-source boundary review passes; independent selection review clear.",
+  "limits": "Engineering evidence only. Final protected checks, actual main-only MCP signature and fresh managed installation remain mandatory; independent tag accuracy, human/device acceptance and original60target remain unmet. Original136complete66open unchanged.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-007",
+    "N-008"
+  ],
+  "files": {
+    "state.json": "95f8df4520996a974273c8734011647f7cb42f4e7d9cbecaddf751ba2051edcf",
+    "eval/route-boundaries.json": "dbdeb3fe33d7b325d8a975e573daf8dbce1b9f77cedcf2c5d73ac2f0a051c6fc",
+    "runs/2026-11-23-managed-current-ps.json": "2ccf21d767b092a16fd5bb7d8fdee72b46e4ef1dae6f2845328abeb653fd8712",
+    "runs/2026-11-23-managed-current-pii_redacted.json": "bb3f1dfedb7b3cdb8e182b000631682059d086c78057a8f44bc27efd0278b892",
+    "runs/2026-11-23-managed-current-extension.json": "541c88f58040b4041a99af3796aa94af1a6916718cf705ba272abbabe53b7faa",
+    "runs/2026-11-23-managed-current-protocol.json": "5dce002ef7c9e47194d4528d1b5b7a5dc7b43846bca315ec9350e6e8f8563403",
+    "runs/2026-11-23-managed-current-website.json": "5a8c8384565a3eb96cf71646b6e3888757a0e6973d3ebfebf6852899be232015",
+    "runs/2026-11-23-managed-current-five-hosted-collection.json": "3ce9f1fee3665c6c5cfada23af18e6e479f8f15ce8f11f6daa0c352e57ad9ddf",
+    "runs/2026-11-23-managed-current-final-boundaries.json": "f97b7373d78f687e940b2d5a2ad26af7d85ce5ca3851c54b62749afe185fcb9f",
+    "runs/2026-11-23-managed-current-selection-distinct-review.json": "d1c6d7c5584cf5889093900bb07b4f84b4e1c7322e175c0fe5eb8a3829b10fa6"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-managed-current-five-hosted-collection.json",
+      "sha256": "3ce9f1fee3665c6c5cfada23af18e6e479f8f15ce8f11f6daa0c352e57ad9ddf"
+    },
+    {
+      "path": "runs/2026-11-23-managed-current-selection-distinct-review.json",
+      "sha256": "d1c6d7c5584cf5889093900bb07b4f84b4e1c7322e175c0fe5eb8a3829b10fa6"
+    },
+    {
+      "path": "runs/2026-11-23-managed-current-final-boundaries.json",
+      "sha256": "f97b7373d78f687e940b2d5a2ad26af7d85ce5ca3851c54b62749afe185fcb9f"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T03:07:28.892804+00:00"
+    }
+  ]
+}

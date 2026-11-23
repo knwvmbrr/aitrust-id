@@ -1,5 +1,22 @@
 ## Current combined handoff — 2026-11-22T16:58:10.565070+00:00
 
+## Latest verified delivery — November 22
+
+ProtectedPR149 is merged as085106c1 and publicly verified at aitrustid.com.
+The three predeclared JPEG credential, v3 bounded archive and private MT review
+preparation jobs now meet their full named contracts:28scoped jobs closed.
+The original ledger is still136complete/66open; four original closures since
+the frozen70-open baseline.60-open remains NOT MET. No criterion was removed.
+[Public delivery](../runs/2026-11-22-image-jpeg-mt-v3-publication.json) and
+[distinct publication review](../runs/2026-11-22-pr149-publication-path-distinct-review.json).
+
+MCP managed packaging and finite source-rights integration continue independently.
+New code/docs invalidate affected old receipts until the next frozen-source run;
+public085evidence is retained as evidence for that release. Source-only classifier
+research has no weights/runtime/accuracy claim. The owner checklist/email remains
+separate from software jobs; people do not inherit the mixed engineering work.
+
+
 **136 originals complete /66 open; target60 remains unmet by6.** Scoped closed
 tasks remain25; original closures since baseline remain4. Three named component
 jobs are **IN_REVIEW**, with no additional closure credit:

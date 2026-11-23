@@ -1,0 +1,173 @@
+{
+  "profile": "mcp-four-target-retained-evidence-distinct-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-22T14:49:18.886529+00:00",
+  "reviewed_by": "Codex / seo",
+  "author_role_boundary": "Reviewer authored separate CFFI/Rust source-obligation data, not the MCP bundle/install/probe core, workflow or hosted execution; this review does not certify its own licensing inputs.",
+  "author_receipt": {
+    "path": "runs/2026-11-22-mcp-four-target-hosted-qualification.json",
+    "sha256": "ecf756326ac2cd3788c553cbfae3206e283b5ed3c3efe2960ffe2eb32cd3e6ea"
+  },
+  "head_commit": "782807ca4aa589e324dad9cf8aeded278af8b9c3",
+  "actual_checkout_commit_reported_by_all4": "c5b83d6ddc9198b36cee67d717c56c06582147d4",
+  "checkout_role": "Actual reports name PR synthetic merge c5b83d6ddc9198b36cee67d717c56c06582147d4, distinct from reviewed head782807ca4aa589e324dad9cf8aeded278af8b9c3. All439source byte hashes independently match current head Git blobs. Synthetic merge object was not locally available and was not fetched.",
+  "run": {
+    "attempt": 1,
+    "conclusion": "success",
+    "event": "pull_request",
+    "id": 45034263495,
+    "matrix_jobs": 4,
+    "status": "completed",
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45034263495"
+  },
+  "independent_read_only_checks": {
+    "all4_retained_ZIP_SHA_and_sizes_match_retained_API_metadata": true,
+    "retained_ZIP_total_bytes": 105471,
+    "each_ZIP_exact10_JSON_member_names_no_duplicate_or_link_members_and_bounded_sizes": true,
+    "all40_raw_JSON_member_digests_match_author_target_report": true,
+    "all4_result_step_values_and_digests_match_raw_member_bytes": true,
+    "all4_source_before_maps_equal_current439source_bindings": true,
+    "all439_current_bytes_and_reviewed_head_Git_blob_OIDs_match": true,
+    "parsed_targets_exact_author_targets": true,
+    "shared_manifest_current_SHA": "08604a609b9a78eecd2f780ed3f1d7d1fd3264ea2b3890635655ba932f640038",
+    "fixed_probe_and_installed_payload_target_verification_source_read": true,
+    "workflow_requires_exact44_and8_named_controls_and_30packages_no_skips": true
+  },
+  "targets": [
+    {
+      "target": "cp312-macosx_11_0_arm64",
+      "retained_artifact": {
+        "id": 14759475151,
+        "name": "mcp-runtime-cp312-macosx_11_0_arm64",
+        "sha256": "1940396b5685c2d87c8dc104cd698cb143301c5444aaf40939308349b8fa7068",
+        "size": 26310
+      },
+      "python_version": "3.12.10",
+      "system": "darwin",
+      "machine": "arm64",
+      "macos": "15.8.2",
+      "libc": [
+        "",
+        ""
+      ],
+      "tests44_failures0_errors0_skips0": true,
+      "installed_distributions": 30,
+      "installed_payloads_verified": 940,
+      "SDK_controls": 8,
+      "SDK_version": "2.3.0",
+      "bundle_sha256": "ad4d1e113a52e590595c943e3bd1f32ca36f5dc846b15fcf102a349ce7749cd0",
+      "bundle_bytes": 14459644,
+      "profile_sha256": "08604a609b9a78eecd2f780ed3f1d7d1fd3264ea2b3890635655ba932f640038",
+      "SPDX_packet_reconstructed": true,
+      "release_refused_before_signer": true,
+      "signature_verifier_invocations": 0,
+      "release_authorized": false
+    },
+    {
+      "target": "cp312-linux_x86_64_glibc_2_34",
+      "retained_artifact": {
+        "id": 14759285201,
+        "name": "mcp-runtime-cp312-linux_x86_64_glibc_2_34",
+        "sha256": "34957cb1f8d3ff0399c5500c188222bf08bb08989402222d7f7c66e8a4e3b3e3",
+        "size": 26418
+      },
+      "python_version": "3.12.16",
+      "system": "linux",
+      "machine": "x86_64",
+      "macos": "",
+      "libc": [
+        "glibc",
+        "2.39"
+      ],
+      "tests44_failures0_errors0_skips0": true,
+      "installed_distributions": 30,
+      "installed_payloads_verified": 940,
+      "SDK_controls": 8,
+      "SDK_version": "2.3.0",
+      "bundle_sha256": "9bd3f1ed712872dcb39592dcc66a28ab490c3d911b322d16fbca36c12498a334",
+      "bundle_bytes": 15518301,
+      "profile_sha256": "08604a609b9a78eecd2f780ed3f1d7d1fd3264ea2b3890635655ba932f640038",
+      "SPDX_packet_reconstructed": true,
+      "release_refused_before_signer": true,
+      "signature_verifier_invocations": 0,
+      "release_authorized": false
+    },
+    {
+      "target": "cp313-macosx_11_0_arm64",
+      "retained_artifact": {
+        "id": 14759146035,
+        "name": "mcp-runtime-cp313-macosx_11_0_arm64",
+        "sha256": "f07c436f7103b5d18dfaf7e0f9764ff098b28bab66312aed61a48cf0fd5ba4d4",
+        "size": 26319
+      },
+      "python_version": "3.13.17",
+      "system": "darwin",
+      "machine": "arm64",
+      "macos": "15.8.2",
+      "libc": [
+        "",
+        ""
+      ],
+      "tests44_failures0_errors0_skips0": true,
+      "installed_distributions": 30,
+      "installed_payloads_verified": 940,
+      "SDK_controls": 8,
+      "SDK_version": "2.3.0",
+      "bundle_sha256": "cc511eb0e05626968c01ff82c1aa057b9778956ee1fae31604335943aa9abce1",
+      "bundle_bytes": 14459101,
+      "profile_sha256": "08604a609b9a78eecd2f780ed3f1d7d1fd3264ea2b3890635655ba932f640038",
+      "SPDX_packet_reconstructed": true,
+      "release_refused_before_signer": true,
+      "signature_verifier_invocations": 0,
+      "release_authorized": false
+    },
+    {
+      "target": "cp313-linux_x86_64_glibc_2_34",
+      "retained_artifact": {
+        "id": 14758981339,
+        "name": "mcp-runtime-cp313-linux_x86_64_glibc_2_34",
+        "sha256": "6b2d36997cc189e6b9a25ad40b840cfd324d5c58dfac2866629c67a8e72a28b9",
+        "size": 26424
+      },
+      "python_version": "3.13.18",
+      "system": "linux",
+      "machine": "x86_64",
+      "macos": "",
+      "libc": [
+        "glibc",
+        "2.39"
+      ],
+      "tests44_failures0_errors0_skips0": true,
+      "installed_distributions": 30,
+      "installed_payloads_verified": 940,
+      "SDK_controls": 8,
+      "SDK_version": "2.3.0",
+      "bundle_sha256": "d22b1cb6764a532748721e211df89c759dca66178ae132757bb532638382d4db",
+      "bundle_bytes": 15517055,
+      "profile_sha256": "08604a609b9a78eecd2f780ed3f1d7d1fd3264ea2b3890635655ba932f640038",
+      "SPDX_packet_reconstructed": true,
+      "release_refused_before_signer": true,
+      "signature_verifier_invocations": 0,
+      "release_authorized": false
+    }
+  ],
+  "input_sha256": {
+    "runs/2026-11-22-mcp-four-target-hosted-qualification.json": "ecf756326ac2cd3788c553cbfae3206e283b5ed3c3efe2960ffe2eb32cd3e6ea",
+    "output/verification/mcp-hosted-45034263495/artifact-metadata.json": "efb4d54d511daa932bf5dd4c92f56b57ed1c0c2e855a1ec30e8781a4c9c41474",
+    "output/verification/mcp-hosted-45034263495/parsed-targets.json": "94a41aae5ef4a9284bd1be6ed19c02c7e0a9ce4a7e0433c6d299d66cf9ff7619",
+    ".github/workflows/mcp-runtime-distribution.yml": "f94ffcf47f4bb446c9a4474685704e5dd1ca6d13fd6ca8146a7d9bcabaff4370",
+    "tools/mcp_distribution.py": "c6f7551709b2ad6a4a12c3c554ab7084291dfa16f0a4a81249877a0333a3ecd5",
+    "tools/mcp_runtime_probe.py": "9141e1669a5e7bc2e9103757aa815783812c50f414e141e54dadf8479d3dbc7d",
+    "sbom/mcp-runtime/manifest.json": "08604a609b9a78eecd2f780ed3f1d7d1fd3264ea2b3890635655ba932f640038"
+  },
+  "source_bindings_sha256": "a7d98c970894a07a07c9cd69764304ca57472d7983332244bee23496f4af0879",
+  "findings": [],
+  "limits": [
+    "No network/download/build/install/native/browser/CLI qualification or44test rerun by reviewer. Retained API metadata is compared, not newly queried from GitHub.",
+    "JSON-only artifacts retain source-bound producer results, not the14\u201316MB runtimeZIP/payload files or actualSPDX/packet bytes; reviewer did not independently reinstall or reconstruct those artifacts locally.",
+    "Actual hosted qualification is four selected macOS15.8.2/arm64 andUbuntu/glibc2.39/x86_64 environments with stated Python patches, not every version named by compatibility minimums.",
+    "Native obligations_complete, route admission, release_authorization, actual protected attestation, independent accuracy and complete-project obligations remain false. No PII service/model or owner data executed.",
+    "No install-removal, production/main merge, website/service deployment, full F057/X02 or original closure is inferred from these reports.",
+    "Full source snapshot before run has13,113files/129,448,448B with4,769,280B headroom; future combined integration must actually remeasure under unchanged128MiB/count caps, as author already records."
+  ]
+}

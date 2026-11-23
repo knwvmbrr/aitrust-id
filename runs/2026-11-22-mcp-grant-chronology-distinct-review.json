@@ -1,0 +1,36 @@
+{
+  "captured_at": "2026-11-22T18:09:54.273531+00:00",
+  "claims": {
+    "actual_mcp_permission_or_signature": false,
+    "hosted_or_legal_clearance": false,
+    "original_closure": false,
+    "repeated_four_controls_on_new_metadata": false,
+    "sdk_native_or_archive_execution": false
+  },
+  "correction": {
+    "assessment_facts_claims_and_qualifications_unchanged": true,
+    "current_capture_and_original_observation_distinguished": true,
+    "four_grant_assets_test_and_workflow_unchanged": true,
+    "module_only_fixed_assessment_digest_changed": true,
+    "policy_only_two_matching_hash_size_rows_changed": true,
+    "prior_two_assessments_preserved_exact": true
+  },
+  "earlier_scoped_control_receipt_sha256": "1aa8774a6fa73ebc6ca820ed1ada75eb30a259e76e5fdf5749847812a44d29fe",
+  "findings": [],
+  "pass": true,
+  "profile": "mcp-carried-grants-chronology-corrected-distinct-review/v1",
+  "scope": "Source-only final addendum to four isolated coherent-grant-refusal controls; previous control execution keeps its original source identity.",
+  "source_sha256": {
+    ".github/workflows/artifact-sbom.yml": "8dcb1fde56d68303ad736de64962483c7a0a1c36942ab2a389e9162c9877bd9d",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "eval/dependencies/mcp-runtime-release.json": "d0488a93ce395eb7b03aed1161977a87a81782f6af7a4bd66ba890c0f4c22c38",
+    "eval/dependency-policy.json": "31e3f2927faaf51c044e361cded59369852a0fddaf97b93fa93bf7394074adce",
+    "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "sbom/mcp-runtime/SCHEMA-ATTRIBUTION.txt": "6beb436170ee08a56908fc69f69bc8ee8a72aeda383694c089048e29db9b90bf",
+    "spec/LICENSE": "dc5be08778ad83fc1be1c18c28788bee9e7848ac3bd68ef33129f402205f6e77",
+    "tests/test_managed_mcp_policy.py": "13f692516d06287837a829bcf2ca5dfbe4ee1422abdd1b8715c6f0baf5721961",
+    "tools/mcp_release_policy.py": "2c986c5652c064b8a0cdb328786dbbcd23e0a0988cde96b0e3030e001656fbfd"
+  },
+  "source_stable": true
+}

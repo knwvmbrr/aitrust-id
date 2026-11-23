@@ -1,0 +1,44 @@
+{
+  "captured_at": "2026-11-22T18:03:55.772000+00:00",
+  "chronology": "Assessment timestamp correction must be current assembly time or explicitly distinguish older observation; see author metadata response.",
+  "controls": {
+    "actual_fourteen_facts_match_fixed_assessment": true,
+    "actual_mcp_still_blocked_on_old_io": true,
+    "coherent_replacement_source_and_metadata_refused": [
+      "LICENSE",
+      "NOTICE",
+      "spec/LICENSE",
+      "eval/vectors/unicode/LICENSE.txt"
+    ],
+    "four_carried_grants_match_component_rows_and_actual_bytes": true,
+    "isolated_assessment_baseline_with_injected_fixed_helper_and_runtime_load": true,
+    "schema_attribution_preserves_author_source_and_ccby4_license_uri": true,
+    "workflow_diff_only25_to26_count_and_actual_static_methods26": true
+  },
+  "findings": [],
+  "limits": {
+    "actual_mcp_admission": false,
+    "archive_install_or_signing": false,
+    "fixed_helper_and_runtime_load_injected_only_for_narrow_comparison_controls": true,
+    "full_author_suite_repeated": false,
+    "global_license_or_original_closure": false,
+    "hosted_run": false,
+    "no_complete_forged_route_authorization_attempt": true,
+    "sdk_or_native_execution": false
+  },
+  "pass": true,
+  "profile": "mcp-carried-grant-pin-distinct-review/v1",
+  "source_sha256": {
+    ".github/workflows/artifact-sbom.yml": "8dcb1fde56d68303ad736de64962483c7a0a1c36942ab2a389e9162c9877bd9d",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "eval/dependencies/mcp-runtime-release.json": "cd74dd7b3c0ecc5eb3cf684bd28a56f5df5a646ae8cc348de83b4696c4305586",
+    "eval/dependency-policy.json": "185aafa09170de707887dbf4a0a6bbe2baec74c54c17b1b85712fe7363221ca6",
+    "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+    "sbom/mcp-runtime/SCHEMA-ATTRIBUTION.txt": "6beb436170ee08a56908fc69f69bc8ee8a72aeda383694c089048e29db9b90bf",
+    "spec/LICENSE": "dc5be08778ad83fc1be1c18c28788bee9e7848ac3bd68ef33129f402205f6e77",
+    "tests/test_managed_mcp_policy.py": "13f692516d06287837a829bcf2ca5dfbe4ee1422abdd1b8715c6f0baf5721961",
+    "tools/mcp_release_policy.py": "cf0b8e4295c3867f410a810e31816a4adf5b272eaf5252f83591b69801ce3899"
+  },
+  "source_stable": true
+}

@@ -1,0 +1,60 @@
+{
+  "candidate_source": "032671e54bbf6a0466977d7b48e6dfa6fd9c4afc",
+  "captured_at": "2026-11-22T22:59:31.086194+00:00",
+  "findings": [],
+  "limits": {
+    "canonical_dist_is_older_build_not_used_to_rebind_http_checks": true,
+    "earlier_component_reviews_remain_separate": true,
+    "http_not_independently_refetched": true,
+    "no_browser_or_test_or_archive_or_git_guard_replay": true,
+    "no_full_project_artifact_claim": true,
+    "no_human_physical_accuracy_or_global_license_claim": true,
+    "no_sdk_or_install": true,
+    "publication_only_no_self_review_of_jpeg_mt_implementation": true,
+    "retained_selected_build_bytes_not_independently_rehashed": true
+  },
+  "observations": {
+    "all11_succeeded_on_exact_head_before_merge": true,
+    "all90_paths_identical_hashes_between_apex_and_deployment": true,
+    "api_merged_pr149_and_actual_strict11_required_contexts_verified": true,
+    "canonical12_owner_files_current_hashes_match_private_baseline": true,
+    "canonical_current_head_and_tracked_clean_verified": true,
+    "canonical_ff_command": "Author execution/tool-transcript observation, not independently replayed or separate raw console log.",
+    "nonrequired_independent_release_gate_failure_preserved": true,
+    "original_scope": {
+      "complete": 136,
+      "new_original_closures": 0,
+      "open": 66,
+      "total": 202
+    },
+    "prior_full_fault_matrix_not_replayed_or_promoted_as_public": true,
+    "public_smoke_only_two_canonical_files_per_engine_plus_ps": true,
+    "selected_http_author_witnesses": 180,
+    "selected_paths_per_origin": 90,
+    "small_smoke_private_record_exact_public_copy": true,
+    "three_predeclared_scoped_tasks_pending_pm_closeout": [
+      "session-jpeg-credential-actions",
+      "session-source-snapshot-v3",
+      "session-mt-private-label-preparation"
+    ],
+    "unresolved_threads_current_and_premerge": 0
+  },
+  "pass": true,
+  "profile": "pr149-publication-path-distinct-review/v1",
+  "publication_source": "085106c1d40e86b071a25a7b9e4e56b965a31044",
+  "review_harness_correction": "Two exploratory type-summary snippets had a Python spacing syntax error before reading private owner files; corrected in final audit. No product failure or runtime retry.",
+  "same_source_tree": "f5ec04b0a7e807ad27bbde70472ae63a995e2119",
+  "selected_api_metadata_sha256": "bde7a689fe9aa30ac9f9b360bd65c999f2d17c1556a060f313f153761835f2aa",
+  "source_and_receipt_sha256": {
+    "docs/scope-progress.json": "a85c5a631e3b8cb93ff020363b396453b0fe69221f2de38e284e4543ae0d7cd6",
+    "docs/session-delivery.json": "7a085e387343b6ef3d5934788198d4480005b1eb9b757efdd17ab3e36d267263",
+    "output/coordination/085-canonical-owner-preservation.json": "e374ee4e88fe50620410509c329f63af27b50a237463e466a3e4c0e8ace1330e",
+    "output/coordination/085-live-small-browser.json": "de5fd8e1e98e6eb1b8059dc90dce1cba69897a3c3b082ab27614a19e3a0a33c6",
+    "output/coordination/live-image-small-smoke.cjs": "7c609570351aa9ae6f4d8ade7129cb5a529f3bdc1df62e54511db4a609772337",
+    "runs/2026-11-22-image-jpeg-mt-v3-publication.json": "453f45035c5af1f061149d713cc49baad37af337402be57584ba86922be0d2c4",
+    "runs/2026-11-22-image-review-live-artifacts.json": "53f7971a7f77a7c4e352dd454d17c518aef788af7613dfe8a4e7760f91639b3a",
+    "runs/2026-11-22-image-review-live-browser.json": "de5fd8e1e98e6eb1b8059dc90dce1cba69897a3c3b082ab27614a19e3a0a33c6",
+    "runs/2026-11-22-pr149-required-premerge.json": "1f8709208168ca2755322e5e41d46b4ce52449bfbca6321bfa221672638dbf38"
+  },
+  "source_stable": true
+}
