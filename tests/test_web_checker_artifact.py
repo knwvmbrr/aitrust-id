@@ -101,6 +101,26 @@ class WebArtifactTests(unittest.TestCase):
                 else:bad['outputs']['assets/fixture.js']['modules'][0]['rendered_length']=False
                 with self.subTest(kind=kind),w.FileTree(root,w.Ledger())as tree,self.assertRaises(w.WebUnavailable):w.validate_observation(bad,'a'*40,s,'b'*40,c,tree,tree.ledger)
 
+    def test_project_method_manifest_requires_committed_exact_bytes(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d).resolve()/'source';o,source,catalog,_=fixture(root)
+            name='site/src/device-manifest.json';raw=b'{"method_sha256":"owned-fixture"}\n'
+            target=root/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(raw)
+            o['sources'][name]={'bytes':len(raw),'sha256':w.sha(raw),'git_blob_oid':w.git_oid(raw),'text_source':True,'notices':[]}
+            source[name]={'bytes':len(raw),'git_blob_oid':w.git_oid(raw),'mode':'100644'}
+            with w.FileTree(root,w.Ledger()) as tree:
+                w.validate_observation(o,'a'*40,source,'b'*40,catalog,tree,tree.ledger)
+            for kind in ('missing-commit','changed-bytes','unknown-neighbor'):
+                bad_o=copy.deepcopy(o);bad_source=copy.deepcopy(source)
+                if kind=='missing-commit':del bad_source[name]
+                elif kind=='changed-bytes':bad_o['sources'][name]['git_blob_oid']='0'*40
+                else:
+                    unknown='site/src/unreviewed-device-manifest.json'
+                    bad_o['sources'][unknown]=bad_o['sources'].pop(name)
+                    bad_source[unknown]=bad_source.pop(name)
+                with self.subTest(kind=kind),w.FileTree(root,w.Ledger()) as tree,self.assertRaises(w.WebUnavailable):
+                    w.validate_observation(bad_o,'a'*40,bad_source,'b'*40,catalog,tree,tree.ledger)
+
     def test_npm_dependency_nested_escape_refuse(self):
         with tempfile.TemporaryDirectory()as d:
             root=Path(d).resolve()/'source';o,s,c,_=fixture(root)

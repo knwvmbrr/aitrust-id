@@ -11852,3 +11852,11 @@ Recorded 2026-11-23T23:50:56.326628+00:00 · Contributor: Codex /root integratio
 - **Changed.** Bound the web artifact reader to the exact active V4 source consumer and registry, preserved every sibling route, and refreshed current independent engineering assignments.
 - **Evidence.** Actual sources CLI passes35 npm/5 runtime/14 companions/3 generators. Distinct review verifies exactly two SOURCE_PINS changed, all other helper AST is identical and thirteen sibling routes remain unchanged. The app/Share and active V4 authored commits are integrated with normal guards. [Change record](./runs/changes/2026-11-23-web-checker-observed-artifact.json).
 - **Not claimed.** Source readiness only; genuine whole current build, package, protected compiled-web authority, current unsigned native compilation, independent accuracy and human acceptance remain pending.136originals complete66open; no closure. Agents are dated assignments rather than permanent processes.
+
+### 2026-11-23-web-generated-source-binding
+
+Recorded 2026-11-23T23:59:45.032929+00:00 · Contributor: Codex /root integration; Codex /root/seo distinct architecture review · change
+
+- **Changed.** Tracked the exact generated PS method manifest, bound its literal observed-source role to committed bytes, and named the omitted project workflow test plus finite bookkeeping paths in current source-copy policy.
+- **Evidence.** Actual complete browser build5 passes and final HTML matches its observation. The first whole package correctly refuses the uncommitted manifest; source review correctly refuses an unnamed changed test. The corrected source passes its new manifest positive/missing-commit/tamper/unknown-neighbor control and all20 current V4 controls.13sibling routes, legacy grants/cohorts and numerical caps are unchanged. [Change record](./runs/changes/2026-11-23-web-generated-source-binding.json).
+- **Not claimed.** The earlier assumption that the manifest existed in protected Q was wrong and remains corrected. This commit is source readiness; fresh committed whole package/current source permission, final distinct source review, protected web authorization, app compile, human acceptance and independent accuracy remain pending.136complete66open; no original closure. Prospective CI names are not completed work.

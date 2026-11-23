@@ -176,3 +176,23 @@ composition and thirteen sibling routes stay unchanged. The actual sources-only
 check passes35 npm packages,5 runtime files,14 companions and3 source generators.
 This is source readiness; whole current build/package and protected web authority
 remain separate. Different exact AST/pin/sibling review precedes the full build.
+
+## Genuine build5 and explicit generated source ownership
+
+Build5 fully completed Vite, static references and offline finalization; its final
+index equals the observed hash. First package production still refused because
+site/src/device-manifest.json is ignored and absent from the committed source.
+The previous assumption that it existed in Q was wrong. Track this exact seven-field
+project-generated manifest, as for the sibling tag manifests, remove only its
+ignore line and add its literal project-source association. Every observed source
+remains Git-byte-bound; no general generated-source exception is introduced.
+
+The active V4 classifier also refused tests/test_source_snapshot_workflow.py: its
+source activation changed this project test but did not name it as maintainable.
+Add only that existing authored test, the manifest and .gitignore (if not already
+named) to the finite project list. Preserve all historical classifiers, copied
+source grants, cohorts and caps. Update only table identity and corresponding
+source registry/web pins. An exact different review and focused controls precede
+a fresh committed build/package; failed build5 package and source diagnostics
+remain unaccepted. Diagnostic instrumentation only observes failed predicates
+and never supplies provenance or source-copy permission.
