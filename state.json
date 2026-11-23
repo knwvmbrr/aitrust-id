@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-23T19:27:36.673408+00:00",
+  "updated": "2026-11-23T19:44:19.911634+00:00",
   "active_increment": "Current whole-source distribution binding and independent image qualification integration;136 originals complete/66 open; target60 unmet.",
   "status": "136complete66open_target60_unmet;source_snapshot_and_image_integration_active",
   "scope": "docs/master-scope.json",
@@ -1247,7 +1247,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-23T19:27:36.673408+00:00",
+  "updated_at": "2026-11-23T19:44:19.911634+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -5309,7 +5309,7 @@
       ],
       "managed_source_release_authorized": false,
       "other_cohort_routes_still_blocked": 11,
-      "current_dependency_policy_sha256": "1b558ea5e5891f388c144a1caba0adb9eb219acff999de8d27b3921edb23e111",
+      "current_dependency_policy_sha256": "14a4606eb648acc6ee37bfc60658f4c53703966ee57f2eed1e28b6db724f329a",
       "evidence": "runs/2026-11-23-source-image-integration-controls.json",
       "receipt_scope": "Historical58 controls plus corrected production wrapper and actual simulated-authority probes; final inert wrapper test also passed; real signature is pending"
     },
@@ -5320,6 +5320,13 @@
       "runtime_qualification_executed": false,
       "model_or_packages_acquired_locally": false,
       "tag_release_approved": false
+    },
+    "first_hosted_findings": {
+      "source_commit": "f23504d166dd450a81cd35dbc15397b13815de21",
+      "candidate_passed": false,
+      "receipt": "runs/2026-11-23-source-image-first-hosted-failures.json",
+      "correction": "Two test contracts and four explicit workflow trigger paths; no production safety relaxation",
+      "fresh_five_reports_pending": true
     }
   },
   "current_route_boundaries_status": "Previous selection retained; fresh current-source inventory and boundary execution pending after integration freeze."

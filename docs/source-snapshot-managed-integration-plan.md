@@ -111,3 +111,42 @@ obligations preserved. It must not classify third-party metadata as project
 prose to allow arbitrary changes. Its schema/implementation amendment requires
 its own pre-code plan and distinct review. This producer refresh is not a new
 zlib execution, runtime correspondence proof, license grant or full closure.
+
+## First hosted portability and historical-pin corrections
+
+Before correction code, 2026-11-23: PR153 candidate f23504d1 passed its actual
+13,719-file canonical archive binding (41,518,397 compressed bytes); the complete
+packet is15,446,307 bytes and predicate9,341,675 bytes under unchanged limits.
+Two hosted controls nevertheless failed, and are preserved rather than retried
+unchanged. Managed-source job137959501471 uses Linux /tmp1777; its descriptor-write
+fault fixture passed that directory's child directly to Capture.directory, whose
+immediate-parent private0700 rule correctly refused. Create an owned0700 child
+inside the existing private test directory and preserve the actual write fault
+and every-descriptor-closed checks. No production I/O permission is relaxed.
+
+Spec job137959500993 caught the qualification test comparing current image-assets
+module520aa3 to its original2158189 digest after the separately reviewed factual
+HF pin correction. Keep the original receipt unchanged. Reverse only the two
+exact factual SOURCE_PINS literals in a copy of the current module, compare the
+entire reconstructed original against2158189, and require the actual current
+module to equal the exact immutable c8174213 peer receipt. The other three model
+production modules must still equal their historical hashes. This admits the
+reviewed reference change without permitting a numerical/code alteration.
+
+Add only four literal source/contract paths to BOTH existing delivery workflow
+PR and main triggers: tests/test_source_snapshot_managed.py,
+tests/test_visual_score_qualification.py, tools/source_snapshot_managed.py and
+tools/source_snapshot_admission.py. These contracts need current profile checks
+even when their command list is unchanged. Keep all commands, prerequisite
+installs, permissions and resource limits unchanged. The workflow hash correctly
+invalidates the prior five profiles; run the corrected source once and reselect
+only actual fresh reports. The first invalidated run is retained, not promoted.
+
+Persist the actual failure signatures and correction event under two individually
+named project JSON paths: runs/2026-11-23-source-image-first-hosted-failures.json
+and runs/changes/2026-11-23-source-image-linux-contract-correction.json. Extend
+only the finite V3 project-name list135to137 within its existing160 bound; update
+its exact data pin and the actual registry file bindings. Gitf235 preserves its
+previous profile and proofs. No copied grant, origin, metadata transition,
+V1/V2 foundation, per-file/operation cap or permission category changes.
+Separate design review: Codex /root/seo. Final exact-data review follows.

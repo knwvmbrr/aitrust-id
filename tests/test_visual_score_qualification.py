@@ -154,7 +154,19 @@ class QualificationTests(unittest.TestCase):
    elif isinstance(v,list):
     for x in v:visit(x)
   visit(frozen);self.assertTrue(values)
-  for path,digest in values:self.assertEqual(q.sha((ROOT/path).read_bytes()),digest)
+  peer_raw=(ROOT/'runs/2026-11-23-hf-card-factual-reference-distinct-review.json').read_bytes()
+  self.assertEqual(q.sha(peer_raw),'c81742135b10ea00fc75c24e58e44321dce4855a1f0544702464761b45a486c5')
+  peer=json.loads(peer_raw)
+  for path,digest in values:
+   raw=(ROOT/path).read_bytes()
+   if path=='tools/visual_score_assets.py':
+    # Historical source is retained: undo only the separately reviewed factual pins.
+    self.assertEqual(q.sha(raw),peer['source_sha256'][path])
+    text=raw.decode('utf-8');line=next(x for x in text.splitlines() if x.startswith('SOURCE_PINS='));original=line
+    for current,previous in (("'hf-model-card-reference.json': '7ba894d89271710d574456154041d8dc98e0cb90af0929ce2ea77af782718621'","'hf-model-card.md': 'de4274ec48590ab3aa1c239720ff55e99a37f4165c117ba3ad7af2b7df72687c'"),("'source.json': 'f95f1008433c32216e0153c8ffd3d9cab4327abed047c19f28fd0c99d55253dc'","'source.json': '37ae88d90d3caa1a0d0274455b8e28326ddf77fb8848a80c56f3593ef721614a'")):
+     self.assertEqual(original.count(current),1);original=original.replace(current,previous)
+    self.assertEqual(text.count(line),1);raw=text.replace(line,original,1).encode('utf-8')
+   self.assertEqual(q.sha(raw),digest)
 
 
 class CleanupOwnershipTests(unittest.TestCase):

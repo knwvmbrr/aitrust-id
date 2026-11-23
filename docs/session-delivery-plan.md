@@ -643,3 +643,15 @@ Source `92be88d00e967d53d4b8604b8f90561088efc903` is merged and published. Both 
 ## Next dispatch rule
 
 Do not rerun closed jobs because a historical handoff points at them. Select the next authorized, unblocked engineering action from the preserved original table and per-tag queues; preserve owner/human gates and keep the original60-open target visible.
+
+
+### 2026-11-23 current-source hosted correction
+
+The f23504d1 archive actually binds13,719 Git files,41,518,397 compressed bytes,
+and a15,446,307-byte complete packet under unchanged caps. The first hosted
+managed-source and spec jobs caught two test-contract defects; see
+`runs/2026-11-23-source-image-first-hosted-failures.json`. Corrected current
+profiles, real protected signing and managed source probes remain pending.
+Image shared-deadline work and web/runtime permission work continue independently.
+Originals remain136complete/66open; scoped finished-job count remains30,
+not additional original closures. Assignments are dated, not permanent bots.

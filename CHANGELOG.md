@@ -4,6 +4,15 @@
 
 
 
+
+### 2026-11-23-source-image-linux-contract-correction
+
+Recorded 2026-11-23T19:46:18.574716+00:00 · Contributor: Codex /root; preimplementation review by Codex /root/seo · change
+
+- **Changed.** Corrected Linux write-fault fixture ancestry and historical image-reference pin reconstruction, preserving actual permission and numerical source checks; registered four literal profile triggers and two named first-party evidence paths.
+- **Evidence.** Both affected controls pass after diagnosis; exact137-name finite profile changes only two project paths and its data pin, with all21 source registry file bindings actual. First hosted failures and successful f235 archive/packet measurements are preserved. [Change record](./runs/changes/2026-11-23-source-image-linux-contract-correction.json).
+- **Not claimed.** Corrected hosted Linux run, five fresh source-bound reports, real protected source signing and managed consumer are pending. No production permission relaxation, model inference, accuracy or full-original closure;136complete66open, target60 unmet.
+
 ### 2026-11-23-source-image-integrated-source
 
 Recorded 2026-11-23T19:30:04.437877+00:00 · Contributor: Codex /root; component authors and different reviewers retained in individual records · change

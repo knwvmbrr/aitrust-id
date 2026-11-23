@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-source-image-linux-contract-correction",
+  "recorded_at": "2026-11-23T19:46:18.574716+00:00",
+  "author": "Codex /root; preimplementation review by Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f23504d166dd450a81cd35dbc15397b13815de21",
+  "changed": "Corrected Linux write-fault fixture ancestry and historical image-reference pin reconstruction, preserving actual permission and numerical source checks; registered four literal profile triggers and two named first-party evidence paths.",
+  "proves": "Both affected controls pass after diagnosis; exact137-name finite profile changes only two project paths and its data pin, with all21 source registry file bindings actual. First hosted failures and successful f235 archive/packet measurements are preserved.",
+  "limits": "Corrected hosted Linux run, five fresh source-bound reports, real protected source signing and managed consumer are pending. No production permission relaxation, model inference, accuracy or full-original closure;136complete66open, target60 unmet.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "T-FA",
+    "T-PA",
+    "F-140"
+  ],
+  "files": {
+    ".github/workflows/delivery-revalidation.yml": "a7e8df2c02d77004ca844eb16ed032a71b41ab1922a26719c1b2010b93e4850f",
+    "docs/session-delivery-plan.md": "f79e3cf6ba01e9875c0af49fd5344082f28d68aaae23cae6bf980b78a5196b64",
+    "docs/session-delivery.json": "761f5b610da188b2e016bca8a6694ee5a27728fd5776342531d20962ce4ebca2",
+    "docs/source-snapshot-managed-integration-plan.md": "dc8b6be69f71d6f87545ab4bcbcb3e4a789dd5a2ed5666a3767868787f2d6d79",
+    "eval/dependencies/source-snapshot-additions-v3.json": "cf5b634dc543009d8b951e68350057c6bd1e2f7ac803e32a5f5ab021331fd42a",
+    "eval/dependency-policy.json": "14a4606eb648acc6ee37bfc60658f4c53703966ee57f2eed1e28b6db724f329a",
+    "eval/route-boundaries.json": "fb3293fa505491938b43c1fb599ef5167287fc9d933ca2eaed8cbc886c0d06dd",
+    "runs/2026-11-23-source-image-first-hosted-failures.json": "3bd1e326e5d2337aa6502247cf8876d35c66c05d0f10fb8905e92bc9857cf62c",
+    "state.json": "10e3711968b7f786e7974283e06f512c51d2516ccfeaedc7abb5452c9b7d683e",
+    "tests/test_source_snapshot_managed.py": "8b8ae77254358491a6e258bfb12acefdabcc1ba81e151263de9dfb66c890f862",
+    "tests/test_visual_score_qualification.py": "a498e1ae7d4c3ebf1a243aa95664a919ede5ed0f15d3fa607d1ebe80cf4476df",
+    "tools/source_release_policy_v3.py": "1017f71af96790e85def6c11e74461f6fb00258e3a2b2e10c937302cdcc78460"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-source-image-first-hosted-failures.json",
+      "sha256": "3bd1e326e5d2337aa6502247cf8876d35c66c05d0f10fb8905e92bc9857cf62c"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "tests.test_source_snapshot_managed.ManagedSourceTests.test_write_fault_releases_every_registered_descriptor_once",
+        "tests.test_visual_score_qualification.QualificationTests.test_production_source_unchanged_from_source_stage",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T19:46:18.574716+00:00"
+    }
+  ]
+}

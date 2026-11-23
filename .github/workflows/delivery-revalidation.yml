@@ -5,11 +5,19 @@ on:
     paths:
       - '.github/workflows/delivery-revalidation.yml'
       - 'eval/revalidation.json'
+      - 'tests/test_source_snapshot_managed.py'
+      - 'tests/test_visual_score_qualification.py'
+      - 'tools/source_snapshot_managed.py'
+      - 'tools/source_snapshot_admission.py'
   push:
     branches: [main]
     paths:
       - '.github/workflows/delivery-revalidation.yml'
       - 'eval/revalidation.json'
+      - 'tests/test_source_snapshot_managed.py'
+      - 'tests/test_visual_score_qualification.py'
+      - 'tools/source_snapshot_managed.py'
+      - 'tools/source_snapshot_admission.py'
 
 permissions:
   contents: read

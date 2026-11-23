@@ -191,17 +191,17 @@ class ManagedSourceTests(unittest.TestCase):
    with self.assertRaises(m.ManagedSourceUnavailable):self.verify()
   self.assertFalse(self.output.exists())
  def test_write_fault_releases_every_registered_descriptor_once(self):
-  held=[]
+  held=[];owned=self.dir/'write-fault-owned';owned.mkdir(mode=0o700)
   with self.assertRaises(OSError):
    with Capture() as c:
-    fd=c.directory(self.dir)
+    fd=c.directory(owned)
     with mock.patch.object(m.os,'write',side_effect=OSError('fixed write fault')):
      try:m._write(c,fd,'failed-private-file',b'data')
      finally:held=list(c.fds)
   self.assertTrue(held)
   for fd in held:
    with self.assertRaises(OSError):os.fstat(fd)
-  self.assertTrue((self.dir/'failed-private-file').exists())
+  self.assertTrue((owned/'failed-private-file').exists())
  def test_disk_shortage_refuses_before_stage_capture_or_auth(self):
   self.assertEqual(m.MIN_FREE,2*1024**3+256*1024**2)
   with mock.patch.object(m.shutil,'disk_usage',return_value=type('Usage',(),{'free':m.MIN_FREE-1})()) as disk,mock.patch.object(m.artifacts,'authorize_release') as auth,mock.patch.object(m,'_materialize') as materialize,mock.patch.object(m,'run_worker') as run,mock.patch.object(Capture,'read') as read:
