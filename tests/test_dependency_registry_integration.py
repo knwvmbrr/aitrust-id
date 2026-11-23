@@ -15,21 +15,22 @@ SPEC.loader.exec_module(GUARD)
 
 
 class RegistryIntegration(unittest.TestCase):
-    def test_actual_current_two_routes_and_ps_contract(self):
+    def test_actual_current_three_routes_and_ps_contract(self):
         result = GUARD.verify()
         self.assertTrue(result['pass'])
         self.assertEqual(result['registered_routes'], 14)
-        self.assertEqual(result['allowed_routes'], ['mcp-stdio', 'ps-source'])
-        self.assertEqual(result['allowed_source_routes'], ['ps-source'])
+        self.assertEqual(result['allowed_routes'], ['mcp-stdio', 'ps-source', 'source-snapshot'])
+        self.assertEqual(result['allowed_source_routes'], ['ps-source', 'source-snapshot'])
         self.assertEqual(result['source_files'], 9)
-        self.assertEqual(len(result['blocked_routes']), 12)
+        self.assertEqual(len(result['blocked_routes']), 11)
         self.assertIs(result['managed_release_signature_verified_by_registry'], False)
 
     def test_exact_route_status_boolean_and_claim_faults_refuse(self):
         actual = {route: GUARD.evaluate(route, ROOT) for route in GUARD.ROUTES}
         faults = [
             ('mcp-stdio', {'release_allowed': False, 'status': 'blocked_unknown'}),
-            ('source-snapshot', {'release_allowed': True, 'status': 'allowed'}),
+            ('web-checker', {'release_allowed': True, 'status': 'allowed'}),
+            ('source-snapshot', {'release_allowed': False, 'status': 'blocked_unknown'}),
             ('ps-source', {'release_allowed': 1}),
             ('mcp-stdio', {'release_allowed': 1}),
             ('source-snapshot', {'release_allowed': 0}),
@@ -73,7 +74,7 @@ def evaluate(route, root):
     row = original(route, root)
     if fault == 'mcp_blocked' and route == 'mcp-stdio':
         row.update(release_allowed=False, status='blocked_unknown')
-    if fault == 'extra_allowed' and route == 'source-snapshot':
+    if fault == 'extra_allowed' and route == 'web-checker':
         row.update(release_allowed=True, status='allowed')
     return row
 def refused(root):

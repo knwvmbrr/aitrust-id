@@ -1,0 +1,97 @@
+{
+  "profile": "generated-source-metadata-transition-distinct-review/v1",
+  "captured_at": "2026-11-23T19:00:56.440058+00:00",
+  "reviewer": "Codex /root/web_camo",
+  "pass": true,
+  "reviewed_author_receipt": {
+    "path": "runs/2026-11-23-source-current-generated-metadata.json",
+    "sha256": "9fd60e3fbd6297c9e491bbc822093a2de4698c65f523e6608d2b8f6fd5233b3b"
+  },
+  "actual_complete_changes": [
+    {
+      "path": "sbom/reviews/zlib-runtime/manifest.json",
+      "old_sha256": "bde99d53feb686f82c2f12b957cf77a84b0e4a015f6ea9b2e7b87f3156870835",
+      "new_sha256": "1befd6a3cfe5fc91ca9729f84cb7c2302af15e66ae20d5f2971d76d5de379ddd",
+      "complete_differences": [
+        {
+          "path": [
+            "producer_sha256",
+            "tools/dependency_policy.py"
+          ],
+          "old": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+          "new": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408"
+        }
+      ]
+    },
+    {
+      "path": "site/public/web-licenses/packages.json",
+      "old_sha256": "e3f618c21bf815b4dc99d8711ef9e5d6d082078163f37794e7d69139f898a490",
+      "new_sha256": "2de807eaf15cccd340e22dd49679d15c94df5499602c939808c1e4a75c70e1c7",
+      "complete_differences": [
+        {
+          "path": [
+            "sources_sha256",
+            "tools/dependency_policy.py"
+          ],
+          "old": "60a39d21d697f649f3695a5cc7319712fc1dafa60fd8c042c2225fbea9bd585a",
+          "new": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408"
+        }
+      ]
+    },
+    {
+      "path": "site/public/web-licenses/web-runtime.spdx.json",
+      "old_sha256": "3492d33fd2582f0ab8dd428893226ccf4388a4e18de34327e9dac98d20d02ff8",
+      "new_sha256": "772adbbf234df5db3fad800a22fd6b22b80b59e8895a5384c6407bb10e3d4e25",
+      "complete_differences": [
+        {
+          "path": [
+            "documentNamespace"
+          ],
+          "old": "urn:aitrustid:spdx:web-npm:5eb8371f6a03462c90692125a3ec365ce35f4bd49cd41dc0f8f5031252a209c9",
+          "new": "urn:aitrustid:spdx:web-npm:053e44cb841ce3c5ddfaeaa4c7c9bc27019dd724ac69ee2c72c4e09e6e21b5bc"
+        }
+      ]
+    },
+    {
+      "path": "site/public/web-licenses/THIRD-PARTY-NOTICES.txt",
+      "old_sha256": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab",
+      "new_sha256": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab",
+      "complete_differences": []
+    }
+  ],
+  "source_and_capture_hashes": {
+    "before-0": "bde99d53feb686f82c2f12b957cf77a84b0e4a015f6ea9b2e7b87f3156870835",
+    "after-0": "1befd6a3cfe5fc91ca9729f84cb7c2302af15e66ae20d5f2971d76d5de379ddd",
+    "before-1": "e3f618c21bf815b4dc99d8711ef9e5d6d082078163f37794e7d69139f898a490",
+    "after-1": "2de807eaf15cccd340e22dd49679d15c94df5499602c939808c1e4a75c70e1c7",
+    "before-2": "3492d33fd2582f0ab8dd428893226ccf4388a4e18de34327e9dac98d20d02ff8",
+    "after-2": "772adbbf234df5db3fad800a22fd6b22b80b59e8895a5384c6407bb10e3d4e25",
+    "before-3": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab",
+    "after-3": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab",
+    "tools/zlib_source_delivery.py": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a",
+    "tools/web_distribution.py": "56214c9e270c6c9ac05860a74931400fa7135fc43f2afb2c013add2bf6c66215",
+    "tools/dependency_policy.py": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408"
+  },
+  "findings": [],
+  "scope": "Root-authored generated metadata transition facts only, not a fresh review of original producer implementation or V3 authority policy.",
+  "checks": [
+    "Exact eight retained before/after payload lengths, SHA256 and Git blobOID matched author receipt; after bytes equal current root.",
+    "Complete recursive JSON differences are ONLY the two dependency-policy source fingerprints and the source-hash-derived SPDX namespace.",
+    "Both old/new SPDX namespace values independently derived from each exact packages sources_sha256 via the canonical function visible in current producer source; no producer called.",
+    "Current dependency_policy.py SHA is e72e; inspected expected_manifest and expected source map/namespace definitions match observed changes.",
+    "All remaining notice/license/package/runtime/claim/evidence fields, and the complete full notice text bytes, unchanged."
+  ],
+  "author_boundary": "Reviewer authored historical zlib source component; this review does not self-approve its implementation. Independent scope is ROOT current regeneration/transition and exact unchanged-data claims.",
+  "not_executed": [
+    "producer rerun",
+    "SDK/native/model",
+    "network",
+    "archive creation",
+    "tests",
+    "source/admission or legal clearance"
+  ],
+  "limits": [
+    "Only exact current retained four-output transition. Other ROOT edits were not reviewed.",
+    "No source-rights V3 permission or managed artifact cryptographic proof inferred."
+  ]
+}

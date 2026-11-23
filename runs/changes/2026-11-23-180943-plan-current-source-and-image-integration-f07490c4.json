@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-180943-plan-current-source-and-image-integration-f07490c4",
+  "recorded_at": "2026-11-23T18:09:43.091001+00:00",
+  "author": "Codex /root; task-list audit by Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "changed": "Recorded the current whole-source delivery architecture, actual independent worker assignments and source-only image integration boundary before feature implementation.",
+  "proves": "A fresh literal audit retains all202 records and136complete/66open; current source-copy and archive consumer work is assigned separately from image qualification.",
+  "limits": "Plan and active work only; no full original closure, native model qualification, authenticity, legal clearance or independent accuracy acceptance. No six autonomous closures promised.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "state.json": "247a1e6b2867a8539b52e9813180141bf017b6853a3b20e327def09e91371cf3",
+    "docs/session-delivery.json": "6f7772a7ee6b04711d2db9410bc2ee746c2f88b854bdcfeae93dc9f3c8d692f8",
+    "docs/session-delivery-plan.md": "51ac5d11d8e0fc1fe3f03ee542946004e2abc33de84c8738afbb2410fa38207d",
+    "docs/source-snapshot-managed-integration-plan.md": "b792055e4cfd309b3746b8ab07279c0a1da0d1b6f1ab3cab856485d5fc81b5c0"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/session-delivery.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T18:09:43.734519+00:00"
+    }
+  ]
+}

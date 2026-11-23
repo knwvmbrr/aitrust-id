@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-source-copy-rights-v2-profile",
+  "recorded_at": "2026-11-23T03:15:59.946342+00:00",
+  "author": "Codex / share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "dfcfb45ef79bca97d4b4c3ad41bb89b73865d341",
+  "changed": "Implemented a standalone versioned source-copy rights checker for the exact reviewed MCP development tree while preserving v1 and all shared distribution consumers.",
+  "proves": "Actual selected and default checks pass13468sourcefiles/139954777bytes;567explicit delta rows and292origin/grant records retain existing categories and new copied source terms. Fourteen focused controls pass; a distinct nonauthor mechanism review verifies six selected/refusal controls and the complete Git projection. A later root source actually refuses unknown_path without admission.",
+  "limits": "Protected baseline085 remains separate from unprotected selecteddfcf. Prior V1/CFFI/Rust authorship is disclosed by the reviewer. No runtime/SDK/archive execution, source-route admission, signer change, legal clearance, accuracy evidence or full F057/X02 closure. Unknown later source metadata remains unclassified.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/source_release_policy_v2.py": "1438edcb8a7f363fd8da77432d6693b33da529f4dbee17f92655f098d95387fc",
+    "eval/dependencies/source-snapshot-release-v2.json": "b5ffe6abefe80a0b42fcfb3516dc11845e337b21f8612bd14b83f57269a49809",
+    "tests/test_source_release_policy_v2.py": "93fb5a92f737ad62d5b0286c1930a1b7bdf9d9124e226883ce9caa2b843aaa2b",
+    "docs/source-snapshot-rights-v2-plan.md": "558039f86c93231171f36447819cd5ee3912b123cba2a6356d5985395e1a0b34",
+    "docs/source-snapshot-rights-v2.md": "7d7eb799f78c2f59e37a518b20c248717b5a785da11f0bfbc85dfaa47d2fe80d",
+    "runs/2026-11-23-source-copy-rights-v2-execution.json": "83a13ec617452de17de36e23e8c6eec469da3e0895350e25c4c9007ee56065a9",
+    "runs/2026-11-23-source-copy-rights-v2-distinct-review.json": "c853e7f226a72d14dd8bb49cb00cb2ddf282937c43a31c98a6a31c6da089a9c9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-source-copy-rights-v2-execution.json",
+      "sha256": "83a13ec617452de17de36e23e8c6eec469da3e0895350e25c4c9007ee56065a9"
+    },
+    {
+      "path": "runs/2026-11-23-source-copy-rights-v2-distinct-review.json",
+      "sha256": "c853e7f226a72d14dd8bb49cb00cb2ddf282937c43a31c98a6a31c6da089a9c9"
+    }
+  ],
+  "checks": []
+}

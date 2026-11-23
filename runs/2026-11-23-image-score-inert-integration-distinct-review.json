@@ -1,0 +1,60 @@
+{
+  "profile": "offline-image-score-inert-integration-distinct-review/v1",
+  "captured_at": "2026-11-23T17:13:32.743426+00:00",
+  "reviewed_by": "/root/seo",
+  "pass": true,
+  "result": "CLEAR_FOR_INERT_SOURCE_HANDOFF_ONLY",
+  "integration_head": "f1ae35b39d2c61f15b4f10b1f05ebb4a1fc1e786",
+  "integration_branch": "codex/nov23-image-source-integration",
+  "protected_base": "f3503e8623959c725c1f7a69ac32acb487531c6f",
+  "approved_source_handoff": "5a546e4c0a5c8264bdb759752e289eb3238c77c6",
+  "exact_three_commit_map": {
+    "b08acf1f865952f3eb7a3f79e38c5308f85917dd": "d2ca3033d2b16a2b86eeccd55a465044c3efb73c",
+    "4221c5e0f67ac52bced0ad6acbb13a14a8a6680f": "02e50b4302edff53e0927154dd6f5ad0137102b2",
+    "5a546e4c0a5c8264bdb759752e289eb3238c77c6": "f1ae35b39d2c61f15b4f10b1f05ebb4a1fc1e786"
+  },
+  "import_manifest": {
+    "path": "runs/2026-11-23-image-score-inert-import-manifest.json",
+    "sha256": "d72aba7f091bbb99364ce21bfb8e46d04278a33e17d5740ba061190650bd2641"
+  },
+  "current_base_author_receipt": {
+    "path": "runs/2026-11-23-image-score-inert-current-base.json",
+    "sha256": "90848a7a8cae7d18de0b531771889f885e7c6eaa4d45b09e2a8b40713d14f0c9"
+  },
+  "architecture_plan_sha256": "384e3c9be1cba302f5af74f991e5dbd71670799c4682a2df3d07dcb936ec9093",
+  "independently_verified": {
+    "all96_new_paths_current_Git_and_approved_bytes_equal": true,
+    "new_file_bytes": 1099384,
+    "all8_shared_inputs_base_approved_and_current_equal": true,
+    "all83_current_execution_source_bindings_before_after_and_approved_equal": true,
+    "only_existing_file_modified_is_CHANGELOG": true,
+    "three_exact_original_rendered_changelog_sections": {
+      "2026-11-23-162819-image-score-cleanup-efae071b": "086ad40012399835e2cfd8763d038b7b84925f3ae3b34880a72d2716e31353c4",
+      "2026-11-23-153209-image-score-linux-source-a680d5de": "76638243400bdaa8310da58c7fee894fdc68bb33b03135866341bbe6db1cf46f",
+      "2026-11-23-034320-offline-image-score-reference-source-89f847f8": "fa130c5f1a4b29cbffd89fb84477f7288bea1353314f4a31796f99ff7dad3dd2"
+    },
+    "root_changelog_remaining_bytes_equal_after_blank_separator_normalization": true,
+    "no_unrelated_ancestry_imported": true,
+    "workflow_push_and_job_ref_cannot_match_integration_branch": true,
+    "no_site_prepare_service_tag_policy_or_catalogue_source_delta": true
+  },
+  "author_execution_review": {
+    "interpreter": "Python 3.12.14",
+    "focused_groups": [
+      31,
+      32
+    ],
+    "fixed_check_lock": true,
+    "actual_missing_model_exit2": true,
+    "actual_independent_PS_finding": true,
+    "reviewer_replayed_tests": false,
+    "receipt_source_and_outcomes_consistent": true
+  },
+  "conclusion": "The inert current-base import preserves the previously reviewed numerical, acquisition/reference and corrected cleanup sources byte-for-byte. Source-only tests/refusals and PS observations remain separate from actual Linux model qualification. No additional integration defect found.",
+  "limits": [
+    "No test/suite repeat, browser, SDK/model/wheel acquisition/import/install, network, push, workflow dispatch, source edit, signing/admission or deployment by reviewer.",
+    "Workflow remains restricted to original exact branch/ref; actual acquisition/CPU native qualification requires separate ROOT authorization and current capacity/source checks.",
+    "ROOT finite inventory, source-copy grants, affected revalidation/CI and protected publication remain pending; old capability receipts are not promoted current.",
+    "No FA/PA verdict, accuracy calibration, actual model functioning, original requirement closure, or legal/distribution clearance."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-180830-image-score-manual-source-registration-18a8770b",
+  "recorded_at": "2026-11-23T18:08:30.531026+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e5d2233db71dcab5c9c9c44acd305e881a1c9670",
+  "changed": "Registered the optional image-score source cohort and four protocol checks; restricted native qualification to an exact manual dispatch and checked-out commit, preserving runtime and phase budgets.",
+  "proves": "Current31+32+5 source-only tests and fixed lock selection pass; original72 protocol commands and other4 capability definitions are unchanged. Distinct source review confirms88 bindings and real-Git identity refusals. Old acquisition/runtime/cleanup workflow bodies reconstruct exactly to their original hash; all8 shared and numerical inputs remain unchanged.",
+  "limits": "Source registration only. No assets, model, SDK, native inference, installation, network acquisition, workflow launch, push, tag/origin/accuracy or original closure. COMMON manifest changes stale all5 selected profiles; selected boundary evidence is deliberately not rehashed. ROOT source-rightsV2/grant mapping, final inventory/revalidation/protected publication and explicit acquisition approval remain pending. The first stale branch-assertion failure is preserved; only its precise authority expectation was corrected.",
+  "scope_ids": [
+    "T-FA"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "a1c038e98cfc891832b0087b3e9889fc9e0b77039267378c3e35bd91726fe475",
+    ".github/workflows/visual-score-qualification.yml": "986d7d6503d8113bb0d374ee492fc382f362dd220a3cf6fae9287f6693191c60",
+    "eval/revalidation.json": "143d85f893c18cb8b4386aa946753e3fac7cb9e29a457d2bfcbd2f2e4be36ac1",
+    "scripts/verify-route-boundaries.py": "84fa4088e2bee894b7098f1ad5ba973027cbaf992447f703f698bd7155eb6855",
+    "tests/test_visual_score_qualification.py": "f735d972cc6ca3833a96cc92f33e2b541efc558f18d8d93d55710c710c9f0189",
+    "tests/test_visual_score_workflow.py": "5eabb944779dbd388730d7cd220ca8228f301cf0dfacafd4c8b62ab118462545",
+    "docs/offline-image-score-registration-amendment.md": "6264b387777a5204cbc928c28aebd51ed52da08e6197c6f0ba7fc51c17bb84fb",
+    "runs/2026-11-23-image-score-manual-registration-first-failure.json": "a0dfd6bb5ed121c26c5b9a3c289f1932b5171daddade1cbe054599a88c7ec113",
+    "runs/2026-11-23-image-score-manual-registration-source.json": "2f29c4aea6b4c8ef05f641ae5affb455bc1e4364cd9e1d2d079fcaf0e95645b3",
+    "runs/2026-11-23-image-score-manual-registration-distinct-review.json": "423f931ff735cf93a545e22b0dc6fad0ff8773f50dd59bbd2afe8747a9292efd"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-image-score-manual-registration-first-failure.json",
+      "sha256": "a0dfd6bb5ed121c26c5b9a3c289f1932b5171daddade1cbe054599a88c7ec113"
+    },
+    {
+      "path": "runs/2026-11-23-image-score-manual-registration-source.json",
+      "sha256": "2f29c4aea6b4c8ef05f641ae5affb455bc1e4364cd9e1d2d079fcaf0e95645b3"
+    },
+    {
+      "path": "runs/2026-11-23-image-score-manual-registration-distinct-review.json",
+      "sha256": "423f931ff735cf93a545e22b0dc6fad0ff8773f50dd59bbd2afe8747a9292efd"
+    }
+  ],
+  "checks": []
+}

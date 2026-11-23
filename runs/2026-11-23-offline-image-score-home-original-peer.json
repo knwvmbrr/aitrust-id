@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-11-23T03:27:42.490188+00:00",
+  "finding": "Ordinary owned worker deadline reaps the child but leaves its privately created HOME outside parent cleanup ownership.",
+  "limits": [
+    "Pure owned-temp ownership counter only: fake infer sleeps, resource syscalls stubbed, no SDK/model/image decoding/network",
+    "No parent/host crash simulated; this is the existing ordinary run timeout path",
+    "No production source edited; only the actual empty owned directory and marker were removed after recording"
+  ],
+  "observations": {
+    "HOME_mode": 320,
+    "child_exit": -9,
+    "deadline_reason": "deadline",
+    "empty_HOME_still_exists_after_supported_deadline": true,
+    "owned_child_reaped": true,
+    "owned_worker_entered_fake_infer_after_HOME_creation": true
+  },
+  "pass": false,
+  "profile": "image-score-owned-worker-home-timeout-counter/v1",
+  "reviewed_by": "/root/seo",
+  "source_sha256": {
+    "tools/visual_score.py": "75e0db4f826ea66edeccfd9f7733563daaabfd8b7969a01dcb96d3fa5f5b2660",
+    "tools/visual_score_process.py": "0d5f86c989f38ac98e2ecc20ee98304e187fbaa50ec14cff5784d380afc22cb9"
+  }
+}

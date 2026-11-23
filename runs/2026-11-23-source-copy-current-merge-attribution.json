@@ -1,0 +1,55 @@
+{
+  "profile": "source-copy-current-protected-merge-attribution/v1",
+  "captured_at": "2026-11-23T18:19:22.668172+00:00",
+  "pass": true,
+  "protected_parent": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "source_base_before_merge": "80ec95238398343c35f7da8570485e67848ba58b",
+  "actual_initial_normal_guard": {
+    "pass": false,
+    "changed_files": 57,
+    "new_records": 11,
+    "total_records": 1261,
+    "errors": [
+      "New change missing fresh matching event: site/index.html",
+      "New change missing fresh matching event: site/scripts/owner-guide.mjs",
+      "New change missing fresh matching event: site/scripts/prepare.mjs",
+      "New change missing fresh matching event: site/scripts/render-reference.mjs",
+      "New change missing fresh matching event: site/src/main.jsx"
+    ],
+    "mode": "staged_index",
+    "commit_created": false
+  },
+  "diagnosis": "Normal full-merge staged range requires fresh exact-byte attribution for these inherited protected display files. Current bytes equal the protected parent; this continuation did not author or change them.",
+  "files": {
+    "site/index.html": {
+      "sha256": "bc5cc8df87041e8c9f291384497e6d96b2063e173590083509477f22f6b1075d",
+      "bytes": 137228,
+      "exact_protected_parent_bytes": true
+    },
+    "site/scripts/owner-guide.mjs": {
+      "sha256": "afbea9a66984959ee8cfa5a4a8048405e1f852c4672f2d13a4450df2d0151581",
+      "bytes": 6557,
+      "exact_protected_parent_bytes": true
+    },
+    "site/scripts/prepare.mjs": {
+      "sha256": "388c87c62423fac7d9e2902b63337700148571f22d3884c144c8b8e241ef9937",
+      "bytes": 19821,
+      "exact_protected_parent_bytes": true
+    },
+    "site/scripts/render-reference.mjs": {
+      "sha256": "3e3fef43a4d5acc0fe3316507ca4460bea58f739b29904d587951c3add4310b4",
+      "bytes": 36866,
+      "exact_protected_parent_bytes": true
+    },
+    "site/src/main.jsx": {
+      "sha256": "c050af7299831d0216fd7940f5e4753fc683ef4fed594af0263ca0e821315f17",
+      "bytes": 25116,
+      "exact_protected_parent_bytes": true
+    }
+  },
+  "correction": "Record exact merge inheritance separately and retry normal staged hook. Existing source/qualification/grant records remain immutable. Required site source paths materialized without editing; initial lookup of sparse paths stopped before writing an observation.",
+  "behavior_tests_repeated": false,
+  "source_changed_for_correction": false,
+  "root_metadata_scope_state_policy_overridden": false,
+  "next_normal_commit_pending": true
+}

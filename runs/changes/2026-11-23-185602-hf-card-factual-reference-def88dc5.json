@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-185602-hf-card-factual-reference-def88dc5",
+  "recorded_at": "2026-11-23T18:56:02.190961+00:00",
+  "author": "Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "916103dd8f04b561e4f9ae850fd77aaa0904e17a",
+  "changed": "Replaced an unnecessary copied Hugging Face card with a pinned factual external reference; preserved the original OpenAI CLIP card and warnings.",
+  "proves": "Four affected source controls and three actual CLI controls passed; production AST differs only in source-pin/source-path assignments and all eight shared inputs remain exact. Separate ROOT review confirms the authored reference facts and source identity.",
+  "limits": "No new retrieval, SDK/model/assets, native inference, numerical-method change, documentation-copy grant, accuracy, source admission or original closure. Prior 83-source receipts and Git history remain historical; original card privately preserved.",
+  "scope_ids": [
+    "T-FA",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "docs/hf-model-card-reference-plan.md": "d2258ad5b74aff81070ba43ce81ae38b4b41f864d1905c57dff71ce28e94a60f",
+    "docs/offline-image-score-guide.md": "5240e1a31ce9e8e09dd4dc88e2c8ee3c0dc38f85efe0955ae4df965c46cd3368",
+    "integrations/visual-score-reference/1.0.0/hf-model-card-reference.json": "7ba894d89271710d574456154041d8dc98e0cb90af0929ce2ea77af782718621",
+    "integrations/visual-score-reference/1.0.0/hf-model-card.md": null,
+    "integrations/visual-score-reference/1.0.0/source.json": "f95f1008433c32216e0153c8ffd3d9cab4327abed047c19f28fd0c99d55253dc",
+    "runs/2026-11-23-hf-card-factual-reference-distinct-review.json": "c81742135b10ea00fc75c24e58e44321dce4855a1f0544702464761b45a486c5",
+    "runs/2026-11-23-hf-card-reference-correction.json": "4fc00710a574e982225b9096700e6d9c3758222e28799d70aaa3065b8432cb42",
+    "tests/test_visual_score.py": "2426d5c10f928b8d8287f4c44f291a1fe68424c2663b555d02532fe9245804fc",
+    "tests/test_visual_score_qualification.py": "854fbcb91c34b2a153e9dd5b4d3e906b12324242cfca5ce9f5cb6518b534cebf",
+    "tools/visual_score_assets.py": "520aa38273620f01645dcfbba414502e74fc23b3b881677810723d803941e231",
+    "tools/visual_score_qualification.py": "e4c628b5a94fbc6252cfe5ebc450cab0b3da76e94c9d957495b32e50503aa449"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-hf-card-reference-correction.json",
+      "sha256": "4fc00710a574e982225b9096700e6d9c3758222e28799d70aaa3065b8432cb42"
+    },
+    {
+      "path": "runs/2026-11-23-hf-card-factual-reference-distinct-review.json",
+      "sha256": "c81742135b10ea00fc75c24e58e44321dce4855a1f0544702464761b45a486c5"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,89 @@
+{
+  "profile": "current-source-copy-composition-distinct-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-23T18:13:41.908193+00:00",
+  "reviewed_by": "/root/seo",
+  "selected_source_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "selected_source_tree": "e2ad43304f0d53194c2b4456ce176ac72fa4968b",
+  "author_execution_sha256": "69c504319c429143cc17695d47a5b73d04d2fd2d01c9805f4b373951f406b433",
+  "current_source_bindings": {
+    "tools/source_release_policy_v2.py": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c",
+    "eval/dependencies/source-snapshot-release-v2.json": "2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d",
+    "tools/source_release_policy.py": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6",
+    "eval/dependencies/source-snapshot-release.json": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+    "tools/source_snapshot_binding.py": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "scripts/build-source-snapshot.py": "865dee30bb6f2908014fdcee17aac41aa4e0fa149d50d01677c30c7a5a838d56",
+    "tests/test_source_release_policy_v2.py": "6151ba84e310a5726b623901f67d797e9deada3c5ba635d26815ad5ed941d182",
+    "tests/test_source_release_policy_v2_archive.py": "4cc65a60dc2f42d5507f6885eeb0d867ede0f70f450712da6c569632568e049f",
+    "docs/source-snapshot-rights-current-main-plan.md": "aa5932d1c59785b3916ef762e0ae7d90a54713ddb98dcb569bd11b7d244caa5d",
+    "docs/source-snapshot-rights-current-main.md": "a1ec74a81037ad0d8544f715e89ee041ef71fd0fb55261adac570269b2a463e9",
+    "docs/source-snapshot-rights-v2.md": "b8efb5a5fe2f08430962d327b93ca842db1fa5aa08bbd55c2f009e821286cba4",
+    "eval/dependencies/source-copy-v2-history/source-snapshot-release-v2-b5ffe6abefe80a0b42fcfb3516dc11845e337b21f8612bd14b83f57269a49809.json": "b5ffe6abefe80a0b42fcfb3516dc11845e337b21f8612bd14b83f57269a49809",
+    "eval/dependencies/source-copy-v2-history/source_release_policy_v2-1438edcb8a7f363fd8da77432d6693b33da529f4dbee17f92655f098d95387fc.py": "1438edcb8a7f363fd8da77432d6693b33da529f4dbee17f92655f098d95387fc",
+    "eval/dependencies/source-copy-v2-history/source_release_policy_v2-fb7df81a98c2763c69bbc2314df76b651d114c60044d6d098debed3cde45fb70.py": "fb7df81a98c2763c69bbc2314df76b651d114c60044d6d098debed3cde45fb70"
+  },
+  "actual_retained_stdout_identities": {
+    "build-result.json": {
+      "sha256": "8a96626f0620536e52e29e3b9cc692a7dc3a3538c683fe34620a1fd969c72035",
+      "bytes": 330
+    },
+    "copy-and-binding-result.json": {
+      "sha256": "087afc6ff58dbca9cc7115903895c4917b68b5744ec7cca5cbdd1f2d22eaefb7",
+      "bytes": 394
+    },
+    "copy-and-binding-corrected-result.json": {
+      "sha256": "902cdde900489a5712689bf63a83f28847a716deaf42f1be3c31140546d0f362",
+      "bytes": 937
+    }
+  },
+  "retained_archive_identity": {
+    "bytes": 40864663,
+    "sha256": "f3b69aed5339784e5d5700289c808832c8ed377316b8bcfa4c2ba95716524cfe",
+    "reviewer_action": "Streaming SHA/size only; no decompression/reconstruction/binding rerun"
+  },
+  "independent_small_controls": [
+    {
+      "case": "test_unknown_copy_rights_refuse_before_any_binding_execution",
+      "pass": true
+    },
+    {
+      "case": "test_actual_tiny_git_archive_and_coherent_forgery",
+      "pass": true
+    },
+    {
+      "case": "real_owned_archive_sized_transport_1000001_bytes",
+      "pass": true,
+      "elapsed_seconds": 0.0164
+    }
+  ],
+  "independent_table_comparison": {
+    "selected_rows_match_actual_Git": 13502,
+    "raw_bytes": 142114658,
+    "new_project_text": 34,
+    "changed_project_text": 20,
+    "missing": 0,
+    "changed_third_party": 0,
+    "old_origin_records_unchanged": 292,
+    "new_origins_total": 327,
+    "table_delta_rows": 615
+  },
+  "findings": [],
+  "conclusions": [
+    "Exact current-source classifications preserve V1/oldV2/source-grant categories and anchors;34 named additions and20 changes are project text, not new raw upstream source.",
+    "One legal prose-marker exception is exact path/oldmarker/newmarker/newblob; protected new notice expressly makes no public software-license/user-policy change. No global marker rule is relaxed.",
+    "Classification precedes archive interpretation. Corrected wrapper captures/pins c219 binder bytes in restricted stdlib namespace, uses existing archive-sized transport and fixed child argv; no sibling reopen/import or cap widening.",
+    "Fixed95s envelope/60s binding/4KiB output, no network/Git lazyfetch/replace refs/extraction and closed true/false/count/commit/archiveSHA output checks remain.",
+    "Actual author retained one archive construction, initial generic-worker1MB transport failure and corrected same-archive success; exact rawstdout/archive identities independently verified.22 initial controls historical atfb7;9 affected current controls retained, not all23 rerun.",
+    "Composed pass still signature_verified/source_archive_admitted/release_authorized/compiled_runtime_permission/legal_clearance/accuracy/complete_F057_X02 false. Protected signature and actual managed integration remain ROOT work."
+  ],
+  "authorship_qualification": "Reviewer authored earlier V1 source-copy/CFFI/Rust facts; independent review here covers new source selection/table continuation, wrapper/resource/integrity boundaries and actual retained evidence, not renewed independent legal approval of own grant inputs.",
+  "limits": [
+    "No full22/23-suite repetition, real142MB-source archive rebuild, full-binding replay, extraction, SDK/model/native/browser/install/network/signature/admission.",
+    "Own3 small current controls only (tiny fixture injected copy decision is NOT a rights grant); exact current whole-source copy classification was independently executed before transport-only correction atfb7, retained historical; final current author result inspected by exact raw identity.",
+    "CHANGELOG merge remains unresolved in Git status at review; source-focused CLEAR does not claim normal commit/attribution/integration completion."
+  ]
+}

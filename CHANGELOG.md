@@ -2,6 +2,150 @@
 
 ## Unreleased — 2026-11-23
 
+
+
+### 2026-11-23-source-image-integrated-source
+
+Recorded 2026-11-23T19:30:04.437877+00:00 · Contributor: Codex /root; component authors and different reviewers retained in individual records · change
+
+- **Changed.** Integrated finite whole-source copy admission, actual canonical-archive binding and an authenticate-before-probe managed consumer with a protected-main producer; imported separately reviewed manual-only unqualified image source and exact copied grants.
+- **Evidence.** Focused source controls, actual PS probe children after simulated authority,34 pytest policy controls and33 shared unittest controls pass; different review checked21 source bindings, sibling isolation and six explicit producer outputs. Actual assembled Git/archive, packet capacity, five current profiles and protected signature remain the next gates. [Change record](./runs/changes/2026-11-23-source-image-integrated-source.json).
+- **Not claimed.** No actual protected source release, native image inference, model accuracy, legal clearance, full fourteen-route approval or original requirement closure.136 originals complete,66 open; target60 unmet. Historical receipts and private/unrelated files preserved.
+
+### 2026-11-23-source-copy-v3-finite-additions
+
+Recorded 2026-11-23T19:14:58.189113+00:00 · Contributor: Codex /root/share_debugger · change
+
+- **Changed.** Implemented a finite source-copy additions checker with exact metadata/grant identities, required carried notice anchors, mandatory protected base, current-producer consistency and trusted-Git archive binding; preserved immutable V1/V2 and provisional mechanism history.
+- **Evidence.** Distinct mechanism and final finite-data reviews cover135 named project paths,93 exact copied rows and85 explicit origins. Actual focused executions, the24-method fixture failure/correction and current final two controls are separately retained without claiming a single current full24 run. [Change record](./runs/changes/2026-11-23-source-copy-v3-finite-additions.json).
+- **Not claimed.** Final assembled candidate Git/archive execution, source-route admission, authentic protected signatures and managed publication remain subsequent. Source-copy facts do not grant compiled/model/data rights, legal clearance, accuracy or full F-057/X-02 closure.
+
+### 2026-11-23-190824-visual-metadata-copy-grants-9cf5c314
+
+Recorded 2026-11-23T19:08:24.228691+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Recovered and carried complete, individually pinned grant/notice/author texts for 39 exact publisher METADATA/description files in the optional visual source cohort; separated declared wheel terms from documentation-copy scope.
+- **Evidence.** All 85 source bindings match before/after; 39 metadata files equal immutable image916 and 43 raw grant texts total 197929 bytes. Ten exact cached publisher wheel/metadata/member identities and 29 official release source relationships support the copy map. Independent factual review checked all anchors, 93 retained response bodies and special multiple-license/author conditions; no copy-scope blocker found. [Change record](./runs/changes/2026-11-23-190824-visual-metadata-copy-grants-9cf5c314.json).
+- **Not claimed.** Exact source-copy scope only. No wheel/native/model/data rights completion, global legal clearance, artifact admission, package execution/install, model acquisition, workflow, push, accuracy, FA/PA tag or original closure. HF model-card additions are excluded and handled by a separate source revision. Initial cache-locator failure and failed official queries remain retained; no main/neighbor fallback. ROOT owns V3 finite classification, source authority and protected publication.
+
+
+### 2026-11-23-190334-reconcile-active-wave-state-and-current-policy-e90d2dd8
+
+Recorded 2026-11-23T19:03:34.526149+00:00 · Contributor: Codex /root; task board maintained by Codex /root/seo · change
+
+- **Changed.** Updated current state to distinguish the active unvalidated integration from the preserved last public deployment, corrected the current public policy version to1.15 and retained earlier policy observations as history.
+- **Evidence.** Actual source policy exports1.15 and the existing production receipt verifies its nine text copies. The board retains136complete/66open,30bounded scoped jobs complete and managed consumer integration pending real protected authorization. [Change record](./runs/changes/2026-11-23-190334-reconcile-active-wave-state-and-current-policy-e90d2dd8.json).
+- **Not claimed.** Bookkeeping correction only; selected engineering receipts are historical until the five current profiles run. No new policy adoption, company formation, accuracy approval, source-route release or original closure.
+
+
+### 2026-11-23-185602-hf-card-factual-reference-def88dc5
+
+Recorded 2026-11-23T18:56:02.190961+00:00 · Contributor: Codex /root/seo · change
+
+- **Changed.** Replaced an unnecessary copied Hugging Face card with a pinned factual external reference; preserved the original OpenAI CLIP card and warnings.
+- **Evidence.** Four affected source controls and three actual CLI controls passed; production AST differs only in source-pin/source-path assignments and all eight shared inputs remain exact. Separate ROOT review confirms the authored reference facts and source identity. [Change record](./runs/changes/2026-11-23-185602-hf-card-factual-reference-def88dc5.json).
+- **Not claimed.** No new retrieval, SDK/model/assets, native inference, numerical-method change, documentation-copy grant, accuracy, source admission or original closure. Prior 83-source receipts and Git history remain historical; original card privately preserved.
+
+
+### 2026-11-23-183101-managed-source-consumer-9dc18e47
+
+Recorded 2026-11-23T18:31:01.963528+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Implemented a private managed source consumer that requires actual release authorization before finite PS source materialization/execution, streams bounded archive inputs and retains staged evidence with explicit publication uncertainty.
+- **Evidence.** Current21 focused source/IO/probe controls pass with19 stable bindings, including real finite PS subprocesses after test-only simulated authority. Separate review clears auth order, fixed10filecohort, exact record parity,2GiB+256MiB preflight,64KiB decoder buffer, no-overwrite and uncertainty. Prior20 and initial assertion-index failure remain immutable. [Change record](./runs/changes/2026-11-23-183101-managed-source-consumer-9dc18e47.json).
+- **Not claimed.** No real signature or managed source permission success is claimed from injected unit authority. Protected base source route remains refused until ROOT integrates the current copy/Git adapter,V2IO and producer. No archive/model/SDK acquisition, install, network, push, workflow, native platform, detector accuracy, legal clearance, all14 routes or full F-057/X-02 closure. Failed/private stages are retained; no universal hostile-sameUID or host-crash guarantee.
+
+
+### 2026-11-23-181922-preserve-protected-main-merge-attribution-182aac1c
+
+Recorded 2026-11-23T18:19:22.710657+00:00 · Contributor: Codex /root/share_debugger; inherited protected source authored and reviewed in PR151 · change
+
+- **Changed.** Record exact protected6d display/navigation inheritance during the source-copy V2 continuation merge after the normal staged guard required fresh matching attribution.
+- **Evidence.** All five inherited files match protected6d bytes exactly. The first normal hook refusal is preserved; no code changed or behavior test repeated for this administrative correction. [Change record](./runs/changes/2026-11-23-181922-preserve-protected-main-merge-attribution-182aac1c.json).
+- **Not claimed.** Merge attribution only, no new display authorship, browser qualification, rights clearance, admission, signature, accuracy or original closure.
+
+
+### 2026-11-23-181547-current-source-copy-archive-consumer-b4bac8c4
+
+Recorded 2026-11-23T18:15:47.866586+00:00 · Contributor: Codex /root/share_debugger; distinct review Codex /root/seo · change
+
+- **Changed.** Select exact protected6d source-copy obligations with34 named project additions and20 project updates; preserve V1/old V2 and compose finite rights checks with captured trusted Git-byte archive binding.
+- **Evidence.** Actual one-time13502-file142114658-byte source archive builds; the same40864663-byte archive passes corrected classification and exact Git-byte binding.22 initial controls and9 affected corrected controls pass; distinct review verifies18 inputs, the complete Git projection and retained archive/stdout identities. [Change record](./runs/changes/2026-11-23-181547-current-source-copy-archive-consumer-b4bac8c4.json).
+- **Not claimed.** First neutral1MB-transport refusal retained; existing streaming binder reused without cap changes. No signature, source-route admission, runtime/legal/accuracy approval, future-image classification or full F057/X02 closure.
+
+
+### 2026-11-23-source-copy-rights-v2-profile
+
+Recorded 2026-11-23T03:15:59.946342+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Implemented a standalone versioned source-copy rights checker for the exact reviewed MCP development tree while preserving v1 and all shared distribution consumers.
+- **Evidence.** Actual selected and default checks pass13468sourcefiles/139954777bytes;567explicit delta rows and292origin/grant records retain existing categories and new copied source terms. Fourteen focused controls pass; a distinct nonauthor mechanism review verifies six selected/refusal controls and the complete Git projection. A later root source actually refuses unknown_path without admission. [Change record](./runs/changes/2026-11-23-source-copy-rights-v2-profile.json).
+- **Not claimed.** Protected baseline085 remains separate from unprotected selecteddfcf. Prior V1/CFFI/Rust authorship is disclosed by the reviewer. No runtime/SDK/archive execution, source-route admission, signer change, legal clearance, accuracy evidence or full F057/X02 closure. Unknown later source metadata remains unclassified.
+
+
+### 2026-11-23-181740-implement-source-admission-and-managed-producer-2b6eec80
+
+Recorded 2026-11-23T18:17:40.961947+00:00 · Contributor: Codex /root; early distinct failure-path review by Codex /root/seo · change
+
+- **Changed.** Added finite source-copy route admission, complete source-archive binding before format verification, registry consumer updates and a protected whole-source producer. Integrated the independently reviewed image source-only candidate with its preserved events.
+- **Evidence.** Eight changed Python sources parse; real source-copy and image component controls have separately attributed evidence. The producer keeps the existing fixed signing identity and runtime/model permissions separate. [Change record](./runs/changes/2026-11-23-181740-implement-source-admission-and-managed-producer-2b6eec80.json).
+- **Not claimed.** Integration in progress. No protected source signing, consumer runtime, native image qualification, independent accuracy or original closure claimed. Current full-tree copy additions and selected engineering profiles remain pending.
+
+
+### 2026-11-23-180830-image-score-manual-source-registration-18a8770b
+
+Recorded 2026-11-23T18:08:30.531026+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Registered the optional image-score source cohort and four protocol checks; restricted native qualification to an exact manual dispatch and checked-out commit, preserving runtime and phase budgets.
+- **Evidence.** Current31+32+5 source-only tests and fixed lock selection pass; original72 protocol commands and other4 capability definitions are unchanged. Distinct source review confirms88 bindings and real-Git identity refusals. Old acquisition/runtime/cleanup workflow bodies reconstruct exactly to their original hash; all8 shared and numerical inputs remain unchanged. [Change record](./runs/changes/2026-11-23-180830-image-score-manual-source-registration-18a8770b.json).
+- **Not claimed.** Source registration only. No assets, model, SDK, native inference, installation, network acquisition, workflow launch, push, tag/origin/accuracy or original closure. COMMON manifest changes stale all5 selected profiles; selected boundary evidence is deliberately not rehashed. ROOT source-rightsV2/grant mapping, final inventory/revalidation/protected publication and explicit acquisition approval remain pending. The first stale branch-assertion failure is preserved; only its precise authority expectation was corrected.
+
+
+### 2026-11-23-171418-image-score-inert-integration-19a72cf2
+
+Recorded 2026-11-23T17:14:18.654425+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Prepared an isolated source-only image-score integration on protectedf350 using exactly three reviewed commits, preserving all imported bytes and the root changelog; recorded current-base controls and separate source review.
+- **Evidence.** All96 imported new files/8 shared inputs/83 bound sources match the frozen handoff; current31+32 stdlib groups, check-lock, missing-model refusal and independent PS pass. Independent source/identity review and the import-range attribution guard pass; the exact-branch qualification workflow cannot run on this integration branch. [Change record](./runs/changes/2026-11-23-171418-image-score-inert-integration-19a72cf2.json).
+- **Not claimed.** Inert source preparation only. No assets, model, SDK, install, native inference, network acquisition, workflow dispatch, push or production hook. Model execution remains UNQUALIFIED. ROOT inventory/CI/profile/source-grant/protected/publication checks remain pending; no tag, accuracy, origin or original requirement closure. Historical receipts retain their original contexts. Initial changelog resolver and hook refusal are preserved privately; only the exact entry union was corrected.
+
+
+### 2026-11-23-162819-image-score-cleanup-efae071b
+
+Recorded 2026-11-23T16:28:19.244346+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Replaced multi-component cleanup traversal with held nofollow directory descriptors, single-component mutations and checked parent relations; preserved original failure and corrected private-filesystem proofs.
+- **Evidence.** The original immutable4221 counter deletes the outside hardlink; corrected code preserves outside sentinel, replacement link and original with CleanupUncertain. Thirteen affected author controls pass; separate peer replay clears original, normal and open-fault boundaries. All83 current source bindings are stable;80 prior bindings remain unchanged. [Change record](./runs/changes/2026-11-23-162819-image-score-cleanup-efae071b.json).
+- **Not claimed.** SOURCE ONLY. No asset/SDK/model acquisition, install, native inference, workflow launch, push, accuracy, FA/PA or original closure. Whole acquisition remains pending ROOT review; no universal hostile concurrent same-UID race, parent SIGKILL or host-crash guarantee. Uncertain cleanup can retain private bytes. Author receipt predates corrected peer review; both immutable observations are retained separately. Initial normal commit hook refused malformed check-summary metadata; only that event schema was corrected, with code/evidence unchanged.
+
+
+### 2026-11-23-153209-image-score-linux-source-a680d5de
+
+Recorded 2026-11-23T15:32:09.563754+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Prepared the complete official CP313/Linux CPU/reference dependency lock, publisher metadata/notice declarations and executable isolated hosted qualification sources.
+- **Evidence.** 39 exact wheels/49 active edges resolve from retained official metadata; 22 current inert source/IO controls, actual check-lock CLI and syntax checks pass. The 33 prior production inputs remain unchanged. Independent metadata-only review is separate. [Change record](./runs/changes/2026-11-23-153209-image-score-linux-source-a680d5de.json).
+- **Not claimed.** SOURCE ONLY. No wheel/model/SDK body acquired, no optional environment installed, no native model forward, workflow push/launch, accuracy, FA/PA or original closure. Final new acquisition/workflow peer and ROOT review are pending. Actual shipped notice inspection, safe head/backbone load, numerical parity/isolation/use/removal remain UNQUALIFIED.
+
+
+### 2026-11-23-034320-offline-image-score-reference-source-89f847f8
+
+Recorded 2026-11-23T03:43:20.016834+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Implemented optional isolated CPU image-score reference source, fixed nonexecuting checkpoint/source boundaries, bounded private CLI and parent-owned cancellation cleanup; actual model qualification remains pending.
+- **Evidence.** Current31 focused stdlib/synthetic controls pass on33 unchanged peer-reviewed source inputs; actual missing-model CLI and independent canonical PS are exercised. No SDK/weights/native forward ran. [Change record](./runs/changes/2026-11-23-034320-offline-image-score-reference-source-89f847f8.json).
+- **Not claimed.** Source stage only, NOT a functioning-native-model or accuracy claim. Complete Linux hash-lock/workflow/root review, actual safe head/backbone acquisition, native parity/isolation/load-use-remove remain pending. No FA/PA, TFA original closure, F019 image scope, owner data, local SDK/model install, endpoint, push or deploy.
+
+
+### 2026-11-23-180943-plan-current-source-and-image-integration-f07490c4
+
+Recorded 2026-11-23T18:09:43.091001+00:00 · Contributor: Codex /root; task-list audit by Codex /root/seo · change
+
+- **Changed.** Recorded the current whole-source delivery architecture, actual independent worker assignments and source-only image integration boundary before feature implementation.
+- **Evidence.** A fresh literal audit retains all202 records and136complete/66open; current source-copy and archive consumer work is assigned separately from image qualification. [Change record](./runs/changes/2026-11-23-180943-plan-current-source-and-image-integration-f07490c4.json).
+- **Not claimed.** Plan and active work only; no full original closure, native model qualification, authenticity, legal clearance or independent accuracy acceptance. No six autonomous closures promised.
+
+
 ### 2026-11-23-170023-confirm-private-records-production-delivery-40bcfc67
 
 Recorded 2026-11-23T17:00:23.922697+00:00 · Contributor: Codex /root · change

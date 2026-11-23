@@ -1,0 +1,15 @@
+{
+  "profile": "visual-score-qualification-cleanup-peer-counter/v1",
+  "captured_at": "2026-11-23T16:13:49.947794+00:00",
+  "reviewed_by": "/root/seo",
+  "source_sha256": {
+    "tools/visual_score_qualification.py": "f6f9ba4185b4492ee48cc57bedd98886e8e0a432b95c3cdc20139eb92bc676d0"
+  },
+  "control": "Actual owned temporary filesystem; swap nested directory for symlink after whole-tree snapshot returns; external sentinel is a hardlink to captured regular inode. No SDK, install, download or model.",
+  "cleanup_result": "CleanupUncertain",
+  "replacement_symlink_preserved": true,
+  "outside_sentinel_deleted": true,
+  "original_file_retained": true,
+  "finding": "Multi-component os.stat/unlink relative to rootfd follows replaced intermediate directory before later directory-inode refusal.",
+  "no_product_source_edits": true
+}

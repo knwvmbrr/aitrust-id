@@ -4,6 +4,7 @@ from functools import wraps
 import base64
 import hashlib
 import importlib
+import io
 import json
 import os
 from pathlib import Path
@@ -38,7 +39,12 @@ WEB_EVIDENCE=('sbom/assets/notices.json','sbom/nested-runtime/pyodide-wasm-relea
  'sbom/nested-runtime/manifest.json','sbom/reviews/pyodide-js/manifest.json','sbom/reviews/zlib-runtime/manifest.json')
 CONSUMERS={
  'ps-source':('tools/ps_source_distribution.py','scripts/export-ps-source.py'),
- 'source-snapshot':('scripts/source_snapshot.py','scripts/source_snapshot_v2.py','scripts/source_snapshot_v3.py','scripts/build-source-snapshot.py','scripts/verify-source-provenance.py'),
+ 'source-snapshot':('scripts/source_snapshot.py','scripts/source_snapshot_v2.py','scripts/source_snapshot_v3.py','scripts/build-source-snapshot.py','scripts/verify-source-provenance.py',
+  'tools/source_snapshot_binding.py','tools/source_release_policy.py','tools/source_release_policy_v2.py',
+  'eval/dependencies/source-snapshot-release.json','eval/dependencies/source-snapshot-release-v2.json',
+  'tools/source_release_policy_v3.py','eval/dependencies/source-snapshot-additions-v3.json',
+  'tools/source_snapshot_admission.py','tools/source_snapshot_managed.py','scripts/verify-managed-source.py',
+  'docs/source-snapshot-managed-consumer.md'),
  'web-checker':('site/package.json','site/scripts/prepare.mjs','tools/web_distribution.py'),
  'ios-app':('scripts/build-ios-project.py','scripts/verify-ios-archive.py','mobile/ios/Source/Assets.swift'),
  'android-app':('scripts/android-share-build.py','mobile/android/AndroidManifest.xml'),
@@ -362,7 +368,7 @@ class Graph:
             meta,name=row.split(b'\t',1);mode,kind,oid=meta.decode('ascii').split(' ');name=name.decode('ascii');path_name(name)
             need(mode in ('100644','100755')and kind=='blob'and COMMIT.fullmatch(oid))
             self.node('git:'+name,name,None,'committed-git-blob',evidence,details={'git_blob_oid':oid,'git_object_format':'sha1','mode':mode})
-        self.gaps.append('whole_repository_source_terms_need_per_component_review')
+        self.gaps.append('whole_source_copy_requires_current_finite_profile_and_actual_archive_binding')
     def finish(self):
         for path in (*COMMON,*CONSUMERS[self.route]):self.read(path)
         for path in (*PRODUCERS,'tools/dependency_policy.py','scripts/worker_process.py'):
@@ -419,18 +425,23 @@ def spdx(route,artifact,graph,created):
         if n['checksums']:p['checksums']=n['checksums']
         if n['origin']=='committed-git-blob':
             p['sourceInfo']='Git blob object identity (includes Git object header; not a plain file checksum): '+n['details']['git_blob_oid']+'; mode '+n['details']['mode']
-        packages.append(p);relationships.append({'spdxElementId':'SPDXRef-Artifact','relationshipType':'OTHER','relatedSpdxElement':p['SPDXID'],'comment':'Associated source evidence; not a containment claim.'})
+        packages.append(p)
+        relationship={'spdxElementId':'SPDXRef-Artifact','relationshipType':'OTHER','relatedSpdxElement':p['SPDXID']}
+        relationship['comment']=('Source evidence'if route=='source-snapshot'else
+                                 'Associated source evidence; not a containment claim.')
+        relationships.append(relationship)
     for edge in graph['relationships']:relationships.append({'spdxElementId':ids[edge['from']],'relationshipType':'DEPENDS_ON','relatedSpdxElement':ids[edge['to']]})
     return {'spdxVersion':'SPDX-2.3','dataLicense':'CC0-1.0','SPDXID':'SPDXRef-DOCUMENT',
       'name':'AI Trust ID '+route+' artifact/source evidence','documentNamespace':'urn:uuid:'+str(uuid.uuid5(uuid.NAMESPACE_OID,seed)),
       'creationInfo':{'created':created,'creators':['Tool: AITrust-ID-artifact-sbom-1.0.0']},
-      'comment':'Source graph SHA256 '+sha(encoded(graph))+'; source-input set SHA256 '+sha(encoded(graph['source_sha256']))+'; complete embedded coverage and license clearance are not asserted.',
+      'comment':'Source graph SHA256 '+sha(encoded(graph))+'; source-input set SHA256 '+sha(encoded(graph['source_sha256']))+'; complete embedded coverage and license clearance are not asserted.'+(' All OTHER relationships identify associated source evidence, not a containment or permission claim.'if route=='source-snapshot'else''),
       'documentDescribes':['SPDXRef-Artifact'],'packages':packages,'relationships':relationships}
 
 
 @boundary
 def prepare(route,artifact,source_commit,root=ROOT,created=None):
     need(type(source_commit)is str and COMMIT.fullmatch(source_commit));need(route in ROUTES)
+    if route=='source-snapshot':need(Path(root).resolve()==ROOT.resolve())
     created=created or datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00','Z')
     try:
         with Capture()as c:
@@ -446,11 +457,26 @@ def prepare(route,artifact,source_commit,root=ROOT,created=None):
             if mcp is not None:
                 need(mcp['sha256']==value['sha256']and mcp['bytes']==value['bytes']and
                      mcp['profile_sha256']==g['source_sha256']['sbom/mcp-runtime/manifest.json'])
-            if route=='source-snapshot':need(g['committed_tree']==source_commit)
+            if route=='source-snapshot':
+                need(g['committed_tree']==source_commit)
+                from tools import source_release_policy_v3 as source_copy
+                # Artifact capture has a separate archive-sized streaming bound;
+                # metadata's 16 MB limit must not be widened for this 40 MB input.
+                with io.BytesIO() as received:
+                    need(c.artifact(artifact,source_copy.MAX_ARCHIVE,copy_to=received)==value)
+                    bound=source_copy.verify_archive(received.getvalue(),source_commit=source_commit)
+                need(bound.get('pass')is True and bound.get('source_copy_profile_satisfied')is True
+                     and bound.get('trusted_git_bytes_matched')is True
+                     and bound.get('source_commit')==source_commit
+                     and bound.get('archive_sha256')==value['sha256']
+                     and bound.get('archive_bytes')==value['bytes']
+                     and bound.get('source_files')==len(g['nodes'])
+                     and all(bound.get(key)is False for key in source_copy.FALSE_CLAIMS)
+                     and bound.get('signature_verified')is False)
             sbom=spdx(route,value,g,created);policy=evaluate(route,root)
             record={'profile':PROFILE,'route':route,'source_commit':source_commit,'artifact':value,'created':created,
                 'graph':g,'spdx':sbom,'spdx_sha256':sha(encoded(sbom)+b'\n'),'graph_sha256':sha(encoded(g)),
-                'policy':policy,'artifact_format_verified':route in('ps-source','mcp-stdio'),'attestation_verified':False,'release_authorized':False,
+                'policy':policy,'artifact_format_verified':route in('ps-source','mcp-stdio','source-snapshot'),'attestation_verified':False,'release_authorized':False,
                 'license_clearance':False,'complete_project_obligations':False}
             need(len(encoded(record))<=MAX_PACKET);c.check();return record
     except (ValueError,OSError,KeyError,TypeError,RecursionError,UnicodeError):raise PrivateInputError('Artifact evidence unavailable.')from None

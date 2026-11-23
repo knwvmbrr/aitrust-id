@@ -1,3 +1,112 @@
+## Current queue and source-consumer handoff — 2026-11-23T18:43:54.542963+00:00
+
+**136 original requirements complete / 66 open; target 60 remains unmet by six.**
+The canonical current queue is [open tags](scope-progress.md#open-tag-requirements)
+and [other open originals](scope-progress.md#all-other-open-requirements), generated
+from `docs/scope-progress.json`. The old 70-row table below is explicitly a
+**historical baseline**, not the current queue. No criterion or percentage changed.
+
+Current tag IDs (14): T-NF, T-FI, T-HP, T-MT, T-PS, T-IV, T-FA, T-PA, T-UNK, T-PII, T-OUT, T-UC, T-SC, T-BT.
+
+Current other original IDs (52): F-004, F-005, F-076, F-010, F-011, F-012, F-013, F-014, F-015, F-016, F-018, F-019a, F-019b, F-019c, F-020b, F-029a, F-023, F-024, F-037, F-035, F-097, F-050, F-108, F-056, F-113, F-114, F-057, F-120, F-125, F-129, F-130, F-135, F-136, F-137, F-074, F-138, F-141, F-142, F-075, F-143, F-146, F-148, F-155, F-156, F-163, X-02, N-005, N-011, N-012, N-013, N-014, N-015.
+
+**30 scoped jobs complete / 32 task records.** The new
+`session-managed-source-consumer-integration` is **IN_REVIEW**, with no closure
+credit. `/root/web_camo` completed source handoff
+`f86bfd4f199281da4553eb2695cd709aa580e760`, separately reviewed by `/root/seo`;
+all four imported owned files match. Actual author 21 focused controls and the
+reviewer's three affected controls establish source readiness, private capture,
+resource bounds, authorization refusal and fixed stdlib PS probes. Positive
+authority is explicitly substituted only inside tests. Actual protected positive
+authorization followed by the three PS source probes remains required before
+this end-to-end consumer job closes. No successful managed release is claimed.
+[Actual source controls](../runs/2026-11-23-managed-source-reserve-corrected-controls.json) ·
+[Distinct source review](../runs/2026-11-23-managed-source-final-distinct-review.json).
+
+This records a reviewed source handoff with integration pending, not a completed
+end-to-end consumer, source admission, native/model operation, all fourteen
+distribution obligations or F-057/X-02. The author receipt's other
+15 foundational inputs describe its protected6d test base; ROOT's changed
+foundations need fresh integration evidence. All older task records, actual
+observations, baseline hashes and original acceptance history remain intact.
+
+Current dated assignments: ROOT integrates and obtains protected evidence;
+`/root/seo` reviews source/failure boundaries and accounting; `/root/share_debugger`
+implements the finite V3 additions profile; `/root/web_camo` recovers source-copy
+grant/author notices for the exact 39 metadata files. The consumer source handoff
+is complete; its end-to-end acceptance stays pending. No permanent process or
+model qualification assignment is implied.
+
+## Source-only handoffs and current integration — 2026-11-23T18:23:15.282528+00:00
+
+**30 scoped jobs complete / 31 task records; originals remain 136 complete /
+66 open. Target 60 is unmet.** Two predeclared source-only handoffs are complete
+after actual bounded source/CLI evidence, separate review, normal authored
+commits and exact ROOT import:
+
+- `session-image-reference-inert-source-handoff`: `/root/web_camo`, reviewed by
+  `/root/seo`; handoff `916103dd8f04b561e4f9ae850fd77aaa0904e17a`. All 88
+  imported bindings match. Qualification is manual-only with exact identity
+  guards. No model/SDK/assets, native inference, dispatch, global current profile
+  or protected publication is claimed.
+- `session-current-source-copy-archive-handoff`: `/root/share_debugger`, reviewed
+  by `/root/seo`; handoff `936e2a2c1ca6545073d7c03f5e63ec2ab8402fdf`. All 18
+  imported bindings match. The selected protected6d source has 13,502 files and
+  142,114,658 raw bytes; its single 40,864,663-byte archive passed current
+  classification/Git binding after the retained transport failure was corrected.
+  This does not cover new ROOT paths, signature/admission/runtime permission
+  or full F-057/X-02.
+
+Current dated assignments: `/root` integrates the actual source route and
+protected delivery; `/root/seo` leads accounting and independent failure-path
+review; `/root/share_debugger` develops the finite profile for individually named
+image/new-source additions; `/root/web_camo` implements the managed source
+consumer. The completed inert image work is separate from this new consumer
+assignment. These are temporary assignments, not permanent running agents.
+
+Evidence: [image source](../runs/2026-11-23-image-score-manual-registration-source.json),
+[image peer](../runs/2026-11-23-image-score-manual-registration-distinct-review.json),
+[current6d execution](../runs/2026-11-23-source-copy-rights-current-main-execution.json),
+[current6d peer](../runs/2026-11-23-source-copy-rights-current-main-distinct-review.json).
+Exact hashes, observation/commit times, scope and completion decisions are in
+the machine board. ROOT acceptance of these bounded handoffs is not a global
+capability selection or original closure. All five affected old fingerprints
+remain historical until fresh frozen-source checks. Every original criterion,
+percentage, baseline hash and earlier task/history record is preserved. The
+possible64-open arithmetic remains conditional on genuinely satisfying both
+whole distribution contracts, with rights feasibility unresolved.
+
+## Current 66-to-60 execution wave — 2026-11-23T18:00:48.901008+00:00
+
+**136 originals complete / 66 open; target 60 remains unmet by six.** The
+28 completed scoped jobs and 29 total task records remain unchanged. All original
+criteria, percentages, historical tasks and baseline hashes are preserved.
+
+Dated active assignments: `/root` owns shared integration and protected delivery;
+`/root/seo` leads the fresh audit of all 66 literal original contracts and the
+board; `/root/share_debugger` advances source-distribution engineering;
+`/root/web_camo` advances independent image engineering within its authorized
+bounds. These assignments are not permanent agents or live process heartbeats.
+Older dated assignments below describe their own waves.
+
+The fresh audit reviewed all 66 literal contracts against actual jobs, package
+clauses and evidence. F-057 and X-02 are engineering-first whole-contract
+candidates with unresolved rights feasibility, not guaranteed autonomous
+closures. Current policy explicitly records proprietary Apple SDK prerequisites
+and unresolved terms; no exception or payment approval is inferred. Actual
+applicable rights or a functional permitted replacement must be established.
+If both full contracts can be completed, the arithmetic would leave 64 open,
+requiring four further full acceptances to reach 60. That is conditional
+arithmetic, not a guaranteed feasible floor. No six autonomous closures are
+promised. Mixed requirements retain their engineering
+work; separate owner, independent-human, physical-device and legal gates remain
+unchanged. A bounded component, signed MCP release or research statistic does
+not substitute for a full original outcome or tag validation.
+
+No new original closure, model qualification, tag accuracy or publication is
+claimed by this assignment update. The IP/scaling discussion does not replace
+the 66-to-60 goal. Earlier snapshots and their actual observations follow.
+
 ## Current operational delivery — 2026-11-23T15:16:14.889674+00:00
 
 Signed [Linux MCP connection](mcp-linux-release.md) now has actual protected-main production, fresh offline installation and eight synthetic SDK cases. All six public assets were anonymously downloaded and match the signed bytes. See the [dated scope/delivery result](mcp-publication-result.md).
@@ -406,7 +515,13 @@ Conditional stretch queue: `T-PS`, `F-010`, `F-011`, `F-014`, `F-108`, `F-005`, 
 - **F-120:** the owner explicitly separated software/human acceptance only for F-105 and F-119. That does not transfer F-120 or F-156 acceptance.
 - **F-146:** the later trust-owned operating-LLC direction does not constitute nonprofit formation or silently retire its preserved future scope.
 
-## Every open original
+## Historical 70-open baseline — not the current queue
+
+The following table preserves the original session baseline and its acceptance
+wording. It is historical: F-030, F-145, N-001 and N-010 subsequently closed.
+The current queue has 66 originals, as identified above and in the canonical
+[scope ledger](scope-progress.md); do not count this old table as current.
+
 
 The table names each original and its blocking category. The JSON retains the full per-record criterion, historical next action, exact package gates and evidence paths; no item disappears into a category.
 

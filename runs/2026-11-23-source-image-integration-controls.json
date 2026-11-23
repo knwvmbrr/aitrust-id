@@ -1,0 +1,77 @@
+{
+  "profile": "source-image-integration-focused-controls/v1",
+  "recorded_at": "2026-11-23T19:25:43.083849+00:00",
+  "implementer": "Codex /root; separately attributed component authors retained in imported receipts",
+  "source_base": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "current_source_sha256": {
+    "tools/source_snapshot_admission.py": "ac86572e674ab4dc9d8a27fa967df465264929a04508142604c1b5e18bb9e273",
+    "tools/source_snapshot_managed.py": "b251bab9f84654062ea484ed34da2d2cdfbfac105de6359e5a5b2cd94fe5fdb0",
+    "tools/distribution_artifacts.py": "548922881ab62b2c5b9af9dffd09496e4906ca252050bee0495a5f85b8a79e3c",
+    "tools/dependency_policy.py": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408",
+    "tools/source_release_policy_v3.py": "eff79d895ad1b398931577d45787d4a61fc5fb8a9543ca846bd839869a6a6a81",
+    "eval/dependencies/source-snapshot-additions-v3.json": "253897094cefa1fe41c7e79195ac4a28425de8abe10618c8e6e4395a044cca00",
+    "eval/dependency-policy.json": "1b558ea5e5891f388c144a1caba0adb9eb219acff999de8d27b3921edb23e111",
+    ".github/workflows/artifact-sbom.yml": "ef60c3cf5ec218163cbb455b6d051b788b4a7093f545566a7993217779e23d13",
+    "tests/test_source_snapshot_admission.py": "7637c072d629a4001008a75c68ab6478e67f5903acc62a242be43801cdd8227b",
+    "tests/test_source_snapshot_managed.py": "37a3ec14d6b2e35f4b131dcad5cd8255f77971eb9a3407d744903d45f60dfe43",
+    "tests/test_source_snapshot_workflow.py": "e940b4c37ad039e994561e0049a572b7e627666461112b9c758e474b13f0a96e",
+    "tests/test_source_release_policy_v3.py": "f493820a1b3b8c6ac6878eb25b476f8c0f24677ab17619efbc618f405b3c1843"
+  },
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "tests.test_source_snapshot_admission",
+        "tests.test_source_snapshot_managed",
+        "tests.test_source_snapshot_workflow",
+        "tests.test_source_release_policy_v3",
+        "-q"
+      ],
+      "exit_status": 0,
+      "tests": 58,
+      "seconds": 3.964,
+      "scope": "Pre-environment-correction source controls; simulated positive authorization is not cryptographic proof.",
+      "prior_source_sha256": {
+        "tools/source_snapshot_managed.py": "25985f6c2c0da9afcbe301cfc0712d7057af4671efb8e1dfae8632cc3e0ad0bd",
+        "tests/test_source_snapshot_managed.py": "c813f03112ea6d1aaf07d83da5a8c7ebcf5ec0d93dd3e3ca5d025a491ec8a0df"
+      }
+    },
+    {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "tests.test_source_snapshot_managed.ManagedSourceTests.test_no_injectable_verifier_or_execution_options",
+        "tests.test_source_snapshot_managed.ManagedSourceTests.test_real_fixed_probes_after_simulated_authority_not_crypto",
+        "-q"
+      ],
+      "exit_status": 0,
+      "tests": 2,
+      "seconds": 0.7,
+      "scope": "Actual fixed exec wrapper preserves HOME iff supplied, withholds unrelated variables, and all five synthetic probe child processes run after simulated authority."
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-dependency-policy.py"
+      ],
+      "exit_status": 0,
+      "scope": "Actual current copy classifier and 21 registry file identities; three copy/runtime cohort routes admitted by their own bounded contracts; eleven other routes blocked. No signature assertion."
+    }
+  ],
+  "environment_correction": {
+    "finding": "Fixed probe child environment replaced HOME; preserve existing value iff present instead.",
+    "reviewer": "Codex /root/share_debugger",
+    "fixed": true,
+    "numeric_model_or_detector_change": false
+  },
+  "pass": true,
+  "actual_protected_signature_tested": false,
+  "full_assembled_archive_binding_executed": false,
+  "independent_accuracy_evidence": false,
+  "complete_F057_X02": false,
+  "original_complete": 136,
+  "original_open": 66
+}

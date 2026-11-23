@@ -1,0 +1,99 @@
+{
+  "actual_bounded_controls": {
+    "actual_parent_HOME_never_rebound": true,
+    "all21_current_component_bindings_match": true,
+    "auth_before_received_source_selection_materialization_probes": true,
+    "corrected_fixed_wrapper_home_present_absent": true,
+    "exact_six_assets_and_actual_JSON_output": true,
+    "fixed_owned_protected_main_signer": true,
+    "global_claims_unchanged_strict_false": true,
+    "historical_current_spdx_parity_other13_on_fixed_synthetic_graph": [
+      "ps-source",
+      "web-checker",
+      "ios-app",
+      "android-app",
+      "gateway-linux-amd64",
+      "evaluator-linux-amd64",
+      "anonymizer-linux-amd64",
+      "nli-linux-x86_64",
+      "nli-macos-arm64",
+      "c2pa-linux-x86_64",
+      "c2pa-macos-arm64",
+      "mcp-stdio",
+      "node-build-tools"
+    ],
+    "new_job_bash_blocks_syntax_checked": 5,
+    "other13_route_and_component_contracts_unchanged": true,
+    "source_spdx_delta_only_document_and_OTHER_comment_text": true,
+    "workflow_YAML_parsed_existing_PyYAML": "6.0.3"
+  },
+  "author_executions_not_repeated": [
+    "ROOT reports historical initial58, two production-correction controls, one final fake-environment control and33shared controls. These are not reviewer executions or promoted as a single final current58 pass."
+  ],
+  "captured_at": "2026-11-23T19:28:51.782682+00:00",
+  "chronology": [
+    "Initial finding came from the earlier25985 source read. ROOT corrected it during the initial snapshot assembly: initial62f055 therefore already hashes corrected b251 while retaining that earlier finding. This final review resolves it; initial record stays unchanged.",
+    "First final-review harness used line-number-only ordering and stopped because _materialize and _probes share one source line. Corrected tuple(line,column) ordering proves the actual lexical sequence; this was a reviewer harness issue, not a product failure."
+  ],
+  "claims": {
+    "accuracy": false,
+    "actual_final_candidate_archive_qualified": false,
+    "complete_fourteen_routes": false,
+    "legal_clearance": false,
+    "managed_source_runtime_executed": false,
+    "original_requirement_closed": false,
+    "protected_signature_observed": false
+  },
+  "initial_review_sha256": "62f055e2d416e4db185f691a5f7664810808dde5c2125864977542cf8d21a075",
+  "limits": [
+    "Reviewer authored V3 and prior source/MCP foundations; this is distinct review of ROOT shared registration/assembly only. Independent V3 a229, grant725a and HFc817 retain their role boundaries.",
+    "No archive build/extraction, SDK/model/native runtime, network, authentic signature, actual managed installation or broad test/profile execution by reviewer.",
+    "Actual final assembled committed source/archive, exact full packet/SPDX byte capacity and protected producer/fresh consumer result remain subsequent. Source cap enforcement is reviewed; old capacity proof is not promoted."
+  ],
+  "pass": true,
+  "profile": "shared-managed-source-integration-distinct-review/v1",
+  "resolved_finding": {
+    "actual_inert_variants": [
+      {
+        "fixed_exec_and_minimal_env": true,
+        "real_exec_called": false,
+        "synthetic_home_present": true
+      },
+      {
+        "fixed_exec_and_minimal_env": true,
+        "real_exec_called": false,
+        "synthetic_home_present": false
+      }
+    ],
+    "corrected_module_sha256": "b251bab9f84654062ea484ed34da2d2cdfbfac105de6359e5a5b2cd94fe5fdb0",
+    "issue": "Original fixed child environment repurposed HOME. Current wrapper preserves existing HOME only when present, and final test uses private fake os/sys imports.",
+    "original_module_sha256": "25985f6c2c0da9afcbe301cfc0712d7057af4671efb8e1dfae8632cc3e0ad0bd",
+    "path": "tools/source_snapshot_managed.py",
+    "priority": "P2",
+    "real_parent_environment_untouched": true
+  },
+  "reviewed_by": "Codex /root/share_debugger",
+  "reviewed_sources_sha256": {
+    ".github/workflows/artifact-sbom.yml": "ef60c3cf5ec218163cbb455b6d051b788b4a7093f545566a7993217779e23d13",
+    "eval/dependency-policy.json": "1b558ea5e5891f388c144a1caba0adb9eb219acff999de8d27b3921edb23e111",
+    "scripts/verify-managed-source.py": "d8e03339f4b4a19e4615928173ef9c809558e9e276e76e40801983ac6bd12355",
+    "tests/test_source_snapshot_admission.py": "7637c072d629a4001008a75c68ab6478e67f5903acc62a242be43801cdd8227b",
+    "tests/test_source_snapshot_managed.py": "59e0b66d8d6aba3732194a80a472e243cfd9aba6f5f409ed40b5688f2c8f77ca",
+    "tests/test_source_snapshot_workflow.py": "e940b4c37ad039e994561e0049a572b7e627666461112b9c758e474b13f0a96e",
+    "tools/dependency_policy.py": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408",
+    "tools/distribution_artifacts.py": "548922881ab62b2c5b9af9dffd09496e4906ca252050bee0495a5f85b8a79e3c",
+    "tools/source_snapshot_admission.py": "ac86572e674ab4dc9d8a27fa967df465264929a04508142604c1b5e18bb9e273",
+    "tools/source_snapshot_managed.py": "b251bab9f84654062ea484ed34da2d2cdfbfac105de6359e5a5b2cd94fe5fdb0"
+  },
+  "scope": "ROOT shared admission/policy/graph/workflow assembly and V3 API compatibility, not sole review of own V3 implementation",
+  "source_findings": [
+    "Permission requires actual finite V3 execution plus exact component/route shape and carried-source hashes; a reviewed status, received packet or copied component cannot grant another route.",
+    "Paid/closed refusals and lazy optional-route isolation remain; only the source route/component selection changes relative protected6d. Other13 policy contracts are unchanged.",
+    "V3 verify/verify_archive/constants and result names match admission and whole-source prepare. Own V3 source/data independently reviewed in a229.",
+    "prepare requires actual captured archive SHA/size, complete trusted-Git file denominator and exact byte binding. MAX_PACKET remains16000000, and complete encoded packet/SPDX reconstruction remains mandatory.",
+    "Source-SPDX delta changes only repeated explanatory comment text while retaining full identities/OIDs/modes/edges and the global noncontainment/permission qualification. Fixed synthetic graph output is byte-identical for the other13 routes.",
+    "Fixed GitHub repository/workflow/main issuer and source digest/ref, separate trusted roots, exact artifact subject and full SPDX predicate verification precede selecting and exercising the finite10-file PS source cohort. No generic extraction, third-party install or packet-selected command.",
+    "Protected signer needs51artifact plus58managed source controls; only protected own main push/dispatch can sign. Six explicit assets include the real JSON summary from --output, not redirected CLI prose. Consumer staging is excluded."
+  ],
+  "source_unchanged_during_final_review": true
+}

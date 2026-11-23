@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-171418-image-score-inert-integration-19a72cf2",
+  "recorded_at": "2026-11-23T17:14:18.654425+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f3503e8623959c725c1f7a69ac32acb487531c6f",
+  "changed": "Prepared an isolated source-only image-score integration on protectedf350 using exactly three reviewed commits, preserving all imported bytes and the root changelog; recorded current-base controls and separate source review.",
+  "proves": "All96 imported new files/8 shared inputs/83 bound sources match the frozen handoff; current31+32 stdlib groups, check-lock, missing-model refusal and independent PS pass. Independent source/identity review and the import-range attribution guard pass; the exact-branch qualification workflow cannot run on this integration branch.",
+  "limits": "Inert source preparation only. No assets, model, SDK, install, native inference, network acquisition, workflow dispatch, push or production hook. Model execution remains UNQUALIFIED. ROOT inventory/CI/profile/source-grant/protected/publication checks remain pending; no tag, accuracy, origin or original requirement closure. Historical receipts retain their original contexts. Initial changelog resolver and hook refusal are preserved privately; only the exact entry union was corrected.",
+  "scope_ids": [
+    "T-FA"
+  ],
+  "files": {
+    "docs/offline-image-score-integration-plan.md": "384e3c9be1cba302f5af74f991e5dbd71670799c4682a2df3d07dcb936ec9093",
+    "runs/2026-11-23-image-score-inert-current-base.json": "90848a7a8cae7d18de0b531771889f885e7c6eaa4d45b09e2a8b40713d14f0c9",
+    "runs/2026-11-23-image-score-inert-import-manifest.json": "d72aba7f091bbb99364ce21bfb8e46d04278a33e17d5740ba061190650bd2641",
+    "runs/2026-11-23-image-score-inert-integration-distinct-review.json": "f6bd468d5fecb67cd5d27fd7b2de9f93567b729311db1955189d5bd643480b60"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-image-score-inert-current-base.json",
+      "sha256": "90848a7a8cae7d18de0b531771889f885e7c6eaa4d45b09e2a8b40713d14f0c9"
+    },
+    {
+      "path": "runs/2026-11-23-image-score-inert-import-manifest.json",
+      "sha256": "d72aba7f091bbb99364ce21bfb8e46d04278a33e17d5740ba061190650bd2641"
+    },
+    {
+      "path": "runs/2026-11-23-image-score-inert-integration-distinct-review.json",
+      "sha256": "f6bd468d5fecb67cd5d27fd7b2de9f93567b729311db1955189d5bd643480b60"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "{existing_verification_python}",
+        "-B",
+        "scripts/verify-changelog.py",
+        "--base",
+        "f3503e8623959c725c1f7a69ac32acb487531c6f",
+        "--head",
+        "HEAD"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T17:12:56.219634+00:00"
+    }
+  ]
+}

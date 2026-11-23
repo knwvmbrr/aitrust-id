@@ -1,0 +1,11 @@
+{
+  "captured_at": "2026-11-23T03:17:51.761830+00:00",
+  "pass": false,
+  "finding": "original default argparse echoes unknown private argument when required arguments are present",
+  "original_source_reconstructed_and_digest_verified": true,
+  "original_source_sha256": "1e56e04eacfd61d05afcf49b0ae931a41fa4e8dadb87bd709c3871c1fb1e9ddd",
+  "marker_echoed": true,
+  "exit_status": 2,
+  "model_executed": false,
+  "prior_probe": "cli-error-echo-original.json omitted required args and did NOT reach unknown-argument branch; nonproof preserved"
+}

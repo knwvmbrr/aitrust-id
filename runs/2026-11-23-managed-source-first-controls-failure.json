@@ -1,0 +1,24 @@
+{
+  "profile": "managed-source-controls-first-failure/v1",
+  "captured_at": "2026-11-23T18:21:48.111429+00:00",
+  "pass": false,
+  "source_base": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+  "source_sha256": {
+    "tools/source_snapshot_managed.py": "8584bea97f487387dfa8cf6db5826d27b4508b211a74286d3c7fe275205f3eb2",
+    "scripts/verify-managed-source.py": "d8e03339f4b4a19e4615928173ef9c809558e9e276e76e40801983ac6bd12355",
+    "tests/test_source_snapshot_managed.py": "227cc80ecf825a0cce41e902cb5d6ff8d925c84a7b52b2b2cbdf66d6f5ed1b58",
+    "docs/source-snapshot-managed-consumer.md": "91cfbc987166b40d513b9df953afd79d3876b80c4ec935280e3009b769adbfcf"
+  },
+  "actual_tests": 19,
+  "passed": 18,
+  "failed": 1,
+  "actual_elapsed_seconds": 1.271,
+  "exit_status": 1,
+  "failed_case": "test_real_fixed_probes_after_simulated_authority_not_crypto",
+  "cause": "Author test inspected authorize_release positional argument6 (source_commit) instead of5 (route). Actual finite source probes completed before the assertion. Production API call used the correct literal route.",
+  "correction": "Test index6 to5 only; no source consumer/CLI behavior change.",
+  "raw_test_log_separately_retained": false,
+  "tool_transcript_observation": true,
+  "injected_authority_is_signature_proof": false,
+  "native_models_SDK_network_or_installs": false
+}
