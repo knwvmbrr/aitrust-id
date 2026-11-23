@@ -1,0 +1,115 @@
+{
+  "authored_by": "/root/seo",
+  "captured_at": "2026-11-22T23:16:44.055948+00:00",
+  "cases": [
+    {
+      "binding_pass": true,
+      "case": "canonical",
+      "expected_binding_pass": true,
+      "fixed_refusal_code": null,
+      "received_archive_sha256": "6e1893bdd97d70e4badd3ed8013f0922c1468a77ae22818392971759743a321b",
+      "result": {
+        "archive_sha256": "6e1893bdd97d70e4badd3ed8013f0922c1468a77ae22818392971759743a321b",
+        "pass": true,
+        "profile": "source-snapshot-trusted-git-binding/v1",
+        "release_authorized": false,
+        "rights_approved": false,
+        "signature_verified": false,
+        "source_bytes": 36,
+        "source_commit": "4d7bb4af6b629114e173db846b668588d5885f63",
+        "source_files": 4,
+        "source_tree": "f23d918779ff2230c778e0bafd9f33e7f38da5ea",
+        "trusted_git_bytes_matched": true
+      },
+      "serializer_self_consistent": true
+    },
+    {
+      "binding_pass": false,
+      "case": "equal_length_coherent_forgery",
+      "expected_binding_pass": false,
+      "fixed_refusal_code": "blob_mismatch",
+      "received_archive_sha256": "781102c21f47f1e7df4567547f7e2d871619cf6fa089621c692a709688a65e11",
+      "result": null,
+      "serializer_self_consistent": true
+    },
+    {
+      "binding_pass": false,
+      "case": "coherent_extra",
+      "expected_binding_pass": false,
+      "fixed_refusal_code": "inventory_mismatch",
+      "received_archive_sha256": "0eeefa8d2983f15465f819cf613f0477e2d4ce7f3ae1f6e8dcfc11c75708f80a",
+      "result": null,
+      "serializer_self_consistent": true
+    },
+    {
+      "binding_pass": false,
+      "case": "coherent_missing",
+      "expected_binding_pass": false,
+      "fixed_refusal_code": "inventory_mismatch",
+      "received_archive_sha256": "33ceebb8c3b59c8faae3544cdbb825a35220313026317d0637cf8f7f4426314f",
+      "result": null,
+      "serializer_self_consistent": true
+    },
+    {
+      "binding_pass": false,
+      "case": "coherent_mode",
+      "expected_binding_pass": false,
+      "fixed_refusal_code": "inventory_mismatch",
+      "received_archive_sha256": "cfde8df638909d8afae0471621dc655749f15cc4f4f0c518a5f0f3cce08bb199",
+      "result": null,
+      "serializer_self_consistent": true
+    },
+    {
+      "binding_pass": false,
+      "case": "coherent_size",
+      "expected_binding_pass": false,
+      "fixed_refusal_code": "inventory_mismatch",
+      "received_archive_sha256": "1cbbe946688d02f9a2cf4b8b9246594921da6c0b0b49dc7757d2b772b3257d87",
+      "result": null,
+      "serializer_self_consistent": true
+    },
+    {
+      "argument_echoed": false,
+      "case": "private_unknown_argument",
+      "pass": true,
+      "stderr_bytes": 0
+    }
+  ],
+  "focused_controls": {
+    "errors": 0,
+    "failures": 0,
+    "log_sha256": "94ae838a6486fdea50a633946680f3d487cbdeee710848aa2424e757e69298ee",
+    "skipped": 0,
+    "tests": 13
+  },
+  "limits": [
+    "Synthetic tiny actual owned Git repository only; no people or private user content",
+    "No real repository archive, SDK, network, extraction, received code execution, signing, rights approval or route admission",
+    "Rights helper and immutable v1/v2/v3 files unchanged; large archive qualification remains Linux-only future work"
+  ],
+  "pass": true,
+  "prior_harness_failure": {
+    "cause": "new test directory absent in sparse checkout and dotted unittest import did not resolve",
+    "product_invoked": false,
+    "retained_log_sha256": "2757f5a1d07f1dab478d414ca1ea7c41cfdf4e538aa091f352442fd218a22266",
+    "stage": "before_product_import"
+  },
+  "profile": "source-snapshot-git-binding-tiny-actual-execution/v1",
+  "source_sha256_after": {
+    "docs/source-snapshot-binding-plan.md": "96c2aa618cfb24b9556fb2d6022075c2b955ae0b643ff56c056d56dc409f81fc",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+    "tests/test_source_snapshot_binding.py": "cfe47124f59f5ae900960c62bd12e02651c6719b8d1addb5d50e27f7d390841b",
+    "tools/source_snapshot_binding.py": "d620e73179de8a65234ef1e2330d65883bf5de95bb0cfe506bb2acc23032e55b"
+  },
+  "source_sha256_before": {
+    "docs/source-snapshot-binding-plan.md": "96c2aa618cfb24b9556fb2d6022075c2b955ae0b643ff56c056d56dc409f81fc",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+    "tests/test_source_snapshot_binding.py": "cfe47124f59f5ae900960c62bd12e02651c6719b8d1addb5d50e27f7d390841b",
+    "tools/source_snapshot_binding.py": "d620e73179de8a65234ef1e2330d65883bf5de95bb0cfe506bb2acc23032e55b"
+  },
+  "source_unchanged": true
+}

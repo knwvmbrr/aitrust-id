@@ -1,0 +1,115 @@
+{
+  "authored_by": "/root/seo",
+  "captured_at": "2026-11-22T23:18:50.570365+00:00",
+  "cases": [
+    {
+      "binding_pass": true,
+      "case": "canonical",
+      "expected_binding_pass": true,
+      "fixed_refusal_code": null,
+      "received_archive_sha256": "480de0083b473670f7b8317cd865723fc0259256d1d6db609987c8fd86f226df",
+      "result": {
+        "archive_sha256": "480de0083b473670f7b8317cd865723fc0259256d1d6db609987c8fd86f226df",
+        "pass": true,
+        "profile": "source-snapshot-trusted-git-binding/v1",
+        "release_authorized": false,
+        "rights_approved": false,
+        "signature_verified": false,
+        "source_bytes": 36,
+        "source_commit": "fe9aa1ff85014708c7b51656276ef5794cdb2fc3",
+        "source_files": 4,
+        "source_tree": "f23d918779ff2230c778e0bafd9f33e7f38da5ea",
+        "trusted_git_bytes_matched": true
+      },
+      "serializer_self_consistent": true
+    },
+    {
+      "binding_pass": false,
+      "case": "equal_length_coherent_forgery",
+      "expected_binding_pass": false,
+      "fixed_refusal_code": "blob_mismatch",
+      "received_archive_sha256": "a5bfff940cd9c066dd1baad5f760355d4c3aa407b2b8cc978d405dc2c8e45976",
+      "result": null,
+      "serializer_self_consistent": true
+    },
+    {
+      "binding_pass": false,
+      "case": "coherent_extra",
+      "expected_binding_pass": false,
+      "fixed_refusal_code": "inventory_mismatch",
+      "received_archive_sha256": "8b905e6fdcf8fa9e04847a3486bd1d1ffa35aa91f0485c540f6ff54a840ec31f",
+      "result": null,
+      "serializer_self_consistent": true
+    },
+    {
+      "binding_pass": false,
+      "case": "coherent_missing",
+      "expected_binding_pass": false,
+      "fixed_refusal_code": "inventory_mismatch",
+      "received_archive_sha256": "d12d9aa6d5e85cb2001a3fabe2d49a536bd35746cd0992f9ad9969d9624c07e4",
+      "result": null,
+      "serializer_self_consistent": true
+    },
+    {
+      "binding_pass": false,
+      "case": "coherent_mode",
+      "expected_binding_pass": false,
+      "fixed_refusal_code": "inventory_mismatch",
+      "received_archive_sha256": "f42cefd1e5ac2fb78456bfd6484a5f994aa0c2c5c8bc712cbbda396f4aeb1722",
+      "result": null,
+      "serializer_self_consistent": true
+    },
+    {
+      "binding_pass": false,
+      "case": "coherent_size",
+      "expected_binding_pass": false,
+      "fixed_refusal_code": "inventory_mismatch",
+      "received_archive_sha256": "16b9e3cbcb2d025003d76b38656629b2339677c278d424ae86a7aba943f41c0f",
+      "result": null,
+      "serializer_self_consistent": true
+    },
+    {
+      "argument_echoed": false,
+      "case": "private_unknown_argument",
+      "pass": true,
+      "stderr_bytes": 0
+    }
+  ],
+  "correction": "Only captured SHA-pinned foundation code is loaded; no repository package initializer/path reopening or serializer-global mutation",
+  "focused_controls": {
+    "errors": 0,
+    "failures": 0,
+    "log_sha256": "2f4b54ab9846c5b360988a152dec7d692e68f5e2b40820caed5ba127f304dadf",
+    "skipped": 0,
+    "tests": 14
+  },
+  "limits": [
+    "Tiny synthetic actual Git only; no people/private user content",
+    "No full repository archive/SDK/network/extraction/received source execution/signature/rights approval/admission",
+    "Previously reviewed rights files and immutable serializers unchanged; real archive qualification Linux later"
+  ],
+  "pass": true,
+  "previous_candidate": {
+    "path": "runs/2026-11-22-source-snapshot-binding-current.json",
+    "retained_unchanged": true,
+    "sha256": "2eea1aa680b76c7ca40646bacce18b932fc3c45d6ad6c29719a1757e97e32912"
+  },
+  "profile": "source-snapshot-git-binding-tiny-actual-execution/v1",
+  "source_sha256_after": {
+    "docs/source-snapshot-binding-plan.md": "5eb031629ea118b07681a5880c5f016441c2e58710b942f633cf2ce719a0980e",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+    "tests/test_source_snapshot_binding.py": "412a066de7a225c98083f1ef76ebde733bacaa7f8216aa91b2fcd0a48b5f2e1b",
+    "tools/source_snapshot_binding.py": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb"
+  },
+  "source_sha256_before": {
+    "docs/source-snapshot-binding-plan.md": "5eb031629ea118b07681a5880c5f016441c2e58710b942f633cf2ce719a0980e",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+    "tests/test_source_snapshot_binding.py": "412a066de7a225c98083f1ef76ebde733bacaa7f8216aa91b2fcd0a48b5f2e1b",
+    "tools/source_snapshot_binding.py": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb"
+  },
+  "source_unchanged": true
+}
