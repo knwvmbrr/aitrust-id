@@ -45,7 +45,7 @@ Separate shared integration review is CLEAR after the environment correction:
 `runs/2026-11-23-source-image-distinct-review.json`. It explicitly leaves the
 real assembled archive, packet capacity, signature and managed consumer pending.
 
-## Publication still required
+## Publication requirements at the first source handoff
 
 Freeze and classify the assembled committed tree, build and bind its real
 archive, measure its complete packet and predicate, execute the five changed
@@ -57,3 +57,27 @@ separately; no hosted run or successful release is implied by this document.
 The separately assigned image worker is correcting the qualification operation's
 shared deadline and cleanup reserve in an isolated branch. That work is not part
 of this frozen source candidate until separately reviewed and integrated.
+
+## Current hosted observations and continuation — 2026-11-23
+
+The later0eef4a9d candidate integrates the separately reviewed image operation
+budget, cleanup reserve and exact source-suite guards. Actual hosted spec source
+controls pass; native qualification, model inference and independent accuracy
+remain pending. This supersedes the preceding paragraph about an unintegrated
+image handoff without changing its historical observation.
+
+Actual source-capacity run45258115933 passes its full13,735-file archive/Git
+binding and graph/SPDX operation:145,578,628 raw bytes,15,463,606 complete-packet
+bytes and9,352,332 predicate bytes, within unchanged limits. Its PR merge checkout
+is e5a987242af59dc746484a05b7f39e39e8a970dc. This is source-copy engineering,
+without a protected signature or release authorization.
+
+The complete delivery run45258115999 passed PS7/privacy6/extension14, then failed
+protocol command72 on an obsolete expectation that the new source route must be
+blocked. Website did not run. All three successful receipts still assess current;
+their successful combined step and artifact API digest have been checked. The
+MCP correction now compares all13 sibling records unchanged during a component
+failure. A read-only scoped runner executes full protocol78 and website66 next;
+no71-command prefix or failed overall job is adopted as a pass. Final evidence
+selection and actual protected-main signing/managed consumption remain pending.
+Original scope is unchanged:136complete66open; no original closure in this wave.

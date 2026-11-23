@@ -18,7 +18,7 @@ import types
 ROOT = Path(__file__).resolve().parents[1]
 PROFILE = 'source-copy-additions/v3'
 POLICY = 'eval/dependencies/source-snapshot-additions-v3.json'
-POLICY_SHA256 = 'a0e0716f39ace36e352d57e6e0b448da9dcd72bd75bc0c62e88913340c2db538'
+POLICY_SHA256 = '521115a3a01802692079c5a2851fcafbd809f53f124f7548c033092218f3acc3'
 V2_METHOD_SHA256 = '6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c'
 V2_POLICY_SHA256 = '2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d'
 BASE = '6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd'

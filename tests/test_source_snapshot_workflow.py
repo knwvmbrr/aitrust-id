@@ -49,11 +49,11 @@ class SourceWorkflow(unittest.TestCase):
         text = self.source()
         for expected in ("('test_source_snapshot_admission.py',10)",
                          "('test_source_snapshot_managed.py',21)",
-                         "('test_source_snapshot_workflow.py',3)",
+                         "('test_source_snapshot_workflow.py',4)",
                          "('test_source_release_policy_v3.py',24)"):
             self.assertIn(expected, text)
         self.assertIn('assert suite.countTestCases()==count', text)
-        self.assertIn('assert result.testsRun==58', text)
+        self.assertIn('assert result.testsRun==59', text)
 
     def test_branch_missing_controls_extra_authority_and_ambiguous_job_refuse(self):
         text = self.source()
@@ -71,6 +71,67 @@ class SourceWorkflow(unittest.TestCase):
                                      '--output "$SOURCE_RELEASE_DIR/consumer/verified.json" > "$SOURCE_RELEASE_DIR/publish/managed-verified.json"')):
             with self.assertRaises(ValueError):
                 source_job(changed)
+
+    def test_scoped_continuation_identity_complete_execution_and_bounded_export(self):
+        import builtins
+        import subprocess
+        import textwrap
+        import types
+        from unittest.mock import Mock
+        text = (ROOT / '.github/workflows/source-profile-continuation.yml').read_text()
+        self.assertIn('  contents: read\n', text)
+        for denied in ('id-token:', 'attestations:', 'secrets.', 'pull_request_target', 'inputs.command'):
+            self.assertNotIn(denied, text)
+        self.assertIn('github.event.pull_request.head.repo.full_name == github.repository', text)
+        self.assertIn('with: {fetch-depth: 0, persist-credentials: false}', text)
+        self.assertIn('    timeout-minutes: 50\n', text)
+        self.assertIn('        timeout-minutes: 12\n', text)
+        self.assertIn('        timeout-minutes: 25\n', text)
+        self.assertIn('npx playwright install --with-deps chromium webkit', text)
+        self.assertIn('pip install --require-hashes -r services/gateway/requirements.lock', text)
+        self.assertIn('Require the runner', text)
+        for name in ('protocol', 'website'):
+            self.assertEqual(text.count('python3 scripts/revalidate.py '+name+' --output output/source-profiles/'+name+'.json'), 1)
+            self.assertEqual(text.count('python3 scripts/revalidate.py '+name+' --receipt output/source-profiles/'+name+'.json'), 1)
+        self.assertEqual(text.count("('protocol','website')"), 2)
+        self.assertIn("read_evidence('output/source-profiles/'+name+'.json')", text)
+        uploads = [line.strip() for line in text.splitlines() if line.startswith('            output/source-profiles/')]
+        self.assertEqual(uploads, ['output/source-profiles/protocol.json', 'output/source-profiles/website.json'])
+        block = text.split("<<'PY_IDENTITY'\n", 1)[1].split('\n          PY_IDENTITY', 1)[0]
+        code = textwrap.dedent(block)
+        self.assertNotIn('${{', code)
+        expected = 'a' * 40
+        valid = {'EXPECTED_COMMIT': expected, 'GITHUB_SHA': expected,
+                 'GITHUB_REPOSITORY': 'knwvmbrr/aitrust-id',
+                 'SCOPED_HEAD_REPO': 'knwvmbrr/aitrust-id',
+                 'GITHUB_EVENT_NAME': 'pull_request', 'GITHUB_REF': 'refs/pull/153/merge'}
+        def namespace(env, output=expected):
+            launch = Mock(return_value=output+'\n')
+            modules = {'os': types.SimpleNamespace(environ=env), 're': re,
+                       'subprocess': types.SimpleNamespace(check_output=launch, DEVNULL=subprocess.DEVNULL,
+                                                           SubprocessError=subprocess.SubprocessError)}
+            def fixed_import(name, *args, **kw):
+                if name not in modules: raise AssertionError('Unexpected guard import')
+                return modules[name]
+            return {'__builtins__': dict(vars(builtins), __import__=fixed_import)}, launch
+        for env in (valid, valid | {'GITHUB_EVENT_NAME': 'workflow_dispatch', 'GITHUB_REF': 'refs/heads/main'},
+                    valid | {'GITHUB_EVENT_NAME': 'workflow_dispatch', 'GITHUB_REF': 'refs/heads/codex/reviewed'}):
+            scope, launch = namespace(env)
+            exec(compile(code, '<scoped-identity>', 'exec'), scope)
+            launch.assert_called_once_with(['git','--no-replace-objects','rev-parse','--verify','HEAD^{commit}'], text=True, stderr=subprocess.DEVNULL, timeout=5)
+        for changes in ({'EXPECTED_COMMIT': ''}, {'EXPECTED_COMMIT': 'PRIVATE_CANARY'},
+                        {'EXPECTED_COMMIT': 'b'*40}, {'GITHUB_REPOSITORY': 'other/repo'},
+                        {'SCOPED_HEAD_REPO': 'fork/repo'}, {'GITHUB_EVENT_NAME': 'push'},
+                        {'GITHUB_REF': 'refs/heads/main'},
+                        {'GITHUB_EVENT_NAME': 'workflow_dispatch', 'GITHUB_REF': 'refs/heads/unreviewed'}):
+            scope, launch = namespace(valid | changes)
+            with self.assertRaises(SystemExit) as failed:
+                exec(compile(code, '<scoped-identity>', 'exec'), scope)
+            self.assertEqual(str(failed.exception), 'Scoped source identity refused.')
+            launch.assert_not_called()
+        scope, launch = namespace(valid, 'b'*40)
+        with self.assertRaises(SystemExit): exec(compile(code, '<scoped-identity>', 'exec'), scope)
+        launch.assert_called_once()
 
 
 if __name__ == '__main__':

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-source-profile-continuation
+
+Recorded 2026-11-23T20:47:41.342301+00:00 · Contributor: Codex /root implementation; Codex /root/seo distinct review · change
+
+- **Changed.** Corrected the obsolete MCP sibling-policy assertion and added a read-only exact-source runner for the complete protocol and website profiles; retained unchanged PS/privacy/extension source contracts and finite copy bounds.
+- **Evidence.** The actual failed hosted delivery completed its PS7/privacy6/extension14 step successfully and all three raw receipts still assess current. One106-control local command reproduced105passes/1obsolete assertion; the corrected isolated test plus four runner controls passed5. YAML, shell and three inline Python blocks parse. Actual source-capacity run45258115933 passed archive/Git/graph/SPDX under unchanged limits. [Change record](./runs/changes/2026-11-23-source-profile-continuation.json).
+- **Not claimed.** The failed overall run is not successful; full protocol78/website66 continuation, protected signing and real managed consumer remain pending. No independent tag accuracy, release authorization or original closure.136complete66open; target60 unmet.
+
+
 
 
 

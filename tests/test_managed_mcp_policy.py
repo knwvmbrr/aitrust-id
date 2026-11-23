@@ -108,11 +108,15 @@ class FiniteGrantPolicy(unittest.TestCase):
             with self.assertRaises(ValueError): r.review(base)
 
     def test_unavailable_optional_module_does_not_poison_ps_or_other_routes(self):
+        before = {route: policy.evaluate(route, ROOT)
+                  for route in policy.ROUTES - {'mcp-stdio'}}
+        self.assertEqual(len(before), 13)
+        self.assertIs(before['ps-source']['release_allowed'], True)
+        self.assertIs(before['source-snapshot']['release_allowed'], True)
         with patch.object(r, 'component_status', side_effect=ImportError('fixed unavailable optional module')):
-            self.assertFalse(policy.evaluate('mcp-stdio', ROOT)['release_allowed'])
-            self.assertTrue(policy.evaluate('ps-source', ROOT)['release_allowed'])
-        for route in policy.ROUTES - {'ps-source', 'mcp-stdio'}:
-            self.assertFalse(policy.evaluate(route, ROOT)['release_allowed'])
+            self.assertIs(policy.evaluate('mcp-stdio', ROOT)['release_allowed'], False)
+            for route, expected in before.items():
+                self.assertEqual(policy.evaluate(route, ROOT), expected)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-source-profile-continuation",
+  "recorded_at": "2026-11-23T20:47:41.342301+00:00",
+  "author": "Codex /root implementation; Codex /root/seo distinct review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "0eef4a9d0ebb3f77b87cc270a84243a8bde8d26b",
+  "changed": "Corrected the obsolete MCP sibling-policy assertion and added a read-only exact-source runner for the complete protocol and website profiles; retained unchanged PS/privacy/extension source contracts and finite copy bounds.",
+  "proves": "The actual failed hosted delivery completed its PS7/privacy6/extension14 step successfully and all three raw receipts still assess current. One106-control local command reproduced105passes/1obsolete assertion; the corrected isolated test plus four runner controls passed5. YAML, shell and three inline Python blocks parse. Actual source-capacity run45258115933 passed archive/Git/graph/SPDX under unchanged limits.",
+  "limits": "The failed overall run is not successful; full protocol78/website66 continuation, protected signing and real managed consumer remain pending. No independent tag accuracy, release authorization or original closure.136complete66open; target60 unmet.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-140"
+  ],
+  "files": {
+    ".github/workflows/artifact-sbom.yml": "b74ae415adc0cfdf0ce2b1402255db489ba792010b9ca7a0c0e950c30df88fa9",
+    ".github/workflows/source-profile-continuation.yml": "f51c37829f994209d32eb1e629a1e7ba1093d7c142917967becb6a7a4d44481d",
+    "docs/session-delivery-plan.md": "9ff0e998698cb7e7de7454ae800cd0ffaae8b453cbf817f54b852b9f00c4e04a",
+    "docs/session-delivery.json": "cd21315b6401f98a14f83ea757876bc96fac1d25e58f018a280678af7fb9d4b7",
+    "docs/source-profile-continuation-plan.md": "1e2790595a093710af84fe6a28d2aee2337e6b5580c95a81578703ef9650bb1d",
+    "eval/dependencies/source-snapshot-additions-v3.json": "521115a3a01802692079c5a2851fcafbd809f53f124f7548c033092218f3acc3",
+    "eval/dependency-policy.json": "dcf9f48de1ae5a0b08ce16837edbff534a88eb9201cd055e86c9fd007c42ae0e",
+    "eval/route-boundaries.json": "829b136cf38400c19a176255433296834b2d85c2f7730704e5d35a19cdba68e5",
+    "state.json": "f6f0a1c31d357ca0404728f220f65b9a79dfc0642feb5b19d002f067fc400e24",
+    "tests/test_managed_mcp_policy.py": "683356c5fe66ef0c58402feb96e4c9178e2c9e3e206ec20257815d78c3b8ef30",
+    "tests/test_source_snapshot_workflow.py": "244ff703507bd1e207900142206e03619ba46324b1a178407bfd43816d278fd3",
+    "tools/source_release_policy_v3.py": "950bcc05ac9d9565655e4f22149e98ebf19dfbc06600d1224581b6644e4f1718",
+    "docs/source-image-integration-result.md": "2401f357257a2e3a6da9f2abe1a57c0f5436e2262ec5c0b992f1438aa7820a9b"
+  },
+  "evidence": [
+    {
+      "path": "docs/source-profile-continuation-plan.md",
+      "sha256": "1e2790595a093710af84fe6a28d2aee2337e6b5580c95a81578703ef9650bb1d"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "pytest",
+        "tests/test_managed_mcp_policy.py::FiniteGrantPolicy::test_unavailable_optional_module_does_not_poison_ps_or_other_routes",
+        "tests/test_source_snapshot_workflow.py",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T20:47:41.342301+00:00"
+    }
+  ],
+  "actual_prior_delivery": {
+    "run": 45258115999,
+    "job": 137985205939,
+    "overall_conclusion": "failure",
+    "successful_combined_step": "Execute current PS privacy and extension capabilities",
+    "successful_combined_step_conclusion": "success",
+    "artifact_id": 14857934086,
+    "artifact_api_zip_sha256": "24da970037fb41e2beb53c37cc474493fa4e65b8fefb428bca68d26f15acef50",
+    "complete_unchanged_reports": {
+      "PS": "f90ed334e3570e90d06f7c6a85b3a632eeec3dfed11cf42459e7fea037ec043d",
+      "PII_REDACTED": "9ceeebbb7e8e8b036cdc4d38d05a3a5ac33d21b65f2a5e7c18e4af77b4f6e465",
+      "extension": "7bfa92bcf1949944e510049b70b0cb095495320549cc3688a7078a487bc5f5b8"
+    },
+    "protocol": "failed command72; previous71 are not a new complete receipt",
+    "website": "unavailable, not executed"
+  },
+  "actual_capacity": {
+    "run": 45258115933,
+    "source_commit": "e5a987242af59dc746484a05b7f39e39e8a970dc",
+    "files": 13735,
+    "raw_bytes": 145578628,
+    "packet_bytes": 15463606,
+    "spdx_bytes": 9352332,
+    "result_sha256": "2dadb9d9bc892711c4878b7cb4f37ae7d390d13b9fd69190a0f05b8c82ce61f9",
+    "signature_verified": false,
+    "release_authorized": false
+  },
+  "finite_copy_contract": {
+    "project_paths": 154,
+    "project_cap": 160,
+    "copied": 93,
+    "origins": 85,
+    "typed_metadata_transitions": 3,
+    "new_project_names": [
+      ".github/workflows/source-profile-continuation.yml",
+      "docs/source-profile-continuation-plan.md",
+      "runs/changes/2026-11-23-source-profile-continuation.json"
+    ]
+  },
+  "actual_development_failures": [
+    {
+      "operation": "local complete affected106-control command",
+      "passed": 105,
+      "failed": 1,
+      "reason": "obsolete requirement that source-snapshot remain blocked"
+    },
+    {
+      "operation": "bookkeeping inventory refresh",
+      "reason": "missing required root argument; state/board writes preserved; corrected inventory-only invocation succeeded"
+    }
+  ],
+  "owner_gates_preserved": true,
+  "original_closures": 0,
+  "actual_prior_no_egress": {
+    "run": 45258115987,
+    "job": 137985206444,
+    "pass": false,
+    "passed": 6285,
+    "failed": 1,
+    "skipped": 15,
+    "seconds": 460.74,
+    "failed_control": "FiniteGrantPolicy.test_unavailable_optional_module_does_not_poison_ps_or_other_routes",
+    "same_obsolete_sibling_assertion": true,
+    "private_raw_log_sha256": "7f8d559ed09fba0e682dd2907ee1e786b5204a48e6e960407a47bfd258d97db2"
+  },
+  "distinct_source_review": {
+    "sha256": "3ece73b364641783622f4becba74a89601188710125c4b55b8dbb73642e2fe6c",
+    "raw_utf8": "{\n  \"profile\": \"source-profile-continuation-distinct-review/v1\",\n  \"pass\": true,\n  \"captured_at\": \"2026-11-23T20:50:01.444914+00:00\",\n  \"reviewed_by\": \"Codex /root/seo\",\n  \"source_base\": \"0eef4a9d0ebb3f77b87cc270a84243a8bde8d26b\",\n  \"source_hashes\": {\n    \".github/workflows/source-profile-continuation.yml\": \"f51c37829f994209d32eb1e629a1e7ba1093d7c142917967becb6a7a4d44481d\",\n    \"docs/source-profile-continuation-plan.md\": \"1e2790595a093710af84fe6a28d2aee2337e6b5580c95a81578703ef9650bb1d\",\n    \"tests/test_managed_mcp_policy.py\": \"683356c5fe66ef0c58402feb96e4c9178e2c9e3e206ec20257815d78c3b8ef30\",\n    \"tests/test_source_snapshot_workflow.py\": \"244ff703507bd1e207900142206e03619ba46324b1a178407bfd43816d278fd3\",\n    \".github/workflows/artifact-sbom.yml\": \"b74ae415adc0cfdf0ce2b1402255db489ba792010b9ca7a0c0e950c30df88fa9\",\n    \"eval/dependencies/source-snapshot-additions-v3.json\": \"521115a3a01802692079c5a2851fcafbd809f53f124f7548c033092218f3acc3\",\n    \"tools/source_release_policy_v3.py\": \"950bcc05ac9d9565655e4f22149e98ebf19dfbc06600d1224581b6644e4f1718\",\n    \"eval/dependency-policy.json\": \"dcf9f48de1ae5a0b08ce16837edbff534a88eb9201cd055e86c9fd007c42ae0e\"\n  },\n  \"unchanged_receipt_inputs\": {\n    \"eval/revalidation.json\": \"cccaecee64921fc94a30f3a303208a163f190158698a379856a79a83d78a6c8a\",\n    \"protocol/revalidation.py\": \"a8ea8d3b6fadf0cc0023234496fa00a0b7f7cf582ceff8ed38c9db8c93297379\",\n    \"scripts/revalidate.py\": \"148996a10cb67c5c5978d5d129618b9bf1a2fe2838104088aa747aa0d0509dfb\",\n    \"protocol/evidence.py\": \"49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9\",\n    \".github/workflows/delivery-revalidation.yml\": \"6fbd4a7c6cedb257c764ae12e58bf2815a58ac6d8f1193478f1de3f8ee709f76\"\n  },\n  \"reviewed_contract\": [\n    \"MCP unavailable must block MCP and preserve all13 exact pre-fault sibling records; PS and source-snapshot explicitly positive.\",\n    \"Full existing protocol and website execution, not partial command continuation; unchanged600s command implementation.\",\n    \"Same-repo PR or main/codex manual invocation with40hex expected==GITHUB_SHA==actualHEAD before setup; no caller commands or new signer/secrets permissions.\",\n    \"Pinned actions, existing setup/env/hashlocks/JDK/browser preparation unchanged;50min job/12min protocol/25min website.\",\n    \"Only two bounded JSON exports; fresh successful job and current report assessments still required. Prior overall45258115999 failure not relabeled.\",\n    \"V3only3literal project names151to154; allother table content unchanged, core only tableSHA and21actual sourcebindings current.\",\n    \"COMMON4 plus original delivery workflow unchanged; prior3 reports may be reused only after actual run/API/artifact proof and fresh current assessments.\",\n    \"Master202 and all progress object bytes unchanged; no136/66 or original closure change.\"\n  ],\n  \"checks\": {\n    \"bash_syntax_steps\": 10,\n    \"inline_python_ast\": 3,\n    \"source_registry_rows\": 21,\n    \"source_before_after_stable\": true\n  },\n  \"limits\": [\n    \"No workflow execution, broad tests, browser, SDK/model/native, acquisition or network.\",\n    \"Not a collection/adoption of current5reports, independent accuracy, signature, release or original approval.\"\n  ],\n  \"findings\": []\n}\n",
+    "reviewer": "Codex /root/seo",
+    "not_hosted_execution": true
+  }
+}
