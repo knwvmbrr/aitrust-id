@@ -10,7 +10,8 @@ from tools import source_snapshot_admission as a
 from tools import dependency_policy as p
 
 ROOT = Path(__file__).resolve().parents[1]
-SELECTED = '6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd'
+LEGACY_6D = '6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd'
+SELECTED = '9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7'
 
 
 class SourceSnapshotAdmission(unittest.TestCase):
@@ -19,10 +20,22 @@ class SourceSnapshotAdmission(unittest.TestCase):
         return policy['components'][a.COMPONENT], policy['routes']['source-snapshot']
 
     def test_real_current_source_copy_not_runtime_accuracy_or_signature(self):
+        from tools import source_release_policy_v3 as legacy
+        from tools import source_release_policy_v4 as current
+        historical = legacy.verify(source_commit=LEGACY_6D)
+        self.assertIs(historical['pass'], True)
+        self.assertEqual(historical['profile'], legacy.PROFILE)
+        self.assertEqual(historical['source_commit'], LEGACY_6D)
+        self.assertEqual(historical['files'], 13502)
+        self.assertEqual(historical['source_bytes'], 142114658)
+        for key in legacy.FALSE_CLAIMS:
+            self.assertIs(historical[key], False)
         result = a.review(source_commit=SELECTED)
+        self.assertIs(result['pass'], True)
+        self.assertEqual(result['profile'], current.PROFILE)
         self.assertEqual(result['source_commit'], SELECTED)
-        self.assertEqual(result['files'], 13502)
-        self.assertEqual(result['source_bytes'], 142114658)
+        self.assertEqual(result['files'], 13747)
+        self.assertEqual(result['source_bytes'], 147265706)
         for key in ('legal_clearance', 'compiled_runtime_permission',
                     'source_archive_admitted', 'release_authorized', 'accuracy',
                     'complete_F057_X02'):
@@ -83,9 +96,13 @@ class SourceSnapshotAdmission(unittest.TestCase):
             self.assertEqual(p.require_route('ps-source'), before)
 
     def test_received_copy_report_with_forged_authority_or_commit_refuses(self):
-        from tools import source_release_policy_v3 as source
+        from tools import source_release_policy_v4 as source
         actual = source.verify(source_commit=SELECTED)
         self.assertIs(actual['pass'], True)
+        baseline = a.review(source_commit=SELECTED)
+        self.assertIs(baseline['pass'], True)
+        self.assertEqual(baseline['source_commit'], SELECTED)
+        self.assertEqual(baseline['profile'], source.PROFILE)
         for key, value in (('pass', 1), ('source_copy_profile_satisfied', 1),
                            ('source_commit', '0' * 40), ('release_authorized', True),
                            ('files', True), ('accuracy', True)):

@@ -43,6 +43,7 @@ CONSUMERS={
   'tools/source_snapshot_binding.py','tools/source_release_policy.py','tools/source_release_policy_v2.py',
   'eval/dependencies/source-snapshot-release.json','eval/dependencies/source-snapshot-release-v2.json',
   'tools/source_release_policy_v3.py','eval/dependencies/source-snapshot-additions-v3.json',
+  'tools/source_release_policy_v4.py','eval/dependencies/source-snapshot-additions-v4.json',
   'tools/source_snapshot_admission.py','tools/source_snapshot_managed.py','scripts/verify-managed-source.py',
   'docs/source-snapshot-managed-consumer.md'),
  'web-checker':('site/package.json','site/scripts/prepare.mjs','tools/web_distribution.py'),
@@ -459,7 +460,7 @@ def prepare(route,artifact,source_commit,root=ROOT,created=None):
                      mcp['profile_sha256']==g['source_sha256']['sbom/mcp-runtime/manifest.json'])
             if route=='source-snapshot':
                 need(g['committed_tree']==source_commit)
-                from tools import source_release_policy_v3 as source_copy
+                from tools import source_release_policy_v4 as source_copy
                 # Artifact capture has a separate archive-sized streaming bound;
                 # metadata's 16 MB limit must not be widened for this 40 MB input.
                 with io.BytesIO() as received:

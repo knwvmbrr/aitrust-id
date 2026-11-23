@@ -20,7 +20,7 @@ import types
 ROOT=Path(__file__).resolve().parents[1]
 PROFILE='source-copy-additions/v4'
 POLICY='eval/dependencies/source-snapshot-additions-v4.json'
-POLICY_SHA256='6b3bcf0983f47ecb8af37824aeb34556623966621181567449b5605460221e42'
+POLICY_SHA256='02f16f4095f228578262f6be99f7786f27ae7335637238ac5b07accbd80bb546'
 Q='9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7'
 Q_TREE='d5ad815a57ff55a49569c1dbce20c77f3420b3ed'
 Q_FILES,Q_BYTES=13747,147265706

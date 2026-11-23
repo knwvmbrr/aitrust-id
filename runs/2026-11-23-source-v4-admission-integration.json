@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "profile": "source-v4-active-admission-integration/v1",
+  "captured_at": "2026-11-23T23:32:11.477945+00:00",
+  "author": "Codex /root/share_debugger",
+  "source_base": "7e6f48c162210671495315d2a3f7ed5e9d966232",
+  "pass": true,
+  "source_sha256": {
+    "tools/source_snapshot_admission.py": "46c19705538b8381e229f1ad080f0932b495c381c55b20b795658c7aeba526e7",
+    "tools/distribution_artifacts.py": "b45bc06319ced5b5d45198b1689e806c1e2b1f76de1c3e0a97b2c908238fe06f",
+    "eval/dependency-policy.json": "2e8b51545467f45284c346150686ea5cc4a9ca2e32b61d648d229df61f99a17e",
+    "tests/test_source_snapshot_admission.py": "296cc59b354ed8b5d27d5fc2bea07b1e0cf3326994d24181e40310903f9f6c96",
+    "tests/test_source_snapshot_workflow.py": "f18ebe67e4b1393e0962257df87f8ddd4cc5b68bb2654fe5618a952c4b2b02f5",
+    ".github/workflows/artifact-sbom.yml": "f6cdec6f06e6c4784e22f3ff9d518fa6d9be3618b637924a2c31fb1b9e01fa6a",
+    "tools/source_release_policy_v4.py": "c0fe7e055534e7c6bca2116a69f57a8196c19a35408f5399886717f352108558",
+    "eval/dependencies/source-snapshot-additions-v4.json": "02f16f4095f228578262f6be99f7786f27ae7335637238ac5b07accbd80bb546",
+    "docs/source-copy-v4-admission-plan.md": "a95c05571fccd90c423f1882d9578f05c9fef9a800199412e27598f14ad9275b"
+  },
+  "unchanged_source_sha256": {
+    "tools/dependency_policy.py": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408",
+    "tools/source_release_policy.py": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6",
+    "tools/source_release_policy_v2.py": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c",
+    "tools/source_release_policy_v3.py": "26a6bb8be66cab5a355bfbe6fcfbd16cefe994d1e7ade8b26b3cd227f0f82d41",
+    "eval/dependencies/source-snapshot-release.json": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+    "eval/dependencies/source-snapshot-release-v2.json": "2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d",
+    "eval/dependencies/source-snapshot-additions-v3.json": "3bd727fef18736bcd259fa4f1e21fd25fa8629f361b25289dc0016f48394db3e",
+    "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+    "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+    "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+    "tools/source_snapshot_managed.py": "b251bab9f84654062ea484ed34da2d2cdfbfac105de6359e5a5b2cd94fe5fdb0",
+    "scripts/verify-managed-source.py": "d8e03339f4b4a19e4615928173ef9c809558e9e276e76e40801983ac6bd12355",
+    "tools/web_checker_artifact.py": "95e5cfd1d24fe07fa59e36fdaccbbf0dc3e29212d5c944efd9fba919b229b3d4"
+  },
+  "executed": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "-c",
+        "import sys,unittest\nsys.path.insert(0,'tests')\nimport test_source_snapshot_admission as a,test_source_snapshot_workflow as w,test_source_release_policy_v4 as v\nsuite=unittest.TestSuite([unittest.defaultTestLoader.loadTestsFromModule(a),unittest.defaultTestLoader.loadTestsFromModule(w),v.V4('test_155_baseline_names_and_closed_source_read_reservation'),v.V4('test_table_digest_coherent_foundation_change_and_161_refuse')])\nassert suite.countTestCases()==16\nresult=unittest.TextTestRunner(verbosity=2).run(suite)\nassert result.testsRun==16 and result.wasSuccessful() and not result.skipped\n"
+      ],
+      "exit": 0,
+      "elapsed_seconds": 26.751092792022973,
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "160f2e1d96dc24887d6a188c81e2886f81a11babd31fced252490f23784f726c",
+      "stderr": "test_altered_source_hash_and_updated_status_flag_do_not_bypass (test_source_snapshot_admission.SourceSnapshotAdmission.test_altered_source_hash_and_updated_status_flag_do_not_bypass) ... ok\ntest_caller_chosen_checkout_cannot_supply_approval (test_source_snapshot_admission.SourceSnapshotAdmission.test_caller_chosen_checkout_cannot_supply_approval) ... ok\ntest_foreign_route_or_extra_entrypoint_cannot_inherit_copy_rights (test_source_snapshot_admission.SourceSnapshotAdmission.test_foreign_route_or_extra_entrypoint_cannot_inherit_copy_rights) ... ok\ntest_missing_notice_unknown_member_or_boolean_number_refuses (test_source_snapshot_admission.SourceSnapshotAdmission.test_missing_notice_unknown_member_or_boolean_number_refuses) ... ok\ntest_paid_and_closed_cannot_be_relabelled_as_copy_only (test_source_snapshot_admission.SourceSnapshotAdmission.test_paid_and_closed_cannot_be_relabelled_as_copy_only) ... ok\ntest_real_current_source_copy_not_runtime_accuracy_or_signature (test_source_snapshot_admission.SourceSnapshotAdmission.test_real_current_source_copy_not_runtime_accuracy_or_signature) ... ok\ntest_received_copy_report_with_forged_authority_or_commit_refuses (test_source_snapshot_admission.SourceSnapshotAdmission.test_received_copy_report_with_forged_authority_or_commit_refuses) ... ok\ntest_source_admission_requires_actual_finite_classifier (test_source_snapshot_admission.SourceSnapshotAdmission.test_source_admission_requires_actual_finite_classifier) ... ok\ntest_source_spdx_retains_every_identity_and_edge_when_prose_is_deduplicated (test_source_snapshot_admission.SourceSnapshotAdmission.test_source_spdx_retains_every_identity_and_edge_when_prose_is_deduplicated) ... ok\ntest_unavailable_copy_route_never_disables_standalone_ps (test_source_snapshot_admission.SourceSnapshotAdmission.test_unavailable_copy_route_never_disables_standalone_ps) ... ok\ntest_actual_source_job_is_protected_and_uploads_exact_authenticated_summary (test_source_snapshot_workflow.SourceWorkflow.test_actual_source_job_is_protected_and_uploads_exact_authenticated_summary) ... ok\ntest_branch_missing_controls_extra_authority_and_ambiguous_job_refuse (test_source_snapshot_workflow.SourceWorkflow.test_branch_missing_controls_extra_authority_and_ambiguous_job_refuse) ... ok\ntest_private_stage_upload_or_human_stdout_as_json_refuses (test_source_snapshot_workflow.SourceWorkflow.test_private_stage_upload_or_human_stdout_as_json_refuses) ... ok\ntest_scoped_continuation_identity_complete_execution_and_bounded_export (test_source_snapshot_workflow.SourceWorkflow.test_scoped_continuation_identity_complete_execution_and_bounded_export) ... ok\ntest_155_baseline_names_and_closed_source_read_reservation (test_source_release_policy_v4.V4.test_155_baseline_names_and_closed_source_read_reservation) ... ok\ntest_table_digest_coherent_foundation_change_and_161_refuse (test_source_release_policy_v4.V4.test_table_digest_coherent_foundation_change_and_161_refuse) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 26.640s\n\nOK\n"
+    },
+    {
+      "control": "actual registry JSON delta and source table/immutable-source comparisons",
+      "pass": true,
+      "only_changed_or_added_registry_file_rows": [
+        "eval/dependencies/source-snapshot-additions-v4.json",
+        "tools/source_release_policy_v4.py",
+        "tools/source_snapshot_admission.py"
+      ],
+      "all_other_registry_fields_equal": true,
+      "only_named_table_additions": 13,
+      "old_names_retained": true,
+      "project_rows": 130,
+      "capacity_charge": 131,
+      "capacity": 160,
+      "immutable_source_anchors": 13
+    },
+    {
+      "control": "frozen9 source identities and Python syntax/static method census",
+      "pass": true,
+      "python_syntax_files": 5,
+      "method_counts": {
+        "admission": 10,
+        "managed": 21,
+        "workflow": 4,
+        "immutable_v3": 24,
+        "v4": 20
+      },
+      "hosted_configured_total": 79,
+      "hosted_executed_here": false
+    },
+    {
+      "command": "python3: dependency_policy.evaluate('source-snapshot') using actual current source component and classifier",
+      "exit": 0,
+      "elapsed_seconds": 11.765555167046841,
+      "selected_source_commit": "7e6f48c162210671495315d2a3f7ed5e9d966232",
+      "result": {
+        "profile": "technical-dependency-conflict-policy/v1",
+        "route": "source-snapshot",
+        "status": "allowed",
+        "release_allowed": true,
+        "components": [
+          {
+            "id": "source-snapshot-unreviewed",
+            "status": "allowed",
+            "reason": "finite_current_source_copy_grants_only"
+          }
+        ],
+        "scope": "Canonical whole-repository source snapshot with finite per-component copy grants, trusted-Git byte binding and retained notices; no bundled runtime, platform or model permission, whole-project legal clearance or independent tag accuracy.",
+        "legal_clearance": false,
+        "independent_accuracy_evidence": false,
+        "complete_project_obligations": false
+      },
+      "meaning": "Finite source-copy registry permission only, not actual artifact authorization/signature/consumer."
+    }
+  ],
+  "historical_and_current_positives": {
+    "legacy_6d": {
+      "classifier": "immutable V3",
+      "source_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+      "files": 13502,
+      "source_bytes": 142114658
+    },
+    "active_q": {
+      "classifier": "V4",
+      "source_commit": "9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7",
+      "files": 13747,
+      "source_bytes": 147265706
+    },
+    "all_six_nonclaims_false": true
+  },
+  "precode_review": {
+    "sha256": "77a2363f8e66aa08f9721618c21472b03deb67ffa87e1843b5acaace029c47c4",
+    "reviewer": "Codex /root/seo",
+    "scope": "architecture only; final implementation review separate"
+  },
+  "integration_notes": {
+    "source_component_files": 23,
+    "source_consumer_files": 18,
+    "source_archive_active_classifier": "V4 without fallback",
+    "PS_managed_files_unchanged": 10,
+    "web_pin_updates_required": {
+      "tools/distribution_artifacts.py": {
+        "sha256": "b45bc06319ced5b5d45198b1689e806c1e2b1f76de1c3e0a97b2c908238fe06f",
+        "bytes": 39209
+      },
+      "eval/dependency-policy.json": {
+        "sha256": "2e8b51545467f45284c346150686ea5cc4a9ca2e32b61d648d229df61f99a17e",
+        "bytes": 34707
+      }
+    }
+  },
+  "author_tooling_observation": {
+    "initial_helper_script": "failed at repository import before registry generation; corrected using repository-CWD Python invocation",
+    "exception_class": "ModuleNotFoundError",
+    "product_execution_failure": false,
+    "original_tool_result_retained_in_session": true,
+    "helper_script_retained_privately": true
+  },
+  "limits": [
+    "No whole current source archive or protected signature/managed consumer executed.",
+    "16 affected controls executed; 79 is hosted configuration, not a local execution claim.",
+    "No web-helper pin edit, main CI/eval registration, serializer, dependency-policy code, PS consumer, runtime/model/native/SDK/build/download or publication change.",
+    "Prospective named records are optional slots, not executed evidence.",
+    "No whole-route or F-057/X-02 completion, legal clearance, runtime rights, accuracy or human acceptance."
+  ],
+  "claims": {
+    "source_archive_admitted": false,
+    "release_authorized": false,
+    "signature_verified": false,
+    "compiled_runtime_permission": false,
+    "legal_clearance": false,
+    "accuracy": false,
+    "complete_F057_X02": false
+  }
+}
