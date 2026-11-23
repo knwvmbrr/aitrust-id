@@ -1,0 +1,84 @@
+{
+  "profile": "finite-web-runtime-obligations-distinct-review/v1",
+  "pass": true,
+  "captured_at": "2026-11-23T20:52:31.504035+00:00",
+  "reviewed_by": "Codex /root/seo",
+  "base_commit": "f23504d166dd450a81cd35dbc15397b13815de21",
+  "source_hashes": {
+    "tools/web_runtime_obligations.py": "597ac7cc8f53750e723e1119076d63c3363e400e5a7c0ee65bb9cf2ccc52ba7b",
+    "scripts/verify-web-runtime-obligations.py": "92feefd17b3c7ae582c392e5e27560dad80133876bc4e4ad8e35723704a23a5c",
+    "tests/test_web_runtime_obligations.py": "121bbc75622847665b668ef8a9db491eedc160f62f8c1be7eff48f09874e37d1",
+    "sbom/web-runtime/manifest.json": "5d662e2a8c1feeb35465370a01eab9a192c21b0d1eb5c60cbc7021c92e592184",
+    "docs/web-runtime-obligations-plan.md": "1c123d251d182b73f9d244607c60f1d941c349a152f8d4bff02ba23bde2fa444",
+    "sbom/web-runtime/.gitattributes": "fb19e40727644db0dc001773a6a28df5391bb82c4693b87fd461bbba00ac926c"
+  },
+  "retained_inputs_verified": 67,
+  "notice_ranges_independently_checked": {
+    "sbom/web-runtime/cpython-embedded-facts.json": 46,
+    "sbom/web-runtime/external-primary-facts.json": 10
+  },
+  "hiwire_preferred_source_blobs_checked": 13,
+  "own_actual_controls": [
+    {
+      "path": "corrected-tiny-controls.json",
+      "sha256": "c0c949eb71f4824c69f557b7b6ebba4a579b8df17dccb65d75031dd85ae2c45c"
+    },
+    {
+      "path": "cli-prepared-uncertainty-distinct.json",
+      "sha256": "406b82f803bce7ebdc839510ee30b093749b96e390b3fbefbdc449118c6a1855"
+    }
+  ],
+  "author_evidence": [
+    {
+      "path": "runs/2026-11-23-web-runtime-obligations-execution.json",
+      "sha256": "7dd66bca09906fac524491dde8fc8196eeba66f1af317b158f502eb7aab001a3"
+    },
+    {
+      "path": "runs/2026-11-23-web-runtime-bounded-membership-correction.json",
+      "sha256": "22e82b710aa1c9d4912a3da71072ce055909742813b6b56f0bf5095582893cb2"
+    },
+    {
+      "path": "runs/2026-11-23-web-runtime-creation-uncertainty-correction.json",
+      "sha256": "079c85a3da0150c14ac5cfe9b93182ce6ed4be5feb2d16609d80b1dff173e72c"
+    },
+    {
+      "path": "runs/2026-11-23-web-runtime-exact-read-budget-correction.json",
+      "sha256": "2dca491a5806f4f6ffb04d9af46c0f957ed22c79eb061bc28a534d1edaf3af39"
+    },
+    {
+      "path": "runs/2026-11-23-web-runtime-cli-uncertainty-correction.json",
+      "sha256": "dea930d9ef455d97fb65957a800cbedd524d81d131cfb70c140e0e2076a93100"
+    }
+  ],
+  "reviewed_contract": [
+    "Fixed5runtime19receivedfiles; complete exact membership, runtime sizes and hashes,14companions required; received claims cannot approve themselves.",
+    "Pinned67inputs and captured trusted producers; no publisher source/package execution or module-global mutation. All11legacy outputs remain exact manifest identities.",
+    "Single60s/128reads/64Mlogical/16Mcache/8Moutput/128FD/128Mlogical-payload reservation unchanged. Read/artifact limits now exact trusted sizes before OS reading;14postwrite rereads charged.",
+    "Bounded scandir and iterator FD headroom; unknown/excess stops immediately and context closes.",
+    "Prepare checks existing name, marks attempt before mkdir; postattempt cancellation/IO/close faults typed uncertain with retained private output and no unsafe deletion/retry.",
+    "CLI warns after prepared output if optional receipt fails or is cancelled; parser remains outside operation catch.",
+    "MPL preferred source includes exact13Hiwire files plus parent recipe/context, full carried license/source access; PSF/Unicode/stdlib, Pyodide/zlib offers and external notices kept distinct.",
+    "Recipe/default/symbol correspondence and selected-artifact hash verification do not assert exhaustive binary object attribution, rebuilt compiler, route admission, signature, legal or wholeF057 completion."
+  ],
+  "authorship_qualification": "Reviewer authored Emscripten finite facts and exact react2.3.8 project-grant recovery; this review does not independently adopt own facts. Separate share_debugger peers f61d9a41 and220205 cover retained factual records. Independently reviewed helper/IO/CPython-external/Hiwire integration boundaries and carried notice ranges.",
+  "unchanged_functions_from_initial_execution": [
+    "Unavailable",
+    "OutputUncertain",
+    "need",
+    "sha",
+    "encoded",
+    "safe",
+    "private_producers",
+    "zip_bytes",
+    "expected",
+    "report",
+    "unavailable_boundary",
+    "verify"
+  ],
+  "findings": [],
+  "limits": [
+    "Only6actual tiny owned-filesystem controls plus2actual CLI main controls with explicit synthetic producer substitutions. No full21suite claim.",
+    "Author historical15/7case, affected corrections and same actual19file qualification read as retained evidence; reviewer did not rerun runtime copies, regenerate14outputs, native/WASM/SDK/build/archive/network.",
+    "No global license, original completion, source/runtime route or accuracy approval."
+  ]
+}
