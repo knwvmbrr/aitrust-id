@@ -24,12 +24,23 @@ def verify():
             any(row.get('reason') == 'invalid_or_unavailable_policy' for row in decisions)):
         raise ValueError('Invalid route graph')
     selected = require_route('ps-source', ROOT)
-    if (sum(row['release_allowed'] for row in decisions) != 1 or
-            any(row['status'] != ('allowed' if row['route'] == 'ps-source' else 'blocked_unknown')
-                for row in decisions)):
-        raise ValueError('Unreviewed policy promotion')
+    allowed = {'ps-source', 'mcp-stdio'}
+    for row in decisions:
+        expected = row['route'] in allowed
+        if (type(row.get('release_allowed')) is not bool or
+                row['release_allowed'] is not expected or
+                row.get('status') != ('allowed' if expected else 'blocked_unknown') or
+                any(row.get(claim) is not False for claim in
+                    ('legal_clearance', 'complete_project_obligations',
+                     'independent_accuracy_evidence'))):
+            raise ValueError('Unreviewed policy promotion or unavailable reviewed route')
+    if (len(selected['files']) != 9 or selected['route'] != 'ps-source'):
+        raise ValueError('Changed PS source export contract')
     return {'pass': True, 'profile': value['profile'], 'registered_routes': len(decisions),
             'allowed_source_routes': ['ps-source'],
+            'allowed_routes': sorted(allowed),
+            'managed_mcp_consumer': 'scripts/install-managed-mcp.py',
+            'managed_release_signature_verified_by_registry': False,
             'blocked_routes': [row['route'] for row in decisions if not row['release_allowed']],
             'source_files': len(selected['files']),
             'selected_policy_sha256': selected['policy_sha256'],

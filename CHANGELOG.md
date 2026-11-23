@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-23
+
+### 2026-11-23-013931-mcp-registry-zlib-current-integration-5521e2ff
+
+Recorded 2026-11-23T01:39:31.102499+00:00 · Contributor: Codex / share_debugger · change
+
+- **Changed.** Corrected the registry integration guard for the reviewed PS and MCP routes and regenerated the selected zlib provenance with the existing producer.
+- **Evidence.** Actual before refusals become two passing isolated CLIs; exact two admissions and twelve refusals retain the PS nine-file contract. Four focused registry groups and ten selected zlib controls pass. Only the actual zlib policy producer hash changes; all449 qualified MCP inputs remain unchanged. Distinct reviewer replayed bounded typed/promotion/privacy refusal cases and source bindings. [Change record](./runs/changes/2026-11-23-013931-mcp-registry-zlib-current-integration-5521e2ff.json).
+- **Not claimed.** No SDK rerun, filesystem export, site build, WASM execution, acquisition, signature, release or full F057/X02 closure. Existing hosted runtime reports retain their source identities; current hosted integration checks remain pending.
+
+
 ## Unreleased — 2026-11-22
 
 ### 2026-11-22-183950-mcp-protected-base-source-refresh-268f912f
