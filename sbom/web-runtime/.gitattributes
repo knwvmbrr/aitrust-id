@@ -1,0 +1,6 @@
+# Preserve exact upstream notice/patch bytes; these four files contain observed
+# trailing blanks or patch context indentation. No source normalization.
+EMSCRIPTEN-SYSTEM-NOTICES.txt -whitespace
+CPYTHON-EMBEDDED-NOTICES.txt -whitespace
+hiwire/patches/wasi-libc-clang-17-compat.patch.txt -whitespace
+hiwire/patches/emcc-emjs-dylink-externref.patch.txt -whitespace

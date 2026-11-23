@@ -1,0 +1,119 @@
+{
+  "claims": {
+    "binary_object_closure_proved": false,
+    "compiler_reproduced": false,
+    "legal_clearance": false,
+    "route_admitted": false
+  },
+  "commit": "6a1e67280a15d929ebeceee54a6358c9c8d5f697",
+  "files": [
+    {
+      "bytes": 16725,
+      "git_blob_oid": "a612ad9813b006ce81d1ee438dd784da99a54007",
+      "name": "LICENSE",
+      "path": "sbom/web-runtime/hiwire/LICENSE.txt",
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/LICENSE"
+    },
+    {
+      "bytes": 1258,
+      "git_blob_oid": "7cef8b182fe3317623639c2b9d19d65f8da85fa7",
+      "name": "Makefile",
+      "path": "sbom/web-runtime/hiwire/Makefile.txt",
+      "sha256": "cc8ccb05c4c77e9291d37d69126852c0b1874bb5d672a112cf89d95d46eb7f2e",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/Makefile"
+    },
+    {
+      "bytes": 6696,
+      "git_blob_oid": "71077bee8c8b1c4dd11f83e80584cfb6bc502a47",
+      "name": "README.md",
+      "path": "sbom/web-runtime/hiwire/README.md.txt",
+      "sha256": "b1e974fdce18050a3f4d176378bcd3ded063ec1ea1484727929a8745bd942a55",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/README.md"
+    },
+    {
+      "bytes": 2919,
+      "git_blob_oid": "81b4a72f85a4a74e109ad979f5a84df1d5e7efee",
+      "name": "patches/emcc-emjs-dylink-externref.patch",
+      "path": "sbom/web-runtime/hiwire/patches/emcc-emjs-dylink-externref.patch.txt",
+      "sha256": "249872448cb7fddf3b1629230336d2e3c27363c147caab352c4b9ba46a612028",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/patches/emcc-emjs-dylink-externref.patch"
+    },
+    {
+      "bytes": 923,
+      "git_blob_oid": "badd91eff67cfb64ddfefae2e6999b959cab2eb1",
+      "name": "patches/wasi-libc-clang-17-compat.patch",
+      "path": "sbom/web-runtime/hiwire/patches/wasi-libc-clang-17-compat.patch.txt",
+      "sha256": "89c3f867a56b73cbb8863a32ae11babda5ba68ca6f3423054b9362a591f2886e",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/patches/wasi-libc-clang-17-compat.patch"
+    },
+    {
+      "bytes": 1126,
+      "git_blob_oid": "c5c03103a40ededeafae24610019e987309edf1d",
+      "name": "pyproject.toml",
+      "path": "sbom/web-runtime/hiwire/pyproject.toml.txt",
+      "sha256": "2a847d0a311bd83fb18f47bba8bf6b5c4db56fb762d436dfe2610d2aeaaa4f90",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/pyproject.toml"
+    },
+    {
+      "bytes": 2521,
+      "git_blob_oid": "dbee15ef4b44855675a077347224747bf4489aba",
+      "name": "src/_deduplicate.c",
+      "path": "sbom/web-runtime/hiwire/src/_deduplicate.c.txt",
+      "sha256": "d4bd9f775dc68e6eb71e96e7cd7cb1caac4b58c1dd2612554b57309fee2dc1fc",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/src/_deduplicate.c"
+    },
+    {
+      "bytes": 3181,
+      "git_blob_oid": "78d85fee2774d9ebeee677fb67bccca3353e4776",
+      "name": "src/compat.c",
+      "path": "sbom/web-runtime/hiwire/src/compat.c.txt",
+      "sha256": "f38c6a3099143c95fec7c689bf7f3ef2cf8b2ab8c4f4af9ee19d070fa28f6042",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/src/compat.c"
+    },
+    {
+      "bytes": 3607,
+      "git_blob_oid": "eae9b60a8e88d632324049fcf23ece8744f9247a",
+      "name": "src/hiwire.c",
+      "path": "sbom/web-runtime/hiwire/src/hiwire.c.txt",
+      "sha256": "2d621e49354bca834a2a24d788934d2b0eb75d53c8c796d278aca53f019f1a52",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/src/hiwire.c"
+    },
+    {
+      "bytes": 2771,
+      "git_blob_oid": "bcd3a583186e78f5c0ef56c4fd26261d79d2068d",
+      "name": "src/hiwire.h",
+      "path": "sbom/web-runtime/hiwire/src/hiwire.h.txt",
+      "sha256": "78550d629ae04a75ce1cb2ea1974974dcd8e127430ad0a0d1346af5efe25ae0f",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/src/hiwire.h"
+    },
+    {
+      "bytes": 5275,
+      "git_blob_oid": "b4809bca4b7910cd09d27be3882367867c1f2805",
+      "name": "src/hiwire_macros.h",
+      "path": "sbom/web-runtime/hiwire/src/hiwire_macros.h.txt",
+      "sha256": "d0c142e064686afc727c2ad55292cc471c30fb5d1eac15122ae578bdbd857c04",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/src/hiwire_macros.h"
+    },
+    {
+      "bytes": 1426,
+      "git_blob_oid": "ec52bc063b6e8c01a8da90dcb410c6e2cd4c08cd",
+      "name": "src/wasm_table.c",
+      "path": "sbom/web-runtime/hiwire/src/wasm_table.c.txt",
+      "sha256": "a42dd5c34d07b31ad5987340da084584c9ee03d7834536788f0e359ae9a82a23",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/src/wasm_table.c"
+    },
+    {
+      "bytes": 233,
+      "git_blob_oid": "1fbf6e1deabd392e5f91d78711088d2629fa6566",
+      "name": "src/wasm_table.h",
+      "path": "sbom/web-runtime/hiwire/src/wasm_table.h.txt",
+      "sha256": "109f8471078e354c1e379c0751bb635e7b8e8afb55f190865bc8565de2bbf8dc",
+      "upstream_url": "https://raw.githubusercontent.com/pyodide/hiwire/6a1e67280a15d929ebeceee54a6358c9c8d5f697/src/wasm_table.h"
+    }
+  ],
+  "license": "MPL-2.0",
+  "obtain_information": "All listed preferred source/header/build files, full MPL notice and publisher README are provided in HIWIRE-SOURCES.zip; no charge or network access is required to obtain that included source.",
+  "parent_recipe_patches": "Pyodide cpython/Makefile checks out the exact commit and invokes make; no parent Hiwire patch command is present. The two upstream patch files are included unchanged.",
+  "profile": "hiwire-preferred-source/v1"
+}

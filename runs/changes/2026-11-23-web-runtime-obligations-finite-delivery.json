@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-web-runtime-obligations-finite-delivery",
+  "recorded_at": "2026-11-23T20:54:41.240993+00:00",
+  "author": "Codex /root/share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f23504d166dd450a81cd35dbc15397b13815de21",
+  "changed": "Implemented a finite received browser-runtime checker and deterministic notice/source-offer delivery for five pinned publisher files plus fourteen companions, including complete Hiwire MPL preferred source; preserved all eleven existing companion formats and shared policies.",
+  "proves": "Actual private nineteen-file selection and seven refusal/recovery cases pass. Affected execution phases of 15, 2, 3, 1 and 1 methods remain separately source-bound, not relabeled a current full 21-method run. Distinct reviewer checked six tiny filesystem and two CLI controls, all 67 retained inputs and applicable notice/source ranges.",
+  "limits": "No whole website or target-selected Node/build-tool approval, compiler reproduction, route admission, signature, legal/professional clearance, accuracy or full F-057/X-02 closure. Failed collector, membership, creation, read-charge and receipt observations and exact old source snapshots remain preserved.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "private_peer_original_sha256": "ffcca2106da67e4aedc628822c3b28bacbe5dff8dd1fd88d90f13e3ef7fdcf13",
+  "public_peer_projection": "Only two private control path values replaced with basenames by reviewer; all control/source digests and findings unchanged.",
+  "files": {
+    "docs/web-runtime-obligations-plan.md": "1c123d251d182b73f9d244607c60f1d941c349a152f8d4bff02ba23bde2fa444",
+    "docs/web-runtime-obligations-result.md": "7fca6f7e57517929e0cff25249e20829fff1c46d515b699cf58f3f3d793eb4d9",
+    "docs/web-runtime-obligations.md": "2a2e8d92f54c094cc8892f906086ed61c6803a54b6f8b23f65cfa634819509d9",
+    "runs/2026-11-23-emscripten-grant-facts-retained-peer.json": "f61d9a41f19b418abce5bfc16758b770789966ce32c47a2b99916cd1791dd9d6",
+    "runs/2026-11-23-react-scrollbar-project-grant-retained-peer.json": "2202051048c588a9319bb4272ca18b31ab8b5400d1510c1276c638378082fb3b",
+    "runs/2026-11-23-web-runtime-bounded-membership-correction.json": "22e82b710aa1c9d4912a3da71072ce055909742813b6b56f0bf5095582893cb2",
+    "runs/2026-11-23-web-runtime-byte-preservation.json": "af53a4559fe3d570f64e88cb8d5c1f980f55d02d77ab10a5980d64fb46feca10",
+    "runs/2026-11-23-web-runtime-cli-uncertainty-correction.json": "dea930d9ef455d97fb65957a800cbedd524d81d131cfb70c140e0e2076a93100",
+    "runs/2026-11-23-web-runtime-creation-uncertainty-correction.json": "079c85a3da0150c14ac5cfe9b93182ce6ed4be5feb2d16609d80b1dff173e72c",
+    "runs/2026-11-23-web-runtime-exact-read-budget-correction.json": "2dca491a5806f4f6ffb04d9af46c0f957ed22c79eb061bc28a534d1edaf3af39",
+    "runs/2026-11-23-web-runtime-obligations-distinct-review.json": "465c541d4c8f7df9d910f07ed7d3b35221615e1c4f0ea82f9eb783ec59a05ab6",
+    "runs/2026-11-23-web-runtime-obligations-execution.json": "7dd66bca09906fac524491dde8fc8196eeba66f1af317b158f502eb7aab001a3",
+    "sbom/web-runtime-history/0f1e5cd974eea917f2470c4de2ab525acd11efb28b1eca2a50b0150fba94f948.py": "0f1e5cd974eea917f2470c4de2ab525acd11efb28b1eca2a50b0150fba94f948",
+    "sbom/web-runtime-history/728f4ec0d2c28883b28a7bfb52e2c6394ee97fcac8c47612799f88182e077e84.py": "728f4ec0d2c28883b28a7bfb52e2c6394ee97fcac8c47612799f88182e077e84",
+    "sbom/web-runtime-history/a098bce5ae6645bede63880b44e3bbfa3984f3f106392ed119b78217f639558b.py": "a098bce5ae6645bede63880b44e3bbfa3984f3f106392ed119b78217f639558b",
+    "sbom/web-runtime-history/adf7ab04843d6d8f687d7c71542237bd727a1ab8e474d30f138526536ca0c688.py": "adf7ab04843d6d8f687d7c71542237bd727a1ab8e474d30f138526536ca0c688",
+    "sbom/web-runtime-history/b6728b7c74cfe5ae1b929b2dde2ab5fece3fd0f1985543bff69047e36f714f1f.py": "b6728b7c74cfe5ae1b929b2dde2ab5fece3fd0f1985543bff69047e36f714f1f",
+    "sbom/web-runtime/.gitattributes": "fb19e40727644db0dc001773a6a28df5391bb82c4693b87fd461bbba00ac926c",
+    "sbom/web-runtime/CPYTHON-EMBEDDED-NOTICES.txt": "a23d5e0943959e8a611334adb0dd5a8848381d4736e9b7ad442618fc5b3cc298",
+    "sbom/web-runtime/EMSCRIPTEN-SYSTEM-NOTICES.txt": "76f9f7bb2ef92ebbe2176924e1f179eaba79c054c012bbea42ea9f07830ae82c",
+    "sbom/web-runtime/EXTERNAL-RUNTIME-NOTICES.txt": "1975bde1297eea4fb42a51bd18e48bef56086cb6750659ab4427c3e31ebdc226",
+    "sbom/web-runtime/cpython-embedded-facts.json": "87cdc75037c8fa8042da088c5098397784284f27a6ce24e1941ec8575ff61a40",
+    "sbom/web-runtime/emscripten-system-grant-facts.json": "565ac73e1c32fe1d3034d8d8cf6f6d8898bf1f1b05280cc90135dd52df9b85a0",
+    "sbom/web-runtime/external-primary-facts.json": "763f888e824d126ce03c0d6b873e119b3bcd72bd2fa4453067246baab66fc612",
+    "sbom/web-runtime/hiwire-preferred-source.json": "91a0b14f3267c0347c47f3c4977bbed59dad6a4c460e774cf833b30b201f2553",
+    "sbom/web-runtime/hiwire/LICENSE.txt": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5",
+    "sbom/web-runtime/hiwire/Makefile.txt": "cc8ccb05c4c77e9291d37d69126852c0b1874bb5d672a112cf89d95d46eb7f2e",
+    "sbom/web-runtime/hiwire/README.md.txt": "b1e974fdce18050a3f4d176378bcd3ded063ec1ea1484727929a8745bd942a55",
+    "sbom/web-runtime/hiwire/patches/emcc-emjs-dylink-externref.patch.txt": "249872448cb7fddf3b1629230336d2e3c27363c147caab352c4b9ba46a612028",
+    "sbom/web-runtime/hiwire/patches/wasi-libc-clang-17-compat.patch.txt": "89c3f867a56b73cbb8863a32ae11babda5ba68ca6f3423054b9362a591f2886e",
+    "sbom/web-runtime/hiwire/pyproject.toml.txt": "2a847d0a311bd83fb18f47bba8bf6b5c4db56fb762d436dfe2610d2aeaaa4f90",
+    "sbom/web-runtime/hiwire/src/_deduplicate.c.txt": "d4bd9f775dc68e6eb71e96e7cd7cb1caac4b58c1dd2612554b57309fee2dc1fc",
+    "sbom/web-runtime/hiwire/src/compat.c.txt": "f38c6a3099143c95fec7c689bf7f3ef2cf8b2ab8c4f4af9ee19d070fa28f6042",
+    "sbom/web-runtime/hiwire/src/hiwire.c.txt": "2d621e49354bca834a2a24d788934d2b0eb75d53c8c796d278aca53f019f1a52",
+    "sbom/web-runtime/hiwire/src/hiwire.h.txt": "78550d629ae04a75ce1cb2ea1974974dcd8e127430ad0a0d1346af5efe25ae0f",
+    "sbom/web-runtime/hiwire/src/hiwire_macros.h.txt": "d0c142e064686afc727c2ad55292cc471c30fb5d1eac15122ae578bdbd857c04",
+    "sbom/web-runtime/hiwire/src/wasm_table.c.txt": "a42dd5c34d07b31ad5987340da084584c9ee03d7834536788f0e359ae9a82a23",
+    "sbom/web-runtime/hiwire/src/wasm_table.h.txt": "109f8471078e354c1e379c0751bb635e7b8e8afb55f190865bc8565de2bbf8dc",
+    "sbom/web-runtime/manifest.json": "5d662e2a8c1feeb35465370a01eab9a192c21b0d1eb5c60cbc7021c92e592184",
+    "sbom/web-runtime/publisher-recipe-facts.json": "6c183126c5d2542a41c33430f1f9ec33a601ee6723d0a2abc977721b85c7047a",
+    "sbom/web-runtime/react-exact-release-project-grant-facts.json": "fe1349a50e639ffcca6f05f49a3a5f1569a1179bb8219b48019eb30af0e9e6d9",
+    "sbom/web-runtime/react-exact-source-2.3.8.tgz": "ccc872d7a2dc007cbf9d755f30d56b8d80eabdbe22c44c95a709129bfdc46f01",
+    "scripts/verify-web-runtime-obligations.py": "92feefd17b3c7ae582c392e5e27560dad80133876bc4e4ad8e35723704a23a5c",
+    "tests/test_web_runtime_obligations.py": "121bbc75622847665b668ef8a9db491eedc160f62f8c1be7eff48f09874e37d1",
+    "tools/web_runtime_obligations.py": "597ac7cc8f53750e723e1119076d63c3363e400e5a7c0ee65bb9cf2ccc52ba7b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-emscripten-grant-facts-retained-peer.json",
+      "sha256": "f61d9a41f19b418abce5bfc16758b770789966ce32c47a2b99916cd1791dd9d6"
+    },
+    {
+      "path": "runs/2026-11-23-react-scrollbar-project-grant-retained-peer.json",
+      "sha256": "2202051048c588a9319bb4272ca18b31ab8b5400d1510c1276c638378082fb3b"
+    },
+    {
+      "path": "runs/2026-11-23-web-runtime-bounded-membership-correction.json",
+      "sha256": "22e82b710aa1c9d4912a3da71072ce055909742813b6b56f0bf5095582893cb2"
+    },
+    {
+      "path": "runs/2026-11-23-web-runtime-byte-preservation.json",
+      "sha256": "af53a4559fe3d570f64e88cb8d5c1f980f55d02d77ab10a5980d64fb46feca10"
+    },
+    {
+      "path": "runs/2026-11-23-web-runtime-cli-uncertainty-correction.json",
+      "sha256": "dea930d9ef455d97fb65957a800cbedd524d81d131cfb70c140e0e2076a93100"
+    },
+    {
+      "path": "runs/2026-11-23-web-runtime-creation-uncertainty-correction.json",
+      "sha256": "079c85a3da0150c14ac5cfe9b93182ce6ed4be5feb2d16609d80b1dff173e72c"
+    },
+    {
+      "path": "runs/2026-11-23-web-runtime-exact-read-budget-correction.json",
+      "sha256": "2dca491a5806f4f6ffb04d9af46c0f957ed22c79eb061bc28a534d1edaf3af39"
+    },
+    {
+      "path": "runs/2026-11-23-web-runtime-obligations-distinct-review.json",
+      "sha256": "465c541d4c8f7df9d910f07ed7d3b35221615e1c4f0ea82f9eb783ec59a05ab6"
+    },
+    {
+      "path": "runs/2026-11-23-web-runtime-obligations-execution.json",
+      "sha256": "7dd66bca09906fac524491dde8fc8196eeba66f1af317b158f502eb7aab001a3"
+    }
+  ],
+  "checks": []
+}

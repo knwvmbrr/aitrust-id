@@ -3,6 +3,15 @@
 ## Unreleased — 2026-11-23
 
 
+### 2026-11-23-web-runtime-obligations-finite-delivery
+
+Recorded 2026-11-23T20:54:41.240993+00:00 · Contributor: Codex /root/share_debugger · change
+
+- **Changed.** Implemented a finite received browser-runtime checker and deterministic notice/source-offer delivery for five pinned publisher files plus fourteen companions, including complete Hiwire MPL preferred source; preserved all eleven existing companion formats and shared policies.
+- **Evidence.** Actual private nineteen-file selection and seven refusal/recovery cases pass. Affected execution phases of 15, 2, 3, 1 and 1 methods remain separately source-bound, not relabeled a current full 21-method run. Distinct reviewer checked six tiny filesystem and two CLI controls, all 67 retained inputs and applicable notice/source ranges. [Change record](./runs/changes/2026-11-23-web-runtime-obligations-finite-delivery.json).
+- **Not claimed.** No whole website or target-selected Node/build-tool approval, compiler reproduction, route admission, signature, legal/professional clearance, accuracy or full F-057/X-02 closure. Failed collector, membership, creation, read-charge and receipt observations and exact old source snapshots remain preserved.
+
+
 
 ### 2026-11-23-source-image-integrated-source
 
