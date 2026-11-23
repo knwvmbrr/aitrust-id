@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-22-source-snapshot-trusted-git-binding
+
+Recorded 2026-11-23T01:50:14.765663+00:00 · Contributor: Codex /root/seo; distinct reviewer Codex /root/web_camo · change
+
+- **Changed.** Add a bounded received-source archive to caller-trusted Git binding helper without changing serializers, rights policy, graph or signer.
+- **Evidence.** 14 focused controls and7 actual tiny command cases pass at the frozen captured-source loader. Canonical source matches; self-consistent same-commit byte, path, mode and size forgeries refuse. A distinct reviewer independently replayed canonical binary/empty source, equal-length coherent forgery and captured-foundation import isolation. [Change record](./runs/changes/2026-11-22-source-snapshot-trusted-git-binding.json).
+- **Not claimed.** No large repository archive, SDK, network, extraction, received code execution, signing, route admission, rights approval or original closure. Whole operation60s with owned5s cleanup; immutable serializers and previously reviewed rights files remain unchanged. Earlier13-control/7-case snapshot and the pre-product sparse-checkout harness failure remain historical; large qualification remains future Linux work.
+
+
 ### 2026-11-23-013931-mcp-registry-zlib-current-integration-5521e2ff
 
 Recorded 2026-11-23T01:39:31.102499+00:00 · Contributor: Codex / share_debugger · change
