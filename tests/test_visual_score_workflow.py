@@ -67,7 +67,7 @@ class WorkflowTests(unittest.TestCase):
   commands=[['{python}','-m','pytest','tests/'+p,'-q'] for p in ['test_visual_score.py','test_visual_score_qualification.py','test_visual_score_workflow.py']]+[['{python}','scripts/prepare-visual-score-qualification.py','check-lock']]
   protocol=manifest['capabilities']['protocol']
   for command in commands:self.assertEqual(protocol['commands'].count(command),1)
-  self.assertEqual(protocol['commands'][-4:],commands)
+  start=protocol['commands'].index(commands[0]);self.assertEqual(protocol['commands'][start:start+len(commands)],commands)
   ci=(ROOT/'.github/workflows/ci.yml').read_text()
   step=ci.split('      - name: Verify image reference source without models or optional SDKs\n',1)[1].split('      - run:',1)[0]
   self.assertEqual(step.splitlines(),['        run: |','          python -m pytest tests/test_visual_score.py -q','          python -m pytest tests/test_visual_score_qualification.py -q','          python -m pytest tests/test_visual_score_workflow.py -q','          python scripts/prepare-visual-score-qualification.py check-lock'])

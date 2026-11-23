@@ -5,6 +5,15 @@
 
 
 
+
+### 2026-11-23-source-capacity-consumer-contract
+
+Recorded 2026-11-23T19:55:05.117330+00:00 · Contributor: Codex /root; separate pre-code review by Codex /root/seo · change
+
+- **Changed.** Updated the real source-capacity consumer to obtain its required Git baseline and distinguish finite copy permission from unsigned release; removed exclusive ownership of the protocol command tail while retaining each image check once and in order.
+- **Evidence.** The affected registration control passes; actual hosted source58 and image qualification33 controls passed after the previous correction. The new source-capacity job keeps its768MiB/20min/600s and byte limits, requires current copying permission and verified format, and explicitly refuses attestation/release/legal/full-project approval. [Change record](./runs/changes/2026-11-23-source-capacity-consumer-contract.json).
+- **Not claimed.** Actual corrected capacity and fresh five source-bound profiles still must run; public policy/tag accuracy, independent/human acceptance and original136complete66open accounting are unchanged. No signature or whole-original closure from copy permission.
+
 ### 2026-11-23-source-image-linux-contract-correction
 
 Recorded 2026-11-23T19:46:18.574716+00:00 · Contributor: Codex /root; preimplementation review by Codex /root/seo · change

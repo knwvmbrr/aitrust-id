@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-source-capacity-consumer-contract",
+  "recorded_at": "2026-11-23T19:55:05.117330+00:00",
+  "author": "Codex /root; separate pre-code review by Codex /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "298bbbb9c73e0fe5b038f448329503ed3051e324",
+  "changed": "Updated the real source-capacity consumer to obtain its required Git baseline and distinguish finite copy permission from unsigned release; removed exclusive ownership of the protocol command tail while retaining each image check once and in order.",
+  "proves": "The affected registration control passes; actual hosted source58 and image qualification33 controls passed after the previous correction. The new source-capacity job keeps its768MiB/20min/600s and byte limits, requires current copying permission and verified format, and explicitly refuses attestation/release/legal/full-project approval.",
+  "limits": "Actual corrected capacity and fresh five source-bound profiles still must run; public policy/tag accuracy, independent/human acceptance and original136complete66open accounting are unchanged. No signature or whole-original closure from copy permission.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "T-FA",
+    "T-PA",
+    "F-140"
+  ],
+  "files": {
+    ".github/workflows/delivery-revalidation.yml": "6fbd4a7c6cedb257c764ae12e58bf2815a58ac6d8f1193478f1de3f8ee709f76",
+    ".github/workflows/source-snapshot-v3.yml": "dd69974c633d6b17a1d92de50e984655e51b9c80704b98e6b83602a8589e25e7",
+    "docs/source-snapshot-managed-integration-plan.md": "6e396b5216853c9219b3e926cc6fff2dd423d31a666759806b4d60b54d845203",
+    "eval/dependencies/source-snapshot-additions-v3.json": "a5e3a302bee53d99b026d7c59c9d0e5933e3f3baa8d56a194bdd4e6a4c2677da",
+    "eval/dependency-policy.json": "e050f7ad5f9579e76787faf77fe6600a1c553d011097e7c7488b203d1ca87602",
+    "eval/route-boundaries.json": "8a6ceaf06bd9c03b67220994be949d57d84576ebdc0ab3f34003308d7693339b",
+    "state.json": "8427d293461a6227e62c9af02adfeb61901bd5f1f0aa9e04f76f14d9425acf62",
+    "tests/test_visual_score_workflow.py": "14795c4998a250c2cd73dc9a5a627d1961cab929224e1ac2ae8df6d9634b4751",
+    "tools/source_release_policy_v3.py": "6dd8f7b521df4b2c3cda1e952f469f738f4d4977b80187523fc62588b92eaf89"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-source-image-first-hosted-failures.json",
+      "sha256": "3bd1e326e5d2337aa6502247cf8876d35c66c05d0f10fb8905e92bc9857cf62c"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "unittest",
+        "tests.test_visual_score_workflow.WorkflowTests.test_registered_source_checks_use_existing_runner_no_acquisition",
+        "-q"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T19:55:05.117330+00:00"
+    }
+  ],
+  "prior_failed_ci": {
+    "capacity_run": 45252698929,
+    "capacity_job": 137966259195,
+    "capacity_retained_result_sha256": "273122c0475f74e76eca02128c899285efd9b33535d9654361a09aa22ab693e9",
+    "actual_capacity_observation": {
+      "actual_source_archive_executed": false,
+      "address_space_limit_bytes": 805306368,
+      "build_cli": {
+        "exit": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "a8a29bfbaa3fa358833b61ad742dc02bb775128b3968e7e12a96b57234b4c7e3"
+      },
+      "captured_at": "2026-11-23T19:48:20.921902+00:00",
+      "failure_stage": "current_graph_and_spdx",
+      "focused": {
+        "errors": 0,
+        "failed_test_ids": [],
+        "failures": 0,
+        "log_sha256": "50a3726b8e42ec18d20dd72fcefbb0a0dce59b1bfdcd812aef812c940a7def7c",
+        "skipped": 0,
+        "tests": 16
+      },
+      "independent_accuracy_evidence": false,
+      "legacy_v2_larger_archive_refused": true,
+      "license_clearance": false,
+      "pass": false,
+      "peak_children_rss_kib": 256028,
+      "peak_self_rss_kib": 256028,
+      "profile": "source-snapshot-v3-actual-ci/v1",
+      "protected_attestation_verified": false,
+      "release_authorized": false
+    },
+    "spec_run": 45252699193,
+    "spec_job": 137966260970,
+    "spec_signature": "Image registration test required its four commands at the global tail, conflicting with the independently appended managed-source suite.",
+    "spec_log_sha256": "db24eed3a8c4f061732d5e888a998dd11fc0cd885dcf76cdee544c756101d597",
+    "site_job": 137966261242,
+    "site_signature": "Old selected browser receipts correctly rejected pending actual current-profile execution.",
+    "site_guard_relaxed": false
+  }
+}

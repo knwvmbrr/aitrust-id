@@ -9,6 +9,8 @@ on:
       - 'tests/test_visual_score_qualification.py'
       - 'tools/source_snapshot_managed.py'
       - 'tools/source_snapshot_admission.py'
+      - '.github/workflows/source-snapshot-v3.yml'
+      - 'tests/test_visual_score_workflow.py'
   push:
     branches: [main]
     paths:
@@ -18,6 +20,8 @@ on:
       - 'tests/test_visual_score_qualification.py'
       - 'tools/source_snapshot_managed.py'
       - 'tools/source_snapshot_admission.py'
+      - '.github/workflows/source-snapshot-v3.yml'
+      - 'tests/test_visual_score_workflow.py'
 
 permissions:
   contents: read

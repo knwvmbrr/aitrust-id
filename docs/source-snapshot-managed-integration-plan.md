@@ -150,3 +150,38 @@ its exact data pin and the actual registry file bindings. Gitf235 preserves its
 previous profile and proofs. No copied grant, origin, metadata transition,
 V1/V2 foundation, per-file/operation cap or permission category changes.
 Separate design review: Codex /root/seo. Final exact-data review follows.
+
+## Capacity-consumer and independent command-registration integration
+
+Before correction code, 2026-11-23: corrected298bbbb9 hosted managed-source58
+controls and qualification33 controls pass. Two later integration checks expose
+remaining old consumer assumptions. Capacity run45252698929/job137966259195
+builds the real archive and passes16 serializer controls and the original V2
+capacity refusal, then fails at current graph/predicate preparation. Its checkout
+still fetches depth1, although the current finite copy classifier requires the
+protected6d baseline/history. Its separate policy assertion also still expects
+the source route to be blocked. Fetch complete history and require the actual
+finite copy policy to allow copying, actual format verification true, and
+attestation/release/legal/full-project approval false. The retained failure
+report records peakRSS256,028KiB under the unchanged768MiB address-space cap;
+no resource limit is raised and the actual corrected hosted operation remains
+necessary to establish success.
+
+Spec job137966260970 now reaches the source-registration control and finds its
+old assertion that image checks exclusively occupy the final four protocol
+commands. The independently added source-consumer suite legitimately follows.
+Require each of the same four image commands exactly once and as a contiguous
+ordered block at its actual registered position. Preserve the existing exact CI
+step, source-only/no-acquisition and runner checks. This supports independent
+cohorts without silently dropping or rearranging their individual controls.
+
+Add only .github/workflows/source-snapshot-v3.yml and
+tests/test_visual_score_workflow.py to both existing delivery triggers, since
+these source/contract corrections need current evidence too. Preserve workflow
+commands, runtime dependencies, permission and all operation/byte/time caps.
+Register the one named first-party correction event
+runs/changes/2026-11-23-source-capacity-consumer-contract.json in the finite V3
+project list137to138, update only its data pin and actual21registry bindings.
+Retain prior failure reports, original receipts and scope136/66 unchanged.
+Site guard failures for old selected browser receipts remain expected until the
+fresh source-bound profiles complete; do not weaken that guard.

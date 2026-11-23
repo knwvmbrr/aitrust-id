@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-23T19:44:19.911634+00:00",
+  "updated": "2026-11-23T19:55:05.117330+00:00",
   "active_increment": "Current whole-source distribution binding and independent image qualification integration;136 originals complete/66 open; target60 unmet.",
   "status": "136complete66open_target60_unmet;source_snapshot_and_image_integration_active",
   "scope": "docs/master-scope.json",
@@ -1247,7 +1247,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-23T19:44:19.911634+00:00",
+  "updated_at": "2026-11-23T19:55:05.117330+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -5309,7 +5309,7 @@
       ],
       "managed_source_release_authorized": false,
       "other_cohort_routes_still_blocked": 11,
-      "current_dependency_policy_sha256": "14a4606eb648acc6ee37bfc60658f4c53703966ee57f2eed1e28b6db724f329a",
+      "current_dependency_policy_sha256": "e050f7ad5f9579e76787faf77fe6600a1c553d011097e7c7488b203d1ca87602",
       "evidence": "runs/2026-11-23-source-image-integration-controls.json",
       "receipt_scope": "Historical58 controls plus corrected production wrapper and actual simulated-authority probes; final inert wrapper test also passed; real signature is pending"
     },
@@ -5327,6 +5327,15 @@
       "receipt": "runs/2026-11-23-source-image-first-hosted-failures.json",
       "correction": "Two test contracts and four explicit workflow trigger paths; no production safety relaxation",
       "fresh_five_reports_pending": true
+    },
+    "later_hosted_contract_findings": {
+      "candidate_source_commit": "298bbbb9c73e0fe5b038f448329503ed3051e324",
+      "capacity_run": 45252698929,
+      "capacity_failure_stage": "current_graph_and_spdx",
+      "corrected_integration": "Full Git history for actual finite baseline; source-copy permission distinct from signature; image commands contiguous and once without owning global tail.",
+      "hosted_source_controls58_passed": true,
+      "hosted_image_qualification33_passed": true,
+      "current_revalidation_still_pending": true
     }
   },
   "current_route_boundaries_status": "Previous selection retained; fresh current-source inventory and boundary execution pending after integration freeze."
