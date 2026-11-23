@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-155139-separate-private-company-legal-working-records-7cb7d4cb
+
+Recorded 2026-11-23T15:51:39.406107+00:00 · Contributor: Codex /root; private legal research by bounded specialist agents · change
+
+- **Changed.** Replaced company-specific legal working draft text and write-ups in the current source with public navigation notices after exact private preservation; retained effective product policies and old history.
+- **Evidence.** Seven published source records preserved outside Git before reversible current-tree edits; no trust instruments, signatures, tax or account details added to source. [Change record](./runs/changes/2026-11-23-155139-separate-private-company-legal-working-records-7cb7d4cb.json).
+- **Not claimed.** No historical erasure, executed LLC/agreement, professional legal clearance, new policy adoption or original requirement closure. Full historical removal requires separate coordinated review.
+
+
 ### 2026-11-23-151932-retain-managed-mcp-public-evidence-996c5cf6
 
 Recorded 2026-11-23T15:19:32.161291+00:00 · Contributor: Codex /root; evidence reviews /root/share_debugger and /root/seo · change
