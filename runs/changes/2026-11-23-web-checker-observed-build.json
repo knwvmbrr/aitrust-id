@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-web-checker-observed-build",
+  "recorded_at": "2026-11-23T23:37:43.115137+00:00",
+  "author": "Codex /root integration; Codex /root/seo distinct source-ownership review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7e6f48c162210671495315d2a3f7ed5e9d966232",
+  "changed": "Kept one exclusive verified-runtime stdlib notice producer and moved the two existing PWA links before bundling so offline finalization preserves observed HTML.",
+  "proves": "Actual build4 completed Vite/source observation and reference rendering, then refused duplicate stdlib output. The redundant newly-added static copy is removed while the protected full notice source and final14-companion requirement remain. Both syntax checks, real source preparation and exact-one-link assertions pass; a different reviewer proves only the intended source-head/postprocessor delta.",
+  "limits": "Partial build4 is not a successful whole build or released artifact. Genuine full build5, final index/observed hash equality, exact14 companions, real MT browsers, current shared admission/protected publication and all original acceptances remain pending.136complete66open; no original closure.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-012"
+  ],
+  "files": {
+    "docs/tag-runtime-integration-plan.md": "14dbd16e3cff88a811348335794685a9ffb8857eda82b8e15c7a52867dddf36b",
+    "site/index.html": "6c27db128f0a6c4e0b750f1a6f89b17456ac7b6d9b58208b90eaaeee1da548fb",
+    "site/public/device-licenses/python-stdlib-notices.txt": null,
+    "site/scripts/prepare-offline.mjs": "a467d7fde57fa26ac153ed31659be680ece1812705ac7b785724fb2fc235938d",
+    "site/scripts/prepare.mjs": "a0645f6fe29df14894c1594c78bd90d32784bf763d14e82d1bd2fc0ebb41e1d9",
+    "state.json": "35d8f446b60192743c727cfdd53e018ce9f2e35957e9755096c92a35240423bc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-web-chunk-runtime-integration.json",
+      "sha256": "b3c9fdfe757c4831e7d529e9ee4779e992da47b7e3985fc447fafc5c54dd1967"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "node",
+        "--check",
+        "site/scripts/prepare.mjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T23:37:43.115137+00:00"
+    },
+    {
+      "argv": [
+        "node",
+        "--check",
+        "site/scripts/prepare-offline.mjs"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T23:37:43.115137+00:00"
+    }
+  ],
+  "actual_partial_build4": {
+    "captured_at": "2026-11-23T23:20:49.887590+00:00",
+    "source_commit": "bbfe7d8d6d861267b908b131c860bb218dd52798",
+    "pass": false,
+    "steps": [
+      {
+        "argv": [
+          "git",
+          "diff",
+          "--exit-code"
+        ],
+        "cwd": "repository",
+        "exit_code": 0,
+        "seconds": 0.041,
+        "log_bytes": 0,
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "argv": [
+          "node",
+          "node_modules/vite/bin/vite.js",
+          "build",
+          "--config",
+          "../scripts/web-checker-build-observer.mjs"
+        ],
+        "cwd": "site",
+        "exit_code": 0,
+        "seconds": 1.6768,
+        "log_bytes": 9823,
+        "log_sha256": "05b2c2f381f6d14d54599e63e7c81bb7e5c9404f9b81eed4891d22efcf8817b0"
+      },
+      {
+        "argv": [
+          "node",
+          "scripts/render-reference.mjs"
+        ],
+        "cwd": "site",
+        "exit_code": 0,
+        "seconds": 0.1882,
+        "log_bytes": 147,
+        "log_sha256": "f6be947e35e0a0a31d9da5ec72f1f38cdaed1b3a413ff3848ae09847882987c8"
+      },
+      {
+        "argv": [
+          "node",
+          "scripts/prepare-offline.mjs"
+        ],
+        "cwd": "site",
+        "exit_code": 1,
+        "seconds": 0.5709,
+        "log_bytes": 710,
+        "log_sha256": "9a826ad44ef9548e1e90e7011b33f13debd3b74079f1779aaaddcce0d898eea8"
+      }
+    ],
+    "same_source_commit_before_after": true,
+    "normal_commit_guard_passed_for_exact_source": true,
+    "redundant_unchanged_guard_not_repeated": true,
+    "peak_child_rss_bytes": 259784704,
+    "dependency_install": false,
+    "network_download": false,
+    "compiled_release_admitted": false
+  },
+  "different_reviews": {
+    "precode": {
+      "sha256": "86be20d220261f978fdd21064d90139490372ed75637893b0509dc613c1c6726",
+      "record": {
+        "actual_ROOT_observation": "Build4 Vite+reference renderer succeeded with154sources/146modules/19outputs; subsequent offline stage failed EEXIST at exclusive stdlib notice write. Partial build is not complete provenance.",
+        "actual_build_or_SDK_or_network_by_reviewer": false,
+        "approved_delta": [
+          "Remove only newly tracked public device-licenses/python-stdlib-notices.txt, absent protectedQ; original retained SBOM source and sole post-bundle verifier/wx writer remain.",
+          "Move identical manifest.webmanifest and apple-touch-icon192 links into prepare.mjs source head before Vite. Remove only later HTML mutation from prepare-offline.",
+          "Preserve notice/runtime validation, wx refusal, icons/manifest generation, offline asset/version hashing and all14 expected companion obligations."
+        ],
+        "captured_at": "2026-11-23T23:25:14.403899+00:00",
+        "conclusion": "CLEAR exact single-owner notice/HTML preparation repair; final source and genuine build pending",
+        "observed_source_sha256": {
+          "site/scripts/prepare-offline.mjs": "59294d4a5670d42eb0f3aa0e9fc8d82f315312e867ea4cce5dd839bff2f86916",
+          "site/scripts/prepare.mjs": "e491bbc8411cf22f826ed59fe42d66ae271028b40ebeeda9f2699b3902bd0d3a"
+        },
+        "permission_cap_endpoint_or_original_scope_changed": false,
+        "profile": "web-source-preparation-single-owner-precode-review/v1",
+        "required_checks": [
+          "Rebuilt source head has each link exactly once even on repeated preparation.",
+          "Freeze regenerated source index before committed observer build.",
+          "Genuine Vite preserves intended URLs and final dist/index matches observed index bytes before offline version is accepted.",
+          "Full14runtimecompanions remain exact; no duplicate source notice needed in Git archive because exact retained source and generated distribution copy remain."
+        ],
+        "reviewer": "Codex /root/seo"
+      }
+    },
+    "final": {
+      "sha256": "301ec47fd24b431373ddef8219d8d65180cd627dd0142dc579c27e16b5490392",
+      "record": {
+        "actual_comparisons": [
+          "Removing only the exact two PWA tags from prepare.mjs restores entire old source bytes.",
+          "Restoring only the old later HTML mutation line restores entire old prepare-offline bytes. Original verify-nested-runtime,wx writer,icons,manifest generation and offlinehash/version behavior unchanged.",
+          "Current regenerated source index HTML parsed with exactly one original manifestURL and one original appleiconURL.",
+          "Only duplicate public stdlib notice is absent; protectedQ never had that path and its retained SBOM source is byte-exact cdb6. No mandatory Q file or full14 companion obligation removed."
+        ],
+        "captured_at": "2026-11-23T23:36:42.746930+00:00",
+        "conclusion": "CLEAR exact source-only ownership correction; actual complete build5/equality/full14 still pending",
+        "limits": [
+          "No realprepare/build/Vite/SDK/native/network repeated by reviewer.",
+          "Source public notice already absent at review; reviewer did not delete or edit ROOT.",
+          "Partial build4 bundler observation is not complete postprocessed artifact/provenance.",
+          "Actual final index must match observed bundler index after build5 and all14 runtime companions must be checked before acceptance.",
+          "No cap,overwrite,endpoint,permission or original criterion change."
+        ],
+        "precode_review_sha256": "86be20d220261f978fdd21064d90139490372ed75637893b0509dc613c1c6726",
+        "profile": "web-single-owner-preparation-final-source-review/v1",
+        "reviewer": "Codex /root/seo",
+        "source_sha256": {
+          "docs/tag-runtime-integration-plan.md": "14dbd16e3cff88a811348335794685a9ffb8857eda82b8e15c7a52867dddf36b",
+          "site/index.html": "6c27db128f0a6c4e0b750f1a6f89b17456ac7b6d9b58208b90eaaeee1da548fb",
+          "site/scripts/prepare-offline.mjs": "a467d7fde57fa26ac153ed31659be680ece1812705ac7b785724fb2fc235938d",
+          "site/scripts/prepare.mjs": "a0645f6fe29df14894c1594c78bd90d32784bf763d14e82d1bd2fc0ebb41e1d9"
+        }
+      }
+    }
+  },
+  "partial_bundler_observation": {
+    "sha256": "7a18acf222affa55512410fd07dd7fcccc588e8a1d034c0c0310805de9d74214",
+    "bytes": 145539,
+    "complete_build_provenance": false
+  },
+  "operator_staging_history": {
+    "first_explicit_add": "Refused redundant path already removed from index by git rm; no data lost.",
+    "first_normal_commit": "Ordinary guard refused the sole staged deletion without its fresh event; no commit.",
+    "correction": "Stage only existing declared files plus the event; preserve the already staged exact deletion. All subprocess dependencies checked before commit.",
+    "bypass": false
+  }
+}

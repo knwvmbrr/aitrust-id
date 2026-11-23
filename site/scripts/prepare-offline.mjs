@@ -14,7 +14,6 @@ for(const size of [192,512]){
  await sharp(Buffer.from(svg)).png().toFile(fileURLToPath(new URL(`app-icon-${size}.png`,dist)));
 }
 await writeFile(new URL('manifest.webmanifest',dist),JSON.stringify({id:'/',name:'AI TRUST ID',short_name:'AI TRUST ID',start_url:'/#person/PS',scope:'/',display:'standalone',background_color:'#f7f8f6',theme_color:'#f7f8f6',icons:[192,512].map(size=>({src:`/app-icon-${size}.png`,sizes:`${size}x${size}`,type:'image/png',purpose:'any maskable'}))},null,2));
-let html=await readFile(new URL('index.html',dist),'utf8');html=html.replace('</head>','<link rel="manifest" href="/manifest.webmanifest"/><link rel="apple-touch-icon" href="/app-icon-192.png"/></head>');await writeFile(new URL('index.html',dist),html);
 async function list(directory,prefix){const files=[];for(const entry of await readdir(directory,{withFileTypes:true})){const name=prefix+entry.name;if(entry.isDirectory())files.push(...await list(new URL(entry.name+'/',directory),name+'/'));else files.push(name);}return files;}
 const assets=['/','/theme.js','/favicon.svg','/manifest.webmanifest','/app-icon-192.png','/app-icon-512.png','/reference/independent-review.md'];
 for(const name of ['assets','device','device-licenses','fonts'])assets.push(...await list(new URL(name+'/',dist),'/'+name+'/'));

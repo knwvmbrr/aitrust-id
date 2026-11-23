@@ -149,3 +149,20 @@ and excessive source refuses. Preserve the existing schema/association/output
 bounds and full provider grant; invent no source file or new provider. Three
 inert scenarios and a different exact-source review precede actual build4. The
 failed third build and diagnostic replay remain unaccepted provenance.
+
+## Single-owner offline finalization
+
+Actual build4 completed Vite observation (154 source records,146 canonical
+modules,19 outputs) and static reference rendering, then refused EEXIST: the
+new ROOT-added public stdlib notice duplicated the original offline finalizer's
+exclusive writer. Keep that original verified-runtime producer and wx/nooverwrite
+behavior. Remove only the redundant public source copy; the protected SBOM
+source remains unchanged, and all14 final runtime companions remain mandatory.
+
+Move the existing manifest/apple-touch-icon links, byte-identical, into the
+prepared source head before Vite. Remove only their later post-bundle HTML
+mutation. Keep all manifest/icon generation, allowlisted cache construction and
+final HTML hashing. Every link must appear exactly once; final dist/index.html
+must equal the actual observed bundler output. Partial build4 is not complete
+provenance. A different pre-code review86be approved this source-ownership
+correction; genuine full build5 and exact artifact inspection remain required.

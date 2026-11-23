@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-web-checker-observed-build
+
+Recorded 2026-11-23T23:37:43.115137+00:00 · Contributor: Codex /root integration; Codex /root/seo distinct source-ownership review · change
+
+- **Changed.** Kept one exclusive verified-runtime stdlib notice producer and moved the two existing PWA links before bundling so offline finalization preserves observed HTML.
+- **Evidence.** Actual build4 completed Vite/source observation and reference rendering, then refused duplicate stdlib output. The redundant newly-added static copy is removed while the protected full notice source and final14-companion requirement remain. Both syntax checks, real source preparation and exact-one-link assertions pass; a different reviewer proves only the intended source-head/postprocessor delta. [Change record](./runs/changes/2026-11-23-web-checker-observed-build.json).
+- **Not claimed.** Partial build4 is not a successful whole build or released artifact. Genuine full build5, final index/observed hash equality, exact14 companions, real MT browsers, current shared admission/protected publication and all original acceptances remain pending.136complete66open; no original closure.
+
+
 ### 2026-11-23-source-copy-rights-v4
 
 Recorded 2026-11-23T23:17:11.619924+00:00 · Contributor: Codex /root/share_debugger · change
