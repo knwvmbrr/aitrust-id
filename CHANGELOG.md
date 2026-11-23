@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-163834-qualify-public-policy-private-records-navigation-02c04832
+
+Recorded 2026-11-23T16:38:34.753448+00:00 · Contributor: Codex /root; distinct public boundary review by Codex /root/share_debugger · change
+
+- **Changed.** Selected the actual corrected website execution, distinct six-file display review and two-engine private-company notice controls; retained prior execution and failure histories.
+- **Evidence.** All 65 declared website commands actually passed with unchanged source, all five selected engineering capabilities assess current and all 36 route-boundary cases pass. Public policies and fixed legacy notices are checked; owner legal packet was sent privately. [Change record](./runs/changes/2026-11-23-163834-qualify-public-policy-private-records-navigation-02c04832.json).
+- **Not claimed.** Engineering and document delivery only; no formed LLC, executed agreement, professional legal clearance, policy adoption, historical Git erasure, independent tag validation or original requirement closure. Protected merge and public deployment pending.
+
+
+### 2026-11-23-162230-retain-generated-records-navigation-0ce4b2c6
+
+Recorded 2026-11-23T16:22:30.839534+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Bound the generated no-script navigation label and the reviewed public-site source inventory after the company-record boundary correction.
+- **Evidence.** Only the reviewed display/reference files differ in the route source inventory. Actual Chromium and WebKit checks pass for public policies, three legacy notices and unchanged opt-in feedback controls. [Change record](./runs/changes/2026-11-23-162230-retain-generated-records-navigation-0ce4b2c6.json).
+- **Not claimed.** No new routes or collection; source-bound website execution and protected publication still required. No original requirement closed.
+
+
+### 2026-11-23-162018-public-policies-private-company-records-5de8c77b
+
+Recorded 2026-11-23T16:20:18.799549+00:00 · Contributor: Codex /root; legal packet research and presentation review by bounded specialist agents · change
+
+- **Changed.** Replaced advertised company signing-packet downloads with accurate public-policy/private-record navigation; retained three old URLs as non-operative notices. Recorded actual private owner delivery of 18 editable documents and nine effective policy copies.
+- **Evidence.** Current build no longer copies company papers into legacy website URLs. Focused browser controls require all three notice responses and no advertised private downloads. Private 82-page visual review and final archive identities were checked before provider-confirmed sending. [Change record](./runs/changes/2026-11-23-162018-public-policies-private-company-records-5de8c77b.json).
+- **Not claimed.** New page requires actual build/browser execution and fresh source-bound website validation before release. No executed document, formed entity, new data collection, policy adoption, professional clearance, historical erasure or original requirement closure.
+
+
 ### 2026-11-23-161207-refresh-private-records-website-evidence-5ed533c5
 
 Recorded 2026-11-23T16:12:07.752133+00:00 · Contributor: Codex /root · change

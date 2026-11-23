@@ -1,0 +1,87 @@
+{
+  "profile": "pr151-public-records-correction-distinct-review/v1",
+  "captured_at": "2026-11-23T16:23:14.774043+00:00",
+  "pass": true,
+  "conclusion": "CLEAR for the bounded register correction; previous P2 resolved. Full current website qualification remains separate.",
+  "reviewed_head": "1cfa4cc915cf0757253058f9fe132f2d55a71026",
+  "reviewed_head_tree": "7b102a9842465efb292f7e076c47bb260cdd0910",
+  "working_tree_correction": true,
+  "source_bindings": {
+    "scripts/verify-research-feedback.cjs": "3b4ab0ca6c9028ed7be5a8e1bc615b7200e08a47f9239760d366f9b5a74edce0",
+    "site/scripts/owner-guide.mjs": "afbea9a66984959ee8cfa5a4a8048405e1f852c4672f2d13a4450df2d0151581",
+    "site/scripts/prepare.mjs": "388c87c62423fac7d9e2902b63337700148571f22d3884c144c8b8e241ef9937",
+    "site/scripts/render-reference.mjs": "3e3fef43a4d5acc0fe3316507ca4460bea58f739b29904d587951c3add4310b4",
+    "site/src/main.jsx": "c050af7299831d0216fd7940f5e4753fc683ef4fed594af0263ca0e821315f17",
+    "site/index.html": "bc5cc8df87041e8c9f291384497e6d96b2063e173590083509477f22f6b1075d"
+  },
+  "source_stable": true,
+  "findings": [],
+  "resolved_finding": {
+    "priority": "P2",
+    "problem": "Generated register advertised company packet downloads after targets became navigation notices.",
+    "resolution": "Public policies and private company records are distinguished; company download promises removed; three legacy URLs generated from one fixed notice rather than copying company source documents; history and actual-operator limitations retained."
+  },
+  "review_observations": [
+    "Read the six-file actual diff; five source files plus derived no-script index label.",
+    "Owner guide, prepare fallback, main navigation and derived index are exact single literal replacements.",
+    "Prior feedback browser control prefix is byte-identical; new checks add register heading, absent company download links and three HTTP-200 notice bodies.",
+    "No source policy, route, permission, intake or research collection changes in the bounded correction."
+  ],
+  "retained_author_browser_evidence": {
+    "log_sha256": "a4e25fe366c7c59b2418779689611c960d7386760334668f41c1b1dcd53813cd",
+    "captured_at": "2026-11-23T16:20:47.274Z",
+    "seven_source_bindings_match": true,
+    "engines": [
+      {
+        "engine": "chromium",
+        "no_script_form_inert": true,
+        "preview_matches_download": true,
+        "permission_required": true,
+        "changed_answers_invalidate_permission": true,
+        "no_feedback_network_or_storage": true,
+        "keyboard_preview": true,
+        "reflow_320_and_200_percent": true,
+        "axe_violations": 0,
+        "physical_device_tested": false,
+        "private_company_downloads_not_advertised": true,
+        "legacy_company_links_are_notices": true
+      },
+      {
+        "engine": "webkit",
+        "no_script_form_inert": true,
+        "preview_matches_download": true,
+        "permission_required": true,
+        "changed_answers_invalidate_permission": true,
+        "no_feedback_network_or_storage": true,
+        "keyboard_preview": true,
+        "reflow_320_and_200_percent": true,
+        "axe_violations": 0,
+        "physical_device_tested": false,
+        "private_company_downloads_not_advertised": true,
+        "legacy_company_links_are_notices": true
+      }
+    ],
+    "reviewer_reran_browser": false
+  },
+  "generated_legacy_notices": {
+    "legal-execution-packet.md": {
+      "sha256": "471b9d48057c359245d9fe0437c6a81bf6e10b8fcd308955a593d4046004a880",
+      "bytes": 434
+    },
+    "michigan-llc-packet.md": {
+      "sha256": "471b9d48057c359245d9fe0437c6a81bf6e10b8fcd308955a593d4046004a880",
+      "bytes": 434
+    },
+    "entity-structure-comparison.md": {
+      "sha256": "471b9d48057c359245d9fe0437c6a81bf6e10b8fcd308955a593d4046004a880",
+      "bytes": 434
+    }
+  },
+  "preserved_original_finding_receipt_sha256": "2afa93c19f4943c3ffc129c42ffa5a2ddbadbc4a062ce0c7e95afbc7bff83d64",
+  "limits": [
+    "No broad tests, build, browser or capability reassessment executed by this reviewer.",
+    "Earlier 1cfa website proof is historical after this correction; fresh 65-check website result is not asserted here.",
+    "No production deployment, history erasure, legal professional clearance, independent human accuracy or original requirement closure.",
+    "Review independence concerns PM display/assembly correction, not prior reviewer-authored MCP implementation."
+  ]
+}
