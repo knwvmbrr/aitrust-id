@@ -24,7 +24,8 @@ COMPONENT_FILES = frozenset({
     'eval/dependencies/source-snapshot-release-v2.json',
     'eval/dependencies/source-snapshot-additions-v3.json',
     'tools/source_release_policy.py', 'tools/source_release_policy_v2.py',
-    'tools/source_release_policy_v3.py',
+    'tools/source_release_policy_v3.py', 'tools/source_release_policy_v4.py',
+    'eval/dependencies/source-snapshot-additions-v4.json',
     'tools/source_snapshot_binding.py', 'tools/source_snapshot_admission.py',
     'scripts/source_snapshot.py', 'scripts/source_snapshot_v2.py',
     'scripts/source_snapshot_v3.py', 'scripts/build-source-snapshot.py',
@@ -37,7 +38,7 @@ COMPONENT_FILES = frozenset({
 def review(root=ROOT, source_commit=None):
     """Actually execute the closed source classifier; no status-only approval."""
     need(Path(root).resolve() == ROOT)
-    from tools import source_release_policy_v3 as copy
+    from tools import source_release_policy_v4 as copy
     result = copy.verify(root=root, source_commit=source_commit)
     need(result.get('profile') == copy.PROFILE and result.get('pass') is True
          and result.get('source_copy_profile_satisfied') is True

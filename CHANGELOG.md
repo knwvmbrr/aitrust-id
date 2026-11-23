@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-source-v4-admission-integration
+
+Recorded 2026-11-23T23:35:56.345865+00:00 · Contributor: Codex /root/share_debugger; Codex /root/seo distinct implementation review · change
+
+- **Changed.** Activated finite V4 source-copy review and archive verification without fallback, added exactly two source bindings to component and graph consumers, refreshed actual source-component rows and configured79 protected source controls. Preserved historical6d/V3 proof alongside activeQ/V4 and prospective literal bookkeeping paths.
+- **Evidence.** Actual16 affected controls pass26.640s; actual current source-only registry evaluate passes11.766s. Different final review checks exact registry/sibling preservation, names-only table, active callers and four independent forged-report controls. [Change record](./runs/changes/2026-11-23-source-v4-admission-integration.json).
+- **Not claimed.** No whole current source archive, protected signature, managed consumer, full79 hosted execution, web pin modification, compiled/runtime/model permission, legal/accuracy/human acceptance or full F-057/X-02 closure. New prospective record slots are not executions. Immutable classifiers/serializers, dependency_policy CODE and PS consumer remain unchanged.
+
+
 ### 2026-11-23-source-copy-rights-v4
 
 Recorded 2026-11-23T23:17:11.619924+00:00 · Contributor: Codex /root/share_debugger · change

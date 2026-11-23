@@ -104,12 +104,12 @@ jobs:
           assert os.geteuid()!=0 and sys.platform=='linux'
           root=pathlib.Path.cwd();sys.path.insert(0,str(root))
           suites=[]
-          for pattern,count in (('test_source_snapshot_admission.py',10),('test_source_snapshot_managed.py',21),('test_source_snapshot_workflow.py',4),('test_source_release_policy_v3.py',24)):
+          for pattern,count in (('test_source_snapshot_admission.py',10),('test_source_snapshot_managed.py',21),('test_source_snapshot_workflow.py',4),('test_source_release_policy_v3.py',24),('test_source_release_policy_v4.py',20)):
             suite=unittest.defaultTestLoader.discover(str(root/'tests'),pattern=pattern)
             assert suite.countTestCases()==count,(pattern,suite.countTestCases())
             suites.append(suite)
           result=unittest.TextTestRunner(verbosity=2).run(unittest.TestSuite(suites))
-          assert result.testsRun==59 and result.wasSuccessful() and not result.skipped
+          assert result.testsRun==79 and result.wasSuccessful() and not result.skipped
           PYTHON
   attest-managed-source:
     needs: [artifact-controls, managed-source-controls]
