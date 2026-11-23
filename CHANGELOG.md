@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-170023-confirm-private-records-production-delivery-40bcfc67
+
+Recorded 2026-11-23T17:00:23.922697+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Recorded actual protected merge and live deployment of public-policy/private-company navigation, with canonical website and immutable source byte comparisons. Updated current state to the deployed source and retained private owner email delivery facts.
+- **Evidence.** All 11 required checks passed before normal PR151 merge, reviewed and merged trees match, 13 actual website and seven public source responses match expected bytes, and the original 12 unrelated local files are preserved. [Change record](./runs/changes/2026-11-23-170023-confirm-private-records-production-delivery-40bcfc67.json).
+- **Not claimed.** Metadata closeout only. Earlier Git/release/cached copies remain. No entity formation, document signature, professional clearance, new privacy-policy adoption, tag accuracy approval or original requirement closure.
+
+
 ### 2026-11-23-163834-qualify-public-policy-private-records-navigation-02c04832
 
 Recorded 2026-11-23T16:38:34.753448+00:00 · Contributor: Codex /root; distinct public boundary review by Codex /root/share_debugger · change

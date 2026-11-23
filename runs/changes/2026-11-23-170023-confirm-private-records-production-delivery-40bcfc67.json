@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-170023-confirm-private-records-production-delivery-40bcfc67",
+  "recorded_at": "2026-11-23T17:00:23.922697+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "f3503e8623959c725c1f7a69ac32acb487531c6f",
+  "changed": "Recorded actual protected merge and live deployment of public-policy/private-company navigation, with canonical website and immutable source byte comparisons. Updated current state to the deployed source and retained private owner email delivery facts.",
+  "proves": "All 11 required checks passed before normal PR151 merge, reviewed and merged trees match, 13 actual website and seven public source responses match expected bytes, and the original 12 unrelated local files are preserved.",
+  "limits": "Metadata closeout only. Earlier Git/release/cached copies remain. No entity formation, document signature, professional clearance, new privacy-policy adoption, tag accuracy approval or original requirement closure.",
+  "scope_ids": [
+    "F-075",
+    "F-140",
+    "F-148"
+  ],
+  "files": {
+    "state.json": "013e97adf43b765d7a368abae12b8d4f54d26945f9105648983275f8e52d78cd",
+    "runs/2026-11-23-public-records-production.json": "823b37d791f78ecb7daaaa16235b5b5f9132946f3a603edb3046955680c8f0ef",
+    "runs/2026-11-23-public-records-protected-merge.json": "74e2457321686fdb6353d94046bd6e7c3766bb9380856f3afe262fe5b8d25f07"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-public-records-production.json",
+      "sha256": "823b37d791f78ecb7daaaa16235b5b5f9132946f3a603edb3046955680c8f0ef"
+    },
+    {
+      "path": "runs/2026-11-23-public-records-protected-merge.json",
+      "sha256": "74e2457321686fdb6353d94046bd6e7c3766bb9380856f3afe262fe5b8d25f07"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T17:00:25.510651+00:00"
+    }
+  ]
+}
