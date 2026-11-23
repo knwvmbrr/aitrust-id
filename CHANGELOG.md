@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-source-copy-rights-v4
+
+Recorded 2026-11-23T23:17:11.619924+00:00 · Contributor: Codex /root/share_debugger · change
+
+- **Changed.** Implemented an isolated finite V4 source-copy classifier over independently executed protected Q/V3, exact scoped source/notice/container grants and source archive binding; preserved immutable V1/V2/V3 and all shared policy/Graph/signing code.
+- **Evidence.** Actual selected365 classification covers13829 files/149315264 bytes with25 copied or mixed rows and all nonclaims false. Initial17 controls and separately source-bound correction groups pass; different review verifies corrected timer/FIFO/final-foundation boundaries and final literal-name-only deltas. All paired original review bytes and source qualifications are retained in the execution record. [Change record](./runs/changes/2026-11-23-source-copy-rights-v4.json).
+- **Not claimed.** No genuine current whole-source archive, protected signature, managed consumer, shared route activation, runtime/model/accuracy/legal clearance or full F-057/X-02 closure. Final20 methods are declared, not relabeled as one full current execution. ROOT integrated capacity/registration and actual artifact remain future work.
+
+
 ### 2026-11-23-source-image-hosted-engineering-selection
 
 Recorded 2026-11-23T21:21:00.213499+00:00 · Contributor: Codex /root implementation; Codex /root/seo independent source review · change
