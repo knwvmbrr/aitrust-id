@@ -11,7 +11,7 @@ const repository = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const fixedInputs = Object.freeze(['site/package.json','site/package-lock.json','site/vite.config.js',
   'site/scripts/prepare.mjs','site/scripts/prepare-device.mjs','site/scripts/prepare-performance.mjs',
   'site/scripts/prepare-offline.mjs','site/scripts/render-reference.mjs','scripts/web-checker-build-observer.mjs']);
-const virtual = new Map([['\0rolldown/runtime.js','rolldown-runtime'],['\0vite/preload-helper.js','vite-preload-helper'],['vite/modulepreload-polyfill','vite-modulepreload']]);
+const virtual = new Map([['\0rolldown/runtime.js','rolldown-runtime'],['\0vite/preload-helper.js','vite-preload-helper'],['vite/modulepreload-polyfill','vite-modulepreload'],['\0vite/modulepreload-polyfill.js','vite-modulepreload']]);
 const hash = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
 const blob = bytes => crypto.createHash('sha1').update(Buffer.from(`blob ${bytes.length}\0`)).update(bytes).digest('hex');
 export class BuildObservationUnavailable extends Error {constructor(){super('Web build observation unavailable.');}}

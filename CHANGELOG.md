@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-tag-runtime-followup
+
+Recorded 2026-11-23T23:04:51.341094+00:00 · Contributor: Codex /root fixes; Codex /root/seo distinct source and actual-evidence review · change
+
+- **Changed.** Fixed the exact observed Vite resolved-ID compatibility, the image capacity-diagnostic test contract and actual web deadline setup/teardown restoration.
+- **Evidence.** Ten inert observer groups, the affected capacity case, all99 finite source controls and the new three-fault timer test pass; a different reviewer exercised four actual timer controls and verified the retained failed web/image evidence. Original source and runtime budgets/provider boundaries remain unchanged. [Change record](./runs/changes/2026-11-23-tag-runtime-followup.json).
+- **Not claimed.** Both actual failed attempts are preserved, not successful build or image qualification. Local reproduced capacity-test mismatch is not asserted as the sole remote cause. Genuine build3, compiled web admission, next changed-source image attempt, all fourteen obligations and original closures remain pending.136complete66open; target60 unmet.
+
+
 ### 2026-11-23-web-observer-html-json-repair
 
 Recorded 2026-11-23T22:50:30.865446+00:00 · Contributor: Codex /root implementation; Codex /root/seo distinct source/counter review · change

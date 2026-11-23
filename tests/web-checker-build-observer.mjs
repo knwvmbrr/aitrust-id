@@ -44,6 +44,12 @@ run('exact_three_virtual_ids_stay_opaque',()=>fixture(({root,module,bundle,conte
   assert.equal(Object.values(record.modules).filter(x=>x.kind==='virtual').length,3);
   for(const item of Object.values(record.modules).filter(x=>x.kind==='virtual'))assert.equal(item.source_path,null);
 }));
+run('actual_pinned_Vite_resolved_polyfill_alias_uses_existing_provider',()=>fixture(({root,module,bundle,context,plugin})=>{
+  const id='\0vite/modulepreload-polyfill.js';context.getModuleIds=()=>[module,id];bundle['fixture.js'].modules[id]={renderedLength:0};
+  plugin().writeBundle.call(context,{dir:path.join(root,'site/dist')},bundle);
+  const record=JSON.parse(fs.readFileSync(path.join(root,'site/dist/web-build-observations.json')));
+  assert.equal(record.modules['virtual:vite-modulepreload'].provider,'vite');assert.equal(Object.keys(record.modules).length,2);
+}));
 run('unknown_virtual_refuses_no_record',()=>fixture(({root,context,bundle,plugin})=>{
   context.getModuleIds=()=>['\0unknown/provider'];
   assert.throws(()=>plugin().writeBundle.call(context,{dir:path.join(root,'site/dist')},bundle),BuildObservationUnavailable);

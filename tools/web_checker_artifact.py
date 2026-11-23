@@ -121,12 +121,13 @@ def original_deadline(ledger):
          and threading.active_count() == 1 and signal.getitimer(signal.ITIMER_REAL) == (0.0, 0.0))
     old = signal.getsignal(signal.SIGALRM)
     def expired(_signum, _frame): raise WebUnavailable()
-    signal.signal(signal.SIGALRM, expired)
-    signal.setitimer(signal.ITIMER_REAL, max(0.001, ledger.deadline-time.monotonic()))
-    try: yield
+    try:
+        signal.signal(signal.SIGALRM, expired)
+        signal.setitimer(signal.ITIMER_REAL, max(0.001, ledger.deadline-time.monotonic()))
+        yield
     finally:
-        signal.setitimer(signal.ITIMER_REAL, 0)
-        signal.signal(signal.SIGALRM, old)
+        try: signal.setitimer(signal.ITIMER_REAL, 0)
+        finally: signal.signal(signal.SIGALRM, old)
 
 
 def preflight_json(raw, ledger, limit=MAX_RECORD):

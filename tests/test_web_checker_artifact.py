@@ -244,6 +244,26 @@ class WebArtifactTests(unittest.TestCase):
         with w.original_deadline(w.Ledger()):self.assertGreater(signal.getitimer(signal.ITIMER_REAL)[0],0)
         self.assertEqual(signal.getitimer(signal.ITIMER_REAL),(0.0,0.0));self.assertEqual(signal.getsignal(signal.SIGALRM),before)
 
+    def test_actual_deadline_setup_and_teardown_faults_restore_process_state(self):
+        old=signal.getsignal(signal.SIGALRM);real=signal.setitimer
+        self.assertEqual(signal.getitimer(signal.ITIMER_REAL),(0.0,0.0))
+        for mode in ('before_arm','after_real_arm','after_real_disarm'):
+            calls=[]
+            def fail(which,value,*args):
+                calls.append(value)
+                if mode=='before_arm' and len(calls)==1:raise OSError('injected before arm')
+                result=real(which,value,*args)
+                if (mode=='after_real_arm' and len(calls)==1)or(mode=='after_real_disarm' and value==0):raise OSError('injected after real timer operation')
+                return result
+            try:
+                with self.subTest(mode=mode),patch.object(w.signal,'setitimer',side_effect=fail),self.assertRaises(OSError):
+                    with w.original_deadline(w.Ledger()):pass
+                self.assertIs(signal.getsignal(signal.SIGALRM),old)
+                self.assertEqual(signal.getitimer(signal.ITIMER_REAL),(0.0,0.0))
+                self.assertEqual(calls[-1],0)
+            finally:
+                real(signal.ITIMER_REAL,0);signal.signal(signal.SIGALRM,old)
+
     def test_fast_verifier_does_not_extend_finite_deadline(self):
         ledger=w.Ledger(managed=True)
         with patch.object(w.time,'monotonic',return_value=ledger.started+61),self.assertRaises(w.WebUnavailable):ledger.tick()

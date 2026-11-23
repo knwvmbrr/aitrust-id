@@ -102,3 +102,35 @@ remain unchanged. Future unsupported HTML refuses rather than receiving a
 generic source grant. Focused regressions cover the actual long HTML URL shape,
 retained HTML/JS legal comments, JSON data and explicit unsupported inline code.
 Different pre-code and exact-source review precede genuine requalification.
+
+## Two independently diagnosed follow-ups before the next attempts
+
+The changed image5950 workflow45283353711 stopped in its source gate; acquisition
+and native work were skipped. The retained684-byte artifact has qualification
+and cleanup records. Local diagnosis found the capacity-refusal control still
+required an empty reports directory, contradicting the intentionally added
+bounded private diagnostic. Correct that test only: require exactly one validated
+capacity diagnostic,0600/4096-byte bound, no private error canary, the original
+exception, no workspace and no acquisition call. Keep27 cases and all production
+source/caps unchanged. Requalify the real source suite before another changed
+manual attempt; never rerun the same failed commit without correction.
+
+Genuine web build2 passed the corrected HTML parsing, then refused the resolved
+virtual ID NULvite/modulepreload-polyfill.js. Its1356-byte transformed code has
+SHA dd838b55e315f155e8a0093fdc4a80b2da5f069c433fc49a15b9962807791374.
+Pinned Vite8.3.4 source explicitly resolves its already supported unresolved ID
+to this literal form. Add only this exact alias to existing canonical
+virtual:vite-modulepreload and its existing Vite grant; retain all three older
+forms, every unknown-ID refusal and original caps. An inert actual-resolved-ID
+control precedes a genuinely rebuilt census. This is no new provider or general
+virtual-prefix permission. Both first failures and private diagnostic copies
+remain distinct from accepted provenance, image qualification or accuracy.
+
+The distinct boundary review also reproduced a web artifact deadline defect:
+setitimer failure before or after the actual arm left the changed SIGALRM handler,
+and the latter left an active timer. Move both setup calls inside the existing
+try/finally and nest teardown so failed disarm cannot skip the old-handler
+restoration attempt. Keep the same single deadline and supported-thread/timer
+preconditions. Focused pre-arm/post-real-arm/teardown fault controls must retain
+the original failure and restore actual process state, with no AUTH or budget
+expansion. No interrupted output is promoted to accepted artifact evidence.
