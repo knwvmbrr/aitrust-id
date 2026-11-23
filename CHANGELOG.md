@@ -36,6 +36,24 @@ Recorded 2026-11-23T20:47:41.342301+00:00 · Contributor: Codex /root implementa
 - **Changed.** Corrected the obsolete MCP sibling-policy assertion and added a read-only exact-source runner for the complete protocol and website profiles; retained unchanged PS/privacy/extension source contracts and finite copy bounds.
 - **Evidence.** The actual failed hosted delivery completed its PS7/privacy6/extension14 step successfully and all three raw receipts still assess current. One106-control local command reproduced105passes/1obsolete assertion; the corrected isolated test plus four runner controls passed5. YAML, shell and three inline Python blocks parse. Actual source-capacity run45258115933 passed archive/Git/graph/SPDX under unchanged limits. [Change record](./runs/changes/2026-11-23-source-profile-continuation.json).
 - **Not claimed.** The failed overall run is not successful; full protocol78/website66 continuation, protected signing and real managed consumer remain pending. No independent tag accuracy, release authorization or original closure.136complete66open; target60 unmet.
+### 2026-11-23-mt-quote-export-mobile-binding
+
+Recorded 2026-11-23T20:57:48.575411+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Regenerated the optional mobile MT source bundle and active manifest with the existing producer after the CLI-only private-export repair, and mirrored the reviewed guide; private export helpers remain excluded from browser analysis.
+- **Evidence.** Only the CLI changes among15 captured source files; manifest delta is path/hash/bytes and that one source row. All legacy sources/manifests/bundles, notices and browser worker/client/result bytes remain exact. Six complete records and three refusals from the captured helper-free payload match current Python; default CLI works without helpers, explicit export remains separately unavailable without writing; six inert JS consumer groups pass. Different source/evidence review clears exact derived bytes and25 stable author bindings. [Change record](./runs/changes/2026-11-23-mt-quote-export-mobile-binding.json).
+- **Not claimed.** No actual browser/Pyodide/WASM/native SDK, model, install, network, ROOT source/eval/registry edit, push or public publication. No grammar/method/budget/taxonomy/accuracy or original closure. Parent c716 and old hash-addressed bundles/receipts are preserved; ROOT combined normal build/browser/inventory checks remain required.
+
+
+### 2026-11-23-mt-quote-export-repair
+
+Recorded 2026-11-23T20:42:22.712961+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Repaired the optional MT quotation private export so supported analysis survives export faults, with separate fixed refusal/uncertainty status, private no-overwrite output and a lazy foundational IO adapter.
+- **Evidence.** Current eight focused controls pass, including the real close-after-release fault, descriptor constructor failure, private modes, no-overwrite/recovery, unsafe/Git/link refusal, six default byte comparisons and actual independent PS. Five standalone CLI cases and separate five-case peer replay pass. Original failure, sparse-harness failure and prior test version remain retained; portable tests require no historical Git object. [Change record](./runs/changes/2026-11-23-mt-quote-export-repair.json).
+- **Not claimed.** No grammar, source-marker, quote, normalizer, shared IO, PS or model change. Synthetic engineering only; no independent accuracy, intent/truth, MT release or original closure. ROOT must regenerate affected source bundle/manifests and perform integration checks; old browser evidence is not rebound. No SDK/browser/native/model/network, push or ROOT edits. First normal hook correctly refused a missing exact human entry after an author assembly assertion on repeated inherited date headings; private failure retained, then exact entry inserted at the first heading without changing feature source.
+
+
 
 
 

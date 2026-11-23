@@ -1,0 +1,126 @@
+{
+  "profile": "mt-quotation-private-export-engineering/v1",
+  "started_at": "2026-11-23T20:35:56.280373+00:00",
+  "captured_at": "2026-11-23T20:35:56.855228+00:00",
+  "pass": true,
+  "source_base": "caf6af45a506bcb3196bfcf991eea1153f6a1e95",
+  "source_sha256_before": {
+    "tools/mt_quote_export.py": "57c3aa2c4c91f0a866e29e6bb0489e11eaeac43e256f2d4d76798561603fdb29",
+    "scripts/authority-mobile-quotation.py": "4e2c4b29733650a3dcda60e7c5a27df460567aee73ca2d44c2ca526baaf10a49",
+    "tests/test_mt_quote_export.py": "3aaba2d435f8e55c285c30596ebccc7cf45755533f840782767313904d63639a",
+    "docs/mt-mobile-quotation.md": "675f3471058eedc947085f9d2e45ff88efefd69cbdbfb8ae55a217c8174aa0b1",
+    "docs/mt-quote-export-repair-plan.md": "81ea14cba70272f4bd2febe4ef914c6f0c833447b7c5d724951df275373c05b9",
+    "tools/mt_label_io.py": "58333a54a9a3630b6ac010f202c0f1a4aef887a1a44f8d16dfe4b91455d3e533",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "tools/authority_mobile_quotation.py": "f230f44ea5584302e08b1b462839b8b41c0e69d03f7f5e34fc197a0c47b2b4bd",
+    "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+  },
+  "source_sha256_after": {
+    "tools/mt_quote_export.py": "57c3aa2c4c91f0a866e29e6bb0489e11eaeac43e256f2d4d76798561603fdb29",
+    "scripts/authority-mobile-quotation.py": "4e2c4b29733650a3dcda60e7c5a27df460567aee73ca2d44c2ca526baaf10a49",
+    "tests/test_mt_quote_export.py": "3aaba2d435f8e55c285c30596ebccc7cf45755533f840782767313904d63639a",
+    "docs/mt-mobile-quotation.md": "675f3471058eedc947085f9d2e45ff88efefd69cbdbfb8ae55a217c8174aa0b1",
+    "docs/mt-quote-export-repair-plan.md": "81ea14cba70272f4bd2febe4ef914c6f0c833447b7c5d724951df275373c05b9",
+    "tools/mt_label_io.py": "58333a54a9a3630b6ac010f202c0f1a4aef887a1a44f8d16dfe4b91455d3e533",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "tools/authority_mobile_quotation.py": "f230f44ea5584302e08b1b462839b8b41c0e69d03f7f5e34fc197a0c47b2b4bd",
+    "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+    "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+    "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+    "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+    "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+    "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+  },
+  "unchanged_foundations_vs_base": {
+    "tools/mt_label_io.py": true,
+    "tools/blind_review_io.py": true,
+    "tools/authority_mobile_quotation.py": true,
+    "tools/authority_quotation.py": true,
+    "protocol/normalization.py": true,
+    "scripts/check-ps.py": true,
+    "scripts/worker_process.py": true,
+    "scripts/build-device-detector.py": true,
+    "services/evaluator/app.py": true
+  },
+  "focused_tests": {
+    "count": 8,
+    "exit": 0,
+    "stderr_sha256": "62f67c313d8a5c5b2836f7cfc93f186393741a548f1380a2e9aa55ea95990c80",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "includes_actual_parent_close_after_real_release": true,
+    "includes_actual_constructor_fd_cleanup": true,
+    "default_six_inputs_byte_equal_immutable_cli": true,
+    "actual_canonical_PS_after_optional_export_failures": true
+  },
+  "actual_standalone_cli_cases": [
+    {
+      "case": "default_counts_only",
+      "exit": 0,
+      "quoted_phrase_count": 1,
+      "private_export_absent": true,
+      "stdout_sha256": "156494a5be1767a4a5447bccd9ccb3d0466cc45b9905d3cee039fcea0f386530"
+    },
+    {
+      "case": "explicit_private_full_record",
+      "exit": 0,
+      "directory_mode": "0o700",
+      "file_mode": "0o600",
+      "private_details_saved": true,
+      "stdout_no_path_or_input": true
+    },
+    {
+      "case": "existing_output_preserved",
+      "exit": 2,
+      "analysis_state": "NO_SUPPORTED_PATTERN",
+      "quoted_phrase_count": 1,
+      "export_state": "UNAVAILABLE",
+      "existing_bytes_preserved": true
+    },
+    {
+      "case": "fresh_destination_recovery",
+      "exit": 0,
+      "private_details_saved": true
+    },
+    {
+      "case": "unsupported_quote_no_export",
+      "exit": 2,
+      "reason": "unsupported_double_quote_context",
+      "output_created": false
+    }
+  ],
+  "first_failure": {
+    "captured_at": "2026-11-23T20:34:55.625659+00:00",
+    "state": "FAILED",
+    "tests_run": 8,
+    "failures": 1,
+    "failure": "PS independence subprocess exited 1; unchanged evaluator source is absent in sparse worktree",
+    "source_evaluator_present": false,
+    "bindings": {
+      "tools/mt_quote_export.py": "57c3aa2c4c91f0a866e29e6bb0489e11eaeac43e256f2d4d76798561603fdb29",
+      "scripts/authority-mobile-quotation.py": "4e2c4b29733650a3dcda60e7c5a27df460567aee73ca2d44c2ca526baaf10a49",
+      "tests/test_mt_quote_export.py": "3aaba2d435f8e55c285c30596ebccc7cf45755533f840782767313904d63639a",
+      "output/mt-supported-use/first-controls.stderr": "434fc4d83a4b00917ac03fe5b7d037b9de95f0744fe106c470d087ffb173244e",
+      "output/mt-supported-use/first-controls.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "runtime_change": false
+  },
+  "original_export_counter_sha256": "67daa74ebac6adb838efe6193273933e6af4decc4bb5e53d8f2e3a2c5c91895f",
+  "fixture_cleanup": "owned TemporaryDirectory contexts completed; no retained synthetic export fixtures",
+  "claims": {
+    "independent_accuracy": false,
+    "human_acceptance": false,
+    "MT_release": false,
+    "original_requirement_closure": false,
+    "browser_parity_current": false
+  },
+  "limits": [
+    "Pure local Python and synthetic data only; no SDK/model/browser/network/account input.",
+    "CLI byte identity changes; ROOT must regenerate source bundles/manifests before integration.",
+    "Optional export adapter is CLI-only; analysis algorithms and private IO are unchanged."
+  ]
+}

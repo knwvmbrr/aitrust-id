@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-mt-quote-export-repair",
+  "recorded_at": "2026-11-23T20:42:22.712961+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "caf6af45a506bcb3196bfcf991eea1153f6a1e95",
+  "changed": "Repaired the optional MT quotation private export so supported analysis survives export faults, with separate fixed refusal/uncertainty status, private no-overwrite output and a lazy foundational IO adapter.",
+  "proves": "Current eight focused controls pass, including the real close-after-release fault, descriptor constructor failure, private modes, no-overwrite/recovery, unsafe/Git/link refusal, six default byte comparisons and actual independent PS. Five standalone CLI cases and separate five-case peer replay pass. Original failure, sparse-harness failure and prior test version remain retained; portable tests require no historical Git object.",
+  "limits": "No grammar, source-marker, quote, normalizer, shared IO, PS or model change. Synthetic engineering only; no independent accuracy, intent/truth, MT release or original closure. ROOT must regenerate affected source bundle/manifests and perform integration checks; old browser evidence is not rebound. No SDK/browser/native/model/network, push or ROOT edits. First normal hook correctly refused a missing exact human entry after an author assembly assertion on repeated inherited date headings; private failure retained, then exact entry inserted at the first heading without changing feature source.",
+  "scope_ids": [
+    "T-MT",
+    "F-019c"
+  ],
+  "files": {
+    "tools/mt_quote_export.py": "57c3aa2c4c91f0a866e29e6bb0489e11eaeac43e256f2d4d76798561603fdb29",
+    "scripts/authority-mobile-quotation.py": "4e2c4b29733650a3dcda60e7c5a27df460567aee73ca2d44c2ca526baaf10a49",
+    "tests/test_mt_quote_export.py": "785b885295f113d48ad7b2513180347f97cba89eef5e5896176eab7cc78deb7b",
+    "docs/mt-mobile-quotation.md": "675f3471058eedc947085f9d2e45ff88efefd69cbdbfb8ae55a217c8174aa0b1",
+    "docs/mt-quote-export-repair-plan.md": "2100a519e85e866065db93aa3ffbceea84f68d1bd4b8621614d32f2b12f8e7e5",
+    "runs/2026-11-23-mt-quote-export-original-counter.json": "67daa74ebac6adb838efe6193273933e6af4decc4bb5e53d8f2e3a2c5c91895f",
+    "runs/2026-11-23-mt-quote-export-current-execution.json": "110dd21cac3b5be95262b0938922996c37bed9da5e3b0c63eaecd1ae48a3976e",
+    "runs/2026-11-23-mt-quote-export-plan-review.json": "cadabf71f39f01dfe53be45cf45ec15b11766b59d4af85c77dfb990ee2eaaa88",
+    "runs/2026-11-23-mt-quote-export-portable-current.json": "ec438395d42b944134a306a23a3aec2d16b6bc708dd9291026ca783ce11fcfee",
+    "runs/2026-11-23-mt-quote-export-distinct-review.json": "7afc1e5f712c5850bad491aaff565ec752777fdc9dafab0c04a922c096d614fc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-mt-quote-export-original-counter.json",
+      "sha256": "67daa74ebac6adb838efe6193273933e6af4decc4bb5e53d8f2e3a2c5c91895f"
+    },
+    {
+      "path": "runs/2026-11-23-mt-quote-export-current-execution.json",
+      "sha256": "110dd21cac3b5be95262b0938922996c37bed9da5e3b0c63eaecd1ae48a3976e"
+    },
+    {
+      "path": "runs/2026-11-23-mt-quote-export-plan-review.json",
+      "sha256": "cadabf71f39f01dfe53be45cf45ec15b11766b59d4af85c77dfb990ee2eaaa88"
+    },
+    {
+      "path": "runs/2026-11-23-mt-quote-export-portable-current.json",
+      "sha256": "ec438395d42b944134a306a23a3aec2d16b6bc708dd9291026ca783ce11fcfee"
+    },
+    {
+      "path": "runs/2026-11-23-mt-quote-export-distinct-review.json",
+      "sha256": "7afc1e5f712c5850bad491aaff565ec752777fdc9dafab0c04a922c096d614fc"
+    }
+  ],
+  "checks": []
+}

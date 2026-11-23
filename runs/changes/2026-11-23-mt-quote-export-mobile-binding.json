@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-mt-quote-export-mobile-binding",
+  "recorded_at": "2026-11-23T20:57:48.575411+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "c7168d2691489e8cc878979d5e107a79b462990d",
+  "changed": "Regenerated the optional mobile MT source bundle and active manifest with the existing producer after the CLI-only private-export repair, and mirrored the reviewed guide; private export helpers remain excluded from browser analysis.",
+  "proves": "Only the CLI changes among15 captured source files; manifest delta is path/hash/bytes and that one source row. All legacy sources/manifests/bundles, notices and browser worker/client/result bytes remain exact. Six complete records and three refusals from the captured helper-free payload match current Python; default CLI works without helpers, explicit export remains separately unavailable without writing; six inert JS consumer groups pass. Different source/evidence review clears exact derived bytes and25 stable author bindings.",
+  "limits": "No actual browser/Pyodide/WASM/native SDK, model, install, network, ROOT source/eval/registry edit, push or public publication. No grammar/method/budget/taxonomy/accuracy or original closure. Parent c716 and old hash-addressed bundles/receipts are preserved; ROOT combined normal build/browser/inventory checks remain required.",
+  "scope_ids": [
+    "T-MT",
+    "F-019c"
+  ],
+  "files": {
+    "site/src/mt-mobile-device-manifest.json": "8e4f1809dd01180bd9056d664cd69e35257937c782cc64d0ab86480f8503b2f5",
+    "site/public/mt-mobile-device/method-53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191.json": "53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191",
+    "site/public/reference/mt-mobile-quotation.md": "675f3471058eedc947085f9d2e45ff88efefd69cbdbfb8ae55a217c8174aa0b1",
+    "runs/2026-11-23-mt-quote-export-mobile-binding.json": "4cf90fe2bd66516c2e991a0df0e0ef7d0d37d69b16b770a76161b8691717d681"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-mt-quote-export-mobile-binding.json",
+      "sha256": "4cf90fe2bd66516c2e991a0df0e0ef7d0d37d69b16b770a76161b8691717d681"
+    }
+  ],
+  "checks": []
+}
