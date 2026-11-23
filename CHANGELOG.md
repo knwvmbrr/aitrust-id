@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-mt-quote-export-repair
+
+Recorded 2026-11-23T20:42:22.712961+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Repaired the optional MT quotation private export so supported analysis survives export faults, with separate fixed refusal/uncertainty status, private no-overwrite output and a lazy foundational IO adapter.
+- **Evidence.** Current eight focused controls pass, including the real close-after-release fault, descriptor constructor failure, private modes, no-overwrite/recovery, unsafe/Git/link refusal, six default byte comparisons and actual independent PS. Five standalone CLI cases and separate five-case peer replay pass. Original failure, sparse-harness failure and prior test version remain retained; portable tests require no historical Git object. [Change record](./runs/changes/2026-11-23-mt-quote-export-repair.json).
+- **Not claimed.** No grammar, source-marker, quote, normalizer, shared IO, PS or model change. Synthetic engineering only; no independent accuracy, intent/truth, MT release or original closure. ROOT must regenerate affected source bundle/manifests and perform integration checks; old browser evidence is not rebound. No SDK/browser/native/model/network, push or ROOT edits. First normal hook correctly refused a missing exact human entry after an author assembly assertion on repeated inherited date headings; private failure retained, then exact entry inserted at the first heading without changing feature source.
+
+
 
 
 
