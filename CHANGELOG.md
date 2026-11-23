@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-031046-include-corrective-source-review-evidence-c0a4a863
+
+Recorded 2026-11-23T03:10:46.947348+00:00 · Contributor: Codex PM; review authored by Codex /root/share_debugger · change
+
+- **Changed.** Included the exact corrective assembly review already referenced by current state, closing one staging omission before protected merge.
+- **Evidence.** The required public-safe report has its reviewed45b5aa digest; all current state evidence references are checked against the staged source index before push. [Change record](./runs/changes/2026-11-23-031046-include-corrective-source-review-evidence-c0a4a863.json).
+- **Not claimed.** Metadata completeness only; no code, source fingerprint, original percentage, license or accuracy clearance change. Protected checks and actual main-only managed installation still required.
+
+
 ### 2026-11-23-030727-select-managed-current-five-capabilities-fc70d7a1
 
 Recorded 2026-11-23T03:07:27.935405+00:00 · Contributor: Codex PM; current hosted evidence collected and selection reviewed by Codex /root/seo · change
