@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-mt-quote-export-mobile-binding
+
+Recorded 2026-11-23T20:57:48.575411+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Regenerated the optional mobile MT source bundle and active manifest with the existing producer after the CLI-only private-export repair, and mirrored the reviewed guide; private export helpers remain excluded from browser analysis.
+- **Evidence.** Only the CLI changes among15 captured source files; manifest delta is path/hash/bytes and that one source row. All legacy sources/manifests/bundles, notices and browser worker/client/result bytes remain exact. Six complete records and three refusals from the captured helper-free payload match current Python; default CLI works without helpers, explicit export remains separately unavailable without writing; six inert JS consumer groups pass. Different source/evidence review clears exact derived bytes and25 stable author bindings. [Change record](./runs/changes/2026-11-23-mt-quote-export-mobile-binding.json).
+- **Not claimed.** No actual browser/Pyodide/WASM/native SDK, model, install, network, ROOT source/eval/registry edit, push or public publication. No grammar/method/budget/taxonomy/accuracy or original closure. Parent c716 and old hash-addressed bundles/receipts are preserved; ROOT combined normal build/browser/inventory checks remain required.
+
+
 ### 2026-11-23-mt-quote-export-repair
 
 Recorded 2026-11-23T20:42:22.712961+00:00 · Contributor: Codex /root/web_camo · change

@@ -62,6 +62,26 @@ existing owner-held mode0700 parent outside the repository. A new0600 evidence
 file is created; existing destinations are refused. Delete your own files when
 finished. The default console result contains counts, not text or fingerprints.
 
+The optional export uses the same analysis record and does not change quotation
+recognition. If an explicit export fails, the console keeps the supported
+analysis state and counts, sets `private_details_saved:false`, and adds a
+separate `private_export` result. `UNAVAILABLE` means no new output from this
+attempt is claimed; a pre-existing destination is preserved. `OUTPUT_UNCERTAIN`
+with `private_output_may_remain:true` means a private file or directory may
+remain: do not use it as accepted evidence. The command exits2 in either case.
+A failed export is not evidence of unsupported quotation, no pattern or safe
+content. Check and remove only your own residual private files when appropriate;
+retry in a fresh destination. Missing optional export support leaves the default
+recognition-only command usable.
+
+Every remaining parent is walked without following symlinks. Arbitrary parent
+symlinks, parent traversal, final existing names/links, unsafe permissions and
+Git ancestors are refused. Only the actual fixed macOS system aliases `/tmp`
+and `/var` may map to their exact `/private` counterparts when used as parent
+components; the final requested name is never resolved or adopted. The adapter
+reuses the unchanged private packet IO foundation, not MT labeling or another
+tag's availability. It provides no universal hostile same-user/crash guarantee.
+
 ## What the checks establish
 
 The browser checks closed record shape, source/subject identities, quote grammar,
