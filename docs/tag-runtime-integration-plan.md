@@ -166,3 +166,13 @@ final HTML hashing. Every link must appear exactly once; final dist/index.html
 must equal the actual observed bundler output. Partial build4 is not complete
 provenance. A different pre-code review86be approved this source-ownership
 correction; genuine full build5 and exact artifact inspection remain required.
+
+## Active-source pin integration
+
+The finite V4 source admission changes only two web source bindings: the shared
+source consumer (39209 bytes) and registry (34707 bytes). Refresh only these exact
+SOURCE_PINS after merging V4 and iOS; the dependency-policy CODE, web authorization
+composition and thirteen sibling routes stay unchanged. The actual sources-only
+check passes35 npm packages,5 runtime files,14 companions and3 source generators.
+This is source readiness; whole current build/package and protected web authority
+remain separate. Different exact AST/pin/sibling review precedes the full build.

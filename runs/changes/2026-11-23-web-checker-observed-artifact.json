@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-web-checker-observed-artifact",
+  "recorded_at": "2026-11-23T23:50:56.326628+00:00",
+  "author": "Codex /root integration; Codex /root/seo distinct exact source-pin review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "69d7a37023d97cf4c5889785746f911a6ce87103",
+  "changed": "Bound the web artifact reader to the exact active V4 source consumer and registry, preserved every sibling route, and refreshed current independent engineering assignments.",
+  "proves": "Actual sources CLI passes35 npm/5 runtime/14 companions/3 generators. Distinct review verifies exactly two SOURCE_PINS changed, all other helper AST is identical and thirteen sibling routes remain unchanged. The app/Share and active V4 authored commits are integrated with normal guards.",
+  "limits": "Source readiness only; genuine whole current build, package, protected compiled-web authority, current unsigned native compilation, independent accuracy and human acceptance remain pending.136originals complete66open; no closure. Agents are dated assignments rather than permanent processes.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-012",
+    "T-IV"
+  ],
+  "files": {
+    "tools/web_checker_artifact.py": "6109a3977d4ed2a157cf601e6c4e73a6f04cf77c132ac8ee38fe62c972da0bbe",
+    "docs/tag-runtime-integration-plan.md": "1c912eaa2d0a8dc632d9335363b46d817bfe86344995f8809d53fac2fd6247e8",
+    "docs/session-delivery.json": "aa1f31346570ac5e0a8f8da17e80adfb21631fa8529ee7f32160d6e3828a5623",
+    "docs/session-delivery-plan.md": "5dbf4289499f520fee4468d3091d5a71c938d10008d250adbb105768ce34b5b1",
+    "state.json": "2662a1bfcf0d49fa8bc647026c994beb128048267ec1def78c662a3b95eed1fb"
+  },
+  "evidence": [],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "scripts/web-checker-artifact.py",
+        "sources"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T23:48:16.621287+00:00"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/session-delivery.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T23:49:48.477400+00:00"
+    }
+  ],
+  "source_check": {
+    "npm_packages": 35,
+    "runtime_files": 5,
+    "runtime_companions": 14,
+    "source_generator_packages": 3,
+    "logical_read_bytes": 65849177,
+    "read_calls": 212,
+    "peak_owned_fds": 94,
+    "complete_build_observed": false
+  },
+  "different_review": {
+    "sha256": "28282e42fbaa36b38b42daa51fcb1f04e8ff9d8ebd28ee2c1250e97e39573f84",
+    "record": {
+      "ROOT_actual_sources_observation_qualified": "ROOT reports source-only sources CLI PASS35npm/5runtime/14companions/3generators,65849177logicalB/212calls/94FD at23:48:16Z. Reviewer did not rerun it or a build.",
+      "actual_pin_delta": {
+        "eval/dependency-policy.json": {
+          "after": {
+            "bytes": 34707,
+            "sha256": "2e8b51545467f45284c346150686ea5cc4a9ca2e32b61d648d229df61f99a17e"
+          },
+          "before": {
+            "bytes": 34311,
+            "sha256": "8db769dbd924e0b4c5ec4b5d92f4e953b0b4cf4cf78656f1dca3a544949ed2b6"
+          }
+        },
+        "tools/distribution_artifacts.py": {
+          "after": {
+            "bytes": 39209,
+            "sha256": "b45bc06319ced5b5d45198b1689e806c1e2b1f76de1c3e0a97b2c908238fe06f"
+          },
+          "before": {
+            "bytes": 39116,
+            "sha256": "548922881ab62b2c5b9af9dffd09496e4906ca252050bee0495a5f85b8a79e3c"
+          }
+        }
+      },
+      "all13sibling_route_and_component_records_unchanged": true,
+      "all15current_pin_rows_match_actual_bytes": true,
+      "all_AST_outside_SOURCE_PINS_unchanged": true,
+      "captured_at": "2026-11-23T23:50:11.192106+00:00",
+      "conclusion": "CLEAR exact two current source-pin updates; no web admission/wholeAUTH claim",
+      "limits": [
+        "Source-copyV4 permission does not approve compiled web artifacts.",
+        "Actual final committed-source build,census,fullartifact inspection,signature and consumer remain separate.",
+        "No code/source/output/credential mutation,SDK/native/network/repeated suite."
+      ],
+      "prior_admission_implementation_review_sha256": "6f92bf04726c5516b3e6908e057fd0fe8f39f9e15bf7378947b69464729792b7",
+      "profile": "web-active-V4-two-source-pin-distinct-review/v1",
+      "reviewer": "Codex /root/seo",
+      "web_helper_sha256": "6109a3977d4ed2a157cf601e6c4e73a6f04cf77c132ac8ee38fe62c972da0bbe"
+    }
+  }
+}

@@ -11844,3 +11844,11 @@ Recorded 2026-11-23T23:21:18.537217+00:00 · Contributor: Codex /root/web_camo �
 - **Changed.** Project exact17 runtime notices and bundled preferred-source offers into App and Share resources, with fixed public-only source access, bounded received-resource inspection and strict private output ownership.
 - **Evidence.** Current source-only CLI projection, private preparation and46 selected resource checks pass; old real IPA verifies ten runtime copies then refuses24 missing resources. Corrected read accounting, physical role identities and final membership rechecks pass focused controls and different source review. Historical fixtures/failures remain explicitly attributed. [Change record](./runs/changes/2026-11-23-ios-runtime-obligations.json).
 - **Not claimed.** No Swift or SDK execution, compiled UI, signing/upload, whole IPA admission, new Apple assent, independent accuracy, legal clearance, policy adoption or original requirement closure. Historical30/37/full fixture records are not relabeled as a current34-test or native run.
+
+### 2026-11-23-web-checker-observed-artifact
+
+Recorded 2026-11-23T23:50:56.326628+00:00 · Contributor: Codex /root integration; Codex /root/seo distinct exact source-pin review · change
+
+- **Changed.** Bound the web artifact reader to the exact active V4 source consumer and registry, preserved every sibling route, and refreshed current independent engineering assignments.
+- **Evidence.** Actual sources CLI passes35 npm/5 runtime/14 companions/3 generators. Distinct review verifies exactly two SOURCE_PINS changed, all other helper AST is identical and thirteen sibling routes remain unchanged. The app/Share and active V4 authored commits are integrated with normal guards. [Change record](./runs/changes/2026-11-23-web-checker-observed-artifact.json).
+- **Not claimed.** Source readiness only; genuine whole current build, package, protected compiled-web authority, current unsigned native compilation, independent accuracy and human acceptance remain pending.136originals complete66open; no closure. Agents are dated assignments rather than permanent processes.
