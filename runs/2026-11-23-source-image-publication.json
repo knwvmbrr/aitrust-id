@@ -1,0 +1,164 @@
+{
+  "profile": "authenticated-source-production-publication/v1",
+  "captured_at": "2026-11-23T22:18:45.531176+00:00",
+  "pass": true,
+  "source_commit": "9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7",
+  "protected_pr": 153,
+  "required_protected_checks_passed": 11,
+  "unresolved_review_threads_at_merge": 0,
+  "admin_bypass": false,
+  "producer_run": 45274283187,
+  "producer_job": 138042152436,
+  "producer_conclusion": "success",
+  "artifact_id": 14865784370,
+  "artifact_zip_sha256": "e4afbb87ff4da604ef3f21bebbcaca3ed7b216c8c76b6f81647beb83be9c0fc9",
+  "actual_release_files": {
+    "source.tar.gz": {
+      "bytes": 42040441,
+      "sha256": "32590093ff99faa39ca264b2cc8bc766a57b029278d098faa0c6580058b801bb"
+    },
+    "evidence.json": {
+      "bytes": 15476440,
+      "sha256": "e7b5fc326c7879c5aefea0a071872c7f53389540e140f9cbd95eb46e1497c2fc"
+    },
+    "artifact.spdx.json": {
+      "bytes": 9360278,
+      "sha256": "8bf212b81641ce2cf9708d27f2105cc632e5b5d903da77039dea604b57355068"
+    },
+    "sbom.sigstore.json": {
+      "bytes": 12490049,
+      "sha256": "c74d076ea60ec3bfdf5346db7bb00ff06c6f1d0be597e9e1357d621115468840"
+    },
+    "trusted-root.jsonl": {
+      "bytes": 34634,
+      "sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c"
+    },
+    "managed-verified.json": {
+      "bytes": 2405,
+      "sha256": "c4a6a07b6c615538e9da882813a7eebe7e4485a94e6ebb899a2ba5956e1635c4"
+    }
+  },
+  "actual_linux_consumer": {
+    "path": "runs/2026-11-23-source-image-protected-source-consumer.json",
+    "sha256": "c4a6a07b6c615538e9da882813a7eebe7e4485a94e6ebb899a2ba5956e1635c4",
+    "actual_authority": true,
+    "synthetic_authority": false
+  },
+  "actual_mac_consumer_completion": {
+    "profile": "actual-macos-managed-source-completion/v1",
+    "captured_at": "2026-11-23T22:04:40.204631+00:00",
+    "process_exit": 0,
+    "tool_session": 97488,
+    "stdout": "Managed source verified; three finite PS source probes completed.\nPrivate staging retained. Not an accuracy, legal or fourteen-route completion claim.\n",
+    "source_commit": "9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7",
+    "result_bytes": 2405,
+    "result_sha256": "c4a6a07b6c615538e9da882813a7eebe7e4485a94e6ebb899a2ba5956e1635c4",
+    "independently_retrieved_trust_root_sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c",
+    "producer_root_used_as_authority": false,
+    "same_result_as_producer": true,
+    "actual_os": "macOS",
+    "source_module_sha256": "b251bab9f84654062ea484ed34da2d2cdfbfac105de6359e5a5b2cd94fe5fdb0",
+    "mocked_authority": false,
+    "dependencies_installed": false,
+    "local_docker_started": false,
+    "independent_accuracy_evidence": false,
+    "legal_clearance": false,
+    "complete_fourteen_routes": false
+  },
+  "public_release": {
+    "id": 456053943,
+    "tag": "source-verified-2026-11-23-9c98ac50",
+    "url": "https://github.com/knwvmbrr/aitrust-id/releases/tag/source-verified-2026-11-23-9c98ac50",
+    "draft": false,
+    "prerelease": true,
+    "published_at": "2026-11-23T22:09:24Z",
+    "tag_target_commit": "9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7"
+  },
+  "actual_anonymous_download": {
+    "profile": "anonymous-verified-source-assets/v1",
+    "captured_at": "2026-11-23T22:11:43.211834+00:00",
+    "started_at": "2026-11-23T22:11:33.532075+00:00",
+    "pass": true,
+    "source_commit": "9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7",
+    "release_tag": "source-verified-2026-11-23-9c98ac50",
+    "checks": [
+      {
+        "name": "source.tar.gz",
+        "bytes": 42040441,
+        "sha256": "32590093ff99faa39ca264b2cc8bc766a57b029278d098faa0c6580058b801bb",
+        "status": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "no_auth_cookie_or_proxy": true
+      },
+      {
+        "name": "evidence.json",
+        "bytes": 15476440,
+        "sha256": "e7b5fc326c7879c5aefea0a071872c7f53389540e140f9cbd95eb46e1497c2fc",
+        "status": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "no_auth_cookie_or_proxy": true
+      },
+      {
+        "name": "artifact.spdx.json",
+        "bytes": 9360278,
+        "sha256": "8bf212b81641ce2cf9708d27f2105cc632e5b5d903da77039dea604b57355068",
+        "status": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "no_auth_cookie_or_proxy": true
+      },
+      {
+        "name": "sbom.sigstore.json",
+        "bytes": 12490049,
+        "sha256": "c74d076ea60ec3bfdf5346db7bb00ff06c6f1d0be597e9e1357d621115468840",
+        "status": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "no_auth_cookie_or_proxy": true
+      },
+      {
+        "name": "trusted-root.jsonl",
+        "bytes": 34634,
+        "sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c",
+        "status": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "no_auth_cookie_or_proxy": true
+      },
+      {
+        "name": "managed-verified.json",
+        "bytes": 2405,
+        "sha256": "c4a6a07b6c615538e9da882813a7eebe7e4485a94e6ebb899a2ba5956e1635c4",
+        "status": 200,
+        "final_host": "release-assets.githubusercontent.com",
+        "no_auth_cookie_or_proxy": true
+      }
+    ],
+    "failure": null,
+    "request_authentication": false,
+    "cookies_used": false,
+    "artifact_bytes_saved_again": false,
+    "independent_accuracy_evidence": false
+  },
+  "distinct_production_review": {
+    "sha256": "5ff0fcabdfabda91ecfbe97cf387b906d5d5dc3e3c0aacb14c12616a78583d28",
+    "raw_utf8": "{\n  \"profile\": \"actual-protected-source-release-distinct-review/v1\",\n  \"pass\": true,\n  \"captured_at\": \"2026-11-23T22:06:44.972922+00:00\",\n  \"reviewed_by\": \"Codex /root/seo\",\n  \"protected_main_commit\": \"9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7\",\n  \"actual_run\": 45274283187,\n  \"actual_job\": 138042152436,\n  \"artifact_id\": 14865784370,\n  \"independently_hashed_outer_ZIP\": {\n    \"bytes\": 45144200,\n    \"sha256\": \"e4afbb87ff4da604ef3f21bebbcaca3ed7b216c8c76b6f81647beb83be9c0fc9\"\n  },\n  \"exact_six_files_independently_hashed\": {\n    \"source.tar.gz\": {\n      \"bytes\": 42040441,\n      \"sha256\": \"32590093ff99faa39ca264b2cc8bc766a57b029278d098faa0c6580058b801bb\"\n    },\n    \"evidence.json\": {\n      \"bytes\": 15476440,\n      \"sha256\": \"e7b5fc326c7879c5aefea0a071872c7f53389540e140f9cbd95eb46e1497c2fc\"\n    },\n    \"artifact.spdx.json\": {\n      \"bytes\": 9360278,\n      \"sha256\": \"8bf212b81641ce2cf9708d27f2105cc632e5b5d903da77039dea604b57355068\"\n    },\n    \"sbom.sigstore.json\": {\n      \"bytes\": 12490049,\n      \"sha256\": \"c74d076ea60ec3bfdf5346db7bb00ff06c6f1d0be597e9e1357d621115468840\"\n    },\n    \"trusted-root.jsonl\": {\n      \"bytes\": 34634,\n      \"sha256\": \"65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c\"\n    },\n    \"managed-verified.json\": {\n      \"bytes\": 2405,\n      \"sha256\": \"c4a6a07b6c615538e9da882813a7eebe7e4485a94e6ebb899a2ba5956e1635c4\"\n    }\n  },\n  \"outer_ZIP_expanded_bytes\": 79404247,\n  \"source_graph_nodes_Git_modes_OIDs_matched\": 13747,\n  \"mechanism_source_blobs_SHA256_matched\": 27,\n  \"PS_cohort_source_blobs_matched\": 10,\n  \"certificate_observation\": {\n    \"SAN_identity\": \"https://github.com/knwvmbrr/aitrust-id/.github/workflows/artifact-sbom.yml@refs/heads/main\",\n    \"issuer_literal_present\": \"https://token.actions.githubusercontent.com\",\n    \"source_commit_extension_present\": true,\n    \"certificate_sha256\": \"2409221ca2786bf932a76852301ac556194f80a312031553f8ea1d70ac0b10be\",\n    \"cryptographic_signature_reexecuted_by_this_reviewer\": false\n  },\n  \"actual_consumer\": {\n    \"hosted_state\": \"VERIFIED_SOURCE_PS_PROBES_COMPLETED\",\n    \"AUTH_verified\": true,\n    \"source_only_PS_probes\": [\n      {\n        \"id\": \"positive\",\n        \"output_sha256\": \"895beb04623a8ebce5b2caad003f27f383d12c7a70d8b536ea7baeec334944a9\",\n        \"state\": \"FINDING\",\n        \"status\": \"PASS\",\n        \"whole_record_canonical_match\": true\n      },\n      {\n        \"id\": \"negative\",\n        \"output_sha256\": \"65186783ca1c9583bd17de16a88e68b978c7578d368621be29a210c981d64c87\",\n        \"state\": \"NO_FINDING\",\n        \"status\": \"PASS\",\n        \"whole_record_canonical_match\": true\n      },\n      {\n        \"id\": \"invalid_utf8\",\n        \"output_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n        \"state\": \"REFUSED\",\n        \"status\": \"PASS\",\n        \"whole_record_canonical_match\": false\n      }\n    ],\n    \"outside_Mac_process_exit\": 0,\n    \"outside_completion_observation_sha256\": \"20869937f40d76111ed0091a1c36f6c766a8e006a5388fb1eeff48ceea196284\",\n    \"outside_result\": {\n      \"bytes\": 2405,\n      \"sha256\": \"c4a6a07b6c615538e9da882813a7eebe7e4485a94e6ebb899a2ba5956e1635c4\"\n    },\n    \"independent_root_bytes\": {\n      \"bytes\": 34634,\n      \"sha256\": \"65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c\"\n    },\n    \"retrieval_channel_note\": \"SeparatelyfetchedROOTactualtrusted-rootbodymatchesproducerbody; equalbytesnotassumedindependentretrieval byhashalone, actualcompletionprovenance reviewed.\"\n  },\n  \"retained_API_sha256\": {\n    \"run-api.json\": \"71e67bf26dbb2016675671f02e7e72719487f3a58bc55dedbb28c835fd99981b\",\n    \"job-api.json\": \"a111543195fc0266d81f8efa0cfa293ba4f0a2d6ed67eb53e872f96aa3f23817\",\n    \"artifact-api.json\": \"e2be0a89359b48b1d723e1905f683752c01dacd143d5942e668584e3024a57ea\"\n  },\n  \"findings\": [],\n  \"limits\": [\n    \"Reviewerindependentlystreamhashedactual45MBouterZIPandall6members/diskfiles; didnotextractorinspectinnersourcearchiveorinstall/runreceivedcode.\",\n    \"ParsedDSSE/certificateidentity/predicate/subjectrelationshipsarenot a newcryptographicverification; actualprotectedLinuxconsumerandcompletedMacconsumer use realfixedghverification, independentlyselectedroots andno mockedauthority, asretainedexecutionevidence.\",\n    \"Graph/Gitmetadataidentityand27mechanism+10PSsourceblobs checkedagainstexplicitQ; actualarchive-to-Gitstreamingbindingispreviouslyreviewedcodeexecutedbyrealconsumers, notrepeatedwholearchivequalificationhere.\",\n    \"Onlysource-snapshotrouteandfinitePSsourceprobes. complete14routes/globalF057/X02/legal/tagaccuracy/human/physicalcertification remainfalse/unfulfilled.\",\n    \"GHAartifactdeliverynotyetpublicanonymoussource-releasepublication; no fulloriginalclosure inferred.\",\n    \"No providernetworkquery/testsuite/browser/nativeSDK/model/sourceexecution/ROOTedits or credentials accessed by reviewer.\"\n  ]\n}\n"
+  },
+  "distinct_publication_review": {
+    "sha256": "bd557d6915f5ae0b6cdae41a14b12fd5c58153ad0275efdd467ea5d3045f0a9f",
+    "raw_utf8": "{\n  \"profile\": \"actual-source-publication-distinct-addendum/v1\",\n  \"pass\": true,\n  \"captured_at\": \"2026-11-23T22:17:14.770086+00:00\",\n  \"reviewed_by\": \"Codex /root/seo\",\n  \"prior_actual_source_review_sha256\": \"5ff0fcabdfabda91ecfbe97cf387b906d5d5dc3e3c0aacb14c12616a78583d28\",\n  \"publication\": {\n    \"release_id\": 456053943,\n    \"URL\": \"https://github.com/knwvmbrr/aitrust-id/releases/tag/source-verified-2026-11-23-9c98ac50\",\n    \"tag\": \"source-verified-2026-11-23-9c98ac50\",\n    \"tag_type\": \"commit\",\n    \"target_commit\": \"9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7\",\n    \"published_at\": \"2026-11-23T22:09:24Z\",\n    \"draft\": false,\n    \"prerelease\": true,\n    \"six_exact_asset_bytes\": 79404247\n  },\n  \"fresh_independent_metadata_observation\": {\n    \"method\": \"TwofixedanonymousHTTPSGitHubRESTGETs, proxyhandlerdisabled/noauth/cookieprocessor; direct200sameURL, eachbody<=65536B; noassetbodyfetch.\",\n    \"release_API_sha256\": \"241d574cc911a686f8bc09b39eed2762e6f5d12d3dc0dad82df011b6caf29b2f\",\n    \"tag_API_sha256\": \"97e689bde10b198051489023ee543d6cb418ffdc37c508eca2ef5fbcb6429dfd\",\n    \"observed_publication_identity_and_all6API_asset_sizes_digests\": true\n  },\n  \"ROOT_actual_anonymous_delivery_observation\": {\n    \"receipt_sha256\": \"0810f96d3d8d6ba77bc31a060b739b9693ea8a09b012e2f6b80791967293c273\",\n    \"started_at\": \"2026-11-23T22:11:33.532075+00:00\",\n    \"completed_at\": \"2026-11-23T22:11:43.211834+00:00\",\n    \"all6HTTP200_exact_expected_SHA_and_size\": true,\n    \"total_bytes\": 79404247,\n    \"auth_cookies_proxy_used\": false,\n    \"reviewer_redownloaded79MB\": false\n  },\n  \"findings\": [],\n  \"limits\": [\n    \"ROOTalreadyperformedactualanonymous6assetstreams; reviewercheckedretainedrecordagainstindependentlyhashed6originalfilesandfreshpublicAPIassetdigests, didnotrepeat79MBdownloads.\",\n    \"Publicmetadata+byteidentityaddsdeliveryobservation, not newsignatureverification or fullsourcearchiveextraction. PriorrealLinux/MacAUTH+PSprobes source5ff0 remains separatelyqualified.\",\n    \"Engineeringprereleaseexactwhole-source route only; all14routes/fullF057/X02/legal/independentaccuracy/human/physical/originalclosure remainunclaimed.\",\n    \"No ROOTedits/termsassent/install/build/sign/browser/nativeSDK/model execution.\"\n  ]\n}\n"
+  },
+  "source_copy_and_finite_ps_exercise_completed": true,
+  "all_202_preserved": true,
+  "original_complete": 136,
+  "original_open": 66,
+  "target_open": 60,
+  "target_met": false,
+  "original_closures_this_wave": 0,
+  "complete_fourteen_routes": false,
+  "independent_accuracy_evidence": false,
+  "legal_clearance": false,
+  "certification": false,
+  "limits": [
+    "Source authentication and the fixed source exercises do not establish detector accuracy or other runtime release permission.",
+    "The actual first image qualification stopped during acquisition before native inference; it did not block this independent source delivery.",
+    "Independent humans, outside operators, physical devices and legal execution retain their own required acceptance."
+  ]
+}

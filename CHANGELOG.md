@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-source-image-protected-publication
+
+Recorded 2026-11-23T22:18:45.531176+00:00 · Contributor: Codex /root production and publication; Codex /root/seo distinct evidence review · change
+
+- **Changed.** Published an authenticated whole-source engineering download with six exact files and completed the real finite PS source consumer on both Linux and Mac; recorded anonymous delivery and truthful remaining gates.
+- **Evidence.** Protected PR153 passed all eleven required checks. Actual main producer signed the exact source archive/SPDX and authenticated before ten-file materialization and three PS probes. The separate Mac consumer exited0 using independently retrieved roots and produced byte-identical records. All six public files downloaded without account, cookies or proxy and matched exact hashes; different source and publication reviews are CLEAR. [Change record](./runs/changes/2026-11-23-source-image-protected-publication.json).
+- **Not claimed.** Full F-057/X-02, independent detector accuracy, outside implementers, physical devices and legal execution remain open. The first separate image qualification failed acquisition before inference and is being diagnosed.136complete66open; target60 unmet; no original closure.
+
+
 ### 2026-11-23-source-image-hosted-engineering-selection
 
 Recorded 2026-11-23T21:21:00.213499+00:00 · Contributor: Codex /root implementation; Codex /root/seo independent source review · change
