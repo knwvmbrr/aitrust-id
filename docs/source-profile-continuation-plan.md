@@ -70,3 +70,31 @@ Review the exact diff and execute focused changed controls before one frozen
 hosted continuation run. Select all five only after real successful outcomes;
 then normal protected checks, main signing and managed download operation.
 Different preimplementation reviewer: Codex /root/seo.
+
+## Hosted prerequisite and state correction, before code
+
+Candidate bfcdc734's actual managed-mcp-controls job138004665463 fails the
+source-snapshot positive precondition before MCP injection. That job alone still
+checks out fetch-depth1. The actual current archive/Git/copy job45263635249 passes,
+where the full history is present. The finite classifier requires the real6d752
+ancestor and immutable predecessor tree comparisons; a shallow checkout cannot
+supply that history and correctly returns unavailable. Change only this control
+job's checkout to fetch-depth0, retaining3minutes,26controls, the positive source
+assertion and all13 exact sibling records. Do not turn a missing-history refusal
+into permission. Different pre-code reviewer /root/seo confirmed this exact causal
+source chain; it did not claim to rerun the hosted job.
+
+The scope-plan job138004666032 also caught ROOT updating state.updated without
+state.updated_at. Synchronize both to the actual correction timestamp. Keep every
+original percentage and criterion unchanged; run the existing accountability
+verifier after all referenced evidence is final.
+
+Artifact-workflow bytes are inputs of protocol and website. Preserve/cancel
+scoped run45263634950 rather than adopt its old partial/complete observations
+as current after this change. The successful original PS/privacy/extension
+receipts retain their unchanged inputs; reassess them after all final edits.
+Run full corrected protocol and website profiles once after source freeze.
+Register only runs/changes/2026-11-23-source-profile-ci-prerequisites.json as
+finite project name155 within unchanged160. Update its data pin/21bindings;
+no copied grants, origin lists, metadata transition, COMMON file, resource cap,
+signer or release permission changes. Preserve original failed candidates.

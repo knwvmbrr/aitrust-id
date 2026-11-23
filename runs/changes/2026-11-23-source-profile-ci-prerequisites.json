@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-source-profile-ci-prerequisites",
+  "recorded_at": "2026-11-23T20:59:34.677845+00:00",
+  "author": "Codex /root implementation; Codex /root/seo distinct review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bfcdc734977f8f8fb70a1e3374455ca191462693",
+  "changed": "Provided the managed MCP controls with the actual full Git history required by their source-route isolation precondition, and repaired the paired current-state timestamps. Kept all26 controls,13sibling invariants, permissions and limits unchanged.",
+  "proves": "Actual hosted failures identified the shallow-history source refusal before fault injection and the contradictory state timestamps. Current accountability and dependency-policy verifiers pass; independent source review confirms the only workflow semantic delta is fetch-depth1to0 in managed-mcp-controls. The finite profile adds only this155th name, within160.",
+  "limits": "Prior scoped candidate45263634950 is preserved/cancelled as source-stale after protocol success and before website completion. Fresh full protocol/website receipts, protected source signing/consumer, independent accuracy and original closures remain pending.136complete66open; target60 unmet.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "F-140"
+  ],
+  "files": {
+    ".github/workflows/artifact-sbom.yml": "7fe34108d0a39f0da4506a2f9c6073fb882a73dec4341ec030751e80d406f6c1",
+    "docs/session-delivery-plan.md": "03ee07f21cff7cdec3aa2e9e823ff15bb55767c629b34ec0b05e67b72c1a35fe",
+    "docs/session-delivery.json": "6845ba0adbfdda5ed071951f4763befdde860545e7762e6734817013ed990847",
+    "docs/source-profile-continuation-plan.md": "31eaa39bd329c1b027790858e8ff124d41ae9bf3d26e539cb85e4fd7a79de173",
+    "eval/dependencies/source-snapshot-additions-v3.json": "3bd727fef18736bcd259fa4f1e21fd25fa8629f361b25289dc0016f48394db3e",
+    "eval/dependency-policy.json": "8db769dbd924e0b4c5ec4b5d92f4e953b0b4cf4cf78656f1dca3a544949ed2b6",
+    "eval/route-boundaries.json": "a4e2a065c7f8a425ce30743fba088d44c87abc34e1d421cf3e237ad06fa0417c",
+    "state.json": "10b05daecbcf576e97935f75c3e4c76b4497f765c1344367e8fbfecfc34d9044",
+    "tools/source_release_policy_v3.py": "26a6bb8be66cab5a355bfbe6fcfbd16cefe994d1e7ade8b26b3cd227f0f82d41"
+  },
+  "evidence": [
+    {
+      "path": "docs/source-profile-continuation-plan.md",
+      "sha256": "31eaa39bd329c1b027790858e8ff124d41ae9bf3d26e539cb85e4fd7a79de173"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python",
+        "scripts/verify-accountability.py",
+        "--output",
+        "output/coordination/source-history-prerequisite-accountability.json"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T20:59:34.677845+00:00"
+    },
+    {
+      "argv": [
+        "python",
+        "scripts/verify-dependency-policy.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T20:59:34.677845+00:00"
+    }
+  ],
+  "distinct_source_review": {
+    "sha256": "4639c0e8c19dfbaf31f390b0a7670f719a160676ec4075da8ade7b614111deae",
+    "raw_utf8": "{\n  \"profile\": \"source-profile-history-prerequisite-final-distinct-review/v1\",\n  \"pass\": true,\n  \"captured_at\": \"2026-11-23T20:58:51.320388+00:00\",\n  \"reviewed_by\": \"Codex /root/seo\",\n  \"base_commit\": \"bfcdc734977f8f8fb70a1e3374455ca191462693\",\n  \"source_hashes\": {\n    \".github/workflows/artifact-sbom.yml\": \"7fe34108d0a39f0da4506a2f9c6073fb882a73dec4341ec030751e80d406f6c1\",\n    \"docs/source-profile-continuation-plan.md\": \"31eaa39bd329c1b027790858e8ff124d41ae9bf3d26e539cb85e4fd7a79de173\",\n    \"eval/dependencies/source-snapshot-additions-v3.json\": \"3bd727fef18736bcd259fa4f1e21fd25fa8629f361b25289dc0016f48394db3e\",\n    \"eval/dependency-policy.json\": \"8db769dbd924e0b4c5ec4b5d92f4e953b0b4cf4cf78656f1dca3a544949ed2b6\",\n    \"tools/source_release_policy_v3.py\": \"26a6bb8be66cab5a355bfbe6fcfbd16cefe994d1e7ade8b26b3cd227f0f82d41\",\n    \"state.json\": \"10b05daecbcf576e97935f75c3e4c76b4497f765c1344367e8fbfecfc34d9044\"\n  },\n  \"source_cause\": {\n    \"base\": \"6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd\",\n    \"lines\": \"tools/source_release_policy_v3.py337-339: actual BASE ancestor plus BASE/V2 protected tree comparisons\",\n    \"finding\": \"Managed MCP controls positive source assertion now legitimately depends on retained Git ancestor objects; fetch-depth1 omitted required history. Fetch-depth0 supplies evidence rather than removing a refusal or granting permission.\",\n    \"hosted_failure_provenance\": \"ROOT-reported job138004665463; reviewer independently checked source causal chain, not downloaded hosted log.\"\n  },\n  \"checks\": {\n    \"workflow_semantic_delta_only_managed_mcp_checkout_depth\": true,\n    \"preserved_3min_and_26controls\": true,\n    \"all_21_source_rows_actual_bytes_verified\": true,\n    \"registry_delta_only2hashrows\": true,\n    \"v3_only_exact1projectname154to155\": true,\n    \"unchanged_copied_origins_transitions_V1V2_caps\": true,\n    \"unchanged_COMMON4_and_original_delivery_workflow\": true,\n    \"paired_state_timestamps\": \"2026-11-23T20:58:36.038455+00:00\",\n    \"bash_syntax_blocks\": 16,\n    \"source_before_after_stable\": true,\n    \"master202_and_progress136_66_bytes_unchanged\": true\n  },\n  \"observed_scope_limits\": [\n    \"New155th event name reserved; event file not yet present at review time. ROOT must write actual immutable failure/repair event and normal attribution before commit; no event bytes reviewed or implied.\",\n    \"Plan appendix/source cause reviewed; private review does not claim actual corrected hosted26/test or current2profile success.\",\n    \"Current2prior candidate must remain cancelled/superseded historical after artifactworkflow change; full2freshprofiles plus3reassessments required.\",\n    \"No code/test/runtimepolicy permission change; no SDK/archive/native/network/fullsuite or ROOT edits by reviewer.\"\n  ],\n  \"findings\": []\n}\n",
+    "not_hosted_execution": true
+  },
+  "actual_failures": [
+    {
+      "run": 45263634884,
+      "job": 138004665463,
+      "stage": "source-snapshot positive before optional-module injection",
+      "passed": 25,
+      "failed": 1,
+      "cause": "fetch-depth1 omits actual6d baseline required by current copy classifier"
+    },
+    {
+      "run": 45263635167,
+      "job": 138004666032,
+      "stage": "verify-accountability",
+      "error": "State timestamps disagree",
+      "cause": "ROOT updated state.updated without state.updated_at"
+    }
+  ],
+  "actual_current_source_capacity": {
+    "run": 45263635249,
+    "source_commit": "438276101e0931cb9dfd75ce085a10b605583fb6",
+    "files": 13738,
+    "raw_bytes": 145610396,
+    "packet_bytes": 15466780,
+    "spdx_bytes": 9354307,
+    "result_sha256": "519bfd7db5abadcaa0dca69a96976f2d2c273b3a89f760a51897947458983eee",
+    "signature_or_release": false
+  },
+  "stopped_bookkeeping_attempts": [
+    "GitHub capacity artifact member was result.json; initial closed source-capacity.json expectation refused before saving; actual digest and one-member shape verified before import.",
+    "First narrow workflow helper overcounted fetch1 occurrences in following job and stopped before writes; scoped patch then applied only managed-mcp-controls.",
+    "Registry helper initially assumed map leaves then iterated components as a list; both stopped before registry writes. Read actual dictionary/files structure and rebound21actual source rows."
+  ],
+  "original_closures": 0
+}

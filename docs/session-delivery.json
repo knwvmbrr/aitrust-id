@@ -6418,7 +6418,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-23T20:46:31.305534+00:00",
+  "updated_at": "2026-11-23T20:58:36.038455+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -7133,13 +7133,13 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-23T20:46:31.305534+00:00",
+    "recorded_at": "2026-11-23T20:58:36.038455+00:00",
     "source_baseline_commit": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
-    "status": "Actual source archive capacity passed; PS/privacy/extension complete current receipts retained. Protocol isolation test corrected; read-only full protocol/website continuation prepared. Protected source consumer remains pending; originals136/66, target60 unmet.",
+    "status": "Current actual source-capacity run45263635249 passed; full protocol candidate passed before website cancellation, now source-stale after diagnosed shallow Git prerequisite correction. Fresh2profile run pending; actual3unchanged prior reports retained.136complete66open; target60 unmet.",
     "assignments": [
       {
         "worker": "/root",
@@ -7296,6 +7296,16 @@
       "focused_corrected_controls": 5,
       "original_closures": 0,
       "protected_publication_complete": false
+    },
+    "current_prerequisite_correction": {
+      "managed_mcp_job": 138004665463,
+      "old_checkout_depth": 1,
+      "new_checkout_depth": 0,
+      "actual_original_baseline_required": "6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd",
+      "test_or_policy_weakened": false,
+      "state_timestamps_paired": true,
+      "superseded_run": 45263634950,
+      "fresh_complete_protocol_and_website_pending": true
     }
   },
   "execution_wave_history": [

@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-23T20:46:31.305534+00:00",
+  "updated": "2026-11-23T20:58:36.038455+00:00",
   "active_increment": "Current whole-source distribution binding and independent image qualification integration;136 originals complete/66 open; target60 unmet.",
   "status": "136complete66open_target60_unmet;source_snapshot_and_image_integration_active",
   "scope": "docs/master-scope.json",
@@ -1247,7 +1247,7 @@
     "independent_accuracy_evidence": false,
     "release_approved": false
   },
-  "updated_at": "2026-11-23T20:14:55.609459+00:00",
+  "updated_at": "2026-11-23T20:58:36.038455+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -5309,7 +5309,7 @@
       ],
       "managed_source_release_authorized": false,
       "other_cohort_routes_still_blocked": 11,
-      "current_dependency_policy_sha256": "dcf9f48de1ae5a0b08ce16837edbff534a88eb9201cd055e86c9fd007c42ae0e",
+      "current_dependency_policy_sha256": "8db769dbd924e0b4c5ec4b5d92f4e953b0b4cf4cf78656f1dca3a544949ed2b6",
       "evidence": "runs/2026-11-23-source-image-integration-controls.json",
       "receipt_scope": "Actual hosted source45258115933 plus source controls. No real protected-main signature or managed consumer claimed."
     },
@@ -5363,7 +5363,14 @@
       "protocol_failure": "obsolete MCP test assumed source-snapshot must be blocked; corrected to compare all13 sibling records exactly",
       "focused_corrected_controls": 5,
       "original_closures": 0,
-      "protected_publication_complete": false
+      "protected_publication_complete": false,
+      "later_prerequisite_correction": {
+        "source": "bfcdc734977f8f8fb70a1e3374455ca191462693",
+        "managed_mcp_job": 138004665463,
+        "scope_job": 138004666032,
+        "fix": "Full actual Git history for control prepositive; pair actual state timestamps. No policy or acceptance weakening.",
+        "cancelled_superseded_source_run": 45263634950
+      }
     }
   },
   "current_route_boundaries_status": "Current source inventory refreshed; prior engineering selection retained pending full protocol and website receipts."

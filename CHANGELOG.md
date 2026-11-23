@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-source-profile-ci-prerequisites
+
+Recorded 2026-11-23T20:59:34.677845+00:00 · Contributor: Codex /root implementation; Codex /root/seo distinct review · change
+
+- **Changed.** Provided the managed MCP controls with the actual full Git history required by their source-route isolation precondition, and repaired the paired current-state timestamps. Kept all26 controls,13sibling invariants, permissions and limits unchanged.
+- **Evidence.** Actual hosted failures identified the shallow-history source refusal before fault injection and the contradictory state timestamps. Current accountability and dependency-policy verifiers pass; independent source review confirms the only workflow semantic delta is fetch-depth1to0 in managed-mcp-controls. The finite profile adds only this155th name, within160. [Change record](./runs/changes/2026-11-23-source-profile-ci-prerequisites.json).
+- **Not claimed.** Prior scoped candidate45263634950 is preserved/cancelled as source-stale after protocol success and before website completion. Fresh full protocol/website receipts, protected source signing/consumer, independent accuracy and original closures remain pending.136complete66open; target60 unmet.
+
+
 ### 2026-11-23-source-profile-continuation
 
 Recorded 2026-11-23T20:47:41.342301+00:00 · Contributor: Codex /root implementation; Codex /root/seo distinct review · change

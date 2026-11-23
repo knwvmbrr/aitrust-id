@@ -1,3 +1,15 @@
+## Hosted prerequisite correction — 2026-11-23T20:58:36.038455+00:00
+
+Originals remain **136 complete / 66 open**; no original closure. Actual source
+capacity45263635249 passes. Candidate bfcdc734 passed complete protocol before
+website cancellation, but its bound workflow changes to supply actual Git history
+to the MCP isolation controls. That candidate is preserved as source-stale, not
+selected. The3-minute26-control job now receives its real6d ancestor, retaining
+the positive source assertion and13exact sibling invariants. Paired state
+timestamps are corrected; accountability passed. Fresh full protocol/website
+evidence and protected source authorization remain pending. MT and runtime
+handoffs continue in isolated branches; no owner gates or full criteria changed.
+
 ## Current continuation and independent handoffs — 2026-11-23T20:46:31.305534+00:00
 
 **136 originals complete / 66 open; target60 unmet. No new original closure.**
