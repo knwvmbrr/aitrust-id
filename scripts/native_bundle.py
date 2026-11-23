@@ -28,14 +28,17 @@ def method_archive(source):
 def assets():
     notice_root = ROOT / 'site/public/device-licenses'
     required_notices = {'pyodide-MPL-2.0.txt', 'python-license.txt', 'source.txt', 'unicode-license.txt'}
-    if ({file.name for file in notice_root.iterdir()} != required_notices
+    present_notices = {file.name for file in notice_root.iterdir()}
+    optional_stdlib = notice_root / 'python-stdlib-notices.txt'
+    if (present_notices not in (required_notices, required_notices | {'python-stdlib-notices.txt'})
             or any(not file.is_file() or file.is_symlink() for file in notice_root.iterdir())
+            or (optional_stdlib.exists() and (optional_stdlib.stat().st_size != 245510
+                or digest(optional_stdlib.read_bytes()) != 'cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321'))
             or (notice_root / 'unicode-license.txt').read_bytes() != (ROOT / 'eval/vectors/unicode/LICENSE.txt').read_bytes()):
         raise ValueError('Exact runtime and Unicode notices required')
     # A direct package command must enforce the same retained identities as CI.
     # Checking filenames alone would copy altered runtime notices into the ZIP.
     from scripts.asset_notices import verify
-    from tools.nested_runtime_inventory import notice_bundle
     verify(root=ROOT)
     manifest = json.loads((ROOT / 'site/src/device-manifest.json').read_text())
     expected = {'method_sha256', 'bundle_sha256', 'path', 'runtime', 'max_codepoints', 'normalization_id', 'normalization_data_sha256'}
@@ -77,20 +80,14 @@ def assets():
     hashes = {'/' + name.removeprefix('Assets/'): digest(raw) for name, raw in payload.items() if name.startswith('Assets/')}
     payload['Assets/native-assets.json'] = (json.dumps({'format': 'ai-trust-id-native-assets/v2', 'method_sha256': current, 'bundle_sha256': manifest['bundle_sha256'], 'archive_sha256': digest(archive), 'hashes': hashes}, sort_keys=True) + '\n').encode()
     payload['LICENSE'] = (ROOT / 'LICENSE').read_bytes()
-    notices = ROOT / 'site/public/device-licenses'
-    files = sorted(notices.rglob('*'))
-    if not any(file.is_file() for file in files):
-        raise ValueError('Prepared runtime notices unavailable')
-    for file in files:
-        if file.is_symlink():
-            raise ValueError('Notice link refused')
-        if file.is_file():
-            payload['Notices/' + file.relative_to(notices).as_posix()] = file.read_bytes()
-    _, standard_library_notices = notice_bundle(ROOT, prepared_runtime=runtime)
+    from tools.ios_runtime_obligations import projection
+    carrying = projection(root=ROOT)
+    if carrying['license'] != payload['LICENSE']:
+        raise ValueError('Project license differs')
+    payload.update(carrying['notices'])
     retained = json.loads((ROOT / 'sbom/assets/notices.json').read_text())
     for member in retained['runtime_members']:
         bundled = payload['Assets/runtime/' + member['name']]
         if len(bundled) != member['bytes'] or digest(bundled) != member['sha256']:
             raise ValueError('Captured native runtime differs from retained artifact')
-    payload['Notices/python-stdlib-notices.txt'] = standard_library_notices
     return payload

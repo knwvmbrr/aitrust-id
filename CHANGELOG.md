@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-ios-runtime-obligations
+
+Recorded 2026-11-23T23:21:18.537217+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Project exact17 runtime notices and bundled preferred-source offers into App and Share resources, with fixed public-only source access, bounded received-resource inspection and strict private output ownership.
+- **Evidence.** Current source-only CLI projection, private preparation and46 selected resource checks pass; old real IPA verifies ten runtime copies then refuses24 missing resources. Corrected read accounting, physical role identities and final membership rechecks pass focused controls and different source review. Historical fixtures/failures remain explicitly attributed. [Change record](./runs/changes/2026-11-23-ios-runtime-obligations.json).
+- **Not claimed.** No Swift or SDK execution, compiled UI, signing/upload, whole IPA admission, new Apple assent, independent accuracy, legal clearance, policy adoption or original requirement closure. Historical30/37/full fixture records are not relabeled as a current34-test or native run.
+
+
 ### 2026-11-23-tag-runtime-integration
 
 Recorded 2026-11-23T22:33:41.247686+00:00 · Contributor: Codex /root integration; /root/seo review; /root/web_camo MT/image; /root/share_debugger runtime · change

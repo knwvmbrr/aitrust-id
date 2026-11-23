@@ -1,5 +1,6 @@
 import UIKit
 import WebKit
+import CryptoKit
 
 class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHandler, WKNavigationDelegate {
     let input = UITextView(), status = UILabel(), result = UILabel()
@@ -82,7 +83,7 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
         evidence.textColor = BrandTheme.ink; evidence.backgroundColor = BrandTheme.panel
         evidence.adjustsFontForContentSizeCategory = true; evidence.isHidden = true
         evidence.accessibilityIdentifier = identity("check-evidence"); stack.addArrangedSubview(evidence)
-        if !shareMode { stack.addArrangedSubview(button("Privacy & open-source notices", #selector(privacy), "privacy-notices")) }
+        stack.addArrangedSubview(button("Privacy & open-source notices", #selector(privacy), "privacy-notices"))
         for name in [UIApplication.didEnterBackgroundNotification, NSNotification.Name.NSExtensionHostDidEnterBackground] {
             backgroundObservers.append(NotificationCenter.default.addObserver(forName: name,
                 object: nil, queue: .main) { [weak self] _ in self?.clear() })
@@ -265,7 +266,23 @@ private final class NativeNoticesController: UITableViewController {
         (id: "python", title: "Python license", path: "Notices/python-license.txt"),
         (id: "unicode", title: "Unicode license", path: "Notices/unicode-license.txt"),
         (id: "source", title: "Source and redistribution", path: "Notices/source.txt"),
-        (id: "stdlib", title: "Python standard library notices", path: "Notices/python-stdlib-notices.txt")
+        (id: "stdlib", title: "Python standard library notices", path: "Notices/python-stdlib-notices.txt"),
+        (id: "project", title: "Project attribution notice", path: "Notices/Project-NOTICE.txt"),
+        (id: "runtime-js", title: "Runtime JavaScript notices", path: "Notices/RuntimeJS/NOTICES.txt"),
+        (id: "runtime-zlib", title: "Runtime Zlib notices", path: "Notices/RuntimeZlib/NOTICES.txt"),
+        (id: "runtime-embedded", title: "Embedded runtime notices", path: "Notices/RuntimeEmbedded/NOTICES.txt"),
+        (id: "local-sources", title: "Bundled source access", path: "Notices/SourceOffers.txt")
+    ]
+
+    // Fixed public files only. Neither a draft nor a received Share item can
+    // select an activity item, URL, filename, or source identity.
+    private let sourceOffers = [
+        (id: "js", title: "Share Pyodide source ZIP", path: "Notices/RuntimeJS/PYODIDE-JS-SOURCES.zip",
+         bytes: 1_632_140, sha: "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"),
+        (id: "zlib", title: "Share Zlib source ZIP", path: "Notices/RuntimeZlib/ZLIB-SOURCES.zip",
+         bytes: 1_682_541, sha: "145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10"),
+        (id: "hiwire", title: "Share Hiwire source ZIP", path: "Notices/RuntimeEmbedded/HIWIRE-SOURCES.zip",
+         bytes: 107_606, sha: "ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086")
     ]
 
     init() { super.init(style: .insetGrouped) }
@@ -289,31 +306,58 @@ private final class NativeNoticesController: UITableViewController {
         navigationItem.rightBarButtonItem?.accessibilityIdentifier = "privacy-done"
     }
 
+    override func numberOfSections(in tableView: UITableView) -> Int { 2 }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        notices.count
+        section == 0 ? notices.count : sourceOffers.count
+    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        section == 0 ? "Read a bundled notice" : "Share public source only"
+    }
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        section == 1 ? "Only the selected public source ZIP is offered. Your text and check result are never included." : nil
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let notice = notices[indexPath.row]
+        let id = indexPath.section == 0 ? "privacy-entry-" + notices[indexPath.row].id : "privacy-source-" + sourceOffers[indexPath.row].id
+        let title = indexPath.section == 0 ? notices[indexPath.row].title : sourceOffers[indexPath.row].title
         let cell = tableView.dequeueReusableCell(withIdentifier: "notice") ?? UITableViewCell(style: .default, reuseIdentifier: "notice")
         var content = cell.defaultContentConfiguration()
-        content.text = notice.title
+        content.text = title
         content.textProperties.font = BrandTheme.font(.body)
         content.textProperties.color = BrandTheme.ink
         cell.contentConfiguration = content
         cell.backgroundColor = BrandTheme.panel
         cell.accessoryType = .disclosureIndicator
-        cell.accessibilityIdentifier = "privacy-entry-" + notice.id
+        cell.accessibilityIdentifier = id
         cell.accessibilityTraits.insert(.button)
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        if indexPath.section == 1 { offerSource(indexPath.row); return }
         let notice = notices[indexPath.row]
         let reader = NoticeReaderController(path: notice.path)
         reader.title = notice.title
         navigationController?.pushViewController(reader, animated: true)
+    }
+
+    private func offerSource(_ index: Int) {
+        let item = sourceOffers[index]
+        guard let url = Bundle.main.resourceURL?.appendingPathComponent(item.path),
+              let values = try? url.resourceValues(forKeys: [.isRegularFileKey, .isSymbolicLinkKey, .fileSizeKey]),
+              values.isRegularFile == true, values.isSymbolicLink != true, values.fileSize == item.bytes,
+              let data = try? Data(contentsOf: url), data.count == item.bytes,
+              SHA256.hash(data: data).map({ String(format: "%02x", $0) }).joined() == item.sha else {
+            let alert = UIAlertController(title: "Public source unavailable", message: "The bundled source could not be verified. No text was shared.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Done", style: .cancel))
+            present(alert, animated: true); return
+        }
+        let activity = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+        activity.view.accessibilityIdentifier = "public-runtime-source-share"
+        activity.popoverPresentationController?.sourceView = tableView
+        activity.popoverPresentationController?.sourceRect = tableView.rectForRow(at: IndexPath(row: index, section: 1))
+        present(activity, animated: true)
     }
 
     @objc private func done() { dismiss(animated: true) }
@@ -381,7 +425,11 @@ private final class NoticeReaderController: UIViewController {
         adaptNavigation()
 
         if let url = Bundle.main.resourceURL?.appendingPathComponent(path),
-           let value = try? String(contentsOf: url, encoding: .utf8), !value.isEmpty {
+           let values = try? url.resourceValues(forKeys: [.isRegularFileKey, .isSymbolicLinkKey, .fileSizeKey]),
+           values.isRegularFile == true, values.isSymbolicLink != true,
+           let size = values.fileSize, size > 0, size <= 2_000_000,
+           let data = try? Data(contentsOf: url), data.count == size,
+           let value = String(data: data, encoding: .utf8), !value.isEmpty {
             pages = Self.paginate(value)
         }
         render()

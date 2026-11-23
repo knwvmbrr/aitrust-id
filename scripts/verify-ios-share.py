@@ -33,12 +33,23 @@ SOURCES += ['mobile/ios/Source/' + name for name in
             ['App.swift', 'Assets.swift', 'AppearancePreference.swift', 'BrandTheme.swift', 'CheckerController.swift', 'ShareController.swift', 'SharedText.swift']]
 
 SOURCES = list(dict.fromkeys([*SOURCES, *NOTICE_SOURCES, BUNDLE, BASE + 'manifest.json', BASE + 'obligations.json']))
+# The native carrying projection uses the same fixed retained web-runtime input
+# cohort. Bind every one, plus its own producer and complete project attribution.
+_runtime_manifest_path = ROOT / 'sbom/web-runtime/manifest.json'
+_runtime_manifest_raw = _runtime_manifest_path.read_bytes()
+if hashlib.sha256(_runtime_manifest_raw).hexdigest() != '5d662e2a8c1feeb35465370a01eab9a192c21b0d1eb5c60cbc7021c92e592184':
+    raise ValueError('Runtime source identity unavailable')
+_runtime_inputs = json.loads(_runtime_manifest_raw)['inputs']
+SOURCES = list(dict.fromkeys([*SOURCES, *_runtime_inputs,
+    'sbom/web-runtime/manifest.json', 'tools/web_runtime_obligations.py',
+    'tools/ios_runtime_obligations.py', 'tools/artifact_evidence_io.py', 'LICENSE', 'NOTICE']))
 WORKFLOW_IDS = tuple(f'UIFlows/{name}()' for name in (
     'testBackgroundClearsInputAndResult',
     'testEditInvalidatesOldFinding',
     'testExplicitPSCheckAndClear',
     'testNativePracticeShareRequiresExplicitCheck',
     'testPrivacyNoticesPageNavigation',
+    'testPublicSourceExportAndCancel',
     'testShareClearDuringCheckAndRepeat',
 ))
 PROFILE = 'invented-text/UIActivityViewController/local-PS/simulator/v2'

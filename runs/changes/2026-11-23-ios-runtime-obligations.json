@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-ios-runtime-obligations",
+  "recorded_at": "2026-11-23T23:21:18.537217+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "365b5f2ac71158c39f1070533d1400f37a8b6efd",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-013",
+    "F-142"
+  ],
+  "changed": "Project exact17 runtime notices and bundled preferred-source offers into App and Share resources, with fixed public-only source access, bounded received-resource inspection and strict private output ownership.",
+  "proves": "Current source-only CLI projection, private preparation and46 selected resource checks pass; old real IPA verifies ten runtime copies then refuses24 missing resources. Corrected read accounting, physical role identities and final membership rechecks pass focused controls and different source review. Historical fixtures/failures remain explicitly attributed.",
+  "limits": "No Swift or SDK execution, compiled UI, signing/upload, whole IPA admission, new Apple assent, independent accuracy, legal clearance, policy adoption or original requirement closure. Historical30/37/full fixture records are not relabeled as a current34-test or native run.",
+  "files": {
+    "tools/ios_runtime_obligations.py": "1a9d713488c8b73128de591e62379f9a1f7c28d0a685e4cdd3a4d6f6ce640524",
+    "scripts/verify-ios-runtime-obligations.py": "8519231cc5c816662e4a42d693e93b2bb814cd1f53bfbe9d3477eb731faac32d",
+    "tests/test_ios_runtime_obligations.py": "86cf54740bb1f832f377051e933cbfd990ede42370c5760eecb418f6e9d5c3cf",
+    "docs/ios-runtime-obligations-plan.md": "fff633326a348abad37c815587da16adcc22c61cf26d64c0a91fa4bb17545bf1",
+    "docs/ios-runtime-obligations.md": "411203a98f7ee08888b6efec2b2d4b6b45a921d827a469395a92900025e957c2",
+    "scripts/native_bundle.py": "4ad2fa33d30cead6a9d7186f4563ee216063e8173aee59626edb982fd80cb710",
+    "tests/test_native_bundle.py": "8733efd4f97e88ee872f5ec30bf0f0fde0406d515fafe6592228e4df8efe6ba5",
+    "mobile/ios/Source/CheckerController.swift": "07ce75bcaca1685b797444da9adc93c1cc8577e16ca6cacb251b0449228ece6d",
+    "mobile/ios/Tests/UIFlows.swift": "501550e6b923df59b56990c220965887055926567734c0fd9a229521374d26ce",
+    "scripts/verify-ios-share.py": "c61df1755cc93dd04d6d9af0960833151e6b920fd6d68903405b8262475c86bf",
+    "tests/test_ios_share_verifier.py": "192f1e5c4865077446ec32f2ec1283d87eb763c48582a2c5d303a5bafc9dcb88",
+    "runs/2026-11-23-ios-runtime-obligations.json": "89b636b5b9172b1091898c4494b606dc17383d4874ce620a6b696085b9d24754"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-ios-runtime-obligations.json",
+      "sha256": "89b636b5b9172b1091898c4494b606dc17383d4874ce620a6b696085b9d24754"
+    }
+  ],
+  "checks": []
+}
