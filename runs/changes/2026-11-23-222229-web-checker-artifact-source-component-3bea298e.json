@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-222229-web-checker-artifact-source-component-3bea298e",
+  "recorded_at": "2026-11-23T22:22:29.936836+00:00",
+  "author": "Codex /root/share_debugger",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "6185ecdab407db8d3afb0b98faf0212f2003554a",
+  "changed": "Implemented a new finite static-web artifact producer, exact source/module/provider and notice checks, inert pinned-builder observer and authenticate-before-materialization private consumer; preserved the existing runtime/helper and all shared policy/signing code.",
+  "proves": "Real isolated CLI prepare/inspect pass on a 26-file private synthetic-census fixture carrying all five actual runtime payloads and fourteen companions; altered payload refuses. Twenty-four authored controls and one subsequent summary-affected repeat remain separately source-bound; five inert observer controls and six independent tiny review controls pass. Original descriptor-composition failure preserved and corrected without larger caps.",
+  "limits": "No actual whole website build or genuine module census, shared web route admission, protected signature, real managed authorization, compiler reproduction, legal/accuracy clearance or full F-057/X-02 closure. Injected authority tests are non-cryptographic. Actual CLI format proof retains its historical source identity.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/web_checker_artifact.py": "2c0dbf7f811d39c355d8a33bee85f0bc3c33aacd5394d387a0d2eb71fdca5168",
+    "scripts/web-checker-artifact.py": "3ee28f6b101c6ab7529e13d4df38fdcd59caccd9d5389a54ead79e71ad79212a",
+    "scripts/web-checker-build-observer.mjs": "b5a01fdc9ab2e10d0f5d12d3e54d3d356c73ece6ee16cd18d49c971e03ac1d03",
+    "tests/test_web_checker_artifact.py": "651dc90daf3e995ea3b5c33e95cd231543b6d12857e3152fff818618b7baa286",
+    "tests/web-checker-build-observer.mjs": "6695b80d2926585feb1e117883b39cefa848a2a82e817678d389cd7ecdbd4314",
+    "docs/web-checker-artifact-plan.md": "847d933785b5543c55f99dd212db33bc5b330aed6046894dbdd19b3eaaf34302",
+    "docs/web-checker-artifact.md": "c6e34fb9c44c0f42c715dee2a40010f694dfa9a34610b6e764f115a0fd816938",
+    "runs/2026-11-23-web-checker-artifact-execution.json": "34fd0e4b163a26e2b515e16f80fc65b7b072013d8f01963bad03b832b6801fae",
+    "runs/2026-11-23-web-checker-artifact-fd-original-counter.json": "2a29bdc3e667785a9eb1c14deeb19253267794245c50b775768b647b1fe46ef8",
+    "runs/2026-11-23-web-checker-artifact-distinct-review.json": "f9970e6b9388bc9f7114f0f0f721b0636e1184fc943f5128e5008d4cd7ece5bc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-web-checker-artifact-execution.json",
+      "sha256": "34fd0e4b163a26e2b515e16f80fc65b7b072013d8f01963bad03b832b6801fae"
+    },
+    {
+      "path": "runs/2026-11-23-web-checker-artifact-fd-original-counter.json",
+      "sha256": "2a29bdc3e667785a9eb1c14deeb19253267794245c50b775768b647b1fe46ef8"
+    },
+    {
+      "path": "runs/2026-11-23-web-checker-artifact-distinct-review.json",
+      "sha256": "f9970e6b9388bc9f7114f0f0f721b0636e1184fc943f5128e5008d4cd7ece5bc"
+    }
+  ],
+  "checks": []
+}
