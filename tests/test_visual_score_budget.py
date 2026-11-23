@@ -191,7 +191,7 @@ class BudgetTests(unittest.TestCase):
    self.assertTrue(last['candidate_pass']);self.assertTrue(first['candidate']['pass']);self.assertTrue(last['requires_successful_exact_source_job'])
  def test_exact_source_suite_admission_before_execution_and_actual_count(self):
   from types import SimpleNamespace
-  expected={'test_visual_score.py':33,'test_visual_score_qualification.py':33,'test_visual_score_workflow.py':5,'test_visual_score_budget.py':27}
+  expected={'test_visual_score.py':33,'test_visual_score_qualification.py':34,'test_visual_score_workflow.py':5,'test_visual_score_budget.py':27}
   self.assertEqual(operator.SOURCE_SUITE_COUNTS,expected)
   def suites(counts):return {name:unittest.TestSuite(unittest.FunctionTestCase(lambda:None) for _ in range(n)) for name,n in counts.items()}
   with self.private() as d:

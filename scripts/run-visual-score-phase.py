@@ -12,7 +12,7 @@ import stat
 from tools import visual_score_budget as b
 from tools import visual_score_qualification as q
 
-SOURCE_SUITE_COUNTS={'test_visual_score.py':33,'test_visual_score_qualification.py':33,'test_visual_score_workflow.py':5,'test_visual_score_budget.py':27}
+SOURCE_SUITE_COUNTS={'test_visual_score.py':33,'test_visual_score_qualification.py':34,'test_visual_score_workflow.py':5,'test_visual_score_budget.py':27}
 
 def emit(path,value):b.write_private(path,b.encode(value))
 def report_dir(path):
@@ -29,6 +29,11 @@ def cleanup_observation(reports):
 def failure(reports,phase,reason):
  """Only missing conditional failure observations; never overwrite prior bytes."""
  payload={'format':'image-score-prepared-evidence/v1','pass':False,'state':'UNQUALIFIED','requires_successful_exact_source_job':True,'stage':phase if phase in b.CAPS else 'budget','reason':reason if reason in b.REASONS else 'phase_refused','native_execution':'not_assessed','cleanup':'not_yet_observed','private_bytes_may_remain':True,'AI_origin':'unknown','tags':[],'accuracy_measured':False,'original_requirement_closed':False}
+ if phase=='acquire':
+  try:
+   diagnostic=json.loads(b.private_read(reports/'acquisition-diagnostic-private.json',4096))
+   payload['acquisition_diagnostic']=q.validate_acquisition_diagnostic(diagnostic)
+  except BaseException:pass # Missing/invalid diagnostics never change the failure.
  try:
   forward=json.loads(b.private_read(reports/'forward-private.json',2*1024**2))
   if type(forward)is dict and forward.get('format')=='offline-image-score-native-qualification/v1':payload['failed_forward_observation']=forward
@@ -88,8 +93,22 @@ def worker(phase,workspace,reports,base_python,record):
    b.need(type(result.testsRun)is int and result.testsRun==expected and result.wasSuccessful() and not result.skipped,'phase_failed');counts[name]=result.testsRun
   prepared(['check-lock']);emit(reports/'source-controls-private.json',{'pass':True,'counts':counts,'skips':0});return
  if phase=='acquire':
-  facts=q.capacity_facts(workspace.parent);emit(reports/'capacity-private.json',facts)
-  raw=prepared(['acquire','--workspace',str(workspace)]);emit(reports/'acquisition-private.json',json.loads(raw));return
+  entered=False;completed=False
+  try:
+   facts=q.capacity_facts(workspace.parent);emit(reports/'capacity-private.json',facts)
+   entered=True;raw=prepared(['acquire','--workspace',str(workspace)]);completed=True
+   emit(reports/'acquisition-private.json',json.loads(raw));return
+  except BaseException as error:
+   # Diagnostics are secondary: writing/validation can fail without masking the
+   # primary error, bypassing the owned supervisor, or disabling always-cleanup.
+   try:
+    diagnostic=None
+    if isinstance(error,q.AcquisitionFailed):diagnostic=error.observation
+    elif not entered:diagnostic=q.acquisition_failure(error)
+    elif completed:diagnostic=q.acquisition_failure(error,'notice',{k:maximum if k!='current_wheel_ordinal' else 0 for k,maximum in q.ACQUISITION_COUNTS.items()})
+    if diagnostic is not None:emit(reports/'acquisition-diagnostic-private.json',q.validate_acquisition_diagnostic(diagnostic))
+   except BaseException:pass
+   raise
  if phase in ('install','fixtures'):
   prepared([phase,'--workspace',str(workspace),'--devino',owned_identity()]);return
  if phase=='seal':

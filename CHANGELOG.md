@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-image-acquisition-diagnostics
+
+Recorded 2026-11-23T22:28:03.791736+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Added fixed bounded acquisition failure diagnostics to the existing image qualification operator while preserving the original failed attempt and its unknown cause; retained all numerical/resource/source-adoption boundaries.
+- **Evidence.** One current grouped synthetic failure control covers six operations, fixed status/predicate reporting, no private echo, schema bounds, primary-error/nooverwrite preservation and accurate publication context. The preceding affected source-count control passed; different reviewer replayed four focused controls and checked all87 bindings/82 unchanged paths. Exact source suites are33/34/5/27; no full99 current execution is claimed. First AST harness placement failure ran zero tests and was corrected before feature controls. [Change record](./runs/changes/2026-11-23-image-acquisition-diagnostics.json).
+- **Not claimed.** No new hosted run, model/SDK/binary acquisition, install, native inference, retry, dispatch, alternative URL/dependency, cap increase, ROOT edits or push. First real job failed acquisition and retained unsealed bytes; no exact cause, successful removal or native qualification inferred. ROOT must integrate current source/admission/projection and authorize any changed-source run separately. No FA/PA/accuracy or original closure.
+
+
 ### 2026-11-23-222229-web-checker-artifact-source-component-3bea298e
 
 Recorded 2026-11-23T22:22:29.936836+00:00 · Contributor: Codex /root/share_debugger · change

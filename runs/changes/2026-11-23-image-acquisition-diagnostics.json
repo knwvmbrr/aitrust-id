@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-image-acquisition-diagnostics",
+  "recorded_at": "2026-11-23T22:28:03.791736+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7",
+  "changed": "Added fixed bounded acquisition failure diagnostics to the existing image qualification operator while preserving the original failed attempt and its unknown cause; retained all numerical/resource/source-adoption boundaries.",
+  "proves": "One current grouped synthetic failure control covers six operations, fixed status/predicate reporting, no private echo, schema bounds, primary-error/nooverwrite preservation and accurate publication context. The preceding affected source-count control passed; different reviewer replayed four focused controls and checked all87 bindings/82 unchanged paths. Exact source suites are33/34/5/27; no full99 current execution is claimed. First AST harness placement failure ran zero tests and was corrected before feature controls.",
+  "limits": "No new hosted run, model/SDK/binary acquisition, install, native inference, retry, dispatch, alternative URL/dependency, cap increase, ROOT edits or push. First real job failed acquisition and retained unsealed bytes; no exact cause, successful removal or native qualification inferred. ROOT must integrate current source/admission/projection and authorize any changed-source run separately. No FA/PA/accuracy or original closure.",
+  "scope_ids": [
+    "T-FA",
+    "T-PA"
+  ],
+  "files": {
+    "docs/offline-image-score-qualification-plan.md": "dea4e19d229a165f4f4eff91d932da136d08eb5e42e88b9470148e05ebabc5af",
+    "tools/visual_score_qualification.py": "8a472b8cfc1adfe064ddc21136bc5d60d0e9be219dfd5310a4867936d89cd6f4",
+    "scripts/run-visual-score-phase.py": "baae68507bcc1bacc7d7eb4f480c1113e4981b4ac969cacc02cba8fbb9797a3e",
+    "tests/test_visual_score_qualification.py": "a9773c7d06a9544aa8dcad82bac3aa83e4cc626074e94be26085fafb7b9e21ad",
+    "tests/test_visual_score_budget.py": "e3ce8b300cb92be3eb7a625d2f765f9f355ebdd3b9beff27357b196cc671a773",
+    "runs/2026-11-23-image-acquisition-diagnostics.json": "117c893dc99d5c65991148eb1e404a54c82c16a92e6fc5aee9cd89cfd055b0b1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-image-acquisition-diagnostics.json",
+      "sha256": "117c893dc99d5c65991148eb1e404a54c82c16a92e6fc5aee9cd89cfd055b0b1"
+    }
+  ],
+  "checks": []
+}
