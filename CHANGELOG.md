@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-161207-refresh-private-records-website-evidence-5ed533c5
+
+Recorded 2026-11-23T16:12:07.752133+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Selected the actual 65-check website execution after release-guide and private company-record navigation changes; kept current product policies and private correspondence boundaries intact.
+- **Evidence.** Website source stayed unchanged during all 65 actual checks; all five selected engineering capabilities assess current and 36 route-boundary scenarios pass. [Change record](./runs/changes/2026-11-23-161207-refresh-private-records-website-evidence-5ed533c5.json).
+- **Not claimed.** Engineering evidence only; no independent tag accuracy, company formation, signed legal document, historical erasure, or original requirement closure. Public website deployment remains separate.
+
+
 ### 2026-11-23-155139-separate-private-company-legal-working-records-7cb7d4cb
 
 Recorded 2026-11-23T15:51:39.406107+00:00 · Contributor: Codex /root; private legal research by bounded specialist agents · change
