@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-162018-public-policies-private-company-records-5de8c77b",
+  "recorded_at": "2026-11-23T16:20:18.799549+00:00",
+  "author": "Codex /root; legal packet research and presentation review by bounded specialist agents",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1cfa4cc915cf0757253058f9fe132f2d55a71026",
+  "changed": "Replaced advertised company signing-packet downloads with accurate public-policy/private-record navigation; retained three old URLs as non-operative notices. Recorded actual private owner delivery of 18 editable documents and nine effective policy copies.",
+  "proves": "Current build no longer copies company papers into legacy website URLs. Focused browser controls require all three notice responses and no advertised private downloads. Private 82-page visual review and final archive identities were checked before provider-confirmed sending.",
+  "limits": "New page requires actual build/browser execution and fresh source-bound website validation before release. No executed document, formed entity, new data collection, policy adoption, professional clearance, historical erasure or original requirement closure.",
+  "scope_ids": [
+    "F-075",
+    "F-140",
+    "F-148"
+  ],
+  "files": {
+    "scripts/verify-research-feedback.cjs": "3b4ab0ca6c9028ed7be5a8e1bc615b7200e08a47f9239760d366f9b5a74edce0",
+    "site/scripts/owner-guide.mjs": "afbea9a66984959ee8cfa5a4a8048405e1f852c4672f2d13a4450df2d0151581",
+    "site/scripts/prepare.mjs": "388c87c62423fac7d9e2902b63337700148571f22d3884c144c8b8e241ef9937",
+    "site/scripts/render-reference.mjs": "3e3fef43a4d5acc0fe3316507ca4460bea58f739b29904d587951c3add4310b4",
+    "site/src/main.jsx": "c050af7299831d0216fd7940f5e4753fc683ef4fed594af0263ca0e821315f17",
+    "state.json": "832b8c9de991d034a37ee0329b6e20a79f3d81a75874336bb6f943373f2a8bbb",
+    "runs/2026-11-23-private-owner-legal-packet-delivery.json": "9bc96f3839e0c5b3a694581c88ce1da33e12dcdc9f176b7b18c36b8e3374d549"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-private-owner-legal-packet-delivery.json",
+      "sha256": "9bc96f3839e0c5b3a694581c88ce1da33e12dcdc9f176b7b18c36b8e3374d549"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T16:20:19.847784+00:00"
+    }
+  ]
+}

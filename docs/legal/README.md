@@ -1,39 +1,11 @@
-# Public legal and operational register
+# Public policies and private company documents
 
-The repository contains the effective product policies, operational architecture,
-execution evidence and proposed corrections linked below. The separately authored
-formation package was found outside the repository. Its source inventory now
-records every current root draft and its hash. **The full originals are not all
-published or fully reviewed here.** This register does not imply they were adopted.
+AI Trust ID publishes its effective product terms, privacy and security policies, licenses, contribution rules, validation boundaries and public governance commitments. Read the [current policies](https://aitrustid.com/policies/) and their [versioned source](../../site/src/policies.js).
 
-| Material | Current status | Where to read it |
-|---|---|---|
-| Nine actual preview policy topics | Effective website policies; no counsel enforceability clearance | `site/src/policies.js`, https://aitrustid.com/policies/ |
-| Formation/contract package | External drafts; source identity recorded, no filing/execution asserted | `source-inventory.json` |
-| Corrective governance, confidentiality, validation, research and retention clauses | Proposed repairs awaiting applicable owner/professional decisions | `reviewed-corrections.md` |
-| Detailed defect review and authoritative sources | Targeted review; unread sections remain unverified | `../legal-operations-review.md` |
-| Research, hosting and recovery | Architecture plus bounded historical executions; no intake | `../data-growth-plan.md`, `../public-community-and-private-data.md` |
-| User operating instructions | Account-free practice and physical-device handoff | `../owner-operation.md`, https://aitrustid.com/reference/operate/ |
+Company-specific formation worksheets, ownership records, operating agreements, proposed contracts and legal-review working papers are maintained privately for owner finalization and appropriate professional review. Their existence does not establish that an entity has formed, an agreement is signed or a filing is accepted. The current legal operator remains the person identified in the effective Terms until an actual lawful transition is documented.
 
-Public display publisher: AI Trust ID. The current legal operator is identified in
-the Terms. A future corporation is not silently substituted for that individual.
+Credentials, trust instruments, signatures, tax and bank records, personal addresses, private participant records and confidential legal correspondence do not belong in public source. Public transparency covers product behavior and user commitments; it does not require disclosing those records.
 
-Restricted exceptions: credentials and recovery material; personal/family and
-institutional provenance dossiers; private complaints and security reports;
-licensed confidential evidence and active independent holdouts. Original formation
-and employment drafts containing those facts need lawful redaction and full review
-before publication. Do not publish another person's private material to prove
-company transparency. Record a reason, owner and review status instead.
+Earlier published drafts remain in Git history and existing clones, forks, cached views or released copies. Replacing current pages is not historical erasure or revocation of existing licenses. Any historical-removal operation needs its own reviewed scope and coordination.
 
-Publication backlog: complete section-by-section review of the original package;
-produce safe full public drafts; reconcile cross-references and business choices;
-obtain qualified review; publish any adopted/ filed instruments with dates and
-redactions. The proposed corrections here do not close that backlog.
-
-## Execution packet prepared 18 November 2026
-
-[Read the unexecuted owner packet](execution-packet.md). It includes operating adoption, formation decisions, contributor and reviewer forms, metadata consent, community notice, social approval, paid-service worksheet, incident procedure and IP/mark review. This is a current operating reconciliation, not a complete professional review or execution of the external formation package.
-
-[Michigan trust-owned single-member LLC documents](michigan-llc-packet.md) follow Michael’s selected commercial formation direction, with himself as initial manager. Trust authority and remaining execution facts need private verification. They do not adopt the historical deferred foundation-owned/Delaware LLC draft. Articles worksheet, operating agreement, initial action, asset schedules, license/tax determinations and compliance calendar remain unexecuted.
-
-[Ownership comparison](entity-structure-comparison.md) preserves the earlier alternatives and records Michael’s subsequent trust-owned choice. No formation filing, signature or asset transfer has been executed. The existing revocable trust and trustee status are owner-reported; no trust instrument has been reviewed or published.
+The public filenames retained here are navigation notices, not executable legal documents. They preserve old links without republishing the company-specific text. No effective public policy or software license is changed by this housekeeping.

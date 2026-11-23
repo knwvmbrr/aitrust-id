@@ -1,5 +1,12 @@
 # Agent and automation status — dated snapshot
 
+## Current delivery — 2026-11-23T15:16:14.889674+00:00
+
+The signed Linux CPython 3.13 [MCP connector is public](mcp-linux-release.md): protected source, signature, fresh installation, eight synthetic SDK cases and six anonymous download identities verified. Original scope remains **136 complete / 66 open**. This is an actual distribution outcome within F-057/X-02, not full-original or independent accuracy completion. The dated table below is the prior integration snapshot.
+
+Current temporary work: root records delivery; source reviewer verifies public bytes; API reviewer checks the protected signature/installation evidence; image engineer prepares the complete Linux CPU lock and isolated real-method qualification. Image native/accuracy qualification remains pending. These are temporary assignments, not permanent bots.
+
+
 November 22, 2026 — combined integration snapshot. This is a status snapshot, not a live heartbeat or proof that
 agents run forever. Four concurrent agent slots means the PM plus at most three
 specialists; fourteen logical tag queues are not fourteen running processes.

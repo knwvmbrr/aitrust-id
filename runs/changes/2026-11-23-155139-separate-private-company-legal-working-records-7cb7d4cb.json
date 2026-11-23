@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-155139-separate-private-company-legal-working-records-7cb7d4cb",
+  "recorded_at": "2026-11-23T15:51:39.406107+00:00",
+  "author": "Codex /root; private legal research by bounded specialist agents",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1f2c10f934e17c345342ab093001129d5cb9f8a4",
+  "changed": "Replaced company-specific legal working draft text and write-ups in the current source with public navigation notices after exact private preservation; retained effective product policies and old history.",
+  "proves": "Seven published source records preserved outside Git before reversible current-tree edits; no trust instruments, signatures, tax or account details added to source.",
+  "limits": "No historical erasure, executed LLC/agreement, professional legal clearance, new policy adoption or original requirement closure. Full historical removal requires separate coordinated review.",
+  "scope_ids": [
+    "F-075",
+    "F-140",
+    "F-148"
+  ],
+  "files": {
+    "state.json": "ab549e29476b3d0e49cf97f65af5edae89f29df3c2ab0131dc88b910bc42924b",
+    "docs/legal/README.md": "f4bd0981fee0ad7c73be48c68edb2a34bddff27962947d07ec551c8ad75d013c",
+    "docs/legal/michigan-llc-packet.md": "a6f5cdac35f865dbe243fb971e36ac7901e7a7537eeb5b3f0fae02c13a535655",
+    "docs/legal/execution-packet.md": "a6f5cdac35f865dbe243fb971e36ac7901e7a7537eeb5b3f0fae02c13a535655",
+    "docs/legal/entity-structure-comparison.md": "a6f5cdac35f865dbe243fb971e36ac7901e7a7537eeb5b3f0fae02c13a535655",
+    "docs/legal/reviewed-corrections.md": "a6f5cdac35f865dbe243fb971e36ac7901e7a7537eeb5b3f0fae02c13a535655",
+    "docs/legal/source-inventory.json": "3848ff5434265b98d2d9c150255a4d3a0ad876b80ad986e46929fbae1d84af8d",
+    "docs/legal-operations-review.md": "0e5d37687f8b605e7b96fa25fe6627ec488c2c0b94196b26835ae43499accc6e",
+    "runs/2026-11-23-private-company-legal-record-boundary.json": "f789bd1364b642885018aa996d71e85e1f8fac0aa6a34536f032296412c326ed"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-private-company-legal-record-boundary.json",
+      "sha256": "f789bd1364b642885018aa996d71e85e1f8fac0aa6a34536f032296412c326ed"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T15:51:40.367167+00:00"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "captured_at": "2026-11-23T15:13:05.012654+00:00",
+  "profile": "managed-mcp-independent-root-verification/v1",
+  "pass": true,
+  "source_commit": "7986680cdf9edda736a488d7fa0a26d04d5290b1",
+  "actual_authorization": {
+    "artifact_sha256": "8165f051203df50dc5f33a613f43dc1a3f613aae48224fd154053ba419d04aa5",
+    "attestation_verified": true,
+    "bundle_sha256": "3b7cae1f1e5063ab97edd4b6ef60915cd2b1ee14f731a44bd8d980453b136c34",
+    "license_clearance": false,
+    "policy_admitted": true,
+    "release_authorized": true,
+    "route": "mcp-stdio",
+    "source_commit": "7986680cdf9edda736a488d7fa0a26d04d5290b1",
+    "spdx_sha256": "ded9f2dade3f5f299df31f17ca44d96ec944e4daf0b141ef88abfde90fbf4230",
+    "state": "AUTHORIZED",
+    "trusted_root_sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c"
+  },
+  "roots_obtained_separately_with": [
+    "gh",
+    "attestation",
+    "trusted-root"
+  ],
+  "local_SDK_or_model_executed": false,
+  "initial_observation": {
+    "exit": 2,
+    "state": "UNAVAILABLE",
+    "reason": "output_destination_inside_Git_correctly_refused",
+    "packet_matches_current_source": true,
+    "direct_signature_verification_exit": 0
+  },
+  "corrected_actual_CLI": {
+    "exit": 0,
+    "output_destination": "new private directory outside Git",
+    "state": "AUTHORIZED"
+  },
+  "source_changed_for_retry": false,
+  "release_approved_for_tag_accuracy": false
+}

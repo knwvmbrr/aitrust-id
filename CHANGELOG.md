@@ -2,6 +2,69 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-163834-qualify-public-policy-private-records-navigation-02c04832
+
+Recorded 2026-11-23T16:38:34.753448+00:00 · Contributor: Codex /root; distinct public boundary review by Codex /root/share_debugger · change
+
+- **Changed.** Selected the actual corrected website execution, distinct six-file display review and two-engine private-company notice controls; retained prior execution and failure histories.
+- **Evidence.** All 65 declared website commands actually passed with unchanged source, all five selected engineering capabilities assess current and all 36 route-boundary cases pass. Public policies and fixed legacy notices are checked; owner legal packet was sent privately. [Change record](./runs/changes/2026-11-23-163834-qualify-public-policy-private-records-navigation-02c04832.json).
+- **Not claimed.** Engineering and document delivery only; no formed LLC, executed agreement, professional legal clearance, policy adoption, historical Git erasure, independent tag validation or original requirement closure. Protected merge and public deployment pending.
+
+
+### 2026-11-23-162230-retain-generated-records-navigation-0ce4b2c6
+
+Recorded 2026-11-23T16:22:30.839534+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Bound the generated no-script navigation label and the reviewed public-site source inventory after the company-record boundary correction.
+- **Evidence.** Only the reviewed display/reference files differ in the route source inventory. Actual Chromium and WebKit checks pass for public policies, three legacy notices and unchanged opt-in feedback controls. [Change record](./runs/changes/2026-11-23-162230-retain-generated-records-navigation-0ce4b2c6.json).
+- **Not claimed.** No new routes or collection; source-bound website execution and protected publication still required. No original requirement closed.
+
+
+### 2026-11-23-162018-public-policies-private-company-records-5de8c77b
+
+Recorded 2026-11-23T16:20:18.799549+00:00 · Contributor: Codex /root; legal packet research and presentation review by bounded specialist agents · change
+
+- **Changed.** Replaced advertised company signing-packet downloads with accurate public-policy/private-record navigation; retained three old URLs as non-operative notices. Recorded actual private owner delivery of 18 editable documents and nine effective policy copies.
+- **Evidence.** Current build no longer copies company papers into legacy website URLs. Focused browser controls require all three notice responses and no advertised private downloads. Private 82-page visual review and final archive identities were checked before provider-confirmed sending. [Change record](./runs/changes/2026-11-23-162018-public-policies-private-company-records-5de8c77b.json).
+- **Not claimed.** New page requires actual build/browser execution and fresh source-bound website validation before release. No executed document, formed entity, new data collection, policy adoption, professional clearance, historical erasure or original requirement closure.
+
+
+### 2026-11-23-161207-refresh-private-records-website-evidence-5ed533c5
+
+Recorded 2026-11-23T16:12:07.752133+00:00 · Contributor: Codex /root · change
+
+- **Changed.** Selected the actual 65-check website execution after release-guide and private company-record navigation changes; kept current product policies and private correspondence boundaries intact.
+- **Evidence.** Website source stayed unchanged during all 65 actual checks; all five selected engineering capabilities assess current and 36 route-boundary scenarios pass. [Change record](./runs/changes/2026-11-23-161207-refresh-private-records-website-evidence-5ed533c5.json).
+- **Not claimed.** Engineering evidence only; no independent tag accuracy, company formation, signed legal document, historical erasure, or original requirement closure. Public website deployment remains separate.
+
+
+### 2026-11-23-155139-separate-private-company-legal-working-records-7cb7d4cb
+
+Recorded 2026-11-23T15:51:39.406107+00:00 · Contributor: Codex /root; private legal research by bounded specialist agents · change
+
+- **Changed.** Replaced company-specific legal working draft text and write-ups in the current source with public navigation notices after exact private preservation; retained effective product policies and old history.
+- **Evidence.** Seven published source records preserved outside Git before reversible current-tree edits; no trust instruments, signatures, tax or account details added to source. [Change record](./runs/changes/2026-11-23-155139-separate-private-company-legal-working-records-7cb7d4cb.json).
+- **Not claimed.** No historical erasure, executed LLC/agreement, professional legal clearance, new policy adoption or original requirement closure. Full historical removal requires separate coordinated review.
+
+
+### 2026-11-23-151932-retain-managed-mcp-public-evidence-996c5cf6
+
+Recorded 2026-11-23T15:19:32.161291+00:00 · Contributor: Codex /root; evidence reviews /root/share_debugger and /root/seo · change
+
+- **Changed.** Retained the five exact public-safe production, separate-root authorization and anonymous-download observations as versioned source evidence.
+- **Evidence.** Each new evidence file is explicitly attributed; all original scope acceptance and136/66 counts remain unchanged. [Change record](./runs/changes/2026-11-23-151932-retain-managed-mcp-public-evidence-996c5cf6.json).
+- **Not claimed.** The first normal commit guard correctly refused five proof files listed only as evidence rather than explicit changed files; no commit or push occurred. This record supplies exact file attribution without bypassing the guard.
+
+
+### 2026-11-23-151727-verified-linux-mcp-public-download-e3c220ca
+
+Recorded 2026-11-23T15:17:27.142373+00:00 · Contributor: Codex /root; production review /root/share_debugger; public-download review /root/seo · change
+
+- **Changed.** Published the protected-source signed Linux CPython3.13 MCP engineering preview with six exact public assets; updated current scope execution state and installation guidance.
+- **Evidence.** Actual main-only signing, current finite permission, fresh offline installation and eight SDK cases passed; anonymous public downloads match all six original asset hashes. [Change record](./runs/changes/2026-11-23-151727-verified-linux-mcp-public-download-e3c220ca.json).
+- **Not claimed.** No independent tag accuracy, other managed platform, broad license clearance or full-original closure.136 originals complete/66 open; website documentation source receipt requires its own refresh.
+
+
 ### 2026-11-23-031046-include-corrective-source-review-evidence-c0a4a863
 
 Recorded 2026-11-23T03:10:46.947348+00:00 · Contributor: Codex PM; review authored by Codex /root/share_debugger · change

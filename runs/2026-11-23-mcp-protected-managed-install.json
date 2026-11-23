@@ -1,0 +1,60 @@
+{
+  "captured_at": "2026-11-23T15:07:27.678175+00:00",
+  "run_id": 45201307837,
+  "source_commit": "7986680cdf9edda736a488d7fa0a26d04d5290b1",
+  "artifact_id": 14830254646,
+  "transport_sha256": "2534ff8dacb2bd8351494b305a1bf0dfdd5782487cdfb4c57c2b874468383930",
+  "files": [
+    {
+      "name": "checker.zip",
+      "bytes": 15519015,
+      "sha256": "8165f051203df50dc5f33a613f43dc1a3f613aae48224fd154053ba419d04aa5"
+    },
+    {
+      "name": "sbom.sigstore.json",
+      "bytes": 320956,
+      "sha256": "3b7cae1f1e5063ab97edd4b6ef60915cd2b1ee14f731a44bd8d980453b136c34"
+    },
+    {
+      "name": "evidence.json",
+      "bytes": 586910,
+      "sha256": "2d41043bc1b5f6f52979bfb94dc1c749021af9e9da3d5a0e4f216221120048f5"
+    },
+    {
+      "name": "artifact.spdx.json",
+      "bytes": 233283,
+      "sha256": "ded9f2dade3f5f299df31f17ca44d96ec944e4daf0b141ef88abfde90fbf4230"
+    },
+    {
+      "name": "trusted-root.jsonl",
+      "bytes": 34634,
+      "sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c"
+    },
+    {
+      "name": "managed-verified.json",
+      "bytes": 438,
+      "sha256": "38e7662ccadab65c267c9a461c684fd9de5f8b7f0ffd919c666aec6dcc54c19b"
+    }
+  ],
+  "actual_managed_summary": {
+    "artifact_sha256": "8165f051203df50dc5f33a613f43dc1a3f613aae48224fd154053ba419d04aa5",
+    "attestation_verified": true,
+    "complete_project_obligations": false,
+    "configuration_included_in_stdout": false,
+    "license_clearance": false,
+    "profile": "mcp-managed-connection/v1",
+    "release_authorized": true,
+    "sdk_cases": 8,
+    "source_commit": "7986680cdf9edda736a488d7fa0a26d04d5290b1",
+    "state": "INSTALLED",
+    "target": "cp313-linux_x86_64_glibc_2_34"
+  },
+  "local_sdk_or_model_execution": false,
+  "profile": "managed-mcp-protected-main-collection/v1",
+  "run_url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45201307837",
+  "required_checks_passed": 11,
+  "normal_protected_merge": true,
+  "merge_pull_request": 150,
+  "independent_accuracy_evidence": false,
+  "original_requirement_closed": false
+}

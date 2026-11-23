@@ -695,6 +695,10 @@ Tag delivery and ownership: [all14 tag scores and gaps](docs/tag-status-2026-11-
 
 ## Connect your AI application
 
+A [signed Linux CPython 3.13 MCP connector](docs/mcp-linux-release.md) is now
+downloadable, with protected-source verification and a fresh offline installation.
+It is an engineering preview; independent tag accuracy remains separate.
+
 Use the free [Python/JSON tag API and MCP plugin](docs/ai-tools.md) to call the
 implemented checks from an AI application. PS runs without Docker or an account;
 optional privacy checking stays separate. Results identify the method and evidence,

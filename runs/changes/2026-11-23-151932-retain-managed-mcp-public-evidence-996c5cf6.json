@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-151932-retain-managed-mcp-public-evidence-996c5cf6",
+  "recorded_at": "2026-11-23T15:19:32.161291+00:00",
+  "author": "Codex /root; evidence reviews /root/share_debugger and /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7986680cdf9edda736a488d7fa0a26d04d5290b1",
+  "changed": "Retained the five exact public-safe production, separate-root authorization and anonymous-download observations as versioned source evidence.",
+  "proves": "Each new evidence file is explicitly attributed; all original scope acceptance and136/66 counts remain unchanged.",
+  "limits": "The first normal commit guard correctly refused five proof files listed only as evidence rather than explicit changed files; no commit or push occurred. This record supplies exact file attribution without bypassing the guard.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "runs/2026-11-23-mcp-anonymous-public-download.json": "77344c4dc4ff960c85ec05db0f9e8eb37adfe06e58941758d742f8eba3348ae4",
+    "runs/2026-11-23-mcp-independent-root-authorization.json": "907cf58da2d193b4427302b24f4edfec8e4ba392ebded1aeb0495ab863897484",
+    "runs/2026-11-23-mcp-protected-managed-install.json": "a2a03f948c7bcbe0106bcf8088da845e293f852f92e7c706368d56812a666033",
+    "runs/2026-11-23-mcp-protected-production-review.json": "8545af11bf61eaae0d7407fbc7a2a13d7827d6032259cdc6d4ce83577ac65ba6",
+    "runs/2026-11-23-mcp-public-download-distinct-review.json": "158f3f39a150a70ee46d64bfc7e6e84c9874d462b27984bd6aa059617e150ebc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-mcp-protected-managed-install.json",
+      "sha256": "a2a03f948c7bcbe0106bcf8088da845e293f852f92e7c706368d56812a666033"
+    },
+    {
+      "path": "runs/2026-11-23-mcp-public-download-distinct-review.json",
+      "sha256": "158f3f39a150a70ee46d64bfc7e6e84c9874d462b27984bd6aa059617e150ebc"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T15:19:33.059072+00:00"
+    }
+  ]
+}

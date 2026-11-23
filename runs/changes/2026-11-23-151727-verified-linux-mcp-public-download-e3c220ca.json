@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-151727-verified-linux-mcp-public-download-e3c220ca",
+  "recorded_at": "2026-11-23T15:17:27.142373+00:00",
+  "author": "Codex /root; production review /root/share_debugger; public-download review /root/seo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "7986680cdf9edda736a488d7fa0a26d04d5290b1",
+  "changed": "Published the protected-source signed Linux CPython3.13 MCP engineering preview with six exact public assets; updated current scope execution state and installation guidance.",
+  "proves": "Actual main-only signing, current finite permission, fresh offline installation and eight SDK cases passed; anonymous public downloads match all six original asset hashes.",
+  "limits": "No independent tag accuracy, other managed platform, broad license clearance or full-original closure.136 originals complete/66 open; website documentation source receipt requires its own refresh.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "README.md": "0d23f1e7f04b34510dcc5aa6c81708b9513da7d0e869fac51475e0f97a76f0e8",
+    "state.json": "c9d893fea5fb07bd2d37c8620b7bc69f45c24fe218d83adeb3bbde25831f0217",
+    "docs/mcp-linux-release.md": "8fe61f02cfb4c330e5d080c025a06b26c2786253f09f1949ad76c911b9ddcb42",
+    "docs/mcp-publication-result.md": "549e4240a31cf12f4943ceda7125397fe49832137944103fdfad5e45aaa1e19b",
+    "docs/agent-delivery-status.md": "2c5a179e0edf8412b0c466f5a810930ab3d95c658ac926db2282ce70c1b86ec1",
+    "docs/session-delivery-plan.md": "4c53d118c6f40a21641f6df3cabb9a2606321c04a986ca93822d4eac9ec34689",
+    "docs/session-delivery.json": "812b546d82979bfbd9ab634b1a4a5b3d8257cf1e5f2310ad2e943ef46b4ba077"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-mcp-protected-managed-install.json",
+      "sha256": "a2a03f948c7bcbe0106bcf8088da845e293f852f92e7c706368d56812a666033"
+    },
+    {
+      "path": "runs/2026-11-23-mcp-independent-root-authorization.json",
+      "sha256": "907cf58da2d193b4427302b24f4edfec8e4ba392ebded1aeb0495ab863897484"
+    },
+    {
+      "path": "runs/2026-11-23-mcp-anonymous-public-download.json",
+      "sha256": "77344c4dc4ff960c85ec05db0f9e8eb37adfe06e58941758d742f8eba3348ae4"
+    },
+    {
+      "path": "runs/2026-11-23-mcp-public-download-distinct-review.json",
+      "sha256": "158f3f39a150a70ee46d64bfc7e6e84c9874d462b27984bd6aa059617e150ebc"
+    },
+    {
+      "path": "runs/2026-11-23-mcp-protected-production-review.json",
+      "sha256": "8545af11bf61eaae0d7407fbc7a2a13d7827d6032259cdc6d4ce83577ac65ba6"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T15:17:28.096009+00:00"
+    }
+  ]
+}

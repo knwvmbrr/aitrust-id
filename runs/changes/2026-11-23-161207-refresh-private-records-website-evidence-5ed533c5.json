@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-161207-refresh-private-records-website-evidence-5ed533c5",
+  "recorded_at": "2026-11-23T16:12:07.752133+00:00",
+  "author": "Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "96aa9832f4ecf56c2694074967f809a9ad3728a3",
+  "changed": "Selected the actual 65-check website execution after release-guide and private company-record navigation changes; kept current product policies and private correspondence boundaries intact.",
+  "proves": "Website source stayed unchanged during all 65 actual checks; all five selected engineering capabilities assess current and 36 route-boundary scenarios pass.",
+  "limits": "Engineering evidence only; no independent tag accuracy, company formation, signed legal document, historical erasure, or original requirement closure. Public website deployment remains separate.",
+  "scope_ids": [
+    "F-075",
+    "F-140",
+    "F-148"
+  ],
+  "files": {
+    "state.json": "d1513a901f3b2e990e2253a1d8160b28c8aed0b8ff3f3369da35a6070eb13a91",
+    "eval/route-boundaries.json": "868fd24c1499aa577c67da8ee2e9d4a7f55a49d9e718cceffb1bc76ba114af28",
+    "runs/2026-11-23-private-records-current-website.json": "60006859b04df168c98b7f751cf0eba3ed67d57dd21fe2216e152c7abcf4971d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-private-records-current-website.json",
+      "sha256": "60006859b04df168c98b7f751cf0eba3ed67d57dd21fe2216e152c7abcf4971d"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-23T16:12:08.677186+00:00"
+    }
+  ]
+}
