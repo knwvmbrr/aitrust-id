@@ -120,8 +120,10 @@ def initialize(path):
 
 
 class HistoryEntitlements:
-    def __init__(self, path):
+    def __init__(self, path, *, clock=None):
+        need(clock is None or callable(clock))
         self.path = Path(path).expanduser().absolute()
+        self.clock = clock
 
     def _private(self, fd):
         held, named = os.fstat(fd), self.path.stat(follow_symlinks=False)
@@ -195,7 +197,11 @@ class HistoryEntitlements:
                     original = (info.st_dev, info.st_ino, info.st_size, info.st_mtime_ns, info.st_ctime_ns)
                     need(member(fd, 'grants.json', MAX_BYTES) == raw)
                     state = validate(json.loads(raw, object_pairs_hook=pairs))
-                    need(now >= state['last_now']); state['last_now'] = now
+                    try:
+                        selected = moment(self.clock()) if self.clock is not None else now
+                    except Exception:
+                        raise EntitlementError('History access clock unavailable.') from None
+                    need(selected >= state['last_now']); state['last_now'] = selected
                     yield state
                     updated = encoded(validate(state)); self._current(fd, original)
                     if updated != raw:
@@ -211,7 +217,7 @@ class HistoryEntitlements:
         identifier(account_id); moment(now)
         try:
             with self._transaction(now) as state:
-                value = result(state, account_id, now)
+                value = result(state, account_id, state['last_now'])
             return value
         except EntitlementError:
             return {'format': FORMAT, 'account_id': account_id, 'state': 'UNAVAILABLE',
@@ -222,6 +228,7 @@ class HistoryEntitlements:
         if until is not None:
             moment(until)
         with self._transaction(now) as state:
+            now = state['last_now']
             previous = next((e for e in state['events'] if e['id'] == event_id), None)
             if previous is not None:
                 need((previous['account_id'], previous['action'], previous['until']) == (account_id, action, until))

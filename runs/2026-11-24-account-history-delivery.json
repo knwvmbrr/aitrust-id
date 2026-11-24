@@ -1,0 +1,478 @@
+{
+  "acceptance_scope": "Actual isolated development/review account and metadata-history API; no public production or payment claim.",
+  "actual_checks": {
+    "current_clock_phase": {
+      "bytes": 7593,
+      "record": {
+        "actual_source_observations": [
+          {
+            "errors": 2,
+            "groups": 2,
+            "note": "First command named four tests: two existing groups passed; two new methods were placed after unittest.main and were not discovered. Method placement alone corrected.",
+            "pass": 2,
+            "seconds": 1.152
+          },
+          {
+            "errors": 0,
+            "groups": 2,
+            "note": "Both new meaningful clock groups executed after placement correction.",
+            "pass": 2,
+            "seconds": 0.592
+          },
+          {
+            "errors": 1,
+            "groups": 2,
+            "note": "Login rotation and erase/pending-cleanup passed; one cancellation method name in argv was misspelled, not executed.",
+            "pass": 2,
+            "seconds": 1.039
+          },
+          {
+            "errors": 0,
+            "groups": 1,
+            "note": "Correct exact existing cancellation method then executed.",
+            "pass": 1,
+            "seconds": 0.215
+          }
+        ],
+        "captured_at": "2026-11-24T16:51:38.759376+00:00",
+        "current_effective_unique_groups_passed": 7,
+        "current_full22_executed": false,
+        "declared_tests": 22,
+        "logs": {
+          "transaction-clock-affected-lifecycle.stderr": {
+            "bytes": 1034,
+            "raw_utf8": "test_login_rotation_logout_and_secure_cookie_configuration (test_account_api.AccountAPITests.test_login_rotation_logout_and_secure_cookie_configuration) ... ok\ntest_cancelled_http_handler_keeps_bounded_workers_owned (unittest.loader._FailedTest.test_cancelled_http_handler_keeps_bounded_workers_owned) ... ERROR\ntest_account_delete_erases_own_data_and_retains_retryable_operator_cleanup (test_account_store.AccountStoreTests.test_account_delete_erases_own_data_and_retains_retryable_operator_cleanup) ... ok\n\n======================================================================\nERROR: test_cancelled_http_handler_keeps_bounded_workers_owned (unittest.loader._FailedTest.test_cancelled_http_handler_keeps_bounded_workers_owned)\n----------------------------------------------------------------------\nAttributeError: type object 'AccountAPITests' has no attribute 'test_cancelled_http_handler_keeps_bounded_workers_owned'\n\n----------------------------------------------------------------------\nRan 3 tests in 1.039s\n\nFAILED (errors=1)\n",
+            "sha256": "0eed4172c335b2efb0e65b7d8aa584d9f2061d15ed76b751e93ac7812412e29b"
+          },
+          "transaction-clock-cancellation.stderr": {
+            "bytes": 281,
+            "raw_utf8": "test_cancelled_http_handler_keeps_owned_worker_capacity_until_finished (test_account_api.AccountAPITests.test_cancelled_http_handler_keeps_owned_worker_capacity_until_finished) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.215s\n\nOK\n",
+            "sha256": "3e6f5c729a784d8acef0e56718e7927b0abde4a939e67203ec512351417066f0"
+          },
+          "transaction-clock-controls.stderr": {
+            "bytes": 486,
+            "raw_utf8": "test_monotonic_maintenance_interleave_succeeds_but_real_rollback_refuses (test_account_api.AccountAPITests.test_monotonic_maintenance_interleave_succeeds_but_real_rollback_refuses) ... ok\ntest_clock_is_selected_under_writer_lock_and_cleanup_uses_fresh_transactions (test_account_store.AccountStoreTests.test_clock_is_selected_under_writer_lock_and_cleanup_uses_fresh_transactions) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.592s\n\nOK\n",
+            "sha256": "1899a20b87ddfa0b1e8e2794263f308d088a0fb0db394ee3f5e8bd0a23f90956"
+          },
+          "transaction-clock-first-test-placement-error.stderr": {
+            "bytes": 1777,
+            "raw_utf8": "test_monotonic_maintenance_interleave_succeeds_but_real_rollback_refuses (unittest.loader._FailedTest.test_monotonic_maintenance_interleave_succeeds_but_real_rollback_refuses) ... ERROR\ntest_clock_is_selected_under_writer_lock_and_cleanup_uses_fresh_transactions (unittest.loader._FailedTest.test_clock_is_selected_under_writer_lock_and_cleanup_uses_fresh_transactions) ... ERROR\ntest_actual_two_user_signup_history_export_expiry_and_account_removal (test_account_api.AccountAPITests.test_actual_two_user_signup_history_export_expiry_and_account_removal) ... ok\ntest_session_expiry_history_retention_and_clock_rollback (test_account_store.AccountStoreTests.test_session_expiry_history_retention_and_clock_rollback) ... ok\n\n======================================================================\nERROR: test_monotonic_maintenance_interleave_succeeds_but_real_rollback_refuses (unittest.loader._FailedTest.test_monotonic_maintenance_interleave_succeeds_but_real_rollback_refuses)\n----------------------------------------------------------------------\nAttributeError: type object 'AccountAPITests' has no attribute 'test_monotonic_maintenance_interleave_succeeds_but_real_rollback_refuses'\n\n======================================================================\nERROR: test_clock_is_selected_under_writer_lock_and_cleanup_uses_fresh_transactions (unittest.loader._FailedTest.test_clock_is_selected_under_writer_lock_and_cleanup_uses_fresh_transactions)\n----------------------------------------------------------------------\nAttributeError: type object 'AccountStoreTests' has no attribute 'test_clock_is_selected_under_writer_lock_and_cleanup_uses_fresh_transactions'\n\n----------------------------------------------------------------------\nRan 4 tests in 1.152s\n\nFAILED (errors=2)\n",
+            "sha256": "a0d803cb1a741e1278049594040b9f62126d8a3833211acea7cf8e74178c5f67"
+          }
+        },
+        "no_http_clock_override": true,
+        "no_schema_KDF_session_quota_or_payment_change": true,
+        "old_p1_and_prior_p3_source_and_http_evidence_retained": true,
+        "original_acceptance_closed": false,
+        "pass": true,
+        "profile": "account-transaction-clock-controls/v1",
+        "public_deployment": false,
+        "real_clock_rollback_rejected": true,
+        "retained_references": {
+          "request-clock-interleave-corrected.json": {
+            "bytes": 2478,
+            "sha256": "25bed2efadd0d7d4d1d10d3b468ddc14d71c23aba4f2847162c4642d74c98d93"
+          },
+          "request-clock-interleave-counter.json": {
+            "bytes": 2491,
+            "sha256": "349af7c82c55dce6e1075b272076b0be62fce252315477d8cdc67d07df649891"
+          },
+          "request-clock-interleave-repair-plan.md": {
+            "bytes": 2845,
+            "sha256": "7f544a8fac52ee0a99bb2a41fea5aa81fdce5aa54d43985727d46a5d0d00fc6a"
+          },
+          "transaction-clock-ready.json": {
+            "bytes": 2469,
+            "sha256": "fe5b3a1ce44e9cf89ef042c7443efb79c9f6ac66eabf5a4c6dc37dc9c1af71e9"
+          }
+        },
+        "sample_after_BEGIN_IMMEDIATE_proven": true,
+        "source": {
+          "docs/account-history-delivery.md": "c53a357904a4df177bdf88e353bbb72f683cdd582ecfef8fe0899f442453d2dd",
+          "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+          "services/accounts/__main__.py": "6bcb6c4341f58d6284ed935fd1b6ab5f651b5e2bd3eeaf676cf2efc4e12a6ccf",
+          "services/accounts/app.py": "ad7a6a6b2297e120ed43454d8cf028df9ebfa749d51159450f7ef43cfe74e5b2",
+          "tests/test_account_api.py": "9c715fd1e9db5602f2fef67950d508ca8a0b6086477c86444e40ad8fa6b96a07",
+          "tests/test_account_core.py": "c98bbf8f515071b821af36863dba6404eb9bec534af0f225ae2ac8b30a5527c2",
+          "tests/test_account_store.py": "8e6593ec0f59b0bf833c36900d82912ff58ef8a27804606cc7a7b61ea63b44b7",
+          "tools/account_core.py": "372de5a8003dcf246b5600a1f40d0cef5b29ef693ca077000cb33c03c824a10a",
+          "tools/account_store.py": "e7ec971f9237bf4ddecb338513acffa9c60fa6c4216341ab6c22c64fc62070cd"
+        },
+        "source_scope": "Current app/store/tests runtime phase; CLI source integrated with separately reviewed real entitlement engine and actual restart. No current whole22 or browser success inferred."
+      },
+      "sha256": "c9e2de14641f380ba4437bb5fb9f49dc024cf693ca89517563847fe7f24cbd86"
+    },
+    "current_same_data_restart_HTTP": {
+      "bytes": 2469,
+      "record": {
+        "captured_at": "2026-11-24T16:51:04.982856+00:00",
+        "credentials_tokens_or_headers_recorded": false,
+        "current_owned_exec_session": 18721,
+        "earlier_source_runtime_proofs_remain_historical": true,
+        "existing_browser_review_user": {
+          "existing_entry_count": 1,
+          "history": 200,
+          "login": 200,
+          "logout": 200
+        },
+        "initialization_or_data_deletion_performed": false,
+        "new_browser_pass_inferred": false,
+        "pass": true,
+        "previous_owned_server_exit": 0,
+        "profile": "account-transaction-clock-restart/v1",
+        "public_or_payment_deployment": false,
+        "readiness": {
+          "/account/": {
+            "bytes": 6026,
+            "no_store": true,
+            "nosniff": true,
+            "status": 200
+          },
+          "/account/app.js": {
+            "bytes": 11374,
+            "no_store": true,
+            "nosniff": true,
+            "status": 200
+          },
+          "/account/style.css": {
+            "bytes": 4053,
+            "no_store": true,
+            "nosniff": true,
+            "status": 200
+          },
+          "/v1/account/session": {
+            "bytes": 199,
+            "no_store": true,
+            "nosniff": true,
+            "status": 200
+          }
+        },
+        "root_engine_sha256": "011643552ed573a43105b377aeb297920a2198ef07d388e2564fae1a78cb8a4d",
+        "root_frontend": {
+          "site/account/app.js": "cd0b43fe2cd93e72794f251e42e6595fdaeb68a8f0b217c2fe05f0b6ed70acb6",
+          "site/account/index.html": "669d18fc09a5e54fd76bdea19c26284efdf441655150170646f612b00ed25e96",
+          "site/account/style.css": "d4d5e79c4b4c0986df7d50a5ecbd6a2094d1815f93810b2edc01b906d05e941d"
+        },
+        "same_schema2_database_and_ledger_reused": true,
+        "source": {
+          "docs/account-history-delivery.md": "c53a357904a4df177bdf88e353bbb72f683cdd582ecfef8fe0899f442453d2dd",
+          "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+          "services/accounts/__main__.py": "6bcb6c4341f58d6284ed935fd1b6ab5f651b5e2bd3eeaf676cf2efc4e12a6ccf",
+          "services/accounts/app.py": "ad7a6a6b2297e120ed43454d8cf028df9ebfa749d51159450f7ef43cfe74e5b2",
+          "tests/test_account_api.py": "9c715fd1e9db5602f2fef67950d508ca8a0b6086477c86444e40ad8fa6b96a07",
+          "tests/test_account_core.py": "c98bbf8f515071b821af36863dba6404eb9bec534af0f225ae2ac8b30a5527c2",
+          "tests/test_account_store.py": "8e6593ec0f59b0bf833c36900d82912ff58ef8a27804606cc7a7b61ea63b44b7",
+          "tools/account_core.py": "372de5a8003dcf246b5600a1f40d0cef5b29ef693ca077000cb33c03c824a10a",
+          "tools/account_store.py": "e7ec971f9237bf4ddecb338513acffa9c60fa6c4216341ab6c22c64fc62070cd"
+        }
+      },
+      "sha256": "fe5b3a1ce44e9cf89ef042c7443efb79c9f6ac66eabf5a4c6dc37dc9c1af71e9"
+    },
+    "initial_source_phase": {
+      "bytes": 2390,
+      "record": {
+        "actual_accounts_are_generated_review_fixtures": true,
+        "after": {
+          "docs/account-history-delivery.md": "e4855af665c62985985739f0722d111d265cc1f1e969210a0a93735dfda36d93",
+          "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+          "services/accounts/__main__.py": "ba2967e2bd8a17ec72db1d7e51e035796ba86bb8c0de525c9f6109345a0eff8c",
+          "services/accounts/app.py": "36e7743dc6b7ba76dd75436a42947f0ecc3d2348db96e5de1cfe973d1bd09964",
+          "tests/test_account_api.py": "0791715a4e61ae4ff029a61a88c69e2db704551c4192b09c262734e1a9c8b09c",
+          "tests/test_account_core.py": "c98bbf8f515071b821af36863dba6404eb9bec534af0f225ae2ac8b30a5527c2",
+          "tests/test_account_store.py": "522f33a30c02a4fa8fe5f48a5f1a006b600e0f849ccce8946762abc0f4651655",
+          "tools/account_core.py": "be1b15d7451b31a00ce26c03307b9709f3df8a0bbf651d5b7c1f2c5f023586c2",
+          "tools/account_store.py": "642472e75d96f60bcad5d59c0054196394501ee426a8fa7588aa11701176eb8a"
+        },
+        "before": {
+          "docs/account-history-delivery.md": "e4855af665c62985985739f0722d111d265cc1f1e969210a0a93735dfda36d93",
+          "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+          "services/accounts/__main__.py": "ba2967e2bd8a17ec72db1d7e51e035796ba86bb8c0de525c9f6109345a0eff8c",
+          "services/accounts/app.py": "36e7743dc6b7ba76dd75436a42947f0ecc3d2348db96e5de1cfe973d1bd09964",
+          "tests/test_account_api.py": "0791715a4e61ae4ff029a61a88c69e2db704551c4192b09c262734e1a9c8b09c",
+          "tests/test_account_core.py": "c98bbf8f515071b821af36863dba6404eb9bec534af0f225ae2ac8b30a5527c2",
+          "tests/test_account_store.py": "522f33a30c02a4fa8fe5f48a5f1a006b600e0f849ccce8946762abc0f4651655",
+          "tools/account_core.py": "be1b15d7451b31a00ce26c03307b9709f3df8a0bbf651d5b7c1f2c5f023586c2",
+          "tools/account_store.py": "642472e75d96f60bcad5d59c0054196394501ee426a8fa7588aa11701176eb8a"
+        },
+        "exit_status": 1,
+        "finished_at": "2026-11-24T16:19:22.229426+00:00",
+        "no_dependency_install": true,
+        "no_real_payment_or_public_collection": true,
+        "profile": "account-history-initial-source-controls/v1",
+        "stable": true,
+        "started_at": "2026-11-24T16:19:19.189090+00:00",
+        "stderr_sha256": "1b1ea3faa226bf5206fede98230dd627de125148ff9054550c1f0d2c3e57bef9",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "sha256": "783544c6dcd68e14e532310cbac37287ea595209cd8b1b2476cfb1cc2ea19716"
+    },
+    "prior_p1_critical_phase": {
+      "bytes": 2521,
+      "record": {
+        "actual_review_fixtures_only": true,
+        "after": {
+          "docs/account-history-delivery.md": "16e332da868a62ac7eb269ce2d77113793163b4ad177a9143f32acedc6ad2a89",
+          "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+          "services/accounts/__main__.py": "ba2967e2bd8a17ec72db1d7e51e035796ba86bb8c0de525c9f6109345a0eff8c",
+          "services/accounts/app.py": "216c00ddfa355cd2bd33212eca29f92f199d13505405de11de3ab00d68702d9a",
+          "tests/test_account_api.py": "692a16e572f592be5f0f2bd8231832da1de1eb0b27366f5fe4d61eafeb720298",
+          "tests/test_account_core.py": "c98bbf8f515071b821af36863dba6404eb9bec534af0f225ae2ac8b30a5527c2",
+          "tests/test_account_store.py": "fea640f9052c54462708a60a19d0962232503cd3acfdfe0d2eb6f82171fb2d59",
+          "tools/account_core.py": "be1b15d7451b31a00ce26c03307b9709f3df8a0bbf651d5b7c1f2c5f023586c2",
+          "tools/account_store.py": "911f0c6cd7187f1fc0634c259f3e874ec7f6a1af8b1a0dac991c83a34c03846c"
+        },
+        "api_exit": 0,
+        "before": {
+          "docs/account-history-delivery.md": "16e332da868a62ac7eb269ce2d77113793163b4ad177a9143f32acedc6ad2a89",
+          "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+          "services/accounts/__main__.py": "ba2967e2bd8a17ec72db1d7e51e035796ba86bb8c0de525c9f6109345a0eff8c",
+          "services/accounts/app.py": "216c00ddfa355cd2bd33212eca29f92f199d13505405de11de3ab00d68702d9a",
+          "tests/test_account_api.py": "692a16e572f592be5f0f2bd8231832da1de1eb0b27366f5fe4d61eafeb720298",
+          "tests/test_account_core.py": "c98bbf8f515071b821af36863dba6404eb9bec534af0f225ae2ac8b30a5527c2",
+          "tests/test_account_store.py": "fea640f9052c54462708a60a19d0962232503cd3acfdfe0d2eb6f82171fb2d59",
+          "tools/account_core.py": "be1b15d7451b31a00ce26c03307b9709f3df8a0bbf651d5b7c1f2c5f023586c2",
+          "tools/account_store.py": "911f0c6cd7187f1fc0634c259f3e874ec7f6a1af8b1a0dac991c83a34c03846c"
+        },
+        "deletion_exit": 0,
+        "finished_at": "2026-11-24T16:25:29.670560+00:00",
+        "initial19_phase_retained": "18passed/1configuration-refusal error, then affected corrected case passed; not promoted to whole current20",
+        "logs": {
+          "current-api-controls.stderr": "5c90c4e282aaf2cbc0b3286389e19492c8c77ece90494c18d7ce0f143b6fe077",
+          "current-deletion-control.stderr": "57f487fb68787471020dbaf579f031bf73a975f3539d2098af467485d62c9f27"
+        },
+        "pass": true,
+        "profile": "account-history-current-critical-controls/v1",
+        "stable": true,
+        "started_at": "2026-11-24T16:25:28.381570+00:00"
+      },
+      "sha256": "9233e3c2f976c1ef9f85ac9c5a361ed9afa73aa8a4aca13714f0c756ef187ada"
+    },
+    "prior_real_two_user_HTTP": {
+      "bytes": 5165,
+      "record": {
+        "actual_session_rotation_login_logout_revocation": true,
+        "captured_at": "2026-11-24T16:39:19.859020+00:00",
+        "cross_owner_history_access_denied": true,
+        "existing_ps_summary_sha256": "5e7c0373e8fa0e3ae8b3115ece0bd22abf3d6464a275e4221d40b2a3d4036dfe",
+        "export_and_delete_after_actual_expiry": true,
+        "no_client_entitlement_grant": true,
+        "no_public_collection_or_real_charge": true,
+        "observations": [
+          {
+            "expected_status": 200,
+            "stage": "first_bootstrap",
+            "status": 200
+          },
+          {
+            "expected_status": 201,
+            "stage": "first_signup",
+            "status": 201
+          },
+          {
+            "expected_status": 200,
+            "stage": "second_bootstrap",
+            "status": 200
+          },
+          {
+            "expected_status": 201,
+            "stage": "second_signup",
+            "status": 201
+          },
+          {
+            "expected_status": 403,
+            "stage": "inactive_enable_refuses",
+            "status": 403
+          },
+          {
+            "expected_status": 200,
+            "stage": "actual_server_owned_active",
+            "status": 200
+          },
+          {
+            "expected_status": 200,
+            "stage": "explicit_opt_in",
+            "status": 200
+          },
+          {
+            "expected_status": 200,
+            "stage": "save_actual_ps_summary_metadata",
+            "status": 200
+          },
+          {
+            "expected_status": 200,
+            "stage": "idempotent_same_summary",
+            "status": 200
+          },
+          {
+            "expected_status": 200,
+            "stage": "second_owner_private_empty",
+            "status": 200
+          },
+          {
+            "expected_status": 404,
+            "stage": "cross_owner_delete_refuses",
+            "status": 404
+          },
+          {
+            "expected_status": 200,
+            "stage": "actual_server_owned_expired",
+            "status": 200
+          },
+          {
+            "expected_status": 200,
+            "stage": "expired_subscription_export",
+            "status": 200
+          },
+          {
+            "expected_status": 403,
+            "stage": "expired_append_refuses",
+            "status": 403
+          },
+          {
+            "expected_status": 200,
+            "stage": "expired_subscription_delete",
+            "status": 200
+          },
+          {
+            "expected_status": 200,
+            "stage": "history_deleted",
+            "status": 200
+          },
+          {
+            "expected_status": 200,
+            "stage": "logout",
+            "status": 200
+          },
+          {
+            "expected_status": 401,
+            "stage": "revoked_session_refuses",
+            "status": 401
+          },
+          {
+            "expected_status": 200,
+            "stage": "login_bootstrap",
+            "status": 200
+          },
+          {
+            "expected_status": 200,
+            "stage": "actual_password_login",
+            "status": 200
+          },
+          {
+            "expected_status": 200,
+            "stage": "account_delete_and_real_ledger_forget",
+            "status": 200
+          },
+          {
+            "expected_status": 401,
+            "stage": "deleted_account_refuses",
+            "status": 401
+          },
+          {
+            "expected_status": 200,
+            "stage": "other_owner_still_works",
+            "status": 200
+          },
+          {
+            "expected_status": 200,
+            "stage": "second_account_delete",
+            "status": 200
+          }
+        ],
+        "only_generated_review_users": true,
+        "pass": true,
+        "profile": "actual-account-history-loopback/v1",
+        "real_engine_forget_after_account_deletion": true,
+        "real_operator_grant_and_passive_expiry": true,
+        "received_history_raw_text_or_subject_fingerprint": false,
+        "source_after": {
+          "docs/account-history-delivery.md": "3d76ad40918e573f3ee04d68740f2f8cc0b5aceb4c86132310fcbab180bcd76c",
+          "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+          "services/accounts/__main__.py": "5f87f19c52b31bc070e5f06ad798afaa83adccdbba97025bd687dab59c8ee587",
+          "services/accounts/app.py": "ec74e4a1a34d6124569f61960371d8fc73e735968645cec965e2f61ba1d4293b",
+          "tests/test_account_api.py": "692a16e572f592be5f0f2bd8231832da1de1eb0b27366f5fe4d61eafeb720298",
+          "tests/test_account_core.py": "c98bbf8f515071b821af36863dba6404eb9bec534af0f225ae2ac8b30a5527c2",
+          "tests/test_account_store.py": "36dae72c4ba51c70c702f806bf72686b6b43bedd15caf6899c1bcf48b69340c3",
+          "tools/account_core.py": "372de5a8003dcf246b5600a1f40d0cef5b29ef693ca077000cb33c03c824a10a",
+          "tools/account_store.py": "59d4b6e3f1a7da5974037d53caac1662d49a7efd9c5714fd92328b718987e24b"
+        },
+        "source_before": {
+          "docs/account-history-delivery.md": "3d76ad40918e573f3ee04d68740f2f8cc0b5aceb4c86132310fcbab180bcd76c",
+          "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+          "services/accounts/__main__.py": "5f87f19c52b31bc070e5f06ad798afaa83adccdbba97025bd687dab59c8ee587",
+          "services/accounts/app.py": "ec74e4a1a34d6124569f61960371d8fc73e735968645cec965e2f61ba1d4293b",
+          "tests/test_account_api.py": "692a16e572f592be5f0f2bd8231832da1de1eb0b27366f5fe4d61eafeb720298",
+          "tests/test_account_core.py": "c98bbf8f515071b821af36863dba6404eb9bec534af0f225ae2ac8b30a5527c2",
+          "tests/test_account_store.py": "36dae72c4ba51c70c702f806bf72686b6b43bedd15caf6899c1bcf48b69340c3",
+          "tools/account_core.py": "372de5a8003dcf246b5600a1f40d0cef5b29ef693ca077000cb33c03c824a10a",
+          "tools/account_store.py": "59d4b6e3f1a7da5974037d53caac1662d49a7efd9c5714fd92328b718987e24b"
+        },
+        "source_stable": true,
+        "two_distinct_accounts": true,
+        "verified_payment_or_external_provider": false
+      },
+      "sha256": "bdfcbbe04988d1a30aefff40c4a055f3c6de29ed9c54aad91b8a46acb1099fe9"
+    }
+  },
+  "architecture_recorded_before_feature_code": true,
+  "captured_at": "2026-11-24T16:58:55.270828+00:00",
+  "current_component_run_is_not_entire_signup_history_production_release": true,
+  "distinct_review_pending_at_capture": true,
+  "frontend_browser_actual_results_owned_and_recorded_separately_by": "Codex /root",
+  "original_criteria_changed_or_closed": false,
+  "pass": true,
+  "profile": "account-history-delivery/v1",
+  "public_production_deployed": false,
+  "real_payment_processed_or_verified": false,
+  "remaining_operational_acceptance": [
+    "Operational PostgreSQL adapter/configuration and production hosting/security acceptance before participant collection",
+    "Verified commercial payment provider/pricing/checkout and subscription lifecycle; operator grants are not payments",
+    "Account recovery/email verification and cross-platform automatic history adapters are not claimed",
+    "ROOT-owned browser integration and its separately attributed actual results",
+    "Source profile/admission and shared CI registration are future integration"
+  ],
+  "scope_percent_change": false,
+  "security_boundaries": {
+    "clock_selected_under_writer_lock": true,
+    "explicit_opt_in": true,
+    "export_delete_independent_of_subscription_and_assessment": true,
+    "free_checks_unchanged": true,
+    "no_installation_or_research_token_as_user_auth": true,
+    "no_raw_input_or_subject_fingerprint_history": true,
+    "password_KDF": "scrypt-n32768-r8-p3-dk32/v1",
+    "private_account_ownership": true,
+    "real_clock_rollback_refuses": true,
+    "schema": 2,
+    "server_owned_entitlement": true
+  },
+  "source": {
+    "docs/account-history-delivery.md": "c53a357904a4df177bdf88e353bbb72f683cdd582ecfef8fe0899f442453d2dd",
+    "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+    "services/accounts/__main__.py": "6bcb6c4341f58d6284ed935fd1b6ab5f651b5e2bd3eeaf676cf2efc4e12a6ccf",
+    "services/accounts/app.py": "ad7a6a6b2297e120ed43454d8cf028df9ebfa749d51159450f7ef43cfe74e5b2",
+    "tests/test_account_api.py": "9c715fd1e9db5602f2fef67950d508ca8a0b6086477c86444e40ad8fa6b96a07",
+    "tests/test_account_core.py": "c98bbf8f515071b821af36863dba6404eb9bec534af0f225ae2ac8b30a5527c2",
+    "tests/test_account_store.py": "8e6593ec0f59b0bf833c36900d82912ff58ef8a27804606cc7a7b61ea63b44b7",
+    "tools/account_core.py": "372de5a8003dcf246b5600a1f40d0cef5b29ef693ca077000cb33c03c824a10a",
+    "tools/account_store.py": "e7ec971f9237bf4ddecb338513acffa9c60fa6c4216341ab6c22c64fc62070cd"
+  },
+  "source_analysis": {
+    "fetch_origin_primary": {
+      "finding": "Unsafe methods in non-cors mode combined with no-referrer select a null Origin. The API continues to reject null; ROOT owns the fixed-relative-API cors-mode frontend change and separately captured browser result.",
+      "retained_source_note_sha256": "e7ef160a25c50ab421686ad91f7e95f8c07eeafef09791a08828f5fe5c5a86fa",
+      "snapshot": "d7fc0fdb1bdc25bec9c3699b57d4bb042f88098e",
+      "this_is_browser_execution_proof": false,
+      "url": "https://fetch.spec.whatwg.org/#append-a-request-origin-header"
+    }
+  },
+  "source_base": "1b6c91edbd11fa7318d604e7415dd903b749b5e8",
+  "test_phase_limits": {
+    "current_HTTP": "Same-data restart and existing real user login/history/logout200; no whole browser success inferred",
+    "current_clock_affected_unique_groups_passed": 7,
+    "current_declared_methods": 22,
+    "current_full22_executed": false,
+    "original19_phase": "18 pass, one configuration-refusal error; preserved and corrected narrowly",
+    "prior_p1_controls": "Historical only; current schema2 scrypt32768/r8/p3 replaces initial p1 without silent migration",
+    "prior_two_user_HTTP": "Actual24 observations on retained previous p3 source before transaction-clock repair"
+  }
+}

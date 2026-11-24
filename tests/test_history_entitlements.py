@@ -60,6 +60,20 @@ class HistoryEntitlementTests(unittest.TestCase):
         with self.assertRaises(h.EntitlementError):
             reopened.grant(self.a, key(), self.now + 100, self.now + 1)
 
+    def test_trusted_service_clock_is_selected_under_lock_without_clamping(self):
+        self.store.grant(self.a, key(), self.now + 5, self.now)
+        self.store.grant(self.b, key(), self.now + 100, self.now + 1)
+        clock = mock.Mock(return_value=self.now + 2)
+        service = h.HistoryEntitlements(self.path, clock=clock)
+        self.assertEqual(service.assess(self.a, self.now)['state'], 'ACTIVE')
+        self.assertEqual(clock.call_count, 1)
+        clock.return_value = self.now + 5
+        self.assertEqual(service.assess(self.a, self.now)['state'], 'INACTIVE')
+        clock.return_value = self.now + 3
+        self.assertEqual(service.assess(self.a, self.now)['state'], 'UNAVAILABLE')
+        clock.side_effect = RuntimeError('private clock marker')
+        self.assertEqual(service.assess(self.a, self.now)['state'], 'UNAVAILABLE')
+
     def test_corruption_duplicate_keys_and_coherent_boolean_revision_refuse(self):
         original = (self.path / 'grants.json').read_bytes()
         self.store.grant(self.a, key(), self.now + 5, self.now)

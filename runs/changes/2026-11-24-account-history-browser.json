@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-account-history-browser",
+  "recorded_at": "2026-11-24T17:14:12.021406+00:00",
+  "author": "Codex /root; /root/seo account/UI review; /root/share_debugger clock review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e606a5f89ad063140c1714cbd144c944c3a2054e",
+  "changed": "Implement the real private account/history browser, strict same-origin session integration, privacy-minimized PS-summary import, independent export/deletion and safe principal refresh; wire lifecycle/privacy regressions into CI and update evidenced scope/state.",
+  "proves": "Actual current Chromium/WebKit user workflow passes against real HTTP and operator access engine. Different review reproduces stale cross-owner display and verifies four corrected full-JS failure-boundary regressions. Two different trusted-clock controls pass without clamping or weakening rollback refusal. Registered isolated account job closes; original136/66 is unchanged.",
+  "limits": "No public signup, customer charge, merchant/price, production PostgreSQL collection, account recovery, native/extension viewing-history binding, physical VoiceOver, independent accuracy, all14-route clearance or original closure. Earlier failed/successful browser phases are retained separately; remote CI is registered, not claimed executed.",
+  "scope_ids": [
+    "F-044",
+    "N-010",
+    "F-136"
+  ],
+  "files": {
+    "site/account/index.html": "669d18fc09a5e54fd76bdea19c26284efdf441655150170646f612b00ed25e96",
+    "site/account/app.js": "fa3a8660a158470b4504c7e2cdc5bbc9715580a230d7cedaf1f2132271f6a550",
+    "site/account/style.css": "d4d5e79c4b4c0986df7d50a5ecbd6a2094d1815f93810b2edc01b906d05e941d",
+    "tests/account-ui-state.cjs": "5b7309e38ee23bccb4fbf6b73a2a65c57dbf5a761e76a851621ae73d3e5daea5",
+    "tools/history_entitlements.py": "011643552ed573a43105b377aeb297920a2198ef07d388e2564fae1a78cb8a4d",
+    "scripts/history-entitlements.py": "fa1fb8d547280737aa593acc32619692aefa6d93198ed0d9696882c09108dc5f",
+    "tests/test_history_entitlements.py": "4dd5c86c575d86be0758cc20e5c5b8cefdf3dfa2f15b8b9f9186d37fa3111259",
+    "docs/history-entitlements.md": "87d119ebdac163d021cbcceb8e3cd6e7a1d8618d8e65c70f886569de896a61ab",
+    "docs/account-history-ui.md": "86e29385e254a1c75b2ad2b60ea99a45694a354964dfba2135b37e2b2a182844",
+    ".github/workflows/ci.yml": "ad094bb166884a5e7062ee8d5caea586d10cc94553455699a743523ac8818127",
+    "package.json": "4ecefb26647ff50ddecafaaed45a7ad99b12c97537e331cce6e250f98872c0fc",
+    "docs/session-delivery.json": "5a01363d9f3eb74b79ac84d591a82d769fd622dcf1773d3c472fdae8e6baee8b",
+    "docs/session-delivery-plan.md": "044db503289aed33adabd16e1d448ed8eed0e4ec7987a0defdae35064f6268a6",
+    "docs/scope-progress.json": "a01ae99abcb854eea873d28ddf99f190774cb687432f0a462b41ed86dd734d1b",
+    "docs/scope-progress.md": "ece5b16b56fe89a6930e98f98b933030c4c46367094e5654f924fafb70ff42f4",
+    "state.json": "bc2af30b5b3ffaad3796f099119ad668b12960dc0b97ae793feb8644fcce1dee",
+    "runs/2026-11-24-account-history-browser.json": "c40b1c252f97768f1375e0c58311ec751953b9c0548421df40d4320467e9d747"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-account-history-browser.json",
+      "sha256": "c40b1c252f97768f1375e0c58311ec751953b9c0548421df40d4320467e9d747"
+    }
+  ],
+  "checks": []
+}

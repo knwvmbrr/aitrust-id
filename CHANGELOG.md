@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-account-history-browser
+
+Recorded 2026-11-24T17:14:12.021406+00:00 · Contributor: Codex /root; /root/seo account/UI review; /root/share_debugger clock review · change
+
+- **Changed.** Implement the real private account/history browser, strict same-origin session integration, privacy-minimized PS-summary import, independent export/deletion and safe principal refresh; wire lifecycle/privacy regressions into CI and update evidenced scope/state.
+- **Evidence.** Actual current Chromium/WebKit user workflow passes against real HTTP and operator access engine. Different review reproduces stale cross-owner display and verifies four corrected full-JS failure-boundary regressions. Two different trusted-clock controls pass without clamping or weakening rollback refusal. Registered isolated account job closes; original136/66 is unchanged. [Change record](./runs/changes/2026-11-24-account-history-browser.json).
+- **Not claimed.** No public signup, customer charge, merchant/price, production PostgreSQL collection, account recovery, native/extension viewing-history binding, physical VoiceOver, independent accuracy, all14-route clearance or original closure. Earlier failed/successful browser phases are retained separately; remote CI is registered, not claimed executed.
+
+
+### 2026-11-24-account-history-delivery
+
+Recorded 2026-11-24T17:02:28.251487+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review and browser execution · change
+
+- **Changed.** Implement real pseudonymous signup, password login, rotated private sessions and per-owner metadata history with explicit opt-in, server-owned access assessment, independent export/deletion and account erasure.
+- **Evidence.** Actual isolated FastAPI account/history flows and real ROOT entitlement engine support signup, private metadata saving and access-expiry-independent export/deletion/account erasure. Seven current affected source groups pass across retained phases; ROOT independently reviewed all nine frozen sources and completed the real Chromium/WebKit user workflow with zero JavaScript, external-request or axe violations. Earlier source/runtime phases and observer errors remain separately attributed. [Change record](./runs/changes/2026-11-24-account-history-delivery.json).
+- **Not claimed.** SQLite is development/review only, operational PostgreSQL and production collection remain unqualified. Operator grants are not verified payments. No account recovery/email verification, public forum authorization, automatic viewing-history adapters, live public signup, source admission, accuracy or original closure is claimed. The22 current declared methods were not falsely represented as one complete current run; actual targeted phases and earlier19-control outcome are separately recorded. ROOT owns frontend and separately attributed browser verification.
+
+
 ### 2026-11-24-source-v5-current-integration
 
 Recorded 2026-11-24T15:51:25.906741+00:00 · Contributor: Codex /root/share_debugger; ROOT different final registration/source review · change

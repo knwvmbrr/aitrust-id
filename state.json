@@ -789,7 +789,7 @@
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
     "candidate_source": "https://theailab.org/ai-trust-registry",
-    "observed_mark": "AI Trust ID™",
+    "observed_mark": "AI Trust ID\u2122",
     "registration_priority_and_legal_conflict_verified": false
   },
   "market_research": {
@@ -1610,7 +1610,7 @@
     "active_retention_days": 30,
     "backup_expiry_days": 7,
     "invitation_only": true,
-    "owner_role": "Michael — accepted accountable pilot operator and access approver",
+    "owner_role": "Michael \u2014 accepted accountable pilot operator and access approver",
     "owner_decision": "runs/2026-10-13-metadata-pilot-owner-decision.json",
     "policy": "deploy/research/metadata-pilot-policy.json"
   },
@@ -5772,8 +5772,8 @@
     "marketing_operating_model": "Owner as human CMO with final post/account/time approval; separate content and fact-check roles; proposed two-week pilot, no social posting or purchase authorized by planning."
   },
   "account_history_delivery": {
-    "recorded_at": "2026-11-24T16:18:02.427997+00:00",
-    "phase": "isolated_account_implementation_and_integration",
+    "recorded_at": "2026-11-24T17:14:12.021406+00:00",
+    "phase": "working_isolated_HTTP_and_browser_qualified",
     "signup_publicly_live": false,
     "account_engineer": "/root/seo",
     "browser_and_entitlements_engineer": "/root",
@@ -5782,7 +5782,14 @@
     "real_payments": false,
     "production_PostgreSQL_collection": false,
     "free_checking_requires_account": false,
-    "scope_id": "ENH-PERSONAL-TAG-HISTORY"
+    "scope_id": "ENH-PERSONAL-TAG-HISTORY",
+    "evidence": "runs/2026-11-24-account-history-browser.json",
+    "browser_engines": [
+      "Chromium",
+      "WebKit"
+    ],
+    "principal_reset_regressions": 4,
+    "actual_current_browser_workflow_pass": true
   },
   "current_image_reference_qualification": {
     "recorded_at": "2026-11-24T16:18:02.427997+00:00",

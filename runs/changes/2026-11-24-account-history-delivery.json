@@ -1,0 +1,67 @@
+{
+  "actual_check_observations": [
+    {
+      "actual_check_context": "Current transaction-clock phase: seven unique affected API/store groups passed across recorded commands, including two newly added grouped regressions. Original two observer errors are retained.",
+      "evidence_sha256": "c9e2de14641f380ba4437bb5fb9f49dc024cf693ca89517563847fe7f24cbd86",
+      "pass": true
+    },
+    {
+      "actual_check_context": "Prior real HTTP/committed-engine two-user flow:24observations passed on preserved pre-clock source, not rebound to current source.",
+      "evidence_sha256": "bdfcbbe04988d1a30aefff40c4a055f3c6de29ed9c54aad91b8a46acb1099fe9",
+      "pass": true
+    },
+    {
+      "actual_check_context": "Current same-data service restart: real existing-user login/history/logout200 with separately reviewed atomic-clock engine.",
+      "evidence_sha256": "fe5b3a1ce44e9cf89ef042c7443efb79c9f6ac66eabf5a4c6dc37dc9c1af71e9",
+      "pass": true
+    }
+  ],
+  "author": "Codex /root/seo; Codex /root distinct source review and browser execution",
+  "changed": "Implement real pseudonymous signup, password login, rotated private sessions and per-owner metadata history with explicit opt-in, server-owned access assessment, independent export/deletion and account erasure.",
+  "checks": [],
+  "claim_level": "engineering_only",
+  "current_source_freeze_sha256": "628e9070454adfe27cef66a321fa5aa6550d12ebfc6933d796c7a756eadb7587",
+  "distinct_review": {
+    "raw_utf8": "{\n  \"authored_run_sha256\": \"2dc1727e01afc8b3889129e8c630fdee6f0569e4c5c2a369d74f6389452953c7\",\n  \"captured_at\": \"2026-11-24T17:01:42.644605+00:00\",\n  \"original_complete\": 136,\n  \"original_open\": 66,\n  \"pass\": true,\n  \"production_deployment_or_payment_approved\": false,\n  \"profile\": \"account-history-distinct-root-review/v1\",\n  \"recorded_by\": \"Codex /root/seo from explicit final review message; not an additional review or browser execution\",\n  \"recovery_claim\": false,\n  \"review_message_utf8\": \"ROOT final source review CLEAR for isolated dev/review contract on nine-source freeze628e: reviewed core/KDF/session/history schema and store/routes/CLI, strict origin+CSRF, current transaction clock, deletion outbox and no tag dependency. Actual complete ROOT browser+real engine evidence independently qualifies user workflow; no production/payment/recovery claim. Persist distinct receipt referencing this review plus hash full current browser result separately; don't modify frozen authored run. Author fresh event and CHL then normal guard/commit12 paths once CTO+phone release Git. Keep source9 exact and original66 unchanged. Provide commit/hash/guard; no duplicate suites/native work.\",\n  \"reviewer\": \"Codex /root\",\n  \"separate_actual_browser_observation\": {\n    \"bytes\": 590,\n    \"executor\": \"Codex /root\",\n    \"raw_utf8\": \"{\\n  \\\"captured_at\\\": \\\"2026-11-24T16:59:42.285Z\\\",\\n  \\\"pass\\\": true,\\n  \\\"phase\\\": \\\"complete\\\",\\n  \\\"real_http\\\": true,\\n  \\\"real_entitlement_engine\\\": true,\\n  \\\"payment_processed\\\": false,\\n  \\\"public_account_launch\\\": false,\\n  \\\"physical_phone\\\": false,\\n  \\\"checks\\\": {\\n    \\\"actual_signup\\\": true,\\n    \\\"server_owned_grant_and_opt_in\\\": true,\\n    \\\"save_actual_PS_summary\\\": true,\\n    \\\"responsive_light_dark_and_accessibility\\\": true,\\n    \\\"inactive_access_keeps_export_and_deletion\\\": true,\\n    \\\"sign_out_and_real_WebKit_sign_in\\\": true\\n  },\\n  \\\"javascript_errors\\\": [],\\n  \\\"external_requests\\\": [],\\n  \\\"axe_violations\\\": []\\n}\\n\",\n    \"sha256\": \"9d7c46b3670befac101468ee8d2e067359217da86ff46a822eff983de26011bc\"\n  },\n  \"source\": {\n    \"docs/account-history-delivery.md\": \"c53a357904a4df177bdf88e353bbb72f683cdd582ecfef8fe0899f442453d2dd\",\n    \"services/accounts/__init__.py\": \"bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d\",\n    \"services/accounts/__main__.py\": \"6bcb6c4341f58d6284ed935fd1b6ab5f651b5e2bd3eeaf676cf2efc4e12a6ccf\",\n    \"services/accounts/app.py\": \"ad7a6a6b2297e120ed43454d8cf028df9ebfa749d51159450f7ef43cfe74e5b2\",\n    \"tests/test_account_api.py\": \"9c715fd1e9db5602f2fef67950d508ca8a0b6086477c86444e40ad8fa6b96a07\",\n    \"tests/test_account_core.py\": \"c98bbf8f515071b821af36863dba6404eb9bec534af0f225ae2ac8b30a5527c2\",\n    \"tests/test_account_store.py\": \"8e6593ec0f59b0bf833c36900d82912ff58ef8a27804606cc7a7b61ea63b44b7\",\n    \"tools/account_core.py\": \"372de5a8003dcf246b5600a1f40d0cef5b29ef693ca077000cb33c03c824a10a\",\n    \"tools/account_store.py\": \"e7ec971f9237bf4ddecb338513acffa9c60fa6c4216341ab6c22c64fc62070cd\"\n  },\n  \"source_freeze_sha256\": \"628e9070454adfe27cef66a321fa5aa6550d12ebfc6933d796c7a756eadb7587\"\n}\n",
+    "recorded_by": "Codex /root/seo from explicit final review message",
+    "reviewer": "Codex /root",
+    "sha256": "b834f0345cf7ed24ae819b2bc037ecff8933ba66ac78a530e1bc1a1794f0a01e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-account-history-delivery.json",
+      "sha256": "2dc1727e01afc8b3889129e8c630fdee6f0569e4c5c2a369d74f6389452953c7"
+    }
+  ],
+  "files": {
+    "docs/account-history-delivery.md": "c53a357904a4df177bdf88e353bbb72f683cdd582ecfef8fe0899f442453d2dd",
+    "runs/2026-11-24-account-history-delivery.json": "2dc1727e01afc8b3889129e8c630fdee6f0569e4c5c2a369d74f6389452953c7",
+    "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+    "services/accounts/__main__.py": "6bcb6c4341f58d6284ed935fd1b6ab5f651b5e2bd3eeaf676cf2efc4e12a6ccf",
+    "services/accounts/app.py": "ad7a6a6b2297e120ed43454d8cf028df9ebfa749d51159450f7ef43cfe74e5b2",
+    "tests/test_account_api.py": "9c715fd1e9db5602f2fef67950d508ca8a0b6086477c86444e40ad8fa6b96a07",
+    "tests/test_account_core.py": "c98bbf8f515071b821af36863dba6404eb9bec534af0f225ae2ac8b30a5527c2",
+    "tests/test_account_store.py": "8e6593ec0f59b0bf833c36900d82912ff58ef8a27804606cc7a7b61ea63b44b7",
+    "tools/account_core.py": "372de5a8003dcf246b5600a1f40d0cef5b29ef693ca077000cb33c03c824a10a",
+    "tools/account_store.py": "e7ec971f9237bf4ddecb338513acffa9c60fa6c4216341ab6c22c64fc62070cd"
+  },
+  "id": "2026-11-24-account-history-delivery",
+  "independent_release_validated": false,
+  "kind": "change",
+  "limits": "SQLite is development/review only, operational PostgreSQL and production collection remain unqualified. Operator grants are not verified payments. No account recovery/email verification, public forum authorization, automatic viewing-history adapters, live public signup, source admission, accuracy or original closure is claimed. The22 current declared methods were not falsely represented as one complete current run; actual targeted phases and earlier19-control outcome are separately recorded. ROOT owns frontend and separately attributed browser verification.",
+  "original_counts": {
+    "changed": false,
+    "complete": 136,
+    "open": 66
+  },
+  "original_criteria_changed_or_closed": false,
+  "proves": "Actual isolated FastAPI account/history flows and real ROOT entitlement engine support signup, private metadata saving and access-expiry-independent export/deletion/account erasure. Seven current affected source groups pass across retained phases; ROOT independently reviewed all nine frozen sources and completed the real Chromium/WebKit user workflow with zero JavaScript, external-request or axe violations. Earlier source/runtime phases and observer errors remain separately attributed.",
+  "recorded_at": "2026-11-24T17:02:28.251487+00:00",
+  "schema_version": 1,
+  "scope_ids": [
+    "F-044",
+    "N-010",
+    "F-136"
+  ],
+  "source_base": "1b6c91edbd11fa7318d604e7415dd903b749b5e8"
+}

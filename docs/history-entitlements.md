@@ -24,6 +24,11 @@ Expiry is evaluated on each use, and an observed wall-clock rollback refuses
 access, including after reopening the ledger. This is not independent time or
 protection against an administrator restoring an older ledger and clock.
 
+Service integration selects its trusted clock after acquiring the ledger lock.
+The optional constructor `clock` is server configuration, never a request field.
+This avoids treating an earlier request timestamp as an OS rollback after a newer
+operation commits. Direct integer-time callers keep strict rollback refusal.
+
 The bounded ledger supports 1,024 accounts and 8,192 events, reserving space for
 revoking every outstanding grant. Changes use private temporary files, fsync and
 atomic replacement. Missing/corrupt/busy storage and write uncertainty produce

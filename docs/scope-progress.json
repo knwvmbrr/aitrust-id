@@ -14802,9 +14802,12 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-11-24T16:18:02.427997+00:00",
-      "checked_by": "Codex /root; distinct access-engine review /root/share_debugger",
-      "implemented_by": [],
+      "audited_at": "2026-11-24T17:14:12.021406+00:00",
+      "checked_by": "Codex /root; different frontend review /root/seo and entitlement-clock review /root/share_debugger",
+      "implemented_by": [
+        "Codex /root — browser and access integration",
+        "Codex /root/seo — account/API/store"
+      ],
       "planning_contributors": [
         "Michael — direct product direction, 2026-11-24T04:35:56.090177+00:00",
         "Codex /root — independent privacy and execution contract"
@@ -14812,13 +14815,16 @@
       "completed_by": [],
       "completed_at": null,
       "completion_timestamp_basis": null,
-      "next_fix": "Implement and qualify an explicitly chosen paid history service with user accounts, independent of free personal checking; deliver readable where/why timeline, bounded retention/quota, safe export/deletion/corrections, separate native/extension adapters, truthful billing/entitlement controls and supported-user acceptance.",
+      "next_fix": "Deliver the selected paid public PostgreSQL account service and actual billing verification/operating recovery; complete filter/correction/extension/native display binding and human/physical-device acceptance. Preserve free checking and access-independent export/deletion; imported summaries remain unverified.",
       "next_owner": "Web/platform tag engineers; privacy reviewer; PM integrates; Michael and independent users for human acceptance",
       "evidence": [
         "docs/personal-tag-history-plan.md",
-        "runs/2026-11-24-history-access-engine.json"
+        "runs/2026-11-24-history-access-engine.json",
+        "runs/2026-11-24-account-history-browser.json",
+        "runs/2026-11-24-account-history-delivery.json",
+        "docs/account-history-ui.md"
       ],
-      "evidence_scope": "Written owner-revised paid-history/account contract only. No active checkout, account service, history store, ambient capture, training consent or live collection. Real private operator access engine and CLI are implemented and verified; real account HTTP and browser integration are in progress. No merchant, public signup, paid charge or production collection is activated.",
+      "evidence_scope": "Working isolated development signup, sessions, owner-only metadata history and real Chromium/WebKit workflow, default-off opt-in, actual operator grants and access-independent export/deletion. No merchant/verified payments, public signup, production PostgreSQL, native/extension display binding, verified viewing time/location or human acceptance. The full paid-history enhancement remains20% because its complete bounded product mechanism is not yet delivered.",
       "required_acceptance": [
         "Actual consent/check/revisit/filter/delete/disable and quota/expiry/corruption/migration failures preserve all checking.",
         "Stored metadata excludes raw inputs, private URLs/excerpts and screenshots by default; explicit optional exports are previewed and no research/network submission occurs.",

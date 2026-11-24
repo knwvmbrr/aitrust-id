@@ -23,7 +23,7 @@ def main():
             access.initialize(args.directory)
             result = {'initialized': True}
         else:
-            store = access.HistoryEntitlements(args.directory)
+            store = access.HistoryEntitlements(args.directory, clock=lambda: int(time.time()))
             if args.operation == 'status': result = store.assess(args.account, now)
             elif args.operation == 'grant': result = store.grant(args.account, args.event, args.until, now)
             elif args.operation == 'revoke': result = store.revoke(args.account, args.event, now)

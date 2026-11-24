@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-account-history-browser",
+  "recorded_at": "2026-11-24T17:14:12.021406+00:00",
+  "author": "Codex /root; backend /root/seo; different reviews /root/seo and /root/share_debugger",
+  "source_base": "e606a5f89ad063140c1714cbd144c944c3a2054e",
+  "account_backend_commit": "90fcd193aaff57764532fb818e567f4ce5488647",
+  "source_sha256": {
+    "site/account/index.html": "669d18fc09a5e54fd76bdea19c26284efdf441655150170646f612b00ed25e96",
+    "site/account/app.js": "fa3a8660a158470b4504c7e2cdc5bbc9715580a230d7cedaf1f2132271f6a550",
+    "site/account/style.css": "d4d5e79c4b4c0986df7d50a5ecbd6a2094d1815f93810b2edc01b906d05e941d",
+    "tests/account-ui-state.cjs": "5b7309e38ee23bccb4fbf6b73a2a65c57dbf5a761e76a851621ae73d3e5daea5",
+    "tools/history_entitlements.py": "011643552ed573a43105b377aeb297920a2198ef07d388e2564fae1a78cb8a4d",
+    "scripts/history-entitlements.py": "fa1fb8d547280737aa593acc32619692aefa6d93198ed0d9696882c09108dc5f",
+    "tests/test_history_entitlements.py": "4dd5c86c575d86be0758cc20e5c5b8cefdf3dfa2f15b8b9f9186d37fa3111259",
+    "docs/history-entitlements.md": "87d119ebdac163d021cbcceb8e3cd6e7a1d8618d8e65c70f886569de896a61ab",
+    "docs/account-history-ui.md": "86e29385e254a1c75b2ad2b60ea99a45694a354964dfba2135b37e2b2a182844"
+  },
+  "actual_current_browser": {
+    "sha256": "e2aa21d9a06f2943ec35bb40937597352a4f9dff52949b31515fd3de9454b8bf",
+    "observation": {
+      "captured_at": "2026-11-24T17:13:32.073Z",
+      "pass": true,
+      "phase": "complete",
+      "real_http": true,
+      "real_entitlement_engine": true,
+      "payment_processed": false,
+      "public_account_launch": false,
+      "physical_phone": false,
+      "checks": {
+        "actual_signup": true,
+        "server_owned_grant_and_opt_in": true,
+        "save_actual_PS_summary": true,
+        "responsive_light_dark_and_accessibility": true,
+        "inactive_access_keeps_export_and_deletion": true,
+        "sign_out_and_real_WebKit_sign_in": true
+      },
+      "javascript_errors": [],
+      "external_requests": [],
+      "axe_violations": []
+    },
+    "boundary": "Real loopback HTTP, actual private account SQLite and operator entitlement ledger, actual Chromium/WebKit. Generated review users only; no mock server responses in successful user workflow."
+  },
+  "browser_instrumentation": {
+    "Chromium": [
+      "signup",
+      "save",
+      "reflow_320_390_428_768_1280",
+      "light_dark_persistence",
+      "axe_selected_rules",
+      "external_request_observer",
+      "javascript_errors"
+    ],
+    "WebKit": [
+      "sign_in",
+      "read_history",
+      "revoked_access_export_delete",
+      "account_erasure",
+      "javascript_errors"
+    ],
+    "not_claimed": "WebKit reflow/axe/external-request observer and physical Safari/VoiceOver"
+  },
+  "different_UI_source_review": {
+    "sha256": "03b0cde4b391e0993924e14939484bbe2b1b2e258a7e7e0020bde6fc178c588f",
+    "record": {
+      "actual_current_test_execution": {
+        "DOM_and_fetch_inertly_substituted": true,
+        "argv": [
+          "node",
+          "--test",
+          "tests/account-ui-state.cjs"
+        ],
+        "duration_ms": 146.597041,
+        "exit_status": 0,
+        "fail": 0,
+        "log_sha256": "40bd39f0e8fcf9fa73d526206fb5b4effffa2c211187733ee1435de22261d57a",
+        "pass": 4,
+        "raw_utf8": "TAP version 13\n# Subtest: new principal history failure cannot render the previous owner record\nok 1 - new principal history failure cannot render the previous owner record\n  ---\n  duration_ms: 50.214791\n  ...\n# Subtest: a session fetch failure hides and clears the previously authenticated private view\nok 2 - a session fetch failure hides and clears the previously authenticated private view\n  ---\n  duration_ms: 3.112958\n  ...\n# Subtest: refresh discards prior import, cursor, preview, consent and confirmation secrets\nok 3 - refresh discards prior import, cursor, preview, consent and confirmation secrets\n  ---\n  duration_ms: 3.330458\n  ...\n# Subtest: successful same-owner refresh renders fresh results and pagination once\nok 4 - successful same-owner refresh renders fresh results and pagination once\n  ---\n  duration_ms: 1.228958\n  ...\n1..4\n# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 146.597041\n",
+        "skip": 0,
+        "tests": 4
+      },
+      "captured_at": "2026-11-24T17:08:03.165204+00:00",
+      "no_current_post_reset_browser_claim": true,
+      "no_real_payment_public_production_physical_phone_or_original_closure": true,
+      "one_off_source_reconstruction": {
+        "not_a_permanent_implementation_mirroring_test": true,
+        "remove_only_new_reset_function_and_its_begin_loadSession_call_restores_whole_prior_JS": true,
+        "restored_sha256": "5acd46fc8253213f8cdc35a2411cafc83f01e9981898ba0a7a6f8e0632e8f608"
+      },
+      "original_counter": {
+        "result": "Full unchanged prior JS reproduced A private row still visible under current B after B history503, with inert DOM/fetch only.",
+        "sha256": "5ec0c3a7ac431d7c6e2269ca0d0c801267c3ab90a051d38ffea22c87d20c4016",
+        "source_sha256": "5acd46fc8253213f8cdc35a2411cafc83f01e9981898ba0a7a6f8e0632e8f608"
+      },
+      "pass": true,
+      "profile": "account-frontend-distinct-source-review/v1",
+      "remaining_finding": null,
+      "reviewer": "Codex /root/seo",
+      "scope": "Full current HTML/JS/CSS source read plus4actual inert DOM/fetch regressions on complete unchanged JS. No new browser/native execution.",
+      "separate_ROOT_browser_observation": {
+        "executor": "Codex /root",
+        "pass_at_that_phase": true,
+        "phase": "Actual complete pre-reset browser source5acd; preserved historical, not rebound to corrected principal-reset JS.",
+        "sha256": "9d7c46b3670befac101468ee8d2e067359217da86ff46a822eff983de26011bc"
+      },
+      "source_after_actual_inert_controls": {
+        "site/account/app.js": "fa3a8660a158470b4504c7e2cdc5bbc9715580a230d7cedaf1f2132271f6a550",
+        "site/account/index.html": "669d18fc09a5e54fd76bdea19c26284efdf441655150170646f612b00ed25e96",
+        "site/account/style.css": "d4d5e79c4b4c0986df7d50a5ecbd6a2094d1815f93810b2edc01b906d05e941d",
+        "tests/account-ui-state.cjs": "5b7309e38ee23bccb4fbf6b73a2a65c57dbf5a761e76a851621ae73d3e5daea5"
+      },
+      "source_review": [
+        "Fixed relative API endpoints, credential cookie only, same-origin credentials/cors mode/no-referrer/redirect refusal preserve exact backend Origin/CSRF protections.",
+        "All history values rendered by textContent/createElement; summary import accepts only exact current PS preview record and sends six bounded metadata fields, never raw source body/name/input fingerprint.",
+        "No payment/production/recovery claim; pseudonymous/private preview, explicit opt-in, expiry/export/delete boundaries and new/current-password autocomplete disclosed.",
+        "Private principal/list/cursor/pending import/file/preview/confirmation/consent/access state resets before any session request. Session failure keeps signed-in hidden; new-owner history failure leaves no old rows.",
+        "Appearance-only localStorage does not store credentials/history. Fixed privacy/terms/free-check links introduce no automatic external request."
+      ],
+      "visual_observations": {
+        "history-current-dark.png": {
+          "bytes": 155261,
+          "captured_phase": "ROOT browser prior to principal-reset source correction; layout/CSS unchanged, not new current-source browser execution",
+          "sha256": "8121ab8eb01b3ab4d96d37655a677fb9c72da16a62237da2af7d17f2074e9eee",
+          "visual_review": "Full-size view_image inspection: readable light/dark layout, clear opt-in and no-payment notices, imported-summary label, export/delete controls; no clipping observed in this428px captured viewport."
+        },
+        "history-current-light.png": {
+          "bytes": 157585,
+          "captured_phase": "ROOT browser prior to principal-reset source correction; layout/CSS unchanged, not new current-source browser execution",
+          "sha256": "84e50ddf91d4afeefd1fa2f9f3760d398629dfb40cac8537f185f9735f784a7a",
+          "visual_review": "Full-size view_image inspection: readable light/dark layout, clear opt-in and no-payment notices, imported-summary label, export/delete controls; no clipping observed in this428px captured viewport."
+        }
+      }
+    }
+  },
+  "different_entitlement_clock_review": {
+    "sha256": "24a2899188a7c1131a2987ffad5b8642a5f8ebec02817e62f4381c7cd2312d3b",
+    "record": {
+      "captured_at": "2026-11-24T16:59:25.853031+00:00",
+      "reviewer": "Codex /root/share_debugger",
+      "scope": "Different review of optional trusted service-clock delta only; earlier store review remains historical.",
+      "source_sha256": {
+        "tools/history_entitlements.py": "011643552ed573a43105b377aeb297920a2198ef07d388e2564fae1a78cb8a4d",
+        "scripts/history-entitlements.py": "fa1fb8d547280737aa593acc32619692aefa6d93198ed0d9696882c09108dc5f",
+        "tests/test_history_entitlements.py": "4dd5c86c575d86be0758cc20e5c5b8cefdf3dfa2f15b8b9f9186d37fa3111259",
+        "docs/history-entitlements.md": "87d119ebdac163d021cbcceb8e3cd6e7a1d8618d8e65c70f886569de896a61ab"
+      },
+      "tests": [
+        "test_clock_rollback_refuses_after_reopen_and_cannot_reactivate_expiry",
+        "test_trusted_service_clock_is_selected_under_lock_without_clamping"
+      ],
+      "actual_tests_run": 2,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 0.009843708015978336,
+      "pass": true,
+      "findings": [],
+      "read_findings": [
+        "Callback is selected only after exclusive flock and validated current state; no clamp or caller-timestamp substitution after selection.",
+        "Strict moment(int, nonboolean) validation and persisted nondecreasing last_now remain; expiry uses selected clock in assess and mutation.",
+        "Ordinary callback failures refuse with fixed diagnostics; BaseException cancellation propagates through existing lock/context close paths.",
+        "CLI supplies runtime time.time callback; no merchant or payment verification authority created."
+      ],
+      "limits": [
+        "No broad 13-case repetition, account/browser testing, public deployment or payment claim.",
+        "Existing private owner-controlled store and concurrent same-UID threat limitations remain."
+      ],
+      "test_log": "test_clock_rollback_refuses_after_reopen_and_cannot_reactivate_expiry (test_history_entitlements.HistoryEntitlementTests.test_clock_rollback_refuses_after_reopen_and_cannot_reactivate_expiry) ... ok\ntest_trusted_service_clock_is_selected_under_lock_without_clamping (test_history_entitlements.HistoryEntitlementTests.test_trusted_service_clock_is_selected_under_lock_without_clamping) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.010s\n\nOK\n"
+    }
+  },
+  "preserved_prior_browser_phases": [
+    {
+      "sha256": "16853b1ec132cca280e59741deebc3b0e55c0bc84d4388c4163f464603cde40e",
+      "phase": "result.json"
+    },
+    {
+      "sha256": "9d7c46b3670befac101468ee8d2e067359217da86ff46a822eff983de26011bc",
+      "phase": "result-current.json"
+    },
+    {
+      "sha256": "6d4d0056dc547cf2b17fb29e91d48d8a9efc0497bfdd32b464b668e71a613906",
+      "phase": "webkit-origin-diagnostic.json"
+    },
+    {
+      "sha256": "c1871b1cab137564d7c5c6a5d05c49b2668c4fe29bdb9c2d0c4b153cd50695f0",
+      "phase": "webkit-origin-corrected.json"
+    }
+  ],
+  "CI_registration": "New account lifecycle groups and dependency-free account UI privacy regression wired into existing jobs; remote CI not executed by this record.",
+  "limits": {
+    "public_signup_live": false,
+    "payment_processed": false,
+    "merchant_activated": false,
+    "production_PostgreSQL_qualified": false,
+    "physical_phone_test": false,
+    "human_VoiceOver_acceptance": false,
+    "independent_accuracy": false,
+    "original_requirements_closed": 0,
+    "original_complete": 136,
+    "original_open": 66
+  },
+  "outcome": "Working isolated signup/session/optional private history through actual browser and HTTP, server-owned access, default-off consent, safe import, no raw input, access-independent export/deletion and account erasure. Not an operating paid public product.",
+  "pass": true,
+  "captured_at": "2026-11-24T17:14:12.021406+00:00",
+  "independent_release_validated": false,
+  "scope_approval_granted": false
+}

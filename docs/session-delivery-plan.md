@@ -1,3 +1,9 @@
+## Working signup and private history — 2026-11-24T17:14:12.021406+00:00
+
+**34 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The registered account integration job now completes actual signup, server-owned access, PS-summary save, revisit, sign-in, export/deletion after access revocation and account removal in Chromium/WebKit. A separately reproduced stale-principal display defect is corrected with four actual full-JS inert regressions. Public signup, real payments, production PostgreSQL, physical phones and automatic native/extension viewing history remain separate open outcomes. /root/seo owns account implementation and next source admission; /root owns browser/access integration, review and publication; /root/web_camo continues current native size qualification; /root/share_debugger implements mandatory selected C2PA notice carrying. These are dated assignments, not permanent bots.
+
+[Actual account/browser evidence](../runs/2026-11-24-account-history-browser.json) · [User/operation guide](account-history-ui.md)
+
 ## Working accounts, history access and image reference — 2026-11-24T16:18:02.427997+00:00
 
 The complete image reference-repair job now passes its actual17-case engineering gate and all3 numerical comparisons, with separate ROOT authenticated provider review. It does not measure AI-image detection accuracy. The independent private operator access engine also works and has a different source reviewer; no money is processed. These are two completed scoped jobs, not original requirement closures.

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <title>Your account · AI Trust ID</title>
+  <link rel="stylesheet" href="/account/style.css">
+  <script type="module" src="/account/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to account</a>
+  <header>
+    <a class="brand" href="https://aitrustid.com/" aria-label="AI Trust ID home">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M9 7h22l10 10v20a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V11a4 4 0 0 1 4-4Z" stroke="currentColor" stroke-width="2.5"/><circle cx="31" cy="17" r="2.5" stroke="currentColor" stroke-width="2"/><path d="M14 25h16M14 31h10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <span>AI TRUST ID</span>
+    </a>
+    <label class="theme"><span>Dark</span><input id="theme" type="checkbox" role="switch" aria-label="Dark appearance"></label>
+  </header>
+  <main id="main">
+    <noscript><p>This account page needs JavaScript. You can still use the <a href="https://aitrustid.com/">free tools and open-source downloads</a>.</p></noscript>
+    <p class="eyebrow">Private development preview · No payments connected</p>
+    <h1 id="heading" tabindex="-1">A place for your tag history.</h1>
+    <p class="intro">Check freely. Choose what you keep.</p>
+    <p id="notice" role="status" aria-live="polite">Connecting to your account…</p>
+    <section id="auth" class="card" aria-labelledby="account-title" hidden>
+      <div class="row"><h2 id="account-title">Create an account</h2><button id="mode" type="button" class="quiet">Sign in instead</button></div>
+      <form id="auth-form">
+        <label for="username">Username</label>
+        <input id="username" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" minlength="3" maxlength="32" pattern="[a-z][a-z0-9_\-]{2,31}" aria-describedby="username-help" required>
+        <p id="username-help" class="help">3–32 lowercase letters, numbers, underscores or dashes. Start with a letter.</p>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="new-password" minlength="15" maxlength="128" aria-describedby="password-help" required>
+        <p id="password-help" class="help">At least 15 characters. Save it in your password manager; email recovery isn’t available yet.</p>
+        <button id="authenticate" type="submit">Create account</button>
+      </form>
+      <p class="help">Your username identifies this account, not your real-world identity. Signing up does not give permission to train on your data. Use invented details while this service is in private development.</p>
+    </section>
+    <div id="signed-in" hidden>
+      <section class="card" aria-labelledby="welcome">
+        <div class="row"><h2 id="welcome">Your account</h2><button id="logout" class="quiet" type="button">Sign out</button></div>
+        <p id="access"></p>
+        <p class="help">History is the planned paid upgrade. This preview uses operator-granted access and does not take payments. Free checks and current-result evidence stay free.</p>
+        <form id="preference-form">
+          <label class="choice"><input type="checkbox" id="history-enabled"><span>Let me save result summaries to my private history.</span></label>
+          <p class="help">Each summary is chosen by you. No answer text, screenshots, browsing URLs or training data are saved here.</p>
+          <button type="submit">Save preference</button>
+        </form>
+      </section>
+      <section id="import-section" class="card" aria-labelledby="import-title" hidden>
+        <h2 id="import-title">Keep a PS result</h2>
+        <p>Choose <strong>Download summary</strong> after a <a href="https://aitrustid.com/#person/PS">free PS check</a>, then open that JSON file here.</p>
+        <label for="summary-file">Your PS summary</label><input id="summary-file" type="file" accept="application/json,.json">
+        <p id="import-preview" class="help">The file stays on this device until you choose Save summary. Only the tag, result and public method details are sent; original viewing time is unknown.</p>
+        <button id="save-summary" type="button" disabled>Save summary</button>
+      </section>
+      <section class="card" aria-labelledby="history-title">
+        <div class="row"><h2 id="history-title">Your history</h2><button id="refresh" type="button" class="quiet">Refresh</button></div>
+        <p class="help">Saved summaries expire after 30 days. Imported summaries are not verified assertions or independent accuracy evidence.</p>
+        <p id="empty">No saved summaries yet.</p><ul id="history-list" aria-label="Saved summaries"></ul>
+        <button id="more" type="button" class="quiet" hidden>Load more</button>
+        <div class="actions"><button id="export" type="button" class="quiet">Export history</button><button id="delete-history" type="button" class="quiet">Delete all history</button></div>
+        <p class="help">Export and deletion remain available when access expires.</p>
+      </section>
+      <details class="card"><summary>Delete your account</summary>
+        <p>This deletes your account history and signs out all your sessions. Existing downloads and backups are separate.</p>
+        <form id="delete-account-form"><label for="confirm-password">Confirm with your password</label><input id="confirm-password" type="password" autocomplete="current-password" required maxlength="128"><button type="submit" class="quiet">Delete account and history</button></form>
+      </details>
+    </div>
+  </main>
+  <footer><a href="https://aitrustid.com/policies/privacy/">Privacy</a><a href="https://aitrustid.com/policies/terms/">Terms</a><a href="https://aitrustid.com/">Free tag checks</a><span>Published by AI Trust ID</span></footer>
+</body>
+</html>
