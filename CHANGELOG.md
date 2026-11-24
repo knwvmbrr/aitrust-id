@@ -2,6 +2,51 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-source-v5-current-integration
+
+Recorded 2026-11-24T15:51:25.906741+00:00 · Contributor: Codex /root/share_debugger; ROOT different final registration/source review · change
+
+- **Changed.** Integrate reviewed image/iPhone source histories with exact125-name V5 copy map and installed25-source registry bindings, preserving all legacy code and grants.
+- **Evidence.** Seven small finite/captured-source/refusal controls pass; exact tokenizer source body and95 anchors match retained bytes/Git identities. Only19 named project/five maintenance additions, V5 digest/count literals and four source-registry bindings change. Actual common20/source25 identities and unchanged14 route contracts are recorded; ROOT/image normal merge guards pass. ROOT independently verifies the stable16-file freeze and executes two critical finite/captured-current-source controls PASS0.045s. [Change record](./runs/changes/2026-11-24-source-v5-current-integration.json).
+- **Not claimed.** Normal final phone/registration merge commit approved after ROOT review. Actual committed-source classifier/archive/protected consumer remain pending at this source checkpoint. No new current whole-source or signature success, image numerical/phone native acceptance, all14-route clearance, independent accuracy, legal clearance or original closure. Existing136complete66open retained.
+
+
+### 2026-11-24-source-v5-caller-lifecycle
+
+Recorded 2026-11-24T15:24:28.130540+00:00 · Contributor: Codex /root/share_debugger; /root/seo mechanism review; /root final source review · change
+
+- **Changed.** Implement source-only sequential admission/common/managed caller captures with fresh captured V5 execution, exact released-source recapture and original metadata ledgers, retaining managed metadata custody.
+- **Evidence.** Affected39 lifecycle controls pass before final anchor correction; current six metadata/capture/fault controls and different2 successor controls pass. ROOT reads final13-file freeze and independently executes four critical controls PASS1.166s. Exact31-input topology records87 refusal then peak39; injected-rights joined source25 fixture enters at N30/strict76 with five real PS children. Final106 mapping and unchanged V5 functions/caps verified. [Change record](./runs/changes/2026-11-24-source-v5-caller-lifecycle.json).
+- **Not claimed.** Normal source commit authorized after final ROOT review; installed registry still23 until ROOT rebinds25 rows and performs actual integrated qualification. No actual new whole-Q/archive binding/signature/protected AUTH, current route activation, all14-route completion, accuracy, legal clearance or original closure. Qualified rights/Graph fixtures remain fixtures; prior452 actual classification stays historical.
+
+
+### 2026-11-24-source-copy-v5
+
+Recorded 2026-11-24T05:52:37.518419+00:00 · Contributor: Codex /root/share_debugger; different final source and lifecycle reviewer /root · change
+
+- **Changed.** Implemented isolated finite V5 source-copy classifier, exact102-name delta and typed tokenizer source-term container over protected Q while retaining all V1–V4 source and grant bytes.
+- **Evidence.** Current source/policy and lifecycle review is clear; affected exact FD, policy and baseline fixture controls pass. Four independently executed lifecycle controls pass. Earlier26 tiny controls and their actual failures remain separately source-bound, not relabelled as final source. Current syntax and isolated help pass. [Change record](./runs/changes/2026-11-24-source-copy-v5.json).
+- **Not claimed.** No actual V5 whole-Q or candidate classification, archive binding, signature replay, shared registry activation, compiled runtime permission, legal clearance, accuracy or original closure. Original42be author run binds its earlier source phase; final bindings and literal/fork amendments are recorded here. ROOT owns subsequent integration and protected qualification.
+
+
+### 2026-11-24-ios-clear-editor-source
+
+Recorded 2026-11-24T15:25:47.355247+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Return the existing empty editor to view only after explicit Clear in the shared App/Share controller, preserving privacy clearing callers; strengthen passive Clear assertions and current layout source pins.
+- **Evidence.** One affected derivation control, actual App/Share source membership, whole prior-source reconstructions and stale-seven-proof refusal pass with eight/114 current bindings stable. ROOT reviewed the six-path source diff; same-source native seven and matrix remain required. [Change record](./runs/changes/2026-11-24-ios-clear-editor-source.json).
+- **Not claimed.** Source-only product revision, not an observed native fix. All four prior matrix failures and old seven proof remain historical; no future70e/build2 qualification, physical device, human accessibility, accuracy, admission, original closure or composed old/new passes.
+
+
+### 2026-11-24-image-reference-position-buffer
+
+Recorded 2026-11-24T15:22:32.034250+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Materialize only the exact validated publisher nonpersistent HF position-id buffer and refuse any remaining non-CPU model parameter or buffer before the original reference forward.
+- **Evidence.** One expanded existing inert reference safety group passes with88 stable inputs; ROOT independently read the exact source and passed the same group. The entire original infer AST is restored by removing only the buffer-adoption call; all85 other source inputs and101 declared source controls remain unchanged. [Change record](./runs/changes/2026-11-24-image-reference-position-buffer.json).
+- **Not claimed.** Actual failure45408000792 is preserved; its precise numerical cause remains unproven. No local SDK/model/native execution, extra forward/probe, tolerance/cache/permission/seal/cap change, hosted retry, reference equivalence, accuracy, redistribution/legal clearance or full-original closure. Author run was captured before this subsequent distinct review and retains its pending-at-capture field.
+
+
 ### 2026-11-24-image-reference-qualified
 
 Recorded 2026-11-24T16:28:37.494117+00:00 · Contributor: Codex /root; different engineering reviewers attributed in evidence · change

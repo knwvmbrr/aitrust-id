@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-ios-clear-editor-source",
+  "recorded_at": "2026-11-24T15:25:47.355247+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fd8c075ee30d9675d7f485515667639193ec6c7e",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "changed": "Return the existing empty editor to view only after explicit Clear in the shared App/Share controller, preserving privacy clearing callers; strengthen passive Clear assertions and current layout source pins.",
+  "proves": "One affected derivation control, actual App/Share source membership, whole prior-source reconstructions and stale-seven-proof refusal pass with eight/114 current bindings stable. ROOT reviewed the six-path source diff; same-source native seven and matrix remain required.",
+  "limits": "Source-only product revision, not an observed native fix. All four prior matrix failures and old seven proof remain historical; no future70e/build2 qualification, physical device, human accessibility, accuracy, admission, original closure or composed old/new passes.",
+  "files": {
+    "mobile/ios/Source/CheckerController.swift": "8f7c020082616cd6f5ed26d5f258a2b474fe3c282ee480d8118cdad7b4b7e29a",
+    "mobile/ios/Tests/UIFlows.swift": "bc14952096fc898c1b8ab06bdad2326e615371c7c0562cb183d728acfb5535c0",
+    "mobile/ios/Tests/SizeLayoutFlows.swift": "449476112ec1ff28bdbe3b1ad27883d4dae60e3c837486a054ce87f26c9c2b96",
+    "tools/ios_simulator_matrix.py": "5b94a55522f1325f169126b2e034a97e769850ae5494be19e5489b51fec4177a",
+    "docs/ios-simulator-matrix-plan.md": "a70c9f45a80ab1381bc009c765c43da449a73eb212e7200e909539545e1a5ad1",
+    "docs/ios-simulator-matrix.md": "471646d0dda912aa05fa3542707ee52048393d8c08999375554bdc118dfe4ed8",
+    "runs/2026-11-24-ios-clear-editor-source.json": "22752809ae028a72881f96ffafee5581a75e00885d75d5d6aecfb84dd76d64e7"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-clear-editor-source.json",
+      "sha256": "22752809ae028a72881f96ffafee5581a75e00885d75d5d6aecfb84dd76d64e7"
+    }
+  ],
+  "checks": [],
+  "different_review": {
+    "profile": "root-clear-editor-source-review-author-retained/v1",
+    "recorded_at": "2026-11-24T15:25:47.355247+00:00",
+    "reviewer": "Codex /root",
+    "retained_by": "Codex /root/web_camo",
+    "source": "Actual parent collaboration instruction; not an independently executed review receipt",
+    "statement": "ROOT read current six-path full diff: product calls polymorphic clear first, weak existing scroll only, loaded/presented/window guards, finite UIKit conversion, no keyboard/network/async/focus change. Passive assertion has no scroll/wait; failed values remain sampled. Approved final source, normal guarded commit, then one current-source seven-flow; only if pass one full4x3 matrix.",
+    "source8": {
+      "tools/ios_simulator_matrix.py": "5b94a55522f1325f169126b2e034a97e769850ae5494be19e5489b51fec4177a",
+      "scripts/verify-ios-size-matrix.py": "7d697baabfbf88af2c08c30be2220b3bbfbe02df75ef479baba69b0aa6141ec7",
+      "mobile/ios/Tests/SizeLayoutFlows.swift": "449476112ec1ff28bdbe3b1ad27883d4dae60e3c837486a054ce87f26c9c2b96",
+      "tests/test_ios_simulator_matrix.py": "3c5a5141e82cb99c0ddce0eda714b28fe703a50bfbc42b6a07dce744665bc9ed",
+      "docs/ios-simulator-matrix-plan.md": "a70c9f45a80ab1381bc009c765c43da449a73eb212e7200e909539545e1a5ad1",
+      "docs/ios-simulator-matrix.md": "471646d0dda912aa05fa3542707ee52048393d8c08999375554bdc118dfe4ed8",
+      "mobile/ios/Source/CheckerController.swift": "8f7c020082616cd6f5ed26d5f258a2b474fe3c282ee480d8118cdad7b4b7e29a",
+      "mobile/ios/Tests/UIFlows.swift": "bc14952096fc898c1b8ab06bdad2326e615371c7c0562cb183d728acfb5535c0"
+    },
+    "native_executed_for_current_source": false
+  },
+  "different_review_sha256": "a502f82805ead2913882b576862b0a6730e165649b9736b0641a9a5a673ca16b"
+}

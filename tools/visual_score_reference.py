@@ -8,6 +8,13 @@ from pathlib import Path
 from tools import visual_score_assets as a
 from tools import visual_score_runtime as r
 
+def _publisher_positions(model,reader,torch):
+ positions=reader.get_tensor('vision_model.embeddings.position_ids')
+ a.need(positions.device.type=='cpu' and positions.dtype==torch.int64 and list(positions.shape)==[1,257],'model_format')
+ a.need(bool(torch.equal(positions,torch.arange(257,dtype=torch.int64,device='cpu').view(1,257))),'model_format')
+ model.vision_model.embeddings.position_ids=positions
+ a.need(all(value.device.type=='cpu' for value in model.parameters()) and all(value.device.type=='cpu' for value in model.buffers()),'model_format')
+
 def infer(raw,model_dir):
  geometry=a.image_preflight(raw);environment=r.isolation()
  with a.Source(Path(model_dir)/'model.safetensors',a.BACKBONE_BYTES) as backbone,a.Source(Path(model_dir)/'fc_weights.pth',a.HEAD_BYTES) as head:
@@ -27,7 +34,8 @@ def infer(raw,model_dir):
    for name in sorted(expected):
     value=reader.get_tensor(name);dtype,shape=shapes[name]
     a.need(dtype=='F32' and list(value.shape)==shape and value.dtype==torch.float32 and bool(torch.isfinite(value).all().item()),'model_format');state[name]=value
-   model.load_state_dict(state,strict=True,assign=True);model.eval()
+   model.load_state_dict(state,strict=True,assign=True)
+   _publisher_positions(model,reader,torch);model.eval()
    with Image.open(io.BytesIO(raw)) as source:
     a.need(source.mode=='RGB' and source.size==(geometry['width'],geometry['height']),'image_unsupported');source.load()
     width,height=source.size

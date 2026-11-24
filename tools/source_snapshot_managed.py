@@ -229,6 +229,8 @@ def _probes(capture,base,expected):
         deadline=time.monotonic()+10
         data=text.encode() if text is not None else b'\xff'
         def invoke(script):
+            from tools.source_snapshot_admission import _source_spawn_room
+            _source_spawn_room()
             remaining=deadline-time.monotonic();need(remaining>0)
             return run_worker([sys.executable,'-I','-S','-B','-c',PROBE_EXEC,str(script)],input=data,timeout=remaining,output_limit=16384)
         capture.check();actual=invoke(base/'scripts/check-ps.py')
@@ -243,9 +245,24 @@ def _probes(capture,base,expected):
     return cases
 
 
+class _ProbeReadsets:
+    """Two closed finite PS source sets; one original metadata-read ledger."""
+    def __init__(self):self.views=[];self.total=0
+    def check(self):
+        for view in self.views:
+            need(view.total<=self.total);view.total=self.total;view.check();self.total=view.total
+    def close(self):
+        failure=None
+        while self.views:
+            try:self.views.pop().close()
+            except BaseException as error:
+                if failure is None:failure=error
+        if failure is not None:raise failure
+
+
 def verify_managed(artifact,packet,spdx,bundle,trusted_root,output,*,source_commit,root=ROOT):
     """Real release authorization only; no injectable verifier or caller command API."""
-    capture=Capture()
+    capture=Capture();probe_snapshot=None
     try:
         with capture:
             need(type(source_commit)is str and artifacts.COMMIT.fullmatch(source_commit))
@@ -273,9 +290,31 @@ def verify_managed(artifact,packet,spdx,bundle,trusted_root,output,*,source_comm
                  and all(authorized.get(k)is True for k in ('release_authorized','policy_admitted','attestation_verified'))
                  and authorized.get('route')=='source-snapshot' and authorized.get('source_commit')==source_commit
                  and authorized.get('artifact_sha256')==value['sha256'])
-            capture.check();expected=_cohort(capture,root)
+            capture.check()
+            from tools.source_snapshot_admission import _SourceReadset,_phase_critical
+            # Keep original/sealed metadata custody. Split source reads from
+            # private materialization so even the snapshot-adoption peak is bounded.
+            probe_snapshot=_ProbeReadsets()
+            with Capture()as work:
+                work.total_read=capture.total_read
+                try:
+                    expected=_cohort(work,root)
+                    expected_paths={root/name:hashlib.sha256(raw).hexdigest()for name,raw in expected.items()}
+                    with _phase_critical():probe_snapshot.views.append(_SourceReadset.from_capture(work,expected_paths,anchors=(root,)))
+                finally:
+                    need(work.total_read>=capture.total_read);capture.total_read=work.total_read
             selected=_select(archive_fd,value,source_commit,expected);capture.check()
-            base=_materialize(capture,stage,fd,selected);cases=_probes(capture,base,expected)
+            with Capture()as work:
+                work.total_read=capture.total_read
+                try:
+                    base=_materialize(work,stage,fd,selected)
+                    expected_paths={base/name:hashlib.sha256(raw).hexdigest()for name,raw in selected.items()}
+                    with _phase_critical():probe_snapshot.views.append(_SourceReadset.from_capture(work,expected_paths,anchors=(base,)))
+                finally:
+                    need(work.total_read>=capture.total_read);capture.total_read=work.total_read
+            probe_snapshot.total=capture.total_read
+            cases=_probes(probe_snapshot,base,expected)
+            need(probe_snapshot.total>=capture.total_read);capture.total_read=probe_snapshot.total
             result={'profile':PROFILE,'state':'VERIFIED_SOURCE_PS_PROBES_COMPLETED','source_commit':source_commit,
                     'artifact':value,'evidence_sha256':{n:hashlib.sha256(raw).hexdigest() for n,raw in raws.items()},
                     'route':'source-snapshot','release_authorized':True,'attestation_verified':True,
@@ -284,11 +323,21 @@ def verify_managed(artifact,packet,spdx,bundle,trusted_root,output,*,source_comm
                     'private_stage_retained':True,'all_source_extracted':False,'dependencies_installed':False,
                     'independent_accuracy_evidence':False,'complete_fourteen_routes':False,'legal_clearance':False}
             def current():
-                capture.check();need(capture.artifact(stage/'source.tar.gz',MAX_ARCHIVE)==value)
+                capture.check()
+                with Capture()as stream:
+                    need(stream.artifact(stage/'source.tar.gz',MAX_ARCHIVE)==value);stream.check()
                 artifacts.verify_packet(record,stage/'source.tar.gz','source-snapshot',source_commit,root)
+                # Share the original metadata-read ledger; no fresh64MB phase.
+                probe_snapshot.total=capture.total_read;probe_snapshot.check();capture.total_read=probe_snapshot.total
                 capture.parent(output);capture.directory(stage);capture.directory(base);capture.check()
             current();capture.save(output,result,32768,prepublish=current);current()
             return result
     except BaseException:
         if capture.output_may_exist:raise ManagedSourceUncertain() from None
         raise ManagedSourceUnavailable() from None
+    finally:
+        if probe_snapshot is not None:
+            try:probe_snapshot.close()
+            except BaseException:
+                if capture.output_may_exist:raise ManagedSourceUncertain()from None
+                raise ManagedSourceUnavailable()from None

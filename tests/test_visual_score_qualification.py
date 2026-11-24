@@ -440,6 +440,47 @@ class QualificationTests(unittest.TestCase):
   import ast
   calls=[ast.unparse(n.func) for n in ast.walk(ast.parse(source)) if isinstance(n,ast.Call)]
   self.assertFalse(any(x.endswith(('torch.load','jit.load','from_pretrained','urlopen')) for x in calls));self.assertIn('CLIPVisionModelWithProjection',calls)
+  # Inert model-state controls: no Torch, Transformers or model bytes are imported.
+  from types import SimpleNamespace
+  from tools import visual_score_reference as reference,visual_score_assets as assets
+  class Tensor:
+   def __init__(self,device='cpu',dtype='int64',shape=(1,257),values=tuple(range(257))):
+    self.device=SimpleNamespace(type=device);self.dtype=dtype;self.shape=shape;self.values=values
+   def view(self,*shape):self.shape=shape;return self
+  def arange(count,*,dtype,device):
+   self.assertEqual((count,dtype,device),(257,'int64','cpu'));return Tensor()
+  torch=SimpleNamespace(int64='int64',arange=arange,equal=lambda left,right:left.values==right.values)
+  class Model:
+   def __init__(self):
+    self.vision_model=SimpleNamespace(embeddings=SimpleNamespace(position_ids=Tensor(device='meta')))
+    self.learned=[Tensor(dtype='float32'),Tensor(dtype='float32')];self.extra_buffers=[];self.forward_calls=0
+   def parameters(self):return iter(self.learned)
+   def buffers(self):return iter([self.vision_model.embeddings.position_ids,*self.extra_buffers])
+   def forward(self):self.forward_calls+=1
+  def reader(value):
+   requests=[]
+   def get_tensor(name):requests.append(name);return value
+   return SimpleNamespace(get_tensor=get_tensor),requests
+  model=Model();learned=tuple(model.learned);positions=Tensor();received,requests=reader(positions)
+  reference._publisher_positions(model,received,torch);model.forward()
+  self.assertEqual(requests,['vision_model.embeddings.position_ids']);self.assertIs(model.vision_model.embeddings.position_ids,positions)
+  self.assertTrue(all(a is b for a,b in zip(learned,model.learned)));self.assertEqual(model.forward_calls,1)
+  for invalid in [Tensor(device='meta'),Tensor(device='cuda'),Tensor(dtype='float32'),Tensor(shape=(257,)),Tensor(shape=(1,256)),Tensor(values=tuple(reversed(range(257))))]:
+   with self.subTest(invalid_publisher=(invalid.device.type,invalid.dtype,invalid.shape)):
+    model=Model();original=model.vision_model.embeddings.position_ids;received,requests=reader(invalid)
+    with self.assertRaises(assets.Refused):reference._publisher_positions(model,received,torch);model.forward()
+    self.assertIs(model.vision_model.embeddings.position_ids,original);self.assertEqual(model.forward_calls,0)
+  for kind in ('parameter','buffer'):
+   model=Model();value=Tensor(device='meta')
+   if kind=='parameter':model.learned.append(value)
+   else:model.extra_buffers.append(value)
+   received,requests=reader(Tensor())
+   with self.assertRaises(assets.Refused):reference._publisher_positions(model,received,torch);model.forward()
+   self.assertEqual(model.forward_calls,0)
+  for cancelled in (KeyboardInterrupt,SystemExit):
+   model=Model();received=SimpleNamespace(get_tensor=mock.Mock(side_effect=cancelled()))
+   with self.assertRaises(cancelled):reference._publisher_positions(model,received,torch);model.forward()
+   self.assertEqual(model.forward_calls,0)
  def test_workflow_no_secret_signer_or_required_gate(self):
   s=(ROOT/'.github/workflows/visual-score-qualification.yml').read_text()
   self.assertIn('contents: read',s);self.assertIn("github.ref == 'refs/heads/codex/nov23-image-native-qualification'",s);self.assertIn("github.event_name == 'workflow_dispatch'",s);self.assertIn("inputs.expected_commit == github.sha",s)

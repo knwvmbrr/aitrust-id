@@ -170,10 +170,48 @@ class ManagedSourceTests(unittest.TestCase):
   self.assertFalse(self.output.exists());self.assertTrue(self.stage().exists())
  def test_postpublication_close_error_is_explicit_uncertainty(self):
   a,p=self.mocks();close=Capture.close
-  def fail(c):close(c);raise OSError('PRIVATE_CLOSE_CANARY')
+  def fail(c):
+   published=c.output_may_exist;close(c)
+   if published:raise OSError('PRIVATE_CLOSE_CANARY')
   with a,p,mock.patch.object(m,'_probes',return_value=[]),mock.patch.object(Capture,'close',fail):
    with self.assertRaises(m.ManagedSourceUncertain) as error:self.verify()
   self.assertTrue(error.exception.output_may_exist);self.assertTrue(self.output.exists());self.assertNotIn('CANARY',str(error.exception))
+ def test_owned_phases_are_closed_before_joined_authority_and_packet_recheck(self):
+  from tools import source_snapshot_admission as admission
+  peaks=[];actual=m.run_worker
+  def authority(record,*args):
+   peaks.append(('authority',admission._source_spawn_room()));return self.auth(record,*args)
+  def packet(*args):peaks.append(('packet',admission._source_spawn_room()));return {}
+  def worker(*args,**kw):
+   peaks.append(('probe',admission._source_spawn_room()));return actual(*args,**kw)
+  with mock.patch.object(m.artifacts,'authorize_release',side_effect=authority),mock.patch.object(m.artifacts,'verify_packet',side_effect=packet),mock.patch.object(m,'run_worker',side_effect=worker):result=self.verify()
+  self.assertEqual(result['state'],'VERIFIED_SOURCE_PS_PROBES_COMPLETED');self.assertEqual(sum(k=='probe'for k,n in peaks),5)
+  self.assertTrue(all(n<=32 for k,n in peaks));self.assertTrue(any(k=='packet'for k,n in peaks))
+ def test_owned_phase_close_failure_refuses_before_publication(self):
+  a,p=self.mocks();close=Capture.close;failed=[]
+  def fail(c):
+   owns_root=any(tuple(ROOT.parts)==parts for parts in c.directory_cache)
+   close(c)
+   if owns_root and not failed:failed.append(True);raise OSError('OWNED_PHASE_CLOSE')
+  with a,p,mock.patch.object(Capture,'close',side_effect=fail,autospec=True),mock.patch.object(m,'_probes')as probes:
+   with self.assertRaises(m.ManagedSourceUnavailable):self.verify()
+   probes.assert_not_called()
+  self.assertTrue(failed);self.assertFalse(self.output.exists())
+ def test_released_probe_source_successor_refuses_even_with_same_bytes(self):
+  a,p=self.mocks()
+  def swap(*args):
+   path=self.stage()/'ps-source/scripts/check-ps.py';raw=path.read_bytes();path.rename(path.with_name('original-check-ps.py'));path.write_bytes(raw);return []
+  with a,p,mock.patch.object(m,'_probes',side_effect=swap):
+   with self.assertRaises(m.ManagedSourceUnavailable):self.verify()
+  self.assertFalse(self.output.exists());self.assertTrue((self.stage()/'ps-source/scripts/original-check-ps.py').exists())
+ def test_original_metadata_ledger_not_reset_for_owned_phase(self):
+  a,p=self.mocks();cohort=m._cohort;observed=[]
+  def charged(c,root):
+   observed.append(c.total_read);c.total_read=64_000_000;return cohort(c,root)
+  with a,p,mock.patch.object(m,'_cohort',side_effect=charged),mock.patch.object(m,'_materialize')as materialize:
+   with self.assertRaises(m.ManagedSourceUnavailable):self.verify()
+   materialize.assert_not_called()
+  self.assertTrue(observed and observed[0]>0);self.assertFalse(self.output.exists())
  def test_probe_timeout_never_publishes_or_falls_back(self):
   a,p=self.mocks()
   with a,p,mock.patch.object(m,'run_worker',side_effect=subprocess.TimeoutExpired(['fixed'],10)) as run:

@@ -1,9 +1,13 @@
 # Representative native layout checks
 
-This separate source-only tool is not yet native-qualified. It leaves the current
-seven-flow iPhone14Plus proof and application code unchanged. It prepares the same
-46-member developer project with exactly one test-source replacement: the new
-layout fixture instead of the seven-flow test source. Other45 members stay exact.
+This separate layout tool is not yet native-qualified. The user-only Clear revision
+changes the shared App/Share controller and strengthens the Clear tests. The earlier
+iPhone14Plus seven-flow proof remains retained as history; fresh same-source seven-flow
+and size-matrix execution is required before qualification.
+
+Layout preparation replaces exactly one test-source member in the current reviewed
+46-member developer project. The other45 members match those current producer inputs;
+this does not assert that application code is unchanged from the earlier source revision.
 
 After different source review and explicit native-slot scheduling, use an existing
 accepted Xcode/SDK and installed iOS26.2 runtime23C54. No download or installation
