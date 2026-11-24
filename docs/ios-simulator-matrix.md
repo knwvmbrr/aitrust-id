@@ -50,3 +50,21 @@ allocations and remote accessibility snapshots are not kernel-hard-bounded;
 free-space reserve checks are observations. Parent/host crash or detached/uninterruptible
 OS processes are not universally recoverable. No physical-device, human usability,
 independent accuracy, signing/upload, release or original requirement is completed.
+
+
+## Public Sources candidate (unqualified source revision)
+
+Privacy & notices now places a Public source files disclosure before the unchanged
+ordered twelve-notice index. Its short destination contains the existing three
+verified bundled ZIP actions, All notices and Done. Both App and Share use the
+same native controller; navigation carries no draft or result and does not share
+a file. Each selected ZIP still requires its exact size and SHA-256 before the
+public URL alone is offered. No endpoint, permission or dependency was added.
+
+The layout fixture checks all three source actions before reading the legal
+notice. The seven-flow source case enters the new destination, preserving its
+privacy/cancel assertions. PublicSourcesFlows is a separate three-case cohort
+(JS, Zlib, Hiwire, each in App and Share), never a substitute for the seven.
+Earlier seven and size observations remain historical source: current native
+compile, archive-content, presentation/cancel and layout qualification is pending.
+This is not an uploaded TestFlight build or physical-device/accessibility-user proof.

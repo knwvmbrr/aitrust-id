@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-ios-public-sources-ux
+
+Recorded 2026-11-24T18:08:09.012592+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Make the three existing verified public source ZIP offers directly discoverable from an early native disclosure, with a dedicated Sources list shared by App and Share. Preserve the twelve notices and verification identities.
+- **Evidence.** Source preservation checks and one existing derivation control pass on the seven bound source files. The existing seven source case adds only semantic navigation; a separate three-case source cohort retains the same strict privacy and cancellation observer for each archive. ROOT different source review independently checked preservation of the production/Clear and notice reader, all notice/offer identities and the verified sharing body. [Change record](./runs/changes/2026-11-24-ios-public-sources-ux.json).
+- **Not claimed.** Source-only product candidate. Swift compile, current seven, each actual public ZIP presentation/cancel and size qualification are pending. Prior failed seven/size outcomes remain retained, not composed or rebound. No TestFlight upload, physical/human accessibility, build2, accuracy, policy admission or original closure.
+
+
 ### 2026-11-24-ios-control-snapshot-efficiency
 
 Recorded 2026-11-24T16:55:24.542728+00:00 · Contributor: Codex /root/web_camo · change

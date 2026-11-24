@@ -287,6 +287,15 @@ final class SizeLayoutFlows: XCTestCase {
         privacy.tap()
         let table = app.tables.firstMatch
         XCTAssertTrue(table.waitForExistence(timeout: 10))
+        let sources = app.cells["privacy-open-sources"]
+        reveal(sources, app: app, scroll: table); readableControl(sources, app: app)
+        sources.tap()
+        for id in ["js", "zlib", "hiwire"] {
+            let source = app.cells["privacy-source-" + id]
+            reveal(source, app: app, scroll: app.tables.firstMatch); readableControl(source, app: app)
+        }
+        let allNotices = app.buttons["privacy-source-index"]
+        XCTAssertTrue(allNotices.exists && allNotices.isEnabled && allNotices.isHittable); allNotices.tap()
         let appNotice = app.cells["privacy-entry-app"]
         reveal(appNotice, app: app, scroll: table); readableControl(appNotice, app: app)
         appNotice.tap()
@@ -314,9 +323,8 @@ final class SizeLayoutFlows: XCTestCase {
         XCTAssertEqual(text.value as? String, content)
         screenshot(app, name: "size-layout-notices")
         app.buttons["privacy-index"].tap()
-        let source = app.cells["privacy-source-js"]
-        reveal(source, app: app, scroll: table); readableControl(source, app: app)
-        // Reachability only. Source sharing/cancel uses the separate real seven-flow proof.
+        // All three sources were reachable above; the separate archive cohort
+        // verifies each actual presentation/cancel without combining proof counts.
         let done = app.buttons["privacy-done"]
         XCTAssertTrue(done.exists && done.isEnabled && done.isHittable); done.tap()
         XCTAssertTrue(app.wait(for: .runningForeground, timeout: 5))
