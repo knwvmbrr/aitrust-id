@@ -2,6 +2,60 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-image-reference-validation
+
+Recorded 2026-11-24T13:44:40.059485+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Preserved the existing reference-call failure stage and precomparison facts so reference refusal, crop mismatch and logit mismatch remain distinct; comparison metadata now propagates control-flow cancellation.
+- **Evidence.** The corrected grouped control passes with88 stable current inputs, including KeyboardInterrupt/SystemExit propagation and ordinary metadata-fault refusal. ROOT independently read the current source and passed the grouped control. Original reference call count, success-six-key shape,17-case gate, numerical operands/tolerances, worker/cache/seal/limits remain unchanged. [Change record](./runs/changes/2026-11-24-image-reference-validation.json).
+- **Not claimed.** Historical author run3420 binds the pre-cancellation source phase only; current source/control/freeze and distinct review are embedded separately. No real local SDK/model or hosted retry, extra forward/probe, numerical equivalence, accuracy/redistribution/legal clearance or original closure. Actual prior first production forward is retained but reference cause and full qualification remain unknown; old failed artifacts/finalization unchanged.
+
+
+### 2026-11-24-image-readonly-cache-root
+
+Recorded 2026-11-24T06:00:18.151368+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Assigned the fixed Inductor cache-root variable to the same already-held empty read-only HOME in the image worker, avoiding a default cache-child selection without allowing cache writes.
+- **Evidence.** Two focused source controls pass with88 stable inputs. ROOT independently read the exact one-literal worker delta and passed the real owned inert lifecycle control. Historical8066 proof is preserved; current worker identity is explicit. All other84 sources, numerical/runtime/reference/locks, seal/cleanup/caps and17-case acceptance remain unchanged. [Change record](./runs/changes/2026-11-24-image-readonly-cache-root.json).
+- **Not claimed.** No real SDK/model or local native execution, Linux procfd/real-AS proof, hosted retry, writable cache, permission or seal exemption, accuracy/redistribution/legal clearance or original closure. Darwin source fixture intercepts only its unsupported AS setter; Linux keeps original setters. Actual failed runs and failure-finalization behavior remain unchanged.
+
+
+### 2026-11-24-image-denied-resource-diagnostics
+
+Recorded 2026-11-24T05:29:20.721327+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Added closed failed-only SDK trace-role, lexical denied-filename relation and nullable observed Torch build-source diagnostics to the existing fixed private qualification probe.
+- **Evidence.** The expanded existing grouped control passes with88 stable source hashes and unchanged101 discovery denominator; ROOT independently read the exact source and passed that control. Three Torch calls/order, native8, isolation/deadlines, successful17 cases, driver and original failure-finalization behavior remain unchanged. [Change record](./runs/changes/2026-11-24-image-denied-resource-diagnostics.json).
+- **Not claimed.** No local SDK/model/native execution, download, installation or hosted retry; no permission/cache workaround, actual denied-resource conclusion, build attestation, redistribution/legal/accuracy or original closure. Historical failed artifacts and CLEAN removal versus failed finalization remain separate and immutable.
+
+
+### 2026-11-23-image-cpu-operation-diagnostics
+
+Recorded 2026-11-24T04:31:24.043597+00:00 · Contributor: Codex /root/seo; Codex /root distinct diagnostic review · change
+
+- **Changed.** Split the diagnostic-only CPU setup stage into the exact three existing Torch call operations and retain only whitelisted errno values and closed error categories.
+- **Evidence.** The expanded existing grouped control passes with88 stable source hashes and unchanged101 discovery denominator. ROOT independently read the delta and passed that grouped control. The exact three calls and their order, driver, isolation, resource budgets, successful acceptance and every other verifier function remain unchanged. [Change record](./runs/changes/2026-11-23-image-cpu-operation-diagnostics.json).
+- **Not claimed.** No local SDK/model/native execution, download, installation, new hosted retry, native qualification, accuracy, redistribution permission, legal clearance or original closure. The prior CPU PermissionError remains unlocalized until a separately authorized exact changed-source run. Failure finalization proposalB is not implemented; immutable prior failure artifacts and nooverwrite remain unchanged.
+
+
+### 2026-11-23-image-forward-diagnostics
+
+Recorded 2026-11-24T04:11:37.333447+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Preserved fixed validated production call failure diagnostics and added one failure-only SDK import/configuration probe within the original checked forward deadline and unchanged private worker limits.
+- **Evidence.** Three actual affected source controls pass with88 frozen hashes stable; discovery counts33/36/5/27. ROOT read the full delta and independently passed the new grouped control. Original17 positive cases, native/shared method, reference,39 lock, resource caps and exclusive failure publication remain unchanged. [Change record](./runs/changes/2026-11-23-image-forward-diagnostics.json).
+- **Not claimed.** No actual SDK/model/inference, acquisition, installation, hosted retry, native qualification, redistribution permission, accuracy, legal clearance or original scope closure. Actual prior hosted model/SDK cause is still unknown. Current101-suite count is discovery only; previous100 execution belongs to976. Fresh readiness/strict inspector and separate ROOT authorization remain before another changed-source run.
+
+
+### 2026-11-23-tokenizers-source-preservation
+
+Recorded 2026-11-24T03:16:29.216235+00:00 · Contributor: Codex /root/seo; ROOT distinct source/artifact review · change
+
+- **Changed.** Added one exact tokenizers wheel source-term companion path for private reference preservation, requiring fixed wheel/metadata/source/companion identity before pip and retaining honest empty carried-notice fields. All unlisted wheels retain carried-notice refusal.
+- **Evidence.** Actual100 stdlib/source controls33/35/5/27 pass without skips; before/after88 source hashes match. The same retained wheel fails under original d7 and passes the new preservation observation with empty carried notices. ROOT independently checked93 full texts,309 associations,153 index and the frozen lifecycle source; its actual grouped lifecycle control passed. [Change record](./runs/changes/2026-11-23-tokenizers-source-preservation.json).
+- **Not claimed.** No download, SDK/model installation, native method forward, Linux execution, changed-source dispatch, redistribution permission, compiled coverage, license clearance, original closure or criteria/percentage change. Source-copy classification, successor integration and any hosted private qualification remain ROOT-owned future work.
+
+
 ### 2026-11-24-ios-size-matrix-frame-diagnostics
 
 Recorded 2026-11-24T13:30:16.499971+00:00 · Contributor: Codex /root/web_camo · change

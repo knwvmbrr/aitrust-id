@@ -1,0 +1,56 @@
+{
+  "actual_check_context": "Single isolated Python stdin harness ran four in-process unittest discovery/runner groups; equivalent project-relative patterns and raw log hashes are recorded in the author evidence.",
+  "author": "Codex /root/seo; ROOT distinct source/artifact review",
+  "changed": "Added one exact tokenizers wheel source-term companion path for private reference preservation, requiring fixed wheel/metadata/source/companion identity before pip and retaining honest empty carried-notice fields. All unlisted wheels retain carried-notice refusal.",
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-"
+      ],
+      "exit_status": 0,
+      "finished_at": "2026-11-24T03:11:52.131975+00:00",
+      "pass": true
+    }
+  ],
+  "claim_level": "engineering_only",
+  "companion_review": {
+    "raw_utf8": "{\n  \"actual_checks\": {\n    \"all153_packages_own_association_ids\": true,\n    \"all309_associations_match_retained_current_source_bytes\": true,\n    \"all7_qualification_exclusion_claims_false\": true,\n    \"carried_notices_empty\": true,\n    \"decoded_exact_texts\": 93,\n    \"decoded_text_bytes\": 300341,\n    \"private_paths_absent\": true,\n    \"unique_retained_source_paths\": 95\n  },\n  \"artifact\": {\n    \"bytes\": 623310,\n    \"sha256\": \"0073729ee413c85b56664bfbee074dcb25e589378acf71921a533b5eddb4347c\"\n  },\n  \"author\": \"/root/seo\",\n  \"captured_at\": \"2026-11-24T03:04:21.058921+00:00\",\n  \"limitations\": [\n    \"Source-retention and deterministic projection review, not compiled-membership or license clearance.\",\n    \"No model/native/install/acquisition executed by this review.\",\n    \"Further exact source implementation and lifecycle controls required.\"\n  ],\n  \"profile\": \"root-tokenizers-source-companion-review/v1\",\n  \"reviewed_by\": \"/root\",\n  \"runtime_or_redistribution_permission_granted\": false,\n  \"source_selection_approved\": true\n}\n",
+    "sha256": "50a4f71ae4af1d1d5b3d99be8cadc33e88f92cb5c27dea13fd0a4f36c26ddff9"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-tokenizers-source-preservation.json",
+      "sha256": "346f4394ec192b5f1177455545cc0fe0891cb45ce561db8c03309a66d66573ef"
+    }
+  ],
+  "files": {
+    "docs/offline-image-score-qualification-plan.md": "26966bdcebd603184c6c11a166002040514fb3a25668128c9409efb458631948",
+    "integrations/visual-score-reference/qualification-notice-inventory.json": "304ebc76c2d2de149d62fa546fb56a96e094a05b83a4712681acb41534a5297c",
+    "integrations/visual-score-reference/tokenizers-0.23.3-source-notices-v1.json": "0073729ee413c85b56664bfbee074dcb25e589378acf71921a533b5eddb4347c",
+    "runs/2026-11-23-tokenizers-source-preservation.json": "346f4394ec192b5f1177455545cc0fe0891cb45ce561db8c03309a66d66573ef",
+    "scripts/run-visual-score-phase.py": "25739ba49f070ce076fb73c428c3efd298019edeede0eff4fb91cfe45ff048b0",
+    "scripts/verify-visual-score-qualification.py": "1de1548523095d5084a0e47de7b3359d969f71e4c998d1334a58d6968744fcb9",
+    "tests/test_visual_score_budget.py": "b325d2e7c1f4d81aa76a5ef2cc99076584f461934d40578e4fe380f7507f98e6",
+    "tests/test_visual_score_qualification.py": "03bad82be586d4a15168b28893d2a78cd71a35828247f833ad51818639ee123c",
+    "tools/visual_score_qualification.py": "578318ca6df42a8fffcd7676150bc8cf96c7fb2a8e9ba1bc51f1487235f40623"
+  },
+  "id": "2026-11-23-tokenizers-source-preservation",
+  "implementation_review": {
+    "raw_utf8": "{\n  \"actual_distinct_check\": {\n    \"argv\": [\n      \"python3\",\n      \"-I\",\n      \"-S\",\n      \"-B\",\n      \"-\"\n    ],\n    \"failed\": 0,\n    \"passed\": 1,\n    \"seconds\": 0.238,\n    \"stdin\": \"unittest loadTestsFromName tests.test_visual_score_qualification.QualificationTests.test_exact_tokenizer_source_preservation_and_private_lifecycle; TextTestRunner verbosity2; exit not successful\"\n  },\n  \"all88_frozen_sources_current\": true,\n  \"artifact_peer_sha256\": \"50a4f71ae4af1d1d5b3d99be8cadc33e88f92cb5c27dea13fd0a4f36c26ddff9\",\n  \"author\": \"/root/seo\",\n  \"author_run_sha256\": \"346f4394ec192b5f1177455545cc0fe0891cb45ce561db8c03309a66d66573ef\",\n  \"captured_at\": \"2026-11-24T03:15:09.828887+00:00\",\n  \"cleanup_snapshot_ast_unchanged\": true,\n  \"frozen_source_hashes\": {\n    \"docs/offline-image-score-qualification-plan.md\": \"26966bdcebd603184c6c11a166002040514fb3a25668128c9409efb458631948\",\n    \"integrations/visual-score-reference/qualification-notice-inventory.json\": \"304ebc76c2d2de149d62fa546fb56a96e094a05b83a4712681acb41534a5297c\",\n    \"integrations/visual-score-reference/tokenizers-0.23.3-source-notices-v1.json\": \"0073729ee413c85b56664bfbee074dcb25e589378acf71921a533b5eddb4347c\",\n    \"scripts/run-visual-score-phase.py\": \"25739ba49f070ce076fb73c428c3efd298019edeede0eff4fb91cfe45ff048b0\",\n    \"scripts/verify-visual-score-qualification.py\": \"1de1548523095d5084a0e47de7b3359d969f71e4c998d1334a58d6968744fcb9\",\n    \"tests/test_visual_score_budget.py\": \"b325d2e7c1f4d81aa76a5ef2cc99076584f461934d40578e4fe380f7507f98e6\",\n    \"tests/test_visual_score_qualification.py\": \"03bad82be586d4a15168b28893d2a78cd71a35828247f833ad51818639ee123c\",\n    \"tools/visual_score_qualification.py\": \"578318ca6df42a8fffcd7676150bc8cf96c7fb2a8e9ba1bc51f1487235f40623\"\n  },\n  \"limits\": [\n    \"Private qualification source handoff only; not new hosted inference, compiled clearance, protected source publication or original completion.\",\n    \"Author100 source controls remain their actual recorded execution; ROOT reran only one affected grouped lifecycle control.\"\n  ],\n  \"pass\": true,\n  \"profile\": \"root-tokenizers-preservation-implementation-peer/v1\",\n  \"reviewed_by\": \"/root\",\n  \"source_review\": [\n    \"Fixed exact wheel/hash/metadata plus source companion hash BEFORE JSON parsing; no general missing notice fallback.\",\n    \"Special wheel hashes and parses SAME immutable captured bytes. Other38 rows unchanged.\",\n    \"Private companion0600/nooverwrite validated before pip, across inventory snapshot, and before/after native forward; inventory-bound cleanup algorithm unchanged.\",\n    \"All153 source rows/93terms/309associations are honest SOURCE preservation; carried notices remain empty; compiled coverage and distribution/legal/accuracy exclusions remain false.\",\n    \"No native/model/download/install job performed by source checks; new88source inspector/profile qualification needed before changed hosted run.\"\n  ],\n  \"unchanged_functions\": [\n    \"acquisition_check\",\n    \"validate_acquisition_diagnostic\",\n    \"acquisition_failure\",\n    \"need\",\n    \"sha\",\n    \"raw_file\",\n    \"capacity_facts\",\n    \"capacity\",\n    \"credential_free\",\n    \"_acquire_file\",\n    \"total_budget\",\n    \"acquire_file\",\n    \"safe_member\",\n    \"_tree_row\",\n    \"_leaf\",\n    \"_directory\",\n    \"_parent_directory\",\n    \"_names\",\n    \"_capture_tree\",\n    \"snapshot\",\n    \"_inventory_children\",\n    \"write_new\",\n    \"check_root\",\n    \"cleanup\",\n    \"call\",\n    \"make_fixtures\",\n    \"source_map\",\n    \"finalize\"\n  ],\n  \"unchanged_sibling_notice_rows\": 38\n}\n",
+    "sha256": "ed12889d1b2420f3a48651fa110fb6fd77c07d322bde54e50fc1777b87953efe"
+  },
+  "independent_release_validated": false,
+  "kind": "change",
+  "limits": "No download, SDK/model installation, native method forward, Linux execution, changed-source dispatch, redistribution permission, compiled coverage, license clearance, original closure or criteria/percentage change. Source-copy classification, successor integration and any hosted private qualification remain ROOT-owned future work.",
+  "proves": "Actual100 stdlib/source controls33/35/5/27 pass without skips; before/after88 source hashes match. The same retained wheel fails under original d7 and passes the new preservation observation with empty carried notices. ROOT independently checked93 full texts,309 associations,153 index and the frozen lifecycle source; its actual grouped lifecycle control passed.",
+  "recorded_at": "2026-11-24T03:16:29.216235+00:00",
+  "schema_version": 1,
+  "scope_ids": [
+    "T-FA"
+  ],
+  "source_base": "d7cdaffd0c3cc5b34c11a0a68102a1d02501b089"
+}

@@ -187,9 +187,47 @@ class Tests(unittest.TestCase):
    if change=='nan':value['raw_logit']=float('nan')
    with self.assertRaises(a.Refused):c.validate(value,raw)
  def test_parent_home_empty_success_cleanup(self):
+  # Real fixed worker/owned child with inert infer only: no optional SDK or model.
+  code="""import sys,os
+sys.path.insert(0,sys.argv[1])
+from tools import visual_score as c,visual_score_runtime as r
+# Mac source fixture only: AS is Linux qualification; Linux uses every real setter.
+if sys.platform=='darwin':
+ original_limit=c.resource.setrlimit
+ def source_limit(kind,limits):
+  if kind==c.resource.RLIMIT_AS:return
+  return original_limit(kind,limits)
+ c.resource.setrlimit=source_limit
+os.environ['TORCHINDUCTOR_CACHE_DIR']='/inert-hostile-cache-must-not-be-adopted'
+def fake(raw,model):
+ home=os.environ['HOME'];cache=os.environ['TORCHINDUCTOR_CACHE_DIR']
+ assert cache==home
+ info=os.stat(cache)
+ assert (info.st_dev,info.st_ino)==(int(sys.argv[2]),int(sys.argv[3]))
+ assert info.st_mode&0o777==0o500 and os.listdir(cache)==[]
+ os.makedirs(cache,exist_ok=True)
+ after=os.stat(cache)
+ assert (after.st_dev,after.st_ino)==(info.st_dev,info.st_ino)
+ assert after.st_mode&0o777==0o500 and os.listdir(cache)==[]
+ try:os.mkdir(cache+'/forbidden-write')
+ except PermissionError:pass
+ else:raise AssertionError('Readonly root permitted a cache child')
+ assert 'torch'not in sys.modules and raw==b'inert'and model=='/inert-no-model'
+ return {'root_verified':True,'write_refused':True,'linux_held_alias':sys.platform=='linux'}
+r.infer=fake
+c.worker()
+"""
+  original_cache=os.environ.get('TORCHINDUCTOR_CACHE_DIR');children=[];real_spawn=subprocess.Popen
+  def spawn(*args,**kwargs):child=real_spawn(*args,**kwargs);children.append(child);return child
   with a.PrivateHome() as home:
    path=Path(home.path);self.assertTrue(path.is_dir());self.assertEqual(path.stat().st_mode&0o777,0o500);home.check()
-  self.assertFalse(path.exists());self.assertIsNone(home.fd)
+   header=json.dumps({'model_dir':'/inert-no-model','image_bytes':5,'cache_dir':home.path,'cache_devino':list(home.origin)},separators=(',',':')).encode()
+   with mock.patch.object(p.subprocess,'Popen',side_effect=spawn):
+    output=p.run([sys.executable,'-I','-S','-B','-c',code,str(ROOT),*[str(x)for x in home.origin]],len(header).to_bytes(4,'big')+header+b'inert',3)
+   self.assertEqual(json.loads(output),{'root_verified':True,'write_refused':True,'linux_held_alias':sys.platform=='linux'})
+   self.assertEqual(len(children),1);self.assertEqual(children[0].returncode,0);self.assertTrue(children[0].stdin.closed and children[0].stdout.closed)
+   self.assertEqual(list(path.iterdir()),[]);home.check()
+  self.assertFalse(path.exists());self.assertIsNone(home.fd);self.assertEqual(os.environ.get('TORCHINDUCTOR_CACHE_DIR'),original_cache)
  def test_parent_home_successor_refuses_and_preserves_both(self):
   home=a.PrivateHome();path=Path(home.path);old=path.with_name(path.name+'-held');path.rename(old);path.mkdir(mode=0o500)
   try:
