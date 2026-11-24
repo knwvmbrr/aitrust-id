@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-ios-seven-ui-observer",
+  "recorded_at": "2026-11-24T03:10:08.870359+00:00",
+  "author": "Codex /root/web_camo; ROOT different source/evidence review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "980463a40d0d0fbb76768f5f2a178e21f44d9421",
+  "scope_ids": [
+    "N-013",
+    "F-057",
+    "X-02",
+    "F-142"
+  ],
+  "changed": "Repair only the iOS test observer: one verified editor-center action, finite identity-bound source/host popup snapshots and source-case host navigation; preserve all seven workflows and private-payload assertions.",
+  "proves": "A genuine normal-runner iOS26.2 Simulator run executes seven workflows with seven passes, zero failures and zero skips; source109 plus component116 stay exact and the owned Simulator is deleted and absent. Source-export App/Share cancellation, source-only privacy and draft/no-result checks pass. Earlier failures and focused diagnostics remain separate immutable evidence.",
+  "limits": "Signing-disabled Simulator software proof only: no physical phone, human accessibility/recognition, developer-signed IPA/TestFlight, independent accuracy, legal clearance, policy adoption, tag release or original closure. No focused or six-plus-one composition; current full seven is actual.",
+  "files": {
+    "mobile/ios/Tests/UIFlows.swift": "16b0ac936caed61cd2d26ba0bc45c03714992488196b0af8175301a6946ed388",
+    "docs/ios-runtime-obligations-plan.md": "79fc98e5b7025ac09551d082c3e6b32652a5b877112678484be959d3a7e199d7",
+    "runs/2026-11-23-ios-seven-ui-current.json": "d719ba450f94177bef788bcee780c732ff4fc11f1117a7c463a4f3133e0ddacb"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-ios-seven-ui-current.json",
+      "sha256": "d719ba450f94177bef788bcee780c732ff4fc11f1117a7c463a4f3133e0ddacb"
+    }
+  ],
+  "checks": [],
+  "different_review": {
+    "reviewer": "ROOT",
+    "sha256": "65a8e3d1081276c1b1b6c88ce3b0a8cda02e0a0986e67cbcefd194fc79e5eb74",
+    "bytes": 1929,
+    "raw_utf8": "{\n  \"actual_result\": {\n    \"composed_focused_runs\": false,\n    \"failed\": 0,\n    \"normal_runner\": true,\n    \"passed\": 7,\n    \"skipped\": 0\n  },\n  \"artifacts\": {\n    \"cleanup.log\": {\n      \"bytes\": 151,\n      \"sha256\": \"0d99b894a4cb4d5a34118c143a728ace856f0694117b10cb58d4a4be2bf73413\"\n    },\n    \"proof.json\": {\n      \"bytes\": 64239,\n      \"sha256\": \"6cce5992369464d7084f0493af7a493b2cc7b071c9e5cb1ccd6c337e900cf4b1\"\n    },\n    \"result.log\": {\n      \"bytes\": 5689,\n      \"sha256\": \"3e7bf3ab90fc10806ad6169f3830abbcd3739962111e4db7b2e85aba9da39e65\"\n    },\n    \"ui_workflows.log\": {\n      \"bytes\": 92327,\n      \"sha256\": \"4d8027d2dd0d9432d8c35569ebc1b77ae4f62f4f44f2cba9d1a8ee391d7ee8e6\"\n    }\n  },\n  \"author\": \"/root/web_camo\",\n  \"captured_at\": \"2026-11-24T03:08:20.804805+00:00\",\n  \"component116_equal_launch_current\": true,\n  \"limits\": {\n    \"human_accessibility\": false,\n    \"independent_accuracy\": false,\n    \"installable_release\": false,\n    \"new_TestFlight_uploaded\": false,\n    \"physical_device\": false\n  },\n  \"owned_simulator_removed_and_inventory_absent\": true,\n  \"profile\": \"root-current-seven-native-distinct-review/v1\",\n  \"record_status\": \"Actual source/runtime review; author event/run identities require final review before commit.\",\n  \"reviewed_by\": \"/root\",\n  \"selected_guard_with_actual_raw_proof_pass\": true,\n  \"source109_equal_current_before_after\": true,\n  \"source_diff_review\": \"ROOT read complete301line UI change; single center action and bounded per-surface source privacy assertions, no product controller/permission changes.\",\n  \"workflows\": [\n    \"UIFlows/testBackgroundClearsInputAndResult()\",\n    \"UIFlows/testEditInvalidatesOldFinding()\",\n    \"UIFlows/testExplicitPSCheckAndClear()\",\n    \"UIFlows/testNativePracticeShareRequiresExplicitCheck()\",\n    \"UIFlows/testPrivacyNoticesPageNavigation()\",\n    \"UIFlows/testPublicSourceExportAndCancel()\",\n    \"UIFlows/testShareClearDuringCheckAndRepeat()\"\n  ]\n}\n",
+    "scope": "Exact final source and retained actual outcome; no reviewer SDK/native rerun."
+  }
+}

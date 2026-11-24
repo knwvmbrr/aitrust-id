@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-ios-seven-ui-observer
+
+Recorded 2026-11-24T03:10:08.870359+00:00 · Contributor: Codex /root/web_camo; ROOT different source/evidence review · change
+
+- **Changed.** Repair only the iOS test observer: one verified editor-center action, finite identity-bound source/host popup snapshots and source-case host navigation; preserve all seven workflows and private-payload assertions.
+- **Evidence.** A genuine normal-runner iOS26.2 Simulator run executes seven workflows with seven passes, zero failures and zero skips; source109 plus component116 stay exact and the owned Simulator is deleted and absent. Source-export App/Share cancellation, source-only privacy and draft/no-result checks pass. Earlier failures and focused diagnostics remain separate immutable evidence. [Change record](./runs/changes/2026-11-23-ios-seven-ui-observer.json).
+- **Not claimed.** Signing-disabled Simulator software proof only: no physical phone, human accessibility/recognition, developer-signed IPA/TestFlight, independent accuracy, legal clearance, policy adoption, tag release or original closure. No focused or six-plus-one composition; current full seven is actual.
+
+
 ### 2026-11-23-ios-runtime-obligations
 
 Recorded 2026-11-23T23:21:18.537217+00:00 · Contributor: Codex /root/web_camo · change
