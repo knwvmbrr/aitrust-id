@@ -189,7 +189,9 @@ def inspect_wheel(path,row):
   for info in members:
    safe_member(info);need(0<=info.file_size<=2*1024**3 and info.compress_type in (zipfile.ZIP_STORED,zipfile.ZIP_DEFLATED))
    total+=info.file_size;need(total<=4*1024**3);by[info.filename]=info
-  metas=[x for x in by if x.endswith('.dist-info/METADATA')];need(len(metas)==1)
+  # Vendored distributions may retain their own metadata as package data.
+  # Only the single archive-root dist-info record describes this locked wheel.
+  metas=[x for x in by if len(PurePosixPath(x).parts)==2 and x.endswith('.dist-info/METADATA')];need(len(metas)==1)
   meta=by[metas[0]];need(meta.file_size<=256*1024)
   data=archive.read(meta);need(sha(data)==row['metadata_sha256'])
   prefix=metas[0][:-len('METADATA')];declared=[]

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-image-wheel-primary-metadata
+
+Recorded 2026-11-24T00:43:07.887308+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Primary locked wheel metadata is only the unique archive-root dist-info/METADATA; every vendor metadata/member/notice still validated/carried. No numeric/model/lock/resource/workflow changes.
+- **Evidence.** Exact retained876263B pinned wheel reproduces original13metadata failure; corrected unique primary selection passes and all17 audited notices remain exact. Fresh99 source controls33/34/5/27 pass after restoring sparse eval input; different reviewer checked actual pinned bytes and three inert parser cases. [Change record](./runs/changes/2026-11-23-image-wheel-primary-metadata.json).
+- **Not claimed.** All original hosted failures remain. No changed-source dispatch, install, extraction, native model/SDK execution, accuracy, FA/PA or full-original closure. Root owns source admission/registration and any future native run.
+
+
 ### 2026-11-23-web-checker-observed-build
 
 Recorded 2026-11-23T23:37:43.115137+00:00 · Contributor: Codex /root integration; Codex /root/seo distinct source-ownership review · change

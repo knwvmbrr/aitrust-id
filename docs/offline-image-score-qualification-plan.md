@@ -184,3 +184,40 @@ still requires ROOT's specific authorization after exact source/peer checks;
 no URL/dependency/license/method/cap workaround is authorized by diagnostics.
 
 Diagnostic source-read clarification before the narrow driver refinement: capacity labels ONLY failures before entering q acquisition; typed AcquisitionFailed carries its actual internal operation. If q acquisition returns and ownership-summary publication fails, report notice operation with all acquisition role counts completed, not capacity. If acquisition was entered but its diagnostic mechanism itself failed and no typed observation exists, omit the unproven diagnostic rather than guess capacity. Add both cases to the same new grouped regression; no source-suite count or new path change. Earlier affected controls remain their exact prior snapshot, not rebound.
+
+## Actual wheel29 primary metadata correction — plan BEFORE code
+
+ROOT approved this bounded correction after actual run45295554500/source416.
+The real job passed SOURCE, fetched and inert-layout-validated the head, completed
+28 wheels, then refused wheel29 setuptools84.2.1. No backbone/install/native ran.
+ROOT separately authorized ONE private876263-byte format audit only; its full
+ca140b45d5325a9478f880e351484f62fef15f336462e449ca0c03c873d589c2 digest
+was checked before ZipFile. Actual audit340cbea54a643ffbb3f74e9ebfad6395040586659f29ff2485855637d2f823eb
+shows13 metadata records: one exact pinned top-level primary and12 vendored
+records. The unchanged inspect_wheel failed exactly at its global metadata-count
+predicate. Initial line-trace harness unwinding confusion was corrected using
+the SAME retained wheel; no second acquisition/install/import/extraction occurred.
+
+Only identify the selected distribution's primary metadata at the archive root
+(two path components ending .dist-info/METADATA), require exactly one, then keep
+the exact retained primary SHA check. Do not accept a nested-only metadata record
+or fall back to it if the primary is absent/tampered; multiple top-level records
+still refuse. Every nested member still passes all safe-name/link/compression/
+size/duplicate/aggregate checks, and ALL shipped license/notice/copying/copyright
+candidates, including vendored files, remain in the original complete scan.
+No package/version/hash/URL, download/expanded/notice/time/cpu/memory/capability
+limit, installer/worker, numeric/preprocessing/classification or positive grammar
+changes. This is neither a license waiver nor a new tag/origin assertion.
+
+Own only existing helper/test/thisplan plus fresh authorrun/event/CHL. Extend the
+existing metadata test with factual13-record layout metadata (short filenames
+only) and existing exact retained primary bytes, plus explicit synthetic vendored
+metadata/notice text. Keep current33/34/5/27 source suite counts. The PUBLIC
+fixture is not a whole publisher wheel or a claim of real-wheel native execution.
+Separately replay the retained exact pinned private wheel against the correction
+and require every audited notice row/name/size/hash retained byte-for-byte.
+Negative controls: two primaries; nested-only; altered primary with matching
+nested data; nested unsafe name/symlink; notice/expanded bounds. Preserve all
+prior failures/source proofs. Obtain different source review before normalcommit
+/handoff; ROOT owns integration/V4/newexactsource/manualdispatch. No redispatch
+or further acquisition authorized by this source change.

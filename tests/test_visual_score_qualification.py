@@ -66,6 +66,32 @@ class QualificationTests(unittest.TestCase):
  def test_actual_zip_metadata_notice(self):
   with tempfile.TemporaryDirectory() as folder:
    p=Path(folder)/'x.whl';row=self.wheel(p);out=q.inspect_wheel(p,row);self.assertEqual(out['notices'][0]['sha256'],q.sha(b'MIT synthetic licence'));self.assertTrue(out['notices'][0]['publisher_declared'])
+  # Real pinned wheel29 metadata layout, not a copied wheel or real vendored
+  # code: primary bytes are the existing licensed retained METADATA; nested
+  # bodies/notices below are explicitly inert parser fixtures.
+  selected=q.selection()['packages'][28]
+  self.assertEqual((selected['name'],selected['version']),('setuptools','84.2.1'))
+  self.assertEqual(selected['wheel']['sha256'],'ca140b45d5325a9478f880e351484f62fef15f336462e449ca0c03c873d589c2')
+  primary_bytes=(ROOT/selected['retained_metadata_path']).read_bytes()
+  self.assertEqual(q.sha(primary_bytes),selected['metadata_sha256'])
+  primary='setuptools-84.2.1.dist-info/METADATA'
+  nested=('setuptools/_vendor/autocommand-2.2.2.dist-info/METADATA', 'setuptools/_vendor/backports.tarfile-1.2.0.dist-info/METADATA', 'setuptools/_vendor/importlib_metadata-8.7.1.dist-info/METADATA', 'setuptools/_vendor/jaraco.text-4.0.0.dist-info/METADATA', 'setuptools/_vendor/jaraco_context-6.1.0.dist-info/METADATA', 'setuptools/_vendor/jaraco_functools-4.4.0.dist-info/METADATA', 'setuptools/_vendor/more_itertools-10.8.0.dist-info/METADATA', 'setuptools/_vendor/packaging-26.3.dist-info/METADATA', 'setuptools/_vendor/platformdirs-4.4.0.dist-info/METADATA', 'setuptools/_vendor/tomli-2.4.0.dist-info/METADATA', 'setuptools/_vendor/wheel-0.46.3.dist-info/METADATA', 'setuptools/_vendor/zipp-3.23.0.dist-info/METADATA')
+  self.assertEqual(len(nested),12)
+  with tempfile.TemporaryDirectory() as folder:
+   def container(name,mode='normal'):
+    path=Path(folder)/name
+    with zipfile.ZipFile(path,'w')as z:
+     if mode!='nested_only':z.writestr(primary,b'changed primary'if mode=='changed_primary'else primary_bytes)
+     z.writestr('setuptools-84.2.1.dist-info/licenses/LICENSE',b'INERT primary notice')
+     for i,member in enumerate(nested):z.writestr(member,primary_bytes if mode=='changed_primary'and i==0 else b'Name: inert parser fixture\nVersion: 1.0\n')
+     z.writestr('setuptools/_vendor/inert/LICENSE',b'INERT vendored notice')
+     if mode=='two_primary':z.writestr('other-1.0.dist-info/METADATA',b'Name: inert\nVersion: 1.0\n')
+     if mode=='unsafe_vendor':z.writestr('setuptools/_vendor/../escape',b'inert')
+    return path
+   observed=q.inspect_wheel(container('valid.whl'),selected)
+   self.assertEqual({n['member']for n in observed['notices']},{'setuptools-84.2.1.dist-info/licenses/LICENSE','setuptools/_vendor/inert/LICENSE'})
+   for mode in ('nested_only','changed_primary','two_primary','unsafe_vendor'):
+    with self.assertRaises(q.QualificationRefused):q.inspect_wheel(container(mode+'.whl',mode),selected)
  def test_actual_zip_path_duplicate_notice_missing_refuse(self):
   with tempfile.TemporaryDirectory() as folder:
    for i,(extra,declared) in enumerate([([('../escape',b'x')],None),([('/escape',b'x')],None),([('bad\\escape',b'x')],None),([],['MISSING'])]):
