@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-24
+
+### 2026-11-23-tag-runtime-ci-integration
+
+Recorded 2026-11-24T00:06:49.465071+00:00 · Contributor: Codex /root/seo; Codex /root distinct registration review · change
+
+- **Changed.** Registered additive current source, runtime obligation, web artifact, iOS resource and MT export controls in ordinary CI and exact engineering revalidation footprints.
+- **Evidence.** Actual static YAML, existing manifest parser, command preservation, source-path and exact old-workflow reconstruction checks pass; different ROOT review55f6 independently confirms the frozen patch. [Change record](./runs/changes/2026-11-23-tag-runtime-ci-integration.json).
+- **Not claimed.** No new control-suite execution, SDK, native code, model, browser, acquisition, build, hosted profile, signature, release authority, accuracy or original scope closure. Existing capability receipts must refresh after COMMON manifest change.
+
+
 ## Unreleased — 2026-11-23
 
 ### 2026-11-23-web-checker-observed-build
