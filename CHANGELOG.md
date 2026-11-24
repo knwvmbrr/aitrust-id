@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-reference-phone-wave
+
+Recorded 2026-11-24T15:20:34.326742+00:00 · Contributor: Codex /root; image, iPhone and source-consumer lanes attributed in board · change
+
+- **Changed.** Update scope fixes, dated active assignments and execution accounting for image reference initialization, user-only iPhone Clear and bounded source-consumer custody.
+- **Evidence.** Scope renderer and session inspector pass with all202 originals and acceptance criteria preserved:136 complete,66 open. Three actual repair jobs are registered active; no unsupported closure is recorded. [Change record](./runs/changes/2026-11-24-reference-phone-wave.json).
+- **Not claimed.** Bookkeeping is not product acceptance. Actual first image forward remains reference-unqualified, changed iPhone source needs native qualification, and source-consumer mechanism controls use explicitly simulated authority. Target60 remains unmet.
+
+
 ### 2026-11-24-image-reference-validation
 
 Recorded 2026-11-24T13:44:40.059485+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change

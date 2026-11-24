@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-reference-phone-wave",
+  "recorded_at": "2026-11-24T15:20:34.326742+00:00",
+  "author": "Codex /root; image, iPhone and source-consumer lanes attributed in board",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8ec503bbc559edf75de88eaebdf180df486a5cb1",
+  "changed": "Update scope fixes, dated active assignments and execution accounting for image reference initialization, user-only iPhone Clear and bounded source-consumer custody.",
+  "proves": "Scope renderer and session inspector pass with all202 originals and acceptance criteria preserved:136 complete,66 open. Three actual repair jobs are registered active; no unsupported closure is recorded.",
+  "limits": "Bookkeeping is not product acceptance. Actual first image forward remains reference-unqualified, changed iPhone source needs native qualification, and source-consumer mechanism controls use explicitly simulated authority. Target60 remains unmet.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-013",
+    "T-FA",
+    "T-PS"
+  ],
+  "files": {
+    "docs/scope-progress.json": "c2023ea1eddffd640f02b25e755dfc977ae976d4e9385825338388f4bdf1b597",
+    "docs/scope-progress.md": "e6dcddd0cf2fc9be20e81a08ecb6381ce01fefd97d66e78acdbaaed239e3a4a0",
+    "docs/session-delivery-plan.md": "9174ed1b8d75e5079f99fb74b8d93ab5fe090fede7beeff8d3a3a3235594b859",
+    "docs/session-delivery.json": "a24bc5f4bfb363d504964d47f2b102083b1a9e39b0463f57eb70759fb040623d",
+    "state.json": "8595518dd1da3d47d1185e97be12f70d2555a658880f1316d7fafd54f95cb339",
+    "runs/2026-11-24-reference-phone-wave.json": "4b487542383cf9afd16c61d98b8769215ccd61afd3904b780cfa4a6c6a0faa84"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-reference-phone-wave.json",
+      "sha256": "4b487542383cf9afd16c61d98b8769215ccd61afd3904b780cfa4a6c6a0faa84"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py",
+        "--render"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-24T15:20:34.326742+00:00"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/session-delivery.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-24T15:20:34.326742+00:00"
+    }
+  ],
+  "distinct_accounting_review_sha256": "c1d2fd49d5e4e7ecf41773e129b7b94916f556e17874bb1bdbec3eadd3ce27f3",
+  "review_format_note": "Only JSON Unicode escape representation changed after peer; all JSON values and original criteria remain exact."
+}

@@ -1,3 +1,14 @@
+## Image reference, iPhone Clear and source-consumer repair — 2026-11-24T15:20:15.735780+00:00
+
+Originals remain **136 complete /66 open; target60 unmet**. No original percentage or acceptance criterion changed. The three scoped jobs below are active, not closed.
+
+- **Image — /root/seo:** a real production forward completed; the reference refused before comparison. Pinned source identifies an uninitialized nonpersistent position buffer. Repair only the publisher tensor binding, then pass the original17-case numerical gate.
+- **iPhone — /root/web_camo:** user Clear must bring the empty editor back into view at large text sizes while retaining background privacy clearing and Share cancellation. The changed sources need fresh seven-flow and size-matrix qualification; earlier passes remain historical.
+- **Source delivery — /root/share_debugger:** close owned capture phases and fully recapture identity to stay within descriptor/read limits. Independent mechanism review is complete; real integrated authorization remains required.
+- **PM — /root:** integrate reviewed source, update scope/changelog, and verify actual delivery. No permanent autonomous bot, new TestFlight build, physical VoiceOver acceptance or tag release is claimed.
+
+[Current dated record](../runs/2026-11-24-reference-phone-wave.json)
+
 ## Actual current seven-flow native handoff — 2026-11-24T03:16:24.697029+00:00
 
 The genuine App/Share Simulator run passes **7/7, zero failures/skips** on exact
