@@ -24,7 +24,8 @@ MAX_REPORT=2*1024**2
 CALL_IDS={'missing_model','no_sdk','gradient.png_production','baseline.jpg_production','sliver.png_production','default_console','repeat_first','repeat_second','recovery','alpha.png','malformed.png','progressive.jpg','multiframe.png','trailing.png','oversize.png','over-pixel.png','truncated-model','corrupt-head'}
 CALL_PHASES={'created','spawned','finished','decode','validated','console_validated'}
 ERROR_CLASSES={'Refused','QualificationRefused','ImportError','ModuleNotFoundError','RuntimeError','OSError','PermissionError','FileNotFoundError','MemoryError','ValueError','TypeError','KeyError','JSONDecodeError','KeyboardInterrupt','SystemError','TimeoutExpired'}
-SDK_STAGES={'isolation','distribution_identity','torch_import','safetensors_import','pillow_import','cpu_configuration','complete','probe_admission','probe_process','probe_decode','probe_cleanup'}
+SDK_STAGES={'isolation','distribution_identity','torch_import','safetensors_import','pillow_import','cpu_intraop_threads','cpu_interop_threads','cpu_deterministic_algorithms','complete','probe_admission','probe_process','probe_decode','probe_cleanup'}
+SDK_ERRNOS={1:'permission_denied',13:'permission_denied',30:'read_only_filesystem',12:'resource_exhausted',23:'resource_exhausted',24:'resource_exhausted',28:'resource_exhausted'}
 PROBE_BODY=b'private-sdk-diagnostic-v1'
 PROBE_MODEL_SENTINEL='/qualification-sdk-diagnostic-no-model'
 
@@ -46,7 +47,7 @@ def _sdk_probe_sources():
 def _sdk_probe_infer(raw,model_dir):
  # Fixed qualification child ONLY. c.worker sets unchanged resource limits and
  # adopts the same500 HOME before this fixed infer substitution is invoked.
- stage='isolation';error=None;state='UNAVAILABLE';environment=None
+ stage='isolation';error=None;error_number=None;error_category=None;state='UNAVAILABLE';environment=None
  try:
   q.need(raw==PROBE_BODY and model_dir==PROBE_MODEL_SENTINEL)
   from tools import visual_score_runtime as runtime
@@ -58,15 +59,23 @@ def _sdk_probe_infer(raw,model_dir):
   stage='safetensors_import';from safetensors import safe_open
   from safetensors.torch import load
   stage='pillow_import';from PIL import Image,features
-  stage='cpu_configuration';torch.set_num_threads(1);torch.set_num_interop_threads(1);torch.use_deterministic_algorithms(True)
+  stage='cpu_intraop_threads';torch.set_num_threads(1)
+  stage='cpu_interop_threads';torch.set_num_interop_threads(1)
+  stage='cpu_deterministic_algorithms';torch.use_deterministic_algorithms(True)
   stage='complete';state='SDK_AVAILABLE'
- except Exception as failure:error=exception_class(failure)
- return {'format':'qualification-sdk-diagnostic/v1','diagnostic_only':True,'actual_model_forward_completed':False,'stage':stage,'state':state,'exception_class':error,'isolation':environment,'source_sha256':_sdk_probe_sources()}
+ except Exception as failure:
+  error=exception_class(failure)
+  candidate=failure.errno if isinstance(failure,OSError)else None
+  error_number=candidate if type(candidate)is int and candidate in SDK_ERRNOS else None
+  error_category=SDK_ERRNOS.get(error_number,'other_or_missing')
+ return {'format':'qualification-sdk-diagnostic/v1','diagnostic_only':True,'actual_model_forward_completed':False,'stage':stage,'state':state,'exception_class':error,'errno':error_number,'os_error_class':error_category,'isolation':environment,'source_sha256':_sdk_probe_sources()}
 
 def validate_sdk_probe(value):
- q.need(type(value)is dict and set(value)=={'format','diagnostic_only','actual_model_forward_completed','stage','state','exception_class','isolation','source_sha256'})
+ q.need(type(value)is dict and set(value)=={'format','diagnostic_only','actual_model_forward_completed','stage','state','exception_class','errno','os_error_class','isolation','source_sha256'})
  q.need(value['format']=='qualification-sdk-diagnostic/v1' and value['diagnostic_only']is True and value['actual_model_forward_completed']is False and value['stage']in SDK_STAGES and value['state']in ('SDK_AVAILABLE','UNAVAILABLE'))
  q.need(value['exception_class']is None or value['exception_class']in ERROR_CLASSES|{'other'})
+ q.need(value['errno']is None or type(value['errno'])is int and value['errno']in SDK_ERRNOS)
+ q.need((value['errno']is None and value['os_error_class']is None)if value['state']=='SDK_AVAILABLE'else value['os_error_class']==SDK_ERRNOS.get(value['errno'],'other_or_missing'))
  q.need(value['isolation']is None or value['isolation']=={'loopback_only_observed':True,'capability_sets_zero':True,'no_new_privileges':True,'nonroot':True})
  q.need(value['state']!='SDK_AVAILABLE' or value['stage']=='complete' and value['exception_class']is None and value['isolation']is not None)
  q.need(value['source_sha256']==_sdk_probe_sources() and len(json.dumps(value,sort_keys=True).encode())<=2048);return value

@@ -140,7 +140,18 @@ class QualificationTests(unittest.TestCase):
    observed=v._sdk_probe_infer(v.PROBE_BODY,v.PROBE_MODEL_SENTINEL);self.assertEqual(observed['state'],'SDK_AVAILABLE');self.assertFalse(observed['actual_model_forward_completed']);self.assertEqual(v.validate_sdk_probe(observed),observed);self.assertEqual(calls,[('threads',1),('interop',1),('deterministic',True)])
    with mock.patch.object(torch,'set_num_interop_threads',side_effect=RuntimeError(secret)):
     failed=v._sdk_probe_infer(v.PROBE_BODY,v.PROBE_MODEL_SENTINEL)
-   self.assertEqual((failed['stage'],failed['exception_class']),('cpu_configuration','RuntimeError'));self.assertNotIn('PRIVATE',json.dumps(failed));self.assertEqual(failed['state'],'UNAVAILABLE')
+   self.assertEqual((failed['stage'],failed['exception_class'],failed['errno'],failed['os_error_class']),('cpu_interop_threads','RuntimeError',None,'other_or_missing'));self.assertNotIn('PRIVATE',json.dumps(failed));self.assertEqual(failed['state'],'UNAVAILABLE')
+   for name,stage in [('set_num_threads','cpu_intraop_threads'),('set_num_interop_threads','cpu_interop_threads'),('use_deterministic_algorithms','cpu_deterministic_algorithms')]:
+    with mock.patch.object(torch,name,side_effect=PermissionError(13,secret,secret)):
+     denied=v._sdk_probe_infer(v.PROBE_BODY,v.PROBE_MODEL_SENTINEL)
+    self.assertEqual((denied['stage'],denied['exception_class'],denied['errno'],denied['os_error_class']),(stage,'PermissionError',13,'permission_denied'));self.assertEqual(v.validate_sdk_probe(denied),denied);self.assertNotIn('PRIVATE',json.dumps(denied))
+   for number,expected,category in [(1,1,'permission_denied'),(13,13,'permission_denied'),(12,12,'resource_exhausted'),(23,23,'resource_exhausted'),(24,24,'resource_exhausted'),(28,28,'resource_exhausted'),(30,30,'read_only_filesystem'),(None,None,'other_or_missing'),(True,None,'other_or_missing'),(987654,None,'other_or_missing')]:
+    with mock.patch.object(torch,'set_num_threads',side_effect=OSError(number,secret)):
+     denied=v._sdk_probe_infer(v.PROBE_BODY,v.PROBE_MODEL_SENTINEL)
+    self.assertEqual(denied['errno'],expected);self.assertEqual(denied['os_error_class'],category);v.validate_sdk_probe(denied);self.assertNotIn('PRIVATE',json.dumps(denied))
+   for change in [lambda d:d.update(errno=True),lambda d:d.update(errno=987654),lambda d:d.update(os_error_class=secret),lambda d:d.update(errno=13,os_error_class='read_only_filesystem')]:
+    invalid=dict(denied);change(invalid)
+    with self.assertRaises(q.QualificationRefused):v.validate_sdk_probe(invalid)
   with mock.patch.object(runtime,'isolation',side_effect=assets.Refused('network_isolation_unavailable')),mock.patch.object(v.importlib.metadata,'version')as versions:
    refused=v._sdk_probe_infer(v.PROBE_BODY,v.PROBE_MODEL_SENTINEL)
   versions.assert_not_called();self.assertEqual(refused['stage'],'isolation');self.assertIsNone(refused['isolation'])

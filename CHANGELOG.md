@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-23-image-cpu-operation-diagnostics
+
+Recorded 2026-11-24T04:31:24.043597+00:00 · Contributor: Codex /root/seo; Codex /root distinct diagnostic review · change
+
+- **Changed.** Split the diagnostic-only CPU setup stage into the exact three existing Torch call operations and retain only whitelisted errno values and closed error categories.
+- **Evidence.** The expanded existing grouped control passes with88 stable source hashes and unchanged101 discovery denominator. ROOT independently read the delta and passed that grouped control. The exact three calls and their order, driver, isolation, resource budgets, successful acceptance and every other verifier function remain unchanged. [Change record](./runs/changes/2026-11-23-image-cpu-operation-diagnostics.json).
+- **Not claimed.** No local SDK/model/native execution, download, installation, new hosted retry, native qualification, accuracy, redistribution permission, legal clearance or original closure. The prior CPU PermissionError remains unlocalized until a separately authorized exact changed-source run. Failure finalization proposalB is not implemented; immutable prior failure artifacts and nooverwrite remain unchanged.
+
 ### 2026-11-23-image-forward-diagnostics
 
 Recorded 2026-11-24T04:11:37.333447+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
