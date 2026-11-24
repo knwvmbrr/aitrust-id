@@ -116,6 +116,87 @@ class QualificationTests(unittest.TestCase):
    with self.assertRaises(q.QualificationRefused):q.notice_observations(stage)
    (stage/q.COMPANION_LEAF).write_bytes(raw)
    current=q.seal_inventory(stage,identity);q.cleanup(stage,identity,current['entries']);self.assertFalse(stage.exists())
+ def test_failed_forward_diagnostics_and_bounded_sdk_probe(self):
+  import contextlib,types,subprocess,time
+  from tools import visual_score as core,visual_score_assets as assets,visual_score_runtime as runtime,visual_score_process as process
+  spec=importlib.util.spec_from_file_location('forward_diagnostic_verifier',ROOT/'scripts/verify-visual-score-qualification.py');v=importlib.util.module_from_spec(spec);spec.loader.exec_module(v)
+  secret='PRIVATE_CANARY /private/input?token=PRIVATE'
+  unavailable=core.unavailable('worker_unavailable');last={};original_spawn=v.subprocess.Popen;children=[]
+  def spawn(argv,*args,**kwargs):
+   code='import sys;sys.stdin.buffer.read();print('+repr(json.dumps(unavailable))+');sys.exit(2)'
+   child=original_spawn([sys.executable,'-I','-S','-B','-c',code],*args,**kwargs);children.append(child);return child
+  with tempfile.TemporaryDirectory()as folder,mock.patch.dict(os.environ,{'VISUAL_QUAL_TMP':folder}),mock.patch.object(v.subprocess,'Popen',side_effect=spawn):
+   result=v.native_cli(Path(folder)/'inert-not-read',Path(folder)/'models-not-read',diagnostic=last,call_id='gradient.png_production')
+  self.assertEqual(result,unavailable);self.assertEqual(last,{'call_id':'gradient.png_production','phase':'validated','state':'UNAVAILABLE','reason':'worker_unavailable','exit_status':2,'exception_class':None});self.assertIsNotNone(children[0].returncode)
+  self.assertEqual(v.validate_last_call(last),last)
+  for change in [lambda d:d.update(call_id=secret),lambda d:d.update(exit_status=True),lambda d:d.update(reason=secret),lambda d:d.update(exception_class=secret)]:
+   d=dict(last);change(d)
+   with self.assertRaises(q.QualificationRefused):v.validate_last_call(d)
+  # No SDK imports: these exact fake modules are used only by this source control.
+  isolation={'loopback_only_observed':True,'capability_sets_zero':True,'no_new_privileges':True,'nonroot':True};calls=[]
+  torch=types.ModuleType('torch');torch.__version__=runtime.VERSIONS['torch'];torch.set_num_threads=lambda n:calls.append(('threads',n));torch.set_num_interop_threads=lambda n:calls.append(('interop',n));torch.use_deterministic_algorithms=lambda b:calls.append(('deterministic',b))
+  safe=types.ModuleType('safetensors');safe.safe_open=object();safetorch=types.ModuleType('safetensors.torch');safetorch.load=object();pil=types.ModuleType('PIL');pil.Image=object();pil.features=object()
+  with mock.patch.dict(sys.modules,{'torch':torch,'safetensors':safe,'safetensors.torch':safetorch,'PIL':pil}),mock.patch.object(runtime,'isolation',return_value=isolation),mock.patch.object(v.importlib.metadata,'version',side_effect=lambda n:runtime.VERSIONS[n]):
+   observed=v._sdk_probe_infer(v.PROBE_BODY,v.PROBE_MODEL_SENTINEL);self.assertEqual(observed['state'],'SDK_AVAILABLE');self.assertFalse(observed['actual_model_forward_completed']);self.assertEqual(v.validate_sdk_probe(observed),observed);self.assertEqual(calls,[('threads',1),('interop',1),('deterministic',True)])
+   with mock.patch.object(torch,'set_num_interop_threads',side_effect=RuntimeError(secret)):
+    failed=v._sdk_probe_infer(v.PROBE_BODY,v.PROBE_MODEL_SENTINEL)
+   self.assertEqual((failed['stage'],failed['exception_class']),('cpu_configuration','RuntimeError'));self.assertNotIn('PRIVATE',json.dumps(failed));self.assertEqual(failed['state'],'UNAVAILABLE')
+  with mock.patch.object(runtime,'isolation',side_effect=assets.Refused('network_isolation_unavailable')),mock.patch.object(v.importlib.metadata,'version')as versions:
+   refused=v._sdk_probe_infer(v.PROBE_BODY,v.PROBE_MODEL_SENTINEL)
+  versions.assert_not_called();self.assertEqual(refused['stage'],'isolation');self.assertIsNone(refused['isolation'])
+  now=time.monotonic_ns()
+  for stop,expected in [(now+30*10**9,15.),(now+8*10**9,2.),(now+6*10**9,None)]:
+   with mock.patch.dict(os.environ,{'VISUAL_QUAL_FORWARD_STOP_NS':str(stop)}),mock.patch.object(v.time,'monotonic_ns',return_value=now):
+    budget=v._probe_budget();self.assertEqual(None if budget is None else budget[2],expected)
+  with mock.patch.dict(os.environ,{'VISUAL_QUAL_FORWARD_STOP_NS':'invalid'}),mock.patch.object(process,'run')as run:
+   self.assertEqual(v.sdk_failure_probe(last,RuntimeError())['state'],'SKIPPED');run.assert_not_called()
+  with mock.patch.object(process,'run')as run:
+   self.assertEqual(v.sdk_failure_probe(last,KeyboardInterrupt())['state'],'SKIPPED');run.assert_not_called()
+  probe_source=process.run;home_paths=[];probe_children=[];actual_spawn=process.subprocess.Popen
+  def track_spawn(*args,**kwargs):child=actual_spawn(*args,**kwargs);probe_children.append(child);return child
+  def inert_probe(argv,wire,timeout):
+   self.assertEqual(argv[-1],'--sdk-diagnostic-worker');self.assertLessEqual(timeout,15.);self.assertGreater(timeout,0)
+   length=int.from_bytes(wire[:4],'big');header=json.loads(wire[4:4+length]);self.assertEqual(wire[4+length:],v.PROBE_BODY);home=Path(header['cache_dir']);home_paths.append(home);self.assertEqual(stat.S_IMODE(home.stat().st_mode),0o500);self.assertEqual(list(home.iterdir()),[])
+   program='import sys;sys.stdin.buffer.read();print('+repr(json.dumps(observed))+')'
+   return probe_source([sys.executable,'-I','-S','-B','-c',program],wire,timeout=timeout)
+  with mock.patch.dict(os.environ,{'VISUAL_QUAL_FORWARD_STOP_NS':str(time.monotonic_ns()+40*10**9)}),mock.patch.object(process,'run',side_effect=inert_probe)as run,mock.patch.object(process.subprocess,'Popen',side_effect=track_spawn):
+   checked=v.sdk_failure_probe(last,RuntimeError())
+  self.assertEqual(checked['state'],'COMPLETED');self.assertEqual(run.call_count,1);self.assertTrue(all(not p.exists()for p in home_paths));self.assertTrue(all(p.returncode is not None for p in probe_children))
+  # Real owned short-child timeout/reap; SDK/kernel resource claims are NOT made.
+  def timeout_probe(argv,wire,timeout):return probe_source([sys.executable,'-I','-S','-B','-c','import time;time.sleep(.2)'],wire,timeout=.01)
+  with mock.patch.dict(os.environ,{'VISUAL_QUAL_FORWARD_STOP_NS':str(time.monotonic_ns()+40*10**9)}),mock.patch.object(process,'run',side_effect=timeout_probe),mock.patch.object(process.subprocess,'Popen',side_effect=track_spawn):
+   timed=v.sdk_failure_probe(last,RuntimeError())
+  self.assertEqual(timed['state'],'UNAVAILABLE');self.assertEqual(timed['reason'],'deadline');self.assertTrue(all(p.returncode is not None for p in probe_children))
+  original_home=assets.PrivateHome
+  class CloseFault:
+   def __enter__(self):self.inner=original_home();return self.inner.__enter__()
+   def __exit__(self,*args):self.inner.__exit__(*args);raise assets.Refused('cleanup_uncertain')
+  with mock.patch.dict(os.environ,{'VISUAL_QUAL_FORWARD_STOP_NS':str(time.monotonic_ns()+40*10**9)}),mock.patch.object(assets,'PrivateHome',CloseFault),mock.patch.object(process,'run',side_effect=inert_probe):
+   uncertain=v.sdk_failure_probe(last,RuntimeError())
+  self.assertEqual(uncertain['reason'],'cleanup_uncertain');self.assertTrue(all(not p.exists()for p in home_paths))
+  retained=[]
+  def nonempty_probe(argv,wire,timeout):
+   length=int.from_bytes(wire[:4],'big');home=Path(json.loads(wire[4:4+length])['cache_dir']);retained.append(home)
+   # Inert hostile same-owner fixture, not an SDK write or cleanup permission.
+   home.chmod(0o700);(home/'sentinel').write_bytes(b'preserve');home.chmod(0o500)
+   return json.dumps(observed).encode()
+  try:
+   with mock.patch.dict(os.environ,{'VISUAL_QUAL_FORWARD_STOP_NS':str(time.monotonic_ns()+40*10**9)}),mock.patch.object(process,'run',side_effect=nonempty_probe):
+    nonempty=v.sdk_failure_probe(last,RuntimeError())
+   self.assertEqual(nonempty['reason'],'cleanup_uncertain');self.assertEqual((retained[0]/'sentinel').read_bytes(),b'preserve')
+  finally:
+   for home in retained:home.chmod(0o700);(home/'sentinel').unlink();home.rmdir()
+  with tempfile.TemporaryDirectory()as folder:
+   stage=Path(folder);(stage/'tmp').mkdir();oldtemp=tempfile.tempdir;probe=mock.Mock();probe.connect.side_effect=OSError(101,'inert')
+   def native(*args,diagnostic,call_id,**kwargs):
+    value=core.unavailable('model_missing'if call_id=='missing_model'else'runtime_unavailable'if call_id=='no_sdk'else'worker_unavailable');diagnostic.clear();diagnostic.update(call_id=call_id,phase='validated',state='UNAVAILABLE',reason=value['reason'],exit_status=2,exception_class=None);return value
+   try:
+    with mock.patch.dict(os.environ,{'VISUAL_QUAL_OUTER_NETNS':'net:[inert-outside]'}),mock.patch.object(v.os,'readlink',return_value='net:[inert-inside]'),mock.patch.object(runtime,'isolation',return_value=isolation),mock.patch.object(v.socket,'socket',return_value=probe),mock.patch.object(v,'installed',return_value={}),mock.patch.object(v,'ps'),mock.patch.object(q,'notice_observations',return_value={}),mock.patch.object(v,'native_cli',side_effect=native),mock.patch.object(v,'sdk_failure_probe',side_effect=OSError(secret)):
+     report=v.execute(stage,sys.executable)
+   finally:tempfile.tempdir=oldtemp
+   self.assertFalse(report['pass']);self.assertFalse(report['actual_model_forward_completed']);self.assertEqual(report['reason'],'qualification_failed')
+   # Secondary failure must not erase the primary last-call reason.
+   self.assertEqual(report['failure_diagnostics']['last_call']['reason'],'worker_unavailable');self.assertNotIn('PRIVATE',json.dumps(report));self.assertLessEqual(len(json.dumps(report['failure_diagnostics']).encode()),4096)
  def wheel(self,path,extra=None,declared=None):
   meta=b'Metadata-Version: 2.4\nName: example\nVersion: 1.0\nLicense-File: LICENSE\n\n'
   with zipfile.ZipFile(path,'w') as z:

@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-23-image-forward-diagnostics
+
+Recorded 2026-11-24T04:11:37.333447+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Preserved fixed validated production call failure diagnostics and added one failure-only SDK import/configuration probe within the original checked forward deadline and unchanged private worker limits.
+- **Evidence.** Three actual affected source controls pass with88 frozen hashes stable; discovery counts33/36/5/27. ROOT read the full delta and independently passed the new grouped control. Original17 positive cases, native/shared method, reference,39 lock, resource caps and exclusive failure publication remain unchanged. [Change record](./runs/changes/2026-11-23-image-forward-diagnostics.json).
+- **Not claimed.** No actual SDK/model/inference, acquisition, installation, hosted retry, native qualification, redistribution permission, accuracy, legal clearance or original scope closure. Actual prior hosted model/SDK cause is still unknown. Current101-suite count is discovery only; previous100 execution belongs to976. Fresh readiness/strict inspector and separate ROOT authorization remain before another changed-source run.
+
 ### 2026-11-23-tokenizers-source-preservation
 
 Recorded 2026-11-24T03:16:29.216235+00:00 · Contributor: Codex /root/seo; ROOT distinct source/artifact review · change
