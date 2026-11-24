@@ -149,6 +149,44 @@ class QualificationTests(unittest.TestCase):
     with mock.patch.object(torch,'set_num_threads',side_effect=OSError(number,secret)):
      denied=v._sdk_probe_infer(v.PROBE_BODY,v.PROBE_MODEL_SENTINEL)
     self.assertEqual(denied['errno'],expected);self.assertEqual(denied['os_error_class'],category);v.validate_sdk_probe(denied);self.assertNotIn('PRIVATE',json.dumps(denied))
+   self.assertEqual((observed['trace_roles'],observed['trace_truncated'],observed['filename_role'],observed['observed_torch_git_version']),([],False,'other_or_missing',None))
+   # Already-present module fields only; no lazy SDK version import/getattr.
+   version=types.ModuleType('torch.version');torch.version=version
+   for claim,expected in [('a1'*20,'a1'*20),('A1'*20,None),('g'*40,None),('a'*41,None),(True,None),(None,None)]:
+    version.git_version=claim;self.assertEqual(v._probe_git_version(torch),expected)
+   version.git_version='a1'*20
+   class TorchModuleSubclass(types.ModuleType):pass
+   torch_subclass=TorchModuleSubclass('torch');torch_subclass.version=version
+   self.assertEqual(v._probe_git_version(torch_subclass),'a1'*20)
+   with mock.patch.object(torch,'use_deterministic_algorithms',side_effect=PermissionError(13,secret,'/held-home/cache')) ,mock.patch.dict(os.environ,{'HOME':'/held-home'}):
+    located=v._sdk_probe_infer(v.PROBE_BODY,v.PROBE_MODEL_SENTINEL)
+   self.assertEqual(located['filename_role'],'private_home_descendant');self.assertEqual(located['observed_torch_git_version'],'a1'*20);v.validate_sdk_probe(located)
+   for path,expected in [('/held-home','private_home'),('/held-home/cache','private_home_descendant'),('/held-venv','venv_root'),('/held-venv/lib','venv_descendant'),(v.PROBE_MODEL_SENTINEL,'model_sentinel'),('/held-home-neighbor/cache','other_or_missing'),('/held-venv-neighbor','other_or_missing'),('/held-home/../elsewhere','other_or_missing'),('/held-home/./cache','other_or_missing'),('/held-home//cache','other_or_missing'),('//held-home/cache','other_or_missing'),('/held-home/','other_or_missing'),('/held-home/\0cache','other_or_missing'),('/physical-alias/cache','other_or_missing'),('/'+'x'*2048,'other_or_missing'),(None,'other_or_missing'),(object(),'other_or_missing')]:
+    self.assertEqual(v._probe_filename_role(path,'/held-home','/held-venv'),expected)
+   # Finite inert frame objects exercise the bounded traversal without source,
+   # paths, exception formatting or optional SDK imports.
+   pairs=list(v.SDK_TRACE_ROLES)+[(secret,secret),('x'*257,'cache_dir'),('torch._inductor.codecache','x'*129)]
+   def trace_chain(pairs):
+    chain=None
+    for module,function in reversed(pairs):chain=types.SimpleNamespace(tb_frame=types.SimpleNamespace(f_globals={'__name__':module},f_code=types.SimpleNamespace(co_name=function)),tb_next=chain)
+    return chain
+   self.assertEqual(v._probe_trace_roles(trace_chain(pairs)),(['cache_root','cache_lock','header_dir','cpp_dir','other','other','other'],False))
+   self.assertEqual(v._probe_trace_roles(trace_chain([pairs[0]]*32)),(['cache_root']*32,False));self.assertEqual(v._probe_trace_roles(trace_chain([pairs[0]]*33)),(['cache_root']*32,True))
+   namespace={'__name__':'torch._inductor.runtime.cache_dir_utils','secret':secret}
+   exec(compile('def cache_dir(*args):\n raise PermissionError(13, secret, "/held-home/cache")','<inert-closed-frame>','exec'),namespace)
+   with mock.patch.object(torch,'use_deterministic_algorithms',namespace['cache_dir']),mock.patch.dict(os.environ,{'HOME':'/held-home'}):
+    framed=v._sdk_probe_infer(v.PROBE_BODY,v.PROBE_MODEL_SENTINEL)
+   self.assertEqual(framed['trace_roles'][-1],'cache_root');self.assertEqual(framed['filename_role'],'private_home_descendant');self.assertNotIn('PRIVATE',json.dumps(framed));self.assertNotIn('held-home',json.dumps(framed));v.validate_sdk_probe(framed)
+   worst={**framed,'trace_roles':['cache_root']*32,'trace_truncated':True}
+   self.assertEqual(v.validate_sdk_probe(worst),worst);self.assertLessEqual(len(json.dumps(worst,sort_keys=True).encode()),2048)
+   combined={'primary_exception_class':'QualificationRefused','last_call':last,'sdk_probe':{'diagnostic_only':True,'state':'COMPLETED','reason':None,'timeout_seconds':15.,'probe':worst}}
+   self.assertLessEqual(len(json.dumps(combined,sort_keys=True).encode()),4096)
+   for change in [lambda d:d.update(trace_roles=['other']*33),lambda d:d.update(trace_roles=[secret]),lambda d:d.update(trace_roles=[{}]),lambda d:d.update(trace_roles=()),lambda d:d.update(trace_truncated=1),lambda d:d.update(trace_truncated=True,trace_roles=[]),lambda d:d.update(filename_role=secret),lambda d:d.update(observed_torch_git_version='A'*40),lambda d:d.update(observed_torch_git_version=True)]:
+    invalid=dict(framed);change(invalid)
+    with self.assertRaises(q.QualificationRefused):v.validate_sdk_probe(invalid)
+   with mock.patch.object(v,'_probe_trace_roles',side_effect=ValueError(secret)),mock.patch.object(torch,'use_deterministic_algorithms',side_effect=PermissionError(13,secret,secret)):
+    secondary=v._sdk_probe_infer(v.PROBE_BODY,v.PROBE_MODEL_SENTINEL)
+   self.assertEqual((secondary['stage'],secondary['errno'],secondary['exception_class']),('cpu_deterministic_algorithms',13,'PermissionError'));self.assertEqual(secondary['trace_roles'],[]);self.assertNotIn('PRIVATE',json.dumps(secondary));v.validate_sdk_probe(secondary)
    for change in [lambda d:d.update(errno=True),lambda d:d.update(errno=987654),lambda d:d.update(os_error_class=secret),lambda d:d.update(errno=13,os_error_class='read_only_filesystem')]:
     invalid=dict(denied);change(invalid)
     with self.assertRaises(q.QualificationRefused):v.validate_sdk_probe(invalid)

@@ -264,3 +264,51 @@ Replace only the single combined stage with three fixed source-owned operations 
 No driver changes, additional probe/model forward, new source input or scope change. Same88/current33/36/5/27=101 discovery denominator; extend the existing grouped source regression with three per-call inert PermissionError injections and errno noecho/schema/boolean/unknown controls. Run only affected meaningful controls, not unchanged101 locally. Existing same15s downward clamp/original stop+6s reserve,500HOME,CPU120/8GiB/64FD/16KiB, namespace/no-new-privileges/capzero, all3thread/deterministic calls, numerical/shared8/reference/39lock/companion and17positive cases remain unchanged.
 
 Owned existing verifier/test/thisplan plus own fresh run/event/CHL only. Proposed immutable-failure finalization B is explicitly NOT approved or implemented; existing nooverwrite and actualCLEAN-versus-finalizationfailure evidence stay unchanged. Different ROOT review and new baseline-only private inspector remain before separately authorized push/hosted retry. No local SDK/model/native/acquisition/install/download/hosted execution is authorized by this amendment.
+
+
+## Denied-resource diagnostic C — pre-code contract
+
+Recorded 2026-11-24T05:19:28.489925+00:00 by Codex /root/seo on isolated codex/image-denied-resource-diagnostics from1b4d2236ca0f186f61d8884fdd6494697c12bc88. ROOT approved private precode933e6c156089c7b16df20146b8f9623f88af432f817529c59d9b4e0c74245395 before implementation, after matrix source review priority. Actual45327386123 established cpu_deterministic_algorithms/PermissionError13 only; cache-root invocation and exact CPU build source remain unknown.
+
+## Preserve the execution contract
+
+Use a new isolated child branch from1b4d after ROOT approves this plan, append existing qualification architecture BEFORE feature edits. Own only scripts/verify-visual-score-qualification.py, its existing grouped test and docs/offline-image-score-qualification-plan.md, plus own run/event/CHL. No new framework/helper/source path, public CLI flag, endpoint, permission, dependency, asset, model or extra import. Driver, supervisor, native8/shared numerics/reference/39lock/companion and failure-finalization semantics stay exact.
+
+Keep all three public Torch calls, order and arguments; keep one failure-only diagnostic process, existing PrivateHome500, explicit isolation, capzero/no-new-privileges/no-egress, CPU120/8GiB/64FD/16KiB, original checked ordinary-stop deadline, min15s DOWN with6s reap/HOME reserve. No model/tensor read, inference, second model forward or probe retry. No parent Torch state mutation. Existing17 positive cases/3 numeric rows/success candidate and both conditional envelopes remain unchanged. Combined failure_diagnostics<=4096 and inner SDK diagnostic<=2048 remain enforced.
+
+## Exact small observations inside the existing caught failure
+
+A. After the existing torch import and existing exact __version__ check, inspect already-present torch.__dict__['version'] and that object's __dict__['git_version'] without importing another SDK module, invoking lazy getattr, reading a file or running a command. Emit observed_torch_git_version only when its exact type is str and it matches lowercase40hex; otherwise null. No tag fallback, arbitrary string echo or acceptance dependency. This is the SDK's observed build-source claim, not execution attestation, compiled reproducibility or automatic proof the source tag matches the wheel. It remains diagnostic even if a valid string is reported.
+
+B. Retain current exact three call stages and whitelist errno/class. On the caught OSError, inspect its existing __traceback__ chain for at most32 frames, iteratively, no recursion. Compare only exact fixed(module-name,function-name) pairs to source-owned roles:
+
+| Fixed pair | Emitted role |
+| --- | --- |
+| torch._inductor.runtime.cache_dir_utils / cache_dir | cache_root |
+| torch._inductor.codecache / get_lock_dir | cache_lock |
+| torch._inductor.codecache / _precompile_header | header_dir |
+| torch._inductor.cpp_builder / _create_if_dir_not_exist | cpp_dir |
+| Every other pair or invalid/missing value | other |
+
+Emit trace_roles as at most32 short enum labels in outer-to-inner order, plus exact boolean trace_truncated when additional frames exist. Source-controlled module/function strings are compared internally only (cap inspected names256/128); none are echoed. Never format/serialize traceback objects, code lines, co_filename, locals, exception text, input, environment, raw modules/functions or paths. A known role is an observation of an exception frame, not proof of complete call graph/compiled provenance. Unknown/truncated frames stay unknown; they never authorize a workaround. Success with no caught error has empty roles and false truncation.
+
+C. Inspect OSError.filename only if exact str<=2048 and a canonical absolute lexical path (no NUL, empty/dot/dotdot components or double-leading slash); otherwise classify other_or_missing. Do not invoke fspath, resolve/realpath, stat/open/listdir/readlink or touch the error target. Compare against only source-owned trusted roots available inside the worker: HOME established by unchanged c.worker as its actual held500 directory name, sys.prefix of the exact selected venv Python, and the fixed no-model sentinel. Emit one enum: private_home, private_home_descendant, venv_root, venv_descendant, model_sentinel, other_or_missing. Descendant matching includes a slash boundary; sibling prefixes do not match. No root value, path component, username, fd number, basename, hash-of-private-path or arbitrary filename is output. This is a lexical relation only; physical aliases can remain other and must not be guessed. The model sentinel category is an unexpected diagnostic observation, never permission to read a model.
+
+For non-OSError errors keep filename_role other_or_missing; trace capture can be limited to OSError to preserve this exact scope. Previously fixed class/errno remains source-owned and closed. Missing/unusual errno remainsnull/other_or_missing. Any diagnostic classification/validation fault must preserve original production failure and may omit the optional diagnostics rather than echo a raw error.
+
+## Closed validation and actual checks
+
+Require exact new inner SDK keys, strict bool truncation, role-list<=32 with allowed labels only, filename enum only, git_version40hex-or-null; type bool must never satisfy errno/int. The role strings make worst-case32-frame output safely fit existing2048/4096 bounds; validate actual serialized worst-case sizes. Do not enlarge either cap. None of these fields enters a positive case or changes provider SUCCESS/source/cleanup/adoption requirements.
+
+Expand the existing one grouped source method, keeping33/36/5/27=101: inert finite module/function fixtures cover every known role plus unknowns, exactly32/33 frames, traversal order and no arbitrary strings; lexical HOME/venv/sentinel matching covers exact/descendant/sibling/dotdot/NUL/non-string/oversize/alias-unknown boundaries; observed git40lowercase/null/malformed/uppercase are tested without a real SDK import. No exception text/canary may reach JSON. Retain real owned short-child reaping, deadline skip/downward clamp,500HOME/nonempty uncertainty and secondary-failure controls. Capture88 before/after, source-diff only these3 files, and unchanged positive/driver/native8 identities. Run the affected group only; actual future hosted101 gate provides full execution, not discovery alone.
+
+## Review and later decision
+
+ROOT different source review, normal authored guard/commit, fresh88 readiness and baseline-only strict inspector precede any separately authorized ONE changed-source hosted job. No dispatch now. Retain old artifacts as failed/provider_refused and distinguish CLEAN removal from finalization failure.
+
+Only actual role+errno+path relation and observed git source may justify an exact source reread and minimal future fix. Example conditional proposal remains unimplemented: if actual cache_root ensures a default HOME child, fixed TORCHINDUCTOR_CACHE_DIR=same existing held500HOME might avoid directory creation without granting writes. cache_lock/header/write paths would stillrefuse; do not pre-create children, change500/empty-root, borrow shared cache, disable determinism, use private_C or relax resources. Any worker environment repair changes a runtime8 source identity and must be reviewed/register-bound explicitly. Failure-finalization proposalB is NOT included.
+
+
+### Pre-final source robustness amendment
+
+ROOT distinct review of initialC source found type(torch) unnecessarily couples the existing torch.version module lookup to a possible Torch ModuleType subclass. Before correction, record this narrow choice: require the already imported fixed stdlib module type type(sys) for the version object, still read only its actual __dict__ and strict lowercase40hex/null field. Add one inert Torch-module-subclass fixture to the existing grouped control. No arbitrary object/lazy attribute acceptance, SDK import, execution budget or three call changes. Preserve initialC author run/source phase separately; the corrected current phase is a fresh immutable record.

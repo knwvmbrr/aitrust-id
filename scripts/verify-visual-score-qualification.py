@@ -26,6 +26,8 @@ CALL_PHASES={'created','spawned','finished','decode','validated','console_valida
 ERROR_CLASSES={'Refused','QualificationRefused','ImportError','ModuleNotFoundError','RuntimeError','OSError','PermissionError','FileNotFoundError','MemoryError','ValueError','TypeError','KeyError','JSONDecodeError','KeyboardInterrupt','SystemError','TimeoutExpired'}
 SDK_STAGES={'isolation','distribution_identity','torch_import','safetensors_import','pillow_import','cpu_intraop_threads','cpu_interop_threads','cpu_deterministic_algorithms','complete','probe_admission','probe_process','probe_decode','probe_cleanup'}
 SDK_ERRNOS={1:'permission_denied',13:'permission_denied',30:'read_only_filesystem',12:'resource_exhausted',23:'resource_exhausted',24:'resource_exhausted',28:'resource_exhausted'}
+SDK_TRACE_ROLES={('torch._inductor.runtime.cache_dir_utils','cache_dir'):'cache_root',('torch._inductor.codecache','get_lock_dir'):'cache_lock',('torch._inductor.codecache','_precompile_header'):'header_dir',('torch._inductor.cpp_builder','_create_if_dir_not_exist'):'cpp_dir'}
+SDK_FILENAME_ROLES={'private_home','private_home_descendant','venv_root','venv_descendant','model_sentinel','other_or_missing'}
 PROBE_BODY=b'private-sdk-diagnostic-v1'
 PROBE_MODEL_SENTINEL='/qualification-sdk-diagnostic-no-model'
 
@@ -44,10 +46,35 @@ def validate_last_call(value):
 def _sdk_probe_sources():
  return {p:q.sha(q.raw_file(ROOT/p,128*1024))for p in ['scripts/verify-visual-score-qualification.py','tools/visual_score.py','tools/visual_score_runtime.py','tools/visual_score_process.py']}
 
+def _probe_git_version(torch):
+ version=torch.__dict__.get('version');fields=version.__dict__ if type(version)is type(sys)else {}
+ value=fields.get('git_version')
+ return value if type(value)is str and len(value)==40 and all(c in '0123456789abcdef'for c in value)else None
+
+def _probe_filename_role(filename,home,venv):
+ def canonical(value):
+  return type(value)is str and 0<len(value)<=2048 and value.startswith('/') and not value.startswith('//') and '\0'not in value and all(p not in ('','.','..')for p in value[1:].split('/'))
+ if not canonical(filename):return 'other_or_missing'
+ if filename==PROBE_MODEL_SENTINEL:return 'model_sentinel'
+ for root,role in [(home,'private_home'),(venv,'venv')]:
+  if canonical(root):
+   if filename==root:return role if role=='private_home'else 'venv_root'
+   if filename.startswith(root+'/'):return role+'_descendant'
+ return 'other_or_missing'
+
+def _probe_trace_roles(trace):
+ roles=[]
+ while trace is not None and len(roles)<32:
+  frame=trace.tb_frame;module=frame.f_globals.get('__name__');function=frame.f_code.co_name
+  role=SDK_TRACE_ROLES.get((module,function),'other')if type(module)is str and len(module)<=256 and type(function)is str and len(function)<=128 else 'other'
+  roles.append(role);trace=trace.tb_next
+ return roles,trace is not None
+
 def _sdk_probe_infer(raw,model_dir):
  # Fixed qualification child ONLY. c.worker sets unchanged resource limits and
  # adopts the same500 HOME before this fixed infer substitution is invoked.
  stage='isolation';error=None;error_number=None;error_category=None;state='UNAVAILABLE';environment=None
+ git_version=None;trace_roles=[];trace_truncated=False;filename_role='other_or_missing';home=os.environ.get('HOME');venv=sys.prefix
  try:
   q.need(raw==PROBE_BODY and model_dir==PROBE_MODEL_SENTINEL)
   from tools import visual_score_runtime as runtime
@@ -55,7 +82,7 @@ def _sdk_probe_infer(raw,model_dir):
   stage='distribution_identity'
   for name,version in runtime.VERSIONS.items():q.need(importlib.metadata.version(name)==version)
   stage='torch_import';import torch
-  q.need(torch.__version__==runtime.VERSIONS['torch'])
+  q.need(torch.__version__==runtime.VERSIONS['torch']);git_version=_probe_git_version(torch)
   stage='safetensors_import';from safetensors import safe_open
   from safetensors.torch import load
   stage='pillow_import';from PIL import Image,features
@@ -68,16 +95,25 @@ def _sdk_probe_infer(raw,model_dir):
   candidate=failure.errno if isinstance(failure,OSError)else None
   error_number=candidate if type(candidate)is int and candidate in SDK_ERRNOS else None
   error_category=SDK_ERRNOS.get(error_number,'other_or_missing')
- return {'format':'qualification-sdk-diagnostic/v1','diagnostic_only':True,'actual_model_forward_completed':False,'stage':stage,'state':state,'exception_class':error,'errno':error_number,'os_error_class':error_category,'isolation':environment,'source_sha256':_sdk_probe_sources()}
+  if isinstance(failure,OSError):
+   # Closed observations only; never format a traceback or inspect file targets.
+   try:trace_roles,trace_truncated=_probe_trace_roles(failure.__traceback__);filename_role=_probe_filename_role(failure.filename,home,venv)
+   except Exception:trace_roles=[];trace_truncated=False;filename_role='other_or_missing'
+ return {'format':'qualification-sdk-diagnostic/v1','diagnostic_only':True,'actual_model_forward_completed':False,'stage':stage,'state':state,'exception_class':error,'errno':error_number,'os_error_class':error_category,'isolation':environment,'source_sha256':_sdk_probe_sources(),'observed_torch_git_version':git_version,'trace_roles':trace_roles,'trace_truncated':trace_truncated,'filename_role':filename_role}
 
 def validate_sdk_probe(value):
- q.need(type(value)is dict and set(value)=={'format','diagnostic_only','actual_model_forward_completed','stage','state','exception_class','errno','os_error_class','isolation','source_sha256'})
+ q.need(type(value)is dict and set(value)=={'format','diagnostic_only','actual_model_forward_completed','stage','state','exception_class','errno','os_error_class','isolation','source_sha256','observed_torch_git_version','trace_roles','trace_truncated','filename_role'})
  q.need(value['format']=='qualification-sdk-diagnostic/v1' and value['diagnostic_only']is True and value['actual_model_forward_completed']is False and value['stage']in SDK_STAGES and value['state']in ('SDK_AVAILABLE','UNAVAILABLE'))
  q.need(value['exception_class']is None or value['exception_class']in ERROR_CLASSES|{'other'})
  q.need(value['errno']is None or type(value['errno'])is int and value['errno']in SDK_ERRNOS)
  q.need((value['errno']is None and value['os_error_class']is None)if value['state']=='SDK_AVAILABLE'else value['os_error_class']==SDK_ERRNOS.get(value['errno'],'other_or_missing'))
  q.need(value['isolation']is None or value['isolation']=={'loopback_only_observed':True,'capability_sets_zero':True,'no_new_privileges':True,'nonroot':True})
  q.need(value['state']!='SDK_AVAILABLE' or value['stage']=='complete' and value['exception_class']is None and value['isolation']is not None)
+ q.need(value['observed_torch_git_version']is None or type(value['observed_torch_git_version'])is str and len(value['observed_torch_git_version'])==40 and all(c in '0123456789abcdef'for c in value['observed_torch_git_version']))
+ q.need(type(value['trace_roles'])is list and len(value['trace_roles'])<=32 and all(type(r)is str and r in set(SDK_TRACE_ROLES.values())|{'other'}for r in value['trace_roles']))
+ q.need(type(value['trace_truncated'])is bool and (not value['trace_truncated']or len(value['trace_roles'])==32))
+ q.need(type(value['filename_role'])is str and value['filename_role']in SDK_FILENAME_ROLES)
+ q.need(value['state']!='SDK_AVAILABLE' or value['trace_roles']==[] and value['trace_truncated']is False and value['filename_role']=='other_or_missing')
  q.need(value['source_sha256']==_sdk_probe_sources() and len(json.dumps(value,sort_keys=True).encode())<=2048);return value
 
 def _probe_budget():

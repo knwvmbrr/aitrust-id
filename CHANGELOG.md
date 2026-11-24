@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-image-denied-resource-diagnostics
+
+Recorded 2026-11-24T05:29:20.721327+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Added closed failed-only SDK trace-role, lexical denied-filename relation and nullable observed Torch build-source diagnostics to the existing fixed private qualification probe.
+- **Evidence.** The expanded existing grouped control passes with88 stable source hashes and unchanged101 discovery denominator; ROOT independently read the exact source and passed that control. Three Torch calls/order, native8, isolation/deadlines, successful17 cases, driver and original failure-finalization behavior remain unchanged. [Change record](./runs/changes/2026-11-24-image-denied-resource-diagnostics.json).
+- **Not claimed.** No local SDK/model/native execution, download, installation or hosted retry; no permission/cache workaround, actual denied-resource conclusion, build attestation, redistribution/legal/accuracy or original closure. Historical failed artifacts and CLEAN removal versus failed finalization remain separate and immutable.
+
 ### 2026-11-23-image-cpu-operation-diagnostics
 
 Recorded 2026-11-24T04:31:24.043597+00:00 · Contributor: Codex /root/seo; Codex /root distinct diagnostic review · change
