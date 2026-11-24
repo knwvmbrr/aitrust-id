@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-source-baseline-refresh
+
+Recorded 2026-11-24T18:02:06.211236+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Correct existing protected publisher suite denominators to actual58 and91, retain unchanged26 MCP controls, and register exactly two fresh source-delivery records within the existing127-of160 finite map.
+- **Evidence.** Discovery-only58/91/26 matches the existing suites; two affected source guards pass and ROOT independently passed both with exact source hashes. Pristinecc actual classifier,43.54MB committed archive and15.68MB Rprepare packet passed separately and remain historical. Only two existing source registry rows bind actual V5 method/table bytes. [Change record](./runs/changes/2026-11-24-source-baseline-refresh.json).
+- **Not claimed.** No protected main identity, signing, AUTH, public release, changed-source archive/packet or whole58/91 suites is claimed by this source correction. New committed source needs fresh actual qualification and normal required PR checks before protected merge/publication. No source cap, baseline override, route/e72 permission,95anchor/159legacy change, SDK/model/install, accuracy or full original F057/X02 closure.
+
+
 ### 2026-11-24-source-v5-current-integration
 
 Recorded 2026-11-24T15:51:25.906741+00:00 · Contributor: Codex /root/share_debugger; ROOT different final registration/source review · change
