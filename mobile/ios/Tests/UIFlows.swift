@@ -338,7 +338,25 @@ final class UIFlows: XCTestCase {
                 if !inShare { return true }
                 return popups[0].hostCaptions == 1 && popups[0].sourceCaptions == 0
             }
-            guard let baseline = observe(phase: 0) else { XCTFail("Unsupported popup tree"); return }
+            var precedingBaseline: SurfaceState?
+            var admittedBaseline: SurfaceState?
+            let baselineReady = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
+                guard let state = observe(phase: 0),
+                      knownHostBaseline(state.popups), state.regions.count == expectedBaseline,
+                      state.sourceCaptions == 0, !state.sourceContainer,
+                      !state.containerPrivatePayload else {
+                    precedingBaseline = nil
+                    admittedBaseline = nil
+                    return false
+                }
+                let stable = precedingBaseline.map { sameFacts($0, state) } ?? false
+                precedingBaseline = state
+                admittedBaseline = stable ? state : nil
+                return stable
+            }, object: done)
+            let baselineResult = XCTWaiter.wait(for: [baselineReady], timeout: 10)
+            XCTAssertEqual(baselineResult, .completed)
+            guard baselineResult == .completed, let baseline = admittedBaseline else { return }
             XCTAssertTrue(knownHostBaseline(baseline.popups))
             XCTAssertEqual(baseline.regions.count, expectedBaseline)
             XCTAssertEqual(baseline.sourceCaptions, 0)

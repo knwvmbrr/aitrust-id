@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-ios-clear-completion-witness",
+  "recorded_at": "2026-11-24T16:25:43.608998+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "1212af0c70eb452c82b89d8e0abbdc750a92accd",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "changed": "Observe the existing Cleared status after each single explicit Clear tap in the independent layout fixture, retaining all original empty-state and visibility assertions and fixed native caps.",
+  "proves": "One affected derivation control and whole prior-fixture/core reconstruction pass with eight/114 current bindings stable; product and seven-suite sources remain exact. Preconditions and fixed completion diagnostics add no action retries or tolerance.",
+  "limits": "Source-only diagnostic, not a product fix, root cause or native pass. Prior independent matrix and current seven remain failed/open; new small-screen three-configuration run pending source review and slot release. No old/new composition, physical/human accessibility, build2, accuracy, admission or original closure.",
+  "files": {
+    "mobile/ios/Tests/SizeLayoutFlows.swift": "4897964d2e4a45f024df8ad9a7e2a4ab9e93b8fd1fb6301ad25e7455afef2569",
+    "tools/ios_simulator_matrix.py": "76b8af01ea01b7e78cc3f4e43b0c9f5bb29527f628ae76b0d7659d7cf07807f9",
+    "docs/ios-simulator-matrix-plan.md": "f0e7f7430042e88feade044fb951bc2f4e05fc89fcc94bcf41a73d0be1810ef9",
+    "runs/2026-11-24-ios-clear-completion-witness.json": "61424df153d050d5edf3da8de5a4268fa831932d30ffd7f3c124814b247f4b44"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-clear-completion-witness.json",
+      "sha256": "61424df153d050d5edf3da8de5a4268fa831932d30ffd7f3c124814b247f4b44"
+    }
+  ],
+  "checks": []
+}

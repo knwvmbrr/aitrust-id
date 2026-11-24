@@ -47,6 +47,33 @@ Recorded 2026-11-24T05:52:37.518419+00:00 · Contributor: Codex /root/share_debu
 - **Not claimed.** No actual V5 whole-Q or candidate classification, archive binding, signature replay, shared registry activation, compiled runtime permission, legal clearance, accuracy or original closure. Original42be author run binds its earlier source phase; final bindings and literal/fork amendments are recorded here. ROOT owns subsequent integration and protected qualification.
 
 
+### 2026-11-24-ios-control-snapshot-efficiency
+
+Recorded 2026-11-24T16:55:24.542728+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Read each layout control through one bounded immutable snapshot while retaining live existence, hittability and exact label-cardinality checks, with all containment assertions and native limits preserved.
+- **Evidence.** One affected derivation control and full prior-fixture/core reconstruction pass with eight/114 bindings stable. Installed public headers confirm the API; every other method, action, product and seven-suite source remains exact. [Change record](./runs/changes/2026-11-24-ios-control-snapshot-efficiency.json).
+- **Not claimed.** Source-only efficiency candidate, not measured runtime improvement or native acceptance. Prior largest case exceeded120seconds and remains failed; seven and four-size acceptance remain open. No cap increase, old/new pass composition, physical/human accessibility, build2, accuracy, admission or original closure.
+
+
+### 2026-11-24-ios-clear-completion-witness
+
+Recorded 2026-11-24T16:25:43.608998+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Observe the existing Cleared status after each single explicit Clear tap in the independent layout fixture, retaining all original empty-state and visibility assertions and fixed native caps.
+- **Evidence.** One affected derivation control and whole prior-fixture/core reconstruction pass with eight/114 current bindings stable; product and seven-suite sources remain exact. Preconditions and fixed completion diagnostics add no action retries or tolerance. [Change record](./runs/changes/2026-11-24-ios-clear-completion-witness.json).
+- **Not claimed.** Source-only diagnostic, not a product fix, root cause or native pass. Prior independent matrix and current seven remain failed/open; new small-screen three-configuration run pending source review and slot release. No old/new composition, physical/human accessibility, build2, accuracy, admission or original closure.
+
+
+### 2026-11-24-ios-source-baseline-readiness
+
+Recorded 2026-11-24T15:50:43.382400+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Require two consecutive exact known popup-baseline observations before the source offer, using a passive ten-second readiness expectation and the unchanged native suite limits.
+- **Evidence.** One affected derivation control passes with eight/114 bindings stable; complete prior UI and core reconstruct by only the baseline block and its literal source pin. Seven IDs and all other six case bodies remain exact; focused adapter preserves the original seven-case acceptors. [Change record](./runs/changes/2026-11-24-ios-source-baseline-readiness.json).
+- **Not claimed.** Source-only correction, not a native result. Prior actual seven remains six passed and one failed; no six-plus-one composition or old proof rebinding. Same-source focused, complete seven and four-size matrix remain pending; no physical/human accessibility, build2, accuracy, admission or original closure.
+
+
 ### 2026-11-24-ios-clear-editor-source
 
 Recorded 2026-11-24T15:25:47.355247+00:00 · Contributor: Codex /root/web_camo · change
