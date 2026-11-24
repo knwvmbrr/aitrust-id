@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-ios-source-baseline-readiness
+
+Recorded 2026-11-24T15:50:43.382400+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Require two consecutive exact known popup-baseline observations before the source offer, using a passive ten-second readiness expectation and the unchanged native suite limits.
+- **Evidence.** One affected derivation control passes with eight/114 bindings stable; complete prior UI and core reconstruct by only the baseline block and its literal source pin. Seven IDs and all other six case bodies remain exact; focused adapter preserves the original seven-case acceptors. [Change record](./runs/changes/2026-11-24-ios-source-baseline-readiness.json).
+- **Not claimed.** Source-only correction, not a native result. Prior actual seven remains six passed and one failed; no six-plus-one composition or old proof rebinding. Same-source focused, complete seven and four-size matrix remain pending; no physical/human accessibility, build2, accuracy, admission or original closure.
+
+
 ### 2026-11-24-ios-clear-editor-source
 
 Recorded 2026-11-24T15:25:47.355247+00:00 · Contributor: Codex /root/web_camo · change
