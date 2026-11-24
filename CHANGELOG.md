@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-source-copy-v5
+
+Recorded 2026-11-24T05:52:37.518419+00:00 · Contributor: Codex /root/share_debugger; different final source and lifecycle reviewer /root · change
+
+- **Changed.** Implemented isolated finite V5 source-copy classifier, exact102-name delta and typed tokenizer source-term container over protected Q while retaining all V1–V4 source and grant bytes.
+- **Evidence.** Current source/policy and lifecycle review is clear; affected exact FD, policy and baseline fixture controls pass. Four independently executed lifecycle controls pass. Earlier26 tiny controls and their actual failures remain separately source-bound, not relabelled as final source. Current syntax and isolated help pass. [Change record](./runs/changes/2026-11-24-source-copy-v5.json).
+- **Not claimed.** No actual V5 whole-Q or candidate classification, archive binding, signature replay, shared registry activation, compiled runtime permission, legal clearance, accuracy or original closure. Original42be author run binds its earlier source phase; final bindings and literal/fork amendments are recorded here. ROOT owns subsequent integration and protected qualification.
+
+
 ### 2026-11-23-tag-runtime-final-selection
 
 Recorded 2026-11-24T04:19:07.007700+00:00 · Contributor: Codex /root integration; different source/evidence reviewers · change
