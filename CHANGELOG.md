@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-ios-clear-editor-source
+
+Recorded 2026-11-24T15:25:47.355247+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Return the existing empty editor to view only after explicit Clear in the shared App/Share controller, preserving privacy clearing callers; strengthen passive Clear assertions and current layout source pins.
+- **Evidence.** One affected derivation control, actual App/Share source membership, whole prior-source reconstructions and stale-seven-proof refusal pass with eight/114 current bindings stable. ROOT reviewed the six-path source diff; same-source native seven and matrix remain required. [Change record](./runs/changes/2026-11-24-ios-clear-editor-source.json).
+- **Not claimed.** Source-only product revision, not an observed native fix. All four prior matrix failures and old seven proof remain historical; no future70e/build2 qualification, physical device, human accessibility, accuracy, admission, original closure or composed old/new passes.
+
+
 ### 2026-11-24-ios-size-matrix-frame-diagnostics
 
 Recorded 2026-11-24T13:30:16.499971+00:00 · Contributor: Codex /root/web_camo · change
