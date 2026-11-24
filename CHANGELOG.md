@@ -13,6 +13,15 @@ Recorded 2026-11-24T00:06:49.465071+00:00 · Contributor: Codex /root/seo; Codex
 
 ## Unreleased — 2026-11-23
 
+### 2026-11-23-reviewer-attestation
+
+Recorded 2026-11-24T00:05:06.374245+00:00 · Contributor: Codex /root/share_debugger; Codex /root distinct software review · change
+
+- **Changed.** Implemented a read-only local reviewer-attestation verifier and CLI with caller-selected key, exact subject/revision/scope, externally selected lifecycle head, explicit consent and expiry/conflict/terminal withdrawal/supersession handling. No IV tag is issued.
+- **Evidence.** Author15-control and2 affected clock/CLI phases pass; a different source reviewer actually ran all16 current controls successfully. Real CLI synthetic declaration/withdrawal/tamper cases return0/3/2. Initial malformed-fixture failure and source phases are preserved. [Change record](./runs/changes/2026-11-23-reviewer-attestation.json).
+- **Not claimed.** Published test keys and synthetic declarations do not establish a real human review, identity, independence, accuracy, timestamp or global withdrawal completeness. No operating key/private user key, endpoint, registry/taxonomy change, deployment or full T-IV closure; human route acceptance remains open.
+
+
 ### 2026-11-23-web-checker-observed-build
 
 Recorded 2026-11-23T23:37:43.115137+00:00 · Contributor: Codex /root integration; Codex /root/seo distinct source-ownership review · change

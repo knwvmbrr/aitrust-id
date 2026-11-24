@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-reviewer-attestation",
+  "recorded_at": "2026-11-24T00:05:06.374245+00:00",
+  "author": "Codex /root/share_debugger; Codex /root distinct software review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "36a3560576b83e47f20ea4ffa7db942cdd3ddfb6",
+  "changed": "Implemented a read-only local reviewer-attestation verifier and CLI with caller-selected key, exact subject/revision/scope, externally selected lifecycle head, explicit consent and expiry/conflict/terminal withdrawal/supersession handling. No IV tag is issued.",
+  "proves": "Author15-control and2 affected clock/CLI phases pass; a different source reviewer actually ran all16 current controls successfully. Real CLI synthetic declaration/withdrawal/tamper cases return0/3/2. Initial malformed-fixture failure and source phases are preserved.",
+  "limits": "Published test keys and synthetic declarations do not establish a real human review, identity, independence, accuracy, timestamp or global withdrawal completeness. No operating key/private user key, endpoint, registry/taxonomy change, deployment or full T-IV closure; human route acceptance remains open.",
+  "scope_ids": [
+    "T-IV"
+  ],
+  "files": {
+    "protocol/reviewer-attestations.cjs": "a4736746394e73d445c33739168a61d85ba6466f63906d47bac49a888b4d2ae9",
+    "scripts/reviewer-attestation.cjs": "10130ff34c0e84af08da842d97264defb8b0f6816eb8e820fa9fa4df606541b1",
+    "tests/reviewer-attestations.cjs": "055f492f774bc0c1139766b68d9d50ca8ec13e4d59b32567058b971d096b1eae",
+    "docs/reviewer-attestation-plan.md": "c65ef2aab639f72578988b29c80ce61d996e7907af60e5b1d683f36c7561f54f",
+    "docs/reviewer-attestations.md": "7d9487cb560bc8d9f2c19167495b408883dda0414a825e89fddb1af48d1a54af",
+    "runs/2026-11-23-reviewer-attestation.json": "60df759814faf01d9286828d49069e473b49b6b5247162e95ba59e8933cacb38"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-reviewer-attestation.json",
+      "sha256": "60df759814faf01d9286828d49069e473b49b6b5247162e95ba59e8933cacb38"
+    }
+  ],
+  "checks": [],
+  "different_review_sha256": "050e5ca72ce05cd07067b739415f5b4663d6d9d35872dde9c340e42e2b12410a"
+}
