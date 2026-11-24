@@ -107,6 +107,41 @@ class AccountAPITests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual((await self.call(alice, 'GET', '/history')).status_code, 401)
         self.assertEqual((await self.call(bob, 'GET', '/history')).status_code, 200)
 
+    async def test_history_result_filter_is_closed_and_export_remains_complete(self):
+        client, owner = await self.signup('api-filter')
+        self.grants[owner] = NOW + 100
+        self.assertEqual((await self.call(client, 'POST', '/history', {'operation': 'enable', 'acknowledge_metadata': True})).status_code, 200)
+        for state in ('FINDING', 'NO_FINDING'):
+            item = record()
+            item['state'] = state
+            self.assertEqual((await self.call(client, 'POST', '/history', {'operation': 'append', 'record': item})).status_code, 200)
+        response = await self.call(client, 'GET', '/history?state=NO_FINDING&limit=1')
+        self.assertEqual(response.status_code, 200)
+        value = response.json()
+        self.assertEqual((value['total_entries'], value['matching_entries']), (2, 1))
+        self.assertEqual([r['state'] for r in value['items']], ['NO_FINDING'])
+        for query in ('state=UNKNOWN', 'state=FINDING&state=NO_FINDING', 'state=', 'role=admin'):
+            self.assertEqual((await self.call(client, 'GET', '/history?' + query)).status_code, 400)
+        self.engine_failed = True
+        exported = await self.call(client, 'GET', '/history/export')
+        self.assertEqual(exported.status_code, 200)
+        self.assertEqual(len(exported.json()['items']), 2)
+
+    async def test_optional_read_binding_refuses_cross_tab_principal_swap(self):
+        alice, _ = await self.signup('tab-alice')
+        bob, _ = await self.signup('tab-bob')
+        alice_binding = self.csrf[id(alice)]
+        bob_binding = self.csrf[id(bob)]
+        self.assertNotEqual(alice_binding, bob_binding)
+        for endpoint in ('/history', '/history/export', '/entitlements'):
+            response = await self.call(bob, 'GET', endpoint, headers={'X-CSRF-Token': alice_binding})
+            self.assertEqual(response.status_code, 403)
+            self.assertEqual(response.json()['reason'], 'csrf_refused')
+            self.assertNotIn('items', response.json())
+            valid = await self.call(bob, 'GET', endpoint, headers={'X-CSRF-Token': bob_binding})
+            self.assertEqual(valid.status_code, 200)
+        self.assertEqual((await self.call(bob, 'GET', '/history')).status_code, 200)
+
     async def test_csrf_origin_installation_token_and_mass_assignment_refuse(self):
         client, owner = await self.signup('api-guard')
         for headers in ({'X-CSRF-Token': '0' * 64}, {'Origin': 'https://other.invalid'}, {'X-CSRF-Token': 'é' * 64}):

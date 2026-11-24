@@ -48,6 +48,34 @@ class AccountStoreTests(unittest.TestCase):
         self.assertEqual(self.path.stat().st_mode & 0o777, 0o700)
         self.assertEqual((self.path / 'accounts.sqlite').stat().st_mode & 0o777, 0o600)
 
+    def test_state_filter_paginates_matching_owner_records_without_changing_export(self):
+        self.store.history_change(self.secret, NOW, 'enable', self.active, acknowledge=True)
+        records = []
+        for state in ('FINDING', 'NO_FINDING', 'FINDING'):
+            item = record()
+            item['event_id'] = str(uuid.uuid4())
+            item['state'] = state
+            records.append(self.store.history_change(self.secret, NOW, 'append', self.active, record=item))
+        first = self.store.history_list(self.secret, NOW, state='FINDING', limit=1)
+        self.assertEqual(first['items'], [records[0]])
+        self.assertEqual((first['total_entries'], first['matching_entries']), (3, 2))
+        self.assertEqual(first['next'], records[0]['event_id'])
+        second = self.store.history_list(self.secret, NOW, state='FINDING', after=first['next'], limit=1)
+        self.assertEqual(second['items'], [records[2]])
+        self.assertIsNone(second['next'])
+        for bad_cursor in (records[1]['event_id'], str(uuid.uuid4())):
+            with self.assertRaises(c.AccountError) as error:
+                self.store.history_list(self.secret, NOW, state='FINDING', after=bad_cursor)
+            self.assertEqual(error.exception.status, 404)
+        empty = self.store.history_list(self.secret, NOW, state='UNAVAILABLE')
+        self.assertEqual((empty['items'], empty['matching_entries'], empty['total_entries']), ([], 0, 3))
+        self.assertEqual(self.store.history_list(self.secret, NOW, export=True)['items'], records)
+        for bad in ('UNKNOWN', '', False, ['FINDING']):
+            with self.assertRaises(c.AccountError):
+                self.store.history_list(self.secret, NOW, state=bad)
+        with self.assertRaises(c.AccountError):
+            self.store.history_list(self.secret, NOW, state='FINDING', export=True)
+
     def test_opt_in_inactive_outage_and_export_delete_independence(self):
         with self.assertRaises(c.AccountError):
             self.store.history_change(self.secret, NOW, 'append', self.active, record=record())

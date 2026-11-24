@@ -195,7 +195,7 @@ def create_app(store: AccountStore, *, origin: str, host: str, entitlement,
     async def check(request, authenticated):
         value, now, peer = context(request)
         c.need(value is not None, 'authentication_required', 401)
-        if request.method != 'GET':
+        if request.method != 'GET' or 'x-csrf-token' in request.headers:
             supplied = request.headers.get('x-csrf-token', '')
             c.need(re.fullmatch('[a-f0-9]{64}', supplied) is not None
                    and hmac.compare_digest(supplied, c.csrf(value)), 'csrf_refused', 403)
@@ -266,11 +266,11 @@ def create_app(store: AccountStore, *, origin: str, host: str, entitlement,
     @private.get('/history')
     async def history(request: Request):
         query = request.query_params
-        c.need(set(query) <= {'after', 'limit'} and len(query.multi_items()) == len(query))
+        c.need(set(query) <= {'after', 'limit', 'state'} and len(query.multi_items()) == len(query))
         limit = query.get('limit', '50')
         c.need(re.fullmatch('[1-9][0-9]?', limit) is not None)
         value, now, _ = context(request)
-        return await work(store.history_list, value, now, after=query.get('after'), limit=int(limit))
+        return await work(store.history_list, value, now, after=query.get('after'), limit=int(limit), state=query.get('state'))
 
     @private.get('/history/export')
     async def export(request: Request):

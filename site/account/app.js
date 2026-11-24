@@ -10,6 +10,7 @@ async function request(path, method='GET', data) {
   const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 10000);
   try {
     const headers = {'Accept':'application/json'};
+    if(session?.csrf_token) headers['X-CSRF-Token']=session.csrf_token;
     if (method !== 'GET') { headers['Content-Type']='application/json'; headers['X-CSRF-Token']=session?.csrf_token || ''; }
     const response = await fetch(API+path,{method,headers,credentials:'same-origin',mode:'cors',redirect:'error',referrerPolicy:'no-referrer',cache:'no-store',signal:controller.signal,body:data===undefined?undefined:JSON.stringify(data)});
     const type = response.headers.get('content-type') || '';
@@ -32,7 +33,7 @@ async function action(work) {
   finally { busy=false; $('main').setAttribute('aria-busy','false'); updateControls(); }
 }
 function updateControls() {
-  document.querySelectorAll('main button, main input').forEach(element=>{element.disabled=busy;});
+  document.querySelectorAll('main button, main input, main select').forEach(element=>{element.disabled=busy;});
   $('save-summary').disabled=busy || !pendingRecord || !session?.history_enabled || entitlement?.state!=='ACTIVE';
   $('import-section').hidden=!session?.authenticated || !session.history_enabled || entitlement?.state!=='ACTIVE';
 }
@@ -46,6 +47,7 @@ function resetPrivateView() {
   session=null; entitlement=null; pendingRecord=null; next=null;
   $('signed-in').hidden=true; $('auth').hidden=true;
   $('history-list').replaceChildren(); $('more').hidden=true; $('empty').hidden=false;
+  $('history-filter').value=''; $('history-count').textContent=''; $('history-error').hidden=true; $('history-error').textContent=''; $('history-retry').hidden=true;
   $('summary-file').value=''; $('confirm-password').value='';
   $('import-preview').textContent='The file stays on this device until you choose Save summary. Only the tag, result and public method details are sent; original viewing time is unknown.';
   $('welcome').textContent=''; $('access').textContent=''; $('history-enabled').checked=false;
@@ -76,13 +78,35 @@ function item(record) {
   const note=document.createElement('p'); note.className='entry-note'; note.textContent=record.explanation;
   const remove=document.createElement('button'); remove.type='button'; remove.className='quiet'; remove.textContent='Delete summary';
   remove.addEventListener('click',()=>action(async()=>{await request('/history/'+encodeURIComponent(record.event_id),'DELETE'); await loadHistory(); announce('Summary deleted from active history.');}));
-  li.append(title,when,note,remove); return li;
+  const details=document.createElement('details'); details.className='method-details';
+  const summary=document.createElement('summary'); summary.textContent='About this saved result';
+  const source=document.createElement('p'); source.textContent=(record.adapter==='summary-import'?'Imported summary. Original viewing time and location are unknown.':'Client-declared record. Its viewing time and location are not independently verified.')+' The original text and individual evidence were not saved.';
+  details.append(summary,source);
+  if(record.method){
+    const method=document.createElement('p'); method.textContent='Method: '+record.method.name+' · '+record.method.revision;
+    const identity=document.createElement('code'); identity.textContent=record.method.sha256;
+    const identityLabel=document.createElement('p'); identityLabel.textContent='Public method identifier: '; identityLabel.append(identity);
+    details.append(method,identityLabel);
+  }
+  li.append(title,when,note,details,remove); return li;
 }
 async function loadHistory(append=false) {
-  const value=await request('/history'+(append&&next?'?after='+encodeURIComponent(next)+'&limit=50':'?limit=50'));
-  if (!append) $('history-list').replaceChildren();
-  for (const record of value.items) $('history-list').append(item(record));
-  next=value.next; $('more').hidden=!next; $('empty').hidden=$('history-list').children.length>0;
+  const selected=$('history-filter').value;
+  $('history-error').hidden=true; $('history-retry').hidden=true;
+  if(!append){$('history-list').replaceChildren(); next=null; $('more').hidden=true; $('empty').hidden=true; $('history-count').textContent='Loading your history…';}
+  try {
+    const value=await request('/history?limit=50'+(selected?'&state='+encodeURIComponent(selected):'')+(append&&next?'&after='+encodeURIComponent(next):''));
+    for (const record of value.items) $('history-list').append(item(record));
+    next=value.next; $('more').hidden=!next;
+    const shown=$('history-list').children.length;
+    $('history-count').textContent=shown+' of '+value.matching_entries+' matching summaries · '+value.total_entries+' saved overall';
+    $('empty').hidden=shown>0;
+    $('empty').textContent=selected?'No saved summaries match this result. Choose All results to see the rest.':'No saved summaries yet. You can keep checking for free.';
+  } catch(error) {
+    $('history-list').replaceChildren(); next=null; $('more').hidden=true; $('empty').hidden=true;
+    $('history-count').textContent='History unavailable'; $('history-error').textContent=error.message || 'Your saved history could not be loaded.';
+    $('history-error').hidden=false; $('history-retry').hidden=false; throw error;
+  }
 }
 function parseSummary(value) {
   const keys=['format','tag','state','method_sha256','stage','independently_validated','training_label','text_included','subject_identifier_included','evidence_positions_included','detail_reference'];
@@ -121,6 +145,8 @@ $('save-summary').addEventListener('click',()=>action(async()=>{
 }));
 $('refresh').addEventListener('click',()=>action(async()=>{await loadSession();announce('History refreshed.');}));
 $('more').addEventListener('click',()=>action(()=>loadHistory(true)));
+$('history-filter').addEventListener('change',()=>action(()=>loadHistory()));
+$('history-retry').addEventListener('click',()=>action(()=>loadHistory()));
 $('export').addEventListener('click',()=>action(async()=>{
   const value=await request('/history/export');const url=URL.createObjectURL(new Blob([JSON.stringify(value,null,2)],{type:'application/json'}));
   const a=document.createElement('a');a.href=url;a.download='ai-trust-id-personal-history.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);announce('History export downloaded. Keep this private.');

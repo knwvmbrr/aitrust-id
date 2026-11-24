@@ -268,7 +268,7 @@ class AccountStore:
 
     def _history(self, db, account_id, now):
         db.execute('DELETE FROM history WHERE account_id=? AND created_at<=?', (account_id, now - c.RETENTION))
-        rows = db.execute('SELECT sequence,event_id,created_at,length(payload) AS bytes FROM history WHERE account_id=? ORDER BY sequence', (account_id,)).fetchall()
+        rows = db.execute('SELECT sequence,event_id,created_at,length(payload) AS bytes,payload FROM history WHERE account_id=? ORDER BY sequence', (account_id,)).fetchall()
         c.need(len(rows) <= c.HISTORY_COUNT and all(type(r['bytes']) is int and 0 < r['bytes'] <= c.RECORD_BYTES for r in rows)
                and all(type(r['created_at']) is int and now - c.RETENTION < r['created_at'] <= now for r in rows)
                and sum(r['bytes'] for r in rows) <= c.HISTORY_BYTES, 'storage_unavailable', 503)
@@ -285,29 +285,34 @@ class AccountStore:
         except (KeyError, ValueError, TypeError):
             raise c.AccountError('storage_unavailable', 503) from None
 
-    def history_list(self, value, now, *, after=None, limit=50, export=False):
+    def history_list(self, value, now, *, after=None, limit=50, export=False, state=None):
         c.need(type(limit) is int and 1 <= limit <= 50)
+        c.need(state is None or type(state) is str and state in c.EXPLANATIONS)
+        c.need(not export or state is None and after is None)
         if after is not None:
             c.identity(after)
         with self._db(now) as (db, now):
             account_id = self._session(db, value, now)
             rows = self._history(db, account_id, now)
+            parsed = {}
+            for row in rows:
+                item = self._record(row['payload'], row['created_at'])
+                c.need(item['event_id'] == row['event_id'], 'storage_unavailable', 503)
+                parsed[row['event_id']] = item
+            matching = rows if state is None else [r for r in rows if parsed[r['event_id']]['state'] == state]
             cursor = 0
             if after is not None:
-                selected = [r for r in rows if r['event_id'] == after]
+                selected = [r for r in matching if r['event_id'] == after]
                 c.need(len(selected) == 1, 'not_found', 404)
                 cursor = selected[0]['sequence']
-            chosen = rows if export else [r for r in rows if r['sequence'] > cursor][:limit]
-            items = []
-            for row in chosen:
-                raw = db.execute('SELECT payload FROM history WHERE account_id=? AND event_id=?', (account_id, row['event_id'])).fetchone()[0]
-                item = self._record(raw, row['created_at'])
-                c.need(item['event_id'] == row['event_id'], 'storage_unavailable', 503)
-                items.append(item)
+            remaining = [r for r in matching if r['sequence'] > cursor]
+            chosen = matching if export else remaining[:limit]
+            items = [parsed[r['event_id']] for r in chosen]
             enabled = db.execute('SELECT history_enabled FROM accounts WHERE account_id=?', (account_id,)).fetchone()[0]
             result = {'format': 'personal-tag-history-export/v1' if export else 'personal-tag-history-page/v1',
                       'items': items, 'history_enabled': bool(enabled), 'retention_days': 30,
-                      'total_entries': len(rows), 'next': chosen[-1]['event_id'] if not export and len([r for r in rows if r['sequence'] > cursor]) > len(chosen) else None,
+                      'total_entries': len(rows), 'matching_entries': len(matching),
+                      'next': chosen[-1]['event_id'] if not export and len(remaining) > len(chosen) else None,
                       'research_consent': False, 'verified_assertions': False}
         return result
 

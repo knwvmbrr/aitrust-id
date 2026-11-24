@@ -789,7 +789,7 @@
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
     "candidate_source": "https://theailab.org/ai-trust-registry",
-    "observed_mark": "AI Trust ID\u2122",
+    "observed_mark": "AI Trust ID™",
     "registration_priority_and_legal_conflict_verified": false
   },
   "market_research": {
@@ -1610,7 +1610,7 @@
     "active_retention_days": 30,
     "backup_expiry_days": 7,
     "invitation_only": true,
-    "owner_role": "Michael \u2014 accepted accountable pilot operator and access approver",
+    "owner_role": "Michael — accepted accountable pilot operator and access approver",
     "owner_decision": "runs/2026-10-13-metadata-pilot-owner-decision.json",
     "policy": "deploy/research/metadata-pilot-policy.json"
   },
@@ -5772,8 +5772,8 @@
     "marketing_operating_model": "Owner as human CMO with final post/account/time approval; separate content and fact-check roles; proposed two-week pilot, no social posting or purchase authorized by planning."
   },
   "account_history_delivery": {
-    "recorded_at": "2026-11-24T17:14:12.021406+00:00",
-    "phase": "working_isolated_HTTP_and_browser_qualified",
+    "recorded_at": "2026-11-24T18:03:56.296255+00:00",
+    "phase": "working_isolated_HTTP_browser_with_filters_and_read_binding",
     "signup_publicly_live": false,
     "account_engineer": "/root/seo",
     "browser_and_entitlements_engineer": "/root",
@@ -5789,7 +5789,11 @@
       "WebKit"
     ],
     "principal_reset_regressions": 4,
-    "actual_current_browser_workflow_pass": true
+    "actual_current_browser_workflow_pass": true,
+    "latest_evidence": "runs/2026-11-24-history-filter-session-binding.json",
+    "history_state_filter": true,
+    "full_export_ignores_filter": true,
+    "optional_read_session_binding": true
   },
   "current_image_reference_qualification": {
     "recorded_at": "2026-11-24T16:18:02.427997+00:00",
@@ -5801,5 +5805,19 @@
     "AI_origin": "unknown",
     "tags": [],
     "original_requirement_closed": false
+  },
+  "testflight_current_status_check": {
+    "checked_at": "2026-11-24T18:03:56.296255+00:00",
+    "status": "UNVERIFIED",
+    "reason": "Chrome control transport unavailable; no configured App Store status API.",
+    "latest_observed_evidence": "runs/2026-11-21-testflight-build-testing-confirmed.json",
+    "latest_observed_date": "2026-11-21",
+    "latest_observed_build": "1.0 (1)",
+    "latest_observed_state": "Testing",
+    "owner_was": "Invited",
+    "physical_install_confirmed": false,
+    "new_build_uploaded_this_turn": false,
+    "evidence": "runs/2026-11-24-history-filter-session-binding.json",
+    "owner_invitation_last_observed_date": "2026-11-18"
   }
 }

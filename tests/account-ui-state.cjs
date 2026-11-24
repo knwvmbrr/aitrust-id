@@ -29,7 +29,7 @@ async function fixture() {
   const context=vm.createContext({document,window:{matchMedia:()=>({matches:false})},localStorage:{getItem:()=>null},setTimeout,clearTimeout,AbortController,Date,TextDecoder,crypto:{randomUUID},
     fetch:async(url, options)=>{
       assert.equal(typeof url,'string'); assert(url.startsWith('/v1/account/'));
-      assert(calls.length<64, 'bounded inert requests'); calls.push({url,owner:state.owner,method:options.method});
+      assert(calls.length<64, 'bounded inert requests'); calls.push({url,owner:state.owner,method:options.method,binding:options.headers['X-CSRF-Token']});
       let value, ok=true;
       if(url==='/v1/account/session') {
         if(state.sessionFailure) {value={reason:'storage_unavailable'};ok=false;}
@@ -37,7 +37,12 @@ async function fixture() {
       } else if(url==='/v1/account/entitlements') value={state:'ACTIVE',valid_until:2_000_000_000};
       else if(url.startsWith('/v1/account/history')) {
         if(state.historyFailure) {value={reason:'storage_unavailable'};ok=false;}
-        else value={items:[privateItem(state.marker)],next:state.next};
+        else {
+          const all=state.items || [privateItem(state.marker)];
+          const filter=new URL(url,'https://review.invalid').searchParams.get('state');
+          const matching=filter?all.filter(item=>item.state===filter):all;
+          value={items:matching,next:state.next,total_entries:all.length,matching_entries:matching.length};
+        }
       } else assert.fail('unexpected endpoint');
       return {ok,headers:{get:()=> 'application/json'},json:async()=>value};
     }});
@@ -54,7 +59,9 @@ test('new principal history failure cannot render the previous owner record',asy
   assert.equal(f.get('welcome').textContent,'Hi, b.');
   assert.equal(f.get('history-list').children.length,0);
   assert.equal(f.get('more').hidden,true);
-  assert.equal(f.get('empty').hidden,false);
+  assert.equal(f.get('empty').hidden,true);
+  assert.equal(f.get('history-error').hidden,false);
+  assert.equal(f.get('history-retry').hidden,false);
   assert(!rendered(f.get('history-list')).includes('a private record'));
   assert(f.get('notice').textContent.includes('storage'));
 });
@@ -93,4 +100,34 @@ test('successful same-owner refresh renders fresh results and pagination once',a
   assert(rendered(f.get('history-list')).includes('a refreshed private record'));
   assert(!rendered(f.get('history-list')).includes('a private record'));
   assert.equal(f.get('more').hidden,true);assert.equal(f.get('empty').hidden,true);
+});
+
+test('state filter starts a fresh page and keeps complete-history export separate',async()=>{
+  const f=await fixture();f.state.items=[privateItem('finding'),{...privateItem('clear'),state:'NO_FINDING'}];f.state.next=null;
+  f.get('history-filter').value='NO_FINDING';f.get('history-filter').fire('change');await f.settle();
+  assert.equal(f.get('history-list').children.length,1);
+  assert(rendered(f.get('history-list')).includes('clear private record'));
+  assert(!rendered(f.get('history-list')).includes('a private record'));
+  assert(f.calls.at(-1).url.includes('state=NO_FINDING'));
+  assert(!f.calls.at(-1).url.includes('after='));
+  assert.equal(f.get('history-count').textContent,'1 of 1 matching summaries · 2 saved overall');
+  f.get('history-filter').value='UNAVAILABLE';f.get('history-filter').fire('change');await f.settle();
+  assert.equal(f.get('history-list').children.length,0);
+  assert(f.get('empty').textContent.includes('All results'));
+});
+
+test('failed filtered history clears stale rows and the visible retry recovers',async()=>{
+  const f=await fixture();f.state.historyFailure=true;
+  f.get('history-filter').value='FINDING';f.get('history-filter').fire('change');await f.settle();
+  assert.equal(f.get('history-list').children.length,0);assert.equal(f.get('more').hidden,true);
+  assert.equal(f.get('history-error').hidden,false);assert.equal(f.get('history-retry').hidden,false);
+  assert.equal(f.get('history-count').textContent,'History unavailable');
+  f.state.historyFailure=false;f.state.next=null;f.get('history-retry').fire('click');await f.settle();
+  assert.equal(f.get('history-error').hidden,true);assert.equal(f.get('history-retry').hidden,true);
+  assert.equal(f.get('history-list').children.length,1);
+});
+
+test('authenticated browser reads carry the current session binding',async()=>{
+  const f=await fixture();
+  for(const call of f.calls.filter(item=>item.url!=='/v1/account/session')) assert.equal(call.binding,'0'.repeat(64));
 });

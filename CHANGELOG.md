@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-history-filter-session-binding
+
+Recorded 2026-11-24T18:03:56.296255+00:00 · Contributor: Codex /root; different source reviewer /root/web_camo · change
+
+- **Changed.** Add owner-only result-state filtering with correct counts/cursors, public method disclosure, safe unavailable/retry UI and optional validated GET session binding; update current TestFlight limits and account/native/source assignments.
+- **Evidence.** Three actual affected store/API groups and seven full-JS inert regressions pass; actual Chromium/WebKit signup/save/filter/read/export/delete workflow passes against real local HTTP and the real private access engine. Different source review clears all nine files. The exact history usability software job closes; originals136/66 remain unchanged. [Change record](./runs/changes/2026-11-24-history-filter-session-binding.json).
+- **Not claimed.** No fresh Apple/TestFlight verification or installation, no new app upload, public signup, real payment, production PostgreSQL, physical/human accessibility, independent accuracy, all14-route clearance or original closure. Chromium-only reflow/axe/external-request instrumentation is distinguished from WebKit signin/history observations.
+
+
 ### 2026-11-24-account-history-browser
 
 Recorded 2026-11-24T17:14:12.021406+00:00 · Contributor: Codex /root; /root/seo account/UI review; /root/share_debugger clock review · change

@@ -91,3 +91,36 @@ service/operator privilege separation, abuse controls, operational retention and
 backup/recovery/deletion, account recovery, production deployment and applicable
 policies. Real subscription checkout, provider verification, prices and commercial
 terms are separate. The free checker has no account-service import or dependency.
+
+## Result filtering increment — architecture before implementation
+
+November 24, 2026. Keep the existing GET `/v1/account/history` route; add only an
+optional `state` drawn from the existing four result states. The store validates
+all retained payloads before filtering, then paginates the selected owner's
+matching records. Cursors from another filter or owner refuse. `total_entries`
+keeps its previous meaning (all retained owner records); `matching_entries`
+reports this filter's count. The separate export route always exports all
+retained owner records and never depends on access/payment assessment.
+
+The browser offers a labeled native select, a readable count, and a clear empty
+filter message. Session changes reset the filter with all other private state.
+Changing filters fetches the first page rather than mixing old cursor/results.
+A failed filter request clears the rendered list and shows unavailable with a
+retry action; it does not show stale records as new results. The stored public
+method can be expanded using native details, with explicit imported-summary
+limits and no invented input or original viewing time. No raw text, new subject
+fingerprint, training consent, payment authority or public activation is added.
+
+Verify actual mixed-state pagination, cursor/owner refusal and inactive export;
+then run the actual page with the existing private service and focused browser
+observations. Database production deployment remains separately qualified.
+
+A read started in a different signed-in tab must not silently display the new
+account under the old tab's identity. Before editing the guard: the browser will
+send its known session CSRF binding on account reads as well as writes. The
+server will validate any supplied binding on GET too. Legacy authenticated GET
+clients without this optional header keep their existing contract; the web UI
+always supplies it after bootstrap. A stale cookie/header pair refuses before
+history/export is read. Session bootstrap remains the explicit fresh-identity
+operation. Verify with two real authenticated clients whose cookies and binding
+are deliberately crossed; no new credential, route or client identity claim.

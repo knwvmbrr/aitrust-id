@@ -1,3 +1,9 @@
+## Current account usability and real rollout — 2026-11-24T18:03:56.296255+00:00
+
+**35 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** Saved history now filters by result, shows its public method and retries failures without stale entries; authenticated web reads are bound to the displayed session. Actual current Chromium/WebKit workflow and different source review pass. PostgreSQL operation, early native Sources navigation and protected fitting-source publication are active bounded jobs. No real payment, public account collection, new app upload or fresh TestFlight availability is claimed. The latest actual Apple observation remains November21 Testing/owner Invited; today’s browser transport is unavailable.
+
+[Actual filter/read-binding evidence](../runs/2026-11-24-history-filter-session-binding.json) · [Current working account guide](account-history-ui.md)
+
 ## Working signup and private history — 2026-11-24T17:14:12.021406+00:00
 
 **34 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The registered account integration job now completes actual signup, server-owned access, PS-summary save, revisit, sign-in, export/deletion after access revocation and account removal in Chromium/WebKit. A separately reproduced stale-principal display defect is corrected with four actual full-JS inert regressions. Public signup, real payments, production PostgreSQL, physical phones and automatic native/extension viewing history remain separate open outcomes. /root/seo owns account implementation and next source admission; /root owns browser/access integration, review and publication; /root/web_camo continues current native size qualification; /root/share_debugger implements mandatory selected C2PA notice carrying. These are dated assignments, not permanent bots.

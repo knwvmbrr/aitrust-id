@@ -14802,7 +14802,7 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-11-24T17:14:12.021406+00:00",
+      "audited_at": "2026-11-24T18:03:56.296255+00:00",
       "checked_by": "Codex /root; different frontend review /root/seo and entitlement-clock review /root/share_debugger",
       "implemented_by": [
         "Codex /root — browser and access integration",
@@ -14822,9 +14822,10 @@
         "runs/2026-11-24-history-access-engine.json",
         "runs/2026-11-24-account-history-browser.json",
         "runs/2026-11-24-account-history-delivery.json",
-        "docs/account-history-ui.md"
+        "docs/account-history-ui.md",
+        "runs/2026-11-24-history-filter-session-binding.json"
       ],
-      "evidence_scope": "Working isolated development signup, sessions, owner-only metadata history and real Chromium/WebKit workflow, default-off opt-in, actual operator grants and access-independent export/deletion. No merchant/verified payments, public signup, production PostgreSQL, native/extension display binding, verified viewing time/location or human acceptance. The full paid-history enhancement remains20% because its complete bounded product mechanism is not yet delivered.",
+      "evidence_scope": "Working isolated development signup, sessions, owner-only metadata history and real Chromium/WebKit workflow, default-off opt-in, actual operator grants and access-independent export/deletion. No merchant/verified payments, public signup, production PostgreSQL, native/extension display binding, verified viewing time/location or human acceptance. The full paid-history enhancement remains20% because its complete bounded product mechanism is not yet delivered. Result-state filtering, exact overall/matching counts, method disclosure, failure retry and browser read binding now pass actual private service/browser checks. PostgreSQL deployment is an active separate increment; no real payment/public collection is asserted.",
       "required_acceptance": [
         "Actual consent/check/revisit/filter/delete/disable and quota/expiry/corruption/migration failures preserve all checking.",
         "Stored metadata excludes raw inputs, private URLs/excerpts and screenshots by default; explicit optional exports are previewed and no research/network submission occurs.",

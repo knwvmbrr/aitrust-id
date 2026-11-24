@@ -58,7 +58,14 @@
       <section class="card" aria-labelledby="history-title">
         <div class="row"><h2 id="history-title">Your history</h2><button id="refresh" type="button" class="quiet">Refresh</button></div>
         <p class="help">Saved summaries expire after 30 days. Imported summaries are not verified assertions or independent accuracy evidence.</p>
-        <p id="empty">No saved summaries yet.</p><ul id="history-list" aria-label="Saved summaries"></ul>
+        <label for="history-filter">Show results</label>
+        <select id="history-filter" aria-describedby="history-count">
+          <option value="">All results</option><option value="FINDING">Take a closer look</option><option value="NO_FINDING">No pattern found</option><option value="UNAVAILABLE">Check unavailable</option><option value="UNSUPPORTED">Not supported</option>
+        </select>
+        <p id="history-count" class="help" role="status"></p>
+        <p id="history-error" class="help" hidden></p>
+        <button id="history-retry" type="button" class="quiet" hidden>Try history again</button>
+        <p id="empty">No saved summaries yet. You can keep checking for free.</p><ul id="history-list" aria-label="Saved summaries"></ul>
         <button id="more" type="button" class="quiet" hidden>Load more</button>
         <div class="actions"><button id="export" type="button" class="quiet">Export history</button><button id="delete-history" type="button" class="quiet">Delete all history</button></div>
         <p class="help">Export and deletion remain available when access expires.</p>
