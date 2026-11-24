@@ -363,3 +363,45 @@ Different ROOT source review, normal authored guard/commit, fresh88 strict-basel
 ### Source-control portability correction before test-only repair
 
 First two focused controls at the unchanged candidate production4ee21a passed current source identity and refused the inert child before infer on Darwin: actual RLIMIT_AS set to8GiB raises ValueError/current limit exceeds maximum. Exact first failure/log and an owned stdlib-only child stderr reproduction are retained. This is the Mac fixture invoking a Linux-only resource configuration, not an actual Linux cache-root/SDK result. Before test edit: the inert Darwin child alone intercepts the AS setter with a no-op; other limit calls remain actual, and the real Linux source-gate child keeps every original setter. No production resource code or Linux limit changes, no SDK execution and no Linux/kernel success claim from Mac controls. Source test still actually verifies same500 owned inode/empty root/exist_ok/no child writes/parent environment/reap/removal.
+
+
+## Existing reference outcome retention — approved pre-code repair
+
+Recorded 2026-11-24T13:26:22.703562+00:00 by Codex /root/seo on isolated codex/image-reference-validation froma561edef7d23e36fc626ee823131d4cd20efdf04. ROOT approved full precode5addac3077be7854ef4b5221830f73df4ea4780ca72e54a1120d61a0cc816ce0 before feature code. No hosted retry follows from implementation.
+
+Actual45338020992/attempt1/job138254627069 passed source101/acquisition/installfixtures. First gradient production result was validatedOBSERVED/exit0 and actual_model_forward_completed:true. Only missing_model/no_sdk completed; then primaryQualificationRefused occurred before a reference observation was retained. Current source permits either reference process/decode/validation failure or crop/logit mismatch. No exact new cause is inferred. Failed2JSON/API/ZIP/log, strictproviderrefusal and CLEAN owned removal versus failed finalization remain immutable (diagnosis73d1c62ccd9c6ff7931682d77f990664adbabac8c45f7acc79774927a0574c84).
+
+## Minimal repair
+
+1. In the existing --reference-worker exception handler ONLY, emit bounded failed-only metadata for the actual already-attempted call: fixed reference-failure format, diagnostic_only:true, fixed worker-exception stage, existing whitelisted exception class, existing a.REASONS refusal or fixed reference_unavailable, whitelisted exact-int errno/null and fixed source5 hashes (verifier/reference helper/worker/runtime/supervisor). No error text, filename, trace, env, image/model path or payload. At most2048B. If this metadata itself fails, retain the old fixed unavailable fallback. The successful reference six-key result stays byte-schema identical. No extra infer invocation, model import or SDKprobe.
+
+2. Parent reference() tracks a source-owned fixed fixture/reference call ID and closed stage before process, decode, worker refusal and result validation. Validate the bounded failure metadata/source identities; record exact closed outcome then preserve qualification refusal. Legacy fixed unavailable/invalid wire is a reference refusal, never a numerical mismatch or success. Keep existing actual request, PrivateHome500, supervisor150, worker limits and cleanup. Diagnostic error cannot erase the primary failure.
+
+3. Immediately after one valid reference result, retain ONLY current synthetic comparison facts before assertions: finite production/reference logits, both closed crop fingerprints or crop_equal, exact existing math.isclose result and finite absolute difference/null if overflow. Set explicit crop_comparison then logit_comparison boundary; require both original conditions. ABS1e-4/REL1e-5 unchanged. Crop mismatch/refusal/logit mismatch are distinct. No input bytes, decoded pixels, tensor/model dumps, arbitrary labels/paths/stack. This is already computed finite metadata, not an additional forward or invented success.
+
+4. Keep one active reference-diagnostic dictionary per current call; clear before each production call and after a successful pair. Attach it only when that existing reference/comparison failed, within original combined failure_diagnostics4096B. Per-reference metadata<=1536B, strict keys/enums/finite primitive types; failure-only worker wire<=2048B. Existing SDK diagnostic admission remains unchanged, and reference failure cannot trigger another SDK probe (last productionOBSERVED). Overall successful25-key candidate, three observations and17-case/numeric gates unchanged. Both public conditional envelopes/provider SUCCESS/cleanup/notice/seal remain unchanged. No failure-finalizationB, tolerance/cache/permission/budget change.
+
+## Source and verification
+
+Own only scripts/verify-visual-score-qualification.py, tests/test_visual_score_qualification.py, existing docs/offline-image-score-qualification-plan.md plus fresh runs/2026-11-24-image-reference-validation.json and matching runs/changes event/CHL after review. Original tools/visual_score_reference.py math and all worker/runtime/assets/cache-root/supervisor/39lock/companion bytes remain exacta561. No new source input;88 and33/36/5/27=101 stay fixed.
+
+Expand the existing grouped diagnostic test: inert actual-call refusal/invalid wire/process error; crop mismatch; logit mismatch; exact passing pair; closed noecho/bool/NaN/schema/overflow/output bounds; injected one-call counters and publication/diagnostic failure preserving original refusal. No optional SDK/native success in these controls. Use actual short-child/HOME cleanup only where needed; do not repeat unchanged101. One-off AST/source88 comparison must show unchanged reference math/three public Torch calls/positive schema/tolerances; focused group then distinct ROOT source review, normal guard/commit and fresh strict baseline precede separately authorized ONE hosted run. No retry now.
+
+## Risks and original acceptance
+
+Risks are accidental acceptance of failure metadata, masking a real crop/logit mismatch, spilling private values or exceeding4096B, and stale diagnostic state falsely attached to a later call. Strict failed-only schema/state, source-bound fixedIDs, finite scalar checks, preassert capture and clearing address them; every failed gate still refuses. Reporting a reference exception proves no numerical equivalence.
+
+No ADDITIONAL full original acceptance has been satisfied by this image attempt. T-FA requires positive origin evidence in an observed/attested workflow and explicitly says absent human evidence never establishes FA, with assisted-input/incomplete-capture/failure/saturation/recovery cases. One synthetic image model forward is not that origin evidence or the17-case qualification. F-057/X-02 remain full applicable release/dependency-boundary obligations; this source/reference repair grants neither. Existing136complete/66open/target60 and all acceptance criteria remain unchanged. No status/percentage/owner edits.
+
+
+### Focused reference control harness correction before repair
+
+Initial grouped control retained one failure: synthetic execution reached reference stage but made zero transport calls because the test mocked global os.readlink for every path, redirecting tempfile realpath while the new actual PrivateHome was created. A separate inert diagnostic exposed FileNotFoundError at reference created; no SDK/model call occurred. Before test-only repair, constrain only /proc/self/ns/net to the inert namespace and delegate all unrelated path readlink calls to the actual original function. Production source/namespace behavior and acceptance remain unchanged; preserve both raw failed control logs and source captures.
+
+
+Final wire precision before source freeze: reserve one of the original2048 failure-wire bytes for the existing stdout newline. Producer and typed worker-failure object validation require serialized body<=2047; actual wire including newline<=2048. No cap increase or success-six-key change; retain the earlier passing source phase separately.
+
+
+### Distinct cancellation correction — pre-code amendment
+
+Recorded 2026-11-24T13:41:20.931532+00:00. ROOT source review found that the four new compare_reference diagnostic-only BaseException catches can swallow a KeyboardInterrupt/SystemExit on a passing pair and return positive. Preserve original29db source bodies,3420 author run and old proof exactly as historical source-phase evidence. Before correction, change ONLY these four comparison diagnostic catches to ordinary Exception so cancellation propagates. Existing failure-report preservation handlers may keep BaseException because the original failure is re-raised/retained, never accepted. Add passing-pair comparison/final-update KeyboardInterrupt and SystemExit controls to the same grouped test; ordinary RuntimeError metadata faults must still preserve real comparison mismatch. Same101/88, positive6keys/17cases/numerics/caps/oneexistingreference call and no extra probe/forward. Do not overwrite old public run; current actual source/controls will be separately bound in the fresh event after distinct review.

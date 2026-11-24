@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-image-reference-validation
+
+Recorded 2026-11-24T13:44:40.059485+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Preserved the existing reference-call failure stage and precomparison facts so reference refusal, crop mismatch and logit mismatch remain distinct; comparison metadata now propagates control-flow cancellation.
+- **Evidence.** The corrected grouped control passes with88 stable current inputs, including KeyboardInterrupt/SystemExit propagation and ordinary metadata-fault refusal. ROOT independently read the current source and passed the grouped control. Original reference call count, success-six-key shape,17-case gate, numerical operands/tolerances, worker/cache/seal/limits remain unchanged. [Change record](./runs/changes/2026-11-24-image-reference-validation.json).
+- **Not claimed.** Historical author run3420 binds the pre-cancellation source phase only; current source/control/freeze and distinct review are embedded separately. No real local SDK/model or hosted retry, extra forward/probe, numerical equivalence, accuracy/redistribution/legal clearance or original closure. Actual prior first production forward is retained but reference cause and full qualification remain unknown; old failed artifacts/finalization unchanged.
+
 ### 2026-11-24-image-readonly-cache-root
 
 Recorded 2026-11-24T06:00:18.151368+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change

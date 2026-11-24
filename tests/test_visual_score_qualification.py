@@ -246,6 +246,93 @@ class QualificationTests(unittest.TestCase):
    self.assertFalse(report['pass']);self.assertFalse(report['actual_model_forward_completed']);self.assertEqual(report['reason'],'qualification_failed')
    # Secondary failure must not erase the primary last-call reason.
    self.assertEqual(report['failure_diagnostics']['last_call']['reason'],'worker_unavailable');self.assertNotIn('PRIVATE',json.dumps(report));self.assertLessEqual(len(json.dumps(report['failure_diagnostics']).encode()),4096)
+  # Existing reference calls only: inert wire/control records are never native positives.
+  ref_value={'reference':'HF-CLIPVisionModelWithProjection5.22.2-eager/no-L2/v1','raw_logit':.25,'crop_rgb_sha256':'a'*64,'AI_origin':'unknown','tags':[],'environment':isolation}
+  worker_failure=v.reference_failure(PermissionError(13,secret,secret));self.assertFalse(worker_failure['pass']);self.assertEqual(v.validate_reference_failure(worker_failure),worker_failure);self.assertNotIn('PRIVATE',json.dumps(worker_failure))
+  entry_code="import sys,runpy;sys.path.insert(0,sys.argv[1]);from tools import visual_score as c\ndef fail():raise PermissionError(13,'PRIVATE_CANARY','/PRIVATE_CANARY')\nc.worker=fail\nsys.argv=[sys.argv[2],'--reference-worker']\nrunpy.run_path(sys.argv[0],run_name='__main__')"
+  entry_wire=process.run([sys.executable,'-I','-S','-B','-c',entry_code,str(ROOT),str(ROOT/'scripts/verify-visual-score-qualification.py')],b'',3)
+  self.assertLessEqual(len(entry_wire),2048);self.assertNotIn(b'PRIVATE',entry_wire);entry_failure=v.validate_reference_failure(json.loads(entry_wire));self.assertEqual((entry_failure['exception_class'],entry_failure['errno']),('PermissionError',13))
+  for change in [lambda d:d.__setitem__('pass',True),lambda d:d.update(errno=True),lambda d:d.update(exception_class=secret),lambda d:d.update(reason=secret),lambda d:d.update(source_sha256={})]:
+   bad=json.loads(json.dumps(worker_failure));change(bad)
+   with self.assertRaises(q.QualificationRefused):v.validate_reference_failure(bad)
+  with tempfile.TemporaryDirectory()as folder:
+   image=Path(folder)/'inert';image.write_bytes(b'inert');models=Path(folder)/'no-model'
+   for wire,stage in [(worker_failure,'reference_worker_refused'),(core.unavailable('inference_unavailable'),'reference_worker_refused'),({'wrong':True},'reference_validation'),({**ref_value,'raw_logit':True},'reference_validation'),({**ref_value,'raw_logit':float('nan')},'reference_validation'),({**ref_value,'crop_rgb_sha256':secret},'reference_validation')]:
+    detail={}
+    with mock.patch.object(process,'run',return_value=json.dumps(wire).encode())as transport,self.assertRaises(q.QualificationRefused):v.reference(image,models,detail,'gradient.png_reference')
+    self.assertEqual(transport.call_count,1);self.assertEqual(detail['stage'],stage);self.assertEqual(detail['state'],'REFUSED');v.validate_reference_diagnostic(detail)
+   detail={}
+   with mock.patch.object(process,'run',return_value=b'not-json'),self.assertRaises(json.JSONDecodeError):v.reference(image,models,detail,'gradient.png_reference')
+   self.assertEqual(detail['reason'],'reference_decode_unavailable');v.validate_reference_diagnostic(detail)
+   detail={}
+   with mock.patch.object(process,'run',side_effect=assets.Refused('deadline')),self.assertRaises(assets.Refused):v.reference(image,models,detail,'gradient.png_reference')
+   self.assertEqual((detail['stage'],detail['reason']),('reference_process','deadline'));v.validate_reference_diagnostic(detail)
+   detail={}
+   with mock.patch.object(process,'run',return_value=json.dumps(ref_value).encode())as transport:
+    actual=v.reference(image,models,detail,'gradient.png_reference')
+   self.assertEqual(actual,ref_value);self.assertEqual(len(actual),6);self.assertEqual(transport.call_count,1)
+   production={'raw_logit':.25,'method':{'crop_rgb_sha256':'a'*64}}
+   v.compare_reference(production,actual,detail);self.assertEqual(detail['stage'],'compared');self.assertEqual(detail['comparison']['absolute_error'],0);v.validate_reference_diagnostic(detail)
+   for change in [lambda d:d['comparison'].update(production_logit=True),lambda d:d['comparison'].update(reference_logit=float('nan')),lambda d:d['comparison'].update(crop_equal=1),lambda d:d['comparison'].update(absolute_tolerance=.001),lambda d:d.update(reason=secret)]:
+    invalid=json.loads(json.dumps(detail));change(invalid)
+    with self.assertRaises(q.QualificationRefused):v.validate_reference_diagnostic(invalid)
+   # An error in optional failure metadata must not replace the original process error.
+   original=assets.Refused('deadline');detail={}
+   with mock.patch.object(process,'run',side_effect=original),mock.patch.object(v,'_reference_error',side_effect=ValueError(secret)):
+    with self.assertRaises(assets.Refused)as caught:v.reference(image,models,detail,'gradient.png_reference')
+   self.assertIs(caught.exception,original)
+   for expected,reason in [({**actual,'crop_rgb_sha256':'b'*64},'crop_mismatch'),({**actual,'raw_logit':.75},'logit_mismatch'),({**actual,'raw_logit':-1e308},'logit_mismatch')]:
+    detail={'call_id':'gradient.png_reference','stage':'reference_validated','state':'VALIDATED','reason':None,'exception_class':None,'errno':None,'worker_failure':None,'comparison':None}
+    value=production if expected['raw_logit']!=-1e308 else {'raw_logit':1e308,'method':production['method']}
+    with self.assertRaises(q.QualificationRefused):v.compare_reference(value,expected,detail)
+    self.assertEqual(detail['reason'],reason);v.validate_reference_diagnostic(detail)
+    if expected['raw_logit']==-1e308:self.assertIsNone(detail['comparison']['absolute_error']);self.assertTrue(detail['comparison']['absolute_error_overflow'])
+   class DiagnosticFault(dict):
+    def __setitem__(self,*args):raise OSError(secret)
+    def update(self,*args,**kwargs):raise OSError(secret)
+   with self.assertRaises(q.QualificationRefused):v.compare_reference(production,{**actual,'raw_logit':.75},DiagnosticFault())
+   class RuntimeMetadataFault(dict):
+    def __setitem__(self,*args):raise RuntimeError(secret)
+    def update(self,*args,**kwargs):raise RuntimeError(secret)
+   with self.assertRaises(q.QualificationRefused):v.compare_reference(production,{**actual,'raw_logit':.75},RuntimeMetadataFault())
+   # Successful-pair metadata must never swallow control-flow cancellation.
+   for error in (KeyboardInterrupt,SystemExit):
+    for boundary in ('comparison','final_update'):
+     class CancelledMetadata(dict):
+      def __setitem__(self,key,value):
+       if boundary=='comparison'and key=='comparison':raise error()
+       return super().__setitem__(key,value)
+      def update(self,*args,**kwargs):
+       if boundary=='final_update':raise error()
+       return super().update(*args,**kwargs)
+     accepted=False
+     with self.assertRaises(error):
+      v.compare_reference(production,actual,CancelledMetadata());accepted=True
+     self.assertFalse(accepted)
+  def ref_execution(mode,metadata_fault=False):
+   with tempfile.TemporaryDirectory()as folder:
+    stage=Path(folder);(stage/'tmp').mkdir();(stage/'fixtures').mkdir();(stage/'fixtures/gradient.png').write_bytes(b'inert');oldtemp=tempfile.tempdir;original_readlink=os.readlink;probe=mock.Mock();probe.connect.side_effect=OSError(101,'inert');calls=[]
+    def native(*args,diagnostic,call_id,**kwargs):
+     calls.append(call_id)
+     if call_id=='missing_model':record=core.unavailable('model_missing')
+     elif call_id=='no_sdk':record=core.unavailable('runtime_unavailable')
+     elif mode=='later_production'and call_id=='baseline.jpg_production':record=core.unavailable('worker_unavailable')
+     else:record={'state':'OBSERVED','raw_logit':.25,'method':{'crop_rgb_sha256':'a'*64},'subject':{}}
+     diagnostic.clear();diagnostic.update(call_id=call_id,phase='validated',state=record['state'],reason=record.get('reason'),exit_status=0 if record['state']=='OBSERVED'else 2,exception_class=None);return record
+    wire=worker_failure if mode=='refusal'else {**ref_value,'crop_rgb_sha256':'b'*64}if mode=='crop'else {**ref_value,'raw_logit':.75}if mode=='logit'else ref_value
+    try:
+     with mock.patch.dict(os.environ,{'VISUAL_QUAL_OUTER_NETNS':'net:[inert-outside]'}),mock.patch.object(v.os,'readlink',side_effect=lambda name,*args,**kwargs:'net:[inert-inside]'if str(name)=='/proc/self/ns/net'else original_readlink(name,*args,**kwargs)),mock.patch.object(runtime,'isolation',return_value=isolation),mock.patch.object(v.socket,'socket',return_value=probe),mock.patch.object(v,'installed',return_value={}),mock.patch.object(v,'ps'),mock.patch.object(q,'notice_observations',return_value={}),mock.patch.object(v,'native_cli',side_effect=native),mock.patch.object(process,'run',return_value=json.dumps(wire).encode())as transport:
+      if metadata_fault:
+       with mock.patch.object(v,'validate_reference_diagnostic',side_effect=OSError(secret)):report=v.execute(stage,sys.executable)
+      else:report=v.execute(stage,sys.executable)
+    finally:tempfile.tempdir=oldtemp
+    self.assertEqual(transport.call_count,1,json.dumps({'stage':report.get('stage'),'cases':report.get('cases'),'diagnostics':report.get('failure_diagnostics')}));self.assertFalse(report['pass']);self.assertTrue(report['actual_model_forward_completed']);self.assertNotIn('PRIVATE',json.dumps(report));self.assertLessEqual(len(json.dumps(report['failure_diagnostics']).encode()),4096)
+    return report,calls
+  for mode,stage in [('refusal','reference_worker_refused'),('crop','crop_comparison'),('logit','logit_comparison')]:
+   report,calls=ref_execution(mode);detail=report['failure_diagnostics']['reference_call'];self.assertEqual(detail['stage'],stage);self.assertEqual(calls,['missing_model','no_sdk','gradient.png_production']);self.assertEqual(report['failure_diagnostics']['sdk_probe']['state'],'SKIPPED')
+   if mode=='logit':self.assertEqual(detail['comparison']['absolute_error'],.5)
+  report,calls=ref_execution('later_production');self.assertNotIn('reference_call',report['failure_diagnostics']);self.assertEqual(calls[-1],'baseline.jpg_production')
+  report,_=ref_execution('crop',metadata_fault=True);self.assertTrue(report['failure_diagnostics']['reference_metadata_unavailable']);self.assertEqual(report['failure_diagnostics']['primary_exception_class'],'QualificationRefused');self.assertEqual(report['failure_diagnostics']['last_call']['state'],'OBSERVED')
  def wheel(self,path,extra=None,declared=None):
   meta=b'Metadata-Version: 2.4\nName: example\nVersion: 1.0\nLicense-File: LICENSE\n\n'
   with zipfile.ZipFile(path,'w') as z:

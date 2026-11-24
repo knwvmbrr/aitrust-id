@@ -185,13 +185,104 @@ def native_cli(image,models,timeout=180,python=None,json_output=True,diagnostic=
       finally:child.wait(timeout=5)
   finally:output.close()
 
-def reference(image,models):
- with a.PrivateHome() as home:
-  raw=q.raw_file(image,a.MAX_IMAGE);header=json.dumps({'model_dir':str(models),'image_bytes':len(raw),'cache_dir':home.path,'cache_devino':list(home.origin)},separators=(',',':')).encode()
-  from tools.visual_score_process import run
-  wire=run([sys.executable,'-I','-B',str(Path(__file__)),'--reference-worker'],len(header).to_bytes(4,'big')+header+raw)
-  result=json.loads(wire);q.need(set(result)=={'reference','raw_logit','crop_rgb_sha256','AI_origin','tags','environment'} and result['tags']==[] and result['AI_origin']=='unknown' and math.isfinite(result['raw_logit']));home.check()
- return result
+REFERENCE_IDS={'gradient.png_reference','baseline.jpg_reference','sliver.png_reference'}
+REFERENCE_STAGES={'created','reference_request','reference_process','reference_decode','reference_worker_refused','reference_validation','reference_validated','reference_cleanup','comparison_facts','crop_comparison','logit_comparison','compared'}
+REFERENCE_REASONS={'reference_unavailable','reference_process_unavailable','reference_decode_unavailable','reference_invalid_record','reference_worker_refused','reference_cleanup_uncertain','crop_mismatch','logit_mismatch'}
+
+def _reference_sources():
+ return {**_sdk_probe_sources(),'tools/visual_score_reference.py':q.sha(q.raw_file(ROOT/'tools/visual_score_reference.py',128*1024))}
+
+def _reference_error(error):
+ number=error.errno if isinstance(error,OSError)else None
+ reason=error.reason if isinstance(error,a.Refused)and error.reason in a.REASONS else 'reference_unavailable'
+ return exception_class(error),reason,number if type(number)is int and number in SDK_ERRNOS else None
+
+def reference_failure(error):
+ kind,reason,number=_reference_error(error)
+ value={'format':'qualification-reference-failure/v1','diagnostic_only':True,'pass':False,'stage':'reference_worker_exception','exception_class':kind,'reason':reason,'errno':number,'source_sha256':_reference_sources()}
+ q.need(len(json.dumps(value,sort_keys=True,allow_nan=False).encode())<=2047);return value
+
+def validate_reference_failure(value):
+ q.need(type(value)is dict and set(value)=={'format','diagnostic_only','pass','stage','exception_class','reason','errno','source_sha256'})
+ q.need(value['format']=='qualification-reference-failure/v1'and value['diagnostic_only']is True and value['pass']is False and value['stage']=='reference_worker_exception')
+ q.need(type(value['exception_class'])is str and value['exception_class']in ERROR_CLASSES|{'other'})
+ q.need(type(value['reason'])is str and value['reason']in a.REASONS|{'reference_unavailable'})
+ q.need(value['errno']is None or type(value['errno'])is int and value['errno']in SDK_ERRNOS)
+ q.need(value['source_sha256']==_reference_sources()and len(json.dumps(value,sort_keys=True,allow_nan=False).encode())<=2047);return value
+
+def _reference_number(value):
+ try:return type(value)in(int,float)and math.isfinite(value)
+ except (ValueError,OverflowError):return False
+
+def _reference_hash(value):return type(value)is str and len(value)==64 and all(c in '0123456789abcdef'for c in value)
+
+def validate_reference_diagnostic(value):
+ q.need(type(value)is dict and set(value)=={'call_id','stage','state','reason','exception_class','errno','worker_failure','comparison'})
+ q.need(type(value['call_id'])is str and value['call_id']in REFERENCE_IDS and type(value['stage'])is str and value['stage']in REFERENCE_STAGES)
+ q.need(value['state']in ('not_validated','REFUSED','VALIDATED')and (value['reason']is None or type(value['reason'])is str and value['reason']in REFERENCE_REASONS|a.REASONS))
+ q.need((value['state']=='REFUSED')==(value['reason']is not None))
+ q.need(value['exception_class']is None or type(value['exception_class'])is str and value['exception_class']in ERROR_CLASSES|{'other'})
+ q.need(value['errno']is None or type(value['errno'])is int and value['errno']in SDK_ERRNOS)
+ if value['worker_failure']is not None:
+  validate_reference_failure(value['worker_failure']);q.need(value['comparison']is None and value['state']=='REFUSED'and value['stage']=='reference_worker_refused'and value['reason']=='reference_worker_refused'and value['exception_class']==value['worker_failure']['exception_class']and value['errno']==value['worker_failure']['errno'])
+ if value['comparison']is not None:
+  f=value['comparison'];q.need(type(f)is dict and set(f)=={'production_logit','reference_logit','production_crop_sha256','reference_crop_sha256','crop_equal','within_predeclared_tolerance','absolute_error','absolute_error_overflow','absolute_tolerance','relative_tolerance'})
+  q.need(_reference_number(f['production_logit'])and _reference_number(f['reference_logit'])and _reference_hash(f['production_crop_sha256'])and _reference_hash(f['reference_crop_sha256']))
+  q.need(type(f['crop_equal'])is bool and f['crop_equal']==(f['production_crop_sha256']==f['reference_crop_sha256']))
+  q.need(type(f['within_predeclared_tolerance'])is bool and f['within_predeclared_tolerance']==math.isclose(f['production_logit'],f['reference_logit'],abs_tol=ABS_TOL,rel_tol=REL_TOL))
+  difference=abs(f['production_logit']-f['reference_logit']);overflow=not math.isfinite(difference)
+  q.need(type(f['absolute_error_overflow'])is bool and f['absolute_error_overflow']==overflow and (f['absolute_error']is None if overflow else _reference_number(f['absolute_error'])and f['absolute_error']==difference))
+  q.need(type(f['absolute_tolerance'])is float and f['absolute_tolerance']==ABS_TOL and type(f['relative_tolerance'])is float and f['relative_tolerance']==REL_TOL)
+  if value['reason']=='crop_mismatch':q.need(value['stage']=='crop_comparison'and value['state']=='REFUSED'and f['crop_equal']is False)
+  if value['reason']=='logit_mismatch':q.need(value['stage']=='logit_comparison'and value['state']=='REFUSED'and f['crop_equal']is True and f['within_predeclared_tolerance']is False)
+ q.need(len(json.dumps(value,sort_keys=True,allow_nan=False).encode())<=1536);return dict(value)
+
+def reference(image,models,diagnostic,call_id):
+ q.need(type(diagnostic)is dict and call_id in REFERENCE_IDS)
+ diagnostic.clear();diagnostic.update(call_id=call_id,stage='created',state='not_validated',reason=None,exception_class=None,errno=None,worker_failure=None,comparison=None)
+ try:
+  with a.PrivateHome() as home:
+   diagnostic['stage']='reference_request'
+   raw=q.raw_file(image,a.MAX_IMAGE);header=json.dumps({'model_dir':str(models),'image_bytes':len(raw),'cache_dir':home.path,'cache_devino':list(home.origin)},separators=(',',':')).encode()
+   from tools.visual_score_process import run
+   diagnostic['stage']='reference_process'
+   wire=run([sys.executable,'-I','-B',str(Path(__file__)),'--reference-worker'],len(header).to_bytes(4,'big')+header+raw)
+   diagnostic['stage']='reference_decode';result=json.loads(wire)
+   if type(result)is dict and result.get('format')=='qualification-reference-failure/v1':
+    diagnostic['stage']='reference_validation';validate_reference_failure(result);diagnostic.update(stage='reference_worker_refused',state='REFUSED',reason='reference_worker_refused',exception_class=result['exception_class'],errno=result['errno'],worker_failure=result);q.need(False)
+   if result==c.unavailable('inference_unavailable'):
+    diagnostic.update(stage='reference_worker_refused',state='REFUSED',reason='reference_worker_refused');q.need(False)
+   diagnostic['stage']='reference_validation'
+   q.need(type(result)is dict and set(result)=={'reference','raw_logit','crop_rgb_sha256','AI_origin','tags','environment'} and result['tags']==[] and result['AI_origin']=='unknown' and _reference_number(result['raw_logit'])and _reference_hash(result['crop_rgb_sha256']))
+   diagnostic['stage']='reference_cleanup';home.check()
+  diagnostic.update(stage='reference_validated',state='VALIDATED');return result
+ except BaseException as primary:
+  try:
+   kind,reason,number=_reference_error(primary)
+   if diagnostic['reason']is None:
+    default={'reference_process':'reference_process_unavailable','reference_decode':'reference_decode_unavailable','reference_validation':'reference_invalid_record','reference_cleanup':'reference_cleanup_uncertain'}.get(diagnostic['stage'],'reference_unavailable')
+    diagnostic.update(reason=reason if reason in a.REASONS else default,exception_class=kind,errno=number)
+   diagnostic['state']='REFUSED'
+  except BaseException:pass
+  raise
+
+def compare_reference(result,expected,diagnostic):
+ production=result['raw_logit'];reference_logit=expected['raw_logit'];q.need(_reference_number(production)and _reference_number(reference_logit))
+ crop_equal=result['method']['crop_rgb_sha256']==expected['crop_rgb_sha256'];within=math.isclose(production,reference_logit,abs_tol=ABS_TOL,rel_tol=REL_TOL)
+ try:
+  diagnostic['stage']='comparison_facts';difference=abs(production-reference_logit);overflow=not math.isfinite(difference)
+  diagnostic['comparison']={'production_logit':production,'reference_logit':reference_logit,'production_crop_sha256':result['method']['crop_rgb_sha256'],'reference_crop_sha256':expected['crop_rgb_sha256'],'crop_equal':crop_equal,'within_predeclared_tolerance':within,'absolute_error':None if overflow else difference,'absolute_error_overflow':overflow,'absolute_tolerance':ABS_TOL,'relative_tolerance':REL_TOL}
+ except Exception:pass
+ if not crop_equal:
+  try:diagnostic.update(stage='crop_comparison',state='REFUSED',reason='crop_mismatch')
+  except Exception:pass
+  q.need(False)
+ if not within:
+  try:diagnostic.update(stage='logit_comparison',state='REFUSED',reason='logit_mismatch')
+  except Exception:pass
+  q.need(False)
+ try:diagnostic.update(stage='compared',state='VALIDATED',reason=None)
+ except Exception:pass
 
 def process_identity(pid):
  try:
@@ -271,7 +362,7 @@ def installed():
 
 def execute(workspace,base_python):
  from tools.visual_score_runtime import isolation
- last_call={}
+ last_call={};reference_diagnostic={}
  def call(call_id,*args,**kwargs):return native_cli(*args,diagnostic=last_call,call_id=call_id,**kwargs)
  report={'format':'offline-image-score-native-qualification/v1','pass':False,'state':'UNQUALIFIED','stage':'preflight','actual_model_forward_completed':False,'cases':{},'AI_origin':'unknown','tags':[],'accuracy_measured':False,'original_requirement_closed':False,'method_equivalence_to_original_JIT_established':False,'tolerance':{'absolute':ABS_TOL,'relative':REL_TOL}}
  try:
@@ -292,9 +383,11 @@ def execute(workspace,base_python):
   report['wheel_notice_observations']=q.notice_observations(workspace)
   report['stage']='actual_forward';observations={}
   for name in ['gradient.png','baseline.jpg','sliver.png']:
-   result=call(name+'_production',fixtures/name,models);q.need(result['state']=='OBSERVED');report['actual_model_forward_completed']=True;expected=reference(fixtures/name,models)
-   q.need(result['method']['crop_rgb_sha256']==expected['crop_rgb_sha256'] and math.isclose(result['raw_logit'],expected['raw_logit'],abs_tol=ABS_TOL,rel_tol=REL_TOL))
+   reference_diagnostic.clear()
+   result=call(name+'_production',fixtures/name,models);q.need(result['state']=='OBSERVED');report['actual_model_forward_completed']=True;expected=reference(fixtures/name,models,reference_diagnostic,name+'_reference')
+   compare_reference(result,expected,reference_diagnostic)
    observations[name]={'subject':result['subject'],'method':result['method'],'raw_logit':result['raw_logit'],'reference_logit':expected['raw_logit'],'crop_equal':True,'within_predeclared_tolerance':True}
+   reference_diagnostic.clear()
   report['observations']=observations;report['cases']['default_console_private_fields_absent']=call('default_console',image,models,json_output=False)
   first=call('repeat_first',image,models);q.need(first==call('repeat_second',image,models));report['cases']['repeat_whole_record']=True
   for name in ['alpha.png','malformed.png','progressive.jpg','multiframe.png','trailing.png','oversize.png','over-pixel.png']:
@@ -312,6 +405,9 @@ def execute(workspace,base_python):
    diagnostics={'primary_exception_class':exception_class(primary),'last_call':last,'sdk_probe':{'diagnostic_only':True,'state':'UNAVAILABLE','reason':'diagnostic_unavailable','probe':None}}
    try:diagnostics['sdk_probe']=sdk_failure_probe(last,primary)
    except BaseException:pass
+   if reference_diagnostic:
+    try:diagnostics['reference_call']=validate_reference_diagnostic(reference_diagnostic)
+    except BaseException:diagnostics['reference_metadata_unavailable']=True
    q.need(len(json.dumps(diagnostics,sort_keys=True,allow_nan=False).encode())<=4096)
    report['failure_diagnostics']=diagnostics
   except BaseException:pass # preserve the original failure even if diagnostics fail
@@ -332,7 +428,10 @@ if __name__=='__main__':
   from tools.visual_score_reference import infer
   runtime.infer=infer
   try:c.worker()
-  except Exception:print(json.dumps(c.unavailable('inference_unavailable')))
+  except Exception as failure:
+   try:failed=reference_failure(failure)
+   except Exception:failed=c.unavailable('inference_unavailable')
+   print(json.dumps(failed,sort_keys=True,allow_nan=False))
  else:
   def interrupted(signum,frame):raise KeyboardInterrupt
   signal.signal(signal.SIGTERM,interrupted)
