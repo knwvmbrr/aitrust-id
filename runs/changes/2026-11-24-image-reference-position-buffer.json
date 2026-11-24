@@ -1,0 +1,50 @@
+{
+  "additional_full_original_acceptance_satisfied": [],
+  "author": "Codex /root/seo; Codex /root distinct source review",
+  "changed": "Materialize only the exact validated publisher nonpersistent HF position-id buffer and refuse any remaining non-CPU model parameter or buffer before the original reference forward.",
+  "checks": [
+    {
+      "actual_check_context": "QualificationTests.test_reference_no_unsafe_loader_or_network_entry; inert publisher tensor/model controls, no optional SDK import.",
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-"
+      ],
+      "exit_status": 0,
+      "finished_at": "2026-11-24T15:19:37.575111+00:00",
+      "pass": true
+    }
+  ],
+  "claim_level": "engineering_only",
+  "current_control_sha256": "9f67faa0630423f2bea2a00b56033a5eba3c927f7d17cbb8d29c5a5b14c4a467",
+  "current_source_freeze_sha256": "c903fd3e57dfb29f11ba9a84117028b4d071c32dd76b331fafac220216ca064f",
+  "distinct_review": {
+    "raw_utf8": "{\n  \"captured_at\": \"2026-11-24T15:21:11.503755+00:00\",\n  \"reviewer\": \"Codex /root\",\n  \"pass\": true,\n  \"source_sha256\": {\n    \"tools/visual_score_reference.py\": \"d9082e32a5d8504602ff7f486e939ebf94af8fb868200bad5f73e0b202540f31\",\n    \"tests/test_visual_score_qualification.py\": \"0eb2a9e437e6370674e1854c80c782e5a0a2f5232adb305f585d4038b28e5f85\",\n    \"docs/offline-image-score-qualification-plan.md\": \"efe8ac7e61b69d9bdf21a92402f05af8b774c367e22d82e3e36acbe7c8f09a28\"\n  },\n  \"elapsed_seconds\": 0.013993832981213927,\n  \"review\": \"Exact existing publisher CPU/int64/shape/arange tensor adopted only into known nonpersistent buffer; all remaining parameters/buffers must be CPU before unchanged forward. Source infer AST otherwise preserved.\",\n  \"controls\": {\n    \"run\": 1,\n    \"failures\": 0,\n    \"errors\": 0\n  },\n  \"real_native_or_hosted_execution\": false,\n  \"full17_qualification\": false,\n  \"original_closure\": false\n}\n",
+    "sha256": "97974e2add794210bc1a9c7fe092dfc8a5714d7db9c827a1d89bf4527531e888"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-image-reference-position-buffer.json",
+      "sha256": "0d174c146d21e1922f009cc69eacbc67cacdb8b90b3b6f40549ba6a279d1f048"
+    }
+  ],
+  "files": {
+    "docs/offline-image-score-qualification-plan.md": "efe8ac7e61b69d9bdf21a92402f05af8b774c367e22d82e3e36acbe7c8f09a28",
+    "runs/2026-11-24-image-reference-position-buffer.json": "0d174c146d21e1922f009cc69eacbc67cacdb8b90b3b6f40549ba6a279d1f048",
+    "tests/test_visual_score_qualification.py": "0eb2a9e437e6370674e1854c80c782e5a0a2f5232adb305f585d4038b28e5f85",
+    "tools/visual_score_reference.py": "d9082e32a5d8504602ff7f486e939ebf94af8fb868200bad5f73e0b202540f31"
+  },
+  "id": "2026-11-24-image-reference-position-buffer",
+  "independent_release_validated": false,
+  "kind": "change",
+  "limits": "Actual failure45408000792 is preserved; its precise numerical cause remains unproven. No local SDK/model/native execution, extra forward/probe, tolerance/cache/permission/seal/cap change, hosted retry, reference equivalence, accuracy, redistribution/legal clearance or full-original closure. Author run was captured before this subsequent distinct review and retains its pending-at-capture field.",
+  "proves": "One expanded existing inert reference safety group passes with88 stable inputs; ROOT independently read the exact source and passed the same group. The entire original infer AST is restored by removing only the buffer-adoption call; all85 other source inputs and101 declared source controls remain unchanged.",
+  "recorded_at": "2026-11-24T15:22:32.034250+00:00",
+  "schema_version": 1,
+  "scope_ids": [
+    "T-FA"
+  ],
+  "source_base": "5da9842f64d472fe91ade809e153ae4883359e17"
+}

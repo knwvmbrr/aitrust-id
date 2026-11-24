@@ -27,6 +27,14 @@ Recorded 2026-11-24T15:20:34.326742+00:00 · Contributor: Codex /root; image, iP
 - **Evidence.** Scope renderer and session inspector pass with all202 originals and acceptance criteria preserved:136 complete,66 open. Three actual repair jobs are registered active; no unsupported closure is recorded. [Change record](./runs/changes/2026-11-24-reference-phone-wave.json).
 - **Not claimed.** Bookkeeping is not product acceptance. Actual first image forward remains reference-unqualified, changed iPhone source needs native qualification, and source-consumer mechanism controls use explicitly simulated authority. Target60 remains unmet.
 
+### 2026-11-24-image-reference-position-buffer
+
+Recorded 2026-11-24T15:22:32.034250+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Materialize only the exact validated publisher nonpersistent HF position-id buffer and refuse any remaining non-CPU model parameter or buffer before the original reference forward.
+- **Evidence.** One expanded existing inert reference safety group passes with88 stable inputs; ROOT independently read the exact source and passed the same group. The entire original infer AST is restored by removing only the buffer-adoption call; all85 other source inputs and101 declared source controls remain unchanged. [Change record](./runs/changes/2026-11-24-image-reference-position-buffer.json).
+- **Not claimed.** Actual failure45408000792 is preserved; its precise numerical cause remains unproven. No local SDK/model/native execution, extra forward/probe, tolerance/cache/permission/seal/cap change, hosted retry, reference equivalence, accuracy, redistribution/legal clearance or full-original closure. Author run was captured before this subsequent distinct review and retains its pending-at-capture field.
+
 
 ### 2026-11-24-image-reference-validation
 
