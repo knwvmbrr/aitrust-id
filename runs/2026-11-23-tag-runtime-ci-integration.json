@@ -1,0 +1,60 @@
+{
+  "profile": "tag-runtime-ci-registration-static-validation/v1",
+  "captured_at": "2026-11-24T00:04:26.792144+00:00",
+  "pass": true,
+  "base_commit": "69d7a37023d97cf4c5889785746f911a6ce87103",
+  "sources": {
+    ".github/workflows/ci.yml": "c9d1c4349b3fb53d835ca8faec29aaec8e56468860bad7458f80ccbdc2e04d86",
+    "eval/revalidation.json": "17acf2add24a30dea755297018358c027b8e2a86439f69c2feb560118bca14b1",
+    "docs/tag-runtime-ci-integration.md": "ca742c5a5e85f781a8ac1b029b064fd467532f2286a6586f6bb5168c21bff5fa"
+  },
+  "actual_checks": [
+    "Existing revalidation.load accepts exact new command schema.",
+    "YAML parsed; deleting only three new steps reconstructs whole prior workflow data exactly, including every other job.",
+    "Prior protocol commands reconstruct exactly after removing V4 from one command and the one appended command; website commands exact; three other capability definitions exact.",
+    "Existing patterns retained as exact ordered prefixes; all new names exist in tracked base."
+  ],
+  "command_counts": {
+    "PS": 7,
+    "PII_REDACTED": 6,
+    "protocol": 79,
+    "extension": 14,
+    "website": 66
+  },
+  "declared_test_counts": {
+    "source_group": 79,
+    "web_runtime": 21,
+    "web_artifact_isolated_base": 25,
+    "web_artifact_integrated_parent": 26,
+    "ios_projection": 34,
+    "mt_export": 8,
+    "observer_node_groups": 13
+  },
+  "execution_limits": [
+    "No control suites, profiles, SDK/model/native code, browser, build, install or acquisition executed. Counts are collected declarations, not pass claims.",
+    "Node observer is explicit site CI gate; no manifest validator widening or false protocol Node execution claim.",
+    "COMMON manifest changes stale all prior capability receipts; parent must run final hosted profiles."
+  ],
+  "added_ci_steps": [
+    {
+      "name": "Exercise current source-copy and managed-source software boundaries",
+      "run": "python -m pytest tests/test_source_release_policy_v4.py tests/test_source_snapshot_admission.py tests/test_source_snapshot_managed.py tests/test_source_release_policy_v3.py tests/test_source_snapshot_workflow.py -q"
+    },
+    {
+      "name": "Exercise finite runtime notices, web artifacts, iOS projections and MT private export",
+      "run": "python -m pytest tests/test_web_runtime_obligations.py tests/test_web_checker_artifact.py tests/test_ios_runtime_obligations.py tests/test_mt_quote_export.py -q"
+    },
+    {
+      "name": "Exercise bounded whole-web build observation without importing a builder",
+      "run": "node tests/web-checker-build-observer.mjs"
+    }
+  ],
+  "independent_accuracy_evidence": false,
+  "release_approved": false,
+  "distinct_review": {
+    "reviewer": "Codex /root",
+    "sha256": "55f6acd842c0f08a3c818f5517f9b12a848ff994b40171e5e9c0162ab7b2850d",
+    "raw_utf8": "{\n  \"captured_at\": \"2026-11-24T00:06:07.263457+00:00\",\n  \"reviewer\": \"Codex /root\",\n  \"pass\": true,\n  \"source_sha256\": {\n    \".github/workflows/ci.yml\": \"c9d1c4349b3fb53d835ca8faec29aaec8e56468860bad7458f80ccbdc2e04d86\",\n    \"eval/revalidation.json\": \"17acf2add24a30dea755297018358c027b8e2a86439f69c2feb560118bca14b1\",\n    \"docs/tag-runtime-ci-integration.md\": \"ca742c5a5e85f781a8ac1b029b064fd467532f2286a6586f6bb5168c21bff5fa\",\n    \"runs/2026-11-23-tag-runtime-ci-integration.json\": \"39ba90b0783f73286b98a4192191dee4ef99882e8a8b5dce953c4ffbb62672f2\"\n  },\n  \"actual_controls\": [\n    \"Read full two-file patch and architecture.\",\n    \"Removing exactly three added CI steps reconstructs old bytes; no runner/permission/job/dependency gate removed.\",\n    \"PS/PII/extension values exact; old pattern prefixes preserved; website66commands exact; protocol78to79 only appendV4 to lastoldsourcecommand andnewfourcohortcommand.\",\n    \"Runtime tests use retained source or inert fixture; SDK/model/install/native UI not introduced. Observer13 registered afterexistingNodeinstall.\"\n  ],\n  \"execution_scope\": \"Read-only source comparisons; no hosted or full control execution by reviewer.\",\n  \"all_original_acceptance_preserved\": true,\n  \"independent_accuracy_evidence\": false\n}\n",
+    "source_verification_only": true
+  }
+}
