@@ -154,6 +154,21 @@ It distinguishes declared, undeclared and unsupported markers. It does not prove
 a source supports a claim, fetch a reference or issue FI/NF. Subject text stays
 local; detailed bindings require a separate private export.
 
+## Check a signed reviewer record locally
+
+Use the [reviewer-attestation verifier](docs/reviewer-attestations.md) to check
+who signed a declared review, the exact item/version and review scope, and
+whether that review expired, was withdrawn or was replaced:
+
+```sh
+node scripts/reviewer-attestation.cjs verify trusted-policy.json history.json subject.txt
+```
+
+Choose the reviewer key and latest known review checkpoint independently.
+The command reads three local files and uploads nothing. Its result separates
+signature integrity from the reviewer’s declared conclusion. It does not issue
+IV or establish that a reviewer is independent, human or correct.
+
 ## Inspect independent signals offline
 
 The source also includes separately selected

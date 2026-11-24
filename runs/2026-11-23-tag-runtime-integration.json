@@ -1,0 +1,492 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-23T22:31:58.118438+00:00",
+  "source_base": "b75ba03d337d4e4a681a88e7341c894cec2ae246",
+  "imports": {
+    "c7168d2691489e8cc878979d5e107a79b462990d": {
+      "preserved_ancestor": true,
+      "exact_changed_files": {
+        "docs/mt-mobile-quotation.md": {
+          "bytes": 5800,
+          "sha256": "675f3471058eedc947085f9d2e45ff88efefd69cbdbfb8ae55a217c8174aa0b1"
+        },
+        "docs/mt-quote-export-repair-plan.md": {
+          "bytes": 7156,
+          "sha256": "2100a519e85e866065db93aa3ffbceea84f68d1bd4b8621614d32f2b12f8e7e5"
+        },
+        "runs/2026-11-23-mt-quote-export-current-execution.json": {
+          "bytes": 6667,
+          "sha256": "110dd21cac3b5be95262b0938922996c37bed9da5e3b0c63eaecd1ae48a3976e"
+        },
+        "runs/2026-11-23-mt-quote-export-distinct-review.json": {
+          "bytes": 5157,
+          "sha256": "7afc1e5f712c5850bad491aaff565ec752777fdc9dafab0c04a922c096d614fc"
+        },
+        "runs/2026-11-23-mt-quote-export-original-counter.json": {
+          "bytes": 2374,
+          "sha256": "67daa74ebac6adb838efe6193273933e6af4decc4bb5e53d8f2e3a2c5c91895f"
+        },
+        "runs/2026-11-23-mt-quote-export-plan-review.json": {
+          "bytes": 3136,
+          "sha256": "cadabf71f39f01dfe53be45cf45ec15b11766b59d4af85c77dfb990ee2eaaa88"
+        },
+        "runs/2026-11-23-mt-quote-export-portable-current.json": {
+          "bytes": 4344,
+          "sha256": "ec438395d42b944134a306a23a3aec2d16b6bc708dd9291026ca783ce11fcfee"
+        },
+        "runs/changes/2026-11-23-mt-quote-export-repair.json": {
+          "bytes": 3705,
+          "sha256": "a1cb52bfd67b4322a44e40c016fbbe050dfaa5d62ed58272c7a0272a3e2ab4d9"
+        },
+        "scripts/authority-mobile-quotation.py": {
+          "bytes": 2591,
+          "sha256": "4e2c4b29733650a3dcda60e7c5a27df460567aee73ca2d44c2ca526baaf10a49"
+        },
+        "tests/test_mt_quote_export.py": {
+          "bytes": 8754,
+          "sha256": "785b885295f113d48ad7b2513180347f97cba89eef5e5896176eab7cc78deb7b"
+        },
+        "tools/mt_quote_export.py": {
+          "bytes": 1946,
+          "sha256": "57c3aa2c4c91f0a866e29e6bb0489e11eaeac43e256f2d4d76798561603fdb29"
+        }
+      }
+    },
+    "fa17b684d1b030baf094b64a230d2dfac3e86835": {
+      "preserved_ancestor": true,
+      "exact_changed_files": {
+        "runs/2026-11-23-mt-quote-export-mobile-binding.json": {
+          "bytes": 28512,
+          "sha256": "4cf90fe2bd66516c2e991a0df0e0ef7d0d37d69b16b770a76161b8691717d681"
+        },
+        "runs/changes/2026-11-23-mt-quote-export-mobile-binding.json": {
+          "bytes": 2277,
+          "sha256": "43026305b5769d05fc412af4256add1beec19f7d787de9a763c0f5b5a67fe716"
+        },
+        "site/public/mt-mobile-device/method-53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191.json": {
+          "bytes": 195760,
+          "sha256": "53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191"
+        },
+        "site/public/reference/mt-mobile-quotation.md": {
+          "bytes": 5800,
+          "sha256": "675f3471058eedc947085f9d2e45ff88efefd69cbdbfb8ae55a217c8174aa0b1"
+        },
+        "site/src/mt-mobile-device-manifest.json": {
+          "bytes": 2067,
+          "sha256": "8e4f1809dd01180bd9056d664cd69e35257937c782cc64d0ab86480f8503b2f5"
+        }
+      }
+    },
+    "6185ecdab407db8d3afb0b98faf0212f2003554a": {
+      "preserved_ancestor": true,
+      "exact_changed_files": {
+        "docs/web-runtime-obligations-plan.md": {
+          "bytes": 20796,
+          "sha256": "1c123d251d182b73f9d244607c60f1d941c349a152f8d4bff02ba23bde2fa444"
+        },
+        "docs/web-runtime-obligations-result.md": {
+          "bytes": 6003,
+          "sha256": "7fca6f7e57517929e0cff25249e20829fff1c46d515b699cf58f3f3d793eb4d9"
+        },
+        "docs/web-runtime-obligations.md": {
+          "bytes": 4702,
+          "sha256": "2a2e8d92f54c094cc8892f906086ed61c6803a54b6f8b23f65cfa634819509d9"
+        },
+        "runs/2026-11-23-emscripten-grant-facts-retained-peer.json": {
+          "bytes": 1398,
+          "sha256": "f61d9a41f19b418abce5bfc16758b770789966ce32c47a2b99916cd1791dd9d6"
+        },
+        "runs/2026-11-23-react-scrollbar-project-grant-retained-peer.json": {
+          "bytes": 2934,
+          "sha256": "2202051048c588a9319bb4272ca18b31ab8b5400d1510c1276c638378082fb3b"
+        },
+        "runs/2026-11-23-web-runtime-bounded-membership-correction.json": {
+          "bytes": 10873,
+          "sha256": "22e82b710aa1c9d4912a3da71072ce055909742813b6b56f0bf5095582893cb2"
+        },
+        "runs/2026-11-23-web-runtime-byte-preservation.json": {
+          "bytes": 10338,
+          "sha256": "af53a4559fe3d570f64e88cb8d5c1f980f55d02d77ab10a5980d64fb46feca10"
+        },
+        "runs/2026-11-23-web-runtime-cli-uncertainty-correction.json": {
+          "bytes": 8653,
+          "sha256": "dea930d9ef455d97fb65957a800cbedd524d81d131cfb70c140e0e2076a93100"
+        },
+        "runs/2026-11-23-web-runtime-creation-uncertainty-correction.json": {
+          "bytes": 8024,
+          "sha256": "079c85a3da0150c14ac5cfe9b93182ce6ed4be5feb2d16609d80b1dff173e72c"
+        },
+        "runs/2026-11-23-web-runtime-exact-read-budget-correction.json": {
+          "bytes": 14896,
+          "sha256": "2dca491a5806f4f6ffb04d9af46c0f957ed22c79eb061bc28a534d1edaf3af39"
+        },
+        "runs/2026-11-23-web-runtime-obligations-distinct-review.json": {
+          "bytes": 4866,
+          "sha256": "465c541d4c8f7df9d910f07ed7d3b35221615e1c4f0ea82f9eb783ec59a05ab6"
+        },
+        "runs/2026-11-23-web-runtime-obligations-execution.json": {
+          "bytes": 35276,
+          "sha256": "7dd66bca09906fac524491dde8fc8196eeba66f1af317b158f502eb7aab001a3"
+        },
+        "runs/changes/2026-11-23-web-runtime-obligations-finite-delivery.json": {
+          "bytes": 8965,
+          "sha256": "e63c8935255e39903c4a61c75669f70a7974d5aafd92917f14e856343c247aaf"
+        },
+        "sbom/web-runtime-history/0f1e5cd974eea917f2470c4de2ab525acd11efb28b1eca2a50b0150fba94f948.py": {
+          "bytes": 17421,
+          "sha256": "0f1e5cd974eea917f2470c4de2ab525acd11efb28b1eca2a50b0150fba94f948"
+        },
+        "sbom/web-runtime-history/728f4ec0d2c28883b28a7bfb52e2c6394ee97fcac8c47612799f88182e077e84.py": {
+          "bytes": 2249,
+          "sha256": "728f4ec0d2c28883b28a7bfb52e2c6394ee97fcac8c47612799f88182e077e84"
+        },
+        "sbom/web-runtime-history/a098bce5ae6645bede63880b44e3bbfa3984f3f106392ed119b78217f639558b.py": {
+          "bytes": 1941,
+          "sha256": "a098bce5ae6645bede63880b44e3bbfa3984f3f106392ed119b78217f639558b"
+        },
+        "sbom/web-runtime-history/adf7ab04843d6d8f687d7c71542237bd727a1ab8e474d30f138526536ca0c688.py": {
+          "bytes": 16884,
+          "sha256": "adf7ab04843d6d8f687d7c71542237bd727a1ab8e474d30f138526536ca0c688"
+        },
+        "sbom/web-runtime-history/b6728b7c74cfe5ae1b929b2dde2ab5fece3fd0f1985543bff69047e36f714f1f.py": {
+          "bytes": 16385,
+          "sha256": "b6728b7c74cfe5ae1b929b2dde2ab5fece3fd0f1985543bff69047e36f714f1f"
+        },
+        "sbom/web-runtime/.gitattributes": {
+          "bytes": 363,
+          "sha256": "fb19e40727644db0dc001773a6a28df5391bb82c4693b87fd461bbba00ac926c"
+        },
+        "sbom/web-runtime/CPYTHON-EMBEDDED-NOTICES.txt": {
+          "bytes": 8909,
+          "sha256": "a23d5e0943959e8a611334adb0dd5a8848381d4736e9b7ad442618fc5b3cc298"
+        },
+        "sbom/web-runtime/EMSCRIPTEN-SYSTEM-NOTICES.txt": {
+          "bytes": 203087,
+          "sha256": "76f9f7bb2ef92ebbe2176924e1f179eaba79c054c012bbea42ea9f07830ae82c"
+        },
+        "sbom/web-runtime/EXTERNAL-RUNTIME-NOTICES.txt": {
+          "bytes": 25315,
+          "sha256": "1975bde1297eea4fb42a51bd18e48bef56086cb6750659ab4427c3e31ebdc226"
+        },
+        "sbom/web-runtime/cpython-embedded-facts.json": {
+          "bytes": 110415,
+          "sha256": "87cdc75037c8fa8042da088c5098397784284f27a6ce24e1941ec8575ff61a40"
+        },
+        "sbom/web-runtime/emscripten-system-grant-facts.json": {
+          "bytes": 71632,
+          "sha256": "565ac73e1c32fe1d3034d8d8cf6f6d8898bf1f1b05280cc90135dd52df9b85a0"
+        },
+        "sbom/web-runtime/external-primary-facts.json": {
+          "bytes": 8399,
+          "sha256": "763f888e824d126ce03c0d6b873e119b3bcd72bd2fa4453067246baab66fc612"
+        },
+        "sbom/web-runtime/hiwire-preferred-source.json": {
+          "bytes": 6098,
+          "sha256": "91a0b14f3267c0347c47f3c4977bbed59dad6a4c460e774cf833b30b201f2553"
+        },
+        "sbom/web-runtime/hiwire/LICENSE.txt": {
+          "bytes": 16725,
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        "sbom/web-runtime/hiwire/Makefile.txt": {
+          "bytes": 1258,
+          "sha256": "cc8ccb05c4c77e9291d37d69126852c0b1874bb5d672a112cf89d95d46eb7f2e"
+        },
+        "sbom/web-runtime/hiwire/README.md.txt": {
+          "bytes": 6696,
+          "sha256": "b1e974fdce18050a3f4d176378bcd3ded063ec1ea1484727929a8745bd942a55"
+        },
+        "sbom/web-runtime/hiwire/patches/emcc-emjs-dylink-externref.patch.txt": {
+          "bytes": 2919,
+          "sha256": "249872448cb7fddf3b1629230336d2e3c27363c147caab352c4b9ba46a612028"
+        },
+        "sbom/web-runtime/hiwire/patches/wasi-libc-clang-17-compat.patch.txt": {
+          "bytes": 923,
+          "sha256": "89c3f867a56b73cbb8863a32ae11babda5ba68ca6f3423054b9362a591f2886e"
+        },
+        "sbom/web-runtime/hiwire/pyproject.toml.txt": {
+          "bytes": 1126,
+          "sha256": "2a847d0a311bd83fb18f47bba8bf6b5c4db56fb762d436dfe2610d2aeaaa4f90"
+        },
+        "sbom/web-runtime/hiwire/src/_deduplicate.c.txt": {
+          "bytes": 2521,
+          "sha256": "d4bd9f775dc68e6eb71e96e7cd7cb1caac4b58c1dd2612554b57309fee2dc1fc"
+        },
+        "sbom/web-runtime/hiwire/src/compat.c.txt": {
+          "bytes": 3181,
+          "sha256": "f38c6a3099143c95fec7c689bf7f3ef2cf8b2ab8c4f4af9ee19d070fa28f6042"
+        },
+        "sbom/web-runtime/hiwire/src/hiwire.c.txt": {
+          "bytes": 3607,
+          "sha256": "2d621e49354bca834a2a24d788934d2b0eb75d53c8c796d278aca53f019f1a52"
+        },
+        "sbom/web-runtime/hiwire/src/hiwire.h.txt": {
+          "bytes": 2771,
+          "sha256": "78550d629ae04a75ce1cb2ea1974974dcd8e127430ad0a0d1346af5efe25ae0f"
+        },
+        "sbom/web-runtime/hiwire/src/hiwire_macros.h.txt": {
+          "bytes": 5275,
+          "sha256": "d0c142e064686afc727c2ad55292cc471c30fb5d1eac15122ae578bdbd857c04"
+        },
+        "sbom/web-runtime/hiwire/src/wasm_table.c.txt": {
+          "bytes": 1426,
+          "sha256": "a42dd5c34d07b31ad5987340da084584c9ee03d7834536788f0e359ae9a82a23"
+        },
+        "sbom/web-runtime/hiwire/src/wasm_table.h.txt": {
+          "bytes": 233,
+          "sha256": "109f8471078e354c1e379c0751bb635e7b8e8afb55f190865bc8565de2bbf8dc"
+        },
+        "sbom/web-runtime/manifest.json": {
+          "bytes": 15727,
+          "sha256": "5d662e2a8c1feeb35465370a01eab9a192c21b0d1eb5c60cbc7021c92e592184"
+        },
+        "sbom/web-runtime/publisher-recipe-facts.json": {
+          "bytes": 36296,
+          "sha256": "6c183126c5d2542a41c33430f1f9ec33a601ee6723d0a2abc977721b85c7047a"
+        },
+        "sbom/web-runtime/react-exact-release-project-grant-facts.json": {
+          "bytes": 17115,
+          "sha256": "fe1349a50e639ffcca6f05f49a3a5f1569a1179bb8219b48019eb30af0e9e6d9"
+        },
+        "sbom/web-runtime/react-exact-source-2.3.8.tgz": {
+          "bytes": 4937,
+          "sha256": "ccc872d7a2dc007cbf9d755f30d56b8d80eabdbe22c44c95a709129bfdc46f01"
+        },
+        "scripts/verify-web-runtime-obligations.py": {
+          "bytes": 2253,
+          "sha256": "92feefd17b3c7ae582c392e5e27560dad80133876bc4e4ad8e35723704a23a5c"
+        },
+        "tests/test_web_runtime_obligations.py": {
+          "bytes": 14007,
+          "sha256": "121bbc75622847665b668ef8a9db491eedc160f62f8c1be7eff48f09874e37d1"
+        },
+        "tools/web_runtime_obligations.py": {
+          "bytes": 17553,
+          "sha256": "597ac7cc8f53750e723e1119076d63c3363e400e5a7c0ee65bb9cf2ccc52ba7b"
+        }
+      }
+    },
+    "4133f70f7e7500d1f8ff2e428e0439526d43345b": {
+      "preserved_ancestor": true,
+      "exact_changed_files": {
+        "docs/web-checker-artifact-plan.md": {
+          "bytes": 30834,
+          "sha256": "847d933785b5543c55f99dd212db33bc5b330aed6046894dbdd19b3eaaf34302"
+        },
+        "docs/web-checker-artifact.md": {
+          "bytes": 5913,
+          "sha256": "c6e34fb9c44c0f42c715dee2a40010f694dfa9a34610b6e764f115a0fd816938"
+        },
+        "runs/2026-11-23-web-checker-artifact-distinct-review.json": {
+          "bytes": 4485,
+          "sha256": "f9970e6b9388bc9f7114f0f0f721b0636e1184fc943f5128e5008d4cd7ece5bc"
+        },
+        "runs/2026-11-23-web-checker-artifact-execution.json": {
+          "bytes": 37655,
+          "sha256": "34fd0e4b163a26e2b515e16f80fc65b7b072013d8f01963bad03b832b6801fae"
+        },
+        "runs/2026-11-23-web-checker-artifact-fd-original-counter.json": {
+          "bytes": 731,
+          "sha256": "2a29bdc3e667785a9eb1c14deeb19253267794245c50b775768b647b1fe46ef8"
+        },
+        "runs/changes/2026-11-23-222229-web-checker-artifact-source-component-3bea298e.json": {
+          "bytes": 3200,
+          "sha256": "8a1dc71038ca9cc064b4e97ee0ac8bc48fef3a12083964625bc269c681bf3d69"
+        },
+        "scripts/web-checker-artifact.py": {
+          "bytes": 2603,
+          "sha256": "3ee28f6b101c6ab7529e13d4df38fdcd59caccd9d5389a54ead79e71ad79212a"
+        },
+        "scripts/web-checker-build-observer.mjs": {
+          "bytes": 13263,
+          "sha256": "b5a01fdc9ab2e10d0f5d12d3e54d3d356c73ece6ee16cd18d49c971e03ac1d03"
+        },
+        "tests/test_web_checker_artifact.py": {
+          "bytes": 19484,
+          "sha256": "651dc90daf3e995ea3b5c33e95cd231543b6d12857e3152fff818618b7baa286"
+        },
+        "tests/web-checker-build-observer.mjs": {
+          "bytes": 5087,
+          "sha256": "6695b80d2926585feb1e117883b39cefa848a2a82e817678d389cd7ecdbd4314"
+        },
+        "tools/web_checker_artifact.py": {
+          "bytes": 125203,
+          "sha256": "2c0dbf7f811d39c355d8a33bee85f0bc3c33aacd5394d387a0d2eb71fdca5168"
+        }
+      }
+    },
+    "5950de88c95d977c1db6faafaedbff8aff9c444d": {
+      "preserved_ancestor": true,
+      "exact_changed_files": {
+        "docs/offline-image-score-qualification-plan.md": {
+          "bytes": 32521,
+          "sha256": "dea4e19d229a165f4f4eff91d932da136d08eb5e42e88b9470148e05ebabc5af"
+        },
+        "runs/2026-11-23-image-acquisition-diagnostics.json": {
+          "bytes": 37544,
+          "sha256": "117c893dc99d5c65991148eb1e404a54c82c16a92e6fc5aee9cd89cfd055b0b1"
+        },
+        "runs/changes/2026-11-23-image-acquisition-diagnostics.json": {
+          "bytes": 2510,
+          "sha256": "a128a791d4c25d57b7fd905e6abba1e8f109040010f4dd9fd9c3a972c6c5ccff"
+        },
+        "scripts/run-visual-score-phase.py": {
+          "bytes": 12919,
+          "sha256": "baae68507bcc1bacc7d7eb4f480c1113e4981b4ac969cacc02cba8fbb9797a3e"
+        },
+        "tests/test_visual_score_budget.py": {
+          "bytes": 20259,
+          "sha256": "e3ce8b300cb92be3eb7a625d2f765f9f355ebdd3b9beff27357b196cc671a773"
+        },
+        "tests/test_visual_score_qualification.py": {
+          "bytes": 27510,
+          "sha256": "a9773c7d06a9544aa8dcad82bac3aa83e4cc626074e94be26085fafb7b9e21ad"
+        },
+        "tools/visual_score_qualification.py": {
+          "bytes": 30768,
+          "sha256": "8a472b8cfc1adfe064ddc21136bc5d60d0e9be219dfd5310a4867936d89cd6f4"
+        }
+      }
+    }
+  },
+  "different_reviews": {
+    "F120": {
+      "sha256": "dd4502fa9c1b01e97dc21bfbb4d1ede5c7404434d8cd99c5a14dbddb1ab9a5bb",
+      "record": {
+        "actual_evidence": [
+          {
+            "actual_linux_authority_and_cases": true,
+            "anonymous_exact_assets": 6,
+            "outside_Mac_exit": 0,
+            "path": "runs/2026-11-23-source-image-publication.json",
+            "producer_run": 45274283187,
+            "sha256": "62b16f41b03b4cf614875db9fef0d6ddf431fa0dfdd7125162a49da295d4c06c",
+            "source_commit": "9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7"
+          },
+          {
+            "path": "runs/2026-11-23-source-image-protected-source-consumer.json",
+            "sha256": "c4a6a07b6c615538e9da882813a7eebe7e4485a94e6ebb899a2ba5956e1635c4"
+          }
+        ],
+        "full_original_closed": false,
+        "independent_accuracy_evidence": false,
+        "legal_clearance": false,
+        "master": {
+          "acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
+          "baseline_job": "Specify and deliver evidence packets \u2014 committed transcripts per exit gate.",
+          "failure_behavior": "Expose unavailable or unsupported status; never issue an unsupported verdict. Optional failure must not disable unrelated tags.",
+          "id": "F-120",
+          "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+          "path": "docs/master-scope.json"
+        },
+        "milestone_literal": "80% = complete selected integration; 100% = all required acceptance for the full named item functioning and evidenced",
+        "milestone_source": "docs/scope-progress.md:14",
+        "must_preserve": [
+          "required_acceptance byte-value unchanged",
+          "outside implementer runs and final acceptance remain required",
+          "final_acceptance milestone absent",
+          "F-120 remains below100 and open",
+          "F-057/X-02/all14 and original136/66 unchanged"
+        ],
+        "profile": "F120-selected-integration-criterion-distinct-review/v1",
+        "recommendation": "Credit selected_integration milestone only (60 to80); final_acceptance remains unpassed.",
+        "required_acceptance_unchanged_from_protected_Q": true,
+        "retained_required_acceptance": [
+          "Version and publish executable conformance vectors and complete exit-gate evidence for the selected released route; outside implementer runs and final acceptance remain required."
+        ],
+        "reviewed_at": "2026-11-23T22:30:28.845881+00:00",
+        "reviewer": "Codex /root/seo",
+        "scope_reasoning": "The original selected-route versioned evidence mechanism is now used through protected publication and two genuine consumer executions, with positive, negative and invalid-input outcomes. This supports complete selected integration. It does not satisfy the explicit outside implementer/final acceptance or validate tag accuracy.",
+        "source_index_evidence": "Previously reviewed actual complete current evidence-packet CLI exited0 with five current receipts; source-bound evidence indexing is not a replacement for retained per-gate raw observations.",
+        "supported_selected_route": "Authenticated whole-source engineering prerelease and finite standalone PS source exercise only",
+        "tests_or_runtime_repeated": false,
+        "versioned_published_Q_source_blobs_sha256": {
+          "eval/conformance/assertion-v1.json": "aa30aef56eeff6657b68b315dc4f64b1756ee9eb8c9c54db76159a633c09b745",
+          "scripts/build-evidence-packet.py": "3c24083e5de227cd8289bf2d6529d0acf6ba93e19dbe42f227441030d9fe6a13",
+          "scripts/check-conformance-vectors.py": "11d50fbc2b6c0a04cb3de12880bb381bea16b52dd1f80356456fa3d5fdf29504",
+          "tools/conformance_vectors.py": "fa06f80172fb314876c7d202c67888a888d866097206f28dbbdea23737b55d45",
+          "tools/evidence_packet.py": "2fc2234ee8e992c4cecd37730498a22da8c84268ad4c7ae4245088aee61f2504"
+        }
+      }
+    },
+    "architecture": {
+      "sha256": "62b66d523c09177f3c5be484297566739574ee99143360c28dc8877a58c67a59",
+      "record": {
+        "conclusion": "CLEAR architecture, with explicit frozen selected-commit/build binding prerequisite",
+        "enforced_next_boundaries": [
+          "Actual observer build must select an explicit source commit with exact source/input bytes; new records or prepared output cannot retroactively authenticate an older dist. A working-tree candidate observation must stay labeled candidate if not committed.",
+          "Reversible two dependency-directory moves require independently verified known targets, no active builder using either path and retained private move facts; my process-ownership knowledge is not a global liveness audit.",
+          "Actual whole-build module/output census and complete 19-runtime companion mapping must succeed; unknown providers or obligations refuse.",
+          "Finite copied-source V4 must preserve older profiles/history and160 new-name cap; copying does not imply compiled-route grant.",
+          "Web protected authorization and consumer positive remain separate, not earned by source/helper or mocked authority tests.",
+          "Original136/66, F057/X02 all14, F120 outside/final acceptance, and independent image/tag gates remain."
+        ],
+        "findings": [],
+        "plan_sha256": "232ce3eef699aaead27e2fa39f937fc48741eedb3bff8ef74c23ecb51aa14f9a",
+        "profile": "tag-runtime-integration-plan-distinct-review/v1",
+        "reviewed_at": "2026-11-23T22:30:28.846991+00:00",
+        "reviewer": "Codex /root/seo",
+        "runtime_or_native_or_network_used": false,
+        "scope": "Architecture only; no build/cache relocation/process/source or signature execution repeated"
+      }
+    }
+  },
+  "observed_integrated_checks": [
+    {
+      "command": "python3 -m unittest discover -s tests -p test_mt_quote_export.py -v",
+      "exit_code": 0,
+      "executed_cases": 8,
+      "scope": "Changed optional MT export; valid observations/default bytes, actual post-close uncertainty, privacy, refusal/recovery and independent PS."
+    },
+    {
+      "command": "python3 -I -S -B scripts/verify-web-runtime-obligations.py",
+      "exit_code": 0,
+      "runtime_files": 5,
+      "required_companions": 14,
+      "retained_facts_verified": true,
+      "received_files_verified": 0
+    },
+    {
+      "command": "python3 -I -S -B scripts/web-checker-artifact.py sources",
+      "exit_code": 2,
+      "diagnostic": "Selected web artifact unavailable.",
+      "diagnosis": "One authored SOURCE_PINS registry hash predates protected Q. Actual current bytes34311/SHA8db769dbd924e0b4c5ec4b5d92f4e953b0b4cf4cf78656f1dca3a544949ed2b6; expected1b558ea5e5891f388c144a1caba0adb9eb219acff999de8d27b3921edb23e111. All other source pins match; admission not granted and no unchanged retry."
+    }
+  ],
+  "dependency_cache_reuse": {
+    "existing_directories_moved": 2,
+    "reverse_compatibility_links": true,
+    "copied_bytes": 0,
+    "installs": 0,
+    "network_downloads": 0,
+    "tracked_sources_changed": false
+  },
+  "ordinary_guard_history": {
+    "MT_merge": "pass14inputs2events0errors",
+    "web_merge_first": "refused exact changelog entry damaged by naive conflict union; no commit",
+    "web_merge_corrected": "restored HEAD human entries and inserted exact two child entries; pass55inputs2events0errors",
+    "image_merge": "pass6inputs1event0errors",
+    "bypass": false
+  },
+  "originals": {
+    "complete": 136,
+    "open": 66,
+    "target_open": 60,
+    "new_original_closures": 0
+  },
+  "F120": {
+    "percent_before": 60,
+    "percent_after": 80,
+    "added_milestone": "selected_integration",
+    "final_acceptance": false,
+    "required_acceptance_unchanged": true
+  },
+  "claims": {
+    "whole_website_build_observed": false,
+    "web_distribution_admitted": false,
+    "native_image_inference": false,
+    "independent_accuracy": false,
+    "all_fourteen_obligations_complete": false,
+    "original_closure": false
+  }
+}

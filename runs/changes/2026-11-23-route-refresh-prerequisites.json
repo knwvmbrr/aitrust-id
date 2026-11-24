@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-route-refresh-prerequisites",
+  "recorded_at": "2026-11-24T03:34:57.328210+00:00",
+  "author": "Codex /root integration; /root/web_camo different source review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "97211535d3e64c0c59d7c743c6da0a921f6c9b5c",
+  "changed": "Registered exactly three final boundary-maintenance/evidence names within the unchanged160-entry cap before the next source freeze; refreshed exact table/registry bindings and recorded the actual stale-boundary refusal.",
+  "proves": "Two affected finite-table controls pass, preserving155historical names and161-entry refusal. Actual972 site validation reaches the unchanged route guard, where nine cases refuse the old source inventory and27others pass. Current source/native scopes remain separate from release or independent accuracy.",
+  "limits": "No current boundary review or browser execution is manufactured. Fresh final-source protocol/website receipts, exact boundary review, required checks and actual publication remain pending; no original criteria, percentages, permissions, endpoint, capture or collection change.136complete66open; target60 unmet.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-013"
+  ],
+  "files": {
+    "docs/session-delivery.json": "34c3d802f288eacf7b98e08c939a28c78efaf49c16fa15611d8783409b70fe3a",
+    "docs/tag-runtime-integration-plan.md": "11753684a7a79c11c8db6e69b6db86217cafbea373e536125a52f38e23eb6279",
+    "eval/dependencies/source-snapshot-additions-v4.json": "da42db15f4fdb9b17784344fb5c7381bbd7e2d257b7a01f4b18fc88678c9db8c",
+    "eval/dependency-policy.json": "7778decd0519e15792615ae00b0cd48fed46a628d2099565a26ec05fc9c8a47e",
+    "state.json": "46b253decebf720ed52790eae520cae6dd36e5e7aaa6fec82222c1449122dbad",
+    "tools/source_release_policy_v4.py": "0e70d9f360533dbd13f67192b967e8831787fce381c220bc013fc8a7eaa0989e",
+    "tools/web_checker_artifact.py": "fe4c15e9c0db14b31351f92359c2b8088a781671a86c4a83a39a59803075f607"
+  },
+  "evidence": [
+    {
+      "path": "eval/dependencies/source-snapshot-additions-v4.json",
+      "sha256": "da42db15f4fdb9b17784344fb5c7381bbd7e2d257b7a01f4b18fc88678c9db8c"
+    },
+    {
+      "path": "runs/2026-11-23-current-native-selection.json",
+      "sha256": "b782d71b24ece7d96e42e11aa38233ed44bd5ca96f57f32e1f009286855543ad"
+    }
+  ],
+  "checks": [],
+  "check_summaries": [
+    {
+      "argv_after_interpreter": [
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_source_release_policy_v4.py",
+        "-k",
+        "155_baseline_names or table_digest"
+      ],
+      "interpreter": "Existing private project verification venv; path omitted",
+      "passed": 2,
+      "deselected": 18,
+      "seconds": 0.34,
+      "exit": 0
+    }
+  ],
+  "actual_failed_hosted_job": {
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45319458440/job/138194195324",
+    "commit": "97211535d3e64c0c59d7c743c6da0a921f6c9b5c",
+    "step": "Exercise current-route deployment boundaries and violating profiles",
+    "failed_cases": 9,
+    "passed_cases": 27,
+    "log_sha256": "f8d5a8ce87a9d77d10b3ce1574cc0321fc8c555270a60b7f4f31509a5b2afc76",
+    "cause": "Current route differs from reviewed source inventory; refusal happens before intended mutation checks.",
+    "release_approved": false
+  },
+  "different_review": {
+    "reviewed_by": "/root/web_camo",
+    "sha256": "9115940d8fe10cf73ced0cf69218a8bc0aee0538c8e724d77e9b565c46ce30d1",
+    "bytes": 4722,
+    "raw_utf8": "{\n  \"profile\": \"route-refresh-prerequisites-distinct-source-review/v1\",\n  \"captured_at\": \"2026-11-24T03:37:12.848062+00:00\",\n  \"reviewer\": \"Codex /root/web_camo\",\n  \"root_head\": \"97211535d3e64c0c59d7c743c6da0a921f6c9b5c\",\n  \"pass\": true,\n  \"findings\": [],\n  \"sources7_before\": {\n    \"docs/session-delivery.json\": \"34c3d802f288eacf7b98e08c939a28c78efaf49c16fa15611d8783409b70fe3a\",\n    \"docs/tag-runtime-integration-plan.md\": \"11753684a7a79c11c8db6e69b6db86217cafbea373e536125a52f38e23eb6279\",\n    \"eval/dependencies/source-snapshot-additions-v4.json\": \"da42db15f4fdb9b17784344fb5c7381bbd7e2d257b7a01f4b18fc88678c9db8c\",\n    \"eval/dependency-policy.json\": \"7778decd0519e15792615ae00b0cd48fed46a628d2099565a26ec05fc9c8a47e\",\n    \"state.json\": \"46b253decebf720ed52790eae520cae6dd36e5e7aaa6fec82222c1449122dbad\",\n    \"tools/source_release_policy_v4.py\": \"0e70d9f360533dbd13f67192b967e8831787fce381c220bc013fc8a7eaa0989e\",\n    \"tools/web_checker_artifact.py\": \"fe4c15e9c0db14b31351f92359c2b8088a781671a86c4a83a39a59803075f607\"\n  },\n  \"sources7_after\": {\n    \"docs/session-delivery.json\": \"34c3d802f288eacf7b98e08c939a28c78efaf49c16fa15611d8783409b70fe3a\",\n    \"docs/tag-runtime-integration-plan.md\": \"11753684a7a79c11c8db6e69b6db86217cafbea373e536125a52f38e23eb6279\",\n    \"eval/dependencies/source-snapshot-additions-v4.json\": \"da42db15f4fdb9b17784344fb5c7381bbd7e2d257b7a01f4b18fc88678c9db8c\",\n    \"eval/dependency-policy.json\": \"7778decd0519e15792615ae00b0cd48fed46a628d2099565a26ec05fc9c8a47e\",\n    \"state.json\": \"46b253decebf720ed52790eae520cae6dd36e5e7aaa6fec82222c1449122dbad\",\n    \"tools/source_release_policy_v4.py\": \"0e70d9f360533dbd13f67192b967e8831787fce381c220bc013fc8a7eaa0989e\",\n    \"tools/web_checker_artifact.py\": \"fe4c15e9c0db14b31351f92359c2b8088a781671a86c4a83a39a59803075f607\"\n  },\n  \"checks\": {\n    \"V4_only_3_names_157_to160_oldnames_origins_copied_grants_155legacy_caps_unchanged\": true,\n    \"only2_R_rows_H_registry_literal_e72_unchanged\": true,\n    \"criteria_progress_route_guard_manifest_public_scope_profiles_unchanged\": true,\n    \"retained_actual972_raw_refusal9_27_and_state_board_pending_not_promoted\": true,\n    \"final_boundary_state_receipt_log_files_do_not_match_protocol_website_patterns\": true,\n    \"event7bindings_evidence_schema_exact_CHLentry\": true\n  },\n  \"finite_names\": {\n    \"before_charge\": 157,\n    \"after_charge\": 160,\n    \"project_count\": 159,\n    \"mixed_copy_charge\": 1,\n    \"cap\": 160,\n    \"added\": [\n      \"eval/route-boundaries.json\",\n      \"runs/changes/2026-11-23-route-refresh-prerequisites.json\",\n      \"runs/changes/2026-11-23-tag-runtime-final-selection.json\"\n    ]\n  },\n  \"actual_author_controls_not_repeated\": {\n    \"finite_table_controls\": 2,\n    \"seconds\": 0.34,\n    \"source\": \"runs/changes/2026-11-23-route-refresh-prerequisites.json\"\n  },\n  \"retained_hosted_log\": {\n    \"sha256\": \"f8d5a8ce87a9d77d10b3ce1574cc0321fc8c555270a60b7f4f31509a5b2afc76\",\n    \"bytes\": 160025,\n    \"observed_summary\": \"9 failed, 27 passed in14.39s; unchanged source-inventory refusal precedes mutation-specific checks.\",\n    \"no_runtime_or_native_executed_by_reviewer\": true\n  },\n  \"capability_pattern_nonmatches\": {\n    \"protocol\": {\n      \"eval/route-boundaries.json\": [],\n      \"state.json\": [],\n      \"CHANGELOG.md\": [],\n      \"runs/changes/2026-11-23-tag-runtime-final-selection.json\": [],\n      \"runs/2026-11-23-tag-runtime-current-protocol.json\": [],\n      \"runs/2026-11-23-tag-runtime-current-website.json\": [],\n      \"runs/2026-11-23-tag-runtime-current-selection.json\": []\n    },\n    \"website\": {\n      \"eval/route-boundaries.json\": [],\n      \"state.json\": [],\n      \"CHANGELOG.md\": [],\n      \"runs/changes/2026-11-23-tag-runtime-final-selection.json\": [],\n      \"runs/2026-11-23-tag-runtime-current-protocol.json\": [],\n      \"runs/2026-11-23-tag-runtime-current-website.json\": [],\n      \"runs/2026-11-23-tag-runtime-current-selection.json\": []\n    }\n  },\n  \"event_before_review_embedding\": {\n    \"path\": \"runs/changes/2026-11-23-route-refresh-prerequisites.json\",\n    \"sha256\": \"77745eb49014a66570671a9e3c653b25d4f5b3cd4830c5bbe624733789125245\",\n    \"CHL_sha256\": \"e3585099fdc346c9110f57a2ffe816d35362f5e91130cf1c6792488161a74add\",\n    \"event_not_one_of7_source_bindings\": true\n  },\n  \"limits\": {\n    \"browser_native_build\": false,\n    \"source_archive_admitted\": false,\n    \"updated_boundary_approved\": false,\n    \"current_protocol_website_observed\": false,\n    \"new_original_closure\": false,\n    \"accuracy\": false,\n    \"endpoint_or_permission_change\": false,\n    \"test_suites_or_runtime_checks_executed\": false\n  },\n  \"review_execution\": \"Pure parsing/hash/literal-diff/schema/pattern checks only; no named test, producer, capability fingerprint execution or runtime replay.\"\n}\n"
+  }
+}

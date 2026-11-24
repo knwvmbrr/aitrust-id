@@ -66,6 +66,32 @@ class QualificationTests(unittest.TestCase):
  def test_actual_zip_metadata_notice(self):
   with tempfile.TemporaryDirectory() as folder:
    p=Path(folder)/'x.whl';row=self.wheel(p);out=q.inspect_wheel(p,row);self.assertEqual(out['notices'][0]['sha256'],q.sha(b'MIT synthetic licence'));self.assertTrue(out['notices'][0]['publisher_declared'])
+  # Real pinned wheel29 metadata layout, not a copied wheel or real vendored
+  # code: primary bytes are the existing licensed retained METADATA; nested
+  # bodies/notices below are explicitly inert parser fixtures.
+  selected=q.selection()['packages'][28]
+  self.assertEqual((selected['name'],selected['version']),('setuptools','84.2.1'))
+  self.assertEqual(selected['wheel']['sha256'],'ca140b45d5325a9478f880e351484f62fef15f336462e449ca0c03c873d589c2')
+  primary_bytes=(ROOT/selected['retained_metadata_path']).read_bytes()
+  self.assertEqual(q.sha(primary_bytes),selected['metadata_sha256'])
+  primary='setuptools-84.2.1.dist-info/METADATA'
+  nested=('setuptools/_vendor/autocommand-2.2.2.dist-info/METADATA', 'setuptools/_vendor/backports.tarfile-1.2.0.dist-info/METADATA', 'setuptools/_vendor/importlib_metadata-8.7.1.dist-info/METADATA', 'setuptools/_vendor/jaraco.text-4.0.0.dist-info/METADATA', 'setuptools/_vendor/jaraco_context-6.1.0.dist-info/METADATA', 'setuptools/_vendor/jaraco_functools-4.4.0.dist-info/METADATA', 'setuptools/_vendor/more_itertools-10.8.0.dist-info/METADATA', 'setuptools/_vendor/packaging-26.3.dist-info/METADATA', 'setuptools/_vendor/platformdirs-4.4.0.dist-info/METADATA', 'setuptools/_vendor/tomli-2.4.0.dist-info/METADATA', 'setuptools/_vendor/wheel-0.46.3.dist-info/METADATA', 'setuptools/_vendor/zipp-3.23.0.dist-info/METADATA')
+  self.assertEqual(len(nested),12)
+  with tempfile.TemporaryDirectory() as folder:
+   def container(name,mode='normal'):
+    path=Path(folder)/name
+    with zipfile.ZipFile(path,'w')as z:
+     if mode!='nested_only':z.writestr(primary,b'changed primary'if mode=='changed_primary'else primary_bytes)
+     z.writestr('setuptools-84.2.1.dist-info/licenses/LICENSE',b'INERT primary notice')
+     for i,member in enumerate(nested):z.writestr(member,primary_bytes if mode=='changed_primary'and i==0 else b'Name: inert parser fixture\nVersion: 1.0\n')
+     z.writestr('setuptools/_vendor/inert/LICENSE',b'INERT vendored notice')
+     if mode=='two_primary':z.writestr('other-1.0.dist-info/METADATA',b'Name: inert\nVersion: 1.0\n')
+     if mode=='unsafe_vendor':z.writestr('setuptools/_vendor/../escape',b'inert')
+    return path
+   observed=q.inspect_wheel(container('valid.whl'),selected)
+   self.assertEqual({n['member']for n in observed['notices']},{'setuptools-84.2.1.dist-info/licenses/LICENSE','setuptools/_vendor/inert/LICENSE'})
+   for mode in ('nested_only','changed_primary','two_primary','unsafe_vendor'):
+    with self.assertRaises(q.QualificationRefused):q.inspect_wheel(container(mode+'.whl',mode),selected)
  def test_actual_zip_path_duplicate_notice_missing_refuse(self):
   with tempfile.TemporaryDirectory() as folder:
    for i,(extra,declared) in enumerate([([('../escape',b'x')],None),([('/escape',b'x')],None),([('bad\\escape',b'x')],None),([],['MISSING'])]):
@@ -279,5 +305,81 @@ class CleanupOwnershipTests(unittest.TestCase):
   with tempfile.TemporaryDirectory() as folder:
    p,identity,outside=self.tree(folder);(p/'pointer').symlink_to(outside,target_is_directory=True);inventory=q.snapshot(p)
    self.assertTrue(stat.S_ISLNK(inventory['pointer'][2]));self.assertNotIn('pointer/f',inventory);q.cleanup(p,identity,inventory);self.assertTrue((outside/'f').exists())
+
+
+ def test_acquisition_diagnostics_are_bounded_private_and_never_mask_failure(self):
+  import contextlib,sys,urllib.error
+  from types import SimpleNamespace
+  from tools import visual_score_assets as assets
+  spec=importlib.util.spec_from_file_location('diagnostic_operator',ROOT/'scripts/run-visual-score-phase.py');operator=importlib.util.module_from_spec(spec);spec.loader.exec_module(operator)
+  private='PRIVATE_FAILURE_CANARY https://private.invalid/path?token=PRIVATE'
+  rows=[{'name':'fixed'+str(i),'version':'1','wheel':{'filename':'fixed'+str(i)+'.whl','url':'https://example.invalid/fixed'+str(i),'size':5,'sha256':'0'*64}}for i in range(1,40)]
+  for operation in ['capacity','head_fetch','head_layout','wheel','backbone','notice']:
+   with self.subTest(operation=operation),tempfile.TemporaryDirectory()as folder:
+    root=Path(folder).resolve();root.chmod(0o700);workspace=root/'visual-score-inert';wheel_calls=[]
+    def fetch(url,destination,*a,**kw):
+     if url==q.HEAD_URL:
+      if operation=='head_fetch':raise urllib.error.HTTPError(private,403,private,{},None)
+     elif url==q.MODEL_URL:
+      if operation=='backbone':raise q.AcquisitionPredicate('sha256_mismatch',200)
+     else:
+      wheel_calls.append(url)
+      if operation=='wheel'and len(wheel_calls)==3:raise TimeoutError(private)
+     destination.write_bytes(b'INERT');return {'bytes':5,'sha256':'0'*64}
+    def layout(raw):
+     if operation=='head_layout':raise assets.Refused('head_format')
+     return b'INERT_NOT_MODEL'
+    def capacity(path):
+     if operation=='capacity':raise q.QualificationRefused(private)
+    def notice(path,raw):
+     if operation=='notice':raise OSError(private)
+     raise AssertionError('No inert case may reach successful acquisition')
+    with mock.patch.object(q,'selection',return_value={'packages':rows}),mock.patch.object(q,'capacity',side_effect=capacity),mock.patch.object(q,'acquire_file',side_effect=fetch),mock.patch.object(assets,'pinned_head',side_effect=layout),mock.patch.object(q,'inspect_wheel',return_value={'expanded_bytes':1}),mock.patch.object(q,'write_new',side_effect=notice),self.assertRaises(q.AcquisitionFailed)as caught:q.acquire(workspace)
+    obs=caught.exception.observation;self.assertEqual(obs['operation'],operation);self.assertNotIn('PRIVATE',json.dumps(obs));self.assertNotIn(str(root),json.dumps(obs));self.assertLess(len(json.dumps(obs).encode()),4096);self.assertEqual(q.validate_acquisition_diagnostic(obs),obs)
+    self.assertEqual(obs['role_counts']['head_fetched'],int(operation not in ['capacity','head_fetch']))
+    self.assertEqual(obs['role_counts']['head_layout_validated'],int(operation in ['wheel','backbone','notice']))
+    self.assertEqual(obs['role_counts']['wheels_completed'],2 if operation=='wheel'else 39 if operation in ['backbone','notice']else 0)
+    self.assertEqual(obs['role_counts']['current_wheel_ordinal'],3 if operation=='wheel'else 0)
+    self.assertEqual(obs['role_counts']['backbone_verified'],int(operation=='notice'));self.assertEqual(obs['role_counts']['notice_inventory_written'],0)
+    if operation=='head_fetch':self.assertEqual((obs['category'],obs['reason_code'],obs['http_status']),('http_error','http_status',403))
+    if operation=='head_layout':self.assertEqual((obs['category'],obs['reason_code']),('asset_refused','head_format'))
+    if operation=='backbone':self.assertEqual((obs['reason_code'],obs['http_status']),('sha256_mismatch',200))
+  obs=q.acquisition_failure(ValueError(private),'capacity')
+  for mutate in [lambda d:d.update(url=private),lambda d:d.update(http_status=True),lambda d:d.update(operation=[]),lambda d:d['role_counts'].update(wheels_completed=40)]:
+   malformed=json.loads(json.dumps(obs));mutate(malformed)
+   with self.assertRaises(q.QualificationRefused):q.validate_acquisition_diagnostic(malformed)
+  with tempfile.TemporaryDirectory()as folder:
+   destination=Path(folder).resolve()/'inert';response=mock.MagicMock();response.status=200;response.headers={'Content-Length':'4'};response.__enter__.return_value=response
+   opener=mock.Mock();opener.open.return_value=response
+   with mock.patch.object(q.urllib.request,'build_opener',return_value=opener),self.assertRaises(q.AcquisitionPredicate)as caught:q._acquire_file(q.HEAD_URL,destination,5)
+   self.assertEqual((caught.exception.reason,caught.exception.http_status),('declared_size_mismatch',200));response.read.assert_not_called()
+  for write_error in [False,True]:
+   with self.subTest(write_error=write_error),tempfile.TemporaryDirectory()as folder:
+    reports=Path(folder).resolve();reports.chmod(0o700);workspace=reports/'visual-score-inert';failure=q.AcquisitionFailed(q.acquisition_failure(OSError(private),'head_fetch'));real_emit=operator.emit
+    def emit(path,value):
+     if write_error and path.name=='acquisition-diagnostic-private.json':raise OSError(private)
+     return real_emit(path,value)
+    with mock.patch.object(operator.b,'boot',return_value='aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa'):
+     record=operator.b.new_record('a'*40)
+     with mock.patch.object(q,'capacity_facts',return_value={'pass':True}),mock.patch.object(q,'main',side_effect=failure),mock.patch.object(operator,'emit',side_effect=emit),self.assertRaises(q.AcquisitionFailed)as caught:operator.worker('acquire',workspace,reports,sys.executable,record)
+     self.assertIs(caught.exception,failure);operator.failure(reports,'acquire','phase_failed');out=json.loads((reports/'qualification.json').read_bytes());self.assertIs(out['pass'],False);self.assertEqual(out['state'],'UNQUALIFIED');self.assertNotIn('PRIVATE',json.dumps(out));self.assertEqual('acquisition_diagnostic'in out,not write_error)
+     before=(reports/'qualification.json').read_bytes();operator.failure(reports,'acquire','phase_failed');self.assertEqual((reports/'qualification.json').read_bytes(),before)
+
+  for complete in [False,True]:
+   with self.subTest(entered_without_typed_diagnostic=not complete),tempfile.TemporaryDirectory()as folder:
+    reports=Path(folder).resolve();reports.chmod(0o700);primary=OSError(private);real_emit=operator.emit
+    def main(argv):
+     if not complete:raise primary
+     print(json.dumps({'pass':True,'workspace_devino':[1,2]})) # INERT completion only.
+    def emit(path,value):
+     if path.name=='acquisition-private.json':raise primary
+     return real_emit(path,value)
+    with mock.patch.object(operator.b,'boot',return_value='aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa'):
+     record=operator.b.new_record('a'*40)
+     with mock.patch.object(q,'capacity_facts',return_value={'pass':True}),mock.patch.object(q,'main',side_effect=main),mock.patch.object(operator,'emit',side_effect=emit),self.assertRaises(OSError)as caught:operator.worker('acquire',reports/'visual-score-inert',reports,sys.executable,record)
+     self.assertIs(caught.exception,primary)
+    file=reports/'acquisition-diagnostic-private.json';self.assertEqual(file.exists(),complete)
+    if complete:
+     value=json.loads(file.read_text());self.assertEqual(value['operation'],'notice');self.assertEqual(value['role_counts']['wheels_completed'],39);self.assertEqual(value['role_counts']['notice_inventory_written'],1)
 
 if __name__=='__main__':unittest.main()

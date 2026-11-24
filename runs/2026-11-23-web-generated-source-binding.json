@@ -1,0 +1,284 @@
+{
+  "captured_at": "2026-11-23T23:56:53.358276+00:00",
+  "author": "Codex /root",
+  "source_commit": "5e1ecd29983bdfde4c1956c99f12d0026de7b3cb",
+  "profile": "actual-web-generated-source-binding-diagnosis/v1",
+  "pass": false,
+  "whole_build_passed": true,
+  "whole_package_passed": false,
+  "source_copy_passed": false,
+  "independent_accuracy_evidence": false,
+  "original_complete": 136,
+  "original_open": 66,
+  "observations": {
+    "actual-web-build5-preparation.json": {
+      "private_raw_sha256": "e58a7fcc3c0fe89cc5840f67046aba011683f26ed1261aa01aaeca38c2a03951",
+      "summary": {
+        "captured_at": "2026-11-23T23:51:46.747968+00:00",
+        "source_commit": "5e1ecd29983bdfde4c1956c99f12d0026de7b3cb",
+        "pass": true,
+        "steps": [
+          {
+            "argv": [
+              "python3",
+              "scripts/web-distribution.py",
+              "prepare"
+            ],
+            "cwd": "repository",
+            "exit_code": 0,
+            "seconds": 0.0759,
+            "log_bytes": 3051,
+            "log_sha256": "cf3c284406543fbce408d0ce1bf3216eec2507c69e604dc6e591ace01da81506"
+          },
+          {
+            "argv": [
+              "node",
+              "scripts/prepare-device.mjs"
+            ],
+            "cwd": "site",
+            "exit_code": 0,
+            "seconds": 0.4965,
+            "log_bytes": 1688,
+            "log_sha256": "e6071e2bd758ff1eec4eaf6d7036dd3eb13fcdd08056a35db02c1bef6d6368a6"
+          },
+          {
+            "argv": [
+              "node",
+              "scripts/prepare-performance.mjs"
+            ],
+            "cwd": "site",
+            "exit_code": 0,
+            "seconds": 0.3925,
+            "log_bytes": 75,
+            "log_sha256": "4c0df934e0b19460d16fc5a66f99074c4e6cdb7bb78e0523497472220d761f01"
+          },
+          {
+            "argv": [
+              "node",
+              "scripts/prepare.mjs"
+            ],
+            "cwd": "site",
+            "exit_code": 0,
+            "seconds": 0.9464,
+            "log_bytes": 176,
+            "log_sha256": "119d4d7240caaa644995e635f8d389f077dc88a39e76b48a7219002e0fb1a354"
+          }
+        ],
+        "tracked_status_after": "",
+        "dependency_install": false,
+        "network_download": false,
+        "whole_build_completed": false
+      }
+    },
+    "actual-web-build-attempt-5.json": {
+      "private_raw_sha256": "f2072cea766025f1265c53a4ed5c1d4a362ee0731cc178ad23d821214bf404e7",
+      "summary": {
+        "captured_at": "2026-11-23T23:52:16.689447+00:00",
+        "source_commit": "5e1ecd29983bdfde4c1956c99f12d0026de7b3cb",
+        "pass": true,
+        "steps": [
+          {
+            "argv": [
+              "node",
+              "node_modules/vite/bin/vite.js",
+              "build",
+              "--config",
+              "../scripts/web-checker-build-observer.mjs"
+            ],
+            "cwd": "site",
+            "exit_code": 0,
+            "seconds": 1.5327,
+            "log_bytes": 9823,
+            "log_sha256": "aa742a637f3333d1bbeef3a1ca5fb8b9d27ef2ef4d7deb3848d118d030ad019c"
+          },
+          {
+            "argv": [
+              "node",
+              "scripts/render-reference.mjs"
+            ],
+            "cwd": "site",
+            "exit_code": 0,
+            "seconds": 0.1829,
+            "log_bytes": 147,
+            "log_sha256": "f6be947e35e0a0a31d9da5ec72f1f38cdaed1b3a413ff3848ae09847882987c8"
+          },
+          {
+            "argv": [
+              "node",
+              "scripts/prepare-offline.mjs"
+            ],
+            "cwd": "site",
+            "exit_code": 0,
+            "seconds": 0.4498,
+            "log_bytes": 74,
+            "log_sha256": "a0a71f60e18e32c5a803d92150efca1bd381efc20095909f0810cb5ccfd44565"
+          }
+        ],
+        "same_source_commit_before_after": true,
+        "tracked_clean_after": true,
+        "normal_commit_guard_passed_for_exact_source": true,
+        "peak_child_rss_bytes": 265945088,
+        "dependency_install": false,
+        "network_download": false,
+        "compiled_release_admitted": false,
+        "whole_build": {
+          "sources": 154,
+          "modules": 146,
+          "outputs": 19,
+          "observation_sha256": "720c442677f05eef9e1227bf855853ed76fb37a128f0a25329c223690e66c337",
+          "final_index_bytes": 137584,
+          "final_index_sha256": "01bf523b6db61e2b587cd744e4dbd0537a900381367136aa60bdf52a7afdc59a",
+          "observed_index": {
+            "bytes": 137584,
+            "dynamic_imports": [],
+            "imports": [],
+            "kind": "asset",
+            "modules": [],
+            "sha256": "01bf523b6db61e2b587cd744e4dbd0537a900381367136aa60bdf52a7afdc59a"
+          },
+          "final_index_matches_observation": true
+        }
+      }
+    },
+    "actual-web-artifact-build5-prepare.json": {
+      "private_raw_sha256": "cc403fc88de5408ea1ec89fcfaf195c84eb3bda7edb974c0cfafb43c8d8ccd4f",
+      "summary": {
+        "captured_at": "2026-11-23T23:53:00.896309+00:00",
+        "source_commit": "5e1ecd29983bdfde4c1956c99f12d0026de7b3cb",
+        "exit_code": 2,
+        "elapsed_seconds": 0.5667,
+        "log_bytes": 93,
+        "log_sha256": "d1470292cfa2bff7b073842c28810361bdb626eb1fa4aa30036e5450d7a0195c",
+        "pass": false,
+        "compiled_release_admitted": false,
+        "argv_display": [
+          "python3",
+          "-I",
+          "-S",
+          "-B",
+          "scripts/web-checker-artifact.py",
+          "prepare",
+          "--directory",
+          "site/dist",
+          "--destination",
+          "<new-private-output>",
+          "--source-commit",
+          "5e1ecd29983bdfde4c1956c99f12d0026de7b3cb"
+        ]
+      }
+    },
+    "actual-web-artifact-build5-private-diagnosis.json": {
+      "private_raw_sha256": "907286f69e526676123e02c53dbe7127255e9a2b6342d37a2729614dbfa33333",
+      "summary": {
+        "captured_at": "2026-11-23T23:53:37.874091+00:00",
+        "diagnostic_only": true,
+        "result": {
+          "exception_class": "WebUnavailable"
+        },
+        "accepted_provenance": false
+      }
+    },
+    "current-V4-source-private-diagnosis2-5e1ecd29.json": {
+      "private_raw_sha256": "584729df4db744e49ce0e2ba68f433793398fdddc88a28bb2385f9c2a89972e2",
+      "summary": {
+        "captured_at": "2026-11-23T23:54:52.011986+00:00",
+        "diagnostic_only": true,
+        "failures": [
+          {
+            "code": "third_party_or_asset_changed",
+            "name": "tests/test_source_snapshot_workflow.py",
+            "stack": [
+              {
+                "line": 11,
+                "function": "<module>"
+              },
+              {
+                "line": 273,
+                "function": "verify"
+              },
+              {
+                "line": 224,
+                "function": "classify"
+              }
+            ]
+          }
+        ],
+        "result": {
+          "profile": "source-copy-additions/v4",
+          "pass": false,
+          "status": "UNAVAILABLE",
+          "source_copy_profile_satisfied": false,
+          "legal_clearance": false,
+          "compiled_runtime_permission": false,
+          "source_archive_admitted": false,
+          "release_authorized": false,
+          "accuracy": false,
+          "complete_F057_X02": false,
+          "reason": "third_party_or_asset_changed"
+        },
+        "accepted_permission": false
+      }
+    }
+  },
+  "failures": [
+    "Whole package refuses existing ignored generated site/src/device-manifest.json, which is absent from Git. Prior Q membership assumption was wrong.",
+    "V4 source classifier refuses changed authored tests/test_source_snapshot_workflow.py omitted from its maintenance list."
+  ],
+  "diagnostic_limits": "Private in-memory predicate instrumentation only; those diagnostic results are never accepted provenance or source-copy permission. An initial diagnostic wrapper missed an optional argument and failed before classification; corrected observation retained separately.",
+  "corrected_source_checks": {
+    "captured_at": "2026-11-23T23:58:32.670027+00:00",
+    "source_changes_only": true,
+    "web_manifest_binding_control": {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_web_checker_artifact.py",
+        "-k",
+        "project_method_manifest",
+        "-v"
+      ],
+      "methods": 1,
+      "scenarios": [
+        "committed exact bytes accepted",
+        "missing committed source refused",
+        "changed observed Git OID refused",
+        "unknown neighboring manifest refused"
+      ],
+      "exit_code": 0,
+      "seconds": 0.007
+    },
+    "V4_changed_table_suite": {
+      "command": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_source_release_policy_v4.py",
+        "-k",
+        "policy",
+        "-v"
+      ],
+      "selection_note": "The module name matches policy, so all20 methods actually executed; this is not reported as a smaller selection.",
+      "methods": 20,
+      "exit_code": 0,
+      "seconds": 11.532
+    },
+    "new_project_names": 8,
+    "project_names": 138,
+    "total_authored_capacity_charge": 139,
+    "maximum_authored_capacity_charge": 160,
+    "legacy_classes_or_copied_grants_or_caps_changed": false,
+    "whole_current_source_verified": false,
+    "whole_current_package_verified": false
+  }
+}

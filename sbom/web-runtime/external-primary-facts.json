@@ -1,0 +1,202 @@
+{
+  "claims": {
+    "compiler_reproduced": false,
+    "legal_clearance": false,
+    "route_admitted": false
+  },
+  "closed_collection": {
+    "bytes": 707685,
+    "requests": 40,
+    "seconds": 572.5805
+  },
+  "hacl_missing_only": {
+    "aggregate_body_bytes": 11370,
+    "captured_at": "2026-11-23T20:21:40.529702+00:00",
+    "closed": true,
+    "elapsed_seconds": 0.14312920800875872,
+    "finalized_at": "2026-11-23T20:22:19.865194+00:00",
+    "requests": [
+      {
+        "bytes": 11356,
+        "path": "c5accbbd8546e94c34aed24afe689a617627d18eed5a6c48277e48db57c23851.txt",
+        "sha256": "c5accbbd8546e94c34aed24afe689a617627d18eed5a6c48277e48db57c23851",
+        "status": 200,
+        "url": "https://raw.githubusercontent.com/hacl-star/hacl-star/8ba599b2f6c9701b3dc961db895b0856a2210f76/LICENSE"
+      },
+      {
+        "bytes": 14,
+        "path": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed.txt",
+        "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed",
+        "status": 404,
+        "url": "https://raw.githubusercontent.com/hacl-star/hacl-star/8ba599b2f6c9701b3dc961db895b0856a2210f76/NOTICE"
+      }
+    ]
+  },
+  "notice_bundle": {
+    "bytes": 25315,
+    "path": "sbom/web-runtime/EXTERNAL-RUNTIME-NOTICES.txt",
+    "sha256": "1975bde1297eea4fb42a51bd18e48bef56086cb6750659ab4427c3e31ebdc226"
+  },
+  "notice_ranges": [
+    {
+      "bytes": 1132,
+      "offset": 236,
+      "sha256": "2c9c2acb9743e6b007b91350475308aee44691d96aa20eacef8e199988c8c388",
+      "url": "https://raw.githubusercontent.com/libffi/libffi/f08493d249d2067c8b3207ba46693dd858f95db3/LICENSE"
+    },
+    {
+      "bytes": 2774,
+      "offset": 1478,
+      "sha256": "c4f8e14fafe458d84808a4cd8b69f94673ebe2bf8fc992291629a69ac12218f8",
+      "url": "https://raw.githubusercontent.com/xz-mirror/xz/9815cdf6987ef91a85493bfcfd1ce2aaf3b47a0a/COPYING"
+    },
+    {
+      "bytes": 1043,
+      "offset": 4362,
+      "sha256": "72d7a7ee8a4eaca5d0b53f20609eff95d5e6f9e155ecce98127414b8215b0b15",
+      "url": "https://raw.githubusercontent.com/xz-mirror/xz/9815cdf6987ef91a85493bfcfd1ce2aaf3b47a0a/AUTHORS"
+    },
+    {
+      "bytes": 1549,
+      "offset": 5529,
+      "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8",
+      "url": "https://raw.githubusercontent.com/python/cpython-source-deps/eef946ae8cf1591c0e5cc5f43486210768647c2e/LICENSE"
+    },
+    {
+      "bytes": 1550,
+      "offset": 7196,
+      "sha256": "8156d8be5023ecd9f5a6bb7e9c007c8d3a53685538d77a054824c21cb760dc89",
+      "url": "https://raw.githubusercontent.com/libffi/libffi/f08493d249d2067c8b3207ba46693dd858f95db3/src/closures.c"
+    },
+    {
+      "bytes": 1421,
+      "offset": 8864,
+      "sha256": "584992a5a273710a44d0487d76c0b007471adb679edfa80439be7cc8c465a0c8",
+      "url": "https://raw.githubusercontent.com/libffi/libffi/f08493d249d2067c8b3207ba46693dd858f95db3/src/prep_cif.c"
+    },
+    {
+      "bytes": 1380,
+      "offset": 10405,
+      "sha256": "934b4ced33e256f8b73cd3e451fd5ea27b9f68aa3b50db5654dbedb18339751c",
+      "url": "https://raw.githubusercontent.com/libffi/libffi/f08493d249d2067c8b3207ba46693dd858f95db3/src/wasm32/ffi.c"
+    },
+    {
+      "bytes": 1382,
+      "offset": 11911,
+      "sha256": "f4ed0643f273f844c4c446e6fea8997385c22ccf57909839ec47e935f67911d2",
+      "url": "https://raw.githubusercontent.com/libffi/libffi/f08493d249d2067c8b3207ba46693dd858f95db3/src/wasm32/ffitarget.h"
+    },
+    {
+      "bytes": 412,
+      "offset": 13429,
+      "sha256": "c2840bd10d1cd7a5f5fcff83b1317f18ce45f6f6df243d575a27048ee3aaf190",
+      "url": "https://raw.githubusercontent.com/python/cpython-source-deps/eef946ae8cf1591c0e5cc5f43486210768647c2e/lib/common/xxhash.h"
+    },
+    {
+      "bytes": 11356,
+      "offset": 13958,
+      "sha256": "c5accbbd8546e94c34aed24afe689a617627d18eed5a6c48277e48db57c23851",
+      "url": "https://raw.githubusercontent.com/hacl-star/hacl-star/8ba599b2f6c9701b3dc961db895b0856a2210f76/LICENSE"
+    }
+  ],
+  "profile": "web-runtime-external-primary-grants/v1",
+  "qualifications": [
+    "Libffi root/source MIT incl FSF/Oracle copyright does not become GPL because of author names.",
+    "XZ COPYING distinguishes public-domain liblzma from GPL/LGPL command/build tools.",
+    "Zstd root BSD alternative is selected; adapted xxhash source explicitly offers this root BSD or GPL2.",
+    "HACL project root Apache and individual generated MIT/AND declarations are carried together. Exact NOTICE is404.",
+    "Publisher source correspondence and recipe selection do not prove complete binary object membership."
+  ],
+  "requests": [
+    {
+      "bytes": 1132,
+      "elapsed_seconds": 1.017,
+      "id": 4,
+      "role": "exact selected project grant/author/README text",
+      "sha256": "2c9c2acb9743e6b007b91350475308aee44691d96aa20eacef8e199988c8c388",
+      "status": 200,
+      "truncated_or_unread": false,
+      "url": "https://raw.githubusercontent.com/libffi/libffi/f08493d249d2067c8b3207ba46693dd858f95db3/LICENSE"
+    },
+    {
+      "bytes": 2774,
+      "elapsed_seconds": 2.329,
+      "id": 11,
+      "role": "exact selected project grant/author/README text",
+      "sha256": "c4f8e14fafe458d84808a4cd8b69f94673ebe2bf8fc992291629a69ac12218f8",
+      "status": 200,
+      "truncated_or_unread": false,
+      "url": "https://raw.githubusercontent.com/xz-mirror/xz/9815cdf6987ef91a85493bfcfd1ce2aaf3b47a0a/COPYING"
+    },
+    {
+      "bytes": 1043,
+      "elapsed_seconds": 2.165,
+      "id": 10,
+      "role": "exact selected project grant/author/README text",
+      "sha256": "72d7a7ee8a4eaca5d0b53f20609eff95d5e6f9e155ecce98127414b8215b0b15",
+      "status": 200,
+      "truncated_or_unread": false,
+      "url": "https://raw.githubusercontent.com/xz-mirror/xz/9815cdf6987ef91a85493bfcfd1ce2aaf3b47a0a/AUTHORS"
+    },
+    {
+      "bytes": 1549,
+      "elapsed_seconds": 3.974,
+      "id": 19,
+      "role": "exact selected project grant/author/README text",
+      "sha256": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8",
+      "status": 200,
+      "truncated_or_unread": false,
+      "url": "https://raw.githubusercontent.com/python/cpython-source-deps/eef946ae8cf1591c0e5cc5f43486210768647c2e/LICENSE"
+    },
+    {
+      "bytes": 30029,
+      "elapsed_seconds": 508.432,
+      "id": 34,
+      "role": "exact applicable source copyright/header or recipe-named build text",
+      "sha256": "f88babe20ae3e95436753e7aadd36e4e8ccfcad418b64aba4ac10b50a0649bb4",
+      "status": 200,
+      "truncated_or_unread": false,
+      "url": "https://raw.githubusercontent.com/libffi/libffi/f08493d249d2067c8b3207ba46693dd858f95db3/src/closures.c"
+    },
+    {
+      "bytes": 8400,
+      "elapsed_seconds": 508.554,
+      "id": 35,
+      "role": "exact applicable source copyright/header or recipe-named build text",
+      "sha256": "6a902ea43fa441c480e7a352d78b2ed929e6c6d00e6c936a87cbc1cca838108c",
+      "status": 200,
+      "truncated_or_unread": false,
+      "url": "https://raw.githubusercontent.com/libffi/libffi/f08493d249d2067c8b3207ba46693dd858f95db3/src/prep_cif.c"
+    },
+    {
+      "bytes": 31548,
+      "elapsed_seconds": 508.82,
+      "id": 36,
+      "role": "exact applicable source copyright/header or recipe-named build text",
+      "sha256": "8f13decacbdbc9faf8aa1a5e4998a64066050c84b071792f0a6c8b499b2d4f05",
+      "status": 200,
+      "truncated_or_unread": false,
+      "url": "https://raw.githubusercontent.com/libffi/libffi/f08493d249d2067c8b3207ba46693dd858f95db3/src/wasm32/ffi.c"
+    },
+    {
+      "bytes": 2334,
+      "elapsed_seconds": 508.958,
+      "id": 37,
+      "role": "exact applicable source copyright/header or recipe-named build text",
+      "sha256": "2d5a0633b2fd92a034b5c66c2c23aa77fd84ef3ebc4ffb31bf04a64971746fa0",
+      "status": 200,
+      "truncated_or_unread": false,
+      "url": "https://raw.githubusercontent.com/libffi/libffi/f08493d249d2067c8b3207ba46693dd858f95db3/src/wasm32/ffitarget.h"
+    },
+    {
+      "bytes": 262488,
+      "elapsed_seconds": 572.58,
+      "id": 39,
+      "role": "exact zstd library third-party copyright/header grant",
+      "sha256": "8cb837b21a8fe9a6b9dbcd0961ab16e733bfcbfa9e003f3a496ce07ae80aa8ee",
+      "status": 200,
+      "truncated_or_unread": false,
+      "url": "https://raw.githubusercontent.com/python/cpython-source-deps/eef946ae8cf1591c0e5cc5f43486210768647c2e/lib/common/xxhash.h"
+    }
+  ]
+}

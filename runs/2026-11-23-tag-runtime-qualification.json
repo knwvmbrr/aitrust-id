@@ -1,0 +1,839 @@
+{
+  "profile": "tag-runtime-concrete-qualification/v1",
+  "captured_at": "2026-11-24T00:11:12.021260+00:00",
+  "pass": true,
+  "original_complete": 136,
+  "original_open": 66,
+  "full_original_requirement_closed": false,
+  "iOS": {
+    "actual_executor": "Codex /root/web_camo",
+    "authored_commit": "980463a40d0d0fbb76768f5f2a178e21f44d9421",
+    "raw_compile_sha256": "d8775e896823d2cb9abd7fc1e7f4807234397958563f43c336449e15e5a56544",
+    "actual_compile": {
+      "profile": "ios-unsigned-compile-observation/v1",
+      "started_at": "2026-11-24T00:02:08.542451+00:00",
+      "source_commit": "980463a40d0d0fbb76768f5f2a178e21f44d9421",
+      "pass": true,
+      "stage": "compiled_resources",
+      "signing_requested": false,
+      "simulator_created_or_booted": false,
+      "sdk_installed": false,
+      "credentials_or_accounts_requested": false,
+      "exit_code": 0,
+      "owned_process_returncode": 0,
+      "elapsed_seconds": 22.159,
+      "peak_owned_allocated_bytes_observed": 359591936,
+      "allocated_bytes_are_filesystem_observations_not_kernel_quota": true,
+      "build_log": {
+        "bytes": 329945,
+        "sha256": "61a657207b6d047c94254dc2373084d500552c535a351e4682ee8a54b00841d5",
+        "hash_status": "complete"
+      },
+      "source_hashes_stable": true,
+      "compiled_resource_check": {
+        "profile": "ios-runtime-obligations/v1",
+        "pass": true,
+        "required_notices": 17,
+        "source_offers": 3,
+        "received_files_verified": 46,
+        "selected_scope_only": true,
+        "notices": {
+          "Notices/Project-NOTICE.txt": {
+            "bytes": 1134,
+            "sha256": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6"
+          },
+          "Notices/RuntimeEmbedded/HIWIRE-SOURCES.zip": {
+            "bytes": 107606,
+            "sha256": "ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086"
+          },
+          "Notices/RuntimeEmbedded/NOTICES.txt": {
+            "bytes": 237980,
+            "sha256": "a327d8128ea3db6cd77bc5c21b410bed3bb1fe69aa32a9c4a6f508c624339a40"
+          },
+          "Notices/RuntimeEmbedded/obligations.json": {
+            "bytes": 3233,
+            "sha256": "f7ba6486df0c2a8c50ca85749e6f0ac412bc84b595b3d4bc94d81e1f0d603b13"
+          },
+          "Notices/RuntimeJS/NOTICES.txt": {
+            "bytes": 18300,
+            "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+          },
+          "Notices/RuntimeJS/PYODIDE-JS-SOURCES.zip": {
+            "bytes": 1632140,
+            "sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"
+          },
+          "Notices/RuntimeJS/index.json": {
+            "bytes": 3006,
+            "sha256": "1e26ef876d26f7aea469332d0e0b59779b70e63a0ecfb31a062320da96ce9f4e"
+          },
+          "Notices/RuntimeZlib/NOTICES.txt": {
+            "bytes": 7912,
+            "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+          },
+          "Notices/RuntimeZlib/ZLIB-SOURCES.zip": {
+            "bytes": 1682541,
+            "sha256": "145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10"
+          },
+          "Notices/RuntimeZlib/index.json": {
+            "bytes": 1858,
+            "sha256": "0aa8796de6337350dd6aa98c3e9c1da6b0f75797ff96fc224db720cbc40d1dc2"
+          },
+          "Notices/SourceOffers.txt": {
+            "bytes": 1401,
+            "sha256": "f2ed43c25dffb15ac25611171abf5bc5acfa2966f8d282972fd8f806a7f5a886"
+          },
+          "Notices/native-runtime-index.json": {
+            "bytes": 3956,
+            "sha256": "33104d168e3235ed6c8caa149e7c25708f6c18edd9694a8a7dac2636b1370e89"
+          },
+          "Notices/pyodide-MPL-2.0.txt": {
+            "bytes": 16725,
+            "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+          },
+          "Notices/python-license.txt": {
+            "bytes": 13804,
+            "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+          },
+          "Notices/python-stdlib-notices.txt": {
+            "bytes": 245510,
+            "sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321"
+          },
+          "Notices/source.txt": {
+            "bytes": 541,
+            "sha256": "2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2"
+          },
+          "Notices/unicode-license.txt": {
+            "bytes": 1995,
+            "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+          }
+        },
+        "artifact": null,
+        "claims": {
+          "distribution_route_admitted": false,
+          "signature_verified": false,
+          "whole_ipa_inspected": false,
+          "native_ui_verified": false,
+          "legal_clearance": false,
+          "accuracy_validated": false,
+          "compiler_reproduced": false
+        },
+        "resources": {
+          "logical_operations": 129,
+          "logical_read_bytes": 42107508,
+          "cached_source_bytes": 5284617,
+          "peak_held_fds": 94,
+          "whole_archive_hash_bytes": 0,
+          "selected_compressed_bytes": 0,
+          "physical_compressed_io_excluded_from_logical_bytes": true
+        }
+      },
+      "executables": {
+        "App": {
+          "bytes": 72904,
+          "sha256": "39656c68b4067a1ac6161d4aeea2eada080e023d81d44de0761f0b07c8a10595"
+        },
+        "Share": {
+          "bytes": 70304,
+          "sha256": "4d360136eb24d6ed524bdf503eb2a1228571c681013c83242f2d3afbe0c0dbb5"
+        }
+      },
+      "finished_at": "2026-11-24T00:02:30.701783+00:00",
+      "limits": [
+        "Compile and selected resources only; no simulator boot/UI workflow, signing, upload, Apple validation, physical-device or route admission.",
+        "The SDK may use its normal compiler services; only the owned process group is controlled on timeout; detached or unkillable OS services are not claimed reaped."
+      ],
+      "source_count": 116,
+      "source_identity_sha256": "9c4b6c5ce4cd1edb916f059bd4e8bc5dd8968db0e564d704de3b31844a679cd6"
+    },
+    "signing_qualification": {
+      "profile": "ios-signing-disabled-compile-metadata-qualification/v1",
+      "captured_at": "2026-11-24T00:04:40.690800+00:00",
+      "compile_proof_sha256": "d8775e896823d2cb9abd7fc1e7f4807234397958563f43c336449e15e5a56544",
+      "readonly_display": {
+        "App": {
+          "display_exit": 0,
+          "fields": [
+            "Identifier=AITrustID",
+            "Format=app bundle with Mach-O universal (x86_64 arm64)",
+            "Signature=adhoc",
+            "TeamIdentifier=not set"
+          ],
+          "raw_stderr_sha256": "921f27f7568647a607e2f547af83d99a1c0930e073fee3f7d31978f9d03e238a"
+        },
+        "Share": {
+          "display_exit": 0,
+          "fields": [
+            "Identifier=AITrustIDShare",
+            "Format=bundle with Mach-O universal (x86_64 arm64)",
+            "Signature=adhoc",
+            "TeamIdentifier=not set"
+          ],
+          "raw_stderr_sha256": "efc8d13f92df28e37ca38150953d81bea8914b59e64fe0d10b996653c96c7a5e"
+        }
+      },
+      "operator_sign_command_executed": false,
+      "developer_identity_or_profile_requested": false,
+      "actual_code_signature_validated": false,
+      "limits": [
+        "Sign-disabled build settings are distinct from absence of linker-generated ad-hoc Mach-O metadata.",
+        "Do not call this a credential-backed signature, signed IPA or signature validation.",
+        "Earlier unsigned-metadata unsigned_bundle_observed:false is retained; the signing_performed:false field there denotes no operator signing action, not absence of all SDK-generated signature metadata."
+      ]
+    },
+    "resource60": {
+      "profile": "ios-compiled-full-public-resource-projection/v1",
+      "captured_at": "2026-11-24T00:05:42.868817+00:00",
+      "source_commit": "980463a40d0d0fbb76768f5f2a178e21f44d9421",
+      "pass": true,
+      "resources_verified": 60,
+      "per_target": 30,
+      "source_project_generator_unchanged": true,
+      "compiled_resource_rows": {
+        "App/Assets/bridge.mjs": {
+          "bytes": 4580,
+          "sha256": "1726a1b3a3e7fd86d0ed95e5554ebaf95bbd6190dd98a004d7d2cb3c13422007"
+        },
+        "App/Assets/index.html": {
+          "bytes": 434,
+          "sha256": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec"
+        },
+        "App/Assets/runtime/pyodide-lock.json": {
+          "bytes": 119077,
+          "sha256": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010"
+        },
+        "App/Assets/runtime/pyodide.asm.mjs": {
+          "bytes": 1250344,
+          "sha256": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635"
+        },
+        "App/Assets/runtime/pyodide.asm.wasm": {
+          "bytes": 9598218,
+          "sha256": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6"
+        },
+        "App/Assets/runtime/pyodide.mjs": {
+          "bytes": 17931,
+          "sha256": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109"
+        },
+        "App/Assets/runtime/python_stdlib.zip": {
+          "bytes": 2545637,
+          "sha256": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a"
+        },
+        "App/Assets/detector-source.zip": {
+          "bytes": 90184,
+          "sha256": "248951edc5447202a86457c2bae098a9461433d8886c6ccc50090519e75e9297"
+        },
+        "App/Assets/device-manifest.json": {
+          "bytes": 454,
+          "sha256": "0d96f9814a059e210962c4927ebbecbe7fbcfd12a9828a2e9c07f304fb9e482c"
+        },
+        "App/Assets/native-assets.json": {
+          "bytes": 1143,
+          "sha256": "8ab9eae91dcb58fab0926aece96af315545c6f7e69ba1721c4f518c644ece442"
+        },
+        "App/Notices/RuntimeJS/PYODIDE-JS-SOURCES.zip": {
+          "bytes": 1632140,
+          "sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"
+        },
+        "App/Notices/RuntimeJS/NOTICES.txt": {
+          "bytes": 18300,
+          "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+        },
+        "App/Notices/RuntimeJS/index.json": {
+          "bytes": 3006,
+          "sha256": "1e26ef876d26f7aea469332d0e0b59779b70e63a0ecfb31a062320da96ce9f4e"
+        },
+        "App/Notices/RuntimeZlib/ZLIB-SOURCES.zip": {
+          "bytes": 1682541,
+          "sha256": "145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10"
+        },
+        "App/Notices/RuntimeZlib/NOTICES.txt": {
+          "bytes": 7912,
+          "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+        },
+        "App/Notices/RuntimeZlib/index.json": {
+          "bytes": 1858,
+          "sha256": "0aa8796de6337350dd6aa98c3e9c1da6b0f75797ff96fc224db720cbc40d1dc2"
+        },
+        "App/Notices/pyodide-MPL-2.0.txt": {
+          "bytes": 16725,
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        "App/Notices/python-license.txt": {
+          "bytes": 13804,
+          "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+        },
+        "App/Notices/source.txt": {
+          "bytes": 541,
+          "sha256": "2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2"
+        },
+        "App/Notices/unicode-license.txt": {
+          "bytes": 1995,
+          "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+        },
+        "App/Notices/python-stdlib-notices.txt": {
+          "bytes": 245510,
+          "sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321"
+        },
+        "App/Notices/RuntimeEmbedded/NOTICES.txt": {
+          "bytes": 237980,
+          "sha256": "a327d8128ea3db6cd77bc5c21b410bed3bb1fe69aa32a9c4a6f508c624339a40"
+        },
+        "App/Notices/RuntimeEmbedded/HIWIRE-SOURCES.zip": {
+          "bytes": 107606,
+          "sha256": "ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086"
+        },
+        "App/Notices/RuntimeEmbedded/obligations.json": {
+          "bytes": 3233,
+          "sha256": "f7ba6486df0c2a8c50ca85749e6f0ac412bc84b595b3d4bc94d81e1f0d603b13"
+        },
+        "App/Notices/Project-NOTICE.txt": {
+          "bytes": 1134,
+          "sha256": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6"
+        },
+        "App/Notices/SourceOffers.txt": {
+          "bytes": 1401,
+          "sha256": "f2ed43c25dffb15ac25611171abf5bc5acfa2966f8d282972fd8f806a7f5a886"
+        },
+        "App/Notices/native-runtime-index.json": {
+          "bytes": 3956,
+          "sha256": "33104d168e3235ed6c8caa149e7c25708f6c18edd9694a8a7dac2636b1370e89"
+        },
+        "App/Privacy.txt": {
+          "bytes": 2513,
+          "sha256": "c13c72fe81c186ac98d8cf8734f85f5b1d5b1195fca04228689f2540dbd56543"
+        },
+        "App/AppLicense.txt": {
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        "App/PrivacyInfo.xcprivacy": {
+          "bytes": 501,
+          "sha256": "522b17bcf2a5f9f2310b461bc3e3360441465b218064b0ec7dfa54618661a496"
+        },
+        "Share/Assets/bridge.mjs": {
+          "bytes": 4580,
+          "sha256": "1726a1b3a3e7fd86d0ed95e5554ebaf95bbd6190dd98a004d7d2cb3c13422007"
+        },
+        "Share/Assets/index.html": {
+          "bytes": 434,
+          "sha256": "713a88cf9d7a008bd66c036d0f201b76171de3019611d64196e21c6d2ae3b5ec"
+        },
+        "Share/Assets/runtime/pyodide-lock.json": {
+          "bytes": 119077,
+          "sha256": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010"
+        },
+        "Share/Assets/runtime/pyodide.asm.mjs": {
+          "bytes": 1250344,
+          "sha256": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635"
+        },
+        "Share/Assets/runtime/pyodide.asm.wasm": {
+          "bytes": 9598218,
+          "sha256": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6"
+        },
+        "Share/Assets/runtime/pyodide.mjs": {
+          "bytes": 17931,
+          "sha256": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109"
+        },
+        "Share/Assets/runtime/python_stdlib.zip": {
+          "bytes": 2545637,
+          "sha256": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a"
+        },
+        "Share/Assets/detector-source.zip": {
+          "bytes": 90184,
+          "sha256": "248951edc5447202a86457c2bae098a9461433d8886c6ccc50090519e75e9297"
+        },
+        "Share/Assets/device-manifest.json": {
+          "bytes": 454,
+          "sha256": "0d96f9814a059e210962c4927ebbecbe7fbcfd12a9828a2e9c07f304fb9e482c"
+        },
+        "Share/Assets/native-assets.json": {
+          "bytes": 1143,
+          "sha256": "8ab9eae91dcb58fab0926aece96af315545c6f7e69ba1721c4f518c644ece442"
+        },
+        "Share/Notices/RuntimeJS/PYODIDE-JS-SOURCES.zip": {
+          "bytes": 1632140,
+          "sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"
+        },
+        "Share/Notices/RuntimeJS/NOTICES.txt": {
+          "bytes": 18300,
+          "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+        },
+        "Share/Notices/RuntimeJS/index.json": {
+          "bytes": 3006,
+          "sha256": "1e26ef876d26f7aea469332d0e0b59779b70e63a0ecfb31a062320da96ce9f4e"
+        },
+        "Share/Notices/RuntimeZlib/ZLIB-SOURCES.zip": {
+          "bytes": 1682541,
+          "sha256": "145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10"
+        },
+        "Share/Notices/RuntimeZlib/NOTICES.txt": {
+          "bytes": 7912,
+          "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+        },
+        "Share/Notices/RuntimeZlib/index.json": {
+          "bytes": 1858,
+          "sha256": "0aa8796de6337350dd6aa98c3e9c1da6b0f75797ff96fc224db720cbc40d1dc2"
+        },
+        "Share/Notices/pyodide-MPL-2.0.txt": {
+          "bytes": 16725,
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        "Share/Notices/python-license.txt": {
+          "bytes": 13804,
+          "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+        },
+        "Share/Notices/source.txt": {
+          "bytes": 541,
+          "sha256": "2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2"
+        },
+        "Share/Notices/unicode-license.txt": {
+          "bytes": 1995,
+          "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+        },
+        "Share/Notices/python-stdlib-notices.txt": {
+          "bytes": 245510,
+          "sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321"
+        },
+        "Share/Notices/RuntimeEmbedded/NOTICES.txt": {
+          "bytes": 237980,
+          "sha256": "a327d8128ea3db6cd77bc5c21b410bed3bb1fe69aa32a9c4a6f508c624339a40"
+        },
+        "Share/Notices/RuntimeEmbedded/HIWIRE-SOURCES.zip": {
+          "bytes": 107606,
+          "sha256": "ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086"
+        },
+        "Share/Notices/RuntimeEmbedded/obligations.json": {
+          "bytes": 3233,
+          "sha256": "f7ba6486df0c2a8c50ca85749e6f0ac412bc84b595b3d4bc94d81e1f0d603b13"
+        },
+        "Share/Notices/Project-NOTICE.txt": {
+          "bytes": 1134,
+          "sha256": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6"
+        },
+        "Share/Notices/SourceOffers.txt": {
+          "bytes": 1401,
+          "sha256": "f2ed43c25dffb15ac25611171abf5bc5acfa2966f8d282972fd8f806a7f5a886"
+        },
+        "Share/Notices/native-runtime-index.json": {
+          "bytes": 3956,
+          "sha256": "33104d168e3235ed6c8caa149e7c25708f6c18edd9694a8a7dac2636b1370e89"
+        },
+        "Share/Privacy.txt": {
+          "bytes": 2513,
+          "sha256": "c13c72fe81c186ac98d8cf8734f85f5b1d5b1195fca04228689f2540dbd56543"
+        },
+        "Share/AppLicense.txt": {
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        "Share/PrivacyInfo.xcprivacy": {
+          "bytes": 501,
+          "sha256": "522b17bcf2a5f9f2310b461bc3e3360441465b218064b0ec7dfa54618661a496"
+        }
+      },
+      "compile_proof_sha256": "d8775e896823d2cb9abd7fc1e7f4807234397958563f43c336449e15e5a56544",
+      "limits": [
+        "Fixed60public source-derived resource copies only; not all binary/IPA contents, UI, signature validation or route admission.",
+        "The10Assets pertarget include the unchanged detector module archive and native hash map; runtime/WASM never executed by this check."
+      ]
+    },
+    "distinct_review": {
+      "sha256": "e23faa99ea5470059afbf1983c27611af60934d7ba5093068466aab97a0f2f3d",
+      "record": {
+        "profile": "ios-actual-compile-retained-distinct-review/v1",
+        "captured_at": "2026-11-24T00:09:53.214848+00:00",
+        "pass": true,
+        "source_commit": "980463a40d0d0fbb76768f5f2a178e21f44d9421",
+        "source_count": 116,
+        "compile_proof_sha256": "d8775e896823d2cb9abd7fc1e7f4807234397958563f43c336449e15e5a56544",
+        "full_resource_proof_sha256": "4d2e7db6e46fd71e9c8a498d19bd9af12903d46ed7d1823c2b2fae0f38ea06ae",
+        "signing_qualification_sha256": "28d615bb20d3c444b1ae0f8036d2e81c16ebc71598408c724a14c18ad868823a",
+        "build_log": {
+          "bytes": 329945,
+          "sha256": "61a657207b6d047c94254dc2373084d500552c535a351e4682ee8a54b00841d5"
+        },
+        "actual_independently_hashed_public_resource_files": 60,
+        "actual_independently_hashed_resource_bytes": 35244032,
+        "elapsed_seconds": 22.159,
+        "conclusions": [
+          "Actual sign-disabled generic iOS Simulator build exited0, owned child reaped, compile log success, same116 current/committed source bindings.",
+          "All60 selected public resource rows independently hashed in compiled App/Share;46 helper-selected runtime/notice files separately reported verified.",
+          "Ad-hoc linker signature metadata exists with noTeamIdentifier. This is no operator/developer signing request; it is not a signature-free artifact or credential-signed IPA."
+        ],
+        "limits": [
+          "No SDK/build/VM/code-signing action by reviewer; retained bytes read only.",
+          "No simulator boot/UI/source ZIP export usability/physical device/AppReview/upload/signature validation/managed route admission/accuracy/original closure.",
+          "Original candidate1 storage-observer failure retained and not reclassified as Swift product error. Filesystem storage observations not quotas."
+        ]
+      }
+    },
+    "physical_device_acceptance": false,
+    "current_TestFlight_upload": false
+  },
+  "MT": {
+    "actual_executor": "Codex /root",
+    "script_static_author_attribution": "Codex / web_camo describes script author, not executor of this run",
+    "raw_sha256": "0e4ab55dc945fc242361bad505035e397f8e4d78425f4dd662af825c3b58e6e3",
+    "actual_report": {
+      "captured_at": "2026-11-24T00:07:14.484Z",
+      "author": "Codex / web_camo",
+      "profile": "mt-mobile-production-route/v1",
+      "pass": true,
+      "before": {
+        "sources": {
+          "tools/mt_mobile_device.py": "cda56dce7cdd8322fe7b0d45b27e167c943ead2f7d22705ff322e9e9ebbb28dd",
+          "tools/authority_mobile_quotation.py": "f230f44ea5584302e08b1b462839b8b41c0e69d03f7f5e34fc197a0c47b2b4bd",
+          "scripts/authority-mobile-quotation.py": "4e2c4b29733650a3dcda60e7c5a27df460567aee73ca2d44c2ca526baaf10a49",
+          "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+          "scripts/authority-quotation.py": "228c65d9255e9b54a9963c040e7109987210b55479f664bc8278a27f7401cd52",
+          "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+          "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+          "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+          "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+          "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+          "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+          "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+          "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+          "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb",
+          "scripts/build-mt-device.py": "3a7302055a99d366d207cda1d637e394a1f317939f270a27656d969744f75838",
+          "scripts/verify-mt-mobile-site.cjs": "661cd467bdcc14657a9935359fc97c4f3ab2e734e5244341f74638c6cc4608e7",
+          "scripts/mt-mobile-site-controls.cjs": "afa9531569cc087646b25aef92d948ea89cde28ffd719d0b19ce7cf911c03b08",
+          "scripts/mt-input-site-controls.cjs": "32a9ac118651d0379b70bfec0240e4fbb4bb8ae5cb7fe7cb3a2786bef01f5dd6",
+          "scripts/verify-mt-input.cjs": "62705d3d0d42efd625b107c5469e00d1afd82fa87dea0fc016cec38042588e39",
+          "tests/mt-device-client.mjs": "86767ebc3b1050c498ac1b0424228fca73e73c51dd4b0fd4f5f6909f0d97336d",
+          "scripts/mt-mobile-device-cases.py": "68894477d4507dc00f880b1762b21b12171400137c43150a4fb8504835ecd5f9",
+          "site/src/main.jsx": "c050af7299831d0216fd7940f5e4753fc683ef4fed594af0263ca0e821315f17",
+          "site/src/MTExplorer.jsx": "3ef945ff120e977cb9860bc3a15136df8d3b1db200df58bc128de5b468855032",
+          "site/src/MTExplorerSlot.jsx": "774c165916edf0bc891aff874ce48dcf1da625d06d9a5c05859ece1d9afd2a06",
+          "site/src/mt-device-client.js": "c4ae3168af3d705e3707ef6ba143a35fc042a047c142dd6e6bbc05c6c3bb8c2e",
+          "site/src/mt-device-result.js": "24bfe35426849f6f85a3682eec732cb9a4ea73d54d749a42017d7b485ac80cc8",
+          "site/src/mt-device-worker.js": "99cd033c5da6468c34de8c3c27dab663cd48dbad6a97c40577418b29e7b75197",
+          "site/src/mt-mobile-device-result.js": "c8190bbf680526a00a6baed4a09f43f1e6878589526184e5d70abe99cfaf9098",
+          "site/src/mt-mobile-device-manifest.json": "8e4f1809dd01180bd9056d664cd69e35257937c782cc64d0ab86480f8503b2f5",
+          "site/src/mt-device-manifest.json": "171bc67cf7d6761bc7788eab238051f73402a1b72f35b62fcc1d128a1cd7abda",
+          "docs/mt-mobile-quotation.md": "675f3471058eedc947085f9d2e45ff88efefd69cbdbfb8ae55a217c8174aa0b1",
+          "site/public/reference/mt-mobile-quotation.md": "675f3471058eedc947085f9d2e45ff88efefd69cbdbfb8ae55a217c8174aa0b1",
+          "site/public/mt-mobile-device/method-53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191.json": "53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191",
+          "site/public/mt-device/method-28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750.json": "28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750"
+        },
+        "served": {
+          "index.html": "01bf523b6db61e2b587cd744e4dbd0537a900381367136aa60bdf52a7afdc59a",
+          "_headers": "a40aac80dbcc3744229866b382828bbf0a381ec2662f313c54f5e328eb8f96ce",
+          "mt-mobile-device/method-53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191.json": "53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191",
+          "mt-device/method-28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750.json": "28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750",
+          "reference/mt-mobile-quotation.md": "675f3471058eedc947085f9d2e45ff88efefd69cbdbfb8ae55a217c8174aa0b1",
+          "assets/CredentialFlowExplorer-C4jGJ4U4.js": "246e95776bb118ef3bade1e7eb21a78b3d5a547e5cdb9d78959ddc44e9b059e5",
+          "assets/HPExplorer-tBaSic0p.js": "7e7f1403fcfd49e47b5262f9dcc3b436c8b53b5607f880e26417166d7aae456e",
+          "assets/HPUncertaintyExplorer-C7nGyihw.js": "17969e9879236c9a9d79418f620981e570433f664aec57a80eee1a6f19573738",
+          "assets/ImageMetadataExplorer-nN4yf5Os.js": "7cb477777c4a678fdd95ffdde3510d9554e1b6b3976f7343fcdf2b33a8a759d3",
+          "assets/MTChoiceExplorer-CK8y4Wkf.js": "c0adbeb981683fb3334b81894734e8be497f7829fc7886fdabfc1f773a0a28a7",
+          "assets/MTExplorer-D0p2vH5S.js": "30a0a31687f025084bb5940d9060af2da3db7b0c9e3b7a07c4a6227da834d1fe",
+          "assets/NFExplorer-PUErw6CQ.js": "84160fc071fc6756600123dbd3b472fad7975924095322eca51ecd5914689fac",
+          "assets/credential-device-worker-IB4hBigb.js": "bab56f40502b0223681d34756715e628915102dd104515beb0a79b70a3bedb8d",
+          "assets/device-worker-CYlrzLLK.js": "4ccf9842437c5fb613d04a6e3ab268fbf369f84a2a767b62416aafb9baf32269",
+          "assets/hp-device-worker-Ckw2-Whn.js": "04f97ef2dae6e5afb5573bd7e0465b1d72886fb656e8dbcd02d0a9f28bef2a1d",
+          "assets/hp-uncertainty-worker-RW14Xkr0.js": "4ff06f16be4582ce3ab909008d09a586638a46f0942878f91daf39f64d82c12b",
+          "assets/index-BZxGydps.css": "3208fe00e4e67b3b239a7939d416f768dedd259a2a112a40884c4cd20b69cfee",
+          "assets/index-CR4jStHU.js": "3ebf8a6e0b303d3be6bc8e632a21149c2e7a17cb690605a1a37d29c48509caef",
+          "assets/mt-device-worker-CAwkVQqX.js": "11a79a65ce0992a5f7c40525b3027484e0be627556fc286d7afdd8a9e5f50278",
+          "assets/mt-mobile-device-result-CFCN0gVs.js": "998882dae350410f9725972224b8f28f37ecada21df671e002c719ab88286f47",
+          "assets/nf-cosine-result-B5DeDq83.js": "26c92e95c49cf65be11a61b18f0131d77369fa970788e4c4637b5f5a1ed3dfe8",
+          "assets/nf-device-worker-C0Au7N2H.js": "e9b6f123170823651c0fd72453940666f57bf48bccdc1373af3aa5eeb2de72ca",
+          "device/runtime-314.0.7/pyodide.mjs": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+          "device/runtime-314.0.7/pyodide.asm.mjs": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+          "device/runtime-314.0.7/pyodide.asm.wasm": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+          "device/runtime-314.0.7/python_stdlib.zip": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+          "device/runtime-314.0.7/pyodide-lock.json": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010"
+        }
+      },
+      "engines": [
+        {
+          "engine": "Chromium",
+          "pass": true,
+          "actual_MT_modal": true,
+          "canonical_full_records": 3,
+          "private_details_opt_in": true,
+          "raw_frozen_NFC_binding": true,
+          "unsupported_then_legacy_urgency_and_authority_recovered": true,
+          "edit_clear_unmount_terminate": true,
+          "empty_reopen": true,
+          "phone320_at200percent": true,
+          "both_themes": true,
+          "minimum44px_controls": true,
+          "input_upload_storage_or_console": false,
+          "optional_payload_and_validator_chunk_failures_confined": true,
+          "physical_phone": false,
+          "human_screen_reader": false,
+          "independent_accuracy_evidence": false,
+          "MT_tag_issued": false,
+          "native_input_retention": {
+            "pass": true,
+            "mode": "corrected_native_input",
+            "observations": [
+              {
+                "check": "urgency",
+                "shape": "non_bmp",
+                "attempted_codepoints": 8001,
+                "retained_codepoints": 8001,
+                "refused_before_worker": true,
+                "correct_invalid_focus": true
+              },
+              {
+                "check": "urgency",
+                "shape": "ascii",
+                "attempted_codepoints": 16001,
+                "retained_codepoints": 16001,
+                "refused_before_worker": true,
+                "correct_invalid_focus": true
+              },
+              {
+                "check": "authority",
+                "shape": "non_bmp",
+                "attempted_codepoints": 8001,
+                "retained_codepoints": 8001,
+                "refused_before_worker": true,
+                "correct_invalid_focus": true
+              },
+              {
+                "check": "authority",
+                "shape": "ascii",
+                "attempted_codepoints": 16001,
+                "retained_codepoints": 16001,
+                "refused_before_worker": true,
+                "correct_invalid_focus": true
+              },
+              {
+                "check": "authority-curly",
+                "shape": "non_bmp",
+                "attempted_codepoints": 8001,
+                "retained_codepoints": 8001,
+                "refused_before_worker": true,
+                "correct_invalid_focus": true
+              },
+              {
+                "check": "authority-curly",
+                "shape": "ascii",
+                "attempted_codepoints": 16001,
+                "retained_codepoints": 16001,
+                "refused_before_worker": true,
+                "correct_invalid_focus": true
+              }
+            ],
+            "whole_canonical_records": 3,
+            "exact_8000_non_bmp_boundary_accepted": true,
+            "private_details_opt_in": true,
+            "edit_clear_unmount_terminate": true,
+            "empty_reopen": true,
+            "no_input_upload_storage_console": true,
+            "reflow320_at200percent": true,
+            "minimum44px_actions": true,
+            "optional_MT_failure_then_actual_PS_HP": true,
+            "canonical_methods_changed": false,
+            "MT_tag_issued": false,
+            "physical_phone": false,
+            "independent_accuracy_evidence": false
+          }
+        },
+        {
+          "engine": "WebKit",
+          "pass": true,
+          "actual_MT_modal": true,
+          "canonical_full_records": 3,
+          "private_details_opt_in": true,
+          "raw_frozen_NFC_binding": true,
+          "unsupported_then_legacy_urgency_and_authority_recovered": true,
+          "edit_clear_unmount_terminate": true,
+          "empty_reopen": true,
+          "phone320_at200percent": true,
+          "both_themes": true,
+          "minimum44px_controls": true,
+          "input_upload_storage_or_console": false,
+          "optional_payload_and_validator_chunk_failures_confined": true,
+          "physical_phone": false,
+          "human_screen_reader": false,
+          "independent_accuracy_evidence": false,
+          "MT_tag_issued": false,
+          "native_input_retention": {
+            "pass": true,
+            "mode": "corrected_native_input",
+            "observations": [
+              {
+                "check": "urgency",
+                "shape": "non_bmp",
+                "attempted_codepoints": 8001,
+                "retained_codepoints": 8001,
+                "refused_before_worker": true,
+                "correct_invalid_focus": true
+              },
+              {
+                "check": "urgency",
+                "shape": "ascii",
+                "attempted_codepoints": 16001,
+                "retained_codepoints": 16001,
+                "refused_before_worker": true,
+                "correct_invalid_focus": true
+              },
+              {
+                "check": "authority",
+                "shape": "non_bmp",
+                "attempted_codepoints": 8001,
+                "retained_codepoints": 8001,
+                "refused_before_worker": true,
+                "correct_invalid_focus": true
+              },
+              {
+                "check": "authority",
+                "shape": "ascii",
+                "attempted_codepoints": 16001,
+                "retained_codepoints": 16001,
+                "refused_before_worker": true,
+                "correct_invalid_focus": true
+              },
+              {
+                "check": "authority-curly",
+                "shape": "non_bmp",
+                "attempted_codepoints": 8001,
+                "retained_codepoints": 8001,
+                "refused_before_worker": true,
+                "correct_invalid_focus": true
+              },
+              {
+                "check": "authority-curly",
+                "shape": "ascii",
+                "attempted_codepoints": 16001,
+                "retained_codepoints": 16001,
+                "refused_before_worker": true,
+                "correct_invalid_focus": true
+              }
+            ],
+            "whole_canonical_records": 3,
+            "exact_8000_non_bmp_boundary_accepted": true,
+            "private_details_opt_in": true,
+            "edit_clear_unmount_terminate": true,
+            "empty_reopen": true,
+            "no_input_upload_storage_console": true,
+            "reflow320_at200percent": true,
+            "minimum44px_actions": true,
+            "optional_MT_failure_then_actual_PS_HP": true,
+            "canonical_methods_changed": false,
+            "MT_tag_issued": false,
+            "physical_phone": false,
+            "independent_accuracy_evidence": false
+          }
+        }
+      ],
+      "errors": [],
+      "artifact_mode": "built_site",
+      "production_publication_claimed": false,
+      "full_publication_byte_equivalence_claimed": false,
+      "physical_phone": false,
+      "independent_accuracy_evidence": false,
+      "actual_guide_matches_source": true,
+      "after": {
+        "sources": {
+          "tools/mt_mobile_device.py": "cda56dce7cdd8322fe7b0d45b27e167c943ead2f7d22705ff322e9e9ebbb28dd",
+          "tools/authority_mobile_quotation.py": "f230f44ea5584302e08b1b462839b8b41c0e69d03f7f5e34fc197a0c47b2b4bd",
+          "scripts/authority-mobile-quotation.py": "4e2c4b29733650a3dcda60e7c5a27df460567aee73ca2d44c2ca526baaf10a49",
+          "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135",
+          "scripts/authority-quotation.py": "228c65d9255e9b54a9963c040e7109987210b55479f664bc8278a27f7401cd52",
+          "tools/language_observations.py": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec",
+          "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+          "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+          "protocol/corpus.py": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f",
+          "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+          "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+          "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+          "protocol/normalization-core.js": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd",
+          "protocol/normalization.mjs": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb",
+          "scripts/build-mt-device.py": "3a7302055a99d366d207cda1d637e394a1f317939f270a27656d969744f75838",
+          "scripts/verify-mt-mobile-site.cjs": "661cd467bdcc14657a9935359fc97c4f3ab2e734e5244341f74638c6cc4608e7",
+          "scripts/mt-mobile-site-controls.cjs": "afa9531569cc087646b25aef92d948ea89cde28ffd719d0b19ce7cf911c03b08",
+          "scripts/mt-input-site-controls.cjs": "32a9ac118651d0379b70bfec0240e4fbb4bb8ae5cb7fe7cb3a2786bef01f5dd6",
+          "scripts/verify-mt-input.cjs": "62705d3d0d42efd625b107c5469e00d1afd82fa87dea0fc016cec38042588e39",
+          "tests/mt-device-client.mjs": "86767ebc3b1050c498ac1b0424228fca73e73c51dd4b0fd4f5f6909f0d97336d",
+          "scripts/mt-mobile-device-cases.py": "68894477d4507dc00f880b1762b21b12171400137c43150a4fb8504835ecd5f9",
+          "site/src/main.jsx": "c050af7299831d0216fd7940f5e4753fc683ef4fed594af0263ca0e821315f17",
+          "site/src/MTExplorer.jsx": "3ef945ff120e977cb9860bc3a15136df8d3b1db200df58bc128de5b468855032",
+          "site/src/MTExplorerSlot.jsx": "774c165916edf0bc891aff874ce48dcf1da625d06d9a5c05859ece1d9afd2a06",
+          "site/src/mt-device-client.js": "c4ae3168af3d705e3707ef6ba143a35fc042a047c142dd6e6bbc05c6c3bb8c2e",
+          "site/src/mt-device-result.js": "24bfe35426849f6f85a3682eec732cb9a4ea73d54d749a42017d7b485ac80cc8",
+          "site/src/mt-device-worker.js": "99cd033c5da6468c34de8c3c27dab663cd48dbad6a97c40577418b29e7b75197",
+          "site/src/mt-mobile-device-result.js": "c8190bbf680526a00a6baed4a09f43f1e6878589526184e5d70abe99cfaf9098",
+          "site/src/mt-mobile-device-manifest.json": "8e4f1809dd01180bd9056d664cd69e35257937c782cc64d0ab86480f8503b2f5",
+          "site/src/mt-device-manifest.json": "171bc67cf7d6761bc7788eab238051f73402a1b72f35b62fcc1d128a1cd7abda",
+          "docs/mt-mobile-quotation.md": "675f3471058eedc947085f9d2e45ff88efefd69cbdbfb8ae55a217c8174aa0b1",
+          "site/public/reference/mt-mobile-quotation.md": "675f3471058eedc947085f9d2e45ff88efefd69cbdbfb8ae55a217c8174aa0b1",
+          "site/public/mt-mobile-device/method-53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191.json": "53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191",
+          "site/public/mt-device/method-28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750.json": "28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750"
+        },
+        "served": {
+          "index.html": "01bf523b6db61e2b587cd744e4dbd0537a900381367136aa60bdf52a7afdc59a",
+          "_headers": "a40aac80dbcc3744229866b382828bbf0a381ec2662f313c54f5e328eb8f96ce",
+          "mt-mobile-device/method-53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191.json": "53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191",
+          "mt-device/method-28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750.json": "28f59d6a00fc2cae0dee86534656969879597fcb2d53fe050b9dcb3d58607750",
+          "reference/mt-mobile-quotation.md": "675f3471058eedc947085f9d2e45ff88efefd69cbdbfb8ae55a217c8174aa0b1",
+          "assets/CredentialFlowExplorer-C4jGJ4U4.js": "246e95776bb118ef3bade1e7eb21a78b3d5a547e5cdb9d78959ddc44e9b059e5",
+          "assets/HPExplorer-tBaSic0p.js": "7e7f1403fcfd49e47b5262f9dcc3b436c8b53b5607f880e26417166d7aae456e",
+          "assets/HPUncertaintyExplorer-C7nGyihw.js": "17969e9879236c9a9d79418f620981e570433f664aec57a80eee1a6f19573738",
+          "assets/ImageMetadataExplorer-nN4yf5Os.js": "7cb477777c4a678fdd95ffdde3510d9554e1b6b3976f7343fcdf2b33a8a759d3",
+          "assets/MTChoiceExplorer-CK8y4Wkf.js": "c0adbeb981683fb3334b81894734e8be497f7829fc7886fdabfc1f773a0a28a7",
+          "assets/MTExplorer-D0p2vH5S.js": "30a0a31687f025084bb5940d9060af2da3db7b0c9e3b7a07c4a6227da834d1fe",
+          "assets/NFExplorer-PUErw6CQ.js": "84160fc071fc6756600123dbd3b472fad7975924095322eca51ecd5914689fac",
+          "assets/credential-device-worker-IB4hBigb.js": "bab56f40502b0223681d34756715e628915102dd104515beb0a79b70a3bedb8d",
+          "assets/device-worker-CYlrzLLK.js": "4ccf9842437c5fb613d04a6e3ab268fbf369f84a2a767b62416aafb9baf32269",
+          "assets/hp-device-worker-Ckw2-Whn.js": "04f97ef2dae6e5afb5573bd7e0465b1d72886fb656e8dbcd02d0a9f28bef2a1d",
+          "assets/hp-uncertainty-worker-RW14Xkr0.js": "4ff06f16be4582ce3ab909008d09a586638a46f0942878f91daf39f64d82c12b",
+          "assets/index-BZxGydps.css": "3208fe00e4e67b3b239a7939d416f768dedd259a2a112a40884c4cd20b69cfee",
+          "assets/index-CR4jStHU.js": "3ebf8a6e0b303d3be6bc8e632a21149c2e7a17cb690605a1a37d29c48509caef",
+          "assets/mt-device-worker-CAwkVQqX.js": "11a79a65ce0992a5f7c40525b3027484e0be627556fc286d7afdd8a9e5f50278",
+          "assets/mt-mobile-device-result-CFCN0gVs.js": "998882dae350410f9725972224b8f28f37ecada21df671e002c719ab88286f47",
+          "assets/nf-cosine-result-B5DeDq83.js": "26c92e95c49cf65be11a61b18f0131d77369fa970788e4c4637b5f5a1ed3dfe8",
+          "assets/nf-device-worker-C0Au7N2H.js": "e9b6f123170823651c0fd72453940666f57bf48bccdc1373af3aa5eeb2de72ca",
+          "device/runtime-314.0.7/pyodide.mjs": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109",
+          "device/runtime-314.0.7/pyodide.asm.mjs": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635",
+          "device/runtime-314.0.7/pyodide.asm.wasm": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6",
+          "device/runtime-314.0.7/python_stdlib.zip": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a",
+          "device/runtime-314.0.7/pyodide-lock.json": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010"
+        }
+      },
+      "source_and_served_bytes_stable": true
+    },
+    "artifact_source_commit": "41669328e10c7f4a268559447f2f6dde50110e2d",
+    "first_attempt_report_unavailable": true,
+    "report_path_correction": "First external report path was rejected by existing report destination boundary. Changed invocation only to allowed output/verification path; repeated genuine browser checks produced retained report. No accepted first report or browser result invented.",
+    "distinct_review": {
+      "sha256": "70a6f255805086447914f6fd3275a63c76331215f33a060f6dc7133588145efc",
+      "record": {
+        "profile": "actual-mt-browser-retained-distinct-review/v1",
+        "captured_at": "2026-11-24T00:10:43.455989+00:00",
+        "pass": true,
+        "raw_sha256": "0e4ab55dc945fc242361bad505035e397f8e4d78425f4dd662af825c3b58e6e3",
+        "raw_bytes": 20434,
+        "source_count": 35,
+        "served_count": 27,
+        "actual_executor": "Codex /root per retained execution provenance; raw static author field remains web_camo script attribution",
+        "engines": [
+          "Chromium",
+          "WebKit"
+        ],
+        "conclusions": [
+          "Both actual browser reports pass three canonical full records, optional MT failure isolation with actual PS/HP recovery, consent/private details, retention/refusal boundaries, themes and reflow.",
+          "Independently hashed all35 current source and27 served files against immutable before/after maps. Index equals whole-build6 observed index.",
+          "Six overlimit input observations per engine retain exact attempted input and refuse before worker; full records and exact8000 boundary remain distinct."
+        ],
+        "limits": [
+          "No browser rerun by reviewer; result is retained execution evidence, not independent human recognition or accuracy.",
+          "Initial private report destination refused by existing output guard; allowed report path supplied for accepted run, no product permission relaxation.",
+          "No physical phone, human screen reader, production deployment equivalence, MT tag issuance, managed AUTH or full original closure."
+        ]
+      }
+    }
+  },
+  "limits": [
+    "Current app and Share compilation/resources, not Simulator UI, credential signing, Apple upload or physical VoiceOver.",
+    "Browser engine/mobile-layout controls are not a physical phone or human screen reader.",
+    "MT component preview never issues MT or claims independent accuracy.",
+    "Actual locally observed web packaging is separately recorded; protected web route authorization remains pending."
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "author": "/root/share_debugger",
+  "captured_at": "2026-11-23T20:36:36.874540+00:00",
+  "claims": {
+    "accuracy_validated": false,
+    "all_project_obligations_complete": false,
+    "binary_object_closure_proved": false,
+    "compiler_reproduced": false,
+    "distribution_route_admitted": false,
+    "legal_clearance": false,
+    "signature_verified": false
+  },
+  "correction": "At most fixed desired<=5 entries plus one refusal observation; one iterator FD included in128 limit; final membership rechecks retained. No input/manifest/cap/producer/data bytes changed.",
+  "current_executed": {
+    "command": "python3 -I -S -B -m unittest discover -s tests -p test_web_runtime_obligations.py -k received_membership -v",
+    "errors": 0,
+    "failures": 0,
+    "same_private_actual_artifact_cli_exit": 0,
+    "same_private_actual_artifact_report": {
+      "captured_at": "2026-11-23T20:36:08.819027+00:00",
+      "claims": {
+        "accuracy_validated": false,
+        "all_project_obligations_complete": false,
+        "binary_object_closure_proved": false,
+        "compiler_reproduced": false,
+        "distribution_route_admitted": false,
+        "legal_clearance": false,
+        "signature_verified": false
+      },
+      "manifest_sha256": "5d662e2a8c1feeb35465370a01eab9a192c21b0d1eb5c60cbc7021c92e592184",
+      "outputs": {
+        "device-licenses/pyodide-MPL-2.0.txt": {
+          "bytes": 16725,
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        "device-licenses/python-license.txt": {
+          "bytes": 13804,
+          "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+        },
+        "device-licenses/python-stdlib-notices.txt": {
+          "bytes": 245510,
+          "sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321"
+        },
+        "device-licenses/source.txt": {
+          "bytes": 541,
+          "sha256": "2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2"
+        },
+        "device-licenses/unicode-license.txt": {
+          "bytes": 1995,
+          "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+        },
+        "runtime-js-sources/NOTICES.txt": {
+          "bytes": 18300,
+          "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+        },
+        "runtime-js-sources/PYODIDE-JS-SOURCES.zip": {
+          "bytes": 1632140,
+          "sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"
+        },
+        "runtime-js-sources/index.json": {
+          "bytes": 3006,
+          "sha256": "1e26ef876d26f7aea469332d0e0b59779b70e63a0ecfb31a062320da96ce9f4e"
+        },
+        "runtime-obligations/HIWIRE-SOURCES.zip": {
+          "bytes": 107606,
+          "sha256": "ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086"
+        },
+        "runtime-obligations/NOTICES.txt": {
+          "bytes": 237980,
+          "sha256": "a327d8128ea3db6cd77bc5c21b410bed3bb1fe69aa32a9c4a6f508c624339a40"
+        },
+        "runtime-obligations/obligations.json": {
+          "bytes": 3233,
+          "sha256": "f7ba6486df0c2a8c50ca85749e6f0ac412bc84b595b3d4bc94d81e1f0d603b13"
+        },
+        "runtime-zlib-sources/NOTICES.txt": {
+          "bytes": 7912,
+          "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+        },
+        "runtime-zlib-sources/ZLIB-SOURCES.zip": {
+          "bytes": 1682541,
+          "sha256": "145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10"
+        },
+        "runtime-zlib-sources/index.json": {
+          "bytes": 1858,
+          "sha256": "0aa8796de6337350dd6aa98c3e9c1da6b0f75797ff96fc224db720cbc40d1dc2"
+        }
+      },
+      "pass": true,
+      "profile": "five-file-browser-runtime-obligations/v1",
+      "received_files_verified": 19,
+      "required_companions": 14,
+      "resources": {
+        "cached_bytes": 5241852,
+        "held_fds": 122,
+        "logical_payload_reservation": 123314272,
+        "logical_read_bytes": 24524687,
+        "read_calls": 98
+      },
+      "retained_facts_verified": true,
+      "runtime_files": 5,
+      "source_offers": 3,
+      "stdlib_inventory_members": 614
+    },
+    "seconds": 0.072,
+    "skips": 0,
+    "suite_methods_declared": 17,
+    "tests": 2
+  },
+  "finding": "Initial directory membership used unbounded listdir before comparison; replaced with context-managed scandir over heldFD and immediate unknown/excess refusal.",
+  "historical_author_execution": {
+    "limits": "15 controls/7 actual cases are historical precursor evidence; unchanged data/old output identities remain reusable, not full17-current execution.",
+    "path": "runs/2026-11-23-web-runtime-obligations-execution.json",
+    "sha256": "7dd66bca09906fac524491dde8fc8196eeba66f1af317b158f502eb7aab001a3"
+  },
+  "initial_test_harness_failure": {
+    "cause": "TemporaryDirectory cleanup preceded Capture.close, so retained-directory identity correctly refused. Test context lifetime corrected; product checks retained.",
+    "errors": 2,
+    "log_sha256": "98126444a73e6fea696c74e410303bc1640e39a4743474b421c9b769f99f78c2"
+  },
+  "limits": [
+    "No archive rebuild/copy/install/native/SDK/model/signing/network/whole17 suite repeated.",
+    "No route admission/legal/accuracy/full F057/X02 claim."
+  ],
+  "pass": true,
+  "profile": "web-runtime-bounded-membership-correction/v1",
+  "raw_current_log": {
+    "bytes": 434,
+    "sha256": "e1ad6717194b237a7bde41b0c675692902a99a43db54c9c70413c37fac2f46c7"
+  },
+  "raw_current_stdout": {
+    "bytes": 2540,
+    "sha256": "6cd4d0226eb2c96632b5fdcdb7a6c9088017494d1f4fc57a1ca19a3733c9e0a1"
+  },
+  "sources": {
+    "docs/web-runtime-obligations-plan.md": {
+      "bytes": 20796,
+      "sha256": "1c123d251d182b73f9d244607c60f1d941c349a152f8d4bff02ba23bde2fa444"
+    },
+    "docs/web-runtime-obligations-result.md": {
+      "bytes": 3512,
+      "sha256": "a5b51b20aeb454724158d9a9f67b6a143e7c2de0e81876cf9d776046e469095d"
+    },
+    "docs/web-runtime-obligations.md": {
+      "bytes": 4702,
+      "sha256": "2a2e8d92f54c094cc8892f906086ed61c6803a54b6f8b23f65cfa634819509d9"
+    },
+    "sbom/web-runtime-history/b6728b7c74cfe5ae1b929b2dde2ab5fece3fd0f1985543bff69047e36f714f1f.py": {
+      "bytes": 16385,
+      "sha256": "b6728b7c74cfe5ae1b929b2dde2ab5fece3fd0f1985543bff69047e36f714f1f"
+    },
+    "sbom/web-runtime/CPYTHON-EMBEDDED-NOTICES.txt": {
+      "bytes": 8909,
+      "sha256": "a23d5e0943959e8a611334adb0dd5a8848381d4736e9b7ad442618fc5b3cc298"
+    },
+    "sbom/web-runtime/EMSCRIPTEN-SYSTEM-NOTICES.txt": {
+      "bytes": 203087,
+      "sha256": "76f9f7bb2ef92ebbe2176924e1f179eaba79c054c012bbea42ea9f07830ae82c"
+    },
+    "sbom/web-runtime/EXTERNAL-RUNTIME-NOTICES.txt": {
+      "bytes": 25315,
+      "sha256": "1975bde1297eea4fb42a51bd18e48bef56086cb6750659ab4427c3e31ebdc226"
+    },
+    "sbom/web-runtime/cpython-embedded-facts.json": {
+      "bytes": 110415,
+      "sha256": "87cdc75037c8fa8042da088c5098397784284f27a6ce24e1941ec8575ff61a40"
+    },
+    "sbom/web-runtime/emscripten-system-grant-facts.json": {
+      "bytes": 71632,
+      "sha256": "565ac73e1c32fe1d3034d8d8cf6f6d8898bf1f1b05280cc90135dd52df9b85a0"
+    },
+    "sbom/web-runtime/external-primary-facts.json": {
+      "bytes": 8399,
+      "sha256": "763f888e824d126ce03c0d6b873e119b3bcd72bd2fa4453067246baab66fc612"
+    },
+    "sbom/web-runtime/hiwire-preferred-source.json": {
+      "bytes": 6098,
+      "sha256": "91a0b14f3267c0347c47f3c4977bbed59dad6a4c460e774cf833b30b201f2553"
+    },
+    "sbom/web-runtime/hiwire/LICENSE.txt": {
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    "sbom/web-runtime/hiwire/Makefile.txt": {
+      "bytes": 1258,
+      "sha256": "cc8ccb05c4c77e9291d37d69126852c0b1874bb5d672a112cf89d95d46eb7f2e"
+    },
+    "sbom/web-runtime/hiwire/README.md.txt": {
+      "bytes": 6696,
+      "sha256": "b1e974fdce18050a3f4d176378bcd3ded063ec1ea1484727929a8745bd942a55"
+    },
+    "sbom/web-runtime/hiwire/patches/emcc-emjs-dylink-externref.patch.txt": {
+      "bytes": 2919,
+      "sha256": "249872448cb7fddf3b1629230336d2e3c27363c147caab352c4b9ba46a612028"
+    },
+    "sbom/web-runtime/hiwire/patches/wasi-libc-clang-17-compat.patch.txt": {
+      "bytes": 923,
+      "sha256": "89c3f867a56b73cbb8863a32ae11babda5ba68ca6f3423054b9362a591f2886e"
+    },
+    "sbom/web-runtime/hiwire/pyproject.toml.txt": {
+      "bytes": 1126,
+      "sha256": "2a847d0a311bd83fb18f47bba8bf6b5c4db56fb762d436dfe2610d2aeaaa4f90"
+    },
+    "sbom/web-runtime/hiwire/src/_deduplicate.c.txt": {
+      "bytes": 2521,
+      "sha256": "d4bd9f775dc68e6eb71e96e7cd7cb1caac4b58c1dd2612554b57309fee2dc1fc"
+    },
+    "sbom/web-runtime/hiwire/src/compat.c.txt": {
+      "bytes": 3181,
+      "sha256": "f38c6a3099143c95fec7c689bf7f3ef2cf8b2ab8c4f4af9ee19d070fa28f6042"
+    },
+    "sbom/web-runtime/hiwire/src/hiwire.c.txt": {
+      "bytes": 3607,
+      "sha256": "2d621e49354bca834a2a24d788934d2b0eb75d53c8c796d278aca53f019f1a52"
+    },
+    "sbom/web-runtime/hiwire/src/hiwire.h.txt": {
+      "bytes": 2771,
+      "sha256": "78550d629ae04a75ce1cb2ea1974974dcd8e127430ad0a0d1346af5efe25ae0f"
+    },
+    "sbom/web-runtime/hiwire/src/hiwire_macros.h.txt": {
+      "bytes": 5275,
+      "sha256": "d0c142e064686afc727c2ad55292cc471c30fb5d1eac15122ae578bdbd857c04"
+    },
+    "sbom/web-runtime/hiwire/src/wasm_table.c.txt": {
+      "bytes": 1426,
+      "sha256": "a42dd5c34d07b31ad5987340da084584c9ee03d7834536788f0e359ae9a82a23"
+    },
+    "sbom/web-runtime/hiwire/src/wasm_table.h.txt": {
+      "bytes": 233,
+      "sha256": "109f8471078e354c1e379c0751bb635e7b8e8afb55f190865bc8565de2bbf8dc"
+    },
+    "sbom/web-runtime/manifest.json": {
+      "bytes": 15727,
+      "sha256": "5d662e2a8c1feeb35465370a01eab9a192c21b0d1eb5c60cbc7021c92e592184"
+    },
+    "sbom/web-runtime/publisher-recipe-facts.json": {
+      "bytes": 36296,
+      "sha256": "6c183126c5d2542a41c33430f1f9ec33a601ee6723d0a2abc977721b85c7047a"
+    },
+    "sbom/web-runtime/react-exact-release-project-grant-facts.json": {
+      "bytes": 17115,
+      "sha256": "fe1349a50e639ffcca6f05f49a3a5f1569a1179bb8219b48019eb30af0e9e6d9"
+    },
+    "sbom/web-runtime/react-exact-source-2.3.8.tgz": {
+      "bytes": 4937,
+      "sha256": "ccc872d7a2dc007cbf9d755f30d56b8d80eabdbe22c44c95a709129bfdc46f01"
+    },
+    "scripts/verify-web-runtime-obligations.py": {
+      "bytes": 1941,
+      "sha256": "a098bce5ae6645bede63880b44e3bbfa3984f3f106392ed119b78217f639558b"
+    },
+    "tests/test_web_runtime_obligations.py": {
+      "bytes": 9792,
+      "sha256": "38dcb01c2fd62ad1cf44f6c876467a88322fec3a6515495ecf5e51f02b5771b5"
+    },
+    "tools/web_runtime_obligations.py": {
+      "bytes": 16884,
+      "sha256": "adf7ab04843d6d8f687d7c71542237bd727a1ab8e474d30f138526536ca0c688"
+    }
+  }
+}

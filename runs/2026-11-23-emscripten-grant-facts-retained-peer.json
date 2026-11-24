@@ -1,0 +1,26 @@
+{
+  "author": "/root/seo",
+  "captured_at": "2026-11-23T20:25:38.903547+00:00",
+  "findings": [],
+  "inputs": {
+    "EMSCRIPTEN-SYSTEM-NOTICES.txt": "76f9f7bb2ef92ebbe2176924e1f179eaba79c054c012bbea42ea9f07830ae82c",
+    "emscripten-system-grant-facts.json": "565ac73e1c32fe1d3034d8d8cf6f6d8898bf1f1b05280cc90135dd52df9b85a0"
+  },
+  "limits": [
+    "No archive rescan/execution/download or binary object completeness claimed.",
+    "Author archive inspections remain attributed to SEO; this review checked retained raw source/range hashes and applicable grant distinctions.",
+    "Musl header/crt waiver is not whole-libc waiver; LLVM embedding exception not all-terms waiver; MiniLZ4 actual MIT and libunwind missing CREDITS remain explicit.",
+    "No route admission, professional clearance or full F057/X02 closure."
+  ],
+  "pass": true,
+  "performed": {
+    "full_member_ranges": 23,
+    "notice_bytes": 203087,
+    "notice_ranges": 147,
+    "retained_range_bodies": 124,
+    "selector_excerpts": 8
+  },
+  "profile": "emscripten-grant-facts-retained-peer/v1",
+  "reviewer": "/root/share_debugger",
+  "source_association": "Pinned Pyodide recipe explicitly links em++/stdc++, wasm exceptions, LZ4=1 and four filesystem libraries. Search of retained build/config files found no MALLOC override; pinned default dlmalloc association is conditional recipe evidence, not actual object membership."
+}

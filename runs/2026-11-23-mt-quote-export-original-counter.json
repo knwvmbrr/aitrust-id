@@ -1,0 +1,52 @@
+{
+  "profile": "mt-supported-quotation-export-before-counter/v1",
+  "captured_at": "2026-11-23T20:24:06.692681+00:00",
+  "author": "Codex /root/web_camo",
+  "source_base": "caf6af45a506bcb3196bfcf991eea1153f6a1e95",
+  "source_sha256": {
+    "scripts/authority-mobile-quotation.py": "999e5579be946b060b1bd1e71704be5fa1e59476eace80c0a39a82da92802145",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "tools/authority_mobile_quotation.py": "f230f44ea5584302e08b1b462839b8b41c0e69d03f7f5e34fc197a0c47b2b4bd",
+    "tools/authority_quotation.py": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135"
+  },
+  "synthetic_input": "The invented example says “Experts agree [1]”.",
+  "supported_default_brief": {
+    "format": "mobile-authority-quotation-observation/v1",
+    "method": "mobile-double-quote-authority-observations/1.0.0",
+    "state": "NO_SUPPORTED_PATTERN",
+    "outside_supported_quotes_without_marker": 0,
+    "outside_supported_quotes_with_marker": 0,
+    "quoted_phrase_count": 1,
+    "supported_quote_count": 1,
+    "source_lookup_performed": false,
+    "quote_endorsement_interpreted": false,
+    "negation_interpreted": false,
+    "semantic_attribution_interpreted": false,
+    "intent_established": false,
+    "truth_established": false,
+    "independent_accuracy_evidence": false,
+    "network_used": false,
+    "tags": []
+  },
+  "actual": {
+    "exit": 2,
+    "default_console": {
+      "state": "UNAVAILABLE",
+      "reason": "unsupported_double_quote_context",
+      "tags": []
+    },
+    "private_details_file_exists": true,
+    "file_mode": "0o600",
+    "directory_mode": "0o700",
+    "retained_detail_quoted_count": 1,
+    "private_output_warning_present": false,
+    "real_parent_close_then_error": true,
+    "source_analysis_supported_before_export": true
+  },
+  "fault": "After the real parent-directory close, raise one owned synthetic OSError. Actual file writing, fsync, and close occurred; no foreign fd or user file targeted.",
+  "limits": [
+    "Pure Python synthetic boundary control only; no private user text, native SDK, browser, model or network.",
+    "Expected cleanup was performed by TemporaryDirectory after the record facts were captured; no private fixture retained.",
+    "No tag, endorsement, semantic intent, accuracy or original requirement claim."
+  ]
+}

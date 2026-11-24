@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "kind": "current_native_source_selection",
+  "captured_at": "2026-11-24T03:16:24.697029+00:00",
+  "pass": true,
+  "source_base": "42f6d0fdf3060c8753a5e48ecc979ab68e1b3479",
+  "selected_guard": "scripts/verify-native-share-evidence.py",
+  "selected_proof": {
+    "path": "runs/2026-11-23-tag-runtime-native-share.json",
+    "bytes": 16489,
+    "sha256": "837a6371bb7078b36e80b72d7a6297a0f4c8a4fa8eb2f82f9c13345e1c5cacb7"
+  },
+  "authored_ui_handoff": "19444eeafe1f373dbdd9ef6435ca3b66998e3ac4",
+  "actual_complete_run": {
+    "passed": 7,
+    "failed": 0,
+    "skipped": 0,
+    "source_inputs": 109,
+    "component_inputs": 116,
+    "raw_receipt_sha256": "6cce5992369464d7084f0493af7a493b2cc7b071c9e5cb1ccd6c337e900cf4b1",
+    "normal_runner": true,
+    "focused_runs_composed": false,
+    "runtime": "iOS 26.2",
+    "runtime_build": "23C54",
+    "sdk": "27.2",
+    "owned_simulator_removed": true,
+    "owned_simulator_inventory_absent": true
+  },
+  "actual_selected_guard_controls": {
+    "interpreter": "existing project verification-venv Python; absolute private path omitted",
+    "argv_after_interpreter": [
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_native_share_evidence.py"
+    ],
+    "returncode": 0,
+    "passed": 24,
+    "seconds": 0.63,
+    "source_bindings": {
+      "scripts/verify-native-share-evidence.py": "fafd41004aceacc4dcdd964adb36a0a861ee6e55f7de45ec0d80846a503469e7",
+      "tests/test_native_share_evidence.py": "28fc7b62e2291e29f5e0105d664f78f5d9a34f596de86f16b07a3712bdd6b1e8",
+      "mobile/ios/Tests/UIFlows.swift": "16b0ac936caed61cd2d26ba0bc45c03714992488196b0af8175301a6946ed388",
+      "runs/2026-11-23-tag-runtime-native-share.json": "837a6371bb7078b36e80b72d7a6297a0f4c8a4fa8eb2f82f9c13345e1c5cacb7"
+    }
+  },
+  "original_scope": {
+    "records": 202,
+    "complete": 136,
+    "open": 66,
+    "target_open": 60,
+    "new_original_closures": 0,
+    "criteria_or_percentages_changed": false
+  },
+  "current_finite_source_registration": {
+    "charged_names": 157,
+    "cap": 160,
+    "new_literal_names": 6,
+    "producer_e72_unchanged": true,
+    "runtime_permission_granted": false
+  },
+  "latest_image_hosted_observation": {
+    "run_id": 45310201663,
+    "source_commit": "d7cdaffd0c3cc5b34c11a0a68102a1d02501b089",
+    "source_phase": "SUCCESS",
+    "acquisition": "FAILED",
+    "wheel_ordinal": 32,
+    "wheels_completed": 31,
+    "install_and_inference": "SKIPPED",
+    "cleanup": "retained_unsealed",
+    "next_source_component": "Isolated exact-wheel supplemental SOURCE preservation; actual88-input hosted qualification still pending."
+  },
+  "separate_source_components": {
+    "web_conditional_policy": "c2093cff7e1fc87e1e227d21efcc6e57362a1a83",
+    "web_common_caller": "4f025df12296205ed4a2e8c36757cd2920f2e438",
+    "ios_build_number": "70e74bde7481b3e36a21514f03c8a6ab1e608c11",
+    "status": "Separate authored handoffs; not integrated or granted runtime authority in this native selection.",
+    "image_source_preservation": "976864835b8a57633a1bd1a7c74186ea022e10d5"
+  },
+  "publication": {
+    "PR": 154,
+    "new_final_source_required_checks": "PENDING",
+    "protocol_and_website_current": false,
+    "new_TestFlight_uploaded": false,
+    "live_site_changed": false
+  },
+  "limitations": {
+    "physical_device": false,
+    "human_accessibility": false,
+    "independent_accuracy": false,
+    "installable_phone_release": false,
+    "new_tag_release": false,
+    "legal_clearance": false
+  },
+  "actual_finite_table_controls": {
+    "argv_after_interpreter": [
+      "-m",
+      "pytest",
+      "-q",
+      "tests/test_source_release_policy_v4.py",
+      "-k",
+      "155_baseline_names or table_digest"
+    ],
+    "returncode": 0,
+    "passed": 2,
+    "deselected": 18,
+    "seconds": 0.5,
+    "scope": "Historical155names/closed reservation and coherent table/foundation/161-entry refusal; no actual whole new-source archive/permission inferred."
+  }
+}

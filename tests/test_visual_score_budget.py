@@ -99,8 +99,12 @@ class BudgetTests(unittest.TestCase):
  def test_capacity_refusal_precedes_acquire_and_stage(self):
   with self.private() as d:
    reports=d/'reports';reports.mkdir(mode=0o700);stage=d/'visual-score-not-created'
-   with mock.patch.object(q,'capacity_facts',side_effect=q.QualificationRefused),mock.patch.object(q,'main') as acquire,self.assertRaises(q.QualificationRefused):operator.worker('acquire',stage,reports,sys.executable,self.record())
-   acquire.assert_not_called();self.assertFalse(stage.exists());self.assertEqual(list(reports.iterdir()),[])
+   failure=q.QualificationRefused('PRIVATE_CAPACITY_CANARY')
+   with mock.patch.object(q,'capacity_facts',side_effect=failure),mock.patch.object(q,'main') as acquire,self.assertRaises(q.QualificationRefused)as caught:operator.worker('acquire',stage,reports,sys.executable,self.record())
+   self.assertIs(caught.exception,failure);acquire.assert_not_called();self.assertFalse(stage.exists())
+   diagnostic=reports/'acquisition-diagnostic-private.json';self.assertEqual(set(reports.iterdir()),{diagnostic})
+   self.assertEqual(stat.S_IMODE(diagnostic.stat().st_mode),0o600);raw=diagnostic.read_bytes();self.assertLessEqual(len(raw),4096);self.assertNotIn(b'PRIVATE_CAPACITY_CANARY',raw)
+   value=q.validate_acquisition_diagnostic(json.loads(raw));self.assertEqual(value,q.acquisition_failure(failure));self.assertEqual(value['operation'],'capacity');self.assertEqual(value['category'],'qualification_refused');self.assertTrue(all(count==0 for count in value['role_counts'].values()))
  def test_actual_cancel_unwinds_and_reaps(self):
   original=subprocess.Popen;children=[];now=b.clock()
   def spawn(*a,**k):p=original(*a,**k);children.append(p);return p
@@ -191,7 +195,7 @@ class BudgetTests(unittest.TestCase):
    self.assertTrue(last['candidate_pass']);self.assertTrue(first['candidate']['pass']);self.assertTrue(last['requires_successful_exact_source_job'])
  def test_exact_source_suite_admission_before_execution_and_actual_count(self):
   from types import SimpleNamespace
-  expected={'test_visual_score.py':33,'test_visual_score_qualification.py':33,'test_visual_score_workflow.py':5,'test_visual_score_budget.py':27}
+  expected={'test_visual_score.py':33,'test_visual_score_qualification.py':34,'test_visual_score_workflow.py':5,'test_visual_score_budget.py':27}
   self.assertEqual(operator.SOURCE_SUITE_COUNTS,expected)
   def suites(counts):return {name:unittest.TestSuite(unittest.FunctionTestCase(lambda:None) for _ in range(n)) for name,n in counts.items()}
   with self.private() as d:

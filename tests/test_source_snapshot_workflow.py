@@ -50,10 +50,11 @@ class SourceWorkflow(unittest.TestCase):
         for expected in ("('test_source_snapshot_admission.py',10)",
                          "('test_source_snapshot_managed.py',21)",
                          "('test_source_snapshot_workflow.py',4)",
-                         "('test_source_release_policy_v3.py',24)"):
+                         "('test_source_release_policy_v3.py',24)",
+                         "('test_source_release_policy_v4.py',20)"):
             self.assertIn(expected, text)
         self.assertIn('assert suite.countTestCases()==count', text)
-        self.assertIn('assert result.testsRun==59', text)
+        self.assertIn('assert result.testsRun==79', text)
 
     def test_branch_missing_controls_extra_authority_and_ambiguous_job_refuse(self):
         text = self.source()

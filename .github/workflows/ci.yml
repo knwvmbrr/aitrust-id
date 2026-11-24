@@ -114,6 +114,10 @@ jobs:
           python -m pytest tests/test_visual_score_budget.py -q
           python scripts/prepare-visual-score-qualification.py check-lock
       - run: python -m pytest tests/test_gateway_integration.py -q
+      - name: Exercise current source-copy and managed-source software boundaries
+        run: python -m pytest tests/test_source_release_policy_v4.py tests/test_source_snapshot_admission.py tests/test_source_snapshot_managed.py tests/test_source_release_policy_v3.py tests/test_source_snapshot_workflow.py -q
+      - name: Exercise finite runtime notices, web artifacts, iOS projections and MT private export
+        run: python -m pytest tests/test_web_runtime_obligations.py tests/test_web_checker_artifact.py tests/test_ios_runtime_obligations.py tests/test_mt_quote_export.py -q
       - name: Keep tag routes independent under real HTTP saturation and worker failures
         run: |
           python -m pytest tests/test_tag_failure_isolation.py tests/test_gateway_runtime_isolation.py tests/test_standalone_ps.py tests/test_independent_tag_batch.py tests/test_tag_isolation_verifier.py tests/test_gateway_cancellation.py tests/test_draft_privacy.py -q
@@ -358,6 +362,8 @@ jobs:
       - run: pip install --require-hashes -r eval/requirements.lock
       - run: npm ci
       - run: npm ci --prefix site
+      - name: Exercise bounded whole-web build observation without importing a builder
+        run: node tests/web-checker-build-observer.mjs
       - name: Validate source-bound redaction development charts and isolated tag states
         run: node --test tests/redaction-performance.cjs tests/blind-review-files.cjs
       - run: npm run verify:enterprise
@@ -392,7 +398,7 @@ jobs:
         run: node scripts/verify-replay-export.cjs --python python
       - name: Offline observations and optional receipt controls
         run: |
-          node --test tests/composition-observations.cjs tests/offline-receipts.cjs
+          node --test tests/composition-observations.cjs tests/offline-receipts.cjs tests/reviewer-attestations.cjs
           node scripts/verify-composition-tool.cjs
           python scripts/verify-tag-development.py
       - name: Device method parity, offline and private input boundaries

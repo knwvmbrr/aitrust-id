@@ -1,0 +1,357 @@
+{
+  "claims": {
+    "accuracy_validated": false,
+    "all_project_obligations_complete": false,
+    "binary_object_closure_proved": false,
+    "compiler_reproduced": false,
+    "distribution_route_admitted": false,
+    "legal_clearance": false,
+    "signature_verified": false
+  },
+  "inputs": {
+    "sbom/assets/notices.json": {
+      "bytes": 11659,
+      "sha256": "5c165aea3c716a183174a10ce8be0b5e0894554a8ad5492171e5141dc642facd"
+    },
+    "sbom/nested-runtime/PYTHON-STDLIB-NOTICES.txt": {
+      "bytes": 245510,
+      "sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321"
+    },
+    "sbom/nested-runtime/cpython-v3.14.2-license.rst": {
+      "bytes": 57595,
+      "sha256": "c695d550b135e53e38807e76496d1db17d22c40e461d1f3f354c86188d3305dd"
+    },
+    "sbom/nested-runtime/cpython-v3.14.2-sbom.spdx.json": {
+      "bytes": 79329,
+      "sha256": "d539d8b99e28b190bc21aa932c69e8a554124bbe6ab196e705f31fc23aa6bd68"
+    },
+    "sbom/nested-runtime/manifest.json": {
+      "bytes": 342006,
+      "sha256": "9452abdfd81cafdc2f0b9a0b2e45cb4206aa40c51ab41edcb61d3552f33a05d6"
+    },
+    "sbom/nested-runtime/obligations.json": {
+      "bytes": 425383,
+      "sha256": "aec684f1dbbfb8bf028b284010b09eb44abddb14df87580dcccde1b043766545"
+    },
+    "sbom/nested-runtime/pyodide-wasm-release.json": {
+      "bytes": 3183,
+      "sha256": "fda0196c527b3920744261e27ac93cb71637ad36cf127e450aeaf49f425dd86f"
+    },
+    "sbom/nested-runtime/upstream-license-origin.json": {
+      "bytes": 984,
+      "sha256": "42b0f92f263499745cf5d20dc92e2474268ed958d74a392603859c66da2f09dd"
+    },
+    "sbom/reviews/pyodide-js/manifest.json": {
+      "bytes": 4934,
+      "sha256": "24263f38d4ada9e82533048d7aead0cb543a3f0f4cbd8bfd69316aefd53c57b6"
+    },
+    "sbom/reviews/pyodide-js/sources/06cb52d1e4ae6a0f9c3f349ba4751b1839dfe7a3515f74373f0a7fab62c52b8d.ts": {
+      "bytes": 4899,
+      "sha256": "06cb52d1e4ae6a0f9c3f349ba4751b1839dfe7a3515f74373f0a7fab62c52b8d"
+    },
+    "sbom/reviews/pyodide-js/sources/0d97147b5f205398c614021ca450d1d95b87cdf8abd1b9ab4fc86c4169f88c36.json": {
+      "bytes": 84911,
+      "sha256": "0d97147b5f205398c614021ca450d1d95b87cdf8abd1b9ab4fc86c4169f88c36"
+    },
+    "sbom/reviews/pyodide-js/sources/1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5.txt": {
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    "sbom/reviews/pyodide-js/sources/27b8c89f8b33c42ca78b4118e0c629731736e92e4a76d45a7515bbeae3313f12.ts": {
+      "bytes": 3678,
+      "sha256": "27b8c89f8b33c42ca78b4118e0c629731736e92e4a76d45a7515bbeae3313f12"
+    },
+    "sbom/reviews/pyodide-js/sources/415b262962d2a85ba65cebfc81aa3319d30dd7960910f2a56bed34b0364c1938.ts": {
+      "bytes": 8410,
+      "sha256": "415b262962d2a85ba65cebfc81aa3319d30dd7960910f2a56bed34b0364c1938"
+    },
+    "sbom/reviews/pyodide-js/sources/4a651baeba2f57f192cf2ccdf45ff052bc34baa986abae01624147d11ad6df1b.ts": {
+      "bytes": 15238,
+      "sha256": "4a651baeba2f57f192cf2ccdf45ff052bc34baa986abae01624147d11ad6df1b"
+    },
+    "sbom/reviews/pyodide-js/sources/516505fb9eb14546ce45991cd6f0ccc2613e7e9d1559b22c24f48073ec008e5d.ts": {
+      "bytes": 10367,
+      "sha256": "516505fb9eb14546ce45991cd6f0ccc2613e7e9d1559b22c24f48073ec008e5d"
+    },
+    "sbom/reviews/pyodide-js/sources/5ed6960e60f16c713adcc2bff7bd1439a7c71088afb56b49ed88033af8a556d3.ts": {
+      "bytes": 7945,
+      "sha256": "5ed6960e60f16c713adcc2bff7bd1439a7c71088afb56b49ed88033af8a556d3"
+    },
+    "sbom/reviews/pyodide-js/sources/7f05551b60289670dc50a2eeb4e009f72a574a71f0f794b950315b261b4a22da.ts": {
+      "bytes": 263,
+      "sha256": "7f05551b60289670dc50a2eeb4e009f72a574a71f0f794b950315b261b4a22da"
+    },
+    "sbom/reviews/pyodide-js/sources/899da9d991cb211a3642b84e82a9ae0b4b4e44546fd207e34d7d4ec2eb40f420.txt": {
+      "bytes": 1080,
+      "sha256": "899da9d991cb211a3642b84e82a9ae0b4b4e44546fd207e34d7d4ec2eb40f420"
+    },
+    "sbom/reviews/pyodide-js/sources/a9c7ac66311ed7e0805b9970054ee5be4f69d02204d28bffe4b017310a24bad9.tar.gz": {
+      "bytes": 1465591,
+      "sha256": "a9c7ac66311ed7e0805b9970054ee5be4f69d02204d28bffe4b017310a24bad9"
+    },
+    "sbom/reviews/pyodide-js/sources/ba3152133cf09428c19a06230b9af252a239659ec1747db8139f68ee6dfe69f9.ts": {
+      "bytes": 226,
+      "sha256": "ba3152133cf09428c19a06230b9af252a239659ec1747db8139f68ee6dfe69f9"
+    },
+    "sbom/reviews/pyodide-js/sources/ccb7cec7bae3b8b3bae66ae5a3cc03e621dc03289605e5667097f8885fd75adc.ts": {
+      "bytes": 1879,
+      "sha256": "ccb7cec7bae3b8b3bae66ae5a3cc03e621dc03289605e5667097f8885fd75adc"
+    },
+    "sbom/reviews/pyodide-js/sources/f1ac1bce24f9a936957975f6205cf49337c46f6b32591e807f168ca377b392a4.ts": {
+      "bytes": 5635,
+      "sha256": "f1ac1bce24f9a936957975f6205cf49337c46f6b32591e807f168ca377b392a4"
+    },
+    "sbom/reviews/web-js/react-remove-scroll-bar-2.3.8.json": {
+      "bytes": 2313,
+      "sha256": "3c57078bb1141ad9836c165831193adf40845e091f1becb65f18a721b47a9072"
+    },
+    "sbom/reviews/web-js/sources/a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84.txt": {
+      "bytes": 1093,
+      "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84"
+    },
+    "sbom/reviews/zlib-runtime/manifest.json": {
+      "bytes": 3744,
+      "sha256": "1befd6a3cfe5fc91ca9729f84cb7c2302af15e66ae20d5f2971d76d5de379ddd"
+    },
+    "sbom/reviews/zlib-runtime/sources/17e88863f3600672ab49182f217281b6fc4d3c762bde361935e436a95214d05c.tar.gz": {
+      "bytes": 1572744,
+      "sha256": "17e88863f3600672ab49182f217281b6fc4d3c762bde361935e436a95214d05c"
+    },
+    "sbom/reviews/zlib-runtime/sources/3fdaedb6b2d1bb6d88754183f94f7af33c17eb3fea084bb12bde3f6321a54089.json": {
+      "bytes": 903,
+      "sha256": "3fdaedb6b2d1bb6d88754183f94f7af33c17eb3fea084bb12bde3f6321a54089"
+    },
+    "sbom/reviews/zlib-runtime/sources/620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86.txt": {
+      "bytes": 5093,
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86"
+    },
+    "sbom/reviews/zlib-runtime/sources/845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243.txt": {
+      "bytes": 1002,
+      "sha256": "845efc77857d485d91fb3e0b884aaa929368c717ae8186b66fe1ed2495753243"
+    },
+    "sbom/reviews/zlib-runtime/sources/8a5579af72ea4f427ff00a4150f0ccb3fc5c1e4379f726e101133b1ab9fc600c.h": {
+      "bytes": 96829,
+      "sha256": "8a5579af72ea4f427ff00a4150f0ccb3fc5c1e4379f726e101133b1ab9fc600c"
+    },
+    "sbom/reviews/zlib-runtime/sources/d3d8ca9a7caac82fa68e4984e47c03386093b8fa2b068e8e9eccedd3aa406926.py": {
+      "bytes": 1506,
+      "sha256": "d3d8ca9a7caac82fa68e4984e47c03386093b8fa2b068e8e9eccedd3aa406926"
+    },
+    "sbom/reviews/zlib-runtime/sources/fbab901f75feb30106921191b00a52ed14fb439e49ad0e42bc7b329438c34d24.txt": {
+      "bytes": 1327,
+      "sha256": "fbab901f75feb30106921191b00a52ed14fb439e49ad0e42bc7b329438c34d24"
+    },
+    "sbom/web-runtime/CPYTHON-EMBEDDED-NOTICES.txt": {
+      "bytes": 8909,
+      "sha256": "a23d5e0943959e8a611334adb0dd5a8848381d4736e9b7ad442618fc5b3cc298"
+    },
+    "sbom/web-runtime/EMSCRIPTEN-SYSTEM-NOTICES.txt": {
+      "bytes": 203087,
+      "sha256": "76f9f7bb2ef92ebbe2176924e1f179eaba79c054c012bbea42ea9f07830ae82c"
+    },
+    "sbom/web-runtime/EXTERNAL-RUNTIME-NOTICES.txt": {
+      "bytes": 25315,
+      "sha256": "1975bde1297eea4fb42a51bd18e48bef56086cb6750659ab4427c3e31ebdc226"
+    },
+    "sbom/web-runtime/cpython-embedded-facts.json": {
+      "bytes": 110415,
+      "sha256": "87cdc75037c8fa8042da088c5098397784284f27a6ce24e1941ec8575ff61a40"
+    },
+    "sbom/web-runtime/emscripten-system-grant-facts.json": {
+      "bytes": 71632,
+      "sha256": "565ac73e1c32fe1d3034d8d8cf6f6d8898bf1f1b05280cc90135dd52df9b85a0"
+    },
+    "sbom/web-runtime/external-primary-facts.json": {
+      "bytes": 8399,
+      "sha256": "763f888e824d126ce03c0d6b873e119b3bcd72bd2fa4453067246baab66fc612"
+    },
+    "sbom/web-runtime/hiwire-preferred-source.json": {
+      "bytes": 6098,
+      "sha256": "91a0b14f3267c0347c47f3c4977bbed59dad6a4c460e774cf833b30b201f2553"
+    },
+    "sbom/web-runtime/hiwire/LICENSE.txt": {
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    "sbom/web-runtime/hiwire/Makefile.txt": {
+      "bytes": 1258,
+      "sha256": "cc8ccb05c4c77e9291d37d69126852c0b1874bb5d672a112cf89d95d46eb7f2e"
+    },
+    "sbom/web-runtime/hiwire/README.md.txt": {
+      "bytes": 6696,
+      "sha256": "b1e974fdce18050a3f4d176378bcd3ded063ec1ea1484727929a8745bd942a55"
+    },
+    "sbom/web-runtime/hiwire/patches/emcc-emjs-dylink-externref.patch.txt": {
+      "bytes": 2919,
+      "sha256": "249872448cb7fddf3b1629230336d2e3c27363c147caab352c4b9ba46a612028"
+    },
+    "sbom/web-runtime/hiwire/patches/wasi-libc-clang-17-compat.patch.txt": {
+      "bytes": 923,
+      "sha256": "89c3f867a56b73cbb8863a32ae11babda5ba68ca6f3423054b9362a591f2886e"
+    },
+    "sbom/web-runtime/hiwire/pyproject.toml.txt": {
+      "bytes": 1126,
+      "sha256": "2a847d0a311bd83fb18f47bba8bf6b5c4db56fb762d436dfe2610d2aeaaa4f90"
+    },
+    "sbom/web-runtime/hiwire/src/_deduplicate.c.txt": {
+      "bytes": 2521,
+      "sha256": "d4bd9f775dc68e6eb71e96e7cd7cb1caac4b58c1dd2612554b57309fee2dc1fc"
+    },
+    "sbom/web-runtime/hiwire/src/compat.c.txt": {
+      "bytes": 3181,
+      "sha256": "f38c6a3099143c95fec7c689bf7f3ef2cf8b2ab8c4f4af9ee19d070fa28f6042"
+    },
+    "sbom/web-runtime/hiwire/src/hiwire.c.txt": {
+      "bytes": 3607,
+      "sha256": "2d621e49354bca834a2a24d788934d2b0eb75d53c8c796d278aca53f019f1a52"
+    },
+    "sbom/web-runtime/hiwire/src/hiwire.h.txt": {
+      "bytes": 2771,
+      "sha256": "78550d629ae04a75ce1cb2ea1974974dcd8e127430ad0a0d1346af5efe25ae0f"
+    },
+    "sbom/web-runtime/hiwire/src/hiwire_macros.h.txt": {
+      "bytes": 5275,
+      "sha256": "d0c142e064686afc727c2ad55292cc471c30fb5d1eac15122ae578bdbd857c04"
+    },
+    "sbom/web-runtime/hiwire/src/wasm_table.c.txt": {
+      "bytes": 1426,
+      "sha256": "a42dd5c34d07b31ad5987340da084584c9ee03d7834536788f0e359ae9a82a23"
+    },
+    "sbom/web-runtime/hiwire/src/wasm_table.h.txt": {
+      "bytes": 233,
+      "sha256": "109f8471078e354c1e379c0751bb635e7b8e8afb55f190865bc8565de2bbf8dc"
+    },
+    "sbom/web-runtime/publisher-recipe-facts.json": {
+      "bytes": 36296,
+      "sha256": "6c183126c5d2542a41c33430f1f9ec33a601ee6723d0a2abc977721b85c7047a"
+    },
+    "sbom/web-runtime/react-exact-release-project-grant-facts.json": {
+      "bytes": 17115,
+      "sha256": "fe1349a50e639ffcca6f05f49a3a5f1569a1179bb8219b48019eb30af0e9e6d9"
+    },
+    "sbom/web-runtime/react-exact-source-2.3.8.tgz": {
+      "bytes": 4937,
+      "sha256": "ccc872d7a2dc007cbf9d755f30d56b8d80eabdbe22c44c95a709129bfdc46f01"
+    },
+    "scripts/pyodide-js-sources.py": {
+      "bytes": 1977,
+      "sha256": "5dc7db3693a6cf2d02c888915dcd8aa3df2a4306005552392f23a2a656307d63"
+    },
+    "scripts/zlib-source-delivery.py": {
+      "bytes": 1901,
+      "sha256": "5f846b260b36d8d5c8c73f72ada149a48b2414dd3fc2605b5d0d02febefc8efe"
+    },
+    "site/package-lock.json": {
+      "bytes": 118066,
+      "sha256": "527f689fcb38beb9de7756c227084b41e9afcf547de92c687646edd90e01449e"
+    },
+    "site/public/device-licenses/pyodide-MPL-2.0.txt": {
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    "site/public/device-licenses/python-license.txt": {
+      "bytes": 13804,
+      "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+    },
+    "site/public/device-licenses/source.txt": {
+      "bytes": 541,
+      "sha256": "2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2"
+    },
+    "site/public/device-licenses/unicode-license.txt": {
+      "bytes": 1995,
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    },
+    "tools/artifact_evidence_io.py": {
+      "bytes": 12720,
+      "sha256": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e"
+    },
+    "tools/dependency_policy.py": {
+      "bytes": 15682,
+      "sha256": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408"
+    },
+    "tools/pyodide_js_sources.py": {
+      "bytes": 18984,
+      "sha256": "5f964360f591fcfbe4fabe24a214d4430dc639c38e608818f8e5fe870c546e4e"
+    },
+    "tools/zlib_source_delivery.py": {
+      "bytes": 14609,
+      "sha256": "9fef4203334144da456b7b6c875873f064e71f7974bae54cf0da333a3cfb513a"
+    }
+  },
+  "legacy_outputs": {
+    "device-licenses/pyodide-MPL-2.0.txt": {
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    "device-licenses/python-license.txt": {
+      "bytes": 13804,
+      "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+    },
+    "device-licenses/python-stdlib-notices.txt": {
+      "bytes": 245510,
+      "sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321"
+    },
+    "device-licenses/source.txt": {
+      "bytes": 541,
+      "sha256": "2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2"
+    },
+    "device-licenses/unicode-license.txt": {
+      "bytes": 1995,
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    },
+    "runtime-js-sources/NOTICES.txt": {
+      "bytes": 18300,
+      "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+    },
+    "runtime-js-sources/PYODIDE-JS-SOURCES.zip": {
+      "bytes": 1632140,
+      "sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"
+    },
+    "runtime-js-sources/index.json": {
+      "bytes": 3006,
+      "sha256": "1e26ef876d26f7aea469332d0e0b59779b70e63a0ecfb31a062320da96ce9f4e"
+    },
+    "runtime-zlib-sources/NOTICES.txt": {
+      "bytes": 7912,
+      "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+    },
+    "runtime-zlib-sources/ZLIB-SOURCES.zip": {
+      "bytes": 1682541,
+      "sha256": "145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10"
+    },
+    "runtime-zlib-sources/index.json": {
+      "bytes": 1858,
+      "sha256": "0aa8796de6337350dd6aa98c3e9c1da6b0f75797ff96fc224db720cbc40d1dc2"
+    }
+  },
+  "obligations": {
+    "covered": "Exact selected five runtime files, complete614-member stdlib inventory, required grants/notices and three preferred-source offers.",
+    "licenses": "PSF2; MPL2(Pyodide and Hiwire source availability); MIT/Apache2/BSD2/BSD3/Unicode and exact public-domain declarations per component records.",
+    "react_scope": "Separately checked exact2.3.8 project-grant inference, not part of the five-file runtime or all website membership.",
+    "retained_history": "Old observations retain false authentication/full-closure flags; this scoped finite artifact verification does not relabel them."
+  },
+  "profile": "five-file-browser-runtime-obligations/v1",
+  "runtime": {
+    "pyodide-lock.json": {
+      "bytes": 119077,
+      "sha256": "5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010"
+    },
+    "pyodide.asm.mjs": {
+      "bytes": 1250344,
+      "sha256": "f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635"
+    },
+    "pyodide.asm.wasm": {
+      "bytes": 9598218,
+      "sha256": "cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6"
+    },
+    "pyodide.mjs": {
+      "bytes": 17931,
+      "sha256": "6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109"
+    },
+    "python_stdlib.zip": {
+      "bytes": 2545637,
+      "sha256": "fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a"
+    }
+  },
+  "source_baseline": "f23504d166dd450a81cd35dbc15397b13815de21"
+}

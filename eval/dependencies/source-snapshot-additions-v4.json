@@ -1,0 +1,1042 @@
+{
+  "baseline_read_reservation": {
+    "bytes": 8774869,
+    "readset_sha256": "076e3fb8df54fc7b341d9f6f73243cce4021bf4aa5b06cdb77367ca720d60cbd",
+    "unique_oids": 273
+  },
+  "claims": {
+    "accuracy": false,
+    "compiled_runtime_permission": false,
+    "complete_F057_X02": false,
+    "legal_clearance": false,
+    "release_authorized": false,
+    "source_archive_admitted": false
+  },
+  "copied_files": [
+    {
+      "authored_capacity_charge": false,
+      "bytes": 8909,
+      "container": null,
+      "git_blob_oid": "2e15ebf4661b09504391fc13b646f3490359aeee",
+      "grant_group": "cpython-notice-copy",
+      "mode": "100644",
+      "path": "sbom/web-runtime/CPYTHON-EMBEDDED-NOTICES.txt",
+      "sha256": "a23d5e0943959e8a611334adb0dd5a8848381d4736e9b7ad442618fc5b3cc298"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 203087,
+      "container": null,
+      "git_blob_oid": "48a164c3a7036b970b18ea1e1e69a85162c96621",
+      "grant_group": "emscripten-notice-copy",
+      "mode": "100644",
+      "path": "sbom/web-runtime/EMSCRIPTEN-SYSTEM-NOTICES.txt",
+      "sha256": "76f9f7bb2ef92ebbe2176924e1f179eaba79c054c012bbea42ea9f07830ae82c"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 25315,
+      "container": null,
+      "git_blob_oid": "f07765e1c3f3361407fddbc47f8e32f298df9f7f",
+      "grant_group": "external-notice-copy",
+      "mode": "100644",
+      "path": "sbom/web-runtime/EXTERNAL-RUNTIME-NOTICES.txt",
+      "sha256": "1975bde1297eea4fb42a51bd18e48bef56086cb6750659ab4427c3e31ebdc226"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 110415,
+      "container": null,
+      "git_blob_oid": "4b7f3717d8f5f48a036ec30b471ff99aa3e5c04c",
+      "grant_group": "cpython-notice-copy",
+      "mode": "100644",
+      "path": "sbom/web-runtime/cpython-embedded-facts.json",
+      "sha256": "87cdc75037c8fa8042da088c5098397784284f27a6ce24e1941ec8575ff61a40"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 71632,
+      "container": null,
+      "git_blob_oid": "2824ce53a898dc4ac4edd10d60017b09a3a4e1bd",
+      "grant_group": "emscripten-notice-copy",
+      "mode": "100644",
+      "path": "sbom/web-runtime/emscripten-system-grant-facts.json",
+      "sha256": "565ac73e1c32fe1d3034d8d8cf6f6d8898bf1f1b05280cc90135dd52df9b85a0"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 16725,
+      "container": null,
+      "git_blob_oid": "a612ad9813b006ce81d1ee438dd784da99a54007",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/LICENSE.txt",
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 1258,
+      "container": null,
+      "git_blob_oid": "7cef8b182fe3317623639c2b9d19d65f8da85fa7",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/Makefile.txt",
+      "sha256": "cc8ccb05c4c77e9291d37d69126852c0b1874bb5d672a112cf89d95d46eb7f2e"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 6696,
+      "container": null,
+      "git_blob_oid": "71077bee8c8b1c4dd11f83e80584cfb6bc502a47",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/README.md.txt",
+      "sha256": "b1e974fdce18050a3f4d176378bcd3ded063ec1ea1484727929a8745bd942a55"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 2919,
+      "container": null,
+      "git_blob_oid": "81b4a72f85a4a74e109ad979f5a84df1d5e7efee",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/patches/emcc-emjs-dylink-externref.patch.txt",
+      "sha256": "249872448cb7fddf3b1629230336d2e3c27363c147caab352c4b9ba46a612028"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 923,
+      "container": null,
+      "git_blob_oid": "badd91eff67cfb64ddfefae2e6999b959cab2eb1",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/patches/wasi-libc-clang-17-compat.patch.txt",
+      "sha256": "89c3f867a56b73cbb8863a32ae11babda5ba68ca6f3423054b9362a591f2886e"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 1126,
+      "container": null,
+      "git_blob_oid": "c5c03103a40ededeafae24610019e987309edf1d",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/pyproject.toml.txt",
+      "sha256": "2a847d0a311bd83fb18f47bba8bf6b5c4db56fb762d436dfe2610d2aeaaa4f90"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 2521,
+      "container": null,
+      "git_blob_oid": "dbee15ef4b44855675a077347224747bf4489aba",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/src/_deduplicate.c.txt",
+      "sha256": "d4bd9f775dc68e6eb71e96e7cd7cb1caac4b58c1dd2612554b57309fee2dc1fc"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 3181,
+      "container": null,
+      "git_blob_oid": "78d85fee2774d9ebeee677fb67bccca3353e4776",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/src/compat.c.txt",
+      "sha256": "f38c6a3099143c95fec7c689bf7f3ef2cf8b2ab8c4f4af9ee19d070fa28f6042"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 3607,
+      "container": null,
+      "git_blob_oid": "eae9b60a8e88d632324049fcf23ece8744f9247a",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/src/hiwire.c.txt",
+      "sha256": "2d621e49354bca834a2a24d788934d2b0eb75d53c8c796d278aca53f019f1a52"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 2771,
+      "container": null,
+      "git_blob_oid": "bcd3a583186e78f5c0ef56c4fd26261d79d2068d",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/src/hiwire.h.txt",
+      "sha256": "78550d629ae04a75ce1cb2ea1974974dcd8e127430ad0a0d1346af5efe25ae0f"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 5275,
+      "container": null,
+      "git_blob_oid": "b4809bca4b7910cd09d27be3882367867c1f2805",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/src/hiwire_macros.h.txt",
+      "sha256": "d0c142e064686afc727c2ad55292cc471c30fb5d1eac15122ae578bdbd857c04"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 1426,
+      "container": null,
+      "git_blob_oid": "ec52bc063b6e8c01a8da90dcb410c6e2cd4c08cd",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/src/wasm_table.c.txt",
+      "sha256": "a42dd5c34d07b31ad5987340da084584c9ee03d7834536788f0e359ae9a82a23"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 233,
+      "container": null,
+      "git_blob_oid": "1fbf6e1deabd392e5f91d78711088d2629fa6566",
+      "grant_group": "hiwire-preferred-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/hiwire/src/wasm_table.h.txt",
+      "sha256": "109f8471078e354c1e379c0751bb635e7b8e8afb55f190865bc8565de2bbf8dc"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 36296,
+      "container": null,
+      "git_blob_oid": "d550d02be72ef47f51f2ffb3fc8327c3ec4c3011",
+      "grant_group": "pyodide-recipe-source-copy",
+      "mode": "100644",
+      "path": "sbom/web-runtime/publisher-recipe-facts.json",
+      "sha256": "6c183126c5d2542a41c33430f1f9ec33a601ee6723d0a2abc977721b85c7047a"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 4937,
+      "container": null,
+      "git_blob_oid": "e67f841234f4df531e423f730da432f65c5a316a",
+      "grant_group": "react-project-mit-source",
+      "mode": "100644",
+      "path": "sbom/web-runtime/react-exact-source-2.3.8.tgz",
+      "sha256": "ccc872d7a2dc007cbf9d755f30d56b8d80eabdbe22c44c95a709129bfdc46f01"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 245510,
+      "container": null,
+      "git_blob_oid": "fbd8c215ccc445a40fb90c9c891aba930bad8cf5",
+      "grant_group": "stdlib-notice-copy",
+      "mode": "100644",
+      "path": "site/public/device-licenses/python-stdlib-notices.txt",
+      "sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 195760,
+      "container": {
+        "format": "mt-mobile-source-bundle/v1",
+        "members": {
+          "LICENSE": {
+            "bytes": 11358,
+            "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+          },
+          "NOTICE": {
+            "bytes": 1134,
+            "sha256": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6"
+          },
+          "eval/vectors/unicode/LICENSE.txt": {
+            "bytes": 1995,
+            "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+          },
+          "protocol/corpus.py": {
+            "bytes": 8414,
+            "sha256": "826f3c069b5480bc4a17d1aff9c5e0ad03a350da9b115c054a65b30f5f78a67f"
+          },
+          "protocol/normalization-core.js": {
+            "bytes": 2038,
+            "sha256": "8e55927e05b9eda0d3c82fc9dc7677de3916d7cc2492b4504d534577821ceccd"
+          },
+          "protocol/normalization.mjs": {
+            "bytes": 61796,
+            "sha256": "8b1472ba4c8f04eb3dae9cbaa2ccc60a7221e01dcd2a857d9bfafb3811633ccb"
+          },
+          "protocol/normalization.py": {
+            "bytes": 2419,
+            "sha256": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1"
+          },
+          "protocol/unicode15-data.json": {
+            "bytes": 59614,
+            "sha256": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+          },
+          "scripts/authority-mobile-quotation.py": {
+            "bytes": 2591,
+            "sha256": "4e2c4b29733650a3dcda60e7c5a27df460567aee73ca2d44c2ca526baaf10a49"
+          },
+          "scripts/authority-quotation.py": {
+            "bytes": 1642,
+            "sha256": "228c65d9255e9b54a9963c040e7109987210b55479f664bc8278a27f7401cd52"
+          },
+          "tools/authority_mobile_quotation.py": {
+            "bytes": 2645,
+            "sha256": "f230f44ea5584302e08b1b462839b8b41c0e69d03f7f5e34fc197a0c47b2b4bd"
+          },
+          "tools/authority_quotation.py": {
+            "bytes": 5329,
+            "sha256": "e585cfb32bae50d641ac2f0f551cada9960f1600524380f4edac6c391ef7c135"
+          },
+          "tools/blind_review_io.py": {
+            "bytes": 6453,
+            "sha256": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09"
+          },
+          "tools/language_observations.py": {
+            "bytes": 8771,
+            "sha256": "8b1def1ebda63b80454305217558baf6855e467cb319ff886edfdd5348cc50ec"
+          },
+          "tools/mt_mobile_device.py": {
+            "bytes": 1944,
+            "sha256": "cda56dce7cdd8322fe7b0d45b27e167c943ead2f7d22705ff322e9e9ebbb28dd"
+          }
+        }
+      },
+      "git_blob_oid": "aa5d456611c1b6e72685f62a02ff0ebb2932bd42",
+      "grant_group": "mt-apache-unicode-source-container",
+      "mode": "100644",
+      "path": "site/public/mt-mobile-device/method-53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191.json",
+      "sha256": "53b8a0016d40a7abae5f069f83a160787ca2264907c673c0ba0d09a5fa3f6191"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 107606,
+      "container": null,
+      "git_blob_oid": "95021b9aa81e687e7dbcbff90b19df6234551c3a",
+      "grant_group": "runtime-generated-obligation-outputs",
+      "mode": "100644",
+      "path": "site/public/runtime-obligations/HIWIRE-SOURCES.zip",
+      "sha256": "ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086"
+    },
+    {
+      "authored_capacity_charge": false,
+      "bytes": 237980,
+      "container": null,
+      "git_blob_oid": "404878207266bb593e3ce9cae5adeb909fa9459b",
+      "grant_group": "runtime-generated-obligation-outputs",
+      "mode": "100644",
+      "path": "site/public/runtime-obligations/NOTICES.txt",
+      "sha256": "a327d8128ea3db6cd77bc5c21b410bed3bb1fe69aa32a9c4a6f508c624339a40"
+    },
+    {
+      "authored_capacity_charge": true,
+      "bytes": 3233,
+      "container": null,
+      "git_blob_oid": "e01b4bfbbd97d662fd230a65e6b939a2660712a1",
+      "grant_group": "runtime-generated-obligation-outputs",
+      "mode": "100644",
+      "path": "site/public/runtime-obligations/obligations.json",
+      "sha256": "f7ba6486df0c2a8c50ca85749e6f0ac412bc84b595b3d4bc94d81e1f0d603b13"
+    }
+  ],
+  "foundations": {
+    "eval/dependencies/source-snapshot-additions-v3.json": {
+      "bytes": 142724,
+      "sha256": "3bd727fef18736bcd259fa4f1e21fd25fa8629f361b25289dc0016f48394db3e"
+    },
+    "eval/dependencies/source-snapshot-release-v2.json": {
+      "bytes": 410005,
+      "sha256": "2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d"
+    },
+    "eval/dependencies/source-snapshot-release.json": {
+      "bytes": 3049927,
+      "sha256": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645"
+    },
+    "scripts/worker_process.py": {
+      "bytes": 3483,
+      "sha256": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3"
+    },
+    "tools/source_release_policy.py": {
+      "bytes": 17412,
+      "sha256": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6"
+    },
+    "tools/source_release_policy_v2.py": {
+      "bytes": 22383,
+      "sha256": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c"
+    },
+    "tools/source_release_policy_v3.py": {
+      "bytes": 24924,
+      "sha256": "26a6bb8be66cab5a355bfbe6fcfbd16cefe994d1e7ade8b26b3cd227f0f82d41"
+    },
+    "tools/source_snapshot_binding.py": {
+      "bytes": 14697,
+      "sha256": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb"
+    }
+  },
+  "legacy_v3_names": [
+    ".github/workflows/source-profile-continuation.yml",
+    ".github/workflows/visual-score-qualification.yml",
+    "docs/hf-model-card-reference-plan.md",
+    "docs/image-score-cleanup-ownership-correction-plan.md",
+    "docs/offline-image-score-guide.md",
+    "docs/offline-image-score-hosted-source-plan.md",
+    "docs/offline-image-score-integration-plan.md",
+    "docs/offline-image-score-plan.md",
+    "docs/offline-image-score-qualification-plan.md",
+    "docs/offline-image-score-registration-amendment.md",
+    "docs/offline-image-score-result.md",
+    "docs/source-image-integration-result.md",
+    "docs/source-profile-continuation-plan.md",
+    "docs/source-snapshot-managed-consumer.md",
+    "docs/source-snapshot-managed-integration-plan.md",
+    "docs/source-snapshot-rights-current-main-plan.md",
+    "docs/source-snapshot-rights-current-main.md",
+    "docs/source-snapshot-rights-v2-plan.md",
+    "docs/source-snapshot-rights-v2.md",
+    "docs/source-snapshot-rights-v3-additions-plan.md",
+    "docs/source-snapshot-rights-v3-metadata-transitions-plan.md",
+    "docs/source-snapshot-rights-v3.md",
+    "docs/visual-score-source-copy-grants.md",
+    "eval/dependencies/source-copy-v2-history/source-snapshot-release-v2-b5ffe6abefe80a0b42fcfb3516dc11845e337b21f8612bd14b83f57269a49809.json",
+    "eval/dependencies/source-copy-v2-history/source_release_policy_v2-1438edcb8a7f363fd8da77432d6693b33da529f4dbee17f92655f098d95387fc.py",
+    "eval/dependencies/source-copy-v2-history/source_release_policy_v2-fb7df81a98c2763c69bbc2314df76b651d114c60044d6d098debed3cde45fb70.py",
+    "eval/dependencies/source-copy-v3-history/source-snapshot-additions-v3-25911bcd411e63c2c07a5128e06382c53c93921544c5abb0341bf0b1533550f6.json",
+    "eval/dependencies/source-copy-v3-history/source_release_policy_v3-0ed9484fa65142bd714b23ce697d85ceade18db38eacf272ad44ff74a5c6c0f1.py",
+    "eval/dependencies/source-copy-v3-history/test_source_release_policy_v3-bd7192016baf1e322d5d639142de8c3a5e11d708c0915c0ce3bb2796d329d810.py",
+    "eval/dependencies/source-snapshot-additions-v3.json",
+    "eval/dependencies/source-snapshot-release-v2.json",
+    "integrations/visual-score-reference/1.0.0/hf-model-card-reference.json",
+    "integrations/visual-score-reference/1.0.0/preprocess-reference.json",
+    "integrations/visual-score-reference/1.0.0/projection.json",
+    "integrations/visual-score-reference/1.0.0/runtime-candidates.json",
+    "integrations/visual-score-reference/1.0.0/source.json",
+    "integrations/visual-score-reference/qualification-linux-cp313.json",
+    "integrations/visual-score-reference/qualification-linux-cp313.lock",
+    "integrations/visual-score-reference/qualification-notice-inventory.json",
+    "runs/2026-11-23-hf-card-factual-reference-distinct-review.json",
+    "runs/2026-11-23-hf-card-reference-correction.json",
+    "runs/2026-11-23-image-budget-final-source-distinct-review.json",
+    "runs/2026-11-23-image-budget-initial-source-controls.json",
+    "runs/2026-11-23-image-budget-preimplementation-distinct-review.json",
+    "runs/2026-11-23-image-budget-publication-corrected-distinct-controls.json",
+    "runs/2026-11-23-image-budget-publication-original-counter.json",
+    "runs/2026-11-23-image-score-cleanup-corrected-distinct-review.json",
+    "runs/2026-11-23-image-score-cleanup-original-peer.json",
+    "runs/2026-11-23-image-score-cleanup-owned-correction.json",
+    "runs/2026-11-23-image-score-hosted-source-prior-review.json",
+    "runs/2026-11-23-image-score-inert-current-base.json",
+    "runs/2026-11-23-image-score-inert-import-manifest.json",
+    "runs/2026-11-23-image-score-inert-integration-distinct-review.json",
+    "runs/2026-11-23-image-score-manual-registration-distinct-review.json",
+    "runs/2026-11-23-image-score-manual-registration-first-failure.json",
+    "runs/2026-11-23-image-score-manual-registration-source.json",
+    "runs/2026-11-23-image-shared-budget-source-controls.json",
+    "runs/2026-11-23-image-source-suite-count-followup.json",
+    "runs/2026-11-23-managed-source-current-controls.json",
+    "runs/2026-11-23-managed-source-final-distinct-review.json",
+    "runs/2026-11-23-managed-source-first-controls-failure.json",
+    "runs/2026-11-23-managed-source-initial-syntax.json",
+    "runs/2026-11-23-managed-source-reserve-corrected-controls.json",
+    "runs/2026-11-23-managed-source-workflow-controls.json",
+    "runs/2026-11-23-offline-image-score-cli-echo-nonproof.json",
+    "runs/2026-11-23-offline-image-score-cli-echo-substantiated.json",
+    "runs/2026-11-23-offline-image-score-direct-validator-original.json",
+    "runs/2026-11-23-offline-image-score-fifo-original.json",
+    "runs/2026-11-23-offline-image-score-final-source-controls.json",
+    "runs/2026-11-23-offline-image-score-home-corrected-source.json",
+    "runs/2026-11-23-offline-image-score-home-original-peer.json",
+    "runs/2026-11-23-offline-image-score-hosted-source-phase.json",
+    "runs/2026-11-23-offline-image-score-prequalification-distinct-review.json",
+    "runs/2026-11-23-offline-image-score-prior25-source-controls.json",
+    "runs/2026-11-23-offline-image-score-prior26-source-controls.json",
+    "runs/2026-11-23-offline-image-score-source-handoff.json",
+    "runs/2026-11-23-offline-image-score-wheel-metadata-distinct-review.json",
+    "runs/2026-11-23-source-copy-archive-first-transport-refusal.json",
+    "runs/2026-11-23-source-copy-current-merge-attribution.json",
+    "runs/2026-11-23-source-copy-rights-current-main-distinct-review.json",
+    "runs/2026-11-23-source-copy-rights-current-main-execution.json",
+    "runs/2026-11-23-source-copy-rights-current-main-handoff.json",
+    "runs/2026-11-23-source-copy-rights-v2-distinct-review.json",
+    "runs/2026-11-23-source-copy-rights-v2-execution.json",
+    "runs/2026-11-23-source-copy-v3-distinct-review.json",
+    "runs/2026-11-23-source-copy-v3-execution.json",
+    "runs/2026-11-23-source-current-generated-metadata-distinct-review.json",
+    "runs/2026-11-23-source-current-generated-metadata.json",
+    "runs/2026-11-23-source-image-current-boundaries.json",
+    "runs/2026-11-23-source-image-current-extension.json",
+    "runs/2026-11-23-source-image-current-pii-redacted.json",
+    "runs/2026-11-23-source-image-current-protocol.json",
+    "runs/2026-11-23-source-image-current-ps.json",
+    "runs/2026-11-23-source-image-current-selection.json",
+    "runs/2026-11-23-source-image-current-website.json",
+    "runs/2026-11-23-source-image-distinct-review.json",
+    "runs/2026-11-23-source-image-first-hosted-failures.json",
+    "runs/2026-11-23-source-image-integration-controls.json",
+    "runs/2026-11-23-source-image-protected-source-consumer.json",
+    "runs/2026-11-23-source-image-publication.json",
+    "runs/2026-11-23-visual-metadata-source-copy-distinct-review.json",
+    "runs/2026-11-23-visual-metadata-source-copy-plan-review.json",
+    "runs/2026-11-23-visual-metadata-source-copy-recovery.json",
+    "runs/changes/2026-11-23-034320-offline-image-score-reference-source-89f847f8.json",
+    "runs/changes/2026-11-23-153209-image-score-linux-source-a680d5de.json",
+    "runs/changes/2026-11-23-162819-image-score-cleanup-efae071b.json",
+    "runs/changes/2026-11-23-171418-image-score-inert-integration-19a72cf2.json",
+    "runs/changes/2026-11-23-180830-image-score-manual-source-registration-18a8770b.json",
+    "runs/changes/2026-11-23-180943-plan-current-source-and-image-integration-f07490c4.json",
+    "runs/changes/2026-11-23-181547-current-source-copy-archive-consumer-b4bac8c4.json",
+    "runs/changes/2026-11-23-181740-implement-source-admission-and-managed-producer-2b6eec80.json",
+    "runs/changes/2026-11-23-181922-preserve-protected-main-merge-attribution-182aac1c.json",
+    "runs/changes/2026-11-23-183101-managed-source-consumer-9dc18e47.json",
+    "runs/changes/2026-11-23-185602-hf-card-factual-reference-def88dc5.json",
+    "runs/changes/2026-11-23-190334-reconcile-active-wave-state-and-current-policy-e90d2dd8.json",
+    "runs/changes/2026-11-23-190824-visual-metadata-copy-grants-9cf5c314.json",
+    "runs/changes/2026-11-23-195613-image-shared-budget-d72c41b9.json",
+    "runs/changes/2026-11-23-image-budget-current-registration.json",
+    "runs/changes/2026-11-23-image-source-suite-count-followup.json",
+    "runs/changes/2026-11-23-source-capacity-consumer-contract.json",
+    "runs/changes/2026-11-23-source-copy-rights-v2-profile.json",
+    "runs/changes/2026-11-23-source-copy-v3-finite-additions.json",
+    "runs/changes/2026-11-23-source-image-hosted-engineering-selection.json",
+    "runs/changes/2026-11-23-source-image-integrated-source.json",
+    "runs/changes/2026-11-23-source-image-linux-contract-correction.json",
+    "runs/changes/2026-11-23-source-image-protected-publication.json",
+    "runs/changes/2026-11-23-source-profile-ci-prerequisites.json",
+    "runs/changes/2026-11-23-source-profile-continuation.json",
+    "sbom/visual-score-source-copy/manifest.json",
+    "scripts/inspect-visual-score.py",
+    "scripts/prepare-visual-score-qualification.py",
+    "scripts/run-visual-score-phase.py",
+    "scripts/verify-managed-source.py",
+    "scripts/verify-visual-score-qualification.py",
+    "tests/test_source_release_policy_v2.py",
+    "tests/test_source_release_policy_v2_archive.py",
+    "tests/test_source_release_policy_v3.py",
+    "tests/test_source_snapshot_admission.py",
+    "tests/test_source_snapshot_managed.py",
+    "tests/test_source_snapshot_workflow.py",
+    "tests/test_visual_score.py",
+    "tests/test_visual_score_budget.py",
+    "tests/test_visual_score_qualification.py",
+    "tests/test_visual_score_workflow.py",
+    "tools/source_release_policy_v2.py",
+    "tools/source_release_policy_v3.py",
+    "tools/source_snapshot_admission.py",
+    "tools/source_snapshot_managed.py",
+    "tools/visual_score.py",
+    "tools/visual_score_assets.py",
+    "tools/visual_score_budget.py",
+    "tools/visual_score_process.py",
+    "tools/visual_score_qualification.py",
+    "tools/visual_score_reference.py",
+    "tools/visual_score_runtime.py"
+  ],
+  "metadata_transitions": [],
+  "origins": {
+    "cpython-notice-copy": {
+      "conditions": [
+        "Preserve all46 copied notice ranges/current input identities and applicable HACL/root terms; no GPL inference from unused build tools.",
+        "Source/header notice copying does not establish actual compiled object or runtime permission."
+      ],
+      "required_anchors": [
+        {
+          "bytes": 8909,
+          "path": "sbom/web-runtime/CPYTHON-EMBEDDED-NOTICES.txt",
+          "sha256": "a23d5e0943959e8a611334adb0dd5a8848381d4736e9b7ad442618fc5b3cc298"
+        },
+        {
+          "bytes": 110415,
+          "path": "sbom/web-runtime/cpython-embedded-facts.json",
+          "sha256": "87cdc75037c8fa8042da088c5098397784284f27a6ce24e1941ec8575ff61a40"
+        },
+        {
+          "bytes": 15727,
+          "path": "sbom/web-runtime/manifest.json",
+          "sha256": "5d662e2a8c1feeb35465370a01eab9a192c21b0d1eb5c60cbc7021c92e592184"
+        },
+        {
+          "bytes": 13804,
+          "path": "site/public/device-licenses/python-license.txt",
+          "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+        },
+        {
+          "bytes": 1995,
+          "path": "eval/vectors/unicode/LICENSE.txt",
+          "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+        },
+        {
+          "bytes": 25315,
+          "path": "sbom/web-runtime/EXTERNAL-RUNTIME-NOTICES.txt",
+          "sha256": "1975bde1297eea4fb42a51bd18e48bef56086cb6750659ab4427c3e31ebdc226"
+        }
+      ],
+      "required_cohort": [],
+      "scope": "Exact complete CPython embedded-component notice bundle and fact record containing copied header/grant excerpts; PSF/history/Expat/mpdecimal/HACL and exact per-range notices.",
+      "unresolved": []
+    },
+    "emscripten-notice-copy": {
+      "conditions": [
+        "Retain every147 notice/source range and full applicable grants/credits; no blanket whole-musl waiver or whole-compiler/native grant.",
+        "Conditional CXX/unwind/dlmalloc recipe facts remain conditional source observations, not compiled incorporation proof."
+      ],
+      "required_anchors": [
+        {
+          "bytes": 203087,
+          "path": "sbom/web-runtime/EMSCRIPTEN-SYSTEM-NOTICES.txt",
+          "sha256": "76f9f7bb2ef92ebbe2176924e1f179eaba79c054c012bbea42ea9f07830ae82c"
+        },
+        {
+          "bytes": 71632,
+          "path": "sbom/web-runtime/emscripten-system-grant-facts.json",
+          "sha256": "565ac73e1c32fe1d3034d8d8cf6f6d8898bf1f1b05280cc90135dd52df9b85a0"
+        },
+        {
+          "bytes": 15727,
+          "path": "sbom/web-runtime/manifest.json",
+          "sha256": "5d662e2a8c1feeb35465370a01eab9a192c21b0d1eb5c60cbc7021c92e592184"
+        }
+      ],
+      "required_cohort": [],
+      "scope": "Exact copied system-grant texts and scoped source excerpts: musl MIT/source-specific notices, Apache2+LLVM exceptions/CREDITS, MiniLZ4 MIT, filesystem headers and exact public-domain declarations.",
+      "unresolved": []
+    },
+    "external-notice-copy": {
+      "conditions": [
+        "Keep all10 external notice ranges, exact primary-source identities, full HACL Apache text and recorded same-ref NOTICE absence.",
+        "Do not infer GPL tool rights for liblzma runtime or omit named source-specific copyright/permission."
+      ],
+      "required_anchors": [
+        {
+          "bytes": 25315,
+          "path": "sbom/web-runtime/EXTERNAL-RUNTIME-NOTICES.txt",
+          "sha256": "1975bde1297eea4fb42a51bd18e48bef56086cb6750659ab4427c3e31ebdc226"
+        },
+        {
+          "bytes": 8399,
+          "path": "sbom/web-runtime/external-primary-facts.json",
+          "sha256": "763f888e824d126ce03c0d6b873e119b3bcd72bd2fa4453067246baab66fc612"
+        },
+        {
+          "bytes": 15727,
+          "path": "sbom/web-runtime/manifest.json",
+          "sha256": "5d662e2a8c1feeb35465370a01eab9a192c21b0d1eb5c60cbc7021c92e592184"
+        }
+      ],
+      "required_cohort": [],
+      "scope": "Exact full external-runtime grant/notice bundle: libffi, XZ liblzma public-domain scope, bzip2, zstd/xxhash and HACL full project terms.",
+      "unresolved": []
+    },
+    "hiwire-preferred-source": {
+      "conditions": [
+        "If any member is selected, carry every exact13 preferred-source member and applicable parent recipe/patch/obtain-source facts; keep complete MPL2 and existing notices.",
+        "Preserve source form/attribution and obtain information; no modified-source or executable-form notice claim is fabricated.",
+        "Generated107606-byte Hiwire ZIP is not tracked; no hypothetical path/prefix/suffix is admitted."
+      ],
+      "required_anchors": [
+        {
+          "bytes": 16725,
+          "path": "sbom/web-runtime/hiwire/LICENSE.txt",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        {
+          "bytes": 6098,
+          "path": "sbom/web-runtime/hiwire-preferred-source.json",
+          "sha256": "91a0b14f3267c0347c47f3c4977bbed59dad6a4c460e774cf833b30b201f2553"
+        },
+        {
+          "bytes": 36296,
+          "path": "sbom/web-runtime/publisher-recipe-facts.json",
+          "sha256": "6c183126c5d2542a41c33430f1f9ec33a601ee6723d0a2abc977721b85c7047a"
+        },
+        {
+          "bytes": 15727,
+          "path": "sbom/web-runtime/manifest.json",
+          "sha256": "5d662e2a8c1feeb35465370a01eab9a192c21b0d1eb5c60cbc7021c92e592184"
+        },
+        {
+          "bytes": 16725,
+          "path": "site/public/device-licenses/pyodide-MPL-2.0.txt",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        }
+      ],
+      "required_cohort": [
+        "sbom/web-runtime/hiwire/LICENSE.txt",
+        "sbom/web-runtime/hiwire/Makefile.txt",
+        "sbom/web-runtime/hiwire/README.md.txt",
+        "sbom/web-runtime/hiwire/patches/emcc-emjs-dylink-externref.patch.txt",
+        "sbom/web-runtime/hiwire/patches/wasi-libc-clang-17-compat.patch.txt",
+        "sbom/web-runtime/hiwire/pyproject.toml.txt",
+        "sbom/web-runtime/hiwire/src/_deduplicate.c.txt",
+        "sbom/web-runtime/hiwire/src/compat.c.txt",
+        "sbom/web-runtime/hiwire/src/hiwire.c.txt",
+        "sbom/web-runtime/hiwire/src/hiwire.h.txt",
+        "sbom/web-runtime/hiwire/src/hiwire_macros.h.txt",
+        "sbom/web-runtime/hiwire/src/wasm_table.c.txt",
+        "sbom/web-runtime/hiwire/src/wasm_table.h.txt"
+      ],
+      "scope": "Exact6a1e67280a15d929ebeceee54a6358c9c8d5f697 preferred source/project build/README/patch files with MPL2; not plain project prose.",
+      "unresolved": []
+    },
+    "mt-apache-unicode-source-container": {
+      "conditions": [
+        "Pin exact method blob mode/OID/SHA/size from fa17; retain Apache/NOTICE and Unicode license in both source tree and15-file container.",
+        "No statement of browser/phone release, runtime compatibility or tag correctness."
+      ],
+      "required_anchors": [
+        {
+          "bytes": 11358,
+          "path": "LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "bytes": 1134,
+          "path": "NOTICE",
+          "sha256": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6"
+        },
+        {
+          "bytes": 1995,
+          "path": "eval/vectors/unicode/LICENSE.txt",
+          "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+        },
+        {
+          "bytes": 28512,
+          "path": "runs/2026-11-23-mt-quote-export-mobile-binding.json",
+          "sha256": "4cf90fe2bd66516c2e991a0df0e0ef7d0d37d69b16b770a76161b8691717d681"
+        }
+      ],
+      "required_cohort": [],
+      "scope": "Exact15-file MT mobile source JSON, Apache2 project code plus copied Unicode3 normalization/data/license; source-copy rights only.",
+      "unresolved": []
+    },
+    "pyodide-recipe-source-copy": {
+      "conditions": [
+        "Retain complete existing source archive/nine CPython patches plus exact recipe and Hiwire patches; no assumption pristine upstream source equals the applied publisher recipe.",
+        "No source/build execution, compiler equivalence or native redistribution claim."
+      ],
+      "required_anchors": [
+        {
+          "bytes": 36296,
+          "path": "sbom/web-runtime/publisher-recipe-facts.json",
+          "sha256": "6c183126c5d2542a41c33430f1f9ec33a601ee6723d0a2abc977721b85c7047a"
+        },
+        {
+          "bytes": 16725,
+          "path": "sbom/web-runtime/hiwire/LICENSE.txt",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        {
+          "bytes": 16725,
+          "path": "site/public/device-licenses/pyodide-MPL-2.0.txt",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        {
+          "bytes": 1465591,
+          "path": "sbom/reviews/pyodide-js/sources/a9c7ac66311ed7e0805b9970054ee5be4f69d02204d28bffe4b017310a24bad9.tar.gz",
+          "sha256": "a9c7ac66311ed7e0805b9970054ee5be4f69d02204d28bffe4b017310a24bad9"
+        }
+      ],
+      "required_cohort": [],
+      "scope": "Exact publisher Makefile/config/patch source excerpts copied in publisher-recipe-facts.json from retained Pyodide source correspondence; MPL2 with carried source context.",
+      "unresolved": []
+    },
+    "react-project-mit-source": {
+      "conditions": [
+        "Carry full1093-byte project MIT copyright/permission notice with the exact4937-byte archive.",
+        "Retain actual404s and historicalUNVERIFIED observations; do not relabel associated2.3.7 commit as2.3.8 or invent a version-specific license gate."
+      ],
+      "required_anchors": [
+        {
+          "bytes": 17115,
+          "path": "sbom/web-runtime/react-exact-release-project-grant-facts.json",
+          "sha256": "fe1349a50e639ffcca6f05f49a3a5f1569a1179bb8219b48019eb30af0e9e6d9"
+        },
+        {
+          "bytes": 1093,
+          "path": "sbom/reviews/web-js/sources/a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84.txt",
+          "sha256": "a79aae0c0f21990d9d963bb3c5a79cdcea9a46f8523ba55c58d7fe776b6ebc84"
+        },
+        {
+          "bytes": 2934,
+          "path": "runs/2026-11-23-react-scrollbar-project-grant-retained-peer.json",
+          "sha256": "2202051048c588a9319bb4272ca18b31ab8b5400d1510c1276c638378082fb3b"
+        }
+      ],
+      "required_cohort": [],
+      "scope": "Exact2.3.8 source tgz; full unversioned same-author/project MIT grant correspondence is a scoped reviewed inference, not recovered exact Git history.",
+      "unresolved": []
+    },
+    "runtime-generated-obligation-outputs": {
+      "conditions": [
+        "Require all exact13 Hiwire preferred-source members, fullMPL and applicable parent recipe/patches/obtain information; ZIP18member identities come from the unchanged deterministic6185 producer.",
+        "Require all three exact output hashes plus full per-range CPython/Emscripten/external grants; no ZIP/notice/index can self-approve omitted anchors.",
+        "The authored obligations index remains charged to the160 authored-name ceiling despite its stricter immutable source-obligation role; no count-saving reclassification.",
+        "Current private previously executed expected bytes were rehashed, not regenerated or adopted as actual ROOT candidate outputs. Final actual ROOT producer/commit/OIDs must match before table acceptance.",
+        "Relative website source-offer references do not claim every generated website offer exists inside a Git source archive; protected-source copy permission remains distinct from compiled website/runtime fulfillment."
+      ],
+      "required_anchors": [
+        {
+          "bytes": 15727,
+          "path": "sbom/web-runtime/manifest.json",
+          "sha256": "5d662e2a8c1feeb35465370a01eab9a192c21b0d1eb5c60cbc7021c92e592184"
+        },
+        {
+          "bytes": 6098,
+          "path": "sbom/web-runtime/hiwire-preferred-source.json",
+          "sha256": "91a0b14f3267c0347c47f3c4977bbed59dad6a4c460e774cf833b30b201f2553"
+        },
+        {
+          "bytes": 16725,
+          "path": "sbom/web-runtime/hiwire/LICENSE.txt",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        {
+          "bytes": 36296,
+          "path": "sbom/web-runtime/publisher-recipe-facts.json",
+          "sha256": "6c183126c5d2542a41c33430f1f9ec33a601ee6723d0a2abc977721b85c7047a"
+        },
+        {
+          "bytes": 8909,
+          "path": "sbom/web-runtime/CPYTHON-EMBEDDED-NOTICES.txt",
+          "sha256": "a23d5e0943959e8a611334adb0dd5a8848381d4736e9b7ad442618fc5b3cc298"
+        },
+        {
+          "bytes": 203087,
+          "path": "sbom/web-runtime/EMSCRIPTEN-SYSTEM-NOTICES.txt",
+          "sha256": "76f9f7bb2ef92ebbe2176924e1f179eaba79c054c012bbea42ea9f07830ae82c"
+        },
+        {
+          "bytes": 25315,
+          "path": "sbom/web-runtime/EXTERNAL-RUNTIME-NOTICES.txt",
+          "sha256": "1975bde1297eea4fb42a51bd18e48bef56086cb6750659ab4427c3e31ebdc226"
+        },
+        {
+          "bytes": 16725,
+          "path": "site/public/device-licenses/pyodide-MPL-2.0.txt",
+          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+        },
+        {
+          "bytes": 13804,
+          "path": "site/public/device-licenses/python-license.txt",
+          "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+        },
+        {
+          "bytes": 1995,
+          "path": "eval/vectors/unicode/LICENSE.txt",
+          "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+        },
+        {
+          "bytes": 1465591,
+          "path": "sbom/reviews/pyodide-js/sources/a9c7ac66311ed7e0805b9970054ee5be4f69d02204d28bffe4b017310a24bad9.tar.gz",
+          "sha256": "a9c7ac66311ed7e0805b9970054ee5be4f69d02204d28bffe4b017310a24bad9"
+        }
+      ],
+      "required_cohort": [
+        "sbom/web-runtime/hiwire/LICENSE.txt",
+        "sbom/web-runtime/hiwire/Makefile.txt",
+        "sbom/web-runtime/hiwire/README.md.txt",
+        "sbom/web-runtime/hiwire/patches/emcc-emjs-dylink-externref.patch.txt",
+        "sbom/web-runtime/hiwire/patches/wasi-libc-clang-17-compat.patch.txt",
+        "sbom/web-runtime/hiwire/pyproject.toml.txt",
+        "sbom/web-runtime/hiwire/src/_deduplicate.c.txt",
+        "sbom/web-runtime/hiwire/src/compat.c.txt",
+        "sbom/web-runtime/hiwire/src/hiwire.c.txt",
+        "sbom/web-runtime/hiwire/src/hiwire.h.txt",
+        "sbom/web-runtime/hiwire/src/hiwire_macros.h.txt",
+        "sbom/web-runtime/hiwire/src/wasm_table.c.txt",
+        "sbom/web-runtime/hiwire/src/wasm_table.h.txt"
+      ],
+      "scope": "Exactly three generated source/notice/obligation companions; preferred-source and third-party grants remain part of their role, not plain project prose.",
+      "unresolved": []
+    },
+    "stdlib-notice-copy": {
+      "conditions": [
+        "New public notice bytes/SHA/GitOID must equal the exact protected Q source bundle; all existing member-specific notice identities/scope remain unchanged.",
+        "Preserve full PSF/history/Unicode and additional source-specific notices as already carried; no suffix permission or reclassification."
+      ],
+      "required_anchors": [
+        {
+          "bytes": 245510,
+          "path": "sbom/nested-runtime/PYTHON-STDLIB-NOTICES.txt",
+          "sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321"
+        },
+        {
+          "bytes": 342006,
+          "path": "sbom/nested-runtime/manifest.json",
+          "sha256": "9452abdfd81cafdc2f0b9a0b2e45cb4206aa40c51ab41edcb61d3552f33a05d6"
+        },
+        {
+          "bytes": 13804,
+          "path": "site/public/device-licenses/python-license.txt",
+          "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+        },
+        {
+          "bytes": 1995,
+          "path": "eval/vectors/unicode/LICENSE.txt",
+          "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+        }
+      ],
+      "required_cohort": [],
+      "scope": "Exact copy of existing protected complete614-member standard-library notice bundle, not first-party prose or new binary/runtime permission.",
+      "unresolved": []
+    }
+  },
+  "profile": "source-copy-additions/v4",
+  "project_files": [
+    ".github/workflows/artifact-sbom.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/source-profile-continuation.yml",
+    ".github/workflows/source-snapshot-v3.yml",
+    ".gitignore",
+    "CHANGELOG.md",
+    "README.md",
+    "docs/ios-runtime-obligations-plan.md",
+    "docs/ios-runtime-obligations.md",
+    "docs/mt-mobile-quotation.md",
+    "docs/mt-quote-export-repair-plan.md",
+    "docs/offline-image-score-qualification-plan.md",
+    "docs/reviewer-attestation-plan.md",
+    "docs/reviewer-attestations.md",
+    "docs/scope-progress.json",
+    "docs/scope-progress.md",
+    "docs/scope-task-index.md",
+    "docs/session-delivery-plan.md",
+    "docs/session-delivery.json",
+    "docs/source-copy-rights-v4-grant-plan.json",
+    "docs/source-copy-rights-v4-plan.md",
+    "docs/source-copy-v4-admission-plan.md",
+    "docs/source-image-integration-result.md",
+    "docs/tag-runtime-ci-integration.md",
+    "docs/tag-runtime-integration-plan.md",
+    "docs/web-checker-artifact-plan.md",
+    "docs/web-checker-artifact.md",
+    "docs/web-runtime-obligations-plan.md",
+    "docs/web-runtime-obligations-result.md",
+    "docs/web-runtime-obligations.md",
+    "eval/dependencies/source-snapshot-additions-v4.json",
+    "eval/dependency-policy.json",
+    "eval/revalidation.json",
+    "eval/route-boundaries.json",
+    "mobile/ios/Source/CheckerController.swift",
+    "mobile/ios/Tests/UIFlows.swift",
+    "protocol/reviewer-attestations.cjs",
+    "runs/2026-11-23-current-native-selection.json",
+    "runs/2026-11-23-emscripten-grant-facts-retained-peer.json",
+    "runs/2026-11-23-image-acquisition-diagnostics.json",
+    "runs/2026-11-23-image-wheel-primary-metadata.json",
+    "runs/2026-11-23-ios-runtime-obligations.json",
+    "runs/2026-11-23-ios-seven-ui-current.json",
+    "runs/2026-11-23-mt-quote-export-current-execution.json",
+    "runs/2026-11-23-mt-quote-export-distinct-review.json",
+    "runs/2026-11-23-mt-quote-export-mobile-binding.json",
+    "runs/2026-11-23-mt-quote-export-original-counter.json",
+    "runs/2026-11-23-mt-quote-export-plan-review.json",
+    "runs/2026-11-23-mt-quote-export-portable-current.json",
+    "runs/2026-11-23-react-scrollbar-project-grant-retained-peer.json",
+    "runs/2026-11-23-reviewer-attestation.json",
+    "runs/2026-11-23-source-copy-rights-v4-distinct-review.json",
+    "runs/2026-11-23-source-copy-rights-v4-execution.json",
+    "runs/2026-11-23-source-image-consumer-acceptance.json",
+    "runs/2026-11-23-source-v4-admission-integration.json",
+    "runs/2026-11-23-tag-runtime-ci-integration.json",
+    "runs/2026-11-23-tag-runtime-current-extension.json",
+    "runs/2026-11-23-tag-runtime-current-pii-redacted.json",
+    "runs/2026-11-23-tag-runtime-current-protocol.json",
+    "runs/2026-11-23-tag-runtime-current-ps.json",
+    "runs/2026-11-23-tag-runtime-current-selection.json",
+    "runs/2026-11-23-tag-runtime-current-website.json",
+    "runs/2026-11-23-tag-runtime-followup.json",
+    "runs/2026-11-23-tag-runtime-integration.json",
+    "runs/2026-11-23-tag-runtime-native-share.json",
+    "runs/2026-11-23-tag-runtime-publication.json",
+    "runs/2026-11-23-tag-runtime-qualification.json",
+    "runs/2026-11-23-web-checker-artifact-distinct-review.json",
+    "runs/2026-11-23-web-checker-artifact-execution.json",
+    "runs/2026-11-23-web-checker-artifact-fd-original-counter.json",
+    "runs/2026-11-23-web-checker-observed-build-review.json",
+    "runs/2026-11-23-web-checker-observed-build.json",
+    "runs/2026-11-23-web-chunk-runtime-integration.json",
+    "runs/2026-11-23-web-generated-source-binding.json",
+    "runs/2026-11-23-web-observer-html-json-repair.json",
+    "runs/2026-11-23-web-runtime-bounded-membership-correction.json",
+    "runs/2026-11-23-web-runtime-byte-preservation.json",
+    "runs/2026-11-23-web-runtime-cli-uncertainty-correction.json",
+    "runs/2026-11-23-web-runtime-creation-uncertainty-correction.json",
+    "runs/2026-11-23-web-runtime-exact-read-budget-correction.json",
+    "runs/2026-11-23-web-runtime-obligations-distinct-review.json",
+    "runs/2026-11-23-web-runtime-obligations-execution.json",
+    "runs/changes/2026-11-23-222229-web-checker-artifact-source-component-3bea298e.json",
+    "runs/changes/2026-11-23-current-native-selection.json",
+    "runs/changes/2026-11-23-image-acquisition-diagnostics.json",
+    "runs/changes/2026-11-23-image-wheel-primary-metadata.json",
+    "runs/changes/2026-11-23-ios-runtime-obligations.json",
+    "runs/changes/2026-11-23-ios-seven-ui-observer.json",
+    "runs/changes/2026-11-23-mt-quote-export-mobile-binding.json",
+    "runs/changes/2026-11-23-mt-quote-export-repair.json",
+    "runs/changes/2026-11-23-reviewer-attestation.json",
+    "runs/changes/2026-11-23-route-refresh-prerequisites.json",
+    "runs/changes/2026-11-23-source-copy-rights-v4.json",
+    "runs/changes/2026-11-23-source-v4-admission-integration.json",
+    "runs/changes/2026-11-23-tag-runtime-ci-integration.json",
+    "runs/changes/2026-11-23-tag-runtime-final-selection.json",
+    "runs/changes/2026-11-23-tag-runtime-followup.json",
+    "runs/changes/2026-11-23-tag-runtime-integration.json",
+    "runs/changes/2026-11-23-tag-runtime-publication.json",
+    "runs/changes/2026-11-23-tag-runtime-qualification.json",
+    "runs/changes/2026-11-23-web-checker-observed-artifact.json",
+    "runs/changes/2026-11-23-web-checker-observed-build.json",
+    "runs/changes/2026-11-23-web-chunk-runtime-integration.json",
+    "runs/changes/2026-11-23-web-generated-source-binding.json",
+    "runs/changes/2026-11-23-web-observer-html-json-repair.json",
+    "runs/changes/2026-11-23-web-runtime-obligations-finite-delivery.json",
+    "sbom/web-runtime-history/0f1e5cd974eea917f2470c4de2ab525acd11efb28b1eca2a50b0150fba94f948.py",
+    "sbom/web-runtime-history/728f4ec0d2c28883b28a7bfb52e2c6394ee97fcac8c47612799f88182e077e84.py",
+    "sbom/web-runtime-history/a098bce5ae6645bede63880b44e3bbfa3984f3f106392ed119b78217f639558b.py",
+    "sbom/web-runtime-history/adf7ab04843d6d8f687d7c71542237bd727a1ab8e474d30f138526536ca0c688.py",
+    "sbom/web-runtime-history/b6728b7c74cfe5ae1b929b2dde2ab5fece3fd0f1985543bff69047e36f714f1f.py",
+    "sbom/web-runtime/.gitattributes",
+    "sbom/web-runtime/external-primary-facts.json",
+    "sbom/web-runtime/hiwire-preferred-source.json",
+    "sbom/web-runtime/manifest.json",
+    "sbom/web-runtime/react-exact-release-project-grant-facts.json",
+    "scripts/authority-mobile-quotation.py",
+    "scripts/native_bundle.py",
+    "scripts/reviewer-attestation.cjs",
+    "scripts/run-visual-score-phase.py",
+    "scripts/verify-ios-runtime-obligations.py",
+    "scripts/verify-ios-share.py",
+    "scripts/verify-native-share-evidence.py",
+    "scripts/verify-web-runtime-obligations.py",
+    "scripts/web-checker-artifact.py",
+    "scripts/web-checker-build-observer.mjs",
+    "site/index.html",
+    "site/public/reference/mt-mobile-quotation.md",
+    "site/public/reference/public-scope.json",
+    "site/scripts/prepare-offline.mjs",
+    "site/scripts/prepare.mjs",
+    "site/src/device-manifest.json",
+    "site/src/mt-mobile-device-manifest.json",
+    "site/src/public-scope.json",
+    "site/src/scope-manifest.json",
+    "site/src/workflows/About.jsx",
+    "state.json",
+    "tests/reviewer-attestations.cjs",
+    "tests/test_ios_runtime_obligations.py",
+    "tests/test_ios_share_verifier.py",
+    "tests/test_mt_quote_export.py",
+    "tests/test_native_bundle.py",
+    "tests/test_source_release_policy_v4.py",
+    "tests/test_source_snapshot_admission.py",
+    "tests/test_source_snapshot_workflow.py",
+    "tests/test_visual_score_budget.py",
+    "tests/test_visual_score_qualification.py",
+    "tests/test_web_checker_artifact.py",
+    "tests/test_web_runtime_obligations.py",
+    "tests/web-checker-build-observer.mjs",
+    "tools/dependency_policy.py",
+    "tools/distribution_artifacts.py",
+    "tools/ios_runtime_obligations.py",
+    "tools/mt_quote_export.py",
+    "tools/source_release_policy_v4.py",
+    "tools/source_snapshot_admission.py",
+    "tools/visual_score_qualification.py",
+    "tools/web_checker_artifact.py",
+    "tools/web_runtime_obligations.py"
+  ],
+  "protected_q": "9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7",
+  "protected_q_tree": "d5ad815a57ff55a49569c1dbce20c77f3420b3ed",
+  "q_bytes": 147265706,
+  "q_files": 13747,
+  "source_observation": {
+    "actual_candidate_verified": false,
+    "candidate_commit": "365b5f2ac71158c39f1070533d1400f37a8b6efd",
+    "candidate_is_protected": false
+  }
+}

@@ -81,3 +81,30 @@ failure. A read-only scoped runner executes full protocol78 and website66 next;
 no71-command prefix or failed overall job is adopted as a pass. Final evidence
 selection and actual protected-main signing/managed consumption remain pending.
 Original scope is unchanged:136complete66open; no original closure in this wave.
+
+## Completed protected source delivery — 2026-11-23T22:29:05.223367+00:00
+
+The first-handoff publication conditions above are now met for the selected
+whole-source route at protected main `9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7`.
+Actual producer run45274283187/job138042152436 completed signing and the real
+managed consumer. The authorized consumer retained only ten fixed source/notice
+files and completed positive, negative and invalid-UTF8 PS probes. The positive
+and negative whole records matched the canonical references; invalid UTF8 was
+refused. The outside Mac consumer exited0 with independently retrieved roots and
+the identical verified JSON. No packages were installed or whole archive extracted.
+
+The engineering prerelease was published at2026-11-23T22:09:24Z. All six anonymous
+asset downloads matched79,404,247 total bytes and expected digests; the direct tag
+target is the same protected source commit. See the [exact protected consumer](../runs/2026-11-23-source-image-protected-source-consumer.json)
+and [publication record with separately attributed distinct reviews](../runs/2026-11-23-source-image-publication.json).
+This completes the predeclared `session-managed-source-consumer-integration`
+scoped job. The board now records31 closed scoped jobs of32 records, with all
+historical source handoffs preserved. Originals remain136complete/66open;
+F-057/X-02, all-fourteen-route completion and target60 remain open.
+
+The independent image acquisition attempt failed before inference. Its diagnostic
+source follow-up is reviewed only; no actual model qualification, AI-origin
+verdict, independent accuracy or tag release is claimed. MT/runtime and finite
+V4 integration remain separate from this completed source-release observation.
+
+[Selected-job acceptance report](../runs/2026-11-23-source-image-consumer-acceptance.json) records this closure in the existing delivery evidence schema. The first direct raw-consumer reference was refused because that immutable execution result has no `pass`/`captured_at` acceptance envelope. Raw consumer/publication evidence and the validator are unchanged; no new execution or original acceptance is claimed.

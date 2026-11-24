@@ -77,3 +77,147 @@ Recorded 2026-11-23T20:02:59.317026+00:00. ROOT read found unittest zero-test su
 Pin an explicit finite SOURCE_SUITE_COUNTS table in the fixed controller:33/33/5/27 (budget gains exactly ONE new grouped regression). Discover ALL four named suites and require each countTestCases equals its pin BEFORE constructing/running any runner or calling q.main. After each runner, require result.testsRun exactly the corresponding pin in addition to existing wasSuccessful/no-skips checks; no dynamic count acceptance, unknown suite, partial list or zero-success allowance. The future actual manual workflow runs complete suites, but this author follow-up runs only the new tiny regression with inert suites/mockrunner and discovery-only afterward, not unchanged source98 or native work.
 
 One grouped regression exercises missing/partial discovery at each of four positions (rejects BEFORE anyrunner/q.main/acquisition/stage), exact complete inert suites accepted with mockrunner, and successful-but-wrong testsRun refusal before check-lock. Expected count changes are source-admission pins, not evidence of98 executed/human/accuracy tests. Existing87 paths, all method/shared8/sourcebody resource caps, deadlines/cleanup and prepared-only public contract remain unchanged. Only existing driver/testbudget/this plan change, one final immutable run assembly runs/2026-11-23-image-source-suite-count-followup.json and one event runs/changes/2026-11-23-image-source-suite-count-followup.json plus normalCHL. Peer raw review will be byte-preserved inside that single run assembly with separate reviewer/assembler/times, avoiding another public filename. ROOT handles its CI/protocol/additive registration adapters independently. No ROOT edits/push/dispatch/acquisition/install/native/network. Different source review and normal guarded local commit follow affected controls.
+
+
+## Actual first acquisition failure: diagnostic amendment BEFORE implementation
+
+Recorded 2026-11-23T22:06:52.861760+00:00; isolated
+codex/image-acquisition-diagnostics from exact protectedQ
+9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7. ROOT retains integration and dispatch.
+No feature code has changed when this amendment is written.
+
+Actual once-dispatched run45274734192/attempt1/job138043459751 completed FAILURE.
+Its source-controls step passed; acquisition failed in four seconds; installation
+and native/reference were skipped. Original679B proofZIP API size/SHA match;
+355B qualification says acquire/phase_failed/UNQUALIFIED/native_not_assessed,
+290B terminal says retained_unsealed/private_bytes_may_remain. The25,689B job log
+contains only generic exit2 at that phase. Child stdout/stderr and its normalized
+inner reason were suppressed by the existing operator, so no exact underlying
+HTTP/head-layout/wheel/backbone/notice error is recoverable. Do not guess SDK,
+memory, private700, alternate URL or licensing causes. Retained workspace is
+observed; capacity admission before mkdir is a qualified source-order inference,
+not measured RAM/disk values. A separately authorized current local HEAD-only
+request returned200/Content-Length4083 without reading a response body; it does
+not establish the original runner result or validate the inert head layout.
+All raw failure/provider/API/provenance and source87 observations remain private
+and immutable; summary b0ea94ce48b9139d01c11f325122195c37b54e91f2f82cc86df67b22e1c13eb6.
+
+### Bounded diagnostic-only contract
+
+Add a source-owned closed acquisition diagnostic, not a new method or API. Expose
+ONLY a fixed operation enum capacity/head_fetch/head_layout/wheel/backbone/notice,
+a normalized fixed error category/reason/status, and predeclared public asset-role
+counts. No exception prose/class chosen from arbitrary strings, URLs (including
+signed query URLs), paths, stack, response body, pickle, image/text/user metadata,
+credentials, arbitrary headers, raw asset bytes or telemetry. No head binary or
+SDK/model acquisition on this Mac. Fixed categories: http_error, url_error,
+timeout, os_error, asset_refused, qualification_refused, invalid_value, cancelled,
+unexpected. HTTP status is null or strict integer100..599. Fixed reason codes can
+identify http_status, encoding_refused, declared_size_mismatch, byte_limit,
+sha256_mismatch, git_blob_mismatch, reserve_or_deadline, model_identity, head_format,
+head_numeric, or generic refused/unknown; no raw exception message is emitted.
+Diagnostic detail does not itself establish a cause beyond the failed predicate.
+
+Counts are exact bounded integers only: head_fetched0..1, head_layout_validated0..1,
+wheels_completed0..39, current_wheel_ordinal0..39, backbone_verified0..1,
+notice_inventory_written0..1. A completed count increments only after that fixed
+operation/identity check finishes. Capacity operation covers admission and owned
+workspace/report setup, so a capacity-stage os_error is NOT called insufficient
+memory. Wheel operation covers only the selected ordinal's fixed fetch and notice
+inspection. HEAD fetch/layout are separate; the model URI and all pinned sizes/
+identities remain unchanged. Report only observed stage/counts; never infer how
+many bytes a failed request transferred. Do not export raw ZIP member metadata.
+
+Implement within existing tools/visual_score_qualification.py: keep all raw/body/
+expanded/time/capacity limits and exact URLs unchanged; add typed internal
+acquisition failure with a validated <=4096B diagnostic. Wrap the existing fixed
+acquire sequence; normalize known failures without evaluating pickle or changing
+safe head/tensor semantics. Where existing generic acquisition predicates lose
+HTTP/size/hash distinction, fixed internal reason codes annotate THAT SAME
+predicate only. Unexpected failures remain fixed unexpected/unknown, not invented
+classification. Other q.main phases and default inference remain independent.
+
+In existing scripts/run-visual-score-phase.py, catch only this acquisition
+observation around the owned acquire phase (including its first capacity check),
+write one fixed private acquisition-diagnostic-private.json with existing owner/
+mode/nooverwrite IO, and rethrow failure. The outer fixed failure observation may
+include that one object ONLY after closed schema/type/range validation. A prior
+failed qualification file is never overwritten. If diagnostic writing/validation
+fails, retain original failure/UNQUALIFIED, omit unproven diagnostics, and let the
+existing always-cleanup/fallback run. Diagnostic errors must never bypass child
+reap/FD cleanup, mask a primary failure into success, reset budget or skip cleanup.
+No source-selected callback/command/URL or model input chooses the reporter.
+
+Keep source-map paths at87. Owned existing files only: this plan;
+tools/visual_score_qualification.py; scripts/run-visual-score-phase.py;
+tests/test_visual_score_qualification.py (one meaningful grouped diagnostic
+regression adds33to34); tests/test_visual_score_budget.py ONLY its fixed expected
+q-suite count33to34, preserving all zero/partial/postrun checks. Update the same
+q-suite literal in driver's SOURCE_SUITE_COUNTS. Other suites33/5/27 unchanged;
+future source phase exact33/34/5/27=99, not a native/accuracy claim. No whole99
+execution is proposed during focused development. No new workflow is needed:
+existing twoJSON export and all35min/shared1740/1560/180/phase/worker/resource caps,
+source-before-after and external exact-jobSUCCESS adoption contract stay intact.
+Numerical core, runtime, safe model loader, reference, model/package locks, all8
+shared inputs and originalFA/PA/T-FA/T-PA criteria remain byte-identical Q.
+
+### Focused checks, peer and later ROOT gates
+
+One new grouped regression uses inert synthetic failures at capacity/head fetch/
+head layout/wheel/backbone/notice, fixed HTTP/status/code mapping, invalid/raw
+string injection, nooverwrite and diagnostic-write failure. It must preserve
+phase failure and never produce native success. Use mock transports/short owned
+stdlib fixtures only; no network/model/SDK or local inference. Run the new group
+and the existing exact-source-count admission group once after freeze, plus only
+newly affected source/workflow checks if a concrete mismatch warrants them.
+Capture actual current source before/after, retain first run failure unchanged,
+and get SEO different preimplementation design and frozen-source review.
+
+ROOT must integrate/register the few changed source hashes/finite run names,
+review a NEW exact87-source projection and corresponding PRIVATE inspector pin
+for a futureQ (old f8d/86d/old receipts stay historical). Proposed only two new
+public paths: runs/2026-11-23-image-acquisition-diagnostics.json and
+runs/changes/2026-11-23-image-acquisition-diagnostics.json, plus ownCHANGELOG.
+No ROOT COMMON/eval/policy/state/source-admission edit or branch push here.
+No unchanged redispatch. Any changed-source hosted acquisition/native attempt
+still requires ROOT's specific authorization after exact source/peer checks;
+no URL/dependency/license/method/cap workaround is authorized by diagnostics.
+
+Diagnostic source-read clarification before the narrow driver refinement: capacity labels ONLY failures before entering q acquisition; typed AcquisitionFailed carries its actual internal operation. If q acquisition returns and ownership-summary publication fails, report notice operation with all acquisition role counts completed, not capacity. If acquisition was entered but its diagnostic mechanism itself failed and no typed observation exists, omit the unproven diagnostic rather than guess capacity. Add both cases to the same new grouped regression; no source-suite count or new path change. Earlier affected controls remain their exact prior snapshot, not rebound.
+
+## Actual wheel29 primary metadata correction — plan BEFORE code
+
+ROOT approved this bounded correction after actual run45295554500/source416.
+The real job passed SOURCE, fetched and inert-layout-validated the head, completed
+28 wheels, then refused wheel29 setuptools84.2.1. No backbone/install/native ran.
+ROOT separately authorized ONE private876263-byte format audit only; its full
+ca140b45d5325a9478f880e351484f62fef15f336462e449ca0c03c873d589c2 digest
+was checked before ZipFile. Actual audit340cbea54a643ffbb3f74e9ebfad6395040586659f29ff2485855637d2f823eb
+shows13 metadata records: one exact pinned top-level primary and12 vendored
+records. The unchanged inspect_wheel failed exactly at its global metadata-count
+predicate. Initial line-trace harness unwinding confusion was corrected using
+the SAME retained wheel; no second acquisition/install/import/extraction occurred.
+
+Only identify the selected distribution's primary metadata at the archive root
+(two path components ending .dist-info/METADATA), require exactly one, then keep
+the exact retained primary SHA check. Do not accept a nested-only metadata record
+or fall back to it if the primary is absent/tampered; multiple top-level records
+still refuse. Every nested member still passes all safe-name/link/compression/
+size/duplicate/aggregate checks, and ALL shipped license/notice/copying/copyright
+candidates, including vendored files, remain in the original complete scan.
+No package/version/hash/URL, download/expanded/notice/time/cpu/memory/capability
+limit, installer/worker, numeric/preprocessing/classification or positive grammar
+changes. This is neither a license waiver nor a new tag/origin assertion.
+
+Own only existing helper/test/thisplan plus fresh authorrun/event/CHL. Extend the
+existing metadata test with factual13-record layout metadata (short filenames
+only) and existing exact retained primary bytes, plus explicit synthetic vendored
+metadata/notice text. Keep current33/34/5/27 source suite counts. The PUBLIC
+fixture is not a whole publisher wheel or a claim of real-wheel native execution.
+Separately replay the retained exact pinned private wheel against the correction
+and require every audited notice row/name/size/hash retained byte-for-byte.
+Negative controls: two primaries; nested-only; altered primary with matching
+nested data; nested unsafe name/symlink; notice/expanded bounds. Preserve all
+prior failures/source proofs. Obtain different source review before normalcommit
+/handoff; ROOT owns integration/V4/newexactsource/manualdispatch. No redispatch
+or further acquisition authorized by this source change.

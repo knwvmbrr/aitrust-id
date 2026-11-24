@@ -1,6 +1,155 @@
 # Changelog
 
+## Unreleased — 2026-11-24
+
+### 2026-11-23-tag-runtime-final-selection
+
+Recorded 2026-11-24T04:19:07.007700+00:00 · Contributor: Codex /root integration; different source/evidence reviewers · change
+
+- **Changed.** Select five current source-bound engineering receipts, refresh the exact reviewed route inventory and reconcile current native/image worker status while preserving all original scope criteria.
+- **Evidence.** Actual five hosted profiles execute7/6/14/79/66 commands, exact8537 Git bindings independently reviewed. All five selected receipts assess current. Unchanged route guard and36failure controls pass; actual seven native flows remain separately evidenced. [Change record](./runs/changes/2026-11-23-tag-runtime-final-selection.json).
+- **Not claimed.** Final committed-tree required checks, capacity and actual live deployment pending. No new tag release, independent accuracy, physical-phone acceptance, TestFlight upload, managed web authority, legal clearance or original closure.136complete66open; target60 unmet.
+
+### 2026-11-23-route-refresh-prerequisites
+
+Recorded 2026-11-24T03:34:57.328210+00:00 · Contributor: Codex /root integration; /root/web_camo different source review · change
+
+- **Changed.** Registered exactly three final boundary-maintenance/evidence names within the unchanged160-entry cap before the next source freeze; refreshed exact table/registry bindings and recorded the actual stale-boundary refusal.
+- **Evidence.** Two affected finite-table controls pass, preserving155historical names and161-entry refusal. Actual972 site validation reaches the unchanged route guard, where nine cases refuse the old source inventory and27others pass. Current source/native scopes remain separate from release or independent accuracy. [Change record](./runs/changes/2026-11-23-route-refresh-prerequisites.json).
+- **Not claimed.** No current boundary review or browser execution is manufactured. Fresh final-source protocol/website receipts, exact boundary review, required checks and actual publication remain pending; no original criteria, percentages, permissions, endpoint, capture or collection change.136complete66open; target60 unmet.
+### 2026-11-23-current-native-selection
+
+Recorded 2026-11-24T03:19:34.208906+00:00 · Contributor: Codex /root integration; /root/web_camo native source and different integration review · change
+
+- **Changed.** Selected the actual complete seven-flow native proof after the authored observer handoff; registered six literal source-copy paths and updated exact bindings, scope, public scope projection and dated worker accounting.
+- **Evidence.** The actual normal Simulator run passes7/7 with stable109/116source, nine current assets and owned cleanup. Current-proof24controls plus two focused finite-table controls pass. All202 original criteria and percentages remain unchanged; charged finite names157/160. [Change record](./runs/changes/2026-11-23-current-native-selection.json).
+- **Not claimed.** Pre-publication engineering selection only. Fresh final-source protected protocol/website/capacity checks, new TestFlight, physical phones, human accessibility and independent tag accuracy remain pending.136complete66open; no original closure, image inference, web admission or legal clearance.
+
+### 2026-11-23-ios-seven-ui-observer
+
+Recorded 2026-11-24T03:10:08.870359+00:00 · Contributor: Codex /root/web_camo; ROOT different source/evidence review · change
+
+- **Changed.** Repair only the iOS test observer: one verified editor-center action, finite identity-bound source/host popup snapshots and source-case host navigation; preserve all seven workflows and private-payload assertions.
+- **Evidence.** A genuine normal-runner iOS26.2 Simulator run executes seven workflows with seven passes, zero failures and zero skips; source109 plus component116 stay exact and the owned Simulator is deleted and absent. Source-export App/Share cancellation, source-only privacy and draft/no-result checks pass. Earlier failures and focused diagnostics remain separate immutable evidence. [Change record](./runs/changes/2026-11-23-ios-seven-ui-observer.json).
+- **Not claimed.** Signing-disabled Simulator software proof only: no physical phone, human accessibility/recognition, developer-signed IPA/TestFlight, independent accuracy, legal clearance, policy adoption, tag release or original closure. No focused or six-plus-one composition; current full seven is actual.
+
+### 2026-11-23-tag-runtime-publication
+
+Recorded 2026-11-24T01:57:22.909566+00:00 · Contributor: Codex /root integration; /root/web_camo image/native source; /root/seo different final source review · change
+
+- **Changed.** Corrected CI image-block placement, closed web Git identity reads, integrated the exact image wheel metadata repair and recorded honest current source/evidence/accounting boundaries.
+- **Evidence.** Five affected CI workflow controls and the actual Git replacement fixture passed. Exact pinned wheel passes corrected primary metadata inspection. Three immutable actual hosted PS/privacy/extension receipts still match current source fingerprints; all202 original criteria and percentages remain intact. Different review binds19 exact files. [Change record](./runs/changes/2026-11-23-tag-runtime-publication.json).
+- **Not claimed.** This is a source repair checkpoint, not a new publication or full current qualification. Protocol/website and actual seven-case native proof remain pending; latest actual simulator run is6of7 with stable sources and owned cleanup.136complete66open; no original closure, new TestFlight, image inference, web managed authority, independent accuracy or legal clearance.
+
+### 2026-11-23-tag-runtime-ci-integration
+
+Recorded 2026-11-24T00:06:49.465071+00:00 · Contributor: Codex /root/seo; Codex /root distinct registration review · change
+
+- **Changed.** Registered additive current source, runtime obligation, web artifact, iOS resource and MT export controls in ordinary CI and exact engineering revalidation footprints.
+- **Evidence.** Actual static YAML, existing manifest parser, command preservation, source-path and exact old-workflow reconstruction checks pass; different ROOT review55f6 independently confirms the frozen patch. [Change record](./runs/changes/2026-11-23-tag-runtime-ci-integration.json).
+- **Not claimed.** No new control-suite execution, SDK, native code, model, browser, acquisition, build, hosted profile, signature, release authority, accuracy or original scope closure. Existing capability receipts must refresh after COMMON manifest change.
+
+
 ## Unreleased — 2026-11-23
+
+### 2026-11-23-reviewer-attestation
+
+Recorded 2026-11-24T00:05:06.374245+00:00 · Contributor: Codex /root/share_debugger; Codex /root distinct software review · change
+
+- **Changed.** Implemented a read-only local reviewer-attestation verifier and CLI with caller-selected key, exact subject/revision/scope, externally selected lifecycle head, explicit consent and expiry/conflict/terminal withdrawal/supersession handling. No IV tag is issued.
+- **Evidence.** Author15-control and2 affected clock/CLI phases pass; a different source reviewer actually ran all16 current controls successfully. Real CLI synthetic declaration/withdrawal/tamper cases return0/3/2. Initial malformed-fixture failure and source phases are preserved. [Change record](./runs/changes/2026-11-23-reviewer-attestation.json).
+- **Not claimed.** Published test keys and synthetic declarations do not establish a real human review, identity, independence, accuracy, timestamp or global withdrawal completeness. No operating key/private user key, endpoint, registry/taxonomy change, deployment or full T-IV closure; human route acceptance remains open.
+
+
+### 2026-11-23-web-checker-observed-build
+
+Recorded 2026-11-23T23:37:43.115137+00:00 · Contributor: Codex /root integration; Codex /root/seo distinct source-ownership review · change
+
+- **Changed.** Kept one exclusive verified-runtime stdlib notice producer and moved the two existing PWA links before bundling so offline finalization preserves observed HTML.
+- **Evidence.** Actual build4 completed Vite/source observation and reference rendering, then refused duplicate stdlib output. The redundant newly-added static copy is removed while the protected full notice source and final14-companion requirement remain. Both syntax checks, real source preparation and exact-one-link assertions pass; a different reviewer proves only the intended source-head/postprocessor delta. [Change record](./runs/changes/2026-11-23-web-checker-observed-build.json).
+- **Not claimed.** Partial build4 is not a successful whole build or released artifact. Genuine full build5, final index/observed hash equality, exact14 companions, real MT browsers, current shared admission/protected publication and all original acceptances remain pending.136complete66open; no original closure.
+
+
+### 2026-11-23-source-copy-rights-v4
+
+Recorded 2026-11-23T23:17:11.619924+00:00 · Contributor: Codex /root/share_debugger · change
+
+- **Changed.** Implemented an isolated finite V4 source-copy classifier over independently executed protected Q/V3, exact scoped source/notice/container grants and source archive binding; preserved immutable V1/V2/V3 and all shared policy/Graph/signing code.
+- **Evidence.** Actual selected365 classification covers13829 files/149315264 bytes with25 copied or mixed rows and all nonclaims false. Initial17 controls and separately source-bound correction groups pass; different review verifies corrected timer/FIFO/final-foundation boundaries and final literal-name-only deltas. All paired original review bytes and source qualifications are retained in the execution record. [Change record](./runs/changes/2026-11-23-source-copy-rights-v4.json).
+- **Not claimed.** No genuine current whole-source archive, protected signature, managed consumer, shared route activation, runtime/model/accuracy/legal clearance or full F-057/X-02 closure. Final20 methods are declared, not relabeled as one full current execution. ROOT integrated capacity/registration and actual artifact remain future work.
+
+
+### 2026-11-23-web-chunk-runtime-integration
+
+Recorded 2026-11-23T23:18:13.652840+00:00 · Contributor: Codex /root integration; Codex /root/seo distinct actual-case source review · change
+
+- **Changed.** Handled the actual chunk-only Rolldown runtime under its existing virtual provider and refreshed four original scope evidence histories without changing acceptance or completion.
+- **Evidence.** Thirteen inert author groups and four distinct affected peer controls pass. Identical runtime repetition succeeds with both outputs physically present; differing code and every other unknown chunk ID refuse. Graph-supplied records win. Actual build3 remains a failed observation; exact root scope rendering retains202 records and136complete66open. [Change record](./runs/changes/2026-11-23-web-chunk-runtime-integration.json).
+- **Not claimed.** No new provider, generic virtual prefix, cap expansion, complete build, release admission, image qualification, independent accuracy or original closure. Whole genuine build4 and artifact inspection remain next; existing Q source release is separate.
+
+
+### 2026-11-23-tag-runtime-followup
+
+Recorded 2026-11-23T23:04:51.341094+00:00 · Contributor: Codex /root fixes; Codex /root/seo distinct source and actual-evidence review · change
+
+- **Changed.** Fixed the exact observed Vite resolved-ID compatibility, the image capacity-diagnostic test contract and actual web deadline setup/teardown restoration.
+- **Evidence.** Ten inert observer groups, the affected capacity case, all99 finite source controls and the new three-fault timer test pass; a different reviewer exercised four actual timer controls and verified the retained failed web/image evidence. Original source and runtime budgets/provider boundaries remain unchanged. [Change record](./runs/changes/2026-11-23-tag-runtime-followup.json).
+- **Not claimed.** Both actual failed attempts are preserved, not successful build or image qualification. Local reproduced capacity-test mismatch is not asserted as the sole remote cause. Genuine build3, compiled web admission, next changed-source image attempt, all fourteen obligations and original closures remain pending.136complete66open; target60 unmet.
+
+
+### 2026-11-23-web-observer-html-json-repair
+
+Recorded 2026-11-23T22:50:30.865446+00:00 · Contributor: Codex /root implementation; Codex /root/seo distinct source/counter review · change
+
+- **Changed.** Corrected source notice parsing so HTML URLs and JSON data do not masquerade as JavaScript comments; retained conservative inline-code refusal and all original notice limits.
+- **Evidence.** The real365b build failed after146 transformed modules; bounded diagnostic copies identified137426-byte HTML URL pseudo-comments. Current nine inert author groups and three distinct peer controls pass, including actual current HTML, inline-code refusal and65-comment refusal. Exact reviewed sources are recorded before genuine build2. [Change record](./runs/changes/2026-11-23-web-observer-html-json-repair.json).
+- **Not claimed.** The original failed build and diagnostic-copy output are not accepted provenance. Whole-site build, actual artifact, current web admission, protected signature/consumer, all fourteen obligations and original closures remain pending.136complete66open; target60 unmet.
+
+
+### 2026-11-23-tag-runtime-integration
+
+Recorded 2026-11-23T22:33:41.247686+00:00 · Contributor: Codex /root integration; /root/seo review; /root/web_camo MT/image; /root/share_debugger runtime · change
+
+- **Changed.** Integrated the reviewed MT private-export repair and mobile source binding, browser runtime obligations/artifact component and bounded image failure diagnostics; recorded actual source-consumer task completion and selected evidence milestone.
+- **Evidence.** All five exact authored commits remain ancestors and every imported changed input matches its author. Integrated MT eight affected checks and runtime source-fact verification pass. Distinct source-consumer review supports31/32 scoped tasks closed and F120 selected integration80%; original full acceptance is preserved. Scope rendering verifies202 records with136complete66open. The expected stale Q web registry pin is now explicitly rebound with a distinct pre-code review; the exact additional MT method row preserves its legacy sibling. Actual web sources now pass for35 npm packages,14 runtime companions and three source-generator packages. Three fixed additional static notice/source files match trusted producer bytes; two plain links expose them. The board accepts a limited wrapper over immutable actual raw consumer facts; no validator change. [Change record](./runs/changes/2026-11-23-tag-runtime-integration.json).
+- **Not claimed.** No original closure, independent accuracy, whole-site observed build, new web admission, image native inference or physical/human acceptance. One web source registry pin is expected-stale and refuses; source-map integration and actual build are next. Six more original closures are required for60; existing Q authenticated source release remains usable.
+
+
+### 2026-11-23-image-acquisition-diagnostics
+
+Recorded 2026-11-23T22:28:03.791736+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Added fixed bounded acquisition failure diagnostics to the existing image qualification operator while preserving the original failed attempt and its unknown cause; retained all numerical/resource/source-adoption boundaries.
+- **Evidence.** One current grouped synthetic failure control covers six operations, fixed status/predicate reporting, no private echo, schema bounds, primary-error/nooverwrite preservation and accurate publication context. The preceding affected source-count control passed; different reviewer replayed four focused controls and checked all87 bindings/82 unchanged paths. Exact source suites are33/34/5/27; no full99 current execution is claimed. First AST harness placement failure ran zero tests and was corrected before feature controls. [Change record](./runs/changes/2026-11-23-image-acquisition-diagnostics.json).
+- **Not claimed.** No new hosted run, model/SDK/binary acquisition, install, native inference, retry, dispatch, alternative URL/dependency, cap increase, ROOT edits or push. First real job failed acquisition and retained unsealed bytes; no exact cause, successful removal or native qualification inferred. ROOT must integrate current source/admission/projection and authorize any changed-source run separately. No FA/PA/accuracy or original closure.
+
+
+### 2026-11-23-222229-web-checker-artifact-source-component-3bea298e
+
+Recorded 2026-11-23T22:22:29.936836+00:00 · Contributor: Codex /root/share_debugger · change
+
+- **Changed.** Implemented a new finite static-web artifact producer, exact source/module/provider and notice checks, inert pinned-builder observer and authenticate-before-materialization private consumer; preserved the existing runtime/helper and all shared policy/signing code.
+- **Evidence.** Real isolated CLI prepare/inspect pass on a 26-file private synthetic-census fixture carrying all five actual runtime payloads and fourteen companions; altered payload refuses. Twenty-four authored controls and one subsequent summary-affected repeat remain separately source-bound; five inert observer controls and six independent tiny review controls pass. Original descriptor-composition failure preserved and corrected without larger caps. [Change record](./runs/changes/2026-11-23-222229-web-checker-artifact-source-component-3bea298e.json).
+- **Not claimed.** No actual whole website build or genuine module census, shared web route admission, protected signature, real managed authorization, compiler reproduction, legal/accuracy clearance or full F-057/X-02 closure. Injected authority tests are non-cryptographic. Actual CLI format proof retains its historical source identity.
+
+
+### 2026-11-23-web-runtime-obligations-finite-delivery
+
+Recorded 2026-11-23T20:54:41.240993+00:00 · Contributor: Codex /root/share_debugger · change
+
+- **Changed.** Implemented a finite received browser-runtime checker and deterministic notice/source-offer delivery for five pinned publisher files plus fourteen companions, including complete Hiwire MPL preferred source; preserved all eleven existing companion formats and shared policies.
+- **Evidence.** Actual private nineteen-file selection and seven refusal/recovery cases pass. Affected execution phases of 15, 2, 3, 1 and 1 methods remain separately source-bound, not relabeled a current full 21-method run. Distinct reviewer checked six tiny filesystem and two CLI controls, all 67 retained inputs and applicable notice/source ranges. [Change record](./runs/changes/2026-11-23-web-runtime-obligations-finite-delivery.json).
+- **Not claimed.** No whole website or target-selected Node/build-tool approval, compiler reproduction, route admission, signature, legal/professional clearance, accuracy or full F-057/X-02 closure. Failed collector, membership, creation, read-charge and receipt observations and exact old source snapshots remain preserved.
+
+
+### 2026-11-23-source-image-protected-publication
+
+Recorded 2026-11-23T22:18:45.531176+00:00 · Contributor: Codex /root production and publication; Codex /root/seo distinct evidence review · change
+
+- **Changed.** Published an authenticated whole-source engineering download with six exact files and completed the real finite PS source consumer on both Linux and Mac; recorded anonymous delivery and truthful remaining gates.
+- **Evidence.** Protected PR153 passed all eleven required checks. Actual main producer signed the exact source archive/SPDX and authenticated before ten-file materialization and three PS probes. The separate Mac consumer exited0 using independently retrieved roots and produced byte-identical records. All six public files downloaded without account, cookies or proxy and matched exact hashes; different source and publication reviews are CLEAR. [Change record](./runs/changes/2026-11-23-source-image-protected-publication.json).
+- **Not claimed.** Full F-057/X-02, independent detector accuracy, outside implementers, physical devices and legal execution remain open. The first separate image qualification failed acquisition before inference and is being diagnosed.136complete66open; target60 unmet; no original closure.
+
 
 ### 2026-11-23-source-image-hosted-engineering-selection
 
@@ -27,6 +176,24 @@ Recorded 2026-11-23T20:47:41.342301+00:00 · Contributor: Codex /root implementa
 - **Changed.** Corrected the obsolete MCP sibling-policy assertion and added a read-only exact-source runner for the complete protocol and website profiles; retained unchanged PS/privacy/extension source contracts and finite copy bounds.
 - **Evidence.** The actual failed hosted delivery completed its PS7/privacy6/extension14 step successfully and all three raw receipts still assess current. One106-control local command reproduced105passes/1obsolete assertion; the corrected isolated test plus four runner controls passed5. YAML, shell and three inline Python blocks parse. Actual source-capacity run45258115933 passed archive/Git/graph/SPDX under unchanged limits. [Change record](./runs/changes/2026-11-23-source-profile-continuation.json).
 - **Not claimed.** The failed overall run is not successful; full protocol78/website66 continuation, protected signing and real managed consumer remain pending. No independent tag accuracy, release authorization or original closure.136complete66open; target60 unmet.
+### 2026-11-23-mt-quote-export-mobile-binding
+
+Recorded 2026-11-23T20:57:48.575411+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Regenerated the optional mobile MT source bundle and active manifest with the existing producer after the CLI-only private-export repair, and mirrored the reviewed guide; private export helpers remain excluded from browser analysis.
+- **Evidence.** Only the CLI changes among15 captured source files; manifest delta is path/hash/bytes and that one source row. All legacy sources/manifests/bundles, notices and browser worker/client/result bytes remain exact. Six complete records and three refusals from the captured helper-free payload match current Python; default CLI works without helpers, explicit export remains separately unavailable without writing; six inert JS consumer groups pass. Different source/evidence review clears exact derived bytes and25 stable author bindings. [Change record](./runs/changes/2026-11-23-mt-quote-export-mobile-binding.json).
+- **Not claimed.** No actual browser/Pyodide/WASM/native SDK, model, install, network, ROOT source/eval/registry edit, push or public publication. No grammar/method/budget/taxonomy/accuracy or original closure. Parent c716 and old hash-addressed bundles/receipts are preserved; ROOT combined normal build/browser/inventory checks remain required.
+
+
+### 2026-11-23-mt-quote-export-repair
+
+Recorded 2026-11-23T20:42:22.712961+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Repaired the optional MT quotation private export so supported analysis survives export faults, with separate fixed refusal/uncertainty status, private no-overwrite output and a lazy foundational IO adapter.
+- **Evidence.** Current eight focused controls pass, including the real close-after-release fault, descriptor constructor failure, private modes, no-overwrite/recovery, unsafe/Git/link refusal, six default byte comparisons and actual independent PS. Five standalone CLI cases and separate five-case peer replay pass. Original failure, sparse-harness failure and prior test version remain retained; portable tests require no historical Git object. [Change record](./runs/changes/2026-11-23-mt-quote-export-repair.json).
+- **Not claimed.** No grammar, source-marker, quote, normalizer, shared IO, PS or model change. Synthetic engineering only; no independent accuracy, intent/truth, MT release or original closure. ROOT must regenerate affected source bundle/manifests and perform integration checks; old browser evidence is not rebound. No SDK/browser/native/model/network, push or ROOT edits. First normal hook correctly refused a missing exact human entry after an author assembly assertion on repeated inherited date headings; private failure retained, then exact entry inserted at the first heading without changing feature source.
+
+
 
 
 
@@ -11720,3 +11887,51 @@ Recorded 2026-10-09T17:06:16.447165+00:00 · Contributor: Codex · retrospective
   message identity and navigation invalidate stale results, including reused DOM hosts.
 - Observed-DOM fixtures, exact download counterexamples and local shell-layer checks;
   60 Python checks and real-container/unpacked-extension synthetic integration pass.
+
+### 2026-11-23-source-v4-admission-integration
+
+Recorded 2026-11-23T23:35:56.345865+00:00 · Contributor: Codex /root/share_debugger; Codex /root/seo distinct implementation review · change
+
+- **Changed.** Activated finite V4 source-copy review and archive verification without fallback, added exactly two source bindings to component and graph consumers, refreshed actual source-component rows and configured79 protected source controls. Preserved historical6d/V3 proof alongside activeQ/V4 and prospective literal bookkeeping paths.
+- **Evidence.** Actual16 affected controls pass26.640s; actual current source-only registry evaluate passes11.766s. Different final review checks exact registry/sibling preservation, names-only table, active callers and four independent forged-report controls. [Change record](./runs/changes/2026-11-23-source-v4-admission-integration.json).
+- **Not claimed.** No whole current source archive, protected signature, managed consumer, full79 hosted execution, web pin modification, compiled/runtime/model permission, legal/accuracy/human acceptance or full F-057/X-02 closure. New prospective record slots are not executions. Immutable classifiers/serializers, dependency_policy CODE and PS consumer remain unchanged.
+
+### 2026-11-23-ios-runtime-obligations
+
+Recorded 2026-11-23T23:21:18.537217+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Project exact17 runtime notices and bundled preferred-source offers into App and Share resources, with fixed public-only source access, bounded received-resource inspection and strict private output ownership.
+- **Evidence.** Current source-only CLI projection, private preparation and46 selected resource checks pass; old real IPA verifies ten runtime copies then refuses24 missing resources. Corrected read accounting, physical role identities and final membership rechecks pass focused controls and different source review. Historical fixtures/failures remain explicitly attributed. [Change record](./runs/changes/2026-11-23-ios-runtime-obligations.json).
+- **Not claimed.** No Swift or SDK execution, compiled UI, signing/upload, whole IPA admission, new Apple assent, independent accuracy, legal clearance, policy adoption or original requirement closure. Historical30/37/full fixture records are not relabeled as a current34-test or native run.
+
+### 2026-11-23-web-checker-observed-artifact
+
+Recorded 2026-11-23T23:50:56.326628+00:00 · Contributor: Codex /root integration; Codex /root/seo distinct exact source-pin review · change
+
+- **Changed.** Bound the web artifact reader to the exact active V4 source consumer and registry, preserved every sibling route, and refreshed current independent engineering assignments.
+- **Evidence.** Actual sources CLI passes35 npm/5 runtime/14 companions/3 generators. Distinct review verifies exactly two SOURCE_PINS changed, all other helper AST is identical and thirteen sibling routes remain unchanged. The app/Share and active V4 authored commits are integrated with normal guards. [Change record](./runs/changes/2026-11-23-web-checker-observed-artifact.json).
+- **Not claimed.** Source readiness only; genuine whole current build, package, protected compiled-web authority, current unsigned native compilation, independent accuracy and human acceptance remain pending.136originals complete66open; no closure. Agents are dated assignments rather than permanent processes.
+
+### 2026-11-23-web-generated-source-binding
+
+Recorded 2026-11-23T23:59:45.032929+00:00 · Contributor: Codex /root integration; Codex /root/seo distinct architecture review · change
+
+- **Changed.** Tracked the exact generated PS method manifest, bound its literal observed-source role to committed bytes, and named the omitted project workflow test plus finite bookkeeping paths in current source-copy policy.
+- **Evidence.** Actual complete browser build5 passes and final HTML matches its observation. The first whole package correctly refuses the uncommitted manifest; source review correctly refuses an unnamed changed test. The corrected source passes its new manifest positive/missing-commit/tamper/unknown-neighbor control and all20 current V4 controls.13sibling routes, legacy grants/cohorts and numerical caps are unchanged. [Change record](./runs/changes/2026-11-23-web-generated-source-binding.json).
+- **Not claimed.** The earlier assumption that the manifest existed in protected Q was wrong and remains corrected. This commit is source readiness; fresh committed whole package/current source permission, final distinct source review, protected web authorization, app compile, human acceptance and independent accuracy remain pending.136complete66open; no original closure. Prospective CI names are not completed work.
+
+### 2026-11-23-tag-runtime-qualification
+
+Recorded 2026-11-24T00:21:32.987283+00:00 · Contributor: Codex /root integration; /root/seo distinct review; tag/runtime workers attributed in evidence · change
+
+- **Changed.** Made IV reviewer-attestation verification discoverable and CI-gated, integrated actual whole-web/MT/app resource qualification, refreshed exact finite source bindings and synchronized attributed scope/state/worker records.
+- **Evidence.** Actual416 whole web creation and inspection pass428 files with complete14runtime companions and different streamed payload review. Actual Chromium/WebKit MT workflows pass35source/27served identities. Actual980 signing-disabled app/Share compile passes with60resource identities. IV has a usable local verifier, distinct source review and actual16 controls. Additive source registration preserves13siblings and all202 original acceptance contracts. [Change record](./runs/changes/2026-11-23-tag-runtime-qualification.json).
+- **Not claimed.** 136originals complete66open; target60 unmet and no full original closes. These exact selected-source engineering observations are not fresh full current protected capability reports, current TestFlight upload, physical/human acceptance, independent accuracy, legal clearance or web-route authorization. Actual image416source gate succeeds but dependency acquisition fails and native inference is skipped; cause remains under diagnosis.
+
+### 2026-11-23-image-wheel-primary-metadata
+
+Recorded 2026-11-24T00:43:07.887308+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Primary locked wheel metadata is only the unique archive-root dist-info/METADATA; every vendor metadata/member/notice still validated/carried. No numeric/model/lock/resource/workflow changes.
+- **Evidence.** Exact retained876263B pinned wheel reproduces original13metadata failure; corrected unique primary selection passes and all17 audited notices remain exact. Fresh99 source controls33/34/5/27 pass after restoring sparse eval input; different reviewer checked actual pinned bytes and three inert parser cases. [Change record](./runs/changes/2026-11-23-image-wheel-primary-metadata.json).
+- **Not claimed.** All original hosted failures remain. No changed-source dispatch, install, extraction, native model/SDK execution, accuracy, FA/PA or full-original closure. Root owns source admission/registration and any future native run.

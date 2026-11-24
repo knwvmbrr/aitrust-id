@@ -15,6 +15,7 @@ import subprocess
 import sys
 import time
 import urllib.parse
+import urllib.error
 import urllib.request
 import zipfile
 
@@ -32,6 +33,54 @@ HOSTS={'raw.githubusercontent.com','files.pythonhosted.org','download-r2.pytorch
 
 class QualificationRefused(Exception):pass
 class CleanupUncertain(QualificationRefused):pass
+
+ACQUISITION_OPERATIONS=frozenset(('capacity','head_fetch','head_layout','wheel','backbone','notice'))
+ACQUISITION_CATEGORIES=frozenset(('http_error','url_error','timeout','os_error','asset_refused','qualification_refused','invalid_value','cancelled','unexpected'))
+ACQUISITION_REASONS=frozenset(('http_status','encoding_refused','declared_size_mismatch','byte_limit','sha256_mismatch','git_blob_mismatch','reserve_or_deadline','model_identity','head_format','head_numeric','refused','unknown'))
+ACQUISITION_COUNTS={'head_fetched':1,'head_layout_validated':1,'wheels_completed':39,'current_wheel_ordinal':39,'backbone_verified':1,'notice_inventory_written':1}
+
+class AcquisitionPredicate(QualificationRefused):
+ def __init__(self,reason,http_status=None):
+  self.reason=reason if type(reason)is str and reason in ACQUISITION_REASONS else 'unknown'
+  self.http_status=http_status if type(http_status)is int and 100<=http_status<=599 else None
+  super().__init__('acquisition_refused')
+
+def acquisition_check(ok,reason,http_status=None):
+ if not ok:raise AcquisitionPredicate(reason,http_status)
+
+def validate_acquisition_diagnostic(value):
+ if not (type(value)is dict and set(value)=={'profile','operation','category','reason_code','http_status','role_counts'}):raise QualificationRefused('qualification_refused')
+ if not (value['profile']=='visual-score-acquisition-diagnostic/v1' and type(value['operation'])is str and value['operation']in ACQUISITION_OPERATIONS and type(value['category'])is str and value['category']in ACQUISITION_CATEGORIES and type(value['reason_code'])is str and value['reason_code']in ACQUISITION_REASONS):raise QualificationRefused('qualification_refused')
+ status=value['http_status'];counts=value['role_counts']
+ if not (status is None or type(status)is int and 100<=status<=599):raise QualificationRefused('qualification_refused')
+ if not (type(counts)is dict and set(counts)==set(ACQUISITION_COUNTS) and all(type(counts[k])is int and 0<=counts[k]<=maximum for k,maximum in ACQUISITION_COUNTS.items())):raise QualificationRefused('qualification_refused')
+ if not (counts['head_layout_validated']<=counts['head_fetched'] and (value['operation']=='wheel' or counts['current_wheel_ordinal']==0)):raise QualificationRefused('qualification_refused')
+ result={**value,'role_counts':dict(counts)}
+ if len(json.dumps(result,sort_keys=True,separators=(',',':'),allow_nan=False).encode())>4096:raise QualificationRefused('qualification_refused')
+ return result
+
+class AcquisitionFailed(QualificationRefused):
+ def __init__(self,observation):
+  self.observation=validate_acquisition_diagnostic(observation)
+  super().__init__('acquisition_failed')
+
+def acquisition_failure(error,operation='capacity',counts=None):
+ # Error content is NEVER output. Only source-owned predicates and fixed types.
+ category='unexpected';reason='unknown';status=None
+ if isinstance(error,AcquisitionPredicate):category='qualification_refused';reason=error.reason;status=error.http_status
+ elif isinstance(error,urllib.error.HTTPError):
+  category='http_error';reason='http_status';status=error.code if type(error.code)is int and 100<=error.code<=599 else None
+ elif isinstance(error,urllib.error.URLError):category='timeout' if isinstance(error.reason,TimeoutError) else 'url_error'
+ elif isinstance(error,TimeoutError):category='timeout'
+ elif isinstance(error,KeyboardInterrupt):category='cancelled'
+ elif isinstance(error,OSError):category='os_error'
+ elif isinstance(error,QualificationRefused):
+  category='timeout' if error.args==('acquisition_deadline',) else 'qualification_refused';reason='reserve_or_deadline' if category=='timeout' else 'refused'
+ else:
+  from tools.visual_score_assets import Refused
+  if isinstance(error,Refused):category='asset_refused';reason=error.reason if error.reason in {'model_identity','head_format','head_numeric'} else 'refused'
+  elif isinstance(error,(ValueError,TypeError,KeyError)):category='invalid_value'
+ return validate_acquisition_diagnostic({'profile':'visual-score-acquisition-diagnostic/v1','operation':operation,'category':category,'reason_code':reason,'http_status':status,'role_counts':dict(counts) if counts is not None else {k:0 for k in ACQUISITION_COUNTS}})
 
 def need(ok):
  if not ok:raise QualificationRefused('qualification_refused')
@@ -91,16 +140,20 @@ def _acquire_file(url,destination,size,expected_sha=None,git_blob=None,deadline=
  try:
   fd=os.open(destination,os.O_WRONLY|os.O_CREAT|os.O_EXCL|os.O_NOFOLLOW,0o600)
   with opener.open(urllib.request.Request(url,headers={'Accept-Encoding':'identity','User-Agent':'AITrustID-reference-qualification/1'}),timeout=max(.1,min(20,deadline-time.monotonic()))) as response:
-   need(response.status==200 and response.headers.get('Content-Encoding','identity')=='identity')
-   declared=response.headers.get('Content-Length');need(declared is None or declared==str(size))
+   acquisition_check(response.status==200,'http_status',response.status)
+   acquisition_check(response.headers.get('Content-Encoding','identity')=='identity','encoding_refused',response.status)
+   declared=response.headers.get('Content-Length');acquisition_check(declared is None or declared==str(size),'declared_size_mismatch',response.status)
    while True:
-    need(time.monotonic()<deadline and shutil.disk_usage(destination.parent).free>=RESERVE)
+    acquisition_check(time.monotonic()<deadline and shutil.disk_usage(destination.parent).free>=RESERVE,'reserve_or_deadline',response.status)
     piece=response.read(min(65536,size+1-count))
     if not piece:break
-    count+=len(piece);need(count<=size);h.update(piece);git.update(piece)
+    count+=len(piece);acquisition_check(count<=size,'byte_limit',response.status);h.update(piece);git.update(piece)
     view=memoryview(piece)
     while view:view=view[os.write(fd,view):]
-   need(time.monotonic()<deadline and count==size and (expected_sha is None or h.hexdigest()==expected_sha) and (git_blob is None or git.hexdigest()==git_blob))
+   acquisition_check(time.monotonic()<deadline,'reserve_or_deadline',response.status)
+   acquisition_check(count==size,'byte_limit',response.status)
+   acquisition_check(expected_sha is None or h.hexdigest()==expected_sha,'sha256_mismatch',response.status)
+   acquisition_check(git_blob is None or git.hexdigest()==git_blob,'git_blob_mismatch',response.status)
   os.fsync(fd)
  finally:
   if fd is not None:owned=fd;fd=None;os.close(owned)
@@ -136,7 +189,9 @@ def inspect_wheel(path,row):
   for info in members:
    safe_member(info);need(0<=info.file_size<=2*1024**3 and info.compress_type in (zipfile.ZIP_STORED,zipfile.ZIP_DEFLATED))
    total+=info.file_size;need(total<=4*1024**3);by[info.filename]=info
-  metas=[x for x in by if x.endswith('.dist-info/METADATA')];need(len(metas)==1)
+  # Vendored distributions may retain their own metadata as package data.
+  # Only the single archive-root dist-info record describes this locked wheel.
+  metas=[x for x in by if len(PurePosixPath(x).parts)==2 and x.endswith('.dist-info/METADATA')];need(len(metas)==1)
   meta=by[metas[0]];need(meta.file_size<=256*1024)
   data=archive.read(meta);need(sha(data)==row['metadata_sha256'])
   prefix=metas[0][:-len('METADATA')];declared=[]
@@ -300,19 +355,29 @@ def install(path,identity):
   call(command,timeout=240,env=env)
 
 def acquire(path):
- selection();capacity(path.parent);need(not path.exists());path.mkdir(mode=0o700)
- for name in ['wheels','models','home','tmp','fixtures']:(path/name).mkdir(mode=0o700)
- from tools.visual_score_assets import HEAD_BYTES,HEAD_GIT_BLOB,pinned_head,BACKBONE_BYTES,BACKBONE_SHA
- deadline=time.monotonic()+900
- head=acquire_file(HEAD_URL,path/'models/fc_weights.pth',HEAD_BYTES,git_blob=HEAD_GIT_BLOB,deadline=deadline)
- pinned_head(raw_file(path/'models/fc_weights.pth',HEAD_BYTES))
- data=selection();notices=[];expanded=0
- for row in data['packages']:
-  w=row['wheel'];file=path/'wheels'/w['filename'];acquire_file(w['url'],file,w['size'],w['sha256'],deadline=deadline)
-  notice=inspect_wheel(file,row);expanded+=notice['expanded_bytes'];need(expanded<=4*1024**3);notices.append(notice)
- acquire_file(MODEL_URL,path/'models/model.safetensors',BACKBONE_BYTES,BACKBONE_SHA,deadline=deadline)
- write_new(path/'notice-observations.json',json.dumps({'format':'visual-score-wheel-notices/v1','packages':notices,'legal_clearance':False},sort_keys=True).encode())
- return head
+ operation='capacity';counts={k:0 for k in ACQUISITION_COUNTS}
+ try:
+  selection();capacity(path.parent);need(not path.exists());path.mkdir(mode=0o700)
+  for name in ['wheels','models','home','tmp','fixtures']:(path/name).mkdir(mode=0o700)
+  from tools.visual_score_assets import HEAD_BYTES,HEAD_GIT_BLOB,pinned_head,BACKBONE_BYTES,BACKBONE_SHA
+  deadline=time.monotonic()+900
+  operation='head_fetch'
+  head=acquire_file(HEAD_URL,path/'models/fc_weights.pth',HEAD_BYTES,git_blob=HEAD_GIT_BLOB,deadline=deadline);counts['head_fetched']=1
+  operation='head_layout';pinned_head(raw_file(path/'models/fc_weights.pth',HEAD_BYTES));counts['head_layout_validated']=1
+  data=selection();notices=[];expanded=0
+  for ordinal,row in enumerate(data['packages'],1):
+   operation='wheel';counts['current_wheel_ordinal']=ordinal
+   w=row['wheel'];file=path/'wheels'/w['filename'];acquire_file(w['url'],file,w['size'],w['sha256'],deadline=deadline)
+   notice=inspect_wheel(file,row);expanded+=notice['expanded_bytes'];need(expanded<=4*1024**3);notices.append(notice);counts['wheels_completed']+=1
+  counts['current_wheel_ordinal']=0;operation='backbone'
+  acquire_file(MODEL_URL,path/'models/model.safetensors',BACKBONE_BYTES,BACKBONE_SHA,deadline=deadline);counts['backbone_verified']=1
+  operation='notice'
+  write_new(path/'notice-observations.json',json.dumps({'format':'visual-score-wheel-notices/v1','packages':notices,'legal_clearance':False},sort_keys=True).encode());counts['notice_inventory_written']=1
+  return head
+ except BaseException as error:
+  try:failure=AcquisitionFailed(acquisition_failure(error,operation,counts))
+  except BaseException:raise error from None
+  raise failure from None
 
 def call(argv,timeout=240,env=None):
  """Silent owned process group; same-group pip bootstrap descendants are reaped on timeout."""

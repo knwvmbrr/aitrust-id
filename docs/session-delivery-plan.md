@@ -1,3 +1,98 @@
+## Actual current seven-flow native handoff — 2026-11-24T03:16:24.697029+00:00
+
+The genuine App/Share Simulator run passes **7/7, zero failures/skips** on exact
+109 runtime/116 component inputs; source-only export/cancel privacy and owned
+Simulator removal pass. ROOT independently checked the raw results and current
+asset identity. The integrated selected-proof guards pass24 focused controls.
+These are software results; physical phones, human accessibility, independent
+accuracy and a new signed TestFlight build remain open. Fresh final-source
+protected checks and publication are next.
+
+Originals stay **136 complete /66 open**; no criterion or percentage changed.
+The image worker repairs the exact wheel32 source-preservation boundary in an
+isolated handoff; the web worker separates historical test data from current
+validators. Their next integration uses a new actual protected baseline rather
+than exceeding the current finite source cap. The historical failed runs and
+earlier six-flow proof remain intact.
+
+[Actual native selection](../runs/2026-11-23-current-native-selection.json) · [Full authored handoff](../runs/2026-11-23-ios-seven-ui-current.json).
+
+## Current delivery repairs and next usable web release — 2026-11-24T01:34:53.929534+00:00
+
+Originals remain **136 complete /66 open**; target60 is unmet. The first PR154
+required checks failed at a CI step placement boundary and an obsolete six-case
+native proof. CI placement is corrected; a new seven-case app/Share proof must
+succeed against actual current sources before selection. Failed Simulator
+candidates and owned cleanup are retained; test observer failures do not prove a
+product fault. Current Xcode/SDK27.2 and installed iOS26.2 runtime are distinct.
+
+The exact image acquisition failure is now traced to valid vendored metadata in
+the pinned setuptools wheel. Reviewed e4e0da62 preserves primary metadata identity
+and all member/notice checks. Its actual wheel inspection passes; hosted native
+execution remains pending. The new conditional web permission component is
+committed separately as c2093cff; shared integration and actual authenticated
+managed distribution remain open. The current source release is already public.
+ROOT integrates; /root/web_camo owns the bounded native workflow;
+/root/share_debugger maps the next web composition; /root/seo reviews source and
+actual completion accounting. These are dated assignments, not permanent bots.
+
+## Actual usable software and runtime qualification — 2026-11-24T00:13:52.217565+00:00
+
+Originals remain **136 complete /66 open**. IV now has a usable read-only signed
+review verifier with exact subject/scope binding and expiry, withdrawal, replacement
+and conflict states; it issues no IV tag. The actual whole browser package passes
+creation/read-back (428 files), and MT passes Chromium/WebKit privacy, reflow and
+independent failure-recovery checks. The app and Share compile on existing Xcode
+with60 expected public resources; ad-hoc linker metadata is explicitly separated
+from credential signing and TestFlight. These are concrete engineering outcomes,
+not full original closures. Current protected-profile refresh and publication
+remain necessary. The changed image source is being qualified on hosted Linux;
+no new local SDK/model or Docker installation was performed.
+
+## Current independent implementation wave — 2026-11-23T23:50:31.938520+00:00
+
+Originals remain **136 complete /66 open**, target60 unmet. ROOT integrates the
+reviewed MT export, whole browser packaging and app/Share source offers. The
+actual protected source release is already published. `/root/share_debugger` now
+implements an independent IV attestation verification function; it will not
+claim human independence from software fixtures. `/root/web_camo` runs bounded
+unsigned native qualification using existing Xcode; `/root/seo` independently
+reviews current source and additive CI registration. These are dated assignments,
+not permanently running bots. Owner, independent-human and legal gates remain.
+No original closes merely because a component builds.
+
+## Completed authenticated source consumer and public delivery — 2026-11-23T22:29:05.223367+00:00
+
+**31 scoped jobs complete / 32 task records. Originals remain 136 complete /
+66 open; target60 is unmet. No original requirement closes in this update.**
+The existing `session-managed-source-consumer-integration` now meets its
+predeclared end-to-end acceptance. Protected main `9c98ac50` produced and signed
+the exact whole-source release; the real Linux consumer authenticated it and
+completed all three finite PS source probes. An outside Mac consumer independently
+retrieved trusted roots, exited0 and produced the same2,405-byte verified summary.
+The public engineering prerelease contains six exact assets; all six anonymous
+HTTP downloads matched their sizes and digests. Implementation credit remains
+`/root/web_camo` with ROOT integration/execution and `/root/seo` distinct review.
+The earlier `f86bfd4f` source handoff and simulated-authority controls remain
+separate historical observations.
+
+[Actual protected consumer](../runs/2026-11-23-source-image-protected-source-consumer.json) ·
+[Production, outside consumer, publication and distinct reviews](../runs/2026-11-23-source-image-publication.json).
+The release is source-copy permission plus finite standalone PS source exercise;
+it does not complete all fourteen routes, F-057/X-02, tag accuracy, independent
+human acceptance, certification or legal clearance.
+
+
+[Selected-job acceptance report](../runs/2026-11-23-source-image-consumer-acceptance.json) records this closure in the existing delivery evidence schema. The first direct raw-consumer reference was refused because that immutable execution result has no `pass`/`captured_at` acceptance envelope. Raw consumer/publication evidence and the validator are unchanged; no new execution or original acceptance is claimed.
+
+Dated assignments: ROOT integrates MT/runtime and finite V4; `/root/seo` maintains
+literal task accounting and reviews current source/proofs; `/root/share_debugger`
+works on the web artifact component and V4 architecture, with genuine web admission
+pending; `/root/web_camo` hands off reviewed acquisition-diagnostic source. The
+first actual image acquisition failed before inference; its exact cause is not
+yet established. No worker is claimed permanently running. Older dated snapshots
+below preserve their observations and acceptance conditions.
+
 ## Hosted prerequisite correction — 2026-11-23T20:58:36.038455+00:00
 
 Originals remain **136 complete / 66 open**; no original closure. Actual source

@@ -1,0 +1,1395 @@
+{
+  "profile": "emscripten-system-runtime-source-grant-facts/v1",
+  "captured_at": "2026-11-23T20:11:25.657219+00:00",
+  "author": "/root/seo",
+  "pass": true,
+  "scope": "Exact retainedEmscripten285c source-grant/notice text and linker-selection facts. ForSharefiniteweb-runtimehelper; no actualcompiledclosure or routepermission.",
+  "archive": {
+    "commit": "285c424dfa9e83b03cf8490c65ceadb7c45f28eb",
+    "bytes": 34477324,
+    "sha256": "8c8c413026dd7b86b0acf7e4b48cb718956c21a053887f2a628168dd1ba2cb33",
+    "pin_record": "sbom/nested-runtime/pyodide-wasm-release.json"
+  },
+  "actual_inspections": [
+    {
+      "path": "actual-inspection.json",
+      "sha256": "8243c431da59ac036df498522aafc25496efc3ddf7c5364f66ac7c13775dda2e"
+    },
+    {
+      "path": "actual-attribution-inspection.json",
+      "sha256": "8ac2955ec084bd20b5f6e99a9de635fe05f62e17d75c44be8704e7f8f062dacb"
+    },
+    {
+      "path": "actual-final-header-inspection.json",
+      "sha256": "b4c448f6d14bea1f91ca75efa988e35f6e1b7dfa1c3c50c2ea2159ca5c5276ae"
+    }
+  ],
+  "source_identity_verified_each_pass": true,
+  "measurements": {
+    "entries_each_pass": 12017,
+    "expanded_each_pass": 127436800,
+    "all3_expanded": 382310400,
+    "amended_aggregate_cap": 384000000,
+    "existing_native_expanded_cap": 536870912,
+    "full_selected_members": 32,
+    "musl_notice_source_records": 126,
+    "retained_unique_raw_text_bytes": 815549,
+    "inspection_seconds": [
+      0.587,
+      0.623,
+      0.533
+    ]
+  },
+  "notice_output": {
+    "path": "EMSCRIPTEN-SYSTEM-NOTICES.txt",
+    "bytes": 203087,
+    "sha256": "76f9f7bb2ef92ebbe2176924e1f179eaba79c054c012bbea42ea9f07830ae82c",
+    "source_ranges": [
+      {
+        "member": "LICENSE",
+        "member_sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+        "offset": 0,
+        "bytes": 5093,
+        "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+        "role": "full_grant_or_attribution"
+      },
+      {
+        "member": "AUTHORS",
+        "member_sha256": "8585fa1b981f576f52806833481323007ccac5c00f31a873215e31c0f42820f0",
+        "offset": 0,
+        "bytes": 29004,
+        "sha256": "8585fa1b981f576f52806833481323007ccac5c00f31a873215e31c0f42820f0",
+        "role": "full_grant_or_attribution"
+      },
+      {
+        "member": "system/lib/libc/musl/COPYRIGHT",
+        "member_sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af",
+        "offset": 0,
+        "bytes": 6204,
+        "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af",
+        "role": "full_grant_or_attribution"
+      },
+      {
+        "member": "system/lib/compiler-rt/LICENSE.TXT",
+        "member_sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d",
+        "offset": 0,
+        "bytes": 16708,
+        "sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d",
+        "role": "full_grant_or_attribution"
+      },
+      {
+        "member": "system/lib/compiler-rt/CREDITS.TXT",
+        "member_sha256": "a9901f47a089da41e4690682d00ce4cedaa2baf41fedbe79beee366d43ac2461",
+        "offset": 0,
+        "bytes": 1049,
+        "sha256": "a9901f47a089da41e4690682d00ce4cedaa2baf41fedbe79beee366d43ac2461",
+        "role": "full_grant_or_attribution"
+      },
+      {
+        "member": "system/lib/libcxx/LICENSE.TXT",
+        "member_sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b",
+        "offset": 0,
+        "bytes": 16703,
+        "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b",
+        "role": "full_grant_or_attribution"
+      },
+      {
+        "member": "system/lib/libcxx/CREDITS.TXT",
+        "member_sha256": "054e099bf5954c8821b880f5751d2fbf221bf43cf7c57ac1c2c5ff6263d6d9c3",
+        "offset": 0,
+        "bytes": 4124,
+        "sha256": "054e099bf5954c8821b880f5751d2fbf221bf43cf7c57ac1c2c5ff6263d6d9c3",
+        "role": "full_grant_or_attribution"
+      },
+      {
+        "member": "system/lib/libcxxabi/LICENSE.TXT",
+        "member_sha256": "e2b35be49f7284a45b7baca8fc7b3ab7440e7902392b2528a457816b5bb2a15c",
+        "offset": 0,
+        "bytes": 16706,
+        "sha256": "e2b35be49f7284a45b7baca8fc7b3ab7440e7902392b2528a457816b5bb2a15c",
+        "role": "full_grant_or_attribution"
+      },
+      {
+        "member": "system/lib/libcxxabi/CREDITS.TXT",
+        "member_sha256": "a259fff28a51623f14917dd68f97f3af7804984087ddc1bfd8196d08ebb75b83",
+        "offset": 0,
+        "bytes": 1660,
+        "sha256": "a259fff28a51623f14917dd68f97f3af7804984087ddc1bfd8196d08ebb75b83",
+        "role": "full_grant_or_attribution"
+      },
+      {
+        "member": "system/lib/libunwind/LICENSE.TXT",
+        "member_sha256": "b5efebcaca80879234098e52d1725e6d9eb8fb96a19fce625d39184b705f7b6d",
+        "offset": 0,
+        "bytes": 16706,
+        "sha256": "b5efebcaca80879234098e52d1725e6d9eb8fb96a19fce625d39184b705f7b6d",
+        "role": "full_grant_or_attribution"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/__cexp.c",
+        "member_sha256": "ffcf569466b0ac3defff943c989b6b181c7c41dc4f9538c32944459a5272203b",
+        "offset": 52,
+        "bytes": 1372,
+        "sha256": "929837e06c3b9c37e61b955742111a53906b7d3382fab6fd7f9a6d8c708b8e92",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/__cexpf.c",
+        "member_sha256": "3cedd5c25cc80d78713bd44c53c7f3170dad26fde14ea5eb3b0028bfede24517",
+        "offset": 53,
+        "bytes": 1372,
+        "sha256": "929837e06c3b9c37e61b955742111a53906b7d3382fab6fd7f9a6d8c708b8e92",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/catan.c",
+        "member_sha256": "056cc1842d173fe90297adb4c088745cb3bcb37c95b56d72c246ae505e470eb5",
+        "offset": 54,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/catanf.c",
+        "member_sha256": "2dbd38c8d786140372a04bfde641a9e290a842fe29133d3d0cd9f629170b9fc7",
+        "offset": 55,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/catanl.c",
+        "member_sha256": "3857a0a047869d9219421a12a4ada0f384e9fbe7c21b3c9516622852f475cf1a",
+        "offset": 55,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/ccosh.c",
+        "member_sha256": "9997abb272468781bc9b6b61a1550e95d1f956df109e0a646d578a3dc2c3aef9",
+        "offset": 54,
+        "bytes": 1356,
+        "sha256": "3a1692b72fb1f66d3f082862dea0bbf69cba16bba5c9d1ec144d683aba49cf53",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/ccoshf.c",
+        "member_sha256": "6ebf4355682268356685ba79621a47f2f955ca910bf13ca6ed32bb52e893574f",
+        "offset": 55,
+        "bytes": 1356,
+        "sha256": "3a1692b72fb1f66d3f082862dea0bbf69cba16bba5c9d1ec144d683aba49cf53",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/cexp.c",
+        "member_sha256": "30943458b19d417812e326d8a61a2413ebce139c826c997ad6598dcddb6e673d",
+        "offset": 53,
+        "bytes": 1372,
+        "sha256": "929837e06c3b9c37e61b955742111a53906b7d3382fab6fd7f9a6d8c708b8e92",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/cexpf.c",
+        "member_sha256": "7de06c6bebd823987c5eefe19821b8a473332ec724d6cc0a6a27955a33ba3734",
+        "offset": 54,
+        "bytes": 1372,
+        "sha256": "929837e06c3b9c37e61b955742111a53906b7d3382fab6fd7f9a6d8c708b8e92",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/csinh.c",
+        "member_sha256": "ed236ed0232c73d39a372a6799ba63b2eaeccc5f03aca0045fcb1504bb489489",
+        "offset": 54,
+        "bytes": 1356,
+        "sha256": "3a1692b72fb1f66d3f082862dea0bbf69cba16bba5c9d1ec144d683aba49cf53",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/csinhf.c",
+        "member_sha256": "4ed3be03188b48d701d8edaa88b0e282cb2ec88b8af1c2f0e2a3f76fba60a773",
+        "offset": 55,
+        "bytes": 1356,
+        "sha256": "3a1692b72fb1f66d3f082862dea0bbf69cba16bba5c9d1ec144d683aba49cf53",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/csqrt.c",
+        "member_sha256": "4f6cfa6aec61754c1ee2ea683ec00e7837eaa1993edafbc516c6c4978e3567b4",
+        "offset": 54,
+        "bytes": 1372,
+        "sha256": "6679e9aa1a98bbb9f73d944ecc84eaf508b2df5d30f620a3af64aa40e5df55fc",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/csqrtf.c",
+        "member_sha256": "8dd69a3ec2052cf54f38e61156b057c2ff74d00da9db64da63f646e30a36e8e3",
+        "offset": 55,
+        "bytes": 1372,
+        "sha256": "6679e9aa1a98bbb9f73d944ecc84eaf508b2df5d30f620a3af64aa40e5df55fc",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/ctanh.c",
+        "member_sha256": "7daa31e0831e9805934bd0e6a33816daf16c0bf1076babeb9799fe6e185ac045",
+        "offset": 54,
+        "bytes": 1335,
+        "sha256": "f11ac8260c79e3792b711323df93ff6dd6ef7866b95708c3a83626b65e579df2",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/complex/ctanhf.c",
+        "member_sha256": "1ebb7bddc872c96bf3e7c8d1a529c14f28db4cf75cc8237fdb1ad62764b405bf",
+        "offset": 55,
+        "bytes": 1335,
+        "sha256": "f11ac8260c79e3792b711323df93ff6dd6ef7866b95708c3a83626b65e579df2",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/crypt/crypt_blowfish.c",
+        "member_sha256": "0f9054739e295e3e981e7aa29c8f287a190aef065b84a82a4c6817120d5da05d",
+        "offset": 155,
+        "bytes": 2029,
+        "sha256": "a17e0d141e431d3f15bd03901da69575531e23e4556847a1de209e79c6f3a1fb",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/crypt/crypt_des.c",
+        "member_sha256": "546b4ee35446fb2a551d7414779395789f81d53aefbabd8914375686af5d228e",
+        "offset": 847,
+        "bytes": 1928,
+        "sha256": "30c3222fecfdbda6900218b4da3fe68f4753cba41a3a71dac7e05345447c40fb",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/crypt/crypt_sha256.c",
+        "member_sha256": "26f3ae83a89a52640f3979df81eb50a431e75c83d5c18f1487325a39ee84fb73",
+        "offset": 0,
+        "bytes": 370,
+        "sha256": "e89eaf7fd9fa79f2ff3ab53267841537180a4b233952f6d17aca8ad2d830107a",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/crypt/crypt_sha512.c",
+        "member_sha256": "7148156d195d9bef7eb57a1b2108439679a02372d0fac418004722513bd7b95c",
+        "offset": 0,
+        "bytes": 370,
+        "sha256": "36947bd567f088a0514fae5ecfce6d12a0d9ad51c4d3a6c89748250d03fc1f3b",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/internal/progname.c",
+        "member_sha256": "51d5fe47275dc62b92ad16709c58734be9fd5fa432fb212c9ecfc0f1dd9e378b",
+        "offset": 0,
+        "bytes": 260,
+        "sha256": "f35ee160d59dbe24858c3db3d9fa423b41c698677c612c8abe0fcf32bada464c",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/internal/proxying_notification_state.h",
+        "member_sha256": "9d3999f4a3fa494676c203d078c01013860e49dcc8fc727013b2494e5c1ad6b9",
+        "offset": 0,
+        "bytes": 260,
+        "sha256": "f35ee160d59dbe24858c3db3d9fa423b41c698677c612c8abe0fcf32bada464c",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__cos.c",
+        "member_sha256": "3f0f774aab60a18d7ef935ffdf121bcda17cbadabff14096c614da22e31a42c1",
+        "offset": 52,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__cosdf.c",
+        "member_sha256": "0ba872cc7e26b93bb9784d19fee84b263e1fa3543a76ec3c0893aea47453a2a7",
+        "offset": 181,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__cosl.c",
+        "member_sha256": "fd644ce4ab8797b1220e2197b284212094a3b299bdf2c4faf66ead81b0fc620d",
+        "offset": 109,
+        "bytes": 450,
+        "sha256": "eba82a2e9f34f53e0faf5a5b6f4d9f588760d888e6aae20a2f8d7406eb256167",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__polevll.c",
+        "member_sha256": "4fef0127318ba19fd5796b6b69a938030d22adb16aaab2ade3e634c8c5c93479",
+        "offset": 54,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__rem_pio2.c",
+        "member_sha256": "938329e0939cd83ee2185a52154b41242f618d4a6df1b08395f344da33d4f1e6",
+        "offset": 57,
+        "bytes": 415,
+        "sha256": "c90662135910b0f0edd97131d0e116a027ec79e46b2785b7b596fa617cca78e3",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__rem_pio2_large.c",
+        "member_sha256": "b97f19fb5951c83a0c10506fab35646caefde13bd03100ad2af55ef00af0b9fb",
+        "offset": 57,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__rem_pio2f.c",
+        "member_sha256": "b73a0219ba4a34e39ed904b5008126ff1b12dfa1a4a380941363c8db5088d756",
+        "offset": 186,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__rem_pio2l.c",
+        "member_sha256": "70f1c69285c0d211d696d5c048e269d46000e5d75fc6a80623ef45e861447a94",
+        "offset": 58,
+        "bytes": 485,
+        "sha256": "5660964828a36e1680c465c6c3ac8669926917d347dc66f803897708af319f29",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__sin.c",
+        "member_sha256": "f3a37ef9bcfb8a2f9c809d8c7f1aa2c17c8c3319ad7fb2fe7c0a6284ea8859d2",
+        "offset": 52,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__sindf.c",
+        "member_sha256": "de7026bcd159b7d06a8cbcc162df722014f3b1a3cc4183116b6b7829eef1d118",
+        "offset": 168,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__sinl.c",
+        "member_sha256": "b6dfffc327cac147a0a2b17a12e9f4ec8ff6df463733db55c316a55ef4bcdb96",
+        "offset": 109,
+        "bytes": 450,
+        "sha256": "eba82a2e9f34f53e0faf5a5b6f4d9f588760d888e6aae20a2f8d7406eb256167",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__tan.c",
+        "member_sha256": "e18b65b69fced8dbb2d3ed1a3dc6daea0e9f857f2762f274380bd89a6f89d2c4",
+        "offset": 52,
+        "bytes": 314,
+        "sha256": "5a534ed1f9266ed799e9f2e3f830f15411762021829da121b23df5edc498c6b6",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__tandf.c",
+        "member_sha256": "60455f3cc0ac743f3eaf0017a3a4f0adbab37c0ee30d29397852d22904c40444",
+        "offset": 168,
+        "bytes": 314,
+        "sha256": "5a534ed1f9266ed799e9f2e3f830f15411762021829da121b23df5edc498c6b6",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/__tanl.c",
+        "member_sha256": "3788db7251d2e14b17e761bc2eccd0d8faa3c72c16eef7a56ca2ca75eca177df",
+        "offset": 109,
+        "bytes": 384,
+        "sha256": "a8a75da52cf114b28d33e48992435876d121c7d410ebf740ce651821afcc79aa",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/acos.c",
+        "member_sha256": "cc6f9017e7e2e0ef01516fa12c68aa63865e6415c90dc039dfce9abffae09a4c",
+        "offset": 53,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/acosf.c",
+        "member_sha256": "b20b3dcb58ce7cc55963945f8cb83efbf064b29d2da3011f2cec5d08459f2aa7",
+        "offset": 137,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/acosl.c",
+        "member_sha256": "ed40b99c604aa593ee2ee71c02f928cb68c1afdf8a18243b0e7b6cc9a65586c1",
+        "offset": 54,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/asin.c",
+        "member_sha256": "9302dd0b2f302f7b7decce82e737ed250bae1bcc65c19eaf3d7ec19010892e63",
+        "offset": 53,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/asinf.c",
+        "member_sha256": "6bc9b2392b81efa4c6a80c8602a2c0898d3b5c77444f6d3266ac71c18df222c5",
+        "offset": 137,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/asinl.c",
+        "member_sha256": "4a0e729842b1bf3181bad43b2f048dd3652b73456e0a3f44f6e65c2c51765e9f",
+        "offset": 54,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/atan.c",
+        "member_sha256": "1cffb67a65456ae0bc5f07a94df04a4f18ebc1ac0bffe3219250c4e0555ee01d",
+        "offset": 53,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/atan2.c",
+        "member_sha256": "a5f94b09b10b4e72bb15d94ae403c9dfd27d7ad881ecd729000004429acfca63",
+        "offset": 54,
+        "bytes": 383,
+        "sha256": "11f476f899dacfef801a097465ad0755ad4546afe03b02c9a17aa38e228344e1",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/atan2f.c",
+        "member_sha256": "31a61a0a4c7b00db625b708525f24673a83df868a3e363042c9cc9dcf0aaeec8",
+        "offset": 138,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/atan2l.c",
+        "member_sha256": "c13d4d9e1329ffcbbf3ef1dd755602c771612f2dd98f38464fc9fb0f7bdf3c68",
+        "offset": 55,
+        "bytes": 383,
+        "sha256": "11f476f899dacfef801a097465ad0755ad4546afe03b02c9a17aa38e228344e1",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/atanf.c",
+        "member_sha256": "e0533d7b72aabce311a758a1f94fd15e5d4067be73b716cb1f425df5bc9039d6",
+        "offset": 137,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/atanl.c",
+        "member_sha256": "5c6f655740e6f594db8a045e529582f20613d14ac2bca8bf3f881145bf459325",
+        "offset": 54,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/cbrt.c",
+        "member_sha256": "af442893d4048c0eb485b93b5628792fb796d45ffc0f88c682041366c7da611d",
+        "offset": 53,
+        "bytes": 414,
+        "sha256": "11a1dc1ce0b6b2879da93a266c5aebe81c4324e749c77a2ce3048b5b24ab58c0",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/cbrtf.c",
+        "member_sha256": "87b7065f44ac0cef6d21385c2b453dde7e15a51e9008ae0d726cd9eaa2dc43da",
+        "offset": 182,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/cbrtl.c",
+        "member_sha256": "ee82c17b1a24681dfd7de0161088b45ecbd2d0346ddeda9d4594b48e4da0d3e5",
+        "offset": 54,
+        "bytes": 609,
+        "sha256": "57c0d6534118d909d6b3e78366981596013f999307b9d0d7711a8998a0410d61",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/cos.c",
+        "member_sha256": "3a74e054057d636fa494bdd76a53a40db5cee618264f6ab31cb0538ba63c6bda",
+        "offset": 52,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/cosf.c",
+        "member_sha256": "33cf828e8e733da2b72c723b9ff20057b9a4f10df72a3923dadcb626c23d222c",
+        "offset": 168,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/erf.c",
+        "member_sha256": "795f05c9388ac277ab27cb5dc63fb4f82620a0ee11eaf8403201df5bc65c0f5b",
+        "offset": 52,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/erff.c",
+        "member_sha256": "876ad823d25e58330628ccdc5d24a3f10cc255135046a4e2903daf33cb75c18f",
+        "offset": 136,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/erfl.c",
+        "member_sha256": "dcce5b86a37215aee265ae27c1a00526542ab13d1dd609a560de3e3e9049a3e6",
+        "offset": 58,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/erfl.c",
+        "member_sha256": "dcce5b86a37215aee265ae27c1a00526542ab13d1dd609a560de3e3e9049a3e6",
+        "offset": 438,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/exp.c",
+        "member_sha256": "7db56f21ca9b8915d36dd5099b707aafeb6a736eae798e19b76b074764e75f34",
+        "offset": 0,
+        "bytes": 111,
+        "sha256": "7e52a70e5de1143e4fdb710116f76b27eced3e41be7ab70310138928a3b34e5e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/exp2.c",
+        "member_sha256": "b771de769e1b69b931d1f95baa39b429a73c9904e8b5607e1736771c6ace92b1",
+        "offset": 0,
+        "bytes": 111,
+        "sha256": "e8f314eb6ab51b691f02a126ad69d2c7996a5eeb091f95f5033b1a806288e5d1",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/exp2f.c",
+        "member_sha256": "1753e636d3b395160a03e9dd4a4ed4fba2abcd9ee12e4cf2d919f5a6bd7e2732",
+        "offset": 0,
+        "bytes": 116,
+        "sha256": "9cd52ae0042ec9364291994dc497f2497414eeddaac23e792f1ab477576dfacf",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/exp2f_data.c",
+        "member_sha256": "3da38c471cc5eb8dc1c2e283c6c00a36b1d353ba5c8ca1e82d95180948e26bd5",
+        "offset": 0,
+        "bytes": 127,
+        "sha256": "eb8e488b7148e706986f5be08c5efbfcc96edb4ed7415391c12be3e512b24c74",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/exp2f_data.h",
+        "member_sha256": "fb52b690bef63df2e8996f2d2b3fd77f9ea08795863e73afdc882df04460e850",
+        "offset": 0,
+        "bytes": 79,
+        "sha256": "72a9b46f0fe5f4ab99af914882d3ad50f72612ca79b3192db87f37a06b841853",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/exp2l.c",
+        "member_sha256": "0eeba2725b540b0d5dd84b732d4c496d8e8d9492cf863dbb5c83fe102771352c",
+        "offset": 93,
+        "bytes": 1377,
+        "sha256": "a0f470d9d239f56f7d6504b1bfcd80a0dbe8f90a895558d4040d4395100ad607",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/exp_data.c",
+        "member_sha256": "c55dff64e369fe816cd8ce367064989bb119f85783599680d1a329031c660689",
+        "offset": 0,
+        "bytes": 119,
+        "sha256": "f6b5b71ae6dc49255b8982a8de10bb97d66035b0b6ad91843da71fcde64cf45f",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/exp_data.h",
+        "member_sha256": "df77fca837edd02b260dd09a2914202775909ae67a059218ae38cfab104e6d16",
+        "offset": 0,
+        "bytes": 74,
+        "sha256": "6ac2dcacfaa533da778dce54dac87709a1285f08d070d9d95790b50199f71486",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/expf.c",
+        "member_sha256": "225123b9b3a47a083c06f2580c6b73d5cadae5cec545f9e928f7041ff837b4b4",
+        "offset": 0,
+        "bytes": 116,
+        "sha256": "722fce9131e08cd408ec1029bb4fc7ad15c899b6e62ebacb911b298ad069728d",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/expl.c",
+        "member_sha256": "7218f10e56cd73c76f01a6924373dd1918730a0e793cf3c64670a34346173e68",
+        "offset": 58,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/expm1.c",
+        "member_sha256": "c4764166cea03420f2dfc1840a6a7615934192d851b96d5d2dcc321cc1e39460",
+        "offset": 54,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/expm1f.c",
+        "member_sha256": "a7d4e8f8b41f04d4b977deb59e6bf96067371387062a5987fcc3b4464f54f5e9",
+        "offset": 138,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/expm1l.c",
+        "member_sha256": "a8362abd18ef31f00a7dd74c8b618ef658a4e9c3919c456d03d65a12fe445c2f",
+        "offset": 60,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/fmaf.c",
+        "member_sha256": "8cef4678e7e82d5be0775e51ac11bbcb680f39005482470f5cfb3ed201cd3620",
+        "offset": 53,
+        "bytes": 1377,
+        "sha256": "c9479241e4e7e711c5cf43e95b86a79af7209b5ea23b8c55f8b95f1788eb5a82",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/fmal.c",
+        "member_sha256": "b53603203db358624a037ddbe1ca4b7563bb31f3381686ed11621ccd8b247ac9",
+        "offset": 53,
+        "bytes": 1377,
+        "sha256": "c9479241e4e7e711c5cf43e95b86a79af7209b5ea23b8c55f8b95f1788eb5a82",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/j0.c",
+        "member_sha256": "88fc190ff03d253791b9fab281caf82e5943e5d4251052c91cc29b14b39055bd",
+        "offset": 51,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/j0f.c",
+        "member_sha256": "d0721c1c30f12badb67820e33299a2db0d9cec0209f7993fddee2a40d8d296a4",
+        "offset": 135,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/j1.c",
+        "member_sha256": "73ec22fae7f2e3fccd2cc6ea777b296d0022a7c1d137035f1ef45cbf0c75ed4e",
+        "offset": 51,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/j1f.c",
+        "member_sha256": "1b16747ce913d4e65dec522710265bd004f923a7f33b5e88d7e4057b9c7b8d79",
+        "offset": 135,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/jn.c",
+        "member_sha256": "cd602fc99cea2f33d8b39462f9f0523c8bc3da646fa349de87e206eb3bb2aded",
+        "offset": 51,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/jnf.c",
+        "member_sha256": "cab6c734e9a718a3e7c41b22e0e69893453befa805f2ebdafca3264d81dbcf71",
+        "offset": 135,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/lgamma_r.c",
+        "member_sha256": "df81910c12c2ba5e82295cea6bfc6f3863e367cc6043d1bf91be1fb9597b2811",
+        "offset": 57,
+        "bytes": 383,
+        "sha256": "11f476f899dacfef801a097465ad0755ad4546afe03b02c9a17aa38e228344e1",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/lgammaf_r.c",
+        "member_sha256": "5aa1db729889e0705ef94b2cb4d7ab5fa6a615d28fd74b7bdf7579a22f6e7ed4",
+        "offset": 141,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/lgammal.c",
+        "member_sha256": "852284cc7fb67db860bcf39a3a33c74481ef28ffa7818a16de82d7e2d534c312",
+        "offset": 61,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/lgammal.c",
+        "member_sha256": "852284cc7fb67db860bcf39a3a33c74481ef28ffa7818a16de82d7e2d534c312",
+        "offset": 441,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log.c",
+        "member_sha256": "a0694d8587a0d145d0f8ae87cbffba014d7988bc2ebcbfad94cea73b394c9ecc",
+        "offset": 0,
+        "bytes": 114,
+        "sha256": "7d44f8a20ce2b9ab074ce883201b78815c98e669108b1dbdf3a699098444c326",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log10.c",
+        "member_sha256": "ef9b4b1f0918cf1fcb797f9fa4d4ffe177bfa27f668d74a41d613bfbcd83850a",
+        "offset": 54,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log10f.c",
+        "member_sha256": "b8de5c0f14be2c622eca1cb33e80e5b131576c7c229aeffb8ea9f1d61555f6b9",
+        "offset": 55,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log10l.c",
+        "member_sha256": "d23e3d61fe4111628efdef794ae7cd614e3443a81f70742e29070f99fdd078c4",
+        "offset": 60,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log1p.c",
+        "member_sha256": "c76bbf714cd456a9f0de6e2c94853c27e7865581a2edfdef6d1f861739bbcb46",
+        "offset": 54,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log1pf.c",
+        "member_sha256": "6c01aff9fcee1dcaca4d4581f17357e0f069643321c00288c672adc3521d0cc8",
+        "offset": 55,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log1pl.c",
+        "member_sha256": "3846b55cbd55e3d3f90d7484216663030ec98c4c353e644ce3c4e3122080e4c4",
+        "offset": 60,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log2.c",
+        "member_sha256": "281e4fc0f737419e245019d8bc8a8ca53032c2d88c31d08561e9e59dcb4b4640",
+        "offset": 0,
+        "bytes": 115,
+        "sha256": "c359dfaf15768892478461e9cb40da11d380123e47c50f29b3ede8207c04486d",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log2_data.c",
+        "member_sha256": "5a62bb213f19dc1364cddb612e3d13831e382f5ae6f7fafd7064362f53478dfb",
+        "offset": 0,
+        "bytes": 95,
+        "sha256": "74ae9464d17802e1e8394431844a842eb25efad729748a359a518d26685beedf",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log2_data.h",
+        "member_sha256": "b56e1a56f73a8700caa9787cd399fecf7f96038af56c2a590aeb6f0f8662ea8e",
+        "offset": 0,
+        "bytes": 74,
+        "sha256": "6ac2dcacfaa533da778dce54dac87709a1285f08d070d9d95790b50199f71486",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log2_small.c",
+        "member_sha256": "f80ab2145f156b8a986cd1303b9753d10631e75a03502a7067c4a38c4849484e",
+        "offset": 53,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log2f.c",
+        "member_sha256": "f2393ef18e78e6dc540e7349dbfea000018246d64fca3eefe73f11a286403352",
+        "offset": 0,
+        "bytes": 117,
+        "sha256": "dfbd4e6eba80a4f25005d42aef337397554ca46598f64439e166633baa58cb3f",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log2f_data.c",
+        "member_sha256": "9261d7fdef29db26bd75310f029823593639ecf7c1cc089a6014623d49d21abe",
+        "offset": 0,
+        "bytes": 112,
+        "sha256": "719c803a410da68f48b70270cd181806b44d0c87ccec10bcba36973c8382a2a9",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log2f_data.h",
+        "member_sha256": "cb65ee48f557b19c8a6366a05f16ffba38aa46b00c4c136faf2dea8f53675a9b",
+        "offset": 0,
+        "bytes": 79,
+        "sha256": "72a9b46f0fe5f4ab99af914882d3ad50f72612ca79b3192db87f37a06b841853",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log2l.c",
+        "member_sha256": "c3294ef6fcf96c061c4511fb3f6cd2886b2f513938deadcfb16fc19fb2a9ff03",
+        "offset": 59,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log_data.c",
+        "member_sha256": "e96bcd99d88fc57e0f3686299014f4b949a6212603ce237f39e16cedc155617a",
+        "offset": 0,
+        "bytes": 94,
+        "sha256": "d22e34751c18a13e5cb7e974c1b94c2cc89caad9d2b4f2ef1c85994d32292805",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log_data.h",
+        "member_sha256": "a8dced6f0821f30cad040ba326b03e419fbe0a750ed8f3b0d7145992bee4bccc",
+        "offset": 0,
+        "bytes": 74,
+        "sha256": "6ac2dcacfaa533da778dce54dac87709a1285f08d070d9d95790b50199f71486",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/log_small.c",
+        "member_sha256": "017fe474291d5cbad5f2b57c53200ca645248dd7ea87e149ddfdf78ffd32af0d",
+        "offset": 52,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/logf.c",
+        "member_sha256": "eecf8e5dd0afd5f64f938ccae07c85b0a8e82919f5d4269936a3b8493fb64e47",
+        "offset": 0,
+        "bytes": 116,
+        "sha256": "ffd4560b424a532b17b1f8af4405f11b4ceeaf9880ca33ad43f896b620bfb52c",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/logf_data.c",
+        "member_sha256": "60b08342fcef877b393a76fc36d92c576d6340ce153459aad03aad3d4716f9b5",
+        "offset": 0,
+        "bytes": 111,
+        "sha256": "7b69dd50886f7e59e969f2d7c91f6d694a42989bde841e57bed58f71a6d34fde",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/logf_data.h",
+        "member_sha256": "80176d1f045f162e917ca5c2879994ab0ed9e27b479086d752e5793c91135adf",
+        "offset": 0,
+        "bytes": 79,
+        "sha256": "72a9b46f0fe5f4ab99af914882d3ad50f72612ca79b3192db87f37a06b841853",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/logl.c",
+        "member_sha256": "e1612b2bb9a010c1914beb93fa242981f69f323392bd9816415cafaaec0d94b0",
+        "offset": 58,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/pow.c",
+        "member_sha256": "b06f0a08d74fcff8cced7afa2c0e47e301e3e8a19c0de5becdec28cd7b014027",
+        "offset": 0,
+        "bytes": 111,
+        "sha256": "5fa165f5ae7e7b676b5ea1e2ab501f258932355ebad0ffaa76865149b47cc00a",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/pow_data.c",
+        "member_sha256": "2052ec913f9b4a2170a98a6fcbcd7694f5dec220036b00c36106a2b4b65a4c55",
+        "offset": 0,
+        "bytes": 110,
+        "sha256": "8867dc852d8c09b25648ac08bb5e7d7effdbff03e10614f13f8e681774ec1414",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/pow_data.h",
+        "member_sha256": "5014345a7958adcf6ff835b5e96afa99dd5a98c40dfe968442288e002b8e01a3",
+        "offset": 0,
+        "bytes": 74,
+        "sha256": "6ac2dcacfaa533da778dce54dac87709a1285f08d070d9d95790b50199f71486",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/pow_small.c",
+        "member_sha256": "2a1a2469efafd354c3acc689a14e0c498c94d3577c7bd746462e1b644e3c379d",
+        "offset": 52,
+        "bytes": 320,
+        "sha256": "15e78071c8347a689c48ec92bbdd5eba7bd8dc74f86ee3e7ad31d34b24fefe83",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/powf.c",
+        "member_sha256": "74069b3a380cf954361e0243b38de2094ae680e2ecfb3e50af61ab576f13babf",
+        "offset": 0,
+        "bytes": 79,
+        "sha256": "72a9b46f0fe5f4ab99af914882d3ad50f72612ca79b3192db87f37a06b841853",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/powf_data.c",
+        "member_sha256": "136f491b0f904842b926784134d0adba7a9103d2ce8a226276dd6e9260457398",
+        "offset": 0,
+        "bytes": 111,
+        "sha256": "0bf37177bf53722a813bbd05dce155746ceb21a1aeee3c7b13a3927554fe53d6",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/powf_data.h",
+        "member_sha256": "5d632276e5f21cdcd47f35c53cf792640ad347aabce1e1bd5774fad5371fc8d8",
+        "offset": 0,
+        "bytes": 79,
+        "sha256": "72a9b46f0fe5f4ab99af914882d3ad50f72612ca79b3192db87f37a06b841853",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/powl.c",
+        "member_sha256": "b1c9f5993fe37ce04e4291cdeaa8d690587f25076525a417c9657f082b7ae987",
+        "offset": 58,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/scalb.c",
+        "member_sha256": "7f7eda8fd9d537105136d56661d70788f912b9584bb116dea185db340c78ada5",
+        "offset": 54,
+        "bytes": 380,
+        "sha256": "74344ebf347f27ca446e00f1c1921f705546f4b20e0fb31c183cd2c8464b1bc5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/scalbf.c",
+        "member_sha256": "b4a0485f7a11d994960c31947f0132c45afd47f599abbae4a9f2041f7f346a3f",
+        "offset": 138,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/sin.c",
+        "member_sha256": "24e53a9d85f196f66919cc19247be5480bb607ef38844b1a24bc47c4fe4974ef",
+        "offset": 52,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/sincos.c",
+        "member_sha256": "2b88cfba380b8d5aa8f8f6b9f055aee91fe112de9f967a4484807afcb5405d9d",
+        "offset": 52,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/sincosf.c",
+        "member_sha256": "0196bf2ccfa370be120b917f2379bb533950ea50818d329aeee076081690c95d",
+        "offset": 168,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/sinf.c",
+        "member_sha256": "2583af55446f07da3225186c368a7aae5a0a0a0edab268967f4122b92e222b87",
+        "offset": 168,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/tan.c",
+        "member_sha256": "422d411bac962a1077ae394d14e54313012a6faa3476c20b2a66d3fb3f7a923f",
+        "offset": 52,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/tanf.c",
+        "member_sha256": "38b39aaf03d33341e606b67b3743ee5fa436b7e8338af155994d4b794b366003",
+        "offset": 168,
+        "bytes": 379,
+        "sha256": "0c3d0381d2cd647be68590170490be5f624c962d9f95eb698489e578c1de8f05",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/math/tgammal.c",
+        "member_sha256": "b9f00584454232f6d4c6cf76b8198221a4cc047c92fa749e5f41476c9b54579f",
+        "offset": 61,
+        "bytes": 796,
+        "sha256": "d9d69faa82c4f80279a3832834c9a1482c52b8b3b5895f2cc869c0e4db33f36e",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/misc/fmtmsg.c",
+        "member_sha256": "27354c57b1827561585a73dbe9f2d7f97cd73563d4043cf2907912c8faaebb6e",
+        "offset": 0,
+        "bytes": 62,
+        "sha256": "c132547c9606c2bdb486ebc7fad17ac9f1b3974b194a78272429a02f9eeb18ec",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/regex/regcomp.c",
+        "member_sha256": "56b0a765e084a5cd3ed7113a893b50d259265ba76b6bea98889c45d7aec302a0",
+        "offset": 0,
+        "bytes": 1444,
+        "sha256": "8313e732fdeef03ee534e30bdb0b2df8fea4c9e6618aa5abda363f873c5c961a",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/regex/regexec.c",
+        "member_sha256": "072e8a1092c98830b48e784fb74ce486f7c39e27207f79f1dd161e2c5d86ba77",
+        "offset": 0,
+        "bytes": 1446,
+        "sha256": "6b0193762d619afafa7f796e10097fbf7c255a8e96dbfa25f75ab072620a87c5",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/regex/tre-mem.c",
+        "member_sha256": "4721979ce365a395fd7644335c847a8a97913e87f14348641f7f199b57b93e28",
+        "offset": 0,
+        "bytes": 1415,
+        "sha256": "da041cb2f902d426453521b2aa036ff79e9ed03236519518d2aa0290bddf88ac",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/regex/tre.h",
+        "member_sha256": "e734e68decc33b5ee983db12cabcbdd2589c2d16088677228087b0e5dc365cf3",
+        "offset": 0,
+        "bytes": 1424,
+        "sha256": "920d6efc69e820c76c990f76db6c6da46c6a8f8ebd306b2004918896a26e4521",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/stdlib/qsort.c",
+        "member_sha256": "3a838cc7f83f4746df6063f567be1ebb2f7d204243342122acd43f44d2434ec6",
+        "offset": 0,
+        "bytes": 1117,
+        "sha256": "87da201b9c63a4bbc969e88cc99c75b630749ffb45d9abc5b90c58f16e40e016",
+        "role": "conservative_musl_leading_source_notice_not_actual_object_membership"
+      },
+      {
+        "member": "system/lib/libc/musl/src/crypt/crypt_md5.c",
+        "member_sha256": "85d1d364c100fc982e99adb0d176e1d4475d175fc5c12bba696cda9c62d62c6b",
+        "offset": 304,
+        "bytes": 71,
+        "sha256": "12f74e03b9ba352153ad48d4c0099a758506b2b90b75b34346a784ccbd4cf3ff",
+        "role": "additional_complete_musl_notice_comment"
+      },
+      {
+        "member": "system/lib/libc/musl/src/crypt/crypt_md5.c",
+        "member_sha256": "85d1d364c100fc982e99adb0d176e1d4475d175fc5c12bba696cda9c62d62c6b",
+        "offset": 4188,
+        "bytes": 1358,
+        "sha256": "0210a0ce49f8e7a9871b9133a050d978ed056e4aab2ffc7644fdf28076c72b5d",
+        "role": "additional_complete_musl_notice_comment"
+      },
+      {
+        "member": "system/lib/libc/musl/src/crypt/crypt_sha256.c",
+        "member_sha256": "26f3ae83a89a52640f3979df81eb50a431e75c83d5c18f1487325a39ee84fb73",
+        "offset": 470,
+        "bytes": 60,
+        "sha256": "7894cd037ed7157c9f588baab5fda771da62bedb415c0a9207e473eabf11ca2c",
+        "role": "additional_complete_musl_notice_comment"
+      },
+      {
+        "member": "system/lib/libc/musl/src/crypt/crypt_sha512.c",
+        "member_sha256": "7148156d195d9bef7eb57a1b2108439679a02372d0fac418004722513bd7b95c",
+        "offset": 470,
+        "bytes": 60,
+        "sha256": "5b592324f887645816b7560a92752dd32b16b0d82f4da35dc15aacf52253bf77",
+        "role": "additional_complete_musl_notice_comment"
+      },
+      {
+        "member": "third_party/mini-lz4.js",
+        "member_sha256": "ac1eaa04b68d792d962d5946504ee5141ef58a9df86a0dfcf0ffa63d08634e46",
+        "offset": 0,
+        "bytes": 1213,
+        "sha256": "0b00f09f62cdad8b46caee7d23aef803235684522d1bd1753b5445cf0aecdd42",
+        "role": "actual_recipe_relevant_JS_notice_header"
+      },
+      {
+        "member": "src/lib/libidbfs.js",
+        "member_sha256": "cc4e6fd5bd22d07fb59bd8f29d85c030b784fe991d75a796b047c3914f72b48a",
+        "offset": 0,
+        "bytes": 92,
+        "sha256": "b69a45df3ce02818c750605cb6ad1d1d3f4cf61eec3134f9897aa3c963d3d3a3",
+        "role": "actual_recipe_relevant_JS_notice_header"
+      },
+      {
+        "member": "src/lib/libnodefs.js",
+        "member_sha256": "7bd282d386765791dae016ed1f09ad06dea4ab41f1f84402cb950fe97476c717",
+        "offset": 0,
+        "bytes": 92,
+        "sha256": "b69a45df3ce02818c750605cb6ad1d1d3f4cf61eec3134f9897aa3c963d3d3a3",
+        "role": "actual_recipe_relevant_JS_notice_header"
+      },
+      {
+        "member": "src/lib/libproxyfs.js",
+        "member_sha256": "7bb2dfe54789cc22f28ce50e691a3ea852a6104f88da45e68cbd52f8a6e500df",
+        "offset": 0,
+        "bytes": 92,
+        "sha256": "2b433cc1f6d96077d177bb09724b8cd4900fdbaf798b27b97819748e96a99097",
+        "role": "actual_recipe_relevant_JS_notice_header"
+      },
+      {
+        "member": "src/lib/libworkerfs.js",
+        "member_sha256": "5a163b498aee8dcfdeaa135d33bd3ce670003f1899808a10062e2d1ef9d8cb83",
+        "offset": 0,
+        "bytes": 92,
+        "sha256": "6919beeeeefaa19cdc6ea5c436df2925cddcf330dd3d68c968386e828cee16bd",
+        "role": "actual_recipe_relevant_JS_notice_header"
+      },
+      {
+        "member": "src/lib/liblz4.js",
+        "member_sha256": "2218ec8f4a1f0921f35ef03083f00acad20f37ec4820a28d7116f229d5e6e383",
+        "offset": 0,
+        "bytes": 92,
+        "sha256": "6919beeeeefaa19cdc6ea5c436df2925cddcf330dd3d68c968386e828cee16bd",
+        "role": "actual_recipe_relevant_JS_notice_header"
+      },
+      {
+        "member": "system/lib/dlmalloc.c",
+        "member_sha256": "c008dc3c2b005ba822efb1bf6187a9d7a6aecd096826c6f28c6f5ee62885053d",
+        "offset": 1656,
+        "bytes": 454,
+        "sha256": "8defa334f869217fe9d8eaa3fd91621d076ca66ca7fc7453419e286e3dabab72",
+        "role": "dlmalloc_original_public_domain_CC0_reference_and_version_notice_not_full_CC0_text"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Emscripten runtime JS/glue and author modifications",
+      "actual_terms": "MIT OR University of Illinois/NCSA, fullrootLICENSE also includes Joyent/NodeMIT notice",
+      "carry": [
+        "LICENSE",
+        "AUTHORS"
+      ],
+      "conditions": "Retain applicablecopyright/permission/disclaimers; NCSA alternative additionally nonendorsement. Fullcombinedtextretained, noexclusivechoiceforced.",
+      "scope": "Exactpublisherprojectsourcegrant; FSJS headers stateMIT, not model/optionalthirdpartycoverage."
+    },
+    {
+      "name": "musl libc",
+      "actual_terms": "FullmuslCOPYRIGHTMIT plus named compatiblethirdpartyterms (TRE BSD2/mathpermissive/cryptBSD/publicdomain etc) inindividualsourcecomments",
+      "carry": [
+        "system/lib/libc/musl/COPYRIGHT",
+        "conservative exactmusl sourcecommentset and separatelycaptured cryptMD5BSD2notice"
+      ],
+      "conditions": "WholelibraryMITattribution/permissionnotice; preserveactualthirdpartyconditions. Explicitpublicheader/crt attributionwaiver applies ONLYlistedheader/crtfiles, notwholelibc.",
+      "scope": "Sourcepool selected bylibc builder exceptdeclaredignoredsubtrees/files; conservativecrossarchnoticecarry doesnotprove eachobjectembedded."
+    },
+    {
+      "name": "LLVM compiler-rt/libc++/libc++abi/libunwind",
+      "actual_terms": "Apache2.0 WITH LLVMexceptions; fullfiles additionally retain legacyNCSA/MITtexts andcopyright/CREDITScontext",
+      "carry": [
+        "system/lib/compiler-rt/LICENSE.TXT",
+        "system/lib/compiler-rt/CREDITS.TXT",
+        "system/lib/libcxx/LICENSE.TXT",
+        "system/lib/libcxx/CREDITS.TXT",
+        "system/lib/libcxxabi/LICENSE.TXT",
+        "system/lib/libcxxabi/CREDITS.TXT",
+        "system/lib/libunwind/LICENSE.TXT"
+      ],
+      "conditions": "LLVMexception permitsredistributing embeddedobjectportions resultingfromcompilation withoutsections4a/4b/4d; notblanketalltermswaiver. Sourcecopiesretainapplicablefullterms/notices; legacyMITnotautomaticallychosenforallcurrentLLVMcode. No source-offer orcompilerrebuildduty inventedfromApache/MIT.",
+      "scope": "Normaldefaultlibraryselectionaddscompiler_rt, CXX adds libc++, CXXorsanitize adds libc++abi, WASMexceptions adds libunwind. ExactPyodidefinalem++/lstdc++/WASMEHactualrecipewitness remainsShareowned."
+    },
+    {
+      "name": "MiniLZ4",
+      "actual_terms": "FullMIT copyright2012PierreCurto, changes same license",
+      "carry": [
+        "actualfullleadingMITcommentfromthird_party/mini-lz4.js"
+      ],
+      "conditions": "Retaincopyright+permission+disclaimer. DoNOTmisidentifyasBSDorassumeallupstreamLZ4codeisembedded.",
+      "scope": "ExactEmscriptenmini-lz4.js usedbyLZ4JS path; ShareobservedactualPyodideLZ4=1."
+    },
+    {
+      "name": "IDBFS/NODEFS/PROXYFS/WORKERFS/LZ4filesystemJS",
+      "actual_terms": "ActualfileheadersMIT,EmscriptenAuthors2013/2015/2016; fullprojectMITgrant+AUTHORSretained",
+      "carry": [
+        "actualfivefilecopyrightheaders",
+        "LICENSE",
+        "AUTHORS"
+      ],
+      "conditions": "Retaincorrespondingcopyright/permission/disclaimer; doNOTinferbundledNodeexecutablefromNODEFS JS.",
+      "scope": "Sourcefileheaders+Shareactualexplicit-lfilesystemrecipe association, not completegeneratedglue source-map proof."
+    },
+    {
+      "name": "dlmalloc original and Emscripten modifications",
+      "actual_terms": "Exactsource statesDougLea2.8.6 releasedpublicdomainwithCC0URL; Emscripten-specificprefixmodifications haveprojectsourcecontext",
+      "carry": [
+        "exactpublicdomain/CC0reference+versionparagraph",
+        "EmscriptenLICENSE/AUTHORSforownmodifications"
+      ],
+      "conditions": "Recordactualdeclaration androotcontext; no fullCC0textrecovery orlegalvalidityguarantee. Conservativeattributioncarry; notblanketMITrelabeloriginal.",
+      "scope": "ActualsettingsdefaultMALLOC=dlmalloc andsystem_libs selector; SharemustverifyactualPyodideoverride/selectedvariant."
+    }
+  ],
+  "fixed_source_selection_evidence": [
+    {
+      "member": "tools/system_libs.py",
+      "member_sha256": "bf5859fc7a2029f0732e70e0762a44cf7e1c6914dee623c20d1a86bf064fd6c8",
+      "first_line": 2322,
+      "last_line": 2345,
+      "offset": 78476,
+      "bytes": 769,
+      "sha256": "cc27605b065e3b5d3fb50ff7c012646673ebe1d4fb656def3f8d6fb5f5c4c4a0",
+      "text": "    if not settings.SIDE_MODULE:\n      if settings.STANDALONE_WASM:\n        if settings.EXPECT_MAIN:\n          add_library('crt1')\n        else:\n          add_library('crt1_reactor')\n      elif settings.PROXY_TO_PTHREAD:\n        add_library('crt1_proxy_main')\n\n  if settings.SIDE_MODULE:\n    return libs_to_link\n\n  # We add the forced libs last so that any libraries that are added in the normal\n  # sequence below are added in the correct order even when they are also part of\n  # EMCC_FORCE_STDLIBS.\n  def add_forced_libs():\n    for forced in force_include:\n      if forced not in system_libs_map:\n        utils.exit_with_error('invalid forced library: %s', forced)\n      add_library(forced)\n\n  if options.nodefaultlibs:\n    add_forced_libs()\n    return libs_to_link\n"
+    },
+    {
+      "member": "tools/system_libs.py",
+      "member_sha256": "bf5859fc7a2029f0732e70e0762a44cf7e1c6914dee623c20d1a86bf064fd6c8",
+      "first_line": 2391,
+      "last_line": 2412,
+      "offset": 80542,
+      "bytes": 818,
+      "sha256": "6cc7da13cd8323c116a228f9ab5ae11b958aa1922fe024393283c133658b9d47",
+      "text": "  if settings.STANDALONE_WASM:\n    add_library('libstandalonewasm')\n  if settings.ALLOW_UNIMPLEMENTED_SYSCALLS:\n    add_library('libstubs')\n  if not options.nolibc:\n    if not settings.EXIT_RUNTIME:\n      add_library('libnoexit')\n    add_library('libc')\n    if settings.MALLOC == 'mimalloc':\n      add_library('libmimalloc')\n      if settings.USE_ASAN:\n        # See https://github.com/emscripten-core/emscripten/issues/23288#issuecomment-2571648258\n        utils.exit_with_error('mimalloc is not compatible with -fsanitize=address')\n    elif settings.MALLOC != 'none':\n      add_library('libmalloc')\n  add_library('libcompiler_rt')\n  if settings.LINK_AS_CXX:\n    add_library('libc++')\n  if settings.LINK_AS_CXX or sanitize:\n    add_library('libc++abi')\n    if settings.WASM_EXCEPTIONS:\n      add_library('libunwind')\n"
+    },
+    {
+      "member": "tools/system_libs.py",
+      "member_sha256": "bf5859fc7a2029f0732e70e0762a44cf7e1c6914dee623c20d1a86bf064fd6c8",
+      "first_line": 945,
+      "last_line": 998,
+      "offset": 33096,
+      "bytes": 1601,
+      "sha256": "491bc0e26983d13f66de3a3bd1d06dfa95e39a7b26a3cf0b23d67afdacd26aba",
+      "text": "class libcompiler_rt(MTLibrary, SjLjLibrary):\n  name = 'libcompiler_rt'\n  # compiler_rt files can't currently be part of LTO although we are hoping to remove this\n  # restriction soon: https://reviews.llvm.org/D71738\n  force_object_files = True\n\n  cflags = ['-fno-builtin', '-DNDEBUG', '-DCOMPILER_RT_HAS_ATOMICS=1']\n  src_dir = 'system/lib/compiler-rt/lib/builtins'\n  profile_src_dir = 'system/lib/compiler-rt/lib/profile'\n  includes = ['system/lib/libc', 'system/lib/compiler-rt/include']\n  excludes = [\n    # gcc_personality_v0.c depends on libunwind, which don't include by default.\n    'gcc_personality_v0.c',\n    # bfloat16\n    'extendbfsf2.c',\n    'truncdfbf2.c',\n    'truncxfbf2.c',\n    'truncsfbf2.c',\n    'trunctfbf2.c',\n    # We provide our own crt\n    'crtbegin.c',\n    'crtend.c',\n    # 80-bit long double (xf_float)\n    'divxc3.c',\n    'extendhfxf2.c',\n    'extendxftf2.c',\n    'fixxfdi.c',\n    'fixxfti.c',\n    'fixunsxfdi.c',\n    'fixunsxfsi.c',\n    'fixunsxfti.c',\n    'floatdixf.c',\n    'floattixf.c',\n    'floatundixf.c',\n    'floatuntixf.c',\n    'mulxc3.c',\n    'powixf2.c',\n    'trunctfxf2.c',\n    'truncxfhf2.c',\n  ]\n  src_files = glob_in_path(src_dir, '*.c', excludes=excludes)\n  src_files += glob_in_path(profile_src_dir, '*.c')\n  src_files += glob_in_path(profile_src_dir, '*.cpp')\n  src_files += files_in_path(\n      path='system/lib/compiler-rt',\n      filenames=[\n        'stack_ops.S',\n        'stack_limits.S',\n        'emscripten_setjmp.c',\n        'emscripten_exception_builtins.c',\n        'emscripten_tempret.s',\n        '__c_longjmp.S',\n        '__trap.c',\n      ])\n"
+    },
+    {
+      "member": "tools/system_libs.py",
+      "member_sha256": "bf5859fc7a2029f0732e70e0762a44cf7e1c6914dee623c20d1a86bf064fd6c8",
+      "first_line": 1154,
+      "last_line": 1183,
+      "offset": 42045,
+      "bytes": 959,
+      "sha256": "76bd98154ed0a0cf63c9f814b714b6ab9eb7eec4bb4e16efff796c0b0aa41319",
+      "text": "  def get_files(self):\n    libc_files = []\n    musl_srcdir = utils.path_from_root('system/lib/libc/musl/src')\n\n    # musl modules\n    ignore = [\n        'ipc', 'passwd', 'signal', 'sched', 'time', 'linux',\n        'aio', 'legacy', 'mq', 'setjmp',\n        'ldso', 'malloc',\n    ]\n\n    # individual files\n    ignore += [\n        'memcpy.c', 'memset.c', 'memmove.c', 'getaddrinfo.c', 'getnameinfo.c',\n        'res_query.c', 'res_querydomain.c',\n        'proto.c',\n        'syscall.c', 'popen.c', 'pclose.c',\n        'getgrouplist.c', 'initgroups.c', 'wordexp.c', 'timer_create.c',\n        'getauxval.c',\n        'lookup_name.c',\n        # 'process' exclusions\n        'fork.c', 'vfork.c', 'posix_spawn.c', 'posix_spawnp.c', 'execve.c', 'waitid.c', 'system.c',\n        '_Fork.c',\n        # 'env' exclusions\n        '__reset_tls.c', '__init_tls.c', '__libc_start_main.c',\n        # 'exit' exclusions\n        'assert.c', 'exit.c',\n    ]\n\n    ignore += LIBC_SOCKETS\n"
+    },
+    {
+      "member": "tools/system_libs.py",
+      "member_sha256": "bf5859fc7a2029f0732e70e0762a44cf7e1c6914dee623c20d1a86bf064fd6c8",
+      "first_line": 1768,
+      "last_line": 1789,
+      "offset": 61010,
+      "bytes": 1062,
+      "sha256": "78197f67a8c9494cca2ffc06e4fdd073d91023d2bdf289b53e53fa0b3924e541",
+      "text": "\n  def __init__(self, **kwargs):\n    self.malloc = kwargs.pop('malloc')\n    if self.malloc not in ('dlmalloc', 'emmalloc', 'emmalloc-debug', 'emmalloc-memvalidate', 'emmalloc-verbose', 'emmalloc-memvalidate-verbose', 'mimalloc', 'none'):\n      raise Exception('malloc must be one of \"emmalloc[-debug|-memvalidate][-verbose]\", \"mimalloc\", \"dlmalloc\" or \"none\", see settings.js')\n\n    self.is_tracing = kwargs.pop('is_tracing')\n    self.memvalidate = kwargs.pop('memvalidate')\n    self.verbose = kwargs.pop('verbose')\n    self.is_debug = kwargs.pop('is_debug') or self.memvalidate or self.verbose\n\n    super().__init__(**kwargs)\n\n  def get_files(self):\n    malloc_base = self.malloc.replace('-memvalidate', '').replace('-verbose', '').replace('-debug', '')\n    malloc = utils.path_from_root('system/lib', {\n      'dlmalloc': 'dlmalloc.c', 'emmalloc': 'emmalloc.c',\n    }[malloc_base])\n    # Include sbrk.c in libc, it uses tracing and libc itself doesn't have a tracing variant.\n    sbrk = utils.path_from_root('system/lib/libc/sbrk.c')\n    return [malloc, sbrk]\n\n"
+    },
+    {
+      "member": "tools/link.py",
+      "member_sha256": "c305ecb9946683863dd63945182fd61a57ee6c173f6dfd73e4348f0e389155c4",
+      "first_line": 1782,
+      "last_line": 1790,
+      "offset": 76009,
+      "bytes": 315,
+      "sha256": "9930e81e29f2e88a2cea5c5fbaf2965ae7d5c003fea05618470be3f298958e06",
+      "text": "\n  settings.LINK_AS_CXX = (shared.run_via_emxx or settings.DEFAULT_TO_CXX) and not options.nostdlibxx\n\n  # WASMFS itself is written in C++, and needs C++ standard libraries\n  if settings.WASMFS:\n    settings.LINK_AS_CXX = True\n\n  # Some settings make no sense when not linking as C++\n  if not settings.LINK_AS_CXX:\n"
+    },
+    {
+      "member": "src/settings.js",
+      "member_sha256": "3b1ef0dc32e40ea95332a838c32e22dbc7af828e21e6032c92578eb0f461ee5c",
+      "first_line": 140,
+      "last_line": 140,
+      "offset": 6837,
+      "bytes": 25,
+      "sha256": "832a16eb83b22ae65196b7a6e4477a2f88e27b79ffb7cc5908059417769e611e",
+      "text": "var MALLOC = \"dlmalloc\";\n"
+    },
+    {
+      "member": "src/settings.js",
+      "member_sha256": "3b1ef0dc32e40ea95332a838c32e22dbc7af828e21e6032c92578eb0f461ee5c",
+      "first_line": 2038,
+      "last_line": 2038,
+      "offset": 93207,
+      "bytes": 27,
+      "sha256": "7da541a9b40421c7e551a952f3b5a994bfc41d2861599334e14ca182467be9a1",
+      "text": "var DEFAULT_TO_CXX = true;\n"
+    }
+  ],
+  "qualifications": [
+    "Actualcompiledmembership/symbol-by-symbolclosure notestablished; source+recipe associations andbinaryobservations areseparateevidencekinds.",
+    "Fouroutsideleadingmuslmarkers resolved bytargetedfullsource:MD5containsfullBSD2aftercode, SHA256/SHA512additionalpublicdomaincomment, errno__strerror markerwasonlyPermissiondeniedstringnotlicense.",
+    "Exactarchive lacks system/lib/libunwind/CREDITS.TXT; retainwholeactualLICENSEtext andnoteabsencewithoutinventingmandatorycounsel/rebuildgate orsubstitutingneighborcreditlist.",
+    "Wholecompiler/LLVMtoolchainisnotautomaticallybundledbecause sourcesareused; optionalclosurecompilerandotherthird_party codeoutsideactualflags areNOTapproved.",
+    "Fullselectedrawsourcebytesretainprivately forreview; portablecompositecarriesonlygrants/notices/ranges, notunneededfullcodebodies.",
+    "ShareownsactualPyodide/CPythonrecipewitness andruntime/offerfulfillment; source-grantfacts alone doNOTauthorizebrowserWASM orall14routes."
+  ],
+  "claims": {
+    "compiled_binary_rebuilt": false,
+    "all_embedded_objects_identified": false,
+    "whole_compiler_shipped": false,
+    "runtime_distribution_permission_complete": false,
+    "legal_clearance": false,
+    "source_route_admitted": false,
+    "tag_accuracy": false,
+    "F057_X02_closed": false,
+    "source_or_native_executed": false,
+    "network_used": false
+  }
+}

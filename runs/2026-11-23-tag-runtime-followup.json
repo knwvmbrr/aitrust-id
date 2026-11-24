@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-23T23:04:51.341094+00:00",
+  "pass": true,
+  "profile": "tag-runtime-bounded-followup/v1",
+  "source_base": "bf815694cafd15ee346f9d245ddf557464a35147",
+  "source_sha256": {
+    "tools/web_checker_artifact.py": "95e5cfd1d24fe07fa59e36fdaccbbf0dc3e29212d5c944efd9fba919b229b3d4",
+    "tests/test_web_checker_artifact.py": "ebbc792456bb13f389572afb4307ee6a365e11395c48805ea5405ac9f3d97bd1",
+    "docs/tag-runtime-integration-plan.md": "a95c493ed16039c1ce26a802c4e72394c9897b390193cad9a13a3e26fb9dd221",
+    "scripts/web-checker-build-observer.mjs": "855be4c350944afea21d074963946c1224ccb008ed331bdd97545aed3ff4564b",
+    "tests/web-checker-build-observer.mjs": "568ab5ac35d47a1b0b7fb246f82e0295b483a725a13d54d9458397b73cd0d8ae",
+    "tests/test_visual_score_budget.py": "0ddc1d7df76764a393f7e029b86d10498248782ef283f3a1e864985b4b34ce40"
+  },
+  "proofs": {
+    "current_source": {
+      "sha256": "0cf80002c08e408b4445a61a1e054b2091416aff00a48987c56bd94e392c3d65",
+      "record": {
+        "actual_ROOT_source99_receipt": {
+          "captured_at": "2026-11-23T22:58:57.884987+00:00",
+          "counts": {
+            "test_visual_score.py": 33,
+            "test_visual_score_budget.py": 27,
+            "test_visual_score_qualification.py": 34,
+            "test_visual_score_workflow.py": 5
+          },
+          "current_source_hashes_matched": 87,
+          "errors": 0,
+          "executed": 99,
+          "failures": 0,
+          "reviewer_reexecuted99": false,
+          "sha256": "b99a53b119259d9f9a925049a36787bc0ff506c7a60f6d40804ff83c2369535b",
+          "skipped": 0
+        },
+        "captured_at": "2026-11-23T23:01:31.660647+00:00",
+        "conclusion": "CLEAR exact six-input correction; actual whole-build/native outcomes remain pending",
+        "limits": {
+          "SDK_model_network_acquisition": false,
+          "actual_whole_build_by_reviewer": false,
+          "original_requirement_closed": false,
+          "source_or_runtime_route_admitted": false
+        },
+        "original_timer_counter_sha256": "74ba97733c43347c7819e1c391a4340a01544f3b806fc17c05c6c94a59dcf122",
+        "own_actual_clock_controls": [
+          {
+            "case": "before_arm",
+            "pass": true
+          },
+          {
+            "case": "after_real_arm",
+            "pass": true
+          },
+          {
+            "case": "after_real_disarm",
+            "pass": true
+          },
+          {
+            "case": "normal",
+            "pass": true
+          }
+        ],
+        "preserved_failure_observations": [
+          "ROOT genuine build2 stopped at unsupported exact resolved virtual ID; no accepted provenance from failed build.",
+          "Image5950 run45283353711 source gate failed before download/inference due obsolete capacity-report expectation; no model/native qualification."
+        ],
+        "profile": "tag-runtime-exact-followup-source-distinct-review/v1",
+        "reviewed_finite_deltas": [
+          "Exactly one NULvite/modulepreload-polyfill.js alias to existing canonical Vite modulepreload provider; old3/unknown-ID refusal/caps retained. Installed Vite8.3.4 exact resolver source inspected.",
+          "Capacity-failure test requires sole validated600/private diagnostic <=4096, no canary, original exception, no workspace and no acquisition. Count27 and production image sources unchanged.",
+          "Web deadline setup inside try and independent nested cancellation/handler restoration; original one deadline and supported-entry restrictions preserved."
+        ],
+        "reviewer": "Codex /root/seo",
+        "source_sha256": {
+          "docs/tag-runtime-integration-plan.md": "a95c493ed16039c1ce26a802c4e72394c9897b390193cad9a13a3e26fb9dd221",
+          "scripts/web-checker-build-observer.mjs": "855be4c350944afea21d074963946c1224ccb008ed331bdd97545aed3ff4564b",
+          "tests/test_visual_score_budget.py": "0ddc1d7df76764a393f7e029b86d10498248782ef283f3a1e864985b4b34ce40",
+          "tests/test_web_checker_artifact.py": "ebbc792456bb13f389572afb4307ee6a365e11395c48805ea5405ac9f3d97bd1",
+          "tests/web-checker-build-observer.mjs": "568ab5ac35d47a1b0b7fb246f82e0295b483a725a13d54d9458397b73cd0d8ae",
+          "tools/web_checker_artifact.py": "95e5cfd1d24fe07fa59e36fdaccbbf0dc3e29212d5c944efd9fba919b229b3d4"
+        }
+      }
+    },
+    "qualified_evidence": {
+      "sha256": "6dbba31a533ee771838c3581a1104805358840a536d1e9c421aefbc33bcc166e",
+      "record": {
+        "actual_image_attempt": {
+          "ZIP_bytes": 684,
+          "ZIP_sha256": "7ca962dc03537bbb1ae1bb7eb06a4d50b20fb14d58bc4b8ab13ce9c448c5ad29",
+          "artifact_id": 14869584083,
+          "attempt": 1,
+          "job": 138073231645,
+          "members": {
+            "cleanup.json": {
+              "bytes": 295,
+              "pass": false,
+              "sha256": "511ada450685f9f8a4cf6c0bde7b0605ba2c3047a79a1225160e0023b193b094"
+            },
+            "qualification.json": {
+              "bytes": 354,
+              "pass": false,
+              "sha256": "6b1413a636edc9734fc66c04eca6f3dc6058d7cb252401edd4f335de390ce423"
+            }
+          },
+          "phase_observation": "Source phase failed; acquisition/install/inference skipped; cleanup failure/fallback and upload retained. Exact inner Linux source-case failure not proven from discarded child stdout.",
+          "run": 45283353711,
+          "source_commit": "5950de88c95d977c1db6faafaedbff8aff9c444d"
+        },
+        "actual_web_attempt2": {
+          "build_exit": 1,
+          "build_log_sha256": "2cbff0e71be9e09a74abddea6e0150c68e15469bcec1e9090434e2b1ec41b088",
+          "provenance_admitted": false,
+          "source_commit": "bf815694cafd15ee346f9d245ddf557464a35147",
+          "summary_sha256": "4356aa70b69a1ee330c4307b4176f1dcb6352b1f02afd6e451129aefdd050f67"
+        },
+        "captured_at": "2026-11-23T23:02:49.907421+00:00",
+        "conclusion": "CLEAR exact reviewed source correction; preserved failed attempts are not accepted provenance or native qualification",
+        "correction_of_prior_wording": "Prior review stated remote source gate failed due obsolete capacity expectation too strongly. Actual remote output proves failed source phase and skipped acquisition/inference only. The obsolete assertion is an actual LOCAL compatibility reproduction; discarded inner stdout prevents attributing it as the proven sole Linux cause. Prior bytes preserved.",
+        "current_local_source99_receipt_sha256": "b99a53b119259d9f9a925049a36787bc0ff506c7a60f6d40804ff83c2369535b",
+        "operator_failure": "First peer evidence harness guessed step-1.log shorthand; file lookup refused before receipt write. Read actual directory, then exact actual-web-build-attempt-2-step-1.log matched declared byte length/SHA. No product failure or prior record rewrite.",
+        "prior_source_review_sha256": "0cf80002c08e408b4445a61a1e054b2091416aff00a48987c56bd94e392c3d65",
+        "profile": "tag-runtime-followup-source-final-evidence-qualification/v1",
+        "review_scope": "Independent retained bytes/metadata read; no actual99 rerun, acquisition, SDK, model or whole build by reviewer.",
+        "reviewer": "Codex /root/seo"
+      }
+    },
+    "original_timer_counter": {
+      "sha256": "74ba97733c43347c7819e1c391a4340a01544f3b806fc17c05c6c94a59dcf122",
+      "record": {
+        "actual_controls": [
+          {
+            "case": "before_arm_setup_fault",
+            "handler_left_changed": true,
+            "timer_left_active": false
+          },
+          {
+            "case": "after_real_arm_setup_fault",
+            "handler_left_changed": true,
+            "timer_left_active": true
+          }
+        ],
+        "build_or_authorization_or_network_executed": false,
+        "captured_at": "2026-11-23T22:58:56.071853+00:00",
+        "core_sha256": "67e47f26d870e0d34f8c7408090c5ebef45be05eba7c96cddb77c2033915ea84",
+        "finding": "Timer setup occurs before try/finally; setup failure leaves changed handler, and post-real-arm fault also leaves active timer. Both manually restored by peer after each counter. Teardown must attempt handler restoration even if disarm fails.",
+        "profile": "web-artifact-original-deadline-setup-counters/v1",
+        "reviewer": "Codex /root/seo",
+        "source_or_root_files_changed": false
+      }
+    },
+    "current99": {
+      "sha256": "b99a53b119259d9f9a925049a36787bc0ff506c7a60f6d40804ff83c2369535b",
+      "record": {
+        "captured_at": "2026-11-23T22:58:57.884987+00:00",
+        "pass": true,
+        "source_base": "bf815694cafd15ee346f9d245ddf557464a35147",
+        "source_sha256": {
+          "tools/visual_score.py": "8066d31995042d5d142d2c68b08fce5e8f5ad2d90fb1d4a9f7d17673d919fea8",
+          "tools/visual_score_assets.py": "520aa38273620f01645dcfbba414502e74fc23b3b881677810723d803941e231",
+          "tools/visual_score_runtime.py": "723898e142574b1a893a767173f8fc21c9e90f83521de56325e6137c5fcbe2d0",
+          "tools/visual_score_process.py": "0d5f86c989f38ac98e2ecc20ee98304e187fbaa50ec14cff5784d380afc22cb9",
+          "scripts/inspect-visual-score.py": "0c316755c1ccca4cd60e31ce4b16e10939b607fe62c2e139854b6333b0ac5a56",
+          "tests/test_visual_score.py": "2426d5c10f928b8d8287f4c44f291a1fe68424c2663b555d02532fe9245804fc",
+          "docs/offline-image-score-plan.md": "e54e60f98ef72cd17c0a7b9f860757869e0e504e6b098538e1967472ae5b437c",
+          "docs/offline-image-score-guide.md": "5240e1a31ce9e8e09dd4dc88e2c8ee3c0dc38f85efe0955ae4df965c46cd3368",
+          "docs/offline-image-score-qualification-plan.md": "dea4e19d229a165f4f4eff91d932da136d08eb5e42e88b9470148e05ebabc5af",
+          "integrations/visual-score-reference/1.0.0/clip-license.txt": "987e63b32f6c89ff5160e429458a872ff048e6860b590a3912e938f9da8f14db",
+          "integrations/visual-score-reference/1.0.0/clip-model-card.md": "7baf04f60c6234b301ec2c9ca39e67a3ca54b47c05e9509bddf732cbcbec8b7f",
+          "integrations/visual-score-reference/1.0.0/clip-model.py": "9902cbe5ee90a1da2aa3e6f043e8a23dc1f8831193b963785c9af03d5c7bef2c",
+          "integrations/visual-score-reference/1.0.0/hf-config.json": "8a09b467700c58138c29d53c605b34ebc69beaadd13274a8a2af8ad2c2f4032a",
+          "integrations/visual-score-reference/1.0.0/hf-metadata.json": "c89d81f20b6a35523af447f3d9f407607ccca85ee90eae18f6a90f2725e2e871",
+          "integrations/visual-score-reference/1.0.0/hf-model-card-reference.json": "7ba894d89271710d574456154041d8dc98e0cb90af0929ce2ea77af782718621",
+          "integrations/visual-score-reference/1.0.0/preprocess-reference.json": "e7dabb28e8d7d074f89cd37d6f4ad735dcc80cb4e85d98f2e5701b5393ba03fe",
+          "integrations/visual-score-reference/1.0.0/projection.json": "0ef209689edf086cad74c79df1c813aed2cae79811d313b238c9c90ca48f1260",
+          "integrations/visual-score-reference/1.0.0/runtime-candidates.json": "502a91a7a8e0d3a1331e5ff9f3ed14d3df7d8a0f0df5e55c0b1a9153be0837c0",
+          "integrations/visual-score-reference/1.0.0/source.json": "f95f1008433c32216e0153c8ffd3d9cab4327abed047c19f28fd0c99d55253dc",
+          "integrations/visual-score-reference/1.0.0/torchvision-center-crop.py.txt": "fc1e04cda9e231a1fb72036f6b3d6e9a3ae6dd494842b9036e70471fbf83ca0a",
+          "integrations/visual-score-reference/1.0.0/torchvision-license.txt": "6502f676851cfe25f8af75531dfb32375b7325b73c37e7b43741fa422893e71d",
+          "integrations/visual-score-reference/1.0.0/ufd-clip-models.py": "57ce5898bf0bc7ff52b5922a0aefae8bc34a9237e4d59e4a1615ff5d8c6ff7a6",
+          "integrations/visual-score-reference/1.0.0/ufd-head-metadata.json": "db3ba20dbc85d13085aa60b997dbd1c760430d1128ce284e0be0625d2553690b",
+          "integrations/visual-score-reference/1.0.0/ufd-license.txt": "923dbc0fe040cc826122491e98b20d6f401e510d50c8b666de908e59ebf2f2b2",
+          "integrations/visual-score-reference/1.0.0/ufd-validate.py": "9ab4021cc6f85002a8b8cd0fc28baa9b4861b59bffcfbd98e10d02b08c42b2d6",
+          "integrations/image-metadata-reference/1.0.0/tools/png_metadata.py": "addd35028617f2d5c2cd01dc19106cec9946686cfe35139beb923af3973d6994",
+          "integrations/image-metadata-reference/1.0.0/tools/jpeg_metadata.py": "c7e8fcb58acd2087a35c886a32b7df1fa390c74c52c023e9b137bdf1dd90872a",
+          "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+          "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+          "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+          "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+          "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+          "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+          "tools/visual_score_qualification.py": "8a472b8cfc1adfe064ddc21136bc5d60d0e9be219dfd5310a4867936d89cd6f4",
+          "tools/visual_score_reference.py": "48f6bf040b69580ef9ea4db6623604ea9e063f847f6eedc718b6d1fac995c1bf",
+          "scripts/prepare-visual-score-qualification.py": "7194ecdefc72061d97c2f539e04aa0ce0c93db419e572028972e1f7b8d43194f",
+          "scripts/verify-visual-score-qualification.py": "ef6ee7578b88ab05a38977a541671b8d8edf74e7e68f1821976c47c8b309c852",
+          "tests/test_visual_score_qualification.py": "a9773c7d06a9544aa8dcad82bac3aa83e4cc626074e94be26085fafb7b9e21ad",
+          ".github/workflows/visual-score-qualification.yml": "33b7a199e5042c86683c02b541968b64cb5434d396a8b6603a39b2451ff6b4e7",
+          "integrations/visual-score-reference/qualification-notice-inventory.json": "f76d4cc04d8c346c05e7a0e615640313f70523ea9277c33b9468a83ce4bec916",
+          "integrations/visual-score-reference/qualification-linux-cp313.json": "576e084e9d6ba3a68fe9d58ab0132b2c392836bf07ed0fd10877aa4d06b305cc",
+          "integrations/visual-score-reference/qualification-linux-cp313.lock": "543f979fe7715adfa3eecf7c41083290d0067a4a1da0841101305cb07315482d",
+          "docs/offline-image-score-hosted-source-plan.md": "ad1db5e130db05bd716605a3f2b4a5ae2917ed12677de7674552fb9a646c8e41",
+          "docs/image-score-cleanup-ownership-correction-plan.md": "f8a379f393891ecb2adab82a1b08a8fb6cc31b90af71c49229984f79300ffbf8",
+          "tools/visual_score_budget.py": "d269b67b9bc1b24afad597a364f8d9c00f038d659c319f27f79320525f8906a9",
+          "scripts/run-visual-score-phase.py": "baae68507bcc1bacc7d7eb4f480c1113e4981b4ac969cacc02cba8fbb9797a3e",
+          "tests/test_visual_score_budget.py": "0ddc1d7df76764a393f7e029b86d10498248782ef283f3a1e864985b4b34ce40",
+          "tests/test_visual_score_workflow.py": "512069f69b55b79117d5069af178a9c1ca8a439d0c7134d3b155f5c4d6b98115",
+          "integrations/visual-score-reference/qualification-metadata/annotated-doc.metadata": "8c24d70c5d9153d22123353a906042fd7603df2d15c2196290b0f8a962558c46",
+          "integrations/visual-score-reference/qualification-metadata/annotated-types.metadata": "614985b278f601b8ef863f82783b991cc3ada4b89f592eb71c7c48c5f2ef2298",
+          "integrations/visual-score-reference/qualification-metadata/anyio.metadata": "b184ac9cd097e2bb7f90d42799346cc91c276095d000d95d7f7ddd407d0c887e",
+          "integrations/visual-score-reference/qualification-metadata/click.metadata": "63d23e734a4c63191d956c85a399291729141377c9af847dcd2b4b450e0b81cc",
+          "integrations/visual-score-reference/qualification-metadata/filelock.metadata": "25f914c3860cb8434342d9c17e8d9d28277ddc166ac9047ce26ab6d38fd901eb",
+          "integrations/visual-score-reference/qualification-metadata/fsspec.metadata": "68f5a262767510638e9b1933b1493f2baadc9616fe1e696f62aedd59c8c0a37c",
+          "integrations/visual-score-reference/qualification-metadata/h11.metadata": "28f326098ac09fcba79b8f180f96087c841fe2456215cb7b872a9c7d5cd19d64",
+          "integrations/visual-score-reference/qualification-metadata/hf-xet.metadata": "04d03dbf3d08734ec5a7cc8cfd7d93c05dda453a9ed0b20d83683ecdd64942e7",
+          "integrations/visual-score-reference/qualification-metadata/httpcore2.metadata": "c073bd68b2bd543fbc2bab3763b42ed1e70666536d32c1bf39ef2764fd50b0a4",
+          "integrations/visual-score-reference/qualification-metadata/httpx2.metadata": "192f20046200ff50911a7278c21dfbee1e1a4c6fa7943227afe9231d28defc3f",
+          "integrations/visual-score-reference/qualification-metadata/huggingface-hub.metadata": "b575d5eabe0b381489db2c163bb382f4ef44588ffbf468a4052719bf161b4211",
+          "integrations/visual-score-reference/qualification-metadata/idna.metadata": "dbd8c14c1e4ca1e0c9824a6dbc7cbbf78884f38eb52d91148cd3025f671e4b85",
+          "integrations/visual-score-reference/qualification-metadata/jinja2.metadata": "68c5548fb67c4132a13898d9b31ec50c6bea2abdd915d921f214355c3a6499c8",
+          "integrations/visual-score-reference/qualification-metadata/markdown-it-py.metadata": "72c36ff516755443b1ecb61e17b2567a990230b49a504b0eb0c42d5f82448a9c",
+          "integrations/visual-score-reference/qualification-metadata/markupsafe.metadata": "66767d76388ece15d49d50dafb655891ef5d868715e7128e7f7d737a70b353c4",
+          "integrations/visual-score-reference/qualification-metadata/mdurl.metadata": "b53b29d48f499367053fda3c81e7ce27d2558380ebbf83e66023b02eb7ddd25d",
+          "integrations/visual-score-reference/qualification-metadata/mpmath.metadata": "44b66ea444b9c0d19ae94815d356bf047ae6b680c19268b5c265687cd6a81406",
+          "integrations/visual-score-reference/qualification-metadata/networkx.metadata": "ffcf42a343af6ffc54ff9cc4c09cf9638cd73b131370f395abd11b630186c90c",
+          "integrations/visual-score-reference/qualification-metadata/numpy.metadata": "e2b909d6a37d76c2bc130f528d7fed0c517322bce16dc7846b6a6df30e200403",
+          "integrations/visual-score-reference/qualification-metadata/packaging.metadata": "70fdb89fc4d4a9a043bf7372b8972bcc883fddff34ab55e9cf80d73875384763",
+          "integrations/visual-score-reference/qualification-metadata/pillow.metadata": "dba7fdfe24e302f46bae562f55d66cc367c0618abae9894a1ebec93dc8f0e511",
+          "integrations/visual-score-reference/qualification-metadata/pydantic.metadata": "c3eb8984172bedc8e056655e1419351f4497374a91b7b709dbc4a1340f50e1e9",
+          "integrations/visual-score-reference/qualification-metadata/pydantic-core.metadata": "bb1956097beb504f190f8ea20c859b5dfea567679a247ce252d7813dd73f361d",
+          "integrations/visual-score-reference/qualification-metadata/pygments.metadata": "1dde075570136774c706bf0009183a793fe0ee262e4a5590cc6eff8453eedd43",
+          "integrations/visual-score-reference/qualification-metadata/pyyaml.metadata": "03c3b415ed38d09faedc49360e930769b40c58f68585e6de00e2e4916a858d34",
+          "integrations/visual-score-reference/qualification-metadata/regex.metadata": "9d4652369c84b7ccd4071445ccf421f2e1e31c4470d6736e6d5c9c49cba6d954",
+          "integrations/visual-score-reference/qualification-metadata/rich.metadata": "fad34fc603fac4481bf81f8dd629492fc302c0ec31909c86644751512afb2e3b",
+          "integrations/visual-score-reference/qualification-metadata/safetensors.metadata": "645be7b8d55e91534f991d144dc9e279581ea8dbea1a8c5b0be14e529d01e345",
+          "integrations/visual-score-reference/qualification-metadata/setuptools.metadata": "24939b84ead30ff4581918c8d5a95aafd377f6a8afc61f30ea18358a8786bfa4",
+          "integrations/visual-score-reference/qualification-metadata/shellingham.metadata": "183d80220a37493262795739dd357cc5bb3f49bd390cc9198d5180e5451a07fa",
+          "integrations/visual-score-reference/qualification-metadata/sympy.metadata": "b756c2fbfd5be05ac5bdb0ebca61f55618f30f633ed92d88a5687429313a7595",
+          "integrations/visual-score-reference/qualification-metadata/tokenizers.metadata": "87032ea29ec14be956ce0f15d164a8f436d6f1adbe19b261d6c179d9184f5cba",
+          "integrations/visual-score-reference/qualification-metadata/torch.metadata": "8bbf94c86c3be6cf586385861d476b78cb66d19b67fef49ece4f7d68ca428cc3",
+          "integrations/visual-score-reference/qualification-metadata/tqdm.metadata": "a5da70b966afea3a759716041bad7187f2ece02c22348cf9e7c0a512bbf15f57",
+          "integrations/visual-score-reference/qualification-metadata/transformers.metadata": "6adeb6ebffd05a916183bfb054630b9e435b1e4c582ec4dcf17df3aaf236eead",
+          "integrations/visual-score-reference/qualification-metadata/truststore.metadata": "1fd496f290853214e630d96f7163d2dd916f84ebe634b58aa827d6853e8f8610",
+          "integrations/visual-score-reference/qualification-metadata/typer.metadata": "49d8f3c9a1ec4001ce800ed4f2c4fd0745de054d354253878a8e76746743c49a",
+          "integrations/visual-score-reference/qualification-metadata/typing-extensions.metadata": "b05084ca1d50879865178d9fff9fabeab61bdfb1f361bfbde95421ffc8f9be46",
+          "integrations/visual-score-reference/qualification-metadata/typing-inspection.metadata": "7306933907768b0098784e56dfd678242f52383ff3e35c10a4c150539393d6ec"
+        },
+        "source_hashes_stable": true,
+        "counts": {
+          "test_visual_score.py": 33,
+          "test_visual_score_qualification.py": 34,
+          "test_visual_score_workflow.py": 5,
+          "test_visual_score_budget.py": 27
+        },
+        "executed": 99,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "output_sha256": "588434dc899239d90bbf6bd628ab5f9b991d016885a027da00744d2bb44d23cc",
+        "scope": "Actual complete finite source-only control gate after test-only capacity diagnostic compatibility correction. No acquisition/model/native/SDK.",
+        "orchestration_history": "Initial private harness had a syntax error before any execution or write; corrected readable harness below actually executed the gate."
+      }
+    }
+  },
+  "evidence_qualification": "Read original source review with qualified_evidence addendum: remote Linux source phase failure is actual; the obsolete capacity assertion is a reproduced LOCAL defect, not a proven sole inner Linux cause because the controller discards child stdout. No original record is rewritten.",
+  "executed_checks": {
+    "inert_observer_groups": 10,
+    "affected_capacity_case": 1,
+    "complete_image_source_controls": 99,
+    "image_failures_errors_skips": 0,
+    "new_authored_timer_test_fault_modes": 3,
+    "distinct_timer_normal_fault_controls": 4
+  },
+  "actual_image_attempt": {
+    "ZIP_bytes": 684,
+    "ZIP_sha256": "7ca962dc03537bbb1ae1bb7eb06a4d50b20fb14d58bc4b8ab13ce9c448c5ad29",
+    "artifact_id": 14869584083,
+    "attempt": 1,
+    "job": 138073231645,
+    "members": {
+      "cleanup.json": {
+        "bytes": 295,
+        "pass": false,
+        "sha256": "511ada450685f9f8a4cf6c0bde7b0605ba2c3047a79a1225160e0023b193b094"
+      },
+      "qualification.json": {
+        "bytes": 354,
+        "pass": false,
+        "sha256": "6b1413a636edc9734fc66c04eca6f3dc6058d7cb252401edd4f335de390ce423"
+      }
+    },
+    "phase_observation": "Source phase failed; acquisition/install/inference skipped; cleanup failure/fallback and upload retained. Exact inner Linux source-case failure not proven from discarded child stdout.",
+    "run": 45283353711,
+    "source_commit": "5950de88c95d977c1db6faafaedbff8aff9c444d"
+  },
+  "actual_web_attempt2": {
+    "build_exit": 1,
+    "build_log_sha256": "2cbff0e71be9e09a74abddea6e0150c68e15469bcec1e9090434e2b1ec41b088",
+    "provenance_admitted": false,
+    "source_commit": "bf815694cafd15ee346f9d245ddf557464a35147",
+    "summary_sha256": "4356aa70b69a1ee330c4307b4176f1dcb6352b1f02afd6e451129aefdd050f67"
+  },
+  "changes": {
+    "virtual_alias": "Exact resolved Vite8.3.4 ID only, mapped to existing virtual:vite-modulepreload provider; original forms and unknown refusal retained.",
+    "image_test": "Test only: sole validated bounded0600 capacity diagnostic, original exception/no acquisition/stage; counts unchanged.",
+    "web_deadline": "Setup now inside its ownership try/finally and teardown always attempts handler restoration; original deadline not extended."
+  },
+  "originals": {
+    "complete": 136,
+    "open": 66,
+    "target": 60,
+    "new_closures": 0
+  },
+  "limits": {
+    "actual_whole_build_completed": false,
+    "web_admission": false,
+    "image_native_inference": false,
+    "model_or_SDK_install": false,
+    "independent_accuracy": false
+  }
+}

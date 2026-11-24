@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "profile": "explicit-review-attestation-software-execution/v1",
+  "captured_at": "2026-11-24T00:03:07.263446+00:00",
+  "author": "Codex /root/share_debugger",
+  "scope_ids": [
+    "T-IV"
+  ],
+  "source_base": "36a3560576b83e47f20ea4ffa7db942cdd3ddfb6",
+  "pass": true,
+  "scope": "Verifier/lifecycle software only; no IV issuance, real human review or original closure.",
+  "source_sha256": {
+    "protocol/reviewer-attestations.cjs": "a4736746394e73d445c33739168a61d85ba6466f63906d47bac49a888b4d2ae9",
+    "scripts/reviewer-attestation.cjs": "10130ff34c0e84af08da842d97264defb8b0f6816eb8e820fa9fa4df606541b1",
+    "tests/reviewer-attestations.cjs": "055f492f774bc0c1139766b68d9d50ca8ec13e4d59b32567058b971d096b1eae",
+    "docs/reviewer-attestation-plan.md": "c65ef2aab639f72578988b29c80ce61d996e7907af60e5b1d683f36c7561f54f",
+    "docs/reviewer-attestations.md": "7d9487cb560bc8d9f2c19167495b408883dda0414a825e89fddb1af48d1a54af"
+  },
+  "unchanged_source_sha256": {
+    "protocol/receipts.cjs": "d807903771a2616e0a437259adc8ac8bf85717b42407224b82f5f9e6799feb59",
+    "spec/assertion.schema.json": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c",
+    "spec/taxonomy.md": "84c495ba17a3d319bc6847b5aa81407ce0d0c8b4b46ace334f68b9b8a7c348b4",
+    "docs/tags/IV-01.md": "1cb35d1a46fd39bf2e856313867f1b9f93ba7cdfecb4e896269f89da8806a221"
+  },
+  "environment": {
+    "node": "v22.12.0",
+    "platform": "{\"platform\":\"darwin\",\"arch\":\"arm64\"}"
+  },
+  "execution_phases": [
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/reviewer-attestations.cjs"
+      ],
+      "log": "initial-tests.log",
+      "tests": 15,
+      "pass": 14,
+      "fail": 1,
+      "role": "Historical first attempt: synthetic helper resign overwrote malformed policy sequence, so negative fixture did not exercise intended input. Original failure retained privately, not claimed product failure or pass."
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "tests/reviewer-attestations.cjs"
+      ],
+      "log": "current-tests.log",
+      "tests": 15,
+      "pass": 15,
+      "fail": 0,
+      "skipped": 0,
+      "role": "Real signature/lifecycle/subject/scope/consent/clock/CLI/filesystem controls after corrected fixture and own core clock-start/final-summary guard. Core equals current; CLI before the later finite startup/rollback correction."
+    },
+    {
+      "command": [
+        "node",
+        "--test",
+        "--test-name-pattern=CLI original clock|actual CLI positive",
+        "tests/reviewer-attestations.cjs"
+      ],
+      "log": "clock-affected-tests.log",
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "skipped": 0,
+      "role": "Current CLI startup nonfinite/rollback/exhausted-window correction plus actual current CLI positive/withdrawal/tamper/help group. Current declared suite has16methods; these phases are not represented as a full current16 execution."
+    }
+  ],
+  "logs": {
+    "initial-tests.log": {
+      "bytes": 4376,
+      "sha256": "ebda07f5663c0707060e51c315ce30a6f7b72a726cbad73f3031665d4ee45c9d"
+    },
+    "corrected-tests.log": {
+      "bytes": 3325,
+      "sha256": "141f4f47835864d39ab10b0b2af979e6639e05aa7739ca936e20b16651ed3615"
+    },
+    "current-tests.log": {
+      "bytes": 3321,
+      "sha256": "fd861dfe53e67ede5bed8f2fbd086235a9b96a19dd51a4618c512661555c0741"
+    },
+    "clock-affected-tests.log": {
+      "bytes": 570,
+      "sha256": "728994aac3670ba4694ce6fadc83b2755aa050d3d461a62a3a4ebd6b14fa4d2f"
+    }
+  },
+  "actual_cli_capture": {
+    "captured_at": "2026-11-24T00:00:06.379Z",
+    "source_phase": {
+      "core": "a4736746394e73d445c33739168a61d85ba6466f63906d47bac49a888b4d2ae9",
+      "CLI_before_clock_only_correction": "c4343b16ac53086252a541a4d3bbe927eb05b40c9b354d6ec470e70035bf1610"
+    },
+    "cases": [
+      {
+        "case": "active-declaration",
+        "argv": [
+          "node",
+          "scripts/reviewer-attestation.cjs",
+          "verify",
+          "policy.json",
+          "history.json",
+          "subject.txt"
+        ],
+        "exit": 0,
+        "state": "REVIEW_RECORD_VERIFIED",
+        "review_status": "ACTIVE_DECLARATION",
+        "tag_issuance": false,
+        "human_identity_established": false,
+        "reviewer_independence_established": false,
+        "stdout_sha256": "341f9911bca3477e6602f50a55524704155034b668776a4de24dce4c37b86634",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "withdrawn",
+        "argv": [
+          "node",
+          "scripts/reviewer-attestation.cjs",
+          "verify",
+          "policy.json",
+          "history.json",
+          "subject.txt"
+        ],
+        "exit": 3,
+        "state": "REVIEW_RECORD_VERIFIED",
+        "review_status": "WITHDRAWN",
+        "tag_issuance": false,
+        "human_identity_established": false,
+        "reviewer_independence_established": false,
+        "stdout_sha256": "c8d65334c1ec5aac0c5904b81fe893bdbb8d855172e512d5ccd0cd3e65a20a24",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "case": "tampered-subject",
+        "argv": [
+          "node",
+          "scripts/reviewer-attestation.cjs",
+          "verify",
+          "policy.json",
+          "history.json",
+          "subject.txt"
+        ],
+        "exit": 2,
+        "state": "UNAVAILABLE",
+        "review_status": null,
+        "tag_issuance": false,
+        "human_identity_established": false,
+        "reviewer_independence_established": false,
+        "stdout_sha256": "5e2feb2d69b6f3b3542f9e6eb73c9fddbe80104266763a741707db14b65ed136",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "retained_file_sha256": {
+      "active-declaration.stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "active-declaration.stdout": {
+        "bytes": 1621,
+        "sha256": "341f9911bca3477e6602f50a55524704155034b668776a4de24dce4c37b86634"
+      },
+      "history.json": {
+        "bytes": 2091,
+        "sha256": "0b266565b6af9e1ca49881e9b33ae1ed31c7530663ead22c9f82e34efc4fb981"
+      },
+      "policy.json": {
+        "bytes": 846,
+        "sha256": "bfa4cd4dfd676e5fc2de806a60670101db783e769fbccb540ded20930ee014a6"
+      },
+      "subject.txt": {
+        "bytes": 38,
+        "sha256": "e0242d7316084e63e906164b8cfca1b4c0329b86f201ed9af19c978236d5235f"
+      },
+      "tampered-subject.stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "tampered-subject.stdout": {
+        "bytes": 273,
+        "sha256": "5e2feb2d69b6f3b3542f9e6eb73c9fddbe80104266763a741707db14b65ed136"
+      },
+      "withdrawn-history.json": {
+        "bytes": 2091,
+        "sha256": "0b266565b6af9e1ca49881e9b33ae1ed31c7530663ead22c9f82e34efc4fb981"
+      },
+      "withdrawn-policy.json": {
+        "bytes": 846,
+        "sha256": "bfa4cd4dfd676e5fc2de806a60670101db783e769fbccb540ded20930ee014a6"
+      },
+      "withdrawn.stderr": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "withdrawn.stdout": {
+        "bytes": 1613,
+        "sha256": "c8d65334c1ec5aac0c5904b81fe893bdbb8d855172e512d5ccd0cd3e65a20a24"
+      }
+    },
+    "active_input_reconstruction": "After capture, exact active inputs reconstructed from retained first signed event and unchanged policy fields/subject literal checked against signed SHA. Labeled reconstruction, not a new execution or an original raw input capture."
+  },
+  "synthetic_only": {
+    "public_test_key_source": "https://www.rfc-editor.org/rfc/rfc8032.txt#section-7.1",
+    "public_test1_key_hex": "d75a980182b10ab7d54bfed3c964073a0ee172f3daa62325af021a68f707511a",
+    "operating_key_created_or_read": false,
+    "actual_human_review": false,
+    "production_or_release_signing": false,
+    "private_PEM_file_persisted": false,
+    "publicly_known_test_seed_in_test_source": true,
+    "qualification": "The published test seed is deliberately present in test source; it is not secret or an operating identity. No private PEM file or user key is saved/read."
+  },
+  "bounds": {
+    "subject_bytes": 8388608,
+    "policy_bytes": 65536,
+    "history_bytes": 262144,
+    "events": 128,
+    "evidence_references": 32,
+    "public_key_bytes": 4096,
+    "held_fds": 128,
+    "path_components": 32,
+    "cooperative_validation_milliseconds": 5000
+  },
+  "claims": {
+    "IV_asserted": false,
+    "tag_issuance": false,
+    "human_identity_established": false,
+    "reviewer_independence_established": false,
+    "accuracy_established": false,
+    "independent_timestamp": false,
+    "global_withdrawal_completeness": false,
+    "full_T_IV_closed": false
+  },
+  "limits": [
+    "Caller selects key/subject/scope/head independently; no artifact-chosen authority.",
+    "Only selected checkpoint completeness is checked; no external revocation/withdrawal server or independent clock.",
+    "Cryptography binds declarations, not identity, actual consent, independence or truth.",
+    "Actual human review/independence, human accessibility and final route acceptance remain open.",
+    "No endpoint, registry, taxonomy/schema changes, publication, install, operating-key creation, private user-key read or runtime/model/SDK acquisition."
+  ],
+  "distinct_review": {
+    "sha256": "050e5ca72ce05cd07067b739415f5b4663d6d9d35872dde9c340e42e2b12410a",
+    "raw_utf8": "{\n  \"captured_at\": \"2026-11-24T00:04:01.001600+00:00\",\n  \"reviewer\": \"Codex /root\",\n  \"profile\": \"reviewer-attestation-distinct-source-and-execution/v1\",\n  \"pass\": true,\n  \"source_sha256\": {\n    \"protocol/reviewer-attestations.cjs\": \"a4736746394e73d445c33739168a61d85ba6466f63906d47bac49a888b4d2ae9\",\n    \"scripts/reviewer-attestation.cjs\": \"10130ff34c0e84af08da842d97264defb8b0f6816eb8e820fa9fa4df606541b1\",\n    \"tests/reviewer-attestations.cjs\": \"055f492f774bc0c1139766b68d9d50ca8ec13e4d59b32567058b971d096b1eae\",\n    \"docs/reviewer-attestations.md\": \"7d9487cb560bc8d9f2c19167495b408883dda0414a825e89fddb1af48d1a54af\",\n    \"docs/reviewer-attestation-plan.md\": \"c65ef2aab639f72578988b29c80ce61d996e7907af60e5b1d683f36c7561f54f\"\n  },\n  \"review\": [\n    \"Read whole verifier, readonly CLI, architecture, existing canonical detached receipts parser and signature verifier.\",\n    \"Exact caller-selected public key, subject/revision/scope and external chain-head binding; only attributed active declarations, never IV/human independence/accuracy.\",\n    \"Strict duplicate JSON/fields and supported key algorithms retained; bounded history, chronology, expiry, conflict and terminal withdrawal/supersession.\",\n    \"Read-only nofollow/nonblocking captures and before/after descriptor/path checks; all closes attempted, invalid clock/refusal never safe.\",\n    \"Output metadata/linkability and incomplete global withdrawal freshness limits explicitly disclosed.\"\n  ],\n  \"actual_execution\": {\n    \"argv\": [\n      \"node\",\n      \"--test\",\n      \"tests/reviewer-attestations.cjs\"\n    ],\n    \"exit_status\": 0,\n    \"methods\": 16,\n    \"pass\": 16,\n    \"fail\": 0,\n    \"skip\": 0,\n    \"duration_ms\": 536.640959\n  },\n  \"synthetic_only\": true,\n  \"operating_keys_created\": false,\n  \"private_user_keys_read\": false,\n  \"network\": false,\n  \"independent_accuracy_evidence\": false,\n  \"IV_issuance\": false,\n  \"full_original_closure\": false,\n  \"limits\": [\n    \"Tests import a documented fixed openly known synthetic key; no real reviewer or human independence established.\",\n    \"Source/software readiness only; ROOT integration, public source delivery and real human acceptance remain separate.\"\n  ]\n}\n",
+    "meaning": "Different source reviewer actually ran all16 current controls; separate from author phased execution, not independent human or accuracy evidence."
+  }
+}

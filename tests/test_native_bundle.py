@@ -39,10 +39,13 @@ def test_actual_package_can_be_inspected_without_credentials(tmp_path, prepared_
             assert hashlib.sha256(package.read('Assets' + name)).hexdigest() == expected
         assert len(config['hashes']) == 9
         assert 'LICENSE' in package.namelist()
-        assert {n for n in package.namelist() if n.startswith('Notices/')} == {
-            'Notices/pyodide-MPL-2.0.txt', 'Notices/python-license.txt',
-            'Notices/source.txt', 'Notices/unicode-license.txt', 'Notices/python-stdlib-notices.txt',
-        }
+        from tools.ios_runtime_obligations import projection
+        notices = projection()['notices']
+        assert len(notices) == 17
+        assert {n for n in package.namelist() if n.startswith('Notices/')} == set(notices)
+        for name, raw in notices.items():
+            assert package.read(name) == raw
+        assert package.read('Notices/Project-NOTICE.txt') == (ROOT / 'NOTICE').read_bytes()
         assert package.read('Notices/python-stdlib-notices.txt') == (
             ROOT / 'sbom/nested-runtime/PYTHON-STDLIB-NOTICES.txt'
         ).read_bytes()

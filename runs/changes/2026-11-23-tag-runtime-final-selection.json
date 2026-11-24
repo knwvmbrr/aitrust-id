@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-tag-runtime-final-selection",
+  "recorded_at": "2026-11-24T04:19:07.007700+00:00",
+  "author": "Codex /root integration; different source/evidence reviewers",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "23f6a3f29db76eb0e4d5dc48c1a18858ecbfb657",
+  "changed": "Select five current source-bound engineering receipts, refresh the exact reviewed route inventory and reconcile current native/image worker status while preserving all original scope criteria.",
+  "proves": "Actual five hosted profiles execute7/6/14/79/66 commands, exact8537 Git bindings independently reviewed. All five selected receipts assess current. Unchanged route guard and36failure controls pass; actual seven native flows remain separately evidenced.",
+  "limits": "Final committed-tree required checks, capacity and actual live deployment pending. No new tag release, independent accuracy, physical-phone acceptance, TestFlight upload, managed web authority, legal clearance or original closure.136complete66open; target60 unmet.",
+  "scope_ids": [
+    "F-057",
+    "F-120",
+    "X-02",
+    "N-013"
+  ],
+  "files": {
+    "eval/route-boundaries.json": "33249a0b5b03d5b07901eef61ae67341e8352ba691be5013903e1c58d4e5103a",
+    "state.json": "c714cc4162883b68cab0b113f16802b6255c5c78de3be56f2f072193450fbd02",
+    "runs/2026-11-23-tag-runtime-current-protocol.json": "b9af96826f943b555a03d0b870b69c6052dbe0cf26fcfbd8eb031a767a98de01",
+    "runs/2026-11-23-tag-runtime-current-website.json": "fcba1cef78d4f69bea276591e93aea66fb8546204399d5c4d8e3b22c4b27952d",
+    "runs/2026-11-23-tag-runtime-current-selection.json": "1e335b58a57111b4a8ce896f11efb694878757ccf3b23dcd33e162e0c1d32744"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-tag-runtime-current-protocol.json",
+      "sha256": "b9af96826f943b555a03d0b870b69c6052dbe0cf26fcfbd8eb031a767a98de01"
+    },
+    {
+      "path": "runs/2026-11-23-tag-runtime-current-website.json",
+      "sha256": "fcba1cef78d4f69bea276591e93aea66fb8546204399d5c4d8e3b22c4b27952d"
+    },
+    {
+      "path": "runs/2026-11-23-tag-runtime-current-selection.json",
+      "sha256": "1e335b58a57111b4a8ce896f11efb694878757ccf3b23dcd33e162e0c1d32744"
+    }
+  ],
+  "checks": [],
+  "check_summaries": [
+    {
+      "kind": "actual_hosted_delivery",
+      "run_id": 45320971651,
+      "attempt": 1,
+      "counts": {
+        "PS": 7,
+        "PII_REDACTED": 6,
+        "extension": 14,
+        "protocol": 79,
+        "website": 66
+      },
+      "pass": true
+    },
+    {
+      "kind": "actual_boundary_controls",
+      "passed": 36,
+      "failed": 0,
+      "seconds": 28.11,
+      "pass": true
+    },
+    {
+      "kind": "actual_source_receipt_assessments",
+      "passed": 5,
+      "failed": 0,
+      "pass": true
+    }
+  ],
+  "different_review": {
+    "reviewer": "Codex /root/share_debugger",
+    "sha256": "e464f436586f76be8dbfdebf2e403f2ecf80035236a731ce96fc09fcf4d8da5d",
+    "bytes": 4383,
+    "raw_utf8": "{\n  \"profile\": \"root-final-engineering-selection-distinct-review/v1\",\n  \"captured_at\": \"2026-11-24T04:20:53.615499+00:00\",\n  \"reviewer\": \"Codex /root/share_debugger\",\n  \"source_base\": \"23f6a3f29db76eb0e4d5dc48c1a18858ecbfb657\",\n  \"result\": \"CLEAR_FINAL_SELECTION_ASSEMBLY_ONLY\",\n  \"changed_files_before_peer_embedding\": {\n    \"CHANGELOG.md\": {\n      \"sha256\": \"62a4c1738ce4117ca049e26f5454c38490a87c90562e9ebc2da8e383e9db4878\",\n      \"bytes\": 1091786\n    },\n    \"eval/route-boundaries.json\": {\n      \"sha256\": \"33249a0b5b03d5b07901eef61ae67341e8352ba691be5013903e1c58d4e5103a\",\n      \"bytes\": 1332606\n    },\n    \"state.json\": {\n      \"sha256\": \"c714cc4162883b68cab0b113f16802b6255c5c78de3be56f2f072193450fbd02\",\n      \"bytes\": 284168\n    },\n    \"runs/2026-11-23-tag-runtime-current-protocol.json\": {\n      \"sha256\": \"b9af96826f943b555a03d0b870b69c6052dbe0cf26fcfbd8eb031a767a98de01\",\n      \"bytes\": 1267564\n    },\n    \"runs/2026-11-23-tag-runtime-current-website.json\": {\n      \"sha256\": \"fcba1cef78d4f69bea276591e93aea66fb8546204399d5c4d8e3b22c4b27952d\",\n      \"bytes\": 302740\n    },\n    \"runs/2026-11-23-tag-runtime-current-selection.json\": {\n      \"sha256\": \"1e335b58a57111b4a8ce896f11efb694878757ccf3b23dcd33e162e0c1d32744\",\n      \"bytes\": 9430\n    },\n    \"runs/changes/2026-11-23-tag-runtime-final-selection.json\": {\n      \"sha256\": \"9bbc39cc9d114e9278c12066bbcb120be9be0beb163efe86efa106ca5c3de9f3\",\n      \"bytes\": 2883\n    }\n  },\n  \"event_reviewed_before_embedding\": true,\n  \"initial_findings_resolved\": [\n    \"Draft source-bound session-plan edits correctly made website receipt stale; both uncommitted drafts restored exactly to HEAD. Actual refusal and correction retained in final_bookkeeping_review.\",\n    \"Three stale current-state labels corrected: actual23f source, current boundary selection and engineering-source/protected-publication distinction. Prior663/972/native failure observations remain history.\"\n  ],\n  \"read_only_actual_data_checks\": [\n    \"New protocol/website raw bytes exactly match once-retained actual23f delivery artifact and supplied row hashes; old3 committed records unchanged with complete fingerprints equal actual23f newly executed records.\",\n    \"All five selected path/size/SHA/time/fingerprint/check counts and state selectors agree;7/6/14/79/66 remain engineering command counts, not original closures.\",\n    \"Boundary8497 hashes checked against actual current files in initial data review; final manifest33249 unchanged. Exactly2 additions/29updates/0removed; scalar review fields+receipt pointers only, all rules and endpoint/permission semantics unchanged.\",\n    \"Seven changed paths are disjoint from8537 independent actual23f source fingerprint union; two session-plan files restored byte-identical, so final bookkeeping does not invalidate the reviewed source footprint.\",\n    \"Master scope and progress raw bytes remain HEAD23f exact;202 originals136complete66open/0newclosures unchanged. Native7 state agrees retained actual record while physical/human/accuracy/installable flags remain false.\",\n    \"Fresh event five-file map/SHA identities and attributed changelog text agree. Peer embedding intentionally occurs afterward and cannot self-reference this receipt.\"\n  ],\n  \"executed_in_this_review\": \"Only source/JSON read/hash/Git-byte equality inspection. No test, capability, guard, assess, build, SDK, browser, native, archive, network or acquisition command repeated. Root-authored36 boundary tests/guard/5assessments are reported as retained author executions.\",\n  \"prior_distinct_actual_evidence\": {\n    \"review_sha256\": \"adc246e0ed99819f055253406222b40ae2aa5f515b8d6a7042fa1ffa7a1afede\",\n    \"scope\": \"Own separate actual API/archiveSHA/tree/full8537Git-binding review and existing5assessments at23f; no new downloads here.\"\n  },\n  \"independence_scope\": \"Review is different ROOT selection/state/boundary assembly, not an independent claim over my earlier runtime/common/classifier implementations or another rerun of native proof. Component peers remain separately source-bound.\",\n  \"limits\": [\n    \"Final committed-tree required11checks/capacity and actual deployment still pending; pre-metadata capacity is correctly labeled historical to23f.\",\n    \"No managed web authority, tag release, independent accuracy/human/physical-phone acceptance, TestFlight upload, legal clearance or fullF057/X02/original closure.\"\n  ]\n}\n",
+    "reviewed_before_embedding": true
+  }
+}
