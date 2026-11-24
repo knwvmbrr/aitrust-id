@@ -23,6 +23,38 @@ final class SizeLayoutFlows: XCTestCase {
             && scroll.frame.contains(frame) && element.isHittable
     }
     private enum RevealRole: Int { case control = 0, input = 1, title = 2 }
+    private func geometryDiagnostic(_ appFrame: CGRect, _ scrollFrame: CGRect, _ frame: CGRect,
+                                    _ viewport: CGRect, role: RevealRole, attempt: Int) {
+        let originals = [appFrame, scrollFrame, frame]
+        let rawFinite: (CGRect) -> Bool = { rectangle in
+            [rectangle.minX, rectangle.minY, rectangle.width, rectangle.height].allSatisfy { $0.isFinite }
+        }
+        var subreason = 0, frameKind = 4
+        if let index = originals.firstIndex(where: { !rawFinite($0) }) {
+            subreason = 1; frameKind = index
+        } else if let index = originals.firstIndex(where: { $0.width <= 0 || $0.height <= 0 }) {
+            subreason = 2; frameKind = index
+        } else if !finite(viewport) || viewport.width <= 32 || viewport.height <= 32 {
+            subreason = 3; frameKind = 3
+        } else if frame.minX < viewport.minX || frame.maxX > viewport.maxX {
+            subreason = 4; frameKind = 2
+        } else if frame.height > viewport.height {
+            subreason = 5; frameKind = 2
+        }
+        var fields = ["LAYOUT_GEOMETRY", "role=\(role.rawValue)", "attempt=\(attempt)",
+                      "subreason=\(subreason)", "framekind=\(frameKind)"]
+        let prefixes = ["a", "s", "e", "v"]
+        for (index, rectangle) in [appFrame, scrollFrame, frame, viewport].enumerated() {
+            let prefix = prefixes[index]
+            let values = [rectangle.minX, rectangle.minY, rectangle.width, rectangle.height]
+            fields.append("\(prefix)f=\(rawFinite(rectangle) ? 1 : 0)")
+            fields.append("\(prefix)p=\(rectangle.width > 0 && rectangle.height > 0 ? 1 : 0)")
+            for (key, value) in zip(["x", "y", "w", "h"], values) where value.isFinite {
+                fields.append("\(prefix)\(key)=\(value)")
+            }
+        }
+        print(fields.joined(separator: " "))
+    }
     private func reveal(_ element: XCUIElement, app: XCUIApplication, scroll: XCUIElement, role: RevealRole = .control) {
         XCTAssertTrue(element.waitForExistence(timeout: 10))
         func refuse(_ reason: Int, _ attempt: Int) {
@@ -36,7 +68,10 @@ final class SizeLayoutFlows: XCTestCase {
             guard finite(appFrame), finite(scrollFrame), finite(frame), finite(viewport),
                   viewport.width > 32, viewport.height > 32,
                   frame.minX >= viewport.minX, frame.maxX <= viewport.maxX,
-                  frame.height <= viewport.height else { refuse(1, attempt); return }
+                  frame.height <= viewport.height else {
+                geometryDiagnostic(appFrame, scrollFrame, frame, viewport, role: role, attempt: attempt)
+                refuse(1, attempt); return
+            }
             // A contained but unhittable target is an unknown interruption, not a scroll instruction.
             guard !viewport.contains(frame) else { refuse(2, attempt); return }
             let upward = frame.maxY > viewport.maxY

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-ios-size-matrix-frame-diagnostics",
+  "recorded_at": "2026-11-24T13:30:16.499971+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a282f2ff00351fad00b19c6c6bb9c28c38f73234",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "changed": "Add bounded value-only numeric diagnostics at the existing layout-geometry refusal while retaining its exact boolean and all actions, then update only the fixture hash and plan.",
+  "proves": "One affected derivation unittest passes; complete prior Swift/core reconstruction and fixed finite-field structure checks pass with six/114 bindings stable. Different source review confirms no new query, wait, gesture or acceptance change; all21 actual candidate3 evidence files remain unchanged.",
+  "limits": "Source-only diagnostics, not actual refused-condition evidence or a supported-cause fix. Native formatter/Swift execution and complete four-size matrix remain unqualified; old821b/c61 baseline does not qualify future70e/build2. No old/new result composition, physical/human accessibility, seven-flow replacement, accuracy, release, admission or original closure.",
+  "files": {
+    "tools/ios_simulator_matrix.py": "14840f7e659cbdb6b53c6eca7d7755a9924b59bec5aca303bd2f481696bd6af5",
+    "mobile/ios/Tests/SizeLayoutFlows.swift": "b1aef51016fe4b1a3687bdf3e56637dc748a133b430332023984bfb84f2f10bc",
+    "docs/ios-simulator-matrix-plan.md": "7822964503e033ef42394055723347e407619b513a333c402c00432573617b82",
+    "runs/2026-11-24-ios-size-matrix-frame-diagnostics.json": "b7aa63b68ca9b733646a56c4adcdaeaab793dca5a1837abe66563a75d0d1670d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-size-matrix-frame-diagnostics.json",
+      "sha256": "b7aa63b68ca9b733646a56c4adcdaeaab793dca5a1837abe66563a75d0d1670d"
+    }
+  ],
+  "checks": [],
+  "different_review": {
+    "reviewer": "Codex /root",
+    "status": "CLEAR for exact diagnostic source; native authority separate after normal commit",
+    "sha256": "558e2589ac5f227c2dc4d5c6ec72e54fe49b4d1858204e2935e632f6a15adb61",
+    "raw_utf8": "{\n  \"SDK_native_or_tests_executed_by_root\": false,\n  \"author\": \"/root/web_camo\",\n  \"author_controls_sha256\": \"fa465a1e4033d3e50121d2dd4355375980f5e10239a5d9e76a3fc5faa11452ae\",\n  \"captured_at\": \"2026-11-24T13:29:03.365740+00:00\",\n  \"dependencies_checked\": 114,\n  \"diagnostics\": \"Sampled value CGRects only; fixed role/attempt/subreason/framekind and finite coordinate fields. Nonfinite omitted, no arbitrary labels or payload.\",\n  \"freeze_sha256\": \"ddc22ee98a61ed644f64c3f5b253afa62260de5f6e6942a44ec0248ed5b97475\",\n  \"limits\": \"Diagnostic-only source review. Current matrix unqualified; no actual refused frame condition or product fix established; physical/human/fullmatrix acceptance remains open.\",\n  \"original_acceptance_queries_actions_deadlines_unchanged\": true,\n  \"original_core_fixture_pin_only_reconstructed\": true,\n  \"original_entire_fixture_reconstructed\": true,\n  \"pass\": true,\n  \"profile\": \"root-ios-frame-diagnostic-source-review/v1\",\n  \"retry_authorized_by_record\": false,\n  \"reviewer\": \"/root\",\n  \"source6\": {\n    \"docs/ios-simulator-matrix-plan.md\": \"7822964503e033ef42394055723347e407619b513a333c402c00432573617b82\",\n    \"docs/ios-simulator-matrix.md\": \"c789b6c3cf14fdb0b5a3e0dec29c00e65e690f52f554abaa8a4d498c0c5b3013\",\n    \"mobile/ios/Tests/SizeLayoutFlows.swift\": \"b1aef51016fe4b1a3687bdf3e56637dc748a133b430332023984bfb84f2f10bc\",\n    \"scripts/verify-ios-size-matrix.py\": \"7d697baabfbf88af2c08c30be2220b3bbfbe02df75ef479baba69b0aa6141ec7\",\n    \"tests/test_ios_simulator_matrix.py\": \"3c5a5141e82cb99c0ddce0eda714b28fe703a50bfbc42b6a07dce744665bc9ed\",\n    \"tools/ios_simulator_matrix.py\": \"14840f7e659cbdb6b53c6eca7d7755a9924b59bec5aca303bd2f481696bd6af5\"\n  },\n  \"source_base\": \"a282f2ff00351fad00b19c6c6bb9c28c38f73234\"\n}\n"
+  }
+}

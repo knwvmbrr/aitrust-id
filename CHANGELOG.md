@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-ios-size-matrix-frame-diagnostics
+
+Recorded 2026-11-24T13:30:16.499971+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Add bounded value-only numeric diagnostics at the existing layout-geometry refusal while retaining its exact boolean and all actions, then update only the fixture hash and plan.
+- **Evidence.** One affected derivation unittest passes; complete prior Swift/core reconstruction and fixed finite-field structure checks pass with six/114 bindings stable. Different source review confirms no new query, wait, gesture or acceptance change; all21 actual candidate3 evidence files remain unchanged. [Change record](./runs/changes/2026-11-24-ios-size-matrix-frame-diagnostics.json).
+- **Not claimed.** Source-only diagnostics, not actual refused-condition evidence or a supported-cause fix. Native formatter/Swift execution and complete four-size matrix remain unqualified; old821b/c61 baseline does not qualify future70e/build2. No old/new result composition, physical/human accessibility, seven-flow replacement, accuracy, release, admission or original closure.
+
+
 ### 2026-11-24-ios-size-matrix-control-reach
 
 Recorded 2026-11-24T06:01:22.178784+00:00 · Contributor: Codex /root/web_camo · change
