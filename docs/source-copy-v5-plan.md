@@ -69,3 +69,37 @@ Current affected controls exercise phase ledger exhaustion, forbidden/duplicate 
 ROOT reviewed the exact87-descriptor counter, sequential custody amendment and review-ready handoff, then authorized precisely four additional project names: tests/test_distribution_artifacts.py, tests/test_source_snapshot_managed.py, runs/2026-11-24-source-v5-caller-lifecycle.json, and runs/changes/2026-11-24-source-v5-caller-lifecycle.json. Both test files are existing Q project maintenance paths and are listed in maintained_project_files too. The two record names are optional factual records, not permissions from status. Removing exactly these four/two entries reconstructs the exact452 table bytes. Total105 project names plus one typed copied container equals106/160; old159 names, copied25/9 origins, immutable foundations, tokenizer95 anchors and all grants/caps are unchanged.
 
 Only the V5 module POLICY_SHA256 literal and the existing literal-count assertion102→106 change. All V5 function bodies remain exact452. The different mechanism review d318ae97 covers the six current S/R/H production/test sources including the corrected real post-dup identity fault; it does not approve ROOT activation. Final affected controls bind this metadata/pin phase separately from prior39/3/2 executions. ROOT final source review and later installed25-row rebind/current integrated classification/archive/consumer qualification remain required before route activation. This handoff does not inherit452 acceptance or make any original closure claim.
+
+
+## Current repaired image/iPhone source registration over793
+
+A private exact plan was persisted before source/data edits (SHA566e17d12de96d74ddf1e0bf5a6842e4266d7f91c28952041fc75dd3a6bee649). Ordinary merges retain ROOT2ab, image1b6c91ed and phone9d74c83b histories and original failed/source-only records. Image/phone merge bases are5da9842f/fd8c075e, so their feature deltas do not replace the newer protected-Q V4/source files with stale ancestor trees. Only understood CHANGELOG unions were resolved.
+
+The finite delta adds exactly these14 factual names; they do not represent completed qualification merely by being named:
+- runs/2026-11-24-image-reference-position-buffer.json
+- runs/2026-11-24-image-reference-validation.json
+- runs/2026-11-24-ios-clear-editor-source.json
+- runs/2026-11-24-ios-size-matrix-control-reach.json
+- runs/2026-11-24-ios-size-matrix-frame-diagnostics.json
+- runs/2026-11-24-reference-phone-wave.json
+- runs/2026-11-24-source-v5-current-integration.json
+- runs/changes/2026-11-24-image-reference-position-buffer.json
+- runs/changes/2026-11-24-image-reference-validation.json
+- runs/changes/2026-11-24-ios-clear-editor-source.json
+- runs/changes/2026-11-24-ios-size-matrix-control-reach.json
+- runs/changes/2026-11-24-ios-size-matrix-frame-diagnostics.json
+- runs/changes/2026-11-24-reference-phone-wave.json
+- runs/changes/2026-11-24-source-v5-current-integration.json
+
+Add only these five existing protected-Q project files to both project_files and maintained_project_files; original license/declaration markers remain mandatory:
+- docs/session-delivery-plan.md
+- docs/session-delivery.json
+- mobile/ios/Source/CheckerController.swift
+- mobile/ios/Tests/UIFlows.swift
+- tools/visual_score_reference.py
+
+Removing exactly those19 project/five maintenance entries reconstructs the exact793 table7ee0e9f7. Final124 project names plus the same single typed tokenizer container equals125/160. Module changes only the POLICY_SHA256 literal, and the existing count assertion106→125. All V5 functions and old159/25copied/9origins, e72, IO and V1–V4 remain byte-immutable. Exact tokenizer623310B copied body and95 source-grant anchors match actual retained bytes/Git identities; no new third-party category or runtime permission is added.
+
+The installed source registry changes only its files array: add current V5 module/table and refresh current source-admission/source-managed hashes (23→25). Assessment, scope, license, notices, prerequisites, all other components, all14 route objects and false global claims stay unchanged. The actual common source CONSUMERS set remains20, with current recorded byte identities. No runtime/refactoring/H-web/endpoint or source-caps change occurs. Default three ordinary route contracts remain unchanged; current permission/classification execution is deferred until ROOT source review.
+
+Seven focused finite/capture/refusal controls pass without whole source classification or archive/crypto/native/model execution. ROOT must review this exact assembled source before any full current classifier/archive/protected authorization. Actual image reference qualification and changed iPhone seven-flow/size acceptance remain separately pending; old successes and mock authority are never rebound. Original136complete/66open remains unchanged. A normal final merge/registration commit follows ROOT review, then ROOT schedules actual committed-source qualification and protected consumer/publication.

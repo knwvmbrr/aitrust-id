@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-source-v5-current-integration
+
+Recorded 2026-11-24T15:51:25.906741+00:00 · Contributor: Codex /root/share_debugger; ROOT different final registration/source review · change
+
+- **Changed.** Integrate reviewed image/iPhone source histories with exact125-name V5 copy map and installed25-source registry bindings, preserving all legacy code and grants.
+- **Evidence.** Seven small finite/captured-source/refusal controls pass; exact tokenizer source body and95 anchors match retained bytes/Git identities. Only19 named project/five maintenance additions, V5 digest/count literals and four source-registry bindings change. Actual common20/source25 identities and unchanged14 route contracts are recorded; ROOT/image normal merge guards pass. ROOT independently verifies the stable16-file freeze and executes two critical finite/captured-current-source controls PASS0.045s. [Change record](./runs/changes/2026-11-24-source-v5-current-integration.json).
+- **Not claimed.** Normal final phone/registration merge commit approved after ROOT review. Actual committed-source classifier/archive/protected consumer remain pending at this source checkpoint. No new current whole-source or signature success, image numerical/phone native acceptance, all14-route clearance, independent accuracy, legal clearance or original closure. Existing136complete66open retained.
+
+
 ### 2026-11-24-source-v5-caller-lifecycle
 
 Recorded 2026-11-24T15:24:28.130540+00:00 · Contributor: Codex /root/share_debugger; /root/seo mechanism review; /root final source review · change
@@ -88,6 +97,14 @@ Recorded 2026-11-24T03:16:29.216235+00:00 · Contributor: Codex /root/seo; ROOT 
 - **Changed.** Added one exact tokenizers wheel source-term companion path for private reference preservation, requiring fixed wheel/metadata/source/companion identity before pip and retaining honest empty carried-notice fields. All unlisted wheels retain carried-notice refusal.
 - **Evidence.** Actual100 stdlib/source controls33/35/5/27 pass without skips; before/after88 source hashes match. The same retained wheel fails under original d7 and passes the new preservation observation with empty carried notices. ROOT independently checked93 full texts,309 associations,153 index and the frozen lifecycle source; its actual grouped lifecycle control passed. [Change record](./runs/changes/2026-11-23-tokenizers-source-preservation.json).
 - **Not claimed.** No download, SDK/model installation, native method forward, Linux execution, changed-source dispatch, redistribution permission, compiled coverage, license clearance, original closure or criteria/percentage change. Source-copy classification, successor integration and any hosted private qualification remain ROOT-owned future work.
+
+### 2026-11-24-ios-clear-editor-source
+
+Recorded 2026-11-24T15:25:47.355247+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Return the existing empty editor to view only after explicit Clear in the shared App/Share controller, preserving privacy clearing callers; strengthen passive Clear assertions and current layout source pins.
+- **Evidence.** One affected derivation control, actual App/Share source membership, whole prior-source reconstructions and stale-seven-proof refusal pass with eight/114 current bindings stable. ROOT reviewed the six-path source diff; same-source native seven and matrix remain required. [Change record](./runs/changes/2026-11-24-ios-clear-editor-source.json).
+- **Not claimed.** Source-only product revision, not an observed native fix. All four prior matrix failures and old seven proof remain historical; no future70e/build2 qualification, physical device, human accessibility, accuracy, admission, original closure or composed old/new passes.
 
 
 ### 2026-11-24-ios-size-matrix-frame-diagnostics
