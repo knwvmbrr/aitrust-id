@@ -55,6 +55,38 @@ final class SizeLayoutFlows: XCTestCase {
         }
         print(fields.joined(separator: " "))
     }
+    private func observeClearCompletion(_ clear: XCUIElement, input: XCUIElement,
+                                        result: XCUIElement, app: XCUIApplication,
+                                        scroll: XCUIElement) {
+        let status = app.staticTexts["check-status"]
+        let beforeCleared = status.exists && status.label == "Cleared."
+        let beforeResult = result.exists
+        let beforeInput = !(input.value as? String ?? "").isEmpty
+        guard !beforeCleared, beforeResult, beforeInput else {
+            print("LAYOUT_CLEAR_COMPLETION precondition=0 preCleared=\(beforeCleared ? 1 : 0) preResult=\(beforeResult ? 1 : 0) preInput=\(beforeInput ? 1 : 0)")
+            XCTFail("Unavailable Clear precondition"); return
+        }
+        let started = ProcessInfo.processInfo.systemUptime
+        clear.tap()
+        let completed = XCTNSPredicateExpectation(
+            predicate: NSPredicate(format: "exists == true AND label == %@", "Cleared."), object: status)
+        let outcome = XCTWaiter.wait(for: [completed], timeout: 10)
+        let elapsed = ProcessInfo.processInfo.systemUptime - started
+        let elapsedField = elapsed.isFinite && elapsed >= 0 ? " elapsed=\(elapsed)" : ""
+        if outcome != .completed {
+            let afterCleared = status.exists && status.label == "Cleared."
+            let afterResult = result.exists
+            let empty = input.value == nil || (input.value as? String) == ""
+            let keyboard = app.keyboards.firstMatch.exists
+            let appFrame = app.frame, scrollFrame = scroll.frame, inputFrame = input.frame
+            print("LAYOUT_CLEAR_COMPLETION precondition=1 completed=0 postCleared=\(afterCleared ? 1 : 0) postResult=\(afterResult ? 1 : 0) postInputEmpty=\(empty ? 1 : 0) keyboard=\(keyboard ? 1 : 0)\(elapsedField)")
+            geometryDiagnostic(appFrame, scrollFrame, inputFrame,
+                               scrollFrame.intersection(appFrame), role: .input, attempt: 0)
+        } else {
+            print("LAYOUT_CLEAR_COMPLETION precondition=1 completed=1\(elapsedField)")
+        }
+        XCTAssertEqual(outcome, .completed, "Expected explicit Clear completion")
+    }
     private func assertClearedEditorReturned(_ input: XCUIElement, app: XCUIApplication, scroll: XCUIElement) {
         guard input.exists else {
             print("LAYOUT_CLEAR_EDITOR exists=0")
@@ -195,7 +227,8 @@ final class SizeLayoutFlows: XCTestCase {
         XCTAssertTrue(result.label.contains("No PS pattern found"))
         XCTAssertTrue(result.label.contains("not a safety clearance"))
         let clear = app.buttons["clear"]
-        reveal(clear, app: app, scroll: scroll); readableControl(clear, app: app); clear.tap()
+        reveal(clear, app: app, scroll: scroll); readableControl(clear, app: app)
+        observeClearCompletion(clear, input: input, result: result, app: app, scroll: scroll)
         XCTAssertFalse(result.exists)
         XCTAssertTrue(input.value == nil || (input.value as? String) == "")
         assertClearedEditorReturned(input, app: app, scroll: scroll)
@@ -212,7 +245,8 @@ final class SizeLayoutFlows: XCTestCase {
         XCTAssertFalse(evidence.frame.intersects(result.frame))
         screenshot(app, name: "size-layout-evidence")
         reveal(why, app: app, scroll: scroll); why.tap(); XCTAssertFalse(evidence.exists)
-        reveal(clear, app: app, scroll: scroll); clear.tap(); XCTAssertFalse(result.exists)
+        reveal(clear, app: app, scroll: scroll)
+        observeClearCompletion(clear, input: input, result: result, app: app, scroll: scroll); XCTAssertFalse(result.exists)
         XCTAssertTrue(input.value == nil || (input.value as? String) == "")
         assertClearedEditorReturned(input, app: app, scroll: scroll)
         let practice = app.buttons["practice-share"]

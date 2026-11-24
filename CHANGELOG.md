@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-ios-clear-completion-witness
+
+Recorded 2026-11-24T16:25:43.608998+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Observe the existing Cleared status after each single explicit Clear tap in the independent layout fixture, retaining all original empty-state and visibility assertions and fixed native caps.
+- **Evidence.** One affected derivation control and whole prior-fixture/core reconstruction pass with eight/114 current bindings stable; product and seven-suite sources remain exact. Preconditions and fixed completion diagnostics add no action retries or tolerance. [Change record](./runs/changes/2026-11-24-ios-clear-completion-witness.json).
+- **Not claimed.** Source-only diagnostic, not a product fix, root cause or native pass. Prior independent matrix and current seven remain failed/open; new small-screen three-configuration run pending source review and slot release. No old/new composition, physical/human accessibility, build2, accuracy, admission or original closure.
+
+
 ### 2026-11-24-ios-source-baseline-readiness
 
 Recorded 2026-11-24T15:50:43.382400+00:00 · Contributor: Codex /root/web_camo · change
