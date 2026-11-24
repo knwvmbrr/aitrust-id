@@ -43,7 +43,7 @@ final class SizeLayoutFlows: XCTestCase {
             let gap = upward ? frame.maxY - viewport.maxY : viewport.minY - frame.minY
             let slack = upward ? frame.minY - viewport.minY : viewport.maxY - frame.maxY
             guard gap.isFinite, slack.isFinite, gap > 0, slack >= gap else { refuse(3, attempt); return }
-            let desired = gap + min(8, max(0, slack - gap))
+            let desired = gap + min(16, max(0, slack - gap))
             let distance = min(desired, slack, 320, viewport.height / 2)
             guard distance.isFinite, distance >= 1 else { refuse(4, attempt); return }
             let origin = CGPoint(x: viewport.midX, y: viewport.minY + viewport.height * (upward ? 0.7 : 0.3))

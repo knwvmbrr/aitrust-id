@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-ios-size-matrix-control-reach
+
+Recorded 2026-11-24T06:01:22.178784+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Increase only the separate layout observer’s optional breathing allowance from8 to16 points after retained check-control motion observations, with its fixture hash and plan updated.
+- **Evidence.** One affected derivation unittest and five captured scalar-expression cases pass; six/114 bindings remain stable. Different source review reconstructs entire prior Swift by one allowance literal and entire prior runner by one fixture hash. Both real failed matrix attempts remain retained with owned cleanup verified. [Change record](./runs/changes/2026-11-24-ios-size-matrix-control-reach.json).
+- **Not claimed.** Source-only experiment; requested movement is not assumed actual UIKit displacement or universal threshold. Full containment, hittability, eight-action and all original time/resource/source limits remain; third native/matrix result pending. No old/new result composition, physical/human accessibility, seven-flow replacement, accuracy, tag release, admission or original closure.
+
+
 ### 2026-11-24-ios-size-matrix-navigation
 
 Recorded 2026-11-24T05:46:00.855166+00:00 · Contributor: Codex /root/web_camo · change
