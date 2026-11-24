@@ -1,5 +1,5 @@
 {
-  "format": "visual-score-qualification-declared-notices/v1",
+  "format": "visual-score-qualification-declared-notices/v2",
   "actual_wheels_inspected": false,
   "legal_clearance": false,
   "binary_redistribution_approved": false,
@@ -403,7 +403,14 @@
       "license_expression_declared": null,
       "license_legacy_declared": null,
       "license_files_declared": [],
-      "future_check": "inspect all declared files and bounded shipped LICENSE/NOTICE/COPYING/COPYRIGHT candidates; preserve in wheels/venv; reject none"
+      "future_check": "Exact private reference source-preservation/v1 amendment: retain carried_notices:[]; require reviewed exact-wheel source companion before pip. Every unlisted wheel still rejects absent carried notices.",
+      "source_preservation": {
+        "policy": "private-reference-source-notice-preservation/v1",
+        "companion_path": "integrations/visual-score-reference/tokenizers-0.23.3-source-notices-v1.json",
+        "companion_sha256": "0073729ee413c85b56664bfbee074dcb25e589378acf71921a533b5eddb4347c",
+        "purpose": "PRIVATE_REFERENCE_QUALIFICATION_ONLY",
+        "carried_notices": []
+      }
     },
     {
       "name": "torch",

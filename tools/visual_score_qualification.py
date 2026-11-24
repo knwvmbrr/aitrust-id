@@ -1,5 +1,7 @@
 """Qualification-only, pinned acquisition and private owned workspace; never an inference download."""
 import argparse
+import base64
+import io
 from contextlib import contextmanager,ExitStack
 import signal
 import email.parser
@@ -24,7 +26,7 @@ DATA='integrations/visual-score-reference/qualification-linux-cp313.json'
 LOCK='integrations/visual-score-reference/qualification-linux-cp313.lock'
 DATA_SHA='576e084e9d6ba3a68fe9d58ab0132b2c392836bf07ed0fd10877aa4d06b305cc'
 NOTICE_DATA='integrations/visual-score-reference/qualification-notice-inventory.json'
-NOTICE_SHA='f76d4cc04d8c346c05e7a0e615640313f70523ea9277c33b9468a83ce4bec916'
+NOTICE_SHA='304ebc76c2d2de149d62fa546fb56a96e094a05b83a4712681acb41534a5297c'
 RESERVE=2*1024**3
 MAX_NOTICE=4*1024**2
 HEAD_URL='https://raw.githubusercontent.com/WisconsinAIVision/UniversalFakeDetect/030495aea3300a8b54c0ec37ec7fe1dd7e63c619/pretrained_weights/fc_weights.pth'
@@ -99,9 +101,92 @@ def raw_file(path,cap):
   current=os.fstat(fd);need(len(data)==st.st_size and (current.st_dev,current.st_ino,current.st_mode,current.st_size,current.st_mtime_ns,current.st_ctime_ns)==(st.st_dev,st.st_ino,st.st_mode,st.st_size,st.st_mtime_ns,st.st_ctime_ns));return data
  finally:os.close(fd)
 
+COMPANION='integrations/visual-score-reference/tokenizers-0.23.3-source-notices-v1.json'
+COMPANION_SHA='0073729ee413c85b56664bfbee074dcb25e589378acf71921a533b5eddb4347c'
+COMPANION_BYTES=623310
+COMPANION_LEAF='tokenizers-source-notices.json'
+COMPANION_POLICY='private-reference-source-notice-preservation/v1'
+TOKENIZER_TARGET={'name':'tokenizers','version':'0.23.3','filename':'tokenizers-0.23.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl','bytes':3396193,'sha256':'376851d22bcf9d650a5c3090bb83e6cf9e895fbf0595369fa4cd43c1f69b5f87','metadata_bytes':9830,'metadata_sha256':'87032ea29ec14be956ce0f15d164a8f436d6f1adbe19b261d6c179d9184f5cba'}
+
+def _canonical(value):return json.dumps(value,sort_keys=True,separators=(',',':'),ensure_ascii=True,allow_nan=False).encode()
+
+def _decode_source_companion(raw):
+ # Hash BEFORE parsing. This is a fixed reviewed source projection, not caller policy.
+ need(type(raw)is bytes and len(raw)==COMPANION_BYTES and sha(raw)==COMPANION_SHA)
+ d=json.loads(raw);need(_canonical(d)+b'\n'==raw)
+ need(type(d)is dict and set(d)=={'format','policy','purpose','target','source','carried_notices','counts','packages','texts','associations','claims','limits'})
+ need(d['format']=='visual-score-exact-wheel-source-preservation/v1' and d['policy']==COMPANION_POLICY and d['purpose']=='PRIVATE_REFERENCE_QUALIFICATION_ONLY' and d['target']==TOKENIZER_TARGET and d['carried_notices']==[])
+ need(d['counts']=={'packages':153,'registry':151,'workspace':2,'texts':93,'text_bytes':300341,'associations':309,'source_carried_associations':307,'upstream_supplement_associations':2})
+ need(type(d['claims'])is dict and set(d['claims'])=={'compiled_coverage_established','license_clearance','redistribution_approved','distribution_admitted','source_build_reproduced','accuracy_established','original_requirement_closed'} and all(v is False for v in d['claims'].values()))
+ source=d['source'];need(type(source)is dict and source['commit']=='301277072263fb3830eb66eec7e47adadf76f1dc' and source['lock_sha256']=='afcedf7f2ebe008b068d7afd25e77f7d9d8e433c24153bc35a1eb5611083ee5b' and source['sdist_sha256']=='cded33237c77caeef62944d32aa9a7ef42bdce2b3497e18d137e072a8c4be438')
+ need(source['publisher_provenance']['subject_sha256']==TOKENIZER_TARGET['sha256'] and source['publisher_provenance']['commit']==source['commit'] and source['publisher_provenance']['independently_verified_attestation'] is False)
+ texts=d['texts'];need(type(texts)is list and len(texts)==93)
+ seen={};decoded=0
+ for row in texts:
+  need(type(row)is dict and set(row)=={'sha256','bytes','base64'} and type(row['bytes'])is int and 0<row['bytes']<=16384 and type(row['base64'])is str)
+  body=base64.b64decode(row['base64'],validate=True);need(len(body)==row['bytes'] and sha(body)==row['sha256'] and row['sha256']not in seen and base64.b64encode(body).decode()==row['base64'])
+  decoded+=len(body);need(decoded<=300341);seen[row['sha256']]=row['bytes']
+ need(decoded==300341 and [r['sha256']for r in texts]==sorted(seen))
+ packages=d['packages'];need(type(packages)is list and len(packages)==153)
+ package_map={}
+ for row in packages:
+  need(type(row)is dict and set(row)=={'id','name','version','source_kind','source','checksum','license_declared','selected_features','compiled_incorporation','association_ids'} and len(_canonical(row))<=1024)
+  need(type(row['name'])is str and type(row['version'])is str and row['id']==row['name']+'@'+row['version'] and row['id']not in package_map and row['selected_features']=='unknown' and row['compiled_incorporation']=='unknown')
+  need(row['license_declared']is None or type(row['license_declared'])is str)
+  if row['source_kind']=='registry':need(row['source']=='registry+https://github.com/rust-lang/crates.io-index' and type(row['checksum'])is str and len(row['checksum'])==64 and set(row['checksum'])<=set('0123456789abcdef'))
+  else:need(row['source_kind']=='workspace' and row['id']in ('tokenizers@0.23.2','tokenizers-python@0.23.3') and row['source']is None and row['checksum']is None)
+  need(type(row['association_ids'])is list and row['association_ids']==sorted(set(row['association_ids'])))
+  package_map[row['id']]=row
+ need([r['id']for r in packages]==sorted(package_map) and sum(r['source_kind']=='registry'for r in packages)==151)
+ associations=d['associations'];need(type(associations)is list and len(associations)==309)
+ indexed={};references={k:[] for k in package_map};roles=[]
+ for row in associations:
+  need(type(row)is dict and len(_canonical(row))<=768 and set(row)in ({'id','package','term_sha256','role','archive_sha256','member','retained_source_path'},{'id','package','term_sha256','role','archive_sha256','member','retained_source_path','upstream'}))
+  need(row['id']==sha(_canonical({k:v for k,v in row.items()if k!='id'})) and row['id']not in indexed and row['package']in package_map and row['term_sha256']in seen)
+  package=package_map[row['package']];need(row['archive_sha256']==(package['checksum']or source['sdist_sha256']))
+  need(type(row['member'])is str and type(row['retained_source_path'])is str and row['retained_source_path']in ('sbom/nli-native/sources/'+row['term_sha256']+'.txt','sbom/c2pa-native/sources/'+row['term_sha256']+'.txt'))
+  need(row['role']in ('source-carried','project-source-carried','upstream-source-supplement'))
+  if row['role']=='upstream-source-supplement':need(row['package']=='defmt-parser@1.0.0' and 'upstream'in row)
+  else:need('upstream'not in row and row['role']==('source-carried'if package['checksum']else 'project-source-carried'))
+  roles.append(row['role']);indexed[row['id']]=row;references[row['package']].append(row['id'])
+ need([r['id']for r in associations]==sorted(indexed) and roles.count('upstream-source-supplement')==2 and all(sorted(references[k])==v['association_ids']and references[k]for k,v in package_map.items()) and {r['term_sha256']for r in associations}==set(seen))
+ return d
+
+def _source_companion(raw):
+ try:return _decode_source_companion(raw)
+ except (ValueError,TypeError,KeyError,IndexError,AttributeError):raise QualificationRefused('source_companion_refused') from None
+
+def source_companion(root=ROOT):
+ raw=raw_file(root/COMPANION,1024**2);return raw,_source_companion(raw)
+
+def companion_summary():
+ return {'policy':COMPANION_POLICY,'sha256':COMPANION_SHA,'bytes':COMPANION_BYTES,'packages':153,'source_texts':93,'source_text_bytes':300341,'associations':309,'purpose':'PRIVATE_REFERENCE_QUALIFICATION_ONLY','carried_notices':[],'compiled_coverage_established':False,'license_clearance':False,'redistribution_approved':False}
+
+def workspace_companion(path):
+ expected,_=source_companion();leaf=path/COMPANION_LEAF
+ before=os.stat(leaf,follow_symlinks=False);need(stat.S_ISREG(before.st_mode) and stat.S_IMODE(before.st_mode)==0o600 and before.st_uid==os.geteuid() and before.st_nlink==1)
+ raw=raw_file(leaf,1024**2);need(raw==expected)
+ after=os.stat(leaf,follow_symlinks=False)
+ identity=lambda s:(s.st_dev,s.st_ino,s.st_mode,s.st_uid,s.st_nlink,s.st_size,s.st_mtime_ns,s.st_ctime_ns)
+ need(identity(before)==identity(after));return identity(after)
+
+def notice_observations(path):
+ workspace_companion(path);d=json.loads(raw_file(path/'notice-observations.json',2*1024**2))
+ need(type(d)is dict and set(d)=={'format','packages','legal_clearance'} and d['format']=='visual-score-wheel-notices/v2' and d['legal_clearance']is False and type(d['packages'])is list and len(d['packages'])==39)
+ need([(r['name'],r['version'])for r in d['packages']]==[(r['name'],r['version'])for r in selection()['packages']])
+ need(all(type(r['notices'])is list and (r['name']=='tokenizers' or bool(r['notices']))for r in d['packages']))
+ tokens=[r for r in d['packages']if r['name']=='tokenizers'];need(len(tokens)==1 and tokens[0]['notices']==[] and tokens[0]['carried_notices']==[] and tokens[0]['supplemental_source_preservation']==companion_summary())
+ return d
+
+def seal_inventory(path,identity):
+ check_root(path,identity);before=workspace_companion(path);entries=snapshot(path);need(workspace_companion(path)==before)
+ need(COMPANION_LEAF in entries and stat.S_ISREG(entries[COMPANION_LEAF][2]) and entries[COMPANION_LEAF][4]==COMPANION_BYTES)
+ return {'format':'visual-score-workspace-inventory/v2','workspace_devino':identity,'entries':entries,'source_notice_companion':companion_summary()}
+
 def selection(root=ROOT):
  raw=raw_file(root/DATA,256*1024);need(sha(raw)==DATA_SHA);data=json.loads(raw)
  need(sha(raw_file(root/NOTICE_DATA,65536))==NOTICE_SHA)
+ source_companion(root)
  rows=data['packages'];need(len(rows)==39 and len({x['name'] for x in rows})==39)
  expected='# Fixed CPython3.13/Linuxx86_64 CPU runtime + qualification-only HF reference. No dependency resolution at install.\n'+''.join(x['name']+'=='+x['version']+' --hash=sha256:'+x['wheel']['sha256']+'\n' for x in rows)
  need(raw_file(root/LOCK,8192).decode()==expected)
@@ -181,9 +266,13 @@ def safe_member(info):
  return p
 
 def inspect_wheel(path,row):
- """No extraction/import; validate names and shipped notices before pip sees a wheel."""
+ """No extraction/import; preserve carried notices or the fixed private source companion before pip."""
  notices=[]
- with zipfile.ZipFile(path) as archive:
+ target=TOKENIZER_TARGET
+ special=(row.get('name'),row.get('version'),row.get('metadata_sha256'),row.get('wheel',{}))==(target['name'],target['version'],target['metadata_sha256'],{'filename':target['filename'],'size':target['bytes'],'sha256':target['sha256'],'url':row.get('wheel',{}).get('url')})
+ if special:
+  raw=raw_file(path,target['bytes']);need(len(raw)==target['bytes'] and sha(raw)==target['sha256']);source_companion()
+ with zipfile.ZipFile(io.BytesIO(raw) if special else path) as archive:
   members=archive.infolist();need(0<len(members)<=40000 and len({x.filename for x in members})==len(members))
   total=0;by={}
   for info in members:
@@ -194,6 +283,7 @@ def inspect_wheel(path,row):
   metas=[x for x in by if len(PurePosixPath(x).parts)==2 and x.endswith('.dist-info/METADATA')];need(len(metas)==1)
   meta=by[metas[0]];need(meta.file_size<=256*1024)
   data=archive.read(meta);need(sha(data)==row['metadata_sha256'])
+  if special:need(len(data)==target['metadata_bytes'])
   prefix=metas[0][:-len('METADATA')];declared=[]
   for name in row['license_files_declared']:
    need(type(name)is str and not PurePosixPath(name).is_absolute() and '..' not in PurePosixPath(name).parts)
@@ -203,12 +293,14 @@ def inspect_wheel(path,row):
   for name,info in by.items():
    leaf=PurePosixPath(name).name.lower()
    if not info.is_dir() and any(leaf.startswith(v) for v in ('license','licence','notice','copying','copyright')):candidates.add(name)
-  need(bool(candidates));notice_bytes=0
+  need(not candidates if special else bool(candidates));notice_bytes=0
   for name in sorted(candidates):
    info=by[name];need(info.file_size<=MAX_NOTICE);notice_bytes+=info.file_size;need(notice_bytes<=64*1024**2)
    data=archive.read(info);need(len(data)==info.file_size)
    notices.append({'member':name,'bytes':len(data),'sha256':sha(data),'publisher_declared':name in declared})
- return {'name':row['name'],'version':row['version'],'expanded_bytes':total,'notices':notices}
+ result={'name':row['name'],'version':row['version'],'expanded_bytes':total,'notices':notices}
+ if special:result.update(carried_notices=[],supplemental_source_preservation=companion_summary())
+ return result
 
 MAX_TREE_ENTRIES=60000
 MAX_TREE_DEPTH=48
@@ -344,21 +436,23 @@ def cleanup(path,identity,inventory):
 
 def install(path,identity):
  from tools.visual_score_runtime import isolation
- isolation();check_root(path,identity);selection()
+ isolation();check_root(path,identity);selection();workspace_companion(path)
  env=credential_free();env['HOME']=str(path/'home')
  for row in selection()['packages']:
   w=row['wheel'];file=path/'wheels'/w['filename']
   with file.open('rb') as stream:
    h=hashlib.file_digest(stream,'sha256')
   need(file.stat().st_size==w['size'] and h.hexdigest()==w['sha256']);inspect_wheel(file,row)
+ workspace_companion(path)
  for command in [[sys.executable,'-I','-B','-m','venv',str(path/'venv')],[str(path/'venv/bin/python'),'-I','-B','-m','pip','install','--no-index','--find-links',str(path/'wheels'),'--no-deps','--no-compile','--require-hashes','--no-cache-dir','-r',str(ROOT/LOCK)]]:
   call(command,timeout=240,env=env)
 
 def acquire(path):
  operation='capacity';counts={k:0 for k in ACQUISITION_COUNTS}
  try:
-  selection();capacity(path.parent);need(not path.exists());path.mkdir(mode=0o700)
+  operation='notice';companion,_=source_companion();selection();operation='capacity';capacity(path.parent);need(not path.exists());path.mkdir(mode=0o700)
   for name in ['wheels','models','home','tmp','fixtures']:(path/name).mkdir(mode=0o700)
+  operation='notice';write_new(path/COMPANION_LEAF,companion);workspace_companion(path)
   from tools.visual_score_assets import HEAD_BYTES,HEAD_GIT_BLOB,pinned_head,BACKBONE_BYTES,BACKBONE_SHA
   deadline=time.monotonic()+900
   operation='head_fetch'
@@ -372,7 +466,7 @@ def acquire(path):
   counts['current_wheel_ordinal']=0;operation='backbone'
   acquire_file(MODEL_URL,path/'models/model.safetensors',BACKBONE_BYTES,BACKBONE_SHA,deadline=deadline);counts['backbone_verified']=1
   operation='notice'
-  write_new(path/'notice-observations.json',json.dumps({'format':'visual-score-wheel-notices/v1','packages':notices,'legal_clearance':False},sort_keys=True).encode());counts['notice_inventory_written']=1
+  write_new(path/'notice-observations.json',json.dumps({'format':'visual-score-wheel-notices/v2','packages':notices,'legal_clearance':False},sort_keys=True).encode());counts['notice_inventory_written']=1
   return head
  except BaseException as error:
   try:failure=AcquisitionFailed(acquisition_failure(error,operation,counts))
@@ -442,11 +536,11 @@ def main(argv=None):
  if a.phase=='install':install(path,identity);return
  if a.phase=='fixtures':make_fixtures(path);return
  if a.phase=='seal':
-  data=json.dumps({'workspace_devino':identity,'entries':snapshot(path)},sort_keys=True,separators=(',',':')).encode();need(len(data)<=16*1024**2);write_new(Path(a.inventory),data);print(sha(data));return
- raw=raw_file(Path(a.inventory),16*1024**2);need(sha(raw)==a.inventory_sha256);d=json.loads(raw);need(d['workspace_devino']==identity)
+  data=json.dumps(seal_inventory(path,identity),sort_keys=True,separators=(',',':')).encode();need(len(data)<=16*1024**2);write_new(Path(a.inventory),data);print(sha(data));return
+ raw=raw_file(Path(a.inventory),16*1024**2);need(sha(raw)==a.inventory_sha256);d=json.loads(raw);need(set(d)=={'format','workspace_devino','entries','source_notice_companion'} and d['format']=='visual-score-workspace-inventory/v2' and d['workspace_devino']==identity and d['source_notice_companion']==companion_summary() and COMPANION_LEAF in d['entries'])
  cleanup(path,identity,d['entries']);print(json.dumps({'pass':True,'workspace_removed':not path.exists(),'recursive_deletion_used':False}))
 
-SOURCE_PATHS=['tools/visual_score.py', 'tools/visual_score_assets.py', 'tools/visual_score_runtime.py', 'tools/visual_score_process.py', 'scripts/inspect-visual-score.py', 'tests/test_visual_score.py', 'docs/offline-image-score-plan.md', 'docs/offline-image-score-guide.md', 'docs/offline-image-score-qualification-plan.md', 'integrations/visual-score-reference/1.0.0/clip-license.txt', 'integrations/visual-score-reference/1.0.0/clip-model-card.md', 'integrations/visual-score-reference/1.0.0/clip-model.py', 'integrations/visual-score-reference/1.0.0/hf-config.json', 'integrations/visual-score-reference/1.0.0/hf-metadata.json', 'integrations/visual-score-reference/1.0.0/hf-model-card-reference.json', 'integrations/visual-score-reference/1.0.0/preprocess-reference.json', 'integrations/visual-score-reference/1.0.0/projection.json', 'integrations/visual-score-reference/1.0.0/runtime-candidates.json', 'integrations/visual-score-reference/1.0.0/source.json', 'integrations/visual-score-reference/1.0.0/torchvision-center-crop.py.txt', 'integrations/visual-score-reference/1.0.0/torchvision-license.txt', 'integrations/visual-score-reference/1.0.0/ufd-clip-models.py', 'integrations/visual-score-reference/1.0.0/ufd-head-metadata.json', 'integrations/visual-score-reference/1.0.0/ufd-license.txt', 'integrations/visual-score-reference/1.0.0/ufd-validate.py', 'integrations/image-metadata-reference/1.0.0/tools/png_metadata.py', 'integrations/image-metadata-reference/1.0.0/tools/jpeg_metadata.py', 'scripts/check-ps.py', 'scripts/build-device-detector.py', 'scripts/worker_process.py', 'services/evaluator/app.py', 'protocol/normalization.py', 'protocol/unicode15-data.json', 'tools/visual_score_qualification.py', 'tools/visual_score_reference.py', 'scripts/prepare-visual-score-qualification.py', 'scripts/verify-visual-score-qualification.py', 'tests/test_visual_score_qualification.py', '.github/workflows/visual-score-qualification.yml', 'integrations/visual-score-reference/qualification-notice-inventory.json', 'integrations/visual-score-reference/qualification-linux-cp313.json', 'integrations/visual-score-reference/qualification-linux-cp313.lock', 'docs/offline-image-score-hosted-source-plan.md', 'docs/image-score-cleanup-ownership-correction-plan.md']
+SOURCE_PATHS=[COMPANION,'tools/visual_score.py', 'tools/visual_score_assets.py', 'tools/visual_score_runtime.py', 'tools/visual_score_process.py', 'scripts/inspect-visual-score.py', 'tests/test_visual_score.py', 'docs/offline-image-score-plan.md', 'docs/offline-image-score-guide.md', 'docs/offline-image-score-qualification-plan.md', 'integrations/visual-score-reference/1.0.0/clip-license.txt', 'integrations/visual-score-reference/1.0.0/clip-model-card.md', 'integrations/visual-score-reference/1.0.0/clip-model.py', 'integrations/visual-score-reference/1.0.0/hf-config.json', 'integrations/visual-score-reference/1.0.0/hf-metadata.json', 'integrations/visual-score-reference/1.0.0/hf-model-card-reference.json', 'integrations/visual-score-reference/1.0.0/preprocess-reference.json', 'integrations/visual-score-reference/1.0.0/projection.json', 'integrations/visual-score-reference/1.0.0/runtime-candidates.json', 'integrations/visual-score-reference/1.0.0/source.json', 'integrations/visual-score-reference/1.0.0/torchvision-center-crop.py.txt', 'integrations/visual-score-reference/1.0.0/torchvision-license.txt', 'integrations/visual-score-reference/1.0.0/ufd-clip-models.py', 'integrations/visual-score-reference/1.0.0/ufd-head-metadata.json', 'integrations/visual-score-reference/1.0.0/ufd-license.txt', 'integrations/visual-score-reference/1.0.0/ufd-validate.py', 'integrations/image-metadata-reference/1.0.0/tools/png_metadata.py', 'integrations/image-metadata-reference/1.0.0/tools/jpeg_metadata.py', 'scripts/check-ps.py', 'scripts/build-device-detector.py', 'scripts/worker_process.py', 'services/evaluator/app.py', 'protocol/normalization.py', 'protocol/unicode15-data.json', 'tools/visual_score_qualification.py', 'tools/visual_score_reference.py', 'scripts/prepare-visual-score-qualification.py', 'scripts/verify-visual-score-qualification.py', 'tests/test_visual_score_qualification.py', '.github/workflows/visual-score-qualification.yml', 'integrations/visual-score-reference/qualification-notice-inventory.json', 'integrations/visual-score-reference/qualification-linux-cp313.json', 'integrations/visual-score-reference/qualification-linux-cp313.lock', 'docs/offline-image-score-hosted-source-plan.md', 'docs/image-score-cleanup-ownership-correction-plan.md']
 
 def source_map():
  paths=SOURCE_PATHS+['tools/visual_score_budget.py','scripts/run-visual-score-phase.py','tests/test_visual_score_budget.py','tests/test_visual_score_workflow.py']+[x['retained_metadata_path'] for x in selection()['packages']]

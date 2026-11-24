@@ -21,7 +21,7 @@ class QualificationTests(unittest.TestCase):
   self.assertNotIn('integrations/visual-score-reference/1.0.0/hf-model-card.md',paths)
   self.assertEqual(q.SOURCE_PATHS.count(new),1)
   self.assertEqual(paths[new],hashlib.sha256((ROOT/new).read_bytes()).hexdigest())
-  self.assertEqual(len(paths),87)
+  self.assertEqual(len(paths),88)
   self.assertTrue({'tools/visual_score_budget.py','scripts/run-visual-score-phase.py','tests/test_visual_score_budget.py','tests/test_visual_score_workflow.py'}<=set(paths))
  def test_complete_retained_lock(self):
   d=q.selection();self.assertEqual(len(d['packages']),39);self.assertEqual(sum(x['wheel']['size'] for x in d['packages']),272974128)
@@ -57,6 +57,65 @@ class QualificationTests(unittest.TestCase):
   redirect=q.Redirect();request=__import__('urllib.request',fromlist=['Request']).Request('https://huggingface.co/x')
   for url in ['http://huggingface.co/x','https://huggingface.co.evil.invalid/x','https://name:secret@huggingface.co/x','https://huggingface.co:444/x']:
    with self.assertRaises(q.QualificationRefused):redirect.redirect_request(request,None,302,'',{},url)
+ def test_exact_tokenizer_source_preservation_and_private_lifecycle(self):
+  import base64
+  raw,d=q.source_companion();self.assertEqual((len(d['packages']),len(d['texts']),len(d['associations'])),(153,93,309))
+  self.assertEqual(d['carried_notices'],[]);self.assertTrue(all(v is False for v in d['claims'].values()))
+  self.assertEqual(sum(len(base64.b64decode(r['base64']))for r in d['texts']),300341)
+  with mock.patch.object(q.json,'loads')as decode,self.assertRaises(q.QualificationRefused):q._source_companion(b'X'+raw[1:])
+  decode.assert_not_called()
+  mutations=[lambda x:x['target'].update(sha256='0'*64),lambda x:x['source'].update(commit='0'*40),lambda x:x['texts'][0].update(base64='AAAA'),lambda x:x['packages'].__setitem__(1,x['packages'][0]),lambda x:x['associations'][0].update(term_sha256='0'*64),lambda x:x['claims'].update(redistribution_approved=True),lambda x:x.update(carried_notices=[{'invented':True}])]
+  for change in mutations:
+   changed=json.loads(raw);change(changed);other=q._canonical(changed)+b'\n'
+   # Coherent producer-error fixtures, not a runtime caller hash override.
+   with self.subTest(change=change),mock.patch.object(q,'COMPANION_SHA',q.sha(other)),mock.patch.object(q,'COMPANION_BYTES',len(other)),self.assertRaises(q.QualificationRefused):q._source_companion(other)
+  with tempfile.TemporaryDirectory()as folder:
+   parent=Path(folder).resolve();parent.chmod(0o700);path=parent/'inert.whl'
+   metadata=b'Metadata-Version: 2.4\nName: tokenizers\nVersion: 0.23.3\n\n'
+   with zipfile.ZipFile(path,'w')as archive:archive.writestr('tokenizers-0.23.3.dist-info/METADATA',metadata)
+   target={**q.TOKENIZER_TARGET,'bytes':path.stat().st_size,'sha256':q.sha(path.read_bytes()),'metadata_bytes':len(metadata),'metadata_sha256':q.sha(metadata)}
+   row={'name':'tokenizers','version':'0.23.3','metadata_sha256':q.sha(metadata),'license_files_declared':[],'wheel':{'filename':target['filename'],'size':target['bytes'],'sha256':target['sha256'],'url':'https://example.invalid/INERT.whl'}}
+   # This synthetic ZIP branch control substitutes only test identity and the
+   # already separately validated companion provider. Actual pinned-wheel proof
+   # is retained separately; this is no wheel, compiled or native admission.
+   with mock.patch.object(q,'TOKENIZER_TARGET',target),mock.patch.object(q,'source_companion',return_value=(raw,d)):
+    result=q.inspect_wheel(path,row);self.assertEqual(result['notices'],[]);self.assertEqual(result['carried_notices'],[]);self.assertEqual(result['supplemental_source_preservation'],q.companion_summary())
+    with mock.patch.object(q,'source_companion',side_effect=q.QualificationRefused),self.assertRaises(q.QualificationRefused):q.inspect_wheel(path,row)
+    old=path.read_bytes();path.write_bytes(old[:-1]+bytes([old[-1]^1]))
+    with self.assertRaises(q.QualificationRefused):q.inspect_wheel(path,row)
+    path.write_bytes(old)
+   unknown={**row,'name':'unknown'}
+   with self.assertRaises(q.QualificationRefused):q.inspect_wheel(path,unknown)
+   stage=parent/'visual-score-notice-control';stage.mkdir(mode=0o700);st=stage.stat();identity=[st.st_dev,st.st_ino]
+   from tools import visual_score_runtime as runtime
+   with mock.patch.object(runtime,'isolation'),mock.patch.object(q,'call')as child:
+    with self.assertRaises(FileNotFoundError):q.install(stage,identity)
+    child.assert_not_called()
+   q.write_new(stage/q.COMPANION_LEAF,raw);self.assertEqual(stat.S_IMODE((stage/q.COMPANION_LEAF).stat().st_mode),0o600)
+   with mock.patch.object(runtime,'isolation'),mock.patch.object(q,'selection',return_value={'packages':[]}),mock.patch.object(q,'call')as child:
+    q.install(stage,identity)
+    self.assertEqual(child.call_count,2) # INERT empty-package fixture; no pip/venv executes.
+   with self.assertRaises(FileExistsError):q.write_new(stage/q.COMPANION_LEAF,raw)
+   snap=q.snapshot
+   def drift(directory):
+    entries=snap(directory);(stage/q.COMPANION_LEAF).write_bytes(b'X'+raw[1:]);return entries
+   with mock.patch.object(q,'snapshot',side_effect=drift),self.assertRaises(q.QualificationRefused):q.seal_inventory(stage,identity)
+   self.assertTrue(stage.exists());(stage/q.COMPANION_LEAF).write_bytes(raw)
+   sealed=q.seal_inventory(stage,identity);self.assertEqual(sealed['source_notice_companion'],q.companion_summary());self.assertIn(q.COMPANION_LEAF,sealed['entries'])
+   (stage/q.COMPANION_LEAF).write_bytes(b'X'+raw[1:])
+   with mock.patch.object(runtime,'isolation'),mock.patch.object(q,'call')as child:
+    with self.assertRaises(q.QualificationRefused):q.install(stage,identity)
+    child.assert_not_called()
+   with self.assertRaises(q.CleanupUncertain):q.cleanup(stage,identity,sealed['entries'])
+   (stage/q.COMPANION_LEAF).write_bytes(raw)
+   packages=[{'name':r['name'],'version':r['version'],'notices':[{'member':'INERT-license','sha256':'0'*64,'bytes':1}]}for r in q.selection()['packages']]
+   token=next(r for r in packages if r['name']=='tokenizers');token.update(notices=[],carried_notices=[],supplemental_source_preservation=q.companion_summary())
+   q.write_new(stage/'notice-observations.json',q._canonical({'format':'visual-score-wheel-notices/v2','packages':packages,'legal_clearance':False}))
+   self.assertEqual(q.notice_observations(stage)['packages'],packages)
+   (stage/q.COMPANION_LEAF).write_bytes(raw[:-1]+b' ')
+   with self.assertRaises(q.QualificationRefused):q.notice_observations(stage)
+   (stage/q.COMPANION_LEAF).write_bytes(raw)
+   current=q.seal_inventory(stage,identity);q.cleanup(stage,identity,current['entries']);self.assertFalse(stage.exists())
  def wheel(self,path,extra=None,declared=None):
   meta=b'Metadata-Version: 2.4\nName: example\nVersion: 1.0\nLicense-File: LICENSE\n\n'
   with zipfile.ZipFile(path,'w') as z:
@@ -331,7 +390,9 @@ class CleanupOwnershipTests(unittest.TestCase):
      return b'INERT_NOT_MODEL'
     def capacity(path):
      if operation=='capacity':raise q.QualificationRefused(private)
+    original_write=q.write_new
     def notice(path,raw):
+     if path.name==q.COMPANION_LEAF:return original_write(path,raw)
      if operation=='notice':raise OSError(private)
      raise AssertionError('No inert case may reach successful acquisition')
     with mock.patch.object(q,'selection',return_value={'packages':rows}),mock.patch.object(q,'capacity',side_effect=capacity),mock.patch.object(q,'acquire_file',side_effect=fetch),mock.patch.object(assets,'pinned_head',side_effect=layout),mock.patch.object(q,'inspect_wheel',return_value={'expanded_bytes':1}),mock.patch.object(q,'write_new',side_effect=notice),self.assertRaises(q.AcquisitionFailed)as caught:q.acquire(workspace)

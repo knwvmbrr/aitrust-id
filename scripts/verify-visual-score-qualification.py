@@ -153,7 +153,7 @@ def execute(workspace,base_python):
   q.need(os.listdir(workspace/'tmp')==[])
   report['cases']['missing_model']=native_cli(image,workspace/'absent')==c.unavailable('model_missing');q.need(report['cases']['missing_model']);ps()
   report['cases']['no_sdk']=native_cli(image,models,python=base_python)['state']=='UNAVAILABLE';q.need(report['cases']['no_sdk'])
-  report['wheel_notice_observations']=json.loads(q.raw_file(workspace/'notice-observations.json',2*1024**2))
+  report['wheel_notice_observations']=q.notice_observations(workspace)
   report['stage']='actual_forward';observations={}
   for name in ['gradient.png','baseline.jpg','sliver.png']:
    result=native_cli(fixtures/name,models);q.need(result['state']=='OBSERVED');report['actual_model_forward_completed']=True;expected=reference(fixtures/name,models)
@@ -168,7 +168,7 @@ def execute(workspace,base_python):
   report['stage']='owned_process_controls';report['cases']['production_cancel']=production_stop_probe(image,models,True)
   report['cases']['production_deadline']=production_stop_probe(image,models,False)
   q.need(native_cli(image,models)['state']=='OBSERVED');report['cases']['recovery']=True;ps();report['cases']['PS_independent']=True
-  q.need(os.listdir(workspace/'tmp')==[]);report['source_sha256_after']=q.source_map();q.need(report['source_sha256_after']==report['source_sha256_before']);report['pass']=True;report['state']='FORWARD_CONTROLS_COMPLETED_CLEANUP_PENDING';report['stage']='complete'
+  q.notice_observations(workspace);q.need(os.listdir(workspace/'tmp')==[]);report['source_sha256_after']=q.source_map();q.need(report['source_sha256_after']==report['source_sha256_before']);report['pass']=True;report['state']='FORWARD_CONTROLS_COMPLETED_CLEANUP_PENDING';report['stage']='complete'
  except BaseException:
   report['pass']=False;report['state']='UNQUALIFIED';report['reason']='qualification_failed'
  return report

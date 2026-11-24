@@ -12,7 +12,7 @@ import stat
 from tools import visual_score_budget as b
 from tools import visual_score_qualification as q
 
-SOURCE_SUITE_COUNTS={'test_visual_score.py':33,'test_visual_score_qualification.py':34,'test_visual_score_workflow.py':5,'test_visual_score_budget.py':27}
+SOURCE_SUITE_COUNTS={'test_visual_score.py':33,'test_visual_score_qualification.py':35,'test_visual_score_workflow.py':5,'test_visual_score_budget.py':27}
 
 def emit(path,value):b.write_private(path,b.encode(value))
 def report_dir(path):
