@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-23-ios-size-matrix-source
+
+Recorded 2026-11-24T05:12:29.690848+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Add a separate four-profile three-configuration native layout fixture and owned serial runner, leaving the application, fixed14Plus seven-flow runner, prior proof and shared policy unchanged.
+- **Evidence.** Current28 focused source/process/metadata controls pass with6/114 before-after bindings stable. Actual owned stdlib children confirm late finalization and invalid/shared-clock admission refuse without signalling reaped IDs or losing returned ownership facts; original counters and24/26 proofs are preserved. Earlier actual producer observation remains separately identified:46 members, one pinned layout-fixture substitution and45 unchanged members. No SDK or Simulator ran. [Change record](./runs/changes/2026-11-23-ios-size-matrix-source.json).
+- **Not claimed.** Source-only candidate: no Swift compile, Simulator create/boot/layout run, screenshot visual acceptance, new signing credential, TestFlight, physical phone, human VoiceOver, independent accuracy, route admission, policy change or original closure. Existing fullseven proof stays separate; targeted layouts cannot become seven-flow coverage.
+
+
 ### 2026-11-23-tag-runtime-final-selection
 
 Recorded 2026-11-24T04:19:07.007700+00:00 · Contributor: Codex /root integration; different source/evidence reviewers · change
