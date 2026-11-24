@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-23-current-static-publication
+
+Recorded 2026-11-24T04:53:23.330017+00:00 · Contributor: Codex /root integration; /root/share_debugger different source/artifact review · change
+
+- **Changed.** Publish the exact428-file observed website package, including both whole-build attribution companions, after the reviewed source merge and all11required engineering contexts pass. Update actual production, worker and unresolved qualification state.
+- **Evidence.** Actual428-file creation/read-back, separate source/origin/notice review, final-source bounded capacity and9exact public URL/header comparisons pass. LivePS finding/no-finding/evidence/clear, Escape, Dark switch and catalogue tabs pass with zero page errors or external requests. Canonical main fast-forwards with12 unrelated private files unchanged. [Change record](./runs/changes/2026-11-23-current-static-publication.json).
+- **Not claimed.** Software development preview only. Independent accuracy/human-release gate remains unmet; no new TestFlight, physical phone/VoiceOver, exact model attribution, history/signup/billing/forum service, managed web authorization, global legal clearance or original closure.136complete66open; target60unmet.
+
 ### 2026-11-23-tag-runtime-final-selection
 
 Recorded 2026-11-24T04:19:07.007700+00:00 · Contributor: Codex /root integration; different source/evidence reviewers · change

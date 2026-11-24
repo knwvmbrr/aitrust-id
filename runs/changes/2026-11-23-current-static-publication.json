@@ -1,0 +1,431 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-current-static-publication",
+  "recorded_at": "2026-11-24T04:53:23.330017+00:00",
+  "author": "Codex /root integration; /root/share_debugger different source/artifact review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+  "changed": "Publish the exact428-file observed website package, including both whole-build attribution companions, after the reviewed source merge and all11required engineering contexts pass. Update actual production, worker and unresolved qualification state.",
+  "proves": "Actual428-file creation/read-back, separate source/origin/notice review, final-source bounded capacity and9exact public URL/header comparisons pass. LivePS finding/no-finding/evidence/clear, Escape, Dark switch and catalogue tabs pass with zero page errors or external requests. Canonical main fast-forwards with12 unrelated private files unchanged.",
+  "limits": "Software development preview only. Independent accuracy/human-release gate remains unmet; no new TestFlight, physical phone/VoiceOver, exact model attribution, history/signup/billing/forum service, managed web authorization, global legal clearance or original closure.136complete66open; target60unmet.",
+  "scope_ids": [
+    "F-057",
+    "F-120",
+    "N-012",
+    "N-013",
+    "X-02"
+  ],
+  "files": {
+    "state.json": "36e9402097f9dd6cb203ce46cd980cbf8cdcacde94bba1fb6cef9e3a807b0eea"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-tag-runtime-current-selection.json",
+      "sha256": "1e335b58a57111b4a8ce896f11efb694878757ccf3b23dcd33e162e0c1d32744"
+    }
+  ],
+  "checks": [],
+  "check_summaries": [
+    {
+      "kind": "required_ci",
+      "run_id": 45325922029,
+      "contexts_passed": 11,
+      "accuracy_human_gate_passed": false
+    },
+    {
+      "kind": "bounded_capacity",
+      "run_id": 45325922355,
+      "files": 13888,
+      "packet_bytes": 15625938,
+      "per_process_peak_rss_kib": 264152,
+      "pass": true
+    }
+  ],
+  "actual_build": {
+    "profile": "actual-current-observed-web-build/v1",
+    "started_at": "2026-11-24T04:27:30.293092+00:00",
+    "source_commit": "d801aaafe06fc462a81734fcdd5534669393b305",
+    "pass": true,
+    "steps": [
+      {
+        "argv": [
+          "node",
+          "scripts/verify-changelog.cjs"
+        ],
+        "cwd": ".",
+        "exit_code": 0,
+        "seconds": 20.43647,
+        "log_bytes": 178,
+        "log_sha256": "13327385740b29ae3ca010a95aeced6d61baebe20ff409f53a73add7889fd2a2"
+      },
+      {
+        "argv": [
+          "{existing_verification_python}",
+          "scripts/web-distribution.py",
+          "prepare"
+        ],
+        "cwd": ".",
+        "exit_code": 0,
+        "seconds": 0.058185,
+        "log_bytes": 3051,
+        "log_sha256": "cf3c284406543fbce408d0ce1bf3216eec2507c69e604dc6e591ace01da81506"
+      },
+      {
+        "argv": [
+          "node",
+          "scripts/prepare-device.mjs"
+        ],
+        "cwd": "site",
+        "exit_code": 0,
+        "seconds": 0.307843,
+        "log_bytes": 1688,
+        "log_sha256": "e6071e2bd758ff1eec4eaf6d7036dd3eb13fcdd08056a35db02c1bef6d6368a6"
+      },
+      {
+        "argv": [
+          "node",
+          "scripts/prepare-performance.mjs"
+        ],
+        "cwd": "site",
+        "exit_code": 0,
+        "seconds": 0.288932,
+        "log_bytes": 75,
+        "log_sha256": "4c0df934e0b19460d16fc5a66f99074c4e6cdb7bb78e0523497472220d761f01"
+      },
+      {
+        "argv": [
+          "node",
+          "scripts/prepare.mjs"
+        ],
+        "cwd": "site",
+        "exit_code": 0,
+        "seconds": 1.02877,
+        "log_bytes": 176,
+        "log_sha256": "119d4d7240caaa644995e635f8d389f077dc88a39e76b48a7219002e0fb1a354"
+      },
+      {
+        "argv": [
+          "node",
+          "node_modules/vite/bin/vite.js",
+          "build",
+          "--config",
+          "../scripts/web-checker-build-observer.mjs"
+        ],
+        "cwd": "site",
+        "exit_code": 0,
+        "seconds": 1.442756,
+        "log_bytes": 9823,
+        "log_sha256": "d871c572a5013a4fad58405ddb22a7c044704fd2a795a4a370eaf5ad5560a987"
+      },
+      {
+        "argv": [
+          "node",
+          "scripts/render-reference.mjs"
+        ],
+        "cwd": "site",
+        "exit_code": 0,
+        "seconds": 0.117318,
+        "log_bytes": 147,
+        "log_sha256": "f6be947e35e0a0a31d9da5ec72f1f38cdaed1b3a413ff3848ae09847882987c8"
+      },
+      {
+        "argv": [
+          "node",
+          "scripts/prepare-offline.mjs"
+        ],
+        "cwd": "site",
+        "exit_code": 0,
+        "seconds": 0.39569,
+        "log_bytes": 74,
+        "log_sha256": "30f3bebda8144194bb819f3b4936a410bcc216d2fab2d86b7af429b63190ac4e"
+      },
+      {
+        "argv": [
+          "{existing_verification_python}",
+          "scripts/pyodide-js-sources.py",
+          "--check-built",
+          "site/dist"
+        ],
+        "cwd": ".",
+        "exit_code": 0,
+        "seconds": 0.082647,
+        "log_bytes": 495,
+        "log_sha256": "01274f218ae76792ebf2d7fcdb54daa87d2185053ae29d0d1dad8d6195a872fd"
+      },
+      {
+        "argv": [
+          "{existing_verification_python}",
+          "scripts/zlib-source-delivery.py",
+          "--check-built",
+          "site/dist"
+        ],
+        "cwd": ".",
+        "exit_code": 0,
+        "seconds": 0.095502,
+        "log_bytes": 461,
+        "log_sha256": "9913d615f334135195a66b5e2edf5faf916f16a9c209018fbfea6abff543201e"
+      }
+    ],
+    "installed_dependencies": false,
+    "release_authorized": false,
+    "prior_attempt_failure": "Default system Python lacked already-installed pydantic; this attempt explicitly uses the existing project verification venv.",
+    "tracked_clean_after": true,
+    "same_source_commit_before_after": true,
+    "captured_at": "2026-11-24T04:27:54.625115+00:00",
+    "private_paths_redacted": true
+  },
+  "actual_artifact_prepare": {
+    "artifact": {
+      "bytes": 26222604,
+      "sha256": "f741a53a2ae78f91d5482f53a51c14866b67403759624b9e33bc2e8ecc63901d"
+    },
+    "build_record_verified": true,
+    "captured_at": "2026-11-24T04:28:22.462116+00:00",
+    "claims": {
+      "all_project_obligations_complete": false,
+      "attestation_verified": false,
+      "compiler_reproduced": false,
+      "independent_accuracy_evidence": false,
+      "legal_clearance": false,
+      "release_authorized": false
+    },
+    "files": 428,
+    "genuine_protected_build_verified": false,
+    "pass": true,
+    "private_output_created": true,
+    "profile": "web-checker-artifact/v1",
+    "resources": {
+      "legacy_read_reservation": 0,
+      "logical_read_bytes": 179577260,
+      "peak_owned_fds": 94,
+      "read_calls": 2404
+    },
+    "source_commit": "d801aaafe06fc462a81734fcdd5534669393b305",
+    "source_tree_oid": "87b84b9a0f16987cdc3d696c52cf33e049088465"
+  },
+  "actual_artifact_inspect": {
+    "captured_at": "2026-11-24T04:28:40.742475+00:00",
+    "claims": {
+      "all_project_obligations_complete": false,
+      "attestation_verified": false,
+      "compiler_reproduced": false,
+      "independent_accuracy_evidence": false,
+      "legal_clearance": false,
+      "release_authorized": false
+    },
+    "files": 428,
+    "format_and_source_verified": true,
+    "pass": true,
+    "profile": "web-checker-artifact/v1",
+    "resources": {
+      "legacy_read_reservation": 0,
+      "logical_read_bytes": 127999074,
+      "peak_owned_fds": 94,
+      "read_calls": 1258
+    },
+    "source_commit": "d801aaafe06fc462a81734fcdd5534669393b305"
+  },
+  "actual_stage": {
+    "profile": "exact-reviewed-web-publication-stage/v1",
+    "captured_at": "2026-11-24T04:41:27.441675+00:00",
+    "pass": true,
+    "artifact_sha256": "f741a53a2ae78f91d5482f53a51c14866b67403759624b9e33bc2e8ecc63901d",
+    "source_commit": "d801aaafe06fc462a81734fcdd5534669393b305",
+    "files": 428,
+    "payload_bytes": 25799438,
+    "different_review_sha256": "d20031cfd4a259bd4b71175e8079a5dc4d47e67758f50ffbef6972970ee982c1",
+    "two_attribution_companions_retained": true,
+    "managed_authority": false,
+    "independent_accuracy": false
+  },
+  "actual_publication": {
+    "profile": "actual-static-site-publication-verification/v1",
+    "captured_at": "2026-11-24T04:42:37.908283+00:00",
+    "pass": true,
+    "candidate_source": "d801aaafe06fc462a81734fcdd5534669393b305",
+    "protected_merge": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+    "deployment": "https://f1de4258.aitrust-id.pages.dev",
+    "public_site": "https://aitrustid.com",
+    "checked": [
+      {
+        "path": "index.html",
+        "url": "https://aitrustid.com/",
+        "status": 200,
+        "bytes": 137584,
+        "sha256": "559f04f549eb7ce1bcf345301769ae1a3cee00d54a1e3809b7b83647eb3e7885",
+        "headers": {
+          "Content-Security-Policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "no-referrer",
+          "X-Frame-Options": "DENY",
+          "Cache-Control": "public, max-age=0, must-revalidate, no-transform"
+        }
+      },
+      {
+        "path": "tags/ps/index.html",
+        "url": "https://aitrustid.com/tags/ps/",
+        "status": 200,
+        "bytes": 24610,
+        "sha256": "7c15862f32953f87c773b428c02332a6c271eca7efac0a2f28548fd1cc08f3b0",
+        "headers": {
+          "Content-Security-Policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "no-referrer",
+          "X-Frame-Options": "DENY",
+          "Cache-Control": "public, max-age=0, must-revalidate, no-transform"
+        }
+      },
+      {
+        "path": "policies/privacy/index.html",
+        "url": "https://aitrustid.com/policies/privacy/",
+        "status": 200,
+        "bytes": 22979,
+        "sha256": "66cc3aa3707770b33e823736d9512b1363f16992b5909363a0954d64b678f25d",
+        "headers": {
+          "Content-Security-Policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "no-referrer",
+          "X-Frame-Options": "DENY",
+          "Cache-Control": "public, max-age=0, must-revalidate, no-transform"
+        }
+      },
+      {
+        "path": "robots.txt",
+        "url": "https://aitrustid.com/robots.txt",
+        "status": 200,
+        "bytes": 67,
+        "sha256": "47f5ce379fa6370f31d72721997c0f5807256d2d0149ba4e1ae1ca227d9959b5",
+        "headers": {
+          "Content-Security-Policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "no-referrer",
+          "X-Frame-Options": "DENY",
+          "Cache-Control": "public, max-age=14400, must-revalidate, no-transform"
+        }
+      },
+      {
+        "path": "sitemap.xml",
+        "url": "https://aitrustid.com/sitemap.xml",
+        "status": 200,
+        "bytes": 2339,
+        "sha256": "61dc3fb7e66479b0c75b1125f7e9d58394c2ff59b4ef30457fd11264ddb3cab4",
+        "headers": {
+          "Content-Security-Policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "no-referrer",
+          "X-Frame-Options": "DENY",
+          "Cache-Control": "public, max-age=0, must-revalidate, no-transform"
+        }
+      },
+      {
+        "path": "web-obligations/BUILD-SOURCE-NOTICES.txt",
+        "url": "https://aitrustid.com/web-obligations/BUILD-SOURCE-NOTICES.txt",
+        "status": 200,
+        "bytes": 151560,
+        "sha256": "7538d291943cfd722b0333be3582405bfefea334fc376b28da8d8d86bb06863d",
+        "headers": {
+          "Content-Security-Policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "no-referrer",
+          "X-Frame-Options": "DENY",
+          "Cache-Control": "public, max-age=0, must-revalidate, no-transform"
+        }
+      },
+      {
+        "path": "web-obligations/source-grants.json",
+        "url": "https://aitrustid.com/web-obligations/source-grants.json",
+        "status": 200,
+        "bytes": 4017,
+        "sha256": "467cae183d1c2a3c54624ad4b8a8dbd5490528474436a46ba13ad3e92d0a791a",
+        "headers": {
+          "Content-Security-Policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "no-referrer",
+          "X-Frame-Options": "DENY",
+          "Cache-Control": "public, max-age=0, must-revalidate, no-transform"
+        }
+      },
+      {
+        "path": "web-build-observations.json",
+        "url": "https://aitrustid.com/web-build-observations.json",
+        "status": 200,
+        "bytes": 145539,
+        "sha256": "fad90870944b154cc5b68af0781697b05c44f231dbfc8e98882f6de5c85a0ac4",
+        "headers": {
+          "Content-Security-Policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "no-referrer",
+          "X-Frame-Options": "DENY",
+          "Cache-Control": "public, max-age=0, must-revalidate, no-transform"
+        }
+      },
+      {
+        "path": "assets/index-DZDO4GVl.js",
+        "url": "https://aitrustid.com/assets/index-DZDO4GVl.js",
+        "status": 200,
+        "bytes": 585236,
+        "sha256": "7e667865e63f348c07db2a1a6f82192cc5cab39a0faef292ee6de3fc220b6b49",
+        "headers": {
+          "Content-Security-Policy": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'",
+          "X-Content-Type-Options": "nosniff",
+          "Referrer-Policy": "no-referrer",
+          "X-Frame-Options": "DENY",
+          "Cache-Control": "public, max-age=14400, must-revalidate, no-transform"
+        }
+      }
+    ],
+    "all428_public_bytes_refetched": false,
+    "managed_authority": false,
+    "independent_accuracy": false
+  },
+  "actual_live_interactions": {
+    "profile": "live-site-targeted-interaction/v1",
+    "captured_at": "2026-11-24T04:49:36.510Z",
+    "source": "d801aaafe06fc462a81734fcdd5534669393b305",
+    "pass": true,
+    "physical_phone": false,
+    "human_accessibility": false,
+    "independent_accuracy": false,
+    "checks": {
+      "person14": true,
+      "compact_PS_modal": true,
+      "actual_on_device_finding": true,
+      "visible_evidence": true,
+      "clear_removes_result": true,
+      "actual_no_finding": true,
+      "escape_navigation": true,
+      "dark_switch": true,
+      "enterprise6": true,
+      "unexpected_external_requests": 0,
+      "page_errors": 0
+    },
+    "finding_explanation": "The matched parts below explain why PS flagged this answer. This is a pattern warning, not proof of a scam or malicious intent."
+  },
+  "different_reviews": [
+    {
+      "sha256": "d20031cfd4a259bd4b71175e8079a5dc4d47e67758f50ffbef6972970ee982c1",
+      "bytes": 9380,
+      "raw_utf8": "{\n  \"profile\": \"actual-d801-web-artifact-compact-distinct-review/v1\",\n  \"captured_at\": \"2026-11-24T04:38:16.931835+00:00\",\n  \"reviewer\": \"Codex /root/share_debugger\",\n  \"result\": \"CLEAR_EXACT_428_PAYLOAD_STATIC_PUBLICATION_SCOPE\",\n  \"source_commit\": \"d801aaafe06fc462a81734fcdd5534669393b305\",\n  \"source_tree\": \"87b84b9a0f16987cdc3d696c52cf33e049088465\",\n  \"artifact\": {\n    \"bytes\": 26222604,\n    \"sha256\": \"f741a53a2ae78f91d5482f53a51c14866b67403759624b9e33bc2e8ecc63901d\",\n    \"zip_members\": 429,\n    \"payload_files\": 428,\n    \"expanded_bytes\": 26153478\n  },\n  \"complete_private_data_review\": {\n    \"bytes\": 72617,\n    \"sha256\": \"4d9ab52cc47aaceb65b3cc354c31c03cc658e06b5eb1d405b82c0ece7ede1f4f\",\n    \"source_rows\": 154,\n    \"direct_source_origins\": 310\n  },\n  \"current_committed_mechanism_bytes\": {\n    \"tools/web_checker_artifact.py\": {\n      \"bytes\": 126190,\n      \"sha256\": \"fe4c15e9c0db14b31351f92359c2b8088a781671a86c4a83a39a59803075f607\"\n    },\n    \"scripts/web-checker-artifact.py\": {\n      \"bytes\": 2603,\n      \"sha256\": \"3ee28f6b101c6ab7529e13d4df38fdcd59caccd9d5389a54ead79e71ad79212a\"\n    },\n    \"scripts/web-checker-build-observer.mjs\": {\n      \"bytes\": 17140,\n      \"sha256\": \"cbbe2012c0329d5ced65cdd709afd43a8b46c8f195feb1e303182aef6581e6b8\"\n    },\n    \"tools/web_runtime_obligations.py\": {\n      \"bytes\": 17553,\n      \"sha256\": \"597ac7cc8f53750e723e1119076d63c3363e400e5a7c0ee65bb9cf2ccc52ba7b\"\n    }\n  },\n  \"actual_observed_census\": {\n    \"sources\": 154,\n    \"modules\": 146,\n    \"outputs\": 19,\n    \"module_kinds\": {\n      \"project\": 72,\n      \"npm\": 71,\n      \"virtual\": 3\n    },\n    \"file_origin_kinds\": {\n      \"project-public\": 283,\n      \"project-generated\": 74,\n      \"bundler-output\": 19,\n      \"copied-source\": 27,\n      \"required-obligation\": 17,\n      \"exact-runtime\": 5,\n      \"build-observation\": 1,\n      \"additional-attribution\": 2\n    }\n  },\n  \"runtime_companions\": {\n    \"count_including_index\": 14,\n    \"members\": {\n      \"device-licenses/pyodide-MPL-2.0.txt\": {\n        \"bytes\": 16725,\n        \"sha256\": \"1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5\"\n      },\n      \"device-licenses/python-license.txt\": {\n        \"bytes\": 13804,\n        \"sha256\": \"b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231\"\n      },\n      \"device-licenses/python-stdlib-notices.txt\": {\n        \"bytes\": 245510,\n        \"sha256\": \"cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321\"\n      },\n      \"device-licenses/source.txt\": {\n        \"bytes\": 541,\n        \"sha256\": \"2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2\"\n      },\n      \"device-licenses/unicode-license.txt\": {\n        \"bytes\": 1995,\n        \"sha256\": \"e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96\"\n      },\n      \"runtime-js-sources/NOTICES.txt\": {\n        \"bytes\": 18300,\n        \"sha256\": \"8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4\"\n      },\n      \"runtime-js-sources/PYODIDE-JS-SOURCES.zip\": {\n        \"bytes\": 1632140,\n        \"sha256\": \"63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f\"\n      },\n      \"runtime-js-sources/index.json\": {\n        \"bytes\": 3006,\n        \"sha256\": \"1e26ef876d26f7aea469332d0e0b59779b70e63a0ecfb31a062320da96ce9f4e\"\n      },\n      \"runtime-obligations/HIWIRE-SOURCES.zip\": {\n        \"bytes\": 107606,\n        \"sha256\": \"ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086\"\n      },\n      \"runtime-obligations/NOTICES.txt\": {\n        \"bytes\": 237980,\n        \"sha256\": \"a327d8128ea3db6cd77bc5c21b410bed3bb1fe69aa32a9c4a6f508c624339a40\"\n      },\n      \"runtime-zlib-sources/NOTICES.txt\": {\n        \"bytes\": 7912,\n        \"sha256\": \"f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf\"\n      },\n      \"runtime-zlib-sources/ZLIB-SOURCES.zip\": {\n        \"bytes\": 1682541,\n        \"sha256\": \"145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10\"\n      },\n      \"runtime-zlib-sources/index.json\": {\n        \"bytes\": 1858,\n        \"sha256\": \"0aa8796de6337350dd6aa98c3e9c1da6b0f75797ff96fc224db720cbc40d1dc2\"\n      },\n      \"runtime-obligations/obligations.json\": {\n        \"bytes\": 3233,\n        \"sha256\": \"f7ba6486df0c2a8c50ca85749e6f0ac412bc84b595b3d4bc94d81e1f0d603b13\",\n        \"mode\": 420\n      }\n    },\n    \"exact_five_runtime_members\": {\n      \"pyodide-lock.json\": {\n        \"bytes\": 119077,\n        \"sha256\": \"5dc2fc119108bc148c7457dc86e7675b5c87e1cafd420b9c34c1eaef7b36c010\"\n      },\n      \"pyodide.asm.mjs\": {\n        \"bytes\": 1250344,\n        \"sha256\": \"f7cdc8ece80678ceb712f8e65ebe6d3a83203a180c399865f49612a051693635\"\n      },\n      \"pyodide.asm.wasm\": {\n        \"bytes\": 9598218,\n        \"sha256\": \"cc36e3cab04fdfc9a63ff13eb52eae2b911bf46c025cc7b281f394bd3de1d5e6\"\n      },\n      \"pyodide.mjs\": {\n        \"bytes\": 17931,\n        \"sha256\": \"6f1d60f7bf529beb300f0f47983c921d3982363640ba20af0e38efdddbc66109\"\n      },\n      \"python_stdlib.zip\": {\n        \"bytes\": 2545637,\n        \"sha256\": \"fa1957e5777068fc4f7437f96d860ae2fbe9c19732ba06c84e004ec16dd7dd7a\"\n      }\n    },\n    \"source_offers\": {\n      \"runtime-js-sources\": {\n        \"zip_bytes\": 1632140,\n        \"zip_sha256\": \"63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f\",\n        \"members\": 14,\n        \"expanded_bytes\": 1630348,\n        \"all_member_rows_match\": true,\n        \"claims_false\": true\n      },\n      \"runtime-zlib-sources\": {\n        \"zip_bytes\": 1682541,\n        \"zip_sha256\": \"145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10\",\n        \"members\": 6,\n        \"expanded_bytes\": 1681851,\n        \"all_member_rows_match\": true,\n        \"claims_false\": true\n      },\n      \"runtime-obligations\": {\n        \"zip_bytes\": 107606,\n        \"zip_sha256\": \"ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086\",\n        \"members\": 18,\n        \"expanded_bytes\": 105354,\n        \"all_member_rows_match\": true,\n        \"claims_false\": true\n      }\n    }\n  },\n  \"additional_two_attribution_outputs\": {\n    \"web-obligations/BUILD-SOURCE-NOTICES.txt\": {\n      \"bytes\": 151560,\n      \"mode\": 420,\n      \"sha256\": \"7538d291943cfd722b0333be3582405bfefea334fc376b28da8d8d86bb06863d\"\n    },\n    \"web-obligations/source-grants.json\": {\n      \"bytes\": 4017,\n      \"mode\": 420,\n      \"sha256\": \"467cae183d1c2a3c54624ad4b8a8dbd5490528474436a46ba13ad3e92d0a791a\"\n    }\n  },\n  \"actual_checks\": [\n    \"Exact26,222,604B ZIP SHA plus429regular-safe entries: one metadata+428payload. Every complete metadata/binding row and all428 size/mode/SHA match actual received bytes.\",\n    \"All426 builder-dist bytes match; exact2 package-generated whole-source/build attribution outputs independently reconstructed from9 exact currentGit grant anchors and all146module notice rows. Complete428payload is publication input; raw426dist alone is incomplete for this format.\",\n    \"All154source bodies match actual installed/current bytes; project-source Gitmode/OID/size bound to d801. All310 direct copied/project-public origins match Git and explicit static copied facts; private reviewer parses two existing explicit closed static-fact assignments, no code execution.\",\n    \"All146closed module identities/source-notice offsets, virtual providers,19output hashes/import/module references match the actual descriptor and current assets. Native/builder dependency license adoption is not inferred.\",\n    \"All5runtime file hashes and14companion rows/index match. Three preferred-source ZIPs inspected as data: JS14/Zlib6/Hiwire18member maps and allmemberSHA/bytes match; indices/notices equal their outercompanions; no nested archive or executable run.\",\n    \"All10 actual build-step exit0/log sizes/digests match retained build-result; actualprepare/inspect positive records point to this exact artifact/source. Original default-Python dependency failure and wrong-filename inspect refusal remain separate, untouched.\"\n  ],\n  \"source_review_scope\": \"Different ROOT build/package/static assembly review only. Earlier runtime/helper authorship is qualified; retained primary-grant peers remain separate. This review invokes no producer or inspector.\",\n  \"publication_condition\": \"ROOT confirmed fresh private publication stage will contain only exact inspected428 payload files with closed path/type/nooverwrite/perfileSHA checks. No zero-file additions/omissions; actual deployment/HTTP verification remains ROOT-owned.\",\n  \"claims\": {\n    \"all_project_obligations_complete\": false,\n    \"attestation_verified\": false,\n    \"compiler_reproduced\": false,\n    \"independent_accuracy_evidence\": false,\n    \"legal_clearance\": false,\n    \"release_authorized\": false\n  },\n  \"limits\": [\n    \"No rebuild, producer/preparer/inspector, SDK/native/browser/model/install/network/acquisition or crypto execution; all work was retained data reading/hash/origin inspection.\",\n    \"No managedAUTH/protected signature, independent accuracy/human acceptance, compiler or fullnative/transitive closure, global legal clearance or fullF057/X02/original closure.\",\n    \"React2.3.8 project-grant correspondence remains an inference; four optionalWASI declaration gaps remain explicit.\",\n    \"Initial private review-harness false assumptions are disclosed in full data review: syntax typo,426+2denominator,Gitmode representation,existing static subscript assignments and versionedruntimeprefix. These changed no product/source/grant/acceptance bytes.\"\n  ]\n}\n"
+    },
+    {
+      "sha256": "cae0bd0338534ab1da7072d5cdfd06907f8bd7956e2c9104511bc9af7aeabb27",
+      "bytes": 8238,
+      "raw_utf8": "{\n  \"profile\": \"final-source-capacity-distinct-json-review/v1\",\n  \"captured_at\": \"2026-11-24T04:27:29.195952+00:00\",\n  \"reviewer\": \"Codex /root/share_debugger\",\n  \"pass\": true,\n  \"head\": \"d801aaafe06fc462a81734fcdd5534669393b305\",\n  \"run\": 45325922355,\n  \"attempt\": 1,\n  \"conclusion\": \"success\",\n  \"source_bindings\": {\n    \".github/workflows/source-snapshot-v3.yml\": {\n      \"sha256\": \"dd69974c633d6b17a1d92de50e984655e51b9c80704b98e6b83602a8589e25e7\",\n      \"bytes\": 7542,\n      \"git_blob_oid\": \"3dd04c021e485d09e79aa1d73d611e5090dcfb2e\"\n    },\n    \"docs/artifact-io-ownership-plan.md\": {\n      \"sha256\": \"fd18ec9fe0438fb828921ce88bf0120c4129c440406b6dec8d096cecc7bc2ad2\",\n      \"bytes\": 2942,\n      \"git_blob_oid\": \"6cb997de8a342b645c690742c3c97c07ba3a236e\"\n    },\n    \"docs/source-snapshot-v3-plan.md\": {\n      \"sha256\": \"e779b6b20334d8a72742fd2b258681db6335d67aa627dccabbf482ef37465eee\",\n      \"bytes\": 6233,\n      \"git_blob_oid\": \"1ab6e501f396cb914cca9b23974761f458f250cd\"\n    },\n    \"scripts/build-source-snapshot.py\": {\n      \"sha256\": \"865dee30bb6f2908014fdcee17aac41aa4e0fa149d50d01677c30c7a5a838d56\",\n      \"bytes\": 1381,\n      \"git_blob_oid\": \"5428a2fa36e524d1c662f064c5cf0b1a4b493161\"\n    },\n    \"scripts/source_snapshot.py\": {\n      \"sha256\": \"24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee\",\n      \"bytes\": 10055,\n      \"git_blob_oid\": \"cc2bdf26338e79ded25402f61299e8f3dd0e308a\"\n    },\n    \"scripts/source_snapshot_v2.py\": {\n      \"sha256\": \"baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46\",\n      \"bytes\": 6849,\n      \"git_blob_oid\": \"8c08b580386da0d4efd7291539d6b1e7fe7f797c\"\n    },\n    \"scripts/source_snapshot_v3.py\": {\n      \"sha256\": \"473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8\",\n      \"bytes\": 12110,\n      \"git_blob_oid\": \"90f353ab395f6b8a4a183d79f40eb46012ef013a\"\n    },\n    \"scripts/verify-source-provenance.py\": {\n      \"sha256\": \"cb5ec29a98a4a1c05ad1ef06c0675c05e9d4ffd6347e2832f2405da005b86ab2\",\n      \"bytes\": 5070,\n      \"git_blob_oid\": \"0d0115691f33dba2e35d574e7ab564e774d8db07\"\n    },\n    \"tests/test_artifact_evidence_io.py\": {\n      \"sha256\": \"adc631878d155c4cb2649e730f8a4446ff50838fb504b4030888c18ca347619f\",\n      \"bytes\": 10676,\n      \"git_blob_oid\": \"91a600a85f358d24d37a07fa0fd31595e0a2bf42\"\n    },\n    \"tests/test_distribution_artifacts.py\": {\n      \"sha256\": \"815b366bb0705683993d36199601ac7b629ca2e82721554391b1b7fde54ae82e\",\n      \"bytes\": 26332,\n      \"git_blob_oid\": \"a57d567ff32b340544056e28e9bd85e397b44b4d\"\n    },\n    \"tests/test_source_provenance.py\": {\n      \"sha256\": \"8686ec115a3e02c8e28bbc5c0259bfc37b50148d167206d470046239138e3fe5\",\n      \"bytes\": 17016,\n      \"git_blob_oid\": \"7d7cc303215fa74993abc8b936d2d31a7760decf\"\n    },\n    \"tests/test_source_snapshot_v3.py\": {\n      \"sha256\": \"79664360e4df25954a0e3186a98234a08fd43c22b20dd2e7a4530ef2d25ac0c3\",\n      \"bytes\": 13182,\n      \"git_blob_oid\": \"bdf0f6b7b916999c0fa75b0669c337d61e12b618\"\n    },\n    \"tools/artifact_evidence_io.py\": {\n      \"sha256\": \"2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e\",\n      \"bytes\": 12720,\n      \"git_blob_oid\": \"cb24bd93d9aa222d2d0fb75817f2c306211125a2\"\n    },\n    \"tools/distribution_artifacts.py\": {\n      \"sha256\": \"b45bc06319ced5b5d45198b1689e806c1e2b1f76de1c3e0a97b2c908238fe06f\",\n      \"bytes\": 39209,\n      \"git_blob_oid\": \"2fb9f2bab07a714118771ee74fe822058b755f00\"\n    }\n  },\n  \"git_rows\": 13888,\n  \"git_raw_bytes\": 151697171,\n  \"packet_headroom_bytes\": 374062,\n  \"artifact_api_archive_sha256\": \"sha256:518aac7f30bf558c0e18f15b6936e4e015fb23e1012601c70ec61989cc2abc4e\",\n  \"artifact_api_id\": 14890230857,\n  \"artifact_api_archive_bytes\": 1616,\n  \"raw_result_sha256\": \"338b136974efffcb6967aa71ebdbab0565a61f955e65fd96e59c84a8e4392a50\",\n  \"result\": {\n    \"actual_source_archive_executed\": true,\n    \"address_space_limit_bytes\": 805306368,\n    \"artifact\": {\n      \"installed_dependencies_authenticated\": false,\n      \"profile\": \"aitrust-development-source/1.0.0\",\n      \"sha256\": \"fc0f2b17e49700a39f7f77e07519fbcba1997088f3bc6a54c9fb86d270a8d7d2\",\n      \"source_bytes\": 151697171,\n      \"source_commit\": \"bbd1c9aff961f4e22a3c011efff906eba14599c8\",\n      \"source_files\": 13888,\n      \"tag_release_validated\": false\n    },\n    \"build_cli\": {\n      \"exit\": 0,\n      \"stderr_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\n      \"stdout_sha256\": \"ed6292ee2339f3429ee91737f836ec5a9e7a1728108593868a1ec633bf1cfec2\"\n    },\n    \"captured_at\": \"2026-11-24T04:22:38.632151+00:00\",\n    \"event_sha\": \"bbd1c9aff961f4e22a3c011efff906eba14599c8\",\n    \"focused\": {\n      \"errors\": 0,\n      \"failed_test_ids\": [],\n      \"failures\": 0,\n      \"log_sha256\": \"f1f9efdb692a414eb34fee606f6c51544403d6a58c67c31d8e9b81449c641522\",\n      \"skipped\": 0,\n      \"tests\": 16\n    },\n    \"graph_nodes\": 13888,\n    \"independent_accuracy_evidence\": false,\n    \"legacy_v2_larger_archive_refused\": true,\n    \"license_clearance\": false,\n    \"packet_bytes\": 15625938,\n    \"packet_sha256\": \"f0f966280b0dde80052347d6919c8c5a4c5a86f966a22c6e3cee6a374ed61679\",\n    \"pass\": true,\n    \"peak_children_rss_kib\": 264152,\n    \"peak_self_rss_kib\": 264152,\n    \"profile\": \"source-snapshot-v3-actual-ci/v1\",\n    \"protected_attestation_verified\": false,\n    \"release_authorized\": false,\n    \"source_commit\": \"bbd1c9aff961f4e22a3c011efff906eba14599c8\",\n    \"source_sha256\": {\n      \".github/workflows/source-snapshot-v3.yml\": \"dd69974c633d6b17a1d92de50e984655e51b9c80704b98e6b83602a8589e25e7\",\n      \"docs/artifact-io-ownership-plan.md\": \"fd18ec9fe0438fb828921ce88bf0120c4129c440406b6dec8d096cecc7bc2ad2\",\n      \"docs/source-snapshot-v3-plan.md\": \"e779b6b20334d8a72742fd2b258681db6335d67aa627dccabbf482ef37465eee\",\n      \"scripts/build-source-snapshot.py\": \"865dee30bb6f2908014fdcee17aac41aa4e0fa149d50d01677c30c7a5a838d56\",\n      \"scripts/source_snapshot.py\": \"24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee\",\n      \"scripts/source_snapshot_v2.py\": \"baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46\",\n      \"scripts/source_snapshot_v3.py\": \"473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8\",\n      \"scripts/verify-source-provenance.py\": \"cb5ec29a98a4a1c05ad1ef06c0675c05e9d4ffd6347e2832f2405da005b86ab2\",\n      \"tests/test_artifact_evidence_io.py\": \"adc631878d155c4cb2649e730f8a4446ff50838fb504b4030888c18ca347619f\",\n      \"tests/test_distribution_artifacts.py\": \"815b366bb0705683993d36199601ac7b629ca2e82721554391b1b7fde54ae82e\",\n      \"tests/test_source_provenance.py\": \"8686ec115a3e02c8e28bbc5c0259bfc37b50148d167206d470046239138e3fe5\",\n      \"tests/test_source_snapshot_v3.py\": \"79664360e4df25954a0e3186a98234a08fd43c22b20dd2e7a4530ef2d25ac0c3\",\n      \"tools/artifact_evidence_io.py\": \"2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e\",\n      \"tools/distribution_artifacts.py\": \"b45bc06319ced5b5d45198b1689e806c1e2b1f76de1c3e0a97b2c908238fe06f\"\n    },\n    \"source_stable\": true,\n    \"spdx_bytes\": 9453135,\n    \"spdx_sha256\": \"d72ff65aabed46d49cd0405d777afbe2234c732749bffca1f2bb3547b6588973\"\n  },\n  \"limits\": [\n    \"JSON-only archive retrieved ONCE; independent retained ZIP/API digest/member bound, all14 current-working/Git source bindings and wholeGit count/raw parity.\",\n    \"No source archive/packet/SPDX download, regeneration, control/build/SDK/native/browser/crypto execution by reviewer.\",\n    \"RSS maxima are per process, not simultaneous aggregate; inherited768MiBAS separately reported.\",\n    \"No signature, release authority, legal clearance, independent accuracy or full original closure.\"\n  ],\n  \"independent_api_git_trees\": [\n    {\n      \"commit\": \"d801aaafe06fc462a81734fcdd5534669393b305\",\n      \"tree\": \"87b84b9a0f16987cdc3d696c52cf33e049088465\",\n      \"parents\": [\n        \"23f6a3f29db76eb0e4d5dc48c1a18858ecbfb657\"\n      ]\n    },\n    {\n      \"commit\": \"bbd1c9aff961f4e22a3c011efff906eba14599c8\",\n      \"tree\": \"87b84b9a0f16987cdc3d696c52cf33e049088465\",\n      \"parents\": [\n        \"9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7\",\n        \"d801aaafe06fc462a81734fcdd5534669393b305\"\n      ]\n    }\n  ],\n  \"head_synthetic_merge_trees_equal\": true,\n  \"jobs\": [\n    {\n      \"id\": 138215376244,\n      \"status\": \"completed\",\n      \"conclusion\": \"success\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "operator_failures_preserved": [
+    "First build attempt used system Python without pydantic; corrected by selecting existing verification venv, with no dependency installation.",
+    "First inspect invocation used the wrong archive filename; existing exact checker.zip then passed unchanged inspection.",
+    "Interactive browser tool native pipe unavailable; actual existing Playwright tooling verified the live flow instead."
+  ],
+  "published_change_records_immutable": true,
+  "record_identity_correction": "Draft incorrectly reused a historical event name. Different review caught the collision before staging/commit; original event restored byte-identical to HEAD and this fresh record preserves actual new publication.",
+  "final_publication_review": {
+    "sha256": "1efb2e944f9c43a7fd45a76385d9fa29a5e1075726cf4b717d808b1b95f6946c",
+    "bytes": 4396,
+    "raw_utf8": "{\n  \"actual_public_projection\": {\n    \"all428_public_bytes_refetched\": false,\n    \"build_only_interpreter_argv0_redacted_and_declared\": true,\n    \"capacity_packet_bytes\": 15625938,\n    \"deployment\": \"https://f1de4258.aitrust-id.pages.dev\",\n    \"embedded_distinct_peers_raw_utf8_bytes_hash_exact\": [\n      {\n        \"bytes\": 9380,\n        \"sha256\": \"d20031cfd4a259bd4b71175e8079a5dc4d47e67758f50ffbef6972970ee982c1\"\n      },\n      {\n        \"bytes\": 8238,\n        \"sha256\": \"cae0bd0338534ab1da7072d5cdfd06907f8bd7956e2c9104511bc9af7aeabb27\"\n      }\n    ],\n    \"nine_public_URLs_refetched_by_reviewer\": false,\n    \"nine_public_status_size_SHA_rows_match_retained428file_binding\": true,\n    \"required_contexts_recorded_passed\": 11,\n    \"retained_proof_sha256\": {\n      \"actual-publication-verification.json\": {\n        \"bytes\": 7249,\n        \"sha256\": \"af79a150ceaab7f3cc5f4cb5daebf1f3b3c8938c2497aecd0d097a7b1e1a2920\"\n      },\n      \"build-result.json\": {\n        \"bytes\": 3695,\n        \"sha256\": \"422047e7b7dc55856818ebe72b899d2d7939960d2a83dfb335b0825f83effff1\"\n      },\n      \"inspect-correct-artifact-stdout.json\": {\n        \"bytes\": 513,\n        \"sha256\": \"9fb24590ef17b441ea587fb25efc2f8ba4b665be66465771b0083535c2af877a\"\n      },\n      \"live-interaction-result.json\": {\n        \"bytes\": 763,\n        \"sha256\": \"126c644b107f88b637304d4b67b929bcf5c56a93164ab1d5acb7922a1ca8ec14\"\n      },\n      \"prepare-stdout.json\": {\n        \"bytes\": 746,\n        \"sha256\": \"2294b37dfe8dd62537e22bb13835417ecbcc0fb0ae9f0ad894c770bd703c02c3\"\n      },\n      \"publish-stage-result.json\": {\n        \"bytes\": 532,\n        \"sha256\": \"5e97fe75282bcf82c970ed09f83a7e812ad5fca772fd47757cbf443ee2316c38\"\n      }\n    },\n    \"six_retained_proof_objects_exact\": true,\n    \"source\": \"d801aaafe06fc462a81734fcdd5534669393b305\",\n    \"source_artifact_sha256\": \"f741a53a2ae78f91d5482f53a51c14866b67403759624b9e33bc2e8ecc63901d\"\n  },\n  \"both_old_and_fresh_human_entries_present\": true,\n  \"captured_at\": \"2026-11-24T04:57:48.274930+00:00\",\n  \"files\": {\n    \"CHANGELOG.md\": {\n      \"bytes\": 1093005,\n      \"sha256\": \"80098fb55c50ef5e9737795c4e4c00daae967aa2602b582731f32db6142c9536\"\n    },\n    \"runs/changes/2026-11-23-current-static-publication.json\": {\n      \"bytes\": 36427,\n      \"sha256\": \"3561bfc9f7eaea7172f2151eddde0b8c8cf7b911a4c5409edf05982d7be548d9\"\n    },\n    \"state.json\": {\n      \"bytes\": 285755,\n      \"sha256\": \"36e9402097f9dd6cb203ce46cd980cbf8cdcacde94bba1fb6cef9e3a807b0eea\"\n    }\n  },\n  \"findings\": [],\n  \"historical_event_restored_sha256\": \"37ff0e6d4bf5b9cce58607789da415cb1cd835c9690d45888f1a4f96eefd23b0\",\n  \"limits\": [\n    \"Read-only retained metadata/projection review. No tests/profiles/browser/SDK/native/network/deploy or artifact regeneration.\",\n    \"ROOT actual required-check/HTTP/live-browser/canonical-private-file measurements remain attributed ROOT observations; reviewer did not rerun or rehash unrelated private user objects.\",\n    \"Earlier independent whole428data and capacity peers remain separately attributed; this is no new managedAUTH/accuracy/legal/original closure.\",\n    \"Fresh finite source-name admission/publication-record PR remains subsequent, as stated; no whole-source successor authorization inferred.\"\n  ],\n  \"new_event_state_map_and_current_selection_digest_exact\": true,\n  \"pass\": true,\n  \"profile\": \"current-static-publication-distinct-record-review/v1\",\n  \"resolved_findings\": [\n    \"Real committed historical observed-artifact event restored exact898; fresh current-static-publication event now absent from baseline and carries current selection evidence.\",\n    \"Current qualification-source field and current-vs-historical failure status repaired; pending wording retained only as explicitly historical observation.\"\n  ],\n  \"reviewer\": \"Codex /root/seo\",\n  \"source_base\": \"898dc254ff8d4c924d699afe732d3c1bbfe1bb01\",\n  \"state_boundaries\": [\n    \"No original ledger edits;202records/136complete66open retained exact base.\",\n    \"Independent accuracy/human gate remains unmet; managed web authority false.\",\n    \"Local7of7 native and separate hosted5of7 retained as different source/execution evidence.\",\n    \"Latest1b4d image result retains deterministic setter EACCES13, model-forward false and observed owned cleanup CLEAN separately from failed publication/finalization.\",\n    \"New paid history/signup/community scope is not merged/operating from this record.\"\n  ]\n}\n",
+    "reviewed_before_embedding": true
+  }
+}
