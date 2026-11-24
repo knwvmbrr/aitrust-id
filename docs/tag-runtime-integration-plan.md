@@ -259,3 +259,46 @@ and inference remain required. Name only its two authored run/event paths in V4
 (151/160 authored names including the mixed index), update the literal policy
 identity and two registry rows, and refresh the exact web registry pin. No copied
 grant, predecessor policy, cap, signature authority or sibling route changes.
+
+
+## Current seven-flow native selection after actual success
+
+The genuine complete candidate12 run on the frozen UI source16b0ac93 passed all
+seven original workflows together, with zero failures/skips, stable109 runner
+inputs/116 component inputs and owned Simulator deletion plus absence. ROOT's
+independent guard replay verified all nine current bundled-asset identities.
+Xcode/SDK27.2 and actual installed iOS26.2/23C54 remain distinct. No new signing,
+TestFlight upload, physical-device acceptance or accuracy follows from this run.
+
+Before changing the selected proof, preserve the exact private raw receipt and
+its command/path details. Add the explicit public-safe projection at
+`runs/2026-11-23-tag-runtime-native-share.json`; carry the exact raw digest and
+all required observed result/source/asset/cleanup flags. Change only the guard's
+selected path after the reviewed authored UI handoff is integrated. Never edit
+or rebind the earlier immutable six-case proof. Run the affected guard controls
+and previously failed current-native checks, then fresh protected publication
+checks against the final actual source.
+
+Name only the four required source-copy additions/maintenance entries:
+`mobile/ios/Tests/UIFlows.swift` was already named; the new literal additions are
+`runs/2026-11-23-ios-seven-ui-current.json`,
+`runs/changes/2026-11-23-ios-seven-ui-observer.json`,
+`runs/2026-11-23-tag-runtime-native-share.json`, and existing maintenance source
+`scripts/verify-native-share-evidence.py`. Add the fresh ROOT report
+`runs/2026-11-23-current-native-selection.json` and its event
+`runs/changes/2026-11-23-current-native-selection.json`; keep the earlier
+`runs/2026-11-23-tag-runtime-current-selection.json` slot reserved for selecting
+all current hosted profiles. This takes151 charged finite entries to157/160, preserving every earlier name and cap.
+Refresh only actual V4 table identity, its two registry source bindings and the
+web helper's literal registry binding; the policy producer and thirteen sibling
+route semantics remain unchanged.
+
+Record current source selection, failed image acquisition at wheel32 and active
+isolated web/image work in scope/state/changelog without changing any original
+criterion, milestone or completion percentage. The image companion would need
+five additional literal entries, exceeding this candidate's160 cap. Keep that
+reviewed component isolated for a successor based on the next actual protected
+main; never drop names, omit its mixed-source capacity charge or raise the cap.
+The same sequencing applies to the separately authored build-number2 and web
+conditional-distribution components. No original closure is claimed by this
+native selection or future source scheduling.

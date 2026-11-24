@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-23-current-native-selection
+
+Recorded 2026-11-24T03:19:34.208906+00:00 · Contributor: Codex /root integration; /root/web_camo native source and different integration review · change
+
+- **Changed.** Selected the actual complete seven-flow native proof after the authored observer handoff; registered six literal source-copy paths and updated exact bindings, scope, public scope projection and dated worker accounting.
+- **Evidence.** The actual normal Simulator run passes7/7 with stable109/116source, nine current assets and owned cleanup. Current-proof24controls plus two focused finite-table controls pass. All202 original criteria and percentages remain unchanged; charged finite names157/160. [Change record](./runs/changes/2026-11-23-current-native-selection.json).
+- **Not claimed.** Pre-publication engineering selection only. Fresh final-source protected protocol/website/capacity checks, new TestFlight, physical phones, human accessibility and independent tag accuracy remain pending.136complete66open; no original closure, image inference, web admission or legal clearance.
+
 ### 2026-11-23-ios-seven-ui-observer
 
 Recorded 2026-11-24T03:10:08.870359+00:00 · Contributor: Codex /root/web_camo; ROOT different source/evidence review · change

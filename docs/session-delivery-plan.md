@@ -1,3 +1,22 @@
+## Actual current seven-flow native handoff — 2026-11-24T03:16:24.697029+00:00
+
+The genuine App/Share Simulator run passes **7/7, zero failures/skips** on exact
+109 runtime/116 component inputs; source-only export/cancel privacy and owned
+Simulator removal pass. ROOT independently checked the raw results and current
+asset identity. The integrated selected-proof guards pass24 focused controls.
+These are software results; physical phones, human accessibility, independent
+accuracy and a new signed TestFlight build remain open. Fresh final-source
+protected checks and publication are next.
+
+Originals stay **136 complete /66 open**; no criterion or percentage changed.
+The image worker repairs the exact wheel32 source-preservation boundary in an
+isolated handoff; the web worker separates historical test data from current
+validators. Their next integration uses a new actual protected baseline rather
+than exceeding the current finite source cap. The historical failed runs and
+earlier six-flow proof remain intact.
+
+[Actual native selection](../runs/2026-11-23-current-native-selection.json) · [Full authored handoff](../runs/2026-11-23-ios-seven-ui-current.json).
+
 ## Current delivery repairs and next usable web release — 2026-11-24T01:34:53.929534+00:00
 
 Originals remain **136 complete /66 open**; target60 is unmet. The first PR154
