@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-source-v5-caller-lifecycle
+
+Recorded 2026-11-24T15:24:28.130540+00:00 · Contributor: Codex /root/share_debugger; /root/seo mechanism review; /root final source review · change
+
+- **Changed.** Implement source-only sequential admission/common/managed caller captures with fresh captured V5 execution, exact released-source recapture and original metadata ledgers, retaining managed metadata custody.
+- **Evidence.** Affected39 lifecycle controls pass before final anchor correction; current six metadata/capture/fault controls and different2 successor controls pass. ROOT reads final13-file freeze and independently executes four critical controls PASS1.166s. Exact31-input topology records87 refusal then peak39; injected-rights joined source25 fixture enters at N30/strict76 with five real PS children. Final106 mapping and unchanged V5 functions/caps verified. [Change record](./runs/changes/2026-11-24-source-v5-caller-lifecycle.json).
+- **Not claimed.** Normal source commit authorized after final ROOT review; installed registry still23 until ROOT rebinds25 rows and performs actual integrated qualification. No actual new whole-Q/archive binding/signature/protected AUTH, current route activation, all14-route completion, accuracy, legal clearance or original closure. Qualified rights/Graph fixtures remain fixtures; prior452 actual classification stays historical.
+
+
+### 2026-11-24-source-copy-v5
+
+Recorded 2026-11-24T05:52:37.518419+00:00 · Contributor: Codex /root/share_debugger; different final source and lifecycle reviewer /root · change
+
+- **Changed.** Implemented isolated finite V5 source-copy classifier, exact102-name delta and typed tokenizer source-term container over protected Q while retaining all V1–V4 source and grant bytes.
+- **Evidence.** Current source/policy and lifecycle review is clear; affected exact FD, policy and baseline fixture controls pass. Four independently executed lifecycle controls pass. Earlier26 tiny controls and their actual failures remain separately source-bound, not relabelled as final source. Current syntax and isolated help pass. [Change record](./runs/changes/2026-11-24-source-copy-v5.json).
+- **Not claimed.** No actual V5 whole-Q or candidate classification, archive binding, signature replay, shared registry activation, compiled runtime permission, legal clearance, accuracy or original closure. Original42be author run binds its earlier source phase; final bindings and literal/fork amendments are recorded here. ROOT owns subsequent integration and protected qualification.
+
+
 ### 2026-11-24-source-snapshot-publication
 
 Recorded 2026-11-24T05:47:48.594645+00:00 · Contributor: Codex /root; Codex /root/seo distinct publication review · change

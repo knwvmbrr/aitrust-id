@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-source-copy-v5",
+  "recorded_at": "2026-11-24T05:52:37.518419+00:00",
+  "author": "Codex /root/share_debugger; different final source and lifecycle reviewer /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+  "changed": "Implemented isolated finite V5 source-copy classifier, exact102-name delta and typed tokenizer source-term container over protected Q while retaining all V1\u2013V4 source and grant bytes.",
+  "proves": "Current source/policy and lifecycle review is clear; affected exact FD, policy and baseline fixture controls pass. Four independently executed lifecycle controls pass. Earlier26 tiny controls and their actual failures remain separately source-bound, not relabelled as final source. Current syntax and isolated help pass.",
+  "limits": "No actual V5 whole-Q or candidate classification, archive binding, signature replay, shared registry activation, compiled runtime permission, legal clearance, accuracy or original closure. Original42be author run binds its earlier source phase; final bindings and literal/fork amendments are recorded here. ROOT owns subsequent integration and protected qualification.",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "tools/source_release_policy_v5.py": "f6161a9372371bb0612f7fb46865aeeb9fe5abfbf1a4a277cf5f7bb4cae4eacc",
+    "eval/dependencies/source-snapshot-additions-v5.json": "e34ff0697a0b51c5885f6e8852661e4dfa1a0a5cb57a58b7b2642343b638a7c0",
+    "tests/test_source_release_policy_v5.py": "0925d7eddae8f56fe46a22ea78cb7aa15127080d9f62a86e2c4f05e871eaf651",
+    "docs/source-copy-v5-plan.md": "e0ee87d79b3c37497c56853800cdbfa175dfdd32c4e2b7b86781915c197086c9",
+    "docs/source-copy-v5.md": "48f0e0c332752bc927af10792ecac42a1992f2b63a8f971e1908c854a85d5525",
+    "runs/2026-11-24-source-copy-v5.json": "42be143a7b40a5888a30707c981593ee50b4615598ac3835e247a0e698febe6e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-source-copy-v5.json",
+      "sha256": "42be143a7b40a5888a30707c981593ee50b4615598ac3835e247a0e698febe6e"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-m",
+        "py_compile",
+        "tools/source_release_policy_v5.py",
+        "tests/test_source_release_policy_v5.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-24T05:52:37.475733+00:00"
+    },
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "tools/source_release_policy_v5.py",
+        "--help"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-24T05:52:37.518029+00:00"
+    }
+  ],
+  "prior_author_phase_sha256": "42be143a7b40a5888a30707c981593ee50b4615598ac3835e247a0e698febe6e",
+  "current_fork_and_literal_amendment": {
+    "profile": "source-copy-v5-final-fork-and-literal-amendment/v1",
+    "captured_at": "2026-11-24T05:45:05.413388+00:00",
+    "sources": {
+      "tools/source_release_policy_v5.py": {
+        "sha256": "0fd72522a77b661363c78caec70faf470c52681cc6d6ab4404253cde758dfd67",
+        "bytes": 32927
+      },
+      "eval/dependencies/source-snapshot-additions-v5.json": {
+        "sha256": "5c03aa5df985526b0fc10f0fb8e09b7db63bdeda579cf0737a2c7d13c5d88a5d",
+        "bytes": 60642
+      },
+      "tests/test_source_release_policy_v5.py": {
+        "sha256": "31ad52b49121f4276d1ce14850ee380e2504a884b23d11361ae6851259471fcc",
+        "bytes": 14982
+      },
+      "docs/source-copy-v5-plan.md": {
+        "sha256": "e50c335019acef14116e4b0fc365b2c22936224f7318afb0abef77e861577fe5",
+        "bytes": 6880
+      },
+      "docs/source-copy-v5.md": {
+        "sha256": "48f0e0c332752bc927af10792ecac42a1992f2b63a8f971e1908c854a85d5525",
+        "bytes": 2356
+      }
+    },
+    "preserved_prior_author_run_sha256": "42be143a7b40a5888a30707c981593ee50b4615598ac3835e247a0e698febe6e",
+    "prior26controls": "Historical at core604e/table5f98, retained unchanged; superseded12/16 steady estimates are not valid transient proof.",
+    "current_affected_controls": [
+      {
+        "argv": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_source_release_policy_v5.py",
+          "-k",
+          "actual_fd",
+          "-v"
+        ],
+        "exit": 0,
+        "seconds": 0.08291162498062477,
+        "log_sha256": "6ab6a08a625a502d09060bd9c2a8a8472514820ef2d3582d8a9ddaf9157c5292"
+      },
+      {
+        "argv": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_source_release_policy_v5.py",
+          "-k",
+          "joined_binder",
+          "-v"
+        ],
+        "exit": 0,
+        "seconds": 0.07946387497941032,
+        "log_sha256": "558f24af3ae77a0d02006437c32dd7d8e4faf69d7a7a867e720a0ccd55fcc295"
+      },
+      {
+        "argv": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_source_release_policy_v5.py",
+          "-k",
+          "literal_current",
+          "-v"
+        ],
+        "exit": 0,
+        "seconds": 0.07880337501410395,
+        "log_sha256": "66cea91766ef69022c67abab3c2d3e953bac6ad45bbc981f037e4f352a3e3784"
+      },
+      {
+        "argv": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_source_release_policy_v5.py",
+          "-k",
+          "baseline_normal",
+          "-v"
+        ],
+        "exit": 0,
+        "seconds": 0.12103929201839492,
+        "log_sha256": "88e914829c8d06379c34ad533126b20d78a11f4118743d244a7c6dbc73b4da50"
+      },
+      {
+        "argv": [
+          "python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_source_release_policy_v5.py",
+          "-k",
+          "161_literal",
+          "-v"
+        ],
+        "exit": 0,
+        "seconds": 0.07143762498162687,
+        "log_sha256": "e106f1642960832e58c2fb185311597ba0e339f0f617a812e6ca4f80c5584cce"
+      }
+    ],
+    "fd_formula": "max(2*N+16,N+32)<=80; N includes the bounded enumeration transient",
+    "exact_boundary": "Actual N32 admitted; N33 refuses before baseline spawn and binder setup; invalid numeric reserve inputs refuse.",
+    "capacity": 96,
+    "new_project_names": 95,
+    "copied_records": 1,
+    "new_names_only": [
+      "runs/2026-11-24-source-snapshot-publication.json",
+      "runs/changes/2026-11-24-source-snapshot-publication.json"
+    ],
+    "method_count": 26,
+    "whole_current_classification_or_archive": false,
+    "shared_changes": false,
+    "limits": "PriorQ managed proof and grant facts unchanged; conditional web and all common activation remain ROOT-owned."
+  },
+  "literal98_phase": {
+    "profile": "source-copy-v5-final98-source-freeze/v1",
+    "captured_at": "2026-11-24T05:45:30.079858+00:00",
+    "sources": {
+      "tools/source_release_policy_v5.py": {
+        "sha256": "2720880e2f6a3591074385220c63f091f47ef6402b75e71d766f85a5fdd2cead",
+        "bytes": 32927
+      },
+      "eval/dependencies/source-snapshot-additions-v5.json": {
+        "sha256": "0d84aadeb04e47b42e8672f627a08180fed9c6648f4b8b71cd986508156f1a41",
+        "bytes": 60760
+      },
+      "tests/test_source_release_policy_v5.py": {
+        "sha256": "e7da756a9380b114eec654e621447f083d3fab51a3ce6f9b2eb457e8c8188e5d",
+        "bytes": 14982
+      },
+      "docs/source-copy-v5-plan.md": {
+        "sha256": "3172eeccdd7227fe838ed3dc6b5ced1affb4661525ef1e52ba76033d7f29abe3",
+        "bytes": 7185
+      },
+      "docs/source-copy-v5.md": {
+        "sha256": "48f0e0c332752bc927af10792ecac42a1992f2b63a8f971e1908c854a85d5525",
+        "bytes": 2356
+      }
+    },
+    "prior_final_amendment_sha256": "77a933fe0eb821c3d29f92ff3bc3841d975bb55eb51e6c7e76c9f82b84df1111",
+    "new_source_record_names_only": [
+      "runs/2026-11-24-ios-size-matrix-navigation.json",
+      "runs/changes/2026-11-24-ios-size-matrix-navigation.json"
+    ],
+    "function_bodies_changed": false,
+    "capacity": 98,
+    "current_small_policy_control_log_sha256": "ea3c2cd2ea30837500a14df8b5cd503ff2aba258c3cb7dda29a9ef51fda856a8",
+    "whole_source_or_archive_executed": false
+  },
+  "final102_phase": {
+    "profile": "source-copy-v5-final102-source-freeze/v1",
+    "captured_at": "2026-11-24T05:50:23.074824+00:00",
+    "sources": {
+      "tools/source_release_policy_v5.py": {
+        "sha256": "f6161a9372371bb0612f7fb46865aeeb9fe5abfbf1a4a277cf5f7bb4cae4eacc",
+        "bytes": 32927
+      },
+      "eval/dependencies/source-snapshot-additions-v5.json": {
+        "sha256": "e34ff0697a0b51c5885f6e8852661e4dfa1a0a5cb57a58b7b2642343b638a7c0",
+        "bytes": 61002
+      },
+      "tests/test_source_release_policy_v5.py": {
+        "sha256": "0925d7eddae8f56fe46a22ea78cb7aa15127080d9f62a86e2c4f05e871eaf651",
+        "bytes": 14983
+      },
+      "docs/source-copy-v5-plan.md": {
+        "sha256": "e0ee87d79b3c37497c56853800cdbfa175dfdd32c4e2b7b86781915c197086c9",
+        "bytes": 7575
+      },
+      "docs/source-copy-v5.md": {
+        "sha256": "48f0e0c332752bc927af10792ecac42a1992f2b63a8f971e1908c854a85d5525",
+        "bytes": 2356
+      }
+    },
+    "preserved_final98_sha256": "30be9d322ac29eee5ac561d92d4f562b67168e7bafd56e5a2a7b6c35f40e25ed",
+    "new_source_names_only": [
+      "runs/2026-11-24-image-readonly-cache-root.json",
+      "runs/changes/2026-11-24-image-readonly-cache-root.json"
+    ],
+    "added_existing_Q_maintenance": [
+      "tools/visual_score.py",
+      "tests/test_visual_score.py"
+    ],
+    "function_bodies_changed": false,
+    "capacity": 102,
+    "current_small_policy_control_log_sha256": "d50c6bda329ccdd1b19eb887d4ccd8c34de710f9518648cb04910eb9a8dc3d22",
+    "whole_source_or_archive_executed": false
+  },
+  "maintained_project_ownership": {
+    "profile": "source-copy-v5-final-maintained-ownership-check/v1",
+    "table_sha256": "e34ff0697a0b51c5885f6e8852661e4dfa1a0a5cb57a58b7b2642343b638a7c0",
+    "maintained_count": 43,
+    "maintained_names": [
+      ".github/workflows/artifact-sbom.yml",
+      ".github/workflows/ci.yml",
+      ".github/workflows/source-profile-continuation.yml",
+      ".github/workflows/source-snapshot-v3.yml",
+      "CHANGELOG.md",
+      "CONTRIBUTING.md",
+      "docs/offline-image-score-qualification-plan.md",
+      "docs/scope-progress.json",
+      "docs/scope-progress.md",
+      "docs/visual-tag-execution-plan.md",
+      "eval/dependency-policy.json",
+      "eval/revalidation.json",
+      "eval/route-boundaries.json",
+      "integrations/visual-score-reference/qualification-notice-inventory.json",
+      "scripts/build-ios-project.py",
+      "scripts/distribution-artifact.py",
+      "scripts/run-visual-score-phase.py",
+      "scripts/verify-approachability.cjs",
+      "scripts/verify-ios-archive.py",
+      "scripts/verify-managed-source.py",
+      "scripts/verify-performance.cjs",
+      "scripts/verify-ps-results.cjs",
+      "scripts/verify-site.cjs",
+      "scripts/verify-visual-score-qualification.py",
+      "site/index.html",
+      "site/src/handheld.jsx",
+      "site/src/main.jsx",
+      "site/src/performance.jsx",
+      "site/src/presentation.js",
+      "site/src/usage.js",
+      "state.json",
+      "tests/test_ios_archive.py",
+      "tests/test_ios_project_package.py",
+      "tests/test_source_snapshot_admission.py",
+      "tests/test_source_snapshot_workflow.py",
+      "tests/test_visual_score.py",
+      "tests/test_visual_score_budget.py",
+      "tests/test_visual_score_qualification.py",
+      "tools/distribution_artifacts.py",
+      "tools/source_snapshot_admission.py",
+      "tools/source_snapshot_managed.py",
+      "tools/visual_score.py",
+      "tools/visual_score_qualification.py"
+    ],
+    "actual_static_legacy_category_projection": "All43 maintained names belong to inherited project-text sets from immutable V1/V2/V3/V4; no retained-source or grant file reclassified.",
+    "new_image_maintenance": [
+      "tools/visual_score.py",
+      "tests/test_visual_score.py"
+    ],
+    "test_or_whole_classifier_execution": false
+  },
+  "different_review": {
+    "sha256": "dc98dbc98e2296ac8c7d96e075c7bc4c03490decda559f3721e3926ede65c735",
+    "bytes": 3689,
+    "raw_utf8": "{\n  \"architecture_review\": \"Read approved fixed child V4(Q), mandatory full denominator, immutable inherited grants, one reserved body ledger, source/FD/time/finalization and archive composition. No shared admission activation.\",\n  \"author\": \"/root/share_debugger\",\n  \"captured_at\": \"2026-11-24T05:51:22.702018+00:00\",\n  \"critical_controls\": {\n    \"SDK_model_archive_or_whole_Q_executed\": false,\n    \"all_source_bytes_stable\": true,\n    \"argv\": [\n      \"python3\",\n      \"-I\",\n      \"-S\",\n      \"-B\",\n      \"tests/test_source_release_policy_v5.py\",\n      \"SourceCopyV5.test_actual_git_fifo_term_unwinds_captured_worker\",\n      \"SourceCopyV5.test_actual_fd_exhaustion_refuses_before_spawn_all_owned_closed\",\n      \"SourceCopyV5.test_joined_binder_fd_admission_before_capture\",\n      \"SourceCopyV5.test_binder_boundary_uses_original_clock_and_final_sample\",\n      \"-v\"\n    ],\n    \"captured_at\": \"2026-11-24T05:48:40.961109+00:00\",\n    \"exit_status\": 0,\n    \"log_sha256\": \"75309a7bda280e46c4ba06d587d0174243890da686ba485193781b3618b5903a\",\n    \"pass\": true,\n    \"profile\": \"root-v5-four-frozen-lifecycle-controls/v1\",\n    \"seconds\": 1.3069935409585014,\n    \"source_freeze_sha256\": \"30be9d322ac29eee5ac561d92d4f562b67168e7bafd56e5a2a7b6c35f40e25ed\",\n    \"sources\": {\n      \"docs/source-copy-v5-plan.md\": {\n        \"bytes\": 7185,\n        \"sha256\": \"3172eeccdd7227fe838ed3dc6b5ced1affb4661525ef1e52ba76033d7f29abe3\"\n      },\n      \"docs/source-copy-v5.md\": {\n        \"bytes\": 2356,\n        \"sha256\": \"48f0e0c332752bc927af10792ecac42a1992f2b63a8f971e1908c854a85d5525\"\n      },\n      \"eval/dependencies/source-snapshot-additions-v5.json\": {\n        \"bytes\": 60760,\n        \"sha256\": \"0d84aadeb04e47b42e8672f627a08180fed9c6648f4b8b71cd986508156f1a41\"\n      },\n      \"tests/test_source_release_policy_v5.py\": {\n        \"bytes\": 14982,\n        \"sha256\": \"e7da756a9380b114eec654e621447f083d3fab51a3ce6f9b2eb457e8c8188e5d\"\n      },\n      \"tools/source_release_policy_v5.py\": {\n        \"bytes\": 32927,\n        \"sha256\": \"2720880e2f6a3591074385220c63f091f47ef6402b75e71d766f85a5fdd2cead\"\n      }\n    },\n    \"tests\": 4\n  },\n  \"freeze_sha256\": \"40242d0ffe7d5e971812ecbadfd78fc82a3460b3c5ce755f56ba35d064828993\",\n  \"legacy_v4_project_names_retained_exact\": 159,\n  \"limits\": \"Whole-Q and archive execution remain unexecuted for V5. Critical controls use isolated lifecycle fixtures; no actual source-copy profile authorization, signatures, runtime permission, legal clearance, accuracy or original closure follows. Normal authored record/commit and actual frozen Q check remain required.\",\n  \"literal_capacity\": 102,\n  \"pass\": true,\n  \"profile\": \"root-source-copy-v5-final-source-review/v1\",\n  \"reviewer\": \"/root\",\n  \"root_critical_controls_sha256\": \"c65c6d0376a0caa522d31f2ad11b442f7a602589f6375ce8c3095b1813a62bde\",\n  \"sources\": {\n    \"docs/source-copy-v5-plan.md\": {\n      \"bytes\": 7575,\n      \"sha256\": \"e0ee87d79b3c37497c56853800cdbfa175dfdd32c4e2b7b86781915c197086c9\"\n    },\n    \"docs/source-copy-v5.md\": {\n      \"bytes\": 2356,\n      \"sha256\": \"48f0e0c332752bc927af10792ecac42a1992f2b63a8f971e1908c854a85d5525\"\n    },\n    \"eval/dependencies/source-snapshot-additions-v5.json\": {\n      \"bytes\": 61002,\n      \"sha256\": \"e34ff0697a0b51c5885f6e8852661e4dfa1a0a5cb57a58b7b2642343b638a7c0\"\n    },\n    \"tests/test_source_release_policy_v5.py\": {\n      \"bytes\": 14983,\n      \"sha256\": \"0925d7eddae8f56fe46a22ea78cb7aa15127080d9f62a86e2c4f05e871eaf651\"\n    },\n    \"tools/source_release_policy_v5.py\": {\n      \"bytes\": 32927,\n      \"sha256\": \"f6161a9372371bb0612f7fb46865aeeb9fe5abfbf1a4a277cf5f7bb4cae4eacc\"\n    }\n  },\n  \"typed_mixed_record_source_anchors\": 95,\n  \"unchanged_foundations_current_and_git_Q\": 11\n}\n"
+  }
+}

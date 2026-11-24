@@ -44,6 +44,7 @@ CONSUMERS={
   'eval/dependencies/source-snapshot-release.json','eval/dependencies/source-snapshot-release-v2.json',
   'tools/source_release_policy_v3.py','eval/dependencies/source-snapshot-additions-v3.json',
   'tools/source_release_policy_v4.py','eval/dependencies/source-snapshot-additions-v4.json',
+  'tools/source_release_policy_v5.py','eval/dependencies/source-snapshot-additions-v5.json',
   'tools/source_snapshot_admission.py','tools/source_snapshot_managed.py','scripts/verify-managed-source.py',
   'docs/source-snapshot-managed-consumer.md'),
  'web-checker':('site/package.json','site/scripts/prepare.mjs','tools/web_distribution.py'),
@@ -359,8 +360,11 @@ class Graph:
             'source_notice_asset_contains_a_conservative_cross_target_source_notice_set'])
 
     def committed_tree(self):
+        from tools.source_snapshot_admission import _source_spawn_room
+        _source_spawn_room()
         head=run_worker(['git','--no-replace-objects','-C',str(self.root),'rev-parse','--verify','HEAD^{commit}'],input=b'',timeout=20,output_limit=100)
         need(head.returncode==0);self.commit=head.stdout.decode('ascii').strip();need(COMMIT.fullmatch(self.commit))
+        _source_spawn_room()
         result=run_worker(['git','--no-replace-objects','-C',str(self.root),'ls-tree','-r','-z','--full-tree',self.commit],input=b'',timeout=20,output_limit=2_000_000)
         need(result.returncode==0);rows=result.stdout.split(b'\0');need(rows[-1:]==[b''] and len(rows)-1<=MAX_NODES)
         evidence='scripts/source_snapshot_v3.py';self.read(evidence);self.read('scripts/source_snapshot.py');self.read('scripts/source_snapshot_v2.py')
@@ -371,6 +375,8 @@ class Graph:
             self.node('git:'+name,name,None,'committed-git-blob',evidence,details={'git_blob_oid':oid,'git_object_format':'sha1','mode':mode})
         self.gaps.append('whole_source_copy_requires_current_finite_profile_and_actual_archive_binding')
     def finish(self):
+        # Source Git workers run before the heavy source-file Capture set.
+        if self.route=='source-snapshot':self.committed_tree()
         for path in (*COMMON,*CONSUMERS[self.route]):self.read(path)
         for path in (*PRODUCERS,'tools/dependency_policy.py','scripts/worker_process.py'):
             need(self.read(path)==self.c.read(ROOT/path,16_000_000,private=False))
@@ -379,7 +385,7 @@ class Graph:
             for row in require_route(self.route,self.root)['files']:
                 need(sha(self.read(row['path']))==row['sha256'])
                 self.node('source:'+row['path'],row['path'],None,'admitted-source-member',row['path'],[('SHA256',row['sha256'])])
-        elif self.route=='source-snapshot':self.committed_tree()
+        elif self.route=='source-snapshot':pass  # already bound before heavy reads
         elif self.route in ('web-checker','ios-app','android-app'):
             self.npm('site/package-lock.json');self.web_assets()
             if self.route!='web-checker':self.gaps.append('unbundled_platform_sdk_rights_are_separate_prerequisites')
@@ -439,11 +445,73 @@ def spdx(route,artifact,graph,created):
       'documentDescribes':['SPDXRef-Artifact'],'packages':packages,'relationships':relationships}
 
 
+class _SourceGraphCapture:
+    """Source-only short captures, closed input denominator and one read ledger."""
+    def __init__(self,root,artifact):
+        self.root=Path(root);self.artifact_path=Path(artifact).absolute();self.snapshot=None;self.total_read=0
+        self.allowed={self.root/p for p in(*COMMON,*CONSUMERS['source-snapshot'],*PRODUCERS,'tools/dependency_policy.py','scripts/worker_process.py')}
+    def _adopt(self,phase,expected,artifact_paths=()):
+        from tools.source_snapshot_admission import _SourceReadset,_phase_critical
+        with _phase_critical():
+            if self.snapshot is None:
+                self.snapshot=_SourceReadset.from_capture(phase,expected,anchors=(self.root,self.artifact_path.parent),artifact_paths=artifact_paths)
+            else:self.snapshot.absorb(phase,expected,artifact_paths=artifact_paths)
+    def read(self,path,limit=16_000_000,*,private=False):
+        path=Path(path).absolute();need(private is False and path in self.allowed and type(limit)is int and 0<limit<=16_000_000)
+        with Capture()as phase:
+            phase.total_read=self.total_read
+            try:
+                raw=phase.read(path,limit,private=False);self._adopt(phase,{path:sha(raw)});return raw
+            finally:self.total_read=phase.total_read
+    def artifact(self,path,limit,*,copy_to):
+        path=Path(path).absolute();need(path==self.artifact_path and limit==64_000_000 and self.snapshot is not None)
+        with Capture()as phase:
+            phase.total_read=self.total_read
+            try:
+                value=phase.artifact(path,limit,copy_to=copy_to);self._adopt(phase,{path:value['sha256']},(path,));return value
+            finally:self.total_read=phase.total_read
+    def check(self):
+        need(self.snapshot is not None);self.snapshot.total=self.total_read
+        try:self.snapshot.check()
+        finally:self.total_read=self.snapshot.total
+    def close(self):
+        if self.snapshot is not None:self.snapshot.close()
+    def __enter__(self):return self
+    def __exit__(self,*unused):self.close()
+
+
+def _prepare_source(artifact,source_commit,root,created):
+    from tools import source_snapshot_admission as admission
+    root=Path(root);need(root.resolve()==ROOT.resolve());artifact=Path(artifact).absolute()
+    with _SourceGraphCapture(root,artifact)as captured:
+        g=Graph('source-snapshot',root,captured).finish();need(g['committed_tree']==source_commit)
+        with io.BytesIO()as received:
+            value=captured.artifact(artifact,64_000_000,copy_to=received);raw=received.getvalue()
+        expected={root/path:digest for path,digest in g['source_sha256'].items()}
+        need(artifact not in expected or expected[artifact]==value['sha256']);expected[artifact]=value['sha256']
+        need(captured.snapshot.expected==expected)
+        # Every heavy owned file capture is CLOSED. No borrowed caller is closed.
+        bound=admission.review_archive(raw,source_commit=source_commit,root=root)
+        need(bound.get('pass')is True and bound.get('source_copy_profile_satisfied')is True and bound.get('trusted_git_bytes_matched')is True
+          and bound.get('source_commit')==source_commit and bound.get('archive_sha256')==value['sha256']and bound.get('archive_bytes')==value['bytes']
+          and bound.get('source_files')==len(g['nodes'])and bound.get('signature_verified')is False
+          and all(bound.get(k)is False for k in('legal_clearance','compiled_runtime_permission','source_archive_admitted','release_authorized','accuracy','complete_F057_X02')))
+        policy=evaluate('source-snapshot',root);document=spdx('source-snapshot',value,g,created)
+        record={'profile':PROFILE,'route':'source-snapshot','source_commit':source_commit,'artifact':value,'created':created,'graph':g,'spdx':document,
+          'spdx_sha256':sha(encoded(document)+b'\n'),'graph_sha256':sha(encoded(g)),'policy':policy,'artifact_format_verified':True,
+          'attestation_verified':False,'release_authorized':False,'license_clearance':False,'complete_project_obligations':False}
+        need(len(encoded(record))<=MAX_PACKET);admission._source_spawn_room()
+        current=run_worker(['git','--no-replace-objects','-C',str(root),'rev-parse','--verify','HEAD^{commit}'],input=b'',timeout=20,output_limit=100)
+        need(current.returncode==0 and current.stdout.decode('ascii').strip()==source_commit)
+        captured.check();return record
+
+
 @boundary
 def prepare(route,artifact,source_commit,root=ROOT,created=None):
     need(type(source_commit)is str and COMMIT.fullmatch(source_commit));need(route in ROUTES)
     if route=='source-snapshot':need(Path(root).resolve()==ROOT.resolve())
     created=created or datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00','Z')
+    if route=='source-snapshot':return _prepare_source(artifact,source_commit,root,created)
     try:
         with Capture()as c:
             mcp=None
@@ -458,22 +526,6 @@ def prepare(route,artifact,source_commit,root=ROOT,created=None):
             if mcp is not None:
                 need(mcp['sha256']==value['sha256']and mcp['bytes']==value['bytes']and
                      mcp['profile_sha256']==g['source_sha256']['sbom/mcp-runtime/manifest.json'])
-            if route=='source-snapshot':
-                need(g['committed_tree']==source_commit)
-                from tools import source_release_policy_v4 as source_copy
-                # Artifact capture has a separate archive-sized streaming bound;
-                # metadata's 16 MB limit must not be widened for this 40 MB input.
-                with io.BytesIO() as received:
-                    need(c.artifact(artifact,source_copy.MAX_ARCHIVE,copy_to=received)==value)
-                    bound=source_copy.verify_archive(received.getvalue(),source_commit=source_commit)
-                need(bound.get('pass')is True and bound.get('source_copy_profile_satisfied')is True
-                     and bound.get('trusted_git_bytes_matched')is True
-                     and bound.get('source_commit')==source_commit
-                     and bound.get('archive_sha256')==value['sha256']
-                     and bound.get('archive_bytes')==value['bytes']
-                     and bound.get('source_files')==len(g['nodes'])
-                     and all(bound.get(key)is False for key in source_copy.FALSE_CLAIMS)
-                     and bound.get('signature_verified')is False)
             sbom=spdx(route,value,g,created);policy=evaluate(route,root)
             record={'profile':PROFILE,'route':route,'source_commit':source_commit,'artifact':value,'created':created,
                 'graph':g,'spdx':sbom,'spdx_sha256':sha(encoded(sbom)+b'\n'),'graph_sha256':sha(encoded(g)),

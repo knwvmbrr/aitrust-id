@@ -369,4 +369,61 @@ except io.OutputCommitUncertain:
             with self.assertRaises(io.OutputCommitUncertain):a.save_packet(r,out)
         self.assertTrue(out.exists());self.assertEqual(out.read_bytes()[:1],b'X')
 
+class SourcePrepareLifecycle(unittest.TestCase):
+    """Injected copy-policy boundary; actual FS/packet lifecycle, NOT rights or AUTH."""
+    def setUp(self):
+        self.temp=tempfile.TemporaryDirectory(dir=Path(tempfile.gettempdir()).resolve());self.addCleanup(self.temp.cleanup)
+        self.base=Path(self.temp.name);self.artifact=self.base/'source.bin';self.artifact.write_bytes(b'opaque source fixture')
+        self.commit=subprocess.check_output(['/usr/bin/git','-C',str(ROOT),'rev-parse','HEAD']).decode().strip()
+        outer=a.Graph
+        class TinyGraph(outer):
+            def finish(inner):
+                inner.read('LICENSE');inner.node('git:LICENSE','LICENSE',None,'committed-git-blob','LICENSE',details={'git_blob_oid':'a'*40,'mode':'100644'})
+                inner.c.check()
+                return {'profile':'declared-and-observed-distribution-graph/v1','route':'source-snapshot','nodes':list(inner.nodes.values()),'relationships':[],
+                  'source_sha256':inner.inputs,'committed_tree':self.commit,'coverage_gaps':['INJECTED_LIFECYCLE_FIXTURE_NOT_AUTHORITY'],'complete_embedded_dependency_coverage':False,'license_clearance':False}
+        self.graph=TinyGraph
+    def bound(self,raw,*,source_commit,root):
+        from tools.source_snapshot_admission import _source_spawn_room
+        self.observed_N=_source_spawn_room()
+        return {'pass':True,'source_copy_profile_satisfied':True,'trusted_git_bytes_matched':True,'source_commit':source_commit,
+          'archive_sha256':hashlib.sha256(raw).hexdigest(),'archive_bytes':len(raw),'source_files':1,'signature_verified':False,
+          **{k:False for k in('legal_clearance','compiled_runtime_permission','source_archive_admitted','release_authorized','accuracy','complete_F057_X02')}}
+    def prepare(self,gate=None):
+        from tools import source_snapshot_admission as admission
+        with mock.patch.object(a,'Graph',self.graph),mock.patch.object(admission,'review_archive',side_effect=gate or self.bound),mock.patch.object(a,'evaluate',return_value={'release_allowed':True,'fixture_only':True}):
+            return a.prepare('source-snapshot',self.artifact,self.commit)
+    def test_source_prepare_closes_heavy_owned_capture_before_gate(self):
+        record=self.prepare();self.assertLessEqual(self.observed_N,32);self.assertFalse(record['release_authorized']);self.assertFalse(record['attestation_verified'])
+        self.assertEqual(record['artifact']['sha256'],hashlib.sha256(self.artifact.read_bytes()).hexdigest())
+    def test_post_gate_artifact_mutation_refuses(self):
+        def mutate(raw,**kw):
+            result=self.bound(raw,**kw);self.artifact.write_bytes(b'changed successor bytes');return result
+        with self.assertRaises(io.PrivateInputError):self.prepare(mutate)
+    def test_late_gate_source_capture_is_not_a_status_substitute(self):
+        with mock.patch.object(a,'evaluate',side_effect=AssertionError('must not evaluate after refused copy')):
+            def refused(*args,**kw):raise io.PrivateInputError('unavailable')
+            with self.assertRaises(io.PrivateInputError):self.prepare(refused)
+    def test_source_reader_unknown_path_refuses_before_read(self):
+        reader=a._SourceGraphCapture(ROOT,self.artifact)
+        with reader,mock.patch.object(io.Capture,'read',side_effect=AssertionError('unknown must not read')):
+            with self.assertRaises(ValueError):reader.read(ROOT/'unreviewed-source.py')
+    def test_source_reader_duplicate_successor_cannot_replace_reference(self):
+        reader=a._SourceGraphCapture(ROOT,self.artifact)
+        # Owned standalone file is an explicitly injected test input, no production permission.
+        reader.allowed={self.artifact}
+        with reader:
+            reader.read(self.artifact);self.artifact.rename(self.base/'retained-original');self.artifact.write_bytes(b'opaque source fixture')
+            with self.assertRaises(ValueError):reader.read(self.artifact)
+        self.assertTrue((self.base/'retained-original').exists())
+    def test_source_reader_keeps_one_read_ledger_across_short_phases(self):
+        with a._SourceGraphCapture(ROOT,self.artifact)as reader:
+            reader.read(ROOT/'LICENSE');charged=reader.total_read;self.assertGreater(charged,0)
+            reader.total_read=64_000_000
+            with self.assertRaises(ValueError):reader.read(ROOT/'NOTICE')
+    def test_archive_stream_bound_stays_separate_from_metadata_limit(self):
+        # One sparse opaque17MB input, fake rights gate; no tar parser or signature.
+        with self.artifact.open('wb')as f:f.truncate(16_000_001)
+        record=self.prepare();self.assertEqual(record['artifact']['bytes'],16_000_001);self.assertLessEqual(self.observed_N,32)
+
 if __name__=='__main__':unittest.main()
