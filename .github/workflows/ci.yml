@@ -398,7 +398,7 @@ jobs:
         run: node scripts/verify-replay-export.cjs --python python
       - name: Offline observations and optional receipt controls
         run: |
-          node --test tests/composition-observations.cjs tests/offline-receipts.cjs
+          node --test tests/composition-observations.cjs tests/offline-receipts.cjs tests/reviewer-attestations.cjs
           node scripts/verify-composition-tool.cjs
           python scripts/verify-tag-development.py
       - name: Device method parity, offline and private input boundaries

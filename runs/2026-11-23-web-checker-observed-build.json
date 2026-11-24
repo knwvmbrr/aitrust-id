@@ -1,0 +1,251 @@
+{
+  "profile": "observed-whole-web-artifact/v1",
+  "captured_at": "2026-11-24T00:02:12.740201+00:00",
+  "pass": true,
+  "author": "Codex /root",
+  "source_commit": "41669328e10c7f4a268559447f2f6dde50110e2d",
+  "actual_build": {
+    "captured_at": "2026-11-24T00:00:45.684477+00:00",
+    "source_commit": "41669328e10c7f4a268559447f2f6dde50110e2d",
+    "pass": true,
+    "steps": [
+      {
+        "argv": [
+          "node",
+          "node_modules/vite/bin/vite.js",
+          "build",
+          "--config",
+          "../scripts/web-checker-build-observer.mjs"
+        ],
+        "exit_code": 0,
+        "seconds": 1.4796,
+        "log_bytes": 9823,
+        "log_sha256": "38fa0c18b0fbe990da7b55ff556c4ef01302dd46d67392b5730a810894f78a56"
+      },
+      {
+        "argv": [
+          "node",
+          "scripts/render-reference.mjs"
+        ],
+        "exit_code": 0,
+        "seconds": 0.1955,
+        "log_bytes": 147,
+        "log_sha256": "f6be947e35e0a0a31d9da5ec72f1f38cdaed1b3a413ff3848ae09847882987c8"
+      },
+      {
+        "argv": [
+          "node",
+          "scripts/prepare-offline.mjs"
+        ],
+        "exit_code": 0,
+        "seconds": 0.5353,
+        "log_bytes": 74,
+        "log_sha256": "a0a71f60e18e32c5a803d92150efca1bd381efc20095909f0810cb5ccfd44565"
+      }
+    ],
+    "tracked_clean_after": true,
+    "same_source_commit_before_after": true,
+    "sources": 154,
+    "modules": 146,
+    "outputs": 19,
+    "final_index_matches_observation": true,
+    "final_index_sha256": "01bf523b6db61e2b587cd744e4dbd0537a900381367136aa60bdf52a7afdc59a",
+    "observation_sha256": "066268161a9931a153c1b85224e22220e0c3d2eb7b64129f37fa966bd2937450",
+    "dependency_install": false,
+    "compiled_release_admitted": false
+  },
+  "artifact_prepare": {
+    "artifact": {
+      "bytes": 26204583,
+      "sha256": "a23bf62113d7042b8752db3c390c07deb5deaf0a9b892d71e4a2e92249b6aed3"
+    },
+    "build_record_verified": true,
+    "captured_at": "2026-11-24T00:01:28.422651+00:00",
+    "claims": {
+      "all_project_obligations_complete": false,
+      "attestation_verified": false,
+      "compiler_reproduced": false,
+      "independent_accuracy_evidence": false,
+      "legal_clearance": false,
+      "release_authorized": false
+    },
+    "files": 428,
+    "genuine_protected_build_verified": false,
+    "pass": true,
+    "private_output_created": true,
+    "profile": "web-checker-artifact/v1",
+    "resources": {
+      "legacy_read_reservation": 0,
+      "logical_read_bytes": 179497962,
+      "peak_owned_fds": 94,
+      "read_calls": 2404
+    },
+    "source_commit": "41669328e10c7f4a268559447f2f6dde50110e2d",
+    "source_tree_oid": "b830480047ac7b4436beb63b24692b95c555de28"
+  },
+  "artifact_inspect": {
+    "captured_at": "2026-11-24T00:02:12.740201+00:00",
+    "claims": {
+      "all_project_obligations_complete": false,
+      "attestation_verified": false,
+      "compiler_reproduced": false,
+      "independent_accuracy_evidence": false,
+      "legal_clearance": false,
+      "release_authorized": false
+    },
+    "files": 428,
+    "format_and_source_verified": true,
+    "pass": true,
+    "profile": "web-checker-artifact/v1",
+    "resources": {
+      "legacy_read_reservation": 0,
+      "logical_read_bytes": 127959095,
+      "peak_owned_fds": 94,
+      "read_calls": 1258
+    },
+    "source_commit": "41669328e10c7f4a268559447f2f6dde50110e2d"
+  },
+  "source_copy_review": {
+    "profile": "source-copy-additions/v4",
+    "pass": true,
+    "status": "SOURCE_COPY_PROFILE_SATISFIED",
+    "source_copy_profile_satisfied": true,
+    "legal_clearance": false,
+    "compiled_runtime_permission": false,
+    "source_archive_admitted": false,
+    "release_authorized": false,
+    "accuracy": false,
+    "complete_F057_X02": false,
+    "source_commit": "41669328e10c7f4a268559447f2f6dde50110e2d",
+    "source_tree": "b830480047ac7b4436beb63b24692b95c555de28",
+    "checkout_commit": "41669328e10c7f4a268559447f2f6dde50110e2d",
+    "policy_sha256": "890f1582450c9b9e8ff9a6dff057ca3cc14f1b93a3196c63d3ebeb1231563b2d",
+    "method_sha256": "3f8dde4c755aa70f44a4ac07cc6471f042814b20b20017a7b43e66971e12e51e",
+    "baseline_v3_verified": true,
+    "baseline_v3_method_sha256": "26a6bb8be66cab5a355bfbe6fcfbd16cefe994d1e7ade8b26b3cd227f0f82d41",
+    "baseline_v3_policy_sha256": "3bd727fef18736bcd259fa4f1e21fd25fa8629f361b25289dc0016f48394db3e",
+    "protected_baseline_commit": "9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7",
+    "selected_profile_base_is_protected_release": true,
+    "selected_source_protected_release_claimed": false,
+    "inspected_body_charge": 21312275,
+    "files": 13857,
+    "source_bytes": 149659261,
+    "present_optional_copied_files": 24,
+    "changed_named_project_text_files": 37,
+    "introduced_named_project_text_files": 86,
+    "captured_at": "2026-11-24T00:01:08.450927+00:00",
+    "elapsed_seconds": 12.0864
+  },
+  "required_companions": {
+    "device-licenses/pyodide-MPL-2.0.txt": {
+      "bytes": 16725,
+      "mode": 420,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    "device-licenses/python-license.txt": {
+      "bytes": 13804,
+      "mode": 420,
+      "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+    },
+    "device-licenses/python-stdlib-notices.txt": {
+      "bytes": 245510,
+      "mode": 420,
+      "sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321"
+    },
+    "device-licenses/source.txt": {
+      "bytes": 541,
+      "mode": 420,
+      "sha256": "2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2"
+    },
+    "device-licenses/unicode-license.txt": {
+      "bytes": 1995,
+      "mode": 420,
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    },
+    "runtime-js-sources/NOTICES.txt": {
+      "bytes": 18300,
+      "mode": 420,
+      "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+    },
+    "runtime-js-sources/PYODIDE-JS-SOURCES.zip": {
+      "bytes": 1632140,
+      "mode": 420,
+      "sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"
+    },
+    "runtime-js-sources/index.json": {
+      "bytes": 3006,
+      "mode": 420,
+      "sha256": "1e26ef876d26f7aea469332d0e0b59779b70e63a0ecfb31a062320da96ce9f4e"
+    },
+    "runtime-obligations/HIWIRE-SOURCES.zip": {
+      "bytes": 107606,
+      "mode": 420,
+      "sha256": "ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086"
+    },
+    "runtime-obligations/NOTICES.txt": {
+      "bytes": 237980,
+      "mode": 420,
+      "sha256": "a327d8128ea3db6cd77bc5c21b410bed3bb1fe69aa32a9c4a6f508c624339a40"
+    },
+    "runtime-obligations/obligations.json": {
+      "bytes": 3233,
+      "mode": 420,
+      "sha256": "f7ba6486df0c2a8c50ca85749e6f0ac412bc84b595b3d4bc94d81e1f0d603b13"
+    },
+    "runtime-zlib-sources/NOTICES.txt": {
+      "bytes": 7912,
+      "mode": 420,
+      "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+    },
+    "runtime-zlib-sources/ZLIB-SOURCES.zip": {
+      "bytes": 1682541,
+      "mode": 420,
+      "sha256": "145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10"
+    },
+    "runtime-zlib-sources/index.json": {
+      "bytes": 1858,
+      "mode": 420,
+      "sha256": "0aa8796de6337350dd6aa98c3e9c1da6b0f75797ff96fc224db720cbc40d1dc2"
+    },
+    "web-licenses/THIRD-PARTY-NOTICES.txt": {
+      "bytes": 47849,
+      "mode": 420,
+      "sha256": "758090e581139eef4bf1062d76ca28dca9e09484ee94476954b6fcbaa6daf5ab"
+    },
+    "web-licenses/packages.json": {
+      "bytes": 38531,
+      "mode": 420,
+      "sha256": "2de807eaf15cccd340e22dd49679d15c94df5499602c939808c1e4a75c70e1c7"
+    },
+    "web-licenses/web-runtime.spdx.json": {
+      "bytes": 28936,
+      "mode": 420,
+      "sha256": "772adbbf234df5db3fad800a22fd6b22b80b59e8895a5384c6407bb10e3d4e25"
+    }
+  },
+  "required_runtime_companions": 14,
+  "additional_web_notice_companions": 3,
+  "file_origin_counts": {
+    "additional-attribution": 2,
+    "build-observation": 1,
+    "bundler-output": 19,
+    "copied-source": 27,
+    "exact-runtime": 5,
+    "project-generated": 74,
+    "project-public": 283,
+    "required-obligation": 17
+  },
+  "build_binding_sha256": "aa980fd7d07f42eeafbf7cead090435add58128af37d978780dbeacbe2c78e6f",
+  "genuine_protected_build_verified": false,
+  "managed_authority_positive_executed": false,
+  "production_published": false,
+  "independent_accuracy_evidence": false,
+  "legal_clearance": false,
+  "original_complete": 136,
+  "original_open": 66,
+  "full_original_requirement_closed": false,
+  "limits": [
+    "Genuine local build and finite canonical format/source verification, not a protected-web cryptographic release or reproduction of installed npm module bytes.",
+    "No physical-device, human accessibility or independent accuracy acceptance. Earlier failed attempts retained in prior diagnosis record."
+  ]
+}

@@ -1,3 +1,16 @@
+## Actual usable software and runtime qualification — 2026-11-24T00:13:52.217565+00:00
+
+Originals remain **136 complete /66 open**. IV now has a usable read-only signed
+review verifier with exact subject/scope binding and expiry, withdrawal, replacement
+and conflict states; it issues no IV tag. The actual whole browser package passes
+creation/read-back (428 files), and MT passes Chromium/WebKit privacy, reflow and
+independent failure-recovery checks. The app and Share compile on existing Xcode
+with60 expected public resources; ad-hoc linker metadata is explicitly separated
+from credential signing and TestFlight. These are concrete engineering outcomes,
+not full original closures. Current protected-profile refresh and publication
+remain necessary. The changed image source is being qualified on hosted Linux;
+no new local SDK/model or Docker installation was performed.
+
 ## Current independent implementation wave — 2026-11-23T23:50:31.938520+00:00
 
 Originals remain **136 complete /66 open**, target60 unmet. ROOT integrates the

@@ -1,0 +1,106 @@
+{
+  "profile": "actual-whole-web-artifact-retained-distinct-review/v1",
+  "captured_at": "2026-11-24T00:09:02.370263+00:00",
+  "pass": true,
+  "source_commit": "41669328e10c7f4a268559447f2f6dde50110e2d",
+  "archive": {
+    "bytes": 26204583,
+    "sha256": "a23bf62113d7042b8752db3c390c07deb5deaf0a9b892d71e4a2e92249b6aed3",
+    "payload_files": 428,
+    "zip_members": 429,
+    "expanded_payload_bytes_independently_stream_hashed": 25781417
+  },
+  "build_record_sha256": "aa980fd7d07f42eeafbf7cead090435add58128af37d978780dbeacbe2c78e6f",
+  "raw_observations": {
+    "actual-web-build-attempt-6.json": "3336fa8d2902e23bbef9e01567c01b297c9178cb54400639607ebb87168008e8",
+    "actual-web-artifact-build6-prepare.json": "e4368195a2e52bf70d677d143a9663b31d4368352acf2d39e206d5f591858e09",
+    "actual-web-artifact-build6-inspect.json": "8dfc8519c1bb3d5dcdca332d5da5ef7fa5cfb5bd5d5b785130034bef7045c4cc",
+    "current-V4-source-review-41669328.json": "ac004595ee02382f2aa56841776ad8ec21dabd370610f7326a9a6152109b2622"
+  },
+  "origin_counts": {
+    "project-public": 283,
+    "project-generated": 74,
+    "bundler-output": 19,
+    "copied-source": 27,
+    "required-obligation": 17,
+    "exact-runtime": 5,
+    "build-observation": 1,
+    "additional-attribution": 2
+  },
+  "independently_matched_runtime_files": 5,
+  "independently_matched_full_companions": {
+    "device-licenses/pyodide-MPL-2.0.txt": {
+      "bytes": 16725,
+      "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
+    },
+    "device-licenses/python-license.txt": {
+      "bytes": 13804,
+      "sha256": "b0e25a78cffb43f4d92de8b61ccfa1f1f98ecbc22330b54b5251e7b6ba010231"
+    },
+    "device-licenses/python-stdlib-notices.txt": {
+      "bytes": 245510,
+      "sha256": "cdb6d580e6b8cd658cb2e971004f75aa8dd49755da5ae6fa41b3efec2383d321"
+    },
+    "device-licenses/source.txt": {
+      "bytes": 541,
+      "sha256": "2a49a0cbc2df408d75db0f319502455ccc94533937242f23a6a226d2ace2d2b2"
+    },
+    "device-licenses/unicode-license.txt": {
+      "bytes": 1995,
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    },
+    "runtime-js-sources/NOTICES.txt": {
+      "bytes": 18300,
+      "sha256": "8b09eb7b180e1711482ac2e2d7a0390bb6e47abb99ce8cd9203f9c6d2425edd4"
+    },
+    "runtime-js-sources/PYODIDE-JS-SOURCES.zip": {
+      "bytes": 1632140,
+      "sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"
+    },
+    "runtime-js-sources/index.json": {
+      "bytes": 3006,
+      "sha256": "1e26ef876d26f7aea469332d0e0b59779b70e63a0ecfb31a062320da96ce9f4e"
+    },
+    "runtime-zlib-sources/NOTICES.txt": {
+      "bytes": 7912,
+      "sha256": "f5dd260a03e0c0ae0315460275c8f5d233ca7140904c5169338e03608eebd1cf"
+    },
+    "runtime-zlib-sources/ZLIB-SOURCES.zip": {
+      "bytes": 1682541,
+      "sha256": "145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10"
+    },
+    "runtime-zlib-sources/index.json": {
+      "bytes": 1858,
+      "sha256": "0aa8796de6337350dd6aa98c3e9c1da6b0f75797ff96fc224db720cbc40d1dc2"
+    },
+    "runtime-obligations/HIWIRE-SOURCES.zip": {
+      "bytes": 107606,
+      "sha256": "ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086"
+    },
+    "runtime-obligations/NOTICES.txt": {
+      "bytes": 237980,
+      "sha256": "a327d8128ea3db6cd77bc5c21b410bed3bb1fe69aa32a9c4a6f508c624339a40"
+    },
+    "runtime-obligations/obligations.json": {
+      "bytes": 3233,
+      "sha256": "f7ba6486df0c2a8c50ca85749e6f0ac412bc84b595b3d4bc94d81e1f0d603b13"
+    }
+  },
+  "observed_build": {
+    "sources": 154,
+    "modules": 146,
+    "outputs": 19,
+    "index_sha256": "01bf523b6db61e2b587cd744e4dbd0537a900381367136aa60bdf52a7afdc59a"
+  },
+  "conclusions": [
+    "Actual ordinary build/prepare/inspect succeeds;428 member bytes/hash/origin census binds supplied committed build record, not synthetic fixture.",
+    "Fourteen full carried runtime companions match previously reviewed source/offer identities; five runtime files match immutable manifest.",
+    "Every provided tracked-origin OID independently matches literal416 tree. V4 source-only report passes same416 without compiled-permission inference."
+  ],
+  "limits": [
+    "No real managed AUTH/protected producer/signature/install/runtime execution/accuracy/fullF057X02 closure. All artifact claims false.",
+    "Observed modules are retained local producer facts, not independent compiler reproduction or exhaustive binary symbol attribution.",
+    "Reviewer authored earlier Emscripten/React facts; carried identity review does not independently adopt own grant facts."
+  ],
+  "review_operation_note": "Initial metadata probe expected flat external binding inside ZIP; actual closed format is outer envelope.build, independently matched exactly. No source/product defect or extraction."
+}

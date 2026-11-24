@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-tag-runtime-qualification",
+  "recorded_at": "2026-11-24T00:21:32.987283+00:00",
+  "author": "Codex /root integration; /root/seo distinct review; tag/runtime workers attributed in evidence",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "432b9276e2ef8cee52437e0ce4eae2b6aaf0c606",
+  "changed": "Made IV reviewer-attestation verification discoverable and CI-gated, integrated actual whole-web/MT/app resource qualification, refreshed exact finite source bindings and synchronized attributed scope/state/worker records.",
+  "proves": "Actual416 whole web creation and inspection pass428 files with complete14runtime companions and different streamed payload review. Actual Chromium/WebKit MT workflows pass35source/27served identities. Actual980 signing-disabled app/Share compile passes with60resource identities. IV has a usable local verifier, distinct source review and actual16 controls. Additive source registration preserves13siblings and all202 original acceptance contracts.",
+  "limits": "136originals complete66open; target60 unmet and no full original closes. These exact selected-source engineering observations are not fresh full current protected capability reports, current TestFlight upload, physical/human acceptance, independent accuracy, legal clearance or web-route authorization. Actual image416source gate succeeds but dependency acquisition fails and native inference is skipped; cause remains under diagnosis.",
+  "scope_ids": [
+    "T-IV",
+    "T-MT",
+    "N-012",
+    "N-013",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "a549b9c83179381e7be79bd6d5dfe15f8ccad45cf694a01776fc6f4babaa05d0",
+    "README.md": "11ed299b8baf76375b3d13cdfd8b54adc3976613b4b8434642e8d16439109367",
+    "docs/scope-progress.json": "47666943746cca67063a60e10c977be2cb3888bcb95bd90f9113eb7075beaaa3",
+    "docs/scope-progress.md": "2cb831d34c27857d06d2ce19f96b745ad53fe8d8d7040429254b85a213929583",
+    "docs/session-delivery-plan.md": "15f986490992e7351a0b45e39c968e8ddaee7f2cc14e1155030ed010f74d32ff",
+    "docs/session-delivery.json": "c71caa7ad7307de4fb438046da32c0dcbb9d403e47b018761f777339a15891b8",
+    "docs/tag-runtime-integration-plan.md": "f44ccfc43644c8dd33a9e8c49d95e0c784e19464519141980db9378d0a4d5404",
+    "eval/dependencies/source-snapshot-additions-v4.json": "6b2ea3a3734f44a678753566a48470a4a2c7df7cc37ad5271be780ef9a2c00fd",
+    "eval/dependency-policy.json": "369cbc468cfe9ba91b87483c5f0acc3b8fa937dbbf5727b7f37d60d9ac8a1ee0",
+    "eval/revalidation.json": "4f2f129bf38ea50fd78847b380e039fe4a0c8574ce813d3ea9a36197bbbaf5a1",
+    "site/public/reference/public-scope.json": "6b221acf14361f8b1a94ac8d39fab7201ddb4b197333ea5eb560974c5df34f91",
+    "site/src/public-scope.json": "6b221acf14361f8b1a94ac8d39fab7201ddb4b197333ea5eb560974c5df34f91",
+    "site/src/scope-manifest.json": "94dbe4cee066e68a981d521b9d31b1851586fe68ea9b1c32a735da53841e8a81",
+    "state.json": "9eb416885866a3fafa2311b8fad09a19f2c1a933b3e1fa66fd5a2240919bc159",
+    "tools/source_release_policy_v4.py": "fe287d8554c16dca3cde91c0e63925fec23be48c54a33e6682ff648ffd6051d8",
+    "tools/web_checker_artifact.py": "9d3bbcf3245c15396ef2255226a59da36237c62b6fa889ea3c77d8f1e22d2338",
+    "runs/2026-11-23-tag-runtime-qualification.json": "687d7c7f3b975d45b2705865b019f59c4f9a9ee141f8461af23d2240ccce76a8",
+    "runs/2026-11-23-web-checker-observed-build-review.json": "518c298eeff3418da1ec235efec0e3ccc96f3f14bfaa5d0968735538e594de41",
+    "runs/2026-11-23-web-checker-observed-build.json": "45ca944f7d5af1369ed0170d5fdb7ad616723b20b0f7615795ac60b572259a50"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-web-checker-observed-build.json",
+      "sha256": "45ca944f7d5af1369ed0170d5fdb7ad616723b20b0f7615795ac60b572259a50"
+    },
+    {
+      "path": "runs/2026-11-23-web-checker-observed-build-review.json",
+      "sha256": "518c298eeff3418da1ec235efec0e3ccc96f3f14bfaa5d0968735538e594de41"
+    },
+    {
+      "path": "runs/2026-11-23-tag-runtime-qualification.json",
+      "sha256": "687d7c7f3b975d45b2705865b019f59c4f9a9ee141f8461af23d2240ccce76a8"
+    }
+  ],
+  "checks": [],
+  "different_final_source_review": {
+    "sha256": "5eea0069d89275ca090098d9970e9d058c68a0c6228557b701af6e1d228b7449",
+    "record": {
+      "profile": "root-tag-runtime-combined-source-distinct-review/v1",
+      "captured_at": "2026-11-24T00:20:19.008275+00:00",
+      "pass": true,
+      "source_head": "432b9276e2ef8cee52437e0ce4eae2b6aaf0c606",
+      "reviewed_file_hashes": {
+        ".github/workflows/ci.yml": "a549b9c83179381e7be79bd6d5dfe15f8ccad45cf694a01776fc6f4babaa05d0",
+        "README.md": "11ed299b8baf76375b3d13cdfd8b54adc3976613b4b8434642e8d16439109367",
+        "docs/scope-progress.json": "47666943746cca67063a60e10c977be2cb3888bcb95bd90f9113eb7075beaaa3",
+        "docs/scope-progress.md": "2cb831d34c27857d06d2ce19f96b745ad53fe8d8d7040429254b85a213929583",
+        "docs/session-delivery-plan.md": "15f986490992e7351a0b45e39c968e8ddaee7f2cc14e1155030ed010f74d32ff",
+        "docs/session-delivery.json": "c71caa7ad7307de4fb438046da32c0dcbb9d403e47b018761f777339a15891b8",
+        "docs/tag-runtime-integration-plan.md": "f44ccfc43644c8dd33a9e8c49d95e0c784e19464519141980db9378d0a4d5404",
+        "eval/dependencies/source-snapshot-additions-v4.json": "6b2ea3a3734f44a678753566a48470a4a2c7df7cc37ad5271be780ef9a2c00fd",
+        "eval/dependency-policy.json": "369cbc468cfe9ba91b87483c5f0acc3b8fa937dbbf5727b7f37d60d9ac8a1ee0",
+        "eval/revalidation.json": "4f2f129bf38ea50fd78847b380e039fe4a0c8574ce813d3ea9a36197bbbaf5a1",
+        "site/public/reference/public-scope.json": "6b221acf14361f8b1a94ac8d39fab7201ddb4b197333ea5eb560974c5df34f91",
+        "site/src/public-scope.json": "6b221acf14361f8b1a94ac8d39fab7201ddb4b197333ea5eb560974c5df34f91",
+        "site/src/scope-manifest.json": "94dbe4cee066e68a981d521b9d31b1851586fe68ea9b1c32a735da53841e8a81",
+        "state.json": "9eb416885866a3fafa2311b8fad09a19f2c1a933b3e1fa66fd5a2240919bc159",
+        "tools/source_release_policy_v4.py": "fe287d8554c16dca3cde91c0e63925fec23be48c54a33e6682ff648ffd6051d8",
+        "tools/web_checker_artifact.py": "9d3bbcf3245c15396ef2255226a59da36237c62b6fa889ea3c77d8f1e22d2338",
+        "runs/2026-11-23-tag-runtime-qualification.json": "687d7c7f3b975d45b2705865b019f59c4f9a9ee141f8461af23d2240ccce76a8",
+        "runs/2026-11-23-web-checker-observed-build-review.json": "518c298eeff3418da1ec235efec0e3ccc96f3f14bfaa5d0968735538e594de41",
+        "runs/2026-11-23-web-checker-observed-build.json": "45ca944f7d5af1369ed0170d5fdb7ad616723b20b0f7615795ac60b572259a50"
+      },
+      "source_stable_during_final_capture": true,
+      "v4_name_capacity": {
+        "project": 148,
+        "mixed_index": 1,
+        "total": 149,
+        "limit": 160
+      },
+      "original_accounting": {
+        "records": 202,
+        "complete": 136,
+        "open": 66,
+        "T_IV_percent": 20,
+        "scoped_closed": 31,
+        "scoped_records": 32,
+        "criteria_percent_milestones_completion_unchanged": true
+      },
+      "findings": [
+        "CI changes only IV Node operand in existing receipt step; removal reconstructs old YAML. Revalidation adds five exact IV source patterns to protocol/website; commands and other capabilities unchanged.",
+        "V4 adds only ten literal project names; core only policy digest. Registry only two exact V4 source rows/current size/hash;13siblings and permission fields unchanged. Web only actual registry source pin. Legacy/copied grants/codee72/caps preserved.",
+        "All202 original acceptance, percentage, milestone, completion/queue criteria preserved; new evidence retains historical prefixes. Three actual generated scope files preserve master fields and embed current progress, including derived legacy-group member next-fix text. Two public copies and manifest exact hash/size agree.",
+        "Board history equals HEAD previous wave; scoped31/32 and136/66 unchanged. New bounded assignment snapshot reflects current next outcomes. State paired timestamps/current432b baseline and exact historical qualification-source limits retained.",
+        "Public web/runtime copies compared to private retained build416/native980/MT records and exact review payloads; no /Users/ paths. Ad-hoc linker metadata, real executor attribution and failed initial report path remain qualified."
+      ],
+      "related_review_digests": {
+        "whole_web": "518c298eeff3418da1ec235efec0e3ccc96f3f14bfaa5d0968735538e594de41",
+        "compiled_ios": "e23faa99ea5470059afbf1983c27611af60934d7ba5093068466aab97a0f2f3d",
+        "MT_browser": "70a6f255805086447914f6fd3275a63c76331215f33a060f6dc7133588145efc"
+      },
+      "event_readiness": "Nineteen exact hashes ready for fresh attributed event and normal guard. Event/CHL are not yet written or waived.",
+      "limits": [
+        "No tests/builds/SDK/model/native/browser/network/profile repeat.",
+        "Ordinary whole web proof remains416 and native compile980. Final new source/ledger projections require fresh hosted profiles and protected publication; no retroactive current-qualified claim.",
+        "Image actual run separate/pending; no IV/tag accuracy/human acceptance/legal/fullF057X02/original closure."
+      ],
+      "reviewer_authorship": "Reviewer authored additive CI and earlier retained facts; this distinct review checks ROOT composition, evidence and accounting rather than independently adopting own grant facts.",
+      "review_operation_note": "Read-only projection probes initially assumed whole-ledger equality, then unchanged legacy_group. Actual prepare source shows embedded progress and derived member next-fix projections; exact mapping checked. No product/source failure or mutation."
+    }
+  }
+}

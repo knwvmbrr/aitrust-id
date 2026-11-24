@@ -196,3 +196,18 @@ source registry/web pins. An exact different review and focused controls precede
 a fresh committed build/package; failed build5 package and source diagnostics
 remain unaccepted. Diagnostic instrumentation only observes failed predicates
 and never supplies provenance or source-copy permission.
+
+## Verified runtime and IV integration
+
+The actual committed416 whole web build/package/inspection passes428 files;
+Chromium and WebKit scoped MT checks pass against those served bytes. The actual
+980 app/Share Simulator compilation succeeds with60 expected public resources;
+its linker ad-hoc metadata is explicitly distinguished from credential signing.
+Integrate reviewed IV78fe as a separate read-only verifier, add its16 Node controls
+to the existing site receipt test step and bind its exact source footprint.
+Publish the local CLI guide in README. Preserve all original criteria/percentages,
+append real evidence and exact remaining integration/human limits, and update dated
+worker assignments. Add only exact7 IV source/record names and2 qualification
+record names to finite V4; include README maintenance if absent. Refresh only
+V4 literal identity and its two registry source rows, then the web registry pin.
+No predecessor code, copied grant, scope criterion, taxonomy, endpoint or cap changes.

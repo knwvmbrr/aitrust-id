@@ -189,22 +189,22 @@
     {
       "tag_id": "T-IV",
       "bot_id": "tag_iv",
-      "actual_worker": "/root/share_debugger",
-      "status": "active",
-      "checked_at": "2026-11-23T23:50:31.938520+00:00",
-      "current_component_status": "Bounded independent attestation lifecycle implementation assigned; architecture before refactor. No IV issuance or human-independent validation claimed.",
+      "actual_worker": null,
+      "status": "reviewed",
+      "checked_at": "2026-11-24T00:13:52.217565+00:00",
+      "current_component_status": "Usable independent read-only attestation integrity/lifecycle verifier integrated from78fe13; ROOT distinct review and actual16controls pass. IV issuance and real human independence/accuracy remain unmet.",
       "blocking_acceptance": "No complete consented human review/identity/withdrawal operating workflow is evidenced. Signatures on selected bytes alone do not establish review scope or reviewer independence.",
-      "next_task": "Verify exact subject/version, declared reviewer scope, consent, signature, expiry, withdrawal and conflict; keep human acceptance open."
+      "next_task": "Finish actual reviewer trust/identity/independence policy, consumer/challenge integration and real human acceptance. No tag released."
     },
     {
       "tag_id": "T-FA",
       "bot_id": "tag_fa",
-      "actual_worker": null,
-      "status": "reviewed",
-      "checked_at": "2026-11-22T16:58:10.565070+00:00",
-      "current_component_status": "Linux JPEG credential/action component engineering and distinct review complete; protected source delivery pending. FA remains Planned.",
+      "actual_worker": "/root/web_camo",
+      "status": "active",
+      "checked_at": "2026-11-24T00:15:53.423239+00:00",
+      "current_component_status": "Actual source-bound image reference qualification on hosted Linux run45295554500; separate bounded research observation, not an FA issuance or AI-origin claim.",
       "blocking_acceptance": "Image/signature integrity, experimental adjudication and revision-diff observations do not yet deliver independently supported generation/edit origin or outside-session knowledge claims for an adopted workflow.",
-      "next_task": "Preserve full image-origin evidence and independent acceptance; component metadata is not an FA verdict."
+      "next_task": "Complete source99/acquisition/install/native/runtime cleanup and retain actual evidence. Trusted generation policy, FA consumer, independent labels and human acceptance remain open."
     },
     {
       "tag_id": "T-PA",
@@ -6478,7 +6478,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-23T23:50:31.938520+00:00",
+  "updated_at": "2026-11-24T00:15:53.423239+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -7193,37 +7193,37 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-23T23:50:31.938520+00:00",
-    "source_baseline_commit": "69d7a370",
+    "recorded_at": "2026-11-24T00:15:53.423239+00:00",
+    "source_baseline_commit": "432b9276e2ef8cee52437e0ce4eae2b6aaf0c606",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
-    "status": "Actual protected source release and separate Mac consumer complete. Reviewed MT, web runtime, active finite V4 and iOS notice source integrated; genuine full web and unsigned native qualification in progress. No original closure.",
+    "status": "Reviewed IV verifier integrated; actual416 whole web artifact and two-engine MT checks pass;980 signing-disabled app/Share compilation plus60publicresources pass. Current protected hosted receipts/publication and image qualification pending.136complete66open; target60 unmet.",
     "assignments": [
       {
         "worker": "/root",
-        "role": "PM and web/runtime integration",
+        "role": "PM and current integration/public delivery",
         "status": "active_bounded_assignment_at_snapshot",
-        "outcome": "Complete actual observed web build and whole artifact, integrate immutable child handoffs and preserve exact source grant and original acceptance."
+        "outcome": "Integrate IV and qualified web/native results, update original scope/state and publish guarded source with fresh required profiles."
       },
       {
         "worker": "/root/seo",
         "role": "Task-list lead and different reviewer",
         "status": "active_bounded_assignment_at_snapshot",
-        "outcome": "Review exact two web source-pin changes, native storage observer and additive CI/revalidation registration."
+        "outcome": "Final combined source/criteria preservation and actual runtime evidence review; no duplicated build/test matrix."
       },
       {
         "worker": "/root/share_debugger",
-        "role": "Independent IV attestation software engineer",
+        "role": "Independent IV software and next web route architect",
         "status": "active_bounded_assignment_at_snapshot",
-        "outcome": "Implement exact subject/version-bound attestation lifecycle verification; preserve actual human independence and final acceptance."
+        "outcome": "IV78fe source handoff integrated; investigate exact protected web route/managed authority composition without broad permission or changing siblings."
       },
       {
         "worker": "/root/web_camo",
-        "role": "Native runtime integration and image qualification engineer",
+        "role": "Image Linux qualification and app evidence engineer",
         "status": "active_bounded_assignment_at_snapshot",
-        "outcome": "Complete bounded unsigned current app/Share compilation; preserve sparse-cache accounting failure. Image99 source correction awaits exact changed Linux qualification."
+        "outcome": "Signing-disabled app/Share compilation and60resources complete. Monitor actual changed416 Linux image run45295554500; inspect existing owned Simulator availability only."
       }
     ],
     "scoped_tasks_closed": 31,
@@ -7865,6 +7865,53 @@
         ],
         "acceptance_at": "2026-11-23T22:29:05.223367+00:00",
         "original_closures": 0
+      }
+    },
+    {
+      "recorded_at": "2026-11-23T23:50:31.938520+00:00",
+      "source_baseline_commit": "69d7a370",
+      "original_complete": 136,
+      "original_open": 66,
+      "target_open": 60,
+      "remaining_full_closures": 6,
+      "status": "Actual protected source release and separate Mac consumer complete. Reviewed MT, web runtime, active finite V4 and iOS notice source integrated; genuine full web and unsigned native qualification in progress. No original closure.",
+      "assignments": [
+        {
+          "worker": "/root",
+          "role": "PM and web/runtime integration",
+          "status": "active_bounded_assignment_at_snapshot",
+          "outcome": "Complete actual observed web build and whole artifact, integrate immutable child handoffs and preserve exact source grant and original acceptance."
+        },
+        {
+          "worker": "/root/seo",
+          "role": "Task-list lead and different reviewer",
+          "status": "active_bounded_assignment_at_snapshot",
+          "outcome": "Review exact two web source-pin changes, native storage observer and additive CI/revalidation registration."
+        },
+        {
+          "worker": "/root/share_debugger",
+          "role": "Independent IV attestation software engineer",
+          "status": "active_bounded_assignment_at_snapshot",
+          "outcome": "Implement exact subject/version-bound attestation lifecycle verification; preserve actual human independence and final acceptance."
+        },
+        {
+          "worker": "/root/web_camo",
+          "role": "Native runtime integration and image qualification engineer",
+          "status": "active_bounded_assignment_at_snapshot",
+          "outcome": "Complete bounded unsigned current app/Share compilation; preserve sparse-cache accounting failure. Image99 source correction awaits exact changed Linux qualification."
+        }
+      ],
+      "scoped_tasks_closed": 31,
+      "scoped_task_records": 32,
+      "original_closures_since_baseline": 4,
+      "all202_preserved": true,
+      "baseline_hashes_unchanged": true,
+      "agents_permanent": false,
+      "assignments_are_live_heartbeats": false,
+      "owner_actions_unchanged": true,
+      "feasibility": {
+        "status": "Current66 original acceptance contracts reviewed again; no six fully autonomous closures established. Continue useful software outcomes without relabeling independent human, legal or owner gates.",
+        "six_autonomous_closures_promised": false
       }
     }
   ]
