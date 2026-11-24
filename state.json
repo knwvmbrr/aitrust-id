@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-24T04:12:11.685177+00:00",
+  "updated": "2026-11-24T05:47:48.594645+00:00",
   "active_increment": "Current seven-flow App/Share proof selected; final-source protected checks/publication next; independent image/web source handoffs;136complete66open, target60 unmet.",
   "status": "136complete66open_target60_unmet;current_seven_native_pass_publication_pending",
   "scope": "docs/master-scope.json",
@@ -768,17 +768,28 @@
     "private_vulnerability_reporting_enabled": true,
     "evidence": "runs/2026-10-09-provenance-boundary-download.json",
     "independent_install_review": false,
-    "latest_implementation_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
+    "latest_implementation_commit": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
     "handheld_download_verified": true,
-    "latest_authenticated_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-11-17-13e808e",
-    "latest_implementation_scope": "Selected gateway/extension runtime; later bookkeeping and accountability utilities are tracked separately.",
-    "latest_authenticated_download_evidence": "runs/2026-11-17-mt-authenticated-source-publication.json",
-    "latest_authenticated_source_commit": "13e808e4c6d98bbbdbc837b0e2388b52176ce7de"
+    "latest_authenticated_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/source-verified-2026-11-24-898dc254",
+    "latest_implementation_scope": "Current complete source snapshot; authenticated source-copy route and three finite standalone PS source probes. Independent tag accuracy, human acceptance and other platform permissions remain separate.",
+    "latest_authenticated_download_evidence": "runs/2026-11-24-source-snapshot-publication.json",
+    "latest_authenticated_source_commit": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+    "authenticated_download_history": [
+      {
+        "superseded_at": "2026-11-24T05:47:48.594645+00:00",
+        "latest_authenticated_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-11-17-13e808e",
+        "latest_authenticated_download_evidence": "runs/2026-11-17-mt-authenticated-source-publication.json",
+        "latest_authenticated_source_commit": "13e808e4c6d98bbbdbc837b0e2388b52176ce7de",
+        "latest_implementation_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
+        "latest_implementation_scope": "Selected gateway/extension runtime; later bookkeeping and accountability utilities are tracked separately."
+      }
+    ],
+    "current_authenticated_assets_anonymously_verified": 6
   },
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
     "candidate_source": "https://theailab.org/ai-trust-registry",
-    "observed_mark": "AI Trust ID\u2122",
+    "observed_mark": "AI Trust ID™",
     "registration_priority_and_legal_conflict_verified": false
   },
   "market_research": {
@@ -1599,7 +1610,7 @@
     "active_retention_days": 30,
     "backup_expiry_days": 7,
     "invitation_only": true,
-    "owner_role": "Michael \u2014 accepted accountable pilot operator and access approver",
+    "owner_role": "Michael — accepted accountable pilot operator and access approver",
     "owner_decision": "runs/2026-10-13-metadata-pilot-owner-decision.json",
     "policy": "deploy/research/metadata-pilot-policy.json"
   },
@@ -5707,5 +5718,14 @@
     "current_failures": [
       "Independent accuracy and actual human-release acceptance remain unmet; these are separate from the11passing required engineering contexts."
     ]
+  },
+  "current_source_snapshot_publication": {
+    "recorded_at": "2026-11-24T05:47:48.594645+00:00",
+    "status": "published_and_six_anonymous_assets_verified",
+    "source_commit": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+    "release_url": "https://github.com/knwvmbrr/aitrust-id/releases/tag/source-verified-2026-11-24-898dc254",
+    "evidence": "runs/2026-11-24-source-snapshot-publication.json",
+    "source_only": true,
+    "original_requirement_closed": false
   }
 }

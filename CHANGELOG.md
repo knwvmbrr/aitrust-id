@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-source-snapshot-publication
+
+Recorded 2026-11-24T05:47:48.594645+00:00 · Contributor: Codex /root; Codex /root/seo distinct publication review · change
+
+- **Changed.** Publish the current protected whole-source snapshot with its five exact evidence companions as an engineering prerelease; update the current source-download state while preserving prior releases.
+- **Evidence.** Protected main production and separate Mac consumer authenticate the same source archive and complete three fixed PS probes. All six public anonymous downloads return HTTP200 and match exact sizes and SHA256; no downloaded bodies are stored again. [Change record](./runs/changes/2026-11-24-source-snapshot-publication.json).
+- **Not claimed.** Whole source-copy route and three finite standalone PS source probes only. No independent tag accuracy, certification, human accessibility acceptance, signed mobile build, all-platform distribution permission or F-057/X-02 closure. Publisher observation and carried roots do not replace independent trust selection. Originals remain136complete/66open; target60unmet.
+
+
 ### 2026-11-23-current-static-publication
 
 Recorded 2026-11-24T04:53:23.330017+00:00 · Contributor: Codex /root integration; /root/share_debugger different source/artifact review · change
