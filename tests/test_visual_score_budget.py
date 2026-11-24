@@ -129,10 +129,15 @@ class BudgetTests(unittest.TestCase):
  def test_forward_execs_fixed_verifier_no_kill_wrapper(self):
   with self.private() as d:
    record=self.record()
-   with mock.patch.object(b,'boot',return_value=BOOT),mock.patch.object(operator.os,'execve',side_effect=OSError('exec unavailable')) as execute,mock.patch.object(q,'call') as wrapped,self.assertRaises(OSError):
+   with mock.patch.object(b,'boot',return_value=BOOT):stop=b.phase_end(record,'forward')-b.DRAIN*b.SECOND
+   with mock.patch.dict(os.environ,{'VISUAL_QUAL_FORWARD_STOP_NS':str(stop)}),mock.patch.object(b,'boot',return_value=BOOT),mock.patch.object(operator.os,'execve',side_effect=OSError('exec unavailable')) as execute,mock.patch.object(q,'call') as wrapped,self.assertRaises(OSError):
     operator.worker('forward',d/'visual-score-owned',d,sys.executable,record)
    wrapped.assert_not_called();args=execute.call_args.args
-   self.assertEqual(args[0],sys.executable);self.assertEqual(args[1][:4],[sys.executable,'-I','-B',str(ROOT/'scripts/verify-visual-score-qualification.py')]);self.assertNotIn('HF_TOKEN',args[2]);self.assertNotIn('GITHUB_TOKEN',args[2])
+   self.assertEqual(args[0],sys.executable);self.assertEqual(args[1][:4],[sys.executable,'-I','-B',str(ROOT/'scripts/verify-visual-score-qualification.py')]);self.assertNotIn('HF_TOKEN',args[2]);self.assertNotIn('GITHUB_TOKEN',args[2]);self.assertEqual(args[2]['VISUAL_QUAL_FORWARD_STOP_NS'],str(stop))
+   for stop in ('invalid',str(record['work_deadline_ns']+1),str(b.clock()-1)):
+    with mock.patch.dict(os.environ,{'VISUAL_QUAL_FORWARD_STOP_NS':stop}),mock.patch.object(b,'boot',return_value=BOOT),mock.patch.object(operator.os,'execve')as execute,self.assertRaises(b.BudgetRefused):
+     operator.worker('forward',d/'visual-score-owned',d,sys.executable,record)
+    execute.assert_not_called()
  def test_late_positive_private_candidate_never_published(self):
   with self.private() as d:
    stage=d/'visual-score-owned';r=self.record();current=[r['work_deadline_ns']+1];h=self.write(d/'budget.json',r)
@@ -195,7 +200,7 @@ class BudgetTests(unittest.TestCase):
    self.assertTrue(last['candidate_pass']);self.assertTrue(first['candidate']['pass']);self.assertTrue(last['requires_successful_exact_source_job'])
  def test_exact_source_suite_admission_before_execution_and_actual_count(self):
   from types import SimpleNamespace
-  expected={'test_visual_score.py':33,'test_visual_score_qualification.py':34,'test_visual_score_workflow.py':5,'test_visual_score_budget.py':27}
+  expected={'test_visual_score.py':33,'test_visual_score_qualification.py':36,'test_visual_score_workflow.py':5,'test_visual_score_budget.py':27}
   self.assertEqual(operator.SOURCE_SUITE_COUNTS,expected)
   def suites(counts):return {name:unittest.TestSuite(unittest.FunctionTestCase(lambda:None) for _ in range(n)) for name,n in counts.items()}
   with self.private() as d:

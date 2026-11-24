@@ -1,0 +1,47 @@
+{
+  "actual_check_context": "One grouped QualificationTests.test_failed_forward_diagnostics_and_bounded_sdk_probe plus one-off source88/diff/AST/discovery capture; no actual SDK import.",
+  "author": "Codex /root/seo; Codex /root distinct diagnostic review",
+  "changed": "Split the diagnostic-only CPU setup stage into the exact three existing Torch call operations and retain only whitelisted errno values and closed error categories.",
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "-"
+      ],
+      "exit_status": 0,
+      "finished_at": "2026-11-24T04:30:03.924694+00:00",
+      "pass": true
+    }
+  ],
+  "claim_level": "engineering_only",
+  "distinct_review": {
+    "raw_utf8": "{\n  \"profile\": \"root-image-cpu-operation-source-review/v1\",\n  \"captured_at\": \"2026-11-24T04:30:53.447815+00:00\",\n  \"reviewer\": \"Codex /root\",\n  \"pass\": true,\n  \"source_base\": \"326bbab302954a8deedc2e2728d89855dd5fa802\",\n  \"files\": {\n    \"docs/offline-image-score-qualification-plan.md\": \"fb19e1a91af76b75b62a6a3d675e6bd2eab6d5b3855c592a27b0b8a58aa35c8b\",\n    \"scripts/verify-visual-score-qualification.py\": \"a975488dcac10be166056bd4a30269800c4cc8d02adfc9ce2e09dfedac6b7a27\",\n    \"tests/test_visual_score_qualification.py\": \"c2f78d315815b5f059d47eb61899a5f915624acb4387acebb942b30695c66e74\",\n    \"runs/2026-11-23-image-cpu-operation-diagnostics.json\": \"011c29b96b0017d472ac4a0d00e92ebdf0469d95b9dd4e531194dc2d1f9d6a0e\"\n  },\n  \"changed_verifier_functions\": [\n    \"_sdk_probe_infer\",\n    \"validate_sdk_probe\"\n  ],\n  \"all_three_sdk_calls_arguments_order_unchanged\": true,\n  \"runtime_supervisor_phase_driver_unchanged\": true,\n  \"actual_affected_control\": {\n    \"name\": \"tests.test_visual_score_qualification.QualificationTests.test_failed_forward_diagnostics_and_bounded_sdk_probe\",\n    \"tests\": 1,\n    \"failures\": 0,\n    \"seconds\": 0.177\n  },\n  \"native_model_or_sdk_executed\": false,\n  \"hosted_retry_authorized\": false,\n  \"original_closure\": false\n}\n",
+    "sha256": "0ca3a89e9bc24f0ab5849d0298d7237957b515ece28bd459d2ae6b95011c270a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-image-cpu-operation-diagnostics.json",
+      "sha256": "011c29b96b0017d472ac4a0d00e92ebdf0469d95b9dd4e531194dc2d1f9d6a0e"
+    }
+  ],
+  "files": {
+    "docs/offline-image-score-qualification-plan.md": "fb19e1a91af76b75b62a6a3d675e6bd2eab6d5b3855c592a27b0b8a58aa35c8b",
+    "runs/2026-11-23-image-cpu-operation-diagnostics.json": "011c29b96b0017d472ac4a0d00e92ebdf0469d95b9dd4e531194dc2d1f9d6a0e",
+    "scripts/verify-visual-score-qualification.py": "a975488dcac10be166056bd4a30269800c4cc8d02adfc9ce2e09dfedac6b7a27",
+    "tests/test_visual_score_qualification.py": "c2f78d315815b5f059d47eb61899a5f915624acb4387acebb942b30695c66e74"
+  },
+  "id": "2026-11-23-image-cpu-operation-diagnostics",
+  "independent_release_validated": false,
+  "kind": "change",
+  "limits": "No local SDK/model/native execution, download, installation, new hosted retry, native qualification, accuracy, redistribution permission, legal clearance or original closure. The prior CPU PermissionError remains unlocalized until a separately authorized exact changed-source run. Failure finalization proposalB is not implemented; immutable prior failure artifacts and nooverwrite remain unchanged.",
+  "proves": "The expanded existing grouped control passes with88 stable source hashes and unchanged101 discovery denominator. ROOT independently read the delta and passed that grouped control. The exact three calls and their order, driver, isolation, resource budgets, successful acceptance and every other verifier function remain unchanged.",
+  "recorded_at": "2026-11-24T04:31:24.043597+00:00",
+  "schema_version": 1,
+  "scope_ids": [
+    "T-FA"
+  ],
+  "source_base": "326bbab302954a8deedc2e2728d89855dd5fa802"
+}

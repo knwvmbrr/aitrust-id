@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-ios-size-matrix-navigation",
+  "recorded_at": "2026-11-24T05:46:00.855166+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "e5b67278bc3e118c77cac94b55354cfe651d0082",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "changed": "Replace the separate layout fixture\u2019s full-swipe reveal with edge-gap/opposite-slack-bounded interior drags and fixed numeric diagnostics, preserving full containment, hittability and all existing runtime limits.",
+  "proves": "One affected derivation unittest and four captured scalar-expression cases pass with6/114 source bindings stable; independent source reviews reconstruct the full old fixture outside reveal/roles and the full old runner outside its fixture hash. Actual first small-screen attempt remains failed at largest input reveal, with both standard configurations passed and owned cleanup verified.",
+  "limits": "Source-only repair, not changed Swift/native qualification. Original failed raw outputs, source-only28 proof and seven-flow proof remain separate; no old/new pass composition, physical phone, human accessibility, accuracy, tag release, route admission or original closure.",
+  "files": {
+    "tools/ios_simulator_matrix.py": "b044a882ae420674bf4a974c5146c89935550bcd8a184b3e062884155419fc44",
+    "mobile/ios/Tests/SizeLayoutFlows.swift": "6e456b4ba2af4d72019c7b3717523302265a7be1194d97000bc18afb766eba90",
+    "docs/ios-simulator-matrix-plan.md": "336147519fde5f345cb2fc9f5d9318a2a7f701792547eb7de6e8590579882afe",
+    "runs/2026-11-24-ios-size-matrix-navigation.json": "bc132e283f5bf36139c2c6d68696f92a7591b652e17f80a2eeb39a9663c559a3"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-size-matrix-navigation.json",
+      "sha256": "bc132e283f5bf36139c2c6d68696f92a7591b652e17f80a2eeb39a9663c559a3"
+    }
+  ],
+  "checks": [],
+  "different_review": {
+    "status": "CLEAR for exact source repair; native attempt separately authorized by ROOT after normal commit",
+    "reviews": [
+      {
+        "name": "seo-navigation-final-source-review.json",
+        "sha256": "97ac6858c247fb6fb4ab8aca536e78efa4a26d2be9804dd2ec92797351158660",
+        "raw_utf8": "{\n  \"author_control_sha256\": \"96b44cafee50a57f9fb7c442e3290d3c928fa10c0e44f8eea6849b5df8723f3f\",\n  \"author_freeze_sha256\": \"816efcc66b633f648cf5bb13995a15e1148a2d82bee22c10378427ec6f4e7606\",\n  \"captured_at\": \"2026-11-24T05:43:43.433867+00:00\",\n  \"dependencies114_current_exact\": true,\n  \"evidence_qualification\": \"One affected actual source derivation unittest and four captured scalar RHS cases are author execution, not independently repeated and not Swift/SDK/gesture runtime proof. Original actual candidate1 failed largest before typing; standard passes not promoted to complete matrix.\",\n  \"independent_comparison\": [\n    \"Restoring only reveal block/role enum and three role argument calls reconstructs entire original Swift byte-exact4adede. All semantic input/result/clear/privacy/source/evidence/screenshot assertions outside it retained.\",\n    \"Reversing only literal fixture digest reconstructs entire original Python core5b09. No process/clock/resource/device/config/testID/cleanup change.\",\n    \"Freshly checked exact six and114 source bytes; all other three source paths unchanged.\"\n  ],\n  \"mechanism_review\": [\n    \"Visible returns only full app+scroll containment and actual hittability. New branch rejects invalid/horizontal/oversized/contained-unhittable frames.\",\n    \"Gap/slack computed symmetrically from actual offending edge; slack>=gap and movement<=slack guarantee requested distance does not cross opposite edge. No40floor; sub1pt refuses;320/halfheight onlydownward ceilings.\",\n    \"Both endpoints16pt in app/scroll usable intersection; current app/scroll/element frames must exactly equal sampled frames immediately before action. No system-edge/overlay gesture or fallback.\",\n    \"One press0.05/slowdrag/hold0.1 per iteration, eight maximum; actual displacement only observed by next sample. Full containment/hittability after eighth still mandatory.\",\n    \"Fixed integer role/reason/attempt/direction and finite geometry only in logs, no arbitrary AX text/path/error echo. Existing log limits apply.\"\n  ],\n  \"native_SDK_or_tests_executed_by_reviewer\": false,\n  \"pass\": true,\n  \"precode_peer_sha256\": \"8b661e1de39421f528a35c93d841dfb05f5647085561cebbf24d87c155b4f7af\",\n  \"profile\": \"ios-layout-navigation-distinct-final-source-review/v1\",\n  \"remaining\": \"ROOT final launch scheduling; actual changed small-first matrix and full-size selected screenshot review still required before layout qualification. No original closure/physical/human accessibility/old7 claim.\",\n  \"retry_authorized_by_this_review\": false,\n  \"reviewer\": \"Codex /root/seo\",\n  \"source6\": {\n    \"docs/ios-simulator-matrix-plan.md\": \"336147519fde5f345cb2fc9f5d9318a2a7f701792547eb7de6e8590579882afe\",\n    \"docs/ios-simulator-matrix.md\": \"c789b6c3cf14fdb0b5a3e0dec29c00e65e690f52f554abaa8a4d498c0c5b3013\",\n    \"mobile/ios/Tests/SizeLayoutFlows.swift\": \"6e456b4ba2af4d72019c7b3717523302265a7be1194d97000bc18afb766eba90\",\n    \"scripts/verify-ios-size-matrix.py\": \"7d697baabfbf88af2c08c30be2220b3bbfbe02df75ef479baba69b0aa6141ec7\",\n    \"tests/test_ios_simulator_matrix.py\": \"3c5a5141e82cb99c0ddce0eda714b28fe703a50bfbc42b6a07dce744665bc9ed\",\n    \"tools/ios_simulator_matrix.py\": \"b044a882ae420674bf4a974c5146c89935550bcd8a184b3e062884155419fc44\"\n  },\n  \"source_base\": \"e5b67278bc3e118c77cac94b55354cfe651d0082\"\n}\n"
+      },
+      {
+        "name": "root-navigation-frozen-source-review.json",
+        "sha256": "a6cfde9db44b4e3fdfc3a53814b6502af21d0ddeaf3f62ad2049907925c6cce0",
+        "raw_utf8": "{\n  \"author\": \"/root/web_camo\",\n  \"captured_at\": \"2026-11-24T05:44:48.315784+00:00\",\n  \"dependency_bindings_checked\": 114,\n  \"different_peer_sha256\": \"97ac6858c247fb6fb4ab8aca536e78efa4a26d2be9804dd2ec92797351158660\",\n  \"freeze_sha256\": \"816efcc66b633f648cf5bb13995a15e1148a2d82bee22c10378427ec6f4e7606\",\n  \"full_containment_and_hittability_preserved\": true,\n  \"full_old_core_reconstructed_by_fixture_sha_only\": true,\n  \"full_old_fixture_reconstructed_by_reveal_and_three_roles_only\": true,\n  \"limits\": \"Changed observer only. Native attempt requires normal recorded commit/final schedule. Prior real failure and original seven-flow evidence unchanged; no original closure.\",\n  \"native_executed_by_root\": false,\n  \"pass\": true,\n  \"precode_plan_read\": true,\n  \"profile\": \"root-ios-layout-navigation-frozen-source-review/v1\",\n  \"retry_authorized_by_record\": false,\n  \"reviewer\": \"/root\",\n  \"source6\": {\n    \"docs/ios-simulator-matrix-plan.md\": \"336147519fde5f345cb2fc9f5d9318a2a7f701792547eb7de6e8590579882afe\",\n    \"docs/ios-simulator-matrix.md\": \"c789b6c3cf14fdb0b5a3e0dec29c00e65e690f52f554abaa8a4d498c0c5b3013\",\n    \"mobile/ios/Tests/SizeLayoutFlows.swift\": \"6e456b4ba2af4d72019c7b3717523302265a7be1194d97000bc18afb766eba90\",\n    \"scripts/verify-ios-size-matrix.py\": \"7d697baabfbf88af2c08c30be2220b3bbfbe02df75ef479baba69b0aa6141ec7\",\n    \"tests/test_ios_simulator_matrix.py\": \"3c5a5141e82cb99c0ddce0eda714b28fe703a50bfbc42b6a07dce744665bc9ed\",\n    \"tools/ios_simulator_matrix.py\": \"b044a882ae420674bf4a974c5146c89935550bcd8a184b3e062884155419fc44\"\n  },\n  \"source_control_sha256\": \"96b44cafee50a57f9fb7c442e3290d3c928fa10c0e44f8eea6849b5df8723f3f\"\n}\n"
+      }
+    ]
+  }
+}

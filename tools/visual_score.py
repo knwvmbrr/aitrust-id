@@ -85,7 +85,7 @@ def worker():
  try:
   info=os.fstat(cache_fd);need((info.st_dev,info.st_ino)==tuple(header['cache_devino']) and info.st_uid==os.geteuid() and stat.S_ISDIR(info.st_mode) and stat.S_IMODE(info.st_mode)==0o500 and os.listdir(cache_fd)==[],'invalid_request')
   home='/proc/self/fd/'+str(cache_fd) if sys.platform=='linux' else header['cache_dir']
-  for name in ['HOME','XDG_CACHE_HOME','HF_HOME','TORCH_HOME','TMPDIR']:os.environ[name]=home
+  for name in ['HOME','XDG_CACHE_HOME','HF_HOME','TORCH_HOME','TMPDIR','TORCHINDUCTOR_CACHE_DIR']:os.environ[name]=home
   import tempfile
   tempfile.tempdir=home # no fallback into an existing user/system cache
   from tools.visual_score_runtime import infer

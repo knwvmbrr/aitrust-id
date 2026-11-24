@@ -126,14 +126,17 @@
   "session_success": false,
   "owners": {
     "pm": "/root",
-    "task_list_lead": "/root/seo",
+    "task_list_lead": "/root",
     "nf_evidence_engineer": "/root/share_debugger",
     "hp_device_engineer": "/root/web_camo",
     "legal_accountable_operator": "Michael R. McGuire",
     "ps_enhancement_engineer": "/root/share_debugger",
     "mt_context_engineer": "/root/web_camo",
     "android_runtime_integrator": "/root/share_debugger",
-    "distribution_engineer": "/root/seo"
+    "distribution_engineer": "/root/seo",
+    "image_reference_engineer": "/root/seo",
+    "iphone_clear_engineer": "/root/web_camo",
+    "source_consumer_lifecycle_engineer": "/root/share_debugger"
   },
   "tag_bots": [
     {
@@ -179,12 +182,12 @@
     {
       "tag_id": "T-PS",
       "bot_id": "tag_ps",
-      "actual_worker": null,
-      "status": "reviewed",
-      "checked_at": "2026-11-24T03:16:24.697029+00:00",
-      "current_component_status": "Current App/Share seven-flow Simulator run7/0/0 with stable109/116source and owned cleanup; selected native proof24guards pass. Detector method unchanged; no independent accuracy or physical acceptance.",
+      "actual_worker": "/root/web_camo",
+      "status": "active",
+      "checked_at": "2026-11-24T15:20:15.735780+00:00",
+      "current_component_status": "PS iPhone delivery: user-only Clear return fix in progress; historical seven-flow evidence retained, new native acceptance pending.",
       "blocking_acceptance": "Current development fixtures and blind-review tooling are present, but the independently coordinated representative holdout, actual blind human labels/adjudication, accepted calibration/abstention policy and applicable human route acceptance are not.",
-      "next_task": "Advance remaining original-specific acceptance; do not rerun completed software jobs."
+      "next_task": "Qualify changed Clear behavior in App and Share and supported size/text matrix; retain independent accuracy and human acceptance."
     },
     {
       "tag_id": "T-IV",
@@ -199,12 +202,12 @@
     {
       "tag_id": "T-FA",
       "bot_id": "tag_fa",
-      "actual_worker": null,
-      "status": "reviewed",
-      "checked_at": "2026-11-24T03:18:38.751107+00:00",
-      "current_component_status": "Exact wheel32 supplemental source-preservation repair97686483 committed in isolated worktree with actual100source controls and separate ROOT review; image native inference and FA issuance remain unperformed.",
+      "actual_worker": "/root/seo",
+      "status": "active",
+      "checked_at": "2026-11-24T15:20:15.735780+00:00",
+      "current_component_status": "Experimental image classifier reference repair in progress; actual production forward observed but reference refused. No FA tag issued.",
       "blocking_acceptance": "Image/signature integrity, experimental adjudication and revision-diff observations do not yet deliver independently supported generation/edit origin or outside-session knowledge claims for an adopted workflow.",
-      "next_task": "Finish authored source handoff, new protected-baseline registration and actual88-source hosted qualification; retain all origin and human acceptance gates."
+      "next_task": "Complete current-source reference qualification without weakening independent origin/human gates."
     },
     {
       "tag_id": "T-PA",
@@ -1765,6 +1768,56 @@
           "acceptance_wrapper_claim": "Selected predeclared engineering job only; no new execution or full original acceptance."
         }
       }
+    },
+    {
+      "task_id": "session-image-reference-initialization",
+      "original_ids": [
+        "T-FA"
+      ],
+      "worker": "/root/seo",
+      "status": "active",
+      "deliverable": "Repair the nonpersistent reference position tensor and pass all existing actual17-case qualification without replacing reference math.",
+      "registered_at": "2026-11-24T15:20:15.735780+00:00",
+      "registration_time_basis": "Actual current board registration; earlier precode/source work retained separately, not backdated.",
+      "done_evidence": [
+        "Pinned publisher tensor validation, all CPU custody and unchanged numerical comparisons.",
+        "Actual complete17-case hosted gate, source identity, cleanup and distinct review; source-only controls are insufficient."
+      ],
+      "original_requirement_closed": false
+    },
+    {
+      "task_id": "session-iphone-clear-editor-return",
+      "original_ids": [
+        "N-013",
+        "T-PS"
+      ],
+      "worker": "/root/web_camo",
+      "status": "active",
+      "deliverable": "User Clear returns the empty editor to view without altering background privacy clearing or Share delivery cancellation.",
+      "registered_at": "2026-11-24T15:20:15.735780+00:00",
+      "registration_time_basis": "Actual current board registration; earlier precode/source work retained separately, not backdated.",
+      "done_evidence": [
+        "Actual current-source seven App/Share flows and full declared four-profile/three-configuration matrix with owned cleanup.",
+        "Review privacy, cancellation and immediately visible empty-editor behavior; retain physical and human accessibility gates."
+      ],
+      "original_requirement_closed": false
+    },
+    {
+      "task_id": "session-source-consumer-lifecycle",
+      "original_ids": [
+        "F-057",
+        "X-02"
+      ],
+      "worker": "/root/share_debugger",
+      "status": "active",
+      "deliverable": "Integrate bounded sequential source custody into actual authenticated source consumers without weakening descriptor, identity, read or authorization checks.",
+      "registered_at": "2026-11-24T15:20:15.735780+00:00",
+      "registration_time_basis": "Actual current board registration; earlier precode/source work retained separately, not backdated.",
+      "done_evidence": [
+        "Exact finite maintenance map, captured current-source execution, full identity recapture, failure cleanup and distinct review.",
+        "Actual integrated authenticated consumer/probes on final selected source; injected authority alone is insufficient."
+      ],
+      "original_requirement_closed": false
     }
   ],
   "original_open_requirements": [
@@ -6478,7 +6531,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-24T03:34:57.328210+00:00",
+  "updated_at": "2026-11-24T15:20:15.735780+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -7193,51 +7246,47 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-24T03:18:38.751107+00:00",
-    "source_baseline_commit": "42f6d0fdf3060c8753a5e48ecc979ab68e1b3479",
+    "recorded_at": "2026-11-24T15:20:15.735780+00:00",
+    "source_baseline_commit": "8ec503bbc559edf75de88eaebdf180df486a5cb1",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
-    "status": "Native7/0/0 selected. Required site now correctly refuses old boundary inventory; finite prerequisite names160/160 registered before fresh capability freeze. Independent image next manual qualification readiness and web handoffs continue.136complete66open; no original closure.",
+    "status": "Three concrete repair lanes active; none has full new original acceptance. Historical seven-flow pass is not rebound to changed Clear sources; first image production forward is not a reference pass.",
     "assignments": [
       {
         "worker": "/root",
-        "role": "PM, task-list lead and shared integration",
+        "role": "PM, scope accounting and final integration",
         "status": "active_bounded_assignment_at_snapshot",
-        "outcome": "Select reviewed actual seven-flow native proof, preserve all originals, update scope/state/changelog, then run final-source protected checks and publish only after success."
-      },
-      {
-        "worker": "/root/web_camo",
-        "role": "App/Share handoff and distinct integration reviewer",
-        "status": "source_handoff_complete; next_distinct_ROOT_integration_review",
-        "outcome": "Actual7/0/0 handoff19444eea merged42f6d0fd; next bounded source/accounting review of ROOT selection. No extra native run or permanent bot."
+        "outcome": "Preserve all202 original criteria, integrate reviewed fixes and qualify actual current sources; original target remains unmet."
       },
       {
         "worker": "/root/seo",
-        "role": "Independent image qualification source worker",
-        "status": "source_handoff_complete; no_running_native_or_model_task",
-        "outcome": "Exact-wheel supplemental SOURCE preservation97686483 committed with100author source controls/one ROOT affected group and separate review; isolated pending protected-baseline registration and genuine88-source hosted qualification."
+        "role": "Image reference initialization engineer",
+        "status": "active_bounded_assignment_at_snapshot",
+        "outcome": "Validate and adopt only the existing publisher position tensor, preserve independent reference math and complete actual17-case qualification."
+      },
+      {
+        "worker": "/root/web_camo",
+        "role": "iPhone App/Share Clear reliability engineer",
+        "status": "active_bounded_assignment_at_snapshot",
+        "outcome": "Return the empty editor to view only on user Clear, preserve background privacy and Share cancellation, qualify actual seven-flow and size matrix."
       },
       {
         "worker": "/root/share_debugger",
-        "role": "Independent web policy and historical fixture worker",
+        "role": "Source-consumer lifecycle engineer and task-list feasibility lead",
         "status": "active_bounded_assignment_at_snapshot",
-        "outcome": "Conditional web/common handoffs c209/4f complete; test-only historical-data/current-code fixture in progress. Actual current compiled managed consumer remains pending."
+        "outcome": "Keep descriptor and cumulative read bounds while recapturing source identities; integrate finite mapping and real authenticated consumer qualification."
       }
     ],
     "scoped_tasks_closed": 31,
-    "scoped_task_records": 32,
+    "scoped_task_records": 35,
     "original_closures_since_baseline": 4,
     "all202_preserved": true,
     "baseline_hashes_unchanged": true,
     "agents_permanent": false,
     "assignments_are_live_heartbeats": false,
-    "owner_actions_unchanged": true,
-    "feasibility": {
-      "status": "Current66 original acceptance contracts reviewed again; no six fully autonomous closures established. Continue useful software outcomes without relabeling independent human, legal or owner gates.",
-      "six_autonomous_closures_promised": false
-    }
+    "owner_actions_unchanged": true
   },
   "execution_wave_history": [
     {
@@ -7993,6 +8042,53 @@
           "role": "App and Share native workflow engineer",
           "status": "active_bounded_assignment_at_snapshot",
           "outcome": "Correct observed focus/source-popover UI test assumptions; obtain actual seven-case success and owned Simulator cleanup without weakening privacy or physical acceptance."
+        }
+      ],
+      "scoped_tasks_closed": 31,
+      "scoped_task_records": 32,
+      "original_closures_since_baseline": 4,
+      "all202_preserved": true,
+      "baseline_hashes_unchanged": true,
+      "agents_permanent": false,
+      "assignments_are_live_heartbeats": false,
+      "owner_actions_unchanged": true,
+      "feasibility": {
+        "status": "Current66 original acceptance contracts reviewed again; no six fully autonomous closures established. Continue useful software outcomes without relabeling independent human, legal or owner gates.",
+        "six_autonomous_closures_promised": false
+      }
+    },
+    {
+      "recorded_at": "2026-11-24T03:18:38.751107+00:00",
+      "source_baseline_commit": "42f6d0fdf3060c8753a5e48ecc979ab68e1b3479",
+      "original_complete": 136,
+      "original_open": 66,
+      "target_open": 60,
+      "remaining_full_closures": 6,
+      "status": "Native7/0/0 selected. Required site now correctly refuses old boundary inventory; finite prerequisite names160/160 registered before fresh capability freeze. Independent image next manual qualification readiness and web handoffs continue.136complete66open; no original closure.",
+      "assignments": [
+        {
+          "worker": "/root",
+          "role": "PM, task-list lead and shared integration",
+          "status": "active_bounded_assignment_at_snapshot",
+          "outcome": "Select reviewed actual seven-flow native proof, preserve all originals, update scope/state/changelog, then run final-source protected checks and publish only after success."
+        },
+        {
+          "worker": "/root/web_camo",
+          "role": "App/Share handoff and distinct integration reviewer",
+          "status": "source_handoff_complete; next_distinct_ROOT_integration_review",
+          "outcome": "Actual7/0/0 handoff19444eea merged42f6d0fd; next bounded source/accounting review of ROOT selection. No extra native run or permanent bot."
+        },
+        {
+          "worker": "/root/seo",
+          "role": "Independent image qualification source worker",
+          "status": "source_handoff_complete; no_running_native_or_model_task",
+          "outcome": "Exact-wheel supplemental SOURCE preservation97686483 committed with100author source controls/one ROOT affected group and separate review; isolated pending protected-baseline registration and genuine88-source hosted qualification."
+        },
+        {
+          "worker": "/root/share_debugger",
+          "role": "Independent web policy and historical fixture worker",
+          "status": "active_bounded_assignment_at_snapshot",
+          "outcome": "Conditional web/common handoffs c209/4f complete; test-only historical-data/current-code fixture in progress. Actual current compiled managed consumer remains pending."
         }
       ],
       "scoped_tasks_closed": 31,
