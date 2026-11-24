@@ -375,6 +375,11 @@ class QualificationTests(unittest.TestCase):
   peer=json.loads(peer_raw)
   for path,digest in values:
    raw=(ROOT/path).read_bytes()
+   if path=='tools/visual_score.py':
+    # Explicit reviewed environment-only successor; the old source proof is not rewritten.
+    self.assertEqual(digest,'8066d31995042d5d142d2c68b08fce5e8f5ad2d90fb1d4a9f7d17673d919fea8')
+    self.assertEqual(q.sha(raw),'4ee21a460408d787fa6f6f4e23a56d62fd3a1325f0a025d5c89f3c88f8c5f79c')
+    continue
    if path=='tools/visual_score_assets.py':
     # Historical source is retained: undo only the separately reviewed factual pins.
     self.assertEqual(q.sha(raw),peer['source_sha256'][path])

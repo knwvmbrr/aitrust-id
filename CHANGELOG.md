@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-image-readonly-cache-root
+
+Recorded 2026-11-24T06:00:18.151368+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Assigned the fixed Inductor cache-root variable to the same already-held empty read-only HOME in the image worker, avoiding a default cache-child selection without allowing cache writes.
+- **Evidence.** Two focused source controls pass with88 stable inputs. ROOT independently read the exact one-literal worker delta and passed the real owned inert lifecycle control. Historical8066 proof is preserved; current worker identity is explicit. All other84 sources, numerical/runtime/reference/locks, seal/cleanup/caps and17-case acceptance remain unchanged. [Change record](./runs/changes/2026-11-24-image-readonly-cache-root.json).
+- **Not claimed.** No real SDK/model or local native execution, Linux procfd/real-AS proof, hosted retry, writable cache, permission or seal exemption, accuracy/redistribution/legal clearance or original closure. Darwin source fixture intercepts only its unsupported AS setter; Linux keeps original setters. Actual failed runs and failure-finalization behavior remain unchanged.
+
 ### 2026-11-24-image-denied-resource-diagnostics
 
 Recorded 2026-11-24T05:29:20.721327+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change

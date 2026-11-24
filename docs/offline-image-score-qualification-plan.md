@@ -312,3 +312,54 @@ Only actual role+errno+path relation and observed git source may justify an exac
 ### Pre-final source robustness amendment
 
 ROOT distinct review of initialC source found type(torch) unnecessarily couples the existing torch.version module lookup to a possible Torch ModuleType subclass. Before correction, record this narrow choice: require the already imported fixed stdlib module type type(sys) for the version object, still read only its actual __dict__ and strict lowercase40hex/null field. Add one inert Torch-module-subclass fixture to the existing grouped control. No arbitrary object/lazy attribute acceptance, SDK import, execution budget or three call changes. Preserve initialC author run/source phase separately; the corrected current phase is a fresh immutable record.
+
+
+## Fixed read-only Inductor root — approved pre-code source amendment
+
+Recorded 2026-11-24T05:50:53.782578+00:00 by Codex /root/seo on isolated codex/image-readonly-cache-root froma2c121ebbafa46711b13305a2610476346c65900. ROOT reviewed full private plan5d0c3890726633749a8e9407fedd9d577e44baf8a75302755f1d7291723f40ff and approved this bounded source FIX before feature edits; no hosted retry authorized.
+
+
+Actual run45334549688/attempt1/job138243435613 passed source101, fixed acquisition and offline install/fixtures. First production gradient result was validated worker_unavailable/exit2; no model forward completed. Its ONE existing fixed SDK diagnostic failed at public use_deterministic_algorithms(True) with PermissionError13, filename_role=private_home_descendant. Sixteen closed frames included cache_root followed by other, without truncation. The observed Torch build claim was d0f2af8b66b20da4baa50644c0cd3f887a2eae2e. This is an SDK self-reported source claim, not compiled reproducibility or execution attestation. Prior guesses based on release31a are not exact current build provenance.
+
+Read only official primary source at that exact observed commit, using Firecrawl. Complete returned cache_dir_utils.py1713B/SHAe009cb55b15513c48d84e02d1d3b498cce90f8b33cc000697dbbbc751d92e24b establishes: cache_dir reads TORCHINDUCTOR_CACHE_DIR; only absent value calls default_cache_dir; default uses tempfile.gettempdir()/torchinductor_<sanitized user>; cache_dir applies abspath, stores the env value, then unconditionally os.makedirs(...,exist_ok=True). Existing worker deliberately sets tempfile.tempdir to its already-held500HOME. The actual cache_root+HOME-descendant error and this source directly support attempted creation of a default child beneath that read-only root. We have no raw denied basename or full native trace and do not invent one.
+
+Primary URL: https://raw.githubusercontent.com/pytorch/pytorch/d0f2af8b66b20da4baa50644c0cd3f887a2eae2e/torch/_inductor/runtime/cache_dir_utils.py
+
+Also read exact cpp_builder.py115942B/SHA550bfe753f4af63b5581b9ec6fb8cfe832f864b581725014736d3f4648902fa2. Its compiler-install path and directory creation helper are nested functions, not evidence they executed here. Do not propose GCC installation, compilation, lock/header writes or disable their refusals. Source retrieval is retained Firecrawl markdown UTF8, not independently measured original HTTP entity bytes. Full tool result, URL/status200/scrape IDs/hashes are in primary-source-manifest.json. No external third-party code will be copied into the product or tests.
+
+Primary URL: https://raw.githubusercontent.com/pytorch/pytorch/d0f2af8b66b20da4baa50644c0cd3f887a2eae2e/torch/_inductor/cpp_builder.py
+
+## Smallest proposed implementation
+
+In unchanged production c.worker, after the existing nofollow cache_fd adoption/check verifies exact dev/ino, current UID, directory mode500 and empty entries, add ONLY TORCHINDUCTOR_CACHE_DIR to the same fixed environment-name list already assigned home. This is the source-owned existing HOME, on Linux /proc/self/fd/<still-held cache_fd>, otherwise the existing adopted directory path. It is never caller-supplied env, a new path, a writable subdirectory, a global parent setting, private Torch _C replacement or public CLI option.
+
+The upstream helper should then receive an already-existing directory instead of proposing a child. Its exist_ok=True path may complete without creating anything. This is a source-supported repair of the observed root-selection mismatch; it is NOT a claim that Linux procfs mkdir/exist_ok semantics or subsequent complete SDK/model execution has already passed. Prove the existing-root/no-new-entry behavior with owned stdlib fixtures first and the exact hosted source gate later. If any later SDK needs real cache file/subdirectory/lock/header writes, keep500 and fail closed. Do not add writable staging, broaden privileges, drop deterministic setup or retry unchanged.
+
+The same c.worker is used by production, fixed reference and fixed diagnostic children, so each sees the same source-owned read-only root. No new SDK import, model/tensor/forward, subprocess, source path or report key. All three public Torch calls/order/arguments remain unchanged. No patch to upstream torch source or installed wheel/METADATA/RECORD.
+
+## Ownership, resource and cleanup contract
+
+No additional cache bytes or inodes are allowed: one existing500 directory, zero children/files, zero extra FDs beyond already-held cache_fd. Parent keeps the same directory/dev/ino ownership until supervised child is actually reaped; worker keeps its original directory descriptor through infer and closes once. Parent checks inode/UID/mode and requires empty entries before its ordinary nonrecursive rmdir. Close/removal/metadata uncertainty remains failure. No borrowed host/shared cache or second directory; do not chmod500 to writable, precreate a child, exclude files or allow leftover entries.
+
+Keep existing nonroot/capzero/no-new-privileges/loopback-only namespace checks BEFORE SDK import, original CPU120/8GiB/64FD/16KiB, worker150s, shared35min/1740s budgets and original downward diagnostic15s+6s reserve. No env exception reaches sibling tools: worker supervisor still accepts only fixed credential-free env, and c.worker sets this literal after adoption before infer. Parent os.environ is unchanged.
+
+Whole workspace seal/notice versions and companion remain exact. Existing ephemeral empty HOME under private tmp is removed after every owned child; no new seal exclusions or persistent artifact. Snapshot, dirtree, tree row and cleanup mutation algorithms remain byte-exact. Source88 stays88 and bounds unchanged; private notice companion623310/93terms/153packages,39 exact wheel/model locks/carried terms and source-grant limits remain unchanged. No R/F057/X02/global route or distribution permission improvement is inferred.
+
+## Owned changes and honest historical guard
+
+Proposed only tools/visual_score.py (one fixed env list entry), tests/test_visual_score.py (behavioral child/HOME regression within an existing method), tests/test_visual_score_qualification.py (explicit current source-identity guard amendment), docs/offline-image-score-qualification-plan.md (pre-code declaration), own fresh run/event/CHL. No new framework/helper/dependency/source input/endpoint; ROOT owns later source copy/pins/registry/CI/strict inspector selection.
+
+This intentionally changes ONE of previously native8 source identities: visual_score.py's worker environment only. Other seven/actual math/runtime/preprocess/reference/39lock sources remain exact. Original8066 worker/historical source proof remains immutable. The existing test_production_source_unchanged_from_source_stage hashes the whole visual_score.py, so it cannot continue falsely asserting full historical byte equality. Keep the historical receipt untouched; explicitly name the new reviewed worker SHA for the current worker identity while still checking unchanged old numerical/runtime/assets/process sources. Do NOT mechanically reverse/reconstruct implementation text in permanent tests. Use a one-off retained AST/whole-module comparison to demonstrate only that env list changed, and permanent functional tests to prove the new boundary. ROOT should review this necessary current-identity guard before implementation.
+
+## Meaningful focused controls and stop conditions
+
+Expand an existing worker lifecycle group rather than a new test-count case, keeping33/36/5/27=101. Use a fresh owned stdlib child invoking the real worker with an inert infer substitution, never optional SDK imports: verify override ignores hostile incoming cache env, exact held HOME/devino/mode500+empty entries before infer, TORCHINDUCTOR_CACHE_DIR equals that root, existing-root os.makedirs(exist_ok=True) leaves zero entries/mode/inode unchanged, and parent removal follows actual reap. On Linux the same source control actually exercises the held /proc/self/fd alias; on Mac label ordinary directory-path evidence as Mac only. No fake Linux positive.
+
+Preserve existing nonempty/successor/deadline/kill/reap/noecho negative controls; one affected current source-identity guard plus this behavioral group suffice locally. One-off compare all88 before/after, only named deltas, whole worker module AST except the exact environment assignment, untouched all17/3 numeric success acceptance and driver/namespace/supervisor/seal/nooverwrite. Do not broad-repeat101 without a concrete need; the separately authorized changed hosted gate performs full101.
+
+Different ROOT source review, normal authored guard/commit, fresh88 strict-baseline preparation and separate ONE hosted authority are still required. No retry now. Preserve actual failed qualification/cleanup/API/ZIP/log and strictproviderrefusal; actual owned cleanupCLEAN is separate from finalization failure. B failure-publication semantics remain unimplemented. If the source-only Linux root control or future actual SDK rejects this unchanged500-root approach, retain failure and return the exact new boundary; do not weaken it or improvise another environment bypass.
+
+
+### Source-control portability correction before test-only repair
+
+First two focused controls at the unchanged candidate production4ee21a passed current source identity and refused the inert child before infer on Darwin: actual RLIMIT_AS set to8GiB raises ValueError/current limit exceeds maximum. Exact first failure/log and an owned stdlib-only child stderr reproduction are retained. This is the Mac fixture invoking a Linux-only resource configuration, not an actual Linux cache-root/SDK result. Before test edit: the inert Darwin child alone intercepts the AS setter with a no-op; other limit calls remain actual, and the real Linux source-gate child keeps every original setter. No production resource code or Linux limit changes, no SDK execution and no Linux/kernel success claim from Mac controls. Source test still actually verifies same500 owned inode/empty root/exist_ok/no child writes/parent environment/reap/removal.
