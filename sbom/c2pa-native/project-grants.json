@@ -1,0 +1,105 @@
+{
+  "profile": "c2pa-three-project-grant-inputs/v1",
+  "source_manifest": {
+    "path": "sbom/c2pa-native/manifest.json",
+    "sha256": "5e9e5e45c13013f727a1fb8a098b6e70db7bb363c2b43bff16cfc834c2ff4a14",
+    "bytes": 3427741
+  },
+  "apache_fulltext": {
+    "path": "sbom/c2pa-native/sources/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt",
+    "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bytes": 10847,
+    "official_text_url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "official_text_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "whitespace_token_sha256": "0ffddef9e48f8a09aed5caf2d44f7ba1c1be2d9b8e0a6f693b1635b2d5566645"
+  },
+  "packages": [
+    {
+      "id": "btree-range-map@0.7.2",
+      "name": "btree-range-map",
+      "version": "0.7.2",
+      "archive_sha256": "1be5c9672446d3800bcbcaabaeba121fe22f1fb25700c4562b22faf76d377c33",
+      "archive_url": "https://static.crates.io/crates/btree-range-map/btree-range-map-0.7.2.crate",
+      "vcs_commit": "ad2af35cd1fe34a3bee5a95a0db1537846368c23",
+      "repository": "https://github.com/timothee-haudebourg/btree-range-map",
+      "authors": [
+        "Timoth\u00e9e Haudebourg <author@haudebourg.net>"
+      ],
+      "declared_license": "MIT/Apache-2.0",
+      "selected_license": "Apache-2.0",
+      "readme": {
+        "path": "sbom/c2pa-native/sources/06e9b4ecd771507225f402fc98a6ee3fa34a9c7a428cabfd5de0b661e96a6b95.txt",
+        "bytes": 3404,
+        "sha256": "06e9b4ecd771507225f402fc98a6ee3fa34a9c7a428cabfd5de0b661e96a6b95"
+      },
+      "cargo_orig": {
+        "path": "sbom/c2pa-native/sources/651d9e32462351d5c4a6cf05da47d7bf75ed151d3cd5c75094c85500f1e84310.txt",
+        "bytes": 615,
+        "sha256": "651d9e32462351d5c4a6cf05da47d7bf75ed151d3cd5c75094c85500f1e84310"
+      },
+      "grant_section_sha256": "d80b63a5562e5a5ffc6ee39a65749f2cb150209bf6d19f72d420a64b130e2129",
+      "grant_section_bytes": 497,
+      "upstream_notice_paths_observed": []
+    },
+    {
+      "id": "range-traits@0.3.2",
+      "name": "range-traits",
+      "version": "0.3.2",
+      "archive_sha256": "d20581732dd76fa913c7dff1a2412b714afe3573e94d41c34719de73337cc8ab",
+      "archive_url": "https://static.crates.io/crates/range-traits/range-traits-0.3.2.crate",
+      "vcs_commit": "19926504c0387a590f87ddc20c70de03cd3df72d",
+      "repository": "https://github.com/timothee-haudebourg/range-traits",
+      "authors": [
+        "Timoth\u00e9e Haudebourg <author@haudebourg.net>"
+      ],
+      "declared_license": "MIT/Apache-2.0",
+      "selected_license": "Apache-2.0",
+      "readme": {
+        "path": "sbom/c2pa-native/sources/a752f34d42f95d7640f6dccc718b1e2965575ad058b8557a8067e945ed5180cf.txt",
+        "bytes": 1733,
+        "sha256": "a752f34d42f95d7640f6dccc718b1e2965575ad058b8557a8067e945ed5180cf"
+      },
+      "cargo_orig": {
+        "path": "sbom/c2pa-native/sources/e297ebed14bd875b4681ffe845e09ebd6769ba60acb18572bb74fa5eeac4d830.txt",
+        "bytes": 472,
+        "sha256": "e297ebed14bd875b4681ffe845e09ebd6769ba60acb18572bb74fa5eeac4d830"
+      },
+      "grant_section_sha256": "d80b63a5562e5a5ffc6ee39a65749f2cb150209bf6d19f72d420a64b130e2129",
+      "grant_section_bytes": 497,
+      "upstream_notice_paths_observed": []
+    },
+    {
+      "id": "static-regular-grammar@2.0.2",
+      "name": "static-regular-grammar",
+      "version": "2.0.2",
+      "archive_sha256": "4f4a6c40247579acfbb138c3cd7de3dab113ab4ac6227f1b7de7d626ee667957",
+      "archive_url": "https://static.crates.io/crates/static-regular-grammar/static-regular-grammar-2.0.2.crate",
+      "vcs_commit": "31bcc76bb370f74c267eaef29562e87fb968c712",
+      "repository": "https://github.com/timothee-haudebourg/static-regular-grammar",
+      "authors": [
+        "Timoth\u00e9e Haudebourg <author@haudebourg.net>"
+      ],
+      "declared_license": "MIT/Apache-2.0",
+      "selected_license": "Apache-2.0",
+      "readme": {
+        "path": "sbom/c2pa-native/sources/702d9da5b808f852bb4168064af1c0061630738d2c7596045f03d1b4daaefded.txt",
+        "bytes": 6244,
+        "sha256": "702d9da5b808f852bb4168064af1c0061630738d2c7596045f03d1b4daaefded"
+      },
+      "cargo_orig": {
+        "path": "sbom/c2pa-native/sources/fe5b97ceef8d87bb49c2202320199dadfb4f1341d0682a6e23f46f0fbf070d9f.txt",
+        "bytes": 807,
+        "sha256": "fe5b97ceef8d87bb49c2202320199dadfb4f1341d0682a6e23f46f0fbf070d9f"
+      },
+      "grant_section_sha256": "d80b63a5562e5a5ffc6ee39a65749f2cb150209bf6d19f72d420a64b130e2129",
+      "grant_section_bytes": 497,
+      "upstream_notice_paths_observed": []
+    }
+  ],
+  "claims": {
+    "upstream_notice_file_recovered": false,
+    "native_incorporation_complete": false,
+    "route_admitted": false,
+    "legal_clearance": false
+  }
+}

@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-c2pa-project-grant-delivery
+
+Recorded 2026-11-24T16:42:17.341661+00:00 · Contributor: Codex /root/share_debugger; Codex /root distinct grant/source review · change
+
+- **Changed.** Deliver three source-bound assembled Apache-choice notices and a canonical four-member artifact producer/received verifier from exact C2PA dependency release grants, preserving upstream filename absence and policy unknowns.
+- **Evidence.** Thirteen actual focused stdlib controls pass after a retained cleanup-mask setup leak counter and independent close/restore correction. Real isolated CLI prepare+inspect pass for39653B/fourmembers; current omitted-grant/modified-license artifacts refuse. Three txt notice bodies equal the prior actual artifact; only producer-source identity changes in its carrying index. Exact released grant/fulltext/authors are pinned to retained primary bytes. ROOT independently reads the three released grant/authorship sections and entire helper and executes three targeted delivered-fulltext, coherent-rebinding refusal and mask-fault cleanup groups PASS0.168s. [Change record](./runs/changes/2026-11-24-c2pa-project-grant-delivery.json).
+- **Not claimed.** Actual delivery is a new assembled carrying supplement, not a forged upstream file, completed C2PA dependency graph, signed SDK artifact or all14-route permission. Old manifests/unresolved filename observations and all policy refusals remain unchanged. Different ROOT grant/source review is clear; normal commit is approved. Actual selected native artifact carrying integration remains pending. No SDK/model/native/browser/runtime/package execution or acquisition.
+
+
 ### 2026-11-24-source-v5-current-integration
 
 Recorded 2026-11-24T15:51:25.906741+00:00 · Contributor: Codex /root/share_debugger; ROOT different final registration/source review · change
