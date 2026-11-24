@@ -123,3 +123,17 @@ turn off the current failed check to speed a release.
 
 The latest owner/engineering split is [execution-ownership.json](execution-ownership.json).
 The owner checklist is [owner-actions.md](owner-actions.md).
+
+## Owner clarification — personal history and temporal scenes
+
+Direction recorded 2026-11-24T04:35:56.090177+00:00. The accepted business model supports the larger
+open identification-standard mission. Track optional personal history as its own
+independent enhancement: what was actually displayed, where, when and why, with
+minimal consented data and no automatic research submission.
+
+Keep image and video priorities, then explicit object/resource/view binding for3D.
+For planning,4D means3D scene evolution over time, requiring timebase, coordinate
+and object-continuity contracts; it is not a live modality or detector. No original
+requirement or numeric gate is removed.
+
+[History and standard execution contract](personal-tag-history-plan.md).

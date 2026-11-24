@@ -1,0 +1,51 @@
+{
+  "profile": "owner-paid-history-spatial-scope/v1",
+  "captured_at": "2026-11-24T04:48:25.637000+00:00",
+  "author": "Codex /root; Michael product direction",
+  "source_base": "d801aaafe06fc462a81734fcdd5534669393b305",
+  "pass": true,
+  "scope_checks": {
+    "original_records": 202,
+    "complete": 136,
+    "open": 66,
+    "original_record_package_subtask_rows_unchanged": true,
+    "enhancements": 15,
+    "scope_schema_render_links_pass": true
+  },
+  "owner_revision": "Optional personal history is a paid upgrade; free checking/current evidence and signup community retained. Accounts/payment do not imply training consent.",
+  "written_contract_only": true,
+  "history_billing_signup_community_implemented": false,
+  "model_attribution_demonstrated": false,
+  "new_modality_or_tag_adopted": false,
+  "new_original_closures": 0,
+  "public_merge_or_deployment": false,
+  "files": {
+    "CONTRIBUTING.md": "f653dc00e168cf2deded83956f42b221de5fa4b6075fa042bbf7ba1b7d86021f",
+    "docs/personal-tag-history-plan.md": "ce808f3b25d14b587945256dd585f2123cb7350cf5ca612a3714564e649c6379",
+    "docs/scope-progress.json": "dbcaa011d76583bd2ff6af5846863bf255bed13a51886e1673a959d4620d60a4",
+    "docs/scope-progress.md": "0e423212773a2691c6c66b63a0b2e5c5ccc211e558b6ee3fc3e9a12dc0abafb0",
+    "docs/visual-tag-execution-plan.md": "bf5338a2cb07c1a06dc013364f4776d525e6437afb5a8903561e58c12c9a20b3",
+    "state.json": "6318e7a9d72b3c4b7252ce11af6fbfe95313caefe9db0202691c45586fa5c5d5"
+  },
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py",
+        "--render"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-24T04:47:56.305155+00:00"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-24T04:47:56.408795+00:00"
+    }
+  ]
+}

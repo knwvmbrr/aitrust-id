@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-23-personal-history-spatial-scope
+
+Recorded 2026-11-24T04:48:25.637000+00:00 · Contributor: Codex /root; Michael owner direction · change
+
+- **Changed.** Record the owner-selected paid personal history upgrade, signup community, model-level provenance and explicit spatial/temporal roadmap; narrow the former blanket free-feature wording without gating personal detection or evidence.
+- **Evidence.** Scope schema/render/link checks pass; all202originals,39packages,117subtasks and136complete66open remain unchanged. New history enhancement is20%writtencontract only. [Change record](./runs/changes/2026-11-23-personal-history-spatial-scope.json).
+- **Not claimed.** No history store, account/signup service, checkout, social publication, model attribution, new modality/tag or original closure. Isolated draft source requires different review, fresh affected checks and next finite protected-baseline admission before publication.
+
 ### 2026-11-23-tag-runtime-final-selection
 
 Recorded 2026-11-24T04:19:07.007700+00:00 · Contributor: Codex /root integration; different source/evidence reviewers · change

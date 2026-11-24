@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-personal-history-spatial-scope",
+  "recorded_at": "2026-11-24T04:48:25.637000+00:00",
+  "author": "Codex /root; Michael owner direction",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "d801aaafe06fc462a81734fcdd5534669393b305",
+  "changed": "Record the owner-selected paid personal history upgrade, signup community, model-level provenance and explicit spatial/temporal roadmap; narrow the former blanket free-feature wording without gating personal detection or evidence.",
+  "proves": "Scope schema/render/link checks pass; all202originals,39packages,117subtasks and136complete66open remain unchanged. New history enhancement is20%writtencontract only.",
+  "limits": "No history store, account/signup service, checkout, social publication, model attribution, new modality/tag or original closure. Isolated draft source requires different review, fresh affected checks and next finite protected-baseline admission before publication.",
+  "scope_ids": [
+    "F-006",
+    "F-044",
+    "F-086",
+    "F-136",
+    "N-011"
+  ],
+  "files": {
+    "CONTRIBUTING.md": "f653dc00e168cf2deded83956f42b221de5fa4b6075fa042bbf7ba1b7d86021f",
+    "docs/personal-tag-history-plan.md": "ce808f3b25d14b587945256dd585f2123cb7350cf5ca612a3714564e649c6379",
+    "docs/scope-progress.json": "dbcaa011d76583bd2ff6af5846863bf255bed13a51886e1673a959d4620d60a4",
+    "docs/scope-progress.md": "0e423212773a2691c6c66b63a0b2e5c5ccc211e558b6ee3fc3e9a12dc0abafb0",
+    "docs/visual-tag-execution-plan.md": "bf5338a2cb07c1a06dc013364f4776d525e6437afb5a8903561e58c12c9a20b3",
+    "state.json": "6318e7a9d72b3c4b7252ce11af6fbfe95313caefe9db0202691c45586fa5c5d5",
+    "runs/2026-11-23-personal-history-spatial-scope.json": "d8aa4f8b9dbdf251f5903b0cd7203396624e22cc811304ddae2bbeff6bc686ba"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-personal-history-spatial-scope.json",
+      "sha256": "d8aa4f8b9dbdf251f5903b0cd7203396624e22cc811304ddae2bbeff6bc686ba"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/scope-progress.py",
+        "--render"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-24T04:47:56.305155+00:00"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-scope-plan.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-24T04:47:56.408795+00:00"
+    }
+  ],
+  "different_review": {
+    "reviewer": "Codex /root/seo",
+    "sha256": "f0d6b226fb17fc38f1ea891587b165341f63e7f73ead66d39e50b0958389ad49",
+    "bytes": 4712,
+    "raw_utf8": "{\n  \"author\": \"Codex /root/seo\",\n  \"captured_at\": \"2026-11-24T04:50:28.301369+00:00\",\n  \"enhancement_changes\": {\n    \"existing_multimodal20_only_adds_explicit3D4D_planning_acceptance_and_source\": true,\n    \"implemented_or_closed_credit_added\": false,\n    \"new_personal_history20_percent_written_contract_only\": true,\n    \"prior14_retained\": true\n  },\n  \"files\": {\n    \"CHANGELOG.md\": {\n      \"bytes\": 1092733,\n      \"sha256\": \"e2a7de702467e9778e49259b94b511ed0e6ec23e068398645d2001b39dd0d9e3\"\n    },\n    \"CONTRIBUTING.md\": {\n      \"bytes\": 3530,\n      \"sha256\": \"f653dc00e168cf2deded83956f42b221de5fa4b6075fa042bbf7ba1b7d86021f\"\n    },\n    \"docs/personal-tag-history-plan.md\": {\n      \"bytes\": 11237,\n      \"sha256\": \"ce808f3b25d14b587945256dd585f2123cb7350cf5ca612a3714564e649c6379\"\n    },\n    \"docs/scope-progress.json\": {\n      \"bytes\": 790838,\n      \"sha256\": \"dbcaa011d76583bd2ff6af5846863bf255bed13a51886e1673a959d4620d60a4\"\n    },\n    \"docs/scope-progress.md\": {\n      \"bytes\": 371900,\n      \"sha256\": \"0e423212773a2691c6c66b63a0b2e5c5ccc211e558b6ee3fc3e9a12dc0abafb0\"\n    },\n    \"docs/visual-tag-execution-plan.md\": {\n      \"bytes\": 13695,\n      \"sha256\": \"bf5338a2cb07c1a06dc013364f4776d525e6437afb5a8903561e58c12c9a20b3\"\n    },\n    \"runs/2026-11-23-personal-history-spatial-scope.json\": {\n      \"bytes\": 1914,\n      \"sha256\": \"d8aa4f8b9dbdf251f5903b0cd7203396624e22cc811304ddae2bbeff6bc686ba\"\n    },\n    \"runs/changes/2026-11-23-personal-history-spatial-scope.json\": {\n      \"bytes\": 2521,\n      \"sha256\": \"21913a2acc9c60b6820b5d5a1c46a1f57e3915420b3e9e9986b1732338eaf6b3\"\n    },\n    \"state.json\": {\n      \"bytes\": 285619,\n      \"sha256\": \"6318e7a9d72b3c4b7252ce11af6fbfe95313caefe9db0202691c45586fa5c5d5\"\n    }\n  },\n  \"findings\": [],\n  \"limits\": [\n    \"This clears the planning/source delta only, not a working paid service, privacy/legal opinion, runtime validation or publication.\",\n    \"Author schema/render/link PASS is retained evidence; reviewer did not rerun those checks.\",\n    \"Original136/66 and all human/platform/accuracy/owner acceptance gates remain.\"\n  ],\n  \"original_scope\": {\n    \"canonical_array_sha256\": {\n      \"packages\": \"e2105ed1556421bed4b2a4da168b1564a21607ece04d17881732c9ce76e1b5c5\",\n      \"records\": \"efd5120aa62714162b0a47114cca7209d81050056ecea7e5d0cfdd89747e86a6\",\n      \"subtasks\": \"f08f2507d73aae6f0389c45e70025d45b0bcecbaf891e2dc1120def5a2919df0\"\n    },\n    \"complete\": 136,\n    \"criteria_percent_contributors_historical_evidence_and_closure_rows_unchanged\": true,\n    \"open\": 66,\n    \"packages\": 39,\n    \"records\": 202,\n    \"subtasks\": 117,\n    \"whole_three_arrays_JSON_value_exact_base\": true\n  },\n  \"pass\": true,\n  \"profile\": \"paid-personal-history-spatial-scope-distinct-review/v1\",\n  \"review_scope\": \"Read-only full nine-file content/diff and semantic source binding review; no tests, render, revalidation or source edit.\",\n  \"reviewed_author\": \"Codex /root\",\n  \"source_base\": \"d801aaafe06fc462a81734fcdd5534669393b305\",\n  \"source_map_checks\": {\n    \"author_six_source_hashes_exact\": true,\n    \"fresh_event_seven_bindings_exact\": true,\n    \"human_changelog_entry_exact\": true\n  },\n  \"substantive_review\": [\n    \"Explicit current CONTRIBUTING owner revision narrowly allows optional operated paid personal history; free personal checking/current-result explanation/evidence/export/accessibility/open standard remain. Lawful self-operation is not prohibited.\",\n    \"Paid upgrade/accounts are opt-in proposed service, no price/revenue/checkout/account/history collection activation; expiry preserves held-data export/deletion.\",\n    \"Default metadata excludes raw input/screenshots/page titles/excerpts/fullURLs; origin minimization and explicit optional choices are stated.1000entry/30day/5MB limits are proposed and unimplemented, not operational promises.\",\n    \"Signup community is free with public reading/account posting; email/billing/history stay out of public posts. Signup/payment and personal history never imply research/training consent.\",\n    \"Server storage/sync requires an explicit separate endpoint/auth/encryption/retention contract before activation; no capture or new endpoint is adopted.\",\n    \"Model/provider label, signed generation declaration and statistical attribution remain separate; exact model unsupported means unknown. Independent tag release/update and progressive disclosure do not change tag meaning or gates.\",\n    \"3D subject/resource/view and4D time/object continuity are planning contracts only; no live protocol enum/detector or original acceptance weakening.\",\n    \"State explicitly marks prior runtime receipts as historical for changed planning inputs and requires fresh affected checks before merge/publication.\"\n  ]\n}\n",
+    "reviewed_before_embedding": true
+  },
+  "planning_only": true,
+  "schema_correction": "Initial guarded commit refused unsupported planning_only enum. Use the existing engineering_only envelope with explicit written-contract-only limits; no runtime or tag release claim is added."
+}
