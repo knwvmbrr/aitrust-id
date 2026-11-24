@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-23-tag-runtime-final-selection
+
+Recorded 2026-11-24T04:19:07.007700+00:00 · Contributor: Codex /root integration; different source/evidence reviewers · change
+
+- **Changed.** Select five current source-bound engineering receipts, refresh the exact reviewed route inventory and reconcile current native/image worker status while preserving all original scope criteria.
+- **Evidence.** Actual five hosted profiles execute7/6/14/79/66 commands, exact8537 Git bindings independently reviewed. All five selected receipts assess current. Unchanged route guard and36failure controls pass; actual seven native flows remain separately evidenced. [Change record](./runs/changes/2026-11-23-tag-runtime-final-selection.json).
+- **Not claimed.** Final committed-tree required checks, capacity and actual live deployment pending. No new tag release, independent accuracy, physical-phone acceptance, TestFlight upload, managed web authority, legal clearance or original closure.136complete66open; target60 unmet.
+
 ### 2026-11-23-route-refresh-prerequisites
 
 Recorded 2026-11-24T03:34:57.328210+00:00 · Contributor: Codex /root integration; /root/web_camo different source review · change

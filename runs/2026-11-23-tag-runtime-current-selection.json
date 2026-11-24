@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "kind": "current_tag_runtime_engineering_selection",
+  "captured_at": "2026-11-24T04:12:11.685177+00:00",
+  "pass": true,
+  "selected_source_base": "23f6a3f29db76eb0e4d5dc48c1a18858ecbfb657",
+  "selected_engineering_receipts": {
+    "PS": {
+      "path": "runs/2026-11-23-tag-runtime-current-ps.json",
+      "bytes": 11210,
+      "sha256": "71af1ee1515b55b4ce5f16e189107df7dccdc2458954214611ee170133df9a1e",
+      "captured_at": "2026-11-24T00:26:38.928496+00:00",
+      "fingerprint_sha256": "157c7972c3a570beed951ad47549d032b0174a37391fd8a440dbefc291df87e4",
+      "executed_commands": 7,
+      "reused_existing_record": true
+    },
+    "PII_REDACTED": {
+      "path": "runs/2026-11-23-tag-runtime-current-pii-redacted.json",
+      "bytes": 13249,
+      "sha256": "af25ec1665fc5c2fc8292d904d2c6d99fc181a05d7c2cd1cef88ed4b49c82de3",
+      "captured_at": "2026-11-24T00:26:48.475860+00:00",
+      "fingerprint_sha256": "329a2618630ba145edb92e44a6669eaedf240eac9a0b151bea8ad1004e17ecf5",
+      "executed_commands": 6,
+      "reused_existing_record": true
+    },
+    "extension": {
+      "path": "runs/2026-11-23-tag-runtime-current-extension.json",
+      "bytes": 17333,
+      "sha256": "0d6b6e7e445b92f716ccce5ad4ce0781091439a9f54a1a2713f2cc78636474d9",
+      "captured_at": "2026-11-24T00:27:41.924398+00:00",
+      "fingerprint_sha256": "2406c50724e4f71752e26ccb2d31f3e36d09638748e8e09258ecaa19fe7498ef",
+      "executed_commands": 14,
+      "reused_existing_record": true
+    },
+    "protocol": {
+      "path": "runs/2026-11-23-tag-runtime-current-protocol.json",
+      "bytes": 1267564,
+      "sha256": "b9af96826f943b555a03d0b870b69c6052dbe0cf26fcfbd8eb031a767a98de01",
+      "captured_at": "2026-11-24T03:45:03.145672+00:00",
+      "fingerprint_sha256": "c82de95aed148b5e0b8c6a3ec39b5f7c7e6d10546b70a0e48104de014cae918e",
+      "executed_commands": 79,
+      "reused_existing_record": false
+    },
+    "website": {
+      "path": "runs/2026-11-23-tag-runtime-current-website.json",
+      "bytes": 302740,
+      "sha256": "fcba1cef78d4f69bea276591e93aea66fb8546204399d5c4d8e3b22c4b27952d",
+      "captured_at": "2026-11-24T04:01:31.322860+00:00",
+      "fingerprint_sha256": "39d28a96ec73517eafe2c0541dcbc4e556cfb3bfe19d3674f2b8018a28ddb868",
+      "executed_commands": 66,
+      "reused_existing_record": false
+    }
+  },
+  "actual_all_five_source_assessment": {
+    "PS": {
+      "pass": true,
+      "capability": "PS",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "PII_REDACTED": {
+      "pass": true,
+      "capability": "PII_REDACTED",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "extension": {
+      "pass": true,
+      "capability": "extension",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "protocol": {
+      "pass": true,
+      "capability": "protocol",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    },
+    "website": {
+      "pass": true,
+      "capability": "website",
+      "revalidation_required": false,
+      "failures": [],
+      "independent_accuracy_evidence": false,
+      "release_approved": false
+    }
+  },
+  "hosted_delivery": {
+    "run_id": 45320971651,
+    "attempt": 1,
+    "job_id": 138199147975,
+    "head": "23f6a3f29db76eb0e4d5dc48c1a18858ecbfb657",
+    "synthetic_merge": "fb8518afbe2692bf8af0f2646b4d007ca4612420",
+    "same_tree": "652c15a78a43b9017760733303cee47e8d6ead44",
+    "artifact_id": 14888851344,
+    "artifact_zip_sha256": "sha256:6d9421bbb6bfa1a61403a8cddb26c2d0634dffaaedb703b263b55e96b2d1f378",
+    "actual_all_five_profiles_pass": true,
+    "counts": {
+      "PS": 7,
+      "PII_REDACTED": 6,
+      "extension": 14,
+      "protocol": 79,
+      "website": 66
+    },
+    "independent_unique_Git_source_bindings": 8537,
+    "distinct_review_sha256": "adc246e0ed99819f055253406222b40ae2aa5f515b8d6a7042fa1ffa7a1afede"
+  },
+  "reuse_semantics": "The three already committed PS/privacy/extension receipts remain byte-identical historical records and assess current. The current23f hosted run independently re-exercised all five; only its new protocol/website raw receipts are copied into their predeclared public paths. No execution date, command, source fingerprint or old raw receipt is rewritten.",
+  "current_boundary": {
+    "manifest_sha256": "33249a0b5b03d5b07901eef61ae67341e8352ba691be5013903e1c58d4e5103a",
+    "actual_guard": {
+      "captured_at": "2026-11-24T04:05:54.400460+00:00",
+      "pass": true,
+      "rules": [
+        "X-01",
+        "X-03",
+        "X-04",
+        "X-06",
+        "X-08",
+        "X-12",
+        "X-14",
+        "X-15",
+        "N-007",
+        "N-008"
+      ],
+      "routes": {
+        "services/gateway/app.py": [
+          [
+            "get",
+            "/healthz"
+          ],
+          [
+            "post",
+            "/v1/evaluate"
+          ]
+        ],
+        "services/evaluator/app.py": [
+          [
+            "get",
+            "/healthz"
+          ],
+          [
+            "post",
+            "/signals"
+          ]
+        ],
+        "services/anonymizer/app.py": [
+          [
+            "get",
+            "/healthz"
+          ],
+          [
+            "post",
+            "/redact"
+          ]
+        ]
+      },
+      "source_files": 8497,
+      "browser_receipts_current": true,
+      "extension_access_unchanged": true,
+      "committed_device_engine_evidence": 2,
+      "active_services": [
+        "anonymizer",
+        "evaluator",
+        "gateway"
+      ],
+      "current_remote_service_cases": 26,
+      "registry_0_1_deferred_enforced": true,
+      "actual_registry_refusal_cases": 2,
+      "actual_full_pipeline_replay_cases": 15,
+      "ordinary_text_without_account_payment_receipt": true,
+      "intake_modes_checked": [
+        "all",
+        "privacy"
+      ],
+      "undeclared_intake_fields_refused": 11,
+      "network_executed": false,
+      "python_manifest_lock_roots_verified": 4,
+      "review_manifest_sha256": "33249a0b5b03d5b07901eef61ae67341e8352ba691be5013903e1c58d4e5103a",
+      "independent_accuracy_evidence": false,
+      "release_approved": false,
+      "scope": "Reviewed current personal source/access/endpoint boundaries and source-bound browser checks. Not a proof against host compromise, third-party collection, future changes or new organizational/research routes. The deferred registry is refused by this release. Future research intake and license clearance remain separate."
+    },
+    "affected_failure_controls": {
+      "argv_after_interpreter": [
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_route_boundaries.py"
+      ],
+      "interpreter": "Existing private verification venv; absolute path omitted",
+      "passed": 36,
+      "failed": 0,
+      "seconds": 28.11
+    }
+  },
+  "pre_metadata_source_capacity": {
+    "source": "23f6a3f29db76eb0e4d5dc48c1a18858ecbfb657",
+    "run_id": 45320971750,
+    "attempt": 1,
+    "job_id": 138199148496,
+    "artifact_id": 14887681107,
+    "result_sha256": "5afaff96f6e28d4cf8394c3ef93552a8179fd5b7e1d65cc5fa560819856a8d36",
+    "files": 13884,
+    "raw_bytes": 150106648,
+    "packet_bytes": 15621677,
+    "packet_headroom_bytes": 378323,
+    "per_process_peak_rss_kib": 262132,
+    "inherited_address_space_bytes": 805306368,
+    "new_metadata_tree_capacity_still_required": true
+  },
+  "native_seven_source_evidence": "runs/2026-11-23-tag-runtime-native-share.json",
+  "original_accounting": {
+    "total": 202,
+    "complete": 136,
+    "open": 66,
+    "target_open": 60,
+    "new_closures": 0,
+    "all_original_criteria_and_percentages_unchanged": true
+  },
+  "separate_image_status": {
+    "run_id": 45321228249,
+    "source": "976864835b8a57633a1bd1a7c74186ea022e10d5",
+    "acquisition": "SUCCESS",
+    "offline_install_and_fixtures": "SUCCESS",
+    "first_CPU_forward": "FAILED before OBSERVED",
+    "actual_model_forward_completed": false,
+    "observed_owned_cleanup": {
+      "pass": true,
+      "workspace_removed": true
+    },
+    "job_and_finalization": "FAILED/UNQUALIFIED; immutable initial failure preserved",
+    "next_action": "Isolated fixed diagnostic repair; no blind retry and no inferred model cause."
+  },
+  "publication": {
+    "PR": 154,
+    "final_metadata_required_checks": "PENDING",
+    "new_live_site_deployment": false,
+    "new_TestFlight_uploaded": false
+  },
+  "limits": {
+    "independent_accuracy": false,
+    "human_accessibility": false,
+    "physical_phone_acceptance": false,
+    "new_tag_release": false,
+    "managed_web_authority": false,
+    "legal_clearance": false,
+    "original_requirement_closed": false
+  },
+  "final_bookkeeping_review": {
+    "captured_at": "2026-11-24T04:19:07.007700+00:00",
+    "initial_metadata_check_refused": true,
+    "cause": "Draft edits to the two source-bound session plans changed the website fingerprint.",
+    "correction": "Restored both uncommitted plan drafts to exact23f bytes; current dated status stays in state.json and this report. No receipt, check, fingerprint rule or existing plan commit rewritten.",
+    "all_five_actual_assessments_after_correction_pass": true
+  }
+}
