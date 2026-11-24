@@ -23,8 +23,12 @@
 6. **No detection capability is ever withheld from an individual.** Every label, every signal,
    every piece of evidence is free and open, forever. Never add a feature flag that disables a
    label, a signal or an evidence panel for a free user. What an organisation pays for is
-   administration of other people's installs — SSO, fleet policy, audit export, retention — not
-   a capability a person would ever want.
+   administration of other people's installs — SSO, fleet policy, audit export and retention.
+   **Owner revision, November 23, 2026:** optional account-based personal history may be
+   a paid upgrade. Free checking, current-result explanations/evidence, accessibility and
+   the open standard remain available without it. A user retains export/deletion access to
+   already-held personal data after subscription expiry. Signup for the free community or
+   paid history is separate from research/training consent. No paid service is operating yet.
 
 **Nothing half-built ships.** If a feature cannot be finished to its written acceptance
 criteria, leave it out of the release and say so in the README. Do not ship a stub behind a

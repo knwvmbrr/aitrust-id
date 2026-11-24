@@ -1,0 +1,124 @@
+{
+  "schema_version": 1,
+  "profile": "operator-history-access-engine/v1",
+  "captured_at": "2026-11-24T16:15:20.447984+00:00",
+  "pass": true,
+  "completed_by": "Codex /root",
+  "verified_by": "Codex /root/share_debugger",
+  "source_sha256": {
+    "tools/history_entitlements.py": "705c9f7073713ff83e05914d5258662c214659cb0e01da3285eb16df8e0f2062",
+    "scripts/history-entitlements.py": "516bfc80d00ac5943c6cc457b68fb4d41e2faa1c0ff723efcfa5c5797bebd476",
+    "tests/test_history_entitlements.py": "7ee521d17b52ab27befd352f7d4696827d0e147f01a7eedbe9211af718af77c1",
+    "docs/history-entitlements.md": "6bf5f3d1fbd9fa51b9cc1cc1a31b3302fbe91a3669c68654a6093c30f30c18a9"
+  },
+  "checks": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_history_entitlements.py",
+      "-v"
+    ],
+    "tests": 13,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 0.23506429098779336,
+    "log": "test_clock_rollback_refuses_after_reopen_and_cannot_reactivate_expiry (test_history_entitlements.HistoryEntitlementTests.test_clock_rollback_refuses_after_reopen_and_cannot_reactivate_expiry) ... ok\ntest_corruption_duplicate_keys_and_coherent_boolean_revision_refuse (test_history_entitlements.HistoryEntitlementTests.test_corruption_duplicate_keys_and_coherent_boolean_revision_refuse) ... ok\ntest_event_collision_and_invalid_lease_never_grant_other_account (test_history_entitlements.HistoryEntitlementTests.test_event_collision_and_invalid_lease_never_grant_other_account) ... ok\ntest_forget_erases_only_selected_account_and_events (test_history_entitlements.HistoryEntitlementTests.test_forget_erases_only_selected_account_and_events) ... ok\ntest_grant_expiry_renewal_revoke_and_replay (test_history_entitlements.HistoryEntitlementTests.test_grant_expiry_renewal_revoke_and_replay) ... ok\ntest_late_directory_privacy_drift_refuses_before_and_after_commit (test_history_entitlements.HistoryEntitlementTests.test_late_directory_privacy_drift_refuses_before_and_after_commit) ... ok\ntest_missing_store_private_permissions_links_and_lock_fail_closed (test_history_entitlements.HistoryEntitlementTests.test_missing_store_private_permissions_links_and_lock_fail_closed) ... ok\ntest_postreplacement_fault_is_explicit_uncertainty (test_history_entitlements.HistoryEntitlementTests.test_postreplacement_fault_is_explicit_uncertainty) ... ok\ntest_prepublication_fault_leaves_original_and_removes_owned_temp (test_history_entitlements.HistoryEntitlementTests.test_prepublication_fault_leaves_original_and_removes_owned_temp) ... ok\ntest_read_write_cancellation_propagates (test_history_entitlements.HistoryEntitlementTests.test_read_write_cancellation_propagates) ... ok\ntest_real_operator_cli_init_grant_status_revoke_never_claims_payment (test_history_entitlements.HistoryEntitlementTests.test_real_operator_cli_init_grant_status_revoke_never_claims_payment) ... ok\ntest_real_replace_then_fault_or_cancel_is_uncertain_not_rolled_back (test_history_entitlements.HistoryEntitlementTests.test_real_replace_then_fault_or_cancel_is_uncertain_not_rolled_back) ... ok\ntest_reserved_capacity_allows_every_current_grant_to_be_revoked (test_history_entitlements.HistoryEntitlementTests.test_reserved_capacity_allows_every_current_grant_to_be_revoked) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.234s\n\nOK\n"
+  },
+  "different_review": {
+    "sha256": "6e9ae772bff4ea08d4c75f792eabd68d05f65c50d8eaf5eb52b246d780758f31",
+    "receipt": {
+      "profile": "history-entitlement-distinct-source-review/v1",
+      "captured_at": "2026-11-24T16:11:54.394221+00:00",
+      "reviewer": "Codex /root/share_debugger",
+      "pass": true,
+      "status": "CLEAR_SCOPED_PRIVATE_OPERATOR_LEDGER",
+      "source_sha256": {
+        "tools/history_entitlements.py": "705c9f7073713ff83e05914d5258662c214659cb0e01da3285eb16df8e0f2062",
+        "scripts/history-entitlements.py": "516bfc80d00ac5943c6cc457b68fb4d41e2faa1c0ff723efcfa5c5797bebd476",
+        "tests/test_history_entitlements.py": "7ee521d17b52ab27befd352f7d4696827d0e147f01a7eedbe9211af718af77c1",
+        "docs/history-entitlements.md": "6bf5f3d1fbd9fa51b9cc1cc1a31b3302fbe91a3669c68654a6093c30f30c18a9"
+      },
+      "source_stable": true,
+      "scope": "Private bounded JSON operator-grant mechanism and CLI, not payment verification, public account authentication, PostgreSQL production or commercial activation.",
+      "source_read": [
+        "Full helper/CLI/tests/docs and blind_review_io foundation inspected.",
+        "Strict account/event/lease/clock/JSON replay reconstruction and outstanding-grant revocation capacity read; no new concrete issue.",
+        "Exact replay is within retained ledger; forget intentionally erases that account and events. No replay-memory promise after erasure.",
+        "Fixed-two-member bounded iterator replaces listdir allocation.",
+        "Possible commit marked before replace; postattempt ordinary errors report typed uncertainty; interruption/exit retain control flow and possible-commit metadata.",
+        "Held/named directory owner/type/mode/inode checks occur before commit and after the final member read. Final one-line delta reconstructs exact4fb0 source; CLI/tests/docs unchanged in this correction.",
+        "Original target is never rollback-deleted. Temp removal checks captured owned identity; no universal guarantee against a compromised same-user filesystem writer is claimed."
+      ],
+      "actual_reviewer_controls": {
+        "earlier_four_corrected_cases": [
+          "real replacement followed by OSError\u2192EntitlementUncertain",
+          "real replacement followed by KeyboardInterrupt\u2192EntitlementInterrupted",
+          "real replacement followed by SystemExit\u2192EntitlementExit",
+          "original precommit0700\u21920755 drift refuses with no grant"
+        ],
+        "earlier_four_source_sha256": "4fb0f04a02c3254aeac5522d41233db3ed83487aa6532209a49bed68e147bbcb",
+        "current_final_case": {
+          "tests": 1,
+          "pass": true,
+          "receipt_sha256": "c84216e01749531b069e4612c11603bb9a4863f0774178c8bd6b02709deeb17a",
+          "result": "Final real member read then directory0755 drift produces typedEntitlementUncertain; actual committed grant retained and no ACTIVE success returned."
+        },
+        "full11_or13_suite_repeated": false
+      },
+      "preserved_original_findings": [
+        {
+          "id": "HE-1",
+          "severity": "P2",
+          "source": "04e0adede3008c2258ac1d85d7f6e6b51f809c52a81725951d89ecbd8291fae6",
+          "counter_sha256": "bc3decb7259a654c1745fa7767e75d4c012a26c5f15ef464bd6815677747c076",
+          "finding": "Post-real-replace errors/cancellation committed a grant without typed uncertainty.",
+          "resolved": true
+        },
+        {
+          "id": "HE-2",
+          "severity": "P2",
+          "counter_sha256": "444005d1193f33162237ecd7b59367a82c9bdc91168a18a10bb9ae00b6bfdc08",
+          "finding": "Configured private directory widened before commit yet ACTIVE returned; intermediate final-member boundary reproduced85d696 too.",
+          "resolved": true
+        }
+      ],
+      "author_execution_qualification": "ROOT13-case0.334s and affected mode group remain author-attributed source phases, not reviewer full-suite execution.",
+      "limits": [
+        "No real payment, external account, user history, private credentials, other users or network used. All counters are owned synthetic private temporary files.",
+        "No browser/tag/SDK/native/build or broad tests; no source edits by reviewer.",
+        "This private working adapter does not qualify production transport/identity/abuse/backups or replace selected PostgreSQL architecture.",
+        "No original requirement/commerce/live-collection completion claim."
+      ]
+    }
+  },
+  "implemented": [
+    "Server-owned private operator grants and exact callback for account history.",
+    "Expiry, renewal, exact event replay, conflicting replay refusal, revocation reserve and persisted observed clock-rollback refusal.",
+    "Private bounded state, lock contention/corruption refusal, atomic replacement uncertainty and preserved cancellation.",
+    "Selective account-data erasure and actual operator CLI lifecycle."
+  ],
+  "payment_processed": false,
+  "verified_payment_claimed": false,
+  "production_database_or_collection_activated": false,
+  "original_requirement_closed": false,
+  "remaining": [
+    "Real merchant/provider, prices and commercial terms before accepting money.",
+    "Production PostgreSQL, privilege separation and actual deployment/recovery remain distinct.",
+    "Account HTTP and browser integration are being implemented separately."
+  ],
+  "scope_ids": [
+    "F-044",
+    "N-010"
+  ],
+  "original_counts": {
+    "total": 202,
+    "complete": 136,
+    "open": 66
+  }
+}

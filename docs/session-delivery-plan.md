@@ -1,3 +1,11 @@
+## Working accounts, history access and image reference — 2026-11-24T16:18:02.427997+00:00
+
+The complete image reference-repair job now passes its actual17-case engineering gate and all3 numerical comparisons, with separate ROOT authenticated provider review. It does not measure AI-image detection accuracy. The independent private operator access engine also works and has a different source reviewer; no money is processed. These are two completed scoped jobs, not original requirement closures.
+
+**136 complete /66 open** remains the original count. Signup/session/private history API and browser integration are active: /root/seo owns account/storage/API, /root owns browser/access integration. /root/web_camo runs independent native layout checks while preserving the current seven-flow failure; /root/share_debugger repairs current-source distribution and actual missing upstream notices. No permanent bot or public account launch is claimed.
+
+[Image reference acceptance](../runs/2026-11-24-image-reference-qualified.json) · [Working private access engine](../runs/2026-11-24-history-access-engine.json)
+
 ## Image reference, iPhone Clear and source-consumer repair — 2026-11-24T15:20:15.735780+00:00
 
 Originals remain **136 complete /66 open; target60 unmet**. No original percentage or acceptance criterion changed. The three scoped jobs below are active, not closed.

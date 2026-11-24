@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-11-24T15:20:15.735780+00:00",
+  "audited_at": "2026-11-24T16:18:02.427997+00:00",
   "client_date": "2026-11-24",
   "method": "Five equally weighted evidence milestones; no effort estimate or overall project average",
   "completion_rule": "100 only when all applicable acceptance for the full named item is functioning and evidenced; complete records retained as completed queue",
@@ -14568,7 +14568,7 @@
       "milestones_passed": [
         "bounded_contract"
       ],
-      "audited_at": "2026-11-24T15:20:15.735780+00:00",
+      "audited_at": "2026-11-24T16:18:02.427997+00:00",
       "checked_by": "Codex",
       "implemented_by": [],
       "planning_contributors": [
@@ -14591,9 +14591,10 @@
         "docs/visual-model-data-screening.md",
         "docs/jpeg-credential-result.md",
         "runs/2026-11-22-jpeg-merged-source-binding.json",
-        "runs/2026-11-24-reference-phone-wave.json"
+        "runs/2026-11-24-reference-phone-wave.json",
+        "runs/2026-11-24-image-reference-qualified.json"
       ],
-      "evidence_scope": "Visual execution plan and independently qualified Linux JPEG credential/action component; no generalized image/video/3D AI-origin detector, new live code or full multimodal release. November24: actual hosted image production forward completed, but reference execution refused before comparison; full 17-case qualification remains unmet. Source review identifies an uninitialized nonpersistent reference position buffer. Its repair and real numerical qualification are pending; no FA/origin verdict is established.",
+      "evidence_scope": "Visual execution plan and independently qualified Linux JPEG credential/action component; no generalized image/video/3D AI-origin detector, new live code or full multimodal release. November24: actual hosted image production forward completed, but reference execution refused before comparison; full 17-case qualification remains unmet. Source review identifies an uninitialized nonpersistent reference position buffer. Its repair and real numerical qualification are pending; no FA/origin verdict is established. Actual pinned image reference17-case engineering qualification now passes; three controlled image calculations agree within original tolerances and owned cleanup succeeds. No image-origin accuracy/tag release is established.",
       "required_acceptance": [
         "Specify independent image provenance/signature/revocation, watermark and statistical AI-generation jobs; enumerate supported bytes/formats and attack/error cases, validate each before release. Extend the same contract to audio, video, documents, code/text and future formats; unknown profiles return Unsupported, never false clearance. No new live tag code is adopted by planning."
       ],
@@ -14792,6 +14793,55 @@
         "Complete one chosen supported AI-host account connection with owner approval, preserving limited tool permissions and selected-text disclosure; SDK compatibility alone is not that account acceptance."
       ],
       "queue": "open"
+    },
+    {
+      "id": "ENH-PERSONAL-TAG-HISTORY",
+      "kind": "enhancement",
+      "title": "Optional paid personal history of displayed tags, where and why",
+      "percent_complete": 20,
+      "milestones_passed": [
+        "bounded_contract"
+      ],
+      "audited_at": "2026-11-24T16:18:02.427997+00:00",
+      "checked_by": "Codex /root; distinct access-engine review /root/share_debugger",
+      "implemented_by": [],
+      "planning_contributors": [
+        "Michael — direct product direction, 2026-11-24T04:35:56.090177+00:00",
+        "Codex /root — independent privacy and execution contract"
+      ],
+      "completed_by": [],
+      "completed_at": null,
+      "completion_timestamp_basis": null,
+      "next_fix": "Implement and qualify an explicitly chosen paid history service with user accounts, independent of free personal checking; deliver readable where/why timeline, bounded retention/quota, safe export/deletion/corrections, separate native/extension adapters, truthful billing/entitlement controls and supported-user acceptance.",
+      "next_owner": "Web/platform tag engineers; privacy reviewer; PM integrates; Michael and independent users for human acceptance",
+      "evidence": [
+        "docs/personal-tag-history-plan.md",
+        "runs/2026-11-24-history-access-engine.json"
+      ],
+      "evidence_scope": "Written owner-revised paid-history/account contract only. No active checkout, account service, history store, ambient capture, training consent or live collection. Real private operator access engine and CLI are implemented and verified; real account HTTP and browser integration are in progress. No merchant, public signup, paid charge or production collection is activated.",
+      "required_acceptance": [
+        "Actual consent/check/revisit/filter/delete/disable and quota/expiry/corruption/migration failures preserve all checking.",
+        "Stored metadata excludes raw inputs, private URLs/excerpts and screenshots by default; explicit optional exports are previewed and no research/network submission occurs.",
+        "Actual extension/native display binding and human/physical-device acceptance remain separate necessary outcomes.",
+        "Owner-authorized paid-upgrade boundary preserves free current-result checking/evidence and ongoing access to personal-data export/deletion; signup/payment never authorizes research training or public history disclosure."
+      ],
+      "queue": "open",
+      "work_packages": [
+        "WP-UX",
+        "WP-CAPTURE",
+        "WP-PRIVACY",
+        "WP-MOBILE"
+      ],
+      "related_scope_ids": [
+        "F-033",
+        "F-044",
+        "F-086",
+        "N-011",
+        "N-013",
+        "N-014"
+      ],
+      "execution_plan": "docs/personal-tag-history-plan.md",
+      "owner_direction_recorded_at": "2026-11-24T04:47:56.186545+00:00"
     }
   ],
   "revalidation": "Any affected source, protocol, method, route, privacy or acceptance change reopens the relevant item; snapshots are not perpetual guarantees."

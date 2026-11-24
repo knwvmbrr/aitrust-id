@@ -112,7 +112,7 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 31,
+    "finished_scoped_tasks": 33,
     "original_requirement_closures": 4
   },
   "goals": {
@@ -202,12 +202,12 @@
     {
       "tag_id": "T-FA",
       "bot_id": "tag_fa",
-      "actual_worker": "/root/seo",
-      "status": "active",
-      "checked_at": "2026-11-24T15:20:15.735780+00:00",
-      "current_component_status": "Experimental image classifier reference repair in progress; actual production forward observed but reference refused. No FA tag issued.",
+      "actual_worker": null,
+      "status": "reviewed",
+      "checked_at": "2026-11-24T16:18:02.427997+00:00",
+      "current_component_status": "Real image reference calculation/runtime qualification passed17 cases and3 numerical comparisons with separate ROOT provider review; no origin verdict or FA tag.",
       "blocking_acceptance": "Image/signature integrity, experimental adjudication and revision-diff observations do not yet deliver independently supported generation/edit origin or outside-session knowledge claims for an adopted workflow.",
-      "next_task": "Complete current-source reference qualification without weakening independent origin/human gates."
+      "next_task": "Measure actual known-origin errors and accepted tag mapping; preserve all origin and human gates."
     },
     {
       "tag_id": "T-PA",
@@ -1775,7 +1775,7 @@
         "T-FA"
       ],
       "worker": "/root/seo",
-      "status": "active",
+      "status": "closed",
       "deliverable": "Repair the nonpersistent reference position tensor and pass all existing actual17-case qualification without replacing reference math.",
       "registered_at": "2026-11-24T15:20:15.735780+00:00",
       "registration_time_basis": "Actual current board registration; earlier precode/source work retained separately, not backdated.",
@@ -1783,7 +1783,20 @@
         "Pinned publisher tensor validation, all CPU custody and unchanged numerical comparisons.",
         "Actual complete17-case hosted gate, source identity, cleanup and distinct review; source-only controls are insufficient."
       ],
-      "original_requirement_closed": false
+      "original_requirement_closed": false,
+      "closure_record": {
+        "closed_at": "2026-11-24T16:18:02.427997+00:00",
+        "completed_by": "/root/seo",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-24-image-reference-qualified.json",
+            "sha256": "a664a0081785ddcc95c9d70d6c85b998afe8507cb85d9936f35583eb48c5504a"
+          }
+        ],
+        "original_requirement_closed": false,
+        "acceptance_basis": "Previously registered complete source/runtime reference-repair job: exact model positions, original17-case gate, actual provider/source/cleanup and different review; no broader origin acceptance."
+      }
     },
     {
       "task_id": "session-iphone-clear-editor-return",
@@ -1818,6 +1831,52 @@
         "Actual integrated authenticated consumer/probes on final selected source; injected authority alone is insufficient."
       ],
       "original_requirement_closed": false
+    },
+    {
+      "task_id": "session-private-history-access-engine",
+      "original_ids": [
+        "F-044",
+        "N-010"
+      ],
+      "worker": "/root",
+      "status": "closed",
+      "registered_at": "2026-11-24T16:18:02.427997+00:00",
+      "registration_time_basis": "Board registration after actual delivery; architecture documented before feature code in this turn, not a backdated board entry.",
+      "preimplementation_contract": "docs/history-entitlements.md",
+      "deliverable": "Functioning private server-owned history access grant, renewal, revoke, expiry and erasure engine with a real operator CLI and safe uncertainty.",
+      "done_evidence": [
+        "Actual operator CLI and lifecycle/refusal/atomicity controls; distinct source review and preserved failure counters.",
+        "No client-paid authority, payment claim, free-check dependency or denial of history export/deletion."
+      ],
+      "closure_record": {
+        "closed_at": "2026-11-24T16:18:02.427997+00:00",
+        "completed_by": "/root",
+        "verified_by": "/root/share_debugger",
+        "evidence": [
+          {
+            "path": "runs/2026-11-24-history-access-engine.json",
+            "sha256": "0efe793301d1c7a94c99a77c5059c0f3a48b66ff2d67041623c3377a176de462"
+          }
+        ],
+        "original_requirement_closed": false
+      }
+    },
+    {
+      "task_id": "session-account-signup-private-history",
+      "original_ids": [
+        "F-136",
+        "F-044"
+      ],
+      "worker": "/root/seo",
+      "status": "active",
+      "registered_at": "2026-11-24T16:18:02.427997+00:00",
+      "registration_time_basis": "Actual dated board assignment; API/storage contract approved before coding, not claimed as a historical process.",
+      "deliverable": "Working private signup/sign-in/session and owner-only optional history through real HTTP and a usable browser page, linked to server-owned entitlement controls.",
+      "done_evidence": [
+        "Actual two-user registration/auth/session rotation, CSRF/ownership/rate/expiry/refusal and private-store flows with different review.",
+        "Real service and browser signup/save/import/read/export/delete/logout; actual metadata minimization and permission defaults.",
+        "Payments and public production collection remain off until their separate operating contracts and deployment gates pass."
+      ]
     }
   ],
   "original_open_requirements": [
@@ -6531,7 +6590,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-24T15:20:15.735780+00:00",
+  "updated_at": "2026-11-24T16:18:02.427997+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -7246,47 +7305,38 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-24T15:20:15.735780+00:00",
-    "source_baseline_commit": "8ec503bbc559edf75de88eaebdf180df486a5cb1",
+    "recorded_at": "2026-11-24T16:18:02.427997+00:00",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
-    "status": "Three concrete repair lanes active; none has full new original acceptance. Historical seven-flow pass is not rebound to changed Clear sources; first image production forward is not a reference pass.",
+    "status": "Image reference engineering job and private access engine completed; account HTTP/UI integration and iPhone size work active. Original requirements remain unchanged/open where full acceptance is absent.",
+    "scoped_tasks_closed": 33,
+    "scoped_task_records": 37,
+    "agents_permanent": false,
+    "assignments_are_live_heartbeats": false,
     "assignments": [
       {
         "worker": "/root",
-        "role": "PM, scope accounting and final integration",
-        "status": "active_bounded_assignment_at_snapshot",
-        "outcome": "Preserve all202 original criteria, integrate reviewed fixes and qualify actual current sources; original target remains unmet."
+        "role": "PM, account browser/entitlement integration and final review",
+        "status": "active_bounded_assignment_at_snapshot"
       },
       {
         "worker": "/root/seo",
-        "role": "Image reference initialization engineer",
-        "status": "active_bounded_assignment_at_snapshot",
-        "outcome": "Validate and adopt only the existing publisher position tensor, preserve independent reference math and complete actual17-case qualification."
+        "role": "Account signup/session/private history engineer",
+        "status": "active_bounded_assignment_at_snapshot"
       },
       {
         "worker": "/root/web_camo",
-        "role": "iPhone App/Share Clear reliability engineer",
-        "status": "active_bounded_assignment_at_snapshot",
-        "outcome": "Return the empty editor to view only on user Clear, preserve background privacy and Share cancellation, qualify actual seven-flow and size matrix."
+        "role": "Independent native size/Clear qualification engineer",
+        "status": "active_bounded_assignment_at_snapshot"
       },
       {
         "worker": "/root/share_debugger",
-        "role": "Source-consumer lifecycle engineer and task-list feasibility lead",
-        "status": "active_bounded_assignment_at_snapshot",
-        "outcome": "Keep descriptor and cumulative read bounds while recapturing source identities; integrate finite mapping and real authenticated consumer qualification."
+        "role": "Distribution engineer, entitlement reviewer and source/notice repair",
+        "status": "active_bounded_assignment_at_snapshot"
       }
-    ],
-    "scoped_tasks_closed": 31,
-    "scoped_task_records": 35,
-    "original_closures_since_baseline": 4,
-    "all202_preserved": true,
-    "baseline_hashes_unchanged": true,
-    "agents_permanent": false,
-    "assignments_are_live_heartbeats": false,
-    "owner_actions_unchanged": true
+    ]
   },
   "execution_wave_history": [
     {
@@ -8103,6 +8153,49 @@
         "status": "Current66 original acceptance contracts reviewed again; no six fully autonomous closures established. Continue useful software outcomes without relabeling independent human, legal or owner gates.",
         "six_autonomous_closures_promised": false
       }
+    },
+    {
+      "recorded_at": "2026-11-24T15:20:15.735780+00:00",
+      "source_baseline_commit": "8ec503bbc559edf75de88eaebdf180df486a5cb1",
+      "original_complete": 136,
+      "original_open": 66,
+      "target_open": 60,
+      "remaining_full_closures": 6,
+      "status": "Three concrete repair lanes active; none has full new original acceptance. Historical seven-flow pass is not rebound to changed Clear sources; first image production forward is not a reference pass.",
+      "assignments": [
+        {
+          "worker": "/root",
+          "role": "PM, scope accounting and final integration",
+          "status": "active_bounded_assignment_at_snapshot",
+          "outcome": "Preserve all202 original criteria, integrate reviewed fixes and qualify actual current sources; original target remains unmet."
+        },
+        {
+          "worker": "/root/seo",
+          "role": "Image reference initialization engineer",
+          "status": "active_bounded_assignment_at_snapshot",
+          "outcome": "Validate and adopt only the existing publisher position tensor, preserve independent reference math and complete actual17-case qualification."
+        },
+        {
+          "worker": "/root/web_camo",
+          "role": "iPhone App/Share Clear reliability engineer",
+          "status": "active_bounded_assignment_at_snapshot",
+          "outcome": "Return the empty editor to view only on user Clear, preserve background privacy and Share cancellation, qualify actual seven-flow and size matrix."
+        },
+        {
+          "worker": "/root/share_debugger",
+          "role": "Source-consumer lifecycle engineer and task-list feasibility lead",
+          "status": "active_bounded_assignment_at_snapshot",
+          "outcome": "Keep descriptor and cumulative read bounds while recapturing source identities; integrate finite mapping and real authenticated consumer qualification."
+        }
+      ],
+      "scoped_tasks_closed": 31,
+      "scoped_task_records": 35,
+      "original_closures_since_baseline": 4,
+      "all202_preserved": true,
+      "baseline_hashes_unchanged": true,
+      "agents_permanent": false,
+      "assignments_are_live_heartbeats": false,
+      "owner_actions_unchanged": true
     }
   ]
 }

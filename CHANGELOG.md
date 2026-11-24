@@ -2,6 +2,33 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-image-reference-qualified
+
+Recorded 2026-11-24T16:28:37.494117+00:00 · Contributor: Codex /root; different engineering reviewers attributed in evidence · change
+
+- **Changed.** Adopt the exact successful hosted image-reference engineering result after separate authenticated provider, artifact and strict-inspector review.
+- **Evidence.** Actual run45425852215 passes17 runtime/failure cases and3 numerical comparisons with identical crops, original tolerances and owned cleanup. ROOT separately verifies provider run/job/artifact identity and reruns only the bounded artifact inspector, not the model. [Change record](./runs/changes/2026-11-24-image-reference-qualified.json).
+- **Not claimed.** Not17 correctly identified AI images. Accuracy is unmeasured, origin remains unknown and no tag is issued. No JIT equivalence, runtime/legal clearance, all-format support, paid access or T-FA/F-057/X-02 original closure.
+
+
+### 2026-11-24-history-access-engine
+
+Recorded 2026-11-24T16:28:37.494117+00:00 · Contributor: Codex /root; different engineering reviewers attributed in evidence · change
+
+- **Changed.** Implement private server-owned history access grants, expiry, renewal, replay-safe revocation and erasure with a working operator CLI; integrate the owner-approved optional paid-history scope and current execution accounting.
+- **Evidence.** Thirteen current lifecycle, CLI, refusal and failure-atomicity controls pass. A different reviewer reproduced and verified corrections for interrupted replacement and privacy drift. All202 original IDs and criteria are preserved; image repair and access engine are finished scoped jobs, not original closures. [Change record](./runs/changes/2026-11-24-history-access-engine.json).
+- **Not claimed.** Operator grants are not verified customer payments. No merchant, price, public signup, production PostgreSQL collection, physical/human acceptance or original closure. Account HTTP/browser integration remains active; original count136complete66open, target60unmet.
+
+
+### 2026-11-23-personal-history-spatial-scope
+
+Recorded 2026-11-24T04:48:25.637000+00:00 · Contributor: Codex /root; Michael owner direction · change
+
+- **Changed.** Record the owner-selected paid personal history upgrade, signup community, model-level provenance and explicit spatial/temporal roadmap; narrow the former blanket free-feature wording without gating personal detection or evidence.
+- **Evidence.** Scope schema/render/link checks pass; all202originals,39packages,117subtasks and136complete66open remain unchanged. New history enhancement is20%writtencontract only. [Change record](./runs/changes/2026-11-23-personal-history-spatial-scope.json).
+- **Not claimed.** No history store, account/signup service, checkout, social publication, model attribution, new modality/tag or original closure. Isolated draft source requires different review, fresh affected checks and next finite protected-baseline admission before publication.
+
+
 ### 2026-11-24-reference-phone-wave
 
 Recorded 2026-11-24T15:20:34.326742+00:00 · Contributor: Codex /root; image, iPhone and source-consumer lanes attributed in board · change
