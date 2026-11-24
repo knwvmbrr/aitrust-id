@@ -2,6 +2,13 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-23-route-refresh-prerequisites
+
+Recorded 2026-11-24T03:34:57.328210+00:00 · Contributor: Codex /root integration; /root/web_camo different source review · change
+
+- **Changed.** Registered exactly three final boundary-maintenance/evidence names within the unchanged160-entry cap before the next source freeze; refreshed exact table/registry bindings and recorded the actual stale-boundary refusal.
+- **Evidence.** Two affected finite-table controls pass, preserving155historical names and161-entry refusal. Actual972 site validation reaches the unchanged route guard, where nine cases refuse the old source inventory and27others pass. Current source/native scopes remain separate from release or independent accuracy. [Change record](./runs/changes/2026-11-23-route-refresh-prerequisites.json).
+- **Not claimed.** No current boundary review or browser execution is manufactured. Fresh final-source protocol/website receipts, exact boundary review, required checks and actual publication remain pending; no original criteria, percentages, permissions, endpoint, capture or collection change.136complete66open; target60 unmet.
 ### 2026-11-23-current-native-selection
 
 Recorded 2026-11-24T03:19:34.208906+00:00 · Contributor: Codex /root integration; /root/web_camo native source and different integration review · change

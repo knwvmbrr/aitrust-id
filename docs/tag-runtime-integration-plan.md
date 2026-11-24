@@ -302,3 +302,40 @@ main; never drop names, omit its mixed-source capacity charge or raise the cap.
 The same sequencing applies to the separately authored build-number2 and web
 conditional-distribution components. No original closure is claimed by this
 native selection or future source scheduling.
+
+
+## Final boundary review prerequisite registration
+
+Actual972 required site validation now reaches the route-boundary checks and
+refuses the stale earlier inventory:9 failure cases stop at that first source
+check;27 other cases pass. The check itself is correct. Preserve actual failed
+job138194195324/run45319458440 and all existing review records. Do not refresh
+source hashes without reviewing the exact changed boundaries, or relabel an old
+website execution current. Existing real endpoint/access/payment/collection
+refusals and independent_release_approval:false remain mandatory.
+
+Before obtaining final current protocol/website receipts, name exactly three
+additional finite entries: existing maintenance `eval/route-boundaries.json`,
+preparation event `runs/changes/2026-11-23-route-refresh-prerequisites.json`, and
+final selection event `runs/changes/2026-11-23-tag-runtime-final-selection.json`.
+This takes157 to160 charged entries, with no cap increase or removed name.
+Update only exact V4 identity/two registry rows/web registry pin. The already
+reserved current-protocol/current-website/current-selection names remain for
+immutable actual receipts and selection; they are not placeholder executions.
+
+Freeze this source and execute fresh source-bound protocol/website evidence on
+that exact tree. Then copy verified actual receipts unchanged and update only
+its reviewed boundary manifest, selected state and attributed log, which are
+outside those capability input sets. Preserve earlier valid PS/privacy/extension
+receipts only after actual fingerprint equality. No original criteria/percentages
+or scope projection change after final capability freeze. Execute the existing
+boundary guard and its failure controls against that complete selected evidence.
+Use the normal guard and required checks; old successful job identities and a
+signed source archive cannot substitute for the new source/runtime execution.
+
+The existing reserved observed-web-artifact event remains available only for an
+actual new observed artifact and publication, not for reusing a filename to hide
+new source or claiming managed authorization. New isolated image/web/build-number
+components require the next protected-baseline finite successor. This sequencing
+adds no endpoint, capture permission, collection, payment, human acceptance,
+accuracy, legal clearance or original closure.
