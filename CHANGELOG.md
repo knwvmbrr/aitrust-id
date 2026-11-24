@@ -2,6 +2,14 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-23-tag-runtime-publication
+
+Recorded 2026-11-24T01:57:22.909566+00:00 · Contributor: Codex /root integration; /root/web_camo image/native source; /root/seo different final source review · change
+
+- **Changed.** Corrected CI image-block placement, closed web Git identity reads, integrated the exact image wheel metadata repair and recorded honest current source/evidence/accounting boundaries.
+- **Evidence.** Five affected CI workflow controls and the actual Git replacement fixture passed. Exact pinned wheel passes corrected primary metadata inspection. Three immutable actual hosted PS/privacy/extension receipts still match current source fingerprints; all202 original criteria and percentages remain intact. Different review binds19 exact files. [Change record](./runs/changes/2026-11-23-tag-runtime-publication.json).
+- **Not claimed.** This is a source repair checkpoint, not a new publication or full current qualification. Protocol/website and actual seven-case native proof remain pending; latest actual simulator run is6of7 with stable sources and owned cleanup.136complete66open; no original closure, new TestFlight, image inference, web managed authority, independent accuracy or legal clearance.
+
 ### 2026-11-23-tag-runtime-ci-integration
 
 Recorded 2026-11-24T00:06:49.465071+00:00 · Contributor: Codex /root/seo; Codex /root distinct registration review · change

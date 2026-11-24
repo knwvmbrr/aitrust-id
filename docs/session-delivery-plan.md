@@ -1,3 +1,22 @@
+## Current delivery repairs and next usable web release — 2026-11-24T01:34:53.929534+00:00
+
+Originals remain **136 complete /66 open**; target60 is unmet. The first PR154
+required checks failed at a CI step placement boundary and an obsolete six-case
+native proof. CI placement is corrected; a new seven-case app/Share proof must
+succeed against actual current sources before selection. Failed Simulator
+candidates and owned cleanup are retained; test observer failures do not prove a
+product fault. Current Xcode/SDK27.2 and installed iOS26.2 runtime are distinct.
+
+The exact image acquisition failure is now traced to valid vendored metadata in
+the pinned setuptools wheel. Reviewed e4e0da62 preserves primary metadata identity
+and all member/notice checks. Its actual wheel inspection passes; hosted native
+execution remains pending. The new conditional web permission component is
+committed separately as c2093cff; shared integration and actual authenticated
+managed distribution remain open. The current source release is already public.
+ROOT integrates; /root/web_camo owns the bounded native workflow;
+/root/share_debugger maps the next web composition; /root/seo reviews source and
+actual completion accounting. These are dated assignments, not permanent bots.
+
 ## Actual usable software and runtime qualification — 2026-11-24T00:13:52.217565+00:00
 
 Originals remain **136 complete /66 open**. IV now has a usable read-only signed

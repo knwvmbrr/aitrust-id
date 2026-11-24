@@ -211,3 +211,51 @@ worker assignments. Add only exact7 IV source/record names and2 qualification
 record names to finite V4; include README maintenance if absent. Refresh only
 V4 literal identity and its two registry source rows, then the web registry pin.
 No predecessor code, copied grant, scope criterion, taxonomy, endpoint or cap changes.
+
+## Required-check repairs after PR154
+
+The first current PR spec check failed because the two added CI steps sat inside
+the image block before its existing Gateway delimiter. Move only those two steps
+after Gateway, keeping every command/check/authority unchanged. Actual focused
+image workflow controls then pass5/5. This repairs placement rather than weakening
+the boundary test.
+
+The site check also correctly rejects the historical6-case native proof after
+adding a seventh public-source-export case. Preserve that old proof byte-for-byte.
+Execute the real current7-case workflow on exactly one newly owned temporary
+iPhone14Plus Simulator using only the already installed available iOS26.2 runtime
+and Xcode/SDK27.2, with existing phase limits and owned-device deletion/absence
+checks. The owner previously authorized virtual phone testing. No new runtime,
+SDK, account, signing credential or persistent guest is introduced. Record the
+actual runtime version; do not claim iOS27.2-runtime testing from SDK27.2. A fresh
+proof must include all7 exact test IDs, stable runner source inputs/assets
+(109 runner bindings, separate from the116-input component freeze),0failed/skipped
+and verified owned cleanup before updating the selected-proof path. Actual
+physical phone/VoiceOver and TestFlight release remain separate.
+
+## Closed Git identity before web artifact interpretation
+
+The distinct new-policy review reproduced a Git replacement-ref counter in the
+new component; the original web artifact helper used the same inherited Git
+invocation. Before accepting another current package, close BOTH existing helper
+Git calls through a fixed isolated Python exec shim: /usr/bin/git, no replacement
+objects, no system/global configuration, protocol.allow=never, no lazy fetch or
+credential prompt, and a fresh minimal environment preserving existing HOME only.
+Reuse the established source-policy-v2 semantics without changing its code, the
+shared supervisor, input/output/time/read/FD limits, source catalogue or authority.
+A real tiny owned Git fixture must preserve original selected tree despite its
+replacement ref and poisoned inherited GIT_DIR/config. No actual repository refs
+or environment are changed; fixture history is independent and never published.
+
+## Image acquisition repair and finite source records
+
+The exact setuptools wheel reached acquisition but failed the old global count
+of METADATA entries: its valid primary metadata coexists with twelve vendored
+metadata files. Integrate reviewed e4e0da62: require exactly one top-level primary
+dist-info/METADATA, retain its pinned digest and every nested path, notice, link
+and size check. The actual pinned wheel passes the corrected inspector; no model
+or runtime installation occurred in that inspection. Actual hosted acquisition
+and inference remain required. Name only its two authored run/event paths in V4
+(151/160 authored names including the mixed index), update the literal policy
+identity and two registry rows, and refresh the exact web registry pin. No copied
+grant, predecessor policy, cap, signature authority or sibling route changes.

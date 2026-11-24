@@ -45,6 +45,30 @@ def archive(fd,members,build=None):
 
 
 class WebArtifactTests(unittest.TestCase):
+    def test_committed_source_ignores_replace_refs_and_inherited_git_authority(self):
+        with tempfile.TemporaryDirectory() as d:
+            base=Path(d).resolve();root=base/'source';root.mkdir(mode=0o700)
+            env={'PATH':'/usr/bin:/bin','LC_ALL':'C','GIT_CONFIG_NOSYSTEM':'1',
+                 'GIT_CONFIG_SYSTEM':'/dev/null','GIT_CONFIG_GLOBAL':'/dev/null'}
+            if 'HOME' in os.environ:env['HOME']=os.environ['HOME']
+            def git(*args):
+                return subprocess.check_output(['/usr/bin/git','-c','core.hooksPath=/dev/null',
+                    '-c','commit.gpgsign=false','-C',str(root),*args],env=env,stderr=subprocess.DEVNULL).decode().strip()
+            git('init','-q');git('config','user.name','Synthetic source fixture');git('config','user.email','fixture@invalid')
+            target=root/'tools/artifact_process.py';target.parent.mkdir()
+            target.write_bytes((ROOT/'tools/artifact_process.py').read_bytes())
+            (root/'original.txt').write_bytes(b'original source\n');git('add','.');git('commit','-qm','original fixture')
+            original=git('rev-parse','HEAD');original_tree=git('rev-parse','HEAD^{tree}')
+            (root/'original.txt').unlink();(root/'replacement.txt').write_bytes(b'replacement source\n')
+            git('add','-A');git('commit','-qm','replacement fixture');replacement=git('rev-parse','HEAD')
+            git('replace',original,replacement)
+            # The counter itself is real: ordinary Git follows the replacement.
+            self.assertNotEqual(git('rev-parse',original+'^{tree}'),original_tree)
+            poisoned=base/'poison.git';subprocess.run(['/usr/bin/git','init','--bare','-q',str(poisoned)],env=env,check=True)
+            with patch.dict(os.environ,{'GIT_DIR':str(poisoned),'GIT_CONFIG_GLOBAL':str(base/'missing-config')},clear=False):
+                rows,tree=w.committed_source(root,original,w.Ledger())
+            self.assertEqual(tree,original_tree);self.assertIn('original.txt',rows);self.assertNotIn('replacement.txt',rows)
+
     def test_actual_license_canonical_roundtrip_and_payload_forgery(self):
         raw=(ROOT/'LICENSE').read_bytes()
         with tempfile.NamedTemporaryFile()as f:

@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-tag-runtime-publication",
+  "recorded_at": "2026-11-24T01:57:22.909566+00:00",
+  "author": "Codex /root integration; /root/web_camo image/native source; /root/seo different final source review",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "cd4ee7f4fb5fddd0634fb5a0cbaa249ab3e3c815",
+  "changed": "Corrected CI image-block placement, closed web Git identity reads, integrated the exact image wheel metadata repair and recorded honest current source/evidence/accounting boundaries.",
+  "proves": "Five affected CI workflow controls and the actual Git replacement fixture passed. Exact pinned wheel passes corrected primary metadata inspection. Three immutable actual hosted PS/privacy/extension receipts still match current source fingerprints; all202 original criteria and percentages remain intact. Different review binds19 exact files.",
+  "limits": "This is a source repair checkpoint, not a new publication or full current qualification. Protocol/website and actual seven-case native proof remain pending; latest actual simulator run is6of7 with stable sources and owned cleanup.136complete66open; no original closure, new TestFlight, image inference, web managed authority, independent accuracy or legal clearance.",
+  "scope_ids": [
+    "F-057",
+    "X-02",
+    "N-013"
+  ],
+  "files": {
+    ".github/workflows/ci.yml": "dbf57bc4fd19cb64edf601da75fe0c288196030b9822df56b1d85b3897f96913",
+    "docs/scope-progress.json": "831f4ac53323834954247f2f778cda782bb1d120912063a338a2977fb2b9d453",
+    "docs/scope-progress.md": "d3038f88184aaf6f25eb5ecf74101ffbb0fbd43251c4d8303aba6941ffcae700",
+    "docs/session-delivery-plan.md": "22f87bcba338cef55b1a7c951a039bca90b1d3f595a4e5280f2cee130f197230",
+    "docs/session-delivery.json": "66cf84efd5db5597990328e2d3e425f0d897167afb4d6537f1b4a4ba1fb79a3c",
+    "docs/tag-runtime-integration-plan.md": "0fd0324adb1072549d37f11285ead2895637151a4d9aa7050765cd5f3e7bcd54",
+    "eval/dependencies/source-snapshot-additions-v4.json": "03fdd4340ee0476e4446c600711d0c0015ec08cdb4b3f12d8bcaf3f545e486e2",
+    "eval/dependency-policy.json": "102927d58fa21e16349af2f20ec2f2162b8f0f9940f8bcfe671ca3c643ec211e",
+    "runs/2026-11-23-tag-runtime-current-extension.json": "0d6b6e7e445b92f716ccce5ad4ce0781091439a9f54a1a2713f2cc78636474d9",
+    "runs/2026-11-23-tag-runtime-current-pii-redacted.json": "af25ec1665fc5c2fc8292d904d2c6d99fc181a05d7c2cd1cef88ed4b49c82de3",
+    "runs/2026-11-23-tag-runtime-current-ps.json": "71af1ee1515b55b4ce5f16e189107df7dccdc2458954214611ee170133df9a1e",
+    "runs/2026-11-23-tag-runtime-publication.json": "fd04014b436511a28e975974c616fa7eccc9a99b310c899f349e51c6f81f9c9c",
+    "site/public/reference/public-scope.json": "ed812592541297334127e4f9c78bc1f98ec9a996d1ce7f708c83f077feae6e26",
+    "site/src/public-scope.json": "ed812592541297334127e4f9c78bc1f98ec9a996d1ce7f708c83f077feae6e26",
+    "site/src/scope-manifest.json": "769741051dd47357d7373cb55298f79c4c12d97b096398042a1f2b23c5a5ed36",
+    "state.json": "e8c06bab5d992c42179e8b9e3ce5075c7074e3ec93a5cf95ca388bc3ef62a2fe",
+    "tests/test_web_checker_artifact.py": "2a006f80dfc6290f4728f19d50412f119da21370b420ef20346892a826fc267e",
+    "tools/source_release_policy_v4.py": "da0e02c92471dde90d4232b91a25590359d59e92f45e99a379e33509ad2f642f",
+    "tools/web_checker_artifact.py": "2f943118b39a0905809f1dd84207e6b3d5da04a54b6674b987af08dd09a7ad04"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-tag-runtime-current-extension.json",
+      "sha256": "0d6b6e7e445b92f716ccce5ad4ce0781091439a9f54a1a2713f2cc78636474d9"
+    },
+    {
+      "path": "runs/2026-11-23-tag-runtime-current-pii-redacted.json",
+      "sha256": "af25ec1665fc5c2fc8292d904d2c6d99fc181a05d7c2cd1cef88ed4b49c82de3"
+    },
+    {
+      "path": "runs/2026-11-23-tag-runtime-current-ps.json",
+      "sha256": "71af1ee1515b55b4ce5f16e189107df7dccdc2458954214611ee170133df9a1e"
+    },
+    {
+      "path": "runs/2026-11-23-tag-runtime-publication.json",
+      "sha256": "fd04014b436511a28e975974c616fa7eccc9a99b310c899f349e51c6f81f9c9c"
+    }
+  ],
+  "checks": [],
+  "different_final_source_review": {
+    "sha256": "e4a39500117a63fdab5de2af3417ccabaf8e4ea66c5e9494d62ec15e2baf0d13",
+    "record": {
+      "accounting": {
+        "all_original_acceptance_percent_milestone_completion_queue_unchanged": true,
+        "complete": 136,
+        "historical_tasks_exact": true,
+        "open": 66,
+        "original_records": 202,
+        "scoped_closed": 31,
+        "scoped_records": 32
+      },
+      "captured_at": "2026-11-24T01:56:17.878671+00:00",
+      "claims": {
+        "accuracy": false,
+        "full_current_qualification": false,
+        "image_native_inference": false,
+        "managed_web_authorization": false,
+        "new_original_closure": false,
+        "new_publication": false
+      },
+      "conclusions": [
+        "CI ordering repair preserves every command and existingimageblock delimiter; H closedGit patch separately reviewed with one actualtiny replace fixture, now onlyregistry pin refresh.",
+        "Exact integrated imagegenerator/test/plan matches separatelyreviewed30a/3bd/051; oldfailures retained. No new inference/native success is claimed.",
+        "Three raw663 receipts exactly match own once-downloaded delivery artifact JSON and independently assessCURRENT afterthis19filefreeze:PS7/privacy6/extension14. No repeated profile execution and no failedworkflow promotion tofivepass.",
+        "Checkpoint filename publication explicitlypassfalse/sourcecheckpoint only; protocol/website/native7/currentcapacity remainpending. Statehistorical3556/Octoberpass clarified ratherthan promoted.",
+        "Board preserves32tasks/31closed and datedhistory; currentassignments represent boundedactualworkers. Scope3 evidence/attribution additions preserve all202criteria/percent/milestones/completion/queue.",
+        "V4 twoimage recordnames only151/160; no copiedgrant/origin/metadata transition/cap change. Current web route remainsblocked and standalonecomponent doesnotadmit it."
+      ],
+      "current_receipts": {
+        "PII_REDACTED": {
+          "actual_current_assessment": {
+            "capability": "PII_REDACTED",
+            "failures": [],
+            "independent_accuracy_evidence": false,
+            "pass": true,
+            "release_approved": false,
+            "revalidation_required": false
+          },
+          "commands": 6,
+          "path": "runs/2026-11-23-tag-runtime-current-pii-redacted.json",
+          "sha256": "af25ec1665fc5c2fc8292d904d2c6d99fc181a05d7c2cd1cef88ed4b49c82de3"
+        },
+        "PS": {
+          "actual_current_assessment": {
+            "capability": "PS",
+            "failures": [],
+            "independent_accuracy_evidence": false,
+            "pass": true,
+            "release_approved": false,
+            "revalidation_required": false
+          },
+          "commands": 7,
+          "path": "runs/2026-11-23-tag-runtime-current-ps.json",
+          "sha256": "71af1ee1515b55b4ce5f16e189107df7dccdc2458954214611ee170133df9a1e"
+        },
+        "extension": {
+          "actual_current_assessment": {
+            "capability": "extension",
+            "failures": [],
+            "independent_accuracy_evidence": false,
+            "pass": true,
+            "release_approved": false,
+            "revalidation_required": false
+          },
+          "commands": 14,
+          "path": "runs/2026-11-23-tag-runtime-current-extension.json",
+          "sha256": "0d6b6e7e445b92f716ccce5ad4ce0781091439a9f54a1a2713f2cc78636474d9"
+        }
+      },
+      "limits": [
+        "No tests/build/native/SDK/download repeated; only source/hash/JSON andthreeexisting source-fingerprint assessments.",
+        "Final rawUIproof andpublicsafe projection, actualfull7/source109+ownedcleanup, freshprotocol/website and changedsourcecapacity remain future.",
+        "Reviewer authors separate build-number component not integratedhere; cannot substitute its sourcefixture controls for native acceptance."
+      ],
+      "policy": {
+        "13siblingcomponents_exact": true,
+        "V4_core_only_policySHA_literal_changed": true,
+        "cap": 160,
+        "copied_origins_transitions_exact": true,
+        "e72_new_permission_or_cap": false,
+        "finite_V4_only2_image_record_names": [
+          "runs/2026-11-23-image-wheel-primary-metadata.json",
+          "runs/changes/2026-11-23-image-wheel-primary-metadata.json"
+        ],
+        "mixed_index_charge": 1,
+        "project_rows": 150,
+        "routes_exact": true,
+        "sourcecomponent_only2_binding_rows_changed": [
+          "eval/dependencies/source-snapshot-additions-v4.json",
+          "tools/source_release_policy_v4.py"
+        ],
+        "total_charged_names": 151
+      },
+      "profile": "root-repair-checkpoint-final-distinct-review/v1",
+      "result": "CLEAR_SOURCE_CHECKPOINT_NOT_FULL_QUALIFICATION",
+      "reviewer": "seo",
+      "source19": {
+        ".github/workflows/ci.yml": {
+          "bytes": 27592,
+          "sha256": "dbf57bc4fd19cb64edf601da75fe0c288196030b9822df56b1d85b3897f96913"
+        },
+        "docs/scope-progress.json": {
+          "bytes": 787976,
+          "sha256": "831f4ac53323834954247f2f778cda782bb1d120912063a338a2977fb2b9d453"
+        },
+        "docs/scope-progress.md": {
+          "bytes": 370677,
+          "sha256": "d3038f88184aaf6f25eb5ecf74101ffbb0fbd43251c4d8303aba6941ffcae700"
+        },
+        "docs/session-delivery-plan.md": {
+          "bytes": 67525,
+          "sha256": "22f87bcba338cef55b1a7c951a039bca90b1d3f595a4e5280f2cee130f197230"
+        },
+        "docs/session-delivery.json": {
+          "bytes": 530170,
+          "sha256": "66cf84efd5db5597990328e2d3e425f0d897167afb4d6537f1b4a4ba1fb79a3c"
+        },
+        "docs/tag-runtime-integration-plan.md": {
+          "bytes": 16817,
+          "sha256": "0fd0324adb1072549d37f11285ead2895637151a4d9aa7050765cd5f3e7bcd54"
+        },
+        "eval/dependencies/source-snapshot-additions-v4.json": {
+          "bytes": 48650,
+          "sha256": "03fdd4340ee0476e4446c600711d0c0015ec08cdb4b3f12d8bcaf3f545e486e2"
+        },
+        "eval/dependency-policy.json": {
+          "bytes": 34707,
+          "sha256": "102927d58fa21e16349af2f20ec2f2162b8f0f9940f8bcfe671ca3c643ec211e"
+        },
+        "runs/2026-11-23-tag-runtime-current-extension.json": {
+          "bytes": 17333,
+          "sha256": "0d6b6e7e445b92f716ccce5ad4ce0781091439a9f54a1a2713f2cc78636474d9"
+        },
+        "runs/2026-11-23-tag-runtime-current-pii-redacted.json": {
+          "bytes": 13249,
+          "sha256": "af25ec1665fc5c2fc8292d904d2c6d99fc181a05d7c2cd1cef88ed4b49c82de3"
+        },
+        "runs/2026-11-23-tag-runtime-current-ps.json": {
+          "bytes": 11210,
+          "sha256": "71af1ee1515b55b4ce5f16e189107df7dccdc2458954214611ee170133df9a1e"
+        },
+        "runs/2026-11-23-tag-runtime-publication.json": {
+          "bytes": 6567,
+          "sha256": "fd04014b436511a28e975974c616fa7eccc9a99b310c899f349e51c6f81f9c9c"
+        },
+        "site/public/reference/public-scope.json": {
+          "bytes": 749698,
+          "sha256": "ed812592541297334127e4f9c78bc1f98ec9a996d1ce7f708c83f077feae6e26"
+        },
+        "site/src/public-scope.json": {
+          "bytes": 749698,
+          "sha256": "ed812592541297334127e4f9c78bc1f98ec9a996d1ce7f708c83f077feae6e26"
+        },
+        "site/src/scope-manifest.json": {
+          "bytes": 2724,
+          "sha256": "769741051dd47357d7373cb55298f79c4c12d97b096398042a1f2b23c5a5ed36"
+        },
+        "state.json": {
+          "bytes": 281223,
+          "sha256": "e8c06bab5d992c42179e8b9e3ce5075c7074e3ec93a5cf95ca388bc3ef62a2fe"
+        },
+        "tests/test_web_checker_artifact.py": {
+          "bytes": 24262,
+          "sha256": "2a006f80dfc6290f4728f19d50412f119da21370b420ef20346892a826fc267e"
+        },
+        "tools/source_release_policy_v4.py": {
+          "bytes": 24893,
+          "sha256": "da0e02c92471dde90d4232b91a25590359d59e92f45e99a379e33509ad2f642f"
+        },
+        "tools/web_checker_artifact.py": {
+          "bytes": 126190,
+          "sha256": "2f943118b39a0905809f1dd84207e6b3d5da04a54b6674b987af08dd09a7ad04"
+        }
+      },
+      "source19_stable_during_review": true,
+      "source_base": "cd4ee7f4fb5fddd0634fb5a0cbaa249ab3e3c815"
+    }
+  }
+}
