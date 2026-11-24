@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-23-image-wheel-primary-metadata",
+  "recorded_at": "2026-11-24T00:43:07.887308+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "41669328e10c7f4a268559447f2f6dde50110e2d",
+  "changed": "Primary locked wheel metadata is only the unique archive-root dist-info/METADATA; every vendor metadata/member/notice still validated/carried. No numeric/model/lock/resource/workflow changes.",
+  "proves": "Exact retained876263B pinned wheel reproduces original13metadata failure; corrected unique primary selection passes and all17 audited notices remain exact. Fresh99 source controls33/34/5/27 pass after restoring sparse eval input; different reviewer checked actual pinned bytes and three inert parser cases.",
+  "limits": "All original hosted failures remain. No changed-source dispatch, install, extraction, native model/SDK execution, accuracy, FA/PA or full-original closure. Root owns source admission/registration and any future native run.",
+  "scope_ids": [
+    "T-FA"
+  ],
+  "files": {
+    "tools/visual_score_qualification.py": "30a473f5dc1886559befd78fdbb48eb3a06c365ff12d885b0c9adeff8581aa48",
+    "tests/test_visual_score_qualification.py": "3bdc5dacbd4a2d48ebc9717db12db49373e3f1bbfc795671500e0c7f85c35b6a",
+    "docs/offline-image-score-qualification-plan.md": "05185ede59063c5f09e8f5a7489a3f1c1269974ce128873e72c86dd1d10eef6b",
+    "runs/2026-11-23-image-wheel-primary-metadata.json": "09090591bd8d9abb95d176a38de42a134ee424e8830db6ac67e907d89ed34c2e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-image-wheel-primary-metadata.json",
+      "sha256": "09090591bd8d9abb95d176a38de42a134ee424e8830db6ac67e907d89ed34c2e"
+    }
+  ],
+  "checks": []
+}

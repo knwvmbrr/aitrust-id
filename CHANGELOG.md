@@ -11888,3 +11888,11 @@ Recorded 2026-11-24T00:21:32.987283+00:00 · Contributor: Codex /root integratio
 - **Changed.** Made IV reviewer-attestation verification discoverable and CI-gated, integrated actual whole-web/MT/app resource qualification, refreshed exact finite source bindings and synchronized attributed scope/state/worker records.
 - **Evidence.** Actual416 whole web creation and inspection pass428 files with complete14runtime companions and different streamed payload review. Actual Chromium/WebKit MT workflows pass35source/27served identities. Actual980 signing-disabled app/Share compile passes with60resource identities. IV has a usable local verifier, distinct source review and actual16 controls. Additive source registration preserves13siblings and all202 original acceptance contracts. [Change record](./runs/changes/2026-11-23-tag-runtime-qualification.json).
 - **Not claimed.** 136originals complete66open; target60 unmet and no full original closes. These exact selected-source engineering observations are not fresh full current protected capability reports, current TestFlight upload, physical/human acceptance, independent accuracy, legal clearance or web-route authorization. Actual image416source gate succeeds but dependency acquisition fails and native inference is skipped; cause remains under diagnosis.
+
+### 2026-11-23-image-wheel-primary-metadata
+
+Recorded 2026-11-24T00:43:07.887308+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Primary locked wheel metadata is only the unique archive-root dist-info/METADATA; every vendor metadata/member/notice still validated/carried. No numeric/model/lock/resource/workflow changes.
+- **Evidence.** Exact retained876263B pinned wheel reproduces original13metadata failure; corrected unique primary selection passes and all17 audited notices remain exact. Fresh99 source controls33/34/5/27 pass after restoring sparse eval input; different reviewer checked actual pinned bytes and three inert parser cases. [Change record](./runs/changes/2026-11-23-image-wheel-primary-metadata.json).
+- **Not claimed.** All original hosted failures remain. No changed-source dispatch, install, extraction, native model/SDK execution, accuracy, FA/PA or full-original closure. Root owns source admission/registration and any future native run.
