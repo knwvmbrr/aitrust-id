@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-ios-size-matrix-control-reach",
+  "recorded_at": "2026-11-24T06:01:22.178784+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "203c37f94af7e42ace01d2d9b7bd13c7cc4aa626",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "changed": "Increase only the separate layout observer\u2019s optional breathing allowance from8 to16 points after retained check-control motion observations, with its fixture hash and plan updated.",
+  "proves": "One affected derivation unittest and five captured scalar-expression cases pass; six/114 bindings remain stable. Different source review reconstructs entire prior Swift by one allowance literal and entire prior runner by one fixture hash. Both real failed matrix attempts remain retained with owned cleanup verified.",
+  "limits": "Source-only experiment; requested movement is not assumed actual UIKit displacement or universal threshold. Full containment, hittability, eight-action and all original time/resource/source limits remain; third native/matrix result pending. No old/new result composition, physical/human accessibility, seven-flow replacement, accuracy, tag release, admission or original closure.",
+  "files": {
+    "tools/ios_simulator_matrix.py": "8774c5025b15ce3d0a58dae80bc32db5beed750866b717d468e21887daa5083b",
+    "mobile/ios/Tests/SizeLayoutFlows.swift": "3b6e3ca34104e8655b7fffdcbf3af2c081b1a4740fec4d3b71604f4e81e91e37",
+    "docs/ios-simulator-matrix-plan.md": "77ff38e298655ea50f4025858af2b0777b2d1c6d586557eaabd72d9526ddddff",
+    "runs/2026-11-24-ios-size-matrix-control-reach.json": "cc810fb133d97c0b5f821265c3ca5dedb809a3de759e1d90c8534ef2e77d9e4d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-size-matrix-control-reach.json",
+      "sha256": "cc810fb133d97c0b5f821265c3ca5dedb809a3de759e1d90c8534ef2e77d9e4d"
+    }
+  ],
+  "checks": [],
+  "different_review": {
+    "reviewer": "Codex /root",
+    "status": "CLEAR for exact frozen source; changed native attempt separately authorized after normal commit",
+    "sha256": "c49e1e99951c281d867a46a96821b5c66d36566d0ff19c89084695d4aba781cc",
+    "raw_utf8": "{\n  \"author\": \"/root/web_camo\",\n  \"author_control_sha256\": \"f2370c0688e3db46ba3a5712dee5baaf464e0dd1f4b0aae73f4ef62fb8640e42\",\n  \"author_controls\": {\n    \"derivation_tests\": 1,\n    \"qualification\": \"Source arithmetic/derivation only, no Swift or gesture runtime proof.\",\n    \"scalar_cases\": 5\n  },\n  \"captured_at\": \"2026-11-24T06:00:09.298313+00:00\",\n  \"dependencies_current_exact\": 114,\n  \"entire_prior_core_restored_by_fixture_sha_only\": true,\n  \"entire_prior_fixture_restored_by_one_breathing_literal\": true,\n  \"freeze_sha256\": \"d0934c55ac5ca4d5b03a9c41e086032ae248170a4bc548c62c1a28cbd2773c2b\",\n  \"full_containment_hittability_slack_and_action_time_limits_unchanged\": true,\n  \"historical_private_metadata_correction\": {\n    \"assembled_at\": \"2026-11-24T05:58:21.449602+00:00\",\n    \"correction\": \"Private harness copied a literal baseSHA by prefix substitution and left old suffix. Actual git show controls used203c37f9 correctly; fix ONLY the metadata source_base to actual git rev-parse203c37f9. No test/source/runtime rerun or change to observations. Original raw proof/helper preserved.\",\n    \"original_raw_proof_sha256\": \"106795d86b1ddfeca47626ee704cd91d94cb05bde76f10ebe4f51015e6cc4723\",\n    \"original_wrong_source_base\": \"203c37f9bc3e118c77cac94b55354cfe651d0082\"\n  },\n  \"limits\": \"Observed check-ps near-edge stall supports this bounded observer experiment, not a proven SDK threshold or product defect. Normal source commit, separate launch and complete actual matrix still required; no original closure.\",\n  \"native_or_tests_executed_by_root\": false,\n  \"native_retry_authorized_by_record\": false,\n  \"pass\": true,\n  \"prior_actual_failed_matrices_preserved\": 2,\n  \"profile\": \"root-ios-control-reach-frozen-source-review/v1\",\n  \"reviewer\": \"/root\",\n  \"source6\": {\n    \"docs/ios-simulator-matrix-plan.md\": \"77ff38e298655ea50f4025858af2b0777b2d1c6d586557eaabd72d9526ddddff\",\n    \"docs/ios-simulator-matrix.md\": \"c789b6c3cf14fdb0b5a3e0dec29c00e65e690f52f554abaa8a4d498c0c5b3013\",\n    \"mobile/ios/Tests/SizeLayoutFlows.swift\": \"3b6e3ca34104e8655b7fffdcbf3af2c081b1a4740fec4d3b71604f4e81e91e37\",\n    \"scripts/verify-ios-size-matrix.py\": \"7d697baabfbf88af2c08c30be2220b3bbfbe02df75ef479baba69b0aa6141ec7\",\n    \"tests/test_ios_simulator_matrix.py\": \"3c5a5141e82cb99c0ddce0eda714b28fe703a50bfbc42b6a07dce744665bc9ed\",\n    \"tools/ios_simulator_matrix.py\": \"8774c5025b15ce3d0a58dae80bc32db5beed750866b717d468e21887daa5083b\"\n  },\n  \"source_base\": \"203c37f94af7e42ace01d2d9b7bd13c7cc4aa626\"\n}\n"
+  }
+}

@@ -2,6 +2,42 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-ios-size-matrix-frame-diagnostics
+
+Recorded 2026-11-24T13:30:16.499971+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Add bounded value-only numeric diagnostics at the existing layout-geometry refusal while retaining its exact boolean and all actions, then update only the fixture hash and plan.
+- **Evidence.** One affected derivation unittest passes; complete prior Swift/core reconstruction and fixed finite-field structure checks pass with six/114 bindings stable. Different source review confirms no new query, wait, gesture or acceptance change; all21 actual candidate3 evidence files remain unchanged. [Change record](./runs/changes/2026-11-24-ios-size-matrix-frame-diagnostics.json).
+- **Not claimed.** Source-only diagnostics, not actual refused-condition evidence or a supported-cause fix. Native formatter/Swift execution and complete four-size matrix remain unqualified; old821b/c61 baseline does not qualify future70e/build2. No old/new result composition, physical/human accessibility, seven-flow replacement, accuracy, release, admission or original closure.
+
+
+### 2026-11-24-ios-size-matrix-control-reach
+
+Recorded 2026-11-24T06:01:22.178784+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Increase only the separate layout observer’s optional breathing allowance from8 to16 points after retained check-control motion observations, with its fixture hash and plan updated.
+- **Evidence.** One affected derivation unittest and five captured scalar-expression cases pass; six/114 bindings remain stable. Different source review reconstructs entire prior Swift by one allowance literal and entire prior runner by one fixture hash. Both real failed matrix attempts remain retained with owned cleanup verified. [Change record](./runs/changes/2026-11-24-ios-size-matrix-control-reach.json).
+- **Not claimed.** Source-only experiment; requested movement is not assumed actual UIKit displacement or universal threshold. Full containment, hittability, eight-action and all original time/resource/source limits remain; third native/matrix result pending. No old/new result composition, physical/human accessibility, seven-flow replacement, accuracy, tag release, admission or original closure.
+
+
+### 2026-11-24-ios-size-matrix-navigation
+
+Recorded 2026-11-24T05:46:00.855166+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Replace the separate layout fixture’s full-swipe reveal with edge-gap/opposite-slack-bounded interior drags and fixed numeric diagnostics, preserving full containment, hittability and all existing runtime limits.
+- **Evidence.** One affected derivation unittest and four captured scalar-expression cases pass with6/114 source bindings stable; independent source reviews reconstruct the full old fixture outside reveal/roles and the full old runner outside its fixture hash. Actual first small-screen attempt remains failed at largest input reveal, with both standard configurations passed and owned cleanup verified. [Change record](./runs/changes/2026-11-24-ios-size-matrix-navigation.json).
+- **Not claimed.** Source-only repair, not changed Swift/native qualification. Original failed raw outputs, source-only28 proof and seven-flow proof remain separate; no old/new pass composition, physical phone, human accessibility, accuracy, tag release, route admission or original closure.
+
+
+### 2026-11-23-ios-size-matrix-source
+
+Recorded 2026-11-24T05:12:29.690848+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Add a separate four-profile three-configuration native layout fixture and owned serial runner, leaving the application, fixed14Plus seven-flow runner, prior proof and shared policy unchanged.
+- **Evidence.** Current28 focused source/process/metadata controls pass with6/114 before-after bindings stable. Actual owned stdlib children confirm late finalization and invalid/shared-clock admission refuse without signalling reaped IDs or losing returned ownership facts; original counters and24/26 proofs are preserved. Earlier actual producer observation remains separately identified:46 members, one pinned layout-fixture substitution and45 unchanged members. No SDK or Simulator ran. [Change record](./runs/changes/2026-11-23-ios-size-matrix-source.json).
+- **Not claimed.** Source-only candidate: no Swift compile, Simulator create/boot/layout run, screenshot visual acceptance, new signing credential, TestFlight, physical phone, human VoiceOver, independent accuracy, route admission, policy change or original closure. Existing fullseven proof stays separate; targeted layouts cannot become seven-flow coverage.
+
+
 ### 2026-11-24-source-snapshot-publication
 
 Recorded 2026-11-24T05:47:48.594645+00:00 · Contributor: Codex /root; Codex /root/seo distinct publication review · change
