@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-ios-size-matrix-navigation
+
+Recorded 2026-11-24T05:46:00.855166+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Replace the separate layout fixture’s full-swipe reveal with edge-gap/opposite-slack-bounded interior drags and fixed numeric diagnostics, preserving full containment, hittability and all existing runtime limits.
+- **Evidence.** One affected derivation unittest and four captured scalar-expression cases pass with6/114 source bindings stable; independent source reviews reconstruct the full old fixture outside reveal/roles and the full old runner outside its fixture hash. Actual first small-screen attempt remains failed at largest input reveal, with both standard configurations passed and owned cleanup verified. [Change record](./runs/changes/2026-11-24-ios-size-matrix-navigation.json).
+- **Not claimed.** Source-only repair, not changed Swift/native qualification. Original failed raw outputs, source-only28 proof and seven-flow proof remain separate; no old/new pass composition, physical phone, human accessibility, accuracy, tag release, route admission or original closure.
+
+
 ### 2026-11-23-ios-size-matrix-source
 
 Recorded 2026-11-24T05:12:29.690848+00:00 · Contributor: Codex /root/web_camo · change

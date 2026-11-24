@@ -22,16 +22,42 @@ final class SizeLayoutFlows: XCTestCase {
         return finite(frame) && finite(scroll.frame) && app.frame.contains(frame)
             && scroll.frame.contains(frame) && element.isHittable
     }
-    private func reveal(_ element: XCUIElement, app: XCUIApplication, scroll: XCUIElement) {
+    private enum RevealRole: Int { case control = 0, input = 1, title = 2 }
+    private func reveal(_ element: XCUIElement, app: XCUIApplication, scroll: XCUIElement, role: RevealRole = .control) {
         XCTAssertTrue(element.waitForExistence(timeout: 10))
-        for _ in 0..<8 {
-            if visible(element, app: app, scroll: scroll) { return }
-            let frame = element.frame
-            XCTAssertTrue(finite(frame) && finite(scroll.frame))
-            if frame.midY < scroll.frame.midY { scroll.swipeDown() }
-            else { scroll.swipeUp() }
+        func refuse(_ reason: Int, _ attempt: Int) {
+            print("LAYOUT_REVEAL role=\(role.rawValue) attempt=\(attempt) reason=\(reason)")
+            XCTFail("Unsupported control geometry or reachability")
         }
-        XCTAssertTrue(visible(element, app: app, scroll: scroll), "Control not fully reachable")
+        for attempt in 0..<8 {
+            if visible(element, app: app, scroll: scroll) { return }
+            let appFrame = app.frame, scrollFrame = scroll.frame, frame = element.frame
+            let viewport = scrollFrame.intersection(appFrame)
+            guard finite(appFrame), finite(scrollFrame), finite(frame), finite(viewport),
+                  viewport.width > 32, viewport.height > 32,
+                  frame.minX >= viewport.minX, frame.maxX <= viewport.maxX,
+                  frame.height <= viewport.height else { refuse(1, attempt); return }
+            // A contained but unhittable target is an unknown interruption, not a scroll instruction.
+            guard !viewport.contains(frame) else { refuse(2, attempt); return }
+            let upward = frame.maxY > viewport.maxY
+            let gap = upward ? frame.maxY - viewport.maxY : viewport.minY - frame.minY
+            let slack = upward ? frame.minY - viewport.minY : viewport.maxY - frame.maxY
+            guard gap.isFinite, slack.isFinite, gap > 0, slack >= gap else { refuse(3, attempt); return }
+            let desired = gap + min(8, max(0, slack - gap))
+            let distance = min(desired, slack, 320, viewport.height / 2)
+            guard distance.isFinite, distance >= 1 else { refuse(4, attempt); return }
+            let origin = CGPoint(x: viewport.midX, y: viewport.minY + viewport.height * (upward ? 0.7 : 0.3))
+            let destination = CGPoint(x: origin.x, y: origin.y + (upward ? -distance : distance))
+            let interior = viewport.insetBy(dx: 16, dy: 16)
+            guard finite(interior), interior.contains(origin), interior.contains(destination),
+                  appFrame.contains(origin), appFrame.contains(destination) else { refuse(5, attempt); return }
+            guard app.frame == appFrame, scroll.frame == scrollFrame, element.frame == frame else { refuse(6, attempt); return }
+            print("LAYOUT_REVEAL role=\(role.rawValue) attempt=\(attempt) reason=0 direction=\(upward ? 1 : 2) y=\(frame.minY) h=\(frame.height) vy=\(viewport.minY) vh=\(viewport.height) gap=\(gap) slack=\(slack) distance=\(distance)")
+            let start = app.coordinate(withNormalizedOffset: .zero).withOffset(CGVector(dx: origin.x - appFrame.minX, dy: origin.y - appFrame.minY))
+            let end = app.coordinate(withNormalizedOffset: .zero).withOffset(CGVector(dx: destination.x - appFrame.minX, dy: destination.y - appFrame.minY))
+            start.press(forDuration: 0.05, thenDragTo: end, withVelocity: .slow, thenHoldForDuration: 0.1)
+        }
+        if !visible(element, app: app, scroll: scroll) { refuse(7, 8) }
     }
     private func readableControl(_ element: XCUIElement, app: XCUIApplication, enabledAction: Bool = true) {
         XCTAssertTrue(element.exists)
@@ -46,7 +72,7 @@ final class SizeLayoutFlows: XCTestCase {
         }
     }
     private func enter(_ text: String, input: XCUIElement, app: XCUIApplication, scroll: XCUIElement) {
-        reveal(input, app: app, scroll: scroll)
+        reveal(input, app: app, scroll: scroll, role: .input)
         var previous = CGRect.zero
         let ready = XCTNSPredicateExpectation(predicate: NSPredicate { _, _ in
             let frame = input.frame
@@ -95,10 +121,10 @@ final class SizeLayoutFlows: XCTestCase {
         automatic.tap()
         XCTAssertEqual(automatic.value as? String, "On")
         let title = app.staticTexts["PS · Check selected text"]
-        reveal(title, app: app, scroll: scroll)
+        reveal(title, app: app, scroll: scroll, role: .title)
         let titleHeight = title.frame.height
         let input = app.textViews["selected-text"]
-        reveal(input, app: app, scroll: scroll)
+        reveal(input, app: app, scroll: scroll, role: .input)
         let frame = input.frame
         XCTAssertTrue(finite(frame) && frame.width > 16 && frame.height > 16)
         enter("An ordinary answer.", input: input, app: app, scroll: scroll)
