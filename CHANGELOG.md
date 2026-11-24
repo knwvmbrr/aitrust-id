@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-ios-control-snapshot-efficiency
+
+Recorded 2026-11-24T16:55:24.542728+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Read each layout control through one bounded immutable snapshot while retaining live existence, hittability and exact label-cardinality checks, with all containment assertions and native limits preserved.
+- **Evidence.** One affected derivation control and full prior-fixture/core reconstruction pass with eight/114 bindings stable. Installed public headers confirm the API; every other method, action, product and seven-suite source remains exact. [Change record](./runs/changes/2026-11-24-ios-control-snapshot-efficiency.json).
+- **Not claimed.** Source-only efficiency candidate, not measured runtime improvement or native acceptance. Prior largest case exceeded120seconds and remains failed; seven and four-size acceptance remain open. No cap increase, old/new pass composition, physical/human accessibility, build2, accuracy, admission or original closure.
+
+
 ### 2026-11-24-ios-clear-completion-witness
 
 Recorded 2026-11-24T16:25:43.608998+00:00 · Contributor: Codex /root/web_camo · change

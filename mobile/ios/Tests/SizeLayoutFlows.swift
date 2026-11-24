@@ -152,13 +152,42 @@ final class SizeLayoutFlows: XCTestCase {
     private func readableControl(_ element: XCUIElement, app: XCUIApplication, enabledAction: Bool = true) {
         XCTAssertTrue(element.exists)
         if enabledAction { XCTAssertTrue(element.isHittable) }
-        XCTAssertTrue(finite(element.frame) && app.frame.contains(element.frame))
-        XCTAssertGreaterThanOrEqual(element.frame.height, 44)
+        let expectedKind = element.elementType, expectedIdentifier = element.identifier
+        let labelCount = element.staticTexts.count
+        guard labelCount <= 4 else { XCTFail("Unsupported control label count"); return }
+        let appFrame = app.frame
+        guard let snapshot = try? element.snapshot(), snapshot.elementType == expectedKind,
+              snapshot.identifier == expectedIdentifier else {
+            XCTFail("Unavailable control snapshot identity"); return
+        }
+        let controlFrame = snapshot.frame
+        XCTAssertTrue(finite(controlFrame) && appFrame.contains(controlFrame))
+        XCTAssertGreaterThanOrEqual(controlFrame.height, 44)
+        // Snapshot traversal is bounded; SDK-internal allocation is not claimed.
+        // Live cardinality prevents a partial tree silently dropping labels.
+        var labelFrames: [CGRect] = []
+        var nodes = 0
+        var complete = true
+        func visit(_ node: any XCUIElementSnapshot, depth: Int) {
+            guard complete else { return }
+            guard depth <= 16, nodes < 64 else { complete = false; return }
+            nodes += 1
+            if depth > 0 && node.elementType == .staticText {
+                guard labelFrames.count < 4 else { complete = false; return }
+                labelFrames.append(node.frame)
+            }
+            for child in node.children {
+                visit(child, depth: depth + 1)
+                if !complete { return }
+            }
+        }
+        visit(snapshot, depth: 0)
+        guard complete, labelFrames.count == labelCount else {
+            XCTFail("Incomplete control label snapshot"); return
+        }
         // Geometry alone is not proof of full-glyph readability; PNG review is required.
-        let labels = element.staticTexts
-        XCTAssertLessThanOrEqual(labels.count, 4)
-        for label in labels.allElementsBoundByAccessibilityElement {
-            XCTAssertTrue(finite(label.frame) && element.frame.contains(label.frame), "Control label clipped")
+        for frame in labelFrames {
+            XCTAssertTrue(finite(frame) && controlFrame.contains(frame), "Control label clipped")
         }
     }
     private func enter(_ text: String, input: XCUIElement, app: XCUIApplication, scroll: XCUIElement) {
