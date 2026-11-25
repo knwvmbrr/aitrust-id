@@ -1,0 +1,146 @@
+{
+  "actual_distinct_review": {
+    "raw_utf8": "{\n  \"reviewed_at\": \"2026-11-25T04:13:22.674885+00:00\",\n  \"reviewer\": \"Codex /root\",\n  \"source_base\": \"ad0eb41b2db7a49f75d51f843f65b22dc30fff80\",\n  \"source\": {\n    \"eval/dependencies/source-snapshot-additions-v5.json\": {\n      \"bytes\": 62972,\n      \"sha256\": \"f87bcb6d3927fc27f54cc236d114d8c5669996911b858067735bae0b3a57067c\"\n    },\n    \"eval/dependency-policy.json\": {\n      \"bytes\": 35104,\n      \"sha256\": \"b2384d0d829edaf35e358e5927c147b7d36a6278c588d51b64f92e2f4ba4ba33\"\n    },\n    \"mobile/ios/Source/CheckerController.swift\": {\n      \"bytes\": 30785,\n      \"sha256\": \"07ce75bcaca1685b797444da9adc93c1cc8577e16ca6cacb251b0449228ece6d\"\n    },\n    \"mobile/ios/Tests/UIFlows.swift\": {\n      \"bytes\": 30324,\n      \"sha256\": \"16b0ac936caed61cd2d26ba0bc45c03714992488196b0af8175301a6946ed388\"\n    },\n    \"tests/test_source_release_policy_v5.py\": {\n      \"bytes\": 14983,\n      \"sha256\": \"e5172b0593b7837ab46e360067bbec10dab545e428f05c4d0aad69febc80260c\"\n    },\n    \"tools/ios_simulator_matrix.py\": {\n      \"bytes\": 29266,\n      \"sha256\": \"45522b3a61d19410a8ac38b5d8aa60053bda1c3745dc1d5c7290a404ae3061fa\"\n    },\n    \"tools/source_release_policy_v5.py\": {\n      \"bytes\": 32927,\n      \"sha256\": \"068f7426386c20155c6e74934e19792bed4caeb01f441c146e7e630f81e330ec\"\n    }\n  },\n  \"pass\": true,\n  \"scope\": [\n    \"Read complete seven-file prospective diff; all frozen current bytes match. Independently compared all109 source files for each unchanged historical7-case record.\",\n    \"Exact current controller/UI suite equal protected898; matrix changes only accepted suite hash literal. Full Clear/Sources improvements preserved on other commits/worktrees, excluded only from staged source-only candidate.\",\n    \"Only2 new literal record paths added to V5, total132; all other table fields,159legacy,95anchors,max160 and foundations unchanged. Existing V5 module/table registrybindings only; e72 unaffected.\",\n    \"Author actual focused controls/runtime preparation/evidenceguard retained; no ROOT native replay or new Apple/phone claim.\"\n  ],\n  \"limits\": [\n    \"Current-head required CI/capacity/reviews and protected merge qualification remain before release.\",\n    \"No oldproof rebinding, new native workflow, physical/human/accuracy/all14/AUTH/legal/original closure.\"\n  ]\n}\n",
+    "sha256": "8bcfd2c1a1aa03cbffd7bf40ce31ff05951b312b6af004ffa3647b43ff33fb40"
+  },
+  "actual_existing_runtime_preparation": {
+    "exit_status": 0,
+    "no_install_network_or_lifecycle_scripts": true,
+    "runtime_cache_reuse_receipt_sha256": "35fe308ca022a2f69140fda7bd1f560e9655e24988308a2bebb99128dcd4e259",
+    "stderr_bytes": 0,
+    "stdout_sha256": "e6071e2bd758ff1eec4eaf6d7036dd3eb13fcdd08056a35db02c1bef6d6368a6"
+  },
+  "actual_focused_controls": {
+    "argv": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_ios_simulator_matrix.MatrixControls.test_derived_payload_exact_one_delta",
+      "tests.test_source_release_policy_v5.SourceCopyV5.test_literal_current_policy_and_immutable_foundations",
+      "-v"
+    ],
+    "exit_status": 0,
+    "log": "test_derived_payload_exact_one_delta (tests.test_ios_simulator_matrix.MatrixControls.test_derived_payload_exact_one_delta) ... ok\ntest_literal_current_policy_and_immutable_foundations (tests.test_source_release_policy_v5.SourceCopyV5.test_literal_current_policy_and_immutable_foundations) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.007s\n\nOK\n",
+    "test_count": 2
+  },
+  "actual_prepared_asset_guard": {
+    "argv": [
+      "python3",
+      "-B",
+      "scripts/verify-native-share-evidence.py"
+    ],
+    "exit_status": 0,
+    "limits": "Actual exact-source/asset consistency check against historical genuine seven-flow proof. Not a new native workflow/phone/VoiceOver/TestFlight run.",
+    "stderr_bytes": 0,
+    "stdout": "{\"pass\": true, \"native_ui_workflows\": 7, \"physical_device\": false, \"independent_accuracy\": false, \"requirement_complete\": false}\n"
+  },
+  "author": "Codex /root/release_recovery",
+  "captured_at": "2026-11-25T04:14:14.834353+00:00",
+  "claim_level": "engineering_only",
+  "files": {
+    "eval/dependencies/source-snapshot-additions-v5.json": {
+      "bytes": 62972,
+      "sha256": "f87bcb6d3927fc27f54cc236d114d8c5669996911b858067735bae0b3a57067c"
+    },
+    "eval/dependency-policy.json": {
+      "bytes": 35104,
+      "sha256": "b2384d0d829edaf35e358e5927c147b7d36a6278c588d51b64f92e2f4ba4ba33"
+    },
+    "mobile/ios/Source/CheckerController.swift": {
+      "bytes": 30785,
+      "sha256": "07ce75bcaca1685b797444da9adc93c1cc8577e16ca6cacb251b0449228ece6d"
+    },
+    "mobile/ios/Tests/UIFlows.swift": {
+      "bytes": 30324,
+      "sha256": "16b0ac936caed61cd2d26ba0bc45c03714992488196b0af8175301a6946ed388"
+    },
+    "tests/test_source_release_policy_v5.py": {
+      "bytes": 14983,
+      "sha256": "e5172b0593b7837ab46e360067bbec10dab545e428f05c4d0aad69febc80260c"
+    },
+    "tools/ios_simulator_matrix.py": {
+      "bytes": 29266,
+      "sha256": "45522b3a61d19410a8ac38b5d8aa60053bda1c3745dc1d5c7290a404ae3061fa"
+    },
+    "tools/source_release_policy_v5.py": {
+      "bytes": 32927,
+      "sha256": "068f7426386c20155c6e74934e19792bed4caeb01f441c146e7e630f81e330ec"
+    }
+  },
+  "finite_source_policy": {
+    "charged": 132,
+    "copied_source_anchors": 95,
+    "e72_method_unchanged": true,
+    "foundations_unchanged": true,
+    "legacy_names": 159,
+    "maintained_names_unchanged": true,
+    "maximum": 160,
+    "new_literal_names": [
+      "runs/2026-11-24-source-baseline-native-cohort.json",
+      "runs/changes/2026-11-24-source-baseline-native-cohort.json"
+    ],
+    "only_existing_V5_table_and_method_registry_rows_changed": true
+  },
+  "independent_release_validated": false,
+  "limits": "This is a staged source-cohort choice, not a fix or fresh acceptance of modern iPhone behavior. The failedf532 native run and canceled unchangedad0 retry remain recorded. Current-head CI/capacity, protected mergeSHA and publisher/signature/consumer qualification remain required. No new native/physical/VoiceOver/TestFlight, accuracy, legal/AUTH/all14 approval or original closure;136complete66open unchanged.",
+  "original_scope_counts_changed": false,
+  "pass": true,
+  "prior_actual_native_attempts": [
+    {
+      "artifact_id": 14990770046,
+      "artifact_sha256": "491f7bfbc54996d645311b312f70ce9bde53062f5aa028652d59ce3e6f424d6b",
+      "commit": "f53256100a1201e726d882f15659570f8370ecae",
+      "conclusion": "failure",
+      "failures": [
+        "UIFlows.testExplicitPSCheckAndClear: UIFlows.swift:80 wait",
+        "UIFlows.testPublicSourceExportAndCancel: UIFlows.swift:342 assertion"
+      ],
+      "owned_cleanup_passed": true,
+      "run_id": 45540719030,
+      "stage": "ui_workflows",
+      "xcode_exit": 65
+    },
+    {
+      "commit": "ad0eb41b2db7a49f75d51f843f65b22dc30fff80",
+      "conclusion": "cancelled",
+      "reason": "Normal deadline-only push automatically queued identical109native sources already failed in retainedf532run. ROOT authorized exact cancellation; no manual unchanged rerun requested.",
+      "run_id": 45544558775
+    }
+  ],
+  "profile": "staged-source-native-cohort-selection/v1",
+  "purpose": "Exclude the unqualified Clear-scroll behavior from this staged source-only release by restoring the exact protected898 native cohort; align the layout runner to that suite and register two literal evidence records132/160.",
+  "release_authorized": false,
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "selected_native_cohort": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+  "selection": {
+    "excluded_from_this_source_stage": "Unqualified Clear-scroll behavior in f532; no claim it has been fixed or newly accepted.",
+    "historical_proofs_unchanged": {
+      "runs/2026-11-23-ios-seven-ui-current.json": {
+        "all109_exact": true,
+        "historical_actual_execution": "2026-11-24T03:06:51.550974+00:00",
+        "new_native_execution": false,
+        "sha256": "d719ba450f94177bef788bcee780c732ff4fc11f1117a7c463a4f3133e0ddacb",
+        "sources": 109
+      },
+      "runs/2026-11-23-tag-runtime-native-share.json": {
+        "all109_exact": true,
+        "historical_actual_execution": "2026-11-24T03:06:51.550974+00:00",
+        "new_native_execution": false,
+        "sha256": "837a6371bb7078b36e80b72d7a6297a0f4c8a4fa8eb2f82f9c13345e1c5cacb7",
+        "sources": 109
+      }
+    },
+    "new_native_execution": false,
+    "preserved_development_commits": [
+      "f53256100a1201e726d882f15659570f8370ecae",
+      "40fc0ba9142261299c38698786374984503edca9",
+      "97221b5a5c1380f4f3ca6cfe17943097ec6ce5e0"
+    ]
+  },
+  "source_base": "ad0eb41b2db7a49f75d51f843f65b22dc30fff80",
+  "source_freeze_sha256": "bb21afce46cdbf42ac3751a9e86307590d2c254efe7c407e7e119cb944306ec5"
+}

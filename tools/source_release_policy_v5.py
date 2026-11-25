@@ -24,7 +24,7 @@ import types
 ROOT = Path(__file__).resolve().parents[1]
 PROFILE = 'source-copy-additions/v5'
 POLICY = 'eval/dependencies/source-snapshot-additions-v5.json'
-POLICY_SHA256 = '0a8810732358ed53503fdd5d6d6230aeb4c4f3a234a0ca1a6b37a92b6234caae'
+POLICY_SHA256 = 'f87bcb6d3927fc27f54cc236d114d8c5669996911b858067735bae0b3a57067c'
 Q = '898dc254ff8d4c924d699afe732d3c1bbfe1bb01'
 Q_TREE = '87b84b9a0f16987cdc3d696c52cf33e049088465'
 Q_FILES, Q_BYTES = 13888, 151697171

@@ -31,7 +31,7 @@ class SourceCopyV5(unittest.TestCase):
         return d,q,observed,read,reads
     def classify(self,*args):return v.classify(*args,v.Clock(),lambda n:None)
     def test_literal_current_policy_and_immutable_foundations(self):
-        d=self.data();self.assertEqual(len(d['legacy_v4_names']),159);self.assertEqual(len(d['project_files'])+len(d['copied_files']),130)
+        d=self.data();self.assertEqual(len(d['legacy_v4_names']),159);self.assertEqual(len(d['project_files'])+len(d['copied_files']),132)
         for name,row in v.FOUNDATION_PINS.items():
             raw=(ROOT/name).read_bytes();self.assertEqual(v.sha(raw),row['sha256']);self.assertEqual(len(raw),row['bytes'])
         self.assertEqual(len(d['copied_files'][0]['anchors']),95)

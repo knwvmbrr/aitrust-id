@@ -9,7 +9,6 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
     private let appearanceSettings = AppearanceSettings()
     private let darkModeSwitch = UISwitch(), automaticAppearanceButton = UIButton(type: .system)
     private let appearanceRow = UIStackView()
-    private weak var contentScroll: UIScrollView?
     private var web: WKWebView?, assets: Assets?, deadline: DispatchWorkItem?
     private var generation = 0, pendingText: String?, matches: [[String: Any]] = []
     private var busy = false
@@ -41,7 +40,6 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
         stack.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16)
         scroll.translatesAutoresizingMaskIntoConstraints = false; stack.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(scroll); scroll.addSubview(stack)
-        contentScroll = scroll
         NSLayoutConstraint.activate([
             scroll.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor), scroll.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
             scroll.leadingAnchor.constraint(equalTo: view.leadingAnchor), scroll.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -68,7 +66,7 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
         checkButton.titleLabel?.adjustsFontForContentSizeCategory = true
         checkButton.accessibilityIdentifier = identity("check-ps"); checkButton.addTarget(self, action: #selector(check), for: .touchUpInside)
         checkButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true; stack.addArrangedSubview(checkButton)
-        stack.addArrangedSubview(button("Clear", #selector(clearFromButton), "clear"))
+        stack.addArrangedSubview(button("Clear", #selector(clear), "clear"))
         if shareMode { stack.addArrangedSubview(button("Done / Cancel", #selector(finish), "finish")) }
         else { stack.addArrangedSubview(button("Practice sharing", #selector(practiceShare), "practice-share")) }
         status.numberOfLines = 0; status.font = font(.body); status.adjustsFontForContentSizeCategory = true
@@ -173,16 +171,6 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
         refreshCheckButton()
     }
     @objc func clear() { input.text = ""; invalidate(); status.text = "Cleared." }
-    @objc private func clearFromButton() {
-        clear()
-        guard isViewLoaded, presentedForChecking, let scroll = contentScroll,
-              view.window != nil else { return }
-        view.layoutIfNeeded()
-        let target = input.convert(input.bounds, to: scroll)
-        guard [target.minX, target.minY, target.width, target.height, target.maxX, target.maxY]
-                .allSatisfy({ $0.isFinite }), target.width > 0, target.height > 0 else { return }
-        scroll.scrollRectToVisible(target, animated: false)
-    }
     @objc func finish() { clear(); extensionContext?.completeRequest(returningItems: nil) }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)

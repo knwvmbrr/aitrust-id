@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-source-baseline-native-cohort
+
+Recorded 2026-11-25T04:14:14.834353+00:00 · Contributor: Codex /root/release_recovery; /root distinct source review · change
+
+- **Changed.** Exclude the unqualified Clear-scroll behavior from this staged source-only release by restoring the exact protected898 native cohort; align the layout runner to that suite and register two literal evidence records132/160.
+- **Evidence.** All109 native sources match both unchanged genuine historical seven-flow proofs. Actual prepared-assets consistency guard and two matrix/policy controls pass; ROOT independently read the full seven-file patch and both109-source maps. Modern Clear/Sources features remain preserved in separate commits/worktrees. [Change record](./runs/changes/2026-11-24-source-baseline-native-cohort.json).
+- **Not claimed.** This is a staged source-cohort choice, not a fix or fresh acceptance of modern iPhone behavior. The failedf532 native run and canceled unchangedad0 retry remain recorded. Current-head CI/capacity, protected mergeSHA and publisher/signature/consumer qualification remain required. No new native/physical/VoiceOver/TestFlight, accuracy, legal/AUTH/all14 approval or original closure;136complete66open unchanged.
+
+
 ### 2026-11-24-source-baseline-ci-repair
 
 Recorded 2026-11-25T04:04:19.576201+00:00 · Contributor: Codex /root/seo; /root/release_recovery recovery; /root distinct review · change

