@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-25
 
+### 2026-11-25-075401-native-keyboard-recovery-accounting-104f6a7c
+
+Recorded 2026-11-25T07:54:01.188700+00:00 · Contributor: Codex /root; native /root/ios_recovery; review /root/postgres_recovery · change
+
+- **Changed.** Integrate the reviewed native keyboard repair and record its source-specific seven-flow pass, separate notice-navigation failure and recovery limits.
+- **Evidence.** Different task-list review ee818bb8e0fcce7974bc48a986f6eb03db19feedf55adec457e09341d70cad22 verifies the eight-file snapshot and original202 acceptance. Native ab328 passes7 while its separate matrix fails Small/light notice Next. Whole-account guide distinguishes its exercised barrier from individual-entry recovery. All original percentages and38 scoped jobs remain unchanged at this dated snapshot. [Change record](./runs/changes/2026-11-25-075401-native-keyboard-recovery-accounting-104f6a7c.json).
+- **Not claimed.** Target60 unmet:136 complete66 open. No full Clear, physical phone, human VoiceOver, current TestFlight installation, public signup or payment claim. PII restart and individual-history recovery remained pending at captured07:44; later actuals remain separate.
+
+
 ### 2026-11-25-070234-native-qualification-accounting-20cdbfce
 
 Recorded 2026-11-25T07:02:34.091625+00:00 · Contributor: Codex /root; native implementation and execution /root/ios_recovery · change

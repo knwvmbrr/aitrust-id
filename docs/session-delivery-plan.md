@@ -1,3 +1,11 @@
+## Native keyboard delivery and recovery diagnosis — 2026-11-25T07:44:14.179456+00:00
+
+**38 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The reviewed native Done/drag repair is merged, and its exact ab328 source passes all7 App/Share workflows. The separate original size matrix now reaches keyboard and both Clear controls, then fails Small/light notice pagination. No full Clear closure or changed fixture/wait is claimed. Local integer-only callback diagnosis is active.
+
+The real PII gateway/replay run exposes an unstable set-derived capability fingerprint across fresh processes. Its narrow identity-only repair is source-reviewed; actual two-source restart qualification remains pending. Individual-history/Clear recovery retains a refused isolated restore for diagnosis; the main database is unchanged and owned services are stopped. Public signup, billing and current TestFlight installation remain unavailable or disabled. Worker assignments are dated snapshots, not perpetual bots.
+
+[Source-specific outcomes and limits](../runs/2026-11-25-native-keyboard-and-recovery-progress.json) · [Whole-account recovery](account-erasure.md)
+
 ## PII fix integrated; actual replay remains open — 2026-11-25T06:17:36.693179+00:00
 
 **38 scoped software jobs complete; originals 136 complete / 66 open, target 60 unmet.** The real PII improvement is integrated: the bracketed address is masked at its original span, the other 41 English observations match the fresh baseline, six compact comparisons match the historical reference, and 14 ASGI controls pass. Different task-list review caught the missing actual replay criterion before PM closeout. The proposed 39th software closure is withdrawn; the existing task and its full acceptance stay open. No criteria were split or lowered.

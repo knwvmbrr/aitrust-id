@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "profile": "native-keyboard-and-recovery-integration/v1",
+  "captured_at": "2026-11-25T07:44:14.179456+00:00",
+  "pass": true,
+  "claim_level": "engineering_only",
+  "actual_worker": "Codex /root; native implementation/execution /root/ios_recovery; account recovery /root/postgres_recovery; PII identity /root/release_recovery",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-023",
+    "T-PII",
+    "F-044",
+    "N-010"
+  ],
+  "source_integration": "8cc5a3ca50ebcfa648710ac7c85beb4f2dac1741",
+  "native": {
+    "selected_execution_source": "ab328be981cd94d2d7fc4dcc986c2bc829ee49b4",
+    "controller_sha256": "8286efc3a87316e4f5a76d078dc7f349c9266d98d5a5c3443fb708d1b9ad2839",
+    "UIFlows_sha256": "3d4d6f60a09856b4782f3e26997d70813800c8caa55afb4c1664f20774fe90b5",
+    "actual_seven": {
+      "pass": true,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "raw_sha256": "04598dc3eb6e5e89ee9afd7bab7a6274ac92a8607d9a806fdf385f2695bbb99d",
+      "different_actual_review_sha256": "77f2cdcc0e98119a04f37d9da719f7261b352260f97dfdb23103ee94e6911224",
+      "runtime": "iPhone14Plus/iOS26.2/23C54 Simulator arm64",
+      "Done_actions": "App and Share keyboard dismissed, original input preserved, no automatic check",
+      "owned_cleanup_and_six_resource_hashes_verified": true
+    },
+    "separate_matrix": {
+      "pass": false,
+      "completed_configurations": 0,
+      "failed_configurations": 1,
+      "unexecuted_configurations": 11,
+      "raw_sha256": "4198de65deba109d0acd9f061b167c356614efc581f3ad1dd36bf5f2b058357b",
+      "failure": "Small/light original Next-page assertion did not reach Page2 within unchanged5seconds. Keyboard reachability and both Clear assertions passed before that failure.",
+      "saved_event_observation_sha256": "445e88ea689ef6857a373d699e1f3da2b54dfffa1d081482e9ba43c70f5d0ea3",
+      "root_cause_established": false,
+      "diagnosis": "One synthesized tap at the visible Next position is recorded; saved data does not prove UIKit action dispatch. Integer-only local observability is a separate unqualified candidate.",
+      "owned_cleanup_verified": true
+    },
+    "full_clear_task_closed": false,
+    "new_Apple_upload": false,
+    "physical_install_verified": false,
+    "human_VoiceOver_verified": false
+  },
+  "TestFlight": {
+    "current_dashboard_status": "owner_sign_in_required",
+    "readonly_visual_status_sha256": "43d847a33c37906501b3eb1d84cfc5bd4d4cd4b3137f8dc6438bc06ddea11f5d",
+    "historical_build": "1.0(1)",
+    "historical_Testing_observed": "2026-11-21",
+    "historical_owner_Invited_observed": "2026-11-18",
+    "current_assignment_or_install_verified": false,
+    "credential_or_browser_security_settings_changed": false
+  },
+  "PII": {
+    "genuine_live_controls_passed": 8,
+    "real_redactor_calls": 5,
+    "serial_model_starts": 2,
+    "actual_sha256": "cb47fb7f02e9f321c6daaa2b6898b3092761541bb0c724b56fc452fa63f5105c",
+    "different_actual_review_sha256": "3a1d7fef46f8aee2afb7384cc906a2af5d2f3c36218143a5d1ce80d50235609e",
+    "same_process_replay_matched": true,
+    "cross_process_reproduced": false,
+    "restart_defect": "A set-derived Spacy capability-list ordering changes the full method fingerprint. Narrow source-only correction reviewed; fresh two-source actual replay remains pending.",
+    "task_closed": false,
+    "tag_acceptance_percent": 80,
+    "staging_service_changed": false
+  },
+  "history": {
+    "whole_account_barrier": "runs/2026-11-25-account-erasure.json",
+    "individual_and_clear_task_closed": false,
+    "latest_changed_resume_pass": false,
+    "failed_actual_sha256": "4b582753b73b190dd57caaca8971a57bdfbc943c54753aa882b2b75dfeee1d61",
+    "failure": "First restore command refused after isolated target allocation; exact first guard is being diagnosed before any further mutation.",
+    "owned_cluster_socket_listener_stopped": true,
+    "main_critical_snapshot_and_old_database_metadata_unchanged": true,
+    "public_signup_enabled": false,
+    "customer_payment_processed": false
+  },
+  "original_counts": {
+    "total": 202,
+    "complete": 136,
+    "open": 66,
+    "target_open": 60
+  },
+  "scoped_tasks_complete": 38,
+  "original_requirement_closures": [],
+  "limits": [
+    "This records separately source-bound outcomes, not an execution of every ROOT integration file.",
+    "No full layout, public signup, payment, production recovery, physical-phone, independent accuracy or original acceptance claimed.",
+    "Immutable earlier successes, failures, proposed closure and correction remain unchanged."
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-075401-native-keyboard-recovery-accounting-104f6a7c",
+  "recorded_at": "2026-11-25T07:54:01.188700+00:00",
+  "author": "Codex /root; native /root/ios_recovery; review /root/postgres_recovery",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "8cc5a3ca50ebcfa648710ac7c85beb4f2dac1741",
+  "changed": "Integrate the reviewed native keyboard repair and record its source-specific seven-flow pass, separate notice-navigation failure and recovery limits.",
+  "proves": "Different task-list review ee818bb8e0fcce7974bc48a986f6eb03db19feedf55adec457e09341d70cad22 verifies the eight-file snapshot and original202 acceptance. Native ab328 passes7 while its separate matrix fails Small/light notice Next. Whole-account guide distinguishes its exercised barrier from individual-entry recovery. All original percentages and38 scoped jobs remain unchanged at this dated snapshot.",
+  "limits": "Target60 unmet:136 complete66 open. No full Clear, physical phone, human VoiceOver, current TestFlight installation, public signup or payment claim. PII restart and individual-history recovery remained pending at captured07:44; later actuals remain separate.",
+  "scope_ids": [
+    "N-013",
+    "F-023",
+    "T-PII",
+    "F-044",
+    "N-010"
+  ],
+  "files": {
+    "README.md": "be3d065059909d359f38aef7d7e76fb4fac02c71a5857058240c91769b30eb57",
+    "docs/account-postgres.md": "324912c0036fd946f0c5d9422a420b2431f3ef4b6b89b399728822f9bc85504f",
+    "docs/scope-progress.json": "04f03fe0e544e7f787004d813ddf4107856e2c05926c24f6b1e298764904e6cf",
+    "docs/scope-progress.md": "93b72c513449d03ea13e2a697cc212ccf502836dda8484bc401d7f55b1e91d8e",
+    "docs/session-delivery-plan.md": "9befabe41df19034d902369be9f3df8010cf1889357eb902f84cfc9d235ef67f",
+    "docs/session-delivery.json": "580559dca74b627740fe42651269fbe2a854b053dbac8282122e13cb9abebe5f",
+    "state.json": "f17fbaaf6446b44b5f8d4467cdbaf86b2497080f2656387c353396246a2bf41c",
+    "runs/2026-11-25-native-keyboard-and-recovery-progress.json": "0b9ad78310de41f4c6359bc58a6169d98ac1cf38239bdb1b39f06acfbf8e5b64"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-native-keyboard-and-recovery-progress.json",
+      "sha256": "0b9ad78310de41f4c6359bc58a6169d98ac1cf38239bdb1b39f06acfbf8e5b64"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-25T07:54:02.068606+00:00"
+    }
+  ]
+}
