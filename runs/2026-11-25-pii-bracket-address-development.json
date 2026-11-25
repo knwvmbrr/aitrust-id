@@ -1,0 +1,343 @@
+{
+  "format": "pii-bracket-address-development/v1",
+  "captured_at": "2026-11-25T05:39:01.403334+00:00",
+  "actual_worker": "Codex /root/ios_recovery",
+  "source_base": "3779d8ccd94974afc05b47f0cbab823c77119794",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "pass": true,
+  "bounded_outcome": "The known explicit bracketed-email challenge is now completely masked at its original offsets by the real pinned recognizer/anonymizer and in-process redaction HTTP route.",
+  "source_after": {
+    "services/anonymizer/app.py": {
+      "sha256": "6c694b9debc2e28ae4e36b767597b28ff6633b220d7919ec979b32304c61760d",
+      "bytes": 9363
+    },
+    "tests/test_redaction_bracketed_email.py": {
+      "sha256": "ca079ad405808b5e78259040b44bb9200df54bd873ec8b7a2f2c10ffd97e73b3",
+      "bytes": 6460
+    },
+    "scripts/verify-bracketed-email-development.py": {
+      "sha256": "db7320b617d4ccc06d54d86bdaaeede15afa0f9e8efe8072b7ba11b194f4324d",
+      "bytes": 13555
+    },
+    "docs/pii-bracket-address-plan.md": {
+      "sha256": "a69ea73c0b71ac1087e026165e8e6a43549cf96abf7f7116ca35b9d2d67b5610",
+      "bytes": 4319
+    }
+  },
+  "fixed_challenge": {
+    "fixture": "eval/fixtures/pii-recognition-development.json",
+    "id": "challenge_obfuscated_email",
+    "coverage": "out_of_coverage",
+    "expected_span": {
+      "entity": "EMAIL_ADDRESS",
+      "start": 8,
+      "end": 36
+    },
+    "expected_characters": 28,
+    "baseline": {
+      "id": "challenge_obfuscated_email",
+      "predicted": [],
+      "applied": [],
+      "redaction_changed": false,
+      "expected_literal_values_still_present": 1
+    },
+    "candidate": {
+      "id": "challenge_obfuscated_email",
+      "predicted": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 8,
+          "end": 36
+        }
+      ],
+      "applied": [
+        {
+          "entity": "EMAIL_ADDRESS",
+          "start": 8,
+          "end": 36
+        }
+      ],
+      "redaction_changed": true,
+      "expected_literal_values_still_present": 0
+    },
+    "candidate_extra_masked_characters": 0
+  },
+  "fixed_development_cohorts": {
+    "english_total": 42,
+    "english_other_rows_equal_to_fresh_baseline": 41,
+    "compact_total": 6,
+    "compact_rows_equal_to_historical_reference": 6,
+    "compact_current_unmasked_characters": 0,
+    "compact_current_extra_masked_characters": 0,
+    "english_existing_extra_masked_characters": 6,
+    "english_existing_cases_with_extra_masking": 2,
+    "out_of_coverage_spanish_extra_masked_characters": 8
+  },
+  "fresh_baseline": {
+    "kind": "Git3779 source-current readonly app overlay on an explicitly older installed image",
+    "source_app_sha256": "2df4afaeee0a2ca4ca2b2b0032f4b38e4b68e2e6c3e2f01361166f54291fd77c",
+    "raw_sha256": "6c316f43d4825943a6f812d963f9135f6072e3d86325d5f9c0e1e7fb367ea500",
+    "rows": 42,
+    "actual_worker_kind": "unchanged redaction-development-worker.py",
+    "worker_sha256": "abedcfb236c8bdc5703776524fe8e9fc792c8825fcd2c79d9fa3572cb5ffcb4e"
+  },
+  "historical_compact_reference": {
+    "path": "runs/2026-11-12-hidden-email-compact-linux.json",
+    "sha256": "c48bce535b0d748ed4d0576fe5967b71eb2f73f0031cb782a128aa8762409380",
+    "model_manifest_sha256": "0de0a5285fed4ee53463a48f70886873802ef94135fa5afdfaeb30eda38cfda4",
+    "source_app_sha256": "2df4afaeee0a2ca4ca2b2b0032f4b38e4b68e2e6c3e2f01361166f54291fd77c",
+    "newly_executed_baseline": false
+  },
+  "asgi": {
+    "request_count": 14,
+    "network_server_started": false,
+    "existing_http_client": "httpx0.28.1",
+    "privacy_source_sha256": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807",
+    "controls": [
+      {
+        "id": "bracket_original",
+        "status": 200,
+        "private_headers": true,
+        "expected_characters": 28,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "changed": true,
+        "entity_count": 1,
+        "email_observed": true,
+        "identity_matches": true
+      },
+      {
+        "id": "bracket_unicode_context",
+        "status": 200,
+        "private_headers": true,
+        "expected_characters": 28,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "changed": true,
+        "entity_count": 1,
+        "email_observed": true,
+        "identity_matches": true
+      },
+      {
+        "id": "bracket_marker_case",
+        "status": 200,
+        "private_headers": true,
+        "expected_characters": 24,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "changed": true,
+        "entity_count": 1,
+        "email_observed": true,
+        "identity_matches": true
+      },
+      {
+        "id": "two_addresses",
+        "status": 200,
+        "private_headers": true,
+        "expected_characters": 52,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "changed": true,
+        "entity_count": 2,
+        "email_observed": true,
+        "identity_matches": true
+      },
+      {
+        "id": "benign_text",
+        "status": 200,
+        "private_headers": true,
+        "expected_characters": 0,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "changed": false,
+        "entity_count": 0,
+        "email_observed": false,
+        "identity_matches": true
+      },
+      {
+        "id": "benign_markers",
+        "status": 200,
+        "private_headers": true,
+        "expected_characters": 0,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "changed": false,
+        "entity_count": 0,
+        "email_observed": false,
+        "identity_matches": true
+      },
+      {
+        "id": "invalid_suffix",
+        "status": 200,
+        "private_headers": true,
+        "expected_characters": 0,
+        "unmasked_expected_characters": 0,
+        "masked_outside_expected_characters": 0,
+        "changed": false,
+        "entity_count": 0,
+        "email_observed": false,
+        "identity_matches": true
+      },
+      {
+        "id": "wrong_type",
+        "status": 422,
+        "private_headers": true,
+        "input_processed": false,
+        "input_reflected": false
+      },
+      {
+        "id": "extra_field",
+        "status": 422,
+        "private_headers": true,
+        "input_processed": false,
+        "input_reflected": false
+      },
+      {
+        "id": "too_long",
+        "status": 422,
+        "private_headers": true,
+        "input_processed": false,
+        "input_reflected": false
+      },
+      {
+        "id": "invalid_json",
+        "status": 422,
+        "private_headers": true,
+        "input_processed": false,
+        "input_reflected": false
+      },
+      {
+        "id": "body_limit",
+        "status": 413,
+        "private_headers": true,
+        "input_processed": false,
+        "input_reflected": false
+      },
+      {
+        "id": "unsupported_method",
+        "status": 405,
+        "private_headers": true,
+        "input_processed": false,
+        "input_reflected": false
+      },
+      {
+        "id": "health",
+        "status": 200,
+        "private_headers": true,
+        "model_identity_matches": true
+      }
+    ]
+  },
+  "runtime": {
+    "platform": "Linux x86_64",
+    "python": "3.12.15",
+    "installed_base_image_id": "fb378e5f4c178a596709b5e072cace6d4b31a21b8467e36f4688967a4878c81d",
+    "installed_base_app_sha256": "fdf399fd22857510312edab09666f3e4da94b58b2d80b3b4ec4f5489f31de089",
+    "base_image_called_source_current": false,
+    "source_mode": "one exact public app.py readonly bind, root-owned0444, private0700 nonce directory",
+    "source_map": {
+      "app": "6c694b9debc2e28ae4e36b767597b28ff6633b220d7919ec979b32304c61760d",
+      "model_loader": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29",
+      "requirements_lock": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887",
+      "identity_contract": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00",
+      "identity_builder": "82b160ab375689bee61ec98f298ac472e9bed2d684a5b3ff12d7946b2e2eb2a5"
+    },
+    "candidate_identity_sha256": "c5e22a64b27d1dd3a3d0b5249659f5c445ac45f720f26bcbfdb8d4bee677c8dd",
+    "model_identity": {
+      "model_name": "en_core_web_sm",
+      "model_version": "3.8.0",
+      "manifest_sha256": "0de0a5285fed4ee53463a48f70886873802ef94135fa5afdfaeb30eda38cfda4",
+      "asset_files": 29,
+      "verified_before_load": true
+    },
+    "model_verified_before_application_and_nlp": true,
+    "kernel_privileges": {
+      "cap_bnd": 0,
+      "cap_eff": 0,
+      "egid": 10001,
+      "euid": 10001,
+      "gid": 10001,
+      "model_manifest_sha256": "0de0a5285fed4ee53463a48f70886873802ef94135fa5afdfaeb30eda38cfda4",
+      "no_new_privs": 1,
+      "uid": 10001
+    },
+    "worker_timeout_seconds": 90,
+    "pids_limit": 128,
+    "memory_bytes": 1073741824,
+    "cpus": 1,
+    "network": "none",
+    "read_only_root": true,
+    "new_dependencies_models_images_or_services_installed": false
+  },
+  "cleanup": {
+    "attach_client_reaped": true,
+    "exact_owned_container_removed_and_absence_checked": true,
+    "host_public_source_inode_and_sha_unchanged": true,
+    "owned_public_source_and_empty_nonce_directory_removed": true,
+    "selected_staging_service_metadata_unchanged": true
+  },
+  "source_review": {
+    "different_reviewer": "Codex /root",
+    "receipt_sha256": "0f0758c454b05395dd4a6b7478d6ad23971e83908143ce19b1b85ee83dcc654f"
+  },
+  "different_actual_review": "Pending integration lead verification of retained actual raw observations.",
+  "local_controls": {
+    "count": 59,
+    "actual_engine": false,
+    "scope": "AST/upstream adapters plus existing mocked HTTP redaction contract",
+    "warning": "Existing upstream Starlette/TestClient deprecation; no new dependency installed"
+  },
+  "private_receipts": {
+    "candidate_raw": {
+      "bytes": 138544,
+      "sha256": "9f7b99dfd3062828c65d57bcd2e4bc25043f231a0581f42a76986c7413005f22"
+    },
+    "baseline_raw": {
+      "bytes": 65166,
+      "sha256": "6c316f43d4825943a6f812d963f9135f6072e3d86325d5f9c0e1e7fb367ea500"
+    },
+    "verified_model_manifest": {
+      "bytes": 3757,
+      "sha256": "0de0a5285fed4ee53463a48f70886873802ef94135fa5afdfaeb30eda38cfda4"
+    },
+    "local_controls": {
+      "bytes": 686,
+      "sha256": "f8c5045f4609f15cbd3b1ca51fcaba693aa7d445d50e8e6413e91e2230eea938"
+    },
+    "candidate_driver": {
+      "bytes": 37659,
+      "sha256": "1799a5102f4f93b274b5ff2c8b6874359dcd2448616a612b3c37c69f15858819"
+    },
+    "candidate_config": {
+      "bytes": 74643,
+      "sha256": "45ca9b3fcc3061b8cb836bd9b9f0b28a9f65c04ee8cded7e5fda994a8e97433c"
+    },
+    "metadata_refusal": {
+      "bytes": 6276,
+      "sha256": "868e3d4a4aa1409223527fb1653d2923f7ed47afbb15022d9c8d77ca01eb9f01"
+    },
+    "stale_model_refusal": {
+      "bytes": 3205,
+      "sha256": "4adc5f23a95bbcece4f98528b3c30979e4e254b6f06e1b3bc2bd6efe515651d5"
+    }
+  },
+  "retained_failures": [
+    "Initial test-file syntax error retained, corrected before genuine old-source failure; fixed challenge then fails as expected on old adapter.",
+    "First isolated-container driver refuses invalid pre-start capability-array assumption; no engine starts. Metadata-only diagnostic identifies null created-state fields.",
+    "Changed no-overlay bootstrap refuses the stale hosted-CI model pin before app/worker.",
+    "Seven fixed-file metadata reads succeed, then refuse source-current comparison: installed base app is older fdf399, not Git3779 app2df4. No stale image relabeled current."
+  ],
+  "limits": [
+    "Synthetic developer-authored examples, not a representative independent holdout, population accuracy estimate or tag release. The obfuscated challenge remains labeled out_of_coverage.",
+    "Existing English extra masking (six characters across two examples) and eight extra Spanish-challenge characters remain unchanged.",
+    "Only explicit paired ASCII bracket markers with bounded tokens/spaces are newly handled; other obfuscations and languages remain unsupported/unverified.",
+    "In-process ASGI is not a rebuilt selected network service, production deployment, gateway/replay integration, clean-install qualification or physical/human acceptance. Existing staging services and published chart selection remain unchanged.",
+    "Old and fresh recognizer-configuration fingerprints differ; this receipt binds actual identities and does not claim identical historical method fingerprints.",
+    "Original F-023/T-PII acceptance criteria and completion percentages are not changed."
+  ]
+}

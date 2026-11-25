@@ -2,6 +2,24 @@
 
 ## Unreleased — 2026-11-25
 
+### 2026-11-25-054424-pii-result-guide-accuracy-wording-2ed0fbd0
+
+Recorded 2026-11-25T05:44:24.374280+00:00 · Contributor: Codex /root/ios_recovery; wording review Codex /root · change
+
+- **Changed.** Clarify the PII result guide so executed examples and matching historical observations are not described as perfectly correct labels.
+- **Evidence.** The guide states the measured bracketed-address fix and unchanged observations while retaining the disclosed English and Spanish overmasking. Scope completion is explicitly distinguished from accuracy, and joined words/numbers are corrected. [Change record](./runs/changes/2026-11-25-054424-pii-result-guide-accuracy-wording-2ed0fbd0.json).
+- **Not claimed.** Documentation-only correction; authored execution, review and prior event remain unchanged. No runtime rerun, tag release, chart admission, staging rollout or original requirement closure.
+
+
+### 2026-11-25-054008-pii-bracket-address-development-4939a3b8
+
+Recorded 2026-11-25T05:40:08.606949+00:00 · Contributor: Codex /root/ios_recovery; different source and actual review Codex /root · change
+
+- **Changed.** Mask explicit paired bracketed-email forms at their original offsets, preserving the offline recognizer and independent tag boundaries.
+- **Evidence.** Actual isolated Linux engine fixes the28-character challenge with zero extra masking;41other English rows and6historical compact controls match.14real in-processASGI identity/privacy controls and59separate model-free adapter/mock controls pass. ROOT independently reviewed actual source, model and cleanup evidence. [Change record](./runs/changes/2026-11-25-054008-pii-bracket-address-development-4939a3b8.json).
+- **Not claimed.** Synthetic development evidence; English false masking and broader recognition/human acceptance remain. No staged-service rebuild, chart or method admission, network replay, production deployment, phone redaction or original closure; F-023/T-PII stay80%.
+
+
 ### 2026-11-25-042723-ios-public-sources-actual-84833215
 
 Recorded 2026-11-25T04:27:23.679464+00:00 · Contributor: Codex /root/ios_recovery; source review Codex /root · change
