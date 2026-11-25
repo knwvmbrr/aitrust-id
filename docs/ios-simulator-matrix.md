@@ -50,3 +50,44 @@ allocations and remote accessibility snapshots are not kernel-hard-bounded;
 free-space reserve checks are observations. Parent/host crash or detached/uninterruptible
 OS processes are not universally recoverable. No physical-device, human usability,
 independent accuracy, signing/upload, release or original requirement is completed.
+
+
+## Public Sources candidate (unqualified source revision)
+
+Privacy & notices now places a Public source files disclosure before the unchanged
+ordered twelve-notice index. Its short destination contains the existing three
+verified bundled ZIP actions, All notices and Done. Both App and Share use the
+same native controller; navigation carries no draft or result and does not share
+a file. Each selected ZIP still requires its exact size and SHA-256 before the
+public URL alone is offered. No endpoint, permission or dependency was added.
+
+The layout fixture checks all three source actions before reading the legal
+notice. The seven-flow source case enters the new destination, preserving its
+privacy/cancel assertions. PublicSourcesFlows is a separate three-case cohort
+(JS, Zlib, Hiwire, each in App and Share), never a substitute for the seven.
+Earlier seven and size observations remain historical source. The actual Sources
+candidate4 compiles, and all six App/Share source ZIP resources match their exact
+bytes and hashes. Its three-case UI cohort passes1/3: Hiwire completes App and Share;
+Pyodide and Zlib stop at Share host-popup baseline observation before source
+selection. Saved hierarchy shows the expected host caption under an OS remote
+portal that the narrower popup snapshot omits. A reviewed observer correction
+captures that same popup's unique portal separately without changing any result,
+privacy, cancellation or time-budget assertion; actual corrected execution and
+layout qualification remain pending. This is not an uploaded TestFlight build or
+physical-device/accessibility-user proof.
+
+
+The corrected portal observer is limited to the actual observed sibling-popup
+representation. If a later OS nests multiple remote portals inside the same popup,
+it refuses the ambiguity. It does not infer ownership from equal frames or reuse
+another popup's caption. Broader nested-OS compatibility remains unverified.
+
+
+## Actual Sources result
+
+The changed Sources component now passes three fixed native Simulator workflows:
+Pyodide, Zlib and Hiwire, each from App and Share, including private-input isolation
+and cancellation. All six compiled public ZIP files match their complete expected
+bytes and hashes. This result is bound to666fa3d0, not an uploaded phone build.
+The original seven-count runner remains a refusal for a three-case cohort; full
+seven-flow and representative layout qualification remain separate open work.

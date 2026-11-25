@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-ios-public-sources-test-local",
+  "recorded_at": "2026-11-25T03:39:10.894658+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "da5ec8ea74b2abdbba08681814b2419fb46a9c8d",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "changed": "Correct a Sources test-local name collision in the two native test suites; preserve the Sources product and all privacy/cancel outcomes and native limits.",
+  "proves": "The actual failed test build identified a duplicate sources binding. Both complete test sources and matrix engine reconstruct exactly by reversing only the local rename and UI hash. One affected derivation control passed; ROOT different source review cleared this exact four-file correction.",
+  "limits": "Source-only test correction; changed native compile and actual three-case execution remain pending. Candidate3 failed test compilation with no UI execution. Its six compiled public ZIP resources match, but that is not a UI pass. No full seven/current-app/TestFlight, physical/human accessibility, numeric accuracy, admission or original closure.",
+  "files": {
+    "mobile/ios/Tests/UIFlows.swift": "acb7bdfed7b47312ee08e0997076b46c5040ff66890e09a9da9fa9c5fb048180",
+    "mobile/ios/Tests/PublicSourcesFlows.swift": "08122ebe9f43da0a7b63cc50b239deaece4cf665c4fe74234460be285d54860d",
+    "tools/ios_simulator_matrix.py": "e1998df6504d4c864421c35a872663370a702288b169d8e1b1d72458483c61b5",
+    "docs/ios-simulator-matrix-plan.md": "8f98ed31844578a255c9e4dc8b06ebe1061f7a8ef7719c4003b35de19442ddbc",
+    "runs/2026-11-24-ios-public-sources-test-local.json": "17f11616c3030c551a3b8485d434d2dacc45fc12a31873df3d35b235d931127b"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-public-sources-test-local.json",
+      "sha256": "17f11616c3030c551a3b8485d434d2dacc45fc12a31873df3d35b235d931127b"
+    }
+  ],
+  "checks": []
+}

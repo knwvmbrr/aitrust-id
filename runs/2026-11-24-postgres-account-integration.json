@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "profile": "reviewed-account-postgresql-integration/v1",
+  "captured_at": "2026-11-25T04:11:13.941347+00:00",
+  "pass": true,
+  "claim_level": "engineering_only",
+  "source_base": "763e9c67f7c6debe462cc3d2bb39fea066461e75",
+  "author_commit": "5f250b473cba913647ea5599cbcb701594e01497",
+  "completed_by": "Codex /root/postgres_recovery",
+  "reviewed_by": "Codex /root",
+  "scope_ids": [
+    "F-044",
+    "N-010"
+  ],
+  "enhancement_id": "ENH-PERSONAL-TAG-HISTORY",
+  "delivered": "Real isolated PostgreSQL signup/session/private history using the same account domain and HTTP application, with migration/least privilege, typed uncertain commit, actual synthetic restore and verified cleanup.",
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-account-postgres.json",
+      "sha256": "2178f5d8dcdee40be2c601bff07ff5511e826c869d2a5c1c3dcf75bd2fe54210"
+    }
+  ],
+  "different_source_review": {
+    "private_receipt": "root-final-different-source-review.json",
+    "sha256": "e8f5b210817812bbf4230262e2945c86dcb27b8aa73e23f6df0aa2c19ac49853",
+    "source_files": 10,
+    "retained_artifact_identities_verified": 12,
+    "actual_critical_controls": 3,
+    "seconds": 0.013,
+    "pass": true
+  },
+  "actual_runtime": {
+    "final_source_http_groups_passed": 11,
+    "seconds": 4.391047570854425,
+    "restore_groups_passed": 5,
+    "source_phase_specific_restore": true,
+    "concurrent_peer_transactions": 2,
+    "owned_processes_stopped": true,
+    "main_critical_snapshot_unchanged": true,
+    "main_application_tables": 0
+  },
+  "attribution_correction": "The immutable worker run/event inherits N-013 from an earlier template. This PostgreSQL job advances F-044/N-010 and the personal-history enhancement; it earns no native Share or iPhone acceptance.",
+  "testflight": {
+    "fresh_status": "UNVERIFIED",
+    "reason": "Computer-use namespace is unavailable after Desktop restart; no configured App Store status API. No credential/profile extraction or new sign-in attempted.",
+    "last_build": "1.0 (1)",
+    "last_actual_build_status": "Testing",
+    "build_status_observed_on": "2026-11-21",
+    "owner_invitation_last_observed_on": "2026-11-18",
+    "physical_install_confirmed": false,
+    "new_upload_this_increment": false
+  },
+  "original_counts": {
+    "total": 202,
+    "complete": 136,
+    "open": 66,
+    "target_open": 60
+  },
+  "original_requirement_closures": [],
+  "scoped_jobs_complete": 36,
+  "public_signup_enabled": false,
+  "customer_payment_processed": false,
+  "production_collection_enabled": false,
+  "limits": [
+    "Private synthetic PostgreSQL component, not an operating paid public signup service.",
+    "Production rollout/backup encryption and deletion reconciliation, actual billing configuration, password recovery, automatic native/extension history and physical/human acceptance remain.",
+    "Native Sources candidate4 compiles but passes only1 of3 UI cases; Share host observer diagnosis and source repair are separate. No new app or tag acceptance.",
+    "Published website and Apple build remain unchanged; source-release PR155 is under review/required CI."
+  ],
+  "accounting_checks": {
+    "scope_progress": {
+      "pass": true,
+      "original_records": 202,
+      "complete": 136,
+      "open": 66,
+      "packages": 39,
+      "subtasks": 117,
+      "enhancements": 15
+    },
+    "accountability": {
+      "pass": true,
+      "state_chronology_verified": true
+    },
+    "session_inspection": {
+      "pass": true,
+      "finished_scoped_tasks": 36,
+      "target_open": 60,
+      "actual_open": 66
+    },
+    "strict_session_goal": {
+      "exit_code": 1,
+      "target_met": false,
+      "reason": "Six full-original closures still required; passing software/identity checks do not satisfy target."
+    }
+  }
+}

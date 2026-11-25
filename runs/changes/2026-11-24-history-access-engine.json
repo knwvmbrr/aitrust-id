@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-history-access-engine",
+  "recorded_at": "2026-11-24T16:28:37.494117+00:00",
+  "author": "Codex /root; different engineering reviewers attributed in evidence",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2ab081fafa8fce47e4a3886f8d1c5fc80ea5eb3a",
+  "changed": "Implement private server-owned history access grants, expiry, renewal, replay-safe revocation and erasure with a working operator CLI; integrate the owner-approved optional paid-history scope and current execution accounting.",
+  "proves": "Thirteen current lifecycle, CLI, refusal and failure-atomicity controls pass. A different reviewer reproduced and verified corrections for interrupted replacement and privacy drift. All202 original IDs and criteria are preserved; image repair and access engine are finished scoped jobs, not original closures.",
+  "limits": "Operator grants are not verified customer payments. No merchant, price, public signup, production PostgreSQL collection, physical/human acceptance or original closure. Account HTTP/browser integration remains active; original count136complete66open, target60unmet.",
+  "scope_ids": [
+    "F-044",
+    "N-010",
+    "F-136"
+  ],
+  "files": {
+    "CONTRIBUTING.md": "f653dc00e168cf2deded83956f42b221de5fa4b6075fa042bbf7ba1b7d86021f",
+    "docs/history-entitlements.md": "6bf5f3d1fbd9fa51b9cc1cc1a31b3302fbe91a3669c68654a6093c30f30c18a9",
+    "docs/personal-tag-history-plan.md": "ce808f3b25d14b587945256dd585f2123cb7350cf5ca612a3714564e649c6379",
+    "docs/scope-progress.json": "18c5c2afd5ff2214952f037a8a2cb0bf6d913abc1dfcab62d00658d6147467ac",
+    "docs/scope-progress.md": "032ab34a1b25e1feec7aee1bd5dc1d49e910fca9d145a0ca42ed86fc59fe54e2",
+    "docs/session-delivery-plan.md": "e86e6b26f0c014ed61772d48cba367d0418746763c6ec7b14867c5c7998141fc",
+    "docs/session-delivery.json": "6220454b0f522faf1f1e6064281803ca4b62e04114a9850569e9cd70fd011333",
+    "docs/visual-tag-execution-plan.md": "bf5338a2cb07c1a06dc013364f4776d525e6437afb5a8903561e58c12c9a20b3",
+    "runs/2026-11-23-personal-history-spatial-scope.json": "d8aa4f8b9dbdf251f5903b0cd7203396624e22cc811304ddae2bbeff6bc686ba",
+    "runs/2026-11-24-history-access-engine.json": "0efe793301d1c7a94c99a77c5059c0f3a48b66ff2d67041623c3377a176de462",
+    "scripts/history-entitlements.py": "516bfc80d00ac5943c6cc457b68fb4d41e2faa1c0ff723efcfa5c5797bebd476",
+    "state.json": "af6c402ec8ab1f3d96ec5b2dcc9d5b92d71fe7a2cd15d8ba5207e14d88e37776",
+    "tests/test_history_entitlements.py": "7ee521d17b52ab27befd352f7d4696827d0e147f01a7eedbe9211af718af77c1",
+    "tools/history_entitlements.py": "705c9f7073713ff83e05914d5258662c214659cb0e01da3285eb16df8e0f2062"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-history-access-engine.json",
+      "sha256": "0efe793301d1c7a94c99a77c5059c0f3a48b66ff2d67041623c3377a176de462"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-11-24T16:18:02.427997+00:00",
+  "profile": "image-reference-engineering-acceptance/v1",
+  "pass": true,
+  "completed_by": "Codex /root/seo",
+  "verified_by": "Codex /root",
+  "source_commit": "1b6c91edbd11fa7318d604e7415dd903b749b5e8",
+  "provider": {
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45425852215",
+    "run_id": 45425852215,
+    "attempt": 1,
+    "job_id": 138557516607,
+    "conclusion": "success",
+    "review_channel": "ROOT separately fetched authenticated GitHub run, attempt-specific job and artifact API records; strict inspector separately exited0."
+  },
+  "artifact": {
+    "API_digest_checked_before_ZipFile": true,
+    "HTTP200_once_download": true,
+    "bytes": 16964,
+    "id": 14937665348,
+    "members": {
+      "cleanup.json": {
+        "bytes": 481,
+        "sha256": "78ac53747897a8aaaeec9d8a93e54792405bc46c9b64b0ddac3d4c8720c4ea70"
+      },
+      "qualification.json": {
+        "bytes": 74329,
+        "sha256": "8647ad241c911d10b9069d14520d244c74035283603edd4cd3a491a63c834b26"
+      }
+    },
+    "sha256": "843980c9717efc3cc51bda378b884d955d3899971c2501b733b0dcbeb007b034"
+  },
+  "cases": {
+    "PS_independent": true,
+    "alpha.png": "image_unsupported",
+    "corrupt-head": "model_identity",
+    "default_console_private_fields_absent": true,
+    "malformed.png": "image_unsupported",
+    "missing_model": true,
+    "multiframe.png": "image_unsupported",
+    "no_sdk": true,
+    "over-pixel.png": "image_limit",
+    "oversize.png": "input_limit",
+    "production_cancel": {
+      "PS_while_stopped": true,
+      "actual_checkpoint_mapping_observed": true,
+      "parent_home_removed": true,
+      "reason": "cancelled",
+      "worker_reaped": true
+    },
+    "production_deadline": {
+      "PS_while_stopped": true,
+      "actual_checkpoint_mapping_observed": true,
+      "parent_home_removed": true,
+      "reason": "deadline",
+      "worker_reaped": true
+    },
+    "progressive.jpg": "image_unsupported",
+    "recovery": true,
+    "repeat_whole_record": true,
+    "trailing.png": "image_corrupt",
+    "truncated-model": "model_identity"
+  },
+  "numerical_comparisons": {
+    "baseline.jpg": {
+      "absolute_difference": 4.76837158203125e-07,
+      "crop_equal": true,
+      "crop_rgb_sha256": "3f76b6b3c26d9b20ac6d8225265b45311916fbbffc8d751f7bda9f49af7f6581",
+      "production_logit": -2.1400346755981445,
+      "reference_logit": -2.1400351524353027,
+      "within_predeclared_tolerance": true
+    },
+    "gradient.png": {
+      "absolute_difference": 1.049041748046875e-05,
+      "crop_equal": true,
+      "crop_rgb_sha256": "d2e3c9a795a09714464bfc25c0dc6ed07a1c6fa44af7fa68436be5edce8602b8",
+      "production_logit": -2.9565305709838867,
+      "reference_logit": -2.9565200805664062,
+      "within_predeclared_tolerance": true
+    },
+    "sliver.png": {
+      "absolute_difference": 7.152557373046875e-06,
+      "crop_equal": true,
+      "crop_rgb_sha256": "077dd2e5c9ddc9864eb9484ba250584c30c896a9e623753ea9a11ebf296ca4ef",
+      "production_logit": -2.312746524810791,
+      "reference_logit": -2.312753677368164,
+      "within_predeclared_tolerance": true
+    }
+  },
+  "tolerance": {
+    "absolute": 0.0001,
+    "relative": 1e-05
+  },
+  "owned_cleanup": {
+    "pass": true,
+    "recursive_deletion_used": false,
+    "workspace_removed": true
+  },
+  "isolation": {
+    "capability_sets_zero": true,
+    "loopback_only_observed": true,
+    "no_new_privileges": true,
+    "nonroot": true
+  },
+  "strict_inspector_sha256": "d5eccbb566034bc5c1f75f6a01dacd0215e3f724620a936435ff03309e868a2b",
+  "validated": {
+    "cases": 17,
+    "locked_distributions": 39,
+    "observations": 3,
+    "raw_scores_are_not_probabilities": true,
+    "source_bindings": 88
+  },
+  "reviewed_provider_sha256": {
+    "root-run-api.json": "44e7a55f530683d9bb8f919e8b27bdfece1d42ae7c6c184a145888360536dbde",
+    "root-jobs-api.json": "1efff8976e2481c037959ba1131882adcc05c278c4a3c853bdd840eadc80373d",
+    "root-artifacts-api.json": "e67b5d850d3cc6b9a4b78885fbce2bb579adf68f190ce2ef3b77f9709c44ceaf"
+  },
+  "author_observation_sha256": "9ab623fed020f1963115f1f6e34df8e289d9a852ad9b85bf14b5c6a4e29865f9",
+  "engineering_reference_qualification_adopted": true,
+  "accuracy_measured": false,
+  "AI_origin": "unknown",
+  "tags": [],
+  "verified_payment_claimed": false,
+  "original_requirement_closed": false,
+  "limits": "Real model calculations on three controlled inputs plus17 runtime/failure/isolation cases. Not17 correct AI-image classifications. No independent detection accuracy, JIT equivalence, calibrated origin verdict, runtime redistribution/legal clearance, all-format support or full T-FA/F-057/X-02 closure."
+}

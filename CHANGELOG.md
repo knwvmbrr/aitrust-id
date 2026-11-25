@@ -2,6 +2,95 @@
 
 ## Unreleased — 2026-11-25
 
+### 2026-11-25-063003-pii-integration-accounting-2b70201c
+
+Recorded 2026-11-25T06:30:03.109893+00:00 · Contributor: Codex /root; implementation /root/ios_recovery; accounting review /root/release_recovery · change
+
+- **Changed.** Integrated bracketed-email redaction evidence and corrected a proposed task closure after independent review; preserved the missing replay gate and registered history restore work.
+- **Evidence.** Actual engine and ASGI observations support the narrow masking fix; reviewed accounting preserves all 202 original criteria with 136 complete and 66 open, and 38 completed scoped jobs. [Change record](./runs/changes/2026-11-25-063003-pii-integration-accounting-2b70201c.json).
+- **Not claimed.** PII replay and the native size matrix remain pending. Signup and payment are not public. Current TestFlight access requires owner sign-in. Target 60 remains unmet.
+
+
+### 2026-11-25-054424-pii-result-guide-accuracy-wording-2ed0fbd0
+
+Recorded 2026-11-25T05:44:24.374280+00:00 · Contributor: Codex /root/ios_recovery; wording review Codex /root · change
+
+- **Changed.** Clarify the PII result guide so executed examples and matching historical observations are not described as perfectly correct labels.
+- **Evidence.** The guide states the measured bracketed-address fix and unchanged observations while retaining the disclosed English and Spanish overmasking. Scope completion is explicitly distinguished from accuracy, and joined words/numbers are corrected. [Change record](./runs/changes/2026-11-25-054424-pii-result-guide-accuracy-wording-2ed0fbd0.json).
+- **Not claimed.** Documentation-only correction; authored execution, review and prior event remain unchanged. No runtime rerun, tag release, chart admission, staging rollout or original requirement closure.
+
+
+### 2026-11-25-054008-pii-bracket-address-development-4939a3b8
+
+Recorded 2026-11-25T05:40:08.606949+00:00 · Contributor: Codex /root/ios_recovery; different source and actual review Codex /root · change
+
+- **Changed.** Mask explicit paired bracketed-email forms at their original offsets, preserving the offline recognizer and independent tag boundaries.
+- **Evidence.** Actual isolated Linux engine fixes the28-character challenge with zero extra masking;41other English rows and6historical compact controls match.14real in-processASGI identity/privacy controls and59separate model-free adapter/mock controls pass. ROOT independently reviewed actual source, model and cleanup evidence. [Change record](./runs/changes/2026-11-25-054008-pii-bracket-address-development-4939a3b8.json).
+- **Not claimed.** Synthetic development evidence; English false masking and broader recognition/human acceptance remain. No staged-service rebuild, chart or method admission, network replay, production deployment, phone redaction or original closure; F-023/T-PII stay80%.
+
+
+### 2026-11-25-052951-account-erasure-integration-3e3b21e0
+
+Recorded 2026-11-25T05:29:51.534578+00:00 · Contributor: Codex /root; PostgreSQL implementation /root/postgres_recovery · change
+
+- **Changed.** Integrate the independently reviewed whole-account recovery barrier, close its registered software job and update scope, state, operator links and dated task ownership.
+- **Evidence.** The real PostgreSQL sequence passes 18 phases and 12 case groups; deleted credentials and history stay removed after an older backup is restored while the other account survives. Different source and actual-evidence reviews pass. The board records 38 completed software jobs and 136 complete / 66 open originals. [Change record](./runs/changes/2026-11-25-052951-account-erasure-integration-3e3b21e0.json).
+- **Not claimed.** Target 60 remains unmet. No public signup, real billing, production backup guarantee, individual history-event or clear recovery, fresh TestFlight status, physical VoiceOver or original requirement closure. Old specialist handoffs remain preserved and unfinished jobs are queued under current owners.
+
+
+### 2026-11-25-account-erasure
+
+Recorded 2026-11-25T05:17:49.531874+00:00 · Contributor: Codex /root/postgres_recovery; different source/actual reviewer /root · change
+
+- **Changed.** Implement whole-account deletion suppression across older PostgreSQL backups with append-only migration002, reserved erasure capacity, checkpointed raw binding, actual backend/dump identities and authoritative restored admission; retain the original account domain and migration001.
+- **Evidence.** One real isolated sequence completes18 phases/12 cases in11.075s: old valid password/session/exact history are present before reconciliation and absent afterward, another account survives, cleanup remains retryable and quota/NULL-ready/rollback/privilege controls pass. Different ROOT actual/source review clears exact27 sources and cleanup; main unchanged, owned services stopped. [Change record](./runs/changes/2026-11-25-account-erasure.json).
+- **Not claimed.** Private synthetic component only; no public signup, customer payment, production backup policy/latest-journal custody, individual-event/clear suppression, physical erasure, new Apple/native acceptance, independent tag accuracy or original closure. Original136complete/66open unchanged. Owner SQL filler and simulated future times were rolled back; idle PSS is not peak RAM. Two guides updated after execution only.
+
+
+### 2026-11-24-native-sources-integration
+
+Recorded 2026-11-25T04:37:30.108619+00:00 · Contributor: Codex /root; native Sources implementation /root/ios_recovery · change
+
+- **Changed.** Integrate the reviewed native Sources UX, close its exact software job, replace stale native-current flags with dated source-specific truth and preserve old snapshots; register account restore/PII work and correct README links/status.
+- **Evidence.** Different ROOT raw review confirms exact3 App+Share source/cancel/privacy cases,116execution inputs,7artifact identities and6compiled archives; normal merge preserves author history. Scope/accounting/chronology pass with37scoped jobs and136complete/66open originals. README cites actualNov21SearchConsole facts instead of a stale unverified claim. [Change record](./runs/changes/2026-11-24-native-sources-integration.json).
+- **Not claimed.** No full current seven-flow/size matrix, Apple validation/upload/current TestFlight or physical installation/human VoiceOver, independent accuracy, public signup/payment/production recovery, fresh Google indexing or original requirement closure.
+
+
+### 2026-11-25-042723-ios-public-sources-actual-84833215
+
+Recorded 2026-11-25T04:27:23.679464+00:00 · Contributor: Codex /root/ios_recovery; source review Codex /root · change
+
+- **Changed.** Qualify the native Sources component across all three public archives in both App and Share.
+- **Evidence.** Actual iPhone14Plus/iOS26.2 Simulator execution passes the three exact archive workflows with zero failures/skips, private-input isolation and cancellation; six compiled archive byte identities and owned cleanup pass, with116 frozen sources unchanged. [Change record](./runs/changes/2026-11-25-042723-ios-public-sources-actual-84833215.json).
+- **Not claimed.** Only the Sources component is qualified. The unchanged seven-count runner refuses three cases; full seven, size matrix, physical/human accessibility, current TestFlight, producer register gap and original requirement gates remain open.
+
+
+### 2026-11-25-041639-ios-sources-portal-native-inputs-85bd8262
+
+Recorded 2026-11-25T04:16:39.114837+00:00 · Contributor: Codex /root/ios_recovery; different review Codex /root · change
+
+- **Changed.** Freeze the current Sources observer input register for one separately reviewed native candidate.
+- **Evidence.** The same115 authored source paths bind current bytes; only the five reviewed UI, matrix and documentation inputs changed. ROOT independently verified the source diff and raw evidence identities. [Change record](./runs/changes/2026-11-25-041639-ios-sources-portal-native-inputs-85bd8262.json).
+- **Not claimed.** An input register is not a native pass. The separately pinned actual manifest remains input116 in the private runner; original seven, matrix, TestFlight and human gates remain open.
+
+
+### 2026-11-25-041532-ios-sources-portal-review-limit-b038b8d7
+
+Recorded 2026-11-25T04:15:32.826234+00:00 · Contributor: Codex /root/ios_recovery; different review Codex /root · change
+
+- **Changed.** Document the observed sibling-popup compatibility boundary and independent review of the Sources observer correction.
+- **Evidence.** Actual saved Hiwire diagnostics show two roots, two regions and zero nested popup pruning across three presented observations; the exact extracted visitor passes eight inert controls. ROOT reviewed the full correction. [Change record](./runs/changes/2026-11-25-041532-ios-sources-portal-review-limit-b038b8d7.json).
+- **Not claimed.** Multiple descendant portals fail closed. Future nested OS compatibility and changed actual native execution remain unverified; no original requirement closes.
+
+
+### 2026-11-25-041149-ios-sources-remote-portal-correction-8f951277
+
+Recorded 2026-11-25T04:11:49.909901+00:00 · Contributor: Codex /root/ios_recovery · change
+
+- **Changed.** Preserve the failed native Sources candidate and correct scoped remote portal observation in both native test suites.
+- **Evidence.** Actual Swift build and six compiled public archive byte checks pass. Hiwire completes App and Share; Pyodide and Zlib fail Share host-baseline capture before source selection. Both observer transformations preserve all existing assertions and budgets; one existing derivation control passes. [Change record](./runs/changes/2026-11-25-041149-ios-sources-remote-portal-correction-8f951277.json).
+- **Not claimed.** Corrected observation is source-only pending different review and one fresh actual execution. No full-seven, matrix, TestFlight, physical/human accessibility, independent accuracy or original requirement closure.
+
 ### 2026-11-24-source-boundary-review
 
 Recorded 2026-11-25T05:17:03.080695+00:00 · Contributor: Codex /root/release_recovery; /root distinct source and artifact review · change
@@ -48,6 +137,77 @@ Recorded 2026-11-24T18:02:06.211236+00:00 · Contributor: Codex /root/seo; Codex
 - **Evidence.** Discovery-only58/91/26 matches the existing suites; two affected source guards pass and ROOT independently passed both with exact source hashes. Pristinecc actual classifier,43.54MB committed archive and15.68MB Rprepare packet passed separately and remain historical. Only two existing source registry rows bind actual V5 method/table bytes. [Change record](./runs/changes/2026-11-24-source-baseline-refresh.json).
 - **Not claimed.** No protected main identity, signing, AUTH, public release, changed-source archive/packet or whole58/91 suites is claimed by this source correction. New committed source needs fresh actual qualification and normal required PR checks before protected merge/publication. No source cap, baseline override, route/e72 permission,95anchor/159legacy change, SDK/model/install, accuracy or full original F057/X02 closure.
 
+### 2026-11-24-ios-public-sources-test-local
+
+Recorded 2026-11-25T03:39:10.894658+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Correct a Sources test-local name collision in the two native test suites; preserve the Sources product and all privacy/cancel outcomes and native limits.
+- **Evidence.** The actual failed test build identified a duplicate sources binding. Both complete test sources and matrix engine reconstruct exactly by reversing only the local rename and UI hash. One affected derivation control passed; ROOT different source review cleared this exact four-file correction. [Change record](./runs/changes/2026-11-24-ios-public-sources-test-local.json).
+- **Not claimed.** Source-only test correction; changed native compile and actual three-case execution remain pending. Candidate3 failed test compilation with no UI execution. Its six compiled public ZIP resources match, but that is not a UI pass. No full seven/current-app/TestFlight, physical/human accessibility, numeric accuracy, admission or original closure.
+
+
+### 2026-11-24-ios-public-sources-ux
+
+Recorded 2026-11-24T18:08:09.012592+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Make the three existing verified public source ZIP offers directly discoverable from an early native disclosure, with a dedicated Sources list shared by App and Share. Preserve the twelve notices and verification identities.
+- **Evidence.** Source preservation checks and one existing derivation control pass on the seven bound source files. The existing seven source case adds only semantic navigation; a separate three-case source cohort retains the same strict privacy and cancellation observer for each archive. ROOT different source review independently checked preservation of the production/Clear and notice reader, all notice/offer identities and the verified sharing body. [Change record](./runs/changes/2026-11-24-ios-public-sources-ux.json).
+- **Not claimed.** Source-only product candidate. Swift compile, current seven, each actual public ZIP presentation/cancel and size qualification are pending. Prior failed seven/size outcomes remain retained, not composed or rebound. No TestFlight upload, physical/human accessibility, build2, accuracy, policy admission or original closure.
+
+
+### 2026-11-24-postgres-account-integration
+
+Recorded 2026-11-25T04:11:13.941347+00:00 · Contributor: Codex /root; PostgreSQL author /root/postgres_recovery · change
+
+- **Changed.** Integrate the reviewed real PostgreSQL account/history implementation, close its registered scoped job and reconcile current scope, worker assignments and TestFlight limits.
+- **Evidence.** Exact author commit preserved in normal merge; different10-file review and3critical controls, actual final HTTP11/source-bound restore5/concurrency2 and stopped owned service/unchanged main. Scope202 and36 scoped jobs verified; original136complete/66open remains. [Change record](./runs/changes/2026-11-24-postgres-account-integration.json).
+- **Not claimed.** No public signup, real billing, production recovery/collection, fresh Apple dashboard or iPhone installation, new upload, native Sources acceptance, independent tag accuracy or original closure. Worker N-013 template metadata earns no native credit.
+
+
+### 2026-11-24-account-postgres
+
+Recorded 2026-11-25T04:07:47.490298+00:00 · Contributor: Codex /root/postgres_recovery; different source reviewer /root · change
+
+- **Changed.** Deliver the same reviewed signup and private-history domain/API on real least-privileged Unix-peer PostgreSQL, with a closed bound-SQL adapter, isolated dependency lock, transactional schema, typed commit uncertainty and observer-independent owned cleanup.
+- **Evidence.** Final current real PostgreSQL/HTTP11 groups pass4.391s; source-attributed restore5 and concurrent2 pass. Real rollback/privilege refusals, dump recovery and unchanged main/stopped owned processes are recorded. Twelve focused inert controls pass; different ROOT source review and three critical controls pass0.013s. No successful runtime or provisioning was replayed after restart. [Change record](./runs/changes/2026-11-24-account-postgres.json).
+- **Not claimed.** Private synthetic PostgreSQL component only; no public signup, real subscription/payment, production collection, backup deletion reconciliation, password recovery, Apple upload, physical accessibility, independent tag accuracy, native/transitive license clearance, new distribution route or original requirement closure. Original136complete/66open is unchanged. Idle PSS is not peak usage or an enforced whole-runtime memory cap.
+
+
+### 2026-11-24-history-filter-session-binding
+
+Recorded 2026-11-24T18:03:56.296255+00:00 · Contributor: Codex /root; different source reviewer /root/web_camo · change
+
+- **Changed.** Add owner-only result-state filtering with correct counts/cursors, public method disclosure, safe unavailable/retry UI and optional validated GET session binding; update current TestFlight limits and account/native/source assignments.
+- **Evidence.** Three actual affected store/API groups and seven full-JS inert regressions pass; actual Chromium/WebKit signup/save/filter/read/export/delete workflow passes against real local HTTP and the real private access engine. Different source review clears all nine files. The exact history usability software job closes; originals136/66 remain unchanged. [Change record](./runs/changes/2026-11-24-history-filter-session-binding.json).
+- **Not claimed.** No fresh Apple/TestFlight verification or installation, no new app upload, public signup, real payment, production PostgreSQL, physical/human accessibility, independent accuracy, all14-route clearance or original closure. Chromium-only reflow/axe/external-request instrumentation is distinguished from WebKit signin/history observations.
+
+
+### 2026-11-24-account-history-browser
+
+Recorded 2026-11-24T17:14:12.021406+00:00 · Contributor: Codex /root; /root/seo account/UI review; /root/share_debugger clock review · change
+
+- **Changed.** Implement the real private account/history browser, strict same-origin session integration, privacy-minimized PS-summary import, independent export/deletion and safe principal refresh; wire lifecycle/privacy regressions into CI and update evidenced scope/state.
+- **Evidence.** Actual current Chromium/WebKit user workflow passes against real HTTP and operator access engine. Different review reproduces stale cross-owner display and verifies four corrected full-JS failure-boundary regressions. Two different trusted-clock controls pass without clamping or weakening rollback refusal. Registered isolated account job closes; original136/66 is unchanged. [Change record](./runs/changes/2026-11-24-account-history-browser.json).
+- **Not claimed.** No public signup, customer charge, merchant/price, production PostgreSQL collection, account recovery, native/extension viewing-history binding, physical VoiceOver, independent accuracy, all14-route clearance or original closure. Earlier failed/successful browser phases are retained separately; remote CI is registered, not claimed executed.
+
+
+### 2026-11-24-account-history-delivery
+
+Recorded 2026-11-24T17:02:28.251487+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review and browser execution · change
+
+- **Changed.** Implement real pseudonymous signup, password login, rotated private sessions and per-owner metadata history with explicit opt-in, server-owned access assessment, independent export/deletion and account erasure.
+- **Evidence.** Actual isolated FastAPI account/history flows and real ROOT entitlement engine support signup, private metadata saving and access-expiry-independent export/deletion/account erasure. Seven current affected source groups pass across retained phases; ROOT independently reviewed all nine frozen sources and completed the real Chromium/WebKit user workflow with zero JavaScript, external-request or axe violations. Earlier source/runtime phases and observer errors remain separately attributed. [Change record](./runs/changes/2026-11-24-account-history-delivery.json).
+- **Not claimed.** SQLite is development/review only, operational PostgreSQL and production collection remain unqualified. Operator grants are not verified payments. No account recovery/email verification, public forum authorization, automatic viewing-history adapters, live public signup, source admission, accuracy or original closure is claimed. The22 current declared methods were not falsely represented as one complete current run; actual targeted phases and earlier19-control outcome are separately recorded. ROOT owns frontend and separately attributed browser verification.
+
+
+### 2026-11-24-c2pa-project-grant-delivery
+
+Recorded 2026-11-24T16:42:17.341661+00:00 · Contributor: Codex /root/share_debugger; Codex /root distinct grant/source review · change
+
+- **Changed.** Deliver three source-bound assembled Apache-choice notices and a canonical four-member artifact producer/received verifier from exact C2PA dependency release grants, preserving upstream filename absence and policy unknowns.
+- **Evidence.** Thirteen actual focused stdlib controls pass after a retained cleanup-mask setup leak counter and independent close/restore correction. Real isolated CLI prepare+inspect pass for39653B/fourmembers; current omitted-grant/modified-license artifacts refuse. Three txt notice bodies equal the prior actual artifact; only producer-source identity changes in its carrying index. Exact released grant/fulltext/authors are pinned to retained primary bytes. ROOT independently reads the three released grant/authorship sections and entire helper and executes three targeted delivered-fulltext, coherent-rebinding refusal and mask-fault cleanup groups PASS0.168s. [Change record](./runs/changes/2026-11-24-c2pa-project-grant-delivery.json).
+- **Not claimed.** Actual delivery is a new assembled carrying supplement, not a forged upstream file, completed C2PA dependency graph, signed SDK artifact or all14-route permission. Old manifests/unresolved filename observations and all policy refusals remain unchanged. Different ROOT grant/source review is clear; normal commit is approved. Actual selected native artifact carrying integration remains pending. No SDK/model/native/browser/runtime/package execution or acquisition.
+
 
 ### 2026-11-24-source-v5-current-integration
 
@@ -75,13 +235,42 @@ Recorded 2026-11-24T05:52:37.518419+00:00 · Contributor: Codex /root/share_debu
 - **Evidence.** Current source/policy and lifecycle review is clear; affected exact FD, policy and baseline fixture controls pass. Four independently executed lifecycle controls pass. Earlier26 tiny controls and their actual failures remain separately source-bound, not relabelled as final source. Current syntax and isolated help pass. [Change record](./runs/changes/2026-11-24-source-copy-v5.json).
 - **Not claimed.** No actual V5 whole-Q or candidate classification, archive binding, signature replay, shared registry activation, compiled runtime permission, legal clearance, accuracy or original closure. Original42be author run binds its earlier source phase; final bindings and literal/fork amendments are recorded here. ROOT owns subsequent integration and protected qualification.
 
-### 2026-11-24-reference-phone-wave
 
-Recorded 2026-11-24T15:20:34.326742+00:00 · Contributor: Codex /root; image, iPhone and source-consumer lanes attributed in board · change
+### 2026-11-24-ios-control-snapshot-efficiency
 
-- **Changed.** Update scope fixes, dated active assignments and execution accounting for image reference initialization, user-only iPhone Clear and bounded source-consumer custody.
-- **Evidence.** Scope renderer and session inspector pass with all202 originals and acceptance criteria preserved:136 complete,66 open. Three actual repair jobs are registered active; no unsupported closure is recorded. [Change record](./runs/changes/2026-11-24-reference-phone-wave.json).
-- **Not claimed.** Bookkeeping is not product acceptance. Actual first image forward remains reference-unqualified, changed iPhone source needs native qualification, and source-consumer mechanism controls use explicitly simulated authority. Target60 remains unmet.
+Recorded 2026-11-24T16:55:24.542728+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Read each layout control through one bounded immutable snapshot while retaining live existence, hittability and exact label-cardinality checks, with all containment assertions and native limits preserved.
+- **Evidence.** One affected derivation control and full prior-fixture/core reconstruction pass with eight/114 bindings stable. Installed public headers confirm the API; every other method, action, product and seven-suite source remains exact. [Change record](./runs/changes/2026-11-24-ios-control-snapshot-efficiency.json).
+- **Not claimed.** Source-only efficiency candidate, not measured runtime improvement or native acceptance. Prior largest case exceeded120seconds and remains failed; seven and four-size acceptance remain open. No cap increase, old/new pass composition, physical/human accessibility, build2, accuracy, admission or original closure.
+
+
+### 2026-11-24-ios-clear-completion-witness
+
+Recorded 2026-11-24T16:25:43.608998+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Observe the existing Cleared status after each single explicit Clear tap in the independent layout fixture, retaining all original empty-state and visibility assertions and fixed native caps.
+- **Evidence.** One affected derivation control and whole prior-fixture/core reconstruction pass with eight/114 current bindings stable; product and seven-suite sources remain exact. Preconditions and fixed completion diagnostics add no action retries or tolerance. [Change record](./runs/changes/2026-11-24-ios-clear-completion-witness.json).
+- **Not claimed.** Source-only diagnostic, not a product fix, root cause or native pass. Prior independent matrix and current seven remain failed/open; new small-screen three-configuration run pending source review and slot release. No old/new composition, physical/human accessibility, build2, accuracy, admission or original closure.
+
+
+### 2026-11-24-ios-source-baseline-readiness
+
+Recorded 2026-11-24T15:50:43.382400+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Require two consecutive exact known popup-baseline observations before the source offer, using a passive ten-second readiness expectation and the unchanged native suite limits.
+- **Evidence.** One affected derivation control passes with eight/114 bindings stable; complete prior UI and core reconstruct by only the baseline block and its literal source pin. Seven IDs and all other six case bodies remain exact; focused adapter preserves the original seven-case acceptors. [Change record](./runs/changes/2026-11-24-ios-source-baseline-readiness.json).
+- **Not claimed.** Source-only correction, not a native result. Prior actual seven remains six passed and one failed; no six-plus-one composition or old proof rebinding. Same-source focused, complete seven and four-size matrix remain pending; no physical/human accessibility, build2, accuracy, admission or original closure.
+
+
+### 2026-11-24-ios-clear-editor-source
+
+Recorded 2026-11-24T15:25:47.355247+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Return the existing empty editor to view only after explicit Clear in the shared App/Share controller, preserving privacy clearing callers; strengthen passive Clear assertions and current layout source pins.
+- **Evidence.** One affected derivation control, actual App/Share source membership, whole prior-source reconstructions and stale-seven-proof refusal pass with eight/114 current bindings stable. ROOT reviewed the six-path source diff; same-source native seven and matrix remain required. [Change record](./runs/changes/2026-11-24-ios-clear-editor-source.json).
+- **Not claimed.** Source-only product revision, not an observed native fix. All four prior matrix failures and old seven proof remain historical; no future70e/build2 qualification, physical device, human accessibility, accuracy, admission, original closure or composed old/new passes.
+
 
 ### 2026-11-24-image-reference-position-buffer
 
@@ -90,6 +279,42 @@ Recorded 2026-11-24T15:22:32.034250+00:00 · Contributor: Codex /root/seo; Codex
 - **Changed.** Materialize only the exact validated publisher nonpersistent HF position-id buffer and refuse any remaining non-CPU model parameter or buffer before the original reference forward.
 - **Evidence.** One expanded existing inert reference safety group passes with88 stable inputs; ROOT independently read the exact source and passed the same group. The entire original infer AST is restored by removing only the buffer-adoption call; all85 other source inputs and101 declared source controls remain unchanged. [Change record](./runs/changes/2026-11-24-image-reference-position-buffer.json).
 - **Not claimed.** Actual failure45408000792 is preserved; its precise numerical cause remains unproven. No local SDK/model/native execution, extra forward/probe, tolerance/cache/permission/seal/cap change, hosted retry, reference equivalence, accuracy, redistribution/legal clearance or full-original closure. Author run was captured before this subsequent distinct review and retains its pending-at-capture field.
+
+
+### 2026-11-24-image-reference-qualified
+
+Recorded 2026-11-24T16:28:37.494117+00:00 · Contributor: Codex /root; different engineering reviewers attributed in evidence · change
+
+- **Changed.** Adopt the exact successful hosted image-reference engineering result after separate authenticated provider, artifact and strict-inspector review.
+- **Evidence.** Actual run45425852215 passes17 runtime/failure cases and3 numerical comparisons with identical crops, original tolerances and owned cleanup. ROOT separately verifies provider run/job/artifact identity and reruns only the bounded artifact inspector, not the model. [Change record](./runs/changes/2026-11-24-image-reference-qualified.json).
+- **Not claimed.** Not17 correctly identified AI images. Accuracy is unmeasured, origin remains unknown and no tag is issued. No JIT equivalence, runtime/legal clearance, all-format support, paid access or T-FA/F-057/X-02 original closure.
+
+
+### 2026-11-24-history-access-engine
+
+Recorded 2026-11-24T16:28:37.494117+00:00 · Contributor: Codex /root; different engineering reviewers attributed in evidence · change
+
+- **Changed.** Implement private server-owned history access grants, expiry, renewal, replay-safe revocation and erasure with a working operator CLI; integrate the owner-approved optional paid-history scope and current execution accounting.
+- **Evidence.** Thirteen current lifecycle, CLI, refusal and failure-atomicity controls pass. A different reviewer reproduced and verified corrections for interrupted replacement and privacy drift. All202 original IDs and criteria are preserved; image repair and access engine are finished scoped jobs, not original closures. [Change record](./runs/changes/2026-11-24-history-access-engine.json).
+- **Not claimed.** Operator grants are not verified customer payments. No merchant, price, public signup, production PostgreSQL collection, physical/human acceptance or original closure. Account HTTP/browser integration remains active; original count136complete66open, target60unmet.
+
+
+### 2026-11-23-personal-history-spatial-scope
+
+Recorded 2026-11-24T04:48:25.637000+00:00 · Contributor: Codex /root; Michael owner direction · change
+
+- **Changed.** Record the owner-selected paid personal history upgrade, signup community, model-level provenance and explicit spatial/temporal roadmap; narrow the former blanket free-feature wording without gating personal detection or evidence.
+- **Evidence.** Scope schema/render/link checks pass; all202originals,39packages,117subtasks and136complete66open remain unchanged. New history enhancement is20%writtencontract only. [Change record](./runs/changes/2026-11-23-personal-history-spatial-scope.json).
+- **Not claimed.** No history store, account/signup service, checkout, social publication, model attribution, new modality/tag or original closure. Isolated draft source requires different review, fresh affected checks and next finite protected-baseline admission before publication.
+
+
+### 2026-11-24-reference-phone-wave
+
+Recorded 2026-11-24T15:20:34.326742+00:00 · Contributor: Codex /root; image, iPhone and source-consumer lanes attributed in board · change
+
+- **Changed.** Update scope fixes, dated active assignments and execution accounting for image reference initialization, user-only iPhone Clear and bounded source-consumer custody.
+- **Evidence.** Scope renderer and session inspector pass with all202 originals and acceptance criteria preserved:136 complete,66 open. Three actual repair jobs are registered active; no unsupported closure is recorded. [Change record](./runs/changes/2026-11-24-reference-phone-wave.json).
+- **Not claimed.** Bookkeeping is not product acceptance. Actual first image forward remains reference-unqualified, changed iPhone source needs native qualification, and source-consumer mechanism controls use explicitly simulated authority. Target60 remains unmet.
 
 
 ### 2026-11-24-image-reference-validation
@@ -144,14 +369,6 @@ Recorded 2026-11-24T03:16:29.216235+00:00 · Contributor: Codex /root/seo; ROOT 
 - **Changed.** Added one exact tokenizers wheel source-term companion path for private reference preservation, requiring fixed wheel/metadata/source/companion identity before pip and retaining honest empty carried-notice fields. All unlisted wheels retain carried-notice refusal.
 - **Evidence.** Actual100 stdlib/source controls33/35/5/27 pass without skips; before/after88 source hashes match. The same retained wheel fails under original d7 and passes the new preservation observation with empty carried notices. ROOT independently checked93 full texts,309 associations,153 index and the frozen lifecycle source; its actual grouped lifecycle control passed. [Change record](./runs/changes/2026-11-23-tokenizers-source-preservation.json).
 - **Not claimed.** No download, SDK/model installation, native method forward, Linux execution, changed-source dispatch, redistribution permission, compiled coverage, license clearance, original closure or criteria/percentage change. Source-copy classification, successor integration and any hosted private qualification remain ROOT-owned future work.
-
-### 2026-11-24-ios-clear-editor-source
-
-Recorded 2026-11-24T15:25:47.355247+00:00 · Contributor: Codex /root/web_camo · change
-
-- **Changed.** Return the existing empty editor to view only after explicit Clear in the shared App/Share controller, preserving privacy clearing callers; strengthen passive Clear assertions and current layout source pins.
-- **Evidence.** One affected derivation control, actual App/Share source membership, whole prior-source reconstructions and stale-seven-proof refusal pass with eight/114 current bindings stable. ROOT reviewed the six-path source diff; same-source native seven and matrix remain required. [Change record](./runs/changes/2026-11-24-ios-clear-editor-source.json).
-- **Not claimed.** Source-only product revision, not an observed native fix. All four prior matrix failures and old seven proof remain historical; no future70e/build2 qualification, physical device, human accessibility, accuracy, admission, original closure or composed old/new passes.
 
 
 ### 2026-11-24-ios-size-matrix-frame-diagnostics

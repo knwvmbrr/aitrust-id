@@ -1,0 +1,249 @@
+{
+  "profile": "c2pa-project-grant-notice-delivery-engineering/v1",
+  "captured_at": "2026-11-24T16:42:17.341661+00:00",
+  "author": "Codex /root/share_debugger",
+  "source_base": "ccbadc16836087dbbd6c9cd8b7f8029b69e01445",
+  "pass": true,
+  "scope": "Three exact source-grant supplements and canonical received notice artifact, not native C2PA or route permission.",
+  "sources": {
+    "tools/c2pa_project_grants.py": {
+      "bytes": 12887,
+      "sha256": "4724e725171b6755f3d03da049bbb3636b959d434c16ec7386069cd21427352b"
+    },
+    "scripts/c2pa-project-grants.py": {
+      "bytes": 1334,
+      "sha256": "3e99f8736ebbc4e256e05febd4a602348012be2951186a1479c13d79670c1109"
+    },
+    "tests/test_c2pa_project_grants.py": {
+      "bytes": 10827,
+      "sha256": "bf61d4dbb43c001ce4c2fa76393dd8119d6bfc743ab8aee530afd40aac2c37ea"
+    },
+    "sbom/c2pa-native/project-grants.json": {
+      "bytes": 4810,
+      "sha256": "65f2b475e2377bc4c739e8f26906ad64de7139cd29d24bd3cf4ca54079c027a8"
+    },
+    "docs/c2pa-project-grants-plan.md": {
+      "bytes": 5929,
+      "sha256": "e675b7eb1132d7251cf7c3945092dc9ce5af44cbb7e07538c1471af023a9749c"
+    },
+    "docs/c2pa-project-grants.md": {
+      "bytes": 3377,
+      "sha256": "ada8984025484b2ed5c1a438ace575a61449f1785d23dc8575b163d19c4ed593"
+    }
+  },
+  "existing_C2PA_and_policy_sources_unchanged": {
+    "tools/c2pa_native_obligations.py": {
+      "bytes": 21838,
+      "sha256": "134d8b7010a9dbab91004f2ffaaf66f3ead26817520b54fed56b811e4f751f7e"
+    },
+    "scripts/verify-c2pa-native-obligations.py": {
+      "bytes": 1970,
+      "sha256": "d473390bf18392f6bf8e61d012680cc65bc3e03c67be5ca0d7a37d779c5fe322"
+    },
+    "tests/test_c2pa_native_obligations.py": {
+      "bytes": 7558,
+      "sha256": "1fd437c4f75baf83a18795e7301bf5c29dbbfb9326332e21556dddfcebe11223"
+    },
+    "sbom/c2pa-native/manifest.json": {
+      "bytes": 3427741,
+      "sha256": "5e9e5e45c13013f727a1fb8a098b6e70db7bb363c2b43bff16cfc834c2ff4a14"
+    },
+    "sbom/c2pa-native/notice-supplements.json": {
+      "bytes": 22205,
+      "sha256": "3938247d6f8d0f5f1cb7403c2b8040181280c6686da003284efd8a3e9d8948c8"
+    },
+    "tools/dependency_policy.py": {
+      "bytes": 15682,
+      "sha256": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408"
+    },
+    "eval/dependency-policy.json": {
+      "bytes": 35104,
+      "sha256": "8a71c73daca1a96367b03fef23b89245534df7586fea657c99fb81c71a916c20"
+    },
+    "tools/source_release_policy_v5.py": {
+      "bytes": 32927,
+      "sha256": "474f067a47788efa2e74370555f9e1242634568e54af77ae26b7254c3575c769"
+    },
+    "eval/dependencies/source-snapshot-additions-v5.json": {
+      "bytes": 62536,
+      "sha256": "22b2da821181d2c905efad639543a792e292d961499731f8a31a4d5e18247e29"
+    }
+  },
+  "actual_controls": {
+    "tests": 13,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 0.929,
+    "log_bytes": 2354,
+    "log_sha256": "c76cd854238967f001af47a06bb195ddf0ca326a09cc6e8ef615b4fd0c28e2d1",
+    "cases": "All original12 component controls plus actual post-source cleanup-mask setup/restore fault and entry-clock type checks; no old441/native/policy tests repeated."
+  },
+  "actual_retained_artifact_delivery": {
+    "profile": "actual-corrected-three-grant-artifact-delivery/v1",
+    "captured_at": "2026-11-24T16:41:22.412580+00:00",
+    "pass": true,
+    "artifact_bytes": 39653,
+    "artifact_sha256": "0347f3be91df7957b8486b883c124f2583b4bf5b3802a49d283db18a8001ef9d",
+    "members": {
+      "btree-range-map-0.7.2-APACHE-2.0.txt": {
+        "bytes": 12053,
+        "sha256": "6979839d14b0b2e4cd15a2990c640b576030a590fb888f269414823fdbd87474"
+      },
+      "range-traits-0.3.2-APACHE-2.0.txt": {
+        "bytes": 12041,
+        "sha256": "dc6f780289b0e97203f3ec639f4eaa3030ae480f3e03bd97ca62f6b7d1c90138"
+      },
+      "static-regular-grammar-2.0.2-APACHE-2.0.txt": {
+        "bytes": 12081,
+        "sha256": "4e1d5edb5ad86884234cc9f0d3c8302925b50d2893c309c8c05b708d055d1b1c"
+      },
+      "C2PA-PROJECT-GRANTS.json": {
+        "bytes": 2880,
+        "sha256": "fecdb602395c6e83ce52e6d7097507d24805d42b71f2831ecc42c0a23bdb0524"
+      }
+    },
+    "actualCLIprepare": {
+      "bytes": 39653,
+      "claims": {
+        "legal_clearance": false,
+        "native_incorporation_complete": false,
+        "route_admitted": false,
+        "upstream_notice_file_recovered": false
+      },
+      "members": 4,
+      "packages": 3,
+      "pass": true,
+      "profile": "c2pa-three-project-notice-delivery/v1",
+      "sha256": "0347f3be91df7957b8486b883c124f2583b4bf5b3802a49d283db18a8001ef9d"
+    },
+    "actualCLIinspect": {
+      "bytes": 39653,
+      "claims": {
+        "legal_clearance": false,
+        "native_incorporation_complete": false,
+        "route_admitted": false,
+        "upstream_notice_file_recovered": false
+      },
+      "members": 4,
+      "packages": 3,
+      "pass": true,
+      "profile": "c2pa-three-project-notice-delivery/v1",
+      "sha256": "0347f3be91df7957b8486b883c124f2583b4bf5b3802a49d283db18a8001ef9d"
+    },
+    "current_received_negatives": [
+      {
+        "case": "omitted-grant",
+        "exit_code": 2,
+        "pass": true,
+        "sha256": "aab4ee56360ec28a3f183ddbeaad1fae7af4924f9dc531c32a0e3e3d6ac90817"
+      },
+      {
+        "case": "modified-full-license",
+        "exit_code": 2,
+        "pass": true,
+        "sha256": "37e64eb358b3b58d5940601d445c0d74e3f6985fe06b967d8ddd2e1cd83c8417"
+      }
+    ],
+    "three_notice_member_bytes_equal_original_phase": true,
+    "carrying_manifest_only_producer_source_SHA_changes": true,
+    "resources": {
+      "source_read_calls": 10,
+      "source_charged_bytes": 3469560,
+      "capture_bytes": 3469560,
+      "source_capture_owned_FD": 21,
+      "expanded_members_bytes": 39055
+    },
+    "source_rows": {
+      "tools/c2pa_project_grants.py": {
+        "bytes": 12887,
+        "sha256": "4724e725171b6755f3d03da049bbb3636b959d434c16ec7386069cd21427352b"
+      },
+      "scripts/c2pa-project-grants.py": {
+        "bytes": 1334,
+        "sha256": "3e99f8736ebbc4e256e05febd4a602348012be2951186a1479c13d79670c1109"
+      },
+      "tests/test_c2pa_project_grants.py": {
+        "bytes": 10827,
+        "sha256": "bf61d4dbb43c001ce4c2fa76393dd8119d6bfc743ab8aee530afd40aac2c37ea"
+      },
+      "sbom/c2pa-native/project-grants.json": {
+        "bytes": 4810,
+        "sha256": "65f2b475e2377bc4c739e8f26906ad64de7139cd29d24bd3cf4ca54079c027a8"
+      },
+      "docs/c2pa-project-grants-plan.md": {
+        "bytes": 5929,
+        "sha256": "e675b7eb1132d7251cf7c3945092dc9ce5af44cbb7e07538c1471af023a9749c"
+      },
+      "docs/c2pa-project-grants.md": {
+        "bytes": 3377,
+        "sha256": "ada8984025484b2ed5c1a438ace575a61449f1785d23dc8575b163d19c4ed593"
+      }
+    },
+    "no_SDK_native_or_route_admission": true,
+    "actual_delivery_source_phase": "Corrected source4724; notice txt bytes equal initial artifact, manifest changes only producer source hash. Earlier5 received-negative artifacts remain historical; current13 controls and2 new retained variants bind corrected source."
+  },
+  "actual_delivery_receipt_sha256": "651662b1b6222fdbd5afaec2446981a1ea7631d036bed1de199ef5f7bd1b6c87",
+  "primary_grant_facts": {
+    "sha256": "431a5772aa72fe513f392e33d7fea7e4142a1d2b3226925d0bc367d30d6bc1c9",
+    "bytes": 10610,
+    "exact_released_README_explicit_choices": 3,
+    "selected_license": "Apache-2.0",
+    "official_standard_text_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "existing_Q_same_publisher_fulltext_sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "official_and_retained_whitespace_tokens_match": true,
+    "upstream_absent_license_notice_filenames_not_fabricated": true
+  },
+  "measured_resources": {
+    "source_reads": 10,
+    "source_logical_bytes": 3469560,
+    "capture_actual_body_bytes": 3469560,
+    "source_capture_owned_descriptors": 21,
+    "prepare_or_inspect_reads": 11,
+    "prepare_or_inspect_logical_bytes": 3509213,
+    "canonical_artifact_bytes": 39653,
+    "expanded_member_bytes": 39055,
+    "members": 4,
+    "max_source_input": 8000000,
+    "max_aggregate_FD": 80,
+    "max_reads": 16,
+    "one_operation_seconds": 10,
+    "output_and_expanded_caps": 131072,
+    "member_cap": 32768
+  },
+  "claims": {
+    "route_admitted": false,
+    "full_native_incorporation": false,
+    "upstream_license_file_recovered": false,
+    "signature_verified": false,
+    "license_clearance": false,
+    "source_compiler_reproduced": false,
+    "accuracy": false,
+    "original_closure": false
+  },
+  "limits": "Actual delivery is a new assembled carrying supplement, not a forged upstream file, completed C2PA dependency graph, signed SDK artifact or all14-route permission. Old manifests/unresolved filename observations and all policy refusals remain unchanged. Different ROOT grant/source review and normal commit remain pending. No SDK/model/native/browser/runtime/package execution or acquisition.",
+  "historical_initial_phase": {
+    "author_run_sha256": "2f5fe6ed1b3dd62ff303e9cf0f79f9fb474cfb01c5a85e1a951f02608b0e023c",
+    "source_sha256": "58af6537fc3b5f9e0245c9125e669928b4df078985cdb6f89ed20a46d6933591",
+    "controls": {
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 0.579,
+      "log_bytes": 2161,
+      "log_sha256": "471fe5c43d59bcd2a42bb0bc335a5bcbf97ecf8ff295098b014445abc5fbc704",
+      "cases": "Real source-derived prepare/inspect+CLI; omitted/modifiedgrant/license/index/extra/alternate encoding; changed source/coherentindex; nooverwrite/private/partialwrite/cancel/actualpendingalarm/close/clock/FDrefusal."
+    },
+    "actual_delivery_receipt_sha256": "faddd4c668a3091fe2aa722693ad0b77cfdcdc0b2703dee069087eb65d59fbd8",
+    "artifact_sha256": "68b572a5c0404af745948e030955965e41e449c93baef53559699d04f778541d",
+    "preserved": "Exact original raw source/run/event and actual artifacts are retained privately under digest names; this phase does not bind corrected source."
+  },
+  "preserved_cleanup_failure": {
+    "counter_sha256": "35a92379a75c130a82a061bf8c95816172793fd5ef2cd480e1e8b047136c36c6",
+    "source_sha256": "58af6537fc3b5f9e0245c9125e669928b4df078985cdb6f89ed20a46d6933591",
+    "actual_own_fds_live_after_refusal": 21,
+    "closed_by_author_after_counter": true,
+    "correction": "Cleanup now attempts signal blocking, owned Capture.close and original-entry-mask restoration independently. Setup/restore faults refuse but cannot skip source descriptor close; original entry clock covers setup and finalization."
+  }
+}

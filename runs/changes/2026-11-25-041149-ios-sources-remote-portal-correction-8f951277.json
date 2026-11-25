@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-041149-ios-sources-remote-portal-correction-8f951277",
+  "recorded_at": "2026-11-25T04:11:49.909901+00:00",
+  "author": "Codex /root/ios_recovery",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "97221b5a5c1380f4f3ca6cfe17943097ec6ce5e0",
+  "changed": "Preserve the failed native Sources candidate and correct scoped remote portal observation in both native test suites.",
+  "proves": "Actual Swift build and six compiled public archive byte checks pass. Hiwire completes App and Share; Pyodide and Zlib fail Share host-baseline capture before source selection. Both observer transformations preserve all existing assertions and budgets; one existing derivation control passes.",
+  "limits": "Corrected observation is source-only pending different review and one fresh actual execution. No full-seven, matrix, TestFlight, physical/human accessibility, independent accuracy or original requirement closure.",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "files": {
+    "mobile/ios/Tests/UIFlows.swift": "1b215994c6ef3ca6344fcd1b7420d220a5a78112a8eb6fd1d54b0e5f0dfe8df2",
+    "mobile/ios/Tests/PublicSourcesFlows.swift": "fb5be61be2600a0d2bc8a9973a4b00a36933c16a650564424a4c58ce57dfc347",
+    "tools/ios_simulator_matrix.py": "a09ef3b0a49505a6ab7618f9b59df93943a26c05b266c34e172bfcb6593b2888",
+    "docs/ios-simulator-matrix-plan.md": "9f1c61bc7504161658a931846d8d254d14b5c228c90a83b9f4fa9e65b4567a13",
+    "docs/ios-simulator-matrix.md": "bbde3339d4c0bf2f9c89ddaa1cd885b35f47efc3850b1daa93bd252ef26318cc",
+    "runs/2026-11-24-ios-sources-remote-portal-correction.json": "9b662ea1f2548ced447859a40efe9158035efe5120bfbcd61c8e6eaa29ef5aac"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-sources-remote-portal-correction.json",
+      "sha256": "9b662ea1f2548ced447859a40efe9158035efe5120bfbcd61c8e6eaa29ef5aac"
+    }
+  ],
+  "checks": []
+}

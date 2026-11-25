@@ -1,0 +1,428 @@
+{
+  "actual_concurrent_seed": {
+    "cases": [
+      {
+        "case": "actual_nonempty_backup_seed",
+        "pass": true
+      },
+      {
+        "case": "two_actual_concurrent_peer_transactions",
+        "pass": true
+      }
+    ],
+    "pass": true,
+    "seconds": 0.5820226329378784,
+    "source": {
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+      "deploy/accounts/001-account-schema.sql": "8bf9fe5a84f6cf13d5118a8fe8e18a27edeae3d2f980ceec0e34ca0500c5e159",
+      "deploy/accounts/requirements.lock": "de5d8516f86f49ee92e822712c6a14c9a2b60304893466f2a3fd10516ccdfd4a",
+      "deploy/accounts/runtime-sources.json": "16689b12cfad1f96d53c062a8cef8faeb031223361c9964a8dc4a24adb9d7859",
+      "scripts/account-postgres-review.py": "95dd48eef160bfb3f6d1c2ece6b6213b31bd41b6f7bf0d6a1b9eeef6894e5ef3",
+      "scripts/verify-account-postgres.py": "e98a23e1d96522fa9719a71c0facab50d6f07ce6bfa8cf2d6ee1a83827711d3a",
+      "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+      "services/accounts/__main__.py": "6bcb6c4341f58d6284ed935fd1b6ab5f651b5e2bd3eeaf676cf2efc4e12a6ccf",
+      "services/accounts/app.py": "6ff30e13d96952a0043cf0815f1f1255e9fa7a19f11da17838f96f93e5f42f5e",
+      "services/accounts/postgres.py": "a5884af53e27301b0b2eda0a097892e5b045b900ac66b5a0819f962d0f778a87",
+      "site/account/app.js": "55fc7a6ccfc7ad3f3715ed7cbcdbe51c81347773d1279e8fd101f5848831fd04",
+      "site/account/index.html": "4aed4fd93e4f1eb50c1aa5e2ec23d0c463498a1f4c7e730b45254b2c85553847",
+      "site/account/style.css": "89d2de1878b9f1cbe31afa8274140e134120d111e749850b8120fa0c80128580",
+      "tools/account_core.py": "372de5a8003dcf246b5600a1f40d0cef5b29ef693ca077000cb33c03c824a10a",
+      "tools/account_postgres.py": "d708a33db1449f4a53a79151f2b5aba61edc00e224053efbae0984b48fd2c5c1",
+      "tools/account_store.py": "0fddcddd322d02ff785592cb5227fac217ebccdc22a42a7930d0002003478685",
+      "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+      "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+      "tools/history_entitlements.py": "011643552ed573a43105b377aeb297920a2198ef07d388e2564fae1a78cb8a4d"
+    }
+  },
+  "actual_restore": {
+    "dump": {
+      "actual_restore": true,
+      "actual_runtime_role": "ait_account_runtime",
+      "backup_bytes": 18158,
+      "backup_sha256": "4fd08634a9faeb3b5fa67b549add3142fa744cf784a4919e157134670d4e57de",
+      "pass": true,
+      "production_database_modified": false,
+      "synthetic_only": true
+    },
+    "source_phase_note": "Core/domain/app/schema/lock sources match final; restore helper and verifier retain their own earlier exact hashes. Final cleanup-only edits do not relabel the restore run.",
+    "workflow": {
+      "actual_postgresql": true,
+      "cases": [
+        {
+          "case": "real_dump_restore_password_login_and_exact_nonempty_payload",
+          "pass": true
+        },
+        {
+          "case": "actual_sql_logical_retention_expiry_without_owner_view_dependency",
+          "pass": true
+        },
+        {
+          "case": "persisted_clock_rollback_refuses_after_restore",
+          "pass": true
+        },
+        {
+          "case": "restored_account_delete_keeps_durable_unavailable_cleanup_outbox",
+          "pass": true
+        },
+        {
+          "case": "actual_recovered_deletion_outbox_retry_with_separate_real_access_engine",
+          "pass": true
+        }
+      ],
+      "mode": "restore",
+      "pass": true,
+      "payment_processed": false,
+      "public_service_enabled": false,
+      "seconds": 1.3897347296588123,
+      "source": {
+        "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+        "deploy/accounts/001-account-schema.sql": "8bf9fe5a84f6cf13d5118a8fe8e18a27edeae3d2f980ceec0e34ca0500c5e159",
+        "deploy/accounts/requirements.lock": "de5d8516f86f49ee92e822712c6a14c9a2b60304893466f2a3fd10516ccdfd4a",
+        "deploy/accounts/runtime-sources.json": "16689b12cfad1f96d53c062a8cef8faeb031223361c9964a8dc4a24adb9d7859",
+        "scripts/account-postgres-review.py": "02de06f9082adb4428ab48e6d6b69ffc58569f2a8b562ba39cc28e2eab417299",
+        "scripts/verify-account-postgres.py": "99729828c9b99b4978c89049db61706576ebf248fbeaaf636d2319d6f7380d5b",
+        "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+        "services/accounts/__main__.py": "6bcb6c4341f58d6284ed935fd1b6ab5f651b5e2bd3eeaf676cf2efc4e12a6ccf",
+        "services/accounts/app.py": "6ff30e13d96952a0043cf0815f1f1255e9fa7a19f11da17838f96f93e5f42f5e",
+        "services/accounts/postgres.py": "e0a089ddeaa8541c3a55c1a0c8366a3e42c0b8e63da05be7e7c71dd4114852b8",
+        "site/account/app.js": "55fc7a6ccfc7ad3f3715ed7cbcdbe51c81347773d1279e8fd101f5848831fd04",
+        "site/account/index.html": "4aed4fd93e4f1eb50c1aa5e2ec23d0c463498a1f4c7e730b45254b2c85553847",
+        "site/account/style.css": "89d2de1878b9f1cbe31afa8274140e134120d111e749850b8120fa0c80128580",
+        "tools/account_core.py": "372de5a8003dcf246b5600a1f40d0cef5b29ef693ca077000cb33c03c824a10a",
+        "tools/account_postgres.py": "d708a33db1449f4a53a79151f2b5aba61edc00e224053efbae0984b48fd2c5c1",
+        "tools/account_store.py": "0fddcddd322d02ff785592cb5227fac217ebccdc22a42a7930d0002003478685",
+        "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+        "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+        "tools/history_entitlements.py": "011643552ed573a43105b377aeb297920a2198ef07d388e2564fae1a78cb8a4d"
+      },
+      "source_commit": "40fc0ba9142261299c38698786374984503edca9",
+      "source_unchanged": true,
+      "synthetic_only": true
+    }
+  },
+  "capture_semantics": "Reconciled retained actual execution artifacts after desktop restart; this timestamp is evidence reconciliation, not a new runtime execution. No successful provisioning, dependencies, HTTP or restore run was repeated.",
+  "captured_at": "2026-11-25T04:00:31.372364+00:00",
+  "claim_level": "engineering_only",
+  "final_current_actual_http_and_cleanup": {
+    "cleanup": {
+      "main_application_tables": 0,
+      "main_critical_snapshot_unchanged": true,
+      "owned_cluster_stopped": true,
+      "owned_http_listener_absent": true,
+      "owned_pg_socket_absent": true,
+      "owned_stop_attempted": true,
+      "owned_workspace_retained": true,
+      "pass": true,
+      "pg_ctl_wait_completed": true,
+      "production_or_payment_active": false,
+      "pss_is_not_peak_or_whole_runtime_enforcement": true,
+      "public_service_enabled": false,
+      "review_pg_idle_pss_kib": 17816,
+      "workspace_allocated_bytes": 111292416
+    },
+    "http_exit": 0,
+    "http_stderr_bytes": 0,
+    "http_stdout_sha256": "8401df04b06bc34461c05d4e159caaeb7f9d3577ba2a6d0586f80a7b7ab0239e",
+    "pass": true,
+    "payment_processed": false,
+    "phase": "Final current-source11HTTP groups after PG env/passfile correction; observer-independent cleanup",
+    "public_service_enabled": false,
+    "start": {
+      "owned_existing_cluster_started": true,
+      "pass": true,
+      "public_service_enabled": false
+    },
+    "workflow": {
+      "actual_postgresql": true,
+      "cases": [
+        {
+          "case": "actual_unprivileged_peer_store_transaction",
+          "pass": true
+        },
+        {
+          "case": "signup_two_real_accounts",
+          "pass": true
+        },
+        {
+          "case": "exact_origin_csrf_and_optional_get_binding",
+          "pass": true
+        },
+        {
+          "case": "server_owned_access_not_client_payment",
+          "pass": true
+        },
+        {
+          "case": "actual_history_append_owner_isolation_and_conflict",
+          "pass": true
+        },
+        {
+          "case": "actual_filtered_history_counts_cursor_and_complete_export",
+          "pass": true
+        },
+        {
+          "case": "revocation_does_not_block_read_export_disable_or_removal",
+          "pass": true
+        },
+        {
+          "case": "logout_and_real_password_login",
+          "pass": true
+        },
+        {
+          "case": "real_precommit_cancellation_rolls_back",
+          "pass": true
+        },
+        {
+          "case": "real_commit_then_lost_ack_is_typed_not_fake_rollback",
+          "pass": true
+        },
+        {
+          "case": "delete_account_reauthentication_and_durable_cleanup",
+          "pass": true
+        }
+      ],
+      "driver": {
+        "implementation": "python",
+        "libpq_version": 190000,
+        "name": "psycopg",
+        "version": "3.3.9"
+      },
+      "http_process_exit_code": -15,
+      "owned_http_process_stopped": true,
+      "pass": true,
+      "payment_processed": false,
+      "profile": "synthetic-postgres-account-http-review/v1",
+      "public_service_enabled": false,
+      "seconds": 4.391047570854425,
+      "source": {
+        "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+        "deploy/accounts/001-account-schema.sql": "8bf9fe5a84f6cf13d5118a8fe8e18a27edeae3d2f980ceec0e34ca0500c5e159",
+        "deploy/accounts/requirements.lock": "de5d8516f86f49ee92e822712c6a14c9a2b60304893466f2a3fd10516ccdfd4a",
+        "deploy/accounts/runtime-sources.json": "16689b12cfad1f96d53c062a8cef8faeb031223361c9964a8dc4a24adb9d7859",
+        "scripts/account-postgres-review.py": "e302513ff2eb5871bbce90b9c49429c9f06153b71669cd5fdd3942d2b16eb356",
+        "scripts/verify-account-postgres.py": "524a1c80d51b30c4508048bda7e502b2b853ec16e8a1af69ebb4f62a770e291b",
+        "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+        "services/accounts/__main__.py": "6bcb6c4341f58d6284ed935fd1b6ab5f651b5e2bd3eeaf676cf2efc4e12a6ccf",
+        "services/accounts/app.py": "6ff30e13d96952a0043cf0815f1f1255e9fa7a19f11da17838f96f93e5f42f5e",
+        "services/accounts/postgres.py": "e0a089ddeaa8541c3a55c1a0c8366a3e42c0b8e63da05be7e7c71dd4114852b8",
+        "site/account/app.js": "55fc7a6ccfc7ad3f3715ed7cbcdbe51c81347773d1279e8fd101f5848831fd04",
+        "site/account/index.html": "4aed4fd93e4f1eb50c1aa5e2ec23d0c463498a1f4c7e730b45254b2c85553847",
+        "site/account/style.css": "89d2de1878b9f1cbe31afa8274140e134120d111e749850b8120fa0c80128580",
+        "tools/account_core.py": "372de5a8003dcf246b5600a1f40d0cef5b29ef693ca077000cb33c03c824a10a",
+        "tools/account_postgres.py": "d708a33db1449f4a53a79151f2b5aba61edc00e224053efbae0984b48fd2c5c1",
+        "tools/account_store.py": "0fddcddd322d02ff785592cb5227fac217ebccdc22a42a7930d0002003478685",
+        "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+        "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+        "tools/history_entitlements.py": "011643552ed573a43105b377aeb297920a2198ef07d388e2564fae1a78cb8a4d"
+      },
+      "source_commit": "40fc0ba9142261299c38698786374984503edca9",
+      "source_unchanged": true,
+      "synthetic_only": true
+    }
+  },
+  "final_runtime_source": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "deploy/accounts/001-account-schema.sql": "8bf9fe5a84f6cf13d5118a8fe8e18a27edeae3d2f980ceec0e34ca0500c5e159",
+    "deploy/accounts/requirements.lock": "de5d8516f86f49ee92e822712c6a14c9a2b60304893466f2a3fd10516ccdfd4a",
+    "deploy/accounts/runtime-sources.json": "16689b12cfad1f96d53c062a8cef8faeb031223361c9964a8dc4a24adb9d7859",
+    "scripts/account-postgres-review.py": "e302513ff2eb5871bbce90b9c49429c9f06153b71669cd5fdd3942d2b16eb356",
+    "scripts/verify-account-postgres.py": "524a1c80d51b30c4508048bda7e502b2b853ec16e8a1af69ebb4f62a770e291b",
+    "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+    "services/accounts/__main__.py": "6bcb6c4341f58d6284ed935fd1b6ab5f651b5e2bd3eeaf676cf2efc4e12a6ccf",
+    "services/accounts/app.py": "6ff30e13d96952a0043cf0815f1f1255e9fa7a19f11da17838f96f93e5f42f5e",
+    "services/accounts/postgres.py": "e0a089ddeaa8541c3a55c1a0c8366a3e42c0b8e63da05be7e7c71dd4114852b8",
+    "site/account/app.js": "55fc7a6ccfc7ad3f3715ed7cbcdbe51c81347773d1279e8fd101f5848831fd04",
+    "site/account/index.html": "4aed4fd93e4f1eb50c1aa5e2ec23d0c463498a1f4c7e730b45254b2c85553847",
+    "site/account/style.css": "89d2de1878b9f1cbe31afa8274140e134120d111e749850b8120fa0c80128580",
+    "tools/account_core.py": "372de5a8003dcf246b5600a1f40d0cef5b29ef693ca077000cb33c03c824a10a",
+    "tools/account_postgres.py": "d708a33db1449f4a53a79151f2b5aba61edc00e224053efbae0984b48fd2c5c1",
+    "tools/account_store.py": "0fddcddd322d02ff785592cb5227fac217ebccdc22a42a7930d0002003478685",
+    "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "tools/history_entitlements.py": "011643552ed573a43105b377aeb297920a2198ef07d388e2564fae1a78cb8a4d"
+  },
+  "final_runtime_source_matches_current_files_or_exact_base_git_blob": true,
+  "focused_inert_controls": {
+    "captured_at": "2026-11-25T03:40:49.372797+00:00",
+    "errors": 0,
+    "failures": 0,
+    "log_sha256": "47ad02d5882f1fa3e0a0129e6690a8291807d9e058cd16bdb14aa9be414d0ee6",
+    "pass": true,
+    "scope": "Small source/dialect/row/clock/fault/observer/FD controls only; no mocked PG-positive claim",
+    "seconds": 0.014312374987639487,
+    "skips": 0,
+    "source": {
+      "scripts/account-postgres-review.py": "e302513ff2eb5871bbce90b9c49429c9f06153b71669cd5fdd3942d2b16eb356",
+      "scripts/verify-account-postgres.py": "524a1c80d51b30c4508048bda7e502b2b853ec16e8a1af69ebb4f62a770e291b",
+      "services/accounts/postgres.py": "e0a089ddeaa8541c3a55c1a0c8366a3e42c0b8e63da05be7e7c71dd4114852b8",
+      "tests/test_account_postgres.py": "3cca170e154493cb71ae42f821197f5c9ff05101851841459fc8444f592f791c",
+      "tools/account_postgres.py": "d708a33db1449f4a53a79151f2b5aba61edc00e224053efbae0984b48fd2c5c1"
+    },
+    "tests": 12
+  },
+  "independent_release_validated": false,
+  "original_counts_unchanged": {
+    "complete": 136,
+    "open": 66,
+    "total": 202
+  },
+  "original_requirement_closures": [],
+  "pass": true,
+  "payment_processed": false,
+  "phase_history": {
+    "corrected_first_cleanup": {
+      "captured_review_processes_not_live": true,
+      "main_application_tables": 0,
+      "main_critical_snapshot_unchanged": true,
+      "owned_cluster_stopped": true,
+      "owned_http_listener_absent": true,
+      "owned_workspace_retained": true,
+      "pass": true,
+      "production_or_payment_active": false,
+      "pss_is_not_peak_or_whole_runtime_enforcement": true,
+      "review_pg_idle_pss_kib": 43667,
+      "source_commit": "40fc0ba9142261299c38698786374984503edca9",
+      "workspace_allocated_bytes": 111742976
+    },
+    "corrected_real_peer": {
+      "account_count": 1,
+      "actual_postgresql": true,
+      "actual_runtime_role": "ait_account_runtime",
+      "core_sha256": "d708a33db1449f4a53a79151f2b5aba61edc00e224053efbae0984b48fd2c5c1",
+      "no_pg_environment": true,
+      "pass": true,
+      "public_service_enabled": false,
+      "scope": "One actual corrected no-passfile/no-PG-env Unix peer transaction, not11group replay",
+      "source_unchanged": true
+    },
+    "final_current_run_reason": "PG environment/passfile guards and observer-independent finally cleanup changed after the initial real HTTP run; final current run used the same existing review cluster, no reprovision or reset.",
+    "initial_real_http": {
+      "cases": 11,
+      "core_sha256": "49114686c4880631f1301c1456de03281917b986e2d88c18b8ac531890812145",
+      "diagnosis": "Three libpq warnings: /dev/null is not a regular passfile; preserved before fixed absent root-protected passfile and all inherited PG* environment refusal.",
+      "pass": true,
+      "seconds": 4.615386956837028,
+      "stderr_bytes": 165
+    },
+    "observer_failure": {
+      "actual_error": "FileNotFoundError for query backend that exited between child enumeration and stat",
+      "captured_at": "2026-11-25T03:28:26.516003+00:00",
+      "correction": "Skip already-exited process during metadata-only snapshot; retain main/owned group checks and stop verification.",
+      "product_or_data_failure": false,
+      "raw_stderr_sha256": "d7292176338a55e25b3751f065cf93ae1afa73b1d3a85518718852be2ef87fed",
+      "stage": "observer proc child identity capture BEFORE stop",
+      "stop_attempted": false
+    }
+  },
+  "production_collection_enabled": false,
+  "profile": "isolated-real-postgresql-account-history/v1",
+  "public_service_enabled": false,
+  "recovery_limits": [
+    "Synthetic review/restore data only; no production signup, merchant, price, checkout or customer payment.",
+    "Review service and Unix socket are stopped; retained workspace111292416B is evidence, not a live service.",
+    "Idle PostgreSQL PSS17816KiB is not peak usage or an enforced complete runtime memory cap.",
+    "Production backup encryption, retention, deletion reconciliation after old backups and operator recovery remain unqualified.",
+    "No email verification, password recovery, public forum authorization, automatic on-screen history, physical accessibility, independent tag accuracy or full-original requirement closure.",
+    "Dependency artifacts remain private server prerequisites; no new distribution route, native/transitive license clearance or wheel redistribution is asserted.",
+    "Different source review and normal source publication are separately recorded before integration."
+  ],
+  "retained_evidence": [
+    {
+      "bytes": 350,
+      "private_artifact": "initial-provision-stdout.json",
+      "sha256": "2c8869d3c7ad3a2e0fc75c5a512cb0c39b34f4a6fd180c98ec77e43919e57c2c"
+    },
+    {
+      "bytes": 3235,
+      "private_artifact": "first-current40fc-pg-http-stdout.json",
+      "sha256": "4ddf5b4947dd1901298c1aa1f789a8f13084fc0e17a390b7b7361e28c1ef936a"
+    },
+    {
+      "bytes": 165,
+      "private_artifact": "first-current40fc-pg-http-stderr.bin",
+      "sha256": "2d9a7b4f039f08194196f367e27a77dbbdebb8ae8316eefe2e4346cca854130a"
+    },
+    {
+      "bytes": 373,
+      "private_artifact": "corrected-guard-peer-stdout.json",
+      "sha256": "bb9b7226133122a46d78a5534216dfa68feb848e25f3d503ec435f7958d00ff5"
+    },
+    {
+      "bytes": 2359,
+      "private_artifact": "actual-recovery-seed-stdout.json",
+      "sha256": "c46b42ed1eb6082e0a4bcbf5ae46d8dde8b22988e21ac68f2fb5b9deb0643f81"
+    },
+    {
+      "bytes": 256,
+      "private_artifact": "actual-pg-restore-stdout.json",
+      "sha256": "c24d0970e50a7a028af07298a0f3c4128a259770f0b0561ab67205f2734506e9"
+    },
+    {
+      "bytes": 2685,
+      "private_artifact": "actual-restore-workflow-stdout.json",
+      "sha256": "e29f3bf45813151e17c76018a19f62ceab9b536f66974066c24f718438c7e2ad"
+    },
+    {
+      "bytes": 509,
+      "private_artifact": "cleanup-observer-initial-failure.json",
+      "sha256": "a8791cb860a0c1fb25a0d5c8978e8225526953fd7e8904cbaa873e6ceecb8eab"
+    },
+    {
+      "bytes": 459,
+      "private_artifact": "corrected-cleanup-main-stdout.json",
+      "sha256": "a3190b75d2611e927073bd2e888376579e628f6c8f6e4a843395424b196d2998"
+    },
+    {
+      "bytes": 4153,
+      "private_artifact": "final-current-http-and-cleanup-stdout.json",
+      "sha256": "40ccafaadfdf6e1cc554c9189437ba8f0bbc0d6c49521f033d93b43cd52181f9"
+    },
+    {
+      "bytes": 0,
+      "private_artifact": "final-current-http-and-cleanup-stderr.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 1588,
+      "private_artifact": "retained-server-proof-index.json",
+      "sha256": "ce27d523dd93cc20d6b0d365753089a676eb61707b34918bfcacdc5f22672bb2"
+    }
+  ],
+  "runtime_architecture": {
+    "connection": "Unix-only peer; actual least-privileged runtime identity",
+    "driver": "psycopg3.3.9 pure Python with existing system libpq19",
+    "expanded_wheel_bytes": 10527093,
+    "isolated_pg_major": 18,
+    "main_cluster_modified": false,
+    "new_api_or_duplicate_security_guards": false,
+    "new_laptop_dependencies": false,
+    "new_wheels": 15,
+    "private_server_prerequisites_only": true,
+    "public_bundle_admission": false,
+    "wheel_bytes": 3437525
+  },
+  "same_shared_domain_and_http_factory": true,
+  "schema_version": 1,
+  "scope_ids": [
+    "F-044",
+    "F-136",
+    "N-013"
+  ],
+  "source": {
+    "deploy/accounts/001-account-schema.sql": "8bf9fe5a84f6cf13d5118a8fe8e18a27edeae3d2f980ceec0e34ca0500c5e159",
+    "deploy/accounts/requirements.lock": "de5d8516f86f49ee92e822712c6a14c9a2b60304893466f2a3fd10516ccdfd4a",
+    "deploy/accounts/runtime-sources.json": "16689b12cfad1f96d53c062a8cef8faeb031223361c9964a8dc4a24adb9d7859",
+    "docs/account-postgres-plan.md": "ede4a6cefcb57043cd7d72a5e625a4755670578510a776f5f57524a29714cc12",
+    "docs/account-postgres.md": "6b47e5c80f8aee44d26290db61594bfd1a96184e2b47efdb9656b17e1f4481e8",
+    "scripts/account-postgres-review.py": "e302513ff2eb5871bbce90b9c49429c9f06153b71669cd5fdd3942d2b16eb356",
+    "scripts/verify-account-postgres.py": "524a1c80d51b30c4508048bda7e502b2b853ec16e8a1af69ebb4f62a770e291b",
+    "services/accounts/postgres.py": "e0a089ddeaa8541c3a55c1a0c8366a3e42c0b8e63da05be7e7c71dd4114852b8",
+    "tests/test_account_postgres.py": "3cca170e154493cb71ae42f821197f5c9ff05101851841459fc8444f592f791c",
+    "tools/account_postgres.py": "d708a33db1449f4a53a79151f2b5aba61edc00e224053efbae0984b48fd2c5c1"
+  },
+  "source_base": "40fc0ba9142261299c38698786374984503edca9",
+  "worker": "Codex /root/postgres; recovered by /root/postgres_recovery"
+}

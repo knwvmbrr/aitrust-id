@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-image-reference-qualified",
+  "recorded_at": "2026-11-24T16:28:37.494117+00:00",
+  "author": "Codex /root; different engineering reviewers attributed in evidence",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "2ab081fafa8fce47e4a3886f8d1c5fc80ea5eb3a",
+  "changed": "Adopt the exact successful hosted image-reference engineering result after separate authenticated provider, artifact and strict-inspector review.",
+  "proves": "Actual run45425852215 passes17 runtime/failure cases and3 numerical comparisons with identical crops, original tolerances and owned cleanup. ROOT separately verifies provider run/job/artifact identity and reruns only the bounded artifact inspector, not the model.",
+  "limits": "Not17 correctly identified AI images. Accuracy is unmeasured, origin remains unknown and no tag is issued. No JIT equivalence, runtime/legal clearance, all-format support, paid access or T-FA/F-057/X-02 original closure.",
+  "scope_ids": [
+    "T-FA",
+    "F-057",
+    "X-02"
+  ],
+  "files": {
+    "runs/2026-11-24-image-reference-qualified.json": "a664a0081785ddcc95c9d70d6c85b998afe8507cb85d9936f35583eb48c5504a"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-image-reference-qualified.json",
+      "sha256": "a664a0081785ddcc95c9d70d6c85b998afe8507cb85d9936f35583eb48c5504a"
+    }
+  ],
+  "checks": []
+}

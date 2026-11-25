@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-ios-source-baseline-readiness",
+  "recorded_at": "2026-11-24T15:50:43.382400+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9d74c83b079dfaea931ff256f1072a5540562292",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "changed": "Require two consecutive exact known popup-baseline observations before the source offer, using a passive ten-second readiness expectation and the unchanged native suite limits.",
+  "proves": "One affected derivation control passes with eight/114 bindings stable; complete prior UI and core reconstruct by only the baseline block and its literal source pin. Seven IDs and all other six case bodies remain exact; focused adapter preserves the original seven-case acceptors.",
+  "limits": "Source-only correction, not a native result. Prior actual seven remains six passed and one failed; no six-plus-one composition or old proof rebinding. Same-source focused, complete seven and four-size matrix remain pending; no physical/human accessibility, build2, accuracy, admission or original closure.",
+  "files": {
+    "mobile/ios/Tests/UIFlows.swift": "79824870eecc096ce7c0233b9d63a40e014c5a8fa1bbb29549e518f3760ae7ee",
+    "tools/ios_simulator_matrix.py": "49210c3173a639700b38aba9b0497c776d334923dd5ce09e8a3e764f227863bf",
+    "docs/ios-simulator-matrix-plan.md": "2d57ea169a09b83f32b7011ace86ff701336d5f804694377ab6184202aeb7f79",
+    "runs/2026-11-24-ios-source-baseline-readiness.json": "e1a8af3f9dddf0e08cd3c06e028600fe86b953600e4b6b8f065dc1b5de144a4e"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-source-baseline-readiness.json",
+      "sha256": "e1a8af3f9dddf0e08cd3c06e028600fe86b953600e4b6b8f065dc1b5de144a4e"
+    }
+  ],
+  "checks": []
+}
