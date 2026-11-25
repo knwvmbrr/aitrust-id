@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-25T05:28:15.873822+00:00",
+  "updated": "2026-11-25T06:17:36.693179+00:00",
   "active_increment": "Real signup/private-history delivery, iPhone independent size checks and actual source/dependency distribution repairs;136complete66open.",
   "status": "136complete66open_target60_unmet;Sources_component_and_private_PostgreSQL_working_public_signup_and_payments_off",
   "scope": "docs/master-scope.json",
@@ -1267,7 +1267,7 @@
     "protocol": "runs/2026-11-23-tag-runtime-current-protocol.json",
     "website": "runs/2026-11-23-tag-runtime-current-website.json"
   },
-  "updated_at": "2026-11-25T05:28:15.873822+00:00",
+  "updated_at": "2026-11-25T06:17:36.693179+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -5730,7 +5730,7 @@
     "public_signup_enabled": false,
     "private_review_services_stopped": true,
     "main_database_unchanged": true,
-    "next_engineering_job": "Individual history-event deletion/clear restore suppression architecture; production rollout remains separately gated.",
+    "next_engineering_job": "session-history-event-clear-restore",
     "whole_account_restore_barrier_evidence": "runs/2026-11-25-account-erasure.json",
     "whole_account_restore_barrier_pass": true
   },
@@ -5746,9 +5746,9 @@
     "original_requirement_closed": false
   },
   "testflight_current_status_check": {
-    "checked_at": "2026-11-25T05:24:24.475359+00:00",
-    "status": "UNVERIFIED",
-    "reason": "No computer-use transport; Chrome Apple Events page inspection is disabled. Read-only fallback refused; browser security setting unchanged.",
+    "checked_at": "2026-11-25T06:00:05.126268+00:00",
+    "status": "BLOCKED_OWNER_SIGN_IN",
+    "reason": "Direct private screenshot shows App Store Connect sign-in form with empty account field. No credentials entered or browser security settings changed.",
     "latest_observed_evidence": "runs/2026-11-21-testflight-build-testing-confirmed.json",
     "latest_observed_date": "2026-11-21",
     "latest_observed_build": "1.0 (1)",
@@ -5756,10 +5756,12 @@
     "owner_was": "Invited",
     "physical_install_confirmed": false,
     "new_build_uploaded_this_turn": false,
-    "evidence": "runs/2026-11-25-account-erasure-integration.json",
+    "evidence": "runs/2026-11-25-pii-bracket-address-accounting-correction.json",
     "owner_invitation_last_observed_date": "2026-11-18",
     "browser_security_setting_changed": false,
-    "existing_chrome_connect_url_opened": "https://appstoreconnect.apple.com/apps"
+    "existing_chrome_connect_url_opened": "https://appstoreconnect.apple.com/apps",
+    "visual_record_sha256": "43d847a33c37906501b3eb1d84cfc5bd4d4cd4b3137f8dc6438bc06ddea11f5d",
+    "current_build_or_tester_assignment_verified": false
   },
   "account_postgresql_delivery": {
     "recorded_at": "2026-11-25T04:11:13.941347+00:00",
@@ -5890,14 +5892,14 @@
     }
   ],
   "current_agent_assignments": {
-    "recorded_at": "2026-11-25T05:24:24.475359+00:00",
+    "recorded_at": "2026-11-25T06:17:36.693179+00:00",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
     "scoped_tasks_closed": 38,
-    "scoped_task_records": 43,
-    "status": "Whole-account old-backup erasure software completed and independently reviewed. PII bracket-address genuine baseline reproduced; candidate qualification pending. PR155 genuine current website/source boundary selected; current protected checks pending. Public signup and real payments remain off.",
+    "scoped_task_records": 44,
+    "status": "PII source/engine/ASGI improvement integrated, registered job remains in_review pending actual replay. Individual history/Clear recovery implementation active. Current full-seven native execution is running after terminal Mac source verification. Apple requires owner sign-in; public signup and real payments remain off.",
     "agents_permanent": false,
     "assignments_are_live_heartbeats": false,
     "assignments": [
@@ -5908,7 +5910,7 @@
       },
       {
         "worker": "/root/postgres_recovery",
-        "role": "Whole-account barrier finished; per-event/clear recovery architecture preparation",
+        "role": "Independent per-event/Clear restore-suppression software implementation",
         "status": "active_bounded_assignment_at_snapshot"
       },
       {
@@ -5918,7 +5920,7 @@
       },
       {
         "worker": "/root/ios_recovery",
-        "role": "Sources work finished; independent PII bracket-address worker",
+        "role": "Current full-seven native qualification; PII actual replay follows without weakened criteria",
         "status": "active_bounded_assignment_at_snapshot"
       }
     ]
@@ -5937,5 +5939,35 @@
     "production_recovery_qualified": false,
     "scoped_job_closed": true,
     "original_requirement_closed": false
+  },
+  "pii_bracket_address_delivery": {
+    "recorded_at": "2026-11-25T06:00:05.126268+00:00",
+    "evidence": "runs/2026-11-25-pii-bracket-address-development.json",
+    "integration_evidence": "runs/2026-11-25-pii-bracket-address-integration.json",
+    "worker_commit": "bc13388e2ee134a38fbf9d0ab2217db4d62bf34b",
+    "actual_engine_and_ASGI_pass": true,
+    "new_source_in_working_branch": true,
+    "new_source_published_or_served": false,
+    "original_tag_acceptance": 80,
+    "original_requirement_closed": false,
+    "accounting_correction_evidence": "runs/2026-11-25-pii-bracket-address-accounting-correction.json",
+    "scoped_job_closed": false,
+    "actual_replay_qualified": false,
+    "registered_task_status": "in_review"
+  },
+  "current_protected_source_release": {
+    "actual_main_commit": "7ab4d3036f6409ec72d6a23972a563fd81e0f416",
+    "pull_request": 155,
+    "all11_required_checks_passed": true,
+    "actual_publisher_run": 45555439793,
+    "actual_provider_artifact": 14996315435,
+    "provider_zip_sha256": "2607911517f83073bc96a5af3f4569c1affa604538e154bc8ff36d89576875ad",
+    "different_received_member_review_sha256": "093e66aa0d215c0fc5dd8aa0903b2f190fc77d1e9a312d0bf1903ed19ec2a2eb",
+    "cloud_consumer_scope": "Authenticated finite standalone PS source route and three probes only; not all fourteen distribution scopes.",
+    "local_Mac_qualification": "Separate current execution; not credited by this record.",
+    "Pii_or_account_new_source_in_main": false,
+    "recorded_at": "2026-11-25T06:00:05.126268+00:00",
+    "evidence": "runs/2026-11-25-pii-bracket-address-integration.json",
+    "accounting_correction_evidence": "runs/2026-11-25-pii-bracket-address-accounting-correction.json"
   }
 }

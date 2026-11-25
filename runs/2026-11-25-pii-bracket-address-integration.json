@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "profile": "reviewed-bracketed-email-integration/v1",
+  "captured_at": "2026-11-25T06:00:05.126268+00:00",
+  "pass": true,
+  "claim_level": "engineering_only",
+  "source_base": "bbecea130282d651c1b32fb214d5ade3ff9b11c3",
+  "author_commit": "bc13388e2ee134a38fbf9d0ab2217db4d62bf34b",
+  "completed_by": "Codex /root/ios_recovery",
+  "reviewed_by": "Codex /root",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "delivered": "Explicit paired bracketed email addresses are recognized by the existing offline recognizer and masked at original character offsets, preserving all other recognizers and the service wire contract.",
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-pii-bracket-address-development.json",
+      "sha256": "006d0f3f58db3a53f7c1a46914c561fa1c402e59f71066c005f8ebb462f4630e"
+    },
+    {
+      "path": "runs/2026-11-25-pii-bracket-address-review.json",
+      "sha256": "4d3e97818f9e3e80bbdad3bf05cc32d29d91dadbd311d7a3071cba692c5d83d8"
+    }
+  ],
+  "different_source_review_sha256": "0f0758c454b05395dd4a6b7478d6ad23971e83908143ce19b1b85ee83dcc654f",
+  "different_actual_review_sha256": "e49f384d8c0afdd9f1c15b2712a764af72cca33df1854fff7e84840dccb5f09b",
+  "actual_result": {
+    "known_email_original_span": [
+      8,
+      36
+    ],
+    "expected_characters_masked": 28,
+    "extra_characters_masked_in_fixed_challenge": 0,
+    "other_fresh_English_observations_unchanged": 41,
+    "historical_compact_observations_unchanged": 6,
+    "actual_ASGI_controls": 14,
+    "model_assets_verified_before_load": 29,
+    "source_files_matched": 5,
+    "owned_container_attach_and_source_cleanup": true,
+    "selected_service_metadata_unchanged": true
+  },
+  "remaining_measured_development_errors": {
+    "English_extra_masked_characters": 6,
+    "English_examples_with_extra_masking": 2,
+    "Spanish_challenge_extra_masked_characters": 8
+  },
+  "original_counts": {
+    "total": 202,
+    "complete": 136,
+    "open": 66,
+    "target_open": 60
+  },
+  "original_requirement_closures": [],
+  "scoped_jobs_complete": 39,
+  "task_records": 44,
+  "tag_acceptance_percent": {
+    "F-023": 80,
+    "T-PII": 80
+  },
+  "served_candidate": false,
+  "independent_accuracy_evidence": false,
+  "testflight": {
+    "current_status": "BLOCKED_OWNER_SIGN_IN",
+    "observed_at": "2026-11-25T00:47:55-05:00",
+    "observation": "Direct private screenshot shows App Store Connect sign-in form with empty account field. No credentials entered or browser security settings changed.",
+    "visual_record_sha256": "43d847a33c37906501b3eb1d84cfc5bd4d4cd4b3137f8dc6438bc06ddea11f5d",
+    "current_build_or_tester_assignment_verified": false,
+    "latest_actual_build_status": "Testing",
+    "build_observed_on": "2026-11-21",
+    "owner_invitation_observed_on": "2026-11-18",
+    "physical_install_confirmed": false
+  },
+  "protected_source_publication": {
+    "actual_main_commit": "7ab4d3036f6409ec72d6a23972a563fd81e0f416",
+    "pull_request": 155,
+    "all11_required_checks_passed": true,
+    "actual_publisher_run": 45555439793,
+    "actual_provider_artifact": 14996315435,
+    "provider_zip_sha256": "2607911517f83073bc96a5af3f4569c1affa604538e154bc8ff36d89576875ad",
+    "different_received_member_review_sha256": "093e66aa0d215c0fc5dd8aa0903b2f190fc77d1e9a312d0bf1903ed19ec2a2eb",
+    "cloud_consumer_scope": "Authenticated finite standalone PS source route and three probes only; not all fourteen distribution scopes.",
+    "local_Mac_qualification": "Separate current execution; not credited by this record.",
+    "Pii_or_account_new_source_in_main": false
+  },
+  "next_registered_software_job": {
+    "task_id": "session-history-event-clear-restore",
+    "worker": "/root/postgres_recovery",
+    "architecture_sha256": "02e91a1f2204145531c7261acdf829f62e742cd6b0c05f7152e2d8b56b843502",
+    "implementation_authorized": true,
+    "remote_execution_authorized": false
+  },
+  "limits": [
+    "Developer-authored synthetic cohorts and different engineering review, not independent representative recognition or human acceptance.",
+    "Compact comparison is historical same-source/model evidence, not a fresh compact baseline; changed recognizer configuration hashes remain distinct.",
+    "New PII source is integrated in the working branch only; no selected-service rebuild, replay/method/chart admission or phone redaction.",
+    "Public signup, real billing, production account recovery, current seven-flow/size and physical VoiceOver remain separately gated.",
+    "Protected source publication is separate from the working account/PII branch; website and Apple build are unchanged.",
+    "All202 original acceptance criteria and percentages are retained; target60 remains unmet."
+  ]
+}

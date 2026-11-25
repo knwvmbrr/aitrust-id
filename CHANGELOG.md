@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-25
 
+### 2026-11-25-063003-pii-integration-accounting-2b70201c
+
+Recorded 2026-11-25T06:30:03.109893+00:00 · Contributor: Codex /root; implementation /root/ios_recovery; accounting review /root/release_recovery · change
+
+- **Changed.** Integrated bracketed-email redaction evidence and corrected a proposed task closure after independent review; preserved the missing replay gate and registered history restore work.
+- **Evidence.** Actual engine and ASGI observations support the narrow masking fix; reviewed accounting preserves all 202 original criteria with 136 complete and 66 open, and 38 completed scoped jobs. [Change record](./runs/changes/2026-11-25-063003-pii-integration-accounting-2b70201c.json).
+- **Not claimed.** PII replay and the native size matrix remain pending. Signup and payment are not public. Current TestFlight access requires owner sign-in. Target 60 remains unmet.
+
+
 ### 2026-11-25-054424-pii-result-guide-accuracy-wording-2ed0fbd0
 
 Recorded 2026-11-25T05:44:24.374280+00:00 · Contributor: Codex /root/ios_recovery; wording review Codex /root · change

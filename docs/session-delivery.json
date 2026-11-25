@@ -232,12 +232,13 @@
     {
       "tag_id": "T-PII",
       "bot_id": "tag_pii",
-      "actual_worker": "/root/ios_recovery",
-      "status": "active",
-      "checked_at": "2026-11-25T04:35:01.350136+00:00",
-      "current_component_status": "Independent PII worker reproduces the known pilot [at] example [dot] org challenge and prepares a narrow original-span-preserving plan before code.",
+      "actual_worker": null,
+      "status": "reviewed",
+      "checked_at": "2026-11-25T06:00:05.126268+00:00",
+      "current_component_status": "Known bracketed-email miss fixed in isolated current-model engine and ASGI route; software handoff complete, not deployed or independently validated.",
       "blocking_acceptance": "Redaction/draft observations are implemented, but representative independent recognition/human acceptance remains; outbound capture also lacks accepted supported send interception and edit/cancel/proceed boundaries.",
-      "next_task": "Deliver supported bracket-address recognition and actual redaction/replay checks without weakening PII or other tag boundaries."
+      "next_task": "Admit the new source/method and qualify rebuilt service/replay and representative recognition; retain known false masking and human acceptance.",
+      "completed_worker": "/root/ios_recovery"
     },
     {
       "tag_id": "T-OUT",
@@ -1804,7 +1805,7 @@
         "N-013",
         "T-PS"
       ],
-      "worker": "/root",
+      "worker": "/root/ios_recovery",
       "status": "queued",
       "deliverable": "User Clear returns the empty editor to view without altering background privacy clearing or Share delivery cancellation.",
       "registered_at": "2026-11-24T15:20:15.735780+00:00",
@@ -1815,7 +1816,7 @@
       ],
       "original_requirement_closed": false,
       "previous_worker": "/root/web_camo",
-      "assignment_note": "Queued current qualification/integration work; previous specialist finished its bounded source handoff and is not running."
+      "assignment_note": "Prior Clear source authored by /root/web_camo; current complete seven-flow qualification prepared by /root/ios_recovery and queued after the Mac source consumer. No native run yet."
     },
     {
       "task_id": "session-source-consumer-lifecycle",
@@ -2039,7 +2040,7 @@
         "F-023"
       ],
       "worker": "/root/ios_recovery",
-      "status": "active",
+      "status": "in_review",
       "registered_at": "2026-11-25T04:35:01.350136+00:00",
       "registration_time_basis": "Current dated registration after preimplementation architecture assignment; not backdated or a process heartbeat.",
       "deliverable": "Reproduce and implement a narrow bracketed-email redaction improvement preserving original spans, current service/replay identity and other tag operation.",
@@ -2047,6 +2048,42 @@
         "Demonstrate the fixed original obfuscated-address challenge and bounded negative/control cases on current sources.",
         "Actual existing runtime/redaction/replay integration after approved narrow plan; no new dependencies, raw participant data or detector release.",
         "Independent representative accuracy and human acceptance remain required for the full PII requirement."
+      ],
+      "withdrawn_closure_records": [
+        {
+          "proposed_record": {
+            "closed_at": "2026-11-25T06:00:05.126268+00:00",
+            "completed_by": "/root/ios_recovery",
+            "verified_by": "/root",
+            "evidence": [
+              {
+                "path": "runs/2026-11-25-pii-bracket-address-integration.json",
+                "sha256": "714473c2b57446ed9817bfdc104bd412fb5a59b1929cc7506d58446593a082f5"
+              }
+            ],
+            "original_requirement_closed": false
+          },
+          "withdrawn_at": "2026-11-25T06:17:36.693179+00:00",
+          "reason": "Required actual replay qualification remains unevidenced; criterion retained.",
+          "correction_evidence": "runs/2026-11-25-pii-bracket-address-accounting-correction.json"
+        }
+      ]
+    },
+    {
+      "task_id": "session-history-event-clear-restore",
+      "original_ids": [
+        "F-044",
+        "N-010"
+      ],
+      "worker": "/root/postgres_recovery",
+      "status": "active",
+      "registered_at": "2026-11-25T05:44:30.887932+00:00",
+      "registration_time_basis": "Dated architecture acceptance before feature implementation; software subtask only, not a new original requirement.",
+      "deliverable": "Keep individual saved-history removal and Clear removed across older backups, while preserving later same-ID re-imports, other owners and independently operating tags.",
+      "done_evidence": [
+        "Append-only003 and explicitv3 preserve001/002 and whole-account erasure; server-only row-incarnation/epoch with reserved deletion capacity.",
+        "Actual separate one-use restore targets prove selective old-row removal, same-public-ID newer-row preservation, Clear and genuine post-reconcile append; incomplete owner/journal input refuses.",
+        "Different source and actual review, exact bounded owned cleanup; public signup/billing and production recovery remain separately gated."
       ]
     }
   ],
@@ -6761,7 +6798,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-25T05:28:15.873822+00:00",
+  "updated_at": "2026-11-25T06:17:36.693179+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -7476,14 +7513,14 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-25T05:24:24.475359+00:00",
+    "recorded_at": "2026-11-25T06:17:36.693179+00:00",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
     "scoped_tasks_closed": 38,
-    "scoped_task_records": 43,
-    "status": "Whole-account old-backup erasure software completed and independently reviewed. PII bracket-address genuine baseline reproduced; candidate qualification pending. PR155 genuine current website/source boundary selected; current protected checks pending. Public signup and real payments remain off.",
+    "scoped_task_records": 44,
+    "status": "PII source/engine/ASGI improvement integrated, registered job remains in_review pending actual replay. Individual history/Clear recovery implementation active. Current full-seven native execution is running after terminal Mac source verification. Apple requires owner sign-in; public signup and real payments remain off.",
     "agents_permanent": false,
     "assignments_are_live_heartbeats": false,
     "assignments": [
@@ -7494,7 +7531,7 @@
       },
       {
         "worker": "/root/postgres_recovery",
-        "role": "Whole-account barrier finished; per-event/clear recovery architecture preparation",
+        "role": "Independent per-event/Clear restore-suppression software implementation",
         "status": "active_bounded_assignment_at_snapshot"
       },
       {
@@ -7504,7 +7541,7 @@
       },
       {
         "worker": "/root/ios_recovery",
-        "role": "Sources work finished; independent PII bracket-address worker",
+        "role": "Current full-seven native qualification; PII actual replay follows without weakened criteria",
         "status": "active_bounded_assignment_at_snapshot"
       }
     ]
@@ -8537,6 +8574,76 @@
           "status": "active_bounded_assignment_at_snapshot"
         }
       ]
+    },
+    {
+      "recorded_at": "2026-11-25T05:44:30.887932+00:00",
+      "original_complete": 136,
+      "original_open": 66,
+      "target_open": 60,
+      "remaining_full_closures": 6,
+      "scoped_tasks_closed": 38,
+      "scoped_task_records": 44,
+      "status": "Whole-account old-backup erasure software completed and independently reviewed. PII bracket-address genuine baseline reproduced; candidate qualification pending. PR155 genuine current website/source boundary selected; current protected checks pending. Public signup and real payments remain off.",
+      "agents_permanent": false,
+      "assignments_are_live_heartbeats": false,
+      "assignments": [
+        {
+          "worker": "/root",
+          "role": "PM, integration and task-list lead",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/postgres_recovery",
+          "role": "Independent per-event/Clear restore-suppression software implementation",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/release_recovery",
+          "role": "PR155 protected source publication and current required checks",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/ios_recovery",
+          "role": "Sources work finished; independent PII bracket-address worker",
+          "status": "active_bounded_assignment_at_snapshot"
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-11-25T06:00:05.126268+00:00",
+      "original_complete": 136,
+      "original_open": 66,
+      "target_open": 60,
+      "remaining_full_closures": 6,
+      "scoped_tasks_closed": 39,
+      "scoped_task_records": 44,
+      "status": "WITHDRAWN scoped-count39 proposal; source improvement valid but actual replay criterion incomplete.",
+      "agents_permanent": false,
+      "assignments_are_live_heartbeats": false,
+      "assignments": [
+        {
+          "worker": "/root",
+          "role": "PM, integration and task-list lead",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/postgres_recovery",
+          "role": "Independent per-event/Clear restore-suppression software implementation",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/release_recovery",
+          "role": "PR155 protected source publication and current required checks",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/ios_recovery",
+          "role": "PII handoff complete; current full-seven native qualification prepared",
+          "status": "queued_for_serialized_local_runtime"
+        }
+      ],
+      "withdrawn_at": "2026-11-25T06:17:36.693179+00:00",
+      "correction_evidence": "runs/2026-11-25-pii-bracket-address-accounting-correction.json"
     }
   ]
 }

@@ -1,3 +1,11 @@
+## PII fix integrated; actual replay remains open — 2026-11-25T06:17:36.693179+00:00
+
+**38 scoped software jobs complete; originals 136 complete / 66 open, target 60 unmet.** The real PII improvement is integrated: the bracketed address is masked at its original span, the other 41 English observations match the fresh baseline, six compact comparisons match the historical reference, and 14 ASGI controls pass. Different task-list review caught the missing actual replay criterion before PM closeout. The proposed 39th software closure is withdrawn; the existing task and its full acceptance stay open. No criteria were split or lowered.
+
+Apple currently shows its sign-in form, so current TestFlight assignment and installation remain unverified. The complete current seven-flow native run is executing in its owned simulator after terminal Mac source verification. The account worker continues individual history/Clear recovery. Public signup and real billing remain off. Protected main source7ab4d303 and the working PII/account branch are separate; the website and Apple build are unchanged.
+
+[Accounting correction](../runs/2026-11-25-pii-bracket-address-accounting-correction.json) · [Actual PII result](../runs/2026-11-25-pii-bracket-address-development.json) · [Use and limits](pii-bracket-address-result.md)
+
 ## Account deletion survives an older backup — 2026-11-25T05:24:24.475359+00:00
 
 **38 scoped software jobs complete; originals 136 complete / 66 open, target 60 unmet.** The registered whole-account recovery job is complete. One genuine isolated PostgreSQL sequence verifies the old password, session and exact history before reconciliation, then refuses the deleted account while preserving the other account. The journal survives successful external cleanup. Different ROOT review verifies source identity, rollback, capacity, privilege controls, stopped owned services and an unchanged main database.

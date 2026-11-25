@@ -36,6 +36,8 @@ The PS source package also has [versioned verification files and an account-free
 
 Optional [signup and private metadata history](docs/account-history-ui.md) work in an isolated development service, including a [real PostgreSQL review and restore workflow](docs/account-postgres.md) and [whole-account deletion protection when restoring an older backup](docs/account-erasure.md). Public signup, customer payments and production account recovery are not active. Free tag checking stays account-free.
 
+A reviewed [redaction improvement](docs/pii-bracket-address-result.md) catches explicit bracketed email addresses at their original positions. It is qualified in an isolated engine/API workflow; the installed service still needs a rebuild and method admission.
+
 ## Deploy approved local checker versions
 
 The [offline fleet tool](docs/fleet-deployment.md) enrolls private macOS/Linux
