@@ -157,3 +157,107 @@ ROOT reviewed exact v2privatecontractb263efa20a6bc366e64026dfcd2c1f6a5fcb7b08a12
 Installed official public headers were read beforecode: XCUIElement.h339-341 declares snapshot children;353-358 snapshotWithError; XCUIElementAttributes.h35/38/50 declares identifier/frame/elementType. Swift try element.snapshot() is already compiled in the unchangedseven suite. Headerhashes/facts retained privately without copying Appleheaderbodies to the repository.
 
 Own only thisplan, SizeLayoutFlows.swift readableControl method and FIXTURE_SHA256 in tools/ios_simulator_matrix.py; fresh literal source-only pair runs/2026-11-24-ios-control-snapshot-efficiency.json and runs/changes/2026-11-24-ios-control-snapshot-efficiency.json plusnormalCHANGELOG. Everyothermethod/action/guard remains byteexact, including Clearwitness/postconditions, revealgeometry, noticepagination/configreadback and120/150/780/1800/cleanup/source/byte limits. No promised runtime saving or pass before actualcomparison. Wholeoldfixture/core reconstruction and oneaffectedderivation check precede finalsourcepeer. No backgroundfocus/sevencriteria change. AfterROOT source-review/native-release, ONEchanged small3 attempt only; no full4/partialcomposition or originalclosure fromsourcecontrols.
+
+
+## Public Sources product increment — approved before code
+
+# Native public Sources — product architecture before code
+
+Base: clean a7fbab21f5039cf3382a082b167513fc0bacc42d / Controller8f7c. After approval create isolated codex/ios-public-sources-ux from thata7fb in the same lightweight worktree, preserving codex/ios-clear-editor-return and allprivate/history files. Branchname lookup currentlyfound no collision. No ROOT/sharedscope/state/policy/Git mutation or native work now.
+
+Chosen product: an EARLY full-width “Public source files” disclosure row in Privacy&notices opens a dedicated native3-row Sources table. It avoids moving Privacy behind three potentially tall sourceactions, and avoids making a shortcut that strands the user at a long footer. Sources has a standard return to Allnotices plus Done. All12 existingnotice documents stay in their originalorder in the containingindex and their reader/pagination stayunchanged. The3existingoffer actions move intact from the indexfooter to this shortdestination; same titles/IDs, no duplicateactions. Explicitnavigation alone neverloads/shares a ZIP.
+
+Keep sourceOffers3records byteexact: IDsjs/zlib/hiwire, fixedpaths, exactbytes/SHA; move the existing offerSource verification/presentation method into the Sources table owner. Preserve its regular-file/nonlink/size/fullhash gates, failurealert/noinputtransfer and UIActivityViewController with ONLY theverifiedbundledURL. Update ONLY popoveranchor to the actual Sources table row/section. No draft/result/receivedShare input enters this controller/constructor. No publicendpoint, dependency, permission, training/model or account coupling. Both App and Share use the existing sharedsourcefile.
+
+Newfirstindexrow uses the existing dynamicheight/BrandTheme/min44-compatiblecellconstruction and accessibilitybutton/disclosure semantics; stableIDprivacy-open-sources, titlePublicsourcefiles, explanatoryhint thatonlybundledfilesareoffered. Sourcepage retains originalpublic-only header/footer, three existingprivacy-source-* IDs, font/theme/DynamicType, and a standard Allnoticesreturn plusprivacy-done. Avoid a tinycustomnavbarlink as the solepath; no customfocus/keyboard/VoiceOverpost/animation. Standardnavigation respectsReducedMotion. Verify actual44pt/containment withlivechecks and PNGs; do notinferphysicalhumanacceptance.
+
+Owned existingpaths proposed: mobile/ios/Source/CheckerController.swift; mobile/ios/Tests/UIFlows.swift (sourcecase enterssemanticSourcesrow, preserving7IDs/oldprivacy/export/cancel/draft/Sharechecks); mobile/ios/Tests/SizeLayoutFlows.swift (check3Sourcesactions before legalreader; move, neverdrop oldsource/noticeassertions); tools/ios_simulator_matrix.py (ONLYtwoexactfixture/UIhashliterals); docs/ios-simulator-matrix-plan.md and docs/ios-simulator-matrix.md (newflow/currentfailurestatus). AdditionalownedNEW target mobile/ios/Tests/PublicSourcesFlows.swift only if ROOTapproves: threefixedarchivecases, each App+Share, reusingcurrentstrictsource/privacy/cancel/focus logic. No newSDKorchestrationlibrary/runner is proposed; existingproducer's oneUITest-file substitution/privateimmutableadapter pattern canqualify this separate3casecohort without changingoriginalsevenacceptors. Exactadapter/source/case wiring getsdifferentreview BEFORElaunch.
+
+Qualification contract: preserve currentfailedseven/small3 asoldsource. BeforeSDK: sourceprojection/commonApp+Sharemembership, exact12notices/3offers/verificationbody/resourcebytes and affectedproducercontrols. After ROOT+SEOarchive slotrelease and sourcepeer: freshcompile; all3ZIPbytes/hashes in BOTHcompiledApp/Share match the fixedcurrentresources; actualsourcepage shows3correctactions, min44/dynamictext/return/Done; actualselectedJS/Zlib/Hiwire publicarchive presentation/cancel preservesprivateAppdraft and receivedSharetext and neverincludes them. Separate3fixedcases keep percase120/max150 and originalwholeUI780/owned26.2guestcleanup; nevercall3casesfullseven. Existing7 updatedsemanticnavigation requires a genuinefresh7; sizeworkrequiresfreshboundsource. No knownoldproofrebinding/TestFlightupload/currentbuild2/physical/human/originalclosure claim. If lifecycle/budget/readability fails, preserveanddiagnose, notwaivecaps.
+
+Risks: navigationowner/popoveranchor must be the actual Sources table; genericparentpresentation wouldbeinvalid. Sourcepage musthaveDone/returnavailable in Sharewithoutfinishingtheextension unexpectedly. Movingrows mustnot lose sourceIDs/legalentries/packagingnoticebytes. Existingfocus/AXtiming issues remainunproven; no fabricatedresolution. Changes invalidate oldApp/UIboundproofs and requirefreshqualification/newdistributioncandidate, not reusingTestFlight1.0(1). Current160admission remainsROOTowned; newbranch isfuturebaselineonly.
+
+
+## Sources test-local correction — architecture before code
+
+Actual three-case candidate3 on da5 prepared the46-member project, booted an owned
+iPhone14Plus26.2/23C54, then its UITest target failed to compile: the newly added
+Sources navigation local `sources` collides with the existing later popup array
+in the same `offerAndCancel` scope. This is an introduced test-code error, not a
+product/SDK/timeout diagnosis. No UI test ran. The complete failure/log and source116
+equality are retained; delete plus inventory absence and owned alias cleanup passed.
+Six actually compiled public ZIP resources (three in App, three in Share) matched
+their existing sizes/hashes; that observation does not establish a successful UI
+build or runtime. The original seven gate remains unqualified.
+
+Repair only the navigation binding to `sourceEntry` and its two references in
+UIFlows.swift and PublicSourcesFlows.swift, plus the matrix engine's legacy UI
+hash literal. Product Controller, notice/order/offer records and complete verified
+sharing code remain unchanged. All actions, waits, predicates, private payload
+checks, known host baselines, original seven IDs, separate three IDs and native
+caps remain identical. Reverse the local rename to reconstruct both complete da5
+test files and reverse the single hash to reconstruct the complete matrix engine.
+Run only the affected derivation control, freeze current source116 and get a
+different source read before a changed native attempt. No unchanged native retry,
+seven/full-app/TestFlight adoption or original closure.
+
+
+## Candidate4 diagnosis and explicit remote portal observation — 2026-11-24
+
+The changed Sources product and both test suites compile on actual Xcode27.2.
+Candidate4 executes three strict cases: Hiwire passes both App and Share; Pyodide
+and Zlib fail before their Share source row is selected. The existing ten-second
+host baseline observes only20 popup nodes without the host caption, while the
+saved whole-app hierarchy contains the exact caption under
+`ShareSheet.RemoteContainerView`. The native Sources page is visible in the saved
+screenshot. This does not establish a source-export product fault. All six
+compiled source archives match; cleanup,116 unchanged input checks and clean Git
+pass. This failed candidate remains preserved and is not a current UI pass.
+
+Before another native run, the observation boundary will capture each popup's
+single explicitly identified remote portal separately, scoped to that popup.
+Parent traversal will prune that exact portal, then its verified immutable
+subtree will be visited once under the same popup index. Unique identity, type,
+finite contained frame, stable counts, depth/node budgets, both known captions,
+private payload checks and repeated complete-surface facts remain mandatory.
+Unexpected, absent or duplicate portals fail. This avoids both double counting
+and borrowing a caption from another popup. The App's identified non-popup
+Cancel-sheet path retains its original traversal. All existing assertion text,
+case IDs and10/120/150/780-second budgets remain unchanged. The observer correction
+is applied to both suites; the matrix only updates its exact legacy UI hash.
+Risks are an OS remote portal remaining incomplete or changing its identity;
+either must produce a retained failure, never an inferred success or longer wait.
+ROOT approved this observer-only architecture before implementation. Current full
+seven, device-size matrix, TestFlight and physical/human acceptance remain open.
+
+
+The different reviewer also checked nested-popup ambiguity. The actual successful
+Hiwire source presentation reports two popup roots, two dismiss regions and zero
+pruned nested popups in three consecutive phase1/2 observations (142 nodes).
+Both popup frames are equal, so frame equality alone cannot establish ownership.
+The new lookup is scoped to the bound popup and requires its sole identified
+portal. A future nested remote representation may expose multiple descendants;
+that ambiguity fails closed and remains an explicit compatibility limit. It does
+not borrow another popup's caption. The exact extracted visitor also passes eight
+private inert controls; those are logic checks, not OS/UI observations. Current
+native re-execution remains required. See the fresh review receipt for identities.
+
+
+## Actual Sources component qualification — 2026-11-24
+
+Candidate5 on frozen666fa3d0 passes all three fixed archive workflows on the
+installed iPhone14Plus/iOS26.2/23C54 Simulator. Each covers App and Share source
+presentation, cancellation, unchanged private input and no private source payload.
+The six compiled archives match full expected bytes and SHA-256. Owned guest
+removal and inventory absence, owned alias removal,116 unchanged source checks and
+clean Git all pass. The narrower capture-boundary diagnosis is now resolved for
+the observed current sibling-popup representation. No assertion or time budget
+was relaxed. Candidate4 and older failures remain immutable history.
+
+The unmodified seven-count runner intentionally returns2/passfalse for this
+three-case summary. Separate strict3-ID/result/device checks qualify only the
+Sources component. The full seven, size matrix, physical phone/human VoiceOver,
+new signed TestFlight build and original requirements remain open. The original
+producer's actual manifest input is still explicitly pinned as116th input by the
+private cohort; its broader formal register gap remains recorded. See
+`runs/2026-11-24-ios-public-sources-actual.json` for source identities and limits.

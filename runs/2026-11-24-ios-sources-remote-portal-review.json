@@ -1,0 +1,69 @@
+{
+  "format": "ios-sources-remote-portal-review/v1",
+  "captured_at": "2026-11-25T04:15:32.731284+00:00",
+  "worker": "Codex /root/ios_recovery",
+  "different_reviewer": "Codex /root",
+  "source_base": "97221b5a5c1380f4f3ca6cfe17943097ec6ce5e0",
+  "source_after": {
+    "mobile/ios/Tests/UIFlows.swift": {
+      "sha256": "1b215994c6ef3ca6344fcd1b7420d220a5a78112a8eb6fd1d54b0e5f0dfe8df2",
+      "bytes": 35701
+    },
+    "mobile/ios/Tests/PublicSourcesFlows.swift": {
+      "sha256": "fb5be61be2600a0d2bc8a9973a4b00a36933c16a650564424a4c58ce57dfc347",
+      "bytes": 29233
+    },
+    "tools/ios_simulator_matrix.py": {
+      "sha256": "a09ef3b0a49505a6ab7618f9b59df93943a26c05b266c34e172bfcb6593b2888",
+      "bytes": 29266
+    },
+    "docs/ios-simulator-matrix-plan.md": {
+      "sha256": "917cb28285ad6b37cdac4907779e6c2e2004dbd742fd6e55a1dd23e65bbfe70c",
+      "bytes": 51609
+    },
+    "docs/ios-simulator-matrix.md": {
+      "sha256": "7982376438e7513604f80a82bc4ee5affb5d287c0fd99b4d8c43ebf9d474a365",
+      "bytes": 5272
+    }
+  },
+  "review_outcome": "CLEAR for the actual observed current sibling-popup representation; ambiguous future nested remote portals fail closed and remain an explicit compatibility limit. No native correction pass yet.",
+  "actual_diagnostic_counts": {
+    "source_tree_input_count": 116,
+    "candidate4_popup_roots": 2,
+    "candidate4_dismiss_regions": 2,
+    "candidate4_visited_nodes": 142,
+    "candidate4_pruned_nested_popup_subtrees": 0,
+    "same_shape_presented_observations": 3
+  },
+  "private_evidence": {
+    "public-sources-three-candidate4-diagnosis.json": {
+      "bytes": 4645,
+      "sha256": "12a806b86bd62e94f86c2abeeb1d8ee1044839e0603c0b16ab2e71b49fe5738b"
+    },
+    "public-sources-three-candidate4-popup-topology.json": {
+      "bytes": 1643,
+      "sha256": "dba2486b82ffe4336b7c20506d4fddf7fb7d1252de9b6cbe047f7783b257a162"
+    },
+    "public-sources-remote-portal-inert-result.json": {
+      "bytes": 1158,
+      "sha256": "7c05aba28d8f31c6b95a707409edaf53a8a68e81583d44a7007f6ac2b8b4a5fc"
+    },
+    "actual-public-sources-three-candidate4/ui_workflows.log": {
+      "bytes": 127393,
+      "sha256": "c708806857a00f048f4be47a5ed31a3da0072c179b04c221c4c3c9e442f529c9"
+    }
+  },
+  "checks": {
+    "exact_extracted_visitor_inert_cases": 8,
+    "inert_cases_pass": true,
+    "os_ui_executed_by_inert_cases": false,
+    "existing_derivation_control_pass": true,
+    "all_original_assertion_lines_case_ids_wait_literals_preserved": true
+  },
+  "limits": [
+    "Only actual observed current sibling-popup representation is supported by this diagnosis. Equal popup frames do not identify ownership.",
+    "A scoped query exposing more than one remote portal refuses ambiguity; future nested-OS compatibility is unverified.",
+    "Inert controls execute the exact visitor with stub snapshots, not an operating-system accessibility tree.",
+    "No native retry, current three-case pass, original seven pass, size-matrix pass, TestFlight, physical/human acceptance or original requirement closure."
+  ]
+}

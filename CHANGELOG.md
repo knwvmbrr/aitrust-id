@@ -1,6 +1,62 @@
 # Changelog
 
+## Unreleased — 2026-11-25
+
+### 2026-11-25-042723-ios-public-sources-actual-84833215
+
+Recorded 2026-11-25T04:27:23.679464+00:00 · Contributor: Codex /root/ios_recovery; source review Codex /root · change
+
+- **Changed.** Qualify the native Sources component across all three public archives in both App and Share.
+- **Evidence.** Actual iPhone14Plus/iOS26.2 Simulator execution passes the three exact archive workflows with zero failures/skips, private-input isolation and cancellation; six compiled archive byte identities and owned cleanup pass, with116 frozen sources unchanged. [Change record](./runs/changes/2026-11-25-042723-ios-public-sources-actual-84833215.json).
+- **Not claimed.** Only the Sources component is qualified. The unchanged seven-count runner refuses three cases; full seven, size matrix, physical/human accessibility, current TestFlight, producer register gap and original requirement gates remain open.
+
+
+### 2026-11-25-041639-ios-sources-portal-native-inputs-85bd8262
+
+Recorded 2026-11-25T04:16:39.114837+00:00 · Contributor: Codex /root/ios_recovery; different review Codex /root · change
+
+- **Changed.** Freeze the current Sources observer input register for one separately reviewed native candidate.
+- **Evidence.** The same115 authored source paths bind current bytes; only the five reviewed UI, matrix and documentation inputs changed. ROOT independently verified the source diff and raw evidence identities. [Change record](./runs/changes/2026-11-25-041639-ios-sources-portal-native-inputs-85bd8262.json).
+- **Not claimed.** An input register is not a native pass. The separately pinned actual manifest remains input116 in the private runner; original seven, matrix, TestFlight and human gates remain open.
+
+
+### 2026-11-25-041532-ios-sources-portal-review-limit-b038b8d7
+
+Recorded 2026-11-25T04:15:32.826234+00:00 · Contributor: Codex /root/ios_recovery; different review Codex /root · change
+
+- **Changed.** Document the observed sibling-popup compatibility boundary and independent review of the Sources observer correction.
+- **Evidence.** Actual saved Hiwire diagnostics show two roots, two regions and zero nested popup pruning across three presented observations; the exact extracted visitor passes eight inert controls. ROOT reviewed the full correction. [Change record](./runs/changes/2026-11-25-041532-ios-sources-portal-review-limit-b038b8d7.json).
+- **Not claimed.** Multiple descendant portals fail closed. Future nested OS compatibility and changed actual native execution remain unverified; no original requirement closes.
+
+
+### 2026-11-25-041149-ios-sources-remote-portal-correction-8f951277
+
+Recorded 2026-11-25T04:11:49.909901+00:00 · Contributor: Codex /root/ios_recovery · change
+
+- **Changed.** Preserve the failed native Sources candidate and correct scoped remote portal observation in both native test suites.
+- **Evidence.** Actual Swift build and six compiled public archive byte checks pass. Hiwire completes App and Share; Pyodide and Zlib fail Share host-baseline capture before source selection. Both observer transformations preserve all existing assertions and budgets; one existing derivation control passes. [Change record](./runs/changes/2026-11-25-041149-ios-sources-remote-portal-correction-8f951277.json).
+- **Not claimed.** Corrected observation is source-only pending different review and one fresh actual execution. No full-seven, matrix, TestFlight, physical/human accessibility, independent accuracy or original requirement closure.
+
+
 ## Unreleased — 2026-11-24
+
+### 2026-11-24-ios-public-sources-test-local
+
+Recorded 2026-11-25T03:39:10.894658+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Correct a Sources test-local name collision in the two native test suites; preserve the Sources product and all privacy/cancel outcomes and native limits.
+- **Evidence.** The actual failed test build identified a duplicate sources binding. Both complete test sources and matrix engine reconstruct exactly by reversing only the local rename and UI hash. One affected derivation control passed; ROOT different source review cleared this exact four-file correction. [Change record](./runs/changes/2026-11-24-ios-public-sources-test-local.json).
+- **Not claimed.** Source-only test correction; changed native compile and actual three-case execution remain pending. Candidate3 failed test compilation with no UI execution. Its six compiled public ZIP resources match, but that is not a UI pass. No full seven/current-app/TestFlight, physical/human accessibility, numeric accuracy, admission or original closure.
+
+
+### 2026-11-24-ios-public-sources-ux
+
+Recorded 2026-11-24T18:08:09.012592+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Make the three existing verified public source ZIP offers directly discoverable from an early native disclosure, with a dedicated Sources list shared by App and Share. Preserve the twelve notices and verification identities.
+- **Evidence.** Source preservation checks and one existing derivation control pass on the seven bound source files. The existing seven source case adds only semantic navigation; a separate three-case source cohort retains the same strict privacy and cancellation observer for each archive. ROOT different source review independently checked preservation of the production/Clear and notice reader, all notice/offer identities and the verified sharing body. [Change record](./runs/changes/2026-11-24-ios-public-sources-ux.json).
+- **Not claimed.** Source-only product candidate. Swift compile, current seven, each actual public ZIP presentation/cancel and size qualification are pending. Prior failed seven/size outcomes remain retained, not composed or rebound. No TestFlight upload, physical/human accessibility, build2, accuracy, policy admission or original closure.
+
 
 ### 2026-11-24-postgres-account-integration
 

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-042723-ios-public-sources-actual-84833215",
+  "recorded_at": "2026-11-25T04:27:23.679464+00:00",
+  "author": "Codex /root/ios_recovery; source review Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "666fa3d048c398a92168a15af2f36bc11a5782bc",
+  "changed": "Qualify the native Sources component across all three public archives in both App and Share.",
+  "proves": "Actual iPhone14Plus/iOS26.2 Simulator execution passes the three exact archive workflows with zero failures/skips, private-input isolation and cancellation; six compiled archive byte identities and owned cleanup pass, with116 frozen sources unchanged.",
+  "limits": "Only the Sources component is qualified. The unchanged seven-count runner refuses three cases; full seven, size matrix, physical/human accessibility, current TestFlight, producer register gap and original requirement gates remain open.",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "files": {
+    "docs/ios-simulator-matrix-plan.md": "7f177f882bcab4acf64e2c2d651ac4c14f3a1b469948bcedcc0b21ceb4d6d6a2",
+    "docs/ios-simulator-matrix.md": "f2f29bcb54dc55ae7146e3f2ec9ccda10a2501655f38cec097d455e1f84412ed",
+    "runs/2026-11-24-ios-public-sources-actual.json": "ae08378e6b978a2e2b8bcde09eee391b3d14d42c9362ebf9b43856c68c291b68"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-public-sources-actual.json",
+      "sha256": "ae08378e6b978a2e2b8bcde09eee391b3d14d42c9362ebf9b43856c68c291b68"
+    }
+  ],
+  "checks": []
+}
