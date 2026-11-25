@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "profile": "native-sources-reviewed-integration/v1",
+  "captured_at": "2026-11-25T04:37:30.108619+00:00",
+  "pass": true,
+  "claim_level": "engineering_only",
+  "source_base": "3779d8ccd94974afc05b47f0cbab823c77119794",
+  "execution_source": "666fa3d048c398a92168a15af2f36bc11a5782bc",
+  "author_handoff": "c721186ab84520a0292cdacf7e6830513df64354",
+  "worker": "Codex /root/ios_recovery",
+  "different_reviewer": "Codex /root",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094"
+  ],
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-public-sources-actual.json",
+      "sha256": "ae08378e6b978a2e2b8bcde09eee391b3d14d42c9362ebf9b43856c68c291b68"
+    }
+  ],
+  "different_actual_review": {
+    "private_receipt": "root-public-sources-actual-review.json",
+    "sha256": "594ec3adfa789dea24c03e1035227ce7e69e43e2ab8aac392628f20a8d132d3c",
+    "verified_source_inputs_against_execution_commit": 116,
+    "verified_raw_artifact_identities": 7,
+    "compiled_resources_independently_rehashed": 6,
+    "actual_ui_cases_passed": 3,
+    "actual_ui_failed": 0,
+    "actual_ui_skipped": 0,
+    "simulator": "iPhone 14 Plus/iOS26.2/23C54/arm64",
+    "owned_cleanup_verified_in_raw_proof": true,
+    "original_seven_refusal_preserved": true,
+    "pass": true
+  },
+  "completion": "Early public Sources destination works for JS, Zlib and Hiwire in both App and Share, with original notice identities, strict privacy and cancellation. Registered Sources UX software job complete.",
+  "original_counts": {
+    "total": 202,
+    "complete": 136,
+    "open": 66,
+    "target_open": 60
+  },
+  "original_requirement_closures": [],
+  "scoped_jobs_complete": 37,
+  "stale_state_reconciled": "Earlier native_sharing current/upload/hosted acceptance flags describe older source. Preserve its exact complete object under native_sharing_history; replace current snapshot with explicit Sources-only qualification and dated Apple facts.",
+  "backup_retention_note": "Repository configure.py/cycle.py/schedule.sh and docs record two weekly full backup sets; no fresh live configuration check and no proven seven-day expiry. New account collection remains disabled.",
+  "limits": [
+    "Full current seven-flow and supported size/text matrix remain unqualified. No new signed app, Apple upload, dashboard check, physical install or human VoiceOver.",
+    "The three-case Sources proof is not a released tag, broad native conformance, independent accuracy, license clearance or original closure.",
+    "PostgreSQL/signup/history component is private; real billing and production backup/erase recovery remain incomplete."
+  ],
+  "documentation_corrections": "README corrects stale Search Console/sitemap text using dated actualNov21 evidence and links the working private account guides; it makes no fresh Google claim.",
+  "checks": {
+    "scope_progress": "PASS202records/136complete/66open/39packages/117subtasks/15enhancements",
+    "session_inspection": "PASS37scopedjobs, strict60targetNOTMET",
+    "accountability": "PASS current state chronology/counts; no runtime/source code executed by these checks"
+  }
+}

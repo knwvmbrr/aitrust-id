@@ -112,7 +112,7 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 36,
+    "finished_scoped_tasks": 37,
     "original_requirement_closures": 4
   },
   "goals": {
@@ -182,12 +182,12 @@
     {
       "tag_id": "T-PS",
       "bot_id": "tag_ps",
-      "actual_worker": "/root/ios_recovery",
-      "status": "active",
-      "checked_at": "2026-11-25T04:11:13.941347+00:00",
-      "current_component_status": "Current PS/common iPhone Sources adapter work by /root/ios_recovery: candidate4 compiles but1/3 focused UI cases pass; observed Share remote hierarchy is being repaired. No detector accuracy improvement or full seven/size acceptance.",
+      "actual_worker": null,
+      "status": "queued",
+      "checked_at": "2026-11-25T04:35:01.350136+00:00",
+      "current_component_status": "Public Sources App/Share UX completed and independently reviewed; no detector accuracy improvement. Full current seven/size, physical and independent PS release acceptance remain.",
       "blocking_acceptance": "Current development fixtures and blind-review tooling are present, but the independently coordinated representative holdout, actual blind human labels/adjudication, accepted calibration/abstention policy and applicable human route acceptance are not.",
-      "next_task": "Qualify actual App/Share public-source actions and current seven/size acceptance, preserve independent PS accuracy and human gates."
+      "next_task": "Qualify full current native flow/matrix after source repair and obtain independent PS labels/human acceptance; no active PS implementation worker at this snapshot."
     },
     {
       "tag_id": "T-IV",
@@ -232,12 +232,12 @@
     {
       "tag_id": "T-PII",
       "bot_id": "tag_pii",
-      "actual_worker": null,
-      "status": "queued",
-      "checked_at": "2026-11-19T15:20:45.481757+00:00",
-      "current_component_status": "Unchanged 42-row English/challenge and six-row compact synthetic cohorts executed on isolated Linux. All six compact addresses remain fully masked; compact extra masking falls from ten characters to zero. English predictions and masking are unchanged, including retained errors. Actual service, private replay, clean-install and declared-host timing controls remain separate from independent accuracy and human acceptance. Hidden-separator candidate additionally fixes one synthetic challenge; the other 47 engine rows are unchanged. Twelve extra service variants fully mask their email; five also mask context. No full requirement closure or public chart update. Rebuilt current-source Linux engine, 26 real service controls, 15 pipeline/CLI replay controls and ten clean-install/failure cases now pass; publication and independent/human acceptance remain pending.",
+      "actual_worker": "/root/ios_recovery",
+      "status": "active",
+      "checked_at": "2026-11-25T04:35:01.350136+00:00",
+      "current_component_status": "Independent PII worker reproduces the known pilot [at] example [dot] org challenge and prepares a narrow original-span-preserving plan before code.",
       "blocking_acceptance": "Redaction/draft observations are implemented, but representative independent recognition/human acceptance remains; outbound capture also lacks accepted supported send interception and edit/cancel/proceed boundaries.",
-      "next_task": "Continue false-mask/obfuscated-recognition engineering or a bounded explicit pre-send surface; do not activate new capture permissions."
+      "next_task": "Deliver supported bracket-address recognition and actual redaction/replay checks without weakening PII or other tag boundaries."
     },
     {
       "tag_id": "T-OUT",
@@ -1960,7 +1960,7 @@
         "F-035"
       ],
       "worker": "/root/ios_recovery",
-      "status": "active",
+      "status": "closed",
       "registered_at": "2026-11-24T18:03:56.296255+00:00",
       "registration_time_basis": "Dated current assignment after preimplementation private architecture approval; not a process heartbeat.",
       "deliverable": "Early native Sources destination with all three exact public archives and all twelve legal notices preserved in App and Share.",
@@ -1968,7 +1968,19 @@
         "Compiled current App/Share resources and actual public-only three-source present/cancel navigation.",
         "All original seven-flow, size, physical/human and TestFlight gates remain separately required."
       ],
-      "previous_worker": "/root/web_camo"
+      "previous_worker": "/root/web_camo",
+      "closure_record": {
+        "closed_at": "2026-11-25T04:37:30.108619+00:00",
+        "completed_by": "/root/ios_recovery",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-24-native-sources-integration.json",
+            "sha256": "b563f95f9a5d8389ae6d9466673bb4fad15a5ace7ef62e56bd284dae70cc9d0e"
+          }
+        ],
+        "original_requirement_closed": false
+      }
     },
     {
       "task_id": "session-protected-source-baseline-refresh",
@@ -1986,6 +1998,40 @@
         "No cap, anchor, route, governance, privacy or historical-evidence exception."
       ],
       "previous_worker": "/root/seo"
+    },
+    {
+      "task_id": "session-account-erasure-restore-barrier",
+      "original_ids": [
+        "F-044",
+        "N-010"
+      ],
+      "worker": "/root/postgres_recovery",
+      "status": "active",
+      "registered_at": "2026-11-25T04:35:01.350136+00:00",
+      "registration_time_basis": "Current dated registration after preimplementation architecture assignment; not backdated or a process heartbeat.",
+      "deliverable": "Prevent a deleted synthetic account from regaining login/session/history after an older backup is restored; fail closed on incomplete recovery evidence.",
+      "done_evidence": [
+        "Atomic least-privilege deletion journal and bounded explicit versioned migration; reserve deletion capacity.",
+        "Actual old-backup-before-delete challenge, reconciliation, unaffected account and rollback/uncertainty controls; separate source review and owned cleanup.",
+        "No public collection, payment, production recovery/custody or full original closure."
+      ]
+    },
+    {
+      "task_id": "session-pii-bracket-address",
+      "original_ids": [
+        "T-PII",
+        "F-023"
+      ],
+      "worker": "/root/ios_recovery",
+      "status": "active",
+      "registered_at": "2026-11-25T04:35:01.350136+00:00",
+      "registration_time_basis": "Current dated registration after preimplementation architecture assignment; not backdated or a process heartbeat.",
+      "deliverable": "Reproduce and implement a narrow bracketed-email redaction improvement preserving original spans, current service/replay identity and other tag operation.",
+      "done_evidence": [
+        "Demonstrate the fixed original obfuscated-address challenge and bounded negative/control cases on current sources.",
+        "Actual existing runtime/redaction/replay integration after approved narrow plan; no new dependencies, raw participant data or detector release.",
+        "Independent representative accuracy and human acceptance remain required for the full PII requirement."
+      ]
     }
   ],
   "original_open_requirements": [
@@ -6699,7 +6745,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-25T04:11:13.941347+00:00",
+  "updated_at": "2026-11-25T04:35:01.350136+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -7414,35 +7460,35 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-25T04:11:13.941347+00:00",
+    "recorded_at": "2026-11-25T04:35:01.350136+00:00",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
-    "scoped_tasks_closed": 36,
-    "scoped_task_records": 41,
-    "status": "Private PostgreSQL account job complete and integrated; actual production signup and payments remain off. Source-release CI/restoration and iPhone Share observer repair remain active. No fresh Apple status access.",
+    "scoped_tasks_closed": 37,
+    "scoped_task_records": 43,
+    "status": "Sources UX and PostgreSQL software jobs complete; account erasure restore barrier and independent PII bracket-address work active. Source release PR155 current-source boundary review is active. Apple current access unavailable.",
     "agents_permanent": false,
     "assignments_are_live_heartbeats": false,
     "assignments": [
       {
         "worker": "/root",
-        "role": "PM, account integration and task-list lead",
+        "role": "PM, integration and task-list lead",
         "status": "active_bounded_assignment_at_snapshot"
       },
       {
         "worker": "/root/postgres_recovery",
-        "role": "PostgreSQL component delivered; next rollout architecture review",
-        "status": "previous_implementation_completed_next_architecture_only"
+        "role": "Account erasure restore barrier implementation",
+        "status": "active_bounded_assignment_at_snapshot"
       },
       {
         "worker": "/root/release_recovery",
-        "role": "Protected source release PR155 and exact qualified native cohort selection",
+        "role": "PR155 protected source release and actual boundary/source qualification",
         "status": "active_bounded_assignment_at_snapshot"
       },
       {
         "worker": "/root/ios_recovery",
-        "role": "Scoped native Sources Share observer correction after actual failed candidate4",
+        "role": "Sources work finished; independent PII bracket-address worker",
         "status": "active_bounded_assignment_at_snapshot"
       }
     ]
@@ -8404,6 +8450,40 @@
         {
           "worker": "/root/web_camo",
           "role": "Native public Sources product improvement",
+          "status": "active_bounded_assignment_at_snapshot"
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-11-25T04:11:13.941347+00:00",
+      "original_complete": 136,
+      "original_open": 66,
+      "target_open": 60,
+      "remaining_full_closures": 6,
+      "scoped_tasks_closed": 36,
+      "scoped_task_records": 41,
+      "status": "Private PostgreSQL account job complete and integrated; actual production signup and payments remain off. Source-release CI/restoration and iPhone Share observer repair remain active. No fresh Apple status access.",
+      "agents_permanent": false,
+      "assignments_are_live_heartbeats": false,
+      "assignments": [
+        {
+          "worker": "/root",
+          "role": "PM, account integration and task-list lead",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/postgres_recovery",
+          "role": "PostgreSQL component delivered; next rollout architecture review",
+          "status": "previous_implementation_completed_next_architecture_only"
+        },
+        {
+          "worker": "/root/release_recovery",
+          "role": "Protected source release PR155 and exact qualified native cohort selection",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/ios_recovery",
+          "role": "Scoped native Sources Share observer correction after actual failed candidate4",
           "status": "active_bounded_assignment_at_snapshot"
         }
       ]

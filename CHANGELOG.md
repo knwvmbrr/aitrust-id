@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-25
 
+### 2026-11-24-native-sources-integration
+
+Recorded 2026-11-25T04:37:30.108619+00:00 · Contributor: Codex /root; native Sources implementation /root/ios_recovery · change
+
+- **Changed.** Integrate the reviewed native Sources UX, close its exact software job, replace stale native-current flags with dated source-specific truth and preserve old snapshots; register account restore/PII work and correct README links/status.
+- **Evidence.** Different ROOT raw review confirms exact3 App+Share source/cancel/privacy cases,116execution inputs,7artifact identities and6compiled archives; normal merge preserves author history. Scope/accounting/chronology pass with37scoped jobs and136complete/66open originals. README cites actualNov21SearchConsole facts instead of a stale unverified claim. [Change record](./runs/changes/2026-11-24-native-sources-integration.json).
+- **Not claimed.** No full current seven-flow/size matrix, Apple validation/upload/current TestFlight or physical installation/human VoiceOver, independent accuracy, public signup/payment/production recovery, fresh Google indexing or original requirement closure.
+
+
 ### 2026-11-25-042723-ios-public-sources-actual-84833215
 
 Recorded 2026-11-25T04:27:23.679464+00:00 · Contributor: Codex /root/ios_recovery; source review Codex /root · change

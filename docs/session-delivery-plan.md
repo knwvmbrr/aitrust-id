@@ -1,3 +1,11 @@
+## Qualified native Sources and independent tag work — 2026-11-25T04:35:01.350136+00:00
+
+**37 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** All three verified public archive offers now open/cancel in App and Share with privacy checks on iPhone14Plus/iOS26.2 Simulator. Different ROOT review checks the exact116 execution inputs, raw3-case tree, retained original-seven refusal and six compiled archive hashes. The complete Sources UX job closes; full current seven/size, physical VoiceOver and Apple upload do not. Stale generic native-current flags are replaced by explicit current truth; the complete older snapshot remains in state history.
+
+/root leads integration/accounting. /root/ios_recovery finished Sources and now independently investigates a known PII bracket-address miss. /root/postgres_recovery builds the account deletion/old-backup restore barrier. /root/release_recovery finishes PR155 and actual current source-boundary review. Public signup and real payments remain disabled. Assignments are dated, not permanent bots.
+
+[Sources actual proof](../runs/2026-11-24-ios-public-sources-actual.json) · [Independent integration review](../runs/2026-11-24-native-sources-integration.json) · [Scope ledger](scope-progress.md)
+
 ## Real PostgreSQL account delivery — 2026-11-25T04:11:13.941347+00:00
 
 **36 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The existing signup/private-history API now works against isolated least-privileged PostgreSQL. Actual current HTTP11, separately source-bound restore5 and concurrent2 outcomes are preserved, with different ROOT source review and verified stopped owned services/unchanged main database. Public signup, customer payments and production backup/deletion recovery remain off or unqualified. This completes the registered database software job, not the whole paid product.
