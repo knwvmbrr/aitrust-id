@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-25
+
+### 2026-11-25-account-erasure
+
+Recorded 2026-11-25T05:17:49.531874+00:00 · Contributor: Codex /root/postgres_recovery; different source/actual reviewer /root · change
+
+- **Changed.** Implement whole-account deletion suppression across older PostgreSQL backups with append-only migration002, reserved erasure capacity, checkpointed raw binding, actual backend/dump identities and authoritative restored admission; retain the original account domain and migration001.
+- **Evidence.** One real isolated sequence completes18 phases/12 cases in11.075s: old valid password/session/exact history are present before reconciliation and absent afterward, another account survives, cleanup remains retryable and quota/NULL-ready/rollback/privilege controls pass. Different ROOT actual/source review clears exact27 sources and cleanup; main unchanged, owned services stopped. [Change record](./runs/changes/2026-11-25-account-erasure.json).
+- **Not claimed.** Private synthetic component only; no public signup, customer payment, production backup policy/latest-journal custody, individual-event/clear suppression, physical erasure, new Apple/native acceptance, independent tag accuracy or original closure. Original136complete/66open unchanged. Owner SQL filler and simulated future times were rolled back; idle PSS is not peak RAM. Two guides updated after execution only.
+
+
 ## Unreleased — 2026-11-24
 
 ### 2026-11-24-account-postgres
