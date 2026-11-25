@@ -11,6 +11,13 @@ Recorded 2026-11-25T07:02:34.091625+00:00 · Contributor: Codex /root; native im
 - **Not claimed.** The full Clear job, changed keyboard candidate, physical iPhone, human VoiceOver and current TestFlight installation remain unqualified. Public signup and real payments are off. Original requirements remain 136 complete and 66 open, with 38 completed scoped jobs; target 60 is not met.
 
 
+### 2026-11-25-ios-keyboard-reachability-source
+
+Recorded 2026-11-25T06:56:12.772895+00:00 · Contributor: Codex /root/ios_recovery; different source review Codex /root · change
+
+- **Changed.** Add a native Done editing action and keyboard dismissal on editor or parent drag in shared App and Share.
+- **Evidence.** Exact source reversals preserve all original product logic, seven assertions and layout fixture; one existing derivation control passes. Different source review checks all five changed implementation and planning files. [Change record](./runs/changes/2026-11-25-ios-keyboard-reachability-source.json).
+- **Not claimed.** Source-only: changed native compilation, full seven and full four-by-three matrix remain pending. No original closure, physical/human acceptance or Apple build claim.
 ### 2026-11-25-ios-current-layout-matrix
 
 Recorded 2026-11-25T06:51:35.215281+00:00 · Contributor: Codex /root/ios_recovery; different actual review Codex /root · change

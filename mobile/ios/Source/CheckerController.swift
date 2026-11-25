@@ -36,6 +36,7 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
     override func viewDidLoad() {
         super.viewDidLoad(); BrandTheme.installBackdrop(in: view)
         let scroll = UIScrollView(), stack = UIStackView(); stack.axis = .vertical; stack.spacing = 16
+        scroll.keyboardDismissMode = .onDrag
         stack.backgroundColor = BrandTheme.panel; stack.layer.cornerRadius = 20
         stack.isLayoutMarginsRelativeArrangement = true
         stack.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16)
@@ -60,6 +61,9 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
         input.layer.borderWidth = 1; input.layer.cornerRadius = 12
         input.textContainerInset = UIEdgeInsets(top: 12, left: 8, bottom: 12, right: 8)
         input.autocorrectionType = .no; input.spellCheckingType = .no; input.autocapitalizationType = .none
+        input.keyboardDismissMode = .onDrag
+        input.bounces = true; input.alwaysBounceVertical = true
+        input.inputAccessoryView = editingAccessory()
         input.heightAnchor.constraint(greaterThanOrEqualToConstant: 180).isActive = true; stack.addArrangedSubview(input)
         checkButton.configuration = BrandTheme.button("Check with PS", primary: true)
         checkButton.configurationUpdateHandler = { button in
@@ -172,6 +176,19 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
         web?.removeFromSuperview(); web = nil; assets = nil
         refreshCheckButton()
     }
+    private func editingAccessory() -> UIToolbar {
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 44))
+        toolbar.autoresizingMask = [.flexibleWidth]
+        toolbar.isTranslucent = false
+        toolbar.barTintColor = BrandTheme.panel; toolbar.tintColor = BrandTheme.ink
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneEditing))
+        done.accessibilityIdentifier = identity("done-editing")
+        done.accessibilityLabel = "Done editing"
+        done.accessibilityHint = "Hide the keyboard without clearing your text."
+        toolbar.items = [UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil), done]
+        return toolbar
+    }
+    @objc private func doneEditing() { input.resignFirstResponder() }
     @objc func clear() { input.text = ""; invalidate(); status.text = "Cleared." }
     @objc private func clearFromButton() {
         clear()
