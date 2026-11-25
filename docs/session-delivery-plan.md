@@ -856,3 +856,10 @@ remain separate gates; no original or scoped task count is increased here.
 The web/runtime worker continues the actual five-file grant/source-offer map,
 including the newly established hiwire MPL source-form obligation.
 Originals remain136complete/66open; scoped finished-job count remains30.
+
+
+## Native qualification and causal product work — 2026-11-25T07:00:18.468795+00:00
+
+The exact c721 full7 App/Share workflows passed; the separate unchanged4x3 matrix stopped after Small3passes at Regular/light-standard keyboard reachability. Both source-bound public records and owned cleanup are integrated. The new Done editing and drag-dismissal product repair is source-reviewed on ab328; fresh full7 is active at this snapshot and the original matrix remains required. This is not an original or full Clear-job closure.
+
+PII live replay harness corrections and per-event/Clear history recovery continue independently; neither a reviewed harness nor a partially passed recovery run is complete. V6 source publication waits current qualified handoffs. Apple sign-in is an owner gate; continue independent work. Counts remain136complete/66open originals and38completed scoped jobs/44records.

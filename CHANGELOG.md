@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-25
 
+### 2026-11-25-070234-native-qualification-accounting-20cdbfce
+
+Recorded 2026-11-25T07:02:34.091625+00:00 · Contributor: Codex /root; native implementation and execution /root/ios_recovery · change
+
+- **Changed.** Integrate the genuine native seven-flow pass and preserved size-matrix failure; update the scope, README and dated worker assignments around the keyboard repair and independent history/PII work.
+- **Evidence.** Exact c721 App/Share source passes all seven workflows. The separate original matrix stops at regular keyboard reachability after three small configurations pass; failures, cleanup and different reviews remain recorded. All 202 original acceptance criteria and completion percentages are preserved. [Change record](./runs/changes/2026-11-25-070234-native-qualification-accounting-20cdbfce.json).
+- **Not claimed.** The full Clear job, changed keyboard candidate, physical iPhone, human VoiceOver and current TestFlight installation remain unqualified. Public signup and real payments are off. Original requirements remain 136 complete and 66 open, with 38 completed scoped jobs; target 60 is not met.
+
+
 ### 2026-11-25-ios-current-layout-matrix
 
 Recorded 2026-11-25T06:51:35.215281+00:00 · Contributor: Codex /root/ios_recovery; different actual review Codex /root · change

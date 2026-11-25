@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-070234-native-qualification-accounting-20cdbfce",
+  "recorded_at": "2026-11-25T07:02:34.091625+00:00",
+  "author": "Codex /root; native implementation and execution /root/ios_recovery",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3fed1b466498247486924080fc998493cc71a5ca",
+  "changed": "Integrate the genuine native seven-flow pass and preserved size-matrix failure; update the scope, README and dated worker assignments around the keyboard repair and independent history/PII work.",
+  "proves": "Exact c721 App/Share source passes all seven workflows. The separate original matrix stops at regular keyboard reachability after three small configurations pass; failures, cleanup and different reviews remain recorded. All 202 original acceptance criteria and completion percentages are preserved.",
+  "limits": "The full Clear job, changed keyboard candidate, physical iPhone, human VoiceOver and current TestFlight installation remain unqualified. Public signup and real payments are off. Original requirements remain 136 complete and 66 open, with 38 completed scoped jobs; target 60 is not met.",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "T-PS",
+    "F-023",
+    "T-PII",
+    "F-044",
+    "N-010"
+  ],
+  "files": {
+    "README.md": "6a53856aa12911a37b25e93fec281937fb1326c8e49cec8e66cdcdeebcfcca64",
+    "docs/scope-progress.json": "ef96f7fa9eec3405473f6de4a1299f9526391ccf8fda2d2d70b0b3a48ce69295",
+    "docs/scope-progress.md": "f497f4651fca7f66376d9af4b721adc00507ec6696e67ac9c4b635d2079ade4f",
+    "docs/session-delivery-plan.md": "ae90422cd454610cfc4f9aee3cda2549aa504519a737766d63611bb0ad7430cf",
+    "docs/session-delivery.json": "787a324cef17e435f28e4dd8826b1e5c334cc0dc8ba2cacc4f6577ab10eba92a",
+    "state.json": "92163d12442ae89323e3a17f37d90d0450facc8eb051d70bfc3fea54f22c5d36"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-ios-current-seven-qualification.json",
+      "sha256": "73aadfbf6f0126c9f4ec93ac9673b798867328b7892220cf07aa4b582cc95da5"
+    },
+    {
+      "path": "runs/2026-11-25-ios-current-layout-matrix.json",
+      "sha256": "5ebffdfc20f6b98ab3d89901cad6a24a9bf8e4c1045c7fff8507ebe2713f35c1"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-25T07:02:35.168295+00:00"
+    }
+  ]
+}
