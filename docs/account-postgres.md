@@ -129,8 +129,24 @@ measurement or an enforced whole-runtime RAM limit. No generic recursive cleanup
 removes retained private evidence.
 
 This is a working private PostgreSQL component and synthetic restore proof.
-Public service/source qualification, production backup encryption/retention and
-deleted-account reconciliation after older backups, recovery procedures,
-merchant integration and collection policy remain separate before real signup.
+Public service/source qualification, production backup encryption/retention,
+individual-history deletion recovery, merchant integration and collection
+policy remain separate before real signup.
 No full-original requirement closure, all-route permission, model/tag accuracy,
 legal clearance or production collection is inferred from these checks.
+
+## Later recovery work — November25,2026
+
+Whole-account deletion now has a separately exercised recovery barrier. The
+isolated PostgreSQL drill restored an older backup, refused the deleted account
+after reconciliation and preserved the other account. Source, privilege,
+rollback and cleanup checks received a different review. See the
+[actual result](../runs/2026-11-25-account-erasure.json),
+[integration review](../runs/2026-11-25-account-erasure-integration.json) and
+[operator instructions](account-erasure.md).
+
+That result covers deleting an entire account. Recovery after deleting one
+history entry or choosing Clear history is still being qualified. The earlier
+dump size, workspace allocation and memory observation above belong to their
+original recorded drill; they are not current capacity or peak-memory claims.
+Public signup and customer payments remain disabled.

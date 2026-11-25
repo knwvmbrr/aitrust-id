@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-pii-bracket-address-live-replay",
+  "kind": "change",
+  "recorded_at": "2026-11-25T07:47:39.940565+00:00",
+  "author": "Codex /root/release_recovery; recognizer /root/ios_recovery; distinct review /root",
+  "source_base": "bc13388e2ee134a38fbf9d0ab2217db4d62bf34b",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "claim_level": "engineering_only",
+  "changed": "Qualify bracket-address gateway/redactor replay with stable capability identity across fresh processes; preserve historical failure and old records.",
+  "proves": "Actual eight controls pass with five real redactor calls, two sequential starts, 29 model assets verified per start, full identity equality and original-record Matched replay after restart. Different review verifies bytes and owned cleanup; staging and sources stay unchanged.",
+  "limits": "Engineering replay defect only; no staging deployment, independent accuracy, human acceptance, current source admission, tag release or original requirement closure. PII80 and136complete66open unchanged; PM owns registered software-job closure after integration.",
+  "files": {
+    "services/anonymizer/replay_metadata.py": "a70b81241c605f9e3782d5c827e51ed7c10f299b91f73e5d9b8a4f7c8caf2981",
+    "tests/test_redactor_capability_identity.py": "03a1b472fa464c8226ebb9dd7057ffd8302c9c77372f012c02e8780b91b9a7c5",
+    "docs/pii-capability-identity-plan.md": "0d3816935d315d3685d61364fa8dfe451a5f44bb48d13fef79c0fe1851a548d5",
+    "docs/pii-capability-identity-result.md": "75422a25fd63eb1b068096871fe910f1542887fcfa09428250e017178663ead4",
+    "runs/2026-11-25-pii-capability-identity-source.json": "ed888a7691ddd3015235cdfbde238741e650a0e7f958058ebc34d4544e8cd90f",
+    "runs/2026-11-25-pii-bracket-address-live-replay.json": "72e56e975719edfbc5ab50e99789bec44e2ceca3410761d3ed870a8df743ab0c"
+  },
+  "checks": [],
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-pii-bracket-address-live-replay.json",
+      "sha256": "72e56e975719edfbc5ab50e99789bec44e2ceca3410761d3ed870a8df743ab0c"
+    }
+  ],
+  "independent_release_validated": false,
+  "original_scope_counts_changed": false
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "profile": "pii-bracket-address-qualified-integration/v1",
+  "captured_at": "2026-11-25T07:58:57.144965+00:00",
+  "pass": true,
+  "claim_level": "engineering_only",
+  "actual_worker": "Codex /root/release_recovery; original bracket recognizer Codex /root/ios_recovery",
+  "different_source_and_actual_reviewer": "Codex /root",
+  "worker_commit": "66e1c95de0ac684aea8e0507faf312bb185df6c4",
+  "integration_commit": "9c3b8435",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "scoped_task": "session-pii-bracket-address",
+  "completion_basis": "All original scoped done_evidence retained and now fulfilled by separately reviewed source-matching real gateway/redactor/replay with stable restart identity. No full tag/original closure.",
+  "acceptance": [
+    {
+      "criterion": "Original-span bracket-address improvement and bounded recognizer controls",
+      "evidence": "runs/2026-11-25-pii-bracket-address-development.json",
+      "identity_only_followup": "Source builder changes only one proven set-derived capability field; detector app unchanged."
+    },
+    {
+      "criterion": "Actual existing runtime/redaction/replay and other tag independence",
+      "evidence": "runs/2026-11-25-pii-bracket-address-live-replay.json",
+      "sha256": "72e56e975719edfbc5ab50e99789bec44e2ceca3410761d3ed870a8df743ab0c",
+      "actual_controls": 8,
+      "real_redactor_calls": 5,
+      "fresh_processes": 2,
+      "original_assertion_matches_after_restart": true,
+      "evaluator_requests": 0,
+      "current15source_identities_match_integration": true,
+      "owned_cleanup_confirmed": true
+    },
+    {
+      "criterion": "Different source and actual review; full PII limits remain open",
+      "review_sha256": "4f89d7dbb93869d86a744d77967c9e20fb56aa95863730c16a2d5aab2f282646",
+      "tag_acceptance_percent": 80
+    }
+  ],
+  "earlier_proposed_closure_and_withdrawal_preserved": true,
+  "accounting_correction": "runs/2026-11-25-pii-bracket-address-accounting-correction.json",
+  "prior_failed_restart_preserved_sha256": "cb47fb7f02e9f321c6daaa2b6898b3092761541bb0c724b56fc452fa63f5105c",
+  "scoped_jobs_before": 38,
+  "scoped_jobs_after": 39,
+  "original_total": 202,
+  "original_complete": 136,
+  "original_open": 66,
+  "target_open": 60,
+  "original_requirement_closures": [],
+  "public_source_admitted_or_published": false,
+  "service_rebuilt_or_deployed": false,
+  "human_or_representative_independent_accuracy_verified": false,
+  "limits": [
+    "PII80; retained false masking and broader coverage, independent labels and human acceptance remain.",
+    "Installed service unchanged; new source admission and rebuilt serving pipeline need separate qualification.",
+    "No signup, payment, full native matrix, physical-phone or TestFlight availability claim."
+  ]
+}

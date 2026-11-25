@@ -112,7 +112,7 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 38,
+    "finished_scoped_tasks": 39,
     "original_requirement_closures": 4
   },
   "goals": {
@@ -182,12 +182,12 @@
     {
       "tag_id": "T-PS",
       "bot_id": "tag_ps",
-      "actual_worker": null,
-      "status": "queued",
-      "checked_at": "2026-11-25T04:35:01.350136+00:00",
-      "current_component_status": "Public Sources App/Share UX completed and independently reviewed; no detector accuracy improvement. Full current seven/size, physical and independent PS release acceptance remain.",
+      "actual_worker": "/root/ios_recovery",
+      "status": "active",
+      "checked_at": "2026-11-25T07:00:18.468795+00:00",
+      "current_component_status": "Native consumer reachability implementation and fresh actual qualification; no PS detector or independent-accuracy improvement claimed.",
       "blocking_acceptance": "Current development fixtures and blind-review tooling are present, but the independently coordinated representative holdout, actual blind human labels/adjudication, accepted calibration/abstention policy and applicable human route acceptance are not.",
-      "next_task": "Qualify full current native flow/matrix after source repair and obtain independent PS labels/human acceptance; no active PS implementation worker at this snapshot."
+      "next_task": "Finish current full7 and unchanged4x3 keyboard/Clear consumer acceptance; independent holdout and human gates retained."
     },
     {
       "tag_id": "T-IV",
@@ -234,10 +234,10 @@
       "bot_id": "tag_pii",
       "actual_worker": null,
       "status": "reviewed",
-      "checked_at": "2026-11-25T06:00:05.126268+00:00",
-      "current_component_status": "Known bracketed-email miss fixed in isolated current-model engine and ASGI route; software handoff complete, not deployed or independently validated.",
+      "checked_at": "2026-11-25T07:58:57.144965+00:00",
+      "current_component_status": "Bracketed-address redaction and stable two-process gateway/replay software are reviewed and integrated. Full PII80; new-source publication/service rebuild and independent representative recognition/human acceptance remain.",
       "blocking_acceptance": "Redaction/draft observations are implemented, but representative independent recognition/human acceptance remains; outbound capture also lacks accepted supported send interception and edit/cancel/proceed boundaries.",
-      "next_task": "Admit the new source/method and qualify rebuilt service/replay and representative recognition; retain known false masking and human acceptance.",
+      "next_task": "Admit current source, qualify a rebuilt serving pipeline, then improve retained masking errors and obtain independent acceptance; no active tag bot is implied.",
       "completed_worker": "/root/ios_recovery"
     },
     {
@@ -1806,7 +1806,7 @@
         "T-PS"
       ],
       "worker": "/root/ios_recovery",
-      "status": "queued",
+      "status": "active",
       "deliverable": "User Clear returns the empty editor to view without altering background privacy clearing or Share delivery cancellation.",
       "registered_at": "2026-11-24T15:20:15.735780+00:00",
       "registration_time_basis": "Actual current board registration; earlier precode/source work retained separately, not backdated.",
@@ -1816,7 +1816,10 @@
       ],
       "original_requirement_closed": false,
       "previous_worker": "/root/web_camo",
-      "assignment_note": "Prior Clear source authored by /root/web_camo; current complete seven-flow qualification prepared by /root/ios_recovery and queued after the Mac source consumer. No native run yet."
+      "assignment_note": "Reviewed ab328 keyboard change is merged; actual all7 PASS, separate Small/light matrix reaches keyboard and both Clear controls then fails original notice Next-page assertion. Integer-only logging diagnosis active; full matrix/human/Apple gates unchanged.",
+      "latest_evidence": [
+        "runs/2026-11-25-native-keyboard-and-recovery-progress.json"
+      ]
     },
     {
       "task_id": "session-source-consumer-lifecycle",
@@ -2002,7 +2005,8 @@
         "Exact source classifier/archive/current Rprepare before publish and actual protected GitHub checks/signature/AUTH after normal merge.",
         "No cap, anchor, route, governance, privacy or historical-evidence exception."
       ],
-      "previous_worker": "/root/seo"
+      "previous_worker": "/root/seo",
+      "assignment_note": "Protected7ab and genuine independent Mac consumer passed. V6 successor remains held during the independently reviewed PII repair; final ROOT-source integration/current qualification required."
     },
     {
       "task_id": "session-account-erasure-restore-barrier",
@@ -2039,8 +2043,8 @@
         "T-PII",
         "F-023"
       ],
-      "worker": "/root/ios_recovery",
-      "status": "in_review",
+      "worker": "/root/release_recovery",
+      "status": "closed",
       "registered_at": "2026-11-25T04:35:01.350136+00:00",
       "registration_time_basis": "Current dated registration after preimplementation architecture assignment; not backdated or a process heartbeat.",
       "deliverable": "Reproduce and implement a narrow bracketed-email redaction improvement preserving original spans, current service/replay identity and other tag operation.",
@@ -2067,7 +2071,23 @@
           "reason": "Required actual replay qualification remains unevidenced; criterion retained.",
           "correction_evidence": "runs/2026-11-25-pii-bracket-address-accounting-correction.json"
         }
-      ]
+      ],
+      "source_implementation_worker": "/root/ios_recovery",
+      "previous_worker": "/root/ios_recovery",
+      "assignment_note": "Earlier proposed closure and withdrawal are preserved. Actual new-source two-process gateway/redactor/replay now qualifies the full predeclared software job; full PII80, source admission and deployment remain open.",
+      "closure_record": {
+        "closed_at": "2026-11-25T07:58:57.144965+00:00",
+        "completed_by": "/root/release_recovery",
+        "source_implementation_worker": "/root/ios_recovery",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-25-pii-bracket-address-qualified-integration.json",
+            "sha256": "40b030cc912262606dfe09fb5a8bd9c8c994e35215b8ca499134b6eb8a7bdf3f"
+          }
+        ],
+        "original_requirement_closed": false
+      }
     },
     {
       "task_id": "session-history-event-clear-restore",
@@ -2084,15 +2104,16 @@
         "Append-only003 and explicitv3 preserve001/002 and whole-account erasure; server-only row-incarnation/epoch with reserved deletion capacity.",
         "Actual separate one-use restore targets prove selective old-row removal, same-public-ID newer-row preservation, Clear and genuine post-reconcile append; incomplete owner/journal input refuses.",
         "Different source and actual review, exact bounded owned cleanup; public signup/billing and production recovery remain separately gated."
-      ]
+      ],
+      "assignment_note": "Real signup/history creation and capacity controls pass in isolated PostgreSQL; latest one-use restore candidate refuses after target allocation. Preserve existing target and diagnose before further mutation; no task closure/public activation."
     }
   ],
   "original_open_requirements": [
     {
       "id": "F-004",
-      "title": "Abstention as a first-class state \u2014 UNK",
+      "title": "Abstention as a first-class state — UNK",
       "percent_at_baseline": 80,
-      "baseline_job": "Specify and deliver abstention as a first-class state \u2014 UNK.",
+      "baseline_job": "Specify and deliver abstention as a first-class state — UNK.",
       "outcome": "The tool says \"I don't know\" instead of guessing at you",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -2159,7 +2180,7 @@
           "acceptance": [
             "Independent implementations agree on canonical subjects/vectors.",
             "Unknown upstream codes are contract failures, not invented abstentions.",
-            "Changing one tag\u2019s vocabulary or floor cannot silently alter another tag."
+            "Changing one tag’s vocabulary or floor cannot silently alter another tag."
           ],
           "decision": null
         }
@@ -2192,9 +2213,9 @@
     },
     {
       "id": "F-076",
-      "title": "RFC process \u2014 template, 14-day comment, evidence requirement",
+      "title": "RFC process — template, 14-day comment, evidence requirement",
       "percent_at_baseline": 40,
-      "baseline_job": "Specify and deliver rFC process \u2014 template, 14-day comment, evidence requirement.",
+      "baseline_job": "Specify and deliver rFC process — template, 14-day comment, evidence requirement.",
       "outcome": "The taxonomy cannot drift into noise by accretion",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -2530,7 +2551,7 @@
       "percent_at_baseline": 20,
       "baseline_job": "Bind an explicit human review and its scope to the exact subject/version reviewed.",
       "outcome": "The reader knows who reviewed what, against which evidence and when, including withdrawal or correction.",
-      "master_acceptance": "A machine never assigns IV merely because a detector passed.; Changing the subject or review scope invalidates that attestation.; Review identity and signature integrity are tested separately from the reviewed claim\u2019s accuracy. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
+      "master_acceptance": "A machine never assigns IV merely because a detector passed.; Changing the subject or review scope invalidates that attestation.; Review identity and signature integrity are tested separately from the reviewed claim’s accuracy. Test this tag alone and under worker failure, saturation and recovery; unrelated implemented tags and the platform must stay usable.",
       "required_acceptance": [
         "Deliver IV Independently Verified. Next package action: Specify reviewer consent, review scope and attestation identity. Required outcome: The reader knows who reviewed what, against which evidence and when, including withdrawal or correction."
       ],
@@ -2542,7 +2563,7 @@
           "acceptance": [
             "A machine never assigns IV merely because a detector passed.",
             "Changing the subject or review scope invalidates that attestation.",
-            "Review identity and signature integrity are tested separately from the reviewed claim\u2019s accuracy.",
+            "Review identity and signature integrity are tested separately from the reviewed claim’s accuracy.",
             "Test this tag alone, fail or saturate its worker, and recover it. Other implemented independent tag routes and the platform must stay usable. Preserve this tag's own Unavailable state and validation gate."
           ],
           "decision": null
@@ -2874,9 +2895,9 @@
     },
     {
       "id": "F-010",
-      "title": "sig.piped_installer.v1 \u2014 curl/wget piped to a shell",
+      "title": "sig.piped_installer.v1 — curl/wget piped to a shell",
       "percent_at_baseline": 80,
-      "baseline_job": "Specify and deliver sig.piped_installer.v1 \u2014 curl/wget piped to a shell.",
+      "baseline_job": "Specify and deliver sig.piped_installer.v1 — curl/wget piped to a shell.",
       "outcome": "A finding identifies this exact signal and the relevant subject spans.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -2931,9 +2952,9 @@
     },
     {
       "id": "F-011",
-      "title": "sig.obfuscated_payload.v1 \u2014 base64/hex into eval/exec",
+      "title": "sig.obfuscated_payload.v1 — base64/hex into eval/exec",
       "percent_at_baseline": 80,
-      "baseline_job": "Specify and deliver sig.obfuscated_payload.v1 \u2014 base64/hex into eval/exec.",
+      "baseline_job": "Specify and deliver sig.obfuscated_payload.v1 — base64/hex into eval/exec.",
       "outcome": "A finding identifies this exact signal and the relevant subject spans.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -2983,9 +3004,9 @@
     },
     {
       "id": "F-012",
-      "title": "sig.credential_exfil.v1 \u2014 reads a secret path, writes to a network sink",
+      "title": "sig.credential_exfil.v1 — reads a secret path, writes to a network sink",
       "percent_at_baseline": 80,
-      "baseline_job": "Specify and deliver sig.credential_exfil.v1 \u2014 reads a secret path, writes to a network sink.",
+      "baseline_job": "Specify and deliver sig.credential_exfil.v1 — reads a secret path, writes to a network sink.",
       "outcome": "A finding identifies this exact signal and the relevant subject spans.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -3039,9 +3060,9 @@
     },
     {
       "id": "F-013",
-      "title": "sig.typosquat.v1 \u2014 package name within edit distance 1\u20132 of a top-N name",
+      "title": "sig.typosquat.v1 — package name within edit distance 1–2 of a top-N name",
       "percent_at_baseline": 80,
-      "baseline_job": "Specify and deliver sig.typosquat.v1 \u2014 package name within edit distance 1\u20132 of a top-N name.",
+      "baseline_job": "Specify and deliver sig.typosquat.v1 — package name within edit distance 1–2 of a top-N name.",
       "outcome": "A finding identifies this exact signal and the relevant subject spans.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -3095,9 +3116,9 @@
     },
     {
       "id": "F-014",
-      "title": "Use/mention discriminator \u2014 is the command being recommended or discussed?",
+      "title": "Use/mention discriminator — is the command being recommended or discussed?",
       "percent_at_baseline": 80,
-      "baseline_job": "Specify and deliver use/mention discriminator \u2014 is the command being recommended or discussed?.",
+      "baseline_job": "Specify and deliver use/mention discriminator — is the command being recommended or discussed?.",
       "outcome": "A finding identifies this exact signal and the relevant subject spans.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -3147,13 +3168,13 @@
     },
     {
       "id": "F-015",
-      "title": "sig.unsourced_specificity.v1 \u2014 figures or dates with no provenance marker",
+      "title": "sig.unsourced_specificity.v1 — figures or dates with no provenance marker",
       "percent_at_baseline": 80,
-      "baseline_job": "Specify and deliver sig.unsourced_specificity.v1 \u2014 figures or dates with no provenance marker.",
+      "baseline_job": "Specify and deliver sig.unsourced_specificity.v1 — figures or dates with no provenance marker.",
       "outcome": "A finding identifies this exact signal and the relevant subject spans.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
-        "Deliver sig.unsourced_specificity.v1 \u2014 figures or dates with no provenance marker. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans."
+        "Deliver sig.unsourced_specificity.v1 — figures or dates with no provenance marker. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans."
       ],
       "stable_next_fix": "Obtain representative contextual specificity and citation-scope labels. Compare the bounded literal method with simpler baselines before adopting any HP mapping. The current CLI rejects fragments inside hash and percent tokens.",
       "package_acceptance": [
@@ -3181,7 +3202,7 @@
         "closure_ready": false
       },
       "done_evidence": [
-        "Original required acceptance: Deliver sig.unsourced_specificity.v1 \u2014 figures or dates with no provenance marker. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans.",
+        "Original required acceptance: Deliver sig.unsourced_specificity.v1 — figures or dates with no provenance marker. Next package action: Evaluate specificity, contradiction, repetition and hedging independently. Required outcome: A finding identifies this exact signal and the relevant subject spans.",
         "Preserve original job/outcome, master and applicable package acceptance; satisfy the stable historical limits recorded above.",
         "Record new immutable source-bound supported/failure evidence and actual required acceptance; a distinct reviewer must inspect the full original result."
       ],
@@ -3206,9 +3227,9 @@
     },
     {
       "id": "F-016",
-      "title": "sig.selfcontradiction.v1 \u2014 NLI entailment between sentence pairs",
+      "title": "sig.selfcontradiction.v1 — NLI entailment between sentence pairs",
       "percent_at_baseline": 60,
-      "baseline_job": "Specify and deliver sig.selfcontradiction.v1 \u2014 NLI entailment between sentence pairs.",
+      "baseline_job": "Specify and deliver sig.selfcontradiction.v1 — NLI entailment between sentence pairs.",
       "outcome": "A finding identifies this exact signal and the relevant subject spans.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -3257,9 +3278,9 @@
     },
     {
       "id": "F-018",
-      "title": "sig.hedge_collapse.v1 \u2014 hedging absent where uncertainty is expected",
+      "title": "sig.hedge_collapse.v1 — hedging absent where uncertainty is expected",
       "percent_at_baseline": 80,
-      "baseline_job": "Specify and deliver sig.hedge_collapse.v1 \u2014 hedging absent where uncertainty is expected.",
+      "baseline_job": "Specify and deliver sig.hedge_collapse.v1 — hedging absent where uncertainty is expected.",
       "outcome": "A finding identifies this exact signal and the relevant subject spans.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -3313,9 +3334,9 @@
     },
     {
       "id": "F-019a",
-      "title": "sig.urgency_frame.v1 \u2014 time-pressure lexicon plus imperative density",
+      "title": "sig.urgency_frame.v1 — time-pressure lexicon plus imperative density",
       "percent_at_baseline": 80,
-      "baseline_job": "Specify and deliver sig.urgency_frame.v1 \u2014 time-pressure lexicon plus imperative density.",
+      "baseline_job": "Specify and deliver sig.urgency_frame.v1 — time-pressure lexicon plus imperative density.",
       "outcome": "A finding identifies this exact signal and the relevant subject spans.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -3377,9 +3398,9 @@
     },
     {
       "id": "F-019b",
-      "title": "sig.false_dilemma.v1 \u2014 binary framing where alternatives exist",
+      "title": "sig.false_dilemma.v1 — binary framing where alternatives exist",
       "percent_at_baseline": 60,
-      "baseline_job": "Specify and deliver sig.false_dilemma.v1 \u2014 binary framing where alternatives exist.",
+      "baseline_job": "Specify and deliver sig.false_dilemma.v1 — binary framing where alternatives exist.",
       "outcome": "A finding identifies this exact signal and the relevant subject spans.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -3439,9 +3460,9 @@
     },
     {
       "id": "F-019c",
-      "title": "sig.authority_appeal.v1 \u2014 unattributed appeals to expertise or consensus",
+      "title": "sig.authority_appeal.v1 — unattributed appeals to expertise or consensus",
       "percent_at_baseline": 80,
-      "baseline_job": "Specify and deliver sig.authority_appeal.v1 \u2014 unattributed appeals to expertise or consensus.",
+      "baseline_job": "Specify and deliver sig.authority_appeal.v1 — unattributed appeals to expertise or consensus.",
       "outcome": "A finding identifies this exact signal and the relevant subject spans.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -3503,9 +3524,9 @@
     },
     {
       "id": "F-020b",
-      "title": "sig.corpus_contradiction.v1 \u2014 NLI contradiction against a retrieved passage",
+      "title": "sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage",
       "percent_at_baseline": 60,
-      "baseline_job": "Specify and deliver sig.corpus_contradiction.v1 \u2014 NLI contradiction against a retrieved passage.",
+      "baseline_job": "Specify and deliver sig.corpus_contradiction.v1 — NLI contradiction against a retrieved passage.",
       "outcome": "A finding identifies this exact signal and the relevant subject spans.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -3565,15 +3586,15 @@
     },
     {
       "id": "F-029a",
-      "title": "sig.outside_knowledge.v1 \u2014 a revision introduces something not derivable from the captured session",
+      "title": "sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session",
       "percent_at_baseline": 20,
-      "baseline_job": "Specify and deliver sig.outside_knowledge.v1 \u2014 a revision introduces something not derivable from the captured session.",
+      "baseline_job": "Specify and deliver sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session.",
       "outcome": "Observed interaction is documented without unsupported authorship or identity claims.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
-        "Deliver sig.outside_knowledge.v1 \u2014 a revision introduces something not derivable from the captured session. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
+        "Deliver sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims."
       ],
-      "stable_next_fix": "Deliver sig.outside_knowledge.v1 \u2014 a revision introduces something not derivable from the captured session. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
+      "stable_next_fix": "Deliver sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
       "package_acceptance": [
         {
           "package_id": "TAG-PA",
@@ -3599,7 +3620,7 @@
         "closure_ready": false
       },
       "done_evidence": [
-        "Original required acceptance: Deliver sig.outside_knowledge.v1 \u2014 a revision introduces something not derivable from the captured session. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
+        "Original required acceptance: Deliver sig.outside_knowledge.v1 — a revision introduces something not derivable from the captured session. Next package action: Separate explicit generation/edit evidence from behavioral research hypotheses. Required outcome: Observed interaction is documented without unsupported authorship or identity claims.",
         "Preserve original job/outcome, master and applicable package acceptance; satisfy the stable historical limits recorded above.",
         "Record new immutable source-bound supported/failure evidence and actual required acceptance; a distinct reviewer must inspect the full original result."
       ],
@@ -3711,9 +3732,9 @@
     },
     {
       "id": "F-024",
-      "title": "PII_OUTBOUND pre-send warning \u2014 you are about to paste personal data into a model",
+      "title": "PII_OUTBOUND pre-send warning — you are about to paste personal data into a model",
       "percent_at_baseline": 80,
-      "baseline_job": "Specify and deliver pII_OUTBOUND pre-send warning \u2014 you are about to paste personal data into a model.",
+      "baseline_job": "Specify and deliver pII_OUTBOUND pre-send warning — you are about to paste personal data into a model.",
       "outcome": "Catches the mistake before it leaves your machine, not after",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -3768,9 +3789,9 @@
     },
     {
       "id": "F-030",
-      "title": "MV3 MAIN-world capture \u2014 fetch patch plus ReadableStream.tee()",
+      "title": "MV3 MAIN-world capture — fetch patch plus ReadableStream.tee()",
       "percent_at_baseline": 40,
-      "baseline_job": "Specify and deliver mV3 MAIN-world capture \u2014 fetch patch plus ReadableStream.tee().",
+      "baseline_job": "Specify and deliver mV3 MAIN-world capture — fetch patch plus ReadableStream.tee().",
       "outcome": "Labels appear where you already read AI output, with no copy-paste",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -3918,9 +3939,9 @@
     },
     {
       "id": "F-097",
-      "title": "User-invoked labelling \u2014 select a response, ask for a check",
+      "title": "User-invoked labelling — select a response, ask for a check",
       "percent_at_baseline": 60,
-      "baseline_job": "Specify and deliver user-invoked labelling \u2014 select a response, ask for a check.",
+      "baseline_job": "Specify and deliver user-invoked labelling — select a response, ask for a check.",
       "outcome": "Correct attribution even when automatic capture cannot be trusted",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -3965,9 +3986,9 @@
     },
     {
       "id": "F-050",
-      "title": "Gate thresholds in eval/gates.yaml \u2014 precision, recall, ECE, abstention band, latency, axe, \u03b1",
+      "title": "Gate thresholds in eval/gates.yaml — precision, recall, ECE, abstention band, latency, axe, α",
       "percent_at_baseline": 60,
-      "baseline_job": "Specify and deliver gate thresholds in eval/gates.yaml \u2014 precision, recall, ECE, abstention band, latency, axe, \u03b1.",
+      "baseline_job": "Specify and deliver gate thresholds in eval/gates.yaml — precision, recall, ECE, abstention band, latency, axe, α.",
       "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -4091,13 +4112,13 @@
     },
     {
       "id": "F-056",
-      "title": "Krippendorff's \u03b1 published for MT, \u2265 0.55",
+      "title": "Krippendorff's α published for MT, ≥ 0.55",
       "percent_at_baseline": 60,
-      "baseline_job": "Specify and deliver krippendorff's \u03b1 published for MT, \u2265 0.55.",
+      "baseline_job": "Specify and deliver krippendorff's α published for MT, ≥ 0.55.",
       "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
-        "Deliver Krippendorff's \u03b1 published for MT, \u2265 0.55. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: Versioned verification evidence determines whether the applicable acceptance criteria passed."
+        "Deliver Krippendorff's α published for MT, ≥ 0.55. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: Versioned verification evidence determines whether the applicable acceptance criteria passed."
       ],
       "stable_next_fix": "Accept the MT annotation and sampling protocol; collect real blinded independent human ratings, adjudicate disagreement, adopt the threshold and interval method, and publish the measured agreement. The nominal computation now executes on Mac and isolated Linux; synthetic examples are not an MT validation study.",
       "package_acceptance": [
@@ -4125,7 +4146,7 @@
         "closure_ready": false
       },
       "done_evidence": [
-        "Original required acceptance: Deliver Krippendorff's \u03b1 published for MT, \u2265 0.55. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: Versioned verification evidence determines whether the applicable acceptance criteria passed.",
+        "Original required acceptance: Deliver Krippendorff's α published for MT, ≥ 0.55. Next package action: Write an annotation guide separating persuasion, urgent safety advice and coercive framing. Required outcome: Versioned verification evidence determines whether the applicable acceptance criteria passed.",
         "Preserve original job/outcome, master and applicable package acceptance; satisfy the stable historical limits recorded above.",
         "Record new immutable source-bound supported/failure evidence and actual required acceptance; a distinct reviewer must inspect the full original result."
       ],
@@ -4390,9 +4411,9 @@
     },
     {
       "id": "F-120",
-      "title": "Evidence packets \u2014 committed transcripts per exit gate",
+      "title": "Evidence packets — committed transcripts per exit gate",
       "percent_at_baseline": 60,
-      "baseline_job": "Specify and deliver evidence packets \u2014 committed transcripts per exit gate.",
+      "baseline_job": "Specify and deliver evidence packets — committed transcripts per exit gate.",
       "outcome": "Versioned verification evidence determines whether the applicable acceptance criteria passed.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -4567,9 +4588,9 @@
     },
     {
       "id": "F-130",
-      "title": "Group authorship \u2014 four signers or four receipts",
+      "title": "Group authorship — four signers or four receipts",
       "percent_at_baseline": 80,
-      "baseline_job": "Specify and deliver group authorship \u2014 four signers or four receipts.",
+      "baseline_job": "Specify and deliver group authorship — four signers or four receipts.",
       "outcome": "An author or verifier can inspect the defined composition evidence and its limits.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -4616,9 +4637,9 @@
     },
     {
       "id": "F-135",
-      "title": "Report AI \u2014 public intake for AI content people want flagged",
+      "title": "Report AI — public intake for AI content people want flagged",
       "percent_at_baseline": 40,
-      "baseline_job": "Specify and deliver report AI \u2014 public intake for AI content people want flagged.",
+      "baseline_job": "Specify and deliver report AI — public intake for AI content people want flagged.",
       "outcome": "A person can access the public tag workflow and its support process.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -4665,7 +4686,7 @@
     },
     {
       "id": "F-136",
-      "title": "Townhall \u2014 a community space for AI users to talk, with moderation",
+      "title": "Townhall — a community space for AI users to talk, with moderation",
       "percent_at_baseline": 40,
       "baseline_job": "Provide public live community discussions and official replies with safe publication controls.",
       "outcome": "Everyone can read public community messages and company replies; private reports and research remain outside the public stream.",
@@ -4857,9 +4878,9 @@
     },
     {
       "id": "F-141",
-      "title": "Pilot programme \u2014 small consenting group, feedback without collecting prompts or outputs",
+      "title": "Pilot programme — small consenting group, feedback without collecting prompts or outputs",
       "percent_at_baseline": 60,
-      "baseline_job": "Specify and deliver pilot programme \u2014 small consenting group, feedback without collecting prompts or outputs.",
+      "baseline_job": "Specify and deliver pilot programme — small consenting group, feedback without collecting prompts or outputs.",
       "outcome": "A person can access the public tag workflow and its support process.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
@@ -4942,7 +4963,7 @@
       "package_acceptance": [
         {
           "package_id": "WP-SITE",
-          "job": "Keep every tag\u2019s job, use instructions, evidence, price boundary and status discoverable.",
+          "job": "Keep every tag’s job, use instructions, evidence, price boundary and status discoverable.",
           "acceptance": [
             "Building Now/Coming Soon/preview/release status is tag-specific.",
             "All preserved tag records remain discoverable.",
@@ -5076,15 +5097,15 @@
     },
     {
       "id": "F-145",
-      "title": "Certification programme \u2014 what a certifier must test, and how one is accredited",
+      "title": "Certification programme — what a certifier must test, and how one is accredited",
       "percent_at_baseline": 20,
-      "baseline_job": "Specify and deliver certification programme \u2014 what a certifier must test, and how one is accredited.",
+      "baseline_job": "Specify and deliver certification programme — what a certifier must test, and how one is accredited.",
       "outcome": "Responsibilities and decisions are documented without implying an operating institution exists.",
       "master_acceptance": "Demonstrate the baseline job on a supported case and a failure case; inspect the user outcome and versioned evidence. Tag-specific numeric gates must be agreed before implementation.",
       "required_acceptance": [
-        "Deliver Certification programme \u2014 what a certifier must test, and how one is accredited. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
+        "Deliver Certification programme — what a certifier must test, and how one is accredited. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists."
       ],
-      "stable_next_fix": "Deliver Certification programme \u2014 what a certifier must test, and how one is accredited. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists.",
+      "stable_next_fix": "Deliver Certification programme — what a certifier must test, and how one is accredited. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists.",
       "package_acceptance": [
         {
           "package_id": "WP-GOVERNANCE",
@@ -5109,7 +5130,7 @@
         "closure_ready": false
       },
       "done_evidence": [
-        "Original required acceptance: Deliver Certification programme \u2014 what a certifier must test, and how one is accredited. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists.",
+        "Original required acceptance: Deliver Certification programme — what a certifier must test, and how one is accredited. Next package action: Separate current individual publisher from any future legal entity. Required outcome: Responsibilities and decisions are documented without implying an operating institution exists.",
         "Preserve original job/outcome, master and applicable package acceptance; satisfy the stable historical limits recorded above.",
         "Record new immutable source-bound supported/failure evidence and actual required acceptance; a distinct reviewer must inspect the full original result."
       ],
@@ -5506,7 +5527,7 @@
           "acceptance": [
             "Independent implementations agree on canonical subjects/vectors.",
             "Unknown upstream codes are contract failures, not invented abstentions.",
-            "Changing one tag\u2019s vocabulary or floor cannot silently alter another tag."
+            "Changing one tag’s vocabulary or floor cannot silently alter another tag."
           ],
           "decision": null
         }
@@ -5922,7 +5943,7 @@
           "acceptance": [
             "Browser-engine emulation is not physical-device evidence.",
             "Shared text is data, not executable code; no unintended network/storage transfer.",
-            "Native and browser routes preserve the exact selected method\u2019s semantics."
+            "Native and browser routes preserve the exact selected method’s semantics."
           ],
           "decision": null
         }
@@ -5979,7 +6000,7 @@
           "acceptance": [
             "Browser-engine emulation is not physical-device evidence.",
             "Shared text is data, not executable code; no unintended network/storage transfer.",
-            "Native and browser routes preserve the exact selected method\u2019s semantics."
+            "Native and browser routes preserve the exact selected method’s semantics."
           ],
           "decision": null
         }
@@ -6086,7 +6107,7 @@
           "acceptance": [
             "Browser-engine emulation is not physical-device evidence.",
             "Shared text is data, not executable code; no unintended network/storage transfer.",
-            "Native and browser routes preserve the exact selected method\u2019s semantics."
+            "Native and browser routes preserve the exact selected method’s semantics."
           ],
           "decision": null
         }
@@ -6105,7 +6126,7 @@
         "runs/2026-11-17-android-emulator-host-inventory.json"
       ],
       "original_acceptance_sha256": "13afa5ea98f0bca08a78390427c7f4c356b63bf10ff56bb9128b4895178a7643",
-      "current_evidence_note": "N014 advanced20\u219280 on exact matched native/default source and9 actual runtime cases. Original acceptance and baseline next-fix snapshot are preserved."
+      "current_evidence_note": "N014 advanced20→80 on exact matched native/default source and9 actual runtime cases. Original acceptance and baseline next-fix snapshot are preserved."
     },
     {
       "id": "N-015",
@@ -6798,7 +6819,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-25T06:17:36.693179+00:00",
+  "updated_at": "2026-11-25T07:58:57.144965+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -7513,14 +7534,14 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-25T06:17:36.693179+00:00",
+    "recorded_at": "2026-11-25T07:58:57.144965+00:00",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
-    "scoped_tasks_closed": 38,
+    "scoped_tasks_closed": 39,
     "scoped_task_records": 44,
-    "status": "PII source/engine/ASGI improvement integrated, registered job remains in_review pending actual replay. Individual history/Clear recovery implementation active. Current full-seven native execution is running after terminal Mac source verification. Apple requires owner sign-in; public signup and real payments remain off.",
+    "status": "Bracket-address software job fully qualified and integrated after actual stable two-process replay. Native notice diagnosis and history recovery continue; original136complete66open/target60 unmet. Public signup and payments off.",
     "agents_permanent": false,
     "assignments_are_live_heartbeats": false,
     "assignments": [
@@ -7530,18 +7551,18 @@
         "status": "active_bounded_assignment_at_snapshot"
       },
       {
+        "worker": "/root/ios_recovery",
+        "role": "Independent native notice navigation diagnosis with original actions/assertions",
+        "status": "active_bounded_assignment_at_snapshot"
+      },
+      {
         "worker": "/root/postgres_recovery",
-        "role": "Independent per-event/Clear restore-suppression software implementation",
+        "role": "Individual-history/Clear restore: exact pg_restore permission diagnosis",
         "status": "active_bounded_assignment_at_snapshot"
       },
       {
         "worker": "/root/release_recovery",
-        "role": "PR155 protected source publication and current required checks",
-        "status": "active_bounded_assignment_at_snapshot"
-      },
-      {
-        "worker": "/root/ios_recovery",
-        "role": "Current full-seven native qualification; PII actual replay follows without weakened criteria",
+        "role": "Qualified PII handoff complete; bounded current-source V6 predecessor qualification",
         "status": "active_bounded_assignment_at_snapshot"
       }
     ]
@@ -8644,6 +8665,40 @@
       ],
       "withdrawn_at": "2026-11-25T06:17:36.693179+00:00",
       "correction_evidence": "runs/2026-11-25-pii-bracket-address-accounting-correction.json"
+    },
+    {
+      "recorded_at": "2026-11-25T07:00:18.468795+00:00",
+      "original_complete": 136,
+      "original_open": 66,
+      "target_open": 60,
+      "remaining_full_closures": 6,
+      "scoped_tasks_closed": 38,
+      "scoped_task_records": 44,
+      "status": "Native c721 all7 PASS; separate matrix FAIL exposed keyboard reachability before Check/Clear. Current product repair source-reviewed, fresh all7 active. History recovery has actual signup/quota controls, reservation correction under review; no finished per-event restore claim. PII live replay source-review corrections active. Apple requires owner sign-in, public signup/real payments remain off.",
+      "agents_permanent": false,
+      "assignments_are_live_heartbeats": false,
+      "assignments": [
+        {
+          "worker": "/root",
+          "role": "PM, integration and task-list lead",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/ios_recovery",
+          "role": "Native keyboard product and exact current7/matrix qualification",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/postgres_recovery",
+          "role": "Independent individual-history/Clear restore recovery; causal reservation correction",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/release_recovery",
+          "role": "PII live replay harness corrections; V6 source implementation paused during this bounded priority handoff",
+          "status": "active_bounded_assignment_at_snapshot"
+        }
+      ]
     }
   ]
 }

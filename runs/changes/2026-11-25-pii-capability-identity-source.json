@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-pii-capability-identity-source",
+  "kind": "change",
+  "recorded_at": "2026-11-25T07:34:42.766053+00:00",
+  "author": "Codex /root/release_recovery; original bracket recognizer /root/ios_recovery",
+  "source_base": "bc13388e2ee134a38fbf9d0ab2217db4d62bf34b",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "claim_level": "engineering_only",
+  "changed": "Canonicalize one proven set-derived Spacy capability field in copied identity metadata while preserving detector operation and ordered fields.",
+  "proves": "Eleven focused source controls pass. Actual installed primary source explains the original same-source ordering defect; unchanged replay code refuses the genuine prior-source assertion without a model/HTTP call. The prior live run and its failed cross-process reproduction remain explicit.",
+  "files": {
+    "services/anonymizer/replay_metadata.py": "a70b81241c605f9e3782d5c827e51ed7c10f299b91f73e5d9b8a4f7c8caf2981",
+    "tests/test_redactor_capability_identity.py": "03a1b472fa464c8226ebb9dd7057ffd8302c9c77372f012c02e8780b91b9a7c5",
+    "docs/pii-capability-identity-plan.md": "0d3816935d315d3685d61364fa8dfe451a5f44bb48d13fef79c0fe1851a548d5",
+    "docs/pii-capability-identity-result.md": "80d8f57916a28fd753d2a3c07f43c9fa09ca37772b7e61f5c5bdb21f1d878a26",
+    "runs/2026-11-25-pii-capability-identity-source.json": "ed888a7691ddd3015235cdfbde238741e650a0e7f958058ebc34d4544e8cd90f"
+  },
+  "checks": [],
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-pii-capability-identity-source.json",
+      "sha256": "ed888a7691ddd3015235cdfbde238741e650a0e7f958058ebc34d4544e8cd90f"
+    }
+  ],
+  "independent_release_validated": false,
+  "original_scope_counts_changed": false,
+  "limits": "Source-only handoff pending different ROOT review and fresh actual two-source stable restart/replay. New builder not deployed; old records unchanged/Unavailable, PII80,136complete66open and registered taskinreview unchanged. No source proof rebound or model behavior/accuracy claim."
+}

@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "profile": "pii-bracket-address-actual-gateway-replay/v1",
+  "captured_at": "2026-11-25T07:47:39.940565+00:00",
+  "actual_started_at": "2026-11-25T07:45:27.396759+00:00",
+  "actual_completed_at": "2026-11-25T07:45:36.853734+00:00",
+  "pass": true,
+  "claim_level": "engineering_only",
+  "actual_worker": "Codex /root/release_recovery",
+  "original_bracket_recognizer_author": "Codex /root/ios_recovery",
+  "different_reviewer": "Codex /root",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "source_base": "bc13388e2ee134a38fbf9d0ab2217db4d62bf34b",
+  "sources": {
+    "services/anonymizer/app.py": {
+      "bytes": 9363,
+      "sha256": "6c694b9debc2e28ae4e36b767597b28ff6633b220d7919ec979b32304c61760d"
+    },
+    "services/anonymizer/model_identity.py": {
+      "bytes": 5356,
+      "sha256": "2df09c5af4d76ec118b3bb47aab74bab7d42ffb0c1cb5a84468ad21bf8351c29"
+    },
+    "services/anonymizer/replay_metadata.py": {
+      "bytes": 2906,
+      "sha256": "a70b81241c605f9e3782d5c827e51ed7c10f299b91f73e5d9b8a4f7c8caf2981"
+    },
+    "services/anonymizer/requirements.lock": {
+      "bytes": 141664,
+      "sha256": "c4883bba6a5005dcfffb96752fd04bc0fe33a6184eff0751cfd2361864589887"
+    },
+    "services/gateway/app.py": {
+      "bytes": 10739,
+      "sha256": "cc33904dd45ef928080d34deebbd7f191e3783e3b86285e3b6fedb6a640e4456"
+    },
+    "protocol/replay.py": {
+      "bytes": 6318,
+      "sha256": "2948a7894bc9c82f653f4347a67708303a1632a78ba25f8769460f14d11abbe6"
+    },
+    "protocol/replay_identity.py": {
+      "bytes": 4312,
+      "sha256": "719fcf682c0ad35bcef545ce0e0d7c5aefb974faa43628e3098b7c4aec666a00"
+    },
+    "protocol/normalization.py": {
+      "bytes": 2419,
+      "sha256": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1"
+    },
+    "protocol/unicode15-data.json": {
+      "bytes": 59614,
+      "sha256": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458"
+    },
+    "protocol/assertions.py": {
+      "bytes": 1149,
+      "sha256": "0ed8e04ed24e4b9cdacf6751182ffc8076d4165e886405442617d19927277ddb"
+    },
+    "protocol/evidence.py": {
+      "bytes": 1340,
+      "sha256": "49be8cfe4f1c04294720f8bff720cb1739592a8cfbf135d305c66802aa643bc9"
+    },
+    "protocol/transport_signing.py": {
+      "bytes": 2684,
+      "sha256": "381238a51b786ae394753e43c4f6fa2a99fa4f20e8e938980bb74203fa2e685c"
+    },
+    "protocol/http_privacy.py": {
+      "bytes": 2063,
+      "sha256": "6151d7bf923cb6613c8615c15ee27706bdd0b8aa6c4015db0e40886a90168807"
+    },
+    "spec/assertion.schema.json": {
+      "bytes": 13233,
+      "sha256": "d43c769a5ddc6a2f7cb4b5e6b81474403dbb2513d25f94fa7958035bfdd6ba1c"
+    },
+    "scripts/aitrust.py": {
+      "bytes": 15916,
+      "sha256": "0fb8dcbd48a80caa456f467d535c7ff079397fa9ed9505fed75aabcbfeaea5ab"
+    }
+  },
+  "actual_evidence": {
+    "private_raw_bytes": 217759,
+    "private_raw_sha256": "907987078f49298b1b629e89582235de95ad76fe31824278c18a3348ef3e7c34",
+    "postflight_sha256": "c0fdfc7830463f14c5b1a4b8d0da924b23158299518ed54dac3026400cbafd69",
+    "source_freeze_sha256": "248a4bd45879e7c9dcbaf1f0f7372d12b9455c302db3d381dd0522cf2e40de53",
+    "source_runtime_review_sha256": "628e1355513ad3f40b00012b10aa66793d44d7da99b9320994a4a84fcb0e86ab",
+    "different_actual_review_sha256": "4f89d7dbb93869d86a744d77967c9e20fb56aa95863730c16a2d5aab2f282646",
+    "source_core_review_sha256": "93722bd3673b44d0c4a2086ff7953b824b48d780798682e3bca78620531ca9dc",
+    "exit_code": 0,
+    "stdout_bytes": 0,
+    "stderr_bytes": 0
+  },
+  "execution": {
+    "route": "Unchanged real gateway ASGI and protocol.replay with actual isolated redactor transport; no fabricated redaction body or evaluator result.",
+    "synthetic_examples_only": true,
+    "real_user_data": false,
+    "checks": [
+      {
+        "id": "initial_current_bracket",
+        "pass": true,
+        "observed_status": null,
+        "identity_equal": null
+      },
+      {
+        "id": "same_original_replay",
+        "pass": true,
+        "observed_status": "matched",
+        "identity_equal": null
+      },
+      {
+        "id": "changed_original_replay",
+        "pass": true,
+        "observed_status": "input_mismatch",
+        "identity_equal": null
+      },
+      {
+        "id": "redactor_transport_unavailable",
+        "pass": true,
+        "observed_status": "unavailable",
+        "identity_equal": null
+      },
+      {
+        "id": "legacy_method_identity_record",
+        "pass": true,
+        "observed_status": "unavailable",
+        "identity_equal": null
+      },
+      {
+        "id": "tampered_identity",
+        "pass": true,
+        "observed_status": "invalid",
+        "identity_equal": null
+      },
+      {
+        "id": "repeat_after_unavailable",
+        "pass": true,
+        "observed_status": "matched",
+        "identity_equal": null
+      },
+      {
+        "id": "cross_process_identity_and_replay",
+        "pass": true,
+        "observed_status": "matched",
+        "identity_equal": true
+      }
+    ],
+    "real_redactor_calls": 5,
+    "serial_process_starts": 2,
+    "model_asset_files_verified_before_each_load": 29,
+    "full_identity_equal_across_processes": true,
+    "actual_original_record_replayed_after_restart": true,
+    "evaluator_requests": 0,
+    "harness_identity_sort_or_override": false,
+    "method": "The production metadata builder canonicalizes only one proven set-derived capability field; the detector and all other ordering remain unchanged.",
+    "historical_identity_probe": "One synthetic changed assertion carries an exact observed previous method identity; this is disclosed separately from replaying the genuinely observed current assertion."
+  },
+  "cleanup": {
+    "owned_container_absence_confirmed": true,
+    "app_source_overlay_removed": true,
+    "metadata_source_overlay_removed": true,
+    "ssh_reaped_exit_code": 0,
+    "staging_service_metadata_unchanged": true,
+    "fifteen_source_and_five_harness_hashes_unchanged": true
+  },
+  "historical_failure_preserved": {
+    "private_raw_sha256": "cb47fb7f02e9f321c6daaa2b6898b3092761541bb0c724b56fc452fa63f5105c",
+    "different_actual_review_sha256": "3a1d7fef46f8aee2afb7384cc906a2af5d2f3c36218143a5d1ce80d50235609e",
+    "controls": 8,
+    "real_calls": 5,
+    "serial_starts": 2,
+    "cross_process_record_reproduced": false,
+    "limitation": "The old builder serialized a capability set in process-dependent order. Its raw result, old assertions and source-only handoff records remain unchanged; the old record is not relabeled as passing the new builder."
+  },
+  "limits": {
+    "current_staging_service_updated": false,
+    "new_public_release_or_tag_gate_passed": false,
+    "independent_accuracy_qualified": false,
+    "human_acceptance_qualified": false,
+    "full_original_requirement_closed": false,
+    "original_counts_changed": false,
+    "pii_full_acceptance_percent": 80,
+    "original_requirements_open": 66,
+    "remaining": "Representative recognition and human acceptance, current source admission, and deployment remain separate gates. This closes only the bounded engineering replay defect after PM integration, not the whole PII tag."
+  }
+}

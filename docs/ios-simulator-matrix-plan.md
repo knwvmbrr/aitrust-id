@@ -261,3 +261,17 @@ new signed TestFlight build and original requirements remain open. The original
 producer's actual manifest input is still explicitly pinned as116th input by the
 private cohort; its broader formal register gap remains recorded. See
 `runs/2026-11-24-ios-public-sources-actual.json` for source identities and limits.
+
+## Keyboard reachability product repair — 2026-11-25
+
+The unchanged c721 full seven passed, then the actual matrix stopped at the
+regular/light-standard keyboard reachability failure after all three small
+configurations passed. Preserve both fresh public records and historical failures.
+ROOT reviewed the saved failure image and approved the useful product repair in
+[ios-keyboard-reachability-plan.md](ios-keyboard-reachability-plan.md) before code:
+native Done editing, keyboard dismissal on drag and short-editor bounce while
+retaining scrolling and all checking/privacy behavior. The matrix fixture,
+gestures, assertions and budgets remain byte-exact. Seven IDs/assertions remain;
+new explicit Done checks and their literal matrix UI pin need fresh source review
+and actual full-seven plus complete4x3 qualification. No old proof is rebound and
+the full Clear task remains open.

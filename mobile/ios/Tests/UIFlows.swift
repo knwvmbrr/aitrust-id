@@ -28,6 +28,23 @@ final class UIFlows: XCTestCase {
         let value = input.value
         XCTAssertTrue(value == nil || (value as? String) == "", file: file, line: line)
     }
+    private func finishEditing(_ input: XCUIElement, in app: XCUIApplication, identifier: String) {
+        XCTAssertTrue(["selected-text", "share-selected-text"].contains(identifier))
+        let prefix = identifier == "share-selected-text" ? "share-" : ""
+        let before = input.value as? String ?? ""
+        XCTAssertFalse(before.isEmpty)
+        XCTAssertFalse(app.staticTexts[prefix + "check-result"].exists)
+        let done = app.buttons[prefix + "done-editing"]
+        XCTAssertTrue(done.waitForExistence(timeout: 10))
+        XCTAssertTrue(done.isHittable)
+        XCTAssertEqual(done.label, "Done editing")
+        done.tap()
+        let hidden = XCTNSPredicateExpectation(predicate: NSPredicate(format: "exists == false"), object: app.keyboards.firstMatch)
+        XCTAssertEqual(XCTWaiter.wait(for: [hidden], timeout: 10), .completed)
+        XCTAssertEqual(input.value as? String ?? "", before)
+        XCTAssertFalse(app.staticTexts[prefix + "check-result"].exists)
+        XCTAssertTrue(app.buttons[prefix + "check-ps"].isEnabled)
+    }
     private func assertEditorReturned(_ app: XCUIApplication, identifier: String) {
         XCTAssertTrue(["selected-text", "share-selected-text"].contains(identifier))
         let input = app.textViews[identifier]
@@ -497,6 +514,7 @@ final class UIFlows: XCTestCase {
         let app = launch()
         let input = app.textViews["selected-text"]
         focus(input, in: app); input.typeText("An ordinary answer.")
+        finishEditing(input, in: app, identifier: "selected-text")
         app.buttons["check-ps"].tap()
         let result = app.staticTexts["check-result"]
         XCTAssertTrue(result.waitForExistence(timeout: 60))
@@ -553,6 +571,9 @@ final class UIFlows: XCTestCase {
     }
     func testShareClearDuringCheckAndRepeat() {
         let app = launch(); openShare(app)
+        let input = app.textViews["share-selected-text"]
+        focus(input, in: app)
+        finishEditing(input, in: app, identifier: "share-selected-text")
         checkSharedText(app); app.buttons["share-clear"].tap()
         assertEmpty(app.textViews["share-selected-text"])
         assertEditorReturned(app, identifier: "share-selected-text")

@@ -1,3 +1,19 @@
+## Qualified bracket-address software delivery — 2026-11-25T07:58:57.144965+00:00
+
+**39 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The original bracket-address job now meets its unchanged recognition and actual replay criteria. Two fresh redactor processes produce the same full method identity, and the real gateway/replay reproduces the original assertion. Five real calls exercise eight controls without the PS evaluator. Different source/actual review and owned cleanup pass. The earlier premature closure and withdrawal remain recorded.
+
+Full PII remains80; installed services have not been rebuilt. Source admission, broader recognition and independent/human acceptance remain separate. Native notice diagnosis and individual-history recovery continue independently; public signup, payments and current TestFlight installation remain unverified or disabled.
+
+[Qualified integration](../runs/2026-11-25-pii-bracket-address-qualified-integration.json) · [Actual replay](../runs/2026-11-25-pii-bracket-address-live-replay.json) · [Method and limits](pii-capability-identity-result.md)
+
+## Native keyboard delivery and recovery diagnosis — 2026-11-25T07:44:14.179456+00:00
+
+**38 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The reviewed native Done/drag repair is merged, and its exact ab328 source passes all7 App/Share workflows. The separate original size matrix now reaches keyboard and both Clear controls, then fails Small/light notice pagination. No full Clear closure or changed fixture/wait is claimed. Local integer-only callback diagnosis is active.
+
+The real PII gateway/replay run exposes an unstable set-derived capability fingerprint across fresh processes. Its narrow identity-only repair is source-reviewed; actual two-source restart qualification remains pending. Individual-history/Clear recovery retains a refused isolated restore for diagnosis; the main database is unchanged and owned services are stopped. Public signup, billing and current TestFlight installation remain unavailable or disabled. Worker assignments are dated snapshots, not perpetual bots.
+
+[Source-specific outcomes and limits](../runs/2026-11-25-native-keyboard-and-recovery-progress.json) · [Whole-account recovery](account-erasure.md)
+
 ## PII fix integrated; actual replay remains open — 2026-11-25T06:17:36.693179+00:00
 
 **38 scoped software jobs complete; originals 136 complete / 66 open, target 60 unmet.** The real PII improvement is integrated: the bracketed address is masked at its original span, the other 41 English observations match the fresh baseline, six compact comparisons match the historical reference, and 14 ASGI controls pass. Different task-list review caught the missing actual replay criterion before PM closeout. The proposed 39th software closure is withdrawn; the existing task and its full acceptance stay open. No criteria were split or lowered.
@@ -856,3 +872,10 @@ remain separate gates; no original or scoped task count is increased here.
 The web/runtime worker continues the actual five-file grant/source-offer map,
 including the newly established hiwire MPL source-form obligation.
 Originals remain136complete/66open; scoped finished-job count remains30.
+
+
+## Native qualification and causal product work — 2026-11-25T07:00:18.468795+00:00
+
+The exact c721 full7 App/Share workflows passed; the separate unchanged4x3 matrix stopped after Small3passes at Regular/light-standard keyboard reachability. Both source-bound public records and owned cleanup are integrated. The new Done editing and drag-dismissal product repair is source-reviewed on ab328; fresh full7 is active at this snapshot and the original matrix remains required. This is not an original or full Clear-job closure.
+
+PII live replay harness corrections and per-event/Clear history recovery continue independently; neither a reviewed harness nor a partially passed recovery run is complete. V6 source publication waits current qualified handoffs. Apple sign-in is an owner gate; continue independent work. Counts remain136complete/66open originals and38completed scoped jobs/44records.
