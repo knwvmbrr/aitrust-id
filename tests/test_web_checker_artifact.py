@@ -309,7 +309,8 @@ class WebArtifactTests(unittest.TestCase):
                 real(signal.ITIMER_REAL,0);signal.signal(signal.SIGALRM,old)
 
     def test_fast_verifier_does_not_extend_finite_deadline(self):
-        ledger=w.Ledger(managed=True)
+        with patch.object(w.time,'monotonic',return_value=0.):
+            ledger=w.Ledger(managed=True)
         with patch.object(w.time,'monotonic',return_value=ledger.started+61),self.assertRaises(w.WebUnavailable):ledger.tick()
         ledger.crypto_seconds=50
         with patch.object(w.time,'monotonic',return_value=ledger.started+109):ledger.tick()

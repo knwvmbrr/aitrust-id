@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-source-baseline-ci-repair
+
+Recorded 2026-11-25T04:04:19.576201+00:00 · Contributor: Codex /root/seo; /root/release_recovery recovery; /root distinct review · change
+
+- **Changed.** Make the existing finite-deadline test deterministic at constructor clock0; register its literal maintenance name and two new evidence records130/160 without changing production deadlines.
+- **Evidence.** The original two focused controls and ROOT different two controls pass against the exact five-file freeze; production helper bytes are unchanged. Actual prior PR155 native run failed at UI workflows, and the selected seven-flow proof remains stale for two sources. [Change record](./runs/changes/2026-11-24-source-baseline-ci-repair.json).
+- **Not claimed.** No current full CI, changed-source archive/packet, native seven-flow success, protected signing/AUTH, public release, accuracy, legal clearance, all14-route approval or original F057/X02 closure. Native failure and stale-proof gate remain open. Original136complete66open retained.
+
+
 ### 2026-11-24-source-baseline-refresh
 
 Recorded 2026-11-24T18:02:06.211236+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
