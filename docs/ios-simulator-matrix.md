@@ -65,6 +65,19 @@ The layout fixture checks all three source actions before reading the legal
 notice. The seven-flow source case enters the new destination, preserving its
 privacy/cancel assertions. PublicSourcesFlows is a separate three-case cohort
 (JS, Zlib, Hiwire, each in App and Share), never a substitute for the seven.
-Earlier seven and size observations remain historical source: current native
-compile, archive-content, presentation/cancel and layout qualification is pending.
-This is not an uploaded TestFlight build or physical-device/accessibility-user proof.
+Earlier seven and size observations remain historical source. The actual Sources
+candidate4 compiles, and all six App/Share source ZIP resources match their exact
+bytes and hashes. Its three-case UI cohort passes1/3: Hiwire completes App and Share;
+Pyodide and Zlib stop at Share host-popup baseline observation before source
+selection. Saved hierarchy shows the expected host caption under an OS remote
+portal that the narrower popup snapshot omits. A reviewed observer correction
+captures that same popup's unique portal separately without changing any result,
+privacy, cancellation or time-budget assertion; actual corrected execution and
+layout qualification remain pending. This is not an uploaded TestFlight build or
+physical-device/accessibility-user proof.
+
+
+The corrected portal observer is limited to the actual observed sibling-popup
+representation. If a later OS nests multiple remote portals inside the same popup,
+it refuses the ambiguity. It does not infer ownership from equal frames or reuse
+another popup's caption. Broader nested-OS compatibility remains unverified.

@@ -165,6 +165,9 @@ final class PublicSourcesFlows: XCTestCase {
                 var missingCaptionSurfaces = 0
                 var prunedPopupSubtrees = 0
                 var prunedRegionSubtrees = 0
+                var remotePortalFrames: [CGRect] = []
+                var prunedRemoteSubtrees = 0
+                var capturedRemoteSubtrees = 0
             }
             var diagnosticLines = 0
             func diagnostic(_ state: SurfaceState?, phase: Int, refusal: Int = 0) {
@@ -207,7 +210,8 @@ final class PublicSourcesFlows: XCTestCase {
                     [frame.minX, frame.minY, frame.width, frame.height].allSatisfy { $0.isFinite }
                 }
                 func visit(_ node: any XCUIElementSnapshot, depth: Int,
-                           enclosingPopup: Int?, inSourceContainer: Bool) {
+                           enclosingPopup: Int?, inSourceContainer: Bool,
+                           inRemotePortal: Bool = false) {
                     guard valid else { return }
                     guard depth <= 64, state.nodes < 4096 else { valid = false; return }
                     state.nodes += 1
@@ -223,6 +227,18 @@ final class PublicSourcesFlows: XCTestCase {
                         return
                     }
                     let popup = enclosingPopup
+                    // A popup snapshot may contain only an OS remote portal
+                    // placeholder while the scoped portal exposes its children.
+                    // Never count that subtree twice or borrow from another popup.
+                    if node.identifier == "ShareSheet.RemoteContainerView", popup != nil {
+                        guard node.elementType == .other, finite(node.frame) else { valid = false; return }
+                        if !inRemotePortal {
+                            state.prunedRemoteSubtrees += 1
+                            state.remotePortalFrames.append(node.frame)
+                            return
+                        }
+                        guard depth == 0 else { valid = false; return }
+                    }
                     let container = inSourceContainer || node.identifier == "public-runtime-source-share"
                     state.sourceContainer = state.sourceContainer || container
                     if node.identifier == "LP.CaptionBar.TopCaption" && node.label == caption {
@@ -241,7 +257,8 @@ final class PublicSourcesFlows: XCTestCase {
                     if let popup, privatePayload { state.popups[popup].privatePayload = true }
                     if container && privatePayload { state.containerPrivatePayload = true }
                     for child in node.children {
-                        visit(child, depth: depth + 1, enclosingPopup: popup, inSourceContainer: container)
+                        visit(child, depth: depth + 1, enclosingPopup: popup,
+                              inSourceContainer: container, inRemotePortal: inRemotePortal)
                         if !valid { break }
                     }
                 }
@@ -251,7 +268,25 @@ final class PublicSourcesFlows: XCTestCase {
                     guard finite(root.frame) else { return refuse(5) }
                     let popupIndex = state.popups.count
                     state.popups.append(PopupState(frame: root.frame))
+                    let precedingPortalCount = state.remotePortalFrames.count
                     visit(root, depth: 0, enclosingPopup: popupIndex, inSourceContainer: false)
+                    guard valid, state.remotePortalFrames.count == precedingPortalCount + 1 else {
+                        return refuse(17)
+                    }
+                    let portalQuery = element.descendants(matching: .other)
+                        .matching(identifier: "ShareSheet.RemoteContainerView")
+                    guard portalQuery.count == 1 else { return refuse(18) }
+                    let portal = portalQuery.element(boundBy: 0)
+                    guard let remote = try? portal.snapshot() else { return refuse(19) }
+                    guard remote.elementType == .other,
+                          remote.identifier == "ShareSheet.RemoteContainerView",
+                          finite(remote.frame), !remote.frame.isEmpty,
+                          remote.frame == state.remotePortalFrames[precedingPortalCount],
+                          root.frame.contains(remote.frame) else { return refuse(20) }
+                    visit(remote, depth: 0, enclosingPopup: popupIndex,
+                          inSourceContainer: false, inRemotePortal: true)
+                    state.capturedRemoteSubtrees += 1
+                    guard portalQuery.count == 1 else { return refuse(21) }
                     if state.popups[popupIndex].sourceCaptions + state.popups[popupIndex].hostCaptions == 0 {
                         state.missingCaptionSurfaces += 1
                     }
@@ -277,7 +312,9 @@ final class PublicSourcesFlows: XCTestCase {
                 guard app.popovers.count == popupCount, regionQuery.count == regionCount,
                       state.popups.count == popupCount, state.regions.count == regionCount else { return refuse(12) }
                 guard state.prunedPopupSubtrees <= popupCount * max(0, popupCount - 1),
-                      state.prunedRegionSubtrees <= popupCount * regionCount else { return refuse(13) }
+                      state.prunedRegionSubtrees <= popupCount * regionCount,
+                      state.prunedRemoteSubtrees == popupCount,
+                      state.capturedRemoteSubtrees == popupCount else { return refuse(13) }
                 diagnostic(state, phase: phase)
                 return state
             }
@@ -290,6 +327,9 @@ final class PublicSourcesFlows: XCTestCase {
                     && left.missingCaptionSurfaces == right.missingCaptionSurfaces
                     && left.prunedPopupSubtrees == right.prunedPopupSubtrees
                     && left.prunedRegionSubtrees == right.prunedRegionSubtrees
+                    && left.remotePortalFrames == right.remotePortalFrames
+                    && left.prunedRemoteSubtrees == right.prunedRemoteSubtrees
+                    && left.capturedRemoteSubtrees == right.capturedRemoteSubtrees
             }
             func knownHostBaseline(_ popups: [PopupState]) -> Bool {
                 guard popups.count == expectedBaseline else { return false }

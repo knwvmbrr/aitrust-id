@@ -1,5 +1,34 @@
 # Changelog
 
+## Unreleased — 2026-11-25
+
+### 2026-11-25-041639-ios-sources-portal-native-inputs-85bd8262
+
+Recorded 2026-11-25T04:16:39.114837+00:00 · Contributor: Codex /root/ios_recovery; different review Codex /root · change
+
+- **Changed.** Freeze the current Sources observer input register for one separately reviewed native candidate.
+- **Evidence.** The same115 authored source paths bind current bytes; only the five reviewed UI, matrix and documentation inputs changed. ROOT independently verified the source diff and raw evidence identities. [Change record](./runs/changes/2026-11-25-041639-ios-sources-portal-native-inputs-85bd8262.json).
+- **Not claimed.** An input register is not a native pass. The separately pinned actual manifest remains input116 in the private runner; original seven, matrix, TestFlight and human gates remain open.
+
+
+### 2026-11-25-041532-ios-sources-portal-review-limit-b038b8d7
+
+Recorded 2026-11-25T04:15:32.826234+00:00 · Contributor: Codex /root/ios_recovery; different review Codex /root · change
+
+- **Changed.** Document the observed sibling-popup compatibility boundary and independent review of the Sources observer correction.
+- **Evidence.** Actual saved Hiwire diagnostics show two roots, two regions and zero nested popup pruning across three presented observations; the exact extracted visitor passes eight inert controls. ROOT reviewed the full correction. [Change record](./runs/changes/2026-11-25-041532-ios-sources-portal-review-limit-b038b8d7.json).
+- **Not claimed.** Multiple descendant portals fail closed. Future nested OS compatibility and changed actual native execution remain unverified; no original requirement closes.
+
+
+### 2026-11-25-041149-ios-sources-remote-portal-correction-8f951277
+
+Recorded 2026-11-25T04:11:49.909901+00:00 · Contributor: Codex /root/ios_recovery · change
+
+- **Changed.** Preserve the failed native Sources candidate and correct scoped remote portal observation in both native test suites.
+- **Evidence.** Actual Swift build and six compiled public archive byte checks pass. Hiwire completes App and Share; Pyodide and Zlib fail Share host-baseline capture before source selection. Both observer transformations preserve all existing assertions and budgets; one existing derivation control passes. [Change record](./runs/changes/2026-11-25-041149-ios-sources-remote-portal-correction-8f951277.json).
+- **Not claimed.** Corrected observation is source-only pending different review and one fresh actual execution. No full-seven, matrix, TestFlight, physical/human accessibility, independent accuracy or original requirement closure.
+
+
 ## Unreleased — 2026-11-24
 
 ### 2026-11-24-ios-public-sources-test-local

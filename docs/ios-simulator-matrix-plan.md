@@ -200,3 +200,44 @@ test files and reverse the single hash to reconstruct the complete matrix engine
 Run only the affected derivation control, freeze current source116 and get a
 different source read before a changed native attempt. No unchanged native retry,
 seven/full-app/TestFlight adoption or original closure.
+
+
+## Candidate4 diagnosis and explicit remote portal observation — 2026-11-24
+
+The changed Sources product and both test suites compile on actual Xcode27.2.
+Candidate4 executes three strict cases: Hiwire passes both App and Share; Pyodide
+and Zlib fail before their Share source row is selected. The existing ten-second
+host baseline observes only20 popup nodes without the host caption, while the
+saved whole-app hierarchy contains the exact caption under
+`ShareSheet.RemoteContainerView`. The native Sources page is visible in the saved
+screenshot. This does not establish a source-export product fault. All six
+compiled source archives match; cleanup,116 unchanged input checks and clean Git
+pass. This failed candidate remains preserved and is not a current UI pass.
+
+Before another native run, the observation boundary will capture each popup's
+single explicitly identified remote portal separately, scoped to that popup.
+Parent traversal will prune that exact portal, then its verified immutable
+subtree will be visited once under the same popup index. Unique identity, type,
+finite contained frame, stable counts, depth/node budgets, both known captions,
+private payload checks and repeated complete-surface facts remain mandatory.
+Unexpected, absent or duplicate portals fail. This avoids both double counting
+and borrowing a caption from another popup. The App's identified non-popup
+Cancel-sheet path retains its original traversal. All existing assertion text,
+case IDs and10/120/150/780-second budgets remain unchanged. The observer correction
+is applied to both suites; the matrix only updates its exact legacy UI hash.
+Risks are an OS remote portal remaining incomplete or changing its identity;
+either must produce a retained failure, never an inferred success or longer wait.
+ROOT approved this observer-only architecture before implementation. Current full
+seven, device-size matrix, TestFlight and physical/human acceptance remain open.
+
+
+The different reviewer also checked nested-popup ambiguity. The actual successful
+Hiwire source presentation reports two popup roots, two dismiss regions and zero
+pruned nested popups in three consecutive phase1/2 observations (142 nodes).
+Both popup frames are equal, so frame equality alone cannot establish ownership.
+The new lookup is scoped to the bound popup and requires its sole identified
+portal. A future nested remote representation may expose multiple descendants;
+that ambiguity fails closed and remains an explicit compatibility limit. It does
+not borrow another popup's caption. The exact extracted visitor also passes eight
+private inert controls; those are logic checks, not OS/UI observations. Current
+native re-execution remains required. See the fresh review receipt for identities.
