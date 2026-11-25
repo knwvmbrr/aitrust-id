@@ -1,0 +1,283 @@
+{
+  "format": "current-native-matrix-attempt/v1",
+  "captured_at": "2026-11-25T06:51:35.201576+00:00",
+  "source_commit": "c721186ab84520a0292cdacf7e6830513df64354",
+  "actual_worker": "Codex /root/ios_recovery",
+  "source_author_attribution": "Preserved prior Clear/layout and Sources implementation; unchanged qualification only.",
+  "different_reviewer": "Codex /root",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094"
+  ],
+  "claim_level": "engineering_only",
+  "pass": false,
+  "requested_profiles": [
+    "small",
+    "regular",
+    "plus",
+    "max"
+  ],
+  "requested_configurations": [
+    "light-standard",
+    "dark-standard",
+    "light-largest"
+  ],
+  "expected_total_cases": 12,
+  "actual_cases": {
+    "total": 4,
+    "passed": 3,
+    "failed": 1,
+    "skipped": 0,
+    "unexecuted": 8
+  },
+  "profile_observations": [
+    {
+      "profile": "small",
+      "pass": true,
+      "configurations": [
+        {
+          "name": "light-standard",
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "metrics": {
+            "height": 667.0,
+            "inputh": 180.0,
+            "titleh": 20.5,
+            "width": 375.0
+          },
+          "images": [
+            {
+              "bytes": 144620,
+              "file": "446DC8FF-70F6-474A-94B6-480DDF722B1B.png",
+              "pixel_height": 1334,
+              "pixel_width": 750,
+              "role": "size-layout-notices",
+              "sha256": "2bed730315593a5b9257bd13dbaa6d29d4f457c9c11964154e9bb543922bb18c"
+            },
+            {
+              "bytes": 92937,
+              "file": "C937DFEC-977B-4360-8A61-C379520F945B.png",
+              "pixel_height": 1334,
+              "pixel_width": 750,
+              "role": "size-layout-app",
+              "sha256": "6a037185672db78c280e04ce11f641ac72294ad0520b29961c2a153bdee96c73"
+            },
+            {
+              "bytes": 114894,
+              "file": "3F27DF3C-FD96-40B8-B1F5-03FB66AE2B04.png",
+              "pixel_height": 1334,
+              "pixel_width": 750,
+              "role": "size-layout-evidence",
+              "sha256": "ad56369ed924348d7309f29b6d58ce87c9eba23f964aa11412762cd99cb9a597"
+            }
+          ]
+        },
+        {
+          "name": "dark-standard",
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "metrics": {
+            "height": 667.0,
+            "inputh": 180.0,
+            "titleh": 20.5,
+            "width": 375.0
+          },
+          "images": [
+            {
+              "bytes": 138006,
+              "file": "C53C3550-BCC4-41E9-9489-27BFACBD9D9A.png",
+              "pixel_height": 1334,
+              "pixel_width": 750,
+              "role": "size-layout-notices",
+              "sha256": "91fb12f13296c7d6d78e4c927bc605a10f7143bedb6fd6bceeefbfc838bdf1bb"
+            },
+            {
+              "bytes": 92392,
+              "file": "3474A365-CDDA-41E6-83D7-4C4B766FBEBF.png",
+              "pixel_height": 1334,
+              "pixel_width": 750,
+              "role": "size-layout-app",
+              "sha256": "37d8af1c57a4712342f3d376cc7b8df67f025d66ae428523607097273d8e689f"
+            },
+            {
+              "bytes": 114584,
+              "file": "80B8140B-5514-4A8E-85E0-0CA520B8234C.png",
+              "pixel_height": 1334,
+              "pixel_width": 750,
+              "role": "size-layout-evidence",
+              "sha256": "9eadeac27284335664f335b63853b802e17ee9387b504a71fc5432d4125ff4fb"
+            }
+          ]
+        },
+        {
+          "name": "light-largest",
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0,
+          "metrics": {
+            "height": 667.0,
+            "inputh": 180.0,
+            "titleh": 187.5,
+            "width": 375.0
+          },
+          "images": [
+            {
+              "bytes": 100939,
+              "file": "E9900947-F3BD-4E05-B39D-11253BA544CA.png",
+              "pixel_height": 1334,
+              "pixel_width": 750,
+              "role": "size-layout-notices",
+              "sha256": "0d5408dae729da8b207f9e7b72621e208ae5d3a423adf73fec5c57a4d73bd642"
+            },
+            {
+              "bytes": 126470,
+              "file": "701DC32B-F478-4E77-B614-5F66C44E5833.png",
+              "pixel_height": 1334,
+              "pixel_width": 750,
+              "role": "size-layout-app",
+              "sha256": "8f5195de2ef79763042c89d482fa06aafd1d9430859e06c609a18634d211e13a"
+            },
+            {
+              "bytes": 134371,
+              "file": "E7BE0DC4-BDD4-45CE-BAB0-D51B7EFEC815.png",
+              "pixel_height": 1334,
+              "pixel_width": 750,
+              "role": "size-layout-evidence",
+              "sha256": "5bd053b8423da1dab69d3e7c51307b2736ed982b4c7c57cc1d6aa4646928f5b0"
+            }
+          ]
+        }
+      ],
+      "owned_cleanup": {
+        "delete_passed": true,
+        "diagnostics_retained": true,
+        "inventory_absent": true,
+        "owned_created": true,
+        "removed": true
+      },
+      "sources_unchanged": true,
+      "separate_visual_review": {
+        "reviewer": "Codex /root",
+        "all9_images_reviewed": true,
+        "receipt_sha256": "51b037d2deaa521cb98442e4e62e8edb4a402528963fbb07f231029689b9501e"
+      }
+    },
+    {
+      "profile": "regular",
+      "pass": false,
+      "failed_configuration": "light-standard",
+      "failed_stage": "light-standard-ui",
+      "reason": "command_failed",
+      "actual_failed_summary": {
+        "failedTests": 1,
+        "passedTests": 0,
+        "result": "Failed",
+        "skippedTests": 0,
+        "totalTestCount": 1
+      },
+      "failure_images": [
+        {
+          "bytes": 258519,
+          "file": "6A8FC83E-4778-4F26-A23E-C13643C8F6D7.png",
+          "pixel_height": 2532,
+          "pixel_width": 1170,
+          "role": "size-layout-failure",
+          "sha256": "a714b10bac3aff8798bf94441a0410b9f0ae4817fd03c848881e705a888d1d35"
+        }
+      ],
+      "owned_cleanup": {
+        "delete_passed": true,
+        "diagnostics_retained": true,
+        "inventory_absent": true,
+        "owned_created": true,
+        "removed": true
+      },
+      "sources_unchanged": true
+    },
+    {
+      "profile": "plus",
+      "state": "not_executed_stop_after_failure"
+    },
+    {
+      "profile": "max",
+      "state": "not_executed_stop_after_failure"
+    }
+  ],
+  "failure_observation": {
+    "message": "Unsupported control geometry or reachability",
+    "source_location": "SizeLayoutFlows.swift:117",
+    "before_any_PS_or_Clear": true,
+    "target_y": 578.0,
+    "target_height": 44.33333333333337,
+    "viewport_y": 47.0,
+    "viewport_height": 489.0,
+    "drag_origin_x": 195.0,
+    "drag_origin_y": 389.3,
+    "drag_distance": 102.33333333333337,
+    "attempts": 8,
+    "target_and_viewport_unchanged": true,
+    "saved_png_keyboard_visible": true,
+    "causal_inference": "Computed drag begins inside focused editor; nested editor may consume the intended outer-scroll gesture. Actual responder dispatch was not traced. Product keyboard reachability needs a separately approved causal fix.",
+    "root_cause_proven": false
+  },
+  "source_integrity": {
+    "frozen_component_sources": 116,
+    "all116_unchanged": true,
+    "cached_assets": 6,
+    "all6_unchanged": true,
+    "owned_alias_removed": true,
+    "git_clean_after": true
+  },
+  "original_core_acceptance_unchanged": true,
+  "all_original_budgets_unchanged": true,
+  "stop_first_failure": true,
+  "full_registered_clear_task_complete": false,
+  "raw_visual_review_completed_field_preserved": false,
+  "private_retained_artifact_identities": {
+    "terminal.json": {
+      "bytes": 31651,
+      "sha256": "ea58082d36471faba1ff2dfaae19ed3c9b551cd5b0129ca7216881036c0d213a"
+    },
+    "plan-v2.json": {
+      "bytes": 3081,
+      "sha256": "5f3bfc4b7875f10b3ced1c27b394a21a29518125f313a0fd9e69d6ddd9f00500"
+    },
+    "qualify-current-matrix.py": {
+      "bytes": 9445,
+      "sha256": "dd864b458d76f8e0b3d94c93561d9a6024d4e0c505f87dae471b933638863f17"
+    },
+    "root-matrix-architecture-source-ack.json": {
+      "bytes": 1168,
+      "sha256": "bcc8e1d82a12fde1cab57690a14466755a8a2f0501bd2890e1e95cfa158c5fe6"
+    },
+    "root-current-matrix-failure-distinct-review.json": {
+      "bytes": 1296,
+      "sha256": "e5861181b394b0d1544967dffe23645e5714f50b2ce5f970dda24a4efa7236ed"
+    },
+    "root-small-profile-visual-review.json": {
+      "bytes": 5027,
+      "sha256": "51b037d2deaa521cb98442e4e62e8edb4a402528963fbb07f231029689b9501e"
+    },
+    "matrix.json": {
+      "bytes": 84470,
+      "sha256": "0478c101e294aad181cef6ccd52bb4f293107f15e2effb08a64107e2ecc06170"
+    },
+    "small/layout.json": {
+      "bytes": 44461,
+      "sha256": "37e93df8eee6652f089c06f51b626a278a6e07f6f56f67e2ffbea9da65942b3c"
+    },
+    "regular/layout.json": {
+      "bytes": 39534,
+      "sha256": "c5e0bb5d5a61aca11e44e76a52cd2c48ecf1c6cb94a2b6fc06666a50eb304d73"
+    }
+  },
+  "limits": [
+    "Full7 passes on the same c721 source in a separate genuine execution; it cannot be composed with partial matrix observations to claim a complete4x3 matrix.",
+    "Matrix remains failed and full Clear task open. Historical failed candidates and current successful seven-flow proof preserved separately.",
+    "No Plus/Max or remaining Regular configuration execution occurred.",
+    "No product source change, retry, physical phone, human VoiceOver, new Apple archive/upload, tag release or original requirement closure."
+  ]
+}

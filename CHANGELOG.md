@@ -2,6 +2,26 @@
 
 ## Unreleased — 2026-11-25
 
+### 2026-11-25-ios-current-layout-matrix
+
+Recorded 2026-11-25T06:51:35.215281+00:00 · Contributor: Codex /root/ios_recovery; different actual review Codex /root · change
+
+- **Changed.** Record the stopped current four-profile native layout attempt and its concrete keyboard reachability failure.
+- **Evidence.** Small completes3configurations; Regular/light-standard fails an original reachability assertion before checking or Clear. Both owned guests and alias are removed; all116sources/sixassets remain unchanged. [Change record](./runs/changes/2026-11-25-ios-current-layout-matrix.json).
+- **Not claimed.** Matrix failed: Plus/Max and eight unexecuted configuration cases are not passes. Nested-editor gesture dispatch is inferred, not established. No unchanged retry, full task completion or original closure.
+
+
+### 2026-11-25-ios-current-seven-qualification
+
+Recorded 2026-11-25T06:51:35.215281+00:00 · Contributor: Codex /root/ios_recovery; different actual review Codex /root · change
+
+- **Changed.** Execute the unchanged current seven App/Share workflows on the supported Simulator.
+- **Evidence.** Actual full7 passes with zero failures/skips; exact116 source and six cached asset identities, six compiled source archives and owned cleanup pass. A different reviewer checked actual raw results. [Change record](./runs/changes/2026-11-25-ios-current-seven-qualification.json).
+- **Not claimed.** The declared four-profile/three-configuration matrix, physical/human checks, new Apple build and full Clear task remain open; no tag release or original closure.
+
+
+
+
 ### 2026-11-25-042723-ios-public-sources-actual-84833215
 
 Recorded 2026-11-25T04:27:23.679464+00:00 · Contributor: Codex /root/ios_recovery; source review Codex /root · change
