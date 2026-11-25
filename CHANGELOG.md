@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-25
 
+### 2026-11-25-080809-pii-qualified-integration-f309d0df
+
+Recorded 2026-11-25T08:08:09.987386+00:00 · Contributor: Codex /root; worker /root/release_recovery; review /root/postgres_recovery · change
+
+- **Changed.** Complete and integrate the registered bracket-address software job after genuine stable two-process gateway/redactor/replay; update scope, state and delivery accounting.
+- **Evidence.** Actual72e56 records8 controls,5 real redactor calls and2 fresh processes with full method identity and original-record replay matching. Different actual review4f89 and PM accounting review6ea0d643119856784040b086d605e48764c0e4e50b89828f930645b6a046f397 verify source, cleanup, unchanged criteria and39 scoped jobs. Earlier premature closure and withdrawal remain immutable. [Change record](./runs/changes/2026-11-25-080809-pii-qualified-integration-f309d0df.json).
+- **Not claimed.** Original136complete66open and fullPII80 remain unchanged; target60 is unmet. Installed service unchanged, current-source admission and rebuilt serving pipeline still pending. No independent accuracy, human acceptance, native matrix, TestFlight install, signup or payment activation.
+
+
 ### 2026-11-25-075401-native-keyboard-recovery-accounting-104f6a7c
 
 Recorded 2026-11-25T07:54:01.188700+00:00 · Contributor: Codex /root; native /root/ios_recovery; review /root/postgres_recovery · change

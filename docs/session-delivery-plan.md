@@ -1,3 +1,11 @@
+## Qualified bracket-address software delivery — 2026-11-25T07:58:57.144965+00:00
+
+**39 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The original bracket-address job now meets its unchanged recognition and actual replay criteria. Two fresh redactor processes produce the same full method identity, and the real gateway/replay reproduces the original assertion. Five real calls exercise eight controls without the PS evaluator. Different source/actual review and owned cleanup pass. The earlier premature closure and withdrawal remain recorded.
+
+Full PII remains80; installed services have not been rebuilt. Source admission, broader recognition and independent/human acceptance remain separate. Native notice diagnosis and individual-history recovery continue independently; public signup, payments and current TestFlight installation remain unverified or disabled.
+
+[Qualified integration](../runs/2026-11-25-pii-bracket-address-qualified-integration.json) · [Actual replay](../runs/2026-11-25-pii-bracket-address-live-replay.json) · [Method and limits](pii-capability-identity-result.md)
+
 ## Native keyboard delivery and recovery diagnosis — 2026-11-25T07:44:14.179456+00:00
 
 **38 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The reviewed native Done/drag repair is merged, and its exact ab328 source passes all7 App/Share workflows. The separate original size matrix now reaches keyboard and both Clear controls, then fails Small/light notice pagination. No full Clear closure or changed fixture/wait is claimed. Local integer-only callback diagnosis is active.
