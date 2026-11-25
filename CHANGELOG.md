@@ -10,6 +10,21 @@ Recorded 2026-11-25T07:54:01.188700+00:00 · Contributor: Codex /root; native /r
 - **Evidence.** Different task-list review ee818bb8e0fcce7974bc48a986f6eb03db19feedf55adec457e09341d70cad22 verifies the eight-file snapshot and original202 acceptance. Native ab328 passes7 while its separate matrix fails Small/light notice Next. Whole-account guide distinguishes its exercised barrier from individual-entry recovery. All original percentages and38 scoped jobs remain unchanged at this dated snapshot. [Change record](./runs/changes/2026-11-25-075401-native-keyboard-recovery-accounting-104f6a7c.json).
 - **Not claimed.** Target60 unmet:136 complete66 open. No full Clear, physical phone, human VoiceOver, current TestFlight installation, public signup or payment claim. PII restart and individual-history recovery remained pending at captured07:44; later actuals remain separate.
 
+### 2026-11-25-pii-bracket-address-live-replay
+
+Recorded 2026-11-25T07:47:39.940565+00:00 · Contributor: Codex /root/release_recovery; recognizer /root/ios_recovery; distinct review /root · change
+
+- **Changed.** Qualify bracket-address gateway/redactor replay with stable capability identity across fresh processes; preserve historical failure and old records.
+- **Evidence.** Actual eight controls pass with five real redactor calls, two sequential starts, 29 model assets verified per start, full identity equality and original-record Matched replay after restart. Different review verifies bytes and owned cleanup; staging and sources stay unchanged. [Change record](./runs/changes/2026-11-25-pii-bracket-address-live-replay.json).
+- **Not claimed.** Engineering replay defect only; no staging deployment, independent accuracy, human acceptance, current source admission, tag release or original requirement closure. PII80 and136complete66open unchanged; PM owns registered software-job closure after integration.
+
+### 2026-11-25-pii-capability-identity-source
+
+Recorded 2026-11-25T07:34:42.766053+00:00 · Contributor: Codex /root/release_recovery; original bracket recognizer /root/ios_recovery · change
+
+- **Changed.** Canonicalize one proven set-derived Spacy capability field in copied identity metadata while preserving detector operation and ordered fields.
+- **Evidence.** Eleven focused source controls pass. Actual installed primary source explains the original same-source ordering defect; unchanged replay code refuses the genuine prior-source assertion without a model/HTTP call. The prior live run and its failed cross-process reproduction remain explicit. [Change record](./runs/changes/2026-11-25-pii-capability-identity-source.json).
+- **Not claimed.** Source-only handoff pending different ROOT review and fresh actual two-source stable restart/replay. New builder not deployed; old records unchanged/Unavailable, PII80,136complete66open and registered taskinreview unchanged. No source proof rebound or model behavior/accuracy claim.
 
 ### 2026-11-25-070234-native-qualification-accounting-20cdbfce
 
@@ -19,7 +34,6 @@ Recorded 2026-11-25T07:02:34.091625+00:00 · Contributor: Codex /root; native im
 - **Evidence.** Exact c721 App/Share source passes all seven workflows. The separate original matrix stops at regular keyboard reachability after three small configurations pass; failures, cleanup and different reviews remain recorded. All 202 original acceptance criteria and completion percentages are preserved. [Change record](./runs/changes/2026-11-25-070234-native-qualification-accounting-20cdbfce.json).
 - **Not claimed.** The full Clear job, changed keyboard candidate, physical iPhone, human VoiceOver and current TestFlight installation remain unqualified. Public signup and real payments are off. Original requirements remain 136 complete and 66 open, with 38 completed scoped jobs; target 60 is not met.
 
-
 ### 2026-11-25-ios-keyboard-reachability-source
 
 Recorded 2026-11-25T06:56:12.772895+00:00 · Contributor: Codex /root/ios_recovery; different source review Codex /root · change
@@ -27,6 +41,7 @@ Recorded 2026-11-25T06:56:12.772895+00:00 · Contributor: Codex /root/ios_recove
 - **Changed.** Add a native Done editing action and keyboard dismissal on editor or parent drag in shared App and Share.
 - **Evidence.** Exact source reversals preserve all original product logic, seven assertions and layout fixture; one existing derivation control passes. Different source review checks all five changed implementation and planning files. [Change record](./runs/changes/2026-11-25-ios-keyboard-reachability-source.json).
 - **Not claimed.** Source-only: changed native compilation, full seven and full four-by-three matrix remain pending. No original closure, physical/human acceptance or Apple build claim.
+
 ### 2026-11-25-ios-current-layout-matrix
 
 Recorded 2026-11-25T06:51:35.215281+00:00 · Contributor: Codex /root/ios_recovery; different actual review Codex /root · change
@@ -34,7 +49,6 @@ Recorded 2026-11-25T06:51:35.215281+00:00 · Contributor: Codex /root/ios_recove
 - **Changed.** Record the stopped current four-profile native layout attempt and its concrete keyboard reachability failure.
 - **Evidence.** Small completes3configurations; Regular/light-standard fails an original reachability assertion before checking or Clear. Both owned guests and alias are removed; all116sources/sixassets remain unchanged. [Change record](./runs/changes/2026-11-25-ios-current-layout-matrix.json).
 - **Not claimed.** Matrix failed: Plus/Max and eight unexecuted configuration cases are not passes. Nested-editor gesture dispatch is inferred, not established. No unchanged retry, full task completion or original closure.
-
 
 ### 2026-11-25-ios-current-seven-qualification
 
