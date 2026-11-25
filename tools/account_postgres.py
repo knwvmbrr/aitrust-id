@@ -193,10 +193,29 @@ def load_profile(path):
     with Capture() as held:
         raw = held.read(path, 4096)
         value = c.parse(raw)
-        unavailable(set(value) == {'format', 'socket', 'port', 'database', 'role', 'server_os_user', 'cluster', 'schema_sha256'}
-                    and value['format'] == PROFILE and value['schema_sha256'] == SCHEMA_SHA
+        keys = {'format', 'socket', 'port', 'database', 'role', 'server_os_user', 'cluster', 'schema_sha256'}
+        if value.get('format') == PROFILE:
+            unavailable(set(value) == keys)
+            databases = ('ait_account_review', 'ait_account_restore')
+        else:
+            from tools import account_erasure as erasure
+            unavailable(value.get('format') == erasure.PROFILE
+                        and set(value) == keys | {'erasure_sha256', 'generation', 'purpose', 'restore_receipt', 'system_identity_sha256'}
+                        and value['erasure_sha256'] == erasure.MIGRATION_SHA
+                        and value['purpose'] in ('source', 'restored'))
+            c.identity(value['generation'])
+            erasure.sha(value['system_identity_sha256'])
+            if value['purpose'] == 'source':
+                unavailable(value['database'] == 'ait_erasure_review' and value['restore_receipt'] is None)
+            else:
+                unavailable(value['database'] == 'ait_erasure_restore'
+                            and type(value['restore_receipt']) is str
+                            and Path(value['restore_receipt']).is_absolute()
+                            and '..' not in Path(value['restore_receipt']).parts)
+            databases = erasure.DATABASES
+        unavailable(value['schema_sha256'] == SCHEMA_SHA
                     and value['role'] == 'ait_account_runtime' and value['cluster'] == 'aitrust-account-review'
-                    and value['database'] in ('ait_account_review', 'ait_account_restore')
+                    and value['database'] in databases
                     and value['server_os_user'] == 'debian' and value['port'] == 55449)
         socket = Path(value['socket'])
         unavailable(type(value['socket']) is str and socket.is_absolute() and '..' not in socket.parts)
@@ -236,11 +255,17 @@ def verify_runtime(transaction, profile):
     role = connection.one("SELECT rolsuper,rolcreatedb,rolcreaterole,rolreplication,rolbypassrls,rolinherit,(SELECT count(*) FROM pg_auth_members WHERE member=pg_roles.oid) FROM pg_roles WHERE rolname=current_user")
     unavailable(role == (False, False, False, False, False, False, 0))
     tables = connection.all("SELECT tablename FROM pg_tables WHERE schemaname='accounts' ORDER BY tablename")
-    unavailable(tuple(x[0] for x in tables) == TABLES)
+    expected = TABLES
+    if profile['format'] != PROFILE:
+        expected = tuple(sorted((*TABLES, 'erasure_journal', 'erasure_state')))
+    unavailable(tuple(x[0] for x in tables) == expected)
     indexes = connection.all("SELECT indexname FROM pg_indexes WHERE schemaname='accounts'")
     unavailable(set(INDEXES).issubset(x[0] for x in indexes))
     privilege = connection.one("SELECT has_schema_privilege(current_user,'accounts','CREATE'),has_database_privilege(current_user,current_database(),'CREATE'),has_database_privilege(current_user,current_database(),'TEMP'),has_table_privilege(current_user,'accounts.meta','INSERT'),has_table_privilege(current_user,'accounts.meta','DELETE'),has_column_privilege(current_user,'accounts.meta','schema_sha','UPDATE')")
     unavailable(privilege == (False,) * 6)
+    if profile['format'] != PROFILE:
+        from tools import account_erasure as erasure
+        erasure.verify_runtime(transaction, profile)
 
 
 class PostgresAccountStore(AccountStore):

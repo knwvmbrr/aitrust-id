@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "profile": "actual-private-account-erasure-barrier/v1",
+  "captured_at": "2026-11-25T05:17:49.531874+00:00",
+  "execution_completed_at": "2026-11-25T05:11:16.931175+00:00",
+  "completion_timestamp_basis": "Server retained final report modification time after owned cleanup; not an independent timestamp witness. Capture time is this evidence reconciliation.",
+  "pass": true,
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "worker": "Codex /root/postgres_recovery",
+  "different_reviewer": "Codex /root",
+  "scope_ids": [
+    "F-044",
+    "N-010"
+  ],
+  "enhancement_id": "ENH-PERSONAL-TAG-HISTORY",
+  "source_base": "5f250b473cba913647ea5599cbcb701594e01497",
+  "source_freeze_sha256": "0d5b1d182ab4bd30e37416d04604f5155993bb2d9bf60b20345401fbf4473e01",
+  "executed_source": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+    "deploy/accounts/001-account-schema.sql": "8bf9fe5a84f6cf13d5118a8fe8e18a27edeae3d2f980ceec0e34ca0500c5e159",
+    "deploy/accounts/002-erasure-schema.sql": "9220cca1e4e6663eeab57be6dbccda245253f95a576ddfc28174551c8e58e757",
+    "deploy/accounts/requirements.lock": "de5d8516f86f49ee92e822712c6a14c9a2b60304893466f2a3fd10516ccdfd4a",
+    "deploy/accounts/runtime-sources.json": "16689b12cfad1f96d53c062a8cef8faeb031223361c9964a8dc4a24adb9d7859",
+    "docs/account-erasure-plan.md": "604a2a42976e72439276f20fac935393b25c74d295c1237fc680c5362ae5ddbe",
+    "docs/account-erasure.md": "ca6371f908a9d4f48991c35f06e876f1a3511629884cdb328c66406e1819d73f",
+    "scripts/account-erasure.py": "e3bdf02cbc3f98df3034c0ccbfc4b4b54cbf54a560925325d33721a38c788073",
+    "scripts/account-postgres-review.py": "e302513ff2eb5871bbce90b9c49429c9f06153b71669cd5fdd3942d2b16eb356",
+    "scripts/verify-account-erasure.py": "37f43e4bb5108df4894cb583c754a29f962873763b5a93c49021881a51ec23bd",
+    "scripts/verify-account-postgres.py": "524a1c80d51b30c4508048bda7e502b2b853ec16e8a1af69ebb4f62a770e291b",
+    "services/accounts/__init__.py": "bbd5fdc155f615c085705271de8593aae2b9213389dc71d5044004028d52f31d",
+    "services/accounts/__main__.py": "6bcb6c4341f58d6284ed935fd1b6ab5f651b5e2bd3eeaf676cf2efc4e12a6ccf",
+    "services/accounts/app.py": "6ff30e13d96952a0043cf0815f1f1255e9fa7a19f11da17838f96f93e5f42f5e",
+    "services/accounts/postgres.py": "e0a089ddeaa8541c3a55c1a0c8366a3e42c0b8e63da05be7e7c71dd4114852b8",
+    "site/account/app.js": "55fc7a6ccfc7ad3f3715ed7cbcdbe51c81347773d1279e8fd101f5848831fd04",
+    "site/account/index.html": "4aed4fd93e4f1eb50c1aa5e2ec23d0c463498a1f4c7e730b45254b2c85553847",
+    "site/account/style.css": "89d2de1878b9f1cbe31afa8274140e134120d111e749850b8120fa0c80128580",
+    "tests/test_account_erasure.py": "f3cb258f61c337d86da40a13ff8c7733a0ab25bb7a3e61a41ad41523e5e8b257",
+    "tools/account_core.py": "372de5a8003dcf246b5600a1f40d0cef5b29ef693ca077000cb33c03c824a10a",
+    "tools/account_erasure.py": "39273de803fafb3f2e45380579d888fc1258545fda5e0301e4d4cbb249917079",
+    "tools/account_postgres.py": "1f4005aa746028905ab5b32a472cacfc5f3ad86c4923faf4da22270e41962577",
+    "tools/account_store.py": "0fddcddd322d02ff785592cb5227fac217ebccdc22a42a7930d0002003478685",
+    "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+    "tools/blind_review_io.py": "81d35f3480deaa7cc8af7b8dc0f1b49aa0d943a668eb657cf1deb22e42508c09",
+    "tools/history_entitlements.py": "011643552ed573a43105b377aeb297920a2198ef07d388e2564fae1a78cb8a4d"
+  },
+  "published_documentation_after_execution": {
+    "docs/account-erasure-plan.md": "0726ed06066485a2f5347ab21d6d8269f42be80aae3fbb329a6e98e1412b3b8b",
+    "docs/account-erasure.md": "589df176e12aaef26c75b241b47b46619d6420d1ddc6f3d6340d5642367b050d"
+  },
+  "documentation_change_semantics": "Two guides updated after execution to describe actual outcomes; no executable/source re-execution is implied. All executed Python/SQL sources remain exact.",
+  "original_requirement_closures": [],
+  "original_counts_unchanged": {
+    "total": 202,
+    "complete": 136,
+    "open": 66
+  },
+  "public_service_enabled": false,
+  "payment_processed": false,
+  "production_collection_enabled": false,
+  "actual_execution": {
+    "single_sequence": true,
+    "workflow_seconds": 11.07532516028732,
+    "command_phases": 18,
+    "case_groups": 12,
+    "synthetic_accounts_created": 2,
+    "prior_accounts_preserved_in_clone": 2,
+    "real_postgresql": true,
+    "driver_runtime_reused": true,
+    "new_dependency_acquisitions": 0,
+    "main_postgresql_modified": false,
+    "old_databases_targeted_for_mutation": false,
+    "new_fixed_databases": [
+      "ait_erasure_review",
+      "ait_erasure_restore"
+    ],
+    "phases": [
+      {
+        "exit_code": 0,
+        "phase": "bootstrap",
+        "result": {
+          "duplicate_migration_refused": true,
+          "inherited_accounts_preserved": 2,
+          "migration_rollback": true,
+          "missing_meta_refused_and_rolled_back": true,
+          "pass": true,
+          "prior_databases_unchanged": true
+        },
+        "seconds": 0.9015796291641891,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "579d47d6647389477b98703f07bb6e69c86be5e82ef01a2af1230bf577a66139"
+      },
+      {
+        "exit_code": 0,
+        "phase": "grant-source-seed",
+        "result": {
+          "pass": true,
+          "public_service_enabled": false,
+          "synthetic_runtime_peer_enabled": true
+        },
+        "seconds": 0.1300682919099927,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "f37ef385d745022a58eaa9dc6da5a30890e20b69bdbe1f4bf8a4fb5a33e1c2a1"
+      },
+      {
+        "exit_code": 0,
+        "phase": "seed",
+        "result": {
+          "actual_postgresql": true,
+          "cases": [
+            {
+              "case": "two_real_accounts_sessions_and_nonempty_private_history_before_backup",
+              "pass": true
+            }
+          ],
+          "pass": true,
+          "payment_processed": false,
+          "phase": "seed",
+          "public_service_enabled": false,
+          "seconds": 1.128278505988419,
+          "source": {
+            "deploy/accounts/002-erasure-schema.sql": "9220cca1e4e6663eeab57be6dbccda245253f95a576ddfc28174551c8e58e757",
+            "scripts/account-erasure.py": "e3bdf02cbc3f98df3034c0ccbfc4b4b54cbf54a560925325d33721a38c788073",
+            "scripts/verify-account-erasure.py": "37f43e4bb5108df4894cb583c754a29f962873763b5a93c49021881a51ec23bd",
+            "tools/account_erasure.py": "39273de803fafb3f2e45380579d888fc1258545fda5e0301e4d4cbb249917079",
+            "tools/account_postgres.py": "1f4005aa746028905ab5b32a472cacfc5f3ad86c4923faf4da22270e41962577"
+          },
+          "synthetic_only": true
+        },
+        "seconds": 1.271544098854065,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "4204bd4c705005704abd35fa9cfabf1133dd10bf7407dabc583aaaab95d401ae"
+      },
+      {
+        "exit_code": 0,
+        "phase": "capture-fixture",
+        "result": {
+          "pass": true,
+          "synthetic_two_account_fixture_copied_to_review_operator": true
+        },
+        "seconds": 0.07601816859096289,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "993a284681a8aecd3ffb8cf92f381ae8063c8c3ee9db38f3461d40f3682e2f8d"
+      },
+      {
+        "exit_code": 0,
+        "phase": "quiesce-source-backup",
+        "result": {
+          "pass": true,
+          "runtime_connect_revoked": true
+        },
+        "seconds": 0.1691608689725399,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "708b521684b1322112491698eabf51f386fcd4d0cf1ea5bc40beb5bfa2669589"
+      },
+      {
+        "exit_code": 0,
+        "phase": "capacity",
+        "result": {
+          "actual_postgresql": true,
+          "cases": [
+            {
+              "case": "owner_only_rolledback4096_capacity_reserves_real_account_deletion_without_phantom_conflict_slot",
+              "pass": true
+            },
+            {
+              "case": "actual_seven_day_boundary_retention_then_pruning_and_full_rollback",
+              "pass": true
+            }
+          ],
+          "pass": true,
+          "payment_processed": false,
+          "phase": "capacity",
+          "public_service_enabled": false,
+          "seconds": 0.27875962806865573,
+          "source": {
+            "deploy/accounts/002-erasure-schema.sql": "9220cca1e4e6663eeab57be6dbccda245253f95a576ddfc28174551c8e58e757",
+            "scripts/account-erasure.py": "e3bdf02cbc3f98df3034c0ccbfc4b4b54cbf54a560925325d33721a38c788073",
+            "scripts/verify-account-erasure.py": "37f43e4bb5108df4894cb583c754a29f962873763b5a93c49021881a51ec23bd",
+            "tools/account_erasure.py": "39273de803fafb3f2e45380579d888fc1258545fda5e0301e4d4cbb249917079",
+            "tools/account_postgres.py": "1f4005aa746028905ab5b32a472cacfc5f3ad86c4923faf4da22270e41962577"
+          },
+          "synthetic_only": true
+        },
+        "seconds": 0.41437143087387085,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "51a7702879bd54b5c95f08bb77aae7e8113b01de4e612867b26a51352fefb2ce"
+      },
+      {
+        "exit_code": 0,
+        "phase": "backup",
+        "result": {
+          "backup_manifest_sha256": "3c745ed0b5820b4872c8bd54cbd26f02581ab5ee7e6d3f358256ebde55712f4a",
+          "pass": true
+        },
+        "seconds": 0.5427554151974618,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "375474c01ea1a0ac71de388a855c329d17a3a0baddcefbac9f4c4c3f96ca5ed5"
+      },
+      {
+        "exit_code": 0,
+        "phase": "grant-source-delete",
+        "result": {
+          "pass": true,
+          "public_service_enabled": false,
+          "synthetic_runtime_peer_enabled": true
+        },
+        "seconds": 0.13193814596161246,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "f37ef385d745022a58eaa9dc6da5a30890e20b69bdbe1f4bf8a4fb5a33e1c2a1"
+      },
+      {
+        "exit_code": 0,
+        "phase": "delete",
+        "result": {
+          "actual_postgresql": true,
+          "cases": [
+            {
+              "case": "real_account_delete_and_successful_external_cleanup_leave_independent_erasure_journal",
+              "pass": true
+            }
+          ],
+          "pass": true,
+          "payment_processed": false,
+          "phase": "delete",
+          "public_service_enabled": false,
+          "seconds": 0.601018653716892,
+          "source": {
+            "deploy/accounts/002-erasure-schema.sql": "9220cca1e4e6663eeab57be6dbccda245253f95a576ddfc28174551c8e58e757",
+            "scripts/account-erasure.py": "e3bdf02cbc3f98df3034c0ccbfc4b4b54cbf54a560925325d33721a38c788073",
+            "scripts/verify-account-erasure.py": "37f43e4bb5108df4894cb583c754a29f962873763b5a93c49021881a51ec23bd",
+            "tools/account_erasure.py": "39273de803fafb3f2e45380579d888fc1258545fda5e0301e4d4cbb249917079",
+            "tools/account_postgres.py": "1f4005aa746028905ab5b32a472cacfc5f3ad86c4923faf4da22270e41962577"
+          },
+          "synthetic_only": true
+        },
+        "seconds": 0.7431056937202811,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "75fd9d418806e1c55e3c1e54f2d481a675c3f6b525be06a7fe2fe4f093591dee"
+      },
+      {
+        "exit_code": 0,
+        "phase": "quiesce-source-journal",
+        "result": {
+          "pass": true,
+          "runtime_connect_revoked": true
+        },
+        "seconds": 0.16954704793170094,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "708b521684b1322112491698eabf51f386fcd4d0cf1ea5bc40beb5bfa2669589"
+      },
+      {
+        "exit_code": 0,
+        "phase": "export",
+        "result": {
+          "checkpoint_source": "operator-selected actual quiesced synthetic source; not independent latest-copy proof",
+          "journal_sha256": "f0a84399dd43ae0aeef3502447cca27b61595547d12574bb7c47e0e5f5b3a30d",
+          "pass": true,
+          "rows": 1
+        },
+        "seconds": 0.4724728879518807,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "ddc6420b52dc8ac3c93f9dcc0d0b29753366a0047ff141ea5ac535485990be5e"
+      },
+      {
+        "exit_code": 0,
+        "phase": "restore",
+        "result": {
+          "pass": true,
+          "restored_old_backup": true,
+          "runtime_connect_revoked": true
+        },
+        "seconds": 0.704075587913394,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "73270b52aee18aeef409fdd671ddb1992364c0c83333e227e13b4e238bb95407"
+      },
+      {
+        "exit_code": 0,
+        "phase": "unready",
+        "result": {
+          "actual_postgresql": true,
+          "cases": [
+            {
+              "case": "actual_runtime_peer_refuses_forged_null_ready_receipt_on_unreconciled_database",
+              "pass": true
+            }
+          ],
+          "pass": true,
+          "payment_processed": false,
+          "phase": "unready",
+          "public_service_enabled": false,
+          "seconds": 0.1709373933263123,
+          "source": {
+            "deploy/accounts/002-erasure-schema.sql": "9220cca1e4e6663eeab57be6dbccda245253f95a576ddfc28174551c8e58e757",
+            "scripts/account-erasure.py": "e3bdf02cbc3f98df3034c0ccbfc4b4b54cbf54a560925325d33721a38c788073",
+            "scripts/verify-account-erasure.py": "37f43e4bb5108df4894cb583c754a29f962873763b5a93c49021881a51ec23bd",
+            "tools/account_erasure.py": "39273de803fafb3f2e45380579d888fc1258545fda5e0301e4d4cbb249917079",
+            "tools/account_postgres.py": "1f4005aa746028905ab5b32a472cacfc5f3ad86c4923faf4da22270e41962577"
+          },
+          "synthetic_only": true
+        },
+        "seconds": 0.5534157180227339,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "eaa84a94fe1c6db0f11bd61e79a760f16da4bad3682f4563c99d22b3507568e3"
+      },
+      {
+        "exit_code": 0,
+        "phase": "before",
+        "result": {
+          "actual_postgresql": true,
+          "cases": [
+            {
+              "case": "actual_old_backup_contains_valid_password_session_and_exact_history_while_serving_is_blocked",
+              "pass": true
+            }
+          ],
+          "pass": true,
+          "payment_processed": false,
+          "phase": "before",
+          "public_service_enabled": false,
+          "seconds": 0.4829803491011262,
+          "source": {
+            "deploy/accounts/002-erasure-schema.sql": "9220cca1e4e6663eeab57be6dbccda245253f95a576ddfc28174551c8e58e757",
+            "scripts/account-erasure.py": "e3bdf02cbc3f98df3034c0ccbfc4b4b54cbf54a560925325d33721a38c788073",
+            "scripts/verify-account-erasure.py": "37f43e4bb5108df4894cb583c754a29f962873763b5a93c49021881a51ec23bd",
+            "tools/account_erasure.py": "39273de803fafb3f2e45380579d888fc1258545fda5e0301e4d4cbb249917079",
+            "tools/account_postgres.py": "1f4005aa746028905ab5b32a472cacfc5f3ad86c4923faf4da22270e41962577"
+          },
+          "synthetic_only": true
+        },
+        "seconds": 0.6189462272450328,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "41bd561d8ee6d060773f100e2a6d7dd0e85e34da9f7cd8ad7af3a10ba5390450"
+      },
+      {
+        "exit_code": 0,
+        "phase": "rollback",
+        "result": {
+          "actual_postgresql": true,
+          "cases": [
+            {
+              "case": "owner_created_pending_cleanup_capacity_refuses_without_dropping_actions_or_issuing_receipt",
+              "pass": true
+            },
+            {
+              "case": "real_reconciliation_precommit_failure_restores_account_trigger_and_outbox_without_serving_receipt",
+              "pass": true
+            }
+          ],
+          "pass": true,
+          "payment_processed": false,
+          "phase": "rollback",
+          "public_service_enabled": false,
+          "seconds": 1.258404484950006,
+          "source": {
+            "deploy/accounts/002-erasure-schema.sql": "9220cca1e4e6663eeab57be6dbccda245253f95a576ddfc28174551c8e58e757",
+            "scripts/account-erasure.py": "e3bdf02cbc3f98df3034c0ccbfc4b4b54cbf54a560925325d33721a38c788073",
+            "scripts/verify-account-erasure.py": "37f43e4bb5108df4894cb583c754a29f962873763b5a93c49021881a51ec23bd",
+            "tools/account_erasure.py": "39273de803fafb3f2e45380579d888fc1258545fda5e0301e4d4cbb249917079",
+            "tools/account_postgres.py": "1f4005aa746028905ab5b32a472cacfc5f3ad86c4923faf4da22270e41962577"
+          },
+          "synthetic_only": true
+        },
+        "seconds": 1.405245543923229,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "e9d7194d98becbd0a331a8995fe4a9c7877e1d1a38bcff5266fee97f3a683e93"
+      },
+      {
+        "exit_code": 0,
+        "phase": "reconcile",
+        "result": {
+          "pass": true,
+          "public_service_enabled": false,
+          "receipt_sha256": "62a1c42f0572e4569cc458cf37838a6e211db9eab3a6bd9f6161617f0656258f"
+        },
+        "seconds": 0.42888769367709756,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "e11093261cf66894f9cdf1ae37b8bccf6da3d5c6757715fed75684c68fadb78b"
+      },
+      {
+        "exit_code": 0,
+        "phase": "grant-restored",
+        "result": {
+          "pass": true,
+          "public_service_enabled": false,
+          "synthetic_runtime_peer_enabled": true
+        },
+        "seconds": 0.4205460073426366,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "f37ef385d745022a58eaa9dc6da5a30890e20b69bdbe1f4bf8a4fb5a33e1c2a1"
+      },
+      {
+        "exit_code": 0,
+        "phase": "after",
+        "result": {
+          "actual_postgresql": true,
+          "cases": [
+            {
+              "case": "restored_deleted_password_and_old_session_refuse",
+              "pass": true
+            },
+            {
+              "case": "restored_deleted_history_absent_and_survivor_password_and_exact_payload_preserved",
+              "pass": true
+            },
+            {
+              "case": "restored_entitlement_cleanup_outbox_survives_and_retries_with_real_access_engine",
+              "pass": true
+            },
+            {
+              "case": "actual_runtime_cannot_mutate_journal_state_trigger_or_owner_role",
+              "pass": true
+            }
+          ],
+          "pass": true,
+          "payment_processed": false,
+          "phase": "after",
+          "public_service_enabled": false,
+          "seconds": 1.0815759473480284,
+          "source": {
+            "deploy/accounts/002-erasure-schema.sql": "9220cca1e4e6663eeab57be6dbccda245253f95a576ddfc28174551c8e58e757",
+            "scripts/account-erasure.py": "e3bdf02cbc3f98df3034c0ccbfc4b4b54cbf54a560925325d33721a38c788073",
+            "scripts/verify-account-erasure.py": "37f43e4bb5108df4894cb583c754a29f962873763b5a93c49021881a51ec23bd",
+            "tools/account_erasure.py": "39273de803fafb3f2e45380579d888fc1258545fda5e0301e4d4cbb249917079",
+            "tools/account_postgres.py": "1f4005aa746028905ab5b32a472cacfc5f3ad86c4923faf4da22270e41962577"
+          },
+          "synthetic_only": true
+        },
+        "seconds": 1.2161684520542622,
+        "stderr_bytes": 0,
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout_sha256": "1cca541d607a1bb850f00ceb0826109bb4c93419cfb9f587f8f9fb9c8c75ec9a"
+      }
+    ]
+  },
+  "recovery_artifact_bindings": {
+    "dump_bytes": 27074,
+    "dump_sha256": "320001e64641730455c0be13b700accab1362900de612aa702600a22a87fad5b",
+    "journal_bytes": 435,
+    "journal_rows": 1,
+    "journal_sha256": "f0a84399dd43ae0aeef3502447cca27b61595547d12574bb7c47e0e5f5b3a30d",
+    "dump_manifest_receipt_match": true,
+    "raw_journal_checkpoint_receipt_match": true,
+    "generation_profile_manifest_journal_receipt_match": true,
+    "actual_backend_system_identity_profile_receipt_match": true,
+    "raw_system_identifier_or_account_ids_published": false
+  },
+  "cleanup": {
+    "erasure_quiescence_failure_types": [],
+    "erasure_workspace_within_256_mib": true,
+    "main_application_tables": 0,
+    "main_critical_snapshot_unchanged": true,
+    "owned_cluster_stopped": true,
+    "owned_http_listener_absent": true,
+    "owned_pg_socket_absent": true,
+    "owned_stop_attempted": true,
+    "owned_workspace_retained": true,
+    "pass": true,
+    "pg_ctl_wait_completed": true,
+    "production_or_payment_active": false,
+    "pss_is_not_peak_or_whole_runtime_enforcement": true,
+    "public_service_enabled": false,
+    "review_pg_idle_pss_kib": 42634,
+    "workspace_allocated_bytes": 123891712
+  },
+  "workspace": {
+    "initial_allocated_bytes": 111489024,
+    "final_allocated_bytes_after_stop": 131043328,
+    "additional_bytes": 19554304,
+    "limit_total_bytes": 268435456,
+    "limit_additional_bytes": 67108864,
+    "review_pg_idle_pss_kib": 42634,
+    "idle_is_not_peak_or_total_ram_enforcement": true
+  },
+  "source_unchanged": true,
+  "original_source_unchanged": true,
+  "raw_evidence": {
+    "actual_remote_stdout_sha256": "029775ceb61220cd24614ba45606e41bf70d7f47c22e6138298e8e2347e8d180",
+    "actual_remote_stdout_bytes": 15968,
+    "ssh_exit": 0,
+    "stderr_bytes": 0,
+    "retained_server_final_sha256": "89fa5d1fcf2f720ccefd76bcd597a00f6195767bbe9deccaf76c534c901d816d",
+    "retained_private_artifacts": 58,
+    "retained_private_artifact_bytes": 72570,
+    "retained_index_sha256": "2f1f641ecd7c84bac2e4db7f2cd11e16cc0818ee82d714fd6a82558119206a70",
+    "private_bytes_not_republished": true
+  },
+  "different_review": {
+    "private_receipt": "root-account-erasure-actual-distinct-review.json",
+    "sha256": "3893f14d93c2b4d897ed2e86cf3e5cefa0c7389e1eba61e1665e3f752c037e52",
+    "pass": true,
+    "scope": "Exact actual raw,27 runtime source map,18 command phases/12 actual cases, source code before/after/rollback assertions, original/new source preservation, budgets, ownership cleanup and unchanged main; no broad replay."
+  },
+  "phase_semantics": [
+    "Only this v3 sequence executed; earlier reviewed9ab/v2 candidates remain unexecuted and are not promoted.",
+    "Owner-created4096-capacity SQL filler and synthetic future timestamps were rolled back; not4096 people or seven elapsed days.",
+    "Pending-outbox quota refusal uses owner-only filler plus an explicitly synthetic absent-account journal row in a rolled-back negative case; not an additional real user deletion.",
+    "Actual old restored password/session/history existed before reconciliation; afterwards victim login/session/history refused or were absent, while the other account authenticated and exported exact payload.",
+    "Actual temporary pre-reconcile CONNECT was a named private negative probe, always revoked; no HTTP serving. Operator-owned authoritative readiness is required for normal restored CONNECT.",
+    "Only existing runtime role receives read-only pg_control_system EXECUTE in two new databases; no role/membership/main privilege change.",
+    "Current source-root/migration identity, byte binding and negative controls do not establish independent tag accuracy or truth."
+  ],
+  "limits": [
+    "Public signup, real billing, production collection, actual production backup expiry/encryption and independent latest-journal custody remain unqualified.",
+    "Repository weekly/two-full backup generation does not prove actual current server retention or7-day expiry. No source-unavailable disaster recovery or physical-media erasure claim.",
+    "Individual history-event remove/clear restore suppression remains a separate open software job.",
+    "Trusted operator selects the checkpoint; hashes prove bytes, not independent freshness/completeness or protection against malicious root/database owner.",
+    "No new App Store/TestFlight/native/physical acceptance, independent tag validation, source bundle admission, all-route license clearance or original requirement closure."
+  ]
+}
