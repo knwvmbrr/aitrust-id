@@ -34,6 +34,7 @@ COMPONENT_FILES = frozenset({
     'tools/source_release_policy_v3.py', 'tools/source_release_policy_v4.py',
     'eval/dependencies/source-snapshot-additions-v4.json',
     'tools/source_release_policy_v5.py','eval/dependencies/source-snapshot-additions-v5.json',
+    'tools/source_release_policy_v6.py','eval/dependencies/source-snapshot-additions-v6.json',
     'tools/source_snapshot_binding.py', 'tools/source_snapshot_admission.py',
     'scripts/source_snapshot.py', 'scripts/source_snapshot_v2.py',
     'scripts/source_snapshot_v3.py', 'scripts/build-source-snapshot.py',
@@ -214,13 +215,13 @@ def _captured_copy(root):
     with _SourceReadset(expected,anchors=(ROOT,))as source:
         raw={}
         for path in expected:
-            value=source.read(path,initial=True,retain=path.name in('source_release_policy_v5.py','source-snapshot-additions-v5.json'))
+            value=source.read(path,initial=True,retain=path.name in('source_release_policy_v6.py','source-snapshot-additions-v6.json'))
             need(type(sizes[path])is int and source.files[path][4]==sizes[path])
             if value is not None:raw[path.name]=value
-        namespace=types.ModuleType('_captured_active_source_copy_v5');namespace.__file__=str(ROOT/'tools/source_release_policy_v5.py')
-        exec(compile(raw['source_release_policy_v5.py'],'<captured-active-source-copy-v5>','exec'),namespace.__dict__)
-        method=sha(raw['source_release_policy_v5.py']);table=sha(raw['source-snapshot-additions-v5.json'])
-        need(namespace.ROOT==ROOT and namespace.POLICY=='eval/dependencies/source-snapshot-additions-v5.json'and namespace.POLICY_SHA256==table)
+        namespace=types.ModuleType('_captured_active_source_copy_v6');namespace.__file__=str(ROOT/'tools/source_release_policy_v6.py')
+        exec(compile(raw['source_release_policy_v6.py'],'<captured-active-source-copy-v6>','exec'),namespace.__dict__)
+        method=sha(raw['source_release_policy_v6.py']);table=sha(raw['source-snapshot-additions-v6.json'])
+        need(namespace.ROOT==ROOT and namespace.POLICY=='eval/dependencies/source-snapshot-additions-v6.json'and namespace.POLICY_SHA256==table)
         yield namespace,method,table
         source.check();need(_rows(root)==rows)
 
@@ -232,7 +233,7 @@ def _checked_result(result,copy,method,table,source_commit,archive=False):
       and all(result.get(key)is False for key in copy.FALSE_CLAIMS))
     if source_commit is not None:need(result['source_commit']==source_commit)
     if archive:
-        need(result.get('profile')=='source-copy-archive-obligations/v5'and result.get('status')=='COPY_OBLIGATIONS_AND_GIT_BYTES_BOUND'
+        need(result.get('profile')=='source-copy-archive-obligations/v6'and result.get('status')=='COPY_OBLIGATIONS_AND_GIT_BYTES_BOUND'
           and result.get('trusted_git_bytes_matched')is True and result.get('signature_verified')is False)
     else:need(result.get('profile')==copy.PROFILE and result.get('status')=='SOURCE_COPY_PROFILE_SATISFIED')
     count=result.get('source_files'if archive else'files');size=result.get('source_bytes')

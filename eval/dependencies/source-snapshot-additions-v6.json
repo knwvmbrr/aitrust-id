@@ -1,0 +1,1739 @@
+{
+  "profile": "source-copy-additions/v6",
+  "protected_baseline": "7ab4d3036f6409ec72d6a23972a563fd81e0f416",
+  "protected_baseline_tree": "7f112209124a1608a287895280fe2e0195d2f515",
+  "baseline_files": 13946,
+  "baseline_bytes": 153744932,
+  "foundations": {
+    "tools/source_release_policy.py": {
+      "mode": "100644",
+      "git_blob_oid": "b97601876dd182d298944d11816cdb07c296f1fe",
+      "bytes": 17412,
+      "sha256": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6"
+    },
+    "tools/source_release_policy_v2.py": {
+      "mode": "100644",
+      "git_blob_oid": "0353dfd270ff31353455c2b154b909b4a5bad2e6",
+      "bytes": 22383,
+      "sha256": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c"
+    },
+    "tools/source_release_policy_v3.py": {
+      "mode": "100644",
+      "git_blob_oid": "cd3183ed19f8ecd7f11808380c06265eb2c94f80",
+      "bytes": 24924,
+      "sha256": "26a6bb8be66cab5a355bfbe6fcfbd16cefe994d1e7ade8b26b3cd227f0f82d41"
+    },
+    "tools/source_release_policy_v4.py": {
+      "mode": "100644",
+      "git_blob_oid": "b609d81bd2ca00ef925fc0d6ced4e66a3c6289ef",
+      "bytes": 24893,
+      "sha256": "0e70d9f360533dbd13f67192b967e8831787fce381c220bc013fc8a7eaa0989e"
+    },
+    "eval/dependencies/source-snapshot-release.json": {
+      "mode": "100644",
+      "git_blob_oid": "76153604af07df009b857ada090c3449d390a488",
+      "bytes": 3049927,
+      "sha256": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645"
+    },
+    "eval/dependencies/source-snapshot-release-v2.json": {
+      "mode": "100644",
+      "git_blob_oid": "ea2c7c5dce0510b4248cfe81b6ac93150d6b5204",
+      "bytes": 410005,
+      "sha256": "2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d"
+    },
+    "eval/dependencies/source-snapshot-additions-v3.json": {
+      "mode": "100644",
+      "git_blob_oid": "e5ba152d50922057f255b22a96a83062f661d655",
+      "bytes": 142724,
+      "sha256": "3bd727fef18736bcd259fa4f1e21fd25fa8629f361b25289dc0016f48394db3e"
+    },
+    "eval/dependencies/source-snapshot-additions-v4.json": {
+      "mode": "100644",
+      "git_blob_oid": "c21ffaaf9f11666c9db504665f4ab4eb6b1c32fa",
+      "bytes": 49133,
+      "sha256": "da42db15f4fdb9b17784344fb5c7381bbd7e2d257b7a01f4b18fc88678c9db8c"
+    },
+    "tools/source_snapshot_binding.py": {
+      "mode": "100644",
+      "git_blob_oid": "fe41b0cb7247c97e3723af126c72e2fe0a6a77c3",
+      "bytes": 14697,
+      "sha256": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb"
+    },
+    "scripts/worker_process.py": {
+      "mode": "100644",
+      "git_blob_oid": "2f3164958b6a04768a57c3f5367c6b4b1b5da18f",
+      "bytes": 3483,
+      "sha256": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3"
+    },
+    "tools/dependency_policy.py": {
+      "mode": "100644",
+      "git_blob_oid": "d202aa40abee220e608f98eba903d4bf004419ea",
+      "bytes": 15682,
+      "sha256": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408"
+    },
+    "tools/source_release_policy_v5.py": {
+      "mode": "100644",
+      "git_blob_oid": "08eaf0fcce36e472f88fa962a68f16222871edf2",
+      "bytes": 32927,
+      "sha256": "737b1eb4c92ced709695aed80c13b7790b7e2e51183bd21416707b37a08a56bc"
+    },
+    "eval/dependencies/source-snapshot-additions-v5.json": {
+      "mode": "100644",
+      "git_blob_oid": "340a8d610c1bc2c4067d1ce3846ffdade81c0cc0",
+      "bytes": 63488,
+      "sha256": "bed27448c456186eded268ef30c9b4cef6205d554f901586720bb107122fd134"
+    }
+  },
+  "legacy_v4_names": [
+    ".github/workflows/artifact-sbom.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/source-profile-continuation.yml",
+    ".github/workflows/source-snapshot-v3.yml",
+    ".gitignore",
+    "CHANGELOG.md",
+    "README.md",
+    "docs/ios-runtime-obligations-plan.md",
+    "docs/ios-runtime-obligations.md",
+    "docs/mt-mobile-quotation.md",
+    "docs/mt-quote-export-repair-plan.md",
+    "docs/offline-image-score-qualification-plan.md",
+    "docs/reviewer-attestation-plan.md",
+    "docs/reviewer-attestations.md",
+    "docs/scope-progress.json",
+    "docs/scope-progress.md",
+    "docs/scope-task-index.md",
+    "docs/session-delivery-plan.md",
+    "docs/session-delivery.json",
+    "docs/source-copy-rights-v4-grant-plan.json",
+    "docs/source-copy-rights-v4-plan.md",
+    "docs/source-copy-v4-admission-plan.md",
+    "docs/source-image-integration-result.md",
+    "docs/tag-runtime-ci-integration.md",
+    "docs/tag-runtime-integration-plan.md",
+    "docs/web-checker-artifact-plan.md",
+    "docs/web-checker-artifact.md",
+    "docs/web-runtime-obligations-plan.md",
+    "docs/web-runtime-obligations-result.md",
+    "docs/web-runtime-obligations.md",
+    "eval/dependencies/source-snapshot-additions-v4.json",
+    "eval/dependency-policy.json",
+    "eval/revalidation.json",
+    "eval/route-boundaries.json",
+    "mobile/ios/Source/CheckerController.swift",
+    "mobile/ios/Tests/UIFlows.swift",
+    "protocol/reviewer-attestations.cjs",
+    "runs/2026-11-23-current-native-selection.json",
+    "runs/2026-11-23-emscripten-grant-facts-retained-peer.json",
+    "runs/2026-11-23-image-acquisition-diagnostics.json",
+    "runs/2026-11-23-image-wheel-primary-metadata.json",
+    "runs/2026-11-23-ios-runtime-obligations.json",
+    "runs/2026-11-23-ios-seven-ui-current.json",
+    "runs/2026-11-23-mt-quote-export-current-execution.json",
+    "runs/2026-11-23-mt-quote-export-distinct-review.json",
+    "runs/2026-11-23-mt-quote-export-mobile-binding.json",
+    "runs/2026-11-23-mt-quote-export-original-counter.json",
+    "runs/2026-11-23-mt-quote-export-plan-review.json",
+    "runs/2026-11-23-mt-quote-export-portable-current.json",
+    "runs/2026-11-23-react-scrollbar-project-grant-retained-peer.json",
+    "runs/2026-11-23-reviewer-attestation.json",
+    "runs/2026-11-23-source-copy-rights-v4-distinct-review.json",
+    "runs/2026-11-23-source-copy-rights-v4-execution.json",
+    "runs/2026-11-23-source-image-consumer-acceptance.json",
+    "runs/2026-11-23-source-v4-admission-integration.json",
+    "runs/2026-11-23-tag-runtime-ci-integration.json",
+    "runs/2026-11-23-tag-runtime-current-extension.json",
+    "runs/2026-11-23-tag-runtime-current-pii-redacted.json",
+    "runs/2026-11-23-tag-runtime-current-protocol.json",
+    "runs/2026-11-23-tag-runtime-current-ps.json",
+    "runs/2026-11-23-tag-runtime-current-selection.json",
+    "runs/2026-11-23-tag-runtime-current-website.json",
+    "runs/2026-11-23-tag-runtime-followup.json",
+    "runs/2026-11-23-tag-runtime-integration.json",
+    "runs/2026-11-23-tag-runtime-native-share.json",
+    "runs/2026-11-23-tag-runtime-publication.json",
+    "runs/2026-11-23-tag-runtime-qualification.json",
+    "runs/2026-11-23-web-checker-artifact-distinct-review.json",
+    "runs/2026-11-23-web-checker-artifact-execution.json",
+    "runs/2026-11-23-web-checker-artifact-fd-original-counter.json",
+    "runs/2026-11-23-web-checker-observed-build-review.json",
+    "runs/2026-11-23-web-checker-observed-build.json",
+    "runs/2026-11-23-web-chunk-runtime-integration.json",
+    "runs/2026-11-23-web-generated-source-binding.json",
+    "runs/2026-11-23-web-observer-html-json-repair.json",
+    "runs/2026-11-23-web-runtime-bounded-membership-correction.json",
+    "runs/2026-11-23-web-runtime-byte-preservation.json",
+    "runs/2026-11-23-web-runtime-cli-uncertainty-correction.json",
+    "runs/2026-11-23-web-runtime-creation-uncertainty-correction.json",
+    "runs/2026-11-23-web-runtime-exact-read-budget-correction.json",
+    "runs/2026-11-23-web-runtime-obligations-distinct-review.json",
+    "runs/2026-11-23-web-runtime-obligations-execution.json",
+    "runs/changes/2026-11-23-222229-web-checker-artifact-source-component-3bea298e.json",
+    "runs/changes/2026-11-23-current-native-selection.json",
+    "runs/changes/2026-11-23-image-acquisition-diagnostics.json",
+    "runs/changes/2026-11-23-image-wheel-primary-metadata.json",
+    "runs/changes/2026-11-23-ios-runtime-obligations.json",
+    "runs/changes/2026-11-23-ios-seven-ui-observer.json",
+    "runs/changes/2026-11-23-mt-quote-export-mobile-binding.json",
+    "runs/changes/2026-11-23-mt-quote-export-repair.json",
+    "runs/changes/2026-11-23-reviewer-attestation.json",
+    "runs/changes/2026-11-23-route-refresh-prerequisites.json",
+    "runs/changes/2026-11-23-source-copy-rights-v4.json",
+    "runs/changes/2026-11-23-source-v4-admission-integration.json",
+    "runs/changes/2026-11-23-tag-runtime-ci-integration.json",
+    "runs/changes/2026-11-23-tag-runtime-final-selection.json",
+    "runs/changes/2026-11-23-tag-runtime-followup.json",
+    "runs/changes/2026-11-23-tag-runtime-integration.json",
+    "runs/changes/2026-11-23-tag-runtime-publication.json",
+    "runs/changes/2026-11-23-tag-runtime-qualification.json",
+    "runs/changes/2026-11-23-web-checker-observed-artifact.json",
+    "runs/changes/2026-11-23-web-checker-observed-build.json",
+    "runs/changes/2026-11-23-web-chunk-runtime-integration.json",
+    "runs/changes/2026-11-23-web-generated-source-binding.json",
+    "runs/changes/2026-11-23-web-observer-html-json-repair.json",
+    "runs/changes/2026-11-23-web-runtime-obligations-finite-delivery.json",
+    "sbom/web-runtime-history/0f1e5cd974eea917f2470c4de2ab525acd11efb28b1eca2a50b0150fba94f948.py",
+    "sbom/web-runtime-history/728f4ec0d2c28883b28a7bfb52e2c6394ee97fcac8c47612799f88182e077e84.py",
+    "sbom/web-runtime-history/a098bce5ae6645bede63880b44e3bbfa3984f3f106392ed119b78217f639558b.py",
+    "sbom/web-runtime-history/adf7ab04843d6d8f687d7c71542237bd727a1ab8e474d30f138526536ca0c688.py",
+    "sbom/web-runtime-history/b6728b7c74cfe5ae1b929b2dde2ab5fece3fd0f1985543bff69047e36f714f1f.py",
+    "sbom/web-runtime/.gitattributes",
+    "sbom/web-runtime/external-primary-facts.json",
+    "sbom/web-runtime/hiwire-preferred-source.json",
+    "sbom/web-runtime/manifest.json",
+    "sbom/web-runtime/react-exact-release-project-grant-facts.json",
+    "scripts/authority-mobile-quotation.py",
+    "scripts/native_bundle.py",
+    "scripts/reviewer-attestation.cjs",
+    "scripts/run-visual-score-phase.py",
+    "scripts/verify-ios-runtime-obligations.py",
+    "scripts/verify-ios-share.py",
+    "scripts/verify-native-share-evidence.py",
+    "scripts/verify-web-runtime-obligations.py",
+    "scripts/web-checker-artifact.py",
+    "scripts/web-checker-build-observer.mjs",
+    "site/index.html",
+    "site/public/reference/mt-mobile-quotation.md",
+    "site/public/reference/public-scope.json",
+    "site/scripts/prepare-offline.mjs",
+    "site/scripts/prepare.mjs",
+    "site/src/device-manifest.json",
+    "site/src/mt-mobile-device-manifest.json",
+    "site/src/public-scope.json",
+    "site/src/scope-manifest.json",
+    "site/src/workflows/About.jsx",
+    "state.json",
+    "tests/reviewer-attestations.cjs",
+    "tests/test_ios_runtime_obligations.py",
+    "tests/test_ios_share_verifier.py",
+    "tests/test_mt_quote_export.py",
+    "tests/test_native_bundle.py",
+    "tests/test_source_release_policy_v4.py",
+    "tests/test_source_snapshot_admission.py",
+    "tests/test_source_snapshot_workflow.py",
+    "tests/test_visual_score_budget.py",
+    "tests/test_visual_score_qualification.py",
+    "tests/test_web_checker_artifact.py",
+    "tests/test_web_runtime_obligations.py",
+    "tests/web-checker-build-observer.mjs",
+    "tools/dependency_policy.py",
+    "tools/distribution_artifacts.py",
+    "tools/ios_runtime_obligations.py",
+    "tools/mt_quote_export.py",
+    "tools/source_release_policy_v4.py",
+    "tools/source_snapshot_admission.py",
+    "tools/visual_score_qualification.py",
+    "tools/web_checker_artifact.py",
+    "tools/web_runtime_obligations.py"
+  ],
+  "legacy_v5_project_names": [
+    ".github/workflows/artifact-sbom.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/source-profile-continuation.yml",
+    ".github/workflows/source-snapshot-v3.yml",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "docs/ios-build-number-plan.md",
+    "docs/ios-simulator-matrix-plan.md",
+    "docs/ios-simulator-matrix.md",
+    "docs/offline-image-score-qualification-plan.md",
+    "docs/personal-tag-history-plan.md",
+    "docs/scope-progress.json",
+    "docs/scope-progress.md",
+    "docs/session-delivery-plan.md",
+    "docs/session-delivery.json",
+    "docs/source-copy-v5-plan.md",
+    "docs/source-copy-v5.md",
+    "docs/tag-ux-clarity-plan.md",
+    "docs/visual-tag-execution-plan.md",
+    "docs/web-historical-fixture-plan.md",
+    "docs/web-managed-release-plan.md",
+    "docs/web-managed-release.md",
+    "eval/dependencies/source-snapshot-additions-v5.json",
+    "eval/dependencies/web-runtime-release.json",
+    "eval/dependency-policy.json",
+    "eval/revalidation.json",
+    "eval/route-boundaries.json",
+    "integrations/visual-score-reference/qualification-notice-inventory.json",
+    "mobile/ios/Source/CheckerController.swift",
+    "mobile/ios/Tests/SizeLayoutFlows.swift",
+    "mobile/ios/Tests/UIFlows.swift",
+    "runs/2026-11-23-image-cpu-operation-diagnostics.json",
+    "runs/2026-11-23-image-forward-diagnostics.json",
+    "runs/2026-11-23-ios-build-number-portable.json",
+    "runs/2026-11-23-ios-build-number.json",
+    "runs/2026-11-23-ios-size-matrix-source.json",
+    "runs/2026-11-23-personal-history-spatial-scope.json",
+    "runs/2026-11-23-tag-ux-clarity.json",
+    "runs/2026-11-23-tokenizers-source-preservation.json",
+    "runs/2026-11-23-web-conditional-artifact.json",
+    "runs/2026-11-23-web-historical-fixture.json",
+    "runs/2026-11-23-web-release-policy.json",
+    "runs/2026-11-24-image-denied-resource-diagnostics.json",
+    "runs/2026-11-24-image-readonly-cache-root.json",
+    "runs/2026-11-24-image-reference-position-buffer.json",
+    "runs/2026-11-24-image-reference-validation.json",
+    "runs/2026-11-24-ios-clear-editor-source.json",
+    "runs/2026-11-24-ios-size-matrix-control-reach.json",
+    "runs/2026-11-24-ios-size-matrix-current.json",
+    "runs/2026-11-24-ios-size-matrix-frame-diagnostics.json",
+    "runs/2026-11-24-ios-size-matrix-navigation.json",
+    "runs/2026-11-24-reference-phone-wave.json",
+    "runs/2026-11-24-source-baseline-ci-repair.json",
+    "runs/2026-11-24-source-baseline-native-cohort.json",
+    "runs/2026-11-24-source-baseline-refresh.json",
+    "runs/2026-11-24-source-boundary-preparation.json",
+    "runs/2026-11-24-source-boundary-review.json",
+    "runs/2026-11-24-source-boundary-website.json",
+    "runs/2026-11-24-source-copy-v5.json",
+    "runs/2026-11-24-source-snapshot-publication.json",
+    "runs/2026-11-24-source-v5-caller-lifecycle.json",
+    "runs/2026-11-24-source-v5-current-integration.json",
+    "runs/changes/2026-11-23-current-static-publication.json",
+    "runs/changes/2026-11-23-image-cpu-operation-diagnostics.json",
+    "runs/changes/2026-11-23-image-forward-diagnostics.json",
+    "runs/changes/2026-11-23-ios-build-number.json",
+    "runs/changes/2026-11-23-ios-size-matrix-source.json",
+    "runs/changes/2026-11-23-personal-history-spatial-scope.json",
+    "runs/changes/2026-11-23-tag-ux-clarity-verification.json",
+    "runs/changes/2026-11-23-tag-ux-clarity.json",
+    "runs/changes/2026-11-23-tokenizers-source-preservation.json",
+    "runs/changes/2026-11-23-web-conditional-artifact.json",
+    "runs/changes/2026-11-23-web-historical-fixture.json",
+    "runs/changes/2026-11-23-web-release-policy.json",
+    "runs/changes/2026-11-24-image-denied-resource-diagnostics.json",
+    "runs/changes/2026-11-24-image-readonly-cache-root.json",
+    "runs/changes/2026-11-24-image-reference-position-buffer.json",
+    "runs/changes/2026-11-24-image-reference-validation.json",
+    "runs/changes/2026-11-24-ios-clear-editor-source.json",
+    "runs/changes/2026-11-24-ios-size-matrix-control-reach.json",
+    "runs/changes/2026-11-24-ios-size-matrix-current.json",
+    "runs/changes/2026-11-24-ios-size-matrix-frame-diagnostics.json",
+    "runs/changes/2026-11-24-ios-size-matrix-navigation.json",
+    "runs/changes/2026-11-24-reference-phone-wave.json",
+    "runs/changes/2026-11-24-source-baseline-ci-repair.json",
+    "runs/changes/2026-11-24-source-baseline-native-cohort.json",
+    "runs/changes/2026-11-24-source-baseline-refresh.json",
+    "runs/changes/2026-11-24-source-boundary-preparation.json",
+    "runs/changes/2026-11-24-source-boundary-review.json",
+    "runs/changes/2026-11-24-source-copy-v5.json",
+    "runs/changes/2026-11-24-source-snapshot-publication.json",
+    "runs/changes/2026-11-24-source-v5-caller-lifecycle.json",
+    "runs/changes/2026-11-24-source-v5-current-integration.json",
+    "scripts/build-ios-project.py",
+    "scripts/distribution-artifact.py",
+    "scripts/run-visual-score-phase.py",
+    "scripts/verify-approachability.cjs",
+    "scripts/verify-ios-archive.py",
+    "scripts/verify-ios-size-matrix.py",
+    "scripts/verify-managed-source.py",
+    "scripts/verify-performance.cjs",
+    "scripts/verify-ps-results.cjs",
+    "scripts/verify-site.cjs",
+    "scripts/verify-visual-score-qualification.py",
+    "site/index.html",
+    "site/public/reference/public-scope.json",
+    "site/src/handheld.jsx",
+    "site/src/main.jsx",
+    "site/src/performance.jsx",
+    "site/src/presentation.js",
+    "site/src/public-scope.json",
+    "site/src/scope-manifest.json",
+    "site/src/usage.js",
+    "state.json",
+    "tests/test_distribution_artifacts.py",
+    "tests/test_ios_archive.py",
+    "tests/test_ios_project_package.py",
+    "tests/test_ios_simulator_matrix.py",
+    "tests/test_source_release_policy_v5.py",
+    "tests/test_source_snapshot_admission.py",
+    "tests/test_source_snapshot_managed.py",
+    "tests/test_source_snapshot_workflow.py",
+    "tests/test_visual_score.py",
+    "tests/test_visual_score_budget.py",
+    "tests/test_visual_score_qualification.py",
+    "tests/test_web_checker_artifact.py",
+    "tests/test_web_conditional_artifact.py",
+    "tests/test_web_release_policy.py",
+    "tests/web_historical_fixture.py",
+    "tools/distribution_artifacts.py",
+    "tools/distribution_policy.py",
+    "tools/ios_simulator_matrix.py",
+    "tools/source_release_policy_v5.py",
+    "tools/source_snapshot_admission.py",
+    "tools/source_snapshot_managed.py",
+    "tools/visual_score.py",
+    "tools/visual_score_qualification.py",
+    "tools/visual_score_reference.py",
+    "tools/web_release_policy.py"
+  ],
+  "legacy_v5_copied_files": [
+    {
+      "mode": "100644",
+      "git_blob_oid": "7d89fe311bf50753d1cd7ff271df51c4294e1c1c",
+      "bytes": 623310,
+      "sha256": "0073729ee413c85b56664bfbee074dcb25e589378acf71921a533b5eddb4347c",
+      "path": "integrations/visual-score-reference/tokenizers-0.23.3-source-notices-v1.json",
+      "kind": "tokenizers-source-preservation/v1",
+      "authored_capacity_charge": true,
+      "unresolved": [],
+      "counts": {
+        "associations": 309,
+        "packages": 153,
+        "registry": 151,
+        "source_carried_associations": 307,
+        "text_bytes": 300341,
+        "texts": 93,
+        "upstream_supplement_associations": 2,
+        "workspace": 2
+      },
+      "claims": {
+        "accuracy_established": false,
+        "compiled_coverage_established": false,
+        "distribution_admitted": false,
+        "license_clearance": false,
+        "original_requirement_closed": false,
+        "redistribution_approved": false,
+        "source_build_reproduced": false
+      },
+      "terms": [
+        [
+          "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f",
+          126
+        ],
+        [
+          "0218327e7a480793ffdd4eb792379a9709e5c135c7ba267f709d6f6d4d70af0a",
+          10854
+        ],
+        [
+          "0444c6991eead6822f7b9102e654448d51624431119546492e8b231db42c48bb",
+          1057
+        ],
+        [
+          "0621878e61f0d0fda054bcbe02df75192c28bde1ecc8289cbd86aeba2dd72720",
+          1071
+        ],
+        [
+          "07919255c7e04793d8ea760d6c2ce32d19f9ff02bdbdde3ce90b1e1880929a9b",
+          1082
+        ],
+        [
+          "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9",
+          1072
+        ],
+        [
+          "0b83dc40cba89b9922bb84b0a9c7d2768ce37c1d7e138b7424fd4549915778c9",
+          1102
+        ],
+        [
+          "0d52feec79589df30138dad3800323fe5686b764b73347330a2dfef8ac83efe8",
+          1073
+        ],
+        [
+          "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+          10174
+        ],
+        [
+          "0dd882e53de11566d50f8e8e2d5a651bcf3fabee4987d70f306233cf39094ba7",
+          1076
+        ],
+        [
+          "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f",
+          1081
+        ],
+        [
+          "123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e",
+          1066
+        ],
+        [
+          "172a2a72c080d3067969599308c91385af86fdeb2419f8ad687883ca5a8ff912",
+          32
+        ],
+        [
+          "1a2f5c12ddc934d58956aa5dbdd3255fe55fd957633ab7d0d39e4f0daa73f7df",
+          1060
+        ],
+        [
+          "1c41c0e19caa2c20b0adfeb8219b606b21b7c63914aa3ae74ae3e091d7ce09ca",
+          899
+        ],
+        [
+          "1e697ce8d21401fbf1bddd9b5c3fd4c4c79ae1e3bdf51f81761c85e11d5a89cd",
+          1166
+        ],
+        [
+          "1fd6747d2c8e80f9fa766f57c5888864774621deb85cc2838ccaed727db32d45",
+          1119
+        ],
+        [
+          "2022c11b24fc1e50fa06a5959e40198a3464f560729ad3d00139abb8a328362d",
+          1112
+        ],
+        [
+          "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b",
+          1117
+        ],
+        [
+          "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d",
+          321
+        ],
+        [
+          "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3",
+          1023
+        ],
+        [
+          "253cd04c6714889df2d32f3f64d669179a1c95c76ac43c40882c52eb06bc3552",
+          1070
+        ],
+        [
+          "268872b9816f90fd8e85db5a28d33f8150ebb8dd016653fb39ef1f94f2686bc5",
+          12243
+        ],
+        [
+          "2710a622a896bba67356913d4d0492cab5465f61b2ecce6d880aeb483834fb50",
+          1053
+        ],
+        [
+          "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427",
+          10874
+        ],
+        [
+          "27995d58ad5c1145c1a8cd86244ce844886958a35eb2b78c6b772748669999ac",
+          1054
+        ],
+        [
+          "29e9fe5074bd27e0e5d5d110394fbbcd841baee2651a3c4b4560a632702cede4",
+          1130
+        ],
+        [
+          "30fefc3a7d6a0041541858293bcbea2dde4caa4c0a5802f996a7f7e8c0085652",
+          1022
+        ],
+        [
+          "3290ae0fbc9ddb77d2239121d710f0bb9d31b3b4744e6d97fe01e652b4c1870b",
+          881
+        ],
+        [
+          "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9",
+          9807
+        ],
+        [
+          "35242e7a83f69875e6edeff02291e688c97caafe2f8902e4e19b49d3e78b4cab",
+          9724
+        ],
+        [
+          "377c2e7c53250cc5905c0b0532d35973392af16ffb9596a41d99d202cf3617c9",
+          853
+        ],
+        [
+          "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397",
+          1057
+        ],
+        [
+          "388e98b08de12ba8a9d4575883c8b0386c747cea188ed459380fc58d60da15c9",
+          11385
+        ],
+        [
+          "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1",
+          1092
+        ],
+        [
+          "4cada0bd02ea3692eee6f16400d86c6508bbd3bafb2b65fed0419f36d4f83e8f",
+          1076
+        ],
+        [
+          "4dbda04344456f09a7a588140455413a9ac59b6b26a1ef7cdf9c800c012d87f0",
+          1065
+        ],
+        [
+          "503558bfefe66ca15e4e3f7955b3cb0ec87fd52f29bf24b336af7bd00e946d5c",
+          1068
+        ],
+        [
+          "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1",
+          1036
+        ],
+        [
+          "523a42c25d245dde9c015f882cec7f4555aad883382a6cf19b4b7d9b2cd5419b",
+          1130
+        ],
+        [
+          "54a744942eb3fa63a74d8d359989ed6962c04f3f10ff20cfa08ff8aa7efbe4e6",
+          11338
+        ],
+        [
+          "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583",
+          566
+        ],
+        [
+          "57088c28c5ea50e729a06c3b04de70c41e496a5b753d75a744e2abbf60a2448f",
+          1321
+        ],
+        [
+          "5734ed989dfca1f625b40281ee9f4530f91b2411ec01cb748223e7eb87e201ab",
+          1099
+        ],
+        [
+          "603fb27ef3266ea516872eefd9ae587746b8c34614a35c0fb24e4e9e0c17e137",
+          1112
+        ],
+        [
+          "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a",
+          9723
+        ],
+        [
+          "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb",
+          1071
+        ],
+        [
+          "65f94e99ddaf4f5d1782a6dae23f35d4293a9a01444a13135a6887017d353cee",
+          1059
+        ],
+        [
+          "65fdb6c76cd61612070c066eec9ecdb30ee74fb27859d0d9af58b9f499fd0c3e",
+          1056
+        ],
+        [
+          "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd",
+          1094
+        ],
+        [
+          "6df43f6f4b5d4587f3d8d71e45532c688fd168afa5fe89d571cb32fa09c4ef51",
+          10282
+        ],
+        [
+          "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6",
+          1062
+        ],
+        [
+          "70ba5469ea0bab6e18a32d7009068f996503168d27be57747e08da34337ff26f",
+          1340
+        ],
+        [
+          "71073d492e996de196dbe1eb1e4c94c27c014c841b288161265b2efd06d0af28",
+          10781
+        ],
+        [
+          "71f321038b088358004bee991635ac09e4c703bec467d3c30c06992c0595f189",
+          1511
+        ],
+        [
+          "74db5baf44a41b1000312c673544b3374e4198af5605c7f9080a402cec42cfa3",
+          2847
+        ],
+        [
+          "7576269ea71f767b99297934c0b2367532690f8c4badc695edf8e04ab6a1e545",
+          1043
+        ],
+        [
+          "792d075c7bad6dac258a44e799eb64cbf465e24d9932d27669be08c5ec957e27",
+          1159
+        ],
+        [
+          "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0",
+          1071
+        ],
+        [
+          "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c",
+          1211
+        ],
+        [
+          "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90",
+          10850
+        ],
+        [
+          "83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32",
+          1275
+        ],
+        [
+          "8764a597675778ddfd4e25f81b08a05dbcf089ac05662df7613fe67f150e3aa2",
+          1054
+        ],
+        [
+          "8b427f5bc501764575e52ba4f9d95673cf8f6d80a86d0d06599852e1a9a20a36",
+          1056
+        ],
+        [
+          "8c9612877aacfa1b42f5e80b679e6c3c93a7ba2bb99dfaf6e87e200dca4b4e6c",
+          1099
+        ],
+        [
+          "8ce0830173fdac609dfb4ea603fdc002c2f4af0dc9b1a005653f5da9cf534b18",
+          1055
+        ],
+        [
+          "8ea93490d74a5a1b1af3ff71d786271b3f1e5f0bea79ac16e02ec533cef040d6",
+          1067
+        ],
+        [
+          "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5",
+          569
+        ],
+        [
+          "95bd3988beee069fa2848f648dab43cc6e0b2add2ad6bcb17360caf749802bcc",
+          9722
+        ],
+        [
+          "98a817e7b85e5fe4e79d165c656a4a139793b8b643d0f3d9cbcc3538ef82ec82",
+          1077
+        ],
+        [
+          "9d185ac6703c4b0453974c0d85e9eee43e6941009296bb1f5eb0b54e2329e9f3",
+          11350
+        ],
+        [
+          "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+          10847
+        ],
+        [
+          "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf",
+          10849
+        ],
+        [
+          "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6",
+          1107
+        ],
+        [
+          "b39b7556926992260c18201e59f9478217ed593602099546581b4092a4b9e10e",
+          1087
+        ],
+        [
+          "b7e650f3fce5c53249d1cdc608b54df156a97edd636cf9d23498d0cfe7aec63e",
+          1085
+        ],
+        [
+          "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b",
+          11351
+        ],
+        [
+          "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          1141
+        ],
+        [
+          "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+          11358
+        ],
+        [
+          "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          11357
+        ],
+        [
+          "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+          1338
+        ],
+        [
+          "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          11358
+        ],
+        [
+          "d027e91dbc9cdbb2f1190068e498bd6b61cff022b6a032b191021ba658d96111",
+          3733
+        ],
+        [
+          "da23be69ad3ccf7a5823d62152efcd2b15de9482a5014fcb1b02844662d86abd",
+          1022
+        ],
+        [
+          "dbe1fff0fb1314b6af94f161511406275cf01c5a32441fbf24528a57a051d599",
+          2003
+        ],
+        [
+          "e4c9b06fa850cb9b540a5e400e9f6394cf15efcf4098144de477d1d3dae10150",
+          1052
+        ],
+        [
+          "e9c1238c5beb73c6cc130160418968058b21d486a7a445f0ceff27d51fbfdc44",
+          1456
+        ],
+        [
+          "ea084a2373ebc1f0902c09266e7bf25a05ab3814c1805bb017ffa7308f90c061",
+          1072
+        ],
+        [
+          "f2cf336738ad935a482a799be004083ddd07c904513caf80f9e48011888fe1b6",
+          74
+        ],
+        [
+          "f428305bbf2e70fbd807af0f3c7ac1b7acfb95311640f451e9d2e48db6d7e96b",
+          1065
+        ],
+        [
+          "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1",
+          1995
+        ],
+        [
+          "f98e09091d5ae02b2f2ec1ead4f7f28c4c44d1cb98b078739ba67091637e170c",
+          1075
+        ],
+        [
+          "ff92bed461f50338dd703a9ba9aee496a425957873df1d91192776e4bdf5dda7",
+          3693
+        ]
+      ],
+      "anchors": {
+        "sbom/c2pa-native/sources/2710a622a896bba67356913d4d0492cab5465f61b2ecce6d880aeb483834fb50.txt": {
+          "mode": "100644",
+          "git_blob_oid": "e68a7ab37c8accca023db5f1505d48e4375d4324",
+          "bytes": 1053,
+          "sha256": "2710a622a896bba67356913d4d0492cab5465f61b2ecce6d880aeb483834fb50"
+        },
+        "sbom/c2pa-native/sources/8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90.txt": {
+          "mode": "100644",
+          "git_blob_oid": "11069edd79019f7dafbe3138841cf289209270dd",
+          "bytes": 10850,
+          "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+        },
+        "sbom/nli-native/sources/01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f.txt": {
+          "mode": "100644",
+          "git_blob_oid": "bb9c20a094e41b7632d63bcff20c0b4b95e80777",
+          "bytes": 126,
+          "sha256": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        "sbom/nli-native/sources/0218327e7a480793ffdd4eb792379a9709e5c135c7ba267f709d6f6d4d70af0a.txt": {
+          "mode": "100644",
+          "git_blob_oid": "1eb321535426d86a4cbc411c0a9dfa7749663d3e",
+          "bytes": 10854,
+          "sha256": "0218327e7a480793ffdd4eb792379a9709e5c135c7ba267f709d6f6d4d70af0a"
+        },
+        "sbom/nli-native/sources/0444c6991eead6822f7b9102e654448d51624431119546492e8b231db42c48bb.txt": {
+          "mode": "100644",
+          "git_blob_oid": "cba20106dd50f630db04a2c2da0cb4067400bf2f",
+          "bytes": 1057,
+          "sha256": "0444c6991eead6822f7b9102e654448d51624431119546492e8b231db42c48bb"
+        },
+        "sbom/nli-native/sources/0621878e61f0d0fda054bcbe02df75192c28bde1ecc8289cbd86aeba2dd72720.txt": {
+          "mode": "100644",
+          "git_blob_oid": "25597d5838fa4cd7ff5c3c2bb1d1b4c3731eda7f",
+          "bytes": 1071,
+          "sha256": "0621878e61f0d0fda054bcbe02df75192c28bde1ecc8289cbd86aeba2dd72720"
+        },
+        "sbom/nli-native/sources/07919255c7e04793d8ea760d6c2ce32d19f9ff02bdbdde3ce90b1e1880929a9b.txt": {
+          "mode": "100644",
+          "git_blob_oid": "3516413824bd717ba0c5e8b01b9903da6a1c673e",
+          "bytes": 1082,
+          "sha256": "07919255c7e04793d8ea760d6c2ce32d19f9ff02bdbdde3ce90b1e1880929a9b"
+        },
+        "sbom/nli-native/sources/0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9.txt": {
+          "mode": "100644",
+          "git_blob_oid": "9729c1284e1bff82ca875abbf0fb4ec540804cd6",
+          "bytes": 1072,
+          "sha256": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9"
+        },
+        "sbom/nli-native/sources/0b83dc40cba89b9922bb84b0a9c7d2768ce37c1d7e138b7424fd4549915778c9.txt": {
+          "mode": "100644",
+          "git_blob_oid": "c4d82b91d6d0013584cd1df75b820bef2ae7d918",
+          "bytes": 1102,
+          "sha256": "0b83dc40cba89b9922bb84b0a9c7d2768ce37c1d7e138b7424fd4549915778c9"
+        },
+        "sbom/nli-native/sources/0d52feec79589df30138dad3800323fe5686b764b73347330a2dfef8ac83efe8.txt": {
+          "mode": "100644",
+          "git_blob_oid": "12f8fdb8d7e841681c090104d2dcbdb057e6761b",
+          "bytes": 1073,
+          "sha256": "0d52feec79589df30138dad3800323fe5686b764b73347330a2dfef8ac83efe8"
+        },
+        "sbom/nli-native/sources/0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594.txt": {
+          "mode": "100644",
+          "git_blob_oid": "f433b1a53f5b830a205fd2df78e2b34974656c7b",
+          "bytes": 10174,
+          "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        "sbom/nli-native/sources/0dd882e53de11566d50f8e8e2d5a651bcf3fabee4987d70f306233cf39094ba7.txt": {
+          "mode": "100644",
+          "git_blob_oid": "7bc10f80a0499ea61b9d7da04a0f84293c44de54",
+          "bytes": 1076,
+          "sha256": "0dd882e53de11566d50f8e8e2d5a651bcf3fabee4987d70f306233cf39094ba7"
+        },
+        "sbom/nli-native/sources/0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f.txt": {
+          "mode": "100644",
+          "git_blob_oid": "3b0a5dc09c1e16357459ddc9182a50f360f3cdba",
+          "bytes": 1081,
+          "sha256": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        },
+        "sbom/nli-native/sources/123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e.txt": {
+          "mode": "100644",
+          "git_blob_oid": "f4095b2fa2d9b6b96341d85c5e8d4943edf7a079",
+          "bytes": 1066,
+          "sha256": "123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e"
+        },
+        "sbom/nli-native/sources/172a2a72c080d3067969599308c91385af86fdeb2419f8ad687883ca5a8ff912.txt": {
+          "mode": "100644",
+          "git_blob_oid": "cf2798131b5db222dcc85a9368302465a13798dd",
+          "bytes": 32,
+          "sha256": "172a2a72c080d3067969599308c91385af86fdeb2419f8ad687883ca5a8ff912"
+        },
+        "sbom/nli-native/sources/1a2f5c12ddc934d58956aa5dbdd3255fe55fd957633ab7d0d39e4f0daa73f7df.txt": {
+          "mode": "100644",
+          "git_blob_oid": "26e15216cd727a960953f4cfab99c16acd7eaf3f",
+          "bytes": 1060,
+          "sha256": "1a2f5c12ddc934d58956aa5dbdd3255fe55fd957633ab7d0d39e4f0daa73f7df"
+        },
+        "sbom/nli-native/sources/1c41c0e19caa2c20b0adfeb8219b606b21b7c63914aa3ae74ae3e091d7ce09ca.txt": {
+          "mode": "100644",
+          "git_blob_oid": "84b89898797ad122e6c607fb743ef14dfe73542f",
+          "bytes": 899,
+          "sha256": "1c41c0e19caa2c20b0adfeb8219b606b21b7c63914aa3ae74ae3e091d7ce09ca"
+        },
+        "sbom/nli-native/sources/1e697ce8d21401fbf1bddd9b5c3fd4c4c79ae1e3bdf51f81761c85e11d5a89cd.txt": {
+          "mode": "100644",
+          "git_blob_oid": "8d1fbe1dce99c844df6c2c7c37c39616e22ed800",
+          "bytes": 1166,
+          "sha256": "1e697ce8d21401fbf1bddd9b5c3fd4c4c79ae1e3bdf51f81761c85e11d5a89cd"
+        },
+        "sbom/nli-native/sources/1fd6747d2c8e80f9fa766f57c5888864774621deb85cc2838ccaed727db32d45.txt": {
+          "mode": "100644",
+          "git_blob_oid": "d0af99b046202b37ed6bb8ea7dbda3f103863003",
+          "bytes": 1119,
+          "sha256": "1fd6747d2c8e80f9fa766f57c5888864774621deb85cc2838ccaed727db32d45"
+        },
+        "sbom/nli-native/sources/2022c11b24fc1e50fa06a5959e40198a3464f560729ad3d00139abb8a328362d.txt": {
+          "mode": "100644",
+          "git_blob_oid": "dc9a85c1ee2f335497ac578f7ff8fced6c49ba6e",
+          "bytes": 1112,
+          "sha256": "2022c11b24fc1e50fa06a5959e40198a3464f560729ad3d00139abb8a328362d"
+        },
+        "sbom/nli-native/sources/209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b.txt": {
+          "mode": "100644",
+          "git_blob_oid": "d93b5baf341d9813bb48a51f42a7e8e4af89ec52",
+          "bytes": 1117,
+          "sha256": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b"
+        },
+        "sbom/nli-native/sources/23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d.txt": {
+          "mode": "100644",
+          "git_blob_oid": "b286ec16abbb02662707e5217a8c568bf7de56b6",
+          "bytes": 321,
+          "sha256": "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d"
+        },
+        "sbom/nli-native/sources/23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3.txt": {
+          "mode": "100644",
+          "git_blob_oid": "31aa79387f27e730e33d871925e152e35e428031",
+          "bytes": 1023,
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        },
+        "sbom/nli-native/sources/253cd04c6714889df2d32f3f64d669179a1c95c76ac43c40882c52eb06bc3552.txt": {
+          "mode": "100644",
+          "git_blob_oid": "f0dbcf4b45d6acca6f7f5d88dc86683c6f360d76",
+          "bytes": 1070,
+          "sha256": "253cd04c6714889df2d32f3f64d669179a1c95c76ac43c40882c52eb06bc3552"
+        },
+        "sbom/nli-native/sources/268872b9816f90fd8e85db5a28d33f8150ebb8dd016653fb39ef1f94f2686bc5.txt": {
+          "mode": "100644",
+          "git_blob_oid": "f9d81955f4bcb8f96a025e2ecc46f39ec536d465",
+          "bytes": 12243,
+          "sha256": "268872b9816f90fd8e85db5a28d33f8150ebb8dd016653fb39ef1f94f2686bc5"
+        },
+        "sbom/nli-native/sources/2710a622a896bba67356913d4d0492cab5465f61b2ecce6d880aeb483834fb50.txt": {
+          "mode": "100644",
+          "git_blob_oid": "e68a7ab37c8accca023db5f1505d48e4375d4324",
+          "bytes": 1053,
+          "sha256": "2710a622a896bba67356913d4d0492cab5465f61b2ecce6d880aeb483834fb50"
+        },
+        "sbom/nli-native/sources/275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427.txt": {
+          "mode": "100644",
+          "git_blob_oid": "9eb0b097f5d0b5e147323e043b3adf35949b9f5a",
+          "bytes": 10874,
+          "sha256": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        "sbom/nli-native/sources/27995d58ad5c1145c1a8cd86244ce844886958a35eb2b78c6b772748669999ac.txt": {
+          "mode": "100644",
+          "git_blob_oid": "44fbc4d8b90dbe07864fdf49939308839e5735b2",
+          "bytes": 1054,
+          "sha256": "27995d58ad5c1145c1a8cd86244ce844886958a35eb2b78c6b772748669999ac"
+        },
+        "sbom/nli-native/sources/29e9fe5074bd27e0e5d5d110394fbbcd841baee2651a3c4b4560a632702cede4.txt": {
+          "mode": "100644",
+          "git_blob_oid": "e54440a9e59acfcb912d302916b02bc59c64529d",
+          "bytes": 1130,
+          "sha256": "29e9fe5074bd27e0e5d5d110394fbbcd841baee2651a3c4b4560a632702cede4"
+        },
+        "sbom/nli-native/sources/30fefc3a7d6a0041541858293bcbea2dde4caa4c0a5802f996a7f7e8c0085652.txt": {
+          "mode": "100644",
+          "git_blob_oid": "468cd79a8f6e50f2b24558c41ed3abafa5bb40ae",
+          "bytes": 1022,
+          "sha256": "30fefc3a7d6a0041541858293bcbea2dde4caa4c0a5802f996a7f7e8c0085652"
+        },
+        "sbom/nli-native/sources/3290ae0fbc9ddb77d2239121d710f0bb9d31b3b4744e6d97fe01e652b4c1870b.txt": {
+          "mode": "100644",
+          "git_blob_oid": "719e3dbc85e2e7b0d2f902b01b311dfefc70138d",
+          "bytes": 881,
+          "sha256": "3290ae0fbc9ddb77d2239121d710f0bb9d31b3b4744e6d97fe01e652b4c1870b"
+        },
+        "sbom/nli-native/sources/32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9.txt": {
+          "mode": "100644",
+          "git_blob_oid": "72207b851d32c92fa0e4a3693dfad7c34685278d",
+          "bytes": 9807,
+          "sha256": "32c76dbe0e73d79100d5ece77c158399f2e2541bc5c78548a4ba45c1cb53c5c9"
+        },
+        "sbom/nli-native/sources/35242e7a83f69875e6edeff02291e688c97caafe2f8902e4e19b49d3e78b4cab.txt": {
+          "mode": "100644",
+          "git_blob_oid": "494ad3bfdfe44d1a2a1e20553308ba59574fb969",
+          "bytes": 9724,
+          "sha256": "35242e7a83f69875e6edeff02291e688c97caafe2f8902e4e19b49d3e78b4cab"
+        },
+        "sbom/nli-native/sources/377c2e7c53250cc5905c0b0532d35973392af16ffb9596a41d99d202cf3617c9.txt": {
+          "mode": "100644",
+          "git_blob_oid": "a841525eff99fff45fe0e6fd36b95f11b8b82e4c",
+          "bytes": 853,
+          "sha256": "377c2e7c53250cc5905c0b0532d35973392af16ffb9596a41d99d202cf3617c9"
+        },
+        "sbom/nli-native/sources/378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397.txt": {
+          "mode": "100644",
+          "git_blob_oid": "39e0ed6602151f235148e6c08413aa7eda5b9038",
+          "bytes": 1057,
+          "sha256": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        },
+        "sbom/nli-native/sources/388e98b08de12ba8a9d4575883c8b0386c747cea188ed459380fc58d60da15c9.txt": {
+          "mode": "100644",
+          "git_blob_oid": "963f4ace2da3ebc2cbd1c0c77782f18c4bb554c5",
+          "bytes": 11385,
+          "sha256": "388e98b08de12ba8a9d4575883c8b0386c747cea188ed459380fc58d60da15c9"
+        },
+        "sbom/nli-native/sources/4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1.txt": {
+          "mode": "100644",
+          "git_blob_oid": "5ec1fe1cd795faf5efa2a215813a514170a6ccfc",
+          "bytes": 1092,
+          "sha256": "4455bf75a91154108304cb283e0fea9948c14f13e20d60887cf2552449dea3b1"
+        },
+        "sbom/nli-native/sources/4cada0bd02ea3692eee6f16400d86c6508bbd3bafb2b65fed0419f36d4f83e8f.txt": {
+          "mode": "100644",
+          "git_blob_oid": "d78c961bcac100919dc8566608e09861a8004b3f",
+          "bytes": 1076,
+          "sha256": "4cada0bd02ea3692eee6f16400d86c6508bbd3bafb2b65fed0419f36d4f83e8f"
+        },
+        "sbom/nli-native/sources/4dbda04344456f09a7a588140455413a9ac59b6b26a1ef7cdf9c800c012d87f0.txt": {
+          "mode": "100644",
+          "git_blob_oid": "88557e44e34e2469f83d9c87701821c14386ba6b",
+          "bytes": 1065,
+          "sha256": "4dbda04344456f09a7a588140455413a9ac59b6b26a1ef7cdf9c800c012d87f0"
+        },
+        "sbom/nli-native/sources/503558bfefe66ca15e4e3f7955b3cb0ec87fd52f29bf24b336af7bd00e946d5c.txt": {
+          "mode": "100644",
+          "git_blob_oid": "ebe0bc91ea7055a88d6e335f739452bb22dc2f36",
+          "bytes": 1068,
+          "sha256": "503558bfefe66ca15e4e3f7955b3cb0ec87fd52f29bf24b336af7bd00e946d5c"
+        },
+        "sbom/nli-native/sources/508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1.txt": {
+          "mode": "100644",
+          "git_blob_oid": "9cf106272ac3b56b0c4c80218e8fc10a664ca5f4",
+          "bytes": 1036,
+          "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+        },
+        "sbom/nli-native/sources/523a42c25d245dde9c015f882cec7f4555aad883382a6cf19b4b7d9b2cd5419b.txt": {
+          "mode": "100644",
+          "git_blob_oid": "cd3f7cb3ae92c6910467c66b165445df70aeb3a1",
+          "bytes": 1130,
+          "sha256": "523a42c25d245dde9c015f882cec7f4555aad883382a6cf19b4b7d9b2cd5419b"
+        },
+        "sbom/nli-native/sources/54a744942eb3fa63a74d8d359989ed6962c04f3f10ff20cfa08ff8aa7efbe4e6.txt": {
+          "mode": "100644",
+          "git_blob_oid": "b0ac754bd13f78425068d70de67c52b2bd2aca09",
+          "bytes": 11338,
+          "sha256": "54a744942eb3fa63a74d8d359989ed6962c04f3f10ff20cfa08ff8aa7efbe4e6"
+        },
+        "sbom/nli-native/sources/553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583.txt": {
+          "mode": "100644",
+          "git_blob_oid": "37465048a6f63d82585781a48df0c80e32aa333a",
+          "bytes": 566,
+          "sha256": "553fffcd9b1cb158bc3e9edc35da85ca5c3b3d7d2e61c883ebcfa8a65814b583"
+        },
+        "sbom/nli-native/sources/57088c28c5ea50e729a06c3b04de70c41e496a5b753d75a744e2abbf60a2448f.txt": {
+          "mode": "100644",
+          "git_blob_oid": "d5b45151c7542ad2f69b47beacc1fac073802d0e",
+          "bytes": 1321,
+          "sha256": "57088c28c5ea50e729a06c3b04de70c41e496a5b753d75a744e2abbf60a2448f"
+        },
+        "sbom/nli-native/sources/5734ed989dfca1f625b40281ee9f4530f91b2411ec01cb748223e7eb87e201ab.txt": {
+          "mode": "100644",
+          "git_blob_oid": "068d491fd551ae2531f4d28583245719a2e19e2d",
+          "bytes": 1099,
+          "sha256": "5734ed989dfca1f625b40281ee9f4530f91b2411ec01cb748223e7eb87e201ab"
+        },
+        "sbom/nli-native/sources/603fb27ef3266ea516872eefd9ae587746b8c34614a35c0fb24e4e9e0c17e137.txt": {
+          "mode": "100644",
+          "git_blob_oid": "6e73e6309faebe29ff49b1a2b69dc77dad436b77",
+          "bytes": 1112,
+          "sha256": "603fb27ef3266ea516872eefd9ae587746b8c34614a35c0fb24e4e9e0c17e137"
+        },
+        "sbom/nli-native/sources/62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a.txt": {
+          "mode": "100644",
+          "git_blob_oid": "1b5ec8b78e237b5c3b3d812a7c0a6589d0f7161d",
+          "bytes": 9723,
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        "sbom/nli-native/sources/6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb.txt": {
+          "mode": "100644",
+          "git_blob_oid": "39d4bdb5acd313c1a92dbeaa1c379aaf0596a315",
+          "bytes": 1071,
+          "sha256": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        },
+        "sbom/nli-native/sources/65f94e99ddaf4f5d1782a6dae23f35d4293a9a01444a13135a6887017d353cee.txt": {
+          "mode": "100644",
+          "git_blob_oid": "bac6fb98de263cc49643b5c038496070684e0004",
+          "bytes": 1059,
+          "sha256": "65f94e99ddaf4f5d1782a6dae23f35d4293a9a01444a13135a6887017d353cee"
+        },
+        "sbom/nli-native/sources/65fdb6c76cd61612070c066eec9ecdb30ee74fb27859d0d9af58b9f499fd0c3e.txt": {
+          "mode": "100644",
+          "git_blob_oid": "bc976a272cedb87725d582193a858be931e722d4",
+          "bytes": 1056,
+          "sha256": "65fdb6c76cd61612070c066eec9ecdb30ee74fb27859d0d9af58b9f499fd0c3e"
+        },
+        "sbom/nli-native/sources/6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd.txt": {
+          "mode": "100644",
+          "git_blob_oid": "8ad082ec4f93b748959a7634b12d25da2000c59e",
+          "bytes": 1094,
+          "sha256": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        },
+        "sbom/nli-native/sources/6df43f6f4b5d4587f3d8d71e45532c688fd168afa5fe89d571cb32fa09c4ef51.txt": {
+          "mode": "100644",
+          "git_blob_oid": "455787c2334661b0c74590c1d35e5f711393cb82",
+          "bytes": 10282,
+          "sha256": "6df43f6f4b5d4587f3d8d71e45532c688fd168afa5fe89d571cb32fa09c4ef51"
+        },
+        "sbom/nli-native/sources/6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6.txt": {
+          "mode": "100644",
+          "git_blob_oid": "a2d01088b6ce55e837a6d193943580f978fb2d2e",
+          "bytes": 1062,
+          "sha256": "6efb0476a1cc085077ed49357026d8c173bf33017278ef440f222fb9cbcb66e6"
+        },
+        "sbom/nli-native/sources/70ba5469ea0bab6e18a32d7009068f996503168d27be57747e08da34337ff26f.txt": {
+          "mode": "100644",
+          "git_blob_oid": "ee4d7cf05501ee338de85b1e92df869c1e8d5bbf",
+          "bytes": 1340,
+          "sha256": "70ba5469ea0bab6e18a32d7009068f996503168d27be57747e08da34337ff26f"
+        },
+        "sbom/nli-native/sources/71073d492e996de196dbe1eb1e4c94c27c014c841b288161265b2efd06d0af28.txt": {
+          "mode": "100644",
+          "git_blob_oid": "fca31990733461b3937c74caaee2d623e9e6bcbc",
+          "bytes": 10781,
+          "sha256": "71073d492e996de196dbe1eb1e4c94c27c014c841b288161265b2efd06d0af28"
+        },
+        "sbom/nli-native/sources/71f321038b088358004bee991635ac09e4c703bec467d3c30c06992c0595f189.txt": {
+          "mode": "100644",
+          "git_blob_oid": "5b0fc41df44f47904d3a53587141f16dd11c88e1",
+          "bytes": 1511,
+          "sha256": "71f321038b088358004bee991635ac09e4c703bec467d3c30c06992c0595f189"
+        },
+        "sbom/nli-native/sources/74db5baf44a41b1000312c673544b3374e4198af5605c7f9080a402cec42cfa3.txt": {
+          "mode": "100644",
+          "git_blob_oid": "b82826bdbdd2c34622ca53747e9011919d8b78bf",
+          "bytes": 2847,
+          "sha256": "74db5baf44a41b1000312c673544b3374e4198af5605c7f9080a402cec42cfa3"
+        },
+        "sbom/nli-native/sources/7576269ea71f767b99297934c0b2367532690f8c4badc695edf8e04ab6a1e545.txt": {
+          "mode": "100644",
+          "git_blob_oid": "9203baa055d41d89e1ab8f4d6aa9180a49e078a7",
+          "bytes": 1043,
+          "sha256": "7576269ea71f767b99297934c0b2367532690f8c4badc695edf8e04ab6a1e545"
+        },
+        "sbom/nli-native/sources/792d075c7bad6dac258a44e799eb64cbf465e24d9932d27669be08c5ec957e27.txt": {
+          "mode": "100644",
+          "git_blob_oid": "9015f776374c75181da22827216009d46028899f",
+          "bytes": 1159,
+          "sha256": "792d075c7bad6dac258a44e799eb64cbf465e24d9932d27669be08c5ec957e27"
+        },
+        "sbom/nli-native/sources/7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0.txt": {
+          "mode": "100644",
+          "git_blob_oid": "e69282e381bc07152cc7598f21f3162e4bbb1f22",
+          "bytes": 1071,
+          "sha256": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+        },
+        "sbom/nli-native/sources/7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c.txt": {
+          "mode": "100644",
+          "git_blob_oid": "68a49daad8ff7e35068f2b7a97d643aab440eaec",
+          "bytes": 1211,
+          "sha256": "7e12e5df4bae12cb21581ba157ced20e1986a0508dd10d0e8a4ab9a4cf94e85c"
+        },
+        "sbom/nli-native/sources/8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90.txt": {
+          "mode": "100644",
+          "git_blob_oid": "11069edd79019f7dafbe3138841cf289209270dd",
+          "bytes": 10850,
+          "sha256": "8173d5c29b4f956d532781d2b86e4e30f83e6b7878dce18c919451d6ba707c90"
+        },
+        "sbom/nli-native/sources/83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32.txt": {
+          "mode": "100644",
+          "git_blob_oid": "7ed244f42dce8ae75632684206f3ef237165119b",
+          "bytes": 1275,
+          "sha256": "83c1763356e822adde0a2cae748d938a73fdc263849ccff6b27776dff213bd32"
+        },
+        "sbom/nli-native/sources/8764a597675778ddfd4e25f81b08a05dbcf089ac05662df7613fe67f150e3aa2.txt": {
+          "mode": "100644",
+          "git_blob_oid": "66b6578d3923d3a281f71faae2ca545b04bd50a8",
+          "bytes": 1054,
+          "sha256": "8764a597675778ddfd4e25f81b08a05dbcf089ac05662df7613fe67f150e3aa2"
+        },
+        "sbom/nli-native/sources/8b427f5bc501764575e52ba4f9d95673cf8f6d80a86d0d06599852e1a9a20a36.txt": {
+          "mode": "100644",
+          "git_blob_oid": "0c3270fdd1530e101f6cd8f3e9bb28ce2442812d",
+          "bytes": 1056,
+          "sha256": "8b427f5bc501764575e52ba4f9d95673cf8f6d80a86d0d06599852e1a9a20a36"
+        },
+        "sbom/nli-native/sources/8c9612877aacfa1b42f5e80b679e6c3c93a7ba2bb99dfaf6e87e200dca4b4e6c.txt": {
+          "mode": "100644",
+          "git_blob_oid": "48b7653f40ed716119cb7f81280fa563a0b673d1",
+          "bytes": 1099,
+          "sha256": "8c9612877aacfa1b42f5e80b679e6c3c93a7ba2bb99dfaf6e87e200dca4b4e6c"
+        },
+        "sbom/nli-native/sources/8ce0830173fdac609dfb4ea603fdc002c2f4af0dc9b1a005653f5da9cf534b18.txt": {
+          "mode": "100644",
+          "git_blob_oid": "819ce21187da4043f615b816bbd0114a4d9fd782",
+          "bytes": 1055,
+          "sha256": "8ce0830173fdac609dfb4ea603fdc002c2f4af0dc9b1a005653f5da9cf534b18"
+        },
+        "sbom/nli-native/sources/8ea93490d74a5a1b1af3ff71d786271b3f1e5f0bea79ac16e02ec533cef040d6.txt": {
+          "mode": "100644",
+          "git_blob_oid": "0b48eadc9d0314e4f0e93ce68e8b08a494499a16",
+          "bytes": 1067,
+          "sha256": "8ea93490d74a5a1b1af3ff71d786271b3f1e5f0bea79ac16e02ec533cef040d6"
+        },
+        "sbom/nli-native/sources/90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5.txt": {
+          "mode": "100644",
+          "git_blob_oid": "468d907caf99fb0cc0dcbb3c322cbb69f740ffd1",
+          "bytes": 569,
+          "sha256": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5"
+        },
+        "sbom/nli-native/sources/95bd3988beee069fa2848f648dab43cc6e0b2add2ad6bcb17360caf749802bcc.txt": {
+          "mode": "100644",
+          "git_blob_oid": "a7e77cb28d386ec6eddeaabf441f91473ddefa1e",
+          "bytes": 9722,
+          "sha256": "95bd3988beee069fa2848f648dab43cc6e0b2add2ad6bcb17360caf749802bcc"
+        },
+        "sbom/nli-native/sources/98a817e7b85e5fe4e79d165c656a4a139793b8b643d0f3d9cbcc3538ef82ec82.txt": {
+          "mode": "100644",
+          "git_blob_oid": "b96d186582ee6c720c41c48b5a701088754b6398",
+          "bytes": 1077,
+          "sha256": "98a817e7b85e5fe4e79d165c656a4a139793b8b643d0f3d9cbcc3538ef82ec82"
+        },
+        "sbom/nli-native/sources/9d185ac6703c4b0453974c0d85e9eee43e6941009296bb1f5eb0b54e2329e9f3.txt": {
+          "mode": "100644",
+          "git_blob_oid": "2dc22c12fa9c6ef93d7e9319ded0df3fc055aec5",
+          "bytes": 11350,
+          "sha256": "9d185ac6703c4b0453974c0d85e9eee43e6941009296bb1f5eb0b54e2329e9f3"
+        },
+        "sbom/nli-native/sources/a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2.txt": {
+          "mode": "100644",
+          "git_blob_oid": "16fe87b06e802f094b3fbb0894b137bca2b16ef1",
+          "bytes": 10847,
+          "sha256": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        "sbom/nli-native/sources/aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf.txt": {
+          "mode": "100644",
+          "git_blob_oid": "17d74680f8cf2d2571d1d5873cb4d14cc6b12246",
+          "bytes": 10849,
+          "sha256": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+        },
+        "sbom/nli-native/sources/afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6.txt": {
+          "mode": "100644",
+          "git_blob_oid": "cd0ad009a8b7a0af083a4926e1b9e340618836dd",
+          "bytes": 1107,
+          "sha256": "afcbe3b2e6b37172b5a9ca869ee4c0b8cdc09316e5d4384864154482c33e5af6"
+        },
+        "sbom/nli-native/sources/b39b7556926992260c18201e59f9478217ed593602099546581b4092a4b9e10e.txt": {
+          "mode": "100644",
+          "git_blob_oid": "e3939ffce4a7753ef543095f877e7ba6674f9f7c",
+          "bytes": 1087,
+          "sha256": "b39b7556926992260c18201e59f9478217ed593602099546581b4092a4b9e10e"
+        },
+        "sbom/nli-native/sources/b7e650f3fce5c53249d1cdc608b54df156a97edd636cf9d23498d0cfe7aec63e.txt": {
+          "mode": "100644",
+          "git_blob_oid": "dfc0e73b19f687984b394c8f3d0865705623b6ba",
+          "bytes": 1085,
+          "sha256": "b7e650f3fce5c53249d1cdc608b54df156a97edd636cf9d23498d0cfe7aec63e"
+        },
+        "sbom/nli-native/sources/c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b.txt": {
+          "mode": "100644",
+          "git_blob_oid": "b5ed4ecec27b39347f6f6c081cf6c512f62bca0a",
+          "bytes": 11351,
+          "sha256": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        "sbom/nli-native/sources/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt": {
+          "mode": "100644",
+          "git_blob_oid": "9e841e7a26e4eb057b24511e7b92d42b257a80e5",
+          "bytes": 1141,
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        },
+        "sbom/nli-native/sources/c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08.txt": {
+          "mode": "100644",
+          "git_blob_oid": "8f71f43fee3f78649d238238cbde51e6d7055c82",
+          "bytes": 11358,
+          "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+        },
+        "sbom/nli-native/sources/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt": {
+          "mode": "100644",
+          "git_blob_oid": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+          "bytes": 11357,
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        },
+        "sbom/nli-native/sources/c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566.txt": {
+          "mode": "100644",
+          "git_blob_oid": "36b7cd93cdfbac762f5be4c6ce276df2ea6305c2",
+          "bytes": 1338,
+          "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+        },
+        "sbom/nli-native/sources/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt": {
+          "mode": "100644",
+          "git_blob_oid": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        "sbom/nli-native/sources/d027e91dbc9cdbb2f1190068e498bd6b61cff022b6a032b191021ba658d96111.txt": {
+          "mode": "100644",
+          "git_blob_oid": "79c8b7c4a1dabcfbc718b7fe6d43b1892f9850cd",
+          "bytes": 3733,
+          "sha256": "d027e91dbc9cdbb2f1190068e498bd6b61cff022b6a032b191021ba658d96111"
+        },
+        "sbom/nli-native/sources/da23be69ad3ccf7a5823d62152efcd2b15de9482a5014fcb1b02844662d86abd.txt": {
+          "mode": "100644",
+          "git_blob_oid": "de22e4284acbdcd22852739f43adf1e3008ecc3f",
+          "bytes": 1022,
+          "sha256": "da23be69ad3ccf7a5823d62152efcd2b15de9482a5014fcb1b02844662d86abd"
+        },
+        "sbom/nli-native/sources/dbe1fff0fb1314b6af94f161511406275cf01c5a32441fbf24528a57a051d599.txt": {
+          "mode": "100644",
+          "git_blob_oid": "2442bbfbf3cc8063659c356fa948ef92d97572a5",
+          "bytes": 2003,
+          "sha256": "dbe1fff0fb1314b6af94f161511406275cf01c5a32441fbf24528a57a051d599"
+        },
+        "sbom/nli-native/sources/e4c9b06fa850cb9b540a5e400e9f6394cf15efcf4098144de477d1d3dae10150.txt": {
+          "mode": "100644",
+          "git_blob_oid": "bb419c21270682eae7918aaba2e9e81107ec6b80",
+          "bytes": 1052,
+          "sha256": "e4c9b06fa850cb9b540a5e400e9f6394cf15efcf4098144de477d1d3dae10150"
+        },
+        "sbom/nli-native/sources/e9c1238c5beb73c6cc130160418968058b21d486a7a445f0ceff27d51fbfdc44.txt": {
+          "mode": "100644",
+          "git_blob_oid": "942c017c875d3ebb56c1c57392184d2628029e62",
+          "bytes": 1456,
+          "sha256": "e9c1238c5beb73c6cc130160418968058b21d486a7a445f0ceff27d51fbfdc44"
+        },
+        "sbom/nli-native/sources/ea084a2373ebc1f0902c09266e7bf25a05ab3814c1805bb017ffa7308f90c061.txt": {
+          "mode": "100644",
+          "git_blob_oid": "ccc94459f8ed9ec43bce6f8aa6bd59072b82890e",
+          "bytes": 1072,
+          "sha256": "ea084a2373ebc1f0902c09266e7bf25a05ab3814c1805bb017ffa7308f90c061"
+        },
+        "sbom/nli-native/sources/f2cf336738ad935a482a799be004083ddd07c904513caf80f9e48011888fe1b6.txt": {
+          "mode": "100644",
+          "git_blob_oid": "6759605b3d99929c5e609adbeb37e1d15b0fca79",
+          "bytes": 74,
+          "sha256": "f2cf336738ad935a482a799be004083ddd07c904513caf80f9e48011888fe1b6"
+        },
+        "sbom/nli-native/sources/f428305bbf2e70fbd807af0f3c7ac1b7acfb95311640f451e9d2e48db6d7e96b.txt": {
+          "mode": "100644",
+          "git_blob_oid": "9471783711da87c60ffe81fae01ba2e1c1161c7a",
+          "bytes": 1065,
+          "sha256": "f428305bbf2e70fbd807af0f3c7ac1b7acfb95311640f451e9d2e48db6d7e96b"
+        },
+        "sbom/nli-native/sources/f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1.txt": {
+          "mode": "100644",
+          "git_blob_oid": "11f2842a303a7935740f7a1d09139b0b9c28c3b6",
+          "bytes": 1995,
+          "sha256": "f7db81051789b729fea528a63ec4c938fdcb93d9d61d97dc8cc2e9df6d47f2a1"
+        },
+        "sbom/nli-native/sources/f98e09091d5ae02b2f2ec1ead4f7f28c4c44d1cb98b078739ba67091637e170c.txt": {
+          "mode": "100644",
+          "git_blob_oid": "efda8e42039bde36edc170861246835040887563",
+          "bytes": 1075,
+          "sha256": "f98e09091d5ae02b2f2ec1ead4f7f28c4c44d1cb98b078739ba67091637e170c"
+        },
+        "sbom/nli-native/sources/ff92bed461f50338dd703a9ba9aee496a425957873df1d91192776e4bdf5dda7.txt": {
+          "mode": "100644",
+          "git_blob_oid": "7397b2bd6a8580d51fe7b23783f8f1a05fa70291",
+          "bytes": 3693,
+          "sha256": "ff92bed461f50338dd703a9ba9aee496a425957873df1d91192776e4bdf5dda7"
+        }
+      },
+      "source_sha256": "46112e6f535a59ec19d0e795ad2d51da53ecaefa152aeab9e09e3d2f2d631780",
+      "target_sha256": "c7fffcf0111f95606ea07b4bff9d960b99e6e3b9ffc86553dde3982000d936e6",
+      "packages_sha256": "902291414defa7be09e37f0593086ab78a564743bd3152d78f445b0f0c5b1b25",
+      "associations_sha256": "f227834a975f43d3a421cf0aa54d7e46c6344130d6abdceb5d0f6e7272c5e881"
+    }
+  ],
+  "baseline_read_reservation": {
+    "inspected_body_charge": 40242180
+  },
+  "project_files": [
+    ".github/workflows/artifact-sbom.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/source-snapshot-v3.yml",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "deploy/accounts/001-account-schema.sql",
+    "deploy/accounts/002-erasure-schema.sql",
+    "deploy/accounts/requirements.lock",
+    "deploy/accounts/runtime-sources.json",
+    "docs/account-erasure-plan.md",
+    "docs/account-erasure.md",
+    "docs/account-history-delivery.md",
+    "docs/account-history-ui.md",
+    "docs/account-postgres-plan.md",
+    "docs/account-postgres.md",
+    "docs/c2pa-project-grants-plan.md",
+    "docs/c2pa-project-grants.md",
+    "docs/history-entitlements.md",
+    "docs/ios-keyboard-reachability-plan.md",
+    "docs/ios-simulator-matrix-plan.md",
+    "docs/ios-simulator-matrix.md",
+    "docs/personal-tag-history-plan.md",
+    "docs/pii-bracket-address-plan.md",
+    "docs/pii-bracket-address-result.md",
+    "docs/pii-capability-identity-plan.md",
+    "docs/pii-capability-identity-result.md",
+    "docs/scope-progress.json",
+    "docs/scope-progress.md",
+    "docs/session-delivery-plan.md",
+    "docs/session-delivery.json",
+    "docs/source-copy-v6-plan.md",
+    "docs/source-copy-v6.md",
+    "docs/visual-tag-execution-plan.md",
+    "eval/dependencies/source-snapshot-additions-v6.json",
+    "eval/dependency-policy.json",
+    "eval/route-boundaries.json",
+    "mobile/ios/Source/CheckerController.swift",
+    "mobile/ios/Tests/PublicSourcesFlows.swift",
+    "mobile/ios/Tests/SizeLayoutFlows.swift",
+    "mobile/ios/Tests/UIFlows.swift",
+    "package.json",
+    "runs/2026-11-23-personal-history-spatial-scope.json",
+    "runs/2026-11-24-account-history-browser.json",
+    "runs/2026-11-24-account-history-delivery.json",
+    "runs/2026-11-24-account-postgres.json",
+    "runs/2026-11-24-c2pa-project-grant-delivery.json",
+    "runs/2026-11-24-history-access-engine.json",
+    "runs/2026-11-24-history-filter-session-binding.json",
+    "runs/2026-11-24-image-reference-qualified.json",
+    "runs/2026-11-24-ios-clear-completion-witness.json",
+    "runs/2026-11-24-ios-control-snapshot-efficiency.json",
+    "runs/2026-11-24-ios-public-sources-actual.json",
+    "runs/2026-11-24-ios-public-sources-test-local.json",
+    "runs/2026-11-24-ios-public-sources-ux.json",
+    "runs/2026-11-24-ios-source-baseline-readiness.json",
+    "runs/2026-11-24-ios-sources-portal-native-inputs.json",
+    "runs/2026-11-24-ios-sources-remote-portal-correction.json",
+    "runs/2026-11-24-ios-sources-remote-portal-review.json",
+    "runs/2026-11-24-native-sources-integration.json",
+    "runs/2026-11-24-postgres-account-integration.json",
+    "runs/2026-11-25-account-erasure-integration.json",
+    "runs/2026-11-25-account-erasure.json",
+    "runs/2026-11-25-ios-current-layout-matrix.json",
+    "runs/2026-11-25-ios-current-seven-qualification.json",
+    "runs/2026-11-25-ios-keyboard-reachability-source.json",
+    "runs/2026-11-25-native-keyboard-and-recovery-progress.json",
+    "runs/2026-11-25-pii-bracket-address-accounting-correction.json",
+    "runs/2026-11-25-pii-bracket-address-development.json",
+    "runs/2026-11-25-pii-bracket-address-integration.json",
+    "runs/2026-11-25-pii-bracket-address-live-replay.json",
+    "runs/2026-11-25-pii-bracket-address-qualified-integration.json",
+    "runs/2026-11-25-pii-bracket-address-review.json",
+    "runs/2026-11-25-pii-capability-identity-source.json",
+    "runs/2026-11-25-protected7ab-source-baseline.json",
+    "runs/2026-11-25-protected7ab-source-boundary.json",
+    "runs/2026-11-25-protected7ab-source-preparation.json",
+    "runs/2026-11-25-protected7ab-source-website.json",
+    "runs/changes/2026-11-23-personal-history-spatial-scope.json",
+    "runs/changes/2026-11-24-account-history-browser.json",
+    "runs/changes/2026-11-24-account-history-delivery.json",
+    "runs/changes/2026-11-24-account-postgres.json",
+    "runs/changes/2026-11-24-c2pa-project-grant-delivery.json",
+    "runs/changes/2026-11-24-history-access-engine.json",
+    "runs/changes/2026-11-24-history-filter-session-binding.json",
+    "runs/changes/2026-11-24-image-reference-qualified.json",
+    "runs/changes/2026-11-24-ios-clear-completion-witness.json",
+    "runs/changes/2026-11-24-ios-control-snapshot-efficiency.json",
+    "runs/changes/2026-11-24-ios-public-sources-test-local.json",
+    "runs/changes/2026-11-24-ios-public-sources-ux.json",
+    "runs/changes/2026-11-24-ios-source-baseline-readiness.json",
+    "runs/changes/2026-11-24-native-sources-integration.json",
+    "runs/changes/2026-11-24-postgres-account-integration.json",
+    "runs/changes/2026-11-25-041149-ios-sources-remote-portal-correction-8f951277.json",
+    "runs/changes/2026-11-25-041532-ios-sources-portal-review-limit-b038b8d7.json",
+    "runs/changes/2026-11-25-041639-ios-sources-portal-native-inputs-85bd8262.json",
+    "runs/changes/2026-11-25-042723-ios-public-sources-actual-84833215.json",
+    "runs/changes/2026-11-25-052951-account-erasure-integration-3e3b21e0.json",
+    "runs/changes/2026-11-25-054008-pii-bracket-address-development-4939a3b8.json",
+    "runs/changes/2026-11-25-054424-pii-result-guide-accuracy-wording-2ed0fbd0.json",
+    "runs/changes/2026-11-25-063003-pii-integration-accounting-2b70201c.json",
+    "runs/changes/2026-11-25-070234-native-qualification-accounting-20cdbfce.json",
+    "runs/changes/2026-11-25-075401-native-keyboard-recovery-accounting-104f6a7c.json",
+    "runs/changes/2026-11-25-080809-pii-qualified-integration-f309d0df.json",
+    "runs/changes/2026-11-25-account-erasure.json",
+    "runs/changes/2026-11-25-ios-current-layout-matrix.json",
+    "runs/changes/2026-11-25-ios-current-seven-qualification.json",
+    "runs/changes/2026-11-25-ios-keyboard-reachability-source.json",
+    "runs/changes/2026-11-25-pii-bracket-address-live-replay.json",
+    "runs/changes/2026-11-25-pii-capability-identity-source.json",
+    "runs/changes/2026-11-25-protected7ab-source-baseline.json",
+    "runs/changes/2026-11-25-protected7ab-source-boundary.json",
+    "runs/changes/2026-11-25-protected7ab-source-preparation.json",
+    "sbom/c2pa-native/project-grants.json",
+    "scripts/account-erasure.py",
+    "scripts/account-postgres-review.py",
+    "scripts/c2pa-project-grants.py",
+    "scripts/history-entitlements.py",
+    "scripts/verify-account-erasure.py",
+    "scripts/verify-account-postgres.py",
+    "scripts/verify-bracketed-email-development.py",
+    "services/accounts/__init__.py",
+    "services/accounts/__main__.py",
+    "services/accounts/app.py",
+    "services/accounts/postgres.py",
+    "services/anonymizer/app.py",
+    "services/anonymizer/replay_metadata.py",
+    "site/account/app.js",
+    "site/account/index.html",
+    "site/account/style.css",
+    "site/public/reference/public-scope.json",
+    "site/src/public-scope.json",
+    "site/src/scope-manifest.json",
+    "state.json",
+    "tests/account-ui-state.cjs",
+    "tests/test_account_api.py",
+    "tests/test_account_core.py",
+    "tests/test_account_erasure.py",
+    "tests/test_account_postgres.py",
+    "tests/test_account_store.py",
+    "tests/test_c2pa_project_grants.py",
+    "tests/test_history_entitlements.py",
+    "tests/test_redaction_bracketed_email.py",
+    "tests/test_redactor_capability_identity.py",
+    "tests/test_source_release_policy_v6.py",
+    "tests/test_source_snapshot_admission.py",
+    "tests/test_source_snapshot_workflow.py",
+    "tests/test_web_checker_artifact.py",
+    "tools/account_core.py",
+    "tools/account_erasure.py",
+    "tools/account_postgres.py",
+    "tools/account_store.py",
+    "tools/c2pa_project_grants.py",
+    "tools/distribution_artifacts.py",
+    "tools/history_entitlements.py",
+    "tools/ios_simulator_matrix.py",
+    "tools/source_release_policy_v6.py",
+    "tools/source_snapshot_admission.py"
+  ],
+  "maintained_project_files": [
+    ".github/workflows/artifact-sbom.yml",
+    ".github/workflows/ci.yml",
+    ".github/workflows/source-snapshot-v3.yml",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "docs/ios-simulator-matrix-plan.md",
+    "docs/ios-simulator-matrix.md",
+    "docs/personal-tag-history-plan.md",
+    "docs/scope-progress.json",
+    "docs/scope-progress.md",
+    "docs/session-delivery-plan.md",
+    "docs/session-delivery.json",
+    "docs/visual-tag-execution-plan.md",
+    "eval/dependency-policy.json",
+    "eval/route-boundaries.json",
+    "mobile/ios/Source/CheckerController.swift",
+    "mobile/ios/Tests/SizeLayoutFlows.swift",
+    "mobile/ios/Tests/UIFlows.swift",
+    "runs/2026-11-23-personal-history-spatial-scope.json",
+    "runs/changes/2026-11-23-personal-history-spatial-scope.json",
+    "services/anonymizer/replay_metadata.py",
+    "site/public/reference/public-scope.json",
+    "site/src/public-scope.json",
+    "site/src/scope-manifest.json",
+    "state.json",
+    "tests/test_source_snapshot_admission.py",
+    "tests/test_source_snapshot_workflow.py",
+    "tests/test_web_checker_artifact.py",
+    "tools/distribution_artifacts.py",
+    "tools/ios_simulator_matrix.py",
+    "tools/source_snapshot_admission.py"
+  ],
+  "project_limits": {
+    ".github/workflows/artifact-sbom.yml": 32768,
+    ".github/workflows/ci.yml": 2000000,
+    ".github/workflows/source-snapshot-v3.yml": 16384,
+    "CHANGELOG.md": 2000000,
+    "CONTRIBUTING.md": 2000000,
+    "README.md": 2000000,
+    "deploy/accounts/001-account-schema.sql": 2000000,
+    "deploy/accounts/002-erasure-schema.sql": 2000000,
+    "deploy/accounts/requirements.lock": 2000000,
+    "deploy/accounts/runtime-sources.json": 2000000,
+    "docs/account-erasure-plan.md": 2000000,
+    "docs/account-erasure.md": 2000000,
+    "docs/account-history-delivery.md": 2000000,
+    "docs/account-history-ui.md": 2000000,
+    "docs/account-postgres-plan.md": 2000000,
+    "docs/account-postgres.md": 2000000,
+    "docs/c2pa-project-grants-plan.md": 2000000,
+    "docs/c2pa-project-grants.md": 2000000,
+    "docs/history-entitlements.md": 2000000,
+    "docs/ios-keyboard-reachability-plan.md": 4096,
+    "docs/ios-simulator-matrix-plan.md": 2000000,
+    "docs/ios-simulator-matrix.md": 2000000,
+    "docs/personal-tag-history-plan.md": 2000000,
+    "docs/pii-bracket-address-plan.md": 2000000,
+    "docs/pii-bracket-address-result.md": 2000000,
+    "docs/pii-capability-identity-plan.md": 8192,
+    "docs/pii-capability-identity-result.md": 4096,
+    "docs/scope-progress.json": 2000000,
+    "docs/scope-progress.md": 2000000,
+    "docs/session-delivery-plan.md": 2000000,
+    "docs/session-delivery.json": 2000000,
+    "docs/source-copy-v6-plan.md": 65536,
+    "docs/source-copy-v6.md": 65536,
+    "docs/visual-tag-execution-plan.md": 2000000,
+    "eval/dependencies/source-snapshot-additions-v6.json": 196608,
+    "eval/dependency-policy.json": 524288,
+    "eval/route-boundaries.json": 2000000,
+    "mobile/ios/Source/CheckerController.swift": 2000000,
+    "mobile/ios/Tests/PublicSourcesFlows.swift": 2000000,
+    "mobile/ios/Tests/SizeLayoutFlows.swift": 2000000,
+    "mobile/ios/Tests/UIFlows.swift": 2000000,
+    "package.json": 2000000,
+    "runs/2026-11-23-personal-history-spatial-scope.json": 2000000,
+    "runs/2026-11-24-account-history-browser.json": 2000000,
+    "runs/2026-11-24-account-history-delivery.json": 2000000,
+    "runs/2026-11-24-account-postgres.json": 2000000,
+    "runs/2026-11-24-c2pa-project-grant-delivery.json": 2000000,
+    "runs/2026-11-24-history-access-engine.json": 2000000,
+    "runs/2026-11-24-history-filter-session-binding.json": 2000000,
+    "runs/2026-11-24-image-reference-qualified.json": 2000000,
+    "runs/2026-11-24-ios-clear-completion-witness.json": 2000000,
+    "runs/2026-11-24-ios-control-snapshot-efficiency.json": 2000000,
+    "runs/2026-11-24-ios-public-sources-actual.json": 2000000,
+    "runs/2026-11-24-ios-public-sources-test-local.json": 2000000,
+    "runs/2026-11-24-ios-public-sources-ux.json": 2000000,
+    "runs/2026-11-24-ios-source-baseline-readiness.json": 2000000,
+    "runs/2026-11-24-ios-sources-portal-native-inputs.json": 2000000,
+    "runs/2026-11-24-ios-sources-remote-portal-correction.json": 2000000,
+    "runs/2026-11-24-ios-sources-remote-portal-review.json": 2000000,
+    "runs/2026-11-24-native-sources-integration.json": 2000000,
+    "runs/2026-11-24-postgres-account-integration.json": 2000000,
+    "runs/2026-11-25-account-erasure-integration.json": 2000000,
+    "runs/2026-11-25-account-erasure.json": 2000000,
+    "runs/2026-11-25-ios-current-layout-matrix.json": 16384,
+    "runs/2026-11-25-ios-current-seven-qualification.json": 32768,
+    "runs/2026-11-25-ios-keyboard-reachability-source.json": 8192,
+    "runs/2026-11-25-native-keyboard-and-recovery-progress.json": 8192,
+    "runs/2026-11-25-pii-bracket-address-accounting-correction.json": 2000000,
+    "runs/2026-11-25-pii-bracket-address-development.json": 2000000,
+    "runs/2026-11-25-pii-bracket-address-integration.json": 2000000,
+    "runs/2026-11-25-pii-bracket-address-live-replay.json": 8192,
+    "runs/2026-11-25-pii-bracket-address-qualified-integration.json": 4096,
+    "runs/2026-11-25-pii-bracket-address-review.json": 2000000,
+    "runs/2026-11-25-pii-capability-identity-source.json": 8192,
+    "runs/2026-11-25-protected7ab-source-baseline.json": 32768,
+    "runs/2026-11-25-protected7ab-source-boundary.json": 32768,
+    "runs/2026-11-25-protected7ab-source-preparation.json": 32768,
+    "runs/2026-11-25-protected7ab-source-website.json": 1000000,
+    "runs/changes/2026-11-23-personal-history-spatial-scope.json": 2000000,
+    "runs/changes/2026-11-24-account-history-browser.json": 2000000,
+    "runs/changes/2026-11-24-account-history-delivery.json": 2000000,
+    "runs/changes/2026-11-24-account-postgres.json": 2000000,
+    "runs/changes/2026-11-24-c2pa-project-grant-delivery.json": 2000000,
+    "runs/changes/2026-11-24-history-access-engine.json": 2000000,
+    "runs/changes/2026-11-24-history-filter-session-binding.json": 2000000,
+    "runs/changes/2026-11-24-image-reference-qualified.json": 2000000,
+    "runs/changes/2026-11-24-ios-clear-completion-witness.json": 2000000,
+    "runs/changes/2026-11-24-ios-control-snapshot-efficiency.json": 2000000,
+    "runs/changes/2026-11-24-ios-public-sources-test-local.json": 2000000,
+    "runs/changes/2026-11-24-ios-public-sources-ux.json": 2000000,
+    "runs/changes/2026-11-24-ios-source-baseline-readiness.json": 2000000,
+    "runs/changes/2026-11-24-native-sources-integration.json": 2000000,
+    "runs/changes/2026-11-24-postgres-account-integration.json": 2000000,
+    "runs/changes/2026-11-25-041149-ios-sources-remote-portal-correction-8f951277.json": 2000000,
+    "runs/changes/2026-11-25-041532-ios-sources-portal-review-limit-b038b8d7.json": 2000000,
+    "runs/changes/2026-11-25-041639-ios-sources-portal-native-inputs-85bd8262.json": 2000000,
+    "runs/changes/2026-11-25-042723-ios-public-sources-actual-84833215.json": 2000000,
+    "runs/changes/2026-11-25-052951-account-erasure-integration-3e3b21e0.json": 2000000,
+    "runs/changes/2026-11-25-054008-pii-bracket-address-development-4939a3b8.json": 2000000,
+    "runs/changes/2026-11-25-054424-pii-result-guide-accuracy-wording-2ed0fbd0.json": 2000000,
+    "runs/changes/2026-11-25-063003-pii-integration-accounting-2b70201c.json": 2000000,
+    "runs/changes/2026-11-25-070234-native-qualification-accounting-20cdbfce.json": 4096,
+    "runs/changes/2026-11-25-075401-native-keyboard-recovery-accounting-104f6a7c.json": 4096,
+    "runs/changes/2026-11-25-080809-pii-qualified-integration-f309d0df.json": 4096,
+    "runs/changes/2026-11-25-account-erasure.json": 2000000,
+    "runs/changes/2026-11-25-ios-current-layout-matrix.json": 4096,
+    "runs/changes/2026-11-25-ios-current-seven-qualification.json": 4096,
+    "runs/changes/2026-11-25-ios-keyboard-reachability-source.json": 4096,
+    "runs/changes/2026-11-25-pii-bracket-address-live-replay.json": 4096,
+    "runs/changes/2026-11-25-pii-capability-identity-source.json": 4096,
+    "runs/changes/2026-11-25-protected7ab-source-baseline.json": 32768,
+    "runs/changes/2026-11-25-protected7ab-source-boundary.json": 32768,
+    "runs/changes/2026-11-25-protected7ab-source-preparation.json": 32768,
+    "sbom/c2pa-native/project-grants.json": 2000000,
+    "scripts/account-erasure.py": 2000000,
+    "scripts/account-postgres-review.py": 2000000,
+    "scripts/c2pa-project-grants.py": 2000000,
+    "scripts/history-entitlements.py": 2000000,
+    "scripts/verify-account-erasure.py": 2000000,
+    "scripts/verify-account-postgres.py": 2000000,
+    "scripts/verify-bracketed-email-development.py": 2000000,
+    "services/accounts/__init__.py": 2000000,
+    "services/accounts/__main__.py": 2000000,
+    "services/accounts/app.py": 2000000,
+    "services/accounts/postgres.py": 2000000,
+    "services/anonymizer/app.py": 2000000,
+    "services/anonymizer/replay_metadata.py": 4096,
+    "site/account/app.js": 2000000,
+    "site/account/index.html": 2000000,
+    "site/account/style.css": 2000000,
+    "site/public/reference/public-scope.json": 2000000,
+    "site/src/public-scope.json": 2000000,
+    "site/src/scope-manifest.json": 2000000,
+    "state.json": 2000000,
+    "tests/account-ui-state.cjs": 2000000,
+    "tests/test_account_api.py": 2000000,
+    "tests/test_account_core.py": 2000000,
+    "tests/test_account_erasure.py": 2000000,
+    "tests/test_account_postgres.py": 2000000,
+    "tests/test_account_store.py": 2000000,
+    "tests/test_c2pa_project_grants.py": 2000000,
+    "tests/test_history_entitlements.py": 2000000,
+    "tests/test_redaction_bracketed_email.py": 2000000,
+    "tests/test_redactor_capability_identity.py": 8192,
+    "tests/test_source_release_policy_v6.py": 131072,
+    "tests/test_source_snapshot_admission.py": 65536,
+    "tests/test_source_snapshot_workflow.py": 32768,
+    "tests/test_web_checker_artifact.py": 2000000,
+    "tools/account_core.py": 2000000,
+    "tools/account_erasure.py": 2000000,
+    "tools/account_postgres.py": 2000000,
+    "tools/account_store.py": 2000000,
+    "tools/c2pa_project_grants.py": 2000000,
+    "tools/distribution_artifacts.py": 98304,
+    "tools/history_entitlements.py": 2000000,
+    "tools/ios_simulator_matrix.py": 2000000,
+    "tools/source_release_policy_v6.py": 65536,
+    "tools/source_snapshot_admission.py": 65536
+  },
+  "claims": {
+    "legal_clearance": false,
+    "compiled_runtime_permission": false,
+    "source_archive_admitted": false,
+    "release_authorized": false,
+    "accuracy": false,
+    "complete_F057_X02": false
+  },
+  "source_observation": {
+    "selected_source_is_protected": false,
+    "actual_candidate_verified": false
+  }
+}

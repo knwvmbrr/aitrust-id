@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-protected7ab-source-preparation",
+  "kind": "change",
+  "recorded_at": "2026-11-25T08:18:40.628981+00:00",
+  "author": "Codex /root/release_recovery; distinct source review Codex /root",
+  "claim_level": "engineering_only",
+  "source_base": "d771739ce4337040ffa935b1cdf2f1f780e3869d",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "changed": "Prepare the finite protected7ab-based V6 source-copy successor with158 explicit paths, existing legacy maintenance identity, captured current-source method bindings and unchanged cumulative limits.",
+  "proves": "Actual focused28 source controls pass without skipped tests, with all frozen source bytes unchanged; different review checks the finite table, exact legacy role and unchanged foundations. Protected7ab Linux/Mac qualification remains a separate immutable baseline fact.",
+  "limits": "Actual candidate classifier/archive/current website/protected authorization pending exact committed source. All14 distribution obligations and full F057/X02 acceptance remain open; original136/66 unchanged.",
+  "files": {
+    ".github/workflows/artifact-sbom.yml": "b6d99d0ef12ce423cdbc0f86cfd21449ebd30f876263371c22b0c32b707fb6f9",
+    ".github/workflows/source-snapshot-v3.yml": "7b31ba24be58dc99164eef843eedd3f16f15b581ba6ccdc6c40cc2105df11ead",
+    "docs/source-copy-v6-plan.md": "cf1ab060e3938fce91bdfd1a79aa62ba1d48e8193a01940ae7e2bba9a0d6f690",
+    "docs/source-copy-v6.md": "95ae96477b454b885d169f35d5d97267363c311e9579ad3d1f45b706656cce6e",
+    "eval/dependencies/source-snapshot-additions-v6.json": "0df291bd1011b9866983c51f7cd5f310e13d1a3fb82e0df7f8217cc5bd1bb430",
+    "eval/dependency-policy.json": "505f574862753d2863da199102e1fe5c903d069a6f998ba34e5f66e91fb67b48",
+    "runs/2026-11-25-protected7ab-source-baseline.json": "27b98d387f9b0ae0478fc3628669ece98006149806e9ecb1c1d6d5c21719467d",
+    "tests/test_source_release_policy_v6.py": "89c8a3cf90c990d3cfc8d8f7971d6246a7d41376778a7869210381cc50de68fb",
+    "tests/test_source_snapshot_admission.py": "55e21b8000b425a83c6dd8d2e9ce2a69fecaa0ad9a9c9519c7e434c49d34f15b",
+    "tests/test_source_snapshot_workflow.py": "355c2da9dab0bec0f828d5f9a7b59f1d59529abac5125cb30a0dc976a2ed7acd",
+    "tools/distribution_artifacts.py": "54c5664440dd57895fdcce439cea3105f1e5e656d13c00709e6bf0a45535d9ba",
+    "tools/source_release_policy_v6.py": "ae42261a7d2d75cf18580ed4a90afeea6851f3568db2e55e9708457b21782ee0",
+    "tools/source_snapshot_admission.py": "9f0cb365fb3ebf194534bcd237aee4ea25324ea65e29374ee84b09b65f65f515",
+    "runs/2026-11-25-protected7ab-source-preparation.json": "36ee5c1e2315fe64ac3fae9f4c6c07776c67e092f64c48e9746431903ed87113"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-protected7ab-source-preparation.json",
+      "sha256": "36ee5c1e2315fe64ac3fae9f4c6c07776c67e092f64c48e9746431903ed87113"
+    }
+  ],
+  "checks": [],
+  "independent_release_validated": false,
+  "original_scope_counts_changed": false
+}

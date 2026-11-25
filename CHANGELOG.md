@@ -2,6 +2,25 @@
 
 ## Unreleased — 2026-11-25
 
+### 2026-11-25-protected7ab-source-preparation
+
+Recorded 2026-11-25T08:18:40.628981+00:00 · Contributor: Codex /root/release_recovery; distinct source review Codex /root · change
+
+- **Changed.** Prepare the finite protected7ab-based V6 source-copy successor with158 explicit paths, existing legacy maintenance identity, captured current-source method bindings and unchanged cumulative limits.
+- **Evidence.** Actual focused28 source controls pass without skipped tests, with all frozen source bytes unchanged; different review checks the finite table, exact legacy role and unchanged foundations. Protected7ab Linux/Mac qualification remains a separate immutable baseline fact. [Change record](./runs/changes/2026-11-25-protected7ab-source-preparation.json).
+- **Not claimed.** Actual candidate classifier/archive/current website/protected authorization pending exact committed source. All14 distribution obligations and full F057/X02 acceptance remain open; original136/66 unchanged.
+
+
+### 2026-11-25-protected7ab-source-baseline
+
+Recorded 2026-11-25T06:42:42.016905+00:00 · Contributor: Codex /root/release_recovery; /root distinct source and actual evidence review · change
+
+- **Changed.** Record the actual protected7ab Linux source publisher and independently rooted Mac consumer, preserving exact received artifact and scoped acceptance limits.
+- **Evidence.** Normal protected PR155 merge passed all11required contexts. Genuine main source signing/admission/Linux consumer and actual Mac verification each completed three fixed PS source probes; results are byte-identical. [Change record](./runs/changes/2026-11-25-protected7ab-source-baseline.json).
+- **Not claimed.** Finite sourceCOPY authority and three synthetic source probes; not tag accuracy, all14scopes, legal/full-original closure, latest working-source publication, app/site deployment or V6baseline selection. Source-policy registration and later publication of this new record are separate controlled steps.
+
+
+
 ### 2026-11-25-080809-pii-qualified-integration-f309d0df
 
 Recorded 2026-11-25T08:08:09.987386+00:00 · Contributor: Codex /root; worker /root/release_recovery; review /root/postgres_recovery · change

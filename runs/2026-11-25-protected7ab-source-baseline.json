@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "profile": "protected-source-linux-macos-qualification/v1",
+  "captured_at": "2026-11-25T06:42:42.016905+00:00",
+  "pass": true,
+  "claim_level": "engineering_only",
+  "actual_worker": "Codex /root/release_recovery; actual protected GitHub Actions Linux publisher",
+  "different_reviewer": "Codex /root",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "source_commit": "7ab4d3036f6409ec72d6a23972a563fd81e0f416",
+  "source_tree": "7f112209124a1608a287895280fe2e0195d2f515",
+  "protected_publication": {
+    "pull_request": 155,
+    "reviewed_head": "d8a8024a65539c3c28d4cef922c6a8b2ca92e6bf",
+    "expected_previous_main": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+    "normal_merge": true,
+    "required_contexts_success": 11,
+    "admin_or_force_bypass": false,
+    "review_threads_unresolved": 0,
+    "source_commit_url": "https://github.com/knwvmbrr/aitrust-id/commit/7ab4d3036f6409ec72d6a23972a563fd81e0f416"
+  },
+  "received_artifact": {
+    "producer_run": 45555439793,
+    "producer_job": 139006505778,
+    "provider_artifact_id": 14996315435,
+    "provider_zip_bytes": 46789696,
+    "provider_zip_sha256": "2607911517f83073bc96a5af3f4569c1affa604538e154bc8ff36d89576875ad",
+    "download_count": 1,
+    "members": {
+      "evidence.json": {
+        "bytes": 15687495,
+        "sha256": "5be27842000b997adb7d53123ed07fdc8db4afa266edabb0c54ca7806f9a9d44"
+      },
+      "artifact.spdx.json": {
+        "bytes": 9491308,
+        "sha256": "543fc7bf2573b5429c060255b09e8cb300f56d46221c797caede7edbc1157d9a"
+      },
+      "trusted-root.jsonl": {
+        "bytes": 34634,
+        "sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c"
+      },
+      "source.tar.gz": {
+        "bytes": 43665267,
+        "sha256": "97bb9bdedf294ecb392a219d9b40b117c82ec8dac2021b2b9b83ab9fc94dbe4d"
+      },
+      "managed-verified.json": {
+        "bytes": 2405,
+        "sha256": "fb7fef656060929b9b0b56d6192dfd07d5086143a99f95fb11c53345d1412431"
+      },
+      "sbom.sigstore.json": {
+        "bytes": 12664608,
+        "sha256": "d7818631e77f1def96a50b8c3397f550cd048175607acf3cff755daff432ed1d"
+      }
+    }
+  },
+  "linux": {
+    "environment": "GitHub-hosted ubuntu-24.04",
+    "producer_event": "push to protected main",
+    "job_started_at": "2026-11-25T05:43:17Z",
+    "job_completed_at": "2026-11-25T05:48:21Z",
+    "job_conclusion": "success",
+    "real_archive_and_SPDX_prepared": true,
+    "real_protected_OIDC_attestation": true,
+    "trusted_roots_obtained_separately_by_job": true,
+    "actual_managed_consumer_exit": 0,
+    "kernel_network_isolation_claimed": false,
+    "summary_sha256": "fb7fef656060929b9b0b56d6192dfd07d5086143a99f95fb11c53345d1412431"
+  },
+  "mac": {
+    "environment": "Darwin arm64; installed CPython3.13.0 and gh2.87.3",
+    "started_at": "2026-11-25T05:58:29.003122+00:00",
+    "completed_at": "2026-11-25T06:03:01.347018+00:00",
+    "elapsed_seconds": 272.34265337500256,
+    "actual_consumer_exit": 0,
+    "actual_stderr_bytes": 0,
+    "source_entrypoint": "scripts/verify-managed-source.py",
+    "trusted_detached_checkout_commit": "7ab4d3036f6409ec72d6a23972a563fd81e0f416",
+    "trusted_detached_checkout_clean": true,
+    "source29_sha256": {
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+      "docs/ps-source-distribution.md": "957854f9a2b5e571fcf212b8534a4a9a65afd2152da5ef4879e2f2085740986e",
+      "eval/dependencies/source-snapshot-additions-v5.json": "bed27448c456186eded268ef30c9b4cef6205d554f901586720bb107122fd134",
+      "eval/dependency-policy.json": "103f1fb9eacea0a5dd1af35ac8117600fce62d3d68d896a1d9be102cfc4e3468",
+      "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+      "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+      "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+      "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+      "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+      "scripts/verify-managed-source.py": "d8e03339f4b4a19e4615928173ef9c809558e9e276e76e40801983ac6bd12355",
+      "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+      "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631",
+      "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+      "tools/artifact_process.py": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86",
+      "tools/dependency_policy.py": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408",
+      "tools/distribution_artifacts.py": "679d326875eb05b5ab010afa50c20f70e3a8261088a63f8f13f577d21d1a5e5c",
+      "tools/ps_source_distribution.py": "682066c75455f0c50585b5eae5a9fb878c0300e7abecbed58987626077fc9c62",
+      "tools/source_release_policy.py": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6",
+      "tools/source_release_policy_v2.py": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c",
+      "tools/source_release_policy_v3.py": "26a6bb8be66cab5a355bfbe6fcfbd16cefe994d1e7ade8b26b3cd227f0f82d41",
+      "tools/source_release_policy_v4.py": "0e70d9f360533dbd13f67192b967e8831787fce381c220bc013fc8a7eaa0989e",
+      "tools/source_release_policy_v5.py": "737b1eb4c92ced709695aed80c13b7790b7e2e51183bd21416707b37a08a56bc",
+      "tools/source_snapshot_admission.py": "323177b5be74b3e74ee125e3e8bc7aad0d38987ae95aa37501c97eb840aac334",
+      "tools/source_snapshot_binding.py": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb",
+      "tools/source_snapshot_managed.py": "16faace436f081d192d63a7b650c0603f94b2d62e626ad8fb491193cfb53c980"
+    },
+    "received6_unchanged": true,
+    "current_roots_obtained_separately": true,
+    "current_roots_sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c",
+    "execution_receipt_sha256": "bdc67dad58bfb02d508cd7ddc70fcb5472d21e2364c8df4959928685e5300b8e",
+    "postflight_receipt_sha256": "422ca7cbe8b6457ecacce0f8f14a876ad0c7b6e5bfe36e818767583979ac3a1a",
+    "owned_process_reaped_and_absent": true,
+    "private0700_stage_intentionally_retained": true,
+    "summary_sha256": "fb7fef656060929b9b0b56d6192dfd07d5086143a99f95fb11c53345d1412431",
+    "summary_byte_identical_to_cloud": true,
+    "new_dependency_or_model_install": false
+  },
+  "actual_finite_consumer_result": {
+    "all_source_extracted": false,
+    "artifact": {
+      "bytes": 43665267,
+      "sha256": "97bb9bdedf294ecb392a219d9b40b117c82ec8dac2021b2b9b83ab9fc94dbe4d"
+    },
+    "attestation_verified": true,
+    "cases": [
+      {
+        "id": "positive",
+        "output_sha256": "895beb04623a8ebce5b2caad003f27f383d12c7a70d8b536ea7baeec334944a9",
+        "state": "FINDING",
+        "status": "PASS",
+        "whole_record_canonical_match": true
+      },
+      {
+        "id": "negative",
+        "output_sha256": "65186783ca1c9583bd17de16a88e68b978c7578d368621be29a210c981d64c87",
+        "state": "NO_FINDING",
+        "status": "PASS",
+        "whole_record_canonical_match": true
+      },
+      {
+        "id": "invalid_utf8",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "state": "REFUSED",
+        "status": "PASS",
+        "whole_record_canonical_match": false
+      }
+    ],
+    "cohort": {
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+      "docs/ps-source-distribution.md": "957854f9a2b5e571fcf212b8534a4a9a65afd2152da5ef4879e2f2085740986e",
+      "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+      "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+      "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+      "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+    },
+    "complete_fourteen_routes": false,
+    "dependencies_installed": false,
+    "evidence_sha256": {
+      "bundle.json": "d7818631e77f1def96a50b8c3397f550cd048175607acf3cff755daff432ed1d",
+      "packet.json": "5be27842000b997adb7d53123ed07fdc8db4afa266edabb0c54ca7806f9a9d44",
+      "roots.jsonl": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c",
+      "spdx.json": "543fc7bf2573b5429c060255b09e8cb300f56d46221c797caede7edbc1157d9a"
+    },
+    "independent_accuracy_evidence": false,
+    "legal_clearance": false,
+    "policy_admitted": true,
+    "private_stage_retained": true,
+    "probe_scope": "finite_standalone_PS_source_only",
+    "profile": "managed-source-ps-exercise/v1",
+    "release_authorized": true,
+    "route": "source-snapshot",
+    "source_commit": "7ab4d3036f6409ec72d6a23972a563fd81e0f416",
+    "state": "VERIFIED_SOURCE_PS_PROBES_COMPLETED"
+  },
+  "different_reviews": {
+    "received_member_and_result_sha256": "093e66aa0d215c0fc5dd8aa0903b2f190fc77d1e9a312d0bf1903ed19ec2a2eb",
+    "actual_Mac_source_execution_sha256": "1ff69323e663e239975541f5a067be9576f8f08e85bba537babd587c503082a6"
+  },
+  "original_counts": {
+    "total": 202,
+    "complete": 136,
+    "open": 66,
+    "target_open": 60
+  },
+  "original_requirement_closures": [],
+  "successor_baseline_selected": false,
+  "limits": [
+    "Authenticated finite source-snapshot COPY and three standalone PS synthetic probes only; no all-fourteen distribution or legal/accuracy clearance.",
+    "Whole Git repository source publication and authenticated Actions artifact are evidenced; a new anonymous permanent managed-release asset was not verified by this work.",
+    "Cloud Linux consumer is genuine; this record does not claim kernel network isolation.",
+    "Protected7ab excludes later working account/PII/iPhone changes; no app/site deployment or TestFlight acceptance.",
+    "Current private retained stages are not erased; no general hostile-code sandbox or secure-deletion promise.",
+    "This immutable record preserves actual completed qualification; it neither adopts V6 nor raises an original requirement percentage."
+  ]
+}

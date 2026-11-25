@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "profile": "protected7ab-v6-source-only-preparation/v1",
+  "phase": "SOURCE_ONLY_PREPARATION",
+  "captured_at": "2026-11-25T08:18:40.628981+00:00",
+  "pass": true,
+  "actual_worker": "Codex /root/release_recovery",
+  "different_reviewer": "Codex /root",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "source_parent": "d771739ce4337040ffa935b1cdf2f1f780e3869d",
+  "integrated_root": "88e177bfc0c0242eaba8cfceccc45647c6406050",
+  "protected_baseline": "7ab4d3036f6409ec72d6a23972a563fd81e0f416",
+  "actual_protected_linux_macos_qualification_record": "runs/2026-11-25-protected7ab-source-baseline.json",
+  "source_review_freeze_sha256": "b8be406f01da2ac38d1f7e0b32c2b0c861e21a75dfd862c5486617d16ba7eec4",
+  "different_source_review_sha256": "4910af6acd081f3dd905b4843e601c04bf51a29ac672ffe08f4fab6f83ebd78d",
+  "source_after": {
+    ".github/workflows/artifact-sbom.yml": {
+      "bytes": 18930,
+      "sha256": "b6d99d0ef12ce423cdbc0f86cfd21449ebd30f876263371c22b0c32b707fb6f9"
+    },
+    ".github/workflows/source-snapshot-v3.yml": {
+      "bytes": 7859,
+      "sha256": "7b31ba24be58dc99164eef843eedd3f16f15b581ba6ccdc6c40cc2105df11ead"
+    },
+    "docs/source-copy-v6-plan.md": {
+      "bytes": 10043,
+      "sha256": "cf1ab060e3938fce91bdfd1a79aa62ba1d48e8193a01940ae7e2bba9a0d6f690"
+    },
+    "docs/source-copy-v6.md": {
+      "bytes": 5099,
+      "sha256": "95ae96477b454b885d169f35d5d97267363c311e9579ad3d1f45b706656cce6e"
+    },
+    "eval/dependencies/source-snapshot-additions-v6.json": {
+      "bytes": 80124,
+      "sha256": "0df291bd1011b9866983c51f7cd5f310e13d1a3fb82e0df7f8217cc5bd1bb430"
+    },
+    "eval/dependency-policy.json": {
+      "bytes": 35500,
+      "sha256": "505f574862753d2863da199102e1fe5c903d069a6f998ba34e5f66e91fb67b48"
+    },
+    "runs/2026-11-25-protected7ab-source-baseline.json": {
+      "bytes": 11123,
+      "sha256": "27b98d387f9b0ae0478fc3628669ece98006149806e9ecb1c1d6d5c21719467d"
+    },
+    "runs/changes/2026-11-25-protected7ab-source-baseline.json": {
+      "bytes": 2933,
+      "sha256": "d108851791ccfe3490ee4f3d0e6dd1af4a3dda37821b757684dd2c83810ba974"
+    },
+    "tests/test_source_release_policy_v6.py": {
+      "bytes": 12665,
+      "sha256": "89c8a3cf90c990d3cfc8d8f7971d6246a7d41376778a7869210381cc50de68fb"
+    },
+    "tests/test_source_snapshot_admission.py": {
+      "bytes": 14501,
+      "sha256": "55e21b8000b425a83c6dd8d2e9ce2a69fecaa0ad9a9c9519c7e434c49d34f15b"
+    },
+    "tests/test_source_snapshot_workflow.py": {
+      "bytes": 9016,
+      "sha256": "355c2da9dab0bec0f828d5f9a7b59f1d59529abac5125cb30a0dc976a2ed7acd"
+    },
+    "tools/distribution_artifacts.py": {
+      "bytes": 43025,
+      "sha256": "54c5664440dd57895fdcce439cea3105f1e5e656d13c00709e6bf0a45535d9ba"
+    },
+    "tools/source_release_policy_v6.py": {
+      "bytes": 25528,
+      "sha256": "ae42261a7d2d75cf18580ed4a90afeea6851f3568db2e55e9708457b21782ee0"
+    },
+    "tools/source_snapshot_admission.py": {
+      "bytes": 16219,
+      "sha256": "9f0cb365fb3ebf194534bcd237aee4ea25324ea65e29374ee84b09b65f65f515"
+    }
+  },
+  "selected_tranche": {
+    "literal_names": 158,
+    "maintained_project_roles": 32,
+    "unchanged_cap": 160,
+    "inherited_v5_charge": 140,
+    "legacy_names": 159,
+    "copied_anchors": 95,
+    "historical_flat_union": 268,
+    "lifetime_flat160_refuses": true,
+    "all_13_foundations_unchanged": true,
+    "only_extra_legacy_eligibility": "Exactly one pinned V1 replay_metadata.py row; no generic maintenance expansion.",
+    "pending_native_logging_and_pg_feature_not_included": true
+  },
+  "actual_focused_controls": {
+    "v6": 23,
+    "captured_cache": 1,
+    "workflow": 4,
+    "total": 28,
+    "tests_pass": true,
+    "skipped": 0,
+    "errors": 0,
+    "private_actual_receipt_sha256": "4fe565d8b2f0be3899241f32920c58199ada81e5541e95e950e07b6a8393e4ac",
+    "completed_at": "2026-11-25T08:18:40.628981+00:00"
+  },
+  "cumulative_read_projection": {
+    "inherited_v5": 40242180,
+    "committed_unique_old_new_body_eof": 7985330,
+    "reserved_final_source_changes": 8000000,
+    "prospective_upper_bound": 56227510,
+    "unchanged_actual_cumulative_cap": 64000000,
+    "actual_classifier_inspected_charge": null
+  },
+  "pending_until_exact_committed_source": {
+    "actual_v6_classifier": true,
+    "actual_v6_archive_git_binding": true,
+    "current_website_boundary": true,
+    "protected_current_required_checks": true,
+    "protected_merge_signed_publication_and_consumer": true
+  },
+  "claims": {
+    "actual_candidate_verified": false,
+    "source_archive_admitted": false,
+    "signature_verified_for_candidate": false,
+    "release_authorized": false,
+    "compiled_runtime_permission": false,
+    "legal_clearance": false,
+    "independent_accuracy": false,
+    "full_F057_X02_complete": false,
+    "original_counts_changed": false
+  },
+  "originals": {
+    "complete": 136,
+    "open": 66
+  },
+  "limits": "Source-only preparation, not classifier/archive/protected authority. Existing old run/event records and unavailable outcomes remain immutable. No install/model/SDK/credential acquisition or site/app deployment.",
+  "preserved_collection_failure": {
+    "phase": "Before any test executed",
+    "private_receipt_sha256": "dfbae835c494e2d6f09c4864ae16babef97f23c5bc185febb0c19698cc302f56",
+    "cause": "Private runner selected the correct method from the wrong existing class; corrected only the selector, with all feature sources/count/budget unchanged.",
+    "executed_controls": 0
+  },
+  "source_after_note": "Changelog receives this fresh event after focused controls; its pre-event digest is not a circular self binding."
+}
