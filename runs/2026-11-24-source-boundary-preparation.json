@@ -1,0 +1,181 @@
+{
+  "actual_build_stages": {
+    "changed_environment_product_build": {
+      "cache_stable": true,
+      "changed_tracked_files": [
+        {
+          "after": "595a80d5a0ac68843da4032877964940b259326474c29d41365a9472e142e744",
+          "before": "6441f2970b8e2c72fe91d968f97e2c400a5de383c9a9f40e11e89c6c882c03e2",
+          "path": "site/public/reference/public-scope.json"
+        },
+        {
+          "after": "595a80d5a0ac68843da4032877964940b259326474c29d41365a9472e142e744",
+          "before": "6441f2970b8e2c72fe91d968f97e2c400a5de383c9a9f40e11e89c6c882c03e2",
+          "path": "site/src/public-scope.json"
+        },
+        {
+          "after": "dcb426b8495a98e83be9b02ca8a88068d3de74c812dfb667631941219afc9a64",
+          "before": "a2c627f15cd1f1add2c88914bc510045140920950805604f073e072947ecda4c",
+          "path": "site/src/scope-manifest.json"
+        }
+      ],
+      "clean_source_wrapper_pass": false,
+      "exit_status": 0,
+      "expected_generated_outputs_separately_accepted_by_ROOT": true,
+      "owned_link_removed": true,
+      "receipt_sha256": "09bdeb2efe230c642195a2d248c0725098960fc3bd8857c5cb09688b10793f75",
+      "seconds": 22.494247624999844,
+      "source_commit": "aea0e6965da921dc0d3dd1d878e939eff1a8a490",
+      "stderr": {
+        "bytes": 9335,
+        "sha256": "21e25e809db32f377954a23d3a62890dd75be00fea6f206ff8f144d9fffcd14d"
+      },
+      "stdout": {
+        "bytes": 8498,
+        "sha256": "137375638efb942767f4569012b35357e9acc0b7790f2decfead4bdee3835b76"
+      }
+    },
+    "dependency_installation_or_lifecycle_commands_invoked": false,
+    "existing_node_cache": {
+      "audit_sha256": "dda816fd8812b5be0263997db4b87edc8b24ac50a790d50ac3169b6d483b1ca6",
+      "matched_installed_packages": 101,
+      "missing_other_platform_optional_packages": 87,
+      "native_bindings": [
+        {
+          "bytes": 16902128,
+          "mode": "0o644",
+          "path": "@rolldown/binding-darwin-arm64/rolldown-binding.darwin-arm64.node",
+          "sha256": "94942f7c7ac5dad56845df9cbbf68ff7207cfde4c666cfd41dd3facdb10beb26"
+        },
+        {
+          "bytes": 10573778,
+          "mode": "0o755",
+          "path": "@esbuild/darwin-arm64/bin/esbuild",
+          "sha256": "e2dc9a52440a2a34f09434a2f4843cb1e30f84e40dcf238976ec61ef8cd7f36a"
+        },
+        {
+          "bytes": 2926752,
+          "mode": "0o644",
+          "path": "@tailwindcss/oxide-darwin-arm64/tailwindcss-oxide.darwin-arm64.node",
+          "sha256": "dbb1ced076c313dde5f967c1299ea725c866daec610ee510c9fac85dbb147470"
+        },
+        {
+          "bytes": 8516384,
+          "mode": "0o644",
+          "path": "lightningcss-darwin-arm64/lightningcss.darwin-arm64.node",
+          "sha256": "6ac4ba1cce8aca75dbcafafa1951955dd30d99ca9953fa81020d0c5246cbd317"
+        }
+      ]
+    },
+    "existing_product_prebuild_and_build_scripts_executed": true,
+    "original_global_python_attempt": {
+      "exit_status": 1,
+      "reason": "Global interpreter lacked pydantic; failed candidate and logs retained.",
+      "receipt_sha256": "91e95c16ae0c50a72d8d10ff256ed3f3cae3191b11396a3154669861dcaf5c12",
+      "seconds": 21.151258249999955
+    },
+    "pinned_python_environment": {
+      "audit_sha256": "f1168fafd4d2753a109fef3061ed12c984e0827e1925a65fd058d9687602e2f5",
+      "matched_packages": 37,
+      "mismatches": 0,
+      "version": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]"
+    }
+  },
+  "actual_distinct_source_review": {
+    "raw_utf8": "{\n  \"reviewed_at\": \"2026-11-25T04:40:46.065935+00:00\",\n  \"reviewer\": \"Codex /root\",\n  \"pass\": true,\n  \"source_base\": \"aea0e6965da921dc0d3dd1d878e939eff1a8a490\",\n  \"source\": {\n    \"site/public/reference/public-scope.json\": {\n      \"before\": \"6441f2970b8e2c72fe91d968f97e2c400a5de383c9a9f40e11e89c6c882c03e2\",\n      \"proposed\": \"595a80d5a0ac68843da4032877964940b259326474c29d41365a9472e142e744\",\n      \"bytes\": 750002,\n      \"payload\": \"0.txt\"\n    },\n    \"site/src/public-scope.json\": {\n      \"before\": \"6441f2970b8e2c72fe91d968f97e2c400a5de383c9a9f40e11e89c6c882c03e2\",\n      \"proposed\": \"595a80d5a0ac68843da4032877964940b259326474c29d41365a9472e142e744\",\n      \"bytes\": 750002,\n      \"payload\": \"1.txt\"\n    },\n    \"site/src/scope-manifest.json\": {\n      \"before\": \"a2c627f15cd1f1add2c88914bc510045140920950805604f073e072947ecda4c\",\n      \"proposed\": \"dcb426b8495a98e83be9b02ca8a88068d3de74c812dfb667631941219afc9a64\",\n      \"bytes\": 2724,\n      \"payload\": \"2.txt\"\n    },\n    \"eval/dependencies/source-snapshot-additions-v5.json\": {\n      \"before\": \"f87bcb6d3927fc27f54cc236d114d8c5669996911b858067735bae0b3a57067c\",\n      \"proposed\": \"bed27448c456186eded268ef30c9b4cef6205d554f901586720bb107122fd134\",\n      \"bytes\": 63488,\n      \"payload\": \"3.txt\"\n    },\n    \"tools/source_release_policy_v5.py\": {\n      \"before\": \"068f7426386c20155c6e74934e19792bed4caeb01f441c146e7e630f81e330ec\",\n      \"proposed\": \"737b1eb4c92ced709695aed80c13b7790b7e2e51183bd21416707b37a08a56bc\",\n      \"bytes\": 32927,\n      \"payload\": \"4.txt\"\n    },\n    \"eval/dependency-policy.json\": {\n      \"before\": \"b2384d0d829edaf35e358e5927c147b7d36a6278c588d51b64f92e2f4ba4ba33\",\n      \"proposed\": \"103f1fb9eacea0a5dd1af35ac8117600fce62d3d68d896a1d9be102cfc4e3468\",\n      \"bytes\": 35104,\n      \"payload\": \"5.txt\"\n    },\n    \"tests/test_source_release_policy_v5.py\": {\n      \"before\": \"e5172b0593b7837ab46e360067bbec10dab545e428f05c4d0aad69febc80260c\",\n      \"proposed\": \"60c7ddbdce8aab124b1e50bd73951307eff88eb04cec449a9b5e3fcfc83ad42a\",\n      \"bytes\": 14983,\n      \"payload\": \"6.txt\"\n    }\n  },\n  \"scope\": [\n    \"Full seven-source prospective review: metadata-only generated scope matches actual build and preserves every originalID/percentage/requiredacceptance, two exactpubliccopies and derivedmanifest.\",\n    \"Only8newproject names and3maintenance names (5preciseevent/website paths+3derived files), total140/max160; everyotherfield including159legacy/95anchors unchanged.\",\n    \"OnlymatchingV5 tableSHA in code,2existing registrybindings and132to140literalcount. No runtimefunctions/route/rules/e72/limits/oldmanifest change.\"\n  ],\n  \"limits\": [\n    \"Stage1oldboundarymanifest correctly remainsrefusing; fresh genuine140website execution, currentfingerprint match anddifferentstage2selectionreview required.\",\n    \"Prior actualbuildexit0 with3expectedgeneratedchanges remains distinct fromcleanwrapperfalse; no new currentUI/Google/Apple/accuracy/license/fulloriginal claim.\"\n  ]\n}\n",
+    "sha256": "188be5710615cfc7c54e6e251e762a5addad43859b9795f500b539041b550acc"
+  },
+  "actual_literal_control": {
+    "exit_status": 0,
+    "log": "test_literal_current_policy_and_immutable_foundations (tests.test_source_release_policy_v5.SourceCopyV5.test_literal_current_policy_and_immutable_foundations) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.005s\n\nOK\n",
+    "test_count": 1
+  },
+  "actual_postbuild_inventory": {
+    "ROOT_prior_reconciliation_sha256": "8f3faf2c04c0eb0cb86b4111262a563998a19425bc59aabd817921d41af66de6",
+    "all21_prior_changes_map_to_existing_source_reviews": true,
+    "count": 8499,
+    "delta_paths_before140_registry_change": 23,
+    "not_selected_yet": true,
+    "sha256": "5685f8b676646d642e87cffa3dc4383d39e938813c7b3e8d1077d82a154b38a1"
+  },
+  "author": "Codex /root/release_recovery",
+  "boundary_status": {
+    "current_route_boundary_pass": false,
+    "future_execution_source": "Unchanged source-bound delivery workflow on the committed frozen140 candidate; no prior report is rebound.",
+    "old_manifest_sha256": "33249a0b5b03d5b07901eef61ae67341e8352ba691be5013903e1c58d4e5103a",
+    "old_manifest_unchanged": true,
+    "website_receipt_current": false
+  },
+  "captured_at": "2026-11-25T04:42:40.925648+00:00",
+  "claim_level": "engineering_only",
+  "files": {
+    "eval/dependencies/source-snapshot-additions-v5.json": {
+      "bytes": 63488,
+      "sha256": "bed27448c456186eded268ef30c9b4cef6205d554f901586720bb107122fd134"
+    },
+    "eval/dependency-policy.json": {
+      "bytes": 35104,
+      "sha256": "103f1fb9eacea0a5dd1af35ac8117600fce62d3d68d896a1d9be102cfc4e3468"
+    },
+    "site/public/reference/public-scope.json": {
+      "bytes": 750002,
+      "sha256": "595a80d5a0ac68843da4032877964940b259326474c29d41365a9472e142e744"
+    },
+    "site/src/public-scope.json": {
+      "bytes": 750002,
+      "sha256": "595a80d5a0ac68843da4032877964940b259326474c29d41365a9472e142e744"
+    },
+    "site/src/scope-manifest.json": {
+      "bytes": 2724,
+      "sha256": "dcb426b8495a98e83be9b02ca8a88068d3de74c812dfb667631941219afc9a64"
+    },
+    "tests/test_source_release_policy_v5.py": {
+      "bytes": 14983,
+      "sha256": "60c7ddbdce8aab124b1e50bd73951307eff88eb04cec449a9b5e3fcfc83ad42a"
+    },
+    "tools/source_release_policy_v5.py": {
+      "bytes": 32927,
+      "sha256": "737b1eb4c92ced709695aed80c13b7790b7e2e51183bd21416707b37a08a56bc"
+    }
+  },
+  "finite_source_policy": {
+    "charged_names": 140,
+    "copied_source_anchors": 95,
+    "five_reserved_record_paths": [
+      "runs/2026-11-24-source-boundary-preparation.json",
+      "runs/changes/2026-11-24-source-boundary-preparation.json",
+      "runs/2026-11-24-source-boundary-review.json",
+      "runs/changes/2026-11-24-source-boundary-review.json",
+      "runs/2026-11-24-source-boundary-website.json"
+    ],
+    "legacy_names": 159,
+    "maximum": 160,
+    "new_maintenance_names": [
+      "site/public/reference/public-scope.json",
+      "site/src/public-scope.json",
+      "site/src/scope-manifest.json"
+    ],
+    "new_project_names": [
+      "site/public/reference/public-scope.json",
+      "site/src/public-scope.json",
+      "site/src/scope-manifest.json",
+      "runs/2026-11-24-source-boundary-preparation.json",
+      "runs/changes/2026-11-24-source-boundary-preparation.json",
+      "runs/2026-11-24-source-boundary-review.json",
+      "runs/changes/2026-11-24-source-boundary-review.json",
+      "runs/2026-11-24-source-boundary-website.json"
+    ],
+    "only_existing_V5_method_and_table_registry_bindings_changed": true,
+    "other_fields_e72_routes_and_caps_unchanged": true
+  },
+  "independent_release_validated": false,
+  "limits": "The existing route manifest remains unchanged and refuses stale website evidence. No current website/browser/route pass, protected signing/AUTH, public deployment, native/TestFlight/VoiceOver, accuracy, legal/all14 approval or original closure. Actual frozen140 website evidence and the complete route guard remain required;136complete66open unchanged.",
+  "new_native_or_browser_execution": false,
+  "original_scope_counts_changed": false,
+  "pass": true,
+  "profile": "source-boundary-frozen-preparation/v1",
+  "release_authorized": false,
+  "source_base": "aea0e6965da921dc0d3dd1d878e939eff1a8a490",
+  "source_freeze_sha256": "132b26982482100050922d3de7ce2236263ca02fb0aae6968820e154a889e4f9",
+  "staged_native_cohort_unchanged": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01"
+}

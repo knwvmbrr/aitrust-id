@@ -1,0 +1,204 @@
+{
+  "accuracy_or_human_acceptance_claimed": false,
+  "actual_outside_consumer": {
+    "all_source_extracted": false,
+    "artifact": {
+      "bytes": 43185593,
+      "sha256": "01a75e2355faf77b7d3d39266ce5c76defcb5f16a432a93239f367dde7184cb2"
+    },
+    "attestation_verified": true,
+    "cases": [
+      {
+        "id": "positive",
+        "output_sha256": "895beb04623a8ebce5b2caad003f27f383d12c7a70d8b536ea7baeec334944a9",
+        "state": "FINDING",
+        "status": "PASS",
+        "whole_record_canonical_match": true
+      },
+      {
+        "id": "negative",
+        "output_sha256": "65186783ca1c9583bd17de16a88e68b978c7578d368621be29a210c981d64c87",
+        "state": "NO_FINDING",
+        "status": "PASS",
+        "whole_record_canonical_match": true
+      },
+      {
+        "id": "invalid_utf8",
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "state": "REFUSED",
+        "status": "PASS",
+        "whole_record_canonical_match": false
+      }
+    ],
+    "cohort": {
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+      "docs/ps-source-distribution.md": "957854f9a2b5e571fcf212b8534a4a9a65afd2152da5ef4879e2f2085740986e",
+      "eval/vectors/unicode/LICENSE.txt": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "protocol/normalization.py": "d949dd32a43762b6d71c7c746430c3ee0fc0d4036885e3b1a2a94deb056f09d1",
+      "protocol/unicode15-data.json": "76121e982f9338f18905eb69e9c9c4b5268247b91841eb20e999b39e11aa0458",
+      "scripts/build-device-detector.py": "582e2b24f8895071216bbbde0891062feb093869283e776757ea5def40ea93a3",
+      "scripts/check-ps.py": "0e4532e95a7f71cac8874f42e1c4ecbc363b159cbed43b7f48bd5146210ed240",
+      "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+      "services/evaluator/app.py": "ee1cc1e11b68de9c6971714232b505b97e4a9f32e216d544217fbebf04779631"
+    },
+    "complete_fourteen_routes": false,
+    "dependencies_installed": false,
+    "evidence_sha256": {
+      "bundle.json": "cb2b9a43ebae5eef9357a183aa50f2a67e637e2927ba1f3f80f3c8f9910cf513",
+      "packet.json": "a9dc454076fc4d13fc09c004083610a361109f0d2f4b9966150e06e5551fefc1",
+      "roots.jsonl": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c",
+      "spdx.json": "2bc416d5c513f7de9b901dcc09a3cf59f7718ac60774e459880862434cc7eae2"
+    },
+    "independent_accuracy_evidence": false,
+    "legal_clearance": false,
+    "policy_admitted": true,
+    "private_stage_retained": true,
+    "probe_scope": "finite_standalone_PS_source_only",
+    "profile": "managed-source-ps-exercise/v1",
+    "release_authorized": true,
+    "route": "source-snapshot",
+    "source_commit": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+    "state": "VERIFIED_SOURCE_PS_PROBES_COMPLETED"
+  },
+  "actual_outside_consumer_sha256": "166725edde1656c8a91abe5cef70d4f762354c2679d4cd0b7c5da20443a29050",
+  "anonymous_public_verification": {
+    "assets": [
+      {
+        "authenticated_request": false,
+        "body_retained": false,
+        "bytes": 9453135,
+        "http_status": 200,
+        "matches_protected_output": true,
+        "name": "artifact.spdx.json",
+        "public_url": "https://github.com/knwvmbrr/aitrust-id/releases/download/source-verified-2026-11-24-898dc254/artifact.spdx.json",
+        "sha256": "2bc416d5c513f7de9b901dcc09a3cf59f7718ac60774e459880862434cc7eae2"
+      },
+      {
+        "authenticated_request": false,
+        "body_retained": false,
+        "bytes": 15625938,
+        "http_status": 200,
+        "matches_protected_output": true,
+        "name": "evidence.json",
+        "public_url": "https://github.com/knwvmbrr/aitrust-id/releases/download/source-verified-2026-11-24-898dc254/evidence.json",
+        "sha256": "a9dc454076fc4d13fc09c004083610a361109f0d2f4b9966150e06e5551fefc1"
+      },
+      {
+        "authenticated_request": false,
+        "body_retained": false,
+        "bytes": 2405,
+        "http_status": 200,
+        "matches_protected_output": true,
+        "name": "managed-verified.json",
+        "public_url": "https://github.com/knwvmbrr/aitrust-id/releases/download/source-verified-2026-11-24-898dc254/managed-verified.json",
+        "sha256": "166725edde1656c8a91abe5cef70d4f762354c2679d4cd0b7c5da20443a29050"
+      },
+      {
+        "authenticated_request": false,
+        "body_retained": false,
+        "bytes": 12613904,
+        "http_status": 200,
+        "matches_protected_output": true,
+        "name": "sbom.sigstore.json",
+        "public_url": "https://github.com/knwvmbrr/aitrust-id/releases/download/source-verified-2026-11-24-898dc254/sbom.sigstore.json",
+        "sha256": "cb2b9a43ebae5eef9357a183aa50f2a67e637e2927ba1f3f80f3c8f9910cf513"
+      },
+      {
+        "authenticated_request": false,
+        "body_retained": false,
+        "bytes": 43185593,
+        "http_status": 200,
+        "matches_protected_output": true,
+        "name": "source.tar.gz",
+        "public_url": "https://github.com/knwvmbrr/aitrust-id/releases/download/source-verified-2026-11-24-898dc254/source.tar.gz",
+        "sha256": "01a75e2355faf77b7d3d39266ce5c76defcb5f16a432a93239f367dde7184cb2"
+      },
+      {
+        "authenticated_request": false,
+        "body_retained": false,
+        "bytes": 34634,
+        "http_status": 200,
+        "matches_protected_output": true,
+        "name": "trusted-root.jsonl",
+        "public_url": "https://github.com/knwvmbrr/aitrust-id/releases/download/source-verified-2026-11-24-898dc254/trusted-root.jsonl",
+        "sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c"
+      }
+    ],
+    "captured_at": "2026-11-24T05:45:35.848697+00:00",
+    "downloaded_bodies_saved": false,
+    "failure_type": null,
+    "outside_consumer_sha256": "166725edde1656c8a91abe5cef70d4f762354c2679d4cd0b7c5da20443a29050",
+    "pass": true,
+    "prerelease": true,
+    "profile": "current-protected-source-anonymous-publication-check/v1",
+    "release_id": 456352419,
+    "seconds": 3.7890627079759724,
+    "source_accuracy_or_original_closure_claimed": false,
+    "source_commit": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+    "url": "https://github.com/knwvmbrr/aitrust-id/releases/tag/source-verified-2026-11-24-898dc254"
+  },
+  "anonymous_public_verification_sha256": "71510e51b0f300bc161d9e57cf829b9aa9a7de900467633f26d812b16db280d2",
+  "author": "Codex /root",
+  "captured_at": "2026-11-24T05:47:48.594645+00:00",
+  "different_prepublication_review_sha256": "f8dafbc044ce172d72d6fb51755eba46db4cd37420b4ed34c588a38eec19dddb",
+  "different_reviewer": "Codex /root/seo",
+  "independent_roots_sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c",
+  "limits": "Whole source-copy route and three finite standalone PS source probes only. No independent tag accuracy, certification, human accessibility acceptance, signed mobile build, all-platform distribution permission or F-057/X-02 closure. Publisher observation and carried roots do not replace independent trust selection.",
+  "new_dependencies_models_or_SDKs_installed": false,
+  "original_requirements": {
+    "complete": 136,
+    "new_original_closures": 0,
+    "open": 66,
+    "target_open": 60
+  },
+  "pass": true,
+  "prior_releases_and_assets_modified": false,
+  "profile": "current-protected-source-publication/v1",
+  "protected_producer": {
+    "artifact_id": 14890354572,
+    "conclusion": "success",
+    "job_id": 138221989496,
+    "provider_zip_bytes": 46305511,
+    "provider_zip_sha256": "45e054173de31b45c6014768e4e2fe4b6c3982be9ccf8e28afbe6cf2a94ef772",
+    "run_id": 45327890777
+  },
+  "release": {
+    "assets": {
+      "artifact.spdx.json": {
+        "bytes": 9453135,
+        "sha256": "2bc416d5c513f7de9b901dcc09a3cf59f7718ac60774e459880862434cc7eae2"
+      },
+      "evidence.json": {
+        "bytes": 15625938,
+        "sha256": "a9dc454076fc4d13fc09c004083610a361109f0d2f4b9966150e06e5551fefc1"
+      },
+      "managed-verified.json": {
+        "bytes": 2405,
+        "sha256": "166725edde1656c8a91abe5cef70d4f762354c2679d4cd0b7c5da20443a29050"
+      },
+      "sbom.sigstore.json": {
+        "bytes": 12613904,
+        "sha256": "cb2b9a43ebae5eef9357a183aa50f2a67e637e2927ba1f3f80f3c8f9910cf513"
+      },
+      "source.tar.gz": {
+        "bytes": 43185593,
+        "sha256": "01a75e2355faf77b7d3d39266ce5c76defcb5f16a432a93239f367dde7184cb2"
+      },
+      "trusted-root.jsonl": {
+        "bytes": 34634,
+        "sha256": "65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c"
+      }
+    },
+    "body_sha256": "af58fe8a993c1e19cc3de44e97205ab13c2c33e23d0bf2521396bee192a5fe35",
+    "direct_tag_commit_verified": true,
+    "id": 456352419,
+    "prerelease": true,
+    "published_at": "2026-11-24T05:43:11Z",
+    "tag": "source-verified-2026-11-24-898dc254",
+    "url": "https://github.com/knwvmbrr/aitrust-id/releases/tag/source-verified-2026-11-24-898dc254"
+  },
+  "roots_fetched_independently": true,
+  "source_commit": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+  "source_tree": "87b84b9a0f16987cdc3d696c52cf33e049088465"
+}

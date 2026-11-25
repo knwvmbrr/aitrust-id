@@ -1,0 +1,94 @@
+{
+  "actual_different_review": {
+    "raw_utf8": "{\n  \"captured_at\": \"2026-11-25T03:40:20.746280+00:00\",\n  \"reviewer\": \"Codex /root\",\n  \"pass\": true,\n  \"actual_groups\": 2,\n  \"seconds\": 0.006853958999272436,\n  \"files\": {\n    \"eval/dependencies/source-snapshot-additions-v5.json\": {\n      \"bytes\": 62848,\n      \"sha256\": \"0a8810732358ed53503fdd5d6d6230aeb4c4f3a234a0ca1a6b37a92b6234caae\"\n    },\n    \"eval/dependency-policy.json\": {\n      \"bytes\": 35104,\n      \"sha256\": \"11e8b0e9de05cdc621c01d74e363704df27370107fba52a0d1e8da4c97946532\"\n    },\n    \"tests/test_source_release_policy_v5.py\": {\n      \"bytes\": 14983,\n      \"sha256\": \"08bd1f4664ee2ac0702898ebc2655da513cbc249203eca5a0f01a15884960040\"\n    },\n    \"tests/test_web_checker_artifact.py\": {\n      \"bytes\": 24329,\n      \"sha256\": \"73c208babe7fe97008a1e1fa98160fdf622f18fee5075119c5b8aa98da3ff028\"\n    },\n    \"tools/source_release_policy_v5.py\": {\n      \"bytes\": 32927,\n      \"sha256\": \"e848c9dff22d7e5ddc237b1695732485e1f74c8390a548c165bd267d2e0f0649\"\n    }\n  },\n  \"source_freeze_sha256\": \"99d980a46ace60a9e1d4474150c590c93cef77c5e3113589dd9aff9cd3fe605c\",\n  \"review\": \"Full five-path patch read: deterministic constructor clock only in existing deadline test; production tick/deadlines untouched. Explicit three new project names and one maintained baseline test registered130/160, selected count and two exact registry fields updated. Legacy159/95anchors/e72/caps unchanged. No native proof rebinding or safety-gate waiver.\",\n  \"log\": \"test_fast_verifier_does_not_extend_finite_deadline (test_web_checker_artifact.WebArtifactTests.test_fast_verifier_does_not_extend_finite_deadline) ... ok\\ntest_literal_current_policy_and_immutable_foundations (test_source_release_policy_v5.SourceCopyV5.test_literal_current_policy_and_immutable_foundations) ... ok\\n\\n----------------------------------------------------------------------\\nRan 2 tests in 0.006s\\n\\nOK\\n\",\n  \"limits\": [\n    \"No changed-source actual archive/prepare/signature/CI-success claim\",\n    \"Original site needs genuine matching seven-flow evidence\"\n  ]\n}\n",
+    "sha256": "e34c28673544d35248eedf9ba13d91e1aa516b6397e3e75d882da094e1a9ad82"
+  },
+  "actual_focused_controls": {
+    "command": [
+      "python3",
+      "-B",
+      "-m",
+      "unittest",
+      "tests.test_web_checker_artifact.WebArtifactTests.test_fast_verifier_does_not_extend_finite_deadline",
+      "tests.test_source_release_policy_v5.SourceCopyV5.test_literal_current_policy_and_immutable_foundations",
+      "-v"
+    ],
+    "errors": 0,
+    "exit": 0,
+    "failures": 0,
+    "seconds": 0.006,
+    "skipped": 0,
+    "tests": 2
+  },
+  "author": "Codex /root/seo; /root/release_recovery recovery",
+  "captured_at": "2026-11-25T04:04:19.576201+00:00",
+  "cause": {
+    "location": "tests/test_web_checker_artifact.py::test_fast_verifier_does_not_extend_finite_deadline",
+    "observation": "A real monotonic constructor start caused subtraction cancellation at the exact finite deadline. The retained existing test now constructs the ledger under clock0.0; production tick and deadlines are untouched.",
+    "production_helper_byte_exact_parent": true,
+    "production_helper_sha256": "fe4c15e9c0db14b31351f92359c2b8088a781671a86c4a83a39a59803075f607"
+  },
+  "claim_level": "engineering_only",
+  "files": {
+    "eval/dependencies/source-snapshot-additions-v5.json": {
+      "bytes": 62848,
+      "sha256": "0a8810732358ed53503fdd5d6d6230aeb4c4f3a234a0ca1a6b37a92b6234caae"
+    },
+    "eval/dependency-policy.json": {
+      "bytes": 35104,
+      "sha256": "11e8b0e9de05cdc621c01d74e363704df27370107fba52a0d1e8da4c97946532"
+    },
+    "tests/test_source_release_policy_v5.py": {
+      "bytes": 14983,
+      "sha256": "08bd1f4664ee2ac0702898ebc2655da513cbc249203eca5a0f01a15884960040"
+    },
+    "tests/test_web_checker_artifact.py": {
+      "bytes": 24329,
+      "sha256": "73c208babe7fe97008a1e1fa98160fdf622f18fee5075119c5b8aa98da3ff028"
+    },
+    "tools/source_release_policy_v5.py": {
+      "bytes": 32927,
+      "sha256": "e848c9dff22d7e5ddc237b1695732485e1f74c8390a548c165bd267d2e0f0649"
+    }
+  },
+  "finite_policy": {
+    "charged_project_and_copied_names": 130,
+    "copied_anchors": 95,
+    "e72_method_unchanged": true,
+    "legacy_names": 159,
+    "maximum": 160,
+    "new_maintained_name": "tests/test_web_checker_artifact.py",
+    "new_project_names": [
+      "tests/test_web_checker_artifact.py",
+      "runs/2026-11-24-source-baseline-ci-repair.json",
+      "runs/changes/2026-11-24-source-baseline-ci-repair.json"
+    ],
+    "only_two_registry_rows_changed": [
+      "eval/dependencies/source-snapshot-additions-v5.json",
+      "tools/source_release_policy_v5.py"
+    ]
+  },
+  "independent_release_validated": false,
+  "limits": "No current full CI, changed-source archive/packet, native seven-flow success, protected signing/AUTH, public release, accuracy, legal clearance, all14-route approval or original F057/X02 closure. Native failure and stale-proof gate remain open. Original136complete66open retained.",
+  "original_scope_counts_changed": false,
+  "pass": true,
+  "prior_actual_CI": {
+    "actual_build_passed": true,
+    "genuine_current_seven_flow_pass_obtained": false,
+    "head": "f53256100a1201e726d882f15659570f8370ecae",
+    "native_artifact_id": 14990770046,
+    "native_artifact_sha256": "491f7bfbc54996d645311b312f70ce9bde53062f5aa028652d59ce3e6f424d6b",
+    "native_conclusion": "failure",
+    "native_failed_stage": "ui_workflows",
+    "native_job_id": 138958277043,
+    "native_run_id": 45540719030,
+    "native_xcode_exit": 65,
+    "owned_simulator_delete_and_inventory_absent": true,
+    "sources_unchanged": true,
+    "unsigned_archive_skipped": true
+  },
+  "profile": "source-baseline-deadline-test-repair/v1",
+  "release_authorized": false,
+  "source_base": "f53256100a1201e726d882f15659570f8370ecae",
+  "source_freeze_sha256": "99d980a46ace60a9e1d4474150c590c93cef77c5e3113589dd9aff9cd3fe605c"
+}

@@ -1,6 +1,211 @@
 # Changelog
 
+## Unreleased — 2026-11-25
+
+### 2026-11-24-source-boundary-review
+
+Recorded 2026-11-25T05:17:03.080695+00:00 · Contributor: Codex /root/release_recovery; /root distinct source and artifact review · change
+
+- **Changed.** Select the genuine frozen140 website execution and refresh the dated current-route source review, keeping every original rule, other selected receipt, permission and source-policy byte unchanged.
+- **Evidence.** Authenticated producer artifact14993199936 supplies byte-exact website receiptcbb2e60b with all66 checks passing and source stable. Its full2131-source fingerprint equals the pre-execution freeze and current tree. All36 current-route and adversarial controls pass; ROOT independently verified ZIP, raw bytes, full fingerprints and the four-field manifest delta. [Change record](./runs/changes/2026-11-24-source-boundary-review.json).
+- **Not claimed.** Engineering source/receipt consistency only. No frozen140 source/table/registry changes, old-report rebinding or local browser/native replay. New-head required CI/capacity/reviews and protected mergeSHA publisher/signature/consumer qualification remain required. No accuracy, legal/AUTH, fullnative/physical/VoiceOver/TestFlight/all14 approval or original closure;136complete66open unchanged.
+
+
 ## Unreleased — 2026-11-24
+
+### 2026-11-24-source-boundary-preparation
+
+Recorded 2026-11-25T04:42:40.925648+00:00 · Contributor: Codex /root/release_recovery; /root distinct source review · change
+
+- **Changed.** Prepare a fixed140-of160 source policy for three derived scope metadata files and five explicit preparation/website/selection records; retain the old route manifest and its stale-website refusal until genuine fresh execution.
+- **Evidence.** The existing literal/foundation control passes. ROOT independently reconstructed the exact seven-file source delta and all202 original percentages/acceptance fields remain intact. Existing pinned37-package Python environment completed product build exit0; its clean-source wrapper honestly refused three expected generated JSON changes, separately reviewed and accepted. [Change record](./runs/changes/2026-11-24-source-boundary-preparation.json).
+- **Not claimed.** The existing route manifest remains unchanged and refuses stale website evidence. No current website/browser/route pass, protected signing/AUTH, public deployment, native/TestFlight/VoiceOver, accuracy, legal/all14 approval or original closure. Actual frozen140 website evidence and the complete route guard remain required;136complete66open unchanged.
+
+
+### 2026-11-24-source-baseline-native-cohort
+
+Recorded 2026-11-25T04:14:14.834353+00:00 · Contributor: Codex /root/release_recovery; /root distinct source review · change
+
+- **Changed.** Exclude the unqualified Clear-scroll behavior from this staged source-only release by restoring the exact protected898 native cohort; align the layout runner to that suite and register two literal evidence records132/160.
+- **Evidence.** All109 native sources match both unchanged genuine historical seven-flow proofs. Actual prepared-assets consistency guard and two matrix/policy controls pass; ROOT independently read the full seven-file patch and both109-source maps. Modern Clear/Sources features remain preserved in separate commits/worktrees. [Change record](./runs/changes/2026-11-24-source-baseline-native-cohort.json).
+- **Not claimed.** This is a staged source-cohort choice, not a fix or fresh acceptance of modern iPhone behavior. The failedf532 native run and canceled unchangedad0 retry remain recorded. Current-head CI/capacity, protected mergeSHA and publisher/signature/consumer qualification remain required. No new native/physical/VoiceOver/TestFlight, accuracy, legal/AUTH/all14 approval or original closure;136complete66open unchanged.
+
+
+### 2026-11-24-source-baseline-ci-repair
+
+Recorded 2026-11-25T04:04:19.576201+00:00 · Contributor: Codex /root/seo; /root/release_recovery recovery; /root distinct review · change
+
+- **Changed.** Make the existing finite-deadline test deterministic at constructor clock0; register its literal maintenance name and two new evidence records130/160 without changing production deadlines.
+- **Evidence.** The original two focused controls and ROOT different two controls pass against the exact five-file freeze; production helper bytes are unchanged. Actual prior PR155 native run failed at UI workflows, and the selected seven-flow proof remains stale for two sources. [Change record](./runs/changes/2026-11-24-source-baseline-ci-repair.json).
+- **Not claimed.** No current full CI, changed-source archive/packet, native seven-flow success, protected signing/AUTH, public release, accuracy, legal clearance, all14-route approval or original F057/X02 closure. Native failure and stale-proof gate remain open. Original136complete66open retained.
+
+
+### 2026-11-24-source-baseline-refresh
+
+Recorded 2026-11-24T18:02:06.211236+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Correct existing protected publisher suite denominators to actual58 and91, retain unchanged26 MCP controls, and register exactly two fresh source-delivery records within the existing127-of160 finite map.
+- **Evidence.** Discovery-only58/91/26 matches the existing suites; two affected source guards pass and ROOT independently passed both with exact source hashes. Pristinecc actual classifier,43.54MB committed archive and15.68MB Rprepare packet passed separately and remain historical. Only two existing source registry rows bind actual V5 method/table bytes. [Change record](./runs/changes/2026-11-24-source-baseline-refresh.json).
+- **Not claimed.** No protected main identity, signing, AUTH, public release, changed-source archive/packet or whole58/91 suites is claimed by this source correction. New committed source needs fresh actual qualification and normal required PR checks before protected merge/publication. No source cap, baseline override, route/e72 permission,95anchor/159legacy change, SDK/model/install, accuracy or full original F057/X02 closure.
+
+
+### 2026-11-24-source-v5-current-integration
+
+Recorded 2026-11-24T15:51:25.906741+00:00 · Contributor: Codex /root/share_debugger; ROOT different final registration/source review · change
+
+- **Changed.** Integrate reviewed image/iPhone source histories with exact125-name V5 copy map and installed25-source registry bindings, preserving all legacy code and grants.
+- **Evidence.** Seven small finite/captured-source/refusal controls pass; exact tokenizer source body and95 anchors match retained bytes/Git identities. Only19 named project/five maintenance additions, V5 digest/count literals and four source-registry bindings change. Actual common20/source25 identities and unchanged14 route contracts are recorded; ROOT/image normal merge guards pass. ROOT independently verifies the stable16-file freeze and executes two critical finite/captured-current-source controls PASS0.045s. [Change record](./runs/changes/2026-11-24-source-v5-current-integration.json).
+- **Not claimed.** Normal final phone/registration merge commit approved after ROOT review. Actual committed-source classifier/archive/protected consumer remain pending at this source checkpoint. No new current whole-source or signature success, image numerical/phone native acceptance, all14-route clearance, independent accuracy, legal clearance or original closure. Existing136complete66open retained.
+
+
+### 2026-11-24-source-v5-caller-lifecycle
+
+Recorded 2026-11-24T15:24:28.130540+00:00 · Contributor: Codex /root/share_debugger; /root/seo mechanism review; /root final source review · change
+
+- **Changed.** Implement source-only sequential admission/common/managed caller captures with fresh captured V5 execution, exact released-source recapture and original metadata ledgers, retaining managed metadata custody.
+- **Evidence.** Affected39 lifecycle controls pass before final anchor correction; current six metadata/capture/fault controls and different2 successor controls pass. ROOT reads final13-file freeze and independently executes four critical controls PASS1.166s. Exact31-input topology records87 refusal then peak39; injected-rights joined source25 fixture enters at N30/strict76 with five real PS children. Final106 mapping and unchanged V5 functions/caps verified. [Change record](./runs/changes/2026-11-24-source-v5-caller-lifecycle.json).
+- **Not claimed.** Normal source commit authorized after final ROOT review; installed registry still23 until ROOT rebinds25 rows and performs actual integrated qualification. No actual new whole-Q/archive binding/signature/protected AUTH, current route activation, all14-route completion, accuracy, legal clearance or original closure. Qualified rights/Graph fixtures remain fixtures; prior452 actual classification stays historical.
+
+
+### 2026-11-24-source-copy-v5
+
+Recorded 2026-11-24T05:52:37.518419+00:00 · Contributor: Codex /root/share_debugger; different final source and lifecycle reviewer /root · change
+
+- **Changed.** Implemented isolated finite V5 source-copy classifier, exact102-name delta and typed tokenizer source-term container over protected Q while retaining all V1–V4 source and grant bytes.
+- **Evidence.** Current source/policy and lifecycle review is clear; affected exact FD, policy and baseline fixture controls pass. Four independently executed lifecycle controls pass. Earlier26 tiny controls and their actual failures remain separately source-bound, not relabelled as final source. Current syntax and isolated help pass. [Change record](./runs/changes/2026-11-24-source-copy-v5.json).
+- **Not claimed.** No actual V5 whole-Q or candidate classification, archive binding, signature replay, shared registry activation, compiled runtime permission, legal clearance, accuracy or original closure. Original42be author run binds its earlier source phase; final bindings and literal/fork amendments are recorded here. ROOT owns subsequent integration and protected qualification.
+
+### 2026-11-24-reference-phone-wave
+
+Recorded 2026-11-24T15:20:34.326742+00:00 · Contributor: Codex /root; image, iPhone and source-consumer lanes attributed in board · change
+
+- **Changed.** Update scope fixes, dated active assignments and execution accounting for image reference initialization, user-only iPhone Clear and bounded source-consumer custody.
+- **Evidence.** Scope renderer and session inspector pass with all202 originals and acceptance criteria preserved:136 complete,66 open. Three actual repair jobs are registered active; no unsupported closure is recorded. [Change record](./runs/changes/2026-11-24-reference-phone-wave.json).
+- **Not claimed.** Bookkeeping is not product acceptance. Actual first image forward remains reference-unqualified, changed iPhone source needs native qualification, and source-consumer mechanism controls use explicitly simulated authority. Target60 remains unmet.
+
+### 2026-11-24-image-reference-position-buffer
+
+Recorded 2026-11-24T15:22:32.034250+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Materialize only the exact validated publisher nonpersistent HF position-id buffer and refuse any remaining non-CPU model parameter or buffer before the original reference forward.
+- **Evidence.** One expanded existing inert reference safety group passes with88 stable inputs; ROOT independently read the exact source and passed the same group. The entire original infer AST is restored by removing only the buffer-adoption call; all85 other source inputs and101 declared source controls remain unchanged. [Change record](./runs/changes/2026-11-24-image-reference-position-buffer.json).
+- **Not claimed.** Actual failure45408000792 is preserved; its precise numerical cause remains unproven. No local SDK/model/native execution, extra forward/probe, tolerance/cache/permission/seal/cap change, hosted retry, reference equivalence, accuracy, redistribution/legal clearance or full-original closure. Author run was captured before this subsequent distinct review and retains its pending-at-capture field.
+
+
+### 2026-11-24-image-reference-validation
+
+Recorded 2026-11-24T13:44:40.059485+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Preserved the existing reference-call failure stage and precomparison facts so reference refusal, crop mismatch and logit mismatch remain distinct; comparison metadata now propagates control-flow cancellation.
+- **Evidence.** The corrected grouped control passes with88 stable current inputs, including KeyboardInterrupt/SystemExit propagation and ordinary metadata-fault refusal. ROOT independently read the current source and passed the grouped control. Original reference call count, success-six-key shape,17-case gate, numerical operands/tolerances, worker/cache/seal/limits remain unchanged. [Change record](./runs/changes/2026-11-24-image-reference-validation.json).
+- **Not claimed.** Historical author run3420 binds the pre-cancellation source phase only; current source/control/freeze and distinct review are embedded separately. No real local SDK/model or hosted retry, extra forward/probe, numerical equivalence, accuracy/redistribution/legal clearance or original closure. Actual prior first production forward is retained but reference cause and full qualification remain unknown; old failed artifacts/finalization unchanged.
+
+
+### 2026-11-24-image-readonly-cache-root
+
+Recorded 2026-11-24T06:00:18.151368+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Assigned the fixed Inductor cache-root variable to the same already-held empty read-only HOME in the image worker, avoiding a default cache-child selection without allowing cache writes.
+- **Evidence.** Two focused source controls pass with88 stable inputs. ROOT independently read the exact one-literal worker delta and passed the real owned inert lifecycle control. Historical8066 proof is preserved; current worker identity is explicit. All other84 sources, numerical/runtime/reference/locks, seal/cleanup/caps and17-case acceptance remain unchanged. [Change record](./runs/changes/2026-11-24-image-readonly-cache-root.json).
+- **Not claimed.** No real SDK/model or local native execution, Linux procfd/real-AS proof, hosted retry, writable cache, permission or seal exemption, accuracy/redistribution/legal clearance or original closure. Darwin source fixture intercepts only its unsupported AS setter; Linux keeps original setters. Actual failed runs and failure-finalization behavior remain unchanged.
+
+
+### 2026-11-24-image-denied-resource-diagnostics
+
+Recorded 2026-11-24T05:29:20.721327+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Added closed failed-only SDK trace-role, lexical denied-filename relation and nullable observed Torch build-source diagnostics to the existing fixed private qualification probe.
+- **Evidence.** The expanded existing grouped control passes with88 stable source hashes and unchanged101 discovery denominator; ROOT independently read the exact source and passed that control. Three Torch calls/order, native8, isolation/deadlines, successful17 cases, driver and original failure-finalization behavior remain unchanged. [Change record](./runs/changes/2026-11-24-image-denied-resource-diagnostics.json).
+- **Not claimed.** No local SDK/model/native execution, download, installation or hosted retry; no permission/cache workaround, actual denied-resource conclusion, build attestation, redistribution/legal/accuracy or original closure. Historical failed artifacts and CLEAN removal versus failed finalization remain separate and immutable.
+
+
+### 2026-11-23-image-cpu-operation-diagnostics
+
+Recorded 2026-11-24T04:31:24.043597+00:00 · Contributor: Codex /root/seo; Codex /root distinct diagnostic review · change
+
+- **Changed.** Split the diagnostic-only CPU setup stage into the exact three existing Torch call operations and retain only whitelisted errno values and closed error categories.
+- **Evidence.** The expanded existing grouped control passes with88 stable source hashes and unchanged101 discovery denominator. ROOT independently read the delta and passed that grouped control. The exact three calls and their order, driver, isolation, resource budgets, successful acceptance and every other verifier function remain unchanged. [Change record](./runs/changes/2026-11-23-image-cpu-operation-diagnostics.json).
+- **Not claimed.** No local SDK/model/native execution, download, installation, new hosted retry, native qualification, accuracy, redistribution permission, legal clearance or original closure. The prior CPU PermissionError remains unlocalized until a separately authorized exact changed-source run. Failure finalization proposalB is not implemented; immutable prior failure artifacts and nooverwrite remain unchanged.
+
+
+### 2026-11-23-image-forward-diagnostics
+
+Recorded 2026-11-24T04:11:37.333447+00:00 · Contributor: Codex /root/seo; Codex /root distinct source review · change
+
+- **Changed.** Preserved fixed validated production call failure diagnostics and added one failure-only SDK import/configuration probe within the original checked forward deadline and unchanged private worker limits.
+- **Evidence.** Three actual affected source controls pass with88 frozen hashes stable; discovery counts33/36/5/27. ROOT read the full delta and independently passed the new grouped control. Original17 positive cases, native/shared method, reference,39 lock, resource caps and exclusive failure publication remain unchanged. [Change record](./runs/changes/2026-11-23-image-forward-diagnostics.json).
+- **Not claimed.** No actual SDK/model/inference, acquisition, installation, hosted retry, native qualification, redistribution permission, accuracy, legal clearance or original scope closure. Actual prior hosted model/SDK cause is still unknown. Current101-suite count is discovery only; previous100 execution belongs to976. Fresh readiness/strict inspector and separate ROOT authorization remain before another changed-source run.
+
+
+### 2026-11-23-tokenizers-source-preservation
+
+Recorded 2026-11-24T03:16:29.216235+00:00 · Contributor: Codex /root/seo; ROOT distinct source/artifact review · change
+
+- **Changed.** Added one exact tokenizers wheel source-term companion path for private reference preservation, requiring fixed wheel/metadata/source/companion identity before pip and retaining honest empty carried-notice fields. All unlisted wheels retain carried-notice refusal.
+- **Evidence.** Actual100 stdlib/source controls33/35/5/27 pass without skips; before/after88 source hashes match. The same retained wheel fails under original d7 and passes the new preservation observation with empty carried notices. ROOT independently checked93 full texts,309 associations,153 index and the frozen lifecycle source; its actual grouped lifecycle control passed. [Change record](./runs/changes/2026-11-23-tokenizers-source-preservation.json).
+- **Not claimed.** No download, SDK/model installation, native method forward, Linux execution, changed-source dispatch, redistribution permission, compiled coverage, license clearance, original closure or criteria/percentage change. Source-copy classification, successor integration and any hosted private qualification remain ROOT-owned future work.
+
+### 2026-11-24-ios-clear-editor-source
+
+Recorded 2026-11-24T15:25:47.355247+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Return the existing empty editor to view only after explicit Clear in the shared App/Share controller, preserving privacy clearing callers; strengthen passive Clear assertions and current layout source pins.
+- **Evidence.** One affected derivation control, actual App/Share source membership, whole prior-source reconstructions and stale-seven-proof refusal pass with eight/114 current bindings stable. ROOT reviewed the six-path source diff; same-source native seven and matrix remain required. [Change record](./runs/changes/2026-11-24-ios-clear-editor-source.json).
+- **Not claimed.** Source-only product revision, not an observed native fix. All four prior matrix failures and old seven proof remain historical; no future70e/build2 qualification, physical device, human accessibility, accuracy, admission, original closure or composed old/new passes.
+
+
+### 2026-11-24-ios-size-matrix-frame-diagnostics
+
+Recorded 2026-11-24T13:30:16.499971+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Add bounded value-only numeric diagnostics at the existing layout-geometry refusal while retaining its exact boolean and all actions, then update only the fixture hash and plan.
+- **Evidence.** One affected derivation unittest passes; complete prior Swift/core reconstruction and fixed finite-field structure checks pass with six/114 bindings stable. Different source review confirms no new query, wait, gesture or acceptance change; all21 actual candidate3 evidence files remain unchanged. [Change record](./runs/changes/2026-11-24-ios-size-matrix-frame-diagnostics.json).
+- **Not claimed.** Source-only diagnostics, not actual refused-condition evidence or a supported-cause fix. Native formatter/Swift execution and complete four-size matrix remain unqualified; old821b/c61 baseline does not qualify future70e/build2. No old/new result composition, physical/human accessibility, seven-flow replacement, accuracy, release, admission or original closure.
+
+
+### 2026-11-24-ios-size-matrix-control-reach
+
+Recorded 2026-11-24T06:01:22.178784+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Increase only the separate layout observer’s optional breathing allowance from8 to16 points after retained check-control motion observations, with its fixture hash and plan updated.
+- **Evidence.** One affected derivation unittest and five captured scalar-expression cases pass; six/114 bindings remain stable. Different source review reconstructs entire prior Swift by one allowance literal and entire prior runner by one fixture hash. Both real failed matrix attempts remain retained with owned cleanup verified. [Change record](./runs/changes/2026-11-24-ios-size-matrix-control-reach.json).
+- **Not claimed.** Source-only experiment; requested movement is not assumed actual UIKit displacement or universal threshold. Full containment, hittability, eight-action and all original time/resource/source limits remain; third native/matrix result pending. No old/new result composition, physical/human accessibility, seven-flow replacement, accuracy, tag release, admission or original closure.
+
+
+### 2026-11-24-ios-size-matrix-navigation
+
+Recorded 2026-11-24T05:46:00.855166+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Replace the separate layout fixture’s full-swipe reveal with edge-gap/opposite-slack-bounded interior drags and fixed numeric diagnostics, preserving full containment, hittability and all existing runtime limits.
+- **Evidence.** One affected derivation unittest and four captured scalar-expression cases pass with6/114 source bindings stable; independent source reviews reconstruct the full old fixture outside reveal/roles and the full old runner outside its fixture hash. Actual first small-screen attempt remains failed at largest input reveal, with both standard configurations passed and owned cleanup verified. [Change record](./runs/changes/2026-11-24-ios-size-matrix-navigation.json).
+- **Not claimed.** Source-only repair, not changed Swift/native qualification. Original failed raw outputs, source-only28 proof and seven-flow proof remain separate; no old/new pass composition, physical phone, human accessibility, accuracy, tag release, route admission or original closure.
+
+
+### 2026-11-23-ios-size-matrix-source
+
+Recorded 2026-11-24T05:12:29.690848+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Add a separate four-profile three-configuration native layout fixture and owned serial runner, leaving the application, fixed14Plus seven-flow runner, prior proof and shared policy unchanged.
+- **Evidence.** Current28 focused source/process/metadata controls pass with6/114 before-after bindings stable. Actual owned stdlib children confirm late finalization and invalid/shared-clock admission refuse without signalling reaped IDs or losing returned ownership facts; original counters and24/26 proofs are preserved. Earlier actual producer observation remains separately identified:46 members, one pinned layout-fixture substitution and45 unchanged members. No SDK or Simulator ran. [Change record](./runs/changes/2026-11-23-ios-size-matrix-source.json).
+- **Not claimed.** Source-only candidate: no Swift compile, Simulator create/boot/layout run, screenshot visual acceptance, new signing credential, TestFlight, physical phone, human VoiceOver, independent accuracy, route admission, policy change or original closure. Existing fullseven proof stays separate; targeted layouts cannot become seven-flow coverage.
+
+
+### 2026-11-24-source-snapshot-publication
+
+Recorded 2026-11-24T05:47:48.594645+00:00 · Contributor: Codex /root; Codex /root/seo distinct publication review · change
+
+- **Changed.** Publish the current protected whole-source snapshot with its five exact evidence companions as an engineering prerelease; update the current source-download state while preserving prior releases.
+- **Evidence.** Protected main production and separate Mac consumer authenticate the same source archive and complete three fixed PS probes. All six public anonymous downloads return HTTP200 and match exact sizes and SHA256; no downloaded bodies are stored again. [Change record](./runs/changes/2026-11-24-source-snapshot-publication.json).
+- **Not claimed.** Whole source-copy route and three finite standalone PS source probes only. No independent tag accuracy, certification, human accessibility acceptance, signed mobile build, all-platform distribution permission or F-057/X-02 closure. Publisher observation and carried roots do not replace independent trust selection. Originals remain136complete/66open; target60unmet.
+
+
+### 2026-11-23-current-static-publication
+
+Recorded 2026-11-24T04:53:23.330017+00:00 · Contributor: Codex /root integration; /root/share_debugger different source/artifact review · change
+
+- **Changed.** Publish the exact428-file observed website package, including both whole-build attribution companions, after the reviewed source merge and all11required engineering contexts pass. Update actual production, worker and unresolved qualification state.
+- **Evidence.** Actual428-file creation/read-back, separate source/origin/notice review, final-source bounded capacity and9exact public URL/header comparisons pass. LivePS finding/no-finding/evidence/clear, Escape, Dark switch and catalogue tabs pass with zero page errors or external requests. Canonical main fast-forwards with12 unrelated private files unchanged. [Change record](./runs/changes/2026-11-23-current-static-publication.json).
+- **Not claimed.** Software development preview only. Independent accuracy/human-release gate remains unmet; no new TestFlight, physical phone/VoiceOver, exact model attribution, history/signup/billing/forum service, managed web authorization, global legal clearance or original closure.136complete66open; target60unmet.
 
 ### 2026-11-23-tag-runtime-final-selection
 

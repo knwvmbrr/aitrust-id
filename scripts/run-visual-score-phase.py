@@ -12,7 +12,7 @@ import stat
 from tools import visual_score_budget as b
 from tools import visual_score_qualification as q
 
-SOURCE_SUITE_COUNTS={'test_visual_score.py':33,'test_visual_score_qualification.py':34,'test_visual_score_workflow.py':5,'test_visual_score_budget.py':27}
+SOURCE_SUITE_COUNTS={'test_visual_score.py':33,'test_visual_score_qualification.py':36,'test_visual_score_workflow.py':5,'test_visual_score_budget.py':27}
 
 def emit(path,value):b.write_private(path,b.encode(value))
 def report_dir(path):
@@ -116,7 +116,10 @@ def worker(phase,workspace,reports,base_python,record):
  if phase=='forward':
   admit()
   argv=[sys.executable,'-I','-B',str(ROOT/'scripts/verify-visual-score-qualification.py'),'--workspace',str(workspace),'--base-python',base_python,'--output',str(reports/'forward-private.json')]
-  os.execve(sys.executable,argv,q.credential_free()|{'VISUAL_QUAL_OUTER_NETNS':os.environ.get('VISUAL_QUAL_OUTER_NETNS','')})
+  stop=os.environ.get('VISUAL_QUAL_FORWARD_STOP_NS','')
+  b.need(stop.isascii() and stop.isdecimal() and len(stop)<=19,'budget_invalid');stop=int(stop)
+  b.need(b.clock()<stop<=record['work_deadline_ns']-b.DRAIN*b.SECOND and stop<=b.clock()+b.CAPS['forward']*b.SECOND,'budget_invalid')
+  os.execve(sys.executable,argv,q.credential_free()|{'VISUAL_QUAL_OUTER_NETNS':os.environ.get('VISUAL_QUAL_OUTER_NETNS',''),'VISUAL_QUAL_FORWARD_STOP_NS':str(stop)})
   raise b.BudgetRefused('phase_failed') # exec may never return as a successful phase
  if phase=='cleanup':
   # Absence of a completed identity/seal NEVER authorizes adoption/deletion.
@@ -153,7 +156,9 @@ def main():
   argv=[a.python,'-I']+([] if a.phase in ('fixtures','forward') else ['-S'])+['-B',str(Path(__file__).resolve()),'internal','--phase',a.phase,'--reports',str(reports),'--workspace',str(workspace),'--python',a.python,'--base-python',a.base_python,'--budget-sha',a.budget_sha]
   env=q.credential_free()
   # Only the actual outer namespace witness is retained for the forward verifier.
-  if a.phase=='forward':env['VISUAL_QUAL_OUTER_NETNS']=os.environ.get('VISUAL_QUAL_OUTER_NETNS','')
+  if a.phase=='forward':
+   env['VISUAL_QUAL_OUTER_NETNS']=os.environ.get('VISUAL_QUAL_OUTER_NETNS','')
+   env['VISUAL_QUAL_FORWARD_STOP_NS']=str(end-b.DRAIN*b.SECOND)
   b.run_owned(argv,env,end)
   b.load(reports/'budget.json',a.budget_sha)
   b.need(b.clock()<=end,'phase_deadline')

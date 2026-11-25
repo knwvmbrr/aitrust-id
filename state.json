@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-24T04:12:11.685177+00:00",
-  "active_increment": "Current seven-flow App/Share proof selected; final-source protected checks/publication next; independent image/web source handoffs;136complete66open, target60 unmet.",
-  "status": "136complete66open_target60_unmet;current_seven_native_pass_publication_pending",
+  "updated": "2026-11-24T15:20:15.735780+00:00",
+  "active_increment": "Repair image reference initialization, qualify iPhone Clear return and integrate source-consumer lifecycle; 136 complete /66 open, target60 unmet.",
+  "status": "136complete66open_target60_unmet;reference_phone_and_source_consumer_repairs_in_progress",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -35,8 +35,8 @@
     "draft_export_verified": true,
     "remote_intake_connected": false,
     "published": true,
-    "cloudflare_auth": "Existing limited Pages-write grant verified; Pages project created and deployed without broader OAuth grant",
-    "evidence": "runs/2026-11-23-public-records-production.json",
+    "cloudflare_auth": "Existing OAuth and Pages-write capability verified for the existing AI Trust ID project; no new grant. No assertion that other token scopes are absent.",
+    "evidence": "runs/changes/2026-11-23-current-static-publication.json",
     "remaining": [
       "Human screen-reader review",
       "Host-specific MCP configuration and user-interface acceptance beyond the official SDK client",
@@ -46,7 +46,7 @@
     ],
     "tile_presentation": "compact_code_only_tag_shape",
     "public_url": "https://aitrustid.com",
-    "deployment_url": "https://03ae906d.aitrust-id.pages.dev",
+    "deployment_url": "https://f1de4258.aitrust-id.pages.dev",
     "production_security_headers_verified": true,
     "alternate_public_urls": [
       "https://www.aitrustid.com",
@@ -66,7 +66,7 @@
     ],
     "appearance_storage": "browser_local_preference_only",
     "logo": "site/public/tag-logo.svg",
-    "publication_evidence": "runs/2026-11-23-public-records-production.json",
+    "publication_evidence": "runs/changes/2026-11-23-current-static-publication.json",
     "seo": {
       "crawlable_tag_pages": 20,
       "sitemap_canonical_urls": 37,
@@ -451,7 +451,17 @@
         "public_evidence": "runs/2026-10-11-consent-live-policies.json"
       }
     ],
-    "current_deployment_pending": true
+    "current_deployment_pending": false,
+    "deployment_history": [
+      {
+        "deployment_url": "https://03ae906d.aitrust-id.pages.dev",
+        "evidence": "runs/2026-11-23-public-records-production.json",
+        "retained_as_historical": true
+      }
+    ],
+    "current_build_source": "d801aaafe06fc462a81734fcdd5534669393b305",
+    "protected_merge": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+    "complete_reviewed_payload_files": 428
   },
   "previous_runtime_verification": {
     "capabilities": [
@@ -758,17 +768,28 @@
     "private_vulnerability_reporting_enabled": true,
     "evidence": "runs/2026-10-09-provenance-boundary-download.json",
     "independent_install_review": false,
-    "latest_implementation_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
+    "latest_implementation_commit": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
     "handheld_download_verified": true,
-    "latest_authenticated_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-11-17-13e808e",
-    "latest_implementation_scope": "Selected gateway/extension runtime; later bookkeeping and accountability utilities are tracked separately.",
-    "latest_authenticated_download_evidence": "runs/2026-11-17-mt-authenticated-source-publication.json",
-    "latest_authenticated_source_commit": "13e808e4c6d98bbbdbc837b0e2388b52176ce7de"
+    "latest_authenticated_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/source-verified-2026-11-24-898dc254",
+    "latest_implementation_scope": "Current complete source snapshot; authenticated source-copy route and three finite standalone PS source probes. Independent tag accuracy, human acceptance and other platform permissions remain separate.",
+    "latest_authenticated_download_evidence": "runs/2026-11-24-source-snapshot-publication.json",
+    "latest_authenticated_source_commit": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+    "authenticated_download_history": [
+      {
+        "superseded_at": "2026-11-24T05:47:48.594645+00:00",
+        "latest_authenticated_download": "https://github.com/knwvmbrr/aitrust-id/releases/tag/development-source-2026-11-17-13e808e",
+        "latest_authenticated_download_evidence": "runs/2026-11-17-mt-authenticated-source-publication.json",
+        "latest_authenticated_source_commit": "13e808e4c6d98bbbdbc837b0e2388b52176ce7de",
+        "latest_implementation_commit": "a36898f30f91adfd189baed12ba7f7c13740964b",
+        "latest_implementation_scope": "Selected gateway/extension runtime; later bookkeeping and accountability utilities are tracked separately."
+      }
+    ],
+    "current_authenticated_assets_anonymously_verified": 6
   },
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
     "candidate_source": "https://theailab.org/ai-trust-registry",
-    "observed_mark": "AI Trust ID\u2122",
+    "observed_mark": "AI Trust ID™",
     "registration_priority_and_legal_conflict_verified": false
   },
   "market_research": {
@@ -1246,7 +1267,7 @@
     "protocol": "runs/2026-11-23-tag-runtime-current-protocol.json",
     "website": "runs/2026-11-23-tag-runtime-current-website.json"
   },
-  "updated_at": "2026-11-24T04:12:11.685177+00:00",
+  "updated_at": "2026-11-24T15:20:15.735780+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1589,7 +1610,7 @@
     "active_retention_days": 30,
     "backup_expiry_days": 7,
     "invitation_only": true,
-    "owner_role": "Michael \u2014 accepted accountable pilot operator and access approver",
+    "owner_role": "Michael — accepted accountable pilot operator and access approver",
     "owner_decision": "runs/2026-10-13-metadata-pilot-owner-decision.json",
     "policy": "deploy/research/metadata-pilot-policy.json"
   },
@@ -3738,9 +3759,9 @@
     "board": "docs/session-delivery.json",
     "reader_board": "docs/session-delivery-plan.md",
     "task_list_lead": "/root",
-    "assignment_snapshot_at": "2026-11-24T04:12:11.685177+00:00",
-    "active_tag_workers_at_snapshot": 0,
-    "phase": "All five selected profiles assess current: actual23f7/6/14/79/66 complete hosted executions, with three older byte-identical receipts reused only after exact fingerprint equality. Current boundary guard and36failure controls pass. Final metadata required checks and publication pending; no accuracy/human release approval.",
+    "assignment_snapshot_at": "2026-11-24T04:53:23.330017+00:00",
+    "active_tag_workers_at_snapshot": 2,
+    "phase": "Current static preview source merged/protected and published; independent image diagnostics, native size matrix and UX work remain separate.136complete66open; target60unmet.",
     "minimum_finished_named_deliverables_per_session": 1,
     "minimum_original_requirement_closures_per_session": 1,
     "finished_scoped_tasks": 31,
@@ -3878,7 +3899,7 @@
       "NF": "Published offline selected-passage literal/cosine methods; no NF tag release"
     }
   },
-  "current_engineering_revalidation_status": "All five selected profiles assess current: actual23f7/6/14/79/66 complete hosted executions, with three older byte-identical receipts reused only after exact fingerprint equality. Current boundary guard and36failure controls pass. Final metadata required checks and publication pending; no accuracy/human release approval.",
+  "current_engineering_revalidation_status": "Selected source-bound five engineering receipts remain current. All11 required d801 CI checks and final committed-source capacity pass. Exact428 static payload deployed and9public paths/header checks plus actuallivePS interactions pass. Independent accuracy/human release gate remains unmet.",
   "mt_evidence_workflow": {
     "status": "merged and published research workflow",
     "implemented_by": "Codex PM",
@@ -5482,8 +5503,8 @@
   },
   "current_route_boundaries_status": "Current8497source review and selected extension/website receipts pass exact guard; four component bindings2engines/26service/2registry/15replay plus36deliberate refusal cases. Preview software only; no independent release approval.",
   "current_tag_runtime_integration": {
-    "recorded_at": "2026-11-24T04:12:11.685177+00:00",
-    "status": "All five selected profiles assess current: actual23f7/6/14/79/66 complete hosted executions, with three older byte-identical receipts reused only after exact fingerprint equality. Current boundary guard and36failure controls pass. Final metadata required checks and publication pending; no accuracy/human release approval.",
+    "recorded_at": "2026-11-24T04:53:23.330017+00:00",
+    "status": "Selected source-bound five engineering receipts remain current. All11 required d801 CI checks and final committed-source capacity pass. Exact428 static payload deployed and9public paths/header checks plus actuallivePS interactions pass. Independent accuracy/human release gate remains unmet.",
     "source_base": "b75ba03d337d4e4a681a88e7341c894cec2ae246",
     "plan": "docs/tag-runtime-integration-plan.md",
     "evidence": "runs/2026-11-23-tag-runtime-integration.json",
@@ -5566,7 +5587,7 @@
       "exact_two_existing_PWA_links_now_source_head": true
     },
     "current_assignment_snapshot": "state.json#/current_tag_runtime_integration/assignments",
-    "active_source_baseline": "23f6a3f29db76eb0e4d5dc48c1a18858ecbfb657",
+    "active_source_baseline": "d801aaafe06fc462a81734fcdd5534669393b305",
     "whole_web_artifact_format_inspected": true,
     "whole_web_observation_source_commit": "41669328e10c7f4a268559447f2f6dde50110e2d",
     "whole_web_evidence": "runs/2026-11-23-web-checker-observed-build.json",
@@ -5582,20 +5603,24 @@
     "current_qualification_evidence": "runs/2026-11-23-tag-runtime-qualification.json",
     "IV_local_verifier_integrated": true,
     "IV_tag_issued": false,
-    "current_qualification_source_scope": "Seven native workflows match actual109source/116component identities. All five engineering profiles match23f source footprints. Older wholeweb416 observation remains source-scoped; final committed-tree capacity, required CI and actual publication pending.",
+    "current_qualification_source_scope": "Seven local native workflows match actual109source/116component identities; separate hosted23f five-pass/two-fail UI observation remains recorded. Allfive engineering profiles match selectedsourcefootprints. Actuald801 complete428 web package, all11required CI checks, finalcapacity and livepublication pass. Older416 wholeweb evidence remains historical; independentaccuracy/human gates remain open.",
     "latest_image_qualification": {
-      "run_id": 45321228249,
-      "source": "976864835b8a57633a1bd1a7c74186ea022e10d5",
+      "run_id": 45327386123,
+      "source": "1b4d2236ca0f186f61d8884fdd6494697c12bc88",
+      "source101": "SUCCESS",
       "acquisition": "SUCCESS",
       "offline_install_and_fixtures": "SUCCESS",
       "first_CPU_forward": "FAILED before OBSERVED",
       "actual_model_forward_completed": false,
+      "diagnostic_stage": "cpu_deterministic_algorithms",
+      "exception_class": "PermissionError",
+      "errno": 13,
       "observed_owned_cleanup": {
         "pass": true,
         "workspace_removed": true
       },
-      "job_and_finalization": "FAILED/UNQUALIFIED; immutable initial failure preserved",
-      "next_action": "Isolated fixed diagnostic repair; no blind retry and no inferred model cause."
+      "job_and_finalization": "FAILED; preserved immutable initial failure; cleanup success is distinct from finalization",
+      "next_action": "Determine the actual isolated SDK import/filesystem operation before a narrowly reviewed repair. No blind retry or permission relaxation."
     },
     "current_image_diagnosis": {
       "source_handoff": "e4e0da6298937cb5743bdd6db631d550e63707fc",
@@ -5646,16 +5671,26 @@
         "raw_proof_sha256": "2babf9c3c63a14eb8b0c2d05a21debd4675934967a55180a7c3d5a88da67afec"
       }
     ],
-    "dated_frozen_source_plan": "docs/session-delivery.json"
+    "dated_frozen_source_plan": "docs/session-delivery.json",
+    "static_production_published": true,
+    "current_publication_evidence": "runs/changes/2026-11-23-current-static-publication.json",
+    "hosted_native_separate_result": {
+      "run_id": 45320971760,
+      "source": "23f6a3f29db76eb0e4d5dc48c1a18858ecbfb657",
+      "workflows": 7,
+      "passed": 5,
+      "failed": 2,
+      "source_stable": true,
+      "owned_cleanup": true,
+      "cause_scope": "Two hosted UI-observation assertions failed; local full candidate12seven-pass result remains separate.",
+      "diagnosis_sha256": "2ec4dcaa9dcfb99c9651c621b9daba5543ddce1c3465242c8b732ae59902143e"
+    }
   },
   "python_tests_passed_scope": "Historical aggregate retained for compatibility; not a pass count for current source or independent accuracy.",
   "current_hosted_candidate_validation": {
-    "source_commit": "23f6a3f29db76eb0e4d5dc48c1a18858ecbfb657",
+    "source_commit": "d801aaafe06fc462a81734fcdd5534669393b305",
     "PR": 154,
-    "status": "Five current source profiles and pre-metadata capacity pass; reviewed boundary inventory8497/current guard36controls pass; final metadata required checks/capacity pending.",
-    "failures": [
-      "Historical663 CI/source-proof failures and972 boundary mismatch are preserved; current selected engineering checks and boundary controls pass. Final metadata required checks and capacity remain pending."
-    ],
+    "status": "All11 required d801 engineering checks and final capacity pass; actualstaticpublication verified; independentaccuracy/human release gate remains failed.",
     "old_pass_counts_are_not_current_acceptance": true,
     "no_requirement_closed": true,
     "working_source_receipts_current": [
@@ -5672,6 +5707,49 @@
     "site_boundary_passed": 27,
     "current_selection_evidence": "runs/2026-11-23-tag-runtime-current-selection.json",
     "current_boundary_manifest_sha256": "33249a0b5b03d5b07901eef61ae67341e8352ba691be5013903e1c58d4e5103a",
-    "historical_failure_source_commit": "97211535d3e64c0c59d7c743c6da0a921f6c9b5c"
+    "historical_failure_source_commit": "97211535d3e64c0c59d7c743c6da0a921f6c9b5c",
+    "required_ci_run": 45325922029,
+    "required_contexts_passed": 11,
+    "capacity_run": 45325922355,
+    "managed_web_authority": false,
+    "historical_failure_observations": [
+      "Historical663 CI/source-proof failures and972 boundary mismatch are preserved; current selected engineering checks and boundary controls pass. Final metadata required checks and capacity remain pending."
+    ],
+    "current_failures": [
+      "Independent accuracy and actual human-release acceptance remain unmet; these are separate from the11passing required engineering contexts."
+    ]
+  },
+  "current_source_snapshot_publication": {
+    "recorded_at": "2026-11-24T05:47:48.594645+00:00",
+    "status": "published_and_six_anonymous_assets_verified",
+    "source_commit": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+    "release_url": "https://github.com/knwvmbrr/aitrust-id/releases/tag/source-verified-2026-11-24-898dc254",
+    "evidence": "runs/2026-11-24-source-snapshot-publication.json",
+    "source_only": true,
+    "original_requirement_closed": false
+  },
+  "reference_phone_wave": {
+    "recorded_at": "2026-11-24T15:20:15.735780+00:00",
+    "evidence": "runs/2026-11-24-reference-phone-wave.json",
+    "original_complete": 136,
+    "original_open": 66,
+    "target_open": 60,
+    "original_closures_this_wave": 0,
+    "image": {
+      "production_forward_observed": true,
+      "reference_comparison_pass": false,
+      "hosted_run": 45408000792,
+      "status": "Nonpersistent position-buffer defect confirmed by pinned source; narrow repair in progress; full17-case hosted gate pending."
+    },
+    "iphone": {
+      "status": "User-only Clear editor-return repair in progress; background clearing and Share cancellation preserved; current changed-source native qualification pending.",
+      "historical_seven_flow_proof_current_for_changed_sources": false,
+      "physical_human_acceptance": false
+    },
+    "source_consumer": {
+      "status": "Sequential source-capture lifecycle repair independently reviewed; exact finite mapping and real integrated authorization remain pending.",
+      "mock_authority_controls_are_release_acceptance": false
+    },
+    "permanent_background_agents": false
   }
 }

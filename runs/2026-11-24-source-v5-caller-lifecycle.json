@@ -1,0 +1,430 @@
+{
+  "profile": "source-v5-caller-lifecycle-engineering/v1",
+  "captured_at": "2026-11-24T15:20:19.798106+00:00",
+  "source_base": "90342c46f377ddca28830fa840aba83ada1f3150",
+  "merge_parent": "452423f5676c6989abc7faf3d53c06c5dc7441cd",
+  "sources": {
+    "tools/source_snapshot_admission.py": {
+      "sha256": "323177b5be74b3e74ee125e3e8bc7aad0d38987ae95aa37501c97eb840aac334",
+      "bytes": 16124
+    },
+    "tools/distribution_artifacts.py": {
+      "sha256": "679d326875eb05b5ab010afa50c20f70e3a8261088a63f8f13f577d21d1a5e5c",
+      "bytes": 42932
+    },
+    "tools/source_snapshot_managed.py": {
+      "sha256": "16faace436f081d192d63a7b650c0603f94b2d62e626ad8fb491193cfb53c980",
+      "bytes": 18634
+    },
+    "tests/test_source_snapshot_admission.py": {
+      "sha256": "fc0d05433c409d5e5989afc9c16e69069a1d390a50fbe55691d1cddc11f58a93",
+      "bytes": 14501
+    },
+    "tests/test_distribution_artifacts.py": {
+      "sha256": "a717b8dff5212596c9a7283ab0add9daccf9b4753becfc307ae93402c0e1190f",
+      "bytes": 31068
+    },
+    "tests/test_source_snapshot_managed.py": {
+      "sha256": "6d43a90cf78e9225223504571e93e5c5714f11d3d2d7e64e7aabdfb782a16fa4",
+      "bytes": 18713
+    },
+    "docs/source-copy-v5-plan.md": {
+      "sha256": "870c09d4da00970c1503e2b3da6d084690e1e605a00342613e10bc4eebbafe6a",
+      "bytes": 16098
+    },
+    "tools/source_release_policy_v5.py": {
+      "sha256": "b637da6600c24a62408b58d08ef4a8ce3c09625aaba8f5e89911a05e331cf8d2",
+      "bytes": 32927
+    },
+    "eval/dependencies/source-snapshot-additions-v5.json": {
+      "sha256": "7ee0e9f798b789c276379db2fd8fb52d42883ea914fef8e76f7efeb2546f04e2",
+      "bytes": 61298
+    },
+    "tests/test_source_release_policy_v5.py": {
+      "sha256": "0320d560c566e6f215231ca11e5b9a772b8d90811b52b9b95aaef3a5a4aba664",
+      "bytes": 14983
+    }
+  },
+  "immutable_Q_files": {
+    "tools/dependency_policy.py": {
+      "sha256": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408",
+      "bytes": 15682
+    },
+    "tools/artifact_evidence_io.py": {
+      "sha256": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+      "bytes": 12720
+    },
+    "tools/source_release_policy.py": {
+      "sha256": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6",
+      "bytes": 17412
+    },
+    "tools/source_release_policy_v2.py": {
+      "sha256": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c",
+      "bytes": 22383
+    },
+    "tools/source_release_policy_v3.py": {
+      "sha256": "26a6bb8be66cab5a355bfbe6fcfbd16cefe994d1e7ade8b26b3cd227f0f82d41",
+      "bytes": 24924
+    },
+    "tools/source_release_policy_v4.py": {
+      "sha256": "0e70d9f360533dbd13f67192b967e8831787fce381c220bc013fc8a7eaa0989e",
+      "bytes": 24893
+    },
+    "eval/dependencies/source-snapshot-release.json": {
+      "sha256": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+      "bytes": 3049927
+    },
+    "eval/dependencies/source-snapshot-release-v2.json": {
+      "sha256": "2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d",
+      "bytes": 410005
+    },
+    "eval/dependencies/source-snapshot-additions-v3.json": {
+      "sha256": "3bd727fef18736bcd259fa4f1e21fd25fa8629f361b25289dc0016f48394db3e",
+      "bytes": 142724
+    },
+    "eval/dependencies/source-snapshot-additions-v4.json": {
+      "sha256": "da42db15f4fdb9b17784344fb5c7381bbd7e2d257b7a01f4b18fc88678c9db8c",
+      "bytes": 49133
+    }
+  },
+  "physical_registry_rows": 23,
+  "required_source_component_rows": 25,
+  "registry_activation": false,
+  "actual_controls": {
+    "source_R_H_current_before_final_dup_correction": {
+      "tests": 39,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 2.714,
+      "log": {
+        "sha256": "a2458c45f8668ee8dd8cf2bd9226a53498efbaa5bbf9bb241593ff76a6dc25ff",
+        "bytes": 6792
+      }
+    },
+    "post_dup_fstat_alarm_allclose_correction": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "log": {
+        "sha256": "4309a5e0fe41db75bf2360f17df5f322912330f3be1cd9bdaa0c4928014114a0",
+        "bytes": 616
+      }
+    },
+    "legacy_admission_refusals": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 0.067,
+      "log": {
+        "sha256": "79ad88bac3fb0e5b49ca94c617d905429f7e022cf89310adc4dff4ad48cc6340",
+        "bytes": 1580
+      }
+    },
+    "final_affected_metadata_and_capture": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "seconds": 0.068,
+      "log": {
+        "bytes": 1074,
+        "sha256": "90ef08c10075f0a38e3194bbb649d1e7c3179f1a2e1d700f3ef80c454acefae6"
+      },
+      "cases": [
+        "exact106 count and immutable foundations",
+        "161-name refusal",
+        "fresh captured current method ignores poisoned module cache",
+        "actual post-dup fstat fault closes registered duplicate",
+        "actual pending SIGALRM adoption closes owned FD",
+        "all-close once and idempotent"
+      ]
+    }
+  },
+  "actual_topology": {
+    "original_counter": {
+      "all_owned_closed": true,
+      "entry_N": 4,
+      "no_auth_or_classifier_or_archive_interpretation": true,
+      "pass": false,
+      "phases": [
+        {
+          "N": 23,
+          "phase": "H_initial"
+        },
+        {
+          "N": 27,
+          "phase": "H_late_custody"
+        },
+        {
+          "N": 87,
+          "capture_files": 38,
+          "metadata_bytes": 4170503,
+          "phase": "exact_R_graph_inputs_and_artifact",
+          "unique_inputs": 31
+        },
+        {
+          "N": 87,
+          "phase": "strict80_guard_refused_snapshot_adoption"
+        }
+      ],
+      "profile": "source-v5-exact-fixed-graph-FD-measure/v1"
+    },
+    "corrected": {
+      "all_owned_closed": true,
+      "entry_N": 4,
+      "no_auth_or_classifier_or_archive_interpretation": true,
+      "pass": true,
+      "phases": [
+        {
+          "N": 23,
+          "phase": "H_initial"
+        },
+        {
+          "N": 27,
+          "phase": "H_late_custody"
+        },
+        {
+          "N": 29,
+          "metadata_bytes": 4175172,
+          "peak_N_including_open": 39,
+          "phase": "exact_R_fixed_inputs_closed_short_phases",
+          "unique_inputs": 31
+        },
+        {
+          "N": 29,
+          "metadata_bytes": 8267955,
+          "phase": "all_original_source_artifact_chains_rechecked"
+        }
+      ],
+      "profile": "source-v5-exact-fixed-graph-FD-measure/v1"
+    },
+    "joined_fixture": {
+      "N_bound": 80,
+      "actual_PS_child_count": 5,
+      "classification_entry_max_N": 32,
+      "full_graph": false,
+      "limits": [
+        "Actual owned FS/common preparation/fresh captured admission source25 and real fixed PS probes; injected minimal Git Graph and typed source-rights result.",
+        "Does not exercise Q baseline/archive/crypto or authorize production use."
+      ],
+      "observations": [
+        {
+          "N": 23,
+          "phase": "H_owned_custody_before_R"
+        },
+        {
+          "N": 26,
+          "bound": 68,
+          "phase": "fresh_captured_S25"
+        },
+        {
+          "N": 25,
+          "phase": "H_owned_custody_before_R"
+        },
+        {
+          "N": 28,
+          "bound": 72,
+          "phase": "fresh_captured_S25"
+        },
+        {
+          "N": 27,
+          "phase": "H_owned_custody_before_R"
+        },
+        {
+          "N": 30,
+          "bound": 76,
+          "phase": "fresh_captured_S25"
+        },
+        {
+          "N": 27,
+          "phase": "H_owned_custody_before_R"
+        },
+        {
+          "N": 30,
+          "bound": 76,
+          "phase": "fresh_captured_S25"
+        }
+      ],
+      "owned_fixed_stdlib_children": 4,
+      "pass": true,
+      "profile": "source-v5-caller-joined-fixture/v1",
+      "real_classifier": false,
+      "real_signature": false,
+      "release_authority_fixture_only": true,
+      "seconds": 1.1435318340081722,
+      "source_component_rows_captured": 25
+    }
+  },
+  "claims": {
+    "whole_current_classification": false,
+    "whole_source_archive_bound": false,
+    "signature_verified": false,
+    "release_authorized": false,
+    "all_fourteen_routes": false,
+    "original_closure": false
+  },
+  "limits": [
+    "No full current classification/archive/crypto or installed registry activation; immutable prior baselines and actual452 classification remain historical source-bound facts.",
+    "Joined rights/Graph boundaries are explicit test fixtures, not production permission.",
+    "Different mechanism review is clear; ROOT final source approval and normal feature commit remain pending."
+  ],
+  "author": "Codex /root/share_debugger",
+  "pass": true,
+  "pass_scope": "Owned source-caller lifecycle mechanisms and explicitly injected-rights fixture only; not current distribution activation.",
+  "preserved_failures": [
+    {
+      "case": "old exact source Graph joined to late managed custody",
+      "result": "87 descriptors; strict80 guard refused; all owned closed",
+      "sha256": "55af40a09147d0807c2780be2c7b165bc315c717dc54df3b3c824ff30c85a36d"
+    },
+    {
+      "case": "first combined cohort/materialization owned Capture",
+      "result": "strict80 guard refused; corrected by separate own phases; no cap change",
+      "sha256": "8532473c87922a1dfd08541ba75aebebbb1805e4b31df134c5f8c2fffb484e4e"
+    },
+    {
+      "case": "first stronger joined fixture",
+      "result": "archive helper default retained synthetic commit; real metadata check refused. Explicit fixture commit corrected; production unchanged.",
+      "sha256": "e8418ed9670daff4e4d4980df226dbb84acc36c2540b3f6991e5f78bdbbfdaae"
+    },
+    {
+      "case": "independent post-dup fstat fault",
+      "result": "one owned duplicate leaked before registration; reviewer closed exact own descriptor; corrected register-before-fstat",
+      "sha256": "55b557de2957fc143b2ba1301515a6c2f13cbffe3061162846c544ac7831d979"
+    }
+  ],
+  "test_method_counts": {
+    "admission_total": 18,
+    "admission_new_lifecycle": 8,
+    "common_total": 34,
+    "common_new_lifecycle": 7,
+    "managed_total": 25,
+    "V5_immutable_mechanism_controls": 26
+  },
+  "source_phase": "Final exact106 metadata/pin phase after ROOT finite authorization; six mechanism source files remain byte-exact different d318ae97 review. Final ROOT source approval and later installed25-row registry activation/current qualification remain pending; no normal feature commit.",
+  "different_mechanism_review": {
+    "sha256": "d318ae97d5430913e9d330baa980190768e8b02ceb7100d24d651c7dc851984c",
+    "bytes": 5721,
+    "record": {
+      "author": "share_debugger",
+      "author_evidence_qualification": [
+        "39 controls preceded anchor fix and remain historical; three affected author controls cover current anchor correction. No full current combined-suite pass inferred.",
+        "Exact31-input FD proof measures current source read topology under late H custody, N29 after phases/peak39, no classifier/archive/Auth.",
+        "Joined proof uses minimal Graph and typed rights/authority fixtures; actual five fixed PS child executions are software evidence, not real source rights, signatures or production release authorization."
+      ],
+      "author_evidence_reviewed": {
+        "anchor-identity-correction.log": {
+          "bytes": 616,
+          "sha256": "4309a5e0fe41db75bf2360f17df5f322912330f3be1cd9bdaa0c4928014114a0"
+        },
+        "corrected-source-R-H-39-controls.log": {
+          "bytes": 6792,
+          "sha256": "a2458c45f8668ee8dd8cf2bd9226a53498efbaa5bbf9bb241593ff76a6dc25ff"
+        },
+        "exact-graph-fd-corrected.json": {
+          "bytes": 454,
+          "sha256": "5f7ff936cda368cf6ffe501cd30ffd91edfda15a20b1bc999ca39a33b537a273"
+        },
+        "joined-proof-sequential-graph.json": {
+          "bytes": 964,
+          "sha256": "0819e334dd4ae3b1c89bcb9710c82c2265cba672b81c2f1a6bf22413cc5939a1"
+        }
+      },
+      "authorship_exclusion": "Reviewer authored earlier V1/CFFI/Rust/HF/React/tokenizer source facts; this is mechanism-only review, no independent adoption of own grant facts.",
+      "captured_at": "2026-11-24T14:56:48.055325+00:00",
+      "claims": {
+        "accuracy": false,
+        "compiled_runtime_permission": false,
+        "complete_F057_X02": false,
+        "license_clearance": false,
+        "new_managed_release_authorized": false,
+        "real_signature_verified": false,
+        "whole_original_closure": false
+      },
+      "finding": {
+        "correction": "Register duplicate before one fstat; close unadopted duplicate on append failure; preserve close-once all-owned attempts.",
+        "issue": "Anchor identity fstat failed after real dup before registration; one own fd leaked.",
+        "original_counter_replayed_on_current": "OSError propagated and zero duplicate fds remained live.",
+        "original_counter_sha256": "55b557de2957fc143b2ba1301515a6c2f13cbffe3061162846c544ac7831d979",
+        "original_source_sha256": "fdf05e5d7aad0ab0d80a2b88991443fb186b86f13b44c31411e2a272670a3f83"
+      },
+      "format": "source-v5-caller-lifecycle-distinct-review/v1",
+      "integration_pending": [
+        "ROOT final approval and exact25-row installed registry binding; current registry remains23.",
+        "ROOT finite authorization for two exact changed test names before V5 literal-table pin update; no cap change or missing-name waiver.",
+        "Actual final source/archive/managed/protected qualification on the integrated exact source remains future."
+      ],
+      "own_actual_controls": {
+        "cases": [
+          "R duplicate same-byte successor refuses after released source read",
+          "H released probe source same-byte successor refuses before output"
+        ],
+        "elapsed_seconds": 0.05293125001480803,
+        "pass": true,
+        "receipt_sha256": "f0270a3631bd766d7e2de1a8030e9db332746b3b369011b20cbfd68222faef34",
+        "stable_six_files": true,
+        "tests": 2
+      },
+      "pass": true,
+      "reviewed_invariants": [
+        "Fixed code-derived source Graph read denominator; unknown reader paths refuse before IO.",
+        "Every short Capture checks complete file set and full directory chain before snapshot adoption; successor or conflicting SHA/identity cannot replace first reference.",
+        "Only owned duplicated directory anchors survive phases; borrowed caller descriptors are neither adopted nor closed.",
+        "Original metadata read ledger remains cumulative <=64000000; original opaque artifact <=64000000 and initial/final aggregate<=128000000 remain separate.",
+        "Fresh V5 code is compiled from exact installed component row bytes; received packet does not select code or permissions.",
+        "All file bodies, full file identity and named chain identities are recaptured before evidence return; private-boundary .git/0700 checks survive released handles.",
+        "Managed original metadata and archive handles remain in original outer Capture; fixed finite PS source and private staged source phases close before nested workers, then are revalidated.",
+        "Existing no-overwrite publication and post-publication uncertainty retained.",
+        "Non-source common route logic and foundation bytes are unchanged; no new public caller command/verifier override."
+      ],
+      "reviewer": "seo",
+      "scope": "Read-only S/R/H source caller lifecycle and six affected files; no whole archive, cryptography, SDK or route acceptance.",
+      "source_sha256": {
+        "tests/test_distribution_artifacts.py": "a717b8dff5212596c9a7283ab0add9daccf9b4753becfc307ae93402c0e1190f",
+        "tests/test_source_snapshot_admission.py": "fc0d05433c409d5e5989afc9c16e69069a1d390a50fbe55691d1cddc11f58a93",
+        "tests/test_source_snapshot_managed.py": "6d43a90cf78e9225223504571e93e5c5714f11d3d2d7e64e7aabdfb782a16fa4",
+        "tools/distribution_artifacts.py": "679d326875eb05b5ab010afa50c20f70e3a8261088a63f8f13f577d21d1a5e5c",
+        "tools/source_snapshot_admission.py": "323177b5be74b3e74ee125e3e8bc7aad0d38987ae95aa37501c97eb840aac334",
+        "tools/source_snapshot_managed.py": "16faace436f081d192d63a7b650c0603f94b2d62e626ad8fb491193cfb53c980"
+      },
+      "static_legacy_comparison": {
+        "all_other_old_common_functions_AST_equal_except_source_only_committed_tree": true,
+        "e72_IO_worker_V1_to_V4_foundation_bytes_equal_HEAD": true,
+        "non_source_prepare_and_Graph_finish_AST_equal_after_removing_source_only_branches": true,
+        "sha256": "3dd52836aa2e568ace02b69a0d0d9b8d8aa47d912f6fd88af784bdf6d860a438"
+      },
+      "status": "BOUNDED_SOURCE_MECHANISM_CLEAR_INTEGRATION_PENDING"
+    }
+  },
+  "actual_topology_phase": {
+    "source_admission_sha256": "fdf05e5d7aad0ab0d80a2b88991443fb186b86f13b44c31411e2a272670a3f83",
+    "qualification": "Topology and39 controls preceded the narrowly reviewed post-dup registration correction; current affected fault/alarm/allclose3 and different successor2 controls pass. No old execution is promoted to final source."
+  },
+  "literal_gap_before_authorization": [
+    "tests/test_source_snapshot_managed.py is an approved owned existing test but is absent from both V5 lists; exact addition requested from ROOT before table change.",
+    "Already approved lifecycle run/event and distribution test names pending same finite table update."
+  ],
+  "finite_registration": {
+    "ROOT_authorized": true,
+    "existing_project_tests_added": [
+      "tests/test_distribution_artifacts.py",
+      "tests/test_source_snapshot_managed.py"
+    ],
+    "new_project_record_names": [
+      "runs/2026-11-24-source-v5-caller-lifecycle.json",
+      "runs/changes/2026-11-24-source-v5-caller-lifecycle.json"
+    ],
+    "project_names": 105,
+    "typed_copied_names": 1,
+    "total_names": 106,
+    "unchanged_capacity": 160,
+    "old_159_unchanged": true,
+    "copied_25_origins_9_and_all_grants_unchanged": true,
+    "exact_452_reconstruction_by_removing_only_authorized_entries": true,
+    "V5_module_only_POLICY_SHA256_literal_changed": true,
+    "V5_test_only_count_102_to_106_changed": true
+  }
+}

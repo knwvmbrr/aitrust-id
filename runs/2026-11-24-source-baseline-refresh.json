@@ -1,0 +1,381 @@
+{
+  "ROOT_distinct_review": {
+    "raw_utf8": "{\n  \"captured_at\": \"2026-11-24T18:00:45.384084+00:00\",\n  \"reviewer\": \"Codex /root\",\n  \"pass\": true,\n  \"actual_groups\": 2,\n  \"seconds\": 0.007189500029198825,\n  \"source\": {\n    \".github/workflows/artifact-sbom.yml\": \"c346e0578d783e9a5b2908bedcf05ded217e641f286023b3d84cb73b64a07d7a\",\n    \"eval/dependencies/source-snapshot-additions-v5.json\": \"2998d70296554840f3eb2183fe11ea1ae6a03b9c5b9e7312764c33d2b2733df1\",\n    \"eval/dependency-policy.json\": \"b8494fbf11926ff51da8a518d9cb349a4b4ff54161a1088d2eddbcdb269d14e7\",\n    \"tests/test_source_release_policy_v5.py\": \"e457624e659b42e572281da1ea47981f66bc539a647d2a6346e065250aa13bea\",\n    \"tests/test_source_snapshot_workflow.py\": \"57ef08f4a3a04877d4d783580110e982a4828312627ff5d5ec38c0e67c5545d8\",\n    \"tools/source_release_policy_v5.py\": \"57cb59e9b6a094bd04b0a4710d3175d40d51f6d10f81aa9da3f66cdafe4c4070\"\n  },\n  \"source_freeze_sha256\": \"3f78b33773ac4d2cc5aaf816e9dc5fc36c32eaa86dd37d1a3ddcbe299b446f92\",\n  \"review\": \"Complete exact patch reviewed: stronger discovered test cardinalities58/91, two literal new source records127/160, same95anchors/159legacy/e72, two exact current registry rebindings; no permissions, authority, upload paths, suite body, lifetime or capacity weakening.\",\n  \"log\": \"test_literal_current_policy_and_immutable_foundations (test_source_release_policy_v5.SourceCopyV5.test_literal_current_policy_and_immutable_foundations) ... ok\\ntest_actual_source_job_is_protected_and_uploads_exact_authenticated_summary (test_source_snapshot_workflow.SourceWorkflow.test_actual_source_job_is_protected_and_uploads_exact_authenticated_summary) ... ok\\n\\n----------------------------------------------------------------------\\nRan 2 tests in 0.006s\\n\\nOK\\n\",\n  \"limits\": [\n    \"No changed-source archive/crypto/AUTH or protected-main claim.\",\n    \"Discovery is not execution of full58/91/26 producer groups.\"\n  ]\n}\n",
+    "sha256": "a30bc23dcd7e690507b1c3f70bc54dd4cf3671078a9230c0012231070e2502f0"
+  },
+  "actual_source_phases": {
+    "discovery_found_original_publisher_defect": {
+      "record": {
+        "captured_at": "2026-11-24T17:51:17.519870+00:00",
+        "discovery_only_no_test_execution": true,
+        "groups": {
+          "artifact-controls": {
+            "discovered_total": 58,
+            "suites": [
+              {
+                "discovered": 34,
+                "pattern": "test_distribution_artifacts.py",
+                "workflow_expected_per_suite": null
+              },
+              {
+                "discovered": 7,
+                "pattern": "test_artifact_process.py",
+                "workflow_expected_per_suite": null
+              },
+              {
+                "discovered": 2,
+                "pattern": "test_artifact_workflow.py",
+                "workflow_expected_per_suite": null
+              },
+              {
+                "discovered": 15,
+                "pattern": "test_artifact_evidence_io.py",
+                "workflow_expected_per_suite": null
+              }
+            ],
+            "workflow_expected_total": 51
+          },
+          "managed-mcp-controls": {
+            "discovered_total": 26,
+            "suites": [
+              {
+                "discovered": 15,
+                "pattern": "test_managed_mcp_release.py",
+                "workflow_expected_per_suite": null
+              },
+              {
+                "discovered": 1,
+                "pattern": "test_managed_mcp_runtime_cleanup.py",
+                "workflow_expected_per_suite": null
+              },
+              {
+                "discovered": 7,
+                "pattern": "test_managed_mcp_policy.py",
+                "workflow_expected_per_suite": null
+              },
+              {
+                "discovered": 3,
+                "pattern": "test_managed_mcp_workflow.py",
+                "workflow_expected_per_suite": null
+              }
+            ],
+            "workflow_expected_total": 26
+          },
+          "managed-source-controls": {
+            "discovered_total": 91,
+            "suites": [
+              {
+                "discovered": 18,
+                "pattern": "test_source_snapshot_admission.py",
+                "workflow_expected_per_suite": 10
+              },
+              {
+                "discovered": 25,
+                "pattern": "test_source_snapshot_managed.py",
+                "workflow_expected_per_suite": 21
+              },
+              {
+                "discovered": 4,
+                "pattern": "test_source_snapshot_workflow.py",
+                "workflow_expected_per_suite": 4
+              },
+              {
+                "discovered": 24,
+                "pattern": "test_source_release_policy_v3.py",
+                "workflow_expected_per_suite": 24
+              },
+              {
+                "discovered": 20,
+                "pattern": "test_source_release_policy_v4.py",
+                "workflow_expected_per_suite": 20
+              }
+            ],
+            "workflow_expected_total": 79
+          }
+        },
+        "profile": "source-publisher-closed-suite-discovery/v1",
+        "source_commit": "ccbadc16836087dbbd6c9cd8b7f8029b69e01445",
+        "workflow_sha256": "f6cdec6f06e6c4784e22f3ff9d518fa6d9be3618b637924a2c31fb1b9e01fa6a"
+      },
+      "sha256": "55861945d92af72bffff4b9d060b28b0bbd877a15a8e2d3a3e8ee8ce0cd12ac2"
+    },
+    "focused_correction_controls": {
+      "record": {
+        "all_other_registry_values_exact": true,
+        "broad_suites_executed": false,
+        "capacity": 127,
+        "captured_at": "2026-11-24T17:57:28.950562+00:00",
+        "discovery_only_counts": {
+          "MCP": 26,
+          "artifact": 58,
+          "source": 91
+        },
+        "module_reverse_only_policy_digest_restores_exact_old": true,
+        "new_archive_or_packet_executed_on_changed_source": false,
+        "one_actual_affected_guard": {
+          "errors": 0,
+          "failures": 0,
+          "pass": 1,
+          "raw_log_utf8": "test_actual_source_job_is_protected_and_uploads_exact_authenticated_summary (test_source_snapshot_workflow.SourceWorkflow.test_actual_source_job_is_protected_and_uploads_exact_authenticated_summary) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nOK\n",
+          "sha256": "4939f356c7c76ac72bc0566008f8b466ac860b1b23b9dbbe0d9d8279e1ff5e3e",
+          "tests": 1
+        },
+        "profile": "source-publisher-count-correction-controls/v1",
+        "registry_only_two_existing_source_rows_SHA_and_table_bytes_changed": true,
+        "source_after": {
+          ".github/workflows/artifact-sbom.yml": "c346e0578d783e9a5b2908bedcf05ded217e641f286023b3d84cb73b64a07d7a",
+          "eval/dependencies/source-snapshot-additions-v5.json": "2998d70296554840f3eb2183fe11ea1ae6a03b9c5b9e7312764c33d2b2733df1",
+          "eval/dependency-policy.json": "b8494fbf11926ff51da8a518d9cb349a4b4ff54161a1088d2eddbcdb269d14e7",
+          "tests/test_source_snapshot_workflow.py": "57ef08f4a3a04877d4d783580110e982a4828312627ff5d5ec38c0e67c5545d8",
+          "tools/source_release_policy_v5.py": "57cb59e9b6a094bd04b0a4710d3175d40d51f6d10f81aa9da3f66cdafe4c4070"
+        },
+        "source_before": {
+          ".github/workflows/artifact-sbom.yml": "f6cdec6f06e6c4784e22f3ff9d518fa6d9be3618b637924a2c31fb1b9e01fa6a",
+          "eval/dependencies/source-snapshot-additions-v5.json": "22b2da821181d2c905efad639543a792e292d961499731f8a31a4d5e18247e29",
+          "eval/dependency-policy.json": "8a71c73daca1a96367b03fef23b89245534df7586fea657c99fb81c71a916c20",
+          "tests/test_source_snapshot_workflow.py": "f18ebe67e4b1393e0962257df87f8ddd4cc5b68bb2654fe5618a952c4b2b02f5",
+          "tools/source_release_policy_v5.py": "474f067a47788efa2e74370555f9e1242634568e54af77ae26b7254c3575c769"
+        },
+        "table_remove_only_two_literal_names_restores_exact_old": true,
+        "unchanged_cap": 160,
+        "whole_workflow_and_test_reverse_exact": true
+      },
+      "sha256": "d1d833dceecb9ef6be9ec59fd5763b5bb9e98055dac9350c8bc976dbb049f21b"
+    },
+    "pristine_local_source_archive_packet": {
+      "record": {
+        "SPDX_and_extra_packet_inspect_not_executed_on_this_old_source": "Stopped after3successful stages because discovery-only publisher denominator mismatch requires a changed-source correction; changed source will receive its own complete chain.",
+        "actual_completed_CLI_stages": [
+          {
+            "exit_status": 0,
+            "stage": "V5_classifier",
+            "stdout": {
+              "accuracy": false,
+              "baseline_cleanup_acknowledged": true,
+              "baseline_v4_verified": true,
+              "changed_named_project_text_files": 25,
+              "checkout_commit": "ccbadc16836087dbbd6c9cd8b7f8029b69e01445",
+              "compiled_runtime_permission": false,
+              "complete_F057_X02": false,
+              "files": 13935,
+              "inspected_body_charge": 35697161,
+              "introduced_named_project_text_files": 46,
+              "legal_clearance": false,
+              "method_sha256": "474f067a47788efa2e74370555f9e1242634568e54af77ae26b7254c3575c769",
+              "pass": true,
+              "policy_sha256": "22b2da821181d2c905efad639543a792e292d961499731f8a31a4d5e18247e29",
+              "present_optional_copied_files": 1,
+              "profile": "source-copy-additions/v5",
+              "protected_baseline_commit": "898dc254ff8d4c924d699afe732d3c1bbfe1bb01",
+              "release_authorized": false,
+              "selected_profile_base_is_protected_release": true,
+              "selected_source_protected_release_claimed": false,
+              "source_archive_admitted": false,
+              "source_bytes": 153351299,
+              "source_commit": "ccbadc16836087dbbd6c9cd8b7f8029b69e01445",
+              "source_copy_profile_satisfied": true,
+              "source_tree": "e97cfd85c9fafdf3c372022db75c7fa502b44fa0",
+              "status": "SOURCE_COPY_PROFILE_SATISFIED"
+            }
+          },
+          {
+            "exit_status": 0,
+            "stage": "committed_archive_build_and_internal_inspect",
+            "stdout": {
+              "installed_dependencies_authenticated": false,
+              "pass": true,
+              "profile": "aitrust-development-source/1.0.0",
+              "sha256": "b9a9b78cf1adf69351ff68780091efd0343abadd61e5973d5fdefd0b49267e88",
+              "source_bytes": 153351299,
+              "source_commit": "ccbadc16836087dbbd6c9cd8b7f8029b69e01445",
+              "source_files": 13935,
+              "tag_release_validated": false
+            }
+          },
+          {
+            "exit_status": 0,
+            "stage": "current_Rprepare_and_publish_bound",
+            "stdout": {
+              "release_authorized": false,
+              "route": "source-snapshot",
+              "state": "PREPARED"
+            }
+          }
+        ],
+        "artifact": {
+          "bytes": 43538784,
+          "sha256": "b9a9b78cf1adf69351ff68780091efd0343abadd61e5973d5fdefd0b49267e88"
+        },
+        "captured_at": "2026-11-24T17:54:37.648697+00:00",
+        "clean_Git_after": true,
+        "first_metadata_observer_error": {
+          "cause": "Observer assumed graph key edges; actual unchanged schema is relationships.",
+          "corrected_only_metadata_projection": true,
+          "error": "KeyError: edges",
+          "product_stage_rerun_or_mutation": false
+        },
+        "packet": {
+          "artifact_format_verified": true,
+          "attestation_verified": false,
+          "bytes": 15675814,
+          "complete_project_obligations": false,
+          "graph_nodes": 13935,
+          "graph_relationships": 0,
+          "license_clearance": false,
+          "policy_release_allowed": true,
+          "release_authorized": false,
+          "sha256": "fdfaacbbfdac34522361a617c117516359ec35ad023d9e0edce682c97be1da55"
+        },
+        "pass": true,
+        "profile": "source-baseline-pristine-local-observation/v1",
+        "protected_candidate": false,
+        "sdk_model_install_native_or_network_executed": false,
+        "source_after": {
+          ".github/workflows/artifact-sbom.yml": "f6cdec6f06e6c4784e22f3ff9d518fa6d9be3618b637924a2c31fb1b9e01fa6a",
+          "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+          "docs/distribution-artifact-sbom.md": "b3f8072fb8e933f1dc6da672709420646e7013fec15b904279e48b9eddfd0634",
+          "docs/source-snapshot-managed-consumer.md": "015cf08a60f9b5477d70669ebe201d65cfc4f4e933b915041101466fd2cd6d42",
+          "eval/dependencies/source-snapshot-additions-v3.json": "3bd727fef18736bcd259fa4f1e21fd25fa8629f361b25289dc0016f48394db3e",
+          "eval/dependencies/source-snapshot-additions-v4.json": "da42db15f4fdb9b17784344fb5c7381bbd7e2d257b7a01f4b18fc88678c9db8c",
+          "eval/dependencies/source-snapshot-additions-v5.json": "22b2da821181d2c905efad639543a792e292d961499731f8a31a4d5e18247e29",
+          "eval/dependencies/source-snapshot-release-v2.json": "2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d",
+          "eval/dependencies/source-snapshot-release.json": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+          "eval/dependency-policy.json": "8a71c73daca1a96367b03fef23b89245534df7586fea657c99fb81c71a916c20",
+          "scripts/build-source-snapshot.py": "865dee30bb6f2908014fdcee17aac41aa4e0fa149d50d01677c30c7a5a838d56",
+          "scripts/distribution-artifact.py": "15fb26b1fa0ef927e3bda554bf55f8cf011935a81cb660bead236f1d07be9d0a",
+          "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+          "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+          "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+          "scripts/verify-managed-source.py": "d8e03339f4b4a19e4615928173ef9c809558e9e276e76e40801983ac6bd12355",
+          "scripts/verify-source-provenance.py": "cb5ec29a98a4a1c05ad1ef06c0675c05e9d4ffd6347e2832f2405da005b86ab2",
+          "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+          "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+          "tools/artifact_process.py": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86",
+          "tools/dependency_policy.py": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408",
+          "tools/distribution_artifacts.py": "679d326875eb05b5ab010afa50c20f70e3a8261088a63f8f13f577d21d1a5e5c",
+          "tools/source_release_policy.py": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6",
+          "tools/source_release_policy_v2.py": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c",
+          "tools/source_release_policy_v3.py": "26a6bb8be66cab5a355bfbe6fcfbd16cefe994d1e7ade8b26b3cd227f0f82d41",
+          "tools/source_release_policy_v4.py": "0e70d9f360533dbd13f67192b967e8831787fce381c220bc013fc8a7eaa0989e",
+          "tools/source_release_policy_v5.py": "474f067a47788efa2e74370555f9e1242634568e54af77ae26b7254c3575c769",
+          "tools/source_snapshot_admission.py": "323177b5be74b3e74ee125e3e8bc7aad0d38987ae95aa37501c97eb840aac334",
+          "tools/source_snapshot_binding.py": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb",
+          "tools/source_snapshot_managed.py": "16faace436f081d192d63a7b650c0603f94b2d62e626ad8fb491193cfb53c980"
+        },
+        "source_before": {
+          ".github/workflows/artifact-sbom.yml": "f6cdec6f06e6c4784e22f3ff9d518fa6d9be3618b637924a2c31fb1b9e01fa6a",
+          "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "NOTICE": "e185f305c76f821aa56011cd201ea03f49e97c57dfc786517f77bfc00c7fecd6",
+          "docs/distribution-artifact-sbom.md": "b3f8072fb8e933f1dc6da672709420646e7013fec15b904279e48b9eddfd0634",
+          "docs/source-snapshot-managed-consumer.md": "015cf08a60f9b5477d70669ebe201d65cfc4f4e933b915041101466fd2cd6d42",
+          "eval/dependencies/source-snapshot-additions-v3.json": "3bd727fef18736bcd259fa4f1e21fd25fa8629f361b25289dc0016f48394db3e",
+          "eval/dependencies/source-snapshot-additions-v4.json": "da42db15f4fdb9b17784344fb5c7381bbd7e2d257b7a01f4b18fc88678c9db8c",
+          "eval/dependencies/source-snapshot-additions-v5.json": "22b2da821181d2c905efad639543a792e292d961499731f8a31a4d5e18247e29",
+          "eval/dependencies/source-snapshot-release-v2.json": "2c6bc3c14c8825f8fdd583e42adb1df39e7983ee6f2bac96004231a3dbd6543d",
+          "eval/dependencies/source-snapshot-release.json": "2e555a5dc31a9d92b0982a9dba1fefea9376a45bb0d4c99625332b59965c6645",
+          "eval/dependency-policy.json": "8a71c73daca1a96367b03fef23b89245534df7586fea657c99fb81c71a916c20",
+          "scripts/build-source-snapshot.py": "865dee30bb6f2908014fdcee17aac41aa4e0fa149d50d01677c30c7a5a838d56",
+          "scripts/distribution-artifact.py": "15fb26b1fa0ef927e3bda554bf55f8cf011935a81cb660bead236f1d07be9d0a",
+          "scripts/source_snapshot.py": "24df10061afea39710fb65799d54d386c177caed80629a4f15bc5384fc2c17ee",
+          "scripts/source_snapshot_v2.py": "baa1ce4b9b0066ad4161d472d5d3df190f6e7bc5817b29c58ce35686f130fb46",
+          "scripts/source_snapshot_v3.py": "473384baa48cedcdff91dbc03598ee0ce77a0118dc97fb0cf815499630bab4a8",
+          "scripts/verify-managed-source.py": "d8e03339f4b4a19e4615928173ef9c809558e9e276e76e40801983ac6bd12355",
+          "scripts/verify-source-provenance.py": "cb5ec29a98a4a1c05ad1ef06c0675c05e9d4ffd6347e2832f2405da005b86ab2",
+          "scripts/worker_process.py": "9411406936c9757a67306211a695cbe54c0e318ca1d7e6c9229d24103baeb7a3",
+          "tools/artifact_evidence_io.py": "2d8089a460d0b70c7725ce8bfdecda88b798c70d3335cfbb22c8fe5b31ea0b4e",
+          "tools/artifact_process.py": "aa178ad04bc8adbcdb1eb40c556b0bd9b2bfea76d07843ef0883511f55b4eb86",
+          "tools/dependency_policy.py": "e72e478a7508e6c3e6e000803ee4d583900f626cc219870fd1ad140131608408",
+          "tools/distribution_artifacts.py": "679d326875eb05b5ab010afa50c20f70e3a8261088a63f8f13f577d21d1a5e5c",
+          "tools/source_release_policy.py": "897d287a1dc91c441db54237b0b80dfe634521ecc6b644944d04a63623b591b6",
+          "tools/source_release_policy_v2.py": "6642ab4ec688754ed5234027bdf029fd2a100b77d262fc98b958e1aed7c7126c",
+          "tools/source_release_policy_v3.py": "26a6bb8be66cab5a355bfbe6fcfbd16cefe994d1e7ade8b26b3cd227f0f82d41",
+          "tools/source_release_policy_v4.py": "0e70d9f360533dbd13f67192b967e8831787fce381c220bc013fc8a7eaa0989e",
+          "tools/source_release_policy_v5.py": "474f067a47788efa2e74370555f9e1242634568e54af77ae26b7254c3575c769",
+          "tools/source_snapshot_admission.py": "323177b5be74b3e74ee125e3e8bc7aad0d38987ae95aa37501c97eb840aac334",
+          "tools/source_snapshot_binding.py": "c219f326861c2634e930d7c0b74c0abad9859b3abe746a77464ece5ba8fceffb",
+          "tools/source_snapshot_managed.py": "16faace436f081d192d63a7b650c0603f94b2d62e626ad8fb491193cfb53c980"
+        },
+        "source_commit": "ccbadc16836087dbbd6c9cd8b7f8029b69e01445",
+        "source_producer_correction_needed": true,
+        "source_stable": true
+      },
+      "sha256": "c737c15b14ab52bd511015ab453b0b92716e7f442fa7592388c0a519f7e7a17c"
+    },
+    "registry_schema_clarification": {
+      "record": {
+        "actual_schema_after_read": "components[source-snapshot-unreviewed].files",
+        "authorized_two_row_source_bindings": [
+          {
+            "after": {
+              "bytes": 62648,
+              "path": "eval/dependencies/source-snapshot-additions-v5.json",
+              "sha256": "2998d70296554840f3eb2183fe11ea1ae6a03b9c5b9e7312764c33d2b2733df1"
+            },
+            "before": {
+              "bytes": 62536,
+              "path": "eval/dependencies/source-snapshot-additions-v5.json",
+              "sha256": "22b2da821181d2c905efad639543a792e292d961499731f8a31a4d5e18247e29"
+            },
+            "path": "eval/dependencies/source-snapshot-additions-v5.json"
+          },
+          {
+            "after": {
+              "bytes": 32927,
+              "path": "tools/source_release_policy_v5.py",
+              "sha256": "57cb59e9b6a094bd04b0a4710d3175d40d51f6d10f81aa9da3f66cdafe4c4070"
+            },
+            "before": {
+              "bytes": 32927,
+              "path": "tools/source_release_policy_v5.py",
+              "sha256": "474f067a47788efa2e74370555f9e1242634568e54af77ae26b7254c3575c769"
+            },
+            "path": "tools/source_release_policy_v5.py"
+          }
+        ],
+        "captured_at": "2026-11-24T17:56:49.237290+00:00",
+        "initial_preparatory_error": "KeyError: source_files. The initial script completed four approved source edits, then stopped before any registry write; no wrong registry values were written.",
+        "table_bytes_must_match_paired_SHA": "Same two rows only; table length changes with its two named rows, so the existing bytes value must rebind with SHA. Module bytes remain unchanged. No other row/field/claim changes."
+      },
+      "sha256": "cf4a295e3ff6f46a21d5c1e3c82616fb03f0f4144ddcbe0763bef51af4cecad1"
+    }
+  },
+  "all_existing_160_95anchors_159legacy_e72_and_sibling_routes_preserved": true,
+  "capacity": {
+    "max": 160,
+    "mixed_authored_charge": 1,
+    "project": 126,
+    "total": 127
+  },
+  "captured_at": "2026-11-24T18:01:39.553266+00:00",
+  "existing_58_91_26_full_suites_executed_locally": false,
+  "new_changed_source_archive_or_packet_claimed": false,
+  "no_local_SDK_model_install_or_new_dependency": true,
+  "one_actual_selected_table_foundation_group": {
+    "errors": 0,
+    "failures": 0,
+    "raw_utf8": "test_literal_current_policy_and_immutable_foundations (test_source_release_policy_v5.SourceCopyV5.test_literal_current_policy_and_immutable_foundations) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.007s\n\nOK\n",
+    "seconds": 0.007,
+    "sha256": "66cea91766ef69022c67abab3c2d3e953bac6ad45bbc981f037e4f352a3e3784",
+    "tests": 1
+  },
+  "original_all14_or_F057_X02_closed": false,
+  "pass": true,
+  "precode_plan": {
+    "raw_utf8": "# Publisher count registration repair \u2014 precode amendment\n\nExact original cc candidate passed real V5/source build/Rprepare with31 stable inputs. Discovery-only of the actual existing protected publisher suites then found two stale closed denominators. Change only artifact-controls total51 to58; managed-source per-suite10/21 to18/25 and total79 to91. Keep all existing suite bodies, four source-workflow methods, source-only main identity, Sigstore signer, permissions, six uploads, time/byte/FD caps and26 MCP controls. Coherently update the matching literals in test_source_snapshot_workflow.py. Do not add V5 suites in this correction. Both files are already explicit current V5 maintained-project text and neither is an immutable foundation.\n\nAdd exactly two new project-authored JSON paths: runs/2026-11-24-source-baseline-refresh.json and runs/changes/2026-11-24-source-baseline-refresh.json. Preserve all124 old names,159legacy names and mixed95anchors/93terms; new126project+1mixed charge=127/160. Refresh only the V5 POLICY_SHA256 literal and those two existing V5 module/table SHA bindings in source-snapshot-unreviewed registry.source_files. ROOT explicitly authorized those two registry fields; no e72, sibling, cap, baselineQ, sourceadmission/core or other implementation change.\n\nVerify discovery-only expected counts58/91/26 and the one affected existing workflow guard. Retain pristinecc as historical, with no SPDX/extra inspect falsely inferred. Fresh author run/event must record actual source/control evidence and normal guard. After a normal committed freeze and ROOT's brief browser release, rerun the real classifier/archive/currentRprepare/SPDX/packet-inspect chain once on the new exact commit. Never rebind the old43.54MB artifact or15.68MB packet. Normal push/draftPR/required11 checks and later protected merge+fresh authenticated consumer/publication remain separately reviewable. No local SDK/model/install or broad unchanged suite.\n",
+    "sha256": "49c5243ca60002c1ae46bf79588d4c393f6d7ed9fb125056a4e42560d4360bd8"
+  },
+  "profile": "source-baseline-publisher-registration/v1",
+  "protected_candidate_or_signature_or_AUTH_claimed": false,
+  "scope": "Two existing protected source-publisher test denominator guards and matching test literals; exact two project record names and source registry bindings. No signature/publication claim.",
+  "source_base": "ccbadc16836087dbbd6c9cd8b7f8029b69e01445",
+  "source_before_after_qualification": "Pristine cc three actual local stages are bound to cc only. Corrected source has two actual affected source groups and discovery-only58/91/26. New exact commit classifier/archive/Rprepare/SPDX/packet inspection remains pending until after normal guarded commit.",
+  "source_sha256": {
+    ".github/workflows/artifact-sbom.yml": "c346e0578d783e9a5b2908bedcf05ded217e641f286023b3d84cb73b64a07d7a",
+    "eval/dependencies/source-snapshot-additions-v5.json": "2998d70296554840f3eb2183fe11ea1ae6a03b9c5b9e7312764c33d2b2733df1",
+    "eval/dependency-policy.json": "b8494fbf11926ff51da8a518d9cb349a4b4ff54161a1088d2eddbcdb269d14e7",
+    "tests/test_source_release_policy_v5.py": "e457624e659b42e572281da1ea47981f66bc539a647d2a6346e065250aa13bea",
+    "tests/test_source_snapshot_workflow.py": "57ef08f4a3a04877d4d783580110e982a4828312627ff5d5ec38c0e67c5545d8",
+    "tools/source_release_policy_v5.py": "57cb59e9b6a094bd04b0a4710d3175d40d51f6d10f81aa9da3f66cdafe4c4070"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "author": "Codex /root/seo; Codex /root distinct source review",
+  "changed": "Preserved fixed validated production call failure diagnostics and added one failure-only SDK import/configuration probe within the original checked forward deadline and unchanged private worker limits.",
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "output/verification/image-forward-diagnostics/capture-focused.py"
+      ],
+      "exit_status": 0,
+      "finished_at": "2026-11-24T04:06:08.300968+00:00",
+      "pass": true
+    }
+  ],
+  "claim_level": "engineering_only",
+  "distinct_review": {
+    "raw_utf8": "{\n  \"actual_distinct_control\": {\n    \"argv\": [\n      \"python3\",\n      \"-I\",\n      \"-S\",\n      \"-B\",\n      \"-\"\n    ],\n    \"failed\": 0,\n    \"passed\": 1,\n    \"seconds\": 0.178,\n    \"stdin\": \"unittest loadTestsFromName tests.test_visual_score_qualification.QualificationTests.test_failed_forward_diagnostics_and_bounded_sdk_probe; TextTestRunner verbosity2; exit not successful\"\n  },\n  \"author\": \"/root/seo\",\n  \"captured_at\": \"2026-11-24T04:10:36.036415+00:00\",\n  \"files\": {\n    \"docs/offline-image-score-qualification-plan.md\": \"e1bde998ed009cb399d38ee87474c9a5827a7052092e8f0c6315a32921872fc3\",\n    \"runs/2026-11-23-image-forward-diagnostics.json\": \"a839e454dacdd8b87c6c5b4a6d17c1de91d7ba910456fcada1408470120d4b26\",\n    \"scripts/run-visual-score-phase.py\": \"d050ca2912803539871482ed592750b5a4dfa4fbb1ce3f5867da84a992e6b870\",\n    \"scripts/verify-visual-score-qualification.py\": \"4718dd1b88a371059662241eace466c345a4f59f9c89b95fded139ce96ae3d1e\",\n    \"tests/test_visual_score_budget.py\": \"1b6a3ca9db30ea6e88341e5afb82de912dcf415e383a815eb9bf22919aaf0ee2\",\n    \"tests/test_visual_score_qualification.py\": \"4f26631c587493bfef67cb3100601dac78354460c6340f717a38208fb84abe43\"\n  },\n  \"limits\": [\n    \"Source-only diagnostic repair; no actual model cause has been recovered, fixed, or inferred.\",\n    \"No real SDK/model/inference/hosted retry by this review; fake SDKs and owned short child controls only.\",\n    \"Author3affected controls/source88stable/discovery101 are source-scoped; no complete101execution claimed.\",\n    \"Fresh prepared source/inspector and separate ROOT approval remain before another changed-source job.\"\n  ],\n  \"pass\": true,\n  \"profile\": \"root-image-forward-diagnostics-distinct-review/v1\",\n  \"reviewed_by\": \"/root\",\n  \"source_review\": [\n    \"Before-assert native call diagnostics retain only closed validated state/reason, bounded exit and whitelisted error class/call-stage; failed-only4096B, no raw input/stderr/path echo.\",\n    \"SDK probe is diagnostic ONLY: fresh supervised child using unchanged c.worker500HOME/resource limits, explicit runtime.isolation, same fixed3SDK versions and import/config only. No image/model/tensor/inference and no positive-case substitution.\",\n    \"Exact trusted outer phase-end is propagated; internal budget guard refuses malformed/extended stops. Probe clamps DOWN to min15s/originalremaining minus6s cleanup reserve, never resets original operator budget.\",\n    \"Original primary failure remains even if probe/capture/cleanup fails. Existing immutable failure file/nooverwrite publication unchanged; actual prior removal CLEAN distinguished from job finalization failure.\",\n    \"Original17 positive assertions/reference/production-stop/PS/installed/native finally remain unchanged apart from fixed call IDs. No production inferCLI or native8/model/reference/39lock edits.\"\n  ],\n  \"unchanged_native_method_and_lock_paths\": [\n    \"tools/visual_score.py\",\n    \"tools/visual_score_assets.py\",\n    \"tools/visual_score_runtime.py\",\n    \"tools/visual_score_process.py\",\n    \"scripts/inspect-visual-score.py\",\n    \"tools/visual_score_reference.py\",\n    \"integrations/visual-score-reference/qualification-linux-cp313.json\",\n    \"integrations/visual-score-reference/qualification-linux-cp313.lock\"\n  ]\n}\n",
+    "sha256": "feb8d3886d16c3daeef11902d7b71a09c0e559d52d0e3f7419c2eca555dfac1d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-23-image-forward-diagnostics.json",
+      "sha256": "a839e454dacdd8b87c6c5b4a6d17c1de91d7ba910456fcada1408470120d4b26"
+    }
+  ],
+  "files": {
+    "docs/offline-image-score-qualification-plan.md": "e1bde998ed009cb399d38ee87474c9a5827a7052092e8f0c6315a32921872fc3",
+    "runs/2026-11-23-image-forward-diagnostics.json": "a839e454dacdd8b87c6c5b4a6d17c1de91d7ba910456fcada1408470120d4b26",
+    "scripts/run-visual-score-phase.py": "d050ca2912803539871482ed592750b5a4dfa4fbb1ce3f5867da84a992e6b870",
+    "scripts/verify-visual-score-qualification.py": "4718dd1b88a371059662241eace466c345a4f59f9c89b95fded139ce96ae3d1e",
+    "tests/test_visual_score_budget.py": "1b6a3ca9db30ea6e88341e5afb82de912dcf415e383a815eb9bf22919aaf0ee2",
+    "tests/test_visual_score_qualification.py": "4f26631c587493bfef67cb3100601dac78354460c6340f717a38208fb84abe43"
+  },
+  "id": "2026-11-23-image-forward-diagnostics",
+  "independent_release_validated": false,
+  "initial_normal_guard_refusal": {
+    "cause": "Fresh author event omitted required source_base field; guard correctly refused before commit.",
+    "correction": "Add exact immutable976 source_base; regenerate only matching human entry if needed.",
+    "pass": false,
+    "source_change_required": false
+  },
+  "kind": "change",
+  "limits": "No actual SDK/model/inference, acquisition, installation, hosted retry, native qualification, redistribution permission, accuracy, legal clearance or original scope closure. Actual prior hosted model/SDK cause is still unknown. Current101-suite count is discovery only; previous100 execution belongs to976. Fresh readiness/strict inspector and separate ROOT authorization remain before another changed-source run.",
+  "proves": "Three actual affected source controls pass with88 frozen hashes stable; discovery counts33/36/5/27. ROOT read the full delta and independently passed the new grouped control. Original17 positive cases, native/shared method, reference,39 lock, resource caps and exclusive failure publication remain unchanged.",
+  "recorded_at": "2026-11-24T04:11:37.333447+00:00",
+  "schema_version": 1,
+  "scope_ids": [
+    "T-FA"
+  ],
+  "source_base": "976864835b8a57633a1bd1a7c74186ea022e10d5"
+}
