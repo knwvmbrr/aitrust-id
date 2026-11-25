@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-25
 
+### 2026-11-25-042723-ios-public-sources-actual-84833215
+
+Recorded 2026-11-25T04:27:23.679464+00:00 · Contributor: Codex /root/ios_recovery; source review Codex /root · change
+
+- **Changed.** Qualify the native Sources component across all three public archives in both App and Share.
+- **Evidence.** Actual iPhone14Plus/iOS26.2 Simulator execution passes the three exact archive workflows with zero failures/skips, private-input isolation and cancellation; six compiled archive byte identities and owned cleanup pass, with116 frozen sources unchanged. [Change record](./runs/changes/2026-11-25-042723-ios-public-sources-actual-84833215.json).
+- **Not claimed.** Only the Sources component is qualified. The unchanged seven-count runner refuses three cases; full seven, size matrix, physical/human accessibility, current TestFlight, producer register gap and original requirement gates remain open.
+
+
 ### 2026-11-25-041639-ios-sources-portal-native-inputs-85bd8262
 
 Recorded 2026-11-25T04:16:39.114837+00:00 · Contributor: Codex /root/ios_recovery; different review Codex /root · change

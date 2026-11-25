@@ -81,3 +81,13 @@ The corrected portal observer is limited to the actual observed sibling-popup
 representation. If a later OS nests multiple remote portals inside the same popup,
 it refuses the ambiguity. It does not infer ownership from equal frames or reuse
 another popup's caption. Broader nested-OS compatibility remains unverified.
+
+
+## Actual Sources result
+
+The changed Sources component now passes three fixed native Simulator workflows:
+Pyodide, Zlib and Hiwire, each from App and Share, including private-input isolation
+and cancellation. All six compiled public ZIP files match their complete expected
+bytes and hashes. This result is bound to666fa3d0, not an uploaded phone build.
+The original seven-count runner remains a refusal for a three-case cohort; full
+seven-flow and representative layout qualification remain separate open work.

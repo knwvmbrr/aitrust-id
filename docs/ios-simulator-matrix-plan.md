@@ -241,3 +241,23 @@ that ambiguity fails closed and remains an explicit compatibility limit. It does
 not borrow another popup's caption. The exact extracted visitor also passes eight
 private inert controls; those are logic checks, not OS/UI observations. Current
 native re-execution remains required. See the fresh review receipt for identities.
+
+
+## Actual Sources component qualification — 2026-11-24
+
+Candidate5 on frozen666fa3d0 passes all three fixed archive workflows on the
+installed iPhone14Plus/iOS26.2/23C54 Simulator. Each covers App and Share source
+presentation, cancellation, unchanged private input and no private source payload.
+The six compiled archives match full expected bytes and SHA-256. Owned guest
+removal and inventory absence, owned alias removal,116 unchanged source checks and
+clean Git all pass. The narrower capture-boundary diagnosis is now resolved for
+the observed current sibling-popup representation. No assertion or time budget
+was relaxed. Candidate4 and older failures remain immutable history.
+
+The unmodified seven-count runner intentionally returns2/passfalse for this
+three-case summary. Separate strict3-ID/result/device checks qualify only the
+Sources component. The full seven, size matrix, physical phone/human VoiceOver,
+new signed TestFlight build and original requirements remain open. The original
+producer's actual manifest input is still explicitly pinned as116th input by the
+private cohort; its broader formal register gap remains recorded. See
+`runs/2026-11-24-ios-public-sources-actual.json` for source identities and limits.
