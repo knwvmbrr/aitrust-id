@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-ios-public-sources-test-local
+
+Recorded 2026-11-25T03:39:10.894658+00:00 · Contributor: Codex /root/web_camo · change
+
+- **Changed.** Correct a Sources test-local name collision in the two native test suites; preserve the Sources product and all privacy/cancel outcomes and native limits.
+- **Evidence.** The actual failed test build identified a duplicate sources binding. Both complete test sources and matrix engine reconstruct exactly by reversing only the local rename and UI hash. One affected derivation control passed; ROOT different source review cleared this exact four-file correction. [Change record](./runs/changes/2026-11-24-ios-public-sources-test-local.json).
+- **Not claimed.** Source-only test correction; changed native compile and actual three-case execution remain pending. Candidate3 failed test compilation with no UI execution. Its six compiled public ZIP resources match, but that is not a UI pass. No full seven/current-app/TestFlight, physical/human accessibility, numeric accuracy, admission or original closure.
+
+
 ### 2026-11-24-ios-public-sources-ux
 
 Recorded 2026-11-24T18:08:09.012592+00:00 · Contributor: Codex /root/web_camo · change

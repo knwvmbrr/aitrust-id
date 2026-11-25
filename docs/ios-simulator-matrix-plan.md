@@ -176,3 +176,27 @@ Owned existingpaths proposed: mobile/ios/Source/CheckerController.swift; mobile/
 Qualification contract: preserve currentfailedseven/small3 asoldsource. BeforeSDK: sourceprojection/commonApp+Sharemembership, exact12notices/3offers/verificationbody/resourcebytes and affectedproducercontrols. After ROOT+SEOarchive slotrelease and sourcepeer: freshcompile; all3ZIPbytes/hashes in BOTHcompiledApp/Share match the fixedcurrentresources; actualsourcepage shows3correctactions, min44/dynamictext/return/Done; actualselectedJS/Zlib/Hiwire publicarchive presentation/cancel preservesprivateAppdraft and receivedSharetext and neverincludes them. Separate3fixedcases keep percase120/max150 and originalwholeUI780/owned26.2guestcleanup; nevercall3casesfullseven. Existing7 updatedsemanticnavigation requires a genuinefresh7; sizeworkrequiresfreshboundsource. No knownoldproofrebinding/TestFlightupload/currentbuild2/physical/human/originalclosure claim. If lifecycle/budget/readability fails, preserveanddiagnose, notwaivecaps.
 
 Risks: navigationowner/popoveranchor must be the actual Sources table; genericparentpresentation wouldbeinvalid. Sourcepage musthaveDone/returnavailable in Sharewithoutfinishingtheextension unexpectedly. Movingrows mustnot lose sourceIDs/legalentries/packagingnoticebytes. Existingfocus/AXtiming issues remainunproven; no fabricatedresolution. Changes invalidate oldApp/UIboundproofs and requirefreshqualification/newdistributioncandidate, not reusingTestFlight1.0(1). Current160admission remainsROOTowned; newbranch isfuturebaselineonly.
+
+
+## Sources test-local correction — architecture before code
+
+Actual three-case candidate3 on da5 prepared the46-member project, booted an owned
+iPhone14Plus26.2/23C54, then its UITest target failed to compile: the newly added
+Sources navigation local `sources` collides with the existing later popup array
+in the same `offerAndCancel` scope. This is an introduced test-code error, not a
+product/SDK/timeout diagnosis. No UI test ran. The complete failure/log and source116
+equality are retained; delete plus inventory absence and owned alias cleanup passed.
+Six actually compiled public ZIP resources (three in App, three in Share) matched
+their existing sizes/hashes; that observation does not establish a successful UI
+build or runtime. The original seven gate remains unqualified.
+
+Repair only the navigation binding to `sourceEntry` and its two references in
+UIFlows.swift and PublicSourcesFlows.swift, plus the matrix engine's legacy UI
+hash literal. Product Controller, notice/order/offer records and complete verified
+sharing code remain unchanged. All actions, waits, predicates, private payload
+checks, known host baselines, original seven IDs, separate three IDs and native
+caps remain identical. Reverse the local rename to reconstruct both complete da5
+test files and reverse the single hash to reconstruct the complete matrix engine.
+Run only the affected derivation control, freeze current source116 and get a
+different source read before a changed native attempt. No unchanged native retry,
+seven/full-app/TestFlight adoption or original closure.

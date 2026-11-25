@@ -141,9 +141,9 @@ final class PublicSourcesFlows: XCTestCase {
         app.scrollViews.firstMatch.swipeUp()
         app.buttons["privacy-notices"].tap()
         func offerAndCancel(inShare: Bool) {
-            let sources = app.cells["privacy-open-sources"]
-            XCTAssertTrue(sources.waitForExistence(timeout: 10))
-            XCTAssertTrue(sources.isHittable); sources.tap()
+            let sourceEntry = app.cells["privacy-open-sources"]
+            XCTAssertTrue(sourceEntry.waitForExistence(timeout: 10))
+            XCTAssertTrue(sourceEntry.isHittable); sourceEntry.tap()
             let expectedBaseline = inShare ? 1 : 0
             let done = app.buttons["privacy-done"]
             XCTAssertTrue(done.exists && done.isEnabled && done.isHittable)
