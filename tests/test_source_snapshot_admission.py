@@ -12,7 +12,7 @@ from tools import dependency_policy as p
 ROOT = Path(__file__).resolve().parents[1]
 LEGACY_6D = '6d752cd0ae127e7d1ebe93499ab6fd83f55dcafd'
 LEGACY_Q='9c98ac5000a2784df66d8e1f5bf17d34cb0f53b7'
-SELECTED='898dc254ff8d4c924d699afe732d3c1bbfe1bb01'
+SELECTED='7ab4d3036f6409ec72d6a23972a563fd81e0f416'
 
 
 class SourceSnapshotAdmission(unittest.TestCase):
@@ -30,7 +30,7 @@ class SourceSnapshotAdmission(unittest.TestCase):
 
     def test_real_current_source_copy_not_runtime_accuracy_or_signature(self):
         from tools import source_release_policy_v3 as legacy
-        from tools import source_release_policy_v5 as current
+        from tools import source_release_policy_v6 as current
         historical = legacy.verify(source_commit=LEGACY_6D)
         self.assertIs(historical['pass'], True)
         self.assertEqual(historical['profile'], legacy.PROFILE)
@@ -46,8 +46,8 @@ class SourceSnapshotAdmission(unittest.TestCase):
         self.assertIs(result['pass'], True)
         self.assertEqual(result['profile'], current.PROFILE)
         self.assertEqual(result['source_commit'], SELECTED)
-        self.assertEqual(result['files'],13888)
-        self.assertEqual(result['source_bytes'],151697171)
+        self.assertEqual(result['files'],13946)
+        self.assertEqual(result['source_bytes'],153744932)
         for key in ('legal_clearance', 'compiled_runtime_permission',
                     'source_archive_admitted', 'release_authorized', 'accuracy',
                     'complete_F057_X02'):
@@ -234,11 +234,11 @@ class SourceCallerLifecycle(unittest.TestCase):
     def test_captured_active_method_ignores_poisoned_module_cache(self):
         import hashlib,sys,types
         rows=[{'path':n,'bytes':(ROOT/n).stat().st_size,'sha256':hashlib.sha256((ROOT/n).read_bytes()).hexdigest()}for n in sorted(a.COMPONENT_FILES)]
-        poison=types.ModuleType('tools.source_release_policy_v5');poison.verify=lambda **kw:(_ for _ in()).throw(AssertionError('cached code'))
-        with patch.dict(sys.modules,{'tools.source_release_policy_v5':poison}),patch.object(a,'_rows',return_value=rows):
+        poison=types.ModuleType('tools.source_release_policy_v6');poison.verify=lambda **kw:(_ for _ in()).throw(AssertionError('cached code'))
+        with patch.dict(sys.modules,{'tools.source_release_policy_v6':poison}),patch.object(a,'_rows',return_value=rows):
             with a._captured_copy(ROOT)as(copy,method,table):
-                self.assertIsNot(copy,poison);self.assertEqual(copy.verify.__code__.co_filename,'<captured-active-source-copy-v5>')
-                self.assertEqual(method,hashlib.sha256((ROOT/'tools/source_release_policy_v5.py').read_bytes()).hexdigest())
+                self.assertIsNot(copy,poison);self.assertEqual(copy.verify.__code__.co_filename,'<captured-active-source-copy-v6>')
+                self.assertEqual(method,hashlib.sha256((ROOT/'tools/source_release_policy_v6.py').read_bytes()).hexdigest())
                 self.assertEqual(table,copy.POLICY_SHA256)
 
 if __name__ == '__main__':

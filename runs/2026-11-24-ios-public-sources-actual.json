@@ -1,0 +1,168 @@
+{
+  "format": "ios-public-sources-actual-cohort/v1",
+  "captured_at": "2026-11-25T04:27:08.306288+00:00",
+  "actual_worker": "Codex /root/ios_recovery",
+  "source_commit": "666fa3d048c398a92168a15af2f36bc11a5782bc",
+  "claim_level": "engineering_only",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "pass": true,
+  "proof_scope": "Exactly three public archive presentation/cancel workflows; each runs App and Share with fixed invented input and strict no-private-payload checks.",
+  "cohort": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "ids": [
+      "PublicSourcesFlows/testHiwireSourceExportAndCancel()",
+      "PublicSourcesFlows/testPyodideSourceExportAndCancel()",
+      "PublicSourcesFlows/testZlibSourceExportAndCancel()"
+    ],
+    "cases": [
+      {
+        "name": "testHiwireSourceExportAndCancel",
+        "seconds": 69.435
+      },
+      {
+        "name": "testPyodideSourceExportAndCancel",
+        "seconds": 62.721
+      },
+      {
+        "name": "testZlibSourceExportAndCancel",
+        "seconds": 61.77
+      }
+    ]
+  },
+  "environment": {
+    "platform": "iOS Simulator",
+    "model": "iPhone 14 Plus",
+    "runtime_version": "26.2",
+    "runtime_build": "23C54",
+    "architecture": "arm64",
+    "xcode_version": "27.2",
+    "xcode_build": "27B52",
+    "sdk": "27.2"
+  },
+  "bounded_execution": {
+    "case_seconds": 120,
+    "max_case_seconds": 150,
+    "whole_ui_phase_seconds": 780,
+    "no_new_sdk_runtime_or_dependency_installed": true,
+    "private_adapter_changed_project_members": [
+      "Tests/UIFlows.swift"
+    ],
+    "other_project_members_unchanged": 45
+  },
+  "source_identity": {
+    "input_run": "runs/2026-11-24-ios-sources-portal-native-inputs.json",
+    "input_run_sha256": "a26c93c12eeed9b535d3d0581b27ed131fe971e0edd6702b1dde8431cca58764",
+    "registered_sources": 115,
+    "private_explicit_manifest_added": true,
+    "frozen_sources_checked_before_and_after": 116,
+    "all_sources_unchanged": true,
+    "product_controller_sha256": "56d84c9785be04bbc539a31b1ef17860f4ea29834f6f58646243317807003508",
+    "ui_sha256": "1b215994c6ef3ca6344fcd1b7420d220a5a78112a8eb6fd1d54b0e5f0dfe8df2",
+    "cohort_fixture_sha256": "fb5be61be2600a0d2bc8a9973a4b00a36933c16a650564424a4c58ce57dfc347"
+  },
+  "compiled_public_resources": [
+    {
+      "target": "App",
+      "resource": "Notices/RuntimeJS/PYODIDE-JS-SOURCES.zip",
+      "bytes": 1632140,
+      "sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"
+    },
+    {
+      "target": "App",
+      "resource": "Notices/RuntimeZlib/ZLIB-SOURCES.zip",
+      "bytes": 1682541,
+      "sha256": "145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10"
+    },
+    {
+      "target": "App",
+      "resource": "Notices/RuntimeEmbedded/HIWIRE-SOURCES.zip",
+      "bytes": 107606,
+      "sha256": "ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086"
+    },
+    {
+      "target": "Share",
+      "resource": "Notices/RuntimeJS/PYODIDE-JS-SOURCES.zip",
+      "bytes": 1632140,
+      "sha256": "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"
+    },
+    {
+      "target": "Share",
+      "resource": "Notices/RuntimeZlib/ZLIB-SOURCES.zip",
+      "bytes": 1682541,
+      "sha256": "145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10"
+    },
+    {
+      "target": "Share",
+      "resource": "Notices/RuntimeEmbedded/HIWIRE-SOURCES.zip",
+      "bytes": 107606,
+      "sha256": "ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086"
+    }
+  ],
+  "cleanup": {
+    "owned_guest_removed": true,
+    "inventory_absence_checked": true,
+    "owned_cache_alias_removed": true,
+    "git_clean_after": true
+  },
+  "original_seven_runner": {
+    "returncode": 2,
+    "pass": false,
+    "failed_stage": "result",
+    "reason": "Unchanged original seven-count acceptor refuses the separate three-case summary. Its seven IDs, counts and caps were not changed.",
+    "original_seven_adopted": false
+  },
+  "different_source_review": {
+    "reviewer": "Codex /root",
+    "receipt_sha256": "0e5faf2afdfd3b4873649ad7288e66b993ee54d08976ebe28021333a8e4d45e6"
+  },
+  "different_actual_review": "Pending parent verification of raw three-case summary/tree/controller and six resource identities.",
+  "private_evidence": {
+    "controller": {
+      "bytes": 40287,
+      "sha256": "e05b301b088f43106e7fce831284f61ce7d29f4ba9fb9d463b86eb6f07eb8ddc"
+    },
+    "raw_original_seven_proof": {
+      "bytes": 47883,
+      "sha256": "cba46c1967e4950ac9fcfc0799f81645326fcf2af6fa34054601cd366e6ab29f"
+    },
+    "summary": {
+      "bytes": 975,
+      "sha256": "6abb7d149b4903481933f45510a75270dcaa8620880fc45fdc2e22c0b5ab1285"
+    },
+    "tests": {
+      "bytes": 2657,
+      "sha256": "d3fba763bc6159fb59b7238b6f0481be0c0b01d70f79c4ddf4e535dbed46619f"
+    },
+    "ui_log": {
+      "bytes": 134101,
+      "sha256": "b8b781bf8bcdb91ae409d02489a6fa620d09a7af305eae83be2977dd58a0c775"
+    },
+    "build_log": {
+      "bytes": 279977,
+      "sha256": "95f758d96efa1bbd037d842f2d10e4bed805ceec8e38e90ddfb1bd6f176f351b"
+    },
+    "compiled_resources": {
+      "bytes": 1677,
+      "sha256": "f4ad3592f3600f58220554ed8762a254861163940b0354d05ddc4498a39580a3"
+    }
+  },
+  "retained_failures": [
+    "Original seven and representative size observations remain source-bound historical evidence.",
+    "Sources candidate3 fails test compilation; source binding was corrected in97221b5.",
+    "Sources candidate4 builds but fails2 of3 Share baseline observations; raw artifacts and cleanup remain intact."
+  ],
+  "limits": [
+    "This is the three-case Sources component, not a full seven-flow or size-matrix pass.",
+    "Future nested remote portal representations fail closed; broader nested-OS compatibility is unverified.",
+    "The original producer manifest-register gap remains separately pinned here, not silently resolved.",
+    "No developer signing, upload, TestFlight processing/current installability, physical iPhone, human VoiceOver, independent accuracy, release admission or original requirement closure is proven."
+  ]
+}

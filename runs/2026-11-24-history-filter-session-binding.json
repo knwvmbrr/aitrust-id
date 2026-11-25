@@ -1,0 +1,211 @@
+{
+  "profile": "account-history-filter-session-binding/v1",
+  "captured_at": "2026-11-24T18:03:56.296255+00:00",
+  "pass": true,
+  "author": "Codex /root",
+  "different_source_reviewer": "Codex /root/web_camo",
+  "source_base": "00bfae2a8b32e7f9763eb0e604e7d10bbca6a98e",
+  "source": {
+    "docs/account-history-ui.md": "16409f80c15e0fa73e795a5a74bd499ae6f757e4acd21a39872322d9e9fea5dd",
+    "tools/account_store.py": "0fddcddd322d02ff785592cb5227fac217ebccdc22a42a7930d0002003478685",
+    "services/accounts/app.py": "6ff30e13d96952a0043cf0815f1f1255e9fa7a19f11da17838f96f93e5f42f5e",
+    "site/account/index.html": "4aed4fd93e4f1eb50c1aa5e2ec23d0c463498a1f4c7e730b45254b2c85553847",
+    "site/account/app.js": "55fc7a6ccfc7ad3f3715ed7cbcdbe51c81347773d1279e8fd101f5848831fd04",
+    "site/account/style.css": "89d2de1878b9f1cbe31afa8274140e134120d111e749850b8120fa0c80128580",
+    "tests/test_account_store.py": "354525f296e5bf8a6aba233846c6c8d0f4f9b60fc6ac36eebf2bcd54105756ad",
+    "tests/test_account_api.py": "7dfb1d9c570d2808fad7db05483c0f55b4c16cc8670d7878bfb3c87c9424b2e1",
+    "tests/account-ui-state.cjs": "cdf7a6dc115355582761948f314e842d2838d1f75ed35eab1f0b36ec7f9bb274"
+  },
+  "actual_affected_store_API": {
+    "captured_at": "2026-11-24T17:58:07.377573+00:00",
+    "exit_code": 0,
+    "actual_groups": 3,
+    "stdout": "",
+    "stderr": "test_state_filter_paginates_matching_owner_records_without_changing_export (test_account_store.AccountStoreTests.test_state_filter_paginates_matching_owner_records_without_changing_export) ... ok\ntest_history_result_filter_is_closed_and_export_remains_complete (test_account_api.AccountAPITests.test_history_result_filter_is_closed_and_export_remains_complete) ... ok\ntest_optional_read_binding_refuses_cross_tab_principal_swap (test_account_api.AccountAPITests.test_optional_read_binding_refuses_cross_tab_principal_swap) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.822s\n\nOK\n",
+    "source_freeze_sha256": "1294da0c5f41878baaada2b3d17cdb2e732e050f7444b1c4c093cd45136136cb"
+  },
+  "actual_full_JS_inert_regressions": {
+    "groups": 7,
+    "pass": 7,
+    "fail": 0,
+    "skip": 0,
+    "duration_ms": 146.697917,
+    "boundary": "Full real app.js with inert DOM/fetch; not real browser or PostgreSQL."
+  },
+  "actual_browser": {
+    "sha256": "3d640d9f272a8dfcc1fcf1e5f405890a3f910b69110f09d4ce175befd091799c",
+    "observations": {
+      "captured_at": "2026-11-24T17:56:53.511Z",
+      "pass": true,
+      "phase": "complete",
+      "real_http": true,
+      "real_entitlement_engine": true,
+      "payment_processed": false,
+      "public_account_launch": false,
+      "physical_phone": false,
+      "checks": {
+        "actual_signup": true,
+        "server_owned_grant_and_opt_in": true,
+        "save_actual_PS_summary": true,
+        "actual_result_filter_counts_and_public_method_details": true,
+        "responsive_light_dark_and_accessibility": true,
+        "inactive_access_keeps_export_and_deletion": true,
+        "sign_out_and_real_WebKit_sign_in": true
+      },
+      "javascript_errors": [],
+      "external_requests": [],
+      "axe_violations": []
+    },
+    "boundary": "Real loopback account HTTP/SQLite store and private operator entitlement engine. Two actual standalone PS evaluations and real summary imports; no mocked server responses.",
+    "instrumentation": {
+      "Chromium": [
+        "signup",
+        "summary_save",
+        "state_filter_and_counts",
+        "method_details",
+        "reflow_320_390_428_768_1280",
+        "light_dark",
+        "axe_selected_rules",
+        "external_requests",
+        "javascript_errors"
+      ],
+      "WebKit": [
+        "signin",
+        "saved_history",
+        "revoked_access_complete_export",
+        "delete_all_history",
+        "account_erasure",
+        "javascript_errors"
+      ]
+    }
+  },
+  "different_source_review": {
+    "sha256": "8ea3795ad21e54415118c52a37763860e471b2cc3049a5cb0925baa1cb3bd5fb",
+    "receipt": {
+      "format": "bounded-distinct-account-source-review/v1",
+      "captured_at": "2026-11-24T18:02:16.304798+00:00",
+      "reviewer": "web_camo",
+      "author": "root",
+      "base": "00bfae2a8b32e7f9763eb0e604e7d10bbca6a98e",
+      "outcome": "SOURCE_CLEAR_WITHIN_SCOPE",
+      "sources_before": {
+        "docs/account-history-ui.md": {
+          "sha256": "16409f80c15e0fa73e795a5a74bd499ae6f757e4acd21a39872322d9e9fea5dd",
+          "bytes": 7982
+        },
+        "services/accounts/app.py": {
+          "sha256": "6ff30e13d96952a0043cf0815f1f1255e9fa7a19f11da17838f96f93e5f42f5e",
+          "bytes": 15954
+        },
+        "site/account/app.js": {
+          "sha256": "55fc7a6ccfc7ad3f3715ed7cbcdbe51c81347773d1279e8fd101f5848831fd04",
+          "bytes": 14337
+        },
+        "site/account/index.html": {
+          "sha256": "4aed4fd93e4f1eb50c1aa5e2ec23d0c463498a1f4c7e730b45254b2c85553847",
+          "bytes": 6672
+        },
+        "site/account/style.css": {
+          "sha256": "89d2de1878b9f1cbe31afa8274140e134120d111e749850b8120fa0c80128580",
+          "bytes": 4319
+        },
+        "tests/account-ui-state.cjs": {
+          "sha256": "cdf7a6dc115355582761948f314e842d2838d1f75ed35eab1f0b36ec7f9bb274",
+          "bytes": 8885
+        },
+        "tests/test_account_api.py": {
+          "sha256": "7dfb1d9c570d2808fad7db05483c0f55b4c16cc8670d7878bfb3c87c9424b2e1",
+          "bytes": 15533
+        },
+        "tests/test_account_store.py": {
+          "sha256": "354525f296e5bf8a6aba233846c6c8d0f4f9b60fc6ac36eebf2bcd54105756ad",
+          "bytes": 14473
+        },
+        "tools/account_store.py": {
+          "sha256": "0fddcddd322d02ff785592cb5227fac217ebccdc22a42a7930d0002003478685",
+          "bytes": 24535
+        }
+      },
+      "sources_after": {
+        "docs/account-history-ui.md": {
+          "sha256": "16409f80c15e0fa73e795a5a74bd499ae6f757e4acd21a39872322d9e9fea5dd",
+          "bytes": 7982
+        },
+        "services/accounts/app.py": {
+          "sha256": "6ff30e13d96952a0043cf0815f1f1255e9fa7a19f11da17838f96f93e5f42f5e",
+          "bytes": 15954
+        },
+        "site/account/app.js": {
+          "sha256": "55fc7a6ccfc7ad3f3715ed7cbcdbe51c81347773d1279e8fd101f5848831fd04",
+          "bytes": 14337
+        },
+        "site/account/index.html": {
+          "sha256": "4aed4fd93e4f1eb50c1aa5e2ec23d0c463498a1f4c7e730b45254b2c85553847",
+          "bytes": 6672
+        },
+        "site/account/style.css": {
+          "sha256": "89d2de1878b9f1cbe31afa8274140e134120d111e749850b8120fa0c80128580",
+          "bytes": 4319
+        },
+        "tests/account-ui-state.cjs": {
+          "sha256": "cdf7a6dc115355582761948f314e842d2838d1f75ed35eab1f0b36ec7f9bb274",
+          "bytes": 8885
+        },
+        "tests/test_account_api.py": {
+          "sha256": "7dfb1d9c570d2808fad7db05483c0f55b4c16cc8670d7878bfb3c87c9424b2e1",
+          "bytes": 15533
+        },
+        "tests/test_account_store.py": {
+          "sha256": "354525f296e5bf8a6aba233846c6c8d0f4f9b60fc6ac36eebf2bcd54105756ad",
+          "bytes": 14473
+        },
+        "tools/account_store.py": {
+          "sha256": "0fddcddd322d02ff785592cb5227fac217ebccdc22a42a7930d0002003478685",
+          "bytes": 24535
+        }
+      },
+      "checks": [
+        "Read exact nine-file diff and relevant complete browser controller, authenticated router dependency, session bootstrap and retained owner record selection paths.",
+        "Filter is closed to four existing states; all retained owner records are validated before matching; cursor membership is scoped to matching owner records; total and matching counts retain distinct meanings.",
+        "Export remains unfiltered and separate from entitlement assessment; export with filter/cursor refuses in store.",
+        "Optional supplied GET CSRF binding checks current cookie before protected route body; no-header legacy GET remains unchanged. Explicit session bootstrap resets private browser state before obtaining fresh identity.",
+        "Busy controller serializes native UI filter/retry actions; first-page changes reset cursor/rows; failure clears stale rows; native details use textContent only.",
+        "Read affected tests preserving original assertions; no repeated tests or browser work.",
+        "Independently recaptured all nine source hashes unchanged."
+      ],
+      "limitations": [
+        "Source correctness/privacy review only; not independent browser/runtime verification or production deployment clearance.",
+        "Author-reported actual store/API and browser outcomes were not rerun or independently adopted by this review.",
+        "Existing complete-system security/availability/legal and paid activation gates remain separate."
+      ],
+      "findings": []
+    }
+  },
+  "preserved_failed_development_observation": {
+    "scope": "First five-of-six UI phase retained in tool execution; the old test expected empty-success on failed history. Updated only that expectation to visible Unavailable/retry, retaining zero stale-owner rows. Current seven groups then passed.",
+    "product_or_acceptance_waiver": false
+  },
+  "Apple_status": {
+    "checked_at": "2026-11-24T18:03:56.296255+00:00",
+    "current_availability": "UNVERIFIED",
+    "reason": "Chrome native control pipe unavailable; no configured Apple status API connection found.",
+    "last_actual_public_evidence": "runs/2026-11-21-testflight-build-testing-confirmed.json",
+    "last_actual_observed_at": "2026-11-21T19:37:32+00:00",
+    "last_observed_build": "1.0 (1)",
+    "last_observed_build_status": "Testing",
+    "last_observed_owner_status": "Invited",
+    "physical_install_confirmed": false,
+    "uploaded_build_contains_current_Clear_fix": false,
+    "owner_invitation_last_observed_date": "2026-11-18"
+  },
+  "limits": {
+    "public_signup": false,
+    "real_customer_payment": false,
+    "production_PostgreSQL_collection": false,
+    "physical_iPhone_or_VoiceOver": false,
+    "original_requirement_closed": false,
+    "original_open": 66,
+    "source_distribution_or_all14_clearance": false
+  },
+  "outcome": "Bounded owner-only result filtering, truthful method details, retry without stale rows, complete access-independent export/deletion and optional GET session binding against cross-tab identity changes."
+}

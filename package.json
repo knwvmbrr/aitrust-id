@@ -92,7 +92,8 @@
     "verify:runtime-js-sources": "python3 scripts/pyodide-js-sources.py",
     "verify:hp-uncertainty": "node scripts/verify-hp-uncertainty-client.cjs",
     "verify:migration": "python3 scripts/verify-assertion-migration.py --report output/verification/assertion-migration.json",
-    "migrate:assertion": "python3 scripts/migrate-assertion.py"
+    "migrate:assertion": "python3 scripts/migrate-assertion.py",
+    "verify:account-ui": "node tests/account-ui-state.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1",

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-protected7ab-source-baseline",
+  "kind": "change",
+  "recorded_at": "2026-11-25T06:42:42.016905+00:00",
+  "author": "Codex /root/release_recovery; /root distinct source and actual evidence review",
+  "source_base": "7ab4d3036f6409ec72d6a23972a563fd81e0f416",
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "claim_level": "engineering_only",
+  "changed": "Record the actual protected7ab Linux source publisher and independently rooted Mac consumer, preserving exact received artifact and scoped acceptance limits.",
+  "proves": "Normal protected PR155 merge passed all11required contexts. Genuine main source signing/admission/Linux consumer and actual Mac verification each completed three fixed PS source probes; results are byte-identical.",
+  "files": {
+    "runs/2026-11-25-protected7ab-source-baseline.json": "27b98d387f9b0ae0478fc3628669ece98006149806e9ecb1c1d6d5c21719467d"
+  },
+  "checks": [],
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-protected7ab-source-baseline.json",
+      "sha256": "27b98d387f9b0ae0478fc3628669ece98006149806e9ecb1c1d6d5c21719467d"
+    }
+  ],
+  "distinct_review": {
+    "sha256": "1ff69323e663e239975541f5a067be9576f8f08e85bba537babd587c503082a6",
+    "raw_utf8": "{\n  \"recorded_at\": \"2026-11-25T06:21:55.454000+00:00\",\n  \"reviewer\": \"Codex PM root\",\n  \"worker\": \"release_recovery\",\n  \"pass\": true,\n  \"source_commit\": \"7ab4d3036f6409ec72d6a23972a563fd81e0f416\",\n  \"actual_mac_execution_sha256\": \"bdc67dad58bfb02d508cd7ddc70fcb5472d21e2364c8df4959928685e5300b8e\",\n  \"actual_postflight_sha256\": \"422ca7cbe8b6457ecacce0f8f14a876ad0c7b6e5bfe36e818767583979ac3a1a\",\n  \"actual_exit\": 0,\n  \"actual_seconds\": 272.34265337500256,\n  \"actual_summary_sha256\": \"fb7fef656060929b9b0b56d6192dfd07d5086143a99f95fb11c53345d1412431\",\n  \"independent_roots_digest\": \"65ca537f6ed8a47fd0e560c421baa1f6c1efb8b25fc200d8c5c02c0e92eb2b9c\",\n  \"all29_sources_and6_received_members_unchanged\": true,\n  \"actual_mac_and_genuine_cloud_results_byte_identical\": true,\n  \"owned_process_reaped_and_absent_verified_by_worker\": true,\n  \"trusted_checkout_still_clean\": true,\n  \"private0700_stage_intentionally_retained\": true,\n  \"new_runtime_execution_by_reviewer\": false,\n  \"limits\": \"Different source/execution/evidence review of actual finite Mac crypto/admission and three PS source probes. All14 scopes, legal/accuracy and full originals remain unqualified; no app/site deploy or tag release.\"\n}\n"
+  },
+  "independent_release_validated": false,
+  "original_scope_counts_changed": false,
+  "limits": "Finite sourceCOPY authority and three synthetic source probes; not tag accuracy, all14scopes, legal/full-original closure, latest working-source publication, app/site deployment or V6baseline selection. Source-policy registration and later publication of this new record are separate controlled steps."
+}

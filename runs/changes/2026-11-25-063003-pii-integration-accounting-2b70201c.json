@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-063003-pii-integration-accounting-2b70201c",
+  "recorded_at": "2026-11-25T06:30:03.109893+00:00",
+  "author": "Codex /root; implementation /root/ios_recovery; accounting review /root/release_recovery",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "bbecea130282d651c1b32fb214d5ade3ff9b11c3",
+  "changed": "Integrated bracketed-email redaction evidence and corrected a proposed task closure after independent review; preserved the missing replay gate and registered history restore work.",
+  "proves": "Actual engine and ASGI observations support the narrow masking fix; reviewed accounting preserves all 202 original criteria with 136 complete and 66 open, and 38 completed scoped jobs.",
+  "limits": "PII replay and the native size matrix remain pending. Signup and payment are not public. Current TestFlight access requires owner sign-in. Target 60 remains unmet.",
+  "scope_ids": [
+    "F-023",
+    "T-PII",
+    "F-044",
+    "N-010",
+    "N-013"
+  ],
+  "files": {
+    "README.md": "aaa0e642c02626dafb94c237654a8efb5afa05a4dafb26b9aa46fb73a226b5ee",
+    "docs/scope-progress.json": "63185e744cfcfc985b0e0fc70581b2a870aeab3c148aa817b29e5d0699073ece",
+    "docs/scope-progress.md": "e9ea5903c961ba79a3bb12022fdde2a7889af04087f39d5e459b2f533186cbc9",
+    "docs/session-delivery-plan.md": "28e223f9fdce4bde212c3e0901512660472bb3f6b87876a094cabc93eb991780",
+    "docs/session-delivery.json": "974ba3d78d53fbc9aa87e47ba2325ded67134e2e53a10144d54287ee905593d9",
+    "state.json": "3e547c40c7d337079c96237eb81d056fa5f19cec9cf3f9f77f260703912d4321",
+    "runs/2026-11-25-pii-bracket-address-integration.json": "714473c2b57446ed9817bfdc104bd412fb5a59b1929cc7506d58446593a082f5",
+    "runs/2026-11-25-pii-bracket-address-accounting-correction.json": "642e5c45a1cebfed8a58eb918c3d98e5b9f54b8495de9171d2ec4986b7ba08f5"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-pii-bracket-address-accounting-correction.json",
+      "sha256": "642e5c45a1cebfed8a58eb918c3d98e5b9f54b8495de9171d2ec4986b7ba08f5"
+    },
+    {
+      "path": "runs/2026-11-25-pii-bracket-address-development.json",
+      "sha256": "006d0f3f58db3a53f7c1a46914c561fa1c402e59f71066c005f8ebb462f4630e"
+    },
+    {
+      "path": "runs/2026-11-25-pii-bracket-address-review.json",
+      "sha256": "4d3e97818f9e3e80bbdad3bf05cc32d29d91dadbd311d7a3071cba692c5d83d8"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-25T06:30:04.017898+00:00"
+    }
+  ]
+}

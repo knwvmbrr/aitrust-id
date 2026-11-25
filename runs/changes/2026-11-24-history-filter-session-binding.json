@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-history-filter-session-binding",
+  "recorded_at": "2026-11-24T18:03:56.296255+00:00",
+  "author": "Codex /root; different source reviewer /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "00bfae2a8b32e7f9763eb0e604e7d10bbca6a98e",
+  "changed": "Add owner-only result-state filtering with correct counts/cursors, public method disclosure, safe unavailable/retry UI and optional validated GET session binding; update current TestFlight limits and account/native/source assignments.",
+  "proves": "Three actual affected store/API groups and seven full-JS inert regressions pass; actual Chromium/WebKit signup/save/filter/read/export/delete workflow passes against real local HTTP and the real private access engine. Different source review clears all nine files. The exact history usability software job closes; originals136/66 remain unchanged.",
+  "limits": "No fresh Apple/TestFlight verification or installation, no new app upload, public signup, real payment, production PostgreSQL, physical/human accessibility, independent accuracy, all14-route clearance or original closure. Chromium-only reflow/axe/external-request instrumentation is distinguished from WebKit signin/history observations.",
+  "scope_ids": [
+    "F-044",
+    "F-136",
+    "N-013",
+    "F-142"
+  ],
+  "files": {
+    "docs/account-history-ui.md": "16409f80c15e0fa73e795a5a74bd499ae6f757e4acd21a39872322d9e9fea5dd",
+    "tools/account_store.py": "0fddcddd322d02ff785592cb5227fac217ebccdc22a42a7930d0002003478685",
+    "services/accounts/app.py": "6ff30e13d96952a0043cf0815f1f1255e9fa7a19f11da17838f96f93e5f42f5e",
+    "site/account/index.html": "4aed4fd93e4f1eb50c1aa5e2ec23d0c463498a1f4c7e730b45254b2c85553847",
+    "site/account/app.js": "55fc7a6ccfc7ad3f3715ed7cbcdbe51c81347773d1279e8fd101f5848831fd04",
+    "site/account/style.css": "89d2de1878b9f1cbe31afa8274140e134120d111e749850b8120fa0c80128580",
+    "tests/test_account_store.py": "354525f296e5bf8a6aba233846c6c8d0f4f9b60fc6ac36eebf2bcd54105756ad",
+    "tests/test_account_api.py": "7dfb1d9c570d2808fad7db05483c0f55b4c16cc8670d7878bfb3c87c9424b2e1",
+    "tests/account-ui-state.cjs": "cdf7a6dc115355582761948f314e842d2838d1f75ed35eab1f0b36ec7f9bb274",
+    "docs/scope-progress.json": "e8ad51b86ce897164591e29b17f8c8e8c30cc4544f25dfa2145980dea2c29fdc",
+    "docs/scope-progress.md": "12677d02eff74e6d1fce1183f7614e29e98dfa613ba3892f82da37bc9c632558",
+    "docs/session-delivery.json": "1cd397ecbc5df2fd1074f05cb8e9ac5609d7ad6c9e3a25c08e22141f7a5c10dc",
+    "docs/session-delivery-plan.md": "67dc994eb20050b8821a9eba839cfd23162c2a6d4d335ade5b2ab6fc6ab42496",
+    "state.json": "a340b3787901ef2fb8470087805340a6946238fa93673387bc454107c55aee23",
+    "runs/2026-11-24-history-filter-session-binding.json": "1be65e44c68ce42c10da273abc5d3e6a760b7b0b8ed9475a198f7909807ed07d"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-history-filter-session-binding.json",
+      "sha256": "1be65e44c68ce42c10da273abc5d3e6a760b7b0b8ed9475a198f7909807ed07d"
+    }
+  ],
+  "checks": []
+}

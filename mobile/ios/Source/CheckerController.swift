@@ -9,6 +9,7 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
     private let appearanceSettings = AppearanceSettings()
     private let darkModeSwitch = UISwitch(), automaticAppearanceButton = UIButton(type: .system)
     private let appearanceRow = UIStackView()
+    private weak var contentScroll: UIScrollView?
     private var web: WKWebView?, assets: Assets?, deadline: DispatchWorkItem?
     private var generation = 0, pendingText: String?, matches: [[String: Any]] = []
     private var busy = false
@@ -35,11 +36,13 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
     override func viewDidLoad() {
         super.viewDidLoad(); BrandTheme.installBackdrop(in: view)
         let scroll = UIScrollView(), stack = UIStackView(); stack.axis = .vertical; stack.spacing = 16
+        scroll.keyboardDismissMode = .onDrag
         stack.backgroundColor = BrandTheme.panel; stack.layer.cornerRadius = 20
         stack.isLayoutMarginsRelativeArrangement = true
         stack.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16)
         scroll.translatesAutoresizingMaskIntoConstraints = false; stack.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(scroll); scroll.addSubview(stack)
+        contentScroll = scroll
         NSLayoutConstraint.activate([
             scroll.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor), scroll.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor),
             scroll.leadingAnchor.constraint(equalTo: view.leadingAnchor), scroll.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -58,6 +61,9 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
         input.layer.borderWidth = 1; input.layer.cornerRadius = 12
         input.textContainerInset = UIEdgeInsets(top: 12, left: 8, bottom: 12, right: 8)
         input.autocorrectionType = .no; input.spellCheckingType = .no; input.autocapitalizationType = .none
+        input.keyboardDismissMode = .onDrag
+        input.bounces = true; input.alwaysBounceVertical = true
+        input.inputAccessoryView = editingAccessory()
         input.heightAnchor.constraint(greaterThanOrEqualToConstant: 180).isActive = true; stack.addArrangedSubview(input)
         checkButton.configuration = BrandTheme.button("Check with PS", primary: true)
         checkButton.configurationUpdateHandler = { button in
@@ -66,7 +72,7 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
         checkButton.titleLabel?.adjustsFontForContentSizeCategory = true
         checkButton.accessibilityIdentifier = identity("check-ps"); checkButton.addTarget(self, action: #selector(check), for: .touchUpInside)
         checkButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 44).isActive = true; stack.addArrangedSubview(checkButton)
-        stack.addArrangedSubview(button("Clear", #selector(clear), "clear"))
+        stack.addArrangedSubview(button("Clear", #selector(clearFromButton), "clear"))
         if shareMode { stack.addArrangedSubview(button("Done / Cancel", #selector(finish), "finish")) }
         else { stack.addArrangedSubview(button("Practice sharing", #selector(practiceShare), "practice-share")) }
         status.numberOfLines = 0; status.font = font(.body); status.adjustsFontForContentSizeCategory = true
@@ -170,7 +176,30 @@ class CheckerController: UIViewController, UITextViewDelegate, WKScriptMessageHa
         web?.removeFromSuperview(); web = nil; assets = nil
         refreshCheckButton()
     }
+    private func editingAccessory() -> UIToolbar {
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 44))
+        toolbar.autoresizingMask = [.flexibleWidth]
+        toolbar.isTranslucent = false
+        toolbar.barTintColor = BrandTheme.panel; toolbar.tintColor = BrandTheme.ink
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneEditing))
+        done.accessibilityIdentifier = identity("done-editing")
+        done.accessibilityLabel = "Done editing"
+        done.accessibilityHint = "Hide the keyboard without clearing your text."
+        toolbar.items = [UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil), done]
+        return toolbar
+    }
+    @objc private func doneEditing() { input.resignFirstResponder() }
     @objc func clear() { input.text = ""; invalidate(); status.text = "Cleared." }
+    @objc private func clearFromButton() {
+        clear()
+        guard isViewLoaded, presentedForChecking, let scroll = contentScroll,
+              view.window != nil else { return }
+        view.layoutIfNeeded()
+        let target = input.convert(input.bounds, to: scroll)
+        guard [target.minX, target.minY, target.width, target.height, target.maxX, target.maxY]
+                .allSatisfy({ $0.isFinite }), target.width > 0, target.height > 0 else { return }
+        scroll.scrollRectToVisible(target, animated: false)
+    }
     @objc func finish() { clear(); extensionContext?.completeRequest(returningItems: nil) }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -274,16 +303,6 @@ private final class NativeNoticesController: UITableViewController {
         (id: "local-sources", title: "Bundled source access", path: "Notices/SourceOffers.txt")
     ]
 
-    // Fixed public files only. Neither a draft nor a received Share item can
-    // select an activity item, URL, filename, or source identity.
-    private let sourceOffers = [
-        (id: "js", title: "Share Pyodide source ZIP", path: "Notices/RuntimeJS/PYODIDE-JS-SOURCES.zip",
-         bytes: 1_632_140, sha: "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"),
-        (id: "zlib", title: "Share Zlib source ZIP", path: "Notices/RuntimeZlib/ZLIB-SOURCES.zip",
-         bytes: 1_682_541, sha: "145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10"),
-        (id: "hiwire", title: "Share Hiwire source ZIP", path: "Notices/RuntimeEmbedded/HIWIRE-SOURCES.zip",
-         bytes: 107_606, sha: "ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086")
-    ]
 
     init() { super.init(style: .insetGrouped) }
     required init?(coder: NSCoder) { return nil }
@@ -308,18 +327,18 @@ private final class NativeNoticesController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int { 2 }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        section == 0 ? notices.count : sourceOffers.count
+        section == 0 ? 1 : notices.count
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        section == 0 ? "Read a bundled notice" : "Share public source only"
+        section == 0 ? "Public source files" : "Read a bundled notice"
     }
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
-        section == 1 ? "Only the selected public source ZIP is offered. Your text and check result are never included." : nil
+        section == 0 ? "Open the three bundled source offers. Navigation alone never shares a file." : nil
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let id = indexPath.section == 0 ? "privacy-entry-" + notices[indexPath.row].id : "privacy-source-" + sourceOffers[indexPath.row].id
-        let title = indexPath.section == 0 ? notices[indexPath.row].title : sourceOffers[indexPath.row].title
+        let id = indexPath.section == 0 ? "privacy-open-sources" : "privacy-entry-" + notices[indexPath.row].id
+        let title = indexPath.section == 0 ? "Public source files" : notices[indexPath.row].title
         let cell = tableView.dequeueReusableCell(withIdentifier: "notice") ?? UITableViewCell(style: .default, reuseIdentifier: "notice")
         var content = cell.defaultContentConfiguration()
         content.text = title
@@ -335,11 +354,71 @@ private final class NativeNoticesController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        if indexPath.section == 1 { offerSource(indexPath.row); return }
+        if indexPath.section == 0 {
+            navigationController?.pushViewController(PublicSourcesController(), animated: !UIAccessibility.isReduceMotionEnabled)
+            return
+        }
         let notice = notices[indexPath.row]
         let reader = NoticeReaderController(path: notice.path)
         reader.title = notice.title
         navigationController?.pushViewController(reader, animated: true)
+    }
+
+
+    @objc private func done() { dismiss(animated: true) }
+}
+
+/// Only fixed bundled public ZIPs enter this controller; no draft or result is passed.
+private final class PublicSourcesController: UITableViewController {
+    // Fixed public files only. Neither a draft nor a received Share item can
+    // select an activity item, URL, filename, or source identity.
+    private let sourceOffers = [
+        (id: "js", title: "Share Pyodide source ZIP", path: "Notices/RuntimeJS/PYODIDE-JS-SOURCES.zip",
+         bytes: 1_632_140, sha: "63f2c044a22edb87933871826b35f889c8b7dd022728102da9bd6ac8c0eaa80f"),
+        (id: "zlib", title: "Share Zlib source ZIP", path: "Notices/RuntimeZlib/ZLIB-SOURCES.zip",
+         bytes: 1_682_541, sha: "145d26716a3d7d192fe0be70a72ba0b5b76347fc4fa11df6becc397b0c9b7f10"),
+        (id: "hiwire", title: "Share Hiwire source ZIP", path: "Notices/RuntimeEmbedded/HIWIRE-SOURCES.zip",
+         bytes: 107_606, sha: "ee4fd2038b44a4a916287f8d77408646a447b962532f1362bd3a9f96998e2086")
+    ]
+
+
+    init() { super.init(style: .insetGrouped) }
+    required init?(coder: NSCoder) { return nil }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Public source files"
+        tableView.backgroundColor = BrandTheme.panel
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 48
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "All notices", style: .plain, target: self, action: #selector(back))
+        navigationItem.leftBarButtonItem?.accessibilityIdentifier = "privacy-source-index"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+        navigationItem.rightBarButtonItem?.accessibilityIdentifier = "privacy-done"
+    }
+    override func numberOfSections(in tableView: UITableView) -> Int { 1 }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { sourceOffers.count }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? { "Share public source only" }
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        "Only the selected public source ZIP is offered. Your text and check result are never included."
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = sourceOffers[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "source") ?? UITableViewCell(style: .default, reuseIdentifier: "source")
+        var content = cell.defaultContentConfiguration()
+        content.text = item.title
+        content.textProperties.font = BrandTheme.font(.body)
+        content.textProperties.color = BrandTheme.ink
+        cell.contentConfiguration = content
+        cell.backgroundColor = BrandTheme.panel
+        cell.accessoryType = .disclosureIndicator
+        cell.accessibilityIdentifier = "privacy-source-" + item.id
+        cell.accessibilityTraits.insert(.button)
+        return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        offerSource(indexPath.row)
     }
 
     private func offerSource(_ index: Int) {
@@ -356,10 +435,12 @@ private final class NativeNoticesController: UITableViewController {
         let activity = UIActivityViewController(activityItems: [url], applicationActivities: nil)
         activity.view.accessibilityIdentifier = "public-runtime-source-share"
         activity.popoverPresentationController?.sourceView = tableView
-        activity.popoverPresentationController?.sourceRect = tableView.rectForRow(at: IndexPath(row: index, section: 1))
+        activity.popoverPresentationController?.sourceRect = tableView.rectForRow(at: IndexPath(row: index, section: 0))
         present(activity, animated: true)
     }
 
+
+    @objc private func back() { navigationController?.popViewController(animated: !UIAccessibility.isReduceMotionEnabled) }
     @objc private func done() { dismiss(animated: true) }
 }
 

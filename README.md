@@ -16,8 +16,8 @@ The public tag catalogue is live at [aitrustid.com](https://aitrustid.com), with
 Person/Enterprise views, compact tag tiles, a tag logo, Light/Dark/System appearance
 and compact tag-detail modals with a plain-language purpose, limitation and visible
 validation status. Each panel starts with an everyday example and a clear next action. Deeper methods, testing and feature details expand on request. Catalogue downloads identify themselves as descriptions; PS result exports remain a separate workflow. Enterprise plans describe their own scope without presenting reviewable designs as running services. Twenty [static tag reference pages](https://aitrustid.com/tags/)
-and a [36-URL sitemap](https://aitrustid.com/sitemap.xml) expose the actual catalogue
-to crawlers. Google indexing and Search Console ownership remain unverified.
+and a [37-URL sitemap](https://aitrustid.com/sitemap.xml) expose the actual catalogue
+to crawlers. [Actual Search Console observations on November 21, 2026](runs/2026-11-21-search-console-verified.json) verify HTTPS-site ownership and indexing of the homepage and PS page; indexing of all37 URLs and aggregate performance remain unverified.
 HTTPS, public response hashes,
 production security headers and all 20 modals pass external checks. Report and
 community controls export drafts and link to public GitHub issues/discussions;
@@ -33,6 +33,10 @@ The PS panel also has an optional **Inspect Python code** preview: paste a suppo
 The FA panel has an optional **Image details · preview**: choose a supported PNG or JPEG and press Inspect to read file details locally. It does not upload or change the image, verify AI origin or issue FA. [Use, limits and privacy](docs/image-device-guide.md).
 
 The PS source package also has [versioned verification files and an account-free guide](docs/ps-source-provenance-downloads.md). Source identity is separate from detector accuracy.
+
+Optional [signup and private metadata history](docs/account-history-ui.md) work in an isolated development service, including a [real PostgreSQL review and restore workflow](docs/account-postgres.md) and [whole-account deletion protection when restoring an older backup](docs/account-erasure.md). Public signup, customer payments and production account recovery are not active. Free tag checking stays account-free.
+
+A reviewed [redaction improvement](docs/pii-bracket-address-result.md) catches explicit bracketed email addresses at their original positions. Its [real gateway and replay path](docs/pii-capability-identity-result.md) now reproduces the original record across fresh redactor processes. The installed service still needs a rebuild and current-source admission; independent recognition and human acceptance remain open.
 
 ## Deploy approved local checker versions
 
@@ -623,7 +627,7 @@ It checks consistency, not correctness or reviewer independence; MT remains plan
 
 The optional [local organization policy registry](docs/organization-policy-registry.md) separates tenant namespaces, credentials, policy revisions and per-job permissions. Run `python3 scripts/organization-policy.py --help`, then follow the invented practice workflow. A tenant pause or broken optional policy job cannot rewrite public tags or disable personal PS. [Technical acceptance](docs/organization-policy-acceptance.md) covers the original N-010 software boundaries; real organization identity, employee consent, legal ownership and terms agreed before sale remain separate obligations. No organization service is running or sold. The [earlier literal-term component](docs/private-policy.md) remains available.
 
-The [native engine verification guide](docs/native-engine-checks.md) separates exact bundled PS engine checks from phone acceptance. The [native Share developer workflow](docs/native-share-developer.md) passes five actual simulator UI workflows, including offline privacy/license access. The separate [App Store preparation](docs/app-store-readiness.md) has a saved app record and an inspected unsigned device archive. Signing, upload, physical-phone and independent tag acceptance remain open; no signed native phone app is offered.
+The [native Share developer workflow](docs/native-share-developer.md) now includes native Done editing and drag dismissal in App and Share. The [exact keyboard source passes all seven workflows](runs/2026-11-25-native-keyboard-and-recovery-progress.json); the separate size matrix passes keyboard and both Clear controls before a Small/light notice-pagination failure. That failure is being diagnosed without changing the original assertions or waits. Build1.0(1) was observed Testing on November21; current Apple access requires owner sign-in, and this repair has not been uploaded. Physical installation, human VoiceOver and independent tag accuracy remain unverified. [App Store readiness](docs/app-store-readiness.md) keeps these gates separate.
 
 The [PAN span correction](docs/pii-pan-token-plan.md) keeps a candidate's required
 evidence inside its own span. The unchanged six-example compact-address cohort

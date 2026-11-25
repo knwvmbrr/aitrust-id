@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-ios-public-sources-ux",
+  "recorded_at": "2026-11-24T18:08:09.012592+00:00",
+  "author": "Codex /root/web_camo",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "a7fbab21f5039cf3382a082b167513fc0bacc42d",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "changed": "Make the three existing verified public source ZIP offers directly discoverable from an early native disclosure, with a dedicated Sources list shared by App and Share. Preserve the twelve notices and verification identities.",
+  "proves": "Source preservation checks and one existing derivation control pass on the seven bound source files. The existing seven source case adds only semantic navigation; a separate three-case source cohort retains the same strict privacy and cancellation observer for each archive. ROOT different source review independently checked preservation of the production/Clear and notice reader, all notice/offer identities and the verified sharing body.",
+  "limits": "Source-only product candidate. Swift compile, current seven, each actual public ZIP presentation/cancel and size qualification are pending. Prior failed seven/size outcomes remain retained, not composed or rebound. No TestFlight upload, physical/human accessibility, build2, accuracy, policy admission or original closure.",
+  "files": {
+    "mobile/ios/Source/CheckerController.swift": "56d84c9785be04bbc539a31b1ef17860f4ea29834f6f58646243317807003508",
+    "mobile/ios/Tests/UIFlows.swift": "d4609f99b1984ede7066c3560efafade0cf695c195f5db9ca9c4fa202645db49",
+    "mobile/ios/Tests/SizeLayoutFlows.swift": "b53d11672675f89d99be4e18d7dcd55b5a1622f2a47726825ec4b33c3a95858d",
+    "tools/ios_simulator_matrix.py": "e348696b731356ed5635a10100f85f3a517daa66c6ba714bd0d01c8eb68aa773",
+    "docs/ios-simulator-matrix-plan.md": "925f85ad17c67ab2e42287062ad33575f441a8e382528dbf5e2a317283e90288",
+    "docs/ios-simulator-matrix.md": "0948b34ee10b91a2ab3e0d1b92fa63518fcaece24a1529833fec125e80409f0e",
+    "mobile/ios/Tests/PublicSourcesFlows.swift": "c0e55bd06c25a78e7b93f67458e5c1e3c06fb44e2400f85ccc35427a747695f9",
+    "runs/2026-11-24-ios-public-sources-ux.json": "6b6d00284a01394a86783ad1783e7ff0eff0ed5e714a59312945f0239267f966"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-public-sources-ux.json",
+      "sha256": "6b6d00284a01394a86783ad1783e7ff0eff0ed5e714a59312945f0239267f966"
+    }
+  ],
+  "checks": []
+}

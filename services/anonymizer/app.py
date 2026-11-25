@@ -20,29 +20,81 @@ class OfflineEmailRecognizer(EmailRecognizer):
     def validate_result(self,pattern_text):
         return self.extractor(pattern_text).fqdn != ''
     FORMAT_SEPARATORS=frozenset('\u200b\u200c\u200d\ufeff')
+    @staticmethod
+    def bracketed_candidates(text):
+        # Explicit ASCII markers only. This is never a global text rewrite.
+        import re
+        atom = r"[A-Za-z0-9!#$%&'*+/=?^_`{|}~-]"
+        local = atom + r"(?:[A-Za-z0-9.!#$%&'*+/=?^_`{|}~-]{0,62}" + atom + r")?"
+        label = r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?"
+        at = r" {0,3}\[[aA][tT]\] {0,3}"
+        dot = r" {0,3}\[[dD][oO][tT]\] {0,3}"
+        token = re.compile(r"(?<![\w.!#$%&'*+/=?^_`{|}~@-])(?P<local>" + local + r")" + at
+                           + r"(?P<domain>" + label + r"(?:" + dot + label + r"){1,7})(?![\w@-])")
+        for match in token.finditer(text):
+            start, end = match.span()
+            local_part = match['local']
+            if '..' in local_part:
+                continue
+            # Do not mask an accepted prefix of a longer or malformed domain.
+            cursor = end
+            while cursor < len(text) and text[cursor] == ' ':
+                cursor += 1
+            if text[cursor:cursor + 5].lower().startswith(('[at]', '[dot]')):
+                continue
+            if (end + 1 < len(text) and text[end] == '.'
+                    and (text[end + 1].isalnum() or text[end + 1] in '._-')):
+                continue
+            domain = re.sub(dot, '.', match['domain'])
+            projected = local_part + '@' + domain
+            if len(projected) <= 254 and len(domain) <= 253:
+                yield start, end, projected
+
     def analyze(self,text,entities,nlp_artifacts=None):
         original=super().analyze(text,entities,nlp_artifacts)
-        if 'EMAIL_ADDRESS' not in entities or not any(c in text for c in self.FORMAT_SEPARATORS):
+        if 'EMAIL_ADDRESS' not in entities:
             return original
-        # This projection is private to email recognition. Every returned span
-        # refers to the unchanged original text used by the anonymizer.
-        offsets=[i for i,c in enumerate(text) if c not in self.FORMAT_SEPARATORS]
-        if not offsets:return original
-        projected=''.join(text[i] for i in offsets)
+        hidden=any(c in text for c in self.FORMAT_SEPARATORS)
+        lowered=text.lower()
+        bracketed='[at]' in lowered and '[dot]' in lowered
+        if not hidden and not bracketed:
+            return original
         seen={(r.entity_type,r.start,r.end) for r in original}
         extra=[]
-        for result in super().analyze(projected,entities,None):
-            if result.entity_type!='EMAIL_ADDRESS' or not 0<=result.start<result.end<=len(offsets):
-                continue
-            start,end=offsets[result.start],offsets[result.end-1]+1
-            key=(result.entity_type,start,end)
-            if key in seen or not any(c in text[start:end] for c in self.FORMAT_SEPARATORS):
-                continue
-            extra.append(RecognizerResult(result.entity_type,start,end,result.score,
-                analysis_explanation=result.analysis_explanation,
-                recognition_metadata=dict(result.recognition_metadata or {})))
-            seen.add(key)
-        return original+extra
+        if hidden:
+            # This projection is private to email recognition. Every returned span
+            # refers to the unchanged original text used by the anonymizer.
+            offsets=[i for i,c in enumerate(text) if c not in self.FORMAT_SEPARATORS]
+            if not offsets:
+                return original
+            projected=''.join(text[i] for i in offsets)
+            for result in super().analyze(projected,entities,None):
+                if result.entity_type!='EMAIL_ADDRESS' or not 0<=result.start<result.end<=len(offsets):
+                    continue
+                start,end=offsets[result.start],offsets[result.end-1]+1
+                key=(result.entity_type,start,end)
+                if key in seen or not any(c in text[start:end] for c in self.FORMAT_SEPARATORS):
+                    continue
+                extra.append(RecognizerResult(result.entity_type,start,end,result.score,
+                    analysis_explanation=result.analysis_explanation,
+                    recognition_metadata=dict(result.recognition_metadata or {})))
+                seen.add(key)
+        if bracketed:
+            for start,end,projected in self.bracketed_candidates(text):
+                key=('EMAIL_ADDRESS',start,end)
+                if key in seen:
+                    continue
+                for result in super().analyze(projected,entities,None):
+                    # The same upstream recognizer must accept the WHOLE candidate.
+                    if (result.entity_type!='EMAIL_ADDRESS' or result.start!=0
+                            or result.end!=len(projected)):
+                        continue
+                    extra.append(RecognizerResult(result.entity_type,start,end,result.score,
+                        analysis_explanation=result.analysis_explanation,
+                        recognition_metadata=dict(result.recognition_metadata or {})))
+                    seen.add(key)
+                    break
+        return original+extra if hidden or extra else original
 analyzer.registry.remove_recognizer('EmailRecognizer')
 analyzer.registry.add_recognizer(OfflineEmailRecognizer())
 import ipaddress

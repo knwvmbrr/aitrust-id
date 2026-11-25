@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-account-postgres",
+  "recorded_at": "2026-11-25T04:07:47.490298+00:00",
+  "author": "Codex /root/postgres_recovery; different source reviewer /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "40fc0ba9142261299c38698786374984503edca9",
+  "changed": "Deliver the same reviewed signup and private-history domain/API on real least-privileged Unix-peer PostgreSQL, with a closed bound-SQL adapter, isolated dependency lock, transactional schema, typed commit uncertainty and observer-independent owned cleanup.",
+  "proves": "Final current real PostgreSQL/HTTP11 groups pass4.391s; source-attributed restore5 and concurrent2 pass. Real rollback/privilege refusals, dump recovery and unchanged main/stopped owned processes are recorded. Twelve focused inert controls pass; different ROOT source review and three critical controls pass0.013s. No successful runtime or provisioning was replayed after restart.",
+  "limits": "Private synthetic PostgreSQL component only; no public signup, real subscription/payment, production collection, backup deletion reconciliation, password recovery, Apple upload, physical accessibility, independent tag accuracy, native/transitive license clearance, new distribution route or original requirement closure. Original136complete/66open is unchanged. Idle PSS is not peak usage or an enforced whole-runtime memory cap.",
+  "scope_ids": [
+    "F-044",
+    "F-136",
+    "N-013"
+  ],
+  "files": {
+    "tools/account_postgres.py": "d708a33db1449f4a53a79151f2b5aba61edc00e224053efbae0984b48fd2c5c1",
+    "services/accounts/postgres.py": "e0a089ddeaa8541c3a55c1a0c8366a3e42c0b8e63da05be7e7c71dd4114852b8",
+    "scripts/verify-account-postgres.py": "524a1c80d51b30c4508048bda7e502b2b853ec16e8a1af69ebb4f62a770e291b",
+    "scripts/account-postgres-review.py": "e302513ff2eb5871bbce90b9c49429c9f06153b71669cd5fdd3942d2b16eb356",
+    "deploy/accounts/001-account-schema.sql": "8bf9fe5a84f6cf13d5118a8fe8e18a27edeae3d2f980ceec0e34ca0500c5e159",
+    "deploy/accounts/requirements.lock": "de5d8516f86f49ee92e822712c6a14c9a2b60304893466f2a3fd10516ccdfd4a",
+    "deploy/accounts/runtime-sources.json": "16689b12cfad1f96d53c062a8cef8faeb031223361c9964a8dc4a24adb9d7859",
+    "tests/test_account_postgres.py": "3cca170e154493cb71ae42f821197f5c9ff05101851841459fc8444f592f791c",
+    "docs/account-postgres-plan.md": "ede4a6cefcb57043cd7d72a5e625a4755670578510a776f5f57524a29714cc12",
+    "docs/account-postgres.md": "6b47e5c80f8aee44d26290db61594bfd1a96184e2b47efdb9656b17e1f4481e8",
+    "runs/2026-11-24-account-postgres.json": "2178f5d8dcdee40be2c601bff07ff5511e826c869d2a5c1c3dcf75bd2fe54210"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-account-postgres.json",
+      "sha256": "2178f5d8dcdee40be2c601bff07ff5511e826c869d2a5c1c3dcf75bd2fe54210"
+    }
+  ],
+  "checks": [],
+  "different_review": {
+    "reviewer": "Codex /root",
+    "reviewed_at": "2026-11-25T04:04:44.033935+00:00",
+    "private_receipt": "root-final-different-source-review.json",
+    "sha256": "e8f5b210817812bbf4230262e2945c86dcb27b8aa73e23f6df0aa2c19ac49853",
+    "pass": true,
+    "three_targeted_controls_seconds": 0.013
+  },
+  "original_requirement_closures": []
+}

@@ -1,3 +1,71 @@
+## Qualified bracket-address software delivery — 2026-11-25T07:58:57.144965+00:00
+
+**39 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The original bracket-address job now meets its unchanged recognition and actual replay criteria. Two fresh redactor processes produce the same full method identity, and the real gateway/replay reproduces the original assertion. Five real calls exercise eight controls without the PS evaluator. Different source/actual review and owned cleanup pass. The earlier premature closure and withdrawal remain recorded.
+
+Full PII remains80; installed services have not been rebuilt. Source admission, broader recognition and independent/human acceptance remain separate. Native notice diagnosis and individual-history recovery continue independently; public signup, payments and current TestFlight installation remain unverified or disabled.
+
+[Qualified integration](../runs/2026-11-25-pii-bracket-address-qualified-integration.json) · [Actual replay](../runs/2026-11-25-pii-bracket-address-live-replay.json) · [Method and limits](pii-capability-identity-result.md)
+
+## Native keyboard delivery and recovery diagnosis — 2026-11-25T07:44:14.179456+00:00
+
+**38 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The reviewed native Done/drag repair is merged, and its exact ab328 source passes all7 App/Share workflows. The separate original size matrix now reaches keyboard and both Clear controls, then fails Small/light notice pagination. No full Clear closure or changed fixture/wait is claimed. Local integer-only callback diagnosis is active.
+
+The real PII gateway/replay run exposes an unstable set-derived capability fingerprint across fresh processes. Its narrow identity-only repair is source-reviewed; actual two-source restart qualification remains pending. Individual-history/Clear recovery retains a refused isolated restore for diagnosis; the main database is unchanged and owned services are stopped. Public signup, billing and current TestFlight installation remain unavailable or disabled. Worker assignments are dated snapshots, not perpetual bots.
+
+[Source-specific outcomes and limits](../runs/2026-11-25-native-keyboard-and-recovery-progress.json) · [Whole-account recovery](account-erasure.md)
+
+## PII fix integrated; actual replay remains open — 2026-11-25T06:17:36.693179+00:00
+
+**38 scoped software jobs complete; originals 136 complete / 66 open, target 60 unmet.** The real PII improvement is integrated: the bracketed address is masked at its original span, the other 41 English observations match the fresh baseline, six compact comparisons match the historical reference, and 14 ASGI controls pass. Different task-list review caught the missing actual replay criterion before PM closeout. The proposed 39th software closure is withdrawn; the existing task and its full acceptance stay open. No criteria were split or lowered.
+
+Apple currently shows its sign-in form, so current TestFlight assignment and installation remain unverified. The complete current seven-flow native run is executing in its owned simulator after terminal Mac source verification. The account worker continues individual history/Clear recovery. Public signup and real billing remain off. Protected main source7ab4d303 and the working PII/account branch are separate; the website and Apple build are unchanged.
+
+[Accounting correction](../runs/2026-11-25-pii-bracket-address-accounting-correction.json) · [Actual PII result](../runs/2026-11-25-pii-bracket-address-development.json) · [Use and limits](pii-bracket-address-result.md)
+
+## Account deletion survives an older backup — 2026-11-25T05:24:24.475359+00:00
+
+**38 scoped software jobs complete; originals 136 complete / 66 open, target 60 unmet.** The registered whole-account recovery job is complete. One genuine isolated PostgreSQL sequence verifies the old password, session and exact history before reconciliation, then refuses the deleted account while preserving the other account. The journal survives successful external cleanup. Different ROOT review verifies source identity, rollback, capacity, privilege controls, stopped owned services and an unchanged main database.
+
+Public signup and customer payments remain off. Individual history-event deletion/clear suppression, production backup expiry/encryption/latest-journal custody, password recovery and native/extension history remain separate. No original acceptance is removed. Chrome refuses the read-only TestFlight inspection fallback because Apple Events JavaScript is disabled; that setting remains unchanged. The last actual Apple observation is November 21 Testing, with owner invitation last observed November 18 and no physical install confirmed.
+
+[Actual erasure result](../runs/2026-11-25-account-erasure.json) · [Different integration review](../runs/2026-11-25-account-erasure-integration.json) · [Operator guide](account-erasure.md) · [Scope ledger](scope-progress.md)
+
+## Qualified native Sources and independent tag work — 2026-11-25T04:35:01.350136+00:00
+
+**37 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** All three verified public archive offers now open/cancel in App and Share with privacy checks on iPhone14Plus/iOS26.2 Simulator. Different ROOT review checks the exact116 execution inputs, raw3-case tree, retained original-seven refusal and six compiled archive hashes. The complete Sources UX job closes; full current seven/size, physical VoiceOver and Apple upload do not. Stale generic native-current flags are replaced by explicit current truth; the complete older snapshot remains in state history.
+
+/root leads integration/accounting. /root/ios_recovery finished Sources and now independently investigates a known PII bracket-address miss. /root/postgres_recovery builds the account deletion/old-backup restore barrier. /root/release_recovery finishes PR155 and actual current source-boundary review. Public signup and real payments remain disabled. Assignments are dated, not permanent bots.
+
+[Sources actual proof](../runs/2026-11-24-ios-public-sources-actual.json) · [Independent integration review](../runs/2026-11-24-native-sources-integration.json) · [Scope ledger](scope-progress.md)
+
+## Real PostgreSQL account delivery — 2026-11-25T04:11:13.941347+00:00
+
+**36 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The existing signup/private-history API now works against isolated least-privileged PostgreSQL. Actual current HTTP11, separately source-bound restore5 and concurrent2 outcomes are preserved, with different ROOT source review and verified stopped owned services/unchanged main database. Public signup, customer payments and production backup/deletion recovery remain off or unqualified. This completes the registered database software job, not the whole paid product.
+
+/root leads integration/task accounting; /root/release_recovery advances PR155; /root/ios_recovery repairs the observed Share test hierarchy boundary. PostgreSQL implementation by /root/postgres_recovery is complete; its next task is architecture review. Candidate4 compiled but only1/3 Sources UI cases passed. No fresh TestFlight dashboard or physical install was verified. These are dated assignments, not background bots.
+
+[Actual database result](../runs/2026-11-24-account-postgres.json) · [Different review and current accounting](../runs/2026-11-24-postgres-account-integration.json) · [Operator guide](account-postgres.md)
+
+## Current account usability and real rollout — 2026-11-24T18:03:56.296255+00:00
+
+**35 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** Saved history now filters by result, shows its public method and retries failures without stale entries; authenticated web reads are bound to the displayed session. Actual current Chromium/WebKit workflow and different source review pass. PostgreSQL operation, early native Sources navigation and protected fitting-source publication are active bounded jobs. No real payment, public account collection, new app upload or fresh TestFlight availability is claimed. The latest actual Apple observation remains November21 Testing/owner Invited; today’s browser transport is unavailable.
+
+[Actual filter/read-binding evidence](../runs/2026-11-24-history-filter-session-binding.json) · [Current working account guide](account-history-ui.md)
+
+## Working signup and private history — 2026-11-24T17:14:12.021406+00:00
+
+**34 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The registered account integration job now completes actual signup, server-owned access, PS-summary save, revisit, sign-in, export/deletion after access revocation and account removal in Chromium/WebKit. A separately reproduced stale-principal display defect is corrected with four actual full-JS inert regressions. Public signup, real payments, production PostgreSQL, physical phones and automatic native/extension viewing history remain separate open outcomes. /root/seo owns account implementation and next source admission; /root owns browser/access integration, review and publication; /root/web_camo continues current native size qualification; /root/share_debugger implements mandatory selected C2PA notice carrying. These are dated assignments, not permanent bots.
+
+[Actual account/browser evidence](../runs/2026-11-24-account-history-browser.json) · [User/operation guide](account-history-ui.md)
+
+## Working accounts, history access and image reference — 2026-11-24T16:18:02.427997+00:00
+
+The complete image reference-repair job now passes its actual17-case engineering gate and all3 numerical comparisons, with separate ROOT authenticated provider review. It does not measure AI-image detection accuracy. The independent private operator access engine also works and has a different source reviewer; no money is processed. These are two completed scoped jobs, not original requirement closures.
+
+**136 complete /66 open** remains the original count. Signup/session/private history API and browser integration are active: /root/seo owns account/storage/API, /root owns browser/access integration. /root/web_camo runs independent native layout checks while preserving the current seven-flow failure; /root/share_debugger repairs current-source distribution and actual missing upstream notices. No permanent bot or public account launch is claimed.
+
+[Image reference acceptance](../runs/2026-11-24-image-reference-qualified.json) · [Working private access engine](../runs/2026-11-24-history-access-engine.json)
+
 ## Image reference, iPhone Clear and source-consumer repair — 2026-11-24T15:20:15.735780+00:00
 
 Originals remain **136 complete /66 open; target60 unmet**. No original percentage or acceptance criterion changed. The three scoped jobs below are active, not closed.
@@ -804,3 +872,10 @@ remain separate gates; no original or scoped task count is increased here.
 The web/runtime worker continues the actual five-file grant/source-offer map,
 including the newly established hiwire MPL source-form obligation.
 Originals remain136complete/66open; scoped finished-job count remains30.
+
+
+## Native qualification and causal product work — 2026-11-25T07:00:18.468795+00:00
+
+The exact c721 full7 App/Share workflows passed; the separate unchanged4x3 matrix stopped after Small3passes at Regular/light-standard keyboard reachability. Both source-bound public records and owned cleanup are integrated. The new Done editing and drag-dismissal product repair is source-reviewed on ab328; fresh full7 is active at this snapshot and the original matrix remains required. This is not an original or full Clear-job closure.
+
+PII live replay harness corrections and per-event/Clear history recovery continue independently; neither a reviewed harness nor a partially passed recovery run is complete. V6 source publication waits current qualified handoffs. Apple sign-in is an owner gate; continue independent work. Counts remain136complete/66open originals and38completed scoped jobs/44records.

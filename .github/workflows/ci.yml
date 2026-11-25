@@ -91,6 +91,8 @@ jobs:
         run: |
           python scripts/verify-conformance-delivery.py
           python -m pytest tests/test_conformance_vectors.py tests/test_conformance_delivery.py -q
+      - name: Refuse stale private account views without a browser or credentials
+        run: node tests/account-ui-state.cjs
       - name: Validate source-bound service timing and refuse altered measurements
         run: node --test tests/pipeline-timing.cjs
       - run: make verify-primitives
@@ -114,6 +116,8 @@ jobs:
           python -m pytest tests/test_visual_score_budget.py -q
           python scripts/prepare-visual-score-qualification.py check-lock
       - run: python -m pytest tests/test_gateway_integration.py -q
+      - name: Exercise optional accounts and history without coupling free tags or payments
+        run: python -m pytest tests/test_account_core.py tests/test_account_store.py tests/test_account_api.py tests/test_history_entitlements.py -q
       - name: Exercise current source-copy and managed-source software boundaries
         run: python -m pytest tests/test_source_release_policy_v4.py tests/test_source_snapshot_admission.py tests/test_source_snapshot_managed.py tests/test_source_release_policy_v3.py tests/test_source_snapshot_workflow.py -q
       - name: Exercise finite runtime notices, web artifacts, iOS projections and MT private export

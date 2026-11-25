@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-041532-ios-sources-portal-review-limit-b038b8d7",
+  "recorded_at": "2026-11-25T04:15:32.826234+00:00",
+  "author": "Codex /root/ios_recovery; different review Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "97221b5a5c1380f4f3ca6cfe17943097ec6ce5e0",
+  "changed": "Document the observed sibling-popup compatibility boundary and independent review of the Sources observer correction.",
+  "proves": "Actual saved Hiwire diagnostics show two roots, two regions and zero nested popup pruning across three presented observations; the exact extracted visitor passes eight inert controls. ROOT reviewed the full correction.",
+  "limits": "Multiple descendant portals fail closed. Future nested OS compatibility and changed actual native execution remain unverified; no original requirement closes.",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "files": {
+    "docs/ios-simulator-matrix-plan.md": "917cb28285ad6b37cdac4907779e6c2e2004dbd742fd6e55a1dd23e65bbfe70c",
+    "docs/ios-simulator-matrix.md": "7982376438e7513604f80a82bc4ee5affb5d287c0fd99b4d8c43ebf9d474a365",
+    "runs/2026-11-24-ios-sources-remote-portal-review.json": "549ff2f98c26b7ab1a678883808073b2633f12937f236d88087e9b2ed6c6d669"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-sources-remote-portal-review.json",
+      "sha256": "549ff2f98c26b7ab1a678883808073b2633f12937f236d88087e9b2ed6c6d669"
+    }
+  ],
+  "checks": []
+}

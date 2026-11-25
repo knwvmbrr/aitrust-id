@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-080809-pii-qualified-integration-f309d0df",
+  "recorded_at": "2026-11-25T08:08:09.987386+00:00",
+  "author": "Codex /root; worker /root/release_recovery; review /root/postgres_recovery",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "9c3b8435bc4b31c53ecf2e228e97dbfdbb9fd016",
+  "changed": "Complete and integrate the registered bracket-address software job after genuine stable two-process gateway/redactor/replay; update scope, state and delivery accounting.",
+  "proves": "Actual72e56 records8 controls,5 real redactor calls and2 fresh processes with full method identity and original-record replay matching. Different actual review4f89 and PM accounting review6ea0d643119856784040b086d605e48764c0e4e50b89828f930645b6a046f397 verify source, cleanup, unchanged criteria and39 scoped jobs. Earlier premature closure and withdrawal remain immutable.",
+  "limits": "Original136complete66open and fullPII80 remain unchanged; target60 is unmet. Installed service unchanged, current-source admission and rebuilt serving pipeline still pending. No independent accuracy, human acceptance, native matrix, TestFlight install, signup or payment activation.",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "files": {
+    "README.md": "4fc0b2155d8b297d65b04e7380e9f29829927ac67c51b22a150a0973961b9bf8",
+    "docs/scope-progress.json": "f8dc18f7b61a40fa7374e4371326921a0490c4356b63a8950da503f0c7f83935",
+    "docs/scope-progress.md": "41ab6690ed1a3a63fc2fb66d582c84e858e5025295d383cc8eabe2f8137527f5",
+    "docs/session-delivery-plan.md": "4bd48edc12f2a26f4be95f3a447582787326b54aba0e9ddfd64ef04c708940cf",
+    "docs/session-delivery.json": "66c869fcf8d8c393fab5a027f7388e0c92104d2b2490c7697b8faf857dd8adb3",
+    "state.json": "644793cee247fbb391fcd861736ebd9715808d04ecad30674831e73f56420849",
+    "runs/2026-11-25-pii-bracket-address-qualified-integration.json": "40b030cc912262606dfe09fb5a8bd9c8c994e35215b8ca499134b6eb8a7bdf3f"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-pii-bracket-address-qualified-integration.json",
+      "sha256": "40b030cc912262606dfe09fb5a8bd9c8c994e35215b8ca499134b6eb8a7bdf3f"
+    },
+    {
+      "path": "runs/2026-11-25-pii-bracket-address-live-replay.json",
+      "sha256": "72e56e975719edfbc5ab50e99789bec44e2ceca3410761d3ed870a8df743ab0c"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-25T08:08:10.947535+00:00"
+    }
+  ]
+}

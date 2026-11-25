@@ -45,6 +45,7 @@ CONSUMERS={
   'tools/source_release_policy_v3.py','eval/dependencies/source-snapshot-additions-v3.json',
   'tools/source_release_policy_v4.py','eval/dependencies/source-snapshot-additions-v4.json',
   'tools/source_release_policy_v5.py','eval/dependencies/source-snapshot-additions-v5.json',
+  'tools/source_release_policy_v6.py','eval/dependencies/source-snapshot-additions-v6.json',
   'tools/source_snapshot_admission.py','tools/source_snapshot_managed.py','scripts/verify-managed-source.py',
   'docs/source-snapshot-managed-consumer.md'),
  'web-checker':('site/package.json','site/scripts/prepare.mjs','tools/web_distribution.py'),

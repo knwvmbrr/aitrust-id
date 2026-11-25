@@ -47,7 +47,10 @@ jobs:
             'scripts/build-source-snapshot.py','scripts/verify-source-provenance.py','tools/distribution_artifacts.py',
             'tests/test_source_snapshot_v3.py','tests/test_source_provenance.py','tests/test_distribution_artifacts.py',
             '.github/workflows/source-snapshot-v3.yml','docs/source-snapshot-v3-plan.md',
-            'tools/artifact_evidence_io.py','tests/test_artifact_evidence_io.py','docs/artifact-io-ownership-plan.md']
+            'tools/artifact_evidence_io.py','tests/test_artifact_evidence_io.py','docs/artifact-io-ownership-plan.md',
+            'tools/source_release_policy_v6.py','eval/dependencies/source-snapshot-additions-v6.json',
+            'tools/source_snapshot_admission.py','eval/dependency-policy.json',
+            'tests/test_source_release_policy_v6.py','tests/test_source_snapshot_admission.py','.github/workflows/artifact-sbom.yml']
           before={p:hashlib.sha256((root/p).read_bytes()).hexdigest()for p in source_paths}
           result['failure_stage']='focused_controls'
           try:

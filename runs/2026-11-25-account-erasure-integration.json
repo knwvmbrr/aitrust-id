@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "profile": "reviewed-account-erasure-integration/v1",
+  "captured_at": "2026-11-25T05:24:24.475359+00:00",
+  "pass": true,
+  "claim_level": "engineering_only",
+  "source_base": "039777f9ae17ad6ad6e32ad3f08429ca99a138fe",
+  "author_commit": "3f98f7a89f41a9db0bf4471cf211f42f97e04b22",
+  "completed_by": "Codex /root/postgres_recovery",
+  "reviewed_by": "Codex /root",
+  "scope_ids": [
+    "F-044",
+    "N-010"
+  ],
+  "enhancement_id": "ENH-PERSONAL-TAG-HISTORY",
+  "delivered": "Whole-account deletion suppression after restoring an older PostgreSQL backup, using migration002, bounded durable journal and source/dump/backend-bound reconciliation before admission.",
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-account-erasure.json",
+      "sha256": "1d70869f3e4ffc1ed027ac8ba5772a45fcd585d81e6c751171c902ea23b76cae"
+    }
+  ],
+  "different_review": {
+    "sha256": "3893f14d93c2b4d897ed2e86cf3e5cefa0c7389e1eba61e1665e3f752c037e52",
+    "pass": true,
+    "runtime_source_files": 27,
+    "actual_phases": 18,
+    "actual_case_groups": 12,
+    "workflow_seconds": 11.07532516028732
+  },
+  "original_counts": {
+    "total": 202,
+    "complete": 136,
+    "open": 66,
+    "target_open": 60
+  },
+  "original_requirement_closures": [],
+  "scoped_jobs_complete": 38,
+  "public_signup_enabled": false,
+  "customer_payment_processed": false,
+  "production_collection_enabled": false,
+  "actual_cleanup": {
+    "owned_cluster_socket_and_http_stopped": true,
+    "main_critical_snapshot_unchanged": true,
+    "main_application_tables": 0
+  },
+  "testflight": {
+    "fresh_status": "UNVERIFIED",
+    "reason": "No computer-use transport; Chrome Apple Events page inspection is disabled. Read-only fallback refused; browser security setting unchanged.",
+    "latest_actual_build_status": "Testing",
+    "build_status_observed_on": "2026-11-21",
+    "owner_invitation_observed_on": "2026-11-18",
+    "physical_install_confirmed": false,
+    "new_upload": false
+  },
+  "limits": [
+    "Private synthetic dedicated-cluster software, not public signup, customer billing or production recovery.",
+    "Actual operator-selected source checkpoint does not prove independent latest-journal custody or source-unavailable recovery.",
+    "Individual history-event deletion/clear restore suppression, production encryption/expiry, password recovery and native/extension display binding remain separate.",
+    "The genuine seven-day journal boundary does not prove production backups expire in seven days; repository backup configuration selects two weekly full sets.",
+    "No current full-seven/size native, physical/human or independent tag-accuracy acceptance; six full original closures are still needed to reach60."
+  ],
+  "accounting_semantics": "Formal scope, accountability and board checks are executed after this immutable integration record is written; their execution belongs to the fresh change event and private check logs."
+}

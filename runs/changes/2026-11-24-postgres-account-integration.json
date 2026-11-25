@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-24-postgres-account-integration",
+  "recorded_at": "2026-11-25T04:11:13.941347+00:00",
+  "author": "Codex /root; PostgreSQL author /root/postgres_recovery",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "763e9c67f7c6debe462cc3d2bb39fea066461e75",
+  "changed": "Integrate the reviewed real PostgreSQL account/history implementation, close its registered scoped job and reconcile current scope, worker assignments and TestFlight limits.",
+  "proves": "Exact author commit preserved in normal merge; different10-file review and3critical controls, actual final HTTP11/source-bound restore5/concurrency2 and stopped owned service/unchanged main. Scope202 and36 scoped jobs verified; original136complete/66open remains.",
+  "limits": "No public signup, real billing, production recovery/collection, fresh Apple dashboard or iPhone installation, new upload, native Sources acceptance, independent tag accuracy or original closure. Worker N-013 template metadata earns no native credit.",
+  "scope_ids": [
+    "F-044",
+    "N-010"
+  ],
+  "files": {
+    "docs/scope-progress.json": "9a1bea69427b5601100546bd14c6b849487a465d88a7cfb0c7799c86337839f6",
+    "docs/scope-progress.md": "188933f59f2646277389b8bfd7036d22f06894c846eb78404b125b2b969ee980",
+    "docs/session-delivery-plan.md": "7e967b8585f276fba3499611ace7b8fb137cfd76347ff94080d209bdd8d06b30",
+    "docs/session-delivery.json": "a9dea40dace1602c2950912468b2499f73b0df70b7fce9f9f97340d23c9360ad",
+    "state.json": "e65be8ff47925a57c4b4b545d3cf28c5415a3eb0cbe86ed7d39dcebd25bde3e2",
+    "runs/2026-11-24-postgres-account-integration.json": "16c6fe811f1cdbb947d9b31d46507a067760ad2f5d2778d29f88f485076703d1"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-postgres-account-integration.json",
+      "sha256": "16c6fe811f1cdbb947d9b31d46507a067760ad2f5d2778d29f88f485076703d1"
+    }
+  ],
+  "checks": []
+}

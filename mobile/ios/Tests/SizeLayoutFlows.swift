@@ -55,6 +55,38 @@ final class SizeLayoutFlows: XCTestCase {
         }
         print(fields.joined(separator: " "))
     }
+    private func observeClearCompletion(_ clear: XCUIElement, input: XCUIElement,
+                                        result: XCUIElement, app: XCUIApplication,
+                                        scroll: XCUIElement) {
+        let status = app.staticTexts["check-status"]
+        let beforeCleared = status.exists && status.label == "Cleared."
+        let beforeResult = result.exists
+        let beforeInput = !(input.value as? String ?? "").isEmpty
+        guard !beforeCleared, beforeResult, beforeInput else {
+            print("LAYOUT_CLEAR_COMPLETION precondition=0 preCleared=\(beforeCleared ? 1 : 0) preResult=\(beforeResult ? 1 : 0) preInput=\(beforeInput ? 1 : 0)")
+            XCTFail("Unavailable Clear precondition"); return
+        }
+        let started = ProcessInfo.processInfo.systemUptime
+        clear.tap()
+        let completed = XCTNSPredicateExpectation(
+            predicate: NSPredicate(format: "exists == true AND label == %@", "Cleared."), object: status)
+        let outcome = XCTWaiter.wait(for: [completed], timeout: 10)
+        let elapsed = ProcessInfo.processInfo.systemUptime - started
+        let elapsedField = elapsed.isFinite && elapsed >= 0 ? " elapsed=\(elapsed)" : ""
+        if outcome != .completed {
+            let afterCleared = status.exists && status.label == "Cleared."
+            let afterResult = result.exists
+            let empty = input.value == nil || (input.value as? String) == ""
+            let keyboard = app.keyboards.firstMatch.exists
+            let appFrame = app.frame, scrollFrame = scroll.frame, inputFrame = input.frame
+            print("LAYOUT_CLEAR_COMPLETION precondition=1 completed=0 postCleared=\(afterCleared ? 1 : 0) postResult=\(afterResult ? 1 : 0) postInputEmpty=\(empty ? 1 : 0) keyboard=\(keyboard ? 1 : 0)\(elapsedField)")
+            geometryDiagnostic(appFrame, scrollFrame, inputFrame,
+                               scrollFrame.intersection(appFrame), role: .input, attempt: 0)
+        } else {
+            print("LAYOUT_CLEAR_COMPLETION precondition=1 completed=1\(elapsedField)")
+        }
+        XCTAssertEqual(outcome, .completed, "Expected explicit Clear completion")
+    }
     private func assertClearedEditorReturned(_ input: XCUIElement, app: XCUIApplication, scroll: XCUIElement) {
         guard input.exists else {
             print("LAYOUT_CLEAR_EDITOR exists=0")
@@ -120,13 +152,42 @@ final class SizeLayoutFlows: XCTestCase {
     private func readableControl(_ element: XCUIElement, app: XCUIApplication, enabledAction: Bool = true) {
         XCTAssertTrue(element.exists)
         if enabledAction { XCTAssertTrue(element.isHittable) }
-        XCTAssertTrue(finite(element.frame) && app.frame.contains(element.frame))
-        XCTAssertGreaterThanOrEqual(element.frame.height, 44)
+        let expectedKind = element.elementType, expectedIdentifier = element.identifier
+        let labelCount = element.staticTexts.count
+        guard labelCount <= 4 else { XCTFail("Unsupported control label count"); return }
+        let appFrame = app.frame
+        guard let snapshot = try? element.snapshot(), snapshot.elementType == expectedKind,
+              snapshot.identifier == expectedIdentifier else {
+            XCTFail("Unavailable control snapshot identity"); return
+        }
+        let controlFrame = snapshot.frame
+        XCTAssertTrue(finite(controlFrame) && appFrame.contains(controlFrame))
+        XCTAssertGreaterThanOrEqual(controlFrame.height, 44)
+        // Snapshot traversal is bounded; SDK-internal allocation is not claimed.
+        // Live cardinality prevents a partial tree silently dropping labels.
+        var labelFrames: [CGRect] = []
+        var nodes = 0
+        var complete = true
+        func visit(_ node: any XCUIElementSnapshot, depth: Int) {
+            guard complete else { return }
+            guard depth <= 16, nodes < 64 else { complete = false; return }
+            nodes += 1
+            if depth > 0 && node.elementType == .staticText {
+                guard labelFrames.count < 4 else { complete = false; return }
+                labelFrames.append(node.frame)
+            }
+            for child in node.children {
+                visit(child, depth: depth + 1)
+                if !complete { return }
+            }
+        }
+        visit(snapshot, depth: 0)
+        guard complete, labelFrames.count == labelCount else {
+            XCTFail("Incomplete control label snapshot"); return
+        }
         // Geometry alone is not proof of full-glyph readability; PNG review is required.
-        let labels = element.staticTexts
-        XCTAssertLessThanOrEqual(labels.count, 4)
-        for label in labels.allElementsBoundByAccessibilityElement {
-            XCTAssertTrue(finite(label.frame) && element.frame.contains(label.frame), "Control label clipped")
+        for frame in labelFrames {
+            XCTAssertTrue(finite(frame) && controlFrame.contains(frame), "Control label clipped")
         }
     }
     private func enter(_ text: String, input: XCUIElement, app: XCUIApplication, scroll: XCUIElement) {
@@ -195,7 +256,8 @@ final class SizeLayoutFlows: XCTestCase {
         XCTAssertTrue(result.label.contains("No PS pattern found"))
         XCTAssertTrue(result.label.contains("not a safety clearance"))
         let clear = app.buttons["clear"]
-        reveal(clear, app: app, scroll: scroll); readableControl(clear, app: app); clear.tap()
+        reveal(clear, app: app, scroll: scroll); readableControl(clear, app: app)
+        observeClearCompletion(clear, input: input, result: result, app: app, scroll: scroll)
         XCTAssertFalse(result.exists)
         XCTAssertTrue(input.value == nil || (input.value as? String) == "")
         assertClearedEditorReturned(input, app: app, scroll: scroll)
@@ -212,7 +274,8 @@ final class SizeLayoutFlows: XCTestCase {
         XCTAssertFalse(evidence.frame.intersects(result.frame))
         screenshot(app, name: "size-layout-evidence")
         reveal(why, app: app, scroll: scroll); why.tap(); XCTAssertFalse(evidence.exists)
-        reveal(clear, app: app, scroll: scroll); clear.tap(); XCTAssertFalse(result.exists)
+        reveal(clear, app: app, scroll: scroll)
+        observeClearCompletion(clear, input: input, result: result, app: app, scroll: scroll); XCTAssertFalse(result.exists)
         XCTAssertTrue(input.value == nil || (input.value as? String) == "")
         assertClearedEditorReturned(input, app: app, scroll: scroll)
         let practice = app.buttons["practice-share"]
@@ -224,6 +287,15 @@ final class SizeLayoutFlows: XCTestCase {
         privacy.tap()
         let table = app.tables.firstMatch
         XCTAssertTrue(table.waitForExistence(timeout: 10))
+        let sources = app.cells["privacy-open-sources"]
+        reveal(sources, app: app, scroll: table); readableControl(sources, app: app)
+        sources.tap()
+        for id in ["js", "zlib", "hiwire"] {
+            let source = app.cells["privacy-source-" + id]
+            reveal(source, app: app, scroll: app.tables.firstMatch); readableControl(source, app: app)
+        }
+        let allNotices = app.buttons["privacy-source-index"]
+        XCTAssertTrue(allNotices.exists && allNotices.isEnabled && allNotices.isHittable); allNotices.tap()
         let appNotice = app.cells["privacy-entry-app"]
         reveal(appNotice, app: app, scroll: table); readableControl(appNotice, app: app)
         appNotice.tap()
@@ -251,9 +323,8 @@ final class SizeLayoutFlows: XCTestCase {
         XCTAssertEqual(text.value as? String, content)
         screenshot(app, name: "size-layout-notices")
         app.buttons["privacy-index"].tap()
-        let source = app.cells["privacy-source-js"]
-        reveal(source, app: app, scroll: table); readableControl(source, app: app)
-        // Reachability only. Source sharing/cancel uses the separate real seven-flow proof.
+        // All three sources were reachable above; the separate archive cohort
+        // verifies each actual presentation/cancel without combining proof counts.
         let done = app.buttons["privacy-done"]
         XCTAssertTrue(done.exists && done.isEnabled && done.isHittable); done.tap()
         XCTAssertTrue(app.wait(for: .runningForeground, timeout: 5))

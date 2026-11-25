@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-041639-ios-sources-portal-native-inputs-85bd8262",
+  "recorded_at": "2026-11-25T04:16:39.114837+00:00",
+  "author": "Codex /root/ios_recovery; different review Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "97221b5a5c1380f4f3ca6cfe17943097ec6ce5e0",
+  "changed": "Freeze the current Sources observer input register for one separately reviewed native candidate.",
+  "proves": "The same115 authored source paths bind current bytes; only the five reviewed UI, matrix and documentation inputs changed. ROOT independently verified the source diff and raw evidence identities.",
+  "limits": "An input register is not a native pass. The separately pinned actual manifest remains input116 in the private runner; original seven, matrix, TestFlight and human gates remain open.",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094",
+    "F-142"
+  ],
+  "files": {
+    "runs/2026-11-24-ios-sources-portal-native-inputs.json": "a26c93c12eeed9b535d3d0581b27ed131fe971e0edd6702b1dde8431cca58764"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-ios-sources-portal-native-inputs.json",
+      "sha256": "a26c93c12eeed9b535d3d0581b27ed131fe971e0edd6702b1dde8431cca58764"
+    }
+  ],
+  "checks": []
+}
