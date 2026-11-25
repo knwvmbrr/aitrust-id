@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-account-postgres
+
+Recorded 2026-11-25T04:07:47.490298+00:00 · Contributor: Codex /root/postgres_recovery; different source reviewer /root · change
+
+- **Changed.** Deliver the same reviewed signup and private-history domain/API on real least-privileged Unix-peer PostgreSQL, with a closed bound-SQL adapter, isolated dependency lock, transactional schema, typed commit uncertainty and observer-independent owned cleanup.
+- **Evidence.** Final current real PostgreSQL/HTTP11 groups pass4.391s; source-attributed restore5 and concurrent2 pass. Real rollback/privilege refusals, dump recovery and unchanged main/stopped owned processes are recorded. Twelve focused inert controls pass; different ROOT source review and three critical controls pass0.013s. No successful runtime or provisioning was replayed after restart. [Change record](./runs/changes/2026-11-24-account-postgres.json).
+- **Not claimed.** Private synthetic PostgreSQL component only; no public signup, real subscription/payment, production collection, backup deletion reconciliation, password recovery, Apple upload, physical accessibility, independent tag accuracy, native/transitive license clearance, new distribution route or original requirement closure. Original136complete/66open is unchanged. Idle PSS is not peak usage or an enforced whole-runtime memory cap.
+
+
 ### 2026-11-24-history-filter-session-binding
 
 Recorded 2026-11-24T18:03:56.296255+00:00 · Contributor: Codex /root; different source reviewer /root/web_camo · change
