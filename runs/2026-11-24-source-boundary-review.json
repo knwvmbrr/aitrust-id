@@ -1,0 +1,164 @@
+{
+  "actual_authenticated_producer": {
+    "all5_actual_capability_results": {
+      "PII_REDACTED": {
+        "assessment": {
+          "capability": "PII_REDACTED",
+          "failures": [],
+          "independent_accuracy_evidence": false,
+          "pass": true,
+          "release_approved": false,
+          "revalidation_required": false
+        },
+        "checks": 6,
+        "fingerprint": "329a2618630ba145edb92e44a6669eaedf240eac9a0b151bea8ad1004e17ecf5",
+        "raw_bytes": 13249,
+        "raw_sha256": "a063bb2804b2838409526e4ce9166f77d8dff0a4fe9f6d4ac7a56501ac65ea98"
+      },
+      "PS": {
+        "assessment": {
+          "capability": "PS",
+          "failures": [],
+          "independent_accuracy_evidence": false,
+          "pass": true,
+          "release_approved": false,
+          "revalidation_required": false
+        },
+        "checks": 7,
+        "fingerprint": "157c7972c3a570beed951ad47549d032b0174a37391fd8a440dbefc291df87e4",
+        "raw_bytes": 11210,
+        "raw_sha256": "7430c17e25d7f1e44c508419bb7e183b28ed21d167de110280fdf720f2cc52a1"
+      },
+      "extension": {
+        "assessment": {
+          "capability": "extension",
+          "failures": [],
+          "independent_accuracy_evidence": false,
+          "pass": true,
+          "release_approved": false,
+          "revalidation_required": false
+        },
+        "checks": 14,
+        "fingerprint": "2406c50724e4f71752e26ccb2d31f3e36d09638748e8e09258ecaa19fe7498ef",
+        "raw_bytes": 17333,
+        "raw_sha256": "d66d83a9080010ee003abf1da585d2d6043a1c8f4a7c0f68f69e75519e3a283b"
+      },
+      "protocol": {
+        "assessment": {
+          "capability": "protocol",
+          "failures": [],
+          "independent_accuracy_evidence": false,
+          "pass": true,
+          "release_approved": false,
+          "revalidation_required": false
+        },
+        "checks": 79,
+        "fingerprint": "c4669b3c18b781e80ca61432bfb3ae415dd59d9961d3849b9326d7d1d73d0af8",
+        "raw_bytes": 1267718,
+        "raw_sha256": "0963b7b3654d97554824b6421e6eadfc8ced502f75d5698c0e32a923141aca1b"
+      },
+      "website": {
+        "assessment": {
+          "capability": "website",
+          "failures": [],
+          "independent_accuracy_evidence": false,
+          "pass": true,
+          "release_approved": false,
+          "revalidation_required": false
+        },
+        "checks": 66,
+        "fingerprint": "e42b41f34cb78bea2754ef9aa785f2af6ebb04330f9c6a2afec6aeef885bee4c",
+        "raw_bytes": 303316,
+        "raw_sha256": "cbb2e60b8295eeb7bf25b4a45ae911a207dbc6e0ad35c798b9bbd3d5cfb4ecc8"
+      }
+    },
+    "all_website_checks_exit0": true,
+    "artifact_bytes": 434758,
+    "artifact_id": 14993199936,
+    "artifact_name": "current-delivery-evidence-1",
+    "artifact_provider_retention_until": "2026-12-02T05:05:55Z",
+    "artifact_sha256": "d445fa2dddfb4d2e7f1ec6d745d837627666d64b16e7c3b959c3a6e9cb189a26",
+    "head_sha": "5a50f3b70fb87b3f915f36d0f214d78f37bb0cf6",
+    "job_id": 138984867422,
+    "other_four_raw_reports_retained_privately": true,
+    "run_id": 45548840078,
+    "url": "https://github.com/knwvmbrr/aitrust-id/actions/runs/45548840078",
+    "website_checks": 66,
+    "website_raw_bytes": 303316,
+    "website_raw_sha256": "cbb2e60b8295eeb7bf25b4a45ae911a207dbc6e0ad35c798b9bbd3d5cfb4ecc8",
+    "website_raw_untouched": true,
+    "website_source_stable": true
+  },
+  "actual_distinct_review": {
+    "raw_utf8": "{\n  \"recorded_at\": \"2026-11-25T05:15:20.573439+00:00\",\n  \"reviewer\": \"Codex PM root\",\n  \"worker\": \"release_recovery\",\n  \"pass\": true,\n  \"selected_two_freeze_sha256\": \"44f2ceacddd4f3c3ce7ee955dd9bcc8635ebe22f7f282827dfac2167a3e9c186\",\n  \"genuine_provider_artifact\": 14993199936,\n  \"provider_run\": 45548840078,\n  \"byte_exact_raw_website_sha256\": \"cbb2e60b8295eeb7bf25b4a45ae911a207dbc6e0ad35c798b9bbd3d5cfb4ecc8\",\n  \"all2131_full_fingerprint_current_and_prefrozen\": true,\n  \"all66_actual_commands_exit0\": true,\n  \"current_assessment_pass\": true,\n  \"manifest_current8499_inventory_changes\": 23,\n  \"manifest_semantic_changes\": [\n    \"engineering_receipts\",\n    \"reviewed_at\",\n    \"reviewed_by\",\n    \"sources\"\n  ],\n  \"all_other_rules_and_selected_extension_unchanged\": true,\n  \"guard36_log_digest\": \"d675a198baa096b2fa5c2461d891d91632d1fa8dffdece1840349fb6af03076c\",\n  \"no_local_66_command_replay\": true,\n  \"limits\": [\n    \"Different review of selected engineering evidence only; not accuracy, legal clearance, full original closure or new native acceptance\",\n    \"Protected current-head checks and merge remain pending\",\n    \"No frozen140 source/table/policy/derived changes approved\"\n  ]\n}\n",
+    "sha256": "4a863f07c0f54c66c768582425228ecad8fb082fa7290ae7f895ee039cac3b40"
+  },
+  "actual_route_guard": {
+    "arguments": [
+      "-B",
+      "-m",
+      "pytest",
+      "tests/test_route_boundaries.py",
+      "-q"
+    ],
+    "exit_status": 0,
+    "interpreter": "Existing Python3.12.14 verification environment matching all37 gateway/evaluation lock pins; exact private argv retained in the private execution receipt.",
+    "seconds": 23.44,
+    "stderr_bytes": 0,
+    "stdout": "....................................                                     [100%]\n36 passed in 23.44s\n",
+    "stdout_sha256": "d675a198baa096b2fa5c2461d891d91632d1fa8dffdece1840349fb6af03076c",
+    "tests": 36
+  },
+  "author": "Codex /root/release_recovery",
+  "captured_at": "2026-11-25T05:17:03.080695+00:00",
+  "claim_level": "engineering_only",
+  "current_route_selection_pass": true,
+  "files": {
+    "eval/route-boundaries.json": {
+      "bytes": 1332860,
+      "sha256": "8c63064e95635248a5c8db7b9a42fa59d31663f3e4963b50f9d43ebc4898d15e"
+    },
+    "runs/2026-11-24-source-boundary-website.json": {
+      "bytes": 303316,
+      "sha256": "cbb2e60b8295eeb7bf25b4a45ae911a207dbc6e0ad35c798b9bbd3d5cfb4ecc8"
+    }
+  },
+  "frozen_source_table_registry_and_derived_files_unchanged": true,
+  "independent_release_validated": false,
+  "limits": "Engineering source/receipt consistency only. No frozen140 source/table/registry changes, old-report rebinding or local browser/native replay. New-head required CI/capacity/reviews and protected mergeSHA publisher/signature/consumer qualification remain required. No accuracy, legal/AUTH, fullnative/physical/VoiceOver/TestFlight/all14 approval or original closure;136complete66open unchanged.",
+  "manifest_selection": {
+    "changed_fields": [
+      "reviewed_at",
+      "reviewed_by",
+      "sources",
+      "engineering_receipts.website"
+    ],
+    "current_manifest_sha256": "8c63064e95635248a5c8db7b9a42fa59d31663f3e4963b50f9d43ebc4898d15e",
+    "historical_manifest_sha256": "33249a0b5b03d5b07901eef61ae67341e8352ba691be5013903e1c58d4e5103a",
+    "old_nov23_execution_reports_unchanged": true,
+    "other_receipts_rules_endpoints_and_independent_approval_false_preserved": true,
+    "source_inventory_count": 8499,
+    "source_inventory_delta_count": 23
+  },
+  "original_scope_counts_changed": false,
+  "pass": true,
+  "prior_diagnoses_preserved": {
+    "aea_website_all66_behavior_checks_passed_but_source_unstable": true,
+    "f532_and_aea_native_failed_no_new_native_pass_claim": true,
+    "metadata_generation_root_cause": "Three expected scope JSON derivatives were stale; their reviewed140-source refresh was committed before genuine website execution.",
+    "unchanged_automatic_native_runs_explicitly_cancelled": [
+      45544558775,
+      45548840147
+    ]
+  },
+  "profile": "current-route-genuine-website-selection/v1",
+  "release_authorized": false,
+  "reserved_path_date_is_session_identifier": true,
+  "selected_website_public_path": "runs/2026-11-24-source-boundary-website.json",
+  "source_base": "5a50f3b70fb87b3f915f36d0f214d78f37bb0cf6",
+  "source_freeze_sha256": "44f2ceacddd4f3c3ce7ee955dd9bcc8635ebe22f7f282827dfac2167a3e9c186",
+  "source_policy_frozen_at_140_of_160": true,
+  "website_fingerprint": "e42b41f34cb78bea2754ef9aa785f2af6ebb04330f9c6a2afec6aeef885bee4c",
+  "website_fingerprint_full_equal_before_execution_receipt_and_current": true,
+  "website_fingerprint_sources": 2131
+}

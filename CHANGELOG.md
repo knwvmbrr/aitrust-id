@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased — 2026-11-25
+
+### 2026-11-24-source-boundary-review
+
+Recorded 2026-11-25T05:17:03.080695+00:00 · Contributor: Codex /root/release_recovery; /root distinct source and artifact review · change
+
+- **Changed.** Select the genuine frozen140 website execution and refresh the dated current-route source review, keeping every original rule, other selected receipt, permission and source-policy byte unchanged.
+- **Evidence.** Authenticated producer artifact14993199936 supplies byte-exact website receiptcbb2e60b with all66 checks passing and source stable. Its full2131-source fingerprint equals the pre-execution freeze and current tree. All36 current-route and adversarial controls pass; ROOT independently verified ZIP, raw bytes, full fingerprints and the four-field manifest delta. [Change record](./runs/changes/2026-11-24-source-boundary-review.json).
+- **Not claimed.** Engineering source/receipt consistency only. No frozen140 source/table/registry changes, old-report rebinding or local browser/native replay. New-head required CI/capacity/reviews and protected mergeSHA publisher/signature/consumer qualification remain required. No accuracy, legal/AUTH, fullnative/physical/VoiceOver/TestFlight/all14 approval or original closure;136complete66open unchanged.
+
+
 ## Unreleased — 2026-11-24
 
 ### 2026-11-24-source-boundary-preparation
