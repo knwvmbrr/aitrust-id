@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "profile": "pii-capability-identity-source-handoff/v1",
+  "captured_at": "2026-11-25T07:34:42.766053+00:00",
+  "pass": true,
+  "claim_level": "engineering_only",
+  "actual_worker": "Codex /root/release_recovery",
+  "original_bracket_recognizer_author": "Codex /root/ios_recovery",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "source_base": "bc13388e2ee134a38fbf9d0ab2217db4d62bf34b",
+  "precode_plan_sha256": "0d3816935d315d3685d61364fa8dfe451a5f44bb48d13fef79c0fe1851a548d5",
+  "architecture_ack_sha256": "e23f610a5c113186d6352f29ea60135486d5693d382674985bc6033b325b6546",
+  "source_after": {
+    "services/anonymizer/replay_metadata.py": {
+      "bytes": 2906,
+      "sha256": "a70b81241c605f9e3782d5c827e51ed7c10f299b91f73e5d9b8a4f7c8caf2981"
+    },
+    "tests/test_redactor_capability_identity.py": {
+      "bytes": 6232,
+      "sha256": "03a1b472fa464c8226ebb9dd7057ffd8302c9c77372f012c02e8780b91b9a7c5"
+    },
+    "docs/pii-capability-identity-plan.md": {
+      "bytes": 4418,
+      "sha256": "0d3816935d315d3685d61364fa8dfe451a5f44bb48d13fef79c0fe1851a548d5"
+    },
+    "docs/pii-capability-identity-result.md": {
+      "bytes": 1734,
+      "sha256": "80d8f57916a28fd753d2a3c07f43c9fa09ca37772b7e61f5c5bdb21f1d878a26"
+    }
+  },
+  "bounded_change": "Identity-only copied capability-set serialization for one concrete pinned SpacyRecognizer class; no recognizer/analyzer/pattern/context mutation.",
+  "primary_source": {
+    "receipt_sha256": "22051a8e9324f978576b26d0f01eaffc1ac0479d134bafb55ae5b95a2cf9126f",
+    "public_files": [
+      {
+        "relative_path": "entity_recognizer.py",
+        "bytes": 6578,
+        "sha256": "7f1ef1212c94400096349cef1ed19a149511c85b8a7fdb9aacf1094d83dd78a1"
+      },
+      {
+        "relative_path": "predefined_recognizers/spacy_recognizer.py",
+        "bytes": 4789,
+        "sha256": "691160226b97afbe3d15e94b38d069c68148e193e5a61ac64ca9e13efd38be5c"
+      },
+      {
+        "relative_path": "nlp_engine/spacy_nlp_engine.py",
+        "bytes": 8766,
+        "sha256": "a7be13504320623b949d3a7badd2088128b9a0806941370526390ca7b5f27271"
+      },
+      {
+        "relative_path": "recognizer_registry/recognizer_registry.py",
+        "bytes": 11412,
+        "sha256": "5c025ccfc7be0f69e3793521d8cbfbec7223c6c1f9110a87a2049fa1b5799008"
+      }
+    ],
+    "total_bytes": 31545,
+    "model_or_package_imported": false,
+    "selected_service_unchanged": true
+  },
+  "current_source_controls": {
+    "focused_controls": 11,
+    "errors": 0,
+    "failures": 0,
+    "skips": 0,
+    "receipt_sha256": "d20c15c4862ea0b00c5f072ad058298627a3a8e780031817a5d5b7d99fc298e6",
+    "actual_prior_assertion_inspection_sha256": "d8feb8de5a12b5326ded805e83fa2b7e25a9c4df2f6f44a7dc00582956b3ad75",
+    "actual_prior_assertion_result": "unavailable/historical_or_different_pipeline_sources",
+    "actual_prior_assertion_unchanged": true,
+    "model_or_HTTP_replay_executed": false
+  },
+  "historical_genuine_live_run": {
+    "raw_sha256": "cb47fb7f02e9f321c6daaa2b6898b3092761541bb0c724b56fc452fa63f5105c",
+    "different_actual_review_sha256": "3a1d7fef46f8aee2afb7384cc906a2af5d2f3c36218143a5d1ce80d50235609e",
+    "controls": 8,
+    "real_redactor_calls": 5,
+    "model_starts": 2,
+    "owned_cleanup_confirmed": true,
+    "same_process_replay_matched": true,
+    "cross_process_record_reproduced": false,
+    "cross_process_result": "unavailable/local_method_identity_differs",
+    "not_current_new_builder_evidence": true
+  },
+  "retained_verification_failure": {
+    "receipt_sha256": "9dc572ea3bfa1c4ffcdf5cdb7db846ab9fe5b5e503d3bb6059175f097f937815",
+    "reason": "Isolated pytest runner did not add project root; collection refused with zero controls executed. No package was installed or assertion rewritten. Direct unchanged protocol inspection of the genuine prior assertion is recorded separately."
+  },
+  "different_current_source_review": "PENDING ROOT; not self-approved",
+  "actual_new_two_source_replay": "NOT EXECUTED",
+  "source_method_changed": true,
+  "wire_envelope_changed": false,
+  "old_records_or_proofs_rewritten": false,
+  "analyzer_or_detection_behavior_changed": false,
+  "deployed_or_service_rebuilt": false,
+  "independent_accuracy_evidence": false,
+  "original_requirement_closures": [],
+  "tag_acceptance_percent": {
+    "F-023": 80,
+    "T-PII": 80
+  },
+  "registered_task_remains_in_review": true,
+  "original_counts": {
+    "total": 202,
+    "complete": 136,
+    "open": 66,
+    "target_open": 60
+  },
+  "limits": [
+    "Focused source/data controls are not actual new-builder model/restart evidence.",
+    "Only the one installed set-derived capability field is canonicalized; other recognizer or ordered metadata semantics are not assumed.",
+    "Different source review and fresh two-source overlay/replay with actual owned cleanup remain required.",
+    "No representative recognition, human, legal, platform, production or full original acceptance is claimed."
+  ]
+}

@@ -2,6 +2,23 @@
 
 ## Unreleased — 2026-11-25
 
+### 2026-11-25-pii-bracket-address-live-replay
+
+Recorded 2026-11-25T07:47:39.940565+00:00 · Contributor: Codex /root/release_recovery; recognizer /root/ios_recovery; distinct review /root · change
+
+- **Changed.** Qualify bracket-address gateway/redactor replay with stable capability identity across fresh processes; preserve historical failure and old records.
+- **Evidence.** Actual eight controls pass with five real redactor calls, two sequential starts, 29 model assets verified per start, full identity equality and original-record Matched replay after restart. Different review verifies bytes and owned cleanup; staging and sources stay unchanged. [Change record](./runs/changes/2026-11-25-pii-bracket-address-live-replay.json).
+- **Not claimed.** Engineering replay defect only; no staging deployment, independent accuracy, human acceptance, current source admission, tag release or original requirement closure. PII80 and136complete66open unchanged; PM owns registered software-job closure after integration.
+
+
+### 2026-11-25-pii-capability-identity-source
+
+Recorded 2026-11-25T07:34:42.766053+00:00 · Contributor: Codex /root/release_recovery; original bracket recognizer /root/ios_recovery · change
+
+- **Changed.** Canonicalize one proven set-derived Spacy capability field in copied identity metadata while preserving detector operation and ordered fields.
+- **Evidence.** Eleven focused source controls pass. Actual installed primary source explains the original same-source ordering defect; unchanged replay code refuses the genuine prior-source assertion without a model/HTTP call. The prior live run and its failed cross-process reproduction remain explicit. [Change record](./runs/changes/2026-11-25-pii-capability-identity-source.json).
+- **Not claimed.** Source-only handoff pending different ROOT review and fresh actual two-source stable restart/replay. New builder not deployed; old records unchanged/Unavailable, PII80,136complete66open and registered taskinreview unchanged. No source proof rebound or model behavior/accuracy claim.
+
 ### 2026-11-25-054424-pii-result-guide-accuracy-wording-2ed0fbd0
 
 Recorded 2026-11-25T05:44:24.374280+00:00 · Contributor: Codex /root/ios_recovery; wording review Codex /root · change
