@@ -1,0 +1,40 @@
+{
+  "author": "Codex /root/release_recovery; /root distinct source review",
+  "changed": "Prepare a fixed140-of160 source policy for three derived scope metadata files and five explicit preparation/website/selection records; retain the old route manifest and its stale-website refusal until genuine fresh execution.",
+  "checks": [],
+  "claim_level": "engineering_only",
+  "distinct_review": {
+    "raw_utf8": "{\n  \"reviewed_at\": \"2026-11-25T04:40:46.065935+00:00\",\n  \"reviewer\": \"Codex /root\",\n  \"pass\": true,\n  \"source_base\": \"aea0e6965da921dc0d3dd1d878e939eff1a8a490\",\n  \"source\": {\n    \"site/public/reference/public-scope.json\": {\n      \"before\": \"6441f2970b8e2c72fe91d968f97e2c400a5de383c9a9f40e11e89c6c882c03e2\",\n      \"proposed\": \"595a80d5a0ac68843da4032877964940b259326474c29d41365a9472e142e744\",\n      \"bytes\": 750002,\n      \"payload\": \"0.txt\"\n    },\n    \"site/src/public-scope.json\": {\n      \"before\": \"6441f2970b8e2c72fe91d968f97e2c400a5de383c9a9f40e11e89c6c882c03e2\",\n      \"proposed\": \"595a80d5a0ac68843da4032877964940b259326474c29d41365a9472e142e744\",\n      \"bytes\": 750002,\n      \"payload\": \"1.txt\"\n    },\n    \"site/src/scope-manifest.json\": {\n      \"before\": \"a2c627f15cd1f1add2c88914bc510045140920950805604f073e072947ecda4c\",\n      \"proposed\": \"dcb426b8495a98e83be9b02ca8a88068d3de74c812dfb667631941219afc9a64\",\n      \"bytes\": 2724,\n      \"payload\": \"2.txt\"\n    },\n    \"eval/dependencies/source-snapshot-additions-v5.json\": {\n      \"before\": \"f87bcb6d3927fc27f54cc236d114d8c5669996911b858067735bae0b3a57067c\",\n      \"proposed\": \"bed27448c456186eded268ef30c9b4cef6205d554f901586720bb107122fd134\",\n      \"bytes\": 63488,\n      \"payload\": \"3.txt\"\n    },\n    \"tools/source_release_policy_v5.py\": {\n      \"before\": \"068f7426386c20155c6e74934e19792bed4caeb01f441c146e7e630f81e330ec\",\n      \"proposed\": \"737b1eb4c92ced709695aed80c13b7790b7e2e51183bd21416707b37a08a56bc\",\n      \"bytes\": 32927,\n      \"payload\": \"4.txt\"\n    },\n    \"eval/dependency-policy.json\": {\n      \"before\": \"b2384d0d829edaf35e358e5927c147b7d36a6278c588d51b64f92e2f4ba4ba33\",\n      \"proposed\": \"103f1fb9eacea0a5dd1af35ac8117600fce62d3d68d896a1d9be102cfc4e3468\",\n      \"bytes\": 35104,\n      \"payload\": \"5.txt\"\n    },\n    \"tests/test_source_release_policy_v5.py\": {\n      \"before\": \"e5172b0593b7837ab46e360067bbec10dab545e428f05c4d0aad69febc80260c\",\n      \"proposed\": \"60c7ddbdce8aab124b1e50bd73951307eff88eb04cec449a9b5e3fcfc83ad42a\",\n      \"bytes\": 14983,\n      \"payload\": \"6.txt\"\n    }\n  },\n  \"scope\": [\n    \"Full seven-source prospective review: metadata-only generated scope matches actual build and preserves every originalID/percentage/requiredacceptance, two exactpubliccopies and derivedmanifest.\",\n    \"Only8newproject names and3maintenance names (5preciseevent/website paths+3derived files), total140/max160; everyotherfield including159legacy/95anchors unchanged.\",\n    \"OnlymatchingV5 tableSHA in code,2existing registrybindings and132to140literalcount. No runtimefunctions/route/rules/e72/limits/oldmanifest change.\"\n  ],\n  \"limits\": [\n    \"Stage1oldboundarymanifest correctly remainsrefusing; fresh genuine140website execution, currentfingerprint match anddifferentstage2selectionreview required.\",\n    \"Prior actualbuildexit0 with3expectedgeneratedchanges remains distinct fromcleanwrapperfalse; no new currentUI/Google/Apple/accuracy/license/fulloriginal claim.\"\n  ]\n}\n",
+    "sha256": "188be5710615cfc7c54e6e251e762a5addad43859b9795f500b539041b550acc"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-24-source-boundary-preparation.json",
+      "sha256": "dbab93b0876c43c61ad73365c89112ee0c0b73943c9ecfc5cf3002774f895d92"
+    }
+  ],
+  "files": {
+    "eval/dependencies/source-snapshot-additions-v5.json": "bed27448c456186eded268ef30c9b4cef6205d554f901586720bb107122fd134",
+    "eval/dependency-policy.json": "103f1fb9eacea0a5dd1af35ac8117600fce62d3d68d896a1d9be102cfc4e3468",
+    "runs/2026-11-24-source-boundary-preparation.json": "dbab93b0876c43c61ad73365c89112ee0c0b73943c9ecfc5cf3002774f895d92",
+    "site/public/reference/public-scope.json": "595a80d5a0ac68843da4032877964940b259326474c29d41365a9472e142e744",
+    "site/src/public-scope.json": "595a80d5a0ac68843da4032877964940b259326474c29d41365a9472e142e744",
+    "site/src/scope-manifest.json": "dcb426b8495a98e83be9b02ca8a88068d3de74c812dfb667631941219afc9a64",
+    "tests/test_source_release_policy_v5.py": "60c7ddbdce8aab124b1e50bd73951307eff88eb04cec449a9b5e3fcfc83ad42a",
+    "tools/source_release_policy_v5.py": "737b1eb4c92ced709695aed80c13b7790b7e2e51183bd21416707b37a08a56bc"
+  },
+  "id": "2026-11-24-source-boundary-preparation",
+  "independent_release_validated": false,
+  "kind": "change",
+  "limits": "The existing route manifest remains unchanged and refuses stale website evidence. No current website/browser/route pass, protected signing/AUTH, public deployment, native/TestFlight/VoiceOver, accuracy, legal/all14 approval or original closure. Actual frozen140 website evidence and the complete route guard remain required;136complete66open unchanged.",
+  "original_scope_counts_changed": false,
+  "proves": "The existing literal/foundation control passes. ROOT independently reconstructed the exact seven-file source delta and all202 original percentages/acceptance fields remain intact. Existing pinned37-package Python environment completed product build exit0; its clean-source wrapper honestly refused three expected generated JSON changes, separately reviewed and accepted.",
+  "recorded_at": "2026-11-25T04:42:40.925648+00:00",
+  "schema_version": 1,
+  "scope_ids": [
+    "F-057",
+    "X-02"
+  ],
+  "source_base": "aea0e6965da921dc0d3dd1d878e939eff1a8a490",
+  "source_freeze_sha256": "132b26982482100050922d3de7ce2236263ca02fb0aae6968820e154a889e4f9"
+}

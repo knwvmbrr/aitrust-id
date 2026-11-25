@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-source-boundary-preparation
+
+Recorded 2026-11-25T04:42:40.925648+00:00 · Contributor: Codex /root/release_recovery; /root distinct source review · change
+
+- **Changed.** Prepare a fixed140-of160 source policy for three derived scope metadata files and five explicit preparation/website/selection records; retain the old route manifest and its stale-website refusal until genuine fresh execution.
+- **Evidence.** The existing literal/foundation control passes. ROOT independently reconstructed the exact seven-file source delta and all202 original percentages/acceptance fields remain intact. Existing pinned37-package Python environment completed product build exit0; its clean-source wrapper honestly refused three expected generated JSON changes, separately reviewed and accepted. [Change record](./runs/changes/2026-11-24-source-boundary-preparation.json).
+- **Not claimed.** The existing route manifest remains unchanged and refuses stale website evidence. No current website/browser/route pass, protected signing/AUTH, public deployment, native/TestFlight/VoiceOver, accuracy, legal/all14 approval or original closure. Actual frozen140 website evidence and the complete route guard remain required;136complete66open unchanged.
+
+
 ### 2026-11-24-source-baseline-native-cohort
 
 Recorded 2026-11-25T04:14:14.834353+00:00 · Contributor: Codex /root/release_recovery; /root distinct source review · change
