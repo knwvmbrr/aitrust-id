@@ -1,3 +1,11 @@
+## Real PostgreSQL account delivery — 2026-11-25T04:11:13.941347+00:00
+
+**36 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** The existing signup/private-history API now works against isolated least-privileged PostgreSQL. Actual current HTTP11, separately source-bound restore5 and concurrent2 outcomes are preserved, with different ROOT source review and verified stopped owned services/unchanged main database. Public signup, customer payments and production backup/deletion recovery remain off or unqualified. This completes the registered database software job, not the whole paid product.
+
+/root leads integration/task accounting; /root/release_recovery advances PR155; /root/ios_recovery repairs the observed Share test hierarchy boundary. PostgreSQL implementation by /root/postgres_recovery is complete; its next task is architecture review. Candidate4 compiled but only1/3 Sources UI cases passed. No fresh TestFlight dashboard or physical install was verified. These are dated assignments, not background bots.
+
+[Actual database result](../runs/2026-11-24-account-postgres.json) · [Different review and current accounting](../runs/2026-11-24-postgres-account-integration.json) · [Operator guide](account-postgres.md)
+
 ## Current account usability and real rollout — 2026-11-24T18:03:56.296255+00:00
 
 **35 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** Saved history now filters by result, shows its public method and retries failures without stale entries; authenticated web reads are bound to the displayed session. Actual current Chromium/WebKit workflow and different source review pass. PostgreSQL operation, early native Sources navigation and protected fitting-source publication are active bounded jobs. No real payment, public account collection, new app upload or fresh TestFlight availability is claimed. The latest actual Apple observation remains November21 Testing/owner Invited; today’s browser transport is unavailable.

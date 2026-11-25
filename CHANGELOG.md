@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-24
 
+### 2026-11-24-postgres-account-integration
+
+Recorded 2026-11-25T04:11:13.941347+00:00 · Contributor: Codex /root; PostgreSQL author /root/postgres_recovery · change
+
+- **Changed.** Integrate the reviewed real PostgreSQL account/history implementation, close its registered scoped job and reconcile current scope, worker assignments and TestFlight limits.
+- **Evidence.** Exact author commit preserved in normal merge; different10-file review and3critical controls, actual final HTTP11/source-bound restore5/concurrency2 and stopped owned service/unchanged main. Scope202 and36 scoped jobs verified; original136complete/66open remains. [Change record](./runs/changes/2026-11-24-postgres-account-integration.json).
+- **Not claimed.** No public signup, real billing, production recovery/collection, fresh Apple dashboard or iPhone installation, new upload, native Sources acceptance, independent tag accuracy or original closure. Worker N-013 template metadata earns no native credit.
+
+
 ### 2026-11-24-account-postgres
 
 Recorded 2026-11-25T04:07:47.490298+00:00 · Contributor: Codex /root/postgres_recovery; different source reviewer /root · change

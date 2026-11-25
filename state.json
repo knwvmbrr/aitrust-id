@@ -1,8 +1,8 @@
 {
   "version": "0.1.0",
-  "updated": "2026-11-24T16:18:02.427997+00:00",
+  "updated": "2026-11-25T04:11:13.941347+00:00",
   "active_increment": "Real signup/private-history delivery, iPhone independent size checks and actual source/dependency distribution repairs;136complete66open.",
-  "status": "136complete66open_target60_unmet;image_reference_qualified_account_history_implementation_active",
+  "status": "136complete66open_target60_unmet;private_account_postgresql_working_public_signup_and_payments_off",
   "scope": "docs/master-scope.json",
   "first_tag": "docs/tags/PS-01.md",
   "remaining": [
@@ -789,7 +789,7 @@
   "name_clearance": {
     "status": "unresolved; related exact-name public use observed",
     "candidate_source": "https://theailab.org/ai-trust-registry",
-    "observed_mark": "AI Trust ID™",
+    "observed_mark": "AI Trust ID\u2122",
     "registration_priority_and_legal_conflict_verified": false
   },
   "market_research": {
@@ -1267,7 +1267,7 @@
     "protocol": "runs/2026-11-23-tag-runtime-current-protocol.json",
     "website": "runs/2026-11-23-tag-runtime-current-website.json"
   },
-  "updated_at": "2026-11-24T16:18:02.427997+00:00",
+  "updated_at": "2026-11-25T04:11:13.941347+00:00",
   "research_pilot": {
     "accepted_scope": "tag result, method version, failure category and structured feedback only",
     "metadata_file_builder": "executed_local_preview_download",
@@ -1610,7 +1610,7 @@
     "active_retention_days": 30,
     "backup_expiry_days": 7,
     "invitation_only": true,
-    "owner_role": "Michael — accepted accountable pilot operator and access approver",
+    "owner_role": "Michael \u2014 accepted accountable pilot operator and access approver",
     "owner_decision": "runs/2026-10-13-metadata-pilot-owner-decision.json",
     "policy": "deploy/research/metadata-pilot-policy.json"
   },
@@ -5757,7 +5757,7 @@
     "owner": "Michael",
     "business_model": "Owner accepted free personal checking/current evidence, optional PAID personal history, free signup community, plus separately specified organizational capabilities; no price, checkout or revenue established.",
     "mission": "Openly implementable identification standard with independent, explainable and claim-specific validated tags.",
-    "history": "Explicit owner-selected PAID UPGRADE; written contract only, not implemented or active.",
+    "history": "Owner-selected paid upgrade: private signup/session/history/access software works on SQLite development and isolated PostgreSQL; public rollout and verified payments remain inactive.",
     "scope_id": "ENH-PERSONAL-TAG-HISTORY",
     "plan": "docs/personal-tag-history-plan.md",
     "storage_or_collection_activated": false,
@@ -5772,10 +5772,10 @@
     "marketing_operating_model": "Owner as human CMO with final post/account/time approval; separate content and fact-check roles; proposed two-week pilot, no social posting or purchase authorized by planning."
   },
   "account_history_delivery": {
-    "recorded_at": "2026-11-24T18:03:56.296255+00:00",
-    "phase": "working_isolated_HTTP_browser_with_filters_and_read_binding",
+    "recorded_at": "2026-11-25T04:11:13.941347+00:00",
+    "phase": "reviewed_real_isolated_PostgreSQL_and_existing_browser_workflow",
     "signup_publicly_live": false,
-    "account_engineer": "/root/seo",
+    "account_engineer": "Codex /root/seo (domain/API); Codex /root/postgres_recovery (PostgreSQL)",
     "browser_and_entitlements_engineer": "/root",
     "history_access_engine": "runs/2026-11-24-history-access-engine.json",
     "operator_grants_functional": true,
@@ -5790,10 +5790,16 @@
     ],
     "principal_reset_regressions": 4,
     "actual_current_browser_workflow_pass": true,
-    "latest_evidence": "runs/2026-11-24-history-filter-session-binding.json",
+    "latest_evidence": "runs/2026-11-24-postgres-account-integration.json",
     "history_state_filter": true,
     "full_export_ignores_filter": true,
-    "optional_read_session_binding": true
+    "optional_read_session_binding": true,
+    "postgresql_evidence": "runs/2026-11-24-account-postgres.json",
+    "private_PostgreSQL_workflow_pass": true,
+    "private_PostgreSQL_restore_pass": true,
+    "public_signup_enabled": false,
+    "private_review_services_stopped": true,
+    "main_database_unchanged": true
   },
   "current_image_reference_qualification": {
     "recorded_at": "2026-11-24T16:18:02.427997+00:00",
@@ -5807,9 +5813,9 @@
     "original_requirement_closed": false
   },
   "testflight_current_status_check": {
-    "checked_at": "2026-11-24T18:03:56.296255+00:00",
+    "checked_at": "2026-11-25T04:11:13.941347+00:00",
     "status": "UNVERIFIED",
-    "reason": "Chrome control transport unavailable; no configured App Store status API.",
+    "reason": "Computer-use namespace is unavailable after Desktop restart; no configured App Store status API. No credential/profile extraction or new sign-in attempted.",
     "latest_observed_evidence": "runs/2026-11-21-testflight-build-testing-confirmed.json",
     "latest_observed_date": "2026-11-21",
     "latest_observed_build": "1.0 (1)",
@@ -5817,7 +5823,20 @@
     "owner_was": "Invited",
     "physical_install_confirmed": false,
     "new_build_uploaded_this_turn": false,
-    "evidence": "runs/2026-11-24-history-filter-session-binding.json",
+    "evidence": "runs/2026-11-24-postgres-account-integration.json",
     "owner_invitation_last_observed_date": "2026-11-18"
+  },
+  "account_postgresql_delivery": {
+    "recorded_at": "2026-11-25T04:11:13.941347+00:00",
+    "evidence": "runs/2026-11-24-account-postgres.json",
+    "integration_evidence": "runs/2026-11-24-postgres-account-integration.json",
+    "worker_commit": "5f250b473cba913647ea5599cbcb701594e01497",
+    "actual_role": "ait_account_runtime",
+    "same_shared_domain_and_HTTP": true,
+    "runtime_scope": "private_synthetic_review_and_restore_only",
+    "customer_data_accepted": false,
+    "public_service_enabled": false,
+    "payment_processed": false,
+    "original_requirement_closed": false
   }
 }
