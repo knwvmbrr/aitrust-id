@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-052951-account-erasure-integration-3e3b21e0",
+  "recorded_at": "2026-11-25T05:29:51.534578+00:00",
+  "author": "Codex /root; PostgreSQL implementation /root/postgres_recovery",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "039777f9ae17ad6ad6e32ad3f08429ca99a138fe",
+  "changed": "Integrate the independently reviewed whole-account recovery barrier, close its registered software job and update scope, state, operator links and dated task ownership.",
+  "proves": "The real PostgreSQL sequence passes 18 phases and 12 case groups; deleted credentials and history stay removed after an older backup is restored while the other account survives. Different source and actual-evidence reviews pass. The board records 38 completed software jobs and 136 complete / 66 open originals.",
+  "limits": "Target 60 remains unmet. No public signup, real billing, production backup guarantee, individual history-event or clear recovery, fresh TestFlight status, physical VoiceOver or original requirement closure. Old specialist handoffs remain preserved and unfinished jobs are queued under current owners.",
+  "scope_ids": [
+    "F-044",
+    "N-010"
+  ],
+  "files": {
+    "README.md": "22db5ad80fe83d702d5ebeb873679b2c7895532f51c4aa05298d78db5e6df448",
+    "docs/scope-progress.json": "4bbae3920dd224f26e6881bfc3f2f434afb8fac1197df2c0211eb9aabc7aab6c",
+    "docs/scope-progress.md": "d230354c2d04dcd92d88dbf4971cb715863a8e3b09fab0eb5657ee0a42e6bd7a",
+    "docs/session-delivery-plan.md": "11eb64c787de477864b39a9f198ca79a1c5f22bdabf92124244e17b6ce9109bd",
+    "docs/session-delivery.json": "12dd6cefc7fcff1fcbd8dee731ddda1e29a8c02fe98c54f81b2761d0d6e8ee4d",
+    "state.json": "44306a7f06fcf2d321cbb3af9dbe0baef3227a934d9cb4e556614d607bf6a256",
+    "runs/2026-11-25-account-erasure-integration.json": "b4fad82d324cea64fa3295656c96f37ebf126a768f13183d7a29a102b1c78266"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-account-erasure-integration.json",
+      "sha256": "b4fad82d324cea64fa3295656c96f37ebf126a768f13183d7a29a102b1c78266"
+    },
+    {
+      "path": "runs/2026-11-25-account-erasure.json",
+      "sha256": "1d70869f3e4ffc1ed027ac8ba5772a45fcd585d81e6c751171c902ea23b76cae"
+    }
+  ],
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "scripts/verify-accountability.py"
+      ],
+      "exit_status": 0,
+      "pass": true,
+      "finished_at": "2026-11-25T05:29:52.516074+00:00"
+    }
+  ],
+  "different_accounting_reviews": [
+    {
+      "reviewer": "Codex /root/postgres_recovery",
+      "pass": true,
+      "scope": "Full seven-file PM accounting; not self-review of feature implementation",
+      "sha256": "d4396020dce8c7883db8ba4b504cf5d8425feed4583a5b05f11f476aaa0d353c"
+    },
+    {
+      "reviewer": "Codex /root/postgres_recovery",
+      "pass": true,
+      "scope": "Only the two queued task attribution rows and timestamps amend the prior reviewed sources",
+      "sha256": "6d4ee951c7fc970b88f87d9b067b6735c0200c26100ab39adeac5b59a2108b26"
+    }
+  ],
+  "strict_session_goal": {
+    "argv": [
+      "python3",
+      "scripts/session-delivery.py",
+      "--check-session"
+    ],
+    "actual_exit_status": 1,
+    "finished_scoped_jobs": 38,
+    "original_open": 66,
+    "target_open": 60,
+    "target_met": false
+  }
+}

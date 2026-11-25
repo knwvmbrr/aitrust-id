@@ -2,6 +2,15 @@
 
 ## Unreleased — 2026-11-25
 
+### 2026-11-25-052951-account-erasure-integration-3e3b21e0
+
+Recorded 2026-11-25T05:29:51.534578+00:00 · Contributor: Codex /root; PostgreSQL implementation /root/postgres_recovery · change
+
+- **Changed.** Integrate the independently reviewed whole-account recovery barrier, close its registered software job and update scope, state, operator links and dated task ownership.
+- **Evidence.** The real PostgreSQL sequence passes 18 phases and 12 case groups; deleted credentials and history stay removed after an older backup is restored while the other account survives. Different source and actual-evidence reviews pass. The board records 38 completed software jobs and 136 complete / 66 open originals. [Change record](./runs/changes/2026-11-25-052951-account-erasure-integration-3e3b21e0.json).
+- **Not claimed.** Target 60 remains unmet. No public signup, real billing, production backup guarantee, individual history-event or clear recovery, fresh TestFlight status, physical VoiceOver or original requirement closure. Old specialist handoffs remain preserved and unfinished jobs are queued under current owners.
+
+
 ### 2026-11-25-account-erasure
 
 Recorded 2026-11-25T05:17:49.531874+00:00 · Contributor: Codex /root/postgres_recovery; different source/actual reviewer /root · change

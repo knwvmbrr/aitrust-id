@@ -112,7 +112,7 @@
     ]
   },
   "counters": {
-    "finished_scoped_tasks": 37,
+    "finished_scoped_tasks": 38,
     "original_requirement_closures": 4
   },
   "goals": {
@@ -1804,8 +1804,8 @@
         "N-013",
         "T-PS"
       ],
-      "worker": "/root/web_camo",
-      "status": "active",
+      "worker": "/root",
+      "status": "queued",
       "deliverable": "User Clear returns the empty editor to view without altering background privacy clearing or Share delivery cancellation.",
       "registered_at": "2026-11-24T15:20:15.735780+00:00",
       "registration_time_basis": "Actual current board registration; earlier precode/source work retained separately, not backdated.",
@@ -1813,7 +1813,9 @@
         "Actual current-source seven App/Share flows and full declared four-profile/three-configuration matrix with owned cleanup.",
         "Review privacy, cancellation and immediately visible empty-editor behavior; retain physical and human accessibility gates."
       ],
-      "original_requirement_closed": false
+      "original_requirement_closed": false,
+      "previous_worker": "/root/web_camo",
+      "assignment_note": "Queued current qualification/integration work; previous specialist finished its bounded source handoff and is not running."
     },
     {
       "task_id": "session-source-consumer-lifecycle",
@@ -1821,8 +1823,8 @@
         "F-057",
         "X-02"
       ],
-      "worker": "/root/share_debugger",
-      "status": "active",
+      "worker": "/root/release_recovery",
+      "status": "queued",
       "deliverable": "Integrate bounded sequential source custody into actual authenticated source consumers without weakening descriptor, identity, read or authorization checks.",
       "registered_at": "2026-11-24T15:20:15.735780+00:00",
       "registration_time_basis": "Actual current board registration; earlier precode/source work retained separately, not backdated.",
@@ -1830,7 +1832,9 @@
         "Exact finite maintenance map, captured current-source execution, full identity recapture, failure cleanup and distinct review.",
         "Actual integrated authenticated consumer/probes on final selected source; injected authority alone is insufficient."
       ],
-      "original_requirement_closed": false
+      "original_requirement_closed": false,
+      "previous_worker": "/root/share_debugger",
+      "assignment_note": "Queued current qualification/integration work; previous specialist finished its bounded source handoff and is not running."
     },
     {
       "task_id": "session-private-history-access-engine",
@@ -2006,7 +2010,7 @@
         "N-010"
       ],
       "worker": "/root/postgres_recovery",
-      "status": "active",
+      "status": "closed",
       "registered_at": "2026-11-25T04:35:01.350136+00:00",
       "registration_time_basis": "Current dated registration after preimplementation architecture assignment; not backdated or a process heartbeat.",
       "deliverable": "Prevent a deleted synthetic account from regaining login/session/history after an older backup is restored; fail closed on incomplete recovery evidence.",
@@ -2014,7 +2018,19 @@
         "Atomic least-privilege deletion journal and bounded explicit versioned migration; reserve deletion capacity.",
         "Actual old-backup-before-delete challenge, reconciliation, unaffected account and rollback/uncertainty controls; separate source review and owned cleanup.",
         "No public collection, payment, production recovery/custody or full original closure."
-      ]
+      ],
+      "closure_record": {
+        "closed_at": "2026-11-25T05:24:24.475359+00:00",
+        "completed_by": "/root/postgres_recovery",
+        "verified_by": "/root",
+        "evidence": [
+          {
+            "path": "runs/2026-11-25-account-erasure-integration.json",
+            "sha256": "b4fad82d324cea64fa3295656c96f37ebf126a768f13183d7a29a102b1c78266"
+          }
+        ],
+        "original_requirement_closed": false
+      }
     },
     {
       "task_id": "session-pii-bracket-address",
@@ -6745,7 +6761,7 @@
     "runs/2026-11-21-nov21-functional-counter-review.json": "61a49daec629520de7db05375ba78164a6fcaf484e444fef3457e2c298c74ae7",
     "runs/2026-11-21-nov21-functional-closeout.json": "a9ecd0dccd013f151c21a1357eadd17bb9854f8d27558f7c1e9796c31f483af5"
   },
-  "updated_at": "2026-11-25T04:35:01.350136+00:00",
+  "updated_at": "2026-11-25T05:28:15.873822+00:00",
   "closeout": {
     "recorded_at": "2026-11-21T11:07:03.859569+00:00",
     "protected_source_commit": "d93a6ecfa510ad8c7d924f3db0aca0c87eaf88da",
@@ -7460,14 +7476,14 @@
     }
   ],
   "current_execution_wave": {
-    "recorded_at": "2026-11-25T04:35:01.350136+00:00",
+    "recorded_at": "2026-11-25T05:24:24.475359+00:00",
     "original_complete": 136,
     "original_open": 66,
     "target_open": 60,
     "remaining_full_closures": 6,
-    "scoped_tasks_closed": 37,
+    "scoped_tasks_closed": 38,
     "scoped_task_records": 43,
-    "status": "Sources UX and PostgreSQL software jobs complete; account erasure restore barrier and independent PII bracket-address work active. Source release PR155 current-source boundary review is active. Apple current access unavailable.",
+    "status": "Whole-account old-backup erasure software completed and independently reviewed. PII bracket-address genuine baseline reproduced; candidate qualification pending. PR155 genuine current website/source boundary selected; current protected checks pending. Public signup and real payments remain off.",
     "agents_permanent": false,
     "assignments_are_live_heartbeats": false,
     "assignments": [
@@ -7478,12 +7494,12 @@
       },
       {
         "worker": "/root/postgres_recovery",
-        "role": "Account erasure restore barrier implementation",
+        "role": "Whole-account barrier finished; per-event/clear recovery architecture preparation",
         "status": "active_bounded_assignment_at_snapshot"
       },
       {
         "worker": "/root/release_recovery",
-        "role": "PR155 protected source release and actual boundary/source qualification",
+        "role": "PR155 protected source publication and current required checks",
         "status": "active_bounded_assignment_at_snapshot"
       },
       {
@@ -8484,6 +8500,40 @@
         {
           "worker": "/root/ios_recovery",
           "role": "Scoped native Sources Share observer correction after actual failed candidate4",
+          "status": "active_bounded_assignment_at_snapshot"
+        }
+      ]
+    },
+    {
+      "recorded_at": "2026-11-25T04:35:01.350136+00:00",
+      "original_complete": 136,
+      "original_open": 66,
+      "target_open": 60,
+      "remaining_full_closures": 6,
+      "scoped_tasks_closed": 37,
+      "scoped_task_records": 43,
+      "status": "Sources UX and PostgreSQL software jobs complete; account erasure restore barrier and independent PII bracket-address work active. Source release PR155 current-source boundary review is active. Apple current access unavailable.",
+      "agents_permanent": false,
+      "assignments_are_live_heartbeats": false,
+      "assignments": [
+        {
+          "worker": "/root",
+          "role": "PM, integration and task-list lead",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/postgres_recovery",
+          "role": "Account erasure restore barrier implementation",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/release_recovery",
+          "role": "PR155 protected source release and actual boundary/source qualification",
+          "status": "active_bounded_assignment_at_snapshot"
+        },
+        {
+          "worker": "/root/ios_recovery",
+          "role": "Sources work finished; independent PII bracket-address worker",
           "status": "active_bounded_assignment_at_snapshot"
         }
       ]

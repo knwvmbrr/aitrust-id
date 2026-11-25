@@ -34,7 +34,7 @@ The FA panel has an optional **Image details · preview**: choose a supported PN
 
 The PS source package also has [versioned verification files and an account-free guide](docs/ps-source-provenance-downloads.md). Source identity is separate from detector accuracy.
 
-Optional [signup and private metadata history](docs/account-history-ui.md) work in an isolated development service, including a [real PostgreSQL review and restore workflow](docs/account-postgres.md). Public signup, customer payments and production account recovery are not active. Free tag checking stays account-free.
+Optional [signup and private metadata history](docs/account-history-ui.md) work in an isolated development service, including a [real PostgreSQL review and restore workflow](docs/account-postgres.md) and [whole-account deletion protection when restoring an older backup](docs/account-erasure.md). Public signup, customer payments and production account recovery are not active. Free tag checking stays account-free.
 
 ## Deploy approved local checker versions
 

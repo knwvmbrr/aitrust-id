@@ -1,3 +1,11 @@
+## Account deletion survives an older backup — 2026-11-25T05:24:24.475359+00:00
+
+**38 scoped software jobs complete; originals 136 complete / 66 open, target 60 unmet.** The registered whole-account recovery job is complete. One genuine isolated PostgreSQL sequence verifies the old password, session and exact history before reconciliation, then refuses the deleted account while preserving the other account. The journal survives successful external cleanup. Different ROOT review verifies source identity, rollback, capacity, privilege controls, stopped owned services and an unchanged main database.
+
+Public signup and customer payments remain off. Individual history-event deletion/clear suppression, production backup expiry/encryption/latest-journal custody, password recovery and native/extension history remain separate. No original acceptance is removed. Chrome refuses the read-only TestFlight inspection fallback because Apple Events JavaScript is disabled; that setting remains unchanged. The last actual Apple observation is November 21 Testing, with owner invitation last observed November 18 and no physical install confirmed.
+
+[Actual erasure result](../runs/2026-11-25-account-erasure.json) · [Different integration review](../runs/2026-11-25-account-erasure-integration.json) · [Operator guide](account-erasure.md) · [Scope ledger](scope-progress.md)
+
 ## Qualified native Sources and independent tag work — 2026-11-25T04:35:01.350136+00:00
 
 **37 scoped software jobs complete; originals136 complete /66 open, target60 unmet.** All three verified public archive offers now open/cancel in App and Share with privacy checks on iPhone14Plus/iOS26.2 Simulator. Different ROOT review checks the exact116 execution inputs, raw3-case tree, retained original-seven refusal and six compiled archive hashes. The complete Sources UX job closes; full current seven/size, physical VoiceOver and Apple upload do not. Stale generic native-current flags are replaced by explicit current truth; the complete older snapshot remains in state history.
