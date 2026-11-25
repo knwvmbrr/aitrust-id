@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-054008-pii-bracket-address-development-4939a3b8",
+  "recorded_at": "2026-11-25T05:40:08.606949+00:00",
+  "author": "Codex /root/ios_recovery; different source and actual review Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3779d8ccd94974afc05b47f0cbab823c77119794",
+  "changed": "Mask explicit paired bracketed-email forms at their original offsets, preserving the offline recognizer and independent tag boundaries.",
+  "proves": "Actual isolated Linux engine fixes the28-character challenge with zero extra masking;41other English rows and6historical compact controls match.14real in-processASGI identity/privacy controls and59separate model-free adapter/mock controls pass. ROOT independently reviewed actual source, model and cleanup evidence.",
+  "limits": "Synthetic development evidence; English false masking and broader recognition/human acceptance remain. No staged-service rebuild, chart or method admission, network replay, production deployment, phone redaction or original closure; F-023/T-PII stay80%.",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "files": {
+    "services/anonymizer/app.py": "6c694b9debc2e28ae4e36b767597b28ff6633b220d7919ec979b32304c61760d",
+    "tests/test_redaction_bracketed_email.py": "ca079ad405808b5e78259040b44bb9200df54bd873ec8b7a2f2c10ffd97e73b3",
+    "scripts/verify-bracketed-email-development.py": "db7320b617d4ccc06d54d86bdaaeede15afa0f9e8efe8072b7ba11b194f4324d",
+    "docs/pii-bracket-address-plan.md": "a69ea73c0b71ac1087e026165e8e6a43549cf96abf7f7116ca35b9d2d67b5610",
+    "docs/pii-bracket-address-result.md": "c2ca49acf41aba2b7edf0a2eeecc5ed4291728ab48cc3c46b27d928af6786d90",
+    "runs/2026-11-25-pii-bracket-address-development.json": "006d0f3f58db3a53f7c1a46914c561fa1c402e59f71066c005f8ebb462f4630e",
+    "runs/2026-11-25-pii-bracket-address-review.json": "4d3e97818f9e3e80bbdad3bf05cc32d29d91dadbd311d7a3071cba692c5d83d8"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-pii-bracket-address-development.json",
+      "sha256": "006d0f3f58db3a53f7c1a46914c561fa1c402e59f71066c005f8ebb462f4630e"
+    },
+    {
+      "path": "runs/2026-11-25-pii-bracket-address-review.json",
+      "sha256": "4d3e97818f9e3e80bbdad3bf05cc32d29d91dadbd311d7a3071cba692c5d83d8"
+    }
+  ],
+  "checks": []
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-054424-pii-result-guide-accuracy-wording-2ed0fbd0",
+  "recorded_at": "2026-11-25T05:44:24.374280+00:00",
+  "author": "Codex /root/ios_recovery; wording review Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "3779d8ccd94974afc05b47f0cbab823c77119794",
+  "changed": "Clarify the PII result guide so executed examples and matching historical observations are not described as perfectly correct labels.",
+  "proves": "The guide states the measured bracketed-address fix and unchanged observations while retaining the disclosed English and Spanish overmasking. Scope completion is explicitly distinguished from accuracy, and joined words/numbers are corrected.",
+  "limits": "Documentation-only correction; authored execution, review and prior event remain unchanged. No runtime rerun, tag release, chart admission, staging rollout or original requirement closure.",
+  "scope_ids": [
+    "F-023",
+    "T-PII"
+  ],
+  "files": {
+    "docs/pii-bracket-address-result.md": "8b89a9bfa737888e59dcc938c461a0357ec54e4f745b81bafdc27be70bdd2735"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-pii-bracket-address-development.json",
+      "sha256": "006d0f3f58db3a53f7c1a46914c561fa1c402e59f71066c005f8ebb462f4630e"
+    },
+    {
+      "path": "runs/2026-11-25-pii-bracket-address-review.json",
+      "sha256": "4d3e97818f9e3e80bbdad3bf05cc32d29d91dadbd311d7a3071cba692c5d83d8"
+    }
+  ],
+  "checks": []
+}
