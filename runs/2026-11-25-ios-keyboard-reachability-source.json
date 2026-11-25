@@ -1,0 +1,103 @@
+{
+  "format": "ios-keyboard-reachability-source/v1",
+  "captured_at": "2026-11-25T06:56:12.744428+00:00",
+  "source_base": "fb35498ea18e2dbaed783428a4d08b1e57b4d89e",
+  "actual_worker": "Codex /root/ios_recovery",
+  "different_source_reviewer": "Codex /root",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094"
+  ],
+  "claim_level": "engineering_only",
+  "pass": true,
+  "proof_scope": "Exact reviewed source implementation and focused source-preservation control only; no native compile or current-source execution.",
+  "implemented": [
+    "Shared App/Share native Done editing toolbar action only resigns first responder, preserving text and check control.",
+    "Parent and editor use UIKit on-drag keyboard dismissal; editor scrolling remains enabled and short text can bounce vertically.",
+    "Original seven case IDs/assertions/waits retained; explicit actual Done accessibility/keyboard/text/no-autocheck observations added within existing App/Share cases.",
+    "Original layout fixture including failed geometry/gestures and all execution/resource budgets byte-exact; matrix core only updates seven-suite digest."
+  ],
+  "files": {
+    "mobile/ios/Source/CheckerController.swift": {
+      "bytes": 35167,
+      "sha256": "8286efc3a87316e4f5a76d078dc7f349c9266d98d5a5c3443fb708d1b9ad2839"
+    },
+    "mobile/ios/Tests/UIFlows.swift": {
+      "bytes": 36986,
+      "sha256": "3d4d6f60a09856b4782f3e26997d70813800c8caa55afb4c1664f20774fe90b5"
+    },
+    "tools/ios_simulator_matrix.py": {
+      "bytes": 29266,
+      "sha256": "80c5751a416cea3ee817e248509eeaf988adeee7cd521a9c70c842448acceda2"
+    },
+    "docs/ios-keyboard-reachability-plan.md": {
+      "bytes": 2721,
+      "sha256": "4a43e4c93f0e6f0afb68e9141ac9a6cf9ee73f43df7048d6735aa9f3cf78023f"
+    },
+    "docs/ios-simulator-matrix-plan.md": {
+      "bytes": 53734,
+      "sha256": "dc667bb3e8348d9495dad1de2687b1df38a28490ca617f2182d5c06a8aaf3889"
+    }
+  },
+  "unchanged_layout_fixture": {
+    "path": "mobile/ios/Tests/SizeLayoutFlows.swift",
+    "sha256": "b53d11672675f89d99be4e18d7dcd55b5a1622f2a47726825ec4b33c3a95858d"
+  },
+  "executed_source_checks": {
+    "whole_controller_reversal_matches_base": true,
+    "whole_seven_suite_reversal_matches_base": true,
+    "matrix_core_only_literal_UI_digest_changed": true,
+    "actual_existing_derivation_control": {
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "tests.test_ios_simulator_matrix.MatrixControls.test_derived_payload_exact_one_delta",
+        "-v"
+      ],
+      "exit_status": 0,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "private_review_and_source_identities": {
+    "keyboard-source-reversal-controls.json": {
+      "bytes": 1348,
+      "sha256": "21729fe9c6519084d341cb3547e887250554f8fcfaa2fcb1e8fa0fc021b21137"
+    },
+    "keyboard-product-source-freeze.json": {
+      "bytes": 1991,
+      "sha256": "0bd0c662417ba9d8bef204b68768716e92e312c7cca917570d25fab3769815cf"
+    },
+    "keyboard-product-source.diff": {
+      "bytes": 7931,
+      "sha256": "de6c767810490764250398e2a57f809418b2abf6f99c75fadc4f886a725cc740"
+    },
+    "root-keyboard-reachability-product-implementation-ack.json": {
+      "bytes": 1463,
+      "sha256": "3cedb283a18ee632ee11d75b0000b8d29df1ccf165034e1d6f830b8d7e773ed8"
+    },
+    "root-keyboard-product-source-review.json": {
+      "bytes": 2168,
+      "sha256": "4395c201233fa1449b3660b5cb07ddc22cfca1ad3411f59b9c0c7e0402f03c4a"
+    }
+  },
+  "native_compiled": false,
+  "native_executed": false,
+  "current_full7_adopted": false,
+  "current_matrix_adopted": false,
+  "full_registered_clear_task_complete": false,
+  "physical_device": false,
+  "human_accessibility": false,
+  "independent_accuracy": false,
+  "original_requirement_closed": false,
+  "limits": [
+    "Source readiness only; a different reviewed new source freeze must precede actual current full7 and complete4x3 matrix.",
+    "Historical c721 full7PASS and matrixFAIL remain separate unchanged records; they do not qualify changed Controller8286/UI3d4d.",
+    "No runtime/SDK/library install, signing, Apple upload or TestFlight action.",
+    "Toolbar/enlarged text/drag/user privacy behavior needs actual checks; no original completion percentage changed."
+  ]
+}

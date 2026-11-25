@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "id": "2026-11-25-ios-keyboard-reachability-source",
+  "recorded_at": "2026-11-25T06:56:12.772895+00:00",
+  "author": "Codex /root/ios_recovery; different source review Codex /root",
+  "kind": "change",
+  "claim_level": "engineering_only",
+  "independent_release_validated": false,
+  "source_base": "fb35498ea18e2dbaed783428a4d08b1e57b4d89e",
+  "changed": "Add a native Done editing action and keyboard dismissal on editor or parent drag in shared App and Share.",
+  "proves": "Exact source reversals preserve all original product logic, seven assertions and layout fixture; one existing derivation control passes. Different source review checks all five changed implementation and planning files.",
+  "limits": "Source-only: changed native compilation, full seven and full four-by-three matrix remain pending. No original closure, physical/human acceptance or Apple build claim.",
+  "scope_ids": [
+    "N-013",
+    "F-035",
+    "F-094"
+  ],
+  "files": {
+    "mobile/ios/Source/CheckerController.swift": "8286efc3a87316e4f5a76d078dc7f349c9266d98d5a5c3443fb708d1b9ad2839",
+    "mobile/ios/Tests/UIFlows.swift": "3d4d6f60a09856b4782f3e26997d70813800c8caa55afb4c1664f20774fe90b5",
+    "tools/ios_simulator_matrix.py": "80c5751a416cea3ee817e248509eeaf988adeee7cd521a9c70c842448acceda2",
+    "docs/ios-keyboard-reachability-plan.md": "4a43e4c93f0e6f0afb68e9141ac9a6cf9ee73f43df7048d6735aa9f3cf78023f",
+    "docs/ios-simulator-matrix-plan.md": "dc667bb3e8348d9495dad1de2687b1df38a28490ca617f2182d5c06a8aaf3889",
+    "runs/2026-11-25-ios-keyboard-reachability-source.json": "cfdb6f5a2741ad5745b5a2da60fd59aaa33af46c7cea69f000acc2256debebff"
+  },
+  "evidence": [
+    {
+      "path": "runs/2026-11-25-ios-keyboard-reachability-source.json",
+      "sha256": "cfdb6f5a2741ad5745b5a2da60fd59aaa33af46c7cea69f000acc2256debebff"
+    }
+  ],
+  "checks": []
+}
